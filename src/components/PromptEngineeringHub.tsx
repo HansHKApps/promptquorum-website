@@ -1111,6 +1111,7 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
                 : lang === 'pt' ? '🔍 Executando modelos locais?'
                 : lang === 'es' ? '🔍 ¿Ejecutando modelos locales?'
                 : lang === 'ar' ? '🔍 هل تشغّل نماذج محلية؟'
+                : lang === 'ko' ? '🔍 로컬 모델을 실행 중이신가요?'
                 : '🔍 Running Local Models?'}
             </p>
             <p className="text-sm text-text-secondary leading-relaxed">
@@ -1128,6 +1129,8 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
                 ? 'Si estás ejecutando LLMs locales con Ollama, LM Studio o llama.cpp, cada técnica de esta guía aplica. Consulta la sección de LLMs locales para guías de hardware, comparaciones de modelos e instrucciones de configuración — luego vuelve aquí para técnicas de prompting.'
                 : lang === 'ar'
                 ? 'إذا كنت تشغّل نماذج LLM المحلية باستخدام Ollama أو LM Studio أو llama.cpp، فإن كل تقنية في هذا الدليل تنطبق عليك. راجع قسم LLMs المحلية للحصول على أدلة الأجهزة ومقارنات النماذج وتعليمات الإعداد — ثم عد إلى هنا لتقنيات Prompting.'
+                : lang === 'ko'
+                ? 'Ollama, LM Studio 또는 llama.cpp로 로컬 LLM을 실행하고 있다면, 이 가이드의 모든 기법이 그대로 적용됩니다. 하드웨어 가이드, 모델 비교, 설치 안내는 로컬 LLM 섹션을 참고하세요 — 그런 다음 여기로 돌아와 프롬프팅 기법을 익히세요.'
                 : 'If you\'re running local LLMs with Ollama, LM Studio, or llama.cpp, every technique in this guide applies. See the Local LLMs section for hardware guides, model comparisons, and setup instructions — then come back here for prompting techniques.'}
             </p>
           </div>
@@ -1142,6 +1145,7 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
               : lang === 'pt' ? 'Explorar LLMs locais →'
               : lang === 'es' ? 'Explorar LLMs locales →'
               : lang === 'ar' ? 'استكشف LLMs المحلية ←'
+              : lang === 'ko' ? '로컬 LLM 탐색하기 →'
               : 'Explore Local LLMs →'}
           </Link>
         </div>

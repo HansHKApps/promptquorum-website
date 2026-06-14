@@ -1138,6 +1138,55 @@ const HUB_THEME_TEXT_KO: Array<{ badge: string; question: string; description: s
   },
 ]
 
+// AR theme text — same index order as HUB_THEMES
+const HUB_THEME_TEXT_AR: Array<{ badge: string; question: string; description: string }> = [
+  {
+    badge: 'نظرة عامة ومرجع',
+    question: 'نظرة عامة ومرجع: من أين تبدأ في منظومة LLM المحلية؟',
+    description: 'دليل شامل لكل أدوات LLM المحلية التي تستحق المعرفة — بيئات التشغيل، تطبيقات سطح المكتب، واجهات الويب، مساعدو البرمجة، أنظمة RAG، أطر الوكلاء، أدوات الصوت والوسائط المتعددة، المحمول، وإضافات الإنتاجية. خريطة "ما هو موجود" قبل أن تلتزم بمكدس معين.',
+  },
+  {
+    badge: 'أسهل تطبيقات سطح المكتب',
+    question: 'أسهل تطبيقات سطح المكتب: أيّ تطبيق ذكاء اصطناعي محلي يجب أن تثبّته أولاً؟',
+    description: 'تطبيقات شبيهة بـ ChatGPT تنزّلها وتشغّلها مباشرة. لا يحتاج إلى واجهة أوامر. أفضل نقطة دخول للمبتدئين. اختبار LM Studio وJan وGPT4All جنباً إلى جنب من حيث السرعة وتجربة الاستخدام والخصوصية.',
+  },
+  {
+    badge: 'RAG والدردشة مع المستندات',
+    question: 'RAG والدردشة مع المستندات: كيف تتحدث مع ملفاتك المحلية؟',
+    description: 'قواعد معرفة شخصية لا تغادر جهازك قط. اختبار AnythingLLM وPrivateGPT وOpen WebUI على مجموعات مستندات حقيقية. اختيارات نماذج التضمين للمحتوى القانوني والبحثي والتقني.',
+  },
+  {
+    badge: 'مساعدو البرمجة',
+    question: 'مساعدو البرمجة: هل يستطيع LLM محلي حقاً أن يحلّ محل GitHub Copilot؟',
+    description: 'اختبار Continue.dev وCline وAider وQwen3-Coder في مواجهة GitHub Copilot على مشاريع حقيقية بـ Next.js وPython وRust. حسابات التكلفة، وإرشادات الإعداد، وأحكام صريحة حول فجوات الجودة.',
+  },
+  {
+    badge: 'وكلاء الذكاء الاصطناعي المحلي واستدعاء الأدوات',
+    question: 'وكلاء الذكاء الاصطناعي المحلي واستدعاء الأدوات: أيّ سير عمل يعمل فعلاً بدون السحابة؟',
+    description: 'بروتوكول MCP، استدعاء الأدوات، الوكلاء المستقلون — الحدود الأمامية لعام 2026. تقارير صريحة عمّا يعمل بموثوقية (وما يستمر في الفشل). استبدال Zapier بوكلاء مستضافة ذاتياً وأنماط الامتثال الأوروبي.',
+  },
+  {
+    badge: 'الإبداع والأدوار التمثيلية',
+    question: 'الإبداع والأدوار التمثيلية: أيّ النماذج المحلية تكتب كالبشر؟',
+    description: 'الخيال والحوار وبناء العوالم والسيناريوهات — اختبار على أكثر من 50 موجهاً إبداعياً. SillyTavern مقابل Agnai مقابل RisuAI لعمل الشخصيات. الرأي الصريح في النماذج غير المقيّدة للكتابة الإبداعية المشروعة.',
+  },
+  {
+    badge: 'LLMs المحمول والحافة',
+    question: 'LLMs المحمول والحافة: هل يمكنك تشغيل ذكاء اصطناعي حقيقي دون اتصال على هاتفك؟',
+    description: 'iPhone وAndroid وiPad وPixel — اختبار على أجهزة حقيقية في 2026. قياس Phi-4 Mini وGemma 3 4B وSmolLM من حيث السرعة والجودة. المساعدون الصوتيون وخطوط أنابيب Whisper للعمل دون اتصال.',
+  },
+  {
+    badge: 'أدوات الإنتاجية وإدارة المعرفة',
+    question: 'أدوات الإنتاجية: كيف تدمج الذكاء الاصطناعي المحلي في سير عملك اليومي؟',
+    description: 'تكاملات Obsidian وLogseq وJoplin. أتمتة البريد الإلكتروني والتقويم. استبدال Grammarly وNotion AI بنماذج محلية. مكدس قاعدة المعرفة الشخصية الكاملة لأكثر من 10,000 عنصر.',
+  },
+  {
+    badge: 'الصوت والكلام والوسائط المتعددة',
+    question: 'الصوت والوسائط المتعددة: كيف تبني خط أنابيب صوت ورؤية يعمل بالكامل دون اتصال؟',
+    description: 'تحويل الكلام إلى نص محلياً عبر whisper.cpp وfaster-whisper. تحويل النص إلى كلام محلياً عبر Piper وCoqui وXTTS v2. نماذج الرؤية (LLaVA وLlama 3.2 Vision) عبر Ollama. مساعدون صوتيون كاملون دون اتصال وخطوط أنابيب متعددة الوسائط — بدون ميكروفون سحابي.',
+  },
+]
+
 type HubHeroL10n = { h1: string; intro: string; introBold: string; keyTakeaways: string[] }
 
 const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko', HubHeroL10n> = {
@@ -1638,7 +1687,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
 
           {/* Themed sections — one per category */}
           {HUB_THEMES.map((theme, idx) => {
-            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : lang === 'es' ? HUB_THEME_TEXT_ES[idx] : lang === 'pt' ? HUB_THEME_TEXT_PT[idx] : lang === 'ko' ? HUB_THEME_TEXT_KO[idx] : theme
+            const themeText = lang === 'de' ? HUB_THEME_TEXT_DE[idx] : lang === 'fr' ? HUB_THEME_TEXT_FR[idx] : lang === 'ja' ? HUB_THEME_TEXT_JA[idx] : lang === 'zh' ? HUB_THEME_TEXT_ZH[idx] : lang === 'es' ? HUB_THEME_TEXT_ES[idx] : lang === 'pt' ? HUB_THEME_TEXT_PT[idx] : lang === 'ko' ? HUB_THEME_TEXT_KO[idx] : lang === 'ar' ? HUB_THEME_TEXT_AR[idx] : theme
             return (
               <section key={theme.id} id={theme.id} className="mb-16">
                 <div className="flex items-center gap-3 mb-2">
