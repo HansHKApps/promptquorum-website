@@ -376,6 +376,8 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     zh: 'Power Local LLM：在自己的硬件上私密运行 AI 应用（2026）',
     es: 'Power Local LLM: Ejecuta Apps de IA Privadas en Tu Propio Hardware (2026)',
     pt: 'Power Local LLM: Rode Apps de IA Privados no Seu Próprio Hardware (2026)',
+    ar: 'Power Local LLM: تشغيل تطبيقات الذكاء الاصطناعي بشكل خاص على أجهزتك (2026)',
+    ko: 'Power Local LLM: 내 하드웨어에서 AI 앱을 비공개로 실행하기 (2026)',
   }
   const descByLang: Partial<Record<Lang, string>> = {
     en: 'Stop paying for SaaS AI tools. Run coding assistants, RAG systems, agents, and creative apps fully offline with local LLMs. 35 guides, tested workflows, 2026 stack.',
@@ -385,6 +387,8 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
     zh: '停止为 SaaS AI 工具付费。使用本地 LLM 完全离线运行编码助手、RAG 系统、代理和创意应用。',
     es: 'Deja de pagar por herramientas IA SaaS. Ejecuta asistentes de código, sistemas RAG, agentes y aplicaciones creativas completamente offline con LLMs locales. 35 guías, flujos de trabajo probados, stack 2026.',
     pt: 'Pare de pagar por ferramentas de IA SaaS. Rode assistentes de código, sistemas RAG, agentes e apps criativos totalmente offline com LLMs locais. 35 guias, fluxos de trabalho testados, stack 2026.',
+    ar: 'توقف عن الدفع لأدوات الذكاء الاصطناعي SaaS. شغّل مساعدي البرمجة وأنظمة RAG والوكلاء والتطبيقات الإبداعية بالكامل دون اتصال مع نماذج LLM المحلية.',
+    ko: 'SaaS AI 도구 비용을 절약하세요. 로컬 LLM으로 코딩 어시스턴트, RAG 시스템, 에이전트, 크리에이티브 앱을 완전 오프라인으로 실행. 35개 가이드, 검증된 워크플로, 2026 스택.',
   }
 
   const isPublished = isPowerLLMHubPublished(lang)
