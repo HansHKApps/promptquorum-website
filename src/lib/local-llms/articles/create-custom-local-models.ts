@@ -1758,7 +1758,7 @@ schema: {
             name: 'Quel framework devrais-je utiliser pour fine-tuning ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth (jusqu'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
+              text: 'Unsloth (jusqu\'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
             },
           },
           {
@@ -1993,7 +1993,7 @@ schema: {
             },
             {
               q: 'Quel framework devrais-je utiliser pour fine-tuning ?',
-              a: 'Unsloth (jusqu'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
+              a: 'Unsloth (jusqu\'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
             },
             {
               q: 'Comment savoir si pre-training vaut le coût ?',
