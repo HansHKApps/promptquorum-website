@@ -8,7 +8,7 @@ import { LangLinksBar } from '@/components/LangLinksBar'
 // Content data — all 5 languages
 // ---------------------------------------------------------------------------
 
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar'
+type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 interface CompareText {
   breadcrumbHome: string
@@ -1110,6 +1110,150 @@ const content: Partial<Record<Lang, CompareText>> = {
     ctaSubtext: 'Beta lançando em julho de 2026. Os usuários de acesso antecipado obtêm integração prioritária, acesso direto ao desenvolvedor e uma ferramenta de poder gratuita!', // VERIFY
     ctaButton: 'Entre na lista de espera →', // VERIFY
   },
+
+  ko: {
+    breadcrumbHome: '홈',
+    breadcrumbCompare: '도구 비교',
+    updatedDate: '2026년 3월 업데이트',
+    h1: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo —',
+    h1Highlight: '멀티 LLM 비교 도구',
+    introPara: '올바른 멀티 LLM 도구는 모든 모델에 동시 전송이 필요한지, 자동화된 합의 점수가 필요한지, Ollama나 LM Studio를 통한 로컬 LLM 개인정보 보호가 필요한지, 아니면 단순한 나란히 비교가 필요한지에 따라 달라집니다. 이 페이지는 2026년 주요 5가지 옵션인 PromptQuorum, Poe, LM Arena, OpenMark, AiZolo를 기능 표, 도구별 분석, 결정 가이드와 함께 비교합니다.',
+    disclaimerLabel: '정확성 안내:',
+    disclaimer: ' 기능 및 가격 정보는 2026년 3월에 검증되었으며 각 제품의 공개 문서를 기반으로 선의로 제공됩니다. 제품은 자주 변경됩니다 — 각 공급업체에 직접 현재 기능을 확인하세요. 이 페이지의 정보가 부정확하거나 오래되었다고 생각되면 ',
+    disclaimerContact: '문의하세요',
+    disclaimerContactSuffix: ' 즉시 수정하겠습니다. 이 비교는 PromptQuorum이 제작했으며 시장 참여자로서 우리의 관점을 반영합니다.',
+
+    atAGlanceH2: '한눈에 보기',
+    atAGlanceItems: [
+      'PromptQuorum: 합의 점수 + Ollama/LM Studio를 통한 로컬 LLM 개인정보 보호에 최적',
+      'Poe: 간편함 + 폭넓은 지원(GPT-4o, Claude, Gemini, 수천 개의 봇)에 최적',
+      'LM Arena: 학술 벤치마킹 + 커뮤니티 기반 모델 순위에 최적',
+      'OpenMark: 100개 이상 모델의 API 비용/품질 분석에 최적',
+      'AiZolo: 저렴한 멀티 모델 콘텐츠 워크플로우($9.90/월)에 최적',
+    ],
+    seeAlsoH2: '관련 페이지',
+    seeAlsoLinks: [
+      { label: 'PromptQuorum 작동 방식', url: '/how-it-works' },
+      { label: '프롬프트 엔지니어링 모범 사례', url: '/prompt-engineering' },
+      { label: '로컬 LLM vs 클라우드 API', url: '/local-llms/local-llms-vs-cloud-apis' },
+      { label: '기능 및 역량', url: '/features' },
+    ],
+    sourcesH2: '출처',
+    sourcesList: [
+      'PromptQuorum: promptquorum.com',
+      'Poe: poe.com',
+      'LM Arena: lmarena.ai',
+      'OpenMark: openmark.ai',
+      'AiZolo: aizolo.com',
+    ],
+
+    jumpLinks: [
+      ['#comparison-table', '비교 표'],
+      ['#promptquorum', 'PromptQuorum'],
+      ['#poe', 'Poe'],
+      ['#lmarena', 'LM Arena'],
+      ['#openmark', 'OpenMark'],
+      ['#aizolo', 'AiZolo'],
+      ['#faq', 'FAQ'],
+    ],
+
+    introH2: '멀티 LLM 비교 도구란 무엇인가요?',
+    introDefinition: '멀티 LLM 비교 도구는 동일한 프롬프트를 여러 대형 언어 모델에 동시에 전송하고 응답을 병렬로 표시하여, 탭을 전환하거나 입력을 반복하지 않고 GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large 등 AI 시스템 간의 추론, 정확성, 스타일 차이를 평가할 수 있게 합니다.',
+    introPara1: '2026년 현재 어떤 단일 AI 모델도 모든 작업에서 권위 있지 않습니다. GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro는 각각 서로 다른 학습 데이터, 아키텍처 편향, 추론 강점을 가지고 있습니다. 한 모델에서 정확해 보이는 답변이 다른 모델에서 반박되거나, 제한되거나, 크게 확장될 수 있습니다.',
+    introPara2: '여기서 비교하는 5가지 도구는 현재 이용 가능한 주요 접근 방식을 대표합니다: 소비자 플랫폼(Poe by Quora), 커뮤니티 벤치마크(LM Arena), 개발자 평가 도구(OpenMark), 통합 멀티 모델 워크스페이스(AiZolo), 합의 점수 플랫폼(PromptQuorum). 각각은 서로 다른 워크플로우를 지원합니다.',
+
+    tableH2: '5가지 멀티 LLM 도구의 주요 차이점은 무엇인가요?',
+    tablePara: '다음 표는 전문적인 멀티 LLM 워크플로우에서 가장 중요한 기능인 동시 전송, 합의 점수, 로컬 LLM 지원, API 키 제어, 가격을 기준으로 5가지 도구를 비교합니다.',
+    tableToolCol: '도구',
+    tableDispatchCol: '동시 전송',
+    tableConsensusCol: '합의 점수',
+    tableLocalCol: '로컬 LLM',
+    tableApiCol: 'API 키 제어',
+    tablePriceCol: '가격',
+    tableFootnote: '✓ 예 · ~ 부분 · ✗ 아니오 · 2026년 3월 공개 문서 기준. 가격 및 기능은 변경될 수 있습니다 — 각 공급업체에 직접 확인하세요. 이 비교는 PromptQuorum이 제작했습니다.',
+
+    pqH2: 'PromptQuorum은 경쟁사와 무엇이 다른가요?',
+    pqBestFor: '최적 대상: 개발자 및 파워 유저',
+    pqTags: ['베타 · 2026년 7월', 'promptquorum.com', 'API 키 필요', 'Ollama + LM Studio'],
+    pqPara1: '**PromptQuorum은 검토된 도구 중 프롬프트 동시 전송과 자동 합의 점수를 결합한 유일한 도구입니다.** 프롬프트를 작성하고 모델을 선택하면 — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large 및 로컬에서 실행 중인 모델 — PromptQuorum이 모두에 병렬로 전송합니다. 그런 다음 Quorum Verdict가 모델들이 어디서 일치하는지, 어디서 다른지, 그리고 그 패턴이 응답 신뢰성에 무엇을 의미하는지 분석합니다.',
+    pqPara2: '결정적 기능은 로컬 LLM 지원입니다. Ollama 및 LM Studio 통합을 통해 PromptQuorum은 로컬에서 실행 중인 모델(LLaMA 3.1 7B는 8GB RAM 필요, 13B는 16GB 필요)을 전송에 포함시켜 민감한 프롬프트가 절대 내 기기를 벗어나지 않습니다. 법률 전문가, 의료 종사자, 금융 분석가, 독점 코드를 다루는 개발자에게 이는 선택이 아닌 필수입니다.',
+    pqPara3: 'PromptQuorum은 사용자가 OpenAI, Anthropic, Google, Mistral의 자체 API 키를 가져오도록 요구합니다. 이를 통해 데이터가 자신의 통제 하에 있고, 비용이 투명하게 유지되며, 사용이 각 공급업체와의 자체 상업적 조건에 연결됩니다.',
+    pqH3: 'PromptQuorum을 사용해야 하는 사람은 누구인가요?',
+    pqH3Para: 'PromptQuorum은 프로덕션 파이프라인에 통합할 모델을 평가하는 개발자, 모델 간 결과를 교차 검증해야 하는 연구자, 제3자 클라우드 서버로 전송할 수 없는 기밀 정보를 다루는 전문가를 위해 설계되었습니다.',
+
+    poeH2: 'Poe — 여러 모델에 대한 일상적 접근과 봇 탐색',
+    poeBestFor: '최적 대상: 일상/소비자 사용',
+    poeTags: ['poe.com', '무료 / $19.99/월', 'iOS, Android, 웹', '수백만 사용자'],
+    poePara1: '**Poe(Quora 소유)는 GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Llama, Mistral 및 수천 개의 커뮤니티 제작 봇에 접근할 수 있는 멀티 모델 채팅 플랫폼입니다.** 소비자 인터페이스는 API 키나 기술 설정 없이 여러 모델을 탐색하는 데 최적화되어 있습니다.',
+    poePara2: 'Poe는 합의 점수를 제공하지 않습니다 — 모델 간 전환하거나 두 모델을 나란히 비교할 수 있지만 자동화된 일치 분석은 없습니다. 2026년 3월 공개 문서 기준으로 Ollama나 LM Studio를 통한 로컬 LLM 추론을 지원하지 않습니다.',
+    poeH3: 'Poe vs PromptQuorum: 주요 차이점',
+    poeH3Para: 'Poe는 접근성과 대화를 위한 소비자 플랫폼입니다. PromptQuorum은 프롬프트 평가와 합의 점수를 위한 전문 도구입니다. Poe는 일상적인 채팅과 봇 탐색에 더 적합합니다. PromptQuorum은 제어된 프롬프트 평가, 합의 분석, 로컬 LLM 워크플로우에 더 적합합니다.',
+
+    lmH2: 'LM Arena — 학술 벤치마킹과 커뮤니티 모델 순위',
+    lmBestFor: '최적 대상: 학술 벤치마킹',
+    lmTags: ['lmarena.ai', '무료', '웹 전용', '인간 투표 시스템'],
+    lmPara1: '**LM Arena(구 Chatbot Arena)는 수백만 건의 인간 선호도 투표에서 도출된 Elo 등급을 사용하는 가장 많이 인용되는 AI 모델 리더보드입니다.** 사용자가 프롬프트를 제출하고 두 익명 모델 중 더 나은 응답을 투표합니다.',
+    lmPara2: 'LM Arena는 두 모델을 나란히 표시하고 인간 선호도 투표를 수집합니다 — 자동화된 합의 분석을 제공하지 않고, 로컬 LLM을 지원하지 않으며, 주요 비교 모드에서 특정 모델을 선택할 수 없습니다. 벤치마킹 플랫폼이지 워크플로우 도구가 아닙니다.',
+    lmH3: 'LM Arena vs PromptQuorum: 주요 차이점',
+    lmH3Para: 'LM Arena는 업계의 집계된 인간 선호도 트렌드를 이해하는 데 더 적합합니다. PromptQuorum은 선택한 모델 전반에 걸쳐 일관된 자동화된 분석으로 특정 프롬프트를 평가하는 데 더 적합합니다. LM Arena는 커뮤니티가 무엇을 선호하는지 알려주고, PromptQuorum은 중요한 각 모델에서 내 프롬프트가 무엇을 생성하는지 알려줍니다.',
+
+    omH2: 'OpenMark — 결정론적 비용 및 품질 벤치마킹',
+    omBestFor: '최적 대상: 비용/품질 분석',
+    omTags: ['openmark.ai', '무료 티어 / 크레딧', '100개 이상 모델', '결정론적 점수'],
+    omPara1: '**OpenMark는 100개 이상의 AI 모델에 대해 프롬프트를 동시에 실행하고 결과를 결정론적으로 점수를 매기는 개발자 지향 벤치마킹 도구입니다 — 동일한 프롬프트는 항상 동일한 순위 결과를 생성합니다.** 품질 점수와 함께 각 모델의 프롬프트당 비용을 정확하게 보여줍니다.',
+    omPara2: 'OpenMark는 범위(100개 이상 모델)와 비용 투명성에서 탁월하지만 합의 판정을 생성하지 않습니다 — 일치 패턴을 분석하는 대신 각 모델을 개별적으로 점수 매깁니다. Ollama나 LM Studio를 통한 로컬 LLM을 지원하지 않습니다.',
+    omH3: 'OpenMark vs PromptQuorum: 주요 차이점',
+    omH3Para: 'OpenMark는 "이 작업에서 어느 개별 모델이 가장 잘 작동하며 비용은 얼마인가"에 답합니다. PromptQuorum은 "이 프롬프트에서 모델들이 얼마나 동의하며 불일치는 무엇을 의미하는가"에 답합니다. 둘 다 API 키가 필요합니다. OpenMark는 100개 이상의 모델을 지원하고, PromptQuorum은 로컬 LLM 추론과 합의 점수를 추가합니다.',
+
+    azH2: 'AiZolo — 콘텐츠 팀을 위한 멀티 모델 워크스페이스',
+    azBestFor: '최적 대상: 콘텐츠 팀',
+    azTags: ['aizolo.com', '$9.90/월부터', 'GPT-4o, Claude, Gemini, Grok', '프롬프트 라이브러리'],
+    azPara1: '**AiZolo는 콘텐츠 크리에이터와 마케팅 팀을 위해 설계된 통합 멀티 모델 워크스페이스로, GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Grok에 병렬로 동시 전송합니다.** 2026년 3월 기준으로 요금제는 $9.90/월부터 시작했습니다 — aizolo.com에서 현재 가격을 확인하세요.',
+    azPara2: 'AiZolo는 합의 점수를 제공하지 않습니다 — 응답을 나란히 표시하지만 분석은 사용자에게 맡깁니다. 클라우드의 네 가지 모델만 지원하며 로컬 LLM 옵션은 없습니다. 기술 평가 플랫폼이 아닌 콘텐츠 제작 워크플로우 도구입니다.',
+    azH3: 'AiZolo vs PromptQuorum: 주요 차이점',
+    azH3Para: 'AiZolo는 일상적인 사용을 위한 저렴하고 잘 설계된 멀티 모델 글쓰기 워크스페이스가 필요한 콘텐츠 팀에 더 적합합니다. PromptQuorum은 자동화된 합의 분석, 로컬 LLM 개인정보 보호, 오픈 웨이트 시스템을 포함한 더 광범위한 모델 세트에 대한 API 키 제어 접근이 필요한 파워 유저에게 더 적합합니다.',
+
+    chooseH2: '어떤 멀티 LLM 도구를 사용해야 할까요?',
+    chooseItems: [
+      { label: 'PromptQuorum 선택', desc: '모델 간 합의 점수, 민감한 작업을 위한 로컬 LLM 지원, 또는 자체 API 키를 사용하는 제어된 평가 워크플로우가 필요한 경우.', highlight: true },
+      { label: 'Poe 선택', desc: 'API 키 관리 없이 일상적인 대화와 탐색을 위해 GPT-4o, Claude 4.6 Sonnet, Gemini 및 수천 개의 봇에 쉽게 접근하고 싶은 경우.' },
+      { label: 'LM Arena 선택', desc: '커뮤니티 기반 모델 선호도 데이터와 업계 Elo 순위에 기여하거나 연구하고 싶은 경우.' },
+      { label: 'OpenMark 선택', desc: '프로덕션 애플리케이션용 모델을 선택하는 개발자로서 100개 이상의 모델에 대한 투명한 비용 데이터와 함께 결정론적 품질 점수가 필요한 경우.' },
+      { label: 'AiZolo 선택', desc: '일상적인 글쓰기 워크플로우를 위한 저렴하고 잘 설계된 멀티 모델 워크스페이스가 필요한 콘텐츠 크리에이터나 마케터인 경우.' },
+    ],
+
+    faqH2: '자주 묻는 질문',
+    faqs: [
+      {
+        q: '동일한 프롬프트를 여러 LLM에 동시에 비교할 수 있는 최선의 도구는 무엇인가요?',
+        a: 'PromptQuorum은 여기서 분석된 도구 중 동시 전송과 자동화된 합의 점수를 결합한 유일한 도구입니다. Poe, AiZolo, OpenMark는 나란히 응답을 제공하지만, GPT-4o, Claude 4.6 Sonnet 등의 모델이 어디서 동의하거나 다른지 자동으로 분석하는 Quorum Verdict를 생성하지 않습니다. 시각적 나란히 비교 이상이 필요한 사용자에게 PromptQuorum이 전용으로 설계된 옵션입니다. 기능 정보는 2026년 3월에 검증되었습니다.',
+      },
+      {
+        q: 'Ollama나 LM Studio 같은 로컬 LLM을 지원하는 멀티 LLM 도구는 무엇인가요?',
+        a: 'PromptQuorum은 분석된 도구 중 Ollama와 LM Studio를 통한 로컬 LLM 추론을 지원하는 유일한 도구입니다. 로컬에서 모델을 실행하면(LLaMA 3.1 7B는 8GB RAM, 13B는 16GB RAM 필요) 민감한 프롬프트가 절대 내 기기를 벗어나지 않습니다. Poe, LM Arena, OpenMark, AiZolo는 2026년 3월 공개 문서 기준으로 클라우드 전용 서비스로 운영됩니다. 결정을 내리기 전에 각 도구의 현재 기능을 해당 공급업체에 직접 확인하세요.',
+      },
+      {
+        q: '멀티 LLM 도구 맥락에서 합의 점수란 무엇인가요?',
+        a: '합의 점수는 독립적인 AI 모델들이 주어진 프롬프트에 얼마나 동의하는지에 대한 자동화된 분석입니다. PromptQuorum의 Quorum Verdict는 전송된 모든 모델(GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro 등) 간의 일치도를 점수로 매기고, 특정 불일치 지점을 식별하며, 그 불일치가 응답 신뢰성에 무엇을 나타내는지 해석합니다. 독립적인 여러 모델 간의 높은 합의는 답변이 정확할 가능성이 높다는 강력한 신호입니다.',
+      },
+      {
+        q: 'PromptQuorum은 Poe나 LM Arena와 어떻게 다른가요?',
+        a: 'Poe는 모델을 하나씩 전환하기 위한 소비자 채팅 플랫폼입니다. LM Arena는 커뮤니티 투표를 사용해 모델을 순위 매깁니다. PromptQuorum은 독자적입니다: 선택한 모든 모델에 동시 전송하고 합의 점수를 통해 어디서 동의하거나 다른지 자동으로 분석합니다. Poe는 대화에 최적화되어 있고, LM Arena는 벤치마킹에, PromptQuorum은 제어된 평가와 환각 감지에 최적화되어 있습니다.',
+      },
+      {
+        q: 'PromptQuorum을 사용하려면 자신의 API 키가 필요한가요?',
+        a: '네. PromptQuorum은 사용자가 OpenAI(GPT-4o), Anthropic(Claude 4.6 Sonnet), Google(Gemini 2.5 Pro), Mistral 및 기타 공급업체의 자체 API 키를 가져오도록 요구합니다. 이 설계는 데이터를 자신의 통제 하에 두고, 비용을 투명하게 유지하며, 사용을 각 공급업체와의 자체 상업적 계약에 연결합니다. 또한 완전히 프라이빗한 추론을 위해 Ollama와 LM Studio를 통한 로컬 LLM 지원도 가능합니다.',
+      },
+      {
+        q: 'PromptQuorum은 무료인가요?',
+        a: '네. PromptQuorum은 2026년 7월부터 무료 베타입니다. 모든 기능인 동시 전송, 합의 점수, 환각 감지, 다중 형식 내보내기가 무료입니다. 베타 이후에는 종량제 모델로 API 사용량에 따라 가격이 책정됩니다. 자체 API 키를 가져오므로 각 공급업체와 직접 비용을 제어합니다.',
+      },
+    ],
+
+    ctaH2: 'PromptQuorum 대기자 명단 등록',
+    ctaSubtext: '베타 출시 2026년 7월. 얼리 액세스 사용자는 우선 온보딩, 개발자 직접 접근, 무료 파워 도구를 받습니다!',
+    ctaButton: '대기자 명단 등록 →',
+  },
 }
 
 // ---------------------------------------------------------------------------
@@ -1130,6 +1274,13 @@ const TABLE_ROWS: Partial<Record<Lang, { pq: string[], poe: string[], lm: string
     lm:  ['~ Apenas 2 modelos', '~ Apenas votação humana', '✗ Somente nuvem', '✗ Não', 'Grátis'], // VERIFY
     om:  ['✓ Paralelo', '~ Pontuação determinística', '✗ Somente nuvem', '✓ Sim', 'Nível gratuito / créditos'], // VERIFY
     az:  ['✓ Sim', '✗ Não', '✗ Somente nuvem', '✓ Sim', 'A partir de $9,90/mês'], // VERIFY
+  },
+  ko: {
+    pq:  ['✓ 예', '✓ Quorum Verdict', '✓ Ollama + LM Studio', '✓ 내 키 사용', '무료 베타'],
+    poe: ['~ 순차 / 제한적', '✗ 아니오', '✗ 클라우드 전용', '~ 제한적', '무료 / $19.99/월'],
+    lm:  ['~ 2개 모델만', '~ 인간 투표만', '✗ 클라우드 전용', '✗ 아니오', '무료'],
+    om:  ['✓ 병렬', '~ 결정론적 점수', '✗ 클라우드 전용', '✓ 예', '무료 티어 / 크레딧'],
+    az:  ['✓ 예', '✗ 아니오', '✗ 클라우드 전용', '✓ 예', '$9.90/월부터'],
   },
 }
 const DEFAULT_ROWS = {
