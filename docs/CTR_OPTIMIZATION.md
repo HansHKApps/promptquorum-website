@@ -29,6 +29,38 @@ numbers, specific model names, and task-outcome hooks.
 - **2026-06-14**: Bucket-2 snippet rewrites deployed (8 pages, all locales via geo-meta-optimizer). Commit `a48ae779`. IndexNow submitted same day (200 OK, 8 URLs, key `2fd43c75…`).
 - **MEASURE on 2026-06-28** — re-pull GSC for these 8 pages (28-day window ending 2026-06-28), fill New CTR column, update Status to ✅ or note if impressions too low to read.
 
+---
+
+## Bucket 3 — /es/ CTR Fix (Spanish high-impression, ~0% CTR)
+
+8 pages ranked in GSC /es/ Page filter (28-day, sorted by impressions) with near-zero CTR.
+Audience: US-based Spanish speakers (#1) + LatAm. Meta rewritten es only (seoTitle + metaDescription).
+dateModified bumped to 2026-06-14; lastFactChecked unchanged (snippet fix only).
+
+**Winning pattern extracted from 4 converting /es/ pages:**
+- Front-load keyword in Spanish; year 2026 in title; parenthetical mini-specs `(X GB, Y tok/s)`;
+  description starts with specific model name + number, not repeating the title.
+
+**High-rank / zero-click anomalies to watch:**
+- `best-cpu-only-llm` (pos 3.8, was 0.1%) — "LLM Solo CPU" not matching Spanish query phrasing → rewritten as "5 LLMs sin GPU 2026"
+- `xinference-llama-qwen-chatglm-mistral` (pos 3.5, was 0%) — no benefit in snippet → added "Servidor LLM local con 200+ modelos"
+
+| Page | Baseline es-CTR | Impr | Pos | New seoTitle | Status | Changed | T+14 Measure |
+|---|---|---|---|---|---|---|---|
+| `/es/local-llms/mobile-local-llms` | 0.1% | 2,004 | 7.3 | Mejores Apps LLM 2026: MLC LLM, PocketPal y Ollama iOS | 🔧 | 2026-06-14 | 2026-06-28 |
+| `/es/local-llms/best-cpu-only-llm` | 0.1% | 1,499 | 3.8 | 5 LLMs sin GPU 2026: Phi-4 Mini, Gemma 3, Llama 3.2 | 🔧 | 2026-06-14 | 2026-06-28 |
+| `/es/local-llms/apple-silicon-m5-local-llm` | 0.2% | 865 | 9.2 | M5 Pro vs M5 Max 2026: Apple Silicon para IA Local | 🔧 | 2026-06-14 | 2026-06-28 |
+| `/es/local-llms/best-local-llms-2026` | 0% | 632 | 7.2 | Mejores LLMs Locales 2026: Llama 70B, Qwen3, Mistral | 🔧 | 2026-06-14 | 2026-06-28 |
+| `/es/local-llms/xinference-llama-qwen-chatglm-mistral` | 0% | 457 | 3.5 | Xinference 2026: Llama 3 y Qwen Locales, API OpenAI | 🔧 | 2026-06-14 | 2026-06-28 |
+| `/es/local-llms/apple-silicon-local-llm-guide-2026` | 0.5% | 426 | 7.1 | Apple Silicon 2026: M5 Pro vs M5 Max para IA Local | 🔧 | 2026-06-14 | 2026-06-28 |
+| `/es/local-llms/top-open-source-models-ollama` | 0.8% | 354 | 7.6 | Top 10 Modelos Ollama 2026: Llama 4, Qwen 3, Kimi K2 | 🔧 | 2026-06-14 | 2026-06-28 |
+| `/es/local-llms/70b-models-consumer-hardware` | 0% | 247 | 6.8 | Llama 70B en PC 2026: 40 GB RAM, RTX 4090 o M5 Max | 🔧 | 2026-06-14 | 2026-06-28 |
+
+### Deploy log
+
+- **2026-06-14**: Bucket-3 /es/ CTR snippet rewrites deployed (8 pages, es locale only). Commit `8686029d`. IndexNow submitted same day (200 OK, 8 URLs, key `2fd43c75…`).
+- **MEASURE on 2026-06-28** — re-pull GSC /es/ Page filter (28-day window), fill New CTR column, mark ✅ or investigate if impressions changed significantly. Focus on best-cpu-only-llm (pos 3.8) and xinference (pos 3.5).
+
 ### Verification notes (2026-06-14)
 
 - All 8 live titles confirmed NEW (model names + numbers visible in `<title>`).
