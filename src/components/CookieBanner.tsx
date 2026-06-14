@@ -169,7 +169,7 @@ const COPY: Partial<Record<Lang, Copy>> = {
   },
 }
 
-const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+const VALID_LANGS: Lang[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 
 // The middleware auto-detects the visitor's language (Accept-Language) and stores it
 // in the `pq_lang` cookie. On URLs without a path locale (/de/…) or ?lang= param —

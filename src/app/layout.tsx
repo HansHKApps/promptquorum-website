@@ -177,7 +177,7 @@ export default async function RootLayout({
                   "url": "https://www.promptquorum.com",
                   "description": "Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Write structured prompts with 9 frameworks, run consensus analysis, detect hallucinations. 100% private.",
                   "publisher": { "@id": "https://www.promptquorum.com/#organization" },
-                  "inLanguage": ["en", "de", "fr", "ja", "zh", "es", "pt", "ar"],
+                  "inLanguage": ["en", "de", "fr", "ja", "zh", "es", "pt", "ar", "ko"],
                   "potentialAction": {
                     "@type": "SearchAction",
                     "target": {

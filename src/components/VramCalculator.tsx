@@ -14,7 +14,7 @@ interface Tooltip {
   description: string;
 }
 
-type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar';
+type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko';
 
 const VRAM_TRANSLATIONS: Partial<Record<Language, {
   popularModels: string;
@@ -225,6 +225,43 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
       context: { title: '上下文长度', description: '模型可记忆的最大对话历史。4K≈3,000词，8K≈6,000词，16K≈12,000词。更长的上下文在推理过程中需要更多VRAM。' },
       batchSize: { title: '批量大小', description: '同时处理的请求数量。大小1=每次一个用户（单用户聊天）。大小4以上=多个用户（API/服务器）。更大的批量使用更多VRAM，但可提高吞吐量。' },
       useCase: { title: '使用场景', description: '单用户聊天=一个人与模型对话。多用户API=服务器处理多个并发请求。批量处理=顺序运行多个请求（无实时要求）。' },
+    },
+  },
+  ko: {
+    popularModels: '인기 모델',
+    modelSize: '모델 크기(Model Size)',
+    quantization: '양자화(Quantization)',
+    context: '컨텍스트(Context)',
+    batchSize: '배치 크기(Batch Size)',
+    useCase: '사용 사례(Use Case)',
+    singleUser: '단일 사용자 채팅',
+    multiUser: '다중 사용자 API',
+    batchProcessing: '일괄 처리',
+    baseModel: '기본 모델',
+    contextOH: '컨텍스트 오버헤드',
+    batchOH: '배치 오버헤드',
+    systemOH: '시스템 오버헤드',
+    totalMinimum: '최소 VRAM',
+    recommended: '권장 사양 (25% 안전 마진 포함)',
+    lookFor: '최소 다음 VRAM을 갖춘 GPU를 선택하세요:',
+    compatibleGPUs: '호환 GPU',
+    headroom: 'GB 여유',
+    shortBy: '부족:',
+    proTips: '💡 실용 팁:',
+    tips: [
+      'GPU 구매 시 항상 "안전 마진 포함" 수치를 기준으로 하세요',
+      'Q4는 크기를 25% 줄이면서 90~95% 품질을 유지합니다. 여유가 있다면 Q5가 더 좋습니다',
+      '컨텍스트 오버헤드는 대화 길이에 따라 증가합니다. 일반적인 사용에는 1~3 GB를 예비로 확보하세요',
+      '배치 크기는 다중 사용자 API에서 중요합니다. 단일 사용자 채팅은 배치 오버헤드를 무시해도 됩니다',
+    ],
+    shareConfig: '📋 이 설정 공유:',
+    loading: '로딩 중…',
+    tooltips: {
+      modelSize: { title: '모델 크기', description: '매개변수 수(단위: 십억, B). 큰 모델(70B)은 더 강력하지만 더 많은 VRAM이 필요합니다. 예: 7B는 일반 작업에 적합, 13B는 코딩/분석, 70B는 고급 추론에 적합합니다.' },
+      quantization: { title: '양자화', description: 'VRAM 절약을 위해 모델 가중치의 정밀도를 낮춥니다. FP16은 완전 정밀도(품질 100%), Q8=8비트(99%), Q4=4비트(95%). Q4가 표준이며, 최소한의 품질 손실로 VRAM을 약 75% 절약합니다.' },
+      context: { title: '컨텍스트 길이', description: '모델이 기억할 수 있는 최대 대화 이력입니다. 4K=약 3,000단어, 8K=약 6,000단어, 16K=약 12,000단어. 컨텍스트가 길수록 추론 시 더 많은 VRAM을 사용합니다.' },
+      batchSize: { title: '배치 크기', description: '동시에 처리하는 요청 수입니다. 크기 1=한 번에 한 명의 사용자(단일 사용자 채팅). 크기 4 이상=다중 사용자(API/서버). 배치가 클수록 더 많은 VRAM이 필요하지만 처리량이 향상됩니다.' },
+      useCase: { title: '사용 사례', description: '단일 사용자 채팅=한 명이 모델과 대화하는 방식입니다. 다중 사용자 API=여러 동시 요청을 처리하는 서버. 일괄 처리=실시간 요구 사항 없이 여러 요청을 순차적으로 실행하는 방식입니다.' },
     },
   },
   pt: {

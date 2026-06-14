@@ -10,7 +10,7 @@ import { buildLLMHubData } from '@/lib/local-llms/hub-data'
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
   const t = translations[selectedLang as keyof typeof translations]
 
@@ -42,7 +42,7 @@ interface PageProps {
 export default async function LocalLLMsPage({ searchParams }: PageProps) {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   const langPrefix = selectedLang === 'en' ? '' : `/${selectedLang}`

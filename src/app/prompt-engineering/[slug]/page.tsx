@@ -100,7 +100,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   // Extract language from searchParams, default to 'en'
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = (peContent[key][selectedLang] || peContent[key]['en'])!
@@ -210,7 +210,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
   // Extract language from searchParams for schema generation
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = (peContent[key][selectedLang] || peContent[key]['en'])!

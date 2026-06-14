@@ -119,7 +119,7 @@ export function middleware(request: NextRequest) {
   // off the URL, not the query string — the <html lang="..."> attribute must match.
   const pathLocale = url.pathname.match(PATH_LOCALE_RE)?.[1]
   const lang = url.searchParams.get('lang') || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = pathLocale ?? (validLangs.includes(lang) ? lang : 'en')
 
   const cookieLang = request.cookies.get('pq_lang')?.value

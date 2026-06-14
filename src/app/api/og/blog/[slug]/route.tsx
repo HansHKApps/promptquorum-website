@@ -16,7 +16,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   // Extract language from query param, default to 'en'
   const url = new URL(request.url)
   const lang = (url.searchParams.get('lang') || 'en') as Language
-  const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+  const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   const post = blogContent[postId][selectedLang] || blogContent[postId]['en']

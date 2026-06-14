@@ -391,4 +391,392 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
+  ko: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-12',
+    theme: 'Knowledge & Research',
+    title: 'AI 지식 마감 날짜, 실시간 검색, 그리고 GEO: 완전 가이드',
+    seoTitle: 'AI 지식 마감 날짜 및 GEO 전략 2026 — 로컬 LLM 중심',
+    intro: '**모든 AI 모델에는 지식 마감 날짜(Knowledge Cutoff)가 있습니다 — 학습 데이터가 끝나는 경계선입니다. 하지만 클라우드 모델과 로컬 모델은 이 한계를 근본적으로 다른 방식으로 다룹니다.** 이 가이드는 마감 날짜와 실시간 검색의 차이를 설명하고, 주요 모델별 동작 방식을 정리하며, 사용자와 AI 생성 답변에 노출되길 원하는 기업 모두를 위한 전략적 시사점을 도출합니다 — 로컬 LLM은 클라우드 모델과 완전히 다른 GEO 전략이 필요하다는 핵심 인사이트를 포함하여.',
+    metaDescription: 'AI 지식 마감 날짜 완전 가이드: Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma, Phi의 검증된 날짜 — 클라우드 AI vs 로컬 LLM GEO 전략 포함. 로컬 모델에는 SEO가 아닌 RAG가 필요합니다.',
+    publishDate: '2026-06-12',
+    dateModified: CUTOFF_DATA_LAST_VERIFIED,
+    lastFactChecked: CUTOFF_DATA_LAST_VERIFIED,
+    readTime: '16분 읽기',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'AI 지식 마감 날짜',
+    audience: '사용자, 제품 팀, 그리고 AI 모델이 정보를 어디서 얻는지 — 그리고 어떻게 대응해야 하는지를 이해해야 하는 마케터',
+    current_models_mentioned: [
+      'Claude Opus 4.8', 'ChatGPT', 'GPT-5.5', 'GPT-4o', 'Gemini 3.1 Pro',
+      'Grok 4.3', 'Mistral Large 3', 'DeepSeek-V3', 'Llama 4 Scout', 'Qwen3 14B',
+      'Gemma 3 27B', 'Phi-4', 'Perplexity',
+    ],
+    leadAnswerBlock: '**AI 지식 마감 날짜란 모델의 학습 데이터가 끝나는 날짜입니다.** 클라우드 모델은 내장 웹 검색(ChatGPT → Bing, Gemini → Google, Grok → X)을 통해 부분적으로 보완합니다. 로컬 LLM에는 검색 레이어가 없어 마감 날짜가 절대적입니다. GEO 전략 측면에서: 클라우드 AI에 노출되려면 검색을 최적화하세요. 로컬 AI에 노출되려면 RAG 파이프라인을 구축하세요 — SEO만으로는 웹을 검색하지 않는 모델에 도달할 수 없습니다.',
+    quickFacts: [
+      '**클라우드 모델 6개** 포함 — 1차 출처 링크와 함께 검증된 마감 날짜',
+      '**로컬/오픈웨이트 모델 6개** 포함 — 모두 검색 레이어 "없음"',
+      '**Gemma 3 27B**는 현재 로컬 모델 중 가장 이른 검증된 마감 날짜: 2024년 8월',
+      '**Phi-4**의 마감 날짜는 2024년 6월 — 로컬 중 두 번째로 이른 검증 날짜',
+      '**Grok 4.3**은 기본 검색 레이어가 일반 웹이 아닌 소셜 플랫폼(X/Twitter)인 유일한 클라우드 모델',
+      '**GEO 시사점**: Llama/Qwen을 내부적으로 배포하는 기업은 해당 기업이 직접 구축한 RAG 파이프라인을 통해서만 도달할 수 있음',
+    ],
+    toc: [
+      { label: '핵심 요점', anchor: 'key-takeaways' },
+      { label: '보이지 않는 한계: 마감 날짜의 실체', anchor: 'the-invisible-limit' },
+      { label: '마감 날짜 vs 실시간 검색: 결정적 차이', anchor: 'cutoff-vs-live-search' },
+      { label: '전체 데이터 표: 모든 모델', anchor: 'full-model-table' },
+      { label: '로컬 LLM 문제: 동결된 뇌로 실행하기', anchor: 'local-llm-problem' },
+      { label: '사용자를 위한 시사점', anchor: 'implications-for-users' },
+      { label: '기업을 위한 시사점: GEO 전략', anchor: 'geo-strategy' },
+      { label: 'GEO 해결책: 해자 구축하기', anchor: 'geo-solution' },
+      { label: '자주 묻는 질문', anchor: 'faq-knowledge-cutoffs' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      proficiencyLevel: 'Intermediate',
+      dependencies: 'LLM 작동 방식에 대한 기본 이해',
+      headline: 'AI 지식 마감 날짜, 실시간 검색, 그리고 GEO: 완전 가이드',
+      description: '모든 주요 클라우드 및 로컬 모델에 대한 검증 데이터와 함께한 AI 지식 마감 날짜 완전 가이드, 로컬 LLM에 SEO가 아닌 RAG가 필요한 이유를 포함한 GEO 전략 시사점.',
+      datePublished: '2026-06-12',
+      dateModified: CUTOFF_DATA_LAST_VERIFIED,
+      inLanguage: 'ko',
+      keywords: [
+        'AI 지식 마감 날짜', '지식 마감 날짜', '로컬 LLM 마감', 'GEO 전략',
+        '생성형 엔진 최적화', 'RAG vs SEO', 'ChatGPT 지식 마감',
+        'Claude 지식 마감', 'Llama 마감', 'Gemma 마감', 'Phi-4 마감',
+        'AI 학습 마감 2026', 'AI 실시간 검색', 'Bing AI 검색', '로컬 LLM 한계',
+      ],
+      about: [
+        { '@type': 'Thing', name: 'AI 지식 마감 날짜' },
+        { '@type': 'Thing', name: '생성형 엔진 최적화' },
+        { '@type': 'Thing', name: '로컬 LLM' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
+        width: 1200,
+        height: 630,
+      },
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/knowledge-cutoffs-and-geo',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'AI 지식 마감 날짜란 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'AI 지식 마감 날짜는 모델의 학습 데이터가 끝나는 날짜입니다. 모델은 이 날짜 이후에 발생한 사건, 제품, 연구, 콘텐츠에 대한 정보가 전혀 없습니다. 클라우드 모델은 내장 웹 검색을 통해 부분적으로 보완할 수 있지만, 로컬 LLM은 그렇지 않아 마감 날짜가 절대적입니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '기본 모델의 학습 마감이 있음에도 ChatGPT가 최근 이벤트를 아는 이유는 무엇입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과로 응답을 보완합니다. 즉, 기본 모델의 학습 데이터에 고정된 마감 날짜(GPT-5.5 학습 마감은 2025년 8월; 레거시 GPT-4o는 2023년 10월)가 있더라도 최근 이벤트에 대한 사실 질문에 답할 수 있습니다. 학습 마감은 여전히 마감 이후 주제에 대한 맥락적 이해를 제한합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '아닙니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 새 모델 버전이 출시될 때(예: Llama 4 Scout)는 새로운 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 모델은 스스로 업데이트되지 않습니다. 현재 정보에 접근하려면 쿼리 시 문서를 가져와 모델의 컨텍스트 윈도우에 주입하는 RAG(검색 증강 생성) 파이프라인을 구축해야 합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GEO(생성형 엔진 최적화)는 브랜드 또는 콘텐츠를 AI 생성 답변에 노출시키는 실천입니다. 클라우드 AI 모델에서 GEO는 SEO와 겹칩니다 — Bing, Google, X 검색에서 좋은 순위를 얻으면 ChatGPT, Gemini, Grok에 인용될 수 있습니다. 로컬 LLM의 경우 모델이 웹을 검색하지 않으므로 검색을 통한 GEO는 불가능합니다. 로컬 LLM에 도달하는 유일한 방법은 해당 모델을 운영하는 조직이 구축한 RAG 파이프라인을 통해서입니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '가장 최근 지식 마감 날짜를 가진 AI 모델은 어느 것입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '검증된 1차 출처 마감 날짜 중: Claude Opus 4.8이 2026년 1월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가집니다. GPT-5.5는 2025년 8월. Grok 4.3은 2024년 11월. Gemini 3.1 Pro는 2025년 1월. DeepSeek-V3은 2024년 7월. Gemma 3 27B는 2024년 8월. Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4, Qwen3, Mistral Large를 포함한 여러 현재 모델은 정확한 마감 날짜를 공개적으로 공시하지 않았습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '아닙니다. 검색 엔진 최적화는 로컬에서 실행되는 LLM에 영향을 줄 수 없습니다. 모델이 웹 검색을 수행하지 않기 때문입니다. 로컬 LLM 출력에 나타나려면: (1) 마감 날짜 이전에 모델의 학습 데이터에 포함되어 있었거나, (2) 모델을 배포하는 조직이 구축한 RAG 파이프라인에 포함되어야 합니다. 이것은 전통적인 SEO나 클라우드 AI GEO와 근본적으로 다른 채널입니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '기본적으로 실시간 웹을 검색하는 클라우드 AI 모델은 어느 것입니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'ChatGPT는 기본적으로 Bing을 검색합니다(유료 티어). Gemini 3.1 Pro는 기본적으로 Google 검색을 사용합니다. Grok 4.3은 기본적으로 X(Twitter)를 검색합니다. Perplexity는 모든 쿼리에 웹 검색 네이티브입니다. Claude는 명시적인 개발자 도구 활성화가 필요하며 기본적으로 검색하지 않습니다. DeepSeek과 Mistral Large는 기본 검색이 없습니다. 모든 로컬 LLM(Llama, Qwen, Gemma, Phi, Mistral 오픈 웨이트)은 검색 기능이 없습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '로컬 LLM에서 현재 정보가 필요할 때 어떻게 해야 합니까?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'RAG(검색 증강 생성) 파이프라인을 구축하십시오. RAG 시스템은 쿼리 시 — 웹 검색, 내부 데이터베이스, 또는 문서 저장소에서 — 관련 최신 문서를 검색하여 응답을 생성하기 전에 LLM의 컨텍스트 윈도우에 주입합니다. 인기 있는 로컬 RAG 도구로는 LlamaIndex, LangChain, 검색 레이어가 있는 Ollama 등이 있습니다. LLM은 동결된 학습 데이터에만 의존하는 대신 주입된 문서를 기반으로 추론합니다.',
+          },
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          '모든 AI 모델에는 지식 마감 날짜가 있습니다 — 학습 데이터가 끝나고 이벤트, 제품, 정보에 대한 인식이 없는 확정 날짜',
+          '클라우드 모델(ChatGPT, Gemini, Grok)은 학습 데이터 위에 실시간 웹 검색을 추가하여 사실 쿼리에 대한 마감 날짜를 부분적으로 재정의합니다',
+          '로컬 LLM(Llama, Qwen, Gemma, Phi, 오픈웨이트 Mistral)에는 검색 레이어가 없습니다 — 마감 날짜는 절대적이며 RAG 시스템 없이는 재정의할 수 없습니다',
+          'GEO(생성형 엔진 최적화)를 위해: 클라우드 AI에 노출되려면 전통적인 검색 최적화(Bing, Google, X)가 필요하고; 로컬 AI에 노출되려면 RAG 파이프라인이 필요합니다 — SEO로는 웹을 한 번도 접촉하지 않는 모델에 도달할 수 없습니다',
+          '검증된 마감 날짜: Claude Opus 4.8 = 2026년 1월(신뢰 가능); GPT-5.5 = 2025년 8월; Gemini 3.1 Pro = 2025년 1월; Grok 4.3 = 2024년 11월; Gemma 3 27B = 2024년 8월; DeepSeek-V3 = 2024년 7월; Phi-4 = 2024년 6월; GPT-4o(레거시) = 2023년 10월',
+          'Llama 4, Qwen3, Mistral Large 3을 포함한 여러 주요 모델은 정확한 마감 날짜를 공개적으로 공시하지 않았습니다',
+        ],
+      },
+      invisible_limit: {
+        id: 'the-invisible-limit',
+        title: '보이지 않는 한계: 지식 마감 날짜의 실체',
+        content: [
+          '<strong>지식 마감 날짜는 AI 모델이 더 이상 학습 데이터를 받지 않는 날짜입니다.</strong> 모델은 해당 날짜까지 방대한 양의 텍스트 — 웹 페이지, 책, 코드, 연구 논문 — 를 읽었으며, 그 이후에는 아무것도 없습니다. 마감 이후에 발생한 이벤트, 제품 출시, 새로운 연구, 가격 변경, 회사 리브랜딩, 또는 기타 개발 사항은 모델에 보이지 않습니다.',
+          '이것은 사용자가 종종 놓치는 체계적인 실패 모드를 만듭니다: AI는 아무것도 모르는 주제에 대해 자신감 있고 잘 구성된 답변을 제공합니다. 왜냐하면 모델이 자신이 무엇을 모르는지 모르기 때문입니다. 2023년 마감이 있는 모델에 2025년 제품에 대해 물어보면 모델은 (믿을 만한 허위 정보를) 꾸며내거나, 올바르게 무지를 인정하거나, 또는 — 가장 위험하게 — 현재 크게 구식이 된 이전 버전 제품에 기반한 답변을 제공할 것입니다.',
+          '많은 클라우드 제품이 이제 기본 모델 위에 실시간 검색을 추가하여 일반 사용자에게 마감 날짜를 보이지 않게 만들기 때문에 혼란이 가중됩니다. ChatGPT가 오늘의 뉴스에 대한 질문에 답할 때 Bing을 사용하는 것입니다 — 학습 데이터가 아닙니다. 그 검색 레이어를 제거하면 모델은 몇 달 또는 몇 년 전 지식으로 작동하게 됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: '빠른 참조',
+            text: '마감 날짜 표만 필요하신가요? <a href="/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">AI 지식 마감 날짜 치트 시트</a>를 확인하세요 — 모든 주요 모델에 대한 스캔 가능한 참조 표입니다.',
+          },
+        ],
+      },
+      cutoff_vs_search: {
+        id: 'cutoff-vs-live-search',
+        title: '마감 날짜 vs 실시간 검색: 모든 것을 바꾸는 차이',
+        content: [
+          '<strong>AI 지식 한계를 이해하는 데 가장 중요한 구분은 학습 마감(모델 속성)과 실시간 검색(제품 기능) 사이입니다.</strong> 클라우드 AI 제품이 두 가지를 매끄럽게 혼합하기 때문에 종종 혼동됩니다.',
+          '<strong>학습 마감</strong>은 모델 가중치에 내장되어 있습니다. 모델을 재학습하거나 파인튜닝하지 않고는 변경할 수 없습니다. ChatGPT, API, 또는 서드파티 도구를 통해 실행되는 GPT-4o의 모든 복사본은 동일한 2023년 10월 마감 날짜를 가집니다.',
+          '<strong>실시간 검색 레이어</strong>는 제품 수준에서 통합된 외부 도구입니다. ChatGPT가 현재 정보가 필요할 때 Bing의 API를 쿼리하고, 현재 결과를 가져와 추론 능력으로 합성합니다. 이것은 추론 시에 발생하며 제품 팀이 켜고 끌 수 있습니다.',
+        ],
+        columns: ['모델 / 제품', '검색 레이어', '검색 트리거', '참고'],
+        rows: [
+          { '모델 / 제품': 'GPT-5.5 (ChatGPT)', '검색 레이어': 'Bing', '검색 트리거': '자동 — 모델이 결정', '참고': 'ChatGPT Plus/Pro에서 기본 켜짐; 원시 API 호출에서는 꺼짐' },
+          { '모델 / 제품': 'Gemini 3.1 Pro', '검색 레이어': 'Google 검색', '검색 트리거': '자동 — 모델이 결정', '참고': 'Vertex AI 개발자를 위한 Google Grounding API 제공' },
+          { '모델 / 제품': 'Grok 4.3 (X.com)', '검색 레이어': 'X (Twitter)', '검색 트리거': '자동 — 모델이 결정', '참고': 'DeepSearch = 더 넓은 웹 검색, 옵트인' },
+          { '모델 / 제품': 'Perplexity', '검색 레이어': '멀티소스 웹', '검색 트리거': '항상 — 모든 쿼리', '참고': '설계상 검색 우선; 출처 인용' },
+          { '모델 / 제품': 'Claude (Anthropic)', '검색 레이어': 'Brave / 웹 (도구)', '검색 트리거': '개발자 옵트인만', '참고': '기본 꺼짐; API 도구 구성 필요' },
+          { '모델 / 제품': 'DeepSeek (클라우드)', '검색 레이어': '없음', '검색 트리거': '해당 없음', '참고': '검색 레이어 없음; 마감 날짜가 경성 한계' },
+          { '모델 / 제품': 'Mistral (클라우드)', '검색 레이어': '없음', '검색 트리거': '해당 없음', '참고': '검색 레이어 없음; 마감 날짜가 경성 한계' },
+          { '모델 / 제품': '모든 로컬 LLM', '검색 레이어': '없음', '검색 트리거': '해당 없음', '참고': '기본적으로 인터넷 접근 없음; 최신성을 위해 RAG 필요' },
+        ],
+      },
+      full_table: {
+        id: 'full-model-table',
+        title: '전체 검증 마감 데이터: 모든 주요 모델',
+        content: [
+          '아래 표는 모델 카드, 공식 문서, 동료 심사 기술 보고서 등 1차 출처 데이터만 사용합니다. 1차 출처가 없는 경우 마감 날짜는 추정이 아닌 "공개적으로 공시되지 않음"으로 표시됩니다.',
+          '<strong>클라우드 모델:</strong>',
+        ],
+        columns: ['모델', '벤더', '마감 날짜', '검증됨', '기본 검색', '검색 레이어'],
+        rows: CLOUD_MODELS.map(m => ({
+          '모델': m.modelName,
+          '벤더': m.vendor,
+          '마감 날짜': m.cutoffDate,
+          '검증됨': m.cutoffVerified ? '✓' : '—',
+          '기본 검색': m.hasLiveSearchDefault ? '예' : (m.searchLayer === 'Tool-use only' ? '도구 사용만' : '아니오'),
+          '검색 레이어': m.searchLayer,
+        })),
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: '클라우드 모델 중 Claude만이 웹 검색에 명시적인 개발자 구성이 필요합니다 — 나머지는 모두 최종 사용자에게 기본적으로 실시간 검색이 켜져 있습니다.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: '클라우드 AI 모델은 질문에 답하는 사이에 검색할 수 있는 연구자와 같습니다. 로컬 AI 모델은 고정된 날짜 이후 완전히 오프라인 상태인 연구자와 같습니다.',
+          },
+        ],
+      },
+      local_table_section: {
+        id: 'local-llm-table',
+        title: '로컬 / 오픈웨이트 모델: 검증된 마감 날짜',
+        content: [
+          '<strong>로컬 오픈웨이트 모델 — 모두 검색 레이어 "없음":</strong>',
+        ],
+        columns: ['모델', '벤더', '마감 날짜', '검증됨', '배포', '라이선스'],
+        rows: LOCAL_MODELS.map(m => ({
+          '모델': m.modelName,
+          '벤더': m.vendor,
+          '마감 날짜': m.cutoffDate,
+          '검증됨': m.cutoffVerified ? '✓ 1차 출처' : '— 공시 없음',
+          '배포': m.deployment,
+          '라이선스': m.license,
+        })),
+        callouts: [
+          {
+            type: 'warning',
+            label: '핵심 인사이트',
+            text: '이 표의 모든 로컬 모델은 검색 레이어가 "없음"입니다. 이것은 특정 모델의 한계가 아닙니다 — 로컬로 배포된 LLM의 구조적 특성입니다. 명시적으로 프로그래밍되지 않는 한 네트워크 접근이 없습니다.',
+          },
+        ],
+      },
+      local_problem: {
+        id: 'local-llm-problem',
+        title: '로컬 LLM 문제: 동결된 뇌로 실행하기',
+        content: [
+          '<strong>Ollama, LM Studio, llama.cpp, 또는 기타 실행기를 통해 로컬 LLM을 실행할 때 지식이 완전히 동결된 모델을 실행하는 것입니다.</strong> "약간 구식"이 아닙니다. "대부분 최신"도 아닙니다. 고정된 날짜에 완전히 동결되어 있습니다.',
+          '이것은 단순한 불편함이 아닙니다. 근본적인 아키텍처 특성입니다. 집에 전화, 백그라운드 업데이트, 자동으로 지식을 갱신하는 모델이 없습니다. 디스크의 가중치가 바로 그 가중치입니다 — 모델이 아는 모든 것을 인코딩하며, 실행 사이에 변경되지 않습니다.',
+          '이것은 특정하고 예측 가능한 실패 패턴을 만듭니다. 마감 이후 리브랜딩한 회사에 대해 질문하는 로컬 실행 모델은 이전 이름을 사용할 것입니다. 마감 이후 출시된 제품에 대해 질문하는 모델은 모른다고 말하거나 — 더 문제적으로 — 그런 제품이 어떨지에 대한 그럴듯한 설명을 꾸며낼 것입니다.',
+          '<strong>로컬 LLM으로 구축된 수천 개의 애플리케이션 — 내부 챗봇, 코드 어시스턴트, 문서 분석기 — 모두 이 동결된 지식 문제를 공유합니다.</strong> 내부적으로 Llama, Qwen, Gemma, 또는 Phi를 배포하는 모든 조직은 RAG 시스템을 구축하지 않는 한 모델의 학습 마감 이후 발생한 것을 문자 그대로 알 수 없는 소프트웨어를 실행하고 있습니다.',
+        ],
+        columns: ['시나리오', '검색이 있는 클라우드 LLM', 'RAG 없는 로컬 LLM'],
+        rows: [
+          { '시나리오': '오늘의 뉴스 질문', '검색이 있는 클라우드 LLM': 'Bing/Google에서 검색; 현재 답변', 'RAG 없는 로컬 LLM': '무지를 인정하거나 환각' },
+          { '시나리오': '2025년 제품 출시 질문', '검색이 있는 클라우드 LLM': '웹 검색; 현재 사양', 'RAG 없는 로컬 LLM': '마감 이후라면 지식 없음' },
+          { '시나리오': '회사(마감 이후)에 대한 질문', '검색이 있는 클라우드 LLM': '검색을 통해 웹사이트 검색 가능', 'RAG 없는 로컬 LLM': '찾을 수 없음; 학습 데이터에 없음' },
+          { '시나리오': '경쟁사 리브랜딩 질문', '검색이 있는 클라우드 LLM': '검색에서 현재 이름 찾기', 'RAG 없는 로컬 LLM': '학습에서 이전 이름 사용' },
+          { '시나리오': '새로운 규정 질문', '검색이 있는 클라우드 LLM': '현재 법적 텍스트 검색', 'RAG 없는 로컬 LLM': '규정 이전 지식만' },
+          { '시나리오': 'AI 모델 순위 질문', '검색이 있는 클라우드 LLM': '벤치마크 검색; 대부분 최신', 'RAG 없는 로컬 LLM': '마감 날짜에 동결; 구식 순위' },
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: '로컬 LLM 한계',
+            text: '마감 날짜를 넘어 로컬 LLM이 할 수 없는 것에 대한 전체 분석은 <a href="/local-llms/local-llm-limitations" class="text-primary hover:underline">로컬 LLM 한계: 할 수 없는 것들</a>을 참조하세요.',
+          },
+        ],
+      },
+      user_implications: {
+        id: 'implications-for-users',
+        title: '사용자를 위한 시사점: AI 답변을 신뢰하는 방법',
+        content: [
+          '<strong>가장 중요한 규칙: 항상 답변이 모델의 마감 날짜 이후에 변경되었을 수 있는지 자문하십시오.</strong> 그렇다면 독립적으로 확인하십시오 — 특히 의료, 법적, 금융, 기술 주제에 대해.',
+          '다른 AI 시스템은 마감 후 공백을 다르게 처리합니다. 각 시스템의 동작 방식을 이해하면 답변을 얼마나 신뢰할지 조정하는 데 도움이 됩니다.',
+        ],
+        columns: ['AI 시스템', '마감 후 동작', '현재 정보 신뢰도', '개선 방법'],
+        rows: [
+          { 'AI 시스템': 'ChatGPT (유료)', '마감 후 동작': '자동으로 Bing 검색', '현재 정보 신뢰도': '사실은 높음; 뉘앙스는 낮음', '개선 방법': '출처 인용 요청; 주요 주장 교차 확인' },
+          { 'AI 시스템': 'Gemini (유료)', '마감 후 동작': '자동으로 Google 검색', '현재 정보 신뢰도': '사실은 높음; 뉘앙스는 낮음', '개선 방법': '그라운딩 활성화; 인용된 URL 검토' },
+          { 'AI 시스템': 'Grok (X.com)', '마감 후 동작': '자동으로 X 게시물 검색', '현재 정보 신뢰도': '소셜 트렌드에 좋음; 사실은 고르지 않음', '개선 방법': '더 깊은 웹 커버리지를 위해 DeepSearch 사용' },
+          { 'AI 시스템': 'Claude (무료/프로)', '마감 후 동작': '기본적으로 학습 데이터만 사용', '현재 정보 신뢰도': '중간 — 2026년 1월 신뢰할 수 있는 마감', '개선 방법': '현재 텍스트를 컨텍스트에 붙여넣기; API 사용자는 검색 도구 활성화 가능' },
+          { 'AI 시스템': 'Perplexity', '마감 후 동작': '항상 먼저 웹 검색', '현재 정보 신뢰도': '높음 — 검색 네이티브 제품', '개선 방법': '설계상 이미 출처 인용' },
+          { 'AI 시스템': '모든 로컬 LLM', '마감 후 동작': '학습 데이터만 사용 — 재정의 없음', '현재 정보 신뢰도': '마감 후 주제에서 매우 낮음', '개선 방법': 'RAG 파이프라인 구축; 수동으로 컨텍스트 붙여넣기' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: '환각 위험',
+            text: '가장 높은 환각 위험은 모델이 마감 날짜 이후 내용에 대해 질문받을 때인데, 그것이 모델이 알고 있는 것과 그럴듯하게 유사해 보일 때입니다. 모델은 무지를 인정하지 않고 구식 학습 데이터를 기반으로 자신감 있는 답변을 제공할 것입니다.',
+          },
+        ],
+      },
+      geo_strategy: {
+        id: 'geo-strategy',
+        title: '기업을 위한 시사점: AI 시스템별 GEO 전략',
+        content: [
+          '<strong>GEO(생성형 엔진 최적화)는 브랜드, 제품, 또는 콘텐츠를 AI 생성 답변에 노출시키는 실천입니다.</strong> 대부분의 AI 시스템에서 GEO는 SEO와 유사하게 작동합니다 — AI가 검색 엔진에서 콘텐츠를 검색하므로 Bing이나 Google에서 좋은 순위를 얻으면 AI 답변에 직접 반영됩니다.',
+          '하지만 로컬 LLM은 이 모델을 완전히 깨뜨립니다. 로컬에 배포된 Llama나 Qwen은 웹을 검색하지 않습니다. 검색을 통해 답변에 최적화할 수 없습니다 — 마감 전에 학습 데이터에 있었거나, 배포 조직이 RAG를 통해 콘텐츠를 주입하는 경우에만 모델이 언급할 것입니다.',
+          '이 표는 각 AI 시스템에 대한 GEO 채널을 매핑합니다:',
+        ],
+        columns: ['AI 시스템', 'GEO 채널', '최적화 대상', '로컬 배포가 이것을 변경합니까?'],
+        rows: [
+          { 'AI 시스템': 'GPT-5.5 (ChatGPT)', 'GEO 채널': 'Bing 검색 검색', '최적화 대상': 'Bing SEO: 기술 SEO, Bing 웹마스터 도구, 구조화 데이터', '로컬 배포가 이것을 변경합니까?': '예 — 로컬 OpenAI API 호출에는 Bing 없음; 마감 날짜가 경성' },
+          { 'AI 시스템': 'Gemini 3.1 Pro', 'GEO 채널': 'Google 검색 그라운딩', '최적화 대상': 'Google SEO + 구조화 데이터(FAQ, HowTo, Article 스키마)', '로컬 배포가 이것을 변경합니까?': '아직 아님 — 2026년 6월 기준 Gemini는 클라우드 전용' },
+          { 'AI 시스템': 'Grok 4.3', 'GEO 채널': 'X (Twitter) 콘텐츠', '최적화 대상': 'X 존재: 인증 계정, 고참여 게시물, X 커뮤니티', '로컬 배포가 이것을 변경합니까?': '아직 아님 — 2026년 6월 기준 Grok은 클라우드 전용' },
+          { 'AI 시스템': 'Perplexity', 'GEO 채널': '웹 네이티브 검색', '최적화 대상': '모든 검색 엔진 + 권위 있는 출처 인용, 명확한 구조화 콘텐츠', '로컬 배포가 이것을 변경합니까?': '아니오 — Perplexity는 설계상 웹 네이티브' },
+          { 'AI 시스템': 'Claude (API)', 'GEO 채널': '도구 사용 검색(Brave/웹) — 옵트인', '최적화 대상': '일반 웹 존재; 스니펫 적합성을 위한 구조화 콘텐츠', '로컬 배포가 이것을 변경합니까?': '예 — 많은 Claude 배포에서 검색이 비활성화되어 있음' },
+          { 'AI 시스템': 'Llama (로컬)', 'GEO 채널': 'RAG 파이프라인만', '최적화 대상': 'RAG: 구조화 데이터 형식, 지식 베이스, 문서 API', '로컬 배포가 이것을 변경합니까?': '이것이 바로 로컬 배포입니다 — SEO는 관련 없음' },
+          { 'AI 시스템': 'Qwen / Gemma / Phi (로컬)', 'GEO 채널': 'RAG 파이프라인만', '최적화 대상': 'RAG: 배포 조직의 문서 수집 파이프라인', '로컬 배포가 이것을 변경합니까?': '이것이 바로 로컬 배포입니다 — SEO는 관련 없음' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: '로컬 LLM GEO 사각지대',
+            text: '대부분의 GEO 가이드는 클라우드 AI에만 집중합니다 — Bing이나 Google 검색을 위해 최적화하라고 말합니다. 그 조언은 Llama, Qwen, Gemma, 또는 Phi의 내부 배포에 도달하는 데 쓸모가 없습니다. 이 모델들은 검색하지 않습니다. 작동하는 유일한 GEO 채널은 모델을 배포하는 조직이 RAG 파이프라인에 콘텐츠를 포함하도록 설득하는 것입니다.',
+          },
+        ],
+      },
+      geo_solution: {
+        id: 'geo-solution',
+        title: 'GEO 해결책: 두 AI 유형 모두를 위한 해자 구축',
+        content: [
+          '<strong>2026년의 완전한 GEO 전략은 두 가지 병렬 트랙이 필요합니다: 클라우드 AI를 위한 검색 최적화와 로컬 AI를 위한 RAG 준비성.</strong> 대부분의 조직은 첫 번째 트랙만 실행하고 있습니다.',
+          '<strong>트랙 1 — 클라우드 AI(검색 기반 GEO):</strong> 전통적인 SEO 기법이 AI 특정 추가 사항과 함께 적용됩니다. 콘텐츠는 스니펫 적합성을 위해 구조화되어야 하고(FAQ 및 HowTo JSON-LD 스키마), 사실적으로 정확해야 하며(AI 모델은 수정 이력이 있는 페이지 인용을 피합니다), 권위 있어야 합니다(Bing 및 Google 품질 신호가 AI 인용 가능성에 직접 반영됩니다). Grok의 경우 X 존재(인증 계정, 참여율, 팔로워 수)가 브랜드가 Grok 답변에 나타나는지를 결정합니다.',
+          '<strong>트랙 2 — 로컬 AI(RAG 기반 GEO):</strong> 검색을 통해 로컬 LLM에 최적화할 수 없습니다. 경로는 완전히 다릅니다: (1) RAG 파이프라인이 소비하는 형식(Markdown, JSON-LD, OpenAPI 사양, 구조화 FAQ)으로 기계 판독 가능한 지식 베이스 생성; (2) 오픈 데이터 이니셔티브에 참여하여 RAG 시스템을 구축하는 조직이 정보를 사용할 수 있게 하기; (3) 로컬 LLM을 배포하는 기업 고객과 직접 관계를 구축하고 데이터 파트너십 계약 제안; (4) 콘텐츠를 RAG 파이프라인에 포함시키는 것을 간단하게 만드는 SDK 또는 API 제공.',
+          '대부분의 회사에서 트랙 1은 SEO의 일환으로 이미 진행 중입니다. 트랙 2는 새로운 작업이 필요합니다 — 구체적으로 인간 독서가 아닌 기계 수집에 최적화된 형식으로 콘텐츠를 생성하는 것입니다.',
+        ],
+        numberedItems: [
+          'AI 가시성 감사: 어떤 AI 시스템이 브랜드를 언급합니까? ChatGPT, Gemini, Grok, Perplexity, 그리고 로컬 Llama/Qwen 배포를 별도로 테스트하십시오',
+          '클라우드 AI 공백의 경우: 구조화 데이터 마크업 적용(FAQPage, HowTo, TechArticle, Product), Bing 웹마스터 존재 개선, E-E-A-T 신호 강화',
+          '로컬 AI 공백의 경우: RAG 시스템이 수집할 수 있는 기계 판독 가능한 지식 베이스(구조화 JSON, Markdown 문서, OpenAPI 사양) 생성',
+          '브랜드 사실을 표준적이고 변경되지 않는 형식으로 문서화하십시오 — 모델 이름, 설명, 기능, 가격 — 각 버전 변경 시 업데이트',
+          '모든 주요 페이지에 llms.txt 파일(AI 크롤러를 위한 일반 텍스트 사이트 설명) 및 구조화 데이터 게시',
+          'AI 시스템 전반에 걸쳐 분기별로 언급율 추적 — 전통적인 검색보다 빠르게 변화하는 환경',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: '로컬 RAG 리소스',
+            text: '자체 LLM 배포에 최신 지식을 제공하기 위한 로컬 RAG의 기술적 구현은 <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">로컬 RAG 2026: 최고의 도구 및 프레임워크</a>와 <a href="/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">로컬 LLM을 사용한 기업 RAG</a>를 참조하세요.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq-knowledge-cutoffs',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: 'AI 지식 마감 날짜란 무엇입니까?',
+            a: '지식 마감 날짜는 모델의 학습 데이터가 끝나는 날짜입니다. 모델은 이 날짜 이후에 발생한 이벤트, 제품, 연구, 또는 콘텐츠에 대한 정보가 전혀 없습니다. 클라우드 모델은 웹 검색을 통해 부분적으로 보완할 수 있지만, 로컬 LLM은 그렇지 않습니다.',
+          },
+          {
+            q: 'ChatGPT의 마감이 2023년 10월이라면 왜 최근 이벤트를 알고 있습니까?',
+            a: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과와 학습 데이터 추론을 합성합니다. 기본 GPT-4o 모델은 여전히 2023년 10월 학습 마감 날짜를 가지고 있습니다 — 보이는 것은 검색 레이어이지 업데이트된 학습 데이터가 아닙니다.',
+          },
+          {
+            q: 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?',
+            a: '아닙니다 — 자동으로는 안 됩니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 각 새로운 모델 릴리스(Llama 4 Scout, Qwen3 14B)는 다른 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 복사본은 고정된 지식을 가집니다. 현재 정보를 얻으려면 RAG 파이프라인을 구축하십시오.',
+          },
+          {
+            q: 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?',
+            a: 'GEO(생성형 엔진 최적화)는 콘텐츠를 AI 생성 답변에 노출시키는 분야입니다. 클라우드 AI의 경우 GEO는 검색 최적화를 통해 작동합니다 — Bing/Google에서 순위를 얻으면 인용됩니다. 로컬 LLM의 경우 모델이 검색하지 않기 때문에 이것은 구조적으로 불가능합니다. 로컬 LLM GEO는 배포 조직의 RAG 파이프라인이 필요합니다.',
+          },
+          {
+            q: '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?',
+            a: '1차 출처 검증 마감 날짜 중: Claude Opus 4.8이 2026년 1월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가집니다. GPT-5.5는 2025년 8월. Gemini 3.1 Pro는 2025년 1월. Grok 4.3은 2024년 11월. DeepSeek-V3와 Gemma 3 27B는 2024년 7월~8월경. Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4, Qwen3, Mistral Large를 포함한 여러 현재 모델은 정확한 날짜를 공개적으로 공시하지 않았습니다.',
+          },
+          {
+            q: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?',
+            a: '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 유일한 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.',
+          },
+          {
+            q: '마감 날짜의 영향을 받을 수 있는 AI 답변을 어떻게 사실 확인해야 합니까?',
+            a: '세 가지 신호가 마감 위험을 시사합니다: (1) 주제가 특정 버전, 가격, 인물, 또는 이벤트를 포함; (2) 빠르게 변화하는 산업의 것을 물어봄; (3) AI 답변에 인용이 없음. 이 중 어느 하나가 적용되면 1차 출처에서 확인하십시오 — 모델의 자신감 있는 어조는 신뢰도 지표가 아닙니다.',
+          },
+          {
+            q: 'AI 답변에서 실시간 검색을 사용했는지 알 수 있는 방법이 있습니까?',
+            a: '종종 그렇습니다: Perplexity는 항상 출처 인용을 표시합니다. Gemini는 그라운딩이 사용될 때 Google 검색 아이콘을 표시합니다. Grok은 X 검색 결과를 나타냅니다. ChatGPT는 지구본 아이콘을 표시하며 출처를 표시하도록 요청할 수 있습니다. Claude는 기본적으로 검색하지 않으므로 지표가 필요 없습니다. 로컬 LLM은 검색하지 않으므로 지표가 없습니다 — 답변은 항상 학습 데이터에서 나옵니다.',
+          },
+        ],
+      },
+    },
+  },
 }
