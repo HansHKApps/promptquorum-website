@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'For EU GDPR compliance, regulated industries, or any setting where source-code auditability is mandated, Jan is the only choice of the three. AnythingLLM is open-source on GitHub but ships closed-source telemetry in the official builds; LM Studio is fully proprietary.',
+            text: 'For EU GDPR compliance, regulated industries, or any setting where source-code auditability is mandated, Jan is the strongest choice: fully AGPL, zero telemetry by design. AnythingLLM is open-source (MIT) with anonymous opt-out telemetry — disable it in Settings > Privacy or via DISABLE_TELEMETRY=true. LM Studio is proprietary with no published source code.',
           },
         ],
       },
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use these for sensitive legal or medical documents?',
-            a: 'All three run fully offline once installed and never transmit document contents. For regulated workflows (HIPAA, GDPR, attorney-client privilege), Jan + Documents is the strongest pick because the entire stack is open source (AGPL) and auditable, with zero telemetry by default. AnythingLLM is also a defensible choice in audited environments using the open-source Docker build (skip the desktop installer telemetry). LM Studio is fully proprietary — confirm with your compliance team before using on regulated data.',
+            a: 'All three run fully offline once installed and never transmit document contents. For regulated workflows (HIPAA, GDPR, attorney-client privilege), Jan + Documents is the strongest pick because the entire stack is open source (AGPL) and auditable, with zero telemetry by default. AnythingLLM is a defensible choice in audited environments — it is open source (MIT) with anonymous opt-out telemetry you can disable in Settings > Privacy or via DISABLE_TELEMETRY=true. LM Studio is fully proprietary — confirm with your compliance team before using on regulated data.',
           },
         ],
       },
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour conformité EU GDPR, industries régulées ou audit de code source obligatoire, Jan est seul choix valide des trois. AnythingLLM open source sur GitHub mais telemetry fermé en builds officiels ; LM Studio complètement propriétaire.',
+            text: 'Pour conformité EU GDPR, industries régulées ou audit de code source obligatoire, Jan est le choix le plus solide : entièrement AGPL, zéro télémétrie par conception. AnythingLLM est open source (MIT) avec télémétrie anonyme opt-out — à désactiver dans Paramètres > Confidentialité ou via DISABLE_TELEMETRY=true. LM Studio est propriétaire, sans code source publié.',
           },
         ],
       },
@@ -1420,7 +1420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je utiliser pour documents confidentiels légaux/médicaux ?',
-            a: 'Tous 100% offline post-install, jamais contenus transmis. Workflows régulés (HIPAA, GDPR, privilege) : Jan+Docs choix force (AGPL auditable, zéro telemetry). AnythingLLM aussi défendable environnement audité Docker open-source (skip installer telemetry). LM Studio propriétaire — confirmez compliance avant données régulées.',
+            a: 'Tous 100% offline post-install, jamais contenus transmis. Workflows régulés (HIPAA, GDPR, privilege) : Jan+Docs choix le plus solide (AGPL auditable, zéro télémétrie). AnythingLLM défendable en environnement audité — open source (MIT), télémétrie anonyme opt-out désactivable dans Paramètres > Confidentialité ou via DISABLE_TELEMETRY=true. LM Studio propriétaire — confirmez compliance avant données régulées.',
           },
         ],
       },
