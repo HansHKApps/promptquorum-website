@@ -1087,7 +1087,7 @@ const HUB_THEME_TEXT_PT: Array<{ badge: string; question: string; description: s
 
 type HubHeroL10n = { h1: string; intro: string; introBold: string; keyTakeaways: string[] }
 
-const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubHeroL10n> = {
+const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko', HubHeroL10n> = {
   en: {
     h1: 'Power Local LLM — Build a Private AI Stack That Replaces Your SaaS Bills',
     intro: 'Local LLMs are no longer just chatbots. In 2026 they run inside your code editor, query your private documents, automate workflows, and replace tools you currently pay monthly for.',
@@ -1172,6 +1172,30 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubH
       'Privacidade, arbitragem de custos e confiabilidade offline são as três forças que impulsionam a adoção.',
     ],
   },
+  ar: {
+    h1: 'Power Local LLM — أنشئ مكدس ذكاء اصطناعي خاص يُغني عن اشتراكات SaaS',
+    intro: 'لم تعد نماذج اللغة المحلية مجرد روبوتات دردشة. في 2026 تعمل داخل محرر الكود الخاص بك، وتستعلم عن مستنداتك الخاصة، وتؤتمت سير العمل، وتحل محل الأدوات التي تدفع ثمنها شهرياً.',
+    introBold: 'إذا كنت قادراً على تشغيل Ollama أو LM Studio، يمكنك استبدال 5 إلى 10 اشتراكات SaaS قبل نهاية هذا الشهر.',
+    keyTakeaways: [
+      'منظومة LLM المحلية في 2026 = أدوات الدردشة وأنظمة RAG ووكلاء البرمجة والتطبيقات الإبداعية والاستدلال على الهاتف المحمول ووكلاء استدعاء الأدوات.',
+      'أفضل نقاط البداية: LM Studio (للمبتدئين)، Ollama + Open WebUI (التوازن)، Continue.dev (للمطورين).',
+      'أكبر تحول في 2026: أطر البرمجة الذكية تحل محل فواتير API السحابية البالغة 200 دولار/شهر.',
+      'نماذج LLM للهاتف والحافة هي الشريحة الأسرع نمواً — تعمل على الهواتف والأجهزة اللوحية ووحدات NPU.',
+      'الخصوصية وتحسين التكاليف والموثوقية دون اتصال هي القوى الثلاث التي تدفع الاعتماد.',
+    ],
+  },
+  ko: {
+    h1: 'Power Local LLM — SaaS 비용을 대체하는 프라이빗 AI 스택 구축',
+    intro: '로컬 LLM은 더 이상 단순한 챗봇이 아닙니다. 2026년에는 코드 에디터 안에서 실행되고, 개인 문서를 쿼리하며, 워크플로를 자동화하고, 월정액을 지불하던 도구들을 대체합니다.',
+    introBold: 'Ollama 또는 LM Studio를 실행할 수 있다면, 이번 달 말까지 5~10개의 SaaS 구독을 절약할 수 있습니다.',
+    keyTakeaways: [
+      '2026년 로컬 LLM 생태계 = 채팅 도구, RAG 시스템, 코딩 에이전트, 크리에이티브 앱, 모바일 추론, 도구 호출 에이전트.',
+      '최적 진입점: LM Studio(초보자), Ollama + Open WebUI(균형), Continue.dev(개발자).',
+      '2026년 최대 변화: 에이전틱 코딩 하네스가 월 200달러 클라우드 API 비용을 대체.',
+      '모바일 및 엣지 LLM이 가장 빠르게 성장하는 분야 — 스마트폰, 태블릿, NPU에서 실행.',
+      '개인 정보 보호, 비용 절감, 오프라인 신뢰성이 채택을 이끄는 세 가지 힘.',
+    ],
+  },
 }
 
 type HubLabelsL10n = {
@@ -1182,7 +1206,7 @@ type HubLabelsL10n = {
   relatedReadingLinks: Array<{ href: string; label: string }>
 }
 
-const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubLabelsL10n> = {
+const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko', HubLabelsL10n> = {
   en: {
     faqHeading: 'Frequently Asked Questions',
     keyTakeawaysLabel: 'Key Takeaways',
