@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three handle 1,000-page documents on 16 GB RAM hardware, run offline, and store data locally',
           'For 5,000+ document libraries or fine-grained chunk control, escalate to a custom RAG stack',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'AnythingLLM, LM Studio, and Jan + Documents tested on 1,000-page documents. Built-in RAG with no vector database setup, no Python, no command line.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag',
       'author': {
@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Lokale KI-Apps mit integriertem RAG: Chat mit Ihren Dateien (ohne Setup)',
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei verarbeiten 1.000-Seiten-Dokumente auf 16-GB-RAM-Hardware, funktionieren offline und speichern Daten lokal',
           'Für Bibliotheken mit 5.000+ Dokumenten oder granulare Chunk-Kontrolle wechseln Sie zu einem benutzerdefinierten RAG-Stack',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -947,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'AnythingLLM, LM Studio und Jan + Dokumente getestet auf 1.000-Seiten-Dokumenten. Integriertes RAG ohne Vektor-Datenbank-Setup, ohne Python, ohne Kommandozeile.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/de/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/de/api/og/local-ai-app-with-built-in-rag',
       'author': {
@@ -1031,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Applications IA locales avec RAG intégré : Discutez avec vos fichiers (sans configuration)',
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois gèrent 1 000 pages sur hardware 16 GB, fonctionnent hors ligne, stockage local',
           'Pour +5 000 documents ou contrôle granulaire, passez à un stack RAG personnalisé',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -1445,7 +1445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'AnythingLLM, LM Studio et Jan+Documents testés documents 1 000 pages. RAG intégré sans base vectorielle, sans Python, sans commandes.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/fr/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/fr/api/og/local-ai-app-with-built-in-rag',
       'author': {
@@ -1529,7 +1529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'ローカルAIアプリ（内蔵RAG対応）：ファイルとチャット（セットアップ不要）',
@@ -1555,7 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3つすべて16GB RAM環境で1,000ページドキュメント対応、オフライン動作、ローカルストレージ',
           '5,000+ドキュメント、細かいチャンク制御が必要なら、カスタムRAGスタックへの移行を検討',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'AnythingLLM、LM Studio、Jan + ドキュメント を 1,000 ページドキュメントでテスト。内蔵 RAG、ベクトル DB 不要、Python 不要、コマンドラインなし。',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/ja/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/ja/api/og/local-ai-app-with-built-in-rag',
       'author': {
@@ -2031,7 +2031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '内置RAG的本地AI应用：与文件聊天（无需配置）',
@@ -2057,7 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三个都在16GB RAM硬件上处理1,000页文档、离线运行、本地存储',
           '对于5,000+文档或细粒度分块控制，升级到自定义RAG堆栈',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -2445,7 +2445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'AnythingLLM、LM Studio和Jan + 文档在1,000页文档上测试。内置RAG无向量库、无Python、无命令行。',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/zh/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/zh/api/og/local-ai-app-with-built-in-rag',
       'author': {
@@ -2533,7 +2533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Apps de IA local con RAG integrado: Chatea con tus archivos (sin configuración)',
@@ -2577,7 +2577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Las tres manejan documentos de 1.000 páginas en hardware con 16 GB de RAM, funcionan sin conexión y almacenan datos localmente',
           'Para bibliotecas de 5.000+ documentos o control granular de fragmentos, escala a un stack RAG personalizado',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -2965,7 +2965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'AnythingLLM, LM Studio y Jan + Documentos probados en documentos de 1.000 páginas. RAG integrado sin base de datos vectorial, sin Python, sin línea de comandos.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/es/api/og/local-ai-app-with-built-in-rag',
       'author': {
@@ -3049,7 +3049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Apps de IA local com RAG integrado: Converse com seus arquivos (sem configuração)',
@@ -3093,7 +3093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os três lidam com documentos de 1.000 páginas em hardware com 16 GB de RAM, funcionam offline e armazenam dados localmente',
           'Para bibliotecas de 5.000+ documentos ou controle granular de fragmentos, escale para um stack RAG personalizado',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -3481,7 +3481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'AnythingLLM, LM Studio e Jan + Documentos testados em documentos de 1.000 páginas. RAG integrado sem banco de dados vetorial, sem Python, sem linha de comando.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/pt/api/og/local-ai-app-with-built-in-rag',
       'author': {
@@ -3566,7 +3566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'تطبيقات الذكاء الاصطناعي المحلي مع RAG مدمج: تحدّث مع ملفاتك (بدون إعداد)',
@@ -3610,7 +3610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الثلاثة تتعامل مع مستندات 1000 صفحة على أجهزة بـ16 جيجابايت RAM، وتعمل بدون اتصال وتُخزّن البيانات محلياً.',
           'لمكتبات 5000+ مستند أو تحكم دقيق في التقطيع، انتقل إلى stack RAG مخصص.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -3971,7 +3971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'اختُبرت تطبيقات AnythingLLM وLM Studio وJan + المستندات على مستندات بـ1000 صفحة. RAG مدمج بدون قاعدة بيانات متجهية، وبدون Python، وبدون سطر أوامر.',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-app-with-built-in-rag',
       image: 'https://www.promptquorum.com/ar/api/og/local-ai-app-with-built-in-rag',
       author: {
@@ -4056,7 +4056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '내장 RAG가 있는 로컬 AI 앱: 설정 없이 파일과 대화하기',
@@ -4100,7 +4100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 앱 모두 16GB RAM 하드웨어에서 1,000페이지 문서를 처리하고 오프라인으로 작동하며 데이터를 로컬에 저장합니다',
           '5,000개 이상의 문서 라이브러리나 세분화된 청크 제어가 필요하다면 맞춤형 RAG 스택으로 확장하십시오',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-14',
       },
     },
     toc: [
@@ -4498,7 +4498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         '1,000페이지 문서에서 테스트된 AnythingLLM, LM Studio 및 Jan + 문서. 벡터 데이터베이스, Python, 명령줄 없는 내장 RAG.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-06-14',
       'inLanguage': 'ko',
       'url': 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/ko/api/og/local-ai-app-with-built-in-rag',
