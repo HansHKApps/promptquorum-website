@@ -15,6 +15,7 @@ import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
+import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
 import { CopyButton } from '@/components/CopyButton'
 import { NextStepBlock } from '@/components/NextStepBlock'
 import { StickyNextStepBar } from '@/components/StickyNextStepBar'
@@ -714,6 +715,13 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
 
         {/* Cross-language links */}
         <LangLinksBar cluster="local-llms" slug={slug} availableLangs={Object.keys(articleData)} initialLang={lang} />
+
+        {/* Affiliate disclosure — neutral third-party-link notice */}
+        {(article as any).affiliateDisclosure && (
+          <p className="affiliate-disclosure text-xs text-text-secondary bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 mb-6">
+            {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
+          </p>
+        )}
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (
