@@ -5,9 +5,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Best Local LLM Apps for Android?',
-    seoTitle: 'Best Android LLM Apps 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Top Android apps for local LLMs: MLC Chat (easiest), Pocketpal (flexible), Termux + Ollama (full control). All run offline. Quick answer from PromptQuorum.',
+    seoTitle: 'Best Offline AI Apps for Android 2026: Quick Picks',
+    metaDescription: 'Run AI offline on Android in 2026. Top pick: MLC Chat for most phones — easy setup, no cloud needed. Plus Pocketpal and Termux + Ollama. RAM guide included.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
@@ -19,8 +20,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     quickAnswerTop: {
       en: {
-        question: 'Best local LLM apps for Android?',
-        answer: 'The top Android apps for running LLMs locally are MLC Chat for easy setup with preoptimized models, Pocketpal for flexible GGUF loading, and Termux with Ollama for full control. All run fully offline.',
+        question: 'What is the best local LLM app for Android in 2026?',
+        answer: 'For most people, MLC Chat is the best local LLM app for Android in 2026 — it installs from Google Play in under a minute, uses preoptimized models, and runs fully offline without any technical setup. Pocketpal is the upgrade for users who want to load custom GGUF models; Termux + Ollama is for developers who want the full Ollama CLI on their phone.',
         bullets: [
           'MLC Chat: easiest setup, preoptimized models for Android',
           'Pocketpal: flexible GGUF model loading',
@@ -83,6 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'The Three Working Options',
         content: [
+          '<strong>Looking for the technical deep-dive?</strong> For performance benchmarks, NPU speed data on real Android phones, and all 6 apps compared — see our <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">in-depth Android local-LLM technical guide</a>. This page gives the quick "which app to install" answer.',
           '<strong>As of May 2026, there are three practical ways to run a local LLM on Android: MLC Chat (Machine Learning Compilation), Pocketpal AI, and Termux with Ollama.</strong> All three run 100% offline after initial model download — no API key or internet connection required.',
           'MLC Chat uses the MLC-LLM compilation framework to pre-optimize model weights for mobile hardware. You download it from Google Play, select a supported model (Llama 3, Gemma, Phi), and the model downloads and runs directly on the device. Setup takes under 10 minutes.',
           'Pocketpal AI is built by the Hugging Face community and supports loading GGUF model files directly from Hugging Face. This means you can run any GGUF-compatible model, not just a prebuilt list. The tradeoff is a slightly more complex setup requiring manual model selection and download.',
@@ -101,7 +103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'A flagship Android phone with 8+ GB RAM handles a 2–3B model at 4–8 tok/s on CPU. Mid-range phones from 2023–2024 are slower (1–3 tok/s) — usable for batch tasks, frustrating for live chat. Do not attempt 7B models on any device with less than 8 GB RAM.',
           '<strong>Termux + Ollama is the most powerful option but has the steepest setup curve.</strong> You install Termux from F-Droid, then run <code>pkg install ollama</code> inside the terminal. Once installed, all standard Ollama commands work including <code>ollama pull</code> and <code>ollama run</code>. This approach is best for developers who already use Ollama on desktop.',
           'Battery drain matters at the 7B tier and above. A 30-minute chat session with Llama 3 8B Q4 on a flagship phone uses 8–12% battery on average. For frequent use, plug in or stick to 2–3B models like Phi-3 Mini and Gemma 2B that draw less power.',
-          'For a full guide to running LLMs on Android including hardware requirements and model recommendations, see the <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">best local LLM apps for Android guide</a>.',
+          'Want the technical deep-dive — performance benchmarks, NPU speeds on real phones, and quantization trade-offs? See our <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">in-depth Android local-LLM technical guide</a>.',
           'For Japan-specific app options with Xperia and AQUOS device support, see our <a href="/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">best Android LLM apps for Japan guide</a>.',
         ],
       },
@@ -132,8 +134,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Tool Comparisons',
     title: 'Die besten lokalen LLM-Apps für Android?',
-    seoTitle: 'Android LLM-Apps 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Beste Android-LLM-Apps: MLC Chat (einfachste), Pocketpal (flexibel), Termux + Ollama (volle Kontrolle). Alle offline. Schnelle Antwort von PromptQuorum.',
+    seoTitle: 'Beste LLM-Apps für Android 2026: Schnelle Empfehlungen',
+    metaDescription: 'KI offline auf Android 2026: MLC Chat ist die Top-Empfehlung für die meisten Geräte. Pocketpal für eigene Modelle, Termux + Ollama für Power-User. RAM-Guide inklusive.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -163,6 +165,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Die drei funktionierenden Optionen',
         content: [
+          '<strong>Technischen Tiefen-Dive gesucht?</strong> Benchmarks, NPU-Geschwindigkeitsdaten auf echten Geräten und alle 6 Android-LLM-Apps im Vergleich: <a href="/de/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">ausführlicher technischer Android-LLM-Leitfaden</a>. Diese Seite liefert die schnelle Installationsempfehlung.',
           '<strong>Stand Mai 2026 gibt es drei praktische Möglichkeiten, ein lokales LLM auf Android zu betreiben: MLC Chat (Machine Learning Compilation), Pocketpal AI und Termux mit Ollama.</strong> Alle drei laufen nach dem ersten Modell-Download zu 100 % offline — kein API-Key oder Internetzugang erforderlich.',
           'MLC Chat verwendet das MLC-LLM-Kompilierungsframework, um Modellgewichte für mobile Hardware vorzuoptimieren. Sie laden es aus dem Google Play Store herunter, wählen ein unterstütztes Modell (Llama 3, Gemma, Phi) aus, und das Modell wird direkt auf dem Gerät heruntergeladen und ausgeführt. Die Einrichtung dauert unter 10 Minuten.',
           'Pocketpal AI wurde von der Hugging-Face-Community entwickelt und unterstützt das direkte Laden von GGUF-Modelldateien von Hugging Face. Das bedeutet, dass Sie ein beliebiges GGUF-kompatibles Modell ausführen können, nicht nur eine vordefinierte Liste. Der Kompromiss ist eine etwas komplexere Einrichtung mit manueller Modellauswahl und -download.',
@@ -181,7 +184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ein Android-Flaggschiff mit 8+ GB RAM verarbeitet ein 2–3B-Modell mit 4–8 tok/s auf der CPU. Mittelklasse-Handys aus 2023–2024 sind langsamer (1–3 tok/s) — für Batch-Aufgaben nutzbar, für Live-Chat frustrierend. Versuchen Sie keine 7B-Modelle auf Geräten mit weniger als 8 GB RAM.',
           '<strong>Termux + Ollama ist die leistungsstärkste Option, hat aber die steilste Einrichtungskurve.</strong> Sie installieren Termux von F-Droid und führen dann <code>pkg install ollama</code> im Terminal aus. Nach der Installation funktionieren alle Standard-Ollama-Befehle, einschließlich <code>ollama pull</code> und <code>ollama run</code>. Dieser Ansatz eignet sich am besten für Entwickler, die Ollama bereits auf dem Desktop verwenden.',
           'Der Akkuverbrauch spielt ab dem 7B-Bereich eine Rolle. Eine 30-minütige Chat-Session mit Llama 3 8B Q4 auf einem Flaggschiff-Handy verbraucht im Durchschnitt 8–12 % Akku. Für häufigen Einsatz am Ladekabel bleiben oder auf 2–3B-Modelle wie Phi-3 Mini und Gemma 2B wechseln, die weniger Strom benötigen.',
-          'Einen vollständigen Leitfaden zum Ausführen von LLMs auf Android mit Hardware-Anforderungen und Modellempfehlungen finden Sie im <a href="/de/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Leitfaden für die besten lokalen LLM-Apps für Android</a>.',
+          'Ausführliche Benchmarks, NPU-Daten auf echten Android-Geräten und Quantisierungsvergleiche gewünscht? Dann der <a href="/de/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">technische Android-LLM-Tiefen-Leitfaden</a>.',
           'Für Japan-spezifische App-Optionen mit Xperia- und AQUOS-Geräteunterstützung, lesen Sie unseren <a href="/de/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">Leitfaden für die besten Android-LLM-Apps in Japan</a>.',
         ],
       },
@@ -212,8 +215,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Tool Comparisons',
     title: 'Meilleures applications LLM locales pour Android ?',
-    seoTitle: 'Meilleures apps LLM Android | Prompt Bites | PromptQuorum',
-    metaDescription: 'Apps Android pour LLM locaux : MLC Chat (plus facile), Pocketpal (flexible), Termux + Ollama. Toutes hors ligne. Réponse rapide de PromptQuorum.',
+    seoTitle: 'Apps LLM Offline Android 2026 : Sélection Rapide',
+    metaDescription: 'IA hors ligne sur Android 2026 : MLC Chat est le top pick pour la plupart des téléphones. Pocketpal et Termux + Ollama comparés. Guide RAM inclus.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -243,6 +246,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Les trois options qui fonctionnent',
         content: [
+          '<strong>Besoin de la comparaison technique complète ?</strong> Benchmarks NPU sur des téléphones réels et 6 apps Android comparées : <a href="/fr/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guide technique Android LLM approfondi</a>. Cette page donne la réponse rapide "quelle app installer".',
           '<strong>En mai 2026, il existe trois méthodes pratiques pour exécuter un LLM local sur Android : MLC Chat (Machine Learning Compilation), Pocketpal AI et Termux avec Ollama.</strong> Les trois fonctionnent 100 % hors ligne après le téléchargement initial du modèle — aucune clé API ni connexion internet requise.',
           'MLC Chat utilise le framework de compilation MLC-LLM pour préoptimiser les poids des modèles pour le matériel mobile. Vous le téléchargez depuis Google Play, sélectionnez un modèle pris en charge (Llama 3, Gemma, Phi), et le modèle se télécharge et s\'exécute directement sur l\'appareil. La configuration prend moins de 10 minutes.',
           'Pocketpal AI est développée par la communauté Hugging Face et prend en charge le chargement de fichiers GGUF directement depuis Hugging Face. Cela signifie que vous pouvez exécuter n\'importe quel modèle compatible GGUF, pas seulement une liste prédéfinie. La contrepartie est une configuration légèrement plus complexe nécessitant une sélection et un téléchargement manuel du modèle.',
@@ -261,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Un téléphone Android haut de gamme avec 8+ Go de RAM gère un modèle 2–3B à 4–8 tok/s sur CPU. Les téléphones milieu de gamme de 2023–2024 sont plus lents (1–3 tok/s) — utilisables pour les tâches en lot, frustrants pour le chat en direct. N\'essayez pas les modèles 7B sur un appareil avec moins de 8 Go de RAM.',
           '<strong>Termux + Ollama est l\'option la plus puissante mais présente la courbe de configuration la plus abrupte.</strong> Vous installez Termux depuis F-Droid, puis exécutez <code>pkg install ollama</code> dans le terminal. Une fois installé, toutes les commandes Ollama standard fonctionnent, y compris <code>ollama pull</code> et <code>ollama run</code>. Cette approche convient mieux aux développeurs qui utilisent déjà Ollama sur desktop.',
           'La consommation de batterie est importante à partir du niveau 7B. Une session de chat de 30 minutes avec Llama 3 8B Q4 sur un téléphone haut de gamme utilise en moyenne 8–12 % de batterie. Pour une utilisation fréquente, branchez l\'appareil ou restez sur des modèles 2–3B comme Phi-3 Mini et Gemma 2B qui consomment moins.',
-          'Pour un guide complet sur l\'exécution de LLMs sur Android incluant les exigences matérielles et les recommandations de modèles, consultez le <a href="/fr/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guide des meilleures applis LLM locales pour Android</a>.',
+          'Benchmarks techniques, données NPU sur matériel Android réel et compromis de quantisation : <a href="/fr/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guide technique Android LLM approfondi</a>.',
           'Pour des options d\'applications spécifiques au Japon avec les appareils Xperia et AQUOS, consultez notre <a href="/fr/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">guide des meilleures apps LLM Android pour le Japon</a>.',
         ],
       },
@@ -292,8 +296,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Tool Comparisons',
     title: 'Androidで最良のローカルLLMアプリは？',
-    seoTitle: 'Android最良ローカルLLMアプリ？ | Prompt Bites | PromptQuorum',
-    metaDescription: 'Android最良ローカルLLMアプリ：MLC Chat（最も簡単）、Pocketpal（柔軟）、Termux + Ollama（完全制御）。すべてオフライン動作。PromptQuorumによる簡潔な回答。',
+    seoTitle: 'Androidローカル AI アプリ 2026年：おすすめ 3 選クイックガイド',
+    metaDescription: 'Android 2026年のオフライン AI：MLC Chat がほとんどの端末に最適。Pocketpal と Termux + Ollama も比較。RAM ガイド付き。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -323,6 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '動作する3つの選択肢',
         content: [
+          '<strong>技術的な詳細が必要ですか？</strong> 実機ベンチマーク、NPU 速度データ、6 つの Android LLM アプリ比較は、<a href="/ja/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">詳細な Android LLM テクニカルガイド</a>をご覧ください。このページは「どのアプリをインストールすべきか」の素早い回答です。',
           '<strong>2026年5月時点で、AndroidでローカルLLMを実行するための実用的な3つの方法があります：MLC Chat（Machine Learning Compilation）、Pocketpal AI、Termux + Ollama。</strong> 3つすべてが最初のモデルダウンロード後は100%オフラインで動作します — APIキーやインターネット接続は不要です。',
           'MLC ChatはMLC-LLMコンパイルフレームワークを使用してモデルの重みをモバイルハードウェア向けに事前最適化します。Google Playからダウンロードし、サポートされているモデル（Llama 3、Gemma、Phi）を選択すると、モデルがデバイスに直接ダウンロードされて実行されます。セットアップは10分以内に完了します。',
           'Pocketpal AIはHugging Faceコミュニティによって開発され、Hugging FaceからGGUFモデルファイルを直接ロードできます。これにより、事前定義リストだけでなく、任意のGGUF互換モデルを実行できます。トレードオフは手動でのモデル選択とダウンロードが必要なやや複雑なセットアップです。',
@@ -341,7 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '8GB以上のRAMを搭載したAndroidフラッグシップは、CPU上で2–3Bモデルを4–8 tok/sで処理します。2023–2024年のミッドレンジスマートフォンは遅く（1–3 tok/s）、バッチタスクには使えますがライブチャットには不向きです。8GB RAM未満のデバイスで7Bモデルは使わないでください。',
           '<strong>Termux + Ollamaは最も強力な選択肢ですが、セットアップの難易度が最も高いです。</strong> F-DroidからTermuxをインストールし、ターミナル内で<code>pkg install ollama</code>を実行します。インストール後、<code>ollama pull</code>や<code>ollama run</code>を含むすべての標準Ollamaコマンドが動作します。このアプローチはデスクトップですでにOllamaを使用している開発者に最適です。',
           'バッテリー消費は7B以上のモデルで重要になります。フラッグシップスマートフォンでLlama 3 8B Q4を30分チャットすると、平均8–12%のバッテリーを消費します。頻繁に使用する場合は充電しながら使うか、Phi-3 MiniやGemma 2Bのような消費電力の少ない2–3Bモデルにとどめてください。',
-          'ハードウェア要件とモデル推奨を含むAndroidでのLLM実行の完全ガイドについては、<a href="/ja/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Androidの最良ローカルLLMアプリガイド</a>をご覧ください。',
+          'パフォーマンスベンチマーク、NPU データ、量子化の比較が必要な方へ：<a href="/ja/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">詳細な Android LLM テクニカルガイド</a>。',
           'XperiaやAQUOSデバイスへの日本固有のアプリについては、<a href="/ja/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">日本のAndroid向けベストLLMアプリガイド</a>をご覧ください。',
         ],
       },
@@ -372,8 +377,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Tool Comparisons',
     title: 'Android 上最好的本地 LLM 应用？',
-    seoTitle: 'Android 最佳本地 LLM 应用？ | Prompt Bites | PromptQuorum',
-    metaDescription: 'Android 最佳本地 LLM 应用：MLC Chat（最简单）、Pocketpal（灵活）、Termux + Ollama（完全控制）。全部离线运行。PromptQuorum 快速解答。',
+    seoTitle: 'Android 本地 LLM 应用 2026：精选快速推荐',
+    metaDescription: 'Android 2026 离线 AI：MLC Chat 为大多数手机首选，Pocketpal 适合自定义模型，Termux + Ollama 适合高级用户。含 RAM 指南。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -403,6 +408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '三种可用选项',
         content: [
+          '<strong>需要技术深度分析？</strong> 真实手机性能基准、NPU 速度数据和 6 款 Android LLM 应用对比，请参阅<a href="/zh/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">深度 Android LLM 技术指南</a>。本页提供"安装哪款应用"的快速答案。',
           '<strong>截至 2026 年 5 月，在 Android 上运行本地 LLM 有三种实用方法：MLC Chat（Machine Learning Compilation）、Pocketpal AI 和 Termux + Ollama。</strong> 三种方式在初始模型下载后均可 100% 离线运行——无需 API 密钥或网络连接。',
           'MLC Chat 使用 MLC-LLM 编译框架将模型权重预优化为适合移动硬件的格式。您从 Google Play 下载，选择支持的模型（Llama 3、Gemma、Phi），模型直接在设备上下载并运行。安装配置不到 10 分钟。',
           'Pocketpal AI 由 Hugging Face 社区开发，支持直接从 Hugging Face 加载 GGUF 模型文件。这意味着您可以运行任何兼容 GGUF 的模型，而不仅仅是预定义列表。代价是需要手动选择和下载模型，配置稍微复杂一些。',
@@ -421,7 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '配备 8+ GB 内存的 Android 旗舰机在 CPU 上处理 2–3B 模型可达 4–8 tok/s。2023–2024 年的中端手机较慢（1–3 tok/s）——适合批量任务，但实时对话体验较差。内存低于 8 GB 的设备不要尝试运行 7B 模型。',
           '<strong>Termux + Ollama 是最强大的选项，但安装难度最高。</strong> 您从 F-Droid 安装 Termux，然后在终端中运行 <code>pkg install ollama</code>。安装后，所有标准 Ollama 命令均可使用，包括 <code>ollama pull</code> 和 <code>ollama run</code>。这种方式最适合已在桌面使用 Ollama 的开发者。',
           '电池消耗在 7B 及以上模型时需要关注。在旗舰手机上使用 Llama 3 8B Q4 进行 30 分钟对话平均消耗 8–12% 电量。频繁使用时请插电，或选择 Phi-3 Mini 和 Gemma 2B 等耗电更少的 2–3B 模型。',
-          '有关在 Android 上运行 LLM 的完整指南（包括硬件要求和模型推荐），请参阅<a href="/zh/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">Android最佳本地LLM应用指南</a>。',
+          '技术深度分析——真实 Android 硬件上的 NPU 基准与量子化权衡：<a href="/zh/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">深度 Android LLM 技术指南</a>。',
           '如需Xperia和AQUOS设备的日本专用应用选项，请参阅我们的<a href="/zh/prompt-bites/best-local-llm-apps-japan-android" class="text-primary hover:underline">日本Android最佳LLM应用指南</a>。',
         ],
       },
@@ -452,8 +458,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Tool Comparisons',
     title: '¿Las mejores apps de LLM local para Android?',
-    seoTitle: 'Mejores apps Android para LLM 2026 | PromptQuorum',
-    metaDescription: 'Mejores apps Android para LLMs locales: MLC Chat (más fácil), PocketPal (flexible) y Termux + Ollama (control total). Todo funciona sin conexión.',
+    seoTitle: 'Mejores Apps LLM Offline Android 2026: Picks Rápidos',
+    metaDescription: 'IA sin conexión en Android 2026: MLC Chat es el top pick para la mayoría de móviles. Pocketpal y Termux + Ollama comparados. Guía de RAM incluida.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -489,6 +495,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Comparación rápida de las 3 mejores opciones',
         content: [
+          '<strong>¿Quieres el análisis técnico completo?</strong> Benchmarks de rendimiento, datos de NPU en teléfonos reales y 6 apps Android comparadas: <a href="/es/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guía técnica profunda de Android LLM</a>. Esta página te da la respuesta rápida "qué app instalar".',
           '<strong>MLC Chat (descarga más fácil)</strong> — Instala en 1 minuto desde Google Play. Incluye una lista seleccionada de modelos preoptimizados para Android (Phi-2, Llama 3B). Sin línea de comandos, sin configuración. La mejor opción para principiantes.',
           '<strong>Pocketpal AI (más flexible)</strong> — Carga cualquier modelo GGUF directamente desde Hugging Face. Requiere más configuración que MLC Chat pero te da libertad para elegir cualquier modelo. Interfaz de chat integrada.',
           '<strong>Termux + Ollama (control total)</strong> — Instala Ollama completo en Android. Todos los comandos de Ollama disponibles. Requiere terminal, 8+ GB RAM, conocimiento técnico. Para usuarios avanzados solo.',
@@ -500,6 +507,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Comienza con <strong>MLC Chat</strong> si nunca has ejecutado LLMs en tu teléfono. Es la opción más accesible.',
           'Usa <strong>Pocketpal</strong> si quieres control sobre qué modelos ejecutas y no quieres tocar la terminal.',
           'Elige <strong>Termux + Ollama</strong> si eres desarrollador o quieres Ollama completo en tu dispositivo.',
+          'Para análisis técnico profundo — benchmarks de NPU, datos de hardware Android real y comparativas de cuantización: <a href="/es/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guía técnica profunda de Android LLM</a>.',
         ],
       },
       faq: {
@@ -529,8 +537,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   pt: {
     theme: 'Tool Comparisons',
     title: 'Quais são os melhores apps de LLM local para Android?',
-    seoTitle: 'Melhores apps Android para LLM 2026 | PromptQuorum',
-    metaDescription: 'Melhores apps Android para LLMs locais: MLC Chat (mais fácil), PocketPal (flexível) e Termux + Ollama (controle total). Tudo funciona offline.',
+    seoTitle: 'Melhores Apps LLM Offline Android 2026: Escolhas Rápidas',
+    metaDescription: 'IA offline no Android 2026: MLC Chat é o top pick para a maioria dos celulares. Pocketpal e Termux + Ollama comparados. Guia de RAM incluído.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -566,6 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Comparação rápida das 3 melhores opções',
         content: [
+          '<strong>Quer a análise técnica completa?</strong> Benchmarks de desempenho, dados de NPU em celulares reais e 6 apps Android comparados: <a href="/pt/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guia técnico detalhado de Android LLM</a>. Esta página fornece a resposta rápida "qual app instalar".',
           '<strong>MLC Chat (download mais fácil)</strong> — Instala em 1 minuto a partir do Google Play. Inclui uma lista selecionada de modelos pré-otimizados para Android (Phi-2, Llama 3B). Sem linha de comando, sem configuração. A melhor opção para iniciantes.',
           '<strong>Pocketpal AI (mais flexível)</strong> — Carrega qualquer modelo GGUF diretamente do Hugging Face. Requer mais configuração do que o MLC Chat, mas dá liberdade para escolher qualquer modelo. Interface de chat integrada.',
           '<strong>Termux + Ollama (controle total)</strong> — Instala o Ollama completo no Android. Todos os comandos Ollama disponíveis. Requer terminal, 8+ GB de RAM, conhecimento técnico. Somente para usuários avançados.',
@@ -577,6 +586,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Comece com <strong>MLC Chat</strong> se nunca executou LLMs no seu telefone. É a opção mais acessível.',
           'Use <strong>Pocketpal</strong> se quiser controle sobre quais modelos executa e não quiser usar o terminal.',
           'Escolha <strong>Termux + Ollama</strong> se for desenvolvedor ou quiser o Ollama completo no seu dispositivo.',
+          'Para análise técnica aprofundada — benchmarks de NPU, dados de hardware Android real e comparações de quantização: <a href="/pt/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">guia técnico detalhado de Android LLM</a>.',
         ],
       },
       faq: {
@@ -606,8 +616,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Tool Comparisons',
     title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android؟',
-    seoTitle: 'أفضل تطبيقات LLM لـAndroid 2026: MLC Chat وPocketpal',
-    metaDescription: '3 تطبيقات تشغّل LLMs محلياً على Android دون إنترنت: MLC Chat (أسهل إعداد)، Pocketpal (GGUF مرن)، Termux + Ollama (تحكم كامل). تحتاج 4 GB RAM كحد أدنى.',
+    seoTitle: 'أفضل تطبيقات LLM بلا إنترنت على Android 2026: اختيارات سريعة',
+    metaDescription: 'ذكاء اصطناعي بلا إنترنت على Android 2026: MLC Chat الأفضل لمعظم الهواتف. مقارنة مع Pocketpal وTermux + Ollama. دليل RAM مضمّن.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -643,6 +653,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'مقارنة سريعة لأفضل 3 خيارات',
         content: [
+          '<strong>هل تريد التحليل التقني المعمّق؟</strong> بيانات NPU وقياسات الأداء على هواتف حقيقية و6 تطبيقات مقارنة: <a href="/ar/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">دليل Android LLM التقني المفصّل</a>. هذه الصفحة تقدّم الإجابة السريعة "أيّ تطبيق تثبّت؟".',
           '<strong>MLC Chat (التنزيل الأسهل)</strong> — يُثبَّت في دقيقة واحدة من Google Play. يتضمن قائمة منتقاة من النماذج المُحسَّنة مسبقاً لنظام Android (Phi-2، Llama 3B). لا سطر أوامر، لا إعداد. الخيار الأفضل للمبتدئين.',
           '<strong>Pocketpal AI (الأكثر مرونة)</strong> — يُحمِّل أي نموذج GGUF مباشرةً من Hugging Face. يتطلب إعداداً أكبر من MLC Chat لكنه يمنحك حرية اختيار أي نموذج. يتضمن واجهة دردشة مدمجة.',
           '<strong>Termux + Ollama (تحكم كامل)</strong> — يُثبّت Ollama الكاملة على Android. جميع أوامر Ollama متاحة. يتطلب طرفية و8 جيجابايت RAM أو أكثر ومعرفة تقنية. للمستخدمين المتقدمين فقط.',
@@ -654,6 +665,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'ابدأ بـ<strong>MLC Chat</strong> إذا لم تشغّل نماذج لغوية كبيرة على هاتفك من قبل. إنه الخيار الأكثر سهولة.',
           'استخدم <strong>Pocketpal</strong> إذا أردت التحكم في النماذج التي تشغّلها دون الحاجة إلى الطرفية.',
           'اختر <strong>Termux + Ollama</strong> إذا كنت مطوراً أو تريد Ollama الكاملة على جهازك.',
+          'للتحليل التقني المعمّق — بيانات NPU وقياسات الأداء على أجهزة Android حقيقية: <a href="/ar/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">دليل Android LLM التقني المفصّل</a>.',
         ],
       },
       faq: {
@@ -683,8 +695,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ko: {
     theme: 'Tool Comparisons',
     title: 'Android용 최고의 로컬 LLM 앱은 무엇입니까?',
-    seoTitle: 'Android 최고 LLM 앱 2026: MLC Chat, Pocketpal, Termux | PromptQuorum',
-    metaDescription: 'Android에서 로컬 LLM을 실행하는 최고의 앱: MLC Chat(가장 간편), Pocketpal(유연한 GGUF), Termux + Ollama(완전 제어). 모두 오프라인에서 작동합니다.',
+    seoTitle: 'Android 오프라인 AI 앱 2026: 빠른 추천 3선',
+    metaDescription: 'Android 2026 오프라인 AI: MLC Chat이 대부분의 기기에 최적. Pocketpal과 Termux + Ollama 비교. RAM 가이드 포함.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
@@ -764,6 +776,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '3가지 최고 옵션 빠른 비교',
         content: [
+          '<strong>기술적인 상세 분석이 필요하신가요?</strong> 실제 스마트폰 벤치마크, NPU 속도 데이터, 6개 Android LLM 앱 비교는 <a href="/ko/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">심층 Android LLM 기술 가이드</a>를 참조하세요. 이 페이지는 "어떤 앱을 설치할지" 빠른 답변을 제공합니다.',
           '<strong>MLC Chat(가장 간편한 다운로드)</strong> — Google Play에서 1분 만에 설치할 수 있습니다. Android용으로 사전 최적화된 모델 목록(Phi-2, Llama 3B)이 포함되어 있습니다. 명령줄이나 별도 설정이 필요 없으며 초보자에게 가장 적합한 선택입니다.',
           '<strong>Pocketpal AI(더 유연함)</strong> — Hugging Face에서 직접 GGUF 모델을 로드할 수 있습니다. MLC Chat보다 설정이 복잡하지만 원하는 모델을 자유롭게 선택할 수 있습니다. 통합 채팅 인터페이스가 제공됩니다.',
           '<strong>Termux + Ollama(완전 제어)</strong> — Android에 전체 Ollama를 설치합니다. 모든 Ollama 명령어를 사용할 수 있습니다. 터미널, 8GB 이상의 RAM, 기술적 지식이 필요하며 고급 사용자 전용입니다.',
@@ -804,7 +817,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Ollama 최고의 프론트엔드 비교](/ko/prompt-bites/best-frontend-for-ollama)',
           '[Jan vs LM Studio 비교](/ko/prompt-bites/jan-vs-lm-studio)',
-          '[Android 로컬 LLM 앱 종합 가이드](/ko/power-local-llm/best-local-llm-apps-android-2026)',
+          '[Android LLM 심층 기술 가이드 — NPU 속도, 벤치마크, 6개 앱 비교](/ko/power-local-llm/best-local-llm-apps-android-2026)',
         ],
       },
     },
