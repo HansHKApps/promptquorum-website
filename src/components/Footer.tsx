@@ -32,6 +32,7 @@ const ACTIVE_LANGS: { code: Language; label: string }[] = [
   { code: 'zh', label: '中文' },
   { code: 'es', label: 'Español' },
   { code: 'pt', label: 'Português' },
+  { code: 'ar', label: 'العربية' },
 ]
 
 const FOOTER_COPY: Record<Language, Record<string, string>> = {
