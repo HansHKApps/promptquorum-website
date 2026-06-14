@@ -17,6 +17,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '工具对比',
     es: 'Comparar herramientas',
     pt: 'Comparar ferramentas', // VERIFY
+    ko: '도구 비교',
   },
   features: {
     en: 'Features',
@@ -26,6 +27,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '功能',
     es: 'Características',
     pt: 'Recursos', // VERIFY
+    ko: '기능',
   },
   howItWorks: {
     en: 'How It Works',
@@ -35,6 +37,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '使用说明',
     es: 'Cómo funciona',
     pt: 'Como funciona', // VERIFY
+    ko: '작동 방식',
   },
   faq: {
     en: 'FAQ',
@@ -44,6 +47,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '常见问题',
     es: 'FAQ',
     pt: 'FAQ', // VERIFY
+    ko: 'FAQ',
   },
   blog: {
     en: 'Blog',
@@ -53,6 +57,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '博客',
     es: 'Blog',
     pt: 'Blog', // VERIFY
+    ko: '블로그',
   },
   promptEngineering: {
     en: 'Prompt Engineering',
@@ -62,6 +67,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '提示词工程',
     es: 'Prompt Engineering',
     pt: 'Prompt Engineering', // VERIFY
+    ko: '프롬프트 엔지니어링',
   },
   localLlms: {
     en: 'Local LLMs',
@@ -71,6 +77,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '本地LLM',
     es: 'LLMs locales',
     pt: 'LLMs locais', // VERIFY
+    ko: '로컬 LLM',
   },
   powerLocalLlm: {
     en: 'Power Local LLM',
@@ -80,6 +87,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '本地LLM进阶',
     es: 'LLM locales avanzados',
     pt: 'LLMs locais avançados',
+    ko: '로컬 LLM 활용',
   },
   promptBites: {
     en: 'Prompt Bites',
@@ -89,6 +97,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '提示词速答',
     es: 'Prompts en breve',
     pt: 'Prompts em resumo',
+    ko: '프롬프트 한입',
   },
   smartHome: {
     // Labels match the term each locale's cluster content uses (not machine-translated).
@@ -99,6 +108,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '智能家居',
     es: 'Smart Home',
     pt: 'Casa inteligente',
+    ko: '스마트 홈',
   },
   waitlist: {
     en: 'Waitlist',
@@ -108,6 +118,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '候补名单',
     es: 'Lista de espera',
     pt: 'Lista de espera', // VERIFY
+    ko: '대기자 명단',
   },
   skipToMain: {
     en: 'Skip to main content',
@@ -117,6 +128,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     zh: '跳转到主要内容',
     es: 'Ir al contenido principal',
     pt: 'Pular para o conteúdo principal', // VERIFY
+    ko: '본문으로 건너뛰기',
   },
 }
 
