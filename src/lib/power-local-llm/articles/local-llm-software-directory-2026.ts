@@ -9,16 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'The Complete Local LLM Software Directory: 70+ Tools to Run AI on Your Own Hardware (2026)',
-    seoTitle: 'Local LLM Tools 2026: 87-App Directory + Latest Updates',
+    seoTitle: '87 Local LLM Tools 2026: 9 Categories, Ollama to RAG',
     affiliateDisclosure: true,
     intro:
       'The local-LLM ecosystem in 2026 is large enough that picking the wrong tool first costs hours, not minutes. This directory catalogues 87 actively-maintained projects across nine layers — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice and multimodal, mobile clients, and specialized productivity plugins — with the description, licence, and primary URL for each. Use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',
     metaDescription:
-      '87 tools for running LLMs locally: Ollama, LM Studio, GPT4All, Jan.ai, plus mobile, RAG, voice & agents. Licences, links & latest versions. Updated June 2026.',
+      '87 local LLM tools: Ollama, LM Studio, GPT4All, Jan.ai, RAG, agents & mobile. 9 categories with licences, links & versions. Pick the right stack faster.',
     twitterDescription:
       '87 local-LLM tools across 9 categories — runtimes, desktop apps, web UIs, coding agents, RAG, multi-agent frameworks, voice, mobile. Licences, links & latest versions, updated June 2026. The "what exists" map before you commit to a stack.',
     current_models_mentioned: [],
@@ -422,16 +422,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Das vollständige lokale LLM Software-Verzeichnis: 70+ Tools für KI auf eigener Hardware (2026)',
-    seoTitle: 'Lokale LLM-Tools 2026: 87-App-Verzeichnis + Updates',
+    seoTitle: '87 Lokale LLM-Tools 2026: 9 Kategorien, Ollama bis RAG',
     affiliateDisclosure: true,
     intro:
       'Das lokale LLM-Ökosystem ist 2026 so groß geworden, dass die falsche Tool-Wahl am Anfang Stunden, nicht Minuten kostet. Dieses Verzeichnis katalogisiert 87 aktiv gepflegte Projekte in neun Schichten — Laufzeitumgebungen, Desktop-Apps, Web-UIs, Coding-Assistenten, RAG-Systeme, Agenten-Frameworks, Sprache und Multimodal, Mobile-Clients und spezialisierte Produktivitäts-Plugins — jeweils mit Beschreibung, Lizenz und primärer URL. Verwenden Sie es als Übersichtskarte des Ist-Zustands, bevor Sie sich für einen Stack entscheiden; jede Kategorie endet mit einem Link zum vertiefenden PromptQuorum-Vergleichsartikel für diese Schicht.',
     metaDescription:
-      '87 lokale-LLM-Tools in 9 Kategorien: Runtimes, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multiagenten, Sprache, Mobile — mit Lizenzen, Links & aktuellen Versionen. Stand Juni 2026.',
+      'Ollama, LM Studio, GPT4All, Jan.ai — 87 LLM-Tools in 9 Kategorien: Runtimes, RAG, Agenten, Sprache & Mobile. Lizenzen, Links & aktuelle Versionen. Juni 2026.',
     twitterDescription:
       '87 lokale-LLM-Tools in 9 Kategorien — Laufzeiten, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multi-Agenten-Frameworks, Sprache, Mobile. Lizenzen, Links & aktuelle Versionen, Stand Juni 2026. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     current_models_mentioned: [],
@@ -842,16 +842,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels LLM locaux : 70+ outils pour faire tourner l\'IA sur votre propre matériel (2026)',
-    seoTitle: 'Outils LLM locaux 2026 : 87 apps + mises à jour',
+    seoTitle: '87 outils LLM locaux 2026 : 9 catégories, Ollama au RAG',
     affiliateDisclosure: true,
     intro:
       'L\'écosystème LLM local en 2026 est assez vaste pour que le mauvais choix initial coûte des heures. Ce répertoire recense 87 projets activement maintenus en neuf couches — runtimes, applications bureau, interfaces web, assistants de codage, systèmes RAG, frameworks d\'agents, voix et multimodal, clients mobiles, plugins de productivité — avec description, licence et URL pour chacun. Utilisez-le comme carte d\'orientation avant de vous engager dans une stack.',
     metaDescription:
-      '87 outils LLM locaux en 9 catégories : runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile — avec licences, liens & versions à jour. Mis à jour en juin 2026.',
+      'Ollama, LM Studio, GPT4All, Jan.ai — 87 outils LLM locaux en 9 catégories : runtimes, RAG, agents, voix & mobile. Licences, liens & versions. Juin 2026.',
     twitterDescription:
       '87 outils LLM locaux en 9 catégories — runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile. Licences, liens & versions à jour, juin 2026. La carte d\'orientation avant de choisir votre stack.',
     current_models_mentioned: [],
@@ -1254,16 +1254,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす70以上のツール（2026年版）',
-    seoTitle: 'ローカルLLMツール2026：87アプリ一覧・最新アップデート',
+    seoTitle: 'ローカルLLM 87ツール2026：9カテゴリ完全一覧',
     affiliateDisclosure: true,
     intro:
       '2026年のローカルLLMエコシステムは、最初に間違ったツールを選ぶだけで数時間を無駄にするほど広大です。このディレクトリでは、ランタイム・デスクトップアプリ・Web UI・コーディングアシスタント・RAGシステム・エージェントフレームワーク・音声/マルチモーダル・モバイルクライアント・専門プラグインの9層にわたる87のプロジェクトを、説明・ライセンス・URLとともに掲載しています。スタックを決める前の「何が存在するか」を把握するための地図としてご活用ください。',
     metaDescription:
-      'ローカルLLMツール87件を9カテゴリで網羅：ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェント、音声、モバイル。ライセンス情報・リンク・最新バージョン付き。2026年6月更新。',
+      'Ollama・LM Studio・GPT4All・Jan.aiを含む87ローカルLLMツールを9カテゴリで比較：ランタイム、RAG、エージェント、音声、モバイル。ライセンス・リンク・最新版付き。2026年6月更新。',
     twitterDescription:
       'ローカルLLMツール87件を9カテゴリで網羅 — ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェントフレームワーク、音声、モバイル。ライセンス・リンク・最新版付き、2026年6月更新。スタックを決める前の「全体像」マップです。',
     current_models_mentioned: [],
@@ -1666,16 +1666,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地LLM软件完整目录：70+款工具，在自有硬件上运行AI（2026）',
-    seoTitle: '本地LLM工具2026：87款应用目录·最新更新',
+    seoTitle: '87个本地LLM工具2026：9大类，Ollama到RAG',
     affiliateDisclosure: true,
     intro:
       '2026年本地LLM生态系统已足够庞大，选错工具会浪费数小时而不只是几分钟。本目录整理了87个活跃维护的项目，覆盖九个层级——运行时、桌面应用、Web界面、编程助手、RAG系统、智能体框架、语音与多模态、移动端客户端以及专业化生产力插件——每项附有描述、许可证和主要链接。在确定技术栈之前，将其作为"现有工具"全景图使用；每个类别末尾附有PromptQuorum该层详细对比指南的链接。',
     metaDescription:
-      '87个本地LLM工具，涵盖9大类：运行时、桌面应用、Web界面、编程助手、RAG、多智能体、语音、移动端——含许可证、链接与最新版本。2026年6月更新。',
+      'Ollama、LM Studio、GPT4All、Jan.ai — 87个本地LLM工具，9大类：运行时、RAG、智能体、语音与移动端。含许可证、链接与最新版本。2026年6月更新。',
     twitterDescription:
       '87个本地LLM工具，9大类别——运行时、桌面应用、Web界面、编程助手、RAG、多智能体框架、语音、移动端。含许可证、链接与最新版本，2026年6月更新。确定技术栈前的"现有工具"全景图。',
     current_models_mentioned: [],
@@ -2078,16 +2078,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'El directorio completo de software LLM local: 70+ herramientas para ejecutar IA en tu propio hardware (2026)',
-    seoTitle: 'Herramientas LLM local 2026: 87 apps + últimas novedades',
+    seoTitle: '87 herramientas LLM local 2026: 9 categorías, Ollama a RAG',
     affiliateDisclosure: true,
     intro:
       'El ecosistema de LLM local en 2026 es lo suficientemente amplio como para que elegir la herramienta incorrecta al inicio cueste horas, no minutos. Este directorio cataloga 87 proyectos en mantenimiento activo en nueve capas — runtimes, aplicaciones de escritorio, interfaces web, asistentes de código, sistemas RAG, frameworks de agentes, voz y multimodal, clientes móviles y plugins de productividad especializados — con descripción, licencia y URL principal para cada uno. Úsalo como el mapa de "qué existe" antes de comprometerte con un stack; cada categoría termina con un enlace a la guía de comparación más detallada de PromptQuorum para esa capa.',
     metaDescription:
-      '87 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias, enlaces y últimas versiones. Actualizado en junio de 2026.',
+      'Ollama, LM Studio, GPT4All, Jan.ai — 87 herramientas LLM en 9 categorías: runtimes, RAG, agentes, voz & móvil. Licencias, enlaces & versiones. Junio 2026.',
     twitterDescription:
       '87 herramientas LLM local en 9 categorías — runtimes, apps de escritorio, interfaces web, agentes de código, RAG, frameworks multiagente, voz, móvil. Licencias, enlaces y últimas versiones, junio de 2026. El mapa de "qué existe" antes de elegir tu stack.',
     current_models_mentioned: [],
@@ -2494,7 +2494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-06-03',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -2503,16 +2503,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
-    seoTitle: 'Ferramentas LLM local 2026: 87 apps + últimas novidades',
+    seoTitle: '87 ferramentas LLM local 2026: 9 categorias, Ollama a RAG',
     affiliateDisclosure: true,
     intro:
       'O ecossistema de LLM local em 2026 é suficientemente amplo para que escolher a ferramenta errada no início custe horas, não minutos. Este diretório cataloga 87 projetos em manutenção ativa em nove camadas — runtimes, aplicativos de desktop, interfaces web, assistentes de código, sistemas RAG, frameworks de agentes, voz e multimodal, clientes móveis e plugins de produtividade especializados — com descrição, licença e URL principal para cada um. Use-o como o mapa de "o que existe" antes de se comprometer com um stack; cada categoria termina com um link para o guia de comparação mais detalhado do PromptQuorum para essa camada.',
     metaDescription:
-      '87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças, links e versões mais recentes. Atualizado em junho de 2026.',
+      'Ollama, LM Studio, GPT4All, Jan.ai — 87 ferramentas LLM em 9 categorias: runtimes, RAG, agentes, voz & mobile. Licenças, links & versões. Junho 2026.',
     twitterDescription:
       '87 ferramentas LLM local em 9 categorias — runtimes, apps de desktop, interfaces web, agentes de código, RAG, frameworks multiagente, voz, mobile. Licenças, links e versões mais recentes, junho de 2026. O mapa de "o que existe" antes de escolher seu stack.',
     current_models_mentioned: [],
@@ -2919,7 +2919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-06-03',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -2927,16 +2927,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: 70+ أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
-    seoTitle: '87 أداة LLM محلية في 2026: رuntimes وواجهات وRAG والصوت',
+    seoTitle: '87 أداة LLM محلية 2026: Ollama وRAG و9 فئات',
     affiliateDisclosure: true,
     intro:
       'منظومة النماذج اللغوية المحلية في 2026 واسعة بما يكفي لأن يكلفك اختيار الأداة الخاطئة في البداية ساعات لا دقائق. يُصنِّف هذا الدليل 87 مشروعاً نشطاً في تسع طبقات — رuntimes وتطبيقات سطح المكتب وواجهات الويب ومساعدو الكود وأنظمة RAG وأطر العملاء الذكيين والصوت والوسائط المتعددة والعملاء المحمولة والإضافات الإنتاجية المتخصصة — مع الوصف والترخيص وعنوان URL الرئيسي لكل منها. استخدمه كخريطة "ما الموجود" قبل الالتزام بـstack؛ تنتهي كل فئة برابط لدليل المقارنة الأكثر تفصيلاً من PromptQuorum لتلك الطبقة.',
     metaDescription:
-      '87 مشروعاً نشطاً لتشغيل LLMs محلياً في 2026: Ollama وLM Studio وJan AI وOpen WebUI وأنظمة RAG وأطر الوكلاء. التراخيص والروابط محدَّثة يونيو 2026.',
+      'Ollama وLM Studio وJan AI — 87 أداة LLM محلية في 9 فئات: رuntimes وRAG وأطر الوكلاء والصوت والموبايل. التراخيص والروابط. يونيو 2026.',
     twitterDescription:
       '87 أداة للنماذج اللغوية المحلية في 9 فئات — رuntimes وتطبيقات سطح المكتب وواجهات الويب وعملاء الكود وRAG وأطر متعددة العملاء والصوت والمحمول. التراخيص والروابط وأحدث الإصدارات، يونيو 2026. خريطة "ما الموجود" قبل اختيار stack.',
     current_models_mentioned: [],
@@ -3343,7 +3343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-06-03',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -3351,17 +3351,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-03',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     slug: 'local-llm-software-directory-2026',
     title: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 70개 이상의 도구 (2026)',
-    seoTitle: '로컬 LLM 도구 2026: 87개 앱 + 최신 업데이트',
+    seoTitle: '로컬 LLM 87도구 2026: 9카테고리 완전 목록',
     affiliateDisclosure: true,
     intro:
       '2026년 로컬 LLM 생태계는 처음에 잘못된 도구를 선택하면 몇 분이 아니라 몇 시간을 낭비할 만큼 방대합니다. 이 디렉토리는 현재 활발히 유지되고 있는 87개 프로젝트를 9개 레이어(런타임, 데스크톱 앱, 웹 UI, 코딩 어시스턴트, RAG 시스템, 에이전트 프레임워크, 음성/멀티모달, 모바일 클라이언트, 전문 생산성 플러그인)로 분류하여 각 도구의 설명, 라이선스, 주요 URL을 함께 제공합니다. 스택을 결정하기 전에 "무엇이 존재하는지" 파악하는 지도로 활용하십시오. 각 카테고리 마지막에는 해당 레이어에 대한 PromptQuorum의 상세 비교 가이드 링크가 있습니다.',
     metaDescription:
-      '로컬 LLM 실행 도구 87개: Ollama, LM Studio, GPT4All, Jan.ai, 모바일, RAG, 음성, 에이전트 프레임워크. 라이선스, 링크, 최신 버전 포함. 2026년 6월 업데이트.',
+      'Ollama, LM Studio, GPT4All, Jan.ai — 로컬 LLM 도구 87개를 9카테고리로 정리: 런타임, RAG, 에이전트, 음성, 모바일. 라이선스·링크·최신 버전 포함. 2026년 6월 업데이트.',
     twitterDescription:
       '로컬 LLM 도구 87개를 9개 카테고리로 정리 — 런타임, 데스크톱 앱, 웹 UI, 코드 에이전트, RAG, 멀티에이전트 프레임워크, 음성, 모바일. 라이선스·링크·최신 버전 수록, 2026년 6월 업데이트. 스택 선택 전 전체 지도 확인.',
     current_models_mentioned: [],

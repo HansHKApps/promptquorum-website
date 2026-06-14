@@ -16,15 +16,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Best AI Coding Tools Compared 2026: Cursor vs Continue.dev',
-    seoTitle: 'Best AI Coding Tools 2026: Cursor vs Continue.dev & More',
+    seoTitle: 'Best AI Coding Tools 2026: Cursor $20 vs Free Continue.dev',
     intro:
       'Most AI-coding-tool comparisons rank on autocomplete quality and miss the question that decides the purchase for many developers: does the tool run on a local LLM, or does it send your code to a third-party server? For proprietary code, NDA-bound work, or regulated industries, that single answer reorders the whole ranking. This guide compares four tools — Cursor, Continue.dev, GitHub Copilot, and Sourcegraph Cody — on the criteria that bind a real choice: local LLM support, price, IDE coverage, and where your code goes. One caveat on price: developer-tool subscriptions change with plan revisions, so every figure here is a May 2026 snapshot — confirm the current rate on the vendor site before you subscribe.',
     metaDescription:
-      'Compare the best AI coding tools in 2026: GitHub Copilot, Cursor, Cline, Continue.dev, and more. Pricing, local vs cloud, autocomplete, and agentic features tested.',
+      'Cursor (~$20/mo), GitHub Copilot (~$10/mo), Continue.dev (free). Which AI coding tools run on a local LLM? 4 tools compared: pricing, privacy, autocomplete.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — four AI coding tools compared. The decision rule most rankings skip: does it run on a local LLM?',
     affiliateDisclosure: true,
@@ -467,15 +467,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Beste KI-Coding-Tools im Vergleich 2026: Cursor vs. Continue.dev',
-    seoTitle: 'Beste KI-Coding-Tools 2026: Cursor vs. Continue.dev & mehr',
+    seoTitle: 'KI-Coding-Tools 2026: Cursor $20 vs. Continue.dev kostenlos',
     intro:
       'Die meisten Vergleiche von KI-Coding-Tools bewerten nach Autovervollständigungsqualität und übersehen die Frage, die für viele Entwickler über den Kauf entscheidet: Läuft das Tool auf einem lokalen LLM, oder sendet es Ihren Code an einen Drittanbieter-Server? Bei proprietärem Code, NDA-gebundener Arbeit oder regulierten Branchen ordnet diese eine Antwort die gesamte Rangfolge neu. Dieser Leitfaden vergleicht vier Tools — Cursor, Continue.dev, GitHub Copilot und Sourcegraph Cody — anhand der Kriterien, die eine echte Entscheidung bestimmen: Unterstützung für lokale LLMs, Preis, IDE-Abdeckung und wohin Ihr Code geht. Eine Einschränkung beim Preis: Abonnements für Entwickler-Tools ändern sich mit Tarifüberarbeitungen, daher ist jede Zahl hier eine Momentaufnahme von Mai 2026 — bestätigen Sie den aktuellen Tarif auf der Anbieter-Website, bevor Sie ein Abonnement abschließen.',
     metaDescription:
-      'Vergleich der besten KI-Coding-Tools 2026: GitHub Copilot, Cursor, Cline, Continue.dev und mehr. Preise, lokal vs Cloud, Autovervollständigung und Agenten.',
+      'Cursor (~20 $/Mo), GitHub Copilot (~10 $/Mo), Continue.dev kostenlos. 4 KI-Tools verglichen: lokales LLM oder Cloud, Preise und Datenschutz auf einen Blick.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — vier KI-Coding-Tools im Vergleich. Die Entscheidungsregel, die die meisten Rankings auslassen: Läuft es auf einem lokalen LLM?',
     affiliateDisclosure: true,
@@ -918,15 +918,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: "Meilleurs outils de codage IA comparés 2026 : Cursor vs Continue.dev",
-    seoTitle: "Meilleurs outils de codage IA 2026 : Cursor vs Continue.dev et plus",
+    seoTitle: "Outils IA 2026 : Cursor 20 $/mois vs Continue.dev gratuit",
     intro:
       "La plupart des comparatifs d'outils de codage IA classent les produits sur la qualité de l'autocomplétion et passent à côté de la question qui décide l'achat pour de nombreux développeurs : l'outil tourne-t-il sur un LLM local, ou envoie-t-il votre code vers un serveur tiers ? Pour du code propriétaire, du travail sous NDA ou des secteurs régulés, cette seule réponse réordonne tout le classement. Ce guide compare quatre outils — Cursor, Continue.dev, GitHub Copilot et Sourcegraph Cody — sur les critères qui déterminent un vrai choix : prise en charge des LLM locaux, prix, couverture des IDE et destination de votre code. Une réserve sur le prix : les abonnements aux outils de développement évoluent avec les révisions de plans, donc chaque chiffre ici est un instantané de mai 2026 — confirmez le tarif courant sur le site de l'éditeur avant de souscrire.",
     metaDescription:
-      "Comparez les meilleurs outils de codage IA en 2026 : GitHub Copilot, Cursor, Cline, Continue.dev. Tarifs, local vs cloud, autocomplétion et fonctions agentiques.",
+      "Cursor (~20 $/mois), Copilot (~10 $/mois), Continue.dev gratuit. Quel outil IA pour le codage tourne sur un LLM local ? 4 outils comparés : prix et confidentialité.",
     twitterDescription:
       "Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatre outils de codage IA comparés. La règle de décision que la plupart des classements ignorent : tourne-t-il sur un LLM local ?",
     affiliateDisclosure: true,
@@ -1369,15 +1369,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '2026年 ベストAIコーディングツール比較: Cursor 対 Continue.dev',
-    seoTitle: '2026年ベストAIコーディングツール: Cursor 対 Continue.dev ほか',
+    seoTitle: '2026年AIコード比較：Cursor $20対Continue.dev無料',
     intro:
       'AIコーディングツールの比較記事の多くは、オートコンプリートの品質でランク付けし、多くの開発者にとって購入を決定づける問いを見落としています。そのツールはローカルLLMで動作するのか、それともコードをサードパーティのサーバーに送信するのか、という問いです。プロプライエタリなコード、NDAに縛られた業務、規制対象の業界では、その単一の答えがランキング全体を組み替えます。本ガイドでは、4つのツール — Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — を、実際の選択を左右する基準で比較します。ローカルLLMサポート、価格、IDEカバレッジ、そしてコードがどこへ送られるか、です。価格について1つ注意点があります。開発者向けツールのサブスクリプションはプラン改定とともに変動するため、ここに記載した数値はすべて2026年5月時点のスナップショットです。契約前にベンダーサイトで現在のレートを確認してください。',
     metaDescription:
-      '2026年のベストAIコーディングツールを比較：GitHub Copilot、Cursor、Cline、Continue.devなど。料金、ローカルvsクラウド、補完品質、エージェント機能を検証。',
+      'Cursor（月約2,700円）、GitHub Copilot（月約1,350円）、Continue.dev（無料）。ローカルLLMで動くツールはどれ？4ツールを価格・プライバシー・補完品質で比較。',
     twitterDescription:
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — 4つのAIコーディングツールを比較。多くのランキングが飛ばす判断基準: ローカルLLMで動作するか。',
     affiliateDisclosure: true,
@@ -1820,15 +1820,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '2026 年最佳 AI 编程工具对比：Cursor vs Continue.dev',
-    seoTitle: '2026 最佳 AI 编程工具：Cursor vs Continue.dev 等',
+    seoTitle: 'AI编程工具2026：本地LLM vs 云端，4款对比',
     intro:
       '大多数 AI 编程工具的对比都以自动补全质量来排名，却忽略了对许多开发者真正决定购买的那个问题：这个工具能在本地 LLM 上运行吗，还是会把你的代码发送到第三方服务器？对于专有代码、受 NDA 约束的工作或受监管行业，这一个答案就会重排整个排名。本指南从真正决定选择的标准出发，对比四款工具——Cursor、Continue.dev、GitHub Copilot 和 Sourcegraph Cody：本地 LLM 支持、价格、IDE 覆盖范围，以及你的代码去往何处。关于价格有一点提醒：开发者工具的订阅会随套餐调整而变动，因此这里的每个数字都是 2026 年 5 月的快照——在订阅前请到厂商网站确认当前价格。',
     metaDescription:
-      '2026 年 Cursor、Continue.dev、GitHub Copilot 与 Sourcegraph Cody 对比：本地 LLM 支持、价格、IDE 覆盖范围，以及你的代码去往何处。',
+      'Cursor（约20美元/月）、GitHub Copilot（约10美元/月）、Continue.dev（免费）：哪款AI编程工具支持本地LLM？4款工具价格与隐私对比。',
     twitterDescription:
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody——四款 AI 编程工具对比。大多数排名跳过的决策规则：它能在本地 LLM 上运行吗？',
     affiliateDisclosure: true,
@@ -2271,15 +2271,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Mejores herramientas de programación con IA 2026: Cursor vs Continue.dev',
-    seoTitle: 'Mejores herramientas de IA para programar 2026: Cursor y más',
+    seoTitle: 'Herramientas IA para código 2026: Cursor $20 vs gratis',
     intro:
       'La mayoría de comparativas de herramientas de programación con IA evalúan la calidad del autocompletado y pasan por alto la pregunta que realmente decide la compra para muchos desarrolladores: ¿la herramienta se ejecuta sobre un LLM local, o envía tu código a un servidor de terceros? Para código propietario, trabajo bajo NDA o sectores regulados, esa única respuesta reordena por completo el ranking. Esta guía compara cuatro herramientas — Cursor, Continue.dev, GitHub Copilot y Sourcegraph Cody — en los criterios que determinan una decisión real: compatibilidad con LLM local, precio, cobertura de IDE y a dónde va tu código. Un aviso sobre precios: las suscripciones a herramientas para desarrolladores cambian con las revisiones de planes, por lo que cada cifra aquí es una instantánea de mayo de 2026 — confirma la tarifa actual en el sitio del proveedor antes de suscribirte.',
     metaDescription:
-      'Compara las mejores herramientas de programación con IA en 2026: GitHub Copilot, Cursor, Cline y Continue.dev. Precios, local vs nube y funciones agénticas.',
+      'Cursor (~20 $/mes), Copilot (~10 $/mes), Continue.dev gratis. ¿Cuál IA corre en LLM local? 4 herramientas de programación comparadas: precios y privacidad.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — cuatro herramientas de programación con IA comparadas. La regla de decisión que la mayoría de rankings omite: ¿funciona con un LLM local?',
     affiliateDisclosure: true,
@@ -2726,7 +2726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -2734,15 +2734,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Melhores ferramentas de programação com IA 2026: Cursor vs Continue.dev',
-    seoTitle: 'Melhores ferramentas de IA para programar 2026: Cursor e mais',
+    seoTitle: 'Ferramentas de IA 2026: Cursor $20 vs Continue.dev grátis',
     intro:
       'A maioria das comparações de ferramentas de programação com IA avalia a qualidade do autocompletar e ignora a pergunta que realmente decide a compra para muitos desenvolvedores: a ferramenta roda sobre um LLM local, ou ela envia o seu código para um servidor de terceiros? Para código proprietário, trabalho sob NDA ou setores regulados, essa única resposta reordena todo o ranking. Este guia compara quatro ferramentas — Cursor, Continue.dev, GitHub Copilot e Sourcegraph Cody — nos critérios que determinam uma decisão real: compatibilidade com LLM local, preço, cobertura de IDE e para onde vai o seu código. Uma ressalva sobre preços: as assinaturas de ferramentas para desenvolvedores mudam com as revisões de planos, então cada valor aqui é um retrato de maio de 2026 — confirme a tarifa atual no site do fornecedor antes de assinar.',
     metaDescription:
-      'Compare as melhores ferramentas de programação com IA em 2026: GitHub Copilot, Cursor, Cline e Continue.dev. Preços, local vs nuvem e recursos agênticos.',
+      'Cursor (~20 $/mês), GitHub Copilot (~10 $/mês), Continue.dev grátis. Qual ferramenta roda em LLM local? 4 ferramentas comparadas: preços e privacidade.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatro ferramentas de programação com IA comparadas. A regra de decisão que a maioria dos rankings ignora: ela funciona com um LLM local?',
     affiliateDisclosure: true,
@@ -3189,7 +3189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -3197,15 +3197,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'أفضل أدوات البرمجة بالذكاء الاصطناعي 2026: Cursor مقابل Continue.dev',
-    seoTitle: 'Cursor وContinue.dev للبرمجة بالذكاء الاصطناعي 2026',
+    seoTitle: 'Cursor وContinue.dev للكود 2026: محلي أم سحابي؟',
     intro:
       'تُقيّم معظم مقارنات أدوات البرمجة بالذكاء الاصطناعي جودة الإكمال التلقائي وتتجاهل السؤال الذي يحسم القرار فعلياً لدى كثير من المطورين: هل تعمل الأداة على نموذج لغوي محلي؟ أم تُرسل الكود إلى خادم طرف ثالث؟ بالنسبة للكود المملوك والعمل الخاضع لاتفاقيات عدم الإفصاح والقطاعات المنظَّمة، تُعيد هذه الإجابة الوحيدة ترتيب التصنيف بأكمله. يقارن هذا الدليل أربع أدوات — Cursor وContinue.dev وGitHub Copilot وSourcegraph Cody — وفق المعايير التي تحدد القرار الفعلي: التوافق مع النموذج المحلي، والسعر، وتغطية بيئة التطوير، ووجهة الكود. تحذير بشأن الأسعار: اشتراكات أدوات المطورين تتغير مع مراجعات الخطط، لذا كل رقم هنا صورة من مايو 2026 — تحقق من السعر الحالي على موقع المورّد قبل الاشتراك.',
     metaDescription:
-      'Cursor وContinue.dev وGitHub Copilot وCody مقارَنة في 2026: دعم النماذج المحلية، الأسعار، تغطية بيئة التطوير، ووجهة الكود. الميزة الحاسمة لكل أداة.',
+      'Cursor (~20 $/شهر) وCopilot (~10 $/شهر) وContinue.dev (مجاني). أيها يعمل على نموذج محلي؟ 4 أدوات: الأسعار والخصوصية مقارَنة.',
     twitterDescription:
       'Cursor وContinue.dev وGitHub Copilot وSourcegraph Cody — أربع أدوات برمجة بالذكاء الاصطناعي مقارَنة. قاعدة القرار التي يتجاهلها معظم التصنيفات: هل تعمل مع نموذج لغوي محلي؟',
     affiliateDisclosure: true,

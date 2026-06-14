@@ -11,13 +11,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU for AI 2026: Full Comparison',
-    seoTitle: 'Alibaba vs Tencent Cloud GPU 2026: Qwen Speed Test',
+    seoTitle: 'AutoDL vs Alibaba Cloud PAI vs Tencent GPU 2026',
     metaDescription:
-      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL for AI GPU rental in 2026: pricing, Qwen performance, data residency, and setup guide. Chinese cloud comparison.',
+      'AutoDL A100 40 GB at ¥2.5/hr — cheapest China GPU cloud. Alibaba Cloud PAI runs Qwen 20–30% faster. Tencent Cloud TI for WeChat. PIPL-compliant.',
     twitterDescription:
       'AutoDL is cheapest for burst GPU use in China. Alibaba Cloud wins for Qwen-optimized inference. Tencent Cloud wins for teams already in WeChat/Tencent ecosystem.',
     affiliateDisclosure: true,
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL for AI GPU rental: pricing, Qwen performance, data residency, and setup guide.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
@@ -320,13 +320,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU para IA 2026: Comparativa Completa',
-    seoTitle: 'Alibaba vs Tencent Cloud GPU IA 2026: Qwen y precios',
+    seoTitle: 'AutoDL vs Alibaba PAI vs Tencent GPU China 2026',
     metaDescription:
-      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL para alquiler de GPU en China 2026: precios, rendimiento Qwen, residencia de datos y configuración.',
+      'AutoDL: A100 40 GB desde ¥2,5/h — GPU más barata en China. Alibaba Cloud PAI corre Qwen 20–30% más rápido. Tencent Cloud TI para WeChat. PIPL.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL para alquiler de GPU de IA: precios, rendimiento Qwen, residencia de datos y guía de configuración.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/es/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
@@ -635,13 +635,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud مقابل Tencent Cloud GPU للذكاء الاصطناعي 2026: مقارنة كاملة',
     seoTitle: 'GPU سحابي صيني 2026: AutoDL مقابل Alibaba PAI',
     metaDescription:
-      'AutoDL أرخص GPU سحابي صيني (A100 40 GB بـ ¥2.5/ساعة). Alibaba Cloud PAI أسرع لنماذج Qwen بنسبة 20–30%. Tencent Cloud TI الأفضل لمنظومة WeChat.',
+      'AutoDL أرخص GPU سحابي صيني: A100 40 GB بـ ¥2.5/ساعة. Alibaba Cloud PAI أسرع لـ Qwen بنسبة 20–30%. Tencent Cloud TI للـ WeChat. PIPL-متوافق.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Alibaba Cloud PAI مقابل Tencent Cloud TI مقابل AutoDL لتأجير GPU للذكاء الاصطناعي: الأسعار، أداء Qwen، إقامة البيانات ودليل الإعداد.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ar/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
@@ -950,13 +950,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU para IA 2026: Comparativo Completo',
-    seoTitle: 'Alibaba vs Tencent Cloud GPU IA 2026: Qwen e preços',
+    seoTitle: 'AutoDL vs Alibaba PAI vs Tencent GPU China 2026',
     metaDescription:
-      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL para aluguel de GPU na China 2026: preços, desempenho Qwen, residência de dados e configuração.',
+      'AutoDL: A100 40 GB a partir de ¥2,5/h — GPU mais barata na China. Alibaba Cloud PAI roda Qwen 20–30% mais rápido. Tencent Cloud TI para WeChat.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL para aluguel de GPU de IA: preços, desempenho Qwen, residência de dados e guia de configuração.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
@@ -1265,13 +1265,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU für KI 2026: Vollständiger Vergleich',
-    seoTitle: 'Alibaba vs Tencent Cloud GPU KI 2026: Preisvergleich',
+    seoTitle: 'AutoDL vs Alibaba PAI vs Tencent Cloud GPU 2026',
     metaDescription:
-      'Alibaba Cloud vs. Tencent Cloud für KI-GPU-Workloads 2026: Preise, H20-Verfügbarkeit, Regionen und DSGVO – für europäische KI-Teams.',
+      'AutoDL: A100 40 GB ab ¥2,5/Std. — günstigste China-GPU. Alibaba Cloud PAI läuft Qwen 20–30 % schneller. Tencent Cloud TI für WeChat. PIPL-konform.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: 'Entwickler in China oder mit China-bezogenen Workloads, die zwischen chinesischen Cloud-GPU-Anbietern wählen.',
@@ -1334,7 +1334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Alibaba Cloud vs Tencent Cloud GPU für KI 2026: Vollständiger Vergleich',
       description: 'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL: Preise, Qwen-Performance, Datenspeicherung in China und Setup-Anleitung.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1344,13 +1344,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs Tencent Cloud GPU pour l\'IA 2026 : Comparaison Complète',
-    seoTitle: 'Alibaba vs Tencent Cloud GPU IA 2026 : Prix et Qwen',
+    seoTitle: 'AutoDL vs Alibaba PAI vs Tencent Cloud GPU 2026',
     metaDescription:
-      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL pour la location GPU en Chine 2026 : tarifs, performance Qwen, résidence des données et tutoriels. Liens affiliés.',
+      'AutoDL : A100 40 Go à ¥2,5/h — GPU le moins cher en Chine. Alibaba Cloud PAI exécute Qwen 20–30 % plus vite. Tencent Cloud TI pour WeChat. PIPL.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: 'Développeurs en Chine ou avec des charges de travail orientées Chine, choisissant entre les fournisseurs cloud GPU chinois.',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Alibaba Cloud vs Tencent Cloud GPU pour l\'IA 2026 : Comparaison Complète',
       description: 'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL : tarifs, performance Qwen, résidence des données en Chine et tutoriels de configuration.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1423,13 +1423,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: 'Alibaba Cloud vs テンセントクラウド GPU AI比較2026：価格・Qwen性能・セットアップ',
-    seoTitle: 'Alibaba Cloud vs テンセントクラウド GPU AI 2026：価格比較とQwen性能',
+    seoTitle: 'AutoDL vs 阿里云PAI 2026：中国GPU価格比較',
     metaDescription:
-      'Alibaba Cloud PAI vs テンセントクラウドTI vs AutoDL：中国クラウドGPUレンタル2026年版。価格、Qwen推論性能、データ国内保存、セットアップガイド。',
+      'AutoDL：A100 40GBがスポット¥2.5/時間——中国最安GPU。阿里云PAIはQwen推論が標準Ollamaより20〜30%速い。テンセントクラウドTIはWeChat統合に最適。3社ともPIPL対応で中国国内データ保存。',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: '中国向けワークロードまたは中国国内の開発者・研究者で、中国クラウドGPUプロバイダーを選ぼうとしている方。',
@@ -1492,7 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Alibaba Cloud vs テンセントクラウド GPU AI比較2026：価格・Qwen性能・セットアップ',
       description: 'Alibaba Cloud PAI vs テンセントクラウドTI vs AutoDL：中国クラウドGPU価格、Qwen推論性能、データ保存、セットアップガイド。',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1502,13 +1502,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
     title: '阿里云vs腾讯云GPU人工智能对比2026：价格、Qwen性能、配置指南',
-    seoTitle: '阿里云vs腾讯云GPU AI 2026：价格对比、Qwen推理速度、使用指南',
+    seoTitle: 'AutoDL vs 阿里云PAI 2026：中国GPU价格对比',
     metaDescription:
-      'AutoDL、阿里云PAI与腾讯云TI Platform 2026年中国AI云GPU完整对比：AutoDL最便宜（A100约2.5元/小时），阿里云Qwen推理优化最好（性能领先20–30%），腾讯云TI最适合微信生态集成。含配置教程与合规要点说明。',
+      'AutoDL A100约¥2.5/时——中国最便宜GPU云。阿里云PAI运行Qwen比标准Ollama快20–30%。腾讯云TI适合微信生态。三家均在中国境内存储数据，PIPL合规。',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: '在中国或面向中国业务的开发者和研究人员，在中国云GPU服务商之间做选择。',
@@ -1591,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '阿里云vs腾讯云GPU人工智能对比2026：价格、Qwen性能、配置指南',
       description: '阿里云PAI vs 腾讯云TI vs AutoDL：2026年中国GPU云价格、Qwen推理性能、数据合规与配置教程对比。',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-14',
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1601,13 +1601,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: '비용 및 비교',
     title: 'Alibaba Cloud vs Tencent Cloud GPU AI 2026 비교: 완전 분석',
-    seoTitle: 'Alibaba vs Tencent Cloud GPU 2026: Qwen 성능 및 가격 비교',
+    seoTitle: 'AutoDL vs Alibaba PAI 2026: GPU 가격비교',
     metaDescription:
-      'Alibaba Cloud PAI vs Tencent Cloud TI vs AutoDL — 2026년 중국 AI GPU 렌탈 비교: 가격, Qwen 추론 성능, 데이터 레지던시, 설정 가이드.',
+      'AutoDL A100 40 GB ¥2.5/시간(스팟) — 중국 최저가 GPU. Alibaba Cloud PAI는 Qwen 추론이 20–30% 빠릅니다. Tencent Cloud TI는 WeChat 연동에 최적. 세 공급자 모두 PIPL 준수.',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:

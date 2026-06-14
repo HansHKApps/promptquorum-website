@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Best Mac for Local AI 2026: Mac Mini vs Mac Studio vs MacBook Pro',
@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Most Mac-for-AI advice fixates on the chip name when the number that actually binds the decision is unified memory. On Apple Silicon the model lives in the same memory pool as everything else, so a 64 GB Mac Mini runs a 34B model that a faster 24 GB MacBook Pro cannot fit. This guide compares three Macs for running local LLMs — the Mac Mini M5 Pro as an always-on server, the MacBook Pro 16" M5 Max as a portable workstation, and the Mac Studio as the desktop option — on the figures that decide a purchase: unified memory, memory bandwidth, measured tokens per second, and price. One caveat on price: Apple raised configured-memory pricing in 2026 on the same memory shortage that hit GPUs, so every price here is a May 2026 snapshot. And one caveat on availability: the Mac Studio M5 is not yet released — its specs and prices below are projected and clearly flagged.',
     metaDescription:
-      'Three Macs compared for local LLMs: Mac Mini M5 Pro, MacBook Pro 16" M5 Max, Mac Studio. Unified memory, tokens/sec, power draw, and May 2026 prices by model size.',
+      'Mac Mini M5 Pro 64GB runs 34B models; MacBook Pro M5 Max 64GB runs 70B. Three Macs compared on unified memory, tok/s, power draw, and 2026 prices.',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio for local AI — three Macs, one decision rule: buy for unified memory, then bandwidth. May 2026 prices.',
     affiliateDisclosure: true,
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'El mejor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'La mayoría de los consejos sobre Mac para IA se centran en el nombre del chip, cuando el número que realmente define la decisión es la memoria unificada. En Apple Silicon el modelo vive en el mismo pool de memoria que todo lo demás, por lo que un Mac Mini de 64 GB puede ejecutar un modelo 34B que un MacBook Pro más rápido con 24 GB no puede cargar. Esta guía compara tres Mac para ejecutar LLMs locales — el Mac Mini M5 Pro como servidor siempre activo, el MacBook Pro 16" M5 Max como estación de trabajo portátil y el Mac Studio como opción de escritorio — en las cifras que deciden una compra: memoria unificada, ancho de banda de memoria, tokens por segundo medidos y precio. Una advertencia sobre el precio: Apple subió los precios de la memoria configurada en 2026 debido a la misma escasez de memoria que afectó a las GPU, por lo que cada precio aquí es una instantánea de mayo de 2026. Y una advertencia sobre disponibilidad: el Mac Studio M5 aún no ha sido lanzado — sus especificaciones y precios a continuación son proyecciones y están claramente señalados como tales.',
     metaDescription:
-      'Tres Mac comparados para LLMs locales: Mac Mini M5 Pro, MacBook Pro M5 Max y Mac Studio. Memoria unificada, tokens/s, consumo y precios 2026 por modelo.',
+      'Mac Mini M5 Pro 64GB ejecuta modelos 34B; MacBook Pro M5 Max 64GB ejecuta 70B. Memoria unificada, tok/s, consumo y precios 2026 de tres Mac comparados.',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio para IA local — tres Mac, una regla de decisión: compra por memoria unificada, luego optimiza el ancho de banda. Precios de mayo 2026.',
     affiliateDisclosure: true,
@@ -969,7 +969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Bester Mac für lokale KI 2026: Mac Mini vs. Mac Studio vs. MacBook Pro',
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die meisten Mac-für-KI-Empfehlungen fixieren sich auf den Chipnamen, dabei ist die Zahl, die die Entscheidung tatsächlich bindet, der Unified Memory. Auf Apple Silicon liegt das Modell im selben Speicherpool wie alles andere — ein Mac Mini mit 64 GB führt daher ein 34B-Modell aus, das in ein schnelleres MacBook Pro mit 24 GB schlicht nicht passt. Dieser Leitfaden vergleicht drei Macs für den Betrieb lokaler LLMs — den Mac Mini M5 Pro als Always-on-Server, das MacBook Pro 16" M5 Max als portable Workstation und den Mac Studio als Desktop-Option — anhand der Kennzahlen, die einen Kauf entscheiden: Unified Memory, Speicherbandbreite, gemessene Tokens pro Sekunde und Preis. Ein Hinweis zum Preis: Apple hat 2026 die Preise für konfigurierten Speicher angehoben, ausgelöst durch dieselbe Speicherknappheit, die auch GPUs verteuert hat — jeder Preis hier ist eine Momentaufnahme vom Mai 2026. Und ein Hinweis zur Verfügbarkeit: Der Mac Studio M5 ist noch nicht erschienen — die unten genannten Spezifikationen und Preise sind Prognosen und klar als solche gekennzeichnet.',
     metaDescription:
-      'Welcher Mac für lokale KI 2026: M5 Pro, M5 Max oder M5 Ultra? Unified Memory, Bandbreite und reale LLM-Geschwindigkeiten. Mac mini, Studio, MacBook Pro im Test.',
+      'Mac Mini M5 Pro 64GB läuft 34B-Modelle; MacBook Pro M5 Max 64GB läuft 70B. Unified Memory, tok/s und Preise 2026: drei Macs für lokale KI im Vergleich.',
     twitterDescription:
       'Mac Mini M5 Pro vs. MacBook Pro 16" M5 Max vs. Mac Studio für lokale KI — drei Macs, eine Entscheidungsregel: zuerst nach Unified Memory kaufen, dann nach Bandbreite. Preise vom Mai 2026.',
     affiliateDisclosure: true,
@@ -1459,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Meilleur Mac pour l\'IA locale 2026 : Mac mini vs Mac Studio vs MacBook Pro',
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'La plupart des conseils sur les Mac pour l\'IA se fixent sur le nom de la puce, alors que le chiffre qui détermine réellement le choix est la mémoire unifiée. Sur Apple Silicon, le modèle réside dans le même pool mémoire que tout le reste : un Mac mini de 64 Go fait donc tourner un modèle 34B qu\'un MacBook Pro de 24 Go, pourtant plus rapide, ne peut pas charger. Ce guide compare trois Mac pour exécuter des LLM en local — le Mac mini M5 Pro comme serveur toujours actif, le MacBook Pro 16" M5 Max comme station de travail portable et le Mac Studio comme option de bureau — sur les chiffres qui décident d\'un achat : mémoire unifiée, bande passante mémoire, tokens par seconde mesurés et prix. Une réserve sur le prix : Apple a relevé en 2026 le tarif de la mémoire configurée, sous l\'effet de la même pénurie de mémoire qui a frappé les GPU ; chaque prix indiqué ici est un relevé de mai 2026. Et une réserve sur la disponibilité : le Mac Studio M5 n\'est pas encore sorti — ses spécifications et ses prix ci-dessous sont des projections clairement signalées.',
     metaDescription:
-      'Quel Mac pour l\'IA locale 2026 : M5 Pro, M5 Max ou M5 Ultra ? Mémoire unifiée, bande passante et vitesses LLM réelles. Mac mini, Studio et MacBook Pro testés.',
+      'Mac mini M5 Pro 64 Go fait tourner 34B ; MacBook Pro M5 Max 64 Go fait tourner 70B. Mémoire unifiée, tok/s et prix 2026 : trois Mac comparés pour l\'IA locale.',
     twitterDescription:
       'Mac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio pour l\'IA locale — trois Mac, une règle : acheter selon la mémoire unifiée, puis la bande passante. Prix de mai 2026.',
     affiliateDisclosure: true,
@@ -1933,15 +1933,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'ローカルAIに最適なMac 2026：Mac mini vs Mac Studio vs MacBook Pro',
-    seoTitle: 'ローカルAIに最適なMac 2026：mini vs Studio vs MBP',
+    seoTitle: 'ローカルAI用Mac 2026：Mini vs Studio vs MBP比較',
     intro:
       'Mac選びの多くのアドバイスはチップ名にとらわれがちですが、購入判断を実際に左右する数値はunified memoryです。Apple Siliconではモデルが他のすべてと同じメモリプールに置かれるため、64GBのMac miniは34Bモデルを動かせますが、より高速でも24GBのMacBook Proには収まりません。本ガイドでは、ローカルLLMを動かすための3台のMac——常時稼働サーバーとしてのMac mini M5 Pro、ポータブルワークステーションとしてのMacBook Pro 16" M5 Max、デスクトップ選択肢としてのMac Studio——を、購入を決める数値、すなわちunified memory、メモリ帯域幅、実測のtokens per second、価格で比較します。価格について一点注意があります。Appleは2026年、GPUを直撃したのと同じメモリ不足を受けて構成メモリの価格を引き上げたため、ここに示す価格はすべて2026年5月時点のスナップショットです。そして入手性について一点注意があります。Mac Studio M5は未発売です——以下の仕様と価格は予測であり、その旨を明示しています。',
     metaDescription:
-      'ローカルLLM向けの3台のMacを比較：Mac mini M5 Pro、MacBook Pro 16" M5 Max、Mac Studio。unified memory、tokens/秒、消費電力、2026年5月時点のモデルサイズ別価格。',
+      'Mac mini M5 Pro 64GBは34Bモデルを実行可能、MacBook Pro M5 Max 64GBは70Bを実行。unified memory、tok/s、2026年価格で3台のMacを比較。',
     twitterDescription:
       'ローカルAI向けMac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio——3台のMac、判断ルールは一つ：まずunified memoryで選び、次に帯域幅。2026年5月時点の価格。',
     affiliateDisclosure: true,
@@ -2407,15 +2407,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '2026 年最适合本地 AI 的 Mac：Mac mini vs Mac Studio vs MacBook Pro',
-    seoTitle: '2026 年最适合本地 AI 的 Mac：mini vs Studio vs MBP',
+    seoTitle: '2026本地AI最佳Mac：Mini vs Studio vs MBP',
     intro:
       '大多数关于「Mac 跑 AI」的建议都盯着芯片型号，但真正决定选择的数字是统一内存。在 Apple Silicon 上，模型与其他一切共用同一个内存池，因此一台 64 GB 的 Mac mini 能跑 34B 模型，而一台速度更快但只有 24 GB 的 MacBook Pro 却装不下。本指南从决定购买的几个数字——统一内存、内存带宽、实测的每秒 token 数和价格——比较三台用于运行本地 LLM 的 Mac：作为常开服务器的 Mac mini M5 Pro、作为便携工作站的 MacBook Pro 16" M5 Max，以及作为桌面选择的 Mac Studio。关于价格有一点提醒：Apple 在 2026 年因同一波冲击 GPU 的内存短缺而上调了配置内存的价格，因此这里的每个价格都是 2026 年 5 月的快照。关于供货还有一点提醒：Mac Studio M5 尚未发布——下文的规格和价格都是预测，并已明确标注。',
     metaDescription:
-      '三台 Mac 对比本地 LLM：Mac mini M5 Pro、MacBook Pro 16" M5 Max、Mac Studio。统一内存、token/秒、功耗，以及按模型规模划分的 2026 年 5 月价格。',
+      'Mac mini M5 Pro 64GB可运行34B模型，MacBook Pro M5 Max 64GB可运行70B。统一内存、tok/s、功耗和2026年价格：三台Mac本地AI对比。',
     twitterDescription:
       'Mac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio 跑本地 AI——三台 Mac，一条决策规则：先按统一内存买，再优化带宽。2026 年 5 月价格。',
     affiliateDisclosure: true,
@@ -2881,7 +2881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'O melhor Mac para IA local 2026: Mac Mini vs Mac Studio vs MacBook Pro',
@@ -2889,7 +2889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A maioria dos conselhos sobre Mac para IA foca no nome do chip, quando o número que realmente define a decisão é a memória unificada. No Apple Silicon o modelo vive no mesmo pool de memória que todo o resto, então um Mac Mini de 64 GB consegue executar um modelo 34B que um MacBook Pro mais rápido com 24 GB não consegue carregar. Este guia compara três Macs para executar LLMs locais — o Mac Mini M5 Pro como servidor sempre ativo, o MacBook Pro 16" M5 Max como estação de trabalho portátil e o Mac Studio como opção de desktop — nos números que decidem uma compra: memória unificada, largura de banda de memória, tokens por segundo medidos e preço. Uma ressalva sobre o preço: a Apple subiu os preços da memória configurada em 2026 devido à mesma escassez de memória que afetou as GPUs, então cada preço aqui é um retrato de maio de 2026. E uma ressalva sobre disponibilidade: o Mac Studio M5 ainda não foi lançado — suas especificações e preços a seguir são projeções e estão claramente sinalizados como tais.',
     metaDescription:
-      'Três Macs comparados para LLMs locais: Mac Mini M5 Pro, MacBook Pro M5 Max e Mac Studio. Memória unificada, tokens/s, consumo e preços 2026 por modelo.',
+      'Mac Mini M5 Pro 64GB executa modelos 34B; MacBook Pro M5 Max 64GB executa 70B. Memória unificada, tok/s, consumo e preços 2026: três Macs comparados para IA local.',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio para IA local — três Macs, uma regra de decisão: compre pela memória unificada, depois otimize a largura de banda. Preços de maio de 2026.',
     affiliateDisclosure: true,
@@ -3359,7 +3359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -3368,7 +3368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'أفضل Mac للذكاء الاصطناعي المحلي 2026: Mac Mini مقابل Mac Studio مقابل MacBook Pro',
@@ -3846,7 +3846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
@@ -3854,15 +3854,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-06-14',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '로컬 AI용 최고의 Mac 2026: Mac Mini vs Mac Studio vs MacBook Pro',
-    seoTitle: '로컬 AI용 최고의 Mac 2026: Mini vs Studio vs MBP',
+    seoTitle: '로컬 AI용 Mac 2026: Mini vs Studio vs MBP',
     intro:
       'Mac을 AI용으로 추천하는 대부분의 글은 칩 이름에만 집중하지만, 실제로 구매 결정을 좌우하는 수치는 통합 메모리(Unified Memory)입니다. Apple Silicon에서는 모델이 시스템의 모든 것과 동일한 메모리 풀을 공유합니다. 따라서 64GB Mac Mini는 더 빠른 24GB MacBook Pro가 로드조차 할 수 없는 34B 모델을 실행할 수 있습니다. 이 가이드는 로컬 LLM 실행을 위한 세 가지 Mac을 비교합니다. 상시 가동 서버로서의 Mac Mini M5 Pro, 휴대용 워크스테이션으로서의 MacBook Pro 16" M5 Max, 그리고 데스크톱 옵션으로서의 Mac Studio를 구매 결정에 중요한 수치인 통합 메모리, 메모리 대역폭, 측정된 초당 토큰 수, 가격으로 비교합니다. 가격에 관한 주의 사항: Apple은 GPU에 영향을 미친 것과 동일한 메모리 부족 현상으로 인해 2026년에 구성된 메모리 가격을 인상했으므로, 여기에 표시된 모든 가격은 2026년 5월의 스냅샷입니다. 가용성에 관한 주의 사항: Mac Studio M5는 아직 출시되지 않았습니다. 아래의 사양과 가격은 예상치이며 명확하게 표시되어 있습니다.',
     metaDescription:
-      '로컬 LLM용 Mac 세 가지 비교: Mac Mini M5 Pro, MacBook Pro M5 Max, Mac Studio. 통합 메모리, 초당 토큰, 전력 소비 및 2026년 가격을 모델별로 안내합니다.',
+      'Mac Mini M5 Pro 64GB로 34B 모델 실행, MacBook Pro M5 Max 64GB로 70B 실행. 통합 메모리·tok/s·2026년 가격을 세 가지 Mac으로 비교합니다.',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio 로컬 AI 비교 — 세 가지 Mac, 하나의 결정 원칙: 통합 메모리를 먼저 보고, 그다음 대역폭을 최적화하세요. 2026년 5월 가격 기준.',
     affiliateDisclosure: true,
@@ -4332,7 +4332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-mac-for-local-ai-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
