@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Für EU-DSGVO-Compliance, regulierte Branchen oder jede Einstellung, in der Quellcode-Auditierbarkeit erforderlich ist, ist Jan die einzige Wahl der drei. AnythingLLM ist auf GitHub Open Source, liefert aber geschlossene Telemetrie in den offiziellen Builds; LM Studio ist vollständig proprietär.',
+            text: 'Für EU-DSGVO-Compliance, regulierte Branchen oder jede Einstellung, in der Quellcode-Auditierbarkeit erforderlich ist, ist Jan die stärkste Wahl: vollständig AGPL, null Telemetrie per Design. AnythingLLM ist Open Source (MIT) mit anonymer Opt-out-Telemetrie — deaktivierbar unter Einstellungen > Datenschutz oder per DISABLE_TELEMETRY=true. LM Studio ist proprietär, ohne veröffentlichten Quellcode.',
           },
         ],
       },
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich diese für vertrauliche Rechts- oder Medizindokumente verwenden?',
-            a: 'Alle drei laufen vollständig offline nach der Installation und übertragen niemals Dokumentinhalte. Für regulierte Workflows (HIPAA, DSGVO, Anwaltsgeheimnis), ist Jan + Dokumente die stärkste Wahl, weil der gesamte Stack Open Source (AGPL) und auditierbar ist, mit null Telemetrie standardmäßig. AnythingLLM ist auch eine vertretbare Wahl in geprüften Umgebungen mit dem Open-Source-Docker-Build (überspringen Sie die Desktop-Installer-Telemetrie). LM Studio ist vollständig proprietär — bestätigen Sie mit Ihrem Compliance-Team vor der Verwendung auf regulierten Daten.',
+            a: 'Alle drei laufen vollständig offline nach der Installation und übertragen niemals Dokumentinhalte. Für regulierte Workflows (HIPAA, DSGVO, Anwaltsgeheimnis), ist Jan + Dokumente die stärkste Wahl, weil der gesamte Stack Open Source (AGPL) und auditierbar ist, mit null Telemetrie standardmäßig. AnythingLLM ist eine vertretbare Wahl in geprüften Umgebungen — Open Source (MIT) mit anonymer Opt-out-Telemetrie, deaktivierbar unter Einstellungen > Datenschutz oder per DISABLE_TELEMETRY=true. LM Studio ist vollständig proprietär — bestätigen Sie mit Ihrem Compliance-Team vor der Verwendung auf regulierten Daten.',
           },
           {
             q: 'Muss ich bei der Verwendung dieser Apps die DSGVO beachten?',
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'EU GDPR コンプライアンス、規制対象業界、またはソースコード監査必須の環境では Jan が 3つ中唯一の選択。AnythingLLM は GitHub でオープンソース、公式ビルドはテレメトリ非公開；LM Studio は全面的に独占。',
+            text: 'EU GDPR コンプライアンス、規制対象業界、またはソースコード監査必須の環境では Jan が最も強い選択肢：完全AGPL、設計上テレメトリゼロ。AnythingLLM はオープンソース（MIT）で匿名オプトアウトテレメトリあり — 設定 > プライバシーまたは DISABLE_TELEMETRY=true で無効化可能。LM Studio は独占的でソースコード非公開。',
           },
         ],
       },
@@ -1918,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'これらアプリを 機密法務・医療ドキュメント に使用可能？',
-            a: 'すべて インストール後 100% オフライン、ドキュメント内容伝送なし。規制ワークフロー（HIPAA、GDPR、弁護士-クライアント特権）：Jan + ドキュメント が最強選択肢（スタック全体 AGPL 監査可能、デフォルト テレメトリゼロ）。AnythingLLM も監査環境内 オープンソース Docker ビルド使用なら防御可能（デスクトップ インストーラー テレメトリ回避）。LM Studio は完全独占的 — 規制データ前に コンプライアンスチーム確認必須。',
+            a: 'すべて インストール後 100% オフライン、ドキュメント内容伝送なし。規制ワークフロー（HIPAA、GDPR、弁護士-クライアント特権）：Jan + ドキュメント が最強選択肢（スタック全体 AGPL 監査可能、デフォルト テレメトリゼロ）。AnythingLLM も監査環境で防御可能 — オープンソース（MIT）、匿名オプトアウトテレメトリは設定 > プライバシーまたは DISABLE_TELEMETRY=true で無効化可能。LM Studio は完全独占的 — 規制データ前に コンプライアンスチーム確認必須。',
           },
         ],
       },
@@ -2245,7 +2245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '对于EU GDPR合规、管制行业或源代码审计必须的环境，Jan是三个中唯一的选择。AnythingLLM在GitHub上是开源的，但在官方构建中有闭源遥测；LM Studio完全专有。',
+            text: '对于EU GDPR合规、管制行业或源代码审计必须的环境，Jan是最强选择：完全AGPL、设计上零遥测。AnythingLLM是开源的（MIT），具有匿名可选退出遥测 — 可在设置 > 隐私中或通过DISABLE_TELEMETRY=true禁用。LM Studio是专有软件，无已发布源代码。',
           },
         ],
       },
@@ -2420,7 +2420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我能将这些用于敏感的法律或医疗文件吗？',
-            a: '三个都在安装后100%离线运行，从不传输文档内容。对于管制工作流（HIPAA、GDPR、律师-客户特权），Jan + 文档是最强的选择，因为整个堆栈是开源（AGPL）和可审计的，默认情况下零遥测。AnythingLLM在使用开源Docker构建的已审计环境中也是合理的选择（跳过桌面安装程序遥测）。LM Studio是完全专有的 — 在使用管制数据之前请咨询您的合规团队。',
+            a: '三个都在安装后100%离线运行，从不传输文档内容。对于管制工作流（HIPAA、GDPR、律师-客户特权），Jan + 文档是最强的选择，因为整个堆栈是开源（AGPL）和可审计的，默认情况下零遥测。AnythingLLM在已审计环境中也是合理的选择 — 开源（MIT），匿名可选退出遥测可在设置 > 隐私中或通过DISABLE_TELEMETRY=true禁用。LM Studio是完全专有的 — 在使用管制数据之前请咨询您的合规团队。',
           },
         ],
       },
@@ -2765,7 +2765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Para el cumplimiento del GDPR de la UE, industrias reguladas o cualquier entorno donde la auditabilidad del código fuente sea obligatoria, Jan es la única opción de las tres. AnythingLLM es open source en GitHub pero incluye telemetría de código cerrado en las builds oficiales; LM Studio es completamente propietario.',
+            text: 'Para el cumplimiento del GDPR de la UE, industrias reguladas o cualquier entorno donde la auditabilidad del código fuente sea obligatoria, Jan es la opción más sólida: completamente AGPL, cero telemetría por diseño. AnythingLLM es open source (MIT) con telemetría anónima opt-out — desactívala en Ajustes > Privacidad o con DISABLE_TELEMETRY=true. LM Studio es propietario, sin código fuente publicado.',
           },
         ],
       },
@@ -2940,7 +2940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar estas apps para documentos legales o médicos sensibles?',
-            a: 'Las tres funcionan completamente sin conexión una vez instaladas y nunca transmiten el contenido de los documentos. Para flujos de trabajo regulados (HIPAA, GDPR, secreto profesional), Jan + Documentos es la opción más sólida porque todo el stack es de código abierto (AGPL) y auditable, con cero telemetría por defecto. AnythingLLM también es una opción defendible en entornos auditados usando la build Docker de código abierto (evitando la telemetría del instalador de escritorio). LM Studio es completamente propietario — confirma con tu equipo de cumplimiento antes de usarlo con datos regulados.',
+            a: 'Las tres funcionan completamente sin conexión una vez instaladas y nunca transmiten el contenido de los documentos. Para flujos de trabajo regulados (HIPAA, GDPR, secreto profesional), Jan + Documentos es la opción más sólida porque todo el stack es de código abierto (AGPL) y auditable, con cero telemetría por defecto. AnythingLLM también es una opción defendible en entornos auditados — es open source (MIT) con telemetría anónima opt-out que puedes desactivar en Ajustes > Privacidad o con DISABLE_TELEMETRY=true. LM Studio es completamente propietario — confirma con tu equipo de cumplimiento antes de usarlo con datos regulados.',
           },
         ],
       },
@@ -4298,7 +4298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'EU GDPR 준수, 규제 산업 또는 소스 코드 감사 가능성이 필수인 모든 환경에서 Jan은 세 가지 중 유일한 옵션입니다. AnythingLLM은 GitHub에서 오픈 소스이지만 공식 빌드에는 비공개 소스 텔레메트리가 포함되어 있습니다. LM Studio는 완전히 독점 소프트웨어입니다.',
+            text: 'EU GDPR 준수, 규제 산업 또는 소스 코드 감사 가능성이 필수인 모든 환경에서 Jan이 가장 강력한 선택입니다: 완전 AGPL, 설계상 텔레메트리 제로. AnythingLLM은 오픈 소스(MIT)로 익명 옵트아웃 텔레메트리를 제공하며 — 설정 > 개인정보 보호 또는 DISABLE_TELEMETRY=true로 비활성화 가능합니다. LM Studio는 독점 소프트웨어로 소스 코드가 공개되어 있지 않습니다.',
           },
         ],
       },
@@ -4473,7 +4473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '민감한 법률 또는 의료 문서에 이 앱들을 사용할 수 있습니까?',
-            a: '세 앱 모두 설치 후 완전히 오프라인으로 작동하며 문서 내용을 전송하지 않습니다. 규제된 워크플로(HIPAA, GDPR, 변호사-고객 특권)의 경우, Jan + 문서가 가장 강력한 옵션입니다. 전체 스택이 오픈 소스(AGPL)이며 감사 가능하고 기본적으로 텔레메트리가 없습니다. AnythingLLM도 오픈 소스 Docker 빌드를 사용하는 감사된 환경에서 방어 가능한 옵션입니다(데스크톱 설치 프로그램의 텔레메트리 방지). LM Studio는 완전히 독점 소프트웨어입니다 — 규제 데이터와 함께 사용하기 전에 규정 준수 팀과 확인하십시오.',
+            a: '세 앱 모두 설치 후 완전히 오프라인으로 작동하며 문서 내용을 전송하지 않습니다. 규제된 워크플로(HIPAA, GDPR, 변호사-고객 특권)의 경우, Jan + 문서가 가장 강력한 옵션입니다. 전체 스택이 오픈 소스(AGPL)이며 감사 가능하고 기본적으로 텔레메트리가 없습니다. AnythingLLM도 감사된 환경에서 방어 가능한 옵션입니다 — 오픈 소스(MIT)이며 익명 옵트아웃 텔레메트리를 설정 > 개인정보 보호 또는 DISABLE_TELEMETRY=true로 비활성화할 수 있습니다. LM Studio는 완전히 독점 소프트웨어입니다 — 규제 데이터와 함께 사용하기 전에 규정 준수 팀과 확인하십시오.',
           },
         ],
       },
