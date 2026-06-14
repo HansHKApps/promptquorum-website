@@ -39,18 +39,18 @@ export default async function KoComparePage() {
             '@graph': [
               {
                 '@type': 'WebPage',
-                '@id': 'https://www.promptquorum.com/ar/compare',
-                'url': 'https://www.promptquorum.com/ar/compare',
-                'name': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Ferramentas multi-LLM comparadas (2026)',
-                'description': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo: compare envio simultâneo, pontuação de consenso, suporte a LLM local e controle de chave de API em 2026.',
+                '@id': 'https://www.promptquorum.com/ko/compare',
+                'url': 'https://www.promptquorum.com/ko/compare',
+                'name': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — 멀티 LLM 도구 비교 (2026)',
+                'description': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo: 동시 전송, 합의 점수, 로컬 LLM 지원, API 키 제어를 2026년 기준으로 비교합니다.',
                 'inLanguage': 'ko',
                 'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
               },
               {
                 '@type': 'BreadcrumbList',
                 'itemListElement': [
-                  { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/ar' },
-                  { '@type': 'ListItem', 'position': 2, 'name': 'Comparar', 'item': 'https://www.promptquorum.com/ar/compare' },
+                  { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': 'https://www.promptquorum.com/ko' },
+                  { '@type': 'ListItem', 'position': 2, 'name': '도구 비교', 'item': 'https://www.promptquorum.com/ko/compare' },
                 ],
               },
               {
@@ -58,42 +58,42 @@ export default async function KoComparePage() {
                 'mainEntity': [
                   {
                     '@type': 'Question',
-                    'name': 'Qual é a melhor ferramenta para comparar o mesmo prompt em múltiplos LLMs simultaneamente?',
+                    'name': '동일한 프롬프트를 여러 LLM에 동시에 비교할 수 있는 최선의 도구는 무엇인가요?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'O PromptQuorum é a única ferramenta que combina envio simultâneo de prompts com análise automática de consenso — você obtém não apenas as respostas lado a lado, mas também um veredicto sobre onde os modelos concordam e onde divergem. Poe e AiZolo oferecem acesso multi-modelo, mas não geram pontuação de consenso. O LM Arena usa votação humana em vez de análise automatizada. O OpenMark avalia prompts individuais, mas não gera um veredicto de consenso entre modelos. As informações de funcionalidades são baseadas em documentação pública de março de 2026.',
+                      'text': 'PromptQuorum은 프롬프트 동시 전송과 자동 합의 분석을 결합한 유일한 도구입니다 — 응답을 나란히 볼 수 있을 뿐만 아니라 모델들이 어디서 동의하고 어디서 다른지에 대한 판정도 제공합니다. Poe와 AiZolo는 멀티 모델 접근을 제공하지만 합의 점수는 생성하지 않습니다. LM Arena는 자동 분석 대신 인간 투표를 사용합니다. OpenMark는 개별 프롬프트를 평가하지만 모델 간 합의 판정을 생성하지 않습니다. 기능 정보는 2026년 3월 공개 문서를 기준으로 합니다.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    'name': 'Qual ferramenta multi-LLM suporta LLMs locais como Ollama e LM Studio?',
+                    'name': 'Ollama나 LM Studio 같은 로컬 LLM을 지원하는 멀티 LLM 도구는 무엇인가요?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'O PromptQuorum é a única ferramenta nesta página que suporta inferência local de LLM via Ollama e LM Studio, o que significa que seus prompts sensíveis nunca saem da sua máquina. Poe, LM Arena, OpenMark e AiZolo operam como serviços exclusivamente na nuvem conforme documentação pública de março de 2026. Verifique as capacidades atuais de cada ferramenta diretamente com o fornecedor antes de tomar uma decisão.',
+                      'text': 'PromptQuorum은 이 페이지에서 Ollama와 LM Studio를 통한 로컬 LLM 추론을 지원하는 유일한 도구입니다. 이는 민감한 프롬프트가 절대 내 기기를 벗어나지 않는다는 것을 의미합니다. Poe, LM Arena, OpenMark, AiZolo는 2026년 3월 공개 문서 기준으로 클라우드 전용 서비스로 운영됩니다. 결정을 내리기 전에 각 도구의 현재 기능을 해당 공급업체에 직접 확인하세요.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    'name': 'O que é a pontuação de consenso em uma ferramenta multi-LLM?',
+                    'name': '멀티 LLM 도구에서 합의 점수란 무엇인가요?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'A pontuação de consenso é uma análise automatizada de quanto múltiplos modelos de IA concordam em um determinado prompt. O Quorum Verdict do PromptQuorum avalia a concordância entre todos os modelos implantados, identifica onde divergem e explica o que essa divergência provavelmente significa. Uma pontuação de consenso alta indica que a resposta é confiável entre arquiteturas de modelos. Uma pontuação de consenso baixa sinaliza incerteza e justifica investigação adicional.',
+                      'text': '합의 점수는 여러 AI 모델이 특정 프롬프트에 얼마나 동의하는지에 대한 자동 분석입니다. PromptQuorum의 Quorum Verdict는 배포된 모든 모델 간의 동의도를 평가하고, 어디서 다른지 식별하며, 그 차이가 무엇을 의미하는지 설명합니다. 합의 점수가 높으면 모델 아키텍처 전반에 걸쳐 응답이 신뢰할 수 있다는 것을 나타냅니다. 합의 점수가 낮으면 불확실성을 나타내며 추가 조사가 필요합니다.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    'name': 'Em que o PromptQuorum difere do Poe?',
+                    'name': 'PromptQuorum은 Poe와 어떻게 다른가요?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'O Poe, de propriedade da Quora, é uma plataforma de chat multi-modelo focada em acesso e conversação. O PromptQuorum é uma ferramenta de envio e análise multi-LLM focada em avaliação de prompts e pontuação de consenso. O Poe permite alternar entre modelos ou comparar dois de cada vez. O PromptQuorum envia para todos os modelos selecionados simultaneamente e analisa automaticamente onde concordam — um fluxo de trabalho fundamentalmente diferente, projetado para usuários avançados e desenvolvedores em vez de chat casual.',
+                      'text': 'Quora 소유의 Poe는 접근성과 대화에 초점을 맞춘 멀티 모델 채팅 플랫폼입니다. PromptQuorum은 프롬프트 평가와 합의 점수에 초점을 맞춘 멀티 LLM 전송 및 분석 도구입니다. Poe는 모델 간 전환하거나 두 모델을 동시에 비교할 수 있습니다. PromptQuorum은 선택한 모든 모델에 동시 전송하고 어디서 동의하는지 자동으로 분석합니다 — 캐주얼 채팅이 아닌 고급 사용자와 개발자를 위해 설계된 근본적으로 다른 워크플로우입니다.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    'name': 'Preciso das minhas próprias chaves de API para usar o PromptQuorum?',
+                    'name': 'PromptQuorum을 사용하려면 자신의 API 키가 필요한가요?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'Sim. O PromptQuorum é projetado para usuários que fornecem suas próprias chaves de API da OpenAI, Anthropic, Google, Mistral e outros provedores. Isso mantém seus dados sob seu controle, seu uso sob seus termos comerciais e seus custos transparentes. Também habilita suporte a LLMs locais via Ollama e LM Studio para usuários que preferem inferência completamente privada.',
+                      'text': '네. PromptQuorum은 OpenAI, Anthropic, Google, Mistral 등의 제공업체에서 자신의 API 키를 가져오는 사용자를 위해 설계되었습니다. 이를 통해 데이터가 자신의 통제 하에 있고, 사용이 자신의 상업적 조건에 따르며, 비용이 투명하게 유지됩니다. 또한 완전히 프라이빗한 추론을 선호하는 사용자를 위해 Ollama와 LM Studio를 통한 로컬 LLM 지원도 가능합니다.',
                     },
                   },
                 ],
