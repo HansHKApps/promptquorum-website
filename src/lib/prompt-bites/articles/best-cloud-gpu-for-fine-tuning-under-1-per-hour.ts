@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — Best Overall (Spot + On-Demand)',
             content: 'RunPod offers the best combination of price, reliability, and developer UX for fine-tuning. Spot RTX 4090 (24 GB): $0.28–0.44/hr. Spot A40 48GB: $0.44/hr. On-demand RTX 4090: $0.74/hr. Runpod supports persistent storage volumes, Docker-based templates (Axolotl, Unsloth pre-built), and GPU health checks. The spot market is rarely interrupted for long runs (<6 hours). Pre-built template: "Unsloth + Llama Factory" — no setup time.',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud (affiliate)', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — Cheapest Spot Market',
             content: 'Vast.ai is a peer-to-peer GPU marketplace where individual sellers set prices. You can bid on RTX 4090 instances at $0.32–0.48/hr or RTX 3090 (24 GB) at $0.20–0.32/hr. Savings over RunPod: 20–40%. Caveats: host reliability varies; run checksums before starting. Best for: short fine-tuning runs where interruption risk is acceptable. Not recommended for >12-hour runs without a checkpoint strategy.',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace (affiliate)', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — Most Reliable On-Demand',
             content: 'Lambda Labs Cloud provides on-demand GPUs with no spot risk. Pricing: A10G 24GB at $0.60/hr, A100 40GB at $1.29/hr. For a 4-hour fine-tuning run on an A10G: $2.40 total. Lambda is preferred by teams that need guaranteed availability and reproducible environments. File system is persistent between restarts. Slight cost premium over RunPod spot for peace of mind.',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud (affiliate)', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — Bestes Gesamtpaket (Spot + On-Demand)',
             content: 'RunPod bietet die beste Kombination aus Preis, Zuverlässigkeit und Entwickler-UX für Fine-Tuning. Spot RTX 4090 (24 GB): 0,28–0,44 $/Stunde. Spot A40 48GB: 0,44 $/Stunde. On-Demand RTX 4090: 0,74 $/Stunde. Unterstützt persistente Speicher-Volumes, Docker-basierte Templates (Axolotl, Unsloth vorinstalliert) und GPU-Health-Checks. Vorgefertigtes Template: "Unsloth + Llama Factory" — kein Setup nötig.',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud (Affiliate)', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — Günstigster Spot-Markt',
             content: 'Vast.ai ist ein Peer-to-Peer-GPU-Marktplatz, auf dem einzelne Verkäufer die Preise festlegen. RTX 4090 Instanzen bei 0,32–0,48 $/Stunde oder RTX 3090 (24 GB) bei 0,20–0,32 $/Stunde möglich. Einsparungen gegenüber RunPod: 20–40%. Einschränkungen: Host-Zuverlässigkeit variiert; Checksums vor dem Start prüfen. Nicht empfohlen für >12-Stunden-Läufe ohne Checkpoint-Strategie.',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace (Affiliate)', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — Zuverlässigstes On-Demand',
             content: 'Lambda Labs Cloud bietet On-Demand-GPUs ohne Spot-Risiko. Preise: A10G 24GB bei 0,60 $/Stunde, A100 40GB bei 1,29 $/Stunde. Für einen 4-Stunden-Fine-Tuning-Lauf auf A10G: 2,40 $ gesamt. Bevorzugt von Teams, die garantierte Verfügbarkeit brauchen.',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud (Affiliate)', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — Meilleur global (spot + à la demande)',
             content: 'RunPod offre le meilleur équilibre prix/fiabilité/UX pour le fine-tuning. Spot RTX 4090 (24 Go) : 0,28–0,44 $/h. Spot A40 48 Go : 0,44 $/h. À la demande RTX 4090 : 0,74 $/h. Supporte les volumes de stockage persistants, les templates Docker (Axolotl, Unsloth pré-installés) et les vérifications de santé GPU. Template pré-construit : "Unsloth + Llama Factory" — pas de setup.',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud (affilié)', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — Marché spot le moins cher',
             content: 'Vast.ai est un marché GPU pair-à-pair où les vendeurs fixent les prix. RTX 4090 à 0,32–0,48 $/h ou RTX 3090 (24 Go) à 0,20–0,32 $/h. Économies vs RunPod : 20–40%. Caveats : fiabilité des hôtes variable. Non recommandé pour les runs de >12h sans stratégie de checkpoint.',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace (affilié)', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — À la demande le plus fiable',
             content: 'Lambda Labs Cloud fournit des GPU à la demande sans risque spot. A10G 24 Go à 0,60 $/h, A100 40 Go à 1,29 $/h. Pour un run de 4h sur A10G : 2,40 $ au total. Préféré des équipes qui ont besoin de disponibilité garantie.',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud (affilié)', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — 総合最良（スポット + オンデマンド）',
             content: 'RunPodはファインチューニングで最良の価格・信頼性・開発者UXを提供。スポットRTX 4090（24GB）：0.28〜0.44ドル/時。スポットA40 48GB：0.44ドル/時。オンデマンドRTX 4090：0.74ドル/時。永続ストレージボリューム、Dockerテンプレート（Axolotl、Unsloth）、GPU健康チェックをサポート。事前構築テンプレート：「Unsloth + Llama Factory」——セットアップ不要。',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud（アフィリエイト）', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — 最安スポット市場',
             content: 'Vast.aiは個人販売者が価格を設定するP2P GPU市場。RTX 4090を0.32〜0.48ドル/時、RTX 3090（24GB）を0.20〜0.32ドル/時で入札可能。RunPodより20〜40%節約。注意：ホストの信頼性にばらつきがある；開始前にチェックサムを確認。12時間以上の実行にはチェックポイント戦略が必要。',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace（アフィリエイト）', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — 最も信頼性の高いオンデマンド',
             content: 'Lambda Labs CloudはスポットリスクなしのオンデマンドGPUを提供。A10G 24GBが0.60ドル/時、A100 40GBが1.29ドル/時。4時間のA10Gでの実行：合計2.40ドル。保証された可用性が必要なチームに最適。',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud（アフィリエイト）', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — 综合最佳（竞价+按需）',
             content: 'RunPod在价格、可靠性和开发者体验上提供最佳组合。竞价RTX 4090（24GB）：0.28–0.44美元/小时。竞价A40 48GB：0.44美元/小时。按需RTX 4090：0.74美元/小时。支持持久存储卷、Docker模板（Axolotl、Unsloth预装）和GPU健康检查。预构建模板："Unsloth + Llama Factory"——无需设置。',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud（推广链接）', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — 最便宜竞价市场',
             content: 'Vast.ai是个人卖家定价的P2P GPU市场。可以0.32–0.48美元/小时竞价获得RTX 4090，或0.20–0.32美元/小时获得RTX 3090（24GB）。比RunPod节省20–40%。注意：主机可靠性参差不齐；开始前验证。不建议超过12小时运行无检查点策略。',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace（推广链接）', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — 最可靠按需服务',
             content: 'Lambda Labs Cloud提供无竞价风险的按需GPU。A10G 24GB 0.60美元/小时，A100 40GB 1.29美元/小时。4小时A10G运行总成本：2.40美元。适合需要有保障可用性的团队。文件系统在重启之间保持持久。',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud（推广链接）', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — Mejor en general (Spot + Bajo demanda)',
             content: 'RunPod ofrece la mejor combinación de precio, fiabilidad y UX para desarrolladores en fine-tuning. Spot RTX 4090 (24 GB): $0.28–0.44/hora. Spot A40 48GB: $0.44/hora. Bajo demanda RTX 4090: $0.74/hora. Admite volúmenes de almacenamiento persistentes, plantillas Docker (Axolotl, Unsloth preinstalados) y comprobaciones de salud de GPU. Plantilla preconfigurada: "Unsloth + Llama Factory" — sin tiempo de configuración.',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud (afiliado)', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — Mercado spot más barato',
             content: 'Vast.ai es un mercado P2P de GPUs donde vendedores individuales fijan los precios. Puedes pujar por instancias RTX 4090 a $0.32–0.48/hora o RTX 3090 (24 GB) a $0.20–0.32/hora. Ahorro sobre RunPod: 20–40%. Inconvenientes: la fiabilidad del host varía; comprueba checksums antes de comenzar. No recomendado para runs de más de 12 horas sin estrategia de checkpoint.',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace (afiliado)', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — Bajo demanda más fiable',
             content: 'Lambda Labs Cloud proporciona GPUs bajo demanda sin riesgo spot. Precios: A10G 24GB a $0.60/hora, A100 40GB a $1.29/hora. Para un run de fine-tuning de 4 horas en A10G: $2.40 en total. Preferido por equipos que necesitan disponibilidad garantizada y entornos reproducibles.',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud (afiliado)', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — Melhor no geral (Spot + Sob demanda)',
             content: 'RunPod oferece a melhor combinação de preço, confiabilidade e UX para desenvolvedores em fine-tuning. Spot RTX 4090 (24 GB): $0,28–0,44/hora. Spot A40 48GB: $0,44/hora. Sob demanda RTX 4090: $0,74/hora. Suporta volumes de armazenamento persistente, templates Docker (Axolotl, Unsloth pré-instalados) e verificações de saúde da GPU. Template pré-configurado: "Unsloth + Llama Factory" — sem tempo de configuração.',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud (afiliado)', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — Mercado spot mais barato',
             content: 'Vast.ai é um mercado P2P de GPUs onde vendedores individuais definem os preços. Você pode fazer lances em instâncias RTX 4090 a $0,32–0,48/hora ou RTX 3090 (24 GB) a $0,20–0,32/hora. Economia em relação ao RunPod: 20–40%. Ressalvas: confiabilidade do host varia; execute checksums antes de começar. Não recomendado para execuções de mais de 12 horas sem estratégia de checkpoint.',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace (afiliado)', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -811,7 +811,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — Sob demanda mais confiável',
             content: 'Lambda Labs Cloud fornece GPUs sob demanda sem risco de spot. Preços: A10G 24GB a $0,60/hora, A100 40GB a $1,29/hora. Para uma execução de fine-tuning de 4 horas em A10G: $2,40 no total. Preferido por equipes que precisam de disponibilidade garantida e ambientes reproduzíveis.',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud (afiliado)', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — الأفضل بشكل عام (فوري + عند الطلب)',
             content: 'يوفر RunPod أفضل مزيج من السعر والموثوقية وتجربة المطورين في الضبط الدقيق. RTX 4090 الفوري (24 جيجابايت): 0.28–0.44 دولار/ساعة. A40 48GB الفوري: 0.44 دولار/ساعة. RTX 4090 عند الطلب: 0.74 دولار/ساعة. يدعم وحدات التخزين الدائمة وقوالب Docker (Axolotl وUnsloth مُثبّتَيْن مسبقاً) وفحوصات صحة معالج الرسومات. قالب جاهز للتشغيل: "Unsloth + Llama Factory" — بدون وقت إعداد.',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud (رابط شريك)', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — أرخص سوق عروض فورية',
             content: 'Vast.ai سوق P2P لمعالجات الرسومات حيث يحدد البائعون الأفراد الأسعار. يمكنك المزايدة على RTX 4090 بـ0.32–0.48 دولار/ساعة أو RTX 3090 (24 جيجابايت) بـ0.20–0.32 دولار/ساعة. وفورات مقارنةً بـ RunPod: 20–40%. تحفظات: موثوقية المضيف تتفاوت؛ شغّل فحوصات التجزئة قبل البدء. غير موصى به لجلسات أطول من 12 ساعة بدون استراتيجية نقطة تحقق.',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace (رابط شريك)', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — أكثر خيارات الطلب الفوري موثوقية',
             content: 'توفر Lambda Labs Cloud معالجات رسومات عند الطلب بدون مخاطر العروض الفورية. الأسعار: A10G 24GB بـ0.60 دولار/ساعة، A100 40GB بـ1.29 دولار/ساعة. لجلسة ضبط دقيق مدتها 4 ساعات على A10G: 2.40 دولار إجمالاً. مفضّل من الفرق التي تحتاج إلى توفر مضمون وبيئات قابلة للاستنساخ.',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud (رابط شريك)', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
@@ -1075,7 +1075,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'RunPod — 종합 최고 (스팟 + 온디맨드)',
             content: 'RunPod은 파인튜닝을 위한 가격, 신뢰성, 개발자 경험의 최적 조합을 제공합니다. 스팟 RTX 4090 (24 GB): $0.28–0.44/시간. 스팟 A40 48GB: $0.44/시간. 온디맨드 RTX 4090: $0.74/시간. 영구 스토리지 볼륨, Docker 템플릿 (Axolotl, Unsloth 사전 설치), GPU 상태 점검을 지원합니다. 사전 구성 템플릿: "Unsloth + Llama Factory" — 설정 시간 불필요.',
             affiliateLinks: [
-              { label: 'RunPod GPU Cloud (제휴 링크)', url: 'https://www.runpod.io' },
+              { label: 'RunPod GPU Cloud', url: 'https://www.runpod.io' },
             ],
           },
           {
@@ -1083,7 +1083,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Vast.ai — 가장 저렴한 스팟 마켓플레이스',
             content: 'Vast.ai는 개인 판매자가 가격을 책정하는 P2P GPU 마켓플레이스입니다. RTX 4090 인스턴스를 $0.32–0.48/시간, RTX 3090 (24 GB)을 $0.20–0.32/시간에 입찰할 수 있습니다. RunPod 대비 절약: 20–40%. 주의사항: 호스트 신뢰성이 다양하므로 시작 전 체크섬을 확인하십시오. 체크포인트 전략 없이 12시간 이상 실행에는 권장하지 않습니다.',
             affiliateLinks: [
-              { label: 'Vast.ai GPU Marketplace (제휴 링크)', url: 'https://vast.ai' },
+              { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],
           },
           {
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             title: 'Lambda Labs — 가장 안정적인 온디맨드',
             content: 'Lambda Labs Cloud는 스팟 리스크 없이 온디맨드 GPU를 제공합니다. 가격: A10G 24GB $0.60/시간, A100 40GB $1.29/시간. A10G에서 4시간 파인튜닝 실행 시 총 비용: $2.40. 보장된 가용성과 재현 가능한 환경이 필요한 팀에 선호됩니다.',
             affiliateLinks: [
-              { label: 'Lambda Labs Cloud (제휴 링크)', url: 'https://lambdalabs.com' },
+              { label: 'Lambda Labs Cloud', url: 'https://lambdalabs.com' },
             ],
           },
         ],
