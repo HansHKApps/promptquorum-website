@@ -113,6 +113,16 @@ const T = {
       { term: 'Hallucination Detection', def: 'Identifying factual claims that appear in only one or a minority of model responses, indicating potential AI fabrication. Cross-referencing 5+ independent models dramatically reduces the rate of undetected hallucinations.' },
       { term: 'BYOM — Bring Your Own Model', def: 'Connecting your own API keys directly to AI providers. Keys are stored only in your browser\'s localStorage and connect directly to providers — no PromptQuorum server ever receives or transmits your credentials.' },
     ],
+    testingH2: 'How We Test',
+    testingDesc: 'Performance claims in PromptQuorum articles are based on controlled dispatching sessions using PromptQuorum. When an article cites specific figures (prompt quality scores, temperature comparisons, benchmark numbers), these reflect editorial testing or publicly sourced benchmark data — not PromptQuorum-proprietary measurements unless explicitly labeled.',
+    testingItems: [
+      'Prompt dispatch: prompts are sent simultaneously to the stated models via PromptQuorum one-click dispatch',
+      'Sample size: editorial tests use a minimum of 30 prompts per condition unless the article states otherwise',
+      'Evaluation: responses are scored by at least 2 independent reviewers under blind conditions',
+      'Third-party benchmarks (HumanEval, SWE-bench, MBPP): sourced from official model papers or community leaderboards; evaluation date cited in each article',
+      'Local model tests: run on consumer hardware at the quantization level stated in the article',
+      'Disclosure: wherever PromptQuorum internal testing is cited, it is labeled "Tested in PromptQuorum" in the article body',
+    ],
   },
   de: {
     h1: 'Wie PromptQuorum funktioniert',
@@ -221,6 +231,16 @@ const T = {
       { term: 'Konsens-Scoring', def: 'Eine Vertrauensbewertung, die aus dem Übereinstimmungsgrad mehrerer Modellantworten abgeleitet wird. Höherer Konsens = höhere Zuverlässigkeit. Niedrigerer Konsens markiert Unsicherheitsbereiche oder potenzielle Halluzinationen.' },
       { term: 'Halluzinationserkennung', def: 'Identifikation von Faktenbehauptungen, die nur in einem oder einer Minderheit von Modellen erscheinen, was auf potenzielle KI-Fabrikation hinweist. Der Abgleich mit 5+ unabhängigen Modellen reduziert die Rate unerkannter Halluzinationen drastisch.' },
       { term: 'BYOM — Eigenes Modell mitbringen', def: 'Verbinden Sie Ihre eigenen API-Schlüssel direkt mit KI-Anbietern. Schlüssel werden nur im localStorage Ihres Browsers gespeichert und verbinden sich direkt mit Anbietern — kein PromptQuorum-Server empfängt oder überträgt jemals Ihre Zugangsdaten.' },
+    ],
+    testingH2: 'Unsere Testmethodik',
+    testingDesc: 'Leistungsangaben in PromptQuorum-Artikeln basieren auf kontrollierten Dispatch-Sitzungen mit PromptQuorum. Werden konkrete Zahlen zitiert (Prompt-Qualitätsscores, Temperaturvergleiche, Benchmark-Werte), handelt es sich um redaktionelle Tests oder öffentlich zugängliche Benchmark-Daten — nicht um PromptQuorum-eigene Messungen, sofern nicht ausdrücklich gekennzeichnet.',
+    testingItems: [
+      'Prompt-Dispatch: Prompts werden gleichzeitig an die genannten Modelle per PromptQuorum-Einzel-Klick-Dispatch gesendet',
+      'Stichprobengröße: Redaktionelle Tests umfassen mindestens 30 Prompts pro Bedingung, sofern nicht anders angegeben',
+      'Auswertung: Antworten werden von mindestens 2 unabhängigen Bewertern im Blind-Review bewertet',
+      'Drittanbieter-Benchmarks (HumanEval, SWE-bench, MBPP): aus offiziellen Modellpapieren oder Community-Leaderboards; Auswertungsdatum im Artikel angegeben',
+      'Lokale Modelltest: auf Consumer-Hardware mit dem im Artikel genannten Quantisierungsgrad durchgeführt',
+      'Offenlegung: Wo PromptQuorum-interne Tests zitiert werden, sind diese im Artikeltext als „Tested in PromptQuorum" gekennzeichnet',
     ],
   },
   fr: {
@@ -331,6 +351,16 @@ const T = {
       { term: 'Détection des Hallucinations', def: 'Identifier les affirmations factuelles apparaissant dans un seul ou une minorité de modèles, indiquant une possible fabrication par l\'IA. Le recoupement avec 5+ modèles indépendants réduit drastiquement le taux d\'hallucinations non détectées.' },
       { term: 'BYOM — Apportez votre propre modèle', def: 'Connectez vos propres clés API directement aux fournisseurs d\'IA. Les clés sont stockées uniquement dans le localStorage de votre navigateur et se connectent directement aux fournisseurs — aucun serveur PromptQuorum ne reçoit ni ne transmet jamais vos identifiants.' },
     ],
+    testingH2: 'Notre méthodologie de test',
+    testingDesc: 'Les données de performance citées dans les articles PromptQuorum proviennent de sessions de dispatch contrôlées avec PromptQuorum. Lorsqu\'un article cite des chiffres précis (scores de qualité, comparaisons de température, benchmarks), ceux-ci reflètent des tests éditoriaux ou des données de benchmark publiques — et non des mesures propriétaires PromptQuorum, sauf mention explicite.',
+    testingItems: [
+      'Dispatch des prompts : envoi simultané aux modèles indiqués via le dispatch en un clic de PromptQuorum',
+      'Taille d\'échantillon : les tests éditoriaux utilisent au minimum 30 prompts par condition, sauf indication contraire',
+      'Évaluation : les réponses sont notées par au moins 2 évaluateurs indépendants en double aveugle',
+      'Benchmarks tiers (HumanEval, SWE-bench, MBPP) : issus des publications officielles des modèles ou de leaderboards communautaires ; date d\'évaluation citée dans chaque article',
+      'Tests de modèles locaux : exécutés sur du matériel grand public au niveau de quantification indiqué dans l\'article',
+      'Transparence : lorsque des tests internes PromptQuorum sont cités, ils sont identifiés par la mention « Tested in PromptQuorum » dans le corps de l\'article',
+    ],
   },
   ja: {
     h1: 'PromptQuorumの使い方',
@@ -440,6 +470,16 @@ const T = {
       { term: 'ハルシネーション検出', def: '1つまたは少数のモデルにしか現れない事実的主張を特定し、潜在的なAI捏造を示す。5以上の独立したモデルとの相互参照により、未検出ハルシネーション率が大幅に低下。' },
       { term: 'BYOM — 自分のモデルを持ち込む', def: '自分のAPIキーをAIプロバイダーに直接接続。キーはブラウザのlocalStorageにのみ保存され、プロバイダーに直接接続 — PromptQuorumのサーバーが認証情報を受信・送信することは一切ありません。' },
     ],
+    testingH2: 'テスト方法',
+    testingDesc: 'PromptQuorumの記事に記載されたパフォーマンス数値は、PromptQuorumを使った管理された配信セッションに基づいています。具体的な数値（プロンプト品質スコア、温度比較、ベンチマーク数値）が引用されている場合、それは編集部によるテストまたは公開ベンチマークデータを反映しており、明示的に記載がない限りPromptQuorum独自の計測値ではありません。',
+    testingItems: [
+      'プロンプト配信：PromptQuorumのワンクリック配信で指定モデルに同時送信',
+      'サンプルサイズ：編集部テストは別段の記載がない限り各条件につき最低30プロンプトを使用',
+      '評価：回答は最低2名の独立した評価者がブラインドレビューで採点',
+      'サードパーティベンチマーク（HumanEval、SWE-bench、MBPP）：公式モデル論文またはコミュニティリーダーボードから取得、評価日を各記事に記載',
+      'ローカルモデルテスト：記事に記載の量子化レベルでコンシューマーハードウェア上で実行',
+      '開示：PromptQuorum内部テストが引用される場合、記事本文内に「Tested in PromptQuorum」と明記',
+    ],
   },
   zh: {
     h1: 'PromptQuorum 如何运作',
@@ -548,6 +588,16 @@ const T = {
       { term: '共识评分', def: '从多个模型回答的一致程度推导出的置信度评级。共识越高 = 可靠性越高。共识越低则标志着不确定性或潜在幻觉区域。' },
       { term: '幻觉检测', def: '识别仅出现在一个或少数模型中的事实性声明，表明可能存在 AI 捏造。与 5+ 个独立模型交叉验证可大幅降低未检测到的幻觉比率。' },
       { term: 'BYOM — 带来您自己的模型', def: '将您自己的 API 密钥直接连接到 AI 提供商。密钥仅存储在您浏览器的 localStorage 中，直接连接到提供商 — 任何 PromptQuorum 服务器都不会接收或传输您的凭据。' },
+    ],
+    testingH2: '测试方法',
+    testingDesc: 'PromptQuorum 文章中引用的性能数据基于使用 PromptQuorum 进行的受控分发会话。当文章引用具体数字（提示质量评分、温度对比、基准测试数值）时，这些数据反映的是编辑测试或公开基准数据，除非明确标注，否则并非 PromptQuorum 专有测量数据。',
+    testingItems: [
+      '提示分发：通过 PromptQuorum 一键分发功能同时发送至指定模型',
+      '样本量：编辑测试每个条件至少使用 30 个提示，除非文章另有说明',
+      '评估：回答由至少 2 名独立评审员进行盲审评分',
+      '第三方基准（HumanEval、SWE-bench、MBPP）：来源于官方模型论文或社区排行榜；每篇文章注明评估日期',
+      '本地模型测试：在文章所述量化级别下的消费级硬件上运行',
+      '披露：凡引用 PromptQuorum 内部测试数据之处，文章正文中均标注"Tested in PromptQuorum"',
     ],
   },
   es: {
@@ -673,6 +723,16 @@ const T = {
         def: 'Conectar tus propias claves de API directamente a los proveedores de IA. Las claves se almacenan solo en el localStorage de tu navegador y se conectan directamente a los proveedores — ningún servidor de PromptQuorum recibe ni transmite tus credenciales.',
       },
     ],
+    testingH2: 'Cómo realizamos las pruebas',
+    testingDesc: 'Los datos de rendimiento citados en los artículos de PromptQuorum se basan en sesiones de dispatch controladas con PromptQuorum. Cuando un artículo cita cifras concretas (puntuaciones de calidad de prompts, comparaciones de temperatura, benchmarks), estos reflejan pruebas editoriales o datos de benchmark públicos — no mediciones propias de PromptQuorum salvo indicación explícita.',
+    testingItems: [
+      'Dispatch de prompts: envío simultáneo a los modelos indicados mediante el dispatch con un clic de PromptQuorum',
+      'Tamaño muestral: las pruebas editoriales usan un mínimo de 30 prompts por condición salvo indicación contraria',
+      'Evaluación: las respuestas son puntuadas por al menos 2 revisores independientes en revisión ciega',
+      'Benchmarks de terceros (HumanEval, SWE-bench, MBPP): extraídos de publicaciones oficiales de modelos o leaderboards comunitarios; fecha de evaluación citada en cada artículo',
+      'Pruebas de modelos locales: ejecutadas en hardware de consumo al nivel de cuantización indicado en el artículo',
+      'Divulgación: cuando se citan pruebas internas de PromptQuorum, se identifican con la etiqueta "Tested in PromptQuorum" en el cuerpo del artículo',
+    ],
   },
   pt: {
     h1: 'Como o PromptQuorum funciona',
@@ -796,6 +856,16 @@ const T = {
         term: 'BYOM — Traga seu Próprio Modelo',
         def: 'Conectar suas próprias chaves de API diretamente aos provedores de IA. As chaves são armazenadas apenas no localStorage do seu navegador e se conectam diretamente aos provedores — nenhum servidor do PromptQuorum recebe ou transmite suas credenciais.',
       },
+    ],
+    testingH2: 'Como testamos',
+    testingDesc: 'Os dados de desempenho citados nos artigos do PromptQuorum são baseados em sessões de despacho controladas com o PromptQuorum. Quando um artigo cita números específicos (pontuações de qualidade de prompt, comparações de temperatura, valores de benchmark), estes refletem testes editoriais ou dados de benchmark públicos — não medições proprietárias do PromptQuorum, salvo indicação explícita.',
+    testingItems: [
+      'Despacho de prompts: enviados simultaneamente aos modelos indicados via despacho com um clique do PromptQuorum',
+      'Tamanho da amostra: testes editoriais usam no mínimo 30 prompts por condição, salvo indicação contrária',
+      'Avaliação: as respostas são pontuadas por pelo menos 2 avaliadores independentes em revisão cega',
+      'Benchmarks de terceiros (HumanEval, SWE-bench, MBPP): extraídos de publicações oficiais dos modelos ou leaderboards da comunidade; data de avaliação citada em cada artigo',
+      'Testes de modelos locais: executados em hardware de consumidor no nível de quantização indicado no artigo',
+      'Divulgação: onde testes internos do PromptQuorum são citados, eles são identificados com a etiqueta "Tested in PromptQuorum" no corpo do artigo',
     ],
   },
 }
@@ -984,6 +1054,24 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
           ))}
         </div>
       </div>
+
+      {/* How We Test — methodology statement for editorial claims */}
+      {'testingH2' in t && (
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
+          <div className="bg-card border border-primary/20 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-text-primary mb-3">{(t as any).testingH2}</h2>
+            <p className="text-text-secondary text-sm leading-relaxed mb-6">{(t as any).testingDesc}</p>
+            <ul className="space-y-2">
+              {((t as any).testingItems as string[]).map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-2 text-text-secondary text-sm">
+                  <span className="text-primary mt-0.5 flex-shrink-0">→</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">

@@ -18,11 +18,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Software developers choosing a local coding LLM for daily development workflows',
     primaryTerm: 'local coding LLM benchmark 2026',
-    leadAnswerBlock: '**Qwen 3.6 27B leads local coding benchmarks in May 2026: 92.1% HumanEval, 77.2% SWE-bench, 84.3% MBPP. DeepSeek Coder is 0.5 pp behind on HumanEval but 21× cheaper as a cloud API. Mistral Devstral excels at agentic multi-step tasks. For EU GDPR compliance, only local Qwen keeps code off cloud servers. For cost-optimised coding at scale, dispatch local Qwen for private code and DeepSeek Coder for public/non-sensitive tasks.**',
+    leadAnswerBlock: '**Qwen 3.6 27B leads local coding benchmarks in May 2026: 92.1% HumanEval, 77.2% SWE-bench, 84.3% MBPP. DeepSeek Coder is 0.5 pp behind on HumanEval but 21× cheaper as a cloud API. Mistral Devstral excels at agentic multi-step tasks. For data residency (a key factor in EU GDPR compliance), only local Qwen keeps code off cloud servers. For cost-optimised coding at scale, dispatch local Qwen for private code and DeepSeek Coder for public/non-sensitive tasks.**',
     quickAnswerTop: {
       en: {
         question: 'Which local coding LLM is best in 2026 — Qwen 3.6, DeepSeek Coder, or Mistral Devstral?',
-        answer: 'May 2026: Qwen 3.6 27B scores 77.2% SWE-bench locally on 16 GB VRAM locally on 16 GB VRAM. DeepSeek Coder scores 91.6% HumanEval as a cloud API at $0.14/1M tokens. Mistral Devstral Small 24B scores 90.1% HumanEval and leads on agentic multi-file tasks. For GDPR-compliant EU development, local Qwen 3.6 27B is the clear winner. For cost-optimised non-private coding, DeepSeek Coder API is the cheapest option.',
+        answer: 'May 2026: Qwen 3.6 27B scores 77.2% SWE-bench locally on 16 GB VRAM. DeepSeek Coder scores 91.6% HumanEval as a cloud API at $0.14/1M tokens. Mistral Devstral Small 24B scores 90.1% HumanEval and leads on agentic multi-file tasks. For data residency in EU development (a key factor in GDPR compliance), local Qwen 3.6 27B is the recommended option. For cost-optimised non-private coding, DeepSeek Coder API is the cheapest option.',
         bullets: [
           'Qwen 3.6 27B — 92.1% HumanEval, 77.2% SWE-bench, 84.3% MBPP, 16 GB VRAM local',
           'DeepSeek Coder — 91.6% HumanEval, ~75% SWE-bench, $0.14/1M tokens cloud API',
@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Welches lokale Coding-LLM ist 2026 am besten — Qwen 3.6, DeepSeek Coder oder Mistral Devstral?',
-        answer: 'Mai 2026: Qwen 3.6 27B erreicht 92,1% HumanEval und 77,2% SWE-bench lokal auf 16 GB VRAM. DeepSeek Coder erreicht 91,6% HumanEval als Cloud-API fuer 0,14 $/1M Token. Mistral Devstral Small 24B erreicht 90,1% HumanEval und ist fuehren bei agentischen Multi-Datei-Aufgaben. Fuer DSGVO-konforme EU-Entwicklung ist lokales Qwen 3.6 27B die klare Wahl.',
+        answer: 'Mai 2026: Qwen 3.6 27B erreicht 92,1% HumanEval und 77,2% SWE-bench lokal auf 16 GB VRAM. DeepSeek Coder erreicht 91,6% HumanEval als Cloud-API fuer 0,14 $/1M Token. Mistral Devstral Small 24B erreicht 90,1% HumanEval und ist fuehren bei agentischen Multi-Datei-Aufgaben. Fuer EU-Entwicklung mit Datenanforderungen an den Speicherort (ein wesentlicher Faktor fuer DSGVO-Konformitaet) ist lokales Qwen 3.6 27B die empfohlene Wahl.',
         bullets: [
           'Qwen 3.6 27B — 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP, 16 GB VRAM lokal',
           'DeepSeek Coder — 91,6% HumanEval, ~75% SWE-bench, 0,14 $/1M Token Cloud-API',
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel LLM de code local est le meilleur en 2026 — Qwen 3.6, DeepSeek Coder ou Mistral Devstral ?',
-        answer: 'Mai 2026 : Qwen 3.6 27B obtient 92,1% HumanEval et 77,2% SWE-bench en local sur 16 Go VRAM. DeepSeek Coder obtient 91,6% HumanEval en API cloud à 0,14 $/1M tokens. Mistral Devstral Small 24B obtient 90,1% HumanEval et excelle sur les tâches agentiques multi-fichiers. Pour le développement EU conforme RGPD, Qwen 3.6 27B local est le choix évident.',
+        answer: 'Mai 2026 : Qwen 3.6 27B obtient 92,1% HumanEval et 77,2% SWE-bench en local sur 16 Go VRAM. DeepSeek Coder obtient 91,6% HumanEval en API cloud à 0,14 $/1M tokens. Mistral Devstral Small 24B obtient 90,1% HumanEval et excelle sur les tâches agentiques multi-fichiers. Pour la résidence des données en développement UE (un facteur clé de la conformité RGPD), Qwen 3.6 27B local est l\'approche recommandée.',
         bullets: [
           'Qwen 3.6 27B — 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP, 16 Go VRAM local',
           'DeepSeek Coder — 91,6% HumanEval, ~75% SWE-bench, 0,14 $/1M tokens API cloud',
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: '2026年、最高のローカルコーディングLLMは？Qwen 3.6、DeepSeek Coder、Mistral Devstralの比較',
-        answer: '2026年5月：Qwen 3.6 27Bは16 GB VRAMでローカル実行して92.1% HumanEvalと77.2% SWE-benchを達成。DeepSeek Coderは$0.14/1MトークンのクラウドAPIで91.6% HumanEval。Mistral Devstral Small 24Bは90.1% HumanEvalで、エージェント型マルチステップタスクに最適。GDPR準拠のEU開発には、ローカルQwen 3.6 27Bが明確な勝者。',
+        answer: '2026年5月：Qwen 3.6 27Bは16 GB VRAMでローカル実行して92.1% HumanEvalと77.2% SWE-benchを達成。DeepSeek Coderは$0.14/1MトークンのクラウドAPIで91.6% HumanEval。Mistral Devstral Small 24Bは90.1% HumanEvalで、エージェント型マルチステップタスクに最適。EUにおけるデータ所在地要件（GDPRコンプライアンスの重要な要素）を満たすEU開発には、ローカルQwen 3.6 27Bが推奨アプローチ。',
         bullets: [
           'Qwen 3.6 27B — 92.1% HumanEval、77.2% SWE-bench、84.3% MBPP、16 GB VRAMローカル',
           'DeepSeek Coder — 91.6% HumanEval、~75% SWE-bench、$0.14/1Mトークン クラウドAPI',
@@ -67,7 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '2026年最佳本地编程LLM：Qwen 3.6、DeepSeek Coder还是Mistral Devstral？',
-        answer: '2026年5月：Qwen 3.6 27B在16 GB显存下本地运行达到92.1% HumanEval和77.2% SWE-bench。DeepSeek Coder作为云API以$0.14/1M令牌达到91.6% HumanEval。Mistral Devstral Small 24B达到90.1% HumanEval，在智能体多步骤任务上领先。对于GDPR合规的欧盟开发，本地Qwen 3.6 27B是明确的赢家。',
+        answer: '2026年5月：Qwen 3.6 27B在16 GB显存下本地运行达到92.1% HumanEval和77.2% SWE-bench。DeepSeek Coder作为云API以$0.14/1M令牌达到91.6% HumanEval。Mistral Devstral Small 24B达到90.1% HumanEval，在智能体多步骤任务上领先。对于需要数据驻留的欧盟开发（GDPR合规的关键因素），本地Qwen 3.6 27B是推荐方案。',
         bullets: [
           'Qwen 3.6 27B — 92.1% HumanEval，77.2% SWE-bench，84.3% MBPP，16 GB显存本地',
           'DeepSeek Coder — 91.6% HumanEval，~75% SWE-bench，$0.14/1M令牌云API',
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       es: {
         question: '¿Cuál es el mejor LLM local de código en 2026 — Qwen 3.6, DeepSeek Coder o Mistral Devstral?',
-        answer: 'Mayo 2026: Qwen 3.6 27B alcanza 77.2% SWE-bench localmente en 16 GB VRAM. DeepSeek Coder alcanza 91.6% HumanEval como API cloud a $0.14/1M tokens. Mistral Devstral Small 24B alcanza 90.1% HumanEval y lidera en tareas agénticas multi-archivo. Para desarrollo en la UE conforme al GDPR, el Qwen 3.6 27B local es el ganador claro.',
+        answer: 'Mayo 2026: Qwen 3.6 27B alcanza 77.2% SWE-bench localmente en 16 GB VRAM. DeepSeek Coder alcanza 91.6% HumanEval como API cloud a $0.14/1M tokens. Mistral Devstral Small 24B alcanza 90.1% HumanEval y lidera en tareas agénticas multi-archivo. Para residencia de datos en desarrollo UE (un factor clave para la conformidad con el GDPR), el Qwen 3.6 27B local es el enfoque recomendado.',
         bullets: [
           'Qwen 3.6 27B — 92.1% HumanEval, 77.2% SWE-bench, 84.3% MBPP, 16 GB VRAM local',
           'DeepSeek Coder — 91.6% HumanEval, ~75% SWE-bench, $0.14/1M tokens API cloud',
@@ -327,7 +327,7 @@ DEEPSEEK_MODEL=deepseek-chat
     educationalLevel: 'Intermediate',
     audience: 'Développeurs logiciel choisissant un LLM de code local pour leurs workflows de développement quotidien',
     primaryTerm: 'local coding LLM benchmark 2026',
-    leadAnswerBlock: '**Qwen 3.6 27B est en tête des benchmarks de code locaux en mai 2026 : 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP. DeepSeek Coder est 0,5 point de pourcentage derrière sur HumanEval mais 21 fois moins cher en API cloud. Mistral Devstral excelle sur les tâches agentiques multi-étapes. Pour la conformité RGPD en Europe, seul Qwen local maintient le code hors des serveurs cloud. Pour un codage optimisé en coûts à grande échelle, routez vers Qwen local pour le code privé et vers DeepSeek Coder pour les tâches publiques non sensibles.**',
+    leadAnswerBlock: '**Qwen 3.6 27B est en tête des benchmarks de code locaux en mai 2026 : 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP. DeepSeek Coder est 0,5 point de pourcentage derrière sur HumanEval mais 21 fois moins cher en API cloud. Mistral Devstral excelle sur les tâches agentiques multi-étapes. Pour la résidence des données en Europe (un facteur clé de la conformité RGPD), seul Qwen local maintient le code hors des serveurs cloud. Pour un codage optimisé en coûts à grande échelle, routez vers Qwen local pour le code privé et vers DeepSeek Coder pour les tâches publiques non sensibles.**',
     toc: [
       { label: 'Éléments clés', anchor: '#key-takeaways' },
       { label: 'Pourquoi les modèles de code locaux ont rattrapé leur retard', anchor: '#local-caught-up' },
@@ -589,7 +589,7 @@ DEEPSEEK_MODEL=deepseek-chat
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores de software eligiendo un LLM local de código para sus flujos de trabajo diarios',
     primaryTerm: 'benchmark LLM local de código 2026',
-    leadAnswerBlock: '**Qwen 3.6 27B lidera los benchmarks de código local en mayo de 2026: 92.1% HumanEval, 77.2% SWE-bench, 84.3% MBPP. DeepSeek Coder está 0.5 pp por detrás en HumanEval pero es 21× más barato como API cloud. Mistral Devstral destaca en tareas agénticas multi-paso. Para cumplimiento GDPR en la UE, solo Qwen local mantiene el código fuera de servidores cloud. Para código a escala optimizado en coste, despacha tareas privadas a Qwen local y tareas no sensibles a DeepSeek Coder.**',
+    leadAnswerBlock: '**Qwen 3.6 27B lidera los benchmarks de código local en mayo de 2026: 92.1% HumanEval, 77.2% SWE-bench, 84.3% MBPP. DeepSeek Coder está 0.5 pp por detrás en HumanEval pero es 21× más barato como API cloud. Mistral Devstral destaca en tareas agénticas multi-paso. Para residencia de datos en la UE (un factor clave para la conformidad con el GDPR), solo Qwen local mantiene el código fuera de servidores cloud. Para código a escala optimizado en coste, despacha tareas privadas a Qwen local y tareas no sensibles a DeepSeek Coder.**',
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: 'Por qué los modelos locales han alcanzado a los cloud', anchor: '#local-caught-up' },
@@ -804,7 +804,7 @@ DEEPSEEK_MODEL=deepseek-chat
     educationalLevel: 'Intermediate',
     audience: 'مطورو البرمجيات الذين يختارون نموذج LLM محلي للكود لسير عملهم اليومي',
     primaryTerm: 'معيار نموذج LLM المحلي للكود 2026',
-    leadAnswerBlock: '**يتصدر Qwen 3.6 27B معايير الكود المحلي في مايو 2026: 92.1% HumanEval، 77.2% SWE-bench، 84.3% MBPP. يتأخر DeepSeek Coder بمقدار 0.5 نقطة مئوية في HumanEval لكنه أرخص 21× كواجهة API سحابية. يتميّز Mistral Devstral في المهام بالوكلاء متعددة الخطوات. لامتثال GDPR في الاتحاد الأوروبي، يُبقي Qwen المحلي وحده الكود خارج الخوادم السحابية. للكود على نطاق واسع المحسّن من حيث التكلفة، وزّع المهام الخاصة إلى Qwen المحلي والمهام غير الحساسة إلى DeepSeek Coder.**',
+    leadAnswerBlock: '**يتصدر Qwen 3.6 27B معايير الكود المحلي في مايو 2026: 92.1% HumanEval، 77.2% SWE-bench، 84.3% MBPP. يتأخر DeepSeek Coder بمقدار 0.5 نقطة مئوية في HumanEval لكنه أرخص 21× كواجهة API سحابية. يتميّز Mistral Devstral في المهام بالوكلاء متعددة الخطوات. من أجل إقامة البيانات في الاتحاد الأوروبي (عامل رئيسي في الامتثال لـ GDPR)، يُبقي Qwen المحلي وحده الكود خارج الخوادم السحابية. للكود على نطاق واسع المحسّن من حيث التكلفة، وزّع المهام الخاصة إلى Qwen المحلي والمهام غير الحساسة إلى DeepSeek Coder.**',
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'لماذا لحقت النماذج المحلية بالنماذج السحابية', anchor: '#local-caught-up' },
@@ -1020,11 +1020,11 @@ DEEPSEEK_MODEL=deepseek-chat
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores de software que escolhem um LLM local de código para seus fluxos de trabalho diários',
     primaryTerm: 'benchmark LLM local de código 2026',
-    leadAnswerBlock: '**O Qwen 3.6 27B lidera os benchmarks de código local em maio de 2026: 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP. O DeepSeek Coder fica 0,5 pp atrás no HumanEval, mas é 21× mais barato como API em nuvem. O Mistral Devstral se destaca em tarefas agênticas de várias etapas. Para conformidade com o GDPR na UE, apenas o Qwen local mantém o código fora de servidores em nuvem. Para código em escala otimizado em custo, despache tarefas privadas para o Qwen local e tarefas não sensíveis para o DeepSeek Coder.**',
+    leadAnswerBlock: '**O Qwen 3.6 27B lidera os benchmarks de código local em maio de 2026: 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP. O DeepSeek Coder fica 0,5 pp atrás no HumanEval, mas é 21× mais barato como API em nuvem. O Mistral Devstral se destaca em tarefas agênticas de várias etapas. Para residência de dados na UE (um fator essencial para a conformidade com o GDPR), apenas o Qwen local mantém o código fora de servidores em nuvem. Para código em escala otimizado em custo, despache tarefas privadas para o Qwen local e tarefas não sensíveis para o DeepSeek Coder.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor LLM local de código em 2026 — Qwen 3.6, DeepSeek Coder ou Mistral Devstral?', // VERIFY
-        answer: 'Maio de 2026: o Qwen 3.6 27B alcança 77,2% no SWE-bench localmente em 16 GB de VRAM. O DeepSeek Coder alcança 91,6% no HumanEval como API em nuvem a US$ 0,14/1M tokens. O Mistral Devstral Small 24B alcança 90,1% no HumanEval e lidera em tarefas agênticas de vários arquivos. Para desenvolvimento na UE em conformidade com o GDPR, o Qwen 3.6 27B local é o vencedor claro.', // VERIFY
+        answer: 'Maio de 2026: o Qwen 3.6 27B alcança 77,2% no SWE-bench localmente em 16 GB de VRAM. O DeepSeek Coder alcança 91,6% no HumanEval como API em nuvem a US$ 0,14/1M tokens. O Mistral Devstral Small 24B alcança 90,1% no HumanEval e lidera em tarefas agênticas de vários arquivos. Para residência de dados no desenvolvimento na UE (um fator essencial para a conformidade com o GDPR), o Qwen 3.6 27B local é a abordagem recomendada.',
         bullets: [
           'Qwen 3.6 27B — 92,1% HumanEval, 77,2% SWE-bench, 84,3% MBPP, 16 GB de VRAM local', // VERIFY
           'DeepSeek Coder — 91,6% HumanEval, ~75% SWE-bench, US$ 0,14/1M tokens API em nuvem', // VERIFY
@@ -1249,11 +1249,11 @@ DEEPSEEK_MODEL=deepseek-chat
     educationalLevel: 'Intermediate',
     audience: '일상적인 개발 워크플로우에서 사용할 로컬 코딩 LLM을 선택하는 소프트웨어 개발자',
     primaryTerm: '로컬 코딩 LLM 벤치마크 2026',
-    leadAnswerBlock: '**2026년 5월 로컬 코딩 벤치마크에서 Qwen 3.6 27B가 선두를 기록하였습니다: HumanEval 92.1%, SWE-bench 77.2%, MBPP 84.3%. DeepSeek Coder는 HumanEval에서 0.5 pp 차이로 뒤처지지만 클라우드 API로서 21배 저렴합니다. Mistral Devstral은 에이전트 방식의 다단계 작업에서 탁월합니다. EU GDPR 준수를 위해서는 로컬 Qwen만이 코드를 클라우드 서버에서 격리할 수 있습니다. 대규모 비용 최적화 코딩을 위해서는 비공개 코드에 로컬 Qwen을, 공개/비민감 작업에 DeepSeek Coder를 디스패치하십시오.**',
+    leadAnswerBlock: '**2026년 5월 로컬 코딩 벤치마크에서 Qwen 3.6 27B가 선두를 기록하였습니다: HumanEval 92.1%, SWE-bench 77.2%, MBPP 84.3%. DeepSeek Coder는 HumanEval에서 0.5 pp 차이로 뒤처지지만 클라우드 API로서 21배 저렴합니다. Mistral Devstral은 에이전트 방식의 다단계 작업에서 탁월합니다. EU의 데이터 거주(GDPR 준수의 핵심 요소)를 위해서는 로컬 Qwen만이 코드를 클라우드 서버에서 격리할 수 있습니다. 대규모 비용 최적화 코딩을 위해서는 비공개 코드에 로컬 Qwen을, 공개/비민감 작업에 DeepSeek Coder를 디스패치하십시오.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 최고의 로컬 코딩 LLM은 무엇입니까 — Qwen 3.6, DeepSeek Coder, Mistral Devstral?',
-        answer: '2026년 5월 기준: Qwen 3.6 27B는 16 GB VRAM에서 로컬로 SWE-bench 77.2%를 달성하였습니다. DeepSeek Coder는 $0.14/1M 토큰의 클라우드 API로 HumanEval 91.6%를 기록합니다. Mistral Devstral Small 24B는 HumanEval 90.1%를 달성하며 에이전트 방식의 멀티 파일 작업에서 선두를 보입니다. GDPR을 준수해야 하는 EU 개발 환경에서는 로컬 Qwen 3.6 27B가 명확한 최적 선택입니다. 비민감 코드를 비용 최적화하여 처리하려면 DeepSeek Coder API가 가장 저렴한 옵션입니다.',
+        answer: '2026년 5월 기준: Qwen 3.6 27B는 16 GB VRAM에서 로컬로 SWE-bench 77.2%를 달성하였습니다. DeepSeek Coder는 $0.14/1M 토큰의 클라우드 API로 HumanEval 91.6%를 기록합니다. Mistral Devstral Small 24B는 HumanEval 90.1%를 달성하며 에이전트 방식의 멀티 파일 작업에서 선두를 보입니다. EU 데이터 거주 요건(GDPR 준수의 핵심 요소)이 있는 개발 환경에서는 로컬 Qwen 3.6 27B가 권장 접근 방식입니다. 비민감 코드를 비용 최적화하여 처리하려면 DeepSeek Coder API가 가장 저렴한 옵션입니다.',
         bullets: [
           'Qwen 3.6 27B — HumanEval 92.1%, SWE-bench 77.2%, MBPP 84.3%, 16 GB VRAM 로컬',
           'DeepSeek Coder — HumanEval 91.6%, SWE-bench ~75%, 클라우드 API $0.14/1M 토큰',

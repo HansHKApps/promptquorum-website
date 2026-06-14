@@ -81,6 +81,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: CUTOFF_DATA_LAST_VERIFIED,
       },
+      pt: {
+        question: 'Quais são as datas de corte de conhecimento dos modelos de IA em 2026?',
+        answer: 'Datas de corte verificadas: GPT-5.5 agosto 2025 (ChatGPT busca no Bing por padrão; GPT-4o legado out 2023); Claude Opus 4.8 janeiro 2026 (corte confiável); Grok 4.3 novembro 2024 (busca X); Gemini 3.1 Pro janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
+        bullets: [
+          'GPT-5.5 (ChatGPT): corte ago 2025 — parcialmente compensado pela busca Bing',
+          'Claude (Opus 4.8): corte jan 2026 (confiável) — busca web requer ativação explícita',
+          'Grok 4.3: corte nov 2024 — busca X por padrão',
+          'LLMs locais: sem camada de busca — o corte é um limite de conhecimento fixo',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+      ar: {
+        question: 'ما هي تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي في 2026؟',
+        answer: 'تواريخ انقطاع موثّقة: GPT-5.5 أغسطس 2025 (ChatGPT يبحث في Bing افتراضيًا؛ GPT-4o القديم أكتوبر 2023)؛ Claude Opus 4.8 يناير 2026 (انقطاع موثوق)؛ Grok 4.3 نوفمبر 2024 (يبحث في X)؛ Gemini 3.1 Pro يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
+        bullets: [
+          'GPT-5.5 (ChatGPT): انقطاع أغسطس 2025 — مُعوَّض جزئيًا ببحث Bing',
+          'Claude (Opus 4.8): انقطاع يناير 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
+          'Grok 4.3: انقطاع نوفمبر 2024 — يبحث في X افتراضيًا',
+          'نماذج LLM المحلية: بلا بحث — الانقطاع حد معرفي مجمّد مطلق',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
     },
     snippetBlocks: [
       {
@@ -383,6 +405,48 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '클라우드 모델(ChatGPT, Gemini, Grok)은 내장된 웹 검색으로 이를 부분적으로 보완합니다',
           '로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없습니다 — 컷오프는 절대적인 지식의 한계입니다',
           'Mistral Large, Llama 4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
+        ],
+      },
+    },
+  },
+  pt: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-12',
+    theme: 'Knowledge & Research',
+    title: 'Datas de corte de conhecimento dos modelos de IA 2026: guia de referência completo',
+    seoTitle: 'Datas de corte de conhecimento de IA 2026 | PromptQuorum',
+    metaDescription: 'Datas de corte verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma e Phi. Descubra quais modelos usam busca web ao vivo e quais estão congelados em um ponto no tempo.',
+    publishDate: '2026-06-12',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Datas de corte de conhecimento são fixas — informações após essa data não existem para o modelo',
+          'Modelos em nuvem (ChatGPT, Gemini, Grok) compensam parcialmente com busca web integrada',
+          'LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto de conhecimento',
+          'Vários modelos principais — incluindo Mistral Large, Llama 4 e Qwen3 — não divulgaram datas de corte exatas',
+        ],
+      },
+    },
+  },
+  ar: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-12',
+    theme: 'Knowledge & Research',
+    title: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي 2026: دليل مرجعي شامل',
+    seoTitle: 'تواريخ انقطاع معرفة الذكاء الاصطناعي 2026 | PromptQuorum',
+    metaDescription: 'تواريخ انقطاع موثّقة لـ Claude وChatGPT وGemini وGrok وLlama وQwen وGemma وPhi. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.',
+    publishDate: '2026-06-12',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'تواريخ انقطاع المعرفة ثابتة — المعلومات بعد هذا التاريخ غير موجودة للنموذج',
+          'نماذج السحابة (ChatGPT وGemini وGrok) تعوّض جزئيًا ببحث ويب مدمج',
+          'نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد معرفي مطلق',
+          'عدة نماذج رئيسية — بما فيها Mistral Large وLlama 4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
         ],
       },
     },

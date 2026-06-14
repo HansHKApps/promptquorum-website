@@ -779,4 +779,780 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
+  pt: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-12',
+    theme: 'Knowledge & Research',
+    title: 'Datas de corte de conhecimento de IA, busca ao vivo e GEO: Guia completo',
+    seoTitle: 'Datas de corte de IA e estratégia GEO 2026 — foco em LLM local',
+    intro: '**Todo modelo de IA possui uma data de corte de conhecimento — a fronteira onde os dados de treinamento terminam. Mas modelos em nuvem e modelos locais lidam com esse limite de formas fundamentalmente diferentes.** Este guia explica a diferença entre datas de corte e busca ao vivo, resume o comportamento dos principais modelos e extrai implicações estratégicas para usuários e empresas que desejam aparecer em respostas geradas por IA — incluindo o insight central de que LLMs locais exigem uma estratégia GEO completamente diferente dos modelos em nuvem.',
+    metaDescription: 'Guia completo sobre datas de corte de conhecimento de IA: datas verificadas para Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma e Phi — com estratégia GEO para IA em nuvem vs LLM local. Modelos locais precisam de RAG, não de SEO.',
+    publishDate: '2026-06-12',
+    dateModified: CUTOFF_DATA_LAST_VERIFIED,
+    lastFactChecked: CUTOFF_DATA_LAST_VERIFIED,
+    readTime: '16 min de leitura',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'data de corte de conhecimento de IA',
+    audience: 'Usuários, equipes de produto e profissionais de marketing que precisam entender de onde os modelos de IA obtêm informações — e como responder a isso',
+    current_models_mentioned: [
+      'Claude Opus 4.8', 'ChatGPT', 'GPT-5.5', 'GPT-4o', 'Gemini 3.1 Pro',
+      'Grok 4.3', 'Mistral Large 3', 'DeepSeek-V3', 'Llama 4 Scout', 'Qwen3 14B',
+      'Gemma 3 27B', 'Phi-4', 'Perplexity',
+    ],
+    leadAnswerBlock: '**A data de corte de conhecimento de IA é a data até a qual os dados de treinamento do modelo terminam.** Modelos em nuvem compensam parcialmente com busca web integrada (ChatGPT → Bing, Gemini → Google, Grok → X). LLMs locais não possuem camada de busca, tornando a data de corte absoluta. Para estratégia GEO: aparecer em IA em nuvem requer otimização de busca. Aparecer em IA local requer pipelines RAG — SEO sozinho não alcança modelos que não navegam na web.',
+    quickFacts: [
+      '**6 modelos em nuvem** incluídos — datas de corte verificadas com links de fontes primárias',
+      '**6 modelos locais/open-weight** incluídos — todos com "nenhuma" camada de busca',
+      '**Gemma 3 27B** possui a data de corte verificada mais antiga entre modelos locais: agosto de 2024',
+      '**Phi-4** tem data de corte de junho de 2024 — segunda data verificada mais antiga entre locais',
+      '**Grok 4.3** é o único modelo em nuvem cuja camada de busca padrão é uma plataforma social (X/Twitter) em vez da web geral',
+      '**Implicação GEO**: empresas que implantam Llama/Qwen internamente só podem ser alcançadas por meio de pipelines RAG que a própria empresa construiu',
+    ],
+    toc: [
+      { label: 'Pontos principais', anchor: 'key-takeaways' },
+      { label: 'O limite invisível: a realidade das datas de corte', anchor: 'the-invisible-limit' },
+      { label: 'Data de corte vs busca ao vivo: a diferença decisiva', anchor: 'cutoff-vs-live-search' },
+      { label: 'Tabela completa: todos os modelos', anchor: 'full-model-table' },
+      { label: 'O problema do LLM local: rodando com conhecimento congelado', anchor: 'local-llm-problem' },
+      { label: 'Implicações para usuários', anchor: 'implications-for-users' },
+      { label: 'Implicações para empresas: estratégia GEO', anchor: 'geo-strategy' },
+      { label: 'Solução GEO: construindo sua vantagem competitiva', anchor: 'geo-solution' },
+      { label: 'Perguntas frequentes', anchor: 'faq-knowledge-cutoffs' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      proficiencyLevel: 'Intermediate',
+      dependencies: 'Compreensão básica de como funcionam LLMs',
+      headline: 'Datas de corte de conhecimento de IA, busca ao vivo e GEO: Guia completo',
+      description: 'Guia completo sobre datas de corte de conhecimento de IA com dados verificados para todos os principais modelos em nuvem e locais, incluindo implicações de estratégia GEO e por que LLMs locais precisam de RAG em vez de SEO.',
+      datePublished: '2026-06-12',
+      dateModified: CUTOFF_DATA_LAST_VERIFIED,
+      inLanguage: 'pt',
+      keywords: [
+        'data de corte de conhecimento de IA', 'data de corte', 'corte de LLM local', 'estratégia GEO',
+        'otimização de motor generativo', 'RAG vs SEO', 'data de corte ChatGPT',
+        'data de corte Claude', 'corte Llama', 'corte Gemma', 'corte Phi-4',
+        'corte de treinamento de IA 2026', 'busca ao vivo IA', 'busca Bing IA', 'limitações LLM local',
+      ],
+      about: [
+        { '@type': 'Thing', name: 'Data de Corte de Conhecimento de IA' },
+        { '@type': 'Thing', name: 'Otimização de Motor Generativo' },
+        { '@type': 'Thing', name: 'LLM Local' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
+        width: 1200,
+        height: 630,
+      },
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/knowledge-cutoffs-and-geo',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'O que é uma data de corte de conhecimento de IA?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A data de corte de conhecimento é a data até a qual os dados de treinamento do modelo terminam. O modelo não tem nenhuma informação sobre eventos, produtos, pesquisas ou conteúdos publicados após essa data. Modelos em nuvem podem compensar parcialmente com busca web, mas LLMs locais não — tornando a data de corte absoluta.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Por que o ChatGPT conhece eventos recentes mesmo tendo data de corte de outubro de 2023?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, complementando respostas com resultados de busca atuais. O modelo base GPT-5.5 tem data de corte de agosto de 2025; o legado GPT-4o tem outubro de 2023. O que você vê é a camada de busca, não dados de treinamento atualizados.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Não. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para acessar informações atuais, você precisa construir um pipeline RAG (Geração Aumentada por Recuperação).',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'O que é GEO e como se relaciona com datas de corte?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GEO (Otimização de Motor Generativo) é a prática de fazer sua marca ou conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO se sobrepõe ao SEO. Para LLMs locais, o modelo não busca na web, então GEO via busca é estruturalmente impossível. O único caminho é por meio de pipelines RAG construídos pela organização que implanta o modelo.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Qual modelo de IA tem a data de corte de conhecimento verificada mais recente?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Claude Opus 4.8 tem a data de corte confiável mais recente em janeiro de 2026. GPT-5.5: agosto de 2025. Gemini 3.1 Pro: janeiro de 2025. Grok 4.3: novembro de 2024. DeepSeek-V3: julho de 2024. Gemma 3 27B: agosto de 2024. Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Posso usar SEO para aparecer em respostas do Llama ou Qwen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Não. SEO não pode influenciar LLMs implantados localmente porque o modelo não faz busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes da data de corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Como verificar factualmente respostas de IA que podem ser afetadas por datas de corte?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Como saber se uma resposta de IA usou busca ao vivo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — respostas sempre vêm dos dados de treinamento.',
+          },
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Todo modelo de IA tem uma data de corte de conhecimento — uma data definitiva após a qual não há dados de treinamento sobre eventos, produtos ou informações',
+          'Modelos em nuvem (ChatGPT, Gemini, Grok) adicionam busca web ao vivo sobre os dados de treinamento, substituindo parcialmente a data de corte para consultas factuais',
+          'LLMs locais (Llama, Qwen, Gemma, Phi, Mistral open-weight) não possuem camada de busca — a data de corte é absoluta e não pode ser substituída sem um sistema RAG',
+          'Para GEO: aparecer em IA em nuvem requer otimização de busca tradicional (Bing, Google, X); aparecer em IA local requer pipelines RAG — SEO não alcança modelos que nunca tocam a web',
+          'Datas de corte verificadas: Claude Opus 4.8 = jan 2026 (confiável); GPT-5.5 = ago 2025; Gemini 3.1 Pro = jan 2025; Grok 4.3 = nov 2024; Gemma 3 27B = ago 2024; DeepSeek-V3 = jul 2024; Phi-4 = jun 2024; GPT-4o (legado) = out 2023',
+          'Vários modelos principais — incluindo Llama 4, Qwen3 e Mistral Large 3 — não divulgaram publicamente datas exatas de corte',
+        ],
+      },
+      invisible_limit: {
+        id: 'the-invisible-limit',
+        title: 'O limite invisível: a realidade das datas de corte de conhecimento',
+        content: [
+          '<strong>A data de corte de conhecimento é a data após a qual um modelo de IA não recebe mais dados de treinamento.</strong> O modelo leu uma enorme quantidade de texto — páginas da web, livros, código, artigos de pesquisa — até essa data, e depois disso, nada. Eventos ocorridos após o corte, lançamentos de produtos, novas pesquisas, mudanças de preço ou qualquer outro desenvolvimento são invisíveis ao modelo.',
+          'Isso cria um modo de falha sistemático que os usuários frequentemente perdem: a IA fornece respostas confiantes e bem estruturadas sobre tópicos que desconhece completamente. Porque o modelo não sabe o que não sabe.',
+          'A confusão é amplificada porque muitos produtos em nuvem agora adicionam busca ao vivo sobre o modelo base. Quando o ChatGPT responde a uma pergunta sobre notícias de hoje, ele está usando Bing — não dados de treinamento.',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: 'Referência rápida',
+            text: 'Só precisa da tabela de datas de corte? Veja a <a href="/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">Folha de referência de datas de corte de conhecimento de IA</a>.',
+          },
+        ],
+      },
+      cutoff_vs_search: {
+        id: 'cutoff-vs-live-search',
+        title: 'Data de corte vs busca ao vivo: a diferença que muda tudo',
+        content: [
+          '<strong>A distinção mais importante é entre corte de treinamento (propriedade do modelo) e busca ao vivo (recurso do produto).</strong>',
+          '<strong>O corte de treinamento</strong> está incorporado nos pesos do modelo. Não pode ser alterado sem retreinar o modelo. Toda cópia do GPT-4o tem o mesmo corte de outubro de 2023.',
+          '<strong>A camada de busca ao vivo</strong> é uma ferramenta externa integrada no nível do produto. Quando o ChatGPT precisa de informações atuais, ele consulta a API do Bing e sintetiza os resultados com sua capacidade de raciocínio.',
+        ],
+        columns: ['Modelo / Produto', 'Camada de busca', 'Gatilho de busca', 'Observação'],
+        rows: [
+          { 'Modelo / Produto': 'GPT-5.5 (ChatGPT)', 'Camada de busca': 'Bing', 'Gatilho de busca': 'Automático — o modelo decide', 'Observação': 'Ativado por padrão no ChatGPT Plus/Pro; desativado em chamadas brutas de API' },
+          { 'Modelo / Produto': 'Gemini 3.1 Pro', 'Camada de busca': 'Google Search', 'Gatilho de busca': 'Automático — o modelo decide', 'Observação': 'Google Grounding API disponível para desenvolvedores no Vertex AI' },
+          { 'Modelo / Produto': 'Grok 4.3 (X.com)', 'Camada de busca': 'X (Twitter)', 'Gatilho de busca': 'Automático — o modelo decide', 'Observação': 'DeepSearch = busca na web mais ampla, opt-in' },
+          { 'Modelo / Produto': 'Perplexity', 'Camada de busca': 'Web multi-fonte', 'Gatilho de busca': 'Sempre — em cada consulta', 'Observação': 'Busca-first por design; cita fontes' },
+          { 'Modelo / Produto': 'Claude (Anthropic)', 'Camada de busca': 'Brave / web (ferramenta)', 'Gatilho de busca': 'Opt-in de desenvolvedor apenas', 'Observação': 'Desativado por padrão; requer configuração de ferramentas na API' },
+          { 'Modelo / Produto': 'DeepSeek (nuvem)', 'Camada de busca': 'Nenhuma', 'Gatilho de busca': 'N/A', 'Observação': 'Sem camada de busca; data de corte é limite rígido' },
+          { 'Modelo / Produto': 'Mistral (nuvem)', 'Camada de busca': 'Nenhuma', 'Gatilho de busca': 'N/A', 'Observação': 'Sem camada de busca; data de corte é limite rígido' },
+          { 'Modelo / Produto': 'Todos os LLMs locais', 'Camada de busca': 'Nenhuma', 'Gatilho de busca': 'N/A', 'Observação': 'Sem acesso à internet por padrão; requer RAG para informações atuais' },
+        ],
+      },
+      full_table: {
+        id: 'full-model-table',
+        title: 'Dados completos verificados: todos os principais modelos',
+        content: [
+          'A tabela abaixo usa apenas dados de fontes primárias. Onde não há fonte primária, a data de corte é marcada como "não divulgada publicamente".',
+          '<strong>Modelos em nuvem:</strong>',
+        ],
+        columns: ['Modelo', 'Fornecedor', 'Data de corte', 'Verificado', 'Busca padrão', 'Camada de busca'],
+        rows: CLOUD_MODELS.map(m => ({
+          'Modelo': m.modelName,
+          'Fornecedor': m.vendor,
+          'Data de corte': m.cutoffDate,
+          'Verificado': m.cutoffVerified ? '✓' : '—',
+          'Busca padrão': m.hasLiveSearchDefault ? 'Sim' : (m.searchLayer === 'Tool-use only' ? 'Somente via ferramenta' : 'Não'),
+          'Camada de busca': m.searchLayer,
+        })),
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'Entre os modelos em nuvem, apenas Claude requer configuração explícita de desenvolvedor para busca web — todos os outros têm busca ao vivo ativa por padrão para usuários finais.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: 'Modelos de IA em nuvem são como pesquisadores que podem fazer buscas entre respostas. Modelos de IA local são como pesquisadores completamente offline desde uma data específica.',
+          },
+        ],
+      },
+      local_table_section: {
+        id: 'local-llm-table',
+        title: 'Modelos locais / open-weight: datas de corte verificadas',
+        content: [
+          '<strong>Modelos open-weight locais — todos com "nenhuma" camada de busca:</strong>',
+        ],
+        columns: ['Modelo', 'Fornecedor', 'Data de corte', 'Verificado', 'Implantação', 'Licença'],
+        rows: LOCAL_MODELS.map(m => ({
+          'Modelo': m.modelName,
+          'Fornecedor': m.vendor,
+          'Data de corte': m.cutoffDate,
+          'Verificado': m.cutoffVerified ? '✓ Fonte primária' : '— Não divulgado',
+          'Implantação': m.deployment,
+          'Licença': m.license,
+        })),
+        callouts: [
+          {
+            type: 'warning',
+            label: 'Insight principal',
+            text: 'Todos os modelos locais nesta tabela têm camada de busca "nenhuma". Isso não é uma limitação de um modelo específico — é uma característica estrutural de LLMs implantados localmente.',
+          },
+        ],
+      },
+      local_problem: {
+        id: 'local-llm-problem',
+        title: 'O problema do LLM local: rodando com conhecimento congelado',
+        content: [
+          '<strong>Ao rodar um LLM local via Ollama, LM Studio ou llama.cpp, você está rodando um modelo com conhecimento completamente congelado.</strong> Não "ligeiramente desatualizado". Completamente congelado em uma data fixa.',
+          'Isso não é apenas uma inconveniência. É uma característica arquitetural fundamental. Os pesos no disco são exatamente esses pesos — codificando tudo que o modelo sabe, não mudando entre execuções.',
+          'Padrões de falha previsíveis: um modelo perguntado sobre uma empresa que fez rebranding após o corte usará o nome antigo. Um modelo perguntado sobre um produto lançado após o corte inventará uma descrição plausível.',
+          '<strong>Milhares de aplicações construídas sobre LLMs locais compartilham esse problema.</strong> Qualquer organização que implanta Llama, Qwen, Gemma ou Phi internamente está rodando software que literalmente não consegue saber nada que aconteceu após o corte — a menos que construa um sistema RAG.',
+        ],
+        columns: ['Cenário', 'LLM em nuvem com busca', 'LLM local sem RAG'],
+        rows: [
+          { 'Cenário': 'Pergunta sobre notícias de hoje', 'LLM em nuvem com busca': 'Busca no Bing/Google; resposta atual', 'LLM local sem RAG': 'Admite ignorância ou alucina' },
+          { 'Cenário': 'Pergunta sobre lançamento de produto em 2025', 'LLM em nuvem com busca': 'Busca na web; especificações atuais', 'LLM local sem RAG': 'Sem conhecimento se após o corte' },
+          { 'Cenário': 'Pergunta sobre empresa (pós-corte)', 'LLM em nuvem com busca': 'Consegue buscar site via pesquisa', 'LLM local sem RAG': 'Não encontra; não está nos dados de treinamento' },
+          { 'Cenário': 'Rebranding de concorrente', 'LLM em nuvem com busca': 'Encontra nome atual via busca', 'LLM local sem RAG': 'Usa nome antigo do treinamento' },
+          { 'Cenário': 'Nova regulamentação', 'LLM em nuvem com busca': 'Busca texto legal atual', 'LLM local sem RAG': 'Apenas conhecimento pré-regulamentação' },
+          { 'Cenário': 'Ranking de modelos de IA', 'LLM em nuvem com busca': 'Busca benchmarks; maiormente atualizado', 'LLM local sem RAG': 'Congelado na data de corte; ranking desatualizado' },
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: 'Limitações de LLM local',
+            text: 'Para análise completa do que LLMs locais não conseguem fazer além da data de corte, veja <a href="/local-llms/local-llm-limitations" class="text-primary hover:underline">Limitações de LLM local: o que eles não conseguem fazer</a>.',
+          },
+        ],
+      },
+      user_implications: {
+        id: 'implications-for-users',
+        title: 'Implicações para usuários: como confiar em respostas de IA',
+        content: [
+          '<strong>A regra mais importante: sempre pergunte a si mesmo se a resposta pode ter mudado após a data de corte do modelo.</strong> Se sim, verifique de forma independente.',
+          'Diferentes sistemas de IA lidam com lacunas pós-corte de formas diferentes.',
+        ],
+        columns: ['Sistema de IA', 'Comportamento pós-corte', 'Confiabilidade de informações atuais', 'Como melhorar'],
+        rows: [
+          { 'Sistema de IA': 'ChatGPT (pago)', 'Comportamento pós-corte': 'Busca automaticamente no Bing', 'Confiabilidade de informações atuais': 'Alta para fatos; baixa para nuances', 'Como melhorar': 'Peça citações de fontes; verifique afirmações principais' },
+          { 'Sistema de IA': 'Gemini (pago)', 'Comportamento pós-corte': 'Busca automaticamente no Google', 'Confiabilidade de informações atuais': 'Alta para fatos; baixa para nuances', 'Como melhorar': 'Ative grounding; revise URLs citadas' },
+          { 'Sistema de IA': 'Grok (X.com)', 'Comportamento pós-corte': 'Busca automaticamente posts do X', 'Confiabilidade de informações atuais': 'Bom para tendências sociais; irregular para fatos', 'Como melhorar': 'Use DeepSearch para cobertura web mais ampla' },
+          { 'Sistema de IA': 'Claude (gratuito/pro)', 'Comportamento pós-corte': 'Usa apenas dados de treinamento por padrão', 'Confiabilidade de informações atuais': 'Média — corte confiável em jan 2026', 'Como melhorar': 'Cole texto atual no contexto; usuários de API podem ativar ferramenta de busca' },
+          { 'Sistema de IA': 'Perplexity', 'Comportamento pós-corte': 'Sempre busca na web primeiro', 'Confiabilidade de informações atuais': 'Alta — produto nativo de busca', 'Como melhorar': 'Já cita fontes por design' },
+          { 'Sistema de IA': 'Todos os LLMs locais', 'Comportamento pós-corte': 'Apenas dados de treinamento — sem substituição', 'Confiabilidade de informações atuais': 'Muito baixa para tópicos pós-corte', 'Como melhorar': 'Construa pipeline RAG; cole contexto manualmente' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'Risco de alucinação',
+            text: 'O maior risco de alucinação ocorre quando o modelo é perguntado sobre conteúdo após a data de corte que parece plausível similar ao que o modelo conhece.',
+          },
+        ],
+      },
+      geo_strategy: {
+        id: 'geo-strategy',
+        title: 'Implicações para empresas: estratégia GEO por sistema de IA',
+        content: [
+          '<strong>GEO (Otimização de Motor Generativo) é a prática de fazer sua marca, produto ou conteúdo aparecer em respostas geradas por IA.</strong> Na maioria dos sistemas de IA, GEO funciona de forma similar ao SEO.',
+          'Mas LLMs locais quebram completamente esse modelo. Um Llama ou Qwen implantado localmente não busca na web.',
+          'Esta tabela mapeia os canais GEO para cada sistema de IA:',
+        ],
+        columns: ['Sistema de IA', 'Canal GEO', 'O que otimizar', 'Implantação local muda isso?'],
+        rows: [
+          { 'Sistema de IA': 'GPT-5.5 (ChatGPT)', 'Canal GEO': 'Busca Bing', 'O que otimizar': 'SEO Bing: SEO técnico, Bing Webmaster Tools, dados estruturados', 'Implantação local muda isso?': 'Sim — chamadas locais de API OpenAI sem Bing; corte é rígido' },
+          { 'Sistema de IA': 'Gemini 3.1 Pro', 'Canal GEO': 'Grounding Google Search', 'O que otimizar': 'SEO Google + dados estruturados (FAQ, HowTo, Article schema)', 'Implantação local muda isso?': 'Ainda não — Gemini é somente nuvem em junho 2026' },
+          { 'Sistema de IA': 'Grok 4.3', 'Canal GEO': 'Conteúdo X (Twitter)', 'O que otimizar': 'Presença no X: conta verificada, posts com alto engajamento', 'Implantação local muda isso?': 'Ainda não — Grok é somente nuvem em junho 2026' },
+          { 'Sistema de IA': 'Perplexity', 'Canal GEO': 'Busca web nativa', 'O que otimizar': 'Todos os mecanismos de busca + fontes autoritativas citáveis', 'Implantação local muda isso?': 'Não — Perplexity é nativo na web por design' },
+          { 'Sistema de IA': 'Claude (API)', 'Canal GEO': 'Busca via ferramenta (Brave/web) — opt-in', 'O que otimizar': 'Presença web geral; conteúdo estruturado para adequação a snippets', 'Implantação local muda isso?': 'Sim — muitas implantações de Claude têm busca desativada' },
+          { 'Sistema de IA': 'Llama (local)', 'Canal GEO': 'Somente pipeline RAG', 'O que otimizar': 'RAG: formatos de dados estruturados, base de conhecimento, APIs de documentos', 'Implantação local muda isso?': 'Isso é a implantação local — SEO é irrelevante' },
+          { 'Sistema de IA': 'Qwen / Gemma / Phi (local)', 'Canal GEO': 'Somente pipeline RAG', 'O que otimizar': 'RAG: pipeline de coleta de documentos da organização implantadora', 'Implantação local muda isso?': 'Isso é a implantação local — SEO é irrelevante' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'Ponto cego de GEO para LLM local',
+            text: 'A maioria dos guias de GEO se foca apenas em IA em nuvem. Esse conselho é inútil para alcançar implantações internas de Llama, Qwen, Gemma ou Phi. Esses modelos não buscam. O único canal GEO que funciona é convencer a organização que implanta o modelo a incluir seu conteúdo no pipeline RAG.',
+          },
+        ],
+      },
+      geo_solution: {
+        id: 'geo-solution',
+        title: 'Solução GEO: construindo vantagem competitiva para ambos os tipos de IA',
+        content: [
+          '<strong>Uma estratégia GEO completa em 2026 requer duas trilhas paralelas: otimização de busca para IA em nuvem e prontidão para RAG para IA local.</strong> A maioria das organizações só está executando a primeira trilha.',
+          '<strong>Trilha 1 — IA em nuvem (GEO baseado em busca):</strong> Técnicas tradicionais de SEO com adições específicas de IA. O conteúdo precisa ser estruturado para adequação a snippets (esquemas JSON-LD FAQ e HowTo), factualmente preciso e autoritativo.',
+          '<strong>Trilha 2 — IA local (GEO baseado em RAG):</strong> Crie base de conhecimento legível por máquina (Markdown, JSON-LD, especificações OpenAPI); participe de iniciativas de dados abertos; construa relacionamentos com clientes corporativos que implantam LLMs localmente.',
+          'Para a maioria das empresas, a Trilha 1 já está em andamento como parte do SEO. A Trilha 2 requer trabalho novo.',
+        ],
+        numberedItems: [
+          'Auditoria de visibilidade em IA: quais sistemas de IA mencionam sua marca? Teste ChatGPT, Gemini, Grok, Perplexity e implantações locais separadamente',
+          'Para lacunas em IA em nuvem: aplique marcação de dados estruturados (FAQPage, HowTo, TechArticle, Product), melhore presença no Bing Webmaster, fortaleça sinais E-E-A-T',
+          'Para lacunas em IA local: crie base de conhecimento legível por máquina (JSON estruturado, documentos Markdown, especificações OpenAPI)',
+          'Documente fatos da marca em formato canônico — nomes de modelos, descrições, recursos, preços — atualize a cada mudança de versão',
+          'Publique arquivo llms.txt e dados estruturados em todas as páginas principais',
+          'Acompanhe a taxa de menção em todos os sistemas de IA trimestralmente',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: 'Recursos de RAG local',
+            text: 'Para implementação técnica de RAG local, veja <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">RAG local 2026: melhores ferramentas e frameworks</a> e <a href="/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">RAG corporativo com LLMs locais</a>.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq-knowledge-cutoffs',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'O que é uma data de corte de conhecimento de IA?',
+            a: 'A data de corte de conhecimento é a data após a qual os dados de treinamento do modelo terminam. O modelo não tem nenhuma informação sobre eventos, produtos, pesquisas ou conteúdos ocorridos após essa data. Modelos em nuvem podem compensar parcialmente via busca web, mas LLMs locais não.',
+          },
+          {
+            q: 'Se o corte do ChatGPT é outubro de 2023, por que ele conhece eventos recentes?',
+            a: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, sintetizando resultados de busca atuais com a inferência dos dados de treinamento. O modelo GPT-4o base ainda tem data de corte de outubro de 2023 — o que você vê é a camada de busca, não dados de treinamento atualizados.',
+          },
+          {
+            q: 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?',
+            a: 'Não — não automaticamente. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para obter informações atuais, construa um pipeline RAG.',
+          },
+          {
+            q: 'O que é GEO e como se relaciona com datas de corte?',
+            a: 'GEO (Otimização de Motor Generativo) é a área de fazer conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO funciona via otimização de busca. Para LLMs locais, isso é estruturalmente impossível porque o modelo não busca. GEO de LLM local requer pipeline RAG da organização implantadora.',
+          },
+          {
+            q: 'Qual modelo de IA tem a data de corte verificada mais recente?',
+            a: 'Claude Opus 4.8 tem a data de corte confiável mais recente em janeiro de 2026. GPT-5.5: agosto de 2025. Gemini 3.1 Pro: janeiro de 2025. Grok 4.3: novembro de 2024. DeepSeek-V3 e Gemma 3 27B: julho-agosto de 2024. Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023.',
+          },
+          {
+            q: 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?',
+            a: 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.',
+          },
+          {
+            q: 'Como verificar faticamente respostas de IA afetadas por datas de corte?',
+            a: 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.',
+          },
+          {
+            q: 'Como saber se uma resposta de IA usou busca ao vivo?',
+            a: 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — as respostas sempre vêm dos dados de treinamento.',
+          },
+        ],
+      },
+    },
+  },
+  ar: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-12',
+    theme: 'Knowledge & Research',
+    title: 'تواريخ انقطاع معرفة الذكاء الاصطناعي والبحث المباشر وGEO: الدليل الكامل',
+    seoTitle: 'تواريخ انقطاع معرفة الذكاء الاصطناعي واستراتيجية GEO 2026 — تركيز على LLM المحلي',
+    intro: '**كل نموذج ذكاء اصطناعي يمتلك تاريخ انقطاع معرفة — الحد الذي تنتهي عنده بيانات التدريب. لكن نماذج السحابة والنماذج المحلية تتعامل مع هذا الحد بطرق مختلفة جوهريًا.** يشرح هذا الدليل الفرق بين تواريخ الانقطاع والبحث المباشر، ويستخلص الآثار الاستراتيجية للمستخدمين والشركات — بما فيها الرؤية المحورية أن نماذج LLM المحلية تستلزم استراتيجية GEO مختلفة كليًا عن نماذج السحابة.',
+    metaDescription: 'الدليل الكامل لتواريخ انقطاع معرفة الذكاء الاصطناعي: تواريخ موثّقة لكلود وGPT وجيميني وجروك وLlama وQwen وGemma وPhi — مع استراتيجية GEO للذكاء الاصطناعي السحابي مقابل LLM المحلي. النماذج المحلية تحتاج RAG وليس SEO.',
+    publishDate: '2026-06-12',
+    dateModified: CUTOFF_DATA_LAST_VERIFIED,
+    lastFactChecked: CUTOFF_DATA_LAST_VERIFIED,
+    readTime: '16 دقيقة للقراءة',
+    educationalLevel: 'Intermediate',
+    primaryTerm: 'تاريخ انقطاع معرفة الذكاء الاصطناعي',
+    audience: 'المستخدمون وفرق المنتجات والمسوّقون الذين يحتاجون إلى فهم من أين تحصل نماذج الذكاء الاصطناعي على معلوماتها — وكيفية الاستجابة لذلك',
+    current_models_mentioned: [
+      'Claude Opus 4.8', 'ChatGPT', 'GPT-5.5', 'GPT-4o', 'Gemini 3.1 Pro',
+      'Grok 4.3', 'Mistral Large 3', 'DeepSeek-V3', 'Llama 4 Scout', 'Qwen3 14B',
+      'Gemma 3 27B', 'Phi-4', 'Perplexity',
+    ],
+    leadAnswerBlock: '**تاريخ انقطاع معرفة الذكاء الاصطناعي هو التاريخ الذي تنتهي عنده بيانات تدريب النموذج.** تعوّض نماذج السحابة جزئيًا بالبحث المدمج في الويب (ChatGPT ← Bing، وGemini ← Google، وGrok ← X). نماذج LLM المحلية لا تملك طبقة بحث، مما يجعل تاريخ الانقطاع مطلقًا. لاستراتيجية GEO: الظهور في ذكاء اصطناعي السحابة يتطلب تحسين البحث. الظهور في الذكاء الاصطناعي المحلي يتطلب خطوط أنابيب RAG — SEO وحده لا يصل إلى نماذج لا تتصفح الويب.',
+    quickFacts: [
+      '**6 نماذج سحابية** متضمنة — تواريخ انقطاع موثّقة بروابط مصادر أولية',
+      '**6 نماذج محلية / open-weight** متضمنة — جميعها بطبقة بحث "لا شيء"',
+      '**Gemma 3 27B** لديها أقدم تاريخ انقطاع موثّق بين النماذج المحلية: أغسطس 2024',
+      '**Phi-4** تاريخ انقطاعه يونيو 2024 — ثاني أقدم تاريخ موثّق بين المحلية',
+      '**Grok 4.3** هو النموذج السحابي الوحيد الذي طبقة بحثه الافتراضية منصة اجتماعية (X/Twitter)',
+      '**الأثر على GEO**: الشركات التي تنشر Llama/Qwen داخليًا لا يمكن الوصول إليها إلا عبر خطوط أنابيب RAG',
+    ],
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: 'key-takeaways' },
+      { label: 'الحد الخفي: حقيقة تواريخ الانقطاع', anchor: 'the-invisible-limit' },
+      { label: 'تاريخ الانقطاع مقابل البحث المباشر: الفرق الحاسم', anchor: 'cutoff-vs-live-search' },
+      { label: 'جدول البيانات الكامل: جميع النماذج', anchor: 'full-model-table' },
+      { label: 'مشكلة LLM المحلي: التشغيل بمعرفة مجمّدة', anchor: 'local-llm-problem' },
+      { label: 'الآثار على المستخدمين', anchor: 'implications-for-users' },
+      { label: 'الآثار على الشركات: استراتيجية GEO', anchor: 'geo-strategy' },
+      { label: 'حل GEO: بناء ميزة تنافسية', anchor: 'geo-solution' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq-knowledge-cutoffs' },
+    ],
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      proficiencyLevel: 'Intermediate',
+      dependencies: 'فهم أساسي لكيفية عمل نماذج اللغة الكبيرة',
+      headline: 'تواريخ انقطاع معرفة الذكاء الاصطناعي والبحث المباشر وGEO: الدليل الكامل',
+      description: 'الدليل الكامل لتواريخ انقطاع معرفة الذكاء الاصطناعي مع بيانات موثّقة لجميع النماذج الرئيسية وآثار استراتيجية GEO ولماذا تحتاج نماذج LLM المحلية RAG وليس SEO.',
+      datePublished: '2026-06-12',
+      dateModified: CUTOFF_DATA_LAST_VERIFIED,
+      inLanguage: 'ar',
+      keywords: [
+        'تاريخ انقطاع معرفة الذكاء الاصطناعي', 'تاريخ الانقطاع', 'انقطاع LLM المحلي', 'استراتيجية GEO',
+        'تحسين محرك التوليد', 'RAG مقابل SEO', 'انقطاع ChatGPT',
+        'انقطاع Claude', 'انقطاع Llama', 'انقطاع Gemma', 'انقطاع Phi-4',
+        'انقطاع تدريب الذكاء الاصطناعي 2026', 'البحث المباشر بالذكاء الاصطناعي', 'بحث Bing بالذكاء الاصطناعي', 'قيود LLM المحلي',
+      ],
+      about: [
+        { '@type': 'Thing', name: 'تاريخ انقطاع معرفة الذكاء الاصطناعي' },
+        { '@type': 'Thing', name: 'تحسين محرك التوليد' },
+        { '@type': 'Thing', name: 'نموذج اللغة الكبير المحلي' },
+      ],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
+        width: 1200,
+        height: 630,
+      },
+      url: 'https://www.promptquorum.com/ar/prompt-engineering/knowledge-cutoffs-and-geo',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'ما هو تاريخ انقطاع معرفة الذكاء الاصطناعي؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'تاريخ انقطاع المعرفة هو التاريخ الذي تنتهي عنده بيانات تدريب النموذج. لا يمتلك النموذج أي معلومات عن الأحداث والمنتجات والأبحاث أو المحتوى بعد هذا التاريخ. يمكن لنماذج السحابة التعويض جزئيًا عبر البحث على الويب، لكن نماذج LLM المحلية لا تستطيع.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'لماذا يعرف ChatGPT الأحداث الأخيرة رغم أن تاريخ انقطاعه أكتوبر 2023؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-5.5 تاريخ انقطاعه أغسطس 2025؛ GPT-4o القديم أكتوبر 2023. ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل تتلقى نماذج LLM المحلية كـLlama أو Qwen تحديثات للمعرفة؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'لا. معرفة نماذج LLM المحلية تتجمّد بصفة دائمة عند تاريخ انقطاع التدريب. للوصول إلى معلومات حالية، تحتاج إلى بناء خط أنابيب RAG.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'ما هو GEO وعلاقته بتواريخ الانقطاع؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو محتواك يظهر في إجابات الذكاء الاصطناعي. لذكاء اصطناعي السحابة، GEO يتداخل مع SEO. لنماذج LLM المحلية، هذا مستحيل هيكليًا لأن النموذج لا يبحث. GEO لـLLM المحلي يتطلب خط أنابيب RAG من المنظمة المنشِرة.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع معرفة موثّق؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Claude Opus 4.8 لديه أحدث تاريخ انقطاع موثوق في يناير 2026. GPT-5.5: أغسطس 2025. Gemini 3.1 Pro: يناير 2025. Grok 4.3: نوفمبر 2024. DeepSeek-V3: يوليو 2024. Gemma 3 27B: أغسطس 2024. Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل يمكنني استخدام SEO للظهور في إجابات Llama أو Qwen؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'لا. SEO لا يستطيع التأثير في نماذج LLM المنشورة محليًا لأن النموذج لا يبحث في الويب. المسارات الوحيدة: (1) أن تكون في بيانات التدريب قبل تاريخ الانقطاع، أو (2) أن تُضمَّن في خط أنابيب RAG للمنظمة المنشِرة.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'كيف أتحقق من صحة إجابات الذكاء الاصطناعي المتأثرة بتواريخ الانقطاع؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'ثلاثة مؤشرات تشير إلى خطر الانقطاع: (1) الموضوع يتضمن إصدارات محددة أو أسعارًا؛ (2) تسأل عن قطاع يتغير بسرعة؛ (3) إجابة الذكاء الاصطناعي خالية من الاستشهادات. تحقق دائمًا من المصادر الأولية.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'كيف أعرف إذا كانت إجابة ذكاء اصطناعي استخدمت البحث المباشر؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Perplexity دائمًا يعرض استشهادات بالمصادر. Gemini يعرض أيقونة Google Search عند التأريض. Grok يشير إلى نتائج بحث X. ChatGPT يعرض أيقونة كرة أرضية. Claude لا يبحث افتراضيًا. نماذج LLM المحلية لا تبحث أبدًا.',
+          },
+        },
+      ],
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'كل نموذج ذكاء اصطناعي لديه تاريخ انقطاع معرفة — تاريخ حاسم لا توجد بعده بيانات تدريب عن الأحداث أو المنتجات أو المعلومات',
+          'نماذج السحابة (ChatGPT وGemini وGrok) تضيف بحثًا مباشرًا على الويب فوق بيانات التدريب، مما يتجاوز جزئيًا تاريخ الانقطاع للاستعلامات الواقعية',
+          'نماذج LLM المحلية (Llama وQwen وGemma وPhi وMistral open-weight) لا تملك طبقة بحث — تاريخ الانقطاع مطلق ولا يمكن تجاوزه بدون نظام RAG',
+          'لاستراتيجية GEO: الظهور في ذكاء اصطناعي السحابة يتطلب تحسين البحث التقليدي (Bing وGoogle وX)؛ الظهور في الذكاء الاصطناعي المحلي يتطلب خطوط أنابيب RAG',
+          'تواريخ انقطاع موثّقة: Claude Opus 4.8 = يناير 2026؛ GPT-5.5 = أغسطس 2025؛ Gemini 3.1 Pro = يناير 2025؛ Grok 4.3 = نوفمبر 2024؛ Gemma 3 27B = أغسطس 2024؛ DeepSeek-V3 = يوليو 2024؛ Phi-4 = يونيو 2024؛ GPT-4o القديم = أكتوبر 2023',
+          'عدة نماذج رئيسية — بما فيها Llama 4 وQwen3 وMistral Large 3 — لم تُفصح علنًا عن تواريخ انقطاع دقيقة',
+        ],
+      },
+      invisible_limit: {
+        id: 'the-invisible-limit',
+        title: 'الحد الخفي: حقيقة تواريخ انقطاع المعرفة',
+        content: [
+          '<strong>تاريخ انقطاع المعرفة هو التاريخ الذي يتوقف فيه نموذج الذكاء الاصطناعي عن تلقي بيانات التدريب.</strong> الأحداث التي وقعت بعد الانقطاع وإطلاقات المنتجات والأبحاث الجديدة وتغيرات الأسعار أو أي تطورات أخرى غير مرئية للنموذج.',
+          'هذا يخلق نمط فشل منهجي: الذكاء الاصطناعي يقدم إجابات واثقة عن موضوعات لا يعرفها إطلاقًا. لأن النموذج لا يعرف ما لا يعرفه.',
+          'يزيد الالتباس لأن كثيرًا من المنتجات السحابية تضيف بحثًا مباشرًا فوق النموذج الأساسي. حين يجيب ChatGPT على سؤال عن أخبار اليوم، يستخدم Bing — وليس بيانات التدريب.',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: 'مرجع سريع',
+            text: 'تحتاج الجدول فقط؟ راجع <a href="/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">ورقة مرجع تواريخ انقطاع معرفة الذكاء الاصطناعي</a>.',
+          },
+        ],
+      },
+      cutoff_vs_search: {
+        id: 'cutoff-vs-live-search',
+        title: 'تاريخ الانقطاع مقابل البحث المباشر: الفرق الذي يغير كل شيء',
+        content: [
+          '<strong>التمييز الأهم هو بين انقطاع التدريب (خاصية النموذج) والبحث المباشر (ميزة المنتج).</strong>',
+          '<strong>انقطاع التدريب</strong> مضمّن في أوزان النموذج. لا يمكن تغييره دون إعادة تدريب النموذج.',
+          '<strong>طبقة البحث المباشر</strong> أداة خارجية مدمجة على مستوى المنتج. حين يحتاج ChatGPT إلى معلومات حالية، يستعلم API Bing ويجمع النتائج مع قدرته الاستدلالية.',
+        ],
+        columns: ['النموذج / المنتج', 'طبقة البحث', 'محفّز البحث', 'ملاحظة'],
+        rows: [
+          { 'النموذج / المنتج': 'GPT-5.5 (ChatGPT)', 'طبقة البحث': 'Bing', 'محفّز البحث': 'تلقائي — النموذج يقرر', 'ملاحظة': 'مفعّل افتراضيًا في ChatGPT Plus/Pro؛ مطفأ في API المباشر' },
+          { 'النموذج / المنتج': 'Gemini 3.1 Pro', 'طبقة البحث': 'Google Search', 'محفّز البحث': 'تلقائي — النموذج يقرر', 'ملاحظة': 'Google Grounding API للمطورين' },
+          { 'النموذج / المنتج': 'Grok 4.3 (X.com)', 'طبقة البحث': 'X (Twitter)', 'محفّز البحث': 'تلقائي — النموذج يقرر', 'ملاحظة': 'DeepSearch = بحث أوسع، اختياري' },
+          { 'النموذج / المنتج': 'Perplexity', 'طبقة البحث': 'ويب متعدد المصادر', 'محفّز البحث': 'دائمًا — في كل استعلام', 'ملاحظة': 'بحث-أولًا بالتصميم؛ يستشهد بالمصادر' },
+          { 'النموذج / المنتج': 'Claude (Anthropic)', 'طبقة البحث': 'Brave / ويب (أداة)', 'محفّز البحث': 'اختياري للمطور فقط', 'ملاحظة': 'مطفأ افتراضيًا؛ يتطلب تكوين أدوات API' },
+          { 'النموذج / المنتج': 'DeepSeek (سحابة)', 'طبقة البحث': 'لا شيء', 'محفّز البحث': 'لا ينطبق', 'ملاحظة': 'بلا طبقة بحث؛ تاريخ الانقطاع حد صلب' },
+          { 'النموذج / المنتج': 'Mistral (سحابة)', 'طبقة البحث': 'لا شيء', 'محفّز البحث': 'لا ينطبق', 'ملاحظة': 'بلا طبقة بحث؛ تاريخ الانقطاع حد صلب' },
+          { 'النموذج / المنتج': 'جميع نماذج LLM المحلية', 'طبقة البحث': 'لا شيء', 'محفّز البحث': 'لا ينطبق', 'ملاحظة': 'بلا وصول للإنترنت افتراضيًا؛ يتطلب RAG للمعلومات الحالية' },
+        ],
+      },
+      full_table: {
+        id: 'full-model-table',
+        title: 'البيانات الموثّقة الكاملة: جميع النماذج الرئيسية',
+        content: [
+          'الجدول أدناه يستخدم فقط بيانات المصادر الأولية. حيث لا يوجد مصدر أولي يُعلَّم تاريخ الانقطاع "غير مُفصح عنه علنًا".',
+          '<strong>النماذج السحابية:</strong>',
+        ],
+        columns: ['النموذج', 'المزوّد', 'تاريخ الانقطاع', 'موثّق', 'بحث افتراضي', 'طبقة البحث'],
+        rows: CLOUD_MODELS.map(m => ({
+          'النموذج': m.modelName,
+          'المزوّد': m.vendor,
+          'تاريخ الانقطاع': m.cutoffDate,
+          'موثّق': m.cutoffVerified ? '✓' : '—',
+          'بحث افتراضي': m.hasLiveSearchDefault ? 'نعم' : (m.searchLayer === 'Tool-use only' ? 'عبر أداة فقط' : 'لا'),
+          'طبقة البحث': m.searchLayer,
+        })),
+        snippets: [
+          {
+            type: 'in-one-sentence',
+            text: 'من بين نماذج السحابة، Claude وحده يتطلب تكوينًا صريحًا من المطور لبحث الويب — جميع الآخرين لديهم البحث المباشر مفعّلًا افتراضيًا.',
+          },
+          {
+            type: 'in-plain-terms',
+            text: 'نماذج الذكاء الاصطناعي السحابية كباحثين يمكنهم البحث بين الإجابات. نماذج الذكاء الاصطناعي المحلية كباحثين كانوا دون اتصال منذ تاريخ محدد.',
+          },
+        ],
+      },
+      local_table_section: {
+        id: 'local-llm-table',
+        title: 'النماذج المحلية / open-weight: تواريخ انقطاع موثّقة',
+        content: [
+          '<strong>نماذج open-weight المحلية — جميعها بطبقة بحث "لا شيء":</strong>',
+        ],
+        columns: ['النموذج', 'المزوّد', 'تاريخ الانقطاع', 'موثّق', 'النشر', 'الترخيص'],
+        rows: LOCAL_MODELS.map(m => ({
+          'النموذج': m.modelName,
+          'المزوّد': m.vendor,
+          'تاريخ الانقطاع': m.cutoffDate,
+          'موثّق': m.cutoffVerified ? '✓ مصدر أولي' : '— غير مُفصح',
+          'النشر': m.deployment,
+          'الترخيص': m.license,
+        })),
+        callouts: [
+          {
+            type: 'warning',
+            label: 'الرؤية الأساسية',
+            text: 'جميع النماذج المحلية في هذا الجدول لديها طبقة بحث "لا شيء". هذه خاصية هيكلية لنماذج LLM المنشورة محليًا، وليست قيدًا على نموذج بعينه.',
+          },
+        ],
+      },
+      local_problem: {
+        id: 'local-llm-problem',
+        title: 'مشكلة LLM المحلي: التشغيل بمعرفة مجمّدة',
+        content: [
+          '<strong>عند تشغيل LLM محلي عبر Ollama أو LM Studio أو llama.cpp، أنت تشغّل نموذجًا معرفته مجمّدة كليًا في تاريخ محدد.</strong>',
+          'هذه ليست مجرد إزعاج — إنها خاصية معمارية أساسية. الأوزان على القرص لا تتغير بين التشغيلات.',
+          'أنماط فشل محددة: نموذج يُسأل عن شركة أعادت تسميتها بعد الانقطاع سيستخدم الاسم القديم. نموذج يُسأل عن منتج أُطلق بعد الانقطاع سيخترع وصفًا مقنعًا.',
+          '<strong>الآلاف من التطبيقات المبنية على نماذج LLM المحلية تشترك في مشكلة المعرفة المجمّدة هذه.</strong> أي منظمة تنشر Llama أو Qwen أو Gemma أو Phi داخليًا بلا RAG تشغّل برمجيات لا تعرف ما حدث بعد تاريخ الانقطاع.',
+        ],
+        columns: ['السيناريو', 'LLM سحابي مع بحث', 'LLM محلي بلا RAG'],
+        rows: [
+          { 'السيناريو': 'سؤال عن أخبار اليوم', 'LLM سحابي مع بحث': 'يبحث في Bing/Google؛ إجابة حالية', 'LLM محلي بلا RAG': 'يعترف بالجهل أو يهلوس' },
+          { 'السيناريو': 'سؤال عن إطلاق منتج 2025', 'LLM سحابي مع بحث': 'يبحث على الويب؛ مواصفات حالية', 'LLM محلي بلا RAG': 'بلا معرفة إذا كان بعد الانقطاع' },
+          { 'السيناريو': 'سؤال عن شركة (بعد الانقطاع)', 'LLM سحابي مع بحث': 'يستطيع البحث عن الموقع', 'LLM محلي بلا RAG': 'لا يجد؛ غير موجود في بيانات التدريب' },
+          { 'السيناريو': 'إعادة تسمية منافس', 'LLM سحابي مع بحث': 'يجد الاسم الحالي عبر البحث', 'LLM محلي بلا RAG': 'يستخدم الاسم القديم من التدريب' },
+          { 'السيناريو': 'لائحة تنظيمية جديدة', 'LLM سحابي مع بحث': 'يبحث عن النص القانوني الحالي', 'LLM محلي بلا RAG': 'معرفة ما قبل اللائحة فقط' },
+          { 'السيناريو': 'ترتيب نماذج الذكاء الاصطناعي', 'LLM سحابي مع بحث': 'يبحث عن المعايير؛ محدّث في معظمه', 'LLM محلي بلا RAG': 'مجمّد عند تاريخ الانقطاع؛ ترتيب قديم' },
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: 'قيود LLM المحلي',
+            text: 'للتحليل الكامل راجع <a href="/local-llms/local-llm-limitations" class="text-primary hover:underline">قيود LLM المحلي: ما لا يستطيع فعله</a>.',
+          },
+        ],
+      },
+      user_implications: {
+        id: 'implications-for-users',
+        title: 'الآثار على المستخدمين: كيفية الوثوق بإجابات الذكاء الاصطناعي',
+        content: [
+          '<strong>القاعدة الأهم: اسأل نفسك دائمًا إذا كانت الإجابة قد تغيرت بعد تاريخ انقطاع النموذج.</strong> إذا نعم، تحقق باستقلالية.',
+          'تتعامل أنظمة الذكاء الاصطناعي المختلفة مع الفجوات بعد الانقطاع بطرق مختلفة.',
+        ],
+        columns: ['نظام الذكاء الاصطناعي', 'السلوك بعد الانقطاع', 'موثوقية المعلومات الحالية', 'كيفية التحسين'],
+        rows: [
+          { 'نظام الذكاء الاصطناعي': 'ChatGPT (مدفوع)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في Bing', 'موثوقية المعلومات الحالية': 'عالية للحقائق؛ منخفضة للفروق الدقيقة', 'كيفية التحسين': 'اطلب استشهادات بالمصادر؛ تحقق من الادعاءات الرئيسية' },
+          { 'نظام الذكاء الاصطناعي': 'Gemini (مدفوع)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في Google', 'موثوقية المعلومات الحالية': 'عالية للحقائق؛ منخفضة للفروق الدقيقة', 'كيفية التحسين': 'فعّل التأريض؛ راجع روابط URL المستشهد بها' },
+          { 'نظام الذكاء الاصطناعي': 'Grok (X.com)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في منشورات X', 'موثوقية المعلومات الحالية': 'جيد للاتجاهات الاجتماعية؛ غير منتظم للحقائق', 'كيفية التحسين': 'استخدم DeepSearch لتغطية أوسع' },
+          { 'نظام الذكاء الاصطناعي': 'Claude (مجاني/برو)', 'السلوك بعد الانقطاع': 'يستخدم بيانات التدريب فقط افتراضيًا', 'موثوقية المعلومات الحالية': 'متوسط — انقطاع موثوق يناير 2026', 'كيفية التحسين': 'الصق النص الحالي في السياق' },
+          { 'نظام الذكاء الاصطناعي': 'Perplexity', 'السلوك بعد الانقطاع': 'يبحث على الويب دائمًا أولًا', 'موثوقية المعلومات الحالية': 'عالية — منتج بحث أصيل', 'كيفية التحسين': 'يستشهد بالمصادر بالتصميم بالفعل' },
+          { 'نظام الذكاء الاصطناعي': 'جميع نماذج LLM المحلية', 'السلوك بعد الانقطاع': 'بيانات تدريب فقط — بلا تجاوز', 'موثوقية المعلومات الحالية': 'منخفضة جدًا للمواضيع بعد الانقطاع', 'كيفية التحسين': 'ابنِ خط أنابيب RAG؛ الصق السياق يدويًا' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'خطر الهلوسة',
+            text: 'أعلى خطر للهلوسة يكون حين يُسأل النموذج عن محتوى بعد تاريخ الانقطاع يبدو مشابهًا لما يعرفه النموذج. سيقدم إجابة واثقة بدلًا من الاعتراف بالجهل.',
+          },
+        ],
+      },
+      geo_strategy: {
+        id: 'geo-strategy',
+        title: 'الآثار على الشركات: استراتيجية GEO لكل نظام ذكاء اصطناعي',
+        content: [
+          '<strong>GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو منتجك أو محتواك يظهر في إجابات الذكاء الاصطناعي.</strong>',
+          'لكن نماذج LLM المحلية تكسر هذا النموذج كليًا. Llama أو Qwen المنشور محليًا لا يبحث في الويب.',
+          'هذا الجدول يُعيّن قنوات GEO لكل نظام ذكاء اصطناعي:',
+        ],
+        columns: ['نظام الذكاء الاصطناعي', 'قناة GEO', 'ما يجب تحسينه', 'هل يغيّر النشر المحلي هذا؟'],
+        rows: [
+          { 'نظام الذكاء الاصطناعي': 'GPT-5.5 (ChatGPT)', 'قناة GEO': 'بحث Bing', 'ما يجب تحسينه': 'SEO Bing: SEO تقني وBing Webmaster Tools وبيانات منظّمة', 'هل يغيّر النشر المحلي هذا؟': 'نعم — استدعاءات API المحلية بلا Bing' },
+          { 'نظام الذكاء الاصطناعي': 'Gemini 3.1 Pro', 'قناة GEO': 'تأريض Google Search', 'ما يجب تحسينه': 'SEO Google + بيانات منظّمة', 'هل يغيّر النشر المحلي هذا؟': 'ليس بعد — Gemini سحابة فقط' },
+          { 'نظام الذكاء الاصطناعي': 'Grok 4.3', 'قناة GEO': 'محتوى X (Twitter)', 'ما يجب تحسينه': 'حضور على X: حساب موثّق ومنشورات عالية التفاعل', 'هل يغيّر النشر المحلي هذا؟': 'ليس بعد — Grok سحابة فقط' },
+          { 'نظام الذكاء الاصطناعي': 'Perplexity', 'قناة GEO': 'بحث ويب أصيل', 'ما يجب تحسينه': 'جميع محركات البحث + مصادر موثوقة', 'هل يغيّر النشر المحلي هذا؟': 'لا — ويب أصيل بالتصميم' },
+          { 'نظام الذكاء الاصطناعي': 'Claude (API)', 'قناة GEO': 'بحث عبر أداة — اختياري', 'ما يجب تحسينه': 'حضور ويب عام؛ محتوى منظّم لملاءمة المقتطفات', 'هل يغيّر النشر المحلي هذا؟': 'نعم — كثير من نشريات Claude لديها البحث معطّلًا' },
+          { 'نظام الذكاء الاصطناعي': 'Llama (محلي)', 'قناة GEO': 'خط أنابيب RAG فقط', 'ما يجب تحسينه': 'RAG: تنسيقات بيانات منظّمة وقاعدة معرفة وAPIs للمستندات', 'هل يغيّر النشر المحلي هذا؟': 'هذا هو النشر المحلي — SEO غير ذي صلة' },
+          { 'نظام الذكاء الاصطناعي': 'Qwen / Gemma / Phi (محلي)', 'قناة GEO': 'خط أنابيب RAG فقط', 'ما يجب تحسينه': 'RAG: خط أنابيب جمع مستندات المنظمة المنشِرة', 'هل يغيّر النشر المحلي هذا؟': 'هذا هو النشر المحلي — SEO غير ذي صلة' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            label: 'نقطة عمياء GEO للـLLM المحلي',
+            text: 'معظم أدلة GEO تركز على ذكاء اصطناعي السحابة فقط. ذلك النصح عديم الجدوى للوصول إلى نشريات داخلية من Llama أو Qwen. هذه النماذج لا تبحث. قناة GEO الوحيدة الفعّالة هي إقناع المنظمة المنشِرة بتضمين محتواك في خط أنابيب RAG.',
+          },
+        ],
+      },
+      geo_solution: {
+        id: 'geo-solution',
+        title: 'حل GEO: بناء ميزة تنافسية لكلا نوعَي الذكاء الاصطناعي',
+        content: [
+          '<strong>استراتيجية GEO الكاملة في 2026 تتطلب مسارين متوازيين: تحسين البحث للذكاء الاصطناعي السحابي والجاهزية لـRAG للذكاء الاصطناعي المحلي.</strong>',
+          '<strong>المسار 1 — الذكاء الاصطناعي السحابي:</strong> تقنيات SEO التقليدية مع إضافات خاصة بالذكاء الاصطناعي — هيكلة المحتوى لملاءمة المقتطفات ودقته واقعيًا وسلطته.',
+          '<strong>المسار 2 — الذكاء الاصطناعي المحلي:</strong> إنشاء قاعدة معرفة قابلة للقراءة آليًا (Markdown وJSON-LD ومواصفات OpenAPI)؛ المشاركة في مبادرات البيانات المفتوحة؛ بناء علاقات مع عملاء مؤسسيين.',
+          'المسار 1 جارٍ عادةً كجزء من SEO. المسار 2 يتطلب عملًا جديدًا — إنشاء محتوى محسّن لجمع الآلات.',
+        ],
+        numberedItems: [
+          'مراجعة الظهور في الذكاء الاصطناعي: اختبر ChatGPT وGemini وGrok وPerplexity والنشريات المحلية بشكل منفصل',
+          'لثغرات الذكاء الاصطناعي السحابي: طبّق ترميز البيانات المنظّمة (FAQPage وHowTo وTechArticle) وحسّن حضور Bing Webmaster',
+          'لثغرات الذكاء الاصطناعي المحلي: أنشئ قاعدة معرفة قابلة للقراءة آليًا (JSON منظّم ومستندات Markdown)',
+          'وثّق حقائق العلامة التجارية بتنسيق ثابت — أسماء النماذج والأوصاف والميزات والأسعار',
+          'انشر ملف llms.txt والبيانات المنظّمة في جميع الصفحات الرئيسية',
+          'تتبّع معدل الذكر في جميع أنظمة الذكاء الاصطناعي ربع سنويًا',
+        ],
+        callouts: [
+          {
+            type: 'info',
+            label: 'موارد RAG المحلي',
+            text: 'للتطبيق التقني، راجع <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">RAG المحلي 2026: أفضل الأدوات والأطر</a> و<a href="/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">RAG المؤسسي مع نماذج LLM المحلية</a>.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq-knowledge-cutoffs',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'ما هو تاريخ انقطاع معرفة الذكاء الاصطناعي؟',
+            a: 'تاريخ انقطاع المعرفة هو التاريخ الذي تنتهي عنده بيانات تدريب النموذج. لا يمتلك النموذج أي معلومات عن الأحداث أو المنتجات أو المحتوى بعد هذا التاريخ. يمكن لنماذج السحابة التعويض جزئيًا، لكن نماذج LLM المحلية لا تستطيع.',
+          },
+          {
+            q: 'إذا كان انقطاع ChatGPT في أكتوبر 2023، لماذا يعرف الأحداث الأخيرة؟',
+            a: 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-4o لا يزال بتاريخ انقطاع أكتوبر 2023 — ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.',
+          },
+          {
+            q: 'هل تتلقى نماذج LLM المحلية كـLlama أو Qwen تحديثات للمعرفة؟',
+            a: 'لا. معرفة نماذج LLM المحلية تتجمّد بصفة دائمة عند تاريخ انقطاع التدريب. للحصول على معلومات حالية، ابنِ خط أنابيب RAG.',
+          },
+          {
+            q: 'ما هو GEO وعلاقته بتواريخ الانقطاع؟',
+            a: 'GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو محتواك يظهر في إجابات الذكاء الاصطناعي. لذكاء اصطناعي السحابة، GEO يتداخل مع SEO. لنماذج LLM المحلية، هذا مستحيل هيكليًا لأن النموذج لا يبحث.',
+          },
+          {
+            q: 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع موثّق؟',
+            a: 'Claude Opus 4.8 لديه أحدث تاريخ انقطاع موثوق في يناير 2026. GPT-5.5: أغسطس 2025. Gemini 3.1 Pro: يناير 2025. Grok 4.3: نوفمبر 2024. Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023.',
+          },
+          {
+            q: 'هل يمكنني استخدام SEO للظهور في إجابات Llama أو Qwen؟',
+            a: 'لا. SEO لا يستطيع التأثير في نماذج LLM المنشورة محليًا لأن النموذج لا يبحث في الويب.',
+          },
+          {
+            q: 'كيف أتحقق من صحة إجابات الذكاء الاصطناعي المتأثرة بتواريخ الانقطاع؟',
+            a: 'ثلاثة مؤشرات: (1) الموضوع يتضمن إصدارات أو أسعارًا محددة؛ (2) قطاع يتغير بسرعة؛ (3) لا استشهادات في الإجابة. تحقق دائمًا من المصادر الأولية.',
+          },
+          {
+            q: 'كيف أعرف إذا كانت إجابة الذكاء الاصطناعي استخدمت البحث المباشر؟',
+            a: 'Perplexity دائمًا يعرض استشهادات. Gemini يعرض أيقونة Google Search. Grok يشير إلى نتائج X. ChatGPT يعرض أيقونة كرة أرضية. Claude لا يبحث افتراضيًا. نماذج LLM المحلية لا تبحث أبدًا.',
+          },
+        ],
+      },
+    },
+  },
 }
