@@ -267,6 +267,14 @@ export const translations = {
     privacyFooterHome: "Home",
     privacyFooterFaq: "FAQ",
 
+    // Search UI
+    searchPlaceholder: "Search guides...",
+    searchAriaLabel: "Search guides",
+    searchModalAriaLabel: "Search all guides",
+    searchPopularGuides: "Popular Guides",
+    searchNoResults: "No results for",
+    searchLoading: "Loading search...",
+
     // Explore Free Guides Section
     guidesTitle: "Explore Free Guides",
     guidesDesc: "Deep dives into AI, prompting, and local LLMs",
@@ -547,6 +555,14 @@ export const translations = {
     // Footer Nav
     privacyFooterHome: "Startseite",
     privacyFooterFaq: "FAQ",
+
+    // Search UI
+    searchPlaceholder: "Guides suchen...",
+    searchAriaLabel: "Guides durchsuchen",
+    searchModalAriaLabel: "Alle Guides durchsuchen",
+    searchPopularGuides: "Beliebte Guides",
+    searchNoResults: "Keine Ergebnisse für",
+    searchLoading: "Suche wird geladen...",
 
     // Explore Free Guides Section
     guidesTitle: "Kostenlose Leitfäden entdecken",
@@ -829,6 +845,14 @@ export const translations = {
     privacyFooterHome: "Accueil",
     privacyFooterFaq: "FAQ",
 
+    // Search UI
+    searchPlaceholder: "Rechercher des guides...",
+    searchAriaLabel: "Rechercher des guides",
+    searchModalAriaLabel: "Rechercher tous les guides",
+    searchPopularGuides: "Guides populaires",
+    searchNoResults: "Aucun résultat pour",
+    searchLoading: "Chargement...",
+
     // Explore Free Guides Section
     guidesTitle: "Explorer les guides gratuits",
     guidesDesc: "Explorations approfondies sur l'IA, les prompts et les LLMs locaux",
@@ -1109,6 +1133,14 @@ export const translations = {
     // Footer Nav
     privacyFooterHome: "ホーム",
     privacyFooterFaq: "FAQ",
+
+    // Search UI
+    searchPlaceholder: "ガイドを検索...",
+    searchAriaLabel: "ガイドを検索",
+    searchModalAriaLabel: "全ガイドを検索",
+    searchPopularGuides: "人気ガイド",
+    searchNoResults: "検索結果なし：",
+    searchLoading: "読み込み中...",
 
     // Explore Free Guides Section
     guidesTitle: "無料ガイドを探索",
@@ -1391,6 +1423,14 @@ export const translations = {
     privacyFooterHome: "主页",
     privacyFooterFaq: "常见问题",
 
+    // Search UI
+    searchPlaceholder: "搜索指南...",
+    searchAriaLabel: "搜索指南",
+    searchModalAriaLabel: "搜索所有指南",
+    searchPopularGuides: "热门指南",
+    searchNoResults: "没有结果：",
+    searchLoading: "加载中...",
+
     // Explore Free Guides Section
     guidesTitle: "探索免费指南",
     guidesDesc: "关于AI、提示词和本地LLM的深度讲解",
@@ -1671,6 +1711,14 @@ export const translations = {
     // Footer Nav
     privacyFooterHome: "Inicio",
     privacyFooterFaq: "FAQ",
+
+    // Search UI
+    searchPlaceholder: "Buscar guías...",
+    searchAriaLabel: "Buscar guías",
+    searchModalAriaLabel: "Buscar todas las guías",
+    searchPopularGuides: "Guías populares",
+    searchNoResults: "Sin resultados para",
+    searchLoading: "Cargando búsqueda...",
 
     // Explore Free Guides Section
     guidesTitle: "Explora las guías gratuitas",
@@ -1953,6 +2001,14 @@ export const translations = {
     privacyFooterHome: "Início",
     privacyFooterFaq: "FAQ",
 
+    // Search UI
+    searchPlaceholder: "Pesquisar guias...",
+    searchAriaLabel: "Pesquisar guias",
+    searchModalAriaLabel: "Pesquisar todos os guias",
+    searchPopularGuides: "Guias populares",
+    searchNoResults: "Sem resultados para",
+    searchLoading: "Carregando pesquisa...",
+
     // Explore Free Guides Section
     guidesTitle: "Explore os guias gratuitos",
     guidesDesc: "Aprofundamentos sobre IA, prompting e LLMs locais",
@@ -2234,6 +2290,14 @@ export const translations = {
     privacyFooterHome: "الرئيسية",
     privacyFooterFaq: "FAQ",
 
+    // Search UI
+    searchPlaceholder: "ابحث في الأدلة...",
+    searchAriaLabel: "البحث في الأدلة",
+    searchModalAriaLabel: "البحث في جميع الأدلة",
+    searchPopularGuides: "الأدلة الشائعة",
+    searchNoResults: "لا توجد نتائج لـ",
+    searchLoading: "جارٍ التحميل...",
+
     // Explore Free Guides Section
     guidesTitle: "استكشف الأدلة المجانية",
     guidesDesc: "تحليلات معمَّقة حول الذكاء الاصطناعي والبرامج النصية وLLMs المحلية",
@@ -2514,6 +2578,14 @@ export const translations = {
     // Footer Nav
     privacyFooterHome: "홈",
     privacyFooterFaq: "FAQ",
+
+    // Search UI
+    searchPlaceholder: "가이드 검색...",
+    searchAriaLabel: "가이드 검색",
+    searchModalAriaLabel: "모든 가이드 검색",
+    searchPopularGuides: "인기 가이드",
+    searchNoResults: "검색 결과 없음:",
+    searchLoading: "검색 로딩 중...",
 
     // Explore Free Guides Section
     guidesTitle: "무료 가이드 둘러보기",

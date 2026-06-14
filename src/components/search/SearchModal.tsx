@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useSearch } from './useSearch'
 import { groupResults, type SearchEntry } from './search-utils'
 import { SearchResultGroup } from './SearchResultGroup'
+import { translations } from '@/translations'
 
 interface Props {
   isOpen: boolean
@@ -14,6 +15,7 @@ interface Props {
 
 export function SearchModal({ isOpen, onClose, lang }: Props) {
   const router = useRouter()
+  const t = translations[lang as keyof typeof translations] || translations.en
   const { search, loadIndex, isLoaded, getPopular } = useSearch(lang)
   const [query, setQuery] = useState('')
   const [activeIndex, setActiveIndex] = useState(0)
@@ -125,7 +127,7 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Search all guides"
+        aria-label={t.searchModalAriaLabel}
         className={`
           fixed z-50 bg-white
           /* Mobile: full-screen */
@@ -161,8 +163,8 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
             aria-activedescendant={
               totalResults > 0 ? `search-item-${activeIndex}` : undefined
             }
-            aria-label="Search guides"
-            placeholder="Search guides..."
+            aria-label={t.searchAriaLabel}
+            placeholder={t.searchPlaceholder}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="flex-1 text-sm bg-transparent outline-none text-gray-900 placeholder-gray-400"
@@ -193,8 +195,8 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
             totalResults > 0
               ? `${totalResults} results for ${query}`
               : query.length >= 2
-              ? 'No results'
-              : 'Popular guides'
+              ? t.searchNoResults
+              : t.searchPopularGuides
           }
         >
           {/* Loading state */}
@@ -204,14 +206,14 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              Loading search...
+              {t.searchLoading}
             </div>
           )}
 
           {/* No results */}
           {isLoaded && query.length >= 2 && totalResults === 0 && (
             <p className="py-10 text-center text-sm text-gray-400">
-              No results for &ldquo;{query}&rdquo;
+              {t.searchNoResults} &ldquo;{query}&rdquo;
             </p>
           )}
 
@@ -241,7 +243,7 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
           {isLoaded && query.length < 2 && popularEntries.length > 0 && (
             <div>
               <p className="px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-gray-400 select-none">
-                Popular Guides
+                {t.searchPopularGuides}
               </p>
               {popularEntries.map((entry) => (
                 <button

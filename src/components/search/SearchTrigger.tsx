@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import { useLang } from '@/hooks/useLang'
+import { translations } from '@/translations'
 import { SearchModal } from './SearchModal'
 
 export function SearchTrigger() {
   const [isOpen, setIsOpen] = useState(false)
   const lang = useLang()
+  const t = translations[lang as keyof typeof translations] || translations.en
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -37,13 +39,13 @@ export function SearchTrigger() {
       <button
         onClick={() => setIsOpen(true)}
         className="hidden md:flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 border border-gray-200 rounded-lg px-3 py-1.5 hover:border-gray-300 transition-colors"
-        aria-label="Search guides"
+        aria-label={t.searchAriaLabel}
       >
         <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="11" cy="11" r="8" />
           <path d="m21 21-4.35-4.35" />
         </svg>
-        <span>Search guides...</span>
+        <span>{t.searchPlaceholder}</span>
         <kbd className="text-[11px] text-gray-400 border border-gray-200 rounded px-1 py-0.5 font-mono leading-none">⌘K</kbd>
       </button>
 
