@@ -413,8 +413,8 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
 }
 
 export async function buildHubPageElement(lang: Lang) {
-  if (lang === 'en' || lang === 'de' || lang === 'fr' || lang === 'ja' || lang === 'zh' || lang === 'es' || lang === 'pt') {
-    return renderLocalizedHub(lang as 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt')
+  if (lang === 'en' || lang === 'de' || lang === 'fr' || lang === 'ja' || lang === 'zh' || lang === 'es' || lang === 'pt' || lang === 'ar' || lang === 'ko') {
+    return renderLocalizedHub(lang as 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko')
   }
   return renderComingSoon({ lang, kind: 'hub' })
 }
@@ -1291,9 +1291,33 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
       { href: '/pt/prompt-engineering/rag-explained', label: 'RAG Explicado' },
     ],
   },
+  ar: {
+    faqHeading: 'الأسئلة الشائعة',
+    keyTakeawaysLabel: 'النقاط الرئيسية',
+    lastUpdatedLabel: 'آخر تحديث:',
+    relatedReadingHeading: 'قراءات ذات صلة',
+    relatedReadingLinks: [
+      { href: '/ar/local-llms/local-llm-hardware-guide-2026', label: 'دليل أجهزة LLM المحلي 2026' },
+      { href: '/ar/local-llms/best-local-llms-2026', label: 'أفضل نماذج LLM المحلية 2026' },
+      { href: '/ar/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp مقابل Ollama مقابل vLLM' },
+      { href: '/ar/prompt-engineering/rag-explained', label: 'شرح RAG' },
+    ],
+  },
+  ko: {
+    faqHeading: '자주 묻는 질문',
+    keyTakeawaysLabel: '핵심 요점',
+    lastUpdatedLabel: '최종 업데이트:',
+    relatedReadingHeading: '관련 자료',
+    relatedReadingLinks: [
+      { href: '/ko/local-llms/local-llm-hardware-guide-2026', label: '로컬 LLM 하드웨어 가이드 2026' },
+      { href: '/ko/local-llms/best-local-llms-2026', label: '2026년 최고의 로컬 LLM' },
+      { href: '/ko/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
+      { href: '/ko/prompt-engineering/rag-explained', label: 'RAG 설명' },
+    ],
+  },
 }
 
-const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubFaq[]> = {
+const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko', HubFaq[]> = {
   en: [
     { q: 'What is a local LLM and how is it different from ChatGPT?', a: 'A local LLM runs entirely on your own hardware — phone, laptop, desktop, or server — without sending prompts to any cloud service. ChatGPT runs on OpenAI servers and sends your prompts there. Local LLMs are private, work offline, and have no per-token cost; ChatGPT is faster on rare topics and requires no setup.' },
     { q: 'Do I need a powerful computer to run local LLMs?', a: 'No. 4 GB RAM and an integrated GPU is enough for small models like Phi-4 Mini or Gemma 3 4B. 16 GB RAM and a midrange GPU (RTX 3060 12 GB or M3 Pro) covers most everyday workflows. Heavy power users want 24+ GB VRAM.' },
@@ -1380,9 +1404,33 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt', HubF
     { q: 'LLMs locais funcionam totalmente offline?', a: 'Sim — uma vez que o modelo é baixado, toda a inferência é local. Útil para viagens, redes restritas, ambientes seguros e qualquer lugar onde a internet seja instável.' },
     { q: 'Qual é o melhor stack de LLM local para empresas na UE?', a: 'Para conformidade com GDPR/Lei de IA da UE: Ollama ou vLLM rodando em hardware dedicado, combinado com Jan (UI), Continue.dev (codificação) e AnythingLLM (RAG). Tudo open source, tudo auditável, tudo on-prem. O Mistral Large é uma forte alternativa hospedada na UE para configurações híbridas.' },
   ],
+  ar: [
+    { q: 'ما هو LLM المحلي وكيف يختلف عن ChatGPT؟', a: 'يعمل نموذج LLM المحلي بالكامل على أجهزتك الخاصة — هاتف أو حاسوب محمول أو سطح مكتب أو خادم — دون إرسال طلباتك إلى أي خدمة سحابية. يعمل ChatGPT على خوادم OpenAI ويرسل طلباتك إليها. نماذج LLM المحلية خاصة وتعمل دون اتصال بالإنترنت وبدون تكلفة لكل رمز؛ ChatGPT أسرع في الموضوعات النادرة ولا يتطلب أي إعداد.' },
+    { q: 'هل أحتاج إلى حاسوب قوي لتشغيل نماذج LLM المحلية؟', a: 'لا. 4 جيجابايت من ذاكرة الوصول العشوائي ووحدة معالجة رسومات مدمجة تكفي للنماذج الصغيرة مثل Phi-4 Mini أو Gemma 3 4B. 16 جيجابايت من الذاكرة ووحدة معالجة رسومات متوسطة (RTX 3060 12 GB أو M3 Pro) تغطي معظم سير العمل اليومية. يريد المستخدمون المتقدمون 24 جيجابايت VRAM أو أكثر.' },
+    { q: 'هل نماذج LLM المحلية جيدة مثل ChatGPT أو Claude؟', a: 'للمهام اليومية (الدردشة والتلخيص والكود الشائع) يتراوح الفارق بين 5-15٪ في 2026. في الاستدلال المتقدم والمعرفة النادرة جداً، لا تزال النماذج السحابية في المقدمة. يميل ميزان التكلفة مقابل الجودة لصالح المحلي لمعظم المستخدمين الذين يتعاملون مع بيانات خاصة أو حساسة.' },
+    { q: 'هل يمكنني تشغيل نماذج LLM المحلية على هاتفي؟', a: 'نعم. تطبيقات مثل LLM Farm وPrivate LLM تشغّل Phi-4 Mini وGemma 3 4B على iPhone 16+ وأجهزة Android الرائدة. الأداء يتراوح بين 8-15 رمزاً في الثانية — مناسب للدردشة وصياغة المسودات والمراجعة دون اتصال.' },
+    { q: 'كم تكلفة تشغيل نموذج LLM محلي؟', a: 'بعد الأجهزة، التكلفة الهامشية هي الكهرباء فقط — عادةً 1-3 دولار/شهر للاستخدام المعتدل. تتراوح الاستثمارات في الأجهزة من 0 دولار (حاسوب محمول موجود) إلى حوالي 2000 دولار لبناء عالي الأداء. مقارنةً باشتراكات SaaS بين 20-200 دولار/شهر، تكون فترة الاسترداد عادةً 8-24 شهراً.' },
+    { q: 'هل بياناتي خاصة فعلاً عند استخدام نماذج LLM المحلية؟', a: 'نعم — بافتراض أن التطبيق لا يرسل الطلبات عبر القياس عن بُعد، وهو ما لا تفعله معظم التطبيقات. يمكن التحقق من ذلك عبر تطبيقات مفتوحة المصدر (Jan وGPT4All وOllama) حيث يمكنك مراجعة حركة الشبكة. ملف النموذج نفسه لا "يتصل بالمنزل" — إنه مجرد أوزان على القرص.' },
+    { q: 'ما هو أسهل تطبيق LLM محلي للمبتدئين؟', a: 'GPT4All يمتلك أبسط عملية تثبيت (نقرة واحدة، يعمل بذاكرة 8 جيجابايت). LM Studio الأغنى بالميزات. Jan الأفضل للخصوصية. راجع مقارنة LM Studio مقابل Jan مقابل GPT4All للاطلاع على المعايير لكل منها.' },
+    { q: 'هل يمكن لنماذج LLM المحلية أن تحل محل مساعد البرمجة لديّ؟', a: 'نعم. Continue.dev + Ollama + Qwen3-Coder يصل إلى 90-95٪ من جودة GitHub Copilot في العمل اليومي بـ TypeScript وPython مع الحفاظ على خصوصية الكود بالكامل. متطلبات الأجهزة: RTX 3060 12 GB أو Mac M3 Pro+.' },
+    { q: 'هل تعمل نماذج LLM المحلية دون اتصال بالكامل؟', a: 'نعم — بمجرد تنزيل النموذج، يتم كل الاستدلال محلياً. مفيد للسفر والشبكات المقيّدة والبيئات الآمنة وأي مكان يكون فيه الإنترنت غير موثوق.' },
+    { q: 'ما أفضل مكدس LLM محلي للشركات في الاتحاد الأوروبي؟', a: 'للامتثال لـ GDPR/قانون الذكاء الاصطناعي الأوروبي: Ollama أو vLLM على أجهزة مخصصة، مقترناً بـ Jan (واجهة المستخدم) وContinue.dev (البرمجة) وAnythingLLM (RAG). كل شيء مفتوح المصدر وقابل للتدقيق ومحلي بالكامل. Mistral Large بديل قوي مستضاف في الاتحاد الأوروبي للإعدادات الهجينة.' },
+  ],
+  ko: [
+    { q: '로컬 LLM이란 무엇이고 ChatGPT와 어떻게 다른가요?', a: '로컬 LLM은 어떤 클라우드 서비스에도 프롬프트를 보내지 않고 자신의 기기(스마트폰, 노트북, 데스크톱, 서버)에서 완전히 실행됩니다. ChatGPT는 OpenAI 서버에서 실행되며 프롬프트를 그곳으로 전송합니다. 로컬 LLM은 프라이빗하고 오프라인에서 작동하며 토큰당 비용이 없습니다. ChatGPT는 드문 주제에서 더 빠르고 별도 설정이 필요 없습니다.' },
+    { q: '로컬 LLM을 실행하려면 강력한 컴퓨터가 필요한가요?', a: '아닙니다. Phi-4 Mini나 Gemma 3 4B 같은 소형 모델은 4GB RAM과 내장 GPU로 충분합니다. 16GB RAM과 중급 GPU(RTX 3060 12GB 또는 M3 Pro)는 대부분의 일상 워크플로를 커버합니다. 고급 사용자는 24GB 이상의 VRAM을 원합니다.' },
+    { q: '로컬 LLM이 ChatGPT나 Claude만큼 좋은가요?', a: '일상적인 작업(채팅, 요약, 일반 코드)에서 2026년 격차는 5~15%입니다. 최첨단 추론과 매우 드문 지식에서는 클라우드 모델이 여전히 앞섭니다. 개인 또는 민감한 데이터를 가진 대부분의 사용자에게는 비용 대비 품질 면에서 로컬이 유리합니다.' },
+    { q: '스마트폰에서 로컬 LLM을 실행할 수 있나요?', a: '네. LLM Farm, Private LLM 같은 앱이 iPhone 16+와 최신 안드로이드 기기에서 Phi-4 Mini와 Gemma 3 4B를 실행합니다. 성능은 초당 8~15토큰으로 채팅, 초안 작성, 오프라인 참조에 활용 가능합니다.' },
+    { q: '로컬 LLM 실행 비용은 얼마인가요?', a: '하드웨어 이후 한계 비용은 전기료뿐입니다. 일반적으로 적당한 사용 시 월 1~3달러입니다. 하드웨어 투자는 0달러(기존 노트북)에서 고성능 빌드의 경우 약 2,000달러까지 다양합니다. 월 20~200달러의 SaaS 구독과 비교하면 회수 기간은 일반적으로 8~24개월입니다.' },
+    { q: '로컬 LLM을 사용할 때 데이터가 정말 비공개인가요?', a: '네 — 앱이 프롬프트를 원격 측정으로 전송하지 않는다는 가정 하에(대부분 전송하지 않습니다). Jan, GPT4All, Ollama 같은 오픈소스 앱에서 네트워크 트래픽을 감사하여 확인할 수 있습니다. 모델 파일 자체는 "집에 전화하지" 않습니다 — 디스크의 가중치일 뿐입니다.' },
+    { q: '초보자에게 가장 쉬운 로컬 LLM 앱은 무엇인가요?', a: 'GPT4All이 가장 간단한 설치를 제공합니다(클릭 한 번, 8GB RAM으로 실행). LM Studio는 기능이 가장 풍부합니다. Jan은 프라이버시에 최적화되어 있습니다. 각 벤치마크는 LM Studio vs Jan vs GPT4All 비교를 참조하세요.' },
+    { q: '로컬 LLM이 코딩 어시스턴트를 대체할 수 있나요?', a: '네. Continue.dev + Ollama + Qwen3-Coder는 일상적인 TypeScript 및 Python 작업에서 GitHub Copilot 품질의 90~95%에 도달하며 코드 프라이버시를 완전히 보장합니다. 하드웨어 요구사항은 RTX 3060 12GB 또는 M3 Pro+ Mac입니다.' },
+    { q: '로컬 LLM이 완전히 오프라인으로 작동하나요?', a: '네 — 모델을 다운로드하면 모든 추론이 로컬에서 이루어집니다. 여행, 제한된 네트워크, 보안 환경, 인터넷이 불안정한 모든 곳에서 유용합니다.' },
+    { q: 'EU 기업에 가장 적합한 로컬 LLM 스택은 무엇인가요?', a: 'GDPR/EU AI 법 준수를 위해: 전용 하드웨어에서 Ollama 또는 vLLM을 실행하고 Jan(UI), Continue.dev(코딩), AnythingLLM(RAG)과 결합하세요. 모두 오픈소스, 모두 감사 가능, 모두 온프레미스입니다. Mistral Large는 하이브리드 설정을 위한 강력한 EU 호스팅 대안입니다.' },
+  ],
 }
 
-function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' }) {
+function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko' }) {
   const hasContent =
     !!powerLLMContent[slug]?.['en'] &&
     Object.keys(powerLLMContent[slug]?.['en']?.sections ?? {}).length > 0
@@ -1435,12 +1483,12 @@ function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang
   )
 }
 
-function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt') {
+function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko') {
   const lastUpdated = '2026-05-07'
   const hero = HUB_HERO_L10N[lang]
   const faqs = HUB_FAQS_L10N[lang]
   const labels = HUB_LABELS_L10N[lang]
-  const dateLocale = lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'ja' ? 'ja-JP' : lang === 'zh' ? 'zh-CN' : lang === 'es' ? 'es-ES' : lang === 'pt' ? 'pt-BR' : 'en-US'
+  const dateLocale = lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'ja' ? 'ja-JP' : lang === 'zh' ? 'zh-CN' : lang === 'es' ? 'es-ES' : lang === 'pt' ? 'pt-BR' : lang === 'ar' ? 'ar-SA' : lang === 'ko' ? 'ko-KR' : 'en-US'
 
   const hubFaqSchema = {
     '@context': 'https://schema.org',
