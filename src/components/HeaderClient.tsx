@@ -18,6 +18,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Comparar herramientas',
     pt: 'Comparar ferramentas', // VERIFY
     ko: '도구 비교',
+    ar: 'مقارنة الأدوات',
   },
   features: {
     en: 'Features',
@@ -28,6 +29,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Características',
     pt: 'Recursos', // VERIFY
     ko: '기능',
+    ar: 'الميزات',
   },
   howItWorks: {
     en: 'How It Works',
@@ -38,6 +40,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Cómo funciona',
     pt: 'Como funciona', // VERIFY
     ko: '작동 방식',
+    ar: 'كيف يعمل',
   },
   faq: {
     en: 'FAQ',
@@ -48,6 +51,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'FAQ',
     pt: 'FAQ', // VERIFY
     ko: 'FAQ',
+    ar: 'الأسئلة الشائعة',
   },
   blog: {
     en: 'Blog',
@@ -58,6 +62,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Blog',
     pt: 'Blog', // VERIFY
     ko: '블로그',
+    ar: 'المدونة',
   },
   promptEngineering: {
     en: 'Prompt Engineering',
@@ -68,6 +73,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Prompt Engineering',
     pt: 'Prompt Engineering', // VERIFY
     ko: '프롬프트 엔지니어링',
+    ar: 'هندسة التعليمات',
   },
   localLlms: {
     en: 'Local LLMs',
@@ -78,6 +84,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'LLMs locales',
     pt: 'LLMs locais', // VERIFY
     ko: '로컬 LLM',
+    ar: 'نماذج محلية',
   },
   powerLocalLlm: {
     en: 'Power Local LLM',
@@ -88,6 +95,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'LLM locales avanzados',
     pt: 'LLMs locais avançados',
     ko: '로컬 LLM 활용',
+    ar: 'نماذج محلية متقدمة',
   },
   promptBites: {
     en: 'Prompt Bites',
@@ -98,6 +106,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Prompts en breve',
     pt: 'Prompts em resumo',
     ko: '프롬프트 한입',
+    ar: 'تعليمات سريعة',
   },
   smartHome: {
     // Labels match the term each locale's cluster content uses (not machine-translated).
@@ -109,6 +118,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Smart Home',
     pt: 'Casa inteligente',
     ko: '스마트 홈',
+    ar: 'المنزل الذكي',
   },
   waitlist: {
     en: 'Waitlist',
@@ -119,6 +129,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Lista de espera',
     pt: 'Lista de espera', // VERIFY
     ko: '대기자 명단',
+    ar: 'قائمة الانتظار',
   },
   skipToMain: {
     en: 'Skip to main content',
@@ -129,6 +140,7 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     es: 'Ir al contenido principal',
     pt: 'Pular para o conteúdo principal', // VERIFY
     ko: '본문으로 건너뛰기',
+    ar: 'تخطى إلى المحتوى الرئيسي',
   },
 }
 
