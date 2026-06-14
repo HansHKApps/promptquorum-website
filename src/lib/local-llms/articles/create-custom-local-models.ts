@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to [Ollama](https://ollama.com/).',
       metaDescription: 'Fine-tune Llama 3.3 8B with LoRA: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training: 10B+ tokens, weeks, $50K–500K. Decision matrix and Ollama deployment guide.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to Ollama.',
       audience: 'Engineers deploying local LLMs in production or enterprise environments',
       readTime: '12 min read',
@@ -32,7 +32,7 @@ schema: {
           url: 'https://www.promptquorum.com/about',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -108,7 +108,7 @@ schema: {
             name: 'What framework should I use for fine-tuning?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth (fastest), Axolotl (flexible), and Hugging Face Transformers (official, most documented) are the main options. Unsloth is recommended for speed; Axolotl for multi-GPU setups. All support LoRA and work with Ollama for deployment.',
+              text: 'Unsloth (up to 2× faster, [per unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), and Hugging Face Transformers (official, most documented) are the main options. Unsloth is recommended for speed; Axolotl for multi-GPU setups. All support LoRA and work with Ollama for deployment.',
             },
           },
           {
@@ -341,7 +341,7 @@ schema: {
             },
             {
               q: 'What framework should I use for fine-tuning?',
-              a: 'Unsloth (fastest), Axolotl (flexible), and Hugging Face Transformers (official, most documented) are the main options. Unsloth is recommended for speed; Axolotl for multi-GPU setups. All support LoRA and work with Ollama for deployment.',
+              a: 'Unsloth (up to 2× faster, [per unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), and Hugging Face Transformers (official, most documented) are the main options. Unsloth is recommended for speed; Axolotl for multi-GPU setups. All support LoRA and work with Ollama for deployment.',
             },
             {
               q: 'How do I know if pre-training is worth the cost?',
@@ -394,7 +394,7 @@ schema: {
       intro: 'Crear LLMs locales personalizados significa hacer fine-tuning de un modelo existente o pre-entrenar desde cero. A partir de abril de 2026, el fine-tuning con LoRA es práctico en hardware de consumo: 500 ejemplos, 8 GB VRAM, 1–2 horas, $100–500. El pre-training cuesta $50K–500K y requiere más de 10B tokens — justificado solo para necesidades propietarias excepcionales. Esta guía cubre ambos enfoques: el camino de fine-tuning en 7 pasos con Unsloth, la matriz de decisión entre fine-tuning vs pre-training vs RAG, y el despliegue en [Ollama](https://ollama.com/).',
       metaDescription: 'Fine-tune Llama 3.3 8B con LoRA: 500 ejemplos, 8 GB VRAM, 1–2 h, $100–500. Pre-training: 10B+ tokens, semanas, $50K–500K. Con matriz de decisión.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: 'Crear LLMs locales personalizados significa hacer fine-tuning de un modelo existente o pre-entrenar desde cero. A partir de abril de 2026, el fine-tuning con LoRA es práctico en hardware de consumo: 500 ejemplos, 8 GB VRAM, 1–2 horas, $100–500. El pre-training cuesta $50K–500K y requiere más de 10B tokens — justificado solo para necesidades propietarias excepcionales. Esta guía cubre ambos enfoques: el camino de fine-tuning en 7 pasos con Unsloth, la matriz de decisión entre fine-tuning vs pre-training vs RAG, y el despliegue en Ollama.',
       audience: 'Ingenieros que despliegan LLMs locales en entornos de producción o empresa',
       readTime: '12 min de lectura',
@@ -412,7 +412,7 @@ schema: {
           name: 'Hans Kuepper',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -489,7 +489,7 @@ schema: {
             name: '¿Qué framework debería usar para el fine-tuning?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth (más rápido), Axolotl (flexible) y Hugging Face Transformers (oficial, más documentado) son las principales opciones. Unsloth es recomendado por velocidad; Axolotl para configuraciones multi-GPU. Todos soportan LoRA y funcionan con Ollama para el despliegue.',
+              text: 'Unsloth (hasta 2× más rápido, [según unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible) y Hugging Face Transformers (oficial, más documentado) son las principales opciones. Unsloth es recomendado por velocidad; Axolotl para configuraciones multi-GPU. Todos soportan LoRA y funcionan con Ollama para el despliegue.',
             },
           },
           {
@@ -724,7 +724,7 @@ schema: {
             },
             {
               q: '¿Qué framework debería usar para el fine-tuning?',
-              a: 'Unsloth (más rápido), Axolotl (flexible) y Hugging Face Transformers (oficial, más documentado) son las principales opciones. Unsloth es recomendado por velocidad; Axolotl para configuraciones multi-GPU. Todos soportan LoRA y funcionan con Ollama para el despliegue.',
+              a: 'Unsloth (hasta 2× más rápido, [según unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible) y Hugging Face Transformers (oficial, más documentado) son las principales opciones. Unsloth es recomendado por velocidad; Axolotl para configuraciones multi-GPU. Todos soportan LoRA y funcionan con Ollama para el despliegue.',
             },
             {
               q: '¿Cómo sé si el pre-training vale el costo?',
@@ -777,7 +777,7 @@ schema: {
       intro: 'إنشاء نماذج LLM محلية مخصصة يعني الضبط الدقيق لنموذج موجود أو التدريب المسبق من الصفر. اعتباراً من أبريل 2026، الضبط الدقيق بـ LoRA عملي على العتاد الاستهلاكي: 500 مثال، 8 GB VRAM، 1–2 ساعة، 100–500 دولار. يكلّف التدريب المسبق 50 ألف–500 ألف دولار ويتطلب أكثر من 10 مليارات رمز — مبرَّر فقط للاحتياجات المملوكة الاستثنائية. يغطي هذا الدليل النهجين: مسار الضبط الدقيق بـ 7 خطوات مع Unsloth، ومصفوفة القرار بين الضبط الدقيق والتدريب المسبق وRAG، والنشر على [Ollama](https://ollama.com/).',
       metaDescription: 'الضبط الدقيق بـ LoRA على Llama 3.3 8B: 500 مثال، 8 GB VRAM، 1–2 ساعة، 100–500 دولار. التدريب المسبق: 10B+ رمز وأسابيع ويكلّف 50,000–500,000 دولار.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: 'إنشاء نماذج LLM محلية مخصصة يعني الضبط الدقيق لنموذج موجود أو التدريب المسبق من الصفر. اعتباراً من أبريل 2026، الضبط الدقيق بـ LoRA عملي على العتاد الاستهلاكي: 500 مثال، 8 GB VRAM، 1–2 ساعة، 100–500 دولار. يكلّف التدريب المسبق 50 ألف–500 ألف دولار ويتطلب أكثر من 10 مليارات رمز — مبرَّر فقط للاحتياجات المملوكة الاستثنائية. يغطي هذا الدليل النهجين: مسار الضبط الدقيق بـ 7 خطوات مع Unsloth، ومصفوفة القرار بين الضبط الدقيق والتدريب المسبق وRAG، والنشر على Ollama.',
       audience: 'المهندسون الذين ينشرون نماذج LLM المحلية في بيئات الإنتاج أو المؤسسات',
       readTime: '12 دقيقة للقراءة',
@@ -795,7 +795,7 @@ schema: {
           name: 'Hans Kuepper',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -872,7 +872,7 @@ schema: {
             name: 'أي إطار ينبغي أن أستخدم للضبط الدقيق؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth (الأسرع)، Axolotl (مرن)، وHugging Face Transformers (رسمي، الأكثر توثيقاً) هي الخيارات الرئيسية. يُوصى بـ Unsloth للسرعة؛ Axolotl لتكوينات متعددة GPU. كلها تدعم LoRA وتعمل مع Ollama للنشر.',
+              text: 'Unsloth (حتى 2× أسرع)، Axolotl (مرن)، وHugging Face Transformers (رسمي، الأكثر توثيقاً) هي الخيارات الرئيسية. يُوصى بـ Unsloth للسرعة؛ Axolotl لتكوينات متعددة GPU. كلها تدعم LoRA وتعمل مع Ollama للنشر.',
             },
           },
           {
@@ -1107,7 +1107,7 @@ schema: {
             },
             {
               q: 'أي إطار ينبغي أن أستخدم للضبط الدقيق؟',
-              a: 'Unsloth (الأسرع)، Axolotl (مرن)، وHugging Face Transformers (رسمي، الأكثر توثيقاً) هي الخيارات الرئيسية. يُوصى بـ Unsloth للسرعة؛ Axolotl لتكوينات متعددة GPU. كلها تدعم LoRA وتعمل مع Ollama للنشر.',
+              a: 'Unsloth (حتى 2× أسرع)، Axolotl (مرن)، وHugging Face Transformers (رسمي، الأكثر توثيقاً) هي الخيارات الرئيسية. يُوصى بـ Unsloth للسرعة؛ Axolotl لتكوينات متعددة GPU. كلها تدعم LoRA وتعمل مع Ollama للنشر.',
             },
             {
               q: 'كيف أعرف إن كان التدريب المسبق يستحق التكلفة؟',
@@ -1253,7 +1253,7 @@ schema: {
       intro: 'Eigene lokale LLMs erstellen bedeutet, ein bestehendes Modell zu Fine-Tuning oder von Grund auf zu pre-trainieren. Im April 2026 ist Fine-Tuning mit LoRA auf Consumer-Hardware praktikabel: 500 Beispiele, 8 GB VRAM, 1–2 Stunden, 100–500 €. Pre-Training kostet 50.000–500.000 € und benötigt 10 Milliarden+ Tokens – begründet nur für seltene proprietäre Bedürfnisse. Dieser Leitfaden behandelt beide Ansätze: den 7-Schritt-Fine-Tuning-Pfad mit Unsloth, die Entscheidungsmatrix für Fine-Tuning vs. Pre-Training vs. RAG und die Bereitstellung auf Ollama.',
       metaDescription: 'Eigene lokale LLMs erstellen 2026: Fine-Tuning (ab $500) vs. Pre-Training (ab $50K). LoRA, QLoRA und volles Fine-Tuning mit Kosten und Schritten.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: 'Eigene lokale LLMs erstellen bedeutet, ein bestehendes Modell zu Fine-Tuning oder von Grund auf zu pre-trainieren. Im April 2026 ist Fine-Tuning mit LoRA auf Consumer-Hardware praktikabel: 500 Beispiele, 8 GB VRAM, 1–2 Stunden, 100–500 €. Pre-Training kostet 50.000–500.000 € und benötigt 10 Milliarden+ Tokens – begründet nur für seltene proprietäre Bedürfnisse. Dieser Leitfaden behandelt beide Ansätze: den 7-Schritt-Fine-Tuning-Pfad mit Unsloth, die Entscheidungsmatrix für Fine-Tuning vs. Pre-Training vs. RAG und die Bereitstellung auf Ollama.',
       audience: 'Ingenieure, die lokale LLMs in Produktion oder Enterprise-Umgebungen einsetzen',
       readTime: '12 Min. Lesezeit',
@@ -1272,7 +1272,7 @@ schema: {
           url: 'https://www.promptquorum.com/about',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -1349,7 +1349,7 @@ schema: {
             name: 'Welches Framework sollte ich zum Fine-Tuning verwenden?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth (schnellste), Axolotl (flexibel) und Hugging Face Transformers (offiziell, umfassend dokumentiert) sind die Hauptoptionen. Unsloth empfohlen für Geschwindigkeit; Axolotl für Multi-GPU-Setups. Alle unterstützen LoRA und funktionieren mit Ollama zur Bereitstellung.',
+              text: 'Unsloth (bis zu 2× schneller, [laut unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexibel) und Hugging Face Transformers (offiziell, umfassend dokumentiert) sind die Hauptoptionen. Unsloth empfohlen für Geschwindigkeit; Axolotl für Multi-GPU-Setups. Alle unterstützen LoRA und funktionieren mit Ollama zur Bereitstellung.',
             },
           },
           {
@@ -1602,7 +1602,7 @@ schema: {
             },
             {
               q: 'Welches Framework sollte ich zum Fine-Tuning verwenden?',
-              a: 'Unsloth (schnellste), Axolotl (flexibel) und Hugging Face Transformers (offiziell, umfassend dokumentiert) sind die Hauptoptionen. Unsloth empfohlen für Geschwindigkeit; Axolotl für Multi-GPU-Setups. Alle unterstützen LoRA und funktionieren mit Ollama zur Bereitstellung.',
+              a: 'Unsloth (bis zu 2× schneller, [laut unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexibel) und Hugging Face Transformers (offiziell, umfassend dokumentiert) sind die Hauptoptionen. Unsloth empfohlen für Geschwindigkeit; Axolotl für Multi-GPU-Setups. Alle unterstützen LoRA und funktionieren mit Ollama zur Bereitstellung.',
             },
             {
               q: 'Wie weiß ich, ob Pre-Training die Kosten wert ist?',
@@ -1662,7 +1662,7 @@ schema: {
       intro: 'Créer des LLMs locaux personnalisés signifie affiner un modèle existant ou pré-entraîner à partir de zéro. En avril 2026, le fine-tuning avec LoRA est pratique sur du matériel grand public : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €. Le pré-entraînement coûte 50 000–500 000 € et nécessite 10 milliards+ tokens — justifié uniquement pour les besoins propriétaires rares. Ce guide couvre les deux approches : le chemin de fine-tuning en 7 étapes avec Unsloth, la matrice de décision fine-tuning vs. pré-entraînement vs. RAG, et le déploiement sur Ollama.',
       metaDescription: 'Fine-tuner Llama 3.3 8B avec LoRA : 500 exemples, 8 Go VRAM, 1–2h, 100–500 $. Pré-entraînement : 10B+ tokens, semaines, 50K–500K $. Matrice de décision + Ollama.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: 'Créer des LLMs locaux personnalisés signifie affiner un modèle existant ou pré-entraîner à partir de zéro. En avril 2026, le fine-tuning avec LoRA est pratique sur du matériel grand public : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €.',
       audience: 'Ingénieurs déployant des LLMs locaux en production ou environnements d\'entreprise',
       readTime: '12 min de lecture',
@@ -1679,7 +1679,7 @@ schema: {
           url: 'https://www.promptquorum.com/about',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -1758,7 +1758,7 @@ schema: {
             name: 'Quel framework devrais-je utiliser pour fine-tuning ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth (plus rapide), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
+              text: 'Unsloth (jusqu'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
             },
           },
           {
@@ -1993,7 +1993,7 @@ schema: {
             },
             {
               q: 'Quel framework devrais-je utiliser pour fine-tuning ?',
-              a: 'Unsloth (plus rapide), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
+              a: 'Unsloth (jusqu'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
             },
             {
               q: 'Comment savoir si pre-training vaut le coût ?',
@@ -2046,7 +2046,7 @@ schema: {
       intro: 'カスタム ローカル LLM を構築するとは、既存モデルを fine-tune するか、ゼロから pre-train することを意味します。2026 年 4 月現在、LoRA による fine-tuning はコンシューマー ハードウェアで実用的です：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。Pre-training には ¥6,000,000～60,000,000 かかり、100 億+ トークンが必要です—稀な独自ニーズのみ正当化されます。このガイドは両方のアプローチをカバーしています：Unsloth を使用した 7 ステップ fine-tuning パス、fine-tuning vs. pre-training vs. RAG の決定マトリックス、および Ollama への デプロイメント。',
       metaDescription: 'Llama 3.3 8BをLoRAで微調整：500例、8GB VRAM、1–2時間、$100–500。事前訓練：10B+トークン、数週間、$50K–500K。判断マトリクスとOllamaデプロイ手順付き。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: 'カスタム ローカル LLM を構築するとは、既存モデルを fine-tune するか、ゼロから pre-train することを意味します。2026 年 4 月現在、LoRA による fine-tuning はコンシューマー ハードウェアで実用的です：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。',
       audience: 'エンタープライズ環境でローカル LLM をデプロイするエンジニア',
       readTime: '12分で読める',
@@ -2062,7 +2062,7 @@ schema: {
           name: 'PromptQuorum',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -2141,7 +2141,7 @@ schema: {
             name: 'Fine-tuning に使用すべきフレームワークは何ですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth (最速)、Axolotl (柔軟)、および Hugging Face Transformers (公式、最も文書化) が主要オプションです。Unsloth は速度、Axolotl はマルチ GPU セットアップに推奨。すべて LoRA をサポートし、Ollama デプロイメントで機能します。',
+              text: 'Unsloth (最大2×高速、[unsloth.ai参照](https://github.com/unslothai/unsloth))、Axolotl (柔軟)、および Hugging Face Transformers (公式、最も文書化) が主要オプションです。Unsloth は速度、Axolotl はマルチ GPU セットアップに推奨。すべて LoRA をサポートし、Ollama デプロイメントで機能します。',
             },
           },
           {
@@ -2376,7 +2376,7 @@ schema: {
             },
             {
               q: 'Fine-tuning に使用すべきフレームワークは何ですか？',
-              a: 'Unsloth（最速）、Axolotl（柔軟）、Hugging Face Transformers（公式、最も文書化）が主要オプション。速度なら Unsloth；マルチ GPU セットアップなら Axolotl 推奨。すべて LoRA サポート、Ollama デプロイメント対応。',
+              a: 'Unsloth（最大2×高速、[unsloth.ai参照](https://github.com/unslothai/unsloth)）、Axolotl（柔軟）、Hugging Face Transformers（公式、最も文書化）が主要オプション。速度なら Unsloth；マルチ GPU セットアップなら Axolotl 推奨。すべて LoRA サポート、Ollama デプロイメント対応。',
             },
             {
               q: 'Pre-training がコスト価値があるかどうかを知るにはどうすればよいですか？',
@@ -2429,7 +2429,7 @@ schema: {
       intro: '创建自定义本地 LLM 意味着微调现有模型或从零开始预训练。截至 2026 年 4 月，使用 LoRA 的微调在消费级硬件上可行：500 个样本、8GB VRAM、1-2 小时、$100-500。预训练成本为 $50,000-500,000，需要 100 亿+ tokens——仅对罕见的专有需求合理。本指南涵盖两种方法：使用 Unsloth 的 7 步微调路径、微调 vs. 预训练 vs. RAG 决策矩阵以及 Ollama 部署。',
       metaDescription: '用LoRA微调Llama 3.3 8B：500个样本，8GB显存，1–2小时，$100–500。预训练：10B+令牌，数周，$50K–500K。含决策矩阵与Ollama部署指南。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: '创建自定义本地 LLM 意味着微调现有模型或从零开始预训练。截至 2026 年 4 月，使用 LoRA 的微调在消费级硬件上可行：500 个样本、8GB VRAM、1-2 小时、$100-500。',
       audience: '在生产或企业环境中部署本地 LLM 的工程师',
       readTime: '阅读约 12 分钟',
@@ -2448,7 +2448,7 @@ schema: {
           url: 'https://www.promptquorum.com',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -2525,7 +2525,7 @@ schema: {
             name: '微调应使用哪个框架？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Unsloth（最快）、Axolotl（灵活）和 Hugging Face Transformers（官方、文档最全）是主要选择。Unsloth 推荐用于速度；Axolotl 推荐用于多 GPU 设置。所有都支持 LoRA 并可与 Ollama 集成进行部署。',
+              text: 'Unsloth（最高快2×，[参见unsloth.ai](https://github.com/unslothai/unsloth)）、Axolotl（灵活）和 Hugging Face Transformers（官方、文档最全）是主要选择。Unsloth 推荐用于速度；Axolotl 推荐用于多 GPU 设置。所有都支持 LoRA 并可与 Ollama 集成进行部署。',
             },
           },
           {
@@ -2760,7 +2760,7 @@ schema: {
             },
             {
               q: '微调应使用哪个框架？',
-              a: 'Unsloth（最快）、Axolotl（灵活）和 Hugging Face Transformers（官方、文档最全）是主要选择。Unsloth 推荐用于速度；Axolotl 推荐用于多 GPU 设置。所有都支持 LoRA 并可与 Ollama 集成进行部署。',
+              a: 'Unsloth（最高快2×，[参见unsloth.ai](https://github.com/unslothai/unsloth)）、Axolotl（灵活）和 Hugging Face Transformers（官方、文档最全）是主要选择。Unsloth 推荐用于速度；Axolotl 推荐用于多 GPU 设置。所有都支持 LoRA 并可与 Ollama 集成进行部署。',
             },
             {
               q: '如何判断预训练成本是否值得？',
@@ -2812,7 +2812,7 @@ schema: {
       intro: '커스텀 로컬 LLM을 만드는 방법은 기존 모델을 파인튜닝하거나 처음부터 사전학습하는 두 가지가 있습니다. 2026년 4월 기준, LoRA를 활용한 파인튜닝은 소비자용 하드웨어에서도 실용적입니다: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습은 $5만~50만이 소요되며 100억 개 이상의 토큰이 필요합니다 — 특수한 독점 목적에만 정당화됩니다. 이 가이드에서는 두 가지 접근 방식을 모두 다룹니다: Unsloth를 활용한 7단계 파인튜닝 경로, 파인튜닝 vs 사전학습 vs RAG 의사결정 매트릭스, 그리고 [Ollama](https://ollama.com/) 배포 방법.',
       metaDescription: 'LoRA로 Llama 3.3 8B 파인튜닝: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습: 토큰 100억 개 이상, 수 주, $5만~50만. 의사결정 매트릭스 및 Ollama 배포 가이드.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-24',
+      dateModified: '2026-06-14',
       leadAnswerBlock: '커스텀 로컬 LLM을 만드는 방법은 기존 모델을 파인튜닝하거나 처음부터 사전학습하는 두 가지가 있습니다. 2026년 4월 기준, LoRA를 활용한 파인튜닝은 소비자용 하드웨어에서도 실용적입니다: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습은 $5만~50만이 소요되며 100억 개 이상의 토큰이 필요합니다 — 특수한 독점 목적에만 정당화됩니다. 이 가이드에서는 Unsloth를 활용한 7단계 파인튜닝 경로, 파인튜닝 vs 사전학습 vs RAG 의사결정 매트릭스, 그리고 Ollama 배포 방법을 다룹니다.',
       audience: '프로덕션 또는 엔터프라이즈 환경에서 로컬 LLM을 배포하는 엔지니어',
       readTime: '12분 읽기',
@@ -2829,7 +2829,7 @@ schema: {
           url: 'https://www.promptquorum.com/about',
         },
         datePublished: '2026-04-04',
-        dateModified: '2026-04-24',
+        dateModified: '2026-06-14',
         publisher: {
           '@type': 'Organization',
           name: 'PromptQuorum',

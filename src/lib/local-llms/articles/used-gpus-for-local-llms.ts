@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'where-to-buy',
           title: 'Where Should You Buy Used GPUs?',
           items: [
-            '**eBay**: Best buyer protection. Seller ratings visible. Shipping included. Can return if dead on arrival (DOA). Takes 1-2 weeks.',
+            '**eBay**: Buyer protection available on most listings. Seller ratings visible. Shipping included. Can return if dead on arrival (DOA). Takes 1-2 weeks.',
             '**Facebook Marketplace**: Local sales, test on-site before payment. No shipping risk. Instant availability. Larger pool than Craigslist.',
             '**Craigslist**: Cheapest prices. Local only. Highest scam risk. Only use if you can meet in safe public place and test immediately.',
             '**Local computer repair shops**: Often have used inventory. Can ask about return policy. Prices 10-15% higher than eBay, but more trust.',
@@ -148,7 +148,7 @@ schema: {
         'description': 'Best used GPUs for local LLMs: RTX 3060, 3080, 3090, 4090. Where to buy, risk assessment, how to bench-test.',
         'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-06-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -311,7 +311,7 @@ schema: {
           id: 'where-to-buy',
           title: '¿Dónde comprar GPUs de segunda mano?',
           items: [
-            '**eBay**: mejor protección al comprador. Calificaciones del vendedor visibles. Envío incluido. Posibilidad de devolución si llega defectuosa (DOA). Tarda 1-2 semanas.',
+            '**eBay**: protección al comprador disponible en la mayoría de los listados. Calificaciones del vendedor visibles. Envío incluido. Posibilidad de devolución si llega defectuosa (DOA). Tarda 1-2 semanas.',
             '**Facebook Marketplace**: ventas locales, prueba in situ antes del pago. Sin riesgo de envío. Disponibilidad inmediata. Mayor oferta que Craigslist.',
             '**Craigslist**: precios más bajos. Solo local. Mayor riesgo de estafa. Úsalo solo si puedes quedar en un lugar público seguro y probar de inmediato.',
             '**Tiendas locales de reparación de ordenadores**: suelen tener inventario de segunda mano. Puedes preguntar por la política de devoluciones. Precios un 10-15% más altos que eBay, pero mayor confianza.',
@@ -378,7 +378,7 @@ schema: {
         'description': 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-06-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -520,7 +520,7 @@ schema: {
           id: 'where-to-buy',
           title: 'أين تشتري وحدات GPU المستعملة؟',
           items: [
-            '**eBay**: أفضل حماية للمشتري. تقييمات البائع مرئية. الشحن مشمول. إمكانية الإرجاع إذا وصلت معطلة (DOA). تستغرق 1-2 أسبوع.',
+            '**eBay**: حماية المشتري متاحة في معظم القوائم. تقييمات البائع مرئية. الشحن مشمول. إمكانية الإرجاع إذا وصلت معطلة (DOA). تستغرق 1-2 أسبوع.',
             '**Facebook Marketplace**: مبيعات محلية، اختبار في الموقع قبل الدفع. لا مخاطر شحن. توفر فوري. عرض أكبر من Craigslist.',
             '**Craigslist**: أدنى الأسعار. محلي فقط. مخاطر احتيال أعلى. استخدمه فقط إذا أمكنك اللقاء في مكان عام آمن والاختبار فورًا.',
             '**متاجر إصلاح الحواسيب المحلية**: غالبًا لديها مخزون مستعمل. يمكنك السؤال عن سياسة الإرجاع. أسعار أعلى بـ 10-15% من eBay، لكن ثقة أكبر.',
@@ -587,7 +587,7 @@ schema: {
         'description': 'أفضل وحدات GPU المستعملة لنماذج LLM المحلية: RTX 3060، 3080، 3090، 4090. أين تشتري، وتقييم المخاطر، وكيفية اختبار الأداء.',
         'url': 'https://www.promptquorum.com/ar/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-06-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
@@ -731,7 +731,7 @@ schema: {
           id: 'where-to-buy',
           title: 'Onde comprar GPUs usadas?',
           items: [
-            '**Mercado Livre**: Melhor proteção ao comprador. Avaliações do vendedor visíveis. Frete incluso. Possibilidade de devolução se chegar com defeito (DOA). Leva 1-2 semanas.',
+            '**Mercado Livre**: Proteção ao comprador disponível na maioria dos anúncios. Avaliações do vendedor visíveis. Frete incluso. Possibilidade de devolução se chegar com defeito (DOA). Leva 1-2 semanas.',
             '**OLX / grupos do Facebook**: Vendas locais, teste in loco antes do pagamento. Sem risco de frete. Disponibilidade imediata. Maior oferta que outras plataformas.',
             '**Hardware.com.br / fóruns**: Preços mais baixos. Comunidade técnica. Risco moderado de golpes. Use apenas se puder verificar o histórico do vendedor.',
             '**Lojas de informática locais com usados**: Costumam ter estoque de segunda mão. Você pode perguntar sobre a política de devolução. Preços 10-15% mais altos que o Mercado Livre, mas maior confiança.',
@@ -799,7 +799,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        dateModified: '2026-04-19',
+        dateModified: '2026-06-14',
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -938,7 +938,7 @@ schema: {
           id: 'where-to-buy',
           title: 'Wo sollten Sie gebrauchte GPUs kaufen?',
           items: [
-            '**eBay**: Bester Käuferschutz. Verkäuferbewertungen sichtbar. Versand inklusive. Rückgabe möglich bei Ankunft defekt. Dauert 1-2 Wochen.',
+            '**eBay**: Käuferschutz bei den meisten Angeboten verfügbar. Verkäuferbewertungen sichtbar. Versand inklusive. Rückgabe möglich bei Ankunft defekt. Dauert 1-2 Wochen.',
             '**Facebook Marketplace**: Lokale Verkäufe, Test vor Ort vor Zahlung. Kein Versandrisiko. Sofortige Verfügbarkeit. Größerer Pool als Craigslist.',
             '**Craigslist**: Billigste Preise. Nur lokal. Höchstes Betrugsrisiko. Nutzen Sie nur, wenn Sie an sicherem öffentlichem Ort treffen und sofort testen können.',
             '**Lokale Computerreparaturläden**: Haben oft Gebrauchtbestand. Können nach Rückgaberichtlinie fragen. Preise 10-15% höher als eBay, aber mehr Vertrauen.',
@@ -1007,7 +1007,7 @@ schema: {
         'description': 'Beste gebrauchte GPUs für lokale LLMs: RTX 3060, 3080, 3090, 4090. Wo kaufen, Risikobewertung, Bench-Test-Anleitung.',
         'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-06-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1159,7 +1159,7 @@ schema: {
           id: 'where-to-buy',
           title: 'Où devriez-vous acheter les GPU utilisées ?',
           items: [
-            '**eBay** : Meilleure protection acheteur. Notations vendeur visibles. Livraison incluse. Possible de retour si morte à l\'arrivée (DOA). Prend 1-2 semaines.',
+            '**eBay** : Protection acheteur disponible sur la plupart des annonces. Notations vendeur visibles. Livraison incluse. Possible de retour si morte à l\'arrivée (DOA). Prend 1-2 semaines.',
             '**Facebook Marketplace** : Ventes locales, test sur site avant paiement. Pas de risque d\'expédition. Disponibilité instantanée. Plus grand pool que Craigslist.',
             '**Craigslist** : Prix les plus bas. Local uniquement. Risque d\'arnaque le plus élevé. Utilisez seulement si vous pouvez rencontrer en lieu public sûr et tester immédiatement.',
             '**Magasins de réparation informatique locaux** : Ont souvent de l\'occasion. Pouvez demander la politique de retour. Prix 10-15% plus élevés qu\'eBay, mais plus de confiance.',
@@ -1226,7 +1226,7 @@ schema: {
         'description': 'Meilleures GPU utilisées pour LLMs locaux : RTX 3060, 3080, 3090, 4090. Où acheter, évaluation des risques, test de performance.',
         'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-06-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1368,7 +1368,7 @@ schema: {
           id: 'where-to-buy',
           title: '中古GPUはどこで購入すべきですか？',
           items: [
-            '**eBay** ：最高の購入者保護。売り手評価が表示されます。送料込み。到着時に動かなければ返品可能（DOA）。1-2週間かかります。',
+            '**eBay** ：多くの出品で購入者保護が利用可能。売り手評価が表示されます。送料込み。到着時に動かなければ返品可能（DOA）。1-2週間かかります。',
             '**Facebookマーケットプレイス** ：地元の販売、支払い前に現地テスト。送料リスクなし。即時利用可能。Craigslistより大きなプール。',
             '**Craigslist** ：最安値。地元のみ。詐欺リスク最高。安全な公共の場で会合でき、すぐにテストできる場合のみ使用してください。',
             '**ローカルコンピュータ修理店** ：中古在庫があることが多い。返品ポリシーについて尋ねることができます。eBayより10-15%高いですが、信頼性が高い。',
@@ -1435,7 +1435,7 @@ schema: {
         'description': 'ローカルLLM向け最高の中古GPU：RTX 3060、3080、3090、4090。購入方法、リスク評価、ベンチマークテスト。',
         'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-06-14',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1577,7 +1577,7 @@ schema: {
           id: 'where-to-buy',
           title: '哪里购买二手GPU？',
           items: [
-            '**eBay** ：最佳购买者保护。卖家评级可见。包括运费。如果到达时死亡可以退货（DOA）。需要1-2周。',
+            '**eBay** ：大多数商品提供买家保护。卖家评级可见。包括运费。如果到达时死亡可以退货（DOA）。需要1-2周。',
             '**Facebook Marketplace** ：本地销售，支付前现场测试。无运费风险。即时可用。池比Craigslist更大。',
             '**Craigslist** ：最便宜的价格。仅限本地。最高诈骗风险。仅在您可以在安全公共场所见面并立即测试时使用。',
             '**本地计算机维修店** ：通常有二手库存。可以询问退货政策。价格比eBay高10-15%，但信任度更高。',
@@ -1644,7 +1644,7 @@ schema: {
         'description': '本地LLM最佳二手GPU：RTX 3060、3080、3090、4090。购买位置、风险评估、基准测试。',
         'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-06-14',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [

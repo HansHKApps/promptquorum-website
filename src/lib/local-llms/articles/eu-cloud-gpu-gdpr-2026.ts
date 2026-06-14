@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 May 2026 Update',
-        content: 'Pricing verified across all providers. Hetzner affiliate program ending June 15, 2026 — direct sponsorship follows. EU AI Act section updated. All data residency claims verified. Next update: June 2026 post-Hetzner transition.',
+        content: 'Pricing verified across all providers. EU AI Act section updated. All data residency claims verified. Next update: November 2026. Disclosure: PromptQuorum has no affiliate contract or financial relationship with any provider listed here. All links are editorial. Verify current pricing directly with each provider.',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What happens to Hetzner credits after June 15, 2026?',
-            a: 'Existing free credits remain valid. Affiliate payouts stop. Direct sponsorship becomes the model after that date.',
+            a: 'No. PromptQuorum has no affiliate contract or financial relationship with Hetzner or any other provider listed here. Links are editorial only — PromptQuorum receives no payment per click or signup. Hetzner did end their own referral program on June 15, 2026. Verify all current pricing and offers directly at hetzner.com.',
           },
           {
             q: 'Is STACKIT only for large enterprises?',
@@ -382,15 +382,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '• STACKIT: stackit.de (enterprise contact required)',
           '• IONOS GPU Cloud: ionos.com/cloud/ — verified 2026-05-18',
           '• Mistral La Plateforme (pay-per-token): mistral.ai — verified 2026-05-18',
-          '**Hetzner Affiliate Program Ending:**',
-          '• Official Hetzner Legal Notice: hetzner.com/legal/referrals — "Referral program will be discontinued on 15 June 2026" — verified 2026-05-18',
           '**Regulatory sources:**',
           '• Schrems II: Court of Justice of the European Union, Case C-311/18 (July 16, 2020)',
           '• Article 28 GDPR: EUR-Lex Regulation (EU) 2016/679, Article 28',
           '• EU AI Act: Regulation (EU) 2024/1689, effective phases 2025–2027',
           '• CNIL Guidance: cnil.fr (French data protection authority)',
           '• BfDI Guidance: bfdi.bund.de (German Federal Data Protection Commissioner)',
-          '**Next refresh:** June 2026. Monthly re-verification schedule in place.',
+          '**Next refresh:** November 2026.',
         ],
       },
       relatedGuides: {
@@ -445,7 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Actualización mayo 2026',
-        content: 'Precios verificados en todos los proveedores. El programa de afiliados de Hetzner finaliza el 15 de junio de 2026. Sección del Acta de IA de la UE actualizada. Todos los requisitos de residencia de datos verificados.',
+        content: 'Precios verificados en todos los proveedores. Sección del Acta de IA de la UE actualizada. Todos los requisitos de residencia de datos verificados. Próxima actualización: noviembre 2026. Aviso: PromptQuorum no tiene contrato de afiliados ni relación financiera con ninguno de los proveedores listados. Todos los enlaces son editoriales. Verifica los precios actuales directamente con cada proveedor.',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -706,8 +704,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'En su mayoría sí. Las librerías estándar de Python (PyTorch, TensorFlow) funcionan de forma idéntica. Las APIs específicas del proveedor (SageMaker, Vertex) requieren refactorización.',
           },
           {
-            q: '¿Qué pasa con los créditos de Hetzner después del 15 de junio de 2026?',
-            a: 'Los créditos existentes siguen siendo válidos. Los pagos de afiliados se detienen. El patrocinio directo pasa a ser el modelo después de esa fecha.',
+            q: '¿PromptQuorum tiene un acuerdo de afiliados con Hetzner?',
+            a: 'No. PromptQuorum no tiene contrato de afiliados ni relación financiera con Hetzner ni con ningún otro proveedor listado. Los enlaces son editoriales: PromptQuorum no recibe pago por clic ni por registro. Hetzner finalizó su propio programa de referidos el 15 de junio de 2026. Verifica precios y ofertas actuales directamente en hetzner.com.',
           },
           {
             q: '¿STACKIT es solo para grandes empresas?',
@@ -732,8 +730,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '• STACKIT: stackit.de (contacto empresarial requerido)',
           '• IONOS GPU Cloud: ionos.com/cloud/ — verificado 2026-05-18',
           '• Mistral La Plateforme (pago por token): mistral.ai — verificado 2026-05-18',
-          '**Fin del programa de afiliados de Hetzner:**',
-          '• Aviso Legal Oficial Hetzner: hetzner.com/legal/referrals — "El programa de referidos finalizará el 15 de junio de 2026" — verificado 2026-05-18',
           '**Fuentes regulatorias:**',
           '• Schrems II: Tribunal de Justicia de la Unión Europea, Caso C-311/18 (16 de julio de 2020)',
           '• Artículo 28 RGPD: EUR-Lex Reglamento (UE) 2016/679, Artículo 28',
@@ -805,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 تحديث مايو 2026',
-        content: 'أسعار مُتحقَّق منها لدى جميع المزودين. ينتهي برنامج الإحالة لدى Hetzner في 15 يونيو 2026. حُدّث قسم قانون الذكاء الاصطناعي للاتحاد الأوروبي. جميع متطلبات إقامة البيانات مُتحقَّق منها.',
+        content: 'أسعار مُتحقَّق منها لدى جميع المزودين. حُدّث قسم قانون الذكاء الاصطناعي للاتحاد الأوروبي. جميع متطلبات إقامة البيانات مُتحقَّق منها. التحديث القادم: نوفمبر 2026. إفصاح: لا يمتلك PromptQuorum أي عقد إحالة أو علاقة مالية مع أيٍّ من المزودين المدرجين. جميع الروابط تحريرية فقط. تحقق من الأسعار الحالية مباشرةً مع كل مزود.',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -1039,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Hetzner ممتثل لـ GDPR افتراضياً؟',
-            a: 'نعم. شركة ألمانية، مراكز بيانات ألمانية، DPA متاح فوراً. دون خطر Schrems II. ينتهي برنامج الإحالة في 15 يونيو 2026 — خطّط له.',
+            a: 'نعم. شركة ألمانية، مراكز بيانات ألمانية، DPA متاح فوراً. دون خطر Schrems II.',
           },
           {
             q: 'هل يمكنني استخدام مناطق AWS في الاتحاد الأوروبي لبيانات شخصية بموجب GDPR؟',
@@ -1067,7 +1063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ماذا يحدث لأرصدة Hetzner بعد 15 يونيو 2026؟',
-            a: 'تبقى الأرصدة الحالية صالحة. تتوقف مدفوعات الإحالة. يصبح الرعاية المباشرة هي النموذج بعد ذلك التاريخ.',
+            a: 'لا. لا يمتلك PromptQuorum أي عقد إحالة أو علاقة مالية مع Hetzner أو أي مزود آخر مدرج هنا. الروابط تحريرية فقط — لا يتلقى PromptQuorum أي دفع مقابل النقر أو التسجيل. أنهت Hetzner برنامج الإحالة الخاص بها في 15 يونيو 2026. تحقق من الأسعار والعروض الحالية مباشرةً على hetzner.com.',
           },
           {
             q: 'هل STACKIT للمؤسسات الكبيرة فقط؟',
@@ -1092,8 +1088,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '• STACKIT: stackit.de (تواصل مؤسسي مطلوب)',
           '• IONOS GPU Cloud: ionos.com/cloud/ — مُتحقَّق منه 2026-05-18',
           '• Mistral La Plateforme (دفع لكل رمز): mistral.ai — مُتحقَّق منه 2026-05-18',
-          '**انتهاء برنامج الإحالة لدى Hetzner:**',
-          '• إشعار قانوني رسمي من Hetzner: hetzner.com/legal/referrals — "سينتهي برنامج الإحالة في 15 يونيو 2026" — مُتحقَّق منه 2026-05-18',
           '**مصادر تنظيمية:**',
           '• Schrems II: محكمة العدل للاتحاد الأوروبي، القضية C-311/18 (16 يوليو 2020)',
           '• المادة 28 من GDPR: EUR-Lex اللائحة (الاتحاد الأوروبي) 2016/679، المادة 28',
@@ -1249,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Mai 2026 Update',
-        content: 'Preisgestaltung überprüft bei allen Anbietern. Hetzner-Affiliate-Programm endet am 15. Juni 2026. EU-AI-Act-Abschnitt aktualisiert. Alle Datenresidenz-Anforderungen überprüft.',
+        content: 'Preisgestaltung überprüft bei allen Anbietern. EU-AI-Act-Abschnitt aktualisiert. Alle Datenresidenz-Anforderungen überprüft. Nächstes Update: November 2026. Hinweis: PromptQuorum hat keinen Affiliate-Vertrag und keine finanzielle Beziehung zu den hier aufgeführten Anbietern. Alle Links sind redaktionell. Preise direkt beim jeweiligen Anbieter prüfen.',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -1378,7 +1372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nur Monatsabrechnung: Keine Spot-Rabatte, keine Pay-as-you-go-Flexibilität für Experimente',
           'Langsame Bereitstellung: 1–2 Tage Provisioning bei manueller Bestellung',
           'GPU-Verfügbarkeit begrenzt: Nur RTX 4000/6000 Ada; kein H100, kein L40S',
-          'Befristetes Affiliate-Programm: Endet am 15. Juni 2026 — danach nur direkte Sponsorships',
+          'Kein Spot-Pricing: Nur Monatsabrechnung verfügbar',
         ],
         bestFor: 'Finanzinstitute, Gesundheitswesen, öffentliche Verwaltungen. Alle Organisationen mit monatlichem Budget und Vorliebe für vorhersehbare Kosten über GPU-Spot-Savings.',
         avoidIf: 'Sie brauchen H100, B200 oder andere High-End-Chips. Sie benötigen Spot-Pricing oder stündliche Kostenkontrolle für Experimente.',
@@ -1536,7 +1530,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bfdi.bund.de/', title: 'Bundesbeauftragte für Datenschutz (BfDI)', description: 'Deutsches Datenschutz-Aufsicht; Cloud-Leitlinien und BSI-Grundschutz' },
           { url: 'https://www.cnil.fr/', title: 'Commission Nationale de l\'Informatique et des Libertés (CNIL)', description: 'Französische Datenschutz-Aufsicht; EU AI Act und Cloud-Richtlinien' },
           { url: 'https://eur-lex.europa.eu/eli/reg/2024/1689/oj', title: 'EU AI Act (2024/1689)', description: 'Verordnung über Künstliche Intelligenz — Anforderungen für Hochrisiko-KI und EU-Infrastruktur' },
-          { url: 'https://www.hetzner.com/legal/referrals', title: 'Hetzner Affiliate-Programm', description: 'Endet am 15. Juni 2026 — danach nur direkte PromptQuorum-Sponsorships' },
         ],
       },
       contrarian: {
@@ -1632,7 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Mise à jour mai 2026',
-        content: 'Tarification vérifiée sur tous les fournisseurs. Programme d\'affiliation Hetzner prenant fin le 15 juin 2026. Section Loi UE sur l\'IA mise à jour. Tous les droits de résidence des données vérifiés.',
+        content: 'Tarification vérifiée sur tous les fournisseurs. Section Loi UE sur l\'IA mise à jour. Tous les droits de résidence des données vérifiés. Prochaine mise à jour : novembre 2026. Mention : PromptQuorum n\'a aucun contrat d\'affiliation ni relation financière avec les fournisseurs listés. Tous les liens sont éditoriaux. Vérifier les tarifs actuels directement auprès de chaque fournisseur.',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -1762,7 +1755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Facturation mensuelle uniquement : Pas d\'économies spot, pas de flexibilité de paiement à l\'utilisation pour les expériences',
           'Provisioning lent : 1–2 jours d\'attente pour la mise en service manuelle',
           'Disponibilité GPU limitée : Seulement RTX 4000/6000 Ada ; pas de H100, pas de L40S',
-          'Programme d\'affiliation limité : Se termine le 15 juin 2026 — après uniquement des sponsorships directs',
+          'Programme de référencement limité : S\'est terminé le 15 juin 2026',
         ],
         bestFor: 'Institutions financières, santé, administration publique. Toutes les organisations avec budget mensuel et préférence pour les coûts prévisibles par rapport aux économies spot.',
         avoidIf: 'Vous avez besoin de H100, B200 ou d\'autres puces haut de gamme. Vous avez besoin de tarification spot ou de contrôle des coûts horaires pour les expériences.',
@@ -1994,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 2026年5月更新',
-        content: 'すべてのプロバイダーの価格を検証しました。Hetznerアフィリエイトプログラムは2026年6月15日に終了します。EU AI法セクション更新。すべてのデータレジデンス要件を検証しました。',
+        content: 'すべてのプロバイダーの価格を検証しました。EU AI法セクション更新。すべてのデータレジデンス要件を検証しました。次回更新：2026年11月。免責事項：PromptQuorumは掲載されているプロバイダーとアフィリエイト契約や金銭的関係を一切持ちません。すべてのリンクは編集目的のみです。最新の価格は各プロバイダーで直接ご確認ください。',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -2124,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '月額請求のみ：スポット割引なし、実験用の柔軟な使用量払い型なし',
           'プロビジョニングが遅い：手動注文で1～2日のプロビジョニング待機時間',
           'GPU可用性制限：RTX 4000/6000 Adaのみ；H100、L40Sなし',
-          '期間限定アフィリエイトプログラム：2026年6月15日に終了——その後は直接スポンサーシップのみ',
+          'スポット料金なし：月額固定のみ、時間単位の節約なし',
         ],
         bestFor: '金融機関、医療、公的管理。予測可能なコストが必要で、GPU削減よりも希望する組織。',
         avoidIf: 'H100、B200、またはその他のハイエンドチップが必要です。実験用の時間単位のコスト管理が必要です。',
@@ -2356,7 +2349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 2026年5月更新',
-        content: '已验证所有提供商的定价。Hetzner联盟计划在2026年6月15日结束。更新了EU AI法案部分。所有数据驻留要求已验证。下次更新：2026年11月。',
+        content: '已验证所有提供商的定价。更新了EU AI法案部分。所有数据驻留要求已验证。下次更新：2026年11月。声明：PromptQuorum与此处列出的提供商没有任何联盟合同或财务关系。所有链接均为编辑性质。请直接向各提供商核实当前价格。',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -2486,7 +2479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '仅月度计费：无现货折扣、实验无灵活的按使用付费',
           '配置速度慢：手动订单1–2天配置等待',
           'GPU可用性有限：仅RTX 4000/6000 Ada；无H100、无L40S',
-          '有限期的联盟计划：2026年6月15日结束——之后仅直接赞助',
+          '无现货定价：仅月度固定计费，无按小时节省',
         ],
         bestFor: '金融机构、医疗、公共管理。所有需要月度预算和可预测成本优于GPU现货节省的组织。',
         avoidIf: '您需要H100、B200或其他高端芯片。您需要实验的现货定价或小时成本控制。',
@@ -2718,7 +2711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       updateNotice: {
         id: 'update-notice',
         title: '🔄 2026년 5월 업데이트',
-        content: '모든 공급업체의 가격이 검증되었습니다. Hetzner 제휴 프로그램은 2026년 6월 15일 종료 — 이후 직접 후원 방식으로 전환됩니다. EU AI 법 섹션이 업데이트되었습니다. 모든 데이터 상주 주장이 검증되었습니다. 다음 업데이트: Hetzner 전환 이후 2026년 6월.',
+        content: '모든 공급업체의 가격이 검증되었습니다. EU AI 법 섹션이 업데이트되었습니다. 모든 데이터 상주 주장이 검증되었습니다. 다음 업데이트: 2026년 11월. 고지: PromptQuorum은 이 페이지에 나열된 어떤 제공업체와도 제휴 계약이나 금전적 관계가 없습니다. 모든 링크는 편집 목적입니다. 현재 가격은 각 제공업체에서 직접 확인하세요.',
       },
       whyMatters: {
         id: 'why-gdpr-matters',
@@ -2963,7 +2956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Hetzner는 기본적으로 GDPR을 준수합니까?',
-            a: '예. 독일 회사, 독일 데이터 센터, 즉시 DPA 제공. Schrems II 위험 없음. 제휴 프로그램은 2026년 6월 15일 종료 — 이에 맞게 계획하십시오.',
+            a: '예. 독일 회사, 독일 데이터 센터, 즉시 DPA 제공. Schrems II 위험 없음.',
           },
           {
             q: 'GDPR 개인 데이터에 AWS EU 리전을 사용할 수 있습니까?',
@@ -2991,7 +2984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026년 6월 15일 이후 Hetzner 크레딧은 어떻게 됩니까?',
-            a: '기존 무료 크레딧은 유효하게 유지됩니다. 제휴 지급이 중단됩니다. 그 날짜 이후로 직접 후원이 모델이 됩니다.',
+            a: '아니요. PromptQuorum은 Hetzner 또는 이 페이지에 나열된 다른 어떤 제공업체와도 제휴 계약이나 금전적 관계가 없습니다. 모든 링크는 편집 목적이며 — PromptQuorum은 클릭이나 가입에 대한 수수료를 받지 않습니다. Hetzner는 2026년 6월 15일에 자체 추천 프로그램을 종료했습니다. 최신 가격 및 혜택은 hetzner.com에서 직접 확인하세요.',
           },
           {
             q: 'STACKIT는 대형 기업 전용입니까?',
@@ -3016,8 +3009,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '• STACKIT: stackit.de (엔터프라이즈 문의 필요)',
           '• IONOS GPU 클라우드: ionos.com/cloud/ — 2026-05-18 검증',
           '• Mistral La Plateforme (토큰당 과금): mistral.ai — 2026-05-18 검증',
-          '**Hetzner 제휴 프로그램 종료:**',
-          '• Hetzner 공식 법적 고지: hetzner.com/legal/referrals — "추천 프로그램은 2026년 6월 15일 종료 예정" — 2026-05-18 검증',
           '**규제 출처:**',
           '• Schrems II: 유럽사법재판소, 사건 C-311/18 (2020년 7월 16일)',
           '• 28조 GDPR: EUR-Lex 규정 (EU) 2016/679, 28조',

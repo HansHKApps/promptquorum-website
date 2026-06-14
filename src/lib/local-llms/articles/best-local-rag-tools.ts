@@ -24,9 +24,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Is RAG?', anchor: '#what-is-rag' },
         { label: 'Top 8 RAG Tools Comparison', anchor: '#top-8-rag-tools' },
-        { label: 'Best Easiest: Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: 'Best Flexible: LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: 'Best Professional: LangChain', anchor: '#professional-langchain' },
+        { label: 'Easiest: Open WebUI RAG', anchor: '#easiest-open-webui' },
+        { label: 'Flexible: LlamaIndex', anchor: '#flexible-llamaindex' },
+        { label: 'Professional: LangChain', anchor: '#professional-langchain' },
         { label: 'Open-Source Alternatives', anchor: '#open-source-alternatives' },
         { label: 'RAG vs Fine-Tuning', anchor: '#rag-vs-finetuning' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Mistakes With Local RAG',
           items: [
             '**Using the wrong chunk size.** Too small (100 tokens) = too many small pieces. Too large (2000 tokens) = not specific. Optimal is 500-1000 tokens.',
-            '**Forgetting to use embeddings.** You cannot do RAG without converting chunks to embeddings. Use `nomic-embed-text` (best for English) or `bge-m3` (multilingual).',
+            '**Forgetting to use embeddings.** You cannot do RAG without converting chunks to embeddings. Use `nomic-embed-text` (strong English performance) or `bge-m3` (multilingual).',
             '**Not evaluating retrieval quality.** Just because RAG runs does not mean it retrieves the right documents. Test with known questions and verify the retrieved chunks are relevant.',
             '**Treating RAG as a replacement for fine-tuning.** RAG is retrieval + in-context learning. Fine-tuning is actual model adaptation. Different tools for different jobs.',
           ],
@@ -306,7 +306,7 @@ schema: {
           title: 'Errores comunes con RAG local',
           items: [
             '**Usar el tamaño de chunk incorrecto.** Muy pequeño (100 tokens) = demasiadas piezas pequeñas. Muy grande (2000 tokens) = poco específico. El óptimo es 500-1000 tokens.',
-            '**Olvidar usar embeddings.** No puedes hacer RAG sin convertir los chunks en embeddings. Usa `nomic-embed-text` (el mejor para inglés) o `bge-m3` (multilingüe).',
+            '**Olvidar usar embeddings.** No puedes hacer RAG sin convertir los chunks en embeddings. Usa `nomic-embed-text` (sólido rendimiento en inglés) o `bge-m3` (multilingüe).',
             '**No evaluar la calidad de la recuperación.** Que RAG funcione no significa que recupere los documentos correctos. Prueba con preguntas conocidas y verifica que los chunks recuperados sean relevantes.',
             '**Tratar RAG como sustituto del fine-tuning.** RAG es recuperación + aprendizaje en contexto. El fine-tuning es adaptación real del modelo. Son herramientas distintas para usos distintos.',
           ],
@@ -512,7 +512,7 @@ schema: {
           title: 'أخطاء شائعة مع RAG المحلي',
           items: [
             '**استخدام حجم جزء خاطئ.** صغير جداً (100 رمز) = أجزاء صغيرة كثيرة جداً. كبير جداً (2000 رمز) = غير محدد. الأمثل 500-1000 رمز.',
-            '**نسيان استخدام التضمينات.** لا يمكنك إجراء RAG دون تحويل الأجزاء إلى تضمينات. استخدم `nomic-embed-text` (الأفضل للإنجليزية) أو `bge-m3` (متعدد اللغات).',
+            '**نسيان استخدام التضمينات.** لا يمكنك إجراء RAG دون تحويل الأجزاء إلى تضمينات. استخدم `nomic-embed-text` (أداء قوي باللغة الإنجليزية) أو `bge-m3` (متعدد اللغات).',
             '**عدم تقييم جودة الاسترجاع.** عمل RAG لا يعني أنه يسترجع المستندات الصحيحة. اختبر بأسئلة معروفة وتحقق من أن الأجزاء المسترجعة ذات صلة.',
             '**معاملة RAG كبديل عن الضبط الدقيق.** RAG هو استرجاع + تعلّم في السياق. الضبط الدقيق هو تكييف فعلي للنموذج. هما أداتان مختلفتان لاستخدامات مختلفة.',
           ],
@@ -718,7 +718,7 @@ schema: {
           title: 'Erros comuns com RAG local',
           items: [
             '**Usar o tamanho de chunk errado.** Muito pequeno (100 tokens) = muitos pedaços pequenos. Muito grande (2000 tokens) = pouco específico. O ideal é 500-1000 tokens.',
-            '**Esquecer de usar embeddings.** Você não pode fazer RAG sem converter os chunks em embeddings. Use `nomic-embed-text` (melhor para inglês) ou `bge-m3` (multilíngue).',
+            '**Esquecer de usar embeddings.** Você não pode fazer RAG sem converter os chunks em embeddings. Use `nomic-embed-text` (bom desempenho em inglês) ou `bge-m3` (multilíngue).',
             '**Não avaliar a qualidade da recuperação.** O fato de o RAG funcionar não significa que ele recupera os documentos certos. Teste com perguntas conhecidas e verifique se os chunks recuperados são relevantes.',
             '**Tratar RAG como substituto do fine-tuning.** RAG é recuperação + aprendizado em contexto. Fine-tuning é adaptação real do modelo. Ferramentas diferentes para usos diferentes.',
           ],
@@ -924,7 +924,7 @@ schema: {
           title: 'Häufige Fehler bei lokaler RAG',
           items: [
             '**Falsche Chunk-Größe verwenden.** Zu klein (100 Token) = zu viele kleine Stücke. Zu groß (2000 Token) = nicht spezifisch. Optimal sind 500-1000 Token.',
-            '**Vergessen, Embeddings zu verwenden.** Sie können ohne Embeddings keine RAG durchführen. Verwenden Sie `nomic-embed-text` (beste für Englisch) oder `bge-m3` (mehrsprachig).',
+            '**Vergessen, Embeddings zu verwenden.** Sie können ohne Embeddings keine RAG durchführen. Verwenden Sie `nomic-embed-text` (starke Leistung für Englisch) oder `bge-m3` (mehrsprachig).',
             '**Abrufqualität nicht evaluieren.** Nur weil RAG läuft, bedeutet das nicht, dass es die richtigen Dokumente abruft. Testen Sie mit bekannten Fragen und überprüfen Sie, dass die abgerufenen Chunks relevant sind.',
             '**RAG als Ersatz für Feinabstimmung behandeln.** RAG ist Abruf + In-Context-Learning. Feinabstimmung ist echte Modellanpassung. Unterschiedliche Werkzeuge für unterschiedliche Aufgaben.',
           ],
@@ -1127,7 +1127,7 @@ schema: {
           title: 'Erreurs courantes avec RAG local',
           items: [
             '**Utiliser la mauvaise taille de chunk.** Trop petit (100 tokens) = trop de petits morceaux. Trop grand (2000 tokens) = pas spécifique. Optimal est 500-1000 tokens.',
-            '**Oublier d\'utiliser les embeddings.** Vous ne pouvez pas faire de RAG sans convertir les chunks en embeddings. Utilisez `nomic-embed-text` (meilleur pour l\'anglais) ou `bge-m3` (multilingue).',
+            '**Oublier d\'utiliser les embeddings.** Vous ne pouvez pas faire de RAG sans convertir les chunks en embeddings. Utilisez `nomic-embed-text` (bonnes performances en anglais) ou `bge-m3` (multilingue).',
             '**Ne pas évaluer la qualité de la récupération.** Juste parce que RAG s\'exécute ne signifie pas qu\'il récupère les bons documents. Testez avec des questions connues et vérifiez que les chunks récupérés sont pertinents.',
             '**Traiter RAG comme un remplacement de l\'affinage.** RAG est récupération + apprentissage en contexte. L\'affinage est une véritable adaptation de modèle. Outils différents pour différents emplois.',
           ],
