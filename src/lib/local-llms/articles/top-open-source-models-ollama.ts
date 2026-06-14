@@ -491,9 +491,9 @@ schema: {
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: '10 Mejores LLMs de Código Abierto para Ollama en 2026 (Clasificados y Probados)',
-      seoTitle: 'Mejores Modelos Ollama 2026: Top 10 LLMs de Código Abierto',
+      seoTitle: 'Top 10 Modelos Ollama 2026: Llama 4, Qwen 3, Kimi K2',
       intro: 'Los modelos más descargados en Ollama en 2026 son Llama 4 Scout y Llama 3.x (los más populares en general), Qwen3 (el de mayor crecimiento, mejor en programación), Gemma 4 (mejor para agentes y tool calling), Mistral (el más eficiente) y DeepSeek-R1 (mejor en razonamiento). Novedades de junio de 2026: Kimi K2.6 (MoE, licencia MIT, programación de primer nivel), Qwen 3.6 (77,2% SWE-bench) y GLM-5.1.',
-      metaDescription: 'Compara los 10 mejores LLMs de código abierto para Ollama en 2026: Llama 3.3 70B, Qwen 3, Mistral y DeepSeek. Benchmarks, requisitos de RAM y setup.',
+      metaDescription: 'Llama 4 Scout, Qwen 3.6 27B, Kimi K2.6 y DeepSeek-R1 comparados para Ollama. Benchmarks de RAM, velocidad y caso de uso — top 10 open-source junio 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**El mejor modelo general en hardware de consumo es Qwen 3.6 27B (77,2% SWE-bench, cabe en 24 GB con Q4). Otras opciones destacadas: Kimi K2.6 (programación de frontera), gpt-oss:20b (mejor pequeño / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (razonamiento), Gemma 4 (visión/tool calling) y Llama 4 Scout (contexto largo 10M / multimodal). Los más descargados en general siguen siendo la familia Llama. Novedades de 2026: Kimi K2.6, Qwen 3.6 27B, GLM-5.1 y gpt-oss.**',
       quickAnswerTop: {
@@ -833,7 +833,7 @@ schema: {
         'description': '¿Buscas nuevos modelos de Ollama? Consulta los últimos lanzamientos de junio de 2026, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-03',
+        'dateModified': '2026-06-14',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'Mejores modelos Ollama 2026' },
