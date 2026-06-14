@@ -406,10 +406,106 @@ const HUB_THEMES: Array<{ id: string; badge: string; description: string; colorB
     }
   })
 
+const HUB_COPY: Partial<Record<Lang, { title: string; intro: string }>> = {
+  en: {
+    title: 'Run Your Smart Home on a Local LLM, Not the Cloud',
+    intro: 'A local-first smart home runs entirely on your own hardware: no cloud dependence, works offline, full privacy. These 25 guides cover the stack — Home Assistant, Matter and Thread, local voice (Whisper, Piper, Wyoming), and an Ollama-driven local LLM as the brain of your home.',
+  },
+  de: {
+    title: 'Steuere dein Smart Home mit einem lokalen LLM, nicht in der Cloud',
+    intro: 'Ein lokales Smart Home läuft vollständig auf deiner eigenen Hardware: keine Cloud-Abhängigkeit, funktioniert offline, volle Privatsphäre. Diese 25 Guides decken den gesamten Stack ab — Home Assistant, Matter und Thread, lokale Sprachsteuerung (Whisper, Piper, Wyoming) und ein Ollama-LLM als Gehirn deines Hauses.',
+  },
+  fr: {
+    title: 'Pilotez votre maison connectée avec un LLM local, sans cloud',
+    intro: 'Une maison connectée locale fonctionne entièrement sur votre propre matériel : pas de dépendance au cloud, fonctionne hors ligne, confidentialité totale. Ces 25 guides couvrent la pile complète — Home Assistant, Matter et Thread, assistants vocaux locaux (Whisper, Piper, Wyoming) et un LLM Ollama comme cerveau de votre maison.',
+  },
+  ja: {
+    title: 'クラウドではなくローカルLLMでスマートホームを動かす',
+    intro: 'ローカルファーストのスマートホームは、完全に自分のハードウェアで動作します。クラウド依存なし、オフライン動作、完全なプライバシー。この25本のガイドで、Home Assistant、MatterとThread、ローカル音声（Whisper、Piper、Wyoming）、そしてOllamaで動くLLMをすべてカバーします。',
+  },
+  zh: {
+    title: '用本地大模型驱动智能家居，告别云端',
+    intro: '本地优先的智能家居完全运行在您自己的硬件上：无云端依赖、离线可用、完全私密。这25篇指南覆盖完整技术栈——Home Assistant、Matter与Thread、本地语音助手（Whisper、Piper、Wyoming），以及由Ollama驱动的本地大模型。',
+  },
+  es: {
+    title: 'Controla tu hogar inteligente con un LLM local, no en la nube',
+    intro: 'Un hogar inteligente local funciona completamente en tu propio hardware: sin dependencia de la nube, funciona sin conexión, privacidad total. Estos 25 guías cubren toda la pila: Home Assistant, Matter y Thread, voz local (Whisper, Piper, Wyoming) y un LLM de Ollama como cerebro de tu hogar.',
+  },
+  pt: {
+    title: 'Execute sua casa inteligente em um LLM local, não na nuvem',
+    intro: 'Uma casa inteligente local funciona inteiramente no seu próprio hardware: sem dependência de nuvem, funciona offline, privacidade total. Estes 25 guias cobrem toda a pilha — Home Assistant, Matter e Thread, voz local (Whisper, Piper, Wyoming) e um LLM com Ollama como o cérebro da sua casa.',
+  },
+  ar: {
+    title: 'شغِّل منزلك الذكي بنموذج لغوي محلي بدلاً من السحابة',
+    intro: 'المنزل الذكي المحلي يعمل بالكامل على أجهزتك الخاصة: بلا اعتماد على السحابة، يعمل دون اتصال، وخصوصية كاملة. هذه الـ25 دليلاً تغطي المنظومة الكاملة — Home Assistant وMatter وThread والصوت المحلي (Whisper وPiper وWyoming) ونموذج Ollama اللغوي كعقل منزلك.',
+  },
+  ko: {
+    title: '클라우드 없이 로컬 LLM으로 스마트홈 구동하기',
+    intro: '로컬 퍼스트 스마트홈은 자신의 하드웨어에서 완전히 실행됩니다. 클라우드 의존 없음, 오프라인 동작, 완전한 개인 정보 보호. 이 25개 가이드는 Home Assistant, Matter와 Thread, 로컬 음성(Whisper, Piper, Wyoming), 그리고 Ollama 기반 LLM을 아우르는 전체 스택을 다룹니다.',
+  },
+}
+
+const CATEGORY_COPY: Partial<Record<Lang, Record<string, { badge: string; description: string }>>> = {
+  en: {
+    foundations:          { badge: 'Smart Home Foundations',         description: 'High-volume entry guides: what a smart home is, the ecosystems, the protocols, and the privacy risks that make local control matter.' },
+    'local-first':        { badge: 'Local-First Smart Home',         description: 'The core moat: everything runs on your hardware. Home Assistant, Matter local control, GDPR-friendly setups, and migrating off the cloud.' },
+    'local-ai':           { badge: 'Local AI & LLMs in the Smart Home', description: 'The intersection: run your smart home on a local LLM. Ollama + Home Assistant, fully local voice assistants, AI automations, and private AI cameras.' },
+    'decision-comparison':{ badge: 'Decision & Comparison',          description: 'Buyer-intent comparison pages: Home Assistant vs Alexa vs Google, best mini PCs for HA + local AI, local vs cloud voice, and zero-subscription builds.' },
+  },
+  de: {
+    foundations:          { badge: 'Smart-Home-Grundlagen',          description: 'Einsteiger-Guides mit hohem Traffic: Was ist ein Smart Home, Ökosysteme, Protokolle und Datenschutzrisiken, die lokale Steuerung wichtig machen.' },
+    'local-first':        { badge: 'Lokales Smart Home',             description: 'Der Kern: Alles läuft auf deiner Hardware. Home Assistant, Matter-Lokalsteuerung, DSGVO-konforme Setups und die Migration aus der Cloud.' },
+    'local-ai':           { badge: 'Lokale KI & LLMs im Smart Home', description: 'Die Schnittmenge: Smart Home mit lokalem LLM steuern. Ollama + Home Assistant, vollständig lokale Sprachassistenten, KI-Automatisierungen und private KI-Kameras.' },
+    'decision-comparison':{ badge: 'Entscheidung & Vergleich',       description: 'Kaufentscheidungs-Seiten: Home Assistant vs Alexa vs Google, beste Mini-PCs für HA + KI, lokale vs. Cloud-Stimme und abo-freie Setups.' },
+  },
+  fr: {
+    foundations:          { badge: 'Fondamentaux de la maison connectée', description: 'Guides d\'entrée à fort trafic : qu\'est-ce qu\'une maison connectée, les écosystèmes, les protocoles et les risques de confidentialité qui justifient le contrôle local.' },
+    'local-first':        { badge: 'Maison connectée locale',         description: 'Le cœur du sujet : tout tourne sur votre matériel. Home Assistant, contrôle local Matter, configurations conformes RGPD et migration hors du cloud.' },
+    'local-ai':           { badge: 'IA locale & LLMs dans la maison connectée', description: 'L\'intersection : piloter sa maison avec un LLM local. Ollama + Home Assistant, assistants vocaux entièrement locaux, automatisations IA et caméras privées.' },
+    'decision-comparison':{ badge: 'Décision & Comparaison',          description: 'Pages d\'intention d\'achat : Home Assistant vs Alexa vs Google, meilleurs mini-PC pour HA + IA locale, voix locale vs cloud, configurations sans abonnement.' },
+  },
+  ja: {
+    foundations:          { badge: 'スマートホームの基礎',              description: '高トラフィックの入門ガイド：スマートホームとは何か、エコシステム、プロトコル、そしてローカル制御を重要にするプライバシーリスク。' },
+    'local-first':        { badge: 'ローカルファーストのスマートホーム', description: 'コアとなるアドバンテージ：すべてが自分のハードウェアで動作。Home Assistant、Matterのローカル制御、GDPRに対応したセットアップ、クラウドからの移行。' },
+    'local-ai':           { badge: 'スマートホームにおけるローカルAIとLLM', description: '交差点：ローカルLLMでスマートホームを制御。Ollama + Home Assistant、完全ローカルの音声アシスタント、AI自動化、プライベートAIカメラ。' },
+    'decision-comparison':{ badge: '比較と選択',                       description: '購入意向比較ページ：Home Assistant vs Alexa vs Google、HA + ローカルAI向け最適ミニPC、ローカルvsクラウド音声、サブスクリプション不要のビルド。' },
+  },
+  zh: {
+    foundations:          { badge: '智能家居基础',                     description: '高流量入门指南：智能家居是什么、生态系统、协议，以及使本地控制变得重要的隐私风险。' },
+    'local-first':        { badge: '本地优先智能家居',                  description: '核心优势：一切都在您的硬件上运行。Home Assistant、Matter本地控制、符合GDPR的设置，以及从云端迁移。' },
+    'local-ai':           { badge: '智能家居中的本地AI与大模型',         description: '交汇点：用本地大模型控制智能家居。Ollama + Home Assistant、完全本地化语音助手、AI自动化和私人AI摄像头。' },
+    'decision-comparison':{ badge: '决策与比较',                       description: '购买意向对比页：Home Assistant vs Alexa vs Google、HA + 本地AI最佳迷你PC、本地vs云端语音、零订阅构建。' },
+  },
+  es: {
+    foundations:          { badge: 'Fundamentos del hogar inteligente', description: 'Guías de entrada de alto volumen: qué es un hogar inteligente, los ecosistemas, los protocolos y los riesgos de privacidad que hacen importante el control local.' },
+    'local-first':        { badge: 'Hogar inteligente local',          description: 'El núcleo: todo funciona en tu hardware. Home Assistant, control local con Matter, configuraciones compatibles con GDPR y migración desde la nube.' },
+    'local-ai':           { badge: 'IA local y LLMs en el hogar inteligente', description: 'La intersección: controla tu hogar con un LLM local. Ollama + Home Assistant, asistentes de voz totalmente locales, automatizaciones de IA y cámaras de IA privadas.' },
+    'decision-comparison':{ badge: 'Decisión y Comparación',           description: 'Páginas de comparación para compradores: Home Assistant vs Alexa vs Google, mejores mini PCs para HA + IA local, voz local vs nube y builds sin suscripción.' },
+  },
+  pt: {
+    foundations:          { badge: 'Fundamentos da casa inteligente',  description: 'Guias de entrada de alto volume: o que é uma casa inteligente, os ecossistemas, os protocolos e os riscos de privacidade que tornam o controlo local importante.' },
+    'local-first':        { badge: 'Casa inteligente local',           description: 'O núcleo: tudo corre no seu hardware. Home Assistant, controlo local com Matter, configurações compatíveis com RGPD e migração da nuvem.' },
+    'local-ai':           { badge: 'IA local e LLMs na casa inteligente', description: 'A intersecção: controla a tua casa com um LLM local. Ollama + Home Assistant, assistentes de voz totalmente locais, automações de IA e câmeras de IA privadas.' },
+    'decision-comparison':{ badge: 'Decisão e Comparação',             description: 'Páginas de comparação para compradores: Home Assistant vs Alexa vs Google, melhores mini PCs para HA + IA local, voz local vs nuvem e builds sem assinatura.' },
+  },
+  ar: {
+    foundations:          { badge: 'أساسيات المنزل الذكي',            description: 'أدلة المبتدئين عالية الزيارات: ما هو المنزل الذكي، الأنظمة البيئية، البروتوكولات، ومخاطر الخصوصية التي تجعل التحكم المحلي ضرورياً.' },
+    'local-first':        { badge: 'المنزل الذكي المحلي',              description: 'الجوهر: كل شيء يعمل على أجهزتك. Home Assistant وتحكم Matter المحلي وإعدادات متوافقة مع GDPR والهجرة من السحابة.' },
+    'local-ai':           { badge: 'الذكاء الاصطناعي المحلي ونماذج اللغة في المنزل الذكي', description: 'نقطة التقاطع: التحكم في منزلك بنموذج لغوي محلي. Ollama مع Home Assistant ومساعدات صوتية محلية بالكامل وأتمتة بالذكاء الاصطناعي وكاميرات خاصة.' },
+    'decision-comparison':{ badge: 'مقارنة واتخاذ القرار',             description: 'صفحات مقارنة الشراء: Home Assistant مقابل Alexa مقابل Google وأفضل الحواسيب المصغرة لـ HA والذكاء الاصطناعي المحلي والصوت المحلي مقابل السحابة وإعدادات بلا اشتراك.' },
+  },
+  ko: {
+    foundations:          { badge: '스마트홈 기초',                     description: '고트래픽 입문 가이드: 스마트홈이란 무엇인가, 생태계, 프로토콜, 그리고 로컬 제어를 중요하게 만드는 개인 정보 위험.' },
+    'local-first':        { badge: '로컬 퍼스트 스마트홈',              description: '핵심: 모든 것이 내 하드웨어에서 실행됩니다. Home Assistant, Matter 로컬 제어, GDPR 친화적 설정, 클라우드에서 마이그레이션.' },
+    'local-ai':           { badge: '스마트홈의 로컬 AI & LLM',          description: '교차점: 로컬 LLM으로 스마트홈 제어하기. Ollama + Home Assistant, 완전 로컬 음성 어시스턴트, AI 자동화, 프라이빗 AI 카메라.' },
+    'decision-comparison':{ badge: '비교 및 선택',                      description: '구매 의도 비교 페이지: Home Assistant vs Alexa vs Google, HA + 로컬 AI 최적 미니 PC, 로컬 vs 클라우드 음성, 구독 없는 빌드.' },
+  },
+}
+
 function renderHub(lang: Lang) {
-  const hubTitle = 'Run Your Smart Home on a Local LLM, Not the Cloud'
-  const hubIntro =
-    'A local-first smart home runs entirely on your own hardware: no cloud dependence, works offline, full privacy. These 25 guides cover the stack — Home Assistant, Matter and Thread, local voice (Whisper, Piper, Wyoming), and an Ollama-driven local LLM as the brain of your home.'
+  const copy = HUB_COPY[lang] ?? HUB_COPY['en']!
+  const hubTitle = copy.title
+  const hubIntro = copy.intro
 
   return (
     <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
@@ -424,9 +520,11 @@ function renderHub(lang: Lang) {
           {HUB_THEMES.map((theme) => (
             <section key={theme.id}>
               <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full border mb-3 ${theme.colorBadge}`}>
-                {theme.badge}
+                {CATEGORY_COPY[lang]?.[theme.id]?.badge ?? theme.badge}
               </span>
-              <p className="text-text-secondary leading-relaxed max-w-3xl mb-6">{theme.description}</p>
+              <p className="text-text-secondary leading-relaxed max-w-3xl mb-6">
+                {CATEGORY_COPY[lang]?.[theme.id]?.description ?? theme.description}
+              </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {theme.slugs.map((slug) => (
                   <Link
@@ -436,7 +534,11 @@ function renderHub(lang: Lang) {
                   >
                     <span className={`mt-1.5 h-2 w-2 rounded-full shrink-0 ${theme.colorDot}`} />
                     <span className="text-sm font-medium text-text-primary group-hover:text-primary transition-colors">
-                      {slugToTitle(slug)}
+                      {(() => {
+                        const key = SMART_HOME_SLUG_TO_KEY[slug]
+                        const articleData = key ? smartHomeContent[key] : undefined
+                        return articleData?.[lang]?.title ?? articleData?.['en']?.title ?? slugToTitle(slug)
+                      })()}
                     </span>
                   </Link>
                 ))}
