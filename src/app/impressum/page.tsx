@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Impressum | PromptQuorum',
-  description: 'Impressum und Anbieterkennzeichnung gemäß § 5 TMG für PromptQuorum.',
+  description: 'Impressum und Anbieterkennzeichnung gemäß § 5 DDG für PromptQuorum.',
   robots: { index: true, follow: true },
 }
 
@@ -18,7 +18,7 @@ export default function ImpressumPage() {
             <span>Impressum</span>
           </p>
           <h1 className="text-3xl font-bold text-gray-900">Impressum</h1>
-          <p className="mt-2 text-sm text-gray-500">Angaben gemäß § 5 TMG</p>
+          <p className="mt-2 text-sm text-gray-500">Angaben gemäß § 5 DDG</p>
         </div>
 
         <div className="space-y-8 text-gray-700 text-sm leading-relaxed">

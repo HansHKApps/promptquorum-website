@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'Direct comparison of deployment models.',
           rows: [
             { 'Factor': 'Data Security', 'Local LLM': 'Zero egress. Data stays on-premise. Encrypted at rest and in transit.', 'Cloud API': 'Data sent to vendor servers. Vendor may train on it (ToS allows). Breach liability on vendor.' },
-            { 'Factor': 'Compliance', 'Local LLM': 'HIPAA/PCI/GDPR compliant. Audit logs under your control. DPIA required but low-risk.', 'Cloud API': 'Not compliant with regulations. Vendor is data processor, you are liable.' },
+            { 'Factor': 'Compliance', 'Local LLM': 'GDPR/HIPAA-compatible architecture (no data egress at inference). Audit logs under your control. A DPIA is required — local deployment simplifies it, but compliance still depends on your organisation\'s controls and lawful basis.', 'Cloud API': 'Requires additional safeguards (SCCs, DPA). Vendor is data processor; you remain liable as controller.' },
             { 'Factor': 'Cost', 'Local LLM': '$3K-5K upfront hardware. $0-500/year maintenance. Predictable.', 'Cloud API': '$0 upfront. $500K+/year at scale (tokens × 2026 pricing). Unpredictable.' },
             { 'Factor': 'Breach Liability', 'Local LLM': '$0 (data never leaves your control). Insurance not required.', 'Cloud API': '$50K-5M+ (vendor breach = you are liable to affected parties under HIPAA/GDPR).' },
           ],

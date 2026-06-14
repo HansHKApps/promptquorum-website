@@ -68,7 +68,7 @@ const T = {
     faqs: [
       { q: 'Is PromptQuorum free?', a: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' },
       { q: 'How does privacy work?', a: 'You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up.' },
-      { q: 'Which AI providers are supported?', a: 'PromptQuorum dispatches to 25+ cloud providers: GPT-4o, GPT-4o mini, Claude 3.5 Sonnet, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok, and more. Plus local LLMs: Ollama, LM Studio, Jan AI, GPT4All.' },
+      { q: 'Which AI providers are supported?', a: 'PromptQuorum dispatches to 25+ cloud providers: GPT-4o, GPT-4o mini, Claude Sonnet 4.6, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok, and more. Plus local LLMs: Ollama, LM Studio, Jan AI, GPT4All.' },
       { q: 'What platforms does PromptQuorum run on?', a: 'PromptQuorum starts with desktop apps (Mac, Windows), followed by a web application, and eventually mobile solutions.' },
       { q: 'What makes PromptQuorum different?', a: 'PromptQuorum covers the full prompt lifecycle: 9 built-in frameworks for writing, iterative optimization with 8 refinement types, simultaneous dispatch to 25+ models, and 13 Quorum analysis types for consensus scoring.' },
       { q: 'Are there any limits?', a: 'No limits from PromptQuorum side. Your usage depends only on your own API rate limits or local LLM resources—we never throttle or meter usage.' },
@@ -288,7 +288,7 @@ const T = {
     faqs: [
       { q: '¿Es gratuito PromptQuorum?', a: 'Sí. PromptQuorum es gratuito. Puedes traer tu propia clave de API, usar un LLM local o probar nuestro servicio backend gratuito limitado para la optimización de prompts.' },
       { q: '¿Cómo funciona la privacidad?', a: 'Tú decides adónde van tus datos. Mantén todo localmente con LM Studio u Ollama, o usa tus propias claves de API. PromptQuorum es tan privado como tú lo configures.' },
-      { q: '¿Qué proveedores de IA son compatibles?', a: 'PromptQuorum envía a más de 25 proveedores en la nube: GPT-4o, GPT-4o mini, Claude 3.5 Sonnet, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok y más. Más LLMs locales: Ollama, LM Studio, Jan AI, GPT4All.' },
+      { q: '¿Qué proveedores de IA son compatibles?', a: 'PromptQuorum envía a más de 25 proveedores en la nube: GPT-4o, GPT-4o mini, Claude Sonnet 4.6, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok y más. Más LLMs locales: Ollama, LM Studio, Jan AI, GPT4All.' },
       { q: '¿En qué plataformas funciona PromptQuorum?', a: 'PromptQuorum comienza con aplicaciones de escritorio (Mac, Windows), seguidas de una aplicación web y finalmente soluciones móviles.' },
       { q: '¿Qué hace diferente a PromptQuorum?', a: 'PromptQuorum cubre el ciclo completo del prompt: 9 frameworks integrados para escribir, optimización iterativa con 8 tipos de refinamiento, envío simultáneo a 25+ modelos y 13 tipos de análisis Quorum para la puntuación de consenso.' },
       { q: '¿Hay algún límite?', a: 'Ningún límite por parte de PromptQuorum. Tu uso depende solo de tus propios límites de tasa de API o recursos de LLM local — nunca limitamos ni medimos el uso.' },
@@ -332,7 +332,7 @@ const T = {
     faqs: [
       { q: 'O PromptQuorum é gratuito?', a: 'Sim. O PromptQuorum é gratuito. Você pode usar sua própria chave de API, usar um LLM local ou testar nosso serviço de backend gratuito limitado para otimização de prompts.' },
       { q: 'Como funciona a privacidade?', a: 'Você decide para onde vão seus dados. Mantenha tudo localmente com LM Studio ou Ollama, ou use suas próprias chaves de API. O PromptQuorum é tão privado quanto você configurar.' },
-      { q: 'Quais provedores de IA são compatíveis?', a: 'O PromptQuorum envia para mais de 25 provedores na nuvem: GPT-4o, GPT-4o mini, Claude 3.5 Sonnet, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok e mais. Além de LLMs locais: Ollama, LM Studio, Jan AI, GPT4All.' },
+      { q: 'Quais provedores de IA são compatíveis?', a: 'O PromptQuorum envia para mais de 25 provedores na nuvem: GPT-4o, GPT-4o mini, Claude Sonnet 4.6, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok e mais. Além de LLMs locais: Ollama, LM Studio, Jan AI, GPT4All.' },
       { q: 'Em quais plataformas o PromptQuorum funciona?', a: 'O PromptQuorum começa com aplicativos desktop (Mac, Windows), seguidos de um aplicativo web e, por fim, soluções móveis.' },
       { q: 'O que torna o PromptQuorum diferente?', a: 'O PromptQuorum cobre todo o ciclo de vida do prompt: 9 frameworks integrados para escrever, otimização iterativa com 8 tipos de refinamento, envio simultâneo para 25+ modelos e 13 tipos de análise Quorum para pontuação de consenso.' },
       { q: 'Há algum limite?', a: 'Nenhum limite por parte do PromptQuorum. Seu uso depende apenas dos seus próprios limites de taxa de API ou recursos de LLM local — nunca restringimos nem medimos o uso.' },

@@ -1181,7 +1181,7 @@ schema: {
           title: 'Stromkosten nach Region',
           content: [
             '**EU (Deutschland/Frankreich): €0,30–0,40/kWh — 3× des US-Durchschnitts.** Der Betrieb einer RTX 4090 24/7 kostet €120–160/Monat in Deutschland. DSGVO ermutigt zu lokalen Deployments, aber Stromkosten machen Apple Silicon oder strombegrenzte GPU-Inferenz für EU-Nutzer unverzichtbar.',
-            '**Deutschland (DSGVO + BSI-Grundschutz): Unternehmen und Mittelstand müssen DSGVO Artikel 28 einhalten — lokale Datenverarbeitung erfüllt diese Anforderungen. BSI-Grundschutz-Kataloge empfehlen On-Premise-Inferenz für sensible Daten (Finanzen, Gesundheit, Jura). Stromeffizienz ist ein Business Case: Apple M5 Max spart €140+/Monat gegenüber RTX 4090. Lokale LLM-Inferenz mit PromptQuorum ist ideal für den Mittelstand: Keine Cloud-Abhängigkeit (Compliance), volle Kontrolle über sensible Daten, niedrigere Betriebskosten.',
+            '**Deutschland (DSGVO + BSI IT-Grundschutz): Lokale Inferenz hält alle Inferenzdaten auf Ihrer eigenen Hardware — keine Daten gelangen an externe KI-Anbieter. Das beseitigt das Art.-44-DSGVO-Transferrisiko auf technischer Ebene. Vollständige DSGVO-Konformität hängt von Ihren organisatorischen Maßnahmen, Ihrer Rechtsgrundlage und ggf. einer DSFA ab. BSI-IT-Grundschutz-Kataloge empfehlen lokale Verarbeitung für sensible Daten (vgl. OPS.2.2). Stromeffizienz ist ein weiterer Business Case: Apple M5 Max spart €140+/Monat gegenüber RTX 4090.',
             '**Japan: ¥27–30/kWh (~€0,18–0,20/kWh).** Energiekosten sind 50–70% höher als der US-Durchschnitt. MEITs AI-Governance-Richtlinien von 2024 bevorzugen energieeffiziente Hardware für Unternehmenseinsätze.',
           ],
         },
@@ -1225,12 +1225,12 @@ schema: {
               a: 'Nein — kontinuierliche Inferenz beschädigt eine gesunde GPU nicht, wenn die Kühlung angemessen ist. GPUs sind für 100% Auslastung 24/7 ausgelegt (Rechenzentren tun dies). Die echten Risiken sind: (1) schlechte Kühlung verursacht Drosselung und verkürzt die Lebensdauer, (2) Stromspitzen von unterdimensionierter PSU können Abschaltungen auslösen, (3) Staub/schlechte Belüftung verschlechtert die Leistung im Laufe der Jahre. Überwache Temperaturen und halte gute Belüftung, und deine GPU hält 5+ Jahre.',
             },
             {
-              q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
-              a: 'Ja, wenn Nutzerdaten involviert sind. DSGVO Artikel 28 verlangt Datenverarbeitungsverträge, wenn ein Dienstleister (z.B. Cloud-Inferenz) Daten verarbeitet. Lokale Inferenz auf On-Premise-Hardware erfüllt diese Anforderungen von Haus aus und eliminiert Cloud-Abhängigkeiten. Lokale Inferenz mit PromptQuorum ist DSGVO-konform und erfüllt BSI-Grundschutz-Standards für Unternehmensumgebungen in Deutschland.',
+              q: 'Welche Datenschutzvorteile bietet lokale LLM-Inferenz?',
+              a: 'Lokale Inferenz hält alle Inferenzdaten auf Ihrer eigenen Hardware — keine Daten gelangen an externe KI-Anbieter. Das beseitigt das Art.-44-DSGVO-Transferrisiko auf technischer Ebene. Vollständige DSGVO-Konformität hängt von Ihren organisatorischen Maßnahmen, Ihrer Rechtsgrundlage und ggf. einer DSFA ab. BSI-IT-Grundschutz-Kataloge empfehlen lokale Verarbeitung für sensible Daten (vgl. OPS.2.2).',
             },
             {
-              q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
-              a: 'Ja. Deutsches KMU (Mittelstand) profitiert von lokaler Inferenz: Keine Cloud-Abhängigkeit (Compliance), volle Kontrolle über sensible Daten (Finanzen, Kundendaten), niedrigere Betriebskosten im Zeitverlauf. PromptQuorum Multi-Model-Konsens ist ideal für Mittelstand: Fallback zwischen Ollama + lokalen Open-Source-Modellen bei Cloud-Ausfällen. Erfüllt BSI-Grundschutz-Kataloge und DSGVO-Anforderungen für Datenverarbeitung vor Ort.',
+              q: 'Ist lokale LLM-Inferenz für den deutschen Mittelstand geeignet?',
+              a: 'Ja. Deutsches KMU (Mittelstand) profitiert von lokaler Inferenz: Keine Cloud-Abhängigkeit, volle Kontrolle über sensible Daten (Finanzen, Kundendaten), niedrigere Betriebskosten im Zeitverlauf. Alle Inferenzdaten verbleiben auf der eigenen Hardware — kein Datentransfer zu externen KI-Anbietern. BSI-IT-Grundschutz-Kataloge empfehlen lokale Verarbeitung für sensible Daten (OPS.2.2); vollständige DSGVO-Konformität erfordert zusätzlich organisatorische Maßnahmen und ggf. eine DSFA.',
             },
           ],
         },
@@ -1330,13 +1330,13 @@ schema: {
           },
           {
             '@type': 'Question',
-            name: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja, wenn Nutzerdaten involviert sind. DSGVO Artikel 28 verlangt Datenverarbeitungsverträge. Lokale Inferenz auf On-Premise-Hardware erfüllt diese Anforderungen von Haus aus und eliminiert Cloud-Abhängigkeiten. Lokale Inferenz mit PromptQuorum ist DSGVO-konform und erfüllt BSI-Grundschutz-Standards.' },
+            name: 'Welche Datenschutzvorteile bietet lokale LLM-Inferenz?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Lokale Inferenz hält alle Inferenzdaten auf Ihrer eigenen Hardware — keine Daten gelangen an externe KI-Anbieter. Das beseitigt das Art.-44-DSGVO-Transferrisiko auf technischer Ebene. Vollständige DSGVO-Konformität hängt von Ihren organisatorischen Maßnahmen, Ihrer Rechtsgrundlage und ggf. einer DSFA ab. BSI-IT-Grundschutz-Kataloge empfehlen lokale Verarbeitung für sensible Daten (OPS.2.2).' },
           },
           {
             '@type': 'Question',
-            name: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Deutsches KMU profitiert von lokaler Inferenz: Keine Cloud-Abhängigkeit (Compliance), volle Kontrolle über sensible Daten, niedrigere Betriebskosten. PromptQuorum Multi-Model-Konsens ist ideal für Mittelstand: Fallback bei Cloud-Ausfällen. Erfüllt BSI-Grundschutz und DSGVO-Anforderungen.' },
+            name: 'Ist lokale LLM-Inferenz für den deutschen Mittelstand geeignet?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Deutsches KMU profitiert von lokaler Inferenz: keine Cloud-Abhängigkeit, volle Kontrolle über sensible Daten, niedrigere Betriebskosten. Alle Inferenzdaten verbleiben auf der eigenen Hardware. BSI-IT-Grundschutz-Kataloge empfehlen lokale Verarbeitung (OPS.2.2); vollständige DSGVO-Konformität erfordert zusätzlich organisatorische Maßnahmen und ggf. eine DSFA.' },
           },
         ],
       },

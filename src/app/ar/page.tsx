@@ -64,7 +64,7 @@ export default async function ArHome() {
                 'name': 'ما نماذج الذكاء الاصطناعي التي يدعمها PromptQuorum؟',
                 'acceptedAnswer': {
                   '@type': 'Answer',
-                  'text': 'يدعم PromptQuorum أكثر من 25 نموذج ذكاء اصطناعي سحابي بما فيها OpenAI GPT-4o وo1، وAnthropic Claude 3.5 Sonnet وClaude 4، وGoogle Gemini 2.0 Flash و1.5 Pro، وxAI Grok، وDeepSeek، وMistral Large، وCohere Command R+، وMeta Llama عبر Together AI وGroq، وPerplexity. كما يدعم جميع بيئات النماذج المحلية الرئيسية: Ollama وLM Studio وJan AI وGPT4All وOpen WebUI وvLLM وKoboldCpp وأي نقطة نهاية متوافقة مع OpenAI.'
+                  'text': 'يدعم PromptQuorum أكثر من 25 نموذج ذكاء اصطناعي سحابي بما فيها OpenAI GPT-4o وo1، وAnthropic Claude Sonnet 4.6 وClaude 4، وGoogle Gemini 2.0 Flash و1.5 Pro، وxAI Grok، وDeepSeek، وMistral Large، وCohere Command R+، وMeta Llama عبر Together AI وGroq، وPerplexity. كما يدعم جميع بيئات النماذج المحلية الرئيسية: Ollama وLM Studio وJan AI وGPT4All وOpen WebUI وvLLM وKoboldCpp وأي نقطة نهاية متوافقة مع OpenAI.'
                 }
               },
               {

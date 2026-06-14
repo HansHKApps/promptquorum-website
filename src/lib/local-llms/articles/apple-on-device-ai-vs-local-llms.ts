@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': 'Self-hosted LLM via Ollama', 'Which tier?': 'Your machine', 'Leaves device?': 'Never', 'Touches Google Cloud?': 'Never' },
         ],
         tableFormat: true,
-        note: 'Keep medical notes, legal documents, and confidential business data off Apple Intelligence if you cannot guarantee the on-device tier. For verified data residency, self-hosted local LLMs remain the only confirmed option.',
+        note: 'Keep medical notes, legal documents, and confidential business data off Apple Intelligence if you cannot guarantee the on-device tier. For verified data residency, self-hosted local LLMs are one of the few architectures where you can independently verify that input and output data stays within your own environment — without relying on third-party promises.',
       },
       forDevelopers: {
         id: 'for-developers',
@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "Apple just made 'private, on-device AI' a mainstream expectation for roughly a billion device owners — that validation of the local-first premise matters. But Apple Intelligence is a hybrid, partly Google-backed, closed-weight system: a gateway to the local-AI mindset, not a replacement for running your own models.",
           "If privacy is your primary motivation, the three-tier architecture introduces real caveats: cloud tiers process your requests, the Cloud Pro tier runs on US-based Google Cloud infrastructure, and you control none of the weights, routing logic, or update schedule.",
-          "Self-hosted local LLMs — Qwen, Llama, Gemma on your own hardware — remain the only architecture where you can verify that nothing leaves your environment. Apple's on-device tier narrows the gap significantly for everyday tasks, but the 'trust Apple' requirement never disappears.",
+          "Self-hosted local LLMs — Qwen, Llama, Gemma on your own hardware — are one of the few architectures where you can independently verify that input and output data stays within your own environment — without relying on third-party promises. Apple's on-device tier narrows the gap significantly for everyday tasks, but the 'trust Apple' requirement never disappears.",
           "For EU users: on-device gives you data residency on simple tasks. For complex tasks routed to Google Cloud, the same GDPR Chapter V analysis applies as for any other US cloud service.",
         ],
       },
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': 'Selbst gehosteter LLM via Ollama', 'Which tier?': 'Ihre Maschine', 'Leaves device?': 'Niemals', 'Touches Google Cloud?': 'Niemals' },
         ],
         tableFormat: true,
-        note: 'Medizinische Notizen, Rechtsdokumente und vertrauliche Geschäftsdaten sollten nicht in Apple Intelligence eingegeben werden, wenn Sie nicht sicherstellen können, dass die On-Device-Stufe genutzt wird. Für verifizierte Datenspeicherung sind selbst gehostete lokale LLMs die einzige bestätigte Option.',
+        note: 'Medizinische Notizen, Rechtsdokumente und vertrauliche Geschäftsdaten sollten nicht in Apple Intelligence eingegeben werden, wenn Sie nicht sicherstellen können, dass die On-Device-Stufe genutzt wird. Für verifizierte Datenspeicherung sind selbst gehostete lokale LLMs eine der wenigen Architekturen, bei der Sie unabhängig verifizieren können, dass Eingabe- und Ausgabedaten die eigene Umgebung nicht verlassen — ohne Vertrauen auf Drittanbieter-Versprechen.',
       },
       forDevelopers: {
         id: 'for-developers',
@@ -395,7 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "Apple hat 'private On-Device-KI' für rund eine Milliarde Gerätenutzern zur Mainstream-Erwartung gemacht — diese Bestätigung des Local-First-Ansatzes ist bedeutsam. Apple Intelligence ist jedoch ein hybrides, teilweise Google-gestütztes Closed-Weight-System: ein Einstiegstor zum Local-AI-Mindset, kein Ersatz für das Betreiben eigener Modelle.",
           'Wenn Datenschutz Ihre Hauptmotivation ist, bringt die Drei-Stufen-Architektur echte Einschränkungen mit sich: Cloud-Stufen verarbeiten Ihre Anfragen, die Cloud-Pro-Stufe läuft auf US-basierter Google-Cloud-Infrastruktur, und Sie kontrollieren weder Gewichte noch Routing-Logik noch Update-Zeitplan.',
-          'Selbst gehostete lokale LLMs — Qwen, Llama, Gemma auf eigener Hardware — bleiben die einzige Architektur, bei der Sie verifizieren können, dass nichts Ihre Umgebung verlässt.',
+          'Selbst gehostete lokale LLMs — Qwen, Llama, Gemma auf eigener Hardware — sind eine der wenigen Architekturen, bei der Sie unabhängig verifizieren können, dass Eingabe- und Ausgabedaten die eigene Umgebung nicht verlassen — ohne Vertrauen auf Drittanbieter-Versprechen.',
           'Für EU-Nutzer: On-Device bietet Datenspeicherung auf dem Gerät für einfache Aufgaben. Für komplexe Aufgaben, die an Google Cloud weitergeleitet werden, gilt dieselbe DSGVO-Kapitel-V-Analyse wie für jeden anderen US-Cloud-Dienst.',
         ],
       },
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': 'LLM auto-hébergé via Ollama', 'Which tier?': 'Votre machine', 'Leaves device?': 'Jamais', 'Touches Google Cloud?': 'Jamais' },
         ],
         tableFormat: true,
-        note: "Gardez notes médicales, documents juridiques et données d'entreprise confidentielles hors d'Apple Intelligence si vous ne pouvez garantir le niveau on-device. Pour une résidence des données vérifiée, les LLM locaux auto-hébergés restent la seule option confirmée.",
+        note: "Gardez notes médicales, documents juridiques et données d'entreprise confidentielles hors d'Apple Intelligence si vous ne pouvez garantir le niveau on-device. Pour une résidence des données vérifiée, les LLM locaux auto-hébergés sont l'une des rares architectures où vous pouvez vérifier indépendamment que les données d'entrée et de sortie restent dans votre propre environnement — sans dépendre des promesses de tiers.",
       },
       forDevelopers: {
         id: 'for-developers',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "Apple vient de faire de l'IA privée on-device une attente grand public pour environ un milliard d'utilisateurs — cette validation de l'approche local-first compte. Mais Apple Intelligence est un système hybride, partiellement soutenu par Google, à poids fermés : une porte d'entrée vers l'état d'esprit local-AI, pas un remplacement pour héberger ses propres modèles.",
           "Si la confidentialité est votre motivation principale, l'architecture à trois niveaux introduit de vraies réserves : les niveaux cloud traitent vos requêtes, le niveau Cloud Pro tourne sur l'infrastructure Google Cloud aux États-Unis, et vous ne contrôlez ni les poids, ni la logique de routage, ni le calendrier de mise à jour.",
-          "Les LLM locaux auto-hébergés — Qwen, Llama, Gemma sur votre propre matériel — restent la seule architecture où vous pouvez vérifier que rien ne quitte votre environnement.",
+          "Les LLM locaux auto-hébergés — Qwen, Llama, Gemma sur votre propre matériel — sont l'une des rares architectures où vous pouvez vérifier indépendamment que les données d'entrée et de sortie restent dans votre propre environnement — sans dépendre des promesses de tiers.",
           "Pour les utilisateurs UE : l'on-device offre la résidence des données pour les tâches simples. Pour les tâches complexes routées vers Google Cloud, la même analyse RGPD Chapitre V s'applique que pour tout autre service cloud américain.",
         ],
       },
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': 'OllamaによるセルフホストLLM', 'Which tier?': '自分のマシン', 'Leaves device?': '絶対にいいえ', 'Touches Google Cloud?': '絶対にいいえ' },
         ],
         tableFormat: true,
-        note: '医療メモ、法的文書、機密ビジネスデータはオンデバイス層での処理を保証できない場合、Apple Intelligenceへの入力を避けてください。データ保存先を確実に把握するには、セルフホストのローカルLLMが唯一の確認済み選択肢です。',
+        note: '医療メモ、法的文書、機密ビジネスデータはオンデバイス層での処理を保証できない場合、Apple Intelligenceへの入力を避けてください。データ保存先を確実に把握するには、セルフホストのローカルLLMは入力データと出力データが自分の環境内に留まることを独立して検証できる数少ないアーキテクチャの一つです — サードパーティの約束に依存することなく。',
       },
       forDevelopers: {
         id: 'for-developers',
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '「プライベートなオンデバイスAI」をおよそ10億人のデバイスオーナーにとっての主流の期待にしたAppleの功績は認められるべきです——ローカルファーストのアプローチへのこの支持は重要です。しかしApple Intelligenceは、ハイブリッドで、一部Googleが支援する、クローズドウェイトのシステムです：ローカルAIのマインドセットへの入り口であり、自前のモデルを動かすことの代替ではありません。',
           'プライバシーが主な動機であるなら、3層アーキテクチャには本物の注意点があります：クラウド層がリクエストを処理し、Cloud Pro層は米国のGoogle Cloudインフラ上で動作し、ウェイト、ルーティングロジック、更新スケジュールのいずれも制御できません。',
-          'Qwen、Llama、Gemmaなど、自前のハードウェアで動かすセルフホストのローカルLLMは、何も自分の環境を離れないことを確認できる唯一のアーキテクチャのままです。',
+          'Qwen、Llama、Gemmaなど、自前のハードウェアで動かすセルフホストのローカルLLMは、入力データと出力データが自分の環境内に留まることを独立して検証できる数少ないアーキテクチャの一つです — サードパーティの約束に依存することなく。',
           'EUのユーザー向け：シンプルなタスクではオンデバイスがデフォルトでデータ保存場所を確保します。Google Cloudにルーティングされる複雑なタスクについては、他の米国クラウドサービスと同じGDPR第V章の分析が適用されます。',
         ],
       },
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': '通过Ollama使用自托管LLM', 'Which tier?': '您自己的设备', 'Leaves device?': '永远不会', 'Touches Google Cloud?': '永远不会' },
         ],
         tableFormat: true,
-        note: '如果无法确保使用设备端层，请勿将医疗笔记、法律文件和机密商业数据输入Apple Intelligence。对于经过验证的数据本地存储，自托管本地LLM是唯一已确认的选择。',
+        note: '如果无法确保使用设备端层，请勿将医疗笔记、法律文件和机密商业数据输入Apple Intelligence。对于经过验证的数据本地存储，自托管本地LLM是少数几种可以独立验证输入和输出数据保留在自己环境中的架构之一——无需依赖第三方承诺。',
       },
       forDevelopers: {
         id: 'for-developers',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Apple刚刚为约十亿设备用户将"私密的设备端AI"变成了主流期望——对本地优先理念的这种认可至关重要。但Apple Intelligence是一个混合的、部分由Google支持的、封闭权重的系统：它是通向本地AI思维方式的入口，而非运行自有模型的替代品。',
           '如果隐私是您的主要动机，三层架构带来了真实的注意事项：云端层处理您的请求，Cloud Pro层运行在美国的Google Cloud基础设施上，您无法控制权重、路由逻辑或更新时间表。',
-          '在自己硬件上运行的自托管本地LLM——Qwen、Llama、Gemma——仍然是唯一可以验证没有任何数据离开您环境的架构。',
+          '在自己硬件上运行的自托管本地LLM——Qwen、Llama、Gemma——是少数几种可以独立验证输入和输出数据保留在自己环境中的架构之一——无需依赖第三方承诺。',
           '对于EU用户：设备端为简单任务提供了默认的数据本地存储。对于路由到Google Cloud的复杂任务，适用与任何其他美国云服务相同的GDPR第五章分析。',
         ],
       },
@@ -1310,7 +1310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': 'LLM auto-alojado via Ollama', 'Which tier?': 'Tu máquina', 'Leaves device?': 'Nunca', 'Touches Google Cloud?': 'Nunca' },
         ],
         tableFormat: true,
-        note: 'Mantén notas médicas, documentos legales y datos empresariales confidenciales fuera de Apple Intelligence si no puedes garantizar el nivel on-device. Para residencia de datos verificada, los LLM locales auto-alojados siguen siendo la única opción confirmada.',
+        note: 'Mantén notas médicas, documentos legales y datos empresariales confidenciales fuera de Apple Intelligence si no puedes garantizar el nivel on-device. Para residencia de datos verificada, los LLM locales auto-alojados son una de las pocas arquitecturas donde puede verificar de forma independiente que los datos de entrada y salida permanecen en su propio entorno — sin depender de promesas de terceros.',
       },
       forDevelopers: {
         id: 'for-developers',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "Apple acaba de convertir la 'IA privada on-device' en una expectativa mainstream para aproximadamente mil millones de usuarios — esa validación del enfoque local-first importa. Pero Apple Intelligence es un sistema híbrido, respaldado en parte por Google, de pesos cerrados: una puerta de entrada a la mentalidad de IA local, no un sustituto de ejecutar tus propios modelos.",
           'Si la privacidad es tu motivación principal, la arquitectura de tres niveles introduce advertencias reales: los niveles cloud procesan tus solicitudes, el nivel Cloud Pro se ejecuta en infraestructura de Google Cloud en EE.UU., y no controlas los pesos, la lógica de enrutamiento ni el calendario de actualizaciones.',
-          'Los LLM locales auto-alojados — Qwen, Llama, Gemma en tu propio hardware — siguen siendo la única arquitectura donde puedes verificar que nada sale de tu entorno.',
+          'Los LLM locales auto-alojados — Qwen, Llama, Gemma en tu propio hardware — son una de las pocas arquitecturas donde puede verificar de forma independiente que los datos de entrada y salida permanecen en su propio entorno — sin depender de promesas de terceros.',
           'Para usuarios de la UE: el on-device ofrece residencia de datos para tareas sencillas. Para tareas complejas enrutadas a Google Cloud, se aplica el mismo análisis del Capítulo V del RGPD que para cualquier otro servicio cloud americano.',
         ],
       },
@@ -1543,7 +1543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': 'LLM auto-hospedado via Ollama', 'Which tier?': 'Sua máquina', 'Leaves device?': 'Nunca', 'Touches Google Cloud?': 'Nunca' },
         ],
         tableFormat: true,
-        note: 'Mantenha notas médicas, documentos jurídicos e dados empresariais confidenciais fora do Apple Intelligence se não puder garantir a camada no dispositivo. Para residência de dados verificada, LLMs locais auto-hospedados continuam sendo a única opção confirmada.',
+        note: 'Mantenha notas médicas, documentos jurídicos e dados empresariais confidenciais fora do Apple Intelligence se não puder garantir a camada no dispositivo. Para residência de dados verificada, LLMs locais auto-hospedados são uma das poucas arquiteturas onde pode verificar de forma independente que os dados de entrada e saída permanecem no seu próprio ambiente — sem depender de promessas de terceiros.',
       },
       forDevelopers: {
         id: 'for-developers',
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "A Apple acabou de tornar a 'IA privada no dispositivo' uma expectativa mainstream para cerca de um bilhão de usuários — essa validação da abordagem local-first importa. Mas o Apple Intelligence é um sistema híbrido, parcialmente respaldado pelo Google, de pesos fechados: uma porta de entrada para a mentalidade de IA local, não um substituto para rodar seus próprios modelos.",
           'Se privacidade é sua motivação principal, a arquitetura de três camadas introduz ressalvas reais: as camadas de nuvem processam seus pedidos, a camada Cloud Pro roda na infraestrutura do Google Cloud nos EUA, e você não controla os pesos, a lógica de roteamento nem o calendário de atualizações.',
-          'LLMs locais auto-hospedados — Qwen, Llama, Gemma no seu próprio hardware — continuam sendo a única arquitetura onde você pode verificar que nada sai do seu ambiente.',
+          'LLMs locais auto-hospedados — Qwen, Llama, Gemma no seu próprio hardware — são uma das poucas arquiteturas onde pode verificar de forma independente que os dados de entrada e saída permanecem no seu próprio ambiente — sem depender de promessas de terceiros.',
           'Para usuários da UE: o no dispositivo oferece residência de dados para tarefas simples. Para tarefas complexas roteadas ao Google Cloud, aplica-se a mesma análise do Capítulo V do GDPR que para qualquer outro serviço de nuvem americano.',
         ],
       },
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'What you ask': 'نموذج LLM مستضاف ذاتياً عبر Ollama', 'Which tier?': 'جهازك', 'Leaves device?': 'أبداً', 'Touches Google Cloud?': 'أبداً' },
         ],
         tableFormat: true,
-        note: 'أبقِ الملاحظات الطبية والمستندات القانونية والبيانات التجارية السرية بعيدة عن Apple Intelligence إن لم تستطع ضمان تفعيل المستوى المحلي. للتحقق من إقامة البيانات، تبقى نماذج LLM المحلية المستضافة ذاتياً الخيار الوحيد المؤكد.',
+        note: 'أبقِ الملاحظات الطبية والمستندات القانونية والبيانات التجارية السرية بعيدة عن Apple Intelligence إن لم تستطع ضمان تفعيل المستوى المحلي. للتحقق من إقامة البيانات، تُعدّ نماذج LLM المحلية المستضافة ذاتياً أحد الأنظمة المعمارية القليلة التي يمكنك من خلالها التحقق باستقلالية من بقاء بيانات الإدخال والإخراج داخل بيئتك الخاصة — دون الاعتماد على وعود جهات خارجية.',
       },
       forDevelopers: {
         id: 'for-developers',
@@ -1793,7 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           "جعلت Apple للتو 'الذكاء الاصطناعي الخاص على الجهاز' توقعاً سائداً لنحو مليار مستخدم — هذا التحقق من مبدأ الأولوية المحلية أمرٌ بالغ الأهمية. غير أن Apple Intelligence منظومة هجينة مدعومة جزئياً من Google، بأوزان مغلقة: إنها بوابة إلى ثقافة الذكاء الاصطناعي المحلي، لا بديل عن تشغيل نماذجك الخاصة.",
           'إن كانت الخصوصية دافعك الأساسي، فإن البنية ثلاثية المستويات تُقدِّم تحفظات حقيقية: مستويات السحابة تُعالج طلباتك، ومستوى Cloud Pro يعمل على بنية تحتية أمريكية لـ Google Cloud، ولا تُحكم على الأوزان ولا منطق التوجيه ولا جدول التحديثات.',
-          'تبقى نماذج LLM المحلية المستضافة ذاتياً — Qwen وLlama وGemma على أجهزتك الخاصة — المعمارية الوحيدة التي يمكنك فيها التحقق من أن لا شيء يغادر بيئتك.',
+          'تُعدّ نماذج LLM المحلية المستضافة ذاتياً — Qwen وLlama وGemma على أجهزتك الخاصة — أحد الأنظمة المعمارية القليلة التي يمكنك من خلالها التحقق باستقلالية من بقاء بيانات الإدخال والإخراج داخل بيئتك الخاصة — دون الاعتماد على وعود جهات خارجية.',
           'لمستخدمي الاتحاد الأوروبي: يُوفّر المستوى المحلي إقامة للبيانات في المهام البسيطة. أما المهام المعقدة الموجَّهة إلى Google Cloud، فتسري عليها تحليلات الفصل الخامس من GDPR ذاتها المُطبَّقة على أي خدمة سحابية أمريكية أخرى.',
         ],
       },

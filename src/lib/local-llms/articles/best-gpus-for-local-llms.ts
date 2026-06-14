@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'amd-intel',
           title: 'AMD and Intel GPUs: Status in April 2026',
           content: [
-            '**AMD (ROCm):** Improving but still behind NVIDIA. RX 7900 XTX is competitive with RTX 4080 in price, but ROCm driver support is shakier. Not recommended unless you prefer AMD ecosystem.',
+            '**AMD (ROCm):** Improving and competitive on price — RX 7900 XTX matches RTX 4080. ROCm driver support requires more configuration effort than CUDA (as of April 2026, ROCm 6.x) — check the current compatibility list before buying. A strong option if you prefer the AMD ecosystem.',
             '**Intel Arc A770**: Too slow for practical LLM use. Not recommended.',
             'Recommendation: Stay with NVIDIA for stability and ecosystem maturity.',
           ],
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Should I buy an AMD GPU for local LLMs?',
-              a: "Not in 2026, unless you specifically prefer the AMD ecosystem. NVIDIA ROCm integration is more mature, and most LLM frameworks (vLLM, llama.cpp, Ollama) are optimized for CUDA first. AMD's RX 7900 XTX competes on price but has more frequent driver issues and inconsistent framework support.",
+              a: "AMD is viable for LLMs in 2026, especially if you prefer the AMD ecosystem. Most LLM frameworks (vLLM, llama.cpp, Ollama) are optimized for CUDA first, and ROCm driver support requires more configuration effort than CUDA (as of April 2026, ROCm 6.x) — check the current compatibility list before buying. AMD's RX 7900 XTX competes well on price.",
             },
             {
               q: 'What is the best GPU for running 70B models locally?',
@@ -306,7 +306,7 @@ schema: {
           id: 'amd-intel',
           title: 'GPUs AMD e Intel: estado en abril de 2026',
           content: [
-            '**AMD (ROCm):** Mejorando, pero sigue por detrás de NVIDIA. La RX 7900 XTX compite en precio con la RTX 4080, pero el soporte de drivers ROCm es menos estable. No recomendada salvo que prefieras el ecosistema AMD.',
+            '**AMD (ROCm):** Mejorando y competitiva en precio — la RX 7900 XTX iguala a la RTX 4080. El soporte del controlador ROCm requiere más esfuerzo de configuración que CUDA (abril 2026, ROCm 6.x) — verifique la lista de compatibilidad actual antes de comprar. Una buena opción si prefiere el ecosistema AMD.',
             '**Intel Arc A770**: Demasiado lenta para uso práctico con LLMs. No recomendada.',
             'Recomendación: Quédate con NVIDIA por estabilidad y madurez del ecosistema.',
           ],
@@ -535,7 +535,7 @@ schema: {
           id: 'amd-intel',
           title: 'بطاقات GPU من AMD وIntel: الوضع في أبريل 2026',
           content: [
-            '**AMD (ROCm):** تتحسّن، لكنها لا تزال متأخرة عن NVIDIA. تنافس RX 7900 XTX في السعر مع RTX 4080، لكن دعم تعريفات ROCm أقل استقراراً. غير موصى بها إلا إذا كنت تفضّل منظومة AMD.',
+            '**AMD (ROCm):** تتحسّن وتنافس في السعر — تضاهي RX 7900 XTX بطاقة RTX 4080. يتطلب دعم برنامج تشغيل ROCm جهداً أكبر في الإعداد مقارنةً بـ CUDA (أبريل 2026، ROCm 6.x) — تحقق من قائمة التوافق الحالية قبل الشراء. خيار جيد إذا كنت تفضّل منظومة AMD.',
             '**Intel Arc A770**: بطيئة جداً للاستخدام العملي مع نماذج LLM. غير موصى بها.',
             'التوصية: التزم بـ NVIDIA للاستقرار ونضج المنظومة.',
           ],
@@ -777,7 +777,7 @@ schema: {
           faqs: [
             { q: 'Qual GPU é melhor para LLMs locais em 2026?', a: 'RTX 4070 Ti (US$ 600) para melhor custo-benefício. RTX 4090 (US$ 1.800) para máximo desempenho em uma única GPU. Para modelos 70B sem dual-GPU, considere Apple Silicon M5 Max (128 GB de memória unificada).' },
             { q: 'Posso comprar GPU NVIDIA no Brasil para LLMs?', a: 'Sim, mas os preços no Brasil são significativamente mais altos devido a impostos de importação. RTX 4070 Ti custa R$ 4.000-5.500. RTX 4090 pode custar R$ 9.000-14.000. Considere importar dos EUA se possível.' },
-            { q: 'AMD RX 7900 XTX vale para LLMs?', a: 'Em abril de 2026, AMD fica atrás da NVIDIA em suporte de software para LLMs. ROCm (equivalente CUDA da AMD) tem menos suporte. Para LLMs locais, NVIDIA é a escolha mais segura.' },
+            { q: 'AMD RX 7900 XTX vale para LLMs?', a: 'Em abril de 2026, a RX 7900 XTX compete bem em preço com a RTX 4080. O suporte do driver ROCm requer mais esforço de configuração do que CUDA (abril 2026, ROCm 6.x) — verifique a lista de compatibilidade atual antes de comprar. ROCm (equivalente CUDA da AMD) tem suporte crescente em frameworks LLM populares. Uma boa opção para quem prefere o ecossistema AMD.' },
           ],
         },
         relatedReading: {
@@ -883,7 +883,7 @@ schema: {
           id: 'amd-intel',
           title: 'AMD und Intel GPUs: Status im April 2026',
           content: [
-            '**AMD (ROCm):** Verbessert sich, bleibt aber hinter NVIDIA zurück. Die RX 7900 XTX konkurriert preislich mit der RTX 4080, aber die ROCm-Treiberunterstützung ist unzuverlässiger. Nicht empfohlen, es sei denn, Sie bevorzugen das AMD-Ökosystem.',
+            '**AMD (ROCm):** Verbessert sich und ist preislich wettbewerbsfähig — die RX 7900 XTX ist mit der RTX 4080 vergleichbar. Die ROCm-Treiberunterstützung erfordert mehr Konfigurationsaufwand als CUDA (Stand: April 2026, ROCm 6.x) — überprüfen Sie die aktuelle Kompatibilitätsliste vor dem Kauf. Eine gute Option, wenn Sie das AMD-Ökosystem bevorzugen.',
             '**Intel Arc A770**: Zu langsam für praktische LLM-Nutzung. Nicht empfohlen.',
             'Empfehlung: Bleiben Sie bei NVIDIA für Stabilität und Ökosystem-Reife.',
           ],
@@ -1100,7 +1100,7 @@ schema: {
           id: 'amd-intel',
           title: 'GPU AMD et Intel : Status en avril 2026',
           content: [
-            '**AMD (ROCm) :** En amélioration mais toujours en retard sur NVIDIA. Le RX 7900 XTX est compétitif avec RTX 4080 en prix, mais le support du pilote ROCm est plus fragile. Non recommandé sauf si vous préférez l\'écosystème AMD.',
+            '**AMD (ROCm) :** En amélioration et compétitif en prix — le RX 7900 XTX est comparable au RTX 4080. Le support du pilote ROCm nécessite plus d\'effort de configuration que CUDA (avril 2026, ROCm 6.x) — vérifiez la liste de compatibilité actuelle avant d\'acheter. Un bon choix si vous préférez l\'écosystème AMD.',
             '**Intel Arc A770** : Trop lent pour un usage pratique LLM. Non recommandé.',
             'Recommandation : Restez avec NVIDIA pour la stabilité et la maturité de l\'écosystème.',
           ],
@@ -1317,7 +1317,7 @@ schema: {
           id: 'amd-intel',
           title: 'AMD・Intel GPU：2026年4月のステータス',
           content: [
-            '**AMD（ROCm）**：改善が進んでいますが、依然としてNVIDIAに後れています。RX 7900 XTXはRTX 4080と価格競争力がありますが、ROCmドライバーのサポートはより不安定です。AMDエコシステムを特に好まない限り、非推奨。',
+            '**AMD（ROCm）**：改善が進んでおり、価格競争力もあります — RX 7900 XTXはRTX 4080に匹敵します。ROCmドライバーサポートはCUDAよりも設定の手間がかかります（2026年4月時点、ROCm 6.x）— 購入前に最新の互換性リストをご確認ください。AMDエコシステムを好む方には良い選択肢です。',
             '**Intel Arc A770**：実用的なLLM用途には低速です。非推奨。',
             '推奨事項：安定性とエコシステム成熟度のためNVIDIAを選びましょう。',
           ],
@@ -1542,7 +1542,7 @@ schema: {
           id: 'amd-intel',
           title: 'AMD和Intel GPU：2026年4月现状',
           content: [
-            '**AMD（ROCm）：** 有所改进但仍落后NVIDIA。RX 7900 XTX在价格上与RTX 4080竞争，但ROCm驱动支持更不稳定。除非特别偏好AMD生态，否则不推荐。',
+            '**AMD（ROCm）：** 持续改进且价格具有竞争力 — RX 7900 XTX与RTX 4080相当。ROCm驱动支持比CUDA需要更多配置工作（截至2026年4月，ROCm 6.x）——购买前请查看最新兼容性列表。若偏好AMD生态，这是不错的选择。',
             '**Intel Arc A770**：速度太慢，不适合实际LLM应用。不推荐。',
             '建议：出于稳定性和生态成熟度考虑，选择NVIDIA。',
           ],
@@ -1767,7 +1767,7 @@ schema: {
         id: 'amd-intel',
         title: 'AMD 및 Intel GPU: 2026년 4월 현황',
         content: [
-          '**AMD (ROCm):** 개선되고 있으나 여전히 NVIDIA에 뒤처져 있습니다. RX 7900 XTX는 RTX 4080과 가격 경쟁력이 있지만 ROCm 드라이버 지원이 불안정합니다. AMD 생태계를 선호하지 않는 한 추천하지 않습니다.',
+          '**AMD (ROCm):** 개선되고 있으며 가격 경쟁력도 있습니다 — RX 7900 XTX는 RTX 4080과 대등합니다. ROCm 드라이버 지원은 CUDA보다 더 많은 설정 작업이 필요합니다(2026년 4월 기준, ROCm 6.x) — 구매 전 최신 호환성 목록을 확인하세요. AMD 생태계를 선호하는 분께 좋은 선택입니다.',
           '**Intel Arc A770**: 실용적인 LLM 사용에는 너무 느립니다. 추천하지 않습니다.',
           '권장 사항: 안정성과 생태계 성숙도를 위해 NVIDIA를 선택하십시오.',
         ],

@@ -146,7 +146,7 @@ schema: {
             '@type': 'ListItem',
             position: 1,
             name: 'Fine-Tuning (Recommended)',
-            description: 'Fine-tune an existing model with 500–5,000 domain-specific examples. Cost: $100–500, Time: 1–4 hours, VRAM: 8 GB. Best for 99% of organizations with domain-specific data.',
+            description: 'Fine-tune an existing model with 500–5,000 domain-specific examples. Cost: $100–500, Time: 1–4 hours, VRAM: 8 GB. The most practical approach for most organisations with domain-specific data.',
           },
           {
             '@type': 'ListItem',
@@ -530,7 +530,7 @@ schema: {
             '@type': 'ListItem',
             position: 1,
             name: 'Fine-Tuning (Recomendado)',
-            description: 'Haz fine-tuning de un modelo existente con 500–5,000 ejemplos específicos del dominio. Costo: $100–500, Tiempo: 1–4 horas, VRAM: 8 GB. La mejor opción para el 99% de las organizaciones con datos de dominio.',
+            description: 'Haz fine-tuning de un modelo existente con 500–5,000 ejemplos específicos del dominio. Costo: $100–500, Tiempo: 1–4 horas, VRAM: 8 GB. El enfoque más práctico para la mayoría de las organizaciones con datos específicos del dominio.',
           },
           {
             '@type': 'ListItem',
@@ -913,7 +913,7 @@ schema: {
             '@type': 'ListItem',
             position: 1,
             name: 'الضبط الدقيق (موصى به)',
-            description: 'اضبط نموذجاً موجوداً دقيقاً بـ 500–5,000 مثال خاص بالمجال. التكلفة: 100–500 دولار، الوقت: 1–4 ساعات، VRAM: 8 GB. أفضل خيار لـ 99% من المؤسسات ذات بيانات المجال.',
+            description: 'اضبط نموذجاً موجوداً دقيقاً بـ 500–5,000 مثال خاص بالمجال. التكلفة: 100–500 دولار، الوقت: 1–4 ساعات، VRAM: 8 GB. النهج الأكثر عملية لمعظم المنظمات التي تمتلك بيانات خاصة بمجال معين.',
           },
           {
             '@type': 'ListItem',
@@ -1170,7 +1170,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '**Fine-tuning com LoRA:** 500 exemplos, 8 GB VRAM, 1–2 horas, $100–500. Abordagem certa para 99% das organizações.',
+            '**Fine-tuning com LoRA:** 500 exemplos, 8 GB VRAM, 1–2 horas, $100–500. A abordagem mais prática para a maioria das organizações com dados específicos do domínio.',
             '**Pré-treinamento:** 10B+ tokens, semanas de computação, $50K–500K. Apenas para necessidades proprietárias excepcionais.',
             '**Unsloth** é 4× mais rápido que o treinamento HuggingFace padrão para fine-tuning LoRA.',
             '**RAG** é a alternativa ao fine-tuning quando os documentos mudam frequentemente.',
@@ -1406,7 +1406,7 @@ schema: {
             '@type': 'ListItem',
             position: 1,
             name: 'Fine-Tuning (Empfohlen)',
-            description: 'Fine-Tune ein bestehendes Modell mit 500–5.000 domänenspezifischen Beispielen. Kosten: 100–500 €, Zeit: 1–4 Stunden, VRAM: 8 GB. Beste Option für 99% der Organisationen mit domänenspezifischen Daten.',
+            description: 'Fine-Tune ein bestehendes Modell mit 500–5.000 domänenspezifischen Beispielen. Kosten: 100–500 €, Zeit: 1–4 Stunden, VRAM: 8 GB. Für die meisten Organisationen mit domänenspezifischen Daten die praktikabelste Methode.',
           },
           {
             '@type': 'ListItem',
@@ -1799,7 +1799,7 @@ schema: {
             '@type': 'ListItem',
             position: 1,
             name: 'Fine-Tuning (Recommandé)',
-            description: 'Affinez un modèle existant avec 500–5 000 exemples spécifiques au domaine. Coût : 100–500 €, Temps : 1–4 heures, VRAM : 8 GB. La meilleure option pour 99% des organisations avec données domaines.',
+            description: 'Affinez un modèle existant avec 500–5 000 exemples spécifiques au domaine. Coût : 100–500 €, Temps : 1–4 heures, VRAM : 8 GB. L\'approche la plus pratique pour la plupart des organisations disposant de données spécifiques à leur domaine.',
           },
           {
             '@type': 'ListItem',
@@ -2182,7 +2182,7 @@ schema: {
             '@type': 'ListItem',
             position: 1,
             name: 'Fine-Tuning（推奨）',
-            description: '500～5,000 個のドメイン固有の例を使用して既存モデルを fine-tune します。コスト：¥15,000～30,000、時間：1～4 時間、VRAM：8 GB。ドメイン データを持つ 99% の組織に最適です。',
+            description: '500～5,000 個のドメイン固有の例を使用して既存モデルを fine-tune します。コスト：¥15,000～30,000、時間：1～4 時間、VRAM：8 GB。ドメイン固有のデータを持つほとんどの組織にとって最も実用的な方法です。',
           },
           {
             '@type': 'ListItem',
@@ -2566,7 +2566,7 @@ schema: {
             '@type': 'ListItem',
             position: 1,
             name: '微调（推荐）',
-            description: '用 500～5,000 个特定领域的样本微调现有模型。成本：$100-500，时间：1-4 小时，VRAM：8GB。适合 99% 拥有领域数据的组织。',
+            description: '用 500～5,000 个特定领域的样本微调现有模型。成本：$100-500，时间：1-4 小时，VRAM：8GB。对于大多数拥有领域特定数据的组织来说，最实用的方法。',
           },
           {
             '@type': 'ListItem',

@@ -1616,7 +1616,7 @@ schema: {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude 3.5 Sonnet (2024)' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -1660,7 +1660,7 @@ schema: {
             name: 'Welche lokalen Modelle sind am besten?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Für 16 GB RAM: Llama 3.3 13B oder Mistral Small (Qualität ≈ GPT-4o mini). Für 40 GB RAM: Llama 3.3 70B oder Qwen 72B (Qualität ≈ GPT-4). Verwenden Sie Q4_K_M-Quantisierung für optimale Effizienz. Für beste Qualität nutzen Sie Cloud APIs (GPT-5.5, Claude 3.5 Sonnet (2024)).'
+              text: 'Für 16 GB RAM: Llama 3.3 13B oder Mistral Small (Qualität ≈ GPT-4o mini). Für 40 GB RAM: Llama 3.3 70B oder Qwen 72B (Qualität ≈ GPT-4). Verwenden Sie Q4_K_M-Quantisierung für optimale Effizienz. Für beste Qualität nutzen Sie Cloud APIs (GPT-5.5, Claude Sonnet 4.6).'
             }
           },
           {
@@ -1676,7 +1676,7 @@ schema: {
             name: 'Was ist das maximale Kontextfenster für lokale Modelle?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Die meisten lokalen Modelle unterstützen 4K–32K Token Kontext. Llama 3.3 hat standardmäßig 4K, kann aber auf 32K erweitert werden. Cloud APIs bieten viel mehr: GPT-5.5 = 128K, Claude 3.5 Sonnet (2024) = 200K. Für große Dokumente ist Cloud besser.'
+              text: 'Die meisten lokalen Modelle unterstützen 4K–32K Token Kontext. Llama 3.3 hat standardmäßig 4K, kann aber auf 32K erweitert werden. Cloud APIs bieten viel mehr: GPT-5.5 = 128K, Claude Sonnet 4.6 = 200K. Für große Dokumente ist Cloud besser.'
             }
           },
           {
@@ -1805,7 +1805,7 @@ schema: {
             '@type': 'ListItem',
             position: 4,
             name: 'Beste Ausgabequalität (Coding, Analyse)',
-            description: 'GPT-5.5 und Claude 3.5 Sonnet (2024) schlagen lokale Modelle um 10–20 Punkte bei Benchmarks.'
+            description: 'GPT-5.5 und Claude Sonnet 4.6 schlagen lokale Modelle um 10–20 Punkte bei Benchmarks.'
           },
           {
             '@type': 'ListItem',
@@ -2270,7 +2270,7 @@ schema: {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude 3.5 Sonnet (2024)' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -2314,7 +2314,7 @@ schema: {
             name: 'Quels sont les meilleurs LLMs locaux ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Pour 16 GB RAM : Llama 3.3 13B ou Mistral Small (qualité ≈ GPT-4o mini). Pour 40 GB RAM : Llama 3.3 70B ou Qwen 72B (qualité ≈ GPT-4). Utilisez la quantification Q4_K_M pour une efficacité optimale. Pour la meilleure qualité : Cloud APIs (GPT-5.5, Claude 3.5 Sonnet (2024)).'
+              text: 'Pour 16 GB RAM : Llama 3.3 13B ou Mistral Small (qualité ≈ GPT-4o mini). Pour 40 GB RAM : Llama 3.3 70B ou Qwen 72B (qualité ≈ GPT-4). Utilisez la quantification Q4_K_M pour une efficacité optimale. Pour la meilleure qualité : Cloud APIs (GPT-5.5, Claude Sonnet 4.6).'
             }
           },
           {
@@ -2330,7 +2330,7 @@ schema: {
             name: 'Quelle est la fenêtre de contexte maximale pour les LLMs locaux ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'La plupart des modèles locaux supportent 4K–32K tokens de contexte. Llama 3.3 a 4K par défaut, mais peut être étendu à 32K. Les Cloud APIs offrent bien plus : GPT-5.5 = 128K, Claude 3.5 Sonnet (2024) = 200K. Pour les gros documents, Cloud est mieux.'
+              text: 'La plupart des modèles locaux supportent 4K–32K tokens de contexte. Llama 3.3 a 4K par défaut, mais peut être étendu à 32K. Les Cloud APIs offrent bien plus : GPT-5.5 = 128K, Claude Sonnet 4.6 = 200K. Pour les gros documents, Cloud est mieux.'
             }
           },
           {
@@ -2443,7 +2443,7 @@ schema: {
             '@type': 'ListItem',
             position: 4,
             name: 'Meilleure qualité de sortie (code, analyse)',
-            description: 'GPT-5.5 et Claude 3.5 Sonnet (2024) surpassent modèles locaux de 10–20 points en benchmarks.'
+            description: 'GPT-5.5 et Claude Sonnet 4.6 surpassent modèles locaux de 10–20 points en benchmarks.'
           },
           {
             '@type': 'ListItem',
@@ -2909,7 +2909,7 @@ schema: {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude 3.5 Sonnet (2024)' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -2953,7 +2953,7 @@ schema: {
             name: 'ベストなローカルLLMはどれですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '16 GB RAM の場合 ： Llama 3.3 13B または Mistral Small（品質 ≈ GPT-4o mini）。40 GB RAM の場合 ： Llama 3.3 70B または Qwen 72B（品質 ≈ GPT-4）。最適な効率には Q4_K_M 量子化を使用します。最高品質：Cloud API（GPT-5.5、Claude 3.5 Sonnet (2024)）。'
+              text: '16 GB RAM の場合 ： Llama 3.3 13B または Mistral Small（品質 ≈ GPT-4o mini）。40 GB RAM の場合 ： Llama 3.3 70B または Qwen 72B（品質 ≈ GPT-4）。最適な効率には Q4_K_M 量子化を使用します。最高品質：Cloud API（GPT-5.5、Claude Sonnet 4.6）。'
             }
           },
           {
@@ -2969,7 +2969,7 @@ schema: {
             name: 'ローカルLLMの最大コンテキストウィンドウはいくつですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'ほとんどのローカルモデルは 4K–32K トークンコンテキストをサポートします。Llama 3.3 はデフォルト 4K ですが 32K に拡張可能。Cloud API ははるかに大きい ： GPT-5.5 = 128K、Claude 3.5 Sonnet (2024) = 200K。大きなドキュメントはクラウドがより良いです。'
+              text: 'ほとんどのローカルモデルは 4K–32K トークンコンテキストをサポートします。Llama 3.3 はデフォルト 4K ですが 32K に拡張可能。Cloud API ははるかに大きい ： GPT-5.5 = 128K、Claude Sonnet 4.6 = 200K。大きなドキュメントはクラウドがより良いです。'
             }
           },
           {
@@ -3082,7 +3082,7 @@ schema: {
             '@type': 'ListItem',
             position: 4,
             name: '最高品質出力（コード、分析）',
-            description: 'GPT-5.5 と Claude 3.5 Sonnet (2024) はベンチマークで 10–20ポイント上。'
+            description: 'GPT-5.5 と Claude Sonnet 4.6 はベンチマークで 10–20ポイント上。'
           },
           {
             '@type': 'ListItem',
@@ -3346,7 +3346,7 @@ schema: {
           content: [
             '<strong>日本（METI AI Governance 2024）：</strong> 日本はデータ主権のための地元・連邦モデルを推進。金融、医療などの規制業界にはローカル推論推奨。Government 2024ガイドラインで明示的に AI ガバナンスサポート。Cloud API ： ローカルキャッシュ/エッジコンピューティングで許容。',
             '<strong>東アジア・APAC（データ越境規制）：</strong> 各地域でデータレジデンシー要件が異なる。マルチASDN/APAC準拠パターン。ローカル推論はほぼ常に許容されて且つ推奨される。',
-            '<strong>グローバル（最高品質・スケール優先）：</strong> ローカルで最高品質が不可能な大規模アプリケーションはクラウドAPI（GPT-5.5、Claude 3.5 Sonnet (2024)）推奨。'
+            '<strong>グローバル（最高品質・スケール優先）：</strong> ローカルで最高品質が不可能な大規模アプリケーションはクラウドAPI（GPT-5.5、Claude Sonnet 4.6）推奨。'
           ]
         },
         whenCloud: {
@@ -3548,7 +3548,7 @@ schema: {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude 3.5 Sonnet (2024)' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -3573,9 +3573,9 @@ schema: {
         mainEntity: [
           { '@type': 'Question', name: '本地LLM比Cloud API慢吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，明显慢。CPU推理每秒生成10–25个token。Cloud API（GPT-5.5）每秒生成80–150个token。即使用GPU（RTX 4090）也只能达到130–160 token/秒。云的速度快4–10倍。' } },
           { '@type': 'Question', name: '我能在笔记本电脑上运行70B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '不能。70B模型至少需要40 GB RAM或VRAM。具有16 GB的笔记本电脑最多只能运行压缩的13B模型。70B模型需要Mac Studio、工作站或多GPU设置（成本：$3,000+）。' } },
-          { '@type': 'Question', name: '最好的本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '16 GB RAM：Llama 3.3 13B或Mistral Small（质量≈GPT-4o mini）。40 GB RAM：Llama 3.3 70B或Qwen 72B（质量≈GPT-4）。使用Q4_K_M量子化以获得最佳效率。最高质量：Cloud API（GPT-5.5、Claude 3.5 Sonnet (2024)）。' } },
+          { '@type': 'Question', name: '最好的本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '16 GB RAM：Llama 3.3 13B或Mistral Small（质量≈GPT-4o mini）。40 GB RAM：Llama 3.3 70B或Qwen 72B（质量≈GPT-4）。使用Q4_K_M量子化以获得最佳效率。最高质量：Cloud API（GPT-5.5、Claude Sonnet 4.6）。' } },
           { '@type': 'Question', name: '我能离线使用本地模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，这是主要优势。下载后，一切在本地运行——不需要互联网。Cloud API始终需要网络连接，但提供自动更新和可用性保证。' } },
-          { '@type': 'Question', name: '本地LLM的最大上下文窗口是多少？', acceptedAnswer: { '@type': 'Answer', text: '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.5 = 128K，Claude 3.5 Sonnet (2024) = 200K。大文档云更好。' } },
+          { '@type': 'Question', name: '本地LLM的最大上下文窗口是多少？', acceptedAnswer: { '@type': 'Answer', text: '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.5 = 128K，Claude Sonnet 4.6 = 200K。大文档云更好。' } },
           { '@type': 'Question', name: '本地LLM需要GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '不需要，但强烈推荐。CPU推理慢10–50倍。带GPU（RTX 4090、RTX 4070）可达50–160 token/秒。仅CPU：10–25 token/秒，实时聊天不可行。' } },
           { '@type': 'Question', name: '本地LLM要花多少钱？', acceptedAnswer: { '@type': 'Answer', text: '免费下载和运行（Ollama免费）。硬件贵：GPU（RTX 4090）= $1,600+，Mac Studio = $2,000+。Cloud API：每1,000 token $0.01–0.10。小到中等规模的云更便宜。' } },
           { '@type': 'Question', name: '我应该用Ollama还是LM Studio？', acceptedAnswer: { '@type': 'Answer', text: 'Ollama是CLI，更快，易于自动化。LM Studio有GUI，适合初学者。生产和API：Ollama。探索性实验：LM Studio。两者运行相同的模型。' } },
@@ -3632,7 +3632,7 @@ schema: {
           { '@type': 'ListItem', position: 1, name: '实时聊天机器人', description: '用户期望< 2秒响应。Cloud API快4–10倍。' },
           { '@type': 'ListItem', position: 2, name: '大批量处理', description: '1,000+文件/天。云自动扩展；本地GPU变成瓶颈。' },
           { '@type': 'ListItem', position: 3, name: '生产SLA要求', description: '99.9%+可用性。云保证SLA；本地硬件需要冗余（成本）。' },
-          { '@type': 'ListItem', position: 4, name: '最高输出质量（代码、分析）', description: 'GPT-5.5和Claude 3.5 Sonnet (2024)在基准测试中高10–20个百分点。' },
+          { '@type': 'ListItem', position: 4, name: '最高输出质量（代码、分析）', description: 'GPT-5.5和Claude Sonnet 4.6在基准测试中高10–20个百分点。' },
           { '@type': 'ListItem', position: 5, name: '长上下文窗口', description: '100K+token。Cloud API（GPT-5.5 128K、Claude 200K）处理大型文件；本地限制4K–32K。' },
           { '@type': 'ListItem', position: 6, name: '无需维护', description: '云=零维护、自动更新。本地需要IT管理CUDA驱动、固件、监控。' }
         ]

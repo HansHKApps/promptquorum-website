@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**Offline chat assistant** — Q&A on flights, subway, rural areas with no internet. Llama 3.2 1B on iPhone handles simple questions at 3 tok/sec.',
-            '**Private note-taking** — Summarize meeting notes, rewrite drafts, brainstorm ideas without sending data to any server. GDPR/HIPAA compliant by design.',
+            '**Private note-taking** — Summarize meeting notes, rewrite drafts, brainstorm ideas without sending data to any server. GDPR/HIPAA-compatible architecture by design (no cross-border data transfer at inference time; your organisation\'s controls and lawful basis still determine full compliance).',
             '**Lightweight coding helper** — Phi-4 Mini 3.8B on iPad provides decent code completion and explanation for Python, JavaScript, and SQL.',
             '**Language learning** — Practice conversations in any language offline. 1–3B models handle basic dialogue well.',
             '**Field work** — Healthcare workers, field inspectors, and legal professionals can query documents locally without cloud connectivity or data transfer concerns.',

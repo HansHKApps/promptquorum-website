@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**HIPAA (164.306):** Patient data requires encryption, access logs, audit trails, and incident reporting.',
             '**SOC2 Type II:** Requires 6+ months of controls evidence (encryption, access control, incident response).',
             '**EU AI Act (2024):** AI systems must be documented, transparent, and audited. Violations: €20M or 4% revenue.',
-            'Local LLMs satisfy ALL compliance requirements because data never leaves your infrastructure.',
+            'Local LLMs satisfy the data-residency technical requirement (no cross-border data transfer at inference time), which significantly simplifies compliance with GDPR Article 44, HIPAA, and SOC 2. Full regulatory compliance still requires your organisation\'s DPA, access controls, audit logging, and lawful basis.',
             '**Penalties:** GDPR fines up to €20M (4% revenue), HIPAA up to $1.5M per violation.',
             'As of April 2026, local deployment significantly simplifies compliance certification by keeping data and controls in-house.',
           ],
@@ -987,7 +987,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '**DSGVO (Artikel 44):** Personenbezogene Daten müssen in der EU bleiben, Betroffenenrechte (Zugang, Löschung, Portabilität) sind garantiert. Übermittlungen an US-amerikanische Cloud-APIs erfordern geeignete Garantien (Standardvertragsklauseln oder Angemessenheitsbeschlüsse).',
+            '**DSGVO (Artikel 44):** Personenbezogene Daten müssen in der EU bleiben. Betroffenenrechte (Zugang, Löschung, Portabilität) sind gesetzlich verankert (Art. 15–20 DSGVO) — ihre Umsetzung erfordert aktive organisatorische Maßnahmen Ihrerseits. Übermittlungen an US-amerikanische Cloud-APIs erfordern geeignete Garantien (Standardvertragsklauseln oder Angemessenheitsbeschlüsse).',
             '**HIPAA (164.306):** Patientendaten erfordern Verschlüsselung, Zugriffsprotokolle, Audit-Trails und Meldepflicht bei Verstößen.',
             '**SOC2 Type II:** Erfordert 6+ Monate Kontrollnachweis (Verschlüsselung, Zugriffskontrolle, Incident Response).',
             '**EU-KI-Verordnung (2024):** KI-Systeme müssen dokumentiert, transparent und auditiert sein. Verstöße: €20 Mio. oder 4% Umsatz.',
@@ -1165,7 +1165,7 @@ schema: {
         'name': 'Enterprise Compliance Local LLMs',
         'numberOfItems': 3,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'DSGVO und Datenschutz', 'description': 'Personenbezogene Daten müssen in der EU bleiben, Betroffenenrechte (Zugang, Löschung, Portabilität) sind garantiert, und Compliance ist für EU-Operationen obligatorisch.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'DSGVO und Datenschutz', 'description': 'Personenbezogene Daten müssen in der EU bleiben. Betroffenenrechte (Zugang, Löschung, Portabilität) sind gesetzlich verankert (Art. 15–20 DSGVO) — ihre Umsetzung erfordert aktive organisatorische Maßnahmen.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'HIPAA Geschützte Gesundheitsinformationen', 'description': 'Patientendaten erfordern Verschlüsselung, Zugriffsprotokolle, Audit-Trails und Meldung in Gesundheitsumgebungen.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'SOC2 und EU-KI-Verordnung', 'description': 'Beide erfordern Dokumentation, Transparenz, Audit-Trails und umfassende Kontrollen für Unternehmensdeployment.' },
         ],
@@ -1201,7 +1201,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '**RGPD (Article 44):** Les données personnelles doivent rester dans l\'UE, les droits des sujets (accès, suppression, portabilité) sont garantis. Les transferts vers des APIs cloud américaines nécessitent des garanties adéquates (clauses contractuelles types ou décisions d\'adéquation).',
+            '**RGPD (Article 44):** Les données personnelles doivent rester dans l\'UE. Les droits des personnes concernées (accès, effacement, portabilité) sont consacrés par la loi (art. 15–20 RGPD) — leur mise en œuvre nécessite des procédures organisationnelles actives de votre part. Les transferts vers des APIs cloud américaines nécessitent des garanties adéquates (clauses contractuelles types ou décisions d\'adéquation).',
             '**HIPAA (164.306):** Les données patients nécessitent chiffrement, journaux d\'accès, pistes d\'audit et déclaration d\'incidents.',
             '**SOC2 Type II:** Exige 6+ mois de preuves de contrôles (chiffrement, contrôle d\'accès, réponse aux incidents).',
             '**Loi IA UE (2024):** Les systèmes IA doivent être documentés, transparents et auditables. Violations: €20M ou 4% de chiffre d\'affaires.',
@@ -1368,7 +1368,7 @@ schema: {
         'name': 'Conformité Entreprise Local LLMs',
         'numberOfItems': 3,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'RGPD et résidence des données', 'description': 'Les données personnelles doivent rester dans l\'UE, les droits des sujets (accès, suppression, portabilité) sont garantis, et la conformité est obligatoire pour les opérations dans l\'UE.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'RGPD et résidence des données', 'description': 'Les données personnelles doivent rester dans l\'UE. Les droits des personnes concernées (accès, effacement, portabilité) sont consacrés par la loi (art. 15–20 RGPD) — leur mise en œuvre nécessite des procédures organisationnelles actives.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'HIPAA Informations de santé protégées', 'description': 'Les données patients nécessitent chiffrement, journaux d\'accès, pistes d\'audit et déclaration dans les environnements de santé.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'SOC2 et Loi IA UE', 'description': 'Tous deux exigent documentation, transparence, pistes d\'audit et contrôles complets pour le déploiement d\'entreprise.' },
         ],
@@ -1569,7 +1569,7 @@ schema: {
         'name': 'エンタープライズコンプライアンス Local LLMs',
         'numberOfItems': 3,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'GDPRとデータレジデンシー', 'description': '個人データはEU内に留まる必要がある。データサブジェクトの権利（アクセス、削除、ポータビリティ）が保証される。EU操業はコンプライアンス必須。' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'GDPRとデータレジデンシー', 'description': '個人データはEU内に留まる必要がある。データ主体の権利（アクセス、削除、ポータビリティ）は法律で確立されています（GDPR第15〜20条）— その実施にはお客様側の積極的な組織的手続きが必要です。EU操業はコンプライアンス必須。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'HIPAA保護健康情報', 'description': '患者データは暗号化、アクセスログ、監査ログ、医療環境での報告が必要。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'SOC2とEU AI Act', 'description': 'どちらもエンタープライズ展開のドキュメント化、透明性、監査ログ、包括的コントロールを要求。' },
         ],

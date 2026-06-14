@@ -64,7 +64,7 @@ export default async function KoHome() {
                 'name': 'PromptQuorum은 어떤 AI 모델을 지원하나요?',
                 'acceptedAnswer': {
                   '@type': 'Answer',
-                  'text': 'PromptQuorum은 OpenAI GPT-4o 및 o1, Anthropic Claude 3.5 Sonnet 및 Claude 4, Google Gemini 2.0 Flash 및 1.5 Pro, xAI Grok, DeepSeek, Mistral Large, Cohere Command R+, Together AI 및 Groq를 통한 Meta Llama, Perplexity 등 25개 이상의 클라우드 AI 모델을 지원합니다. 또한 Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, KoboldCpp 및 OpenAI 호환 엔드포인트를 포함한 모든 주요 로컬 모델 환경도 지원합니다.'
+                  'text': 'PromptQuorum은 OpenAI GPT-4o 및 o1, Anthropic Claude Sonnet 4.6 및 Claude 4, Google Gemini 2.0 Flash 및 1.5 Pro, xAI Grok, DeepSeek, Mistral Large, Cohere Command R+, Together AI 및 Groq를 통한 Meta Llama, Perplexity 등 25개 이상의 클라우드 AI 모델을 지원합니다. 또한 Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, KoboldCpp 및 OpenAI 호환 엔드포인트를 포함한 모든 주요 로컬 모델 환경도 지원합니다.'
                 }
               },
               {

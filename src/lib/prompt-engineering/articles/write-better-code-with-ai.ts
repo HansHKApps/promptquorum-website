@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Is AI-generated code safe to deploy directly?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No. AI introduces security vulnerabilities in 45% of generated code cases, including insecure implementations and hallucinated package names that enable supply-chain attacks. All AI-generated code must be reviewed by a developer and scanned with a security linter (e.g., Bandit for Python, ESLint Security for JavaScript) before production deployment.',
+              text: 'No. Per a 2025 Veracode report, generative AI models chose insecure implementations in 45% of cases when both secure and insecure options were available. All AI-generated code must be reviewed by a developer and scanned with a security linter (e.g., Bandit for Python, ESLint Security for JavaScript) before production deployment.',
             },
           },
           {
@@ -401,7 +401,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Avoid these frequent errors when working with AI coding tools:**',
           ],
           items: [
-            '**Treating AI output as ready-to-deploy:** AI generates plausible-looking code, not verified code. Security vulnerabilities appear in 45% of AI-generated code. Every output requires developer review and security linting before deployment.',
+            '**Treating AI output as ready-to-deploy:** AI generates plausible-looking code, not verified code. Per 2025 Veracode research, AI models chose insecure implementations in 45% of test cases. Every output requires developer review and security linting before deployment.',
             '**Vague prompts for complex tasks:** "Write a login system" produces insecure defaults. "Write a JWT-based authentication endpoint in FastAPI, using bcrypt for password hashing, returning 401 on invalid credentials, and handling database connection errors with 500" produces usable code. Specificity is the variable.',
             '**Ignoring the temperature setting:** Default temperature on most platforms is 0.7–1.0 — correct for creative writing, wrong for code. Set temperature to 0.1–0.2 for production code generation on every session.',
             '**Accepting hallucinated package names:** AI recommends non-existent libraries 20% of the time. Before running pip install or npm install on any AI-suggested package, verify it exists on PyPI or npm and check the download count. Low download counts on a recently-created package are a red flag for slopsquatting.',
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Is AI-generated code safe to deploy directly?',
-              a: 'No. AI introduces security vulnerabilities in 45% of generated code cases, including insecure implementations and hallucinated package names that enable supply-chain attacks. All AI-generated code must be reviewed by a developer and scanned with a security linter (e.g., Bandit for Python, ESLint Security for JavaScript) before production deployment.',
+              a: 'No. Per a 2025 Veracode report, generative AI models chose insecure implementations in 45% of cases when both secure and insecure options were available. All AI-generated code must be reviewed by a developer and scanned with a security linter (e.g., Bandit for Python, ESLint Security for JavaScript) before production deployment.',
             },
             {
               q: 'How much faster are developers who use AI coding tools?',

@@ -429,7 +429,7 @@ schema: {
             '**Gewinner: Unentschieden**. Beide sind privat, ebenso wie das kostenlose Ollama.',
           ],
           callouts: [
-            { type: '🛠️ Best Practice', text: 'Für regulierte Branchen (Gesundheitswesen, Finanzen, Rechtswesen) führen Sie beide Apps auf isolierten Computern oder Firmennetzwerken ohne Internet-Zugang aus. Beide unterstützen vollständig offline Betrieb, sobald Modelle heruntergeladen sind. Dies ist der DSGVO-konform Weg für deutsche Unternehmen.' },
+            { type: '🛠️ Best Practice', text: 'Für regulierte Branchen (Gesundheitswesen, Finanzen, Rechtswesen) führen Sie beide Apps auf isolierten Computern oder Firmennetzwerken ohne Internet-Zugang aus. Beide unterstützen vollständig offline Betrieb, sobald Modelle heruntergeladen sind. Dies ist ein DSGVO-freundlicher Weg für deutsche Unternehmen (keine Inferenzdaten verlassen das Gerät).' },
           ],
         },
         'mistakes': {

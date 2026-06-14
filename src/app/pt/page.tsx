@@ -64,7 +64,7 @@ export default async function PtHome() {
                 'name': 'Quais modelos de IA o PromptQuorum suporta?',
                 'acceptedAnswer': {
                   '@type': 'Answer',
-                  'text': 'O PromptQuorum suporta mais de 25 modelos de IA na nuvem, incluindo OpenAI GPT-4o e o1, Anthropic Claude 3.5 Sonnet e Claude 4, Google Gemini 2.0 Flash e 1.5 Pro, xAI Grok, DeepSeek, Mistral Large, Cohere Command R+, Meta Llama via Together AI e Groq, e Perplexity. Também suporta todos os principais ambientes de LLM local: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, KoboldCpp e qualquer endpoint compatível com OpenAI.'
+                  'text': 'O PromptQuorum suporta mais de 25 modelos de IA na nuvem, incluindo OpenAI GPT-4o e o1, Anthropic Claude Sonnet 4.6 e Claude 4, Google Gemini 2.0 Flash e 1.5 Pro, xAI Grok, DeepSeek, Mistral Large, Cohere Command R+, Meta Llama via Together AI e Groq, e Perplexity. Também suporta todos os principais ambientes de LLM local: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, KoboldCpp e qualquer endpoint compatível com OpenAI.'
                 }
               },
               {

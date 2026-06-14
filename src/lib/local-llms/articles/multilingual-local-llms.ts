@@ -1251,7 +1251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?',
-              a: 'Ja, aber Lokal ist DSGVO-konform. Wichtig: (1) Keine Datenübertragung zu US-Servern (API-frei), (2) Erfüllung von Artikel 28 (Datenverarbeitungsvertrag nicht erforderlich, wenn Sie der Verantwortliche sind), (3) BSI-Grundschutz-Kataloge: Lokale Ausführung erfüllt Anforderungen an Datenschutz und Vertraulichkeit. Empfehlung: Dokumentieren Sie die Sicherheitsmaßnahmen für Ihr Compliance-Team.'
+              a: 'Ja, aber Lokale Inferenz ist DSGVO-kompatibel (keine Inferenzdaten an externe Anbieter). Wichtig: (1) Keine Datenübertragung zu US-Servern (API-frei), (2) Erfüllung von Artikel 28 (Datenverarbeitungsvertrag nicht erforderlich, wenn Sie der Verantwortliche sind), (3) BSI-Grundschutz-Kataloge: Lokale Ausführung erfüllt Anforderungen an Datenschutz und Vertraulichkeit. Empfehlung: Dokumentieren Sie die Sicherheitsmaßnahmen für Ihr Compliance-Team.'
             },
             {
               q: 'Ist Qwen3 für den deutschen Mittelstand geeignet?',
@@ -1458,7 +1458,7 @@ schema: {
             'name': 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja, aber Lokal ist DSGVO-konform. Wichtig: (1) Keine Datenübertragung zu US-Servern (API-frei), (2) Erfüllung von Artikel 28 (Datenverarbeitungsvertrag nicht erforderlich, wenn Sie der Verantwortliche sind), (3) BSI-Grundschutz-Kataloge: Lokale Ausführung erfüllt Anforderungen an Datenschutz und Vertraulichkeit. Empfehlung: Dokumentieren Sie die Sicherheitsmaßnahmen für Ihr Compliance-Team.'
+              'text': 'Ja, aber Lokale Inferenz ist DSGVO-kompatibel (keine Inferenzdaten an externe Anbieter). Wichtig: (1) Keine Datenübertragung zu US-Servern (API-frei), (2) Erfüllung von Artikel 28 (Datenverarbeitungsvertrag nicht erforderlich, wenn Sie der Verantwortliche sind), (3) BSI-Grundschutz-Kataloge: Lokale Ausführung erfüllt Anforderungen an Datenschutz und Vertraulichkeit. Empfehlung: Dokumentieren Sie die Sicherheitsmaßnahmen für Ihr Compliance-Team.'
             }
           },
           {
@@ -2048,7 +2048,7 @@ schema: {
             '**Qwen3 7B** は中国語、日本語、韓国語の最適なローカルモデル（中国語5つ星、日本語/韓国語4つ星）。',
             '**Mistral Small** と **Qwen3 7B** はヨーロッパ言語で同等（フランス語、ドイツ語、スペイン語、イタリア語それぞれ4つ星）。',
             '**Q4_K_M量子化** はVRAM要件を75%削減し、精度損失は最小（<1%）-- ローカル展開に必須。',
-            '**ローカル処理**（Ollama、llama.cpp）はAPI費用とレイテンシを排除；データ機密性とGDPR準拠に理想的。',
+            '**ローカル処理**（Ollama、llama.cpp）はAPI費用とレイテンシを排除；データ機密性とGDPR互換アーキテクチャ（推論データをサードパーティに送信しない）に理想的。',
             'アジアなら **Qwen3**、ヨーロッパなら **Mistral または Qwen3** を選択（ハードウェア予算に基づき、7Bモデルに8GB VRAM必要）。'
           ],
         },
@@ -2105,7 +2105,7 @@ schema: {
           title: 'ヨーロッパ言語向けベストローカルLLM',
           content: 'フランス語、ドイツ語、スペイン語、イタリア語：**Mistral Small** と **Qwen3 7B** は同等。Mistral はフランス語とドイツ語に優位；Qwen3 はスペイン語とイタリア語で若干優秀。両者とも Q4_K_M で 8GB VRAM のみ必要。日本でのMETI AI統治に続き、ヨーロッパでも地域データセキュリティを重視する傾向が強化。',
           items: [
-            '**Mistral Small for フランス語とドイツ語**：Mistral はフランス語とドイツ語の訓練データで学習、ネイティブ精度を提供。GDPR準拠と地域データ保護義務に理想的。',
+            '**Mistral Small for フランス語とドイツ語**：Mistral はフランス語とドイツ語の訓練データで学習、ネイティブ精度を提供。GDPR互換アーキテクチャ（推論データをサードパーティに送信しない）と地域データ保護義務に理想的。',
             '**Qwen3 7B for スペイン語とイタリア語**：Qwen3 はロマンス言語で優れた品質。Q4_K_M 量子化で MacBook Pro M2 または標準Linux GPU でメモリ問題なし。',
             '**Llama 3.3 8B as フォールバック**：Llama 3.3 8B はヨーロッパ言語で十分（3つ星評価）だが最適でない。Qwen3 または Mistral が利用不可の場合のみ使用。',
             '**DACH専門家（ドイツ/オーストリア/スイス）**：ドイツ語圏企業向け：Mistral Small はローカル処理で BSI-Grundschutz 要件を満たす。米国サーバーへのデータ転送不要。',
@@ -2662,7 +2662,7 @@ schema: {
             },
             {
               q: '本地LLM处理机密数据有多安全？',
-              a: '非常安全。本地运行的模型不离开您的机器。重要：在Ollama中禁用遥测（`OLLAMA_NUM_PARALLEL=1` 环境变量）。企业需求：需安全团队验证。符合GDPR/CCPA（无第三方数据传输）。'
+              a: '非常安全。本地运行的模型不离开您的机器。重要：在Ollama中禁用遥测（`OLLAMA_NUM_PARALLEL=1` 环境变量）。企业需求：需安全团队验证。GDPR兼容架构（不向第三方发送推理数据）；完整合规性取决于您的组织措施。'
             },
             {
               q: 'Python代码生成选哪个模型？',

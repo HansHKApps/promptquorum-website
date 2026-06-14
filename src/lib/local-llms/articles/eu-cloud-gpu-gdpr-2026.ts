@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**Choose Hetzner GPU (€184/month flat, RTX 4000 SFF Ada, German) for most predictable GDPR cost, but note flat monthly billing only (no hourly option). Choose Scaleway (€0.50–€2.50/hr H100, French) for AI-focused workloads with flexible hourly billing. Choose OVHcloud (€0.60–€3.00/hr, French) for enterprise multi-region coverage and SLA.** All provide full GDPR compliance, DPA, and zero Schrems II risk.**',
+    leadAnswerBlock: '**Choose Hetzner GPU (€184/month flat, RTX 4000 SFF Ada, German) for most predictable GDPR cost, but note flat monthly billing only (no hourly option). Choose Scaleway (€0.50–€2.50/hr H100, French) for AI-focused workloads with flexible hourly billing. Choose OVHcloud (€0.60–€3.00/hr, French) for enterprise multi-region coverage and SLA.** All provide full GDPR compliance and DPA. For EU-internal inference workloads with no third-country transfer, the typical Schrems-II exposure does not apply — your own legal assessment for your specific use case is recommended.**',
     quickAnswerTop: {
       en: {
         question: 'Which EU GDPR cloud GPU provider is best?',
@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: 'Why GDPR Cloud GPU Choice Matters',
-        content: 'The Schrems II ruling (CJEU 2020) invalidated Privacy Shield. US cloud providers with EU regions remain structurally exposed to US surveillance law. Only EU-native providers guarantee zero Schrems II risk. Article 28 DPAs also differ: most US standard DPAs don\'t satisfy German/French DPO requirements. Real enforcement: Germany\'s BfDI, France\'s CNIL, and the European Court have issued guidance that EU data residency with proper DPA is the standard.',
+        content: 'The Schrems II ruling (CJEU 2020) invalidated Privacy Shield. US cloud providers with EU regions remain structurally exposed to US surveillance law. EU-native providers significantly reduce Schrems-II exposure for EU-internal inference workloads with no third-country transfer. Article 28 DPAs also differ: most US standard DPAs don\'t satisfy German/French DPO requirements. Real enforcement: Germany\'s BfDI, France\'s CNIL, and the European Court have issued guidance that EU data residency with proper DPA is the standard. Your own legal assessment for your specific use case is recommended.',
         items: [
           'Schrems II: EU data cannot flow to US servers without extraordinary safeguards',
           'Article 28 DPA: Must specify processing subject matter, duration, nature, purpose, data types, controller obligations, sub-processor approval',
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '✅ Flat monthly pricing (€184/mo GEX44, €500+/mo GEX130)',
           '✅ German company, German data center (DIN ISO/IEC 27001 certified)',
           '✅ DPA available immediately, no negotiations',
-          '✅ No Schrems II risk (EU-only infrastructure)',
+          '✅ Significantly reduced Schrems-II exposure for EU-internal workloads (EU-only infrastructure; own legal assessment recommended)',
           '❌ No hourly/spot billing — monthly commitment only',
           '❌ Limited H100 availability (not offered)',
           '❌ 1–2 day provisioning (manual account verification)',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is Hetzner GDPR-compliant by default?',
-            a: 'Yes. German company, German data centers, DPA available immediately. No Schrems II risk. Affiliate program ends June 15, 2026 — plan accordingly.',
+            a: 'Hetzner is a German company with German data centres and provides a Data Processing Agreement (DPA) immediately — this significantly simplifies GDPR documentation. For EU-internal inference workloads with no third-country transfer, the typical Schrems-II exposure does not apply. Your own legal assessment for your specific use case is recommended. Affiliate program ends June 15, 2026 — plan accordingly.',
           },
           {
             q: 'Can I use AWS EU regions for GDPR personal data?',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**Elige Hetzner GPU (€184/mes fijo, RTX 4000 SFF Ada, alemán) para el costo RGPD más predecible, pero ten en cuenta que solo ofrece facturación mensual. Elige Scaleway (€0,50–€2,50/h H100, francés) para cargas de trabajo de IA con facturación por hora flexible. Elige OVHcloud (€0,60–€3,00/h, francés) para cobertura multi-región empresarial y SLA.** Todos ofrecen cumplimiento total del RGPD, DPA y cero riesgo Schrems II.**',
+    leadAnswerBlock: '**Elige Hetzner GPU (€184/mes fijo, RTX 4000 SFF Ada, alemán) para el costo RGPD más predecible, pero ten en cuenta que solo ofrece facturación mensual. Elige Scaleway (€0,50–€2,50/h H100, francés) para cargas de trabajo de IA con facturación por hora flexible. Elige OVHcloud (€0,60–€3,00/h, francés) para cobertura multi-región empresarial y SLA.** Todos ofrecen cumplimiento total del RGPD y DPA. Para cargas de trabajo de inferencia intra-UE sin transferencia a terceros países, la exposición típica de Schrems-II no se aplica — se recomienda realizar una evaluación jurídica propia para su caso de uso específico.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor proveedor de GPU cloud RGPD de la UE?',
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: 'Por qué importa la elección de GPU cloud para el RGPD',
-        content: 'La sentencia Schrems II (TJUE 2020) invalidó el Privacy Shield. Los proveedores cloud de EE.UU. con regiones en la UE siguen expuestos estructuralmente a la ley de vigilancia estadounidense. Solo los proveedores nativos de la UE garantizan cero riesgo Schrems II. Los DPA del Artículo 28 también difieren: la mayoría de los DPA estándar de EE.UU. no satisfacen los requisitos de los DPO alemanes o franceses. Aplicación real: CNIL, BfDI y otros han emitido directrices sobre cumplimiento en la nube. Para equipos en Latinoamérica, los proveedores EU-nativos también ofrecen marcos de protección de datos equivalentes a la LFPDPPP (México), Ley 25.326 (Argentina) y Ley 1581 (Colombia).',
+        content: 'La sentencia Schrems II (TJUE 2020) invalidó el Privacy Shield. Los proveedores cloud de EE.UU. con regiones en la UE siguen expuestos estructuralmente a la ley de vigilancia estadounidense. Los proveedores nativos de la UE reducen significativamente la exposición a Schrems II para cargas de trabajo de inferencia intra-UE sin transferencia a países terceros. Los DPA del Artículo 28 también difieren: la mayoría de los DPA estándar de EE.UU. no satisfacen los requisitos de los DPO alemanes o franceses. Aplicación real: CNIL, BfDI y otros han emitido directrices sobre cumplimiento en la nube. Se recomienda realizar una evaluación jurídica propia para su caso de uso específico. Para equipos en Latinoamérica, los proveedores EU-nativos también ofrecen marcos de protección de datos equivalentes a la LFPDPPP (México), Ley 25.326 (Argentina) y Ley 1581 (Colombia).',
         items: [
           'Schrems II: Los datos de la UE no pueden fluir a servidores de EE.UU. sin salvaguardas extraordinarias',
           'DPA Artículo 28: Debe especificar objeto del tratamiento, duración, naturaleza, finalidad, tipos de datos, obligaciones del responsable, aprobación de subencargados',
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '✅ Precio mensual fijo (€184/mes GEX44, €500+/mes GEX130)',
           '✅ Empresa alemana, centro de datos alemán (certificado DIN ISO/IEC 27001)',
           '✅ DPA disponible de inmediato, sin negociaciones',
-          '✅ Sin riesgo Schrems II (infraestructura solo en la UE)',
+          '✅ Exposición Schrems-II significativamente reducida para cargas de trabajo intra-UE (infraestructura solo en la UE; se recomienda evaluación jurídica propia)',
           '❌ Sin facturación por hora/spot — solo compromiso mensual',
           '❌ Disponibilidad H100 limitada (no ofrecido)',
           '❌ Aprovisionamiento de 1–2 días (verificación de cuenta manual)',
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Hetzner cumple el RGPD por defecto?',
-            a: 'Sí. Empresa alemana, centros de datos alemanes, DPA disponible de inmediato. Sin riesgo Schrems II. El programa de afiliados termina el 15 de junio de 2026 — planifícalo.',
+            a: 'Hetzner es una empresa alemana con centros de datos alemanes y proporciona inmediatamente un acuerdo de tratamiento de datos (ATD) — esto simplifica considerablemente la documentación del RGPD. Para cargas de trabajo de inferencia intra-UE sin transferencia a terceros países, la exposición típica de Schrems-II no se aplica. Se recomienda realizar una evaluación jurídica propia para su caso de uso específico. El programa de afiliados termina el 15 de junio de 2026 — planifícalo.',
           },
           {
             q: '¿Puedo usar las regiones EU de AWS para datos personales bajo el RGPD?',
@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: '¿Hetzner cumple el RGPD por defecto?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Empresa alemana, centros de datos alemanes, DPA disponible de inmediato. Sin riesgo Schrems II.' } },
+        { '@type': 'Question', name: '¿Hetzner cumple el RGPD por defecto?', acceptedAnswer: { '@type': 'Answer', text: 'Hetzner es una empresa alemana con centros de datos alemanes y proporciona inmediatamente un acuerdo de tratamiento de datos (ATD) — esto simplifica considerablemente la documentación del RGPD. Para cargas de trabajo de inferencia intra-UE sin transferencia a terceros países, la exposición típica de Schrems-II no se aplica. Se recomienda una evaluación jurídica propia para su caso de uso específico.' } },
         { '@type': 'Question', name: '¿Qué es Schrems II?', acceptedAnswer: { '@type': 'Answer', text: 'Sentencia del TJUE 2020 que invalidó el Privacy Shield, restringiendo las transferencias de datos UE-EE.UU.' } },
         { '@type': 'Question', name: '¿Qué proveedor EU tiene mayor disponibilidad de H100?', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway, seguido de OVHcloud. Nebius aumenta rápidamente su inventario de H100 (Q3 2026 planificado).' } },
       ],
@@ -776,14 +776,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     title: 'GPU سحابية ممتثلة لـ GDPR في الاتحاد الأوروبي 2026: Hetzner مقابل Scaleway مقابل OVHcloud (مختبَر مايو 2026)',
     seoTitle: 'GPU سحابي ممتثل لـ GDPR 2026: Hetzner مقابل Scaleway',
-    metaDescription: 'Hetzner GPU بـ 184 يورو/شهر ثابت، Scaleway H100 بـ 0.50–2.50 يورو/ساعة، OVHcloud للمؤسسات: مقارنة 7 مزودين أوروبيين بدون مخاطر Schrems II.',
+    metaDescription: 'Hetzner GPU بـ 184 يورو/شهر ثابت، Scaleway H100 بـ 0.50–2.50 يورو/ساعة، OVHcloud للمؤسسات: مقارنة 7 مزودين أوروبيين بمخاطر Schrems-II منخفضة لأعباء العمل داخل الاتحاد الأوروبي.',
     intro: 'على مؤسسات الاتحاد الأوروبي التي تعالج بيانات شخصية استخدام مزودي GPU سحابية ممتثلين لـ GDPR. يقارن هذا الدليل سبعة خيارات أصلية لـ GDPR (Hetzner، Scaleway، OVHcloud، Nebius، Mistral، STACKIT، IONOS) مختبَرة في مايو 2026 من حيث السعر وموقف الامتثال وخطر Schrems II. يضمن جميع المزودين المميزين إقامة البيانات في الاتحاد الأوروبي ويقدّمون اتفاقيات DPA مناسبة. لفرق الخليج التي عليها الامتثال لقوانين مثل PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات)، يقدّم المزودون الأصليون في الاتحاد الأوروبي عقود حماية بيانات مكافئة، فضلاً عن خيارات سيادة البيانات الداعمة للنماذج العربية السيادية.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**اختر Hetzner GPU (184 يورو/شهرياً ثابتة، RTX 4000 SFF Ada، ألماني) لأكثر تكلفة GDPR قابلية للتنبؤ، لكن انتبه إلى أنه يقدّم فوترة شهرية فقط. اختر Scaleway (0.50–2.50 يورو/ساعة لـ H100، فرنسي) لأعباء عمل الذكاء الاصطناعي بفوترة مرنة بالساعة. اختر OVHcloud (0.60–3.00 يورو/ساعة، فرنسي) لتغطية متعددة المناطق للمؤسسات واتفاقية مستوى خدمة.** يقدّم الجميع امتثالاً كاملاً لـ GDPR وDPA وصفر خطر Schrems II.**',
+    leadAnswerBlock: '**اختر Hetzner GPU (184 يورو/شهرياً ثابتة، RTX 4000 SFF Ada، ألماني) لأكثر تكلفة GDPR قابلية للتنبؤ، لكن انتبه إلى أنه يقدّم فوترة شهرية فقط. اختر Scaleway (0.50–2.50 يورو/ساعة لـ H100، فرنسي) لأعباء عمل الذكاء الاصطناعي بفوترة مرنة بالساعة. اختر OVHcloud (0.60–3.00 يورو/ساعة، فرنسي) لتغطية متعددة المناطق للمؤسسات واتفاقية مستوى خدمة.** يقدّم الجميع امتثالاً كاملاً لـ GDPR واتفاقية DPA. بالنسبة لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة، لا ينطبق خطر Schrems-II النموذجي — يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة.**',
     quickAnswerTop: {
       question: 'ما أفضل مزود GPU سحابية ممتثل لـ GDPR في الاتحاد الأوروبي؟',
       answer: 'Hetzner GPU هو الأكثر قابلية للتنبؤ في التكاليف (184 يورو/شهرياً ثابتة لـ RTX 4000 SFF Ada، 20GB VRAM، مراكز بيانات ألمانية). فوترة شهرية ثابتة فقط — دون خيارات بالساعة. Scaleway (0.50–2.50 يورو/ساعة لـ H100، فرنسي) أفضل لأعباء عمل الذكاء الاصطناعي المرنة بفوترة بالساعة. OVHcloud (0.60–3.00 يورو/ساعة، متعدد المناطق، فرنسي) أفضل للمؤسسات. Mistral La Plateforme (دفع لكل رمز، فرنسي) أفضل للاستدلال فقط.',
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: 'لماذا يهم اختيار GPU السحابية لـ GDPR',
-        content: 'أبطل حكم Schrems II (محكمة العدل الأوروبية 2020) درع الخصوصية. يبقى مزودو السحابة الأمريكيون ذوو المناطق في الاتحاد الأوروبي معرّضين بنيوياً لقانون المراقبة الأمريكي. يضمن المزودون الأصليون في الاتحاد الأوروبي وحدهم صفر خطر Schrems II. تختلف اتفاقيات DPA بموجب المادة 28 أيضاً: لا تستوفي معظم اتفاقيات DPA الأمريكية القياسية متطلبات مسؤولي حماية البيانات الألمان أو الفرنسيين. الإنفاذ الحقيقي: أصدرت CNIL وBfDI وغيرها إرشادات حول الامتثال السحابي. لفرق الخليج، يقدّم المزودون الأصليون في الاتحاد الأوروبي أيضاً أطر حماية بيانات مكافئة لـ PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات).',
+        content: 'أبطل حكم Schrems II (محكمة العدل الأوروبية 2020) درع الخصوصية. يبقى مزودو السحابة الأمريكيون ذوو المناطق في الاتحاد الأوروبي معرّضين بنيوياً لقانون المراقبة الأمريكي. يقلّل المزودون الأصليون في الاتحاد الأوروبي بشكل كبير من مخاطر Schrems-II لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة. تختلف اتفاقيات DPA بموجب المادة 28 أيضاً: لا تستوفي معظم اتفاقيات DPA الأمريكية القياسية متطلبات مسؤولي حماية البيانات الألمان أو الفرنسيين. الإنفاذ الحقيقي: أصدرت CNIL وBfDI وغيرها إرشادات حول الامتثال السحابي. يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة. لفرق الخليج، يقدّم المزودون الأصليون في الاتحاد الأوروبي أيضاً أطر حماية بيانات مكافئة لـ PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات).',
         items: [
           'Schrems II: لا يمكن أن تتدفق بيانات الاتحاد الأوروبي إلى خوادم أمريكية دون ضمانات استثنائية',
           'DPA المادة 28: يجب تحديد موضوع المعالجة ومدتها وطبيعتها وغرضها وأنواع البيانات والتزامات المسؤول واعتماد المعالجين الفرعيين',
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '✅ سعر شهري ثابت (184 يورو/شهرياً GEX44، 500+ يورو/شهرياً GEX130)',
           '✅ شركة ألمانية، مركز بيانات ألماني (معتمد DIN ISO/IEC 27001)',
           '✅ DPA متاح فوراً، دون مفاوضات',
-          '✅ دون خطر Schrems II (بنية تحتية في الاتحاد الأوروبي فقط)',
+          '✅ انخفاض كبير في التعرض لـ Schrems-II لأعباء العمل داخل الاتحاد الأوروبي (بنية تحتية في الاتحاد الأوروبي فقط؛ يُنصح بإجراء تقييم قانوني خاص)',
           '❌ دون فوترة بالساعة/فورية — التزام شهري فقط',
           '❌ توافر H100 محدود (غير مُقدَّم)',
           '❌ تجهيز 1–2 يوم (تحقق حساب يدوي)',
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Hetzner ممتثل لـ GDPR افتراضياً؟',
-            a: 'نعم. شركة ألمانية، مراكز بيانات ألمانية، DPA متاح فوراً. دون خطر Schrems II.',
+            a: 'هيتزنر شركة ألمانية تمتلك مراكز بيانات ألمانية وتقدم اتفاقية معالجة البيانات (DPA) على الفور — مما يبسط توثيق اللائحة العامة لحماية البيانات بشكل كبير. بالنسبة لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة، لا ينطبق خطر Schrems-II النموذجي. يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة.',
           },
           {
             q: 'هل يمكنني استخدام مناطق AWS في الاتحاد الأوروبي لبيانات شخصية بموجب GDPR؟',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'هل Hetzner ممتثل لـ GDPR افتراضياً؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. شركة ألمانية، مراكز بيانات ألمانية، DPA متاح فوراً. دون خطر Schrems II.' } },
+        { '@type': 'Question', name: 'هل Hetzner ممتثل لـ GDPR افتراضياً؟', acceptedAnswer: { '@type': 'Answer', text: 'هيتزنر شركة ألمانية تمتلك مراكز بيانات ألمانية وتقدم اتفاقية معالجة البيانات (DPA) على الفور — مما يبسط توثيق اللائحة العامة لحماية البيانات بشكل كبير. بالنسبة لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة، لا ينطبق خطر Schrems-II النموذجي. يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة.' } },
         { '@type': 'Question', name: 'ما Schrems II؟', acceptedAnswer: { '@type': 'Answer', text: 'حكم محكمة العدل الأوروبية 2020 الذي أبطل درع الخصوصية، مقيّداً عمليات نقل البيانات بين الاتحاد الأوروبي والولايات المتحدة.' } },
         { '@type': 'Question', name: 'أي مزود في الاتحاد الأوروبي لديه أعلى توافر لـ H100؟', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway، يليه OVHcloud. يزيد Nebius مخزونه من H100 بسرعة (الربع الثالث 2026 مخطط له).' } },
       ],
@@ -1223,7 +1223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**Wählen Sie Hetzner GPU (€184/Monat pauschal, RTX 4000 SFF Ada, Deutsch) für die kostenvorhersagbarste DSGVO-Option, aber beachten Sie, dass nur Monatsabrechnung verfügbar ist. Wählen Sie Scaleway (€0,50–€2,50/h H100, Französisch) für AI-fokussierte Workloads mit Stundenabrechnung. Wählen Sie OVHcloud (€0,60–€3,00/h, Französisch) für Enterprise-Multi-Region-Abdeckung und SLA.** Alle bieten vollständige DSGVO-Konformität, AVV und null Schrems-II-Risiko.**',
+    leadAnswerBlock: '**Wählen Sie Hetzner GPU (€184/Monat pauschal, RTX 4000 SFF Ada, Deutsch) für die kostenvorhersagbarste DSGVO-Option, aber beachten Sie, dass nur Monatsabrechnung verfügbar ist. Wählen Sie Scaleway (€0,50–€2,50/h H100, Französisch) für AI-fokussierte Workloads mit Stundenabrechnung. Wählen Sie OVHcloud (€0,60–€3,00/h, Französisch) für Enterprise-Multi-Region-Abdeckung und SLA.** Alle bieten vollständige DSGVO-Konformität und AVV. Für EU-interne Inferenz-Workloads ohne Drittlandübermittlung entfällt das typische Schrems-II-Risikopotenzial — eine eigene rechtliche Prüfung für Ihren spezifischen Anwendungsfall wird empfohlen.**',
     quickAnswerTop: {
       de: {
         question: 'Welcher EU-DSGVO-Cloud-GPU-Anbieter ist am besten?',
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: 'Warum die DSGVO-Cloud-GPU-Wahl wichtig ist',
-        content: 'Das Schrems-II-Urteil (EuGH 2020) invalidierte Privacy Shield. US-Cloud-Anbieter mit EU-Regionen bleiben strukturell US-Überwachungsgesetzen ausgesetzt. Nur EU-native Anbieter garantieren null Schrems-II-Risiko. Artikel-28-AVVs unterscheiden sich auch: Die meisten US-Standard-AVVs erfüllen nicht die Anforderungen deutscher/französischer Datenschutzbeauftragte.',
+        content: 'Das Schrems-II-Urteil (EuGH 2020) invalidierte Privacy Shield. US-Cloud-Anbieter mit EU-Regionen bleiben strukturell US-Überwachungsgesetzen ausgesetzt. EU-native Anbieter reduzieren das Schrems-II-Risikopotenzial für EU-interne Inferenz-Workloads ohne Drittlandübermittlung erheblich. Artikel-28-AVVs unterscheiden sich auch: Die meisten US-Standard-AVVs erfüllen nicht die Anforderungen deutscher/französischer Datenschutzbeauftragte. Eine eigene rechtliche Prüfung für Ihren spezifischen Anwendungsfall wird empfohlen.',
         items: [
           'Schrems II: EU-Daten können ohne außergewöhnliche Schutzmaßnahmen nicht zu US-Servern fließen',
           'Artikel 28 AVV: Muss Verarbeitungsgegenstand, Dauer, Natur, Zweck, Datentypen, Kontrollantenverpflichtungen, Untervergeber-Genehmigung angeben',
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         strengths: [
           'Flat-Rate Kostenvorteil: €184/Mo für RTX 4000 SFF Ada mit 20GB VRAM; OVHcloud/Scaleway berechnen €0,45–€2,50/h, was €324–€1800/Mo für ähnliche Konfigurationen entspricht',
-          'Deutsche Compliance: Hetzner ist deutsches Unternehmen, vollständige DSGVO, BSI-konform, keine Schrems-II-Exposition',
+          'Deutsche Compliance: Hetzner ist deutsches Unternehmen, vollständige DSGVO, BSI-konform; für EU-interne Inferenz-Workloads ohne Drittlandübermittlung entfällt das typische Schrems-II-Risikopotenzial',
           'Transparente Preise: Keine versteckten Gebühren, keine Preiserhöhungen während des Monats, sofortiger AVV (Auftragsverarbeitungsvertrag)',
         ],
         weaknesses: [
@@ -1391,7 +1391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         strengths: [
           'H100 für AI: Scaleway hat die beste H100-Verfügbarkeit in der EU. €0,50–€2,50/h je nach Spitzenzeiten und Region',
           'Stündliche Abrechnung: Perfekt für Experimente, Training, Inferenz-Batches. Starten Sie, trainieren Sie, stoppen Sie — zahlen Sie nur für das, was Sie nutzen',
-          'Französische Compliance: Scaleway ist französisches Unternehmen, CNIL-zertifiziert, vollständiger EU-AVV, keine Schrems-II-Exposition',
+          'Französische Compliance: Scaleway ist französisches Unternehmen, CNIL-zertifiziert, vollständiger EU-AVV; für EU-interne Workloads ohne Drittlandübermittlung entfällt das typische Schrems-II-Risikopotenzial',
           'Ausgereifte API: Terraform, Kubernetes, Python SDK für automatisierte Bereitstellung und Multi-GPU-Orchestrierung',
         ],
         weaknesses: [
@@ -1501,7 +1501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         bestFor: 'Deutsche KMUs, Schulen, öffentliche Verwaltungen. Organisationen, die eine etablierte deutsche Marke mit guten Preisen bevorzugen.',
         avoidIf: 'Sie benötigen H100 oder B200 (Scaleway, Nebius). Sie benötigen Enterprise-SLA und Multi-Region (OVHcloud).',
-        callout: 'DSGVO-Compliance ausgelöst: Deutsche Unternehmen, unbegrenzte deutsche DPA, kein Schrems-II-Risiko. Gute Wahl für deutsche Unternehmen.',
+        callout: 'DSGVO-Compliance: Deutsches Unternehmen, unbegrenzte deutsche AVV, sofort verfügbar. Für EU-interne Inferenz-Workloads ohne Drittlandübermittlung entfällt das typische Schrems-II-Risikopotenzial. Eigene rechtliche Prüfung empfohlen.',
       },
       mistralSection: {
         id: 'mistral-inference-only',
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist Hetzner standardmäßig DSGVO-konform?',
-            a: 'Ja. Deutsches Unternehmen, deutsche Rechenzentren, AVV sofort verfügbar. Kein Schrems-II-Risiko.',
+            a: 'Hetzner ist ein deutsches Unternehmen mit deutschen Rechenzentren und stellt sofort einen Auftragsverarbeitungsvertrag (AVV) bereit — das vereinfacht die DSGVO-Dokumentation erheblich. Für EU-interne Inferenz-Workloads ohne Drittlandübermittlung entfällt das typische Schrems-II-Risikopotenzial. Eine eigene rechtliche Prüfung für Ihren spezifischen Anwendungsfall wird empfohlen.',
           },
           {
             q: 'Was ist Schrems II?',
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Ist Hetzner standardmäßig DSGVO-konform?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Deutsches Unternehmen, deutsche Rechenzentren, AVV sofort verfügbar. Kein Schrems-II-Risiko.' } },
+        { '@type': 'Question', name: 'Ist Hetzner standardmäßig DSGVO-konform?', acceptedAnswer: { '@type': 'Answer', text: 'Hetzner ist ein deutsches Unternehmen mit deutschen Rechenzentren und stellt sofort einen Auftragsverarbeitungsvertrag (AVV) bereit — das vereinfacht die DSGVO-Dokumentation erheblich. Für EU-interne Inferenz-Workloads ohne Drittlandübermittlung entfällt das typische Schrems-II-Risikopotenzial. Eine eigene rechtliche Prüfung für Ihren spezifischen Anwendungsfall wird empfohlen.' } },
         { '@type': 'Question', name: 'Was ist Schrems II?', acceptedAnswer: { '@type': 'Answer', text: 'EuGH-Urteil von 2020, das Privacy Shield für ungültig erklärte und US-EU-Datenübertragungen einschränkte.' } },
         { '@type': 'Question', name: 'Welcher EU-Anbieter hat die meiste H100-Verfügbarkeit?', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway, gefolgt von OVHcloud. Nebius erweitert H100-Bestand schnell (Q3 2026 geplant).' } },
       ],
@@ -1605,7 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**Choisissez Hetzner GPU (€184/mois forfaitaire, RTX 4000 SFF Ada, Allemand) pour le coût RGPD le plus prévisible, mais notez que seule la facturation mensuelle est disponible. Choisissez Scaleway (€0,50–€2,50/h H100, Français) pour les charges de travail IA flexibles avec facturation à l\'heure. Choisissez OVHcloud (€0,60–€3,00/h, Français) pour la couverture multi-régions d\'entreprise et le SLA.** Tous offrent une conformité RGPD complète, un DPA et un risque Schrems II nul.**',
+    leadAnswerBlock: '**Choisissez Hetzner GPU (€184/mois forfaitaire, RTX 4000 SFF Ada, Allemand) pour le coût RGPD le plus prévisible, mais notez que seule la facturation mensuelle est disponible. Choisissez Scaleway (€0,50–€2,50/h H100, Français) pour les charges de travail IA flexibles avec facturation à l\'heure. Choisissez OVHcloud (€0,60–€3,00/h, Français) pour la couverture multi-régions d\'entreprise et le SLA.** Tous offrent une conformité RGPD complète et un DPA. Pour les charges de travail d\'inférence intra-UE sans transfert vers des pays tiers, l\'exposition typique Schrems-II ne s\'applique pas — une évaluation juridique propre à votre cas d\'usage est recommandée.**',
     quickAnswerTop: {
       fr: {
         question: 'Quel fournisseur GPU cloud RGPD UE est le meilleur ?',
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: 'Pourquoi le choix du GPU Cloud RGPD est important',
-        content: 'L\'arrêt Schrems II (CJUE 2020) a annulé le Bouclier de protection des données. Les fournisseurs de cloud américains disposant de régions UE restent structurellement exposés à la loi de surveillance américaine. Seuls les fournisseurs natifs de l\'UE garantissent zéro risque Schrems II. Les DPA de l\'article 28 diffèrent également : la plupart des DPA standards américains ne satisfont pas les exigences des DPD allemands/français. Application réelle : CNIL et autres ont émis des recommandations selon lesquelles la résidence des données au sein de l\'UE avec un DPA approprié est la norme.',
+        content: 'L\'arrêt Schrems II (CJUE 2020) a annulé le Bouclier de protection des données. Les fournisseurs de cloud américains disposant de régions UE restent structurellement exposés à la loi de surveillance américaine. Les fournisseurs natifs de l\'UE réduisent considérablement l\'exposition Schrems-II pour les charges de travail d\'inférence intra-UE sans transfert vers des pays tiers. Les DPA de l\'article 28 diffèrent également : la plupart des DPA standards américains ne satisfont pas les exigences des DPD allemands/français. Application réelle : CNIL et autres ont émis des recommandations selon lesquelles la résidence des données au sein de l\'UE avec un DPA approprié est la norme. Une évaluation juridique propre à votre cas d\'usage est recommandée.',
         items: [
           'Schrems II : Les données UE ne peuvent pas être transférées vers des serveurs américains sans mesures de protection extraordinaires',
           'DPA Article 28 : Doit spécifier le sujet du traitement, la durée, la nature, l\'objectif, les types de données, les obligations du responsable, l\'approbation du sous-traitant',
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         strengths: [
           'Avantage tarifaire forfaitaire : €184/mois pour RTX 4000 SFF Ada avec 20 Go VRAM ; OVHcloud/Scaleway facturent €0,45–€2,50/h, ce qui équivaut à €324–€1800/mois pour des configurations similaires',
-          'Conformité allemande : Hetzner est une entreprise allemande, RGPD complet, conforme BSI, aucune exposition Schrems II',
+          'Conformité allemande : Hetzner est une entreprise allemande, RGPD complet, conforme BSI ; pour les charges de travail d\'inférence intra-UE sans transfert vers des pays tiers, l\'exposition typique Schrems-II ne s\'applique pas',
           'Tarification transparente : Pas de frais cachés, pas d\'augmentations tarifaires au cours du mois, DPA (Contrat de traitement des données) immédiat',
         ],
         weaknesses: [
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         strengths: [
           'H100 pour l\'IA : Scaleway a la meilleure disponibilité H100 en UE. €0,50–€2,50/h selon les heures de pointe et la région',
           'Facturation horaire : Parfait pour les expériences, entraînement, lots d\'inférence. Commencez, entraînez, arrêtez — payez uniquement ce que vous utilisez',
-          'Conformité française : Scaleway est une entreprise française, CNIL-certifiée, DPA UE complet, aucune exposition Schrems II',
+          'Conformité française : Scaleway est une entreprise française, CNIL-certifiée, DPA UE complet ; pour les charges de travail intra-UE sans transfert vers des pays tiers, l\'exposition typique Schrems-II ne s\'applique pas',
           'API mature : Terraform, Kubernetes, SDK Python pour provisioning automatisé et orchestration multi-GPU',
         ],
         weaknesses: [
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         bestFor: 'PME allemandes, écoles, administration publique. Organisations préférant marque allemande établie avec bons tarifs.',
         avoidIf: 'Avez besoin H100 ou B200 (Scaleway, Nebius). Avez besoin SLA entreprise et multi-région (OVHcloud).',
-        callout: 'RGPD déclenché : Entreprise allemande, DPA allemand illimité, aucun risque Schrems II. Bon choix pour entreprises allemandes.',
+        callout: 'RGPD : Entreprise allemande, DPA allemand illimité, disponible immédiatement. Pour les charges de travail d\'inférence intra-UE sans transfert vers des pays tiers, l\'exposition typique Schrems-II ne s\'applique pas. Évaluation juridique propre recommandée.',
       },
       mistralSection: {
         id: 'mistral-inference-only',
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Hetzner conforme RGPD par défaut ?',
-            a: 'Oui. Entreprise allemande, data centers allemands, DPA immédiatement disponible. Aucun risque Schrems II.',
+            a: 'Hetzner est une société allemande avec des centres de données allemands et fournit immédiatement un accord de traitement des données (ATD) — ce qui simplifie considérablement la documentation RGPD. Pour les charges de travail d\'inférence intra-UE sans transfert vers des pays tiers, l\'exposition typique Schrems-II ne s\'applique pas. Une évaluation juridique propre à votre cas d\'usage est recommandée.',
           },
           {
             q: 'Qu\'est-ce que Schrems II ?',
@@ -1951,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Hetzner conforme RGPD par défaut ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Entreprise allemande, data centers allemands, DPA immédiatement disponible. Aucun risque Schrems II.' } },
+        { '@type': 'Question', name: 'Hetzner conforme RGPD par défaut ?', acceptedAnswer: { '@type': 'Answer', text: 'Hetzner est une société allemande avec des centres de données allemands et fournit immédiatement un accord de traitement des données (ATD) — ce qui simplifie considérablement la documentation RGPD. Pour les charges de travail d\'inférence intra-UE sans transfert vers des pays tiers, l\'exposition typique Schrems-II ne s\'applique pas. Une évaluation juridique propre à votre cas d\'usage est recommandée.' } },
         { '@type': 'Question', name: 'Qu\'est-ce que Schrems II ?', acceptedAnswer: { '@type': 'Answer', text: 'Arrêt CJUE 2020 annulant Bouclier de protection données, restreignant transferts données US-UE.' } },
         { '@type': 'Question', name: 'Fournisseur UE plus disponibilité H100 ?', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway, suivi OVHcloud. Nebius élargit stock H100 rapidement (Q3 2026 prévu).' } },
       ],
@@ -1967,7 +1967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**Hetzner GPU（月額¥26,700定額、RTX 4000 SFF Ada、ドイツ）を、最も予測可能なGDPRコストの選択肢として推奨しますが、月額請求のみである点に注意してください。Scaleway（時間当たり¥73～¥363の H100、フランス）は、柔軟な時間単位請求を備えたAIワークロードに最適です。OVHcloud（時間当たり€0.60～€3.00、フランス）は、エンタープライズ向けマルチリージョンカバレッジとSLAに最適です。** すべてのプロバイダーが完全なGDPR準拠、DPA、Schrems IIリスク無を提供しています。**',
+    leadAnswerBlock: '**Hetzner GPU（月額¥26,700定額、RTX 4000 SFF Ada、ドイツ）を、最も予測可能なGDPRコストの選択肢として推奨しますが、月額請求のみである点に注意してください。Scaleway（時間当たり¥73～¥363の H100、フランス）は、柔軟な時間単位請求を備えたAIワークロードに最適です。OVHcloud（時間当たり€0.60～€3.00、フランス）は、エンタープライズ向けマルチリージョンカバレッジとSLAに最適です。** すべてのプロバイダーが完全なGDPR準拠とDPAを提供しています。第三国への転送なしのEU内推論ワークロードには、典型的なSchrems-IIの懸念は適用されません。特定のユースケースに対する独自の法的評価を推奨します。**',
     quickAnswerTop: {
       ja: {
         question: 'EU GDPR準拠のクラウドGPUプロバイダーはどれが最適？',
@@ -1992,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: 'なぜGDPRクラウドGPU選択が重要なのか',
-        content: 'Schrems II判決（CJEU 2020）はPrivacy Shieldを無効化しました。EUリージョンを備えた米国クラウドプロバイダーは、構造的に米国監視法に露出しています。EU固有のプロバイダーのみがSchrems IIリスク無を保証します。Article 28 DPAも異なります：ほとんどの米国標準DPAはドイツ/フランスのDPO要件を満たしていません。実際の執行：CNIL、BfDI、その他がクラウドコンプライアンスに関するガイダンスを発行しています。',
+        content: 'Schrems II判決（CJEU 2020）はPrivacy Shieldを無効化しました。EUリージョンを備えた米国クラウドプロバイダーは、構造的に米国監視法に露出しています。EUネイティブプロバイダーは、第三国への転送なしのEU内推論ワークロードにおけるSchrems-IIリスクを大幅に軽減します。Article 28 DPAも異なります：ほとんどの米国標準DPAはドイツ/フランスのDPO要件を満たしていません。実際の執行：CNIL、BfDI、その他がクラウドコンプライアンスに関するガイダンスを発行しています。特定のユースケースに対する独自の法的評価を推奨します。',
         items: [
           'Schrems II：EUデータは特別な保護対策なしに米国サーバーに流出できません',
           'Article 28 DPA：処理のサブジェクト、期間、性質、目的、データタイプ、コントローラー義務、サブプロセッサ承認を指定する必要があります',
@@ -2110,7 +2110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         strengths: [
           '定額コスト優位：RTX 4000 SFF Ada 20GBで月額¥26,700；OVHcloud/Scalewayは時間当たり¥65～¥363を請求し、同様の構成で月額¥47,000～¥2,600,000になります',
-          'ドイツコンプライアンス：Hetznerはドイツ企業、完全なGDPR、BSI準拠、Schrems II露出なし',
+          'ドイツコンプライアンス：Hetznerはドイツ企業、完全なGDPR、BSI準拠；第三国への転送なしのEU内推論ワークロードには典型的なSchrems-IIリスクは適用されません',
           '透明な価格設定：隠れた手数料なし、月内の価格上昇なし、即座のDPA（データ処理契約）',
         ],
         weaknesses: [
@@ -2136,7 +2136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         strengths: [
           'AIのH100：Scalewayはアラ最高のH100可用性。ピークアワーと地域に応じて時間当たり¥73～¥363',
           '時間単位請求：実験、トレーニング、推論バッチに最適。開始、トレーニング、停止——使用した内容のみを支払う',
-          'フランスのコンプライアンス：Scalewayはフランス企業、CNIL認証、完全なEU DPA、Schrems II露出なし',
+          'フランスのコンプライアンス：Scalewayはフランス企業、CNIL認証、完全なEU DPA；EU内ワークロードにおける典型的なSchrems-IIリスクは適用されません',
           '成熟したAPI：Terraform、Kubernetes、マルチGPUオーケストレーション用のPython SDK',
         ],
         weaknesses: [
@@ -2246,7 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         bestFor: 'ドイツのSME、学校、公的管理。確立されたドイツブランドと良い価格を好む組織。',
         avoidIf: 'H100またはB200が必要（Scaleway、Nebius選択）。エンタープライズSLAとマルチリージョン（OVHcloud選択）が必要です。',
-        callout: 'GDPR有効化：ドイツ企業、無制限のドイツDPA、Schrems IIリスクなし。ドイツ企業向けの良い選択肢。',
+        callout: 'GDPR：ドイツ企業、無制限のドイツDPA、即時利用可能。第三国への転送なしのEU内推論ワークロードには典型的なSchrems-IIリスクは適用されません。独自の法的評価を推奨します。',
       },
       mistralSection: {
         id: 'mistral-inference-only',
@@ -2273,7 +2273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Hetznerはデフォルトで GDPR準拠ですか？',
-            a: 'はい。ドイツ企業、ドイツデータセンター、すぐに使用可能なDPA。Schrems IIリスクはありません。',
+            a: 'HetznerはドイツのデータセンターをもつドイツのGmbHであり、データ処理契約（DPA）を即座に提供します。これによりGDPRの文書化が大幅に簡素化されます。第三国への転送なしのEU内推論ワークロードには、典型的なSchrems-IIの懸念は適用されません。特定のユースケースに対する独自の法的評価を推奨します。',
           },
           {
             q: 'Schrems IIとは何ですか？',
@@ -2313,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Hetznerはデフォルトで GDPR準拠ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。ドイツ企業、ドイツデータセンター、すぐに使用可能なDPA。Schrems IIリスクはありません。' } },
+        { '@type': 'Question', name: 'Hetznerはデフォルトで GDPR準拠ですか？', acceptedAnswer: { '@type': 'Answer', text: 'HetznerはドイツのデータセンターをもつドイツのGmbHであり、データ処理契約（DPA）を即座に提供します。第三国への転送なしのEU内推論ワークロードには、典型的なSchrems-IIの懸念は適用されません。特定のユースケースに対する独自の法的評価を推奨します。' } },
         { '@type': 'Question', name: 'Schrems IIとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2020年CJEU判決、Privacy Shield無効化、US-EUデータ転送制限。' } },
         { '@type': 'Question', name: 'EU プロバイダーは最もH100可用性がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway、次にOVHcloud。Nebius H100在庫を急速に拡大（Q3 2026予定）。' } },
       ],
@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**选择Hetzner GPU（$200/月固定价格、RTX 4000 SFF Ada、德国）以获得最可预测的GDPR成本，但请注意仅提供月度结算。选择Scaleway（$0.54-$2.70/小时 H100、法国）用于具有灵活小时计费的AI工作负载。选择OVHcloud（$0.65-$3.24/小时、法国）用于企业多区域覆盖和SLA。** 所有提供商均提供完整GDPR合规、DPA和零Schrems II风险。**',
+    leadAnswerBlock: '**选择Hetzner GPU（$200/月固定价格、RTX 4000 SFF Ada、德国）以获得最可预测的GDPR成本，但请注意仅提供月度结算。选择Scaleway（$0.54-$2.70/小时 H100、法国）用于具有灵活小时计费的AI工作负载。选择OVHcloud（$0.65-$3.24/小时、法国）用于企业多区域覆盖和SLA。** 所有提供商均提供完整GDPR合规和DPA。对于无第三国传输的欧盟内部推理工作负载，典型的Schrems-II风险不适用——建议针对您的具体用例进行自己的法律评估。**',
     quickAnswerTop: {
       zh: {
         question: '哪个欧盟GDPR合规云GPU提供商最适合？',
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: '为什么GDPR云GPU选择很重要',
-        content: 'Schrems II判决（CJEU 2020）废除了隐私盾。配置EU区域的美国云提供商在结构上暴露于美国监视法。只有EU原生提供商才能保证零Schrems II风险。Article 28 DPA也有所不同：大多数美国标准DPA不满足德国/法国DPO要求。实际执法：CNIL、BfDI及其他监管机构已发布关于云合规性的指导。',
+        content: 'Schrems II判决（CJEU 2020）废除了隐私盾。配置EU区域的美国云提供商在结构上暴露于美国监视法。EU原生提供商大幅降低了无第三国传输的欧盟内部推理工作负载的Schrems-II风险。Article 28 DPA也有所不同：大多数美国标准DPA不满足德国/法国DPO要求。实际执法：CNIL、BfDI及其他监管机构已发布关于云合规性的指导。建议针对您的具体用例进行自己的法律评估。',
         items: [
           'Schrems II：EU数据在没有特殊保护措施的情况下不能流向美国服务器',
           'Article 28 DPA：必须指定处理对象、期限、性质、目的、数据类型、控制者义务、子处理器批准',
@@ -2472,7 +2472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         strengths: [
           '固定价格优势：RTX 4000 SFF Ada 20GB $200/月；OVHcloud/Scaleway收费$0.49-$2.70/小时，相当于类似配置$280-$1,900/月',
-          '德国合规性：Hetzner是德国公司、完整GDPR、BSI兼容、无Schrems II曝露',
+          '德国合规性：Hetzner是德国公司、完整GDPR、BSI兼容；对于无第三国传输的欧盟内部推理工作负载，典型的Schrems-II风险不适用',
           '透明定价：无隐藏费用、月内无价格上涨、即时DPA（数据处理协议）',
         ],
         weaknesses: [
@@ -2498,7 +2498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         strengths: [
           '用于AI的H100：Scaleway在EU拥有最佳H100可用性。根据高峰期和地区$0.54-$2.70/小时',
           '小时计费：完美用于实验、训练、推理批处理。启动、训练、停止——仅支付使用的内容',
-          '法国合规性：Scaleway是法国公司、CNIL认证、完整EU DPA、无Schrems II曝露',
+          '法国合规性：Scaleway是法国公司、CNIL认证、完整EU DPA；对于欧盟内部工作负载，典型的Schrems-II风险不适用',
           '成熟的API：Terraform、Kubernetes、Python SDK用于自动化配置和多GPU编排',
         ],
         weaknesses: [
@@ -2608,7 +2608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         bestFor: '德国中小企业、学校、公共行政。倾向于成熟德国品牌和良好价格的组织。',
         avoidIf: '您需要H100或B200（选择Scaleway、Nebius）。您需要企业SLA和多区域（选择OVHcloud）。',
-        callout: 'GDPR启用：德国公司、无限制德国DPA、无Schrems II风险。德国企业的良好选择。',
+        callout: 'GDPR：德国公司、无限制德国DPA、即时可用。对于无第三国传输的欧盟内部推理工作负载，典型的Schrems-II风险不适用。建议进行自己的法律评估。',
       },
       mistralSection: {
         id: 'mistral-inference-only',
@@ -2635,7 +2635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Hetzner默认符合GDPR吗？',
-            a: '是的。德国公司、德国数据中心、即时可用的DPA。无Schrems II风险。',
+            a: 'Hetzner是一家德国公司，拥有德国数据中心，可立即提供数据处理协议（DPA）——这大大简化了GDPR文档工作。对于无第三国传输的欧盟内部推理工作负载，典型的Schrems-II风险不适用。建议针对您的具体用例进行自己的法律评估。',
           },
           {
             q: 'Schrems II是什么？',
@@ -2675,7 +2675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Hetzner默认符合GDPR吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。德国公司、德国数据中心、即时可用的DPA。无Schrems II风险。' } },
+        { '@type': 'Question', name: 'Hetzner默认符合GDPR吗？', acceptedAnswer: { '@type': 'Answer', text: 'Hetzner是一家德国公司，拥有德国数据中心，可立即提供数据处理协议（DPA）——这大大简化了GDPR文档工作。对于无第三国传输的欧盟内部推理工作负载，典型的Schrems-II风险不适用。建议针对您的具体用例进行自己的法律评估。' } },
         { '@type': 'Question', name: 'Schrems II是什么？', acceptedAnswer: { '@type': 'Answer', text: '2020年CJEU判决、废除隐私盾、限制US-EU数据转移。' } },
         { '@type': 'Question', name: '哪个EU提供商有最多H100可用性？', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway、其次OVHcloud。Nebius快速扩展H100库存（Q3 2026计划）。' } },
       ],
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Advanced',
-    leadAnswerBlock: '**비용 예측 가능성을 위해서는 Hetzner GPU(월 €184 정액, RTX 4000 SFF Ada, 독일)를 선택하십시오. 단, 월 정액 청구만 가능하며 시간제 옵션은 없습니다. 유연한 시간제 청구가 있는 AI 워크로드에는 Scaleway(H100 €0.50–€2.50/시간, 프랑스)를 선택하십시오. 엔터프라이즈 다중 지역 커버리지와 SLA를 위해서는 OVHcloud(€0.60–€3.00/시간, 프랑스)를 선택하십시오.** 모든 공급업체는 완전한 GDPR 준수, DPA 및 Schrems II 위험 없음을 제공합니다.**',
+    leadAnswerBlock: '**비용 예측 가능성을 위해서는 Hetzner GPU(월 €184 정액, RTX 4000 SFF Ada, 독일)를 선택하십시오. 단, 월 정액 청구만 가능하며 시간제 옵션은 없습니다. 유연한 시간제 청구가 있는 AI 워크로드에는 Scaleway(H100 €0.50–€2.50/시간, 프랑스)를 선택하십시오. 엔터프라이즈 다중 지역 커버리지와 SLA를 위해서는 OVHcloud(€0.60–€3.00/시간, 프랑스)를 선택하십시오.** 모든 공급업체는 완전한 GDPR 준수와 DPA를 제공합니다. 제3국 이전 없는 EU 내부 추론 워크로드의 경우 일반적인 Schrems-II 노출은 적용되지 않습니다 — 특정 사용 사례에 대한 자체 법적 평가를 권장합니다.**',
     quickAnswerTop: {
       ko: {
         question: 'EU GDPR 클라우드 GPU 공급업체 중 최선은 무엇입니까?',
@@ -2716,7 +2716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyMatters: {
         id: 'why-gdpr-matters',
         title: 'GDPR 클라우드 GPU 선택이 중요한 이유',
-        content: 'Schrems II 판결(CJEU 2020)은 Privacy Shield를 무효화했습니다. EU 리전을 보유한 미국 클라우드 공급업체는 미국 감시법에 구조적으로 노출되어 있습니다. EU 네이티브 공급업체만이 Schrems II 위험 없음을 보장합니다. 28조 DPA도 다릅니다: 대부분의 미국 표준 DPA는 독일/프랑스 DPO 요건을 충족하지 않습니다. 실제 집행: 독일 BfDI, 프랑스 CNIL, 유럽 법원은 적절한 DPA를 갖춘 EU 데이터 상주가 표준임을 안내했습니다.',
+        content: 'Schrems II 판결(CJEU 2020)은 Privacy Shield를 무효화했습니다. EU 리전을 보유한 미국 클라우드 공급업체는 미국 감시법에 구조적으로 노출되어 있습니다. EU 네이티브 공급업체는 제3국 이전 없는 EU 내부 추론 워크로드에서 Schrems-II 위험을 크게 줄입니다. 28조 DPA도 다릅니다: 대부분의 미국 표준 DPA는 독일/프랑스 DPO 요건을 충족하지 않습니다. 실제 집행: 독일 BfDI, 프랑스 CNIL, 유럽 법원은 적절한 DPA를 갖춘 EU 데이터 상주가 표준임을 안내했습니다. 특정 사용 사례에 대한 자체 법적 평가를 권장합니다.',
         items: [
           'Schrems II: EU 데이터는 특별한 보호 조치 없이 미국 서버로 이전 불가',
           '28조 DPA: 처리 대상, 기간, 성격, 목적, 데이터 유형, 컨트롤러 의무, 하위 처리자 승인을 명시해야 함',
@@ -2841,7 +2841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '✅ 월 정액 가격(GEX44 월 €184, GEX130 월 €500+)',
           '✅ 독일 회사, 독일 데이터 센터(DIN ISO/IEC 27001 인증)',
           '✅ 즉시 DPA 제공, 협상 불필요',
-          '✅ Schrems II 위험 없음(EU 전용 인프라)',
+          '✅ 제3국 이전 없는 EU 내부 추론에서 Schrems-II 노출 크게 감소(EU 전용 인프라)',
           '❌ 시간제/스팟 청구 없음 — 월 약정만 가능',
           '❌ H100 가용성 없음(미제공)',
           '❌ 1–2일 프로비저닝(수동 계정 인증)',
@@ -2956,7 +2956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Hetzner는 기본적으로 GDPR을 준수합니까?',
-            a: '예. 독일 회사, 독일 데이터 센터, 즉시 DPA 제공. Schrems II 위험 없음.',
+            a: 'Hetzner는 독일 데이터 센터를 보유한 독일 회사로, 즉시 데이터 처리 계약(DPA)을 제공합니다 — 이는 GDPR 문서화를 크게 간소화합니다. 제3국 이전 없는 EU 내부 추론 워크로드의 경우 일반적인 Schrems-II 노출은 적용되지 않습니다. 특정 사용 사례에 대한 자체 법적 평가를 권장합니다.',
           },
           {
             q: 'GDPR 개인 데이터에 AWS EU 리전을 사용할 수 있습니까?',

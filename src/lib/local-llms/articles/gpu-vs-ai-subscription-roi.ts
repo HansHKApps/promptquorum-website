@@ -1248,7 +1248,7 @@ schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'GPU vs ChatGPT Plus 2026: Wann sich der GPU-Kauf gegenüber dem Abonnement amortisiert',
-      'description': 'Gebrauchte RTX 5060 Ti (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18 Monaten. 5-Jahres-ROI für alle Nutzungsebenen. DSGVO-konform.',
+      'description': 'Gebrauchte RTX 5060 Ti (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18 Monaten. 5-Jahres-ROI für alle Nutzungsebenen. DSGVO-kompatible Architektur (keine Inferenzdaten an Drittanbieter).',
       'url': 'https://www.promptquorum.com/de/local-llms/gpu-vs-ai-subscription-roi',
       'datePublished': '2026-04-05',
       'dateModified': '2026-06-14',

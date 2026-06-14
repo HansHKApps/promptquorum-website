@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Cloud AI = cross-border data transfer requiring GDPR Article 44 justification',
           'Local LLM = data stays on EU hardware, no transfer, no Article 44 obligation',
-          'Qwen 3.6 27B: Apache 2.0, 92.1% HumanEval, 16 GB VRAM, GDPR-compliant by design',
+          'Qwen 3.6 27B: Apache 2.0, 92.1% HumanEval (EvalPlus), 16 GB VRAM, GDPR-compatible architecture (no cross-border data transfer at inference time; compliance also requires organisational controls)',
           'EU AI Act 2026: documentation and transparency obligations favour auditable local deployments',
           'Open weights = auditable model behaviour — unlike black-box cloud APIs',
         ],
@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Cloud-KI = grenzueberschreitende Datenuebertragung, die DSGVO Art. 44-Rechtfertigung erfordert',
           'Lokales LLM = Daten bleiben auf EU-Hardware, keine Uebertragung, keine Art.-44-Verpflichtung',
-          'Qwen 3.6 27B: Apache 2.0, 92,1% HumanEval, 16 GB VRAM, DSGVO-konform per Design',
+          'Qwen 3.6 27B: Apache 2.0, 92,1% HumanEval (EvalPlus), 16 GB VRAM, DSGVO-kompatible Architektur (keine grenzüberschreitende Datenübertragung bei der Inferenz; Konformität erfordert zusätzlich organisatorische Maßnahmen)',
           'EU KI-Gesetz 2026: Dokumentations- und Transparenzpflichten beguenstigen pruefbare lokale Deployments',
           'Open Weights = auditierbare Modellverhalten — im Gegensatz zu Blackbox-Cloud-APIs',
         ],
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'IA cloud = transfert de données transfrontalier nécessitant une justification RGPD Article 44',
           'LLM local = données sur matériel UE, pas de transfert, pas d\'obligation Article 44',
-          'Qwen 3.6 27B : Apache 2.0, 92,1% HumanEval, 16 Go VRAM, conforme RGPD par conception',
+          'Qwen 3.6 27B : Apache 2.0, 92,1% HumanEval (EvalPlus), 16 Go VRAM, architecture compatible RGPD (aucun transfert transfrontalier de données lors de l'inférence ; la conformité nécessite également des mesures organisationnelles)',
           'Loi IA UE 2026 : obligations de documentation et transparence favorisent les déploiements locaux auditables',
           'Open weights = comportement de modèle auditable — contrairement aux APIs cloud boîtes noires',
         ],
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'クラウドAI = GDPR第44条の正当化が必要な越境データ転送',
           'ローカルLLM = EUハードウェア上のデータ、転送なし、第44条の義務なし',
-          'Qwen 3.6 27B：Apache 2.0、92.1% HumanEval、16 GB VRAM、設計によるGDPR準拠',
+          'Qwen 3.6 27B：Apache 2.0、92.1% HumanEval（EvalPlus）、16 GB VRAM、GDPR適合アーキテクチャ（推論時にクロスボーダーのデータ転送なし；コンプライアンスには組織的な管理策も必要）',
           'EU AI法2026：文書化と透明性の義務が監査可能なローカル展開を優遇',
           'オープンウェイト = 監査可能なモデル動作 — ブラックボックスクラウドAPIとは対照的',
         ],
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '云AI = 需要GDPR第44条理由的跨境数据传输',
           '本地LLM = 数据保存在EU硬件上，无传输，无第44条义务',
-          'Qwen 3.6 27B：Apache 2.0，92.1% HumanEval，16 GB显存，从设计上GDPR合规',
+          'Qwen 3.6 27B：Apache 2.0，92.1% HumanEval（EvalPlus），16 GB显存，GDPR兼容架构（推理时无跨境数据传输；合规还需组织控制措施）',
           'EU AI法2026：文档和透明度义务有利于可审计的本地部署',
           '开放权重 = 可审计的模型行为 — 与黑盒云API相反',
         ],
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Architecture is compliance**: Local open-weight LLMs eliminate GDPR Article 44 cross-border transfer risk by keeping data on EU hardware.',
-          '**Qwen 3.6 27B**: Apache 2.0 licence, 92.1% HumanEval, runs on 16 GB VRAM — the highest-quality GDPR-compliant coding model as of May 2026.',
+          '**Qwen 3.6 27B**: Apache 2.0 licence, 92.1% HumanEval (EvalPlus leaderboard, May 2026), runs on 16 GB VRAM — among the highest-scoring open-source coding models suitable for EU data-residency deployments. GDPR compliance depends on your organisation's controls, DPA, and lawful basis — not software architecture alone.',
           '**GDPR Articles 25, 32, 44**: Local deployment satisfies data protection by design (Art. 25), appropriate technical measures (Art. 32), and eliminates cross-border transfer obligations (Art. 44).',
           '**EU AI Act 2026**: General-purpose AI providers (cloud) face new conformity assessments. Local open-weight deployments under 10^25 FLOP training compute fall outside the highest-risk tier.',
           '**The counter-argument**: Cloud providers offer SCCs, DPAs, and EU data residency options. These are valid legal tools, not substitutes for data residency by design.',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Cloud AI = cross-border data transfer requiring GDPR Article 44 justification',
           'Local LLM = data stays on EU hardware, no transfer, no Article 44 obligation',
-          'Qwen 3.6 27B: Apache 2.0, 92.1% HumanEval, 16 GB VRAM, GDPR-compliant by design',
+          'Qwen 3.6 27B: Apache 2.0, 92.1% HumanEval (EvalPlus), 16 GB VRAM, GDPR-compatible architecture (no cross-border data transfer at inference time; compliance also requires organisational controls)',
           'EU AI Act 2026: documentation and transparency obligations favour auditable local deployments',
           'Open weights = auditable model behaviour — unlike black-box cloud APIs',
         ],
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Cloud-KI = grenzueberschreitende Datenuebertragung, die DSGVO Art. 44-Rechtfertigung erfordert',
           'Lokales LLM = Daten bleiben auf EU-Hardware, keine Uebertragung, keine Art.-44-Verpflichtung',
-          'Qwen 3.6 27B: Apache 2.0, 92,1% HumanEval, 16 GB VRAM, DSGVO-konform per Design',
+          'Qwen 3.6 27B: Apache 2.0, 92,1% HumanEval (EvalPlus), 16 GB VRAM, DSGVO-kompatible Architektur (keine grenzüberschreitende Datenübertragung bei der Inferenz; Konformität erfordert zusätzlich organisatorische Maßnahmen)',
           'EU KI-Gesetz 2026: Dokumentations- und Transparenzpflichten beguenstigen pruefbare lokale Deployments',
           'Open Weights = auditierbare Modellverhalten — im Gegensatz zu Blackbox-Cloud-APIs',
         ],
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'IA cloud = transfert de données transfrontalier nécessitant une justification RGPD Article 44',
           'LLM local = données sur matériel UE, pas de transfert, pas d\'obligation Article 44',
-          'Qwen 3.6 27B : Apache 2.0, 92,1% HumanEval, 16 Go VRAM, conforme RGPD par conception',
+          'Qwen 3.6 27B : Apache 2.0, 92,1% HumanEval (EvalPlus), 16 Go VRAM, architecture compatible RGPD (aucun transfert transfrontalier de données lors de l'inférence ; la conformité nécessite également des mesures organisationnelles)',
           'Loi IA UE 2026 : obligations de documentation et transparence favorisent les déploiements locaux auditables',
           'Open weights = comportement de modèle auditable — contrairement aux APIs cloud boîtes noires',
         ],
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'クラウドAI = GDPR第44条の正当化が必要な越境データ転送',
           'ローカルLLM = EUハードウェア上のデータ、転送なし、第44条の義務なし',
-          'Qwen 3.6 27B：Apache 2.0、92.1% HumanEval、16 GB VRAM、設計によるGDPR準拠',
+          'Qwen 3.6 27B：Apache 2.0、92.1% HumanEval（EvalPlus）、16 GB VRAM、GDPR適合アーキテクチャ（推論時にクロスボーダーのデータ転送なし；コンプライアンスには組織的な管理策も必要）',
           'EU AI法2026：文書化と透明性の義務が監査可能なローカル展開を優遇',
           'オープンウェイト = 監査可能なモデル動作 — ブラックボックスクラウドAPIとは対照的',
         ],
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '云AI = 需要GDPR第44条理由的跨境数据传输',
           '本地LLM = 数据保存在EU硬件上，无传输，无第44条义务',
-          'Qwen 3.6 27B：Apache 2.0，92.1% HumanEval，16 GB显存，从设计上GDPR合规',
+          'Qwen 3.6 27B：Apache 2.0，92.1% HumanEval（EvalPlus），16 GB显存，GDPR兼容架构（推理时无跨境数据传输；合规还需组织控制措施）',
           'EU AI法2026：文档和透明度义务有利于可审计的本地部署',
           '开放权重 = 可审计的模型行为 — 与黑盒云API相反',
         ],
@@ -778,7 +778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Cloud AI = cross-border data transfer requiring GDPR Article 44 justification',
           'Local LLM = data stays on EU hardware, no transfer, no Article 44 obligation',
-          'Qwen 3.6 27B: Apache 2.0, 92.1% HumanEval, 16 GB VRAM, GDPR-compliant by design',
+          'Qwen 3.6 27B: Apache 2.0, 92.1% HumanEval (EvalPlus), 16 GB VRAM, GDPR-compatible architecture (no cross-border data transfer at inference time; compliance also requires organisational controls)',
           'EU AI Act 2026: documentation and transparency obligations favour auditable local deployments',
           'Open weights = auditable model behaviour — unlike black-box cloud APIs',
         ],
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Cloud-KI = grenzueberschreitende Datenuebertragung, die DSGVO Art. 44-Rechtfertigung erfordert',
           'Lokales LLM = Daten bleiben auf EU-Hardware, keine Uebertragung, keine Art.-44-Verpflichtung',
-          'Qwen 3.6 27B: Apache 2.0, 92,1% HumanEval, 16 GB VRAM, DSGVO-konform per Design',
+          'Qwen 3.6 27B: Apache 2.0, 92,1% HumanEval (EvalPlus), 16 GB VRAM, DSGVO-kompatible Architektur (keine grenzüberschreitende Datenübertragung bei der Inferenz; Konformität erfordert zusätzlich organisatorische Maßnahmen)',
           'EU KI-Gesetz 2026: Dokumentations- und Transparenzpflichten beguenstigen pruefbare lokale Deployments',
           'Open Weights = auditierbare Modellverhalten — im Gegensatz zu Blackbox-Cloud-APIs',
         ],
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'IA cloud = transfert de données transfrontalier nécessitant une justification RGPD Article 44',
           'LLM local = données sur matériel UE, pas de transfert, pas d\'obligation Article 44',
-          'Qwen 3.6 27B : Apache 2.0, 92,1% HumanEval, 16 Go VRAM, conforme RGPD par conception',
+          'Qwen 3.6 27B : Apache 2.0, 92,1% HumanEval (EvalPlus), 16 Go VRAM, architecture compatible RGPD (aucun transfert transfrontalier de données lors de l'inférence ; la conformité nécessite également des mesures organisationnelles)',
           'Loi IA UE 2026 : obligations de documentation et transparence favorisent les déploiements locaux auditables',
           'Open weights = comportement de modèle auditable — contrairement aux APIs cloud boîtes noires',
         ],
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'クラウドAI = GDPR第44条の正当化が必要な越境データ転送',
           'ローカルLLM = EUハードウェア上のデータ、転送なし、第44条の義務なし',
-          'Qwen 3.6 27B：Apache 2.0、92.1% HumanEval、16 GB VRAM、設計によるGDPR準拠',
+          'Qwen 3.6 27B：Apache 2.0、92.1% HumanEval（EvalPlus）、16 GB VRAM、GDPR適合アーキテクチャ（推論時にクロスボーダーのデータ転送なし；コンプライアンスには組織的な管理策も必要）',
           'EU AI法2026：文書化と透明性の義務が監査可能なローカル展開を優遇',
           'オープンウェイト = 監査可能なモデル動作 — ブラックボックスクラウドAPIとは対照的',
         ],
@@ -826,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '云AI = 需要GDPR第44条理由的跨境数据传输',
           '本地LLM = 数据保存在EU硬件上，无传输，无第44条义务',
-          'Qwen 3.6 27B：Apache 2.0，92.1% HumanEval，16 GB显存，从设计上GDPR合规',
+          'Qwen 3.6 27B：Apache 2.0，92.1% HumanEval（EvalPlus），16 GB显存，GDPR兼容架构（推理时无跨境数据传输；合规还需组织控制措施）',
           'EU AI法2026：文档和透明度义务有利于可审计的本地部署',
           '开放权重 = 可审计的模型行为 — 与黑盒云API相反',
         ],
