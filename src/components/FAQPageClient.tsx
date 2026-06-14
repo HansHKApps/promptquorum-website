@@ -85,6 +85,17 @@ const T = {
     ctaBtn: 'Entrar na lista de espera',
     back: '← Voltar ao início',
   },
+  ko: {
+    h1: 'PromptQuorum FAQ: 프레임워크, 개인정보 보호, AI 모델 및 시작하기',
+    subtitle: 'PromptQuorum, 요금, 개인정보 보호 및 시작 방법에 대해 알아야 할 모든 것.',
+    founderH2: '창립자 소개',
+    founderTitle: '창립자 & 개발자, PromptQuorum',
+    founderBio: 'Hans Kuepper는 독일 바덴-뷔르템베르크 주에 기반을 둔 독립 개발자로, 4개 언어를 구사하며 20개 이상의 나라에서 생활하고 일했습니다. 그는 팀이 AI가 생성한 답변을 검증할 레이어가 필요하다고 판단해 PromptQuorum을 개발했습니다. 여러 모델의 출력을 비교하면 환각을 감지할 수 있습니다. 개인정보 보호는 타협할 수 없습니다: 프롬프트와 API 키는 절대 PromptQuorum 서버에 전달되지 않습니다.',
+    ctaH2: '얼리 액세스 대기자 명단에 참여하세요',
+    ctaDesc: '얼리 액세스에는 평생 프리미엄 기능과 우선 지원이 포함됩니다. PromptQuorum 출시 시 가장 먼저 사용해 보세요.',
+    ctaBtn: '대기자 명단 참여',
+    back: '← 홈으로 돌아가기',
+  },
 }
 
 function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
@@ -100,7 +111,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="faq" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es"]} initialLang={initialLang} />
+        <LangLinksBar cluster="faq" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es", "pt", "ar", "ko"]} initialLang={initialLang} />
 
         <FAQAccordion lang={lang} />
 
