@@ -28,7 +28,7 @@ function runBuild() {
   return new Promise((resolve, reject) => {
     const child = spawn('npx', ['next', 'build'], {
       stdio: 'inherit',
-      env: { ...process.env, NODE_OPTIONS: '--max-old-space-size=4096' }
+      env: { ...process.env, NODE_OPTIONS: '--max-old-space-size=3072' }
     })
 
     child.on('close', (code) => {
@@ -124,9 +124,11 @@ async function main() {
     // Apply fix AFTER build (Next.js regenerates validator during build)
     fixValidator()
 
-    // Check if build succeeded by looking for .next directory (Next.js build output)
+    // Check if build succeeded by looking for routes-manifest.json (written only on successful completion)
+    // NOTE: .next/ itself exists from Vercel's cache restore even before the build starts,
+    // so checking the directory alone gives a false positive after an OOM kill.
     const outDir = path.join(__dirname, '.next')
-    if (fs.existsSync(outDir)) {
+    if (fs.existsSync(path.join(outDir, 'routes-manifest.json'))) {
       console.log('\n✓ Build completed successfully!')
       await pingSitemap()
       process.exit(0)

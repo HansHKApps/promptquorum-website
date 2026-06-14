@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   experimental: {
     cpus: 1,
+    workerThreads: false,
   },
   images: {
     formats: ['image/avif', 'image/webp'],
