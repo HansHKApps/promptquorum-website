@@ -33,6 +33,7 @@ const ACTIVE_LANGS: { code: Language; label: string }[] = [
   { code: 'es', label: 'Español' },
   { code: 'pt', label: 'Português' },
   { code: 'ar', label: 'العربية' },
+  { code: 'ko', label: '한국어' },
 ]
 
 const FOOTER_COPY: Record<Language, Record<string, string>> = {
@@ -124,7 +125,7 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  const NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'] as const
+  const NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const
 
   // Roots that are path-prefix routed for all non-EN langs (/de/<path>, …).
   // Keep in sync with PATH_LOCALE_CLUSTERS + PATH_PREFIX_LANG_CLUSTERS in src/middleware.ts.
