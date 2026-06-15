@@ -156,4 +156,11 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // WWDC 2026 Apple on-device AI
   'apple-on-device-ai-vs-local-llms':             'apple-on-device-ai-vs-local-llms',
+
+  // Saudi Arabia local-AI sprint 2026-06-14
+  'saudi-pdpl-data-sovereignty-local-ai-2026':    'saudi-pdpl-data-sovereignty-local-ai-2026',
+  'best-saudi-arabic-local-llms-allam-2026':      'best-saudi-arabic-local-llms-allam-2026',
+
+  // Emerging memory tech 2026-06-15
+  'mram-in-memory-computing-local-ai-2026':       'mram-in-memory-computing-local-ai-2026',
 }
