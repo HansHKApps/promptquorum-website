@@ -543,5 +543,320 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     }
+  },
+  es: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-15',
+    last_full_refresh: '2026-06-15',
+    theme: 'Hardware & Performance',
+    title: 'IA en Dispositivo y Memoria: Por Qué HBM Determina la Velocidad de IA Local (2026)',
+    seoTitle: 'HBM vs LPDDR5X: Ancho de Banda para IA en Dispositivo Explicado',
+    intro: 'El ancho de banda de memoria, no TOPS de cálculo, es el cuello de botella para la inferencia de IA. Galaxy S26 (Exynos 2600) tiene LPDDR5X a 85.6 GB/s; los centros de datos usan HBM3E a 1.229 TB/s—una diferencia de 14x. Esta brecha explica por qué modelos de 7B parámetros se ejecutan en teléfonos a 8–15 tokens/seg pero las GPU de centros de datos manejan 100+ tokens/seg. Samsung y SK Hynix son los actores clave: SK Hynix domina HBM (62% de cuota de mercado), mientras que Samsung impulsa LPDDR5X-PIM (Procesamiento en Memoria) para reducir la brecha. Esta guía explica el cuello de botella de memoria, el papel de Samsung y SK Hynix, y qué significa para IA en dispositivo en 2026 y más allá.',
+    metaDescription: 'HBM vs LPDDR5X: El ancho de banda de memoria es el cuello de botella de IA. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Por qué la IA en dispositivo es lenta y la IA en centro de datos es rápida.',
+    publishDate: '2026-06-15',
+    dateModified: '2026-06-15',
+    readTime: 'Lectura de 11 min',
+    educationalLevel: 'Intermedio',
+    audience: 'Ingenieros de IA, diseñadores de hardware, cualquiera curioso sobre por qué la IA local es más lenta que la IA en la nube',
+    primaryTerm: 'Memoria HBM en IA en dispositivo',
+    targetKeywords: ['memoria hbm', 'ancho de banda hbm3e', 'ancho de banda lpddr5x', 'cuello de botella ancho de banda memoria', 'velocidad ia en dispositivo', 'sk hynix', 'samsung hbm'],
+    leadAnswerBlock: '**La fase de decodificación de la inferencia de LLM está limitada por ancho de banda, no por cálculo: tokens/seg ≈ ancho_banda_memoria / tamaño_modelo_en_bytes. Galaxy S26 LPDDR5X (85.6 GB/s) limita un modelo 7B a ~24 tokens/seg máximo. GPU H100 de centro de datos HBM3E (1.229 TB/s) alcanza 100+ tokens/seg. La brecha de ancho de banda de 14x explica la diferencia de velocidad. SK Hynix posee 62% de cuota de mercado HBM; Samsung se enfoca en LPDDR5X-PIM (procesamiento en memoria) para reducir movimiento de datos. HBM4 (>2 TB/s) llega 2026-2027. Este cuello de botella de memoria es fundamental para por qué la IA local siempre será más lenta que la nube—no puede ajustar HBM en un teléfono.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: []
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'IA en Dispositivo y Memoria: Por Qué HBM Determina la Velocidad de IA Local (2026)',
+      'description': 'HBM vs LPDDR5X: El ancho de banda de memoria es el cuello de botella de IA. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Por qué la IA en dispositivo es lenta y la IA en centro de datos es rápida.',
+      'image': 'https://www.promptquorum.com/og-images/hbm-memory-on-device-ai-samsung-sk-hynix-2026.png',
+      'datePublished': '2026-06-15',
+      'dateModified': '2026-06-15',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'inLanguage': 'es',
+      'url': 'https://www.promptquorum.com/es/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+      'articleBody': 'El ancho de banda de memoria, no TOPS de cálculo, es el cuello de botella para la inferencia de IA. Galaxy S26 tiene LPDDR5X a 85.6 GB/s; los centros de datos usan HBM3E a 1.229 TB/s—una diferencia de 14x.'
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'es',
+      'mainEntity': []
+    }
+  },
+  de: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-15',
+    last_full_refresh: '2026-06-15',
+    theme: 'Hardware & Performance',
+    title: 'On-Device KI und Speicher: Warum HBM die Geschwindigkeit lokaler KI antreibt (2026)',
+    seoTitle: 'HBM vs LPDDR5X-Speicher: On-Device KI-Bandbreite erklärt',
+    intro: 'Speicherbandbreite, nicht Rechen-TOPS, ist der Engpass für KI-Inferenz. Das Galaxy S26 (Exynos 2600) hat LPDDR5X mit 85,6 GB/s; Rechenzentren verwenden HBM3E mit 1.229 TB/s—ein 14-facher Unterschied. Diese Lücke erklärt, warum 7B-Parameter-Modelle auf Telefonen mit 8–15 Tokens/Sekunde laufen, Rechenzentrum-GPUs aber 100+ Tokens/Sekunde verarbeiten. Samsung und SK Hynix sind die Schlüsselbeteiligten: SK Hynix dominiert HBM (62% Marktanteil), während Samsung LPDDR5X-PIM (Processing-In-Memory) voranbringt. Dieser Leitfaden erklärt den Speicherengpass, die Rolle von Samsung und SK Hynix und was es für On-Device KI 2026 und darüber hinaus bedeutet.',
+    metaDescription: 'HBM vs LPDDR5X: Speicherbandbreite ist der KI-Engpass. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Warum On-Device KI langsam und Rechenzentrum-KI schnell ist.',
+    publishDate: '2026-06-15',
+    dateModified: '2026-06-15',
+    readTime: '11 Min Lesedauer',
+    educationalLevel: 'Intermediate',
+    audience: 'KI-Ingenieure, Hardware-Designer, alle, die neugierig sind, warum lokale KI langsamer als Cloud KI ist',
+    primaryTerm: 'HBM-Speicher On-Device KI',
+    targetKeywords: ['hbm speicher', 'hbm3e bandbreite', 'lpddr5x bandbreite', 'speicherbandbreite engpass', 'on device ki geschwindigkeit', 'sk hynix', 'samsung hbm'],
+    leadAnswerBlock: '**Die Dekodierungsphase der LLM-Inferenz ist bandbreitenbegrenzt, nicht rechenbegrenzt: Tokens/Sekunde ≈ Speicherbandbreite / Modellgröße_in_Bytes. Galaxy S26 LPDDR5X (85,6 GB/s) begrenzt ein 7B-Modell auf ~24 Tokens/Sekunde maximum. Rechenzentrum H100 GPU HBM3E (1.229 TB/s) erreicht 100+ Tokens/Sekunde. Die 14-fache Bandbreitenlücke erklärt den Geschwindigkeitsunterschied. SK Hynix hält 62% HBM-Marktanteil; Samsung konzentriert sich auf LPDDR5X-PIM (Processing-In-Memory), um Datenbewegung zu reduzieren. HBM4 (>2 TB/s) kommt 2026-2027. Dieser Speicherengpass ist grundlegend für den Grund, warum lokale KI immer langsamer als Cloud sein wird—Sie können HBM nicht in ein Telefon passen.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: []
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'On-Device KI und Speicher: Warum HBM die Geschwindigkeit lokaler KI antreibt (2026)',
+      'description': 'HBM vs LPDDR5X: Speicherbandbreite ist der KI-Engpass. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Warum On-Device KI langsam und Rechenzentrum-KI schnell ist.',
+      'image': 'https://www.promptquorum.com/og-images/hbm-memory-on-device-ai-samsung-sk-hynix-2026.png',
+      'datePublished': '2026-06-15',
+      'dateModified': '2026-06-15',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'inLanguage': 'de',
+      'url': 'https://www.promptquorum.com/de/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+      'articleBody': 'Speicherbandbreite, nicht Rechen-TOPS, ist der Engpass für KI-Inferenz. Das Galaxy S26 hat LPDDR5X mit 85,6 GB/s; Rechenzentren verwenden HBM3E mit 1.229 TB/s—ein 14-facher Unterschied.'
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'de',
+      'mainEntity': []
+    }
+  },
+  fr: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-15',
+    last_full_refresh: '2026-06-15',
+    theme: 'Hardware & Performance',
+    title: 'IA Sur Appareil et Mémoire: Pourquoi HBM Détermine la Vitesse de l\'IA Locale (2026)',
+    seoTitle: 'HBM vs LPDDR5X: Bande Passante IA Sur Appareil Expliquée',
+    intro: 'La bande passante mémoire, pas les TOPS de calcul, est le goulot d\'étranglement pour l\'inférence IA. Le Galaxy S26 (Exynos 2600) a LPDDR5X à 85,6 GB/s; les data centers utilisent HBM3E à 1.229 TB/s—un écart de 14x. Cet écart explique pourquoi les modèles 7B paramètres s\'exécutent sur les téléphones à 8–15 tokens/sec mais les GPU du data center gèrent 100+ tokens/sec. Samsung et SK Hynix sont les acteurs clés: SK Hynix domine HBM (62% de part de marché), tandis que Samsung pousse LPDDR5X-PIM (Processing-In-Memory) pour réduire l\'écart. Ce guide explique le goulot d\'étranglement mémoire, le rôle de Samsung et SK Hynix, et ce que cela signifie pour l\'IA sur appareil en 2026 et au-delà.',
+    metaDescription: 'HBM vs LPDDR5X: La bande passante mémoire est le goulot d\'étranglement IA. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Pourquoi l\'IA sur appareil est lente et l\'IA data center est rapide.',
+    publishDate: '2026-06-15',
+    dateModified: '2026-06-15',
+    readTime: 'Lecture 11 min',
+    educationalLevel: 'Intermediate',
+    audience: 'Ingénieurs IA, concepteurs matériel, quiconque curieux de savoir pourquoi l\'IA locale est plus lente que l\'IA cloud',
+    primaryTerm: 'Mémoire HBM IA sur appareil',
+    targetKeywords: ['mémoire hbm', 'bande passante hbm3e', 'bande passante lpddr5x', 'goulot d\'étranglement bande passante mémoire', 'vitesse ia sur appareil', 'sk hynix', 'samsung hbm'],
+    leadAnswerBlock: '**La phase de décodage de l\'inférence LLM est limitée par la bande passante, pas par le calcul: tokens/sec ≈ bande_passante_mémoire / taille_modèle_en_octets. Galaxy S26 LPDDR5X (85,6 GB/s) limite un modèle 7B à ~24 tokens/sec maximum. GPU H100 data-center HBM3E (1.229 TB/s) atteint 100+ tokens/sec. L\'écart de bande passante 14x explique la différence de vitesse. SK Hynix détient 62% de part de marché HBM; Samsung se concentre sur LPDDR5X-PIM (Processing-In-Memory) pour réduire le mouvement de données. HBM4 (>2 TB/s) arrive 2026-2027. Ce goulot d\'étranglement mémoire est fondamental pour expliquer pourquoi l\'IA locale sera toujours plus lente que le cloud—vous ne pouvez pas mettre HBM dans un téléphone.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: []
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'IA Sur Appareil et Mémoire: Pourquoi HBM Détermine la Vitesse de l\'IA Locale (2026)',
+      'description': 'HBM vs LPDDR5X: La bande passante mémoire est le goulot d\'étranglement IA. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Pourquoi l\'IA sur appareil est lente et l\'IA data center est rapide.',
+      'image': 'https://www.promptquorum.com/og-images/hbm-memory-on-device-ai-samsung-sk-hynix-2026.png',
+      'datePublished': '2026-06-15',
+      'dateModified': '2026-06-15',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'inLanguage': 'fr',
+      'url': 'https://www.promptquorum.com/fr/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+      'articleBody': 'La bande passante mémoire, pas les TOPS de calcul, est le goulot d\'étranglement pour l\'inférence IA. Le Galaxy S26 a LPDDR5X à 85,6 GB/s; les data centers utilisent HBM3E à 1.229 TB/s—un écart de 14x.'
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'fr',
+      'mainEntity': []
+    }
+  },
+  ja: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-15',
+    last_full_refresh: '2026-06-15',
+    theme: 'Hardware & Performance',
+    title: 'オンデバイスAIとメモリ: HBMメモリがローカルAIを加速する理由 (2026)',
+    seoTitle: 'HBM vs LPDDR5X: オンデバイスAI帯域幅の完全ガイド',
+    intro: 'メモリ帯域幅はAI推論のボトルネックです。計算TOPSではなく帯域幅が問題です。Galaxy S26(Exynos 2600)はLPDDR5Xで85.6 GB/s、データセンターはHBM3Eで1.229 TB/s—14倍の差があります。このギャップが、7Bパラメータモデルが電話では8〜15トークン/秒で動作し、データセンターGPUは100+トークン/秒を処理する理由を説明しています。SamsungとSK Hynixが主要プレイヤーです。SK HynixはHBMを支配し(62%市場シェア)、SamsungはLPDDR5X-PIM(メモリ内処理)を推進しています。このガイドでは、メモリボトルネック、SamsungとSK Hynixの役割、2026以降のオンデバイスAIの意味について説明します。',
+    metaDescription: 'HBM vs LPDDR5X: メモリ帯域幅はAIボトルネック。SK Hynix HBM3E vs Samsung LPDDR5X-PIM。オンデバイスAIが遅い理由、データセンターAIが速い理由。',
+    publishDate: '2026-06-15',
+    dateModified: '2026-06-15',
+    readTime: '11分で読了',
+    educationalLevel: 'Intermediate',
+    audience: 'AIエンジニア、ハードウェア設計者、ローカルAIがクラウドAIより遅い理由に関心のある人',
+    primaryTerm: 'HBMメモリ オンデバイスAI',
+    targetKeywords: ['hbm memory', 'hbm3e bandwidth', 'lpddr5x bandwidth', 'memory bandwidth bottleneck', 'on device ai speed', 'sk hynix', 'samsung hbm'],
+    leadAnswerBlock: '**LLMのデコード段階は帯域幅制約であり、計算制約ではありません。tokens/sec ≈ memory_bandwidth / model_size_in_bytes。Galaxy S26のLPDDR5X(85.6 GB/s)は7Bモデルを最大~24トークン/秒に制限します。データセンターH100 GPU HBM3E(1.229 TB/s)は100+トークン/秒を達成します。14倍の帯域幅ギャップが速度差を説明します。SK Hynixは62% HBM市場シェアを保有しています。Samsungはメモリ内処理(LPDDR5X-PIM)でデータ移動を削減することに焦点を当てています。HBM4(>2 TB/s)は2026-2027年に到着します。このメモリボトルネックは、ローカルAIがクラウドより常に遅い根本的な理由です。電話にHBMを収納することはできません。',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: []
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'オンデバイスAIとメモリ: HBMメモリがローカルAIを加速する理由 (2026)',
+      'description': 'HBM vs LPDDR5X: メモリ帯域幅はAIボトルネック。SK Hynix HBM3E vs Samsung LPDDR5X-PIM。オンデバイスAIが遅い理由、データセンターAIが速い理由。',
+      'image': 'https://www.promptquorum.com/og-images/hbm-memory-on-device-ai-samsung-sk-hynix-2026.png',
+      'datePublished': '2026-06-15',
+      'dateModified': '2026-06-15',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'inLanguage': 'ja',
+      'url': 'https://www.promptquorum.com/ja/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+      'articleBody': 'メモリ帯域幅はAI推論のボトルネックです。Galaxy S26はLPDDR5Xで85.6 GB/s、データセンターはHBM3Eで1.229 TB/s—14倍の差。'
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'ja',
+      'mainEntity': []
+    }
+  },
+  zh: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-15',
+    last_full_refresh: '2026-06-15',
+    theme: 'Hardware & Performance',
+    title: '设备上的AI和内存：为什么HBM内存驱动本地AI速度 (2026)',
+    seoTitle: 'HBM与LPDDR5X内存：设备上AI带宽解释',
+    intro: '内存带宽而非计算TOPS是AI推理的瓶颈。Galaxy S26(Exynos 2600)具有LPDDR5X 85.6 GB/s;数据中心使用HBM3E 1.229 TB/s—14倍差异。这个差异解释了为什么7B参数模型在手机上以8–15 tokens/sec运行,而数据中心GPU处理100+ tokens/sec。Samsung和SK Hynix是关键参与者:SK Hynix主导HBM(62%市场份额),而Samsung正在推LPDDR5X-PIM(内存内处理)以缩小差距。本指南解释了内存瓶颈、Samsung和SK Hynix的角色,以及2026年及以后设备上AI的含义。',
+    metaDescription: 'HBM与LPDDR5X:内存带宽是AI瓶颈。SK Hynix HBM3E vs Samsung LPDDR5X-PIM。为什么设备上AI缓慢而数据中心AI快速。',
+    publishDate: '2026-06-15',
+    dateModified: '2026-06-15',
+    readTime: '11分钟阅读',
+    educationalLevel: 'Intermediate',
+    audience: 'AI工程师、硬件设计师、对为什么本地AI比云AI慢感到好奇的任何人',
+    primaryTerm: 'HBM内存设备上AI',
+    targetKeywords: ['hbm内存', 'hbm3e带宽', 'lpddr5x带宽', '内存带宽瓶颈', '设备上ai速度', 'sk海力士', '三星hbm'],
+    leadAnswerBlock: '**LLM解码阶段是带宽限制的,而非计算限制的:tokens/sec ≈ memory_bandwidth / model_size_in_bytes。Galaxy S26 LPDDR5X(85.6 GB/s)将7B模型限制到最多~24 tokens/sec。数据中心H100 GPU HBM3E(1.229 TB/s)达到100+ tokens/sec。14倍带宽差异解释了速度差异。SK Hynix持有62% HBM市场份额;Samsung专注于LPDDR5X-PIM(内存内处理)以减少数据移动。HBM4(>2 TB/s)在2026-2027年到达。这个内存瓶颈是本地AI将永远比云慢的根本原因—您无法将HBM装入手机。',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: []
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': '设备上的AI和内存：为什么HBM内存驱动本地AI速度 (2026)',
+      'description': 'HBM与LPDDR5X:内存带宽是AI瓶颈。SK Hynix HBM3E vs Samsung LPDDR5X-PIM。为什么设备上AI缓慢而数据中心AI快速。',
+      'image': 'https://www.promptquorum.com/og-images/hbm-memory-on-device-ai-samsung-sk-hynix-2026.png',
+      'datePublished': '2026-06-15',
+      'dateModified': '2026-06-15',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'inLanguage': 'zh',
+      'url': 'https://www.promptquorum.com/zh/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+      'articleBody': '内存带宽而非计算TOPS是AI推理的瓶颈。Galaxy S26具有LPDDR5X 85.6 GB/s;数据中心使用HBM3E 1.229 TB/s—14倍差异。'
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'zh',
+      'mainEntity': []
+    }
+  },
+  pt: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-15',
+    last_full_refresh: '2026-06-15',
+    theme: 'Hardware & Performance',
+    title: 'IA no Dispositivo e Memória: Por que a Memória HBM Impulsiona a Velocidade de IA Local (2026)',
+    seoTitle: 'HBM vs LPDDR5X: Largura de Banda de IA no Dispositivo Explicada',
+    intro: 'Largura de banda de memória, não TOPS de computação, é o gargalo para inferência de IA. O Galaxy S26 (Exynos 2600) tem LPDDR5X em 85,6 GB/s; data centers usam HBM3E em 1,229 TB/s—uma diferença de 14x. Essa lacuna explica por que modelos de 7B parâmetros executam em telefones a 8–15 tokens/seg, mas GPUs de data center lidam com 100+ tokens/seg. Samsung e SK Hynix são os principais players: SK Hynix domina HBM (62% de participação de mercado), enquanto Samsung está impulsionando LPDDR5X-PIM (Processamento em Memória) para estreitar a lacuna. Este guia explica o gargalo de memória, o papel da Samsung e SK Hynix, e o que isso significa para IA no dispositivo em 2026 e além.',
+    metaDescription: 'HBM vs LPDDR5X: Largura de banda de memória é o gargalo de IA. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Por que IA no dispositivo é lenta e IA em data center é rápida.',
+    publishDate: '2026-06-15',
+    dateModified: '2026-06-15',
+    readTime: '11 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Engenheiros de IA, designers de hardware, qualquer pessoa curiosa sobre por que IA local é mais lenta que IA em nuvem',
+    primaryTerm: 'Memória HBM IA no dispositivo',
+    targetKeywords: ['memória hbm', 'largura de banda hbm3e', 'largura de banda lpddr5x', 'gargalo largura de banda memória', 'velocidade ia dispositivo', 'sk hynix', 'samsung hbm'],
+    leadAnswerBlock: '**A fase de decodificação de inferência LLM é limitada por largura de banda, não por computação: tokens/seg ≈ memory_bandwidth / model_size_in_bytes. Galaxy S26 LPDDR5X (85,6 GB/s) limita um modelo de 7B a ~24 tokens/seg máximo. GPU H100 data-center HBM3E (1,229 TB/s) atinge 100+ tokens/seg. A lacuna de largura de banda 14x explica a diferença de velocidade. SK Hynix detém 62% de participação de mercado HBM; Samsung foca em LPDDR5X-PIM (processamento em memória) para reduzir movimento de dados. HBM4 (>2 TB/s) chega 2026-2027. Este gargalo de memória é fundamental para por que IA local sempre será mais lenta que nuvem—você não pode encaixar HBM em um telefone.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: []
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'IA no Dispositivo e Memória: Por que a Memória HBM Impulsiona a Velocidade de IA Local (2026)',
+      'description': 'HBM vs LPDDR5X: Largura de banda de memória é o gargalo de IA. SK Hynix HBM3E vs Samsung LPDDR5X-PIM. Por que IA no dispositivo é lenta e IA em data center é rápida.',
+      'image': 'https://www.promptquorum.com/og-images/hbm-memory-on-device-ai-samsung-sk-hynix-2026.png',
+      'datePublished': '2026-06-15',
+      'dateModified': '2026-06-15',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'inLanguage': 'pt',
+      'url': 'https://www.promptquorum.com/pt/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+      'articleBody': 'Largura de banda de memória, não TOPS de computação, é o gargalo para inferência de IA. O Galaxy S26 tem LPDDR5X em 85,6 GB/s; data centers usam HBM3E em 1,229 TB/s—uma diferença de 14x.'
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'pt',
+      'mainEntity': []
+    }
+  },
+  ar: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-07-15',
+    last_full_refresh: '2026-06-15',
+    theme: 'Hardware & Performance',
+    title: 'الذكاء الاصطناعي على الجهاز والذاكرة: لماذا تدفع ذاكرة HBM سرعة الذكاء الاصطناعي المحلي (2026)',
+    seoTitle: 'ذاكرة HBM مقابل LPDDR5X: شرح عرض النطاق الترددي للذكاء الاصطناعي على الجهاز',
+    intro: 'عرض النطاق الترددي للذاكرة، وليس حساب TOPS، هو الاختناق في الاستدلال بالذكاء الاصطناعي. يحتوي Galaxy S26 (Exynos 2600) على LPDDR5X بـ 85.6 GB/s؛ مراكز البيانات تستخدم HBM3E بـ 1.229 TB/s—فارق 14 مرة. هذا الفارق يفسر لماذا تعمل نماذج المعاملات 7B على الهواتف بـ 8–15 رموز/ثانية لكن وحدات GPU في مراكز البيانات تتعامل مع 100+ رموز/ثانية. Samsung و SK Hynix هما اللاعبان الرئيسيان: SK Hynix تهيمن على HBM (حصة سوقية 62%)، بينما تدفع Samsung LPDDR5X-PIM (المعالجة داخل الذاكرة) لتضييق الفارق. يشرح هذا الدليل اختناق الذاكرة، ودور Samsung و SK Hynix، وما يعنيه الذكاء الاصطناعي على الجهاز في 2026 وما بعده.',
+    metaDescription: 'HBM مقابل LPDDR5X: عرض النطاق الترددي للذاكرة هو اختناق الذكاء الاصطناعي. SK Hynix HBM3E مقابل Samsung LPDDR5X-PIM. لماذا الذكاء الاصطناعي على الجهاز بطيء والذكاء الاصطناعي في مركز البيانات سريع.',
+    publishDate: '2026-06-15',
+    dateModified: '2026-06-15',
+    readTime: 'قراءة 11 دقيقة',
+    educationalLevel: 'Intermediate',
+    audience: 'مهندسو الذكاء الاصطناعي، مصممو الأجهزة، أي شخص فضولي حول سبب كون الذكاء الاصطناعي المحلي أبطأ من الذكاء الاصطناعي بالسحابة',
+    primaryTerm: 'ذاكرة HBM الذكاء الاصطناعي على الجهاز',
+    targetKeywords: ['ذاكرة hbm', 'عرض النطاق الترددي hbm3e', 'عرض النطاق الترددي lpddr5x', 'اختناق عرض النطاق الترددي للذاكرة', 'سرعة ذكاء اصطناعي على الجهاز', 'sk hynix', 'samsung hbm'],
+    leadAnswerBlock: '**مرحلة فك التشفير في استدلال LLM مقيدة بعرض النطاق الترددي، وليست مقيدة بالحساب: رموز/ثانية ≈ عرض_النطاق_الترددي_للذاكرة / حجم_النموذج_بالبايت. LPDDR5X في Galaxy S26 (85.6 GB/s) يحد من نموذج 7B إلى ~24 رموز/ثانية كحد أقصى. وحدة GPU H100 في مركز البيانات HBM3E (1.229 TB/s) تحقق 100+ رموز/ثانية. فارق عرض النطاق الترددي 14 مرة يفسر فرق السرعة. SK Hynix تمتلك 62% من حصة سوق HBM؛ Samsung تركز على LPDDR5X-PIM (المعالجة داخل الذاكرة) لتقليل حركة البيانات. يصل HBM4 (>2 TB/s) 2026-2027. هذا الاختناق في الذاكرة أساسي لسبب كون الذكاء الاصطناعي المحلي سيكون دائماً أبطأ من السحابة—لا يمكنك ملاءمة HBM في هاتف.',
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: []
+      }
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'الذكاء الاصطناعي على الجهاز والذاكرة: لماذا تدفع ذاكرة HBM سرعة الذكاء الاصطناعي المحلي (2026)',
+      'description': 'HBM مقابل LPDDR5X: عرض النطاق الترددي للذاكرة هو اختناق الذكاء الاصطناعي. SK Hynix HBM3E مقابل Samsung LPDDR5X-PIM. لماذا الذكاء الاصطناعي على الجهاز بطيء والذكاء الاصطناعي في مركز البيانات سريع.',
+      'image': 'https://www.promptquorum.com/og-images/hbm-memory-on-device-ai-samsung-sk-hynix-2026.png',
+      'datePublished': '2026-06-15',
+      'dateModified': '2026-06-15',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'inLanguage': 'ar',
+      'url': 'https://www.promptquorum.com/ar/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+      'articleBody': 'عرض النطاق الترددي للذاكرة، وليس حساب TOPS، هو الاختناق في الاستدلال بالذكاء الاصطناعي. Galaxy S26 لديها LPDDR5X بـ 85.6 GB/s؛ مراكز البيانات تستخدم HBM3E بـ 1.229 TB/s—فارق 14 مرة.'
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'inLanguage': 'ar',
+      'mainEntity': []
+    }
   }
 };
