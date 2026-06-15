@@ -66,6 +66,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Modern AI inference is dominated by a single problem: **the von Neumann bottleneck.** Compute (CPU/GPU) and memory are physically separate. Every neural network operation requires data to shuttle back and forth — weights, activations, KV caches in transformers.',
           'This data movement is extraordinarily expensive compared to the actual math:',
+          'On a typical local LLM inference workload, data movement accounts for up to 90% of total energy consumption. Compute itself — the actual neural network math — is almost a rounding error. This creates a perverse incentive: bigger, faster CPUs/GPUs don\'t help if the memory bus is the wall.',
+          'For on-device AI on phones, laptops, and edge devices running on battery, this bottleneck is the primary obstacle to longer inference time without draining the battery.',
         ],
         rows: [
           { Operation: '32-bit DRAM access', 'Energy cost': '~640 pJ', Relative: '~200× more than a MAC op' },
@@ -73,10 +75,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: '32-bit floating-point multiply-accumulate (MAC)', 'Energy cost': '~0.9 pJ', Relative: 'baseline (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
-        content: [
-          'On a typical local LLM inference workload, data movement accounts for up to 90% of total energy consumption. Compute itself — the actual neural network math — is almost a rounding error. This creates a perverse incentive: bigger, faster CPUs/GPUs don\'t help if the memory bus is the wall.',
-          'For on-device AI on phones, laptops, and edge devices running on battery, this bottleneck is the primary obstacle to longer inference time without draining the battery.',
-        ],
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -91,11 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The memory array\'s analog properties compute the matrix-vector multiply in a single pass — the core operation in transformer inference.',
           'Results are read out and quantized back to digital.',
         ],
-        content: [
-          '**Why this matters:**',
-          'Data never leaves the memory array. Compute happens exactly where the data lives. Energy cost drops from 200–640 pJ (DRAM shuttle) down to near the intrinsic power of the memory technology itself.',
-          'For battery-constrained devices, this can mean 2–10× better energy efficiency, depending on the workload and how well the in-memory compute architecture matches the neural network structure.',
-        ],
+        note: 'Why this matters: Data never leaves the memory array. Compute happens exactly where the data lives. Energy cost drops from 200–640 pJ (DRAM shuttle) down to near the intrinsic power of the memory technology itself. For battery-constrained devices, this can mean 2–10× better energy efficiency, depending on the workload and how well the in-memory compute architecture matches the neural network structure.',
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
@@ -108,11 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Accuracy achieved:** 98% on handwritten digit classification (MNIST), 93% on face detection.',
           'Power efficiency: directionally confirmed to benefit from eliminating data movement, but specific quantified power reduction vs DRAM not disclosed in public materials.',
           'Limitation: Highly specialized for classical ML tasks (digit classification, object detection). Not yet demonstrated on large transformer inference.',
-        ],
-        content: [
           '**SemiFive + ICYTech PNM MRAM Edge Chip (May 2026):**',
-        ],
-        items: [
           'Successfully achieved **tape-out** on Samsung Foundry 8nm (8LPU) with embedded MRAM.',
           'Tape-out = design submitted for manufacturing. Silicon has not yet returned, benchmarks have not been published, and the product has not shipped.',
           'Claimed capability: On-device inference for models up to 2 billion parameters without network connectivity.',
@@ -171,19 +161,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zero refresh power: eliminates the standby current overhead.',
           'Direct die integration: no separate memory package required.',
           'Suitable for intermittently-powered edge nodes and wearables.',
-        ],
-        content: [
           '**What HBM offers that MRAM (currently) doesn\'t:**',
-        ],
-        items: [
           'Vastly higher bandwidth: HBM4 provides 1.6 TB/s vs MRAM\'s embedded bandwidth (unspecified, likely in the 10–100 GB/s range).',
           'Proven density at scale for training large models.',
           'No reliance on specialized MTJ process integration.',
           'Available today in production AI accelerators.',
         ],
-        content: [
-          '**Bottom line:** MRAM and HBM are not competitors today. HBM targets high-bandwidth AI accelerators (GPUs, TPUs in data centers). MRAM targets edge inference and specialized in-memory compute where non-volatility and SoC integration matter more than raw bandwidth.',
-        ],
+        note: 'Bottom line: MRAM and HBM are not competitors today. HBM targets high-bandwidth AI accelerators (GPUs, TPUs in data centers). MRAM targets edge inference and specialized in-memory compute where non-volatility and SoC integration matter more than raw bandwidth.',
       },
       'software-alternative': {
         id: 'software-alternative',
@@ -198,8 +182,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Zero accuracy loss** on benchmarks including needle-in-haystack evaluations (long-context retrieval).',
           '**Up to 8× speedup** in computing attention logits on H100 GPUs (4-bit TurboQuant vs 32-bit unquantized).',
           '**No training or fine-tuning required.** Drop-in replacement for existing inference pipelines.',
-        ],
-        content: [
           'How it works: Two-stage process — PolarQuant (quantize in polar coordinates using Lloyd-Max centroids) + QJL (Quantized Johnson-Lindenstrauss transform, adds error-correction to preserve inner-product accuracy at extreme compression).',
           'Multiple independent open-source implementations exist. Official Google code release expected Q2 2026.',
           '**Why it matters:** Software-only memory reduction is available *today*, requires no new hardware, and works on any NVIDIA/AMD GPU or CPU with standard inference libraries. It\'s a pragmatic solution to the memory bottleneck while waiting for MRAM maturity.',
@@ -216,9 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Battery longevity:** No standby refresh drain on the memory subsystem. For always-on AI features (background listening, privacy-preserving analytics), energy savings are multiplicative.',
           '**Larger models on fixed power budget:** If in-memory computing achieves 2–10× energy efficiency over LPDDR5 + compute separation, phones could run 5B–10B models with the same battery impact as today\'s 1B–2B models.',
         ],
-        content: [
-          'However, these benefits are conditional on MRAM reaching consumer density and cost targets. Current eMRAM is suitable for small caches (1–100 MB embedded in microcontrollers and edge AI SoCs). Phone-scale deployment (8–16 GB unified memory equivalent) would require foundries to solve density and yield challenges that remain unsolved as of June 2026.',
-        ],
+        note: 'However, these benefits are conditional on MRAM reaching consumer density and cost targets. Current eMRAM is suitable for small caches (1–100 MB embedded in microcontrollers and edge AI SoCs). Phone-scale deployment (8–16 GB unified memory equivalent) would require foundries to solve density and yield challenges that remain unsolved as of June 2026.',
       },
       'timeline': {
         id: 'timeline',
@@ -235,19 +215,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: 'Possible consumer smartphone MRAM integration (non-volatile cache or specialized AI die)', Status: 'Speculative' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
-        content: [
-          '**What is NOT confirmed:**',
-        ],
         items: [
+          '**What is NOT confirmed:**',
           'No major smartphone OEM (Apple, Qualcomm, MediaTek) has announced MRAM integration.',
           'MRAM bandwidth and density specs for consumer VRAM-scale (8–16 GB) are not publicly available.',
           'Power efficiency gains for large-model inference (30B+) have not been measured in silicon.',
           'Cost parity with LPDDR5 or HBM is not on any published roadmap.',
-        ],
-        content: [
           '**Realistic timeline:**',
-        ],
-        items: [
           '**2026–2028:** Edge AI SoCs (robots, automotive, IoT) with small MRAM in-memory compute units. Limited 2B-scale models. Asia-first deployment.',
           '**2028–2030:** Potential smartphone integration as a non-volatile cache or specialized AI accelerator tile (not main memory replacement).',
           '**2030+:** Mainstream consumer phone deployment as DRAM replacement would require solving density, bandwidth, and cost challenges that are not yet solved. Not expected before 2031–2035.',
