@@ -795,6 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es Jais un modelo saudí?', a: 'No: Jais es de origen emiratí, desarrollado por Core42/G42 en Abu Dabi, no por una institución saudí. Se incluye aquí porque es un modelo en árabe capaz, con licencia Apache 2.0 y competitivo en tareas de dialecto, pero no forma parte del linaje saudí (ALLaM/AceGPT).' },
           { q: '¿Debería usar ALLaM 34B o 7B?', a: 'Para despliegue local, usa el 7B: el 34B es propietario y no es autoalojable. Empieza con ALLaM 7B en tu propio hardware y, si necesitas la capacidad del 34B, accede a él a través del producto HUMAIN Chat en lugar de esperar pesos descargables.' },
           { q: '¿Cómo pruebo si un modelo maneja correctamente el árabe saudí?', a: 'Ejecuta prompts de consistencia MSA frente a dialecto, pregunta sobre prácticas culturales saudíes y finanzas islámicas, y prueba la concordancia de género gramatical (por ejemplo, describiendo a una médica y a un ingeniero). Vigila las respuestas en alfabeto latino, el registro dialectal equivocado o un enfoque culturalmente inapropiado, y valida con al menos 20 prompts específicos de tu dominio antes de desplegar.' },
+          { q: '¿Qué es HUMAIN?', a: 'HUMAIN es una empresa saudí de IA propiedad en su totalidad del Public Investment Fund, lanzada en mayo de 2025. Comercializa ALLaM y opera HUMAIN Chat. Es independiente de SDAIA, pero heredó los modelos ALLaM del Centro Nacional de IA de SDAIA; Aramco adquirió después una participación minoritaria.' },
         ],
       },
       relatedReading: {
@@ -874,6 +875,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': '¿Es Jais un modelo saudí?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No: Jais es de origen emiratí, desarrollado por Core42/G42 en Abu Dabi, no por una institución saudí. Se incluye aquí porque es un modelo en árabe capaz, con licencia Apache 2.0 y competitivo en tareas de dialecto, pero no forma parte del linaje saudí (ALLaM/AceGPT).' } },
         { '@type': 'Question', 'name': '¿Debería usar ALLaM 34B o 7B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para despliegue local, usa el 7B: el 34B es propietario y no es autoalojable. Empieza con ALLaM 7B en tu propio hardware y, si necesitas la capacidad del 34B, accede a él a través del producto HUMAIN Chat en lugar de esperar pesos descargables.' } },
         { '@type': 'Question', 'name': '¿Cómo pruebo si un modelo maneja correctamente el árabe saudí?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ejecuta prompts de consistencia MSA frente a dialecto, pregunta sobre prácticas culturales saudíes y finanzas islámicas, y prueba la concordancia de género gramatical (por ejemplo, describiendo a una médica y a un ingeniero). Vigila las respuestas en alfabeto latino, el registro dialectal equivocado o un enfoque culturalmente inapropiado, y valida con al menos 20 prompts específicos de tu dominio antes de desplegar.' } },
+        {
+          '@type': 'Question',
+          'name': '¿Qué es HUMAIN?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'HUMAIN es una empresa saudí de IA propiedad en su totalidad del Public Investment Fund, lanzada en mayo de 2025. Comercializa ALLaM y opera HUMAIN Chat. Es independiente de SDAIA, pero heredó los modelos ALLaM del Centro Nacional de IA de SDAIA; Aramco adquirió después una participación minoritaria.' },
+        },
       ],
     },
     itemListSchema: {
@@ -1015,6 +1021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Jais est-il un modèle saoudien ?', a: 'Non — Jais est d\'origine émirienne, développé par Core42/G42 à Abu Dhabi, et non par une institution saoudienne. Il est inclus ici parce qu\'il s\'agit d\'un modèle arabe capable, sous Apache 2.0, compétitif sur les tâches dialectales, mais il ne fait pas partie de la lignée saoudienne (ALLaM/AceGPT).' },
           { q: 'Dois-je utiliser ALLaM 34B ou 7B ?', a: 'Pour un déploiement local, utilisez le 7B — le 34B est propriétaire et non auto-hébergeable. Commencez avec ALLaM 7B sur votre propre matériel, et si vous avez besoin de la capacité du 34B, accédez-y via le produit HUMAIN Chat plutôt que d\'attendre des poids téléchargeables.' },
           { q: 'Comment tester si un modèle gère correctement l\'arabe saoudien ?', a: 'Exécutez des prompts de cohérence MSA vs dialecte, interrogez sur les pratiques culturelles saoudiennes et la finance islamique, et testez l\'accord grammatical de genre (par exemple, en décrivant une femme médecin et un homme ingénieur). Surveillez les réponses en alphabet latin, un mauvais registre dialectal ou un cadrage culturellement inapproprié, et validez avec au moins 20 prompts spécifiques à votre domaine avant de déployer.' },
+          { q: 'Qu\'est-ce que HUMAIN ?', a: 'HUMAIN est une entreprise saoudienne d\'IA détenue intégralement par le Public Investment Fund, lancée en mai 2025. Elle commercialise ALLaM et exploite HUMAIN Chat. Elle est distincte de SDAIA, mais a hérité des modèles ALLaM du Centre national d\'IA de SDAIA ; Aramco a ensuite pris une participation minoritaire.' },
         ],
       },
       relatedReading: {
@@ -1094,6 +1101,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Jais est-il un modèle saoudien ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non — Jais est d\'origine émirienne, développé par Core42/G42 à Abu Dhabi, et non par une institution saoudienne. Il est inclus ici parce qu\'il s\'agit d\'un modèle arabe capable, sous Apache 2.0, compétitif sur les tâches dialectales, mais il ne fait pas partie de la lignée saoudienne (ALLaM/AceGPT).' } },
         { '@type': 'Question', 'name': 'Dois-je utiliser ALLaM 34B ou 7B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour un déploiement local, utilisez le 7B — le 34B est propriétaire et non auto-hébergeable. Commencez avec ALLaM 7B sur votre propre matériel, et si vous avez besoin de la capacité du 34B, accédez-y via le produit HUMAIN Chat plutôt que d\'attendre des poids téléchargeables.' } },
         { '@type': 'Question', 'name': 'Comment tester si un modèle gère correctement l\'arabe saoudien ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exécutez des prompts de cohérence MSA vs dialecte, interrogez sur les pratiques culturelles saoudiennes et la finance islamique, et testez l\'accord grammatical de genre (par exemple, en décrivant une femme médecin et un homme ingénieur). Surveillez les réponses en alphabet latin, un mauvais registre dialectal ou un cadrage culturellement inapproprié, et validez avec au moins 20 prompts spécifiques à votre domaine avant de déployer.' } },
+        {
+          '@type': 'Question',
+          'name': 'Qu\'est-ce que HUMAIN ?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'HUMAIN est une entreprise saoudienne d\'IA détenue intégralement par le Public Investment Fund, lancée en mai 2025. Elle commercialise ALLaM et exploite HUMAIN Chat. Elle est distincte de SDAIA, mais a hérité des modèles ALLaM du Centre national d\'IA de SDAIA ; Aramco a ensuite pris une participation minoritaire.' },
+        },
       ],
     },
     itemListSchema: {
@@ -1235,6 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Jaisはサウジのモデルですか?', a: 'いいえ — JaisはUAE発で、サウジの機関ではなくアブダビのCore42/G42によって開発されました。方言タスクで競争力のある有能なApache 2.0のアラビア語モデルであるためここに含めていますが、サウジ (ALLaM/AceGPT) の系譜の一部ではありません。' },
           { q: 'ALLaM 34Bと7Bのどちらを使うべきですか?', a: 'ローカル展開には7Bを使用してください — 34Bはプロプライエタリでセルフホストできません。まず自分のハードウェアでALLaM 7Bから始め、34Bの能力が必要な場合は、ダウンロード可能な重みを期待するのではなく、HUMAIN Chat製品を通じてアクセスしてください。' },
           { q: 'モデルがサウジアラビア語を正しく処理するかをどうテストすればよいですか?', a: 'MSA対方言の一貫性プロンプトを実行し、サウジの文化的慣習とイスラム金融について尋ね、文法的な性の一致 (例えば女性医師と男性エンジニアの描写) をテストします。ラテン文字の応答、誤った方言レジスター、または文化的に不適切な枠付けに注意し、展開する前に少なくとも20個のドメイン固有のプロンプトで検証してください。' },
+          { q: 'HUMAINとは何ですか？', a: 'HUMAINは、Public Investment Fundが完全所有するサウジアラビアのAI企業で、2025年5月に設立されました。ALLaMを商用化し、HUMAIN Chatを運営しています。SDAIAとは別組織ですが、SDAIAの国立AIセンター（NCAI）からALLaMモデルを引き継ぎました。その後、Aramcoが少数株式を取得しました。' },
         ],
       },
       relatedReading: {
@@ -1314,6 +1327,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Jaisはサウジのモデルですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ — JaisはUAE発で、サウジの機関ではなくアブダビのCore42/G42によって開発されました。方言タスクで競争力のある有能なApache 2.0のアラビア語モデルであるためここに含めていますが、サウジ (ALLaM/AceGPT) の系譜の一部ではありません。' } },
         { '@type': 'Question', 'name': 'ALLaM 34Bと7Bのどちらを使うべきですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ローカル展開には7Bを使用してください — 34Bはプロプライエタリでセルフホストできません。まず自分のハードウェアでALLaM 7Bから始め、34Bの能力が必要な場合は、ダウンロード可能な重みを期待するのではなく、HUMAIN Chat製品を通じてアクセスしてください。' } },
         { '@type': 'Question', 'name': 'モデルがサウジアラビア語を正しく処理するかをどうテストすればよいですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'MSA対方言の一貫性プロンプトを実行し、サウジの文化的慣習とイスラム金融について尋ね、文法的な性の一致 (例えば女性医師と男性エンジニアの描写) をテストします。ラテン文字の応答、誤った方言レジスター、または文化的に不適切な枠付けに注意し、展開する前に少なくとも20個のドメイン固有のプロンプトで検証してください。' } },
+        {
+          '@type': 'Question',
+          'name': 'HUMAINとは何ですか？',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'HUMAINは、Public Investment Fundが完全所有するサウジアラビアのAI企業で、2025年5月に設立されました。ALLaMを商用化し、HUMAIN Chatを運営しています。SDAIAとは別組織ですが、SDAIAの国立AIセンター（NCAI）からALLaMモデルを引き継ぎました。その後、Aramcoが少数株式を取得しました。' },
+        },
       ],
     },
     itemListSchema: {
@@ -1455,6 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O Jais é um modelo saudita?', a: 'Não — o Jais é de origem nos EAU, desenvolvido pela Core42/G42 em Abu Dhabi, não por uma instituição saudita. Ele está incluído aqui porque é um modelo em árabe capaz, sob Apache 2.0, competitivo em tarefas de dialeto, mas não faz parte da linhagem saudita (ALLaM/AceGPT).' },
           { q: 'Devo usar o ALLaM 34B ou o 7B?', a: 'Para implantação local, use o 7B — o 34B é proprietário e não auto-hospedável. Comece com o ALLaM 7B no seu próprio hardware e, se você precisar da capacidade do 34B, acesse-o por meio do produto HUMAIN Chat em vez de esperar pesos para download.' },
           { q: 'Como eu testo se um modelo lida corretamente com o árabe saudita?', a: 'Rode prompts de consistência MSA vs. dialeto, pergunte sobre práticas culturais sauditas e finanças islâmicas, e teste a concordância gramatical de gênero (por exemplo, descrevendo uma médica e um engenheiro). Fique atento a respostas em escrita latina, registro dialetal errado ou enquadramento culturalmente inadequado, e valide com pelo menos 20 prompts específicos do domínio antes de implantar.' },
+          { q: 'O que é a HUMAIN?', a: 'A HUMAIN é uma empresa saudita de IA totalmente controlada pelo Public Investment Fund, lançada em maio de 2025. Ela comercializa o ALLaM e opera o HUMAIN Chat. É separada da SDAIA, mas herdou os modelos ALLaM do Centro Nacional de IA da SDAIA; a Aramco depois adquiriu uma participação minoritária.' },
         ],
       },
       relatedReading: {
@@ -1534,6 +1553,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'O Jais é um modelo saudita?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não — o Jais é de origem nos EAU, desenvolvido pela Core42/G42 em Abu Dhabi, não por uma instituição saudita. Ele está incluído aqui porque é um modelo em árabe capaz, sob Apache 2.0, competitivo em tarefas de dialeto, mas não faz parte da linhagem saudita (ALLaM/AceGPT).' } },
         { '@type': 'Question', 'name': 'Devo usar o ALLaM 34B ou o 7B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para implantação local, use o 7B — o 34B é proprietário e não auto-hospedável. Comece com o ALLaM 7B no seu próprio hardware e, se você precisar da capacidade do 34B, acesse-o por meio do produto HUMAIN Chat em vez de esperar pesos para download.' } },
         { '@type': 'Question', 'name': 'Como eu testo se um modelo lida corretamente com o árabe saudita?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Rode prompts de consistência MSA vs. dialeto, pergunte sobre práticas culturais sauditas e finanças islâmicas, e teste a concordância gramatical de gênero (por exemplo, descrevendo uma médica e um engenheiro). Fique atento a respostas em escrita latina, registro dialetal errado ou enquadramento culturalmente inadequado, e valide com pelo menos 20 prompts específicos do domínio antes de implantar.' } },
+        {
+          '@type': 'Question',
+          'name': 'O que é a HUMAIN?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'A HUMAIN é uma empresa saudita de IA totalmente controlada pelo Public Investment Fund, lançada em maio de 2025. Ela comercializa o ALLaM e opera o HUMAIN Chat. É separada da SDAIA, mas herdou os modelos ALLaM do Centro Nacional de IA da SDAIA; a Aramco depois adquiriu uma participação minoritária.' },
+        },
       ],
     },
     itemListSchema: {
@@ -1675,6 +1699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Jais 是沙特模型吗？', a: '不是——Jais 是阿联酋出身，由阿布扎比的 Core42/G42 开发，而非由沙特机构开发。之所以列在这里，是因为它是一个能力出色、采用 Apache 2.0 且在方言任务上具竞争力的阿拉伯语模型，但它不属于沙特 (ALLaM/AceGPT) 谱系。' },
           { q: '我应该使用 ALLaM 34B 还是 7B？', a: '对于本地部署，请使用 7B——34B 是专有的，无法自托管。从在你自己硬件上运行的 ALLaM 7B 开始，如果你需要 34B 的能力，请通过 HUMAIN Chat 产品来访问它，而不要期望获得可下载的权重。' },
           { q: '我如何测试一个模型是否正确处理沙特阿拉伯语？', a: '运行 MSA 与方言一致性的提示词，询问有关沙特文化习俗和伊斯兰金融的问题，并测试语法性别一致 (例如，描述一位女医生和一位男工程师)。留意拉丁字母回复、错误的方言语域，或文化上不得体的表述，并在部署前用至少 20 条特定领域的提示词进行验证。' },
+          { q: 'HUMAIN 是什么？', a: 'HUMAIN 是一家由 Public Investment Fund 全资拥有的沙特 AI 公司，于 2025 年 5 月成立。它将 ALLaM 商业化并运营 HUMAIN Chat。它独立于 SDAIA，但继承了 SDAIA 国家 AI 中心（NCAI）的 ALLaM 模型；Aramco 后来收购了少数股权。' },
         ],
       },
       relatedReading: {
@@ -1754,6 +1779,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Jais 是沙特模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是——Jais 是阿联酋出身，由阿布扎比的 Core42/G42 开发，而非由沙特机构开发。之所以列在这里，是因为它是一个能力出色、采用 Apache 2.0 且在方言任务上具竞争力的阿拉伯语模型，但它不属于沙特 (ALLaM/AceGPT) 谱系。' } },
         { '@type': 'Question', 'name': '我应该使用 ALLaM 34B 还是 7B？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于本地部署，请使用 7B——34B 是专有的，无法自托管。从在你自己硬件上运行的 ALLaM 7B 开始，如果你需要 34B 的能力，请通过 HUMAIN Chat 产品来访问它，而不要期望获得可下载的权重。' } },
         { '@type': 'Question', 'name': '我如何测试一个模型是否正确处理沙特阿拉伯语？', 'acceptedAnswer': { '@type': 'Answer', 'text': '运行 MSA 与方言一致性的提示词，询问有关沙特文化习俗和伊斯兰金融的问题，并测试语法性别一致 (例如，描述一位女医生和一位男工程师)。留意拉丁字母回复、错误的方言语域，或文化上不得体的表述，并在部署前用至少 20 条特定领域的提示词进行验证。' } },
+        {
+          '@type': 'Question',
+          'name': 'HUMAIN 是什么？',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'HUMAIN 是一家由 Public Investment Fund 全资拥有的沙特 AI 公司，于 2025 年 5 月成立。它将 ALLaM 商业化并运营 HUMAIN Chat。它独立于 SDAIA，但继承了 SDAIA 国家 AI 中心（NCAI）的 ALLaM 模型；Aramco 后来收购了少数股权。' },
+        },
       ],
     },
     itemListSchema: {
@@ -1895,6 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Jais는 사우디 모델입니까?', a: '아니요 — Jais는 UAE 출신으로, 사우디 기관이 아니라 아부다비의 Core42/G42가 개발했습니다. 방언 작업에서 경쟁력 있는 유능한 Apache 2.0 아랍어 모델이기 때문에 여기에 포함되었지만, 사우디 (ALLaM/AceGPT) 계보의 일부는 아닙니다.' },
           { q: 'ALLaM 34B를 사용해야 합니까 아니면 7B를 사용해야 합니까?', a: '로컬 배포의 경우 7B를 사용하십시오 — 34B는 독점이며 자체 호스팅할 수 없습니다. 자체 하드웨어에서 ALLaM 7B로 시작하고, 34B 역량이 필요하다면 다운로드 가능한 가중치를 기대하기보다는 HUMAIN Chat 제품을 통해 접근하십시오.' },
           { q: '모델이 사우디 아랍어를 올바르게 처리하는지 어떻게 테스트합니까?', a: 'MSA 대 방언 일관성 프롬프트를 실행하고, 사우디 문화 관행과 이슬람 금융에 대해 물어보고, 문법적 성 일치를 테스트하십시오 (예: 여성 의사와 남성 엔지니어 묘사). 라틴 문자 응답, 잘못된 방언 격식, 또는 문화적으로 부적절한 표현을 주의하고, 배포하기 전에 최소 20개의 도메인별 프롬프트로 검증하십시오.' },
+          { q: 'HUMAIN이란 무엇입니까?', a: 'HUMAIN은 Public Investment Fund가 전액 소유한 사우디아라비아 AI 기업으로 2025년 5월에 설립되었습니다. ALLaM을 상용화하고 HUMAIN Chat을 운영합니다. SDAIA와는 별개 조직이지만 SDAIA의 국립 AI 센터(NCAI)에서 ALLaM 모델을 인계받았습니다. 이후 Aramco가 소수 지분을 인수했습니다.' },
         ],
       },
       relatedReading: {
@@ -1974,6 +2005,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Jais는 사우디 모델입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '아니요 — Jais는 UAE 출신으로, 사우디 기관이 아니라 아부다비의 Core42/G42가 개발했습니다. 방언 작업에서 경쟁력 있는 유능한 Apache 2.0 아랍어 모델이기 때문에 여기에 포함되었지만, 사우디 (ALLaM/AceGPT) 계보의 일부는 아닙니다.' } },
         { '@type': 'Question', 'name': 'ALLaM 34B를 사용해야 합니까 아니면 7B를 사용해야 합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '로컬 배포의 경우 7B를 사용하십시오 — 34B는 독점이며 자체 호스팅할 수 없습니다. 자체 하드웨어에서 ALLaM 7B로 시작하고, 34B 역량이 필요하다면 다운로드 가능한 가중치를 기대하기보다는 HUMAIN Chat 제품을 통해 접근하십시오.' } },
         { '@type': 'Question', 'name': '모델이 사우디 아랍어를 올바르게 처리하는지 어떻게 테스트합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'MSA 대 방언 일관성 프롬프트를 실행하고, 사우디 문화 관행과 이슬람 금융에 대해 물어보고, 문법적 성 일치를 테스트하십시오 (예: 여성 의사와 남성 엔지니어 묘사). 라틴 문자 응답, 잘못된 방언 격식, 또는 문화적으로 부적절한 표현을 주의하고, 배포하기 전에 최소 20개의 도메인별 프롬프트로 검증하십시오.' } },
+        {
+          '@type': 'Question',
+          'name': 'HUMAIN이란 무엇입니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'HUMAIN은 Public Investment Fund가 전액 소유한 사우디아라비아 AI 기업으로 2025년 5월에 설립되었습니다. ALLaM을 상용화하고 HUMAIN Chat을 운영합니다. SDAIA와는 별개 조직이지만 SDAIA의 국립 AI 센터(NCAI)에서 ALLaM 모델을 인계받았습니다. 이후 Aramco가 소수 지분을 인수했습니다.' },
+        },
       ],
     },
     itemListSchema: {
