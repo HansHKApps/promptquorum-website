@@ -133,7 +133,13 @@ import { article as a_galaxy_s26_local_ai_on_device_2026 } from "./articles/gala
 import { article as a_galaxy_vs_iphone_on_device_ai_2026 } from "./articles/galaxy-vs-iphone-on-device-ai-2026";
 import { article as a_hbm_memory_on_device_ai_samsung_sk_hynix_2026 } from "./articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026";
 
+// Brazil Sprint 2026-06-14 — LGPD + Brazilian Portuguese
+import { article as a_local_llm_lgpd_compliance_brazil_2026 } from "./articles/local-llm-lgpd-compliance-brazil-2026";
+import { article as a_best_local_llms_portuguese_language_2026 } from "./articles/best-local-llms-portuguese-language-2026";
+
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
+  "local-llm-lgpd-compliance-brazil-2026": a_local_llm_lgpd_compliance_brazil_2026,
+  "best-local-llms-portuguese-language-2026": a_best_local_llms_portuguese_language_2026,
   "what-are-local-llms": a_what_are_local_llms,
   "how-to-install-ollama": a_how_to_install_ollama,
   "how-to-install-lm-studio": a_how_to_install_lm_studio,

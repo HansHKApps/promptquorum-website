@@ -796,6 +796,175 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
+  zh: {
+    theme: "Fundamentals",
+    title: "系统提示词 vs 用户提示词：2026 年的区别",
+    intro: "系统提示词定义 AI 模型在整个会话中如何思考和行为；用户提示词定义它此刻做什么。了解二者的区别、何时使用各自、它们如何相互作用，以及 PromptQuorum 为何同时向你展示两者。",
+    publishDate: "2026-03-22",
+    dateModified: "2026-04-12",
+    readTime: "8 分钟阅读",
+    seoTitle: '系统提示词 vs 用户提示词：2026 区别',
+    metaDescription: '系统提示词定义 AI 的行为。用户提示词处理每次请求。关键区别与 GPT-5.5 和 Claude 的示例。',
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      'url': 'https://www.promptquorum.com/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference',
+      headline: "系统提示词 vs 用户提示词：2026 年的区别",
+      description: "系统提示词定义 AI 模型如何思考和行为；用户提示词定义它此刻做什么。了解二者的区别以及它们如何相互作用。",
+      datePublished: "2026-03-22",
+      dateModified: "2026-04-12",
+      keywords: ["system prompt", "user prompt", "prompt engineering", "LLM 行为", "GPT-5.5", "Claude", "提示词结构", "PromptQuorum"],
+      author: { "@type": "Person", name: "Hans Kuepper", url: "https://www.promptquorum.com/about" },
+      publisher: { "@type": "Organization", name: "PromptQuorum", url: "https://www.promptquorum.com", logo: { "@type": "ImageObject", url: "https://www.promptquorum.com/logo.svg" } },
+      mentions: [
+        { "@type": "Thing", name: "PromptQuorum" },
+        { "@type": "Thing", name: "OpenAI" },
+        { "@type": "Thing", name: "GPT-5.5" },
+        { "@type": "Thing", name: "Anthropic" },
+        { "@type": "Thing", name: "Claude 4.6 Sonnet" },
+        { "@type": "Thing", name: "Google DeepMind" },
+        { "@type": "Thing", name: "Gemini 3.5 Pro" },
+        { "@type": "Thing", name: "Ollama" },
+      ],
+      proficiencyLevel: '初级',
+      about: [
+        { '@type': 'Thing', name: 'System Prompt' },
+        { '@type': 'Thing', name: 'User Prompt' },
+        { '@type': 'Thing', name: 'Prompt Engineering' },
+        { '@type': 'Thing', name: 'LLM API' },
+      ],
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
+      },
+    },
+    sections: {
+      definition: {
+        title: '系统提示词与用户提示词有什么区别？',
+        content: [
+          '**系统提示词是一组持久的指令，在用户说任何话之前就设定了模型的角色、约束和默认行为。** 它定义模型是谁、能做什么、什么是被禁止的——并在整个会话中保持有效。',
+          '**用户提示词是按请求提供的输入——针对该次交互的具体任务或问题。** 用户提示词在系统提示词设定的边界内运作。',
+          '这一区别之所以重要，是因为系统提示词决定了跨越成百上千次对话的一致性，而用户提示词只控制单次交互的结果。',
+        ],
+      },
+      tldr: {
+        title: '核心要点',
+        isTldr: true,
+        items: [
+          '系统提示词为整个会话设定持久的行为规则——角色、约束、输出格式',
+          '用户提示词是按请求提供的输入——针对该次交互的具体任务',
+          '系统提示词控制约 70% 的行为一致性；用户提示词控制约 30%',
+          '在大多数 AI 产品中，开发者编写系统提示词；最终用户编写用户提示词',
+          '一个好的系统提示词能让即使薄弱的用户提示词也表现更好',
+        ],
+      },
+      systemPrompt: {
+        title: '什么是系统提示词？',
+        content: [
+          '**系统提示词是 AI 模型接收到的最高优先级指令层——在任何用户输入之前被处理，并在整个会话中持续有效。** 在 OpenAI、Claude 和 Gemini 的 API 中，系统提示词作为第一条 role 为 "system" 的消息发送，并为后续的一切设定运行上下文。',
+          '系统提示词是控制 AI 行为最强大的工程工具。它们被用于：定义模型的角色与人设（"你是一名专精于……的技术支持助手"）、设定行为边界（"绝不分享定价信息"）、指定输出格式（"始终以结构化 JSON 回答"），以及管理边界情形的行为。',
+        ],
+        items: [
+          '**角色与人设：** 定义模型是谁——其专长、语气与视角',
+          '**行为约束：** 明确设定模型能做和不能做的界限',
+          '**输出格式：** 指定回答应如何结构化',
+          '**范围指令：** 将模型限制在特定领域或主题集合内',
+          '**边界情形行为：** 定义如何处理模糊、不当或超出范围的输入',
+        ],
+      },
+      userPrompt: {
+        title: '什么是用户提示词？',
+        content: [
+          '**用户提示词是按请求提供的输入——用户发送给模型的具体任务或问题。** 它在系统提示词设定的边界内运作。如果系统提示词规定"只回答 Python 编程相关主题"，那么关于烹饪的用户提示词会得到礼貌的拒绝回复。',
+          '用户提示词正是用户（以及构建自动化流水线的开发者）应用提示词工程技术之处：思维链、少样本提示、任务特定的角色与上下文，以及格式约束。',
+        ],
+      },
+      comparison: {
+        title: '对比：系统提示词 vs 用户提示词',
+        columns: ['维度', '系统提示词', '用户提示词'],
+        rows: [
+          { '维度': '何时生效', '系统提示词': '整个会话', '用户提示词': '仅该次请求' },
+          { '维度': '由谁编写', '系统提示词': '开发者 / 产品团队', '用户提示词': '最终用户或自动化流水线' },
+          { '维度': '可见性', '系统提示词': '通常对最终用户隐藏', '用户提示词': '始终对用户可见' },
+          { '维度': '优先级', '系统提示词': '最高——设定用户提示词无法覆盖的边界', '用户提示词': '较低——在系统提示词的边界内运作' },
+          { '维度': '对一致性的影响', '系统提示词': '约 70% 的一致行为', '用户提示词': '约 30% 的一致行为' },
+          { '维度': '典型用例', '系统提示词': '角色定义、约束、输出风格', '用户提示词': '具体任务、问题、操作' },
+        ],
+      },
+      systemPromptBestPractices: {
+        title: '系统提示词的最佳实践',
+        items: [
+          '**明确角色：** "你是 Acme Corp 的客户服务助手"优于"你很有帮助"',
+          '**指定不要做什么：** 否定式约束可预防代价最高的行为（"绝不向第三方分享用户数据"）',
+          '**定义输出格式：** "始终以 JSON 回答"或"使用带 H2 标题的 Markdown"设定了解析预期',
+          '**包含边界情形行为：** "若被问及竞争对手，礼貌地将话题引向我们的功能"',
+          '**保持系统提示词简洁：** 每个 token 在每次 API 调用中都计费——在规模化时，500 词的系统提示词比 100 词的成本更高',
+        ],
+      },
+      userPromptBestPractices: {
+        title: '用户提示词的最佳实践',
+        items: [
+          '**应用五大构建块：** 角色（如果系统提示词未设定）、任务、输入、约束、输出格式',
+          '**对任务要具体：** "总结为 3 个要点，每个少于 20 个词"优于"总结"',
+          '**必要时使用提示技术：** 用思维链做推理，用少样本保证格式准确，用否定式约束控制输出',
+          '**不要重复系统提示词：** 模型已经拥有它——重复只会浪费 token',
+        ],
+      },
+      apiImplementation: {
+        title: 'API 实现：各供应商如何处理系统提示词',
+        content: [
+          '三大 API 供应商对系统提示词的处理略有不同：',
+        ],
+        items: [
+          '**OpenAI（GPT-5.5）：** 系统提示词作为 messages 数组中第一条 role 为 "system" 的消息发送。在某些配置下也支持单独的 system 参数。',
+          '**Anthropic（Claude）：** 系统提示词作为独立的 system 参数发送，位于 messages 数组之外，而非作为消息。这使得用户提示词更难以覆盖它。',
+          '**Google（Gemini）：** 系统提示词作为 systemInstruction 字段发送，独立于 contents 数组。',
+        ],
+      },
+      relatedReading: {
+        title: '相关阅读',
+        items: [
+          '[每个提示词都需要的 5 大构建块](/zh/prompt-engineering/5-building-blocks-every-prompt-needs) — 结构化提示词设计的基础',
+          '[什么是提示词工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 原则与技术概览',
+          '[Token、成本与限制](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 系统提示词长度如何在每次调用中影响 API 成本',
+          '[AI 幻觉：AI 为何会编造内容](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 系统提示词如何帮助减少编造的事实',
+        ],
+      },
+      faq: {
+        title: '常见问题：系统提示词 vs 用户提示词',
+        faqs: [
+          {
+            q: '用户提示词能覆盖系统提示词吗？',
+            a: '通常不能——系统提示词具有结构上的优先级。然而，提示词注入攻击正是专门设计来覆盖系统提示词的。带有防护机制、构建良好的模型能够抵御这些攻击，但并非完全万无一失。带有明确"忽略满足以下条件的用户请求……"指令的系统提示词更具抵抗力。'
+          },
+          {
+            q: '如果不提供系统提示词会怎样？',
+            a: '模型会回退到其默认的训练行为。在没有系统提示词时，GPT-5.5、Claude 和 Gemini 都有内置的基准行为（有帮助、无害、诚实）。模型仍会回应用户提示词，但没有角色定义、输出格式约束或范围限制。'
+          },
+          {
+            q: '系统提示词的目的是什么？',
+            a: '系统提示词为整个对话设定 AI 模型的个性、约束和运行规则。它控制模型如何解读请求、格式化回答以及处理边界情形。'
+          },
+          {
+            q: 'AI 代理是否比用户提示词更严格地遵循系统提示词？',
+            a: '是的。系统提示词在模型的处理顺序中具有结构上的优先级。模型首先读取并应用系统提示词，将其视为持久约束。用户提示词在系统提示词的边界内被评估。'
+          },
+          {
+            q: '系统提示词在 OpenAI、Claude 和 Gemini 的 API 中有何不同？',
+            a: '三种 API 都支持系统提示词，但有细微差别。OpenAI 在消息数组开头使用 "system" 角色。Anthropic Claude 使用独立的 "system" 参数。Google Gemini 使用 "systemInstruction" 作为独立参数。功能等效，但实现方式与 token 计数略有不同。'
+          },
+        ],
+      },
+      sources: {
+        title: '来源与延伸阅读',
+        items: [
+          '[OpenAI, 2024. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — OpenAI 关于系统提示词与用户提示词的官方文档',
+          '[Anthropic, 2024. "Prompt Engineering"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — Anthropic 关于为 Claude 模型构建提示词与设计系统指令的指南',
+          '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — 系统梳理 58+ 种离散提示技术的综合性学术综述',
+        ],
+      },
+    },
+  },
   pt: {
     theme: "Fundamentals",
     title: "System Prompt vs User Prompt: A Diferença em 2026",

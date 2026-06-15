@@ -382,6 +382,131 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    theme: 'Frameworks',
+    title: 'SPECS 框架',
+    intro: 'SPECS 框架是一种提示词结构，可将模糊的请求转化为精确的规范，使大语言模型产出可预测、可执行的输出。在 PromptQuorum 中，SPECS 框架作为内置选项提供，任何用户都可以直接在应用中选择并应用它。',
+    publishDate: '2026-03-24',
+    readTime: '8 分钟阅读',
+    seoTitle: 'SPECS 框架 2026：精确的提示词结构',
+    metaDescription: 'SPECS：Scope、Purpose、Examples、Constraints、Steps。详尽的提示词结构，附指南与最佳实践，助你获得可预测的输出。',
+    educationalLevel: 'Intermediate',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'SPECS 框架',
+      description: 'SPECS 框架（Scope、Purpose、Examples、Constraints、Steps）的工作原理、何时使用，以及 PromptQuorum 如何将其作为内置选项提供。',
+      datePublished: '2026-03-24',
+      dateModified: '2026-03-24',
+      keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Prompt Engineering' },
+        { '@type': 'Thing', name: '提示词框架' },
+        { '@type': 'Thing', name: '大语言模型' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
+      ],
+    },
+    sections: {
+      whatIsSPECS: {
+        title: '什么是 SPECS 框架',
+        content: [
+          '**SPECS 框架是一种面向规范的提示词模式，它将每个提示词视为一份微型需求文档，而不是随意的聊天消息。** 它专为那些精确性、结构性和可重复性比开放式创意更重要的任务而设计。SPECS 对 GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro 及本地模型都很有效，因为它消除了指令中的歧义。',
+          '当不同的人或系统必须执行同一个提示词并获得一致的结果时，SPECS 尤其有用。通过将提示词转化为清晰的规范，你可以更轻松地排查问题、比较模型行为，并在工作流中保持标准一致。',
+        ],
+      },
+      fiveComponents: {
+        title: 'SPECS 的五个组成部分',
+        content: [
+          '**一个好的 SPECS 提示词会定义全部五个组成部分，使模型确切知道要做什么、为什么做，以及如何为回答设定格式。** 每个组成部分聚焦于指令的不同部分。',
+          '常见的定义如下：',
+        ],
+        items: [
+          'Scope（范围）：任务涵盖什么，以及明确排除什么。',
+          'Purpose（目的）：输出应支持的目标或决策。',
+          'Examples（示例）：一个或多个示例输入与输出，用于引导模型。',
+          'Constraints（约束）：严格的规则，如长度限制、格式或禁止的行为。',
+          'Steps（步骤）：模型为得出输出而应遵循的内部顺序。',
+        ],
+      },
+      whySPECSIsUseful: {
+        title: 'SPECS 框架为什么有用',
+        content: [
+          '**SPECS 框架适用于分析型、运营型和集成型任务，当你需要机器可用的结果而不仅仅是可读的文字时，它尤其有用。** 它减少了隐含假设，并使提示词的每个部分都明确化——这对生产环境的工作流至关重要。',
+          '其常见的好处包括：',
+        ],
+        items: [
+          '排查更简单，因为你可以单独调整或测试规范中的各个组成部分。',
+          '得益于约束与示例，跨模型、跨运行的输出更稳定。',
+          '与后续处理更契合，因为结构是事先已知的。',
+        ],
+      },
+      badVsGoodExample: {
+        title: '示例：糟糕的 SPECS 提示词 vs 优秀的 SPECS 提示词',
+        content: [
+          '**当你看到同一个任务用两种方式书写时，无结构请求与基于 SPECS 的请求之间的差异就一目了然。** 这里有一个从文本中提取信息的示例。',
+          '**[糟糕的提示词]**',
+          '"阅读这封客户邮件并总结要点。"',
+          '**[优秀的提示词]**',
+          '"Scope：分析单封客户支持邮件，提取与我们支持团队相关的关键信息。忽略营销或销售机会。Purpose：产出一份结构化摘要，可记录到我们的工单系统中，并帮助客服人员更快回复。Examples：输入：\'我今天尝试重置密码两次，链接两次都过期了……\' 输出：{"issue_type": "password_reset", "urgency": "medium", "summary": "重置链接在用户完成流程前就过期了"} Constraints：输出必须是有效的 JSON，包含 `issue_type`、`urgency` 和 `summary` 键。不要添加额外字段。`urgency` 必须为以下之一：low、medium、high。Steps：1) 识别主要问题，2) 根据影响和受挫程度推断紧急度，3) 写一份少于 25 个词的简明摘要。"',
+          'SPECS 版本确切地定义了模型应产出什么、应如何推理，以及结果将如何被使用。',
+        ],
+      },
+      whenToUse: {
+        title: '何时使用 SPECS 框架',
+        content: [
+          '**当你的主要目标是结构化、可靠的输出，而非探索性的头脑风暴时，你应当使用 SPECS 框架。** 这通常包括：',
+        ],
+        items: [
+          '将邮件、聊天或文档中的数据提取到固定模式。',
+          '带有严格规则的代码转换、文档生成与重构。',
+          '标题、指标和格式均已预定义的报告生成。',
+          '任何 AI 输出直接馈入另一个系统或脚本的工作流。',
+        ],
+      },
+      howPQImplements: {
+        title: 'PromptQuorum 如何实现 SPECS 框架',
+        content: [
+          '**PromptQuorum 是一款多模型 AI 调度工具，它将 SPECS 框架作为内置提示词结构之一提供，使用户无需从零构建即可设计规范式提示词。** 当你在 PromptQuorum 中选择 SPECS 时，应用会显示用于 Scope、Purpose、Examples、Constraints 和 Steps 的专用字段，然后将它们组装成一条结构良好的指令。',
+          '在 PromptQuorum 中，SPECS 框架让你能够：',
+        ],
+        items: [
+          '在各自独立的字段中捕获每个组成部分，使规范保持可读且易于编辑。',
+          '将同一个基于 SPECS 的提示词并行应用于多个模型，便于比较不同供应商如何处理严格的格式。',
+          '为工单摘要、报告生成或代码审查等重复性工作流保存和共享 SPECS 模板。',
+        ],
+      },
+      usingSpecsWithOthers: {
+        title: '将 SPECS 与其他框架搭配使用',
+        content: [
+          '**你应当将 SPECS 框架定位为结构化输出的主干，并为互补任务将其与其他框架结合。** 一种实用的模式是：',
+        ],
+        items: [
+          '凡是必须产出可预测结构或馈入工具的内容，都使用 SPECS。',
+          '将 CRAFT 等创意型框架用于营销与文案。',
+          '当你想看到中间推理时，使用分析–规划–执行（APE）等面向推理的框架。',
+          '对不值得编写完整规范的快速任务，使用通用的单步框架。',
+        ],
+      },
+      howToStart: {
+        title: '如何使用 SPECS 框架',
+        numberedItems: [
+          '**Setting（环境）：提供关于环境、系统或领域的上下文。** 示例：\'你是一家医疗健康公司的数据分析师。患者隐私至关重要。所有查询都必须符合 HIPAA。\'',
+          '**Problem statement（问题陈述）：说明你正在解决的具体问题。** 示例：\'识别在过去 90 天内用药依从性较低的患者群组。\'',
+          '**Examples（示例）：提供 2–3 个良好输出的具体示例。** 对于分析，展示一张表格或示例发现。对于代码生成，展示遵循你风格的可运行代码。',
+          '**Constraints（约束）：列出严格的规则与偏好。** 示例：\'仅使用 SQL（不使用 Python）。查询必须在 5 秒内执行完毕。输出必须匿名化（不含患者姓名）。\'',
+          '**Style（风格）：指定偏好的语气、语言和格式。** 示例：\'技术受众。使用精确术语。返回一份 markdown 报告。\'',
+        ],
+      },
+    },
+  },
   pt: {
     theme: 'Frameworks',
     title: 'O Framework SPECS',

@@ -170,4 +170,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'galaxy-s26-local-ai-on-device-2026':           'galaxy-s26-local-ai-on-device-2026',
   'galaxy-vs-iphone-on-device-ai-2026':           'galaxy-vs-iphone-on-device-ai-2026',
   'hbm-memory-on-device-ai-samsung-sk-hynix-2026': 'hbm-memory-on-device-ai-samsung-sk-hynix-2026',
+  // Brazil Sprint 2026-06-14 — LGPD + Brazilian Portuguese
+  'local-llm-lgpd-compliance-brazil-2026':        'local-llm-lgpd-compliance-brazil-2026',
+  'best-local-llms-portuguese-language-2026':     'best-local-llms-portuguese-language-2026',
 }
