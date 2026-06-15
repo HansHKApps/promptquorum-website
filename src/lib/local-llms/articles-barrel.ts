@@ -126,6 +126,12 @@ import { article as a_gpu_vs_ai_subscription_roi } from "./articles/gpu-vs-ai-su
 // Saudi Arabia local-AI sprint 2026-06-14
 import { article as a_saudi_pdpl_data_sovereignty_local_ai_2026 } from "./articles/saudi-pdpl-data-sovereignty-local-ai-2026";
 import { article as a_best_saudi_arabic_local_llms_allam_2026 } from "./articles/best-saudi-arabic-local-llms-allam-2026";
+import { article as a_mram_in_memory_computing_local_ai_2026 } from "./articles/mram-in-memory-computing-local-ai-2026";
+
+// Korea Hardware 2026-06-15
+import { article as a_galaxy_s26_local_ai_on_device_2026 } from "./articles/galaxy-s26-local-ai-on-device-2026";
+import { article as a_galaxy_vs_iphone_on_device_ai_2026 } from "./articles/galaxy-vs-iphone-on-device-ai-2026";
+import { article as a_hbm_memory_on_device_ai_samsung_sk_hynix_2026 } from "./articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026";
 
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   "what-are-local-llms": a_what_are_local_llms,
@@ -249,4 +255,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   // UAE Sprint 2026-06-14
   "uae-pdpl-data-sovereignty-local-ai-2026": a_uae_pdpl_data_sovereignty_local_ai_2026,
   "best-arabic-local-llms-2026": a_best_arabic_local_llms_2026,
+  // Emerging memory tech 2026-06-15
+  "mram-in-memory-computing-local-ai-2026": a_mram_in_memory_computing_local_ai_2026,
+  // Korea Hardware 2026-06-15
+  "galaxy-s26-local-ai-on-device-2026": a_galaxy_s26_local_ai_on_device_2026,
+  "galaxy-vs-iphone-on-device-ai-2026": a_galaxy_vs_iphone_on_device_ai_2026,
+  "hbm-memory-on-device-ai-samsung-sk-hynix-2026": a_hbm_memory_on_device_ai_samsung_sk_hynix_2026,
 };

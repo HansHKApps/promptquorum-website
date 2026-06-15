@@ -165,4 +165,9 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Emerging memory tech 2026-06-15
   'mram-in-memory-computing-local-ai-2026':       'mram-in-memory-computing-local-ai-2026',
+
+  // Korea Hardware 2026-06-15
+  'galaxy-s26-local-ai-on-device-2026':           'galaxy-s26-local-ai-on-device-2026',
+  'galaxy-vs-iphone-on-device-ai-2026':           'galaxy-vs-iphone-on-device-ai-2026',
+  'hbm-memory-on-device-ai-samsung-sk-hynix-2026': 'hbm-memory-on-device-ai-samsung-sk-hynix-2026',
 }
