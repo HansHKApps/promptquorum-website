@@ -63,6 +63,9 @@ import { article as a_best_gpu_for_llm_inference_under_500_2026 } from "./articl
 import { article as a_local_llm_cost_calculator_build_vs_rent_2026 } from "./articles/local-llm-cost-calculator-build-vs-rent-2026";
 // WWDC 2026 Apple on-device AI
 import { article as a_apple_on_device_ai_vs_local_llms } from "./articles/apple-on-device-ai-vs-local-llms";
+// UAE Sprint 2026-06-14 — data sovereignty + Arabic local LLMs
+import { article as a_uae_pdpl_data_sovereignty_local_ai_2026 } from "./articles/uae-pdpl-data-sovereignty-local-ai-2026";
+import { article as a_best_arabic_local_llms_2026 } from "./articles/best-arabic-local-llms-2026";
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
@@ -243,4 +246,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   // Saudi Arabia local-AI sprint 2026-06-14
   "saudi-pdpl-data-sovereignty-local-ai-2026": a_saudi_pdpl_data_sovereignty_local_ai_2026,
   "best-saudi-arabic-local-llms-allam-2026": a_best_saudi_arabic_local_llms_allam_2026,
+  // UAE Sprint 2026-06-14
+  "uae-pdpl-data-sovereignty-local-ai-2026": a_uae_pdpl_data_sovereignty_local_ai_2026,
+  "best-arabic-local-llms-2026": a_best_arabic_local_llms_2026,
 };

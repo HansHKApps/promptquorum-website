@@ -71,6 +71,8 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'enterprise-compliance-local-llms':     'enterprise-compliance-local-llms',
   'scaling-local-llms-enterprise':        'scaling-local-llms-enterprise',
   'corporate-rag-local-llms':             'corporate-rag-local-llms',
+  'uae-pdpl-data-sovereignty-local-ai-2026': 'uae-pdpl-data-sovereignty-local-ai-2026',
+  'best-arabic-local-llms-2026':          'best-arabic-local-llms-2026',
 
   // GPU Buying Guides (NEW THEME)
   'best-budget-gpus-local-llm':           'best-budget-gpus-local-llm',
