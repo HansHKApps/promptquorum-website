@@ -153,6 +153,12 @@ const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: 
     savePdf: '下载参考卡（PDF）',
     fallbackDescription: '本文的交互式幻灯片。',
   },
+  ar: {
+    heading: 'العرض التقديمي',
+    description: 'تصفّح الشرائح أدناه أو نزّلها بصيغة PDF للرجوع إليها دون اتصال.',
+    savePdf: 'تنزيل البطاقة المرجعية (PDF)',
+    fallbackDescription: 'عرض شرائح تفاعلي لهذا المقال.',
+  },
 }
 
 // Render inline link placeholders and markdown links [text](url)

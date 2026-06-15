@@ -79,6 +79,19 @@
             line-height: 1.5;
         }
 
+        /* RTL overrides for Arabic — beat inline text-align on numbered/FAQ slides */
+        .slide[data-lang="ar"] ul,
+        .slide[data-lang="ar"] ol,
+        .slide[data-lang="ar"] .slide-footer,
+        .slide[data-lang="ar"] div[style*="text-align: left"] {
+            text-align: right !important;
+        }
+        .slide[data-lang="ar"] ul,
+        .slide[data-lang="ar"] ol {
+            padding-right: 1.2em;
+            padding-left: 0;
+        }
+
         .slide.title {
             background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
         }
@@ -1172,6 +1185,154 @@
             href: 'https://www.promptquorum.com'
           }
         ]
+      },
+      ar: {
+        title: 'شرح تكميم نماذج LLM: Q4_K_M وQ8_0 وGGUF',
+        backLabel: '→ المقالة',
+        slides: [
+          {
+            type: 'title',
+            h1: 'شرح تكميم نماذج LLM',
+            subtitle: 'يقلّص Q4_K_M نموذج 7B من 14 GB إلى 4.5 GB بفقدان جودة لا يتجاوز 1–3٪. تعرّف على كيفية عمل صيغ Q4_K_M وQ8_0 وGGUF.',
+            link: 'https://www.promptquorum.com/local-llms/llm-quantization-explained'
+          },
+          {
+            type: 'list',
+            h2: 'أهم النقاط',
+            items: [
+              'يحوّل التكميم أوزان النموذج من 16 بت إلى 4 بت أو 8 بت، مما يقلّل استهلاك RAM بنسبة 50–75٪.',
+              '<strong>Q4_K_M</strong> هو التوصية القياسية — أفضل توازن بين الجودة واستهلاك RAM على العتاد الاستهلاكي.',
+              'نموذج 7B بدقة FP16 = نحو 14 GB من RAM. عند Q4_K_M = نحو 4.5 GB. عند Q8_0 = نحو 7 GB.',
+              'فقدان الجودة عند Q4_K_M يبلغ 1–3٪ في اختبارات MMLU مقارنة بـ FP16 — غير محسوس في معظم المهام.',
+              'GGUF هي صيغة الملف للنماذج المكمّمة التي تستخدمها Ollama وLM Studio وllama.cpp.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ما هو تكميم نماذج LLM؟',
+            intro: 'يخزّن نموذج LLM مليارات الأوزان الرقمية. افتراضيًا، يستخدم كل وزن 2 بايت (FP16). نموذج 7B = نحو 14 GB.',
+            items: [
+              '<strong>التكميم إلى 4 بت:</strong> يستخدم كل وزن 0.5 بايت بدل 2 — مما يخفض RAM بنحو 75٪.',
+              '<strong>نتيجة Q4_K_M:</strong> ينتقل نموذج 7B من نحو 14 GB (FP16) إلى نحو 4.5 GB.',
+              '<strong>لماذا يهم ذلك:</strong> بدون تكميم، يحتاج نموذج 7B إلى 16 GB من RAM. أما Q4_K_M فيحتاج 6 GB فقط.',
+              '<strong>المقايضة في الجودة:</strong> يفقد Q4_K_M نسبة 1–3٪ في الاختبارات — غير محسوس عمليًا.',
+              'تستطيع الحواسيب المحمولة الاستهلاكية بذاكرة 8–16 GB تشغيل نماذج 7B–13B قوية مع التكميم.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'FP16 مقابل Q4_K_M: نموذج 7B',
+            line1: '🔴 FP16 (دقة كاملة): <strong>نحو 14 GB من RAM</strong> — يتطلب جهازًا بذاكرة 16 GB أو أكثر',
+            line2: '🟢 Q4_K_M (4 بت): <strong>نحو 4.5 GB من RAM</strong> — يعمل على 6 GB من RAM',
+            tip: 'النموذج 7B نفسه. يفقد Q4_K_M 1–3٪ فقط من الجودة، ويعمل أسرع بـ 4–8 أضعاف على وحدة المعالجة المركزية (CPU).'
+          },
+          {
+            type: 'table',
+            h2: 'مقارنة مستويات التكميم',
+            columns: ['المستوى', 'البتات', 'RAM (7B)', 'فقدان الجودة', 'متى تستخدمه'],
+            rows: [
+              { 'المستوى': 'Q2_K', 'البتات': '2', 'RAM (7B)': '~2.7 GB', 'فقدان الجودة': 'مرتفع', 'متى تستخدمه': 'عند RAM أقل من 4 GB فقط' },
+              { 'المستوى': 'Q3_K_S', 'البتات': '3', 'RAM (7B)': '~3.3 GB', 'فقدان الجودة': 'متوسط', 'متى تستخدمه': 'RAM بين 4–5 GB' },
+              { 'المستوى': 'Q4_K_M', 'البتات': '4', 'RAM (7B)': '~4.5 GB', 'فقدان الجودة': 'منخفض (1–3٪)', 'متى تستخدمه': 'الافتراضي لمعظم المستخدمين' },
+              { 'المستوى': 'Q5_K_M', 'البتات': '5', 'RAM (7B)': '~5.7 GB', 'فقدان الجودة': 'ضئيل (<1٪)', 'متى تستخدمه': 'RAM 16 GB، جودة أفضل' },
+              { 'المستوى': 'Q6_K', 'البتات': '6', 'RAM (7B)': '~6.6 GB', 'فقدان الجودة': 'شبه معدوم', 'متى تستخدمه': 'مهام البرمجة/الرياضيات' },
+              { 'المستوى': 'Q8_0', 'البتات': '8', 'RAM (7B)': '~7.7 GB', 'فقدان الجودة': 'مهمل', 'متى تستخدمه': 'RAM 16 GB أو أكثر، أقصى جودة' }
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'توفير RAM حسب حجم النموذج',
+            columns: ['حجم النموذج', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+            rows: [
+              { 'حجم النموذج': '3B', 'FP16': '~6 GB', 'Q8_0': '~3.8 GB', 'Q4_K_M': '~2 GB', 'Q3_K_S': '~1.6 GB' },
+              { 'حجم النموذج': '7B', 'FP16': '~14 GB', 'Q8_0': '~7.7 GB', 'Q4_K_M': '~4.5 GB', 'Q3_K_S': '~3.3 GB' },
+              { 'حجم النموذج': '13B', 'FP16': '~26 GB', 'Q8_0': '~14 GB', 'Q4_K_M': '~8.5 GB', 'Q3_K_S': '~6 GB' },
+              { 'حجم النموذج': '34B', 'FP16': '~68 GB', 'Q8_0': '~36 GB', 'Q4_K_M': '~22 GB', 'Q3_K_S': '~16 GB' },
+              { 'حجم النموذج': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ما هي صيغة GGUF؟',
+            intro: 'GGUF (GPT-Generated Unified Format) هي الصيغة القياسية أحادية الملف للنماذج المكمّمة — تستخدمها Ollama وLM Studio وllama.cpp.',
+            items: [
+              '<strong>مكتفية ذاتيًا:</strong> ملف .gguf واحد = أوزان النموذج + المُرمِّز (tokenizer) + البيانات الوصفية. دون ملفات إضافية.',
+              '<strong>تحل محل GGML:</strong> أصبحت GGUF الصيغة القياسية منذ 2024، وتستخدمها جميع أدوات LLM المحلية الرئيسية.',
+              '<strong>اسم الملف يحدد مستوى التكميم:</strong> الاسم Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf يخبرك بالمستوى الدقيق.',
+              '<strong>Ollama تستخدم GGUF:</strong> عند تنفيذ `ollama pull`، تنزّل Ollama ملف GGUF داخليًا.',
+              '<strong>مقابل GPTQ:</strong> تعمل GGUF على CPU وGPU معًا. أما GPTQ فتعمل على GPU فقط. للاستدلال المحلي، استخدم GGUF.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'فقدان الجودة حسب مستوى التكميم',
+            intro: 'يُقاس فقدان الجودة بمقارنة درجات اختبار MMLU بين نسخة FP16 والنسخ المكمّمة.',
+            items: [
+              '<strong>Q4_K_M مقابل FP16:</strong> انخفاض 1–3٪ في MMLU. من 73٪ إلى 71–72٪ لنموذج 7B. غير محسوس عمليًا.',
+              '<strong>Q3_K_S مقابل FP16:</strong> انخفاض 5–10٪. محسوس في مهام الرياضيات والاستدلال.',
+              '<strong>Q2_K مقابل FP16:</strong> انخفاض 15–25٪. كبير. استخدمه فقط عند قيود RAM القصوى.',
+              '<strong>Q8_0 مقابل FP16:</strong> أقل من 0.5٪ — مطابق عمليًا لكل الأغراض.',
+              '<strong>متغيرات K_M أفضل:</strong> فضّل دائمًا Q4_K_M على Q4_0 — جودة أفضل بنسبة 5–8٪ بنفس استهلاك RAM.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'أي مستوى تكميم ينبغي أن تستخدم؟',
+            items: [
+              '<strong>4–8 GB من RAM:</strong> Q4_K_M — أفضل توازن للعتاد المحدود.',
+              '<strong>8–16 GB من RAM:</strong> Q5_K_M أو Q6_K — جودة أفضل مع هامش مريح.',
+              '<strong>16 GB من RAM أو أكثر:</strong> Q8_0 — شبه معدوم الفقد، لا داعي لمستوى تكميم أدنى.',
+              '<strong>بطاقة GPU بذاكرة 24 GB من VRAM أو أكثر:</strong> Q8_0 أو Q6_K بأحجام النماذج التي تتسع في VRAM.',
+              '<strong>مهام البرمجة/الرياضيات:</strong> استخدم Q5_K_M أو أعلى — تأثيرات التكميم تظهر أكثر في الاستدلال الدقيق.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'أخطاء شائعة في التكميم',
+            items: [
+              '<strong>تنزيل Q4_0 بدل Q4_K_M.</strong> Q4_0 صيغة أقدم — وQ4_K_M أفضل جودة بنسبة 5–8٪ بنفس استهلاك RAM. اختر دائمًا Q4_K_M عند توفر الاثنين.',
+              '<strong>الاعتقاد بأن رقم Q الأعلى = جودة أسوأ.</strong> العكس صحيح: Q8_0 &gt; Q5_K_M &gt; Q4_K_M في الجودة. بتات أكثر = دقة أعلى = جودة أفضل.',
+              '<strong>عدم التحقق من هامش RAM.</strong> القاعدة: حجم ملف النموذج + 2 GB لنظام التشغيل + 1 GB احتياطي = الحد الأدنى المطلوب من RAM. نموذج بحجم 4.5 GB على 8 GB يترك 2.5 GB فقط لكل شيء آخر.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'الامتثال الإقليمي والتكميم',
+            intro: 'النماذج المحلية المكمّمة هي الحل الأساسي للامتثال لمتطلبات سيادة البيانات.',
+            items: [
+              '<strong>الاتحاد الأوروبي / GDPR:</strong> شغّل النماذج المكمّمة محليًا لتجنّب نقل البيانات عبر الحدود بموجب المادتين 5 و44 من GDPR. توصي الهيئة الألمانية BfDI بالاستدلال المحلي لتطبيقات الذكاء الاصطناعي عالية المخاطر.',
+              '<strong>اليابان / METI:</strong> تروّج METI للسيادة المحلية في الذكاء الاصطناعي. يجعل Q4_K_M نماذج 13B وأكبر ممكنة على خوادم الشركات بذاكرة 16 GB دون معالجة من طرف ثالث.',
+              '<strong>الصين / CAC:</strong> التشغيل المحلي مطلوب قانونًا لمعظم تطبيقات الذكاء الاصطناعي. يتيح Q4_K_M وQ5_K_M الامتثال داخل المؤسسات باستخدام نماذج صينية أصلية (Qwen2.5 وBaichuan).'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'الأسئلة الشائعة',
+            faqs: [
+              { q: 'هل تستخدم Ollama أفضل مستوى تكميم تلقائيًا؟', a: 'نعم — الأمر ollama pull llama3.1:8b ينزّل Q4_K_M افتراضيًا. للحصول على مستوى محدد، أضف وسمًا: ollama pull llama3.1:8b-instruct-q5_K_M.' },
+              { q: 'هل يؤثر التكميم في نافذة السياق؟', a: 'لا — يؤثر التكميم في دقة الأوزان فقط، لا في طول السياق. يبقى نموذج بسعة 128K رمز عند 128K. لكن السياقات الأطول تظل تتطلب RAM أكثر لذاكرة KV المؤقتة.' },
+              { q: 'ما هو تكميم imatrix؟', a: 'يستخدم تكميم imatrix بيانات معايرة لتخصيص دقة أعلى للأوزان المهمة. النتيجة: جودة أفضل بنسبة 2–4٪ من Q4_K_M القياسي بنفس عدد البتات. ابحث عن "imat" في اسم الملف.' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'البدء مع النماذج المكمّمة',
+            items: [
+              '<strong>تحقق من RAM لديك:</strong> افتح معلومات النظام / مراقب النشاط لرؤية RAM المتاحة. خطط: RAM المتاحة − 2 GB (نظام التشغيل) = أقصى حجم للنموذج.',
+              '<strong>ثبّت Ollama:</strong> نزّلها من ollama.com. تتولى تنزيلات GGUF والتكميم تلقائيًا.',
+              '<strong>نزّل نموذجًا:</strong> نفّذ `ollama pull llama3.1:8b` — تنزّل Ollama صيغة Q4_K_M افتراضيًا (نحو 4.5 GB).',
+              '<strong>شغّل واختبر:</strong> الأمر `ollama run llama3.1:8b` يفتح محادثة. اختبره بسؤال للتأكد من عمله.',
+              '<strong>ارتقِ للأعلى:</strong> إذا كانت الجودة كافية، جرّب Q5_K_M أو نموذجًا أكبر (13B) إذا سمحت RAM.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'قارن النماذج باستخدام PromptQuorum',
+            body: 'يتيح لك PromptQuorum تشغيل المُوجّه نفسه عبر عدة نماذج LLM محلية في آنٍ واحد — قارن الجودة عند مستويات تكميم مختلفة جنبًا إلى جنب.',
+            cta: 'جرّب PromptQuorum مجانًا',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
       }
     };
 
@@ -1180,7 +1341,8 @@
       de: '← Artikel',
       fr: '← Article',
       ja: '← 記事',
-      zh: '← 文章'
+      zh: '← 文章',
+      ar: '→ المقالة'
     };
 
     const SAVE_PDF_LABELS = {
@@ -1188,7 +1350,17 @@
       de: 'Als PDF speichern',
       fr: 'Enregistrer en PDF',
       ja: 'PDFとして保存',
-      zh: '保存为PDF'
+      zh: '保存为PDF',
+      ar: 'حفظ كملف PDF'
+    };
+
+    const QA_LABELS = {
+      en: { q: 'Q', a: 'A' },
+      de: { q: 'F', a: 'A' },
+      fr: { q: 'Q', a: 'R' },
+      ja: { q: 'Q', a: 'A' },
+      zh: { q: '问', a: '答' },
+      ar: { q: 'س', a: 'ج' }
     };
 
     function renderSlide(slide, lang) {
@@ -1251,10 +1423,11 @@
 
         case 'faq':
           html = `<h2>${slide.h2}</h2>`;
+          const qa = QA_LABELS[lang] || QA_LABELS.en;
           slide.faqs.forEach(faq => {
             html += `<div style="margin-bottom: 16px; text-align: left; max-width: 640px;">
-              <strong>Q: ${faq.q}</strong>
-              <p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p>
+              <strong>${qa.q}: ${faq.q}</strong>
+              <p style="margin-top: 6px; font-size: 0.95em;">${qa.a}: ${faq.a}</p>
             </div>`;
           });
           html += footerHtml;
@@ -1275,8 +1448,14 @@
     // Init
     const params = new URLSearchParams(window.location.search);
     const lang = (params.get('lang') || 'en');
-    const validLang = ['en','de','fr','ja','zh'].includes(lang) ? lang : 'en';
+    const validLang = ['en','de','fr','ja','zh','ar'].includes(lang) ? lang : 'en';
     const content = CONTENT[validLang] || CONTENT.en;
+
+    // Apply RTL for Arabic across the whole document
+    if (validLang === 'ar') {
+      document.documentElement.lang = 'ar';
+      document.documentElement.dir = 'rtl';
+    }
 
     // Update header
     document.getElementById('header-title').textContent = content.title;
