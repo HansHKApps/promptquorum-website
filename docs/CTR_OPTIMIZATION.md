@@ -107,3 +107,43 @@ affiliateDisclosure untouched. `dateModified` bumped; `lastFactChecked` unchange
 
 - **2026-06-14**: Bucket-3 affiliate CTR rewrites deployed (6 pages, 9 locales each via geo-meta-optimizer). Commit `775c39db`. IndexNow submitted same day (200 OK, 6 URLs, key `2fd43c75…`).
 - **MEASURE on 2026-06-28** — re-pull GSC for these 6 pages (28-day window ending 2026-06-28), fill New CTR column, update Status to ✅ or flag ranking issues.
+
+---
+
+## Bucket 4 — Intent-mismatch reposition (ranks well, 0% CTR, wrong title intent)
+
+### `/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts` — license/commercial reposition
+
+Page ranked **pos 3.6–11 with 0% CTR** across all locales. GSC showed the dominant
+query cluster is **LICENSE / commercial-use intent**, but the title was a generic
+engine "vs" comparison — no license signal. Total makeover: repositioned title +
+meta for license/commercial intent, made the License section the standout (clear
+"can I use this commercially?" table), filled the specific content gap (CPML
+non-interactive acceptance via `COQUI_TOS_AGREED=1` env var — its own section + FAQ),
+added Kokoro-vs-Piper FAQ + Tortoise TTS (Apache 2.0) to both comparison tables, and
+refreshed XTTS v2 voices/17-languages + VRAM snippets. Licenses web-verified June 2026.
+All 9 locales (en/de/fr/ja/zh/es/ko/pt/ar). `dateModified` + `lastFactChecked` → today.
+
+| Page | Baseline CTR | Pos | New CTR | Status | Changed | Measure |
+|---|---|---|---|---|---|---|
+| `/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts` (×9 locales) | 0% | 3.6–11 | — | 🔧 | 2026-06-16 | 2026-06-30 |
+
+**Query clusters (all 0% CTR):**
+- **LICENSE/commercial (primary, higher-value commercial visitors):** `coqui xtts v2 license non commercial` (pos 7.2), `coqui tts cpml license agree environment variable non-interactive` (pos 3.6 — content gap, now filled), `coqui xtts v2 license commercial use 2026` (6.0), `piper tts license commercial use` (8.0), `coqui xtts v2 license voice cloning commercial use` (7.8)
+- **COMPARISON:** `kokoro tts vs piper 2026` (9.1), `piper tts vs kokoro tts` (11.2), `piper tts vs coqui tts vs tortoise tts vs styletts 2026` (4.8)
+- **SPEC:** `xtts v2 voices` (9.4), `coqui xtts v2 vram requirements` (7.8)
+
+**Quick-unlock note:** pos 3.6 (CPML env-var query) + pos 4.8 with 0 clicks = fast win once
+the title signals license answers. License intent is **commercial** → higher-value traffic.
+
+### Before/after EN seoTitle + meta
+
+| Field | Before | After |
+|---|---|---|
+| seoTitle | `Local TTS Voice Cloning 2026: Piper vs XTTS v2 vs F5-TTS` | `Local TTS & Voice Cloning Licenses 2026: Commercial Use` |
+| metaDescription | `Piper runs real-time on CPU; XTTS v2 voice-clones in 17 languages. 6 local TTS engines for 2026 — VRAM, Apple Silicon results, and CPML license guide.` | `Which local TTS engines allow commercial use? Licenses for Piper (MIT), XTTS v2 (CPML), F5-TTS (CC-BY-NC) & Coqui, plus the COQUI_TOS_AGREED env var. 2026 guide.` |
+
+### Deploy log
+
+- **2026-06-16**: License/commercial reposition + content makeover deployed (1 page, 9 locales). Licenses web-verified (XTTS v2 CPML non-commercial; Coqui shut down Jan 2024 → no commercial license on sale; `COQUI_TOS_AGREED=1` confirmed; F5-TTS CC-BY-NC-4.0; Tortoise Apache 2.0). IndexNow submitted same day (200 OK, 9 URLs, key `2fd43c75…`).
+- **MEASURE on 2026-06-30** — re-pull GSC (28-day window), fill New CTR, update Status to ✅ or flag.

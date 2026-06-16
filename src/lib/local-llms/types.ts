@@ -105,6 +105,7 @@ export interface LLMArticle {
   freshness_tier?: 'evergreen' | 'semi_annual' | 'annual' | 'monthly'
   next_refresh_due?: string
   last_full_refresh?: string
+  lastFactChecked?: string
   next_seo_review_due?: string
   last_seo_review?: string
   current_models_mentioned?: string[]
