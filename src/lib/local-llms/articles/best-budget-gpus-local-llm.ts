@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec — all at Q4 quantization.** The 6GB variant is limited to 3B models only. As of June 2026, the RTX 3060 12GB ($200–250 used) remains the best budget GPU for local LLMs: 12GB VRAM fits every 7B-8B model at Q4/Q5 and most dense 13B-14B models at Q4. (Note: Llama 4 Scout is a 17B-active/109B-total MoE that needs ~55 GB at Q4 — it does not fit 12 GB normally.) This guide covers exactly which models run on each VRAM tier, with real speeds and practical setups.',
       metaDescription: 'Best budget GPU for local LLMs 2026: RTX 3060 12GB ($200–250 used) runs Qwen3 14B at 9–12 tok/s. Cheaper: RX 6700 XT. Best VRAM/$: RTX A4000. Full speed table.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec. The 6GB variant handles 3B models only. Best budget GPU for local LLMs in 2026 at $200–250 used.**',
       nextStep: {
         text: 'Got your GPU? Now choose the right software to run models on it.',
@@ -338,9 +338,9 @@ schema: {
       title: 'Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB',
       seoTitle: 'Mejor GPU económica para LLMs locales 2026: RTX 3060',
       intro: '**RTX 3060 12GB ejecuta Qwen3 14B a 9–12 tok/seg, Qwen3 8B a 16–20 tok/seg, Gemma 4 E12B a 11–14 tok/seg, Mistral Small a 18 tok/seg y DeepSeek-R1 7B a 10–12 tok/seg — todo a cuantización Q4.** La variante de 6GB está limitada solo a modelos de 3B. A junio de 2026, la RTX 3060 12GB ($200–250 usada) sigue siendo la mejor GPU económica para LLMs locales: 12GB de VRAM cabe con todos los modelos 7B-8B en Q4/Q5 y la mayoría de los densos 13B-14B en Q4. (Nota: Llama 4 Scout es un MoE de 17B activos/109B totales que necesita ~55 GB en Q4 — no cabe en 12 GB normalmente.) Esta guía cubre exactamente qué modelos funcionan en cada nivel de VRAM, con velocidades reales y configuraciones prácticas. Los precios pueden variar según tu país.',
-      metaDescription: 'La RTX 3060 12GB usada ($200-250) ejecuta 7 LLMs locales: Qwen3 14B (9-12 tok/s), Qwen3 8B (16-20 tok/s), Gemma 4 E12B. Tabla de VRAM y velocidad.',
+      metaDescription: 'Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB ($200–250 usada) ejecuta Qwen3 14B a 9–12 tok/s. Más barata: RX 6700 XT. Mejor VRAM/$: RTX A4000.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**RTX 3060 12GB ejecuta Qwen3 14B a 9–12 tok/seg, Qwen3 8B a 16–20 tok/seg, Gemma 4 E12B a 11–14 tok/seg, Mistral Small a 18 tok/seg y DeepSeek-R1 7B a 10–12 tok/seg. La variante de 6GB solo maneja modelos de 3B. Mejor GPU económica para LLMs locales en 2026 a $200–250 usada. Los precios pueden variar según tu país.**',
       nextStep: {
         text: '¿Ya tienes tu GPU? Ahora elige el software adecuado para ejecutar modelos en ella.',
@@ -367,6 +367,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
+            '**Mejor opción por presupuesto:** Menos de $200 — RX 6700 XT 12GB ($150–200, la más barata, fricción de configuración AMD) o RTX A4000 16GB si la encuentras por menos de $230 (mejor VRAM por dólar). ~$250 — RTX 3060 12GB (mejor en general). Menos de $500 — RTX 4070 Super 12GB (la más rápida, 25–30 tok/s).',
             '**RTX 3060 12GB** ($200–250 usada): Ejecuta todos los modelos 7B-8B en Q4/Q5 y la mayoría de los densos 13B-14B en Q4. Mejor opción económica.',
             '**RTX 3060 6GB**: Limitada a modelos 3B (Phi-4 Mini, Llama 3.2 3B). Insuficiente para 7B.',
             '**Mejor modelo general en 12GB:** Qwen3 14B a ~9 GB VRAM, 9–12 tok/seg. Mejor calidad densa que cabe cómodamente.',
@@ -628,7 +629,7 @@ schema: {
             'name': '¿Cuál es la mejor GPU NVIDIA económica para inferencia de LLM local?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 4060 Ti (8 GB, ~$250) para modelos 7B, o RTX 4070 Super (12 GB, ~$350-400) para modelos 13B. Usada: RTX 3060 12GB (~$150-200) ejecuta modelos 7-13B sin problemas a Q4. El mejor valor es RTX 3060 12GB usada, o RTX 4070 Super nueva.'
+              'text': 'RTX 4060 Ti (8 GB, ~$250) para modelos 7B, o RTX 4070 Super (12 GB, ~$350-400) para modelos 13B. Usada: RTX 3060 12GB ($200–250) ejecuta modelos 7-13B sin problemas a Q4. El mejor valor es RTX 3060 12GB usada, o RTX 4070 Super nueva.'
             }
           },
           {
@@ -653,12 +654,12 @@ schema: {
     ar: {
       freshness_tier: 'monthly',
       theme: 'GPU Buying Guides',
-      title: 'RTX 3060 12GB: شغّل Qwen3 8B وQwen3 14B وGemma 4 وMistral Small (دليل 2026)',
-      seoTitle: 'RTX 3060 12GB 2026: تشغّل Qwen3 14B بـ 9-12 tok/ث',
+      title: 'أفضل GPU اقتصادية لنماذج LLM المحلية 2026: RTX 3060 12GB',
+      seoTitle: 'أفضل GPU اقتصادية لنماذج LLM المحلية 2026: RTX 3060',
       intro: '**تشغّل RTX 3060 12GB نموذج Qwen3 14B بسرعة 9–12 tok/ث، وQwen3 8B بسرعة 16–20 tok/ث، وGemma 4 E12B بسرعة 11–14 tok/ث، وMistral Small بسرعة 18 tok/ث، وDeepSeek-R1 7B بسرعة 10–12 tok/ث — كل ذلك بتكميم Q4.** النسخة بسعة 6GB محدودة بنماذج 3B فقط. اعتباراً من يونيو 2026، تبقى RTX 3060 12GB (200–250 دولار مستعملة) أفضل GPU اقتصادية لنماذج LLM المحلية: تتسع 12GB من VRAM لجميع نماذج 7B-8B بصيغة Q4/Q5 ومعظم النماذج الكثيفة 13B-14B بصيغة Q4. (ملاحظة: Llama 4 Scout هو MoE بـ 17B نشطة/109B إجمالاً يحتاج إلى ~55 GB بصيغة Q4 — لا يتسع في 12 GB عادةً.) يغطي هذا الدليل بالضبط أي النماذج تعمل عند كل مستوى VRAM، بسرعات حقيقية وإعدادات عملية. قد تختلف الأسعار حسب بلدك.',
-      metaDescription: 'RTX 3060 12GB مستعملة (200-250$) تشغّل 7 نماذج LLM محلية: Qwen3 14B بـ 9-12 tok/ث، Qwen3 8B بـ 16-20 tok/ث، Gemma 4 E12B. جدول VRAM والسرعة.',
+      metaDescription: 'أفضل GPU اقتصادية لنماذج LLM المحلية 2026: RTX 3060 12GB (200–250$ مستعملة) تشغّل Qwen3 14B بـ 9–12 tok/ث. الأرخص: RX 6700 XT. أفضل VRAM لكل دولار: RTX A4000.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**تشغّل RTX 3060 12GB نموذج Qwen3 14B بسرعة 9–12 tok/ث، وQwen3 8B بسرعة 16–20 tok/ث، وGemma 4 E12B بسرعة 11–14 tok/ث، وMistral Small بسرعة 18 tok/ث، وDeepSeek-R1 7B بسرعة 10–12 tok/ث. النسخة بسعة 6GB تتعامل مع نماذج 3B فقط. أفضل GPU اقتصادية لنماذج LLM المحلية في 2026 بسعر 200–250 دولار مستعملة. قد تختلف الأسعار حسب بلدك.**',
       nextStep: {
         text: 'هل لديك GPU بالفعل؟ الآن اختر البرنامج المناسب لتشغيل النماذج عليها.',
@@ -685,6 +686,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
+            '**أفضل خيار حسب الميزانية:** أقل من 200$ — RX 6700 XT 12GB (150–200$، الأرخص، احتكاك إعداد AMD) أو RTX A4000 16GB إذا وجدتها بأقل من 230$ (أفضل VRAM لكل دولار). ~250$ — RTX 3060 12GB (الأفضل إجمالاً). أقل من 500$ — RTX 4070 Super 12GB (الأسرع، 25–30 tok/ث).',
             '**RTX 3060 12GB** (200–250 دولار مستعملة): تشغّل جميع نماذج 7B-8B بصيغة Q4/Q5 ومعظم النماذج الكثيفة 13B-14B بصيغة Q4. أفضل خيار اقتصادي.',
             '**RTX 3060 6GB**: محدودة بنماذج 3B (Phi-4 Mini، Llama 3.2 3B). غير كافية لـ 7B.',
             '**أفضل نموذج عام على 12GB:** Qwen3 14B بـ ~9 GB VRAM، 9–12 tok/ث. أفضل جودة كثيفة تتسع بأريحية.',
@@ -946,7 +948,7 @@ schema: {
             'name': 'ما أفضل GPU من NVIDIA اقتصادية لاستدلال LLM المحلي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 4060 Ti (8 GB، ~250 دولاراً) لنماذج 7B، أو RTX 4070 Super (12 GB، ~350-400 دولار) لنماذج 13B. مستعملة: RTX 3060 12GB (~150-200 دولار) تشغّل نماذج 7-13B دون مشاكل بصيغة Q4. أفضل قيمة هي RTX 3060 12GB مستعملة، أو RTX 4070 Super جديدة.'
+              'text': 'RTX 4060 Ti (8 GB، ~250 دولاراً) لنماذج 7B، أو RTX 4070 Super (12 GB، ~350-400 دولار) لنماذج 13B. مستعملة: RTX 3060 12GB (200–250 دولار) تشغّل نماذج 7-13B دون مشاكل بصيغة Q4. أفضل قيمة هي RTX 3060 12GB مستعملة، أو RTX 4070 Super جديدة.'
             }
           },
           {
@@ -971,12 +973,12 @@ schema: {
     pt: {
       freshness_tier: 'monthly',
       theme: 'GPU Buying Guides',
-      title: 'RTX 3060 12 GB: rode Qwen3 8B, Qwen3 14B, Gemma 4, Mistral Small (Guia 2026)',
-      seoTitle: 'RTX 3060 12 GB 2026: Qwen3 14B a 9-12 tok/s',
+      title: 'Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB',
+      seoTitle: 'Melhor GPU econômica para LLMs locais 2026: RTX 3060',
       intro: '**RTX 3060 12 GB roda Qwen3 14B a 9-12 tok/s, Qwen3 8B a 16-20 tok/s, Gemma 4 E12B a 11-14 tok/s, Mistral Small a 18 tok/s e DeepSeek-R1 7B a 10-12 tok/s -- tudo em quantização Q4.** A variante de 6 GB está limitada apenas a modelos de 3B. Em junho de 2026, a RTX 3060 12 GB (US$ 200-250 usada) continua sendo a melhor GPU econômica para LLMs locais.',
-      metaDescription: 'A RTX 3060 12 GB usada (US$ 200-250) roda 7 LLMs locais: Qwen3 14B (9-12 tok/s), Qwen3 8B (16-20 tok/s), Gemma 4 E12B. Tabela de VRAM e velocidade.',
+      metaDescription: 'Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 200–250 usada) roda Qwen3 14B a 9–12 tok/s. Mais barata: RX 6700 XT. Melhor VRAM/$: RTX A4000.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**RTX 3060 12 GB roda Qwen3 14B a 9-12 tok/s, Qwen3 8B a 16-20 tok/s, Mistral Small a 18 tok/s e DeepSeek-R1 7B a 10-12 tok/s. A melhor GPU econômica para LLMs locais em 2026 a US$ 200-250 usada.**',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
       readTime: '7 min de leitura',
@@ -998,6 +1000,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
+            '**Melhor opção por orçamento:** Menos de US$ 200 — RX 6700 XT 12GB (US$ 150–200, a mais barata, atrito de configuração AMD) ou RTX A4000 16GB se a encontrar abaixo de US$ 230 (melhor VRAM por dólar). ~US$ 250 — RTX 3060 12 GB (melhor no geral). Menos de US$ 500 — RTX 4070 Super 12GB (a mais rápida, 25–30 tok/s).',
             '**RTX 3060 12 GB** (US$ 200-250 usada): Roda todos os modelos 7B-8B em Q4/Q5 e a maioria dos densos 13B-14B em Q4. Melhor opção econômica.',
             '**RTX 3060 6 GB**: Limitada a modelos 3B (Phi-4 Mini, Llama 3.2 3B). Insuficiente para 7B.',
             '**Melhor modelo geral em 12 GB:** Qwen3 14B a ~9 GB VRAM, 9-12 tok/s. Melhor qualidade densa que cabe confortavelmente.',
@@ -1080,7 +1083,7 @@ schema: {
         href: '/local-llms/best-local-llm-frontends',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '7 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Budget GPU für lokale LLMs',
@@ -1341,7 +1344,7 @@ schema: {
         href: '/local-llms/best-local-llm-frontends',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '7 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU Budget pour LLMs locaux',
@@ -1458,7 +1461,7 @@ schema: {
         href: '/local-llms/best-local-llm-frontends',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '7分で読める',
       educationalLevel: 'Intermediate',
       primaryTerm: 'ローカルLLMの予算GPU',
@@ -1513,7 +1516,7 @@ schema: {
         href: '/local-llms/best-local-llm-frontends',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '阅读约7分钟',
       educationalLevel: 'Intermediate',
       primaryTerm: '本地LLM预算GPU',
@@ -1717,7 +1720,7 @@ schema: {
       last_full_refresh: '2026-06-01',
       current_models_mentioned: ['Qwen3 8B', 'Qwen3 14B', 'Gemma 4 E12B', 'Gemma 4 E4B', 'Mistral Small', 'DeepSeek-R1 7B', 'gpt-oss:20b'],
       theme: 'GPU 구매 가이드',
-      title: 'RTX 3060 12GB: Qwen3 8B, Qwen3 14B, Gemma 4, Mistral Small 실행 가이드 (2026)',
+      title: '2026 로컬 LLM 최고의 예산형 GPU: RTX 3060 12GB',
       seoTitle: 'RTX 3060 12GB: 2026년 로컬 LLM 최고의 예산형 GPU',
       intro: '**RTX 3060 12GB는 Q4 양자화 기준으로 Qwen3 14B를 초당 9–12토큰, Qwen3 8B를 초당 16–20토큰, Gemma 4 E12B를 초당 11–14토큰, Mistral Small을 초당 18토큰, DeepSeek-R1 7B를 초당 10–12토큰으로 실행합니다.** 6GB 버전은 3B 모델만 실행 가능합니다. 2026년 6월 현재, RTX 3060 12GB(중고 $200–250)는 로컬 LLM용 최고의 예산형 GPU로 자리잡고 있습니다. 12GB VRAM은 Q4/Q5로 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델을 Q4로 실행할 수 있습니다. (참고: Llama 4 Scout는 활성 파라미터 17B/총 109B의 MoE 모델로 Q4에서 약 55GB가 필요하므로 12GB에서는 일반적으로 실행되지 않습니다.) 이 가이드는 각 VRAM 등급에서 실행 가능한 모델과 실측 속도, 실용적인 설정 방법을 상세히 안내합니다.',
       metaDescription: 'RTX 3060 12GB: Qwen3 8B(초당 16-20토큰), Qwen3 14B(초당 9-12토큰), Gemma 4 E12B, Mistral Small, DeepSeek-R1. VRAM 및 속도 벤치마크를 포함한 전체 모델 표.',
@@ -1748,6 +1751,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
+            '**예산별 추천:** $200 미만 — RX 6700 XT 12GB($150–200, 가장 저렴, AMD 설정 번거로움) 또는 $230 미만이면 RTX A4000 16GB(달러당 최고의 VRAM). ~$250 — RTX 3060 12GB(종합 최고). $500 미만 — RTX 4070 Super 12GB(가장 빠름, 초당 25–30토큰).',
             '**RTX 3060 12GB** (중고 $200–250): Q4/Q5로 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델을 Q4로 실행합니다. 최고의 예산형 선택입니다.',
             '**RTX 3060 6GB**: 3B 모델(Phi-4 Mini, Llama 3.2 3B)만 지원합니다. 7B 모델에는 용량이 부족합니다.',
             '**12GB 최고의 전체 모델:** Qwen3 14B (~9GB VRAM, 초당 9–12토큰). 편안하게 실행 가능한 최고 품질의 밀집형 모델입니다.',
