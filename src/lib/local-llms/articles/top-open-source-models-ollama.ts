@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Most Popular Models on Ollama', anchor: '#most-popular-models-on-ollama' },
         { label: 'Top Models by Use Case', anchor: '#top-models-by-category' },
-        { label: 'New in June 2026', anchor: '#whats-new-ollama-june-2026' },
+        { label: 'New in June 2026', anchor: '#new-may-2026' },
         { label: 'What Is DeepSeek-R1?', anchor: '#deepseek-r1' },
         { label: 'Vision Models on Ollama', anchor: '#vision-models' },
         { label: 'Full Top 10 Comparison Table', anchor: '#full-top-10-comparison' },
