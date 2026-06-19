@@ -92,4 +92,8 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
 
   // Knowledge & GEO Sprint 2026-06-12
   'ai-model-knowledge-cutoff-dates':          'aiModelKnowledgeCutoffDates',
+
+  // DeepSeek Series 2026-06-19
+  'deepseek-r1-distill-vram-cheatsheet':      'deepseekR1DistillVramCheatsheet',
+  'best-deepseek-distill-for-your-gpu':       'bestDeepseekDistillForYourGpu',
 }

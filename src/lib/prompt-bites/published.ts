@@ -81,6 +81,10 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'run-local-llm-on-xperia-japan',
   'best-mini-pc-local-llm-japan',
   'best-gpu-local-llm-japan-price',
+
+  // DeepSeek Series 2026-06-19
+  'deepseek-r1-distill-vram-cheatsheet',
+  'best-deepseek-distill-for-your-gpu',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

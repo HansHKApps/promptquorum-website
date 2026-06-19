@@ -172,4 +172,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   // Brazil Sprint 2026-06-14 — LGPD + Brazilian Portuguese
   'local-llm-lgpd-compliance-brazil-2026':        'local-llm-lgpd-compliance-brazil-2026',
   'best-local-llms-portuguese-language-2026':     'best-local-llms-portuguese-language-2026',
+  // DeepSeek Series 2026-06-19
+  'best-local-reasoning-model-deepseek-r1-2026':  'best-local-reasoning-model-deepseek-r1-2026',
+  'deepseek-local-china-data-privacy-2026':       'deepseek-local-china-data-privacy-2026',
 }

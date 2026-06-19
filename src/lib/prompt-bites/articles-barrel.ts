@@ -67,6 +67,9 @@ import { article as cheapestWayToRun70bModelLocally } from './articles/cheapest-
 import { article as bestLocalLlmAppsJapanAndroid } from './articles/best-local-llm-apps-japan-android'
 // Knowledge & GEO Sprint 2026-06-12
 import { article as aiModelKnowledgeCutoffDates } from './articles/ai-model-knowledge-cutoff-dates'
+// DeepSeek Series 2026-06-19
+import { article as deepseekR1DistillVramCheatsheet } from './articles/deepseek-r1-distill-vram-cheatsheet'
+import { article as bestDeepseekDistillForYourGpu } from './articles/best-deepseek-distill-for-your-gpu'
 import { article as bestJapaneseLanguageModelsLocal } from './articles/best-japanese-language-models-local'
 import { article as runLocalLlmOnXperiaJapan } from './articles/run-local-llm-on-xperia-japan'
 import { article as bestMiniPcLocalLlmJapan } from './articles/best-mini-pc-local-llm-japan'
@@ -143,4 +146,7 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestGpuLocalLlmJapanPrice,
   // Knowledge & GEO Sprint 2026-06-12
   aiModelKnowledgeCutoffDates,
+  // DeepSeek Series 2026-06-19
+  deepseekR1DistillVramCheatsheet,
+  bestDeepseekDistillForYourGpu,
 }

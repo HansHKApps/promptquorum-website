@@ -131,6 +131,9 @@ import { article as a_mram_in_memory_computing_local_ai_2026 } from "./articles/
 // Korea Hardware 2026-06-15
 import { article as a_galaxy_vs_iphone_on_device_ai_2026 } from "./articles/galaxy-vs-iphone-on-device-ai-2026";
 import { article as a_hbm_memory_on_device_ai_samsung_sk_hynix_2026 } from "./articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026";
+// DeepSeek Series 2026-06-19
+import { article as a_best_local_reasoning_model_deepseek_r1_2026 } from "./articles/best-local-reasoning-model-deepseek-r1-2026";
+import { article as a_deepseek_local_china_data_privacy_2026 } from "./articles/deepseek-local-china-data-privacy-2026";
 
 // Brazil Sprint 2026-06-14 — LGPD + Brazilian Portuguese
 import { article as a_local_llm_lgpd_compliance_brazil_2026 } from "./articles/local-llm-lgpd-compliance-brazil-2026";
@@ -265,4 +268,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   // Korea Hardware 2026-06-15
   "galaxy-vs-iphone-on-device-ai-2026": a_galaxy_vs_iphone_on_device_ai_2026,
   "hbm-memory-on-device-ai-samsung-sk-hynix-2026": a_hbm_memory_on_device_ai_samsung_sk_hynix_2026,
+  // DeepSeek Series 2026-06-19
+  "best-local-reasoning-model-deepseek-r1-2026": a_best_local_reasoning_model_deepseek_r1_2026,
+  "deepseek-local-china-data-privacy-2026": a_deepseek_local_china_data_privacy_2026,
 };

@@ -87,4 +87,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-tts-voice-cloning-piper-coqui-xtts':    'local-tts-voice-cloning-piper-coqui-xtts',
   'build-local-voice-assistant-2026':             'build-local-voice-assistant-2026',
   'local-multimodal-pipeline-voice-vision-text':  'local-multimodal-pipeline-voice-vision-text',
+  // DeepSeek Series 2026-06-19
+  'deepseek-r1-vs-distills-explained-2026':       'deepseek-r1-vs-distills-explained-2026',
+  'deepseek-offline-china-self-hosted-2026':      'deepseek-offline-china-self-hosted-2026',
 }

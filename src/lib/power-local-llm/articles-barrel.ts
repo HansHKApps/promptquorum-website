@@ -64,6 +64,9 @@ import { article as a_qwen_local_deployment_complete_guide_2026 } from './articl
 import { article as a_deepseek_vs_qwen_local_comparison_2026 } from './articles/deepseek-vs-qwen-local-comparison-2026'
 import { article as a_local_ai_behind_firewall_offline_2026 } from './articles/local-ai-behind-firewall-offline-2026'
 import { article as a_wechat_local_llm_integration_2026 } from './articles/wechat-local-llm-integration-2026'
+// DeepSeek Series 2026-06-19
+import { article as a_deepseek_r1_vs_distills_explained_2026 } from './articles/deepseek-r1-vs-distills-explained-2026'
+import { article as a_deepseek_offline_china_self_hosted_2026 } from './articles/deepseek-offline-china-self-hosted-2026'
 import { article as a_deepseek_vs_qwen_coding_local_2026 } from './articles/deepseek-vs-qwen-coding-local-2026'
 import { article as a_best_workstation_build_local_ai_2026 } from './articles/best-workstation-build-local-ai-2026'
 import { article as a_best_local_llm_ide_plugins_2026 } from './articles/best-local-llm-ide-plugins-2026'
@@ -135,4 +138,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'deepseek-vs-qwen-local-comparison-2026':            a_deepseek_vs_qwen_local_comparison_2026,
   'local-ai-behind-firewall-offline-2026':             a_local_ai_behind_firewall_offline_2026,
   'wechat-local-llm-integration-2026':                 a_wechat_local_llm_integration_2026,
+  // DeepSeek Series 2026-06-19
+  'deepseek-r1-vs-distills-explained-2026':            a_deepseek_r1_vs_distills_explained_2026,
+  'deepseek-offline-china-self-hosted-2026':           a_deepseek_offline_china_self_hosted_2026,
 }
