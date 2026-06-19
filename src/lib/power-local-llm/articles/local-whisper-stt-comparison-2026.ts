@@ -9,15 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration',
     seoTitle: 'Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks & Setup',
     intro:
       'whisper.cpp and faster-whisper are the two dominant implementations of OpenAI\'s Whisper speech-to-text model for local, offline transcription in 2026. whisper.cpp is a pure C/C++ port that runs on Apple Metal, CUDA, Vulkan, and CPU — making it ideal for Apple Silicon, embedded systems, and real-time voice applications. faster-whisper is a Python library using CTranslate2 that achieves ~4× the throughput of the original Whisper on NVIDIA GPUs via int8 quantization. This guide covers installation, performance benchmarks, real-time transcription setup, and a head-to-head comparison across platforms so you can pick the right tool for your pipeline.',
     metaDescription:
-      'Compare whisper.cpp and faster-whisper for local speech recognition in 2026. WER benchmarks, GPU vs CPU speed, Apple Silicon Metal, real-time transcription, and setup guides. All offline.',
+      'Compare whisper.cpp vs faster-whisper for local speech-to-text in 2026: WER benchmarks, GPU vs CPU speed, Apple Metal, real-time transcription, plus pip install / ggml-base.bin setup and the June 2026 whisper.cpp v1.8.6 update. All offline.',
     twitterDescription:
       'whisper.cpp vs faster-whisper: local speech recognition benchmarks 2026. CPU vs GPU speed, Apple Metal, WER accuracy, real-time transcription. No cloud, no cost.',
     audience:
@@ -61,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Apple Silicon → whisper.cpp with Core ML / Metal. ~10× real-time on M5 Pro with large-v3.',
           'NVIDIA GPU → faster-whisper. ~12× real-time on RTX 4070 with large-v3 int8, ~2.5 GB VRAM.',
           'Python pipeline → faster-whisper. Native Python, 5-line setup, VAD built in.',
-          'Embedded / Raspberry Pi → whisper.cpp. Pure C binary, no Python runtime needed.',
+          'Embedded / Raspberry Pi 5 → whisper.cpp. Pure C binary, no Python runtime; tiny/base run in real time, small is batch-only.',
           'Real-time voice → whisper.cpp stream mode or faster-whisper VAD pipeline.',
           'Batch transcription → faster-whisper. Best throughput on GPU; easy async batching.',
           'WER accuracy: both are identical — they use the same Whisper model weights.',
@@ -76,11 +77,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Whisper Model Sizes', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper: The Faster Alternative', anchor: '#distil-whisper' },
       { label: 'whisper.cpp — The C/C++ Port', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp Latest Version & Updates (June 2026)', anchor: '#whats-new' },
       { label: 'faster-whisper — The CTranslate2 Port', anchor: '#faster-whisper' },
+      { label: 'Get ggml-base.bin via pip (Python Setup)', anchor: '#install-ggml-pip' },
       { label: 'Head-to-Head Benchmark Table', anchor: '#benchmarks' },
       { label: 'Real-Time Transcription Setup', anchor: '#real-time' },
       { label: 'Apple Silicon: whisper.cpp Wins', anchor: '#apple-silicon' },
       { label: 'NVIDIA GPU: faster-whisper Wins', anchor: '#nvidia-gpu' },
+      { label: 'Whisper on Raspberry Pi 5', anchor: '#raspberry-pi-5' },
       { label: 'When to Use Which', anchor: '#when-to-use' },
       { label: 'Beyond whisper.cpp and faster-whisper', anchor: '#beyond-tools' },
       { label: 'Common Issues and Fixes', anchor: '#troubleshooting' },
@@ -99,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Whisper large-v3 gives the best accuracy at 2.5% WER on English.** For most production use cases, Whisper small (3.4% WER, 2 GB RAM) or medium (2.9% WER, 5 GB RAM) offers a better speed-accuracy trade-off.',
           '**Real-time transcription is achievable with both tools** — whisper.cpp via its `--stream` flag, faster-whisper via its built-in VAD (voice activity detection) pipeline. Practical latency is 0.5–2 seconds behind live speech depending on model size.',
           '**whisper.cpp runs on CPU, Metal, CUDA, and Vulkan** — making it the only choice for cross-platform embedded use (Raspberry Pi, Windows GPU setups, ARM servers). faster-whisper supports CPU and CUDA only (no Metal on Mac).',
-          '**For Raspberry Pi and embedded Linux, whisper.cpp tiny/base on CPU** is the practical ceiling — tiny at ~15× real-time on Pi 5, base at ~6× real-time. Both fit within 1 GB RAM.',
+          '**For Raspberry Pi 5 and embedded Linux, whisper.cpp tiny and base on CPU** are the real-time-capable models — tiny runs comfortably faster than real-time, base around real-time with `-t 4`. The small model (3.4% WER) runs below real-time on the Pi 5 and is best for batch jobs. All inference is CPU (ARM NEON) — the Pi has no usable GPU path for Whisper.',
         ],
       },
       quickFacts: {
@@ -226,6 +230,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp Latest Version & Updates (June 2026)',
+        content:
+          '**The latest whisper.cpp release is v1.8.6, published June 2, 2026.** It continues the v1.8.x maintenance line (v1.8.4 and v1.8.5) focused on streaming VAD, server stability, and performance — not new model support. faster-whisper\'s current release is v1.2.1 (October 31, 2025). Both runtimes still load the same OpenAI Whisper weights; nothing about transcription accuracy changed in 2026.',
+        items: [
+          '**whisper.cpp v1.8.6 (June 2, 2026):** Reimplemented `ffmpeg-transcode` for clearer optional FFmpeg decoding of compressed audio (MP3, M4A) plus a CI examples-path fix.',
+          '**whisper.cpp v1.8.5 (May 2026):** Streaming VAD (voice activity detection) improvements, server parameter-leak and token-timestamp fixes, and memory-leak fixes in the Ruby and VAD bindings.',
+          '**whisper.cpp v1.8.4 (March 19, 2026):** Latest `ggml` sync with broad performance gains, a new `-g` / `--gpu-device` flag (and `GGML_CUDA` device selection) to pick a GPU, and UTF-8 segment-wrapping fixes.',
+          '**Native VAD is now built into whisper.cpp.** Recent releases added a native voice-activity-detection path, narrowing a long-standing faster-whisper advantage — though faster-whisper\'s Silero VAD integration remains more turnkey.',
+          '**faster-whisper v1.2.1 (October 31, 2025):** Current stable release; `pip install faster-whisper` pulls it. No 2026 release as of this update — the project is stable, not stalled.',
+          '**No new base Whisper model in 2026.** large-v3 and distil-large-v3 remain the newest weights, so "updates" to either tool are runtime and tooling changes, not accuracy changes.',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper — The CTranslate2 Port',
@@ -253,6 +271,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: 'Get ggml-base.bin via pip (Python Setup)',
+        content:
+          '**To use ggml-base.bin from Python via pip, install the `pywhispercpp` binding — `pip install pywhispercpp` — then load `Model("base")`, which downloads `ggml-base.bin` automatically on first run.** There is no `pip install whisper.cpp`; pywhispercpp is the pip wrapper around the whisper.cpp C/C++ engine, and it keeps Metal and CUDA acceleration. The GGML model file (`ggml-base.bin`, ~142 MB) is downloaded separately from Hugging Face and cached locally — the pip package ships the inference engine, not the weights.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Run `pip install pywhispercpp`, then `Model("base")` in Python fetches and caches ggml-base.bin automatically on first use.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'pip installs the program (pywhispercpp); the ggml-base.bin model file is a separate ~142 MB download that happens the first time you load the "base" model — or that you grab by hand with the download-ggml-model.sh script.',
+          },
+        ],
+        items: [
+          '**Install the binding:** `pip install pywhispercpp`. For NVIDIA CUDA acceleration, build with `GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp`.',
+          '**Auto-download ggml-base.bin:** `from pywhispercpp.model import Model` then `model = Model("base")` downloads `ggml-base.bin` from Hugging Face (`ggerganov/whisper.cpp`) on first run and caches it. Use `"base.en"` for the English-only variant.',
+          '**Manual download (CLI route, no pip):** From a cloned whisper.cpp repo, `bash ./models/download-ggml-model.sh base` saves the file to `models/ggml-base.bin` — the same file pywhispercpp fetches.',
+          '**Direct download:** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin` pulls the model with no script. Swap `base` for `tiny`, `small`, `medium`, or `large-v3`.',
+          '**Do not confuse the packages:** `pip install openai-whisper` installs OpenAI\'s original PyTorch Whisper (it uses `.pt` checkpoints, not `ggml-base.bin`). `pip install faster-whisper` uses the CTranslate2 format. Only `pywhispercpp` consumes GGML `ggml-*.bin` files.',
+          '**Where the file lives:** pywhispercpp stores downloaded GGML models under its module cache (or a path you pass via `Model("base", models_dir="...")`), so the same `ggml-base.bin` is reused across runs — no re-download.',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -384,6 +443,30 @@ for segment in segments:
           '**int8 vs float16:** int8 is ~2× faster and uses ~40% less VRAM with negligible accuracy loss. Always use `compute_type="int8"` on NVIDIA.',
           '**Batch processing:** faster-whisper\'s `batched=True` parameter enables parallel processing of multiple audio files, maximizing GPU utilization for large transcription jobs.',
           '**Python pipeline integration:** faster-whisper slots directly into LangChain, Haystack, and custom Python pipelines. No subprocess overhead vs. wrapping whisper.cpp.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: 'Whisper on Raspberry Pi 5: tiny, base & small',
+        content:
+          '**On a Raspberry Pi 5, whisper.cpp runs the tiny and base models in real time for live transcription, while the small model runs below real time and is best kept to batch jobs.** The Pi 5\'s quad-core Cortex-A76 has no usable GPU path for Whisper, so all inference is CPU (ARM NEON). Use the quantized GGML models (`ggml-*-q5_0.bin`) to cut memory use and speed inference.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'On a Raspberry Pi 5, the whisper.cpp small model runs slower than real time (~0.5×, batch only); tiny and base are the models that keep up with live speech.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'A Pi 5 can transcribe live audio with the tiny and base Whisper models, but the small model is too heavy to keep up in real time — use small for recorded files you process in the background, not for a live microphone.',
+          },
+        ],
+        items: [
+          '**Whisper small on Pi 5:** Roughly 0.4–0.6× real-time on CPU (a 10-minute clip takes ~17–25 minutes). Accurate at 3.4% WER but too slow for live captioning — use it for overnight/batch transcription.',
+          '**Whisper base on Pi 5:** Around real-time to ~2× with multithreading (`-t 4`). The practical sweet spot for live transcription on the Pi, with acceptable 5.0% WER.',
+          '**Whisper tiny on Pi 5:** Fastest option, comfortably faster than real-time for live use, at the cost of higher 7.6% WER. Best for wake-word and short-command recognition.',
+          '**Use quantized models:** `bash ./models/download-ggml-model.sh small-q5_0` trims RAM and speeds inference with minimal accuracy loss — important on the Pi 5\'s shared memory.',
+          '**faster-whisper on Pi 5:** Installable (`pip install faster-whisper`, CPU int8) and competitive for batch jobs, but whisper.cpp\'s lighter C binary is the more common embedded choice.',
+          '**Thermals:** Sustained transcription pushes the Pi 5 CPU hard — use active cooling to avoid thermal throttling that erodes these numbers.',
         ],
       },
       whenToUse: {
@@ -536,15 +619,16 @@ for segment in segments:
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung',
     seoTitle: 'Whisper.cpp vs. faster-whisper 2026: Lokale STT-Benchmarks',
     intro:
       'whisper.cpp und faster-whisper sind die zwei dominanten Implementierungen von OpenAIs Whisper-Spracherkennungsmodell für lokale, offline Transkription im Jahr 2026. Dieser whisper.cpp vs faster-whisper Vergleich zeigt, welches Tool auf welcher Hardware gewinnt. whisper.cpp ist ein reiner C/C++-Port, der auf Apple Metal, CUDA, Vulkan und CPU läuft – ideal für Apple Silicon, Embedded-Systeme und Echtzeit-Sprachanwendungen. faster-whisper ist eine Python-Bibliothek auf Basis von CTranslate2, die durch int8-Quantisierung rund 4-fachen Durchsatz des ursprünglichen Whisper auf NVIDIA-GPUs erreicht. Dieser Leitfaden behandelt Installation, Performance-Benchmarks, Echtzeit-Transkriptions-Setup und einen direkten Plattformvergleich.',
     metaDescription:
-      'whisper.cpp vs faster-whisper 2026: Lokale STT im Vergleich. WER-Benchmarks, GPU vs. CPU, Apple Metal, Echtzeit-Transkription, vollständig offline.',
+      'whisper.cpp vs faster-whisper für lokale Spracherkennung 2026: WER-Benchmarks, GPU vs. CPU, Apple Metal, Echtzeit-Transkription, plus pip-Installation / ggml-base.bin-Setup und das whisper.cpp v1.8.6-Update vom Juni 2026. Vollständig offline.',
     twitterDescription:
       'whisper.cpp vs faster-whisper: Lokale STT-Benchmarks 2026. CPU vs. GPU-Geschwindigkeit, Apple Metal, WER-Genauigkeit, Echtzeit-Transkription. Kein Cloud-Dienst, keine Kosten.',
     audience:
@@ -588,7 +672,7 @@ for segment in segments:
           'Apple Silicon → whisper.cpp mit Core ML / Metal. ~10-fache Echtzeit auf M5 Pro mit large-v3.',
           'NVIDIA GPU → faster-whisper. ~12-fache Echtzeit auf RTX 4070 mit large-v3 int8, ~2,5 GB VRAM.',
           'Python-Pipeline → faster-whisper. Nativ in Python, 5-Zeilen-Setup, VAD integriert.',
-          'Embedded / Raspberry Pi → whisper.cpp. Reines C-Binary, kein Python-Runtime erforderlich.',
+          'Embedded / Raspberry Pi 5 → whisper.cpp. Reines C-Binary, kein Python-Runtime; tiny/base laufen in Echtzeit, small nur im Batch-Betrieb.',
           'Echtzeit-Spracherfassung → whisper.cpp Stream-Modus oder faster-whisper VAD-Pipeline.',
           'Batch-Transkription → faster-whisper. Bester Durchsatz auf GPU; einfaches Async-Batching.',
           'WER-Genauigkeit: beide identisch – sie verwenden dieselben Whisper-Modellgewichte.',
@@ -603,11 +687,14 @@ for segment in segments:
       { label: 'Whisper-Modellgrößen', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper: Die schnellere Alternative', anchor: '#distil-whisper' },
       { label: 'whisper.cpp – Der C/C++-Port', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp – Aktuelle Version & Updates (Juni 2026)', anchor: '#whats-new' },
       { label: 'faster-whisper – Der CTranslate2-Port', anchor: '#faster-whisper' },
+      { label: 'ggml-base.bin per pip beziehen (Python-Setup)', anchor: '#install-ggml-pip' },
       { label: 'Direktvergleich: Benchmark-Tabelle', anchor: '#benchmarks' },
       { label: 'Echtzeit-Transkription einrichten', anchor: '#real-time' },
       { label: 'Apple Silicon: whisper.cpp gewinnt', anchor: '#apple-silicon' },
       { label: 'NVIDIA GPU: faster-whisper gewinnt', anchor: '#nvidia-gpu' },
+      { label: 'Whisper auf dem Raspberry Pi 5', anchor: '#raspberry-pi-5' },
       { label: 'Wann welches Tool verwenden?', anchor: '#when-to-use' },
       { label: 'Über whisper.cpp und faster-whisper hinaus', anchor: '#beyond-tools' },
       { label: 'Häufige Probleme und Lösungen', anchor: '#troubleshooting' },
@@ -626,7 +713,7 @@ for segment in segments:
           '**Whisper large-v3 bietet die beste Genauigkeit mit 2,5 % WER auf Englisch.** Für die meisten Produktivszenarien bietet Whisper small (3,4 % WER, 2 GB RAM) oder medium (2,9 % WER, 5 GB RAM) ein besseres Geschwindigkeit-Genauigkeits-Verhältnis.',
           '**Echtzeit-Transkription ist mit beiden Tools erreichbar** – whisper.cpp über den `--stream`-Flag, faster-whisper über seine integrierte VAD-Pipeline (Sprachaktivitätserkennung). Die praktische Latenz liegt je nach Modellgröße bei 0,5–2 Sekunden hinter der Livesprache.',
           '**whisper.cpp läuft auf CPU, Metal, CUDA und Vulkan** – und ist damit die einzige Wahl für plattformübergreifende Embedded-Nutzung (Raspberry Pi, Windows GPU-Setups, ARM-Server). faster-whisper unterstützt nur CPU und CUDA (kein Metal auf Mac).',
-          '**Für Raspberry Pi und Embedded Linux** ist whisper.cpp tiny/base auf der CPU die praktische Obergrenze – tiny mit ~15-facher Echtzeit auf Pi 5, base mit ~6-facher Echtzeit. Beide passen in 1 GB RAM.',
+          '**Für Raspberry Pi 5 und Embedded Linux sind whisper.cpp tiny und base auf der CPU** die echtzeitfähigen Modelle – tiny läuft komfortabel schneller als Echtzeit, base etwa in Echtzeit mit `-t 4`. Das small-Modell (3,4 % WER) läuft auf dem Pi 5 unterhalb der Echtzeit und eignet sich am besten für Batch-Jobs. Die gesamte Inferenz erfolgt auf der CPU (ARM NEON) – der Pi hat keinen nutzbaren GPU-Pfad für Whisper.',
         ],
       },
       quickFacts: {
@@ -753,6 +840,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp – Aktuelle Version & Updates (Juni 2026)',
+        content:
+          '**Die neueste whisper.cpp-Version ist v1.8.6, veröffentlicht am 2. Juni 2026.** Sie setzt die Wartungslinie v1.8.x (v1.8.4 und v1.8.5) fort, fokussiert auf Streaming-VAD, Server-Stabilität und Performance – kein neuer Modell-Support. Die aktuelle Version von faster-whisper ist v1.2.1 (31. Oktober 2025). Beide Runtimes laden weiterhin dieselben OpenAI-Whisper-Gewichte; an der Transkriptionsgenauigkeit hat sich 2026 nichts geändert.',
+        items: [
+          '**whisper.cpp v1.8.6 (2. Juni 2026):** Neu implementiertes `ffmpeg-transcode` für klarere optionale FFmpeg-Dekodierung komprimierter Audiodateien (MP3, M4A) plus eine Korrektur des CI-Beispielpfads.',
+          '**whisper.cpp v1.8.5 (Mai 2026):** Verbesserungen beim Streaming-VAD (Sprachaktivitätserkennung), Korrekturen für Server-Parameter-Leaks und Token-Zeitstempel sowie Behebung von Speicherlecks in den Ruby- und VAD-Bindings.',
+          '**whisper.cpp v1.8.4 (19. März 2026):** Neueste `ggml`-Synchronisierung mit breiten Performance-Gewinnen, ein neuer `-g` / `--gpu-device`-Flag (und `GGML_CUDA`-Geräteauswahl) zur GPU-Wahl sowie Korrekturen beim UTF-8-Segmentumbruch.',
+          '**Nativer VAD ist jetzt in whisper.cpp integriert.** Aktuelle Versionen haben einen nativen Pfad zur Sprachaktivitätserkennung ergänzt und verringern damit einen langjährigen Vorteil von faster-whisper – auch wenn die Silero-VAD-Integration von faster-whisper weiterhin gebrauchsfertiger ist.',
+          '**faster-whisper v1.2.1 (31. Oktober 2025):** Aktuelle stabile Version; `pip install faster-whisper` installiert sie. Bis zu diesem Update gibt es keine Version aus 2026 – das Projekt ist stabil, nicht eingestellt.',
+          '**Kein neues Whisper-Basismodell in 2026.** large-v3 und distil-large-v3 bleiben die neuesten Gewichte, sodass „Updates“ beider Tools Laufzeit- und Tooling-Änderungen sind, keine Genauigkeitsänderungen.',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper – Der CTranslate2-Port',
@@ -780,6 +881,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: 'ggml-base.bin per pip beziehen (Python-Setup)',
+        content:
+          '**Um ggml-base.bin aus Python per pip zu nutzen, installieren Sie das `pywhispercpp`-Binding – `pip install pywhispercpp` – und laden dann `Model("base")`, das `ggml-base.bin` beim ersten Lauf automatisch herunterlädt.** Es gibt kein `pip install whisper.cpp`; pywhispercpp ist der pip-Wrapper um die whisper.cpp-C/C++-Engine und behält Metal- und CUDA-Beschleunigung bei. Die GGML-Modelldatei (`ggml-base.bin`, ~142 MB) wird separat von Hugging Face heruntergeladen und lokal zwischengespeichert – das pip-Paket liefert die Inferenz-Engine, nicht die Gewichte.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '`pip install pywhispercpp` ausführen; dann lädt `Model("base")` in Python ggml-base.bin beim ersten Aufruf automatisch herunter und speichert es zwischen.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'pip installiert das Programm (pywhispercpp); die Modelldatei ggml-base.bin ist ein separater ~142-MB-Download, der beim ersten Laden des „base“-Modells erfolgt – oder den Sie manuell mit dem Skript download-ggml-model.sh holen.',
+          },
+        ],
+        items: [
+          '**Binding installieren:** `pip install pywhispercpp`. Für NVIDIA-CUDA-Beschleunigung mit `GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp` bauen.',
+          '**ggml-base.bin automatisch herunterladen:** `from pywhispercpp.model import Model`, dann lädt `model = Model("base")` beim ersten Lauf `ggml-base.bin` von Hugging Face (`ggerganov/whisper.cpp`) herunter und speichert es zwischen. `"base.en"` für die rein englische Variante verwenden.',
+          '**Manueller Download (CLI-Weg, ohne pip):** In einem geklonten whisper.cpp-Repo speichert `bash ./models/download-ggml-model.sh base` die Datei unter `models/ggml-base.bin` – dieselbe Datei, die pywhispercpp abruft.',
+          '**Direkter Download:** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin` lädt das Modell ohne Skript. `base` durch `tiny`, `small`, `medium` oder `large-v3` ersetzen.',
+          '**Die Pakete nicht verwechseln:** `pip install openai-whisper` installiert OpenAIs ursprüngliches PyTorch-Whisper (es nutzt `.pt`-Checkpoints, nicht `ggml-base.bin`). `pip install faster-whisper` nutzt das CTranslate2-Format. Nur `pywhispercpp` verarbeitet GGML-`ggml-*.bin`-Dateien.',
+          '**Wo die Datei liegt:** pywhispercpp speichert heruntergeladene GGML-Modelle in seinem Modul-Cache (oder einem Pfad, den Sie über `Model("base", models_dir="...")` übergeben), sodass dieselbe `ggml-base.bin` über mehrere Läufe wiederverwendet wird – kein erneuter Download.',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -911,6 +1053,30 @@ for segment in segments:
           '**int8 vs. float16:** int8 ist ~2× schneller und benötigt ~40 % weniger VRAM bei vernachlässigbarem Genauigkeitsverlust. `compute_type="int8"` auf NVIDIA immer verwenden.',
           '**Batch-Verarbeitung:** Der `batched=True`-Parameter von faster-whisper ermöglicht die parallele Verarbeitung mehrerer Audiodateien und maximiert die GPU-Auslastung bei großen Transkriptionsjobs.',
           '**Python-Pipeline-Integration:** faster-whisper fügt sich direkt in LangChain, Haystack und eigene Python-Pipelines ein. Kein Subprocess-Overhead im Vergleich zum Wrapping von whisper.cpp.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: 'Whisper auf dem Raspberry Pi 5: tiny, base & small',
+        content:
+          '**Auf einem Raspberry Pi 5 führt whisper.cpp die Modelle tiny und base in Echtzeit für die Live-Transkription aus, während das small-Modell unterhalb der Echtzeit läuft und am besten Batch-Jobs vorbehalten bleibt.** Der Quad-Core-Cortex-A76 des Pi 5 hat keinen nutzbaren GPU-Pfad für Whisper, sodass die gesamte Inferenz auf der CPU (ARM NEON) erfolgt. Verwenden Sie die quantisierten GGML-Modelle (`ggml-*-q5_0.bin`), um den Speicherbedarf zu senken und die Inferenz zu beschleunigen.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Auf einem Raspberry Pi 5 läuft das whisper.cpp-small-Modell langsamer als Echtzeit (~0,5×, nur Batch); tiny und base sind die Modelle, die mit Live-Sprache mithalten.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Ein Pi 5 kann Live-Audio mit den Whisper-Modellen tiny und base transkribieren, aber das small-Modell ist zu schwer, um in Echtzeit mitzuhalten – nutzen Sie small für aufgezeichnete Dateien, die Sie im Hintergrund verarbeiten, nicht für ein Live-Mikrofon.',
+          },
+        ],
+        items: [
+          '**Whisper small auf dem Pi 5:** Etwa 0,4–0,6× Echtzeit auf der CPU (ein 10-Minuten-Clip dauert ~17–25 Minuten). Genau mit 3,4 % WER, aber zu langsam für Live-Untertitelung – für nächtliche/Batch-Transkription verwenden.',
+          '**Whisper base auf dem Pi 5:** Etwa Echtzeit bis ~2× mit Multithreading (`-t 4`). Der praktische Sweet Spot für Live-Transkription auf dem Pi, mit akzeptablen 5,0 % WER.',
+          '**Whisper tiny auf dem Pi 5:** Schnellste Option, komfortabel schneller als Echtzeit für den Live-Einsatz, zum Preis höherer 7,6 % WER. Am besten für Wake-Word- und Kurzbefehl-Erkennung.',
+          '**Quantisierte Modelle verwenden:** `bash ./models/download-ggml-model.sh small-q5_0` senkt den RAM-Bedarf und beschleunigt die Inferenz bei minimalem Genauigkeitsverlust – wichtig beim geteilten Speicher des Pi 5.',
+          '**faster-whisper auf dem Pi 5:** Installierbar (`pip install faster-whisper`, CPU int8) und wettbewerbsfähig für Batch-Jobs, aber das leichtere C-Binary von whisper.cpp ist die verbreitetere Embedded-Wahl.',
+          '**Thermik:** Anhaltende Transkription belastet die CPU des Pi 5 stark – verwenden Sie aktive Kühlung, um thermisches Throttling zu vermeiden, das diese Werte verschlechtert.',
         ],
       },
       whenToUse: {
@@ -1071,15 +1237,16 @@ for segment in segments:
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026 : Benchmarks STT local, configuration & accélération GPU',
     seoTitle: 'Whisper.cpp vs faster-whisper 2026 : Benchmarks STT local & configuration',
     intro:
       'whisper.cpp et faster-whisper sont les deux implémentations dominantes du modèle Whisper d\'OpenAI pour la transcription locale hors ligne en 2026. Ce guide whisper.cpp vs faster-whisper détermine quel outil s\'impose sur chaque plateforme. whisper.cpp est un portage pur C/C++ fonctionnant sur Apple Metal, CUDA, Vulkan et CPU — idéal pour Apple Silicon, les systèmes embarqués et les applications vocales temps réel. faster-whisper est une bibliothèque Python utilisant CTranslate2 qui atteint environ 4× le débit de l\'implémentation originale de Whisper sur GPU NVIDIA via la quantification int8.',
     metaDescription:
-      'whisper.cpp vs faster-whisper 2026 : benchmarks STT local, GPU vs CPU, Apple Metal, transcription temps réel, installation. Entièrement hors ligne.',
+      'whisper.cpp vs faster-whisper pour la reconnaissance vocale locale en 2026 : benchmarks WER, GPU vs CPU, Apple Metal, transcription temps réel, plus installation pip / configuration ggml-base.bin et la mise à jour whisper.cpp v1.8.6 de juin 2026. Entièrement hors ligne.',
     twitterDescription:
       'whisper.cpp vs faster-whisper : benchmarks STT local 2026. Vitesse CPU vs GPU, Apple Metal, précision WER, transcription temps réel. Pas de cloud, pas de coût.',
     audience:
@@ -1123,7 +1290,7 @@ for segment in segments:
           'Apple Silicon → whisper.cpp avec Core ML / Metal. ~10× le temps réel sur M5 Pro avec large-v3.',
           'GPU NVIDIA → faster-whisper. ~12× le temps réel sur RTX 4070 avec large-v3 int8, ~2.5 GB VRAM.',
           'Pipeline Python → faster-whisper. API Python native, configuration en 5 lignes, VAD intégré.',
-          'Embarqué / Raspberry Pi → whisper.cpp. Binaire C pur, aucun runtime Python requis.',
+          'Embarqué / Raspberry Pi 5 → whisper.cpp. Binaire C pur, aucun runtime Python ; tiny/base tournent en temps réel, small uniquement en mode batch.',
           'Voix temps réel → mode stream whisper.cpp ou pipeline VAD faster-whisper.',
           'Transcription par lots → faster-whisper. Meilleur débit sur GPU ; batching asynchrone facile.',
           'Précision WER : identique pour les deux — ils utilisent les mêmes poids de modèle Whisper.',
@@ -1138,11 +1305,14 @@ for segment in segments:
       { label: 'Tailles des modèles Whisper', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper : l\'alternative plus rapide', anchor: '#distil-whisper' },
       { label: 'whisper.cpp – le port C/C++', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp : dernière version & mises à jour (juin 2026)', anchor: '#whats-new' },
       { label: 'faster-whisper – le port CTranslate2', anchor: '#faster-whisper' },
+      { label: 'Obtenir ggml-base.bin via pip (configuration Python)', anchor: '#install-ggml-pip' },
       { label: 'Comparaison directe : tableau de benchmarks', anchor: '#benchmarks' },
       { label: 'Configuration de la transcription en temps réel', anchor: '#real-time' },
       { label: 'Apple Silicon : whisper.cpp gagne', anchor: '#apple-silicon' },
       { label: 'GPU NVIDIA : faster-whisper gagne', anchor: '#nvidia-gpu' },
+      { label: 'Whisper sur Raspberry Pi 5', anchor: '#raspberry-pi-5' },
       { label: 'Quel outil utiliser ?', anchor: '#when-to-use' },
       { label: 'Au-delà de whisper.cpp et faster-whisper', anchor: '#beyond-tools' },
       { label: 'Problèmes courants et solutions', anchor: '#troubleshooting' },
@@ -1161,7 +1331,7 @@ for segment in segments:
           '**Whisper large-v3 offre la meilleure précision avec 2.5 % de WER sur l\'anglais.** Pour la plupart des cas d\'usage, Whisper small (3.4 % WER, 2 GB RAM) ou medium (2.9 % WER, 5 GB RAM) offre un meilleur compromis vitesse-précision.',
           '**La transcription en temps réel est accessible avec les deux outils** — whisper.cpp via son flag `--stream`, faster-whisper via son pipeline VAD intégré. La latence pratique est de 0.5–2 secondes derrière la parole en direct selon la taille du modèle.',
           '**whisper.cpp fonctionne sur CPU, Metal, CUDA et Vulkan** — seul choix pour les déploiements embarqués multi-plateformes (Raspberry Pi, GPU Windows, serveurs ARM). faster-whisper supporte uniquement CPU et CUDA (pas de Metal sur Mac).',
-          '**Pour Raspberry Pi et Linux embarqué**, whisper.cpp tiny/base sur CPU est le plafond pratique — tiny à ~15× le temps réel sur Pi 5, base à ~6×. Les deux tiennent dans 1 GB de RAM.',
+          '**Pour Raspberry Pi 5 et Linux embarqué, whisper.cpp tiny et base sur CPU** sont les modèles capables de temps réel — tiny tourne confortablement plus vite que le temps réel, base autour du temps réel avec `-t 4`. Le modèle small (3.4 % WER) tourne en deçà du temps réel sur le Pi 5 et convient mieux aux jobs par lots. Toute l\'inférence se fait sur CPU (ARM NEON) — le Pi n\'a pas de chemin GPU utilisable pour Whisper.',
         ],
       },
       quickFacts: {
@@ -1288,6 +1458,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp : dernière version & mises à jour (juin 2026)',
+        content:
+          '**La dernière version de whisper.cpp est la v1.8.6, publiée le 2 juin 2026.** Elle poursuit la ligne de maintenance v1.8.x (v1.8.4 et v1.8.5) axée sur le VAD en streaming, la stabilité serveur et les performances — pas de support de nouveau modèle. La version actuelle de faster-whisper est la v1.2.1 (31 octobre 2025). Les deux runtimes chargent toujours les mêmes poids OpenAI Whisper ; rien n\'a changé concernant la précision de transcription en 2026.',
+        items: [
+          '**whisper.cpp v1.8.6 (2 juin 2026) :** réimplémentation de `ffmpeg-transcode` pour un décodage FFmpeg optionnel plus clair des fichiers audio compressés (MP3, M4A), plus une correction du chemin des exemples CI.',
+          '**whisper.cpp v1.8.5 (mai 2026) :** améliorations du VAD en streaming (détection d\'activité vocale), corrections de fuites de paramètres serveur et d\'horodatages de tokens, ainsi que des corrections de fuites mémoire dans les bindings Ruby et VAD.',
+          '**whisper.cpp v1.8.4 (19 mars 2026) :** dernière synchronisation `ggml` avec de larges gains de performance, un nouveau flag `-g` / `--gpu-device` (et sélection de périphérique `GGML_CUDA`) pour choisir un GPU, et des corrections de retour à la ligne des segments UTF-8.',
+          '**Le VAD natif est désormais intégré à whisper.cpp.** Les versions récentes ont ajouté un chemin natif de détection d\'activité vocale, réduisant un avantage de longue date de faster-whisper — même si l\'intégration Silero VAD de faster-whisper reste plus clé en main.',
+          '**faster-whisper v1.2.1 (31 octobre 2025) :** version stable actuelle ; `pip install faster-whisper` l\'installe. Aucune version 2026 à la date de cette mise à jour — le projet est stable, pas à l\'arrêt.',
+          '**Aucun nouveau modèle Whisper de base en 2026.** large-v3 et distil-large-v3 restent les poids les plus récents, donc les « mises à jour » de chaque outil sont des changements de runtime et d\'outillage, pas de précision.',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper – le port CTranslate2',
@@ -1315,6 +1499,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: 'Obtenir ggml-base.bin via pip (configuration Python)',
+        content:
+          '**Pour utiliser ggml-base.bin depuis Python via pip, installez le binding `pywhispercpp` — `pip install pywhispercpp` — puis chargez `Model("base")`, qui télécharge `ggml-base.bin` automatiquement au premier lancement.** Il n\'existe pas de `pip install whisper.cpp` ; pywhispercpp est le wrapper pip autour du moteur C/C++ whisper.cpp, et il conserve l\'accélération Metal et CUDA. Le fichier modèle GGML (`ggml-base.bin`, ~142 MB) est téléchargé séparément depuis Hugging Face et mis en cache localement — le paquet pip livre le moteur d\'inférence, pas les poids.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Exécutez `pip install pywhispercpp`, puis `Model("base")` en Python récupère et met en cache ggml-base.bin automatiquement à la première utilisation.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'pip installe le programme (pywhispercpp) ; le fichier modèle ggml-base.bin est un téléchargement séparé de ~142 MB qui se produit la première fois que vous chargez le modèle « base » — ou que vous récupérez à la main avec le script download-ggml-model.sh.',
+          },
+        ],
+        items: [
+          '**Installer le binding :** `pip install pywhispercpp`. Pour l\'accélération NVIDIA CUDA, compilez avec `GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp`.',
+          '**Téléchargement auto de ggml-base.bin :** `from pywhispercpp.model import Model` puis `model = Model("base")` télécharge `ggml-base.bin` depuis Hugging Face (`ggerganov/whisper.cpp`) au premier lancement et le met en cache. Utilisez `"base.en"` pour la variante anglaise uniquement.',
+          '**Téléchargement manuel (voie CLI, sans pip) :** depuis un dépôt whisper.cpp cloné, `bash ./models/download-ggml-model.sh base` enregistre le fichier dans `models/ggml-base.bin` — le même fichier que pywhispercpp récupère.',
+          '**Téléchargement direct :** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin` récupère le modèle sans script. Remplacez `base` par `tiny`, `small`, `medium` ou `large-v3`.',
+          '**Ne confondez pas les paquets :** `pip install openai-whisper` installe le Whisper PyTorch original d\'OpenAI (il utilise des checkpoints `.pt`, pas `ggml-base.bin`). `pip install faster-whisper` utilise le format CTranslate2. Seul `pywhispercpp` consomme les fichiers GGML `ggml-*.bin`.',
+          '**Où réside le fichier :** pywhispercpp stocke les modèles GGML téléchargés dans son cache de module (ou un chemin passé via `Model("base", models_dir="...")`), de sorte que le même `ggml-base.bin` est réutilisé d\'un lancement à l\'autre — aucun re-téléchargement.',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -1446,6 +1671,30 @@ for segment in segments:
           '**int8 vs float16 :** int8 est ~2× plus rapide et utilise ~40 % de VRAM en moins avec une perte de précision négligeable. Toujours utiliser `compute_type="int8"` sur NVIDIA.',
           '**Traitement par lots :** le paramètre `batched=True` de faster-whisper permet le traitement parallèle de plusieurs fichiers audio, maximisant l\'utilisation GPU pour les gros jobs de transcription.',
           '**Intégration pipeline Python :** faster-whisper s\'intègre directement dans LangChain, Haystack et des pipelines Python personnalisés. Pas d\'overhead subprocess comparé au wrapping de whisper.cpp.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: 'Whisper sur Raspberry Pi 5 : tiny, base & small',
+        content:
+          '**Sur un Raspberry Pi 5, whisper.cpp exécute les modèles tiny et base en temps réel pour la transcription en direct, tandis que le modèle small tourne en deçà du temps réel et vaut mieux le réserver aux jobs par lots.** Le quad-core Cortex-A76 du Pi 5 n\'a pas de chemin GPU utilisable pour Whisper, donc toute l\'inférence se fait sur CPU (ARM NEON). Utilisez les modèles GGML quantifiés (`ggml-*-q5_0.bin`) pour réduire l\'usage mémoire et accélérer l\'inférence.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Sur un Raspberry Pi 5, le modèle small de whisper.cpp tourne plus lentement que le temps réel (~0.5×, batch uniquement) ; tiny et base sont les modèles qui suivent la parole en direct.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Un Pi 5 peut transcrire de l\'audio en direct avec les modèles Whisper tiny et base, mais le modèle small est trop lourd pour suivre en temps réel — utilisez small pour des fichiers enregistrés que vous traitez en arrière-plan, pas pour un microphone en direct.',
+          },
+        ],
+        items: [
+          '**Whisper small sur Pi 5 :** environ 0.4–0.6× le temps réel sur CPU (un clip de 10 minutes prend ~17–25 minutes). Précis à 3.4 % WER mais trop lent pour le sous-titrage en direct — à utiliser pour la transcription de nuit/par lots.',
+          '**Whisper base sur Pi 5 :** autour du temps réel jusqu\'à ~2× avec le multithreading (`-t 4`). Le compromis pratique idéal pour la transcription en direct sur le Pi, avec un WER acceptable de 5.0 %.',
+          '**Whisper tiny sur Pi 5 :** l\'option la plus rapide, confortablement plus rapide que le temps réel pour l\'usage en direct, au prix d\'un WER plus élevé de 7.6 %. Idéal pour la reconnaissance de mots de réveil et de commandes courtes.',
+          '**Utilisez des modèles quantifiés :** `bash ./models/download-ggml-model.sh small-q5_0` réduit la RAM et accélère l\'inférence avec une perte de précision minimale — important sur la mémoire partagée du Pi 5.',
+          '**faster-whisper sur Pi 5 :** installable (`pip install faster-whisper`, CPU int8) et compétitif pour les jobs par lots, mais le binaire C plus léger de whisper.cpp reste le choix embarqué le plus courant.',
+          '**Thermique :** une transcription soutenue sollicite fortement le CPU du Pi 5 — utilisez un refroidissement actif pour éviter le throttling thermique qui dégrade ces chiffres.',
         ],
       },
       whenToUse: {
@@ -1598,15 +1847,16 @@ for segment in segments:
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'ローカル音声認識2026：Whisper.cpp vs faster-whisper — ベンチマーク・セットアップ・GPU高速化',
     seoTitle: 'Whisper.cpp vs faster-whisper 2026：ローカルSTTベンチマーク＆セットアップ',
     intro:
       'whisper.cppとfaster-whisperは、2026年にローカル・オフラインの文字起こしに使用されるOpenAIのWhisper音声認識モデルの2大実装です。whisper.cppはApple Metal、CUDA、Vulkan、CPUで動作する純粋なC/C++ポートで、Apple Silicon、組み込みシステム、リアルタイム音声アプリケーションに最適です。faster-whisperはCTranslate2を使用したPythonライブラリで、int8量子化によりNVIDIA GPU上でオリジナルWhisperの約4倍のスループットを実現します。このガイドでは、インストール、パフォーマンスベンチマーク、リアルタイム文字起こしのセットアップ、そして各プラットフォームでの比較を詳しく解説します。',
     metaDescription:
-      '2026年のローカル音声認識におけるwhisper.cppとfaster-whisperの比較。WERベンチマーク、GPU対CPUの速度、Apple Silicon Metal、リアルタイム文字起こし、セットアップガイド。完全オフライン対応。',
+      '2026年のローカル音声認識におけるwhisper.cppとfaster-whisperの比較：WERベンチマーク、GPU対CPUの速度、Apple Metal、リアルタイム文字起こしに加え、pipインストール / ggml-base.binセットアップと2026年6月のwhisper.cpp v1.8.6アップデート。完全オフライン対応。',
     twitterDescription:
       'whisper.cpp vs faster-whisper：2026年ローカル音声認識ベンチマーク。CPU対GPU速度、Apple Metal、WER精度、リアルタイム文字起こし。クラウド不要、コストゼロ。',
     audience:
@@ -1650,7 +1900,7 @@ for segment in segments:
           'Apple Silicon → Core ML / Metal付きのwhisper.cpp。M5 Proでlarge-v3が約10倍速。',
           'NVIDIA GPU → faster-whisper。RTX 4070でlarge-v3 int8が約12倍速、VRAM約2.5 GB。',
           'Pythonパイプライン → faster-whisper。ネイティブPython、5行のセットアップ、VAD内蔵。',
-          '組み込み / Raspberry Pi → whisper.cpp。純粋なCバイナリ、Pythonランタイム不要。',
+          '組み込み / Raspberry Pi 5 → whisper.cpp。純粋なCバイナリ、Pythonランタイム不要。tiny/baseはリアルタイムで動作し、smallはバッチ専用。',
           'リアルタイム音声 → whisper.cppのstreamモードまたはfaster-whisperのVADパイプライン。',
           'バッチ文字起こし → faster-whisper。GPUでの最高スループット、簡単な非同期バッチ処理。',
           'WER精度：両方とも同一 — 同じWhisperモデルウェイトを使用。',
@@ -1665,11 +1915,14 @@ for segment in segments:
       { label: 'Whisperモデルサイズ', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper：高速な代替手段', anchor: '#distil-whisper' },
       { label: 'whisper.cpp — C/C++ポート', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp 最新バージョンとアップデート（2026年6月）', anchor: '#whats-new' },
       { label: 'faster-whisper — CTranslate2ポート', anchor: '#faster-whisper' },
+      { label: 'pipでggml-base.binを入手する（Pythonセットアップ）', anchor: '#install-ggml-pip' },
       { label: '直接比較：ベンチマークテーブル', anchor: '#benchmarks' },
       { label: 'リアルタイム文字起こしのセットアップ', anchor: '#real-time' },
       { label: 'Apple Silicon：whisper.cppが勝つ', anchor: '#apple-silicon' },
       { label: 'NVIDIA GPU：faster-whisperが勝つ', anchor: '#nvidia-gpu' },
+      { label: 'Raspberry Pi 5でのWhisper', anchor: '#raspberry-pi-5' },
       { label: 'どちらをいつ使うか', anchor: '#when-to-use' },
       { label: 'whisper.cppとfaster-whisperを超えて', anchor: '#beyond-tools' },
       { label: 'よくある問題と解決策', anchor: '#troubleshooting' },
@@ -1688,7 +1941,7 @@ for segment in segments:
           '**Whisper large-v3は英語で2.5% WERの最高精度を提供します。** ほとんどの本番ユースケースでは、Whisper small（3.4% WER、2 GB RAM）またはmedium（2.9% WER、5 GB RAM）の方が速度と精度のバランスが良いです。',
           '**リアルタイム文字起こしは両ツールとも実現可能です** — whisper.cppは`--stream`フラグ経由、faster-whisperは内蔵VAD（音声アクティビティ検出）パイプライン経由。モデルサイズによって実用レイテンシは音声より0.5〜2秒遅れます。',
           '**whisper.cppはCPU、Metal、CUDA、Vulkanで動作します** — クロスプラットフォーム組み込み用途（Raspberry Pi、Windows GPUセットアップ、ARMサーバー）では唯一の選択肢。faster-whisperはCPUとCUDAのみ対応（MacではMetalなし）。',
-          '**Raspberry PiとEmbedded Linuxでは、whisper.cpp tiny/baseをCPUで実行するのが現実的な上限です** — Pi 5でtinyが約15倍速、baseが約6倍速。両方とも1 GB RAM内に収まります。',
+          '**Raspberry Pi 5と組み込みLinuxでは、whisper.cpp tinyとbaseをCPUで実行するのがリアルタイム対応モデルです** — tinyはリアルタイムより余裕を持って高速に動作し、baseは`-t 4`でほぼリアルタイムです。smallモデル（3.4% WER）はPi 5でリアルタイム未満となり、バッチ処理に最適です。すべての推論はCPU（ARM NEON）で行われ、PiにはWhisper向けの利用可能なGPUパスがありません。',
         ],
       },
       quickFacts: {
@@ -1815,6 +2068,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp 最新バージョンとアップデート（2026年6月）',
+        content:
+          '**whisper.cppの最新リリースは2026年6月2日に公開されたv1.8.6です。** これはストリーミングVAD、サーバーの安定性、パフォーマンスに焦点を当てたv1.8.x保守ライン（v1.8.4およびv1.8.5）を引き継ぐもので、新しいモデルのサポートではありません。faster-whisperの現行リリースはv1.2.1（2025年10月31日）です。両ランタイムとも同じOpenAI Whisperのウェイトを読み込んでおり、文字起こし精度に関して2026年に変わったことはありません。',
+        items: [
+          '**whisper.cpp v1.8.6（2026年6月2日）：** 圧縮音声（MP3、M4A）のオプションのFFmpegデコードをより明確にするため`ffmpeg-transcode`を再実装し、CIのexamplesパスを修正。',
+          '**whisper.cpp v1.8.5（2026年5月）：** ストリーミングVAD（音声アクティビティ検出）の改善、サーバーのパラメータリークおよびトークンタイムスタンプの修正、RubyとVADのバインディングにおけるメモリリークの修正。',
+          '**whisper.cpp v1.8.4（2026年3月19日）：** 幅広いパフォーマンス向上を伴う最新の`ggml`同期、GPUを選択するための新しい`-g` / `--gpu-device`フラグ（および`GGML_CUDA`デバイス選択）、UTF-8セグメント折り返しの修正。',
+          '**ネイティブVADがwhisper.cppに組み込まれました。** 最近のリリースでネイティブな音声アクティビティ検出パスが追加され、長年のfaster-whisperの優位性が縮小しました — ただしfaster-whisperのSilero VAD統合の方が依然としてすぐ使える状態です。',
+          '**faster-whisper v1.2.1（2025年10月31日）：** 現行の安定版リリース。`pip install faster-whisper`で取得できます。本アップデート時点で2026年のリリースはありません — プロジェクトは安定しており、停滞しているわけではありません。',
+          '**2026年に新しいベースWhisperモデルはありません。** large-v3とdistil-large-v3が引き続き最新のウェイトであり、いずれのツールの「アップデート」もランタイムとツーリングの変更であって、精度の変更ではありません。',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper — CTranslate2ポート',
@@ -1842,6 +2109,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: 'pipでggml-base.binを入手する（Pythonセットアップ）',
+        content:
+          '**ggml-base.binをpip経由でPythonから使うには、`pywhispercpp`バインディングをインストール（`pip install pywhispercpp`）し、`Model("base")`を読み込みます。初回実行時に`ggml-base.bin`が自動的にダウンロードされます。** `pip install whisper.cpp`は存在しません。pywhispercppはwhisper.cppのC/C++エンジンをラップするpipラッパーで、MetalとCUDAの高速化を維持します。GGMLモデルファイル（`ggml-base.bin`、~142 MB）はHugging Faceから別途ダウンロードされ、ローカルにキャッシュされます — pipパッケージが提供するのは推論エンジンであり、ウェイトではありません。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '`pip install pywhispercpp`を実行すると、Pythonの`Model("base")`が初回使用時にggml-base.binを自動的に取得・キャッシュします。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'pipはプログラム（pywhispercpp）をインストールします。モデルファイルggml-base.binは別途~142 MBのダウンロードで、「base」モデルを初めて読み込むとき、またはdownload-ggml-model.shスクリプトで手動取得するときに行われます。',
+          },
+        ],
+        items: [
+          '**バインディングのインストール：** `pip install pywhispercpp`。NVIDIA CUDA高速化には`GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp`でビルドします。',
+          '**ggml-base.binの自動ダウンロード：** `from pywhispercpp.model import Model`の後に`model = Model("base")`とすると、初回実行時にHugging Face（`ggerganov/whisper.cpp`）から`ggml-base.bin`をダウンロードしてキャッシュします。英語専用版には`"base.en"`を使用します。',
+          '**手動ダウンロード（CLI経由、pipなし）：** クローン済みのwhisper.cppリポジトリで`bash ./models/download-ggml-model.sh base`を実行すると、ファイルが`models/ggml-base.bin`に保存されます — pywhispercppが取得するのと同じファイルです。',
+          '**直接ダウンロード：** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`でスクリプトなしにモデルを取得します。`base`を`tiny`、`small`、`medium`、`large-v3`に置き換えられます。',
+          '**パッケージを混同しないこと：** `pip install openai-whisper`はOpenAIのオリジナルのPyTorch版Whisperをインストールします（`.pt`チェックポイントを使用し、`ggml-base.bin`ではありません）。`pip install faster-whisper`はCTranslate2フォーマットを使用します。GGMLの`ggml-*.bin`ファイルを扱うのは`pywhispercpp`だけです。',
+          '**ファイルの保存場所：** pywhispercppはダウンロードしたGGMLモデルをモジュールのキャッシュ（または`Model("base", models_dir="...")`で渡したパス）に保存するため、同じ`ggml-base.bin`が実行をまたいで再利用されます — 再ダウンロードは不要です。',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -1973,6 +2281,30 @@ for segment in segments:
           '**int8対float16：** int8は約2倍速でVRAMを約40%削減し、精度への影響は無視できます。NVIDIAでは常に`compute_type="int8"`を使用。',
           '**バッチ処理：** faster-whisperの`batched=True`パラメータにより複数の音声ファイルの並列処理が可能となり、大規模な文字起こしジョブでGPU利用率を最大化。',
           '**Pythonパイプライン統合：** faster-whisperはLangChain、Haystack、カスタムPythonパイプラインに直接組み込めます。whisper.cppをラップする際のサブプロセスオーバーヘッドなし。',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: 'Raspberry Pi 5でのWhisper：tiny、base、small',
+        content:
+          '**Raspberry Pi 5では、whisper.cppはtinyとbaseモデルをライブ文字起こし向けにリアルタイムで実行しますが、smallモデルはリアルタイム未満で動作するためバッチジョブに留めるのが最適です。** Pi 5のクアッドコアCortex-A76にはWhisper向けの利用可能なGPUパスがないため、すべての推論はCPU（ARM NEON）で行われます。量子化済みGGMLモデル（`ggml-*-q5_0.bin`）を使ってメモリ使用量を抑え、推論を高速化しましょう。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Raspberry Pi 5では、whisper.cppのsmallモデルはリアルタイムより遅く動作し（約0.5倍速、バッチ専用）、ライブ音声に追いつけるのはtinyとbaseモデルです。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pi 5はtinyとbaseのWhisperモデルでライブ音声を文字起こしできますが、smallモデルは重すぎてリアルタイムで追いつけません — smallはライブマイク用ではなく、バックグラウンドで処理する録音ファイル用に使いましょう。',
+          },
+        ],
+        items: [
+          '**Pi 5でのWhisper small：** CPUで概ね0.4〜0.6倍速（10分のクリップで約17〜25分）。3.4% WERで正確ですが、ライブ字幕には遅すぎます — 夜間/バッチの文字起こしに使用します。',
+          '**Pi 5でのWhisper base：** マルチスレッド（`-t 4`）でほぼリアルタイム〜約2倍速。Piでのライブ文字起こしの実用的なスイートスポットで、許容範囲の5.0% WERです。',
+          '**Pi 5でのWhisper tiny：** 最速のオプションで、ライブ用途にリアルタイムより余裕を持って高速ですが、WERは7.6%とやや高めです。ウェイクワードや短いコマンドの認識に最適です。',
+          '**量子化モデルを使用：** `bash ./models/download-ggml-model.sh small-q5_0`はRAMを削減し、精度の低下を最小限に抑えつつ推論を高速化します — Pi 5の共有メモリでは重要です。',
+          '**Pi 5でのfaster-whisper：** インストール可能（`pip install faster-whisper`、CPU int8）でバッチジョブには競争力がありますが、より軽量なwhisper.cppのCバイナリの方が組み込みでは一般的な選択肢です。',
+          '**サーマル：** 継続的な文字起こしはPi 5のCPUに大きな負荷をかけます — これらの数値を悪化させるサーマルスロットリングを避けるため、アクティブ冷却を使用しましょう。',
         ],
       },
       whenToUse: {
@@ -2125,15 +2457,16 @@ for segment in segments:
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: '本地语音识别2026：Whisper.cpp vs faster-whisper — 基准测试、安装配置、GPU加速',
     seoTitle: 'Whisper.cpp vs faster-whisper 2026：本地STT基准测试与配置指南',
     intro:
       'whisper.cpp和faster-whisper是2026年本地离线语音转文字的两大主流实现。whisper.cpp是纯C/C++移植版本，支持Apple Metal、CUDA、Vulkan和CPU，适用于Apple Silicon、嵌入式系统和实时语音应用。faster-whisper是基于CTranslate2的Python库，通过int8量化在NVIDIA GPU上实现约4倍于原始Whisper的吞吐量。本指南涵盖安装方法、性能基准测试、实时转录配置以及各平台的横向对比。',
     metaDescription:
-      '对比whisper.cpp与faster-whisper在2026年本地语音识别中的表现。WER基准、GPU与CPU速度对比、Apple Silicon Metal支持、实时转录配置及安装指南。完全离线使用。',
+      '对比whisper.cpp与faster-whisper在2026年本地语音识别中的表现：WER基准、GPU与CPU速度对比、Apple Metal、实时转录，以及pip安装 / ggml-base.bin配置和2026年6月的whisper.cpp v1.8.6更新。完全离线使用。',
     twitterDescription:
       'whisper.cpp vs faster-whisper：2026年本地语音识别基准测试。CPU与GPU速度、Apple Metal、WER准确率、实时转录。无需云服务，零成本。',
     audience:
@@ -2177,7 +2510,7 @@ for segment in segments:
           'Apple Silicon → 使用Core ML / Metal的whisper.cpp。M5 Pro上large-v3约10倍实时速度。',
           'NVIDIA GPU → faster-whisper。RTX 4070上large-v3 int8约12倍实时速度，VRAM约2.5 GB。',
           'Python管道 → faster-whisper。原生Python，5行代码配置，内置VAD。',
-          '嵌入式 / Raspberry Pi → whisper.cpp。纯C二进制文件，无需Python运行时。',
+          '嵌入式 / Raspberry Pi 5 → whisper.cpp。纯C二进制文件，无需Python运行时；tiny/base可实时运行，small仅适合批处理。',
           '实时语音 → whisper.cpp的stream模式或faster-whisper的VAD管道。',
           '批量转录 → faster-whisper。GPU上最佳吞吐量，轻松实现异步批处理。',
           'WER精度：两者完全相同 — 使用相同的Whisper模型权重。',
@@ -2192,11 +2525,14 @@ for segment in segments:
       { label: 'Whisper模型规格', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper：更快的替代方案', anchor: '#distil-whisper' },
       { label: 'whisper.cpp — C/C++移植版', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp 最新版本与更新（2026年6月）', anchor: '#whats-new' },
       { label: 'faster-whisper — CTranslate2版本', anchor: '#faster-whisper' },
+      { label: '通过pip获取ggml-base.bin（Python配置）', anchor: '#install-ggml-pip' },
       { label: '正面对比：基准测试表格', anchor: '#benchmarks' },
       { label: '实时转录配置', anchor: '#real-time' },
       { label: 'Apple Silicon：whisper.cpp胜出', anchor: '#apple-silicon' },
       { label: 'NVIDIA GPU：faster-whisper胜出', anchor: '#nvidia-gpu' },
+      { label: 'Raspberry Pi 5上的Whisper', anchor: '#raspberry-pi-5' },
       { label: '适用场景指南', anchor: '#when-to-use' },
       { label: '超越whisper.cpp和faster-whisper', anchor: '#beyond-tools' },
       { label: '常见问题与解决方案', anchor: '#troubleshooting' },
@@ -2215,7 +2551,7 @@ for segment in segments:
           '**Whisper large-v3在英语上提供最佳精度，WER为2.5%。** 对于大多数生产用例，Whisper small（3.4% WER，2 GB RAM）或medium（2.9% WER，5 GB RAM）提供更好的速度精度平衡。',
           '**两款工具均可实现实时转录** — whisper.cpp通过`--stream`参数，faster-whisper通过内置VAD（语音活动检测）管道。根据模型大小，实际延迟比实时语音慢0.5至2秒。',
           '**whisper.cpp支持CPU、Metal、CUDA和Vulkan** — 是跨平台嵌入式部署（Raspberry Pi、Windows GPU、ARM服务器）的唯一选择。faster-whisper仅支持CPU和CUDA（Mac上无Metal支持）。',
-          '**对于Raspberry Pi和嵌入式Linux，whisper.cpp tiny/base在CPU上运行**是实际可行的上限 — Pi 5上tiny约15倍实时速度，base约6倍实时速度。两者均可在1 GB RAM内运行。',
+          '**对于Raspberry Pi 5和嵌入式Linux，whisper.cpp tiny和base在CPU上**是具备实时能力的模型 — tiny运行速度从容超过实时，base在`-t 4`下约为实时。small模型（3.4% WER）在Pi 5上低于实时，最适合批处理任务。所有推理均在CPU（ARM NEON）上进行 — Pi没有可用于Whisper的GPU路径。',
         ],
       },
       quickFacts: {
@@ -2342,6 +2678,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp 最新版本与更新（2026年6月）',
+        content:
+          '**whisper.cpp的最新版本是v1.8.6，于2026年6月2日发布。** 它延续了v1.8.x维护线（v1.8.4和v1.8.5），聚焦于流式VAD、服务器稳定性和性能 — 而非新模型支持。faster-whisper的当前版本是v1.2.1（2025年10月31日）。两个运行时仍加载相同的OpenAI Whisper权重；2026年转录精度方面没有任何变化。',
+        items: [
+          '**whisper.cpp v1.8.6（2026年6月2日）：** 重新实现了`ffmpeg-transcode`，以便更清晰地对压缩音频（MP3、M4A）进行可选的FFmpeg解码，并修复了CI示例路径问题。',
+          '**whisper.cpp v1.8.5（2026年5月）：** 改进了流式VAD（语音活动检测），修复了服务器参数泄漏和token时间戳问题，并修复了Ruby和VAD绑定中的内存泄漏。',
+          '**whisper.cpp v1.8.4（2026年3月19日）：** 最新的`ggml`同步带来广泛的性能提升，新增用于选择GPU的`-g` / `--gpu-device`标志（以及`GGML_CUDA`设备选择），并修复了UTF-8分段换行问题。',
+          '**原生VAD现已内置于whisper.cpp。** 近期版本新增了原生语音活动检测路径，缩小了faster-whisper长期以来的优势 — 不过faster-whisper的Silero VAD集成仍然更开箱即用。',
+          '**faster-whisper v1.2.1（2025年10月31日）：** 当前稳定版本；`pip install faster-whisper`即可安装。截至本次更新尚无2026年版本 — 该项目稳定，并非停滞。',
+          '**2026年没有新的基础Whisper模型。** large-v3和distil-large-v3仍是最新权重，因此两款工具的"更新"都是运行时和工具链变更，而非精度变更。',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper — CTranslate2版本',
@@ -2369,6 +2719,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: '通过pip获取ggml-base.bin（Python配置）',
+        content:
+          '**要通过pip在Python中使用ggml-base.bin，请安装`pywhispercpp`绑定 — `pip install pywhispercpp` — 然后加载`Model("base")`，它会在首次运行时自动下载`ggml-base.bin`。** 不存在`pip install whisper.cpp`；pywhispercpp是围绕whisper.cpp C/C++引擎的pip封装，并保留Metal和CUDA加速。GGML模型文件（`ggml-base.bin`，~142 MB）从Hugging Face单独下载并缓存到本地 — pip包提供的是推理引擎，而非权重。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '运行`pip install pywhispercpp`，然后Python中的`Model("base")`会在首次使用时自动获取并缓存ggml-base.bin。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'pip安装的是程序（pywhispercpp）；模型文件ggml-base.bin是一个单独的~142 MB下载，发生在首次加载"base"模型时 — 或者你用download-ggml-model.sh脚本手动获取。',
+          },
+        ],
+        items: [
+          '**安装绑定：** `pip install pywhispercpp`。如需NVIDIA CUDA加速，使用`GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp`进行编译。',
+          '**自动下载ggml-base.bin：** `from pywhispercpp.model import Model`，然后`model = Model("base")`会在首次运行时从Hugging Face（`ggerganov/whisper.cpp`）下载`ggml-base.bin`并缓存。英语专用变体使用`"base.en"`。',
+          '**手动下载（CLI方式，无需pip）：** 在克隆的whisper.cpp仓库中，`bash ./models/download-ggml-model.sh base`会将文件保存到`models/ggml-base.bin` — 与pywhispercpp获取的是同一文件。',
+          '**直接下载：** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`无需脚本即可拉取模型。将`base`替换为`tiny`、`small`、`medium`或`large-v3`。',
+          '**请勿混淆这些包：** `pip install openai-whisper`安装的是OpenAI原始的PyTorch版Whisper（使用`.pt`检查点，而非`ggml-base.bin`）。`pip install faster-whisper`使用CTranslate2格式。只有`pywhispercpp`才使用GGML的`ggml-*.bin`文件。',
+          '**文件位置：** pywhispercpp将下载的GGML模型存储在其模块缓存中（或通过`Model("base", models_dir="...")`传入的路径），因此同一个`ggml-base.bin`会在多次运行间复用 — 无需重新下载。',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -2500,6 +2891,30 @@ for segment in segments:
           '**int8与float16：** int8速度约快2倍，VRAM减少约40%，精度损失可忽略不计。在NVIDIA上始终使用`compute_type="int8"`。',
           '**批量处理：** faster-whisper的`batched=True`参数支持并行处理多个音频文件，最大化大型转录任务的GPU利用率。',
           '**Python管道集成：** faster-whisper可直接插入LangChain、Haystack和自定义Python管道。无需封装whisper.cpp时的子进程开销。',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: '在Raspberry Pi 5上运行Whisper：tiny、base与small',
+        content:
+          '**在Raspberry Pi 5上，whisper.cpp可以实时运行tiny和base模型用于实时转录，而small模型运行速度低于实时，最适合用于批处理任务。** Pi 5的四核Cortex-A76没有可用于Whisper的GPU路径，因此所有推理都在CPU（ARM NEON）上进行。使用量化的GGML模型（`ggml-*-q5_0.bin`）可降低内存占用并加快推理速度。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '在Raspberry Pi 5上，whisper.cpp的small模型运行速度低于实时（约0.5倍，仅适合批处理）；tiny和base才是能跟上实时语音的模型。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pi 5可以用tiny和base这两个Whisper模型转录实时音频，但small模型太重，无法实时跟上 — 请将small用于在后台处理的录制文件，而不是实时麦克风。',
+          },
+        ],
+        items: [
+          '**Pi 5上的Whisper small：** CPU上约0.4–0.6倍实时速度（10分钟的片段需要约17–25分钟）。3.4% WER下精度高，但对于实时字幕太慢 — 用于过夜/批量转录。',
+          '**Pi 5上的Whisper base：** 借助多线程（`-t 4`）约为实时到约2倍。是Pi上实时转录的实用最佳平衡点，WER为5.0%，可接受。',
+          '**Pi 5上的Whisper tiny：** 最快的选项，实时使用时可轻松快于实时，代价是WER较高（7.6%）。最适合唤醒词和短命令识别。',
+          '**使用量化模型：** `bash ./models/download-ggml-model.sh small-q5_0`可减少RAM占用并加快推理，精度损失极小 — 在Pi 5的共享内存上很重要。',
+          '**Pi 5上的faster-whisper：** 可安装（`pip install faster-whisper`，CPU int8），在批处理任务中具有竞争力，但whisper.cpp更轻量的C二进制文件是更常见的嵌入式选择。',
+          '**散热：** 持续转录会让Pi 5的CPU高负荷运行 — 使用主动散热以避免热降频侵蚀这些数据。',
         ],
       },
       whenToUse: {
@@ -2652,15 +3067,16 @@ for segment in segments:
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Benchmarks STT local, configuración y aceleración GPU',
     seoTitle: 'Whisper.cpp vs faster-whisper 2026: STT local y benchmarks',
     intro:
       'whisper.cpp y faster-whisper son las dos implementaciones dominantes del modelo Whisper de OpenAI para transcripción local y offline en 2026. whisper.cpp es un port puro en C/C++ que funciona en Apple Metal, CUDA, Vulkan y CPU — ideal para Apple Silicon, sistemas embebidos y aplicaciones de voz en tiempo real. faster-whisper es una librería Python que usa CTranslate2 y logra un rendimiento de hasta ~4× el original de Whisper en GPUs NVIDIA mediante cuantización int8. Esta guía cubre instalación, benchmarks de rendimiento, configuración de transcripción en tiempo real y una comparación directa entre plataformas para que elijas la herramienta adecuada.',
     metaDescription:
-      'Compara whisper.cpp y faster-whisper para voz local en 2026: WER, velocidad GPU vs CPU, Apple Silicon Metal y transcripción en tiempo real. Todo offline.',
+      'Compara whisper.cpp y faster-whisper para voz local en 2026: benchmarks WER, velocidad GPU vs CPU, Apple Metal, transcripción en tiempo real, además de instalación con pip / configuración de ggml-base.bin y la actualización de whisper.cpp v1.8.6 de junio de 2026. Todo offline.',
     twitterDescription:
       'whisper.cpp vs faster-whisper: benchmarks de reconocimiento de voz local 2026. Velocidad CPU vs GPU, Apple Metal, precisión WER, transcripción en tiempo real. Sin nube, sin costo.',
     audience:
@@ -2704,7 +3120,7 @@ for segment in segments:
           'Apple Silicon → whisper.cpp con Core ML / Metal. ~10× tiempo real en M5 Pro con large-v3.',
           'NVIDIA GPU → faster-whisper. ~12× tiempo real en RTX 4070 con large-v3 int8, ~2,5 GB VRAM.',
           'Pipeline Python → faster-whisper. Python nativo, configuración en 5 líneas, VAD incluido.',
-          'Embebido / Raspberry Pi → whisper.cpp. Binario C puro, sin necesidad de runtime Python.',
+          'Embebido / Raspberry Pi 5 → whisper.cpp. Binario C puro, sin runtime Python; tiny/base funcionan en tiempo real, small solo por lotes.',
           'Voz en tiempo real → modo stream de whisper.cpp o pipeline VAD de faster-whisper.',
           'Transcripción por lotes → faster-whisper. Mejor rendimiento en GPU; batching asíncrono sencillo.',
           'Precisión WER: idéntica en ambos — usan los mismos pesos del modelo Whisper.',
@@ -2719,11 +3135,14 @@ for segment in segments:
       { label: 'Tamaños del modelo Whisper', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper: la alternativa más rápida', anchor: '#distil-whisper' },
       { label: 'whisper.cpp — el port C/C++', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp: última versión y novedades (junio de 2026)', anchor: '#whats-new' },
       { label: 'faster-whisper — el port CTranslate2', anchor: '#faster-whisper' },
+      { label: 'Obtén ggml-base.bin con pip (configuración Python)', anchor: '#install-ggml-pip' },
       { label: 'Comparativa directa: tabla de benchmarks', anchor: '#benchmarks' },
       { label: 'Configuración de transcripción en tiempo real', anchor: '#real-time' },
       { label: 'Apple Silicon: gana whisper.cpp', anchor: '#apple-silicon' },
       { label: 'GPU NVIDIA: gana faster-whisper', anchor: '#nvidia-gpu' },
+      { label: 'Whisper en Raspberry Pi 5', anchor: '#raspberry-pi-5' },
       { label: 'Cuándo usar cuál', anchor: '#when-to-use' },
       { label: 'Más allá de whisper.cpp y faster-whisper', anchor: '#beyond-tools' },
       { label: 'Problemas comunes y soluciones', anchor: '#troubleshooting' },
@@ -2742,7 +3161,7 @@ for segment in segments:
           '**Whisper large-v3 ofrece la mejor precisión con 2,5% WER en inglés.** Para la mayoría de casos de producción, Whisper small (3,4% WER, 2 GB RAM) o medium (2,9% WER, 5 GB RAM) ofrece mejor equilibrio entre velocidad y precisión.',
           '**La transcripción en tiempo real es alcanzable con ambas herramientas** — whisper.cpp mediante su flag `--stream`, faster-whisper mediante su pipeline VAD (detección de actividad de voz) integrado. La latencia práctica es de 0,5–2 segundos detrás del habla en vivo según el tamaño del modelo.',
           '**whisper.cpp funciona en CPU, Metal, CUDA y Vulkan** — siendo la única opción para uso embebido multiplataforma (Raspberry Pi, configuraciones GPU en Windows, servidores ARM). faster-whisper solo admite CPU y CUDA (sin Metal en Mac).',
-          '**Para Raspberry Pi y Linux embebido, whisper.cpp tiny/base en CPU** es el límite práctico — tiny a ~15× tiempo real en Pi 5, base a ~6× tiempo real. Ambos caben en 1 GB de RAM.',
+          '**Para Raspberry Pi 5 y Linux embebido, whisper.cpp tiny y base en CPU** son los modelos capaces de tiempo real — tiny funciona cómodamente más rápido que el tiempo real, base en torno al tiempo real con `-t 4`. El modelo small (3,4% WER) funciona por debajo del tiempo real en el Pi 5 y conviene reservarlo para trabajos por lotes. Toda la inferencia es en CPU (ARM NEON) — el Pi no tiene una ruta GPU utilizable para Whisper.',
         ],
       },
       quickFacts: {
@@ -2869,6 +3288,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp: última versión y novedades (junio de 2026)',
+        content:
+          '**La última versión de whisper.cpp es la v1.8.6, publicada el 2 de junio de 2026.** Continúa la línea de mantenimiento v1.8.x (v1.8.4 y v1.8.5) centrada en VAD por streaming, estabilidad del servidor y rendimiento — no en soporte de nuevos modelos. La versión actual de faster-whisper es la v1.2.1 (31 de octubre de 2025). Ambos runtimes siguen cargando los mismos pesos de OpenAI Whisper; nada relativo a la precisión de transcripción cambió en 2026.',
+        items: [
+          '**whisper.cpp v1.8.6 (2 de junio de 2026):** reimplementación de `ffmpeg-transcode` para una decodificación opcional con FFmpeg más clara de audio comprimido (MP3, M4A), además de una corrección de la ruta de ejemplos en CI.',
+          '**whisper.cpp v1.8.5 (mayo de 2026):** mejoras en el VAD por streaming (detección de actividad de voz), correcciones de fugas de parámetros del servidor y de marcas de tiempo de tokens, y correcciones de fugas de memoria en los bindings de Ruby y VAD.',
+          '**whisper.cpp v1.8.4 (19 de marzo de 2026):** última sincronización de `ggml` con amplias mejoras de rendimiento, un nuevo flag `-g` / `--gpu-device` (y selección de dispositivo `GGML_CUDA`) para elegir una GPU, y correcciones del ajuste de segmentos UTF-8.',
+          '**El VAD nativo ya está integrado en whisper.cpp.** Las versiones recientes añadieron una ruta nativa de detección de actividad de voz, reduciendo una ventaja de larga data de faster-whisper — aunque la integración de Silero VAD de faster-whisper sigue siendo más lista para usar.',
+          '**faster-whisper v1.2.1 (31 de octubre de 2025):** versión estable actual; `pip install faster-whisper` la instala. No hay versión de 2026 a la fecha de esta actualización — el proyecto es estable, no está detenido.',
+          '**Ningún nuevo modelo Whisper base en 2026.** large-v3 y distil-large-v3 siguen siendo los pesos más recientes, así que las «actualizaciones» de cualquiera de las herramientas son cambios de runtime y de tooling, no de precisión.',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper — el port CTranslate2',
@@ -2896,6 +3329,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: 'Obtén ggml-base.bin con pip (configuración Python)',
+        content:
+          '**Para usar ggml-base.bin desde Python con pip, instala el binding `pywhispercpp` — `pip install pywhispercpp` — y luego carga `Model("base")`, que descarga `ggml-base.bin` automáticamente en la primera ejecución.** No existe `pip install whisper.cpp`; pywhispercpp es el envoltorio pip del motor C/C++ de whisper.cpp y conserva la aceleración Metal y CUDA. El archivo del modelo GGML (`ggml-base.bin`, ~142 MB) se descarga por separado desde Hugging Face y se cachea localmente — el paquete pip incluye el motor de inferencia, no los pesos.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ejecuta `pip install pywhispercpp`, y luego `Model("base")` en Python obtiene y cachea ggml-base.bin automáticamente en el primer uso.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'pip instala el programa (pywhispercpp); el archivo del modelo ggml-base.bin es una descarga aparte de ~142 MB que ocurre la primera vez que cargas el modelo «base» — o que obtienes a mano con el script download-ggml-model.sh.',
+          },
+        ],
+        items: [
+          '**Instala el binding:** `pip install pywhispercpp`. Para aceleración NVIDIA CUDA, compila con `GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp`.',
+          '**Descarga automática de ggml-base.bin:** `from pywhispercpp.model import Model` y luego `model = Model("base")` descarga `ggml-base.bin` desde Hugging Face (`ggerganov/whisper.cpp`) en la primera ejecución y lo cachea. Usa `"base.en"` para la variante solo en inglés.',
+          '**Descarga manual (vía CLI, sin pip):** desde un repo whisper.cpp clonado, `bash ./models/download-ggml-model.sh base` guarda el archivo en `models/ggml-base.bin` — el mismo archivo que obtiene pywhispercpp.',
+          '**Descarga directa:** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin` obtiene el modelo sin script. Cambia `base` por `tiny`, `small`, `medium` o `large-v3`.',
+          '**No confundas los paquetes:** `pip install openai-whisper` instala el Whisper PyTorch original de OpenAI (usa checkpoints `.pt`, no `ggml-base.bin`). `pip install faster-whisper` usa el formato CTranslate2. Solo `pywhispercpp` consume archivos GGML `ggml-*.bin`.',
+          '**Dónde queda el archivo:** pywhispercpp almacena los modelos GGML descargados en su caché de módulo (o en una ruta que pases con `Model("base", models_dir="...")`), de modo que el mismo `ggml-base.bin` se reutiliza entre ejecuciones — sin volver a descargar.',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -3027,6 +3501,30 @@ for segment in segments:
           '**int8 vs float16:** int8 es ~2× más rápido y usa ~40% menos VRAM con pérdida de precisión negligible. Usa siempre `compute_type="int8"` en NVIDIA.',
           '**Procesamiento por lotes:** el parámetro `batched=True` de faster-whisper permite el procesamiento paralelo de múltiples archivos de audio, maximizando la utilización GPU en trabajos grandes de transcripción.',
           '**Integración en pipeline Python:** faster-whisper se integra directamente en LangChain, Haystack y pipelines Python personalizados. Sin overhead de subproceso comparado con envolver whisper.cpp.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: 'Whisper en Raspberry Pi 5: tiny, base y small',
+        content:
+          '**En una Raspberry Pi 5, whisper.cpp ejecuta los modelos tiny y base en tiempo real para transcripción en vivo, mientras que el modelo small funciona por debajo del tiempo real y conviene reservarlo para trabajos por lotes.** El Cortex-A76 de cuatro núcleos del Pi 5 no tiene una ruta GPU utilizable para Whisper, así que toda la inferencia es en CPU (ARM NEON). Usa los modelos GGML cuantizados (`ggml-*-q5_0.bin`) para reducir el uso de memoria y acelerar la inferencia.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'En una Raspberry Pi 5, el modelo small de whisper.cpp funciona más lento que el tiempo real (~0,5×, solo por lotes); tiny y base son los modelos que siguen el ritmo del habla en vivo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Una Pi 5 puede transcribir audio en vivo con los modelos Whisper tiny y base, pero el modelo small es demasiado pesado para seguir el ritmo en tiempo real — usa small para archivos grabados que proceses en segundo plano, no para un micrófono en vivo.',
+          },
+        ],
+        items: [
+          '**Whisper small en Pi 5:** aproximadamente 0,4–0,6× tiempo real en CPU (un clip de 10 minutos tarda ~17–25 minutos). Preciso con 3,4% WER pero demasiado lento para subtitulado en vivo — úsalo para transcripción nocturna/por lotes.',
+          '**Whisper base en Pi 5:** en torno al tiempo real hasta ~2× con multihilo (`-t 4`). El punto óptimo práctico para transcripción en vivo en el Pi, con un WER aceptable de 5,0%.',
+          '**Whisper tiny en Pi 5:** la opción más rápida, cómodamente más rápida que el tiempo real para uso en vivo, a costa de un WER más alto de 7,6%. Ideal para reconocimiento de palabra de activación y comandos cortos.',
+          '**Usa modelos cuantizados:** `bash ./models/download-ggml-model.sh small-q5_0` recorta la RAM y acelera la inferencia con una pérdida de precisión mínima — importante en la memoria compartida del Pi 5.',
+          '**faster-whisper en Pi 5:** instalable (`pip install faster-whisper`, CPU int8) y competitivo para trabajos por lotes, pero el binario C más ligero de whisper.cpp es la opción embebida más común.',
+          '**Térmica:** la transcripción sostenida exige mucho a la CPU del Pi 5 — usa refrigeración activa para evitar el throttling térmico que degrada estas cifras.',
         ],
       },
       whenToUse: {
@@ -3182,7 +3680,7 @@ for segment in segments:
        url: 'https://www.promptquorum.com/es/power-local-llm/local-whisper-stt-comparison-2026',
        inLanguage: 'es',
        datePublished: '2026-05-24',
-       dateModified: '2026-05-24',
+       dateModified: '2026-06-15',
        author: { '@type': 'Person', name: 'Hans Kuepper' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
      },
@@ -3191,15 +3689,16 @@ for segment in segments:
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Benchmarks de STT local, configuração e aceleração de GPU',
     seoTitle: 'Whisper.cpp vs faster-whisper 2026: STT local e benchmarks',
     intro:
       'whisper.cpp e faster-whisper são as duas implementações dominantes do modelo Whisper de fala em texto da OpenAI para transcrição local e offline em 2026. whisper.cpp é um port puro em C/C++ que roda em Apple Metal, CUDA, Vulkan e CPU — o que o torna ideal para Apple Silicon, sistemas embarcados e aplicações de voz em tempo real. faster-whisper é uma biblioteca Python que usa CTranslate2 e atinge ~4× o throughput do Whisper original em GPUs NVIDIA por meio de quantização int8. Este guia cobre instalação, benchmarks de desempenho, configuração de transcrição em tempo real e uma comparação direta entre plataformas para que você escolha a ferramenta certa para seu pipeline.',
     metaDescription:
-      'Compare whisper.cpp e faster-whisper para reconhecimento de voz local em 2026. Benchmarks de WER, velocidade GPU vs CPU, Apple Silicon Metal, transcrição em tempo real e guias de instalação. Tudo offline.',
+      'Compare whisper.cpp e faster-whisper para reconhecimento de voz local em 2026: benchmarks de WER, velocidade GPU vs CPU, Apple Metal, transcrição em tempo real, além de instalação com pip / configuração do ggml-base.bin e a atualização do whisper.cpp v1.8.6 de junho de 2026. Tudo offline.',
     twitterDescription:
       'whisper.cpp vs faster-whisper: benchmarks de reconhecimento de voz local 2026. Velocidade CPU vs GPU, Apple Metal, precisão WER, transcrição em tempo real. Sem nuvem, sem custo.',
     audience:
@@ -3243,7 +3742,7 @@ for segment in segments:
           'Apple Silicon → whisper.cpp com Core ML / Metal. ~10× tempo real em M5 Pro com large-v3.',
           'NVIDIA GPU → faster-whisper. ~12× tempo real em RTX 4070 com large-v3 int8, ~2,5 GB VRAM.',
           'Pipeline Python → faster-whisper. Python nativo, configuração em 5 linhas, VAD incluído.',
-          'Embarcado / Raspberry Pi → whisper.cpp. Binário C puro, sem necessidade de runtime Python.',
+          'Embarcado / Raspberry Pi 5 → whisper.cpp. Binário C puro, sem runtime Python; tiny/base rodam em tempo real, small apenas em lote.',
           'Voz em tempo real → modo stream do whisper.cpp ou pipeline VAD do faster-whisper.',
           'Transcrição em lote → faster-whisper. Melhor throughput em GPU; batching assíncrono simples.',
           'Precisão WER: idêntica em ambos — usam os mesmos pesos do modelo Whisper.',
@@ -3258,11 +3757,14 @@ for segment in segments:
       { label: 'Tamanhos do modelo Whisper', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper: a alternativa mais rápida', anchor: '#distil-whisper' },
       { label: 'whisper.cpp — o port C/C++', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp: versão mais recente e novidades (junho de 2026)', anchor: '#whats-new' },
       { label: 'faster-whisper — o port CTranslate2', anchor: '#faster-whisper' },
+      { label: 'Obtenha ggml-base.bin via pip (configuração Python)', anchor: '#install-ggml-pip' },
       { label: 'Comparação direta: tabela de benchmarks', anchor: '#benchmarks' },
       { label: 'Configuração de transcrição em tempo real', anchor: '#real-time' },
       { label: 'Apple Silicon: whisper.cpp vence', anchor: '#apple-silicon' },
       { label: 'GPU NVIDIA: faster-whisper vence', anchor: '#nvidia-gpu' },
+      { label: 'Whisper no Raspberry Pi 5', anchor: '#raspberry-pi-5' },
       { label: 'Quando usar cada um', anchor: '#when-to-use' },
       { label: 'Além do whisper.cpp e do faster-whisper', anchor: '#beyond-tools' },
       { label: 'Problemas comuns e soluções', anchor: '#troubleshooting' },
@@ -3281,7 +3783,7 @@ for segment in segments:
           '**Whisper large-v3 oferece a melhor precisão, com 2,5% de WER em inglês.** Para a maioria dos casos de produção, Whisper small (3,4% WER, 2 GB RAM) ou medium (2,9% WER, 5 GB RAM) oferece um melhor equilíbrio entre velocidade e precisão.',
           '**A transcrição em tempo real é alcançável com ambas as ferramentas** — whisper.cpp por meio da flag `--stream`, faster-whisper por meio de seu pipeline VAD (detecção de atividade de voz) integrado. A latência prática é de 0,5–2 segundos atrás da fala ao vivo, dependendo do tamanho do modelo.',
           '**whisper.cpp roda em CPU, Metal, CUDA e Vulkan** — sendo a única opção para uso embarcado multiplataforma (Raspberry Pi, configurações de GPU no Windows, servidores ARM). faster-whisper só suporta CPU e CUDA (sem Metal no Mac).',
-          '**Para Raspberry Pi e Linux embarcado, whisper.cpp tiny/base em CPU** é o limite prático — tiny a ~15× tempo real no Pi 5, base a ~6× tempo real. Ambos cabem em 1 GB de RAM.',
+          '**Para Raspberry Pi 5 e Linux embarcado, whisper.cpp tiny e base em CPU** são os modelos capazes de tempo real — tiny roda confortavelmente mais rápido que o tempo real, base em torno do tempo real com `-t 4`. O modelo small (3,4% WER) roda abaixo do tempo real no Pi 5 e é melhor reservá-lo para trabalhos em lote. Toda a inferência é em CPU (ARM NEON) — o Pi não tem um caminho de GPU utilizável para o Whisper.',
         ],
       },
       quickFacts: {
@@ -3408,6 +3910,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp: versão mais recente e novidades (junho de 2026)',
+        content:
+          '**A versão mais recente do whisper.cpp é a v1.8.6, publicada em 2 de junho de 2026.** Ela continua a linha de manutenção v1.8.x (v1.8.4 e v1.8.5) focada em VAD por streaming, estabilidade do servidor e desempenho — não em suporte a novos modelos. A versão atual do faster-whisper é a v1.2.1 (31 de outubro de 2025). Ambos os runtimes ainda carregam os mesmos pesos do OpenAI Whisper; nada relativo à precisão de transcrição mudou em 2026.',
+        items: [
+          '**whisper.cpp v1.8.6 (2 de junho de 2026):** reimplementação do `ffmpeg-transcode` para uma decodificação opcional com FFmpeg mais clara de áudio comprimido (MP3, M4A), além de uma correção do caminho de exemplos no CI.',
+          '**whisper.cpp v1.8.5 (maio de 2026):** melhorias no VAD por streaming (detecção de atividade de voz), correções de vazamento de parâmetros do servidor e de carimbos de tempo de tokens, e correções de vazamentos de memória nos bindings de Ruby e VAD.',
+          '**whisper.cpp v1.8.4 (19 de março de 2026):** sincronização mais recente do `ggml` com amplos ganhos de desempenho, uma nova flag `-g` / `--gpu-device` (e seleção de dispositivo `GGML_CUDA`) para escolher uma GPU, e correções de quebra de segmentos UTF-8.',
+          '**O VAD nativo agora vem integrado ao whisper.cpp.** Versões recentes adicionaram um caminho nativo de detecção de atividade de voz, reduzindo uma vantagem de longa data do faster-whisper — embora a integração do Silero VAD do faster-whisper continue mais pronta para uso.',
+          '**faster-whisper v1.2.1 (31 de outubro de 2025):** versão estável atual; `pip install faster-whisper` a instala. Não há versão de 2026 até esta atualização — o projeto está estável, não parado.',
+          '**Nenhum novo modelo Whisper base em 2026.** large-v3 e distil-large-v3 continuam sendo os pesos mais recentes, então as «atualizações» de qualquer das ferramentas são mudanças de runtime e de tooling, não de precisão.',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper — o port CTranslate2',
@@ -3435,6 +3951,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: 'Obtenha ggml-base.bin via pip (configuração Python)',
+        content:
+          '**Para usar ggml-base.bin a partir do Python via pip, instale o binding `pywhispercpp` — `pip install pywhispercpp` — e então carregue `Model("base")`, que baixa `ggml-base.bin` automaticamente na primeira execução.** Não existe `pip install whisper.cpp`; pywhispercpp é o wrapper pip do motor C/C++ do whisper.cpp e mantém a aceleração Metal e CUDA. O arquivo do modelo GGML (`ggml-base.bin`, ~142 MB) é baixado separadamente do Hugging Face e armazenado em cache localmente — o pacote pip entrega o motor de inferência, não os pesos.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Execute `pip install pywhispercpp`, e então `Model("base")` no Python busca e armazena em cache o ggml-base.bin automaticamente no primeiro uso.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'o pip instala o programa (pywhispercpp); o arquivo do modelo ggml-base.bin é um download separado de ~142 MB que ocorre na primeira vez que você carrega o modelo «base» — ou que você obtém manualmente com o script download-ggml-model.sh.',
+          },
+        ],
+        items: [
+          '**Instale o binding:** `pip install pywhispercpp`. Para aceleração NVIDIA CUDA, compile com `GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp`.',
+          '**Download automático do ggml-base.bin:** `from pywhispercpp.model import Model` e então `model = Model("base")` baixa `ggml-base.bin` do Hugging Face (`ggerganov/whisper.cpp`) na primeira execução e o armazena em cache. Use `"base.en"` para a variante somente em inglês.',
+          '**Download manual (via CLI, sem pip):** a partir de um repositório whisper.cpp clonado, `bash ./models/download-ggml-model.sh base` salva o arquivo em `models/ggml-base.bin` — o mesmo arquivo que o pywhispercpp busca.',
+          '**Download direto:** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin` obtém o modelo sem script. Troque `base` por `tiny`, `small`, `medium` ou `large-v3`.',
+          '**Não confunda os pacotes:** `pip install openai-whisper` instala o Whisper PyTorch original da OpenAI (ele usa checkpoints `.pt`, não `ggml-base.bin`). `pip install faster-whisper` usa o formato CTranslate2. Apenas o `pywhispercpp` consome arquivos GGML `ggml-*.bin`.',
+          '**Onde o arquivo fica:** o pywhispercpp armazena os modelos GGML baixados no cache do seu módulo (ou em um caminho que você passe via `Model("base", models_dir="...")`), de modo que o mesmo `ggml-base.bin` é reutilizado entre execuções — sem novo download.',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -3566,6 +4123,30 @@ for segment in segments:
           '**int8 vs float16:** int8 é ~2× mais rápido e usa ~40% menos VRAM com perda de precisão negligível. Use sempre `compute_type="int8"` em NVIDIA.',
           '**Processamento em lote:** o parâmetro `batched=True` do faster-whisper permite o processamento paralelo de múltiplos arquivos de áudio, maximizando a utilização da GPU em grandes trabalhos de transcrição.',
           '**Integração em pipeline Python:** faster-whisper se integra diretamente ao LangChain, Haystack e pipelines Python personalizados. Sem overhead de subprocesso em comparação com envolver o whisper.cpp.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: 'Whisper no Raspberry Pi 5: tiny, base e small',
+        content:
+          '**Em um Raspberry Pi 5, o whisper.cpp roda os modelos tiny e base em tempo real para transcrição ao vivo, enquanto o modelo small roda abaixo do tempo real e é melhor reservá-lo para trabalhos em lote.** O Cortex-A76 quad-core do Pi 5 não tem um caminho de GPU utilizável para o Whisper, então toda a inferência é em CPU (ARM NEON). Use os modelos GGML quantizados (`ggml-*-q5_0.bin`) para reduzir o uso de memória e acelerar a inferência.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Em um Raspberry Pi 5, o modelo small do whisper.cpp roda mais lento que o tempo real (~0,5×, apenas em lote); tiny e base são os modelos que acompanham a fala ao vivo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Um Pi 5 consegue transcrever áudio ao vivo com os modelos Whisper tiny e base, mas o modelo small é pesado demais para acompanhar em tempo real — use o small para arquivos gravados que você processa em segundo plano, não para um microfone ao vivo.',
+          },
+        ],
+        items: [
+          '**Whisper small no Pi 5:** cerca de 0,4–0,6× tempo real em CPU (um clipe de 10 minutos leva ~17–25 minutos). Preciso com 3,4% WER, mas lento demais para legendagem ao vivo — use-o para transcrição noturna/em lote.',
+          '**Whisper base no Pi 5:** em torno do tempo real até ~2× com multithreading (`-t 4`). O ponto ideal prático para transcrição ao vivo no Pi, com WER aceitável de 5,0%.',
+          '**Whisper tiny no Pi 5:** a opção mais rápida, confortavelmente mais rápida que o tempo real para uso ao vivo, ao custo de um WER mais alto de 7,6%. Ideal para reconhecimento de palavra de ativação e comandos curtos.',
+          '**Use modelos quantizados:** `bash ./models/download-ggml-model.sh small-q5_0` reduz a RAM e acelera a inferência com perda mínima de precisão — importante na memória compartilhada do Pi 5.',
+          '**faster-whisper no Pi 5:** instalável (`pip install faster-whisper`, CPU int8) e competitivo para trabalhos em lote, mas o binário C mais leve do whisper.cpp é a escolha embarcada mais comum.',
+          '**Térmica:** a transcrição sustentada exige muito da CPU do Pi 5 — use refrigeração ativa para evitar o throttling térmico que degrada esses números.',
         ],
       },
       whenToUse: {
@@ -3721,7 +4302,7 @@ for segment in segments:
        url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-whisper-stt-comparison-2026',
        inLanguage: 'pt-BR',
        datePublished: '2026-05-24',
-       dateModified: '2026-05-24',
+       dateModified: '2026-06-15',
        author: { '@type': 'Person', name: 'Hans Kuepper' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
      },
@@ -3730,8 +4311,9 @@ for segment in segments:
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp مقابل faster-whisper 2026: معايير STT المحلية والإعداد وتسريع GPU',
     seoTitle: 'Whisper.cpp مقابل faster-whisper 2026: معايير STT',
@@ -3782,7 +4364,7 @@ for segment in segments:
           'Apple Silicon ← whisper.cpp مع Core ML / Metal. ~10 أضعاف الزمن الفعلي على M5 Pro مع large-v3.',
           'NVIDIA GPU ← faster-whisper. ~12 ضعف الزمن الفعلي على RTX 4070 مع large-v3 int8، ~2.5 جيجابايت VRAM.',
           'خط أنابيب Python ← faster-whisper. Python أصيل، إعداد بـ5 أسطر، VAD مدمج.',
-          'مدمج / Raspberry Pi ← whisper.cpp. ثنائي C نقي، لا يتطلب وقت تشغيل Python.',
+          'مدمج / Raspberry Pi 5 ← whisper.cpp. ثنائي C نقي، لا يتطلب وقت تشغيل Python؛ tiny/base يعملان في الزمن الفعلي، وsmall للدُّفعات فقط.',
           'صوت الوقت الفعلي ← وضع stream في whisper.cpp أو خط أنابيب VAD في faster-whisper.',
           'نسخ دفعي ← faster-whisper. أفضل إنتاجية على GPU؛ معالجة دفعية غير متزامنة سهلة.',
           'دقة WER: متطابقة في كليهما — يستخدمان أوزان نموذج Whisper ذاتها.',
@@ -3797,11 +4379,14 @@ for segment in segments:
       { label: 'أحجام نموذج Whisper', anchor: '#whisper-model-sizes' },
       { label: 'Distil-Whisper: البديل الأسرع', anchor: '#distil-whisper' },
       { label: 'whisper.cpp — منفذ C/C++', anchor: '#whisper-cpp' },
+      { label: 'whisper.cpp — أحدث إصدار وتحديثات (يونيو 2026)', anchor: '#whats-new' },
       { label: 'faster-whisper — منفذ CTranslate2', anchor: '#faster-whisper' },
+      { label: 'الحصول على ggml-base.bin عبر pip (إعداد Python)', anchor: '#install-ggml-pip' },
       { label: 'مقارنة مباشرة: جدول معايير الأداء', anchor: '#benchmarks' },
       { label: 'إعداد النسخ في الوقت الفعلي', anchor: '#real-time' },
       { label: 'Apple Silicon: يفوز whisper.cpp', anchor: '#apple-silicon' },
       { label: 'NVIDIA GPU: يفوز faster-whisper', anchor: '#nvidia-gpu' },
+      { label: 'Whisper على Raspberry Pi 5', anchor: '#raspberry-pi-5' },
       { label: 'متى تستخدم أيًّا منهما', anchor: '#when-to-use' },
       { label: 'ما وراء whisper.cpp وfaster-whisper', anchor: '#beyond-tools' },
       { label: 'المشكلات الشائعة والحلول', anchor: '#troubleshooting' },
@@ -3947,6 +4532,20 @@ make -j4 WHISPER_COREML=1
 ./main -m models/ggml-large-v3-encoder.mlmodelc -f recording.wav`,
         codeLanguage: 'bash',
       },
+      whatsNew: {
+        id: 'whats-new',
+        title: 'whisper.cpp — أحدث إصدار وتحديثات (يونيو 2026)',
+        content:
+          '**أحدث إصدار من whisper.cpp هو v1.8.6، الصادر في 2 يونيو 2026.** يواصل خط الصيانة v1.8.x (الإصداران v1.8.4 وv1.8.5) مركّزًا على VAD المتدفق واستقرار الخادم والأداء — لا دعم لنماذج جديدة. الإصدار الحالي من faster-whisper هو v1.2.1 (31 أكتوبر 2025). لا تزال كلتا أداتَي التشغيل تحمّلان أوزان OpenAI Whisper ذاتها؛ ولم يتغير أي شيء يخص دقة النسخ في 2026.',
+        items: [
+          '**whisper.cpp v1.8.6 (2 يونيو 2026):** إعادة تنفيذ `ffmpeg-transcode` لفك تشفير FFmpeg الاختياري بوضوح أكبر للصوت المضغوط (MP3، M4A) إضافةً إلى إصلاح لمسار أمثلة CI.',
+          '**whisper.cpp v1.8.5 (مايو 2026):** تحسينات على VAD المتدفق (الكشف عن نشاط الصوت)، وإصلاحات لتسريب معاملات الخادم وطوابع توقيت الرموز، وإصلاحات لتسرب الذاكرة في ارتباطات Ruby وVAD.',
+          '**whisper.cpp v1.8.4 (19 مارس 2026):** أحدث مزامنة لـ`ggml` مع مكاسب أداء واسعة، وراية جديدة `-g` / `--gpu-device` (واختيار جهاز `GGML_CUDA`) لاختيار GPU، وإصلاحات لالتفاف مقاطع UTF-8.',
+          '**VAD الأصيل مدمج الآن في whisper.cpp.** أضافت الإصدارات الأخيرة مسارًا أصيلًا للكشف عن نشاط الصوت، مما يقلّص ميزةً طالما تمتّع بها faster-whisper — وإن ظل تكامل Silero VAD في faster-whisper أجهز للاستخدام.',
+          '**faster-whisper v1.2.1 (31 أكتوبر 2025):** الإصدار المستقر الحالي؛ يجلبه `pip install faster-whisper`. لا إصدار في 2026 حتى هذا التحديث — المشروع مستقر وليس متوقفًا.',
+          '**لا نموذج Whisper أساسي جديد في 2026.** يظل large-v3 وdistil-large-v3 أحدث الأوزان، لذا فإن «تحديثات» أي من الأداتين هي تغييرات في وقت التشغيل والأدوات، وليست تغييرات في الدقة.',
+        ],
+      },
       fasterWhisperDeep: {
         id: 'faster-whisper',
         title: 'faster-whisper — منفذ CTranslate2',
@@ -3974,6 +4573,47 @@ print(f"Detected language: {info.language} (probability: {info.language_probabil
 for segment in segments:
     print(f"[{segment.start:.2f}s → {segment.end:.2f}s] {segment.text}")`,
         codeLanguage: 'python',
+      },
+      installPython: {
+        id: 'install-ggml-pip',
+        title: 'الحصول على ggml-base.bin عبر pip (إعداد Python)',
+        content:
+          '**لاستخدام ggml-base.bin من Python عبر pip، ثبّت ارتباط `pywhispercpp` — `pip install pywhispercpp` — ثم حمّل `Model("base")`، الذي ينزّل `ggml-base.bin` تلقائيًا في أول تشغيل.** لا يوجد `pip install whisper.cpp`؛ فـpywhispercpp هو غلاف pip حول محرك whisper.cpp بلغة C/C++، وهو يحافظ على تسريع Metal وCUDA. يُنزَّل ملف نموذج GGML (`ggml-base.bin`، ~142 ميغابايت) بشكل منفصل من Hugging Face ويُخزَّن محليًا — يوفّر حزمة pip محرك الاستدلال، لا الأوزان.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'شغّل `pip install pywhispercpp`، ثم يجلب `Model("base")` في Python ملف ggml-base.bin ويخزّنه تلقائيًا في أول استخدام.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'يثبّت pip البرنامج (pywhispercpp)؛ أما ملف النموذج ggml-base.bin فهو تنزيل منفصل بحجم ~142 ميغابايت يحدث أول مرة تحمّل فيها نموذج «base» — أو تجلبه يدويًا عبر السكربت download-ggml-model.sh.',
+          },
+        ],
+        items: [
+          '**ثبّت الارتباط:** `pip install pywhispercpp`. لتسريع NVIDIA CUDA، ابنِ عبر `GGML_CUDA=1 pip install git+https://github.com/absadiki/pywhispercpp`.',
+          '**تنزيل ggml-base.bin تلقائيًا:** `from pywhispercpp.model import Model` ثم `model = Model("base")` ينزّل `ggml-base.bin` من Hugging Face (`ggerganov/whisper.cpp`) في أول تشغيل ويخزّنه. استخدم `"base.en"` للنسخة الإنجليزية فقط.',
+          '**تنزيل يدوي (مسار CLI، دون pip):** من مستودع whisper.cpp مستنسخ، يحفظ `bash ./models/download-ggml-model.sh base` الملف في `models/ggml-base.bin` — وهو الملف ذاته الذي يجلبه pywhispercpp.',
+          '**تنزيل مباشر:** `curl -L -o ggml-base.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin` يجلب النموذج دون سكربت. استبدل `base` بـ`tiny` أو `small` أو `medium` أو `large-v3`.',
+          '**لا تخلط بين الحزم:** `pip install openai-whisper` يثبّت Whisper الأصلي من OpenAI بـPyTorch (يستخدم نقاط تحقق `.pt`، لا `ggml-base.bin`). و`pip install faster-whisper` يستخدم تنسيق CTranslate2. وحده `pywhispercpp` يستهلك ملفات GGML من نوع `ggml-*.bin`.',
+          '**أين يوجد الملف:** يخزّن pywhispercpp نماذج GGML المنزّلة في ذاكرة التخزين المؤقت للوحدة (أو مسار تمرّره عبر `Model("base", models_dir="...")`)، بحيث يُعاد استخدام `ggml-base.bin` ذاته عبر عمليات التشغيل — دون إعادة تنزيل.',
+        ],
+        codeBlock: `# 1. Install the pip binding for whisper.cpp
+pip install pywhispercpp
+
+# 2. ggml-base.bin downloads automatically on first use
+#    from pywhispercpp.model import Model
+#    model = Model("base")          # fetches & caches ggml-base.bin (~142 MB)
+#    for seg in model.transcribe("audio.wav"):
+#        print(seg.text)
+
+# --- Or get ggml-base.bin manually (no pip) ---
+# From a cloned whisper.cpp checkout:
+bash ./models/download-ggml-model.sh base       # -> models/ggml-base.bin
+
+# Or download the file directly from Hugging Face:
+curl -L -o ggml-base.bin \\
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin`,
+        codeLanguage: 'bash',
       },
       benchmarks: {
         id: 'benchmarks',
@@ -4105,6 +4745,30 @@ for segment in segments:
           '**int8 مقابل float16:** int8 أسرع بنسبة ~2 ضعف ويستخدم ~40% أقل من VRAM مع خسارة دقة ضئيلة. استخدم دائمًا `compute_type="int8"` على NVIDIA.',
           '**المعالجة الدفعية:** يتيح معامل `batched=True` في faster-whisper المعالجة المتوازية لملفات صوتية متعددة، مما يعظّم استخدام GPU لمهام النسخ الكبيرة.',
           '**التكامل في خط أنابيب Python:** يتكامل faster-whisper مباشرةً مع LangChain وHaystack وخطوط أنابيب Python المخصصة. لا حمل زائد للعمليات الفرعية مقارنةً بتغليف whisper.cpp.',
+        ],
+      },
+      raspberryPi: {
+        id: 'raspberry-pi-5',
+        title: 'Whisper على Raspberry Pi 5: tiny وbase وsmall',
+        content:
+          '**على Raspberry Pi 5، يشغّل whisper.cpp النموذجين tiny وbase في الزمن الفعلي للنسخ الحي، بينما يعمل نموذج small دون الزمن الفعلي ويُفضّل قصره على مهام الدُّفعات.** لا يملك معالج Pi 5 رباعي النوى Cortex-A76 مسار GPU قابلًا للاستخدام مع Whisper، لذا تجري كل عمليات الاستدلال على المعالج (ARM NEON). استخدم نماذج GGML المكمَّمة (`ggml-*-q5_0.bin`) لتقليل استخدام الذاكرة وتسريع الاستدلال.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'على Raspberry Pi 5، يعمل نموذج small في whisper.cpp أبطأ من الزمن الفعلي (~0.5×، للدُّفعات فقط)؛ أما tiny وbase فهما النموذجان اللذان يجاريان الكلام الحي.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'يستطيع Pi 5 نسخ الصوت الحي بنموذجَي Whisper من نوع tiny وbase، لكن نموذج small أثقل من أن يجاري الزمن الفعلي — استخدم small للملفات المسجّلة التي تعالجها في الخلفية، لا للميكروفون الحي.',
+          },
+        ],
+        items: [
+          '**Whisper small على Pi 5:** نحو 0.4–0.6× من الزمن الفعلي على المعالج (مقطع 10 دقائق يستغرق ~17–25 دقيقة). دقيق عند 3.4% WER لكنه بطيء جدًا للترجمة الحية — استخدمه للنسخ الليلي/الدُّفعي.',
+          '**Whisper base على Pi 5:** من الزمن الفعلي إلى ~2× مع تعدد الخيوط (`-t 4`). نقطة التوازن العملية للنسخ الحي على Pi، مع WER مقبول قدره 5.0%.',
+          '**Whisper tiny على Pi 5:** الخيار الأسرع، أسرع بكثير من الزمن الفعلي للاستخدام الحي، على حساب WER أعلى قدره 7.6%. الأفضل للتعرّف على كلمة التنبيه والأوامر القصيرة.',
+          '**استخدم النماذج المكمَّمة:** `bash ./models/download-ggml-model.sh small-q5_0` يقلّص الذاكرة ويسرّع الاستدلال بخسارة دقة ضئيلة — أمر مهم على الذاكرة المشتركة في Pi 5.',
+          '**faster-whisper على Pi 5:** قابل للتثبيت (`pip install faster-whisper`، CPU int8) ومنافس لمهام الدُّفعات، لكن ثنائي C الأخف في whisper.cpp هو الخيار المضمَّن الأكثر شيوعًا.',
+          '**الحرارة:** يجهد النسخ المستمر معالج Pi 5 بشدة — استخدم تبريدًا نشطًا لتجنّب خفض التردد الحراري الذي يقوّض هذه الأرقام.',
         ],
       },
       whenToUse: {
@@ -4260,7 +4924,7 @@ for segment in segments:
        url: 'https://www.promptquorum.com/ar/power-local-llm/local-whisper-stt-comparison-2026',
        inLanguage: 'ar',
        datePublished: '2026-05-24',
-       dateModified: '2026-05-24',
+       dateModified: '2026-06-15',
        author: { '@type': 'Person', name: 'Hans Kuepper' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
      },
@@ -4268,8 +4932,9 @@ for segment in segments:
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
-    next_refresh_due: '2026-11-14',
+    dateModified: '2026-06-15',
+    lastFactChecked: '2026-06-15',
+    next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: 로컬 STT 벤치마크, 설정 및 GPU 가속',
     seoTitle: 'Whisper.cpp vs faster-whisper 2026: 로컬 STT 및 벤치마크',
