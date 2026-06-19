@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'Complete guide to choosing the right LLM quantization for your hardware: Q4_K_M for 6–8 GB VRAM, Q5_K_M for 16 GB, Q8_0 for 24+ GB. Head-to-head comparisons of Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, and Q8_0 vs Q8_K_XL, plus GGUF format explained, quality loss by level, and advanced techniques (CPU offloading and multi-GPU layer splitting). Learn how to run Llama 3.3 70B on RTX 4090 via offloading, 2× RTX 4090 via layer splitting, or Mac Studio M2 Ultra natively. Updated June 2026.',
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M and Q8_0 vs Q8_K_XL compared. Bits, VRAM per 7B, quality loss, and which GGUF quant to choose for your VRAM in 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
+      dateModified: '2026-06-19',
       lastFactChecked: '2026-06-15',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
@@ -404,6 +404,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Running 70B Models on Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max) -- Native 70B at Q5 quality without VRAM limits: how unified memory changes quantization decisions.',
             '[Ollama on Mac: Apple Silicon Setup Guide 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Run quantized GGUF models on Mac with automatic Metal GPU acceleration.',
             '[Whisper on Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark) -- Metal and Core ML benchmarks for Whisper STT across quantization levels on M1–M5.',
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Next steps',
+          items: [
+            '[How Much VRAM Do I Need?](/local-llms/how-much-vram-local-llm) — Apply quantization knowledge to your VRAM budget →',
+            '[Best CPU-Only LLMs](/local-llms/best-cpu-only-llm) — Best quantized models for CPU-only inference →',
+            '[Best Open-Source Models on Ollama](/local-llms/top-open-source-models-ollama) — Now that you know quant levels, pick a model to download →',
           ],
         },
         faqSection: {
@@ -994,6 +1003,15 @@ schema: {
             '[Whisper en Apple Silicon 2026](/es/local-llms/apple-silicon-whisper-metal-benchmark) — Benchmarks Metal y Core ML para Whisper STT en niveles de cuantización en M1–M5.',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Próximos pasos',
+          items: [
+            '[¿Cuánta VRAM necesito?](/es/local-llms/how-much-vram-local-llm) — Aplica lo aprendido sobre cuantización a tu presupuesto de VRAM →',
+            '[Mejores LLM solo CPU](/es/local-llms/best-cpu-only-llm) — Mejores modelos cuantizados para inferencia solo en CPU →',
+            '[Mejores modelos de código abierto en Ollama](/es/local-llms/top-open-source-models-ollama) — Ya sabes los niveles de cuant, ahora elige un modelo →',
+          ],
+        },
         faqSection: {
           id: 'common-questions',
           title: 'Preguntas frecuentes sobre cuantización de LLM',
@@ -1542,6 +1560,15 @@ schema: {
             '[تشغيل نماذج 70B على Apple Silicon M5 Max](/ar/local-llms/running-70b-models-apple-silicon-m5-max) — 70B أصلي بصيغة Q5 دون حدود VRAM: كيف تغيّر الذاكرة الموحدة قرارات التكميم.',
             '[Ollama على Mac: دليل إعداد Apple Silicon 2026](/ar/local-llms/ollama-on-mac-apple-silicon-setup-2026) — شغّل نماذج GGUF مكمَّمة على Mac بتسريع GPU من Metal تلقائياً.',
             '[Whisper على Apple Silicon 2026](/ar/local-llms/apple-silicon-whisper-metal-benchmark) — اختبارات Metal وCore ML لـ Whisper STT عند مستويات تكميم على M1–M5.',
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'الخطوات التالية',
+          items: [
+            '[كم سعة VRAM أحتاج؟](/ar/local-llms/how-much-vram-local-llm) — طبّق معرفتك بالتحديد الدقيق على ميزانية VRAM →',
+            '[أفضل نماذج LLM بالمعالج فقط](/ar/local-llms/best-cpu-only-llm) — أفضل النماذج المُدقَّقة للاستدلال على المعالج →',
+            '[أفضل النماذج مفتوحة المصدر على Ollama](/ar/local-llms/top-open-source-models-ollama) — الآن بعد أن فهمت مستويات التحديد، اختر نموذجاً →',
           ],
         },
         faqSection: {
@@ -2099,6 +2126,15 @@ schema: {
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — Configuração passo a passo para executar modelos Q4_K_M com Ollama.',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Próximos passos',
+          items: [
+            '[Quanta VRAM preciso?](/pt/local-llms/how-much-vram-local-llm) — Aplique o conhecimento de quantização ao seu orçamento de VRAM →',
+            '[Melhores LLMs só com CPU](/pt/local-llms/best-cpu-only-llm) — Melhores modelos quantizados para inferência apenas no CPU →',
+            '[Melhores modelos open source no Ollama](/pt/local-llms/top-open-source-models-ollama) — Agora que sabe os níveis de quantização, escolha um modelo →',
+          ],
+        },
         faqSection: {
           id: 'common-questions',
           title: 'Perguntas comuns sobre quantização de LLM',
@@ -2454,6 +2490,15 @@ schema: {
             '[70B-Modelle auf Apple Silicon M5 Max](/de/local-llms/running-70b-models-apple-silicon-m5-max) -- Nativer 70B-Betrieb ohne VRAM-Grenzen: wie Unified Memory Quantisierungsentscheidungen ändert.',
             '[Ollama auf Mac: Apple Silicon Setup 2026](/de/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Quantisierte GGUF-Modelle auf Mac mit automatischer Metal GPU-Beschleunigung ausführen.',
             '[Whisper auf Apple Silicon 2026](/de/local-llms/apple-silicon-whisper-metal-benchmark) -- Metal- und Core ML-Benchmarks für Whisper STT-Quantisierung über M1–M5.',
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Nächste Schritte',
+          items: [
+            '[Wie viel VRAM brauche ich?](/de/local-llms/how-much-vram-local-llm) — Quantisierungswissen auf deinen VRAM-Bedarf anwenden →',
+            '[Beste CPU-only-LLMs](/de/local-llms/best-cpu-only-llm) — Beste quantisierte Modelle für reine CPU-Inferenz →',
+            '[Beste Open-Source-Modelle auf Ollama](/de/local-llms/top-open-source-models-ollama) — Jetzt ein Modell zum Herunterladen wählen →',
           ],
         },
         faqSection: {
@@ -3014,6 +3059,15 @@ schema: {
             '[Whisper sur Apple Silicon 2026](/fr/local-llms/apple-silicon-whisper-metal-benchmark) -- Benchmarks Metal et Core ML pour la quantification Whisper STT sur M1–M5.',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Étapes suivantes',
+          items: [
+            '[Combien de VRAM me faut-il ?](/fr/local-llms/how-much-vram-local-llm) — Appliquez vos connaissances en quantification à votre budget VRAM →',
+            '[Meilleurs LLM sur CPU uniquement](/fr/local-llms/best-cpu-only-llm) — Meilleurs modèles quantifiés pour l\'inférence CPU →',
+            '[Meilleurs modèles open source sur Ollama](/fr/local-llms/top-open-source-models-ollama) — Maintenant que vous connaissez les niveaux de quant, choisissez un modèle →',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Questions fréquemment posées sur la quantification LLM',
@@ -3552,6 +3606,15 @@ schema: {
             '[Apple Silicon M5 Maxで70Bモデルを実行](/ja/local-llms/running-70b-models-apple-silicon-m5-max) -- VRAMの制限なしにネイティブ70B：ユニファイドメモリが量子化決定をどう変えるか。',
             '[MacでOllama：Apple Siliconセットアップ2026](/ja/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Metal GPU自動加速で量子化GGUFモデルをMacで実行。',
             '[Apple Silicon 2026でのWhisper](/ja/local-llms/apple-silicon-whisper-metal-benchmark) -- M1-M5でのWhisper STT量子化のMetalとCore MLベンチマーク。',
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: '次のステップ',
+          items: [
+            '[必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — 量子化の知識をVRAM予算に活かす →',
+            '[CPUのみで動く最高LLM](/ja/local-llms/best-cpu-only-llm) — CPU推論向けの最良量子化モデル →',
+            '[Ollamaで動く最高オープンソースモデル](/ja/local-llms/top-open-source-models-ollama) — 量子化レベルが分かったら、モデルを選ぼう →',
           ],
         },
         faqSection: {
@@ -4093,6 +4156,15 @@ schema: {
             '[Apple Silicon 2026上的Whisper](/zh/local-llms/apple-silicon-whisper-metal-benchmark)----M1-M5上Whisper STT量化的Metal和Core ML基准测试。',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: '下一步',
+          items: [
+            '[我需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) — 将量化知识应用到你的VRAM预算 →',
+            '[仅CPU运行LLM指南](/zh/local-llms/best-cpu-only-llm) — CPU推理的最佳量化模型 →',
+            '[Ollama上最佳开源模型](/zh/local-llms/top-open-source-models-ollama) — 了解量化级别后，选择一个模型下载 →',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: '关于大语言模型量化的常见问题',
@@ -4623,6 +4695,15 @@ schema: {
             '[Apple Silicon M5 Max에서 70B 모델 실행](/local-llms/running-70b-models-apple-silicon-m5-max) — VRAM 제한 없이 Q5 품질로 70B 네이티브 실행: 통합 메모리가 양자화 결정을 어떻게 바꾸는가.',
             '[Mac의 Ollama: Apple Silicon 설정 가이드 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) — 자동 Metal GPU 가속으로 Mac에서 양자화 GGUF 모델 실행.',
             '[Apple Silicon Whisper 2026](/local-llms/apple-silicon-whisper-metal-benchmark) — M1–M5에서 양자화 수준별 Whisper STT Metal 및 Core ML 벤치마크.',
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: '다음 단계',
+          items: [
+            '[필요한 VRAM은 얼마나?](/ko/local-llms/how-much-vram-local-llm) — 양자화 지식을 VRAM 예산에 적용하기 →',
+            '[CPU 전용 최고 LLM](/ko/local-llms/best-cpu-only-llm) — CPU 추론용 최고 양자화 모델 →',
+            '[Ollama 최고 오픈소스 모델](/ko/local-llms/top-open-source-models-ollama) — 양자화 수준을 이해했으니, 이제 모델을 선택하세요 →',
           ],
         },
         faqSection: {

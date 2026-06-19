@@ -146,6 +146,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Buying a 16 GB card just for 13B models. A 12 GB RTX 3060 already runs Qwen3 14B at Q4. Step up to 16 GB only if you specifically need gpt-oss:20b (16 GB), dense 20B+ models, or more context headroom.',
           ],
         },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Next steps',
+          items: [
+            '[Best AMD GPUs for Local LLMs](/local-llms/best-amd-gpus-local-llm) — Considering AMD? Full AMD vs NVIDIA breakdown →',
+            '[Best Open-Source Ollama Models](/local-llms/top-open-source-models-ollama) — See which models run best on a budget GPU →',
+            '[How Much VRAM Do I Need?](/local-llms/how-much-vram-local-llm) — Match your GPU to your model size →',
+          ],
+        },
         'faqSection': {
           title: 'FAQ',
           faqs: [
@@ -464,6 +473,15 @@ schema: {
             'Asumir que la RAM DDR5 y la CPU i9 aceleran la inferencia de LLMs — no lo hacen. El ancho de banda de la VRAM de la GPU es el único cuello de botella que importa para la velocidad de inferencia.',
             'Asumir que Llama 4 Scout cabe en 12 GB. Scout es un MoE de 17B activos / 109B totales que necesita ~55 GB en Q4 (solo entra en 24 GB con un cuant extremo de 1.78-bit, ~20 tok/s). En una RTX 3060 de 12 GB, ejecuta modelos densos en su lugar: Qwen3 14B (~9 GB), Qwen3 8B o Gemma 4 E12B.',
             'Comprar una tarjeta de 16 GB solo para modelos 13B. Una RTX 3060 de 12 GB ya ejecuta Qwen3 14B en Q4. Pasa a 16 GB solo si necesitas específicamente gpt-oss:20b (16 GB), modelos densos de 20B+ o más margen de contexto.',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Próximos pasos',
+          items: [
+            '[Mejores GPU AMD para LLM local](/es/local-llms/best-amd-gpus-local-llm) — ¿Consideras AMD? Comparativa completa AMD vs NVIDIA →',
+            '[Mejores modelos Ollama de código abierto](/es/local-llms/top-open-source-models-ollama) — Qué modelos rinden mejor en una GPU de bajo costo →',
+            '[¿Cuánta VRAM necesito?](/es/local-llms/how-much-vram-local-llm) — Ajusta tu GPU al tamaño del modelo →',
           ],
         },
         'faqSection': {
@@ -785,6 +803,15 @@ schema: {
             'شراء بطاقة 16 GB فقط لنماذج 13B. تشغّل RTX 3060 بسعة 12 GB بالفعل Qwen3 14B بصيغة Q4. انتقل إلى 16 GB فقط إذا كنت تحتاج تحديداً gpt-oss:20b (16 GB)، أو نماذج كثيفة 20B+ أو هامش سياق أكبر.',
           ],
         },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'الخطوات التالية',
+          items: [
+            '[أفضل وحدات GPU من AMD لنماذج LLM المحلية](/ar/local-llms/best-amd-gpus-local-llm) — تفكر في AMD؟ مقارنة شاملة AMD مقابل NVIDIA →',
+            '[أفضل نماذج Ollama مفتوحة المصدر](/ar/local-llms/top-open-source-models-ollama) — أي النماذج يعمل بشكل أفضل على GPU اقتصادية →',
+            '[كم سعة VRAM أحتاج؟](/ar/local-llms/how-much-vram-local-llm) — طابق حجم GPU مع حجم النموذج →',
+          ],
+        },
         'faqSection': {
           title: 'الأسئلة الشائعة',
           faqs: [
@@ -1049,6 +1076,15 @@ schema: {
             { 'GPU': 'RTX 4070 12 GB', 'VRAM': '12 GB', 'Preço (nova)': 'US$ 550-600', 'Velocidade 7B': '25-30 tok/s', 'Modelo máx.': '13B (Q4)', 'Veredicto': 'Mais rápida mas 2× mais cara' },
           ],
         },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Próximos passos',
+          items: [
+            '[Melhores GPUs AMD para LLMs locais](/pt/local-llms/best-amd-gpus-local-llm) — Considera AMD? Comparação completa AMD vs NVIDIA →',
+            '[Melhores modelos Ollama open source](/pt/local-llms/top-open-source-models-ollama) — Quais modelos rodam melhor em GPU econômica →',
+            '[Quanta VRAM preciso?](/pt/local-llms/how-much-vram-local-llm) — Encontre o equilíbrio entre GPU e tamanho do modelo →',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Perguntas frequentes',
@@ -1165,6 +1201,15 @@ schema: {
           'Annehmen, dass Llama 4 Scout in 12 GB passt. Scout ist ein MoE mit 17B aktiven / 109B Gesamt-Parametern, das bei Q4 ca. 55 GB benötigt (es quetscht sich nur bei 1,78-Bit in 24 GB, ca. 20 Tok/s). Auf einer 12-GB-RTX-3060 betreiben Sie stattdessen dichte Modelle: Qwen3 14B (ca. 9 GB), Qwen3 8B oder Gemma 4 E12B.',
           'Eine 16-GB-Karte nur für 13B-Modelle kaufen. Eine 12-GB-RTX-3060 betreibt Qwen3 14B bereits bei Q4. Steigen Sie nur auf 16 GB um, wenn Sie speziell gpt-oss:20b (16 GB), dichte 20B+-Modelle oder mehr Kontext-Spielraum benötigen.',
         ] },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Nächste Schritte',
+          items: [
+            '[Beste AMD-GPUs für lokale LLMs](/de/local-llms/best-amd-gpus-local-llm) — AMD in Betracht ziehen? Vollständiger AMD-vs-NVIDIA-Vergleich →',
+            '[Beste Open-Source-Ollama-Modelle](/de/local-llms/top-open-source-models-ollama) — Welche Modelle laufen am besten auf einer Budget-GPU? →',
+            '[Wie viel VRAM brauche ich?](/de/local-llms/how-much-vram-local-llm) — GPU-VRAM auf Modellgröße abstimmen →',
+          ],
+        },
         'faqSection': { title: 'FAQ', faqs: [
           { q: 'Lohnt sich die RTX 3060 12GB 2026 noch?', a: 'Ja. Sie ist über 4 Jahre alt, aber 12 GB VRAM sind zeitlos. Betreibt Qwen3 14B, Qwen3 8B, Gemma 4 E12B und Mistral Small reibungslos bei Q4. Sie fasst jedes 7B-8B-Modell und die meisten dichten 13B-14B-Modelle.' },
           { q: 'Soll ich die RTX 5060 Ti oder RTX 4060 Ti für lokale LLMs kaufen?', a: 'RTX 5060 Ti. Die neuere Generation (2026) bietet 10–15 % mehr Leistung. Bei knappem Budget ist die RTX 4060 Ti weiterhin solide. Meiden Sie die Basis-4060/5060 (8 GB) und 4070 (12 GB) — schlechtes Preis-Leistungs-Verhältnis.' },
@@ -1313,6 +1358,15 @@ schema: {
           'Croire que Llama 4 Scout tient dans 12 GB. Scout est un MoE 17B actifs / 109B au total qui réclame ~55 GB en Q4 (il ne se glisse dans 24 GB qu\'en 1.78 bit, ~20 tok/s). Sur une RTX 3060 12 GB, faites plutôt tourner des modèles denses : Qwen3 14B (~9 GB), Qwen3 8B ou Gemma 4 E12B.',
           'Acheter une carte 16 GB juste pour les modèles 13B. Une RTX 3060 12 GB fait déjà tourner Qwen3 14B en Q4. Passez au 16 GB uniquement si vous avez spécifiquement besoin de gpt-oss:20b (16 GB), de modèles denses 20B+ ou de plus de marge de contexte.',
         ] },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Étapes suivantes',
+          items: [
+            '[Meilleures GPU AMD pour LLM local](/fr/local-llms/best-amd-gpus-local-llm) — Envisagez AMD ? Comparaison complète AMD vs NVIDIA →',
+            '[Meilleurs modèles Ollama open source](/fr/local-llms/top-open-source-models-ollama) — Quels modèles tournent le mieux sur une GPU budget ? →',
+            '[Combien de VRAM me faut-il ?](/fr/local-llms/how-much-vram-local-llm) — Adaptez votre GPU à la taille du modèle →',
+          ],
+        },
         'faqSection': { title: 'FAQ', faqs: [
           { q: 'La RTX 3060 12GB vaut-elle encore l\'achat en 2026 ?', a: 'Oui. Elle a 4 ans et plus, mais ses 12GB de VRAM sont intemporels. Elle fait tourner Qwen3 14B, Qwen3 8B, Gemma 4 E12B et Mistral Small sans accroc en Q4. Elle accueille tous les modèles 7B-8B et la plupart des denses 13B-14B.' },
           { q: 'Faut-il acheter une RTX 5060 Ti ou une RTX 4060 Ti pour les LLM locaux ?', a: 'La RTX 5060 Ti. La nouvelle génération (2026) offre 10-15 % de performances en plus. Avec un budget serré, la RTX 4060 Ti reste solide. Évitez les 4060/5060 de base (8GB) et la 4070 (12GB) — mauvaise valeur.' },
@@ -1404,6 +1458,15 @@ schema: {
         'best-by-use-case': { id: 'best-by-use-case', title: 'RTX 3060でのユースケース別最適モデル', content: ['**パラメータ数ではなく、実際のニーズに基づいてモデルを選択してください：**', 'バジェットハードウェアは小さなモデルを実行しますが、巧みなプロンプティングが品質差を縮めます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/ja/prompt-engineering)では、Chain-of-Thoughtや構造化出力など、小さなモデルの実力を引き出すテクニックを解説しています。RTX 3060 12 GB の VRAM に収まる具体的なワークロードのひとつが、プルリクエストの自動レビューです。まさに同じハードウェア上で Qwen3 8B を PR にぶつける GitHub Actions のパターンは、[CI/CD でのローカル LLM コードレビュー](/ja/power-local-llm/local-llm-code-review-ci-cd)で解説しています。'], items: ['**チャット / Q&A：** `ollama run qwen3:14b` — 稠密14B、~9GB VRAM、12GBで最良品質。軽量オプションは `ollama run qwen3:8b`（~7GB）。', '**コーディング：** `ollama run qwen3:8b` — 万能で強力なコーディング。~7GB VRAM。16–20トークン/秒。', '**推論 / 数学：** `ollama run deepseek-r1:7b` — Chain-of-Thought。10–12トークン/秒。', '**ライティング / クリエイティブ：** `ollama run mistral:7b` — 最良の指示従行。18トークン/秒。', '**ビジョン / 画像：** `ollama run gemma4:e12b` — マルチモーダル。11–14トークン/秒。~9GB VRAM。軽量な選択肢は `ollama run gemma4:e4b`（~5GB）。', '**プライバシー / オフライン：** 上記すべて。100%ローカル。データは外部送信されません。', '**ホームオートメーション / 常時稼働AI：** `ollama run phi4-mini` — Phi-4 Mini（3.8B、~3 GB VRAM）は専用GPUなしのミニPCでHome Assistantの音声クエリを処理します。[ローカルスマートホームAIの最適ハードウェア →](/smart-home/best-hardware-for-local-smart-home)をご覧ください。'] },
         'used-vs-new': { title: '中古 vs 新品：どこで買う？', items: ['**中古（50～100ドル安い）**：eBay、Facebook Marketplace、Craigslist、地元のコンピュータ修理店。死んだカードまたは不良VRAMのリスクが高い。確約する前に常にテストしてください。', '**新品（280～400ドル）**：Newegg、Amazon、Best Buy、Microcenter。保証付き。驚きなし。価格安定。リスク回避買い手に最適。', '**マイニングカード（暗号、超安い）**：極端なリスク。VRAM劣化は一般的。その場で完全にベンチテストできる場合のみ購入してください。'] },
         'mistakes': { title: 'よくあるバジェットGPUの間違い', items: ['4GB RTX 2060を購入してスムーズな7B推論を期待する。常にメモリ不足エラーが発生します。', '250ドルのGPUを30ドルのPSU（電源）と組み合わせます。電圧サグは安定性を殺します。80+ Gold認定、650W最小をバジェット化してください。', 'DDR5 RAMとi9 CPUがLLM推論を高速化すると想定する。それらは高速化しません。GPU VRAMバンド幅は推論速度に影響する唯一のボトルネックです。'] },
+        'nextSteps': {
+          id: 'next-steps',
+          title: '次のステップ',
+          items: [
+            '[ローカルLLM向け最高AMD GPU](/ja/local-llms/best-amd-gpus-local-llm) — AMDを検討中？AMD対NVIDIA完全比較 →',
+            '[最高オープンソースOllamaモデル](/ja/local-llms/top-open-source-models-ollama) — 予算GPUで最高の性能を出すモデルは →',
+            '[必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — GPUとモデルサイズを一致させる →',
+          ],
+        },
         'faqSection': { title: 'FAQ', faqs: [{ q: 'RTX 3060 12GBは2026年でもまだ価値があるか？', a: 'はい。4年以上前ですが12GB VRAMは時代遅れではありません。Llama 3.3 8Bとよりすぐに実行します。中古で250ドル未満で見つけたら最適。' }, { q: 'ローカルLLM用にRTX 4060またはRTX 4060 Tiを購入すべきか？', a: 'RTX 4060 Ti。ベース4060（8GB）と4070（12GB）は悪い価値です。TiはLLM作業に最適な価格のRTX 40シリーズカードです。' }, { q: 'AMD RX 6700または6800 XTを代わりに使用できるか？', a: 'はい、ただしAMD上のONNX RuntimeのドライバサポートはNVIDIA + CUDAより弱い。セットアップの摩擦を増します。RTXはバジェットにより安全です。' }, { q: '12GB VRAM 13Bモデルに十分か？', a: 'かろうじて、Q4量子化で。Q5またはQ8はOOMエラーを起こします。13Bの快適さが必要な場合は16GBを目指してください。' }, { q: 'RTX A4000などの中古企業GPUを購入すべきか？', a: 'はい、利用可能な場合。16GB VRAM、プロフェッショナルグレード冷却、通常180～230ドルで中古。RTX 3060より若干遅いですがVRAMクッションの価値があります。' }, { q: '250ドルGPUで購入するPSU電力はいくらか？', a: '650W、80+ Gold最小。250ドルGPU + CPU + マザーボード400W以下ですがスパイク用に余裕が必要。' }, { q: '200ドルのバジェットGPUでOllamaを実行できるか？', a: 'はい。Ollamaは軽量です。4年前のRTX 3060にOllamaはMistral Smallを10～15トークン/秒で実行します。完全に使用可能。' }, { q: 'エンタープライズでのGDPR準拠ローカル推論に推奨GPUは？', a: 'Llama 3.3 13B Q4で最大50ユーザーにはRTX 3060 12GBまたはA4000 16GB最小。ECC GPUはエラー検出に推奨。ファームウェア/物理セキュリティはGPUメモリダンプを防止します。' }, { q: '中小企業のチームサーバーに推奨GPUは？', a: '1～50従業員にはRTX 3060 12GBまたはA4000。50～200従業員にはRTX 4070 SuperまたはA6000。RTX 3060はLlama 3.3 13B Q4 + vLLMを3～5同時要求で実行可能。より大規模なチームはA100エンタープライズクラスタリングが必要。' }, { q: 'RTX 3060と4060 Tiのパフォーマンス差は？', a: 'RTX 4060 Tiは約15～20%高速ですが、RTX 3060は4GB追加VRAMがあります。7Bモデルでは両方が快適な推論を提供します。バジェットで選択してください。' }, { q: 'マイニングカードはローカルLLMで安全か？', a: 'リスクあり。VRAMは集約的な運用年後に劣化します。確約前に完全にその場でストレステストできる場合のみ購入してください。' }] },
         'relatedReading': { title: '関連資料', items: ['[ローカルLLMに必要なVRAMはいくらか](/ja/local-llms/how-much-vram-local-llm)', '[コンシューマーハードウェアの70Bモデル](/ja/local-llms/70b-models-consumer-hardware)', '[RTX 5090 vs RTX 4090](/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm)', '[ローカルLLM用の中古GPU](/ja/local-llms/used-gpus-for-local-llms)', '[ローカルLLM向けの最高のGPU](/ja/local-llms/best-gpus-for-local-llms)', '[VRAM計算機](/ja/local-llms/how-much-vram-local-llm)', '[Mac Mini M5ローカルAIサーバーとして](/ja/local-llms/mac-mini-m5-local-ai-server)', '[ローカルLLM向けApple Silicon M5](/ja/local-llms/apple-silicon-m5-local-llm) — M5 Pro/Max完全ガイド：ベンチマーク、Mac構成、メモリ層、ローカル推論用Mac購入ガイド', '[ローカルLLM向けApple Silicon対NVIDIA GPU](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026)', '[Apple Silicon向けベストモデル2026](/ja/local-llms/best-models-apple-silicon-2026)', '秋葉原の販売店、メルカリ・Yahoo!オークションの中古市場を含む日本のGPU価格については、<a href="/ja/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">日本でコスパ最強のローカルLLM用GPUガイド</a>をご覧ください。'] },
         'sources': { title: 'ソース', items: ['TechPowerUp GPUデータベース：RTX 3060 / RTX 4060 Ti / RTX 4070 Super仕様と電力消費', 'NVIDIA CUDA能力マトリックス：推論ワークロード用GPU メモリバンド幅と理論的スループット', 'Ollama モデル要件：Llama 3.3 7B、Mistral Small、Qwen量子化レベルVRAM推奨'] },
@@ -1547,6 +1610,15 @@ schema: {
             '购买4GB RTX 2060并期望顺利的7B推理----您会不断遇到内存不足错误。',
             '将250美元的GPU与30美元PSU（电源）配对----电压降会导致稳定性问题。预算80+ Gold认证、650W最小。',
             '假设DDR5 RAM和i9 CPU会加快LLM推理----它们不会。GPU VRAM带宽是影响推理速度的唯一瓶颈。',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: '下一步',
+          items: [
+            '[本地LLM最佳AMD GPU](/zh/local-llms/best-amd-gpus-local-llm) — 考虑AMD？AMD vs NVIDIA完整对比 →',
+            '[最佳开源Ollama模型](/zh/local-llms/top-open-source-models-ollama) — 哪些模型在预算GPU上表现最佳 →',
+            '[我需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) — 根据模型大小选择合适的GPU →',
           ],
         },
         'faqSection': {
@@ -1766,6 +1838,15 @@ schema: {
             'DDR5 RAM과 i9 CPU 속도가 LLM 추론을 빠르게 한다고 가정하는 경우 — 그렇지 않습니다. 추론 속도에서 유일하게 중요한 병목은 GPU VRAM 대역폭입니다.',
             'Llama 4 Scout가 12GB에 맞다고 가정하는 경우. Scout는 활성 파라미터 17B / 총 109B의 MoE로 Q4에서 약 55GB가 필요합니다(24GB에서 1.78비트로만 실행 가능, ~초당 20토큰). RTX 3060 12GB에서는 밀집형 모델을 실행하십시오: Qwen3 14B (~9GB), Qwen3 8B, 또는 Gemma 4 E12B.',
             '13B 모델만을 위해 16GB 카드를 구매하는 경우. RTX 3060 12GB는 이미 Qwen3 14B를 Q4로 실행합니다. gpt-oss:20b (16GB), 밀집형 20B+ 모델, 또는 더 많은 컨텍스트 여유 공간이 구체적으로 필요한 경우에만 16GB로 업그레이드하십시오.',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: '다음 단계',
+          items: [
+            '[로컬 LLM 최고 AMD GPU](/ko/local-llms/best-amd-gpus-local-llm) — AMD 고려 중? AMD vs NVIDIA 완전 비교 →',
+            '[최고 오픈소스 Ollama 모델](/ko/local-llms/top-open-source-models-ollama) — 예산 GPU에서 최고 성능 모델은 →',
+            '[필요한 VRAM은 얼마나?](/ko/local-llms/how-much-vram-local-llm) — GPU와 모델 크기 맞추기 →',
           ],
         },
         'faqSection': {

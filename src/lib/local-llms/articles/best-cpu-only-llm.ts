@@ -222,6 +222,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Next steps',
+          items: [
+            '[Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs) — Old or low-end PC? Best speed-optimized models →',
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Why Q4_K_M matters for CPU inference speed →',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Best lightweight coding models that run on CPU →',
+          ],
+        },
         relatedReading: {
           id: 'related-reading',
           title: 'Related Reading',
@@ -446,6 +455,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: '¿Necesito ajustar configuraciones para CPU Apple Silicon?',
               a: 'No. Ollama detecta automáticamente M1/M2/M3/M4 y usa la memoria unificada de forma eficiente. Apple Silicon es ~10–20% más rápido que las CPU Intel equivalentes gracias a su arquitectura de memoria.',
             },
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Próximos pasos',
+          items: [
+            '[LLM locales más rápidos para PC de baja gama](/es/local-llms/fastest-local-llms-low-end-pcs) — ¿PC antiguo o limitado? Modelos optimizados para velocidad →',
+            '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — Por qué Q4_K_M importa para la velocidad CPU →',
+            '[Mejores LLM locales para código](/es/local-llms/best-local-llms-for-coding) — Mejores modelos ligeros de código para CPU →',
           ],
         },
         relatedReading: {
@@ -674,6 +692,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'الخطوات التالية',
+          items: [
+            '[أسرع نماذج LLM المحلية للأجهزة منخفضة المواصفات](/ar/local-llms/fastest-local-llms-low-end-pcs) — جهاز قديم أو محدود؟ نماذج مُحسَّنة للسرعة →',
+            '[شرح تحديد دقة LLM](/ar/local-llms/llm-quantization-explained) — لماذا يُهم Q4_K_M لسرعة المعالج →',
+            '[أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) — أفضل نماذج برمجة خفيفة تعمل على المعالج →',
+          ],
+        },
         relatedReading: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
@@ -839,6 +866,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Qual é o melhor modelo LLM para CPU sem GPU?', a: 'Phi-4 Mini (3,8B) é o melhor equilíbrio de qualidade e velocidade para somente CPU em 2026. Gemma 3 2B é o mais rápido. Llama 3.2 3B é o mais equilibrado.' },
             { q: 'A inferência somente CPU é adequada para o português?', a: 'Sim. Qwen3 7B (5 tok/s em CPU) tem melhor suporte para português. Phi-4 Mini e Llama 3.2 3B também funcionam razoavelmente em português.' },
             { q: 'A inferência CPU é adequada para produção?', a: 'Sim, se você não precisar de latência em tempo real. Processamento em lote, APIs assíncronas e fluxos de trabalho offline funcionam muito bem em CPU.' },
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Próximos passos',
+          items: [
+            '[LLMs locais mais rápidos para PCs básicos](/pt/local-llms/fastest-local-llms-low-end-pcs) — PC antigo ou limitado? Melhores modelos para velocidade →',
+            '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — Por que Q4_K_M importa para a velocidade do CPU →',
+            '[Melhores LLMs locais para programação](/pt/local-llms/best-local-llms-for-coding) — Melhores modelos leves de código para CPU →',
           ],
         },
         relatedReading: {
@@ -1022,6 +1058,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'Sind CPU-only-Modelle für den deutschen Mittelstand geeignet?',
               a: 'Absolut. Für Mittelständler sind CPU-only LLMs ideal: (1) Keine GPU-Hardware-Investitionen erforderlich — verwenden Sie vorhandene Unternehmens-Server oder Arbeitsplatz-Hardware. (2) Erfüllt IT-Sicherheitsstandards — lokal gehostete Modelle erfüllen BSI-Grundschutz-Kataloge besser als Cloud-APIs. (3) Kosteneffizient für Dokumentenverarbeitung, Kundenservice-Chatbots und Datenbankabfragen — Durchsatz ist nicht zeitkritisch. (4) Datenschutz — sensitive Kundendaten bleiben im Unternehmen. Ideale Anwendungsfälle: Rechnungsverarbeitung, Vertragsanalyse, interne Wissensbasen, HR-Chatbots.',
             },
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Nächste Schritte',
+          items: [
+            '[Schnellste LLMs für Low-End-PCs](/de/local-llms/fastest-local-llms-low-end-pcs) — Altes oder schwaches PC? Schnellste optimierte Modelle →',
+            '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — Warum Q4_K_M für CPU-Inferenz entscheidend ist →',
+            '[Beste lokale LLMs für Coding](/de/local-llms/best-local-llms-for-coding) — Beste schlanke Coding-Modelle für CPU →',
           ],
         },
         relatedReading: {
@@ -1335,6 +1380,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Étapes suivantes',
+          items: [
+            '[LLM locaux les plus rapides pour PC bas de gamme](/fr/local-llms/fastest-local-llms-low-end-pcs) — PC ancien ou limité ? Modèles optimisés pour la vitesse →',
+            '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) — Pourquoi Q4_K_M est crucial pour la vitesse CPU →',
+            '[Meilleurs LLM locaux pour le code](/fr/local-llms/best-local-llms-for-coding) — Meilleurs modèles légers de code sur CPU →',
+          ],
+        },
         relatedReading: {
           id: 'related-reading',
           title: 'Lectures Connexes',
@@ -1628,6 +1682,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'llama.cpp vs Ollama で CPU 推論速度に違いはありますか？',
               a: 'わずかです。両者とも同じコア CPU 最適化 (AVX-512) を使用します。わずかな差異はスレッド管理の実装による (~2–5%)。デフォルトの Ollama をお試しください。',
             },
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: '次のステップ',
+          items: [
+            '[低スペックPC向け最速ローカルLLM](/ja/local-llms/fastest-local-llms-low-end-pcs) — 古い・低スペックPC？速度最適化モデル →',
+            '[LLM量子化を解説](/ja/local-llms/llm-quantization-explained) — CPU推論速度にQ4_K_Mが重要な理由 →',
+            '[コーディング向け最高ローカルLLM](/ja/local-llms/best-local-llms-for-coding) — CPUで動く軽量コーディングモデル →',
           ],
         },
         relatedReading: {
@@ -1925,6 +1988,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: '下一步',
+          items: [
+            '[低配PC最快本地LLM](/zh/local-llms/fastest-local-llms-low-end-pcs) — 老旧或低配PC？速度优化模型推荐 →',
+            '[LLM量化详解](/zh/local-llms/llm-quantization-explained) — 为什么Q4_K_M对CPU推理速度至关重要 →',
+            '[最佳本地编程LLM](/zh/local-llms/best-local-llms-for-coding) — CPU上运行的最佳轻量编程模型 →',
+          ],
+        },
         relatedReading: {
           id: 'related-reading',
           title: '相关阅读',
@@ -2212,6 +2284,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'Apple Silicon CPU를 위해 설정을 조정해야 합니까?',
               a: '아닙니다. Ollama는 M1/M2/M3/M4를 자동으로 감지하고 통합 메모리를 효율적으로 사용합니다. Apple Silicon은 메모리 아키텍처 덕분에 동급 Intel CPU보다 약 10~20% 빠릅니다.',
             },
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: '다음 단계',
+          items: [
+            '[저사양 PC용 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs) — 오래되거나 저사양 PC? 속도 최적화 모델 →',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — CPU 추론 속도에 Q4_K_M이 중요한 이유 →',
+            '[코딩용 최고 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — CPU에서 실행되는 최고의 경량 코딩 모델 →',
           ],
         },
         relatedReading: {

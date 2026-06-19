@@ -27,7 +27,7 @@ schema: {
         'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -191,6 +191,15 @@ schema: {
             'Buying RX 6700 (12GB) thinking it\'s a 3060 12GB equivalent--it\'s 20% slower and often harder to find used.',
             'Assuming ROCm "just works" like CUDA--plan 5-10 hours of troubleshooting driver and kernel compatibility.',
             'Using Ollama with AMD expecting seamless integration — ROCm support was inconsistent in our April 2026 testing (Ollama v0.3.x, ROCm 6.x); llama.cpp or vLLM are better bets.',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Next steps',
+          items: [
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — On a budget? Best value GPUs for LLM inference →',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD vs Apple vs CPU — which platform fits your workflow? →',
+            '[How Much VRAM Do I Need?](/local-llms/how-much-vram-local-llm) — Match your GPU VRAM to model size →',
           ],
         },
         'faqSection': {
@@ -389,6 +398,15 @@ schema: {
             'Comprar una RX 6700 (12GB) creyendo que equivale a una 3060 12GB — es un 20% más lenta y a menudo difícil de encontrar de segunda mano.',
             'Asumir que ROCm «simplemente funciona» como CUDA — planifica entre 5 y 10 horas de solución de problemas de compatibilidad de drivers y kernel.',
             'Usar Ollama con AMD esperando una integración fluida — el soporte ROCm fue inconsistente en nuestras pruebas de abril de 2026 (Ollama v0.3.x, ROCm 6.x); llama.cpp o vLLM son mejores opciones.',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Próximos pasos',
+          items: [
+            '[Mejores GPU de bajo costo para LLM local](/es/local-llms/best-budget-gpus-local-llm) — ¿Presupuesto ajustado? Las mejores GPU calidad-precio →',
+            '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple o CPU — ¿qué plataforma te conviene? →',
+            '[¿Cuánta VRAM necesito?](/es/local-llms/how-much-vram-local-llm) — Ajusta la VRAM de tu GPU al tamaño del modelo →',
           ],
         },
         'faqSection': {
@@ -607,6 +625,15 @@ schema: {
             'استخدام Ollama مع AMD مع توقع تكامل سلس — كان دعم ROCm غير متسق في اختباراتنا في أبريل 2026 (Ollama v0.3.x، ROCm 6.x)؛ llama.cpp أو vLLM خياران أفضل.',
           ],
         },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'الخطوات التالية',
+          items: [
+            '[أفضل وحدات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm) — ميزانية محدودة؟ أفضل وحدات GPU من حيث القيمة →',
+            '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD أم Apple أم المعالج؟ اختر المنصة المناسبة →',
+            '[كم سعة VRAM أحتاج؟](/ar/local-llms/how-much-vram-local-llm) — طابق سعة VRAM لحجم النموذج →',
+          ],
+        },
         'faqSection': {
           title: 'الأسئلة الشائعة',
           faqs: [
@@ -822,6 +849,15 @@ schema: {
             'Usar o Ollama com AMD esperando uma integração fluida — o suporte ROCm foi inconsistente nos nossos testes de abril de 2026 (Ollama v0.3.x, ROCm 6.x); llama.cpp ou vLLM são melhores opções.',
           ],
         },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Próximos passos',
+          items: [
+            '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm) — Com orçamento limitado? As melhores GPUs custo-benefício →',
+            '[GPU vs CPU vs Apple Silicon](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple ou CPU — qual plataforma se encaixa? →',
+            '[Quanta VRAM eu preciso?](/pt/local-llms/how-much-vram-local-llm) — Encontre o equilíbrio entre VRAM e tamanho do modelo →',
+          ],
+        },
         'faqSection': {
           title: 'Perguntas frequentes',
           faqs: [
@@ -969,6 +1005,15 @@ schema: {
             'RX 6700 (12 GB) kaufen, denkend, es ist ein 3060-12GB-Äquivalent - es ist 20% langsamer und oft schwer gebraucht zu finden.',
             'Annahme, dass ROCm „einfach funktioniert" wie CUDA - planen Sie 5-10 Stunden Fehlerbehebung von Treiber- und Kernel-Kompatibilität.',
             'Ollama mit AMD verwenden, nahtlose Integration erwartet — ROCm-Unterstützung war in unseren Tests April 2026 (Ollama v0.3.x, ROCm 6.x) inkonsistent; llama.cpp oder vLLM sind bessere Wetten.',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Nächste Schritte',
+          items: [
+            '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — Knapp bei Kasse? Die besten GPUs für LLM-Inferenz →',
+            '[GPU vs. CPU vs. Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD vs. Apple vs. CPU — welche Plattform passt? →',
+            '[Wie viel VRAM brauche ich?](/de/local-llms/how-much-vram-local-llm) — GPU-VRAM auf Modellgröße abstimmen →',
           ],
         },
         'faqSection': {
@@ -1128,6 +1173,15 @@ schema: {
             'Utiliser Ollama avec AMD en attendant une intégration transparente — le support ROCm était inconsistant dans nos tests d\'avril 2026 (Ollama v0.3.x, ROCm 6.x) ; llama.cpp ou vLLM sont de meilleurs choix.',
           ],
         },
+        'nextSteps': {
+          id: 'next-steps',
+          title: 'Étapes suivantes',
+          items: [
+            '[Meilleures GPU budget pour LLM local](/fr/local-llms/best-budget-gpus-local-llm) — Petit budget ? Les meilleures GPU rapport qualité-prix →',
+            '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple ou CPU — quelle plateforme choisir ? →',
+            '[Combien de VRAM me faut-il ?](/fr/local-llms/how-much-vram-local-llm) — Faites correspondre la VRAM à la taille du modèle →',
+          ],
+        },
         'faqSection': {
           title: 'Questions fréquentes',
           faqs: [
@@ -1284,6 +1338,15 @@ schema: {
             '⚠️ **RX 6700（12GB）を 3060 12GB 同等と誤認して購入** -- 20% 遅く、中古でも見つけにくい。',
             '⚠️ **ROCm が CUDA のように「即座に機能する」と仮定** -- ドライバーとカーネル互換性のデバッグに 5-10 時間を計画してください。',
             '⚠️ **Ollama で AMD を使用しシームレスな統合を期待** — 2026年4月テスト（Ollama v0.3.x、ROCm 6.x）でROCmサポートは不安定でした。llama.cpp または vLLM の方が優れた選択肢です。',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: '次のステップ',
+          items: [
+            '[予算内で最高のGPU（ローカルLLM向け）](/ja/local-llms/best-budget-gpus-local-llm) — 予算が限られている？コスパ最強GPU →',
+            '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD・Apple・CPU、どのプラットフォームが最適か →',
+            '[必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — GPUのVRAMとモデルサイズを合わせる →',
           ],
         },
         'faqSection': {
@@ -1447,6 +1510,15 @@ schema: {
             '⚠️ **购买 RX 6700（12GB）误认为等同 3060 12GB** -- 慢 20%，二手也难找。',
             '⚠️ **假设 ROCm 像 CUDA 一样「即插即用」** -- 计划 5-10 小时驱动程序和内核兼容性调试。',
             '⚠️ **在 AMD 用 Ollama 期待无缝集成** — 2026年4月测试（Ollama v0.3.x，ROCm 6.x）中ROCm支持不稳定；llama.cpp 或 vLLM 是更佳选择。',
+          ],
+        },
+        'nextSteps': {
+          id: 'next-steps',
+          title: '下一步',
+          items: [
+            '[本地LLM预算GPU推荐](/zh/local-llms/best-budget-gpus-local-llm) — 预算有限？性价比最高的GPU →',
+            '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD、Apple还是CPU？哪个平台最合适 →',
+            '[我需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) — 根据模型大小匹配GPU显存 →',
           ],
         },
         'faqSection': {
@@ -1708,6 +1780,15 @@ schema: {
           'RX 6700(12GB)을 3060 12GB와 동급으로 착각하고 구입하는 것 — 20% 느리며 중고 시장에서 찾기도 어렵습니다.',
           'ROCm이 CUDA처럼 "그냥 작동"한다고 가정하는 것 — 드라이버 및 커널 호환성 디버깅에 5-10시간을 계획하십시오.',
           'AMD에서 Ollama를 사용하며 원활한 통합을 기대하는 것 — 2026년 4월 테스트(Ollama v0.3.x, ROCm 6.x)에서 ROCm 지원이 불안정했습니다. llama.cpp 또는 vLLM이 더 나은 선택입니다.',
+        ],
+      },
+      'nextSteps': {
+        id: 'next-steps',
+        title: '다음 단계',
+        items: [
+          '[로컬 LLM 예산 GPU 추천](/ko/local-llms/best-budget-gpus-local-llm) — 예산이 부족하신가요? 가성비 최고 GPU →',
+          '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) — AMD, Apple, CPU — 어떤 플랫폼이 맞나요? →',
+          '[필요한 VRAM은 얼마나 될까요?](/ko/local-llms/how-much-vram-local-llm) — GPU VRAM과 모델 크기 맞추기 →',
         ],
       },
       'faqSection': {

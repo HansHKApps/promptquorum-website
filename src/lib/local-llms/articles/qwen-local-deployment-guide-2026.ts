@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Qwen3 7B runs in 5.5 GB of VRAM via Ollama — one command, no configuration. Qwen3-Coder 32B reaches 92.7% on HumanEval. Qwen2-VL 7B leads local vision models for Chinese and Japanese document OCR. This guide covers the complete Qwen family — which model to run at each hardware tier, Ollama and LM Studio setup, quantization picks, benchmark data, and how Qwen compares to DeepSeek and Llama on consumer hardware in 2026.',
     metaDescription: 'Run Qwen3 (7B–72B), Qwen3-Coder and Qwen2-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.',
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-06-19',
     readTime: '14 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers, researchers, and privacy-focused users who want to run the full Qwen model family locally — including Chinese-language users who prefer Alibaba\'s models over US alternatives',
@@ -332,6 +332,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Using the wrong sub-family for coding.** Qwen3 7B (general) scores 57.3% on HumanEval. Qwen3-Coder 7B scores 75.6% on the same benchmark — a 32% relative improvement. If your use case is code, always use the Coder variant of the same size.',
         ],
       },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Next steps',
+        items: [
+          '[Best CPU-Only LLMs](/local-llms/best-cpu-only-llm) — No GPU? See which Qwen3 sizes run on CPU only →',
+          '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Confused by Q4_K_M vs Q8? Quantization explained →',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -623,6 +631,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Elegir cuantización Q2_K para uso en chino.** A 2 bits de precisión, la salida en chino de Qwen3 se degrada notablemente. Usa Q4_K_M como mínimo para cualquier trabajo en chino.',
           '**Ejecutar el modelo 32B con poca VRAM.** Si la GPU tiene 16 GB y el modelo necesita 20,5 GB, Ollama descarga capas a la RAM del sistema. El modelo funciona pero a 3–5 tok/s — inutilizable para uso interactivo. Consulta la tabla de hardware y elige un modelo que quepa en tu VRAM.',
           '**Usar la subfamilia incorrecta para programación.** Qwen3 7B (uso general) puntúa 57,3 % en HumanEval. Qwen3-Coder 7B puntúa 75,6 % en el mismo benchmark — una mejora relativa del 32 %. Si tu caso de uso es código, usa siempre la variante Coder del mismo tamaño.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Próximos pasos',
+        items: [
+          '[Mejores LLM solo CPU](/es/local-llms/best-cpu-only-llm) — ¿Sin GPU? Descubre qué tamaños de Qwen3 funcionan en CPU →',
+          '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — ¿Confundido con Q4_K_M vs Q8? Cuantización explicada →',
         ],
       },
       faqSection: {
@@ -918,6 +934,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**استخدام العائلة الفرعية الخاطئة للبرمجة.** يسجّل Qwen3 7B (استخدام عام) 57.3% في HumanEval. ويسجّل Qwen3-Coder 7B نسبة 75.6% في المعيار نفسه — تحسّن نسبي بنسبة 32%. إذا كانت حالة استخدامك هي الكود، استخدم دائمًا متغير Coder بالحجم نفسه.',
         ],
       },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'الخطوات التالية',
+        items: [
+          '[أفضل نماذج LLM للمعالج فقط](/ar/local-llms/best-cpu-only-llm) — ليس لديك GPU؟ اكتشف أحجام Qwen3 التي تعمل على المعالج فقط →',
+          '[شرح تحديد دقة LLM](/ar/local-llms/llm-quantization-explained) — تبحث عن الفرق بين Q4_K_M وQ8؟ شرح التحديد الدقي →',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -1200,6 +1224,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Escolher quantização Q2_K para uso em chinês.** A 2 bits de precisão, a saída em chinês do Qwen3 se degrada notavelmente. Use Q4_K_M no mínimo para qualquer trabalho em chinês.',
           '**Executar o modelo 32B com pouca VRAM.** Se a GPU tiver 16 GB e o modelo precisar de 20,5 GB, o Ollama descarrega camadas para a RAM do sistema. O modelo funciona mas a 3–5 tok/s — inutilizável para uso interativo.',
           '**Usar a subfamília errada para programação.** O Qwen3 7B (uso geral) pontua 57,3% no HumanEval. O Qwen3-Coder 7B pontua 75,6% — uma melhoria relativa de 32%. Para código, sempre use a variante Coder do mesmo tamanho.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Próximos passos',
+        items: [
+          '[Melhores LLMs apenas CPU](/pt/local-llms/best-cpu-only-llm) — Sem GPU? Veja quais tamanhos do Qwen3 rodam só no CPU →',
+          '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — Confuso com Q4_K_M vs Q8? Quantização explicada →',
         ],
       },
       faqSection: {
@@ -1492,6 +1524,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Choisir la quantification Q2_K pour du chinois.** À 2 bits, la sortie en langue chinoise de Qwen3 se dégrade notablement. Utiliser au minimum Q4_K_M pour tout travail en CJK.',
           '**Exécuter le modèle 32B avec trop peu de VRAM.** Si votre GPU a 16 Go et que le modèle en nécessite 20,5 Go, Ollama décharge des couches en RAM — le modèle tourne à 3–5 tokens/s, inutilisable en interactif.',
           '**Utiliser la mauvaise sous-famille pour le code.** Qwen3 7B (usage général) : 57,3 % sur HumanEval. Qwen3-Coder 7B : 75,6 % — soit +32 % de performance relative. Toujours utiliser la variante Coder pour le code.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Étapes suivantes',
+        items: [
+          '[Meilleurs LLM CPU uniquement](/fr/local-llms/best-cpu-only-llm) — Pas de GPU ? Découvrez quelles tailles Qwen3 tournent sur CPU →',
+          '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) — Q4_K_M vs Q8 vous perturbe ? La quantification expliquée →',
         ],
       },
       faqSection: {
@@ -1788,6 +1828,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Q2_K-Quantisierung für chinesischsprachige Nutzung wählen.** Bei 2-Bit-Präzision verschlechtert sich Qwen3\'s chinesische Ausgabe spürbar. Q4_K_M als Minimum für jede chinesischsprachige Arbeit verwenden.',
           '**32B-Modell mit zu wenig VRAM ausführen.** Wenn die GPU 16 GB hat und das Modell 20,5 GB benötigt, lagert Ollama Layer in den System-RAM aus. Das Modell läuft, aber mit 3–5 Tokens/Sek. — für interaktive Nutzung unbrauchbar.',
           '**Falsche Teilfamilie für Coding verwenden.** Qwen3 7B (allgemein) erreicht 57,3 % auf HumanEval. Qwen3-Coder 7B erreicht 75,6 % auf demselben Benchmark — eine 32 %ige relative Verbesserung. Für Coding immer die Coder-Variante gleicher Größe verwenden.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: 'Nächste Schritte',
+        items: [
+          '[Beste CPU-Only-LLMs](/de/local-llms/best-cpu-only-llm) — Keine GPU? Welche Qwen3-Größen laufen rein auf CPU →',
+          '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — Q4_K_M vs. Q8 unklar? Quantisierung erklärt →',
         ],
       },
       faqSection: {
@@ -2087,6 +2135,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**コーディングに間違ったサブファミリーを使う。** Qwen3 7B（汎用）はHumanEvalで57.3%。Qwen3-Coder 7Bは同ベンチマークで75.6% — 相対的に32%の改善。コーディングには必ず同サイズのCoder バリアントを使用してください。',
         ],
       },
+      nextSteps: {
+        id: 'next-steps',
+        title: '次のステップ',
+        items: [
+          '[CPUのみで動くベストLLM](/ja/local-llms/best-cpu-only-llm) — GPUなし？Qwen3のどのサイズがCPUだけで動くか →',
+          '[LLM量子化を解説](/ja/local-llms/llm-quantization-explained) — Q4_K_MとQ8の違いが分からない？量子化を解説 →',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
@@ -2382,6 +2438,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**中文用途选择Q2_K量化。** 2位精度下，Qwen3的中文输出质量明显下降——出现字符替换问题。中文任务至少使用Q4_K_M。',
           '**显存不足时运行32B模型。** 若GPU只有16GB而模型需要20.5GB，Ollama会将层卸载到系统内存。模型可运行但速度仅3–5 token/秒，不适合交互使用。',
           '**代码任务使用错误的子系列。** Qwen3 7B（通用版）在HumanEval上得57.3%。Qwen3-Coder 7B得75.6%——相对提升32%。代码任务始终使用同等规格的Coder版本。',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: '下一步',
+        items: [
+          '[仅用CPU运行LLM指南](/zh/local-llms/best-cpu-only-llm) — 没有GPU？了解哪些Qwen3规格可纯CPU运行 →',
+          '[LLM量化详解](/zh/local-llms/llm-quantization-explained) — Q4_K_M和Q8搞不清楚？量化原理详解 →',
         ],
       },
       faqSection: {
@@ -2740,6 +2804,14 @@ curl http://localhost:11434/v1/chat/completions \\
           '**중국어 용도에 Q2_K 양자화 선택.** 2비트 정밀도에서 Qwen3의 중국어 출력이 눈에 띄게 저하됩니다 — 문자 대체가 증가합니다. 중국어 작업에는 Q4_K_M을 최소값으로 사용하십시오.',
           '**VRAM이 부족한 상태에서 32B 모델 실행.** GPU에 16 GB가 있고 모델에 20.5 GB가 필요한 경우 Ollama가 레이어를 시스템 RAM으로 오프로드합니다. 모델은 실행되지만 초당 3–5 토큰으로 — 대화형 사용에는 적합하지 않습니다. 위의 하드웨어 표를 확인하고 VRAM에 맞는 모델을 선택하십시오.',
           '**코딩에 잘못된 하위 패밀리 사용.** Qwen3 7B(범용)는 HumanEval에서 57.3%를 기록합니다. Qwen3-Coder 7B는 같은 벤치마크에서 75.6%를 기록합니다 — 상대적으로 32% 향상입니다. 코딩이 목적이라면 항상 같은 크기의 Coder 변형을 사용하십시오.',
+        ],
+      },
+      nextSteps: {
+        id: 'next-steps',
+        title: '다음 단계',
+        items: [
+          '[CPU 전용 최고 LLM](/ko/local-llms/best-cpu-only-llm) — GPU 없나요? CPU만으로 실행 가능한 Qwen3 크기 →',
+          '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M과 Q8이 헷갈리세요? 양자화 설명 →',
         ],
       },
       faqSection: {

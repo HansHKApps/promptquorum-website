@@ -299,6 +299,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) -- Open WebUI, Jan AI, and other interfaces that connect to any model in this list',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Next steps',
+          items: [
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Want the best Ollama model for coding specifically? →',
+            '[Best CPU-Only LLMs](/local-llms/best-cpu-only-llm) — Running without a GPU? Start here →',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Not sure your machine can run these models? Check hardware requirements →',
+          ],
+        },
         faqSection: {
           id: 'common-questions',
           title: 'Common Questions About Open Source Models on Ollama',
@@ -366,7 +375,7 @@ schema: {
         'description': 'Looking for new Ollama models? See the latest June 2026 releases, what is new, and which models are worth using for chat, coding, and reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-06-19',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'Best Ollama models 2026' },
@@ -780,6 +789,15 @@ schema: {
             '[Mejores frontends de LLM local](/es/local-llms/best-local-llm-frontends) -- Open WebUI, Jan AI y otras interfaces que se conectan a cualquier modelo de esta lista',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Próximos pasos',
+          items: [
+            '[Mejores LLM locales para código](/es/local-llms/best-local-llms-for-coding) — ¿El mejor modelo Ollama para programación? →',
+            '[Mejores LLM solo con CPU](/es/local-llms/best-cpu-only-llm) — ¿Sin GPU? Empieza aquí →',
+            '[Guía de hardware LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — ¿Tu equipo puede correr estos modelos? →',
+          ],
+        },
         faqSection: {
           id: 'common-questions',
           title: 'Preguntas frecuentes sobre modelos de código abierto en Ollama',
@@ -1027,6 +1045,15 @@ schema: {
             '**Automação residencial / IA de palavra de ativação**: `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 GB VRAM) processa comandos de voz do Home Assistant a 20–25 tok/seg em um mini PC sem GPU dedicada. Veja [guia de integração Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Próximos passos',
+          items: [
+            '[Melhores LLMs locais para código](/pt/local-llms/best-local-llms-for-coding) — O melhor modelo Ollama especialmente para programação →',
+            '[Melhores LLMs só com CPU](/pt/local-llms/best-cpu-only-llm) — Sem GPU? Comece por aqui →',
+            '[Guia de hardware LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Seu computador aguenta esses modelos? →',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes',
@@ -1239,6 +1266,15 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
               q: 'Ich habe ein Modell gepullt, sehe es aber nicht in der Liste. Wie überprüfe ich die Installation?',
               a: 'Führen Sie `ollama list` aus. Ollama speichert Modelle unter `~/.ollama/models/` (Mac) oder `%USERPROFILE%\.ollama\models\` (Windows). Wenn sich das Modell dort befindet, aber nicht in der Liste angezeigt wird, neustarten Sie den Ollama-Daemon: Beenden Sie Ollama und öffnen Sie es erneut.',
             },
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Nächste Schritte',
+          items: [
+            '[Beste lokale LLMs für Coding](/de/local-llms/best-local-llms-for-coding) — Das beste Ollama-Modell speziell für Code-Aufgaben →',
+            '[Beste LLMs ohne GPU (CPU-only)](/de/local-llms/best-cpu-only-llm) — Kein Grafikprozessor? Hier starten →',
+            '[Hardware-Guide für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) — Unsicher, ob dein PC diese Modelle ausführen kann? →',
           ],
         },
         faqSection: {
@@ -1619,6 +1655,15 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             },
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'Étapes suivantes',
+          items: [
+            '[Meilleurs LLM locaux pour le code](/fr/local-llms/best-local-llms-for-coding) — Le meilleur modèle Ollama pour le développement →',
+            '[Meilleurs LLM sur CPU uniquement](/fr/local-llms/best-cpu-only-llm) — Pas de GPU ? Par ici →',
+            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Votre machine peut-elle faire tourner ces modèles ? →',
+          ],
+        },
         faqSection: {
           title: 'Questions fréquemment posées',
           faqs: [
@@ -1996,6 +2041,15 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             },
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: '次のステップ',
+          items: [
+            '[コーディング向け最高ローカルLLM](/ja/local-llms/best-local-llms-for-coding) — コード特化の最良Ollamaモデルを選ぶ →',
+            '[CPUのみで動く最高LLM](/ja/local-llms/best-cpu-only-llm) — GPU なし？ここから始める →',
+            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — あなたのPCでこれらのモデルが動くか確認 →',
+          ],
+        },
         faqSection: {
           title: 'よくある質問',
           faqs: [
@@ -2351,6 +2405,15 @@ schema: {
               q: '金融、医疗、法律企业如何部署？',
               a: '这些高监管行业要求：数据主权、完整审计、合规认证。本地LLM方案：（1）Llama 3.3/70B：标准金融基准检验；（2）Qwen3：中文医疗文档理解；（3）Mistral：法律条款分析。部署步骤：孤立网络、受限访问、日志记录、定期审计。Ollama与标准企业IT（Kubernetes、Docker）兼容。',
             },
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: '下一步',
+          items: [
+            '[最佳本地编程LLM](/zh/local-llms/best-local-llms-for-coding) — 专为编程优化的最佳Ollama模型 →',
+            '[仅CPU运行LLM指南](/zh/local-llms/best-cpu-only-llm) — 没有GPU？从这里开始 →',
+            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 不确定你的电脑能否运行这些模型？ →',
           ],
         },
         faqSection: {
@@ -2793,6 +2856,15 @@ schema: {
             '[최고 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- 이 목록의 모든 모델에 연결되는 Open WebUI, Jan AI 및 기타 인터페이스',
           ],
         },
+        nextSteps: {
+          id: 'next-steps',
+          title: '다음 단계',
+          items: [
+            '[코딩용 최고 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — 코딩에 최적화된 Ollama 모델 →',
+            '[CPU 전용 최고 LLM](/ko/local-llms/best-cpu-only-llm) — GPU 없나요? 여기서 시작 →',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 내 PC가 이 모델들을 실행할 수 있는지 확인 →',
+          ],
+        },
         faqSection: {
           id: 'common-questions',
           title: 'Ollama 오픈소스 모델에 관한 자주 묻는 질문',
@@ -3092,6 +3164,15 @@ schema: {
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) -- كيفية الاختيار بين Q4_K_M وQ8_0 للنماذج في هذه القائمة',
             '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- أي أداة تستخدم لتشغيل هذه النماذج حسب تدفق عملك',
             '[أفضل واجهات LLM المحلية](/ar/local-llms/best-local-llm-frontends) -- Open WebUI وJan AI وواجهات أخرى تتصل بأي نموذج في هذه القائمة',
+          ],
+        },
+        nextSteps: {
+          id: 'next-steps',
+          title: 'الخطوات التالية',
+          items: [
+            '[أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) — أفضل نموذج Ollama مخصص للبرمجة →',
+            '[أفضل نماذج LLM بالمعالج فقط](/ar/local-llms/best-cpu-only-llm) — ليس لديك GPU؟ ابدأ هنا →',
+            '[دليل أجهزة LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) — هل جهازك يستطيع تشغيل هذه النماذج؟ →',
           ],
         },
         faqSection: {
