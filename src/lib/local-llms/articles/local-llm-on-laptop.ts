@@ -552,8 +552,10 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'local LLM laptop',
       toc: [
+        { label: 'Respuesta rápida: ¿Qué LLM local funciona en tu portátil?', anchor: '#quick-answer-ram' },
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Puedes ejecutar un LLM local en un portátil?', anchor: '#can-you-run' },
+        { label: '¿Puedes ejecutar RAG en un portátil?', anchor: '#rag-laptop' },
         { label: '¿Qué configuración necesitas?', anchor: '#use-case' },
         { label: '¿Qué modelos LLM locales funcionan mejor en un portátil?', anchor: '#best-models' },
         { label: 'Apple Silicon vs portátil Windows', anchor: '#apple-vs-windows' },
@@ -568,6 +570,20 @@ schema: {
         { label: 'Fuentes', anchor: '#sources' },
       ],
       sections: {
+        quickAnswerByRam: {
+          id: 'quick-answer-ram',
+          title: 'Respuesta rápida: ¿Qué LLM local funciona en tu portátil (8GB, 16GB, Apple Silicon)?',
+          content: [
+            'Puedes ejecutar un LLM local en cualquier portátil con 8 GB de RAM — un modelo 7B en Q4_K_M funciona a 10–25 tok/s en CPU y 30–80 tok/s en Apple Silicon. Combina tu hardware con el modelo adecuado a continuación:',
+          ],
+          rows: [
+            { 'Tu portátil': '8 GB RAM', 'Mejor modelo': 'Llama 3.2 3B / Mistral 7B Q4_K_M', 'Velocidad (CPU)': '10–25 tok/s', 'Velocidad (Apple Silicon)': '30–80 tok/s' },
+            { 'Tu portátil': '16 GB RAM', 'Mejor modelo': 'Llama 3.1 8B / Qwen2.5 14B Q4_K_M', 'Velocidad (CPU)': '8–18 tok/s', 'Velocidad (Apple Silicon)': '50–80 tok/s' },
+            { 'Tu portátil': 'Apple M-series (8–18 GB)', 'Mejor modelo': 'hasta 13B en memoria unificada', 'Velocidad (CPU)': '—', 'Velocidad (Apple Silicon)': '50–80 tok/s' },
+            { 'Tu portátil': 'Intel Iris Xe / AMD iGPU', 'Mejor modelo': '3B–7B (solo CPU)', 'Velocidad (CPU)': '8–20 tok/s', 'Velocidad (Apple Silicon)': 'n/a' },
+          ],
+          columns: ['Tu portátil', 'Mejor modelo', 'Velocidad (CPU)', 'Velocidad (Apple Silicon)'],
+        },
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
@@ -607,6 +623,15 @@ schema: {
           ],
           image: '/images/ollama-terminal.svg',
           imageCaption: 'Ollama ejecutando Mistral Small en un MacBook -- 22 tokens/seg en CPU con cuantización Q4_K_M.',
+        },
+        rag: {
+          id: 'rag-laptop',
+          title: '¿Puedes ejecutar RAG (recuperación) en un portátil?',
+          content: [
+            '**Sí -- RAG funciona cómodamente en un portátil, porque la restricción determinante sigue siendo el modelo de chat, no la capa de recuperación.** Un stack RAG en portátil tiene tres partes: un modelo de embeddings pequeño, un almacén de vectores local y tu modelo de chat.',
+            'El modelo de embeddings es pequeño -- normalmente unos pocos cientos de MB -- así que añade poca presión de RAM. En un portátil de 8 GB puedes ejecutar cómodamente un modelo de chat 3B más un modelo de embeddings pequeño; con 16 GB tienes margen para un modelo de chat 7B junto a la recuperación.',
+            '**2 GB de RAM no es realmente utilizable para RAG.** Después del SO, no hay espacio para un modelo de chat y un modelo de embeddings sin un swap intenso, lo que baja la inferencia a 1–3 tok/s. Planifica 8 GB como el mínimo práctico.',
+          ],
         },
         useCase: {
           id: 'use-case',
@@ -653,10 +678,10 @@ schema: {
         bestModels: {
           id: 'best-models',
           title: '¿Qué modelos LLM locales funcionan mejor en un portátil?',
-          content: 'Estos modelos se han seleccionado específicamente para las limitaciones de los portátiles -- equilibrando calidad, uso de RAM y velocidad de generación sostenida. Para una guía detallada sobre los requisitos de VRAM para diferentes modelos y configuraciones de portátil, consulta la [guía de requisitos VRAM →](/es/local-llms/how-much-vram-local-llm). Instala [Ollama](/local-llms/how-to-install-ollama) para ejecutar cualquiera de estos con un solo comando:',
+          content: 'Estos modelos se han seleccionado específicamente para las limitaciones de los portátiles -- equilibrando calidad, uso de RAM y velocidad de generación sostenida. Para una guía detallada sobre los requisitos de VRAM para diferentes modelos y configuraciones de portátil, consulta la [guía de requisitos VRAM →](/es/local-llms/how-much-vram-local-llm). Instala [Ollama](/local-llms/how-to-install-ollama) para ejecutar cualquiera de estos con un solo comando. ¿Ejecutas sin ninguna GPU? Consulta la guía dedicada: **[Mejores LLMs locales solo para CPU 2026](/es/local-llms/best-cpu-only-llm)**.',
           rows: [
             { 'Modelo': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Velocidad (CPU)': '25–45 tok/s', 'Calidad': 'Media', 'Mejor para': 'Portátiles de 8 GB, tareas rápidas' },
-            { 'Modelo': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Velocidad (CPU)': '20–35 tok/s', 'Calidad': 'Media-Alta', 'Mejor para': 'Portátiles de 8 GB, razonamiento/código' },
+            { 'Modelo': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Velocidad (CPU)': '20–35 tok/s', 'Calidad': 'Media-Alta', 'Mejor para': 'Portátiles de 8 GB, razonamiento/código' },
             { 'Modelo': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Velocidad (CPU)': '10–20 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, uso general' },
             { 'Modelo': 'Qwen3 7B', 'RAM': '4,7 GB', 'Velocidad (CPU)': '10–18 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, multilingüe, código' },
             { 'Modelo': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Velocidad (CPU)': '8–15 tok/s', 'Calidad': 'Alta+', 'Mejor para': 'Portátiles de 16 GB, mejor calidad en ese tamaño' },
@@ -684,6 +709,7 @@ schema: {
             '**Los MacBook con Apple Silicon (M1 a M4) son los mejores portátiles de consumo para inferencia local de LLMs.** La arquitectura de memoria unificada significa que la GPU y la CPU comparten el mismo banco de memoria -- un MacBook Pro M3 con 18 GB de memoria puede ejecutar un modelo 13B íntegramente en memoria GPU, alcanzando 50–80 tok/seg.',
             'Los portátiles Windows con GPUs NVIDIA discretas pueden ser más rápidos si el VRAM es suficiente (8 GB o más). Una GPU NVIDIA RTX 4060 para portátil (8 GB VRAM) ejecuta un modelo 7B a 60–90 tok/seg -- comparable al Apple M3 Pro. El inconveniente es un mayor consumo de batería y generación de calor.',
             'Los portátiles Windows con gráficos integrados Intel Iris Xe o AMD Radeon usan solo inferencia por CPU, lo que resulta en 8–20 tok/seg para modelos 7B.',
+            '**Mejores modelos para gráficos integrados (Intel Iris Xe / AMD Radeon):** Con 16 GB de RAM, el punto óptimo es un modelo 3B–7B en Q4_K_M. Llama 3.2 3B funciona en la parte alta del rango de 8–20 tok/seg, mientras que Mistral Small (7B) se sitúa en la parte baja pero ofrece una calidad notablemente mejor. La GPU integrada no acelera la inferencia aquí -- el trabajo lo hace la CPU -- así que prioriza un modelo que se mantenga cómodamente dentro de la RAM en lugar de buscar un tamaño mayor. Para una configuración de gama baja paso a paso, consulta [LLMs locales más rápidos para PCs de gama baja](/es/local-llms/fastest-local-llms-low-end-pcs).',
           ],
           rows: [
             { 'Tipo de portátil': 'Apple M3 Pro (18 GB)', 'Velocidad (7B)': '50–80 tok/s', 'Consumo batería': 'Moderado', 'Modelo máximo': '~13B' },
@@ -755,6 +781,18 @@ schema: {
           id: 'faq',
           title: 'Preguntas frecuentes sobre LLMs locales en portátiles',
           faqs: [
+            {
+              q: '¿Cuáles son los mejores modelos de Ollama para Intel Iris Xe con 16 GB de RAM?',
+              a: 'En un portátil con gráficos integrados Intel Iris Xe y 16 GB de RAM, la inferencia se ejecuta en la CPU (Iris Xe no la acelera), así que elige un modelo 3B–7B en Q4_K_M. Llama 3.2 3B es el más rápido, en la parte alta del rango de 8–20 tok/seg; Mistral Small (7B) es más lento pero de mayor calidad. Ejecuta cualquiera con `ollama run llama3.2:3b` o `ollama run mistral`.',
+            },
+            {
+              q: '¿Puedes ejecutar RAG localmente en un portátil?',
+              a: 'Sí. Un stack RAG en portátil es un modelo de embeddings pequeño más un almacén de vectores local más tu modelo de chat. El modelo de embeddings ocupa solo unos pocos cientos de MB, por lo que el modelo de chat sigue siendo la restricción determinante de RAM — un portátil de 8 GB ejecuta cómodamente un modelo de chat 3B con recuperación. Consulta la [sección de RAG en un portátil](#rag-laptop) más arriba para el desglose de RAM.',
+            },
+            {
+              q: '¿Cuál es el mejor LLM local solo para CPU en un portátil?',
+              a: 'Para portátiles solo con CPU, Llama 3.2 3B (25–45 tok/seg) y Mistral Small 7B (10–20 tok/seg) en Q4_K_M son el mejor equilibrio entre velocidad y calidad. Para una comparación completa y clasificada y los comandos de Ollama, consulta la guía dedicada: [Mejores LLMs locales solo para CPU 2026](/es/local-llms/best-cpu-only-llm).',
+            },
             {
               q: '¿Ejecutar un LLM local dañará mi portátil con el tiempo?',
               a: 'No -- las CPUs y GPUs modernas están diseñadas para manejar cargas altas sostenidas de forma segura mediante el throttling térmico. Ejecutar inferencia durante horas equivale a codificar vídeo o jugar. Un soporte para portátil y ventilación adecuada previenen la acumulación excesiva de calor. El número de ciclos de batería aumenta con la carga prolongada enchufada, lo que es un patrón de desgaste normal.',
@@ -857,11 +895,11 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ejecutar LLMs Locales en un Portátil: RAM, Velocidad y Temperatura 2026',
+        'headline': 'LLM Local en un Portátil: Qué Funciona en 8GB, 16GB y Apple Silicon (2026)',
         'description': 'Ejecuta LLMs locales en portátiles con 8 GB de RAM. Cubre los mejores modelos (Llama 3.2 3B, Mistral Small, Qwen3 7B), correcciones de throttling térmico, optimización de batería y configuración de cuantización Q4_K_M.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-on-laptop',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -886,7 +924,7 @@ schema: {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': 'Modelo 3B. 2,5 GB de RAM. 25–45 tok/seg en CPU, 60–100 tok/seg en Apple Silicon. Mejor modelo de inicio para portátiles de 8 GB.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': 'Modelo 3.8B. 3 GB de RAM. 20–35 tok/seg en CPU. Mejor razonamiento y código con menos de 4 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': 'Modelo 3.8B. 3 GB de RAM. 20–35 tok/seg en CPU. Mejor razonamiento y código con menos de 4 GB de RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': 'Modelo 7B. 4,5 GB de RAM. 10–20 tok/seg en CPU. Mejor modelo de propósito general para portátiles de 8–16 GB.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': 'Modelo 7B. 4,7 GB de RAM. 10–18 tok/seg en CPU. Mejor para tareas multilingüe y código en portátiles de 8–16 GB.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8–15 tok/seg en CPU. Mejor calidad en ese tamaño para portátiles de 16 GB.' },
@@ -896,6 +934,30 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Cuáles son los mejores modelos de Ollama para Intel Iris Xe con 16 GB de RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En un portátil con gráficos integrados Intel Iris Xe y 16 GB de RAM, la inferencia se ejecuta en la CPU (Iris Xe no la acelera), así que elige un modelo 3B–7B en Q4_K_M. Llama 3.2 3B es el más rápido, en la parte alta del rango de 8–20 tok/seg; Mistral Small (7B) es más lento pero de mayor calidad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedes ejecutar RAG localmente en un portátil?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Un stack RAG en portátil es un modelo de embeddings pequeño más un almacén de vectores local más tu modelo de chat. El modelo de embeddings ocupa solo unos pocos cientos de MB, por lo que el modelo de chat sigue siendo la restricción determinante de RAM — un portátil de 8 GB ejecuta cómodamente un modelo de chat 3B con recuperación. 2 GB de RAM no es realmente utilizable para RAG.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor LLM local solo para CPU en un portátil?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para portátiles solo con CPU, Llama 3.2 3B (25–45 tok/seg) y Mistral Small 7B (10–20 tok/seg) en Q4_K_M son el mejor equilibrio entre velocidad y calidad. Consulta la guía dedicada Mejores LLMs locales solo para CPU 2026 para una comparación completa y clasificada.',
+            },
+          },
           {
             '@type': 'Question',
             'name': '¿Ejecutar un LLM local dañará mi portátil con el tiempo?',
@@ -993,13 +1055,13 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
-      title: 'تشغيل نماذج LLM المحلية على لابتوب: RAM والسرعة والحرارة 2026',
-      seoTitle: 'نماذج LLM على لابتوب 8–16 GB: Llama وPhi والحرارة 2026',
+      title: 'تشغيل LLM محلي على لابتوب: ما يعمل على 8GB و16GB وApple Silicon (2026)',
+      seoTitle: 'LLM محلي على لابتوب (2026): 8GB و16GB وApple Silicon',
       intro: 'تشغيل نموذج LLM محلي على لابتوب ممكن — حتى بذاكرة 8 GB من RAM — لكن الأداء يعتمد إلى حد كبير على حجم النموذج وRAM والحرارة. يعمل نموذج 7B بسرعة 10–25 رمزاً/ث على CPU أو 50–80 tok/ث على Apple Silicon، مما يجعل أجهزة اللابتوب صالحة للتطوير والاختبار وسير عمل الذكاء الاصطناعي الخفيف.',
-      metaDescription: 'نماذج 7B على CPU بسرعة 10–25 tok/ث وعلى Apple Silicon بـ50–80 tok/ث. الخفض الحراري يقلّص السرعة 20–40%. دليل Q4_K_M ومقارنة Intel Iris Xe.',
+      metaDescription: 'نعم، يمكنك تشغيل LLM محلي على لابتوب — حتى بـ 8 GB RAM. ما يعمل على 8GB مقابل 16GB مقابل Apple Silicon، وسرعات tok/s الحقيقية لكل عتاد.',
       twitterDescription: 'تعمل نماذج 7B على أجهزة لابتوب بسعة 8 GB بسرعة 10–25 tok/ث. Apple Silicon M3: 50–80 tok/ث. حل خفض الأداء الحراري: استخدم حاملاً وعطّل Turbo Boost. دليل Q4_K_M.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-18',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**تشغيل نموذج LLM محلي على لابتوب يعني نشر نماذج اللغة مباشرةً على حاسوبك دون واجهات سحابية أو نقل بيانات خارجي.** الفائدة الأساسية هي الخصوصية الكاملة والقدرة على العمل دون اتصال؛ يعتمد الأداء على العتاد (8 GB من RAM كحد أدنى لنماذج 7B، 16 GB لنماذج 13B).',
       comparisonTable: {
         columns: ['الإعداد', 'حجم النموذج', 'السرعة', 'التجربة'],
@@ -1015,8 +1077,10 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'local LLM laptop',
       toc: [
+        { label: 'إجابة سريعة: أي نموذج LLM محلي يعمل على لابتوبك؟', anchor: '#quick-answer-ram' },
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'هل يمكنك تشغيل LLM محلي على لابتوب؟', anchor: '#can-you-run' },
+        { label: 'هل يمكنك تشغيل RAG على لابتوب؟', anchor: '#rag-laptop' },
         { label: 'أي إعداد تحتاج؟', anchor: '#use-case' },
         { label: 'أي نماذج LLM محلية تعمل بأفضل شكل على لابتوب؟', anchor: '#best-models' },
         { label: 'Apple Silicon مقابل لابتوب Windows', anchor: '#apple-vs-windows' },
@@ -1031,6 +1095,20 @@ schema: {
         { label: 'المصادر', anchor: '#sources' },
       ],
       sections: {
+        quickAnswerByRam: {
+          id: 'quick-answer-ram',
+          title: 'إجابة سريعة: أي نموذج LLM محلي يعمل على لابتوبك (8GB، 16GB، Apple Silicon)؟',
+          content: [
+            'يمكنك تشغيل نموذج LLM محلي على أي لابتوب بذاكرة 8 GB من RAM — يعمل نموذج 7B بصيغة Q4_K_M بسرعة 10–25 tok/s على CPU و30–80 tok/s على Apple Silicon. طابِق عتادك مع النموذج المناسب أدناه:',
+          ],
+          rows: [
+            { 'لابتوبك': '8 GB RAM', 'أفضل نموذج': 'Llama 3.2 3B / Mistral 7B Q4_K_M', 'السرعة (CPU)': '10–25 tok/s', 'السرعة (Apple Silicon)': '30–80 tok/s' },
+            { 'لابتوبك': '16 GB RAM', 'أفضل نموذج': 'Llama 3.1 8B / Qwen2.5 14B Q4_K_M', 'السرعة (CPU)': '8–18 tok/s', 'السرعة (Apple Silicon)': '50–80 tok/s' },
+            { 'لابتوبك': 'Apple سلسلة M (8–18 GB)', 'أفضل نموذج': 'حتى 13B في الذاكرة الموحدة', 'السرعة (CPU)': '—', 'السرعة (Apple Silicon)': '50–80 tok/s' },
+            { 'لابتوبك': 'Intel Iris Xe / iGPU من AMD', 'أفضل نموذج': '3B–7B (CPU فقط)', 'السرعة (CPU)': '8–20 tok/s', 'السرعة (Apple Silicon)': 'n/a' },
+          ],
+          columns: ['لابتوبك', 'أفضل نموذج', 'السرعة (CPU)', 'السرعة (Apple Silicon)'],
+        },
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
@@ -1070,6 +1148,15 @@ schema: {
           ],
           image: '/images/ollama-terminal.svg',
           imageCaption: 'Ollama يشغّل Mistral Small على MacBook -- 22 رمزاً/ث على CPU بتكميم Q4_K_M.',
+        },
+        rag: {
+          id: 'rag-laptop',
+          title: 'هل يمكنك تشغيل RAG (الاسترجاع) على لابتوب؟',
+          content: [
+            '**نعم -- يعمل RAG بأريحية على لابتوب، لأن القيد الحاسم يظل نموذج المحادثة، لا طبقة الاسترجاع.** تتكوّن حزمة RAG على لابتوب من ثلاثة أجزاء: نموذج تضمين صغير، ومخزن متجهات محلي، ونموذج المحادثة الخاص بك.',
+            'نموذج التضمين صغير -- عادةً بضع مئات من الميغابايت -- فيضيف ضغطاً قليلاً على RAM. على لابتوب بسعة 8 GB يمكنك تشغيل نموذج محادثة 3B إضافة إلى نموذج تضمين صغير بأريحية؛ بـ 16 GB يتوفر هامش لنموذج محادثة 7B بجانب الاسترجاع.',
+            '**2 GB من RAM ليست قابلة للاستخدام واقعياً لـ RAG.** بعد نظام التشغيل، لا يبقى مكان لنموذج محادثة ونموذج تضمين معاً دون تبديل مكثّف، مما يخفض الاستدلال إلى 1–3 tok/s. خطّط لـ 8 GB كحد أدنى عملي.',
+          ],
         },
         useCase: {
           id: 'use-case',
@@ -1116,10 +1203,10 @@ schema: {
         bestModels: {
           id: 'best-models',
           title: 'أي نماذج LLM محلية تعمل بأفضل شكل على لابتوب؟',
-          content: 'اختيرت هذه النماذج خصيصاً لقيود أجهزة اللابتوب -- موازنةً بين الجودة واستخدام RAM وسرعة التوليد المستمر. للحصول على دليل تفصيلي حول متطلبات VRAM لنماذج وإعدادات لابتوب مختلفة، راجع [دليل متطلبات VRAM →](/ar/local-llms/how-much-vram-local-llm). ثبّت [Ollama](/ar/local-llms/how-to-install-ollama) لتشغيل أي منها بأمر واحد:',
+          content: 'اختيرت هذه النماذج خصيصاً لقيود أجهزة اللابتوب -- موازنةً بين الجودة واستخدام RAM وسرعة التوليد المستمر. للحصول على دليل تفصيلي حول متطلبات VRAM لنماذج وإعدادات لابتوب مختلفة، راجع [دليل متطلبات VRAM →](/ar/local-llms/how-much-vram-local-llm). ثبّت [Ollama](/ar/local-llms/how-to-install-ollama) لتشغيل أي منها بأمر واحد. تشغّل دون أي GPU؟ راجع الدليل المخصص: **[أفضل نماذج LLM المحلية لـ CPU فقط 2026](/ar/local-llms/best-cpu-only-llm)**.',
           rows: [
             { 'النموذج': 'Llama 3.2 3B', 'RAM': '2.5 GB', 'السرعة (CPU)': '25–45 tok/ث', 'الجودة': 'متوسطة', 'الأفضل لـ': 'أجهزة لابتوب بسعة 8 GB، مهام سريعة' },
-            { 'النموذج': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'السرعة (CPU)': '20–35 tok/ث', 'الجودة': 'متوسطة-عالية', 'الأفضل لـ': 'أجهزة لابتوب بسعة 8 GB، استدلال/كود' },
+            { 'النموذج': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'السرعة (CPU)': '20–35 tok/ث', 'الجودة': 'متوسطة-عالية', 'الأفضل لـ': 'أجهزة لابتوب بسعة 8 GB، استدلال/كود' },
             { 'النموذج': 'Mistral Small v0.3', 'RAM': '4.5 GB', 'السرعة (CPU)': '10–20 tok/ث', 'الجودة': 'عالية', 'الأفضل لـ': '8–16 GB، استخدام عام' },
             { 'النموذج': 'Qwen3 7B', 'RAM': '4.7 GB', 'السرعة (CPU)': '10–18 tok/ث', 'الجودة': 'عالية', 'الأفضل لـ': '8–16 GB، متعدد اللغات، كود' },
             { 'النموذج': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'السرعة (CPU)': '8–15 tok/ث', 'الجودة': 'عالية+', 'الأفضل لـ': 'أجهزة لابتوب بسعة 16 GB، أفضل جودة في ذلك الحجم' },
@@ -1147,6 +1234,7 @@ schema: {
             '**أجهزة MacBook بـ Apple Silicon (من M1 إلى M4) هي أفضل أجهزة لابتوب استهلاكية للاستدلال المحلي لنماذج LLM.** تعني بنية الذاكرة الموحدة أن GPU وCPU يتشاركان نفس بنك الذاكرة -- يستطيع MacBook Pro M3 بذاكرة 18 GB تشغيل نموذج 13B بالكامل في ذاكرة GPU، محققاً 50–80 tok/ث.',
             'أجهزة لابتوب Windows ببطاقات NVIDIA منفصلة قد تكون أسرع إذا كانت VRAM كافية (8 GB أو أكثر). تشغّل بطاقة NVIDIA RTX 4060 للابتوب (8 GB VRAM) نموذج 7B بسرعة 60–90 tok/ث -- مماثلة لـ Apple M3 Pro. العيب هو استهلاك بطارية أعلى وتوليد حرارة.',
             'أجهزة لابتوب Windows برسوميات Intel Iris Xe أو AMD Radeon المدمجة تستخدم استدلال CPU فقط، مما ينتج 8–20 tok/ث لنماذج 7B.',
+            '**أفضل النماذج للرسوميات المدمجة (Intel Iris Xe / AMD Radeon):** بذاكرة 16 GB من RAM، النقطة المثلى هي نموذج 3B–7B بصيغة Q4_K_M. يعمل Llama 3.2 3B في أعلى نطاق 8–20 tok/ث، بينما يقع Mistral Small (7B) في الطرف الأدنى لكنه يمنح جودة أفضل بشكل ملحوظ. لا تسرّع GPU المدمجة الاستدلال هنا -- CPU هو من يقوم بالعمل -- لذا أعطِ الأولوية لنموذج يبقى بأريحية ضمن RAM بدلاً من ملاحقة حجم أكبر. للحصول على إعداد منخفض الفئة خطوة بخطوة، راجع [أسرع نماذج LLM المحلية للحواسيب منخفضة الفئة](/ar/local-llms/fastest-local-llms-low-end-pcs).',
           ],
           rows: [
             { 'نوع اللابتوب': 'Apple M3 Pro (18 GB)', 'السرعة (7B)': '50–80 tok/ث', 'استهلاك البطارية': 'متوسط', 'النموذج الأقصى': '~13B' },
@@ -1218,6 +1306,18 @@ schema: {
           id: 'faq',
           title: 'الأسئلة الشائعة حول نماذج LLM المحلية على أجهزة لابتوب',
           faqs: [
+            {
+              q: 'ما أفضل نماذج Ollama لـ Intel Iris Xe بذاكرة 16 GB من RAM؟',
+              a: 'على لابتوب برسوميات Intel Iris Xe المدمجة وذاكرة 16 GB من RAM، يجري الاستدلال على CPU (لا يسرّعه Iris Xe)، لذا اختر نموذج 3B–7B بصيغة Q4_K_M. Llama 3.2 3B هو الأسرع في أعلى نطاق 8–20 tok/ث؛ Mistral Small (7B) أبطأ لكنه أعلى جودة. شغّل أياً منهما بـ `ollama run llama3.2:3b` أو `ollama run mistral`.',
+            },
+            {
+              q: 'هل يمكنك تشغيل RAG محلياً على لابتوب؟',
+              a: 'نعم. تتكوّن حزمة RAG على لابتوب من نموذج تضمين صغير ومخزن متجهات محلي ونموذج المحادثة الخاص بك. نموذج التضمين بضع مئات من الميغابايت فقط، لذا يظل نموذج المحادثة هو القيد الحاسم لـ RAM — يشغّل لابتوب بسعة 8 GB نموذج محادثة 3B مع الاسترجاع بأريحية. راجع [قسم RAG على لابتوب](#rag-laptop) أعلاه لتفصيل RAM.',
+            },
+            {
+              q: 'ما أفضل نموذج LLM محلي لـ CPU فقط على لابتوب؟',
+              a: 'لأجهزة اللابتوب بـ CPU فقط، Llama 3.2 3B (25–45 tok/ث) وMistral Small 7B (10–20 tok/ث) بصيغة Q4_K_M هما أفضل توازن بين السرعة والجودة. للمقارنة الكاملة المرتبة وأوامر Ollama، راجع الدليل المخصص: [أفضل نماذج LLM المحلية لـ CPU فقط 2026](/ar/local-llms/best-cpu-only-llm).',
+            },
             {
               q: 'هل سيضرّ تشغيل LLM محلي بلابتوبي مع الوقت؟',
               a: 'لا -- وحدات CPU وGPU الحديثة مصممة للتعامل مع الأحمال العالية المستمرة بأمان عبر خفض الأداء الحراري. تشغيل الاستدلال لساعات يعادل ترميز الفيديو أو الألعاب. حامل اللابتوب والتهوية المناسبة يمنعان تراكم الحرارة المفرط. يزيد عدد دورات البطارية مع الشحن الموصول المطوّل، وهو نمط تآكل طبيعي.',
@@ -1320,11 +1420,11 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'تشغيل نماذج LLM المحلية على لابتوب: RAM والسرعة والحرارة 2026',
+        'headline': 'تشغيل LLM محلي على لابتوب: ما يعمل على 8GB و16GB وApple Silicon (2026)',
         'description': 'شغّل نماذج LLM محلية على أجهزة لابتوب بذاكرة 8 GB من RAM. يغطي أفضل النماذج (Llama 3.2 3B، Mistral Small، Qwen3 7B)، وإصلاحات خفض الأداء الحراري، وتحسين البطارية، وإعداد تكميم Q4_K_M.',
         'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-on-laptop',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1349,7 +1449,7 @@ schema: {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': 'نموذج 3B. 2.5 GB من RAM. 25–45 tok/ث على CPU، 60–100 tok/ث على Apple Silicon. أفضل نموذج بداية لأجهزة لابتوب بسعة 8 GB.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': 'نموذج 3.8B. 3 GB من RAM. 20–35 tok/ث على CPU. أفضل استدلال وكود بأقل من 4 GB من RAM.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': 'نموذج 3.8B. 3 GB من RAM. 20–35 tok/ث على CPU. أفضل استدلال وكود بأقل من 4 GB من RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': 'نموذج 7B. 4.5 GB من RAM. 10–20 tok/ث على CPU. أفضل نموذج عام الأغراض لأجهزة لابتوب بسعة 8–16 GB.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': 'نموذج 7B. 4.7 GB من RAM. 10–18 tok/ث على CPU. الأفضل لمهام متعددة اللغات والكود على أجهزة لابتوب بسعة 8–16 GB.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'نموذج 8B. 5.5 GB من RAM. 8–15 tok/ث على CPU. أفضل جودة في ذلك الحجم لأجهزة لابتوب بسعة 16 GB.' },
@@ -1359,6 +1459,30 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل نماذج Ollama لـ Intel Iris Xe بذاكرة 16 GB من RAM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'على لابتوب برسوميات Intel Iris Xe المدمجة وذاكرة 16 GB من RAM، يجري الاستدلال على CPU (لا يسرّعه Iris Xe)، لذا اختر نموذج 3B–7B بصيغة Q4_K_M. Llama 3.2 3B هو الأسرع في أعلى نطاق 8–20 tok/ث؛ Mistral Small (7B) أبطأ لكنه أعلى جودة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنك تشغيل RAG محلياً على لابتوب؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. تتكوّن حزمة RAG على لابتوب من نموذج تضمين صغير ومخزن متجهات محلي ونموذج المحادثة الخاص بك. نموذج التضمين بضع مئات من الميغابايت فقط، لذا يظل نموذج المحادثة هو القيد الحاسم لـ RAM — يشغّل لابتوب بسعة 8 GB نموذج محادثة 3B مع الاسترجاع بأريحية. 2 GB من RAM ليست قابلة للاستخدام واقعياً لـ RAG.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل نموذج LLM محلي لـ CPU فقط على لابتوب؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لأجهزة اللابتوب بـ CPU فقط، Llama 3.2 3B (25–45 tok/ث) وMistral Small 7B (10–20 tok/ث) بصيغة Q4_K_M هما أفضل توازن بين السرعة والجودة. راجع الدليل المخصص أفضل نماذج LLM المحلية لـ CPU فقط 2026 للمقارنة الكاملة المرتبة.',
+            },
+          },
           {
             '@type': 'Question',
             'name': 'هل سيضرّ تشغيل LLM محلي بلابتوبي مع الوقت؟',
@@ -1459,19 +1583,21 @@ schema: {
     // thermals: { ..., image: '/images/laptop-stand-airflow.svg', imageCaption: '...' }
         de: {
       theme: 'Getting Started',
-      title: 'Lokale LLMs auf Laptops ausführen: Performance, Wärmemanagement und Modellwahl',
-      seoTitle: 'Llama & Phi auf 8-16GB Laptops: Thermals Guide 2026',
+      title: 'Lokales LLM auf einem Laptop: Was auf 8GB, 16GB & Apple Silicon läuft (2026)',
+      seoTitle: 'Lokales LLM auf einem Laptop (2026): 8GB, 16GB & Apple Silicon',
       intro: 'Ein lokales LLM auf einem Laptop zu betreiben ist möglich -- auch mit 8 GB RAM -- aber die Leistung hängt stark von Modellgröße, RAM und Thermalverhalten ab. Ein 7B-Modell erreicht 10–25 Token/Sek. auf der CPU oder 50–80 Token/Sek. auf Apple Silicon und macht Laptops damit tauglich für Entwicklung, Tests und einfache KI-Workflows.',
-      metaDescription: 'Llama 3.2 7B, Phi-4 Mini, Gemma auf 8-16GB Laptops. Thermal Throttling senkt Speed 20–40%. Apple Silicon vs Intel Iris Xe Benchmarks. Q4_K_M Leitfaden.',
+      metaDescription: 'Ja, Sie können ein lokales LLM auf einem Laptop ausführen — sogar mit 8 GB RAM. Sehen Sie genau, was auf 8 GB vs 16 GB vs Apple Silicon läuft, echte Token/Sek. nach Hardware, Thermalverhalten und die besten Modelle pro RAM-Stufe.',
       twitterDescription: '7B-Modelle auf 8 GB Laptops mit 10–25 Token/Sek. Apple Silicon M3: 50–80 Token/Sek. Thermal Throttling-Fix: Laptop-Ständer + Turbo Boost deaktivieren. Q4_K_M Guide.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-07',
+      dateModified: '2026-06-19',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'Local LLM Laptop',
       toc: [
+        { label: 'Kurze Antwort: Welches lokale LLM läuft auf Ihrem Laptop?', anchor: '#quick-answer-ram' },
         { label: 'Zusammenfassung', anchor: '#zusammenfassung' },
         { label: 'Können Sie ein Local LLM auf einem Laptop ausführen?', anchor: '#laptop-moglich' },
+        { label: 'Können Sie RAG auf einem Laptop ausführen?', anchor: '#rag-laptop' },
         { label: 'Welches Setup brauchen Sie?', anchor: '#use-case' },
         { label: 'Welche lokalen LLM-Modelle laufen am besten auf einem Laptop?', anchor: '#beste-modelle' },
         { label: 'Apple Silicon vs Windows-Laptop', anchor: '#apple-vs-windows' },
@@ -1486,6 +1612,20 @@ schema: {
       ],
       leadAnswerBlock: '**Ein lokales LLM auf einem Laptop auszuführen bedeutet, Sprachmodelle direkt auf Ihrem Computer bereitzustellen, ohne Cloud-APIs oder externe Datenübertragung.** Der Hauptvorteil ist vollständige Datenschutz und Offline-Funktionalität; die Leistung hängt von der Hardware ab (mindestens 8 GB RAM für 7B-Modelle, 16 GB für 13B).',
       sections: {
+        quickAnswerByRam: {
+          id: 'quick-answer-ram',
+          title: 'Kurze Antwort: Welches lokale LLM läuft auf Ihrem Laptop (8GB, 16GB, Apple Silicon)?',
+          content: [
+            'Sie können ein lokales LLM auf jedem Laptop mit 8 GB RAM ausführen — ein 7B-Modell in Q4_K_M läuft mit 10–25 Token/Sek. auf der CPU und 30–80 Token/Sek. auf Apple Silicon. Wählen Sie unten das passende Modell für Ihre Hardware:',
+          ],
+          rows: [
+            { 'Ihr Laptop': '8 GB RAM', 'Bestes Modell': 'Llama 3.2 3B / Mistral 7B Q4_K_M', 'Geschwindigkeit (CPU)': '10–25 Token/Sek.', 'Geschwindigkeit (Apple Silicon)': '30–80 Token/Sek.' },
+            { 'Ihr Laptop': '16 GB RAM', 'Bestes Modell': 'Llama 3.1 8B / Qwen2.5 14B Q4_K_M', 'Geschwindigkeit (CPU)': '8–18 Token/Sek.', 'Geschwindigkeit (Apple Silicon)': '50–80 Token/Sek.' },
+            { 'Ihr Laptop': 'Apple M-Serie (8–18 GB)', 'Bestes Modell': 'bis zu 13B im vereinheitlichten Speicher', 'Geschwindigkeit (CPU)': '—', 'Geschwindigkeit (Apple Silicon)': '50–80 Token/Sek.' },
+            { 'Ihr Laptop': 'Intel Iris Xe / AMD iGPU', 'Bestes Modell': '3B–7B (nur CPU)', 'Geschwindigkeit (CPU)': '8–20 Token/Sek.', 'Geschwindigkeit (Apple Silicon)': 'n/a' },
+          ],
+          columns: ['Ihr Laptop', 'Bestes Modell', 'Geschwindigkeit (CPU)', 'Geschwindigkeit (Apple Silicon)'],
+        },
         tldr: {
           id: 'key-takeaways',
 
@@ -1525,6 +1665,15 @@ schema: {
           ],
           blockquote: 'Ein Local LLM auf einem Laptop ist eine Modelldatei, die auf Ihrer CPU oder Ihrem RAM läuft -- kein Internet, keine API, Token werden lokal mit 10-80 Token/Sek. generiert, abhängig von der Hardware.',
           blockquoteSource: 'In einem Satz',
+        },
+        rag: {
+          id: 'rag-laptop',
+          title: 'Können Sie RAG (Retrieval) auf einem Laptop ausführen?',
+          content: [
+            '**Ja -- RAG läuft problemlos auf einem Laptop, weil der begrenzende Faktor weiterhin das Chat-Modell ist, nicht die Retrieval-Schicht.** Ein Laptop-RAG-Stack besteht aus drei Teilen: einem kleinen Embedding-Modell, einem lokalen Vektorspeicher und Ihrem Chat-Modell.',
+            'Das Embedding-Modell ist klein -- typischerweise einige Hundert MB -- und belastet den RAM daher kaum. Auf einem 8-GB-Laptop können Sie ein 3B-Chat-Modell zusammen mit einem kleinen Embedding-Modell komfortabel ausführen; bei 16 GB haben Sie Spielraum für ein 7B-Chat-Modell neben dem Retrieval.',
+            '**2 GB RAM sind für RAG realistisch nicht nutzbar.** Nach dem OS bleibt kein Platz für ein Chat-Modell und ein Embedding-Modell ohne starkes Swapping, was die Inferenz auf 1–3 Token/Sek. drückt. Planen Sie 8 GB als praktische Untergrenze.',
+          ],
         },
         useCase: {
           id: 'use-case',
@@ -1569,10 +1718,10 @@ schema: {
         },
         bestModels: {
           title: 'Was sind die besten Local LLM-Modelle für Laptops?',
-          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt -- Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Für detaillierte Anleitungen zu VRAM-Anforderungen in verschiedenen Laptop-Konfigurationen siehe den [VRAM-Anforderungsleitfaden →](/de/local-llms/how-much-vram-local-llm). Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen:',
+          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt -- Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Für detaillierte Anleitungen zu VRAM-Anforderungen in verschiedenen Laptop-Konfigurationen siehe den [VRAM-Anforderungsleitfaden →](/de/local-llms/how-much-vram-local-llm). Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen. Sie betreiben das Modell ganz ohne GPU? Siehe den entsprechenden Leitfaden: **[Beste CPU-only Local LLMs 2026](/de/local-llms/best-cpu-only-llm)**.',
           rows: [
             { 'Modell': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Geschwindigkeit (CPU)': '25-45 Token/s', 'Qualität': 'Mittel', 'Beste für': '8 GB Laptops, schnelle Aufgaben' },
-            { 'Modell': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20-35 Token/s', 'Qualität': 'Mittel-Hoch', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
+            { 'Modell': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20-35 Token/s', 'Qualität': 'Mittel-Hoch', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
             { 'Modell': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Geschwindigkeit (CPU)': '10-20 Token/s', 'Qualität': 'Hoch', 'Beste für': '8-16 GB, allgemeine Nutzung' },
             { 'Modell': 'Qwen3 7B', 'RAM': '4,7 GB', 'Geschwindigkeit (CPU)': '10-18 Token/s', 'Qualität': 'Hoch', 'Beste für': '8-16 GB, mehrsprachig, Coding' },
             { 'Modell': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Geschwindigkeit (CPU)': '8-15 Token/s', 'Qualität': 'Hoch+', 'Beste für': '16 GB Laptops, beste Qualität bei dieser Größe' },
@@ -1599,6 +1748,7 @@ schema: {
             '**Ab April 2026 sind Apple Silicon MacBooks (M1 bis M4) die besten Consumer-Laptops für lokale LLM-Inferenz.** Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen -- ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50-80 Token/Sek.',
             'Windows-Laptops mit diskreten NVIDIA-GPUs können schneller sein, wenn der VRAM ausreichend ist (8 GB+). Eine NVIDIA RTX 4060 Laptop-GPU (8 GB VRAM) führt ein 7B-Modell mit 60-90 Token/Sek. aus -- vergleichbar mit Apple M3 Pro. Der Nachteil ist höherer Batterieverbrauch und Wärmeerzeugung.',
             'Windows-Laptops mit integrierter Intel Iris Xe oder AMD Radeon Grafik verwenden nur CPU-Inferenz, was zu 8-20 Token/Sek. für 7B-Modelle führt.',
+            '**Beste Modelle für integrierte Grafik (Intel Iris Xe / AMD Radeon):** Mit 16 GB RAM ist der Sweet Spot ein 3B–7B-Modell in Q4_K_M. Llama 3.2 3B läuft am oberen Ende des Bereichs von 8–20 Token/Sek., während Mistral Small (7B) am unteren Ende liegt, aber spürbar bessere Qualität liefert. Die integrierte GPU beschleunigt die Inferenz hier nicht -- die CPU übernimmt die Arbeit -- priorisieren Sie also ein Modell, das komfortabel im RAM bleibt, statt eine größere Größe anzustreben. Für eine Schritt-für-Schritt-Einrichtung auf schwacher Hardware siehe [Schnellste Local LLMs für Low-End-PCs](/de/local-llms/fastest-local-llms-low-end-pcs).',
           ],
           rows: [
             { 'Laptop-Typ': 'Apple M3 Pro (18 GB)', 'Geschwindigkeit (7B)': '50-80 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~13B' },
@@ -1687,6 +1837,18 @@ schema: {
           title: 'Häufig gestellte Fragen zum Ausführen lokaler LLMs auf Laptops',
           faqs: [
             {
+              q: 'Was sind die besten Ollama-Modelle für Intel Iris Xe mit 16 GB RAM?',
+              a: 'Auf einem Laptop mit integrierter Intel Iris Xe Grafik und 16 GB RAM läuft die Inferenz auf der CPU (Iris Xe beschleunigt sie nicht), wählen Sie also ein 3B–7B-Modell in Q4_K_M. Llama 3.2 3B ist am schnellsten am oberen Ende des Bereichs von 8–20 Token/Sek.; Mistral Small (7B) ist langsamer, aber von höherer Qualität. Führen Sie beide mit `ollama run llama3.2:3b` oder `ollama run mistral` aus.',
+            },
+            {
+              q: 'Können Sie RAG lokal auf einem Laptop ausführen?',
+              a: 'Ja. Ein Laptop-RAG-Stack besteht aus einem kleinen Embedding-Modell, einem lokalen Vektorspeicher und Ihrem Chat-Modell. Das Embedding-Modell ist nur einige Hundert MB groß, sodass das Chat-Modell die begrenzende RAM-Beschränkung bleibt — ein 8-GB-Laptop führt ein 3B-Chat-Modell mit Retrieval komfortabel aus. Siehe den [Abschnitt RAG auf einem Laptop](#rag-laptop) oben für die RAM-Aufschlüsselung.',
+            },
+            {
+              q: 'Was ist das beste CPU-only Local LLM für einen Laptop?',
+              a: 'Für CPU-only-Laptops bieten Llama 3.2 3B (25–45 Token/Sek.) und Mistral Small 7B (10–20 Token/Sek.) in Q4_K_M die beste Balance aus Geschwindigkeit und Qualität. Für einen vollständigen, gerankten Vergleich und Ollama-Befehle siehe den entsprechenden Leitfaden: [Beste CPU-only Local LLMs 2026](/de/local-llms/best-cpu-only-llm).',
+            },
+            {
               q: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?',
               a: 'Nein -- moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten über Thermal Throttling ausgelegt. Das Ausführen von Inferenz stundenlang ist gleichbedeutend mit Videokodierung oder Gaming. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung. Die Akkuzyklenzahl erhöht sich mit längeren eingesteckten Ladevorgängen, was ein normales Verschleißmuster ist.',
             },
@@ -1754,11 +1916,11 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Local LLMs auf Laptop (8-16GB VRAM) - Performance Guide 2026',
+        'headline': 'Lokales LLM auf einem Laptop: Was auf 8GB, 16GB & Apple Silicon läuft (2026)',
         'description': 'Praxis-Guide für leistungsstarke Local LLMs auf Laptops mit wenig VRAM. Mit Quantisierungs-Tricks, besten Modellen und echten Performance-Benchmarks.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -1796,6 +1958,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'Was sind die besten Ollama-Modelle für Intel Iris Xe mit 16 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Auf einem Laptop mit integrierter Intel Iris Xe Grafik und 16 GB RAM läuft die Inferenz auf der CPU (Iris Xe beschleunigt sie nicht), wählen Sie also ein 3B–7B-Modell in Q4_K_M. Llama 3.2 3B ist am schnellsten am oberen Ende des Bereichs von 8–20 Token/Sek.; Mistral Small (7B) ist langsamer, aber von höherer Qualität.' } },
+          { '@type': 'Question', name: 'Können Sie RAG lokal auf einem Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ein Laptop-RAG-Stack besteht aus einem kleinen Embedding-Modell, einem lokalen Vektorspeicher und Ihrem Chat-Modell. Das Embedding-Modell ist nur einige Hundert MB groß, sodass das Chat-Modell die begrenzende RAM-Beschränkung bleibt -- ein 8-GB-Laptop führt ein 3B-Chat-Modell mit Retrieval komfortabel aus. 2 GB RAM sind für RAG realistisch nicht nutzbar.' } },
+          { '@type': 'Question', name: 'Was ist das beste CPU-only Local LLM für einen Laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Für CPU-only-Laptops bieten Llama 3.2 3B (25–45 Token/Sek.) und Mistral Small 7B (10–20 Token/Sek.) in Q4_K_M die beste Balance aus Geschwindigkeit und Qualität. Siehe den entsprechenden Leitfaden Beste CPU-only Local LLMs 2026 für einen vollständigen, gerankten Vergleich.' } },
           { '@type': 'Question', name: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein -- moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten ausgelegt. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung.' } },
           { '@type': 'Question', name: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Kaum. Ein 2B-Modell benötigt etwa 1,7 GB RAM für das Modell, das OS benötigt 2-3 GB gleichzeitig. Bei 4 GB Gesamt-RAM wird Swap-Nutzung Inferenz 5-10× langsamer machen.' } },
           { '@type': 'Question', name: 'Benötigt mein Laptop eine dedizierte GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Alle großen Local LLM-Tools laufen nur auf CPU. Eine dedizierte GPU beschleunigt die Inferenz erheblich, aber 3B-7B-Modelle sind mit 10-30 Token/Sek. nur auf CPU nutzbar.' } },
@@ -1813,7 +1978,7 @@ schema: {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2,5 GB RAM. 25-45 Token/s CPU. Beste für 8 GB Laptops und schnelle Aufgaben.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3 GB RAM. 20-35 Token/s CPU. Beste für 8 GB Laptops, Reasoning und Coding.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3 GB RAM. 20-35 Token/s CPU. Beste für 8 GB Laptops, Reasoning und Coding.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4,5 GB RAM. 10-20 Token/s CPU. Beste für 8-16 GB allgemeine Nutzung.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4,7 GB RAM. 10-18 Token/s CPU. Beste für mehrsprachig und Coding auf 8-16 GB.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5,5 GB RAM. 8-15 Token/s CPU. Beste Qualität bei dieser Größe für 16 GB Laptops.' }
@@ -1823,10 +1988,10 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
-      title: 'LLMs Locais em Notebook: RAM, Velocidade e Temperatura 2026',
-      seoTitle: 'Llama e Phi em notebooks de 8–16 GB: velocidade e térmica',
+      title: 'LLM Local em um Notebook: O Que Roda em 8GB, 16GB e Apple Silicon (2026)',
+      seoTitle: 'LLM Local em um Notebook (2026): 8GB, 16GB e Apple Silicon',
       intro: 'Executar um LLM local em um notebook é possível — mesmo com 8 GB de RAM — mas o desempenho depende muito do tamanho do modelo, da RAM e do gerenciamento térmico. Um modelo 7B roda a 10–25 tok/s na CPU ou 50–80 tok/s no Apple Silicon, tornando notebooks viáveis para desenvolvimento, testes e fluxos de trabalho de IA leves.',
-      metaDescription: 'Execute Llama 3.2 7B, Phi-4 Mini e Gemma 2B em notebooks de 8–16 GB. O throttling térmico reduz a velocidade em 20–40%. Apple Silicon vs Intel Iris Xe. Guia Q4_K_M.',
+      metaDescription: 'Sim, você pode executar um LLM local em um notebook — até com 8 GB de RAM. Veja exatamente o que roda em 8 GB vs 16 GB vs Apple Silicon, tok/s reais por hardware, temperatura e os melhores modelos por nível de RAM.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Um modelo 7B roda a 10–25 tok/s na CPU ou 50–80 tok/s no Apple Silicon. Para notebooks de 8 GB: use modelos 3B–7B em Q4_K_M. O throttling térmico reduz a velocidade em 20–40% após 10–15 minutos de uso contínuo. Solução: base de resfriamento + desativar Turbo Boost.**',
       audience: 'Usuários que querem executar LLMs locais em notebooks com hardware de consumo',
@@ -1844,7 +2009,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'LLMs Locais em Notebook: RAM, Velocidade e Temperatura 2026',
+        'headline': 'LLM Local em um Notebook: O Que Roda em 8GB, 16GB e Apple Silicon (2026)',
         'description': 'Execute Llama 3.2 7B, Phi-4 Mini em notebooks de 8–16 GB. Throttling térmico, Apple Silicon vs CPU Intel, seleção de modelos Q4_K_M. 2026.',
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-on-laptop',
         'inLanguage': 'pt-BR',
@@ -1869,19 +2034,21 @@ schema: {
     },
     fr: {
       theme: 'Getting Started',
-      title: 'Comment exécuter des Local LLMs sur un ordinateur portable: Performance, Thermique et Sélection de modèle',
-      seoTitle: 'Llama & Phi sur 8-16GB Ordinateurs: Thermique 2026',
+      title: 'LLM local sur ordinateur portable : ce qui tourne sur 8 Go, 16 Go et Apple Silicon (2026)',
+      seoTitle: 'LLM local sur portable (2026) : 8 Go, 16 Go, Apple Silicon',
       intro: 'Exécuter un Local LLM sur un ordinateur portable est possible — même avec 8 Go de RAM — mais les performances dépendent fortement de la taille du modèle, de la RAM et de la gestion thermique. Un modèle 7B tourne à 10–25 token/sec sur CPU ou 50–80 token/sec sur Apple Silicon, rendant les ordinateurs portables viables pour le développement, les tests et les workflows IA légers.',
-      metaDescription: 'Llama 3.2 7B, Phi-4 Mini, Gemma sur 8-16GB portables. Étranglement thermique réduit vitesse 20–40%. Apple Silicon vs Intel Iris Xe. Guide Q4_K_M.',
+      metaDescription: 'Oui, vous pouvez exécuter un LLM local sur un portable — même avec 8 Go de RAM. Découvrez ce qui tourne sur 8 Go vs 16 Go vs Apple Silicon, les tok/sec réels par matériel, la thermique et les meilleurs modèles par palier de RAM.',
       twitterDescription: 'Modèles 7B sur ordinateurs portables 8 Go avec 10–25 tok/sec. Apple Silicon M3: 50–80 tok/sec. Correction throttling: stand + désactiver Turbo Boost. Guide Q4_K_M.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-07',
+      dateModified: '2026-06-19',
       readTime: '8 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Local LLM ordinateur portable',
       toc: [
+        { label: 'Réponse rapide : quel LLM local tourne sur votre portable ?', anchor: '#quick-answer-ram' },
         { label: 'Résumé clé', anchor: '#resume-cle' },
         { label: 'Pouvez-vous exécuter un Local LLM sur un ordinateur portable?', anchor: '#peux-executer' },
+        { label: 'Peut-on faire du RAG sur un ordinateur portable ?', anchor: '#rag-laptop' },
         { label: 'Quelle configuration vous convient?', anchor: '#use-case' },
         { label: '8 GB RAM vs 16 GB RAM', anchor: '#8gb-vs-16gb-ram' },
         { label: 'Quels modèles LLM locaux fonctionnent le mieux sur un ordinateur portable?', anchor: '#meilleurs-modeles' },
@@ -1897,6 +2064,20 @@ schema: {
       ],
       leadAnswerBlock: '**Exécuter un Local LLM sur un ordinateur portable signifie déployer des modèles de langage directement sur votre ordinateur sans APIs cloud ni transmission de données externe.** L\'avantage principal est une confidentialité complète et une capacité hors ligne; les performances dépendent du matériel (8 Go de RAM minimum pour les modèles 7B, 16 Go pour 13B).',
       sections: {
+        quickAnswerByRam: {
+          id: 'quick-answer-ram',
+          title: 'Réponse rapide : quel LLM local tourne sur votre portable (8 Go, 16 Go, Apple Silicon) ?',
+          content: [
+            'Vous pouvez exécuter un LLM local sur tout portable disposant de 8 Go de RAM — un modèle 7B en Q4_K_M tourne à 10–25 tok/s sur CPU et 30–80 tok/s sur Apple Silicon. Associez votre matériel au bon modèle ci-dessous :',
+          ],
+          rows: [
+            { 'Votre portable': '8 Go RAM', 'Meilleur modèle': 'Llama 3.2 3B / Mistral 7B Q4_K_M', 'Vitesse (CPU)': '10–25 tok/s', 'Vitesse (Apple Silicon)': '30–80 tok/s' },
+            { 'Votre portable': '16 Go RAM', 'Meilleur modèle': 'Llama 3.1 8B / Qwen2.5 14B Q4_K_M', 'Vitesse (CPU)': '8–18 tok/s', 'Vitesse (Apple Silicon)': '50–80 tok/s' },
+            { 'Votre portable': 'Apple série M (8–18 Go)', 'Meilleur modèle': 'jusqu\'à 13B en mémoire unifiée', 'Vitesse (CPU)': '—', 'Vitesse (Apple Silicon)': '50–80 tok/s' },
+            { 'Votre portable': 'Intel Iris Xe / iGPU AMD', 'Meilleur modèle': '3B–7B (CPU uniquement)', 'Vitesse (CPU)': '8–20 tok/s', 'Vitesse (Apple Silicon)': 'n/a' },
+          ],
+          columns: ['Votre portable', 'Meilleur modèle', 'Vitesse (CPU)', 'Vitesse (Apple Silicon)'],
+        },
         tldr: {
           id: 'key-takeaways',
 
@@ -1936,6 +2117,15 @@ schema: {
           ],
           blockquote: 'Un Local LLM sur un ordinateur portable est un fichier de modèle exécuté sur votre CPU ou RAM -- pas d\'internet, pas d\'API, tokens générés localement à 10-80 token/sec selon le matériel.',
           blockquoteSource: 'En une phrase',
+        },
+        rag: {
+          id: 'rag-laptop',
+          title: 'Peut-on faire du RAG (récupération) sur un ordinateur portable ?',
+          content: [
+            '**Oui -- le RAG tourne sans difficulté sur un ordinateur portable, car la contrainte déterminante reste le modèle de chat, pas la couche de récupération.** Une pile RAG sur portable comporte trois éléments : un petit modèle d\'embeddings, un magasin de vecteurs local et votre modèle de chat.',
+            'Le modèle d\'embeddings est léger -- généralement quelques centaines de Mo -- et pèse donc peu sur la RAM. Sur un portable 8 Go, vous pouvez exécuter confortablement un modèle de chat 3B plus un petit modèle d\'embeddings ; avec 16 Go, vous avez la marge pour un modèle de chat 7B aux côtés de la récupération.',
+            '**2 Go de RAM ne suffisent pas pour le RAG.** Après l\'OS, il ne reste pas de place pour un modèle de chat et un modèle d\'embeddings sans swap intensif, ce qui fait chuter l\'inférence à 1–3 tok/s. Visez 8 Go comme plancher pratique.',
+          ],
         },
         useCase: {
           id: 'use-case',
@@ -1980,10 +2170,10 @@ schema: {
         },
         bestModels: {
           title: 'Quels sont les meilleurs modèles Local LLM pour ordinateurs portables?',
-          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable -- équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Pour des conseils détaillés sur les exigences VRAM selon les configurations portables, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande:',
+          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable -- équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Pour des conseils détaillés sur les exigences VRAM selon les configurations portables, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande. Vous tournez sans aucun GPU ? Consultez le guide dédié : **[Meilleurs LLM locaux CPU uniquement 2026](/fr/local-llms/best-cpu-only-llm)**.',
           rows: [
             { 'Modèle': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Vitesse (CPU)': '25-45 token/s', 'Qualité': 'Moyenne', 'Meilleur pour': 'Ordinateurs portables 8 GB, tâches rapides' },
-            { 'Modèle': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Vitesse (CPU)': '20-35 token/s', 'Qualité': 'Moyenne-Haute', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
+            { 'Modèle': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Vitesse (CPU)': '20-35 token/s', 'Qualité': 'Moyenne-Haute', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
             { 'Modèle': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Vitesse (CPU)': '10-20 token/s', 'Qualité': 'Haute', 'Meilleur pour': '8-16 GB, utilisation générale' },
             { 'Modèle': 'Qwen3 7B', 'RAM': '4,7 GB', 'Vitesse (CPU)': '10-18 token/s', 'Qualité': 'Haute', 'Meilleur pour': '8-16 GB, multilingue, coding' },
             { 'Modèle': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Vitesse (CPU)': '8-15 token/s', 'Qualité': 'Haute+', 'Meilleur pour': 'Ordinateurs portables 16 GB, meilleure qualité à cette taille' },
@@ -2010,6 +2200,7 @@ schema: {
             '**À partir d\'avril 2026, les MacBooks Apple Silicon (M1 à M4) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM.** L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire -- un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50-80 token/sec.',
             'Les ordinateurs portables Windows avec GPU NVIDIA discrets peuvent être plus rapides si la VRAM est suffisante (8 GB+). Un GPU ordinateur portable NVIDIA RTX 4060 (8 GB VRAM) exécute un modèle 7B à 60-90 token/sec -- comparable à Apple M3 Pro. L\'inconvénient est une consommation électrique plus élevée et une génération de chaleur plus importante.',
             'Les ordinateurs portables Windows exécutant un graphique intégré Intel Iris Xe ou AMD Radeon utilisent uniquement l\'inférence CPU, ce qui se traduit par 8-20 token/sec pour les modèles 7B.',
+            '**Meilleurs modèles pour les graphiques intégrés (Intel Iris Xe / AMD Radeon) :** Avec 16 Go de RAM, l\'optimal est un modèle 3B–7B en Q4_K_M. Llama 3.2 3B atteint le haut de la plage 8–20 token/sec, tandis que Mistral Small (7B) se situe plus bas mais offre une qualité nettement supérieure. Le GPU intégré n\'accélère pas l\'inférence ici -- c\'est le CPU qui travaille -- privilégiez donc un modèle qui reste confortablement dans la RAM plutôt qu\'une taille supérieure. Pour une configuration bas de gamme pas à pas, voir [Local LLMs les plus rapides pour PC d\'entrée de gamme](/fr/local-llms/fastest-local-llms-low-end-pcs).',
           ],
           rows: [
             { 'Type d\'ordinateur portable': 'Apple M3 Pro (18 GB)', 'Vitesse (7B)': '50-80 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~13B' },
@@ -2097,6 +2288,18 @@ schema: {
           title: 'Questions fréquemment posées sur l\'exécution de Local LLMs sur ordinateurs portables',
           faqs: [
             {
+              q: 'Quels sont les meilleurs modèles Ollama pour Intel Iris Xe avec 16 Go de RAM ?',
+              a: 'Sur un portable doté d\'un graphique intégré Intel Iris Xe et de 16 Go de RAM, l\'inférence s\'exécute sur le CPU (Iris Xe ne l\'accélère pas) : choisissez donc un modèle 3B–7B en Q4_K_M. Llama 3.2 3B est le plus rapide, en haut de la plage 8–20 token/sec ; Mistral Small (7B) est plus lent mais de meilleure qualité. Lancez l\'un ou l\'autre avec `ollama run llama3.2:3b` ou `ollama run mistral`.',
+            },
+            {
+              q: 'Peut-on faire du RAG localement sur un ordinateur portable ?',
+              a: 'Oui. Une pile RAG sur portable se compose d\'un petit modèle d\'embeddings, d\'un magasin de vecteurs local et de votre modèle de chat. Le modèle d\'embeddings ne pèse que quelques centaines de Mo : le modèle de chat reste donc la contrainte déterminante de RAM — un portable 8 Go exécute confortablement un modèle de chat 3B avec récupération. Voir la [section RAG sur portable](#rag-laptop) ci-dessus pour le détail de la RAM.',
+            },
+            {
+              q: 'Quel est le meilleur LLM local CPU uniquement pour un portable ?',
+              a: 'Pour les portables sans GPU, Llama 3.2 3B (25–45 token/sec) et Mistral Small 7B (10–20 token/sec) en Q4_K_M offrent le meilleur équilibre vitesse/qualité. Pour un comparatif classé complet et les commandes Ollama, consultez le guide dédié : [Meilleurs LLM locaux CPU uniquement 2026](/fr/local-llms/best-cpu-only-llm).',
+            },
+            {
               q: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?',
               a: 'Non -- les CPU et GPU modernes sont conçus pour gérer en toute sécurité les charges élevées continues via l\'étranglement thermique. L\'exécution de l\'inférence pendant des heures est équivalente à l\'encodage vidéo ou aux jeux. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur. Le nombre de cycles de batterie augmente avec les recharges prolongées branchées, ce qui est un modèle d\'usure normal.',
             },
@@ -2163,11 +2366,11 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Local LLMs sur ordinateur portable (8-16 Go VRAM) - Guide Performance 2026',
+        'headline': 'LLM local sur ordinateur portable : ce qui tourne sur 8 Go, 16 Go et Apple Silicon (2026)',
         'description': 'Guide pratique pour exécuter des Local LLMs puissants avec peu de VRAM. Astuces de quantification, meilleurs modèles et benchmarks réels.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -2205,6 +2408,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'Quels sont les meilleurs modèles Ollama pour Intel Iris Xe avec 16 Go de RAM ?', acceptedAnswer: { '@type': 'Answer', text: 'Sur un portable doté d\'un graphique intégré Intel Iris Xe et de 16 Go de RAM, l\'inférence s\'exécute sur le CPU (Iris Xe ne l\'accélère pas) : choisissez un modèle 3B–7B en Q4_K_M. Llama 3.2 3B est le plus rapide, en haut de la plage 8–20 token/sec ; Mistral Small (7B) est plus lent mais de meilleure qualité.' } },
+          { '@type': 'Question', name: 'Peut-on faire du RAG localement sur un ordinateur portable ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Une pile RAG sur portable se compose d\'un petit modèle d\'embeddings, d\'un magasin de vecteurs local et de votre modèle de chat. Le modèle d\'embeddings ne pèse que quelques centaines de Mo : le modèle de chat reste donc la contrainte déterminante de RAM — un portable 8 Go exécute confortablement un modèle de chat 3B avec récupération. 2 Go de RAM ne suffisent pas pour le RAG.' } },
+          { '@type': 'Question', name: 'Quel est le meilleur LLM local CPU uniquement pour un portable ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour les portables sans GPU, Llama 3.2 3B (25–45 token/sec) et Mistral Small 7B (10–20 token/sec) en Q4_K_M offrent le meilleur équilibre vitesse/qualité. Consultez le guide dédié Meilleurs LLM locaux CPU uniquement 2026 pour un comparatif classé complet.' } },
           { '@type': 'Question', name: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?', acceptedAnswer: { '@type': 'Answer', text: 'Non -- les CPU et GPU modernes gèrent les charges élevées continues en toute sécurité. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur.' } },
           { '@type': 'Question', name: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'À peine. Un modèle 2B nécessite environ 1,7 GB de RAM, l\'OS a besoin de 2-3 GB simultanément. Avec 4 GB au total, l\'utilisation d\'échange rendra l\'inférence 5-10× plus lente.' } },
           { '@type': 'Question', name: 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Tous les principaux outils Local LLM fonctionnent uniquement sur CPU. Un GPU dédié accélère l\'inférence, mais les modèles 3B-7B sont utilisables à 10-30 token/sec uniquement sur CPU.' } },
@@ -2222,7 +2428,7 @@ schema: {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2,5 GB RAM. 25-45 token/s CPU. Meilleur pour ordinateurs portables 8 GB et tâches rapides.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3 GB RAM. 20-35 token/s CPU. Meilleur pour ordinateurs portables 8 GB, reasoning et coding.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3 GB RAM. 20-35 token/s CPU. Meilleur pour ordinateurs portables 8 GB, reasoning et coding.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4,5 GB RAM. 10-20 token/s CPU. Meilleur pour utilisation générale 8-16 GB.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4,7 GB RAM. 10-18 token/s CPU. Meilleur pour multilingue et coding sur 8-16 GB.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5,5 GB RAM. 8-15 token/s CPU. Meilleure qualité à cette taille pour ordinateurs portables 16 GB.' }
@@ -2231,19 +2437,21 @@ schema: {
     },
         ja: {
       theme: 'Getting Started',
-      title: 'ノートパソコンでローカルLLMを動かす方法：パフォーマンス、発熱管理、モデル選択',
-      seoTitle: 'Llama & Phi 8-16GB ノートPC: 熱節流対策 2026',
+      title: 'ノートパソコンでローカルLLM：8GB・16GB・Apple Siliconで動くもの（2026）',
+      seoTitle: 'ノートパソコンでローカルLLM（2026）：8GB・16GB・Apple Silicon',
       intro: 'ノートパソコンでローカルLLMを実行することは可能です――8GB RAMでも動作しますが、パフォーマンスはモデルサイズ、RAM、発熱に大きく左右されます。7BモデルはCPUで10–25トークン/秒、Apple Siliconで50–80トークン/秒で動作し、開発・テスト・軽量AIワークフローにノートパソコンを十分活用できます。',
-      metaDescription: 'Llama 3.2 7B、Phi-4 Mini、Gemma 8-16GB ノートPC運用ガイド。熱節流で20-40%速度低下。Apple Silicon vs Intel Iris Xe。Q4_K_M完全解説。',
+      metaDescription: 'はい、ノートパソコンでローカルLLMを実行できます――8GB RAMでも可能です。8GB・16GB・Apple Siliconでそれぞれ何が動くか、ハードウェア別の実測トークン/秒、発熱、RAM階層ごとの最適モデルを正確に確認できます。',
       twitterDescription: '7B実行: 8GB ノートPCで 10–25 トークン/秒。Apple Silicon M3: 50–80 トークン/秒。熱対策: スタンド使用＋Turbo Boost無効化。Q4_K_M ガイド。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-07',
+      dateModified: '2026-06-19',
       readTime: '8分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'ノートパソコン向けローカルLLM',
       toc: [
+        { label: 'クイック回答：どのローカルLLMがあなたのノートパソコンで動くか？', anchor: '#quick-answer-ram' },
         { label: '重要なポイント', anchor: '#key-points' },
         { label: 'ノートパソコンでローカルLLMを実行できますか？', anchor: '#can-run' },
+        { label: 'ノートパソコンでRAGを実行できますか？', anchor: '#rag-laptop' },
         { label: '自分に合った構成は？', anchor: '#use-case' },
         { label: '8GB RAM vs 16GB RAM', anchor: '#ram-comparison' },
         { label: 'ノートパソコンに最適なローカルLLMモデルはどれですか？', anchor: '#best-models' },
@@ -2259,6 +2467,20 @@ schema: {
       ],
       leadAnswerBlock: '**ノートパソコンでローカルLLMを実行することは、クラウドAPIや外部データ転送なしに言語モデルをコンピュータに直接デプロイすることを意味します。** 主な利点は完全なプライバシーとオフライン機能です。パフォーマンスはハードウェアに依存します（7Bモデルの場合最小8GB RAM、13Bの場合16GB）。',
       sections: {
+        quickAnswerByRam: {
+          id: 'quick-answer-ram',
+          title: 'クイック回答：どのローカルLLMがあなたのノートパソコンで動くか（8GB・16GB・Apple Silicon）？',
+          content: [
+            '8GB RAMを搭載したどのノートパソコンでもローカルLLMを実行できます――Q4_K_Mの7BモデルはCPUで10–25トークン/秒、Apple Siliconで30–80トークン/秒で動作します。以下の表でお使いのハードウェアに合ったモデルを選んでください：',
+          ],
+          rows: [
+            { 'あなたのノートパソコン': '8GB RAM', '最適なモデル': 'Llama 3.2 3B / Mistral 7B Q4_K_M', '速度（CPU）': '10–25トークン/秒', '速度（Apple Silicon）': '30–80トークン/秒' },
+            { 'あなたのノートパソコン': '16GB RAM', '最適なモデル': 'Llama 3.1 8B / Qwen2.5 14B Q4_K_M', '速度（CPU）': '8–18トークン/秒', '速度（Apple Silicon）': '50–80トークン/秒' },
+            { 'あなたのノートパソコン': 'Apple Mシリーズ（8–18GB）', '最適なモデル': '統合メモリで最大13B', '速度（CPU）': '—', '速度（Apple Silicon）': '50–80トークン/秒' },
+            { 'あなたのノートパソコン': 'Intel Iris Xe / AMD iGPU', '最適なモデル': '3B–7B（CPUのみ）', '速度（CPU）': '8–20トークン/秒', '速度（Apple Silicon）': 'n/a' },
+          ],
+          columns: ['あなたのノートパソコン', '最適なモデル', '速度（CPU）', '速度（Apple Silicon）'],
+        },
         tldr: {
           id: 'key-takeaways',
 
@@ -2298,6 +2520,15 @@ schema: {
           ],
           blockquote: 'ノートパソコン上のローカルLLMはCPUまたはRAMで実行されるモデルファイル--インターネットなし、APIなし、ハードウェアに応じてローカルで10-80トークン/秒で生成されるトークン。',
           blockquoteSource: '一言で言うと',
+        },
+        rag: {
+          id: 'rag-laptop',
+          title: 'ノートパソコンでRAG（検索）を実行できますか？',
+          content: [
+            '**はい--RAGはノートパソコンで快適に動作します。制約となるのは依然としてチャットモデルであり、検索レイヤーではないからです。** ノートパソコンのRAGスタックは3つの要素から構成されます：小さな埋め込みモデル、ローカルのベクトルストア、そしてチャットモデルです。',
+            '埋め込みモデルは小さく--通常は数百MB程度です--RAMへの負荷はほとんどありません。8GBのノートパソコンでは、3Bのチャットモデルと小さな埋め込みモデルを快適に実行できます。16GBあれば、検索と並行して7Bのチャットモデルを動かす余裕があります。',
+            '**2GB RAMはRAGには現実的に使えません。** OSの後では、激しいスワッピングなしにチャットモデルと埋め込みモデルの両方を動かす余裕がなく、推論が1–3トークン/秒に落ちます。実用的な下限として8GBを見込んでください。',
+          ],
         },
         useCase: {
           id: 'use-case',
@@ -2342,10 +2573,10 @@ schema: {
         },
         bestModels: {
           title: 'ノートパソコン向けのベストローカルLLMモデルは何ですか？',
-          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています--品質、RAM使用量、および継続的な生成速度のバランスをとっています。異なるノートパソコン構成でのVRAM要件についての詳細ガイドは、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します：',
+          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています--品質、RAM使用量、および継続的な生成速度のバランスをとっています。異なるノートパソコン構成でのVRAM要件についての詳細ガイドは、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します。GPUなしで実行しますか？専用ガイドをご覧ください：**[CPUのみのベストローカルLLM 2026](/ja/local-llms/best-cpu-only-llm)**。',
           rows: [
             { 'モデル': 'Llama 3.2 3B', 'RAM': '2.5GB', 'Speed (CPU)': '25-45トークン/秒', '品質': '中', '最適な用途': '8GBノートパソコン、クイックタスク' },
-            { 'モデル': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20-35トークン/秒', '品質': '中〜高', '最適な用途': '8GBノートパソコン、推論/コーディング' },
+            { 'モデル': 'Phi-4-mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20-35トークン/秒', '品質': '中〜高', '最適な用途': '8GBノートパソコン、推論/コーディング' },
             { 'モデル': 'Mistral Small v0.3', 'RAM': '4.5GB', 'Speed (CPU)': '10-20トークン/秒', '品質': '高', '最適な用途': '8-16GB、一般的な用途' },
             { 'モデル': 'Qwen3 7B', 'RAM': '4.7GB', 'Speed (CPU)': '10-18トークン/秒', '品質': '高', '最適な用途': '8-16GB、多言語、コーディング' },
             { 'モデル': 'Llama 3.3 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8-15トークン/秒', '品質': '高+', '最適な用途': '16GBノートパソコン、最高の品質' },
@@ -2372,6 +2603,7 @@ schema: {
             '**2026年4月現在、Apple Silicon MacBook（M1からM4）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。** [統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します--18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50-80トークン/秒を実現できます。',
             'VRAMが十分（8GB以上）な場合、専用NVIDIAグラフィックス搭載のWindowsノートパソコンがより高速になる可能性があります。NVIDIA RTX 4060ノートパソコンGPU（8GB VRAM）は60-90トークン/秒で7Bモデルを実行します--Apple M3 Proと同等です。欠点は、バッテリー消費量が多く、熱が多く生成されます。',
             'Intel Iris XeまたはAMD Radeon統合グラフィックス搭載のWindowsノートパソコンはCPU推論のみを使用し、7Bモデルで8-20トークン/秒になります。',
+            '**統合グラフィックス（Intel Iris Xe / AMD Radeon）向けのベストモデル：** 16GB RAMでは、Q4_K_Mの3B–7Bモデルがスイートスポットです。Llama 3.2 3Bは8–20トークン/秒の範囲の上限で動作し、Mistral Small（7B）は下限ですが明らかに優れた品質を提供します。ここでは統合GPUは推論を加速しません--CPUが処理を行います--したがって、より大きなサイズを追い求めるよりも、RAM内に快適に収まるモデルを優先してください。低スペック環境向けのステップバイステップのセットアップは、[低スペックPC向け最速ローカルLLM](/ja/local-llms/fastest-local-llms-low-end-pcs)をご覧ください。',
           ],
           rows: [
             { 'ノートパソコンタイプ': 'Apple M3 Pro（18GB）', 'Speed (7B)': '50-80トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~13B' },
@@ -2459,6 +2691,18 @@ schema: {
           title: 'ノートパソコンでのローカルLLM実行に関するよくある質問',
           faqs: [
             {
+              q: '16GB RAMのIntel Iris Xeに最適なOllamaモデルは何ですか？',
+              a: 'Intel Iris Xe統合グラフィックスと16GB RAMを搭載したノートパソコンでは、推論はCPUで実行されるため（Iris Xeは加速しません）、Q4_K_Mの3B–7Bモデルを選んでください。Llama 3.2 3Bは8–20トークン/秒の範囲の上限で最速です。Mistral Small（7B）は遅いですが高品質です。どちらも`ollama run llama3.2:3b`または`ollama run mistral`で実行できます。',
+            },
+            {
+              q: 'ノートパソコンでローカルにRAGを実行できますか？',
+              a: 'はい。ノートパソコンのRAGスタックは、小さな埋め込みモデル、ローカルのベクトルストア、そしてチャットモデルで構成されます。埋め込みモデルはわずか数百MBなので、チャットモデルが依然としてRAMの制約となります――8GBのノートパソコンは検索付きで3Bのチャットモデルを快適に実行します。RAMの内訳については上記の[ノートパソコンでのRAGセクション](#rag-laptop)をご覧ください。',
+            },
+            {
+              q: 'ノートパソコンに最適なCPUのみのローカルLLMは何ですか？',
+              a: 'CPUのみのノートパソコンでは、Q4_K_MのLlama 3.2 3B（25–45トークン/秒）とMistral Small 7B（10–20トークン/秒）が速度と品質の最良のバランスです。完全なランキング比較とOllamaコマンドについては、専用ガイド[CPUのみのベストローカルLLM 2026](/ja/local-llms/best-cpu-only-llm)をご覧ください。',
+            },
+            {
               q: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？',
               a: 'いいえ--最新のCPUおよびGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。推論を数時間実行することはビデオエンコーディングやゲームに相当します。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。バッテリーサイクル数は長時間のプラグイン充電で増加し、これは通常の摩耗パターンです。',
             },
@@ -2525,11 +2769,11 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'ノートPCでLocal LLMを動かす（8〜16GB VRAM）実測性能ガイド 2026',
+        'headline': 'ノートパソコンでローカルLLM：8GB・16GB・Apple Siliconで動くもの（2026）',
         'description': '低VRAM環境で高性能Local LLMを動かす実践ガイド。量子化テクニック、おすすめモデル、実測ベンチマークを詳しく解説。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -2567,6 +2811,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: '16GB RAMのIntel Iris Xeに最適なOllamaモデルは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Intel Iris Xe統合グラフィックスと16GB RAMを搭載したノートパソコンでは、推論はCPUで実行されるため（Iris Xeは加速しません）、Q4_K_Mの3B–7Bモデルを選んでください。Llama 3.2 3Bは8–20トークン/秒の範囲の上限で最速です。Mistral Small（7B）は遅いですが高品質です。' } },
+          { '@type': 'Question', name: 'ノートパソコンでローカルにRAGを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。ノートパソコンのRAGスタックは、小さな埋め込みモデル、ローカルのベクトルストア、そしてチャットモデルで構成されます。埋め込みモデルはわずか数百MBなので、チャットモデルが依然としてRAMの制約となります--8GBのノートパソコンは検索付きで3Bのチャットモデルを快適に実行します。2GB RAMはRAGには現実的に使えません。' } },
+          { '@type': 'Question', name: 'ノートパソコンに最適なCPUのみのローカルLLMは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'CPUのみのノートパソコンでは、Q4_K_MのLlama 3.2 3B（25–45トークン/秒）とMistral Small 7B（10–20トークン/秒）が速度と品質の最良のバランスです。完全なランキング比較については専用ガイドのCPUのみのベストローカルLLM 2026をご覧ください。' } },
           { '@type': 'Question', name: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ--最新のCPUとGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。' } },
           { '@type': 'Question', name: '4GB RAMノートパソコンでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'ほぼ。2Bモデルは約1.7GB RAMが必要で、OSは2-3GB必要です。4GB合計では、スワップ使用により推論が5-10倍遅くなります。' } },
           { '@type': 'Question', name: 'ノートパソコンはローカルLLM用に専用GPUを必要とますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。すべての主要なローカルLLMツールはCPU単独で実行されます。専用GPUは推論を加速しますが、3B-7Bモデルは10-30トークン/秒でCPU単独で使用可能です。' } },
@@ -2584,7 +2831,7 @@ schema: {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2.5GB RAM。25-45トークン/秒CPU。8GBノートパソコン、クイックタスク向けベスト。' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3GB RAM。20-35トークン/秒CPU。8GBノートパソコン、推論/コーディング向けベスト。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3GB RAM。20-35トークン/秒CPU。8GBノートパソコン、推論/コーディング向けベスト。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4.5GB RAM。10-20トークン/秒CPU。8-16GB一般使用向けベスト。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4.7GB RAM。10-18トークン/秒CPU。8-16GB多言語コーディング向けベスト。' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5.5GB RAM。8-15トークン/秒CPU。16GBノートパソコンこのサイズでベスト品質。' }
@@ -2593,19 +2840,21 @@ schema: {
     },
     zh: {
       theme: 'Getting Started',
-      title: '如何在笔记本上运行本地LLM：性能、散热和型号选择',
-      seoTitle: 'Llama & Phi 8-16GB笔记本：热节流对策 2026',
+      title: '笔记本上的本地LLM：8GB、16GB和Apple Silicon能运行什么（2026）',
+      seoTitle: '笔记本上的本地LLM（2026）：8GB、16GB和Apple Silicon',
       intro: '在笔记本电脑上运行本地LLM是可行的——即使只有8GB RAM——但性能高度取决于模型大小、RAM和散热。7B模型在CPU上可达10–25令牌/秒，在Apple Silicon上可达50–80令牌/秒，使笔记本电脑足以用于开发、测试和轻量AI工作流。',
-      metaDescription: 'Llama 3.2 7B、Phi-4 Mini、Gemma 8-16GB笔记本实操指南。热节流降速20-40%。苹果硅 vs Intel Iris Xe。Q4_K_M完全解析。',
+      metaDescription: '是的，你可以在笔记本上运行本地LLM——即使只有8GB RAM。看清楚8GB、16GB和Apple Silicon分别能运行什么、各硬件的真实令牌/秒、散热表现，以及每个RAM档位的最佳模型。',
       twitterDescription: '7B 运行：8GB 笔记本 10–25 词/秒。Apple Silicon M3：50–80 词/秒。降温方案：支架＋关闭 Turbo Boost。Q4_K_M 完全指南。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-18',
+      dateModified: '2026-06-19',
       readTime: '8分钟阅读',
       educationalLevel: 'Beginner',
       primaryTerm: '笔记本电脑本地LLM',
       toc: [
+        { label: '快速解答：哪种本地LLM能在你的笔记本上运行？', anchor: '#quick-answer-ram' },
         { label: '关键要点', anchor: '#key-points' },
         { label: '您可以在笔记本上运行本地LLM吗？', anchor: '#can-run' },
+        { label: '可以在笔记本上运行RAG吗？', anchor: '#rag-laptop' },
         { label: '哪种配置适合您？', anchor: '#use-case' },
         { label: '8GB RAM vs 16GB RAM', anchor: '#ram-comparison' },
         { label: '哪些本地LLM模型在笔记本上运行最佳？', anchor: '#best-models' },
@@ -2621,6 +2870,20 @@ schema: {
       ],
       leadAnswerBlock: '**在笔记本电脑上运行本地LLM意味着在没有云API或外部数据传输的情况下，将语言模型直接部署到您的计算机上。** 主要优势是完全的隐私性和离线功能；性能取决于硬件（7B模型最少需要8GB RAM，13B需要16GB）。',
       sections: {
+        quickAnswerByRam: {
+          id: 'quick-answer-ram',
+          title: '快速解答：哪种本地LLM能在你的笔记本上运行（8GB、16GB、Apple Silicon）？',
+          content: [
+            '任何配有8GB RAM的笔记本都能运行本地LLM——Q4_K_M量化的7B模型在CPU上为10–25 tok/s，在Apple Silicon上为30–80 tok/s。根据下表把你的硬件匹配到合适的模型：',
+          ],
+          rows: [
+            { '你的笔记本': '8GB RAM', '最佳模型': 'Llama 3.2 3B / Mistral 7B Q4_K_M', '速度（CPU）': '10–25 tok/s', '速度（Apple Silicon）': '30–80 tok/s' },
+            { '你的笔记本': '16GB RAM', '最佳模型': 'Llama 3.1 8B / Qwen2.5 14B Q4_K_M', '速度（CPU）': '8–18 tok/s', '速度（Apple Silicon）': '50–80 tok/s' },
+            { '你的笔记本': 'Apple M系列（8–18GB）', '最佳模型': '统一内存中最高13B', '速度（CPU）': '—', '速度（Apple Silicon）': '50–80 tok/s' },
+            { '你的笔记本': 'Intel Iris Xe / AMD核显', '最佳模型': '3B–7B（仅CPU）', '速度（CPU）': '8–20 tok/s', '速度（Apple Silicon）': 'n/a' },
+          ],
+          columns: ['你的笔记本', '最佳模型', '速度（CPU）', '速度（Apple Silicon）'],
+        },
         tldr: {
           id: 'key-takeaways',
 
@@ -2660,6 +2923,15 @@ schema: {
           ],
           blockquote: '笔记本电脑上的本地LLM是在CPU或RAM上运行的模型文件 -- 没有互联网，没有API，令牌根据硬件在10-80令牌/秒本地生成。',
           blockquoteSource: '一句话总结',
+        },
+        rag: {
+          id: 'rag-laptop',
+          title: '可以在笔记本上运行RAG（检索）吗？',
+          content: [
+            '**可以——RAG在笔记本上运行起来很顺畅，因为决定性的瓶颈仍是聊天模型，而非检索层。** 笔记本上的RAG栈由三部分组成：一个小型嵌入模型、一个本地向量库，以及你的聊天模型。',
+            '嵌入模型很小——通常只有几百MB——因此对RAM的压力很小。在8GB笔记本上，你可以从容地运行一个3B聊天模型加一个小型嵌入模型；在16GB上，则有余量在检索之外运行7B聊天模型。',
+            '**2GB RAM实际上无法用于RAG。** 在操作系统之后，没有空间同时容纳聊天模型和嵌入模型而不发生大量交换，这会把推理降到1–3 tok/s。请把8GB作为实际下限来规划。',
+          ],
         },
         useCase: {
           id: 'use-case',
@@ -2704,10 +2976,10 @@ schema: {
         },
         bestModels: {
           title: '笔记本电脑最佳本地LLM模型是什么？',
-          content: '这些模型专门为笔记本电脑限制而选择 -- 平衡质量、RAM使用和持续生成速度。关于不同笔记本电脑配置中VRAM要求的详细指南，见[VRAM需求指南 →](/zh/local-llms/how-much-vram-local-llm)。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个：',
+          content: '这些模型专门为笔记本电脑限制而选择 -- 平衡质量、RAM使用和持续生成速度。关于不同笔记本电脑配置中VRAM要求的详细指南，见[VRAM需求指南 →](/zh/local-llms/how-much-vram-local-llm)。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个。完全不用GPU？请参阅专门指南：**[最佳纯CPU本地LLM 2026](/zh/local-llms/best-cpu-only-llm)**。',
           rows: [
             { '模型': 'Llama 3.2 3B', 'RAM': '2.5GB', '速度（CPU）': '25-45令牌/秒', '质量': '中等', '最佳适配': '8GB笔记本电脑，快速任务' },
-            { '模型': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', '速度（CPU）': '20-35令牌/秒', '质量': '中高', '最佳适配': '8GB笔记本电脑，推理/编码' },
+            { '模型': 'Phi-4-mini 3.8B', 'RAM': '3GB', '速度（CPU）': '20-35令牌/秒', '质量': '中高', '最佳适配': '8GB笔记本电脑，推理/编码' },
             { '模型': 'Mistral Small v0.3', 'RAM': '4.5GB', '速度（CPU）': '10-20令牌/秒', '质量': '高', '最佳适配': '8-16GB，通用用途' },
             { '模型': 'Qwen3 7B', 'RAM': '4.7GB', '速度（CPU）': '10-18令牌/秒', '质量': '高', '最佳适配': '8-16GB，多语言、编码' },
             { '模型': 'Llama 3.3 8B', 'RAM': '5.5GB', '速度（CPU）': '8-15令牌/秒', '质量': '高+', '最佳适配': '16GB笔记本电脑，这个大小最好的品质' },
@@ -2734,6 +3006,7 @@ schema: {
             '**截至2026年4月，Apple Silicon MacBook（M1至M4）是本地LLM推理的最佳消费级笔记本电脑。** [统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 -- 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50-80令牌/秒。',
             '带有离散NVIDIA GPU的Windows笔记本电脑如果VRAM足够（8GB以上）可能更快。NVIDIA RTX 4060笔记本电脑GPU（8GB VRAM）以60-90令牌/秒运行7B模型 -- 可与Apple M3 Pro相比。缺点是更高的电池消耗和更多的热量生成。',
             '运行Intel Iris Xe或AMD Radeon集成显卡的Windows笔记本电脑仅使用CPU推理，对7B模型产生8-20令牌/秒。',
+            '**集成显卡（Intel Iris Xe / AMD Radeon）的最佳模型：** 在16GB RAM下，最佳选择是Q4_K_M的3B–7B模型。Llama 3.2 3B位于8–20令牌/秒区间的上端，而Mistral Small（7B）处于下端但质量明显更好。这里集成GPU并不加速推理——由CPU完成工作——因此应优先选择能从容驻留在RAM中的模型，而非一味追求更大尺寸。如需分步的低端配置方案，请参阅[低端PC最快本地LLM](/zh/local-llms/fastest-local-llms-low-end-pcs)。',
           ],
           rows: [
             { '笔记本电脑类型': 'Apple M3 Pro（18GB）', '速度（7B）': '50-80令牌/秒', '电池消耗': '适中', '最大模型': '~13B' },
@@ -2821,6 +3094,18 @@ schema: {
           title: '关于在笔记本电脑上运行本地LLM的常见问题',
           faqs: [
             {
+              q: '配备16GB RAM的Intel Iris Xe最佳Ollama模型是什么？',
+              a: '在配有Intel Iris Xe集成显卡和16GB RAM的笔记本上，推理在CPU上运行（Iris Xe不会加速它），因此请选择Q4_K_M的3B–7B模型。Llama 3.2 3B最快，位于8–20令牌/秒区间的上端；Mistral Small（7B）更慢但质量更高。用`ollama run llama3.2:3b`或`ollama run mistral`运行其中任一个。',
+            },
+            {
+              q: '可以在笔记本上本地运行RAG吗？',
+              a: '可以。笔记本上的RAG栈由一个小型嵌入模型、一个本地向量库和你的聊天模型组成。嵌入模型只有几百MB，因此聊天模型仍是决定性的RAM瓶颈——8GB笔记本可从容地运行带检索的3B聊天模型。RAM分解详见上文[笔记本RAG部分](#rag-laptop)。',
+            },
+            {
+              q: '笔记本上最佳的纯CPU本地LLM是什么？',
+              a: '对于纯CPU笔记本，Q4_K_M的Llama 3.2 3B（25–45令牌/秒）和Mistral Small 7B（10–20令牌/秒）在速度与质量之间最为平衡。完整排名比较和Ollama命令请参阅专门指南：[最佳纯CPU本地LLM 2026](/zh/local-llms/best-cpu-only-llm)。',
+            },
+            {
               q: '运行本地LLM会随着时间推移损伤我的笔记本电脑吗？',
               a: '否 -- 现代CPU和GPU设计可通过热节流安全地处理持续的高负荷。运行推理数小时等同于视频编码或游戏。笔记本电脑支架和适当的通风可防止过度热量积聚。通过插电充电增加的电池周期数是正常的磨损。',
             },
@@ -2887,11 +3172,11 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': '笔记本运行 Local LLM（8-16GB 显存）实测性能指南 2026',
+        'headline': '笔记本上的本地LLM：8GB、16GB和Apple Silicon能运行什么（2026）',
         'description': '低显存环境运行高性能 Local LLM 的完整指南。涵盖量化技巧、最佳模型推荐与真实性能测试。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -2929,6 +3214,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: '配备16GB RAM的Intel Iris Xe最佳Ollama模型是什么？', acceptedAnswer: { '@type': 'Answer', text: '在配有Intel Iris Xe集成显卡和16GB RAM的笔记本上，推理在CPU上运行（Iris Xe不会加速它），因此请选择Q4_K_M的3B–7B模型。Llama 3.2 3B最快，位于8–20令牌/秒区间的上端；Mistral Small（7B）更慢但质量更高。' } },
+          { '@type': 'Question', name: '可以在笔记本上本地运行RAG吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。笔记本上的RAG栈由一个小型嵌入模型、一个本地向量库和你的聊天模型组成。嵌入模型只有几百MB，因此聊天模型仍是决定性的RAM瓶颈——8GB笔记本可从容地运行带检索的3B聊天模型。2GB RAM实际上无法用于RAG。' } },
+          { '@type': 'Question', name: '笔记本上最佳的纯CPU本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '对于纯CPU笔记本，Q4_K_M的Llama 3.2 3B（25–45令牌/秒）和Mistral Small 7B（10–20令牌/秒）在速度与质量之间最为平衡。完整排名比较请参阅专门指南《最佳纯CPU本地LLM 2026》。' } },
           { '@type': 'Question', name: '运行本地LLM会随着时间推移损伤笔记本电脑吗？', acceptedAnswer: { '@type': 'Answer', text: '否 -- 现代CPU和GPU设计可安全处理持续的高负荷。笔记本电脑支架和适当的通风可防止过度热量积聚。' } },
           { '@type': 'Question', name: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '勉强。2B模型需要约1.7GB RAM，操作系统需要2-3GB。在4GB总RAM下，交换使用使推理速度降低5-10倍。' } },
           { '@type': 'Question', name: '我的笔记本电脑需要专用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '否。所有主要的本地LLM工具仅在CPU上运行。专用GPU加速推理，但3B-7B模型可在10-30令牌/秒的CPU单独上使用。' } },
@@ -2946,7 +3234,7 @@ schema: {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '2.5GB RAM。25-45令牌/秒CPU。8GB笔记本电脑、快速任务最佳。' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-3.5 Mini 3.8B', 'description': '3GB RAM。20-35令牌/秒CPU。8GB笔记本电脑、推理/编码最佳。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3GB RAM。20-35令牌/秒CPU。8GB笔记本电脑、推理/编码最佳。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4.5GB RAM。10-20令牌/秒CPU。8-16GB通用用途最佳。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4.7GB RAM。10-18令牌/秒CPU。8-16GB多语言编码最佳。' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5.5GB RAM。8-15令牌/秒CPU。16GB笔记本电脑这个大小最好的品质。' }
@@ -2956,13 +3244,13 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '시작하기',
-      title: '노트북에서 로컬 LLM 실행하기: RAM, 속도 & 열 관리 2026',
-      seoTitle: '8~16GB 노트북에서 Llama & Phi 실행: 속도 & 열 관리 2026',
+      title: '노트북에서 로컬 LLM: 8GB, 16GB & Apple Silicon에서 무엇이 실행되는가 (2026)',
+      seoTitle: '노트북에서 로컬 LLM (2026): 8GB, 16GB & Apple Silicon',
       intro: '노트북에서 로컬 LLM을 실행하는 것은 가능합니다 — 8GB RAM에서도 실행할 수 있지만, 성능은 모델 크기, RAM, 열 관리 방식에 따라 크게 달라집니다. 7B 모델은 CPU에서 10~25토큰/초, Apple Silicon에서 50~80토큰/초로 실행되므로, 노트북은 개발, 테스트, 경량 AI 워크플로에 충분히 활용할 수 있습니다.',
-      metaDescription: '8~16GB 노트북에서 Llama 3.2 7B, Phi-4 Mini, Gemma 2B를 실행하는 방법. 열 쓰로틀링으로 속도가 20~40% 감소합니다. Apple Silicon vs Intel Iris Xe 벤치마크. Q4_K_M 설정 방법.',
+      metaDescription: '네, 노트북에서 로컬 LLM을 실행할 수 있습니다 — 8GB RAM에서도 가능합니다. 8GB, 16GB, Apple Silicon에서 각각 무엇이 실행되는지, 하드웨어별 실제 토큰/초, 발열, RAM 등급별 최적 모델을 정확히 확인하십시오.',
       twitterDescription: '7B 모델이 8GB 노트북에서 10~25토큰/초로 실행됩니다. Apple Silicon M3: 50~80토큰/초. 열 쓰로틀링 해결책: 스탠드 사용 + Turbo Boost 비활성화. Q4_K_M 가이드.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-18',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**노트북에서 로컬 LLM을 실행한다는 것은 클라우드 API나 외부 데이터 전송 없이 컴퓨터에 직접 언어 모델을 배포하는 것을 의미합니다.** 주요 장점은 완전한 개인 정보 보호와 오프라인 사용 가능성입니다. 성능은 하드웨어에 따라 달라지며, 7B 모델에는 최소 8GB RAM, 13B 모델에는 16GB RAM이 필요합니다.',
       comparisonTable: {
         columns: ['설정', '모델 크기', '속도', '사용 경험'],
@@ -2978,8 +3266,10 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: '로컬 LLM 노트북',
       toc: [
+        { label: '빠른 답변: 어떤 로컬 LLM이 내 노트북에서 실행되는가?', anchor: '#quick-answer-ram' },
         { label: '핵심 요약', anchor: '#key-takeaways' },
         { label: '노트북에서 로컬 LLM을 실행할 수 있습니까?', anchor: '#can-you-run' },
+        { label: '노트북에서 RAG를 실행할 수 있습니까?', anchor: '#rag-laptop' },
         { label: '어떤 설정이 필요합니까?', anchor: '#use-case' },
         { label: '노트북에서 가장 잘 실행되는 로컬 LLM 모델은?', anchor: '#best-models' },
         { label: 'Apple Silicon vs Windows 노트북', anchor: '#apple-vs-windows' },
@@ -2994,6 +3284,20 @@ schema: {
         { label: '출처', anchor: '#sources' },
       ],
       sections: {
+        quickAnswerByRam: {
+          id: 'quick-answer-ram',
+          title: '빠른 답변: 어떤 로컬 LLM이 내 노트북에서 실행되는가 (8GB, 16GB, Apple Silicon)?',
+          content: [
+            '8GB RAM이 탑재된 어떤 노트북에서도 로컬 LLM을 실행할 수 있습니다 — Q4_K_M의 7B 모델은 CPU에서 10~25토큰/초, Apple Silicon에서 30~80토큰/초로 실행됩니다. 아래 표에서 하드웨어에 맞는 모델을 선택하십시오:',
+          ],
+          rows: [
+            { '내 노트북': '8GB RAM', '최적 모델': 'Llama 3.2 3B / Mistral 7B Q4_K_M', '속도 (CPU)': '10~25토큰/초', '속도 (Apple Silicon)': '30~80토큰/초' },
+            { '내 노트북': '16GB RAM', '최적 모델': 'Llama 3.1 8B / Qwen2.5 14B Q4_K_M', '속도 (CPU)': '8~18토큰/초', '속도 (Apple Silicon)': '50~80토큰/초' },
+            { '내 노트북': 'Apple M 시리즈 (8~18GB)', '최적 모델': '통합 메모리에서 최대 13B', '속도 (CPU)': '—', '속도 (Apple Silicon)': '50~80토큰/초' },
+            { '내 노트북': 'Intel Iris Xe / AMD iGPU', '최적 모델': '3B~7B (CPU만)', '속도 (CPU)': '8~20토큰/초', '속도 (Apple Silicon)': 'n/a' },
+          ],
+          columns: ['내 노트북', '최적 모델', '속도 (CPU)', '속도 (Apple Silicon)'],
+        },
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
@@ -3033,6 +3337,15 @@ schema: {
           ],
           image: '/images/ollama-terminal.svg',
           imageCaption: 'MacBook에서 Ollama로 Mistral Small 실행 중 -- Q4_K_M 양자화로 CPU에서 22토큰/초.',
+        },
+        rag: {
+          id: 'rag-laptop',
+          title: '노트북에서 RAG(검색)를 실행할 수 있습니까?',
+          content: [
+            '**네 -- RAG는 노트북에서 무리 없이 실행됩니다. 결정적인 제약은 여전히 채팅 모델이며 검색 계층이 아니기 때문입니다.** 노트북 RAG 스택은 세 가지 요소로 구성됩니다: 작은 임베딩 모델, 로컬 벡터 스토어, 그리고 채팅 모델입니다.',
+            '임베딩 모델은 작아서 -- 일반적으로 수백 MB 정도 -- RAM 부담이 거의 없습니다. 8GB 노트북에서는 3B 채팅 모델과 작은 임베딩 모델을 무리 없이 실행할 수 있으며, 16GB에서는 검색과 함께 7B 채팅 모델을 실행할 여유가 있습니다.',
+            '**2GB RAM은 RAG에 현실적으로 사용할 수 없습니다.** OS를 제외하면 과도한 스와핑 없이 채팅 모델과 임베딩 모델을 함께 실행할 공간이 없으며, 이로 인해 추론이 1~3토큰/초로 떨어집니다. 실용적인 하한선으로 8GB를 계획하십시오.',
+          ],
         },
         useCase: {
           id: 'use-case',
@@ -3079,10 +3392,10 @@ schema: {
         bestModels: {
           id: 'best-models',
           title: '노트북에서 가장 잘 실행되는 로컬 LLM 모델은 무엇입니까?',
-          content: '이 모델들은 노트북의 제약 조건에 맞게 특별히 선정되었습니다 -- 품질, RAM 사용량, 지속적인 생성 속도의 균형을 고려하였습니다. 다양한 모델과 노트북 구성에 대한 VRAM 요구 사항에 대한 자세한 안내는 [VRAM 요구 사항 가이드 →](/local-llms/how-much-vram-local-llm)를 참조하십시오. [Ollama](/local-llms/how-to-install-ollama)를 설치하면 단 하나의 명령어로 이 모델들을 실행할 수 있습니다:',
+          content: '이 모델들은 노트북의 제약 조건에 맞게 특별히 선정되었습니다 -- 품질, RAM 사용량, 지속적인 생성 속도의 균형을 고려하였습니다. 다양한 모델과 노트북 구성에 대한 VRAM 요구 사항에 대한 자세한 안내는 [VRAM 요구 사항 가이드 →](/ko/local-llms/how-much-vram-local-llm)를 참조하십시오. [Ollama](/local-llms/how-to-install-ollama)를 설치하면 단 하나의 명령어로 이 모델들을 실행할 수 있습니다. GPU 없이 실행하십니까? 전용 가이드를 참조하십시오: **[최고의 CPU 전용 로컬 LLM 2026](/ko/local-llms/best-cpu-only-llm)**.',
           rows: [
             { 'Model': 'Llama 3.2 3B', 'RAM': '2.5GB', 'Speed (CPU)': '25~45토큰/초', 'Quality': '보통', 'Best For': '8GB 노트북, 빠른 작업' },
-            { 'Model': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20~35토큰/초', 'Quality': '보통~높음', 'Best For': '8GB 노트북, 추론/코딩' },
+            { 'Model': 'Phi-4-mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20~35토큰/초', 'Quality': '보통~높음', 'Best For': '8GB 노트북, 추론/코딩' },
             { 'Model': 'Mistral Small v0.3', 'RAM': '4.5GB', 'Speed (CPU)': '10~20토큰/초', 'Quality': '높음', 'Best For': '8~16GB, 일반 용도' },
             { 'Model': 'Qwen3 7B', 'RAM': '4.7GB', 'Speed (CPU)': '10~18토큰/초', 'Quality': '높음', 'Best For': '8~16GB, 다국어, 코딩' },
             { 'Model': 'Llama 3.3 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8~15토큰/초', 'Quality': '높음+', 'Best For': '16GB 노트북, 해당 크기에서 최고 품질' },
@@ -3110,6 +3423,7 @@ schema: {
             '**Apple Silicon MacBook(M1~M4)은 로컬 LLM 추론을 위한 최고의 소비자용 노트북입니다.** 통합 메모리 아키텍처 덕분에 GPU와 CPU가 동일한 메모리 풀을 공유합니다 -- 18GB 메모리의 M3 MacBook Pro는 13B 모델 전체를 GPU 메모리에서 실행하여 50~80토큰/초를 달성합니다.',
             'VRAM이 충분한 경우(8GB 이상), 별도의 NVIDIA GPU가 탑재된 Windows 노트북이 더 빠를 수 있습니다. NVIDIA RTX 4060 노트북 GPU(8GB VRAM)는 7B 모델을 60~90토큰/초로 실행합니다 -- Apple M3 Pro와 비슷한 수준입니다. 단점은 배터리 소모가 많고 발열이 높다는 것입니다.',
             'Intel Iris Xe 또는 AMD Radeon 내장 그래픽을 사용하는 Windows 노트북은 CPU 추론만 사용하므로, 7B 모델에서 8~20토큰/초의 결과를 냅니다.',
+            '**내장 그래픽(Intel Iris Xe / AMD Radeon)에 최적인 모델:** 16GB RAM에서는 Q4_K_M의 3B~7B 모델이 최적입니다. Llama 3.2 3B는 8~20토큰/초 범위의 상단에서 실행되고, Mistral Small(7B)은 하단에 위치하지만 눈에 띄게 더 나은 품질을 제공합니다. 여기서 내장 GPU는 추론을 가속하지 않으며 -- CPU가 작업을 처리합니다 -- 따라서 더 큰 크기를 추구하기보다 RAM 내에 여유 있게 들어가는 모델을 우선하십시오. 저사양 단계별 설정은 [저사양 PC를 위한 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)을 참조하십시오.',
           ],
           rows: [
             { 'Laptop Type': 'Apple M3 Pro (18GB)', 'Speed (7B)': '50~80토큰/초', 'Battery Drain': '보통', 'Max Model': '~13B' },
@@ -3181,6 +3495,18 @@ schema: {
           id: 'faq',
           title: '노트북에서 로컬 LLM 실행에 관한 자주 묻는 질문',
           faqs: [
+            {
+              q: '16GB RAM의 Intel Iris Xe에 최적인 Ollama 모델은 무엇입니까?',
+              a: 'Intel Iris Xe 내장 그래픽과 16GB RAM을 갖춘 노트북에서는 추론이 CPU에서 실행되므로(Iris Xe는 가속하지 않음), Q4_K_M의 3B~7B 모델을 선택하십시오. Llama 3.2 3B는 8~20토큰/초 범위의 상단에서 가장 빠르고, Mistral Small(7B)은 더 느리지만 품질이 더 높습니다. 둘 다 `ollama run llama3.2:3b` 또는 `ollama run mistral`로 실행하십시오.',
+            },
+            {
+              q: '노트북에서 로컬로 RAG를 실행할 수 있습니까?',
+              a: '네. 노트북 RAG 스택은 작은 임베딩 모델, 로컬 벡터 스토어, 그리고 채팅 모델로 구성됩니다. 임베딩 모델은 수백 MB에 불과하므로 채팅 모델이 여전히 결정적인 RAM 제약이 됩니다 — 8GB 노트북은 검색과 함께 3B 채팅 모델을 무리 없이 실행합니다. RAM 분석은 위의 [노트북에서의 RAG 섹션](#rag-laptop)을 참조하십시오.',
+            },
+            {
+              q: '노트북에 최적인 CPU 전용 로컬 LLM은 무엇입니까?',
+              a: 'CPU 전용 노트북에서는 Q4_K_M의 Llama 3.2 3B(25~45토큰/초)와 Mistral Small 7B(10~20토큰/초)가 속도와 품질의 최적 균형입니다. 전체 순위 비교와 Ollama 명령어는 전용 가이드 [최고의 CPU 전용 로컬 LLM 2026](/ko/local-llms/best-cpu-only-llm)을 참조하십시오.',
+            },
             {
               q: '로컬 LLM을 실행하면 노트북이 시간이 지남에 따라 손상됩니까?',
               a: '아니요 -- 현대의 CPU와 GPU는 열 쓰로틀링을 통해 안전하게 지속적인 고부하를 처리하도록 설계되었습니다. 장시간 추론 실행은 동영상 인코딩이나 게임과 동등합니다. 노트북 스탠드와 충분한 환기를 통해 과도한 열 축적을 방지하십시오. 장시간 충전 상태 유지로 배터리 사이클 수가 증가하는 것은 정상적인 소모 패턴입니다.',
