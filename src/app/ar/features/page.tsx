@@ -38,9 +38,9 @@ export default async function ArFeaturesPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              'name': 'Recursos do PromptQuorum — Prompt Engineering, Envio Multi-Modelo, Análise Quorum',
+              'name': 'ميزات PromptQuorum — هندسة الموجهات، الإرسال متعدد النماذج، تحليل Quorum',
               'url': 'https://www.promptquorum.com/ar/features',
-              'description': 'Explore os recursos do PromptQuorum: 9 frameworks de prompt, otimização por IA, envio para 25+ serviços de IA, análise de consenso multi-modelo, detecção de alucinações, suporte a LLM local e privacidade total.',
+              'description': 'استكشف ميزات PromptQuorum: 9 أطر عمل للموجهات، تحسين بالذكاء الاصطناعي، إرسال إلى 25+ خدمة ذكاء اصطناعي، تحليل التوافق متعدد النماذج، كشف الهلوسة، دعم النماذج المحلية، وخصوصية كاملة.',
               'inLanguage': 'ar',
               'datePublished': '2026-04-05',
               'dateModified': '2026-04-05',
@@ -55,8 +55,8 @@ export default async function ArFeaturesPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/ar' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Recursos', 'item': 'https://www.promptquorum.com/ar/features' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'الرئيسية', 'item': 'https://www.promptquorum.com/ar' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'الميزات', 'item': 'https://www.promptquorum.com/ar/features' },
               ],
             },
           ]),

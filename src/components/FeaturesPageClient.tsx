@@ -312,6 +312,88 @@ const T = {
     ],
     back: '← Voltar ao início',
   },
+  ar: {
+    h1: 'ميزات PromptQuorum: 9 أطر عمل، 25+ نموذج، 13 نوع تحليل',
+    subtitle: 'اكتب موجهات منظمة باستخدام 9 أطر عمل مدمجة، وأرسلها إلى 25+ نموذج ذكاء اصطناعي بالتوازي، وحلّل الاستجابات بـ 13 نوع تحليل للتوافق — بما في ذلك كشف الهلوسة. اعتبارًا من أبريل 2026.',
+    tldrTitle: 'الميزات الرئيسية في لمحة',
+    tldrItems: [
+      '9 أطر عمل لهندسة الموجهات (CO-STAR، CRAFT، RISEN، TRACE، APE، SPECS، Google، RTF)',
+      'إرسال إلى 25+ نموذج سحابي في آنٍ واحد (GPT-4o، Claude، Gemini، DeepSeek والمزيد)',
+      '13 نوع تحليل توافق Quorum عبر 4 فئات (التوليف، المقارنة، الجودة، الاختيار)',
+      'كشف الهلوسة يُعلّم الادعاءات التي تظهر في نموذج واحد فقط أو تتعارض مع التوافق',
+      'دعم النماذج المحلية: Ollama، LM Studio، Jan AI، GPT4All، Open WebUI، vLLM، وأي نقطة نهاية متوافقة مع OpenAI',
+      'الخصوصية أولًا: تنفيذ كامل بلا اتصال، لا تسجيل مطلوب، لا شيء يغادر جهازك',
+      'مقارنة فورية للاستجابات جنبًا إلى جنب عبر جميع النماذج في الوقت الفعلي',
+      'تحسين تلقائي للموجهات بـ 8 تقنيات تحسين لمخرجات ذكاء اصطناعي أفضل',
+    ],
+    features: [
+      { title: 'تحسين الموجهات', description: 'قم بتحسين موجهاتك تلقائيًا باستخدام 8 تقنيات تحسين مجربة لمخرجات ذكاء اصطناعي أفضل.' },
+      { title: 'إرسال متعدد النماذج', description: 'شغّل الموجهات عبر ChatGPT وClaude وGemini وأكثر من 25 نموذجًا آخر في آنٍ واحد.' },
+      { title: 'تقييم Quorum', description: 'اعثر على إجابات توافقية عبر النماذج مع تقييم الثقة. يكشف الهلوسة على الفور.' },
+      { title: 'مقارنة فورية', description: 'احصل على الاستجابات بالتوازي بنقرة واحدة — دون نسخ ولصق يدوي بين نوافذ المتصفح.' },
+      { title: 'الخصوصية أولًا', description: 'خيار التنفيذ المحلي. لا تسجيل مطلوب. تحكم كامل في موجهاتك.' },
+    ],
+    optimizationH2: 'كيف تراجع نتائج التحسين؟',
+    optimizationDesc: 'راجع تقييمات الجودة وسجل الإصدارات واقتراحات التحسين لموجهاتك المُحسَّنة.',
+    quorumH2: 'ما هو Quorum — التوافق متعدد النماذج؟',
+    quorumDesc: 'اجمع الاستجابات من 25+ نموذج ذكاء اصطناعي، وحلّل أنماط التوافق، واستخلص الرؤى من منظورات مختلفة.',
+    howH2: 'كيف يعمل PromptQuorum في 3 خطوات؟',
+    howDesc: 'ثلاث خطوات بسيطة نحو موجهات أفضل وقرارات ذكاء اصطناعي أذكى.',
+    relatedReadingH2: 'قراءة ذات صلة',
+    relatedReadingLinks: [
+      { title: 'كيف يعمل: نظرة عامة كاملة على النظام', href: '/how-it-works' },
+      { title: 'قارن PromptQuorum مع البدائل', href: '/compare' },
+      { title: 'أدلة وأطر عمل هندسة الموجهات', href: '/prompt-engineering' },
+      { title: 'الأسئلة المتكررة', href: '/faq' },
+    ],
+    steps: [
+      { title: 'اختر إطار عمل', desc: 'حدد إطار عمل لهندسة الموجهات مثل Chain-of-Thought أو Few-Shot أو CRAFT.' },
+      { title: 'شغّل موجهك', desc: 'أرسل موجهك إلى 25+ نموذج. شاهد الاستجابات تعود بالتوازي في الوقت الفعلي.' },
+      { title: 'قارن وحسّن', desc: 'اعثر على إجابات توافقية، اكتشف الهلوسة، وحسّن للحصول على جودة مخرجات أفضل.' },
+    ],
+    back: '← العودة إلى الرئيسية',
+  },
+  ko: {
+    h1: 'PromptQuorum 기능: 9가지 프레임워크, 25개 이상 모델, 13가지 분석 유형',
+    subtitle: '9가지 내장 프레임워크로 구조화된 프롬프트를 작성하고, 25개 이상의 AI 모델에 병렬로 전송하며, 13가지 합의 분석 유형으로 응답을 분석하세요 — 환각 감지 포함. 2026년 4월 기준.',
+    tldrTitle: '주요 기능 한눈에 보기',
+    tldrItems: [
+      '9가지 프롬프트 엔지니어링 프레임워크 (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
+      '25개 이상의 클라우드 모델에 동시 전송 (GPT-4o, Claude, Gemini, DeepSeek 등)',
+      '4가지 카테고리에 걸친 13가지 Quorum 합의 분석 유형 (합성, 비교, 품질, 선택)',
+      '환각 감지: 단일 모델에만 나타나거나 합의와 상충되는 주장을 표시',
+      '로컬 LLM 지원: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, OpenAI 호환 엔드포인트',
+      '프라이버시 우선: 완전한 오프라인 실행, 가입 불필요, 장치 밖으로 데이터 유출 없음',
+      '모든 전송 모델의 실시간 나란한 응답 비교',
+      '더 나은 AI 출력을 위한 8가지 개선 기법으로 자동 프롬프트 최적화',
+    ],
+    features: [
+      { title: '프롬프트 최적화', description: '더 나은 AI 출력을 위해 8가지 검증된 개선 기법으로 프롬프트를 자동으로 개선하고 최적화합니다.' },
+      { title: '다중 모델 전송', description: 'ChatGPT, Claude, Gemini 및 25개 이상의 AI 모델에 동시에 병렬로 프롬프트를 실행합니다.' },
+      { title: 'Quorum 스코어링', description: '신뢰도 점수로 모델 간 합의 답변을 찾아냅니다. 환각을 즉시 감지합니다.' },
+      { title: '즉각 비교', description: '클릭 한 번으로 병렬 응답을 받아보세요 — 브라우저 탭 간의 수동 복사·붙여넣기가 필요 없습니다.' },
+      { title: '프라이버시 우선', description: '로컬 실행 옵션 제공. 가입 불필요. 프롬프트에 대한 완전한 제어권을 가집니다.' },
+    ],
+    optimizationH2: '최적화 결과를 어떻게 검토하나요?',
+    optimizationDesc: '최적화된 프롬프트의 품질 평가, 버전 기록, 개선 제안을 검토하세요.',
+    quorumH2: 'Quorum — 다중 모델 합의란 무엇인가요?',
+    quorumDesc: '25개 이상의 AI 모델에서 응답을 수집하고, 합의 패턴을 분석하며, 다양한 관점의 인사이트를 종합합니다.',
+    howH2: 'PromptQuorum은 3단계로 어떻게 작동하나요?',
+    howDesc: '더 나은 프롬프트와 스마트한 AI 결정을 위한 세 가지 간단한 단계.',
+    relatedReadingH2: '관련 읽기',
+    relatedReadingLinks: [
+      { title: '작동 방식: 전체 시스템 개요', href: '/how-it-works' },
+      { title: 'PromptQuorum과 대안 비교', href: '/compare' },
+      { title: '프롬프트 엔지니어링 가이드 및 프레임워크', href: '/prompt-engineering' },
+      { title: '자주 묻는 질문', href: '/faq' },
+    ],
+    steps: [
+      { title: '프레임워크 선택', desc: 'Chain-of-Thought, Few-Shot 또는 CRAFT와 같은 프롬프트 엔지니어링 프레임워크를 선택하세요.' },
+      { title: '프롬프트 실행', desc: '25개 이상의 모델에 프롬프트를 전송하세요. 실시간으로 병렬 응답이 돌아오는 것을 확인하세요.' },
+      { title: '비교 및 최적화', desc: '합의 답변을 찾고, 환각을 감지하며, 더 나은 출력 품질을 위해 개선하세요.' },
+    ],
+    back: '← 홈으로 돌아가기',
+  },
 }
 
 function FeatureCard({ icon: Icon, title, description }: { icon: React.ElementType; title: string; description: string }) {
@@ -341,7 +423,7 @@ function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLan
 
         {/* Cross-language links */}
         <div className="flex justify-center mb-20">
-          <LangLinksBar cluster="features" slug="" availableLangs={["en", "de", "fr", "ja", "zh"]} initialLang={initialLang} />
+          <LangLinksBar cluster="features" slug="" availableLangs={["en", "de", "fr", "ja", "zh", "es", "pt", "ar", "ko"]} initialLang={initialLang} />
         </div>
 
         {/* TLDR Section */}

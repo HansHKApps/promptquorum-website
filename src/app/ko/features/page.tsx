@@ -38,9 +38,9 @@ export default async function KoFeaturesPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              'name': 'Recursos do PromptQuorum — Prompt Engineering, Envio Multi-Modelo, Análise Quorum',
-              'url': 'https://www.promptquorum.com/ar/features',
-              'description': 'Explore os recursos do PromptQuorum: 9 frameworks de prompt, otimização por IA, envio para 25+ serviços de IA, análise de consenso multi-modelo, detecção de alucinações, suporte a LLM local e privacidade total.',
+              'name': 'PromptQuorum 기능 — 프롬프트 엔지니어링, 다중 모델 전송, Quorum 분석',
+              'url': 'https://www.promptquorum.com/ko/features',
+              'description': 'PromptQuorum 기능 살펴보기: 9가지 프롬프트 프레임워크, AI 최적화, 25개 이상의 AI 서비스 전송, 다중 모델 합의 분석, 환각 감지, 로컬 LLM 지원, 완전한 프라이버시.',
               'inLanguage': 'ko',
               'datePublished': '2026-04-05',
               'dateModified': '2026-04-05',
@@ -55,8 +55,8 @@ export default async function KoFeaturesPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/ar' },
-                { '@type': 'ListItem', 'position': 2, 'name': 'Recursos', 'item': 'https://www.promptquorum.com/ar/features' },
+                { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': 'https://www.promptquorum.com/ko' },
+                { '@type': 'ListItem', 'position': 2, 'name': '기능', 'item': 'https://www.promptquorum.com/ko/features' },
               ],
             },
           ]),
