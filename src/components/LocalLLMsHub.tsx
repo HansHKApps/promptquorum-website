@@ -41,25 +41,95 @@ function renderDescription(text: string, lang: Language): React.ReactNode {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'Best Local LLMs May 2026: Ollama, LM Studio, Hardware & VRAM Guide',
-  de: 'Beste Lokale LLMs Mai 2026: Ollama, LM Studio, Hardware & VRAM Guide',
-  fr: 'Meilleurs LLMs Locaux Mai 2026 : Ollama, LM Studio & Guide VRAM',
-  ja: '2026年5月最高のローカルLLM：Ollama・LM Studio・VRAMガイド',
-  zh: '2026年5月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南',
-  es: 'Mejores LLMs Locales Mayo 2026: Ollama, LM Studio, Hardware y Guía de VRAM',
-  pt: 'Melhores LLMs Locais Maio 2026: Ollama, LM Studio, Hardware e Guia de VRAM',
-  ko: '2026년 5월 최고의 로컬 LLM: Ollama, LM Studio, 하드웨어 및 VRAM 가이드',
+  en: 'Best Local LLMs June 2026: Ollama, LM Studio, Hardware & VRAM Guide',
+  de: 'Beste Lokale LLMs Juni 2026: Ollama, LM Studio, Hardware & VRAM Guide',
+  fr: 'Meilleurs LLMs Locaux Juin 2026 : Ollama, LM Studio & Guide VRAM',
+  ja: '2026年6月最高のローカルLLM：Ollama・LM Studio・VRAMガイド',
+  zh: '2026年6月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南',
+  es: 'Mejores LLMs Locales Junio 2026: Ollama, LM Studio, Hardware y Guía de VRAM',
+  pt: 'Melhores LLMs Locais Junho 2026: Ollama, LM Studio, Hardware e Guia de VRAM',
+  ko: '2026년 6월 최고의 로컬 LLM: Ollama, LM Studio, 하드웨어 및 VRAM 가이드',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Best local LLMs for May 2026 — covering the latest Ollama models (Llama 4 Scout, Qwen3, Gemma 3), LM Studio vs Jan.ai comparison, VRAM and GPU requirements for RTX 3060 12 GB and other hardware, pull commands, and beginner hardware recommendations. $0/token, full privacy, offline.',
-  de: 'Beste lokale LLMs für Mai 2026 — aktuelle Ollama-Modelle, LM Studio vs Jan.ai Vergleich, VRAM- & GPU-Anforderungen (RTX 3060 etc.), Pull-Befehle und Hardware-Empfehlungen für Einsteiger.',
-  fr: 'Meilleurs LLMs locaux pour mai 2026 — modèles Ollama récents (Llama 4 Scout, Qwen3, Gemma 3), comparaison LM Studio vs Jan.ai, exigences VRAM/GPU (RTX 3060 inclus), commandes pull et recommandations matérielles débutants.',
-  ja: '2026年5月最新ローカルLLM：Ollamaおすすめモデル（Llama 4 Scout・Qwen3・Gemma 3）、LM Studio vs Jan.ai比較、RTX 3060などVRAM/GPU必要スペック、pullコマンド付き完全ガイド。',
-  zh: '2026年5月最佳本地LLM：最新Ollama模型（Llama 4 Scout、Qwen3、Gemma 3）、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。',
-  es: 'Mejores LLMs locales para mayo de 2026 — modelos Ollama recientes (Llama 4 Scout, Qwen3, Gemma 3), comparativa LM Studio vs Jan.ai, requisitos VRAM/GPU (RTX 3060 incluida), comandos pull y recomendaciones de hardware para principiantes.',
-  pt: 'Melhores LLMs locais para maio de 2026 — modelos Ollama recentes (Llama 4 Scout, Qwen3, Gemma 3), comparativo LM Studio vs Jan.ai, requisitos de VRAM/GPU (RTX 3060 incluída), comandos pull e recomendações de hardware para iniciantes. $0/token, privacidade total, offline.',
-  ko: '2026년 5월 최고의 로컬 LLM — 최신 Ollama 모델(Llama 4 Scout, Qwen3, Gemma 3), LM Studio vs Jan.ai 비교, RTX 3060 12 GB 등 VRAM 및 GPU 요구 사항, pull 명령어, 초보자 하드웨어 추천. 토큰당 $0, 완전한 개인 정보 보호, 오프라인.',
+  en: 'Local LLMs are large language models that run entirely on your own computer — no internet connection, no API fees, and no data leaving your machine. If you are just starting, install Ollama and run Llama 3.2 3B or Qwen3 4B on 8 GB of RAM in under 10 minutes; the guides below rank the best models, GPUs, and tools for every budget as of June 2026.',
+  de: 'Lokale LLMs sind große Sprachmodelle, die vollständig auf Ihrem eigenen Computer laufen — ohne Internetverbindung, ohne API-Gebühren und ohne dass Daten Ihr Gerät verlassen. Für den Einstieg installieren Sie Ollama und führen Llama 3.2 3B oder Qwen3 4B mit 8 GB RAM in unter 10 Minuten aus; die folgenden Leitfäden bewerten die besten Modelle, GPUs und Tools für jedes Budget (Stand Juni 2026).',
+  fr: 'Les LLMs locaux sont de grands modèles de langage qui s\'exécutent entièrement sur votre propre ordinateur — sans connexion Internet, sans frais d\'API et sans qu\'aucune donnée ne quitte votre machine. Pour débuter, installez Ollama et exécutez Llama 3.2 3B ou Qwen3 4B avec 8 Go de RAM en moins de 10 minutes ; les guides ci-dessous classent les meilleurs modèles, GPU et outils pour chaque budget (juin 2026).',
+  ja: 'ローカルLLMとは、インターネット接続・API料金・データ送信なしで、自分のパソコン上だけで動作する大規模言語モデルです。初めての方は、Ollamaをインストールして8GBのRAMでLlama 3.2 3BまたはQwen3 4Bを10分以内に実行できます。以下のガイドでは、2026年6月時点であらゆる予算に最適なモデル・GPU・ツールをランク付けしています。',
+  zh: '本地LLM是完全在你自己的电脑上运行的大语言模型——无需联网、没有API费用，数据也不会离开你的设备。新手只需安装Ollama，用8GB内存即可在10分钟内运行Llama 3.2 3B或Qwen3 4B；以下指南按2026年6月的情况，为各种预算评选最佳模型、GPU和工具。',
+  es: 'Los LLMs locales son grandes modelos de lenguaje que se ejecutan por completo en tu propio ordenador, sin conexión a Internet, sin tarifas de API y sin que ningún dato salga de tu máquina. Si empiezas, instala Ollama y ejecuta Llama 3.2 3B o Qwen3 4B con 8 GB de RAM en menos de 10 minutos; las guías siguientes clasifican los mejores modelos, GPUs y herramientas para cada presupuesto a junio de 2026.',
+  pt: 'Os LLMs locais são grandes modelos de linguagem que rodam inteiramente no seu próprio computador — sem conexão à Internet, sem taxas de API e sem que nenhum dado saia da sua máquina. Se está a começar, instale o Ollama e rode o Llama 3.2 3B ou o Qwen3 4B com 8 GB de RAM em menos de 10 minutos; os guias abaixo classificam os melhores modelos, GPUs e ferramentas para cada orçamento em junho de 2026.',
+  ko: '로컬 LLM은 인터넷 연결, API 요금, 데이터 전송 없이 전적으로 자신의 컴퓨터에서 실행되는 대규모 언어 모델입니다. 처음이라면 Ollama를 설치하고 8GB RAM으로 Llama 3.2 3B 또는 Qwen3 4B를 10분 이내에 실행할 수 있습니다. 아래 가이드는 2026년 6월 기준으로 모든 예산에 맞는 최고의 모델, GPU, 도구를 정리합니다.',
+}
+
+const HUB_START_HERE_TITLE: Record<string, string> = {
+  en: 'Start Here: 5 Guides by What You Want to Do',
+  de: 'Hier starten: 5 Guides nach Ihrem Ziel',
+  fr: 'Commencez ici : 5 guides selon votre objectif',
+  ja: 'ここから始める：目的別5つのガイド',
+  zh: '从这里开始：按需求分类的5篇指南',
+  es: 'Empieza aquí: 5 guías según lo que quieras hacer',
+  pt: 'Comece aqui: 5 guias conforme o seu objetivo',
+  ko: '여기서 시작: 목적별 5가지 가이드',
+}
+
+const HUB_START_HERE_ITEMS: Record<string, { emoji: string; label: string; desc: string; href: string }[]> = {
+  en: [
+    { emoji: '🚀', label: 'New to local LLMs?', desc: 'Install Ollama and run your first model in 10 minutes.', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: 'Which model is best?', desc: 'Top open-source models on Ollama ranked (Qwen3, Llama 4, Gemma 3).', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: 'Coding with local LLMs', desc: 'The strongest local models for code generation and review.', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: 'What hardware do I need?', desc: 'VRAM and RAM required for each model size, explained.', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: 'On a budget?', desc: 'Cheapest GPUs that run 7B–13B models smoothly.', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
+  de: [
+    { emoji: '🚀', label: 'Neu bei lokalen LLMs?', desc: 'Ollama installieren und in 10 Minuten das erste Modell ausführen.', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: 'Welches Modell ist das beste?', desc: 'Top-Open-Source-Modelle für Ollama im Ranking (Qwen3, Llama 4, Gemma 3).', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: 'Programmieren mit lokalen LLMs', desc: 'Die stärksten lokalen Modelle für Code-Generierung und Review.', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: 'Welche Hardware brauche ich?', desc: 'VRAM und RAM je Modellgröße — verständlich erklärt.', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: 'Schmales Budget?', desc: 'Günstigste GPUs, die 7B–13B-Modelle flüssig ausführen.', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
+  fr: [
+    { emoji: '🚀', label: 'Nouveau sur les LLMs locaux ?', desc: 'Installez Ollama et exécutez votre premier modèle en 10 minutes.', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: 'Quel modèle choisir ?', desc: 'Les meilleurs modèles open source sur Ollama, classés (Qwen3, Llama 4, Gemma 3).', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: 'Coder avec des LLMs locaux', desc: 'Les modèles locaux les plus performants pour le code.', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: 'Quel matériel faut-il ?', desc: 'VRAM et RAM nécessaires selon la taille du modèle, expliqués.', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: 'Petit budget ?', desc: 'Les GPU les moins chers qui font tourner les modèles 7B–13B.', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
+  ja: [
+    { emoji: '🚀', label: 'ローカルLLMが初めて？', desc: 'Ollamaをインストールし、10分で最初のモデルを実行。', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: 'どのモデルが最適？', desc: 'Ollamaのおすすめオープンソースモデルをランキング（Qwen3・Llama 4・Gemma 3）。', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: 'ローカルLLMでコーディング', desc: 'コード生成・レビューに最も強いローカルモデル。', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: '必要なハードウェアは？', desc: 'モデルサイズ別に必要なVRAM・RAMを解説。', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: '予算重視？', desc: '7B〜13Bモデルを快適に動かせる最安GPU。', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
+  zh: [
+    { emoji: '🚀', label: '第一次用本地LLM？', desc: '安装Ollama，10分钟内运行你的第一个模型。', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: '哪个模型最好？', desc: 'Ollama上的顶级开源模型排名（Qwen3、Llama 4、Gemma 3）。', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: '用本地LLM编程', desc: '代码生成与审查最强的本地模型。', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: '需要什么硬件？', desc: '按模型大小说明所需的VRAM和内存。', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: '预算有限？', desc: '能流畅运行7B–13B模型的最便宜显卡。', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
+  es: [
+    { emoji: '🚀', label: '¿Nuevo en LLMs locales?', desc: 'Instala Ollama y ejecuta tu primer modelo en 10 minutos.', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: '¿Qué modelo es el mejor?', desc: 'Mejores modelos open source en Ollama, clasificados (Qwen3, Llama 4, Gemma 3).', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: 'Programar con LLMs locales', desc: 'Los modelos locales más potentes para generar y revisar código.', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: '¿Qué hardware necesito?', desc: 'VRAM y RAM necesarias según el tamaño del modelo, explicadas.', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: '¿Presupuesto ajustado?', desc: 'Las GPUs más baratas que ejecutan modelos 7B–13B con fluidez.', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
+  pt: [
+    { emoji: '🚀', label: 'Novo em LLMs locais?', desc: 'Instale o Ollama e rode o seu primeiro modelo em 10 minutos.', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: 'Qual modelo é o melhor?', desc: 'Melhores modelos open source no Ollama, classificados (Qwen3, Llama 4, Gemma 3).', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: 'Programar com LLMs locais', desc: 'Os modelos locais mais fortes para gerar e revisar código.', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: 'De que hardware preciso?', desc: 'VRAM e RAM necessárias por tamanho de modelo, explicadas.', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: 'Orçamento apertado?', desc: 'As GPUs mais baratas que rodam modelos 7B–13B com fluidez.', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
+  ko: [
+    { emoji: '🚀', label: '로컬 LLM이 처음인가요?', desc: 'Ollama를 설치하고 10분 안에 첫 모델을 실행하세요.', href: '/local-llms/how-to-install-ollama' },
+    { emoji: '🏆', label: '어떤 모델이 가장 좋나요?', desc: 'Ollama의 최고 오픈소스 모델 순위(Qwen3, Llama 4, Gemma 3).', href: '/local-llms/top-open-source-models-ollama' },
+    { emoji: '💻', label: '로컬 LLM으로 코딩하기', desc: '코드 생성과 리뷰에 가장 강력한 로컬 모델.', href: '/local-llms/best-local-llms-for-coding' },
+    { emoji: '🖥️', label: '어떤 하드웨어가 필요한가요?', desc: '모델 크기별로 필요한 VRAM과 RAM을 설명합니다.', href: '/local-llms/local-llm-hardware-guide-2026' },
+    { emoji: '💸', label: '예산이 빠듯한가요?', desc: '7B–13B 모델을 원활하게 돌리는 가장 저렴한 GPU.', href: '/local-llms/best-budget-gpus-local-llm' },
+  ],
 }
 
 const HUB_NEW_APRIL_HEADING: Record<string, string> = {
@@ -1486,7 +1556,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
         {/* Hero */}
         <div className="py-16 border-b border-primary/20 mb-16">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Local LLMs</p>
-          <p className="text-xs text-text-secondary mb-4">Updated <time dateTime="2026-05-03">May 2026</time></p>
+          <p className="text-xs text-text-secondary mb-4">Updated <time dateTime="2026-06-19">June 2026</time></p>
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             {HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
           </h1>
@@ -1507,6 +1577,30 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Start Here — curated picks by use case */}
+          <div className="mb-10">
+            <h2 className="text-lg font-bold text-text-primary mb-4">
+              {HUB_START_HERE_TITLE[lang] ?? HUB_START_HERE_TITLE['en']}
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {(HUB_START_HERE_ITEMS[lang] ?? HUB_START_HERE_ITEMS['en']).map((item, i) => (
+                <Link
+                  key={i}
+                  href={navHref(item.href, lang)}
+                  className="group flex items-start gap-3 rounded-xl border border-primary/15 bg-primary/3 p-4 transition-colors hover:border-primary/40 hover:bg-primary/5"
+                >
+                  <span className="text-xl leading-none" aria-hidden="true">{item.emoji}</span>
+                  <span>
+                    <span className="block text-sm font-semibold text-text-primary group-hover:text-primary transition-colors">
+                      {item.label}
+                    </span>
+                    <span className="block text-xs text-text-secondary mt-0.5">{item.desc}</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* PE Sidebar */}

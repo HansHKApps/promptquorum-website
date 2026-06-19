@@ -74,6 +74,7 @@ const T = {
       { q: 'Are there any limits?', a: 'No limits from PromptQuorum side. Your usage depends only on your own API rate limits or local LLM resources—we never throttle or meter usage.' },
     ],
     copyright: '© 2026 PromptQuorum. All rights reserved.',
+    heroStrong: 'PromptQuorum is a multi-AI dispatch tool that sends one prompt to 25+ models simultaneously — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek, and more — and scores the results for consensus and hallucination risk.',
     worldwide: '🌍 Available worldwide',
   },
   de: {
@@ -118,6 +119,7 @@ const T = {
       { q: 'Gibt es Limits?', a: 'Keine Limits von PromptQuorum. Ihre Nutzung ist nur durch Ihre API-Schlüssel oder lokale LLM-Ressourcen begrenzt.' },
     ],
     copyright: '© 2026 PromptQuorum. Alle Rechte vorbehalten.',
+    heroStrong: 'PromptQuorum ist ein Multi-KI-Versandtool, das einen Prompt gleichzeitig an 25+ Modelle sendet — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek und mehr — und die Ergebnisse nach Konsens und Halluzinationsrisiko bewertet.',
     worldwide: '🌍 Weltweit verfügbar',
   },
   fr: {
@@ -162,6 +164,7 @@ const T = {
       { q: 'Y a-t-il des limites ?', a: 'Aucune limite de la part de PromptQuorum. Votre utilisation est uniquement limitée par vos clés API ou ressources LLM locales.' },
     ],
     copyright: '© 2026 PromptQuorum. Tous droits réservés.',
+    heroStrong: "PromptQuorum est un outil multi-IA qui envoie un prompt à 25+ modèles simultanément — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek et plus — et évalue les résultats en termes de consensus et de risque d'hallucination.",
     worldwide: '🌍 Disponible dans le monde entier',
   },
   ja: {
@@ -206,6 +209,7 @@ const T = {
       { q: '利用制限はありますか？', a: 'PromptQuorum側からの制限はありません。利用はAPIキーまたはローカルLLMのリソースにのみ依存します。' },
     ],
     copyright: '© 2026 PromptQuorum. All rights reserved.',
+    heroStrong: 'PromptQuorumは、1つのプロンプトを25以上のモデルに同時送信するマルチAIディスパッチツールです — GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Mistral Large、DeepSeekなど — 結果を合意形成とハルシネーションリスクでスコアリングします。',
     worldwide: '🌍 世界中で利用可能',
   },
   zh: {
@@ -250,6 +254,7 @@ const T = {
       { q: '有使用限制吗？', a: 'PromptQuorum 本身没有任何限制。您的使用量仅受 API 密钥或本地 LLM 资源限制。' },
     ],
     copyright: '© 2026 PromptQuorum. 保留所有权利。',
+    heroStrong: 'PromptQuorum 是一款多AI分发工具，可将一个提示同时发送给25+个模型——GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Mistral Large、DeepSeek等——并对结果进行共识和幻觉风险评分。',
     worldwide: '🌍 全球可用',
   },
   es: {
@@ -294,6 +299,7 @@ const T = {
       { q: '¿Hay algún límite?', a: 'Ningún límite por parte de PromptQuorum. Tu uso depende solo de tus propios límites de tasa de API o recursos de LLM local — nunca limitamos ni medimos el uso.' },
     ],
     copyright: '© 2026 PromptQuorum. Todos los derechos reservados.',
+    heroStrong: 'PromptQuorum es una herramienta de envío multi-IA que envía un prompt a 25+ modelos simultáneamente — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek y más — y puntúa los resultados por consenso y riesgo de alucinación.',
     worldwide: '🌍 Disponible en todo el mundo',
   },
   pt: {
@@ -338,7 +344,53 @@ const T = {
       { q: 'Há algum limite?', a: 'Nenhum limite por parte do PromptQuorum. Seu uso depende apenas dos seus próprios limites de taxa de API ou recursos de LLM local — nunca restringimos nem medimos o uso.' },
     ],
     copyright: '© 2026 PromptQuorum. Todos os direitos reservados.',
+    heroStrong: 'PromptQuorum é uma ferramenta de envio multi-IA que envia um prompt para 25+ modelos simultaneamente — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek e mais — e avalia os resultados por consenso e risco de alucinação.',
     worldwide: '🌍 Disponível no mundo todo',
+  },
+  ko: {
+    badge: '대기자 명단 접수 중',
+    h1a: '하나의 프롬프트. 25개 이상의 AI 응답.',
+    h1b: '합의 도출',
+    heroDesc: '프롬프트를 한 번 작성하고 최적화하세요 — ChatGPT, Claude, Gemini 및 25개 이상의 AI 모델에서 응답을 나란히 받아보세요. 환각을 감지하고, 합의를 점수화하며, 모든 모델에서 최상의 답변을 찾으세요.',
+    heroSub: '무료로 사용. 자신의 API 키를 사용하거나 로컬 LLM을 실행하세요.',
+    compareH2: '어떤 AI 모델이 당신의 작업에 가장 좋은 답변을 제공하나요?',
+    compareDesc: '동일한 프롬프트를 ChatGPT, Claude, Gemini, Mistral, Llama, DeepSeek 및 25개 이상의 다른 AI 모델에 동시에 전송하세요. 사실적 합의를 찾고 모순을 표시하기 위해 응답을 나란히 비교하세요.',
+    compareBtn: 'AI 모델 비교 가이드 보기',
+    featuresH2: 'PromptQuorum으로 무엇을 할 수 있나요?',
+    featuresDesc: '프롬프트 최적화, 다중 모델 전송 및 합의 분석을 위한 6가지 도구',
+    features: [
+      { title: '프롬프트 최적화', description: '8가지 개선 기법으로 프롬프트를 자동으로 다듬고 최적화하세요.' },
+      { title: '다중 모델 분석', description: '환각을 감지하기 위해 25개 이상의 AI 모델의 응답을 나란히 비교하세요.' },
+      { title: '모델 역량 비교', description: '코딩, 추론, 창작 또는 사실 회상에서 어떤 모델이 뛰어난지 식별하세요 — 정확한 프롬프트에 대해 나란히 비교.' },
+      { title: '속도 및 효율성', description: '브라우저 탭을 수동으로 전환하는 대신 클릭 한 번으로 25개 이상의 모델에 전송하세요.' },
+      { title: '개인 정보 보호 우선', description: 'API 키는 브라우저 localStorage에만 저장 — PromptQuorum 서버로 전송되지 않습니다. 등록 없음, 추적 없음, 완전한 제어.' },
+      { title: '오픈 소스 통합', description: 'Ollama, LM Studio, Jan AI, Meta Llama로 로컬에 배포 — API 키 불필요.' },
+    ],
+    pipelineH2: 'PromptQuorum의 4단계 파이프라인은 어떻게 작동하나요?',
+    pipelineDesc: '프롬프트를 자동으로 최적화, 비교, 분석 및 개선하세요',
+    faqH2: '자주 묻는 질문',
+    waitlistH2: 'PromptQuorum 대기자 명단에 참여하세요',
+    publishedDate: '2026년 4월 5일 업데이트',
+    waitlistDesc: 'PromptQuorum은 2026년 4월에 출시됩니다. 조기 접근 및 평생 프리미엄 기능을 위해 대기자 명단에 등록하세요. API 키는 브라우저에 저장 — 등록 없음, 추적 없음.',
+    whyH2: '왜 PromptQuorum인가요?',
+    whyItems: [
+      '동시에 25개 이상의 모델에 하나의 프롬프트를 전송 — 탭 전환 없음',
+      'Quorum 판정 받기: 모든 모델에 걸친 자동화된 합의 점수',
+      '환각 감지 및 모순 자동 표시',
+      '완전한 개인 정보 보호를 위해 Ollama/LM Studio로 로컬 실행',
+      '무료 이용 — 자신의 API 키 사용, 완전한 제어 유지',
+    ],
+    faqs: [
+      { q: 'PromptQuorum은 무료입니까?', a: '예. PromptQuorum은 무료로 사용하실 수 있습니다. 자체 API 키를 사용하거나 로컬 LLM을 사용하거나 테스트 목적으로 제한된 무료 백엔드 서비스를 이용하실 수 있습니다.' },
+      { q: '개인 정보 보호는 어떻게 작동합니까?', a: '데이터 전송 위치를 직접 결정하십시오. LM Studio 또는 Ollama로 모든 것을 로컬에 유지하거나 자체 API 키를 사용하십시오. PromptQuorum의 개인 정보 보호 수준은 사용자가 설정하는 방식에 따라 달라집니다.' },
+      { q: '지원되는 AI 제공업체는 무엇입니까?', a: 'PromptQuorum은 25개 이상의 클라우드 제공업체에 전송합니다: GPT-4o, GPT-4o mini, Claude Sonnet 4.6, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok 등. 로컬 LLM도 지원: Ollama, LM Studio, Jan AI, GPT4All.' },
+      { q: 'PromptQuorum은 어떤 플랫폼에서 실행됩니까?', a: 'PromptQuorum은 데스크톱 앱(Mac, Windows)으로 시작하며, 이후 웹 애플리케이션, 그리고 최종적으로 모바일 솔루션으로 확장될 예정입니다.' },
+      { q: 'PromptQuorum의 차별점은 무엇입니까?', a: 'PromptQuorum은 전체 프롬프트 수명 주기를 다룹니다: 작성을 위한 9가지 내장 프레임워크, 8가지 개선 유형의 반복적 최적화, 25개 이상의 모델에 동시 전송, 합의 점수 산출을 위한 13가지 Quorum 분석 유형.' },
+      { q: '사용 제한이 있습니까?', a: 'PromptQuorum 측에서는 제한이 없습니다. 사용량은 자신의 API 속도 제한 또는 로컬 LLM 리소스에 의해서만 제한됩니다 — 당사는 절대 사용을 조절하거나 계량하지 않습니다.' },
+    ],
+    copyright: '© 2026 PromptQuorum. 모든 권리 보유.',
+    heroStrong: 'PromptQuorum은 하나의 프롬프트를 25개 이상의 모델에 동시에 전송하는 다중 AI 전송 도구입니다 — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek 등 — 결과를 합의 및 환각 위험도로 점수화합니다.',
+    worldwide: '🌍 전 세계 이용 가능',
   },
 }
 
@@ -381,7 +433,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
           </h1>
 
           <p className="mt-6 text-lg text-text-primary max-w-3xl mx-auto animate-fade-in font-medium leading-relaxed" style={{ animationDelay: '150ms' }}>
-            <strong>PromptQuorum is a multi-AI dispatch tool that sends one prompt to 25+ models simultaneously — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek, and more — and scores the results for consensus and hallucination risk.</strong>
+            <strong>{t.heroStrong}</strong>
           </p>
 
           <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
