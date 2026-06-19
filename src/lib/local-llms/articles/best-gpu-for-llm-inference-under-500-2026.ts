@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Hardware & Performance',
     title: 'أفضل GPU للاستدلال على نماذج LLM بأقل من $500 (2026)',
     seoTitle: 'RTX 4060 Ti 16GB بـ 420$: أفضل GPU لـ LLM 2026',
-    metaDescription: 'RTX 4060 Ti 16GB (~420$): 16 GB VRAM، 55 tok/s، نماذج 14B بجودة Q8. RTX 3090 مستعملة (24 GB، ~440$) لنماذج 30B. RX 7800 XT 16GB (~370$) أفضل AMD. 2026.',
+    metaDescription: 'RTX 4060 Ti 16GB (~420$): 55 tok/s ونماذج 14B بجودة Q8. RTX 3090 مستعملة (24GB، ~440$) لنماذج 30B. RX 7800 XT (~370$) أفضل AMD. 2026.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
