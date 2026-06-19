@@ -3560,7 +3560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ستة تطبيقات Android تشغّل النماذج اللغوية الكبيرة بالكامل دون اتصال بالإنترنت في 2026: MLC Chat وMaid وLayla وOllama عبر Termux وPrivate AI وPocketPal AI. تتفاوت هذه التطبيقات في استخدام وحدة المعالجة العصبية (NPU) واتساع مكتبة النماذج والتكامل مع Android — ويعتمد الاختيار الأمثل على أولويتك: السرعة (MLC Chat مع NPU Hexagon) أو أقصى مرونة في النماذج (Ollama عبر Termux) أو واجهة مستخدم أصلية مصقولة (Layla أو PocketPal AI). يقارن هذا الدليل التطبيقات الستة على Samsung Galaxy S25 Ultra (Snapdragon 8 Elite) وPixel 9 Pro (Tensor G5) وOnePlus 13 (Snapdragon 8 Elite)، مع تغطية الاستدلال عبر Snapdragon Hexagon NPU مقابل MediaTek APU مقابل Tensor G5، وواقع تشرذم Android، وكيفية تعامل كل تطبيق مع التخزين وحدود الخلفية وقائمة المشاركة في Android.',
     metaDescription:
-      'كيف تعمل النماذج اللغوية المحلية فعلياً على Android 2026 — قياسات أداء على S25 Ultra وPixel 9 Pro. سرعات NPU، دعم GGUF، حدود RAM. 6 تطبيقات مقارنة.',
+      'أداء النماذج اللغوية المحلية فعلياً على Android 2026: قياسات على S25 Ultra وPixel 9 Pro. سرعات NPU ودعم GGUF وحدود RAM. 6 تطبيقات.',
     twitterDescription:
       'الذكاء الاصطناعي المحلي على Android في 2026: يبلغ MLC Chat ~40 رمز/ث مع NPU Hexagon من Snapdragon. يوفر Maid وصولاً كاملاً إلى GGUF. برنامج Ollama عبر Termux هو مسار المستخدمين المتقدمين. مقارنة كاملة لـ 6 تطبيقات على S25 Ultra وPixel 9 Pro وOnePlus 13.',
     current_models_mentioned: [

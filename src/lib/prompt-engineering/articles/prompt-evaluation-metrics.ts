@@ -744,7 +744,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'مقاييس تقييم البرومبتات: ماذا تقيس وكيف',
-      seoTitle: 'مقاييس تقييم البرومبتات: Pass Rate وBLEU وLLM-as-Judge',
+      seoTitle: 'مقاييس تقييم البرومبت: Pass Rate وBLEU وLLM-as-Judge',
       metaDescription: 'Pass rate بنسبة 90% يعني 10% من الطلبات تفشل. تعلّم أي مقاييس تقييم تناسب مخرجاتك: Pass Rate لـJSON وBLEU للترجمة وLLM-as-judge للنص الحر.',
       ogDescription: 'اختر مقياس تقييم البرومبتات الصحيح حسب نوع المخرجات. قارن pass rate وBLEU والتشابه الدلالي وLLM-as-judge مع كشف الانحدار.',
       twitterDescription: 'Pass rate أم BLEU أم التشابه الدلالي أم LLM-as-judge؟ اختر مقياس تقييم البرومبتات الصحيح حسب نوع المخرجات. إطار مع تنبيهات الانحدار.',

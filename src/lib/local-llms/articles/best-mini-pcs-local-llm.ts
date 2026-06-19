@@ -1600,7 +1600,7 @@ schema: {
       title: 'أفضل أجهزة الكمبيوتر المصغرة لنماذج LLM المحلية 2026: مقارنة Mac Mini M4 Pro وFramework Desktop وتجميعات Mini-ITX',
       seoTitle: 'كمبيوتر مصغر لـ LLM 2026: Mac mini M4 Pro وFramework',
       intro: '**أجهزة الكمبيوتر المصغرة المزودة بشرائح حديثة تشغّل النماذج من 7B إلى 70B في حجم مدمج.** يتعامل Mac mini M4 Pro (ذاكرة موحدة 64 GB) مع نموذج 70B بسرعة 10–15 tok/s. يصل Framework Desktop (AMD Ryzen AI Max 395+، ذاكرة موحدة 128 GB) إلى 70B بسرعة 20+ tok/s. تغطي تجميعات Mini-ITX التقليدية المزودة بـ RTX 5060 Ti (16 GB) أو RTX 5070 (12 GB) نماذج 7B–13B مقابل 900–1,400 دولار. اعتباراً من أبريل 2026، تلغي أجهزة الكمبيوتر المصغرة الفوضى على المكتب دون التضحية بأداء نماذج LLM المحلية. قد تختلف الأسعار حسب بلدك.',
-      metaDescription: 'Mac mini M4 Pro 64 GB: Llama 70B بـ 10–15 tok/s. Framework Desktop 128 GB: 70B بـ 20+ tok/s. ASUS PN51 مع RTX 5060 Ti: أفضل قيمة x86 بـ 900 دولار.',
+      metaDescription: 'Mac mini M4 Pro 64 GB: Llama 70B بـ 10–15 tok/s. Framework Desktop 128 GB: 70B بـ 20+ tok/s. ASUS PN51 مع RTX 5060 Ti: أفضل قيمة x86 بـ 900$.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-21',
       leadAnswerBlock: '**أجهزة الكمبيوتر المصغرة المزودة بشرائح حديثة تشغّل النماذج من 7B إلى 70B في حجم مدمج. يتعامل Mac mini M4 Pro (ذاكرة موحدة 64 GB) مع نموذج 70B بسرعة 10–15 tok/s. يصل Framework Desktop (AMD Ryzen AI Max 395+، ذاكرة موحدة 128 GB) إلى 70B بسرعة 20+ tok/s.**',

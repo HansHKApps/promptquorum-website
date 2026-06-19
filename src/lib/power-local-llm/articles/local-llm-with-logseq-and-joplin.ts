@@ -2989,11 +2989,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq وJoplin مع نماذج اللغة المحلية: ملاحظات ذكية بدون مزامنة سحابية (2026)',
-    seoTitle: 'Logseq وJoplin مع LLM محلي: بديل خاص لـ Notion AI 2026',
+    seoTitle: 'Logseq وJoplin مع LLM محلي: بديل خاص لـ Notion AI',
     intro:
       '[Logseq](https://logseq.com) و[Joplin](https://joplinapp.org) هما تطبيقا الملاحظات مفتوحا المصدر في 2026 اللذان يتكاملان بسلاسة مع نماذج اللغة المحلية دون الحاجة إلى الاتصال بالسحابة. يُشغّل Logseq ملحق logseq-copilot مع [Ollama](https://ollama.com) للمحادثة الأصيلة في أداة التخطيط الهرمي والذكاء الاصطناعي لليوميات؛ بينما يُشغّل Joplin ملحق Jarvis مع Ollama للدردشة المدركة للملاحظات والملخصات والاسترجاع المدعوم بالتضمينات. كلا التطبيقين أكثر امتثالاً للائحة حماية البيانات العامة GDPR من Notion AI بحكم هندستهما الافتراضية — إذ يُرسل Notion محتوى الملاحظات إلى OpenAI، بينما لا يُرسل Logseq ولا Joplin أي شيء ما لم تُهيئهما على ذلك. القيد الرئيسي في 2026 هو الجوّال: لا يدعم أيٌّ منهما الملحقات على iOS أو Android، وبذلك تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط. يقيّم هذا الدليل كلا الأداتين من حيث نضج ملحقات الذكاء الاصطناعي ومسارات المزامنة بدون سحابة وتوافق الجوّال ومسار الانتقال من Notion، مع خطوات تهيئة ملموسة لـ Ollama.',
     metaDescription:
-      'Logseq مع logseq-copilot وJoplin مع Jarvis — كلاهما على Ollama بدلاً من Notion AI. مزامنة بدون سحابة، امتثال GDPR، وفجوة ملحقات iOS وAndroid موضَّحة.',
+      'Logseq مع logseq-copilot وJoplin مع Jarvis على Ollama بدلاً من Notion AI. مزامنة بلا سحابة وامتثال GDPR وفجوة ملحقات iOS وAndroid.',
     twitterDescription:
       'ملاحظات مفتوحة المصدر + ذكاء اصطناعي محلي بدون سحابة: Logseq مع logseq-copilot، Joplin مع Jarvis، كلاهما على Ollama. شرح فجوة ملحقات الجوّال. مسار الانتقال من Notion. صديق للخصوصية افتراضياً.',
     current_models_mentioned: [

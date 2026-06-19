@@ -795,7 +795,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
     next_refresh_due: '2026-11-15',
     theme: 'Hardware & Performance',
     title: 'تشغيل نماذج 70B+ على Apple Silicon 2026: دليل M5 Max الكامل',
-    seoTitle: 'نماذج 70B على M5 Max 128GB: 12–20 token/ث، جودة GPT-5.5',
+    seoTitle: 'نماذج 70B على M5 Max 128GB: 12–20 tok/ث، جودة GPT',
     intro: 'شغّل نماذج LLM بحجم 70B وأكثر محليًا على Apple Silicon M5 Max (128GB). دليل كامل مع Ollama وMLX، ومقارنة التكميم (Q4/Q5/Q8)، ومعايير جودة 8B مقابل 70B، وأرقام token/ث الفعلية، وتحليل تكلفة 70B مقابل واجهات API السحابية، ونماذج 70B+ بديلة، وتحسين السرعة، وتوقعات M5 Ultra لعام 2026.',
     metaDescription: 'يشغّل M5 Max 128GB نماذج 70B بـ 12–20 token/ث. جودة Q5 تساوي GPT-5.5 ضمن 3%. إعداد كامل مع Ollama/MLX، ودليل تكميم، ومعايير.',
     twitterDescription: 'نماذج LLM 70B على M5 Max 128GB: 12–20 token/ث، خيارات Q4–Q8، جودة سحابية بفارق 3%، $0/شهر. دليل إعداد كامل + معايير.',

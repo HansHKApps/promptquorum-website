@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: 'مقارنة مخاطر GDPR: Qwen مقابل DeepSeek مقابل Llama مقابل Claude 2026',
     seoTitle: 'مخاطر GDPR لنماذج LLM: Qwen وDeepSeek وLlama وClaude',
-    metaDescription: 'DeepSeek API يمثل أعلى مخاطر GDPR؛ Qwen المحلي الأدنى خطراً؛ Claude/GPT API مخاطر متوسطة. مصفوفة مقارنة بالولاية القضائية وإقامة البيانات وشروط SCC.',
+    metaDescription: 'DeepSeek API أعلى مخاطر GDPR؛ Qwen المحلي الأدنى خطراً؛ Claude/GPT API مخاطر متوسطة. مصفوفة مقارنة بالولاية القضائية وإقامة البيانات وSCC.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     readTime: '8 دقائق للقراءة',

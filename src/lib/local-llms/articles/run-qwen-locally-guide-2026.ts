@@ -651,7 +651,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     title: 'كيفية تشغيل Qwen 3 محليًا في 2026: دليل إعداد Ollama + LM Studio',
     seoTitle: 'تشغيل Qwen 3 محليًا 2026: 16 GB VRAM في 10 دقائق',
     intro: 'يعمل Qwen 3.6 27B على بطاقة رسوم استهلاكية واحدة (16 GB VRAM) عبر Ollama أو LM Studio. يستغرق الإعداد أقل من 10 دقائق. يغطي هذا الدليل اختيار النموذج، ومتطلبات الأجهزة، وتثبيت Ollama CLI، وإعداد واجهة LM Studio الرسومية، والتصحيح الحرج لـ num_ctx، واستهلاك الطاقة وإجمالي تكلفة الملكية، وكيفية ربط Qwen المحلي بـ PromptQuorum للتوزيع متعدد النماذج.',
-    metaDescription: 'شغّل Qwen 3.6 27B محليًا بـ16 GB VRAM عبر Ollama أو LM Studio في أقل من 10 دقائق. يشمل تصحيح num_ctx 32768 الحرج وأداء 35 رمزًا/ثانية على RTX 4090.',
+    metaDescription: 'شغّل Qwen 3.6 27B محليًا بـ 16 GB VRAM عبر Ollama أو LM Studio في أقل من 10 دقائق. يشمل تصحيح num_ctx 32768 وأداء 35 رمزًا/ث على RTX 4090.',
     publishDate: '2026-05-16',
     dateModified: '2026-06-14',
     readTime: '10 دقائق قراءة',

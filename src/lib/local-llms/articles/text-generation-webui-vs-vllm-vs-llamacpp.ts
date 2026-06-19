@@ -732,7 +732,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Text-Generation-WebUI مقابل vLLM مقابل llama.cpp في 2026: مقارنة محركات الاستدلال',
-      seoTitle: 'Text-Generation-WebUI مقابل vLLM مقابل llama.cpp 2026',
+      seoTitle: 'Text-Generation-WebUI مقابل vLLM وllama.cpp 2026',
       intro: 'Text-Generation-WebUI وvLLM وllama.cpp ثلاثة محركات استدلال شائعة لتشغيل نماذج LLM المحلية، كلٌّ منها محسّن لحالات استخدام مختلفة. llama.cpp هو الأخف ويشغّل Ollama؛ وvLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية؛ وText-Generation-WebUI هو الأغنى بالميزات للتجريب. اعتبارًا من أبريل 2026، يهيمن vLLM على عمليات النشر الإنتاجية، ويهيمن llama.cpp على الأجهزة الاستهلاكية، ويهيمن Text-Generation-WebUI على سير عمل البحث والضبط الدقيق.',
       metaDescription: 'vLLM يُنتج 300+ رمز/ثانية في الإنتاج؛ llama.cpp يشغّل Ollama (الأخف)؛ Text-Generation-WebUI الأمثل للبحث وLoRA. مقارنة محركات الاستدلال 2026.',
       publishDate: '2026-04-04',

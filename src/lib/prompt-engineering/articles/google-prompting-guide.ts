@@ -1574,7 +1574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     dateModified: '2026-05-03',
     readTime: '9 دقائق للقراءة',
     seoTitle: 'دليل Google للمطالبات: 5 مبادئ أساسية + أمثلة',
-    metaDescription: '5 مبادئ من Google (وضوح، بنية، أمثلة، أدوار، قيود) تُقلّل أخطاء النماذج 40–60%. طبّقها على Gemini وGPT-5.5 وClaude والنماذج المحلية عبر PromptQuorum.',
+    metaDescription: '5 مبادئ من Google (وضوح، بنية، أمثلة، أدوار، قيود) تُقلّل أخطاء النماذج 40–60%. طبّقها على Gemini وGPT-5.5 وClaude والنماذج المحلية.',
     ogTitle: 'دليل Google للمطالبات: 5 مبادئ أساسية + أمثلة',
     ogDescription: 'أتقن مبادئ Google الخمسة للمطالبات: الوضوح، والقيود، والأمثلة، والأدوار، والبنية. طبّقها على Gemini وGPT-5.5 وClaude والنماذج المحلية للحصول على نتائج متوقعة.',
     twitterTitle: 'دليل Google للمطالبات: 5 مبادئ أساسية + أمثلة',

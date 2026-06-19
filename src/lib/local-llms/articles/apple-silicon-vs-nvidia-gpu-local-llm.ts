@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple Silicon مقابل GPU من NVIDIA لنماذج LLM المحلية 2026: الأداء والتكلفة وتدفق العمل',
     seoTitle: 'Apple Silicon مقابل NVIDIA GPU لـ LLM المحلي 2026',
     intro: 'Apple Silicon مقابل GPU من NVIDIA لنماذج LLM المحلية: M5 Max مقابل RTX 4090 في السرعة والتكلفة والاستهلاك وحد VRAM مقابل الذاكرة الموحدة ومقارنة تدفق العمل. نقطة التقاطع: نحو 24 GB من حجم النموذج. دون هذا الحد، NVIDIA أسرع. وفوقه، Apple Silicon هو الخيار الاستهلاكي الوحيد.',
-    metaDescription: 'M5 Max مقابل RTX 4090: نقطة التقاطع عند 24 GB. دون 24 GB تتفوق NVIDIA؛ فوق 24 GB يصبح Apple Silicon الخيار الوحيد. مقارنة السرعة والتكلفة والطاقة.',
+    metaDescription: 'M5 Max مقابل RTX 4090: التقاطع عند 24 GB. دونها تتفوق NVIDIA؛ فوقها Apple Silicon الخيار الوحيد. مقارنة السرعة والتكلفة والطاقة.',
     twitterDescription: 'Mac مقابل NVIDIA للذكاء الاصطناعي المحلي 2026: M5 Max مقابل RTX 4090 اختبارات مرجعية، إجمالي تكلفة الملكية لـ 3 سنوات، تكاليف الكهرباء ومقارنة تدفق العمل. نقطة التقاطع عند نحو 24 GB من حجم النموذج.',
     publishDate: '2026-05-15',
     dateModified: '2026-05-15',

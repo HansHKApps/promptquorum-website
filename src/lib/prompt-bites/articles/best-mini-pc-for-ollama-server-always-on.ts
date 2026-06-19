@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware & Performance',
     type: 'comparison',
     title: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026',
-    seoTitle: 'أفضل جهاز مصغر لخادم Ollama الدائم 2026 | PromptQuorum',
+    seoTitle: 'أفضل جهاز مصغر لخادم Ollama دائم 2026 | PromptQuorum',
     metaDescription: 'شغّل Ollama 24/7 بجهاز مصغر يستهلك 15–35 W. Minisforum UM890 Pro يشغّل نماذج 7B بـ12–18 رمز/ثانية. مقارنة شاملة مع AOOSTAR GEM12 وBeelink SER8.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,

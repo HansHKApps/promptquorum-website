@@ -1644,7 +1644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'الذكاء الاصطناعي المحلي من Apple مقابل نماذج LLM المستضافة ذاتياً: ما الذي غيّرته WWDC 2026 فعلاً',
     seoTitle: 'Apple WWDC 2026: الذكاء المحلي مقابل LLMs المستضافة',
     intro: 'في WWDC 2026 (8 يونيو، الخطاب الافتتاحي الأخير لـ Tim Cook بوصفه رئيساً تنفيذياً)، أعادت Apple بناء استراتيجيتها للذكاء الاصطناعي حول بنية هجينة تجمع بين التشغيل المحلي على الجهاز والحوسبة السحابية، فضلاً عن شراكة جديدة مع Google. بالنسبة لمن يُشغّل نماذج LLM محلية، فإن السؤال الجوهري ليس هل أصبحت Siri أكثر ذكاءً، بل ما الذي يعمل فعلاً على جهازك، وما الذي يخرج منه، وكيف يقارن ذلك بتشغيل Qwen أو Llama على بنيتك التحتية الخاصة.',
-    metaDescription: 'WWDC 2026: Apple Intelligence بثلاثة مستويات: AFM على الجهاز، وPrivate Cloud Compute، وGoogle Cloud (مُحسَّن بـ Gemini). الأثر على نماذج LLM المحلية.',
+    metaDescription: 'WWDC 2026: Apple Intelligence بثلاثة مستويات: AFM على الجهاز، وPrivate Cloud Compute، وGoogle Cloud. الأثر على نماذج LLM المحلية.',
     publishDate: '2026-06-13',
     dateModified: '2026-06-13',
     readTime: '١٠ دقائق للقراءة',

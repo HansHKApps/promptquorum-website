@@ -539,7 +539,7 @@ schema: {
       title: 'أفضل نماذج 7B لعتاد المستهلك',
       seoTitle: 'أفضل نماذج LLM محلية 7B لعتاد المستهلك 2026',
       intro: '**لكروت رسوميات المستهلك بـ 8–12 GB من VRAM، يتصدّر Llama 3.3 7B وMistral Small وQwen3 7B فئة 7B في 2026.** اعتبارًا من أبريل 2026، تبلغ الثلاثة نحو 15 tok/ثانية على RTX 3060 12 GB، لكنها تختلف في الاستدلال (يفوز Llama 3.3 بـ 82% MATH)، واتباع التعليمات (يفوز Mistral بـ 92%)، والدعم متعدد اللغات (يفوز Qwen3 بـ 27 لغة). اختر حسب حالة استخدامك.',
-      metaDescription: 'Llama 3.3 7B وQwen3 7B يبلغان 15 tok/s على RTX 3060 12 GB. Llama الأفضل للاستدلال (82% MATH)، Qwen3 لـ 27 لغة، Mistral لاتباع التعليمات. قارن وحدّد.',
+      metaDescription: 'Llama 3.3 7B وQwen3 7B بـ 15 tok/s على RTX 3060 12 GB. Llama الأفضل للاستدلال (82% MATH)، Qwen3 لـ 27 لغة، Mistral للتعليمات. قارن وحدّد.',
       publishDate: '2026-04-05',
       dateModified: '2026-04-18',
       leadAnswerBlock: '**لكروت رسوميات المستهلك بـ 8–12 GB من VRAM، يتصدّر Llama 3.3 7B وMistral Small وQwen3 7B فئة 7B في 2026. تبلغ الثلاثة نحو 15 tok/ثانية على RTX 3060 12 GB، لكنها تختلف: يفوز Llama 3.3 في الاستدلال (82% MATH)، وMistral في اتباع التعليمات (92%)، وQwen3 في تعدد اللغات (27 لغة).**',

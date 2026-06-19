@@ -3503,11 +3503,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
     title: 'Continue.dev مقابل Cline مقابل Aider: أفضل وكيل برمجة محلي في 2026',
-    seoTitle: 'Continue.dev مقابل Cline مقابل Aider: أيّها لسير عملك؟',
+    seoTitle: 'Continue.dev مقابل Cline وAider: أيّها لعملك؟',
     intro:
       'تُعدّ أدوات Continue.dev وCline وAider الأدوات الثلاث الجادة مفتوحة المصدر للبرمجة التي تتكامل بسلاسة مع نموذج لغوي محلي في عام 2026. وهي ليست قابلة للتبادل؛ إذ تقوم كلٌّ منها على بدائية سير عمل مختلفة: الإكمال التلقائي، أو حلقة الوكيل المستقل، أو الفوارق الأصيلة في Git. اختر أولاً بحسب سير العمل ثم النموذج، وستتجنب 90% من مشكلات التكامل.',
     metaDescription:
-      'Continue.dev للإكمال التلقائي، Cline للوكيل المستقل، Aider لفوارق Git. مقارنة نموذج التحرير والتكامل مع بيئة التطوير وخيارات التراجع مع نماذج محلية.',
+      'Continue.dev للإكمال التلقائي وCline للوكيل المستقل وAider لفوارق Git. مقارنة نموذج التحرير والتكامل مع IDE وخيارات التراجع محلياً.',
     twitterDescription:
       'ثلاث أدوات برمجة محلية، وثلاث بدائيات سير عمل مختلفة. تطبيق Continue.dev للإكمال التلقائي، وأداة Cline للوكلاء المستقلين، وأداة Aider للفوارق الأصيلة في Git. الحكم حسب سير العمل.',
     current_models_mentioned: [

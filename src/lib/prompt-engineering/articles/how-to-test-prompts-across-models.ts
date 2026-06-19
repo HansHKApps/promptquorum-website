@@ -1700,7 +1700,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     current_models_mentioned: ['GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.5 Pro', 'Llama 3.3 70B'],
     title: 'كيفية اختبار البرومبتات عبر النماذج: تقييم متعدد النماذج',
-    seoTitle: 'اختبار البرومبت عبر النماذج: GPT وClaude وGemini (2026)',
+    seoTitle: 'اختبار البرومبت عبر النماذج: GPT وClaude وGemini',
     metaDescription: 'GPT-5.5 يحقق 95% موثوقية JSON مقابل 70% لـ Llama. اختبر نفس البرومبت على GPT وClaude وGemini بالتوازي وقارن معدلات النجاح والتكلفة لكل token.',
     ogTitle: 'برومبتك يعمل على GPT-5.5. يفشل على Claude. إليك السبب.',
     ogDescription: 'برومبت يحقق 95% على GPT قد يفشل بصمت على Claude — معالجة JSON مختلفة، وعتبات رفض مختلفة، وأولويات تعليمات مختلفة. لن تعرف حتى تختبر نفس البرومبت على كليهما.',
