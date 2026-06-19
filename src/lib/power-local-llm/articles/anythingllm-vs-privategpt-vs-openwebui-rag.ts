@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026',
     seoTitle: 'Local RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -53,15 +53,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?',
         answer:
-          'Pick AnythingLLM if you need real production-grade RAG: best citations, swappable embedding models, persistent workspaces, and the lowest hallucination rate (6%) on a 5,000-page corpus. Pick PrivateGPT if retrieval latency, full offline operation, and a hardened EU-compliance posture matter more than UI polish — it is a Python service with a CLI-first mindset. Pick Open WebUI if you already run Ollama and want a multi-user chat front-end that adds RAG as a side feature rather than the core. All three are free and open source, all run fully offline, and all top out before 10,000 pages without custom work.',
+          '**Open WebUI** wins for most users: easiest setup, best UI, and broadest model support (Ollama + OpenAI API). Use **AnythingLLM** if you need multi-user workspaces. Use **PrivateGPT** only for strict offline-only air-gapped environments.',
         bullets: [
-          'AnythingLLM — best citations, swappable embedders, lowest hallucination rate (6%), persistent workspaces. The default production pick.',
-          'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service, hardened compliance posture. Best for EU/regulated teams.',
-          'Open WebUI — cleanest multi-user UI, native Ollama RAG, easiest to bolt onto an existing chat stack. Best for shared internal deployments.',
+          'Open WebUI — easiest one-command Docker install, best UI, supports Ollama and OpenAI-compatible APIs. The default pick for most users in 2026.',
+          'AnythingLLM — best citations, swappable embedders, multi-user workspaces with document access controls. Right choice for teams needing production-grade RAG with user management.',
+          'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service. Use only for strict air-gapped deployments where no internet connectivity is acceptable.',
           'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.',
           'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -106,11 +106,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'AnythingLLM had the lowest hallucination rate (6%) and best citation quality on a 5,000-page corpus; PrivateGPT had the lowest retrieval latency and cleanest offline posture; Open WebUI had the best multi-user and OAuth support for shared deployments.',
+            text: 'Open WebUI is the best RAG tool for local LLMs in 2026 — easiest install, best UI, Ollama + OpenAI support. Use AnythingLLM for team workspaces.',
           },
           {
             type: 'plain-terms',
-            text: 'Pick AnythingLLM if you want the easiest setup and best answer accuracy for a personal document library (under 3,000 docs). Pick PrivateGPT if you need guaranteed offline operation with no cloud dependencies. Pick Open WebUI if multiple people need to share the same RAG system with separate accounts and access controls.',
+            text: 'For home or solo use: Open WebUI. For a team that needs document workspaces: AnythingLLM. For fully air-gapped deployments: PrivateGPT.',
           },
         ],
         columns: ['Feature', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-one',
         title: 'Which One Should You Pick?',
         content:
-          '**The right choice depends on whether you need citations for downstream work, whether compliance posture matters, and whether other people will share the deployment.** Use this decision shortcut:',
+          '**Open WebUI is the recommended choice for most users in 2026** — it has the most active development cadence, easiest one-command Docker install, and supports both Ollama and OpenAI-compatible APIs. AnythingLLM is the right choice for teams that need document workspaces and user management. PrivateGPT suits strict air-gapped deployments where no internet connectivity is acceptable. The right choice depends on whether you need citations for downstream work, whether compliance posture matters, and whether other people will share the deployment. Use this decision shortcut:',
         rows: [
           { 'Your situation': 'I need cited answers I can paste into a research write-up', 'Pick': 'AnythingLLM' },
           { 'Your situation': 'I am a one-person team with 50–500 PDFs and want production-grade RAG', 'Pick': 'AnythingLLM' },
@@ -489,8 +489,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Die beste lokale RAG 2026',
     seoTitle: 'Lokales RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei verarbeiten 5.000 Seiten auf einer 16-GB-RAM-Maschine; die Skalierungsklippe tritt zwischen 8.000–12.000 Seiten auf, je nach Embedder-Wahl.',
           'Das Wechseln von Einbettungsmodellen erfordert eine vollständige Neuindexierung in allen drei — budgetieren Sie 30–90 Minuten pro 5.000 Seiten auf Consumer-Hardware.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -926,8 +926,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI : La meilleure RAG locale 2026',
     seoTitle: 'AnythingLLM vs PrivateGPT vs Open WebUI : RAG 2026',
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois gèrent 5 000 pages sur une machine 16 GB RAM ; la falaise d\'échelle apparaît entre 8 000–12 000 pages selon le choix d\'embedder.',
           'Changer les modèles d\'embedding nécessite une réindexation complète dans les trois — budgétez 30–90 minutes par 5 000 pages sur matériel grand public.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -1354,8 +1354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
     seoTitle: 'ローカルRAG 2026：AnythingLLM・PrivateGPT・Open WebUI比較',
@@ -1406,7 +1406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.',
           'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -1847,7 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-06-19',
       inLanguage: 'ja',
       url: '/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       speakable: {
@@ -1953,8 +1953,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台',
     seoTitle: '本地RAG 2026：AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -1969,7 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: '本地RAG平台',
     targetKeywords: ['anythingllm vs privategpt', 'open webui rag', 'best local rag 2026', 'self-hosted rag comparison', 'privategpt benchmark', 'anythingllm scaling'],
     leadAnswerBlock: '**在2026年5月测试的5,047页语料库上，AnythingLLM在生产可靠性上获胜（最佳引用、可交换的嵌入器、持久工作空间、6%的最低幻想率）。PrivateGPT在检索延迟上获胜（p50为240ms、完全离线设计、强化的EU合规姿态）。Open WebUI在操作人体工程学上获胜（最干净的多用户设置、精美的Ollama集成、最容易插入现有聊天工作流）。所有三个都在约10,000页时以不同的方式破裂。为您实际拥有的工作流选择，而不是您可能增长的工作流。**',
-    quickAnswerTop: { en: { question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?', answer: 'Pick AnythingLLM if you need real production-grade RAG: best citations, swappable embedding models, persistent workspaces, and the lowest hallucination rate (6%) on a 5,000-page corpus. Pick PrivateGPT if retrieval latency, full offline operation, and a hardened EU-compliance posture matter more than UI polish — it is a Python service with a CLI-first mindset. Pick Open WebUI if you already run Ollama and want a multi-user chat front-end that adds RAG as a side feature rather than the core. All three are free and open source, all run fully offline, and all top out before 10,000 pages without custom work.', bullets: ['AnythingLLM — best citations, swappable embedders, lowest hallucination rate (6%), persistent workspaces. The default production pick.', 'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service, hardened compliance posture. Best for EU/regulated teams.', 'Open WebUI — cleanest multi-user UI, native Ollama RAG, easiest to bolt onto an existing chat stack. Best for shared internal deployments.', 'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.', 'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.'], updatedDate: '2026-05-07' } },
+    quickAnswerTop: { en: { question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?', answer: '**Open WebUI** wins for most users: easiest setup, best UI, and broadest model support (Ollama + OpenAI API). Use **AnythingLLM** if you need multi-user workspaces. Use **PrivateGPT** only for strict offline-only air-gapped environments.', bullets: ['Open WebUI — easiest one-command Docker install, best UI, supports Ollama and OpenAI-compatible APIs. The default pick for most users in 2026.', 'AnythingLLM — best citations, swappable embedders, multi-user workspaces with document access controls. Right choice for teams needing production-grade RAG with user management.', 'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service. Use only for strict air-gapped deployments where no internet connectivity is acceptable.', 'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.', 'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.'], updatedDate: '2026-06-19' } },
     toc: [{ label: '核心要点', anchor: '#key-takeaways' }, { label: '比较表', anchor: '#comparison-table' }, { label: '应该选择哪个', anchor: '#which-one' }, { label: '5,047页测试方法', anchor: '#how-we-tested' }, { label: '架构：各系统如何处理文档', anchor: '#architecture' }, { label: 'AnythingLLM：深度解析', anchor: '#anythingllm' }, { label: 'PrivateGPT：深度解析', anchor: '#privategpt' }, { label: 'Open WebUI：深度解析', anchor: '#open-webui' }, { label: '检索延迟（p50 / p95）', anchor: '#latency' }, { label: '按查询类型的幻想率', anchor: '#hallucination' }, { label: '引用质量', anchor: '#citations' }, { label: '嵌入模型灵活性', anchor: '#embedding-flexibility' }, { label: '没人谈论的隐性成本', anchor: '#hidden-costs' }, { label: '扩展限制：演示何时破裂', anchor: '#scaling-cliff' }, { label: '决策树：应该选择哪个', anchor: '#decision-tree' }, { label: '常见误区', anchor: '#common-mistakes' }, { label: '常见问题', anchor: '#faq' }, { label: '相关阅读', anchor: '#related-reading' }],
     sections: {
       tldr: {
@@ -2016,13 +2016,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: '嵌入模型灵活性：AnythingLLM提供8个GUI可选后端；PrivateGPT原生支持所有HuggingFace sentence-transformers模型，包括支持100+语言的bge-m3；Open WebUI使用Ollama提供的嵌入模型及SentenceTransformers。',
       },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台', description: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年5月的测试结果。', image: 'https://www.promptquorum.com/zh/api/og/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-07', dateModified: '2026-05-07', inLanguage: 'zh', url: '/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag', speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }, about: [{ '@type': 'Thing', name: 'AnythingLLM' }, { '@type': 'Thing', name: 'PrivateGPT' }, { '@type': 'Thing', name: 'Open WebUI' }, { '@type': 'Thing', name: 'RAG（检索增强生成）' }, { '@type': 'Thing', name: '本地LLM' }], mentions: [{ '@type': 'SoftwareApplication', name: 'Ollama' }, { '@type': 'SoftwareApplication', name: 'LanceDB' }, { '@type': 'SoftwareApplication', name: 'Qdrant' }, { '@type': 'SoftwareApplication', name: 'ChromaDB' }, { '@type': 'SoftwareApplication', name: 'Llama 3.3' }], educationalLevel: 'Advanced', faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: '哪个RAG平台处理最大的文档集？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT在消费者硬件上扩展最远。带有调整设置在32GB RAM机器上舒适地达到25,000页。AnythingLLM在10,000页左右破裂，Open WebUI在8,000页左右。超过25,000页，三个都不是正确的工具。' } }, { '@type': 'Question', name: '我可以在这些平台之间迁移文档和嵌入吗？', acceptedAnswer: { '@type': 'Answer', text: '源文档自由迁移。所有三个接受相同的文件。嵌入不迁移。每个平台以自己的格式存储向量，因此切换总是意味着重新索引。' } }, { '@type': 'Question', name: '哪个平台具有最佳引用准确性？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM。在50个评分查询中，对逐字引用查询正确引用了10个中的9个。' } }, { '@type': 'Question', name: '索引期间每个平台需要多少GPU内存？', acceptedAnswer: { '@type': 'Answer', text: '在5,047页语料库上使用默认嵌入器：AnythingLLM在6.2GB处达到峰值，Open WebUI 5.4GB，PrivateGPT 4.8GB。' } }, { '@type': 'Question', name: '我可以使用自己的嵌入模型吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在GUI中支持8个嵌入后端。PrivateGPT通过settings.yaml支持任何HuggingFace模型。Open WebUI支持Ollama和OpenAI兼容端点。' } }, { '@type': 'Question', name: '哪个平台最好处理多语言文档？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT配对BAAI/bge-m3时最好。bge-m3支持100多种语言。' } }, { '@type': 'Question', name: '他们如何处理PDF表格和图形？', acceptedAnswer: { '@type': 'Answer', text: '所有三个通过PDF解析器提取文本。表格被提取为文本。图形被提取为图像参考但未用于检索。' } }, { '@type': 'Question', name: '有多少令牌用于典型的RAG查询？', acceptedAnswer: { '@type': 'Answer', text: '查询嵌入和搜索约500-700令牌等值计算。提示组装和回答生成取决于检索的块和模型的上下文窗口大小。' } }, { '@type': 'Question', name: '这些平台之外还有其他RAG选择吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。对于更高规模：自定义Ollama + Qdrant / Weaviate。对于更简单的设置：Docling + Qdrant CLI。使用Llamaindex或LangChain直接构建自定义RAG管道。' } }, { '@type': 'Question', name: '这些平台支持审计日志吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在工作空间元数据中记录。PrivateGPT可以启用FastAPI服务日志。Open WebUI记录用户登录和文档访问。' } }], inLanguage: 'zh' } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台', description: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年5月的测试结果。', image: 'https://www.promptquorum.com/zh/api/og/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-07', dateModified: '2026-06-19', inLanguage: 'zh', url: '/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag', speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }, about: [{ '@type': 'Thing', name: 'AnythingLLM' }, { '@type': 'Thing', name: 'PrivateGPT' }, { '@type': 'Thing', name: 'Open WebUI' }, { '@type': 'Thing', name: 'RAG（检索增强生成）' }, { '@type': 'Thing', name: '本地LLM' }], mentions: [{ '@type': 'SoftwareApplication', name: 'Ollama' }, { '@type': 'SoftwareApplication', name: 'LanceDB' }, { '@type': 'SoftwareApplication', name: 'Qdrant' }, { '@type': 'SoftwareApplication', name: 'ChromaDB' }, { '@type': 'SoftwareApplication', name: 'Llama 3.3' }], educationalLevel: 'Advanced', faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: '哪个RAG平台处理最大的文档集？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT在消费者硬件上扩展最远。带有调整设置在32GB RAM机器上舒适地达到25,000页。AnythingLLM在10,000页左右破裂，Open WebUI在8,000页左右。超过25,000页，三个都不是正确的工具。' } }, { '@type': 'Question', name: '我可以在这些平台之间迁移文档和嵌入吗？', acceptedAnswer: { '@type': 'Answer', text: '源文档自由迁移。所有三个接受相同的文件。嵌入不迁移。每个平台以自己的格式存储向量，因此切换总是意味着重新索引。' } }, { '@type': 'Question', name: '哪个平台具有最佳引用准确性？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM。在50个评分查询中，对逐字引用查询正确引用了10个中的9个。' } }, { '@type': 'Question', name: '索引期间每个平台需要多少GPU内存？', acceptedAnswer: { '@type': 'Answer', text: '在5,047页语料库上使用默认嵌入器：AnythingLLM在6.2GB处达到峰值，Open WebUI 5.4GB，PrivateGPT 4.8GB。' } }, { '@type': 'Question', name: '我可以使用自己的嵌入模型吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在GUI中支持8个嵌入后端。PrivateGPT通过settings.yaml支持任何HuggingFace模型。Open WebUI支持Ollama和OpenAI兼容端点。' } }, { '@type': 'Question', name: '哪个平台最好处理多语言文档？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT配对BAAI/bge-m3时最好。bge-m3支持100多种语言。' } }, { '@type': 'Question', name: '他们如何处理PDF表格和图形？', acceptedAnswer: { '@type': 'Answer', text: '所有三个通过PDF解析器提取文本。表格被提取为文本。图形被提取为图像参考但未用于检索。' } }, { '@type': 'Question', name: '有多少令牌用于典型的RAG查询？', acceptedAnswer: { '@type': 'Answer', text: '查询嵌入和搜索约500-700令牌等值计算。提示组装和回答生成取决于检索的块和模型的上下文窗口大小。' } }, { '@type': 'Question', name: '这些平台之外还有其他RAG选择吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。对于更高规模：自定义Ollama + Qdrant / Weaviate。对于更简单的设置：Docling + Qdrant CLI。使用Llamaindex或LangChain直接构建自定义RAG管道。' } }, { '@type': 'Question', name: '这些平台支持审计日志吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在工作空间元数据中记录。PrivateGPT可以启用FastAPI服务日志。Open WebUI记录用户登录和文档访问。' } }], inLanguage: 'zh' } },
   },
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026',
     seoTitle: 'RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -2073,7 +2073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Las tres gestionan 5.000 páginas en una máquina con 16 GB de RAM; el límite de escalabilidad aparece entre 8.000 y 12.000 páginas según el embedder elegido.',
           'Cambiar los modelos de embedding requiere una re-indexación completa en las tres plataformas — reserva entre 30 y 90 minutos por cada 5.000 páginas en hardware de consumo.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -2505,7 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-06-19',
       inLanguage: 'es',
       url: 'https://www.promptquorum.com/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       speakable: {
@@ -2619,8 +2619,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: O melhor RAG local em 2026',
     seoTitle: 'RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -2671,7 +2671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'As três gerenciam 5.000 páginas em uma máquina com 16 GB de RAM; o limite de escalabilidade aparece entre 8.000 e 12.000 páginas conforme o embedder escolhido.',
           'Trocar os modelos de embedding exige uma reindexação completa nas três plataformas — reserve entre 30 e 90 minutos por cada 5.000 páginas em hardware de consumo.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -3103,7 +3103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-06-19',
       inLanguage: 'pt-BR',
       url: 'https://www.promptquorum.com/pt/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       speakable: {
@@ -3217,8 +3217,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM مقابل PrivateGPT مقابل Open WebUI: أفضل RAG محلي في 2026',
     seoTitle: 'RAG محلي: AnythingLLM وPrivateGPT وOpen WebUI 2026',
@@ -3269,7 +3269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تتعامل الثلاثة مع 5.000 صفحة على جهاز بذاكرة وصول عشوائي 16 GB؛ يظهر حد قابلية التوسع بين 8.000 و12.000 صفحة وفق نموذج التضمين المختار.',
           'يستلزم تغيير نماذج التضمين إعادة فهرسة كاملة في المنصات الثلاث — احجز ما بين 30 و90 دقيقة لكل 5.000 صفحة على أجهزة المستهلكين.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -3701,7 +3701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-06-19',
       inLanguage: 'ar',
       url: 'https://www.promptquorum.com/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       speakable: {
@@ -3815,8 +3815,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교',
     seoTitle: '로컬 RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -3867,7 +3867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 플랫폼 모두 16GB RAM 머신에서 5,000페이지를 처리할 수 있습니다. 확장성 한계는 선택한 임베더에 따라 8,000~12,000페이지 사이에 나타납니다.',
           '임베딩 모델 변경 시 세 플랫폼 모두 전체 재인덱싱이 필요합니다. 소비자 하드웨어에서 5,000페이지당 30~90분을 예약하십시오.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -4299,7 +4299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-06-19',
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       speakable: {

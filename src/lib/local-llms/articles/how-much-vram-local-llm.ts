@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-07-01',
-      next_refresh_due: '2026-06-30',
+      next_refresh_due: '2026-12-19',
       last_full_refresh: '2026-06-01',
       current_models_mentioned: ['Qwen 3.6 35B-A3B', 'DeepSeek V4-Flash', 'Llama 4 Scout', 'Kimi K2.6', 'gpt-oss:20b'],
       theme: 'GPU Buying Guides',
@@ -19,8 +19,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**For 7B models, you need 8GB VRAM; for 13B-22B, 12-16GB; for 70B, 24GB minimum.** As of April 2026, these numbers assume Q4 (4-bit) quantization. Full-precision (FP32) models need 2-3× more VRAM and are rarely practical on consumer GPUs. The formula is: Model size (billions) × 2 bytes (FP32) ÷ quantization factor.',
       metaDescription: 'Exact VRAM by model size at Q4: 7B needs 8GB, 13B needs 13GB, 22B needs 16GB, 70B needs 24GB. Free calculator plus Q5/Q8 charts and the simple ÷8 formula.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**For 7B models, you need 8GB VRAM; for 13B-22B, 12-16GB; for 70B, 24GB minimum. As of April 2026, these numbers assume Q4 (4-bit) quantization.**',
+      quickAnswerTop: {
+        en: {
+          question: 'How much VRAM do I need to run a local LLM?',
+          answer: 'Rule of thumb: 1B model parameters ≈ 0.6 GB VRAM in 4-bit (Q4) quantization. A 7B model needs 4–5 GB; a 13B model needs 8–9 GB; a 70B model needs 40–48 GB. For CPU-only RAM, roughly double those figures.',
+          bullets: [
+            '3B model (Phi, StableLM): ~2 GB VRAM at Q4',
+            '7B model (Llama 3.3, Qwen3): ~4–5 GB VRAM at Q4',
+            '13B model: ~8–9 GB VRAM at Q4',
+            '70B model (Llama 3.3, Qwen): ~40–48 GB VRAM at Q4',
+            'CPU-only (no GPU): roughly double the VRAM figures for system RAM',
+          ],
+          updatedDate: '2026-06-19',
+        },
+      },
       nextStep: {
         text: 'You know your VRAM budget. Now pick the right GPU for it.',
         label: 'Best Budget GPUs for Local LLMs →',
@@ -59,6 +73,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'ruleOfThumb': {
           title: 'VRAM Rule of Thumb — Quick Reference',
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'For 4-bit quantization, budget 0.6 GB VRAM per billion parameters — a 7B model fits in 5 GB, a 70B model needs 42 GB.' },
+            { type: 'plain-terms', text: 'Divide your model size in billions by roughly 1.7 to get the minimum VRAM in GB at Q4 (4-bit). A 7B model needs about 4–5 GB, a 13B about 8–9 GB, and a 70B about 40–48 GB. For CPU-only setups without a GPU, double those numbers since system RAM is slower and you need headroom.' },
+          ],
           content: [
             '**Don\'t have time for the formula? Use these simple rules:**',
             'Once you know your VRAM budget, [see which GPUs fit each tier →](/local-llms/best-budget-gpus-local-llm)',
@@ -207,7 +225,7 @@ schema: {
         'description': 'How much VRAM does a 70B LLM need? See exact 2026 requirements for Q4/Q5 quantization, 13B–70B models, and what fits in 24GB–32GB GPUs.',
         'url': 'https://www.promptquorum.com/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -311,14 +329,14 @@ schema: {
     },
     es: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-06-30',
+      next_refresh_due: '2026-12-19',
       theme: 'GPU Buying Guides',
       title: '¿Cuánta VRAM para un LLM local? Tablas 7B a 70B (2026)',
       seoTitle: 'VRAM para LLM local: 7B=8GB, 13B=13GB, 70B=24GB (2026)',
       intro: '**Para modelos 7B necesitas 8 GB de VRAM; para 13B-22B, 12-16 GB; para 70B, mínimo 24 GB.** A partir de abril de 2026, estos números asumen cuantización Q4 (4 bits). Los modelos en precisión completa (FP32) necesitan 2-3× más VRAM y rara vez son prácticos en GPUs de consumo. La fórmula es: Tamaño del modelo (miles de millones) × 2 bytes (FP32) ÷ factor de cuantización.',
       metaDescription: 'VRAM exacta por tamaño en Q4: 7B necesita 8 GB, 13B necesita 13 GB, 22B necesita 16 GB, 70B necesita 24 GB. Calculadora gratis, tablas Q5/Q8 y la fórmula ÷8.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**Para modelos 7B necesitas 8 GB de VRAM; para 13B-22B, 12-16 GB; para 70B, mínimo 24 GB. A partir de abril de 2026, estos números asumen cuantización Q4 (4 bits).**',
       nextStep: {
         text: 'Ya conoces tu presupuesto de VRAM. Ahora elige la GPU correcta para él.',
@@ -505,7 +523,7 @@ schema: {
         'description': '¿Cuánta VRAM necesita un LLM de 70B? Consulta los requisitos exactos de 2026 para cuantización Q4/Q5, modelos de 13B a 70B y qué cabe en GPUs de 24 GB a 32 GB.',
         'url': 'https://www.promptquorum.com/es/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -609,14 +627,14 @@ schema: {
     },
     ar: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-06-30',
+      next_refresh_due: '2026-12-19',
       theme: 'GPU Buying Guides',
       title: 'كم تحتاج من VRAM لنموذج LLM محلي؟ جداول من 7B إلى 70B (2026)',
       seoTitle: 'VRAM لـ LLM محلي: 7B=8GB و13B=13GB و70B=24GB (2026)',
       intro: '**لنماذج 7B تحتاج 8 GB من VRAM؛ ولنماذج 13B-22B، 12-16 GB؛ ولنماذج 70B، 24 GB كحد أدنى.** اعتبارًا من أبريل 2026، تفترض هذه الأرقام تكميم Q4 (4 بت). تحتاج النماذج بالدقة الكاملة (FP32) إلى 2-3× أكثر من VRAM ونادرًا ما تكون عملية على GPU استهلاكية. الصيغة: حجم النموذج (مليار) × 2 بايت (FP32) ÷ عامل التكميم.',
       metaDescription: 'VRAM الدقيقة حسب الحجم في Q4: 7B تحتاج 8 GB و13B تحتاج 13 GB و22B تحتاج 16 GB و70B تحتاج 24 GB. حاسبة مجانية وجداول Q5/Q8 ومعادلة ÷8 البسيطة.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**لنماذج 7B تحتاج 8 GB من VRAM؛ ولنماذج 13B-22B، 12-16 GB؛ ولنماذج 70B، 24 GB كحد أدنى. اعتبارًا من أبريل 2026، تفترض هذه الأرقام تكميم Q4 (4 بت).**',
       nextStep: {
         text: 'أصبحت تعرف ميزانية VRAM لديك. والآن اختر GPU المناسبة لها.',
@@ -803,7 +821,7 @@ schema: {
         'description': 'كم تحتاج نماذج 70B من VRAM؟ راجع المتطلبات الدقيقة لعام 2026 لتكميم Q4/Q5 ونماذج من 13B إلى 70B وما يتسع في GPU من 24 GB إلى 32 GB.',
         'url': 'https://www.promptquorum.com/ar/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -907,14 +925,14 @@ schema: {
     },
     pt: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-06-30',
+      next_refresh_due: '2026-12-19',
       theme: 'GPU Buying Guides',
       title: 'Quanta VRAM para um LLM local? Tabelas de 7B a 70B (2026)',
       seoTitle: 'VRAM para LLM local: 7B=8GB, 13B=13GB, 70B=24GB (2026)',
       intro: '**Para modelos 7B você precisa de 8 GB de VRAM; para 13B-22B, 12-16 GB; para 70B, no mínimo 24 GB.** A partir de abril de 2026, esses números assumem quantização Q4 (4 bits). Os modelos em precisão completa (FP32) precisam de 2-3× mais VRAM e raramente são práticos em GPUs de consumo. A fórmula é: tamanho do modelo (bilhões) × 2 bytes (FP32) ÷ fator de quantização.',
       metaDescription: 'VRAM exata por tamanho em Q4: 7B precisa de 8 GB, 13B de 13 GB, 22B de 16 GB, 70B de 24 GB. Calculadora grátis, tabelas Q5/Q8 e a fórmula simples ÷8.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       leadAnswerBlock: '**Para modelos 7B você precisa de 8 GB de VRAM; para 13B-22B, 12-16 GB; para 70B, no mínimo 24 GB. A partir de abril de 2026, esses números assumem quantização Q4 (4 bits).**',
       nextStep: {
         text: 'Você já conhece seu orçamento de VRAM. Agora escolha a GPU certa para ele.',
@@ -1101,7 +1119,7 @@ schema: {
         'description': 'Quanta VRAM um LLM de 70B precisa? Veja os requisitos exatos de 2026 para quantização Q4/Q5, modelos de 13B a 70B e o que cabe em GPUs de 24 GB a 32 GB.',
         'url': 'https://www.promptquorum.com/pt/pt/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1215,7 +1233,7 @@ schema: {
         href: '/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '7 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Exigences VRAM',
@@ -1411,7 +1429,7 @@ schema: {
         headline: 'Combien de VRAM avez-vous besoin pour exécuter un Local LLM en 2026?',
         description: 'VRAM exact pour Local LLMs: 7B nécessite 4-5 GB (Q4), 13B nécessite 8-10 GB, 70B nécessite 35-40 GB. Formule, sélection GPU et compromis de quantification. Guide 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/how-much-vram-local-llm',
-        dateModified: '2026-06-01',
+        dateModified: '2026-06-19',
         'datePublished': '2026-04-04',
         author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         speakable: {
@@ -1473,7 +1491,7 @@ schema: {
         href: '/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '7 min Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'VRAM-Anforderungen',
@@ -1507,7 +1525,7 @@ schema: {
         relatedReading: { title: 'Weiterführende Literatur', items: ['/de/local-llms/best-local-llm-models-2026', '/de/local-llms/how-to-run-ollama-locally', '/de/local-llms/local-llm-hardware-guide-2026', '/de/local-llms/best-amd-gpus-local-llm', '/de/local-llms/local-llm-security-privacy-checklist', '/de/local-llms/how-much-unified-memory-for-local-llm', '/de/local-llms/running-70b-models-apple-silicon-m5-max', '/de/local-llms/best-models-apple-silicon-2026', '/de/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
         sources: { title: 'Quellen', items: ['NVIDIA CUDA-Dokumentation: GPU-Speicherverwaltung, Tensor Cores, Compute Capability', 'Ollama-Dokumentation: VRAM-Anforderungen, Quantisierungsschemata, GPU-Kompatibilitätsmatrix', 'Llama.cpp GitHub: GGUF-Format, Q4/Q5/Q8-Implementierung, Speicher-Profilierung'] },
       },
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Wie viel VRAM benötigen Sie für einen lokalen LLM im Jahr 2026?', description: 'Exaktes VRAM für lokale LLMs: 7B benötigt 4-5 GB (Q4), 13B benötigt 8-10 GB, 70B benötigt 35-40 GB. Formel, GPU-Auswahl, Quantisierungs-Tradeoffs.', 'url': 'https://www.promptquorum.com/de/local-llms/how-much-vram-local-llm', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/author/hans-kuepper' }, datePublished: '2026-04-05', dateModified: '2026-06-01', inLanguage: 'de', image: '/og-image.png', publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Wie viel VRAM benötigen Sie für einen lokalen LLM im Jahr 2026?', description: 'Exaktes VRAM für lokale LLMs: 7B benötigt 4-5 GB (Q4), 13B benötigt 8-10 GB, 70B benötigt 35-40 GB. Formel, GPU-Auswahl, Quantisierungs-Tradeoffs.', 'url': 'https://www.promptquorum.com/de/local-llms/how-much-vram-local-llm', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/author/hans-kuepper' }, datePublished: '2026-04-05', dateModified: '2026-06-19', inLanguage: 'de', image: '/og-image.png', publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } } },
       howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'VRAM-Anforderungen für lokale LLMs berechnen', step: [{ '@type': 'HowToStep', name: 'VRAM-Berechnungsformel verstehen', text: 'VRAM = (Milliarden Parameter × Bits pro Gewicht) ÷ 8 + KV-Cache + Overhead' }, { '@type': 'HowToStep', name: 'Modellgröße auswählen', text: '7B (Anfänger), 13B (empfohlen), 70B (high-performance) wählen.' }, { '@type': 'HowToStep', name: 'Quantisierungsstufe bestimmen', text: 'Q4 (Standard, VRAM-effizient), Q5 (Balance), Q8 (Genauigkeit prioritär) wählen.' }, { '@type': 'HowToStep', name: 'KV-Cache-Overhead addieren', text: 'Bei Sequenzlänge 2048 +2-5 GB addieren.' }, { '@type': 'HowToStep', name: 'GPU-Speicher überprüfen', text: 'RTX 4070 (12 GB) minimum empfohlen. Größer als berechnet wählen.' }] },
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Lokale LLM VRAM-Anforderungen Kurzanleitung', itemListElement: [{ '@type': 'ListItem', position: 1, name: '7B Q4 Modell', description: '4-5 GB VRAM. RTX 4070 (12 GB) empfohlen.' }, { '@type': 'ListItem', position: 2, name: '13B Q4 Modell', description: '8-10 GB VRAM. RTX 4080 (16 GB) empfohlen.' }, { '@type': 'ListItem', position: 3, name: '70B Q4 Modell', description: '35-40 GB VRAM. Zwei RTX 4090 (48 GB total) oder A100 (80 GB).' }, { '@type': 'ListItem', position: 4, name: 'KV-Cache', description: 'Proportional zu Output-Token. 2048 Token +2-5 GB.' }, { '@type': 'ListItem', position: 5, name: 'Apple Silicon (M3)', description: 'Unified Memory gleichwertig zu GPU. M3 18 GB ≈ GPU 18 GB VRAM.' }] },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', mainEntity: [{ '@type': 'Question', name: 'Kann ein 3B-Modell auf meiner GPU laufen?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 3060 (3 GB) oder CPU. Q4-Quantisierung benötigt 1,5-2 GB VRAM. Ollama, Llama.cpp, LM Studio unterstützen alle.' } }, { '@type': 'Question', name: 'Ist RTX 4060 ausreichend für 7B Q4?', acceptedAnswer: { '@type': 'Answer', text: 'Knapp. RTX 4060 (8 GB) sollte 5 GB theoretisch verwalten, aber OS/Laufzeit-Overhead wird eng. RTX 4070 (12 GB) empfohlen.' } }, { '@type': 'Question', name: 'Sind 12 GB für Llama3 13B ausreichend?', acceptedAnswer: { '@type': 'Answer', text: 'Q4 knapp. Q5 oder Q8 nicht. 12 GB ist eng. 16 GB komfortabel.' } }, { '@type': 'Question', name: 'Benötige ich 24 GB für ein 70B-Modell?', acceptedAnswer: { '@type': 'Answer', text: 'Q4 ja. Q5+ nein. 70B mindestens 35-40 GB erforderlich.' } }, { '@type': 'Question', name: 'Reduziert höhere Batch-Größe VRAM für einzelne Inferenz?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Einzelne Inferenz verwendet immer batch=1. Batch-Größe hilft nur Durchsatz (Multi-User-Szenarios).' } }, { '@type': 'Question', name: 'Was ist die präziseste Quantisierung?', acceptedAnswer: { '@type': 'Answer', text: 'Q8 nahezu unmerklicher Verlust. Q5 ~2% Verlust. Q4 ~1% Verlust. Für die meisten Fälle Q4 beste Balance.' } }, { '@type': 'Question', name: 'Kann ich Teil des VRAM auf CPU-RAM auslagern?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, über Layer-Splitting. Llama.cpp und Ollama unterstützen es. Leistung sinkt 30-50%.' } }, { '@type': 'Question', name: 'Was ist die minimale VRAM für lokale LLM-Ausführung?', acceptedAnswer: { '@type': 'Answer', text: '4 GB VRAM mit 3B Q4. Praktisches Minimum 8 GB VRAM + 7B Q4. Unter 6 GB OOM für die meisten 7B-Modelle.' } }, { '@type': 'Question', name: 'Ist Apple Silicon VRAM dasselbe wie GPU VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon verwendet Unified Memory -- ganzer Speicherpool verfügbar. M3 18 GB = GPU 18 GB VRAM. MacBook Pro M3 18 GB kann Llama3 13B Q4 (~7 GB) + Overhead ausführen.' } }, { '@type': 'Question', name: 'Wie viel VRAM benötigt 7B bei verschiedenen Quantisierungen?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28 GB. 7B Q8: ~7 GB. 7B Q5: ~4,5 GB. 7B Q4: ~5 GB (3,5 GB Modell + 1,5 GB Overhead). 6 GB GPU eng, 8 GB komfortabel.' } }, { '@type': 'Question', name: 'Was sind die VRAM-Anforderungen für DSGVO-konforme lokale Inferenz in Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum RTX 4070 Ti (12 GB) für bis zu 50 Nutzer mit Llama3 13B Q4. Für 50-500 Nutzer RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB). ECC-GPU für Speicherfehler-Detektion empfohlen.' } }, { '@type': 'Question', name: 'Welche GPU empfiehlt sich für einen Team-Server im deutschen Mittelstand?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4070 Ti (12 GB) für 1-50 Mitarbeiter. RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für 50-500 Mitarbeiter. RTX 4070 Ti kann Llama3 13B Q4 + vLLM mit 3-5 gleichzeitigen Anfragen verwalten.' } }] },
@@ -1524,7 +1542,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
         href: '/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '7分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'VRAM要件',
@@ -1558,7 +1576,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
         relatedReading: { title: '関連資料', items: ['/ja/local-llms/best-local-llm-models-2026', '/ja/local-llms/how-much-unified-memory-for-local-llm', '/ja/local-llms/running-70b-models-apple-silicon-m5-max', '/ja/local-llms/best-models-apple-silicon-2026', '/ja/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
         sources: { title: '参考資料', items: ['NVIDIA CUDA ドキュメント', 'Ollama ドキュメント'] },
       },
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年にローカルLLMを実行するのに必要なVRAMはどのくらい?', 'url': 'https://www.promptquorum.com/ja/local-llms/how-much-vram-local-llm', inLanguage: 'ja', datePublished: '2026-04-04', dateModified: '2026-06-01', author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年にローカルLLMを実行するのに必要なVRAMはどのくらい?', 'url': 'https://www.promptquorum.com/ja/local-llms/how-much-vram-local-llm', inLanguage: 'ja', datePublished: '2026-04-04', dateModified: '2026-06-19', author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
@@ -1613,7 +1631,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         href: '/local-llms/best-budget-gpus-local-llm',
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-06-14',
+      dateModified: '2026-06-19',
       readTime: '7分钟阅读',
       educationalLevel: 'Beginner',
       primaryTerm: '显存要求',
@@ -1647,7 +1665,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         relatedReading: { title: '相关阅读', items: ['/zh/local-llms/best-local-llm-models-2026', '/zh/local-llms/how-much-unified-memory-for-local-llm', '/zh/local-llms/running-70b-models-apple-silicon-m5-max', '/zh/local-llms/best-models-apple-silicon-2026', '/zh/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
         sources: { title: '参考资源', items: ['NVIDIA CUDA文档', 'Ollama文档'] },
       },
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年运行本地LLM需要多少显存?', 'url': 'https://www.promptquorum.com/zh/local-llms/how-much-vram-local-llm', inLanguage: 'zh', datePublished: '2026-04-04', dateModified: '2026-06-01', author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年运行本地LLM需要多少显存?', 'url': 'https://www.promptquorum.com/zh/local-llms/how-much-vram-local-llm', inLanguage: 'zh', datePublished: '2026-04-04', dateModified: '2026-06-19', author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' } },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
@@ -1693,7 +1711,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
 
   ko: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-06-30',
+      next_refresh_due: '2026-12-19',
       theme: 'GPU 구매 가이드',
       title: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',
       seoTitle: '로컬 LLM에 VRAM이 얼마나 필요합니까? 7B~70B 차트 (2026)',
@@ -1886,7 +1904,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         'description': '70B LLM에 VRAM이 얼마나 필요합니까? Q4/Q5 양자화, 13B~70B 모델, 24GB~32GB GPU에 맞는 모델의 2026년 정확한 요구 사항을 확인하십시오.',
         'url': 'https://www.promptquorum.com/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-01',
+        'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [

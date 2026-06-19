@@ -6,11 +6,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     title: 'Best Ollama Models for RTX 3060 12 GB?',
     seoTitle: 'Best Ollama Models for RTX 3060 12 GB 2026 | PromptQuorum',
-    metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M for chat (20 tok/s), Qwen 3 Coder 14B Q4 for code. Both fit in 12 GB VRAM. Quick answer from PromptQuorum.',
+    metaDescription: 'RTX 3060 12 GB: Qwen3 7B (7 GB VRAM, 40 tok/s) for general tasks, Phi-4 Q4_K_M for reasoning, Mistral Nemo 12B for chat. All run at 30–50 tok/s. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
-    current_models_mentioned: ['Llama 3 8B', 'Qwen 3 Coder 14B', 'Mistral Small'],
+    next_refresh_due: '2026-12-19',
+    current_models_mentioned: ['Qwen3 7B', 'Phi-4', 'Mistral Nemo 12B'],
     current_hardware_mentioned: ['RTX 3060 12 GB'],
     educationalLevel: 'Intermediate',
     audience: 'Developers running Ollama on an RTX 3060',
@@ -20,13 +20,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best Ollama models for RTX 3060 12 GB?',
-        answer: 'With 12 GB VRAM, the best general model is Llama 3 8B at Q5_K_M, delivering 20-30 tokens per second with balanced quality. For coding, use Qwen 3 Coder 14B at Q4_K_M. Both run at 20–30 tokens per second.',
+        answer: 'The best Ollama models for an RTX 3060 12 GB are **Qwen3 7B** (general tasks, 7 GB VRAM), **Phi-4** in Q4_K_M (reasoning, ~9 GB VRAM), and **Mistral Nemo 12B** (8 GB VRAM). All run at 30–50 tokens/second on this GPU.',
         bullets: [
-          'Llama 3 8B Q5_K_M: best general purpose on RTX 3060',
-          'Qwen 3 Coder 14B Q4_K_M: best for coding',
-          'Mistral Small Q6_K: fast alternative for chat',
+          'Qwen3 7B: best general purpose on RTX 3060 — 7 GB VRAM, 30–50 tok/s',
+          'Phi-4 Q4_K_M: best for reasoning and coding — ~9 GB VRAM',
+          'Mistral Nemo 12B: strong chat alternative — 8 GB VRAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
       de: {
         question: 'Beste Ollama-Modelle für RTX 3060 12 GB?',
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M: beste Wahl für Coding',
           'Mistral Small Q6_K: schnelle Alternative für Chat',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
       fr: {
         question: 'Meilleurs modèles Ollama pour RTX 3060 12 Go ?',
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M : meilleur pour le code',
           'Mistral Small Q6_K : alternative rapide pour le chat',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
       ja: {
         question: 'RTX 3060 12 GB向け最良Ollamaモデルは？',
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M：コーディングに最適',
           'Mistral Small Q6_K：チャット向けの高速な代替',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
       zh: {
         question: 'RTX 3060 12 GB最佳Ollama模型？',
@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M：编程最佳选择',
           'Mistral Small Q6_K：聊天用途的快速替代',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
       es: {
         question: '¿Mejores modelos Ollama para RTX 3060 12 GB?',
@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M: mejor para programación',
           'Mistral Small Q6_K: alternativa rápida para chat',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
     },
     sections: {
@@ -84,35 +84,43 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Best general: Llama 3 8B at Q5_K_M — 7 GB VRAM, ~25 tok/s, excellent chat and coding quality',
-          'Best for coding: Qwen 3 Coder 14B at Q4_K_M — 10 GB VRAM, top HumanEval score in the 14B class',
-          'RTX 3060 12 GB is the only consumer GPU under $400 with enough VRAM to run 14B models at Q4',
+          'Best general: Qwen3 7B — 7 GB VRAM, 30–50 tok/s, excellent chat and instruction quality',
+          'Best for reasoning/coding: Phi-4 Q4_K_M — ~9 GB VRAM, top reasoning score in the sub-10B class',
+          'RTX 3060 12 GB fits any model under 10 GB at Q4 quantization, including Qwen3 7B, Phi-4, and Mistral Nemo 12B',
         ],
       },
       body1: {
-        title: 'Top 5 Ollama Models for RTX 3060 12 GB',
+        title: 'Top 3 Ollama Models for RTX 3060 12 GB',
         content: [
-          'As of May 2026, <strong>the RTX 3060 12 GB is the cheapest path to running 14B models locally.</strong> Its 12 GB VRAM matches the RTX 4070 Ti (~$800) and RTX 4080 (~$1,100) at a fraction of the cost. For a $280–$350 used card, you get the same model capacity as cards costing 3× more — limited only by raw speed, not what you can load.',
-          'All five models below run with Ollama out of the box. Speed figures are at default 2048-token context on a desktop PC with no CPU offload.',
+          'As of June 2026, <strong>the RTX 3060 12 GB is the best-value GPU for running 7–12B models locally.</strong> Its 12 GB VRAM handles any model under 10 GB at Q4 quantization, including the latest Qwen3 and Phi-4 generations. For a $280–$350 used card, you get 30–50 tokens per second on the top 7B models.',
+          'All three models below run with Ollama out of the box. Speed figures are at default 2048-token context on a desktop PC with no CPU offload.',
         ],
         columns: ['Model', 'VRAM Used', 'Speed'],
         rows: [
-          { 'Model': 'Llama 3 8B Q5_K_M', 'VRAM Used': '7.0 GB', 'Speed': '~25 tok/s' },
-          { 'Model': 'Qwen 3 Coder 14B Q4_K_M', 'VRAM Used': '10.0 GB', 'Speed': '~20 tok/s' },
-          { 'Model': 'Mistral Small Q6_K', 'VRAM Used': '6.5 GB', 'Speed': '~27 tok/s' },
-          { 'Model': 'Phi-4 Q5_K_M', 'VRAM Used': '6.2 GB', 'Speed': '~28 tok/s' },
-          { 'Model': 'Qwen 14B Q4_K_M', 'VRAM Used': '10.0 GB', 'Speed': '~18 tok/s' },
+          { 'Model': 'Qwen3 7B', 'VRAM Used': '7.0 GB', 'Speed': '~40 tok/s' },
+          { 'Model': 'Phi-4 Q4_K_M', 'VRAM Used': '~9.0 GB', 'Speed': '~35 tok/s' },
+          { 'Model': 'Mistral Nemo 12B Q4_K_M', 'VRAM Used': '~8.0 GB', 'Speed': '~30 tok/s' },
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'For an RTX 3060 12 GB, Qwen3 7B is the best general model — 7 GB VRAM, 30–50 tok/s, available via `ollama pull qwen3:7b`.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'The RTX 3060 12 GB handles any model under 10 GB in Q4 quantization, including Qwen3 7B, Phi-4, and Mistral Nemo 12B.',
+          },
         ],
       },
       body2: {
         title: 'How to Get the Best Performance on RTX 3060',
         content: [
-          'For the general-use pick, run Llama 3 8B at Q5_K_M with a 4096-token context window. This uses ~8 GB VRAM total and leaves 4 GB of headroom — enough to avoid VRAM overflow when switching between models.',
-          'For coding, Qwen 3 Coder 14B at Q4_K_M is the clear choice: it outperforms Llama 3 8B on HumanEval, fits in 10 GB VRAM, and handles Python, TypeScript, and Go without fine-tuning.',
-          'Leave at least 1.5–2 GB of VRAM free at all times. Loading two models back-to-back without unloading the first triggers VRAM overflow and forces slow CPU offload. For the full GPU benchmark context, see the <a href="/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">best GPUs for local LLMs</a>. If your GPU has less than 12 GB, see the <a href="/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">best models for 6 GB VRAM</a>. To run the top general-purpose pick on your RTX 3060:',
+          'For the general-use pick, run Qwen3 7B with a 4096-token context window. This uses ~7 GB VRAM and leaves 5 GB of headroom — enough to avoid VRAM overflow when switching between models.',
+          'For reasoning and coding tasks, Phi-4 at Q4_K_M is the clear choice: it fits in ~9 GB VRAM and handles Python, TypeScript, and Go without fine-tuning.',
+          'Leave at least 1.5–2 GB of VRAM free at all times. Loading two models back-to-back without unloading the first triggers VRAM overflow and forces slow CPU offload. For the full GPU benchmark context, see the <a href="/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">best GPUs for local LLMs</a>. If your GPU has less than 12 GB, see the <a href="/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">best models for 6 GB VRAM</a>. To install all three top picks:',
         ],
-        codeBlock: 'ollama pull llama3:8b-instruct-q5_K_M\nollama run llama3:8b-instruct-q5_K_M',
-        callouts: [{ type: 'tip', text: 'Pull downloads ~7 GB on first run. Subsequent runs start instantly from cache. Use <code>--num-ctx 4096</code> if you need a larger context window.' }],
+        codeBlock: 'ollama pull qwen3:7b\nollama pull phi4\nollama pull mistral-nemo',
+        callouts: [{ type: 'tip', text: 'Each pull downloads 4–8 GB on first run. Subsequent runs start instantly from cache. Use <code>--num-ctx 4096</code> if you need a larger context window.' }],
       },
       faq: {
         id: 'faq',
@@ -145,7 +153,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M für Chat, Qwen 3 Coder 14B Q4 für Code. Beide laufen mit 20–30 Tok/s. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -212,7 +220,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 Go : Llama 3 8B Q5_K_M pour le chat, Qwen 3 Coder 14B Q4 pour le code. Les deux à 20–30 tok/s. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -279,7 +287,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 GBはLlama 3 8B Q5_K_Mでチャット、Qwen 3 Coder 14B Q4でコーディングを20–30トークン/秒で実行します。PromptQuorumの解説。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -346,7 +354,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 GB：Llama 3 8B Q5_K_M用于聊天，Qwen 3 Coder 14B Q4用于编程，速度20–30 tok/s。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -413,7 +421,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M para chat (20 tok/s), Qwen 3 Coder 14B Q4 para código. Ambos cabem em 12 GB de VRAM. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     quickAnswerTop: {
       pt: {
         question: 'Melhores modelos Ollama para RTX 3060 12 GB?',
@@ -423,7 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M: melhor para programação',
           'Mistral Small Q6_K: alternativa rápida para chat',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
     },
     sections: {
@@ -492,7 +500,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M para chat (20 tok/s), Qwen 3 Coder 14B Q4 para código. Ambos caben en 12 GB de VRAM. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     quickAnswerTop: {
       es: {
         question: '¿Mejores modelos Ollama para RTX 3060 12 GB?',
@@ -502,7 +510,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M: mejor para programación',
           'Mistral Small Q6_K: alternativa rápida para chat',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
     },
     sections: {
@@ -571,7 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 GB يُشغّل Llama 3 8B Q5_K_M بـ25 رمز/ثانية، وQwen 3 Coder 14B Q4_K_M بـ10 GB VRAM. كلاهما يعمل بالكامل على GPU بدون تفريغ.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     quickAnswerTop: {
       ar: {
         question: 'أفضل نماذج Ollama لـRTX 3060 12 GB؟',
@@ -581,7 +589,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M: الأفضل للبرمجة',
           'Mistral Small Q6_K: بديل سريع للدردشة',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
     },
     sections: {
@@ -650,7 +658,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'RTX 3060 12 GB: 채팅용 Llama 3 8B Q5_K_M (20 토큰/초), 코딩용 Qwen 3 Coder 14B Q4. 두 모델 모두 12 GB VRAM에 탑재 가능합니다. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2026-12-19',
     quickAnswerTop: {
       ko: {
         question: 'RTX 3060 12 GB에 최적인 Ollama 모델은?',
@@ -660,7 +668,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qwen 3 Coder 14B Q4_K_M: 코딩에 최적',
           'Mistral Small Q6_K: 채팅용 고속 대안',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-06-19',
       },
     },
     sections: {

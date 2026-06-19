@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: 'Best Local Models for Tool Calling in 2026: Benchmarks & Comparison',
     seoTitle: 'Best Local Tool-Calling Models 2026: Real MCP Benchmarks',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Which local model is best for tool calling in 2026?',
         answer:
-          'Llama 3.3 70B has the highest tool-call success rate but needs 48 GB+ VRAM, so most users pick one of the 27B–32B models. Gemma 4 27B is the default for general-purpose agent work on a 24 GB rig — best-in-class tool-call training for the size, conservative on chained calls but reliable. GLM-5.1 32B is the pick for long-context tasks (128K out of the box) like compliance reporting or hour-long meeting transcripts. Qwen3 32B is well-rounded; Qwen3-Coder 30B is the best dedicated coding tool-caller. All five emit clean function-calling JSON and survive the strict schema validation that MCP clients apply. Tool-call reliability is a model property — the same harness wrapping a smaller general-purpose model fails in the same workload. The fix is "switch model", not "switch harness".',
+          'The best local model for tool calling in 2026 is **Qwen3 7B** — reliable structured JSON tool calls on 8 GB VRAM. For highest accuracy and complex multi-tool workflows, use **Qwen3 32B** on 24 GB VRAM.',
         bullets: [
           'Top picks by VRAM: 24 GB → Gemma 4 27B; 24 GB long-context → GLM-5.1 32B; 24 GB code-shaped → Qwen3-Coder 30B; 48 GB+ → Llama 3.3 70B.',
           'All five reliable models emit well-formed function-calling JSON, handle parallel calls, and survive strict schema validation in MCP clients.',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Format-portability is high — the same model handles OpenAI tools, Cline\'s XML, MCP JSON-RPC, and Aider\'s diff blocks without reconfiguration.',
           'Real-world reliability is rate-of-well-formed-calls × rate-of-correct-tool-selection × rate-of-correct-arguments. The 90%+ headline numbers compound; expect 80–90% end-to-end on real workflows.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -125,11 +125,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Tool calling is the LLM-side skill of emitting structured JSON that names a tool and supplies arguments matching its schema; MCP, OpenAI tools, and Cline\'s XML are wire-format expressions of the same skill.',
+            text: 'Qwen3 7B is the best local model for tool calling in 2026 — reliable structured JSON function calls on 8 GB VRAM via Ollama.',
           },
           {
             type: 'plain-terms',
-            text: 'A tool-calling model can read a list of available tools, decide which one fits the user\'s request, and produce a clean structured response naming the tool and its arguments. The wire format (JSON, XML, JSON-RPC) is a harness decision; whether the model gets the call right is a model property — and that is what this guide measures.',
+            text: 'For most tool-calling use cases: Qwen3 7B. For complex multi-step tool chains where accuracy matters most: Qwen3 32B. Both available via Ollama.',
           },
         ],
         callouts: [
@@ -379,8 +379,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: 'Beste lokale Modelle für Tool Calling in 2026: Benchmarks und Vergleich',
     seoTitle: 'Beste lokale Tool-Calling-Modelle 2026: MCP-Benchmarks',
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Format-Portabilität ist hoch — das gleiche Modell verarbeitet OpenAI-Tools, Clines XML, MCP-JSON-RPC und Aiders Diff-Blöcke ohne Neukonfiguration.',
           'Real-World-Zuverlässigkeit ist Rate-der-korrekt-geformten-Calls × Rate-der-korrekten-Tool-Auswahl × Rate-der-korrekten-Argumente. Die 90%+-Schlagzahlen schreiben sich zusammen; erwarten Sie 80–90 % End-to-End bei echten Workflows.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -769,8 +769,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: 'Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison',
     seoTitle: 'Modèles locaux pour le tool calling 2026 : Qwen, Llama',
@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La portabilité de format est élevée — le même modèle gère les outils OpenAI, le XML de Cline, le JSON-RPC MCP et les blocs diff d\'Aider sans reconfiguration.',
           'La fiabilité du monde réel est taux-d\'appels-bien-formés × taux-de-sélection-correcte-d\'outil × taux-d\'arguments-corrects. Les chiffres 90%+ se composent ; attendez-vous à 80–90 % end-to-end sur les flux de travail réels multi-étapes.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -1139,8 +1139,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: '2026年のベストローカルツール呼び出しモデル : ベンチマークと比較',
     seoTitle: 'ベストローカルツール呼び出しモデル2026 : 実MCP ベンチマーク',
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'フォーマットの移植性は高いです — 同じモデルがOpenAIツール、ClineのXML、MCPのJSON-RPC、AiderのDiffブロックを処理します。',
           '実世界の信頼性は、正しく形成されたレート × 正しいツール選択レート × 正しい引数レートです。90%+のヘッドラインはコンパイルされます。マルチステップの実際のワークフロー全体で80–90%エンドツーエンドを期待してください。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -1509,8 +1509,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: '2026年最佳本地工具调用模型：基准和比较',
     seoTitle: '最佳本地工具调用模型2026：真实MCP基准',
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '格式可移植性很高——相同模型处理OpenAI工具、Cline的XML、MCP的JSON-RPC和Aider的Diff块，无需重新配置。',
           '实际可靠性 = 格式良好的速率 × 正确工具选择速率 × 正确参数速率。90%+的头条数复合；期望多步实际工作流中80-90%的端到端。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -1879,8 +1879,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: 'Mejores modelos locales para Tool Calling en 2026: Benchmarks y comparativa',
     seoTitle: 'Mejores modelos locales para Tool Calling 2026: MCP real',
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La portabilidad de formato es alta — el mismo modelo gestiona las herramientas de OpenAI, el XML de Cline, MCP JSON-RPC y los bloques diff de Aider sin reconfiguración.',
           'La fiabilidad en el mundo real es tasa-de-llamadas-bien-formadas × tasa-de-selección-correcta × tasa-de-argumentos-correctos. Los números del 90%+ se componen; espera un 80–90% end-to-end en flujos de trabajo reales de múltiples pasos.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -2271,8 +2271,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: 'Melhores modelos locais para Tool Calling em 2026: Benchmarks e comparativo',
     seoTitle: 'Melhores modelos locais para Tool Calling 2026: MCP real',
@@ -2322,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A portabilidade de formato é alta — o mesmo modelo gerencia as ferramentas da OpenAI, o XML do Cline, o MCP JSON-RPC e os blocos diff do Aider sem reconfiguração.',
           'A confiabilidade no mundo real é taxa-de-chamadas-bem-formadas × taxa-de-seleção-correta × taxa-de-argumentos-corretos. Os números de 90%+ se compõem; espere de 80 a 90% end-to-end em fluxos de trabalho reais de múltiplas etapas.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -2664,8 +2664,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: 'أفضل النماذج المحلية لاستدعاء الأدوات في 2026: المعايير والمقارنة',
     seoTitle: 'نماذج استدعاء الأدوات المحلية 2026: Qwen3 وGemma',
@@ -2715,7 +2715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'قابلية نقل التنسيق عالية — نفس النموذج يتعامل مع أدوات OpenAI وXML لـCline وMCP JSON-RPC وكتل diff لـAider دون إعادة إعداد.',
           'الموثوقية الحقيقية = معدل_الاستدعاءات_المشكّلة × معدل_الاختيار_الصحيح × معدل_الوسائط_الصحيحة. الأرقام 90%+ تتراكم؛ توقع 80–90% شاملاً في سير العمل الحقيقية متعددة الخطوات.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
@@ -3056,8 +3056,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-06-19',
+    next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: '2026년 Tool Calling 최고의 로컬 모델: 벤치마크 및 비교',
     seoTitle: '2026년 Tool Calling 최고 로컬 모델: 실제 MCP 벤치마크',
@@ -3107,7 +3107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '형식 이식성이 높습니다 — 동일한 모델이 재설정 없이 OpenAI 도구, Cline XML, MCP JSON-RPC, Aider diff 블록을 모두 처리합니다.',
           '실제 신뢰성은 올바른-형성-비율 × 올바른-선택-비율 × 올바른-인수-비율입니다. 90%+ 숫자는 복합되므로, 실제 다단계 워크플로우에서 end-to-end 80–90%를 예상하십시오.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-06-19',
       },
     },
     toc: [
