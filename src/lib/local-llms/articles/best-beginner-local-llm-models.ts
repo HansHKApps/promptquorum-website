@@ -747,7 +747,7 @@ schema: {
       seoTitle: 'أفضل LLM محلية للمبتدئين 2026: 5 نماذج بـ 4–8GB RAM',
       intro: 'أفضل خمسة نماذج LLM محلية للمبتدئين في 2026 هي Meta Llama 3.2 3B وMicrosoft Phi-4 Mini وGoogle Gemma 3 2B وMistral Small v0.3 وQwen3 7B. يعمل كل منها على عتاد استهلاكي بذاكرة 4-8 GB من RAM وينتج جودة مخرجات مناسبة للمهام اليومية.',
       leadAnswerBlock: '**أفضل خمسة نماذج LLM محلية للمبتدئين في 2026 هي Llama 3.2 3B وPhi-4 Mini 3.8B وGemma 3 2B وMistral Small v0.3 وQwen3 7B. تعمل جميعها بذاكرة 4-8 GB من RAM بأمر Ollama واحد.**',
-      metaDescription: '5 نماذج LLM للمبتدئين: Llama 3.2 3B (2.5GB، 45 رمز/ث)، Phi-4 Mini (أفضل استدلال)، Gemma 3 2B (1.7GB، الأسرع). جميعها بـ 4–8GB RAM وأمر Ollama واحد.',
+      metaDescription: '5 نماذج LLM للمبتدئين: Llama 3.2 3B (2.5GB، 45 رمز/ث)، Phi-4 Mini أفضل استدلال، Gemma 3 2B الأسرع. كلها بـ 4–8GB RAM وأمر Ollama واحد.',
       twitterDescription: 'مقارنة: Llama 3.2 3B (2.5 GB، 25-45 tok/s)، Phi-4 Mini (2.5 GB، أفضل استدلال)، Gemma 3 2B (1.7 GB، الأسرع). 5 نماذج LLM محلية للمبتدئين حسب RAM + السرعة 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',

@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'أفضل VPN لتطوير الذكاء الاصطناعي في الصين 2026',
     seoTitle: 'أفضل VPN لتطوير الذكاء الاصطناعي في الصين 2026',
     metaDescription:
-      'NordVPN وExpressVPN الأكثر موثوقيةً لتجاوز GFW والوصول إلى HuggingFace وGitHub وDocker Hub من الصين. 12 MB/s مع NordVPN، ExpressVPN الأسرع للنماذج.',
+      'NordVPN وExpressVPN الأكثر موثوقيةً لتجاوز GFW والوصول إلى HuggingFace وGitHub وDocker Hub من الصين. ExpressVPN الأسرع للنماذج.',
     publishDate: '2026-05-26',
     dateModified: '2026-05-26',
     freshness_tier: 'semi_annual',

@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware Guides',
     title: 'ما هو أفضل جهاز كمبيوتر مصغر لنماذج اللغة الكبيرة المحلية المتاح في اليابان؟',
     seoTitle: 'أفضل جهاز مصغر لنماذج LLM في اليابان 2026',
-    metaDescription: 'Beelink SER7 (~¥70,000) أفضل جهاز بـ~10 رمز/ثانية. UM790 Pro (~¥85,000) بـ~12 رمز/ثانية. GMKtec NucBox K6 (~¥65,000) اقتصادي. كلها 32 GB DDR5 وVulkan.',
+    metaDescription: 'Beelink SER7 (~¥70,000) بـ~10 رمز/ثانية. UM790 Pro (~¥85,000) بـ~12 رمز/ثانية. GMKtec NucBox K6 (~¥65,000) اقتصادي. كلها 32 GB DDR5.',
     publishDate: '2026-05-27',
     dateModified: '2026-05-27',
     freshness_tier: 'semi_annual',

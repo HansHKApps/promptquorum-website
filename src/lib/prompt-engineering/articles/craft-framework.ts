@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '٧ دقائق للقراءة',
       educationalLevel: 'متوسط',
       seoTitle: 'إطار CRAFT: السياق والدور والجمهور والنبرة 2026',
-      metaDescription: 'إطار CRAFT بـ5 حقول منظّمة (سياق، دور، جمهور، تنسيق، نبرة): أنتج نصوص ذكاء اصطناعي متسقة مع علامتك. قوالب جاهزة ومقارنة مع CO-STAR في PromptQuorum.',
+      metaDescription: 'إطار CRAFT بـ5 حقول منظّمة (سياق، دور، جمهور، تنسيق، نبرة) لإنتاج نصوص ذكاء اصطناعي متسقة. قوالب جاهزة ومقارنة مع CO-STAR.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

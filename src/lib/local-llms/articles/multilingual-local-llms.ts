@@ -503,9 +503,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ar: {
       theme: 'Best Models',
       title: 'أفضل نماذج LLM المحلية متعددة اللغات 2026: Qwen3 مقابل Mistral',
-      seoTitle: 'أفضل LLMs محلية متعددة اللغات 2026: Qwen3 مقابل Mistral',
+      seoTitle: 'أفضل LLM محلية متعددة اللغات 2026: Qwen3 وMistral',
       intro: 'Qwen3 هو أقوى عائلة نماذج LLM محلية متعددة اللغات في 2026، بدعم أصلي لـ 29 لغة، بما في ذلك الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. للغات الأوروبية، Mistral وLlama 3.x تنافسيان. للغات الآسيوية (اليابانية، الكورية، الصينية)، يتفوق Qwen3 على جميع البدائل في كل حجم نموذج مماثل.',
-      metaDescription: 'Qwen3 يتفوق في اللغات الآسيوية بفارق 15–25% عن Llama في JMT-bench. Mistral تنافسي في اللغات الأوروبية. مقارنة اختبارات الأداء لـ 29 لغة — أبريل 2026.',
+      metaDescription: 'Qwen3 يتفوق في اللغات الآسيوية بـ 15–25% عن Llama في JMT-bench. Mistral تنافسي أوروبياً. مقارنة اختبارات الأداء لـ 29 لغة — أبريل 2026.',
       publishDate: '2026-04-04',
       readTime: '9 دقائق قراءة',
       educationalLevel: 'Beginner',

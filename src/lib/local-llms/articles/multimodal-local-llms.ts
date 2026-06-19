@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'نماذج LLM المحلية متعددة الوسائط: معالجة الرؤية والصوت والنص',
-      seoTitle: 'نماذج LLM المحلية متعددة الوسائط 2026: رؤية وصوت وOCR',
+      seoTitle: 'نماذج LLM المحلية متعددة الوسائط 2026: رؤية وOCR',
       intro: 'تعالج النماذج متعددة الوسائط الصور والنص والصوت. اعتبارًا من أبريل 2026، Llama 3.2 Vision وGemma 3 Vision وQwen2-VL نماذج متعددة الوسائط عملية للنشر المحلي. تتيح OCR للمستندات وتحليل الصور والأسئلة والأجوبة البصرية دون واجهات API سحابية.',
       metaDescription: 'نماذج LLM المحلية متعددة الوسائط: رؤية الحاسوب، معالجة الصور، OCR، ونماذج الصوت. أدلة LLaVA وQwen-VL مع حالات استخدام فعلية وأداء مقارن 2026.',
       publishDate: '2026-04-04',

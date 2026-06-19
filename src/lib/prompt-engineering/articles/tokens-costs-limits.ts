@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       dateModified: '2026-04-12',
       seoTitle: 'رموز LLM وتكاليفها وحدودها 2026: الاقتصاد الكامل',
-      metaDescription: '1M رمز إدخال يكلف $3–5 في GPT-5.5 وClaude. افهم احتساب الرموز ومعدلات الحدود واختيار نموذج LLM المناسب لتخفيض التكاليف.',
+      metaDescription: '1M رمز إدخال يكلف $3–5 في GPT-5.5 وClaude. افهم احتساب الرموز ومعدلات الحدود واختيار نموذج LLM المناسب لتخفيض تكاليفك الشهرية.',
       readTime: '١٣ دقيقة للقراءة',
       schema: {
         '@context': 'https://schema.org',

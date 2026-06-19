@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     title: 'كيفية تحويل نماذج Ollama إلى صيغة MLX',
     seoTitle: 'تحويل نماذج Ollama إلى MLX 2026 | PromptQuorum',
-    metaDescription: 'معظم نماذج Llama 3 وQwen وMistral لها نسخ MLX جاهزة على Hugging Face. لا يمكن تحويل نماذج Ollama مباشرةً؛ استخدم mlx-lm convert مع الأوزان الأصلية.',
+    metaDescription: 'معظم نماذج Llama 3 وQwen وMistral لها نسخ MLX جاهزة على Hugging Face. لا يمكن تحويل نماذج Ollama مباشرةً؛ استخدم mlx-lm convert.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

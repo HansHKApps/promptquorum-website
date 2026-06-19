@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'إطار TRACE',
-      seoTitle: 'إطار TRACE: اجعل استدلال الذكاء الاصطناعي شفافاً 2026',
+      seoTitle: 'إطار TRACE: استدلال ذكاء اصطناعي شفاف 2026',
       intro: '**إطار TRACE يحوّل استدلال الذكاء الاصطناعي من صندوق أسود إلى عملية مرئية خطوة بخطوة.** يطلب من النماذج التفكير والاستدلال والتحليل والاستنتاج والشرح — حتى تتمكن من رؤية أين تصمد المنطق وأين تنهار. PromptQuorum يتضمن إطار TRACE كخيار مدمج يمكن لأي مستخدم تحديده واستخدامه مباشرة داخل التطبيق.',
       publishDate: '2026-03-24',
       dateModified: '2026-04-28',

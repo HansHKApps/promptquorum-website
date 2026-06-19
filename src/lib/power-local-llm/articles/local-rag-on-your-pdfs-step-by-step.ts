@@ -3768,7 +3768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'دليل كامل لأسرع طريق إلى نظام RAG شخصي عامل على حاسوب محمول بذاكرة 16 غيغابايت. الحزمة: Ollama، وLlama 3.3 8B، وAnythingLLM، وnomic-embed-text. الوقت الإجمالي: 30 دقيقة من جهاز فارغ إلى محادثة ملفات PDF الخاصة بك.',
     metaDescription:
-      'خطوة بخطوة: ثبّت Ollama، وأعدّ AnythingLLM، وارفع ملفات PDF وحاوِرها. الوقت الإجمالي 30 دقيقة. مُختبَر على حاسوب محمول بذاكرة 16 غيغابايت. مايو 2026.',
+      'خطوة بخطوة: ثبّت Ollama وأعدّ AnythingLLM وارفع ملفات PDF وحاوِرها. الوقت الإجمالي 30 دقيقة. مُختبَر على حاسوب بذاكرة 16 غيغابايت. مايو 2026.',
     twitterDescription:
       '30 دقيقة من حاسوب محمول فارغ إلى محادثة ملفات PDF الخاصة بك. Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. مُختبَر بذاكرة 16 غيغابايت.',
     current_models_mentioned: ['Llama 3.3 8B', 'nomic-embed-text-v1.5', 'Phi-4 Mini', 'Mistral Small'],

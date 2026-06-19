@@ -1131,7 +1131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     dateModified: "2026-04-12",
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Beginner',
-    seoTitle: 'System Prompt مقابل User Prompt: ما يتحكم فيه كل منهما',
+    seoTitle: 'System Prompt مقابل User Prompt: دور كل منهما',
     metaDescription: 'System prompts تُحدد 70% من ثبات مخرجات LLMs. تعلّم الفرق بين system prompt وuser prompt وكيف يتفاعلان في GPT وClaude وOllama مع أمثلة API.',
     schema: {
       '@context': 'https://schema.org',

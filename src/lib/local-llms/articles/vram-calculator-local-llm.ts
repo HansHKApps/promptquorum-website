@@ -2070,7 +2070,7 @@ schema: {
       title: 'VRAM 계산기 2026: 7B/13B/70B LLM GPU 요구 사항 (Q4, Q5, Q8)',
       seoTitle: 'VRAM 계산기 2026: 7B/13B/70B LLM GPU 요구 사항 (Q4, Q5, Q8)',
       intro: '로컬 LLM을 위한 인터랙티브 VRAM 계산기입니다. 모델 크기, 양자화, 컨텍스트 길이, 배치 크기를 입력하면 정확한 GPU VRAM 요구량을 계산합니다. FP16, Q8, Q5, Q4 양자화 방식으로 1B~405B 모델을 지원합니다. RTX 4090, 4080, 3060 적합성 분석 및 오버헤드 계산이 2026년 4월 기준으로 업데이트되었습니다.',
-      metaDescription: '인터랙티브 VRAM 계산기: 7B(Q4 기준 3.5 GB), 13B(Q4 기준 6.5 GB), 70B(Q4 기준 35 GB) LLM 모델의 정확한 GPU 요구 사항을 계산하십시오. RTX 4090, 4080, 4070 Ti 적합 여부 확인. Q4/Q5/Q8 양자화. 컨텍스트, 배치, 시스템 오버헤드 포함.',
+      metaDescription: '인터랙티브 VRAM 계산기: 7B(Q4 3.5GB), 13B(6.5GB), 70B(35GB) LLM GPU 요구 사항 계산. RTX 4090/4080/4070 Ti 적합 여부와 Q4/Q5/Q8 양자화 포함.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-19',
       leadAnswerBlock: '이 가이드는 모든 모델과 하드웨어 조합에 대한 정확한 VRAM 요구 사항을 계산하는 방법을 설명합니다. 공식은 간단합니다: (모델 크기 GB × 양자화 비트) ÷ 8 = 필요 VRAM.',

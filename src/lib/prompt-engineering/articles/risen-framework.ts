@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       readTime: '١٣ دقيقة للقراءة',
       seoTitle: 'إطار RISEN: 5 خطوات لتحسين البرومبتات تكرارياً',
-      metaDescription: 'RISEN يُحسِّن مسودة البرومبت في 2-4 دورات: Refine وInspect وSummarize وEvaluate وNext Steps. سجّل تغييراتك واختبر عبر نماذج متعددة مع PromptQuorum.',
+      metaDescription: 'RISEN يُحسِّن مسودة البرومبت في 2-4 دورات: Refine وInspect وSummarize وEvaluate وNext Steps. سجّل تغييراتك واختبر عبر نماذج متعددة.',
       educationalLevel: 'متوسط',
       audience: 'المطورون الذين يبنون سير عمل البرومبتات، وفرق المنتج التي تُكرر المحتوى، والفرق التي تُجري مراجعات متعددة المراحل',
       primaryTerm: 'Framework RISEN',

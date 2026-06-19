@@ -2669,7 +2669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل تطبيقات الذكاء الاصطناعي المحلي للأجهزة الضعيفة 2026 (8 GB RAM بدون GPU)',
     seoTitle: 'ذكاء اصطناعي محلي بدون GPU 2026: Ollama وGPT4All',
     metaDescription:
-      'Ollama وGPT4All وJan وllama.cpp اختُبرت على 8 GB RAM مع رسومات متكاملة بدون GPU. سرعات الرموز في الثانية وضغط الذاكرة والإعدادات المثلى لكل تطبيق.',
+      'Ollama وGPT4All وJan وllama.cpp اختُبرت على 8 GB RAM برسومات متكاملة بدون GPU. سرعات الرموز وضغط الذاكرة والإعدادات المثلى لكل تطبيق.',
     twitterDescription:
       '4 تطبيقات للذكاء الاصطناعي المحلي تعمل على أجهزة بـ8 GB RAM بدون GPU. الرموز/ثانية والإعدادات الدقيقة وتقييمات صادقة. مايو 2026.',
     current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 4B', 'SmolLM 2 1.7B', 'Llama 3.2 1B', 'Qwen 3 1.5B'],

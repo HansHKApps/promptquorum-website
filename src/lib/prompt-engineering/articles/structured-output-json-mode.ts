@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-05',
       readTime: '١٠ دقائق للقراءة',
       seoTitle: 'المخرجات المهيكلة ووضع JSON في LLMs: دليل 2026',
-      metaDescription: 'أقل من 5% معدل فشل مع تصميم المخطط الصحيح. متى تستخدم وضع JSON أو استدعاء الوظائف في GPT وClaude وGemini. مقارنة امتثال JSON حسب النموذج مع أمثلة.',
+      metaDescription: 'أقل من 5% معدل فشل مع تصميم المخطط الصحيح. متى تستخدم وضع JSON أو استدعاء الوظائف في GPT وClaude وGemini مع أمثلة لكل نموذج.',
       educationalLevel: 'متوسط',
       schema: {
         '@context': 'https://schema.org',

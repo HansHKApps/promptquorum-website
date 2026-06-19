@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'الأسئلة الشائعة', anchor: 'faq' },
         { label: 'المصادر', anchor: 'sources' },
       ],
-      seoTitle: 'مراجعة الكود بـ AI 2026: Snyk vs Greptile vs CodeRabbit',
+      seoTitle: 'مراجعة الكود بـ AI 2026: Snyk وGreptile وCodeRabbit',
       metaDescription: 'Snyk وGreptile وCodeRabbit تكتشف 42-85% من الأخطاء مقابل 20% لـ SAST. مقارنة معايير الأداء والأسعار وحالات الاستخدام لكل أداة.',
       ogTitle: 'مراجعة الكود بالذكاء الاصطناعي 2026: أفضل الأدوات (CodeRabbit، Greptile، Snyk) + إطار التعليمات',
       ogDescription: '64٪ من تعليقات مراجعة الكود بالذكاء الاصطناعي هي ضوضاء أسلوبية؛ 14٪ فقط تكتشف أخطاءً حقيقية. إليك إطار التعليمات من 5 أجزاء الذي يعكس هذه النسبة — بالإضافة إلى مقارنة الأدوات ومعايير الأمان.',
