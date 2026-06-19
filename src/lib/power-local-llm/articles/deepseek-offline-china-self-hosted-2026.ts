@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Run DeepSeek Offline 2026: Self-Hosted, No Firewall',
     seoTitle: 'Run DeepSeek Offline 2026: Self-Hosted, No Firewall',
     intro: 'Run DeepSeek reasoning models fully offline — no API, no Great Firewall dependency, full data control. This guide covers DeepSeek model selection for Chinese-language reasoning, hardware tiers, the offline Ollama and LM Studio setup, and how to verify your deployment is genuinely offline. Network and firewall mechanics are linked out, not duplicated.',
-    metaDescription: 'Run DeepSeek reasoning models fully offline — no API, no Great Firewall dependency, full data control. Model selection, hardware tiers, and Chinese-language setup.',
+    metaDescription: 'Run DeepSeek reasoning models fully offline — no API, no Great Firewall, full data control. Model selection, hardware tiers, and Chinese-language setup.',
     twitterDescription: 'Run DeepSeek fully offline: which distills handle Chinese best, hardware tiers, offline Ollama/LM Studio setup, and how to verify there is zero egress. 本地部署 deepseek.',
     publishDate: '2026-06-19',
     dateModified: '2026-06-19',

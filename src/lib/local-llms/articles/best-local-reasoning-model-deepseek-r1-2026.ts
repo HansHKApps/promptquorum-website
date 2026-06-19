@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best Local Reasoning Model 2026: DeepSeek-R1 Ranked',
     seoTitle: 'Best Local Reasoning Model 2026: DeepSeek-R1 Ranked',
     intro: 'The full 671B DeepSeek-R1 is datacenter-only, so the model you actually run at home is one of its distills. This guide ranks the six official DeepSeek-R1 distills (1.5B to 70B) plus the standout DeepSeek-R1-0528-Qwen3-8B by hardware tier, with real AIME 2024 and MATH-500 reasoning scores, the exact Ollama command per model, and the GPU that fits each one.',
-    metaDescription: 'The 6 DeepSeek-R1 distills ranked for local reasoning — math, logic, multi-step. Which fits your GPU, real AIME scores, and the best small distill (R1-0528-Qwen3-8B).',
+    metaDescription: 'The 6 DeepSeek-R1 distills ranked for local reasoning — which fits your GPU, real AIME 2024 scores, and the best small distill (R1-0528-Qwen3-8B).',
     twitterDescription: 'DeepSeek-R1 distills ranked for local reasoning: 7B→RTX 3060, 14B→4060 Ti, 32B→4090, 70B→dual-GPU, plus the best small distill R1-0528-Qwen3-8B. Real AIME scores.',
     publishDate: '2026-06-19',
     dateModified: '2026-06-19',

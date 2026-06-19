@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Does Local DeepSeek Solve the China Data Problem? 2026',
     seoTitle: 'Does Local DeepSeek Solve the China Data Problem? 2026',
     intro: 'The hosted DeepSeek app stores user data in China, which is a genuine GDPR concern. Self-hosting the open weights eliminates the cross-border data flow entirely. This is an evenhanded breakdown of the two surfaces — hosted service versus open weights — what changes when you run locally, and the honest caveats on both sides.',
-    metaDescription: 'The hosted DeepSeek app stores data in China — a real GDPR problem. Self-hosting the open weights eliminates the cross-border flow. The honest, evenhanded breakdown.',
+    metaDescription: 'The hosted DeepSeek app stores data in China — a real GDPR problem. Self-hosting the open weights removes the cross-border flow. An evenhanded breakdown.',
     twitterDescription: 'Hosted DeepSeek stores data in China; the open weights you self-host send nothing anywhere. The difference between the two surfaces — and the honest caveats — explained.',
     publishDate: '2026-06-19',
     dateModified: '2026-06-19',

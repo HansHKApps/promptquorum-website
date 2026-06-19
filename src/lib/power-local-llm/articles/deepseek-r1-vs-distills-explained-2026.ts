@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'DeepSeek-R1 vs Distills 2026: What You Actually Lose',
     seoTitle: 'DeepSeek-R1 vs Distills 2026: What You Actually Lose',
     intro: 'You cannot run the real 671B DeepSeek-R1 at home — what you run is a distill built on a Qwen2.5 or Llama 3 base. This explainer covers exactly what the distillation keeps (chain-of-thought, self-verification, reflection), what it loses (raw capability and breadth), and whether that gap matters for your use case.',
-    metaDescription: 'You can\'t run the real 671B DeepSeek-R1 at home — you run a distill. Here\'s exactly what the distillation keeps, what it loses, and whether the gap matters for you.',
+    metaDescription: 'You can\'t run the real 671B DeepSeek-R1 at home — you run a distill. Here\'s what distillation keeps, what it loses, and whether the gap matters.',
     twitterDescription: 'The full 671B DeepSeek-R1 is datacenter-only. A distill copies its reasoning onto a small base. Here\'s what survives distillation, what doesn\'t, and when the gap matters.',
     publishDate: '2026-06-19',
     dateModified: '2026-06-19',
