@@ -1943,8 +1943,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
   ko: {
     theme: 'Tools & Platforms',
     title: '프롬프트 테스트 및 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval',
-    seoTitle: '프롬프트 테스트 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval 비교',
-    metaDescription: 'Promptfoo는 몇 초 만에 회귀를 감지합니다 (무료). Braintrust는 인간 심사자와 함께 배치 평가를 실행합니다 ($500/월). DeepEval은 RAGAS 지표로 RAG를 채점합니다. LangSmith는 오류를 추적하고 Phoenix는 프로덕션을 모니터링합니다. 전체 파이프라인 비교.',
+    seoTitle: '프롬프트 테스트·평가 도구 2026: Promptfoo vs Braintrust',
+    metaDescription: 'Promptfoo는 몇 초 만에 회귀를 감지합니다(무료). Braintrust는 인간 심사자와 배치 평가($500/월). DeepEval은 RAGAS로 RAG를 채점. LangSmith·Phoenix 비교 포함.',
     ogTitle: 'Promptfoo는 초 단위. Braintrust는 시간 단위. 무엇이 필요하십니까?',
     ogDescription: '빠른 CI/CD 테스트 vs 느린 배치 평가 vs RAG 채점 vs 트레이싱 vs 모니터링. 5가지 도구, 5가지 역할. 비교 표 포함.',
     twitterTitle: '프롬프트 테스트 도구 2026: 5단계 파이프라인 비교',

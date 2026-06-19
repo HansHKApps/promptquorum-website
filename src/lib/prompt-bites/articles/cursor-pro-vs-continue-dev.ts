@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ko: {
     theme: 'Tool Comparisons',
     title: 'Cursor Pro vs Continue.dev: 2026년 월 $20 가치가 있을까?',
-    seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
+    seoTitle: 'Cursor Pro vs Continue.dev 2026: 로컬 vs 클라우드',
     metaDescription: 'Cursor Pro(월 $20)는 Claude, GPT 등 클라우드 모델과 세련된 편집기 UX에 탁월합니다. Continue.dev는 무료이며 Ollama 로컬 모델에 더 적합합니다. 모델 위치에 따라 선택하십시오.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',

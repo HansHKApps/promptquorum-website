@@ -2568,7 +2568,7 @@ schema: {
       title: 'Qwen 3 vs Llama 3.3 vs Mistral: 로컬 LLM 비교 2026',
       seoTitle: 'Qwen 3.6 vs Llama 4 vs Mistral 2026: 어느 LLM이 최고인가?',
       intro: 'Qwen 3.6 27B는 소비자용 하드웨어에서 전반적으로 최고의 성능을 발휘합니다. 77.2% SWE-bench(최고 밀집 모델)를 기록하며 Q4에서 24 GB에 탑재됩니다. Llama 4 Scout 17B(MoE, 10M 컨텍스트, 멀티모달)는 장문 컨텍스트/멀티모달 선택지이나 Q4에서 ~55 GB VRAM이 필요합니다. Mistral Small 3.1 24B는 14 GB로 최고의 RAM 대비 품질 비율을 제공합니다. Qwen3는 코딩과 29개 언어에 탁월하고, Llama 4 Scout는 컨텍스트 길이(10M 토큰)와 멀티모달에서 앞서며, Mistral은 제한된 하드웨어에서 품질을 극대화합니다. 세 모델 모두 Ollama를 통해 소비자용 하드웨어에서 실행됩니다. 업데이트: 2026년 6월.',
-      metaDescription: 'Qwen 3.6 27B: 77.2% SWE-bench, 24 GB 최고 성능. Llama 4 Scout: MoE, 10M 컨텍스트, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU. Qwen 3 14B vs Llama 3.3 8B vs Mistral 24B 비교 포함.',
+      metaDescription: 'Qwen 3.6 27B: 77.2% SWE-bench, 24GB 최고 성능. Llama 4 Scout: MoE, 10M 컨텍스트, ~55GB VRAM. Mistral Small 3.1: 79% MMLU. 작업별 최적 모델 비교 포함.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-01',
       last_full_refresh: '2026-06-01',

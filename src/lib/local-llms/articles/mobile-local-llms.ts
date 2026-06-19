@@ -2747,7 +2747,7 @@ schema: {
       next_refresh_due: '2026-11-04',
       theme: 'Hardware & Performance',
       title: '모바일 로컬 LLM 2026: iPhone 16 Pro, iPad M4 & Snapdragon X',
-      seoTitle: 'Android & iOS 최고의 로컬 LLM 앱 2026 (MLC LLM, PocketPal AI, Ollama iOS)',
+      seoTitle: 'Android·iOS 최고의 로컬 LLM 앱 2026: MLC·PocketPal',
       intro: '**네, 2026년에는 스마트폰에서 로컬 LLM을 실행할 수 있습니다 — 단, 소형 모델(iPhone에서 1–3B, 플래그십 Android에서 최대 7B)만 가능합니다.** 데스크톱에서 경험하는 80–150 tok/sec가 아닌 3–5 tok/sec를 기대하십시오. 오프라인 채팅, 개인 메모, API 비용이나 인터넷 없이 처리하는 경량 AI 작업에는 충분히 가치 있는 트레이드오프입니다. 이 가이드에서는 현재 최고의 모바일 LLM 앱(PocketPal AI, MLC Chat, Ollama iOS), Android & iOS 설치 튜토리얼, 그리고 실제로 실행 가능한 하드웨어를 다룹니다.',
       metaDescription: 'Android(MLC LLM, PocketPal AI — 50만 다운로드 이상) & iOS(Ollama iOS, Private LLM)용 최고의 모바일 LLM 앱. iPhone에서 1–3B, Snapdragon X에서 7B 실행. 설치 가이드 및 성능 벤치마크.',
       publishDate: '2026-04-04',

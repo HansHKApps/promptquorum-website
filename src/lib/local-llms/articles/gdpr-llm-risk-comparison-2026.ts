@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'GDPR 리스크 비교: Qwen vs DeepSeek vs Llama vs Claude 2026',
-    seoTitle: 'GDPR 리스크 매트릭스: LLM 비교 Qwen DeepSeek Llama Claude | PromptQuorum',
+    seoTitle: 'GDPR 리스크 매트릭스: Qwen·DeepSeek·Llama·Claude 비교',
     metaDescription: 'GDPR 준수 LLM 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스. 2026년 5월 업데이트.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',

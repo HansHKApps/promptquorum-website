@@ -1697,7 +1697,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
       title: '안전한 오프라인 로컬 LLM 워크플로우 구축 방법',
-      seoTitle: '안전한 오프라인 LLM 워크플로우: Air-Gapped 설정, 제로 네트워크, 데이터 처리',
+      seoTitle: '안전한 오프라인 LLM 워크플로우: Air-Gapped 설정 가이드',
       intro: '**최대 프라이버시를 위해 air-gapped 워크플로우를 구축하십시오: LLM 서버를 오프라인으로 유지(제로 네트워크), 암호화된 USB를 통해 데이터를 전송합니다.** 2026년 4월 기준, 이는 고보안 환경(법적 증거 개시, 의료 유전 데이터, 기밀 연구)에서 필수적입니다. 설정에는 1-2일이 소요되며, 운영 오버헤드는 보통 수준입니다.',
       metaDescription: '안전한 오프라인 로컬 LLM 워크플로우: Air-gapped 서버, 암호화된 USB 데이터 전송, 하드카피 출력. 네트워크 위험 없음.',
       publishDate: '2026-04-05',
