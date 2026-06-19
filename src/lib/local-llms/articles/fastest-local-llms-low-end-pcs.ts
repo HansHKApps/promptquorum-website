@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Model Should You Use?',
           content: '**Match your situation to the right model — this is the single most important decision:**',
           items: [
-            '**8 GB RAM laptop (no discrete GPU):** Mistral Small Q4 — good balance of speed and quality for CPU-only inference.',
+            '**8 GB RAM laptop (no discrete GPU):** Mistral Small Q4 — good balance of speed and quality for CPU-only inference. For per-RAM-tier picks and thermals, see [how to run a local LLM on a laptop](/local-llms/local-llm-on-laptop).',
             '**16 GB RAM:** Llama 3.3 8B Q5 — higher quality than Q4, fits comfortably with headroom.',
             '**Very old PC (4 GB RAM or less):** TinyLlama 1B Q5 or Phi-4 Mini Q4 — only viable options at this tier.',
             '**Want max speed:** 3B models (Phi-4 Mini, Llama 3.2 3B) — 60–120 tok/sec on any modern GPU.',
