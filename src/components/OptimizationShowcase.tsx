@@ -528,7 +528,7 @@ End with: "You're already doing prompt engineering—now do it better."`}
           </button>
           {expandedCollapsible === 'details' && (
             <div className="p-4 border-t border-gray-200">
-              <strong className="text-gray-900">Strengths:</strong>
+              <strong className="text-gray-900">{t.strengths}</strong>
               <ul className="my-2 ml-4 text-sm text-gray-700 space-y-1">
                 <li>• Clear structure with numbered sections</li>
                 <li>• Concrete examples provided for beginners</li>

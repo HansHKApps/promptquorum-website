@@ -25,6 +25,7 @@ type ShowcaseStrings = {
   helpOptimize: string
   promptEngineeringBestPractices: string
   optimizationEngine: string
+  optimizationStarted: string
 }
 
 const translations = {
@@ -49,6 +50,7 @@ const translations = {
     helpOptimize: 'Need help optimizing your prompt?',
     promptEngineeringBestPractices: 'View prompt engineering best practices',
     optimizationEngine: 'Optimization engine powered by',
+    optimizationStarted: 'Optimization started...',
   },
   es: {
     title: 'Optimizador de Prompts',
@@ -71,6 +73,7 @@ const translations = {
     helpOptimize: '¿Necesitas ayuda para optimizar tu prompt?',
     promptEngineeringBestPractices: 'Ver mejores prácticas de prompt engineering',
     optimizationEngine: 'Motor de optimización impulsado por',
+    optimizationStarted: 'Optimización iniciada...',
   },
   de: {
     title: 'Prompt-Optimierer',
@@ -93,6 +96,7 @@ const translations = {
     helpOptimize: 'Benötigen Sie Hilfe beim Optimieren Ihres Prompts?',
     promptEngineeringBestPractices: 'Beste Praktiken für Prompt Engineering ansehen',
     optimizationEngine: 'Optimierungsmaschine unterstützt von',
+    optimizationStarted: 'Optimierung gestartet...',
   },
   fr: {
     title: 'Optimiseur de Prompts',
@@ -115,6 +119,7 @@ const translations = {
     helpOptimize: 'Besoin d\'aide pour optimiser votre prompt?',
     promptEngineeringBestPractices: 'Voir les meilleures pratiques d\'optimisation de prompt',
     optimizationEngine: 'Moteur d\'optimisation alimenté par',
+    optimizationStarted: 'Optimisation lancée...',
   },
   ja: {
     title: 'プロンプト最適化ツール',
@@ -137,6 +142,7 @@ const translations = {
     helpOptimize: 'プロンプトの最適化についてサポートが必要ですか?',
     promptEngineeringBestPractices: 'プロンプトエンジニアリングのベストプラクティスを表示',
     optimizationEngine: 'による最適化エンジン',
+    optimizationStarted: '最適化を開始しました...',
   },
   zh: {
     title: '提示词优化器',
@@ -159,6 +165,7 @@ const translations = {
     helpOptimize: '需要帮助来优化提示词吗？',
     promptEngineeringBestPractices: '查看提示词工程最佳实践',
     optimizationEngine: '由以下提供支持的优化引擎',
+    optimizationStarted: '优化已开始...',
   },
   pt: {
     title: 'Otimizador de Prompts',
@@ -181,6 +188,7 @@ const translations = {
     helpOptimize: 'Precisa de ajuda para otimizar seu prompt?',
     promptEngineeringBestPractices: 'Ver melhores práticas de engenharia de prompt',
     optimizationEngine: 'Mecanismo de otimização alimentado por',
+    optimizationStarted: 'Otimização iniciada...',
   },
   ar: {
     title: 'محسِّن الطلبات',
@@ -203,6 +211,30 @@ const translations = {
     helpOptimize: 'هل تحتاج إلى مساعدة في تحسين طلبك؟',
     promptEngineeringBestPractices: 'عرض أفضل الممارسات لهندسة الطلبات',
     optimizationEngine: 'محرك التحسين مدعوم من',
+    optimizationStarted: 'بدأ التحسين...',
+  },
+  ko: {
+    title: '프롬프트 최적화 도구',
+    desc: '프레임워크를 선택하고, 프롬프트를 최적화하며, AI 모델 간에 비교하세요',
+    selectedProvider: '선택된 공급자',
+    changeProvider: '공급자 변경',
+    selectFramework: '프레임워크 선택',
+    quickPrompt: '빠른 프롬프트',
+    simpleDirect: '간단하고 직접적',
+    chainOfThought: '연쇄 사고',
+    stepByStepReasoning: '단계별 추론',
+    fewShot: '퓨샷',
+    examplesIncluded: '예시 포함',
+    yourPrompt: '프롬프트',
+    promptPlaceholder: '프롬프트를 입력하세요... AI에게 원하는 작업을 설명해 주세요.',
+    promptTip: '요구 사항, 맥락, 원하는 출력 형식에 대해 구체적으로 작성하세요.',
+    primaryProvider: '기본 공급자',
+    optimizePrompt: '프롬프트 최적화',
+    compareFrameworks: '프레임워크 비교',
+    helpOptimize: '프롬프트 최적화에 도움이 필요하신가요?',
+    promptEngineeringBestPractices: '프롬프트 엔지니어링 모범 사례 보기',
+    optimizationEngine: '최적화 엔진 제공:',
+    optimizationStarted: '최적화가 시작되었습니다...',
   },
 }
 
@@ -333,7 +365,7 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
 
       {optimizationStarted && (
         <div role="status" className="mt-3 px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-800">
-          Optimization started...
+          {t.optimizationStarted}
         </div>
       )}
 
