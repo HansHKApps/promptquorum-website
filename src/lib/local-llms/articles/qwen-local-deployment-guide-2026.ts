@@ -8,9 +8,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     theme: 'Qwen Models',
-    title: 'Qwen Local Deployment Guide 2026: Run Qwen3, Coder & VL at Every Hardware Tier',
+    title: 'Qwen3 Local Deployment Guide 2026: Coder, VL & Hardware Tiers',
     seoTitle: 'Qwen3 Local Setup Guide 2026: Coder, VL & Hardware Tiers',
-    intro: 'Qwen3 7B runs in 5.5 GB of VRAM via Ollama — one command, no configuration. Qwen3-Coder 32B reaches 92.7% on HumanEval. Qwen2-VL 7B leads local vision models for Chinese and Japanese document OCR. This guide covers the complete Qwen family — which model to run at each hardware tier, Ollama and LM Studio setup, quantization picks, benchmark data, and how Qwen compares to DeepSeek and Llama on consumer hardware in 2026.',
+    intro: 'Qwen3 7B runs in 5.5 GB of VRAM via Ollama — one command, no configuration — while Qwen3-Coder 32B reaches 92.7% on HumanEval and Qwen2-VL 7B leads local vision models for Chinese and Japanese document OCR. This guide covers which Qwen sub-family to run at each hardware tier, with Ollama and LM Studio setup, Q4_K_M quantization picks, and benchmark data from 7B through 72B. Hardware tiers range from an RTX 3060 at 5.5 GB VRAM for Qwen3 7B to dual RTX 3090s or Apple M2 Ultra for Qwen3 72B.',
     metaDescription: 'Run Qwen3 (7B–72B), Qwen3-Coder and Qwen2-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-19',
@@ -77,16 +77,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Qwen Local Deployment Guide 2026: Run Qwen3, Coder & VL at Every Hardware Tier',
       description: 'Complete guide to deploying the Qwen3 model family locally — VRAM requirements, Ollama and LM Studio setup, quantization, benchmarks, and hardware recommendations.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-06-19',
       inLanguage: 'en',
       url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026',
-      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/', url: 'https://www.promptquorum.com' },
+      audience: { '@type': 'Audience', audienceType: 'Developers and researchers running Qwen3 models locally' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'inLanguage': 'en',
       mainEntity: [
         {
           '@type': 'Question',
@@ -143,13 +146,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware decision**: 12 GB VRAM → 14B model; 24 GB VRAM → 32B; 48 GB+ (two GPUs or Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 covers three local-deployment sub-families — general (7B–72B), coding (Coder 7B–32B), and vision (VL 7B–72B) — all runnable via Ollama or LM Studio.' },
-          { type: 'plain-terms', text: 'Running a model locally means the AI runs on your own computer instead of a cloud server. No data leaves your machine, and there is no per-token cost after hardware.' },
+          { type: 'one-sentence', text: 'Qwen3 7B runs in 5.5 GB VRAM via Ollama; Qwen3-Coder 32B needs 24 GB and scores 92.7% on HumanEval.' },
+          { type: 'plain-terms', text: 'Qwen3 is a family of open-weight AI models from Alibaba that run on consumer GPUs — from a laptop GPU to a desktop RTX 4090 — without sending data to any cloud.' },
         ],
       },
       modelFamily: {
         id: 'model-family',
-        title: 'Qwen3 Model Family Overview',
+        title: 'Which Qwen3 Sub-Family Should You Run?',
         content: [
           '**The Qwen3 family covers three distinct tasks: general reasoning, coding, and vision** — each with multiple size options from 7B to 72B parameters. All are open-weight models published by Alibaba\'s Qwen team on Hugging Face under the Apache 2.0 licence.',
           'Choose the sub-family first, then the size that fits your VRAM. Mixing sub-families is common: run Qwen3-Coder 14B for code completion and Qwen3 7B for document summarisation.',
@@ -165,7 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareTiers: {
         id: 'hardware-tiers',
-        title: 'Hardware Requirements by Model Size',
+        title: 'How Much VRAM Does Each Qwen3 Model Require?',
         content: [
           '**Pick your VRAM tier first, then select the largest Qwen3 model that fits.** Q4_K_M is the standard quantisation used in all figures below — it gives the best size-to-quality ratio for Ollama and LM Studio.',
         ],
@@ -187,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ollamaSetup: {
         id: 'ollama-setup',
-        title: 'Setting Up with Ollama',
+        title: 'How Do You Run Qwen3 with Ollama?',
         content: [
           '**Ollama is the fastest path to running any Qwen3 model locally** — it handles model download, GGUF quantisation, and the local API at `localhost:11434` without any configuration. Install from [ollama.com](https://ollama.com/download). If you have not used Ollama before, read [how to install Ollama](/local-llms/how-to-install-ollama) first.',
         ],
@@ -222,7 +225,7 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
-        title: 'Setting Up with LM Studio',
+        title: 'How Do You Run Qwen3 with LM Studio?',
         content: [
           '**LM Studio provides a GUI interface for Qwen3 with no terminal commands.** Download from [lmstudio.ai](https://lmstudio.ai), or see [how to install LM Studio](/local-llms/how-to-install-lm-studio). It runs on macOS, Windows, and Linux.',
         ],
@@ -248,13 +251,13 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         note: 'For a full quantisation explainer, see [LLM quantization explained](/local-llms/llm-quantization-explained).',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Q4_K_M is the best Qwen3 quantization for most users: it cuts VRAM by 55% with less than 1% quality loss versus FP16.' },
-          { type: 'plain-terms', text: 'Quantization compresses the model\'s numbers from 16-bit to 4-bit, roughly halving the file size and VRAM needed. Think of it as reducing image quality from TIFF to a high-quality JPEG — smaller file, nearly identical result for most uses.' },
+          { type: 'one-sentence', text: 'Q4_K_M is the recommended default for Qwen3: 55% less VRAM than FP16, under 1% quality loss.' },
+          { type: 'plain-terms', text: 'Quantization is a compression technique — like reducing image quality to save file size. Q4_K_M keeps 99% of Qwen3\'s accuracy while cutting memory use in half.' },
         ],
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'Benchmark Performance on Consumer Hardware',
+        title: 'How Does Qwen3 Perform on Consumer Hardware?',
         content: [
           '**Qwen3 32B Q4_K_M on an RTX 4090 delivers 28 tokens/sec — fast enough for real-time coding assistance.** Scores below are for Q4_K_M GGUF builds tested on Ollama. Full-precision FP16 scores are 1–2% higher.',
         ],
@@ -303,7 +306,7 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: 'Hardware Picks by Budget',
+        title: 'Which Hardware Should You Buy for Qwen3 Deployment?',
         content: [
           '**RTX 3060 12 GB is the best entry point for Qwen3 7B and Qwen3-Coder 7B at under €300.** For 14B models, the RTX 4070 12 GB adds 35% speed at ~€400 new. Below are the hardware options used and tested for this guide.',
         ],
@@ -323,7 +326,7 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'Common Mistakes Running Qwen3 Locally',
+        title: 'What Are the Common Mistakes Running Qwen3 Locally?',
         items: [
           '**Using an untagged `ollama pull qwen2.5` command.** Without an explicit size tag (`:7b`, `:14b`, etc.), Ollama may resolve to a default size that changes between library updates. Always use explicit tags: `ollama pull qwen2.5:14b`.',
           '**Ignoring the context window size.** Qwen3 supports 128K context, but Ollama defaults to 2K at `num_ctx`. If you\'re processing long documents, add `--num-ctx 8192` (or higher) to the run command — otherwise the model silently truncates input.',

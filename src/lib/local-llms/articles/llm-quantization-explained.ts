@@ -8,14 +8,14 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM Quantization Explained (2026)',
-      intro: 'Complete guide to choosing the right LLM quantization for your hardware: Q4_K_M for 6–8 GB VRAM, Q5_K_M for 16 GB, Q8_0 for 24+ GB. Head-to-head comparisons of Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, and Q8_0 vs Q8_K_XL, plus GGUF format explained, quality loss by level, and advanced techniques (CPU offloading and multi-GPU layer splitting). Learn how to run Llama 3.3 70B on RTX 4090 via offloading, 2× RTX 4090 via layer splitting, or Mac Studio M2 Ultra natively. Updated June 2026.',
-      metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M and Q8_0 vs Q8_K_XL compared. Bits, VRAM per 7B, quality loss, and which GGUF quant to choose for your VRAM in 2026.',
+      intro: '**Choose quantization by VRAM: 6–8 GB → Q4_K_M (~4.5 GB for 7B, <1% quality loss), 16 GB → Q5_K_M, 24+ GB → Q8_0.** Head-to-head comparisons of Q4_0 vs Q4_K_M, Q8_0 vs Q8_K_XL, and advanced techniques including CPU offloading and multi-GPU layer splitting are covered below.',
+      metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, and Q8_K_XL compared. VRAM per 7B model, quality loss, and which GGUF quant to pick for your hardware in 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
       lastFactChecked: '2026-06-15',
@@ -118,8 +118,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       sections: {
         tldr: {
           id: 'key-takeaways',
-
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Q4_K_M is the recommended default quantization: it cuts a 7B model from 14 GB to 4.5 GB with under 1% quality loss, and runs on any 6 GB+ GPU.' },
+            { type: 'plain-terms', text: 'Quantization is like compressing an image — the AI model takes less memory and runs faster, with only a tiny drop in quality. Q4_K_M is the most common "compressed" format for local LLMs.' },
+          ],
           items: [
             'Quantization converts 16-bit model weights to 4-bit or 8-bit, reducing RAM by 50-75%.',
             '**Q4_K_M** is the standard recommended level -- best balance of quality and RAM for consumer hardware.',
@@ -188,7 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
-          title: 'Q4_K_M vs Q4_K_S: Medium vs Small K-Quant',
+          title: 'Q4_K_M vs Q4_K_S: Which Should You Choose?',
           content: '**Q4_K_M and Q4_K_S are both 4-bit K-quants; the difference is how many layers stay at higher precision. Q4_K_M (Medium) keeps more sensitive layers at 6-bit, while Q4_K_S (Small) pushes more weights to 4-bit to save ~0.3–0.4 GB on a 7B model.** Measured on llama.cpp, Q4_K_S adds about +0.11 perplexity at 7B versus +0.05 for Q4_K_M — roughly 3–5% more quality loss. Pick Q4_K_S only when those few hundred megabytes decide whether the model fits in VRAM.',
           rows: [
             { 'Format': 'Q4_K_S', 'Variant': 'Small', 'RAM (7B)': '~4.1 GB', 'Quality Loss': '~4–6% (small but real)', 'Pick When': 'Need ~0.4 GB to fit VRAM' },
@@ -208,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         compareQ80Q8KXL: {
           id: 'q8-0-vs-q8-k-xl',
-          title: 'Q8_0 vs Q8_K_XL: Standard 8-Bit vs Dynamic Upcast',
+          title: 'Q8_0 vs Q8_K_XL: Is Dynamic Upcast Worth the Extra VRAM?',
           content: [
             '**Q8_0 is the standard llama.cpp 8-bit quant — every weight at 8-bit, ~7.7 GB for a 7B model, under 0.5% loss versus FP16. Q8_K_XL is not a stock llama.cpp type: it is an Unsloth "Dynamic" GGUF variant that keeps an 8-bit base but upcasts the most sensitive layers (embeddings, attention, and output) to 16-bit (BF16/F16), pushing quality closer to full FP16 at a slightly larger file size.** Q8_K_XL targets users who want the last fraction of a percent of accuracy and have VRAM to spare.',
             'Exact Q8_K_XL file sizes vary by model and by how many layers Unsloth upcasts, so verify the size shown in your tool (LM Studio or Hugging Face) before downloading. For a 7B–8B model expect it to sit slightly above Q8_0; on very large models the gap is wider. Because Q8_0 is already effectively lossless for most users, Q8_K_XL is worth it only when you specifically need maximum fidelity and the extra VRAM is free.',
@@ -234,6 +237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ramSavings: {
           id: 'ram-savings',
           title: 'How Much RAM Does Quantization Save for Different Model Sizes?',
+          content: '**Quantization cuts RAM by 50–75%: a 7B model drops from ~14 GB at FP16 to ~4.5 GB at Q4_K_M, with under 1% quality loss on standard benchmarks.**',
           rows: [
             { 'Model Size': '3B', 'FP16': '~6 GB', 'Q8_0': '~3.8 GB', 'Q4_K_M': '~2 GB', 'Q3_K_S': '~1.6 GB' },
             { 'Model Size': '7B', 'FP16': '~14 GB', 'Q8_0': '~7.7 GB', 'Q4_K_M': '~4.5 GB', 'Q3_K_S': '~3.3 GB' },
@@ -263,6 +267,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         whichQuantization: {
           id: 'which-quantization',
           title: 'Which Quantization Should You Use? (Quick Decision Tree)',
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Use Q4_K_M for 6–8 GB VRAM, Q5_K_M for 12–16 GB, Q8_0 for 24+ GB, and IQ4_XS only when VRAM is extremely tight.' },
+            { type: 'plain-terms', text: 'Think of quantization levels like video quality settings: Q8_0 is 1080p (near-perfect, needs more space), Q4_K_M is 720p (good enough, half the storage), Q2_K is 360p (you notice the difference).' },
+          ],
           content: '**Choose based on your available VRAM, not on the model size alone.** The table below shows which quantization to select for different hardware constraints.',
           rows: [
             { 'Your VRAM': '4–6 GB', 'Best Quantization': 'Q3_K_S or Q4_K_M', 'Model Size': '3B, 7B (Q4) | 7B (Q3)', 'Quality': '5–10% loss (Q3) | 1–3% (Q4)' },
@@ -282,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         lmStudio: {
           id: 'lm-studio-quantization-selection',
-          title: 'LM Studio: How to Select Quantization in the UI',
+          title: 'How Do You Select Quantization in LM Studio?',
           content: [
             '**LM Studio (desktop app) shows available quantization variants for each model download.** When searching for a model, you\\\'ll see multiple GGUF options: Q2_K, Q3_K_S, Q4_K_M, Q5_K_M, Q6_K, Q8_0.',
             '**Step 1:** Open LM Studio → Navigate to the "Local Models" tab. Search for a model (e.g., "Llama 3.3 8B"). Step 2: Each model shows available quantizations. Look at the file size to estimate VRAM usage. Q4_K_M for a 7B model is usually listed as ~4.5 GB. Step 3: Click the download icon next to your chosen quantization.',
@@ -295,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         offloading: {
           id: 'offloading',
-          title: 'Offloading: CPU RAM as Spillover',
+          title: 'When Should You Use CPU RAM Offloading?',
           content: [
             '**When VRAM is full, models can offload (move) layers to system RAM.** Offloading trades speed for capacity.',
             'Scenario: Running 70B Q4 model on RTX 4090 (24 GB). Model needs 35 GB. With offloading, run at ~5-10 tokens/sec (80% to RAM).',
@@ -306,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         layerSplitting: {
           id: 'layer-splitting',
-          title: 'Layer Splitting: Distribute Across Multiple GPUs',
+          title: 'How Do You Split a Model Across Multiple GPUs?',
           content: [
             '**Modern inference engines (vLLM, llama.cpp) can split a model across multiple GPUs automatically.** Learn more about [Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) for advanced setups.',
             'Example: 70B model with 2× RTX 4090:',
@@ -319,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         kvCacheQuantization: {
           id: 'kv-cache-quantization',
-          title: 'KV Cache Quantization: Reducing Context Memory Overhead',
+          title: 'What Is KV Cache Quantization and When Does It Help?',
           content: [
             '**KV Cache quantization reduces the memory required to store attention key-value pairs during inference, particularly important when processing long contexts (32K+ tokens).** While model weight quantization (Q4_K_M) is most common, KV cache quantization targets a different memory bottleneck.',
             'During inference, the model maintains running key-value (KV) pairs for each token in the context. For a 7B model processing a 32K-token context, KV cache alone can consume 8–16 GB of VRAM depending on the precision. Standard KV cache uses FP16 (2 bytes per value); quantizing the KV cache to FP8 or Q8 reduces this by 50%.',
@@ -332,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         hybrid: {
           id: 'hybrid',
-          title: 'Hybrid Approach: Combining Techniques',
+          title: 'Which Combination of Quantization Techniques Works Best?',
           content: [
             '**Best results come from combining all three techniques.** See [VRAM Requirements Guide](/local-llms/how-much-vram-local-llm) for specific hardware planning.',
             '**Scenario 1: 70B on single RTX 4090 (24 GB)**',
@@ -359,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         macStudio: {
           id: 'mac-studio',
-          title: 'Mac Studio M2 Ultra: Native 70B Without Offloading',
+          title: 'Can Mac Studio M2 Ultra Run 70B Models Without Offloading?',
           content: [
             '**Mac Studio M2 Ultra with 192 GB unified memory runs Llama 3.3 70B at Q4 natively — no offloading, no layer splitting required.**',
             'Unified memory bandwidth: Mac Studio M2 Ultra accesses both CPU and GPU memory at ~800 GB/s. DDR5 system RAM offloading is capped at ~90 GB/s. This 9× advantage eliminates the speed penalty that makes offloading impractical.',
@@ -374,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         regionalContext: {
           id: 'regional-context',
-          title: 'LLM Quantization: Regional Context',
+          title: 'How Does LLM Quantization Apply Across Different Regions?',
           items: [
             '**EU (GDPR, Article 44)** -- Cross-border AI data transfers require adequacy decisions or Standard Contractual Clauses. Q4_K_M quantization enables 7B models to run on 8 GB edge devices, eliminating third-party cloud API calls entirely. The German BfDI and French CNIL both recommend local inference for high-risk AI processing under GDPR Article 22. Quantized Mistral and Llama models are the dominant choices in EU enterprise deployments for this reason.',
             '**Japan (METI AI Governance Guidelines 2024)** -- Japan\'s Ministry of Economy, Trade and Industry requires AI governance documentation for enterprise deployments. Quantized models on domestic infrastructure satisfy METI\'s "controllability" requirements -- the model weights stay on-premises. Q4_K_M quantization makes 13B-32B models feasible on 16-32 GB corporate servers without GPU clusters. Qwen3 and Llama 3 are the most-deployed families in Japanese enterprise settings.',
@@ -507,12 +515,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Which LLM Quantization Should You Use? Q4_K_M vs Q5_K_M vs Q8_0 (2026)',
+        'headline': 'LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
         'description': 'Practical guide to choosing LLM quantization levels by VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 compared with RAM tables, quality loss, and use cases.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-06-19',
         'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained',
-        'proficiencyLevel': 'Intermediate',
+        'proficiencyLevel': 'Advanced',
+        'inLanguage': 'en',
         'about': [
           { '@type': 'Thing', 'name': 'Q4_K_M quantization' },
           { '@type': 'Thing', 'name': 'Q4_0 quantization' },
@@ -668,9 +677,9 @@ schema: {
       gammaDescription: 'The slide deck below covers: Q4_K_M vs Q8_0 vs GGUF format comparison, RAM savings by model size (3B-70B), quality loss by quantization level, and which quantization to choose for your hardware. Download the PDF as an LLM quantization reference card.',
     },
     es: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'Cuantización de LLM explicada: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: cuantización de LLM (2026)',
@@ -1227,9 +1236,9 @@ schema: {
       gammaDescription: 'El slide deck a continuación cubre: comparación Q4_K_M vs Q8_0 vs formato GGUF, ahorro de RAM por tamaño de modelo (3B-70B), pérdida de calidad por nivel de cuantización y qué cuantización elegir para tu hardware. Descarga el PDF como tarjeta de referencia de cuantización de LLM.',
     },
     ar: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'شرح تكميم LLM: Q4_K_M مقابل Q4_0 مقابل Q8_0 (2026)',
       seoTitle: 'Q4_K_M مقابل Q4_0 مقابل Q8_0: شرح تكميم LLM (2026)',
@@ -1777,9 +1786,9 @@ schema: {
       gammaDescription: 'يغطي العرض التقديمي أدناه: مقارنة Q4_K_M مقابل Q8_0 مقابل صيغة GGUF، وتوفير RAM حسب حجم النموذج (3B-70B)، وفقدان الجودة حسب مستوى التكميم، وأي تكميم تختار لعتادك. نزّل ملف PDF كبطاقة مرجعية لتكميم LLM.',
     },
     pt: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'Quantização de LLM explicada: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: quantização de LLM explicada (2026)',
@@ -2167,9 +2176,9 @@ schema: {
       },
     },
     de: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'LLM-Quantisierung erklärt: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM-Quantisierung erklärt (2026)',
@@ -2766,9 +2775,9 @@ schema: {
       gammaDescription: 'Das Slide-Deck umfasst: Q4_K_M vs Q8_0 vs GGUF-Formatvergleich, RAM-Einsparungen nach Modellgröße (3B-70B), Qualitätsverlust nach Quantisierungsstufe und welche Quantisierung für Ihre Hardware geeignet ist. PDF als LLM-Quantisierungs-Referenzkarte herunterladen.',
     },
     fr: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'Quantification LLM expliquée : Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0 : la quantification LLM expliquée (2026)',
@@ -3315,9 +3324,9 @@ schema: {
       gammaDescription: 'Le diaporama ci-dessous couvre : comparaison Q4_K_M vs Q8_0 vs GGUF, économies RAM par taille de modèle (3B-70B), perte de qualité par niveau de quantification, et quelle quantification choisir pour votre matériel. Téléchargez le PDF comme référence de quantification LLM.',
     },
     ja: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'LLM量子化を解説：Q4_K_M vs Q4_0 vs Q8_0（2026）',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0：LLM量子化を解説（2026）',
@@ -3863,9 +3872,9 @@ schema: {
       gammaDescription: '下記のスライドデッキには次の内容が含まれています：Q4_K_M vs Q8_0 vs GGUF形式の比較、モデルサイズ（3B～70B）別のRAM削減量、量子化レベル別の品質低下、お使いのハードウェアに適した量子化の選択方法。PDFをLLM量子化リファレンスカードとしてダウンロードできます。',
     },
     zh: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'LLM量化详解：Q4_K_M vs Q4_0 vs Q8_0（2026）',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0：LLM量化详解（2026）',
@@ -4402,9 +4411,9 @@ schema: {
       gammaDescription: '下方幻灯片涵盖：Q4_K_M vs Q8_0 vs GGUF格式对比、按模型大小（3B～70B）节省的RAM、各量化级别的质量损失，以及如何为您的硬件选择量化级别。将PDF下载为LLM量化参考卡片。',
     },
   ko: {
-      freshness_tier: 'monthly',
+      freshness_tier: 'semi_annual',
       next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-07-15',
+      next_refresh_due: '2026-12-19',
       theme: 'Best Models',
       title: 'LLM 양자화 완전 해설: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM 양자화 해설 (2026)',

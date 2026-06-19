@@ -21,6 +21,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publishDate: '2026-04-05',
       dateModified: '2026-06-19',
       leadAnswerBlock: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec. The 6GB variant handles 3B models only. Best budget GPU for local LLMs in 2026 at $200–250 used.**',
+      quickAnswerTop: {
+        question: 'What is the best budget GPU for local LLMs in 2026?',
+        answer: 'RTX 3060 12 GB ($200–250 used) is the best budget GPU for local LLMs in 2026 — runs Qwen3 14B at 9–12 tok/s at Q4, handles all 7B-8B models, and fits within a $250 budget. For $350–400 new, the RTX 4070 Super 12 GB runs the same models 20–30% faster.',
+        bullets: [
+          '→ RTX 3060 12 GB used ($200–250): runs Qwen3 14B at 9–12 tok/s — best value overall',
+          '→ RTX 4060 Ti 8 GB new (~$250): faster than 3060 on 7B, but only 8 GB VRAM',
+          '→ RTX 4070 Super 12 GB new ($350–400): best new budget card — 20% faster, same VRAM',
+          '→ Used RTX A4000 (~$200): 16 GB VRAM at budget price, great for 13B-20B models',
+        ],
+        updatedDate: '2026-06-19',
+      },
       nextStep: {
         text: 'Got your GPU? Now choose the right software to run models on it.',
         label: 'Best Local LLM Frontends 2026 →',
@@ -34,11 +45,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'TLDR', anchor: '#tldr' },
         { label: 'What Can You Run on RTX 3060 12GB?', anchor: '#rtx-3060-12gb' },
         { label: 'What Can You Run on RTX 3060 6GB?', anchor: '#rtx-3060-6gb' },
-        { label: 'RTX 3060 vs Other Budget GPUs', anchor: '#which-budget-gpus' },
+        { label: 'How Does RTX 3060 Compare to Other Budget GPUs?', anchor: '#which-budget-gpus' },
         { label: 'How Much VRAM Do You Need for 7B Models?', anchor: '#vram-7b' },
-        { label: 'Best Models by Use Case on RTX 3060', anchor: '#best-by-use-case' },
+        { label: 'Which Models Run Best on RTX 3060 by Use Case?', anchor: '#best-by-use-case' },
         { label: 'Used vs. New: Where Should You Buy?', anchor: '#used-vs-new' },
-        { label: 'Common Budget GPU Mistakes', anchor: '#mistakes' },
+        { label: 'What Are the Most Common Budget GPU Mistakes?', anchor: '#mistakes' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -46,6 +57,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 3060 12 GB ($200–250 used) runs Qwen3 14B at 9–12 tok/s and is the best budget GPU for local LLMs in 2026.' },
+            { type: 'plain-terms', text: 'A budget GPU for AI means a graphics card that costs under $300 but still has enough video memory (VRAM) to run a capable AI model at a usable speed on your own computer.' },
+          ],
           items: [
             '**Best pick by budget:** Under $200 — RX 6700 XT 12GB ($150–200, cheapest, AMD setup friction) or RTX A4000 16GB if found sub-$230 (best VRAM per dollar). ~$250 — RTX 3060 12GB (best overall). Under $500 — RTX 4070 Super 12GB (fastest at 25–30 tok/s).',
             '**RTX 3060 12GB** ($200–250 used): Runs every 7B-8B model at Q4/Q5 and most dense 13B-14B at Q4. Best budget pick.',
@@ -59,6 +74,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'rtx-3060-12gb': {
           id: 'rtx-3060-12gb',
           title: 'What Can You Run on RTX 3060 12GB?',
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 3060 12 GB runs Qwen3 14B at Q4 (9 GB, ~9–12 tok/s), Qwen3 8B (5.5 GB, ~16–20 tok/s), and all 7B models comfortably.' },
+            { type: 'plain-terms', text: 'The RTX 3060 12 GB has 12 gigabytes of video memory — enough for AI models up to about 14 billion parameters. Larger models will not fit and will run slowly.' },
+          ],
           content: [
             '**The RTX 3060 12GB is the best budget GPU for local LLMs in 2026.** 12GB VRAM fits every 7B model at Q4/Q5 quantization, and most 13B models at Q4. For detailed guidance on VRAM requirements across model sizes, see the [VRAM requirements guide →](/local-llms/how-much-vram-local-llm). Here are the exact models and speeds you can expect:',
           ],
@@ -90,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'which-budget-gpus': {
           id: 'which-budget-gpus',
-          title: 'RTX 3060 vs Other Budget GPUs',
+          title: 'How Does RTX 3060 Compare to Other Budget GPUs?',
           columns: ['GPU', 'VRAM', 'Price (Used)', '7B Speed', 'Max Model', 'Verdict'],
           rows: [
             { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', 'Price (Used)': '$200–250', '7B Speed': '15–20 tok/sec', 'Max Model': '13B (Q4)', 'Verdict': 'Best overall budget' },
@@ -102,6 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           note: 'RTX 3060 12GB wins on value: 12GB VRAM at $200–250 runs every 7B model and most 13B. The RTX A4000 is a close second if you find one under $230.',
         },
         'vram-7b': {
+          id: 'vram-7b',
           title: 'How Much VRAM Do You Need for 7B Models?',
           content: [
             '**7B models quantized at Q4 (4-bit) require 6-8GB VRAM; Q5 (5-bit) requires 8-10GB; Q8 (8-bit) requires 14-16GB.**',
@@ -113,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'best-by-use-case': {
           id: 'best-by-use-case',
-          title: 'Best Models by Use Case on RTX 3060',
+          title: 'Which Models Run Best on RTX 3060 by Use Case?',
           content: [
             '**Pick your model based on what you actually need, not parameter count.** Here are the best choices for each use case on RTX 3060 12GB:',
             'Budget hardware runs smaller models — but skilled prompting closes the quality gap. The [prompt engineering guide](https://www.promptquorum.com/prompt-engineering) covers techniques like chain-of-thought and structured output that help smaller models punch above their weight. A concrete workload that fits the RTX 3060 12 GB tier is automated pull-request review — see [Local LLM Code Review in CI/CD](/power-local-llm/local-llm-code-review-ci-cd) for the GitHub Actions pattern that runs Qwen3 8B against PRs on this exact hardware.',
@@ -129,6 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'used-vs-new': {
+          id: 'used-vs-new',
           title: 'Used vs. New: Where Should You Buy?',
           items: [
             '**Used ($50-100 cheaper)**: eBay, Facebook Marketplace, Craigslist, local computer repair shops. Higher risk of dead cards or bad VRAM. Always test before committing.',
@@ -137,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'mistakes': {
-          title: 'Common Budget GPU Mistakes',
+          title: 'What Are the Most Common Budget GPU Mistakes?',
           items: [
             'Buying a 4GB RTX 2060 and expecting smooth 7B inference--you\'ll hit out-of-memory errors constantly.',
             'Pairing a $250 GPU with a $30 PSU (power supply)--voltage sag kills stability. Budget 80+ Gold certified, 650W minimum.',
@@ -155,8 +176,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How Much VRAM Do I Need?](/local-llms/how-much-vram-local-llm) — Match your GPU to your model size →',
           ],
         },
+        'regionalContext': {
+          id: 'regional-context',
+          title: 'How Do Regional Privacy Laws Affect GPU Choice for Local LLMs?',
+          content: [
+            '**EU GDPR: Budget GPU local inference is fully compliant — no cloud, no data transfer.** Running Qwen3 or Gemma 4 on an RTX 3060 keeps all inference on-device. GDPR Article 25 (privacy by design) and Article 32 (technical security) are satisfied by default. European freelancers, legal firms, and healthcare providers increasingly use budget NVIDIA setups for document processing that cannot touch cloud APIs.',
+            '**Japan APPI and Asia-Pacific: Local GPU inference eliminates cross-border data transfer.** Under Japan\'s amended APPI, sensitive personal data cannot be transferred to servers outside Japan without explicit consent. A €250 RTX 3060 running Ollama locally removes this concern entirely — inference happens on-device with no network requests.',
+            '**US and global SMBs: Budget GPU setups reduce API cost and eliminate vendor lock-in.** For small businesses, an RTX 3060 ($200–250 used) pays back its cost in roughly 2–3 months compared to GPT-4o API usage at comparable token volumes, with no per-token costs thereafter.',
+          ],
+        },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Is RTX 3060 12GB still worth buying in 2026?', a: 'Yes. It\'s 4+ years old, but 12GB VRAM is timeless. Runs Qwen3 14B, Qwen3 8B, Gemma 4 E12B, and Mistral Small smoothly at Q4. It fits every 7B-8B model and most dense 13B-14B models.' },
             { q: 'Should I buy RTX 5060 Ti or RTX 4060 Ti for local LLMs?', a: 'RTX 5060 Ti. The newer generation (2026) offers 10-15% better performance. If budget-constrained, RTX 4060 Ti is still solid. Avoid base 4060/5060 (8GB) and 4070 (12GB)—poor value.' },
@@ -166,6 +197,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What PSU wattage should I buy with a $250 GPU?', a: '650W, 80+ Gold minimum. A $250 GPU + CPU + motherboard doesn\'t exceed 400W draw, but you want headroom for spikes.' },
             { q: 'Can I run Ollama with a $200 budget GPU?', a: 'Yes. Ollama is lightweight. A 4-year-old RTX 3060 with Ollama will run Qwen3 14B at 9-12 tok/sec or Qwen3 8B at 16-20 tok/sec — totally usable for interactive chat and coding assistance.' },
             { q: 'Can I run Llama 4 Scout on an RTX 3060 12GB?', a: 'Not normally. Llama 4 Scout is a 17B-active / 109B-total MoE that needs ~55 GB VRAM at Q4 — far beyond a 12 GB card. It only squeezes into 24 GB at an extreme 1.78-bit quant (~20 tok/sec). On an RTX 3060 12GB, run dense models instead: `ollama pull qwen3:14b` (best quality that fits), Qwen3 8B, or Gemma 4 E12B. Scout is a long-context (10M-token) / large-multimodal pick for 48 GB+ rigs.' },
+            { q: 'What is the best budget GPU under $200?', a: 'Used RTX 2080 (8GB, ~$150) or RTX A2000 (12GB, ~$180-200). Both run 7B models at Q4. The A2000 is preferred for its 12GB VRAM headroom.' },
+            { q: 'How do I test a used GPU for VRAM defects before buying?', a: 'Run VRAM stress tests: gpu-burn (Linux), HWiNFO64 memory stress test (Windows), or load a large model in Ollama and watch for OOM errors. Test before returning the card.' },
+            { q: 'Can I upgrade my current GPU to run larger models later?', a: 'Yes, GPU upgrades are straightforward in desktop PCs. Start with RTX 3060 12GB, then upgrade to RTX 4090 or 5090 later. PCIE slot is backward-compatible across generations.' },
+            { q: 'What is the best budget NVIDIA GPU for local LLM inference?', a: 'RTX 4060 Ti (8 GB, ~$250) for 7B models, or RTX 4070 Super (12 GB, ~$350-400) for 13B models. For used: RTX 3060 12GB ($200–250) runs 7-13B models smoothly at Q4. Best value is RTX 3060 12GB used, or RTX 4070 Super new.' },
+            { q: 'How does the AMD 6800XT compare to the RTX 4070 for AI inference?', a: 'AMD RX 6800 XT (16 GB) beats RTX 4070 (12 GB) on VRAM and gaming performance but lags on LLM inference speed (15-20% slower). ROCm driver setup for llama.cpp is also more complex than CUDA. For pure LLM work, RTX 4070 is easier; for gaming + LLMs, 6800 XT offers better value.' },
+            { q: 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?', a: 'Used RTX 3090 (24 GB, ~$450-500) = $18-20 per GB. Used RTX 3060 (12 GB, ~$150-180) = $12-15 per GB. RTX 4070 Ti (12 GB, ~$600 new) = $50 per GB. Best value: RTX 3060 12GB used. Most capacity per dollar: RTX 3090 24GB used. Balance price + power: RTX 4070 new.' },
           ],
         },
         'relatedReading': {
@@ -185,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Apple Silicon vs NVIDIA GPU for Local LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — Full cost and performance comparison: when a Mac beats a budget GPU.',
             '[Best Models for Apple Silicon 2026](/local-llms/best-models-apple-silicon-2026) — Model recommendations for 16GB–128GB unified memory tiers.',
             '[Melhores GPUs Econômicas para LLMs Locais (Português)](/pt/local-llms/best-budget-gpus-local-llm) — versão em português deste guia',
-            'For Japan-specific GPU pricing, Akihabara retailers, and used market options on Mercari and Yahoo Auctions, see our <a href="/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">best value GPU for local LLMs in Japan guide</a>.',
+            '[Best Value GPU for Local LLMs in Japan — Akihabara retailers, Mercari and Yahoo Auctions pricing guide](/prompt-bites/best-gpu-local-llm-japan-price)',
           ],
         },
         'sources': {
@@ -196,19 +233,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'TechPowerUp GPU Database: RTX 3060 / RTX 4060 Ti / RTX 4070 Super specs and power consumption',
             'NVIDIA CUDA Capability Matrix: GPU memory bandwidth and theoretical throughput for inference workloads',
             'Ollama Model Requirements: VRAM recommendations for Llama 4 Scout, Qwen3, and Mistral Small quantization levels',
-            'Compliance frameworks require auditable workflows. Establish governance standards for AI prompt quality and review: [prompt governance in production](https://www.promptquorum.com/prompt-engineering/prompt-governance-in-production) covers policies, version control, and approval processes.',
           ],
         },
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'RTX 3060 Local LLM Guide 2026: What Models You Can Run',
         'description': 'What local LLMs can you run on RTX 3060 12GB or 6GB? See best models for coding, chat, and reasoning in 2026 with real VRAM limits and performance tips.',
         'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-01',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'dateModified': '2026-06-19',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'budget GPU' },
@@ -218,9 +254,12 @@ schema: {
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+          'cssSelector': ['.article-intro'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
+        'inLanguage': 'en',
+        'audience': { '@type': 'Audience', 'audienceType': 'Beginners running their first local LLM on consumer hardware' },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -231,7 +270,7 @@ schema: {
             'name': 'Is RTX 3060 12GB still worth buying in 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. It is 4+ years old, but 12GB VRAM is timeless for 7B-13B models. Runs Llama 3 8B and Mistral Small smoothly. Ideal if you find one used under $250.'
+              'text': 'Yes. It\'s 4+ years old, but 12 GB VRAM is still current. Runs Qwen3 14B (Q4, ~9 GB), Qwen3 8B, Gemma 4 E12B, and gpt-oss:20b smoothly at Q4. It handles every 7B-8B model and most dense 13B-14B models.'
             }
           },
           {
