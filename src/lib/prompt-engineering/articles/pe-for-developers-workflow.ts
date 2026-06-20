@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Related Reading',
         items: [
           { title: 'Best Prompt Engineering IDEs', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: 'Best Prompt Testing Tools', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           { title: 'Beste IDEs für Prompt Engineering', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: 'Prompt-Versionskontrolle', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt-Versionskontrolle', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Review Workflow für Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: 'Beste Prompt-Testing-Tools', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: 'Prompt-Engineering-Setup für kleine Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           { title: 'Mejores IDEs para prompt engineering', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Flujo de revisión de prompts para equipos', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: 'Mejores herramientas de prueba de prompts', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: 'Configuración de prompt engineering para equipos pequeños', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Leitura relacionada',
         items: [
           { title: 'Melhores IDEs para prompt engineering', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: 'Controle de versões de prompts', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Controle de versões de prompts', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Fluxo de revisão de prompts para equipes', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: 'Melhores ferramentas de teste de prompts', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: 'Configuração de prompt engineering para equipes pequenas', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           { title: 'Meilleurs IDEs pour le prompt engineering', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: 'Contrôle de version des prompts', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Contrôle de version des prompts', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Workflow de revue de prompts pour les équipes', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: 'Meilleurs outils de test de prompts', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: 'Configuration de prompt engineering pour petites équipes', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '関連リソース',
         items: [
           { title: 'プロンプトエンジニアリングに最適なIDE', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: 'プロンプトバージョン管理', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'プロンプトバージョン管理', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'チーム向けプロンプトレビューワークフロー', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: '最適なプロンプトテストツール', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: '小規模チーム向けプロンプトエンジニアリングセットアップ', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '相关阅读',
         items: [
           { title: '最佳提示词工程IDE', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: '提示词版本控制', url: '/prompt-engineering/prompt-version-control' },
+          { title: '提示词版本控制', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: '团队提示词审查工作流', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: '最佳提示词测试工具', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: '小型团队提示词工程配置', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -1331,7 +1331,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           { title: 'أفضل بيئات التطوير لهندسة البرومبت', url: '/ar/prompt-engineering/best-prompt-engineering-ides' },
-          { title: 'التحكم في إصدار البرومبتات', url: '/ar/prompt-engineering/prompt-version-control' },
+          { title: 'التحكم في إصدار البرومبتات', url: '/ar/prompt-engineering/prompt-version-control-workflows' },
           { title: 'سير مراجعة البرومبت للفرق', url: '/ar/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: 'أفضل أدوات اختبار البرومبت', url: '/ar/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: 'إعداد هندسة البرومبت للفرق الصغيرة', url: '/ar/prompt-engineering/prompt-engineering-setup-small-teams' },
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '관련 자료',
         items: [
           { title: '최고의 프롬프트 엔지니어링 IDE', url: '/prompt-engineering/best-prompt-engineering-ides' },
-          { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control' },
+          { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: '팀을 위한 프롬프트 검토 워크플로우', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
           { title: '최고의 프롬프트 테스트 도구', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
           { title: '소규모 팀을 위한 프롬프트 엔지니어링 설정', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },

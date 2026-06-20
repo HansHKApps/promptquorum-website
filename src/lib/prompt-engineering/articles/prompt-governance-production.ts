@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Related Reading',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Audit and Regression Testing', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Prompt Security Tools: Injection Testing', url: '/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Audit and Regression Testing', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Prompt Security Tools: Injection Testing', url: '/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Lectura relacionada',
         items: [
           { title: 'Flujo de revisión de prompts para equipos', url: '/es/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'Control de versiones de prompts', url: '/es/prompt-engineering/prompt-version-control' },
+          { title: 'Control de versiones de prompts', url: '/es/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Auditoría y pruebas de regresión de prompts', url: '/es/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Herramientas de seguridad de prompts: pruebas de injection', url: '/es/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'Plantillas de documentación de prompts', url: '/es/prompt-engineering/prompt-documentation-templates' },
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Leitura relacionada',
         items: [
           { title: 'Fluxo de revisão de prompts para equipes', url: '/pt/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'Controle de versões de prompts', url: '/pt/prompt-engineering/prompt-version-control' },
+          { title: 'Controle de versões de prompts', url: '/pt/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Auditoria e testes de regressão de prompts', url: '/pt/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Ferramentas de segurança de prompts: testes de injection', url: '/pt/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'Templates de documentação de prompts', url: '/pt/prompt-engineering/prompt-documentation-templates' },
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Audit and Regression Testing', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Prompt Security Tools: Injection Testing', url: '/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
@@ -1200,7 +1200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '関連記事',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Audit and Regression Testing', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Prompt Security Tools: Injection Testing', url: '/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
@@ -1412,7 +1412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'قراءة ذات صلة',
         items: [
           { title: 'سير عمل مراجعة التعليمات للفرق', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'التحكم في إصدارات التعليمات', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'التحكم في إصدارات التعليمات', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'تدقيق التعليمات واختبار الانحدار', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'أدوات أمان التعليمات: اختبار الحقن', url: '/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'قوالب توثيق التعليمات', url: '/prompt-engineering/prompt-documentation-templates' },
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '相关阅读',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Audit and Regression Testing', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Prompt Security Tools: Injection Testing', url: '/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
@@ -1817,7 +1817,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '관련 읽기',
         items: [
           { title: '팀을 위한 프롬프트 검토 워크플로', url: '/ko/prompt-engineering/prompt-review-workflow-for-teams' },
-          { title: '프롬프트 버전 관리', url: '/ko/prompt-engineering/prompt-version-control' },
+          { title: '프롬프트 버전 관리', url: '/ko/prompt-engineering/prompt-version-control-workflows' },
           { title: '프롬프트 감사 및 회귀 테스트', url: '/ko/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: '프롬프트 보안 도구: 인젝션 테스트', url: '/ko/prompt-engineering/prompt-security-tools-injection-testing' },
           { title: '프롬프트 문서 템플릿', url: '/ko/prompt-engineering/prompt-documentation-templates' },

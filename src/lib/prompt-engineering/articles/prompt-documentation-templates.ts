@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Related Reading',
         items: [
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Library Management for Teams', url: '/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Weiterführende Artikel',
         items: [
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Library Management for Teams', url: '/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Lectura relacionada',
         items: [
-          { title: 'Control de versiones de prompts', url: '/es/prompt-engineering/prompt-version-control' },
+          { title: 'Control de versiones de prompts', url: '/es/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Governance de prompts en producción', url: '/es/prompt-engineering/prompt-governance-in-production' },
           { title: 'Gestión de biblioteca de prompts para equipos', url: '/es/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'Construye una biblioteca de prompts', url: '/es/prompt-engineering/build-a-prompt-library' },
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'قراءة ذات صلة',
         items: [
-          { title: 'التحكم في إصدارات الأوامر', url: '/ar/prompt-engineering/prompt-version-control' },
+          { title: 'التحكم في إصدارات الأوامر', url: '/ar/prompt-engineering/prompt-version-control-workflows' },
           { title: 'حوكمة الأوامر في الإنتاج', url: '/ar/prompt-engineering/prompt-governance-in-production' },
           { title: 'إدارة مكتبة الأوامر للفرق', url: '/ar/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'بناء مكتبة أوامر', url: '/ar/prompt-engineering/build-a-prompt-library' },
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Leitura relacionada',
         items: [
-          { title: 'Controle de versões de prompts', url: '/pt/prompt-engineering/prompt-version-control' },
+          { title: 'Controle de versões de prompts', url: '/pt/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Governança de prompts em produção', url: '/pt/prompt-engineering/prompt-governance-in-production' },
           { title: 'Gerenciamento de biblioteca de prompts para equipes', url: '/pt/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'Construa uma biblioteca de prompts', url: '/pt/prompt-engineering/build-a-prompt-library' },
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: 'Lectures complémentaires',
         items: [
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Library Management for Teams', url: '/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: '関連記事',
         items: [
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Library Management for Teams', url: '/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -1405,7 +1405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       related_reading: {
         title: '相关阅读',
         items: [
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Library Management for Teams', url: '/prompt-engineering/prompt-library-management-for-teams' },
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     related_reading: {
       title: '관련 읽기',
       items: [
-        { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control' },
+        { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control-workflows' },
         { title: '프로덕션에서의 프롬프트 거버넌스', url: '/prompt-engineering/prompt-governance-in-production' },
         { title: '팀을 위한 프롬프트 라이브러리 관리', url: '/prompt-engineering/prompt-library-management-for-teams' },
         { title: '프롬프트 라이브러리 구축', url: '/prompt-engineering/build-a-prompt-library' },

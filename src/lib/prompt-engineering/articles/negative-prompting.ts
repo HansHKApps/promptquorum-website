@@ -1654,8 +1654,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       items: [
         { title: 'Guidage Contraint', url: '/fr/prompt-engineering/constrained-prompting' },
-        { title: 'Les 5 Éléments Clés d\'un Prompt', url: '/fr/prompt-engineering/5-building-blocks-of-a-prompt' },
-        { title: 'Hallucinations IA', url: '/fr/prompt-engineering/ai-hallucinations' },
+        { title: 'Les 5 Éléments Clés d\'un Prompt' },
+        { title: 'Hallucinations IA' },
         { title: 'Injection de Prompt et Sécurité', url: '/fr/prompt-engineering/prompt-injection-and-security' },
         { title: 'Température et Top-P', url: '/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity' },
         { title: 'Zero-Shot vs Few-Shot Prompting', url: '/fr/prompt-engineering/zero-shot-vs-few-shot' },
@@ -2001,8 +2001,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     relatedReading: {
       items: [
         { title: '制約付きプロンプティング', url: '/ja/prompt-engineering/constrained-prompting' },
-        { title: 'プロンプトの5つの構成要素', url: '/ja/prompt-engineering/5-building-blocks-of-a-prompt' },
-        { title: 'AI幻覚', url: '/ja/prompt-engineering/ai-hallucinations' },
+        { title: 'プロンプトの5つの構成要素' },
+        { title: 'AI幻覚' },
         { title: 'プロンプトインジェクションとセキュリティ', url: '/ja/prompt-engineering/prompt-injection-and-security' },
         { title: '温度とTop-P', url: '/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity' },
         { title: 'ゼロショットとフューショット', url: '/ja/prompt-engineering/zero-shot-vs-few-shot' },

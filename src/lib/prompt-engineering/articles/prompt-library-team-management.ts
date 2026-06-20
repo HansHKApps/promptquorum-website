@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Construye una biblioteca de prompts', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'Plantillas de documentación de prompts', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Gobernanza de prompts en producción', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Configuración de prompt engineering para equipos pequeños', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Construa uma biblioteca de prompts', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'Templates de documentação de prompts', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'Controle de versões de prompts', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Controle de versões de prompts', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Governança de prompts em produção', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Configuração de prompt engineering para equipes pequenas', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -1018,7 +1018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: '프롬프트 라이브러리 구축', url: '/prompt-engineering/build-a-prompt-library' },
           { title: '프롬프트 문서 템플릿', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control' },
+          { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: '프로덕션 프롬프트 거버넌스', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: '소규모 팀을 위한 프롬프트 엔지니어링 설정', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'بناء مكتبة تلقينات', url: '/prompt-engineering/build-a-prompt-library' },
           { title: 'قوالب توثيق التلقينات', url: '/prompt-engineering/prompt-documentation-templates' },
-          { title: 'التحكم بإصدارات التلقينات', url: '/prompt-engineering/prompt-version-control' },
+          { title: 'التحكم بإصدارات التلقينات', url: '/prompt-engineering/prompt-version-control-workflows' },
           { title: 'حوكمة التلقينات في الإنتاج', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'إعداد prompt engineering للفرق الصغيرة', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
