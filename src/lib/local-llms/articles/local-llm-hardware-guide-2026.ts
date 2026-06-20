@@ -561,6 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best AI Workstation Build for Local LLM (2026)](/power-local-llm/best-workstation-build-local-ai-2026) -- Full component list for 70B inference: GPU, CPU, RAM, PSU.',
             '[DeepSeek v3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) -- Minimum VRAM to run DeepSeek v3 full and quantized variants.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
+            '[Best Local Reasoning Model 2026: DeepSeek-R1 Distills Ranked](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Which DeepSeek-R1 distill fits your hardware tier — 7B to 70B — with benchmarks and Ollama setup.',
           ],
         },
         sources: {
@@ -1221,6 +1222,7 @@ schema: {
             '[Mejor configuración de estación de trabajo de IA para LLM local (2026)](/es/power-local-llm/best-workstation-build-local-ai-2026) -- Lista completa de componentes para inferencia de 70B: GPU, CPU, RAM, PSU.',
             '[Requisitos de hardware local de DeepSeek v3](/es/prompt-bites/deepseek-v3-local-hardware-requirements) -- VRAM mínima para ejecutar DeepSeek v3 en variantes completa y cuantizada.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
+            '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 Distills clasificados](/es/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Qué distill DeepSeek-R1 encaja con tu nivel de hardware — 7B a 70B — con benchmarks y configuración de Ollama.',
           ],
         },
         sources: {
@@ -1881,6 +1883,7 @@ schema: {
             '[أفضل تجميعة محطة عمل ذكاء اصطناعي لـ LLM المحلي (2026)](/ar/power-local-llm/best-workstation-build-local-ai-2026) -- قائمة مكونات كاملة لاستدلال 70B: GPU، CPU، الذاكرة، PSU.',
             '[متطلبات عتاد DeepSeek v3 المحلي](/ar/prompt-bites/deepseek-v3-local-hardware-requirements) -- الحد الأدنى من VRAM لتشغيل DeepSeek v3 الكامل والمتغيرات المكمّمة.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
+            '[أفضل نموذج استدلال محلي 2026: ترتيب DeepSeek-R1 Distills](/ar/local-llms/best-local-reasoning-model-deepseek-r1-2026) — أي distill من DeepSeek-R1 يناسب مستوى عتادك — من 7B إلى 70B — مع بيانات المعيار وإعداد Ollama.',
           ],
         },
         sources: {
@@ -2541,6 +2544,7 @@ schema: {
             '[Melhor Montagem de Estação de Trabalho de IA para LLM Local (2026)](/pt/power-local-llm/best-workstation-build-local-ai-2026) -- Lista completa de componentes para inferência 70B: GPU, CPU, RAM, PSU.',
             '[Requisitos de Hardware Local do DeepSeek v3](/pt/prompt-bites/deepseek-v3-local-hardware-requirements) -- VRAM mínima para rodar o DeepSeek v3 completo e as variantes quantizadas.',
             '[Local LLM Hardware Guide 2026 (English)](/local-llms/local-llm-hardware-guide-2026) — versão em inglês deste guia',
+            '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 Distills classificados](/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Qual distill DeepSeek-R1 se adapta ao seu nível de hardware — 7B a 70B — com benchmarks e configuração do Ollama.',
           ],
         },
         sources: {
@@ -3201,6 +3205,7 @@ schema: {
             '[Bester KI-Workstation-Build fuer lokale LLMs (2026)](/de/power-local-llm/best-workstation-build-local-ai-2026) -- Vollstaendige Komponentenliste fuer 70B-Inferenz: GPU, CPU, RAM, Netzteil.',
             '[DeepSeek v3 Lokale Hardware-Anforderungen](/de/prompt-bites/deepseek-v3-local-hardware-requirements) -- Minimaler VRAM, um DeepSeek v3 voll und quantisiert zu betreiben.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
+            '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 Distills im Ranking](/de/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Welches DeepSeek-R1-Distill passt zu Ihrem Hardware-Tier — 7B bis 70B — mit Benchmarks und Ollama-Einrichtung.',
           ],
         },
         sources: {
@@ -3861,6 +3866,7 @@ schema: {
             '[Meilleure station de travail IA pour LLM local (2026)](/fr/power-local-llm/best-workstation-build-local-ai-2026) -- Liste complete de composants pour l\'inference 70B : GPU, CPU, RAM, alimentation.',
             '[Besoins materiels locaux de DeepSeek v3](/fr/prompt-bites/deepseek-v3-local-hardware-requirements) -- VRAM minimale pour faire tourner DeepSeek v3 complet et ses variantes quantifiees.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
+            '[Meilleur modèle de raisonnement local 2026 : DeepSeek-R1 classé](/fr/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Quel distill DeepSeek-R1 correspond à votre niveau matériel — 7B à 70B — avec benchmarks et configuration Ollama.',
           ],
         },
         sources: {
@@ -4521,6 +4527,7 @@ schema: {
             '[ローカルLLM向けベストAIワークステーション構成（2026）](/ja/power-local-llm/best-workstation-build-local-ai-2026) -- 70B推論のための完全なコンポーネントリスト：GPU、CPU、RAM、PSU。',
             '[DeepSeek v3 ローカルハードウェア要件](/ja/prompt-bites/deepseek-v3-local-hardware-requirements) -- DeepSeek v3のフルおよび量子化バリアントを実行するための最小VRAM。',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
+            '[2026年最高のローカル推論モデル：DeepSeek-R1 Distillランキング](/ja/local-llms/best-local-reasoning-model-deepseek-r1-2026) — ハードウェアティア別（7B〜70B）のDeepSeek-R1 Distill比較、ベンチマーク、Ollamaセットアップ。',
           ],
         },
         sources: {
@@ -5181,6 +5188,7 @@ schema: {
             '[最佳本地LLM AI工作站配置（2026）](/zh/power-local-llm/best-workstation-build-local-ai-2026) -- 70B 推理的完整组件清单：GPU、CPU、RAM、PSU。',
             '[DeepSeek v3 本地硬件要求](/zh/prompt-bites/deepseek-v3-local-hardware-requirements) -- 运行 DeepSeek v3 完整版和量化变体的最低显存。',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
+            '[2026年最佳本地推理模型：DeepSeek-R1 Distill排名](/zh/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 各显存规格（7B至70B）对应的DeepSeek-R1 Distill推荐、基准测试数据及Ollama部署指南。',
           ],
         },
         sources: {
@@ -5804,6 +5812,7 @@ schema: {
             '[2026년 로컬 LLM용 최고의 AI 워크스테이션 빌드](/power-local-llm/best-workstation-build-local-ai-2026) -- 70B 추론을 위한 전체 부품 목록: GPU, CPU, RAM, PSU.',
             '[DeepSeek v3 로컬 하드웨어 요구 사항](/prompt-bites/deepseek-v3-local-hardware-requirements) -- DeepSeek v3 전체 및 양자화 변형을 실행하는 최소 VRAM.',
             '[로컬 LLM 하드웨어 가이드 2026 (포르투갈어)](/pt/local-llms/local-llm-hardware-guide-2026) — 이 가이드의 포르투갈어 버전',
+            '[2026년 최고의 로컬 추론 모델: DeepSeek-R1 Distill 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 하드웨어 티어별(7B~70B) DeepSeek-R1 Distill 비교, 벤치마크 데이터 및 Ollama 설정 가이드.',
           ],
         },
         sources: {

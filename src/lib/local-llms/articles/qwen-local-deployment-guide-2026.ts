@@ -2477,6 +2477,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { url: '/zh/local-llms/llm-quantization-explained', title: 'LLM量化解析', description: 'Q4_K_M、Q8_0和IQ4_XS的含义——对显存、速度和输出质量的影响。' },
           { url: '/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen本地对比2026', description: '完整对比：DeepSeek-V2.5 vs Qwen3在代码、推理、中文和创意写作上的表现——含Mac vs NVIDIA详细分析。' },
           { url: '/zh/prompt-bites/best-qwen-model-for-coding', title: '最佳Qwen编码模型', description: 'Qwen3-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
+          { url: '/zh/power-local-llm/deepseek-offline-china-self-hosted-2026', title: '本地离线部署 DeepSeek：完全断网运行指南', description: '想用推理模型？了解如何在完全离线环境中本地部署 DeepSeek-R1 Distill，数据零出境，满足《数据安全法》合规要求。' },
         ],
       },
     },

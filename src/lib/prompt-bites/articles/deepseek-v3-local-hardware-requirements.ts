@@ -103,6 +103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**12–16 GB VRAM (RTX 3080 / M2 Pro):** DS-R1-Distill-Qwen-14B Q4_K_M — 90% MATH-500, step-by-step chain-of-thought on complex problems.',
           '**24 GB VRAM (RTX 4090 / M3 Max):** DS-R1-Distill-Qwen-32B Q4_K_M — 94% MATH-500, outperforms full V3 on standardised maths benchmarks.',
           '**64+ GB RAM (no discrete GPU):** Qwen3-72B Q4_K_M — CPU inference, 0.5–1 tok/s, best general-purpose large local model.',
+          'For the full R1 reasoning family — hardware guide, benchmarks, and Ollama commands: [Best Local Reasoning Model 2026](/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -203,6 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**8 GB VRAM (RTX 3060):** DS-R1-Distill-Qwen-7B Q4_K_M — 88 % MATH-500.',
           '**12–16 GB VRAM (RTX 3080):** DS-R1-Distill-Qwen-14B Q4_K_M — 90 % MATH-500.',
           '**24 GB VRAM (RTX 4090):** DS-R1-Distill-Qwen-32B Q4_K_M — 94 % MATH-500.',
+          'Für die vollständige R1-Reasoning-Familie — Hardware-Leitfaden, Benchmarks und Ollama-Befehle: [Bestes lokales Reasoning-Modell 2026](/de/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [VRAM-Spickzettel](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -300,6 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**8 Go VRAM :** DS-R1-Distill-Qwen-7B Q4_K_M — 88 % MATH-500.',
           '**12–16 Go VRAM :** DS-R1-Distill-Qwen-14B Q4_K_M — 90 % MATH-500.',
           '**24 Go VRAM :** DS-R1-Distill-Qwen-32B Q4_K_M — 94 % MATH-500, surpasse V3 complet sur les benchmarks maths.',
+          'Pour la famille complète R1 reasoning — guide matériel, benchmarks et commandes Ollama : [Meilleur modèle de raisonnement local 2026](/fr/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [Antisèche VRAM](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -401,6 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**8 GB VRAM（RTX 3060）：** DS-R1-Distill-Qwen-7B Q4_K_M——MATH-500 88%。',
           '**12–16 GB VRAM（RTX 3080）：** DS-R1-Distill-Qwen-14B Q4_K_M——MATH-500 90%。',
           '**24 GB VRAM（RTX 4090）：** DS-R1-Distill-Qwen-32B Q4_K_M——MATH-500 94%、標準化数学ベンチマークで完全V3を上回ります。',
+          'R1推論ファミリー全体のガイド — ハードウェア選定、ベンチマーク、Ollamaコマンド：[2026年最高のローカル推論モデル](/ja/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [VRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -504,6 +508,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**12–16 GB显存（RTX 3080 / M2 Pro）：** DS-R1-Distill-Qwen-14B Q4_K_M——MATH-500 90%，逐步链式思维。',
           '**24 GB显存（RTX 4090 / M3 Max）：** DS-R1-Distill-Qwen-32B Q4_K_M——MATH-500 94%，标准化数学基准测试超越完整V3。',
           '**64+ GB内存（无独立GPU）：** Qwen3-72B Q4_K_M——CPU推理0.5–1 tok/s，最佳大型本地通用模型。',
+          'R1推理系列完整指南 — 硬件选择、基准测试与Ollama命令：[2026年最佳本地推理模型](/zh/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [显存速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -615,6 +620,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**12–16 GB de VRAM (RTX 3080 / M2 Pro):** DS-R1-Distill-Qwen-14B Q4_K_M — 90% MATH-500, raciocínio passo a passo em problemas complexos.',
           '**24 GB de VRAM (RTX 4090 / M3 Max):** DS-R1-Distill-Qwen-32B Q4_K_M — 94% MATH-500, supera o V3 completo nos benchmarks de matemática padronizados.',
           '**64+ GB de RAM (sem GPU dedicada):** Qwen3-72B Q4_K_M — inferência por CPU, 0,5–1 tok/s, melhor modelo local grande de propósito geral.',
+          'Para a família completa R1 de raciocínio — guia de hardware, benchmarks e comandos Ollama: [Melhor modelo de raciocínio local 2026](/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [Guia de VRAM](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -729,6 +735,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**12–16 GB VRAM (RTX 3080 / M2 Pro):** DS-R1-Distill-Qwen-14B Q4_K_M — 90% MATH-500, razonamiento paso a paso en problemas complejos.',
           '**24 GB VRAM (RTX 4090 / M3 Max):** DS-R1-Distill-Qwen-32B Q4_K_M — 94% MATH-500, supera al V3 completo en benchmarks de matemáticas estandarizados.',
           '**64+ GB RAM (sin GPU dedicada):** Qwen3-72B Q4_K_M — inferencia CPU, 0.5–1 tok/s, mejor modelo local grande de propósito general.',
+          'Para la familia completa R1 reasoning — guía de hardware, benchmarks y comandos Ollama: [Mejor modelo de razonamiento local 2026](/es/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [Chuleta de VRAM](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -828,6 +835,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**12–16 GB VRAM (RTX 3080 / M2 Pro):** DS-R1-Distill-Qwen-14B Q4_K_M — 90% MATH-500، استدلال خطوة بخطوة على مسائل معقدة.',
           '**24 GB VRAM (RTX 4090 / M3 Max):** DS-R1-Distill-Qwen-32B Q4_K_M — 94% MATH-500، يتفوق على V3 الكامل في اختبارات الرياضيات المعيارية.',
           '**64+ GB RAM (بدون GPU مخصص):** Qwen3-72B Q4_K_M — استنتاج CPU، 0.5–1 رمز/ثانية، أفضل نموذج محلي كبير للأغراض العامة.',
+          'لعائلة R1 الاستدلالية الكاملة — دليل الأجهزة والمعايير وأوامر Ollama: [أفضل نموذج استدلال محلي 2026](/ar/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [جدول مرجعي VRAM](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {
@@ -930,6 +938,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**12–16 GB VRAM (RTX 3080 / M2 Pro):** DS-R1-Distill-Qwen-14B Q4_K_M — 90% MATH-500, 복잡한 문제에서 단계별 추론이 가능합니다.',
           '**24 GB VRAM (RTX 4090 / M3 Max):** DS-R1-Distill-Qwen-32B Q4_K_M — 94% MATH-500, 표준 수학 벤치마크에서 V3 전체 모델을 능가합니다.',
           '**64+ GB RAM (전용 GPU 없음):** Qwen3-72B Q4_K_M — CPU 추론, 0.5–1 tok/s, 범용 목적에서 최고의 로컬 대형 모델입니다.',
+          'R1 추론 패밀리 완전 가이드 — 하드웨어 선택, 벤치마크 및 Ollama 명령어: [2026년 최고의 로컬 추론 모델](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) · [VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet)',
         ],
       },
       faqSection: {

@@ -273,6 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Continue.dev vs Cline vs Aider comparison: /power-local-llm/continue-dev-vs-cline-vs-aider-local',
           'Replace GitHub Copilot with local LLM: /power-local-llm/replace-github-copilot-with-local-llm',
           'Best local coding models 2026: /power-local-llm/best-local-coding-models-2026',
+          'Best local reasoning model 2026 — for reasoning (not coding) distills, this is the guide: /local-llms/best-local-reasoning-model-deepseek-r1-2026',
         ],
       },
       faq: {
@@ -654,6 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Comparativa Continue.dev vs Cline vs Aider: /es/power-local-llm/continue-dev-vs-cline-vs-aider-local',
           'Reemplaza GitHub Copilot con un LLM local: /es/power-local-llm/replace-github-copilot-with-local-llm',
           'Mejores modelos de coding local 2026: /es/power-local-llm/best-local-coding-models-2026',
+          'Mejor modelo de razonamiento local 2026 — para distills de razonamiento (no de código): /es/local-llms/best-local-reasoning-model-deepseek-r1-2026',
         ],
       },
       faq: {
@@ -1037,6 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Continue.dev vs Cline vs Aider 비교: /ko/power-local-llm/continue-dev-vs-cline-vs-aider-local',
           'GitHub Copilot을 로컬 LLM으로 교체: /ko/power-local-llm/replace-github-copilot-with-local-llm',
           '2026 최고 로컬 코딩 모델: /ko/power-local-llm/best-local-coding-models-2026',
+          '2026년 최고의 로컬 추론 모델 — 추론용 Distill(코딩 아님) 가이드: /ko/local-llms/best-local-reasoning-model-deepseek-r1-2026',
         ],
       },
       faq: {
@@ -1759,6 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Comparação Continue.dev vs Cline vs Aider: /pt/power-local-llm/continue-dev-vs-cline-vs-aider-local',
           'Substitua o GitHub Copilot por um LLM local: /pt/power-local-llm/replace-github-copilot-with-local-llm',
           'Melhores modelos de codificação local 2026: /pt/power-local-llm/best-local-coding-models-2026',
+          'Melhor modelo de raciocínio local 2026 — para distills de raciocínio (não de código): /pt/local-llms/best-local-reasoning-model-deepseek-r1-2026',
         ],
       },
       faq: {
@@ -2142,6 +2146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مقارنة Continue.dev مقابل Cline مقابل Aider: /ar/power-local-llm/continue-dev-vs-cline-vs-aider-local',
           'استبدال GitHub Copilot بنموذج لغوي محلي: /ar/power-local-llm/replace-github-copilot-with-local-llm',
           'أفضل نماذج البرمجة المحلية 2026: /ar/power-local-llm/best-local-coding-models-2026',
+          'أفضل نموذج استدلال محلي 2026 — لـ distills الاستدلال (وليس البرمجة): /ar/local-llms/best-local-reasoning-model-deepseek-r1-2026',
         ],
       },
       faq: {
