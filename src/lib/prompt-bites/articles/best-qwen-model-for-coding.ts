@@ -739,9 +739,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    title: 'ما هو أفضل نموذج Qwen للبرمجة؟',
-    seoTitle: 'Qwen3-Coder للبرمجة 2026: 7B مقابل 14B مقابل 32B',
-    metaDescription: 'Qwen3-Coder 32B يحقق 91.5% HumanEval بـ24 GB VRAM. 14B النقطة المثلى بـ9.5 GB (88.0%). 7B يعمل بـ5.5 GB على RTX 3060 بـ8–15 رمز/ثانية.',
+    title: 'ما هو أفضل نموذج ⁨Qwen⁩ للبرمجة؟',
+    seoTitle: '⁨Qwen3-Coder⁩ للبرمجة ⁨2026⁩: ⁨7B⁩ مقابل ⁨14B⁩ مقابل ⁨32B⁩',
+    metaDescription: '⁨Qwen3-Coder 32B⁩ يحقق ⁨91.5% HumanEval⁩ بـ⁨24 GB VRAM. 14B⁩ النقطة المثلى بـ⁨9.5 GB⁩ (⁨88.0%⁩). ⁨7B⁩ يعمل بـ⁨5.5 GB⁩ على ⁨RTX 3060⁩ بـ⁨8⁩–⁨15⁩ رمز/ثانية.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

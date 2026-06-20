@@ -626,8 +626,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'أفضل جهاز كمبيوتر مصغر لتشغيل نماذج اللغة الكبيرة محلياً؟',
-    seoTitle: 'أفضل جهاز مصغر لتشغيل LLM محلياً 2026 | PromptQuorum',
-    metaDescription: 'Mac Mini M4 يحقق ~18 رمز/ثانية في 7B Q4. UM790 Pro يتوسع حتى 64 GB DDR5. Beelink SER8: ~8 رمز/ثانية بسعر معقول. 3 أجهزة مصغرة لنماذج LLM 2026.',
+    seoTitle: 'أفضل جهاز مصغر لتشغيل ⁨LLM⁩ محلياً ⁨2026⁩ | ⁨PromptQuorum⁩',
+    metaDescription: '⁨Mac Mini M4⁩ يحقق ~⁨18⁩ رمز/ثانية في ⁨7B Q4. UM790 Pro⁩ يتوسع حتى ⁨64 GB DDR5. Beelink SER8⁩: ~⁨8⁩ رمز/ثانية بسعر معقول. ⁨3⁩ أجهزة مصغرة لنماذج ⁨LLM 2026⁩.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

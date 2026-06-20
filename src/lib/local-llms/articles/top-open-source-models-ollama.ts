@@ -2956,10 +2956,10 @@ schema: {
       current_models_mentioned: ['Qwen 3.6 27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.1', 'Llama 4 Scout', 'Devstral Small 24B', 'Mistral Small', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-Bench Pro', 'HumanEval', 'MATH'],
       theme: 'Best Models',
-      title: 'أفضل نماذج Ollama مفتوحة المصدر يونيو 2026: أفضل 10 (مرتبة)',
-      seoTitle: 'أفضل نماذج Ollama يونيو 2026: أفضل 10 مفتوحة المصدر',
+      title: 'أفضل نماذج ⁨Ollama⁩ مفتوحة المصدر يونيو ⁨2026⁩: أفضل ⁨10⁩ (مرتبة)',
+      seoTitle: 'أفضل نماذج ⁨Ollama⁩ يونيو ⁨2026⁩: أفضل ⁨10⁩ مفتوحة المصدر',
       intro: 'تحديث يونيو 2026. الإصدار الحالي من Ollama هو v0.30.8 (صدر في 12 يونيو 2026)، وهو يوسّع دعم عتاد GGUF عبر llama.cpp ويرقّي محرك MLX على Apple Silicon. أحدث النماذج في المكتبة هذا الشهر هي MiniMax M3 (1 يونيو، أوزان مفتوحة، سياق 1M توكن + رؤية أصلية) وNVIDIA Nemotron 3 Ultra (4 يونيو) وDeepSeek V4 Pro، لتنضم إلى Kimi K2.6 وQwen 3.6 وGLM-5.1 وgpt-oss وGemma 4. الأكثر تنزيلاً عمومًا لا تزال عائلة Llama (Llama 4 Scout وLlama 3.x)؛ وأفضل خيار عام على عتاد المستهلك هو Qwen 3.6 27B (77.2% SWE-bench).',
-      metaDescription: 'أفضل نماذج Ollama مفتوحة المصدر في يونيو 2026: Qwen 3.6 27B (الأفضل إجمالاً)، Kimi K2.6 (البرمجة)، gpt-oss:20b (16 GB). معايير موثقة، RAM، أوامر pull.',
+      metaDescription: 'أفضل نماذج ⁨Ollama⁩ مفتوحة المصدر في يونيو ⁨2026⁩: ⁨Qwen 3.6 27B⁩ (الأفضل إجمالاً)، ⁨Kimi K2.6⁩ (البرمجة)، ⁨gpt-oss⁩:⁨20b⁩ (⁨16 GB⁩). معايير موثقة، ⁨RAM⁩، أوامر ⁨pull⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**الإصدار الحالي من Ollama هو v0.30.8 (12 يونيو 2026). أحدث النماذج المضافة هذا الشهر هي MiniMax M3 (أوزان مفتوحة، سياق 1M توكن + رؤية أصلية) وNVIDIA Nemotron 3 Ultra وDeepSeek V4 Pro. أفضل خيار عام على عتاد المستهلك هو Qwen 3.6 27B (77.2% SWE-bench، يلائم 24 GB عند Q4). خيارات بارزة أخرى: Kimi K2.6 (برمجة متقدمة)، gpt-oss:20b (أفضل نموذج صغير / 16 GB)، qwen3:30b (متوازن لكل الاستخدامات)، DeepSeek-R1 (الاستدلال)، Gemma 4 (الرؤية/استدعاء الأدوات)، وLlama 4 Scout (سياق طويل 10M / متعدد الوسائط). الأكثر تنزيلاً عمومًا لا تزال عائلة Llama.**',
       quickAnswerTop: {

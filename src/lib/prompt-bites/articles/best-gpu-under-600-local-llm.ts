@@ -883,9 +883,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'أفضل معالج رسومات بأقل من 600 دولار للنماذج اللغوية الكبيرة المحلية في 2026؟',
-    seoTitle: 'أفضل GPU بأقل من 600 دولار لـ LLMs المحلية 2026',
-    metaDescription: 'RTX 4060 Ti 16 GB (~424 دولار جديد) أفضل GPU بأقل من 600 دولار لـ LLMs: 16 GB VRAM تشغّل نماذج 14B بتكميم Q4 وتستهلك 165 واط فقط.',
+    title: 'أفضل معالج رسومات بأقل من ⁨600⁩ دولار للنماذج اللغوية الكبيرة المحلية في ⁨2026⁩؟',
+    seoTitle: 'أفضل ⁨GPU⁩ بأقل من ⁨600⁩ دولار لـ ⁨LLMs⁩ المحلية ⁨2026⁩',
+    metaDescription: '⁨RTX 4060 Ti 16 GB⁩ (~⁨424⁩ دولار جديد) أفضل ⁨GPU⁩ بأقل من ⁨600⁩ دولار لـ ⁨LLMs⁩: ⁨16 GB VRAM⁩ تشغّل نماذج ⁨14B⁩ بتكميم ⁨Q4⁩ وتستهلك ⁨165⁩ واط فقط.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

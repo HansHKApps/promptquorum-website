@@ -832,10 +832,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
-      title: 'حاسبة VRAM 2026: متطلبات GPU لنماذج LLM 7B/13B/70B (Q4، Q5، Q8)',
-      seoTitle: 'حاسبة VRAM 2026: GPU لنماذج LLM 7B و13B و70B',
+      title: 'حاسبة ⁨VRAM 2026⁩: متطلبات ⁨GPU⁩ لنماذج ⁨LLM 7B/13B/70B⁩ (⁨Q4⁩، ⁨Q5⁩، ⁨Q8⁩)',
+      seoTitle: 'حاسبة ⁨VRAM 2026⁩: ⁨GPU⁩ لنماذج ⁨LLM 7B⁩ و⁨13B⁩ و⁨70B⁩',
       intro: 'حاسبة VRAM تفاعلية لنماذج LLM المحلية. أدخل حجم النموذج، والتكميم، وطول السياق، وحجم الدفعة لحساب مقدار VRAM GPU الذي تحتاجه بالضبط. تدعم النماذج من 1B إلى 405B بـ FP16 وQ8 وQ5 وQ4. مُحدّثة في أبريل 2026 بتحليل توافق لـ RTX 4090 و4080 و3060 وحسابات الحمل الإضافي.',
-      metaDescription: 'احسب متطلبات GPU الدقيقة لنماذج 7B (3.5 GB بـ Q4) و13B (6.5 GB بـ Q4) و70B (35 GB بـ Q4). توافق مع RTX 4090 و4080 و4070 Ti.',
+      metaDescription: 'احسب متطلبات ⁨GPU⁩ الدقيقة لنماذج ⁨7B⁩ (⁨3.5 GB⁩ بـ ⁨Q4⁩) و⁨13B⁩ (⁨6.5 GB⁩ بـ ⁨Q4⁩) و⁨70B⁩ (⁨35 GB⁩ بـ ⁨Q4⁩). توافق مع ⁨RTX 4090⁩ و⁨4080⁩ و⁨4070 Ti⁩.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-19',
       next_refresh_due: '2026-10-04',

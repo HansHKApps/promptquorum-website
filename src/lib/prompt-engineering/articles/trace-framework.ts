@@ -927,15 +927,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-      title: 'إطار TRACE',
-      seoTitle: 'إطار TRACE: استدلال ذكاء اصطناعي شفاف 2026',
+      title: 'إطار ⁨TRACE⁩',
+      seoTitle: 'إطار ⁨TRACE⁩: استدلال ذكاء اصطناعي شفاف ⁨2026⁩',
       intro: '**إطار TRACE يحوّل استدلال الذكاء الاصطناعي من صندوق أسود إلى عملية مرئية خطوة بخطوة.** يطلب من النماذج التفكير والاستدلال والتحليل والاستنتاج والشرح — حتى تتمكن من رؤية أين تصمد المنطق وأين تنهار. PromptQuorum يتضمن إطار TRACE كخيار مدمج يمكن لأي مستخدم تحديده واستخدامه مباشرة داخل التطبيق.',
       publishDate: '2026-03-24',
       dateModified: '2026-04-28',
       readTime: '٨ دقائق للقراءة',
       educationalLevel: 'متوسط',
       primaryTerm: 'إطار TRACE',
-      metaDescription: 'إطار TRACE يُلزم LLMs بـ5 مراحل: التفكير والاستدلال والتحليل والاستنتاج والشرح. اكشف أخطاء المنطق قبل أن تثق بالإجابة النهائية.',
+      metaDescription: 'إطار ⁨TRACE⁩ يُلزم ⁨LLMs⁩ بـ⁨5⁩ مراحل: التفكير والاستدلال والتحليل والاستنتاج والشرح. اكشف أخطاء المنطق قبل أن تثق بالإجابة النهائية.',
       toc: [
         { anchor: 'key-takeaways', label: 'النقاط الرئيسية' },
         { anchor: 'what-is-trace', label: 'ما هو إطار TRACE' },

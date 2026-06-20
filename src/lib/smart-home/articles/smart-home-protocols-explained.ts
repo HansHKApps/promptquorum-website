@@ -195,8 +195,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    title: 'Matter وThread وZigbee وZ-Wave: شرح البروتوكولات (2026)',
-    seoTitle: 'Zigbee وZ-Wave وMatter وThread: الدليل 2026',
+    title: '⁨Matter⁩ و⁨Thread⁩ و⁨Zigbee⁩ و⁨Z-Wave⁩: شرح البروتوكولات (⁨2026⁩)',
+    seoTitle: '⁨Zigbee⁩ و⁨Z-Wave⁩ و⁨Matter⁩ و⁨Thread⁩: الدليل ⁨2026⁩',
     intro:
       'تحدد بروتوكولات المنزل الذكي كيفية تواصل أجهزتك ومداها وما إذا كانت تعمل محليًا. يشرح هذا الدليل البسيط بروتوكولات Zigbee وZ-Wave وThread وMatter — مداها واستهلاكها للطاقة وقابلية التشغيل المتبادل وأيها محلي بشكل افتراضي — حتى تتمكن من اختيار المناسب لإعداد موثوق وخاص.',
     metaDescription:

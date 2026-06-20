@@ -545,8 +545,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'ما أفضل النماذج اللغوية الكبيرة المحلية لدعم اللغة اليابانية؟',
-    seoTitle: 'أفضل LLMs محلية لليابانية 2026: Rinna وELYZA وQwen3',
-    metaDescription: 'Rinna 3.6B يعمل بـ4 GB RAM، وELYZA-7B بـ6 GB للتعليمات، وQwen3 7B يغطي JA/ZH/EN — جميعها تعمل محلياً عبر Ollama بتكميم Q4_K_M.',
+    seoTitle: 'أفضل ⁨LLMs⁩ محلية لليابانية ⁨2026⁩: ⁨Rinna⁩ و⁨ELYZA⁩ و⁨Qwen3⁩',
+    metaDescription: '⁨Rinna 3.6B⁩ يعمل بـ⁨4 GB RAM⁩، و⁨ELYZA-7B⁩ بـ⁨6 GB⁩ للتعليمات، و⁨Qwen3 7B⁩ يغطي ⁨JA/ZH/EN⁩ — جميعها تعمل محلياً عبر ⁨Ollama⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',

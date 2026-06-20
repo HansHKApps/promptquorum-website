@@ -1615,8 +1615,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-23',
       dateModified: '2026-05-04',
       readTime: '٩ دقائق للقراءة',
-      seoTitle: 'البحث بـ AI: تحقق من الاقتباسات وتجنب الهلوسة',
-      metaDescription: 'قلِّل مراجعة الأدبيات من أسابيع إلى ساعات. Elicit وConsensus وscite.ai يكتشفون نسبة الهلوسة (9.2%) ويتحققون من الاقتباسات تلقائيًا.',
+      seoTitle: 'البحث بـ ⁨AI⁩: تحقق من الاقتباسات وتجنب الهلوسة',
+      metaDescription: 'قلِّل مراجعة الأدبيات من أسابيع إلى ساعات. ⁨Elicit⁩ و⁨Consensus⁩ و⁨scite.ai⁩ يكتشفون نسبة الهلوسة (⁨9.2%⁩) ويتحققون من الاقتباسات تلقائيًا.',
       educationalLevel: 'متوسط',
       schema: {
         '@context': 'https://schema.org',

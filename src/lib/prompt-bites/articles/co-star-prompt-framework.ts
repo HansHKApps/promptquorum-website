@@ -622,9 +622,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Prompt Engineering',
-    title: 'ما هو إطار عمل CO-STAR للأوامر؟',
-    seoTitle: 'إطار CO-STAR 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR إطار أوامر من 6 أجزاء: Context وObjective وStyle وTone وAudience وResponse. يُهيكل الأوامر لمخرجات متسقة في 60–120 كلمة.',
+    title: 'ما هو إطار عمل ⁨CO-STAR⁩ للأوامر؟',
+    seoTitle: 'إطار ⁨CO-STAR 2026⁩ | ⁨Prompt Bites⁩ | ⁨PromptQuorum⁩',
+    metaDescription: '⁨CO-STAR⁩ إطار أوامر من ⁨6⁩ أجزاء: ⁨Context⁩ و⁨Objective⁩ و⁨Style⁩ و⁨Tone⁩ و⁨Audience⁩ و⁨Response⁩. يُهيكل الأوامر لمخرجات متسقة في ⁨60⁩–⁨120⁩ كلمة.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

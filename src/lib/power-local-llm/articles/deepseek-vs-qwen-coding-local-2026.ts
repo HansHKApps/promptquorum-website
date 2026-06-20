@@ -1887,8 +1887,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-19',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
-    title: 'DeepSeek مقابل Qwen للبرمجة المحلية 2026: أيّهما يفوز؟',
-    seoTitle: 'DeepSeek مقابل Qwen للبرمجة 2026: الفائز حسب اللغة',
+    title: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة المحلية ⁨2026⁩: أيّهما يفوز؟',
+    seoTitle: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة ⁨2026⁩: الفائز حسب اللغة',
     metaDescription:
       'DeepSeek-V3 يفوز في Python وJavaScript وQwen3-Coder يفوز في Rust وC++. مقارنة السرعة ومتطلبات VRAM لكل لغة مع نماذج Ollama 2026.',
     twitterDescription:

@@ -1170,9 +1170,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
-    title: 'أفضل حاسوب AMD مصغر لتشغيل LLM محلياً 2026: مقارنة AOOSTAR وMinisforum وBeelink وGMKtec',
-    seoTitle: 'Minisforum مقابل Beelink: حاسوب AMD مصغر لـ LLM 2026',
-    metaDescription: 'Minisforum MS-A2 بـ 96GB يشغّل Llama 70B Q4 بـ 18-22 رمزًا/ثانية بـ 1599 دولارًا. مقارنة AOOSTAR وBeelink GTR9 وGMKtec EVO-X2 للاستدلال المحلي.',
+    title: 'أفضل حاسوب ⁨AMD⁩ مصغر لتشغيل ⁨LLM⁩ محلياً ⁨2026⁩: مقارنة ⁨AOOSTAR⁩ و⁨Minisforum⁩ و⁨Beelink⁩ و⁨GMKtec⁩',
+    seoTitle: '⁨Minisforum⁩ مقابل ⁨Beelink⁩: حاسوب ⁨AMD⁩ مصغر لـ ⁨LLM 2026⁩',
+    metaDescription: '⁨Minisforum MS-A2⁩ بـ ⁨96GB⁩ يشغّل ⁨Llama 70B Q4⁩ بـ ⁨18-22⁩ رمزًا/ثانية بـ ⁨1599⁩ دولارًا. مقارنة ⁨AOOSTAR⁩ و⁨Beelink GTR9⁩ و⁨GMKtec EVO-X2⁩ للاستدلال المحلي.',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
     intro: '**أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ 395 المزودة بذاكرة موحدة بسعة 64–128 GB قادرة على تشغيل نماذج 30–70B دون اتصال بالإنترنت بأداء محطة عمل مقابل 1,200–2,500 دولار أمريكي.** تجذب فئة الحاسوب المصغر الجديدة من مصنّعي OEM الصينيين (AOOSTAR وMinisforum وBeelink وGMKtec) المشترين الذين يرتقون من أجهزة اللابتوب أو الراغبين في تجنب تكلفة Mac Studio (أكثر من 3,000 دولار). تجمع هذه الأجهزة بين معالج Zen 5 + iGPU من نوع Radeon 8060S + NPU بقدرة 50 TOPS بحجم أصغر من برج مكتبي، مع دعم ROCm على Linux ينضج بسرعة. قد تختلف الأسعار حسب بلدك.',

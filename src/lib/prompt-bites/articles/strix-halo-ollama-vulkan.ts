@@ -862,9 +862,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: الإعداد والأداء',
-    seoTitle: 'Strix Halo Ollama Vulkan على Linux 2026: إعداد وأداء',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo) يحمل 96 GB ذاكرة موحدة ويشغّل Llama 70B Q4_K_M عبر Ollama Vulkan على Linux. سرعة ~22 tok/s مع Llama 3.3 8B.',
+    title: '⁨Strix Halo⁩ (⁨Ryzen AI Max⁩) + ⁨Ollama Vulkan⁩: الإعداد والأداء',
+    seoTitle: '⁨Strix Halo Ollama Vulkan⁩ على ⁨Linux 2026⁩: إعداد وأداء',
+    metaDescription: '⁨Ryzen AI Max 395⁩ (⁨Strix Halo⁩) يحمل ⁨96 GB⁩ ذاكرة موحدة ويشغّل ⁨Llama 70B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama Vulkan⁩ على ⁨Linux⁩. سرعة ~⁨22 tok/s⁩ مع ⁨Llama 3.3 8B⁩.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',

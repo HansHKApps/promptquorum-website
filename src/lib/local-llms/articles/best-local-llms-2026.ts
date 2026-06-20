@@ -594,10 +594,10 @@ schema: {
     ar: {
       freshness_tier: 'monthly',
       theme: 'Best Models',
-      title: 'أفضل نماذج LLM المحلية في 2026: تصنيف Qwen3 14B وDeepSeek-R1 وPhi-4-mini',
-      seoTitle: 'أفضل نماذج LLM المحلية يونيو 2026: Qwen3 14B، DeepSeek-R1-32B، Phi-4-mini',
+      title: 'أفضل نماذج ⁨LLM⁩ المحلية في ⁨2026⁩: تصنيف ⁨Qwen3 14B⁩ و⁨DeepSeek-R1⁩ و⁨Phi-4-mini⁩',
+      seoTitle: 'أفضل نماذج ⁨LLM⁩ المحلية يونيو ⁨2026⁩: ⁨Qwen3 14B⁩، ⁨DeepSeek-R1-32B⁩، ⁨Phi-4-mini⁩',
       intro: 'أفضل نماذج LLM المحلية في يونيو 2026 هي Qwen3 14B (الأفضل عموماً)، وDeepSeek-R1-Distill-Qwen-32B (الأفضل للاستدلال)، وQwen2.5-Coder 7B (الأفضل للبرمجة)، وPhi-4-mini (الأفضل لوحدة المعالجة المركزية فقط)، وLlama 3.2 3B (أفضل نموذج صغير). يستند هذا التصنيف إلى درجات قياسات MMLU وHumanEval وMATH.',
-      metaDescription: 'أفضل نماذج LLM المحلية يونيو 2026: Qwen3 14B يفوز عموماً (83% MMLU، 9 GB RAM). DeepSeek-R1-32B للاستدلال. Qwen2.5-Coder 7B للبرمجة. Phi-4-mini لوحدة المعالجة المركزية فقط.',
+      metaDescription: 'أفضل نماذج ⁨LLM⁩ المحلية يونيو ⁨2026⁩: ⁨Qwen3 14B⁩ يفوز عموماً (⁨83% MMLU⁩، ⁨9 GB RAM⁩). ⁨DeepSeek-R1-32B⁩ للاستدلال. ⁨Qwen2.5-Coder 7B⁩ للبرمجة. ⁨Phi-4-mini⁩ لوحدة المعالجة المركزية فقط.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**أفضل نماذج LLM المحلية في يونيو 2026 هي Qwen3 14B (الأفضل عموماً)، وDeepSeek-R1-Distill-Qwen-32B (الأفضل للاستدلال)، وQwen2.5-Coder 7B (الأفضل للبرمجة)، وPhi-4-mini (الأفضل لوحدة المعالجة المركزية فقط)، وLlama 3.2 3B (أفضل نموذج صغير).**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',

@@ -604,9 +604,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'هل يمكنك تشغيل نماذج اللغة المحلية على Radeon RX 6800M؟',
-    seoTitle: 'Radeon 6800M للـ LLM المحلي: ROCm و Vulkan',
-    metaDescription: 'Radeon RX 6800M (12 GB VRAM) تشغّل LLMs عبر ROCm على Linux بـ~12 tok/s أو llama.cpp مع Vulkan. Llama 3 8B Q4_K_M يعمل. دعم Windows محدود.',
+    title: 'هل يمكنك تشغيل نماذج اللغة المحلية على ⁨Radeon RX 6800M⁩؟',
+    seoTitle: '⁨Radeon 6800M⁩ للـ ⁨LLM⁩ المحلي: ⁨ROCm⁩ و ⁨Vulkan⁩',
+    metaDescription: '⁨Radeon RX 6800M⁩ (⁨12 GB VRAM⁩) تشغّل ⁨LLMs⁩ عبر ⁨ROCm⁩ على ⁨Linux⁩ بـ~⁨12 tok/s⁩ أو ⁨llama.cpp⁩ مع ⁨Vulkan. Llama 3 8B Q4⁩_⁨K⁩_⁨M⁩ يعمل. دعم ⁨Windows⁩ محدود.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

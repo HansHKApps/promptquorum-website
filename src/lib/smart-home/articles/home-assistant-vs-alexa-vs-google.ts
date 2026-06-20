@@ -199,8 +199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    title: 'Home Assistant مقابل Alexa مقابل Google Home: أيهم الأنسب؟ (2026)',
-    seoTitle: 'Home Assistant مقابل Alexa مقابل Google Home 2026',
+    title: '⁨Home Assistant⁩ مقابل ⁨Alexa⁩ مقابل ⁨Google Home⁩: أيهم الأنسب؟ (⁨2026⁩)',
+    seoTitle: '⁨Home Assistant⁩ مقابل ⁨Alexa⁩ مقابل ⁨Google Home 2026⁩',
     intro:
       'يناسب Home Assistant وAmazon Alexa وGoogle Home أولويات مختلفة: يتفوق Home Assistant على صعيد الخصوصية والتحكم المحلي، في حين يتفوق Alexa وGoogle على صعيد سهولة الإعداد الفوري. تقارن هذه المراجعة المباشرة الخصوصية والتحكم المحلي ودعم الأجهزة والصوت والذكاء الاصطناعي والتكلفة والجهد، وتوصي بالاختيار المناسب حسب نوع المستخدم.',
     metaDescription:

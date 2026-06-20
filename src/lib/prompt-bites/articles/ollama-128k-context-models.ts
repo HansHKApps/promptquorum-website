@@ -562,9 +562,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Ollama',
-    title: 'ما نماذج Ollama التي تدعم سياق 128K؟',
-    seoTitle: 'Ollama سياق 128K: Llama 3.3 8B وQwen 3 2026',
-    metaDescription: 'Llama 3.3 8B يدعم سياق 128K على Ollama؛ Qwen 3 14B يصل إلى مليون رمز. نافذة 128K تستهلك 3–4 أضعاف VRAM مقارنةً بالإعداد الافتراضي 4K.',
+    title: 'ما نماذج ⁨Ollama⁩ التي تدعم سياق ⁨128K⁩؟',
+    seoTitle: '⁨Ollama⁩ سياق ⁨128K⁩: ⁨Llama 3.3 8B⁩ و⁨Qwen 3 2026⁩',
+    metaDescription: '⁨Llama 3.3 8B⁩ يدعم سياق ⁨128K⁩ على ⁨Ollama⁩؛ ⁨Qwen 3 14B⁩ يصل إلى مليون رمز. نافذة ⁨128K⁩ تستهلك ⁨3⁩–⁨4⁩ أضعاف ⁨VRAM⁩ مقارنةً بالإعداد الافتراضي ⁨4K⁩.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

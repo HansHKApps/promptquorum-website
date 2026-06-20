@@ -3780,8 +3780,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    title: 'أنشئ مساعدًا صوتيًا محليًا على هاتفك: Whisper + LLM محلي (بدون سحابة) — 2026',
-    seoTitle: 'مساعد صوتي محلي Whisper + LLM للهاتف 2026',
+    title: 'أنشئ مساعدًا صوتيًا محليًا على هاتفك: ⁨Whisper + LLM⁩ محلي (بدون سحابة) — ⁨2026⁩',
+    seoTitle: 'مساعد صوتي محلي ⁨Whisper + LLM⁩ للهاتف ⁨2026⁩',
     intro:
       'مساعد صوتي محلي بالكامل على iPhone أو Android في 2026 يجمع ثلاثة مكونات: Whisper لتحويل الصوت إلى نص، ونموذج LLM محلي على الجهاز لتوليد الردود، و Piper أو نظام التحويل النصي إلى صوتي للنطق. زمن الاستجابة الفعلي من لحظة الكلام حتى أول صوت على هواتف المستوى العالي هو 0.8–1.5 ثانية، دون عتبة الثانيتين التي "تبدو قابلة للاستخدام". يغطي هذا الدليل مسار iPhone ‏(LLM Farm + WhisperKit)‏ ومسار Android ‏(Layla + Whisper.cpp)‏ والمسار الهجين ‏(STT على الهاتف + Ollama عن بُعد)‏، مع أرقام مقيسة للكمون والبطارية والدقة.',
     metaDescription:

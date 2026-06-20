@@ -1130,14 +1130,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     theme: "Fundamentals",
     freshness_tier: 'semi_annual',
-    title: "System Prompt مقابل User Prompt: الفرق في 2026",
+    title: "⁨System Prompt⁩ مقابل ⁨User Prompt⁩: الفرق في ⁨2026⁩",
     intro: "تحدد system prompts كيف يفكر نموذج الذكاء الاصطناعي ويتصرف طوال الجلسة بأكملها؛ بينما تحدد user prompts ما يفعله الآن تحديدًا. تعرّف على الفرق، ومتى تستخدم كلًا منهما، وكيف يتفاعلان، ولماذا يعرض لك PromptQuorum كليهما.",
     publishDate: "2026-03-22",
     dateModified: "2026-04-12",
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Beginner',
-    seoTitle: 'System Prompt مقابل User Prompt: دور كل منهما',
-    metaDescription: 'System prompts تُحدد 70% من ثبات مخرجات LLMs. تعلّم الفرق بين system prompt وuser prompt وكيف يتفاعلان في GPT وClaude وOllama مع أمثلة API.',
+    seoTitle: '⁨System Prompt⁩ مقابل ⁨User Prompt⁩: دور كل منهما',
+    metaDescription: '⁨System prompts⁩ تُحدد ⁨70%⁩ من ثبات مخرجات ⁨LLMs⁩. تعلّم الفرق بين ⁨system prompt⁩ و⁨user prompt⁩ وكيف يتفاعلان في ⁨GPT⁩ و⁨Claude⁩ و⁨Ollama⁩ مع أمثلة ⁨API⁩.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',

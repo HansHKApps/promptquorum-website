@@ -3696,8 +3696,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    title: 'أفضل نماذج البرمجة المحلية في 2026: Qwen3-Coder مقابل DeepSeek مقابل Codestral',
-    seoTitle: 'نماذج البرمجة المحلية 2026: Qwen3-Coder وDeepSeek',
+    title: 'أفضل نماذج البرمجة المحلية في ⁨2026⁩: ⁨Qwen3-Coder⁩ مقابل ⁨DeepSeek⁩ مقابل ⁨Codestral⁩',
+    seoTitle: 'نماذج البرمجة المحلية ⁨2026⁩: ⁨Qwen3-Coder⁩ و⁨DeepSeek⁩',
     intro:
       'ستة نماذج مفتوحة الأوزان تتنافس على صدارة البرمجة المحلية في 2026: Qwen3-Coder (30B و7B) وDeepSeek Coder V3 وCodestral 22B وLlama 3.3 Code وGranite Code وStarCoder 2. تتفاوت هذه النماذج في عدد المعاملات ونافذة السياق وتركيز بيانات التدريب والترخيص والبصمة على ذاكرة VRAM. يعتمد الاختيار الصحيح على أيّ قيد يظهر أولاً بحسب عتادك ولغة البرمجة المستخدمة. يقارن هذا الدليل النماذج وفق معلومات قابلة للتحقق العلني: البنية والأحجام والسياق والتراخيص وحسابات VRAM واتجاهات المعايير التي يُبلغ عنها كل مزود، مع روابط لبطاقة كل نموذج لمراجعة الأرقام بنفسك.',
     metaDescription:

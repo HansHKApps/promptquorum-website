@@ -1075,9 +1075,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'أفضل SSD لتحميل النماذج بسرعة في 2026؟',
-    seoTitle: 'أفضل SSD لتحميل نماذج LLM بسرعة 2026 | PromptQuorum',
-    metaDescription: 'Samsung 990 Pro 2 TB بسرعة 7,000 MB/s يحمّل نموذج 14B في أقل من 5 ثوانٍ. PCIe Gen4 NVMe أسرع 7 أضعاف من SSD SATA لتحميل نماذج LLM.',
+    title: 'أفضل ⁨SSD⁩ لتحميل النماذج بسرعة في ⁨2026⁩؟',
+    seoTitle: 'أفضل ⁨SSD⁩ لتحميل نماذج ⁨LLM⁩ بسرعة ⁨2026⁩ | ⁨PromptQuorum⁩',
+    metaDescription: '⁨Samsung 990 Pro 2 TB⁩ بسرعة ⁨7⁩,⁨000 MB/s⁩ يحمّل نموذج ⁨14B⁩ في أقل من ⁨5⁩ ثوانٍ. ⁨PCIe Gen4 NVMe⁩ أسرع ⁨7⁩ أضعاف من ⁨SSD SATA⁩ لتحميل نماذج ⁨LLM⁩.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

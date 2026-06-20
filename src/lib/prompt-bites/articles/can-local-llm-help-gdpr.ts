@@ -565,9 +565,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
-    title: 'هل يمكن لنموذج LLM المحلي المساعدة في الامتثال للائحة GDPR؟',
-    seoTitle: 'LLM محلي لامتثال GDPR 2026: إلغاء المادة 44',
-    metaDescription: 'نعم — النموذج المحلي يُلغي نقل بيانات المادة 44 من GDPR. Qwen 3 14B Q4_K_M عبر Ollama يحتاج 12 GB VRAM ويعالج نصوص HR والوثائق القانونية محليًا.',
+    title: 'هل يمكن لنموذج ⁨LLM⁩ المحلي المساعدة في الامتثال للائحة ⁨GDPR⁩؟',
+    seoTitle: '⁨LLM⁩ محلي لامتثال ⁨GDPR 2026⁩: إلغاء المادة ⁨44⁩',
+    metaDescription: 'نعم — النموذج المحلي يُلغي نقل بيانات المادة ⁨44⁩ من ⁨GDPR. Qwen 3 14B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama⁩ يحتاج ⁨12 GB VRAM⁩ ويعالج نصوص ⁨HR⁩ والوثائق القانونية محليًا.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

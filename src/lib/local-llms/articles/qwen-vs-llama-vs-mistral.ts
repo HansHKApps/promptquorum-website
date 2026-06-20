@@ -928,10 +928,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ar: {
       freshness_tier: 'monthly',
       theme: 'Best Models',
-      title: 'Qwen 3.6 مقابل Llama 4 مقابل Mistral: مقارنة LLM المحلي 2026',
-      seoTitle: 'Qwen 3.6 vs Llama 4 vs Mistral 2026: Qwen يتفوق',
+      title: '⁨Qwen 3.6⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩',
+      seoTitle: '⁨Qwen 3.6 vs Llama 4 vs Mistral 2026⁩: ⁨Qwen⁩ يتفوق',
       intro: 'Qwen 3.6 27B هو الأفضل إجمالًا على الأجهزة الاستهلاكية: 77.2% في SWE-bench (أفضل نموذج كثيف)، يتسع في 24 GB بـ Q4. Llama 4 Scout 17B (MoE، سياق 10M، متعدد الوسائط) هو الخيار للسياق الطويل/متعدد الوسائط، لكنه يتطلب ~55 GB من VRAM بـ Q4؛ يقدّم Mistral Small 3.1 24B أفضل نسبة جودة-RAM بـ 14 GB. يتميّز Qwen3 في البرمجة و29 لغة؛ يتصدر Llama 4 Scout في طول السياق (10M token) ومتعدد الوسائط؛ ويعظّم Mistral الجودة على أجهزة محدودة. الثلاثة تعمل على أجهزة استهلاكية عبر Ollama. مُحدّث: يونيو 2026.',
-      metaDescription: 'Qwen 3.6 27B يتفوق برمجياً: 77.2% SWE-bench على 24 GB. Llama 4 Scout: سياق 10M. Mistral Small 3.1: 79% MMLU على 14 GB. أي نموذج يفوز؟',
+      metaDescription: '⁨Qwen 3.6 27B⁩ يتفوق برمجياً: ⁨77.2% SWE-bench⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
       next_refresh_due: '2026-06-30',

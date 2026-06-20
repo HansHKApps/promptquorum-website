@@ -990,9 +990,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'كم تكلّف وحدة GPU السحابية في الساعة عام 2026؟',
-    seoTitle: 'تكلفة GPU السحابية في الساعة 2026 | Prompt Bites',
-    metaDescription: 'تكلفة GPU السحابية في الساعة (مايو 2026): RTX 4090 ~$0.30–0.80، A100 80 GB ~$0.90–1.90، H100 ~$2.20–4.00. نطاقات تقريبية عبر كبار مزودي الخدمة.',
+    title: 'كم تكلّف وحدة ⁨GPU⁩ السحابية في الساعة عام ⁨2026⁩؟',
+    seoTitle: 'تكلفة ⁨GPU⁩ السحابية في الساعة ⁨2026⁩ | ⁨Prompt Bites⁩',
+    metaDescription: 'تكلفة ⁨GPU⁩ السحابية في الساعة (مايو ⁨2026⁩): ⁨RTX 4090⁩ ~$⁨0.30⁩–⁨0.80⁩، ⁨A100 80 GB⁩ ~$⁨0.90⁩–⁨1.90⁩، ⁨H100⁩ ~$⁨2.20⁩–⁨4.00⁩. نطاقات تقريبية عبر كبار مزودي الخدمة.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

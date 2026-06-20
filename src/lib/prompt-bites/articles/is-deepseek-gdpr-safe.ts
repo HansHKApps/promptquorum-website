@@ -574,9 +574,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
-    title: 'هل استخدام DeepSeek آمن وفق اللائحة الأوروبية لحماية البيانات GDPR؟',
-    seoTitle: 'DeepSeek GDPR 2026: API الصيني أم أوزان محلية؟',
-    metaDescription: 'DeepSeek API يحمل أعلى مخاطر GDPR: خوادم صينية خاضعة لقانون PIPL، ولا قرار كفاية أوروبي للصين. الأوزان المحلية تُلغي نقل البيانات تماماً.',
+    title: 'هل استخدام ⁨DeepSeek⁩ آمن وفق اللائحة الأوروبية لحماية البيانات ⁨GDPR⁩؟',
+    seoTitle: '⁨DeepSeek GDPR 2026⁩: ⁨API⁩ الصيني أم أوزان محلية؟',
+    metaDescription: '⁨DeepSeek API⁩ يحمل أعلى مخاطر ⁨GDPR⁩: خوادم صينية خاضعة لقانون ⁨PIPL⁩، ولا قرار كفاية أوروبي للصين. الأوزان المحلية تُلغي نقل البيانات تماماً.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

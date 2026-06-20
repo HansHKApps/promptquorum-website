@@ -210,8 +210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     affiliateDisclosure: true,
-    title: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (2026)',
-    seoTitle: 'أجهزة المنزل الذكي المحلي 2026: Pi أم mini PC أم NAS',
+    title: 'أفضل أجهزة المنزل الذكي المحلي + الذكاء الاصطناعي المحلي (⁨2026⁩)',
+    seoTitle: 'أجهزة المنزل الذكي المحلي ⁨2026⁩: ⁨Pi⁩ أم ⁨mini PC⁩ أم ⁨NAS⁩',
     intro:
       'تعتمد أفضل أجهزة المنزل الذكي المحلي على ما إذا كنت تريد أيضًا تشغيل نموذج LLM محلي: يكفي Raspberry Pi للأساسيات، بينما يُعدّ mini PC الخيار الأفضل إذا أردت Home Assistant مع الذكاء الاصطناعي المحلي على صندوق واحد. يقارن هذا الدليل بين Pi وmini PC وNAS والخادم المخصص، ويساعدك على الاختيار بين HA فقط أو HA مع الذكاء الاصطناعي — مع إحالات خارجية لتفاصيل VRAM.',
     metaDescription:

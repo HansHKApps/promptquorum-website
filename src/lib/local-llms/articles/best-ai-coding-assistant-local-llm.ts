@@ -869,9 +869,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
-    title: 'أفضل مساعد كود بالذكاء الاصطناعي لـ LLM المحلي 2026: Cursor مقابل Continue.dev مقابل Cody',
-    seoTitle: 'Continue.dev مقابل Cursor لـ LLM المحلي 2026',
-    metaDescription: 'Continue.dev مجاني مع أفضل تكامل Ollama. Cursor (20 دولارًا/شهر) للتدفق الهجين سحابة+محلي. Cody لسياق المستودع. مقارنة 5 مساعدي كود، مايو 2026.',
+    title: 'أفضل مساعد كود بالذكاء الاصطناعي لـ ⁨LLM⁩ المحلي ⁨2026⁩: ⁨Cursor⁩ مقابل ⁨Continue.dev⁩ مقابل ⁨Cody⁩',
+    seoTitle: '⁨Continue.dev⁩ مقابل ⁨Cursor⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩',
+    metaDescription: '⁨Continue.dev⁩ مجاني مع أفضل تكامل ⁨Ollama. Cursor⁩ (⁨20⁩ دولارًا/شهر) للتدفق الهجين سحابة+محلي. ⁨Cody⁩ لسياق المستودع. مقارنة ⁨5⁩ مساعدي كود، مايو ⁨2026⁩.',
     intro: 'أصبح مساعدو الكود بالذكاء الاصطناعي مثل Cursor وContinue.dev وSourcegraph Cody أدوات أساسية للمطورين. ومع ذلك، تغفل معظم المقارنات جانبًا رئيسيًا: أي الأدوات تدعم فعلًا نماذج LLM المحلية؟ يقارن هذا الدليل خمسة من مساعدي الكود الرائدين بالذكاء الاصطناعي خصيصًا للمطورين الذين يريدون تكاملًا مع Ollama أو LM Studio أو llama.cpp — لا مجرد واجهات سحابية. نغطّي الأسعار، وعمق إعداد LLM المحلي، ودعم IDE، وآثار الخصوصية الواقعية.',
     publishDate: '2026-05-17',
     theme: 'light',

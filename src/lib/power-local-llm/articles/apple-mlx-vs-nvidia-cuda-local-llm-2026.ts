@@ -3174,9 +3174,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'المطوّرون وهواة الذكاء الاصطناعي والمستخدمون المتقدمون الذين يختارون عتادًا لأغراض الاستنتاج المحلي بنماذج اللغة الكبيرة',
     primaryTerm: 'Apple MLX مقابل NVIDIA CUDA لنماذج اللغة الكبيرة المحلية',
-    title: 'Apple MLX مقابل NVIDIA CUDA لنماذج اللغة الكبيرة المحلية: أيهما تختار في 2026؟',
-    seoTitle: 'M5 Max مقابل RTX 5090: معايير LLM المحلية 2026',
-    metaDescription: 'M5 Max مقابل RTX 5090: 75 tok/s مقابل 150 tok/s على Llama 3 8B — نموذج 70B يعمل على M5 Max لا على RTX 4090. معايير الأداء والتكلفة والطاقة 2026.',
+    title: '⁨Apple MLX⁩ مقابل ⁨NVIDIA CUDA⁩ لنماذج اللغة الكبيرة المحلية: أيهما تختار في ⁨2026⁩؟',
+    seoTitle: '⁨M5 Max⁩ مقابل ⁨RTX 5090⁩: معايير ⁨LLM⁩ المحلية ⁨2026⁩',
+    metaDescription: '⁨M5 Max⁩ مقابل ⁨RTX 5090⁩: ⁨75 tok/s⁩ مقابل ⁨150 tok/s⁩ على ⁨Llama 3 8B⁩ — نموذج ⁨70B⁩ يعمل على ⁨M5 Max⁩ لا على ⁨RTX 4090⁩. معايير الأداء والتكلفة والطاقة ⁨2026⁩.',
     readTime: '18 دقائق قراءة',
     targetKeywords: [
       'apple mlx مقابل nvidia cuda نماذج لغة كبيرة محلية',

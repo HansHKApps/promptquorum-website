@@ -1023,9 +1023,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية في 2026؟',
-    seoTitle: 'أفضل GPU بأقل من 300 دولار لـ LLMs المحلية 2026',
-    metaDescription: 'RTX 3060 12 GB مستعملة (150–250 دولار) أفضل GPU بأقل من 300 دولار لـ LLMs: 12 GB VRAM تشغّل نماذج 7B بـ 25 رمز/ثانية مع CUDA فوري عبر Ollama.',
+    title: 'أفضل بطاقة رسوميات بأقل من ⁨300⁩ دولار لنماذج اللغة المحلية في ⁨2026⁩؟',
+    seoTitle: 'أفضل ⁨GPU⁩ بأقل من ⁨300⁩ دولار لـ ⁨LLMs⁩ المحلية ⁨2026⁩',
+    metaDescription: '⁨RTX 3060 12 GB⁩ مستعملة (⁨150⁩–⁨250⁩ دولار) أفضل ⁨GPU⁩ بأقل من ⁨300⁩ دولار لـ ⁨LLMs⁩: ⁨12 GB VRAM⁩ تشغّل نماذج ⁨7B⁩ بـ ⁨25⁩ رمز/ثانية مع ⁨CUDA⁩ فوري عبر ⁨Ollama⁩.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

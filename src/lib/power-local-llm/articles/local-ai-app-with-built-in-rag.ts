@@ -3569,8 +3569,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    title: 'تطبيقات الذكاء الاصطناعي المحلي مع RAG مدمج: تحدّث مع ملفاتك (بدون إعداد)',
-    seoTitle: 'RAG مدمج 2026: دردشة مع PDF محلياً بدون إعداد',
+    title: 'تطبيقات الذكاء الاصطناعي المحلي مع ⁨RAG⁩ مدمج: تحدّث مع ملفاتك (بدون إعداد)',
+    seoTitle: '⁨RAG⁩ مدمج ⁨2026⁩: دردشة مع ⁨PDF⁩ محلياً بدون إعداد',
     metaDescription:
       'LM Studio وJan وAnythingLLM تُجيب على PDFs بـ 1000 صفحة في 5 دقائق، بدون قاعدة بيانات متجهية أو Python. مقارنة دقة الاسترداد والاقتباسات.',
     twitterDescription:

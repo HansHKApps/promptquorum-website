@@ -857,9 +857,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    title: 'الكتابة بالصينية مقابل الإنجليزية: أيهما أفضل لنماذج LLM المحلية؟',
-    seoTitle: 'الكتابة بالصينية مقابل الإنجليزية 2026: كفاءة الرموز',
-    metaDescription: 'الأوامر الصينية توفّر 30–50% من الرموز على Qwen3 وDeepSeek-R1-Distill. الإنجليزية تُنتج سلاسل استدلال أقوى. تقنيات مختلطة وتوصيات لكل نموذج LLM.',
+    title: 'الكتابة بالصينية مقابل الإنجليزية: أيهما أفضل لنماذج ⁨LLM⁩ المحلية؟',
+    seoTitle: 'الكتابة بالصينية مقابل الإنجليزية ⁨2026⁩: كفاءة الرموز',
+    metaDescription: 'الأوامر الصينية توفّر ⁨30⁩–⁨50%⁩ من الرموز على ⁨Qwen3⁩ و⁨DeepSeek-R1-Distill⁩. الإنجليزية تُنتج سلاسل استدلال أقوى. تقنيات مختلطة وتوصيات لكل نموذج ⁨LLM⁩.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

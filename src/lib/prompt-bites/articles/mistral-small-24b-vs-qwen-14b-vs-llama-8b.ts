@@ -596,9 +596,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    title: 'Mistral Small 24B مقابل Qwen 3 14B مقابل Llama 3.3 8B: أيهما تشغّل محلياً؟',
-    seoTitle: 'Mistral Small 24B مقابل Qwen 14B مقابل Llama 8B 2026',
-    metaDescription: 'Llama 3.3 8B: 4.9 GB VRAM و66.6% MMLU. Qwen 3 14B: 9.3 GB و74.8% MMLU. Mistral Small 24B: 14.4 GB و81% MMLU. اختر النموذج بحسب حجم VRAM المتاح.',
+    title: '⁨Mistral Small 24B⁩ مقابل ⁨Qwen 3 14B⁩ مقابل ⁨Llama 3.3 8B⁩: أيهما تشغّل محلياً؟',
+    seoTitle: '⁨Mistral Small 24B⁩ مقابل ⁨Qwen 14B⁩ مقابل ⁨Llama 8B 2026⁩',
+    metaDescription: '⁨Llama 3.3 8B⁩: ⁨4.9 GB VRAM⁩ و⁨66.6% MMLU. Qwen 3 14B⁩: ⁨9.3 GB⁩ و⁨74.8% MMLU. Mistral Small 24B⁩: ⁨14.4 GB⁩ و⁨81% MMLU⁩. اختر النموذج بحسب حجم ⁨VRAM⁩ المتاح.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',

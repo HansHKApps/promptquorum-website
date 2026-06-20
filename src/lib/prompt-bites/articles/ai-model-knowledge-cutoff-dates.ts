@@ -434,9 +434,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
-    title: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي 2026: دليل مرجعي شامل',
-    seoTitle: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي 2026',
-    metaDescription: 'تواريخ انقطاع موثّقة لـ Claude وChatGPT وGemini وLlama وQwen. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.',
+    title: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩: دليل مرجعي شامل',
+    seoTitle: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩',
+    metaDescription: 'تواريخ انقطاع موثّقة لـ ⁨Claude⁩ و⁨ChatGPT⁩ و⁨Gemini⁩ و⁨Llama⁩ و⁨Qwen⁩. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.',
     publishDate: '2026-06-12',
     sections: {
       tldr: {

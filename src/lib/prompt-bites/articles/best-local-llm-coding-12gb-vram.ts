@@ -593,9 +593,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'ما أفضل نموذج لغوي كبير محلي للبرمجة بـ12 جيجابايت VRAM؟',
-    seoTitle: 'أفضل LLM برمجة لـ12 GB VRAM 2026 | PromptQuorum',
-    metaDescription: 'Qwen 3 Coder 14B Q4_K_M أفضل نموذج برمجة لـ12 GB VRAM بـ~10 GB، أعلى HumanEval. DeepSeek 14B Q4 بديل قوي. كلاهما على RTX 3060 وRTX 3080 Ti.',
+    title: 'ما أفضل نموذج لغوي كبير محلي للبرمجة بـ⁨12⁩ جيجابايت ⁨VRAM⁩؟',
+    seoTitle: 'أفضل ⁨LLM⁩ برمجة لـ⁨12 GB VRAM 2026⁩ | ⁨PromptQuorum⁩',
+    metaDescription: '⁨Qwen 3 Coder 14B Q4⁩_⁨K⁩_⁨M⁩ أفضل نموذج برمجة لـ⁨12 GB VRAM⁩ بـ~⁨10 GB⁩، أعلى ⁨HumanEval. DeepSeek 14B Q4⁩ بديل قوي. كلاهما على ⁨RTX 3060⁩ و⁨RTX 3080 Ti⁩.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

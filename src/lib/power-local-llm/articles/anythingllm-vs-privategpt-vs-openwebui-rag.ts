@@ -3223,8 +3223,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-19',
     next_refresh_due: '2026-12-19',
     theme: 'RAG & Document Chat',
-    title: 'AnythingLLM مقابل PrivateGPT مقابل Open WebUI: أفضل RAG محلي في 2026',
-    seoTitle: 'RAG محلي: AnythingLLM وPrivateGPT وOpen WebUI 2026',
+    title: '⁨AnythingLLM⁩ مقابل ⁨PrivateGPT⁩ مقابل ⁨Open WebUI⁩: أفضل ⁨RAG⁩ محلي في ⁨2026⁩',
+    seoTitle: '⁨RAG⁩ محلي: ⁨AnythingLLM⁩ و⁨PrivateGPT⁩ و⁨Open WebUI 2026⁩',
     intro:
       'تُعدّ AnythingLLM وPrivateGPT وOpen WebUI أبرز ثلاث منصات RAG ذاتية الاستضافة في عام 2026. قمنا بتحميل مجموعة نصوص متطابقة مؤلفة من 5.047 صفحة على كل منصة، ونفّذنا 50 استعلامًا موزعة على 5 أنواع من الأسئلة، وقسنا زمن الاسترجاع، ومعدل الهلوسة، وجودة الاستشهادات، إضافةً إلى التكاليف الخفية التي لا يتحدث عنها أحد (إعادة التضمين، والتخزين في قاعدة البيانات المتجهية، وذروات استهلاك GPU أثناء الفهرسة). البطل في العروض التجريبية ليس البطل في بيئات الإنتاج.',
     metaDescription:

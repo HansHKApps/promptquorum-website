@@ -552,9 +552,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quantization & VRAM',
-    title: 'ما هو ضغط Q4_K_M؟',
-    seoTitle: 'Q4_K_M: ضغط k-quant 4-bit 2026 | PromptQuorum',
-    metaDescription: 'Q4_K_M يوفر جودة أعلى بـ 5–8% من Q4_0 بنفس حجم الملف. نموذج 7B يحتاج ~5.5 GB VRAM. استخدمه افتراضيًا في Ollama بدلًا من Q4_0 أو Q8_0.',
+    title: 'ما هو ضغط ⁨Q4⁩_⁨K⁩_⁨M⁩؟',
+    seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩: ضغط ⁨k-quant 4-bit 2026⁩ | ⁨PromptQuorum⁩',
+    metaDescription: '⁨Q4⁩_⁨K⁩_⁨M⁩ يوفر جودة أعلى بـ ⁨5⁩–⁨8%⁩ من ⁨Q4⁩_⁨0⁩ بنفس حجم الملف. نموذج ⁨7B⁩ يحتاج ~⁨5.5 GB VRAM⁩. استخدمه افتراضيًا في ⁨Ollama⁩ بدلًا من ⁨Q4⁩_⁨0⁩ أو ⁨Q8⁩_⁨0⁩.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

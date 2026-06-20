@@ -3185,8 +3185,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    title: 'Obsidian + LLM محلي: 5 ملحقات تحوّل مخزنك إلى دماغ ثانٍ (2026)',
-    seoTitle: 'Obsidian + LLM محلي: 5 ملحقات لمخزنك 2026',
+    title: '⁨Obsidian + LLM⁩ محلي: ⁨5⁩ ملحقات تحوّل مخزنك إلى دماغ ثانٍ (⁨2026⁩)',
+    seoTitle: '⁨Obsidian + LLM⁩ محلي: ⁨5⁩ ملحقات لمخزنك ⁨2026⁩',
     intro:
       'خمسة ملحقات لـ Obsidian تحوّل المخزن إلى دماغ ثانٍ حقيقي في 2026 حين تُقرن بخلفية Ollama محلية: Smart Connections وCopilot for Obsidian وText Generator وLocal GPT وBMO Chatbot. يغطي كلٌّ منها طبقةً مختلفة: بحث دلالي، ودردشة مضمّنة، وتوليد بالقوالب، ومحادثة تعطي الأولوية للخصوصية، ودردشة خفيفة بسياق. المزيج الموصى به لمعظم المستخدمين هو Smart Connections + Copilot for Obsidian: الأول يتولى الربط الدلالي عبر المخزن بأكمله، والثاني يوفر واجهة الدردشة. يُقيّم هذا الدليل الملحقات الخمسة من حيث جودة البحث في المخزن وسرعة التوليد وتخصيص الموجّهات وسلوك المزامنة على الجوّال، مع خطوات تهيئة ملموسة لـ Ollama.',
     metaDescription:

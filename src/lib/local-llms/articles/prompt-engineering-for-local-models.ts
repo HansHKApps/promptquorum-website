@@ -748,10 +748,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
-      title: 'هندسة الأوامر لنماذج LLM المحلية 2026: CoT وFew-Shot',
-      seoTitle: 'هندسة الأوامر لنماذج LLM المحلية: CoT وFew-Shot',
+      title: 'هندسة الأوامر لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨CoT⁩ و⁨Few-Shot⁩',
+      seoTitle: 'هندسة الأوامر لنماذج ⁨LLM⁩ المحلية: ⁨CoT⁩ و⁨Few-Shot⁩',
       intro: 'تستجيب النماذج المحلية بحجم 7B–13B للأوامر بشكل مختلف عن GPT-5.2 أو Claude. فهي تحتاج إلى بنية صريحة وتعليمات أوضح و3–5 أمثلة few-shot حيث تكتفي النماذج السحابية بمثال أو مثالين. في أبريل 2026، تشمل التقنيات المثبتة أمر سلسلة التفكير (Chain-of-Thought) (+10–20% دقة)، وتعريف الأدوار، وتنسيق المخرجات المنظم (JSON)، وإعداد أمر النظام في Ollama وLM Studio.',
-      metaDescription: 'سلسلة التفكير (Chain-of-Thought) ترفع دقة نماذج 7B بـ 10–20%. few-shot بـ 3–5 أمثلة يتفوق على zero-shot بـ 15–25% في نماذج Ollama وLM Studio.',
+      metaDescription: 'سلسلة التفكير (⁨Chain-of-Thought⁩) ترفع دقة نماذج ⁨7B⁩ بـ ⁨10⁩–⁨20%. few-shot⁩ بـ ⁨3⁩–⁨5⁩ أمثلة يتفوق على ⁨zero-shot⁩ بـ ⁨15⁩–⁨25%⁩ في نماذج ⁨Ollama⁩ و⁨LM Studio⁩.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-25',
       leadAnswerBlock: '**تستجيب نماذج LLM المحلية (النماذج بحجم 7B-13B) للأوامر بشكل مختلف عن واجهات API السحابية. فهي تحتاج إلى بنية صريحة وتعليمات أوضح واعتماد أقل على التعلّم في السياق.**',

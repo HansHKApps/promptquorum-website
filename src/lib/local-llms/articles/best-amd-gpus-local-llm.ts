@@ -500,10 +500,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
-      title: 'أفضل كروت رسوميات AMD لنماذج LLM المحلية',
-      seoTitle: 'كروت AMD لنماذج LLM المحلية: RX 7900 XTX مقابل RTX',
+      title: 'أفضل كروت رسوميات ⁨AMD⁩ لنماذج ⁨LLM⁩ المحلية',
+      seoTitle: 'كروت ⁨AMD⁩ لنماذج ⁨LLM⁩ المحلية: ⁨RX 7900 XTX⁩ مقابل ⁨RTX⁩',
       intro: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.** اعتبارًا من أبريل 2026، نضج AMD ROCm (HIP)، رغم أن طبقات التوافق تضيف احتكاكًا. ولا يزال NVIDIA CUDA المسار الأبسط لنماذج LLM المحلية. استخدم AMD فقط إن وجدت عرضًا مستعملًا رائعًا أو كنت تملك بالفعل عتاد AMD.',
-      metaDescription: 'RX 7900 XTX بسعة 24GB VRAM توازي RTX 4090 بسعر أقل بـ 300 دولار. مقارنة ROCm مقابل CUDA، دعم Ollama وllama.cpp، ومتى يستحق AMD الاختيار في 2026.',
+      metaDescription: '⁨RX 7900 XTX⁩ بسعة ⁨24GB VRAM⁩ توازي ⁨RTX 4090⁩ بسعر أقل بـ ⁨300⁩ دولار. مقارنة ⁨ROCm⁩ مقابل ⁨CUDA⁩، دعم ⁨Ollama⁩ و⁨llama.cpp⁩، ومتى يستحق ⁨AMD⁩ الاختيار في ⁨2026⁩.',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.**',
       audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات عملهم مع نماذج LLM المحلية',

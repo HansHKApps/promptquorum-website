@@ -664,11 +664,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ar: {
       theme: 'Fundamentals',
-      title: 'درجة الحرارة وTop-P: تحكّم في إبداع الذكاء الاصطناعي',
+      title: 'درجة الحرارة و⁨Top-P⁩: تحكّم في إبداع الذكاء الاصطناعي',
       intro: 'تتحكم درجة الحرارة وTop-P في مدى المجازفة أو التحفظ في اختيار الكلمات لدى الذكاء الاصطناعي. بضبط هذين المعاملَين، توازن بين الإبداع والموثوقية — فالقيم المرتفعة تُنتج مخرجات مفاجئة ومتنوعة، بينما تُنتج القيم المنخفضة مخرجات آمنة ومتوقعة.',
       publishDate: '2026-03-22',
-      seoTitle: 'Temperature وTop-P 2026: اضبط الإبداع والدقة',
-      metaDescription: 'Temperature من 0 إلى 2 وTop-P من 0.1 إلى 1.0: تحكم في عشوائية LLMs للكود والملخصات والعصف الذهني. نطاقات مُختبرة على ChatGPT وClaude وGemini.',
+      seoTitle: '⁨Temperature⁩ و⁨Top-P 2026⁩: اضبط الإبداع والدقة',
+      metaDescription: '⁨Temperature⁩ من ⁨0⁩ إلى ⁨2⁩ و⁨Top-P⁩ من ⁨0.1⁩ إلى ⁨1.0⁩: تحكم في عشوائية ⁨LLMs⁩ للكود والملخصات والعصف الذهني. نطاقات مُختبرة على ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Gemini⁩.',
       readTime: '١٠ دقائق للقراءة',
       schema: {
         '@context': 'https://schema.org',

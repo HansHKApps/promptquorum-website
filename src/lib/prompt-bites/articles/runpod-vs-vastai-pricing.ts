@@ -988,9 +988,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    title: 'RunPod مقابل Vast.ai: أيهما أرخص في 2026؟',
-    seoTitle: 'أسعار RunPod مقابل Vast.ai 2026 | Prompt Bites',
-    metaDescription: 'Vast.ai: RTX 4090 بـ $0.30–0.55/hr؛ RunPod: $0.60–0.80/hr مع ضمان التشغيل. Vast.ai أرخص للـ GPU المؤقت؛ RunPod أوثق للإنتاج المستمر.',
+    title: '⁨RunPod⁩ مقابل ⁨Vast.ai⁩: أيهما أرخص في ⁨2026⁩؟',
+    seoTitle: 'أسعار ⁨RunPod⁩ مقابل ⁨Vast.ai 2026⁩ | ⁨Prompt Bites⁩',
+    metaDescription: '⁨Vast.ai⁩: ⁨RTX 4090⁩ بـ $⁨0.30⁩–⁨0.55/hr⁩؛ ⁨RunPod⁩: $⁨0.60⁩–⁨0.80/hr⁩ مع ضمان التشغيل. ⁨Vast.ai⁩ أرخص للـ ⁨GPU⁩ المؤقت؛ ⁨RunPod⁩ أوثق للإنتاج المستمر.',
     publishDate: '2026-05-22',
     dateModified: '2026-05-22',
     freshness_tier: 'semi_annual',

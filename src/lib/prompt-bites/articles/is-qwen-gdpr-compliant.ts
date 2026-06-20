@@ -583,9 +583,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
-    title: 'هل Qwen متوافق مع اللائحة الأوروبية لحماية البيانات GDPR؟',
-    seoTitle: 'Qwen وGDPR 2026: محلياً آمن تماماً، API يتطلب SCCs',
-    metaDescription: 'Qwen المُشغَّل محلياً لا ينقل أي بيانات فلا تنطبق المادة 44 من GDPR. API Qwen عبر Alibaba Cloud يتطلب SCCs وتقييم TIA لأي بيانات شخصية.',
+    title: 'هل ⁨Qwen⁩ متوافق مع اللائحة الأوروبية لحماية البيانات ⁨GDPR⁩؟',
+    seoTitle: '⁨Qwen⁩ و⁨GDPR 2026⁩: محلياً آمن تماماً، ⁨API⁩ يتطلب ⁨SCCs⁩',
+    metaDescription: '⁨Qwen⁩ المُشغَّل محلياً لا ينقل أي بيانات فلا تنطبق المادة ⁨44⁩ من ⁨GDPR. API Qwen⁩ عبر ⁨Alibaba Cloud⁩ يتطلب ⁨SCCs⁩ وتقييم ⁨TIA⁩ لأي بيانات شخصية.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

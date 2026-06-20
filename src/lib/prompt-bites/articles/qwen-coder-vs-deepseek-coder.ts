@@ -621,9 +621,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    title: 'Qwen Coder مقابل DeepSeek Coder: أيهما أفضل؟',
-    seoTitle: 'Qwen Coder مقابل DeepSeek Coder: أيهما أفضل؟',
-    metaDescription: 'Qwen 3 Coder 14B يتفوق في HumanEval بـ 5 نقاط على DeepSeek Coder V2. كلاهما يعمل على RTX 3060 بـ ~10 GB VRAM. Python و TypeScript: Qwen يفوز.',
+    title: '⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩: أيهما أفضل؟',
+    seoTitle: '⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩: أيهما أفضل؟',
+    metaDescription: '⁨Qwen 3 Coder 14B⁩ يتفوق في ⁨HumanEval⁩ بـ ⁨5⁩ نقاط على ⁨DeepSeek Coder V2⁩. كلاهما يعمل على ⁨RTX 3060⁩ بـ ~⁨10 GB VRAM. Python⁩ و ⁨TypeScript⁩: ⁨Qwen⁩ يفوز.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

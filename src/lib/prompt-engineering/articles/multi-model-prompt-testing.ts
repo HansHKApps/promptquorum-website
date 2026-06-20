@@ -1375,11 +1375,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
-    title: 'اختبار النماذج المتعددة للـ prompt: مقارنة المخرجات عبر GPT-5.5 وClaude وGemini',
-    seoTitle: 'اختبار النماذج المتعددة: GPT-5.5 وClaude وGemini',
-    metaDescription: 'اختبار الـ prompt متعدد النماذج: لماذا تختلف المخرجات في GPT-5.5 وClaude 4.6 وGemini 2.5. أنشئ مصفوفة اختبار وقيّم النتائج باستخدام PromptQuorum.',
+    title: 'اختبار النماذج المتعددة للـ ⁨prompt⁩: مقارنة المخرجات عبر ⁨GPT-5.5⁩ و⁨Claude⁩ و⁨Gemini⁩',
+    seoTitle: 'اختبار النماذج المتعددة: ⁨GPT-5.5⁩ و⁨Claude⁩ و⁨Gemini⁩',
+    metaDescription: 'اختبار الـ ⁨prompt⁩ متعدد النماذج: لماذا تختلف المخرجات في ⁨GPT-5.5⁩ و⁨Claude 4.6⁩ و⁨Gemini 2.5⁩. أنشئ مصفوفة اختبار وقيّم النتائج باستخدام ⁨PromptQuorum⁩.',
     ogDescription: 'كيفية اختبار الـ prompts عبر نماذج متعددة — لماذا تتباين المخرجات، وكيف تبني مصفوفة اختبار، ومعايير التقييم، والأدوات (PromptQuorum، Promptfoo)، وكيفية قراءة نتائج الاختبار متعدد النماذج.',
-    twitterDescription: 'اختبار الـ prompt متعدد النماذج: GPT-5.5 مقابل Claude مقابل Gemini. مصفوفة الاختبار والتقييم وPromptQuorum + Promptfoo.',
+    twitterDescription: 'اختبار الـ ⁨prompt⁩ متعدد النماذج: ⁨GPT-5.5⁩ مقابل ⁨Claude⁩ مقابل ⁨Gemini⁩. مصفوفة الاختبار والتقييم و⁨PromptQuorum + Promptfoo⁩.',
     intro: 'تشغيل prompt على نموذج واحد ونشر النتيجة مباشرةً هو استراتيجية ذات نقطة فشل واحدة. تمتلك النماذج توزيعات تدريب مختلفة، وإعدادات تنسيق متباينة، وعتبات مختلفة للإسهاب واتباع التعليمات. يكشف اختبار النماذج المتعددة هذه التباينات قبل أن تصل إلى المستخدمين.',
     leadAnswerBlock: '**اختبار الـ prompt متعدد النماذج هو ممارسة تشغيل الـ prompt ذاته على نموذجَين أو أكثر من نماذج الذكاء الاصطناعي لمقارنة جودة المخرجات واتساقها والامتثال للتنسيق.** قد ينتج prompt يعمل على GPT-5.5 تنسيقًا غير متسق على Claude 4.6 Sonnet أو إجابات مطولة على Gemini 2.5 Flash — يكشف الاختبار النموذجَ الأنسب لمعاييرك.',
     quickFacts: [

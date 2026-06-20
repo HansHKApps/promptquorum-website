@@ -214,8 +214,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    title: 'ربط Ollama بـ Home Assistant: مساعد ذكاء اصطناعي محلي (2026)',
-    seoTitle: 'Ollama + Home Assistant 2026: مساعد ذكاء اصطناعي محلي',
+    title: 'ربط ⁨Ollama⁩ بـ ⁨Home Assistant⁩: مساعد ذكاء اصطناعي محلي (⁨2026⁩)',
+    seoTitle: '⁨Ollama + Home Assistant 2026⁩: مساعد ذكاء اصطناعي محلي',
     intro:
       'يتضمن Home Assistant تكاملًا مدمجًا مع Ollama يحوّل نموذجًا يستضيفه محليًا إلى عامل محادثة يتحكم في الأجهزة بلغة طبيعية دون أي سحابة. يستعرض هذا الدليل المتطلبات الأساسية وإضافة التكامل واختيار النموذج وتوصيل عامل المحادثة والتحكم في الأجهزة واستكشاف الأخطاء — مع الإبقاء على إعداد Ollama واختيار النموذج كروابط خارجية لا إعادة شرح.',
     metaDescription:

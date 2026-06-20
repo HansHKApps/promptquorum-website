@@ -3746,8 +3746,8 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
     dateModified: '2026-06-19',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
-    title: 'نماذج الرؤية المحلية 2026: LLaVA وLlama 3.2 Vision وQwen3-VL وإعداد Ollama متعدد الوسائط',
-    seoTitle: 'نماذج الرؤية المحلية 2026: LLaVA وQwen3-VL، Ollama',
+    title: 'نماذج الرؤية المحلية ⁨2026⁩: ⁨LLaVA⁩ و⁨Llama 3.2 Vision⁩ و⁨Qwen3-VL⁩ وإعداد ⁨Ollama⁩ متعدد الوسائط',
+    seoTitle: 'نماذج الرؤية المحلية ⁨2026⁩: ⁨LLaVA⁩ و⁨Qwen3-VL⁩، ⁨Ollama⁩',
     intro:
       'تقبل نماذج الرؤية واللغة (VLMs) مدخلات الصور والنصوص معاً وتُنتج نصاً — لاستخراج النصوص من المستندات (OCR)، والإجابة على أسئلة حول الصور، وتحليل لقطات الشاشة، وقراءة الرسوم البيانية، وكل ذلك بصورة محلية تامة. في عام 2026، يُعدّ برنامج Ollama أيسر طريق لتشغيل نماذج VLM: سحب النموذج، وإرسال الصورة، والحصول على وصف أو إجابة. يقارن هذا الدليل أبرز نماذج الرؤية المحلية (LLaVA 1.6 وLlama 3.2 Vision وMiniCPM-V 4.5 وMoondream 2 وQwen3-VL وInternVL 2.5)، ويشرح خطوات إعداد Ollama تفصيلياً، ويربط كل نموذج بأفضل حالات استخدامه وفق متطلبات ذاكرة VRAM ومعايير الجودة.',
     metaDescription:

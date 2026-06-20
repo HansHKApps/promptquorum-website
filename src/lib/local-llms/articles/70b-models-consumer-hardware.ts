@@ -599,10 +599,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
-      title: 'كيفية تشغيل نماذج 70B على عتاد المستهلك 2026: الذاكرة وكرت الرسوميات',
-      seoTitle: 'نماذج 70B محليًا: متطلبات RAM وإعداد GPU 2026',
+      title: 'كيفية تشغيل نماذج ⁨70B⁩ على عتاد المستهلك ⁨2026⁩: الذاكرة وكرت الرسوميات',
+      seoTitle: 'نماذج ⁨70B⁩ محليًا: متطلبات ⁨RAM⁩ وإعداد ⁨GPU 2026⁩',
       intro: 'يتطلب تشغيل نموذج بـ 70B معامل محليًا من 40 إلى 48 GB من الذاكرة مع تكميم Q4_K_M. هذا ممكن على: أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو أجهزة تجمع بين GPU من NVIDIA بسعة 24 GB و32 GB من ذاكرة النظام باستخدام layer offloading. في أبريل 2026، يُعد Llama 3.3 70B وQwen3 72B النموذجين الرئيسيين من فئة 70B المتاحين.',
-      metaDescription: 'Llama 3.3 70B يحتاج 40 GB RAM عند Q4_K_M. M5 Max يبلغ 20–30 tok/s؛ RTX 4090 مع layer offloading يبلغ 10–18 tok/s. دليل عتاد المستهلك 2026.',
+      metaDescription: '⁨Llama 3.3 70B⁩ يحتاج ⁨40 GB RAM⁩ عند ⁨Q4⁩_⁨K⁩_⁨M. M5 Max⁩ يبلغ ⁨20⁩–⁨30 tok/s⁩؛ ⁨RTX 4090⁩ مع ⁨layer offloading⁩ يبلغ ⁨10⁩–⁨18 tok/s⁩. دليل عتاد المستهلك ⁨2026⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يتطلب تشغيل نموذج بـ 70B معامل محليًا من 40 إلى 48 GB من الذاكرة مع تكميم Q4_K_M. هذا ممكن على: أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو أجهزة تجمع بين GPU من NVIDIA بسعة 24 GB و32 GB من ذاكرة النظام باستخدام layer offloading.**',
       audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات العمل مع نماذج LLM المحلية',

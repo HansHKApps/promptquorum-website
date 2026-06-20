@@ -731,10 +731,10 @@ schema: {
     ar: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      title: 'الضبط الدقيق بـ LoRA لنماذج LLM المحلية 2026: درس Unsloth على 8 GB من VRAM مع Llama 3.3',
-      seoTitle: 'LoRA لضبط LLMs المحلية 2026: Unsloth على 8 GB VRAM',
+      title: 'الضبط الدقيق بـ ⁨LoRA⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: درس ⁨Unsloth⁩ على ⁨8 GB⁩ من ⁨VRAM⁩ مع ⁨Llama 3.3⁩',
+      seoTitle: '⁨LoRA⁩ لضبط ⁨LLMs⁩ المحلية ⁨2026⁩: ⁨Unsloth⁩ على ⁨8 GB VRAM⁩',
       intro: 'يكيّف الضبط الدقيق نموذجاً مُدرَّباً مسبقاً مع مجالك باستخدام LoRA (التكيّف منخفض الرتبة) — يضيف طبقات مُكيِّفة صغيرة (0.4% من إجمالي الأوزان) بدلاً من إعادة تدريب النموذج بالكامل. يتطلب الضبط الدقيق لـ Llama 3.3 8B 8 GB من VRAM و1–2 ساعة على عتاد استهلاكي مع Unsloth (أسرع بـ 2× من التدريب القياسي ([وفق unsloth.ai](https://github.com/unslothai/unsloth))). في أبريل 2026، LoRA وQLoRA (LoRA مُكمَّم بـ 4 بت) جاهزان للإنتاج في Ollama وLM Studio وvLLM.',
-      metaDescription: 'اضبط Llama 3.3 8B على 8 GB VRAM خلال 1–2 ساعة باستخدام Unsloth عبر QLoRA. يكفي 500 مثال تدريبي. كود كامل ومقارنة LoRA مقابل RAG.',
+      metaDescription: 'اضبط ⁨Llama 3.3 8B⁩ على ⁨8 GB VRAM⁩ خلال ⁨1⁩–⁨2⁩ ساعة باستخدام ⁨Unsloth⁩ عبر ⁨QLoRA⁩. يكفي ⁨500⁩ مثال تدريبي. كود كامل ومقارنة ⁨LoRA⁩ مقابل ⁨RAG⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يكيّف الضبط الدقيق نموذجاً مُدرَّباً مسبقاً مع مجالك باستخدام LoRA (التكيّف منخفض الرتبة) — يضيف طبقات مُكيِّفة صغيرة (0.4% من إجمالي الأوزان) بدلاً من إعادة تدريب النموذج بالكامل. يتطلب الضبط الدقيق لـ Llama 3.3 8B 8 GB من VRAM و1–2 ساعة على عتاد استهلاكي مع Unsloth (أسرع بـ 2× من التدريب القياسي ([وفق unsloth.ai](https://github.com/unslothai/unsloth))).**',
       audience: 'المهندسون الذين ينشرون نماذج LLM المحلية في بيئات الإنتاج أو المؤسسات',

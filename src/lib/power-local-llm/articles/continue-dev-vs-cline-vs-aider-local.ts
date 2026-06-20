@@ -3504,8 +3504,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    title: 'Continue.dev مقابل Cline مقابل Aider: أفضل وكيل برمجة محلي في 2026',
-    seoTitle: 'Continue.dev مقابل Cline وAider: أيّها لعملك؟',
+    title: '⁨Continue.dev⁩ مقابل ⁨Cline⁩ مقابل ⁨Aider⁩: أفضل وكيل برمجة محلي في ⁨2026⁩',
+    seoTitle: '⁨Continue.dev⁩ مقابل ⁨Cline⁩ و⁨Aider⁩: أيّها لعملك؟',
     intro:
       'تُعدّ أدوات Continue.dev وCline وAider الأدوات الثلاث الجادة مفتوحة المصدر للبرمجة التي تتكامل بسلاسة مع نموذج لغوي محلي في عام 2026. وهي ليست قابلة للتبادل؛ إذ تقوم كلٌّ منها على بدائية سير عمل مختلفة: الإكمال التلقائي، أو حلقة الوكيل المستقل، أو الفوارق الأصيلة في Git. اختر أولاً بحسب سير العمل ثم النموذج، وستتجنب 90% من مشكلات التكامل.',
     metaDescription:

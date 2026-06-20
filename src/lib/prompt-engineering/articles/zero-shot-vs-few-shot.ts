@@ -368,14 +368,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     ar: {
   theme: 'Techniques',
-  title: 'الطلبات Zero-Shot مقابل Few-Shot',
-  seoTitle: 'Zero-Shot مقابل Few-Shot 2026: أيهما تختار ومتى',
+  title: 'الطلبات ⁨Zero-Shot⁩ مقابل ⁨Few-Shot⁩',
+  seoTitle: '⁨Zero-Shot⁩ مقابل ⁨Few-Shot 2026⁩: أيهما تختار ومتى',
   intro: 'الطلبات Zero-Shot لا تتضمن أمثلة في الطلب وتعتمد كليًا على المعرفة المسبقة للنموذج، بينما تُضيف الطلبات Few-Shot عددًا صغيرًا من الأمثلة حتى يتمكن النموذج من تقليد النمط المطلوب.',
   publishDate: '2026-03-26',
   readTime: '٦ دقائق للقراءة',
   educationalLevel: 'متوسط',
   primaryTerm: 'Zero-Shot وFew-Shot Prompting',
-  metaDescription: 'Zero-Shot لا يحتاج أمثلة وأسرع، بينما يرفع Few-Shot الدقة في المهام المتخصصة بـ 10 نقاط مئوية أو أكثر. تعلّم متى تستخدم كل أسلوب مع PromptQuorum.',
+  metaDescription: '⁨Zero-Shot⁩ لا يحتاج أمثلة وأسرع، بينما يرفع ⁨Few-Shot⁩ الدقة في المهام المتخصصة بـ ⁨10⁩ نقاط مئوية أو أكثر. تعلّم متى تستخدم كل أسلوب مع ⁨PromptQuorum⁩.',
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',

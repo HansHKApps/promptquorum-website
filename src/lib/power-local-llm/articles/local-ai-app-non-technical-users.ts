@@ -2546,8 +2546,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-19',
     next_refresh_due: '2026-12-19',
     theme: 'Easiest Desktop Apps',
-    title: 'الذكاء الاصطناعي المحلي للمستخدمين غير التقنيين: 5 تطبيقات تعمل ببساطة (بدون سطر أوامر)',
-    seoTitle: 'GPT4All وJan وMsty: 5 تطبيقات ذكاء اصطناعي للمبتدئين',
+    title: 'الذكاء الاصطناعي المحلي للمستخدمين غير التقنيين: ⁨5⁩ تطبيقات تعمل ببساطة (بدون سطر أوامر)',
+    seoTitle: '⁨GPT4All⁩ و⁨Jan⁩ و⁨Msty⁩: ⁨5⁩ تطبيقات ذكاء اصطناعي للمبتدئين',
     intro:
       'تُعدّ تطبيقات GPT4All وJan وMsty وAnythingLLM Desktop وLM Studio الخمسة الأفضل للمستخدمين غير التقنيين الذين يريدون الذكاء الاصطناعي المحلي — بدون سطر أوامر، وبدون Python، وبدون Docker. كل تطبيق يتصدر لملف مستخدم مبتدئ مختلف. GPT4All يُحضر المستخدم إلى محادثة عاملة في 4 نقرات؛ Jan يضيف صفر بيانات مُرسَلة؛ Msty يضيف الواجهة الأجمل؛ AnythingLLM Desktop يضيف الدردشة مع المستندات بالسحب والإسقاط؛ LM Studio يقدم أفضل تجربة على Mac.',
     metaDescription:

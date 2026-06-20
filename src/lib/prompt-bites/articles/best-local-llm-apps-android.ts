@@ -615,9 +615,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android؟',
-    seoTitle: 'أفضل تطبيقات AI بلا إنترنت على Android 2026',
-    metaDescription: 'ذكاء اصطناعي بلا إنترنت على Android 2026: MLC Chat الأفضل لمعظم الهواتف. مقارنة مع Pocketpal وTermux + Ollama. دليل RAM مضمّن.',
+    title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام ⁨Android⁩؟',
+    seoTitle: 'أفضل تطبيقات ⁨AI⁩ بلا إنترنت على ⁨Android 2026⁩',
+    metaDescription: 'ذكاء اصطناعي بلا إنترنت على ⁨Android 2026⁩: ⁨MLC Chat⁩ الأفضل لمعظم الهواتف. مقارنة مع ⁨Pocketpal⁩ و⁨Termux + Ollama⁩. دليل ⁨RAM⁩ مضمّن.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

@@ -1456,10 +1456,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
-      title: 'نماذج LLM المحلية لسير عمل البرمجة: توليد الشيفرة ومراجعتها واختبارها',
-      seoTitle: 'Qwen3-Coder للبرمجة 2026: 92.7% HumanEval بـ24 GB',
+      title: 'نماذج ⁨LLM⁩ المحلية لسير عمل البرمجة: توليد الشيفرة ومراجعتها واختبارها',
+      seoTitle: '⁨Qwen3-Coder⁩ للبرمجة ⁨2026⁩: ⁨92.7% HumanEval⁩ بـ⁨24 GB⁩',
       intro: 'يمكن لنماذج LLM المحلية مساعدتك في البرمجة: توليد الشيفرة المتكررة، ومراجعة الشيفرة، وكتابة الاختبارات، وشرح الدوال. اعتبارًا من أبريل 2026، تحقّق نماذج مثل Qwen3-Coder 32B وCodeLlama 34B بين 72 و92.7% دقة في معايير HumanEval. السرعة أقل من السحابة (2-5 ثوانٍ لكل استجابة)، لكن الشيفرة لا تغادر جهازك أبدًا.',
-      metaDescription: 'Qwen3-Coder 32B يبلغ 92.7% HumanEval بـ24 GB VRAM. Qwen3-Coder 7B يبلغ 72% بـ5 GB. ولّد الشيفرة وراجعها واختبرها محليًا عبر Ollama وVS Code.',
+      metaDescription: '⁨Qwen3-Coder 32B⁩ يبلغ ⁨92.7% HumanEval⁩ بـ⁨24 GB VRAM. Qwen3-Coder 7B⁩ يبلغ ⁨72%⁩ بـ⁨5 GB⁩. ولّد الشيفرة وراجعها واختبرها محليًا عبر ⁨Ollama⁩ و⁨VS Code⁩.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-24',
       leadAnswerBlock: '**يمكن لنماذج LLM المحلية مساعدتك في البرمجة: توليد الشيفرة المتكررة، ومراجعة الشيفرة، وكتابة الاختبارات، وشرح الدوال. اعتبارًا من أبريل 2026، تحقّق نماذج مثل Qwen3-Coder 32B (92.7% HumanEval) وCodeLlama 34B (75% HumanEval) دقة متطورة في معايير البرمجة.**',

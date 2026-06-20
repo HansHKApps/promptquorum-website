@@ -775,9 +775,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
-    title: 'GPU سحابية ممتثلة لـ GDPR في الاتحاد الأوروبي 2026: Hetzner مقابل Scaleway مقابل OVHcloud (مختبَر مايو 2026)',
-    seoTitle: 'GPU سحابي ممتثل لـ GDPR 2026: Hetzner مقابل Scaleway',
-    metaDescription: 'Hetzner GPU بـ 184 يورو/شهر، Scaleway H100 بـ 0.50–2.50 يورو/ساعة، OVHcloud: مقارنة مزودين أوروبيين بمخاطر Schrems-II منخفضة للاتحاد الأوروبي.',
+    title: '⁨GPU⁩ سحابية ممتثلة لـ ⁨GDPR⁩ في الاتحاد الأوروبي ⁨2026⁩: ⁨Hetzner⁩ مقابل ⁨Scaleway⁩ مقابل ⁨OVHcloud⁩ (مختبَر مايو ⁨2026⁩)',
+    seoTitle: '⁨GPU⁩ سحابي ممتثل لـ ⁨GDPR 2026⁩: ⁨Hetzner⁩ مقابل ⁨Scaleway⁩',
+    metaDescription: '⁨Hetzner GPU⁩ بـ ⁨184⁩ يورو/شهر، ⁨Scaleway H100⁩ بـ ⁨0.50⁩–⁨2.50⁩ يورو/ساعة، ⁨OVHcloud⁩: مقارنة مزودين أوروبيين بمخاطر ⁨Schrems-II⁩ منخفضة للاتحاد الأوروبي.',
     intro: 'على مؤسسات الاتحاد الأوروبي التي تعالج بيانات شخصية استخدام مزودي GPU سحابية ممتثلين لـ GDPR. يقارن هذا الدليل سبعة خيارات أصلية لـ GDPR (Hetzner، Scaleway، OVHcloud، Nebius، Mistral، STACKIT، IONOS) مختبَرة في مايو 2026 من حيث السعر وموقف الامتثال وخطر Schrems II. يضمن جميع المزودين المميزين إقامة البيانات في الاتحاد الأوروبي ويقدّمون اتفاقيات DPA مناسبة. لفرق الخليج التي عليها الامتثال لقوانين مثل PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات)، يقدّم المزودون الأصليون في الاتحاد الأوروبي عقود حماية بيانات مكافئة، فضلاً عن خيارات سيادة البيانات الداعمة للنماذج العربية السيادية.',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',

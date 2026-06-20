@@ -198,8 +198,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    title: 'كاميرات الأمان بالذكاء الاصطناعي المحلي مع Frigate (2026)',
-    seoTitle: 'Frigate 2026: كاميرات ذكاء اصطناعي محلي خاصة',
+    title: 'كاميرات الأمان بالذكاء الاصطناعي المحلي مع ⁨Frigate⁩ (⁨2026⁩)',
+    seoTitle: '⁨Frigate 2026⁩: كاميرات ذكاء اصطناعي محلي خاصة',
     intro:
       'يُشغِّل Frigate الكشفَ المحلي بالذكاء الاصطناعي عن الأشخاص والأشياء على تغذيات الكاميرا دون الحاجة إلى سحابة أو اشتراك، مع تكامل مباشر مع Home Assistant. يتناول هذا الدليل مشكلة خصوصية الكاميرات السحابية، وما يفعله Frigate، والأجهزة التي تُسرِّع الكشف (مثل Coral TPU أو GPU)، والتكامل مع Home Assistant، والإشعارات، ومقارنة التكلفة بالكاميرات القائمة على الاشتراك.',
     metaDescription:

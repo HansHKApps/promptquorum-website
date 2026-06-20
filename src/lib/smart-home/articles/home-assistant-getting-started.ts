@@ -200,8 +200,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    title: 'Home Assistant: دليل البدء الشامل (2026)',
-    seoTitle: 'Home Assistant 2026: إعداد المنزل الذكي المحلي',
+    title: '⁨Home Assistant⁩: دليل البدء الشامل (⁨2026⁩)',
+    seoTitle: '⁨Home Assistant 2026⁩: إعداد المنزل الذكي المحلي',
     intro:
       'Home Assistant هو المركز الرائد للمنزل الذكي المحلي أولًا: ثبّته على Raspberry Pi أو mini PC، أضف التكاملات، وتحكم في كل شيء محليًا بدون سحابة. يغطي هذا الدليل للمبتدئين سبب اختيار Home Assistant وخيارات التثبيت والتكاملات الأولى ولوحة التحكم وأول أتمتة وكيفية إضافة الذكاء الاصطناعي المحلي لاحقًا — دون إعادة شرح ميكانيكا النموذج اللغوي.',
     metaDescription:

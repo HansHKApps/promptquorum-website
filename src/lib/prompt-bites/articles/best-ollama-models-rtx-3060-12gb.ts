@@ -574,9 +574,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quantization & VRAM',
-    title: 'أفضل نماذج Ollama لـRTX 3060 12 GB؟',
-    seoTitle: 'أفضل نماذج Ollama لبطاقة RTX 3060 12 GB 2026',
-    metaDescription: 'RTX 3060 12 GB يُشغّل Llama 3 8B Q5_K_M بـ25 رمز/ثانية، وQwen 3 Coder 14B Q4_K_M بـ10 GB VRAM. كلاهما يعمل بالكامل على GPU بدون تفريغ.',
+    title: 'أفضل نماذج ⁨Ollama⁩ لـ⁨RTX 3060 12 GB⁩؟',
+    seoTitle: 'أفضل نماذج ⁨Ollama⁩ لبطاقة ⁨RTX 3060 12 GB 2026⁩',
+    metaDescription: '⁨RTX 3060 12 GB⁩ يُشغّل ⁨Llama 3 8B Q5⁩_⁨K⁩_⁨M⁩ بـ⁨25⁩ رمز/ثانية، و⁨Qwen 3 Coder 14B Q4⁩_⁨K⁩_⁨M⁩ بـ⁨10 GB VRAM⁩. كلاهما يعمل بالكامل على ⁨GPU⁩ بدون تفريغ.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',

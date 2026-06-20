@@ -454,13 +454,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-      title: 'إطار CRAFT',
+      title: 'إطار ⁨CRAFT⁩',
       intro: 'إطار CRAFT هو بنية موجّه مصمّمة لإنتاج محتوى محدد ومدرك للجمهور من خلال التركيز على السياق والدور والجمهور والتنسيق والنبرة في تعليمة واحدة متكاملة. في PromptQuorum، يتوفر إطار CRAFT كخيار مدمج يمكن لأي مستخدم اختياره وتطبيقه عبر جميع النماذج المدعومة.',
       publishDate: '2026-03-24',
       readTime: '٧ دقائق للقراءة',
       educationalLevel: 'متوسط',
-      seoTitle: 'إطار CRAFT: السياق والدور والجمهور والنبرة 2026',
-      metaDescription: 'إطار CRAFT بـ5 حقول منظّمة (سياق، دور، جمهور، تنسيق، نبرة) لإنتاج نصوص ذكاء اصطناعي متسقة. قوالب جاهزة ومقارنة مع CO-STAR.',
+      seoTitle: 'إطار ⁨CRAFT⁩: السياق والدور والجمهور والنبرة ⁨2026⁩',
+      metaDescription: 'إطار ⁨CRAFT⁩ بـ⁨5⁩ حقول منظّمة (سياق، دور، جمهور، تنسيق، نبرة) لإنتاج نصوص ذكاء اصطناعي متسقة. قوالب جاهزة ومقارنة مع ⁨CO-STAR⁩.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

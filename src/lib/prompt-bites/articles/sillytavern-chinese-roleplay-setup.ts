@@ -1654,9 +1654,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    title: 'إعداد SillyTavern للعب الأدوار باللغة الصينية',
-    seoTitle: 'SillyTavern لعب أدوار صيني 2026: Qwen3-72B و Yi-34B',
-    metaDescription: 'Qwen3-72B Q4_K_M يحتاج 46 GB RAM وهو أفضل نموذج للعب الأدوار الصيني في SillyTavern. Yi-34B لـ 21 GB RAM، Qwen3-7B لـ 8 GB VRAM عبر Ollama.',
+    title: 'إعداد ⁨SillyTavern⁩ للعب الأدوار باللغة الصينية',
+    seoTitle: '⁨SillyTavern⁩ لعب أدوار صيني ⁨2026⁩: ⁨Qwen3-72B⁩ و ⁨Yi-34B⁩',
+    metaDescription: '⁨Qwen3-72B Q4⁩_⁨K⁩_⁨M⁩ يحتاج ⁨46 GB RAM⁩ وهو أفضل نموذج للعب الأدوار الصيني في ⁨SillyTavern. Yi-34B⁩ لـ ⁨21 GB RAM⁩، ⁨Qwen3-7B⁩ لـ ⁨8 GB VRAM⁩ عبر ⁨Ollama⁩.',
     publishDate: '2026-05-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',

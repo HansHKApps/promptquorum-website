@@ -578,9 +578,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    title: 'MLX مقابل Ollama مقابل llama.cpp: أي محرك استنتاج يجب أن تستخدم؟',
-    seoTitle: 'MLX مقابل Ollama مقابل llama.cpp 2026: دليل الاختيار',
-    metaDescription: 'على Apple Silicon استخدم MLX: يحقق ~65 توكن/ثانية على M5 Pro مقابل ~35 لـ Ollama. على NVIDIA اختر Ollama للبساطة أو llama.cpp للتحكم الكامل.',
+    title: '⁨MLX⁩ مقابل ⁨Ollama⁩ مقابل ⁨llama.cpp⁩: أي محرك استنتاج يجب أن تستخدم؟',
+    seoTitle: '⁨MLX⁩ مقابل ⁨Ollama⁩ مقابل ⁨llama.cpp 2026⁩: دليل الاختيار',
+    metaDescription: 'على ⁨Apple Silicon⁩ استخدم ⁨MLX⁩: يحقق ~⁨65⁩ توكن/ثانية على ⁨M5 Pro⁩ مقابل ~⁨35⁩ لـ ⁨Ollama⁩. على ⁨NVIDIA⁩ اختر ⁨Ollama⁩ للبساطة أو ⁨llama.cpp⁩ للتحكم الكامل.',
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',

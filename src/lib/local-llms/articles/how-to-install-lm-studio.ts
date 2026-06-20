@@ -537,10 +537,10 @@ schema: {
     ar: {
       freshness_tier: 'annual',
       theme: 'Getting Started',
-      title: 'تثبيت LM Studio: إعداد الواجهة الرسومية لـ macOS و Windows و Linux',
-      seoTitle: 'تثبيت LM Studio على macOS و Windows و Linux',
+      title: 'تثبيت ⁨LM Studio⁩: إعداد الواجهة الرسومية لـ ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
+      seoTitle: 'تثبيت ⁨LM Studio⁩ على ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
       intro: 'LM Studio تطبيق سطح مكتب يتيح لك استكشاف نماذج LLM المحلية وتنزيلها وتشغيلها عبر واجهة رسومية، دون الحاجة إلى أوامر في الطرفية. يعمل على macOS و Windows و Linux، ويتضمن واجهة محادثة مدمجة وخادمًا محليًا متوافقًا مع OpenAI. واعتبارًا من أبريل 2026، يدعم LM Studio أي نموذج GGUF مُكمّم من Hugging Face.',
-      metaDescription: 'LM Studio يُشغّل نماذج GGUF محليًا بواجهة رسومية دون طرفية. ثبّت، نزّل نموذجًا وابدأ المحادثة خلال 5 دقائق على macOS أو Windows أو Linux.',
+      metaDescription: '⁨LM Studio⁩ يُشغّل نماذج ⁨GGUF⁩ محليًا بواجهة رسومية دون طرفية. ثبّت، نزّل نموذجًا وابدأ المحادثة خلال ⁨5⁩ دقائق على ⁨macOS⁩ أو ⁨Windows⁩ أو ⁨Linux⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio تطبيق سطح مكتب يتيح لك استكشاف نماذج LLM المحلية وتنزيلها وتشغيلها عبر واجهة رسومية، دون الحاجة إلى أوامر في الطرفية. يعمل على macOS و Windows و Linux، ويتضمن واجهة محادثة مدمجة وخادمًا محليًا متوافقًا مع OpenAI.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',

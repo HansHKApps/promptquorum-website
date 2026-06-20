@@ -1370,10 +1370,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
-      title: 'دليل أوامر Ollama: شرح جميع الأوامر (2026)',
-      seoTitle: 'أوامر Ollama 2026: pull، run، list، serve، create',
+      title: 'دليل أوامر ⁨Ollama⁩: شرح جميع الأوامر (⁨2026⁩)',
+      seoTitle: 'أوامر ⁨Ollama 2026⁩: ⁨pull⁩، ⁨run⁩، ⁨list⁩، ⁨serve⁩، ⁨create⁩',
       intro: 'Ollama أداة سطر أوامر، وفهم أوامرها يجعلها أقوى بكثير. يغطي هذا الدليل الأوامر الأساسية: `ollama pull` و`ollama run` و`ollama list` و`ollama rm` و`ollama serve` وخيارات متقدمة مثل تكميم النماذج وملفات Modelfile المخصصة. اعتبارًا من أبريل 2026، تغطي هذه الأوامر 95% من حالات الاستخدام الواقعية.',
-      metaDescription: '6 أوامر Ollama الأساسية تغطي 95% من حالات الاستخدام: pull، run، list، rm، serve، create مع أمثلة عملية وجدول تكميم GGUF.',
+      metaDescription: '⁨6⁩ أوامر ⁨Ollama⁩ الأساسية تغطي ⁨95%⁩ من حالات الاستخدام: ⁨pull⁩، ⁨run⁩، ⁨list⁩، ⁨rm⁩، ⁨serve⁩، ⁨create⁩ مع أمثلة عملية وجدول تكميم ⁨GGUF⁩.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**Ollama أداة سطر أوامر، وفهم أوامرها يجعلها أقوى بكثير. يغطي هذا الدليل الأوامر الأساسية: `ollama pull` و`ollama run` و`ollama list` و`ollama rm` و`ollama serve` وخيارات متقدمة مثل تكميم النماذج وملفات Modelfile المخصصة.**',

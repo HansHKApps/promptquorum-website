@@ -568,10 +568,10 @@ schema: {
     ar: {
       freshness_tier: 'annual',
       theme: 'Getting Started',
-      title: 'تثبيت Ollama: إعداد في دقيقتين لـ macOS و Windows و Linux',
-      seoTitle: 'تثبيت Ollama في دقيقتين: macOS و Windows و Linux',
+      title: 'تثبيت ⁨Ollama⁩: إعداد في دقيقتين لـ ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
+      seoTitle: 'تثبيت ⁨Ollama⁩ في دقيقتين: ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
       intro: 'يُثبَّت Ollama في أقل من دقيقتين على macOS و Windows و Linux. وبعد التثبيت، يقوم أمر واحد بتنزيل وتشغيل أي نموذج من مكتبة Ollama -- دون بيئة Python ودون ملفات تهيئة ودون حاجة إلى GPU للبدء. واعتبارًا من أبريل 2026، يدعم Ollama أكثر من 200 نموذج، بما في ذلك Meta Llama 3.3 و Qwen3 و Mistral.',
-      metaDescription: 'Ollama يدعم أكثر من 200 نموذج بأمر واحد. ثبّته على macOS أو Windows أو Linux، شغّل Llama أو Qwen أو Mistral دون إعداد Python أو ملفات تهيئة.',
+      metaDescription: '⁨Ollama⁩ يدعم أكثر من ⁨200⁩ نموذج بأمر واحد. ثبّته على ⁨macOS⁩ أو ⁨Windows⁩ أو ⁨Linux⁩، شغّل ⁨Llama⁩ أو ⁨Qwen⁩ أو ⁨Mistral⁩ دون إعداد ⁨Python⁩ أو ملفات تهيئة.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يُثبَّت Ollama في أقل من دقيقتين على macOS و Windows و Linux. وبعد التثبيت، يقوم أمر واحد بتنزيل وتشغيل أي نموذج من مكتبة Ollama -- دون بيئة Python ودون ملفات تهيئة ودون حاجة إلى GPU للبدء.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',

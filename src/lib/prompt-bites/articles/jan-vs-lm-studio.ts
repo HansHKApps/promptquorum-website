@@ -620,9 +620,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    title: 'Jan مقابل LM Studio: أيهما أفضل؟',
-    seoTitle: 'Jan مقابل LM Studio: أيهما أفضل للـ LLMs؟',
-    metaDescription: 'Jan مفتوح المصدر MIT مع ~30 إضافة ويعمل على Linux. LM Studio واجهة مصقولة ومتجر نماذج GGUF مدمج. Jan للتخصيص، LM Studio للسهولة الفورية.',
+    title: '⁨Jan⁩ مقابل ⁨LM Studio⁩: أيهما أفضل؟',
+    seoTitle: '⁨Jan⁩ مقابل ⁨LM Studio⁩: أيهما أفضل للـ ⁨LLMs⁩؟',
+    metaDescription: '⁨Jan⁩ مفتوح المصدر ⁨MIT⁩ مع ~⁨30⁩ إضافة ويعمل على ⁨Linux. LM Studio⁩ واجهة مصقولة ومتجر نماذج ⁨GGUF⁩ مدمج. ⁨Jan⁩ للتخصيص، ⁨LM Studio⁩ للسهولة الفورية.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',

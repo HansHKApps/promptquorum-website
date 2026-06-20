@@ -3763,8 +3763,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    title: 'ابنِ نظام RAG محليًا على ملفات PDF الخاصة بك في 30 دقيقة (Ollama + AnythingLLM)',
-    seoTitle: 'RAG محلي على ملفات PDF 2026: إعداد خطوة بخطوة',
+    title: 'ابنِ نظام ⁨RAG⁩ محليًا على ملفات ⁨PDF⁩ الخاصة بك في ⁨30⁩ دقيقة (⁨Ollama + AnythingLLM⁩)',
+    seoTitle: '⁨RAG⁩ محلي على ملفات ⁨PDF 2026⁩: إعداد خطوة بخطوة',
     intro:
       'دليل كامل لأسرع طريق إلى نظام RAG شخصي عامل على حاسوب محمول بذاكرة 16 غيغابايت. الحزمة: Ollama، وLlama 3.3 8B، وAnythingLLM، وnomic-embed-text. الوقت الإجمالي: 30 دقيقة من جهاز فارغ إلى محادثة ملفات PDF الخاصة بك.',
     metaDescription:

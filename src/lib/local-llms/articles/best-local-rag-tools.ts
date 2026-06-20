@@ -408,10 +408,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
-      title: 'أفضل أدوات RAG المحلية في 2026: Open WebUI وLlamaIndex وLangChain',
-      seoTitle: 'أدوات RAG محلية 2026: Open WebUI وLlamaIndex',
+      title: 'أفضل أدوات ⁨RAG⁩ المحلية في ⁨2026⁩: ⁨Open WebUI⁩ و⁨LlamaIndex⁩ و⁨LangChain⁩',
+      seoTitle: 'أدوات ⁨RAG⁩ محلية ⁨2026⁩: ⁨Open WebUI⁩ و⁨LlamaIndex⁩',
       intro: 'يتيح RAG (التوليد المعزّز بالاسترجاع) لنموذج LLM المحلي لديك الإجابة عن أسئلة حول مستنداتك الخاصة. في أبريل 2026، يملك Open WebUI أبسط RAG مدمج (ارفع المستندات واطرح الأسئلة)، بينما LlamaIndex وLangChain إطاران احترافيان لبناء خطوط أنابيب RAG. يغطي هذا الدليل 8 أدوات من حيث سهولة الاستخدام والوظائف والجاهزية للإنتاج.',
-      metaDescription: 'Open WebUI يوفر أبسط RAG مدمج للمستندات. LlamaIndex وLangChain إطاران للخطوط الاحترافية. مقارنة 8 أدوات حسب سهولة الاستخدام والجاهزية للإنتاج.',
+      metaDescription: '⁨Open WebUI⁩ يوفر أبسط ⁨RAG⁩ مدمج للمستندات. ⁨LlamaIndex⁩ و⁨LangChain⁩ إطاران للخطوط الاحترافية. مقارنة ⁨8⁩ أدوات حسب سهولة الاستخدام والجاهزية للإنتاج.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يتيح RAG (التوليد المعزّز بالاسترجاع) لنموذج LLM المحلي لديك الإجابة عن أسئلة حول مستنداتك الخاصة. في أبريل 2026، يملك Open WebUI أبسط RAG مدمج (ارفع المستندات واطرح الأسئلة)، بينما LlamaIndex وLangChain إطاران احترافيان لبناء خطوط أنابيب RAG.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',

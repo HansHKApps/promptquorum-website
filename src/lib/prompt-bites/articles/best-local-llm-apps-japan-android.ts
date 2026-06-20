@@ -566,9 +566,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام Android في اليابان؟',
-    seoTitle: 'تطبيقات LLM لـAndroid باليابان 2026 | PromptQuorum',
-    metaDescription: 'MLC Chat يشغّل Rinna 3.6B بـ4 GB RAM. PocketPal AI يشغّل ELYZA-7B بـ6 GB. Termux + Ollama يضيف Qwen3 7B لأجهزة 8 GB+. الثلاثة تعمل بلا إنترنت.',
+    title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام ⁨Android⁩ في اليابان؟',
+    seoTitle: 'تطبيقات ⁨LLM⁩ لـ⁨Android⁩ باليابان ⁨2026⁩ | ⁨PromptQuorum⁩',
+    metaDescription: '⁨MLC Chat⁩ يشغّل ⁨Rinna 3.6B⁩ بـ⁨4 GB RAM. PocketPal AI⁩ يشغّل ⁨ELYZA-7B⁩ بـ⁨6 GB. Termux + Ollama⁩ يضيف ⁨Qwen3 7B⁩ لأجهزة ⁨8 GB⁩+. الثلاثة تعمل بلا إنترنت.',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',

@@ -619,10 +619,10 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
-      title: 'تحديثات نماذج LLM المحلية 2026: جميع الإصدارات مفتوحة الأوزان المهمة في العام',
-      seoTitle: 'تحديثات نماذج LLM 2026: Llama وGemma وQwen في Ollama',
+      title: 'تحديثات نماذج ⁨LLM⁩ المحلية ⁨2026⁩: جميع الإصدارات مفتوحة الأوزان المهمة في العام',
+      seoTitle: 'تحديثات نماذج ⁨LLM 2026⁩: ⁨Llama⁩ و⁨Gemma⁩ و⁨Qwen⁩ في ⁨Ollama⁩',
       intro: 'اعتباراً من أبريل 2026، تشمل أهم إصدارات نماذج LLM المحلية لهذا العام Meta Llama 3.3 70B (ديسمبر 2025)، وDeepSeek-R1 (يناير 2025)، وعائلتي Qwen3 وQwen3-Coder (سبتمبر 2025)، وMicrosoft Phi-4 (ديسمبر 2024)، وGoogle Gemma 3 (فبراير 2026). يسجّل هذا المقال جميع إصدارات النماذج الرئيسية بمواصفاتها الأساسية وتوافرها في Ollama.',
-      metaDescription: 'Gemma 3 وLlama 4 Scout وQwen3 وDeepSeek-R1 — أبرز إصدارات نماذج LLM المفتوحة في 2026 بالمواصفات ونتائج MMLU وتوافرها الفوري في Ollama.',
+      metaDescription: '⁨Gemma 3⁩ و⁨Llama 4 Scout⁩ و⁨Qwen3⁩ و⁨DeepSeek-R1⁩ — أبرز إصدارات نماذج ⁨LLM⁩ المفتوحة في ⁨2026⁩ بالمواصفات ونتائج ⁨MMLU⁩ وتوافرها الفوري في ⁨Ollama⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**اعتباراً من أبريل 2026، تشمل أهم إصدارات نماذج LLM المحلية لهذا العام Meta Llama 3.3 70B (ديسمبر 2025)، وDeepSeek-R1 (يناير 2025)، وعائلتي Qwen3 وQwen3-Coder (سبتمبر 2025)، وMicrosoft Phi-4.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',

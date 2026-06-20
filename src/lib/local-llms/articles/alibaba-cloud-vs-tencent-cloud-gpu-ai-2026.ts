@@ -640,8 +640,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-26',
     theme: 'Cost & Comparisons',
-    title: 'Alibaba Cloud مقابل Tencent Cloud GPU للذكاء الاصطناعي 2026: مقارنة كاملة',
-    seoTitle: 'GPU سحابي صيني 2026: AutoDL مقابل Alibaba PAI',
+    title: '⁨Alibaba Cloud⁩ مقابل ⁨Tencent Cloud GPU⁩ للذكاء الاصطناعي ⁨2026⁩: مقارنة كاملة',
+    seoTitle: '⁨GPU⁩ سحابي صيني ⁨2026⁩: ⁨AutoDL⁩ مقابل ⁨Alibaba PAI⁩',
     metaDescription:
       'AutoDL أرخص GPU سحابي صيني: A100 40 GB بـ ¥2.5/ساعة. Alibaba Cloud PAI أسرع لـ Qwen بنسبة 20–30%. Tencent Cloud TI للـ WeChat. PIPL-متوافق.',
     affiliateDisclosure: true,

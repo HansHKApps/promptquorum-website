@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware Guides',
     title: 'ما أفضل معالج رسومات من حيث السعر لتشغيل النماذج اللغوية الكبيرة محلياً في اليابان؟',
-    seoTitle: 'أفضل GPU للـ LLMs في اليابان 2026: RTX 3060 12 GB',
+    seoTitle: 'أفضل ⁨GPU⁩ للـ ⁨LLMs⁩ في اليابان ⁨2026⁩: ⁨RTX 3060 12 GB⁩',
     metaDescription:
       'RTX 3060 12 GB بـ~¥40,000 جديد أفضل GPU قيمةً في اليابان لـ LLMs. نماذج 7B بـ20–25 رمز/ثانية عبر Ollama. متاح في Tsukumo وDospara.',
     publishDate: '2026-05-27',
