@@ -62,6 +62,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama is the easiest (auto Metal, REST API, 2-minute setup); MLX is 15–25% faster and supports Python + fine-tuning; llama.cpp is the most cross-platform with widest GGUF model support — most Mac users start with Ollama and switch to MLX when they need speed.' },
+          { type: 'plain-terms', text: 'These are three open-source programs that let your Mac run AI models locally. "Metal" means they use your Mac\'s GPU (graphics chip) for fast AI processing. GGUF is the most common file format for downloadable AI models. LoRA fine-tuning lets you train a model on your own data without retraining from scratch.' },
+        ],
         items: [
           'Ollama: easiest setup, best for beginners',
           'MLX: fastest on Apple Silicon (15–25% faster)',
@@ -364,6 +369,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama ist am einfachsten (Auto-Metal, REST-API, 2-Minuten-Setup); MLX ist 15–25 % schneller und unterstützt Python + Fine-Tuning; llama.cpp ist am plattformübergreifendsten mit breiter GGUF-Modellunterstützung — die meisten Mac-Nutzer starten mit Ollama und wechseln zu MLX, wenn sie mehr Geschwindigkeit benötigen.' },
+          { type: 'plain-terms', text: 'Das sind drei Open-Source-Programme, mit denen dein Mac KI-Modelle lokal ausführen kann. "Metal" bedeutet, dass die GPU des Macs für schnelle KI-Verarbeitung genutzt wird. GGUF ist das gebräuchlichste Dateiformat für herunterladbare KI-Modelle. LoRA Fine-Tuning ermöglicht das Training auf eigenen Daten ohne komplettes Neutraining.' },
+        ],
         items: [
           'Ollama: einfachste Einrichtung, ideal für Einsteiger',
           'MLX: am schnellsten auf Apple Silicon (15–25% schneller)',
@@ -668,6 +678,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama est le plus facile (Metal auto, API REST, installation en 2 minutes) ; MLX est 15–25 % plus rapide et prend en charge Python + fine-tuning ; llama.cpp est le plus multiplateforme avec le plus large support de modèles GGUF — la plupart des utilisateurs Mac commencent avec Ollama et basculent vers MLX pour la vitesse.' },
+          { type: 'plain-terms', text: 'Ce sont trois programmes open source qui permettent à votre Mac d\'exécuter des modèles IA localement. "Metal" signifie qu\'ils utilisent le GPU de votre Mac pour un traitement IA rapide. GGUF est le format de fichier le plus courant pour les modèles IA téléchargeables. Le fine-tuning LoRA permet d\'entraîner un modèle sur vos propres données sans repartir de zéro.' },
+        ],
         items: [
           'Ollama : installation la plus simple, idéal pour débutants',
           'MLX : le plus rapide sur Apple Silicon (15–25% plus vite)',
@@ -985,6 +1000,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollamaが最も簡単（自動Metal、REST API、2分セットアップ）；MLXは15〜25%速くPython + ファインチューニング対応；llama.cppは最もクロスプラットフォームでGGUFモデル対応が広い — 多くのMacユーザーはOllamaから始め、速度が必要になったらMLXに切り替える。' },
+          { type: 'plain-terms', text: 'これらはMacでAIモデルをローカルで実行できる3つのオープンソースプログラムです。"Metal"とはMacのGPU（グラフィックチップ）を高速AI処理に使うことを意味します。GGUFはダウンロード可能なAIモデルの最も一般的なファイル形式です。LoRAファインチューニングでは、ゼロから再学習せずに自分のデータでモデルをトレーニングできます。' },
+        ],
         items: [
           'Ollama：最も簡単なセットアップ、初心者に最適',
           'MLX：Apple Silicon上で最速（15〜25%高速）',
@@ -1302,6 +1322,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama最简单（自动Metal、REST API、2分钟配置）；MLX快15–25%，支持Python和微调；llama.cpp跨平台性最强，GGUF模型格式支持最广——大多数Mac用户从Ollama开始，需要速度时切换到MLX。' },
+          { type: 'plain-terms', text: '这三个开源程序让你的Mac在本地运行AI模型。"Metal"表示它们使用Mac的GPU（图形芯片）进行快速AI处理。GGUF是可下载AI模型最常见的文件格式。LoRA微调让你在不从头重新训练的情况下，用自己的数据训练模型。' },
+        ],
         items: [
           'Ollama：安装最简单，适合初学者',
           'MLX：Apple Silicon上最快（快15–25%）',
@@ -1607,6 +1632,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama es el más fácil (Metal auto, API REST, configuración en 2 minutos); MLX es 15–25% más rápido y soporta Python + ajuste fino; llama.cpp es el más multiplataforma con el mayor soporte de modelos GGUF — la mayoría de usuarios Mac empiezan con Ollama y cambian a MLX cuando necesitan más velocidad.' },
+          { type: 'plain-terms', text: 'Estos son tres programas de código abierto que permiten a tu Mac ejecutar modelos de IA localmente. "Metal" significa que usan la GPU del Mac para procesamiento rápido de IA. GGUF es el formato de archivo más común para modelos de IA descargables. El ajuste fino LoRA permite entrenar un modelo con tus propios datos sin reentrenarlo desde cero.' },
+        ],
         items: [
           'Ollama: configuración más sencilla, ideal para principiantes',
           'MLX: el más rápido en Apple Silicon (15–25% más veloz)',
@@ -1906,6 +1936,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama هو الأسهل (Metal تلقائي، REST API، إعداد في دقيقتين)؛ MLX أسرع بنسبة 15–25% ويدعم Python والضبط الدقيق؛ llama.cpp هو الأكثر توافقاً عبر المنصات مع أوسع دعم لنماذج GGUF — معظم مستخدمي Mac يبدؤون بـ Ollama ثم يتحولون إلى MLX عند الحاجة إلى السرعة.' },
+          { type: 'plain-terms', text: 'هذه ثلاثة برامج مفتوحة المصدر تتيح لجهاز Mac تشغيل نماذج الذكاء الاصطناعي محلياً. "Metal" يعني استخدام GPU جهاز Mac لمعالجة الذكاء الاصطناعي بسرعة. GGUF هو أكثر تنسيقات الملفات شيوعاً لنماذج الذكاء الاصطناعي القابلة للتنزيل. يتيح الضبط الدقيق LoRA تدريب نموذج على بياناتك الخاصة دون إعادة التدريب من الصفر.' },
+        ],
         items: [
           'Ollama: الإعداد الأبسط، مثالي للمبتدئين',
           'MLX: الأسرع على Apple Silicon (أسرع بنسبة 15–25%)',
@@ -2206,6 +2241,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama é o mais fácil (Metal automático, API REST, configuração em 2 minutos); MLX é 15–25% mais rápido e suporta Python + fine-tuning; llama.cpp é o mais multiplataforma com o maior suporte a modelos GGUF — a maioria dos usuários Mac começa com Ollama e muda para MLX quando precisa de velocidade.' },
+          { type: 'plain-terms', text: 'Estes são três programas de código aberto que permitem ao seu Mac rodar modelos de IA localmente. "Metal" significa que usam a GPU do Mac para processamento rápido de IA. GGUF é o formato de arquivo mais comum para modelos de IA para download. O fine-tuning LoRA permite treinar um modelo com seus próprios dados sem retreinar do zero.' },
+        ],
         items: [
           '**Ollama:** mais fácil de instalar, Metal automático, API REST para integração de apps, ideal para iniciantes.',
           '**MLX:** 15–25% mais rápido no Apple Silicon, framework nativo da Apple, melhor integração Python, fine-tuning.',
@@ -2398,6 +2437,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ollama가 가장 쉬움(자동 Metal, REST API, 2분 설치); MLX는 15–25% 빠르고 Python + 파인튜닝 지원; llama.cpp는 가장 크로스플랫폼이며 GGUF 모델 지원이 가장 넓음 — 대부분의 Mac 사용자는 Ollama로 시작해 속도가 필요할 때 MLX로 전환합니다.' },
+          { type: 'plain-terms', text: '이것들은 Mac에서 AI 모델을 로컬로 실행할 수 있는 3개의 오픈소스 프로그램입니다. "Metal"은 Mac의 GPU(그래픽 칩)를 빠른 AI 처리에 사용한다는 의미입니다. GGUF는 다운로드 가능한 AI 모델의 가장 일반적인 파일 형식입니다. LoRA 파인튜닝은 처음부터 재학습하지 않고 자체 데이터로 모델을 학습시킬 수 있습니다.' },
+        ],
         items: [
           'Ollama: 가장 간편한 설치, 초보자에게 최적',
           'MLX: Apple Silicon에서 가장 빠름(15~25% 빠름)',

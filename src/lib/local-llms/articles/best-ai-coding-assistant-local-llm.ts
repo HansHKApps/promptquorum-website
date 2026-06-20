@@ -71,6 +71,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'The best AI coding assistant for local LLMs in May 2026: Continue.dev (free, best Ollama/LM Studio integration), Cursor ($20/mo, best autocomplete), Sourcegraph Cody ($9/user/mo, best for teams), and Windsurf ($0–15/mo, rising Cascade workflow alternative).' },
+          { type: 'plain-terms', text: 'These are IDE extensions that connect your code editor to a local AI model running on your own computer. They provide autocomplete, code generation, and chat — entirely offline and private, without sending your code to any cloud service.' },
+        ],
+        items: [],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 May 2026 Update',
@@ -460,6 +469,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Los mejores asistentes de código IA para LLM locales en mayo de 2026: Continue.dev (gratuito, mejor integración Ollama/LM Studio), Cursor ($20/mes, mejor autocompletado), Sourcegraph Cody ($9/usuario/mes, mejor para equipos) y Windsurf ($0–15/mes).' },
+          { type: 'plain-terms', text: 'Estas extensiones IDE conectan tu editor de código con un modelo de IA local en tu propio ordenador. Ofrecen autocompletado, generación de código y chat — completamente sin conexión y privado, sin enviar tu código a ningún servicio en la nube.' },
+        ],
+        items: [],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Actualización mayo 2026',
@@ -873,6 +891,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'أفضل مساعدي الكود بالذكاء الاصطناعي للنماذج اللغوية المحلية في مايو 2026: Continue.dev (مجاني، أفضل تكامل مع Ollama/LM Studio)، Cursor (20 $/شهر، أفضل إكمال تلقائي)، Sourcegraph Cody (9 $/مستخدم/شهر، الأفضل للفرق)، Windsurf (0–15 $/شهر).' },
+          { type: 'plain-terms', text: 'هذه إضافات بيئة تطوير تربط محرر الكود الخاص بك بنموذج ذكاء اصطناعي محلي يعمل على جهاز الكمبيوتر الخاص بك. توفر الإكمال التلقائي وتوليد الكود والدردشة — بالكامل دون اتصال بالإنترنت وبشكل خاص، دون إرسال الكود إلى أي خدمة سحابية.' },
+        ],
+        items: [],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 تحديث مايو 2026',
@@ -1289,6 +1316,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Os melhores assistentes de código IA para LLMs locais em maio de 2026: Continue.dev (gratuito, melhor integração Ollama/LM Studio), Cursor (US$20/mês, melhor autocompletar), Sourcegraph Cody (US$9/usuário/mês, melhor para equipes) e Windsurf (US$0–15/mês).' },
+          { type: 'plain-terms', text: 'Essas extensões de IDE conectam seu editor de código a um modelo de IA local no seu próprio computador. Fornecem autocompletar, geração de código e chat — completamente offline e privado, sem enviar seu código para nenhum serviço na nuvem.' },
+        ],
+        items: [],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Atualização de maio 2026',
@@ -1453,6 +1489,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Die besten KI-Coding-Assistenten für lokale LLMs im Mai 2026: Continue.dev (kostenlos, beste Ollama/LM Studio-Integration), Cursor (20 $/Monat, bestes Autocomplete), Sourcegraph Cody (9 $/Nutzer/Monat, beste Teamlösung) und Windsurf (0–15 $/Monat).' },
+          { type: 'plain-terms', text: 'Diese IDE-Erweiterungen verbinden deinen Code-Editor mit einem lokalen KI-Modell auf deinem eigenen Computer. Sie bieten Autocomplete, Code-Generierung und Chat — vollständig offline und privat, ohne deinen Code in die Cloud zu senden.' },
+        ],
+        items: [],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Mai 2026 Update',
@@ -1848,6 +1893,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Les meilleurs assistants de code IA pour LLM locaux en mai 2026 : Continue.dev (gratuit, meilleure intégration Ollama/LM Studio), Cursor (20 $/mois, meilleur autocomplete), Sourcegraph Cody (9 $/utilisateur/mois, meilleur pour les équipes) et Windsurf (0–15 $/mois).' },
+          { type: 'plain-terms', text: 'Ces extensions IDE connectent votre éditeur de code à un modèle IA local sur votre propre ordinateur. Elles offrent autocomplete, génération de code et chat — entièrement hors ligne et privé, sans envoyer votre code dans le cloud.' },
+        ],
+        items: [],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Mise à jour mai 2026',
@@ -2207,6 +2261,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026年5月のローカルLLM向けAIコーディングアシスタントのベスト：Continue.dev（無料、Ollama/LM Studio統合が最良）、Cursor（月20ドル、オートコンプリート最良）、Sourcegraph Cody（ユーザー月9ドル、チーム向け最良）、Windsurf（月0〜15ドル）。' },
+          { type: 'plain-terms', text: 'これらはIDEの拡張機能で、コードエディタを自分のPC上で動くローカルAIモデルに接続します。コードをクラウドに送ることなく、オフラインかつプライベートにオートコンプリート・コード生成・チャットを提供します。' },
+        ],
+        items: [],
+      },
       updateNotice: { id: 'update-notice', title: '🔄 2026年5月のアップデート', content: 'ローカルLLMセットアップでの5つのツールすべてテスト済み（Ollama + Qwen 3 Coder 14B）。すべてのプロバイダーで価格検証済み。Windsurf（Codeium）ローカルLLM統合テスト済みで動作確認。Continue.devはローカルファースト開発者向けにリード維持。Cursorの価格設定と機能検証済み。次のアップデート：2026年6月。', callouts: [{ type: '📋 検証済みデータ', text: 'すべての価格設定、機能、およびローカルLLM統合要求は2026年5月に検証されました。本物のOllamaセットアップで毎月各ツールをテストしています。' }] },
       verifiedSources: { id: 'verified-sources', title: 'ソース検証（2026年5月）', content: '**公式ソースから検証された価格:**\n- **Cursor** (¥3,040/月Pro): cursor.com/pricing — 2026-05-16に検証\n- **Continue.dev** (無料): continue.dev — Apache 2.0オープンソース確認、プレミアムティアなし\n- **Sourcegraph Cody** (¥1,400/ユーザー/月): sourcegraph.com/cody/pricing — 2026-05-16に検証\n- **Tabnine** (¥1,800/月Pro): tabnine.com/pricing — 2026-05-16に検証\n- **Windsurf** (無料/¥2,200/月): codeium.com/windsurf/pricing — 2026-05-16に検証\n- **GitHub Copilot** (¥1,500/月): github.com/features/copilot/pricing — 2026-05-16に検証\n\n**ローカルLLM統合テスト環境:**\n- Ollama 0.5.x (2026年5月現在の最新安定版)\n- Qwen 3 Coder 14B (標準的な中規模コードモデル)\n- Deepseek Coder 33B (より大規模な選択肢)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (代表的なハードウェア)\n\n**次回更新:** 2026年6月。月次再検証スケジュール実施中。' },
       verdictBox: { id: 'verdict-picks', title: '🏆 当社の選択—2026年5月', content: '5つの異なる優先度向けの5つの勝者。', callouts: [{ type: '🥇全体最高：Continue.dev', text: '理由：無料、オープンソース、最高のOllama/LM Studio統合。VS Code/JetBrains対応。活発な開発。ローカルLLMに真に最適。' }, { type: '💎最高のUX：Cursor', text: '理由：¥2,800/月でAIコーディング体験が最も洗練。カスタムOpenAIエンドポイント設定経由のローカルLLM。ほとんどのプロに価値あり。' }, { type: '👥チーム向け最高：Sourcegraph Cody', text: '理由：¥8,260/ユーザー/月（エンタープライズのみ）。コードベース全体コンテキスト。チーム管理/コンプライアンス機能。エンタープライズグレード。' }, { type: '🔒プライバシー最適：Tabnine', text: '理由：¥5,460/ユーザー/月またはセルフホスティング。許容ライセンスのみで訓練。SOC 2 Type 2認証。企業向けプライバシー。' }, { type: '🚀ライジングスター：Windsurf', text: '理由：無料ティア+¥2,100/月Pro。Cascadeワークフロー。ローカルLLM対応2025年後半追加。強い勢い。' }] },
@@ -2252,6 +2315,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026年5月本地LLM最佳AI编程助手：Continue.dev（免费，最佳Ollama/LM Studio集成）、Cursor（$20/月，最佳自动补全）、Sourcegraph Cody（$9/用户/月，最适合团队）、Windsurf（$0–15/月）。' },
+          { type: 'plain-terms', text: '这些是IDE扩展，将你的代码编辑器连接到本地运行的AI模型。提供自动补全、代码生成和对话功能——完全离线且私密，代码不会发送到任何云服务。' },
+        ],
+        items: [],
+      },
       updateNotice: { id: 'update-notice', title: '🔄 2026年5月更新', content: '本地LLM设置中已测试全部五个工具（Ollama + Qwen 3 Coder 14B）。所有提供商的价格已验证。Windsurf（Codeium）本地LLM集成已测试并确认工作。Continue.dev仍然领先本地优先开发者。Cursor定价和功能已验证。下次更新：2026年6月。', callouts: [{ type: '📋 已验证数据', text: '所有定价、功能和本地LLM集成声明已在2026年5月验证。我们每月用真实Ollama设置测试每个工具。' }] },
       verifiedSources: { id: 'verified-sources', title: '来源验证（2026年5月）', content: '**官方来源验证的定价：** Cursor（$20/月Pro）、Continue.dev（免费）、Sourcegraph Cody（$9/用户/月）、Tabnine（$12/月Pro）、Windsurf（免费/$15/月）、GitHub Copilot（$10/月）。所有于2026年5月验证。' },
       verdictBox: { id: 'verdict-picks', title: '🏆 我们的选择 — 2026年5月', content: '针对五种不同优先级的五位获胜者。', callouts: [{ type: '🥇 最佳整体：Continue.dev', text: '为什么：免费、开源、一流的Ollama和LM Studio集成。本地LLM真正的最佳选择。' }, { type: '💎 最佳UX：Cursor', text: '为什么：$20/月。对大多数专业开发者值得付费。' }, { type: '👥 团队最佳：Sourcegraph Cody', text: '为什么：$9/用户/月。代码库上下文。企业级质量。' }, { type: '🔒 隐私最优：Tabnine', text: '为什么：$12/月或自托管。SOC 2认证。企业标准。' }, { type: '🚀 冉冉上升者：Windsurf', text: '为什么：免费 + $15/月Pro。强劲势头。' }] },
@@ -2321,6 +2393,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026년 5월 로컬 LLM용 최고 AI 코딩 어시스턴트: Continue.dev(무료, 최고의 Ollama/LM Studio 통합), Cursor($20/월, 최고의 자동완성), Sourcegraph Cody($9/사용자/월, 팀에 최적), Windsurf($0–15/월).' },
+          { type: 'plain-terms', text: '이것들은 코드 편집기를 내 컴퓨터에서 실행 중인 로컬 AI 모델에 연결하는 IDE 확장 프로그램입니다. 코드를 클라우드 서비스에 전송하지 않고 완전히 오프라인·프라이빗하게 자동완성, 코드 생성, 채팅을 제공합니다.' },
+        ],
+        items: [],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 2026년 5월 업데이트',

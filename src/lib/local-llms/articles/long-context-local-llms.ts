@@ -192,10 +192,124 @@ schema: {
         { label: 'FAQ', anchor: '#faq' },
         { label: 'Sources', anchor: '#sources' },
       ],
+      quickAnswerTop: {
+        en: {
+          question: 'Which local LLM handles the longest context in 2026?',
+          answer: 'All major 2026 local models — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — support 128K tokens natively. The best pick for most users is Qwen3 14B Q4_K_M: handles 128K in ~12 GB RAM at 15–25 tok/s on Apple M5 Pro. On 8 GB, use Qwen3 4B (same 128K context, lower quality). Important: Ollama defaults to 2048 tokens — set num_ctx explicitly in a Modelfile.',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M: 128K context, ~12 GB RAM, 15–25 tok/s on M5 Pro (best all-round)',
+            '→ Qwen3 4B: 128K context, ~4 GB RAM (best for 8 GB machines)',
+            '→ Gemma 3 12B, Llama 3.1 8B, Mistral Small 3.1 24B: all support 128K',
+            '→ Ollama default = 2048 tokens — always set num_ctx in Modelfile for long context',
+            '→ Lost in the Middle: accuracy drops for info in the middle of very long contexts; put key facts first',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'Welches lokale LLM unterstützt 2026 den längsten Kontext?',
+          answer: 'Alle großen lokalen Modelle 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — unterstützen nativ 128K Token. Die beste Wahl für die meisten Nutzer ist Qwen3 14B Q4_K_M: verarbeitet 128K in ~12 GB RAM bei 15–25 Tok/s auf Apple M5 Pro. Mit 8 GB: Qwen3 4B (gleicher 128K-Kontext, geringere Qualität). Wichtig: Ollama ist standardmäßig auf 2048 Token eingestellt — num_ctx im Modelfile explizit setzen.',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M: 128K Kontext, ~12 GB RAM, 15–25 Tok/s auf M5 Pro (bester Allrounder)',
+            '→ Qwen3 4B: 128K Kontext, ~4 GB RAM (beste Wahl für 8-GB-Geräte)',
+            '→ Gemma 3 12B, Llama 3.1 8B, Mistral Small 3.1 24B: alle unterstützen 128K',
+            '→ Ollama-Standard = 2048 Token — num_ctx immer im Modelfile für langen Kontext setzen',
+            '→ Lost in the Middle: Genauigkeit sinkt für Infos in der Mitte sehr langer Kontexte; wichtige Fakten an den Anfang stellen',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'Quel LLM local gère le contexte le plus long en 2026 ?',
+          answer: 'Tous les grands modèles locaux 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — supportent nativement 128K tokens. Le meilleur choix pour la plupart des utilisateurs est Qwen3 14B Q4_K_M : gère 128K en ~12 Go de RAM à 15–25 tok/s sur Apple M5 Pro. Avec 8 Go : Qwen3 4B (même contexte 128K, qualité moindre). Important : Ollama est limité à 2048 tokens par défaut — définissez num_ctx explicitement dans un Modelfile.',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M : contexte 128K, ~12 Go RAM, 15–25 tok/s sur M5 Pro (meilleur polyvalent)',
+            '→ Qwen3 4B : contexte 128K, ~4 Go RAM (meilleur pour les machines 8 Go)',
+            '→ Gemma 3 12B, Llama 3.1 8B, Mistral Small 3.1 24B : tous supportent 128K',
+            '→ Par défaut Ollama = 2048 tokens — toujours définir num_ctx dans le Modelfile pour le contexte long',
+            '→ Lost in the Middle : la précision baisse pour les infos au milieu de très longs contextes ; placez les faits clés en premier',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: '2026年にローカルLLMで最長コンテキストを処理できるのはどれですか？',
+          answer: '2026年の主要なローカルモデル（Qwen3、Gemma 3、Llama 3.1、Mistral Small 3.1）はすべて128Kトークンをネイティブでサポートしています。多くのユーザーに最適なのはQwen3 14B Q4_K_M：Apple M5 Proで~12 GB RAMを使い15〜25トークン/秒で128Kを処理。8 GBマシンではQwen3 4B（同じ128K、品質は若干落ちる）。重要：Ollamaのデフォルトは2048トークン — Modelfileでnum_ctxを明示的に設定すること。',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M: 128Kコンテキスト、~12 GB RAM、M5 Proで15〜25トークン/秒（最良のオールラウンダー）',
+            '→ Qwen3 4B: 128Kコンテキスト、~4 GB RAM（8 GBマシンに最適）',
+            '→ Gemma 3 12B、Llama 3.1 8B、Mistral Small 3.1 24B: すべて128Kをサポート',
+            '→ Ollamaデフォルト = 2048トークン — 長いコンテキストにはModelfileでnum_ctxを必ず設定',
+            '→ Lost in the Middle: 非常に長いコンテキストの中間部分の情報は精度が下がる。重要な情報を最初に置くこと',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '2026年哪个本地LLM支持最长的上下文？',
+          answer: '2026年所有主要本地模型——Qwen3、Gemma 3、Llama 3.1、Mistral Small 3.1——原生支持128K token。大多数用户的最佳选择是Qwen3 14B Q4_K_M：在Apple M5 Pro上以约12 GB RAM、15–25 tok/s处理128K。8 GB机器：Qwen3 4B（同样128K，质量稍低）。重要：Ollama默认只有2048 token——必须在Modelfile中明确设置num_ctx。',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M：128K上下文，约12 GB RAM，M5 Pro上15–25 tok/s（最全面）',
+            '→ Qwen3 4B：128K上下文，约4 GB RAM（最适合8 GB机器）',
+            '→ Gemma 3 12B、Llama 3.1 8B、Mistral Small 3.1 24B：均支持128K',
+            '→ Ollama默认 = 2048 token——长上下文时务必在Modelfile中设置num_ctx',
+            '→ 中间丢失效应：非常长上下文中间部分的信息准确率会下降；将关键信息放在提示词开头',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: '¿Qué LLM local gestiona el contexto más largo en 2026?',
+          answer: 'Todos los grandes modelos locales de 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — soportan 128K tokens de forma nativa. La mejor elección para la mayoría es Qwen3 14B Q4_K_M: gestiona 128K en ~12 GB RAM a 15–25 tok/s en Apple M5 Pro. Con 8 GB: Qwen3 4B (mismo contexto 128K, menor calidad). Importante: Ollama por defecto limita a 2048 tokens — establece num_ctx explícitamente en un Modelfile.',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M: contexto 128K, ~12 GB RAM, 15–25 tok/s en M5 Pro (mejor todoterreno)',
+            '→ Qwen3 4B: contexto 128K, ~4 GB RAM (mejor para máquinas de 8 GB)',
+            '→ Gemma 3 12B, Llama 3.1 8B, Mistral Small 3.1 24B: todos soportan 128K',
+            '→ Ollama por defecto = 2048 tokens — siempre establece num_ctx en el Modelfile para contexto largo',
+            '→ Lost in the Middle: la precisión cae para información en el centro de contextos muy largos; pon los datos clave primero',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'Qual LLM local lida com o contexto mais longo em 2026?',
+          answer: 'Todos os principais modelos locais de 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — suportam 128K tokens nativamente. A melhor escolha para a maioria é Qwen3 14B Q4_K_M: processa 128K em ~12 GB de RAM a 15–25 tok/s no Apple M5 Pro. Com 8 GB: Qwen3 4B (mesmo contexto 128K, qualidade menor). Importante: Ollama tem padrão de 2048 tokens — defina num_ctx explicitamente em um Modelfile.',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M: contexto 128K, ~12 GB RAM, 15–25 tok/s no M5 Pro (melhor opção geral)',
+            '→ Qwen3 4B: contexto 128K, ~4 GB RAM (melhor para máquinas com 8 GB)',
+            '→ Gemma 3 12B, Llama 3.1 8B, Mistral Small 3.1 24B: todos suportam 128K',
+            '→ Padrão Ollama = 2048 tokens — sempre defina num_ctx no Modelfile para contexto longo',
+            '→ Lost in the Middle: precisão cai para informações no meio de contextos muito longos; coloque dados-chave no início',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'أي نموذج LLM محلي يتعامل مع أطول سياق في عام 2026؟',
+          answer: 'جميع النماذج المحلية الكبرى لعام 2026 — Qwen3 وGemma 3 وLlama 3.1 وMistral Small 3.1 — تدعم 128 ألف رمز بشكل أصلي. الخيار الأفضل لمعظم المستخدمين هو Qwen3 14B Q4_K_M: يعالج 128K في ~12 جيجابايت رام بسرعة 15–25 رمزاً/ثانية على Apple M5 Pro. مع 8 جيجابايت: استخدم Qwen3 4B (نفس سياق 128K، جودة أقل). مهم: Ollama يعمل افتراضياً بـ 2048 رمزاً — اضبط num_ctx صراحةً في Modelfile.',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M: سياق 128K، ~12 جيجابايت رام، 15–25 رمزاً/ثانية على M5 Pro (الأفضل شمولاً)',
+            '→ Qwen3 4B: سياق 128K، ~4 جيجابايت رام (الأفضل لأجهزة 8 جيجابايت)',
+            '→ Gemma 3 12B وLlama 3.1 8B وMistral Small 3.1 24B: جميعها تدعم 128K',
+            '→ Ollama افتراضياً = 2048 رمزاً — اضبط num_ctx دائماً في Modelfile للسياق الطويل',
+            '→ ظاهرة "الضياع في المنتصف": تنخفض الدقة للمعلومات في منتصف السياقات الطويلة جداً؛ ضع المعلومات الأساسية في البداية',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '2026년 가장 긴 컨텍스트를 처리하는 로컬 LLM은?',
+          answer: '2026년 모든 주요 로컬 모델 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — 은 128K 토큰을 기본적으로 지원합니다. 대부분의 사용자에게 최선은 Qwen3 14B Q4_K_M: Apple M5 Pro에서 ~12 GB RAM으로 15–25 tok/s에 128K 처리. 8 GB에서는 Qwen3 4B(동일한 128K, 품질 약간 낮음). 중요: Ollama 기본값은 2048 토큰 — Modelfile에서 num_ctx를 명시적으로 설정해야 합니다.',
+          bullets: [
+            '→ Qwen3 14B Q4_K_M: 128K 컨텍스트, ~12 GB RAM, M5 Pro에서 15–25 tok/s (최고 올라운더)',
+            '→ Qwen3 4B: 128K 컨텍스트, ~4 GB RAM (8 GB 기기에 최적)',
+            '→ Gemma 3 12B, Llama 3.1 8B, Mistral Small 3.1 24B: 모두 128K 지원',
+            '→ Ollama 기본값 = 2048 토큰 — 긴 컨텍스트에는 항상 Modelfile에서 num_ctx 설정',
+            '→ Lost in the Middle: 매우 긴 컨텍스트 중간의 정보에서 정확도 하락; 핵심 정보를 앞에 배치',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'All major 2026 local LLMs support 128K tokens natively; Qwen3 14B Q4_K_M handles 128K in ~12 GB RAM at 15–25 tok/s — but Ollama defaults to 2048 tokens, so always set num_ctx explicitly in a Modelfile.' },
+            { type: 'plain-terms', text: 'Context length is how much text an AI can "see" at once. 128K tokens ≈ 96,000 words — enough for a full novel. The catch: models lose accuracy on information buried in the middle of very long inputs (called "Lost in the Middle"). Put your most important facts at the start of the prompt.' },
+          ],
           items: [
             'All major 2026 local models — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — support 128K tokens natively. Long context is no longer a differentiator; it is table stakes.',
             '**Winner for most users: Qwen3 14B at Q4_K_M.** Handles 128K tokens in ~12 GB RAM at 15-25 tok/s on Apple M5 Pro. On 8 GB machines, use Qwen3 4B — same 128K context, lower quality, fully usable.',
@@ -538,6 +652,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Todos los grandes LLMs locales de 2026 soportan 128K tokens de forma nativa; Qwen3 14B Q4_K_M gestiona 128K en ~12 GB RAM a 15–25 tok/s — pero Ollama limita por defecto a 2048 tokens, así que siempre establece num_ctx en un Modelfile.' },
+            { type: 'plain-terms', text: 'La longitud de contexto es cuánto texto puede "ver" una IA a la vez. 128K tokens ≈ 96.000 palabras — suficiente para una novela completa. El problema: los modelos pierden precisión con la información enterrada en el medio de entradas muy largas ("Lost in the Middle"). Coloca tus datos más importantes al inicio del prompt.' },
+          ],
           items: [
             'Llama 4 Scout (MoE) soporta hasta 10M tokens. DeepSeek V4-Flash y Qwen 3.6 soportan 1M y 256K tokens respectivamente (extensible a 1M mediante YaRN). Mayo de 2026 marca la primera generación de modelos abiertos capaces de millones de tokens.',
             '**Contexto práctico por tamaño de modelo**: los modelos 7B-8B mantienen calidad fiable en 16K-32K tokens. Los modelos de 70B+ y MoE lo extienden a 256K-1M tokens. Llama 4 Scout puede manejar contextos completos de un millón de tokens con VRAM suficiente.',
@@ -882,6 +1000,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'جميع نماذج LLM المحلية الكبرى في 2026 تدعم 128K رمز بشكل أصلي؛ Qwen3 14B Q4_K_M يعالج 128K في ~12 جيجابايت رام بسرعة 15–25 رمزاً/ثانية — لكن Ollama افتراضياً 2048 رمزاً فقط، لذا اضبط num_ctx دائماً في Modelfile.' },
+            { type: 'plain-terms', text: 'طول السياق هو كمية النص التي يمكن للذكاء الاصطناعي "رؤيته" دفعة واحدة. 128K رمز ≈ 96,000 كلمة — ما يكفي لرواية كاملة. المشكلة: تنخفض دقة النماذج للمعلومات المدفونة في منتصف المدخلات الطويلة جداً (ظاهرة "Lost in the Middle"). ضع أهم معلوماتك في بداية المطالبة.' },
+          ],
           items: [
             'تدعم جميع نماذج 2026 الرئيسية — Qwen3 وGemma 3 وLlama 3.1 وMistral Small 3.1 — سياق 128K رمز أصليًا. السياق الطويل أصبح معيارًا أساسيًا، لا ميزة تنافسية.',
             '**الفائز للمستخدم العادي: Qwen3 14B بكمية Q4_K_M.** يعالج 128K رمز في ~12 GB من RAM بسرعة 15-25 رمز/ث على Apple M5 Pro. على أجهزة 8 GB، استخدم Qwen3 4B — نفس نافذة 128K بجودة أقل.',
@@ -1226,6 +1348,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Todos os principais LLMs locais de 2026 suportam 128K tokens nativamente; Qwen3 14B Q4_K_M processa 128K em ~12 GB RAM a 15–25 tok/s — mas Ollama padrão é 2048 tokens, então sempre defina num_ctx em um Modelfile.' },
+            { type: 'plain-terms', text: 'O comprimento de contexto é quanto texto uma IA pode "ver" de uma vez. 128K tokens ≈ 96.000 palavras — suficiente para um romance completo. O problema: modelos perdem precisão com informações enterradas no meio de entradas muito longas ("Lost in the Middle"). Coloque seus dados mais importantes no início do prompt.' },
+          ],
           items: [
             'O Llama 4 Scout (MoE) suporta até 10M tokens. O DeepSeek V4-Flash e o Qwen 3.6 suportam 1M e 256K tokens respectivamente (extensível a 1M via YaRN). Maio de 2026 marca a primeira geração de modelos abertos capazes de milhões de tokens.',
             '**Contexto prático por tamanho de modelo**: os modelos 7B-8B mantêm qualidade confiável em 16K-32K tokens. Os modelos de 70B+ e MoE estendem isso a 256K-1M tokens. O Llama 4 Scout consegue lidar com contextos completos de um milhão de tokens com VRAM suficiente.',
@@ -1425,6 +1551,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年所有主要本地LLM原生支持128K token；Qwen3 14B Q4_K_M用约12 GB RAM以15–25 tok/s处理128K——但Ollama默认只有2048 token，务必在Modelfile中明确设置num_ctx。' },
+            { type: 'plain-terms', text: '上下文长度是AI一次能"看到"多少文本。128K token ≈ 96,000词——足够处理一整本小说。关键问题：模型对埋在非常长输入中间的信息准确率会下降（称为"中间丢失"效应）。将最重要的信息放在提示词开头。' },
+          ],
           items: [
             '2026年6月所有主流本地LLM——Qwen3、Gemma 3、Llama 3.1、Mistral Small 3.1——均原生支持128K标记上下文窗口。长上下文已成标准，非差异化优势。',
             '**中文处理首选Qwen3**：Qwen3的原生中文分词器比Llama对中文文档的处理效率高30-40%。Qwen3 14B（Q4_K_M）在Apple M5 Pro上以约12 GB RAM、15-25令牌/秒处理128K上下文。8 GB设备推荐Qwen3 4B。',
@@ -1716,7 +1846,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'lange Kontextfenster lokale LLM',
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: ['Alle wichtigen lokalen LLMs 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — unterstützen 128K Token nativ. Langer Kontext ist Standard, kein Unterscheidungsmerkmal mehr.', '**Empfehlung für die meisten Nutzer: Qwen3 14B bei Q4_K_M.** Verarbeitet 128K Token in ~12 GB RAM mit 15-25 Tok/s auf Apple M5 Pro. Auf 8-GB-Geräten: Qwen3 4B — gleiche Kontextlänge, geringere Qualität, voll nutzbar.', 'RAM skaliert mit Kontextlänge UND Modellgröße. Ein 7B-Modell Q4_K_M benötigt ~6 GB bei 4K und ~14 GB bei 128K. Qwen3 14B Q4_K_M verbraucht ~12 GB bei 128K auf Apple Silicon (Unified Memory hilft).', '"Lost in the Middle" gilt weiterhin: LLMs verpassen Details aus mittleren Kontextabschnitten. Abhilfe: wichtige Infos an den Anfang, RAG für Suche, oder überlappende Chunks.', 'Langer Kontext eignet sich für holistische Analyse vollständiger Dokumente. RAG eignet sich für suchintensive Aufgaben. Nach Aufgabentyp wählen, nicht nach Kontextgröße.', 'Ollama nutzt standardmäßig 2048 Token -- nicht 128K. num_ctx explizit in einer Modelfile setzen. Apple M5 (16-32 GB, 200 GB/s) und M5 Pro (36-64 GB, 307 GB/s) eignen sich gut für 128K-Inferenz.'] },
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [{ type: 'one-sentence', text: 'Alle großen lokalen LLMs von 2026 unterstützen nativ 128K Token; Qwen3 14B Q4_K_M verarbeitet 128K in ~12 GB RAM bei 15–25 Tok/s — aber Ollama begrenzt standardmäßig auf 2048 Token, also immer num_ctx im Modelfile setzen.' }, { type: 'plain-terms', text: 'Kontextlänge ist, wie viel Text eine KI auf einmal "sehen" kann. 128K Token ≈ 96.000 Wörter — genug für einen ganzen Roman. Der Haken: Modelle verlieren Genauigkeit bei Informationen, die in der Mitte sehr langer Eingaben vergraben sind ("Lost in the Middle"). Die wichtigsten Fakten an den Anfang des Prompts stellen.' }], items: ['Alle wichtigen lokalen LLMs 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — unterstützen 128K Token nativ. Langer Kontext ist Standard, kein Unterscheidungsmerkmal mehr.', '**Empfehlung für die meisten Nutzer: Qwen3 14B bei Q4_K_M.** Verarbeitet 128K Token in ~12 GB RAM mit 15-25 Tok/s auf Apple M5 Pro. Auf 8-GB-Geräten: Qwen3 4B — gleiche Kontextlänge, geringere Qualität, voll nutzbar.', 'RAM skaliert mit Kontextlänge UND Modellgröße. Ein 7B-Modell Q4_K_M benötigt ~6 GB bei 4K und ~14 GB bei 128K. Qwen3 14B Q4_K_M verbraucht ~12 GB bei 128K auf Apple Silicon (Unified Memory hilft).', '"Lost in the Middle" gilt weiterhin: LLMs verpassen Details aus mittleren Kontextabschnitten. Abhilfe: wichtige Infos an den Anfang, RAG für Suche, oder überlappende Chunks.', 'Langer Kontext eignet sich für holistische Analyse vollständiger Dokumente. RAG eignet sich für suchintensive Aufgaben. Nach Aufgabentyp wählen, nicht nach Kontextgröße.', 'Ollama nutzt standardmäßig 2048 Token -- nicht 128K. num_ctx explizit in einer Modelfile setzen. Apple M5 (16-32 GB, 200 GB/s) und M5 Pro (36-64 GB, 307 GB/s) eignen sich gut für 128K-Inferenz.'] },
         whatIsContext: { id: 'what-is-context-length', title: 'Was ist die Kontextlänge und warum ist sie für lokale LLMs wichtig?', content: ['**Die Kontextlänge ist die maximale Anzahl von Token, die ein Modell in einem einzigen Inferenz-Aufruf verarbeiten kann -- die kombinierte Größe von Eingabe (Dokument, Gesprächsverlauf, Systemprompt) und Ausgabe (Modellantwort).** Ein Token ≈ 0,75 Wörter auf Deutsch; 128K Token ≈ 96.000 Wörter.', 'Für lokale LLM-Anwendungen ermöglicht langer Kontext: Zusammenfassung ganzer Bücher oder langer Berichte, Analyse vollständiger Codebasen in einem Prompt, Verarbeitung stundenlanger Meeting-Transkripte und Pflege langer Gesprächsverläufe ohne Verlust früherer Inhalte.', 'Der entscheidende Unterschied liegt zwischen der beworbenen Kontextlänge (was die Modellarchitektur unterstützt) und der praktischen Kontextlänge (wo die Qualität zuverlässig bleibt). Ein Modell kann technisch 128K Token unterstützen, aber bei Informationen ab dem 100K-Token-Mark Qualitätseinbußen zeigen.'] },
         which128k: { id: 'models-128k', title: 'Welche lokalen LLMs unterstützen 128K-Token-Kontext im Jahr 2026?', rows: [{ 'Modell': 'Qwen3 14B Q4_K_M', 'Kontextfenster': '128K', 'Praktisches Limit': '~32-64K zuverlässig', 'Ollama-Befehl': 'ollama run qwen3:14b' }, { 'Modell': 'Qwen3 4B Q4_K_M', 'Kontextfenster': '128K', 'Praktisches Limit': '~16-32K zuverlässig', 'Ollama-Befehl': 'ollama run qwen3:4b' }, { 'Modell': 'Gemma 3 12B Q4_K_M', 'Kontextfenster': '128K', 'Praktisches Limit': '~32K zuverlässig', 'Ollama-Befehl': 'ollama run gemma3:12b' }, { 'Modell': 'Llama 3.1 8B Q4_K_M', 'Kontextfenster': '128K', 'Praktisches Limit': '~32K zuverlässig', 'Ollama-Befehl': 'ollama run llama3.1:8b' }, { 'Modell': 'Llama 3.2 3B', 'Kontextfenster': '128K', 'Praktisches Limit': '~16K zuverlässig', 'Ollama-Befehl': 'ollama run llama3.2:3b' }, { 'Modell': 'Mistral Small 3.1 24B', 'Kontextfenster': '128K', 'Praktisches Limit': '~32K zuverlässig', 'Ollama-Befehl': 'ollama run mistral-small3.1' }, { 'Modell': 'Qwen3 8B Q4_K_M', 'Kontextfenster': '128K', 'Praktisches Limit': '~32K zuverlässig', 'Ollama-Befehl': 'ollama run qwen3:8b' }, { 'Modell': 'DeepSeek-R1 14B Q4_K_M', 'Kontextfenster': '128K', 'Praktisches Limit': '~32K zuverlässig', 'Ollama-Befehl': 'ollama run deepseek-r1:14b' }], columns: ['Modell', 'Kontextfenster', 'Praktisches Limit', 'Ollama-Befehl'], image: '/images/long-context-models-comparison-en.svg', imageCaption: '8 lokale LLM-Modelle mit 128K-Kontextunterstützung 2026 -- Qwen3 14B ist die Top-Wahl für 16-GB-Geräte, Qwen3 4B für 8-GB-Geräte.' },
         ramForLongContext: { id: 'ram-long-context', title: 'Wie viel RAM benötigt die Verarbeitung langer Kontexte?', content: ['**Der RAM-Verbrauch skaliert sowohl mit Modellgröße als auch Kontextlänge.** Der KV-Cache speichert Attention-Zustände für alle verarbeiteten Token -- dieser wächst linear mit der Kontextlänge.', 'Ein 7B-Modell bei Q4_K_M mit 4K-Kontext benötigt ~6 GB RAM. Dasselbe Modell mit 32K-Kontext benötigt ~8-9 GB RAM. Bei 128K-Kontext: ~12-16 GB RAM.'], rows: [{ 'Modell': 'Llama 3.3 8B Q4_K_M', '4K-Kontext': '~6 GB', '32K-Kontext': '~9 GB', '128K-Kontext': '~14 GB' }, { 'Modell': 'Qwen3 14B Q4_K_M', '4K-Kontext': '~9 GB', '32K-Kontext': '~12 GB', '128K-Kontext': '~18 GB' }, { 'Modell': 'Mistral Small 3.1 24B Q4_K_M', '4K-Kontext': '~14 GB', '32K-Kontext': '~17 GB', '128K-Kontext': '~24 GB' }, { 'Modell': 'Llama 3.3 70B Q4_K_M', '4K-Kontext': '~40 GB', '32K-Kontext': '~45 GB', '128K-Kontext': '~55 GB' }], columns: ['Modell', '4K-Kontext', '32K-Kontext', '128K-Kontext'], image: '/images/long-context-ram-scaling-en.svg', imageCaption: 'KV-Cache-RAM skaliert mit Kontextlänge -- ein 7B-Modell bei Q4_K_M benötigt ~6 GB bei 4K, aber ~14 GB bei 128K-Kontext.' },
@@ -1748,7 +1878,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'long contexte LLM local',
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: ['Tous les principaux LLMs locaux 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — supportent 128K tokens nativement. Le long contexte est désormais standard, plus un avantage différenciant.', '**Recommandation pour la plupart des utilisateurs : Qwen3 14B en Q4_K_M.** Traite 128K tokens en ~12 Go de RAM à 15-25 tok/s sur Apple M5 Pro. Sur 8 Go : Qwen3 4B — même longueur de contexte, qualité moindre, pleinement utilisable.', 'La RAM évolue avec la longueur du contexte ET la taille du modèle. Un modèle 7B Q4_K_M nécessite ~6 Go à 4K et ~14 Go à 128K. Qwen3 14B Q4_K_M utilise ~12 Go à 128K sur Apple Silicon.', 'Le problème "Lost in the Middle" persiste : les LLMs manquent des détails des sections centrales. Solutions : informations critiques au début du prompt, RAG pour la recherche, ou blocs chevauchants.', 'Le long contexte excelle pour l\'analyse holistique de documents complets. Le RAG excelle pour les tâches de recherche sur de nombreux documents. Choisir selon le type de tâche.', 'Ollama utilise 2048 tokens par défaut -- pas 128K. Définir num_ctx explicitement dans un Modelfile. Apple M5 (16-32 Go, 200 Go/s) et M5 Pro (36-64 Go, 307 Go/s) gèrent bien l\'inférence 128K.'] },
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [{ type: 'one-sentence', text: 'Tous les grands LLM locaux 2026 supportent 128K tokens nativement ; Qwen3 14B Q4_K_M gère 128K en ~12 Go RAM à 15–25 tok/s — mais Ollama est limité à 2048 tokens par défaut, alors toujours définir num_ctx dans un Modelfile.' }, { type: 'plain-terms', text: 'La longueur de contexte indique combien de texte une IA peut "voir" à la fois. 128K tokens ≈ 96 000 mots — de quoi couvrir un roman entier. Le problème : les modèles perdent en précision sur les informations enfouies au milieu de très longues entrées ("Lost in the Middle"). Placez vos faits les plus importants au début du prompt.' }], items: ['Tous les principaux LLMs locaux 2026 — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — supportent 128K tokens nativement. Le long contexte est désormais standard, plus un avantage différenciant.', '**Recommandation pour la plupart des utilisateurs : Qwen3 14B en Q4_K_M.** Traite 128K tokens en ~12 Go de RAM à 15-25 tok/s sur Apple M5 Pro. Sur 8 Go : Qwen3 4B — même longueur de contexte, qualité moindre, pleinement utilisable.', 'La RAM évolue avec la longueur du contexte ET la taille du modèle. Un modèle 7B Q4_K_M nécessite ~6 Go à 4K et ~14 Go à 128K. Qwen3 14B Q4_K_M utilise ~12 Go à 128K sur Apple Silicon.', 'Le problème "Lost in the Middle" persiste : les LLMs manquent des détails des sections centrales. Solutions : informations critiques au début du prompt, RAG pour la recherche, ou blocs chevauchants.', 'Le long contexte excelle pour l\'analyse holistique de documents complets. Le RAG excelle pour les tâches de recherche sur de nombreux documents. Choisir selon le type de tâche.', 'Ollama utilise 2048 tokens par défaut -- pas 128K. Définir num_ctx explicitement dans un Modelfile. Apple M5 (16-32 Go, 200 Go/s) et M5 Pro (36-64 Go, 307 Go/s) gèrent bien l\'inférence 128K.'] },
         whatIsContext: { id: 'what-is-context-length', title: 'Qu\'est-ce que la longueur de contexte et pourquoi est-ce important pour les LLMs locaux ?', content: ['**La longueur de contexte est le nombre maximum de tokens qu\'un modèle peut traiter dans un seul appel d\'inférence -- la taille combinée de l\'entrée (document, historique de conversation, prompt système) et de la sortie (réponse du modèle).** Un token ≈ 0,75 mots en français ; 128K tokens ≈ 96 000 mots.', 'Pour les LLMs locaux, un long contexte permet : résumer des livres entiers ou de longs rapports, analyser des bases de code complètes en un seul prompt, traiter des heures de transcriptions, et maintenir de longues conversations sans perdre le contexte antérieur.', 'La distinction clé est entre la longueur de contexte annoncée (ce que l\'architecture supporte) et la longueur de contexte pratique (où la qualité reste fiable). Un modèle peut techniquement supporter 128K tokens mais montrer une qualité dégradée au-delà de la marque des 100K tokens.'] },
         which128k: { id: 'models-128k', title: 'Quels LLMs locaux supportent 128K tokens de contexte en 2026 ?', rows: [{ 'Modèle': 'Qwen3 14B Q4_K_M', 'Fenêtre de contexte': '128K', 'Limite pratique': '~32-64K fiable', 'Commande Ollama': 'ollama run qwen3:14b' }, { 'Modèle': 'Qwen3 4B Q4_K_M', 'Fenêtre de contexte': '128K', 'Limite pratique': '~16-32K fiable', 'Commande Ollama': 'ollama run qwen3:4b' }, { 'Modèle': 'Gemma 3 12B Q4_K_M', 'Fenêtre de contexte': '128K', 'Limite pratique': '~32K fiable', 'Commande Ollama': 'ollama run gemma3:12b' }, { 'Modèle': 'Llama 3.1 8B Q4_K_M', 'Fenêtre de contexte': '128K', 'Limite pratique': '~32K fiable', 'Commande Ollama': 'ollama run llama3.1:8b' }, { 'Modèle': 'Llama 3.2 3B', 'Fenêtre de contexte': '128K', 'Limite pratique': '~16K fiable', 'Commande Ollama': 'ollama run llama3.2:3b' }, { 'Modèle': 'Mistral Small 3.1 24B', 'Fenêtre de contexte': '128K', 'Limite pratique': '~32K fiable', 'Commande Ollama': 'ollama run mistral-small3.1' }, { 'Modèle': 'Qwen3 8B Q4_K_M', 'Fenêtre de contexte': '128K', 'Limite pratique': '~32K fiable', 'Commande Ollama': 'ollama run qwen3:8b' }, { 'Modèle': 'DeepSeek-R1 14B Q4_K_M', 'Fenêtre de contexte': '128K', 'Limite pratique': '~32K fiable', 'Commande Ollama': 'ollama run deepseek-r1:14b' }], columns: ['Modèle', 'Fenêtre de contexte', 'Limite pratique', 'Commande Ollama'], image: '/images/long-context-models-comparison-en.svg', imageCaption: '8 modèles LLM locaux avec support de contexte 128K en 2026 -- Qwen3 14B est le meilleur choix pour les machines 16 Go.' },
         ramForLongContext: { id: 'ram-long-context', title: 'Combien de RAM le traitement de long contexte nécessite-t-il ?', content: ['**L\'utilisation RAM évolue avec la taille du modèle et la longueur du contexte.** Le cache KV stocke les états d\'attention pour tous les tokens traités -- il croît linéairement avec la longueur du contexte.', 'Un modèle 7B en Q4_K_M avec contexte 4K utilise ~6 Go de RAM. Le même modèle avec contexte 32K utilise ~8-9 Go. Avec contexte 128K : ~12-16 Go.'], rows: [{ 'Modèle': 'Llama 3.3 8B Q4_K_M', 'Contexte 4K': '~6 Go', 'Contexte 32K': '~9 Go', 'Contexte 128K': '~14 Go' }, { 'Modèle': 'Qwen3 14B Q4_K_M', 'Contexte 4K': '~9 Go', 'Contexte 32K': '~12 Go', 'Contexte 128K': '~18 Go' }, { 'Modèle': 'Mistral Small 3.1 24B Q4_K_M', 'Contexte 4K': '~14 Go', 'Contexte 32K': '~17 Go', 'Contexte 128K': '~24 Go' }, { 'Modèle': 'Llama 3.3 70B Q4_K_M', 'Contexte 4K': '~40 Go', 'Contexte 32K': '~45 Go', 'Contexte 128K': '~55 Go' }], columns: ['Modèle', 'Contexte 4K', 'Contexte 32K', 'Contexte 128K'], image: '/images/long-context-ram-scaling-en.svg', imageCaption: 'La RAM du cache KV évolue avec la longueur du contexte -- un modèle 7B en Q4_K_M nécessite ~6 Go à 4K, mais ~14 Go à 128K.' },
@@ -1780,7 +1910,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: '長コンテキストローカルLLM',
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: ['2026年6月の主要ローカルLLM——Qwen3、Gemma 3、Llama 3.1、Mistral Small 3.1——はすべて128Kトークンをネイティブサポートする。長コンテキストは標準機能になった。', '**ほとんどのユーザーへの推奨：Qwen3 14B（Q4_K_M）。** Apple M5 Proで約12 GB RAM使用、128Kを15-25トークン/秒で処理。**Qwen3はネイティブ日本語トークナイザーでLlamaより30-40%効率的。** 8 GBマシンにはQwen3 4B。', 'RAMはコンテキスト長とモデルサイズ両方に比例して増加。7BモデルQ4_K_Mは4Kで~6 GB、128Kで~14 GB必要。Apple M5 Proの統合メモリ（36-64 GB、307 GB/s）は128K推論に最適。', '"中間迷子"問題は依然として存在：LLMはコンテキスト中間の詳細を見落とす。対策：重要情報をプロンプト冒頭に置き、検索にはRAGを使用する。', '長いコンテキストは完全なドキュメントの総合分析に優れる。RAGは多数のドキュメントの検索タスクに優れる。タスク種別で選択する。', 'Ollamaのデフォルトは2048トークン——128Kではない。ModelfileでPARAMETER num_ctx 32768を明示的に設定すること。'] },
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [{ type: 'one-sentence', text: '2026年の主要なローカルLLMはすべて128Kトークンをネイティブでサポート。Qwen3 14B Q4_K_Mは~12 GB RAMで15〜25トークン/秒 — ただしOllamaのデフォルトは2048トークンなので、Modelfileで必ずnum_ctxを明示的に設定すること。' }, { type: 'plain-terms', text: 'コンテキスト長とは、AIが一度に「見ることができる」テキストの量です。128Kトークン ≈ 96,000語 — 小説1冊分に相当します。落とし穴：非常に長い入力の中間に埋め込まれた情報に対してモデルの精度が低下します（「Lost in the Middle」と呼ばれる現象）。最も重要な情報をプロンプトの冒頭に置くようにしましょう。' }], items: ['2026年6月の主要ローカルLLM——Qwen3、Gemma 3、Llama 3.1、Mistral Small 3.1——はすべて128Kトークンをネイティブサポートする。長コンテキストは標準機能になった。', '**ほとんどのユーザーへの推奨：Qwen3 14B（Q4_K_M）。** Apple M5 Proで約12 GB RAM使用、128Kを15-25トークン/秒で処理。**Qwen3はネイティブ日本語トークナイザーでLlamaより30-40%効率的。** 8 GBマシンにはQwen3 4B。', 'RAMはコンテキスト長とモデルサイズ両方に比例して増加。7BモデルQ4_K_Mは4Kで~6 GB、128Kで~14 GB必要。Apple M5 Proの統合メモリ（36-64 GB、307 GB/s）は128K推論に最適。', '"中間迷子"問題は依然として存在：LLMはコンテキスト中間の詳細を見落とす。対策：重要情報をプロンプト冒頭に置き、検索にはRAGを使用する。', '長いコンテキストは完全なドキュメントの総合分析に優れる。RAGは多数のドキュメントの検索タスクに優れる。タスク種別で選択する。', 'Ollamaのデフォルトは2048トークン——128Kではない。ModelfileでPARAMETER num_ctx 32768を明示的に設定すること。'] },
         whatIsContext: { id: 'what-is-context-length', title: 'コンテキスト長とは何か、なぜローカルLLMにとって重要なのか？', content: ['**コンテキスト長は、モデルが1回の推論呼び出しで処理できる最大トークン数です。入力（ドキュメント、会話履歴、システムプロンプト）と出力（モデルの応答）の合計サイズです。** 1トークン ≈ 0.75英単語；128Kトークン ≈ 96,000語。', 'ローカルLLMのユースケースでは、長いコンテキストにより：本全体の要約、コードベース全体を1つのプロンプトで分析、数時間の会議文字起こし処理、以前のコンテキストを失わずに長い会話履歴を維持することが可能になります。', '重要な区別は、広告されたコンテキスト長（アーキテクチャがサポートするもの）と実用的なコンテキスト長（品質が維持される範囲）の差です。技術的に128Kをサポートするモデルでも、100Kトークン付近では品質が低下する場合があります。'] },
         which128k: { id: 'models-128k', title: '2026年に128KトークンのコンテキストをサポートするローカルLLMは？', rows: [{ 'モデル': 'Qwen3 14B Q4_K_M', 'コンテキストウィンドウ': '128K', '実用的な上限': '~32-64K 信頼性あり', 'Ollamaコマンド': 'ollama run qwen3:14b' }, { 'モデル': 'Qwen3 4B Q4_K_M', 'コンテキストウィンドウ': '128K', '実用的な上限': '~16-32K 信頼性あり', 'Ollamaコマンド': 'ollama run qwen3:4b' }, { 'モデル': 'Gemma 3 12B Q4_K_M', 'コンテキストウィンドウ': '128K', '実用的な上限': '~32K 信頼性あり', 'Ollamaコマンド': 'ollama run gemma3:12b' }, { 'モデル': 'Llama 3.1 8B Q4_K_M', 'コンテキストウィンドウ': '128K', '実用的な上限': '~32K 信頼性あり', 'Ollamaコマンド': 'ollama run llama3.1:8b' }, { 'モデル': 'Llama 3.2 3B', 'コンテキストウィンドウ': '128K', '実用的な上限': '~16K 信頼性あり', 'Ollamaコマンド': 'ollama run llama3.2:3b' }, { 'モデル': 'Mistral Small 3.1 24B', 'コンテキストウィンドウ': '128K', '実用的な上限': '~32K 信頼性あり', 'Ollamaコマンド': 'ollama run mistral-small3.1' }, { 'モデル': 'Qwen3 8B Q4_K_M', 'コンテキストウィンドウ': '128K', '実用的な上限': '~32K 信頼性あり', 'Ollamaコマンド': 'ollama run qwen3:8b' }, { 'モデル': 'DeepSeek-R1 14B Q4_K_M', 'コンテキストウィンドウ': '128K', '実用的な上限': '~32K 信頼性あり', 'Ollamaコマンド': 'ollama run deepseek-r1:14b' }], columns: ['モデル', 'コンテキストウィンドウ', '実用的な上限', 'Ollamaコマンド'], image: '/images/long-context-models-comparison-en.svg', imageCaption: '2026年の128Kコンテキスト対応ローカルLLM。Qwen3はネイティブ日本語サポートでLlamaより30-40%効率的。16 GBマシンにはQwen3 14Bを推奨。' },
         ramForLongContext: { id: 'ram-long-context', title: '長いコンテキストの処理にはどれくらいのRAMが必要か？', content: ['**RAMの使用量はモデルサイズとコンテキスト長の両方に比例して増加します。** KVキャッシュはすべての処理済みトークンのAttention状態を格納し、コンテキスト長に線形に増加します。', 'Q4_K_Mの7Bモデルで4Kコンテキストは~6 GB RAMを使用。同じモデルで32Kコンテキストは~8-9 GB。128Kコンテキストでは~12-16 GB。'], rows: [{ 'モデル': 'Llama 3.3 8B Q4_K_M', '4Kコンテキスト': '~6 GB', '32Kコンテキスト': '~9 GB', '128Kコンテキスト': '~14 GB' }, { 'モデル': 'Qwen3 14B Q4_K_M', '4Kコンテキスト': '~9 GB', '32Kコンテキスト': '~12 GB', '128Kコンテキスト': '~18 GB' }, { 'モデル': 'Mistral Small 3.1 24B Q4_K_M', '4Kコンテキスト': '~14 GB', '32Kコンテキスト': '~17 GB', '128Kコンテキスト': '~24 GB' }, { 'モデル': 'Llama 3.3 70B Q4_K_M', '4Kコンテキスト': '~40 GB', '32Kコンテキスト': '~45 GB', '128Kコンテキスト': '~55 GB' }], columns: ['モデル', '4Kコンテキスト', '32Kコンテキスト', '128Kコンテキスト'], image: '/images/long-context-ram-scaling-en.svg', imageCaption: 'KVキャッシュのRAMはコンテキスト長とともに増加。Q4_K_Mの7Bモデルは4Kで~6 GB、128Kで~14 GB必要。' },
@@ -1983,6 +2113,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026년 모든 주요 로컬 LLM은 128K 토큰을 기본 지원; Qwen3 14B Q4_K_M은 ~12 GB RAM에서 15–25 tok/s로 128K 처리 — 단, Ollama 기본값은 2048 토큰이므로 항상 Modelfile에서 num_ctx를 명시적으로 설정해야 합니다.' },
+            { type: 'plain-terms', text: '컨텍스트 길이는 AI가 한 번에 "볼 수 있는" 텍스트의 양입니다. 128K 토큰 ≈ 96,000 단어 — 소설 한 권 분량입니다. 문제점: 매우 긴 입력의 중간에 묻힌 정보에서 모델 정확도가 떨어집니다("Lost in the Middle"). 가장 중요한 정보를 프롬프트 앞부분에 배치하세요.' },
+          ],
           items: [
             '2026년 6월 주요 로컬 LLM — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — 모두 128K 토큰을 기본 지원합니다. 긴 컨텍스트는 이제 표준이 되었습니다.',
             '**대부분의 사용자 추천: Qwen3 14B (Q4_K_M).** Apple M5 Pro에서 약 12 GB RAM으로 128K를 15-25 토큰/초로 처리. 8 GB 장치: Qwen3 4B — 동일한 컨텍스트 길이, 낮은 품질, 완전히 사용 가능.',

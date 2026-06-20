@@ -47,6 +47,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Best laptop for local LLMs in June 2026: MacBook Pro M5 Pro ($2,199, 24 GB unified memory, 45–60 tok/s on Qwen3 14B). Best Windows: RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s). Budget Windows: RTX 5070 Ti laptop (~$2,499, 12 GB VRAM, ~50 tok/s).' },
+            { type: 'plain-terms', text: 'For laptop AI: Mac uses unified memory (shared by CPU+GPU), so 24 GB can load larger models than a Windows laptop\'s 16 GB VRAM. Windows laptops with NVIDIA RTX GPUs are faster when the model fits in VRAM (16 GB handles 14B models), but are louder and run hotter under AI load.' },
+          ],
           items: [
             '**Winner: MacBook Pro M5 Pro ($2,199)** — 24 GB unified memory, silent, 45–60 tok/s on Qwen3 14B Q4.',
             '**Best Windows: RTX 5080 laptop (~$2,799)** — 16 GB GDDR7 VRAM, ~70 tok/s sustained on 7B models.',
@@ -310,6 +314,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Mejor laptop para LLMs locales en junio de 2026: MacBook Pro M5 Pro ($2.199, 24 GB de memoria unificada, 45–60 tok/s en Qwen3 14B). Mejor Windows: laptop RTX 5080 (~$2.799, 16 GB VRAM, ~70 tok/s). Windows económico: laptop RTX 5070 Ti (~$2.499, 12 GB VRAM, ~50 tok/s).' },
+            { type: 'plain-terms', text: 'Para IA en laptop: el Mac usa memoria unificada (compartida por CPU+GPU), por lo que 24 GB puede cargar modelos más grandes que los 16 GB VRAM de un laptop Windows. Los laptops Windows con GPU NVIDIA RTX son más rápidos cuando el modelo cabe en la VRAM (16 GB para modelos 14B), pero son más ruidosos y generan más calor bajo carga de IA.' },
+          ],
           items: [
             '**Ganadora: MacBook Pro M5 Pro ($2,199)** — 24 GB de memoria unificada, silenciosa, 45–60 tok/s en Qwen3 14B Q4.',
             '**Mejor Windows: laptop RTX 5080 (~$2,799)** — 16 GB de VRAM GDDR7, ~70 tok/s sostenidos en modelos de 7B.',
@@ -517,6 +525,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أفضل لابتوب للنماذج اللغوية المحلية في يونيو 2026: MacBook Pro M5 Pro (2,199 دولار، 24 جيجابايت ذاكرة موحدة، 45–60 رمزاً/ثانية على Qwen3 14B). أفضل Windows: لابتوب RTX 5080 (~2,799 دولار، 16 جيجابايت VRAM، ~70 رمزاً/ثانية). الخيار الاقتصادي: لابتوب RTX 5070 Ti (~2,499 دولار، 12 جيجابايت VRAM، ~50 رمزاً/ثانية).' },
+            { type: 'plain-terms', text: 'للذكاء الاصطناعي على اللابتوب: يستخدم Mac ذاكرة موحدة (مشتركة بين CPU+GPU)، لذا يمكن لـ 24 جيجابايت تحميل نماذج أكبر مما تستوعبه 16 جيجابايت VRAM في لابتوب Windows. لابتوبات Windows مع GPU NVIDIA RTX أسرع عندما يتناسب النموذج مع VRAM (16 جيجابايت لنماذج 14B)، لكنها أعلى صوتاً وأكثر سخونة تحت حمل الذكاء الاصطناعي.' },
+          ],
           items: [
             '**الفائز: MacBook Pro M5 Pro ($2,199)** — ذاكرة موحدة 24 GB، صامت، 45–60 tok/s على Qwen3 14B بتكميم Q4.',
             '**أفضل خيار Windows: لابتوب RTX 5080 (~$2,799)** — 16 GB GDDR7 VRAM، ~70 tok/s مستدامة على نماذج 7B.',
@@ -725,6 +737,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Melhor laptop para LLMs locais em junho de 2026: MacBook Pro M5 Pro (US$2.199, 24 GB de memória unificada, 45–60 tok/s no Qwen3 14B). Melhor Windows: laptop RTX 5080 (~US$2.799, 16 GB VRAM, ~70 tok/s). Windows econômico: laptop RTX 5070 Ti (~US$2.499, 12 GB VRAM, ~50 tok/s).' },
+            { type: 'plain-terms', text: 'Para IA em laptop: o Mac usa memória unificada (compartilhada por CPU+GPU), então 24 GB consegue carregar modelos maiores do que os 16 GB VRAM de um laptop Windows. Laptops Windows com GPU NVIDIA RTX são mais rápidos quando o modelo cabe na VRAM (16 GB para modelos 14B), mas são mais barulhentos e esquentam mais sob carga de IA.' },
+          ],
           items: [
             '**Vencedor: MacBook Pro M5 Pro (US$ 2.199)** — 24 GB de memória unificada, silencioso, 45–60 tok/s no Qwen3 14B Q4.',
             '**Melhor Windows: notebook RTX 5080 (~US$ 2.799)** — 16 GB de VRAM GDDR7, ~70 tok/s sustentados em modelos 7B.',
@@ -932,6 +948,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Bestes Laptop für lokale LLMs im Juni 2026: MacBook Pro M5 Pro (2.199 $, 24 GB Unified Memory, 45–60 Tok/s bei Qwen3 14B). Bestes Windows-Gerät: RTX-5080-Laptop (~2.799 $, 16 GB VRAM, ~70 Tok/s). Günstiges Windows: RTX-5070-Ti-Laptop (~2.499 $, 12 GB VRAM, ~50 Tok/s).' },
+            { type: 'plain-terms', text: 'Beim Laptop-KI gilt: Mac nutzt Unified Memory (von CPU+GPU geteilt), sodass 24 GB größere Modelle lädt als die 16 GB VRAM eines Windows-Laptops. Windows-Laptops mit NVIDIA RTX GPUs sind schneller, wenn das Modell in den VRAM passt (16 GB für 14B-Modelle), aber lauter und heißer unter KI-Last.' },
+          ],
           items: [
             '**Sieger: MacBook Pro M5 Pro ($2,199)** — 24 GB Unified Memory, lautlos, 45–60 tok/s bei Qwen3 14B Q4.',
             '**Beste Windows-Wahl: RTX 5080 Laptop (~$2,799)** — 16 GB GDDR7 VRAM, ~70 tok/s dauerhaft bei 7B-Modellen.',
@@ -1138,6 +1158,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Meilleur laptop pour les LLM locaux en juin 2026 : MacBook Pro M5 Pro (2 199 $, 24 Go de mémoire unifiée, 45–60 tok/s sur Qwen3 14B). Meilleur Windows : laptop RTX 5080 (~2 799 $, 16 Go VRAM, ~70 tok/s). Windows entrée de gamme : laptop RTX 5070 Ti (~2 499 $, 12 Go VRAM, ~50 tok/s).' },
+            { type: 'plain-terms', text: 'Pour l\'IA sur laptop : le Mac utilise la mémoire unifiée (partagée entre CPU+GPU), donc 24 Go peut charger des modèles plus grands que les 16 Go VRAM d\'un laptop Windows. Les laptops Windows avec GPU NVIDIA RTX sont plus rapides quand le modèle tient en VRAM (16 Go pour les 14B), mais sont plus bruyants et plus chauds sous charge IA.' },
+          ],
           items: [
             '**Gagnant : MacBook Pro M5 Pro ($2,199)** — 24 GB de mémoire unifiée, silencieux, 45–60 tok/s sur Qwen3 14B Q4.',
             '**Meilleur Windows : ordinateur portable RTX 5080 (~$2,799)** — 16 GB VRAM GDDR7, ~70 tok/s soutenus sur les modèles 7B.',
@@ -1344,6 +1368,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年6月のローカルLLM向けベストノートPC：MacBook Pro M5 Pro（2,199ドル、24 GBユニファイドメモリ、Qwen3 14B Q4で45〜60トークン/秒）。ベストWindows：RTX 5080ノートPC（約2,799ドル、16 GB VRAM、約70トークン/秒）。低価格Windows：RTX 5070 Tiノートpc（約2,499ドル、12 GB VRAM、約50トークン/秒）。' },
+            { type: 'plain-terms', text: 'ノートPCのAIについて：Macはユニファイドメモリ（CPU+GPU共有）を使うため、24 GBはWindowsノートPCの16 GB VRAMより大きなモデルを読み込めます。NVIDIA RTX GPUを搭載したWindowsノートPCはモデルがVRAMに収まる場合（16 GBで14Bモデル）より速いですが、AI処理中はうるさく熱くなります。' },
+          ],
           items: [
             '**勝者: MacBook Pro M5 Pro($2,199)** ― 24 GB統合メモリ、静音、Qwen3 14B Q4で45～60 tok/s。',
             '**Windows最適解: RTX 5080ノート(～$2,799)** ― 16 GB GDDR7 VRAM、7Bモデルで持続～70 tok/s。',
@@ -1550,6 +1578,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年6月本地LLM最佳笔记本：MacBook Pro M5 Pro（$2,199，24 GB统一内存，Qwen3 14B Q4达45–60 tok/s）。最佳Windows：RTX 5080笔记本（约$2,799，16 GB VRAM，约70 tok/s）。低预算Windows：RTX 5070 Ti笔记本（约$2,499，12 GB VRAM，约50 tok/s）。' },
+            { type: 'plain-terms', text: '笔记本AI方面：Mac使用统一内存（CPU+GPU共享），24 GB能加载比Windows笔记本16 GB VRAM更大的模型。搭载NVIDIA RTX GPU的Windows笔记本在模型能装入VRAM时（16 GB处理14B模型）速度更快，但在AI负载下噪音更大、更热。' },
+          ],
           items: [
             '**冠军: MacBook Pro M5 Pro ($2,199)**——24 GB统一内存、静音，在Q4量化的Qwen3 14B上45–60 tok/s。',
             '**最佳Windows: RTX 5080笔记本 (~$2,799)**——16 GB GDDR7 VRAM，7B模型上持续~70 tok/s。',
@@ -1756,6 +1788,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     tldr: {
       id: 'key-takeaways',
       isTldr: true,
+      snippetBlocks: [
+        { type: 'one-sentence', text: '2026년 6월 로컬 LLM 최고 노트북: MacBook Pro M5 Pro($2,199, 24 GB 통합 메모리, Qwen3 14B Q4에서 45–60 tok/s). 최고 Windows: RTX 5080 노트북(~$2,799, 16 GB VRAM, ~70 tok/s). 저예산 Windows: RTX 5070 Ti 노트북(~$2,499, 12 GB VRAM, ~50 tok/s).' },
+        { type: 'plain-terms', text: '노트북 AI의 경우: Mac은 통합 메모리(CPU+GPU 공유)를 사용하므로 24 GB가 Windows 노트북의 16 GB VRAM보다 더 큰 모델을 로드할 수 있습니다. NVIDIA RTX GPU를 탑재한 Windows 노트북은 모델이 VRAM에 맞을 때(16 GB로 14B 모델) 더 빠르지만, AI 부하 시 소음이 크고 더 뜨거워집니다.' },
+      ],
       items: [
         '**1위: MacBook Pro M5 Pro ($2,199)** — 24 GB 통합 메모리, 무소음, Qwen3 14B Q4에서 45~60 tok/s.',
         '**최고의 Windows: RTX 5080 노트북 (~$2,799)** — 16 GB GDDR7 VRAM, 7B 모델에서 지속 ~70 tok/s.',

@@ -40,10 +40,124 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Frequently Asked Questions', anchor: '#common-questions' },
         { label: 'Sources', anchor: '#sources' },
       ],
+      quickAnswerTop: {
+        en: {
+          question: 'What is the best local LLM for a beginner with 4–8 GB RAM in 2026?',
+          answer: 'The best beginner local LLM on 4 GB RAM is Llama 3.2 3B — 2 GB download, strong instruction-following, runs via `ollama run llama3.2:3b`. On 8 GB RAM, Phi-4 Mini 3.8B offers better reasoning (68% MMLU, 70% HumanEval). All five top picks install with one Ollama command and need no GPU.',
+          bullets: [
+            '→ Llama 3.2 3B: best overall, 4 GB RAM, 2 GB download — start here',
+            '→ Phi-4 Mini 3.8B: best for low RAM (2.5 GB RAM, 68% MMLU, 70% HumanEval)',
+            '→ Gemma 3 2B: fastest 2B model, 40–60 tok/s on CPU, 128K context',
+            '→ Mistral Small v0.3: best 7B all-rounder, Apache 2.0 licence',
+            '→ Qwen3 7B: best for multilingual + coding, 29 languages natively',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        de: {
+          question: 'Was ist das beste lokale LLM für Einsteiger mit 4–8 GB RAM im Jahr 2026?',
+          answer: 'Das beste Einsteiger-LLM mit 4 GB RAM ist Llama 3.2 3B — 2 GB Download, hervorragendes Instruction-Following, läuft über `ollama run llama3.2:3b`. Mit 8 GB RAM bietet Phi-4 Mini 3.8B besseres Reasoning (68 % MMLU, 70 % HumanEval). Alle fünf Top-Empfehlungen installieren sich mit einem Ollama-Befehl und benötigen keine GPU.',
+          bullets: [
+            '→ Llama 3.2 3B: bestes Gesamtpaket, 4 GB RAM, 2 GB Download — hier anfangen',
+            '→ Phi-4 Mini 3.8B: beste Wahl bei wenig RAM (2,5 GB RAM, 68 % MMLU, 70 % HumanEval)',
+            '→ Gemma 3 2B: schnellstes 2B-Modell, 40–60 Tok/s auf CPU, 128K Kontext',
+            '→ Mistral Small v0.3: bester 7B-Allrounder, Apache-2.0-Lizenz',
+            '→ Qwen3 7B: bestes für Mehrsprachigkeit und Coding, 29 Sprachen nativ',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        fr: {
+          question: 'Quel est le meilleur LLM local pour un débutant avec 4–8 Go de RAM en 2026 ?',
+          answer: 'Le meilleur LLM local pour débutants avec 4 Go de RAM est Llama 3.2 3B — 2 Go de téléchargement, excellent suivi d\'instructions, fonctionne via `ollama run llama3.2:3b`. Avec 8 Go de RAM, Phi-4 Mini 3.8B offre un meilleur raisonnement (68 % MMLU, 70 % HumanEval). Les cinq meilleures options s\'installent en une commande Ollama et ne nécessitent pas de GPU.',
+          bullets: [
+            '→ Llama 3.2 3B : meilleur dans l\'ensemble, 4 Go RAM, 2 Go de téléchargement — commencez ici',
+            '→ Phi-4 Mini 3.8B : meilleur pour peu de RAM (2,5 Go RAM, 68 % MMLU, 70 % HumanEval)',
+            '→ Gemma 3 2B : modèle 2B le plus rapide, 40–60 tok/s sur CPU, contexte 128K',
+            '→ Mistral Small v0.3 : meilleur 7B polyvalent, licence Apache 2.0',
+            '→ Qwen3 7B : meilleur pour le multilingue + code, 29 langues nativement',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        ja: {
+          question: '2026年に4〜8 GB RAMの初心者に最適なローカルLLMは何ですか？',
+          answer: 'RAM 4 GBの初心者に最適なローカルLLMはLlama 3.2 3B — 2 GBのダウンロード、優れた指示追従能力、`ollama run llama3.2:3b`で実行。RAM 8 GBではPhi-4 Mini 3.8Bがより優れた推論能力を発揮（MMLU 68%、HumanEval 70%）。5つのトップ選択肢はすべてOllamaの1コマンドでインストールでき、GPUは不要です。',
+          bullets: [
+            '→ Llama 3.2 3B: 総合最優秀、RAM 4 GB、2 GBダウンロード — ここから始めよう',
+            '→ Phi-4 Mini 3.8B: 低RAMに最適（RAM 2.5 GB、MMLU 68%、HumanEval 70%）',
+            '→ Gemma 3 2B: 最速の2Bモデル、CPU上で40〜60トークン/秒、128Kコンテキスト',
+            '→ Mistral Small v0.3: 最高の7Bオールラウンダー、Apache 2.0ライセンス',
+            '→ Qwen3 7B: 多言語・コーディングに最適、29言語をネイティブサポート',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        zh: {
+          question: '2026年4–8 GB内存的初学者最佳本地LLM是什么？',
+          answer: '4 GB内存初学者最佳选择是Llama 3.2 3B——2 GB下载，指令遵循能力强，通过`ollama run llama3.2:3b`运行。8 GB内存上，Phi-4 Mini 3.8B提供更强推理能力（MMLU 68%，HumanEval 70%）。所有五个推荐项均可用一条Ollama命令安装，无需GPU。',
+          bullets: [
+            '→ Llama 3.2 3B：综合最佳，4 GB内存，2 GB下载——从这里开始',
+            '→ Phi-4 Mini 3.8B：低内存最佳（2.5 GB内存，MMLU 68%，HumanEval 70%）',
+            '→ Gemma 3 2B：最快的2B模型，CPU上40–60 tok/s，128K上下文',
+            '→ Mistral Small v0.3：最佳7B全能模型，Apache 2.0许可证',
+            '→ Qwen3 7B：多语言+编程最佳，原生支持29种语言',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        es: {
+          question: '¿Cuál es el mejor LLM local para principiantes con 4–8 GB de RAM en 2026?',
+          answer: 'El mejor LLM local para principiantes con 4 GB de RAM es Llama 3.2 3B — descarga de 2 GB, excelente seguimiento de instrucciones, funciona con `ollama run llama3.2:3b`. Con 8 GB de RAM, Phi-4 Mini 3.8B ofrece mejor razonamiento (68 % MMLU, 70 % HumanEval). Las cinco mejores opciones se instalan con un comando Ollama y no necesitan GPU.',
+          bullets: [
+            '→ Llama 3.2 3B: mejor en general, 4 GB RAM, descarga de 2 GB — empieza aquí',
+            '→ Phi-4 Mini 3.8B: mejor para poca RAM (2,5 GB RAM, 68 % MMLU, 70 % HumanEval)',
+            '→ Gemma 3 2B: modelo 2B más rápido, 40–60 tok/s en CPU, contexto 128K',
+            '→ Mistral Small v0.3: mejor todo terreno 7B, licencia Apache 2.0',
+            '→ Qwen3 7B: mejor para multilingüe + código, 29 idiomas de forma nativa',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        pt: {
+          question: 'Qual é o melhor LLM local para iniciantes com 4–8 GB de RAM em 2026?',
+          answer: 'O melhor LLM local para iniciantes com 4 GB de RAM é Llama 3.2 3B — download de 2 GB, excelente seguimento de instruções, roda via `ollama run llama3.2:3b`. Com 8 GB de RAM, Phi-4 Mini 3.8B oferece melhor raciocínio (68% MMLU, 70% HumanEval). As cinco melhores opções instalam-se com um comando Ollama e não precisam de GPU.',
+          bullets: [
+            '→ Llama 3.2 3B: melhor no geral, 4 GB RAM, download de 2 GB — comece aqui',
+            '→ Phi-4 Mini 3.8B: melhor para pouca RAM (2,5 GB RAM, 68% MMLU, 70% HumanEval)',
+            '→ Gemma 3 2B: modelo 2B mais rápido, 40–60 tok/s em CPU, contexto 128K',
+            '→ Mistral Small v0.3: melhor 7B completo, licença Apache 2.0',
+            '→ Qwen3 7B: melhor para multilíngue + código, 29 idiomas nativos',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        ar: {
+          question: 'ما هو أفضل LLM محلي للمبتدئين مع 4–8 جيجابايت رام في عام 2026؟',
+          answer: 'أفضل نموذج LLM محلي للمبتدئين مع 4 جيجابايت رام هو Llama 3.2 3B — تنزيل 2 جيجابايت، اتباع ممتاز للتعليمات، يعمل عبر `ollama run llama3.2:3b`. مع 8 جيجابايت رام، يوفر Phi-4 Mini 3.8B استدلالاً أفضل (68% MMLU، 70% HumanEval). جميع الخيارات الخمسة الأفضل تُثبَّت بأمر Ollama واحد ولا تحتاج إلى GPU.',
+          bullets: [
+            '→ Llama 3.2 3B: الأفضل شمولاً، 4 جيجابايت رام، تنزيل 2 جيجابايت — ابدأ من هنا',
+            '→ Phi-4 Mini 3.8B: الأفضل مع قليل من الرام (2.5 جيجابايت رام، 68% MMLU، 70% HumanEval)',
+            '→ Gemma 3 2B: أسرع نموذج 2B، 40–60 رمزاً/ثانية على CPU، سياق 128K',
+            '→ Mistral Small v0.3: أفضل نموذج 7B للأغراض العامة، رخصة Apache 2.0',
+            '→ Qwen3 7B: الأفضل للتعدد اللغوي والبرمجة، 29 لغة بشكل أصلي',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        ko: {
+          question: '2026년 4–8 GB RAM 초보자에게 최고의 로컬 LLM은?',
+          answer: '4 GB RAM 초보자에게 최고의 로컬 LLM은 Llama 3.2 3B — 2 GB 다운로드, 우수한 명령 수행, `ollama run llama3.2:3b`로 실행. 8 GB RAM에서는 Phi-4 Mini 3.8B가 더 나은 추론(MMLU 68%, HumanEval 70%)을 제공합니다. 5가지 추천 모두 한 줄의 Ollama 명령으로 설치, GPU 불필요.',
+          bullets: [
+            '→ Llama 3.2 3B: 전체 최고, 4 GB RAM, 2 GB 다운로드 — 여기서 시작',
+            '→ Phi-4 Mini 3.8B: 저RAM 최적(2.5 GB RAM, MMLU 68%, HumanEval 70%)',
+            '→ Gemma 3 2B: 가장 빠른 2B 모델, CPU에서 40–60 tok/s, 128K 컨텍스트',
+            '→ Mistral Small v0.3: 최고 7B 올라운더, Apache 2.0 라이선스',
+            '→ Qwen3 7B: 다국어+코딩 최적, 29개 언어 기본 지원',
+          ],
+          updatedDate: '2026-04-01',
+        },
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'The best beginner local LLMs in 2026 are Llama 3.2 3B (4 GB RAM, best overall), Phi-4 Mini 3.8B (2.5 GB RAM, best reasoning at low RAM), and Gemma 3 2B (fastest at 40–60 tok/s on CPU) — all installed with one Ollama command, no GPU needed.' },
+            { type: 'plain-terms', text: 'These models run entirely on your laptop or desktop using normal RAM — no cloud subscription, no GPU required. "3B" or "7B" means billions of parameters (the model\'s size). Smaller = faster and uses less RAM. Bigger = smarter but needs more RAM. Start with Llama 3.2 3B: 2 GB download, runs on 4 GB RAM, surprisingly capable.' },
+          ],
           items: [
             'Best overall beginner model: **Llama 3.2 3B** -- 2 GB download, runs on 4 GB RAM, strong instruction-following for its size.',
             'Best for low RAM (4 GB or less): **Phi-4 Mini 3.8B** -- Microsoft\'s compact model excels at reasoning and coding tasks (68% MMLU, 70% HumanEval at just 2.5 GB RAM).',
@@ -411,6 +525,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los mejores LLMs locales para principiantes en 2026 son Llama 3.2 3B (4 GB RAM, mejor general), Phi-4 Mini 3.8B (2,5 GB RAM, mejor razonamiento con poca RAM) y Gemma 3 2B (el más rápido a 40–60 tok/s en CPU) — todos se instalan con un comando Ollama, sin GPU.' },
+            { type: 'plain-terms', text: 'Estos modelos se ejecutan completamente en tu laptop o escritorio usando RAM normal — sin suscripción a la nube, sin GPU. "3B" o "7B" significa miles de millones de parámetros (el tamaño del modelo). Más pequeño = más rápido y usa menos RAM. Más grande = más inteligente pero necesita más RAM. Empieza con Llama 3.2 3B: descarga de 2 GB, funciona con 4 GB de RAM.' },
+          ],
           items: [
             'Mejor modelo para principiantes en general: **Llama 3.2 3B** -- 2 GB de descarga, funciona con 4 GB de RAM, excelente seguimiento de instrucciones para su tamaño.',
             'Mejor para poca RAM (4 GB o menos): **Phi-4 Mini 3.8B** -- el modelo compacto de Microsoft destaca en razonamiento y codificación (68% MMLU, 70% HumanEval con solo 2,5 GB de RAM).',
@@ -777,6 +895,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أفضل نماذج LLM المحلية للمبتدئين في 2026 هي Llama 3.2 3B (4 جيجابايت رام، الأفضل شمولاً)، وPhi-4 Mini 3.8B (2.5 جيجابايت رام، أفضل استدلال مع رام قليل)، وGemma 3 2B (الأسرع بـ 40–60 رمزاً/ثانية على CPU) — جميعها تُثبَّت بأمر Ollama واحد، دون GPU.' },
+            { type: 'plain-terms', text: 'تعمل هذه النماذج كلياً على جهاز الكمبيوتر المحمول أو المكتبي باستخدام الذاكرة العشوائية العادية — دون اشتراك سحابي أو GPU. "3B" أو "7B" تعني مليارات المعاملات (حجم النموذج). أصغر = أسرع ويستخدم ذاكرة أقل. أكبر = أذكى لكن يحتاج ذاكرة أكثر. ابدأ بـ Llama 3.2 3B: تنزيل 2 جيجابايت، يعمل بذاكرة 4 جيجابايت.' },
+          ],
           items: [
             'أفضل نموذج للمبتدئين عموماً: **Llama 3.2 3B** -- تنزيل 2 GB، يعمل بذاكرة 4 GB من RAM، اتباع ممتاز للتعليمات بالنسبة لحجمه.',
             'الأفضل للذاكرة المنخفضة (4 GB أو أقل): **Phi-4 Mini 3.8B** -- يتفوق النموذج المدمج من Microsoft في الاستدلال والبرمجة (68% MMLU، 70% HumanEval بذاكرة 2.5 GB فقط من RAM).',
@@ -1142,6 +1264,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os melhores LLMs locais para iniciantes em 2026 são Llama 3.2 3B (4 GB RAM, melhor no geral), Phi-4 Mini 3.8B (2,5 GB RAM, melhor raciocínio com pouca RAM) e Gemma 3 2B (mais rápido a 40–60 tok/s na CPU) — todos instalados com um comando Ollama, sem GPU.' },
+            { type: 'plain-terms', text: 'Estes modelos rodam completamente no seu laptop ou desktop usando RAM normal — sem assinatura em nuvem, sem GPU necessária. "3B" ou "7B" significa bilhões de parâmetros (o tamanho do modelo). Menor = mais rápido e usa menos RAM. Maior = mais inteligente mas precisa de mais RAM. Comece com Llama 3.2 3B: download de 2 GB, roda com 4 GB de RAM.' },
+          ],
           items: [
             'Melhor modelo para iniciantes em geral: **Llama 3.2 3B** -- download de 2 GB, funciona com 4 GB de RAM, excelente seguimento de instruções para o seu tamanho.',
             'Melhor para pouca RAM (4 GB ou menos): **Phi-4 Mini 3.8B** -- o modelo compacto da Microsoft se destaca em raciocínio e codificação (68% MMLU, 70% HumanEval com apenas 2,5 GB de RAM).',
@@ -1270,6 +1396,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Die besten lokalen LLMs für Einsteiger 2026 sind Llama 3.2 3B (4 GB RAM, bestes Gesamtpaket), Phi-4 Mini 3.8B (2,5 GB RAM, bestes Reasoning bei wenig RAM) und Gemma 3 2B (schnellstes mit 40–60 Tok/s auf CPU) — alle mit einem Ollama-Befehl installierbar, ohne GPU.' },
+            { type: 'plain-terms', text: 'Diese Modelle laufen vollständig auf Ihrem Laptop oder Desktop mit normalem RAM — kein Cloud-Abo, keine GPU erforderlich. „3B" oder „7B" steht für Milliarden Parameter (die Modellgröße). Kleiner = schneller und weniger RAM-Bedarf. Größer = intelligenter, aber mehr RAM nötig. Beginnen Sie mit Llama 3.2 3B: 2 GB Download, läuft auf 4 GB RAM.' },
+          ],
           items: [
             'Bestes Einstiegsmodell insgesamt: **Llama 3.2 3B** – 2 GB Download, läuft auf 4 GB RAM, starke Anweisungsverarbeitung für seine Größe.',
             'Bestes Modell für wenig RAM (4 GB oder weniger): **Phi-4 Mini 3.8B** – Microsofts kompaktes Modell überzeugt bei Reasoning- und Coding-Aufgaben (68 % MMLU, 70 % HumanEval bei nur 2,5 GB RAM).',
@@ -1643,6 +1773,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Les meilleurs LLMs locaux pour débutants en 2026 sont Llama 3.2 3B (4 Go RAM, meilleur dans l\'ensemble), Phi-4 Mini 3.8B (2,5 Go RAM, meilleur raisonnement avec peu de RAM) et Gemma 3 2B (le plus rapide à 40–60 tok/s sur CPU) — tous installés avec une commande Ollama, sans GPU.' },
+            { type: 'plain-terms', text: 'Ces modèles s\'exécutent entièrement sur votre ordinateur portable ou de bureau avec de la RAM normale — sans abonnement cloud ni GPU requis. « 3B » ou « 7B » signifie des milliards de paramètres (la taille du modèle). Plus petit = plus rapide et moins de RAM. Plus grand = plus intelligent mais nécessite plus de RAM. Commencez avec Llama 3.2 3B : téléchargement de 2 Go, fonctionne avec 4 Go de RAM.' },
+          ],
           items: [
             'Meilleur modèle débutant : **Llama 3.2 3B** — 2 Go à télécharger, fonctionne avec 4 Go de RAM, excellente compréhension des instructions.',
             'Meilleur pour peu de RAM (4 Go ou moins) : **Phi-4 Mini 3.8B** — le modèle compact de Microsoft excelle en raisonnement et en code (68 % MMLU, 70 % HumanEval avec seulement 2.5 Go de RAM).',
@@ -2006,6 +2140,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年の初心者向けベストローカルLLMは、Llama 3.2 3B（4 GB RAM、総合最優秀）、Phi-4 Mini 3.8B（2.5 GB RAM、低RAMで最高の推論）、Gemma 3 2B（CPU上で40〜60トークン/秒、最速）の3つです — すべてOllamaの1コマンドでインストール可能、GPUは不要です。' },
+            { type: 'plain-terms', text: 'これらのモデルはすべて、通常のRAMを使ってノートPCまたはデスクトップで完全にローカル動作します — クラウドサブスクリプションもGPUも不要です。「3B」「7B」はパラメータ数（モデルのサイズ）を意味します。小さいほど高速でRAM消費が少なく、大きいほど賢いがRAMが多く必要です。まずLlama 3.2 3Bから始めましょう：2 GBダウンロード、4 GB RAMで動作します。' },
+          ],
           items: [
             '総合的に最良の入門モデル：**Llama 3.2 3B** — 2 GBダウンロード、4 GB RAMで動作、サイズに対して優れた指示追従性能。',
             '低RAM（4 GB以下）に最適：**Phi-4 Mini 3.8B** — Microsoftの小型モデルで推論・コーディングに強い（68% MMLU、70% HumanEval、わずか2.5 GB RAM）。',
@@ -2369,6 +2507,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年初学者最佳本地LLM是Llama 3.2 3B（4 GB内存，综合最佳）、Phi-4 Mini 3.8B（2.5 GB内存，低内存最强推理）和Gemma 3 2B（CPU上40–60 tok/s，最快）——均可用一条Ollama命令安装，无需GPU。' },
+            { type: 'plain-terms', text: '这些模型完全在您的笔记本电脑或台式机上使用普通内存运行——无需云订阅，无需GPU。"3B"或"7B"表示参数数量（模型大小）。越小越快，内存占用越少；越大越智能，但需要更多内存。从Llama 3.2 3B开始：2 GB下载，4 GB内存即可运行。' },
+          ],
           items: [
             '综合最佳入门模型：**Llama 3.2 3B** — 2 GB下载，运行于4 GB内存，指令遵循能力在同规格模型中表现优异。',
             '低内存（4 GB或以下）最佳选择：**Phi-4 Mini 3.8B** — 微软紧凑型模型，擅长推理和编程任务（68% MMLU、70% HumanEval，仅需2.5 GB内存）。',
@@ -2733,6 +2875,10 @@ schema: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026년 초보자를 위한 최고의 로컬 LLM은 Llama 3.2 3B(4 GB RAM, 전체 최고), Phi-4 Mini 3.8B(2.5 GB RAM, 저RAM에서 최고 추론), Gemma 3 2B(CPU에서 40–60 tok/s, 최속)입니다 — 모두 Ollama 명령 한 줄로 설치 가능, GPU 불필요.' },
+          { type: 'plain-terms', text: '이 모델들은 일반 RAM만 사용하여 노트북이나 데스크톱에서 완전히 로컬로 실행됩니다 — 클라우드 구독도, GPU도 필요 없습니다. "3B" 또는 "7B"는 파라미터 수(모델 크기)를 의미합니다. 작을수록 빠르고 RAM을 덜 씁니다. 클수록 더 스마트하지만 RAM이 더 필요합니다. Llama 3.2 3B로 시작하세요: 2 GB 다운로드, 4 GB RAM에서 실행됩니다.' },
+        ],
         items: [
           '전체 최고 입문 모델: **Llama 3.2 3B** -- 2 GB 다운로드, 4 GB RAM에서 실행, 크기 대비 우수한 명령 수행 능력.',
           '저용량 RAM(4 GB 이하) 최고: **Phi-4 Mini 3.8B** -- Microsoft의 소형 모델로 추론 및 코딩 작업에서 탁월한 성능 발휘 (68% MMLU, 70% HumanEval, 단 2.5 GB RAM).',

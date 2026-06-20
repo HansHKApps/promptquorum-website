@@ -61,6 +61,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple M5 Pro (64 GB) runs 8B models at 45–55 tok/s and 34B at 15–20 tok/s; M5 Max (128 GB) runs 70B at 12–18 tok/s — all at 25–70W with no VRAM limits thanks to unified memory.' },
+          { type: 'plain-terms', text: 'Unified memory means the CPU, GPU, and AI engine all share the same pool of memory — so a 128 GB Mac can use all 128 GB for a model, unlike a GPU which is capped at its VRAM (max 24 GB for RTX 4090). That\'s why Macs can run 70B-parameter models that no NVIDIA consumer GPU can fit.' },
+        ],
         items: [
           'Apple Silicon removes VRAM limits — all 32–128 GB unified memory available to models. RTX 4090 maxes out at 24GB discrete VRAM.',
           'M5 Pro (64GB) runs 8B models at 45–55 tok/s and 34B models at 15–20 tok/s. M5 Max (128GB) runs 70B models at 12–18 tok/s.',
@@ -341,6 +345,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'El Apple M5 Pro (64 GB) ejecuta modelos 8B a 45–55 tok/s y 34B a 15–20 tok/s; el M5 Max (128 GB) ejecuta 70B a 12–18 tok/s — todo a 25–70 W sin límites de VRAM gracias a la memoria unificada.' },
+          { type: 'plain-terms', text: 'La memoria unificada significa que CPU, GPU y motor IA comparten el mismo pool de memoria. Un Mac de 128 GB puede usar todo ese espacio para un modelo, a diferencia de una GPU limitada a su VRAM (máx. 24 GB para RTX 4090). Por eso los Macs pueden ejecutar modelos 70B que ninguna GPU NVIDIA de consumo puede alojar.' },
+        ],
         items: [
           'Apple Silicon elimina los límites de VRAM — toda la memoria unificada de 32–128 GB está disponible para los modelos. El RTX 4090 tiene un máximo de 24GB de VRAM discreta.',
           'M5 Pro (64GB) ejecuta modelos 8B a 45–55 tok/s y modelos 34B a 15–20 tok/s. M5 Max (128GB) ejecuta modelos 70B a 12–18 tok/s.',
@@ -615,6 +623,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple M5 Pro (64 جيجابايت) يُشغّل نماذج 8B بسرعة 45–55 رمزاً/ثانية و34B بسرعة 15–20 رمزاً/ثانية؛ M5 Max (128 جيجابايت) يُشغّل 70B بسرعة 12–18 رمزاً/ثانية — كل ذلك عند 25–70 واط بدون قيود VRAM بفضل الذاكرة الموحدة.' },
+          { type: 'plain-terms', text: 'الذاكرة الموحدة تعني أن وحدة المعالجة المركزية وبطاقة الرسومات ومحرك الذكاء الاصطناعي تشترك في نفس مجموعة الذاكرة. يمكن لجهاز Mac بسعة 128 جيجابايت استخدام الكل للنموذج، على عكس بطاقة الرسومات المحدودة بـ VRAM الخاصة بها (24 جيجابايت كحد أقصى لبطاقة RTX 4090). لهذا يمكن لأجهزة Mac تشغيل نماذج 70B التي لا تسعها أي بطاقة NVIDIA للمستهلكين.' },
+        ],
         items: [
           'يزيل Apple Silicon حدود VRAM — كامل الذاكرة الموحدة من 32–128 GB متاح للنماذج. يملك RTX 4090 حدًا أقصى 24GB من VRAM المنفصلة.',
           'يشغّل M5 Pro (64GB) نماذج 8B بسرعة 45–55 tok/s ونماذج 34B بسرعة 15–20 tok/s. ويشغّل M5 Max (128GB) نماذج 70B بسرعة 12–18 tok/s.',
@@ -894,6 +906,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'O Apple M5 Pro (64 GB) roda modelos 8B a 45–55 tok/s e 34B a 15–20 tok/s; o M5 Max (128 GB) roda 70B a 12–18 tok/s — tudo a 25–70W sem limites de VRAM graças à memória unificada.' },
+          { type: 'plain-terms', text: 'Memória unificada significa que CPU, GPU e motor de IA compartilham o mesmo pool de memória. Um Mac de 128 GB pode usar tudo isso para um modelo, ao contrário de uma GPU limitada à sua VRAM (máx. 24 GB para RTX 4090). Por isso os Macs podem rodar modelos de 70B que nenhuma GPU NVIDIA para consumidor consegue comportar.' },
+        ],
         items: [
           'O Apple Silicon elimina os limites de VRAM -- toda a memória unificada de 32-128 GB disponível para os modelos. O RTX 4090 tem limite de 24 GB de VRAM discreta.',
           'M5 Pro (64 GB) roda modelos 8B a 45-55 tok/s e modelos 34B a 15-20 tok/s. M5 Max (128 GB) roda modelos 70B a 12-18 tok/s.',
@@ -1219,6 +1235,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple M5 Pro (64 GB) läuft mit 8B-Modellen bei 45–55 Tok/s und 34B bei 15–20 Tok/s; M5 Max (128 GB) mit 70B bei 12–18 Tok/s — alles bei 25–70 W ohne VRAM-Grenzen dank Unified Memory.' },
+          { type: 'plain-terms', text: 'Unified Memory bedeutet: CPU, GPU und KI-Engine teilen denselben Speicher. Ein Mac mit 128 GB kann alle 128 GB für ein Modell nutzen, anders als eine GPU, die auf ihren VRAM begrenzt ist (max. 24 GB beim RTX 4090). Deshalb können Macs 70B-Modelle ausführen, die kein Consumer-GPU von NVIDIA fassen kann.' },
+        ],
         items: [
           'Apple Silicon eliminiert VRAM-Grenzen — der gesamte 32–128 GB einheitliche Speicher steht dem Modell zur Verfügung. RTX 4090 hat eine harte 24 GB-Grenze.',
           'M5 Pro (64 GB) erzeugt 34B-Modelle bei 15–20 Token/Sekunde. M5 Max (128 GB) erzeugt 70B-Modelle bei 12–18 tok/s. Beides bei 25–70 W Stromverbrauch gegenüber 300–450 W für Desktop-GPUs.',
@@ -1427,6 +1447,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'L\'Apple M5 Pro (64 Go) fait tourner les modèles 8B à 45–55 tok/s et 34B à 15–20 tok/s ; le M5 Max (128 Go) fait tourner les 70B à 12–18 tok/s — le tout à 25–70 W sans limite de VRAM grâce à la mémoire unifiée.' },
+          { type: 'plain-terms', text: 'La mémoire unifiée signifie que le CPU, le GPU et le moteur IA partagent le même pool de mémoire. Un Mac avec 128 Go peut utiliser tout cet espace pour un modèle, contrairement à un GPU limité à sa VRAM (max 24 Go pour la RTX 4090). C\'est pourquoi les Macs peuvent faire tourner des modèles 70B qu\'aucun GPU NVIDIA grand public ne peut contenir.' },
+        ],
         items: [
           'Apple Silicon élimine les limites VRAM — tous les 32–128 GB de mémoire unifiée sont disponibles au modèle. RTX 4090 est limité à 24 GB VRAM discrets.',
           'M5 Pro (64 GB) exécute les modèles 34B à 15–20 tok/s. M5 Max (128 GB) exécute les modèles 70B à 12–18 tok/s. Les deux avec 25–70 W versus 300–450 W pour les GPUs de bureau.',
@@ -1617,6 +1641,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple M5 Pro（64 GB）は8Bモデルを45〜55トークン/秒、34Bを15〜20トークン/秒で実行。M5 Max（128 GB）は70Bを12〜18トークン/秒で実行 — すべてユニファイドメモリのおかげでVRAM制限なし、消費電力25〜70W。' },
+          { type: 'plain-terms', text: 'ユニファイドメモリとは、CPU・GPU・AIエンジンが同じメモリプールを共有することです。128 GBのMacはそのすべてをモデルに使えますが、GPUはVRAMの上限（RTX 4090で最大24 GB）に制限されます。そのため、Macは一般消費者向けNVIDIA GPUでは収まりきらない70Bモデルを実行できます。' },
+        ],
         items: [
           'Apple Siliconは VRAM制限を排除——32～128GB統一メモリすべてモデルで利用可能。RTX 4090は24GB離散VRAM上限。',
           'M5 Pro（64GB）は34Bモデルを15～20 tok/s実行。M5 Max（128GB）は70Bモデルを12～18 tok/s実行。双方とも25～70W対デスクトップGPU300～450W。',
@@ -1835,6 +1863,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple M5 Pro（64 GB）运行8B模型达45–55 tok/s，34B达15–20 tok/s；M5 Max（128 GB）运行70B达12–18 tok/s——统一内存无VRAM限制，功耗仅25–70W。' },
+          { type: 'plain-terms', text: '统一内存意味着CPU、GPU和AI引擎共享同一内存池。128 GB的Mac可将全部内存用于模型，而GPU受限于显存上限（RTX 4090最多24 GB）。因此，Mac可以运行消费级NVIDIA GPU无法容纳的70B模型。' },
+        ],
         items: [
           'Apple Silicon消除VRAM限制——所有32-128GB统一内存可供模型使用。RTX 4090限制在24GB离散VRAM。',
           'M5 Pro（64GB）以15-20 tok/s运行34B模型。M5 Max（128GB）以12-18 tok/s运行70B模型。双者均为25-70W功耗对比台式GPU的300-450W。',
@@ -2075,6 +2107,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple M5 Pro(64 GB)는 8B 모델을 45–55 tok/s, 34B를 15–20 tok/s로 실행; M5 Max(128 GB)는 70B를 12–18 tok/s로 실행 — 통합 메모리 덕분에 VRAM 제한 없이 25–70W로 동작.' },
+          { type: 'plain-terms', text: '통합 메모리는 CPU, GPU, AI 엔진이 동일한 메모리 풀을 공유한다는 의미입니다. 128 GB Mac은 전체 메모리를 모델에 사용할 수 있지만, GPU는 VRAM 한도(RTX 4090 기준 최대 24 GB)에 제한됩니다. 그래서 Mac은 소비자용 NVIDIA GPU가 수용할 수 없는 70B 모델을 실행할 수 있습니다.' },
+        ],
         items: [
           'Apple Silicon은 VRAM 한계를 제거합니다. 32–128GB 통합 메모리 전체를 모델에 사용할 수 있습니다. RTX 4090은 독립형 VRAM이 24GB에서 최대입니다.',
           'M5 Pro(64GB)는 8B 모델을 45–55 tok/s, 34B 모델을 15–20 tok/s로 실행합니다. M5 Max(128GB)는 70B 모델을 12–18 tok/s로 실행합니다.',
