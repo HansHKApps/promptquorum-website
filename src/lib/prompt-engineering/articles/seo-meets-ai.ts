@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         image: 'https://www.promptquorum.com/og-image-seo-meets-ai-de.png',
         datePublished: '2026-03-23',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['Generative Engine Optimization', 'GEO', 'KI-Suche', 'ChatGPT', 'Perplexity', 'Content-Struktur', 'Schema-Markup', 'AI-Traffic'],
         teaches: [
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Aprende la Optimización para Motores Generativos (GEO) para ChatGPT, Perplexity y Gemini. Estrategias para el tráfico de búsqueda de IA, marcado de esquema y estructura de contenido.',
         datePublished: '2026-03-23',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['Generative Engine Optimization', 'GEO', 'búsqueda con IA', 'ChatGPT', 'Perplexity', 'estructura de contenido', 'marcado de esquema', 'tráfico de IA'],
         teaches: [
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'تعلّم تحسين محركات البحث التوليدية (GEO) لـ ChatGPT وPerplexity وGemini. استراتيجيات لحركة مرور البحث بالذكاء الاصطناعي وترميز المخطط وبنية المحتوى.',
         datePublished: '2026-03-23',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['Generative Engine Optimization', 'GEO', 'البحث بالذكاء الاصطناعي', 'ChatGPT', 'Perplexity', 'بنية المحتوى', 'ترميز المخطط', 'حركة مرور الذكاء الاصطناعي'],
         teaches: [
@@ -1681,7 +1681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-28',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/seo-meets-ai-how-geo-is-replacing-the-traditional-playbook',
         inLanguage: 'pt-BR',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['GEO', 'Generative Engine Optimization', 'SEO para IA', 'prompt engineering', 'PromptQuorum'],
       },
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         image: 'https://www.promptquorum.com/og-image-seo-meets-ai-fr.png',
         datePublished: '2026-03-23',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['Generative Engine Optimization', 'GEO', 'Recherche IA', 'ChatGPT', 'Perplexity', 'Structure du contenu', 'Schéma-markup'],
         teaches: [

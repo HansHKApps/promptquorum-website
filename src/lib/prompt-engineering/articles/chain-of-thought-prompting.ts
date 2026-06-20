@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-26',
         dateModified: '2026-05-03',
         keywords: ['chain-of-thought prompting', 'step-by-step reasoning', 'prompt engineering', 'reasoning models', 'extended thinking'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-26',
     dateModified: '2026-05-03',
     keywords: ['Chain-of-Thought Prompting', 'Schrittweise Argumentation', 'Prompt Engineering', 'Reasoning Modelle', 'Extended Thinking'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Chain-of-Thought Prompting' },
@@ -874,7 +874,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-26',
     dateModified: '2026-05-03',
     keywords: ['chain-of-thought prompting', 'razonamiento paso a paso', 'prompt engineering', 'modelos de razonamiento', 'extended thinking'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-26',
     dateModified: '2026-05-03',
     keywords: ['توجيه سلسلة الأفكار', 'الاستدلال خطوة بخطوة', 'هندسة التعليمات', 'نماذج الاستدلال', 'التفكير الممتد'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'توجيه سلسلة الأفكار', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
@@ -1694,7 +1694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-26',
     dateModified: '2026-05-03',
     keywords: ['chain-of-thought prompting', 'raciocínio passo a passo', 'prompt engineering', 'modelos de raciocínio', 'extended thinking'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Chain-of-Thought Prompting', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-26',
     dateModified: '2026-05-03',
     keywords: ['Chain-of-Thought Prompting', 'raisonnement étape par étape', 'ingénierie des prompts', 'modèles de raisonnement', 'extended thinking'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Chain-of-Thought Prompting' },
@@ -3337,7 +3337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-26',
     dateModified: '2026-05-03',
     keywords: ['chain-of-thought 프롬프팅', '단계별 추론', '프롬프트 엔지니어링', '추론 모델', 'extended thinking'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Chain-of-Thought 프롬프팅', 'sameAs': 'https://www.wikidata.org/wiki/Q117050701' },

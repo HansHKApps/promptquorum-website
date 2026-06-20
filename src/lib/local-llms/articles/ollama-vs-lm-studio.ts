@@ -61,7 +61,7 @@ schema: {
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -377,7 +377,7 @@ schema: {
         'dateModified': '2026-05-05',
         'url': 'https://www.promptquorum.com/de/local-llms/ollama-vs-lm-studio',
         'proficiencyLevel': 'Anfänger',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -701,7 +701,7 @@ schema: {
         'dateModified': '2026-05-05',
         'url': 'https://www.promptquorum.com/fr/local-llms/ollama-vs-lm-studio',
         'proficiencyLevel': 'Débutant',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -1022,7 +1022,7 @@ schema: {
         'dateModified': '2026-05-05',
         'url': 'https://www.promptquorum.com/ja/local-llms/ollama-vs-lm-studio',
         'proficiencyLevel': '初心者',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -1670,7 +1670,7 @@ schema: {
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/es/local-llms/ollama-vs-lm-studio',
         'proficiencyLevel': 'Principiante',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -1984,7 +1984,7 @@ schema: {
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/ar/local-llms/ollama-vs-lm-studio',
         'proficiencyLevel': 'Principiante',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -2477,7 +2477,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/ollama-vs-lm-studio',
         'inLanguage': 'pt-BR',
         'proficiencyLevel': 'Iniciante',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -2532,7 +2532,7 @@ schema: {
         'dateModified': '2026-05-17',
         'url': 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },

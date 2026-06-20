@@ -241,7 +241,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/70b-models-consumer-hardware',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': '70B language model' },
@@ -535,7 +535,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/70b-models-consumer-hardware',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'modelo de lenguaje 70B' },
@@ -830,7 +830,7 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'inLanguage': 'ar',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'نموذج لغوي 70B' },
@@ -1124,7 +1124,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/70b-models-consumer-hardware',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
     },
@@ -1156,7 +1156,7 @@ schema: {
     'description': '70B Local LLMs auf Consumer Hardware ausführen: RAM-Anforderungen, GPU-Optionen, Layer Offloading und Quantisierung. Was Du für Llama 3.3 benötigst -- kostenlos April 2026.',
     'url': 'https://www.promptquorum.com/de/local-llms/70b-models-consumer-hardware',
     'datePublished': '2026-04-04',
-    'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+    'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'about': [
       { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
@@ -1170,6 +1170,7 @@ schema: {
       { '@type': 'SoftwareApplication', 'name': 'Ollama' },
       { '@type': 'SoftwareApplication', 'name': 'llama.cpp' },
     ],
+    'proficiencyLevel': 'Intermediate',
     'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
   },
   howToSchema: {
@@ -1592,7 +1593,7 @@ schema: {
       url: 'https://www.promptquorum.com/fr/local-llms/70b-models-consumer-hardware',
       inLanguage: 'fr',
       datePublished: '2026-04-04',
-      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
@@ -1652,7 +1653,7 @@ schema: {
     dateModified: '2026-04-04',
     url: 'https://www.promptquorum.com/ja/local-llms/70b-models-consumer-hardware',
     inLanguage: 'ja',
-    author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Llama 3.3 70B' },
@@ -2423,7 +2424,7 @@ schema: {
       'inLanguage': 'ko',
       'datePublished': '2026-04-04',
       'dateModified': '2026-04-18',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': '70B 언어 모델' },

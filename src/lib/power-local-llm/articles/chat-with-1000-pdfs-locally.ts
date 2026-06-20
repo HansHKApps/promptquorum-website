@@ -2718,6 +2718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com',
       },
       'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       'about': [
         { '@type': 'Thing', 'name': 'RAG (Retrieval-Augmented Generation)' },
         { '@type': 'Thing', 'name': 'Vector Search' },

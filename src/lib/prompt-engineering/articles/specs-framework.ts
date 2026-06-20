@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-24',
       dateModified: '2026-03-24',
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -150,7 +150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-24',
       dateModified: '2026-03-24',
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-24',
       dateModified: '2026-03-24',
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-24',
       dateModified: '2026-03-24',
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/pt/prompt-engineering/specs-framework',
       inLanguage: 'pt-BR',
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'frameworks de prompts', 'prompt engineering', 'prompts estruturados', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },

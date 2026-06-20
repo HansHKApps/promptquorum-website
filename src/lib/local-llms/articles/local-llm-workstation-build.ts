@@ -241,6 +241,7 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -609,6 +610,7 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -990,6 +992,7 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1352,6 +1355,7 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1717,6 +1721,7 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2082,6 +2087,7 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2447,6 +2453,7 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2607,8 +2614,9 @@ schema: {
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-25',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       sections: {

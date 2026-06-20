@@ -262,7 +262,7 @@ schema: {
         inLanguage: 'en',
         datePublished: '2026-04-04',
         dateModified: '2026-04-24',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -625,7 +625,7 @@ schema: {
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -999,7 +999,7 @@ schema: {
         inLanguage: 'ar',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -1371,7 +1371,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/prompt-engineering-for-local-models',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1640,7 +1640,7 @@ schema: {
         inLanguage: 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -2025,7 +2025,7 @@ schema: {
         inLanguage: 'fr',
         datePublished: '2026-04-04',
         dateModified: '2026-04-25',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [

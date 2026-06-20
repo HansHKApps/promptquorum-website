@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-03-24',
         'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use',
         keywords: ['prompt frameworks', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['Prompt-Frameworks', 'Prompt Engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       howToSchema: {
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['أطر الطلبات', 'هندسة الطلبات', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -812,7 +812,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Como escolher o framework de prompt certo para GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais — e como o PromptQuorum automatiza a seleção de frameworks.',
         datePublished: '2026-03-24',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       howToSchema: {
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['プロンプトフレームワーク', 'プロンプトエンジニアリング', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       howToSchema: {
@@ -1343,7 +1343,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['提示框架', '提示工程', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       howToSchema: {
@@ -1529,7 +1529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-03-24',
         'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use',
         keywords: ['prompt frameworks', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },

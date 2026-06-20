@@ -880,7 +880,7 @@ tests:
       inLanguage: 'de',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
       about: [
@@ -2211,7 +2211,7 @@ tests:
       inLanguage: 'fr',
       datePublished: '2026-04-10',
       dateModified: '2026-04-29',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
       about: [

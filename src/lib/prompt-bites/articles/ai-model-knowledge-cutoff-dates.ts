@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'AI training cutoff 2026', 'GPT-4o cutoff', 'Gemini cutoff date',
         'Grok knowledge cutoff', 'Phi-4 cutoff', 'Gemma cutoff date',
       ],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',

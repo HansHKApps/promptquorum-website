@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-26',
       dateModified: '2026-05-03',
       keywords: ['persona prompting', 'prompt engineering', 'AI behavior', 'role-based prompting', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-26',
       dateModified: '2026-05-03',
       keywords: ['Persona-Prompting', 'Prompt Engineering', 'KI-Verhalten', 'rollenbasiertes Prompting', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-26',
       dateModified: '2026-05-03',
       keywords: ['persona prompting', 'prompt engineering', 'comportamiento de IA', 'prompting basado en roles', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'O que é o persona prompting, por que importa, os blocos de construção fundamentais, exemplos práticos e como testar personas em vários modelos de IA.',
       datePublished: '2026-03-26',
       keywords: ['persona prompting', 'prompt engineering', 'comportamento de IA', 'prompting baseado em papéis', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1097,7 +1097,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-26',
       dateModified: '2026-05-03',
       keywords: ['persona prompting', 'prompt engineering', 'comportement IA', 'prompting basé sur rôles', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-26',
       dateModified: '2026-05-03',
       keywords: ['페르소나 프롬프팅', '프롬프트 엔지니어링', 'AI 행동', '역할 기반 프롬프팅', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: '프롬프트 엔지니어링' },

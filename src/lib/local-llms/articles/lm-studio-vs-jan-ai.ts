@@ -218,7 +218,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -231,6 +231,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -490,7 +491,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/lm-studio-vs-jan-ai',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -747,7 +748,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/lm-studio-vs-jan-ai',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -1532,7 +1533,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-vs-jan-ai',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -1784,7 +1785,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/lm-studio-vs-jan-ai',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
         'about': [
@@ -1882,8 +1883,9 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/lm-studio-vs-jan-ai',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       sections: {

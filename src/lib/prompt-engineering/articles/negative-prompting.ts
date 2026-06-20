@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/prompt-engineering/negative-prompting',
         inLanguage: 'en',
         keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     url: 'https://www.promptquorum.com/de/prompt-engineering/negative-prompting',
     inLanguage: 'de',
     keywords: ['Negatives Prompting', 'Prompt-Engineering', 'Schutzmaßnahmen', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Prompt-Engineering' },
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     url: 'https://www.promptquorum.com/es/prompt-engineering/negative-prompting',
     inLanguage: 'es',
     keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -811,7 +811,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     url: 'https://www.promptquorum.com/ar/prompt-engineering/negative-prompting',
     inLanguage: 'ar',
     keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     url: 'https://www.promptquorum.com/pt/prompt-engineering/negative-prompting',
     inLanguage: 'pt-BR',
     keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1407,7 +1407,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     url: 'https://www.promptquorum.com/fr/prompt-engineering/negative-prompting',
     inLanguage: 'fr',
     keywords: ['guidage négatif', 'ingénierie des invites', 'garde-fous', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Guidage Négatif' },
@@ -2145,7 +2145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     url: 'https://www.promptquorum.com/prompt-engineering/negative-prompting',
     inLanguage: 'ko',
     keywords: ['네거티브 프롬프팅', '프롬프트 엔지니어링', '가드레일', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: '프롬프트 엔지니어링' },

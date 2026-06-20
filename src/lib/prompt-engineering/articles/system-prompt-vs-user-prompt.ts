@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-22',
       dateModified: '2026-04-12',
       keywords: ['system prompt', 'user prompt', 'prompt engineering', 'LLM behavior', 'GPT-5.5', 'Claude', 'prompt structure', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       mentions: [
         { '@type': 'Thing', name: 'PromptQuorum' },

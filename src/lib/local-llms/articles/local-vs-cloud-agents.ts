@@ -225,7 +225,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/local-vs-cloud-agents',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -484,7 +484,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/local-vs-cloud-agents',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -751,7 +751,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/local-vs-cloud-agents',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1004,7 +1004,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-vs-cloud-agents',
         'inLanguage': 'pt-BR',
         'proficiencyLevel': 'Intermediate',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Agentes de IA local' },
@@ -1242,7 +1242,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/local-vs-cloud-agents',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1512,7 +1512,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/local-vs-cloud-agents',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-24',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [

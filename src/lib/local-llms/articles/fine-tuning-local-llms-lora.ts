@@ -218,7 +218,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LoRA fine-tuning' },
@@ -578,7 +578,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LoRA fine-tuning' },
@@ -938,7 +938,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LoRA fine-tuning' },
@@ -1183,7 +1183,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/fine-tuning-local-llms-lora',
         headline: 'Fine-Tuning LoRA para LLMs Locais 2026: Tutorial do Unsloth em 8 GB de VRAM com Llama 3.3',
         description: 'Faça fine-tuning do Llama 3.3 8B com LoRA em 8 GB de VRAM em 1–2 horas com Unsloth (até 2× mais rápido, QLoRA). Mínimo 500 exemplos.',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         datePublished: '2026-04-04',
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
@@ -1415,7 +1415,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LoRA Fine-Tuning' },
@@ -1797,7 +1797,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Fine-tuning LoRA' },

@@ -190,7 +190,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/ollama-command-guide',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -203,6 +203,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner to Advanced',
+        'proficiencyLevel': 'Beginner to Advanced',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -430,7 +431,7 @@ schema: {
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -637,7 +638,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/ollama-command-guide',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
@@ -862,7 +863,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/ollama-command-guide',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
@@ -1300,7 +1301,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/ollama-command-guide',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -1313,6 +1314,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner to Advanced',
+        'proficiencyLevel': 'Beginner to Advanced',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1547,7 +1549,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/ollama-command-guide',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -1560,6 +1562,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner to Advanced',
+        'proficiencyLevel': 'Beginner to Advanced',
       },
       faqSchema: {
         '@context': 'https://schema.org',

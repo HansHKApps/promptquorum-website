@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         dateModified: '2026-05-03',
         url: 'https://www.promptquorum.com/local-llms/private-local-llm-sensitive-data',
         inLanguage: 'en',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'HIPAA Compliance' },
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         dateModified: '2026-05-03',
         url: 'https://www.promptquorum.com/es/local-llms/private-local-llm-sensitive-data',
         inLanguage: 'es',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         about: [
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         dateModified: '2026-05-03',
         url: 'https://www.promptquorum.com/ar/local-llms/private-local-llm-sensitive-data',
         inLanguage: 'ar',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         about: [
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         dateModified: '2026-05-03',
         url: 'https://www.promptquorum.com/pt/local-llms/private-local-llm-sensitive-data',
         inLanguage: 'pt-BR',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         about: [
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         dateModified: '2026-05-03',
         url: 'https://www.promptquorum.com/fr/local-llms/private-local-llm-sensitive-data',
         inLanguage: 'fr',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
       faqSchema: {
@@ -1532,6 +1532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'dateModified': '2026-05-03',
         'url': 'https://www.promptquorum.com/zh/local-llms/private-local-llm-sensitive-data',
         'educationalLevel': 'intermediate',
+        'proficiencyLevel': 'intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1590,12 +1591,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'TechArticle',
         'headline': 'Optimale lokale LLM-Einrichtung für sensible Daten',
         'description': 'Sicheres lokales LLM für sensible Daten: DSGVO, BDSG, Konformität. Luftgebundene Einrichtung, Audit-Logs, Datenverwaltung.',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-05',
         'dateModified': '2026-05-03',
         'url': 'https://www.promptquorum.com/de/local-llms/private-local-llm-sensitive-data',
         'educationalLevel': 'intermediate',
+        'proficiencyLevel': 'intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1661,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         dateModified: '2026-05-03',
         url: 'https://www.promptquorum.com/local-llms/private-local-llm-sensitive-data',
         inLanguage: 'ko',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'HIPAA Compliance' },

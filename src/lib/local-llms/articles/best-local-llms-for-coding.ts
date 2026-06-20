@@ -486,7 +486,7 @@ schema: {
         'description': 'June 2026: Kimi K2.6 (58.6 SWE-Bench Pro) is the best local coding LLM. Compare with Qwen 3.6 27B (77.2% SWE-bench) and Devstral 24B. SWE-bench replaces HumanEval.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1005,7 +1005,7 @@ schema: {
         'description': 'Junio 2026: Kimi K2.6 (58.6 SWE-Bench Pro) es el mejor LLM local de programación. Comparación con Qwen 3.6 27B (77,2% SWE-bench) y Devstral 24B. SWE-bench reemplaza a HumanEval.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1476,7 +1476,7 @@ schema: {
         'description': 'يونيو 2026: Kimi K2.6 (58.6 SWE-Bench Pro) هو أفضل نموذج LLM محلي للبرمجة. مقارنة بـ Qwen 3.6 27B (77.2% SWE-bench) وDevstral 24B. يحل SWE-bench محل HumanEval.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1666,7 +1666,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-coding',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
     },
@@ -2036,7 +2036,7 @@ schema: {
         'description': 'Juni 2026: Kimi K2.6 (58.6 SWE-Bench Pro) ist das beste lokale Programmier-LLM. Vergleich mit Qwen 3.6 27B (77,2% SWE-bench) und Devstral 24B. SWE-bench ersetzt HumanEval.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -2443,7 +2443,7 @@ schema: {
         'description': 'Juin 2026 : Kimi K2.6 (58.6 SWE-Bench Pro) est le meilleur LLM local pour la programmation. Comparé avec Qwen 3.6 27B (77,2% SWE-bench) et Devstral 24B. SWE-bench remplace HumanEval.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [

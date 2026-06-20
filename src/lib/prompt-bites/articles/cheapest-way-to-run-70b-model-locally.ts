@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 5, name: 'Mac Studio M4 Max 128GB', description: 'Mejor rendimiento por vatio, $3,000' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Forma Más Barata de Ejecutar un Modelo 70B Localmente 2026', author: { '@type': 'Person', name: 'Hans Kuepper' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'Forma Más Barata de Ejecutar un Modelo 70B Localmente 2026', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/cheapest-way-to-run-70b-model-locally', inLanguage: 'es' },
   },
   zh: {
     freshness_tier: 'semi_annual',

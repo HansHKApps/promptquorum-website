@@ -552,7 +552,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -845,7 +845,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -918,8 +918,9 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-one-click-installers',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/local-llm-one-click-installers-static.html',
@@ -1193,7 +1194,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -1469,7 +1470,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -1745,7 +1746,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -2023,7 +2024,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },

@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026',
       'datePublished': '2026-06-14',
       'dateModified': '2026-06-14',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
       'about': [
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'inLanguage': 'de',
       'datePublished': '2026-06-14',
       'dateModified': '2026-06-14',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
       'about': [
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'inLanguage': 'es',
       'datePublished': '2026-06-14',
       'dateModified': '2026-06-14',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
       'about': [
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'inLanguage': 'fr',
       'datePublished': '2026-06-14',
       'dateModified': '2026-06-14',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
       'about': [
@@ -1648,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'inLanguage': 'pt-BR',
       'datePublished': '2026-06-14',
       'dateModified': '2026-06-14',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
       'about': [

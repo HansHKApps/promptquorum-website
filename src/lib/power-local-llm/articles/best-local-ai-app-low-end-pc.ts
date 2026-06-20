@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Ollama, GPT4All, Jan und llama.cpp auf 8-GB-RAM-Laptops mit integrierter Grafik getestet. Tokens/Sek., Speicherdruck, exakte Einstellungen.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Ollama, GPT4All, Jan et llama.cpp testés sur des portables 8 Go RAM avec graphiques intégrés. Tokens/s, pression mémoire, réglages exacts.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
       'proficiencyLevel': 'Beginner',
       'about': [
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Ollama, GPT4All, Jan y llama.cpp probados en portátiles con 8 GB RAM y gráficos integrados. Tokens/s, presión de memoria, configuraciones exactas.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -2593,7 +2593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Ollama, GPT4All, Jan e llama.cpp testados em notebooks com 8 GB RAM e gráficos integrados. Tokens/s, pressão de memória, configurações exatas.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -3069,7 +3069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'اختُبرت Ollama وGPT4All وJan وllama.cpp على أجهزة كمبيوتر محمولة بـ8 GB RAM ورسومات متكاملة. الرموز/ثانية وضغط الذاكرة والإعدادات الدقيقة.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -3351,7 +3351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
       'inLanguage': 'ko',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     },
     itemListSchema: {

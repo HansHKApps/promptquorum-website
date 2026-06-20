@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'IA en la educación' },
@@ -1679,7 +1679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'الذكاء الاصطناعي في التعليم' },
@@ -2089,7 +2089,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/teaching-with-ai-tools-guide-2026',
         inLanguage: 'pt-BR',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['IA na educação', 'Khanmigo', 'MagicSchool', 'tutoria com IA', 'prompt engineering para educadores', '2026'],
       },

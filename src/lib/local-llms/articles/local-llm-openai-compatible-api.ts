@@ -279,7 +279,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'audience': { '@type': 'Audience', 'audienceType': 'Developers integrating local LLMs into Python, Node.js, or JavaScript applications' },
         'about': [
@@ -728,7 +728,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'audience': { '@type': 'Audience', 'audienceType': 'Entwickler, die lokale LLMs in Python, Node.js, oder JavaScript Anwendungen integrieren' },
         'about': [
@@ -987,7 +987,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -1824,7 +1824,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'audience': { '@type': 'Audience', 'audienceType': 'Desarrolladores que integran LLMs locales en aplicaciones Python, Node.js o JavaScript' },
         'about': [
@@ -2274,7 +2274,7 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-05-17',
         'inLanguage': 'ar',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'audience': { '@type': 'Audience', 'audienceType': 'المطورون الذين يدمجون نماذج LLM المحلية في تطبيقات Python أو Node.js أو JavaScript' },
         'about': [
@@ -2485,8 +2485,9 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-openai-compatible-api',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',

@@ -40,7 +40,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -270,7 +270,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -505,7 +505,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -741,7 +741,7 @@ schema: {
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -959,7 +959,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1187,7 +1187,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1996,7 +1996,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [

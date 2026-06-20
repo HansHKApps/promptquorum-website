@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Master AI code generation with structured prompts, model comparison, and security workflows. Learn temperature settings, local models, and how to avoid 45% of hallucinations.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         keywords: 'AI coding, prompt engineering, code generation, Claude, GPT-5, Gemini 3, security vulnerabilities, temperature, context window',
         about: [
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Masterkurs in KI-Code-Generierung mit strukturierten Prompts, Modellvergleich und Security-Workflows. Lernen Sie Temperature-Einstellungen, lokale Modelle und wie Sie 45% der Halluzinationen vermeiden.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         keywords: 'KI-Programmierung, Prompt Engineering, Code-Generierung, Claude, GPT-5, Gemini 3, Sicherheitslücken, Temperature, Context Window',
         about: [
@@ -1040,7 +1040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Domina la generación de código con IA con prompts estructurados, comparativa de modelos y flujos de trabajo de seguridad. Aprende ajustes de temperatura, modelos locales y cómo evitar el 45 % de las alucinaciones.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         keywords: 'programación con IA, prompt engineering, generación de código, Claude, GPT-5, Gemini 3, vulnerabilidades de seguridad, temperatura, ventana de contexto',
         about: [
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'أتقن توليد الكود بالذكاء الاصطناعي بطلبات منظمة ومقارنة النماذج ومسارات عمل الأمان. تعلّم إعدادات درجة الحرارة والنماذج المحلية وكيف تتجنب 45% من الهلوسات.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         keywords: 'البرمجة بالذكاء الاصطناعي، هندسة الطلبات، توليد الكود، Claude، GPT-5، Gemini 3، ثغرات أمنية، درجة الحرارة، نافذة السياق',
         about: [
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Como Escrever Código Melhor com IA: Prompts, Modelos e Segurança em 2026',
         description: 'Domine a geração de código com IA com prompts estruturados, comparativo de modelos e fluxos de trabalho de segurança. Aprenda configurações de temperatura, modelos locais e como evitar 45% das alucinações.',
         datePublished: '2026-03-22',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         keywords: 'codificação com IA, prompt engineering, geração de código, Claude, GPT-5, Gemini 3, vulnerabilidades de segurança, temperatura, janela de contexto',
         about: [
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Maîtrisez la génération de code IA avec des prompts structurés, la comparaison de modèles et les workflows de sécurité. Apprenez les réglages de température, les modèles locaux et comment éviter 45 % des hallucinations.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         inLanguage: 'fr',
         url: 'https://www.promptquorum.com/fr/prompt-engineering/write-better-code-with-ai',
@@ -3267,7 +3267,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '구조화된 프롬프트, 모델 비교, 보안 워크플로우로 AI 코드 생성을 마스터하십시오. Temperature 설정, 로컬 모델, 그리고 환각의 45%를 방지하는 방법을 배우십시오.',
         datePublished: '2026-03-22',
         dateModified: '2026-04-28',
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         keywords: 'AI 코딩, 프롬프트 엔지니어링, 코드 생성, Claude, GPT-5, Gemini 3, 보안 취약점, temperature, context window',
         about: [

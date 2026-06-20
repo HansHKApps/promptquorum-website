@@ -183,7 +183,7 @@ schema: {
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Local LLM vs cloud API' },
@@ -408,7 +408,7 @@ schema: {
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llms-vs-cloud-apis',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LLM local vs API en la nube' },
@@ -639,7 +639,7 @@ schema: {
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/ar/local-llms/local-llms-vs-cloud-apis',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LLM محلي مقابل API سحابية' },
@@ -870,7 +870,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llms-vs-cloud-apis',
         'inLanguage': 'pt-BR',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LLM local vs API na nuvem' },
@@ -1078,7 +1078,7 @@ schema: {
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-vs-cloud-apis',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Lokales LLM vs. Cloud-API' },
@@ -1321,7 +1321,7 @@ schema: {
         'dateModified': '2026-04-12',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-vs-cloud-apis',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LLM local vs API cloud' },

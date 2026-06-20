@@ -606,7 +606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/es/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'es',
         keywords: ['historia del prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'línea de tiempo del prompt engineering', 'InstructGPT', 'RLHF'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
       sections: {
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/ar/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'ar',
         keywords: ['تاريخ هندسة البرومبت', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'هندسة السياق', 'خط زمني لهندسة البرومبت', 'InstructGPT', 'RLHF'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
       sections: {
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/pt/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'pt-BR',
         keywords: ['história do prompt engineering', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'linha do tempo do prompt engineering', 'InstructGPT', 'RLHF'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
       sections: {
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/ja/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'ja',
         keywords: ['プロンプトエンジニアリング歴史', 'GPT-3 フューショット学習', 'Chain-of-Thought プロンプティング', 'ChatGPT', 'コンテキストエンジニアリング', 'プロンプトエンジニアリング タイムライン', 'InstructGPT', 'RLHF'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       },
       sections: {
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/zh/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'zh',
         keywords: ['提示工程历史', 'GPT-3 少样本学习', 'Chain-of-Thought 提示', 'ChatGPT', '上下文工程', '提示工程时间线', 'InstructGPT', 'RLHF'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       },
       sections: {

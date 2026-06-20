@@ -400,7 +400,7 @@ schema: {
         'description': 'RAG Local 2026: construye sistemas de preguntas y respuestas, bases de datos vectoriales, estrategias de chunking y optimización de recuperación. Guía completa.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-rag-2026',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
@@ -623,7 +623,7 @@ schema: {
         'description': 'RAG محلي 2026: ابنِ أنظمة أسئلة وأجوبة، وقواعد بيانات متجهية، واستراتيجيات تقسيم، وتحسين الاسترجاع. دليل كامل.',
         'url': 'https://www.promptquorum.com/ar/local-llms/local-rag-2026',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
@@ -847,7 +847,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-rag-2026',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [

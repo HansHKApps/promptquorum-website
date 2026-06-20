@@ -230,7 +230,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-16',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -493,7 +493,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/mac-vs-windows-vs-linux-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -761,7 +761,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/mac-vs-windows-vs-linux-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -972,7 +972,7 @@ schema: {
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1151,7 +1151,7 @@ schema: {
         'description': 'MacBook Pro M5 Max 128GB: 70B bei 25–35 tok/s, 614 GB/s Bandbreite. Windows RTX 5090 32GB: 70B bei 40–50 tok/s, ca. 1.900 €. Linux: 1–5% schneller, ca. 770 € Gesamtkosten 3 Jahre.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Mittel',
         'about': [

@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'PromptLayer logs and versions LLM calls, Mirascope is a free Python SDK for type-safe LLM apps, PromptPerfect auto-rewrites prompts. Three tools, three different problems — pick exactly one.',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'PromptLayer protokolliert und versioniert LLM-Aufrufe, Mirascope ist ein kostenloses Python-SDK für typsichere LLM-Apps, PromptPerfect schreibt Prompts automatisch um. Drei Tools für drei verschiedene Probleme — je eines auswählen.',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'PromptLayer registra y versiona llamadas LLM, Mirascope es un SDK Python gratuito para apps LLM type-safe, PromptPerfect reescribe prompts automáticamente. Tres herramientas, tres problemas distintos — elige exactamente una.',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1569,7 +1569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'PromptLayer يسجّل ويُصدر استدعاءات نماذج اللغة، Mirascope مكتبة Python مجانية لتطبيقات نماذج اللغة الآمنة من حيث النوع، PromptPerfect يُعيد كتابة الموجّهات تلقائيًا. ثلاث أدوات، ثلاث مشاكل مختلفة — اختر واحدة فقط.',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1885,7 +1885,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer registra e versiona chamadas LLM, Mirascope é um SDK Python gratuito para apps LLM type-safe, PromptPerfect reescreve prompts automaticamente. Três ferramentas, três problemas distintos — escolha exatamente uma.',
       datePublished: '2026-04-10',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
       inLanguage: 'pt-BR',
@@ -2262,7 +2262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'PromptLayer journalise les appels LLM, Mirascope est un SDK Python gratuit pour applications à typage fort, PromptPerfect réécrit les prompts automatiquement. Trois outils pour trois problèmes distincts.',
       datePublished: '2026-04-10',
       dateModified: '2026-05-01',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',

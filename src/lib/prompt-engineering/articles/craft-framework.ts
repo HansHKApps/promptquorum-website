@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-03-24',
         'url': 'https://www.promptquorum.com/prompt-engineering/craft-framework',
         keywords: ['CRAFT Framework', 'prompt frameworks', 'prompt engineering', 'creative prompts', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['CRAFT-Framework', 'Prompt-Frameworks', 'Prompt-Engineering', 'kreative Prompts', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       sections: {
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/es/prompt-engineering/craft-framework',
         inLanguage: 'es',
         keywords: ['Framework CRAFT', 'frameworks de prompt', 'prompt engineering', 'prompts creativos', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/ar/prompt-engineering/craft-framework',
         inLanguage: 'ar',
         keywords: ['إطار CRAFT', 'أطر الموجّهات', 'هندسة الموجّهات', 'الموجّهات الإبداعية', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'هندسة الموجّهات' },
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/pt/prompt-engineering/craft-framework',
         inLanguage: 'pt-BR',
         keywords: ['Framework CRAFT', 'frameworks de prompt', 'prompt engineering', 'prompts criativos', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['Framework CRAFT', 'Frameworks de prompt', 'Prompt Engineering', 'prompts créatifs', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       sections: {
@@ -900,7 +900,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['CRAFTフレームワーク', 'プロンプトフレームワーク', 'プロンプトエンジニアリング', 'creative prompts', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       sections: {
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-03-24',
         keywords: ['CRAFT框架', '提示框架', '提示工程', '创意提示', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
       sections: {
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/ko/prompt-engineering/craft-framework',
       inLanguage: 'ko',
       keywords: ['CRAFT 프레임워크', '프롬프트 프레임워크', '프롬프트 엔지니어링', '창의적 프롬프트', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: '프롬프트 엔지니어링' },

@@ -155,7 +155,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/vpn-for-local-llm-users',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'VPN setup' },
@@ -168,6 +168,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -387,7 +388,7 @@ schema: {
         inLanguage: 'de',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'VPN-Setup' },
@@ -634,7 +635,7 @@ schema: {
         inLanguage: 'fr',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'Configuration VPN' },
@@ -823,7 +824,7 @@ schema: {
         inLanguage: 'ja',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'VPNセットアップ' },
@@ -1012,7 +1013,7 @@ schema: {
         inLanguage: 'zh',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'VPN 设置' },
@@ -1201,7 +1202,7 @@ schema: {
         inLanguage: 'es',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'Configuración de VPN' },
@@ -1432,7 +1433,7 @@ schema: {
         inLanguage: 'ar',
         datePublished: '2026-04-05',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'إعداد VPN' },
@@ -1570,7 +1571,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/vpn-for-local-llm-users',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },

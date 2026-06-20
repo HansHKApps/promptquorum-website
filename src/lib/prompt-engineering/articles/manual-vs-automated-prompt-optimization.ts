@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-05',
       url: 'https://www.promptquorum.com/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'en',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       keywords: ['prompt optimization', 'manual optimization', 'automated optimization', 'DSPy', 'TextGrad', 'Promptfoo', 'LLM scaling'],
       about: [
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-05',
       url: 'https://www.promptquorum.com/de/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'de',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       keywords: ['Prompt-Optimierung', 'manuelle Optimierung', 'automatisierte Optimierung', 'DSPy', 'TextGrad', 'Promptfoo', 'LLM-Skalierung'],
       about: [
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-05',
       url: 'https://www.promptquorum.com/es/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'es',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       keywords: ['optimización de prompts', 'optimización manual', 'optimización automatizada', 'DSPy', 'TextGrad', 'Promptfoo', 'escalabilidad LLM'],
       about: [
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-04-26',
       url: 'https://www.promptquorum.com/pt/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'pt-BR',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       keywords: ['otimização de prompts', 'otimização manual', 'otimização automatizada', 'DSPy', 'TextGrad', 'Promptfoo', 'escalabilidade LLM'],
       about: [
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-05',
       url: 'https://www.promptquorum.com/fr/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'fr',
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       keywords: ['Optimisation de prompts', 'optimisation manuelle', 'optimisation automatisée', 'DSPy', 'TextGrad', 'Promptfoo', 'scalabilité LLM'],
       about: [

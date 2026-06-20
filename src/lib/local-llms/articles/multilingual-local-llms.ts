@@ -344,10 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'description': 'Qwen3 domina los idiomas asiáticos (15-25% mejor que Llama en JMT-bench). Mistral competitivo en idiomas europeos. Comparativa de benchmarks y recomendaciones -- abril 2026.',
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg',
         'datePublished': '2026-04-04',
-        'author': {
-          '@type': 'Person',
-          'name': 'Hans Kuepper'
-        },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -670,10 +667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'description': 'يهيمن Qwen3 على اللغات الآسيوية (أفضل بنسبة 15-25% من Llama في JMT-bench). Mistral تنافسي في اللغات الأوروبية. مقارنة اختبارات الأداء وتوصيات -- أبريل 2026.',
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg',
         'datePublished': '2026-04-04',
-        'author': {
-          '@type': 'Person',
-          'name': 'Hans Kuepper'
-        },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -983,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com/pt/local-llms/multilingual-local-llms',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
@@ -1306,10 +1300,7 @@ schema: {
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-de.svg',
         'datePublished': '2025-12-10',
         'dateModified': '2026-04-11',
-        'author': {
-          '@type': 'Person',
-          'name': 'Hans Kuepper'
-        },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -1821,10 +1812,7 @@ schema: {
         'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-fr.svg',
         'datePublished': '2025-12-10',
         'dateModified': '2026-04-11',
-        'author': {
-          '@type': 'Person',
-          'name': 'Hans Kuepper'
-        },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',

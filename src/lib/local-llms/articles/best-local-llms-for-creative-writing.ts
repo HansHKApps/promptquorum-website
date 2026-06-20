@@ -36,7 +36,7 @@ schema: {
           { '@type': 'Thing', 'name': 'AI fiction writing' },
           { '@type': 'Thing', 'name': 'Fine-tuned LLM' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -327,7 +327,7 @@ schema: {
           { '@type': 'Thing', 'name': 'IA para ficción' },
           { '@type': 'Thing', 'name': 'LLM fine-tuned' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -617,7 +617,7 @@ schema: {
           { '@type': 'Thing', 'name': 'الذكاء الاصطناعي للروايات' },
           { '@type': 'Thing', 'name': 'نموذج LLM مضبوط بدقة' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -907,7 +907,7 @@ schema: {
           { '@type': 'Thing', 'name': 'IA para ficção' },
           { '@type': 'Thing', 'name': 'LLM fine-tuned' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',

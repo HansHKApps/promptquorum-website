@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'en',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'vector database', 'LLM hallucination', 'semantic search', 'prompt engineering'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation', 'sameAs': 'https://www.wikidata.org/wiki/Q121362277' },
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'de',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'Vektor-Datenbank', 'LLM-Halluzinationen', 'semantische Suche', 'Prompt-Engineering'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation' },
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'es',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'base de datos vectorial', 'alucinación LLM', 'búsqueda semántica', 'prompt engineering'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation' },
@@ -1018,7 +1018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ar',
         keywords: ['RAG', 'التوليد المُعزَّز بالاسترجاع', 'قاعدة البيانات المتجهية', 'هلوسة LLM', 'البحث الدلالي', 'هندسة البرومبت'],
         proficiencyLevel: 'متوسط',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'التوليد المُعزَّز بالاسترجاع' },
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'pt-BR',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'banco de dados vetorial', 'alucinação de LLM', 'busca semântica', 'engenharia de prompt'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation' },
@@ -1545,7 +1545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'fr',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'base de données vectorielle', 'hallucinations LLM', 'recherche sémantique', 'ingénierie des prompts'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation' },
@@ -1860,7 +1860,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ja',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'ベクトルデータベース', 'LLMハルシネーション', 'セマンティック検索', 'プロンプトエンジニアリング'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation' },
@@ -2174,7 +2174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'zh',
         keywords: ['RAG', '检索增强生成', '向量数据库', 'LLM幻觉', '语义搜索', '提示工程'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation' },
@@ -2506,7 +2506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ko',
         keywords: ['RAG', 'Retrieval-Augmented Generation', '벡터 데이터베이스', 'LLM 환각', '시맨틱 검색', '프롬프트 엔지니어링'],
         proficiencyLevel: '중급',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Retrieval-Augmented Generation', 'sameAs': 'https://www.wikidata.org/wiki/Q121362277' },

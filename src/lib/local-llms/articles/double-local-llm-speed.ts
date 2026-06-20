@@ -189,7 +189,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'en',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -475,7 +475,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'es',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -762,7 +762,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'ar',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -993,7 +993,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/double-local-llm-speed',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1163,7 +1163,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'de',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -1378,7 +1378,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'fr',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [
@@ -2078,7 +2078,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'ko',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         about: [

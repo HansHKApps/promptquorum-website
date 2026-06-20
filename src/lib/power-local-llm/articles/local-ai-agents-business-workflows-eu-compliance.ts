@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Despliega agentes de IA locales para procesamiento de documentos, gestión de correos y generación de informes bajo el GDPR y el EU AI Act. Arquitectura, controles de cumplimiento y 5 plantillas de flujos de trabajo.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-agents-business-workflows-eu-compliance',
       inLanguage: 'es',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
     sections: {
@@ -2004,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Implante agentes de IA locais para processamento de documentos, gestão de e-mails e geração de relatórios sob LGPD/GDPR e EU AI Act. Arquitetura, controles de conformidade e 5 modelos de fluxos de trabalho.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-agents-business-workflows-eu-compliance',
       inLanguage: 'pt-BR',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
     sections: {
@@ -2331,7 +2331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'انشر وكلاء ذكاء اصطناعي محلي لمعالجة المستندات وإدارة البريد الإلكتروني وإعداد التقارير وفق GDPR وEU AI Act. البنية وضوابط الامتثال و5 قوالب لسير العمل.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-agents-business-workflows-eu-compliance',
       inLanguage: 'ar',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
     sections: {
@@ -2675,7 +2675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'GDPR 및 EU AI Act 하에서 문서 처리, 이메일 관리, 보고서 생성을 위한 로컬 AI 에이전트를 배포합니다. 아키텍처, 규정 준수 통제 및 5가지 워크플로 템플릿을 제공합니다.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-agents-business-workflows-eu-compliance',
       inLanguage: 'ko',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },
     breadcrumbSchema: {

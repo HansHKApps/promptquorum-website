@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting',
         keywords: ['self-consistency prompting', 'prompt engineering', 'reasoning prompts', 'majority voting', 'chain-of-thought', 'accuracy improvement', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/de/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'KI-Zuverlässigkeit', 'Mehrheitsabstimmung', 'Reasoning', 'Chain-of-Thought'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -550,7 +550,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/es/prompt-engineering/self-consistency-prompting',
         inLanguage: 'es',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de razonamiento', 'voto mayoritario', 'chain-of-thought', 'mejora de precisión', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/ar/prompt-engineering/self-consistency-prompting',
         inLanguage: 'ar',
         keywords: ['برومبت الاتساق الذاتي', 'هندسة البرومبت', 'برومبتات الاستدلال', 'التصويت الأغلبي', 'سلسلة الأفكار', 'تحسين الدقة', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'هندسة البرومبت' },
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/pt/prompt-engineering/self-consistency-prompting',
         inLanguage: 'pt-BR',
         keywords: ['self-consistency prompting', 'prompt engineering', 'prompts de raciocínio', 'votação por maioria', 'chain-of-thought', 'melhora de precisão', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1277,7 +1277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/fr/prompt-engineering/self-consistency-prompting',
         keywords: ['Self-Consistency Prompting', 'Prompt Engineering', 'Fiabilité IA', 'Vote majoritaire', 'Raisonnement', 'Chaîne de pensée'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -2499,7 +2499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/self-consistency-prompting',
         keywords: ['자기 일관성 프롬프팅', '프롬프트 엔지니어링', '추론 프롬프트', '다수결 투표', 'chain-of-thought', '정확도 향상', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: '프롬프트 엔지니어링' },

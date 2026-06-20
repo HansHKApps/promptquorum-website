@@ -1228,7 +1228,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/create-custom-local-models',
         headline: 'Criar LLMs Locais Personalizados 2026: Fine-Tuning vs Pré-Treinamento com Unsloth e Ollama',
         description: 'Fine-tune um modelo 7B com LoRA: 500 exemplos, 8 GB VRAM, 1–2 horas, $100–500. Pré-treinamento: 10B+ tokens, $50K–500K. Inclui matriz de decisão, configuração do Unsloth e deploy no Ollama.',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         datePublished: '2026-04-04',
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',

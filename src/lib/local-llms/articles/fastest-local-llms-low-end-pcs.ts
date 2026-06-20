@@ -278,7 +278,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -647,7 +647,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1017,7 +1017,7 @@ schema: {
         'inLanguage': 'ar',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1206,7 +1206,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/fastest-local-llms-low-end-pcs',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1449,7 +1449,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1793,7 +1793,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/fastest-local-llms-low-end-pcs',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [

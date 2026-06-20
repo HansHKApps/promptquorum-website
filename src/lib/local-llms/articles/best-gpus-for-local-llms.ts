@@ -400,7 +400,7 @@ schema: {
         inLanguage: 'es',
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -629,7 +629,7 @@ schema: {
         inLanguage: 'ar',
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -798,7 +798,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/best-gpus-for-local-llms',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
     },

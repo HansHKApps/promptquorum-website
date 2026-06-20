@@ -180,7 +180,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/open-webui-vs-sillytavern',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -411,7 +411,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/open-webui-vs-sillytavern',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -636,7 +636,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/open-webui-vs-sillytavern',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1250,7 +1250,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/open-webui-vs-sillytavern',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1459,7 +1459,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/open-webui-vs-sillytavern',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1647,7 +1647,7 @@ schema: {
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [

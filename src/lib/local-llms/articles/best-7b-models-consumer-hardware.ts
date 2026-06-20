@@ -29,7 +29,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/best-7b-models-consumer-hardware',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Llama 3.3 7B' },
@@ -41,6 +41,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -292,7 +293,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/best-7b-models-consumer-hardware',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Llama 3.3 7B' },
@@ -304,6 +305,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -556,7 +558,7 @@ schema: {
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'inLanguage': 'ar',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Llama 3.3 7B' },
@@ -568,6 +570,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -819,7 +822,7 @@ schema: {
         'description': 'Melhores modelos 7B para 8 GB de VRAM em 2026: Llama 3.3 7B (82% MATH), Mistral Small (92% seguimento de instruções), Qwen3 7B (27 idiomas). Guia de configuração para GPU de consumo.',
         'url': 'https://www.promptquorum.com/pt/local-llms/best-7b-models-consumer-hardware',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'pt-BR',
       },
@@ -987,7 +990,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/best-7b-models-consumer-hardware',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Llama 3.3 7B' },
@@ -999,6 +1002,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1262,7 +1266,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/best-7b-models-consumer-hardware',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Llama 3.3 7B' },
@@ -1274,6 +1278,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1536,6 +1541,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1798,6 +1804,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -2050,7 +2057,7 @@ schema: {
       'datePublished': '2026-04-05',
       'dateModified': '2026-04-18',
       'inLanguage': 'ko',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': 'Llama 3.3 7B' },
@@ -2062,6 +2069,7 @@ schema: {
         { '@type': 'SoftwareApplication', 'name': 'Ollama' },
         { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
       ],
+      'proficiencyLevel': 'Intermediate',
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

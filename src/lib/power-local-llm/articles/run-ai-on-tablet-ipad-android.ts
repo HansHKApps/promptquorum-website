@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
-      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
         'Die Ausführung einer lokalen KI auf einem Tablet ist 2026 praktisch. Diese Anleitung behandelt On-Device-Inferenz und Remote-Verbindung zu einem Home-Computer.',
@@ -1165,7 +1165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
-      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
         'Exécution IA locale tablette pratique 2026. Inférence on-device et connexion à distance machine locale.',
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
-      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
         'Ejecutar IA local en una tablet es práctico en 2026. Esta guía cubre la inferencia en el dispositivo y la conexión remota a una máquina en casa.',
@@ -2792,7 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
-      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
         '태블릿에서 로컬 AI를 실행하는 것은 2026년에 실용적입니다. 이 가이드는 온디바이스 추론과 자택 기기 원격 연결을 다룹니다.',
@@ -3195,7 +3195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
-      author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
         'Executar IA local em um tablet é prático em 2026. Este guia cobre a inferência no dispositivo e a conexão remota a uma máquina em casa.',
@@ -3473,7 +3473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ar',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       mentions: [
         { '@type': 'SoftwareApplication', name: 'LLM Farm' },

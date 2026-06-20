@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/prompt-engineering/tree-of-thought-react',
       inLanguage: 'en',
       keywords: ['tree-of-thought', 'ReAct', 'prompt engineering', 'reasoning prompts', 'AI agents', 'agentic prompting', 'native tool use', 'chain-of-thought', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Tree-of-Thought Prompting' },
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/de/prompt-engineering/tree-of-thought-react',
       inLanguage: 'de',
       keywords: ['tree-of-thought', 'ReAct', 'Prompt Engineering', 'KI-Agenten', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Tree-of-Thought Prompting' },
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/es/prompt-engineering/tree-of-thought-react',
       inLanguage: 'es',
       keywords: ['tree-of-thought', 'ReAct', 'prompt engineering', 'prompts de razonamiento', 'agentes de IA', 'prompting agéntico', 'uso nativo de herramientas', 'chain-of-thought', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Tree-of-Thought Prompting' },
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/ar/prompt-engineering/tree-of-thought-react',
       inLanguage: 'ar',
       keywords: ['tree-of-thought', 'ReAct', 'prompt engineering', 'موجّهات الاستدلال', 'وكلاء الذكاء الاصطناعي', 'الموجّه الوكيلي', 'استخدام الأدوات الأصلي', 'chain-of-thought', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Tree-of-Thought Prompting' },
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/pt/prompt-engineering/tree-of-thought-react',
       inLanguage: 'pt-BR',
       keywords: ['tree-of-thought', 'ReAct', 'prompt engineering', 'prompts de raciocínio', 'agentes de IA', 'prompting agêntico', 'uso nativo de ferramentas', 'chain-of-thought', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Tree-of-Thought Prompting' },
@@ -1705,7 +1705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       url: 'https://www.promptquorum.com/fr/prompt-engineering/tree-of-thought-react',
       inLanguage: 'fr',
       keywords: ['tree-of-thought', 'ReAct', 'prompt engineering', 'prompts de raisonnement', 'agents IA', 'prompting agentique', 'utilisation native d\'outils', 'chain-of-thought', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Tree-of-Thought Prompting' },
@@ -2437,7 +2437,7 @@ Final Answer: [総合結論]`,
       url: 'https://www.promptquorum.com/ko/prompt-engineering/tree-of-thought-react',
       inLanguage: 'ko',
       keywords: ['tree-of-thought', 'ReAct', '프롬프트 엔지니어링', '추론 프롬프트', 'AI 에이전트', '에이전트 프롬프팅', '네이티브 도구 사용', 'chain-of-thought', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Tree-of-Thought Prompting' },

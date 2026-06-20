@@ -177,7 +177,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/what-are-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'local LLM' },
@@ -190,6 +190,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -426,7 +427,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/what-are-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LLM local' },
@@ -439,6 +440,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -675,7 +677,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/what-are-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
         'about': [
@@ -689,6 +691,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -926,7 +929,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/what-are-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LLM local' },
@@ -939,6 +942,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',

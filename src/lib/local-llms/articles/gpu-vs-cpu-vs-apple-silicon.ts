@@ -256,7 +256,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/gpu-vs-cpu-vs-apple-silicon',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -538,7 +538,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-cpu-vs-apple-silicon',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -827,7 +827,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/gpu-vs-cpu-vs-apple-silicon',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -972,7 +972,7 @@ schema: {
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1234,7 +1234,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/gpu-vs-cpu-vs-apple-silicon',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1517,7 +1517,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/gpu-vs-cpu-vs-apple-silicon',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [

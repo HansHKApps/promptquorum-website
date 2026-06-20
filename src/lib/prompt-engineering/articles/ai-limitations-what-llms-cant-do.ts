@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-05-01',
         keywords: ['AI limitations', 'LLM limitations', 'what LLMs can\'t do', 'large language model failures', 'hallucination', 'knowledge cutoff', 'context window', 'prompt engineering'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
           logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-05-01',
         keywords: ['KI-Einschränkungen', 'LLM-Einschränkungen', 'was LLMs nicht können', 'Fehler großer Sprachmodelle', 'Halluzination', 'Wissens-Cutoff', 'Kontextfenster', 'Prompt Engineering'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
           logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-05-01',
         keywords: ['limitaciones de la IA', 'limitaciones de LLM', 'lo que los LLMs no pueden hacer', 'fallos de grandes modelos de lenguaje', 'alucinación', 'corte de conocimiento', 'context window', 'prompt engineering'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
           logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-05-01',
         keywords: ['قيود الذكاء الاصطناعي', 'قيود النماذج اللغوية الكبيرة', 'ما لا تستطيع النماذج اللغوية الكبيرة فعله', 'إخفاقات النماذج اللغوية الكبيرة', 'الهلوسة', 'قطع المعرفة', 'نافذة السياق', 'هندسة التعليمات'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
           logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-05-01',
         keywords: ['limitações da IA', 'limitações de LLM', 'o que os LLMs não podem fazer', 'falhas de grandes modelos de linguagem', 'alucinação', 'corte de conhecimento', 'janela de contexto', 'prompt engineering'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
           logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-05-01',
         keywords: ['limitations de l\'IA', 'limitations des LLMs', 'ce que les LLMs ne peuvent pas faire', 'défaillances des grands modèles de langage', 'hallucination', 'coupure de connaissance', 'fenêtre de contexte', 'ingénierie des prompts'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
           logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-24',
     dateModified: '2026-05-01',
     keywords: ['AI制限', 'LLM制限', 'LLMができないこと', '大規模言語モデルの失敗', '幻覚', '知識カットオフ', 'コンテキストウィンドウ', 'プロンプトエンジニアリング'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: {
       '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
       logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -2156,7 +2156,7 @@ zh: {
         datePublished: '2026-03-24',
         dateModified: '2026-05-01',
         keywords: ['AI 局限性', '大语言模型局限性', '大语言模型无法做什么', '大语言模型失败', '幻觉', '知识截断', '上下文窗口', '提示词工程'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
           logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
@@ -2537,7 +2537,7 @@ zh: {
       datePublished: '2026-03-24',
       dateModified: '2026-05-01',
       keywords: ['AI 한계', 'LLM 한계', 'LLM이 할 수 없는 것', '대형 언어 모델 실패', '환각', '지식 콼오프', '컨텍스트 윈도우', '프롬프트 엔지니어링'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },

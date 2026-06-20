@@ -218,7 +218,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -555,7 +555,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/run-first-local-llm',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -892,7 +892,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/run-first-local-llm',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1383,7 +1383,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/run-first-local-llm',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [

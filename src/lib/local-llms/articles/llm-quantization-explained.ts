@@ -1864,7 +1864,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Q4_K_S quantization' },
           { '@type': 'Thing', 'name': 'Q8_K_XL quantization' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
@@ -4276,7 +4276,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Q4_K_S quantization' },
           { '@type': 'Thing', 'name': 'Q8_K_XL quantization' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'speakable': {
           '@type': 'SpeakableSpecification',

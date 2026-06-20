@@ -198,7 +198,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'en',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 630 },
         about: [
@@ -468,7 +468,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'es',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 630 },
         about: [
@@ -744,7 +744,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'ar',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 630 },
         about: [
@@ -925,7 +925,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/future-of-local-llms',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -1138,7 +1138,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'de',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 630 },
         about: [
@@ -1424,7 +1424,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-20',
         inLanguage: 'fr',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 630 },
         about: [

@@ -29,8 +29,9 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
@@ -269,8 +270,9 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-24',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
@@ -507,8 +509,9 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-24',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
@@ -707,6 +710,7 @@ schema: {
         'dateModified': '2026-04-24',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
@@ -905,6 +909,7 @@ schema: {
         'dateModified': '2026-04-24',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
@@ -1101,8 +1106,9 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
@@ -1340,8 +1346,9 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',
@@ -1589,8 +1596,9 @@ schema: {
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       sections: {
@@ -1637,8 +1645,9 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       gammaEmbedUrl: '/presentations/local-llm-setup-for-teams-static.html',

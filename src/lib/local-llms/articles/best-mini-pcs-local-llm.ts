@@ -228,7 +228,7 @@ schema: {
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Mac mini M4 Pro LLM' },
@@ -242,6 +242,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -498,7 +499,7 @@ schema: {
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Mac mini M4 Pro LLM' },
@@ -512,6 +513,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -759,7 +761,7 @@ schema: {
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Mac mini M4 Pro LLM' },
@@ -773,6 +775,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1030,6 +1033,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1288,6 +1292,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1544,7 +1549,7 @@ schema: {
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Mac mini M4 Pro LLM' },
@@ -1558,6 +1563,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1815,7 +1821,7 @@ schema: {
         'dateModified': '2026-04-21',
         'proficiencyLevel': 'Intermediate',
         'inLanguage': 'ar',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Mac mini M4 Pro LLM' },
@@ -1829,6 +1835,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -2073,7 +2080,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/best-mini-pcs-local-llm',
         'datePublished': '2026-04-05',
         'proficiencyLevel': 'Intermediate',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'pt-BR',
         'about': [
@@ -2088,6 +2095,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -2337,7 +2345,7 @@ schema: {
     'datePublished': '2026-04-05',
     'dateModified': '2026-04-21',
     'proficiencyLevel': 'Intermediate',
-    'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+    'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'about': [
       { '@type': 'Thing', 'name': 'Mac mini M4 Pro LLM' },
@@ -2351,6 +2359,7 @@ schema: {
       'cssSelector': ['.article-intro', '.key-takeaways'],
     },
     'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
   },
   faqSchema: {
     '@context': 'https://schema.org',

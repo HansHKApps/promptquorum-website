@@ -580,7 +580,7 @@ schema: {
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -594,6 +594,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1235,7 +1236,7 @@ schema: {
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -1249,6 +1250,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1890,7 +1892,7 @@ schema: {
         'inLanguage': 'ar',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -1904,6 +1906,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -2545,7 +2548,7 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
         'inLanguage': 'pt-BR',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -2559,6 +2562,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -3200,7 +3204,7 @@ schema: {
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -3214,6 +3218,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -3855,7 +3860,7 @@ schema: {
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
         'inLanguage': 'fr',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -3869,6 +3874,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -4510,7 +4516,7 @@ schema: {
         'inLanguage': 'ja',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -4524,6 +4530,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -5165,7 +5172,7 @@ schema: {
         'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-15',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'GPU VRAM requirements LLM' },
@@ -5179,6 +5186,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2', 'h3']
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',

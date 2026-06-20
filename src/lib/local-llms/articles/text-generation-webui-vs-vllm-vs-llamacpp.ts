@@ -255,7 +255,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'vLLM' },
@@ -615,7 +615,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'vLLM' },
@@ -975,7 +975,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
         'about': [
@@ -1147,7 +1147,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1376,7 +1376,7 @@ schema: {
       'url': 'https://www.promptquorum.com/de/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
       'datePublished': '2026-04-04',
       'dateModified': '2026-04-15',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': 'vLLM' },
@@ -1390,6 +1390,7 @@ schema: {
         'cssSelector': ['.article-intro', '.key-takeaways'],
       },
       'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1635,7 +1636,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-15',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'vLLM' },
@@ -1649,6 +1650,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1989,6 +1991,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2329,6 +2332,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',

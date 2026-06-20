@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Compara 5 asistentes de código IA con soporte LLM local nativo: Ollama, LM Studio, privacidad, precios. Cursor vs Continue.dev vs Cody—verificado mayo 2026.',
       'datePublished': '2026-05-17',
       'dateModified': '2026-05-17',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': 'Continue.dev' },
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-17',
       'dateModified': '2026-05-17',
       'inLanguage': 'ar',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': 'Continue.dev' },
@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'url': 'https://www.promptquorum.com/pt/local-llms/best-ai-coding-assistant-local-llm',
       'inLanguage': 'pt-BR',
       'datePublished': '2026-05-17',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     },
   },
@@ -2276,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': '对比5款支持本地LLM的编程助手。Continue.dev、Cursor、Cody、Tabnine——按隐私、成本、功能选择最佳工具。',
       'datePublished': '2026-05-18',
       'dateModified': '2026-05-18',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': 'Continue.dev' },
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-17',
       'dateModified': '2026-05-17',
       'inLanguage': 'ko',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': 'Continue.dev' },

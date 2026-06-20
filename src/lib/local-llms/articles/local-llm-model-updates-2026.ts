@@ -192,7 +192,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/local-llm-model-updates-2026',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'proficiencyLevel': 'Intermediate',
         'speakable': {
           '@type': 'SpeakableSpecification',
@@ -493,7 +493,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-model-updates-2026',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'speakable': {
@@ -800,7 +800,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-model-updates-2026',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'speakable': {
@@ -950,8 +950,9 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-model-updates-2026',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       sections: {
@@ -1355,7 +1356,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-model-updates-2026',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'about': [
@@ -1864,7 +1865,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-model-updates-2026',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'about': [

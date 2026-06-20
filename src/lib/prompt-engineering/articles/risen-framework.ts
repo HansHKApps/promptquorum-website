@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework',
         keywords: ['RISEN Framework', 'iterative prompting', 'prompt refinement', 'multi-step workflows', 'prompt engineering', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'RISEN Framework' },
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/de/prompt-engineering/risen-framework',
         keywords: ['RISEN-Framework', 'iteratives Prompting', 'Prompt-Verfeinerung', 'Prompt Engineering', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'RISEN-Framework' },
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/es/prompt-engineering/risen-framework',
         inLanguage: 'es',
         keywords: ['Framework RISEN', 'prompting iterativo', 'refinamiento de prompts', 'flujos de trabajo multi-paso', 'prompt engineering', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Framework RISEN' },
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/ar/prompt-engineering/risen-framework',
         inLanguage: 'ar',
         keywords: ['Framework RISEN', 'برومبت تكراري', 'تحسين البرومبتات', 'سير عمل متعدد الخطوات', 'هندسة البرومبت', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Framework RISEN' },
@@ -2001,7 +2001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/pt/prompt-engineering/risen-framework',
         inLanguage: 'pt-BR',
         keywords: ['Framework RISEN', 'prompting iterativo', 'refinamento de prompts', 'fluxos de trabalho multi-etapa', 'prompt engineering', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Framework RISEN' },
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/fr/prompt-engineering/risen-framework',
         keywords: ['Framework RISEN', 'prompting itératif', 'raffinement prompts', 'ingénierie prompts', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Framework RISEN' },
@@ -3619,7 +3619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/risen-framework',
         keywords: ['RISEN Framework', '반복 프롬프트', '프롬프트 개선', '다단계 워크플로', '프롬프트 엔지니어링', 'PromptQuorum', 'GPT-5.5', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'RISEN Framework' },

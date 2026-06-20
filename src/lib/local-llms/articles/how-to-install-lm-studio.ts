@@ -199,7 +199,7 @@ schema: {
         'description': 'Install LM Studio on macOS, Windows, or Linux: download, load a model, and start chatting in 5 minutes. No terminal needed. Beginner guide 2026.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -212,6 +212,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -461,7 +462,7 @@ schema: {
         'description': 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -474,6 +475,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -723,7 +725,7 @@ schema: {
         'description': 'ثبّت LM Studio على macOS أو Windows أو Linux: نزّل نموذجًا وابدأ المحادثة خلال 5 دقائق. دون طرفية. دليل للمبتدئين 2026.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -736,6 +738,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -891,7 +894,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/how-to-install-lm-studio',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1512,7 +1515,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/how-to-install-lm-studio',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [

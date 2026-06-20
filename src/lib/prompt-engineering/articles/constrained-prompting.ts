@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-26',
         dateModified: '2026-04-28',
         keywords: ['constrained prompting', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-26',
         dateModified: '2026-05-03',
         keywords: ['Constrained Prompting', 'Prompt Engineering', 'strukturierte Prompts', 'PromptQuorum', 'API-Level Durchsetzung'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -713,7 +713,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-26',
         dateModified: '2026-04-28',
         keywords: ['constrained prompting', 'prompt engineering', 'prompts estructurados', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1045,7 +1045,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-26',
         dateModified: '2026-04-28',
         keywords: ['الموجّهات المقيّدة', 'هندسة الموجّهات', 'موجّهات منظّمة', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-26',
         dateModified: '2026-04-28',
         keywords: ['constrained prompting', 'prompt engineering', 'prompts estruturados', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     datePublished: '2026-03-26',
     dateModified: '2026-05-03',
     keywords: ['prompting avec contraintes', 'prompting', 'outputs structurés', 'JSON schema', 'PromptQuorum'],
-    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     proficiencyLevel: 'Intermediate',
     about: [
@@ -3005,7 +3005,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-03-26',
       dateModified: '2026-04-28',
       keywords: ['제약 프롬프팅', '프롬프트 엔지니어링', '구조화된 프롬프트', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
       about: [

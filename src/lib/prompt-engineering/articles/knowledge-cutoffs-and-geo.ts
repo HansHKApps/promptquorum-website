@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'Generative Engine Optimization' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: '생성형 엔진 최적화' },
         { '@type': 'Thing', name: '로컬 LLM' },
       ],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'Otimização de Motor Generativo' },
         { '@type': 'Thing', name: 'LLM Local' },
       ],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'تحسين محرك التوليد' },
         { '@type': 'Thing', name: 'نموذج اللغة الكبير المحلي' },
       ],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
         name: 'PromptQuorum',

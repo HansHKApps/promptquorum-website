@@ -56,7 +56,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'LM Studio' },
         ],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -555,7 +555,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'LM Studio' },
         ],
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -1053,7 +1053,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'LM Studio' },
         ],
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -1532,8 +1532,9 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-limitations',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       sections: {
@@ -1620,10 +1621,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
-        author: {
-          '@type': 'Person',
-          'name': 'Hans Kuepper'
-        },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -2274,10 +2272,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
-        author: {
-          '@type': 'Person',
-          'name': 'Hans Kuepper'
-        },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -4043,7 +4038,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'LM Studio' },
         ],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },

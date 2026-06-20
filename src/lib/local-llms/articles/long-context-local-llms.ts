@@ -45,7 +45,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Lost in the middle LLM' },
           { '@type': 'Thing', 'name': 'Ollama num_ctx' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -395,7 +395,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Problema lost in the middle en LLM' },
           { '@type': 'Thing', 'name': 'Ollama num_ctx' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'isPartOf': {
@@ -739,7 +739,7 @@ schema: {
           { '@type': 'Thing', 'name': 'مشكلة lost in the middle في LLM' },
           { '@type': 'Thing', 'name': 'Ollama num_ctx' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'isPartOf': {
@@ -1083,7 +1083,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Problema lost in the middle em LLM' },
           { '@type': 'Thing', 'name': 'Ollama num_ctx' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'isPartOf': {
@@ -1581,7 +1581,7 @@ schema: {
         'url': 'https://www.promptquorum.com/zh/local-llms/long-context-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -1832,7 +1832,7 @@ schema: {
           { '@type': 'Thing', 'name': '중간 소실 LLM' },
           { '@type': 'Thing', 'name': 'Ollama num_ctx' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',

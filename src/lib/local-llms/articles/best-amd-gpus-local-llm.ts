@@ -293,7 +293,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'AMD GPU' },
@@ -306,6 +306,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -517,7 +518,7 @@ schema: {
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
         'inLanguage': 'ar',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'AMD GPU' },
@@ -530,6 +531,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -742,7 +744,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'AMD GPU' },
@@ -755,6 +757,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1659,7 +1662,7 @@ schema: {
       'datePublished': '2026-04-05',
       'dateModified': '2026-04-18',
       'inLanguage': 'ko',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'about': [
         { '@type': 'Thing', 'name': 'AMD GPU' },
@@ -1672,6 +1675,7 @@ schema: {
         'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
       },
       'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
     },
     faqSchema: {
       '@context': 'https://schema.org',

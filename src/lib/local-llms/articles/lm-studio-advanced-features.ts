@@ -28,7 +28,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -41,6 +41,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1295,7 +1296,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -1308,6 +1309,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1542,7 +1544,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
         'about': [
@@ -1556,6 +1558,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1806,7 +1809,7 @@ schema: {
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -1816,6 +1819,7 @@ schema: {
         ],
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       sections: {
         tldr: {
@@ -1945,7 +1949,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'LM Studio' },
@@ -1958,6 +1962,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Advanced',
+        'proficiencyLevel': 'Advanced',
       },
       howToSchema: {
         '@context': 'https://schema.org',

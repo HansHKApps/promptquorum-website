@@ -167,7 +167,7 @@ schema: {
         'description': 'Qwen3-Coder 32B catches 88% of code review bugs at 20 GB RAM. Llama 3.3 70B best for security. DeepSeek-R1 14B best for algorithms. Comparison by code type.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-11',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -381,7 +381,7 @@ schema: {
         'description': 'Qwen3-Coder 32B detecta el 88% de errores en code review con 20 GB de RAM. Llama 3.3 70B ideal para seguridad. DeepSeek-R1 14B ideal para algoritmos. Comparación por tipo de código.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-11',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -595,7 +595,7 @@ schema: {
         'description': 'يكشف Qwen3-Coder 32B عن 88% من الأخطاء في مراجعة الكود بـ 20 GB من RAM. Llama 3.3 70B مثالي للأمن. DeepSeek-R1 14B مثالي للخوارزميات. مقارنة حسب نوع الكود.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-11',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -808,7 +808,7 @@ schema: {
         'description': 'Qwen3-Coder 32B erkennt 88% Code-Review-Fehler bei 20 GB RAM. Llama 3.3 70B beste für Sicherheit. DeepSeek-R1 14B beste für Algorithmen. Vergleich nach Code-Typ.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-11',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1023,7 +1023,7 @@ schema: {
         'description': "Qwen3-Coder 32B détecte 88% bugs revue code à 20 GB RAM. Llama 3.3 70B meilleur sécurité. DeepSeek-R1 14B meilleur algorithmes.",
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-11',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1267,7 +1267,7 @@ schema: {
         'description': 'O Qwen3-Coder 32B detecta 88% dos bugs em code review com 20 GB de RAM. Llama 3.3 70B ideal para segurança. DeepSeek-R1 14B ideal para algoritmos. Comparação por tipo de código.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-11',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [

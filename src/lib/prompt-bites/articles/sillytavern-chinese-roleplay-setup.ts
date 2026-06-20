@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'en',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'de',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'fr',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -915,7 +915,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'ja',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'zh',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'pt-BR',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'es',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -1822,7 +1822,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'ar',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       inLanguage: 'ko',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'SillyTavern' },

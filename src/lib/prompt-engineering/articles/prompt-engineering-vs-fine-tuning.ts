@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-04-10',
       dateModified: '2026-05-04',
       keywords: ['prompt engineering', 'fine-tuning', 'decision guide', 'cost comparison'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-04-10',
       dateModified: '2026-05-04',
       keywords: ['Prompt Engineering', 'Fine-Tuning', 'Entscheidungsleitfaden', 'Kostenvergleich'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-04-10',
       dateModified: '2026-05-04',
       keywords: ['prompt engineering', 'fine-tuning', 'guía de decisión', 'comparativa de costes'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       description: 'Guia de decisão que compara prompt engineering e fine-tuning.',
       datePublished: '2026-04-10',
       keywords: ['prompt engineering', 'fine-tuning', 'guia de decisão', 'comparativo de custos'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-04-10',
       dateModified: '2026-05-04',
       keywords: ['prompt engineering', 'fine-tuning', 'guide décisionnel', 'comparaison coûts'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1861,7 +1861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-04-10',
       dateModified: '2026-05-04',
       keywords: ['prompt engineering', 'fine-tuning', '의사결정 가이드', '비용 비교'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },

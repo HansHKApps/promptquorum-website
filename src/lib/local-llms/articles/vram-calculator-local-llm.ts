@@ -26,11 +26,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'VRAM Calculator for Local LLMs: Calculate Exact GPU Requirements',
         description: 'VRAM calculator for local LLMs 2026: use formula VRAM = (Model Billions × Quantization Bits) ÷ 8. RTX 4090, 4080, M5 Max examples with overhead, batching, and accuracy data.',
-        author: {
-          '@type': 'Person',
-          name: 'Hans Kuepper',
-          sameAs: 'https://www.promptquorum.com/about'
-        },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
         publisher: {
@@ -439,10 +435,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'Calculadora de VRAM para LLMs locales: Calcula los requisitos exactos de GPU',
         description: 'Calculadora de VRAM para LLMs locales 2026: usa la fórmula VRAM = (Miles de millones del modelo × Bits de cuantización) ÷ 8. Ejemplos con RTX 4090, 4080, M5 Max con datos de sobrecarga, procesamiento por lotes y precisión.',
-        author: {
-          '@type': 'Person',
-          name: 'Hans Kuepper'
-        },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
         publisher: {
@@ -856,10 +849,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'حاسبة VRAM لنماذج LLM المحلية: احسب متطلبات GPU الدقيقة',
         description: 'حاسبة VRAM لنماذج LLM المحلية 2026: استخدم الصيغة VRAM = (مليارات النموذج × بتات التكميم) ÷ 8. أمثلة بـ RTX 4090 و4080 وM5 Max ببيانات الحمل الإضافي والمعالجة بالدُفعات والدقة.',
-        author: {
-          '@type': 'Person',
-          name: 'Hans Kuepper'
-        },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
         publisher: {
@@ -1275,7 +1265,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/vram-calculator-local-llm',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -1370,7 +1360,7 @@ schema: {
         '@type': 'TechArticle',
         headline: 'VRAM-Rechner für lokale LLMs: Berechnen Sie exakte GPU-Anforderungen',
         description: 'VRAM-Rechner für lokale LLMs 2026: Verwenden Sie die Formel VRAM = (Modell-Milliarden × Quantisierungs-Bits) ÷ 8. RTX 4090, 4080, M5 Max Beispiele mit Overhead, Batching und Accuracy-Daten.',
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         datePublished: '2026-04-04',
         dateModified: '2026-04-19',
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1441,7 +1431,7 @@ schema: {
       readTime: '10 min de lecture',
       educationalLevel: 'Débutant à intermédiaire',
       primaryTerm: 'calculateur VRAM',
-schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Calculateur VRAM pour LLMs locaux : calculez les exigences GPU exactes', description: 'Calculateur VRAM pour LLMs locaux 2026 : utilisez la formule VRAM = (Milliards modèle × Bits quantification) ÷ 8. Exemples RTX 4090, 4080, M5 Max avec surcharge, traitement par lots et données de précision.', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about' }, datePublished: '2026-04-04', dateModified: '2026-04-19', publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, proficiencyLevel: 'Débutant', audience: { '@type': 'Audience', audienceType: 'Développeurs, débutants exécutant des LLMs locaux' }, about: [{ '@type': 'Thing', name: 'VRAM' }, { '@type': 'Thing', name: 'Mémoire GPU' }, { '@type': 'Thing', name: 'Modèles Llama' }, { '@type': 'Thing', name: 'Quantification' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }, url: 'https://www.promptquorum.com/fr/local-llms/vram-calculator-local-llm', inLanguage: 'fr' },
+schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Calculateur VRAM pour LLMs locaux : calculez les exigences GPU exactes', description: 'Calculateur VRAM pour LLMs locaux 2026 : utilisez la formule VRAM = (Milliards modèle × Bits quantification) ÷ 8. Exemples RTX 4090, 4080, M5 Max avec surcharge, traitement par lots et données de précision.', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, datePublished: '2026-04-04', dateModified: '2026-04-19', publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, proficiencyLevel: 'Débutant', audience: { '@type': 'Audience', audienceType: 'Développeurs, débutants exécutant des LLMs locaux' }, about: [{ '@type': 'Thing', name: 'VRAM' }, { '@type': 'Thing', name: 'Mémoire GPU' }, { '@type': 'Thing', name: 'Modèles Llama' }, { '@type': 'Thing', name: 'Quantification' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }, url: 'https://www.promptquorum.com/fr/local-llms/vram-calculator-local-llm', inLanguage: 'fr' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [{ '@type': 'Question', name: 'La formule fonctionne-t-elle pour tous les types de modèles ?', acceptedAnswer: { '@type': 'Answer', text: "Oui. La formule (Milliards modèle × Bits quantification) ÷ 8 s'applique à tous les modèles basés sur Transformer (Llama, Qwen, Mistral, Claude, etc.). Les architectures non-Transformer (RNN, etc.) sont rares et peuvent nécessiter des ajustements." } }, { '@type': 'Question', name: 'Quelle quantification utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour la plupart des usages : Q5 offre le meilleur équilibre (95 % qualité, 68 % réduction). Pour les GPU grand public : Q4 est standard (90–95 % qualité, 75 % réduction). En production : Q8 si la VRAM le permet (99 % qualité). Évitez Q3 et en dessous sauf nécessité absolue.' } }, { '@type': 'Question', name: 'Quelle quantité de RAM système faut-il ?', acceptedAnswer: { '@type': 'Answer', text: '16 Go minimum pour le déchargement. En cas de déchargement VRAM (débordement CPU), la RAM système devient le recours. Pour le traitement par lots, ajoutez 8–16 Go. Pour le chat mono-utilisateur, 16 Go suffisent.' } }, { '@type': 'Question', name: 'La taille du lot affecte-t-elle le calcul VRAM ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. La formule calcule la VRAM pour une requête unique. La taille du lot ajoute de la VRAM linéairement : chaque requête simultanée ajoute ~500 Mo–2 Go selon le contexte. Avec batch=4, ajoutez 2–8 Go au montant calculé.' } }, { '@type': 'Question', name: 'Puis-je exécuter un modèle 70B sur un GPU 12 Go ?', acceptedAnswer: { '@type': 'Answer', text: "Uniquement avec une quantification extrême (Q2, ~70 % de perte qualité) et déchargement CPU (très lent, 1–3 tokens/s). Peu pratique. Meilleure option : un modèle 13B en Q4 (même VRAM, bien plus rapide et de meilleure qualité)." } }, { '@type': 'Question', name: "Que faire si l'utilisation VRAM réelle est inférieure au calcul ?", acceptedAnswer: { '@type': 'Answer', text: "La formule est conservative et inclut la surcharge. Une utilisation inférieure signifie plus de marge pour le traitement par lots, des contextes plus longs ou une sécurité accrue. Utilisez nvidia-smi pour mesurer l'utilisation réelle, puis benchmarkez votre modèle." } }] },
       softwareApplicationSchema: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Calculateur VRAM pour LLMs locaux', description: 'Calculateur VRAM interactif pour LLMs locaux. Calculez les exigences GPU exactes pour toute combinaison taille modèle (1B–405B), quantification (FP16, Q8, Q5, Q4, Q3, Q2), longueur contexte (2K–128K tokens) et taille lot (1–8). Inclut vérification compatibilité GPU en temps réel pour RTX 3060/4070/4080/4090 et M5 Max.', applicationCategory: 'UtilityApplication', operatingSystem: 'Web', url: 'https://www.promptquorum.com/fr/local-llms/vram-calculator-local-llm', inLanguage: 'fr', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, creator: { '@type': 'Person', name: 'Hans Kuepper' } },
       howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Comment calculer les exigences VRAM pour les LLMs locaux', description: 'Calculez la VRAM exacte pour tout modèle LLM local avec la formule : (Milliards modèle × Bits quantification) ÷ 8. Inclut contexte, lot et surcharge système.', inLanguage: 'fr', step: [{ '@type': 'HowToStep', position: 1, name: 'Identifiez la taille de votre modèle', text: 'Déterminez le nombre de paramètres en milliards (ex. 7B = 7 milliards, 13B = 13 milliards). Modèles courants : Llama 3.2 (7B, 13B), Qwen3 (7B, 14B, 32B, 72B), Mistral 3.1 (7B, 32B).' }, { '@type': 'HowToStep', position: 2, name: 'Choisissez le niveau de quantification', text: 'Sélectionnez les bits : FP16 (100 % qualité, plus grand), Q8 (99 %), Q5 (95 %, équilibre recommandé), Q4 (90–95 %, défaut grand public), Q3 (80–85 %, compression extrême), Q2 (70 %, appareils Edge).' }, { '@type': 'HowToStep', position: 3, name: 'Appliquez la formule', text: 'Calculez : VRAM (Go) = (Taille modèle en milliards × Bits quantification) ÷ 8. Exemple : modèle 13B en Q4 = (13 × 4) ÷ 8 = 6.5 Go de poids de modèle de base.' }, { '@type': 'HowToStep', position: 4, name: 'Comptabilisez la surcharge', text: 'Ajoutez la surcharge pour le contexte (1–3 Go pour 4k tokens), le traitement par lots (×taille lot) et le système (1–2 Go). Total = base + surcharge.' }, { '@type': 'HowToStep', position: 5, name: 'Appliquez une marge de sécurité de 25 %', text: 'Multipliez le total par 1.25 pour obtenir la VRAM recommandée. Exemple : 10 Go calculés = achetez un GPU 12–16 Go.' }, { '@type': 'HowToStep', position: 6, name: 'Vérifiez la compatibilité GPU', text: 'Comparez votre VRAM recommandée aux GPU disponibles. RTX 4090 (24 Go), RTX 4080 (16 Go), RTX 4070 Ti (12 Go), RTX 3060 (12 Go), M5 Max (36 Go). Utilisez le calculateur interactif.' }] },

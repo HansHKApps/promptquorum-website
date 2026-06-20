@@ -32,7 +32,7 @@ schema: {
         url: 'https://www.promptquorum.com/local-llms/quantization-levels-comparison',
         inLanguage: 'en',
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'LLM Quantization' },
@@ -279,7 +279,7 @@ schema: {
         url: 'https://www.promptquorum.com/es/local-llms/quantization-levels-comparison',
         inLanguage: 'es',
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'Cuantización de LLM' },
@@ -525,7 +525,7 @@ schema: {
         url: 'https://www.promptquorum.com/ar/local-llms/quantization-levels-comparison',
         inLanguage: 'ar',
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'تكميم نماذج LLM' },
@@ -771,7 +771,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/quantization-levels-comparison',
         inLanguage: 'pt-BR',
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'Quantização de LLM' },
@@ -1016,7 +1016,7 @@ schema: {
         url: 'https://www.promptquorum.com/de/local-llms/quantization-levels-comparison',
         inLanguage: 'de',
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'LLM-Quantisierung' },
@@ -1265,7 +1265,7 @@ schema: {
         url: 'https://www.promptquorum.com/fr/local-llms/quantization-levels-comparison',
         inLanguage: 'fr',
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', 'name': 'Quantification LLM' },

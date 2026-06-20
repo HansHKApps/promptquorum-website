@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     image: 'https://www.promptquorum.com/og-build-a-prompt-library-de.png',
     datePublished: '2026-03-24',
     dateModified: '2026-04-29',
-    author: { '@type': 'Person', name: 'Hans Kuepper' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Prompt-Bibliotheken' },
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
         keywords: ['biblioteca de prompts', 'gestión de prompts', 'prompt engineering', 'productividad del equipo', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
         keywords: ['مكتبة التعليمات', 'إدارة التعليمات', 'هندسة التعليمات', 'إنتاجية الفريق', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'هندسة التعليمات' },
@@ -1928,7 +1928,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
         keywords: ['biblioteca de prompts', 'gestão de prompts', 'prompt engineering', 'produtividade da equipe', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -2273,7 +2273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     image: 'https://www.promptquorum.com/og-build-a-prompt-library-fr.png',
     datePublished: '2026-03-24',
     dateModified: '2026-04-29',
-    author: { '@type': 'Person', name: 'Hans Kuepper' },
+    author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Bibliothèques de prompts' },
@@ -3985,7 +3985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',
         keywords: ['프롬프트 라이브러리', '프롬프트 관리', 'prompt engineering', '팀 생산성', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },

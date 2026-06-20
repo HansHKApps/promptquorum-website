@@ -45,7 +45,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         about: [
@@ -319,7 +319,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/es/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         about: [
@@ -593,7 +593,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/ar/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         inLanguage: 'ar',
         proficiencyLevel: 'Beginner',
@@ -869,7 +869,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/pt/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         about: [
@@ -1122,7 +1122,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/de/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -1179,7 +1179,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/fr/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -1238,7 +1238,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/ja/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -1460,7 +1460,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/zh/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -1703,7 +1703,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models',
-        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         about: [

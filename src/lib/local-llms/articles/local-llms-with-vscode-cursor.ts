@@ -152,7 +152,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'local code completion' },
@@ -163,6 +163,7 @@ schema: {
         ],
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',

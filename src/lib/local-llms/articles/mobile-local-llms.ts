@@ -280,7 +280,7 @@ schema: {
         inLanguage: 'en',
         datePublished: '2026-04-04',
         dateModified: '2026-04-22',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -700,7 +700,7 @@ schema: {
         inLanguage: 'de',
         datePublished: '2026-04-04',
         dateModified: '2026-04-16',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1052,7 +1052,7 @@ schema: {
         inLanguage: 'fr',
         datePublished: '2026-04-04',
         dateModified: '2026-04-16',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -2738,7 +2738,7 @@ schema: {
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
         dateModified: '2026-05-17',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
     },

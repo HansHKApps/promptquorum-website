@@ -308,7 +308,7 @@ schema: {
         'description': 'Despliegue de LLM local headless 2026: ejecuta Ollama, vLLM y APIs de inferencia sin UI. Configuración de producción para servidores y microservicios.',
         'url': 'https://www.promptquorum.com/es/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
@@ -481,7 +481,7 @@ schema: {
         'description': 'نشر LLM محلي بلا واجهة 2026: شغّل Ollama و vLLM وواجهات استدلال دون واجهة مستخدم. إعداد إنتاجي للخوادم والخدمات المصغّرة.',
         'url': 'https://www.promptquorum.com/ar/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
@@ -654,7 +654,7 @@ schema: {
         'description': 'Implantação de LLM local headless 2026: rode Ollama, vLLM e APIs de inferência sem UI. Configuração de produção para servidores e microsserviços.',
         'url': 'https://www.promptquorum.com/pt/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
@@ -1001,7 +1001,7 @@ schema: {
         'description': 'Déploiement LLM Headless avec Ollama et vLLM : configuration de production pour serveurs et microservices, sans interface utilisateur.',
         'url': 'https://www.promptquorum.com/fr/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {

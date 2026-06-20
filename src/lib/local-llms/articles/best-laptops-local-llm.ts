@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'url': 'https://www.promptquorum.com/local-llms/best-laptops-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-19',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'MacBook Pro M5 Pro' },
@@ -184,6 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Intermediate',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -432,7 +433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'es',
         datePublished: '2026-04-05',
         dateModified: '2026-06-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'MacBook Pro M5 Pro' },
@@ -639,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'ar',
         datePublished: '2026-04-05',
         dateModified: '2026-06-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'MacBook Pro M5 Pro' },
@@ -847,7 +848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
         dateModified: '2026-06-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'MacBook Pro M5 Pro' },
@@ -1053,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'de',
         datePublished: '2026-04-05',
         dateModified: '2026-06-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'MacBook Pro M5 Pro' },
@@ -1259,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'fr',
         datePublished: '2026-04-05',
         dateModified: '2026-06-19',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'MacBook Pro M5 Pro' },

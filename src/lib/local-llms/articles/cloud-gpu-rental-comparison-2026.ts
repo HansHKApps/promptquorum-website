@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Aluguel de GPU na Nuvem 2026: RunPod vs Vast.ai vs Lambda Labs',
       description: 'Comparativa detalhada de preços, SLA de uptime e características dos três principais provedores de aluguel de GPU na nuvem.',
       datePublished: '2026-05-17',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },

@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-14',
       dateModified: '2026-06-14',
       inLanguage: 'en',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'LGPD' },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-14',
       dateModified: '2026-06-14',
       inLanguage: 'pt-BR',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'LGPD' },
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-14',
       dateModified: '2026-06-14',
       inLanguage: 'de',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'LGPD' },
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-14',
       dateModified: '2026-06-14',
       inLanguage: 'es',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'LGPD' },
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-14',
       dateModified: '2026-06-14',
       inLanguage: 'fr',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'LGPD' },

@@ -236,6 +236,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -522,7 +523,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/troubleshooting-local-llm-setup',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Solución de problemas de Ollama' },
@@ -537,6 +538,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -823,7 +825,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/troubleshooting-local-llm-setup',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
         'about': [
@@ -839,6 +841,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -965,7 +968,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/troubleshooting-local-llm-setup',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1008,7 +1011,7 @@ schema: {
     'url': 'https://www.promptquorum.com/de/local-llms/troubleshooting-local-llm-setup',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
-    'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+    'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'audience': { '@type': 'Audience', 'audienceType': 'Entwickler und Benutzer, die lokale LLMs zum ersten Mal einrichten' },
     'about': [
@@ -1024,6 +1027,7 @@ schema: {
       'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
     },
     'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -1316,6 +1320,7 @@ schema: {
         'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
       },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1591,7 +1596,7 @@ schema: {
     'url': 'https://www.promptquorum.com/ja/local-llms/troubleshooting-local-llm-setup',
     'datePublished': '2026-04-04',
     'dateModified': '2026-04-16',
-    'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+    'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'audience': { '@type': 'Audience', 'audienceType': '初めてローカルLLMをセットアップする開発者とユーザー' },
     'about': [
@@ -1607,6 +1612,7 @@ schema: {
       'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
     },
     'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -1954,6 +1960,7 @@ schema: {
       'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
     },
     'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
   },
   howToSchema: {
     '@context': 'https://schema.org',

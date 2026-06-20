@@ -1200,7 +1200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-26',
         keywords: ['prompt chaining', 'prompt engineering', 'fluxos de trabalho de IA', 'PromptQuorum'],
         proficiencyLevel: 'Intermediate',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },

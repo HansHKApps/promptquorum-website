@@ -28,7 +28,7 @@ schema: {
         'description': 'Mistral Small 3.1 24B leads for emails and memos. Qwen3 7B excels at non-English writing. 7B-24B models outperform 70B. Ollama setup in 10 minutes.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Business writing AI' },
@@ -230,7 +230,7 @@ schema: {
         'description': 'Mistral Small 3.1 24B lidera para correos y memos. Qwen3 7B destaca en redacción multilingüe. Los modelos 7B-24B superan a los 70B. Configuración con Ollama en 10 minutos.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'IA para redacción profesional' },
@@ -432,7 +432,7 @@ schema: {
         'description': 'يتصدّر Mistral Small 3.1 24B لرسائل البريد والمذكرات. ويتفوق Qwen3 7B في الكتابة متعددة اللغات. تتفوق نماذج 7B-24B على نماذج 70B. إعداد بـ Ollama في 10 دقائق.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'الذكاء الاصطناعي للكتابة المهنية' },
@@ -634,7 +634,7 @@ schema: {
         'description': 'O Mistral Small 3.1 24B lidera para e-mails e memos. O Qwen3 7B se destaca na escrita multilíngue. Os modelos 7B-24B superam os 70B. Configuração com Ollama em 10 minutos.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'IA para escrita profissional' },
@@ -833,7 +833,7 @@ schema: {
         'description': 'Mistral Small 3.1 24B führt bei E-Mails und Memos. Qwen3 7B bei mehrsprachiger Korrespondenz. 7B-24B-Modelle übertreffen 70B. Ollama-Setup in 10 Minuten.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'KI für Geschäftskorrespondenz' },
@@ -1038,7 +1038,7 @@ schema: {
         'description': 'Mistral Small 3.1 24B excelle pour emails et mémos. Qwen3 7B pour correspondance multilingue. Modèles 7B-24B surpassent 70B. Configuration Ollama en 10 minutes.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-18',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'IA pour rédaction professionnelle' },

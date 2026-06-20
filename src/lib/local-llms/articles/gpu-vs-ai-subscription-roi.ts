@@ -275,7 +275,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/gpu-vs-ai-subscription-roi',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -584,7 +584,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/gpu-vs-ai-subscription-roi',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -893,7 +893,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/gpu-vs-ai-subscription-roi',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1017,7 +1017,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/gpu-vs-ai-subscription-roi',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -1252,7 +1252,7 @@ schema: {
       'url': 'https://www.promptquorum.com/de/local-llms/gpu-vs-ai-subscription-roi',
       'datePublished': '2026-04-05',
       'dateModified': '2026-06-14',
-      'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+      'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
       'about': [
@@ -1317,7 +1317,7 @@ schema: {
         'relatedReading': { title: 'Lecture connexe', items: ['[LLMs locaux vs ChatGPT Plus : Comparaison coûts](/fr/local-llms/local-llms-vs-chatgpt-plus)', '[LLMs locaux vs Claude Pro : Confidentialité et coût](/fr/local-llms/local-llms-vs-claude-pro)', '[LLM local vs GPU cloud : Quel est moins cher ?](/fr/local-llms/local-llm-vs-cloud-gpu-cost)', '[Meilleures GPUs budget pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm)', '[Combien de VRAM pour LLMs locaux ?](/fr/local-llms/how-much-vram-local-llm)', '[Guide Hardware LLM local 2026 : GPUs, CPUs, RAM](/fr/local-llms/local-llm-hardware-guide-2026)', '[Quand utiliser LLMs locaux vs APIs cloud](/fr/local-llms/local-llm-vs-cloud-api)'] },
         'sources': { title: 'Sources', items: ['[EIA US Average Electricity Rate (Q1 2026)](https://eia.gov/electricity)', '[eBay GPU Pricing: RTX 4070 & RTX 4090 Used Market (April 2026)](https://ebay.com)', '[OpenAI ChatGPT Plus Pricing](https://openai.com/pricing)', '[Anthropic Claude Pro Pricing](https://claude.ai/billing)', '[NVIDIA RTX 40 Series Specs (Official)](https://nvidia.com/en-us/geforce/graphics-cards/40-series/)', '[Meta Llama 3.3 Model Card & Capabilities](https://llama.meta.com)'] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'GPU vs ChatGPT Plus 2026 : Quand l\'achat d\'un GPU devient rentable face à l\'abonnement', 'description': 'RTX 5060 Ti d\'occasion (450 €) s\'amortit face à ChatGPT Plus (240 €/an) en 18–24 mois à 5 h/sem. Économies 5 000 €+ sur 5 ans. Tableaux complets pour 7 abonnements.', 'url': 'https://www.promptquorum.com/fr/local-llms/gpu-vs-ai-subscription-roi', 'inLanguage': 'fr', 'datePublished': '2026-04-05', 'dateModified': '2026-06-14', 'author': { '@type': 'Person', 'name': 'Hans Kuepper' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'proficiencyLevel': 'Beginner', 'about': [{ '@type': 'Thing', 'name': 'GPU vs ChatGPT Plus ROI' }, { '@type': 'Thing', 'name': 'RTX 5060 Ti période d\'amortissement' }, { '@type': 'Thing', 'name': 'Coût ChatGPT Plus 2026' }, { '@type': 'Thing', 'name': 'Tier ChatGPT Pro 100 €' }, { '@type': 'Thing', 'name': 'Seuil de rentabilité LLM local' }], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] } },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'GPU vs ChatGPT Plus 2026 : Quand l\'achat d\'un GPU devient rentable face à l\'abonnement', 'description': 'RTX 5060 Ti d\'occasion (450 €) s\'amortit face à ChatGPT Plus (240 €/an) en 18–24 mois à 5 h/sem. Économies 5 000 €+ sur 5 ans. Tableaux complets pour 7 abonnements.', 'url': 'https://www.promptquorum.com/fr/local-llms/gpu-vs-ai-subscription-roi', 'inLanguage': 'fr', 'datePublished': '2026-04-05', 'dateModified': '2026-06-14', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'proficiencyLevel': 'Beginner', 'about': [{ '@type': 'Thing', 'name': 'GPU vs ChatGPT Plus ROI' }, { '@type': 'Thing', 'name': 'RTX 5060 Ti période d\'amortissement' }, { '@type': 'Thing', 'name': 'Coût ChatGPT Plus 2026' }, { '@type': 'Thing', 'name': 'Tier ChatGPT Pro 100 €' }, { '@type': 'Thing', 'name': 'Seuil de rentabilité LLM local' }], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] } },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'fr', 'url': 'https://www.promptquorum.com/fr/local-llms/gpu-vs-ai-subscription-roi', 'mainEntity': [{ '@type': 'Question', 'name': 'Et si les coûts électricité sont bien plus élevés dans ma région ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'À €0,30/kWh (tarifs européens), RTX 4070 coûte 60 €/an au lieu de 30 €. Seuil de rentabilité s\'étend à 2 ans au lieu de 1,5. Toujours compétitif 5+ h/sem.' } }, { '@type': 'Question', 'name': 'La volatilité des prix GPU affecte-t-elle le ROI ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Prix GPU d\'occasion varient saisonnièrement. Lancements nouveaux (RTX 5090 en 2025) peuvent réduire prix d\'occasion 20–40 %. Surveillez eBay cartes 6 mois.' } }, { '@type': 'Question', 'name': 'Puis-je déduire un GPU comme charge professionnelle ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, si utilisation professionnelle. Amortissez sur 5–7 ans, réduisant coût effectif. Abonnements dépense immédiate. Consultez un expert-comptable.' } }, { '@type': 'Question', 'name': 'Et si j\'achète un GPU et arrête l\'utiliser ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Valeur revente : RTX 4070 se vend 60–70 % prix d\'achat ; RTX 4090 50–65 %. Récupérez majorité coûts. Abonnements coût irrécupérable.' } }, { '@type': 'Question', 'name': 'La location GPU cloud correspond-elle à cette analyse ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Location GPU cloud (Lambda Labs 2,50 €/h) coûte 10–50× plus que local. Viable uniquement charges burst temporaires, non utilisation cohérente.' } }, { '@type': 'Question', 'name': 'Les modèles futurs (GPT-6, Claude 5) justifieront-ils garder abonnements ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Probablement. Si GPT-6 abonnement-seul, équivalents Llama locaux peuvent retarder 6–12 mois. Hybride (local + abonnement) assurez votre futur.' } }, { '@type': 'Question', 'name': 'Devrais-je acheter ChatGPT Pro 100 € plutôt qu\'un GPU ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pro 100 € (lancé 9 avril 2026) coûte 1 200 €/an — comparable coûts RTX 5060 Ti neuf. Pour qualité cloud max : Pro 100 € gagne. Pour qualité locale acceptable (82 % parité) : RTX 4090 d\'occasion (1 400 €) rentabilisé en 14 mois.' } }, { '@type': 'Question', 'name': 'Le Mac mini M5 changera-t-il la mathématique GPU vs abonnement ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mac mini M5 Pro (attendu mi-2026, ~1 599 €, 64 Go) exécute Llama 3.3 70B 15–20 tok/sec. Utilisateurs Mac : silence, Ollama clé en main. Seuil rentabilité vs Plus : 6,5 ans. vs Pro 100 € : 16 mois.' } }, { '@type': 'Question', 'name': 'La CNIL a-t-elle des recommandations sur les LLMs locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. La CNIL recommande LLMs locaux pour traitement données sensibles professionnelles. Aucune données quitte votre infrastructure, conformité RGPD Article 28 garantie. Idéal données clients, financières, juridiques.' } }, { '@type': 'Question', 'name': 'Un GPU est-il rentable pour petites/moyennes entreprises ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, particulièrement secteurs sensibles (finance, santé, juridique). GPU local élimine verrouillage fournisseur, satisfait RGPD, réduit coûts 10+ h/sem. 18–24 mois amortissement acceptable investissements entreprise.' } }] },
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'name': 'GPU vs ChatGPT Plus 5-Ans ROI par Tier 2026', 'numberOfItems': 5, 'inLanguage': 'fr', 'itemListElement': [{ '@type': 'ListItem', 'position': 1, 'name': 'Utilisateur occasionnel (2 heures/semaine)', 'description': 'GPU 600 € total vs ChatGPT Plus 1 200 €. GPU perd 600 €. Conservez abonnement.' }, { '@type': 'ListItem', 'position': 2, 'name': 'Utilisateur régulier (5 heures/semaine)', 'description': 'GPU 600 € total vs ChatGPT Plus 1 200 €. GPU gagne 600 €. Amortissement : 18–24 mois.' }, { '@type': 'ListItem', 'position': 3, 'name': 'Utilisateur moyen (10 heures/semaine)', 'description': 'GPU 750 € total vs ChatGPT Plus 1 200 €. GPU gagne 450 € + aucune limite de débit. Amortissement : 12–14 mois.' }, { '@type': 'ListItem', 'position': 4, 'name': 'Utilisateur intensif (20 heures/semaine)', 'description': 'GPU 1 050 € total vs ChatGPT Plus 1 200 €. GPU gagne 150 € + requêtes illimitées. Amortissement : 9–12 mois.' }, { '@type': 'ListItem', 'position': 5, 'name': 'Utilisateur très intensif (40+ heures/semaine)', 'description': 'GPU 1 650 € vs passage forcé Pro 100 € (6 000 €/5-ans). GPU économise 4 350 € + aucune limite. Pro 100 € essentiel si cloud uniquement.' }] },
     },
@@ -2224,7 +2224,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/gpu-vs-ai-subscription-roi',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [

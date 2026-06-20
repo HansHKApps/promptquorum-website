@@ -28,6 +28,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/best-nas-storage-local-llm',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }
       },
       itemListSchema: {
@@ -203,8 +204,9 @@ schema: {
         'description': 'Mejor NAS para LLMs locales: redundancia RAID 6, estrategia de backup y organización de la biblioteca de modelos. Compara Synology, QNAP y TrueNAS.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-nas-storage-local-llm',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       itemListSchema: {
@@ -380,8 +382,9 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/best-nas-storage-local-llm',
         'inLanguage': 'ar',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       itemListSchema: {
@@ -667,8 +670,9 @@ schema: {
         'description': 'Melhor NAS para LLMs locais: redundância RAID 6, estratégia de backup e organização da biblioteca de modelos. Compare Synology, QNAP e TrueNAS.',
         'url': 'https://www.promptquorum.com/pt/local-llms/best-nas-storage-local-llm',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
       itemListSchema: {
@@ -844,6 +848,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/best-nas-storage-local-llm',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Intermediate',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }
       },
       itemListSchema: {

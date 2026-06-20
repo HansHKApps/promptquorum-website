@@ -499,7 +499,7 @@ docker run --gpus all \\
       inLanguage: 'en',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Qwen language models' },
@@ -668,7 +668,7 @@ docker run --gpus all \\
       inLanguage: 'de',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
     },
     relatedReading: {
@@ -780,7 +780,7 @@ docker run --gpus all \\
       inLanguage: 'fr',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
     },
     relatedReading: {
@@ -897,7 +897,7 @@ docker run --gpus all \\
       inLanguage: 'ja',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
     },
     relatedReading: {
@@ -1032,7 +1032,7 @@ docker run --gpus all \\
       inLanguage: 'zh',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
     },
     relatedReading: {
@@ -1535,7 +1535,7 @@ docker run --gpus all \\
       inLanguage: 'es',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Modelos de lenguaje Qwen' },
@@ -2064,7 +2064,7 @@ docker run --gpus all \\
       inLanguage: 'pt-BR',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Modelos de linguagem Qwen' },
@@ -2421,7 +2421,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       inLanguage: 'ar',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'نماذج لغة Qwen' },
@@ -2950,7 +2950,7 @@ docker run --gpus all \
       inLanguage: 'ko',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       about: [
         { '@type': 'Thing', name: 'Qwen 언어 모델' },

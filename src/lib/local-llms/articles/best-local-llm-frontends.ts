@@ -248,7 +248,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Open WebUI' },
@@ -262,6 +262,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -547,7 +548,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Open WebUI' },
@@ -561,6 +562,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -862,7 +864,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llm-frontends',
         'headline': 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
         'description': 'Comparez 8 interfaces LLM locales : Open WebUI (25k étoiles, RAG), Enchanted UI (plus rapide), Jan AI (bureau), Continue.dev (code) et plus. Comparaison et guide de configuration.',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
@@ -1846,7 +1848,7 @@ schema: {
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Open WebUI' },
@@ -1860,6 +1862,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2166,7 +2169,7 @@ schema: {
         'inLanguage': 'ar',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'Open WebUI' },
@@ -2180,6 +2183,7 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2352,7 +2356,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llm-frontends',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
     },
