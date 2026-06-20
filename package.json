@@ -17,7 +17,8 @@
     "seo:log": "node scripts/seo-log-change.mjs",
     "test:cluster-noindex": "node scripts/test-cluster-noindex.mjs",
     "check:affiliate-links": "node scripts/check-affiliate-links.mjs",
-    "test:affiliate-clicks": "node scripts/test-affiliate-clicks.mjs"
+    "test:affiliate-clicks": "node scripts/test-affiliate-clicks.mjs",
+    "indexnow": "node scripts/indexnow-direct.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
