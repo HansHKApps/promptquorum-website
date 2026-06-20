@@ -6,6 +6,8 @@ Before writing or editing any user-facing text on this website, read and apply t
 
 **`docs/GEO_WRITING_GUIDELINES.md`** — mandatory for all content (pages, blog posts, FAQ entries, feature descriptions, meta tags, headings, CTAs)
 
+**`docs/ARTICLE_SCAFFOLD_2026.md`** — canonical field order, required schema fields, and localized FAQ titles for all new articles. Check this before writing any new article to avoid repeating the defects fixed in the June 2026 GEO audit.
+
 Summary of non-negotiable rules:
 - **Answer-first:** Lead every section with the direct answer or key fact. Explanation follows.
 - **Structure:** Use H2/H3 headings, bullet lists, short paragraphs (≤3 sentences each).
