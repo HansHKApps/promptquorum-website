@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: 'Negative Prompting: diga à IA o que ela NÃO deve fazer',
     description: 'O que é o negative prompting, por que importa e como usar regras explícitas de "não fazer" para manter as saídas de IA dentro de limites seguros e alinhados à marca.',
     datePublished: '2026-03-26',
-    url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/negative-prompting',
+    url: 'https://www.promptquorum.com/pt/prompt-engineering/negative-prompting',
     inLanguage: 'pt-BR',
     keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

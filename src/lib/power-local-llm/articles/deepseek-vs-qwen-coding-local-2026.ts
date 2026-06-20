@@ -1860,7 +1860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-19',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'pt-BR',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },

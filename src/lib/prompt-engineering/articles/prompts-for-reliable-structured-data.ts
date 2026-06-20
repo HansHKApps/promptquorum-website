@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-30',
       dateModified:  '2026-04-30',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompts-for-reliable-structured-data',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompts-for-reliable-structured-data',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Intermediate',
       about: [

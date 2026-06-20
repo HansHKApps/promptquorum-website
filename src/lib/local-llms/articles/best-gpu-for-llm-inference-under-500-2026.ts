@@ -915,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Comparação classificada de GPUs por menos de US$ 500 para inferência de IA local: RTX 4060 Ti 16GB, RTX 3090, RX 7800 XT, RTX 4070, Arc B580. Inclui benchmarks, guia de VRAM e recomendações de compra.',
       datePublished: '2026-05-26',
       dateModified: '2026-06-19',
-      url: 'https://www.promptquorum.com/pt/pt/local-llms/best-gpu-for-llm-inference-under-500-2026',
+      url: 'https://www.promptquorum.com/pt/local-llms/best-gpu-for-llm-inference-under-500-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

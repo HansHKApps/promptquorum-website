@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Comparação de riscos GDPR: Qwen vs DeepSeek vs Llama vs Claude 2026',
       description: 'Comparação de LLMs em conformidade com GDPR/LGPD: matriz de risco para DeepSeek, Qwen, Llama e Claude.',
-      url: 'https://www.promptquorum.com/pt/pt/local-llms/gdpr-llm-risk-comparison-2026',
+      url: 'https://www.promptquorum.com/pt/local-llms/gdpr-llm-risk-comparison-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-22',
       dateModified: '2026-05-22',

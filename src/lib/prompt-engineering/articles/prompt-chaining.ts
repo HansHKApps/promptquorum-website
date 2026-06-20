@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-chaining',
+        'url': 'https://www.promptquorum.com/pt/prompt-engineering/prompt-chaining',
         headline: 'Prompt Chaining: como dividir tarefas grandes em etapas vencedoras',
         description: 'O que é o prompt chaining, por que importa e como projetar fluxos de trabalho de IA de múltiplas etapas que são mais fáceis de controlar e reutilizar.',
         datePublished: '2026-03-26',

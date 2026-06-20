@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-governance-production',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-governance-production',
       inLanguage: 'pt-BR',
       headline: 'Governance de prompts em produção: papéis, gates de revisão e regras de implantação',
       description: 'Configure a governance de prompts com 3 papéis, 3 gates de revisão, procedimentos de rollback e trilhas de auditoria. Conforme com NIST AI RMF, LGPD e EU AI Act.',

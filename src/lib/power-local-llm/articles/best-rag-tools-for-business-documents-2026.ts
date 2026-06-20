@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-rag-tools-for-business-documents-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     },

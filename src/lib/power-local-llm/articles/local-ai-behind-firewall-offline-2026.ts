@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'IA local atrás de um firewall: guia de implantação offline 2026',
       description: 'Implante LLMs locais offline atrás de um firewall: lista de verificação prévia, fluxo de trabalho air-gap com Ollama e llama.cpp, dimensionamento de NAS e notas de conformidade.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-behind-firewall-offline-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-behind-firewall-offline-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

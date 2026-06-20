@@ -1842,7 +1842,7 @@ while True:
       '@type': 'TechArticle',
       headline: 'WeChat + LLM local: Guia para desenvolvedores 2026',
       description: 'Conecte o WeChat a um LLM local usando o WeChatFerry e o Ollama. Três padrões de integração, recomendações de modelos, configuração de servidor mini PC e conformidade com a DSL chinesa.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/wechat-local-llm-integration-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/wechat-local-llm-integration-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

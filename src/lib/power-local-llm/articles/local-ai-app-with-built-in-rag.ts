@@ -3482,7 +3482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'AnythingLLM, LM Studio e Jan + Documentos testados em documentos de 1.000 páginas. RAG integrado sem banco de dados vetorial, sem Python, sem linha de comando.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
-      'url': 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-app-with-built-in-rag',
+      'url': 'https://www.promptquorum.com/pt/power-local-llm/local-ai-app-with-built-in-rag',
       'image': 'https://www.promptquorum.com/pt/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Person',

@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Ollama no Mac 2026: Guia de configuração Apple Silicon (M1–M5)',
       description: 'Instale o Ollama no Mac com um único comando. GPU Metal automática, download de modelos em minutos.',
-      url: 'https://www.promptquorum.com/pt/pt/local-llms/ollama-on-mac-apple-silicon-setup-2026',
+      url: 'https://www.promptquorum.com/pt/local-llms/ollama-on-mac-apple-silicon-setup-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-15',
       dateModified: '2026-05-15',

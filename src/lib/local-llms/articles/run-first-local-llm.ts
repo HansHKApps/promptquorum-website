@@ -1380,7 +1380,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Rode seu primeiro LLM local em 10 minutos (passo a passo)',
         'description': 'Rode seu primeiro LLM local em menos de 10 minutos com o Ollama: instale, baixe um modelo 3B e obtenha uma resposta — sem chave de API nem conta após o download.',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/run-first-local-llm',
+        'url': 'https://www.promptquorum.com/pt/local-llms/run-first-local-llm',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

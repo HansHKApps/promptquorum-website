@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Agentes de IA locais para fluxos de trabalho empresariais: guia de conformidade UE 2026',
       description: 'Implante agentes de IA locais para processamento de documentos, gestão de e-mails e geração de relatórios sob LGPD/GDPR e EU AI Act. Arquitetura, controles de conformidade e 5 modelos de fluxos de trabalho.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-agents-business-workflows-eu-compliance',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-agents-business-workflows-eu-compliance',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/trace-framework',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/trace-framework',
         inLanguage: 'pt-BR',
         headline: 'O Framework TRACE',
         description: 'Como o Framework TRACE (Pensar, Raciocinar, Analisar, Concluir, Explicar) funciona, quando usá-lo e como o PromptQuorum oferece o TRACE como opção integrada.',

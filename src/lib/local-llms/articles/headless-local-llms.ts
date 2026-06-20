@@ -652,7 +652,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'LLMs locais headless: rodar modelos sem interface de usuário (2026)',
         'description': 'Implantação de LLM local headless 2026: rode Ollama, vLLM e APIs de inferência sem UI. Configuração de produção para servidores e microsserviços.',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/headless-local-llms',
+        'url': 'https://www.promptquorum.com/pt/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

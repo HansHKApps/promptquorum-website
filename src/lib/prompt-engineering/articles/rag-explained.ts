@@ -1277,7 +1277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)',
         description: 'Como a geração aumentada por recuperação funciona, por que reduz alucinações e como implementar um pipeline RAG de 4 etapas para dados privados ou que mudam com frequência.',
         datePublished: '2026-03-26',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/rag-explained',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/rag-explained',
         inLanguage: 'pt-BR',
         keywords: ['RAG', 'Retrieval-Augmented Generation', 'banco de dados vetorial', 'alucinação de LLM', 'busca semântica', 'engenharia de prompt'],
         proficiencyLevel: 'Intermediate',

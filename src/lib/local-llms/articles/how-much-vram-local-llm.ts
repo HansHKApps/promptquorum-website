@@ -1117,7 +1117,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Requisitos de VRAM para LLM local 2026: modelos quantizados de 7B a 70B',
         'description': 'Quanta VRAM um LLM de 70B precisa? Veja os requisitos exatos de 2026 para quantização Q4/Q5, modelos de 13B a 70B e o que cabe em GPUs de 24 GB a 32 GB.',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/how-much-vram-local-llm',
+        'url': 'https://www.promptquorum.com/pt/local-llms/how-much-vram-local-llm',
         'datePublished': '2026-04-05',
         'dateModified': '2026-06-19',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },

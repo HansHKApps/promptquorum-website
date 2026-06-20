@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'TechArticle',
       headline: 'Fluxo de trabalho de prompt engineering para desenvolvedores: configuração de IDE, testes e integração CI/CD',
       description: 'Fluxo de trabalho de prompt engineering para desenvolvedores: configuração de IDE, loop de teste local, controle de versões Git, gates CI/CD e monitoramento em produção.',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/pe-for-developers-workflow',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/pe-for-developers-workflow',
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

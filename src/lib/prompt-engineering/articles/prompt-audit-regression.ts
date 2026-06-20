@@ -816,7 +816,7 @@ tests:
       '@type': 'TechArticle',
       headline: 'Auditoria de prompts e testes de regressão: detecte falhas silenciosas antes da produção (2026)',
       description: 'Suite de testes de regressão de prompts: 10-20 casos golden, casos limite, entradas adversariais. Bloqueie a implantação se a taxa cair >5%. Promptfoo, Braintrust e PromptQuorum.',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-audit-regression',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-audit-regression',
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

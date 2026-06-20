@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/pe-for-support-operations',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/pe-for-support-operations',
       headline: 'Prompt engineering para operações de suporte: modelos de resposta consistentes e precisos',
       description: 'Como as equipes de suporte projetam prompts para triagem, escalada, resolução e acompanhamento — incluindo controles de tom, salvaguardas de conformidade de políticas e padrões de transferência para humanos.',
       datePublished: '2026-05-02',

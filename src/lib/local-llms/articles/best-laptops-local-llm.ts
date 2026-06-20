@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'TechArticle',
         headline: 'Melhores notebooks para LLMs locais junho de 2026: MacBook M5 Pro vs RTX 5080',
         description: 'Melhores notebooks para LLMs locais em junho de 2026: MacBook Pro M5 Pro (US$ 2.199, 24GB unificados), notebook RTX 5080 (~US$ 2.799, 16GB de VRAM), notebook RTX 5070 Ti (~US$ 2.499, 12GB). Benchmarks e escolhas.',
-        url: 'https://www.promptquorum.com/pt/pt/local-llms/best-laptops-local-llm',
+        url: 'https://www.promptquorum.com/pt/local-llms/best-laptops-local-llm',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
         dateModified: '2026-06-19',
@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
-        url: 'https://www.promptquorum.com/pt/pt/local-llms/best-laptops-local-llm',
+        url: 'https://www.promptquorum.com/pt/local-llms/best-laptops-local-llm',
         mainEntity: [
           { '@type': 'Question', name: 'O MacBook Pro M5 Pro é bom para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — é o melhor notebook para LLMs locais em junho de 2026. A configuração de 24 GB de memória unificada (US$ 2.199) roda o Qwen3 14B com Q4 a 45–60 tok/s e sem ruído de ventoinha. Faça upgrade para 36 GB (US$ 2.999) para folga confortável em modelos 30B.' }},
           { '@type': 'Question', name: 'Qual notebook Windows é o melhor para rodar LLMs localmente em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'O notebook RTX 5080 (~US$ 2.799, 16 GB de VRAM GDDR7) é a melhor escolha Windows — ~70 tok/s no Llama 3.3 8B Q4. O notebook RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM) é a melhor opção econômica, a ~50 tok/s.' }},
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        url: 'https://www.promptquorum.com/pt/pt/local-llms/best-laptops-local-llm',
+        url: 'https://www.promptquorum.com/pt/local-llms/best-laptops-local-llm',
         inLanguage: 'pt-BR',
         name: 'Melhores notebooks para LLMs locais junho de 2026',
         itemListElement: [

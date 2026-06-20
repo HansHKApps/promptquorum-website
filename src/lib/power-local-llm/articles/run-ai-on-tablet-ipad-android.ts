@@ -3191,7 +3191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Como executar IA localmente em um iPad ou tablet Android em 2026. Aplicativos de inferência no dispositivo, Termux + Ollama no Android e conexão remota ao seu Mac ou PC em casa explicados.',
       image: `https://www.promptquorum.com/pt/og/power-local-llm/run-ai-on-tablet-ipad-android`,
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/run-ai-on-tablet-ipad-android',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',

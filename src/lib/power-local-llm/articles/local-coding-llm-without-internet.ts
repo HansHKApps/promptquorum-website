@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'LLM local para programar sem internet: configuração offline completa (2026)',
       description: 'Stack de programação offline testada em um voo de 14 horas. LLM local, npm/pip em cache, Devdocs, ripgrep — ~60 GB em disco, zero chamadas de rede. Checklist pré-voo incluído.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-coding-llm-without-internet',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-coding-llm-without-internet',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

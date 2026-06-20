@@ -898,7 +898,7 @@ schema: {
         'headline': 'Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e conteúdo de formato longo',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-18',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/best-local-llms-for-creative-writing',
+        'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-creative-writing',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'IA para escrita criativa' },

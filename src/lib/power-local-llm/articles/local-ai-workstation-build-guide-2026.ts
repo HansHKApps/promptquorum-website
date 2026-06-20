@@ -3600,7 +3600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Guia para montar um PC com IA local 2026: 3 níveis de orçamento',
       description: 'Três configurações completas de PC para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes exatas, tokens por segundo esperados e custos totais de maio de 2026.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-workstation-build-guide-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-workstation-build-guide-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

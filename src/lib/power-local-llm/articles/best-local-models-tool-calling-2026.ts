@@ -2643,7 +2643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhores modelos locais para Tool Calling em 2026: Benchmarks e comparativo',
       description:
         'Compare Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B para confiabilidade em Tool Calling. Benchmarks MCP reais, não pontuações de leaderboard.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-local-models-tool-calling-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-models-tool-calling-2026',
       inLanguage: 'pt-BR',
       author: {
         '@type': 'Person',

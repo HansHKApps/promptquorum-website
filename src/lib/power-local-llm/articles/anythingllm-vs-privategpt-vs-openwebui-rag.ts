@@ -3105,7 +3105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-07',
       dateModified: '2026-06-19',
       inLanguage: 'pt-BR',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],

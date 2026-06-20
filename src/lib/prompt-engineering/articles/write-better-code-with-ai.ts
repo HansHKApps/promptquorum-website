@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Segurança de código' },
         ],
         image: 'https://www.promptquorum.com/pt/api/og/write-better-code-with-ai',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/write-better-code-with-ai',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/write-better-code-with-ai',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {

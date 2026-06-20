@@ -1992,7 +1992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/how-llms-actually-work',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/how-llms-actually-work',
         inLanguage: 'pt-BR',
         headline: 'Como os LLMs Realmente Funcionam: Tokens, Atenção e Inferência',
         description: 'Os grandes modelos de linguagem preveem o próximo token usando distribuições de probabilidade — não por compreensão. Aprenda tokenização, transformer attention, RLHF e parâmetros de inferência.',

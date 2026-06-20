@@ -2211,7 +2211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'Extraia e resuma com IA',
         description: 'O resumo de documentos com IA reduz o tempo de revisão entre 60 e 80% com taxas de alucinação de 0,7%. Aprenda as abordagens extrativa vs abstrativa, quais modelos usar e como estruturar prompts para saídas fiéis.',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/extract-and-summarise',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/extract-and-summarise',
         inLanguage: 'pt-BR',
         datePublished: '2026-03-23',
         dateModified: '2026-05-04',

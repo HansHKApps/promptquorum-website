@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
         description: 'Prompts lentos de IA têm uma única causa: a ambiguidade. Cinco decisões de design geram respostas precisas e rápidas na primeira tentativa.',
         datePublished: '2026-03-22',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'pt-BR',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

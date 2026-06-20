@@ -4394,7 +4394,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       '@type': 'TechArticle',
       headline: 'Prompts para LLM local para escritores de ficção: 15 modelos e técnicas (2026)',
       description: '15 modelos de prompts para escritores de ficção que usam LLMs locais. Escrita de cenas, desenvolvimento de personagens, diálogo, construção de mundos, transferência de estilo, revisão e modelos editoriais — prontos para copiar no Ollama e no LM Studio.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-llm-prompts-for-fiction-writers',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-prompts-for-fiction-writers',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

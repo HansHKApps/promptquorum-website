@@ -3065,7 +3065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agentes locais 2026',
       description: 'Guia de configuração para agentes de IA locais em 2026 usando Ollama e Model Context Protocol (MCP). Filesystem, SQLite/Postgres, navegador, servidor GitHub, configuração JSON funcional e um modelo de sandboxing que não confia no LLM.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-agents-with-mcp-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-agents-with-mcp-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

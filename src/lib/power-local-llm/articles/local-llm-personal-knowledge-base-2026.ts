@@ -3255,7 +3255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Construa uma base de conhecimento pessoal com IA local: guia de stack 2026',
       description: 'Base de conhecimento pessoal com IA local 2026: 3 arquiteturas comparadas (Obsidian, AnythingLLM, Python + ChromaDB). Escala para mais de 100.000 elementos. Captura, RAG, sincronização, backup.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-llm-personal-knowledge-base-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-personal-knowledge-base-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

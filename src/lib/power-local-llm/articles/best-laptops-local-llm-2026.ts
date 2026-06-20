@@ -3439,7 +3439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Os melhores notebooks para rodar LLMs locais: guia de compra 2026',
       description: 'Os melhores notebooks para rodar LLMs locais em 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, VRAM e velocidades reais de tokens comparadas por faixa de preço.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-laptops-local-llm-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-laptops-local-llm-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

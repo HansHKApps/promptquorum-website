@@ -1613,7 +1613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/build-quality-checks',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/build-quality-checks',
         inLanguage: 'pt-BR',
         keywords: ['gates de qualidade', 'CI/CD', 'alucinações IA', 'revisão de código', 'escaneamento de segurança', 'validação de dependências', 'verificações de build'],
         proficiencyLevel: 'Intermediate',

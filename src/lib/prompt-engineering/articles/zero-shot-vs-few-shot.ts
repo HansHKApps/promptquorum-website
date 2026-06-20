@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'prompt engineering', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-    url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/zero-shot-vs-few-shot',
+    url: 'https://www.promptquorum.com/pt/prompt-engineering/zero-shot-vs-few-shot',
     inLanguage: 'pt-BR',
   },
   sections: {

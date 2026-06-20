@@ -2587,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/pt/pt/power-local-llm/best-local-ai-app-low-end-pc',
+      'url': 'https://www.promptquorum.com/pt/power-local-llm/best-local-ai-app-low-end-pc',
       'headline': 'Melhores apps de IA local para PCs de baixo desempenho em 2026 (8 GB RAM, sem GPU)',
       'description':
         'Ollama, GPT4All, Jan e llama.cpp testados em notebooks com 8 GB RAM e gráficos integrados. Tokens/s, pressão de memória, configurações exatas.',

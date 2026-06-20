@@ -1145,7 +1145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/how-to-reduce-prompt-brittleness',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'pt-BR',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },

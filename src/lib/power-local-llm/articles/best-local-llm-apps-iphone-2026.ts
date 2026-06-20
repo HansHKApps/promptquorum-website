@@ -3530,7 +3530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Os melhores apps de LLM local para iPhone em 2026 (execute IA sem WiFi)',
       description: 'Cinco apps para iPhone que executam LLMs reais no dispositivo em 2026. PocketPal AI, Private LLM, MLC Chat e LLM Farm testados no iPhone 16 Pro e 17 Pro. Velocidade, privacidade e biblioteca de modelos comparadas.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-local-llm-apps-iphone-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-apps-iphone-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

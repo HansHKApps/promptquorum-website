@@ -4068,7 +4068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Melhores GPUs para LLMs locais: guia de compra completo 2026',
       description: 'Oito GPUs comparadas para LLMs locais em quatro orçamentos: RTX 3060 ao RTX 5090. VRAM, tokens/s, consumo de energia e preços de maio de 2026 — com o tamanho de modelo que cada faixa executa.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-22',
       dateModified: '2026-05-22',

@@ -2524,7 +2524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '5 apps de IA local que funcionam sem terminal (2026)',
       description: 'Zero comandos de terminal. Sem Python. Sem Docker. 5 apps de IA local que um usuário não técnico pode instalar em 10 minutos. Testados com iniciantes reais em 2026.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-ai-app-non-technical-users',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
       dateModified: '2026-06-19',

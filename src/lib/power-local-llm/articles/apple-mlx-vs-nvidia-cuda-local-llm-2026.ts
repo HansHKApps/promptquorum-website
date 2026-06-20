@@ -3154,7 +3154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Apple MLX vs NVIDIA CUDA para LLMs locais: qual sistema escolher em 2026?',
       description: 'Apple M5 Max vs RTX 4090/5090 para LLMs locais: dados de benchmark, custo total por tamanho de modelo, consumo de energia e recomendações claras por caso de uso para 2026.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-06-14',

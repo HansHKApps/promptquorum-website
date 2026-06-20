@@ -2538,7 +2538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Redigir romances e roteiros com LLMs locais: guia de fluxo de trabalho para mais de 100.000 palavras',
       description: 'Fluxo de trabalho completo para usar LLMs locais na redação de romances e roteiros: seleção de modelos, gerenciamento do contexto, estruturação por capítulos, geração de cenas e integrações de ferramentas para escritores.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-llm-screenwriting-and-novel-drafting',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-screenwriting-and-novel-drafting',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

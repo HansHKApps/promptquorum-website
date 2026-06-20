@@ -1687,7 +1687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/chain-of-thought-prompting',
+    url: 'https://www.promptquorum.com/pt/prompt-engineering/chain-of-thought-prompting',
     inLanguage: 'pt-BR',
     headline: 'Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio',
     description: 'O que é o chain-of-thought prompting, quando ajuda e como estruturar prompts para que os modelos mostrem seu raciocínio com clareza.',

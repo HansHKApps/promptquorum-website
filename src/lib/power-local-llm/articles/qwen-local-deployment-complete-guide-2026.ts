@@ -2060,7 +2060,7 @@ docker run --gpus all \\
       headline: 'Implantação Local do Qwen: Guia Completo de Produção 2026',
       description:
         'Implante Qwen 7B a 72B em produção: servidor API Docker Compose, configuração multi-GPU, benchmarks de hardware e comparação de custos com a Alibaba Cloud.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/qwen-local-deployment-complete-guide-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/qwen-local-deployment-complete-guide-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',

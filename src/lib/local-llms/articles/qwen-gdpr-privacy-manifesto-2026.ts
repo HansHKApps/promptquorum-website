@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'O Manifesto de Privacidade de LLMs Locais 2026: Pesos Abertos',
       description: 'O Qwen 3 local elimina os problemas de transferência de dados do GDPR. Por que os pesos abertos vencem.',
-      url: 'https://www.promptquorum.com/pt/pt/local-llms/qwen-gdpr-privacy-manifesto-2026',
+      url: 'https://www.promptquorum.com/pt/local-llms/qwen-gdpr-privacy-manifesto-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-16',
       dateModified: '2026-05-16',

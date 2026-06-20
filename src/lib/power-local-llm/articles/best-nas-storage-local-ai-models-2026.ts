@@ -3306,7 +3306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'O melhor NAS e armazenamento para modelos de IA local 2026: guia de compra',
       description: 'Comparativo de NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido de modelos, capacidade e preços de maio de 2026.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-nas-storage-local-ai-models-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

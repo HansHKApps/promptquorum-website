@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Logseq e Joplin com LLMs locais: notas inteligentes sem sincronização na nuvem (2026)',
       description: 'Logseq + logseq-copilot vs Joplin + Jarvis no Ollama: alternativa privada ao Notion AI. Sync sem nuvem, postura GDPR, lacuna de plugins móveis. 2026.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-llm-with-logseq-and-joplin',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

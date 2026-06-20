@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/co-star-framework',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/co-star-framework',
         inLanguage: 'pt-BR',
         headline: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta',
         description: 'Como funciona o Framework CO-STAR (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta), quando usá-lo e como o PromptQuorum o oferece como opção integrada.',

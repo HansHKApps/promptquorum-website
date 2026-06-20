@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'O Framework APE divide cada prompt de IA em Analisar, Planejar e Executar — tornando o raciocínio do modelo visível e verificável. Modelo, exemplos e comparação com outros frameworks.',
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/ape-framework',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/ape-framework',
         inLanguage: 'pt-BR',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         keywords: ['Framework APE', 'Analisar Planejar Executar', 'frameworks de prompt', 'prompt engineering', 'raciocínio estruturado', 'PromptQuorum'],

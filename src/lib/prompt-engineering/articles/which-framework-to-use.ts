@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/which-prompt-framework-should-you-use',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/which-prompt-framework-should-you-use',
         inLanguage: 'pt-BR',
         headline: 'Qual framework de prompt você deve usar?',
         description: 'Como escolher o framework de prompt certo para GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais — e como o PromptQuorum automatiza a seleção de frameworks.',

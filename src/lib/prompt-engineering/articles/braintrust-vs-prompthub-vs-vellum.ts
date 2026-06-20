@@ -1770,7 +1770,7 @@ tests:
       dateModified: '2026-05-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Intermediate',
       about: [

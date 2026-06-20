@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Otimização manual vs automatizada de prompts: quando iterar, quando automatizar',
       description: 'Otimização manual vs automatizada de prompts: escolha conforme o número de prompts. Framework de decisão de escalabilidade.',
       datePublished: '2026-04-26',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/manual-vs-automated-prompt-optimization',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },

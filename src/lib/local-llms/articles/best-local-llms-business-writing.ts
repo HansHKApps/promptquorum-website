@@ -629,7 +629,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/best-local-llms-business-writing',
+        'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-business-writing',
         'headline': 'Melhores LLMs locais para escrita profissional em 2026: e-mails, propostas e voz da marca',
         'description': 'O Mistral Small 3.1 24B lidera para e-mails e memos. O Qwen3 7B se destaca na escrita multilíngue. Os modelos 7B-24B superam os 70B. Configuração com Ollama em 10 minutos.',
         'datePublished': '2026-04-05',

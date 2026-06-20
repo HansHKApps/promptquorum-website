@@ -868,7 +868,7 @@ schema: {
         description: 'Os LLMs locais pequenos (1B-4B parâmetros) funcionam em máquinas com 4-8 GB de RAM e produzem 30-70 tokens/seg na CPU -- rápido o suficiente para chat em tempo real.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-05',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/small-local-llm-models',
+        'url': 'https://www.promptquorum.com/pt/local-llms/small-local-llm-models',
         author: { '@type': 'Person', 'name': 'Hans Kuepper' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',

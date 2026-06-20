@@ -1452,7 +1452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         headline: 'Controle a saída: conformidade com JSON Schema, constrained decoding e seleção de formato',
         description: 'Domine o controle de saída em LLMs: constrained decoding, formatação baseada em prompts, parâmetros de amostragem e a compensação de qualidade de raciocínio. Guia de produção para JSON, JSONL, CSV.',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/control-the-output',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/control-the-output',
         inLanguage: 'pt-BR',
         datePublished: '2026-03-24',
         dateModified: '2026-04-29',

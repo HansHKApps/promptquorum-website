@@ -3529,7 +3529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Os melhores apps de LLM local para Android em 2026: 6 apps comparados em celulares reais',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-local-llm-apps-android-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'pt-BR',
       image: 'https://www.promptquorum.com/pt/api/og/best-local-llm-apps-android-2026',
       author: {

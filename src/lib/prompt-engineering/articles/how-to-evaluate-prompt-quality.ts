@@ -2050,7 +2050,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-10',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/how-to-evaluate-prompt-quality',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/how-to-evaluate-prompt-quality',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Intermediate',
       about: [

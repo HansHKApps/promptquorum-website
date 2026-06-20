@@ -680,7 +680,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Desktop vs Web UI para LLMs locais: qual interface escolher?',
         'description': 'Desktop vs Web UI para LLMs locais 2026: comparação de interfaces, recursos, compatibilidade, escalabilidade. Quando usar cada um para implantação em produção.',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/desktop-vs-webui-local-llm',
+        'url': 'https://www.promptquorum.com/pt/local-llms/desktop-vs-webui-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

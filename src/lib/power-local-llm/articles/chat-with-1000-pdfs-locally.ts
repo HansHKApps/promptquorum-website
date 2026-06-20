@@ -4453,7 +4453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Guia de decisão para escalar RAG local de 1.000 a 10.000+ PDFs. Comparação de arquiteturas, benchmarks medidos e as quatro melhorias (busca híbrida, reranking, filtragem de metadados, recuperação hierárquica) que eliminam o penhasco de escalonamento.',
       'datePublished': '2026-05-07',
       'dateModified': '2026-05-07',
-      'url': 'https://www.promptquorum.com/pt/pt/power-local-llm/chat-with-1000-pdfs-locally',
+      'url': 'https://www.promptquorum.com/pt/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',

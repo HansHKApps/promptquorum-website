@@ -3186,7 +3186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Melhores ferramentas de programação com IA 2026: Cursor vs Continue.dev',
       description: 'Compare as melhores ferramentas de programação com IA em 2026: GitHub Copilot, Cursor, Cline, Continue.dev e mais. Preços, local vs nuvem, autocompletar e recursos agênticos analisados.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-ai-coding-tools-comparison-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-06-19',

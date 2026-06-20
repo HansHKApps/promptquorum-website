@@ -3721,7 +3721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Crie um assistente de voz local no seu telefone: Whisper + LLM local (sem nuvem) — 2026',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/voice-assistant-local-mobile-offline',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/voice-assistant-local-mobile-offline',
       image: {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/og-image.png',

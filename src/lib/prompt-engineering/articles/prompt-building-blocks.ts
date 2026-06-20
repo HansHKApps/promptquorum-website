@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Os 5 blocos de construção que todo prompt precisa',
         description: 'Os 5 blocos de construção de todo prompt: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída. Com esses cinco componentes, cada prompt de IA se torna confiável e repetível.',
         datePublished: '2026-03-01',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/5-building-blocks-every-prompt-needs',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/5-building-blocks-every-prompt-needs',
         inLanguage: 'pt-BR',
         proficiencyLevel: 'Beginner',
         keywords: ['estrutura do prompt', 'blocos de construção do prompt', 'papel e contexto', 'formato de saída', 'restrições do prompt', 'exemplos few-shot', 'prompt engineering', 'modelos de linguagem'],

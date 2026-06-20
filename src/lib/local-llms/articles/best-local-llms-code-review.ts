@@ -1262,7 +1262,7 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/best-local-llms-code-review',
+        'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-code-review',
         'headline': 'Melhores LLMs locais para Code Review em 2026: classificados por detecção de bugs, velocidade e VRAM',
         'description': 'O Qwen3-Coder 32B detecta 88% dos bugs em code review com 20 GB de RAM. Llama 3.3 70B ideal para segurança. DeepSeek-R1 14B ideal para algoritmos. Comparação por tipo de código.',
         'datePublished': '2026-04-05',

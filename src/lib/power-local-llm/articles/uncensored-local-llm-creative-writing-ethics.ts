@@ -2976,7 +2976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'LLMs locais sem censura para escrita criativa: quando escritores precisam deles em 2026',
       description: 'LLMs locais sem censura para escrita criativa: quais modelos usar, configuração no Ollama, responsabilidades éticas, casos de uso apropriados e os limites que os escritores devem manter sempre.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', 'name': 'Hans Kuepper' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },

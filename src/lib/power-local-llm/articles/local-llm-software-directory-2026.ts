@@ -2916,7 +2916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
       description: '87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças, links e versões mais recentes. Atualizado em junho de 2026.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/local-llm-software-directory-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-06-14',

@@ -3333,7 +3333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Substitua o Zapier por agentes de IA locais: 5 fluxos de trabalho que economizam $30/mês (2026)',
       description: 'Substitua 5 fluxos de trabalho do Zapier por agentes de IA locais usando n8n + Ollama. Tempo de configuração, economia de $30/mês, teste de confiabilidade de 30 dias, limitações honestas.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/replace-zapier-with-local-ai-agents',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/replace-zapier-with-local-ai-agents',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

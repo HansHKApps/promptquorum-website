@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Tree of Thought e ReAct: Raciocínio avançado para problemas difíceis',
       description: 'Como Tree-of-Thought (explorar múltiplas ramificações) e ReAct (loops raciocinar-agir) funcionam e quando usá-los para resolver problemas complexos de forma mais confiável.',
       datePublished: '2026-03-26',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/tree-of-thought-react',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/tree-of-thought-react',
       inLanguage: 'pt-BR',
       keywords: ['tree-of-thought', 'ReAct', 'prompt engineering', 'prompts de raciocínio', 'agentes de IA', 'prompting agêntico', 'uso nativo de ferramentas', 'chain-of-thought', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },

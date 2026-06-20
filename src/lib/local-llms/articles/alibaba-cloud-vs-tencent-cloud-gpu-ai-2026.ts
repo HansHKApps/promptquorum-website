@@ -1244,7 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       author: { '@type': 'Person', name: 'Hans Kuepper' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+      url: 'https://www.promptquorum.com/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'pt-BR',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [

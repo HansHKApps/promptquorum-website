@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Substitua o Grammarly e o Notion AI por um LLM local (2026)',
       description: 'Substitua Grammarly e Notion AI por um LLM local: comparativo de privacidade, custo e capacidades. Guias de configuração para correção de escrita, redação de documentos e automação de anotações.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/replace-grammarly-notion-ai-with-local',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/replace-grammarly-notion-ai-with-local',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

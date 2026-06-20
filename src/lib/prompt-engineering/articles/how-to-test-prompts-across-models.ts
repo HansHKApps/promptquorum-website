@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-04-10',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/how-to-test-prompts-across-models',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/how-to-test-prompts-across-models',
       inLanguage: 'pt-BR',
       keywords: 'testes de prompts multi-modelo, GPT-5.5 vs Claude, avaliação de prompts, comparação de custos LLM, prompts agnósticos ao modelo',
       proficiencyLevel: 'Intermediate',

@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/constrained-prompting',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/constrained-prompting',
         inLanguage: 'pt-BR',
         headline: 'Constrained Prompting: Force formatos de saída de IA (2026)',
         description: 'O que é o constrained prompting, por que importa e como usá-lo para tornar as saídas de IA previsíveis e seguras em workflows reais.',

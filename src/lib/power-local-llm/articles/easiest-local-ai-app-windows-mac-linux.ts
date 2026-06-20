@@ -2564,7 +2564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'O aplicativo de IA local mais fácil para Windows, Mac e Linux (2026)',
       description: 'LM Studio, Jan, GPT4All classificados por facilidade em 2026: tempo de instalação, compatibilidade de modelos, requisitos de hardware e primeira execução no Windows, Mac, Linux. Nenhum terminal é necessário.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',

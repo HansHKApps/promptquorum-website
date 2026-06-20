@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/prompt-library-team-management',
+      url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-library-team-management',
       inLanguage: 'pt-BR',
       headline: 'Gerenciamento de biblioteca de prompts: como organizar, versionar e governar os prompts da equipe',
       description: 'Gerencie bibliotecas de prompts da equipe: estrutura de pastas, convenções de nomes, versionamento Git, controle de acesso e fluxo de depreciação.',

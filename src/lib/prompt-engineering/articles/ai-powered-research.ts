@@ -2141,7 +2141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/pt/pt/prompt-engineering/ai-powered-research',
+        url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-powered-research',
         inLanguage: 'pt-BR',
         headline: 'Pesquisa com IA: Ferramentas, Taxas de Alucinação e Fluxos de Verificação',
         description: 'As ferramentas de pesquisa com IA reduzem o tempo de revisão bibliográfica de semanas para horas — mas as taxas de alucinação de 9,2% tornam os fluxos de verificação obrigatórios. Cobre Elicit, Consensus, Perplexity, scite.ai, verificação cruzada multi-modelo e frameworks de prompts para pesquisa.',

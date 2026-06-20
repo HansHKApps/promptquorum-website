@@ -1828,7 +1828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Melhor VPN para privacidade com IA: proteja sua configuração de LLM local 2026',
       description: 'ProtonVPN, NordVPN, Mullvad e Surfshark comparados para proteger uma configuração de LLM local: política sem registros, jurisdição, WireGuard e preços de maio de 2026.',
-      url: 'https://www.promptquorum.com/pt/pt/power-local-llm/best-vpn-ai-privacy-local-llm-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-vpn-ai-privacy-local-llm-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-05-24',

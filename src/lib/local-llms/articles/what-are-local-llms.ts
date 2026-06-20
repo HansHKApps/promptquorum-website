@@ -923,7 +923,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'O que são LLMs locais? Como os modelos de IA rodam no seu hardware',
         'description': 'Os LLMs locais rodam modelos de IA no seu próprio hardware, sem precisar de internet. Aprenda o que são, como funcionam e quando usá-los. Guia para 2026.',
-        'url': 'https://www.promptquorum.com/pt/pt/local-llms/what-are-local-llms',
+        'url': 'https://www.promptquorum.com/pt/local-llms/what-are-local-llms',
         'datePublished': '2026-04-04',
         'dateModified': '2026-06-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
