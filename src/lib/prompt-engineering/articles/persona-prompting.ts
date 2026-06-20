@@ -330,13 +330,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       relatedReading: {
         title: 'Related Articles',
-        items: [
-          '[How to Write Clear Prompts for AI](/prompt-engineering/how-to-write-clear-prompts) — Master the fundamentals before advancing to personas.',
+        items:  [
+          'How to Write Clear Prompts for AI — Master the fundamentals before advancing to personas.',
           '[Negative Prompting: Tell AI What NOT to Do](/prompt-engineering/negative-prompting) — Combine personas with explicit constraints for better control.',
           '[Prompt Frameworks: Chain-of-Thought and Beyond](/prompt-engineering/chain-of-thought-prompting) — Learn structured reasoning techniques that work with personas.',
-          '[System Prompts: The Foundation of AI Behavior](/prompt-engineering/system-prompts) — Understand how personas fit into the broader system architecture.',
-          '[Fine-Tuning vs Prompt Engineering: When to Use Each](/prompt-engineering/fine-tuning-vs-prompting) — Decide whether personas or fine-tuning is right for your use case.',
-          '[Testing AI Models Across Providers](/prompt-engineering/testing-ai-models) — Learn how to systematically compare persona performance.',
+          '[System Prompts: The Foundation of AI Behavior](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Understand how personas fit into the broader system architecture.',
+          '[Fine-Tuning vs Prompt Engineering: When to Use Each](/prompt-engineering/prompt-engineering-vs-fine-tuning) — Decide whether personas or fine-tuning is right for your use case.',
+          'Testing AI Models Across Providers — Learn how to systematically compare persona performance.',
         ],
       },
     },
@@ -672,13 +672,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       relatedReading: {
         title: 'Verwandte Artikel',
-        items: [
-          '[Wie Sie klare Prompts für KI schreiben](/de/prompt-engineering/how-to-write-clear-prompts) — Beherrschen Sie die Grundlagen, bevor Sie zu Personas vorankommen.',
+        items:  [
+          'Wie Sie klare Prompts für KI schreiben — Beherrschen Sie die Grundlagen, bevor Sie zu Personas vorankommen.',
           '[Negative Prompting: Sagen Sie KI, was Sie NICHT tun sollen](/de/prompt-engineering/negative-prompting) — Kombinieren Sie Personas mit expliziten Constraints für bessere Kontrolle.',
           '[Prompt-Frameworks: Chain-of-Thought und darüber hinaus](/de/prompt-engineering/chain-of-thought-prompting) — Lernen Sie strukturierte Reasoning-Techniken, die mit Personas funktionieren.',
-          '[System-Prompts: Die Grundlage des KI-Verhaltens](/de/prompt-engineering/system-prompts) — Verstehen Sie, wie Personas in die breitere System-Architektur passen.',
-          '[Fine-Tuning vs Prompt Engineering: Wann Sie jedes verwenden](/de/prompt-engineering/fine-tuning-vs-prompting) — Entscheiden Sie, ob Personas oder Fine-Tuning richtig für Ihren Anwendungsfall ist.',
-          '[Testen von KI-Modellen über Anbieter hinweg](/de/prompt-engineering/testing-ai-models) — Lernen Sie, wie Sie Persona-Leistung systematisch vergleichen.',
+          '[System-Prompts: Die Grundlage des KI-Verhaltens](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Verstehen Sie, wie Personas in die breitere System-Architektur passen.',
+          '[Fine-Tuning vs Prompt Engineering: Wann Sie jedes verwenden](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) — Entscheiden Sie, ob Personas oder Fine-Tuning richtig für Ihren Anwendungsfall ist.',
+          'Testen von KI-Modellen über Anbieter hinweg — Lernen Sie, wie Sie Persona-Leistung systematisch vergleichen.',
         ],
       },
     },
@@ -874,13 +874,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       relatedReading: {
         title: 'Lecturas relacionadas',
-        items: [
-          '[Cómo escribir prompts claros para IA](/es/prompt-engineering/how-to-write-clear-prompts) — Domina los fundamentos antes de avanzar a las personas.',
+        items:  [
+          'Cómo escribir prompts claros para IA — Domina los fundamentos antes de avanzar a las personas.',
           '[Negative prompting: dile a la IA lo que NO debe hacer](/es/prompt-engineering/negative-prompting) — Combina personas con constraints explícitas para mayor control.',
           '[Frameworks de prompt: chain-of-thought y más allá](/es/prompt-engineering/chain-of-thought-prompting) — Aprende técnicas de razonamiento estructurado que funcionan con personas.',
-          '[System prompts: la base del comportamiento de IA](/es/prompt-engineering/system-prompts) — Entiende cómo las personas encajan en la arquitectura de sistema más amplia.',
-          '[Fine-tuning vs prompt engineering: cuándo usar cada uno](/es/prompt-engineering/fine-tuning-vs-prompting) — Decide si las personas o el fine-tuning son lo correcto para tu caso de uso.',
-          '[Probando modelos de IA entre proveedores](/es/prompt-engineering/testing-ai-models) — Aprende a comparar sistemáticamente el rendimiento de las personas.',
+          '[System prompts: la base del comportamiento de IA](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Entiende cómo las personas encajan en la arquitectura de sistema más amplia.',
+          '[Fine-tuning vs prompt engineering: cuándo usar cada uno](/es/prompt-engineering/prompt-engineering-vs-fine-tuning) — Decide si las personas o el fine-tuning son lo correcto para tu caso de uso.',
+          'Probando modelos de IA entre proveedores — Aprende a comparar sistemáticamente el rendimiento de las personas.',
         ],
       },
     },
@@ -1074,13 +1074,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       relatedReading: {
         title: 'Leitura relacionada',
-        items: [
-          '[Como escrever prompts claros para IA](/pt/prompt-engineering/how-to-write-clear-prompts) — Domine os fundamentos antes de avançar para as personas.',
+        items:  [
+          'Como escrever prompts claros para IA — Domine os fundamentos antes de avançar para as personas.',
           '[Negative prompting: diga à IA o que ela NÃO deve fazer](/pt/prompt-engineering/negative-prompting) — Combine personas com restrições explícitas para maior controle.',
           '[Frameworks de prompt: chain-of-thought e mais além](/pt/prompt-engineering/chain-of-thought-prompting) — Aprenda técnicas de raciocínio estruturado que funcionam com personas.',
-          '[System prompts: a base do comportamento de IA](/pt/prompt-engineering/system-prompts) — Entenda como as personas se encaixam na arquitetura de sistema mais ampla.',
-          '[Fine-tuning vs prompt engineering: quando usar cada um](/pt/prompt-engineering/fine-tuning-vs-prompting) — Decida se as personas ou o fine-tuning são o certo para o seu caso de uso.',
-          '[Testando modelos de IA entre provedores](/pt/prompt-engineering/testing-ai-models) — Aprenda a comparar sistematicamente o desempenho das personas.',
+          '[System prompts: a base do comportamento de IA](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Entenda como as personas se encaixam na arquitetura de sistema mais ampla.',
+          '[Fine-tuning vs prompt engineering: quando usar cada um](/pt/prompt-engineering/prompt-engineering-vs-fine-tuning) — Decida se as personas ou o fine-tuning são o certo para o seu caso de uso.',
+          'Testando modelos de IA entre provedores — Aprenda a comparar sistematicamente o desempenho das personas.',
         ],
       },
     },
@@ -1416,13 +1416,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       relatedReading: {
         title: 'Articles Connexes',
-        items: [
-          '[Comment Écrire des Prompts Clairs pour l\'IA](/fr/prompt-engineering/how-to-write-clear-prompts) — Maîtrisez les fondamentaux avant d\'avancer vers les personas.',
+        items:  [
+          '[Comment Écrire des Prompts Clairs pour l\'IA — Maîtrisez les fondamentaux avant d\'avancer vers les personas.',
           '[Negative Prompting: Dites à l\'IA ce qu\'elle NE doit PAS faire](/fr/prompt-engineering/negative-prompting) — Combinez personas avec contraintes explicites pour meilleur contrôle.',
           '[Frameworks de Prompts: Chain-of-Thought et Au-delà](/fr/prompt-engineering/chain-of-thought-prompting) — Apprenez techniques de raisonnement structuré qui fonctionnent avec personas.',
-          '[Prompts Système: La Fondation du Comportement IA](/fr/prompt-engineering/system-prompts) — Comprenez comment personas s\'intègrent à l\'architecture système plus large.',
-          '[Fine-Tuning vs Prompt Engineering: Quand Utiliser Chacun](/fr/prompt-engineering/fine-tuning-vs-prompting) — Décidez si personas ou fine-tuning convient à votre cas d\'usage.',
-          '[Tester les Modèles IA sur les Fournisseurs](/fr/prompt-engineering/testing-ai-models) — Apprenez à comparer systématiquement la performance des personas.',
+          '[Prompts Système: La Fondation du Comportement IA](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Comprenez comment personas s\'intègrent à l\'architecture système plus large.',
+          '[Fine-Tuning vs Prompt Engineering: Quand Utiliser Chacun](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) — Décidez si personas ou fine-tuning convient à votre cas d\'usage.',
+          'Tester les Modèles IA sur les Fournisseurs — Apprenez à comparer systématiquement la performance des personas.',
         ],
       },
     },
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — ペルソナプロンプティングの基礎となるコンセプト',
           '[チェーン・オブ・ソート（Chain-of-Thought）プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — 段階的推論テクニック',
-          '[ファウショット・プロンプティング](/ja/prompt-engineering/few-shot-prompting) — ペルソナに例を含める方法',
+          '[ファウショット・プロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — ペルソナに例を含める方法',
           '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — ペルソナとセキュリティ考慮事項',
           '[GPT、Claude、Gemini：適切なモデルの選択](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — モデルによるペルソナ追従の違い',
         ],
@@ -1839,7 +1839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 人物角色提示的基础概念',
           '[链式思维（Chain-of-Thought）提示](/zh/prompt-engineering/chain-of-thought-prompting) — 逐步推理技术',
-          '[少样本提示](/zh/prompt-engineering/few-shot-prompting) — 如何在人物角色中包含示例',
+          '[少样本提示](/zh/prompt-engineering/zero-shot-vs-few-shot) — 如何在人物角色中包含示例',
           '[提示注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 人物角色和安全考虑',
           '[GPT、Claude、Gemini：选择正确的模型](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 模型间人物角色遵守差异',
         ],
@@ -2089,13 +2089,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       relatedReading: {
         title: 'قراءات ذات صلة',
-        items: [
-          '[كيفية كتابة طلبات واضحة للذكاء الاصطناعي](/ar/prompt-engineering/how-to-write-clear-prompts) — أتقن الأساسيات قبل التقدم إلى الشخصيات.',
+        items:  [
+          'كيفية كتابة طلبات واضحة للذكاء الاصطناعي — أتقن الأساسيات قبل التقدم إلى الشخصيات.',
           '[التوجيه السلبي: أخبر الذكاء الاصطناعي بما لا يجب فعله](/ar/prompt-engineering/negative-prompting) — ادمج الشخصيات مع القيود الصريحة لمزيد من التحكم.',
           '[أطر التوجيه: chain-of-thought وما بعده](/ar/prompt-engineering/chain-of-thought-prompting) — تعلم تقنيات التفكير المنظم التي تعمل مع الشخصيات.',
-          '[System prompts: أساس سلوك الذكاء الاصطناعي](/ar/prompt-engineering/system-prompts) — افهم كيف تتناسب الشخصيات مع البنية الأشمل للنظام.',
-          '[Fine-tuning مقابل prompt engineering: متى تستخدم كلاً منهما](/ar/prompt-engineering/fine-tuning-vs-prompting) — قرر ما إذا كانت الشخصيات أو fine-tuning هو الخيار المناسب لحالتك.',
-          '[اختبار نماذج الذكاء الاصطناعي عبر المزودين](/ar/prompt-engineering/testing-ai-models) — تعلم كيف تقارن أداء الشخصيات بشكل منهجي.',
+          '[System prompts: أساس سلوك الذكاء الاصطناعي](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — افهم كيف تتناسب الشخصيات مع البنية الأشمل للنظام.',
+          '[Fine-tuning مقابل prompt engineering: متى تستخدم كلاً منهما](/ar/prompt-engineering/prompt-engineering-vs-fine-tuning) — قرر ما إذا كانت الشخصيات أو fine-tuning هو الخيار المناسب لحالتك.',
+          'اختبار نماذج الذكاء الاصطناعي عبر المزودين — تعلم كيف تقارن أداء الشخصيات بشكل منهجي.',
         ],
       },
     },
@@ -2423,13 +2423,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       relatedReading: {
         title: '관련 기사',
-        items: [
-          '[AI를 위한 명확한 프롬프트 작성 방법](/prompt-engineering/how-to-write-clear-prompts) — 페르소나로 발전하기 전에 기초를 마스터하십시오.',
+        items:  [
+          'AI를 위한 명확한 프롬프트 작성 방법 — 페르소나로 발전하기 전에 기초를 마스터하십시오.',
           '[네거티브 프롬프팅: AI에게 하지 말아야 할 것을 알려주십시오](/prompt-engineering/negative-prompting) — 더 나은 제어를 위해 페르소나와 명시적 제약 조건을 결합하십시오.',
           '[프롬프트 프레임워크: 사고 연쇄와 그 이상](/prompt-engineering/chain-of-thought-prompting) — 페르소나와 함께 작동하는 구조화된 추론 기법을 학습하십시오.',
-          '[시스템 프롬프트: AI 행동의 기초](/prompt-engineering/system-prompts) — 페르소나가 더 넓은 시스템 아키텍처에 어떻게 맞는지 이해하십시오.',
-          '[파인튜닝 대 프롬프트 엔지니어링: 각각 언제 사용할지](/prompt-engineering/fine-tuning-vs-prompting) — 페르소나 또는 파인튜닝이 사용 사례에 적합한지 결정하십시오.',
-          '[공급업체 간 AI 모델 테스트](/prompt-engineering/testing-ai-models) — 페르소나 성능을 체계적으로 비교하는 방법을 학습하십시오.',
+          '[시스템 프롬프트: AI 행동의 기초](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 페르소나가 더 넓은 시스템 아키텍처에 어떻게 맞는지 이해하십시오.',
+          '[파인튜닝 대 프롬프트 엔지니어링: 각각 언제 사용할지](/prompt-engineering/prompt-engineering-vs-fine-tuning) — 페르소나 또는 파인튜닝이 사용 사례에 적합한지 결정하십시오.',
+          '공급업체 간 AI 모델 테스트 — 페르소나 성능을 체계적으로 비교하는 방법을 학습하십시오.',
         ],
       },
     },

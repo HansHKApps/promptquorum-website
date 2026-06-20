@@ -1767,7 +1767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Leituras Relacionadas',
           items: [
             { title: 'O que é Prompt Engineering?', url: '/pt/prompt-engineering/what-is-prompt-engineering' },
-            { title: 'Saída Estruturada em LLMs', url: '/pt/prompt-engineering/structured-output-json-mode' },
+            { title: 'Saída Estruturada em LLMs', url: '/pt/prompt-engineering/structured-output-and-json-mode' },
           ],
         },
         sources: {

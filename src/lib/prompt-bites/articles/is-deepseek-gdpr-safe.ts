@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[LLM GDPR 위험 비교 2026](/ko/local-llms/gdpr-llm-risk-comparison-2026)',
           '[Qwen은 GDPR에 안전합니까?](/ko/prompt-bites/is-qwen-gdpr-compliant)',
           '[로컬 LLM이 GDPR 준수에 도움이 됩니까?](/ko/prompt-bites/can-local-llm-help-gdpr)',
-          '[Ollama 로컬 설치 가이드](/ko/local-llms/how-to-run-llm-locally)',
+          '[Ollama 로컬 설치 가이드](/ko/local-llms/run-first-local-llm)',
         ],
       },
     },

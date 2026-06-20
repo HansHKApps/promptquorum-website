@@ -1276,7 +1276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Weiterführende Ressourcen',
           items: [
             '[Ollama installieren: Schritt-für-Schritt-Anleitung](/de/local-llms/how-to-install-ollama) -- Aktualisierte Anleitung für alle Plattformen (macOS, Linux, Windows).',
-            '[LM Studio vs. Ollama: Vergleich 2026](/de/local-llms/lm-studio-vs-ollama) -- Welches Tool ist für lokale Modelle besser?',
+            '[LM Studio vs. Ollama: Vergleich 2026](/de/local-llms/ollama-vs-lm-studio) -- Welches Tool ist für lokale Modelle besser?',
             '[Lokale LLM-Hardware-Anforderungen 2026](/de/local-llms/local-llm-hardware-guide-2026) -- GPU/CPU/RAM-Anforderungen für Qwen3, Llama, Mistral.',
             '[LLM-Quantisierung erklärt: Q4_K_M vs. Q5_K_M](/de/local-llms/llm-quantization-explained) -- Warum Q4_K_M Standard ist.',
             '[Troubleshooting lokaler LLM-Setups](/de/local-llms/troubleshooting-local-llm-setup) -- Häufige Fehler und Lösungen (VRAM, Pfade, Quantisierungen).'
@@ -1789,7 +1789,7 @@ schema: {
           title: 'Lectures complémentaires',
           items: [
             '[Installer Ollama : Guide complet](/fr/local-llms/how-to-install-ollama) -- Guide mis à jour pour toutes les plates-formes (macOS, Linux, Windows).',
-            '[LM Studio vs Ollama : Comparaison 2026](/fr/local-llms/lm-studio-vs-ollama) -- Quel outil est le meilleur pour les modèles locaux ?',
+            '[LM Studio vs Ollama : Comparaison 2026](/fr/local-llms/ollama-vs-lm-studio) -- Quel outil est le meilleur pour les modèles locaux ?',
             '[Configuration matérielle des LLMs locaux 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences GPU/CPU/RAM pour Qwen3, Llama, Mistral.',
             '[Quantification LLM expliquée : Q4_K_M vs Q5_K_M](/fr/local-llms/llm-quantization-explained) -- Pourquoi Q4_K_M est la norme.',
             '[Dépannage des configurations locales des LLMs](/fr/local-llms/troubleshooting-local-llm-setup) -- Erreurs courantes et solutions (VRAM, chemins, quantifications).'
@@ -2286,7 +2286,7 @@ schema: {
           title: '参考資料',
           items: [
             '[Ollama インストール：完全ガイド](/ja/local-llms/how-to-install-ollama) -- 全プラットフォーム対応（macOS、Linux、Windows）。',
-            '[LM Studio vs Ollama：2026 比較](/ja/local-llms/lm-studio-vs-ollama) -- ローカルモデルに最良のツール？',
+            '[LM Studio vs Ollama：2026 比較](/ja/local-llms/ollama-vs-lm-studio) -- ローカルモデルに最良のツール？',
             '[ローカルLLM ハードウェア要件 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- Qwen3、Llama、Mistral の GPU/CPU/RAM 要件。',
             '[LLM 量子化説明：Q4_K_M vs Q5_K_M](/ja/local-llms/llm-quantization-explained) -- Q4_K_M が標準な理由。',
             '[ローカルLLM セットアップトラブルシューティング](/ja/local-llms/troubleshooting-local-llm-setup) -- 一般的エラーと解決策（VRAM、パス、量子化）。'
@@ -2699,7 +2699,7 @@ schema: {
           title: '相关阅读',
           items: [
             '[Ollama安装完整指南](/zh/local-llms/how-to-install-ollama) -- 全平台支持（macOS、Linux、Windows）。',
-            '[LM Studio vs Ollama：2026对比](/zh/local-llms/lm-studio-vs-ollama) -- 本地模型最佳工具是哪个？',
+            '[LM Studio vs Ollama：2026对比](/zh/local-llms/ollama-vs-lm-studio) -- 本地模型最佳工具是哪个？',
             '[本地LLM硬件要求2026](/zh/local-llms/local-llm-hardware-guide-2026) -- Qwen3、Llama、Mistral的GPU/CPU/RAM要求。',
             '[LLM量化解释：Q4_K_M vs Q5_K_M](/zh/local-llms/llm-quantization-explained) -- 为什么Q4_K_M是标准。',
             '[本地LLM配置故障排除](/zh/local-llms/troubleshooting-local-llm-setup) -- 常见错误与解决方案（VRAM、路径、量化）。'

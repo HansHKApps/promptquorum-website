@@ -2329,9 +2329,9 @@ schema: {
           items: [
             '[Wie viel VRAM brauche ich für lokale LLMs? (Hardware-Guide)](/de/local-llms/how-much-vram-local-llm)',
             '[Ollama installieren: Schritt-für-Schritt-Anleitung](/de/local-llms/how-to-install-ollama)',
-            '[LM Studio vs. Ollama: Welches ist besser?](/de/local-llms/lm-studio-vs-ollama)',
-            '[Die besten lokalen Modelle 2026 im Vergleich](/de/local-llms/best-local-llm-models)',
-            '[Prompt Engineering für lokale LLMs (Techniken & Tricks)](/de/prompt-engineering/prompt-engineering-local-llms)'
+            '[LM Studio vs. Ollama: Welches ist besser?](/de/local-llms/ollama-vs-lm-studio)',
+            'Die besten lokalen Modelle 2026 im Vergleich',
+            '[Prompt Engineering für lokale LLMs (Techniken & Tricks)](/de/local-llms/prompt-engineering-for-local-models)'
           ]
         }
       }
@@ -2967,9 +2967,9 @@ schema: {
           items: [
             '[Combien VRAM pour LLMs locaux ? (Guide matériel)](/fr/local-llms/how-much-vram-local-llm)',
             '[Installer Ollama : guide étape par étape](/fr/local-llms/how-to-install-ollama)',
-            '[LM Studio vs. Ollama : lequel choisir ?](/fr/local-llms/lm-studio-vs-ollama)',
-            '[Meilleurs modèles locaux 2026 comparés](/fr/local-llms/best-local-llm-models)',
-            '[Prompt Engineering pour LLMs locaux (techniques & astuces)](/fr/prompt-engineering/prompt-engineering-local-llms)'
+            '[LM Studio vs. Ollama : lequel choisir ?](/fr/local-llms/ollama-vs-lm-studio)',
+            'Meilleurs modèles locaux 2026 comparés',
+            '[Prompt Engineering pour LLMs locaux (techniques & astuces)](/fr/local-llms/prompt-engineering-for-local-models)'
           ]
         }
       }
@@ -3608,9 +3608,9 @@ schema: {
           items: [
             '[ローカルLLMに何VRAM必要？（ハードウェアガイド）](/ja/local-llms/how-much-vram-local-llm)',
             '[Ollama インストール ： ステップバイステップガイド](/ja/local-llms/how-to-install-ollama)',
-            '[LM Studio vs. Ollama ： どちらを選ぶ？](/ja/local-llms/lm-studio-vs-ollama)',
-            '[2026最高ローカルモデル比較](/ja/local-llms/best-local-llm-models)',
-            '[ローカルLLM用プロンプトエンジニアリング（技法＆コツ）](/ja/prompt-engineering/prompt-engineering-local-llms)'
+            '[LM Studio vs. Ollama ： どちらを選ぶ？](/ja/local-llms/ollama-vs-lm-studio)',
+            '2026最高ローカルモデル比較',
+            '[ローカルLLM用プロンプトエンジニアリング（技法＆コツ）](/ja/local-llms/prompt-engineering-for-local-models)'
           ]
         }
       }
@@ -4104,9 +4104,9 @@ schema: {
           items: [
             '[本地LLM需多少VRAM？（硬件指南）](/zh/local-llms/how-much-vram-local-llm)',
             '[Ollama安装：分步指南](/zh/local-llms/how-to-install-ollama)',
-            '[LM Studio vs. Ollama：选哪个？](/zh/local-llms/lm-studio-vs-ollama)',
-            '[2026最佳本地模型对比](/zh/local-llms/best-local-llm-models)',
-            '[本地LLM提示工程（技巧和诀窍）](/zh/prompt-engineering/prompt-engineering-local-llms)'
+            '[LM Studio vs. Ollama：选哪个？](/zh/local-llms/ollama-vs-lm-studio)',
+            '2026最佳本地模型对比',
+            '[本地LLM提示工程（技巧和诀窍）](/zh/local-llms/prompt-engineering-for-local-models)'
           ]
         }
       }

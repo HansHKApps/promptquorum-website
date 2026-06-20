@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Engineering for Developers Workflow', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'Prompt Engineering for Content Teams', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'Prompt Engineering for Support Operations', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Engineering for Developers Workflow', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'Prompt Engineering for Content Teams', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'Prompt Engineering for Support Operations', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Flujo de trabajo de prompt engineering para desarrolladores', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'Prompt engineering para equipos de contenido', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'Prompt engineering para operaciones de soporte', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'Mejores herramientas para salida estructurada', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: 'Mejores herramientas para salida estructurada', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'هندسة الأوامر لسير عمل المطورين', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'هندسة الأوامر لفرق المحتوى', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'هندسة الأوامر لعمليات الدعم', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'أفضل أدوات المخرجات المنظمة', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: 'أفضل أدوات المخرجات المنظمة', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -837,7 +837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Fluxo de trabalho de prompt engineering para desenvolvedores', url: '/pt/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'Prompt engineering para equipes de conteúdo', url: '/pt/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'Prompt engineering para operações de suporte', url: '/pt/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'Melhores ferramentas para saída estruturada', url: '/pt/prompt-engineering/best-tools-structured-output' },
+          { title: 'Melhores ferramentas para saída estruturada', url: '/pt/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -1006,7 +1006,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Engineering for Developers Workflow', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'Prompt Engineering for Content Teams', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'Prompt Engineering for Support Operations', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Engineering for Developers Workflow', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'Prompt Engineering for Content Teams', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'Prompt Engineering for Support Operations', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -1344,7 +1344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Engineering for Developers Workflow', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: 'Prompt Engineering for Content Teams', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: 'Prompt Engineering for Support Operations', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: 'Best Tools for Structured Output', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: '개발자를 위한 프롬프트 엔지니어링 워크플로우', url: '/prompt-engineering/prompt-engineering-for-developers-workflow' },
           { title: '콘텐츠 팀을 위한 프롬프트 엔지니어링', url: '/prompt-engineering/prompt-engineering-for-content-teams' },
           { title: '지원 운영을 위한 프롬프트 엔지니어링', url: '/prompt-engineering/prompt-engineering-for-support-operations' },
-          { title: '구조화된 출력을 위한 최고의 도구', url: '/prompt-engineering/best-tools-structured-output' },
+          { title: '구조화된 출력을 위한 최고의 도구', url: '/prompt-engineering/best-tools-structured-output-json' },
         ],
       },
       sources: {

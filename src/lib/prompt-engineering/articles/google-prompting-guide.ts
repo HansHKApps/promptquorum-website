@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Role prompting: Asking the model to "act as" a specific expert (for example a data analyst or product manager).',
           'Step-by-step reasoning: Requesting intermediate steps or explanations before the final answer.',
-          '[Few-shot prompting](/prompt-engineering/few-shot-prompting): Supplying several input–output examples to anchor behavior.',
+          '[Few-shot prompting](/prompt-engineering/zero-shot-vs-few-shot): Supplying several input–output examples to anchor behavior.',
           'Structured output: Asking for answers in defined formats such as bullet lists, tables, or JSON.',
           'Iterative refinement: Reusing the model\'s own output as input for revision and improvement.',
         ],
@@ -156,12 +156,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'Using Google\'s Guide With Other Frameworks',
         content: [
-          '**You should treat Google\'s Prompting Guide as a set of low-level techniques that work together with higher-level frameworks like [CO-STAR](/prompt-engineering/co-star-prompting-framework), SPECS, RISEN, and TRACE.** The guide tells you how to phrase instructions; the frameworks tell you how to structure entire workflows.',
+          '**You should treat Google\'s Prompting Guide as a set of low-level techniques that work together with higher-level frameworks like [CO-STAR](/prompt-bites/co-star-prompt-framework), SPECS, RISEN, and TRACE.** The guide tells you how to phrase instructions; the frameworks tell you how to structure entire workflows.',
           'A practical approach is:',
         ],
         items: [
           'Use a framework (for example CO-STAR or SPECS) to define the overall structure of the task.',
-          'Apply Google\'s prompting principles inside that structure: explicit roles, clear constraints, [few-shot examples](/prompt-engineering/few-shot-prompting), and step-by-step reasoning when needed.',
+          'Apply Google\'s prompting principles inside that structure: explicit roles, clear constraints, [few-shot examples](/prompt-engineering/zero-shot-vs-few-shot), and step-by-step reasoning when needed.',
           'Run the combined prompt in PromptQuorum across multiple models to validate that it behaves consistently.',
         ],
         callouts: [
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Be clear and specific: avoid vague instructions.** Instead of "Tell me about AI," ask "Explain how Large Language Models (LLMs) generate text, with technical detail suitable for computer science students." This removes ambiguity.',
           '**Provide examples of the desired output format.** Show a sample answer or code example the model should emulate. Examples teach better than descriptions. One well-chosen example is worth 10 lines of instruction.',
           '**Give the model a "role" to play if it helps.** Example: "You are a financial advisor. Explain tax-loss harvesting to a high-net-worth individual." Roles guide tone and detail level. Roles are especially useful for creative tasks.',
-          '**Use step-by-step reasoning for complex tasks.** Ask the model to "think step by step" before answering. This forces deliberation and catches errors. Works across [Gemini 3.1 Pro](/prompt-engineering/gemini-prompting-guide), GPT-5.5, and Claude Opus 4.8.',
+          '**Use step-by-step reasoning for complex tasks.** Ask the model to "think step by step" before answering. This forces deliberation and catches errors. Works across [Gemini 3.1 Pro](/prompt-engineering/googles-prompting-guide), GPT-5.5, and Claude Opus 4.8.',
           '**Test your prompt on varied inputs before deploying at scale.** A prompt that works on one example may fail on edge cases. Validate across diverse scenarios. Use PromptQuorum to test against multiple models and input types in parallel.',
         ],
         callouts: [
@@ -232,11 +232,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          { title: 'Few-Shot Prompting', url: '/prompt-engineering/few-shot-prompting' },
+          { title: 'Few-Shot Prompting', url: '/prompt-engineering/zero-shot-vs-few-shot' },
           { title: 'Chain-of-Thought Prompting', url: '/prompt-engineering/chain-of-thought-prompting' },
           { title: 'Persona Prompting', url: '/prompt-engineering/persona-prompting' },
           { title: 'Constrained Prompting', url: '/prompt-engineering/constrained-prompting' },
-          { title: 'CO-STAR Prompting Framework', url: '/prompt-engineering/co-star-prompting-framework' },
+          { title: 'CO-STAR Prompting Framework', url: '/prompt-bites/co-star-prompt-framework' },
           { title: 'Prompt Chaining', url: '/prompt-engineering/prompt-chaining' },
           { title: 'How to Test Prompts Across Models', url: '/prompt-engineering/how-to-test-prompts-across-models' },
           { title: 'GPT, Claude, or Gemini? How to Pick the Right Model', url: '/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Official Google Gemini API prompting guide (2024–2026)',
-          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — JSON schema enforcement at the API level',
+          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — JSON schema enforcement at the API level',
           '[Google Search Grounding for Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Automatic fact-checking via Google Search integration',
           '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — Practical prompting courses and guides',
           'OpenAI & Anthropic API Documentation (2026) — Prompt engineering best practices across GPT-5.5, Claude Opus 4.8, and open-source models',
@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Role Prompting: Bitte das Modell, als ein spezifischer Experte zu „agieren" (z.B. Data Analyst oder Product Manager).',
           'Schrittweise Begründung: Fordere Zwischenschritte oder Erklärungen vor der finalen Antwort an.',
-          '[Few-Shot Prompting](/de/prompt-engineering/few-shot-prompting): Stelle mehrere Input–Output-Beispiele bereit, um Verhalten zu verankern.',
+          '[Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot): Stelle mehrere Input–Output-Beispiele bereit, um Verhalten zu verankern.',
           'Strukturierte Output: Fordere Antworten in definierten Formaten wie Bullet Lists, Tabellen oder JSON an.',
           'Iterative Verfeinerung: Nutze die eigene Output des Modells als Input für Revision und Verbesserung.',
         ],
@@ -420,12 +420,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'Googles Guide mit anderen Frameworks nutzen',
         content: [
-          '**Du solltest den Google Prompting Guide als Satz von Low-Level-Techniken behandeln, die mit Higher-Level-Frameworks wie [CO-STAR](/de/prompt-engineering/co-star-prompting-framework), SPECS, RISEN und TRACE zusammenarbeiten.** Der Guide sagt dir, wie man Anweisungen formuliert; die Frameworks sagen dir, wie man gesamte Workflows strukturiert.',
+          '**Du solltest den Google Prompting Guide als Satz von Low-Level-Techniken behandeln, die mit Higher-Level-Frameworks wie [CO-STAR](/de/prompt-bites/co-star-prompt-framework), SPECS, RISEN und TRACE zusammenarbeiten.** Der Guide sagt dir, wie man Anweisungen formuliert; die Frameworks sagen dir, wie man gesamte Workflows strukturiert.',
           'Ein praktischer Ansatz ist:',
         ],
         items: [
           'Nutze ein Framework (z.B. CO-STAR oder SPECS), um die Gesamtstruktur der Aufgabe zu definieren.',
-          'Wende Googles Prompting-Prinzipien darin an: explizite Rollen, klare Constraints, [Few-Shot-Beispiele](/de/prompt-engineering/few-shot-prompting) und schrittweise Begründung, wenn nötig.',
+          'Wende Googles Prompting-Prinzipien darin an: explizite Rollen, klare Constraints, [Few-Shot-Beispiele](/de/prompt-engineering/zero-shot-vs-few-shot) und schrittweise Begründung, wenn nötig.',
           'Führe den kombinierten Prompt in PromptQuorum über mehrere Modelle aus, um zu validieren, dass er konsistent verhält.',
         ],
         callouts: [
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Sei klar und spezifisch: vermeide vage Anweisungen.** Statt „Erzähl mir von KI" frag „Erkläre, wie Large Language Models (LLMs) Text generieren, mit technischer Detail für Computer-Science-Studenten." Das entfernt Ambiguität.',
           '**Gib Beispiele des gewünschten Output-Formats.** Zeig eine Sample-Antwort oder Code-Beispiel, das das Modell imitieren sollte. Beispiele lehren besser als Beschreibungen. Ein gut gewähltes Beispiel lohnt sich über 10 Zeilen Anweisungen.',
           '**Gib dem Modell eine „Role" zu spielen, wenn es hilft.** Beispiel: „Du bist ein Finanzberater. Erkläre Tax-Loss-Harvesting einer High-Net-Worth Person." Rollen lenken Ton und Detaillevel. Rollen sind besonders für kreative Aufgaben hilfreich.',
-          '**Nutze schrittweise Begründung für komplexe Aufgaben.** Bitte das Modell, „Schritt für Schritt zu denken", bevor es antwortet. Das erzwingt Überlegung und fängt Fehler auf. Funktioniert über [Gemini 3,1 Pro](/de/prompt-engineering/gemini-prompting-guide), GPT-5.5 und Claude Opus 4,7.',
+          '**Nutze schrittweise Begründung für komplexe Aufgaben.** Bitte das Modell, „Schritt für Schritt zu denken", bevor es antwortet. Das erzwingt Überlegung und fängt Fehler auf. Funktioniert über [Gemini 3,1 Pro](/de/prompt-engineering/googles-prompting-guide), GPT-5.5 und Claude Opus 4,7.',
           '**Teste deinen Prompt auf varied Inputs, bevor du at Scale deployst.** Ein Prompt, der auf einem Beispiel funktioniert, kann auf Edge Cases fehlen. Validiere über diverse Szenarien. Nutze PromptQuorum, um gegen mehrere Models und Input-Types parallel zu testen.',
         ],
         callouts: [
@@ -511,11 +511,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Verwandte Lektüre',
         items: [
-          { title: 'Few-Shot Prompting', url: '/de/prompt-engineering/few-shot-prompting' },
+          { title: 'Few-Shot Prompting', url: '/de/prompt-engineering/zero-shot-vs-few-shot' },
           { title: 'Chain-of-Thought Prompting', url: '/de/prompt-engineering/chain-of-thought-prompting' },
           { title: 'Persona Prompting', url: '/de/prompt-engineering/persona-prompting' },
           { title: 'Constrained Prompting', url: '/de/prompt-engineering/constrained-prompting' },
-          { title: 'CO-STAR Prompting Framework', url: '/de/prompt-engineering/co-star-prompting-framework' },
+          { title: 'CO-STAR Prompting Framework', url: '/de/prompt-bites/co-star-prompt-framework' },
           { title: 'Prompt Chaining', url: '/de/prompt-engineering/prompt-chaining' },
           { title: 'Wie man Prompts über Models testet', url: '/de/prompt-engineering/how-to-test-prompts-across-models' },
           { title: 'GPT, Claude oder Gemini? Das richtige Modell wählen', url: '/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Quellen',
         items: [
           '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Offizielle Google Gemini API Prompting-Guide (2024–2026)',
-          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — JSON-Schema-Erzwingung auf API-Level',
+          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — JSON-Schema-Erzwingung auf API-Level',
           '[Google Search Grounding für Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Automatisches Fact-Checking über Google Search-Integration',
           '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — Praktische Prompting-Kurse und Guides',
           'OpenAI & Anthropic API Documentation (2026) — Prompt-Engineering Best Practices über GPT-5.5, Claude Opus 4,7 und Open-Source-Modelle',
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Role prompting: Demander au modèle d\'« agir comme » un expert spécifique (par exemple un analyste de données ou un chef de produit).',
           'Raisonnement étape par étape: Demander des étapes intermédiaires ou des explications avant la réponse finale.',
-          '[Few-shot prompting](/fr/prompt-engineering/few-shot-prompting): Fournir plusieurs exemples entrée–sortie pour ancrer le comportement.',
+          '[Few-shot prompting](/fr/prompt-engineering/zero-shot-vs-few-shot): Fournir plusieurs exemples entrée–sortie pour ancrer le comportement.',
           'Sortie structurée: Demander des réponses dans des formats définis comme des listes à puces, des tableaux ou du JSON.',
           'Raffinement itératif: Réutiliser la propre sortie du modèle comme entrée pour la révision et l\'amélioration.',
         ],
@@ -684,12 +684,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'Combiner le Guide Google avec d\'autres frameworks',
         content: [
-          '**Vous devriez traiter le Guide Google comme un ensemble de techniques bas-niveau qui fonctionnent ensemble avec des frameworks haut-niveau comme [CO-STAR](/fr/prompt-engineering/co-star-prompting-framework), SPECS, RISEN et TRACE.** Le guide vous dit comment formuler les instructions; les frameworks vous disent comment structurer des workflows entiers.',
+          '**Vous devriez traiter le Guide Google comme un ensemble de techniques bas-niveau qui fonctionnent ensemble avec des frameworks haut-niveau comme [CO-STAR](/fr/prompt-bites/co-star-prompt-framework), SPECS, RISEN et TRACE.** Le guide vous dit comment formuler les instructions; les frameworks vous disent comment structurer des workflows entiers.',
           'Une approche pratique est:',
         ],
         items: [
           'Utilisez un framework (par exemple CO-STAR ou SPECS) pour définir la structure globale de la tâche.',
-          'Appliquez les principes de prompting Google dedans: rôles explicites, contraintes claires, [exemples few-shot](/fr/prompt-engineering/few-shot-prompting) et raisonnement étape par étape si nécessaire.',
+          'Appliquez les principes de prompting Google dedans: rôles explicites, contraintes claires, [exemples few-shot](/fr/prompt-engineering/zero-shot-vs-few-shot) et raisonnement étape par étape si nécessaire.',
           'Exécutez le prompt combiné dans PromptQuorum sur plusieurs modèles pour valider qu\'il se comporte de manière cohérente.',
         ],
         callouts: [
@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Soyez clair et spécifique: évitez les instructions vagues.** Au lieu de « Parle-moi de l\'IA », demandez « Explique comment les grands modèles de langage (LLMs) génèrent du texte, avec un niveau technique pour les étudiants en informatique. » Cela supprime l\'ambiguïté.',
           '**Fournissez des exemples du format de sortie souhaité.** Montrez une exemple de réponse ou un exemple de code que le modèle devrait imiter. Les exemples enseignent mieux que les descriptions. Un seul bon exemple vaut 10 lignes d\'instructions.',
           '**Donnez au modèle un « rôle » à jouer si cela aide.** Exemple: « Tu es un conseiller financier. Explique le tax-loss harvesting à un individu à haut patrimoine net. » Les rôles guident le ton et le niveau de détail. Les rôles sont particulièrement utiles pour les tâches créatives.',
-          '**Utilisez le raisonnement étape par étape pour les tâches complexes.** Demandez au modèle de « penser étape par étape » avant de répondre. Cela force la délibération et attrape les erreurs. Fonctionne sur [Gemini 3.1 Pro](/fr/prompt-engineering/gemini-prompting-guide), GPT-5.5 et Claude Opus 4.8.',
+          '**Utilisez le raisonnement étape par étape pour les tâches complexes.** Demandez au modèle de « penser étape par étape » avant de répondre. Cela force la délibération et attrape les erreurs. Fonctionne sur [Gemini 3.1 Pro](/fr/prompt-engineering/googles-prompting-guide), GPT-5.5 et Claude Opus 4.8.',
           '**Testez votre prompt sur des inputs variés avant de le déployer à l\'échelle.** Un prompt qui fonctionne sur un exemple peut échouer sur edge cases. Validez sur des scénarios divers. Utilisez PromptQuorum pour tester contre plusieurs modèles et types d\'input en parallèle.',
         ],
         callouts: [
@@ -775,11 +775,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures connexes',
         items: [
-          { title: 'Few-Shot Prompting', url: '/fr/prompt-engineering/few-shot-prompting' },
+          { title: 'Few-Shot Prompting', url: '/fr/prompt-engineering/zero-shot-vs-few-shot' },
           { title: 'Chain-of-Thought Prompting', url: '/fr/prompt-engineering/chain-of-thought-prompting' },
           { title: 'Persona Prompting', url: '/fr/prompt-engineering/persona-prompting' },
           { title: 'Constrained Prompting', url: '/fr/prompt-engineering/constrained-prompting' },
-          { title: 'CO-STAR Prompting Framework', url: '/fr/prompt-engineering/co-star-prompting-framework' },
+          { title: 'CO-STAR Prompting Framework', url: '/fr/prompt-bites/co-star-prompt-framework' },
           { title: 'Prompt Chaining', url: '/fr/prompt-engineering/prompt-chaining' },
           { title: 'Comment tester les prompts sur plusieurs modèles', url: '/fr/prompt-engineering/how-to-test-prompts-across-models' },
           { title: 'GPT, Claude ou Gemini ? Comment choisir le bon modèle', url: '/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Guide officiel Google Gemini API pour le prompting (2024–2026)',
-          '[Structured Outputs Gemini API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — Exécution du schéma JSON au niveau de l\'API',
+          '[Structured Outputs Gemini API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — Exécution du schéma JSON au niveau de l\'API',
           '[Google Search Grounding pour Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Fact-checking automatique via intégration Google Search',
           '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — Cours pratiques et guides de prompting',
           'OpenAI & Anthropic API Documentation (2026) — Bonnes pratiques de prompt engineering sur GPT-5.5, Claude Opus 4.8 et modèles open-source',
@@ -868,10 +868,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: { id: 'key-takeaways', isTldr: true, title: '重要ポイント', items: ['**Googleガイドは明確さ、構造、明示的な制約を優先します。**タスク、オーディエンス、出力フォーマット、安全ルールを定めます。', '**5つの中核原則は: 明確さ（正確に求めること）、例（説明より実例）、ロール（専門知識を割り当て）、制約（境界を設定）、構造（タスク分解）です。**', '**これらの原則は全モダンモデル—Gemini 3.1 Pro、GPT-5.5、Claude Opus 4.8、ローカルモデル（Ollama、LM Studio）で機能します。** モデル非依存です。', '**Googleガイドは低レベルの技術フレームワークで、CO-STAR、SPECS、RISEN、TRACEなどの高レベルフレームワークと組み合わせて使う設計です。** その代わりではなく、中に使用してください。', '**Googleガイドの構造化プロンプトは入力トークンの10–20%を追加しますが、エラー率を40–60%削減し、全体コストを低下させます。**', '**PromptQuorumはGoogleガイドを再利用可能フレームワークとして統合。フィールドを一度埋めて、Gemini、GPT-5.5、Claude、ローカルモデルへ並列送信。**', '**Googleガイドをfew-shot例、段階的推論、明示的な出力フォーマットと組み合わせ、モデル動作を最大コントロール。**'] },
       whatIsGoogle: { id: 'what-is-google', title: 'Googleプロンプト作成ガイドとは', content: ['**Googleプロンプト作成ガイドはGeminiと他の大規模言語モデルをpromptするパターンと最良実践の集合です。巧さではなく、明確さ、構造、安全性に焦点を合わせます。** ガイドはGoogle DeepMindの研究を、専門家以外でも従えるルールに翻訳します。ロール定義、コンテキスト提供、出力制約、推論・コーディング・データ抽出などのタスク処理をカバー。', '実務では、ガイドはpromptレシピの検索ツール。各レシピは指示の言い方、避けるべきことを示し、例を追加してモデル動作を予測可能にします。これらパターンはGemini 3.1 Proだけでなく、[GPT-5.5](https://openai.com)、Claude Opus 4.8、[Ollama](https://ollama.com)などのローカルモデルでも有効です。基礎となる考え方が一般的だから。'] },
       corePrinciples: { id: 'core-principles', title: '中核原則', content: ['**Googleガイドの中核原則は明確さ、制約、反復的改善を中心に回ります。巧い言い方ではなく。** 重点は、モデルに評価しやすい方法で求めることにあります。2026年5月時点で、これら原則はGemini 3.1 Pro、GPT-5.5、Claude Opus 4.8、オープンソースモデルで検証済み。', 'よくあるテーマ:'], items: ['タスク、オーディエンス、出力フォーマットについて明示的。モデルに推測させるな。', '可能なら代表的な例を提供。モデルがパターンを真似できるように。', '複雑なタスクをステップに分割し、答える前に推論をもとめる。', '明確な安全・品質の制約を使用—禁止内容、引用要件、長さ制限など。'], callouts: [{ type: 'pro-tip', label: 'Pro Tip', text: 'Googleガイドからの最単一影響力のある技術はfew-shot例です。PromptQuorum測定では、promptへの2–3例追加で、全モデルでフォーマットエラーが50%以上削減。時間が一つの技術だけなら、例に投資してください。' }] },
-      techniques: { id: 'techniques', title: '強調される技術', content: ['**Googleガイドは、研究から要件、製品コピーまで領域に適用できる反復的技術セットを強調します。** 版間でのネーミング・強調の変動があるかもしれないが、基礎的考えは一貫し、モデルファミリーで証明済み。', 'よくある技術:'], items: ['Role prompting: 具体的エキスパート（例：データアナリスト、製品マネージャー）として「振る舞う」をモデルに要求。', 'ステップバイステップ推論: 最終答の前に中間ステップ・説明をリクエスト。', '[Few-shot prompting](/ja/prompt-engineering/few-shot-prompting): 動作を固定するため複数の入力–出力例を提供。', '構造化出力: 定義済みフォーマット（箇条書き、表、JSON）での応答をリクエスト。', '反復的改善: モデル自身の出力を改定・強化用の入力として再利用。'] },
+      techniques: { id: 'techniques', title: '強調される技術', content: ['**Googleガイドは、研究から要件、製品コピーまで領域に適用できる反復的技術セットを強調します。** 版間でのネーミング・強調の変動があるかもしれないが、基礎的考えは一貫し、モデルファミリーで証明済み。', 'よくある技術:'], items: ['Role prompting: 具体的エキスパート（例：データアナリスト、製品マネージャー）として「振る舞う」をモデルに要求。', 'ステップバイステップ推論: 最終答の前に中間ステップ・説明をリクエスト。', '[Few-shot prompting](/ja/prompt-engineering/zero-shot-vs-few-shot): 動作を固定するため複数の入力–出力例を提供。', '構造化出力: 定義済みフォーマット（箇条書き、表、JSON）での応答をリクエスト。', '反復的改善: モデル自身の出力を改定・強化用の入力として再利用。'] },
       badVsGood: { id: 'bad-vs-good', title: '例：悪い vs 良いprompt', content: ['**Googleスタイルpromptingの影響は、同じタスクの非構造化promptと比較すると最もわかりやすい。** 以下は製品説明者の簡単な例。', '**[悪いPrompt]**', '"我々の新しいAI機能をユーザーに説明しろ。"', '**[Googleガイドに従う良いPrompt]**', '"あなたは非技術ユーザー向けに執筆する製品教育者です。タスク: マネージャー向けに週間customer-supportチケットを1ページレポートに自動圧縮する、我々の新しいAI機能を説明。オーディエンス: 時間がない、技術背景が限定のサポートリーダー。要件: 短い文で平易言語を使用。導入、主要利点の3つbullet、短い結論段落で構造化。「革新的」「ゲームチェンジャー」などのhypeワードなし。250-300語で説明保持。Output: 各セクションにH2見出しのMarkdown。"', 'この「良い」版はGoogleの推奨に従い、ロール、オーディエンス、構造、制約、フォーマットを、すべてのモダンモデルが確実に従える方法で定義。'] },
       howPQImplements: { id: 'how-pq-implements', title: 'PromptQuorum実装', content: ['**PromptQuorumはマルチモデルAIディスパッチツールで、Googleプロンプトガイドを再利用可能フレームワークとしてパッケージ化。ユーザーはこれら最良実践を暗記なしに適用できます。** PromptQuorumでGoogleプロンプトガイドフレームワークを選ぶと、アプリはガイドのアイデアを反映したフィールド—タスク、ロール、オーディエンス、構造、制約、例—を露出し、単一の高品質promptに結合。', 'PromptQuorumで以下ができます:'], items: ['ガイド準拠フィールド一度記入し、Gemini 3.1 Pro、GPT-5.5、Claude Opus 4.8、[Ollama](https://ollama.com)またはLM Studioのローカルモデルへ並列送信。', 'Googleスタイルpromptテンプレートを説明者、コードレビュー、構造化サマリーなど再現的ワークフロー用に保存。', '異なるモデルが同じGoogleベース構造でどう応答するか比較し、各タスク最適providerを選択。'] },
-      usingWithOthers: { id: 'using-with-others', title: '他のフレームワークとの組み合わせ', content: ['**GoogleプロンプトガイドをCO-STAR、SPECS、RISEN、TRACEなど高レベルフレームワークとともに機能する低レベル技術セットとして扱う。** ガイドは指示の言い方を教える；フレームワークは全ワークフロー構造を教える。', '実用的な方法:'], items: ['フレームワーク（例：CO-STAR、SPECS）使用で全タスク構造定義。', 'その中でGoogleプロンプト原則を適用: 明示的ロール、明確な制約、[few-shot例](/ja/prompt-engineering/few-shot-prompting)、必要なら段階的推論。', 'PromptQuorumで複合promptを複数モデル実行、一貫動作確認。'], callouts: [{ type: 'did-you-know', label: 'ご存知ですか？', text: 'Googleプロンプトガイドは明示的にクロスモデルテストを推奨。ガイド自身の文書はprompt動作がモデルファミリーで変わることを述べています—ちょうどPromptQuorumがマルチモデルディスパッチで可能にすること。Gemini 3.1 Pro、GPT-5.5、Claude Opus 4.8でGoogleスタイルpromptをテストし、一貫動作確保。' }] },
+      usingWithOthers: { id: 'using-with-others', title: '他のフレームワークとの組み合わせ', content: ['**GoogleプロンプトガイドをCO-STAR、SPECS、RISEN、TRACEなど高レベルフレームワークとともに機能する低レベル技術セットとして扱う。** ガイドは指示の言い方を教える；フレームワークは全ワークフロー構造を教える。', '実用的な方法:'], items: ['フレームワーク（例：CO-STAR、SPECS）使用で全タスク構造定義。', 'その中でGoogleプロンプト原則を適用: 明示的ロール、明確な制約、[few-shot例](/ja/prompt-engineering/zero-shot-vs-few-shot)、必要なら段階的推論。', 'PromptQuorumで複合promptを複数モデル実行、一貫動作確認。'], callouts: [{ type: 'did-you-know', label: 'ご存知ですか？', text: 'Googleプロンプトガイドは明示的にクロスモデルテストを推奨。ガイド自身の文書はprompt動作がモデルファミリーで変わることを述べています—ちょうどPromptQuorumがマルチモデルディスパッチで可能にすること。Gemini 3.1 Pro、GPT-5.5、Claude Opus 4.8でGoogleスタイルpromptをテストし、一貫動作確保。' }] },
       google2026Updates: { id: 'google-2026-updates', title: 'Google 2026プロンプトランドスケープ', content: ['**Googleガイドの中核原則は永遠で有効。ですが2026発展が、実務適用を変えました。** Googleが2024で推奨した多くのpromptレベル技術は、今APIの原生機能に。', '2026主要変化:'], items: ['**Gemini Structured Outputs:** APIが`response_mime_type: \"application/json\"`＋`response_schema`パラメータ受け入れ、JSON構造をAPIレベルで強制。promptで「JSON出力」要求不要—APIが保証。', '**Gemini Grounding with Google Search:** Gemini 3.1 Proは自動的にGoogle Search結果で応答を根拠。これは「反復的改善」guide推奨を一部置き換え—モデルが自身fact-check。', '**Gemini Deep Think:** Gemini 3.1 Pro内蔵reasoning mode（Claude Opus 4.8\'s extended thinking、OpenAI\'s o3 reasoning）が「段階的推論」推奨をモデルレベルで自動化。リクエスト不要；モデルが内部推論。', '**Context Caching:** Long-context prompts（>32K tokens）はGemini・Claudeでコスト削減用にキャッシュ可。few-shotヘビープrompts（千tokens消費）は5–24時間キャッシュ・再利用可。', '**キーポイント:** guideの低レベル原則（明確さ、例、制約、ロール、構造）が以前より重要。ですが2026 API機能（Structured outputs、grounding、caching、deep thinking）と組合せて、信頼性最大化・コスト低減。'] },
       commonMistakes: { id: 'common-mistakes', title: '一般的な間違い', content: '複雑なprompting適用でチームが予測可能な間違いを踏みます。最も一般的—と回避法:',
         mistakes: [
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Googleガイドを完全frameworkと扱う。', problem: '複雑workflow（multi-turn相互作用、conditional logic、sequential tasks）ではGuideアイデアだけ不足。より高レベルCO-STAR・SPECSのような構造が必要。', fix: 'Googleガイドを広いframeworkの中の戦術として使用。タスクがシンプル（one-shot request明確出力）ならGuide原則充分。複雑（multi-step reasoning decision branches）ならCO-STAR、SPECS、RISENと組合わせ。' }
         ]
       },
-      howToStart: { id: 'how-to-start', title: '始め方', numberedItems: ['**明確・具体的に：曖昧な指示を避け。** 「AIについて話せ」の代わり「Large Language Models（LLMs）がテキスト生成する方法を、computer science学生向け技術詳細で説明」とリクエスト。曖昧さ除去。', '**出力フォーマットの例提供。** モデルが真似すべきサンプル応答またはコード例を示す。例は説明より優秀。良く選ばれた例は10命令行に値する。', '**タスク助けになるなら、モデルに「ロール」給付。** 例：「あなたはfinancial advisor。high-net-worth個人へtax-loss harvestingを説明」。ロールがトーン・detail-levelを導く。ロールはcreative taskで特に有用。', '**複雑タスク向けstep-by-step推論使用。** モデルに応答前に「step by step think」をリクエスト。強制思考・エラー発見。[Gemini 3.1 Pro](/ja/prompt-engineering/gemini-prompting-guide)、GPT-5.5、Claude Opus 4.8機能。', '**scale deploy前にvariedで inputテスト実施。** one exampleで効く promptが edge cases失敗可能。diverse シナリオで検証。PromptQuorumでmultiple modelsおよびinput-types parallel同時test。'], callouts: [{ type: 'warning', label: '警告: Token Cost', text: 'Few-shot例と詳細roleの指示はtoken追加。5 × 200-word例 = ~1,500 token beforeタスク到着。Geminiで$2/1M input tokenこれfractionof cent costing。Claude Opus 4.8で$5/1M volumeで加算。Gemini\'s context cachedをfew-shot-heavyへ promptへ活用、コスト削減。' }] },
+      howToStart: { id: 'how-to-start', title: '始め方', numberedItems: ['**明確・具体的に：曖昧な指示を避け。** 「AIについて話せ」の代わり「Large Language Models（LLMs）がテキスト生成する方法を、computer science学生向け技術詳細で説明」とリクエスト。曖昧さ除去。', '**出力フォーマットの例提供。** モデルが真似すべきサンプル応答またはコード例を示す。例は説明より優秀。良く選ばれた例は10命令行に値する。', '**タスク助けになるなら、モデルに「ロール」給付。** 例：「あなたはfinancial advisor。high-net-worth個人へtax-loss harvestingを説明」。ロールがトーン・detail-levelを導く。ロールはcreative taskで特に有用。', '**複雑タスク向けstep-by-step推論使用。** モデルに応答前に「step by step think」をリクエスト。強制思考・エラー発見。[Gemini 3.1 Pro](/ja/prompt-engineering/googles-prompting-guide)、GPT-5.5、Claude Opus 4.8機能。', '**scale deploy前にvariedで inputテスト実施。** one exampleで効く promptが edge cases失敗可能。diverse シナリオで検証。PromptQuorumでmultiple modelsおよびinput-types parallel同時test。'], callouts: [{ type: 'warning', label: '警告: Token Cost', text: 'Few-shot例と詳細roleの指示はtoken追加。5 × 200-word例 = ~1,500 token beforeタスク到着。Geminiで$2/1M input tokenこれfractionof cent costing。Claude Opus 4.8で$5/1M volumeで加算。Gemini\'s context cachedをfew-shot-heavyへ promptへ活用、コスト削減。' }] },
       faqSection: { id: 'faq', title: 'よくある質問', faqs: [
         { q: 'Googleガイドはgemini限定か？', a: '不可。原則は普遍。GPT-5.5、Claude Opus 4.8、全モダンモデルで機能同等。Geminiが主例ですが、根本アイデアはmodel-agnostic。' },
         { q: 'Googleガイドを他フレームワークと結合できるか？', a: 'はい、推奨。高レベルフレームワーク（CO-STAR、SPECS）で全体構造定義、その中でGoogleプロンプト原則（clarity、constraints、examples、roles）適用。' },
@@ -894,11 +894,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { q: 'Googleガイドのtoken costing何か？', a: 'Googleガイドに従う構造化prompts一般的10–20%入力token追加（more explicit detail、examples、constraints）しますがエラー率40–60%削減、再試行減少、全体cost低減。' }
       ] },
       relatedReading: { id: 'related-reading', title: '関連リーディング', items: [
-        { title: 'Few-Shot Prompting', url: '/ja/prompt-engineering/few-shot-prompting' },
+        { title: 'Few-Shot Prompting', url: '/ja/prompt-engineering/zero-shot-vs-few-shot' },
         { title: 'Chain-of-Thought Prompting', url: '/ja/prompt-engineering/chain-of-thought-prompting' },
         { title: 'Persona Prompting', url: '/ja/prompt-engineering/persona-prompting' },
         { title: 'Constrained Prompting', url: '/ja/prompt-engineering/constrained-prompting' },
-        { title: 'CO-STAR Prompting Framework', url: '/ja/prompt-engineering/co-star-prompting-framework' },
+        { title: 'CO-STAR Prompting Framework', url: '/ja/prompt-bites/co-star-prompt-framework' },
         { title: 'Prompt Chaining', url: '/ja/prompt-engineering/prompt-chaining' },
         { title: 'Models横断Promptsテスト方法', url: '/ja/prompt-engineering/how-to-test-prompts-across-models' },
         { title: 'GPT、Claude、Gemini：正しいモデル選択', url: '/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ] },
       sources: { id: 'sources', title: 'ソース', items: [
         '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Official Google Gemini API prompting guide（2024–2026）',
-        '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — JSON schemaをAPI levelで強制',
+        '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — JSON schemaをAPI levelで強制',
         '[Google Search Grounding for Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Automatic fact-checking via Google Search integration',
         '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — 実践prompt courses とguides',
         'OpenAI & Anthropic API Documentation（2026） — Prompt engineering best practicesアクロスGPT-5.5、Claude Opus 4.8、open-sourceモデル',
@@ -989,7 +989,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ] },
       howPqImplements: { id: 'how-pq-implements', title: 'PromptQuorum如何实现它', content: 'PromptQuorum将Google指南集成为一个内置框架。创建提示词时，用户可选择"Google"模板，工具会：1) 提示输入清晰任务定义、受众和约束；2) 从库生成例子；3) 应用格式规则；4) 跨Gemini 3.1 Pro、GPT-5.5和Claude Opus 4.8测试输出。这使Google原则可操作化，不需要用户手动构造提示词。' },
       usingWithOthers: { id: 'using-with-others', title: '与其他框架组合', content: '尽管Google指南很全面，它们最强大的用法是与高层框架组合：\n\n• **CO-STAR + Google:** CO-STAR（Context、Objective、Style、Tone、Action、Result）定义整体结构；Google的明确性和例子原则完善每个步骤。\n• **SPECS + Google:** SPECS（Setting、Person、Expectation、Context、Sample、Style）与Google的约束和角色概念配合。\n• **RISE + Google:** RISE（Role、Input、Steps、Examples）直接对应Google的角色、结构、例子。\n\n高层框架给出骨架；Google指南在肉体里加肌肉。' },
-      google2026: { id: 'google-2026-updates', title: 'Google 2026年提示词概览', content: '从2024–2026，Google对指南做了几项更新反映现代LLM能力。\n\n**结构化输出API：** Gemini现在可以返回JSON或其他模式化格式——不仅作为约定，而是作为API层强制的schema。这意味着你可以保证输出会精确符合定义的结构，零解析错误。\n\n**接地（Grounding）：** Gemini可以对Google Search结果进行实时接地，减少幻觉。指南现在包括何时让模型查找事实与何时使用参数化知识的建议。\n\n**Deep Think（深度思考）：** Gemini的最新推理模式将Google的推理原则扩展为更长的思考链。提示词可以要求"深度思考"以处理极其复杂的问题。\n\n**上下文缓存：** 如果你有数千token的few-shot例子，Gemini可以缓存它们，减少成本和延迟。Google指南适配了这一点。', callouts: [{ type: 'info', label: '了解更多', text: '有关2026年Gemini功能的深入指南，请见[Gemini API文档](https://ai.google.dev/gemini-api)和[PromptQuorum Gemini指南](/zh/prompt-engineering/gemini-prompting-guide)。' }] },
+      google2026: { id: 'google-2026-updates', title: 'Google 2026年提示词概览', content: '从2024–2026，Google对指南做了几项更新反映现代LLM能力。\n\n**结构化输出API：** Gemini现在可以返回JSON或其他模式化格式——不仅作为约定，而是作为API层强制的schema。这意味着你可以保证输出会精确符合定义的结构，零解析错误。\n\n**接地（Grounding）：** Gemini可以对Google Search结果进行实时接地，减少幻觉。指南现在包括何时让模型查找事实与何时使用参数化知识的建议。\n\n**Deep Think（深度思考）：** Gemini的最新推理模式将Google的推理原则扩展为更长的思考链。提示词可以要求"深度思考"以处理极其复杂的问题。\n\n**上下文缓存：** 如果你有数千token的few-shot例子，Gemini可以缓存它们，减少成本和延迟。Google指南适配了这一点。', callouts: [{ type: 'info', label: '了解更多', text: '有关2026年Gemini功能的深入指南，请见[Gemini API文档](https://ai.google.dev/gemini-api)和[PromptQuorum Gemini指南](/zh/prompt-engineering/googles-prompting-guide)。' }] },
       commonMistakes: { id: 'common-mistakes', title: '常见错误', content: 'Google指南确认并修正几个广泛的提示词错误。', mistakes: [
         { mistake: '提示词过于宽泛或模糊', problem: '"告诉我关于机器学习"留给模型太大的自由度。响应可能太泛或太技术。', fix: '明确定义受众、深度和格式。例："为高中学生解释机器学习，避免数学，用日常例子，250词。"' },
         { mistake: '期望模型理解隐含背景', problem: '提示词假设背景知识（"分析这个财务报表"）但没有上下文。模型可能编造数字。', fix: '提供背景：完整的财务报表或URL，明确指出哪些数字很关键。' },
@@ -1008,11 +1008,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { q: 'Google指南的token成本如何？', a: '按Google指南写的提示词通常增加10～20%的输入token，但错误率减少40～60%，导致重试减少、总体成本降低。' },
       ] },
       relatedReading: { id: 'related-reading', title: '关联阅读', items: [
-        { title: 'Few-Shot Prompting', url: '/zh/prompt-engineering/few-shot-prompting' },
+        { title: 'Few-Shot Prompting', url: '/zh/prompt-engineering/zero-shot-vs-few-shot' },
         { title: 'Chain-of-Thought Prompting', url: '/zh/prompt-engineering/chain-of-thought-prompting' },
         { title: 'Persona Prompting', url: '/zh/prompt-engineering/persona-prompting' },
         { title: 'Constrained Prompting', url: '/zh/prompt-engineering/constrained-prompting' },
-        { title: 'CO-STAR Prompting Framework', url: '/zh/prompt-engineering/co-star-prompting-framework' },
+        { title: 'CO-STAR Prompting Framework', url: '/zh/prompt-bites/co-star-prompt-framework' },
         { title: 'Prompt Chaining', url: '/zh/prompt-engineering/prompt-chaining' },
         { title: '如何跨模型测试提示词', url: '/zh/prompt-engineering/how-to-test-prompts-across-models' },
         { title: '选择模型：GPT、Claude还是Gemini？', url: '/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ] },
       sources: { id: 'sources', title: '来源', items: [
         '[Google Gemini API：提示词策略](https://ai.google.dev/gemini-api/docs/prompting-strategies) — 官方Google Gemini API提示词指南（2024–2026）',
-        '[Gemini 结构化输出API参考](https://ai.google.dev/gemini-api/docs/structured-output) — 在API级别强制JSON schema',
+        '[Gemini 结构化输出API参考](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — 在API级别强制JSON schema',
         '[Google Search为Gemini接地](https://ai.google.dev/gemini-api/docs/grounding) — 通过Google搜索集成自动事实检查',
         '[Google Cloud生成式AI课程](https://www.cloudskillsboost.google/) — 实践提示词课程和指南',
         'OpenAI & Anthropic API文档（2026） — GPT-5.5、Claude Opus 4.8、开源模型的提示词工程最佳实践',
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Prompting de rol: pedir al modelo que "actúe como" un experto específico (por ejemplo, un analista de datos o un gerente de producto).',
           'Razonamiento paso a paso: solicitar pasos intermedios o explicaciones antes de la respuesta final.',
-          '[Prompting few-shot](/es/prompt-engineering/few-shot-prompting): proporcionar varios ejemplos de entrada–salida para anclar el comportamiento.',
+          '[Prompting few-shot](/es/prompt-engineering/zero-shot-vs-few-shot): proporcionar varios ejemplos de entrada–salida para anclar el comportamiento.',
           'Salida estructurada: pedir respuestas en formatos definidos como listas de viñetas, tablas o JSON.',
           'Refinamiento iterativo: reutilizar la propia salida del modelo como entrada para su revisión y mejora.',
         ],
@@ -1182,12 +1182,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'Uso de la Guía de Google con otros frameworks',
         content: [
-          '**Debes tratar la Guía de Prompts de Google como un conjunto de técnicas de bajo nivel que funcionan junto con frameworks de alto nivel como [CO-STAR](/es/prompt-engineering/co-star-prompting-framework), SPECS, RISEN y TRACE.** La guía te dice cómo formular las instrucciones; los frameworks te dicen cómo estructurar flujos de trabajo completos.',
+          '**Debes tratar la Guía de Prompts de Google como un conjunto de técnicas de bajo nivel que funcionan junto con frameworks de alto nivel como [CO-STAR](/es/prompt-bites/co-star-prompt-framework), SPECS, RISEN y TRACE.** La guía te dice cómo formular las instrucciones; los frameworks te dicen cómo estructurar flujos de trabajo completos.',
           'Un enfoque práctico es:',
         ],
         items: [
           'Usa un framework (por ejemplo, CO-STAR o SPECS) para definir la estructura general de la tarea.',
-          'Aplica los principios de prompting de Google dentro de esa estructura: roles explícitos, restricciones claras, [ejemplos few-shot](/es/prompt-engineering/few-shot-prompting) y razonamiento paso a paso cuando sea necesario.',
+          'Aplica los principios de prompting de Google dentro de esa estructura: roles explícitos, restricciones claras, [ejemplos few-shot](/es/prompt-engineering/zero-shot-vs-few-shot) y razonamiento paso a paso cuando sea necesario.',
           'Ejecuta el prompt combinado en PromptQuorum en múltiples modelos para validar que se comporta de manera consistente.',
         ],
         callouts: [
@@ -1233,7 +1233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Sé claro y específico: evita las instrucciones vagas.** En lugar de "Cuéntame sobre la IA", pregunta "Explica cómo los modelos de lenguaje de gran escala (LLMs) generan texto, con detalles técnicos adecuados para estudiantes de informática." Esto elimina la ambigüedad.',
           '**Proporciona ejemplos del formato de salida deseado.** Muestra una respuesta de ejemplo o un fragmento de código que el modelo deba emular. Los ejemplos enseñan mejor que las descripciones. Un ejemplo bien elegido vale más que 10 líneas de instrucción.',
           '**Dale al modelo un "rol" que interpretar si ayuda.** Ejemplo: "Eres un asesor financiero. Explica la recolección de pérdidas fiscales a una persona con alto patrimonio." Los roles guían el tono y el nivel de detalle, y son especialmente útiles para tareas creativas.',
-          '**Usa el razonamiento paso a paso para tareas complejas.** Pide al modelo que "piense paso a paso" antes de responder. Esto obliga a la deliberación y detecta errores. Funciona en [Gemini 3.1 Pro](/es/prompt-engineering/gemini-prompting-guide), GPT-5.5 y Claude Opus 4.8.',
+          '**Usa el razonamiento paso a paso para tareas complejas.** Pide al modelo que "piense paso a paso" antes de responder. Esto obliga a la deliberación y detecta errores. Funciona en [Gemini 3.1 Pro](/es/prompt-engineering/googles-prompting-guide), GPT-5.5 y Claude Opus 4.8.',
           '**Prueba tu prompt con entradas variadas antes de implementarlo a escala.** Un prompt que funciona en un ejemplo puede fallar en casos límite. Valida en escenarios diversos. Usa PromptQuorum para probar en múltiples modelos y tipos de entrada en paralelo.',
         ],
         callouts: [
@@ -1258,11 +1258,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          { title: 'Few-Shot Prompting', url: '/es/prompt-engineering/few-shot-prompting' },
+          { title: 'Few-Shot Prompting', url: '/es/prompt-engineering/zero-shot-vs-few-shot' },
           { title: 'Chain-of-Thought Prompting', url: '/es/prompt-engineering/chain-of-thought-prompting' },
           { title: 'Persona Prompting', url: '/es/prompt-engineering/persona-prompting' },
           { title: 'Constrained Prompting', url: '/es/prompt-engineering/constrained-prompting' },
-          { title: 'CO-STAR Prompting Framework', url: '/es/prompt-engineering/co-star-prompting-framework' },
+          { title: 'CO-STAR Prompting Framework', url: '/es/prompt-bites/co-star-prompt-framework' },
           { title: 'Prompt Chaining', url: '/es/prompt-engineering/prompt-chaining' },
           { title: 'Cómo probar prompts en múltiples modelos', url: '/es/prompt-engineering/how-to-test-prompts-across-models' },
           { title: '¿GPT, Claude o Gemini? Cómo elegir el modelo correcto', url: '/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fuentes',
         items: [
           '[Google Gemini API: Estrategias de prompting](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Guía oficial de prompting de la API de Google Gemini (2024–2026)',
-          '[Referencia de la API de Salidas Estructuradas de Gemini](https://ai.google.dev/gemini-api/docs/structured-output) — Aplicación de esquemas JSON a nivel de API',
+          '[Referencia de la API de Salidas Estructuradas de Gemini](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — Aplicación de esquemas JSON a nivel de API',
           '[Google Search Grounding para Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Verificación automática de hechos mediante integración con Google Search',
           '[IA Generativa para Todos - Google Cloud](https://www.cloudskillsboost.google/) — Cursos prácticos de prompting y guías',
           'Documentación de la API de OpenAI y Anthropic (2026) — Mejores prácticas de ingeniería de prompts para GPT-5.5, Claude Opus 4.8 y modelos de código abierto',
@@ -1415,7 +1415,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'Prompting de papel: pedir ao modelo que "aja como" um especialista específico (por exemplo, um analista de dados ou gerente de produto).',
           'Raciocínio passo a passo: solicitar etapas intermediárias ou explicações antes da resposta final.',
-          '[Few-shot prompting](/pt/prompt-engineering/few-shot-prompting): fornecer vários exemplos de entrada–saída para ancorar o comportamento.',
+          '[Few-shot prompting](/pt/prompt-engineering/zero-shot-vs-few-shot): fornecer vários exemplos de entrada–saída para ancorar o comportamento.',
           'Saída estruturada: pedir respostas em formatos definidos como listas de marcadores, tabelas ou JSON.',
           'Refinamento iterativo: reutilizar a própria saída do modelo como entrada para revisão e melhoria.',
         ],
@@ -1449,12 +1449,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'Uso do Guia do Google com outros frameworks',
         content: [
-          '**Você deve tratar o Guia de Prompts do Google como um conjunto de técnicas de baixo nível que funcionam junto com frameworks de alto nível como [CO-STAR](/pt/prompt-engineering/co-star-prompting-framework), SPECS, RISEN e TRACE.** O guia diz como formular as instruções; os frameworks dizem como estruturar fluxos de trabalho completos.',
+          '**Você deve tratar o Guia de Prompts do Google como um conjunto de técnicas de baixo nível que funcionam junto com frameworks de alto nível como [CO-STAR](/pt/prompt-bites/co-star-prompt-framework), SPECS, RISEN e TRACE.** O guia diz como formular as instruções; os frameworks dizem como estruturar fluxos de trabalho completos.',
           'Uma abordagem prática é:',
         ],
         items: [
           'Use um framework (por exemplo, CO-STAR ou SPECS) para definir a estrutura geral da tarefa.',
-          'Aplique os princípios de prompting do Google dentro dessa estrutura: papéis explícitos, restrições claras, [exemplos few-shot](/pt/prompt-engineering/few-shot-prompting) e raciocínio passo a passo quando necessário.',
+          'Aplique os princípios de prompting do Google dentro dessa estrutura: papéis explícitos, restrições claras, [exemplos few-shot](/pt/prompt-engineering/zero-shot-vs-few-shot) e raciocínio passo a passo quando necessário.',
           'Execute o prompt combinado no PromptQuorum em vários modelos para validar que ele se comporta de forma consistente.',
         ],
         callouts: [
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Seja claro e específico: evite instruções vagas.** Em vez de "Fale sobre IA", pergunte "Explique como os modelos de linguagem de grande escala (LLMs) geram texto, com detalhes técnicos adequados para estudantes de ciência da computação." Isso elimina a ambiguidade.',
           '**Forneça exemplos do formato de saída desejado.** Mostre uma resposta de exemplo ou trecho de código que o modelo deve emular. Exemplos ensinam melhor do que descrições. Um exemplo bem escolhido vale mais do que 10 linhas de instrução.',
           '**Dê ao modelo um "papel" para desempenhar, se ajudar.** Exemplo: "Você é um consultor financeiro. Explique tax-loss harvesting para um indivíduo de alto patrimônio." Papéis orientam o tom e o nível de detalhe. São especialmente úteis para tarefas criativas.',
-          '**Use raciocínio passo a passo para tarefas complexas.** Peça ao modelo para "pensar passo a passo" antes de responder. Isso força a deliberação e detecta erros. Funciona no [Gemini 3.1 Pro](/pt/prompt-engineering/gemini-prompting-guide), GPT-5.5 e Claude Opus 4.8.',
+          '**Use raciocínio passo a passo para tarefas complexas.** Peça ao modelo para "pensar passo a passo" antes de responder. Isso força a deliberação e detecta erros. Funciona no [Gemini 3.1 Pro](/pt/prompt-engineering/googles-prompting-guide), GPT-5.5 e Claude Opus 4.8.',
           '**Teste seu prompt com entradas variadas antes de implantar em escala.** Um prompt que funciona em um exemplo pode falhar em casos extremos. Valide em cenários diversos. Use o PromptQuorum para testar em vários modelos e tipos de entrada em paralelo.',
         ],
         callouts: [
@@ -1525,11 +1525,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          { title: 'Few-Shot Prompting', url: '/pt/prompt-engineering/few-shot-prompting' },
+          { title: 'Few-Shot Prompting', url: '/pt/prompt-engineering/zero-shot-vs-few-shot' },
           { title: 'Chain-of-Thought Prompting', url: '/pt/prompt-engineering/chain-of-thought-prompting' },
           { title: 'Persona Prompting', url: '/pt/prompt-engineering/persona-prompting' },
           { title: 'Constrained Prompting', url: '/pt/prompt-engineering/constrained-prompting' },
-          { title: 'CO-STAR Prompting Framework', url: '/pt/prompt-engineering/co-star-prompting-framework' },
+          { title: 'CO-STAR Prompting Framework', url: '/pt/prompt-bites/co-star-prompt-framework' },
           { title: 'Prompt Chaining', url: '/pt/prompt-engineering/prompt-chaining' },
           { title: 'Como testar prompts em vários modelos', url: '/pt/prompt-engineering/how-to-test-prompts-across-models' },
           { title: 'GPT, Claude ou Gemini? Como escolher o modelo certo', url: '/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fontes',
         items: [
           '[Google Gemini API: Estratégias de prompting](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Guia oficial de prompting da API do Google Gemini (2024–2026)',
-          '[Referência da API de Saídas Estruturadas do Gemini](https://ai.google.dev/gemini-api/docs/structured-output) — Imposição de esquema JSON a nível de API',
+          '[Referência da API de Saídas Estruturadas do Gemini](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — Imposição de esquema JSON a nível de API',
           '[Google Search Grounding para Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Verificação automática de fatos via integração com Google Search',
           '[IA Generativa para Todos - Google Cloud](https://www.cloudskillsboost.google/) — Cursos práticos de prompting e guias',
           'Documentação da API da OpenAI e da Anthropic (2026) — Melhores práticas de engenharia de prompts para GPT-5.5, Claude Opus 4.8 e modelos de código aberto',
@@ -1685,7 +1685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'مطالبة الدور: طلب من النموذج "التصرف بوصفه" خبيراً محدداً (مثل محلل بيانات أو مدير منتج).',
           'التفكير خطوة بخطوة: طلب خطوات وسيطة أو تفسيرات قبل الإجابة النهائية.',
-          '[مطالبة few-shot](/ar/prompt-engineering/few-shot-prompting): تقديم أمثلة متعددة من المدخلات والمخرجات لتثبيت السلوك.',
+          '[مطالبة few-shot](/ar/prompt-engineering/zero-shot-vs-few-shot): تقديم أمثلة متعددة من المدخلات والمخرجات لتثبيت السلوك.',
           'المخرجات المنظمة: طلب ردود بتنسيقات محددة كقوائم نقطية أو جداول أو JSON.',
           'الصقل التكراري: إعادة استخدام مخرجات النموذج ذاتها كمدخلات للمراجعة والتحسين.',
         ],
@@ -1719,12 +1719,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'استخدام دليل Google مع أطر العمل الأخرى',
         content: [
-          '**ينبغي لك التعامل مع دليل Google للمطالبات بوصفه مجموعة تقنيات منخفضة المستوى تعمل جنباً إلى جنب مع أطر العمل عالية المستوى مثل [CO-STAR](/ar/prompt-engineering/co-star-prompting-framework) وSPECS وRISEN وTRACE.** يُخبرك الدليل بكيفية صياغة التعليمات؛ أما أطر العمل فتُخبرك ببنية سير العمل الكاملة.',
+          '**ينبغي لك التعامل مع دليل Google للمطالبات بوصفه مجموعة تقنيات منخفضة المستوى تعمل جنباً إلى جنب مع أطر العمل عالية المستوى مثل [CO-STAR](/ar/prompt-bites/co-star-prompt-framework) وSPECS وRISEN وTRACE.** يُخبرك الدليل بكيفية صياغة التعليمات؛ أما أطر العمل فتُخبرك ببنية سير العمل الكاملة.',
           'نهج عملي:',
         ],
         items: [
           'استخدم إطار عمل (مثل CO-STAR أو SPECS) لتحديد البنية العامة للمهمة.',
-          'طبِّق مبادئ مطالبة Google داخل تلك البنية: أدوار صريحة، وقيود واضحة، و[أمثلة few-shot](/ar/prompt-engineering/few-shot-prompting)، وتفكير خطوة بخطوة عند الاقتضاء.',
+          'طبِّق مبادئ مطالبة Google داخل تلك البنية: أدوار صريحة، وقيود واضحة، و[أمثلة few-shot](/ar/prompt-engineering/zero-shot-vs-few-shot)، وتفكير خطوة بخطوة عند الاقتضاء.',
           'شغِّل المطالبة المدمجة في PromptQuorum على نماذج متعددة للتحقق من أنها تتصرف باتساق.',
         ],
         callouts: [
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**كُن واضحاً ومحدداً: تجنب التعليمات الغامضة.** بدلاً من "أخبرني عن الذكاء الاصطناعي"، اسأل "اشرح كيف تُولّد نماذج اللغة الكبيرة (LLMs) النص، بتفاصيل تقنية مناسبة لطلاب علوم الحاسوب." هذا يُزيل الغموض.',
           '**قدِّم أمثلة على تنسيق المخرجات المطلوب.** اعرض رداً نموذجياً أو مقتطف كود يجب أن يحاكيه النموذج. الأمثلة تُعلِّم أفضل من الأوصاف. مثال واحد مختار جيداً يساوي 10 أسطر من التعليمات.',
           '**امنح النموذج "دوراً" يؤديه إذا أسهم في ذلك.** مثال: "أنت مستشار مالي. اشرح جني الخسائر الضريبية لشخص ذي ثروة كبيرة." توجِّه الأدوارُ الأسلوبَ ومستوى التفصيل، وهي مفيدة بشكل خاص للمهام الإبداعية.',
-          '**استخدم التفكير خطوة بخطوة للمهام المعقدة.** اطلب من النموذج "التفكير خطوة بخطوة" قبل الإجابة. هذا يُجبر على التأمل ويكشف الأخطاء. يعمل مع [Gemini 3.1 Pro](/ar/prompt-engineering/gemini-prompting-guide) وGPT-5.5 وClaude Opus 4.8.',
+          '**استخدم التفكير خطوة بخطوة للمهام المعقدة.** اطلب من النموذج "التفكير خطوة بخطوة" قبل الإجابة. هذا يُجبر على التأمل ويكشف الأخطاء. يعمل مع [Gemini 3.1 Pro](/ar/prompt-engineering/googles-prompting-guide) وGPT-5.5 وClaude Opus 4.8.',
           '**اختبر مطالبتك بمدخلات متنوعة قبل نشرها على نطاق واسع.** قد تفشل مطالبة تعمل على مثال واحد في الحالات الحدية. تحقق من صحتها في سيناريوهات متنوعة. استخدم PromptQuorum للاختبار على نماذج وأنواع مدخلات متعددة بالتوازي.',
         ],
         callouts: [
@@ -1795,11 +1795,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          { title: 'Few-Shot Prompting', url: '/ar/prompt-engineering/few-shot-prompting' },
+          { title: 'Few-Shot Prompting', url: '/ar/prompt-engineering/zero-shot-vs-few-shot' },
           { title: 'Chain-of-Thought Prompting', url: '/ar/prompt-engineering/chain-of-thought-prompting' },
           { title: 'Persona Prompting', url: '/ar/prompt-engineering/persona-prompting' },
           { title: 'Constrained Prompting', url: '/ar/prompt-engineering/constrained-prompting' },
-          { title: 'CO-STAR Prompting Framework', url: '/ar/prompt-engineering/co-star-prompting-framework' },
+          { title: 'CO-STAR Prompting Framework', url: '/ar/prompt-bites/co-star-prompt-framework' },
           { title: 'Prompt Chaining', url: '/ar/prompt-engineering/prompt-chaining' },
           { title: 'كيفية اختبار المطالبات عبر نماذج متعددة', url: '/ar/prompt-engineering/how-to-test-prompts-across-models' },
           { title: 'GPT أم Claude أم Gemini؟ كيف تختار النموذج الصحيح', url: '/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -1826,7 +1826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'المصادر',
         items: [
           '[Google Gemini API: استراتيجيات المطالبة](https://ai.google.dev/gemini-api/docs/prompting-strategies) — الدليل الرسمي للمطالبة من API Gemini الخاصة بـ Google (2024–2026)',
-          '[مرجع API المخرجات المنظمة من Gemini](https://ai.google.dev/gemini-api/docs/structured-output) — تطبيق مخطط JSON على مستوى الـ API',
+          '[مرجع API المخرجات المنظمة من Gemini](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — تطبيق مخطط JSON على مستوى الـ API',
           '[Google Search Grounding لـ Gemini](https://ai.google.dev/gemini-api/docs/grounding) — التحقق التلقائي من الحقائق عبر تكامل Google Search',
           '[الذكاء الاصطناعي التوليدي للجميع - Google Cloud](https://www.cloudskillsboost.google/) — دورات مطالبة عملية وأدلة',
           'وثائق OpenAI وAnthropic API (2026) — أفضل ممارسات هندسة المطالبات لـ GPT-5.5 وClaude Opus 4.8 والنماذج مفتوحة المصدر',
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '역할 프롬프팅: 모델에게 특정 전문가(예: 데이터 분석가 또는 제품 매니저)로 "행동하도록" 요청합니다.',
           '단계별 추론: 최종 답변 전에 중간 단계나 설명을 요청합니다.',
-          '[퓨샷 프롬프팅](/prompt-engineering/few-shot-prompting): 동작을 고정하기 위해 여러 입력-출력 예시를 제공합니다.',
+          '[퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot): 동작을 고정하기 위해 여러 입력-출력 예시를 제공합니다.',
           '구조화된 출력: 글머리 목록, 표, JSON 등 정해진 형식으로 답변을 요청합니다.',
           '반복적 개선: 모델 자체 출력을 수정 및 개선을 위한 입력으로 재사용합니다.',
         ],
@@ -1989,12 +1989,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'Google 가이드를 다른 프레임워크와 함께 사용하기',
         content: [
-          '**Google 프롬프팅 가이드는 [CO-STAR](/prompt-engineering/co-star-prompting-framework), SPECS, RISEN, TRACE 같은 고수준 프레임워크와 함께 작동하는 저수준 기법 모음으로 취급해야 합니다.** 이 가이드는 지침을 어떻게 표현할지를 알려 주고, 프레임워크는 전체 워크플로를 어떻게 구성할지를 알려 줍니다.',
+          '**Google 프롬프팅 가이드는 [CO-STAR](/prompt-bites/co-star-prompt-framework), SPECS, RISEN, TRACE 같은 고수준 프레임워크와 함께 작동하는 저수준 기법 모음으로 취급해야 합니다.** 이 가이드는 지침을 어떻게 표현할지를 알려 주고, 프레임워크는 전체 워크플로를 어떻게 구성할지를 알려 줍니다.',
           '실용적인 접근 방법은 다음과 같습니다:',
         ],
         items: [
           'CO-STAR 또는 SPECS 같은 프레임워크를 사용하여 태스크의 전체 구조를 정의하십시오.',
-          '그 구조 안에서 Google 프롬프팅 원칙을 적용하십시오: 명시적 역할, 명확한 제약, [퓨샷 예시](/prompt-engineering/few-shot-prompting), 필요 시 단계별 추론.',
+          '그 구조 안에서 Google 프롬프팅 원칙을 적용하십시오: 명시적 역할, 명확한 제약, [퓨샷 예시](/prompt-engineering/zero-shot-vs-few-shot), 필요 시 단계별 추론.',
           'PromptQuorum에서 결합된 프롬프트를 여러 모델로 실행하여 일관되게 동작하는지 검증하십시오.',
         ],
         callouts: [
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**명확하고 구체적으로 작성하십시오: 모호한 지침을 피하십시오.** "AI에 대해 알려 주십시오" 대신 "컴퓨터 과학 학생에게 적합한 기술적 수준으로 대규모 언어 모델(LLM)이 어떻게 텍스트를 생성하는지 설명하십시오"라고 요청하십시오. 이렇게 하면 모호함이 제거됩니다.',
           '**원하는 출력 형식의 예시를 제공하십시오.** 모델이 모방해야 할 샘플 답변이나 코드 예시를 보여 주십시오. 예시는 설명보다 더 잘 가르칩니다. 잘 선택된 예시 하나는 10줄의 지침보다 가치 있습니다.',
           '**도움이 된다면 모델에게 "역할"을 부여하십시오.** 예: "당신은 재무 어드바이저입니다. 고액 자산가에게 세금 손실 수확을 설명하십시오." 역할은 어조와 세부 수준을 안내합니다. 역할은 창의적 태스크에 특히 유용합니다.',
-          '**복잡한 태스크에는 단계별 추론을 사용하십시오.** 모델에게 답변하기 전에 "단계별로 생각"하도록 요청하십시오. 이렇게 하면 신중한 검토가 이루어지고 오류를 포착합니다. [Gemini 3.1 Pro](/prompt-engineering/gemini-prompting-guide), GPT-5.5, Claude Opus 4.8에서 모두 작동합니다.',
+          '**복잡한 태스크에는 단계별 추론을 사용하십시오.** 모델에게 답변하기 전에 "단계별로 생각"하도록 요청하십시오. 이렇게 하면 신중한 검토가 이루어지고 오류를 포착합니다. [Gemini 3.1 Pro](/prompt-engineering/googles-prompting-guide), GPT-5.5, Claude Opus 4.8에서 모두 작동합니다.',
           '**대규모 배포 전에 다양한 입력으로 프롬프트를 테스트하십시오.** 한 예시에서 작동하는 프롬프트가 엣지 케이스에서 실패할 수 있습니다. 다양한 시나리오에서 검증하십시오. PromptQuorum을 사용하여 여러 모델과 입력 유형에 동시에 테스트하십시오.',
         ],
         callouts: [
@@ -2065,11 +2065,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          { title: '퓨샷 프롬프팅', url: '/prompt-engineering/few-shot-prompting' },
+          { title: '퓨샷 프롬프팅', url: '/prompt-engineering/zero-shot-vs-few-shot' },
           { title: '연쇄적 사고 프롬프팅', url: '/prompt-engineering/chain-of-thought-prompting' },
           { title: '페르소나 프롬프팅', url: '/prompt-engineering/persona-prompting' },
           { title: '제약적 프롬프팅', url: '/prompt-engineering/constrained-prompting' },
-          { title: 'CO-STAR 프롬프팅 프레임워크', url: '/prompt-engineering/co-star-prompting-framework' },
+          { title: 'CO-STAR 프롬프팅 프레임워크', url: '/prompt-bites/co-star-prompt-framework' },
           { title: '프롬프트 체이닝', url: '/prompt-engineering/prompt-chaining' },
           { title: '여러 모델에서 프롬프트 테스트하는 방법', url: '/prompt-engineering/how-to-test-prompts-across-models' },
           { title: 'GPT, Claude, Gemini 중 올바른 모델 선택하기', url: '/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
@@ -2096,7 +2096,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '출처',
         items: [
           '[Google Gemini API: 프롬프팅 전략](https://ai.google.dev/gemini-api/docs/prompting-strategies) — 공식 Google Gemini API 프롬프팅 가이드(2024–2026)',
-          '[Gemini 구조화된 출력 API 참조](https://ai.google.dev/gemini-api/docs/structured-output) — API 수준의 JSON 스키마 강제',
+          '[Gemini 구조화된 출력 API 참조](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — API 수준의 JSON 스키마 강제',
           '[Gemini용 Google Search 그라운딩](https://ai.google.dev/gemini-api/docs/grounding) — Google Search 통합을 통한 자동 팩트 체크',
           '[모두를 위한 생성형 AI - Google Cloud](https://www.cloudskillsboost.google/) — 실용적인 프롬프팅 강좌 및 가이드',
           'OpenAI 및 Anthropic API 문서(2026) — GPT-5.5, Claude Opus 4.8, 오픈소스 모델에 걸친 프롬프트 엔지니어링 모범 사례',

@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Token Costs by Script',
         content: [
           '**The same 1,000-word piece of content costs 46% more tokens in Arabic than in English, and 30% more in Japanese — directly increasing your API bill.** Token efficiency varies dramatically by script and language family. This affects both API costs and context window budgeting.',
-          'See [tokens, costs, and limits](/prompt-engineering/tokens-costs-limits) for a detailed breakdown of how to budget tokens in your multilingual workflows.',
+          'See [tokens, costs, and limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) for a detailed breakdown of how to budget tokens in your multilingual workflows.',
         ],
         columns: ['Language', 'Script', 'Tokens (approx.)', 'vs. English', 'API Cost Multiplier'],
         rows: [
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Why? Most instruction-following capability in LLMs was trained on English RLHF (Reinforcement Learning from Human Feedback) data. Complex system-level instructions (formatting rules, personas, chain-of-thought directives) are more reliably followed when written in English. English instructions are part of the model\'s core reasoning pathway.',
           'But style instructions (formality register, cultural tone, politeness level) are best written in the target language because they depend on understanding native speakers\' expectations for what "formal French" or "polite Japanese" actually means.',
           '**Decision tree:** Complex reasoning/formatting rules → English system prompt. Formality register (Sie, Vous, keigo) → target language. Persona definition → English + one target-language sample. Output language specification → always explicit in system prompt: "Respond in formal Japanese (丁寧語 / です・ます体)."',
-          'For the full breakdown, see [system prompt vs. user prompt](/prompt-engineering/system-prompt-vs-user-prompt).',
+          'For the full breakdown, see [system prompt vs. user prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference).',
         ],
         callouts: [
           { type: 'warning', label: 'Common Mistake', text: 'Writing both system prompt AND user instructions in the target language often reduces reasoning accuracy. Use English for logic, target language for tone.' },
@@ -365,11 +365,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[System Prompt vs. User Prompt: What Goes Where?](/prompt-engineering/system-prompt-vs-user-prompt) — Understanding where language instructions should live',
-          '[Tokens, Costs, and Limits: A Practical Guide](/prompt-engineering/tokens-costs-limits) — Calculate token budget for non-English inputs',
+          '[System Prompt vs. User Prompt: What Goes Where?](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Understanding where language instructions should live',
+          '[Tokens, Costs, and Limits: A Practical Guide](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Calculate token budget for non-English inputs',
           '[Chain-of-Thought Prompting: How to Get LLMs to Show Their Work](/prompt-engineering/chain-of-thought-prompting) — Cross-lingual CoT techniques',
           '[Few-Shot vs. Zero-Shot Prompting: Which to Use When?](/prompt-engineering/zero-shot-vs-few-shot) — Choosing examples strategy for multilingual tasks',
-          '[Which AI Model Is Right for Your Task?](/prompt-engineering/gpt-claude-gemini-which-model) — Model selection by language and task',
+          '[Which AI Model Is Right for Your Task?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Model selection by language and task',
         ],
       },
       sources: {
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Token-Kosten nach Schrift',
         content: [
           '**Derselbe 1.000-Wörter-Text kostet auf Arabisch 46 % mehr Token als auf Englisch und auf Russisch 31 % mehr — das wirkt sich direkt auf Ihre API-Rechnung aus.** Die Token-Effizienz variiert stark je nach Schriftsystem und Sprachfamilie. Dies beeinflusst sowohl die API-Kosten als auch die Kontextfenster-Budgetierung.',
-          'Weitere Details finden Sie unter [Tokens, Kosten und Limits](/de/prompt-engineering/tokens-costs-limits).',
+          'Weitere Details finden Sie unter [Tokens, Kosten und Limits](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
         ],
         columns: ['Sprache', 'Schrift', 'Token (ca.)', 'vs. Englisch', 'API-Kostenfaktor'],
         rows: [
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Warum? Der Großteil der Instruction-Following-Fähigkeit von LLMs wurde auf englischen RLHF-Daten (Reinforcement Learning from Human Feedback) trainiert. Komplexe System-Anweisungen (Formatierungsregeln, Personas, Chain-of-Thought-Direktiven) werden zuverlässiger befolgt, wenn sie auf Englisch geschrieben sind. Englische Anweisungen sind Teil des zentralen Reasoning-Pfads des Modells.',
           'Stil-Anweisungen (Formalitätsregister, kultureller Ton, Höflichkeitsniveau) funktionieren hingegen am besten in der Zielsprache, da sie ein Verständnis dafür erfordern, was „formales Deutsch" oder „höfliches Japanisch" für Muttersprachler tatsächlich bedeutet.',
           '**Entscheidungsbaum:** Komplexe Reasoning-/Formatierungsregeln → englischer System-Prompt. Formalitätsregister (Sie-Form, Vous, Keigo) → Zielsprache. Persona-Definition → Englisch + ein Muster in der Zielsprache. Ausgabesprachen-Spezifikation → immer explizit im System-Prompt: „Respond in formal Japanese (丁寧語 / です・ます体)."',
-          'Ausführliche Erklärung: [System-Prompt vs. Benutzer-Prompt](/de/prompt-engineering/system-prompt-vs-user-prompt).',
+          'Ausführliche Erklärung: [System-Prompt vs. Benutzer-Prompt](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference).',
         ],
         callouts: [
           { type: 'warning', label: 'Häufiger Fehler', text: 'System-Prompt und Benutzeranweisungen vollständig in der Zielsprache zu schreiben, reduziert die Reasoning-Genauigkeit oft deutlich. Verwenden Sie Englisch für Logik, die Zielsprache für den Ton.' },
@@ -742,11 +742,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
-          '[System-Prompt vs. Benutzer-Prompt: Was gehört wohin?](/de/prompt-engineering/system-prompt-vs-user-prompt) — Verstehen, wo Sprachanweisungen platziert werden sollten',
-          '[Tokens, Kosten und Limits: Ein praktischer Leitfaden](/de/prompt-engineering/tokens-costs-limits) — Token-Budget für nicht-englische Eingaben berechnen',
+          '[System-Prompt vs. Benutzer-Prompt: Was gehört wohin?](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Verstehen, wo Sprachanweisungen platziert werden sollten',
+          '[Tokens, Kosten und Limits: Ein praktischer Leitfaden](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Token-Budget für nicht-englische Eingaben berechnen',
           '[Chain-of-Thought-Prompting: Wie LLMs ihr Denken zeigen](/de/prompt-engineering/chain-of-thought-prompting) — Sprachübergreifende CoT-Techniken',
           '[Few-Shot vs. Zero-Shot Prompting: Was Sie wann verwenden sollten](/de/prompt-engineering/zero-shot-vs-few-shot) — Beispielstrategie für mehrsprachige Aufgaben',
-          '[Welches KI-Modell ist das richtige für Ihre Aufgabe?](/de/prompt-engineering/gpt-claude-gemini-which-model) — Modellauswahl nach Sprache und Aufgabe',
+          '[Welches KI-Modell ist das richtige für Ihre Aufgabe?](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Modellauswahl nach Sprache und Aufgabe',
         ],
       },
       sources: {
@@ -901,7 +901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Costos de tokens por escritura',
         content: [
           '**El mismo texto de 1.000 palabras cuesta un 46 % más en tokens en árabe que en inglés y un 31 % más en ruso — esto impacta directamente en tu factura de la API.** La eficiencia de tokens varía significativamente según el sistema de escritura y la familia de idiomas. Esto afecta tanto los costos de la API como la planificación del presupuesto de ventana de contexto.',
-          'Más detalles en [Tokens, costos y límites](/es/prompt-engineering/tokens-costs-limits).',
+          'Más detalles en [Tokens, costos y límites](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
         ],
         columns: ['Idioma', 'Escritura', 'Tokens (aprox.)', 'vs. inglés', 'Factor de costo API'],
         rows: [
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '¿Por qué? La mayor parte de la capacidad de seguimiento de instrucciones de los LLMs fue entrenada en datos RLHF (Reinforcement Learning from Human Feedback) en inglés. Las instrucciones de sistema complejas (reglas de formato, personas, directivas Chain-of-Thought) se siguen de forma más fiable cuando están escritas en inglés. Las instrucciones en inglés forman parte de la ruta de razonamiento central del modelo.',
           'Las instrucciones de estilo (registro de formalidad, tono cultural, nivel de cortesía) funcionan mejor en el idioma objetivo, ya que requieren comprensión de lo que el "español formal" o el "japonés cortés" significa realmente para los hablantes nativos.',
           '**Árbol de decisión:** Reglas de razonamiento/formato complejas → prompt de sistema en inglés. Registro de formalidad (usted, vous, keigo) → idioma objetivo. Definición de persona → inglés + un ejemplo en el idioma objetivo. Especificación del idioma de salida → siempre explícita en el prompt de sistema: "Respond in formal Spanish (tratamiento de usted)."',
-          'Explicación detallada: [Prompt de sistema vs. prompt de usuario](/es/prompt-engineering/system-prompt-vs-user-prompt).',
+          'Explicación detallada: [Prompt de sistema vs. prompt de usuario](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference).',
         ],
         callouts: [
           { type: 'warning', label: 'Error común', text: 'Escribir el prompt de sistema y las instrucciones de usuario completamente en el idioma objetivo a menudo reduce significativamente la precisión de razonamiento. Usa inglés para la lógica, el idioma objetivo para el tono.' },
@@ -1118,11 +1118,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Prompt de sistema vs. prompt de usuario: ¿Qué va dónde?](/es/prompt-engineering/system-prompt-vs-user-prompt) — Comprender dónde deben estar las instrucciones de idioma',
-          '[Tokens, costos y límites: Una guía práctica](/es/prompt-engineering/tokens-costs-limits) — Calcular el presupuesto de tokens para entradas en idiomas distintos al inglés',
+          '[Prompt de sistema vs. prompt de usuario: ¿Qué va dónde?](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Comprender dónde deben estar las instrucciones de idioma',
+          '[Tokens, costos y límites: Una guía práctica](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Calcular el presupuesto de tokens para entradas en idiomas distintos al inglés',
           '[Prompting Chain-of-Thought: Cómo los LLMs muestran su razonamiento](/es/prompt-engineering/chain-of-thought-prompting) — Técnicas de CoT entre idiomas',
           '[Prompting few-shot vs. zero-shot: ¿Cuándo usar cuál?](/es/prompt-engineering/zero-shot-vs-few-shot) — Elegir la estrategia de ejemplos para tareas multilingüe',
-          '[¿Qué modelo de IA es el adecuado para tu tarea?](/es/prompt-engineering/gpt-claude-gemini-which-model) — Selección de modelo por idioma y tarea',
+          '[¿Qué modelo de IA es el adecuado para tu tarea?](/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Selección de modelo por idioma y tarea',
         ],
       },
       sources: {
@@ -1482,11 +1482,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Prompt de sistema vs. prompt de usuário: O que vai onde?](/pt/prompt-engineering/system-prompt-vs-user-prompt) — Entender onde as instruções de idioma devem estar',
-          '[Tokens, custos e limites: Um guia prático](/pt/prompt-engineering/tokens-costs-limits) — Calcular o orçamento de tokens para entradas em idiomas diferentes do inglês',
+          '[Prompt de sistema vs. prompt de usuário: O que vai onde?](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Entender onde as instruções de idioma devem estar',
+          '[Tokens, custos e limites: Um guia prático](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Calcular o orçamento de tokens para entradas em idiomas diferentes do inglês',
           '[Prompting Chain-of-Thought: Como os LLMs mostram seu raciocínio](/pt/prompt-engineering/chain-of-thought-prompting) — Técnicas de CoT entre idiomas',
           '[Prompting few-shot vs. zero-shot: Quando usar qual?](/pt/prompt-engineering/zero-shot-vs-few-shot) — Escolher a estratégia de exemplos para tarefas multilíngues',
-          '[Qual modelo de IA é o certo para a sua tarefa?](/pt/prompt-engineering/gpt-claude-gemini-which-model) — Seleção de modelo por idioma e tarefa',
+          '[Qual modelo de IA é o certo para a sua tarefa?](/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Seleção de modelo por idioma e tarefa',
         ],
       },
       sources: {
@@ -1640,7 +1640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Coûts de tokens par script',
         content: [
           '**Le même contenu de 1 000 mots coûte 46 % plus de tokens en arabe qu\'en anglais, et 30 % de plus en japonais — ce qui impacte directement votre facture d\'API.** L\'efficacité des tokens varie considérablement selon le script et la famille linguistique.',
-          'Consultez [tokens, coûts et limites](/fr/prompt-engineering/tokens-costs-limits) pour une ventilation détaillée de la gestion des tokens dans vos workflows multilingues.',
+          'Consultez [tokens, coûts et limites](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) pour une ventilation détaillée de la gestion des tokens dans vos workflows multilingues.',
         ],
         columns: ['Langue', 'Script', 'Tokens (approx.)', 'vs. Anglais', 'Multiplicateur de coût'],
         rows: [
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Pour les tâches structurées et de raisonnement, les prompts système en anglais surpassent les prompts système en langue native pour les langues de niveau 2–3. Pour le ton et la formalité, les prompts système en langue native obtiennent de meilleurs résultats.** C\'est la décision la plus importante du prompting multilingue.',
           'Pourquoi ? La plupart des capacités de suivi d\'instructions des LLM ont été entraînées sur des données RLHF en anglais. Les instructions système complexes (règles de formatage, personas, directives chain-of-thought) sont suivies de façon plus fiable en anglais. En revanche, les instructions de style (registre de formalité, ton culturel, niveau de politesse) sont mieux rédigées dans la langue cible.',
           '**Arbre de décision :** Règles de raisonnement/formatage complexes → prompt système en anglais. Registre de formalité (Vous, Sie, keigo) → langue cible. Définition de persona → anglais + un exemple en langue cible. Spécification de la langue de sortie → toujours explicite dans le prompt système : "Respond in formal French using Vous-form."',
-          'Pour la ventilation complète, consultez [prompt système vs. prompt utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt).',
+          'Pour la ventilation complète, consultez [prompt système vs. prompt utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference).',
         ],
         callouts: [
           { type: 'warning', label: 'Erreur courante', text: 'Rédiger à la fois le prompt système ET les instructions utilisateur dans la langue cible réduit souvent la précision du raisonnement. Utilisez l\'anglais pour la logique, la langue cible pour le ton.' },
@@ -1855,11 +1855,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures connexes',
         items: [
-          '[Prompt système vs. prompt utilisateur : où mettre quoi ?](/fr/prompt-engineering/system-prompt-vs-user-prompt) — Comprendre où placer les instructions de langue',
-          '[Tokens, coûts et limites : guide pratique](/fr/prompt-engineering/tokens-costs-limits) — Calculer le budget de tokens pour les entrées non anglophones',
+          '[Prompt système vs. prompt utilisateur : où mettre quoi ?](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Comprendre où placer les instructions de langue',
+          '[Tokens, coûts et limites : guide pratique](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Calculer le budget de tokens pour les entrées non anglophones',
           '[Chain-of-Thought : comment pousser les LLM à montrer leur raisonnement](/fr/prompt-engineering/chain-of-thought-prompting) — Techniques CoT multilingues',
           '[Few-shot vs. zéro-shot : quand utiliser lequel ?](/fr/prompt-engineering/zero-shot-vs-few-shot) — Choisir une stratégie d\'exemples pour les tâches multilingues',
-          '[Quel modèle d\'IA choisir pour votre tâche ?](/fr/prompt-engineering/gpt-claude-gemini-which-model) — Sélection de modèle par langue et tâche',
+          '[Quel modèle d\'IA choisir pour votre tâche ?](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Sélection de modèle par langue et tâche',
         ],
       },
       sources: {
@@ -2014,7 +2014,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'スクリプト別tokenコスト',
         content: [
           '**同じ1,000語のコンテンツは英語よりアラビア語で46%多くのtokenを消費し、ロシア語では30%多くなります — API請求に直接影響します。** tokenの効率はscriptと言語ファミリーによって大きく異なります。',
-          'tokenの詳細な予算管理については[tokens、コスト、制限](/ja/prompt-engineering/tokens-costs-limits)をご覧ください。',
+          'tokenの詳細な予算管理については[tokens、コスト、制限](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)をご覧ください。',
         ],
         columns: ['言語', 'スクリプト', 'トークン（概算）', '英語比', 'APIコスト倍率'],
         rows: [
@@ -2037,7 +2037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**構造化・推論タスクでは、英語のsystem promptはレベル2〜3言語の母語system promptを上回ります。語調と敬語については、母語のsystem promptの方が効果的です。** これが多言語promptingで最も重要な判断です。',
           'なぜでしょうか？LLMの指示に従う能力の多くは英語のRLHF（人間からのフィードバックによる強化学習）データで訓練されています。複雑なsystem指示（フォーマット規則、ペルソナ、CoTディレクティブ）は英語で書くとより確実に守られます。一方、スタイル指示（敬語レベル、文化的なトーン）はターゲット言語で書く方が効果的です。',
           '**判断フロー：** 複雑な推論・フォーマット規則 → 英語のsystem prompt。敬語レベル（丁寧語、Sie、keigo）→ ターゲット言語。ペルソナ定義 → 英語＋1件のターゲット言語サンプル。出力言語指定 → 常にsystem promptで明示：「Respond in formal Japanese using 丁寧語.」',
-          '詳細は[system prompt vs user prompt](/ja/prompt-engineering/system-prompt-vs-user-prompt)をご覧ください。',
+          '詳細は[system prompt vs user prompt](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)をご覧ください。',
         ],
         callouts: [
           { type: 'warning', label: 'よくある間違い', text: 'System promptとuser指示の両方をターゲット言語で書くと、推論精度が低下することがよくあります。ロジックには英語、語調にはターゲット言語を使用してください。' },
@@ -2229,11 +2229,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[システムプロンプト vs ユーザープロンプト：何をどこに置くか？](/ja/prompt-engineering/system-prompt-vs-user-prompt) — 言語指示をどこに配置すべきかを理解する',
-          '[トークン、コスト、制限：実践ガイド](/ja/prompt-engineering/tokens-costs-limits) — 非英語入力のtokenバジェットを計算する',
+          '[システムプロンプト vs ユーザープロンプト：何をどこに置くか？](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 言語指示をどこに配置すべきかを理解する',
+          '[トークン、コスト、制限：実践ガイド](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 非英語入力のtokenバジェットを計算する',
           '[Chain-of-Thoughtプロンプティング：LLMに推論を示させる方法](/ja/prompt-engineering/chain-of-thought-prompting) — 言語横断CoT技法',
           '[Few-shot vs ゼロショット：どちらをいつ使うか？](/ja/prompt-engineering/zero-shot-vs-few-shot) — 多言語タスクのための例戦略を選ぶ',
-          '[あなたのタスクに適したAIモデルはどれ？](/ja/prompt-engineering/gpt-claude-gemini-which-model) — 言語とタスクによるモデル選択',
+          '[あなたのタスクに適したAIモデルはどれ？](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 言語とタスクによるモデル選択',
         ],
       },
       sources: {
@@ -2388,7 +2388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '按文字系统的token成本',
         content: [
           '**相同1,000词内容在阿拉伯文中比英文多消耗46%的token，在俄文中多30%——直接影响API账单。** Token效率因文字系统和语言族系而有显著差异。中文是例外：比英文少消耗31%的token，是成本效益最高的语言之一。',
-          '详细了解如何在多语言工作流中管理token预算，请参阅[token、成本和限制](/zh/prompt-engineering/tokens-costs-limits)。',
+          '详细了解如何在多语言工作流中管理token预算，请参阅[token、成本和限制](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)。',
         ],
         columns: ['语言', '文字系统', 'Token数（约）', '与英文比较', 'API成本倍数'],
         rows: [
@@ -2411,7 +2411,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**对于结构化和推理任务，英文系统提示在2～3级语言中优于母语系统提示。对于语气和正式程度，母语系统提示效果更好。** 这是多语言提示中最重要的决策。',
           '原因：LLM的大多数指令遵循能力在英文RLHF（基于人类反馈的强化学习）数据上训练。复杂的系统级指令（格式规则、角色扮演、思维链指令）用英文写时遵循更可靠。而风格指令（正式程度、文化语气、礼貌级别）用目标语言写效果更好。',
           '**决策树：** 复杂推理/格式规则 → 英文系统提示。正式程度（敬语、Vous、keigo）→ 目标语言。角色定义 → 英文+一个目标语言示例。输出语言规范 → 始终在系统提示中明确：「Respond in formal Chinese.」',
-          '完整分析请参阅[系统提示 vs 用户提示](/zh/prompt-engineering/system-prompt-vs-user-prompt)。',
+          '完整分析请参阅[系统提示 vs 用户提示](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)。',
         ],
         callouts: [
           { type: 'warning', label: '常见错误', text: '同时用目标语言写系统提示和用户指令通常会降低推理精度。逻辑用英文，语气用目标语言。' },
@@ -2603,11 +2603,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[系统提示 vs 用户提示：内容应放在哪里？](/zh/prompt-engineering/system-prompt-vs-user-prompt) — 了解语言指令应放置的位置',
-          '[Token、成本和限制：实践指南](/zh/prompt-engineering/tokens-costs-limits) — 计算非英文输入的token预算',
+          '[系统提示 vs 用户提示：内容应放在哪里？](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 了解语言指令应放置的位置',
+          '[Token、成本和限制：实践指南](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 计算非英文输入的token预算',
           '[思维链提示：让LLM展示推理过程](/zh/prompt-engineering/chain-of-thought-prompting) — 跨语言思维链技术',
           '[Few-shot vs 零样本：何时使用哪种？](/zh/prompt-engineering/zero-shot-vs-few-shot) — 为多语言任务选择示例策略',
-          '[哪个AI模型适合您的任务？](/zh/prompt-engineering/gpt-claude-gemini-which-model) — 按语言和任务选择模型',
+          '[哪个AI模型适合您的任务？](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 按语言和任务选择模型',
         ],
       },
       sources: {
@@ -2767,7 +2767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'تكاليف الـ token حسب نظام الكتابة',
         content: [
           '**نفس النص المكون من 1000 كلمة يكلف 46% token أكثر بالعربية من الإنجليزية، و31% أكثر بالروسية — هذا يؤثر مباشرةً على فاتورة API.** تتباين كفاءة الـ token تبعًا لنظام الكتابة وعائلة اللغة. يؤثر هذا على تكاليف API وتخطيط ميزانية نافذة السياق.',
-          'مزيد من التفاصيل في [الـ tokens والتكاليف والحدود](/ar/prompt-engineering/tokens-costs-limits).',
+          'مزيد من التفاصيل في [الـ tokens والتكاليف والحدود](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting).',
         ],
         columns: ['اللغة', 'نظام الكتابة', 'الـ tokens (تقريبًا)', 'مقارنةً بالإنجليزية', 'معامل تكلفة API'],
         rows: [
@@ -2791,7 +2791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'لماذا؟ دُرِّب جزء كبير من قدرة اتباع التعليمات في نماذج LLM على بيانات RLHF (التعلم التعزيزي من ردود الفعل البشرية) باللغة الإنجليزية. التعليمات المعقدة للنظام (قواعد التنسيق، الشخصيات، توجيهات Chain-of-Thought) تُتَّبع بشكل أكثر موثوقية عند كتابتها بالإنجليزية. تعليمات النظام الإنجليزية جزء من مسار الاستدلال الأساسي للنموذج.',
           'تعليمات الأسلوب (مستوى الرسمية، النبرة الثقافية، درجة اللياقة) تعمل بشكل أفضل باللغة الهدف، لأنها تتطلب فهم ما تعنيه "العربية الرسمية" أو "اليابانية المهذبة" حقًا للناطقين الأصليين.',
           '**شجرة القرار:** قواعد استدلال/تنسيق معقدة → برومبت النظام بالإنجليزية. مستوى الرسمية (فصحى، vouvoiement، keigo) → اللغة الهدف. تعريف الشخصية → إنجليزية + مثال باللغة الهدف. تحديد لغة الإخراج → صريح دائمًا في برومبت النظام: "Respond in formal Arabic (Modern Standard Arabic / الفصحى)."',
-          'شرح تفصيلي: [برومبت النظام مقابل برومبت المستخدم](/ar/prompt-engineering/system-prompt-vs-user-prompt).',
+          'شرح تفصيلي: [برومبت النظام مقابل برومبت المستخدم](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference).',
         ],
         callouts: [
           { type: 'warning', label: 'خطأ شائع', text: 'كتابة برومبت النظام والتعليمات بالكامل باللغة الهدف غالبًا ما يُقلل دقة الاستدلال بشكل كبير. استخدم الإنجليزية للمنطق، واللغة الهدف للنبرة.' },
@@ -2984,11 +2984,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'القراءة ذات الصلة',
         items: [
-          '[برومبت النظام مقابل برومبت المستخدم: ما الذي يذهب أين؟](/ar/prompt-engineering/system-prompt-vs-user-prompt) — فهم مكان وضع تعليمات اللغة',
-          '[الـ tokens والتكاليف والحدود: دليل عملي](/ar/prompt-engineering/tokens-costs-limits) — حساب ميزانية الـ token للإدخال بغير الإنجليزية',
+          '[برومبت النظام مقابل برومبت المستخدم: ما الذي يذهب أين؟](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — فهم مكان وضع تعليمات اللغة',
+          '[الـ tokens والتكاليف والحدود: دليل عملي](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — حساب ميزانية الـ token للإدخال بغير الإنجليزية',
           '[برومبت Chain-of-Thought: كيف تُظهر نماذج LLM استدلالها](/ar/prompt-engineering/chain-of-thought-prompting) — تقنيات CoT متعددة اللغات',
           '[برومبت few-shot مقابل zero-shot: متى تستخدم كلًا منهما؟](/ar/prompt-engineering/zero-shot-vs-few-shot) — اختيار استراتيجية الأمثلة للمهام متعددة اللغات',
-          '[أي نموذج ذكاء اصطناعي مناسب لمهمتك؟](/ar/prompt-engineering/gpt-claude-gemini-which-model) — اختيار النموذج حسب اللغة والمهمة',
+          '[أي نموذج ذكاء اصطناعي مناسب لمهمتك؟](/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — اختيار النموذج حسب اللغة والمهمة',
         ],
       },
       sources: {
@@ -3149,7 +3149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '스크립트별 토큰 비용',
         content: [
           '**동일한 1,000단어 콘텐츠가 아랍어로는 영어보다 토큰이 46% 더 많이 소요되고, 일본어로는 30% 더 많이 소요되어 API 비용이 직접적으로 증가합니다.** 토큰 효율은 스크립트와 언어군에 따라 크게 다릅니다. 이는 API 비용과 컨텍스트 윈도우 예산 모두에 영향을 미칩니다.',
-          '다국어 워크플로우에서 토큰 예산을 편성하는 방법에 대한 자세한 내용은 [토큰, 비용 및 한도](/prompt-engineering/tokens-costs-limits)를 참조하십시오.',
+          '다국어 워크플로우에서 토큰 예산을 편성하는 방법에 대한 자세한 내용은 [토큰, 비용 및 한도](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)를 참조하십시오.',
         ],
         columns: ['언어', '스크립트', '토큰(근사)', '영어 대비', 'API 비용 배수'],
         rows: [
@@ -3173,7 +3173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '이유가 무엇입니까? LLM의 지시 이행 능력 대부분은 영어 RLHF(인간 피드백 강화 학습) 데이터로 학습되었습니다. 복잡한 시스템 수준 지침(서식 규칙, 페르소나, 연쇄 사고 지시)은 영어로 작성될 때 더 안정적으로 이행됩니다. 영어 지침은 모델의 핵심 추론 경로의 일부입니다.',
           '그러나 스타일 지침(격식 수준, 문화적 어조, 예의 수준)은 대상 언어로 작성하는 것이 가장 좋습니다. "격식체 프랑스어"나 "정중한 일본어"가 실제로 어떤 의미인지에 대한 원어민의 기대를 이해하는 데 의존하기 때문입니다.',
           '**의사결정 트리:** 복잡한 추론/서식 규칙 → 영어 시스템 프롬프트. 격식 수준(Sie, Vous, 경어) → 대상 언어. 페르소나 정의 → 영어 + 대상 언어 샘플 하나. 출력 언어 명시 → 항상 시스템 프롬프트에 명시: "Respond in formal Japanese (丁寧語 / です・ます体)."',
-          '자세한 내용은 [시스템 프롬프트 vs. 사용자 프롬프트](/prompt-engineering/system-prompt-vs-user-prompt)를 참조하십시오.',
+          '자세한 내용은 [시스템 프롬프트 vs. 사용자 프롬프트](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)를 참조하십시오.',
         ],
         callouts: [
           { type: 'warning', label: '흔한 실수', text: '시스템 프롬프트와 사용자 지침 모두를 대상 언어로 작성하면 추론 정확도가 저하되는 경우가 많습니다. 논리에는 영어를, 어조에는 대상 언어를 사용하십시오.' },
@@ -3365,11 +3365,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          '[시스템 프롬프트 vs. 사용자 프롬프트: 무엇이 어디로 가야 합니까?](/prompt-engineering/system-prompt-vs-user-prompt) — 언어 지침이 어디에 위치해야 하는지 이해',
-          '[토큰, 비용 및 한도: 실용적인 가이드](/prompt-engineering/tokens-costs-limits) — 비영어 입력에 대한 토큰 예산 계산',
+          '[시스템 프롬프트 vs. 사용자 프롬프트: 무엇이 어디로 가야 합니까?](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 언어 지침이 어디에 위치해야 하는지 이해',
+          '[토큰, 비용 및 한도: 실용적인 가이드](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 비영어 입력에 대한 토큰 예산 계산',
           '[연쇄 사고 프롬프팅: LLM이 추론 과정을 보여주도록 하는 방법](/prompt-engineering/chain-of-thought-prompting) — 교차 언어 CoT 기법',
           '[퓨샷 vs. 제로샷 프롬프팅: 언제 무엇을 사용합니까?](/prompt-engineering/zero-shot-vs-few-shot) — 다국어 작업에 대한 예시 전략 선택',
-          '[작업에 적합한 AI 모델은 무엇입니까?](/prompt-engineering/gpt-claude-gemini-which-model) — 언어 및 작업별 모델 선택',
+          '[작업에 적합한 AI 모델은 무엇입니까?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 언어 및 작업별 모델 선택',
         ],
       },
       sources: {

@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Lecturas relacionadas',
           items: [
             '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon) — análisis profundo de las ventajas y desventajas de hardware para inferencia local de LLM',
-            '[¿Cuánta VRAM necesito?](/es/local-llms/how-much-vram-do-i-need) — calculadora de VRAM para cada tamaño de modelo y nivel de cuantización',
+            '[¿Cuánta VRAM necesito?](/es/prompt-bites/how-much-vram-for-local-llm) — calculadora de VRAM para cada tamaño de modelo y nivel de cuantización',
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — domina Q4_K_M, Q5_K_M y cuándo usar cada uno',
             '[Mejores modelos LLM locales para principiantes](/es/local-llms/best-beginner-local-llm-models) — guía paso a paso para tu primer LLM local',
             '[Guía de comandos de Ollama](/es/local-llms/ollama-command-guide) — cómo gestionar modos CPU/GPU, multi-GPU y offloading',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'قراءات ذات صلة',
           items: [
             '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon) — تحليل معمّق لمزايا وعيوب العتاد للاستدلال المحلي لنماذج LLM',
-            '[كم من VRAM أحتاج؟](/ar/local-llms/how-much-vram-do-i-need) — حاسبة VRAM لكل حجم نموذج ومستوى تكميم',
+            '[كم من VRAM أحتاج؟](/ar/prompt-bites/how-much-vram-for-local-llm) — حاسبة VRAM لكل حجم نموذج ومستوى تكميم',
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — أتقن Q4_K_M وQ5_K_M ومتى تستخدم كلاً منهما',
             '[أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) — دليل خطوة بخطوة لأول نموذج LLM محلي لك',
             '[دليل أوامر Ollama](/ar/local-llms/ollama-command-guide) — كيفية إدارة أوضاع CPU/GPU، وتعدد GPU، وتفريغ الحمل',
@@ -1140,7 +1140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Weiterführende Ressourcen',
           items: [
             '[GPU vs CPU vs Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon) — tiefgreifender Vergleich der Hardware-Kompromisse für lokale LLM-Inferenz',
-            '[Wie viel VRAM benötige ich?](/de/local-llms/how-much-vram-do-i-need) — VRAM-Rechner für jede Modellgröße und Quantisierungsstufe',
+            '[Wie viel VRAM benötige ich?](/de/prompt-bites/how-much-vram-for-local-llm) — VRAM-Rechner für jede Modellgröße und Quantisierungsstufe',
             '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — beherrschen Sie Q4_K_M, Q5_K_M und wann Sie jede verwenden',
             '[Beste Anfänger-Modelle für lokale LLMs](/de/local-llms/best-beginner-local-llm-models) — Schritt-für-Schritt-Anleitung zu Ihrem ersten lokalen LLM',
             '[Ollama-Befehlsanleitung](/de/local-llms/ollama-command-guide) — Verwaltung von CPU/GPU-Modi, Multi-GPU und Offloading',
@@ -1460,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Lectures Connexes',
           items: [
             '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon) — analyse approfondie des compromis matériels pour inférence LLM locale',
-            '[Combien de VRAM Ai-je Besoin?](/fr/local-llms/how-much-vram-do-i-need) — calculatrice VRAM pour chaque taille de modèle et niveau de quantisation',
+            '[Combien de VRAM Ai-je Besoin?](/fr/prompt-bites/how-much-vram-for-local-llm) — calculatrice VRAM pour chaque taille de modèle et niveau de quantisation',
             '[Quantisation LLM Expliquée](/fr/local-llms/llm-quantization-explained) — maîtrisez Q4_K_M, Q5_K_M, et quand utiliser chacun',
             '[Meilleurs Modèles LLM Débutant](/fr/local-llms/best-beginner-local-llm-models) — guide étape par étape vers votre premier LLM local',
             '[Guide Commandes Ollama](/fr/local-llms/ollama-command-guide) — gestion des modes CPU/GPU, multi-GPU, et offloading',
@@ -1764,7 +1764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '関連リンク',
           items: [
             '[GPU vs CPU vs Apple Silicon](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon) — ローカル LLM 推論のハードウェアトレードオフの深掘り',
-            '[必要な VRAM は？](/ja/local-llms/how-much-vram-do-i-need) — すべてのモデルサイズおよび量子化レベルの VRAM 計算機',
+            '[必要な VRAM は？](/ja/prompt-bites/how-much-vram-for-local-llm) — すべてのモデルサイズおよび量子化レベルの VRAM 計算機',
             '[LLM 量子化の説明](/ja/local-llms/llm-quantization-explained) — Q4_K_M、Q5_K_M をマスターし、各いつ使用するか',
             '[最高の初級ローカル LLM モデル](/ja/local-llms/best-beginner-local-llm-models) — 最初のローカル LLM へのステップバイステップガイド',
             '[Ollama コマンドガイド](/ja/local-llms/ollama-command-guide) — CPU/GPU モード、マルチ GPU、オフロード管理',
@@ -2068,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '相关阅读',
           items: [
             '[GPU vs CPU vs Apple Silicon](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon) — 本地 LLM 推理硬件权衡的深入探讨',
-            '[我需要多少 VRAM？](/zh/local-llms/how-much-vram-do-i-need) — 每个模型大小和量化级别的 VRAM 计算器',
+            '[我需要多少 VRAM？](/zh/prompt-bites/how-much-vram-for-local-llm) — 每个模型大小和量化级别的 VRAM 计算器',
             '[LLM 量化讲解](/zh/local-llms/llm-quantization-explained) — 掌握 Q4_K_M、Q5_K_M，何时使用每一个',
             '[最佳初级本地 LLM 模型](/zh/local-llms/best-beginner-local-llm-models) — 第一个本地 LLM 的分步指南',
             '[Ollama 命令指南](/zh/local-llms/ollama-command-guide) — 管理 CPU/GPU 模式、多 GPU 和卸载',
@@ -2366,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '관련 자료',
           items: [
             '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) — 로컬 LLM 추론을 위한 하드웨어 트레이드오프 심층 분석',
-            '[VRAM이 얼마나 필요합니까?](/ko/local-llms/how-much-vram-do-i-need) — 모든 모델 크기 및 양자화 수준에 대한 VRAM 계산기',
+            '[VRAM이 얼마나 필요합니까?](/ko/prompt-bites/how-much-vram-for-local-llm) — 모든 모델 크기 및 양자화 수준에 대한 VRAM 계산기',
             '[LLM 양자화 해설](/ko/local-llms/llm-quantization-explained) — Q4_K_M, Q5_K_M 마스터하기 및 적절한 사용 시점',
             '[초보자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 첫 번째 로컬 LLM을 위한 단계별 가이드',
             '[Ollama 명령어 가이드](/ko/local-llms/ollama-command-guide) — CPU/GPU 모드, 멀티 GPU, 오프로딩 관리 방법',

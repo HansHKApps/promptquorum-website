@@ -2794,7 +2794,7 @@ schema: {
           items: [
             '[ローカルLLM向け最高のAIコーディングアシスタント](/ja/local-llms/best-ai-coding-assistant-local-llm) — 適切なIDEツール（Cursor、Continue.dev、Cody）を選択',
             '[ローカルLLM開発スタック](/ja/local-llms/local-llm-developer-stack) — CLI → API → 本番環境の完全セットアップ',
-            '[VS Code用ローカルLLM：Continue.devインストール](/ja/local-llms/how-to-install-continue-dev) — IDE統合ガイド',
+            'VS Code用ローカルLLM：Continue.devインストール — IDE統合ガイド',
             '[ローカルLLM量子化解説](/ja/local-llms/llm-quantization-explained) — Q4 vs Q5 vs Q8',
             '[Ollama完全インストールガイド](/ja/local-llms/how-to-install-ollama) — Macbook/Linux/Windows',
             '[初心者向けベストモデル5選](/ja/local-llms/best-beginner-local-llm-models) — 最初のモデル選択',
@@ -3142,7 +3142,7 @@ schema: {
           items: [
             '[本地LLM最佳AI编码助手](/zh/local-llms/best-ai-coding-assistant-local-llm) ——选择正确的IDE工具（Cursor、Continue.dev、Cody）来使用您的代码模型。',
             '[本地LLM开发栈](/zh/local-llms/local-llm-developer-stack) ——CLI → API → 生产的完整设置。',
-            '[VS Code本地LLM：Continue.dev安装](/zh/local-llms/how-to-install-continue-dev) ——IDE集成指南',
+            'VS Code本地LLM：Continue.dev安装 ——IDE集成指南',
             '[本地LLM量化解释](/zh/local-llms/llm-quantization-explained) ——Q4 vs Q5 vs Q8',
             '[Ollama完整安装指南](/zh/local-llms/how-to-install-ollama) ——Mac/Linux/Windows',
             '[初学者最佳模型5选](/zh/local-llms/best-beginner-local-llm-models) ——首选模型决策',

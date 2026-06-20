@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whenToUse: {
           title: 'When Should You Use Constrained Prompting?',
           content: [
-            '**You should use constrained prompting whenever correctness and consistency are more important than maximum creativity.** This is particularly true in operational, analytical, and regulated contexts. Paired with [few-shot examples](/prompt-engineering/few-shot-prompting), constraints become even more powerful.',
+            '**You should use constrained prompting whenever correctness and consistency are more important than maximum creativity.** This is particularly true in operational, analytical, and regulated contexts. Paired with [few-shot examples](/prompt-engineering/zero-shot-vs-few-shot), constraints become even more powerful.',
             'Typical use cases include:',
           ],
           items: [
@@ -312,9 +312,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundations before applying constraints.',
-            '[Structured Output: JSON Mode](/prompt-engineering/structured-output-json-mode) — API-level enforcement of output schemas.',
+            '[Structured Output: JSON Mode](/prompt-engineering/structured-output-and-json-mode) — API-level enforcement of output schemas.',
             '[RTF Framework](/prompt-engineering/rtf-framework) — Role-Task-Format: a structured framework that pairs naturally with constrained prompting.',
-            '[Few-Shot Prompting](/prompt-engineering/few-shot-prompting) — Providing examples is a form of implicit constraint.',
+            '[Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — Providing examples is a form of implicit constraint.',
             '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Validate constrained prompts on multiple LLMs.',
             '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Safety constraints defend against adversarial input.',
           ],
@@ -638,9 +638,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Grundlagen vor Anwendung von Constraints.',
             '[RTF Framework](/de/prompt-engineering/rtf-framework) — Role-Task-Format: ein strukturiertes Framework, das natürlich mit Constrained Prompting kombiniert werden kann.',
-            '[Few-Shot Prompting](/de/prompt-engineering/few-shot-prompting) — Beispiele bereitstellen ist eine Form impliziter Constraints.',
+            '[Few-Shot Prompting](/de/prompt-engineering/zero-shot-vs-few-shot) — Beispiele bereitstellen ist eine Form impliziter Constraints.',
             '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Wenn Sie Reasoning-Schritte wünschen, nicht nur geconstraintetete Ausgabe.',
-            '[KI-Halluzinationen: Wie man sie stoppt](/de/prompt-engineering/ai-hallucinations-how-to-stop) — Constraints, die Halluzinations-Risiken reduzieren.',
+            '[KI-Halluzinationen: Wie man sie stoppt](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Constraints, die Halluzinations-Risiken reduzieren.',
             '[Grundlagen der Prompt-Engineering-Optimierung](/de/prompt-engineering/fundamentals-of-prompt-optimization) — Optimierungstechniken, die Constrained Prompting erweitern.',
           ],
         },
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whenToUse: {
           title: '¿Cuándo debes usar constrained prompting?',
           content: [
-            '**Debes usar constrained prompting siempre que la corrección y la consistencia sean más importantes que la máxima creatividad.** Esto es especialmente válido en contextos operativos, analíticos y regulados. Combinado con [ejemplos few-shot](/prompt-engineering/few-shot-prompting), las constraints se vuelven aún más potentes.',
+            '**Debes usar constrained prompting siempre que la corrección y la consistencia sean más importantes que la máxima creatividad.** Esto es especialmente válido en contextos operativos, analíticos y regulados. Combinado con [ejemplos few-shot](/prompt-engineering/zero-shot-vs-few-shot), las constraints se vuelven aún más potentes.',
             'Los casos de uso típicos incluyen:',
           ],
           items: [
@@ -972,9 +972,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lecturas relacionadas',
           items: [
             '[¿Qué es el prompt engineering?](/es/prompt-engineering/what-is-prompt-engineering) — Fundamentos antes de aplicar constraints.',
-            '[Salida estructurada: modo JSON](/es/prompt-engineering/structured-output-json-mode) — Aplicación de esquemas de salida a nivel de API.',
+            '[Salida estructurada: modo JSON](/es/prompt-engineering/structured-output-and-json-mode) — Aplicación de esquemas de salida a nivel de API.',
             '[Framework RTF](/es/prompt-engineering/rtf-framework) — Role-Task-Format: un framework estructurado que se combina bien con constrained prompting.',
-            '[Few-shot prompting](/es/prompt-engineering/few-shot-prompting) — Proporcionar ejemplos es una forma de constraint implícita.',
+            '[Few-shot prompting](/es/prompt-engineering/zero-shot-vs-few-shot) — Proporcionar ejemplos es una forma de constraint implícita.',
             '[Cómo probar prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Valida prompts con constraints en múltiples LLMs.',
             '[Prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Las constraints de seguridad defienden contra entradas adversariales.',
           ],
@@ -1300,9 +1300,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'قراءات ذات صلة',
           items: [
             '[ما هي هندسة الموجّهات؟](/ar/prompt-engineering/what-is-prompt-engineering) — الأساسيات قبل تطبيق القيود.',
-            '[المخرجات المنظّمة: وضع JSON](/ar/prompt-engineering/structured-output-json-mode) — تطبيق مخططات المخرجات على مستوى API.',
+            '[المخرجات المنظّمة: وضع JSON](/ar/prompt-engineering/structured-output-and-json-mode) — تطبيق مخططات المخرجات على مستوى API.',
             '[إطار RTF](/ar/prompt-engineering/rtf-framework) — الدور-المهمة-التنسيق: إطار منظّم يتكامل جيدًا مع الموجّهات المقيّدة.',
-            '[موجّهات القليل من الأمثلة](/ar/prompt-engineering/few-shot-prompting) — تقديم الأمثلة هو شكل من أشكال القيود الضمنية.',
+            '[موجّهات القليل من الأمثلة](/ar/prompt-engineering/zero-shot-vs-few-shot) — تقديم الأمثلة هو شكل من أشكال القيود الضمنية.',
             '[كيفية اختبار الموجّهات عبر النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — التحقق من صحة الموجّهات المقيّدة على نماذج لغة متعددة.',
             '[حقن الموجّهات والأمان](/ar/prompt-engineering/prompt-injection-and-security) — قيود الأمان تحمي من المدخلات المعادية.',
           ],
@@ -1626,9 +1626,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Leituras relacionadas',
           items: [
             '[O que é prompt engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — Fundamentos antes de aplicar restrições.',
-            '[Saída estruturada: modo JSON](/pt/prompt-engineering/structured-output-json-mode) — Aplicação de esquemas de saída no nível da API.',
+            '[Saída estruturada: modo JSON](/pt/prompt-engineering/structured-output-and-json-mode) — Aplicação de esquemas de saída no nível da API.',
             '[Framework RTF](/pt/prompt-engineering/rtf-framework) — Role-Task-Format: um framework estruturado que se combina bem com constrained prompting.',
-            '[Few-shot prompting](/pt/prompt-engineering/few-shot-prompting) — Fornecer exemplos é uma forma de restrição implícita.',
+            '[Few-shot prompting](/pt/prompt-engineering/zero-shot-vs-few-shot) — Fornecer exemplos é uma forma de restrição implícita.',
             '[Como testar prompts entre modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Valide prompts com restrições em múltiplos LLMs.',
             '[Injeção de prompt e segurança](/pt/prompt-engineering/prompt-injection-and-security) — Restrições de segurança defendem contra entradas adversariais.',
           ],
@@ -1930,13 +1930,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     relatedReading: {
       title: 'Lectures complémentaires',
-      items: [
-        '[Grammars LLM : Forcer la Structure de Sortie](/fr/prompt-engineering/llm-grammars) — Approches formelles au-delà des contraintes',
-        '[Chain-of-Thought vs. Structured Reasoning](/fr/prompt-engineering/cot-structured-reasoning) — Quand utiliser lequel',
-        '[Fine-Tuning pour la Conformité de Sortie](/fr/prompt-engineering/fine-tuning-for-structured-output) — Alternatives au prompting',
-        '[Validation d\'Outputs LLM : Schémas et Tests](/fr/prompt-engineering/llm-output-validation) — Cadre complet de validation',
-        '[PromptQuorum : Dispatch Multi-Modèle](/fr/features/multi-model-dispatch) — Comment tester les contraintes à l\'échelle',
-        '[API Conversationnelles avec LLM](/fr/local-llms/conversational-apis) — Cas d\'usage réel : structures contrôlées dans les chatbots'
+      items:  [
+        'Grammars LLM : Forcer la Structure de Sortie — Approches formelles au-delà des contraintes',
+        'Chain-of-Thought vs. Structured Reasoning — Quand utiliser lequel',
+        'Fine-Tuning pour la Conformité de Sortie — Alternatives au prompting',
+        '[Validation d\'Outputs LLM : Schémas et Tests — Cadre complet de validation',
+        '[PromptQuorum : Dispatch Multi-Modèle](/fr/features/prompt-engineering/multi-model-prompt-testing-workflows) — Comment tester les contraintes à l\'échelle',
+        'API Conversationnelles avec LLM — Cas d\'usage réel : structures contrôlées dans les chatbots'
       ]
     },
     faqSection: {
@@ -2209,13 +2209,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     relatedReading: {
       title: '参考資料',
-      items: [
-        '[LLM文法：出力構造の強制](/ja/prompt-engineering/llm-grammars) — 制約を超えた形式的アプローチ',
-        '[Chain-of-Thoughtと構造化推論](/ja/prompt-engineering/cot-structured-reasoning) — 使い分け',
-        '[構造化出力向けファインチューニング](/ja/prompt-engineering/fine-tuning-for-structured-output) — プロンプティングの代替手段',
-        '[LLMアウトプット検証：スキーマとテスト](/ja/prompt-engineering/llm-output-validation) — 総合検証フレームワーク',
-        '[PromptQuorum：マルチモデルディスパッチ](/ja/features/multi-model-dispatch) — 大規模制約テスト',
-        '[会話型API with LLM](/ja/local-llms/conversational-apis) — 実例：チャットボットの制御出力'
+      items:  [
+        'LLM文法：出力構造の強制 — 制約を超えた形式的アプローチ',
+        'Chain-of-Thoughtと構造化推論 — 使い分け',
+        '構造化出力向けファインチューニング — プロンプティングの代替手段',
+        '[LLMアウトプット検証：スキーマとテスト — 総合検証フレームワーク',
+        '[PromptQuorum：マルチモデルディスパッチ](/ja/features/prompt-engineering/multi-model-prompt-testing-workflows) — 大規模制約テスト',
+        '会話型API with LLM — 実例：チャットボットの制御出力'
       ]
     },
     faqSection: {
@@ -2702,13 +2702,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     relatedReading: {
       title: '相关阅读',
-      items: [
-        '[LLM文法：强制输出结构](/zh/prompt-engineering/llm-grammars) — 约束之外的形式化方法',
-        '[Chain-of-Thought vs 结构化推理](/zh/prompt-engineering/cot-structured-reasoning) — 何时使用哪种',
-        '[结构化输出微调](/zh/prompt-engineering/fine-tuning-for-structured-output) — 提示工程的替代方案',
-        '[LLM输出验证：架构和测试](/zh/prompt-engineering/llm-output-validation) — 完整验证框架',
-        '[PromptQuorum：多模型分发](/zh/features/multi-model-dispatch) — 大规模测试约束',
-        '[与LLM的会话API](/zh/local-llms/conversational-apis) — 实例：聊天机器人的控制输出'
+      items:  [
+        'LLM文法：强制输出结构 — 约束之外的形式化方法',
+        'Chain-of-Thought vs 结构化推理 — 何时使用哪种',
+        '结构化输出微调 — 提示工程的替代方案',
+        '[LLM输出验证：架构和测试 — 完整验证框架',
+        '[PromptQuorum：多模型分发](/zh/features/prompt-engineering/multi-model-prompt-testing-workflows) — 大规模测试约束',
+        '与LLM的会话API — 实例：聊天机器人的控制输出'
       ]
     },
     faqSection: {
@@ -3156,7 +3156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whenToUse: {
         title: '제약 프롬프팅을 언제 사용해야 하는가?',
         content: [
-          '**최대한의 창의성보다 정확성과 일관성이 더 중요할 때 제약 프롬프팅을 사용해야 합니다.** 이는 운영적, 분석적, 규제적 맥락에서 특히 사실입니다. [퓨샷 예시](/prompt-engineering/few-shot-prompting)와 결합하면 제약이 훨씬 더 강력해집니다.',
+          '**최대한의 창의성보다 정확성과 일관성이 더 중요할 때 제약 프롬프팅을 사용해야 합니다.** 이는 운영적, 분석적, 규제적 맥락에서 특히 사실입니다. [퓨샷 예시](/prompt-engineering/zero-shot-vs-few-shot)와 결합하면 제약이 훨씬 더 강력해집니다.',
           '일반적인 사용 사례에는 다음이 포함됩니다:',
         ],
         items: [
@@ -3271,9 +3271,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — 제약을 적용하기 전의 기초.',
-          '[구조화된 출력: JSON 모드](/prompt-engineering/structured-output-json-mode) — 출력 스키마의 API 수준 적용.',
+          '[구조화된 출력: JSON 모드](/prompt-engineering/structured-output-and-json-mode) — 출력 스키마의 API 수준 적용.',
           '[RTF 프레임워크](/prompt-engineering/rtf-framework) — 역할-작업-형식: 제약 프롬프팅과 자연스럽게 결합되는 구조화된 프레임워크.',
-          '[퓨샷 프롬프팅](/prompt-engineering/few-shot-prompting) — 예시 제공은 암묵적 제약의 한 형태입니다.',
+          '[퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 예시 제공은 암묵적 제약의 한 형태입니다.',
           '[여러 모델에서 프롬프트를 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — 여러 LLM에서 제약 프롬프트 검증.',
           '[프롬프트 인젝션과 보안](/prompt-engineering/prompt-injection-and-security) — 안전 제약이 적대적 입력을 방어합니다.',
         ],

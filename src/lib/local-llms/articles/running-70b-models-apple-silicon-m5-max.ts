@@ -402,7 +402,7 @@ for chunk in stream_generate(model, tokenizer, "Explain quantum computing", max_
         title: 'Related Articles',
         items: [
           '[Apple Silicon for Local LLMs: Complete Guide](/local-llms/apple-silicon-local-llm-guide-2026) — M1 to M5 Max comparison, unified memory explained',
-          '[Running DeepSeek-R1 Locally](/local-llms/run-deepseek-r1-locally) — DeepSeek-R1-Distill-Llama-70B feasibility details, full R1 671B vs distill comparison',
+          'Running DeepSeek-R1 Locally — DeepSeek-R1-Distill-Llama-70B feasibility details, full R1 671B vs distill comparison',
           '[M5 Pro vs M5 Max LLM Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026) — detailed tok/s numbers across model sizes',
           '[How Much Unified Memory for Local LLMs?](/local-llms/how-much-unified-memory-for-local-llm) — 16GB vs 36GB vs 64GB vs 128GB guide',
           '[Best LLM Models for Apple Silicon](/local-llms/best-models-apple-silicon-2026) — model recommendations per Mac configuration',

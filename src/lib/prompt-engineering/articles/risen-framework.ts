@@ -3205,7 +3205,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             { title: '链式思维提示词', url: '/zh/prompt-engineering/chain-of-thought-prompting' },
             { title: '什么是Prompt工程？', url: '/zh/prompt-engineering/what-is-prompt-engineering' },
-            { title: '少样本Prompt', url: '/zh/prompt-engineering/few-shot-prompting' },
+            { title: '少样本Prompt', url: '/zh/prompt-engineering/zero-shot-vs-few-shot' },
             { title: '受限Prompt', url: '/zh/prompt-engineering/constrained-prompting' },
             { title: 'GPT、Claude还是Gemini？选择合适的模型', url: '/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
             { title: 'Prompt注入和安全', url: '/zh/prompt-engineering/prompt-injection-and-security' },

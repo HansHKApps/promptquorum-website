@@ -2490,7 +2490,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
-            '[Leitfaden zur Hardware für lokale LLMs](/de/local-llms/local-llm-hardware-setup) -- GPU-, CPU- und RAM-Anforderungen für quantisierte Modelle.',
+            '[Leitfaden zur Hardware für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) -- GPU-, CPU- und RAM-Anforderungen für quantisierte Modelle.',
             '[Beste lokale LLM-Modelle für Anfänger](/de/local-llms/best-beginner-local-llm-models) -- Wählen Sie Ihr erstes Modell mit Quantisierungsempfehlungen.',
             '[Kleine LLM-Modelle für Consumer-Hardware](/de/local-llms/small-local-llm-models) -- 3B und 7B Modelle, die auf Quantisierung laufen.',
             '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- GGUF-quantisierte Modelle herunterladen und ausführen.',
@@ -3057,7 +3057,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-setup) -- Exigences GPU, CPU et RAM pour les modèles quantifiés.',
+            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences GPU, CPU et RAM pour les modèles quantifiés.',
             '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Choisissez votre premier modèle avec recommandations de quantification.',
             '[Petits modèles LLM pour matériel grand public](/fr/local-llms/small-local-llm-models) -- Modèles 3B et 7B qui s\'exécutent sur quantification.',
             '[Installer Ollama](/fr/local-llms/how-to-install-ollama) -- Télécharger et exécuter les modèles quantifiés GGUF.',
@@ -3606,7 +3606,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-setup) -- 量子化モデル実行のためのGPU、CPU、RAM要件。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) -- 量子化モデル実行のためのGPU、CPU、RAM要件。',
             '[初心者向けベストローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) -- 量子化推奨事項付きで最初のモデルを選択。',
             '[コンシューマーハードウェア向け小規模LLMモデル](/ja/local-llms/small-local-llm-models) -- 量子化で実行される3Bおよび7Bモデル。',
             '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) -- GGUF量子化モデルのダウンロードと実行。',
@@ -4154,7 +4154,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-setup)----运行量化模型的GPU、CPU和RAM要求。',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)----运行量化模型的GPU、CPU和RAM要求。',
             '[初学者最佳本地LLM模型](/zh/local-llms/best-beginner-local-llm-models)----选择您的第一个模型附带量化建议。',
             '[消费级硬件小型LLM模型](/zh/local-llms/small-local-llm-models)----在量化上运行的3B和7B模型。',
             '[如何安装Ollama](/zh/local-llms/how-to-install-ollama)----下载并运行GGUF量化模型。',

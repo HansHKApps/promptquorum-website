@@ -953,11 +953,11 @@ schema: {
         },
         relatedReading: {
           items: [
-            '[Ollama vs LM Studio vs GPT4All : comparaison 2026](/fr/local-llms/ollama-vs-lm-studio-vs-gpt4all) -- serveurs backend pour interfaces.',
+            '[Ollama vs LM Studio vs GPT4All : comparaison 2026](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) -- serveurs backend pour interfaces.',
             '[Comment installer Ollama : guide complet](/fr/local-llms/how-to-install-ollama) -- démarrage Ollama avant toute interface.',
-            '[Open WebUI RAG guide :](/fr/local-llms/open-webui-rag-setup) -- configurer document upload + recherche.',
-            '[Modèles locaux meilleurs 2026 :](/fr/local-llms/best-local-llm-models-2026) -- sélectionner bon modèle pour votre matériel.',
-            '[Continue.dev profond dive :](/fr/local-llms/continue-dev-setup-guide) -- optimiser complétion code avec VS Code.',
+            'Open WebUI RAG guide : -- configurer document upload + recherche.',
+            '[Modèles locaux meilleurs 2026 :](/fr/local-llms/best-local-llms-2026) -- sélectionner bon modèle pour votre matériel.',
+            'Continue.dev profond dive : -- optimiser complétion code avec VS Code.',
           ],
         },
         sources: {
@@ -1278,11 +1278,11 @@ schema: {
         },
         relatedReading: {
           items: [
-            '[Ollama vs LM Studio vs GPT4All：2026比較](/ja/local-llms/ollama-vs-lm-studio-vs-gpt4all) -- フロントエンド用バックエンドサーバー。',
+            '[Ollama vs LM Studio vs GPT4All：2026比較](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) -- フロントエンド用バックエンドサーバー。',
             '[Ollama インストール：完全ガイド](/ja/local-llms/how-to-install-ollama) -- 任意フロントエンド前にOllama起動。',
-            '[Open WebUI RAG ガイド](/ja/local-llms/open-webui-rag-setup) -- ドキュメントアップロード＋検索設定。',
-            '[ベストローカルLLM 2026](/ja/local-llms/best-local-llm-models-2026) -- ハードウェア向け適切モデル選択。',
-            '[Continue.dev ディープダイブ](/ja/local-llms/continue-dev-setup-guide) -- VS Codeコード補完最適化。',
+            'Open WebUI RAG ガイド -- ドキュメントアップロード＋検索設定。',
+            '[ベストローカルLLM 2026](/ja/local-llms/best-local-llms-2026) -- ハードウェア向け適切モデル選択。',
+            'Continue.dev ディープダイブ -- VS Codeコード補完最適化。',
           ],
         },
         sources: {
@@ -1605,11 +1605,11 @@ schema: {
         },
         relatedReading: {
           items: [
-            '[Ollama vs LM Studio vs GPT4All：2026对比](/zh/local-llms/ollama-vs-lm-studio-vs-gpt4all) -- 前端的后端服务器。',
+            '[Ollama vs LM Studio vs GPT4All：2026对比](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) -- 前端的后端服务器。',
             '[Ollama安装：完整指南](/zh/local-llms/how-to-install-ollama) -- 任何前端之前启动Ollama。',
-            '[Open WebUI RAG指南](/zh/local-llms/open-webui-rag-setup) -- 配置文档上传+搜索。',
-            '[最佳本地LLM 2026](/zh/local-llms/best-local-llm-models-2026) -- 为您的硬件选合适模型。',
-            '[Continue.dev深入探讨](/zh/local-llms/continue-dev-setup-guide) -- 使用VS Code优化代码补全。',
+            'Open WebUI RAG指南 -- 配置文档上传+搜索。',
+            '[最佳本地LLM 2026](/zh/local-llms/best-local-llms-2026) -- 为您的硬件选合适模型。',
+            'Continue.dev深入探讨 -- 使用VS Code优化代码补全。',
           ],
         },
         sources: {

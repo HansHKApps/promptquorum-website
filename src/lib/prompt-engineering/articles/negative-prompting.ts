@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { title: 'Prompt Injection and Security', url: '/prompt-engineering/prompt-injection-and-security' },
             { title: 'Constrained Prompting', url: '/prompt-engineering/constrained-prompting' },
             { title: 'How to Test Prompts Across Models', url: '/prompt-engineering/how-to-test-prompts-across-models' },
-            { title: 'Single Step Prompt Method', url: '/prompt-engineering/single-prompt-method' },
+            { title: 'Single Step Prompt Method', url: '/prompt-engineering/the-single-step-prompt-method' },
           ],
         },
         sources: {
@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { title: 'Prompt injection y seguridad', url: '/es/prompt-engineering/prompt-injection-and-security' },
         { title: 'Constrained prompting', url: '/es/prompt-engineering/constrained-prompting' },
         { title: 'Cómo probar prompts entre modelos', url: '/es/prompt-engineering/how-to-test-prompts-across-models' },
-        { title: 'Método de prompt de un solo paso', url: '/es/prompt-engineering/single-prompt-method' },
+        { title: 'Método de prompt de un solo paso', url: '/es/prompt-engineering/the-single-step-prompt-method' },
       ],
     },
     sources: {
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { title: 'حقن البرومبت والأمان', url: '/ar/prompt-engineering/prompt-injection-and-security' },
         { title: 'البرومبت المقيّد', url: '/ar/prompt-engineering/constrained-prompting' },
         { title: 'كيفية اختبار البرومبتات عبر النماذج', url: '/ar/prompt-engineering/how-to-test-prompts-across-models' },
-        { title: 'أسلوب برومبت الخطوة الواحدة', url: '/ar/prompt-engineering/single-prompt-method' },
+        { title: 'أسلوب برومبت الخطوة الواحدة', url: '/ar/prompt-engineering/the-single-step-prompt-method' },
       ],
     },
     sources: {
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { title: 'Prompt injection e segurança', url: '/pt/prompt-engineering/prompt-injection-and-security' },
         { title: 'Constrained prompting', url: '/pt/prompt-engineering/constrained-prompting' },
         { title: 'Como testar prompts entre modelos', url: '/pt/prompt-engineering/how-to-test-prompts-across-models' },
-        { title: 'Método de prompt de etapa única', url: '/pt/prompt-engineering/single-prompt-method' },
+        { title: 'Método de prompt de etapa única', url: '/pt/prompt-engineering/the-single-step-prompt-method' },
       ],
     },
     sources: {
@@ -1657,8 +1657,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { title: 'Les 5 Éléments Clés d\'un Prompt', url: '/fr/prompt-engineering/5-building-blocks-of-a-prompt' },
         { title: 'Hallucinations IA', url: '/fr/prompt-engineering/ai-hallucinations' },
         { title: 'Injection de Prompt et Sécurité', url: '/fr/prompt-engineering/prompt-injection-and-security' },
-        { title: 'Température et Top-P', url: '/fr/prompt-engineering/temperature-and-top-p' },
-        { title: 'Zero-Shot vs Few-Shot Prompting', url: '/fr/prompt-engineering/zero-shot-vs-few-shot-prompting' },
+        { title: 'Température et Top-P', url: '/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity' },
+        { title: 'Zero-Shot vs Few-Shot Prompting', url: '/fr/prompt-engineering/zero-shot-vs-few-shot' },
       ],
     },
     sources: {
@@ -2004,8 +2004,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { title: 'プロンプトの5つの構成要素', url: '/ja/prompt-engineering/5-building-blocks-of-a-prompt' },
         { title: 'AI幻覚', url: '/ja/prompt-engineering/ai-hallucinations' },
         { title: 'プロンプトインジェクションとセキュリティ', url: '/ja/prompt-engineering/prompt-injection-and-security' },
-        { title: '温度とTop-P', url: '/ja/prompt-engineering/temperature-and-top-p' },
-        { title: 'ゼロショットとフューショット', url: '/ja/prompt-engineering/zero-shot-vs-few-shot-prompting' },
+        { title: '温度とTop-P', url: '/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity' },
+        { title: 'ゼロショットとフューショット', url: '/ja/prompt-engineering/zero-shot-vs-few-shot' },
       ],
     },
     sources: {
@@ -2361,7 +2361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { title: '프롬프트 인젝션 및 보안', url: '/prompt-engineering/prompt-injection-and-security' },
         { title: '제약된 프롬프팅', url: '/prompt-engineering/constrained-prompting' },
         { title: '여러 모델에서 프롬프트를 테스트하는 방법', url: '/prompt-engineering/how-to-test-prompts-across-models' },
-        { title: '단일 단계 프롬프트 방법', url: '/prompt-engineering/single-prompt-method' },
+        { title: '단일 단계 프롬프트 방법', url: '/prompt-engineering/the-single-step-prompt-method' },
       ],
     },
     sources: {

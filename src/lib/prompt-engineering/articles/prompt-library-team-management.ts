@@ -168,7 +168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Plantillas de documentación de prompts', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'Control de versiones de prompts', url: '/prompt-engineering/prompt-version-control' },
           { title: 'Gobernanza de prompts en producción', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'Configuración de prompt engineering para equipos pequeños', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'Configuración de prompt engineering para equipos pequeños', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Templates de documentação de prompts', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'Controle de versões de prompts', url: '/prompt-engineering/prompt-version-control' },
           { title: 'Governança de prompts em produção', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'Configuração de prompt engineering para equipes pequenas', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'Configuração de prompt engineering para equipes pequenas', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Documentation Templates', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control' },
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'Prompt Engineering Setup for Small Teams', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: '프롬프트 문서 템플릿', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control' },
           { title: '프로덕션 프롬프트 거버넌스', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: '소규모 팀을 위한 프롬프트 엔지니어링 설정', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: '소규모 팀을 위한 프롬프트 엔지니어링 설정', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'قوالب توثيق التلقينات', url: '/prompt-engineering/prompt-documentation-templates' },
           { title: 'التحكم بإصدارات التلقينات', url: '/prompt-engineering/prompt-version-control' },
           { title: 'حوكمة التلقينات في الإنتاج', url: '/prompt-engineering/prompt-governance-in-production' },
-          { title: 'إعداد prompt engineering للفرق الصغيرة', url: '/prompt-engineering/pe-setup-small-teams' },
+          { title: 'إعداد prompt engineering للفرق الصغيرة', url: '/prompt-engineering/prompt-engineering-setup-small-teams' },
         ],
       },
       sources: {

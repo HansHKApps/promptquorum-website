@@ -309,11 +309,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational principles behind structured AI instruction design',
-            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p) — deep dive into the two primary randomness parameters',
+            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — deep dive into the two primary randomness parameters',
             '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — applying output control techniques in code generation workflows',
-            '[Tool Use and Function Calling](/prompt-engineering/tool-use-and-function-calling) — structured output via tool definitions and function schemas',
+            'Tool Use and Function Calling — structured output via tool definitions and function schemas',
             '[Tokens & Token Economics](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — understanding token costs for constrained decoding and two-stage pipelines',
-            '[Error Handling in LLM Applications](/prompt-engineering/error-handling-llm) — detecting and recovering from malformed output in production systems',
+            'Error Handling in LLM Applications — detecting and recovering from malformed output in production systems',
           ],
         },
         howToStart: {
@@ -687,11 +687,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Weiterführende Lektüre',
           items: [
             '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Grundprinzipien hinter strukturiertem KI-Instruktionsdesign',
-            '[Temperature und Top-P erklärt](/de/prompt-engineering/temperature-and-top-p) — Tiefenanalyse der beiden primären Zufälligkeitsparameter',
+            '[Temperature und Top-P erklärt](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) — Tiefenanalyse der beiden primären Zufälligkeitsparameter',
             '[Besseren Code mit KI schreiben](/de/prompt-engineering/write-better-code-with-ai) — Ausgabekontrolltechniken in Code-Generierungs-Workflows anwenden',
-            '[Tool Use und Function Calling](/de/prompt-engineering/tool-use-and-function-calling) — Strukturierter Output via Tool-Definitionen und Funktionsschemata',
+            'Tool Use und Function Calling — Strukturierter Output via Tool-Definitionen und Funktionsschemata',
             '[Tokens & Token Economics](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Token-Kosten für Constrained Decoding und zweistufige Pipelines verstehen',
-            '[Fehlerbehandlung in LLM-Anwendungen](/de/prompt-engineering/error-handling-llm) — Fehlerhaften Output in Produktionssystemen erkennen und beheben',
+            'Fehlerbehandlung in LLM-Anwendungen — Fehlerhaften Output in Produktionssystemen erkennen und beheben',
           ],
         },
 
@@ -1035,11 +1035,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lecturas relacionadas',
           items: [
             '[¿Qué es el prompt engineering?](/es/prompt-engineering/what-is-prompt-engineering) — principios fundamentales detrás del diseño de instrucciones de IA estructuradas',
-            '[Temperature y Top-P explicados](/es/prompt-engineering/temperature-and-top-p) — análisis profundo de los dos parámetros primarios de aleatoriedad',
+            '[Temperature y Top-P explicados](/es/prompt-engineering/temperature-and-top-p-control-ai-creativity) — análisis profundo de los dos parámetros primarios de aleatoriedad',
             '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — aplicando técnicas de control de salida en workflows de generación de código',
-            '[Tool use y function calling](/es/prompt-engineering/tool-use-and-function-calling) — salida estructurada vía definiciones de herramientas y schemas de función',
+            'Tool use y function calling — salida estructurada vía definiciones de herramientas y schemas de función',
             '[Tokens y economía de tokens](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — comprensión de los costos de tokens para constrained decoding y pipelines de dos etapas',
-            '[Manejo de errores en aplicaciones LLM](/es/prompt-engineering/error-handling-llm) — detección y recuperación de salida malformada en sistemas de producción',
+            'Manejo de errores en aplicaciones LLM — detección y recuperación de salida malformada en sistemas de producción',
           ],
         },
         howToStart: {
@@ -1370,9 +1370,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'قراءات ذات صلة',
           items: [
             '[ما هي هندسة الموجّهات؟](/ar/prompt-engineering/what-is-prompt-engineering) — المبادئ الأساسية وراء تصميم تعليمات الذكاء الاصطناعي المنظّمة',
-            '[درجة الحرارة وTop-P موضّحَان](/ar/prompt-engineering/temperature-and-top-p) — تحليل معمّق للمعاملين الرئيسيين للعشوائية',
+            '[درجة الحرارة وTop-P موضّحَان](/ar/prompt-engineering/temperature-and-top-p-control-ai-creativity) — تحليل معمّق للمعاملين الرئيسيين للعشوائية',
             '[اكتب كودًا أفضل بالذكاء الاصطناعي](/ar/prompt-engineering/write-better-code-with-ai) — تطبيق تقنيات التحكم في المخرجات في سير عمل توليد الكود',
-            '[استخدام الأدوات واستدعاء الوظائف](/ar/prompt-engineering/tool-use-and-function-calling) — المخرجات المنظّمة عبر تعريفات الأدوات ومخططات الوظائف',
+            'استخدام الأدوات واستدعاء الوظائف — المخرجات المنظّمة عبر تعريفات الأدوات ومخططات الوظائف',
             '[الرموز واقتصادياتها](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — فهم تكاليف الرموز للفك المقيّد ومسارات المرحلتين',
           ],
         },
@@ -1699,11 +1699,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Leituras relacionadas',
           items: [
             '[O que é prompt engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — princípios fundamentais por trás do design de instruções de IA estruturadas',
-            '[Temperature e Top-P explicados](/pt/prompt-engineering/temperature-and-top-p) — análise profunda dos dois parâmetros primários de aleatoriedade',
+            '[Temperature e Top-P explicados](/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity) — análise profunda dos dois parâmetros primários de aleatoriedade',
             '[Escreva melhor código com IA](/pt/prompt-engineering/write-better-code-with-ai) — aplicando técnicas de controle de saída em workflows de geração de código',
-            '[Tool use e function calling](/pt/prompt-engineering/tool-use-and-function-calling) — saída estruturada via definições de ferramentas e schemas de função',
+            'Tool use e function calling — saída estruturada via definições de ferramentas e schemas de função',
             '[Tokens e economia de tokens](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — compreensão dos custos de tokens para constrained decoding e pipelines de duas etapas',
-            '[Tratamento de erros em aplicações LLM](/pt/prompt-engineering/error-handling-llm) — detecção e recuperação de saída malformada em sistemas de produção',
+            'Tratamento de erros em aplicações LLM — detecção e recuperação de saída malformada em sistemas de produção',
           ],
         },
         howToStart: {
@@ -2063,11 +2063,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lectures complémentaires',
           items: [
             '[Qu\'est-ce que le prompt engineering ?](/fr/prompt-engineering/what-is-prompt-engineering) — principes fondamentaux de la conception d\'instructions IA structurées',
-            '[Temperature et Top-P expliqués](/fr/prompt-engineering/temperature-and-top-p) — analyse approfondie des deux paramètres d\'aléatoire principaux',
+            '[Temperature et Top-P expliqués](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — analyse approfondie des deux paramètres d\'aléatoire principaux',
             '[Écrire de meilleur code avec l\'IA](/fr/prompt-engineering/write-better-code-with-ai) — techniques de contrôle des sorties dans les workflows de génération de code',
-            '[Tool Use et Function Calling](/fr/prompt-engineering/tool-use-and-function-calling) — sortie structurée via les définitions de tools et les schémas de fonctions',
+            'Tool Use et Function Calling — sortie structurée via les définitions de tools et les schémas de fonctions',
             '[Tokens et économie des tokens](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — comprendre les coûts en tokens pour le decoding contraint et les pipelines en deux étapes',
-            '[Gestion des erreurs dans les applications LLM](/fr/prompt-engineering/error-handling-llm) — détecter et récupérer les sorties malformées en production',
+            'Gestion des erreurs dans les applications LLM — détecter et récupérer les sorties malformées en production',
           ],
         },
 
@@ -2431,11 +2431,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '関連記事',
           items: [
             '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — 構造化されたAI指示設計の基本原則',
-            '[TemperatureとTop-Pの解説](/ja/prompt-engineering/temperature-and-top-p) — 2つの主要なランダム性パラメータの詳細解説',
+            '[TemperatureとTop-Pの解説](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 2つの主要なランダム性パラメータの詳細解説',
             '[AIでより良いコードを書く](/ja/prompt-engineering/write-better-code-with-ai) — コード生成ワークフローにおける出力制御テクニック',
-            '[Tool UseとFunction Calling](/ja/prompt-engineering/tool-use-and-function-calling) — ツール定義と関数スキーマによる構造化出力',
+            'Tool UseとFunction Calling — ツール定義と関数スキーマによる構造化出力',
             '[トークンとトークンエコノミクス](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 制約デコードと2段階パイプラインのトークンコスト理解',
-            '[LLMアプリケーションのエラー処理](/ja/prompt-engineering/error-handling-llm) — 本番システムで不正な出力を検出・回復する方法',
+            'LLMアプリケーションのエラー処理 — 本番システムで不正な出力を検出・回復する方法',
           ],
         },
 
@@ -2799,11 +2799,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '延伸阅读',
           items: [
             '[什么是Prompt Engineering？](/zh/prompt-engineering/what-is-prompt-engineering) — AI结构化指令设计的基础原则',
-            '[Temperature和Top-P详解](/zh/prompt-engineering/temperature-and-top-p) — 两个主要随机性参数的深入解析',
+            '[Temperature和Top-P详解](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 两个主要随机性参数的深入解析',
             '[用AI编写更好的代码](/zh/prompt-engineering/write-better-code-with-ai) — 将输出控制技术应用于代码生成工作流',
-            '[工具使用和函数调用](/zh/prompt-engineering/tool-use-and-function-calling) — 通过工具定义和函数Schema实现结构化输出',
+            '工具使用和函数调用 — 通过工具定义和函数Schema实现结构化输出',
             '[词元与词元经济学](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 理解受限解码和两阶段流水线的词元成本',
-            '[LLM应用中的错误处理](/zh/prompt-engineering/error-handling-llm) — 在生产系统中检测和恢复格式错误输出',
+            'LLM应用中的错误处理 — 在生产系统中检测和恢复格式错误输出',
           ],
         },
 
@@ -3160,11 +3160,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '관련 자료',
           items: [
             '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 구조화된 AI 지시 설계의 기본 원칙',
-            '[Temperature와 Top-P 설명](/ko/prompt-engineering/temperature-and-top-p) — 두 가지 주요 무작위성 파라미터에 대한 심층 분석',
+            '[Temperature와 Top-P 설명](/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 두 가지 주요 무작위성 파라미터에 대한 심층 분석',
             '[AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai) — 코드 생성 워크플로우에서 출력 제어 기술 적용',
-            '[도구 사용 및 함수 호출](/ko/prompt-engineering/tool-use-and-function-calling) — 도구 정의와 함수 스키마를 통한 구조화 출력',
+            '도구 사용 및 함수 호출 — 도구 정의와 함수 스키마를 통한 구조화 출력',
             '[토큰과 토큰 경제학](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 제약 디코딩과 2단계 파이프라인의 토큰 비용 이해',
-            '[LLM 애플리케이션의 오류 처리](/ko/prompt-engineering/error-handling-llm) — 프로덕션 시스템에서 잘못된 출력 감지 및 복구',
+            'LLM 애플리케이션의 오류 처리 — 프로덕션 시스템에서 잘못된 출력 감지 및 복구',
           ],
         },
 

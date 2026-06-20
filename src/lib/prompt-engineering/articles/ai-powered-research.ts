@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'For research tasks involving fewer than 20 papers, all three models handle the full context. For systematic reviews covering 50—200 papers, Gemini 3.1 Pro\'s 1-million-token context window is the only current model capable of processing the full corpus in a single session.',
             'For truly large corpora (500+ papers), a RAG pipeline — where papers are chunked, embedded in a vector database, and retrieved by semantic similarity — is the correct architecture, not direct context injection.',
-            'For a deeper explanation of context windows and why models lose information mid-context, see [context windows explained](/prompt-engineering/context-window-limits-explained).',
+            'For a deeper explanation of context windows and why models lose information mid-context, see [context windows explained](/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
         },
         lostInMiddle: {
@@ -967,7 +967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Für Forschungsaufgaben mit weniger als 20 Papieren verarbeiten alle drei Modelle den vollständigen Context. Für Systematic Reviews, die 50–200 Papiere abdecken, ist Gemini 3.1 Pros 1-Million-Token Context Window das einzige aktuelle Modell, das die vollständige Kopie in einer Sitzung verarbeitet.',
             'Für wirklich große Korpora (500+ Papiere) ist eine RAG-Pipeline – wo Papiere geckt, in einer Vektor-Datenbank eingebettet und durch semantische Ähnlichkeit abgerufen werden – die korrekte Architektur, nicht direkter Context-Injection.',
-            'Für eine tiefere Erklärung von Context Windows und warum Modelle Informationen in der Mitte des Kontexts verlieren, siehe [Context Windows erklärt](/de/prompt-engineering/context-window-limits-explained).',
+            'Für eine tiefere Erklärung von Context Windows und warum Modelle Informationen in der Mitte des Kontexts verlieren, siehe [Context Windows erklärt](/de/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
         },
         lostInMiddle: {
@@ -1495,7 +1495,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Para tareas de investigación con menos de 20 artículos, los tres modelos procesan el contexto completo. Para revisiones sistemáticas que cubren 50–200 artículos, la ventana de contexto de 1 millón de tokens de Gemini 3.1 Pro es el único modelo actual que procesa la copia completa en una sesión.',
             'Para corpus realmente grandes (más de 500 artículos), un pipeline RAG — donde los artículos se fragmentan, se embeben en una base de datos vectorial y se recuperan por similitud semántica — es la arquitectura correcta, no la inyección directa de contexto.',
-            'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información en el medio del contexto, consulta [Ventanas de contexto explicadas](/es/prompt-engineering/context-window-limits-explained).',
+            'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información en el medio del contexto, consulta [Ventanas de contexto explicadas](/es/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
         },
         lostInMiddle: {
@@ -2024,7 +2024,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'لمهام البحث التي تضم أقل من 20 ورقة، تعالج النماذج الثلاثة السياق الكامل. لمراجعات منهجية تغطي 50 إلى 200 ورقة، نافذة السياق البالغة مليون رمز لـ Gemini 3.1 Pro هي النموذج الوحيد الحالي الذي يعالج النص الكامل في جلسة.',
             'للمجموعات الكبيرة حقًا (أكثر من 500 ورقة)، خط أنابيب RAG — حيث تُجزَّأ الأوراق وتُضمَّن في قاعدة بيانات متجهية وتُسترجَع بالتشابه الدلالي — هو البنية المعمارية الصحيحة، لا الحقن المباشر للسياق.',
-            'لشرح أعمق لنوافذ السياق ولماذا تفقد النماذج المعلومات في منتصف السياق، راجع [نوافذ السياق موضَّحة](/ar/prompt-engineering/context-window-limits-explained).',
+            'لشرح أعمق لنوافذ السياق ولماذا تفقد النماذج المعلومات في منتصف السياق، راجع [نوافذ السياق موضَّحة](/ar/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
         },
         lostInMiddle: {
@@ -2552,7 +2552,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Para tarefas de pesquisa com menos de 20 artigos, os três modelos processam o contexto completo. Para revisões sistemáticas cobrindo 50–200 artigos, a janela de contexto de 1 milhão de tokens do Gemini 3.1 Pro é o único modelo atual que processa a cópia completa em uma sessão.',
             'Para corpus realmente grandes (mais de 500 artigos), um pipeline RAG — onde os artigos são fragmentados, incorporados em um banco de dados vetorial e recuperados por similaridade semântica — é a arquitetura correta, não a injeção direta de contexto.',
-            'Para uma explicação mais profunda das janelas de contexto e por que os modelos perdem informações no meio do contexto, consulte [Janelas de contexto explicadas](/pt/prompt-engineering/context-window-limits-explained).',
+            'Para uma explicação mais profunda das janelas de contexto e por que os modelos perdem informações no meio do contexto, consulte [Janelas de contexto explicadas](/pt/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
         },
         lostInMiddle: {
@@ -3081,7 +3081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Pour les tâches de recherche impliquant moins de 20 articles, les trois modèles gèrent le contexte complet. Pour les revues systématiques couvrant 50 à 200 articles, la fenêtre de contexte de 1 million de tokens de Gemini 3.1 Pro est le seul modèle actuel capable de traiter le corpus complet en une seule session.',
             'Pour les très grands corpus (500+ articles), un pipeline RAG — où les articles sont découpés, intégrés dans une base de données vectorielle et récupérés par similarité sémantique — est l\'architecture correcte, pas l\'injection directe de contexte.',
-            'Pour une explication plus profonde des fenêtres de contexte et pourquoi les modèles perdent l\'information au milieu des longs contextes, voir [les fenêtres de contexte expliquées](/fr/prompt-engineering/context-window-limits-explained).',
+            'Pour une explication plus profonde des fenêtres de contexte et pourquoi les modèles perdent l\'information au milieu des longs contextes, voir [les fenêtres de contexte expliquées](/fr/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
         },
         lostInMiddle: {
@@ -4117,7 +4117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '20개 미만의 논문을 가진 연구 작업의 경우 세 모델 모두 전체 컨텍스트를 처리합니다. 50~200개의 논문을 포괄하는 체계적 검토의 경우 Gemini 3.1 Pro의 1백만 토큰 컨텍스트 윈도우가 단일 세션에서 전체 텍스트를 처리하는 유일한 현재 모델입니다.',
           '정말 큰 코퍼스(500개 이상의 논문)의 경우, 논문이 청크로 나뉘어 벡터 데이터베이스에 임베딩되고 의미론적 유사성으로 검색되는 RAG 파이프라인이 올바른 아키텍처입니다.',
-          '컨텍스트 윈도우와 모델이 긴 컨텍스트의 중간에서 정보를 잃는 이유에 대한 자세한 설명은 [컨텍스트 윈도우 설명](/ko/prompt-engineering/context-window-limits-explained)을 참조하십시오.',
+          '컨텍스트 윈도우와 모델이 긴 컨텍스트의 중간에서 정보를 잃는 이유에 대한 자세한 설명은 [컨텍스트 윈도우 설명](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)을 참조하십시오.',
         ],
       },
       lostInMiddle: {

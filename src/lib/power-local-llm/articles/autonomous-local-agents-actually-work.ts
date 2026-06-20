@@ -1650,9 +1650,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       relatedReading: {
         title: '関連リソース',
         items: [
-          '[ローカル LLM のベストプラクティス](/ja/power-local-llm/local-llm-best-practices) — 本番環境で安全にローカルモデルを実行するためのチェックリスト。',
-          '[METI AI ガバナンスガイドライン](/ja/power-local-llm/local-ai-governance-framework) — 日本の企業向けの AI エージェント規制フレームワーク。',
-          '[ローカル LLM ワークフロー：エンタープライズ対応](/ja/power-local-llm/local-ai-agents-business-workflows-japan-meti-compliance) — 日本の金融・医療セクター向けのコンテキスト。',
+          'ローカル LLM のベストプラクティス — 本番環境で安全にローカルモデルを実行するためのチェックリスト。',
+          'METI AI ガバナンスガイドライン — 日本の企業向けの AI エージェント規制フレームワーク。',
+          'ローカル LLM ワークフロー：エンタープライズ対応 — 日本の金融・医療セクター向けのコンテキスト。',
           '[2026 年の最高のオープンソース LLM](/ja/local-llms/best-local-llms-2026) — モデル選定のための権威的ガイド。',
           '[Power Local LLM ハブ](/power-local-llm) — ガイドとチュートリアルの完全なライブラリ。',
         ],
@@ -2571,7 +2571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[连接Ollama到数据库和API：本地代理设置2026](/zh/power-local-llm/local-ai-agents-with-mcp-2026) — 代理工作原理；数据库、文件系统、浏览器Tool的协议层。',
           '[2026年最佳本地Tool-calling模型](/zh/power-local-llm/best-local-models-tool-calling-2026) — 模型层；推荐Tool-caller基准测试。',
           '[Continue.dev vs Cline vs Aider：2026年最佳本地代理](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 代码工作比较。',
-          '[本地AI代理商业工作流和监管合规](/zh/power-local-llm/local-ai-agents-business-workflows-compliance) — 企业部署指南。',
+          '本地AI代理商业工作流和监管合规 — 企业部署指南。',
           '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 更广泛开放权重LLM概览。',
           '[Power Local LLM Hub](/power-local-llm) — 代码、RAG、代理、创意工作完整指南库。',
         ],

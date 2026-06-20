@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Structured Output and JSON Mode](/prompt-engineering/structured-output-json-mode) — How JSON mode works on OpenAI, Anthropic, and Google APIs; when to use format enforcement vs. schema validation.',
+          '[Structured Output and JSON Mode](/prompt-engineering/structured-output-and-json-mode) — How JSON mode works on OpenAI, Anthropic, and Google APIs; when to use format enforcement vs. schema validation.',
           '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Risks when accepting user input to structured prompts; sanitization strategies.',
           '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — Measure accuracy, consistency, and instruction-following on your structured output schemas.',
           '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Run the same test set on GPT, Claude, and Gemini; compare pass rates.',
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[Structured Output und JSON-Modus](/de/prompt-engineering/structured-output-json-mode) — Wie JSON-Modus auf OpenAI-, Anthropic- und Google-APIs funktioniert; wann Format-Durchsetzung vs. Schema-Validierung.',
+          '[Structured Output und JSON-Modus](/de/prompt-engineering/structured-output-and-json-mode) — Wie JSON-Modus auf OpenAI-, Anthropic- und Google-APIs funktioniert; wann Format-Durchsetzung vs. Schema-Validierung.',
           '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Risiken bei der Akzeptierung von Benutzereingaben in strukturierten Prompts; Bereinigungsstrategien.',
           '[Wie man Prompt-Qualität bewertet](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Genauigkeit, Konsistenz und Instruction-Following auf Structured Output-Schemas messen.',
           '[Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Denselben Test-Satz auf GPT, Claude und Gemini ausführen; Bestehensraten vergleichen.',
@@ -926,7 +926,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Structured Output y JSON Mode](/es/prompt-engineering/structured-output-json-mode) — Cómo funciona el modo JSON en APIs de OpenAI, Anthropic y Google; cuándo usar cumplimiento de formato vs validación de esquema.',
+          '[Structured Output y JSON Mode](/es/prompt-engineering/structured-output-and-json-mode) — Cómo funciona el modo JSON en APIs de OpenAI, Anthropic y Google; cuándo usar cumplimiento de formato vs validación de esquema.',
           '[Prompt Injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Riesgos al aceptar entrada de usuario en prompts estructurados; estrategias de sanitización.',
           '[Cómo evaluar la calidad de prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Mide precisión, consistencia y seguimiento de instrucciones en tus esquemas de structured output.',
           '[Cómo testear prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Ejecuta el mismo conjunto de tests en GPT, Claude y Gemini; compara tasas de paso.',
@@ -1257,7 +1257,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Structured Output e JSON Mode](/pt/prompt-engineering/structured-output-json-mode) — Como o modo JSON funciona nas APIs da OpenAI, Anthropic e Google; quando usar conformidade de formato vs validação de esquema.',
+          '[Structured Output e JSON Mode](/pt/prompt-engineering/structured-output-and-json-mode) — Como o modo JSON funciona nas APIs da OpenAI, Anthropic e Google; quando usar conformidade de formato vs validação de esquema.',
           '[Prompt Injection e segurança](/pt/prompt-engineering/prompt-injection-and-security) — Riscos ao aceitar entrada de usuário em prompts estruturados; estratégias de sanitização.',
           '[Como avaliar a qualidade de prompts](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — Meça precisão, consistência e seguimento de instruções em seus esquemas de structured output.',
           '[Como testar prompts entre modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Execute o mesmo conjunto de testes no GPT, Claude e Gemini; compare taxas de aprovação.',
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Structured Output et mode JSON](/fr/prompt-engineering/structured-output-json-mode) — Comment fonctionne le mode JSON sur les APIs OpenAI, Anthropic et Google ; quand utiliser l\'application de format vs la validation de schéma.',
+          '[Structured Output et mode JSON](/fr/prompt-engineering/structured-output-and-json-mode) — Comment fonctionne le mode JSON sur les APIs OpenAI, Anthropic et Google ; quand utiliser l\'application de format vs la validation de schéma.',
           '[Injection de prompt et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Risques lors de l\'acceptation de saisies utilisateur dans des prompts structurés ; stratégies d\'assainissement.',
           '[Évaluer la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Mesurer la précision, la cohérence et le suivi des instructions sur vos schémas Structured Output.',
           '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécuter le même ensemble de tests sur GPT, Claude et Gemini ; comparer les taux de réussite.',
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
-          '[Structured OutputとJSONモード](/ja/prompt-engineering/structured-output-json-mode) — OpenAI、Anthropic、Google APIでのJSONモードの仕組み；フォーマット強制とスキーマバリデーションの使い分け。',
+          '[Structured OutputとJSONモード](/ja/prompt-engineering/structured-output-and-json-mode) — OpenAI、Anthropic、Google APIでのJSONモードの仕組み；フォーマット強制とスキーマバリデーションの使い分け。',
           '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 構造化プロンプトでユーザー入力を受け入れる際のリスク；サニタイズ戦略。',
           '[プロンプト品質の評価方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — Structured Outputスキーマの精度、一貫性、指示遵守を測定。',
           '[モデル間でプロンプトをテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT、Claude、Geminiで同じテストセットを実行；合格率を比較。',
@@ -2222,7 +2222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[结构化输出与JSON模式](/zh/prompt-engineering/structured-output-json-mode) — OpenAI、Anthropic、Google API的JSON模式工作原理；格式强制与模式验证的使用场景。',
+          '[结构化输出与JSON模式](/zh/prompt-engineering/structured-output-and-json-mode) — OpenAI、Anthropic、Google API的JSON模式工作原理；格式强制与模式验证的使用场景。',
           '[Prompt注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 在结构化Prompt中接受用户输入的风险；净化策略。',
           '[如何评估Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 在结构化输出模式上测量准确性、一致性和指令遵循度。',
           '[如何跨模型测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT、Claude和Gemini上运行相同测试集；比较通过率。',
@@ -2564,7 +2564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          '[Structured Output و JSON Mode](/ar/prompt-engineering/structured-output-json-mode) — كيف يعمل وضع JSON في APIs لـ OpenAI و Anthropic و Google؛ متى تستخدم الامتثال للصيغة مقابل التحقق من المخطط.',
+          '[Structured Output و JSON Mode](/ar/prompt-engineering/structured-output-and-json-mode) — كيف يعمل وضع JSON في APIs لـ OpenAI و Anthropic و Google؛ متى تستخدم الامتثال للصيغة مقابل التحقق من المخطط.',
           '[حقن الـ Prompt والأمان](/ar/prompt-engineering/prompt-injection-and-security) — مخاطر قبول مدخلات المستخدم في prompts منظمة؛ استراتيجيات التعقيم.',
           '[كيف تُقيّم جودة الـ Prompt](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — قِس الدقة والاتساق واتباع التعليمات في مخططات structured output الخاصة بك.',
           '[كيف تختبر الـ Prompts عبر النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — شغّل نفس مجموعة الاختبارات عبر GPT و Claude و Gemini؛ قارن معدلات النجاح.',
@@ -2897,7 +2897,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[Structured Output 및 JSON Mode](/ko/prompt-engineering/structured-output-json-mode) — OpenAI, Anthropic, Google API에서 JSON 모드 작동 방식; 형식 준수 대 스키마 유효성 검사를 사용하는 시점.',
+          '[Structured Output 및 JSON Mode](/ko/prompt-engineering/structured-output-and-json-mode) — OpenAI, Anthropic, Google API에서 JSON 모드 작동 방식; 형식 준수 대 스키마 유효성 검사를 사용하는 시점.',
           '[프롬프트 인젝션 및 보안](/ko/prompt-engineering/prompt-injection-and-security) — 구조화된 프롬프트에서 사용자 입력을 수락할 때의 위험; 새니타이제이션 전략.',
           '[프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — structured output 스키마에서 정확도, 일관성 및 지시 사항 준수를 측정하십시오.',
           '[모델 간 프롬프트 테스트 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT, Claude, Gemini에서 동일한 테스트 세트를 실행하고 통과율을 비교하십시오.',

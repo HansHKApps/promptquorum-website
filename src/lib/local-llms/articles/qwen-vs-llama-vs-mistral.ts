@@ -1927,7 +1927,7 @@ schema: {
             '[Prompt Engineering : Guide complet](/fr/prompt-engineering/what-is-prompt-engineering) — Maximiser qualité réponses',
             '[GPT vs Claude vs Gemini : Comment choisir](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Propriétaire vs local',
             '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — Technique pour améliorer raisonnement',
-            '[Techniques avancées prompting](/fr/prompt-engineering/advanced-prompt-techniques) — Few-shot, system messages',
+            'Techniques avancées prompting — Few-shot, system messages',
             '[Constrained Prompting](/fr/prompt-engineering/constrained-prompting) — Formats structurés, JSON',
           ],
         },

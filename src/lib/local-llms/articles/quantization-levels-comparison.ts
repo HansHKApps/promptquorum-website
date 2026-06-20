@@ -1587,8 +1587,8 @@ schema: {
           title: '関連記事',
           items: [
             '[VRAM要件ガイド](/ja/local-llms/how-much-vram-local-llm)',
-            '[Llama 3 vs Mistral](/ja/local-llms/llama-3-vs-mistral)',
-            '[ローカルLLMハードウェア](/ja/local-llms/local-llm-hardware-guide)',
+            'Llama 3 vs Mistral',
+            '[ローカルLLMハードウェア](/ja/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {
@@ -1727,8 +1727,8 @@ schema: {
           title: '相关阅读',
           items: [
             '[VRAM需求指南](/zh/local-llms/how-much-vram-local-llm)',
-            '[Llama 3 vs Mistral](/zh/local-llms/llama-3-vs-mistral)',
-            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)',
+            'Llama 3 vs Mistral',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {

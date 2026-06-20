@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         consensusTest: {
           title: 'PromptQuorum Consensus Test',
-          content: '**Tested in PromptQuorum — 15 hallucination-prone prompts dispatched to GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro:** GPT-5.5 fabricated 1 citation completely; Claude Opus 4.8 declined to cite unverified papers; Gemini 3.5 Pro cited 3 real papers but 1 with an incorrect year. Only 1 citation appeared in all three model responses. This test demonstrates that consensus across models is a meaningful signal of reliability—and that single-model answers are more likely to contain fabrications.\n\nPromptQuorum automates this: send one prompt to 25+ AI models simultaneously, run consensus analysis across all responses, and get a verdict on which claims have high agreement (more likely reliable) and which have low agreement (worth investigating further). The tool flags exactly which claims contradict, surfaces claims that appear in only one or two responses, and weights model responses by capability—transforming hallucination detection from educated guessing into structured, data-driven analysis.\n\nSee how [multi-model AI reduces hallucinations](/prompt-engineering/consensus-scoring) for a deeper technical explanation.',
+          content: '**Tested in PromptQuorum — 15 hallucination-prone prompts dispatched to GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro:** GPT-5.5 fabricated 1 citation completely; Claude Opus 4.8 declined to cite unverified papers; Gemini 3.5 Pro cited 3 real papers but 1 with an incorrect year. Only 1 citation appeared in all three model responses. This test demonstrates that consensus across models is a meaningful signal of reliability—and that single-model answers are more likely to contain fabrications.\n\nPromptQuorum automates this: send one prompt to 25+ AI models simultaneously, run consensus analysis across all responses, and get a verdict on which claims have high agreement (more likely reliable) and which have low agreement (worth investigating further). The tool flags exactly which claims contradict, surfaces claims that appear in only one or two responses, and weights model responses by capability—transforming hallucination detection from educated guessing into structured, data-driven analysis.\n\nSee how multi-model AI reduces hallucinations for a deeper technical explanation.',
         },
 
         globalPerspective: {
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         criticalPrinciple: {
-          content: '**Critical principle:** Even with perfect prompts and consensus checking, human verification remains essential for high-stakes decisions. Use AI as a time-saver and first-pass tool, not as a replacement for expert judgment or primary source verification.\n\nLearn how [self-critique techniques](/prompt-engineering/self-critique-prompting) can further reduce errors in complex reasoning tasks.',
+          content: '**Critical principle:** Even with perfect prompts and consensus checking, human verification remains essential for high-stakes decisions. Use AI as a time-saver and first-pass tool, not as a replacement for expert judgment or primary source verification.\n\nLearn how self-critique techniques can further reduce errors in complex reasoning tasks.',
         },
 
         checklist: {
@@ -314,8 +314,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational concepts behind structuring prompts',
-            '[Multi-Model Consensus Scoring](/prompt-engineering/consensus-scoring) — how comparing models detects disagreements and unreliability',
-            '[Self-Critique Prompting Techniques](/prompt-engineering/self-critique-prompting) — how to get models to catch their own errors',
+            'Multi-Model Consensus Scoring — how comparing models detects disagreements and unreliability',
+            'Self-Critique Prompting Techniques — how to get models to catch their own errors',
             '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
           ],
         },
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         consensusTest: {
           title: 'PromptQuorum Consensus Test',
-          content: '**Getestet in PromptQuorum – 15 halluzinationsanfällige Prompts an GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro gesendet:** GPT-5.5 erfand 1 Zitat komplett; Claude Opus 4.8 lehnte ab, unverifizierte Paper zu zitieren; Gemini 3.5 Pro zitierte 3 echte Paper, aber 1 mit falscher Jahr. Nur 1 Zitat erschien in allen drei Modell-Antworten. Dieser Test zeigt, dass Consensus über Modelle ein aussagekräftiges Signal für Zuverlässigkeit ist – und dass Single-Modell-Antworten mehr Erfindungen enthalten.\n\nPromptQuorum automatisiert dies: sende einen Prompt an 25+ KI-Modelle gleichzeitig, führe Consensus-Analyse über alle Antworten durch und erhalte ein Urteil darüber, welche Aussagen hohe Übereinstimmung haben (wahrscheinlich zuverlässig) und welche niedrige Übereinstimmung haben (wert, nachzuschlagen). Das Tool markiert genau, welche Aussagen widersprüchlich sind, zeigt Aussagen auf, die nur in ein oder zwei Antworten erscheinen, und gewichtet Model-Antworten nach Fähigkeit – und transformiert Halluzinations-Erkennung von Vermutungen in strukturierte, datengestützte Analyse.\n\nSiehe, wie [Multi-Modell-KI Halluzinationen reduziert](/prompt-engineering/consensus-scoring) für eine tiefere technische Erklärung.',
+          content: '**Getestet in PromptQuorum – 15 halluzinationsanfällige Prompts an GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro gesendet:** GPT-5.5 erfand 1 Zitat komplett; Claude Opus 4.8 lehnte ab, unverifizierte Paper zu zitieren; Gemini 3.5 Pro zitierte 3 echte Paper, aber 1 mit falscher Jahr. Nur 1 Zitat erschien in allen drei Modell-Antworten. Dieser Test zeigt, dass Consensus über Modelle ein aussagekräftiges Signal für Zuverlässigkeit ist – und dass Single-Modell-Antworten mehr Erfindungen enthalten.\n\nPromptQuorum automatisiert dies: sende einen Prompt an 25+ KI-Modelle gleichzeitig, führe Consensus-Analyse über alle Antworten durch und erhalte ein Urteil darüber, welche Aussagen hohe Übereinstimmung haben (wahrscheinlich zuverlässig) und welche niedrige Übereinstimmung haben (wert, nachzuschlagen). Das Tool markiert genau, welche Aussagen widersprüchlich sind, zeigt Aussagen auf, die nur in ein oder zwei Antworten erscheinen, und gewichtet Model-Antworten nach Fähigkeit – und transformiert Halluzinations-Erkennung von Vermutungen in strukturierte, datengestützte Analyse.\n\nSiehe, wie Multi-Modell-KI Halluzinationen reduziert für eine tiefere technische Erklärung.',
         },
         globalPerspective: {
           title: 'Globale Perspektiven auf Halluzinationsgovernance',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         criticalPrinciple: {
-          content: '**Kritisches Prinzip:** Selbst mit perfekten Prompts und Consensus-Überprüfung bleibt menschliche Verifikation für hochriskante Entscheidungen wesentlich. Verwende KI als Zeit-sparer und First-Pass-Tool, nicht als Ersatz für Expertenurteil oder primäre Quellenverifikation.\n\nLerne, wie [Self-Critique-Techniken](/prompt-engineering/self-critique-prompting) Fehler in komplexen Denkaufgaben weiter reduzieren können.',
+          content: '**Kritisches Prinzip:** Selbst mit perfekten Prompts und Consensus-Überprüfung bleibt menschliche Verifikation für hochriskante Entscheidungen wesentlich. Verwende KI als Zeit-sparer und First-Pass-Tool, nicht als Ersatz für Expertenurteil oder primäre Quellenverifikation.\n\nLerne, wie Self-Critique-Techniken Fehler in komplexen Denkaufgaben weiter reduzieren können.',
         },
         checklist: {
           title: 'Praktische Checkliste: Bevor du einen kritischen Prompt sendest',
@@ -583,8 +583,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Weiterführendes Material',
           items: [
             '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) – die Grundkonzepte hinter der Strukturierung von Prompts',
-            '[Multi-Modell Consensus Scoring](/prompt-engineering/consensus-scoring) – wie das Vergleichen von Modellen Uneinigkeiten und Unzuverlässigkeit erkennt',
-            '[Self-Critique Prompting Techniken](/prompt-engineering/self-critique-prompting) – wie man Modelle dazu bringt, ihre eigenen Fehler zu fangen',
+            'Multi-Modell Consensus Scoring – wie das Vergleichen von Modellen Uneinigkeiten und Unzuverlässigkeit erkennt',
+            'Self-Critique Prompting Techniken – wie man Modelle dazu bringt, ihre eigenen Fehler zu fangen',
           ],
         },
         sources: {
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Material relacionado',
           items: [
             '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — los conceptos básicos detrás de la estructuración de prompts',
-            '[Self-Critique Prompting Techniques](/es/prompt-engineering/self-critique-prompting) — cómo hacer que los modelos atrapen sus propios errores',
+            'Self-Critique Prompting Techniques — cómo hacer que los modelos atrapen sus propios errores',
           ],
         },
         sources: {
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'مواد ذات صلة',
           items: [
             '[ما هي هندسة التعليمات؟](/ar/prompt-engineering/what-is-prompt-engineering) — المفاهيم الأساسية وراء هيكلة التعليمات',
-            '[تقنيات النقد الذاتي في التعليمات](/ar/prompt-engineering/self-critique-prompting) — كيفية جعل النماذج تكتشف أخطاءها الخاصة',
+            'تقنيات النقد الذاتي في التعليمات — كيفية جعل النماذج تكتشف أخطاءها الخاصة',
           ],
         },
         sources: {
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         consensusTest: {
           title: 'Teste de consenso do PromptQuorum',
-          content: '**Testado no PromptQuorum — 15 prompts propensos a alucinações enviados para GPT-5.5, Claude Opus 4.8 e Gemini 3.5 Pro:** GPT-5.5 fabricou 1 citação completamente; Claude Opus 4.8 recusou-se a citar artigos não verificados; Gemini 3.5 Pro citou 3 artigos reais mas 1 com o ano incorreto. Apenas 1 citação apareceu nas três respostas dos modelos. Este teste demonstra que o consenso entre os modelos é um sinal significativo de confiabilidade — e que as respostas de modelos únicos têm maior probabilidade de conter fabricações.\n\nO PromptQuorum automatiza isso: envie um prompt para 25+ modelos de IA simultaneamente, execute análise de consenso em todas as respostas e obtenha um veredicto sobre quais afirmações têm alto acordo (mais provavelmente confiáveis) e quais têm baixo acordo (valem investigação adicional). A ferramenta sinaliza exatamente quais afirmações contradizem, revela afirmações que aparecem em apenas uma ou duas respostas e pondera as respostas dos modelos por capacidade — transformando a detecção de alucinações de suposições em análise estruturada baseada em dados.\n\nVeja como [a IA multi-modelo reduz alucinações](/prompt-engineering/consensus-scoring) para uma explicação técnica mais profunda.',
+          content: '**Testado no PromptQuorum — 15 prompts propensos a alucinações enviados para GPT-5.5, Claude Opus 4.8 e Gemini 3.5 Pro:** GPT-5.5 fabricou 1 citação completamente; Claude Opus 4.8 recusou-se a citar artigos não verificados; Gemini 3.5 Pro citou 3 artigos reais mas 1 com o ano incorreto. Apenas 1 citação apareceu nas três respostas dos modelos. Este teste demonstra que o consenso entre os modelos é um sinal significativo de confiabilidade — e que as respostas de modelos únicos têm maior probabilidade de conter fabricações.\n\nO PromptQuorum automatiza isso: envie um prompt para 25+ modelos de IA simultaneamente, execute análise de consenso em todas as respostas e obtenha um veredicto sobre quais afirmações têm alto acordo (mais provavelmente confiáveis) e quais têm baixo acordo (valem investigação adicional). A ferramenta sinaliza exatamente quais afirmações contradizem, revela afirmações que aparecem em apenas uma ou duas respostas e pondera as respostas dos modelos por capacidade — transformando a detecção de alucinações de suposições em análise estruturada baseada em dados.\n\nVeja como a IA multi-modelo reduz alucinações para uma explicação técnica mais profunda.',
         },
         globalPerspective: {
           title: 'Perspectivas globais sobre governança de alucinações',
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         criticalPrinciple: {
-          content: '**Princípio crítico:** Mesmo com prompts perfeitos e verificação de consenso, a verificação humana permanece essencial para decisões de alto risco. Use a IA como uma ferramenta de economia de tempo e primeira passagem, não como substituta do julgamento de especialistas ou verificação de fontes primárias.\n\nAprenda como [técnicas de autocrítica](/prompt-engineering/self-critique-prompting) podem reduzir ainda mais os erros em tarefas de raciocínio complexo.',
+          content: '**Princípio crítico:** Mesmo com prompts perfeitos e verificação de consenso, a verificação humana permanece essencial para decisões de alto risco. Use a IA como uma ferramenta de economia de tempo e primeira passagem, não como substituta do julgamento de especialistas ou verificação de fontes primárias.\n\nAprenda como técnicas de autocrítica podem reduzir ainda mais os erros em tarefas de raciocínio complexo.',
         },
         checklist: {
           title: 'Lista de verificação prática: antes de enviar um prompt crítico',
@@ -1239,8 +1239,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Leitura relacionada',
           items: [
             '[O que é Prompt Engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — os conceitos fundamentais por trás da estruturação de prompts',
-            '[Pontuação de Consenso Multi-Modelo](/pt/prompt-engineering/consensus-scoring) — como comparar modelos detecta discordâncias e falta de confiabilidade',
-            '[Técnicas de Prompting de Autocrítica](/pt/prompt-engineering/self-critique-prompting) — como fazer os modelos detectarem seus próprios erros',
+            'Pontuação de Consenso Multi-Modelo — como comparar modelos detecta discordâncias e falta de confiabilidade',
+            'Técnicas de Prompting de Autocrítica — como fazer os modelos detectarem seus próprios erros',
             '[Limitações da IA: O que os LLMs não podem fazer](/pt/prompt-engineering/ai-limitations-what-llms-cant-do) — as oito restrições estruturais que todo LLM compartilha e a solução de engenharia para cada uma',
           ],
         },
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         consensusTest: {
           title: 'Test de consensus PromptQuorum',
-          content: '**Testé dans PromptQuorum – 15 prompts sujets aux hallucinations envoyés à GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro:** GPT-5.5 a complètement inventé 1 citation; Claude Opus 4.8 a refusé de citer des articles non vérifiés; Gemini 3.5 Pro a cité 3 articles réels mais 1 avec une année incorrecte. Seulement 1 citation apparaît dans les trois réponses du modèle. Ce test démontre que le consensus entre les modèles est un signal significatif de fiabilité – et que les réponses de modèle unique sont plus susceptibles de contenir des inventions.\n\nPromptQuorum automatise cela: envoyez un prompt à 25+ modèles IA simultanément, exécutez l\'analyse de consensus sur toutes les réponses, et obtenez un jugement sur les affirmations ayant un accord élevé (probablement fiable) et lesquels ont un accord faible (digne d\'être enquêté). L\'outil signale exactement quelles affirmations se contredisent, identifie les affirmations qui n\'apparaissent que dans une ou deux réponses, et ponde les réponses du modèle par la capacité – transformant la détection d\'hallucination de suppositions dans l\'analyse structurée basée sur les données.\n\nVoir comment [l\'IA multi-modèles réduit les hallucinations](/prompt-engineering/consensus-scoring) pour une explication technique plus profonde.',
+          content: '**Testé dans PromptQuorum – 15 prompts sujets aux hallucinations envoyés à GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro:** GPT-5.5 a complètement inventé 1 citation; Claude Opus 4.8 a refusé de citer des articles non vérifiés; Gemini 3.5 Pro a cité 3 articles réels mais 1 avec une année incorrecte. Seulement 1 citation apparaît dans les trois réponses du modèle. Ce test démontre que le consensus entre les modèles est un signal significatif de fiabilité – et que les réponses de modèle unique sont plus susceptibles de contenir des inventions.\n\nPromptQuorum automatise cela: envoyez un prompt à 25+ modèles IA simultanément, exécutez l\'analyse de consensus sur toutes les réponses, et obtenez un jugement sur les affirmations ayant un accord élevé (probablement fiable) et lesquels ont un accord faible (digne d\'être enquêté). L\'outil signale exactement quelles affirmations se contredisent, identifie les affirmations qui n\'apparaissent que dans une ou deux réponses, et ponde les réponses du modèle par la capacité – transformant la détection d\'hallucination de suppositions dans l\'analyse structurée basée sur les données.\n\nVoir comment l\'IA multi-modèles réduit les hallucinations pour une explication technique plus profonde.',
         },
         globalPerspective: {
           title: 'Perspectives mondiales sur la gouvernance des hallucinations',
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         criticalPrinciple: {
-          content: '**Principe critique:** Même avec des prompts parfaits et une vérification du consensus, la vérification humaine reste essentielle pour les décisions à haut risque. Utilisez l\'IA comme un économiseur de temps et un outil de première passe, pas comme un remplacement du jugement d\'expert ou de la vérification des sources primaires.\n\nApprenez comment [les techniques d\'autocritique](/prompt-engineering/self-critique-prompting) peuvent réduire davantage les erreurs dans les tâches de raisonnement complexe.',
+          content: '**Principe critique:** Même avec des prompts parfaits et une vérification du consensus, la vérification humaine reste essentielle pour les décisions à haut risque. Utilisez l\'IA comme un économiseur de temps et un outil de première passe, pas comme un remplacement du jugement d\'expert ou de la vérification des sources primaires.\n\nApprenez comment les techniques d\'autocritique peuvent réduire davantage les erreurs dans les tâches de raisonnement complexe.',
         },
         checklist: {
           title: 'Checklist pratique: avant d\'envoyer un prompt critique',
@@ -1508,8 +1508,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lectures connexes',
           items: [
             '[Qu\'est-ce que le prompt engineering?](/prompt-engineering/what-is-prompt-engineering) – les concepts fondamentaux derrière la structuration des prompts',
-            '[Consensus Scoring multi-modèles](/prompt-engineering/consensus-scoring) – comment comparer les modèles détecte les désaccords et l\'instabilité',
-            '[Techniques de prompt d\'autocritique](/prompt-engineering/self-critique-prompting) – comment obtenir des modèles pour attraper leurs propres erreurs',
+            'Consensus Scoring multi-modèles – comment comparer les modèles détecte les désaccords et l\'instabilité',
+            'Techniques de prompt d\'autocritique – comment obtenir des modèles pour attraper leurs propres erreurs',
           ],
         },
         sources: {
@@ -1681,7 +1681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         consensusTest: {
           title: 'PromptQuorum コンセンサステスト',
-          content: '**PromptQuorumでテスト—15ハルシネーション傾向プロンプトをGPT-5.5、Claude Opus 4.8、およびGemini 3.5 Proに送信：** GPT-5.5は完全に1つの引用を作成しました。Claude Opus 4.8は未検証のペーパーを引用することを拒否しました。Gemini 3.5 Proは3つの実際のペーパーを引用しましたが、1つは年が正しくありません。1つの引用のみが3つすべてのモデル応答に表示されました。このテストは、モデル全体のコンセンサスが信頼性の有意な信号である—そして、単一モデル応答がより多くの製造を含む可能性があることを実証しています。\n\nPromptQuorumはこれを自動化します：25 +のAIモデルに同時に1つのプロンプトを送信し、すべての回答全体でコンセンサス分析を実行し、どの請求が高い合意を持っているか（おそらく信頼できる）と低い合意（さらに調査する価値がある）についての判決を得ます。ツールは、どの請求が矛盾するかを正確に標識し、1つまたは2つの応答にのみ表示される請求を表示し、機能別にモデル応答を重み付け—ハルシネーション検出を根拠のない推測から構造化された、データドリブン分析に変換します。\n\n[マルチモデルAIがハルシネーションを減らす方法](/prompt-engineering/consensus-scoring)を参照して、より深い技術的説明を行うことを参照してください。',
+          content: '**PromptQuorumでテスト—15ハルシネーション傾向プロンプトをGPT-5.5、Claude Opus 4.8、およびGemini 3.5 Proに送信：** GPT-5.5は完全に1つの引用を作成しました。Claude Opus 4.8は未検証のペーパーを引用することを拒否しました。Gemini 3.5 Proは3つの実際のペーパーを引用しましたが、1つは年が正しくありません。1つの引用のみが3つすべてのモデル応答に表示されました。このテストは、モデル全体のコンセンサスが信頼性の有意な信号である—そして、単一モデル応答がより多くの製造を含む可能性があることを実証しています。\n\nPromptQuorumはこれを自動化します：25 +のAIモデルに同時に1つのプロンプトを送信し、すべての回答全体でコンセンサス分析を実行し、どの請求が高い合意を持っているか（おそらく信頼できる）と低い合意（さらに調査する価値がある）についての判決を得ます。ツールは、どの請求が矛盾するかを正確に標識し、1つまたは2つの応答にのみ表示される請求を表示し、機能別にモデル応答を重み付け—ハルシネーション検出を根拠のない推測から構造化された、データドリブン分析に変換します。\n\nマルチモデルAIがハルシネーションを減らす方法を参照して、より深い技術的説明を行うことを参照してください。',
         },
         globalPerspective: {
           title: 'ハルシネーションガバナンスのグローバルパースペクティブ',
@@ -1699,7 +1699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         criticalPrinciple: {
-          content: '**重要な原則：**完全なプロンプトとコンセンサスチェックであっても、人的検証は高リスク決定に不可欠です。AIを時間節約とファーストパスツール使用し、エキスパートジャッジメントまたはプライマリソース検証の交換ではなく。\n\n[自己批評技術](/prompt-engineering/self-critique-prompting)が複雑な推論タスクでエラーをさらに削減する方法を学びます。',
+          content: '**重要な原則：**完全なプロンプトとコンセンサスチェックであっても、人的検証は高リスク決定に不可欠です。AIを時間節約とファーストパスツール使用し、エキスパートジャッジメントまたはプライマリソース検証の交換ではなく。\n\n自己批評技術が複雑な推論タスクでエラーをさらに削減する方法を学びます。',
         },
         checklist: {
           title: '実践的なチェックリスト：重大なプロンプトを送信する前に',
@@ -1775,8 +1775,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '関連読書',
           items: [
             '[プロンプトエンジニアリングとは何ですか？](/prompt-engineering/what-is-prompt-engineering) —プロンプト構造の背後にある基本的な概念',
-            '[マルチモデルコンセンサススコアリング](/prompt-engineering/consensus-scoring) —モデルの比較が不一致と不信頼を検出する方法',
-            '[自己批評プロンプト技術](/prompt-engineering/self-critique-prompting) —モデルに独自のエラーをキャッチさせる方法',
+            'マルチモデルコンセンサススコアリング —モデルの比較が不一致と不信頼を検出する方法',
+            '自己批評プロンプト技術 —モデルに独自のエラーをキャッチさせる方法',
           ],
         },
         sources: {
@@ -1948,7 +1948,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         consensusTest: {
           title: 'PromptQuorum共识测试',
-          content: '**在PromptQuorum中测试—15个幻觉倾向的提示分派给GPT-5.5、Claude Opus 4.8和Gemini 3.5 Pro：** GPT-5.5完全编造了1项引用; Claude Opus 4.8拒绝引用未验证的论文; Gemini 3.5 Pro引用了3个真实论文，但1个年份不正确。只有1个引用出现在所有三个模型响应中。此测试表明模型间的共识是可靠性的有意义信号—并且单模型答案更可能包含虚构。\n\nPromptQuorum自动化这种：将一个提示同时发送到25+AI模型，在所有响应中运行共识分析，并获得关于哪些索赔具有高度协议（可能可靠）和低协议（值得进一步调查）的判决。该工具精确标记哪些索赔相互矛盾，表面仅在一个或两个响应中出现的索赔，并按能力加权模型响应—将幻觉检测从有根据的猜测转变为结构化的数据驱动分析。\n\n参见[多模型AI如何减少幻觉](/prompt-engineering/consensus-scoring)，获得更深层技术解释。',
+          content: '**在PromptQuorum中测试—15个幻觉倾向的提示分派给GPT-5.5、Claude Opus 4.8和Gemini 3.5 Pro：** GPT-5.5完全编造了1项引用; Claude Opus 4.8拒绝引用未验证的论文; Gemini 3.5 Pro引用了3个真实论文，但1个年份不正确。只有1个引用出现在所有三个模型响应中。此测试表明模型间的共识是可靠性的有意义信号—并且单模型答案更可能包含虚构。\n\nPromptQuorum自动化这种：将一个提示同时发送到25+AI模型，在所有响应中运行共识分析，并获得关于哪些索赔具有高度协议（可能可靠）和低协议（值得进一步调查）的判决。该工具精确标记哪些索赔相互矛盾，表面仅在一个或两个响应中出现的索赔，并按能力加权模型响应—将幻觉检测从有根据的猜测转变为结构化的数据驱动分析。\n\n参见多模型AI如何减少幻觉，获得更深层技术解释。',
         },
         globalPerspective: {
           title: '关于幻觉治理的全球观点',
@@ -1966,7 +1966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         criticalPrinciple: {
-          content: '**关键原则：** 即使有完美的提示和共识检查，人工验证对于高风险决定仍然至关重要。将AI用作时间节省器和第一遍工具，而不是专家判断或主要来源验证的替代品。\n\n了解[自我批评技术](/prompt-engineering/self-critique-prompting)如何在复杂推理任务中进一步减少错误。',
+          content: '**关键原则：** 即使有完美的提示和共识检查，人工验证对于高风险决定仍然至关重要。将AI用作时间节省器和第一遍工具，而不是专家判断或主要来源验证的替代品。\n\n了解自我批评技术如何在复杂推理任务中进一步减少错误。',
         },
         checklist: {
           title: '实际清单：在发送关键提示之前',
@@ -2042,8 +2042,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '相关阅读',
           items: [
             '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering) —提示结构背后的基本概念',
-            '[多模型共识评分](/prompt-engineering/consensus-scoring) —比较模型如何检测分歧和不信度',
-            '[自我批评提示技术](/prompt-engineering/self-critique-prompting) —如何让模型捕获自己的错误',
+            '多模型共识评分 —比较模型如何检测分歧和不信度',
+            '自我批评提示技术 —如何让模型捕获自己的错误',
           ],
         },
         sources: {
@@ -2228,7 +2228,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '관련 자료',
         items: [
           '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 프롬프트 구조화 뒤의 기본 개념',
-          '[자기 비평 프롬프트 기술](/ko/prompt-engineering/self-critique-prompting) — 모델이 자체 오류를 잡는 방법',
+          '자기 비평 프롬프트 기술 — 모델이 자체 오류를 잡는 방법',
         ],
       },
       sources: {

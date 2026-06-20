@@ -1466,11 +1466,11 @@ schema: {
         relatedReading: {
           id: 'related-reading',
           title: '関連記事',
-          items: [
-            '[RAG の高度な手法](/ja/local-llms/advanced-rag-techniques) -- 再ランキング、クエリ展開、ハイブリッド検索',
-            '[ローカル LLM ハイブリッドアーキテクチャ](/ja/local-llms/local-llm-hybrid-architectures) -- 複数モデル、複数GPU、分散',
-            '[プロンプトエンジニアリング for RAG](/ja/local-llms/prompt-engineering-rag) -- 検索結果を使った効果的なプロンプト',
-            '[Ollama + RAG パイプラインの実装](/ja/local-llms/ollama-rag-implementation) -- ステップバイステップコード例',
+          items:  [
+            'RAG の高度な手法 -- 再ランキング、クエリ展開、ハイブリッド検索',
+            '[ローカル LLM ハイブリッドアーキテクチャ -- 複数モデル、複数GPU、分散',
+            '[プロンプトエンジニアリング for RAG](/ja/prompt-engineering/prompt-engineering-vs-rag-decision) -- 検索結果を使った効果的なプロンプト',
+            'Ollama + RAG パイプラインの実装 -- ステップバイステップコード例',
           ],
         },
         sources: {
@@ -1734,11 +1734,11 @@ schema: {
         relatedReading: {
           id: 'related-reading',
           title: '相关阅读',
-          items: [
-            '[RAG高级技术](/zh/local-llms/advanced-rag-techniques) -- 重新排序、查询扩展、混合搜索',
-            '[本地大语言模型混合架构](/zh/local-llms/local-llm-hybrid-architectures) -- 多模型、多GPU、分布式',
-            '[RAG的提示工程](/zh/local-llms/prompt-engineering-rag) -- 使用检索结果的有效提示',
-            '[Ollama + RAG管道实现](/zh/local-llms/ollama-rag-implementation) -- 分步代码示例',
+          items:  [
+            'RAG高级技术 -- 重新排序、查询扩展、混合搜索',
+            '[本地大语言模型混合架构 -- 多模型、多GPU、分布式',
+            '[RAG的提示工程](/zh/prompt-engineering/prompt-engineering-vs-rag-decision) -- 使用检索结果的有效提示',
+            'Ollama + RAG管道实现 -- 分步代码示例',
           ],
         },
         sources: {

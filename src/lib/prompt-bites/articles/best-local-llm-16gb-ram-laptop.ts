@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[노트북에서 로컬 LLM 실행 가이드](/ko/local-llms/local-llm-on-laptop)',
           '[2 GB RAM에서 RAG를 실행할 수 있습니까?](/ko/prompt-bites/can-you-run-rag-on-2gb-ram)',
-          '[Ollama 시작 가이드](/ko/local-llms/ollama-getting-started)',
+          '[Ollama 시작 가이드](/ko/local-llms/how-to-install-ollama)',
         ],
       },
     },

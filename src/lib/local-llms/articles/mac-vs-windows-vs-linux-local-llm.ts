@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm) — Compact Linux servers for 24/7 inference.',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Complete breakdown of RTX, Mac, and Linux hardware.',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Step-by-step setup guide for all three OS.',
-            '[NVIDIA CUDA vs AMD ROCm: GPU Drivers for Local LLMs](/local-llms/cuda-vs-rocm-local-llm) — Which GPU driver to choose.',
+            'NVIDIA CUDA vs AMD ROCm: GPU Drivers for Local LLMs — Which GPU driver to choose.',
           ],
         },
         'regionalContext': {
@@ -463,7 +463,7 @@ schema: {
             '[Mejores mini PCs para LLMs locales](/es/local-llms/best-mini-pcs-local-llm) — Servidores Linux compactos para inferencia 24/7.',
             '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) — Análisis completo de hardware RTX, Mac y Linux.',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Guía de configuración paso a paso para los tres SO.',
-            '[NVIDIA CUDA vs AMD ROCm: drivers GPU para LLMs locales](/es/local-llms/cuda-vs-rocm-local-llm) — Qué driver GPU elegir.',
+            'NVIDIA CUDA vs AMD ROCm: drivers GPU para LLMs locales — Qué driver GPU elegir.',
           ],
         },
         'regionalContext': {
@@ -731,7 +731,7 @@ schema: {
             '[أفضل الحواسيب الصغيرة لنماذج LLM المحلية](/ar/local-llms/best-mini-pcs-local-llm) — خوادم Linux مدمجة للاستدلال 24/7.',
             '[دليل العتاد لنماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — تحليل شامل لعتاد RTX وMac وLinux.',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — دليل إعداد خطوة بخطوة للأنظمة الثلاثة.',
-            '[NVIDIA CUDA مقابل AMD ROCm: تعريفات GPU لنماذج LLM المحلية](/ar/local-llms/cuda-vs-rocm-local-llm) — أي تعريف GPU تختار.',
+            'NVIDIA CUDA مقابل AMD ROCm: تعريفات GPU لنماذج LLM المحلية — أي تعريف GPU تختار.',
           ],
         },
         'regionalContext': {
@@ -1386,14 +1386,14 @@ schema: {
                 '[Meilleurs mini-ordinateurs pour les LLM locaux](/fr/local-llms/best-mini-pcs-local-llm) — Serveurs Linux compacts pour l\'inférence 24/7.',
                 '[Guide du matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Explication complète du matériel RTX, Mac et Linux.',
                 '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — Guide de configuration étape par étape pour tous les trois systèmes d\'exploitation.',
-                '[NVIDIA CUDA vs AMD ROCm : pilotes GPU pour les LLM locaux](/fr/local-llms/cuda-vs-rocm-local-llm) — Quel pilote GPU choisir.',
+                'NVIDIA CUDA vs AMD ROCm : pilotes GPU pour les LLM locaux — Quel pilote GPU choisir.',
               ],
             },
             'regionalContext': {
               id: 'regional-context',
               title: 'Considérations régionales',
               content: [
-                '**UE (RGPD) :** Les trois systèmes d\'exploitation prennent en charge le traitement local des données. macOS est conforme par défaut ; Windows nécessite un examen de la confidentialité du pilote NVIDIA ; Linux offre une transparence totale. Voir la [Liste de contrôle CNIL pour la conformité au RGPD des LLM locaux](/fr/local-llms/local-llm-rgpd-checklist) pour les exigences spécifiques de l\'UE.',
+                '**UE (RGPD) :** Les trois systèmes d\'exploitation prennent en charge le traitement local des données. macOS est conforme par défaut ; Windows nécessite un examen de la confidentialité du pilote NVIDIA ; Linux offre une transparence totale. Voir la [Liste de contrôle CNIL pour la conformité au RGPD des LLM locaux](/fr/local-llms/local-llm-security-privacy-checklist) pour les exigences spécifiques de l\'UE.',
                 '**Japon (APPI) :** Les Mac Apple Silicon traitent les données personnelles localement (aucune synchronisation cloud requise). Windows et Linux nécessitent un consentement utilisateur explicite avant les sauvegardes cloud.',
                 '**Chine et monde entier :** Les coûts d\'électricité varient considérablement. Les tarifs européens (0,20–0,30 €/kWh) et les tarifs chinois (0,08–0,12 €/kWh) impactent le ROI à long terme sur les GPU.',
               ],
@@ -1636,7 +1636,7 @@ schema: {
                 '[ローカル LLM 向けベスト ミニPC](/ja/local-llms/best-mini-pcs-local-llm) — 24/7 推論用コンパクト Linux サーバー。',
                 '[ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) — RTX、Mac、Linux ハードウェアの完全分析。',
                 '[Ollama のインストール方法](/ja/local-llms/how-to-install-ollama) — 3つの OS すべてのセットアップ ステップバイステップ ガイド。',
-                '[NVIDIA CUDA vs AMD ROCm : ローカル LLM 向け GPU ドライバ](/ja/local-llms/cuda-vs-rocm-local-llm) — どの GPU ドライバを選択するか。',
+                'NVIDIA CUDA vs AMD ROCm : ローカル LLM 向け GPU ドライバ — どの GPU ドライバを選択するか。',
               ],
             },
             'regionalContext': {
@@ -1886,7 +1886,7 @@ schema: {
                 '[本地LLM最佳迷你电脑](/zh/local-llms/best-mini-pcs-local-llm) ——24/7推理用紧凑Linux服务器。',
                 '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) ——RTX、Mac和Linux硬件完整分析。',
                 '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) ——三个操作系统的逐步设置指南。',
-                '[NVIDIA CUDA vs AMD ROCm：本地LLM的GPU驱动](/zh/local-llms/cuda-vs-rocm-local-llm) ——选择哪个GPU驱动。',
+                'NVIDIA CUDA vs AMD ROCm：本地LLM的GPU驱动 ——选择哪个GPU驱动。',
               ],
             },
             'regionalContext': {
@@ -2147,7 +2147,7 @@ schema: {
             '[로컬 LLM을 위한 최고의 미니 PC](/local-llms/best-mini-pcs-local-llm) — 24/7 추론을 위한 소형 Linux 서버.',
             '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — RTX, Mac, Linux 하드웨어 완전 분석.',
             '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 세 OS에 대한 단계별 설정 가이드.',
-            '[NVIDIA CUDA vs AMD ROCm: 로컬 LLM을 위한 GPU 드라이버](/local-llms/cuda-vs-rocm-local-llm) — 어떤 GPU 드라이버를 선택할 것인가.',
+            'NVIDIA CUDA vs AMD ROCm: 로컬 LLM을 위한 GPU 드라이버 — 어떤 GPU 드라이버를 선택할 것인가.',
           ],
         },
         'regionalContext': {

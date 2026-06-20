@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How Do You Prompt AI for Assessment Feedback?',
           content: [
             '**For formative assessment, include your rubric criteria directly in the prompt so the AI understands your grading standards and applies them consistently across all student submissions.**',
-            'Claude Sonnet 4.6\'s 1M-token [context window](/prompt-engineering/context-windows-explained) handles full class sets of essays in a single session — approximately 800 standard pages — making batch feedback generation practical for teachers with large classes. GPT-5.5 handles ~800 pages per session (1M tokens), sufficient for any classroom workload.',
+            'Claude Sonnet 4.6\'s 1M-token [context window](/prompt-engineering/context-windows-explained-why-ai-forgets) handles full class sets of essays in a single session — approximately 800 standard pages — making batch feedback generation practical for teachers with large classes. GPT-5.5 handles ~800 pages per session (1M tokens), sufficient for any classroom workload.',
           ],
           blockquote: 'You are an experienced 7th-grade English teacher. Analyze this student argumentative essay using this rubric: clear thesis (4 pts), three supporting arguments with evidence (12 pts), acknowledgment of counterargument (4 pts), formal transitions (3 pts), conclusion that reinforces thesis (3 pts). For each criterion: state the score, quote the relevant sentence, and write one specific improvement suggestion. Total score out of 26.',
           callouts: [
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie schreibe ich KI-Prompts für Bewertungsfeedback?',
           content: [
             '**Für Formativ-Bewertung: Inkludieren Sie Ihre Rubrik-Kriterien direkt im Prompt, damit die KI Ihre Benotungsstandards versteht und sie konsistent über alle Schülereinreichungen anwendet.**',
-            'Claude Sonnet 4.6s 1.000.000-Token [Kontextfenster](/de/prompt-engineering/context-windows-explained) behandelt vollständige Klassensätze von Essays in einer einzelnen Sitzung — ungefähr 800 Standardseiten — was Batch-Feedback-Generierung für Lehrkräfte mit großen Klassen praktisch macht. GPT-5.5 behandelt ~800 Seiten pro Sitzung (1M Token), ausreichend für jede Klassengröße.',
+            'Claude Sonnet 4.6s 1.000.000-Token [Kontextfenster](/de/prompt-engineering/context-windows-explained-why-ai-forgets) behandelt vollständige Klassensätze von Essays in einer einzelnen Sitzung — ungefähr 800 Standardseiten — was Batch-Feedback-Generierung für Lehrkräfte mit großen Klassen praktisch macht. GPT-5.5 behandelt ~800 Seiten pro Sitzung (1M Token), ausreichend für jede Klassengröße.',
           ],
           blockquote: 'Du bist eine erfahrene Englisch-Lehrerin der siebten Klasse. Analysiere diesen Schüler-Überzeugungsessay unter Verwendung dieser Rubrik: klare These (4 Punkte), drei stützende Argumente mit Belegen (12 Punkte), Anerkennung des Gegenarguments (4 Punkte), formale Übergänge (3 Punkte), Schlussfolgerung, die These verstärkt (3 Punkte). Für jedes Kriterium: geben Sie die Bewertung an, zitieren Sie den relevanten Satz, und schreiben Sie einen spezifischen Verbesserungsvorschlag. Gesamtbewertung von 26 Punkten.',
           callouts: [
@@ -2589,7 +2589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Comment rédiger des prompts IA pour les commentaires d\'évaluation ?',
       content: [
         '**Pour l\'évaluation formative : incluez vos critères de rubrique directement dans le prompt, afin que l\'IA comprenne vos normes de notation et les applique régulièrement à tous les travaux des élèves.**',
-        'La [fenêtre de contexte](/fr/prompt-engineering/context-windows-explained) de 200 000 tokens de Claude Sonnet 4.6 traite des séries complètes de courts essais en une seule session — environ 160 pages standard — rendant la génération de rétroaction en lot pratique pour les enseignants avec de grandes classes. GPT-5.5 traite ~100 pages par session, suffisant pour les tailles de classe typiques.',
+        'La [fenêtre de contexte](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) de 200 000 tokens de Claude Sonnet 4.6 traite des séries complètes de courts essais en une seule session — environ 160 pages standard — rendant la génération de rétroaction en lot pratique pour les enseignants avec de grandes classes. GPT-5.5 traite ~100 pages par session, suffisant pour les tailles de classe typiques.',
       ],
       blockquote: 'Tu es une enseignante expérimentée d\'anglais en septième année. Analyse cet essai persuasif d\'élève en utilisant cette rubrique : thèse claire (4 points), trois arguments avec preuves (12 points), reconnaissance du contre-argument (4 points), transitions formelles (3 points), conclusion renforçant la thèse (3 points). Pour chaque critère : donne la note, cite la phrase pertinente et écris une suggestion d\'amélioration spécifique. Score total sur 26 points.',
       callouts: [
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '評価フィードバック向けAIプロンプトの書き方',
       content: [
         '**形成評価向け：ルーブリック基準をプロンプトに直接含めます、AIがあなたの採点基準を理解し、すべての生徒作業に一貫して適用できるように。**',
-        'Claude Sonnet 4.6の[コンテキストウィンドウ](/ja/prompt-engineering/context-windows-explained)（200,000トークン）は短いエッセイの完全シリーズを1セッションで処理します—約160標準ページ—大クラスを持つ教師向けにバッチフィードバック生成を実践的にしています。GPT-5.5は1セッション約100ページ処理し、典型的なクラスサイズに十分。',
+        'Claude Sonnet 4.6の[コンテキストウィンドウ](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)（200,000トークン）は短いエッセイの完全シリーズを1セッションで処理します—約160標準ページ—大クラスを持つ教師向けにバッチフィードバック生成を実践的にしています。GPT-5.5は1セッション約100ページ処理し、典型的なクラスサイズに十分。',
       ],
       blockquote: 'あなたは経験豊かな7年生英語教師です。このルーブリック使用しこの学生説得エッセイを分析：明確なテーゼ（4ポイント）、証拠3つの議論（12ポイント）、反論認識（4ポイント）、形式的移行（3ポイント）、テーゼを補強する結論（3ポイント）。各基準向けに：スコアを与え、関連文を引用、特定改善提案を書いてください。26ポイント満点。',
       callouts: [
@@ -3881,7 +3881,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '평가 피드백을 위한 AI 프롬프트 작성 방법',
           content: [
             '**형성 평가를 위해서는 루브릭 기준을 프롬프트에 직접 포함하여 AI가 귀하의 채점 기준을 이해하고 모든 학생 제출물에 일관되게 적용하도록 하십시오.**',
-            'Claude Sonnet 4.6의 1M 토큰 [컨텍스트 창](/prompt-engineering/context-windows-explained)은 단일 세션에서 전체 학급의 에세이를 처리합니다 — 약 800 표준 페이지 — 대형 학급 교사에게 일괄 피드백 생성을 실용적으로 만듭니다. GPT-5.5는 세션당 약 800페이지(1M 토큰)를 처리하며, 어떤 교실 작업량에도 충분합니다.',
+            'Claude Sonnet 4.6의 1M 토큰 [컨텍스트 창](/prompt-engineering/context-windows-explained-why-ai-forgets)은 단일 세션에서 전체 학급의 에세이를 처리합니다 — 약 800 표준 페이지 — 대형 학급 교사에게 일괄 피드백 생성을 실용적으로 만듭니다. GPT-5.5는 세션당 약 800페이지(1M 토큰)를 처리하며, 어떤 교실 작업량에도 충분합니다.',
           ],
           blockquote: '당신은 경험 많은 7학년 영어 교사입니다. 이 루브릭을 사용하여 이 학생의 논증 에세이를 분석하세요: 명확한 논제(4점), 증거가 있는 세 가지 지지 논거(12점), 반론 인정(4점), 형식적 전환(3점), 논제를 강화하는 결론(3점). 각 기준에 대해: 점수를 명시하고, 관련 문장을 인용하며, 하나의 구체적인 개선 제안을 작성하세요. 26점 만점 총점.',
           callouts: [

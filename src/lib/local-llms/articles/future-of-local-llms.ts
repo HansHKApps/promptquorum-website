@@ -175,7 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- Latest open-source model rankings.',
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) -- Cost, compliance, and control analysis.',
             '[How to Double Local LLM Speed](/local-llms/double-local-llm-speed) -- Production optimization techniques.',
-            '[Best Small Local LLMs Under 4 GB](/local-llms/best-small-local-llms-under-4gb) -- 1–3B models for edge and mobile.',
+            '[Best Small Local LLMs Under 4 GB](/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B models for edge and mobile.',
           ],
         },
         sources: {
@@ -446,7 +446,7 @@ schema: {
             '[Mejores LLMs locales 2026](/es/local-llms/best-local-llms-2026) -- Últimas clasificaciones de modelos de código abierto.',
             '[Por qué las empresas usan LLMs locales](/es/local-llms/why-enterprises-use-local-llms) -- Análisis de costo, cumplimiento y control.',
             '[Cómo duplicar la velocidad de tu LLM local](/es/local-llms/double-local-llm-speed) -- Técnicas de optimización para producción.',
-            '[Mejores LLMs locales pequeños bajo 4 GB](/es/local-llms/best-small-local-llms-under-4gb) -- Modelos 1–3B para edge y móvil.',
+            '[Mejores LLMs locales pequeños bajo 4 GB](/es/prompt-bites/best-ollama-models-4gb-vram) -- Modelos 1–3B para edge y móvil.',
           ],
         },
         sources: {
@@ -723,7 +723,7 @@ schema: {
             '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026) -- أحدث تصنيفات النماذج مفتوحة المصدر.',
             '[لماذا تستخدم الشركات نماذج LLM المحلية](/ar/local-llms/why-enterprises-use-local-llms) -- تحليل التكلفة والامتثال والتحكم.',
             '[كيفية مضاعفة سرعة نموذج LLM المحلي لديك](/ar/local-llms/double-local-llm-speed) -- تقنيات التحسين للإنتاج.',
-            '[أفضل نماذج LLM المحلية الصغيرة أقل من 4 GB](/ar/local-llms/best-small-local-llms-under-4gb) -- نماذج 1–3B للحافة والمحمول.',
+            '[أفضل نماذج LLM المحلية الصغيرة أقل من 4 GB](/ar/prompt-bites/best-ollama-models-4gb-vram) -- نماذج 1–3B للحافة والمحمول.',
           ],
         },
         sources: {
@@ -1119,7 +1119,7 @@ schema: {
             '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) -- Neueste Open-Source-Modell-Rankings.',
             '[Warum Unternehmen lokale LLMs nutzen](/de/local-llms/why-enterprises-use-local-llms) -- Kosten-, Compliance- und Kontrollanalyse.',
             '[Lokale LLM-Geschwindigkeit verdoppeln](/de/local-llms/double-local-llm-speed) -- Produktions-Optimierungstechniken.',
-            '[Beste kleine lokale LLMs unter 4 GB](/de/local-llms/best-small-local-llms-under-4gb) -- 1–3B-Modelle für Edge und Mobile.',
+            '[Beste kleine lokale LLMs unter 4 GB](/de/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B-Modelle für Edge und Mobile.',
           ],
         },
         sources: {
@@ -1406,7 +1406,7 @@ schema: {
             '[Meilleurs LLM locaux 2026](/fr/local-llms/best-local-llms-2026) -- Classements des derniers modèles open-source.',
             '[Pourquoi les entreprises utilisent les LLM locaux](/fr/local-llms/why-enterprises-use-local-llms) -- Analyse des coûts, conformité et contrôle.',
             '[Comment doubler la vitesse des LLM locaux](/fr/local-llms/double-local-llm-speed) -- Techniques d\'optimisation de la production.',
-            '[Meilleurs petits LLM locaux sous 4 GB](/fr/local-llms/best-small-local-llms-under-4gb) -- Modèles 1–3B pour les appareils et mobiles.',
+            '[Meilleurs petits LLM locaux sous 4 GB](/fr/prompt-bites/best-ollama-models-4gb-vram) -- Modèles 1–3B pour les appareils et mobiles.',
           ],
         },
         sources: {
@@ -1683,7 +1683,7 @@ schema: {
             '[ベストローカルLLM2026](/ja/local-llms/best-local-llms-2026) -- 最新オープンソースモデルランキング',
             '[エンタープライズなぜローカルLLM](/ja/local-llms/why-enterprises-use-local-llms) -- コスト・コンプライアンス・コントロール分析',
             '[ローカルLLM速度2倍化](/ja/local-llms/double-local-llm-speed) -- 本番最適化技法',
-            '[ベスト小型ローカルLLM 4GB以下](/ja/local-llms/best-small-local-llms-under-4gb) -- 1–3B型エッジ・モバイル',
+            '[ベスト小型ローカルLLM 4GB以下](/ja/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B型エッジ・モバイル',
           ],
         },
         sources: {
@@ -1960,7 +1960,7 @@ schema: {
             '[最佳本地LLM 2026](/zh/local-llms/best-local-llms-2026) -- 最新开源模型排名',
             '[企业为何使用本地LLM](/zh/local-llms/why-enterprises-use-local-llms) -- 成本、合规和控制分析',
             '[本地LLM速度加倍](/zh/local-llms/double-local-llm-speed) -- 生产优化技术',
-            '[4GB以下最佳小型本地LLM](/zh/local-llms/best-small-local-llms-under-4gb) -- 1–3B边缘和移动模型',
+            '[4GB以下最佳小型本地LLM](/zh/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B边缘和移动模型',
           ],
         },
         sources: {
@@ -2237,7 +2237,7 @@ schema: {
             '[최고의 로컬 LLM 2026](/local-llms/best-local-llms-2026) -- 최신 오픈소스 모델 순위.',
             '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms) -- 비용, 규정 준수, 통제 분석.',
             '[로컬 LLM 속도를 두 배로 높이는 방법](/local-llms/double-local-llm-speed) -- 프로덕션 최적화 기법.',
-            '[4 GB 미만 최고의 소형 로컬 LLM](/local-llms/best-small-local-llms-under-4gb) -- 엣지 및 모바일을 위한 1–3B 모델.',
+            '[4 GB 미만 최고의 소형 로컬 LLM](/prompt-bites/best-ollama-models-4gb-vram) -- 엣지 및 모바일을 위한 1–3B 모델.',
           ],
         },
         sources: {

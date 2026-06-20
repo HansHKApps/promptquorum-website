@@ -1832,9 +1832,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[ローカルLLMでObsidianを使用する方法 - 5つのステップ](/ja/power-local-llm/local-llm-with-obsidian-2026) — 知識管理向けのローカルRAGの実際の例。',
           '[Ollamaのインストール方法：ローカルオープンソースLLM実行](/ja/local-llms/how-to-install-ollama) — Open WebUI、AnythingLLM、PrivateGPTすべてで使用するLLMランタイムのセットアップガイド。',
-          '[LM StudioでローカルLLMをファインチューン：完全ガイド](/ja/local-llms/fine-tuning-local-llms-lm-studio) — AnythingLLMやPrivateGPTで使用する小さいモデルを適応させる方法。',
-          '[LocalコンテキストウィンドウおよびLLM トークンの説明](/ja/power-local-llm/local-llm-context-windows-explained) — なぜコンテキストサイズが RAG精度（特にマルチホップクエリ）に影響するのか。',
-          '[MacBook Airで実行する5,000ページのローカルRAG：M5性能ベンチマーク](/ja/power-local-llm/local-rag-performance-macbook-m-series) — AppleシリコンでのAnythingLLM、PrivateGPT、Open WebUIの詳細評価。',
+          'LM StudioでローカルLLMをファインチューン：完全ガイド — AnythingLLMやPrivateGPTで使用する小さいモデルを適応させる方法。',
+          '[LocalコンテキストウィンドウおよびLLM トークンの説明](/ja/prompt-engineering/context-windows-explained-why-ai-forgets) — なぜコンテキストサイズが RAG精度（特にマルチホップクエリ）に影響するのか。',
+          '[MacBook Airで実行する5,000ページのローカルRAG：M5性能ベンチマーク](/ja/local-llms/local-rag-2026) — AppleシリコンでのAnythingLLM、PrivateGPT、Open WebUIの詳細評価。',
         ],
       },
     },

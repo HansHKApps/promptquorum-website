@@ -1510,9 +1510,9 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMセキュリティガイド](/ja/local-llms/local-llm-security)',
-            '[エンタープライズLLMデプロイメント](/ja/local-llms/enterprise-llm-deployment)',
-            '[政府・防衛LLMコンプライアンス](/ja/local-llms/govt-compliance-llm)',
+            '[ローカルLLMセキュリティガイド](/ja/local-llms/local-llm-security-privacy-checklist)',
+            'エンタープライズLLMデプロイメント',
+            '政府・防衛LLMコンプライアンス',
           ],
         },
         'sources': {

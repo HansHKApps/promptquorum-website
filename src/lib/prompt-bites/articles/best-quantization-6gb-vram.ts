@@ -809,10 +809,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       relatedReading: {
         title: '관련 읽을거리',
         items: [
-          '[6GB VRAM에서 실행할 수 있는 최고의 LLM 모델](/ko/local-llms/best-llm-models-6gb-vram)',
-          '[Ollama에서 컨텍스트 크기 설정하는 방법](/ko/prompt-bites/ollama-context-size)',
-          '[GGUF란 무엇인가: 로컬 LLM 파일 형식 설명](/ko/local-llms/what-is-gguf)',
-          '[RTX 3060에서 LLM 실행 가이드](/ko/local-llms/run-llm-rtx-3060)',
+          '[6GB VRAM에서 실행할 수 있는 최고의 LLM 모델](/ko/prompt-bites/best-local-llm-6gb-vram)',
+          '[Ollama에서 컨텍스트 크기 설정하는 방법](/ko/prompt-bites/ollama-128k-context-models)',
+          'GGUF란 무엇인가: 로컬 LLM 파일 형식 설명',
+          '[RTX 3060에서 LLM 실행 가이드](/ko/prompt-bites/best-ollama-models-rtx-3060-12gb)',
         ],
       },
     },

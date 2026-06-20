@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt Governance in Production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt Audit and Regression Risk', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
-          { title: 'Structured Output and JSON Mode', url: '/prompt-engineering/structured-output-json-mode' },
+          { title: 'Structured Output and JSON Mode', url: '/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Prompt-Governance in der Produktion', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Prompt-Audit und Regressionsrisiko', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
-          { title: 'Strukturierte Ausgabe und JSON-Modus', url: '/prompt-engineering/structured-output-json-mode' },
+          { title: 'Strukturierte Ausgabe und JSON-Modus', url: '/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Governance de prompts en producción', url: '/es/prompt-engineering/prompt-governance-in-production' },
           { title: 'Auditoría de prompts y riesgo de regresión', url: '/es/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Incorpora controles de calidad a tus prompts', url: '/es/prompt-engineering/build-quality-checks' },
-          { title: 'Salida estructurada y modo JSON', url: '/es/prompt-engineering/structured-output-json-mode' },
+          { title: 'Salida estructurada y modo JSON', url: '/es/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Governança de prompts em produção', url: '/pt/prompt-engineering/prompt-governance-in-production' },
           { title: 'Auditoria de prompts e risco de regressão', url: '/pt/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Adicione verificações de qualidade aos seus prompts', url: '/pt/prompt-engineering/build-quality-checks' },
-          { title: 'Saída estruturada e modo JSON', url: '/pt/prompt-engineering/structured-output-json-mode' },
+          { title: 'Saída estruturada e modo JSON', url: '/pt/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Gouvernance des prompts en production', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'Audit de prompts et risque de régression', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
-          { title: 'Sortie structurée et mode JSON', url: '/prompt-engineering/structured-output-json-mode' },
+          { title: 'Sortie structurée et mode JSON', url: '/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: '本番環境でのプロンプトガバナンス', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: 'プロンプト監査と回帰リスク', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
-          { title: '構造化出力とJSONモード', url: '/prompt-engineering/structured-output-json-mode' },
+          { title: '構造化出力とJSONモード', url: '/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: '生产环境中的提示词治理', url: '/prompt-engineering/prompt-governance-in-production' },
           { title: '提示词审计与回归风险', url: '/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'Build Quality Checks into Your Prompts', url: '/prompt-engineering/build-quality-checks' },
-          { title: '结构化输出与JSON模式', url: '/prompt-engineering/structured-output-json-mode' },
+          { title: '结构化输出与JSON模式', url: '/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: '프로덕션 프롬프트 거버넌스', url: '/ko/prompt-engineering/prompt-governance-in-production' },
           { title: '프롬프트 감사와 회귀 위험', url: '/ko/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: '프롬프트에 품질 검사 추가', url: '/ko/prompt-engineering/build-quality-checks' },
-          { title: '구조화된 출력과 JSON 모드', url: '/ko/prompt-engineering/structured-output-json-mode' },
+          { title: '구조화된 출력과 JSON 모드', url: '/ko/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {
@@ -1522,7 +1522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'حوكمة الـ prompts في الإنتاج', url: '/ar/prompt-engineering/prompt-governance-in-production' },
           { title: 'تدقيق الـ prompts ومخاطر الانحدار', url: '/ar/prompt-engineering/prompt-audit-and-regression-risk' },
           { title: 'أضف فحوصات الجودة إلى الـ prompts الخاصة بك', url: '/ar/prompt-engineering/build-quality-checks' },
-          { title: 'المخرجات المنظمة ووضع JSON', url: '/ar/prompt-engineering/structured-output-json-mode' },
+          { title: 'المخرجات المنظمة ووضع JSON', url: '/ar/prompt-engineering/structured-output-and-json-mode' },
         ],
       },
       sources: {

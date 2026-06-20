@@ -1320,7 +1320,7 @@ schema: {
           items: [
             '[Como instalar Ollama](/pt/local-llms/how-to-install-ollama) -- Configuração em 5 minutos.',
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) -- Por que Q4_K_M é o padrão.',
-            '[Quanta RAM para LLMs locais?](/pt/local-llms/how-much-ram-local-llm) -- Requisitos de memória do sistema.',
+            '[Quanta RAM para LLMs locais?](/pt/prompt-bites/how-much-ram-for-7b-model) -- Requisitos de memória do sistema.',
           ],
         },
       },

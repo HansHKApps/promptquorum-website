@@ -188,8 +188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'coding': {
           id: 'coding',
-          content: [
-            '**Best stack: [vLLM](/local-llms/vllm-performance-guide) + Qwen3-Coder + IDE extension**',
+          content:  [
+            '**Best stack: [vLLM + Qwen3-Coder + IDE extension**',
             'Why this stack: Qwen3-Coder scores 82% on HumanEval (best open-source coding model, April 2026). vLLM is 3–5× faster than Ollama for batch inference. Native OpenAI API compatibility fits existing IDE tools. Streaming enabled for real-time suggestions.',
             '',
             '**AI-Powered Code Review for Multiple Files**',
@@ -247,7 +247,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**Best stack: LangGraph + vLLM + tool definitions**',
-            'Why this stack: [LangGraph](/local-llms/local-llm-agents-with-langgraph) provides structured agent flow. vLLM is fast enough for 10+ sequential LLM calls. Tool use is explicit and debuggable.',
+            'Why this stack: [LangGraph](/local-llms/local-ai-agents-langgraph-ollama) provides structured agent flow. vLLM is fast enough for 10+ sequential LLM calls. Tool use is explicit and debuggable.',
           ],
           numberedItems: [
             'Install LangGraph (`pip install langchain langgraph`).',
@@ -317,7 +317,7 @@ for filename, review in reviews:
             '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) — IDE choice for your coding stack (Cursor, Continue.dev, Cody).',
             '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek-Coder HumanEval rankings.',
             '[Local RAG Setup 2026](/local-llms/local-rag-2026) — Complete LlamaIndex + Qdrant + Ollama implementation guide.',
-            '[Local LLM Agents with LangGraph](/local-llms/local-llm-agents-with-langgraph) — Agent workflow framework with step-by-step examples.',
+            '[Local LLM Agents with LangGraph](/local-llms/local-ai-agents-langgraph-ollama) — Agent workflow framework with step-by-step examples.',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Backend comparison: CLI vs GUI, speed, batch processing.',
             '[Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern) — Chat UI comparison: professional vs roleplay.',
             '[How much VRAM do local LLMs need?](/local-llms/how-much-vram-local-llm) — Hardware requirements by model size and use case.',
@@ -465,8 +465,8 @@ schema: {
         },
         'coding': {
           id: 'coding',
-          content: [
-            '**Mejor stack: [vLLM](/es/local-llms/vllm-performance-guide) + Qwen3-Coder + extensión IDE**',
+          content:  [
+            '**Mejor stack: [vLLM + Qwen3-Coder + extensión IDE**',
             'Por qué este stack: Qwen3-Coder obtiene un 82% en HumanEval (mejor modelo de código open-source, abril 2026). vLLM es 3–5× más rápido que Ollama para inferencia por lotes. La compatibilidad nativa con la API de OpenAI encaja con las herramientas IDE existentes. Streaming habilitado para sugerencias en tiempo real.',
             '',
             '**Revisión de código con IA para múltiples archivos**',
@@ -524,7 +524,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**Mejor stack: LangGraph + vLLM + definiciones de herramientas**',
-            'Por qué este stack: [LangGraph](/es/local-llms/local-llm-agents-with-langgraph) proporciona un flujo de agente estructurado. vLLM es lo suficientemente rápido para 10+ llamadas LLM secuenciales. El uso de herramientas es explícito y fácil de depurar.',
+            'Por qué este stack: [LangGraph](/es/local-llms/local-ai-agents-langgraph-ollama) proporciona un flujo de agente estructurado. vLLM es lo suficientemente rápido para 10+ llamadas LLM secuenciales. El uso de herramientas es explícito y fácil de depurar.',
           ],
           numberedItems: [
             'Instala LangGraph (`pip install langchain langgraph`).',
@@ -594,7 +594,7 @@ for filename, review in reviews:
             '[Mejor asistente de código IA para LLM local](/es/local-llms/best-ai-coding-assistant-local-llm) — Elección de IDE para tu stack de código (Cursor, Continue.dev, Cody).',
             '[Mejores LLM locales para código 2026](/es/local-llms/best-local-llms-for-coding) — Rankings HumanEval: Qwen3-Coder vs DeepSeek-Coder.',
             '[Configuración RAG local 2026](/es/local-llms/local-rag-2026) — Guía completa de implementación con LlamaIndex + Qdrant + Ollama.',
-            '[Agentes LLM locales con LangGraph](/es/local-llms/local-llm-agents-with-langgraph) — Framework de workflows de agentes con ejemplos paso a paso.',
+            '[Agentes LLM locales con LangGraph](/es/local-llms/local-ai-agents-langgraph-ollama) — Framework de workflows de agentes con ejemplos paso a paso.',
             '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — Comparativa de backends: CLI vs GUI, velocidad, procesamiento por lotes.',
             '[Open WebUI vs SillyTavern](/es/local-llms/open-webui-vs-sillytavern) — Comparativa de UI de chat: profesional vs roleplay.',
             '[¿Cuánta VRAM necesitan los LLM locales?](/es/local-llms/how-much-vram-local-llm) — Requisitos de hardware por tamaño de modelo y caso de uso.',
@@ -751,8 +751,8 @@ for filename, review in reviews:
         },
         'coding': {
           id: 'coding',
-          content: [
-            '**أفضل منظومة: [vLLM](/ar/local-llms/vllm-performance-guide) + Qwen3-Coder + امتداد IDE**',
+          content:  [
+            '**أفضل منظومة: [vLLM + Qwen3-Coder + امتداد IDE**',
             'لماذا هذه المنظومة: يحقق Qwen3-Coder نسبة 82% في HumanEval (أفضل نموذج برمجي مفتوح المصدر، أبريل 2026). vLLM أسرع بمقدار 3–5× من Ollama للاستدلال بالدفعات. التوافق الأصلي مع API من OpenAI يناسب أدوات IDE الحالية. streaming مُفعَّل للاقتراحات في الوقت الفعلي.',
             '',
             '**مراجعة الكود بالذكاء الاصطناعي لملفات متعددة**',
@@ -810,7 +810,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**أفضل منظومة: LangGraph + vLLM + تعريفات الأدوات**',
-            'لماذا هذه المنظومة: يوفّر [LangGraph](/ar/local-llms/local-llm-agents-with-langgraph) تدفّق وكيل منظّم. vLLM سريع بما يكفي لـ 10+ استدعاءات LLM متتالية. استخدام الأدوات صريح وسهل التصحيح.',
+            'لماذا هذه المنظومة: يوفّر [LangGraph](/ar/local-llms/local-ai-agents-langgraph-ollama) تدفّق وكيل منظّم. vLLM سريع بما يكفي لـ 10+ استدعاءات LLM متتالية. استخدام الأدوات صريح وسهل التصحيح.',
           ],
           numberedItems: [
             'ثبّت LangGraph (`pip install langchain langgraph`).',
@@ -880,7 +880,7 @@ for filename, review in reviews:
             '[أفضل مساعد برمجي بالذكاء الاصطناعي لنموذج LLM محلي](/ar/local-llms/best-ai-coding-assistant-local-llm) — اختيار IDE لمنظومة البرمجة لديك (Cursor، Continue.dev، Cody).',
             '[أفضل نماذج LLM المحلية للبرمجة 2026](/ar/local-llms/best-local-llms-for-coding) — تصنيفات HumanEval: Qwen3-Coder مقابل DeepSeek-Coder.',
             '[تهيئة RAG محلي 2026](/ar/local-llms/local-rag-2026) — دليل تنفيذ شامل مع LlamaIndex + Qdrant + Ollama.',
-            '[وكلاء LLM محليون مع LangGraph](/ar/local-llms/local-llm-agents-with-langgraph) — إطار عمل سير عمل الوكلاء مع أمثلة خطوة بخطوة.',
+            '[وكلاء LLM محليون مع LangGraph](/ar/local-llms/local-ai-agents-langgraph-ollama) — إطار عمل سير عمل الوكلاء مع أمثلة خطوة بخطوة.',
             '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) — مقارنة الخلفيات: CLI مقابل GUI، السرعة، معالجة الدفعات.',
             '[Open WebUI مقابل SillyTavern](/ar/local-llms/open-webui-vs-sillytavern) — مقارنة واجهات الدردشة: احترافية مقابل تقمّص أدوار.',
             '[كم من VRAM تحتاج نماذج LLM المحلية؟](/ar/local-llms/how-much-vram-local-llm) — متطلبات العتاد حسب حجم النموذج وحالة الاستخدام.',
@@ -1149,8 +1149,8 @@ for filename, review in reviews:
         },
         'coding': {
           id: 'coding',
-          content: [
-            '**Bester Stack: [vLLM](/de/local-llms/vllm-performance-guide) + Qwen3-Coder + IDE-Erweiterung**',
+          content:  [
+            '**Bester Stack: [vLLM + Qwen3-Coder + IDE-Erweiterung**',
             'Warum dieser Stack: Qwen3-Coder erzielt 82% auf HumanEval (bestes Open-Source-Coding-Modell, April 2026). vLLM ist 3–5-fach schneller als Ollama für Batch-Inferenz. Native OpenAI-API-Kompatibilität passt zu bestehenden IDE-Tools. Streaming für Echtzeit-Vorschläge aktiviert.',
             '',
             '**KI-gestützter Code-Review für mehrere Dateien**',
@@ -1208,7 +1208,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**Bester Stack: LangGraph + vLLM + Tool-Definitionen**',
-            'Warum dieser Stack: [LangGraph](/de/local-llms/local-llm-agents-with-langgraph) bietet strukturierten Agenten-Flow. vLLM ist schnell genug für 10+ sequentielle LLM-Aufrufe. Tool-Nutzung ist explizit und debuggbar.',
+            'Warum dieser Stack: [LangGraph](/de/local-llms/local-ai-agents-langgraph-ollama) bietet strukturierten Agenten-Flow. vLLM ist schnell genug für 10+ sequentielle LLM-Aufrufe. Tool-Nutzung ist explizit und debuggbar.',
           ],
           numberedItems: [
             'LangGraph installieren (`pip install langchain langgraph`).',
@@ -1281,7 +1281,7 @@ for filename, review in reviews:
             '[Beste KI-Coding-Assistenten für lokale LLM](/de/local-llms/best-ai-coding-assistant-local-llm) — IDE-Wahl für Ihren Coding-Stack (Cursor, Continue.dev, Cody).',
             '[Beste lokale LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs. DeepSeek-Coder HumanEval-Rankings.',
             '[Lokales RAG einrichten 2026](/de/local-llms/local-rag-2026) — Vollständige Implementierungsanleitung: LlamaIndex + Qdrant + Ollama.',
-            '[Lokale LLM-Agenten mit LangGraph](/de/local-llms/local-llm-agents-with-langgraph) — Agenten-Workflow-Framework mit Schritt-für-Schritt-Beispielen.',
+            '[Lokale LLM-Agenten mit LangGraph](/de/local-llms/local-ai-agents-langgraph-ollama) — Agenten-Workflow-Framework mit Schritt-für-Schritt-Beispielen.',
             '[Ollama vs. LM Studio](/de/local-llms/ollama-vs-lm-studio) — Backend-Vergleich: CLI vs. GUI, Geschwindigkeit, Batch-Verarbeitung.',
             '[Open WebUI vs. SillyTavern](/de/local-llms/open-webui-vs-sillytavern) — Chat-UI-Vergleich: professionell vs. Rollenspiel.',
             '[Wie viel VRAM brauchen lokale LLMs?](/de/local-llms/how-much-vram-local-llm) — Hardware-Anforderungen nach Modellgröße und Anwendungsfall.',
@@ -1430,8 +1430,8 @@ schema: {
         },
         'coding': {
           id: 'coding',
-          content: [
-            '**Stack recommandé : [vLLM](/fr/local-llms/vllm-performance-guide) + Qwen3-Coder + extension IDE**',
+          content:  [
+            '**Stack recommandé : [vLLM + Qwen3-Coder + extension IDE**',
             'Pourquoi ce stack : Qwen3-Coder obtient 82 % sur HumanEval (meilleur modèle de coding open-source, avril 2026). vLLM est 3–5× plus rapide qu\'Ollama pour l\'inférence par lots. Compatibilité OpenAI API native avec les outils IDE existants. Streaming activé pour les suggestions en temps réel.',
             '',
             '**Revue de code IA sur plusieurs fichiers**',
@@ -1489,7 +1489,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**Stack recommandé : LangGraph + vLLM + définitions d\'outils**',
-            'Pourquoi ce stack : [LangGraph](/fr/local-llms/local-llm-agents-with-langgraph) fournit un flux d\'agent structuré. vLLM est suffisamment rapide pour 10+ appels LLM séquentiels. L\'utilisation des outils est explicite et déboguable.',
+            'Pourquoi ce stack : [LangGraph](/fr/local-llms/local-ai-agents-langgraph-ollama) fournit un flux d\'agent structuré. vLLM est suffisamment rapide pour 10+ appels LLM séquentiels. L\'utilisation des outils est explicite et déboguable.',
           ],
           numberedItems: [
             'Installez LangGraph (`pip install langchain langgraph`).',
@@ -1560,7 +1560,7 @@ for filename, review in reviews:
             '[Meilleur assistant IA de code pour LLM local](/fr/local-llms/best-ai-coding-assistant-local-llm) — Choix IDE pour votre stack de codage (Cursor, Continue.dev, Cody).',
             '[Meilleurs LLM locaux pour le coding 2026](/fr/local-llms/best-local-llms-for-coding) — Classements HumanEval : Qwen3-Coder vs DeepSeek-Coder.',
             '[Configuration RAG local 2026](/fr/local-llms/local-rag-2026) — Guide complet LlamaIndex + Qdrant + Ollama.',
-            '[Agents LLM locaux avec LangGraph](/fr/local-llms/local-llm-agents-with-langgraph) — Framework de workflows agents avec exemples étape par étape.',
+            '[Agents LLM locaux avec LangGraph](/fr/local-llms/local-ai-agents-langgraph-ollama) — Framework de workflows agents avec exemples étape par étape.',
             '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) — Comparaison des backends : CLI vs GUI, vitesse, traitement par lots.',
             '[Open WebUI vs SillyTavern](/fr/local-llms/open-webui-vs-sillytavern) — Comparaison d\'interfaces : professionnel vs roleplay.',
             '[Quelle VRAM pour les LLM locaux ?](/fr/local-llms/how-much-vram-local-llm) — Exigences matérielles par taille de modèle et cas d\'usage.',
@@ -1707,8 +1707,8 @@ schema: {
         },
         'coding': {
           id: 'coding',
-          content: [
-            '**推奨スタック： [vLLM](/ja/local-llms/vllm-performance-guide) + Qwen3-Coder + IDE拡張**',
+          content:  [
+            '**推奨スタック： [vLLM + Qwen3-Coder + IDE拡張**',
             'Qwen3-CoderはHumanEvalで82％（2026年4月現在最高のオープンソースコーディングモデル）。vLLMはバッチ推論でOllamaよ3–5倍高速。既存IDEツールとのネイティブOpenAI API互换性。リアルタイム潔歋候補のストリーミング有効。',
             '',
             '**複数ファイルの並列コードレビュー**',
@@ -1766,7 +1766,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**推奨スタック： LangGraph + vLLM + ツール定義**',
-            '[LangGraph](/ja/local-llms/local-llm-agents-with-langgraph)が構造化されたエージェントフローを提供。vLLMは10+回の連続LLM呼び出しに十分な速度。ツール使用は明示的でデバッグ容易。',
+            '[LangGraph](/ja/local-llms/local-ai-agents-langgraph-ollama)が構造化されたエージェントフローを提供。vLLMは10+回の連続LLM呼び出しに十分な速度。ツール使用は明示的でデバッグ容易。',
           ],
           numberedItems: [
             'LangGraphをインストール：`pip install langchain langgraph`',
@@ -1837,7 +1837,7 @@ for filename, review in reviews:
             '[ローカルLLM向け最高のAIコーディングアシスタント](/ja/local-llms/best-ai-coding-assistant-local-llm) — コーディングスタック用IDE選択（Cursor、Continue.dev、Cody）。',
             '[コーディング向きローカルLLM 2026](/ja/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek-CoderのHumanEvalランキング。',
             '[ローカルRAG設定 2026](/ja/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollamaの完全実装ガイド。',
-            '[ローカルLLMエージェント（LangGraph）](/ja/local-llms/local-llm-agents-with-langgraph) — ステップごとのエージェントワークフローフレームワーク。',
+            '[ローカルLLMエージェント（LangGraph）](/ja/local-llms/local-ai-agents-langgraph-ollama) — ステップごとのエージェントワークフローフレームワーク。',
             '[Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio) — バックエンド比較：CLI vs GUI、速度、バッチ処理。',
             '[Open WebUI vs SillyTavern](/ja/local-llms/open-webui-vs-sillytavern) — チャットUI比較：プロフェッショナル vs ロールプレイ。',
             '[ローカルLLMに必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — モデルサイズとユースケース別ハードウェア要件。',
@@ -1984,8 +1984,8 @@ schema: {
         },
         'coding': {
           id: 'coding',
-          content: [
-            '**推荐堆栈： [vLLM](/zh/local-llms/vllm-performance-guide) + Qwen3-Coder + IDE插件**',
+          content:  [
+            '**推荐堆栈： [vLLM + Qwen3-Coder + IDE插件**',
             'Qwen3-Coder在HumanEval得劆8剸2%（2026年4月最佳开源代码模型）。vLLM批量推理比Ollama快3–5倍。原生OpenAI API兼容，完美适配现有IDE工具。实时补全流式传输已启用。',
             '',
             '**多文件并行代码审查**',
@@ -2043,7 +2043,7 @@ for filename, review in reviews:
           id: 'agents',
           content: [
             '**推荐堆栈： LangGraph + vLLM + 工具定义**',
-            '[LangGraph](/zh/local-llms/local-llm-agents-with-langgraph)提供结构化的智能体流。vLLM足够快以支持连续10+次LLM调用。工具调用显式且易于调试。',
+            '[LangGraph](/zh/local-llms/local-ai-agents-langgraph-ollama)提供结构化的智能体流。vLLM足够快以支持连续10+次LLM调用。工具调用显式且易于调试。',
           ],
           numberedItems: [
             '安装LangGraph：`pip install langchain langgraph`',
@@ -2114,7 +2114,7 @@ for filename, review in reviews:
             '[本地LLM最佳AI编码助手](/zh/local-llms/best-ai-coding-assistant-local-llm) — 编码栈的IDE选择（Cursor、Continue.dev、Cody）。',
             '[编程最佳本地LLM 2026](/zh/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek-Coder HumanEval排名。',
             '[本地RAG配置 2026](/zh/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollama完整实现指南。',
-            '[LangGraph本地LLM智能体](/zh/local-llms/local-llm-agents-with-langgraph) — 逐步示例的智能体工作流框架。',
+            '[LangGraph本地LLM智能体](/zh/local-llms/local-ai-agents-langgraph-ollama) — 逐步示例的智能体工作流框架。',
             '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) — 后端对比：CLI vs GUI、速度、批量处理。',
             '[Open WebUI vs SillyTavern](/zh/local-llms/open-webui-vs-sillytavern) — 聊天界面对比：专业与角色扮演。',
             '[本地LLM需要多少显存？](/zh/local-llms/how-much-vram-local-llm) — 按模型大小和用途划分硬件需求。',
@@ -2262,8 +2262,8 @@ schema: {
     },
     'coding': {
       id: 'coding',
-      content: [
-        '**최적 스택: [vLLM](/local-llms/vllm-performance-guide) + Qwen3-Coder + IDE 확장**',
+      content:  [
+        '**최적 스택: [vLLM + Qwen3-Coder + IDE 확장**',
         '이 스택을 선택하는 이유: Qwen3-Coder는 HumanEval에서 82%를 기록합니다(2026년 4월 기준 최고의 오픈소스 코딩 모델). vLLM은 배치 추론에서 Ollama보다 3~5배 빠릅니다. 네이티브 OpenAI API 호환성으로 기존 IDE 도구에 적합합니다. 실시간 제안을 위한 스트리밍이 활성화됩니다.',
         '',
         '**여러 파일에 대한 AI 기반 코드 리뷰**',
@@ -2321,7 +2321,7 @@ for filename, review in reviews:
       id: 'agents',
       content: [
         '**최적 스택: LangGraph + vLLM + 도구 정의**',
-        '이 스택을 선택하는 이유: [LangGraph](/local-llms/local-llm-agents-with-langgraph)는 구조화된 에이전트 플로를 제공합니다. vLLM은 순차적 LLM 호출 10회 이상에도 충분히 빠릅니다. 도구 사용이 명시적이고 디버그 가능합니다.',
+        '이 스택을 선택하는 이유: [LangGraph](/local-llms/local-ai-agents-langgraph-ollama)는 구조화된 에이전트 플로를 제공합니다. vLLM은 순차적 LLM 호출 10회 이상에도 충분히 빠릅니다. 도구 사용이 명시적이고 디버그 가능합니다.',
       ],
       numberedItems: [
         'LangGraph 설치(`pip install langchain langgraph`).',
@@ -2391,7 +2391,7 @@ for filename, review in reviews:
         '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) — 코딩 스택을 위한 IDE 선택(Cursor, Continue.dev, Cody).',
         '[2026년 코딩용 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — Qwen3-Coder 대 DeepSeek-Coder HumanEval 순위.',
         '[2026년 로컬 RAG 설정](/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollama 완전 구현 가이드.',
-        '[LangGraph로 로컬 LLM 에이전트 구축](/local-llms/local-llm-agents-with-langgraph) — 단계별 예시가 포함된 에이전트 워크플로 프레임워크.',
+        '[LangGraph로 로컬 LLM 에이전트 구축](/local-llms/local-ai-agents-langgraph-ollama) — 단계별 예시가 포함된 에이전트 워크플로 프레임워크.',
         '[Ollama 대 LM Studio](/local-llms/ollama-vs-lm-studio) — 백엔드 비교: CLI 대 GUI, 속도, 배치 처리.',
         '[Open WebUI 대 SillyTavern](/local-llms/open-webui-vs-sillytavern) — 채팅 UI 비교: 전문적 vs 롤플레이.',
         '[로컬 LLM에 VRAM이 얼마나 필요합니까?](/local-llms/how-much-vram-local-llm) — 모델 크기 및 사용 사례별 하드웨어 요구 사항.',

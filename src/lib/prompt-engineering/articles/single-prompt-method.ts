@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'Instead of having a back-and-forth conversation with the AI, you write one detailed instruction that tells it exactly who to be, what to do, what it needs to know, what rules to follow, and how to format the answer. You send it once. It works.' },
           ],
           content: [
-            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models such as those you run via [Ollama](/local-llms/ollama-installation-guide) or LM Studio.',
+            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models such as those you run via [Ollama](/local-llms/how-to-install-ollama) or LM Studio.',
             'The core idea is to think once, write once, and execute once. You invest effort in designing one precise [prompt](/prompt-engineering/what-is-prompt-engineering), then reuse it across tasks, projects, and models. Because the structure is fixed, you can measure quality, change one parameter at a time, and improve your prompts systematically.',
           ],
         },
@@ -359,8 +359,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompt Testing & Iteration](/prompt-engineering/how-to-test-prompts-across-models) — Methodology for validating your prompts across models',
             '[Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Best practices from the Claude team',
             '[SPECS Framework](/prompt-engineering/specs-framework) — When you need to enforce strict output validation and constraints',
-            '[Prompt Building Blocks](/prompt-engineering/prompt-building-blocks) — Core components that make up effective prompts',
-            '[Temperature and Top-P](/prompt-engineering/temperature-and-top-p) — How to control model randomness alongside your prompt structure',
+            '[Prompt Building Blocks](/prompt-engineering/5-building-blocks-every-prompt-needs) — Core components that make up effective prompts',
+            '[Temperature and Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — How to control model randomness alongside your prompt structure',
             '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — When to include examples in your Single Step prompts',
             '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Validating Single Step prompts on multiple LLMs',
           ],
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsSingleStep: {
           title: 'Was die Single Step Prompt Methode ist',
           content: [
-            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/de/local-llms/ollama-installation-guide) oder LM Studio ausführen.',
+            '**Die Single Step Prompt Methode ist eine Prompt-Struktur auf Basis eines einzelnen Durchlaufs, die Rolle, Ziel, Kontext, Einschränkungen und Ausgabeformat in einer einzigen Nachricht an das Modell zusammenfasst.** Anstatt die KI über mehrere Durchläufe hinweg zur gemeinsamen Überlegung aufzufordern, geben Sie ihr alles, was sie benötigt, von Anfang an. Dieser Ansatz funktioniert mit GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen wie denen, die Sie über [Ollama](/de/local-llms/how-to-install-ollama) oder LM Studio ausführen.',
             'Die Kernidee ist: einmal denken, einmal schreiben, einmal ausführen. Sie investieren Aufwand in die Gestaltung eines präzisen [Prompts](/de/prompt-engineering/what-is-prompt-engineering) und verwenden ihn anschließend in verschiedenen Aufgaben, Projekten und Modellen. Da die Struktur fest ist, können Sie die Qualität messen, jeweils einen Parameter ändern und Ihre Prompts systematisch verbessern.',
           ],
         },
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsSingleStep: {
           title: 'What the Single Step Prompt Method Is',
           content: [
-            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/fr/local-llms/ollama-installation-guide) ou LM Studio.',
+            '**La Méthode Single Step Prompt est une structure d\'invite unique qui concentre le rôle, l\'objectif, le contexte, les contraintes et le format de sortie dans un seul message au modèle.** Au lieu de demander à l\'IA de « réfléchir ensemble » sur plusieurs tours, vous lui fournissez tout ce dont elle a besoin d\'emblée. Cette approche fonctionne avec GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux tels que ceux que vous exécutez via [Ollama](/fr/local-llms/how-to-install-ollama) ou LM Studio.',
             'L\'idée centrale est de réfléchir une seule fois, d\'écrire une seule fois et d\'exécuter une seule fois. Vous investissez l\'effort initial dans la conception d\'un seul [prompt](/fr/prompt-engineering/what-is-prompt-engineering) précis, puis le réutilisez dans différentes tâches, projets et modèles. Comme la structure est fixe, vous pouvez mesurer la qualité, modifier un paramètre à la fois et améliorer vos prompts de façon systématique.',
           ],
         },
@@ -1905,7 +1905,7 @@ ja: {
     whatIsSingleStep: {
       title: 'What the Single Step Prompt Method Is',
       content: [
-        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、および[Ollama](/ja/local-llms/ollama-installation-guide)やLM Studioなどのローカルモデルに対応しています。',
+        '**Single Step Prompt Methodは、ロール・目的・コンテキスト・制約・出力形式を1つのメッセージに凝縮する1回限りのプロンプト構造です。** AIに「一緒にブレインストーミングしましょう」と複数ターンにわたって提案する代わりに、必要な情報をすべて最初に提供します。このアプローチはGPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、および[Ollama](/ja/local-llms/how-to-install-ollama)やLM Studioなどのローカルモデルに対応しています。',
         '基本的な考え方は「1度考え、1度書き、1度実行する」ことです。1つの精密な[プロンプト](/ja/prompt-engineering/what-is-prompt-engineering)設計に時間をかけ、その後タスク・プロジェクト・モデル全体で再利用します。構造が固定されているため、品質を測定し、1度に1つのパラメータを変更し、プロンプトを体系的に改善できます。',
       ],
     },
@@ -2216,7 +2216,7 @@ ja: {
         whatIsSingleStep: {
           title: '什么是单步提示法',
           content: [
-            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro以及通过[Ollama](/zh/local-llms/ollama-installation-guide)或LM Studio等工具运行的本地模型。',
+            '**单步提示法是一种一次性的提示结构，将角色、目标、上下文、约束条件和输出格式整合到一条给模型的单一消息中。** 不同于让AI在多轮对话中"一起头脑风暴"，单步提示法在最初就向模型提供它所需的全部信息。这种方法适用于GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro以及通过[Ollama](/zh/local-llms/how-to-install-ollama)或LM Studio等工具运行的本地模型。',
             '核心理念是"思考一次、编写一次、执行一次"。你投入精力设计一个精确的[提示](/zh/prompt-engineering/what-is-prompt-engineering)，然后在多个任务、项目和模型中重复使用。由于结构固定，你可以衡量质量、每次改变一个参数，并系统地改进提示。',
           ],
         },
@@ -2545,7 +2545,7 @@ ja: {
             { type: 'in-plain-terms', text: 'AI와 여러 번 주고받는 대화를 나누는 대신, 모델이 어떤 역할을 해야 하는지, 무엇을 해야 하는지, 무엇을 알아야 하는지, 어떤 규칙을 따라야 하는지, 그리고 답변 형식은 어때야 하는지를 정확히 알려주는 상세한 지시문 하나를 작성합니다. 한 번 전송하면 됩니다. 작동합니다.' },
           ],
           content: [
-            '**단일 단계 프롬프트 방법론은 역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담는 원샷(one-shot) 프롬프트 구조입니다.** 여러 턴에 걸쳐 AI에게 "함께 브레인스토밍"을 요청하는 대신, 모델이 필요한 모든 정보를 처음부터 제공합니다. 이 접근법은 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, 그리고 [Ollama](/local-llms/ollama-installation-guide)나 LM Studio를 통해 실행하는 로컬 모델에서 모두 작동합니다.',
+            '**단일 단계 프롬프트 방법론은 역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담는 원샷(one-shot) 프롬프트 구조입니다.** 여러 턴에 걸쳐 AI에게 "함께 브레인스토밍"을 요청하는 대신, 모델이 필요한 모든 정보를 처음부터 제공합니다. 이 접근법은 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, 그리고 [Ollama](/local-llms/how-to-install-ollama)나 LM Studio를 통해 실행하는 로컬 모델에서 모두 작동합니다.',
             '핵심 아이디어는 한 번 생각하고, 한 번 작성하고, 한 번 실행하는 것입니다. 하나의 정밀한 [프롬프트](/prompt-engineering/what-is-prompt-engineering)를 설계하는 데 노력을 투자하고, 이를 작업, 프로젝트, 모델 전반에 걸쳐 재사용합니다. 구조가 고정되어 있으므로 품질을 측정하고, 한 번에 하나의 파라미터를 변경하며, 체계적으로 프롬프트를 개선할 수 있습니다.',
           ],
         },
@@ -2814,8 +2814,8 @@ ja: {
             '[프롬프트 테스트 및 반복](/prompt-engineering/how-to-test-prompts-across-models) — 여러 모델에서 프롬프트를 검증하는 방법론',
             '[Anthropic 프롬프트 엔지니어링 가이드](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Claude 팀의 모범 사례',
             '[SPECS 프레임워크](/prompt-engineering/specs-framework) — 엄격한 출력 검증 및 제약 조건을 적용해야 할 때',
-            '[프롬프트 구성 요소](/prompt-engineering/prompt-building-blocks) — 효과적인 프롬프트를 구성하는 핵심 구성 요소',
-            '[Temperature 및 Top-P](/prompt-engineering/temperature-and-top-p) — 프롬프트 구조와 함께 모델 무작위성을 제어하는 방법',
+            '[프롬프트 구성 요소](/prompt-engineering/5-building-blocks-every-prompt-needs) — 효과적인 프롬프트를 구성하는 핵심 구성 요소',
+            '[Temperature 및 Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 프롬프트 구조와 함께 모델 무작위성을 제어하는 방법',
             '[Zero-Shot vs Few-Shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 단일 단계 프롬프트에 예제를 포함할 시점',
             '[여러 모델에서 프롬프트를 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — 여러 LLM에서 단일 단계 프롬프트 검증',
           ],

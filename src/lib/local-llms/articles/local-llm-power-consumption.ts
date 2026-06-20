@@ -2081,9 +2081,9 @@ schema: {
         'relatedReading': {
           id: 'related-reading',
           title: '関連記事',
-          items: [
-            '[ローカルLLM GPU要件ガイド](/ja/local-llms/gpu-requirements-local-llm)',
-            '[2026年 ベストローカルLLM GPU](/ja/local-llms/best-gpus-local-llm)',
+          items:  [
+            'ローカルLLM GPU要件ガイド',
+            '[2026年 ベストローカルLLM GPU](/ja/local-llms/best-gpus-for-local-llms)',
             '[ノートパソコン vs デスクトップ: ローカルLLM](/ja/local-llms/laptop-vs-desktop-local-llm)',
           ],
         },

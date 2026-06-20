@@ -615,8 +615,8 @@ schema: {
           items: [
             '[Ollama installieren: Schritt-für-Schritt-Anleitung](/de/local-llms/how-to-install-ollama) -- Erste Schritte.',
             '[Ollama vs. LM Studio vs. Jan: Vergleich](/de/local-llms/ollama-vs-lm-studio) -- Wählen Sie das richtige Werkzeug.',
-            '[Local LLM finetunen mit Ollama](/de/local-llms/fine-tune-local-llm-ollama) -- Anpassung für Ihren Anwendungsfall.',
-            '[Ollama API-Referenz](/de/local-llms/ollama-api-reference) -- Programmgesteuerte Verwendung.',
+            'Local LLM finetunen mit Ollama -- Anpassung für Ihren Anwendungsfall.',
+            '[Ollama API-Referenz](/de/local-llms/ollama-command-guide) -- Programmgesteuerte Verwendung.',
           ],
         },
         sources: {
@@ -840,8 +840,8 @@ schema: {
           items: [
             '[Guide d\'installation Ollama: Étape par étape](/fr/local-llms/how-to-install-ollama) -- Premiers pas.',
             '[Ollama vs LM Studio vs Jan: Comparaison](/fr/local-llms/ollama-vs-lm-studio) -- Choisissez le bon outil.',
-            '[Fine-tuner une LLM locale avec Ollama](/fr/local-llms/fine-tune-local-llm-ollama) -- Adaptez à votre cas d\'usage.',
-            '[Référence API Ollama](/fr/local-llms/ollama-api-reference) -- Utilisation programmatique.',
+            'Fine-tuner une LLM locale avec Ollama -- Adaptez à votre cas d\'usage.',
+            '[Référence API Ollama](/fr/local-llms/ollama-command-guide) -- Utilisation programmatique.',
           ],
         },
         sources: {
@@ -1063,8 +1063,8 @@ schema: {
           items: [
             '[Ollama インストールガイド: ステップバイステップ](/ja/local-llms/how-to-install-ollama) -- 入門。',
             '[Ollama vs LM Studio vs Jan: 比較](/ja/local-llms/ollama-vs-lm-studio) -- 正しいツールを選択。',
-            '[Ollama でローカル LLM をファインチューン](/ja/local-llms/fine-tune-local-llm-ollama) -- ユースケース向け調整。',
-            '[Ollama API リファレンス](/ja/local-llms/ollama-api-reference) -- プログラマティック使用。',
+            'Ollama でローカル LLM をファインチューン -- ユースケース向け調整。',
+            '[Ollama API リファレンス](/ja/local-llms/ollama-command-guide) -- プログラマティック使用。',
           ],
         },
         sources: {
@@ -1772,10 +1772,10 @@ schema: {
         relatedReading: {
           id: 'related-reading',
           title: '相关阅读',
-          items: [
-            '[本地 LLM 完整指南](/zh/local-llms/local-llm-guide) — 从硬件选择到部署的全面概述',
-            '[Ollama vs LM Studio](/zh/local-llms/lm-studio-vs-ollama-local-llm) — 命令行与图形界面对比',
-            '[LLM 量化详解](/zh/local-llms/quantization-llms-comprehensive-guide) — GGUF、Q4_K_M 和精度权衡',
+          items:  [
+            '本地 LLM 完整指南 — 从硬件选择到部署的全面概述',
+            '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) — 命令行与图形界面对比',
+            '[LLM 量化详解](/zh/local-llms/llm-quantization-explained) — GGUF、Q4_K_M 和精度权衡',
           ],
         },
         sources: {

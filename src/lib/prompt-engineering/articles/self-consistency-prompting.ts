@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — security considerations when implementing multi-sample pipelines',
             '[Temperature and Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — the sampling parameters that make self-consistency work',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where self-consistency can be applied at each step',
-            '[AI Hallucinations: How to Detect and Stop Them](/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — self-consistency as a hallucination detection method',
+            '[AI Hallucinations: How to Detect and Stop Them](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — self-consistency as a hallucination detection method',
           ],
         },
         sources: {
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Sicherheitsaspekte beim Implementieren von Multi-Sample-Pipelines',
             '[Temperatur und Top-P](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) — die Sampling-Parameter, die Self-Consistency zum Funktionieren bringen',
             '[Prompt Chaining](/de/prompt-engineering/prompt-chaining) — mehrstufige Workflows, bei denen Self-Consistency in jedem Schritt angewendet werden kann',
-            '[KI-Halluzinationen: Wie man sie erkennt und stoppt](/de/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — Self-Consistency als Halluzinations-Erkennungsmethode',
+            '[KI-Halluzinationen: Wie man sie erkennt und stoppt](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Self-Consistency als Halluzinations-Erkennungsmethode',
           ],
         },
         sources: {
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Inyección de prompts y seguridad](/es/prompt-engineering/prompt-injection-and-security) — consideraciones de seguridad al implementar pipelines de múltiples muestras',
             '[Temperatura y Top-P](/es/prompt-engineering/temperature-and-top-p-control-ai-creativity) — los parámetros de muestreo que hacen funcionar el self-consistency',
             '[Prompt chaining](/es/prompt-engineering/prompt-chaining) — flujos de trabajo de múltiples pasos donde el self-consistency puede aplicarse en cada paso',
-            '[Alucinaciones de IA: cómo detectarlas y detenerlas](/es/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — el self-consistency como método de detección de alucinaciones',
+            '[Alucinaciones de IA: cómo detectarlas y detenerlas](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — el self-consistency como método de detección de alucinaciones',
           ],
         },
         sources: {
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[حقن البرومبت والأمان](/ar/prompt-engineering/prompt-injection-and-security) — اعتبارات الأمان عند تنفيذ خطوط معالجة متعددة العينات',
             '[درجة الحرارة وTop-P](/ar/prompt-engineering/temperature-and-top-p-control-ai-creativity) — معاملات أخذ العينات التي تجعل الاتساق الذاتي يعمل',
             '[سلسلة البرومبتات](/ar/prompt-engineering/prompt-chaining) — سير عمل متعدد الخطوات حيث يمكن تطبيق الاتساق الذاتي في كل خطوة',
-            '[هلوسات الذكاء الاصطناعي: كيفية كشفها وإيقافها](/ar/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — الاتساق الذاتي كطريقة لكشف الهلوسة',
+            '[هلوسات الذكاء الاصطناعي: كيفية كشفها وإيقافها](/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — الاتساق الذاتي كطريقة لكشف الهلوسة',
           ],
         },
         sources: {
@@ -1208,7 +1208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting)',
             '[Temperatura e Top-P](/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
-            '[Alucinações de IA: Como detectar e parar](/pt/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them)',
+            '[Alucinações de IA: Como detectar e parar](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)',
           ],
         },
         sources: {
@@ -1453,7 +1453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Injection de Prompt et Sécurité](/fr/prompt-engineering/prompt-injection-and-security) — considérations de sécurité lors de l\'implémentation de pipelines multi-échantillons',
             '[Température et Top-P](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) — les paramètres d\'échantillonnage qui rendent Self-Consistency fonctionnel',
             '[Prompt Chaining](/fr/prompt-engineering/prompt-chaining) — workflows multi-étapes où Self-Consistency peut être appliqué à chaque étape',
-            '[Hallucinations IA : Comment les détecter et les arrêter](/fr/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — Self-Consistency comme méthode de détection des hallucinations',
+            '[Hallucinations IA : Comment les détecter et les arrêter](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Self-Consistency comme méthode de détection des hallucinations',
           ],
         },
         sources: {
@@ -1824,10 +1824,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '[Chain-of-Thoughtプロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — セルフコンシステンシーの基盤となる線形推論手法',
             '[プロンプトエンジニアリングとは](/ja/prompt-engineering/what-is-prompt-engineering) — 基礎知識',
-            '[マルチステップ推論と分解](/ja/prompt-engineering/decomposition-prompting) — 大型問題を分割する手法',
-            '[Few-Shotプロンプティング](/ja/prompt-engineering/few-shot-prompting) — 例示による精度向上',
+            'マルチステップ推論と分解 — 大型問題を分割する手法',
+            '[Few-Shotプロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — 例示による精度向上',
             '[モデル選択ガイド](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Claude Opus 4.8、GPT-5.5、Gemini 3.1 Pro 比較',
-            '[プロンプト検証戦略](/ja/prompt-engineering/prompt-optimization-metrics) — 精度測定とA/Bテスト'
+            '[プロンプト検証戦略](/ja/prompt-engineering/prompt-evaluation-metrics) — 精度測定とA/Bテスト'
           ]
         },
 
@@ -2322,10 +2322,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '[Chain-of-Thought提示工程](/zh/prompt-engineering/chain-of-thought-prompting) — 自洽一致性的基础技术',
             '[什么是提示工程](/zh/prompt-engineering/what-is-prompt-engineering) — 基础概念',
-            '[分解式提示（Decomposition）](/zh/prompt-engineering/decomposition-prompting) — 拆分复杂问题',
-            '[少样本提示（Few-Shot）](/zh/prompt-engineering/few-shot-prompting) — 用例子指导推理',
+            '分解式提示（Decomposition） — 拆分复杂问题',
+            '[少样本提示（Few-Shot）](/zh/prompt-engineering/zero-shot-vs-few-shot) — 用例子指导推理',
             '[模型选择指南](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Claude vs GPT vs Gemini推理能力对比',
-            '[提示优化与评估](/zh/prompt-engineering/prompt-optimization-metrics) — 精度测量和A/B测试'
+            '[提示优化与评估](/zh/prompt-engineering/prompt-evaluation-metrics) — 精度测量和A/B测试'
           ]
         },
 
@@ -2681,7 +2681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[프롬프트 인젝션 및 보안](/prompt-engineering/prompt-injection-and-security) — 다중 샘플 파이프라인 구현 시 보안 고려 사항',
             '[Temperature 및 Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 자기 일관성을 작동시키는 샘플링 파라미터',
             '[프롬프트 체이닝](/prompt-engineering/prompt-chaining) — 각 단계에서 자기 일관성을 적용할 수 있는 다단계 워크플로',
-            '[AI 환각: 감지 및 방지 방법](/prompt-engineering/ai-hallucinations-how-to-detect-and-stop-them) — 환각 감지 방법으로서의 자기 일관성',
+            '[AI 환각: 감지 및 방지 방법](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 환각 감지 방법으로서의 자기 일관성',
           ],
         },
         sources: {

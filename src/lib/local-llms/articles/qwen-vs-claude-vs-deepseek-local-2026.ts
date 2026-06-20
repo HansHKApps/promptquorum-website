@@ -1880,7 +1880,7 @@ dispatchers:
         title: '関連記事',
         items: [
           '[Ollama: ローカルLLM実行完全ガイド](/ja/local-llms/how-to-install-ollama)',
-          '[LM Studioでローカル開発](/ja/local-llms/local-llm-with-lm-studio)',
+          '[LM Studioでローカル開発](/ja/local-llms/lm-studio-advanced-features)',
           '[Qwen 3.6 27B ベンチマーク詳細（Hugging Face）](https://huggingface.co/Qwen)',
           '[GDPR Article 44 — EU データ転送規制](https://eur-lex.europa.eu/eli/reg/2016/679/oj)',
           '[経済産業省 AI戦略 2023](https://www.meti.go.jp)',

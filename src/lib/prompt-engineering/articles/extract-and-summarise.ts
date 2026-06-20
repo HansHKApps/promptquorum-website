@@ -4052,7 +4052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '如何撰写提取和总结提示词',
           content: [
             '**结构化总结提示词——指定文档类型、输出格式、长度限制和明确指示来标记无法验证的声明——产生直接可用的输出；非结构化提示词产生遗漏关键信息的通用段落。**',
-            '总结中最常见的[提示词工程](/zh/prompt-engineering/what-is-prompt-engineering)失败是将"总结一下"作为完整指示。模型对长度、格式、视角和细节级别所做的每一个假设都是与您实际需要的潜在不匹配。[5块提示词结构](/zh/prompt-engineering/prompt-building-blocks)——角色、任务、输入、约束、输出格式——直接适用于提取任务。',
+            '总结中最常见的[提示词工程](/zh/prompt-engineering/what-is-prompt-engineering)失败是将"总结一下"作为完整指示。模型对长度、格式、视角和细节级别所做的每一个假设都是与您实际需要的潜在不匹配。[5块提示词结构](/zh/prompt-engineering/5-building-blocks-every-prompt-needs)——角色、任务、输入、约束、输出格式——直接适用于提取任务。',
           ],
         },
         promptFramework: {

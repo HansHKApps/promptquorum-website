@@ -2462,12 +2462,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'relatedReading': {
           title: '相关阅读',
           items: [
-            '[CRAFT框架详解](/zh/prompt-engineering/craft-framework-guide)',
-            '[如何通过提示优化提高输出质量](/zh/prompt-engineering/prompt-optimization-guide)',
-            '[AI提示工程基础](/zh/prompt-engineering/prompt-engineering-fundamentals)',
-            '[提示框架对比：选择适合你的框架](/zh/prompt-engineering/prompt-frameworks-comparison)',
+            '[CRAFT框架详解](/zh/prompt-engineering/craft-framework)',
+            '[如何通过提示优化提高输出质量](/zh/prompt-engineering/fundamentals-of-prompt-optimization)',
+            '[AI提示工程基础](/zh/prompt-engineering/what-is-prompt-engineering)',
+            '[提示框架对比：选择适合你的框架](/zh/prompt-engineering/which-prompt-framework-should-you-use)',
             '[零样本提示vs少样本提示](/zh/prompt-engineering/zero-shot-vs-few-shot)',
-            '[构建可重复使用的AI工作流](/zh/prompt-engineering/reusable-ai-workflows)',
+            '构建可重复使用的AI工作流',
           ],
         },
         faqSection: {

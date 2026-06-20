@@ -1406,9 +1406,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         heading: '관련 자료',
         items: [
-          '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/run-llm-locally-with-ollama)',
-          '[LM Studio 가이드: 로컬 AI 모델 실행](/ko/local-llms/lm-studio-guide)',
-          '[프롬프트 엔지니어링 기초](/ko/prompt-engineering/prompt-engineering-basics)',
+          '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/how-to-install-ollama)',
+          '[LM Studio 가이드: 로컬 AI 모델 실행](/ko/local-llms/lm-studio-advanced-features)',
+          '[프롬프트 엔지니어링 기초](/ko/prompt-engineering/what-is-prompt-engineering)',
         ],
       },
     },

@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[GPU vs CPU vs Apple Silicon — 로컬 LLM 비교](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/local-llms/local-llm-software-directory-2026)',
-          '[MacBook에서 Ollama 실행하기](/ko/local-llms/run-ollama-on-mac)',
+          '[MacBook에서 Ollama 실행하기](/ko/local-llms/ollama-on-mac-apple-silicon-setup-2026)',
         ],
       },
     },

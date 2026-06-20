@@ -756,8 +756,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         heading: '관련 자료',
         items: [
           '[LM Studio vs Jan vs GPT4All 2026](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
-          '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/run-local-llm-ollama)',
-          '[Qwen3 로컬 설치 가이드 2026](/ko/prompt-bites/how-to-run-qwen3-locally-2026)',
+          '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/how-to-install-ollama)',
+          '[Qwen3 로컬 설치 가이드 2026](/ko/local-llms/run-qwen-locally-guide-2026)',
         ],
       },
     },

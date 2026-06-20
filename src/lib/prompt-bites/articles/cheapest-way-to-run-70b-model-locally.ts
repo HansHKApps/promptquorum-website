@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '관련 자료',
         items: [
           '[2026년 로컬 AI를 위한 최고의 워크스테이션 구성](/ko/power-local-llm/best-workstation-build-local-ai-2026)',
-          '[Llama 3.3 70B 로컬 실행 가이드](/ko/local-llms/run-llama-3-locally)',
+          'Llama 3.3 70B 로컬 실행 가이드',
           '[llama.cpp CPU 오프로드 설정 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally)',
           '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/local-llms/local-llm-software-directory-2026)',
         ],

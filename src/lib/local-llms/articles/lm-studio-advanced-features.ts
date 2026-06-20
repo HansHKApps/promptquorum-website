@@ -1110,7 +1110,7 @@ schema: {
           items: [
             '[LM Studioのインストール方法](/ja/local-llms/how-to-install-lm-studio) -- macOS、Windows、Linuxの完全インストールガイド。',
             '[ローカルLLMに必要なVRAM量](/ja/local-llms/how-much-vram-local-llm) -- 異なるモデルサイズのハードウェア要件とVRAM計画。',
-            '[Ollama vs LM Studio](/ja/local-llms/lm-studio-vs-ollama) -- 詳細な比較。',
+            '[Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio) -- 詳細な比較。',
             '[ローカルLLM OpenAI互換API](/ja/local-llms/local-llm-openai-compatible-api) -- APIドキュメント。',
           ],
         },
@@ -1262,7 +1262,7 @@ schema: {
           items: [
             '[如何安装LM Studio](/zh/local-llms/how-to-install-lm-studio) -- macOS、Windows和Linux的完整安装指南。',
             '[本地LLM需要多少VRAM](/zh/local-llms/how-much-vram-local-llm) -- 不同模型大小的硬件要求和VRAM规划。',
-            '[Ollama vs LM Studio](/zh/local-llms/lm-studio-vs-ollama) -- 详细比较。',
+            '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) -- 详细比较。',
             '[本地LLM OpenAI兼容API](/zh/local-llms/local-llm-openai-compatible-api) -- API文档。',
           ],
         },

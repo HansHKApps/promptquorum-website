@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         templateLocalLLMLinks: {
           id: 'local-llm-cross-links',
-          content: 'For prompt techniques optimized specifically for local models with smaller context windows, see [Prompt Engineering for Local LLMs](/prompt-engineering/prompt-engineering-for-local-models). For a comparison of which local model follows the 5-block structure most reliably, see [Comparing Open-Source Models](/prompt-engineering/comparing-open-source-models).',
+          content: 'For prompt techniques optimized specifically for local models with smaller context windows, see [Prompt Engineering for Local LLMs](/local-llms/prompt-engineering-for-local-models). For a comparison of which local model follows the 5-block structure most reliably, see Comparing Open-Source Models.',
         },
 
         systemVsUser: {
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         templateLocalLLMLinks: {
           id: 'local-llm-cross-links',
-          content: 'Für Prompt-Techniken, die speziell für lokale Modelle mit kleineren Kontextfenstern optimiert sind, siehe [Prompt Engineering for Local LLMs](/de/prompt-engineering/prompt-engineering-for-local-models). Um zu vergleichen, welches lokale Modell der 5-Block-Struktur am zuverlässigsten folgt, siehe [Comparing Open-Source Models](/de/prompt-engineering/comparing-open-source-models).',
+          content: 'Für Prompt-Techniken, die speziell für lokale Modelle mit kleineren Kontextfenstern optimiert sind, siehe [Prompt Engineering for Local LLMs](/de/local-llms/prompt-engineering-for-local-models). Um zu vergleichen, welches lokale Modell der 5-Block-Struktur am zuverlässigsten folgt, siehe Comparing Open-Source Models.',
         },
 
         systemVsUser: {
@@ -3316,7 +3316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         templateLocalLLMLinks: {
           id: 'local-llm-cross-links',
-          content: '더 작은 컨텍스트 창을 가진 로컬 모델에 특별히 최적화된 프롬프트 기법은 [로컬 LLM을 위한 프롬프트 엔지니어링](/prompt-engineering/prompt-engineering-for-local-models)을 참조하십시오. 5블록 구조를 가장 안정적으로 따르는 로컬 모델 비교는 [오픈 소스 모델 비교](/prompt-engineering/comparing-open-source-models)를 참조하십시오.',
+          content: '더 작은 컨텍스트 창을 가진 로컬 모델에 특별히 최적화된 프롬프트 기법은 [로컬 LLM을 위한 프롬프트 엔지니어링](/local-llms/prompt-engineering-for-local-models)을 참조하십시오. 5블록 구조를 가장 안정적으로 따르는 로컬 모델 비교는 오픈 소스 모델 비교를 참조하십시오.',
         },
 
         systemVsUser: {

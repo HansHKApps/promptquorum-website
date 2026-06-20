@@ -1024,8 +1024,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)',
           '[Ollama 설치 및 시작 가이드](/ko/prompt-bites/how-to-install-ollama)',
-          '[최고의 무료 로컬 AI 모델 2026](/ko/local-llms/best-free-local-ai-models-2026)',
-          '[eGPU로 로컬 LLM 실행하기](/ko/prompt-bites/run-local-llm-with-egpu)',
+          '최고의 무료 로컬 AI 모델 2026',
+          '[eGPU로 로컬 LLM 실행하기](/ko/prompt-bites/best-egpu-ollama-macbook)',
         ],
       },
     },

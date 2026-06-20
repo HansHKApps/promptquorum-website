@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         fiveStages: {
           title: 'What Are the Five TRACE Stages?',
           content: [
-            '**A good TRACE prompt tells the model exactly what to do at each stage so that the reasoning trace is consistent across tasks and models.** You can compress this into one message while still keeping the steps clear. For simpler tasks, [zero-shot prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) is faster; use TRACE when auditability is required.',
+            '**A good TRACE prompt tells the model exactly what to do at each stage so that the reasoning trace is consistent across tasks and models.** You can compress this into one message while still keeping the steps clear. For simpler tasks, [zero-shot prompting](/prompt-engineering/zero-shot-vs-few-shot) is faster; use TRACE when auditability is required.',
             'Typical stage definitions:',
           ],
           items: [
@@ -254,8 +254,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — The foundational technique that asks models to reason step by step.',
             '[The RISEN Framework](/prompt-engineering/risen-framework) — Use this when you want iterative refinement alongside reasoning.',
             '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — A complementary framework for drafting and generation tasks.',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) — Understand when TRACE is overkill and simpler techniques suffice.',
-            '[Prompt Engineering Fundamentals](/prompt-engineering/prompt-engineering-fundamentals) — A foundational guide to structuring prompts effectively.',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — Understand when TRACE is overkill and simpler techniques suffice.',
+            '[Prompt Engineering Fundamentals](/prompt-engineering/what-is-prompt-engineering) — A foundational guide to structuring prompts effectively.',
           ],
         },
 
@@ -531,8 +531,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — Die grundlegende Technik, die Modelle bittet, Schritt für Schritt zu denken.',
             '[Das RISEN Framework](/prompt-engineering/risen-framework) — Nutzen Sie dies, wenn Sie iterative Verbesserung neben Reasoning wünschen.',
             '[Das CO-STAR Framework](/prompt-engineering/co-star-framework) — Ein ergänzendes Framework für Entwurfs- und Generierungsaufgaben.',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) — Verstehen Sie, wann TRACE überdimensioniert ist und einfachere Techniken ausreichen.',
-            '[Prompt Engineering Grundlagen](/prompt-engineering/prompt-engineering-fundamentals) — Ein grundlegender Leitfaden zur effektiven Strukturierung von Prompts.',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — Verstehen Sie, wann TRACE überdimensioniert ist und einfachere Techniken ausreichen.',
+            '[Prompt Engineering Grundlagen](/prompt-engineering/what-is-prompt-engineering) — Ein grundlegender Leitfaden zur effektiven Strukturierung von Prompts.',
           ],
         },
 
@@ -866,8 +866,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompting Chain-of-Thought](/es/prompt-engineering/chain-of-thought-prompting) — La técnica fundamental que pide a los modelos razonar paso a paso.',
             '[El Framework RISEN](/es/prompt-engineering/risen-framework) — Úsalo cuando quieras refinamiento iterativo junto con el razonamiento.',
             '[El Framework CO-STAR](/es/prompt-engineering/co-star-framework) — Un framework complementario para tareas de redacción y generación.',
-            '[Zero-Shot vs Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot-prompting) — Entiende cuándo TRACE es excesivo y técnicas más simples son suficientes.',
-            '[Fundamentos de Prompt Engineering](/es/prompt-engineering/prompt-engineering-fundamentals) — Una guía fundamental para estructurar prompts efectivamente.',
+            '[Zero-Shot vs Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot) — Entiende cuándo TRACE es excesivo y técnicas más simples son suficientes.',
+            '[Fundamentos de Prompt Engineering](/es/prompt-engineering/what-is-prompt-engineering) — Una guía fundamental para estructurar prompts efectivamente.',
           ],
         },
 
@@ -1172,8 +1172,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[استدعاء Chain-of-Thought](/ar/prompt-engineering/chain-of-thought-prompting) — التقنية الأساسية التي تطلب من النماذج الاستدلال خطوة بخطوة.',
             '[إطار RISEN](/ar/prompt-engineering/risen-framework) — استخدمه عندما تريد التحسين التكراري إلى جانب الاستدلال.',
             '[إطار CO-STAR](/ar/prompt-engineering/co-star-framework) — إطار مكمّل لمهام الصياغة والتوليد.',
-            '[Zero-Shot مقابل Few-Shot](/ar/prompt-engineering/zero-shot-vs-few-shot-prompting) — افهم متى يكون TRACE مبالغة وتكفي التقنيات الأبسط.',
-            '[أساسيات هندسة الطلبات](/ar/prompt-engineering/prompt-engineering-fundamentals) — دليل أساسي لبناء الطلبات بفعالية.',
+            '[Zero-Shot مقابل Few-Shot](/ar/prompt-engineering/zero-shot-vs-few-shot) — افهم متى يكون TRACE مبالغة وتكفي التقنيات الأبسط.',
+            '[أساسيات هندسة الطلبات](/ar/prompt-engineering/what-is-prompt-engineering) — دليل أساسي لبناء الطلبات بفعالية.',
           ],
         },
 
@@ -1472,8 +1472,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompting Chain-of-Thought](/pt/prompt-engineering/chain-of-thought-prompting) — A técnica fundamental que pede aos modelos que raciocinem passo a passo.',
             '[O Framework RISEN](/pt/prompt-engineering/risen-framework) — Use isso quando quiser refinamento iterativo junto com raciocínio.',
             '[O Framework CO-STAR](/pt/prompt-engineering/co-star-framework) — Um framework complementar para tarefas de rascunho e geração.',
-            '[Zero-Shot vs. Few-Shot Prompting](/pt/prompt-engineering/zero-shot-vs-few-shot-prompting) — Entenda quando o TRACE é excessivo e técnicas mais simples são suficientes.',
-            '[Fundamentos de Prompt Engineering](/pt/prompt-engineering/prompt-engineering-fundamentals) — Um guia fundamental para estruturar prompts de forma eficaz.',
+            '[Zero-Shot vs. Few-Shot Prompting](/pt/prompt-engineering/zero-shot-vs-few-shot) — Entenda quando o TRACE é excessivo e técnicas mais simples são suficientes.',
+            '[Fundamentos de Prompt Engineering](/pt/prompt-engineering/what-is-prompt-engineering) — Um guia fundamental para estruturar prompts de forma eficaz.',
           ],
         },
         faq: {
@@ -1732,8 +1732,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — La technique fondamentale qui demande aux modèles de raisonner étape par étape.',
             '[Le Framework RISEN](/prompt-engineering/risen-framework) — À utiliser quand vous voulez l\'amélioration itérative au côté du raisonnement.',
             '[Le Framework CO-STAR](/prompt-engineering/co-star-framework) — Un framework complémentaire pour les tâches de rédaction et génération.',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot-prompting) — Comprendre quand TRACE est excessif et les techniques plus simples suffisent.',
-            '[Fondamentaux du Prompt Engineering](/prompt-engineering/prompt-engineering-fundamentals) — Un guide fondateur pour structurer les prompts efficacement.',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — Comprendre quand TRACE est excessif et les techniques plus simples suffisent.',
+            '[Fondamentaux du Prompt Engineering](/prompt-engineering/what-is-prompt-engineering) — Un guide fondateur pour structurer les prompts efficacement.',
           ],
         },
 
@@ -2035,8 +2035,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — モデルにステップバイステップで推論させる基本的な技術。',
             '[RISENフレームワーク](/prompt-engineering/risen-framework) — 推論と一緒に反復的な改善が必要な場合に使用します。',
             '[CO-STARフレームワーク](/prompt-engineering/co-star-framework) — 文章作成と生成タスク用の補完的なフレームワーク。',
-            '[ゼロショット vs ファインショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot-prompting) — TRACEが過剰で、より簡単な技術で十分な場合を理解してください。',
-            '[プロンプト・エンジニアリング基礎](/prompt-engineering/prompt-engineering-fundamentals) — プロンプトを効果的に構造化するための基本的なガイド。',
+            '[ゼロショット vs ファインショットプロンプティング](/prompt-engineering/zero-shot-vs-few-shot) — TRACEが過剰で、より簡単な技術で十分な場合を理解してください。',
+            '[プロンプト・エンジニアリング基礎](/prompt-engineering/what-is-prompt-engineering) — プロンプトを効果的に構造化するための基本的なガイド。',
           ],
         },
 
@@ -2339,8 +2339,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought提示](/prompt-engineering/chain-of-thought-prompting) — 让模型逐步推理的基础技术。',
             '[RISEN框架](/prompt-engineering/risen-framework) — 当你需要和推理一起迭代改进时使用。',
             '[CO-STAR框架](/prompt-engineering/co-star-framework) — 用于起草和生成任务的辅助框架。',
-            '[零样本 vs 少样本提示](/prompt-engineering/zero-shot-vs-few-shot-prompting) — 了解什么时候TRACE太重了，更简单的技术就够用。',
-            '[提示工程基础](/prompt-engineering/prompt-engineering-fundamentals) — 有效结构化提示的基础指南。',
+            '[零样本 vs 少样本提示](/prompt-engineering/zero-shot-vs-few-shot) — 了解什么时候TRACE太重了，更简单的技术就够用。',
+            '[提示工程基础](/prompt-engineering/what-is-prompt-engineering) — 有效结构化提示的基础指南。',
           ],
         },
 
@@ -2546,7 +2546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         fiveStages: {
           title: 'TRACE의 다섯 단계는 무엇인가',
           content: [
-            '**좋은 TRACE 프롬프트는 작업과 모델 전반에 걸쳐 추론 흔적이 일관되도록 각 단계에서 모델이 수행해야 할 작업을 명확히 지시합니다.** 단계를 명확하게 유지하면서 하나의 메시지로 압축할 수 있습니다. 단순한 작업의 경우 [zero-shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot-prompting)이 더 빠릅니다. 감사 가능성이 필요한 경우에 TRACE를 사용하십시오.',
+            '**좋은 TRACE 프롬프트는 작업과 모델 전반에 걸쳐 추론 흔적이 일관되도록 각 단계에서 모델이 수행해야 할 작업을 명확히 지시합니다.** 단계를 명확하게 유지하면서 하나의 메시지로 압축할 수 있습니다. 단순한 작업의 경우 [zero-shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot)이 더 빠릅니다. 감사 가능성이 필요한 경우에 TRACE를 사용하십시오.',
             '일반적인 단계 정의:',
           ],
           items: [
@@ -2674,8 +2674,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 모델에게 단계적으로 추론하도록 요청하는 기초 기법.',
             '[RISEN 프레임워크](/prompt-engineering/risen-framework) — 추론과 함께 반복적 개선이 필요할 때 사용하십시오.',
             '[CO-STAR 프레임워크](/prompt-engineering/co-star-framework) — 초안 작성 및 생성 작업을 위한 보완 프레임워크.',
-            '[Zero-Shot vs Few-Shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot-prompting) — TRACE가 과도하고 더 간단한 기법으로 충분한 경우를 이해하십시오.',
-            '[프롬프트 엔지니어링 기초](/prompt-engineering/prompt-engineering-fundamentals) — 프롬프트를 효과적으로 구조화하기 위한 기초 가이드.',
+            '[Zero-Shot vs Few-Shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — TRACE가 과도하고 더 간단한 기법으로 충분한 경우를 이해하십시오.',
+            '[프롬프트 엔지니어링 기초](/prompt-engineering/what-is-prompt-engineering) — 프롬프트를 효과적으로 구조화하기 위한 기초 가이드.',
           ],
         },
 

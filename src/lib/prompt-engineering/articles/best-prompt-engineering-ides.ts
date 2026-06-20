@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'What Makes a Good Prompt Engineering IDE?',
-        content: '**A good prompt IDE minimizes friction between idea and execution.** You should be able to switch models in seconds, see results immediately, view token counts, save prompt history, and export to code without leaving the tool.\n\nKey features to evaluate:\n\n- **Model switching:** Can you test the same prompt on GPT-5.5, Claude, and Gemini in one tool?\n- **Playground mode:** Can you execute prompts without writing code?\n- **Token counter:** Does it show tokens consumed before you commit? (Token costs add up — learn [how to optimize prompts for cost](/prompt-engineering/optimize-prompts-for-cost).)\n- **Prompt history:** Can you revert to earlier versions without manual save files?\n- **Export to code:** Can you convert a working prompt into Python/JS/API format?\n- **Cost visibility:** Can you see cost-per-request during exploration?\n\nAs of April 2026, no single IDE nails all six. Developers choose based on workflow: Cursor for development speed, Playground for API exploration, Console for single-model focus, LM Studio for offline work.',
+        content: '**A good prompt IDE minimizes friction between idea and execution.** You should be able to switch models in seconds, see results immediately, view token counts, save prompt history, and export to code without leaving the tool.\n\nKey features to evaluate:\n\n- **Model switching:** Can you test the same prompt on GPT-5.5, Claude, and Gemini in one tool?\n- **Playground mode:** Can you execute prompts without writing code?\n- **Token counter:** Does it show tokens consumed before you commit? (Token costs add up — learn how to optimize prompts for cost.)\n- **Prompt history:** Can you revert to earlier versions without manual save files?\n- **Export to code:** Can you convert a working prompt into Python/JS/API format?\n- **Cost visibility:** Can you see cost-per-request during exploration?\n\nAs of April 2026, no single IDE nails all six. Developers choose based on workflow: Cursor for development speed, Playground for API exploration, Console for single-model focus, LM Studio for offline work.',
         snippets: [
           { type: 'in-one-sentence', text: 'A prompt engineering IDE is any tool where you can write, test, and iterate on prompts without context-switching to a terminal or separate API client.' },
         ],
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Best Prompt Engineering Tools 2026: Ranked by Use Case](/prompt-engineering/best-prompt-engineering-tools-2026) — Full ranking of 15+ tools across management, testing, and development categories',
           '[Best Prompt Testing & Evaluation Tools 2026](/prompt-engineering/best-prompt-testing-evaluation-tools) — Tools for automated regression testing, LLM-as-judge, and pass rate scoring',
           '[Best Prompt Management Platforms 2026](/prompt-engineering/best-prompt-management-platforms) — Platforms for versioning, sharing, and governing prompts across teams',
-          '[How to Optimize Prompts for Cost: Practical Techniques 2026](/prompt-engineering/optimize-prompts-for-cost) — Token reduction, model tiering, and caching strategies for production prompts',
+          'How to Optimize Prompts for Cost: Practical Techniques 2026 — Token reduction, model tiering, and caching strategies for production prompts',
           '[Prompt Engineering vs Fine-Tuning: How to Decide](/prompt-engineering/prompt-engineering-vs-fine-tuning) — Decision framework for when prompting is enough vs. when to train a model',
           '[How to Evaluate Prompt Quality: A Practical Framework](/prompt-engineering/how-to-evaluate-prompt-quality) — Systematic methods for measuring prompt reliability, accuracy, and regression',
         ],
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'Was macht eine gute Prompt-Engineering-IDE aus?',
-        content: '**Eine gute Prompt-IDE minimiert die Reibung zwischen Idee und Umsetzung.** Sie sollten in der Lage sein, Modelle in Sekunden zu wechseln, Ergebnisse sofort zu sehen, Token-Zahlen einzusehen, den Prompt-Verlauf zu speichern und in Code zu exportieren, ohne das Tool zu verlassen.\n\nWichtige Kriterien bei der Bewertung:\n\n- **Modellwechsel:** Können Sie denselben Prompt in einem Tool mit GPT-5.5, Claude und Gemini testen?\n- **Playground-Modus:** Können Sie Prompts ohne Code ausführen?\n- **Token-Zähler:** Zeigt das Tool den Token-Verbrauch vor der Ausführung an? (Token-Kosten summieren sich — erfahren Sie, wie Sie [Prompts kostenoptimiert gestalten](/de/prompt-engineering/optimize-prompts-for-cost).)\n- **Prompt-Verlauf:** Können Sie zu früheren Versionen zurückkehren, ohne manuelle Sicherungsdateien anlegen zu müssen?\n- **Code-Export:** Können Sie einen funktionierenden Prompt in das Python/JS/API-Format konvertieren?\n- **Kostentransparenz:** Können Sie die Kosten pro Anfrage während der Erkundung einsehen?\n\nStand April 2026 erfüllt keine einzelne IDE alle sechs Kriterien vollständig. Entwickler wählen je nach Workflow: Cursor für Entwicklungsgeschwindigkeit, Playground für API-Erkundung, Console für modellspezifischen Fokus, LM Studio für den Offline-Betrieb.',
+        content: '**Eine gute Prompt-IDE minimiert die Reibung zwischen Idee und Umsetzung.** Sie sollten in der Lage sein, Modelle in Sekunden zu wechseln, Ergebnisse sofort zu sehen, Token-Zahlen einzusehen, den Prompt-Verlauf zu speichern und in Code zu exportieren, ohne das Tool zu verlassen.\n\nWichtige Kriterien bei der Bewertung:\n\n- **Modellwechsel:** Können Sie denselben Prompt in einem Tool mit GPT-5.5, Claude und Gemini testen?\n- **Playground-Modus:** Können Sie Prompts ohne Code ausführen?\n- **Token-Zähler:** Zeigt das Tool den Token-Verbrauch vor der Ausführung an? (Token-Kosten summieren sich — erfahren Sie, wie Sie Prompts kostenoptimiert gestalten.)\n- **Prompt-Verlauf:** Können Sie zu früheren Versionen zurückkehren, ohne manuelle Sicherungsdateien anlegen zu müssen?\n- **Code-Export:** Können Sie einen funktionierenden Prompt in das Python/JS/API-Format konvertieren?\n- **Kostentransparenz:** Können Sie die Kosten pro Anfrage während der Erkundung einsehen?\n\nStand April 2026 erfüllt keine einzelne IDE alle sechs Kriterien vollständig. Entwickler wählen je nach Workflow: Cursor für Entwicklungsgeschwindigkeit, Playground für API-Erkundung, Console für modellspezifischen Fokus, LM Studio für den Offline-Betrieb.',
         snippets: [
           { type: 'in-one-sentence', text: 'Eine Prompt-Engineering-IDE ist jedes Tool, mit dem Sie Prompts schreiben, testen und iterieren können, ohne in ein Terminal oder einen separaten API-Client wechseln zu müssen.' },
         ],
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Beste Prompt-Engineering-Tools 2026: Geordnet nach Anwendungsfall](/de/prompt-engineering/best-prompt-engineering-tools-2026) — Vollständiges Ranking von 15+ Tools aus den Bereichen Management, Tests und Entwicklung',
           '[Beste Prompt-Test- und Evaluierungstools 2026](/de/prompt-engineering/best-prompt-testing-evaluation-tools) — Tools für automatisierte Regressionstests, LLM-as-Judge und Erfolgsquoten-Scoring',
           '[Beste Prompt-Management-Plattformen 2026](/de/prompt-engineering/best-prompt-management-platforms) — Plattformen zur Versionierung, gemeinsamen Nutzung und Verwaltung von Prompts in Teams',
-          '[Prompts kostentechnisch optimieren: Praxistechniken 2026](/de/prompt-engineering/optimize-prompts-for-cost) — Token-Reduzierung, Modell-Tiering und Caching-Strategien für Produktionsprompts',
+          'Prompts kostentechnisch optimieren: Praxistechniken 2026 — Token-Reduzierung, Modell-Tiering und Caching-Strategien für Produktionsprompts',
           '[Prompt Engineering vs. Fine-Tuning: Entscheidungshilfe](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) — Entscheidungsrahmen: Wann reicht Prompting, wann muss ein Modell trainiert werden?',
           '[Prompt-Qualität evaluieren: Ein praktisches Framework](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Systematische Methoden zur Messung von Prompt-Zuverlässigkeit, Genauigkeit und Regression',
         ],
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '¿Qué hace un buen IDE de prompt engineering?',
-        content: '**Un buen IDE de prompts minimiza la fricción entre la idea y la ejecución.** Deberías poder cambiar de modelo en segundos, ver los resultados inmediatamente, ver los conteos de tokens, guardar el historial de prompts y exportar a código sin salir de la herramienta.\n\nCaracterísticas clave a evaluar:\n\n- **Cambio de modelo:** ¿Puedes testear el mismo prompt en GPT-5.5, Claude y Gemini en una sola herramienta?\n- **Modo playground:** ¿Puedes ejecutar prompts sin escribir código?\n- **Contador de tokens:** ¿Muestra los tokens consumidos antes de confirmar? (Los costes de tokens se acumulan — aprende a [optimizar prompts por coste](/es/prompt-engineering/optimize-prompts-for-cost).)\n- **Historial de prompts:** ¿Puedes volver a versiones anteriores sin archivos de guardado manuales?\n- **Exportar a código:** ¿Puedes convertir un prompt que funciona al formato Python/JS/API?\n- **Visibilidad de coste:** ¿Puedes ver el coste por petición durante la exploración?\n\nA abril de 2026, ningún IDE único domina los seis criterios. Los desarrolladores eligen según el flujo de trabajo: Cursor para velocidad de desarrollo, Playground para exploración de API, Console para foco en un modelo específico, LM Studio para trabajo offline.',
+        content: '**Un buen IDE de prompts minimiza la fricción entre la idea y la ejecución.** Deberías poder cambiar de modelo en segundos, ver los resultados inmediatamente, ver los conteos de tokens, guardar el historial de prompts y exportar a código sin salir de la herramienta.\n\nCaracterísticas clave a evaluar:\n\n- **Cambio de modelo:** ¿Puedes testear el mismo prompt en GPT-5.5, Claude y Gemini en una sola herramienta?\n- **Modo playground:** ¿Puedes ejecutar prompts sin escribir código?\n- **Contador de tokens:** ¿Muestra los tokens consumidos antes de confirmar? (Los costes de tokens se acumulan — aprende a optimizar prompts por coste.)\n- **Historial de prompts:** ¿Puedes volver a versiones anteriores sin archivos de guardado manuales?\n- **Exportar a código:** ¿Puedes convertir un prompt que funciona al formato Python/JS/API?\n- **Visibilidad de coste:** ¿Puedes ver el coste por petición durante la exploración?\n\nA abril de 2026, ningún IDE único domina los seis criterios. Los desarrolladores eligen según el flujo de trabajo: Cursor para velocidad de desarrollo, Playground para exploración de API, Console para foco en un modelo específico, LM Studio para trabajo offline.',
         snippets: [
           { type: 'in-one-sentence', text: 'Un IDE de prompt engineering es cualquier herramienta donde puedes escribir, testear e iterar sobre prompts sin cambiar a un terminal o cliente API separado.' },
         ],
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Mejores herramientas de prompt engineering 2026: clasificadas por caso de uso](/es/prompt-engineering/best-prompt-engineering-tools-2026) — Ranking completo de 15+ herramientas en las categorías de gestión, testing y desarrollo',
           '[Mejores herramientas de testing y evaluación de prompts 2026](/es/prompt-engineering/best-prompt-testing-evaluation-tools) — Herramientas para testing de regresión automatizado, LLM-as-judge y scoring de tasa de paso',
           '[Mejores plataformas de gestión de prompts 2026](/es/prompt-engineering/best-prompt-management-platforms) — Plataformas para versionar, compartir y gobernar prompts entre equipos',
-          '[Cómo optimizar prompts por coste: técnicas prácticas 2026](/es/prompt-engineering/optimize-prompts-for-cost) — Reducción de tokens, tiering de modelos y estrategias de caching para prompts en producción',
+          'Cómo optimizar prompts por coste: técnicas prácticas 2026 — Reducción de tokens, tiering de modelos y estrategias de caching para prompts en producción',
           '[Prompt engineering vs fine-tuning: cómo decidir](/es/prompt-engineering/prompt-engineering-vs-fine-tuning) — Framework de decisión para cuándo el prompting es suficiente vs cuándo entrenar un modelo',
           '[Cómo evaluar la calidad de prompts: un framework práctico](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Métodos sistemáticos para medir la fiabilidad, precisión y regresión de prompts',
         ],
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'O que faz um bom IDE de prompt engineering?',
-        content: '**Um bom IDE de prompts minimiza o atrito entre a ideia e a execução.** Você deve poder trocar de modelo em segundos, ver os resultados imediatamente, ver as contagens de tokens, salvar o histórico de prompts e exportar para código sem sair da ferramenta.\n\nRecursos-chave a avaliar:\n\n- **Troca de modelo:** Você pode testar o mesmo prompt no GPT-5.5, Claude e Gemini em uma única ferramenta?\n- **Modo playground:** Você pode executar prompts sem escrever código?\n- **Contador de tokens:** Mostra os tokens consumidos antes de confirmar? (Os custos de tokens se acumulam — aprenda a [otimizar prompts por custo](/pt/prompt-engineering/optimize-prompts-for-cost).)\n- **Histórico de prompts:** Você pode voltar a versões anteriores sem arquivos de salvamento manuais?\n- **Exportar para código:** Você pode converter um prompt que funciona para o formato Python/JS/API?\n- **Visibilidade de custo:** Você pode ver o custo por requisição durante a exploração?\n\nEm abril de 2026, nenhum IDE único domina os seis critérios. Os desenvolvedores escolhem conforme o fluxo de trabalho: Cursor para velocidade de desenvolvimento, Playground para exploração de API, Console para foco em um modelo específico, LM Studio para trabalho offline.',
+        content: '**Um bom IDE de prompts minimiza o atrito entre a ideia e a execução.** Você deve poder trocar de modelo em segundos, ver os resultados imediatamente, ver as contagens de tokens, salvar o histórico de prompts e exportar para código sem sair da ferramenta.\n\nRecursos-chave a avaliar:\n\n- **Troca de modelo:** Você pode testar o mesmo prompt no GPT-5.5, Claude e Gemini em uma única ferramenta?\n- **Modo playground:** Você pode executar prompts sem escrever código?\n- **Contador de tokens:** Mostra os tokens consumidos antes de confirmar? (Os custos de tokens se acumulam — aprenda a otimizar prompts por custo.)\n- **Histórico de prompts:** Você pode voltar a versões anteriores sem arquivos de salvamento manuais?\n- **Exportar para código:** Você pode converter um prompt que funciona para o formato Python/JS/API?\n- **Visibilidade de custo:** Você pode ver o custo por requisição durante a exploração?\n\nEm abril de 2026, nenhum IDE único domina os seis critérios. Os desenvolvedores escolhem conforme o fluxo de trabalho: Cursor para velocidade de desenvolvimento, Playground para exploração de API, Console para foco em um modelo específico, LM Studio para trabalho offline.',
         snippets: [
           { type: 'in-one-sentence', text: 'Um IDE de prompt engineering é qualquer ferramenta onde você pode escrever, testar e iterar sobre prompts sem mudar para um terminal ou cliente de API separado.' },
         ],
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Melhores ferramentas de prompt engineering 2026: classificadas por caso de uso](/pt/prompt-engineering/best-prompt-engineering-tools-2026) — Ranking completo de 15+ ferramentas nas categorias de gerenciamento, testes e desenvolvimento',
           '[Melhores ferramentas de testes e avaliação de prompts 2026](/pt/prompt-engineering/best-prompt-testing-evaluation-tools) — Ferramentas para testes de regressão automatizados, LLM-as-judge e scoring de taxa de aprovação',
           '[Melhores plataformas de gerenciamento de prompts 2026](/pt/prompt-engineering/best-prompt-management-platforms) — Plataformas para versionar, compartilhar e governar prompts entre equipes',
-          '[Como otimizar prompts por custo: técnicas práticas 2026](/pt/prompt-engineering/optimize-prompts-for-cost) — Redução de tokens, tiering de modelos e estratégias de caching para prompts em produção',
+          'Como otimizar prompts por custo: técnicas práticas 2026 — Redução de tokens, tiering de modelos e estratégias de caching para prompts em produção',
           '[Prompt engineering vs fine-tuning: como decidir](/pt/prompt-engineering/prompt-engineering-vs-fine-tuning) — Framework de decisão para quando o prompting é suficiente vs quando treinar um modelo',
           '[Como avaliar a qualidade de prompts: um framework prático](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — Métodos sistemáticos para medir a confiabilidade, precisão e regressão de prompts',
         ],
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: 'Ce qui fait un bon IDE de prompt engineering',
-        content: '**Un bon IDE de prompt engineering minimise la friction entre idée et exécution.** Vous devez pouvoir changer de modèle en quelques secondes, voir les résultats immédiatement, consulter le nombre de tokens, sauvegarder l\'historique des prompts et exporter en code sans quitter l\'outil.\n\nCritères clés à évaluer :\n\n- **Sélection de modèle :** Pouvez-vous tester le même prompt sur GPT-5.5, Claude et Gemini dans un seul outil ?\n- **Mode playground :** Pouvez-vous exécuter des prompts sans écrire de code ?\n- **Compteur de tokens :** Affiche-t-il les tokens consommés avant l\'exécution ? (Les coûts s\'accumulent — découvrez comment [optimiser vos prompts pour réduire les coûts](/fr/prompt-engineering/optimize-prompts-for-cost).)\n- **Historique des prompts :** Pouvez-vous revenir aux versions précédentes sans fichiers de sauvegarde manuels ?\n- **Export en code :** Pouvez-vous convertir un prompt fonctionnel en Python/JS/API ?\n- **Visibilité sur les coûts :** Pouvez-vous voir le coût par requête pendant l\'exploration ?\n\nEn avril 2026, aucun IDE ne remplit les six critères. Les développeurs choisissent selon leur workflow : Cursor pour la vitesse de développement, Playground pour l\'exploration d\'API, Console pour un focus mono-modèle, LM Studio pour le travail hors ligne.',
+        content: '**Un bon IDE de prompt engineering minimise la friction entre idée et exécution.** Vous devez pouvoir changer de modèle en quelques secondes, voir les résultats immédiatement, consulter le nombre de tokens, sauvegarder l\'historique des prompts et exporter en code sans quitter l\'outil.\n\nCritères clés à évaluer :\n\n- **Sélection de modèle :** Pouvez-vous tester le même prompt sur GPT-5.5, Claude et Gemini dans un seul outil ?\n- **Mode playground :** Pouvez-vous exécuter des prompts sans écrire de code ?\n- **Compteur de tokens :** Affiche-t-il les tokens consommés avant l\'exécution ? (Les coûts s\'accumulent — découvrez comment optimiser vos prompts pour réduire les coûts.)\n- **Historique des prompts :** Pouvez-vous revenir aux versions précédentes sans fichiers de sauvegarde manuels ?\n- **Export en code :** Pouvez-vous convertir un prompt fonctionnel en Python/JS/API ?\n- **Visibilité sur les coûts :** Pouvez-vous voir le coût par requête pendant l\'exploration ?\n\nEn avril 2026, aucun IDE ne remplit les six critères. Les développeurs choisissent selon leur workflow : Cursor pour la vitesse de développement, Playground pour l\'exploration d\'API, Console pour un focus mono-modèle, LM Studio pour le travail hors ligne.',
         snippets: [
           { type: 'in-one-sentence', text: 'Un IDE de prompt engineering est tout outil permettant d\'écrire, tester et itérer sur des prompts sans passer par un terminal ou un client API séparé.' },
         ],
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Meilleurs outils de prompt engineering 2026 : classés par cas d\'usage](/fr/prompt-engineering/best-prompt-engineering-tools-2026) — Classement complet de 15+ outils dans les catégories gestion, tests et développement',
           '[Meilleurs outils de test et d\'évaluation de prompts 2026](/fr/prompt-engineering/best-prompt-testing-evaluation-tools) — Outils pour les tests de régression automatisés, LLM-as-judge et scoring de taux de réussite',
           '[Meilleures plateformes de gestion de prompts 2026](/fr/prompt-engineering/best-prompt-management-platforms) — Plateformes pour versionner, partager et gouverner les prompts en équipe',
-          '[Optimiser les prompts pour réduire les coûts : techniques pratiques 2026](/fr/prompt-engineering/optimize-prompts-for-cost) — Réduction de tokens, tiering de modèles et stratégies de cache pour les prompts de production',
+          'Optimiser les prompts pour réduire les coûts : techniques pratiques 2026 — Réduction de tokens, tiering de modèles et stratégies de cache pour les prompts de production',
           '[Prompt engineering vs. fine-tuning : comment décider](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) — Cadre de décision : quand le prompting suffit et quand entraîner un modèle',
           '[Évaluer la qualité des prompts : un cadre pratique](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Méthodes systématiques pour mesurer la fiabilité, la précision et la régression des prompts',
         ],
@@ -1642,7 +1642,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '優れたプロンプトエンジニアリングIDEの条件',
-        content: '**優れたプロンプトIDEは、アイデアから実行までの摩擦を最小化します。** 数秒でモデルを切り替え、結果をすぐに確認し、トークン数を把握し、プロンプト履歴を保存し、ツールを離れずにコードとしてエクスポートできることが求められます。\n\n評価すべき主要機能：\n\n- **モデル切り替え：** 一つのツールでGPT-5.5、Claude、Geminiを同じプロンプトでテストできますか？\n- **Playgroundモード：** コードを書かずにプロンプトを実行できますか？\n- **トークンカウンター：** 実行前に消費トークン数を確認できますか？（コストは積み重なります — [コスト最適化の手法](/ja/prompt-engineering/optimize-prompts-for-cost)を参照してください。）\n- **プロンプト履歴：** 手動バックアップなしに以前のバージョンに戻せますか？\n- **コードエクスポート：** 動作するプロンプトをPython/JS/API形式に変換できますか？\n- **コスト可視化：** 探索中にリクエストごとのコストを確認できますか？\n\n2026年4月時点で、6つの基準すべてを満たすIDEはありません。開発者はワークフローに応じて選択します：Cursor（開発速度）、Playground（API探索）、Console（特定モデルへの集中）、LM Studio（オフライン作業）。',
+        content: '**優れたプロンプトIDEは、アイデアから実行までの摩擦を最小化します。** 数秒でモデルを切り替え、結果をすぐに確認し、トークン数を把握し、プロンプト履歴を保存し、ツールを離れずにコードとしてエクスポートできることが求められます。\n\n評価すべき主要機能：\n\n- **モデル切り替え：** 一つのツールでGPT-5.5、Claude、Geminiを同じプロンプトでテストできますか？\n- **Playgroundモード：** コードを書かずにプロンプトを実行できますか？\n- **トークンカウンター：** 実行前に消費トークン数を確認できますか？（コストは積み重なります — コスト最適化の手法を参照してください。）\n- **プロンプト履歴：** 手動バックアップなしに以前のバージョンに戻せますか？\n- **コードエクスポート：** 動作するプロンプトをPython/JS/API形式に変換できますか？\n- **コスト可視化：** 探索中にリクエストごとのコストを確認できますか？\n\n2026年4月時点で、6つの基準すべてを満たすIDEはありません。開発者はワークフローに応じて選択します：Cursor（開発速度）、Playground（API探索）、Console（特定モデルへの集中）、LM Studio（オフライン作業）。',
         snippets: [
           { type: 'in-one-sentence', text: 'プロンプトエンジニアリングIDEとは、ターミナルや別のAPIクライアントに切り替えることなく、プロンプトを書いて・テストして・改善できるツールです。' },
         ],
@@ -1780,7 +1780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[プロンプトエンジニアリングツール2026年版：ユースケース別ランキング](/ja/prompt-engineering/best-prompt-engineering-tools-2026) — 管理・テスト・開発カテゴリにわたる15以上のツールの完全ランキング',
           '[プロンプトテスト＆評価ツール2026年版](/ja/prompt-engineering/best-prompt-testing-evaluation-tools) — 自動回帰テスト、LLM-as-judge、合格率スコアリングのためのツール',
           '[プロンプト管理プラットフォーム2026年版](/ja/prompt-engineering/best-prompt-management-platforms) — チーム全体でプロンプトをバージョン管理・共有・ガバナンスするためのプラットフォーム',
-          '[プロンプトのコスト最適化：実践的テクニック2026年版](/ja/prompt-engineering/optimize-prompts-for-cost) — プロダクションプロンプトのトークン削減・モデル階層化・キャッシング戦略',
+          'プロンプトのコスト最適化：実践的テクニック2026年版 — プロダクションプロンプトのトークン削減・モデル階層化・キャッシング戦略',
           '[プロンプトエンジニアリング vs ファインチューニング：判断の枠組み](/ja/prompt-engineering/prompt-engineering-vs-fine-tuning) — プロンプティングで十分なケースとモデルをトレーニングすべきケースの判断基準',
           '[プロンプト品質の評価：実践的フレームワーク](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — プロンプトの信頼性・精度・回帰を測定するための体系的な手法',
         ],
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '优秀Prompt工程IDE的评判标准',
-        content: '**优秀的Prompt IDE能最小化创意到执行的摩擦。** 你需要能在数秒内切换模型、立即查看结果、掌握Token用量、保存Prompt历史，并在不离开工具的情况下导出为代码。\n\n核心评估维度：\n\n- **模型切换：** 能否在一个工具里用GPT-5.5、Claude和Gemini测试同一个Prompt？\n- **Playground模式：** 能否不写代码直接执行Prompt？\n- **Token计数器：** 执行前能看到Token消耗吗？（成本会累积——参考[Prompt成本优化方法](/zh/prompt-engineering/optimize-prompts-for-cost)。）\n- **Prompt历史：** 能否在不手动保存文件的情况下回退到之前版本？\n- **代码导出：** 能否将可用Prompt转换为Python/JS/API格式？\n- **成本可视化：** 探索阶段能否实时查看每次请求的费用？\n\n截至2026年4月，没有任何一款IDE能同时满足全部六个标准。开发者根据工作流选择：Cursor（开发效率）、Playground（API探索）、Console（专注单模型）、LM Studio（离线场景）。',
+        content: '**优秀的Prompt IDE能最小化创意到执行的摩擦。** 你需要能在数秒内切换模型、立即查看结果、掌握Token用量、保存Prompt历史，并在不离开工具的情况下导出为代码。\n\n核心评估维度：\n\n- **模型切换：** 能否在一个工具里用GPT-5.5、Claude和Gemini测试同一个Prompt？\n- **Playground模式：** 能否不写代码直接执行Prompt？\n- **Token计数器：** 执行前能看到Token消耗吗？（成本会累积——参考Prompt成本优化方法。）\n- **Prompt历史：** 能否在不手动保存文件的情况下回退到之前版本？\n- **代码导出：** 能否将可用Prompt转换为Python/JS/API格式？\n- **成本可视化：** 探索阶段能否实时查看每次请求的费用？\n\n截至2026年4月，没有任何一款IDE能同时满足全部六个标准。开发者根据工作流选择：Cursor（开发效率）、Playground（API探索）、Console（专注单模型）、LM Studio（离线场景）。',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt工程IDE就是任何能让你无需切换到终端或独立API客户端，就能编写、测试和迭代Prompt的工具。' },
         ],
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[2026年最佳Prompt工程工具：按使用场景排名](/zh/prompt-engineering/best-prompt-engineering-tools-2026) — 涵盖管理、测试和开发类别的15+款工具完整排名',
           '[2026年最佳Prompt测试与评估工具](/zh/prompt-engineering/best-prompt-testing-evaluation-tools) — 自动化回归测试、LLM-as-judge和通过率评分工具',
           '[2026年最佳Prompt管理平台](/zh/prompt-engineering/best-prompt-management-platforms) — 团队级Prompt版本管理、共享和治理平台',
-          '[Prompt成本优化实践技巧（2026）](/zh/prompt-engineering/optimize-prompts-for-cost) — 生产Prompt的Token压缩、模型分级和缓存策略',
+          'Prompt成本优化实践技巧（2026） — 生产Prompt的Token压缩、模型分级和缓存策略',
           '[Prompt工程 vs 微调：如何决策](/zh/prompt-engineering/prompt-engineering-vs-fine-tuning) — 何时用Prompt够用、何时需要训练模型的决策框架',
           '[如何评估Prompt质量：实践框架](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 系统化衡量Prompt可靠性、准确性和回归的方法',
         ],
@@ -2341,7 +2341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[أفضل أدوات هندسة البرومبت 2026: مصنّفة حسب حالة الاستخدام](/ar/prompt-engineering/best-prompt-engineering-tools-2026)',
           '[أفضل أدوات اختبار وتقييم البرومبت 2026](/ar/prompt-engineering/best-prompt-testing-evaluation-tools)',
           '[أفضل منصات إدارة البرومبت 2026](/ar/prompt-engineering/best-prompt-management-platforms)',
-          '[تحسين البرومبت للتكلفة: تقنيات عملية](/ar/prompt-engineering/optimize-prompts-for-cost)',
+          'تحسين البرومبت للتكلفة: تقنيات عملية',
           '[هندسة البرومبت مقابل الضبط الدقيق: متى تختار كلًا منهما؟](/ar/prompt-engineering/prompt-engineering-vs-fine-tuning)',
           '[كيفية تقييم جودة البرومبت: إطار عملي](/ar/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
@@ -2503,7 +2503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatMakesGoodIDE: {
         id: 'what-makes-good-ide',
         title: '좋은 프롬프트 엔지니어링 IDE의 조건',
-        content: '**좋은 프롬프트 IDE는 아이디어와 실행 사이의 마찰을 최소화합니다.** 몇 초 만에 모델을 전환하고, 결과를 즉시 확인하고, 토큰 수를 파악하고, 프롬프트 히스토리를 저장하고, 도구를 벗어나지 않고 코드로 내보낼 수 있어야 합니다.\n\n평가할 핵심 기능:\n\n- **모델 전환:** 하나의 도구에서 GPT-5.5, Claude, Gemini로 동일한 프롬프트를 테스트할 수 있습니까?\n- **플레이그라운드 모드:** 코드를 작성하지 않고 프롬프트를 실행할 수 있습니까?\n- **토큰 카운터:** 확인 전에 소비된 토큰을 표시합니까? (토큰 비용이 쌓입니다 — [비용 기준 프롬프트 최적화](/ko/prompt-engineering/optimize-prompts-for-cost)를 참고하십시오.)\n- **프롬프트 히스토리:** 수동 저장 파일 없이 이전 버전으로 돌아갈 수 있습니까?\n- **코드 내보내기:** 작동하는 프롬프트를 Python/JS/API 형식으로 변환할 수 있습니까?\n- **비용 가시성:** 탐색 중에 요청당 비용을 볼 수 있습니까?\n\n2026년 4월 기준, 6가지 기준을 모두 충족하는 단일 IDE는 없습니다. 개발자들은 워크플로우에 따라 선택합니다: 개발 속도에는 Cursor, API 탐색에는 Playground, 특정 모델에 집중할 때는 Console, 오프라인 작업에는 LM Studio.',
+        content: '**좋은 프롬프트 IDE는 아이디어와 실행 사이의 마찰을 최소화합니다.** 몇 초 만에 모델을 전환하고, 결과를 즉시 확인하고, 토큰 수를 파악하고, 프롬프트 히스토리를 저장하고, 도구를 벗어나지 않고 코드로 내보낼 수 있어야 합니다.\n\n평가할 핵심 기능:\n\n- **모델 전환:** 하나의 도구에서 GPT-5.5, Claude, Gemini로 동일한 프롬프트를 테스트할 수 있습니까?\n- **플레이그라운드 모드:** 코드를 작성하지 않고 프롬프트를 실행할 수 있습니까?\n- **토큰 카운터:** 확인 전에 소비된 토큰을 표시합니까? (토큰 비용이 쌓입니다 — 비용 기준 프롬프트 최적화를 참고하십시오.)\n- **프롬프트 히스토리:** 수동 저장 파일 없이 이전 버전으로 돌아갈 수 있습니까?\n- **코드 내보내기:** 작동하는 프롬프트를 Python/JS/API 형식으로 변환할 수 있습니까?\n- **비용 가시성:** 탐색 중에 요청당 비용을 볼 수 있습니까?\n\n2026년 4월 기준, 6가지 기준을 모두 충족하는 단일 IDE는 없습니다. 개발자들은 워크플로우에 따라 선택합니다: 개발 속도에는 Cursor, API 탐색에는 Playground, 특정 모델에 집중할 때는 Console, 오프라인 작업에는 LM Studio.',
         snippets: [
           { type: 'in-one-sentence', text: '프롬프트 엔지니어링 IDE는 별도의 터미널이나 API 클라이언트로 전환하지 않고도 프롬프트를 작성, 테스트, 반복할 수 있는 도구입니다.' },
         ],
@@ -2641,7 +2641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[2026년 최고의 프롬프트 엔지니어링 도구: 사용 사례별 순위](/ko/prompt-engineering/best-prompt-engineering-tools-2026) — 관리, 테스트, 개발 카테고리의 15개 이상 도구 완전 순위',
           '[2026년 최고의 프롬프트 테스트 및 평가 도구](/ko/prompt-engineering/best-prompt-testing-evaluation-tools) — 자동화된 회귀 테스트, LLM-as-judge, 통과율 점수 도구',
           '[2026년 최고의 프롬프트 관리 플랫폼](/ko/prompt-engineering/best-prompt-management-platforms) — 팀 간 프롬프트 버전 관리, 공유, 거버넌스 플랫폼',
-          '[비용 기준 프롬프트 최적화: 2026년 실용 기술](/ko/prompt-engineering/optimize-prompts-for-cost) — 프로덕션 프롬프트를 위한 토큰 절감, 모델 티어링, 캐싱 전략',
+          '비용 기준 프롬프트 최적화: 2026년 실용 기술 — 프로덕션 프롬프트를 위한 토큰 절감, 모델 티어링, 캐싱 전략',
           '[프롬프트 엔지니어링 vs 파인튜닝: 결정 방법](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning) — 프롬프팅으로 충분한 경우 vs 모델 학습이 필요한 경우의 결정 프레임워크',
           '[프롬프트 품질 평가 방법: 실용적인 프레임워크](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 프롬프트 신뢰성, 정확도, 회귀를 측정하는 체계적인 방법',
         ],

@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Choose GPT-5.5 for Structured Output, Claude 4.6 Sonnet for Nuance',
         content: [
           '**Start with GPT-5.5 and Claude 4.6 Sonnet for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
-          '[GPT-5.5 from OpenAI](https://platform.openai.com/playground) and [Claude 4.6 Sonnet from Anthropic](https://docs.anthropic.com/) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-gemini-which-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-5.5 mini.',
+          '[GPT-5.5 from OpenAI](https://platform.openai.com/playground) and [Claude 4.6 Sonnet from Anthropic](https://docs.anthropic.com/) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-5.5 mini.',
         ],
         columns: ['Task type', 'Recommended model', 'Why'],
         rows: [
@@ -314,7 +314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[How To Evaluate Prompt Quality: Metrics, Tests & Checklist](/prompt-engineering/how-to-evaluate-prompt-quality) — 20-case test set construction, binary pass/fail scoring, and LLM-as-judge rubrics',
           '[How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — running the same prompt against GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro to find the best performer per task',
           '[Best Prompt Management Platforms (2026)](/prompt-engineering/best-prompt-management-platforms) — when you outgrow Git: Braintrust, PromptHub, and Vellum compared for growing teams',
-          '[GPT-5.5 vs Claude vs Gemini: Which Model?](/prompt-engineering/gpt-claude-gemini-which-model) — model selection by task type, latency, cost, and context window',
+          '[GPT-5.5 vs Claude vs Gemini: Which Model?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — model selection by task type, latency, cost, and context window',
           '[Best Prompt Engineering IDEs (2026)](/prompt-engineering/best-prompt-engineering-ides) — configuring VS Code and Cursor for YAML prompt file editing with syntax highlighting and team-shared snippets',
         ],
       },
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Auswahl von KI-Modellen für Ihre Prompts',
         content: [
           '**Beginnen Sie für die meisten Aufgaben mit GPT-5.5 und Claude 4.6 Sonnet – führen Sie beide aus und vergleichen Sie Pass-Raten für Ihren spezifischen Anwendungsfall, bevor Sie sich auf ein Modell festlegen.** Das richtige Modell hängt vom Aufgabentyp ab, nicht von allgemeinen Leaderboard-Rankings.',
-          'GPT-5.5 (OpenAI) und Claude 4.6 Sonnet (Anthropic) sind die zwei am weitesten verbreiteten Frontier-Modelle für Produktions-Prompt-Engineering [Stand April 2026](/de/prompt-engineering/gpt-claude-gemini-which-model). Für Dokumente über 100k Token: Gemini 2.5 Pro hinzufügen. Für kostenempfindliche Hochvolumen-Aufgaben: Claude 4.5 Haiku oder GPT-5.5 mini verwenden.',
+          'GPT-5.5 (OpenAI) und Claude 4.6 Sonnet (Anthropic) sind die zwei am weitesten verbreiteten Frontier-Modelle für Produktions-Prompt-Engineering [Stand April 2026](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Für Dokumente über 100k Token: Gemini 2.5 Pro hinzufügen. Für kostenempfindliche Hochvolumen-Aufgaben: Claude 4.5 Haiku oder GPT-5.5 mini verwenden.',
         ],
         columns: ['Aufgabentyp', 'Empfohlenes Modell', 'Begründung'],
         rows: [
@@ -657,7 +657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Prompt-Qualität evaluieren: Metriken, Tests & Checkliste](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Aufbau eines 20-Testfälle-Sets, binäre Pass/Fail-Bewertung und LLM-as-Judge-Rubrics',
           '[Prompts modellübergreifend testen](/de/prompt-engineering/how-to-test-prompts-across-models) — denselben Prompt gegen GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro ausführen, um den besten Performer pro Aufgabe zu finden',
           '[Beste Prompt-Management-Plattformen (2026)](/de/prompt-engineering/best-prompt-management-platforms) — wenn Sie über Git hinauswachsen: Braintrust, PromptHub und Vellum für wachsende Teams verglichen',
-          '[GPT-5.5 vs. Claude vs. Gemini: Welches Modell?](/de/prompt-engineering/gpt-claude-gemini-which-model) — Modellauswahl nach Aufgabentyp, Latenz, Kosten und Kontextfenster',
+          '[GPT-5.5 vs. Claude vs. Gemini: Welches Modell?](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Modellauswahl nach Aufgabentyp, Latenz, Kosten und Kontextfenster',
           '[Beste Prompt-Engineering-IDEs (2026)](/de/prompt-engineering/best-prompt-engineering-ides) — VS Code und Cursor für die YAML-Prompt-Dateibearbeitung mit Syntax-Highlighting und team-geteilten Snippets konfigurieren',
         ],
       },
@@ -984,7 +984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Cómo evaluar la calidad de los prompts: métricas, pruebas y checklist](/es/prompt-engineering/how-to-evaluate-prompt-quality) — construcción de conjunto de pruebas de 20 casos, puntuación binaria aprobado/fallido y rúbricas LLM-as-judge',
           '[Cómo probar prompts en múltiples modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — ejecutar el mismo prompt en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar el mejor rendimiento por tarea',
           '[Mejores plataformas de gestión de prompts (2026)](/es/prompt-engineering/best-prompt-management-platforms) — cuándo superar Git: Braintrust, PromptHub y Vellum comparados para equipos en crecimiento',
-          '[GPT-5.5 vs Claude vs Gemini: ¿qué modelo?](/es/prompt-engineering/gpt-claude-gemini-which-model) — selección de modelo por tipo de tarea, latencia, coste y ventana de contexto',
+          '[GPT-5.5 vs Claude vs Gemini: ¿qué modelo?](/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — selección de modelo por tipo de tarea, latencia, coste y ventana de contexto',
           '[Mejores IDEs de prompt engineering (2026)](/es/prompt-engineering/best-prompt-engineering-ides) — configuración de VS Code y Cursor para edición de archivos YAML de prompts con resaltado de sintaxis y snippets compartidos del equipo',
         ],
       },
@@ -1307,7 +1307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Como avaliar a qualidade dos prompts: métricas, testes e checklist](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — construção de conjunto de testes de 20 casos, pontuação binária aprovado/reprovado e rubricas LLM-as-judge',
           '[Como testar prompts em múltiplos modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — executar o mesmo prompt no GPT-5.5, Claude 4.6 Sonnet e Gemini 2.5 Pro para encontrar o melhor desempenho por tarefa',
           '[Melhores plataformas de gerenciamento de prompts (2026)](/pt/prompt-engineering/best-prompt-management-platforms) — quando superar o Git: Braintrust, PromptHub e Vellum comparados para equipes em crescimento',
-          '[GPT-5.5 vs Claude vs Gemini: qual modelo?](/pt/prompt-engineering/gpt-claude-gemini-which-model) — seleção de modelo por tipo de tarefa, latência, custo e janela de contexto',
+          '[GPT-5.5 vs Claude vs Gemini: qual modelo?](/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — seleção de modelo por tipo de tarefa, latência, custo e janela de contexto',
           '[Melhores IDEs de prompt engineering (2026)](/pt/prompt-engineering/best-prompt-engineering-ides) — configuração de VS Code e Cursor para edição de arquivos YAML de prompts com realce de sintaxe e snippets compartilhados da equipe',
         ],
       },
@@ -1505,7 +1505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Choisir les modèles IA pour vos prompts',
         content: [
           '**Commencez avec GPT-5.5 et Claude 4.6 Sonnet pour la plupart des tâches — exécutez les deux et comparez les taux de réussite sur votre cas d\'usage avant de vous engager sur un modèle.** Le bon modèle dépend du type de tâche, pas des classements généraux.',
-          'GPT-5.5 (OpenAI) et Claude 4.6 Sonnet (Anthropic) sont les deux modèles frontier les plus utilisés pour le prompt engineering en production [en avril 2026](/fr/prompt-engineering/gpt-claude-gemini-which-model). Pour les documents dépassant 100k tokens, ajoutez Gemini 2.5 Pro. Pour les tâches en volume à faible coût, utilisez Claude 4.5 Haiku ou GPT-5.5 mini.',
+          'GPT-5.5 (OpenAI) et Claude 4.6 Sonnet (Anthropic) sont les deux modèles frontier les plus utilisés pour le prompt engineering en production [en avril 2026](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Pour les documents dépassant 100k tokens, ajoutez Gemini 2.5 Pro. Pour les tâches en volume à faible coût, utilisez Claude 4.5 Haiku ou GPT-5.5 mini.',
         ],
         columns: ['Type de tâche', 'Modèle recommandé', 'Pourquoi'],
         rows: [
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Évaluer la qualité des prompts : métriques, tests et checklist](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — construction d\'un jeu de 20 tests, scoring binaire pass/fail et rubriques LLM-as-judge',
           '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — exécuter le même prompt sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver le meilleur performer par tâche',
           '[Meilleures plateformes de gestion de prompts (2026)](/fr/prompt-engineering/best-prompt-management-platforms) — quand vous dépassez Git : Braintrust, PromptHub et Vellum comparés pour les équipes en croissance',
-          '[GPT-5.5 vs Claude vs Gemini : quel modèle choisir ?](/fr/prompt-engineering/gpt-claude-gemini-which-model) — sélection de modèle par type de tâche, latence, coût et fenêtre de contexte',
+          '[GPT-5.5 vs Claude vs Gemini : quel modèle choisir ?](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — sélection de modèle par type de tâche, latence, coût et fenêtre de contexte',
           '[Meilleurs IDE pour le prompt engineering (2026)](/fr/prompt-engineering/best-prompt-engineering-ides) — configurer VS Code et Cursor pour l\'édition de fichiers YAML avec coloration syntaxique et snippets partagés',
         ],
       },
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'プロンプトに使うAIモデルの選び方',
         content: [
           '**ほとんどのタスクはGPT-5.5とClaude 4.6 Sonnetから始めてください — 1つのモデルに絞る前に、両方を実行して特定のユースケースでの合格率を比較します。** 適切なモデルはタスクの種類に依存します。一般的なリーダーボードランキングではありません。',
-          'GPT-5.5（OpenAI）とClaude 4.6 Sonnet（Anthropic）は、[2026年4月時点で](/ja/prompt-engineering/gpt-claude-gemini-which-model)本番プロンプトエンジニアリングで最も広く使われている2つのフロンティアモデルです。100kトークンを超えるドキュメントにはGemini 2.5 Proを追加します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-5.5 miniを使用します。',
+          'GPT-5.5（OpenAI）とClaude 4.6 Sonnet（Anthropic）は、[2026年4月時点で](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)本番プロンプトエンジニアリングで最も広く使われている2つのフロンティアモデルです。100kトークンを超えるドキュメントにはGemini 2.5 Proを追加します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-5.5 miniを使用します。',
         ],
         columns: ['タスクの種類', '推奨モデル', '理由'],
         rows: [
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Prompt品質の評価方法：メトリクス、テスト、チェックリスト](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 20件テストセットの構築、二値pass/failスコアリング、LLM-as-Judgeルーブリック',
           '[複数モデルでのPromptテスト方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — タスクごとのベストパフォーマーを見つけるためにGPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Proで同じPromptを実行',
           '[ベストPrompt管理プラットフォーム（2026年）](/ja/prompt-engineering/best-prompt-management-platforms) — Gitを超えたとき：成長するチームのためのBraintrust、PromptHub、Vellumの比較',
-          '[GPT-5.5 vs Claude vs Gemini：どのモデルを選ぶ？](/ja/prompt-engineering/gpt-claude-gemini-which-model) — タスクの種類、レイテンシ、コスト、コンテキストウィンドウによるモデル選択',
+          '[GPT-5.5 vs Claude vs Gemini：どのモデルを選ぶ？](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — タスクの種類、レイテンシ、コスト、コンテキストウィンドウによるモデル選択',
           '[ベストPromptエンジニアリングIDE（2026年）](/ja/prompt-engineering/best-prompt-engineering-ides) — シンタックスハイライトとチーム共有スニペット付きYAML Promptファイル編集のためのVS CodeとCursorの設定',
         ],
       },
@@ -2273,7 +2273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[如何评估Prompt质量：指标、测试和清单](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 20条测试集构建、通过/失败评分、LLM-as-judge评分标准',
           '[如何跨模型测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT-5.5、Claude和Gemini上运行相同Prompt以找到最佳表现者',
           '[最佳Prompt管理平台（2026）](/zh/prompt-engineering/best-prompt-management-platforms) — 超越Git后的选择：Braintrust、PromptHub、Vellum对比',
-          '[GPT-5.5 vs Claude vs Gemini：如何选择？](/zh/prompt-engineering/gpt-claude-gemini-which-model) — 按任务类型的模型选择指南',
+          '[GPT-5.5 vs Claude vs Gemini：如何选择？](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 按任务类型的模型选择指南',
         ],
       },
       sources: {
@@ -2599,7 +2599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[كيفية تقييم جودة البرومبتات: المقاييس والاختبارات والقوائم المرجعية](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — بناء مجموعة اختبار من 20 حالة، والتقييم الثنائي ناجح/فاشل، وركيزة LLM-as-judge',
           '[كيفية اختبار البرومبتات عبر نماذج متعددة](/ar/prompt-engineering/how-to-test-prompts-across-models) — تشغيل البرومبت ذاته على GPT-5.5 وClaude 4.6 Sonnet وGemini 2.5 Pro للعثور على أفضل أداء حسب المهمة',
           '[أفضل منصات إدارة البرومبتات (2026)](/ar/prompt-engineering/best-prompt-management-platforms) — متى تتجاوز Git: Braintrust وPromptHub وVellum مقارنةً للفرق في مرحلة النمو',
-          '[GPT-5.5 مقابل Claude مقابل Gemini: أي نموذج؟](/ar/prompt-engineering/gpt-claude-gemini-which-model) — اختيار النموذج حسب نوع المهمة، والكمون، والتكلفة، ونافذة السياق',
+          '[GPT-5.5 مقابل Claude مقابل Gemini: أي نموذج؟](/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — اختيار النموذج حسب نوع المهمة، والكمون، والتكلفة، ونافذة السياق',
           '[أفضل بيئات تطوير هندسة البرومبت (2026)](/ar/prompt-engineering/best-prompt-engineering-ides) — إعداد VS Code وCursor لتحرير ملفات YAML للبرومبتات مع تمييز الصياغة ومقتطفات الفريق المشتركة',
         ],
       },
@@ -2797,7 +2797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '구조화된 출력에는 GPT-5.5, 뉘앙스 처리에는 Claude 4.6 Sonnet 선택',
         content: [
           '**대부분의 작업에는 GPT-5.5와 Claude 4.6 Sonnet으로 시작하십시오. 하나의 모델을 확정하기 전에 두 모델을 실행하고 특정 사용 사례의 합격률을 비교하십시오.** 올바른 모델은 일반적인 리더보드 순위가 아닌 작업 유형에 달려 있습니다.',
-          '[OpenAI의 GPT-5.5](https://platform.openai.com/playground)와 [Anthropic의 Claude 4.6 Sonnet](https://docs.anthropic.com/)은 [2026년 4월 기준](/prompt-engineering/gpt-claude-gemini-which-model) 프로덕션 프롬프트 엔지니어링에서 가장 널리 사용되는 두 개의 프론티어 모델입니다. 100k 토큰을 초과하는 문서의 경우 Gemini 2.5 Pro를 추가하십시오. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.5 mini를 사용하십시오.',
+          '[OpenAI의 GPT-5.5](https://platform.openai.com/playground)와 [Anthropic의 Claude 4.6 Sonnet](https://docs.anthropic.com/)은 [2026년 4월 기준](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) 프로덕션 프롬프트 엔지니어링에서 가장 널리 사용되는 두 개의 프론티어 모델입니다. 100k 토큰을 초과하는 문서의 경우 Gemini 2.5 Pro를 추가하십시오. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.5 mini를 사용하십시오.',
         ],
         columns: ['작업 유형', '권장 모델', '이유'],
         rows: [
@@ -2925,7 +2925,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[프롬프트 품질 평가 방법: 지표, 테스트 및 체크리스트](/prompt-engineering/how-to-evaluate-prompt-quality) — 20개 케이스 테스트 세트 구성, 이진 합격/불합격 채점, LLM-as-judge 루브릭',
           '[여러 모델에서 프롬프트 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro에서 동일한 프롬프트를 실행하여 작업별 최적 모델 찾기',
           '[최고의 프롬프트 관리 플랫폼 (2026)](/prompt-engineering/best-prompt-management-platforms) — Git의 한계를 넘어설 때: 성장하는 팀을 위한 Braintrust, PromptHub, Vellum 비교',
-          '[GPT-5.5 대 Claude 대 Gemini: 어떤 모델을 선택할까?](/prompt-engineering/gpt-claude-gemini-which-model) — 작업 유형, 지연 시간, 비용, 컨텍스트 창별 모델 선택',
+          '[GPT-5.5 대 Claude 대 Gemini: 어떤 모델을 선택할까?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 작업 유형, 지연 시간, 비용, 컨텍스트 창별 모델 선택',
           '[최고의 프롬프트 엔지니어링 IDE (2026)](/prompt-engineering/best-prompt-engineering-ides) — 문법 강조와 팀 공유 스니펫을 활용한 YAML 프롬프트 파일 편집을 위한 VS Code 및 Cursor 설정',
         ],
       },

@@ -1857,7 +1857,7 @@ schema: {
           id: 'related-reading',
           items: [
             '[Ollama インストール完全ガイド](/ja/local-llms/how-to-install-ollama) — 初心者向け LLM セットアップ',
-            '[LM Studio ダウンロード・セットアップ](/ja/local-llms/lm-studio) — GUI ベース LLM 実行',
+            'LM Studio ダウンロード・セットアップ — GUI ベース LLM 実行',
             '[ローカル LLM に必要な VRAM は](/ja/local-llms/how-much-vram-local-llm) — モデルサイズ別 VRAM 計算',
             '[ベストバリュー GPU ローカル LLM 向け](/ja/local-llms/best-budget-gpus-local-llm) — 2026 GPU 比較',
             '[ローカルLLM向けApple Silicon対NVIDIA GPU 2026](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — TCO、電力コスト、ユーザータイプ別決定マトリクスによるMac対NVIDIAの詳細比較。CPU推論は対象外。',
@@ -2105,7 +2105,7 @@ schema: {
           id: 'related-reading',
           items: [
             '[Ollama 完整安装指南](/zh/local-llms/how-to-install-ollama) ——初学者大模型设置',
-            '[LM Studio 下载和设置](/zh/local-llms/lm-studio) ——基于 GUI 的大模型运行',
+            'LM Studio 下载和设置 ——基于 GUI 的大模型运行',
             '[本地大模型需要多少 VRAM](/zh/local-llms/how-much-vram-local-llm) ——按模型大小的 VRAM 计算',
             '[本地大模型最佳预算 GPU](/zh/local-llms/best-budget-gpus-local-llm) ——2026 GPU 对比',
             '[本地LLM的Apple Silicon对比NVIDIA GPU 2026](/zh/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) ——TCO、电力成本和用户类型决策矩阵的Mac对NVIDIA深度对比。不含CPU推理。',

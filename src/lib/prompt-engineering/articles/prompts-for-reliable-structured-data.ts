@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Treating JSON mode as a complete structured output solution',
             problem: 'JSON mode prevents unparseable output but not schema-compliance failures — a model using JSON mode can still return valid JSON with missing fields, wrong types, and invalid enum values, all of which fail downstream validation',
-            fix: 'Always include schema-in-prompt and field instructions even when using API-enforced JSON mode. See [Structured Output and JSON Mode](/prompt-engineering/structured-output-json-mode) for the API configuration — this guide covers the prompt-level complement.',
+            fix: 'Always include schema-in-prompt and field instructions even when using API-enforced JSON mode. See [Structured Output and JSON Mode](/prompt-engineering/structured-output-and-json-mode) for the API configuration — this guide covers the prompt-level complement.',
           },
         ],
       },
@@ -377,8 +377,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Structured Output and JSON Mode: When and How to Use It](/prompt-engineering/structured-output-json-mode) — API-level JSON mode configuration for GPT-5.5, Claude, and Gemini with a model compliance table',
-          '[Best Tools for Structured Output (2026)](/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI, and LangChain compared for structured extraction workflows',
+          '[Structured Output and JSON Mode: When and How to Use It](/prompt-engineering/structured-output-and-json-mode) — API-level JSON mode configuration for GPT-5.5, Claude, and Gemini with a model compliance table',
+          '[Best Tools for Structured Output (2026)](/prompt-engineering/best-tools-structured-output-json) — Instructor, Outlines, Pydantic AI, and LangChain compared for structured extraction workflows',
           '[How To Control the Output: Format, Temperature, and Constrained Decoding](/prompt-engineering/control-the-output) — constrained decoding mechanics, temperature and top-p for structured tasks, stop sequences',
           '[How To Evaluate Prompt Quality: Metrics, Tests and Checklist](/prompt-engineering/how-to-evaluate-prompt-quality) — 20-case test set construction, binary pass/fail scoring, and LLM-as-judge rubrics',
           '[How To Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — running the same prompt against GPT-5.5, Claude 4.6 Sonnet, and Gemini 2.5 Pro to find model-specific failures',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'JSON-Modus als komplette strukturierte Output-Lösung behandeln',
             problem: 'JSON-Modus verhindert nicht analysierbare Ausgabe aber nicht Schema-Konformitätsfehler — ein Modell mit JSON-Modus kann immer noch gültiges JSON mit fehlenden Feldern, falschem Typ und ungültigen Enum-Werten zurückgeben, alle davon scheitern nachgelagert Validierung',
-            fix: 'Beziehen Sie immer Schema im Prompt und Feldanweisungen ein, sogar wenn Sie API-erzwungenen JSON-Modus nutzen. Siehe [Strukturierte Ausgabe und JSON-Modus](/de/prompt-engineering/structured-output-json-mode) für API-Konfiguration — dieses Handbuch behandelt die Prompt-Level-Ergänzung.',
+            fix: 'Beziehen Sie immer Schema im Prompt und Feldanweisungen ein, sogar wenn Sie API-erzwungenen JSON-Modus nutzen. Siehe [Strukturierte Ausgabe und JSON-Modus](/de/prompt-engineering/structured-output-and-json-mode) für API-Konfiguration — dieses Handbuch behandelt die Prompt-Level-Ergänzung.',
           },
         ],
       },
@@ -642,8 +642,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
-          '[Strukturierte Ausgabe und JSON-Modus: Wann und wie Sie es nutzen](/de/prompt-engineering/structured-output-json-mode) — API-Level-JSON-Modus-Konfiguration für GPT-5.5, Claude und Gemini mit Modell-Konformitäts-Tabelle',
-          '[Beste Tools für strukturierte Ausgabe (2026)](/de/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI und LangChain für strukturierte Extraktions-Workflows verglichen',
+          '[Strukturierte Ausgabe und JSON-Modus: Wann und wie Sie es nutzen](/de/prompt-engineering/structured-output-and-json-mode) — API-Level-JSON-Modus-Konfiguration für GPT-5.5, Claude und Gemini mit Modell-Konformitäts-Tabelle',
+          '[Beste Tools für strukturierte Ausgabe (2026)](/de/prompt-engineering/best-tools-structured-output-json) — Instructor, Outlines, Pydantic AI und LangChain für strukturierte Extraktions-Workflows verglichen',
           '[Wie Sie die Ausgabe kontrollieren: Format, Temperatur und beschränkte Dekodierung](/de/prompt-engineering/control-the-output) — beschränkte Dekodierungs-Mechanik, Temperatur und top-p für strukturierte Aufgaben, Stop-Sequenzen',
           '[Wie Sie Prompt-Qualität bewerten: Metriken, Tests und Checkliste](/de/prompt-engineering/how-to-evaluate-prompt-quality) — 20-Fall-Test-Set-Konstruktion, binäre Pass/Fail-Bewertung und LLM-as-Judge-Rubriken',
           '[Wie Sie Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Ausführen des gleichen Prompts gegen GPT-5.5, Claude 4.6 Sonnet und Gemini 2.5 Pro, um modellabhängige Fehler zu finden',
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Salida estructurada y modo JSON: cuándo y cómo usarlo](/es/prompt-engineering/structured-output-json-mode) — Configuración del modo JSON a nivel de API para GPT-5.5, Claude y Gemini con tabla de cumplimiento del modelo',
+          '[Salida estructurada y modo JSON: cuándo y cómo usarlo](/es/prompt-engineering/structured-output-and-json-mode) — Configuración del modo JSON a nivel de API para GPT-5.5, Claude y Gemini con tabla de cumplimiento del modelo',
           '[Cómo controlar la salida: formato, temperatura y decodificación restringida](/es/prompt-engineering/control-the-output) — mecánicas de decodificación restringida, temperatura y top-p para tareas estructuradas',
           '[Cómo evaluar la calidad del prompt: métricas, pruebas y lista de verificación](/es/prompt-engineering/how-to-evaluate-prompt-quality) — construcción de conjuntos de prueba de 20 casos, puntuación binaria de aprobación/fallo',
           '[Cómo probar prompts en diferentes modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — ejecutar el mismo prompt en GPT-5.5, Claude 4.6 Sonnet y Gemini 2.5 Pro para encontrar fallos específicos del modelo',
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[المخرجات المنظمة ووضع JSON: متى وكيف تستخدمها](/ar/prompt-engineering/structured-output-json-mode) — إعداد وضع JSON على مستوى API لـ GPT-5.5 و Claude و Gemini مع جدول امتثال النماذج',
+          '[المخرجات المنظمة ووضع JSON: متى وكيف تستخدمها](/ar/prompt-engineering/structured-output-and-json-mode) — إعداد وضع JSON على مستوى API لـ GPT-5.5 و Claude و Gemini مع جدول امتثال النماذج',
           '[كيفية التحكم في المخرجات: التنسيق ودرجة الحرارة والترميز المقيّد](/ar/prompt-engineering/control-the-output) — آليات الترميز المقيّد ودرجة الحرارة و top-p للمهام المنظمة',
           '[كيفية تقييم جودة الموجّه: المقاييس والاختبارات وقائمة التحقق](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — بناء مجموعات اختبار من 20 حالة، التسجيل الثنائي للنجاح/الفشل',
           '[كيفية اختبار الموجّهات على نماذج مختلفة](/ar/prompt-engineering/how-to-test-prompts-across-models) — تشغيل نفس الموجّه في GPT-5.5 و Claude 4.6 Sonnet و Gemini 2.5 Pro لاكتشاف الإخفاقات الخاصة بالنموذج',
@@ -1521,7 +1521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Saída estruturada e modo JSON: quando e como usar](/pt/prompt-engineering/structured-output-json-mode) — Configuração do modo JSON a nível de API para GPT-5.5, Claude e Gemini com tabela de conformidade do modelo',
+          '[Saída estruturada e modo JSON: quando e como usar](/pt/prompt-engineering/structured-output-and-json-mode) — Configuração do modo JSON a nível de API para GPT-5.5, Claude e Gemini com tabela de conformidade do modelo',
           '[Como controlar a saída: formato, temperatura e decodificação restrita](/pt/prompt-engineering/control-the-output) — mecânicas de decodificação restrita, temperatura e top-p para tarefas estruturadas',
           '[Como avaliar a qualidade do prompt: métricas, testes e checklist](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — construção de conjuntos de teste de 20 casos, pontuação binária de aprovação/reprovação',
           '[Como testar prompts em diferentes modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — executar o mesmo prompt no GPT-5.5, Claude 4.6 Sonnet e Gemini 2.5 Pro para encontrar falhas específicas do modelo',
@@ -1777,7 +1777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'Traiter JSON-mode comme une solution complète de sortie structurée',
             problem: 'JSON-mode empêche la sortie non analysable mais pas les défaillances de conformité du schéma — un modèle avec JSON-mode peut toujours retourner du JSON valide avec champs manquants, mauvais types et valeurs enum invalides, tous échouant à la validation en aval',
-            fix: 'Toujours inclure schéma-dans-le-prompt et instructions de champ même quand utilisant JSON-mode imposé par API. Voir [Sortie Structurée et JSON-mode](/fr/prompt-engineering/structured-output-json-mode) pour configuration API — ce guide couvre le complément au niveau prompt.',
+            fix: 'Toujours inclure schéma-dans-le-prompt et instructions de champ même quand utilisant JSON-mode imposé par API. Voir [Sortie Structurée et JSON-mode](/fr/prompt-engineering/structured-output-and-json-mode) pour configuration API — ce guide couvre le complément au niveau prompt.',
           },
         ],
       },
@@ -1785,8 +1785,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: 'Lectures Supplémentaires',
         items: [
-          '[Sortie Structurée et JSON-mode: Quand et Comment l\'Utiliser](/fr/prompt-engineering/structured-output-json-mode) — Configuration JSON-mode au niveau API pour GPT-5.5, Claude et Gemini avec tableau de conformité du modèle',
-          '[Meilleurs Outils pour Sortie Structurée (2026)](/fr/prompt-engineering/best-tools-structured-output) — Instructor, Outlines, Pydantic AI et LangChain comparés pour workflows d\'extraction structurée',
+          '[Sortie Structurée et JSON-mode: Quand et Comment l\'Utiliser](/fr/prompt-engineering/structured-output-and-json-mode) — Configuration JSON-mode au niveau API pour GPT-5.5, Claude et Gemini avec tableau de conformité du modèle',
+          '[Meilleurs Outils pour Sortie Structurée (2026)](/fr/prompt-engineering/best-tools-structured-output-json) — Instructor, Outlines, Pydantic AI et LangChain comparés pour workflows d\'extraction structurée',
           '[Comment Contrôler la Sortie: Format, Température et Décodage Contraint](/fr/prompt-engineering/control-the-output) — Mécanique de décodage contraint, température et top-p pour tâches structurées, séquences d\'arrêt',
           '[Comment Évaluer la Qualité du Prompt: Métriques, Tests et Checklist](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Construction d\'ensemble de test de 20 cas, scoring réussite/échec binaire et rubriques LLM-as-judge',
           '[Comment Tester les Prompts sur les Modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécution du même prompt sur GPT-5.5, Claude 4.6 Sonnet et Gemini 2.5 Pro pour trouver les défaillances dépendantes du modèle',
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: '完全な構造化出力ソリューションとしてJSON-modeを扱う',
             problem: 'JSON-modeは解析不可能な出力を防ぎますが、スキーマ準拠の失敗を防ぎません — JSON-modeを使用するモデルは、不足しているフィールド、間違ったタイプ、無効な列挙値を含む有効なJSONを返すことができ、すべてが下流検証に失敗',
-            fix: 'API-enforced JSON-modeを使用する場合でも、常にスキーマ-in-prompｔと フィールド指示を含めてください。[構造化出力とJSON-mode](/ja/prompt-engineering/structured-output-json-mode) 参照 API構成— このガイドはプロンプトレベルの補完をカバーしています。',
+            fix: 'API-enforced JSON-modeを使用する場合でも、常にスキーマ-in-prompｔと フィールド指示を含めてください。[構造化出力とJSON-mode](/ja/prompt-engineering/structured-output-and-json-mode) 参照 API構成— このガイドはプロンプトレベルの補完をカバーしています。',
           },
         ],
       },
@@ -2050,8 +2050,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '参考資料',
         items: [
-          '[構造化出力とJSON-mode: いつ、どのように使用するか](/ja/prompt-engineering/structured-output-json-mode) — GPT-5.5、Claude、Geminiのためのapi-levelJSON-mode構成と、モデル準拠テーブル',
-          '[構造化出力用のベストツール (2026)](/ja/prompt-engineering/best-tools-structured-output) — 構造化抽出ワークフロー用に比較されたInstructor、Outlines、Pydantic AI、LangChain',
+          '[構造化出力とJSON-mode: いつ、どのように使用するか](/ja/prompt-engineering/structured-output-and-json-mode) — GPT-5.5、Claude、Geminiのためのapi-levelJSON-mode構成と、モデル準拠テーブル',
+          '[構造化出力用のベストツール (2026)](/ja/prompt-engineering/best-tools-structured-output-json) — 構造化抽出ワークフロー用に比較されたInstructor、Outlines、Pydantic AI、LangChain',
           '[出力を制御する方法: フォーマット、温度、制約デコード](/ja/prompt-engineering/control-the-output) — メカニクスデコード制約、構造化タスク、停止シーケンスの温度とtop-p',
           '[プロンプト品質を評価する方法: メトリクス、テスト、チェックリスト](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 20ケーステストセット構築、バイナリ合格/不合格スコアリング、LLM-as-judgeルーブリック',
           '[モデル全体でプロンプトをテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.5、Claude 4.6 Sonnet、Gemini 2.5 Pro全体で同じプロンプトを実行して、モデル依存の失敗を検出',
@@ -2402,7 +2402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'JSON 모드를 완전한 구조화 출력 솔루션으로 취급',
             problem: 'JSON 모드는 파싱 불가 출력을 방지하지만 스키마 준수 실패는 막지 못합니다 — JSON 모드를 사용하는 모델은 여전히 누락된 필드, 잘못된 타입, 유효하지 않은 enum 값이 있는 유효한 JSON을 반환할 수 있으며, 이 모두가 다운스트림 유효성 검사에 실패합니다.',
-            fix: 'API 강제 JSON 모드를 사용할 때도 항상 스키마-인-프롬프트와 필드 지시사항을 포함하십시오. API 설정은 [구조화 출력과 JSON 모드](/prompt-engineering/structured-output-json-mode)를 참조하십시오 — 이 가이드는 프롬프트 수준의 보완 내용을 다룹니다.',
+            fix: 'API 강제 JSON 모드를 사용할 때도 항상 스키마-인-프롬프트와 필드 지시사항을 포함하십시오. API 설정은 [구조화 출력과 JSON 모드](/prompt-engineering/structured-output-and-json-mode)를 참조하십시오 — 이 가이드는 프롬프트 수준의 보완 내용을 다룹니다.',
           },
         ],
       },
@@ -2449,8 +2449,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[구조화 출력과 JSON 모드: 사용 시기 및 방법](/prompt-engineering/structured-output-json-mode) — 모델 준수 테이블과 함께 GPT-5.5, Claude, Gemini를 위한 API 수준 JSON 모드 설정',
-          '[구조화 출력을 위한 최적 도구 (2026)](/prompt-engineering/best-tools-structured-output) — 구조화 추출 워크플로를 위한 Instructor, Outlines, Pydantic AI, LangChain 비교',
+          '[구조화 출력과 JSON 모드: 사용 시기 및 방법](/prompt-engineering/structured-output-and-json-mode) — 모델 준수 테이블과 함께 GPT-5.5, Claude, Gemini를 위한 API 수준 JSON 모드 설정',
+          '[구조화 출력을 위한 최적 도구 (2026)](/prompt-engineering/best-tools-structured-output-json) — 구조화 추출 워크플로를 위한 Instructor, Outlines, Pydantic AI, LangChain 비교',
           '[출력 제어 방법: 포맷, Temperature, 제약 디코딩](/prompt-engineering/control-the-output) — 제약 디코딩 메커니즘, 구조화 작업을 위한 temperature와 top-p, stop 시퀀스',
           '[프롬프트 품질 평가 방법: 지표, 테스트, 체크리스트](/prompt-engineering/how-to-evaluate-prompt-quality) — 20개 케이스 테스트 세트 구성, 이진 통과/실패 점수, LLM-as-judge 루브릭',
           '[여러 모델에서 프롬프트를 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — 모델별 실패를 찾기 위해 GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Pro에서 동일한 프롬프트 실행',

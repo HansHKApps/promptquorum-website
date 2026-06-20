@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[Local LLM on Laptop: Setup Guide](/local-llms/local-llm-on-laptop)',
             '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm)',
-            '[Local LLM PC Build Under $2,000](/local-llms/local-llm-pc-build-2000)',
+            '[Local LLM PC Build Under $2,000](/local-llms/local-llm-workstation-build)',
             '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm)',
             '[GPU vs CPU vs Apple Silicon for Local LLMs](/local-llms/gpu-vs-cpu-vs-apple-silicon)',
             '[Running 70B Models on Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max)',
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[LLM local en laptop: guía de configuración](/es/local-llms/local-llm-on-laptop)',
             '[Mejores mini PCs para LLMs locales](/es/local-llms/best-mini-pcs-local-llm)',
-            '[PC para LLM local por menos de $2,000](/es/local-llms/local-llm-pc-build-2000)',
+            '[PC para LLM local por menos de $2,000](/es/local-llms/local-llm-workstation-build)',
             '[¿Cuánta VRAM necesitas?](/es/local-llms/how-much-vram-local-llm)',
             '[MacBook Pro M5 Max en profundidad: comparativa Apple Silicon LLM local](/es/local-llms/apple-silicon-m5-local-llm) — Benchmarks de rendimiento para MacBook Pro 16" M5 Max 64GB y 128GB.',
           ],
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[نموذج LLM محلي على اللابتوب: دليل التهيئة](/ar/local-llms/local-llm-on-laptop)',
             '[أفضل أجهزة mini PC لنماذج LLM المحلية](/ar/local-llms/best-mini-pcs-local-llm)',
-            '[تجميع PC لنموذج LLM محلي بأقل من $2,000](/ar/local-llms/local-llm-pc-build-2000)',
+            '[تجميع PC لنموذج LLM محلي بأقل من $2,000](/ar/local-llms/local-llm-workstation-build)',
             '[كم من VRAM تحتاج؟](/ar/local-llms/how-much-vram-local-llm)',
             '[MacBook Pro M5 Max بالتفصيل: مقارنة Apple Silicon لنماذج LLM المحلية](/ar/local-llms/apple-silicon-m5-local-llm) — قياسات أداء لـ MacBook Pro 16" M5 Max 64GB و128GB.',
           ],
@@ -839,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[LLM local em notebook: guia de configuração](/pt/local-llms/local-llm-on-laptop)',
             '[Melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm)',
-            '[PC para LLM local por menos de $2,000](/pt/local-llms/local-llm-pc-build-2000)',
+            '[PC para LLM local por menos de $2,000](/pt/local-llms/local-llm-workstation-build)',
             '[Quanta VRAM você precisa?](/pt/local-llms/how-much-vram-local-llm)',
             '[MacBook Pro M5 Max em profundidade: comparativo Apple Silicon LLM local](/pt/local-llms/apple-silicon-m5-local-llm) — Benchmarks de desempenho para MacBook Pro 16" M5 Max 64GB e 128GB.',
           ],
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[Lokale LLM auf Laptop: Einrichtungsleitfaden](/de/local-llms/local-llm-on-laptop)',
             '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm)',
-            '[Lokaler LLM-PC-Bau unter €2.000](/de/local-llms/local-llm-pc-build-2000)',
+            '[Lokaler LLM-PC-Bau unter €2.000](/de/local-llms/local-llm-workstation-build)',
             '[Wie viel VRAM benötigen Sie?](/de/local-llms/how-much-vram-local-llm)',
           ],
         },
@@ -1260,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[LLM Local sur Ordinateur Portable: Guide de Configuration](/fr/local-llms/local-llm-on-laptop)',
             '[Meilleurs Mini-PC pour LLM Locaux](/fr/local-llms/best-mini-pcs-local-llm)',
-            '[Configuration PC LLM Local sous 2 000 €](/fr/local-llms/local-llm-pc-build-2000)',
+            '[Configuration PC LLM Local sous 2 000 €](/fr/local-llms/local-llm-workstation-build)',
             '[Combien de VRAM Avez-Vous Besoin?](/fr/local-llms/how-much-vram-local-llm)',
           ],
         },
@@ -1470,7 +1470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[ローカルLLMをノートパソコンで: セットアップガイド](/ja/local-llms/local-llm-on-laptop)',
             '[ローカルLLM向けベストミニPC](/ja/local-llms/best-mini-pcs-local-llm)',
-            '[20万円以下でローカルLLM PC構築](/ja/local-llms/local-llm-pc-build-2000)',
+            '[20万円以下でローカルLLM PC構築](/ja/local-llms/local-llm-workstation-build)',
             '[どのくらいVRAMが必要か?](/ja/local-llms/how-much-vram-local-llm)',
           ],
         },
@@ -1680,7 +1680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[笔记本上的本地LLM: 设置指南](/zh/local-llms/local-llm-on-laptop)',
             '[本地LLM最佳迷你PC](/zh/local-llms/best-mini-pcs-local-llm)',
-            '[本地LLM PC $2000以下构建](/zh/local-llms/local-llm-pc-build-2000)',
+            '[本地LLM PC $2000以下构建](/zh/local-llms/local-llm-workstation-build)',
             '[你需要多少VRAM?](/zh/local-llms/how-much-vram-local-llm)',
           ],
         },
@@ -1890,7 +1890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       items: [
         '[노트북에서 로컬 LLM 실행: 설정 가이드](/local-llms/local-llm-on-laptop)',
         '[로컬 LLM 최고 미니 PC](/local-llms/best-mini-pcs-local-llm)',
-        '[$2,000 이하 로컬 LLM PC 빌드](/local-llms/local-llm-pc-build-2000)',
+        '[$2,000 이하 로컬 LLM PC 빌드](/local-llms/local-llm-workstation-build)',
         '[필요한 VRAM 용량은?](/local-llms/how-much-vram-local-llm)',
         '[MacBook Pro M5 Max 심층 분석: Apple Silicon 로컬 LLM 비교](/local-llms/apple-silicon-m5-local-llm) — MacBook Pro 16" M5 Max 64GB 및 128GB 모델의 성능 벤치마크.',
       ],

@@ -1795,11 +1795,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         items: [
           '[温度和Top-P：控制AI创意](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity)',
-          '[单一Prompt方法框架](/zh/prompt-engineering/single-prompt-method)',
-          '[Prompt工程vs零样本学习](/zh/prompt-engineering/prompt-engineering-vs-zero-shot)',
-          '[RAG与微调：何时使用](/zh/prompt-engineering/rag-vs-fine-tuning-explained)',
-          '[本地LLM成本指南](/zh/local-llms/local-llm-cost-breakdown-2026)',
-          '[通过Prompt链接改进推理](/zh/prompt-engineering/prompt-chaining-reasoning)',
+          '[单一Prompt方法框架](/zh/prompt-engineering/the-single-step-prompt-method)',
+          'Prompt工程vs零样本学习',
+          'RAG与微调：何时使用',
+          '[本地LLM成本指南](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026)',
+          '[通过Prompt链接改进推理](/zh/prompt-engineering/prompt-chaining)',
         ],
       },
       regionalContext: {
