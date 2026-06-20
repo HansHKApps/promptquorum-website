@@ -1952,7 +1952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'Perguntas Frequentes',
+        title: 'Perguntas frequentes',
         faqs: [
           { q: 'Posso rodar o DeepSeek-R1 completo de 671B localmente?', a: 'Não. O DeepSeek-R1 completo é um modelo Mixture-of-Experts de 671B parâmetros (~37B ativos por token) e precisa de aproximadamente 376–404 GB de VRAM em Q4 — apenas hardware de datacenter. Em casa você roda um de seus destilados (1.5B a 70B). Existe uma build Unsloth de 1.58-bit (~131 GB), mas ela roda a cerca de 0.3 tokens/segundo, o que é uma curiosidade em vez de uma configuração utilizável.' },
           { q: 'Qual destilado do DeepSeek-R1 é o melhor geral?', a: 'Para a maioria das pessoas, o DeepSeek-R1-Distill-Qwen-14B em uma GPU de 16 GB é o melhor equilíbrio entre qualidade de raciocínio, velocidade e ajuste de VRAM. Se você tem uma placa de 24 GB, o destilado 32B é mais forte e supera o OpenAI o1-mini em vários benchmarks de raciocínio.' },

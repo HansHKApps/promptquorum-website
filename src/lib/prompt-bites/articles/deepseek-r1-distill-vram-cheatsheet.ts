@@ -161,6 +161,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Der volle 671B DeepSeek-R1 steht nicht in dieser Tabelle — er benötigt ~376–404 GB bei Q4 (nur Rechenzentrum).',
           'Dies sind R1-Reasoning-Distills, nicht DeepSeek-V3 (ein Chat-Modell).',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'DeepSeek-R1-Distills benötigen bei Q4_K_M etwa 0,6 GB VRAM pro Milliarde Parameter — 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 42 GB.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M ist ein komprimiertes Modellformat, das etwa 0,6 GB Grafikspeicher pro Milliarde Parameter benötigt — ein 14B-Modell braucht also ca. 9–10 GB. Übersteigt das Modell den VRAM Ihrer GPU, weicht es auf den langsamen System-RAM aus und die Leistung bricht ein.',
+          },
+        ],
       },
       masterTable: {
         id: 'vram-table',
@@ -264,6 +274,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Le 32B en Q4_K_M (~20.5 GB) est juste sur une RTX 4090 24 GB ; passez à une quantification plus petite pour un contexte plus long.',
           'Le DeepSeek-R1 complet 671B ne figure pas dans ce tableau — il nécessite ~376–404 GB en Q4 (centre de données uniquement).',
           'Ce sont des distillations de raisonnement R1, pas DeepSeek-V3 (un modèle de chat).',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Les distillations DeepSeek-R1 nécessitent environ 0,6 Go de VRAM par milliard de paramètres en Q4_K_M — 7B ≈ 5,5 Go, 14B ≈ 9,5 Go, 32B ≈ 20,5 Go, 70B ≈ 42 Go.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M est un format de modèle compressé qui utilise environ 0,6 Go de mémoire GPU par milliard de paramètres — un modèle 14B nécessite donc environ 9–10 Go. Si le modèle dépasse la VRAM de votre GPU, il déborde sur la RAM système, beaucoup plus lente, et les performances s\'effondrent.',
+          },
         ],
       },
       masterTable: {
@@ -369,6 +389,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'フルの671B DeepSeek-R1はこの表に含まれません — Q4で~376–404 GBが必要（データセンター専用）。',
           'これらはR1推論Distillであり、DeepSeek-V3（チャットモデル）ではありません。',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'DeepSeek-R1 distillはQ4_K_MでGPUの显存（VRAM）を10億パラメータあたり約0.6 GB使用します — 7B ≈ 5.5 GB、14B ≈ 9.5 GB、32B ≈ 20.5 GB、70B ≈ 42 GB。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_Mは10億パラメータあたり約0.6 GBのGPUメモリを使う圧縮モデル形式です — 14Bモデルなら約9〜10 GBが必要です。VRAMを超えるとシステムRAMに溢れ、速度が急激に低下します。',
+          },
+        ],
       },
       masterTable: {
         id: 'vram-table',
@@ -472,6 +502,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Q4_K_M 下的 32B（~20.5 GB）在 24 GB 的 RTX 4090 上较为紧张；如需更长上下文请降到更小的量化。',
           '完整的 671B DeepSeek-R1 不在此表中——它在 Q4 下需要 ~376–404 GB（仅限数据中心）。',
           '这些是 R1 推理 distill，而非 DeepSeek-V3（一款对话模型）。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'DeepSeek-R1 distill 在 Q4_K_M 格式下每十亿参数约需 0.6 GB 显存——7B ≈ 5.5 GB，14B ≈ 9.5 GB，32B ≈ 20.5 GB，70B ≈ 42 GB。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M 是一种压缩模型格式，每十亿参数约占用 0.6 GB GPU 显存——因此 14B 模型大约需要 9–10 GB。若模型超出显存容量，会溢出到速度较慢的系统内存，导致性能急剧下降。',
+          },
         ],
       },
       masterTable: {
@@ -577,6 +617,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'El DeepSeek-R1 completo de 671B no está en esta tabla: necesita ~376–404 GB en Q4 (solo centros de datos).',
           'Estos son distills de razonamiento R1, no DeepSeek-V3 (un modelo de chat).',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Los distills de DeepSeek-R1 necesitan aproximadamente 0,6 GB de VRAM por cada mil millones de parámetros en Q4_K_M: 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 42 GB.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M es un formato de modelo comprimido que usa unos 0,6 GB de memoria GPU por cada mil millones de parámetros; un modelo de 14B necesita aproximadamente 9–10 GB. Si el modelo supera la VRAM disponible, desborda hacia la RAM del sistema, mucho más lenta, y el rendimiento se desploma.',
+          },
+        ],
       },
       masterTable: {
         id: 'vram-table',
@@ -680,6 +730,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'O 32B no Q4_K_M (~20.5 GB) fica apertado em uma RTX 4090 de 24 GB; reduza para uma quantização menor para contexto mais longo.',
           'O DeepSeek-R1 completo de 671B não está nesta tabela — ele precisa de ~376–404 GB no Q4 (apenas data center).',
           'Estes são distills de raciocínio R1, não o DeepSeek-V3 (um modelo de chat).',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Os distills do DeepSeek-R1 precisam de aproximadamente 0,6 GB de VRAM por bilhão de parâmetros em Q4_K_M — 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 42 GB.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M é um formato de modelo comprimido que usa cerca de 0,6 GB de memória GPU por bilhão de parâmetros — um modelo de 14B precisa de aproximadamente 9–10 GB. Se o modelo exceder a VRAM da sua GPU, ele transborda para a RAM do sistema, muito mais lenta, e o desempenho despenca.',
+          },
         ],
       },
       masterTable: {
@@ -785,6 +845,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'نموذج DeepSeek-R1 الكامل بحجم 671B غير مدرج في هذا الجدول — فهو يحتاج إلى ~376–404 GB عند Q4 (لمراكز البيانات فقط).',
           'هذه نماذج استدلال R1 distill، وليست DeepSeek-V3 (نموذج محادثة).',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'تحتاج نماذج DeepSeek-R1 distill إلى نحو 0.6 جيجابايت من VRAM لكل مليار معامل بصيغة Q4_K_M — 7B ≈ 5.5 جيجابايت، و14B ≈ 9.5 جيجابايت، و32B ≈ 20.5 جيجابايت، و70B ≈ 42 جيجابايت.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M صيغة نموذج مضغوطة تستهلك نحو 0.6 جيجابايت من ذاكرة GPU لكل مليار معامل — أي أن نموذج 14B يحتاج نحو 9–10 جيجابايت. إذا تجاوز النموذج سعة VRAM في بطاقتك، فسيُفيض إلى ذاكرة النظام الأبطأ وستنهار الأداء.',
+          },
+        ],
       },
       masterTable: {
         id: 'vram-table',
@@ -888,6 +958,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Q4_K_M의 32B(~20.5 GB)는 24 GB RTX 4090에서 빠듯합니다. 더 긴 컨텍스트가 필요하면 더 작은 양자화로 낮추십시오.',
           '전체 671B DeepSeek-R1은 이 표에 없습니다 — Q4에서 ~376–404 GB가 필요하며 데이터센터 전용입니다.',
           '이들은 R1 추론 distill이며, DeepSeek-V3(채팅 모델)이 아닙니다.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'DeepSeek-R1 distill은 Q4_K_M 기준 10억 파라미터당 약 0.6 GB의 VRAM이 필요합니다 — 7B ≈ 5.5 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M은 10억 파라미터당 약 0.6 GB의 GPU 메모리를 사용하는 압축 모델 형식입니다 — 14B 모델이라면 약 9–10 GB가 필요합니다. 모델이 GPU의 VRAM을 초과하면 느린 시스템 RAM으로 넘쳐나 성능이 급격히 떨어집니다.',
+          },
         ],
       },
       masterTable: {

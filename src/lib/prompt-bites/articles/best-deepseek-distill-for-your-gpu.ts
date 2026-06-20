@@ -163,6 +163,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Setzen Sie die Temperatur auf 0,6 und verwenden Sie keinen System-Prompt, um R1-Wiederholungsfehler zu vermeiden.',
           'Dies ist die R1-Reasoning-Familie — nicht DeepSeek-V3, das ein Chat-Modell ist.',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ordnen Sie Ihre GPU nach VRAM dem größten passenden DeepSeek-R1-Distill zu: RTX 3060 12GB → 7B, RTX 4060 Ti 16GB → 14B, RTX 4090 → 32B, Dual-GPU → 70B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Wählen Sie das größte DeepSeek-R1-Reasoning-Modell, das in den Grafikspeicher (VRAM) Ihrer Grafikkarte passt — mehr VRAM bedeutet mehr Reasoning-Leistung, und jedes Modell wird mit einem einzigen Ollama-Befehl installiert.',
+          },
+        ],
       },
       gpuTable: {
         id: 'gpu-table',
@@ -268,6 +278,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Chaque modèle s\'installe en Q4_K_M avec une seule commande, par ex. `ollama run deepseek-r1:14b`.',
           'Réglez la température sur 0.6 et n\'utilisez aucun system prompt pour éviter les répétitions de R1.',
           'Il s\'agit de la famille de raisonnement R1 — pas de DeepSeek-V3, qui est un modèle de chat.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Associez la VRAM de votre GPU au plus grand distill DeepSeek-R1 compatible : RTX 3060 12 Go → 7B, RTX 4060 Ti 16 Go → 14B, RTX 4090 → 32B, double GPU → 70B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Choisissez le plus grand modèle de raisonnement DeepSeek-R1 que la mémoire de votre carte graphique (VRAM) peut contenir — plus de VRAM signifie plus de capacité de raisonnement, et chaque modèle s\'installe avec une seule commande Ollama.',
+          },
         ],
       },
       gpuTable: {
@@ -375,6 +395,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'R1の繰り返し不具合を避けるため、temperatureを0.6に設定し、system promptは使用しないでください。',
           'これはR1推論ファミリーであり、チャットモデルであるDeepSeek-V3ではありません。',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'GPUの显存（VRAM）に収まる最大のDeepSeek-R1 distillを選んでください：RTX 3060 12GB → 7B、RTX 4060 Ti 16GB → 14B、RTX 4090 → 32B、デュアルGPU → 70B。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'グラフィックカードのVRAMに収まる最大のDeepSeek-R1推論モデルを選びましょう — VRAMが多いほど推論性能が上がり、各モデルはOllamaコマンド1つでインストールできます。',
+          },
+        ],
       },
       gpuTable: {
         id: 'gpu-table',
@@ -480,6 +510,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '每个模型都以 Q4_K_M 通过一条命令安装，例如 `ollama run deepseek-r1:14b`。',
           '将 temperature 设为 0.6 且不使用 system prompt，以避免 R1 的重复故障。',
           '这是 R1 推理家族——不是聊天模型 DeepSeek-V3。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '根据显存大小选择最大的 DeepSeek-R1 distill：RTX 3060 12GB → 7B，RTX 4060 Ti 16GB → 14B，RTX 4090 → 32B，双卡 → 70B。',
+          },
+          {
+            type: 'plain-terms',
+            text: '选择显卡显存（VRAM）能容纳的最大 DeepSeek-R1 推理模型——显存越大，推理能力越强，每个模型只需一条 Ollama 命令即可安装。',
+          },
         ],
       },
       gpuTable: {
@@ -587,6 +627,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ajusta la temperatura a 0.6 y no uses system prompt para evitar fallos de repetición de R1.',
           'Esta es la familia de razonamiento R1, no DeepSeek-V3, que es un modelo de chat.',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Empareja la VRAM de tu GPU con el mayor distill DeepSeek-R1 que quepa: RTX 3060 12 GB → 7B, RTX 4060 Ti 16 GB → 14B, RTX 4090 → 32B, doble GPU → 70B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Elige el mayor modelo de razonamiento DeepSeek-R1 que quepa en la memoria de tu tarjeta gráfica (VRAM) — más VRAM equivale a más capacidad de razonamiento, y cada modelo se instala con un solo comando de Ollama.',
+          },
+        ],
       },
       gpuTable: {
         id: 'gpu-table',
@@ -692,6 +742,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Cada modelo é instalado em Q4_K_M com um comando, por exemplo `ollama run deepseek-r1:14b`.',
           'Defina a temperatura em 0.6 e não use system prompt para evitar falhas de repetição da R1.',
           'Esta é a família de raciocínio R1 — não a DeepSeek-V3, que é um modelo de chat.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Combine a VRAM da sua GPU com o maior distill DeepSeek-R1 que couber: RTX 3060 12 GB → 7B, RTX 4060 Ti 16 GB → 14B, RTX 4090 → 32B, GPU dupla → 70B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Escolha o maior modelo de raciocínio DeepSeek-R1 que a memória da sua placa de vídeo (VRAM) comporta — mais VRAM significa mais capacidade de raciocínio, e cada modelo é instalado com um único comando do Ollama.',
+          },
         ],
       },
       gpuTable: {
@@ -799,6 +859,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'اضبط درجة الحرارة على 0.6 ولا تستخدم system prompt لتجنّب أعطال التكرار في R1.',
           'هذه عائلة R1 الاستدلالية — وليست DeepSeek-V3 وهو نموذج محادثة.',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'طابِق حجم VRAM في وحدة معالجة الرسوميات لديك مع أكبر distill من DeepSeek-R1 يمكنه الاستيعاب: RTX 3060 12GB → 7B، وRTX 4060 Ti 16GB → 14B، وRTX 4090 → 32B، وبطاقتان مزدوجتان → 70B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'اختَر أكبر نموذج استدلال DeepSeek-R1 يمكن لذاكرة بطاقة الرسوميات (VRAM) احتواؤه — فكلما زاد حجم VRAM، زادت قدرة الاستدلال، ويُثبَّت كل نموذج بأمر Ollama واحد فقط.',
+          },
+        ],
       },
       gpuTable: {
         id: 'gpu-table',
@@ -904,6 +974,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '모든 모델은 하나의 명령어로 Q4_K_M으로 설치됩니다. 예: `ollama run deepseek-r1:14b`.',
           'R1의 반복 오류를 피하려면 temperature를 0.6으로 설정하고 system prompt를 사용하지 마십시오.',
           '이것은 R1 추론 계열이며, 채팅 모델인 DeepSeek-V3가 아닙니다.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'GPU의 VRAM 크기에 맞는 가장 큰 DeepSeek-R1 distill을 선택하세요: RTX 3060 12GB → 7B, RTX 4060 Ti 16GB → 14B, RTX 4090 → 32B, 듀얼 GPU → 70B.',
+          },
+          {
+            type: 'plain-terms',
+            text: '그래픽 카드의 메모리(VRAM)에 들어가는 가장 큰 DeepSeek-R1 추론 모델을 고르세요 — VRAM이 클수록 추론 성능이 높아지며, 각 모델은 Ollama 명령어 하나로 설치됩니다.',
+          },
         ],
       },
       gpuTable: {
