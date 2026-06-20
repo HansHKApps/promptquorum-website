@@ -320,6 +320,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is constrained prompting?', a: 'Constrained prompting is the practice of adding explicit rules — format, length, content, and safety boundaries — directly into a prompt to make AI output predictable and reusable. Instead of "write a summary," you specify: 150 words, JSON format, no competitor names, must include a call-to-action.' },
@@ -644,6 +645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was ist Constrained Prompting?', a: 'Constrained Prompting ist die Praxis, explizite Regeln – Format, Länge, Inhalt und Sicherheitsgrenzen – direkt in einen Prompt zu integrieren, um KI-Ausgaben vorhersehbar und wiederverwendbar zu machen. Statt „schreibe eine Zusammenfassung" geben Sie vor: 150 Wörter, JSON-Format, keine Konkurrenten-Namen, muss einen Call-to-Action enthalten.' },
@@ -978,6 +980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es el constrained prompting?', a: 'El constrained prompting es la práctica de añadir reglas explícitas — formato, longitud, contenido y límites de seguridad — directamente en un prompt para hacer que la salida de la IA sea predecible y reutilizable. En lugar de "escribe un resumen", especificas: 150 palabras, formato JSON, sin nombres de competidores, debe incluir una llamada a la acción.' },
@@ -1305,6 +1308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هي الموجّهات المقيّدة؟', a: 'الموجّهات المقيّدة هي ممارسة إضافة قواعد صريحة — التنسيق والطول والمحتوى وحدود الأمان — مباشرةً في الموجّه لجعل مخرجات الذكاء الاصطناعي قابلة للتنبؤ وإعادة الاستخدام. بدلًا من "اكتب ملخصًا"، تحدد: 150 كلمة، تنسيق JSON، بلا أسماء منافسين، يجب تضمين دعوة للعمل.' },
@@ -1630,6 +1634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que é o constrained prompting?', a: 'O constrained prompting é a prática de adicionar regras explícitas — formato, comprimento, conteúdo e limites de segurança — diretamente em um prompt para tornar a saída da IA previsível e reutilizável.' },
@@ -1935,6 +1940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     faqSection: {
+      id: 'faq',
       title: 'Questions fréquentes',
       faqs: [
         {
@@ -2213,6 +2219,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     faqSection: {
+      id: 'faq',
       title: 'よくある質問',
       faqs: [
         {
@@ -2705,6 +2712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     faqSection: {
+      id: 'faq',
       title: '常见问题',
       faqs: [
         {
@@ -3271,6 +3279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '제약 프롬프팅이란 무엇입니까?', a: '제약 프롬프팅은 형식, 길이, 콘텐츠, 안전 경계에 관한 명시적인 규칙을 프롬프트에 직접 추가하여 AI 출력을 예측 가능하고 재사용 가능하게 만드는 방법입니다. "요약을 작성하라" 대신 150단어, JSON 형식, 경쟁사 이름 제외, 행동 촉구 포함이라고 명시합니다.' },

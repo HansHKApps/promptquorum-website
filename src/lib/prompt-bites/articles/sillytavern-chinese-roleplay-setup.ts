@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can Qwen3-7B handle long roleplay sessions in Chinese?',

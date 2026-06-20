@@ -130,7 +130,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Local deployment reduces data-residency and transfer risk but does not, by itself, deliver full LGPD compliance. This table is informational, not legal advice.',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Does running a local LLM make my company LGPD compliant?', a: 'No — not by itself. It helps significantly with data residency, because data never leaves your infrastructure at inference time. But you still need a lawful basis for processing, data-subject rights processes, data-retention policies, and a DPO where required. This is informational, not legal advice.' },
           { q: 'Is it illegal for Brazilian companies to use ChatGPT or Gemini?', a: 'Not automatically. Using cloud AI is not banned, but organizations may face ANPD scrutiny — especially when processing sensitive personal data through services that transfer data abroad without adequate safeguards or lack a Portuguese privacy policy. Assess the risk with your DPO.' },
@@ -329,7 +330,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'A implementação local reduz o risco de residência e transferência de dados, mas não entrega, por si só, conformidade total com a LGPD. Esta tabela é informativa, não é aconselhamento jurídico.',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Perguntas frequentes',
         faqs: [
           { q: 'Rodar um LLM local torna minha empresa conforme com a LGPD?', a: 'Não — não por si só. Ajuda muito com a residência de dados, porque os dados nunca saem da sua infraestrutura no momento da inferência. Mas você ainda precisa de uma base legal para o tratamento, de processos para os direitos do titular, de políticas de retenção de dados e de um DPO quando exigido. Isto é informativo, não é aconselhamento jurídico.' },
           { q: 'É ilegal empresas brasileiras usarem ChatGPT ou Gemini?', a: 'Não automaticamente. Usar IA na nuvem não é proibido, mas as organizações podem enfrentar escrutínio da ANPD — especialmente ao tratar dados pessoais sensíveis por meio de serviços que transferem dados para o exterior sem salvaguardas adequadas ou que não têm política de privacidade em português. Avalie o risco com seu DPO.' },
@@ -529,7 +531,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Die lokale Bereitstellung reduziert das Risiko bei Datenlokalisierung und Übermittlung, liefert aber für sich allein keine vollständige LGPD-Konformität. Diese Tabelle ist informativ und keine Rechtsberatung.',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Macht der Betrieb eines lokalen LLM mein Unternehmen LGPD-konform?', a: 'Nein — nicht für sich allein. Es hilft erheblich bei der Datenlokalisierung, weil Daten zur Inferenzzeit niemals Ihre Infrastruktur verlassen. Aber Sie benötigen weiterhin eine Rechtsgrundlage für die Verarbeitung, Prozesse für Betroffenenrechte, Aufbewahrungsrichtlinien und einen Datenschutzbeauftragten, sofern erforderlich. Dies ist informativ und keine Rechtsberatung.' },
           { q: 'Ist es für brasilianische Unternehmen illegal, ChatGPT oder Gemini zu nutzen?', a: 'Nicht automatisch. Die Nutzung von Cloud-KI ist nicht verboten, aber Organisationen können der Prüfung durch die ANPD ausgesetzt sein — insbesondere bei der Verarbeitung sensibler personenbezogener Daten über Dienste, die Daten ohne angemessene Schutzmaßnahmen ins Ausland übermitteln oder keine portugiesische Datenschutzerklärung haben. Bewerten Sie das Risiko mit Ihrem Datenschutzbeauftragten.' },
@@ -734,7 +737,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'El despliegue local reduce el riesgo de residencia y transferencia de datos, pero no entrega, por sí solo, un cumplimiento total de la LGPD. Esta tabla es informativa, no es asesoramiento legal.',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Ejecutar un LLM local hace que mi empresa cumpla la LGPD?', a: 'No — no por sí solo. Ayuda mucho con la residencia de datos, porque los datos nunca salen de tu infraestructura en el momento de la inferencia. Pero aún necesitas una base legal para el tratamiento, procesos para los derechos del titular, políticas de retención de datos y un DPO cuando se requiera. Esto es informativo, no es asesoramiento legal.' },
           { q: '¿Es ilegal que las empresas brasileñas usen ChatGPT o Gemini?', a: 'No automáticamente. Usar IA en la nube no está prohibido, pero las organizaciones pueden enfrentar escrutinio de la ANPD — especialmente al tratar datos personales sensibles mediante servicios que transfieren datos al extranjero sin salvaguardas adecuadas o que carecen de una política de privacidad en portugués. Evalúa el riesgo con tu DPO.' },
@@ -935,7 +939,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'Le déploiement local réduit le risque de résidence et de transfert des données mais n\'apporte pas, à lui seul, une conformité totale à la LGPD. Ce tableau est informatif, et non un conseil juridique.',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Exécuter un LLM local rend-il mon entreprise conforme à la LGPD ?', a: 'Non — pas à lui seul. Cela aide considérablement pour la résidence des données, car les données ne quittent jamais votre infrastructure au moment de l\'inférence. Mais vous avez toujours besoin d\'une base légale pour le traitement, de processus pour les droits des personnes concernées, de politiques de conservation des données et d\'un DPO le cas échéant. Ceci est informatif, et non un conseil juridique.' },
           { q: 'Est-il illégal pour les entreprises brésiliennes d\'utiliser ChatGPT ou Gemini ?', a: 'Pas automatiquement. Utiliser l\'IA cloud n\'est pas interdit, mais les organisations peuvent faire l\'objet d\'un examen de l\'ANPD — en particulier lors du traitement de données personnelles sensibles via des services qui transfèrent des données à l\'étranger sans garanties adéquates ou sans politique de confidentialité en portugais. Évaluez le risque avec votre DPO.' },
@@ -1136,7 +1141,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'ローカル導入はデータ所在地と移転のリスクを軽減しますが、それ自体で完全なLGPD準拠を実現するものではありません。この表は情報提供であり、法的助言ではありません。',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'よくある質問',
         faqs: [
           { q: 'ローカルLLMを実行すれば、自社はLGPDに準拠しますか？', a: 'いいえ — それ単体では準拠しません。データが推論時に自社インフラから出ないため、データ所在地に大きく役立ちます。しかし、依然として処理の適法な根拠、データ主体対応のプロセス、データ保持ポリシー、必要な場合はDPOが必要です。これは情報提供であり、法的助言ではありません。' },
           { q: 'ブラジル企業がChatGPTやGeminiを使うのは違法ですか？', a: '自動的に違法になるわけではありません。クラウドAIの利用は禁止されていませんが、組織はANPDの精査を受ける可能性があります — 特に、適切なセーフガードなしにデータを海外へ移転するサービスや、ポルトガル語のプライバシーポリシーを欠くサービスを通じて機微な個人データを処理する場合です。リスクはDPOと評価してください。' },
@@ -1337,7 +1343,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: '本地部署降低了数据本地化和传输风险，但其本身并不能实现完整的 LGPD 合规。本表为信息性内容，而非法律建议。',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: '常见问题',
         faqs: [
           { q: '运行本地 LLM 会让我的公司符合 LGPD 吗？', a: '不会 — 单凭它本身不会。它对数据本地化有很大帮助，因为数据在推理时永远不会离开您的基础设施。但您仍然需要处理的合法依据、数据主体处理流程、数据保留政策，以及必要时的 DPO。本文为信息性内容，而非法律建议。' },
           { q: '巴西公司使用 ChatGPT 或 Gemini 是否违法？', a: '并非自动违法。使用云端 AI 并未被禁止，但组织可能面临 ANPD 的审查 — 尤其是在通过将数据传输到境外而无充分保障措施、或缺乏葡萄牙语隐私政策的服务来处理敏感个人数据时。请与您的 DPO 评估风险。' },
@@ -1538,6 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: 'يقلّل النشر المحلي من مخاطر إقامة البيانات والنقل لكنه لا يحقّق بمفرده امتثالاً كاملاً لـ LGPD. هذا الجدول دليل إرشادي وليس استشارة قانونية.',
       },
       faqSection: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل يجعل تشغيل LLM محلي شركتي ممتثلة لـ LGPD؟', a: 'لا — ليس بمفرده. إنه يساعد بشكل كبير في إقامة البيانات، لأن البيانات لا تغادر بنيتك التحتية أبدًا وقت الاستدلال. لكنك لا تزال بحاجة إلى أساس قانوني للمعالجة، وعمليات لحقوق أصحاب البيانات، وسياسات للاحتفاظ بالبيانات، ومسؤول حماية بيانات عند الاقتضاء. هذا دليل إرشادي وليس استشارة قانونية.' },
@@ -1739,7 +1747,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: '로컬 배포는 데이터 거주 및 이전 위험을 줄이지만 그 자체만으로 완전한 LGPD 규정 준수를 제공하지는 않습니다. 이 표는 정보 제공용이며 법률 자문이 아닙니다.',
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: '자주 묻는 질문',
         faqs: [
           { q: '로컬 LLM을 실행하면 우리 회사가 LGPD를 준수하게 됩니까?', a: '아니요 — 그 자체만으로는 아닙니다. 데이터가 추론 시 절대 인프라를 벗어나지 않으므로 데이터 거주에 크게 도움이 됩니다. 그러나 여전히 처리를 위한 적법한 근거, 정보주체 권리 처리 절차, 데이터 보존 정책, 그리고 필요한 경우 DPO가 필요합니다. 이는 정보 제공용이며 법률 자문이 아닙니다.' },
           { q: '브라질 기업이 ChatGPT나 Gemini를 사용하는 것이 불법입니까?', a: '자동으로 불법이 되는 것은 아닙니다. 클라우드 AI 사용은 금지되지 않지만, 조직은 ANPD의 조사를 받을 수 있습니다 — 특히 적절한 보호 조치 없이 데이터를 해외로 이전하거나 포르투갈어 개인정보 처리방침이 없는 서비스를 통해 민감한 개인 데이터를 처리할 때 그렇습니다. DPO와 함께 위험을 평가하십시오.' },

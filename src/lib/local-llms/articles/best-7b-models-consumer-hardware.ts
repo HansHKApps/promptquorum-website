@@ -237,7 +237,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Which 7B should I choose?', a: 'Use Llama 3.3 7B for coding, math, and analytical tasks — it scores 82% on MATH and 73% on HumanEval. Use Mistral Small for creative writing, chat, and instruction-following — it scores 92% on instruction benchmarks. Use Qwen3 7B if you need multilingual support across Chinese, Japanese, German, or Arabic.' },
             { q: 'Is Llama 3.3 7B better than Llama 3.3 7B?', a: 'Yes. Llama 3.3 7B scores approximately 15% higher on reasoning and code benchmarks compared to Llama 3.3 7B. Llama 3.3 uses a new 128K-vocabulary tokenizer, 8K context window, and improved training data. Llama 3.3 is obsolete for new projects — use Llama 3.3.' },
@@ -501,7 +501,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué modelo 7B debería elegir?', a: 'Usa Llama 3.3 7B para programación, matemáticas y tareas analíticas — obtiene 82% en MATH y 73% en HumanEval. Usa Mistral Small para escritura creativa, chat y seguimiento de instrucciones — obtiene 92% en benchmarks de instrucciones. Usa Qwen3 7B si necesitas soporte multilingüe en chino, japonés, alemán o árabe.' },
             { q: '¿Es Llama 3.3 7B mejor que Llama 3.3 7B?', a: 'Sí. Llama 3.3 7B obtiene aproximadamente un 15% más en benchmarks de razonamiento y código comparado con Llama 3.3 7B. Llama 3.3 usa un nuevo tokenizador de vocabulario de 128K, ventana de contexto de 8K y datos de entrenamiento mejorados. Llama 3.3 es obsoleto para nuevos proyectos — usa Llama 3.3.' },
@@ -940,7 +940,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Perguntas frequentes',
           faqs: [
             { q: 'Qual modelo 7B devo escolher?', a: 'Use Llama 3.3 7B para programação, matemática e tarefas analíticas -- obtém 82% em MATH e 73% em HumanEval. Use Mistral Small para escrita criativa, chat e seguimento de instruções -- obtém 92% em benchmarks de instruções. Use Qwen3 7B se precisar de suporte multilíngue em chinês, japonês, alemão, árabe ou português.' },
             { q: 'Posso rodar dois modelos 7B com 16 GB de VRAM?', a: 'Sim. O Ollama suporta carregamento sequencial de vários modelos. Com 16 GB de VRAM você pode rodar dois modelos 7B com quantização Q4, já que cada um requer ~4,5 GB.' },
@@ -1209,7 +1209,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Welches 7B-Modell soll ich wählen?', a: 'Nutzen Sie Llama 3.3 7B für Coding, Mathematik und analytische Aufgaben — es erreicht 82 % beim MATH-Benchmark und 73 % bei HumanEval. Nutzen Sie Mistral Small für kreatives Schreiben, Chat und Instruktionsbefolgung — es erreicht 92 % bei Instruktions-Benchmarks. Nutzen Sie Qwen2,5 7B für mehrsprachige Unterstützung in Chinesisch, Japanisch, Deutsch oder Arabisch.' },
             { q: 'Ist Llama 3.3 7B besser als Llama 3.3 7B?', a: 'Ja. Llama 3.3 7B erzielt bei Reasoning- und Code-Benchmarks rund 15 % höhere Werte als Llama 3.3 7B. Llama 3.3 verwendet einen neuen 128K-Vokabular-Tokenizer, ein 8K-Kontextfenster und verbesserte Trainingsdaten. Llama 3.3 ist für neue Projekte veraltet — verwenden Sie Llama 3.3.' },
@@ -1474,7 +1474,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Quel modèle 7B dois-je choisir ?', a: 'Utilisez Llama 3.3 7B pour le code, les mathématiques et les tâches analytiques — il obtient 82 % au benchmark MATH et 73 % à HumanEval. Utilisez Mistral Small pour la rédaction créative, le chat et le suivi d\'instructions — il obtient 92 % aux benchmarks d\'instructions. Utilisez Qwen3 7B pour le support multilingue en chinois, japonais, allemand ou arabe.' },
             { q: 'Llama 3.3 7B est-il meilleur que Llama 3.3 7B ?', a: 'Oui. Llama 3.3 7B obtient environ 15 % de mieux sur les benchmarks de raisonnement et de code. Il utilise un nouveau tokenizer à vocabulaire 128K, une fenêtre de contexte 8K et des données d\'entraînement améliorées. Llama 3.3 est obsolète pour les nouveaux projets — utilisez Llama 3.3.' },
@@ -1737,7 +1737,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             { q: 'どの7Bモデルを選ぶべきですか？', a: 'コーディング・数学・分析タスクにはLlama 3.3 7Bを使用してください（MATH 82%、HumanEval 73%）。創作・チャット・指示追従にはMistral Smallを使用してください（指示追従ベンチマーク92%）。中国語・日本語・アラビア語などの多言語サポートが必要な場合はQwen3 7Bを選択してください。' },
             { q: 'Llama 3.3 7BはLlama 3.3 7Bより優れていますか？', a: 'はい。Llama 3.3 7BはLlama 3.3 7Bと比較して推論・コードベンチマークで約15%高いスコアを達成します。Llama 3.3は128Kボキャブラリートークナイザー、8Kコンテキストウィンドウ、改善されたトレーニングデータを使用しています。Llama 3.3は新規プロジェクトでは非推奨です。' },
@@ -2267,7 +2267,7 @@ schema: {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: '어떤 7B 모델을 선택해야 합니까?', a: '코딩, 수학, 분석 작업에는 Llama 3.3 7B를 사용하십시오(MATH 82%, HumanEval 73%). 창작 글쓰기, 채팅, 지시 수행에는 Mistral Small을 사용하십시오(지시 수행 벤치마크 92%). 중국어, 일본어, 독일어, 아랍어에 걸쳐 다국어 지원이 필요한 경우에는 Qwen3 7B를 선택하십시오.' },
           { q: 'Llama 3.3 7B는 이전 버전보다 우수합니까?', a: '예. Llama 3.3 7B는 이전 버전 대비 추론 및 코드 벤치마크에서 약 15% 높은 점수를 기록합니다. Llama 3.3은 128K 어휘 토크나이저, 8K 컨텍스트 윈도우, 개선된 학습 데이터를 사용합니다. 이전 버전은 신규 프로젝트에서 더 이상 사용하지 마십시오.' },

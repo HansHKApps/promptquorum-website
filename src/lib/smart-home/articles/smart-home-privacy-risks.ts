@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Do smart speakers always listen?', a: 'Cloud voice assistants listen for a wake word locally, then send the following audio to the cloud for processing. That means your spoken queries are transmitted and may be retained. A local voice assistant processes everything on your hardware instead.' },
           { q: 'Where do my camera feeds go?', a: 'Cloud cameras upload footage to the vendor\'s servers, where it is stored and often gated behind a subscription. A local setup with Frigate keeps footage on your own hardware, so it never leaves the house.' },
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Lauschen smarte Lautsprecher ständig?', a: 'Cloud-Sprachassistenten warten lokal auf ein Aktivierungswort und senden dann das folgende Audio zur Verarbeitung in die Cloud. Das bedeutet, dass Ihre gesprochenen Anfragen übertragen und gespeichert werden können. Ein lokaler Sprachassistent verarbeitet stattdessen alles auf Ihrer Hardware.' },
           { q: 'Wohin gehen meine Kamerafeeds?', a: 'Cloud-Kameras laden Aufnahmen auf die Server des Anbieters, wo sie gespeichert und oft hinter einem Abonnement gehalten werden. Ein lokales Setup mit Frigate hält die Aufnahmen auf Ihrer eigenen Hardware, sodass sie das Haus nie verlassen.' },
@@ -1016,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Les enceintes connectées écoutent-elles en permanence ?', a: 'Les assistants vocaux cloud écoutent localement un mot d\'activation, puis envoient l\'audio suivant au cloud pour traitement. Cela signifie que vos requêtes vocales sont transmises et peuvent être conservées. Un assistant vocal local traite tout sur votre matériel à la place.' },
           { q: 'Où vont les flux de mes caméras ?', a: 'Les caméras cloud téléversent les images sur les serveurs du fournisseur, où elles sont stockées et souvent gérées derrière un abonnement. Une configuration locale avec Frigate garde les images sur votre propre matériel, elles ne quittent donc jamais la maison.' },

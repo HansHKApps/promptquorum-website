@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is the smallest usable model for home control?', a: 'A 3B model such as Llama 3.2 3B is the practical floor for reliable device control on low-power hardware, trading some understanding for speed. A 4B model like Gemma 3 4B or Qwen3 4B is the better balance if your hardware allows it.' },
           { q: 'Does a home-control model need a GPU?', a: 'No for 4B models, which run on CPU or an integrated GPU. A GPU or NPU mainly lets you run an 8B model such as Qwen3 8B at low latency for better understanding. Match the model to your hardware.' },
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist das kleinste nutzbare Modell für die Heimsteuerung?', a: 'Ein 3B-Modell wie Llama 3.2 3B ist die praktische Untergrenze für zuverlässige Gerätesteuerung auf stromsparender Hardware und tauscht etwas Verständnis gegen Tempo. Ein 4B-Modell wie Gemma 3 4B oder Qwen3 4B ist die bessere Balance, wenn Ihre Hardware es erlaubt.' },
           { q: 'Braucht ein Heimsteuerungs-Modell eine GPU?', a: 'Nein für 4B-Modelle, die auf CPU oder einer integrierten GPU laufen. Eine GPU oder NPU lässt Sie vor allem ein 8B-Modell wie Qwen3 8B bei niedriger Latenz für besseres Verständnis betreiben. Passen Sie das Modell an Ihre Hardware an.' },
@@ -1042,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel est le plus petit modèle utilisable pour le contrôle de la maison ?', a: 'Un modèle 3B comme Llama 3.2 3B est le plancher pratique pour un contrôle d\'appareils fiable sur du matériel basse consommation, échangeant un peu de compréhension contre de la vitesse. Un modèle 4B comme Gemma 3 4B ou Qwen3 4B est un meilleur équilibre si votre matériel le permet.' },
           { q: 'Un modèle de contrôle de la maison a-t-il besoin d\'un GPU ?', a: 'Non pour les modèles 4B, qui tournent sur CPU ou un GPU intégré. Un GPU ou un NPU vous permet surtout d\'exécuter un modèle 8B comme Qwen3 8B à faible latence pour une meilleure compréhension. Adaptez le modèle à votre matériel.' },

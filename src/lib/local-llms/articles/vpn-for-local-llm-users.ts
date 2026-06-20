@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Should I use a VPN or expose the LLM API to the internet?', a: 'Always use VPN. Never expose LLM directly to internet (DDoS, unauthorized access). VPN + firewall is secure.' },
             { q: 'Can users access the LLM API without VPN?', a: 'Only from LAN (same network). Remote users MUST use VPN. Or use reverse SSH tunnel (less secure).' },
@@ -597,7 +597,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Dois-je utiliser un VPN ou exposer l\'API LLM sur Internet ?', a: 'Utilise toujours un VPN. N\'expose jamais LLM directement sur Internet (DDoS, accès non autorisé). VPN + pare-feu est sécurisé.' },
             { q: 'Les utilisateurs peuvent-ils accéder à l\'API LLM sans VPN ?', a: 'Uniquement depuis le LAN (même réseau). Les utilisateurs distants DOIVENT utiliser le VPN. Ou utilise le tunnel SSH inverse (moins sécurisé).' },
@@ -786,7 +786,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             { q: 'VPNを使用するか、LLM APIをインターネットに公開するか？', a: '常にVPNを使用。LLMをインターネットに直接公開しないでください（DDoS、不正アクセス）。VPN +ファイアウォールは安全。' },
             { q: 'VPNなしでLLM APIにアクセスできますか？', a: 'LANからのみ（同じネットワーク）。リモートユーザーはVPNを使用する必要があります。またはリバースSSHトンネルを使用（安全性が低い）。' },
@@ -1698,7 +1698,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'VPN을 사용해야 할까요, 아니면 LLM API를 인터넷에 노출해야 할까요?', a: '항상 VPN을 사용하십시오. LLM을 인터넷에 직접 노출하지 마십시오 (DDoS, 무단 접근). VPN + 방화벽이 안전합니다.' },
             { q: '사용자가 VPN 없이 LLM API에 접속할 수 있습니까?', a: 'LAN (동일 네트워크)에서만 가능합니다. 원격 사용자는 반드시 VPN을 사용해야 합니다. 또는 역방향 SSH 터널을 사용할 수 있습니다 (보안성 낮음).' },

@@ -172,7 +172,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Why is Mistral Small 3.1 better than Llama 3.3 for email?', a: 'Mistral Small 3.1 is more concise. Llama 3.3 is more adaptable. For pure speed/brevity: Mistral Small 3.1. For tone matching: Llama 3.3.' },
             { q: 'Can I use a 13B model for business writing?', a: 'Yes, but unnecessary. 7B is faster and equally good. 13B is slightly better at long proposals (>2 pages).' },
@@ -374,7 +375,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Por qué Mistral Small 3.1 es mejor que Llama 3.3 para correos?', a: 'Mistral Small 3.1 es más conciso. Llama 3.3 es más adaptable. Para pura brevedad/precisión: Mistral Small 3.1. Para ajuste de tono: Llama 3.3.' },
             { q: '¿Puedo usar un modelo 13B para redacción profesional?', a: 'Sí, pero no es necesario. El 7B es más rápido e igual de bueno. El 13B es ligeramente mejor para propuestas largas (más de 2 páginas).' },
@@ -576,6 +578,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'لماذا Mistral Small 3.1 أفضل من Llama 3.3 لرسائل البريد؟', a: 'Mistral Small 3.1 أكثر إيجازاً. Llama 3.3 أكثر قابلية للتكيف. للإيجاز/الدقة الخالصة: Mistral Small 3.1. لضبط النبرة: Llama 3.3.' },
@@ -778,6 +781,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Por que o Mistral Small 3.1 é melhor que o Llama 3.3 para e-mails?', a: 'O Mistral Small 3.1 é mais conciso. O Llama 3.3 é mais adaptável. Para pura brevidade/precisão: Mistral Small 3.1. Para ajuste de tom: Llama 3.3.' },
@@ -981,7 +985,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Warum ist Mistral Small 3.1 besser als Llama 3.3 für E-Mails?', a: 'Mistral Small 3.1 ist präziser. Llama 3.3 ist anpassungsfähiger. Für reine Kürze/Präzision: Mistral Small 3.1. Für Tonanpassung: Llama 3.3.' },
             { q: 'Kann ich ein 13B-Modell für Geschäftskorrespondenz verwenden?', a: 'Ja, aber unnötig. 7B ist schneller und qualitativ gleichwertig. 13B ist für lange Angebote (>2 Seiten) leicht besser.' },
@@ -1182,7 +1187,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Pourquoi Mistral Small 3.1 est-il meilleur que Llama 3.3 pour les emails?', a: 'Mistral Small 3.1 est plus concis. Llama 3.3 est plus adaptable. Pour pure brièveté/précision: Mistral Small 3.1. Pour adaptation tonale: Llama 3.3.' },
             { q: 'Puis-je utiliser un modèle 13B pour rédaction professionnelle?', a: 'Oui, mais inutile. 7B est plus rapide et aussi bon. 13B est légèrement meilleur pour propositions longues (>2 pages).' },
@@ -1381,7 +1387,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'よくある質問',
           faqs: [
             { q: 'なぜMistral Small 3.1がメール向けLlama 3.3より優れているのか?', a: 'Mistral Small 3.1はより簡潔。Llama 3.3はより適応可能。純粋な速さ/精度: Mistral Small 3.1。トーン適応: Llama 3.3。' },
             { q: 'ビジネスライティング向けに13Bモデルを使用できますか?', a: 'はい、しかし不要。7Bはより高速で同等に良好。13Bは長い提案（>2ページ）でやや良好。' },
@@ -1581,6 +1588,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '为什么Mistral Small 3.1对电子邮件更好？', a: 'Mistral Small 3.1更精确。Llama 3.3更灵活。纯粹为了简洁/精确：Mistral Small 3.1。音调适应：Llama 3.3。' },
@@ -1733,6 +1741,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: '이메일 작성에서 Mistral Small 3.1이 Llama 3.3보다 나은 이유는 무엇입니까?', a: 'Mistral Small 3.1은 더 간결합니다. Llama 3.3은 더 유연합니다. 순수한 속도와 간결함을 원한다면 Mistral Small 3.1을, 톤 매칭을 원한다면 Llama 3.3을 선택하십시오.' },

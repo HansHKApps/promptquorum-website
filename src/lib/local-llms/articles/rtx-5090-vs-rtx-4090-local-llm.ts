@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Is RTX 5090 worth it for running Llama 3 70B?', a: 'Only if you need 45+ tokens/sec. 4090 gives you 36, which is "good enough" for most. The extra 9 tokens/sec costs $1,000.' },
             { q: 'Should I buy RTX 5090 or two RTX 4090s?', a: 'Two 4090s (~$2,500 used) beat 5090 ($1,999) on speed and flexibility. You can run multiple models in parallel. 5090 is simpler setup, but more expensive.' },
@@ -930,7 +930,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'Llama 3 70B 실행을 위해 RTX 5090이 가치 있나요?', a: '45+ tokens/sec가 필요한 경우에만 가치가 있습니다. 4090은 36 tokens/sec를 제공하며, 이는 대부분의 사용자에게 "충분합니다". 추가적인 9 tokens/sec를 위해 $1,000을 더 지불해야 합니다.' },
             { q: 'RTX 5090 하나와 RTX 4090 두 장 중 어느 것이 더 나은가요?', a: '중고 4090 두 장(약 $2,500)은 속도와 유연성 면에서 5090($1,999)을 앞섭니다. 여러 모델을 병렬로 실행할 수 있습니다. 5090은 설정이 더 간단하지만 비용이 더 높습니다.' },

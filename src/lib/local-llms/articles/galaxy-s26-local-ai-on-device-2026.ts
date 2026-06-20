@@ -336,7 +336,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is Galaxy AI fully on-device or does it use cloud?',
@@ -643,6 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           {
@@ -942,6 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
@@ -1242,6 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
+        id: 'faq',
         title: 'FAQ',
         faqs: [
           {

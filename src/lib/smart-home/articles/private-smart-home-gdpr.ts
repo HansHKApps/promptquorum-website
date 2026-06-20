@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Are smart home devices GDPR-relevant?', a: 'Yes. Smart home devices generate personal data such as presence, routines, voice, and video. Under GDPR, how and where that data is processed matters, and cloud devices that send it to vendor servers introduce a third-party processor.' },
           { q: 'Does local mean there is no processor?', a: 'For your household data, yes — local processing keeps everything on your own hardware, so no external party processes it. You remain in control of the data, which supports GDPR data-minimization and residency principles.' },
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Sind Smart-Home-Geräte DSGVO-relevant?', a: 'Ja. Smart-Home-Geräte erzeugen personenbezogene Daten wie Anwesenheit, Routinen, Sprache und Video. Nach der DSGVO ist wichtig, wie und wo diese Daten verarbeitet werden, und Cloud-Geräte, die sie an Hersteller-Server senden, führen einen Auftragsverarbeiter ein.' },
           { q: 'Bedeutet lokal, dass es keinen Verarbeiter gibt?', a: 'Für Ihre Haushaltsdaten ja – lokale Verarbeitung hält alles auf Ihrer eigenen Hardware, sodass kein externer Beteiligter sie verarbeitet. Sie behalten die Kontrolle über die Daten, was die DSGVO-Prinzipien Datenminimierung und Datenresidenz unterstützt.' },
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Les appareils de maison connectée sont-ils concernés par le RGPD ?', a: 'Oui. Les appareils de maison connectée génèrent des données personnelles telles que présence, routines, voix et vidéo. Selon le RGPD, la façon et le lieu de traitement de ces données importent, et les appareils cloud qui les envoient aux serveurs du fabricant introduisent un sous-traitant externe.' },
           { q: 'Local signifie-t-il qu\'il n\'y a pas de sous-traitant ?', a: 'Pour les données de votre foyer, oui — le traitement local garde tout sur votre propre matériel, donc aucune partie externe ne les traite. Vous gardez le contrôle des données, ce qui soutient les principes du RGPD de minimisation et de résidence.' },

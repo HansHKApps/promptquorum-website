@@ -2118,6 +2118,7 @@ schema: {
           ]
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
@@ -2754,6 +2755,7 @@ schema: {
           ]
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             {
@@ -3393,6 +3395,7 @@ schema: {
           ]
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -3932,6 +3935,7 @@ schema: {
           ]
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '本地LLM比Cloud API慢吗？', a: '是的，明显。CPU = 10–25 token/秒，云= 80–150 token/秒。实时聊天本地太慢。批处理本地OK。' },

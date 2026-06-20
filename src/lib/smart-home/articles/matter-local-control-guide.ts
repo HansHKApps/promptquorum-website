@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is Matter always local?', a: 'Matter is designed for local control, but whether your setup stays local depends on the controller and commissioning. Pairing devices to a local controller like Home Assistant keeps control on your network; relying only on a vendor cloud app may route features through the cloud.' },
           { q: 'Do I need a Thread border router?', a: 'Only for Thread-based Matter devices, which use the low-power Thread mesh. A Thread border router bridges them to your IP network and is built into some hubs and speakers. Matter-over-Wi-Fi devices do not need one.' },
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist Matter immer lokal?', a: 'Matter ist für lokale Steuerung ausgelegt, aber ob Ihr Setup lokal bleibt, hängt vom Controller und dem Einbinden ab. Geräte in einen lokalen Controller wie Home Assistant zu koppeln hält die Steuerung in Ihrem Netzwerk; sich nur auf eine Hersteller-Cloud-App zu verlassen, kann Funktionen über die Cloud leiten.' },
           { q: 'Brauche ich einen Thread-Border-Router?', a: 'Nur für Thread-basierte Matter-Geräte, die das stromsparende Thread-Mesh nutzen. Ein Thread-Border-Router verbindet sie mit Ihrem IP-Netzwerk und ist in manchen Hubs und Lautsprechern eingebaut. Matter-über-WLAN-Geräte brauchen keinen.' },
@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Matter est-il toujours local ?', a: 'Matter est conçu pour le contrôle local, mais le fait que votre configuration reste locale dépend du contrôleur et de l\'appairage. Appairer les appareils à un contrôleur local comme Home Assistant garde le contrôle sur votre réseau ; ne compter que sur une app cloud du fabricant peut acheminer des fonctions via le cloud.' },
           { q: 'Ai-je besoin d\'un routeur de bordure Thread ?', a: 'Seulement pour les appareils Matter basés sur Thread, qui utilisent le maillage Thread basse consommation. Un routeur de bordure Thread les relie à votre réseau IP et est intégré à certains hubs et enceintes. Les appareils Matter-sur-Wi-Fi n\'en ont pas besoin.' },

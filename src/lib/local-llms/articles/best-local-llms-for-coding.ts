@@ -446,7 +446,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is the best local LLM for coding in June 2026?', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, Modified MIT license). Best dense model: Qwen 3.6 27B — 77.2% SWE-bench, 22 GB VRAM. For 8 GB machines: Qwen3 8B. For IDE autocomplete: Codestral 22B.' },
             { q: 'What is HumanEval and why does it matter?', a: 'HumanEval is a benchmark of 164 Python programming problems. The model must generate a correct function body for each. Pass@1 (percentage solved on first attempt) is the standard metric. It is the most widely-used measure for comparing coding models.' },
@@ -965,7 +966,8 @@ schema: {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuál es el mejor LLM local para programación en junio de 2026?', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, licencia MIT modificada). Mejor modelo denso: Qwen 3.6 27B — 77,2% SWE-bench, 22 GB de VRAM. Para máquinas de 8 GB: Qwen3 8B. Para autocompletado en IDE: Codestral 22B.' },
             { q: '¿Qué es HumanEval y por qué importa?', a: 'HumanEval es un benchmark de 164 problemas de programación en Python. El modelo debe generar un cuerpo de función correcto para cada uno. Pass@1 (porcentaje resuelto en el primer intento) es la métrica estándar. Es la medida más utilizada para comparar modelos de programación.' },
@@ -1436,6 +1438,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما أفضل نموذج LLM محلي للبرمجة في يونيو 2026؟', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE، رخصة MIT معدّلة). أفضل نموذج كثيف: Qwen 3.6 27B — 77.2% SWE-bench، 22 GB من VRAM. للأجهزة بسعة 8 GB: Qwen3 8B. للإكمال التلقائي في بيئة التطوير: Codestral 22B.' },
@@ -1999,6 +2002,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'FAQ',
           faqs: [
             { q: 'Was ist das beste lokale LLM für Programmierung 2026?', a: 'Kimi K2.6 -- 58.6 SWE-Bench Pro (MoE, Modified MIT-Lizenz) ist insgesamt am besten. Bestes dichtes Modell: Qwen 3.6 27B -- 77,2% SWE-bench, 22 GB VRAM. Für agentic Coding: Devstral Small 24B. Für 8-GB-Maschinen: Qwen3 8B.' },
@@ -2411,6 +2415,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'FAQ',
           faqs: [
             { q: 'Quel est le meilleur LLM local pour la programmation en 2026?', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, licence MIT modifiée) est le meilleur global. Meilleur modèle dense : Qwen 3.6 27B — 77,2% SWE-bench, 22 GB VRAM. Pour la programmation agentive : Devstral Small 24B. Pour les machines 8 GB : Qwen3 8B.' },
@@ -3563,7 +3568,8 @@ schema: {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: '2026년 6월 기준 코딩에 가장 적합한 로컬 LLM은 무엇입니까?', a: 'Kimi K2.6 — SWE-Bench Pro 58.6점 (MoE, Modified MIT 라이선스). 최고의 밀집형 모델: Qwen 3.6 27B — SWE-bench 77.2%, VRAM 22 GB. 8 GB 환경: Qwen3 8B. IDE 자동 완성: Codestral 22B.' },
             { q: 'HumanEval이란 무엇이며 왜 중요합니까?', a: 'HumanEval은 164개의 Python 프로그래밍 문제 벤치마크입니다. 모델은 각 문제에 대한 올바른 함수 본문을 생성해야 합니다. 첫 번째 시도에서 해결한 비율(Pass@1)이 표준 지표입니다. 코딩 모델 비교에 가장 널리 사용되는 척도입니다.' },

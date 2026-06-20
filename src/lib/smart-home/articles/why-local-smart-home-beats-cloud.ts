@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What happens when a smart home cloud shuts down?', a: 'Cloud-dependent devices can lose core functions when a vendor discontinues the product cloud, sometimes becoming unusable. Local devices are unaffected because they do not rely on that cloud to operate, which is a key reason to choose local control.' },
           { q: 'Is a local smart home faster?', a: 'Often, yes. Local commands skip the internet round-trip to a vendor server, so direct controls and automations respond quickly. Local voice latency depends on your hardware and model size rather than network conditions.' },
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was passiert, wenn eine Smart-Home-Cloud abgeschaltet wird?', a: 'Cloud-abhängige Geräte können Kernfunktionen verlieren, wenn ein Hersteller die Produkt-Cloud einstellt, manchmal werden sie unbrauchbar. Lokale Geräte sind nicht betroffen, weil sie diese Cloud zum Betrieb nicht benötigen – ein zentraler Grund, lokale Steuerung zu wählen.' },
           { q: 'Ist ein lokales Smart Home schneller?', a: 'Oft ja. Lokale Befehle sparen den Internet-Umweg zu einem Hersteller-Server, sodass direkte Steuerungen und Automatisierungen schnell reagieren. Die lokale Sprachlatenz hängt von Ihrer Hardware und Modellgröße ab statt von Netzwerkbedingungen.' },
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Que se passe-t-il quand un cloud de maison connectée ferme ?', a: 'Les appareils dépendants du cloud peuvent perdre des fonctions clés ou devenir inutilisables quand un fabricant abandonne le cloud du produit. Les appareils locaux ne sont pas affectés car ils ne dépendent pas de ce cloud pour fonctionner — une raison clé de choisir le local.' },
           { q: 'Une maison connectée locale est-elle plus rapide ?', a: 'Souvent, oui. Les commandes locales s\'épargnent l\'aller-retour internet vers un serveur du fabricant, donc les commandes directes et les automatisations répondent vite. La latence de la voix locale dépend de votre matériel et de la taille du modèle, pas des conditions réseau.' },

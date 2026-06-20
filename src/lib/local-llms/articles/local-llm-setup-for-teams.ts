@@ -200,7 +200,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Can I add more users without buying new hardware?', a: 'Up to 20-30 concurrent users per GPU. Beyond that, add a second RTX 4090 and rebalance the load with nginx. One RTX 4090 handles approximately 5 tokens/sec per concurrent user.' },
             { q: 'How do I handle model updates (new Llama 3 variant)?', a: 'Download the new model on a separate machine and test it before deployment. vLLM supports hot-swapping models by pausing new requests, finishing in-flight queries, and swapping model files with zero downtime.' },
@@ -440,7 +440,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Kann ich mehr Benutzer ohne neue Hardware hinzufügen?', a: 'Bis zu 20-30 pro GPU. Danach GPU hinzufügen. 1 RTX 4090 verarbeitet ungefähr 5 Token/Sek pro gleichzeitigem Benutzer.' },
             { q: 'Wie handhabe ich Modell-Updates (neue Llama 3 Variante)?', a: 'Auf separater Maschine herunterladen, testen, austauschen. vLLM unterstützt Hot-Swapping Modelle mit 0 Ausfallzeit.' },
@@ -639,7 +639,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Puis-je ajouter plus d\'utilisateurs sans acheter du nouveau matériel?', a: 'Jusqu\'à 20-30 par GPU. Au-delà, ajoutez un GPU. 1 RTX 4090 gère environ 5 tok/sec par utilisateur concurrent.' },
             { q: 'Comment gérer les mises à jour de modèles (nouvelle variante Llama 3)?', a: 'Téléchargez sur une machine séparée, testez, échangez. vLLM supporte le hot-swapping de modèles avec zéro temps d\'arrêt.' },
@@ -838,7 +838,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             { q: '新しいハードウェアなしでより多くのユーザーを追加できますか?', a: 'GPU当たり20～30まで。それ以上はGPUカード追加、ロードバランサー再バランス。1× RTX 4090は同時ユーザーあたり約5 tok/s処理。' },
             { q: 'モデル更新（新Llama 3バリアント）をどのように処理しますか?', a: '別マシンでダウンロード、テスト、スワップイン。vLLMはゼロダウンタイムのモデルホットスワップをサポート。' },
@@ -1037,7 +1037,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: '常见问题',
           faqs: [
             { q: '无需购买新硬件可以添加更多用户吗?', a: '每个GPU最多20-30个。超过此数后添加GPU卡并重新平衡负载均衡器。一个RTX 4090每个并发用户处理约5令牌/秒。' },
             { q: '如何处理模型更新（新Llama 3变体）?', a: '在独立机器上下载、测试、交换。vLLM支持零停机时间模型热交换。' },
@@ -1276,7 +1276,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Puedo agregar más usuarios sin comprar hardware nuevo?', a: 'Hasta 20-30 usuarios simultáneos por GPU. Más allá, agrega una segunda RTX 4090 y reequilibra la carga con nginx. Una RTX 4090 maneja aproximadamente 5 tokens/seg por usuario simultáneo.' },
             { q: '¿Cómo gestiono las actualizaciones de modelos (nueva variante de Llama 3)?', a: 'Descarga el nuevo modelo en una máquina separada y pruébalo antes del despliegue. vLLM soporta el hot-swapping de modelos pausando nuevas solicitudes, terminando las consultas en curso y cambiando los archivos del modelo con cero tiempo de inactividad.' },
@@ -1815,7 +1815,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: '새 하드웨어를 구입하지 않고 사용자를 추가할 수 있습니까?', a: 'GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 두 번째 RTX 4090을 추가하고 nginx로 부하를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 tok/s를 처리합니다.' },
             { q: '모델 업데이트(새 Llama 3 변형 등)를 어떻게 처리합니까?', a: '배포 전에 별도의 기기에서 새 모델을 다운로드하고 테스트하십시오. vLLM은 새 요청을 일시 중지하고, 진행 중인 쿼리를 완료한 후 모델 파일을 교체함으로써 다운타임 없이 모델 핫 스와핑을 지원합니다.' },

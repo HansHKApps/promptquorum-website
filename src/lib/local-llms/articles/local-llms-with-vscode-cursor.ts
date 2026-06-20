@@ -348,6 +348,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'FAQ: Lokale Code-Vervollständigung',
           faqs: [
             {
@@ -537,6 +538,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'FAQ : Complétions de code locales',
           faqs: [
             {
@@ -710,6 +712,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'FAQ：ローカルコード補完',
           faqs: [
             {
@@ -898,6 +901,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题：本地代码补全',
           faqs: [
             {
@@ -1073,6 +1077,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes: Completaciones de código locales',
           faqs: [
             {
@@ -1248,6 +1253,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة: إكمالات الشيفرة المحلية',
           faqs: [
             {
@@ -1423,6 +1429,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes: Completamentos de código locais',
           faqs: [
             {

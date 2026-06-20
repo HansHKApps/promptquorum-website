@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which Whisper model should I use for Home Assistant?', a: 'Use small as the default on a mini PC CPU, tiny or base on a Raspberry Pi, and medium or large only if you have a GPU and need higher accuracy on accents or noisy rooms. Step up one size at a time and re-test.' },
           { q: 'Do I need a GPU for local Whisper?', a: 'No for small and below — those run on CPU. A GPU mainly makes medium and large models fast enough for real-time use. You can also offload Whisper to a more powerful machine over the Wyoming protocol.' },
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Welches Whisper-Modell sollte ich für Home Assistant nutzen?', a: 'Nutzen Sie small als Standard auf einer Mini-PC-CPU, tiny oder base auf einem Raspberry Pi und medium oder large nur, wenn Sie eine GPU haben und höhere Genauigkeit bei Akzenten oder lauten Räumen brauchen. Erhöhen Sie jeweils eine Stufe und testen Sie erneut.' },
           { q: 'Brauche ich eine GPU für lokales Whisper?', a: 'Nein für small und kleiner – die laufen auf der CPU. Eine GPU macht vor allem medium- und large-Modelle schnell genug für die Echtzeitnutzung. Sie können Whisper auch über das Wyoming-Protokoll auf eine leistungsfähigere Maschine auslagern.' },
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel modèle Whisper utiliser pour Home Assistant ?', a: 'Utilisez small par défaut sur un CPU de mini-PC, tiny ou base sur une Raspberry Pi, et medium ou large seulement si vous avez un GPU et avez besoin d\'une meilleure précision sur les accents ou les pièces bruyantes. Montez d\'une taille à la fois et retestez.' },
           { q: 'Ai-je besoin d\'un GPU pour Whisper local ?', a: 'Non pour small et en dessous — ceux-ci tournent sur CPU. Un GPU rend surtout les modèles medium et large assez rapides pour un usage en temps réel. Vous pouvez aussi déporter Whisper sur une machine plus puissante via le protocole Wyoming.' },

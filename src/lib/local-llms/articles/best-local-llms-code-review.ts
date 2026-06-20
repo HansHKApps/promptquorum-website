@@ -138,7 +138,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Can I use a 13B model for code review?', a: 'Yes for linting-level feedback -- style and obvious bugs. For security and performance review, use 32B+. Qwen3-Coder 32B at 20 GB RAM is the practical minimum for serious code review.' },
             { q: 'How many files can I review in parallel?', a: 'vLLM default batch=32. On 70B models, batch=1 per file is realistic. Process 5-10 files sequentially for full review in 10-15 min.' },
@@ -352,7 +353,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Puedo usar un modelo de 13B para code review?', a: 'Sí para feedback de nivel lint — estilo y errores obvios. Para revisión de seguridad y rendimiento, usa 32B+. Qwen3-Coder 32B con 20 GB de RAM es el mínimo práctico para code review serio.' },
             { q: '¿Cuántos archivos puedo revisar en paralelo?', a: 'El batch predeterminado de vLLM es 32. Con modelos de 70B, batch=1 por archivo es lo realista. Procesa 5-10 archivos de forma secuencial para una revisión completa en 10-15 min.' },
@@ -566,6 +568,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل يمكنني استخدام نموذج 13B لمراجعة الكود؟', a: 'نعم لتغذية راجعة بمستوى lint — الأسلوب والأخطاء الواضحة. للمراجعة الأمنية وأداء الكود، استخدم 32B+. Qwen3-Coder 32B بـ 20 GB من RAM هو الحد الأدنى العملي لمراجعة كود جدية.' },
@@ -777,6 +780,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Kann ich ein 13B-Modell für Code Review verwenden?', a: 'Ja für Linting-Level-Feedback -- Style und offensichtliche Fehler. Für Sicherheits- und Leistungs-Review verwenden Sie 32B+. Qwen3-Coder 32B bei 20 GB RAM ist die praktische Mindestanforderung für ernsthaften Code Review.' },
@@ -994,6 +998,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: "FAQ",
           faqs: [
             { q: "Puis-je utiliser modèle 13B pour revue code ?", a: "Oui pour feedback lint-level -- style bugs évidents. Revue sécurité, utilisez 32B+. Qwen3-Coder 32B à 20 GB RAM minimum pratique." },
@@ -1238,6 +1243,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Posso usar um modelo de 13B para code review?', a: 'Sim, para feedback de nível lint — estilo e bugs óbvios. Para revisão de segurança e desempenho, use 32B+. O Qwen3-Coder 32B com 20 GB de RAM é o mínimo prático para code review sério.' },
@@ -1452,7 +1458,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: '코드 리뷰에 13B 모델을 사용할 수 있습니까?', a: '린트 수준의 피드백(스타일 및 명백한 버그)에는 사용할 수 있습니다. 보안 및 성능 리뷰에는 32B 이상을 사용하십시오. 20 GB RAM의 Qwen3-Coder 32B가 본격적인 코드 리뷰의 실용적인 최소 기준입니다.' },
             { q: '병렬로 몇 개의 파일을 리뷰할 수 있습니까?', a: 'vLLM 기본 배치는 32입니다. 70B 모델에서는 파일당 배치=1이 현실적입니다. 전체 리뷰를 위해 5~10개 파일을 순차적으로 처리하면 10~15분이 소요됩니다.' },

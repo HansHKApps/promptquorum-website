@@ -140,7 +140,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Should I use Open WebUI or SillyTavern?', a: 'Open WebUI for work/research. SillyTavern for creative writing/roleplay. Different tools, different jobs.' },
             { q: 'Can I use SillyTavern for team chat?', a: 'Not easily. Single-user design. For teams, use Open WebUI (built-in multi-user).' },
@@ -345,7 +346,8 @@ schema: {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             {
               q: 'Soll ich Open WebUI oder SillyTavern verwenden?',
@@ -578,7 +580,8 @@ schema: {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             {
               q: 'Dois-je utiliser Open WebUI ou SillyTavern ?',
@@ -801,7 +804,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'よくある質問',
           faqs: [
             { q: 'Open WebUI と SillyTavern どちらを選ぶべき？', a: 'Open WebUI は業務/調査向け。SillyTavern は創作/ロールプレイ向け。用途が異なります。' },
             { q: 'SillyTavern をチーム向けチャットに使える？', a: 'そうではない。シングルユーザー設計。チーム用には Open WebUI（マルチユーザー組込み）。' },
@@ -1006,6 +1010,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '我应该使用 Open WebUI 还是 SillyTavern？', a: '工作/研究 → Open WebUI。创意写作/扮演 → SillyTavern。不同工具，不同工作。' },
@@ -1210,7 +1215,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Debo usar Open WebUI o SillyTavern?', a: 'Open WebUI para trabajo/investigación. SillyTavern para escritura creativa/roleplay. Son herramientas diferentes para propósitos distintos.' },
             { q: '¿Puedo usar SillyTavern para chat en equipo?', a: 'No fácilmente. Diseño de un solo usuario. Para equipos, usa Open WebUI (multiusuario integrado).' },
@@ -1419,6 +1425,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل أستخدم Open WebUI أم SillyTavern؟', a: 'Open WebUI للعمل/البحث. SillyTavern للكتابة الإبداعية/roleplay. هما أداتان مختلفتان لأغراض مختلفة.' },
@@ -1617,7 +1624,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Perguntas frequentes',
           faqs: [
             {
               q: 'Posso usar o Open WebUI e o SillyTavern com o mesmo modelo Ollama?',
@@ -1789,7 +1796,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'Open WebUI와 SillyTavern 중 어느 것을 사용해야 합니까?', a: '업무/연구에는 Open WebUI를. 창작 글쓰기/롤플레이에는 SillyTavern을 사용하십시오. 서로 다른 도구이며 서로 다른 용도를 위한 것입니다.' },
             { q: 'SillyTavern을 팀 채팅에 사용할 수 있습니까?', a: '쉽지 않습니다. 단일 사용자 설계입니다. 팀에는 Open WebUI(내장 다중 사용자 지원)를 사용하십시오.' },

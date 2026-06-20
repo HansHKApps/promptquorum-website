@@ -184,7 +184,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'Select your model size and quantization to estimate VRAM requirements.',
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Can I run Mistral Small on a 6GB GPU?', a: 'Barely, at Q4 with tight overhead. Practically, no. Buy at least 8GB. You\'ll hit OOM errors with 6GB.' },
             { q: 'How much VRAM do I need for fine-tuning a 7B model?', a: 'For LoRA: 12-16GB. Full fine-tuning: 28GB+. Fine-tuning requires optimizer state (2-4× model VRAM), not just inference.' },
@@ -483,7 +484,8 @@ schema: {
           content: 'Selecciona el tamaño de tu modelo y la cuantización para estimar los requisitos de VRAM.',
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Puedo ejecutar Mistral Small en una GPU de 6 GB?', a: 'Con dificultad, en Q4 con overhead ajustado. En la práctica, no. Compra al menos 8 GB. Tendrás errores de OOM con 6 GB.' },
             { q: '¿Cuánta VRAM necesito para hacer fine-tuning de un modelo 7B?', a: 'Para LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. El fine-tuning requiere estado del optimizador (2-4× la VRAM del modelo), no solo la inferencia.' },
@@ -782,6 +784,7 @@ schema: {
           content: 'اختر حجم نموذجك والتكميم لتقدير متطلبات VRAM.',
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل يمكنني تشغيل Mistral Small على GPU بسعة 6 GB؟', a: 'بصعوبة، بـ Q4 مع عبء ضيّق. عمليًا، لا. اشترِ 8 GB على الأقل. ستواجه أخطاء OOM بـ 6 GB.' },
@@ -1081,6 +1084,7 @@ schema: {
           content: 'Selecione o tamanho do seu modelo e a quantização para estimar os requisitos de VRAM.',
         },
         'faqSection': {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Posso rodar o Mistral Small em uma GPU de 6 GB?', a: 'Com dificuldade, em Q4 com overhead apertado. Na prática, não. Compre pelo menos 8 GB. Você terá erros de OOM com 6 GB.' },
@@ -1390,7 +1394,8 @@ schema: {
           content: 'Sélectionnez la taille de votre modèle et la quantification pour estimer les exigences VRAM.',
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Puis-je exécuter Mistral Small sur une GPU 6 GB?', a: 'À peine, à Q4 avec surcharge serrée. Pratiquement, non. Achetez au moins 8 GB. Vous aurez des erreurs OOM avec 6 GB.' },
             { q: 'Combien de VRAM ai-je besoin pour fine-tuner un modèle 7B?', a: 'Pour LoRA: 12-16 GB. Fine-tuning complet: 28 GB+. Le fine-tuning nécessite l\'état optimiseur (2-4× VRAM du modèle), pas seulement l\'inférence.' },
@@ -1867,7 +1872,8 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           content: '모델 크기와 양자화를 선택하여 VRAM 요구 사항을 추정하십시오.',
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'Mistral Small을 6GB GPU에서 실행할 수 있습니까?', a: 'Q4에서 오버헤드를 빡빡하게 잡으면 간신히 가능합니다. 실질적으로는 불가능합니다. 최소 8GB를 구매하십시오. 6GB에서는 OOM 오류가 발생합니다.' },
             { q: '7B 모델을 파인튜닝하려면 VRAM이 얼마나 필요합니까?', a: 'LoRA: 12~16GB. 전체 파인튜닝: 28GB 이상. 파인튜닝은 옵티마이저 상태(모델 VRAM의 2~4배)가 필요하며, 추론만이 아닙니다.' },

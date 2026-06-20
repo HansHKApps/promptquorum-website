@@ -341,7 +341,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'What is prompt optimization for teams?',
@@ -1251,7 +1251,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Qué es la optimización de prompts para equipos?',
@@ -1727,7 +1727,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'O que é otimização de prompts para equipes?',
@@ -2968,7 +2968,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: '什么是团队提示优化?',
@@ -3887,7 +3887,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '팀을 위한 프롬프트 최적화란 무엇입니까?',

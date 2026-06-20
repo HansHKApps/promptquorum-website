@@ -238,6 +238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What does APE stand for?', a: 'APE stands for Analyze, Plan, Execute. It\'s a three-step prompt framework that breaks down complex reasoning into three explicit stages: understanding the problem, planning an approach, and executing the solution.' },
@@ -903,6 +904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         faqSection: {
+          id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
             { q: 'Que signifie APE ?', a: 'APE signifie Analyser, Planifier, Exécuter. C\'est un framework de prompt en trois étapes qui divise le raisonnement complexe en trois phases explicites : la compréhension du problème, la planification d\'une approche et l\'exécution de la solution.' },
@@ -942,6 +944,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'APEは何の略ですか？', a: 'APEはAnalyze（分析）、Plan（計画）、Execute（実行）の略です。複雑な推論を3つの明示的な段階に分割するプロンプトフレームワークです。問題の理解、アプローチの計画、解決策の実行という段階です。' },
@@ -981,6 +984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: 'APE代表什么？', a: 'APE代表分析（Analyze）、规划（Plan）、执行（Execute）。这是一个三步骤的提示框架，将复杂推理分为三个明确的阶段：理解问题、规划方法和执行解决方案。' },

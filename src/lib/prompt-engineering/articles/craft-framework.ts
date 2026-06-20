@@ -141,6 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What does CRAFT stand for?', a: 'CRAFT stands for Context, Role, Audience, Format, and Tone. It\'s a prompt framework that structures creative tasks by explicitly defining who is writing, who they\'re writing for, and what the output should look like.' },
@@ -279,6 +280,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig Gestellte Fragen',
           faqs: [
             { q: 'Wofür steht CRAFT?', a: 'CRAFT steht für Kontext, Rolle, Zielgruppe, Format und Ton. Es ist ein Prompt-Framework, das kreative Aufgaben strukturiert, indem explizit festgelegt wird, wer schreibt, für wen sie schreiben und wie die Ausgabe aussehen soll.' },
@@ -428,6 +430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué significa CRAFT?', a: 'CRAFT significa Contexto, Rol, Audiencia, Formato y Tono. Es un framework de prompt que estructura las tareas creativas al definir explícitamente quién escribe, para quién escribe y cómo debe verse el resultado.' },
@@ -579,6 +582,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ماذا يعني CRAFT؟', a: 'CRAFT يعني السياق والدور والجمهور والتنسيق والنبرة (Context, Role, Audience, Format, Tone). إنه إطار موجّه يُبنيِّن المهام الإبداعية من خلال تحديد من يكتب صراحةً ولمن يكتب وكيف يجب أن يبدو الناتج.' },
@@ -730,6 +734,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que significa CRAFT?', a: 'CRAFT significa Contexto, Papel (Role), Audiência, Formato e Tom. É um framework de prompt que estrutura tarefas criativas ao definir explicitamente quem escreve, para quem escreve e como deve parecer o resultado.' },
@@ -868,6 +873,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
             { q: 'Que signifie CRAFT ?', a: 'CRAFT signifie Contexte, Rôle, Audience, Format et Ton. C\'est un framework de prompt qui structure les tâches créatives en définissant explicitement qui écrit, pour qui ils écrivent et comment le résultat doit ressembler.' },
@@ -1005,6 +1011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'CRAFTは何を表していますか？', a: 'CRAFTはContext（コンテキスト）、Role（役割）、Audience（オーディエンス）、Format（フォーマット）、Tone（トーン）を表しています。誰が書いているのか、誰に書いているのか、出力がどのようであるべきかを明確に定義することで、創造的なタスクを構造化するプロンプトフレームワークです。' },
@@ -1142,6 +1149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: 'CRAFT代表什么？', a: 'CRAFT代表背景、角色、受众、格式和语气。它是一个提示框架，通过明确定义谁在写作、他们为谁写作和输出应该是什么样子来结构化创意任务。' },
@@ -1291,6 +1299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: 'CRAFT는 무엇을 의미합니까?', a: 'CRAFT는 맥락(Context), 역할(Role), 대상(Audience), 형식(Format), 어조(Tone)를 의미합니다. 누가 쓰는지, 누구를 위해 쓰는지, 결과물이 어떻게 보여야 하는지를 명시적으로 정의하여 창의적 작업을 구조화하는 프롬프트 프레임워크입니다.' },

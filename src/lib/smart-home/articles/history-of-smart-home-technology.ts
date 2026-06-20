@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What was the first smart home technology?', a: 'X10, introduced in 1975, is generally considered the first mainstream home-automation technology. It sent control signals over a home\'s existing electrical wiring, letting switches and modules communicate without new cabling.' },
           { q: 'When did smart homes go mainstream?', a: 'Smart homes reached the mainstream in the 2010s with cloud-connected devices: the Nest thermostat in 2011 and voice assistants like the Amazon Echo in 2014 made the technology accessible to a broad audience.' },
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was war die erste Smart-Home-Technik?', a: 'X10, eingeführt 1975, gilt allgemein als erste verbreitete Heimautomatisierungstechnik. Es sendete Steuersignale über die vorhandene Elektroinstallation eines Hauses und ließ Schalter und Module ohne neue Verkabelung kommunizieren.' },
           { q: 'Wann wurden Smart Homes Mainstream?', a: 'Smart Homes erreichten in den 2010ern den Mainstream mit cloud-vernetzten Geräten: das Nest-Thermostat 2011 und Sprachassistenten wie der Amazon Echo 2014 machten die Technik einem breiten Publikum zugänglich.' },
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quelle a été la première technologie de maison connectée ?', a: 'X10, introduite en 1975, est généralement considérée comme la première technologie de domotique grand public. Elle envoyait des signaux de commande par le câblage électrique existant d\'une maison, permettant aux interrupteurs et modules de communiquer sans nouveau câblage.' },
           { q: 'Quand les maisons connectées sont-elles devenues grand public ?', a: 'Les maisons connectées ont atteint le grand public dans les années 2010 avec des appareils connectés au cloud : le thermostat Nest en 2011 et des assistants vocaux comme l\'Amazon Echo en 2014 ont rendu la technologie accessible à un large public.' },

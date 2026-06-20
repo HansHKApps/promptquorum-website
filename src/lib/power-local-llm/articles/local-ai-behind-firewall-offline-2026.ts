@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Does Ollama make any network calls when running offline?', a: 'By default, Ollama does not make network calls when serving a locally cached model. It contacts ollama.com only to pull or update models. Running `OLLAMA_MODELS` pointed at a local cache with `ollama serve` makes no outbound calls.' },
           { q: 'Can I run Qwen3 72B on a NAS-mounted path?', a: 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.' },

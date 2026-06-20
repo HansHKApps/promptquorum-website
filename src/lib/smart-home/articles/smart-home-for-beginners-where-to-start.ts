@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What should I buy first for a smart home?', a: 'Buy a hub first, ideally a local-first one like Home Assistant, plus a Zigbee coordinator and a couple of Zigbee bulbs or a sensor. The hub determines what works together, so it should come before individual devices.' },
           { q: 'Is it expensive to start a smart home?', a: 'No, if you start small. A local hub and a few Zigbee devices in one room is inexpensive, and you expand gradually. Costs rise only if you buy many devices at once or choose premium cloud ecosystems with subscriptions.' },
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was sollte ich zuerst für ein Smart Home kaufen?', a: 'Kaufen Sie zuerst einen Hub, idealerweise einen Local-First-Hub wie Home Assistant, plus einen Zigbee-Koordinator und ein paar Zigbee-Leuchtmittel oder einen Sensor. Der Hub bestimmt, was zusammenarbeitet, daher sollte er vor einzelnen Geräten kommen.' },
           { q: 'Ist es teuer, ein Smart Home zu starten?', a: 'Nein, wenn Sie klein anfangen. Ein lokaler Hub und ein paar Zigbee-Geräte in einem Raum sind günstig, und Sie erweitern schrittweise. Kosten steigen nur, wenn Sie viele Geräte auf einmal kaufen oder Premium-Cloud-Ökosysteme mit Abonnements wählen.' },
@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Que devrais-je acheter en premier pour une maison connectée ?', a: 'Achetez d\'abord un hub, idéalement un hub local-first comme Home Assistant, plus un coordinateur Zigbee et deux ou trois ampoules ou un capteur Zigbee. Le hub détermine ce qui fonctionne ensemble, il devrait donc venir avant les appareils individuels.' },
           { q: 'Est-ce cher de démarrer une maison connectée ?', a: 'Non, si vous commencez petit. Un hub local et quelques appareils Zigbee dans une pièce sont peu coûteux, et vous étendez progressivement. Les coûts n\'augmentent que si vous achetez beaucoup d\'appareils d\'un coup ou choisissez des écosystèmes cloud premium avec abonnements.' },

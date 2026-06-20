@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Can I use air-gapped for everyday work or just sensitive docs?', a: 'Just sensitive. Air-gapped is slow (manual USB transfers). Use for high-security projects only.' },
             { q: 'What if the air-gapped server breaks?', a: 'Data is encrypted on USB. Use backup air-gapped machine (same setup). Private key allows decryption on any air-gapped system.' },
@@ -302,7 +302,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Puedo usar air-gapped para trabajo diario o solo para documentos sensibles?', a: 'Solo para documentos sensibles. El air-gapped es lento (transferencias USB manuales). Úsalo solo para proyectos de alta seguridad.' },
             { q: '¿Qué pasa si el servidor air-gapped falla?', a: 'Los datos están cifrados en el USB. Usa una máquina air-gapped de respaldo (misma configuración). La clave privada permite el descifrado en cualquier sistema air-gapped.' },
@@ -1169,7 +1169,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Puis-je utiliser l\'isolation pour le travail quotidien ou seulement pour les documents sensibles ?', a: 'Seulement pour les documents sensibles. L\'isolation est lente (transferts USB manuels). À utiliser uniquement pour les projets haute sécurité.' },
             { q: 'Que faire si le serveur isolé cesse de fonctionner ?', a: 'Les données sont chiffrées sur USB. Utilisez une machine isolée de secours (même configuration). La clé privée permet le déchiffrement sur n\'importe quel système isolé.' },
@@ -1382,7 +1382,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             { q: 'エアギャップは日常業務や機密ドキュメントのみに使えますか？', a: '機密ドキュメントのみ。エアギャップは遅い（手動USB転送）。高セキュリティプロジェクトにのみ使用してください。' },
             { q: 'エアギャップサーバーが壊れたら？', a: 'データはUSB上で暗号化。バックアップエアギャップマシン使用（同じセットアップ）。秘密鍵はどのエアギャップシステムでも復号化を許可。' },
@@ -1808,7 +1808,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'Air-gapped를 일상 업무에도 사용할 수 있습니까, 아니면 민감한 문서에만 사용합니까?', a: '민감한 문서에만 사용하십시오. Air-gapped는 수동 USB 전송으로 인해 속도가 느립니다. 고보안 프로젝트에만 사용하십시오.' },
             { q: 'Air-gapped 서버가 고장나면 어떻게 합니까?', a: '데이터는 USB에 암호화되어 있습니다. 동일한 설정의 백업 air-gapped 머신을 사용하십시오. 개인 키가 있으면 모든 air-gapped 시스템에서 복호화할 수 있습니다.' },

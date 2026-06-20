@@ -156,7 +156,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Should I use NAS for inference, or just storage?', a: 'Just storage. Keep inference on local GPU. NAS over network is too slow for real-time inference.' },
             { q: 'Can I use an old laptop as a NAS?', a: 'Yes, but power consumption is high (20W+). Purpose-built NAS uses 10-15W. Cost-effective over 3+ years.' },
@@ -333,7 +334,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Debo usar el NAS para la inferencia o solo para almacenamiento?', a: 'Solo para almacenamiento. Mantén la inferencia en la GPU local. El NAS por red es demasiado lento para la inferencia en tiempo real.' },
             { q: '¿Puedo usar un portátil antiguo como NAS?', a: 'Sí, pero el consumo eléctrico es alto (20W+). Un NAS dedicado usa 10-15W. Rentable a largo plazo (3+ años).' },
@@ -513,6 +515,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل ينبغي استخدام NAS للاستدلال أم للتخزين فقط؟', a: 'للتخزين فقط. أبقِ الاستدلال على GPU المحلية. NAS عبر الشبكة بطيء جداً للاستدلال في الوقت الفعلي.' },
@@ -592,7 +595,7 @@ schema: {
         backup: { title: 'Stratégie de sauvegarde', content: ['**Règle de sauvegarde :** 3-2-1 (3 copies, 2 types de médias, 1 hors site).', '- NAS = primaire (sur site).', '- USB externe = secondaire (sur site, mais physiquement séparé).', '- Cloud (Backblaze B2) = sauvegarde hors site.', '**Fréquence :** Incrémentielle quotidienne, complète hebdomadaire. Automatisée via rsync + cron.', '**Test de récupération :** Exercice mensuel de récupération. Restaurez un modèle exemple depuis la sauvegarde, vérifiez l\'intégrité.'] },
         organization: { title: 'Organisation de la bibliothèque de modèles', content: ['/models/', '  /llama3/', '    /llama3-7b-instruct-q4.gguf', '    /llama3-13b-instruct-q4.gguf', '    /llama3-70b-instruct-q4.gguf', '  /mistral/', '    /mistral-7b-instruct-q4.gguf', '  /quantization-sources/', '    /llama3-70b-f32.safetensors (sauvegarde pleine précision)', '**Convention de nommage :** [modèle]-[params]-[format]-[quantification].gguf', '**Checksums :** Stockez les hachages SHA256 pour chaque modèle. Vérifiez au téléchargement pour détecter les corruptions.'] },
         mistakes: { title: 'Erreurs courantes NAS', items: ['RAID 5 sur grands disques. La reconstruction dure 24-48h ; risque élevé de panne du 2e disque pendant la reconstruction. Utilisez RAID 6.', 'Pas de sauvegardes. Défaillance matérielle NAS = perte de tous les modèles. Les sauvegardes externes sont obligatoires.', 'RAID sous-dimensionné. Achetez 8To quand vous pensez avoir besoin de 4To. Les modèles grossissent vite.'] },
-        faqSection: { title: 'FAQ', faqs: [{ q: 'Dois-je utiliser le NAS pour l\'inférence ou juste le stockage ?', a: 'Juste le stockage. Gardez l\'inférence sur GPU local. Le NAS sur réseau est trop lent pour l\'inférence en temps réel.' }, { q: 'Puis-je utiliser un ancien ordinateur portable comme NAS ?', a: 'Oui, mais la consommation électrique est élevée (20W+). Un NAS dédié utilise 10-15W. Rentable sur 3+ ans.' }, { q: 'La sauvegarde cloud (Backblaze) est-elle sécurisée pour les fichiers modèles ?', a: 'Oui, avec chiffrement. Backblaze utilise AES-256 au repos. Les données sont privées (Backblaze ne peut pas les lire).' }, { q: 'Combien de temps dure la reconstruction RAID 6 ?', a: '~24 heures pour 8To. Pendant la reconstruction, si le 2e disque tombe en panne, les données sont perdues. Rare mais possible ; surveillez activement.' }, { q: 'Puis-je utiliser Synology + TrueNAS ensemble ?', a: 'Oui. Synology pour vitesse/facilité, TrueNAS pour conformité/audit. Mais overkill sauf si vous avez les deux.' }, { q: 'Ai-je besoin d\'un réseau 10Gbps pour le NAS ?', a: 'Non. Gigabit (1Gbps) suffit pour les transferts de modèles (1 heure pour 35Go modèle 70B). 10Gbps pour équipes >20 utilisateurs.' }] },
+        faqSection: { title: 'Questions fréquemment posées', faqs: [{ q: 'Dois-je utiliser le NAS pour l\'inférence ou juste le stockage ?', a: 'Juste le stockage. Gardez l\'inférence sur GPU local. Le NAS sur réseau est trop lent pour l\'inférence en temps réel.' }, { q: 'Puis-je utiliser un ancien ordinateur portable comme NAS ?', a: 'Oui, mais la consommation électrique est élevée (20W+). Un NAS dédié utilise 10-15W. Rentable sur 3+ ans.' }, { q: 'La sauvegarde cloud (Backblaze) est-elle sécurisée pour les fichiers modèles ?', a: 'Oui, avec chiffrement. Backblaze utilise AES-256 au repos. Les données sont privées (Backblaze ne peut pas les lire).' }, { q: 'Combien de temps dure la reconstruction RAID 6 ?', a: '~24 heures pour 8To. Pendant la reconstruction, si le 2e disque tombe en panne, les données sont perdues. Rare mais possible ; surveillez activement.' }, { q: 'Puis-je utiliser Synology + TrueNAS ensemble ?', a: 'Oui. Synology pour vitesse/facilité, TrueNAS pour conformité/audit. Mais overkill sauf si vous avez les deux.' }, { q: 'Ai-je besoin d\'un réseau 10Gbps pour le NAS ?', a: 'Non. Gigabit (1Gbps) suffit pour les transferts de modèles (1 heure pour 35Go modèle 70B). 10Gbps pour équipes >20 utilisateurs.' }] },
         relatedReading: { title: 'Lectures complémentaires', items: ['[Configuration LLM local pour équipes](/fr/local-llms/local-llm-setup-for-teams)', '[Workflow LLM local hors ligne sécurisé](/fr/local-llms/secure-offline-local-llm-workflow)', '[LLM local privé pour données sensibles](/fr/local-llms/private-local-llm-sensitive-data)'] },
         sources: { title: 'Sources', items: ['Documentation officielle Synology & QNAP : configuration RAID et temps de reconstruction', 'Documentation TrueNAS : redondance ZFS et stratégies de sauvegarde', 'Spécifications de tarification et de chiffrement Backblaze B2'] },
       },
@@ -799,7 +802,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Perguntas frequentes',
           faqs: [
             { q: 'Devo usar o NAS para inferência ou apenas para armazenamento?', a: 'Apenas armazenamento. Mantenha a inferência na GPU local. O NAS pela rede é lento demais para inferência em tempo real.' },
             { q: 'Posso usar um notebook antigo como NAS?', a: 'Sim, mas o consumo de energia é alto (20W+). Um NAS dedicado usa 10-15W. Compensa ao longo de 3+ anos.' },
@@ -975,7 +979,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'NAS를 인퍼런스에 사용해야 합니까, 아니면 스토리지에만 사용해야 합니까?', a: '스토리지에만 사용하십시오. 인퍼런스는 로컬 GPU에서 유지하십시오. 네트워크를 통한 NAS는 실시간 인퍼런스에 너무 느립니다.' },
             { q: '오래된 노트북을 NAS로 사용할 수 있습니까?', a: '사용할 수 있지만 전력 소비가 높습니다(20W 이상). 전용 NAS는 10~15W를 사용합니다. 3년 이상 사용 시 비용 효율적입니다.' },

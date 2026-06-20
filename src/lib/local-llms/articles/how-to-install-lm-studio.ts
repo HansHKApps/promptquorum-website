@@ -1101,7 +1101,8 @@ print(response.choices[0].message.content)`,
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             {
               q: 'LM Studio zeigt „Not enough memory to load model"',
@@ -1454,7 +1455,8 @@ schema: {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             {
               q: 'LM Studio affiche « Not enough memory to load model »',
@@ -1761,7 +1763,8 @@ schema: {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'よくある質問',
           faqs: [
             { q: 'LM Studioが「モデルをロードするメモリが不足しています」と表示される', a: 'モデルには利用可能なメモリより多いRAMが必要。他のアプリケーションを閉じてメモリを解放するか、より小さい量子化を選択。一般的なルール：推定RAMを取得するためにモデルファイルサイズに1.2を掛ける。4.5GBファイルは～5.4GB空きRAMが必要。' },
             { q: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', a: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック--0が表示される場合、GPUは使用されていない。macOSでは、LM StudioはApple SiliconのMetalを自動的に有効。Windows/Linuxの場合、NVIDIAドライバーが最新であることを確認し、GPU Layersを最大値に増やす。' },
@@ -2021,7 +2024,8 @@ schema: {
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          id: 'faq',
+          title: '常见问题',
           faqs: [
             { q: 'LM Studio 显示"没有足够的内存来加载模型"', a: '模型需要比可用更多的 RAM。关闭其他应用以释放内存，或选择更小的量化。一般规则：将模型文件大小乘以 1.2 以估计所需的 RAM。' },
             { q: '模型生成非常缓慢（每秒 5 个令牌以下）', a: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。在 macOS 上，LM Studio 自动为 Apple Silicon 启用 Metal。' },

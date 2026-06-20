@@ -203,7 +203,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Which should I use as a beginner?', a: 'Ollama. One command, automatic model downloads, clean interface.' },
             { q: 'Which is fastest?', a: 'For single request: llama.cpp (~3% faster than Ollama). For 10 concurrent requests: vLLM (~7× faster).' },
@@ -438,7 +438,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuál debo usar como principiante?', a: 'Ollama. Un comando, descarga automática de modelos, interfaz sencilla.' },
             { q: '¿Cuál es el más rápido?', a: 'Para solicitud única: llama.cpp (~3% más rápido que Ollama). Para 10 solicitudes simultáneas: vLLM (~7× más rápido).' },
@@ -897,7 +897,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Perguntas frequentes',
           faqs: [
             { q: 'Qual devo usar como iniciante?', a: 'Ollama. Um comando, download automático de modelos, interface limpa.' },
             { q: 'Qual é o mais rápido?', a: 'Para solicitação única: llama.cpp (~3% mais rápido que Ollama). Para 10 solicitações simultâneas: vLLM (~7× mais rápido).' },
@@ -1120,7 +1120,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Welches Backend sollte ich als Einsteiger verwenden?', a: 'Ollama. Ein Befehl, automatische Modell-Downloads, übersichtliche Oberfläche.' },
             { q: 'Welches ist am schnellsten?', a: 'Bei einer Einzelanfrage: llama.cpp (~3 % schneller als Ollama). Bei 10 gleichzeitigen Anfragen: vLLM (~7× schneller).' },
@@ -1340,7 +1340,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Quel backend utiliser en tant que débutant ?', a: 'Ollama. Une commande, téléchargement automatique des modèles, interface claire.' },
             { q: 'Lequel est le plus rapide ?', a: 'Pour une requête unique : llama.cpp (~3 % plus rapide qu\'Ollama). Pour 10 requêtes simultanées : vLLM (~7× plus rapide).' },
@@ -1564,7 +1564,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             { q: '初心者にはどのバックエンドが向いていますか？', a: 'Ollamaです、1コマンド、モデルは自動DL、シンプルなインターフェイス。' },
             { q: '最も速いのはどれですか？', a: 'シングルリクエスト：llama.cpp（Ollamaより約3%高速）。10同時リクエスト：vLLM（約7倍高速）。' },
@@ -2159,7 +2159,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: '초보자에게 어떤 것을 권장합니까?', a: 'Ollama. 명령 하나로 자동 모델 다운로드, 깔끔한 인터페이스.' },
             { q: '어느 것이 가장 빠릅니까?', a: '단일 요청의 경우: llama.cpp(Ollama보다 약 3% 빠름). 10개의 동시 요청의 경우: vLLM(약 7배 빠름).' },

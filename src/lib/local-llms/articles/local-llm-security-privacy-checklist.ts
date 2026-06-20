@@ -1248,6 +1248,7 @@ schema: {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Was sind häufige Sicherheitsfragen zu lokalen LLMs?',
         faqs: [
           {
@@ -1484,6 +1485,7 @@ schema: {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Quelles sont les questions courantes sur la sécurité ?',
         faqs: [
           {
@@ -1694,6 +1696,7 @@ schema: {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'ローカルLLMについてのよくあるセキュリティ質問',
         faqs: [
           {
@@ -1917,6 +1920,7 @@ schema: {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '关于本地LLM的常见安全问题',
         faqs: [
           {

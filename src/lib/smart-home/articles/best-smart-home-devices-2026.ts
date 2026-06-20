@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What\'s the best smart home device to start with?', a: 'A local hub running Home Assistant, plus a Zigbee coordinator and a couple of Zigbee bulbs or sensors. The hub is the foundation that makes every other local-capable device work together offline and privately.' },
           { q: 'Which brands work locally?', a: 'Look for devices using Zigbee, Z-Wave, or Matter, or local-Wi-Fi devices with a documented local API. These work through a local hub without a vendor cloud, regardless of brand. Avoid devices that require a cloud account for basic control.' },
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Mit welchem Smart-Home-Gerät sollte man starten?', a: 'Mit einem lokalen Hub auf Home Assistant plus einem Zigbee-Koordinator und ein paar Zigbee-Leuchtmitteln oder Sensoren. Der Hub ist die Grundlage, die jedes andere lokal-fähige Gerät offline und privat zusammenarbeiten lässt.' },
           { q: 'Welche Marken funktionieren lokal?', a: 'Achten Sie auf Geräte mit Zigbee, Z-Wave oder Matter oder auf lokale-WLAN-Geräte mit dokumentierter lokaler API. Diese funktionieren über einen lokalen Hub ohne Hersteller-Cloud, unabhängig von der Marke. Vermeiden Sie Geräte, die für die Grundsteuerung ein Cloud-Konto verlangen.' },
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Par quel appareil de maison connectée commencer ?', a: 'Par un hub local exécutant Home Assistant, plus un coordinateur Zigbee et deux ou trois ampoules ou capteurs Zigbee. Le hub est la fondation qui fait fonctionner ensemble tout autre appareil à capacité locale, hors ligne et en privé.' },
           { q: 'Quelles marques fonctionnent localement ?', a: 'Cherchez des appareils utilisant Zigbee, Z-Wave ou Matter, ou des appareils Wi-Fi local avec une API locale documentée. Ils fonctionnent via un hub local sans cloud du fabricant, quelle que soit la marque. Évitez ceux qui exigent un compte cloud pour le contrôle de base.' },

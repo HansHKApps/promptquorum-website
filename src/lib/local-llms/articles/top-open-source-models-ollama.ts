@@ -1296,6 +1296,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
@@ -1683,6 +1684,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             {
@@ -2069,6 +2071,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -2435,6 +2438,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {

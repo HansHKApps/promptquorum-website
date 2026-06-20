@@ -308,7 +308,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is Galaxy AI better than Apple Intelligence?',
@@ -499,6 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Galaxy AI가 Apple Intelligence보다 낫나요?', a: '우선 순위에 따라. Galaxy AI는 출시 시 더 많은 기능과 사용자 제어; Apple Intelligence는 더 강한 프라이버시 보장과 완성도. 온디바이스 LLM 실행: Galaxy S26이 더 낫습니다(더 빠른 하드웨어). 프라이버시 우선: iPhone 16이 더 낫습니다(감사 가능한 PCC).' },
@@ -661,6 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Es Galaxy AI mejor que Apple Intelligence?', a: 'Depende de prioridades. Galaxy AI tiene más características en lanzamiento y control del usuario; Apple Intelligence tiene garantías de privacidad más sólidas. Para inferencia LLM: Galaxy S26 es mejor (chip más rápido). Para privacidad: iPhone 16 es mejor (PCC auditable).' }

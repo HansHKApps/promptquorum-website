@@ -447,6 +447,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen zu LM Studio erweiterten Funktionen',
           faqs: [
             {
@@ -820,6 +821,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées sur LM Studio',
           faqs: [
             {

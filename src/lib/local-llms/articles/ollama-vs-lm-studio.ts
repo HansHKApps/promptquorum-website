@@ -2437,7 +2437,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Perguntas frequentes',
           faqs: [
             {
               q: 'O Ollama e o LM Studio suportam os mesmos modelos?',

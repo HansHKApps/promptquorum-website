@@ -181,7 +181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Which should I choose for my first local LLM?', a: 'LM Studio. Simpler UI, faster setup, built-in model discovery. Jan AI if you want to tinker with plugins.' },
             { q: 'Can I use LM Studio API with VS Code Copilot?', a: 'Yes. Start LM Studio server, copy endpoint URL into Copilot extension settings.' },
@@ -449,6 +450,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Welches sollte ich für mein erstes lokales LLM wählen?', a: 'LM Studio. Einfachere Benutzeroberfläche, schnelleres Setup, integrierte Modell-Erkennung. Jan AI, wenn Sie Plugins experimentieren möchten.' },
@@ -708,6 +710,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Questions fréquentes',
           faqs: [
             { q: 'Lequel choisir pour mon premier LLM local ?', a: 'LM Studio. Interface plus simple, setup plus rapide, découverte de modèles intégrée. Jan AI si vous voulez expérimenter les plugins.' },
@@ -973,6 +976,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'ローカルLLMを初めて使う場合は、どちらを選ぶべきですか？', a: 'LM Studio。より簡単なUI、セットアップが速く、モデルの発見が組み込み。プラグインでいろいろ試してみたい場合はJan AIです。' },
@@ -1238,6 +1242,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '第一次用本地LLM选哪个？', a: 'LM Studio。界面简单、安装快、模型发现内置。想试验插件就选Jan AI。' },
@@ -1493,6 +1498,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuál debería elegir para mi primer LLM local?', a: 'LM Studio. Interfaz más simple, configuración más rápida, descubrimiento de modelos integrado. Jan AI si quieres experimentar con plugins.' },
@@ -1745,6 +1751,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'أيهما ينبغي أن أختار لأول نموذج LLM محلي؟', a: 'LM Studio. واجهة أبسط، إعداد أسرع، اكتشاف نماذج مدمج. Jan AI إذا أردت تجربة الإضافات.' },
@@ -2035,7 +2042,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: '첫 번째 로컬 LLM에는 어느 것을 선택해야 합니까?', a: 'LM Studio. 더 간단한 UI, 더 빠른 설정, 내장 모델 검색. 플러그인을 탐색하고 싶다면 Jan AI.' },
             { q: 'LM Studio API를 VS Code Copilot과 함께 사용할 수 있습니까?', a: '예. LM Studio 서버를 시작하고, Copilot 확장 설정에 엔드포인트 URL을 복사하십시오.' },

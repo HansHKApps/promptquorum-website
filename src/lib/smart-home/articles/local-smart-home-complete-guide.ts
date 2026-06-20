@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is a local smart home hard to set up?', a: 'It takes more effort than a plug-and-play cloud setup, mainly installing Home Assistant and pairing devices. Most people get a working hub and first automation running in a weekend, then expand gradually. No coding is required for common setups, though YAML configuration is available for advanced automations.' },
           { q: 'Does a local smart home work without internet?', a: 'Yes. Because the hub and devices communicate over your local network, lights, locks, sensors, and automations keep working during an internet or vendor-cloud outage. You only lose internet-dependent extras like remote access away from home and cloud notifications.' },
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist ein lokales Smart Home schwer einzurichten?', a: 'Es erfordert mehr Aufwand als eine Plug-and-Play-Cloud-Lösung, vor allem die Installation von Home Assistant und das Koppeln von Geräten. Die meisten bekommen an einem Wochenende einen funktionierenden Hub und eine erste Automatisierung zum Laufen und erweitern dann schrittweise. Für übliche Einrichtungen ist kein Programmieren nötig, für fortgeschrittene Automatisierungen steht jedoch YAML zur Verfügung.' },
           { q: 'Funktioniert ein lokales Smart Home ohne Internet?', a: 'Ja. Da Hub und Geräte über Ihr lokales Netzwerk kommunizieren, funktionieren Licht, Schlösser, Sensoren und Automatisierungen bei einem Internet- oder Cloud-Ausfall weiter. Sie verlieren nur internetabhängige Extras wie den Fernzugriff von unterwegs und Cloud-Benachrichtigungen.' },
@@ -1224,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Une maison connectée locale est-elle difficile à configurer ?', a: 'Elle demande plus d\'effort qu\'une configuration cloud prête à l\'emploi, surtout l\'installation de Home Assistant et l\'appairage des appareils. La plupart obtiennent un hub fonctionnel et une première automatisation en un week-end, puis étendent progressivement. Aucune programmation n\'est requise pour les configurations courantes, mais le YAML est disponible pour les automatisations avancées.' },
           { q: 'Une maison connectée locale fonctionne-t-elle sans internet ?', a: 'Oui. Comme le hub et les appareils communiquent via votre réseau local, lumières, serrures, capteurs et automatisations continuent de fonctionner pendant une coupure internet ou cloud. Vous ne perdez que les extras dépendants d\'internet, comme l\'accès à distance hors de chez vous et les notifications cloud.' },

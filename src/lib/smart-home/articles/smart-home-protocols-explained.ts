@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is Matter a protocol or a standard?', a: 'Matter is an application-layer standard, not a radio protocol. It defines how devices are described and controlled and runs on top of transport layers like Thread, Wi-Fi, and Ethernet, which is why it can unify devices from different brands.' },
           { q: 'Do I need Thread?', a: 'Only if you use Thread-based or Matter-over-Thread devices, which need a Thread border router. Many hubs and some speakers include one. Zigbee and Z-Wave devices do not use Thread and need their own coordinator instead.' },
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist Matter ein Protokoll oder ein Standard?', a: 'Matter ist ein Standard auf Anwendungsebene, kein Funkprotokoll. Es definiert, wie Geräte beschrieben und gesteuert werden, und läuft auf Transportschichten wie Thread, WLAN und Ethernet – deshalb kann es Geräte verschiedener Marken vereinheitlichen.' },
           { q: 'Brauche ich Thread?', a: 'Nur wenn Sie Thread-basierte oder Matter-über-Thread-Geräte nutzen, die einen Thread-Border-Router benötigen. Viele Hubs und manche Lautsprecher enthalten einen. Zigbee- und Z-Wave-Geräte nutzen kein Thread und brauchen stattdessen ihren eigenen Koordinator.' },
@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Matter est-il un protocole ou un standard ?', a: 'Matter est un standard de couche application, pas une radio. Il définit comment les appareils sont décrits et commandés et tourne sur des couches de transport comme Thread, Wi-Fi et Ethernet — c\'est pourquoi il peut unifier des appareils de marques différentes.' },
           { q: 'Ai-je besoin de Thread ?', a: 'Seulement si vous utilisez des appareils basés sur Thread ou Matter-sur-Thread, qui nécessitent un routeur de bordure Thread. De nombreux hubs et certaines enceintes en intègrent un. Les appareils Zigbee et Z-Wave n\'utilisent pas Thread et nécessitent plutôt leur propre coordinateur.' },

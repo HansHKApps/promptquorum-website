@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can I keep my existing devices?', a: 'Many of them, yes. Devices using Zigbee, Z-Wave, Matter, or a local Wi-Fi API can re-pair to a local hub like Home Assistant. Only cloud-only devices that require a vendor account for basic control need replacing over time.' },
           { q: 'What can\'t go local?', a: 'Cloud-only devices that depend entirely on a vendor cloud — often some cameras, doorbells, and proprietary ecosystems — generally cannot go local and need replacing with local-capable alternatives such as RTSP cameras paired with Frigate.' },
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ich meine vorhandenen Geräte behalten?', a: 'Viele davon, ja. Geräte mit Zigbee, Z-Wave, Matter oder einer lokalen WLAN-API lassen sich neu mit einem lokalen Hub wie Home Assistant koppeln. Nur nur-Cloud-Geräte, die für die Grundsteuerung ein Hersteller-Konto verlangen, müssen mit der Zeit ersetzt werden.' },
           { q: 'Was kann nicht lokal werden?', a: 'Nur-Cloud-Geräte, die vollständig von einer Hersteller-Cloud abhängen – oft manche Kameras, Türklingeln und proprietäre Ökosysteme – können in der Regel nicht lokal werden und müssen durch lokal-fähige Alternativen ersetzt werden, etwa RTSP-Kameras mit Frigate.' },
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Puis-je garder mes appareils existants ?', a: 'Beaucoup d\'entre eux, oui. Les appareils utilisant Zigbee, Z-Wave, Matter ou une API Wi-Fi locale peuvent être réappairés à un hub local comme Home Assistant. Seuls les appareils tout-cloud qui exigent un compte du fabricant pour le contrôle de base doivent être remplacés au fil du temps.' },
           { q: 'Qu\'est-ce qui ne peut pas passer en local ?', a: 'Les appareils tout-cloud qui dépendent entièrement d\'un cloud du fabricant — souvent certaines caméras, sonnettes et écosystèmes propriétaires — ne peuvent généralement pas passer en local et doivent être remplacés par des alternatives à capacité locale, comme des caméras RTSP appairées avec Frigate.' },

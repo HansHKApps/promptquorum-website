@@ -192,7 +192,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Can I use cloud LLMs with compliance data if I hash PII?', a: 'No. Hashed data is still regulated. HIPAA/GDPR prohibit transmission to any vendor, including cloud APIs. Hashing does not remove the data from the vendor\'s control. Use local LLM only.' },
             { q: 'Do I need a BAA with Llama or Mistral models?', a: 'No. Open-source models have no vendor to sign a BAA. Instead, document your compliance internally: risk assessment, data processing procedures, audit logs, retention policy. BAA is only required if using a vendor (OpenAI, Anthropic, Google).' },
@@ -423,6 +424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Puedo usar LLMs en la nube con datos de cumplimiento si hasheo la PII?', a: 'No. Los datos hasheados siguen estando regulados. HIPAA/GDPR prohíben la transmisión a cualquier proveedor, incluidas las APIs en la nube. El hasheo no elimina los datos del control del proveedor. Usa solo LLM local.' },
@@ -651,6 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل يمكنني استخدام نماذج LLM سحابية مع بيانات الامتثال إذا hashtُ البيانات الشخصية؟', a: 'لا. البيانات المُجزّأة (hashed) لا تزال منظّمة. تحظر لوائح البيانات الصحية وحماية البيانات الإرسال لأي مزوّد، بما في ذلك واجهات API السحابية. الـ hashing لا يزيل البيانات من سيطرة المزوّد. استخدم LLM محلي فقط.' },
@@ -880,6 +883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Posso usar LLMs na nuvem com dados de conformidade se eu fizer hash da PII?', a: 'Não. Os dados com hash continuam sendo regulados. HIPAA/GDPR/LGPD proíbem a transmissão a qualquer provedor, incluindo APIs em nuvem. O hash não remove os dados do controle do provedor. Use apenas LLM local.' },
@@ -1089,7 +1093,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Puis-je utiliser des LLM cloud avec des données de conformité si j\'anonymise les données ?', a: 'Non. Les données anonymisées sont toujours régulées. Le RGPD interdit la transmission à tout fournisseur, y compris les APIs cloud. L\'anonymisation ne retire pas les données du contrôle du fournisseur. Utiliser uniquement les LLM locaux.' },
             { q: 'Ai-je besoin d\'un accord de traitement des données (DPA) avec Llama ou Mistral ?', a: 'Non. Les modèles open-source n\'ont pas de fournisseur pour signer un DPA. À la place, documenter votre conformité en interne : évaluation des risques, procédures de traitement, journaux d\'audit, politique de rétention. Le DPA s\'applique uniquement si vous utilisez un fournisseur (OpenAI, Anthropic, Google).' },
@@ -1297,7 +1302,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'よくある質問',
           faqs: [
             { q: 'データを匿名化すればクラウドLLMを使用できますか？', a: 'いいえ。匿名化されたデータもまだ規制されています。GDPRはクラウドAPIを含むベンダーへの送信を禁止。匿名化はベンダーの管理からデータを削除しません。ローカルLLMのみを使用します。' },
             { q: 'LlamaまたはMistralモデルとのDPA（データ処理契約）が必要ですか？', a: 'いいえ。オープンソースモデルにはDPAに署名するベンダーがありません。代わり：リスク評価、処理手順、監査ログ、保持方針を内部ドキュメント化。DPAはベンダーのみ必須（OpenAI、Anthropic、Google）。' },
@@ -1486,6 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '如果我匿名化数据，我可以使用云LLM吗？', a: '不。匿名化的数据仍然受监管。GDPR/中国数据法禁止传输到任何供应商、包括云API。匿名化不会将数据从供应商的控制中删除。仅使用本地LLM。' },
@@ -1811,7 +1818,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'PII를 해시 처리하면 컴플라이언스 데이터에 클라우드 LLM을 사용할 수 있습니까?', a: '아닙니다. 해시된 데이터도 여전히 규제 대상입니다. HIPAA/GDPR은 클라우드 API를 포함한 모든 벤더로의 전송을 금지합니다. 해시 처리가 벤더의 통제에서 데이터를 제거하지는 않습니다. 로컬 LLM만 사용하십시오.' },
             { q: 'Llama 또는 Mistral 모델과 BAA가 필요합니까?', a: '아닙니다. 오픈소스 모델에는 BAA에 서명할 벤더가 없습니다. 대신 내부적으로 컴플라이언스를 문서화하십시오: 위험 평가, 데이터 처리 절차, 감사 로그, 보존 정책. BAA는 벤더(OpenAI, Anthropic, Google)를 사용하는 경우에만 필요합니다.' },

@@ -1368,6 +1368,7 @@ schema: {
       ],
     },
     faqSection: {
+      id: 'faq',
       title: 'Häufig gestellte Fragen zu 70B Modellen auf Consumer Hardware',
       faqs: [
         {
@@ -1539,6 +1540,7 @@ schema: {
       ],
     },
     faqSection: {
+      id: 'faq',
       title: 'Questions fréquentes sur l\'exécution de modèles 70B sur matériel grand public',
       faqs: [
         {
@@ -1803,6 +1805,7 @@ schema: {
       ],
     },
     faqSection: {
+      id: 'faq',
       title: 'コンシューマーハードウェアで70Bモデルを実行することについてのよくある質問',
       faqs: [
         {
@@ -1972,6 +1975,7 @@ schema: {
       ],
     },
     faqSection: {
+      id: 'faq',
       title: '关于在消费级硬件上运行 70B 模型的常见问题',
       faqs: [
         {

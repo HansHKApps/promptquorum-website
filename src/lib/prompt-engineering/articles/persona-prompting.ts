@@ -280,6 +280,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
@@ -612,6 +613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
@@ -842,6 +844,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Cuánto tiempo debe tener un prompt de persona?', a: 'Las personas más efectivas tienen 200–600 tokens. Empieza con 200–300 tokens para rol, dominio, objetivos y 1–2 constraints. Añade ejemplos y manejo de incertidumbre cuando la complejidad lo requiera. Las personas >1000 tokens a menudo confunden a los modelos; mantenlas concisas y comprobables.' },
@@ -1040,6 +1043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Qual deve ser o comprimento de um prompt de persona?', a: 'As personas mais eficazes têm 200–600 tokens. Comece com 200–300 tokens para papel, domínio, objetivos e 1–2 restrições. Adicione exemplos e gerenciamento de incerteza quando a complexidade exigir. Personas >1000 tokens frequentemente confundem os modelos; mantenha-as concisas e testáveis.' },
@@ -1350,6 +1354,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Questions Fréquemment Posées',
         faqs: [
           {
@@ -2049,6 +2054,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو الطول المناسب لطلب الشخصية؟', a: 'الشخصيات الأكثر فاعلية تتراوح بين 200–600 token. ابدأ بـ 200–300 token للدور والمجال والأهداف وقيد أو قيدَين. أضف الأمثلة ومعالجة عدم اليقين عندما يتطلب التعقيد ذلك. الشخصيات التي تتجاوز 1000 token كثيراً ما تربك النماذج؛ اجعلها موجزة وقابلة للاختبار.' },
@@ -2359,6 +2365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           {

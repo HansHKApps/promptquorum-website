@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which smart home devices have no fees?', a: 'Devices using Zigbee, Z-Wave, or Matter, or local-Wi-Fi devices with a local API, charge no recurring fees because they work through a local hub with no cloud account. The recurring fees almost always come from cloud cameras and premium ecosystem features.' },
           { q: 'Can I store camera footage without a subscription?', a: 'Yes. Record RTSP or PoE cameras locally with Frigate to your own storage, which provides recording and AI detection with no subscription. Footage stays in your home, and you control retention by the disk space you provide.' },
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Welche Smart-Home-Geräte haben keine Gebühren?', a: 'Geräte mit Zigbee, Z-Wave oder Matter oder lokale-WLAN-Geräte mit einer lokalen API erheben keine wiederkehrenden Gebühren, weil sie über einen lokalen Hub ohne Cloud-Konto funktionieren. Die wiederkehrenden Gebühren kommen fast immer von Cloud-Kameras und Premium-Ökosystem-Funktionen.' },
           { q: 'Kann ich Kameraaufnahmen ohne Abonnement speichern?', a: 'Ja. Zeichnen Sie RTSP- oder PoE-Kameras mit Frigate lokal auf Ihren eigenen Speicher auf, das Aufzeichnung und KI-Erkennung ohne Abonnement bietet. Aufnahmen bleiben zu Hause, und Sie steuern die Aufbewahrung über den bereitgestellten Speicherplatz.' },
@@ -1000,7 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quels appareils de maison connectée n\'ont aucun frais ?', a: 'Les appareils utilisant Zigbee, Z-Wave ou Matter, ou les appareils Wi-Fi local avec une API locale, ne facturent aucun frais récurrent car ils fonctionnent via un hub local sans compte cloud. Les frais récurrents viennent presque toujours des caméras cloud et des fonctions premium de l\'écosystème.' },
           { q: 'Puis-je stocker les images des caméras sans abonnement ?', a: 'Oui. Enregistrez les caméras RTSP ou PoE en local avec Frigate sur votre propre stockage, ce qui fournit enregistrement et détection IA sans abonnement. Les images restent chez vous, et vous contrôlez la rétention selon l\'espace disque que vous fournissez.' },

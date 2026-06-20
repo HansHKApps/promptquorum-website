@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can one mini PC do both Home Assistant and a local LLM?', a: 'Yes. A mini PC with enough RAM and a capable integrated GPU or NPU runs Home Assistant and a small local LLM together, and can add Whisper and Frigate. This single-box approach is the simplest way to get a local-AI smart home.' },
           { q: 'How much RAM do I need?', a: 'Enough to hold your target model plus Home Assistant and any add-ons. A small model needs only modest RAM, while running a 7B model comfortably alongside the hub benefits from ample RAM. Match RAM to the largest model you plan to run.' },
@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ein Mini-PC sowohl Home Assistant als auch ein lokales LLM betreiben?', a: 'Ja. Ein Mini-PC mit genug RAM und einer leistungsfähigen integrierten GPU oder NPU betreibt Home Assistant und ein kleines lokales LLM zusammen und kann Whisper und Frigate hinzufügen. Dieser Ein-Geräte-Ansatz ist der einfachste Weg zu einem lokalen KI-Smart-Home.' },
           { q: 'Wie viel RAM brauche ich?', a: 'Genug, um Ihr Zielmodell plus Home Assistant und etwaige Add-ons zu fassen. Ein kleines Modell braucht nur bescheidenen RAM, während es einem 7B-Modell, das bequem neben dem Hub läuft, von reichlich RAM profitiert. Passen Sie den RAM an das größte geplante Modell an.' },
@@ -1060,7 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Un seul mini-PC peut-il faire à la fois Home Assistant et un LLM local ?', a: 'Oui. Un mini-PC avec assez de RAM et un GPU intégré ou NPU capable fait tourner Home Assistant et un petit LLM local ensemble, et peut ajouter Whisper et Frigate. Cette approche en une machine est la façon la plus simple d\'obtenir une maison connectée à IA locale.' },
           { q: 'De combien de RAM ai-je besoin ?', a: 'Assez pour contenir votre modèle cible plus Home Assistant et les add-ons. Un petit modèle ne nécessite que peu de RAM, tandis que faire tourner confortablement un modèle 7B aux côtés du hub profite d\'une RAM ample. Adaptez la RAM au plus gros modèle prévu.' },

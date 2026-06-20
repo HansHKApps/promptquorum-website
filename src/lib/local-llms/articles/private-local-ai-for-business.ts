@@ -2454,7 +2454,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Perguntas frequentes',
           faqs: [
             {
               q: 'Qual é o volume mínimo de tokens para justificar IA on-premises no Brasil?',

@@ -1661,6 +1661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'プロンプト品質とテスト品質の違いは?', a: 'プロンプト品質は出力の精度・一貫性を測ります。テスト品質はテストセット自体の有効性（カバレッジ、代表性）です。良いプロンプトは悪いテストでも高スコアを得られ、悪いプロンプトは良いテストで低スコアを得られます。' },
@@ -1978,6 +1979,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '提示词质量和测试质量有什么区别？', a: '提示词质量测量输出的精度和一致性。测试质量测量测试集本身的有效性（覆盖范围、代表性）。好的提示词在坏的测试下也能得高分，坏的提示词在好的测试下会得低分。' },

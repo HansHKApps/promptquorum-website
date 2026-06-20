@@ -193,6 +193,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is the best prompt framework for all tasks?', a: 'There is no universal best framework. Chain-of-Thought works for reasoning, ReAct for tool use, Tree-of-Thought for complex multi-step tasks. Test frameworks on your specific task to find the best fit.' },
@@ -378,6 +379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig Gestellte Fragen',
           faqs: [
             { q: 'Was ist das beste Prompt-Framework für alle Aufgaben?', a: 'Es gibt kein universelles bestes Framework. Chain-of-Thought funktioniert für Reasoning, ReAct für Tool-Nutzung, Tree-of-Thought für komplexe mehrstufige Aufgaben. Testen Sie Frameworks auf Ihrer spezifischen Aufgabe, um die beste Lösung zu finden.' },
@@ -579,6 +581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuál es el mejor framework de prompt para todas las tareas?', a: 'No hay un mejor framework universal. Chain-of-Thought funciona para el razonamiento, ReAct para el uso de herramientas, Tree-of-Thought para tareas complejas multi-paso. Prueba frameworks en tu tarea específica para encontrar el mejor ajuste.' },
@@ -780,6 +783,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما أفضل إطار طلب لجميع المهام؟', a: 'لا يوجد إطار أفضل شامل. Chain-of-Thought يعمل للاستدلال، ReAct لاستخدام الأدوات، Tree-of-Thought للمهام المعقدة متعددة الخطوات. جرّب الأطر على مهمتك المحددة للعثور على الأنسب.' },
@@ -941,6 +945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Qual é o melhor framework de prompt para todas as tarefas?', a: 'Não há um melhor framework universal. Chain-of-Thought funciona para raciocínio, ReAct para uso de ferramentas, Tree-of-Thought para tarefas complexas de múltiplas etapas. Teste frameworks na sua tarefa específica para encontrar o melhor ajuste.' },
@@ -1126,6 +1131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
             { q: 'Quel est le meilleur framework de prompt pour toutes les tâches ?', a: 'Il n\'y a pas de meilleur framework universel. Chain-of-Thought fonctionne pour le raisonnement, ReAct pour l\'utilisation d\'outils, Tree-of-Thought pour les tâches complexes multi-étapes. Testez les frameworks sur votre tâche spécifique pour trouver la meilleure solution.' },
@@ -1311,6 +1317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'すべてのタスクに最適なプロンプトフレームワークは何ですか？', a: 'すべてのタスクに対する普遍的な最適なフレームワークはありません。Chain-of-Thoughtは推論に機能し、ReActはツールの使用に、Tree-of-Thoughtは複雑なマルチステップタスクに機能します。特定のタスクでフレームワークをテストして、最適なものを見つけてください。' },
@@ -1496,6 +1503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '所有任务最好的提示词框架是什么？', a: '没有通用最佳框架。Chain-of-Thought适合推理，ReAct适合工具使用，Tree-of-Thought适合复杂的多步骤任务。在您的特定任务上测试框架，找到最合适的。' },
@@ -1696,6 +1704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: '모든 작업에 가장 좋은 프롬프트 프레임워크는 무엇입니까?', a: '모든 경우에 통용되는 최고의 프레임워크는 없습니다. Chain-of-Thought는 추론에, ReAct는 도구 사용에, Tree-of-Thought는 복잡한 다단계 작업에 적합합니다. 특정 작업에 프레임워크를 테스트하여 최적의 적합성을 찾으십시오.' },

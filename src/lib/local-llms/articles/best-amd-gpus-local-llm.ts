@@ -448,6 +448,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Debo comprar la AMD RX 6800 XT o la NVIDIA RTX 3080 para LLMs locales?', a: 'RTX 3080 si valoras la simplicidad (CUDA funciona sin problemas). RX 6800 XT si quieres un 25% más de valor y no te importan 5-10 horas de configuración de ROCm.' },
@@ -674,6 +675,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل أشتري AMD RX 6800 XT أم NVIDIA RTX 3080 لنماذج LLM المحلية؟', a: 'RTX 3080 إن كنت تقدّر البساطة (CUDA يعمل دون مشاكل). RX 6800 XT إن أردت قيمة أكبر بنسبة 25% ولا تمانع 5-10 ساعات من إعداد ROCm.' },
@@ -899,6 +901,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Devo comprar a AMD RX 6800 XT ou a NVIDIA RTX 3080 para LLMs locais?', a: 'RTX 3080 se você valoriza a simplicidade (o CUDA funciona sem problemas). RX 6800 XT se você quer 25% mais valor e não se importa com 5-10 horas de configuração do ROCm.' },
@@ -1057,6 +1060,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Sollte ich AMD RX 6800 XT oder NVIDIA RTX 3080 für lokale LLMs kaufen?', a: 'RTX 3080, wenn Sie Einfachheit bevorzugen (CUDA „funktioniert einfach"). RX 6800 XT, wenn Sie 25% besseren Wert und 5-10 Stunden ROCm-Einrichtung nicht stört.' },
@@ -1223,6 +1227,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Questions fréquentes',
           faqs: [
             { q: 'Devrais-je acheter AMD RX 6800 XT ou NVIDIA RTX 3080 pour LLM locaux?', a: 'RTX 3080 si vous privilégiez simplicité (CUDA « marche »). RX 6800 XT si vous voulez 25% meilleur rapport et tolérez 5-10 h configuration ROCm.' },
@@ -1390,6 +1395,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'ローカル LLM に AMD RX 6800 XT または NVIDIA RTX 3080 を購入すべきか？', a: 'シンプルさを優先する場合は RTX 3080（CUDA「即座に機能」）。25% 優れたコスト・パフォーマンスで 5-10 時間の ROCm セットアップを厭わない場合は RX 6800 XT。' },
@@ -1562,6 +1568,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '本地 LLM 应购买 AMD RX 6800 XT 还是 NVIDIA RTX 3080？', a: '优先简单则 RTX 3080（CUDA「即用」）。优先 25% 更优性价比且可承受 5-10 小时 ROCm 设置则 RX 6800 XT。' },
@@ -1833,6 +1840,7 @@ schema: {
         ],
       },
       'faqSection': {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '로컬 LLM용으로 AMD RX 6800 XT와 NVIDIA RTX 3080 중 어느 것을 구입해야 합니까?', a: '단순함을 중시한다면 RTX 3080(CUDA는 바로 작동합니다). 25% 더 나은 가성비를 원하고 5-10시간의 ROCm 설정을 감수할 수 있다면 RX 6800 XT를 권장합니다.' },

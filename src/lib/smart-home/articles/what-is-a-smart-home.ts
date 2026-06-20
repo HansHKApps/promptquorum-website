@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Do I need a hub for a smart home?', a: 'Not always. Wi-Fi devices and cloud ecosystems can work without a dedicated hub, but a hub is needed for local protocols like Zigbee and Z-Wave and for running automations locally. A local hub like Home Assistant also keeps your system working offline.' },
           { q: 'Is a smart home secure?', a: 'It can be, but security depends on the devices and setup. Cloud devices expose data to vendor servers; local setups keep data at home. Use strong passwords, keep firmware updated, and prefer local-capable devices for sensitive areas like cameras.' },
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Brauche ich einen Hub für ein Smart Home?', a: 'Nicht immer. WLAN-Geräte und Cloud-Ökosysteme funktionieren ohne dedizierten Hub, aber ein Hub ist für lokale Protokolle wie Zigbee und Z-Wave und für lokal ausgeführte Automatisierungen nötig. Ein lokaler Hub wie Home Assistant hält Ihr System zudem offline am Laufen.' },
           { q: 'Ist ein Smart Home sicher?', a: 'Es kann sicher sein, aber die Sicherheit hängt von den Geräten und der Einrichtung ab. Cloud-Geräte legen Daten auf Hersteller-Servern offen; lokale Lösungen halten Daten zu Hause. Nutzen Sie starke Passwörter, halten Sie die Firmware aktuell und bevorzugen Sie für sensible Bereiche wie Kameras lokal-fähige Geräte.' },
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Ai-je besoin d\'un hub pour une maison connectée ?', a: 'Pas toujours. Les appareils Wi-Fi et les écosystèmes cloud fonctionnent sans hub dédié, mais un hub est nécessaire pour les protocoles locaux comme Zigbee et Z-Wave et pour exécuter les automatisations localement. Un hub local comme Home Assistant garde aussi votre système opérationnel hors ligne.' },
           { q: 'Une maison connectée est-elle sûre ?', a: 'Elle peut l\'être, mais la sécurité dépend des appareils et de la configuration. Les appareils cloud exposent des données sur les serveurs du fabricant ; les configurations locales gardent les données à la maison. Utilisez des mots de passe forts, maintenez le firmware à jour et privilégiez les appareils à capacité locale pour les zones sensibles comme les caméras.' },

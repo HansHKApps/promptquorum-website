@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can a Raspberry Pi run a local LLM too?', a: 'A Pi can run only very small models, and slowly, so it is not ideal for a responsive local-LLM assistant. It handles Home Assistant and basic voice well, but for local AI a mini PC with a capable iGPU or NPU is the better choice.' },
           { q: 'How much RAM do I need?', a: 'Home Assistant alone runs in a couple of gigabytes. To run a small local LLM and other AI services on the same box, more RAM helps; a mini PC with ample RAM and a capable iGPU/NPU keeps a small model responsive. Match RAM to the model size you plan to run.' },
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ein Raspberry Pi auch ein lokales LLM betreiben?', a: 'Ein Pi kann nur sehr kleine Modelle betreiben, und das langsam, daher ist er für einen reaktionsschnellen lokalen LLM-Assistenten nicht ideal. Home Assistant und einfache Sprache bewältigt er gut, aber für lokale KI ist ein Mini-PC mit einer leistungsfähigen iGPU oder NPU die bessere Wahl.' },
           { q: 'Wie viel RAM brauche ich?', a: 'Home Assistant allein läuft in ein paar Gigabyte. Um ein kleines lokales LLM und andere KI-Dienste auf demselben Gerät zu betreiben, hilft mehr RAM; ein Mini-PC mit reichlich RAM und einer leistungsfähigen iGPU/NPU hält ein kleines Modell reaktionsschnell. Passen Sie den RAM an die geplante Modellgröße an.' },
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Une Raspberry Pi peut-elle aussi exécuter un LLM local ?', a: 'Une Pi ne peut exécuter que des modèles très petits, et lentement, elle n\'est donc pas idéale pour un assistant LLM local réactif. Elle gère bien Home Assistant et la voix basique, mais pour l\'IA locale un mini-PC avec un iGPU ou NPU capable est le meilleur choix.' },
           { q: 'De combien de RAM ai-je besoin ?', a: 'Home Assistant seul tourne dans quelques gigaoctets. Pour exécuter un petit LLM local et d\'autres services d\'IA sur la même machine, plus de RAM aide ; un mini-PC avec une RAM ample et un iGPU/NPU capable garde un petit modèle réactif. Adaptez la RAM à la taille du modèle prévu.' },

@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Is the MacBook Pro M5 Pro good for local LLMs?', a: 'Yes — it is the best laptop for local LLMs in June 2026. The 24 GB unified memory configuration ($2,199) runs Qwen3 14B at Q4 with 45–60 tok/s and no fan noise. Upgrade to 36 GB ($2,999) for comfortable 30B model headroom.' },
             { q: 'Which Windows laptop is best for running LLMs locally in 2026?', a: 'The RTX 5080 laptop (~$2,799, 16 GB GDDR7 VRAM) is the top Windows pick — ~70 tok/s on Llama 3.3 8B Q4. The RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best budget option at ~50 tok/s.' },

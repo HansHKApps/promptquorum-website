@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             {
               q: 'What is an AI-aware build quality check?',
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es un control de calidad de build consciente de IA?', a: 'Un control de calidad de build consciente de IA es un gate CI/CD diseñado para detectar modos de fallo específicos del código generado por IA: APIs alucinadas, nombres de paquetes fabricados y errores lógicos que compilan pero violan los requisitos.' },
             { q: '¿En qué se diferencia el código generado por IA del código escrito por humanos en riesgo de calidad?', a: 'El código generado por IA introduce modos de fallo estructurales que el código escrito por humanos raramente muestra: nombres de paquetes inventados, llamadas a métodos ausentes de tus versiones de SDK, y código que satisface tests superficiales mientras implementa incorrectamente los requisitos.' },
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que é uma verificação de qualidade de build consciente de IA?', a: 'Uma verificação de qualidade de build consciente de IA é um gate CI/CD projetado para detectar modos de falha específicos do código gerado por IA: APIs alucinadas, nomes de pacotes fabricados e erros lógicos que compilam mas violam os requisitos.' },
             { q: 'Em que o código gerado por IA difere do código escrito por humanos em risco de qualidade?', a: 'O código gerado por IA introduz modos de falha estruturais que o código escrito por humanos raramente apresenta: nomes de pacotes inventados, chamadas de métodos ausentes das suas versões de SDK e código que satisfaz testes superficiais enquanto implementa incorretamente os requisitos.' },
@@ -3571,7 +3571,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'AI 인식 빌드 품질 검사란 무엇입니까?', a: 'AI 인식 빌드 품질 검사는 AI 생성 코드의 특정 실패 패턴을 감지하도록 설계된 CI/CD 게이트입니다: 환각된 API, 조작된 패키지 이름, 컴파일은 되지만 요구사항을 위반하는 논리 오류.' },
             { q: 'AI 생성 코드는 품질 위험 면에서 인간이 작성한 코드와 어떻게 다릅니까?', a: 'AI 생성 코드는 인간이 작성한 코드에서 거의 나타나지 않는 구조적 실패 패턴을 도입합니다: 조작된 패키지 이름, SDK 버전에 없는 메서드 호출, 요구사항을 잘못 구현하면서 표면적인 테스트를 통과하는 코드.' },

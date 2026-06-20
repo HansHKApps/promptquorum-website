@@ -221,6 +221,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is the difference between a prompt technique and a prompt framework?', a: 'A technique is a single instruction or method (e.g., "think step by step"). A framework is a reusable structure with 3+ components that define how prompts should be built. Frameworks are repeatable; techniques are ad-hoc.' },
@@ -397,6 +398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist der Unterschied zwischen einer Prompt-Technik und einem Prompt-Framework?', a: 'Eine Technik ist eine einzelne Anweisung oder Methode (z. B. „denke Schritt für Schritt"). Ein Framework ist eine wiederverwendbare Struktur mit 3+ Komponenten, die definiert, wie Prompts aufgebaut sein sollten. Frameworks sind wiederholbar; Techniken sind ad hoc.' },
@@ -633,6 +635,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Cuál es la diferencia entre una técnica de prompt y un framework de prompt?', a: 'Una técnica es una instrucción o método único (por ejemplo, "piensa paso a paso"). Un framework es una estructura reutilizable con 3+ componentes que define cómo deben construirse los prompts. Los frameworks son repetibles; las técnicas son ad hoc.' },
@@ -869,6 +872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Qual é a diferença entre uma técnica de prompt e um framework de prompt?', a: 'Uma técnica é uma instrução ou método único (por exemplo, "pense passo a passo"). Um framework é uma estrutura reutilizável com 3+ componentes que define como os prompts devem ser construídos. Frameworks são repetíveis; técnicas são ad hoc.' },
@@ -1055,6 +1059,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quelle est la différence entre une technique de prompt et un framework de prompt?', a: 'Une technique est une instruction ou méthode unique (par exemple, "réfléchis étape par étape"). Un framework est une structure réutilisable avec 3+ composants qui définissent comment les prompts doivent être construits. Les frameworks sont répétables; les techniques sont ad hoc.' },
@@ -1253,6 +1258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: 'プロンプト技法とプロンプトフレームワークの違いは?', a: '技法は単一の指示またはメソッドです（例：「ステップバイステップで考える」）。フレームワークは3+コンポーネントを持つ再利用可能な構造で、プロンプトの構築方法を定義します。フレームワークは繰り返し可能で、技法はアドホックです。' },
@@ -1451,6 +1457,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '提示技巧和提示框架有什么区别?', a: '技巧是单一指令或方法（如"逐步思考"）。框架是具有3+组件的可重用结构，定义如何构建提示。框架可重复使用；技巧是临时的。' },
@@ -1687,6 +1694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما الفرق بين أسلوب الأوامر وإطار عمل الأوامر؟', a: 'الأسلوب هو تعليمة أو طريقة واحدة (مثل "فكّر خطوة بخطوة"). وإطار العمل هو بنية قابلة لإعادة الاستخدام تحتوي على 3 مكونات أو أكثر، تحدد كيفية بناء الأوامر. أطر العمل قابلة للتكرار؛ والأساليب عشوائية.' },
@@ -1922,6 +1930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '프롬프트 기법과 프롬프트 프레임워크의 차이점은 무엇입니까?', a: '기법은 단일 지침 또는 방법입니다(예: "단계별로 생각하십시오"). 프레임워크는 프롬프트가 어떻게 구성되어야 하는지 정의하는 3개 이상의 구성 요소가 있는 재사용 가능한 구조입니다. 프레임워크는 반복 가능하며, 기법은 임시적입니다.' },

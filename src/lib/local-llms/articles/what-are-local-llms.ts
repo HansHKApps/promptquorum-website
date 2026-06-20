@@ -1122,6 +1122,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquentes',
           faqs: [
             {
@@ -1271,6 +1272,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -1420,6 +1422,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {
@@ -1569,6 +1572,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen zu lokalen LLMs',
           faqs: [
             {

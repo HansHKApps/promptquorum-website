@@ -217,7 +217,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is LLM quantization?', a: 'Quantization compresses a model by reducing numerical precision, lowering memory usage and increasing speed.' },
             { q: 'What is the best quantization level?', a: 'Q4_K_M is the best default for most users, balancing performance and quality.' },
@@ -463,7 +464,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es la cuantización de LLM?', a: 'La cuantización comprime un modelo reduciendo la precisión numérica, lo que reduce el uso de memoria y aumenta la velocidad.' },
             { q: '¿Cuál es el mejor nivel de cuantización?', a: 'Q4_K_M es el mejor valor predeterminado para la mayoría de los usuarios, equilibrando rendimiento y calidad.' },
@@ -709,6 +711,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هو تكميم نماذج LLM؟', a: 'يضغط التكميم النموذج عبر تقليل الدقة العددية، مما يخفض استخدام الذاكرة ويزيد السرعة.' },
@@ -955,6 +958,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que é a quantização de LLM?', a: 'A quantização comprime um modelo reduzindo a precisão numérica, o que reduz o uso de memória e aumenta a velocidade.' },
@@ -1202,7 +1206,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was ist LLM-Quantisierung?', a: 'Quantisierung komprimiert ein Modell durch Reduktion der numerischen Genauigkeit, reduziert Speicherverbrauch und erhöht Geschwindigkeit.' },
             { q: 'Was ist die beste Quantisierungsstufe?', a: 'Q4_K_M ist die beste Standardoption für die meisten Nutzer und balanciert Leistung und Qualität.' },
@@ -1447,7 +1452,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Qu\'est-ce que la quantification LLM ?', a: 'La quantification compresse un modèle en réduisant la précision numérique, réduisant l\'utilisation mémoire et augmentant la vitesse.' },
             { q: 'Quel est le meilleur niveau de quantification ?', a: 'Q4_K_M est le meilleur défaut pour la plupart des utilisateurs, équilibrant performance et qualité.' },
@@ -1915,7 +1921,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'LLM 양자화란 무엇입니까?', a: '양자화는 수치 정밀도를 낮춰 모델을 압축하여 메모리 사용량을 줄이고 속도를 높입니다.' },
             { q: '최적의 양자화 수준은 무엇입니까?', a: 'Q4_K_M이 대부분의 사용자에게 성능과 품질을 균형 있게 제공하는 최적의 기본값입니다.' },

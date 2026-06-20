@@ -1552,7 +1552,7 @@ while True:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'WeChatFerry가 Mac용 WeChat에서 작동합니까?',

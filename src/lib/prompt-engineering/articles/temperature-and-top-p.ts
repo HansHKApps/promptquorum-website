@@ -952,6 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas Frequentes',
           faqs: [
             {

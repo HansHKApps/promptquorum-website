@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Is a used mining GPU worth buying at a steep discount?', a: 'Only if you can test it in person for 2+ hours with MemtestG80. Otherwise, no. The discount ($50-100) isn\'t worth the 20% failure risk.' },
             { q: 'How can I tell if a used GPU was a mining card?', a: 'Often you can\'t from photos alone. Ask the seller. Look for thermal damage (discoloration near capacitors) or unusually heavy dust. Request their mining pool address if they used it.' },
@@ -341,7 +341,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Merece la pena comprar una GPU de minería de segunda mano con gran descuento?', a: 'Solo si puedes probarla in situ durante 2 horas o más con MemtestG80. De lo contrario, no. El descuento ($50-100) no compensa el 20% de riesgo de fallo.' },
             { q: '¿Cómo puedo saber si una GPU de segunda mano fue una tarjeta de minería?', a: 'En muchos casos no es posible determinarlo solo por las fotos. Pregunta al vendedor. Busca daños térmicos (decoloración cerca de los condensadores) o polvo excesivo. Si la usaron para minar, pide la dirección del pool de minería.' },
@@ -970,7 +970,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Lohnt es sich, eine gebrauchte Mining-GPU mit starkem Rabatt zu kaufen?', a: 'Nur, wenn Sie sie vor Ort 2+ Stunden mit MemtestG80 testen können. Sonst nein. Der Rabatt (€45-90) ist das 20% Ausfallrisiko nicht wert.' },
             { q: 'Wie erkenne ich, ob eine gebrauchte GPU eine Mining-Karte war?', a: 'Oft können Sie es von Fotos allein nicht. Fragen Sie den Verkäufer. Achten Sie auf Wärmeschaden (Verfärbung neben Kondensatoren) oder ungewöhnlich starken Staub. Fragen Sie nach ihrer Mining-Pool-Adresse, falls sie verwendet wurde.' },
@@ -1192,7 +1192,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Vaut-il la peine d\'acheter une GPU minière utilisée avec forte réduction ?', a: 'Seulement si vous pouvez la tester sur site pendant 2+ heures avec MemtestG80. Sinon, non. La réduction (€40-80) ne vaut pas le risque de 20% défaillance.' },
             { q: 'Comment savoir si une GPU utilisée était une carte minière ?', a: 'Souvent vous ne pouvez pas à partir des photos seules. Demandez au vendeur. Cherchez dommages thermiques (décoloration près condensateurs) ou poussière inhabituellement lourde. Demandez adresse mining pool s\'ils l\'ont utilisée.' },
@@ -1402,7 +1402,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             { q: '大幅割引で中古マイニングGPUを購入する価値はありますか？', a: 'MemtestG80を使用して2時間以上現地でテストできる場合のみ。そうでなければいいえ。割引（¥4,500-9,000）は20%障害リスクの価値がありません。' },
             { q: '中古GPUがマイニングカードであったかどうかをどうやって判断しますか？', a: '多くの場合、写真だけからは判断できません。売り手に聞いてください。熱損傷（コンデンサの近くの変色）や異常に重い埃を探してください。使用していた場合はマイニングプールアドレスを要求してください。' },
@@ -1822,7 +1822,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: '대폭 할인된 채굴용 중고 GPU를 구매할 가치가 있나요?', a: 'MemtestG80으로 현장에서 2시간 이상 테스트할 수 있는 경우에만 가치가 있습니다. 그렇지 않다면 구매하지 마십시오. $50~100의 할인은 20%의 불량 리스크를 감수할 만한 가치가 없습니다.' },
             { q: '중고 GPU가 채굴용인지 어떻게 알 수 있나요?', a: '사진만으로는 판단하기 어려운 경우가 많습니다. 판매자에게 직접 물어보십시오. 캐패시터 주변의 변색이나 비정상적으로 많은 먼지 등 열 손상 흔적을 확인하십시오. 채굴에 사용했다면 채굴 풀 주소를 요청해 보십시오.' },

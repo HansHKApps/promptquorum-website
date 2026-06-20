@@ -219,6 +219,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         id: 'faq',
         faqs: [
@@ -475,6 +476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         id: 'faq',
         faqs: [
@@ -731,6 +733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         id: 'faq',
         faqs: [
@@ -983,6 +986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         id: 'faq',
         faqs: [
@@ -1239,6 +1243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Questions fréquentes',
         id: 'faq',
         faqs: [
@@ -1497,6 +1502,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'よくある質問',
         id: 'faq',
         faqs: [
@@ -1761,6 +1767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '常见问题',
         id: 'faq',
         faqs: [
@@ -2046,6 +2053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         id: 'faq',
         faqs: [
@@ -2302,6 +2310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         id: 'faq',
         faqs: [

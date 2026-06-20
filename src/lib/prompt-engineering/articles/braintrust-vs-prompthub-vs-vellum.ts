@@ -355,7 +355,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'What is the main difference between Braintrust and PromptHub?',
@@ -1245,7 +1245,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Cuál es la principal diferencia entre Braintrust y PromptHub?',
@@ -1697,7 +1697,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Qual é a principal diferença entre Braintrust e PromptHub?',
@@ -3114,7 +3114,7 @@ tests:
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'Braintrust와 PromptHub의 주요 차이점은 무엇입니까?',

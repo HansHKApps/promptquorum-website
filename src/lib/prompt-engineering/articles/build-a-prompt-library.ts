@@ -554,6 +554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -1505,6 +1506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es una biblioteca de prompts?', a: 'Una biblioteca de prompts es una colección estructurada de prompts probados con metadatos (entradas, guía de modelo, salida esperada, versión, propietario). A diferencia de una lista de prompts copiados de internet, una biblioteca de prompts es un producto interno que tu equipo mantiene y reutiliza para consistencia y velocidad.' },
@@ -1850,6 +1852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هي مكتبة التعليمات؟', a: 'مكتبة التعليمات هي مجموعة منظمة من التعليمات المختبرة مع معادن بيانات (مدخلات ودليل نموذج ومخرجات متوقعة ونسخة ومالك). على عكس قائمة التعليمات المنسوخة من الإنترنت، مكتبة التعليمات هي منتج داخلي يصونه فريقك ويعيد استخدامه للاتساق والسرعة.' },
@@ -2194,6 +2197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que é uma biblioteca de prompts?', a: 'Uma biblioteca de prompts é uma coleção estruturada de prompts testados com metadados (entradas, orientação de modelo, saída esperada, versão, responsável). Ao contrário de uma lista de prompts da internet, uma biblioteca de prompts é um produto interno que sua equipe mantém e reutiliza para consistência e velocidade.' },
@@ -4253,6 +4257,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: '프롬프트 라이브러리란 무엇입니까?', a: '프롬프트 라이브러리는 메타데이터(입력값, 모델 가이드, 예상 출력, 버전, 담당자)를 갖춘 검증된 프롬프트의 구조화된 모음입니다. 인터넷에서 복사한 프롬프트 목록과 달리, 팀이 일관성과 속도를 위해 유지 관리하고 재사용하는 내부 제품입니다.' },

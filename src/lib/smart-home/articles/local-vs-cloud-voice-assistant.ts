@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is local voice as good as cloud now?', a: 'For home control and natural-language commands, a local stack with a good Whisper model and a local LLM is highly capable. Cloud assistants still lead on consistent accuracy out of the box and on broad third-party skills beyond home control.' },
           { q: 'Is a local voice assistant fully offline?', a: 'Yes. Speech-to-text, text-to-speech, intent handling, and an optional local LLM all run on your hardware, so a local voice assistant works with no internet. Only remote access from outside the home needs connectivity.' },
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist lokale Sprache inzwischen so gut wie Cloud?', a: 'Für Heimsteuerung und natürlichsprachliche Befehle ist ein lokaler Stack mit einem guten Whisper-Modell und einem lokalen LLM sehr leistungsfähig. Cloud-Assistenten führen weiterhin bei konsistenter Out-of-Box-Genauigkeit und bei breiten Drittanbieter-Skills über die Heimsteuerung hinaus.' },
           { q: 'Ist ein lokaler Sprachassistent vollständig offline?', a: 'Ja. Sprache-zu-Text, Text-zu-Sprache, die Intent-Verarbeitung und ein optionales lokales LLM laufen alle auf Ihrer Hardware, sodass ein lokaler Sprachassistent ohne Internet funktioniert. Nur der Fernzugriff von außerhalb des Hauses benötigt Konnektivität.' },
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'La voix locale est-elle aussi bonne que le cloud désormais ?', a: 'Pour le contrôle de la maison et les commandes en langage naturel, une pile locale avec un bon modèle Whisper et un LLM local est très capable. Les assistants cloud mènent encore sur la précision cohérente prête à l\'emploi et sur les skills tierces larges au-delà du contrôle de la maison.' },
           { q: 'Un assistant vocal local est-il entièrement hors ligne ?', a: 'Oui. Reconnaissance vocale, synthèse vocale, gestion des intentions et un LLM local optionnel tournent tous sur votre matériel, donc un assistant vocal local fonctionne sans internet. Seul l\'accès à distance depuis l\'extérieur nécessite une connectivité.' },

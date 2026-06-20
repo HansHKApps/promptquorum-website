@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Do I need a Coral TPU for Frigate?', a: 'Not strictly, but it is recommended. A Google Coral TPU handles AI detection for several cameras efficiently and with low power. A GPU works too, and CPU-only detection is possible but limits how many cameras you can run in real time.' },
           { q: 'Does Frigate work offline?', a: 'Yes. Detection, recording, and Home Assistant notifications all run on your local network, so Frigate keeps working during an internet outage. Only remote viewing from outside the home needs connectivity.' },
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Brauche ich eine Coral-TPU für Frigate?', a: 'Nicht zwingend, aber empfohlen. Eine Google-Coral-TPU bewältigt KI-Erkennung für mehrere Kameras effizient und stromsparend. Eine GPU funktioniert auch, und reine CPU-Erkennung ist möglich, begrenzt aber, wie viele Kameras Sie in Echtzeit betreiben können.' },
           { q: 'Funktioniert Frigate offline?', a: 'Ja. Erkennung, Aufnahme und Home-Assistant-Benachrichtigungen laufen alle in Ihrem lokalen Netzwerk, sodass Frigate bei einem Internetausfall weiterarbeitet. Nur das Fernansehen von außerhalb des Hauses benötigt Konnektivität.' },
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Ai-je besoin d\'un Coral TPU pour Frigate ?', a: 'Pas strictement, mais c\'est recommandé. Un Google Coral TPU gère la détection IA pour plusieurs caméras efficacement et à faible consommation. Un GPU fonctionne aussi, et la détection CPU seule est possible mais limite le nombre de caméras que vous pouvez exécuter en temps réel.' },
           { q: 'Frigate fonctionne-t-il hors ligne ?', a: 'Oui. Détection, enregistrement et notifications Home Assistant tournent tous sur votre réseau local, donc Frigate continue de fonctionner lors d\'une coupure internet. Seule la visualisation à distance depuis l\'extérieur nécessite une connectivité.' },

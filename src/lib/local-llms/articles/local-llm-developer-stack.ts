@@ -191,7 +191,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Which tier should I use?', a: 'Tier 1 if solo (casual use). Tier 2 if single dev + IDE integration. Tier 3 if team + 24/7 service.' },
             { q: 'Can I use vLLM instead of Ollama?', a: 'Yes, but more setup. vLLM is faster (batching) and more flexible (Python API).' },
@@ -428,7 +428,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué nivel debo usar?', a: 'Nivel 1 para uso individual (casual). Nivel 2 para un desarrollador con integración de IDE. Nivel 3 para equipos con servicio 24/7.' },
             { q: '¿Puedo usar vLLM en lugar de Ollama?', a: 'Sí, pero requiere más configuración. vLLM es más rápido (procesamiento por lotes) y más flexible (API de Python).' },
@@ -939,7 +939,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Welche Stufe soll ich verwenden?', a: 'Stufe 1 für Einzelnutzer (gelegentlicher Gebrauch). Stufe 2 für einzelne Entwickler mit IDE-Integration. Stufe 3 für Teams mit 24/7-Betrieb.' },
             { q: 'Kann ich vLLM statt Ollama verwenden?', a: 'Ja, aber mit mehr Aufwand. vLLM ist schneller (Batching) und flexibler (Python-API).' },
@@ -1143,7 +1144,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Quel niveau dois-je utiliser ?', a: 'Niveau 1 pour usage solo (occasionnel). Niveau 2 pour un développeur seul avec intégration IDE. Niveau 3 pour une équipe avec service 24/7.' },
             { q: 'Puis-je utiliser vLLM à la place d\'Ollama ?', a: 'Oui, mais avec plus de configuration. vLLM est plus rapide (batching) et plus flexible (API Python).' },
@@ -1344,7 +1346,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'よくある質問',
           faqs: [
             { q: 'どの階層を使うべきですか？', a: '個人利用（カジュアル）なら階層1。IDE統合が必要な単独開発者なら階層2。チームや24/7サービスなら階層3。' },
             { q: 'OllamaのかわりにvLLMを使えますか？', a: '可能ですが、セットアップが増えます。vLLMはバッチ処理で高速で、Python APIによる柔軟性も優れています。' },
@@ -1545,6 +1548,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '应该使用哪个层级？', a: '个人使用（临时用途）选层级一。单人开发加IDE集成选层级二。团队和24/7服务选层级三。' },
@@ -1759,7 +1763,7 @@ schema: {
         },
         'faqSection': {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             { q: '어떤 단계를 사용해야 합니까?', a: '혼자 사용하는 경우 1단계, 단일 개발자 + IDE 통합은 2단계, 팀 + 24/7 서비스는 3단계를 사용하십시오.' },
             { q: 'Ollama 대신 vLLM을 사용할 수 있습니까?', a: '가능합니다만 설정이 더 복잡합니다. vLLM은 더 빠르고(배치 처리) 더 유연합니다(Python API).' },

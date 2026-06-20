@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can a local voice assistant fully replace Alexa?', a: 'For smart-home control and many routines, yes — Assist with Whisper, Piper, and a local LLM covers natural-language device control and responses. It does not replicate every third-party Alexa skill or cloud shopping feature, but it covers the core home-control use case privately.' },
           { q: 'Does a local voice assistant work offline?', a: 'Yes. Speech-to-text (Whisper), text-to-speech (Piper), intent handling, and an optional local LLM all run on your hardware, so the assistant works with no internet. Only remote access from outside the home needs connectivity.' },
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ein lokaler Sprachassistent Alexa vollständig ersetzen?', a: 'Für die Smart-Home-Steuerung und viele Routinen ja – Assist mit Whisper, Piper und einem lokalen LLM deckt natürlichsprachliche Gerätesteuerung und Antworten ab. Er repliziert nicht jeden Alexa-Skill von Drittanbietern oder Cloud-Shopping-Funktionen, deckt aber den Kern-Anwendungsfall der Heimsteuerung privat ab.' },
           { q: 'Funktioniert ein lokaler Sprachassistent offline?', a: 'Ja. Sprache-zu-Text (Whisper), Text-zu-Sprache (Piper), die Intent-Verarbeitung und ein optionales lokales LLM laufen alle auf Ihrer Hardware, sodass der Assistent ohne Internet funktioniert. Nur der Fernzugriff von außerhalb des Hauses benötigt Konnektivität.' },
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Un assistant vocal local peut-il remplacer entièrement Alexa ?', a: 'Pour le contrôle de la maison connectée et de nombreuses routines, oui — Assist avec Whisper, Piper et un LLM local couvre le contrôle d\'appareils et les réponses en langage naturel. Il ne reproduit pas chaque skill Alexa tierce ni les fonctions d\'achat cloud, mais il couvre le cas d\'usage central du contrôle de la maison en privé.' },
           { q: 'Un assistant vocal local fonctionne-t-il hors ligne ?', a: 'Oui. Reconnaissance vocale (Whisper), synthèse vocale (Piper), gestion des intentions et un LLM local optionnel tournent tous sur votre matériel, donc l\'assistant fonctionne sans internet. Seul l\'accès à distance depuis l\'extérieur nécessite une connectivité.' },

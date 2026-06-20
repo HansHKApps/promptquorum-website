@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             {
               q: 'Is GPU or CPU better for running local LLMs?',
@@ -2218,7 +2218,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: '자주 묻는 질문',
           faqs: [
             {
               q: '로컬 LLM 실행에 GPU와 CPU 중 어느 것이 더 낫습니까?',

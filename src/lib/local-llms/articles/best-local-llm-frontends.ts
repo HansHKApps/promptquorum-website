@@ -793,6 +793,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions courantes',
           faqs: [
             {
@@ -1116,6 +1117,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -1441,6 +1443,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {

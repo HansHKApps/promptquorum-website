@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Are local-LLM automations reliable enough to trust?', a: 'For comfort and convenience automations, yes — when you constrain scope and review behaviour first. Keep safety-critical automations (locks, alarms, smoke detectors) as deterministic rules rather than routing them through the model.' },
           { q: 'Does an LLM replace all my automations?', a: 'No. Use deterministic rules for simple, time-sensitive, or safety-critical triggers, and reserve the LLM for automations that need context, nuance, or natural-language goals. The two work together.' },
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Sind lokale LLM-Automatisierungen zuverlässig genug, um ihnen zu vertrauen?', a: 'Für Komfort- und Bequemlichkeits-Automatisierungen ja – wenn Sie den Umfang eingrenzen und das Verhalten zuerst prüfen. Halten Sie sicherheitskritische Automatisierungen (Schlösser, Alarme, Rauchmelder) als deterministische Regeln, statt sie über das Modell zu leiten.' },
           { q: 'Ersetzt ein LLM alle meine Automatisierungen?', a: 'Nein. Nutzen Sie deterministische Regeln für einfache, zeitkritische oder sicherheitskritische Auslöser und reservieren Sie das LLM für Automatisierungen, die Kontext, Nuance oder natürlichsprachliche Ziele brauchen. Beide arbeiten zusammen.' },
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Les automatisations par LLM local sont-elles assez fiables pour qu\'on s\'y fie ?', a: 'Pour les automatisations de confort et de commodité, oui — quand vous limitez le périmètre et vérifiez le comportement d\'abord. Gardez les automatisations critiques de sécurité (serrures, alarmes, détecteurs de fumée) comme règles déterministes plutôt que de les router via le modèle.' },
           { q: 'Un LLM remplace-t-il toutes mes automatisations ?', a: 'Non. Utilisez des règles déterministes pour les déclencheurs simples, sensibles au temps ou critiques de sécurité, et réservez le LLM aux automatisations nécessitant contexte, nuance ou objectifs en langage naturel. Les deux fonctionnent ensemble.' },

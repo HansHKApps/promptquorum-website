@@ -343,6 +343,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What does RAG stand for?', a: 'RAG stands for Retrieval-Augmented Generation. It is a two-step process: first, retrieve relevant documents from a knowledge base; second, feed those documents to an LLM alongside the user\'s question. The LLM answers based on the retrieved content instead of only its training data.' },
@@ -692,6 +693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was ist RAG?', a: 'RAG (Retrieval-Augmented Generation) ruft relevante Dokumente ab, bevor eine Antwort generiert wird, anstatt sich auf das Trainingswissen des Modells zu verlassen. Die Antwort wird in Ihren Dokumenten verankert, nicht erfunden.' },
@@ -957,6 +959,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es RAG?', a: 'RAG (Retrieval-Augmented Generation) recupera documentos relevantes antes de generar una respuesta, en lugar de depender del conocimiento de entrenamiento del modelo. La respuesta se ancla en tus documentos, no se inventa.' },
@@ -1222,6 +1225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هو RAG؟', a: 'يسترجع RAG (التوليد المُعزَّز بالاسترجاع) المستندات ذات الصلة قبل توليد الاستجابة، بدلاً من الاعتماد على معرفة تدريب النموذج. الاستجابة مُرساة في مستنداتك، وليست مخترعة.' },
@@ -1486,6 +1490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que é RAG?', a: 'RAG (Retrieval-Augmented Generation) recupera documentos relevantes antes de gerar uma resposta, em vez de depender do conhecimento de treinamento do modelo. A resposta é ancorada nos seus documentos, não inventada.' },
@@ -1801,6 +1806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Qu\'est-ce que RAG ?', a: 'RAG (Retrieval-Augmented Generation) récupère des documents pertinents avant de générer une réponse, plutôt que de s\'appuyer uniquement sur les connaissances d\'entraînement du modèle. La réponse est ancrée dans vos documents, pas inventée.' },
@@ -2115,6 +2121,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'RAGとは何ですか？', a: 'RAG（検索増強生成）は、モデルのトレーニングデータだけに頼るのではなく、先に関連ドキュメントを取得してから回答を生成します。回答はあなたのドキュメントに根拠づけられ、発明されていません。' },
@@ -2442,6 +2449,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: 'RAG是什么？', a: 'RAG（检索增强生成）不只依赖模型的训练数据，而是先从知识库中检索相关文档，然后生成答案。答案根植于你的文档，而非凭空捏造。' },
@@ -2793,6 +2801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: 'RAG는 무엇을 뜻합니까?', a: 'RAG는 Retrieval-Augmented Generation(검색 증강 생성)의 약자입니다. 두 단계 프로세스입니다: 첫째, 지식 베이스에서 관련 문서를 검색하고, 둘째, 사용자의 질문과 함께 해당 문서를 LLM에 제공합니다. LLM은 학습 데이터만이 아닌 검색된 콘텐츠를 기반으로 답변합니다.' },

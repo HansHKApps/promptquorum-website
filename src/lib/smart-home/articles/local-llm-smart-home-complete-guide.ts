@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which local model is best for home control?', a: 'A small instruction-following model with reliable function-calling — typically in the 3B to 8B range — is the best fit, because home control needs fast, structured responses rather than the largest model. The right pick depends on your hardware; see the best local LLM models for smart home guide for current options.' },
           { q: 'Do I need a GPU to run a local LLM smart home?', a: 'No, but it helps. A small model runs on a modern CPU or capable integrated GPU; a discrete GPU or NPU mainly lowers response latency so the assistant feels snappier. Match the model size to your hardware rather than buying the biggest GPU.' },
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Welches lokale Modell eignet sich am besten für die Heimsteuerung?', a: 'Ein kleines, anweisungsfolgendes Modell mit zuverlässigem Function-Calling – typischerweise im Bereich 3B bis 8B – passt am besten, weil die Heimsteuerung schnelle, strukturierte Antworten braucht statt des größten Modells. Die richtige Wahl hängt von Ihrer Hardware ab; siehe den Leitfaden zu den besten lokalen LLM-Modellen fürs Smart Home für aktuelle Optionen.' },
           { q: 'Brauche ich eine GPU für ein lokales LLM-Smart-Home?', a: 'Nein, aber sie hilft. Ein kleines Modell läuft auf einer modernen CPU oder leistungsfähigen integrierten GPU; eine dedizierte GPU oder NPU senkt vor allem die Antwortlatenz, sodass sich der Assistent flotter anfühlt. Passen Sie die Modellgröße an Ihre Hardware an, statt die größte GPU zu kaufen.' },
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel modèle local est le meilleur pour le contrôle domestique ?', a: 'Un petit modèle suivant les instructions et doté d\'un function-calling fiable — généralement entre 3B et 8B — convient le mieux, car le contrôle domestique exige des réponses rapides et structurées plutôt que le plus grand modèle. Le bon choix dépend de votre matériel ; voir le guide des meilleurs modèles LLM locaux pour la maison connectée.' },
           { q: 'Ai-je besoin d\'une GPU pour une maison connectée à LLM local ?', a: 'Non, mais elle aide. Un petit modèle tourne sur un CPU moderne ou une GPU intégrée performante ; une GPU dédiée ou NPU réduit surtout la latence de réponse pour un assistant plus réactif. Adaptez la taille du modèle à votre matériel.' },

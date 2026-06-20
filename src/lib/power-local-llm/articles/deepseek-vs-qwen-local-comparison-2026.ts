@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is DeepSeek-R1 the same as the distilled models?',
@@ -648,7 +648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿DeepSeek-R1 es lo mismo que los modelos destilados?',
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'O DeepSeek-R1 é o mesmo que os modelos destilados?',

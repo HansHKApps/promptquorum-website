@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which smart home ecosystem is most private?', a: 'Home Assistant is the most private because control and automations run locally on your own hardware with no vendor data collection. Among the mainstream cloud ecosystems, Apple Home is the most privacy-focused.' },
           { q: 'Which ecosystem works offline?', a: 'Home Assistant works offline for local devices and automations. Alexa and Google Home depend heavily on the cloud and lose most functions without internet; Apple Home retains some local control through a home hub.' },
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Welches Smart-Home-Ökosystem ist am privatesten?', a: 'Home Assistant ist am privatesten, weil Steuerung und Automatisierungen lokal auf Ihrer eigenen Hardware ohne Datensammlung des Herstellers laufen. Unter den gängigen Cloud-Ökosystemen ist Apple Home am datenschutzfreundlichsten.' },
           { q: 'Welches Ökosystem funktioniert offline?', a: 'Home Assistant funktioniert offline für lokale Geräte und Automatisierungen. Alexa und Google Home hängen stark von der Cloud ab und verlieren ohne Internet die meisten Funktionen; Apple Home behält über einen Home-Hub etwas lokale Steuerung.' },
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel écosystème de maison connectée est le plus privé ?', a: 'Home Assistant est le plus privé car le contrôle et les automatisations tournent localement sur votre propre matériel sans collecte de données par le fabricant. Parmi les écosystèmes cloud grand public, Apple Home est le plus axé sur la confidentialité.' },
           { q: 'Quel écosystème fonctionne hors ligne ?', a: 'Home Assistant fonctionne hors ligne pour les appareils et automatisations locaux. Alexa et Google Home dépendent fortement du cloud et perdent la plupart des fonctions sans internet ; Apple Home conserve un peu de contrôle local via un home hub.' },

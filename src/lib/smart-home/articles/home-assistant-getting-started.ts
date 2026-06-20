@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Raspberry Pi or mini PC for Home Assistant?', a: 'A Raspberry Pi runs Home Assistant well for typical smart home use. Choose a mini PC if you also want to run a local LLM, larger Whisper models, or Frigate camera detection on the same box, since those need more compute.' },
           { q: 'Is Home Assistant free?', a: 'Yes. Home Assistant is free and open-source. You only pay for the hardware it runs on and any optional extras (for example, a cloud relay for easy remote access). Core local control needs no subscription.' },
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Raspberry Pi oder Mini-PC für Home Assistant?', a: 'Ein Raspberry Pi betreibt Home Assistant für typische Smart-Home-Nutzung gut. Wählen Sie einen Mini-PC, wenn Sie auch ein lokales LLM, größere Whisper-Modelle oder Frigate-Kameraerkennung auf demselben Gerät betreiben wollen, da diese mehr Rechenleistung brauchen.' },
           { q: 'Ist Home Assistant kostenlos?', a: 'Ja. Home Assistant ist kostenlos und quelloffen. Sie zahlen nur für die Hardware, auf der es läuft, und optionale Extras (etwa ein Cloud-Relay für einfachen Fernzugriff). Die lokale Kernsteuerung benötigt kein Abonnement.' },
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Raspberry Pi ou mini-PC pour Home Assistant ?', a: 'Une Raspberry Pi fait bien tourner Home Assistant pour un usage maison connectée typique. Choisissez un mini-PC si vous voulez aussi exécuter un LLM local, des modèles Whisper plus grands ou la détection de caméras Frigate sur la même machine, car cela demande plus de puissance.' },
           { q: 'Home Assistant est-il gratuit ?', a: 'Oui. Home Assistant est gratuit et open source. Vous payez seulement le matériel sur lequel il tourne et des extras optionnels (par exemple un relais cloud pour un accès à distance facile). Le contrôle local de base ne nécessite aucun abonnement.' },

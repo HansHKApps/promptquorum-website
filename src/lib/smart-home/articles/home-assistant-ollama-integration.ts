@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which model should I pick for Home Assistant?', a: 'A small instruction-following model with function-calling support is the best starting point because home control needs fast, structured responses. The right size depends on your hardware; see the best local LLM models for smart home guide for current options.' },
           { q: 'Do I need a GPU to run Ollama with Home Assistant?', a: 'No, but it helps. A small model runs on a modern CPU or integrated GPU; a discrete GPU or NPU lowers latency so the assistant feels snappier. Match model size to your hardware.' },
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Welches Modell sollte ich für Home Assistant wählen?', a: 'Ein kleines, instruktionsfolgendes Modell mit Function-Calling-Unterstützung ist der beste Ausgangspunkt, weil Heimsteuerung schnelle, strukturierte Antworten braucht. Die richtige Größe hängt von Ihrer Hardware ab; siehe den Leitfaden zu den besten lokalen LLM-Modellen fürs Smart Home für aktuelle Optionen.' },
           { q: 'Brauche ich eine GPU, um Ollama mit Home Assistant zu betreiben?', a: 'Nein, aber sie hilft. Ein kleines Modell läuft auf einer modernen CPU oder integrierten GPU; eine dedizierte GPU oder NPU senkt die Latenz, sodass der Assistent flotter wirkt. Passen Sie die Modellgröße an Ihre Hardware an.' },
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel modèle choisir pour Home Assistant ?', a: 'Un petit modèle suivant les instructions avec prise en charge de l\'appel de fonctions est le meilleur point de départ, car le contrôle de la maison nécessite des réponses rapides et structurées. La bonne taille dépend de votre matériel ; voir le guide des meilleurs modèles LLM locaux pour la maison connectée pour les options actuelles.' },
           { q: 'Ai-je besoin d\'un GPU pour exécuter Ollama avec Home Assistant ?', a: 'Non, mais cela aide. Un petit modèle tourne sur un CPU moderne ou un GPU intégré ; un GPU discret ou un NPU réduit la latence, rendant l\'assistant plus vif. Adaptez la taille du modèle à votre matériel.' },

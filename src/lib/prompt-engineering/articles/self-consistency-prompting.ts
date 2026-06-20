@@ -218,6 +218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is self-consistency prompting?', a: 'Self-consistency prompting is a technique where you generate multiple independent answers to the same question — each with its own reasoning path — and then select the answer that appears most frequently. Instead of trusting one AI response, you trust the consensus of many. It was introduced by Wang et al. (2023) and significantly improves accuracy on math, logic, and multi-step reasoning tasks.' },
@@ -471,6 +472,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig Gestellte Fragen',
           faqs: [
             { q: 'Was ist Self-Consistency Prompting?', a: 'Self-Consistency Prompting ist eine Technik, bei der Sie mehrere unabhängige Antworten auf die gleiche Frage generieren — jede mit ihrem eigenen Lösungsweg — und dann die am häufigsten vorkommende Antwort auswählen. Anstatt einer einzigen KI-Antwort zu vertrauen, vertrauen Sie dem Konsens vieler. Sie wurde von Wang et al. (2023) eingeführt und verbessert die Genauigkeit bei Mathematik-, Logik- und mehrstufigen Reasoning-Aufgaben erheblich.' },
@@ -719,6 +721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es el self-consistency prompting?', a: 'El self-consistency prompting es una técnica donde generas múltiples respuestas independientes a la misma pregunta — cada una con su propio camino de razonamiento — y luego seleccionas la respuesta que aparece con más frecuencia. En lugar de confiar en una respuesta de IA, confías en el consenso de muchas. Fue introducido por Wang et al. (2023) y mejora significativamente la precisión en matemáticas, lógica y tareas de razonamiento de múltiples pasos.' },
@@ -964,6 +967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هو برومبت الاتساق الذاتي؟', a: 'برومبت الاتساق الذاتي تقنية تُولّد فيها استجابات مستقلة متعددة للسؤال نفسه — لكل منها مسار استدلالي خاص — ثم تختار الإجابة التي تظهر في أغلب الأحيان. بدلاً من الاعتماد على إجابة ذكاء اصطناعي، تعتمد على توافق استجابات عديدة. قدّمتها Wang et al. (2023) وتُحسّن الدقة بشكل ملحوظ في الرياضيات والمنطق ومهام الاستدلال متعدد الخطوات.' },
@@ -1211,6 +1215,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas Frequentes',
           faqs: [
             { q: 'O que é self-consistency prompting?', a: 'Self-consistency prompting é uma técnica onde você gera múltiplas respostas independentes para a mesma pergunta — cada uma com seu próprio caminho de raciocínio — e depois seleciona a resposta que aparece com mais frequência. Introduzida por Wang et al. (2023) e melhora significativamente a precisão em matemática, lógica e tarefas de raciocínio de múltiplos passos.' },
@@ -1455,6 +1460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
             { q: 'Qu\'est-ce que le Self-Consistency Prompting ?', a: 'Le Self-Consistency Prompting est une technique où vous générez plusieurs réponses indépendantes à la même question — chacune avec son propre chemin de raisonnement — puis sélectionnez la réponse qui apparaît le plus fréquemment. Au lieu de faire confiance à une réponse IA, vous vous appuyez sur le consensus de plusieurs. Il a été introduit en 2023 par Wang et al. et améliore significativement la précision sur les tâches mathématiques, logiques et de raisonnement multi-étapes.' },
@@ -1832,6 +1838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ]
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'セルフコンシステンシープロンプティングとは？', a: 'セルフコンシステンシープロンプティングは、同じ質問に複数の独立した回答を生成し——各々が独自の推論パスを持つ——その後、最も頻繁に現れる答えを選択する技術です。1つのAI回答を信頼する代わりに、多くの回答の合意に依存します。2023年にWang et al.によって導入され、数学、論理、および多段階推論タスクの精度を大幅に向上させます。' },
@@ -2328,6 +2335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ]
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '什么是自洽一致性提示？', a: '自洽一致性提示是一种技术，其中您为同一问题生成多个独立答案——每个都有自己的推理路径——然后选择出现最频繁的答案。您不是相信单一AI回应，而是相信许多人的共识。它由Wang et al.在2023年引入，并显著改善了数学、逻辑和多步推理任务的准确性。' },
@@ -2677,6 +2685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: '자기 일관성 프롬프팅이란 무엇입니까?', a: '자기 일관성 프롬프팅은 동일한 질문에 대해 여러 독립적인 답변을 생성하고—각각 자체 추론 경로를 가진—가장 자주 나타나는 답변을 선택하는 기법입니다. 하나의 AI 응답을 신뢰하는 대신, 많은 응답의 합의를 신뢰합니다. Wang et al. (2023)이 도입하였으며 수학, 논리, 다단계 추론 과제에서 정확도를 크게 향상시킵니다.' },

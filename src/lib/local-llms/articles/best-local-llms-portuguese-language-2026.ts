@@ -123,7 +123,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is the best local LLM for Brazilian Portuguese in 2026?', a: 'Qwen3 8B is the top practical choice: runs on 8GB VRAM via Ollama, trained on 36 trillion tokens across 119 languages. For maximum PT-BR quality, Sabiá-3 from Maritaca AI approaches GPT-4o performance but requires downloading from HuggingFace.' },
           { q: 'Can I run local LLMs on a standard Brazilian laptop?', a: 'Yes. Most modern laptops with 16GB RAM can run Qwen3 8B via Ollama at 2–4 tokens/sec on CPU only. With a dedicated GPU (8GB VRAM), speed increases to 15–20 tokens/sec.' },
@@ -319,7 +320,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist das beste lokale LLM für brasilianisches Portugiesisch in 2026?', a: 'Qwen3 8B ist die beste praktische Wahl: läuft auf 8 GB VRAM via Ollama, trainiert auf 36 Billionen Tokens in 119 Sprachen. Für maximale PT-BR-Qualität nähert sich Sabiá-3 von Maritaca AI GPT-4o-Leistung, erfordert aber den Download von HuggingFace.' },
           { q: 'Kann ich lokale LLMs auf einem Standard-Laptop betreiben?', a: 'Ja. Die meisten modernen Laptops mit 16 GB RAM können Qwen3 8B via Ollama mit 2–4 Tokens/Sek. auf der CPU allein betreiben. Mit einer dedizierten GPU (8 GB VRAM) steigt die Geschwindigkeit auf 15–20 Tokens/Sek.' },
@@ -519,6 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Cuál es el mejor LLM local para portugués brasileño en 2026?', a: 'Qwen3 8B es la mejor opción práctica: funciona con 8 GB de VRAM vía Ollama, entrenado con 36 billones de tokens en 119 idiomas. Para máxima calidad PT-BR, Sabiá-3 de Maritaca AI se aproxima al rendimiento de GPT-4o, pero requiere descarga desde HuggingFace.' },
@@ -715,7 +718,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel est le meilleur LLM local pour le portugais brésilien en 2026 ?', a: 'Qwen3 8B est le meilleur choix pratique : fonctionne avec 8 Go de VRAM via Ollama, entraîné sur 36 billions de tokens dans 119 langues. Pour une qualité PT-BR maximale, Sabiá-3 de Maritaca AI se rapproche des performances de GPT-4o, mais nécessite un téléchargement depuis HuggingFace.' },
           { q: 'Puis-je exécuter des LLM locaux sur un ordinateur portable standard ?', a: 'Oui. La plupart des ordinateurs portables modernes dotés de 16 Go de RAM peuvent exécuter Qwen3 8B via Ollama à 2–4 tokens/s sur CPU uniquement. Avec un GPU dédié (8 Go de VRAM), la vitesse augmente à 15–20 tokens/s.' },
@@ -911,6 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: '2026年のブラジルポルトガル語向けで最良のローカルLLMは何ですか？', a: 'Qwen3 8Bが最良の実用的な選択肢です。Ollama経由で8GBのVRAMで動作し、119言語にわたる36兆トークンで学習されています。最高のPT-BR品質を求めるなら、Maritaca AIのSabiá-3がGPT-4oの性能に近づきますが、HuggingFaceからのダウンロードが必要です。' },
@@ -1107,6 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '2026 年巴西葡萄牙语最佳本地 LLM 是哪个？', a: 'Qwen3 8B 是最佳实用选择：通过 Ollama 在 8GB 显存上运行，基于 119 种语言的 36 万亿个 token 训练。若追求最高 PT-BR 质量，Maritaca AI 的 Sabiá-3 接近 GPT-4o 性能，但需要从 HuggingFace 下载。' },
@@ -1303,6 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Qual é o melhor LLM local para português do Brasil em 2026?', a: 'O Qwen3 8B é a melhor escolha prática: roda com 8 GB de VRAM via Ollama, treinado com 36 trilhões de tokens em 119 idiomas. Para máxima qualidade em PT-BR, o Sabiá-3 da Maritaca AI se aproxima do desempenho do GPT-4o, mas exige download do HuggingFace.' },
@@ -1500,6 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو أفضل نموذج LLM محلي للبرتغالية البرازيلية في 2026؟', a: 'يُعد Qwen3 8B الخيار العملي الأفضل: يعمل بذاكرة VRAM سعة 8 جيجابايت عبر Ollama، ودُرّب على 36 تريليون توكن عبر 119 لغة. وللحصول على أعلى جودة PT-BR، يقترب Sabiá-3 من Maritaca AI من أداء GPT-4o لكنه يتطلب التنزيل من HuggingFace.' },
@@ -1696,6 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '2026년 브라질 포르투갈어를 위한 최고의 로컬 LLM은 무엇입니까?', a: 'Qwen3 8B가 최고의 실용적 선택입니다. Ollama를 통해 8GB VRAM에서 실행되고, 119개 언어에 걸친 36조 개의 토큰으로 학습되었습니다. 최고의 PT-BR 품질을 원한다면 Maritaca AI의 Sabiá-3가 GPT-4o 성능에 근접하지만 HuggingFace 다운로드가 필요합니다.' },

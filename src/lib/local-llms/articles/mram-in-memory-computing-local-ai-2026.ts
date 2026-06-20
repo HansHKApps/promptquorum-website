@@ -228,7 +228,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       'faqSection': {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is MRAM available to buy now for my PC or phone?',

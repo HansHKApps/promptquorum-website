@@ -1126,7 +1126,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Ist macOS oder Windows besser für lokale LLMs?', a: 'macOS ist besser für Einfachheit (6 Min Setup). Windows ist besser für Peak-Leistung (RTX 5090, 40–50 tok/s). Wahl basierend auf Ihrer Priorität: Einfachheit vs. Leistung.' },
             { q: 'Sollte ich M5 Max oder RTX 5090 kaufen?', a: 'M5 Max (ca. 5.694–6.999 €) für portabel + einfach + privat. RTX 5090 (ca. 1.900 €) für maximale Geschwindigkeit + Aufrüstbarkeit. RTX ist billiger pro TFLOPS, aber M5 ist tragbar.' },

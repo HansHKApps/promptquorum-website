@@ -292,6 +292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -637,6 +638,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig Gestellte Fragen',
           faqs: [
             {
@@ -902,6 +904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿En qué se diferencia el prompt chaining de un único prompt complejo?', a: 'Un único prompt complejo intenta hacer todo a la vez (analizar, planificar, generar, verificar). El prompt chaining separa esto en pasos. Los prompts únicos son más simples, pero menos fiables para tareas complejas. Las cadenas son más transparentes y testables, pero requieren más configuración y llamadas a la API.' },
@@ -1144,6 +1147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'كيف يختلف ربط البرومبتات عن برومبت معقد واحد؟', a: 'برومبت معقد واحد يحاول فعل كل شيء دفعة واحدة (تحليل، تخطيط، توليد، تحقق). ربط البرومبتات يفصل هذا إلى خطوات. البرومبتات الفردية أبسط لكن أقل موثوقية للمهام المعقدة. السلاسل أكثر شفافية وقابلية للاختبار لكنها تتطلب إعدادًا أكبر واستدعاءات API أكثر.' },
@@ -1382,6 +1386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Em que se diferencia o prompt chaining de um único prompt complexo?', a: 'Um único prompt complexo tenta fazer tudo de uma vez (analisar, planejar, gerar, verificar). O prompt chaining separa isso em etapas. Os prompts únicos são mais simples, mas menos confiáveis para tarefas complexas. As cadeias são mais transparentes e testáveis, mas requerem mais configuração e chamadas à API.' },
@@ -1638,6 +1643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
             {
@@ -1910,6 +1916,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     faqSection: {
+      id: 'faq',
       title: 'よくある質問',
       faqs: [
         {
@@ -2383,6 +2390,7 @@ zh: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             {

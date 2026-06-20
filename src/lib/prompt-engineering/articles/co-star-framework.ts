@@ -656,6 +656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was steht CO-STAR für?', a: 'CO-STAR steht für Context (Kontext), Objective (Ziel), Style (Stil), Tone (Ton), Audience (Zielgruppe) und Response (Antwort). Es ist ein sechsteiliges Framework, das Ihnen hilft, klare, strukturierte Prompts zu schreiben, indem Sie explizit jedes Element definieren, das beeinflusst, wie das Modell die Ausgabe erzeugt.' },
@@ -954,6 +955,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué significa CO-STAR?', a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Es un framework de seis partes que te ayuda a escribir prompts claros y estructurados al definir explícitamente cada elemento que influye en cómo el modelo produce el output.' },
@@ -1243,6 +1245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ماذا يعني CO-STAR؟', a: 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. إطار من ست أجزاء يساعدك على كتابة موجّهات واضحة ومنظّمة بتحديد كل عنصر يؤثر على كيفية إنتاج النموذج للمخرجات.' },
@@ -1540,6 +1543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que significa CO-STAR?', a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. É um framework de seis partes que ajuda você a escrever prompts claros e estruturados ao definir explicitamente cada elemento que influencia como o modelo produz a saída.' },
@@ -1876,6 +1880,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Que signifie CO-STAR?', a: 'CO-STAR signifie Context (Contexte), Objective (Objectif), Style (Style), Tone (Ton), Audience (Audience) et Response (Réponse). C\'est un framework à six composants qui vous aide à écrire des prompts clairs et structurés en définissant explicitement chaque élément qui influence la façon dont le modèle produit une sortie.' },
@@ -2213,6 +2218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'CO-STARは何の略ですか？', a: 'CO-STARはContext（コンテキスト）、Objective（目的）、Style（スタイル）、Tone（トーン）、Audience（対象）、Response（応答）を意味します。これは6つのコンポーネントフレームワークで、モデルが出力をどのように生成するかに影響を与える各要素を明示的に定義することで、明確で構造化されたプロンプトを作成するのに役立ちます。' },
@@ -2457,6 +2463,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: 'CO-STAR代表什么？', a: 'CO-STAR代表Context（背景）、Objective（目标）、Style（风格）、Tone（语调）、Audience（受众）、Response（回应）。这是一个六要素框架，通过明确定义影响模型如何生成输出的每个因素，帮助您编写清晰、结构化的提示。' },
@@ -2747,6 +2754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: 'CO-STAR는 무엇을 의미합니까?', a: 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 이 6부분 프레임워크는 모델이 출력을 생성하는 방식에 영향을 미치는 모든 요소를 명시적으로 정의하여 명확하고 구조화된 프롬프트를 작성하는 데 도움을 줍니다.' },

@@ -1834,6 +1834,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen zum Ausführen lokaler LLMs auf Laptops',
           faqs: [
             {
@@ -2286,6 +2287,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées sur l\'exécution de Local LLMs sur ordinateurs portables',
           faqs: [
             {
@@ -2689,6 +2691,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'ノートパソコンでのローカルLLM実行に関するよくある質問',
           faqs: [
             {
@@ -3092,6 +3095,7 @@ schema: {
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '关于在笔记本电脑上运行本地LLM的常见问题',
           faqs: [
             {

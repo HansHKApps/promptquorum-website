@@ -524,7 +524,8 @@ schema: {
           ],
         },
         'faqSection': {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Sigue valiendo la pena comprar una RTX 3060 12GB en 2026?', a: 'Sí. Tiene más de 4 años, pero 12GB de VRAM sigue siendo muy relevante. Ejecuta Qwen3 14B, Qwen3 8B, Gemma 4 E12B y Mistral Small sin problemas en Q4. Cabe con todos los modelos 7B-8B y la mayoría de los densos 13B-14B.' },
             { q: '¿Debería comprar RTX 5060 Ti o RTX 4060 Ti para LLMs locales?', a: 'RTX 5060 Ti. La generación más nueva (2026) ofrece un 10-15% mejor rendimiento. Si tienes restricciones de presupuesto, RTX 4060 Ti sigue siendo sólida. Evita la base 4060/5060 (8GB) y la 4070 (12GB) — mala relación calidad-precio.' },
@@ -853,6 +854,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل لا يزال شراء RTX 3060 12GB يستحق العناء في 2026؟', a: 'نعم. عمرها أكثر من 4 سنوات، لكن 12GB من VRAM لا تزال وثيقة الصلة جداً. تشغّل Qwen3 14B وQwen3 8B وGemma 4 E12B وMistral Small دون مشاكل بصيغة Q4. تتسع لجميع نماذج 7B-8B ومعظم النماذج الكثيفة 13B-14B.' },
@@ -1251,7 +1253,7 @@ schema: {
             '[Wie viel VRAM brauche ich?](/de/local-llms/how-much-vram-local-llm) — GPU-VRAM auf Modellgröße abstimmen →',
           ],
         },
-        'faqSection': { title: 'FAQ', faqs: [
+        'faqSection': { title: 'Häufig gestellte Fragen', faqs: [
           { q: 'Lohnt sich die RTX 3060 12GB 2026 noch?', a: 'Ja. Sie ist über 4 Jahre alt, aber 12 GB VRAM sind zeitlos. Betreibt Qwen3 14B, Qwen3 8B, Gemma 4 E12B und Mistral Small reibungslos bei Q4. Sie fasst jedes 7B-8B-Modell und die meisten dichten 13B-14B-Modelle.' },
           { q: 'Soll ich die RTX 5060 Ti oder RTX 4060 Ti für lokale LLMs kaufen?', a: 'RTX 5060 Ti. Die neuere Generation (2026) bietet 10–15 % mehr Leistung. Bei knappem Budget ist die RTX 4060 Ti weiterhin solide. Meiden Sie die Basis-4060/5060 (8 GB) und 4070 (12 GB) — schlechtes Preis-Leistungs-Verhältnis.' },
           { q: 'Kann ich stattdessen eine AMD RX 7900 XT oder RX 7900 XTX verwenden?', a: 'Ja, aber die Treiberunterstützung für AMD ist schwächer als NVIDIA + CUDA. Das HIP/ROCm-Setup erfordert mehr Aufwand. RTX ist für Einsteiger sicherer.' },
@@ -1408,7 +1410,7 @@ schema: {
             '[Combien de VRAM me faut-il ?](/fr/local-llms/how-much-vram-local-llm) — Adaptez votre GPU à la taille du modèle →',
           ],
         },
-        'faqSection': { title: 'FAQ', faqs: [
+        'faqSection': { title: 'Questions fréquemment posées', faqs: [
           { q: 'La RTX 3060 12GB vaut-elle encore l\'achat en 2026 ?', a: 'Oui. Elle a 4 ans et plus, mais ses 12GB de VRAM sont intemporels. Elle fait tourner Qwen3 14B, Qwen3 8B, Gemma 4 E12B et Mistral Small sans accroc en Q4. Elle accueille tous les modèles 7B-8B et la plupart des denses 13B-14B.' },
           { q: 'Faut-il acheter une RTX 5060 Ti ou une RTX 4060 Ti pour les LLM locaux ?', a: 'La RTX 5060 Ti. La nouvelle génération (2026) offre 10-15 % de performances en plus. Avec un budget serré, la RTX 4060 Ti reste solide. Évitez les 4060/5060 de base (8GB) et la 4070 (12GB) — mauvaise valeur.' },
           { q: 'Puis-je utiliser une AMD RX 7900 XT ou RX 7900 XTX à la place ?', a: 'Oui, mais le support des pilotes AMD est plus faible que NVIDIA + CUDA. La configuration HIP/ROCm demande plus d\'efforts. RTX reste plus sûr pour les débutants.' },
@@ -1508,7 +1510,7 @@ schema: {
             '[必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — GPUとモデルサイズを一致させる →',
           ],
         },
-        'faqSection': { title: 'FAQ', faqs: [{ q: 'RTX 3060 12GBは2026年でもまだ価値があるか？', a: 'はい。4年以上前ですが12GB VRAMは時代遅れではありません。Llama 3.3 8Bとよりすぐに実行します。中古で250ドル未満で見つけたら最適。' }, { q: 'ローカルLLM用にRTX 4060またはRTX 4060 Tiを購入すべきか？', a: 'RTX 4060 Ti。ベース4060（8GB）と4070（12GB）は悪い価値です。TiはLLM作業に最適な価格のRTX 40シリーズカードです。' }, { q: 'AMD RX 6700または6800 XTを代わりに使用できるか？', a: 'はい、ただしAMD上のONNX RuntimeのドライバサポートはNVIDIA + CUDAより弱い。セットアップの摩擦を増します。RTXはバジェットにより安全です。' }, { q: '12GB VRAM 13Bモデルに十分か？', a: 'かろうじて、Q4量子化で。Q5またはQ8はOOMエラーを起こします。13Bの快適さが必要な場合は16GBを目指してください。' }, { q: 'RTX A4000などの中古企業GPUを購入すべきか？', a: 'はい、利用可能な場合。16GB VRAM、プロフェッショナルグレード冷却、通常180～230ドルで中古。RTX 3060より若干遅いですがVRAMクッションの価値があります。' }, { q: '250ドルGPUで購入するPSU電力はいくらか？', a: '650W、80+ Gold最小。250ドルGPU + CPU + マザーボード400W以下ですがスパイク用に余裕が必要。' }, { q: '200ドルのバジェットGPUでOllamaを実行できるか？', a: 'はい。Ollamaは軽量です。4年前のRTX 3060にOllamaはMistral Smallを10～15トークン/秒で実行します。完全に使用可能。' }, { q: 'エンタープライズでのGDPR準拠ローカル推論に推奨GPUは？', a: 'Llama 3.3 13B Q4で最大50ユーザーにはRTX 3060 12GBまたはA4000 16GB最小。ECC GPUはエラー検出に推奨。ファームウェア/物理セキュリティはGPUメモリダンプを防止します。' }, { q: '中小企業のチームサーバーに推奨GPUは？', a: '1～50従業員にはRTX 3060 12GBまたはA4000。50～200従業員にはRTX 4070 SuperまたはA6000。RTX 3060はLlama 3.3 13B Q4 + vLLMを3～5同時要求で実行可能。より大規模なチームはA100エンタープライズクラスタリングが必要。' }, { q: 'RTX 3060と4060 Tiのパフォーマンス差は？', a: 'RTX 4060 Tiは約15～20%高速ですが、RTX 3060は4GB追加VRAMがあります。7Bモデルでは両方が快適な推論を提供します。バジェットで選択してください。' }, { q: 'マイニングカードはローカルLLMで安全か？', a: 'リスクあり。VRAMは集約的な運用年後に劣化します。確約前に完全にその場でストレステストできる場合のみ購入してください。' }] },
+        'faqSection': { title: 'よくある質問', faqs: [{ q: 'RTX 3060 12GBは2026年でもまだ価値があるか？', a: 'はい。4年以上前ですが12GB VRAMは時代遅れではありません。Llama 3.3 8Bとよりすぐに実行します。中古で250ドル未満で見つけたら最適。' }, { q: 'ローカルLLM用にRTX 4060またはRTX 4060 Tiを購入すべきか？', a: 'RTX 4060 Ti。ベース4060（8GB）と4070（12GB）は悪い価値です。TiはLLM作業に最適な価格のRTX 40シリーズカードです。' }, { q: 'AMD RX 6700または6800 XTを代わりに使用できるか？', a: 'はい、ただしAMD上のONNX RuntimeのドライバサポートはNVIDIA + CUDAより弱い。セットアップの摩擦を増します。RTXはバジェットにより安全です。' }, { q: '12GB VRAM 13Bモデルに十分か？', a: 'かろうじて、Q4量子化で。Q5またはQ8はOOMエラーを起こします。13Bの快適さが必要な場合は16GBを目指してください。' }, { q: 'RTX A4000などの中古企業GPUを購入すべきか？', a: 'はい、利用可能な場合。16GB VRAM、プロフェッショナルグレード冷却、通常180～230ドルで中古。RTX 3060より若干遅いですがVRAMクッションの価値があります。' }, { q: '250ドルGPUで購入するPSU電力はいくらか？', a: '650W、80+ Gold最小。250ドルGPU + CPU + マザーボード400W以下ですがスパイク用に余裕が必要。' }, { q: '200ドルのバジェットGPUでOllamaを実行できるか？', a: 'はい。Ollamaは軽量です。4年前のRTX 3060にOllamaはMistral Smallを10～15トークン/秒で実行します。完全に使用可能。' }, { q: 'エンタープライズでのGDPR準拠ローカル推論に推奨GPUは？', a: 'Llama 3.3 13B Q4で最大50ユーザーにはRTX 3060 12GBまたはA4000 16GB最小。ECC GPUはエラー検出に推奨。ファームウェア/物理セキュリティはGPUメモリダンプを防止します。' }, { q: '中小企業のチームサーバーに推奨GPUは？', a: '1～50従業員にはRTX 3060 12GBまたはA4000。50～200従業員にはRTX 4070 SuperまたはA6000。RTX 3060はLlama 3.3 13B Q4 + vLLMを3～5同時要求で実行可能。より大規模なチームはA100エンタープライズクラスタリングが必要。' }, { q: 'RTX 3060と4060 Tiのパフォーマンス差は？', a: 'RTX 4060 Tiは約15～20%高速ですが、RTX 3060は4GB追加VRAMがあります。7Bモデルでは両方が快適な推論を提供します。バジェットで選択してください。' }, { q: 'マイニングカードはローカルLLMで安全か？', a: 'リスクあり。VRAMは集約的な運用年後に劣化します。確約前に完全にその場でストレステストできる場合のみ購入してください。' }] },
         'relatedReading': { title: '関連資料', items: ['[ローカルLLMに必要なVRAMはいくらか](/ja/local-llms/how-much-vram-local-llm)', '[コンシューマーハードウェアの70Bモデル](/ja/local-llms/70b-models-consumer-hardware)', '[RTX 5090 vs RTX 4090](/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm)', '[ローカルLLM用の中古GPU](/ja/local-llms/used-gpus-for-local-llms)', '[ローカルLLM向けの最高のGPU](/ja/local-llms/best-gpus-for-local-llms)', '[VRAM計算機](/ja/local-llms/how-much-vram-local-llm)', '[Mac Mini M5ローカルAIサーバーとして](/ja/local-llms/mac-mini-m5-local-ai-server)', '[ローカルLLM向けApple Silicon M5](/ja/local-llms/apple-silicon-m5-local-llm) — M5 Pro/Max完全ガイド：ベンチマーク、Mac構成、メモリ層、ローカル推論用Mac購入ガイド', '[ローカルLLM向けApple Silicon対NVIDIA GPU](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026)', '[Apple Silicon向けベストモデル2026](/ja/local-llms/best-models-apple-silicon-2026)', '秋葉原の販売店、メルカリ・Yahoo!オークションの中古市場を含む日本のGPU価格については、<a href="/ja/prompt-bites/best-gpu-local-llm-japan-price" class="text-primary hover:underline">日本でコスパ最強のローカルLLM用GPUガイド</a>をご覧ください。'] },
         'sources': { title: 'ソース', items: ['TechPowerUp GPUデータベース：RTX 3060 / RTX 4060 Ti / RTX 4070 Super仕様と電力消費', 'NVIDIA CUDA能力マトリックス：推論ワークロード用GPU メモリバンド幅と理論的スループット', 'Ollama モデル要件：Llama 3.3 7B、Mistral Small、Qwen量子化レベルVRAM推奨'] },
       },
@@ -1663,6 +1665,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: 'RTX 3060 12GB在2026年还值得买吗？', a: '是的。它已有4年多，但12GB VRAM永不过时。平稳运行Llama 3.3 8B和Mistral Small。如果能找到二手250美元以下的就买。' },
@@ -1891,6 +1894,7 @@ schema: {
           ],
         },
         'faqSection': {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: 'RTX 3060 12GB는 2026년에도 구매할 가치가 있습니까?', a: '예. 4년 이상 된 제품이지만 12GB VRAM은 여전히 유효합니다. Q4로 Qwen3 14B, Qwen3 8B, Gemma 4 E12B, Mistral Small을 원활하게 실행합니다. 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델에 적합합니다.' },

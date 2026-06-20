@@ -289,7 +289,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Why is memory bandwidth the bottleneck for AI inference?',
@@ -497,6 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '왜 AI 추론에 메모리 대역폭이 병목인가?', a: '디코드 단계(각 토큰 생성)는 한 번의 전향 패스에 대해 전체 모델을 메모리에 로드해야 하기 때문. 계산 단위가 빨리 끝나지만 메모리가 충분히 빨리 데이터를 공급할 수 없습니다. FLOPS가 병목이 아니라 데이터 배달입니다.' },

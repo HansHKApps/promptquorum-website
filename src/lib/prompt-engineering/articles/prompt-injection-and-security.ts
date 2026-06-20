@@ -1116,6 +1116,7 @@ def is_injection_attempt(text: str) -> bool:`,
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es la prompt injection?', a: 'La prompt injection es un ataque de seguridad donde un adversario incrusta instrucciones maliciosas en el texto de entrada para anular el system prompt de un LLM y hacer que el modelo realice acciones no autorizadas. Es el #1 en el OWASP Top 10 para Aplicaciones de Modelos de Lenguaje de Gran Tamaño.' },
@@ -1447,6 +1448,7 @@ def is_injection_attempt(text: str) -> bool:`,
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هو حقن البرومبت؟', a: 'حقن البرومبت هجوم أمني يُدرج فيه الخصم تعليمات خبيثة في نص المدخلات لتجاوز system prompt للنموذج اللغوي الكبير وإجبار النموذج على تنفيذ إجراءات غير مصرح بها. وهو #1 في OWASP Top 10 لتطبيقات نماذج اللغة الكبيرة.' },
@@ -1776,6 +1778,7 @@ def is_injection_attempt(text: str) -> bool:`,
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que é prompt injection?', a: 'A prompt injection é um ataque de segurança onde um adversário incorpora instruções maliciosas no texto de entrada para anular o system prompt de um LLM e fazer com que o modelo realize ações não autorizadas. É a #1 no OWASP Top 10 para Aplicações de Modelos de Linguagem de Grande Porte.' },
@@ -3299,6 +3302,7 @@ def is_injection_attempt(text: str) -> bool:
         ],
       },
       faqSection: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '프롬프트 인젝션이란 무엇입니까?', a: '프롬프트 인젝션은 적대자가 입력 텍스트에 악의적 지시를 삽입하여 LLM의 시스템 프롬프트를 무력화하고 모델이 무단 작업을 수행하도록 하는 보안 공격입니다. OWASP 대형 언어 모델 애플리케이션 Top 10에서 #1입니다.' },

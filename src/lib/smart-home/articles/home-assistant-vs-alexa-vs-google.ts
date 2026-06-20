@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which is most private?', a: 'Home Assistant is the most private because control, voice, and AI run locally on your own hardware with no vendor data collection. Alexa and Google Home are cloud-first and send usage and voice data to vendor servers.' },
           { q: 'Which is easiest?', a: 'Amazon Alexa and Google Home are easiest because setup is app-guided and cloud-managed, with broad out-of-the-box device support. Home Assistant offers more privacy and control but takes more setup effort.' },
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist am privatesten?', a: 'Home Assistant ist am privatesten, weil Steuerung, Sprache und KI lokal auf Ihrer eigenen Hardware ohne Hersteller-Datensammlung laufen. Alexa und Google Home sind cloud-zuerst und senden Nutzungs- und Sprachdaten an Hersteller-Server.' },
           { q: 'Was ist am einfachsten?', a: 'Amazon Alexa und Google Home sind am einfachsten, weil die Einrichtung per App geführt und cloud-verwaltet ist, mit breiter Out-of-the-Box-Geräteunterstützung. Home Assistant bietet mehr Datenschutz und Kontrolle, braucht aber mehr Einrichtungsaufwand.' },
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Lequel est le plus privé ?', a: 'Home Assistant est le plus privé car le contrôle, la voix et l\'IA tournent en local sur votre propre matériel sans collecte de données par le fabricant. Alexa et Google Home sont cloud d\'abord et envoient les données d\'usage et de voix aux serveurs du fabricant.' },
           { q: 'Lequel est le plus facile ?', a: 'Amazon Alexa et Google Home sont les plus faciles car la configuration est guidée par application et gérée dans le cloud, avec une large prise en charge prête à l\'emploi. Home Assistant offre plus de confidentialité et de contrôle mais demande plus d\'effort de configuration.' },
