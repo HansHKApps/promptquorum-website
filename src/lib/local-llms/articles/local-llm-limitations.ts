@@ -109,6 +109,116 @@ schema: {
       },
       gammaEmbedUrl: '/presentations/local-llm-limitations-static.html',
       gammaDescription: 'Interactive 14-slide presentation comparing local LLMs vs cloud APIs. Learn the 6 key limitations: quality gap (10–20% below GPT-5.5 on reasoning), speed (10–25 tok/sec CPU vs 80–150 tok/sec cloud), hardware requirements (16 GB+ RAM minimum), no real-time data access, setup complexity (20–40 min vs 5 min cloud), and context window limits (4K–128K tokens). Includes benchmark tables, decision trees, and when-to-use guidance for Ollama, LM Studio, Llama 3.x, Qwen3, and Mistral models. Download the presentation as a PDF reference card.',
+      quickAnswerTop: {
+        en: {
+          question: 'What are the main limitations of running a local LLM vs using a cloud API?',
+          answer: 'Local LLMs have three hard limitations vs frontier cloud models: (1) quality gap — local 7B models score 10–20 points below GPT-5.5 on reasoning/coding benchmarks; (2) speed — CPU-only 7B gives 10–25 tok/s vs cloud\'s 50–200 tok/s; (3) no internet access or real-time data. Use local for privacy, offline tasks, and zero cost. Use cloud for high-accuracy, real-time, and complex reasoning.',
+          bullets: [
+            '→ Quality: local 7B = 10–20 pts below frontier models; gap narrows significantly at 70B (needs 40–48 GB RAM)',
+            '→ Speed: CPU-only 10–25 tok/s; Apple Silicon and NVIDIA GPU close this gap for consumers',
+            '→ No internet: local models cannot access real-time data or web search',
+            '→ Setup: 5–15 minutes initial install vs API key for cloud',
+            '→ Use local for: privacy, offline, cost sensitivity. Use cloud for: accuracy, real-time, complex tasks',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'Was sind die Haupteinschränkungen eines lokalen LLM im Vergleich zu einer Cloud-API?',
+          answer: 'Lokale LLMs haben drei wesentliche Einschränkungen gegenüber Frontier-Cloud-Modellen: (1) Qualitätslücke — lokale 7B-Modelle schneiden bei Reasoning- und Coding-Benchmarks 10–20 Punkte schlechter ab als GPT-5.5; (2) Geschwindigkeit — CPU-only 7B liefert 10–25 Tok/s vs. 50–200 Tok/s in der Cloud; (3) kein Internetzugang. Lokal für Datenschutz, Offline-Aufgaben und ohne Kosten. Cloud für hohe Genauigkeit und Echtzeit.',
+          bullets: [
+            '→ Qualität: lokal 7B = 10–20 Punkte unter Frontier-Modellen; Abstand wird bei 70B deutlich geringer (braucht 40–48 GB RAM)',
+            '→ Geschwindigkeit: CPU-only 10–25 Tok/s; Apple Silicon und NVIDIA GPU schließen diese Lücke',
+            '→ Kein Internet: lokale Modelle haben keinen Zugang zu Echtzeitdaten',
+            '→ Setup: 5–15 Minuten erstmalig vs. API-Schlüssel für Cloud',
+            '→ Lokal für: Datenschutz, Offline, Kostenersparnis. Cloud für: Genauigkeit, Echtzeit, komplexe Aufgaben',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'Quelles sont les principales limitations d\'un LLM local par rapport à une API cloud ?',
+          answer: 'Les LLM locaux ont trois limitations principales par rapport aux modèles frontier : (1) écart de qualité — les modèles locaux 7B scoring 10–20 points en dessous de GPT-5.5 sur les benchmarks ; (2) vitesse — CPU seul à 10–25 tok/s vs 50–200 tok/s en cloud ; (3) pas d\'accès internet ni données temps réel. Local pour la confidentialité, hors ligne, zéro coût. Cloud pour haute précision et temps réel.',
+          bullets: [
+            '→ Qualité : local 7B = 10–20 pts en dessous des modèles frontier ; l\'écart se réduit nettement à 70B (40–48 Go RAM requis)',
+            '→ Vitesse : CPU seul 10–25 tok/s ; Apple Silicon et GPU NVIDIA comblent cet écart',
+            '→ Pas d\'internet : les modèles locaux n\'accèdent pas aux données en temps réel',
+            '→ Installation : 5–15 minutes vs clé API pour le cloud',
+            '→ Local pour : confidentialité, hors ligne, économies. Cloud pour : précision, temps réel, tâches complexes',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: 'ローカルLLMとクラウドAPIの主な違いと制限は何ですか？',
+          answer: 'ローカルLLMにはフロンティアクラウドモデルに対して3つの主な制限があります：(1) 品質の差 — ローカル7BモデルはReasoning・CodingベンチマークでGPT-5.5より10〜20ポイント低い；(2) 速度 — CPUのみの7Bは10〜25トークン/秒 対クラウドの50〜200トークン/秒；(3) インターネット接続不可・リアルタイムデータなし。プライバシー・オフライン・コスト面ではローカル。高精度・リアルタイムではクラウド。',
+          bullets: [
+            '→ 品質：ローカル7B = フロンティアモデルより10〜20ポイント低い；70Bで大幅改善（40〜48 GB RAM必要）',
+            '→ 速度：CPUのみ10〜25トークン/秒；Apple SiliconとNVIDIA GPUがこの差を縮める',
+            '→ インターネット接続なし：ローカルモデルはリアルタイムデータにアクセス不可',
+            '→ セットアップ：最初に5〜15分、クラウドはAPIキーのみ',
+            '→ ローカル向き：プライバシー・オフライン・コスト削減。クラウド向き：高精度・リアルタイム・複雑タスク',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '本地LLM与云API相比有哪些主要限制？',
+          answer: '本地LLM对比前沿云模型有三大限制：(1) 质量差距——本地7B模型在推理/编程基准上比GPT-5.5低10–20分；(2) 速度——纯CPU 7B达10–25 tok/s，云端达50–200 tok/s；(3) 无法联网或获取实时数据。隐私/离线/零成本用本地，高精度/实时/复杂任务用云端。',
+          bullets: [
+            '→ 质量：本地7B = 比前沿模型低10–20分；70B时差距明显缩小（需40–48 GB内存）',
+            '→ 速度：纯CPU 10–25 tok/s；Apple Silicon和NVIDIA GPU能缩小差距',
+            '→ 无网络：本地模型无法访问实时数据',
+            '→ 配置：初次5–15分钟 vs 云端API密钥',
+            '→ 本地适合：隐私、离线、节省成本。云端适合：高精度、实时、复杂任务',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: '¿Cuáles son las principales limitaciones de un LLM local frente a una API cloud?',
+          answer: 'Los LLMs locales tienen tres limitaciones principales frente a los modelos frontier: (1) brecha de calidad — los modelos locales 7B puntúan 10–20 puntos por debajo de GPT-5.5 en benchmarks; (2) velocidad — CPU solo 10–25 tok/s vs 50–200 tok/s en cloud; (3) sin acceso a internet ni datos en tiempo real. Local para privacidad, offline y cero coste. Cloud para alta precisión y tiempo real.',
+          bullets: [
+            '→ Calidad: local 7B = 10–20 pts por debajo de los modelos frontier; se reduce a 70B (necesita 40–48 GB RAM)',
+            '→ Velocidad: CPU solo 10–25 tok/s; Apple Silicon y GPU NVIDIA cierran esta brecha',
+            '→ Sin internet: los modelos locales no acceden a datos en tiempo real',
+            '→ Configuración: 5–15 minutos iniciales vs clave API para cloud',
+            '→ Local para: privacidad, offline, ahorro. Cloud para: precisión, tiempo real, tareas complejas',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'Quais são as principais limitações de um LLM local vs uma API na nuvem?',
+          answer: 'LLMs locais têm três limitações principais vs modelos frontier: (1) lacuna de qualidade — modelos locais 7B ficam 10–20 pontos abaixo do GPT-5.5 nos benchmarks; (2) velocidade — CPU apenas 10–25 tok/s vs 50–200 tok/s na nuvem; (3) sem acesso à internet ou dados em tempo real. Local para privacidade, offline e custo zero. Nuvem para alta precisão e tempo real.',
+          bullets: [
+            '→ Qualidade: local 7B = 10–20 pts abaixo dos modelos frontier; lacuna reduz em 70B (precisa 40–48 GB RAM)',
+            '→ Velocidade: CPU apenas 10–25 tok/s; Apple Silicon e GPU NVIDIA reduzem essa diferença',
+            '→ Sem internet: modelos locais não acessam dados em tempo real',
+            '→ Configuração: 5–15 minutos inicial vs chave de API na nuvem',
+            '→ Local para: privacidade, offline, economia. Nuvem para: precisão, tempo real, tarefas complexas',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'ما هي القيود الرئيسية لاستخدام نموذج LLM محلي مقارنةً بـ API السحابي؟',
+          answer: 'للنماذج اللغوية المحلية ثلاثة قيود رئيسية مقارنةً بنماذج السحابة المتقدمة: (1) فجوة الجودة — نماذج 7B المحلية تسجّل أقل بـ 10–20 نقطة من GPT-5.5 في المعايير المرجعية؛ (2) السرعة — المعالج فقط 10–25 رمزاً/ثانية مقابل 50–200 في السحابة؛ (3) لا وصول للإنترنت أو بيانات آنية. محلي للخصوصية والأوفلاين والتكلفة الصفرية. السحابة للدقة العالية والزمن الفعلي.',
+          bullets: [
+            '→ الجودة: نموذج 7B محلي أقل بـ 10–20 نقطة؛ الفجوة تضيق عند 70B (يحتاج 40–48 جيجابايت رام)',
+            '→ السرعة: المعالج فقط 10–25 رمزاً/ثانية؛ Apple Silicon وGPU NVIDIA تسدّان هذه الفجوة',
+            '→ لا إنترنت: النماذج المحلية لا تصل إلى بيانات آنية',
+            '→ الإعداد: 5–15 دقيقة مقابل مفتاح API للسحابة',
+            '→ محلي لـ: الخصوصية، الأوفلاين، توفير التكلفة. السحابة لـ: الدقة، الزمن الفعلي، المهام المعقدة',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '로컬 LLM vs 클라우드 API의 주요 한계는 무엇인가요?',
+          answer: '로컬 LLM은 프론티어 클라우드 모델 대비 세 가지 주요 한계가 있습니다: (1) 품질 차이 — 로컬 7B 모델은 추론/코딩 벤치마크에서 GPT-5.5보다 10–20점 낮음; (2) 속도 — CPU 전용 7B는 10–25 tok/s vs 클라우드 50–200 tok/s; (3) 인터넷 접근 불가·실시간 데이터 없음. 로컬은 프라이버시·오프라인·무비용. 클라우드는 고정밀·실시간·복잡한 작업.',
+          bullets: [
+            '→ 품질: 로컬 7B = 프론티어 모델 대비 10–20점 낮음; 70B에서 크게 개선(40–48 GB RAM 필요)',
+            '→ 속도: CPU 전용 10–25 tok/s; Apple Silicon과 NVIDIA GPU로 차이 줄임',
+            '→ 인터넷 없음: 로컬 모델은 실시간 데이터 접근 불가',
+            '→ 설정: 최초 5–15분 vs 클라우드 API 키',
+            '→ 로컬 적합: 프라이버시, 오프라인, 비용 절감. 클라우드 적합: 고정밀, 실시간, 복잡한 작업',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       sections: {
         inOneSentence: {
           id: 'in-one-sentence',
@@ -130,6 +240,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Local LLMs are best for privacy, offline tasks, and zero cost; they trail frontier cloud models by 10–20 benchmark points on reasoning at 7B, and lack internet access — use cloud APIs when accuracy or real-time data matter.' }, { type: 'plain-terms', text: 'Running AI locally means your data never leaves your device, and you pay nothing after setup. The trade-off: local models are slower and less capable than GPT-5.5 or similar. Think of it as the difference between a skilled local employee (private, always available) vs a specialist consultant (more capable, billed by use).' }],
           items: [
             'Quality gap: local 7B models score 10-20 percentage points below GPT-5.5 on reasoning and coding benchmarks. The gap narrows significantly at 70B scale but requires 40-48 GB of RAM.',
             'Speed: CPU-only inference on a 7B model produces 10-25 tok/sec. Cloud APIs produce 50-200 tok/sec. Apple Silicon and NVIDIA GPUs close this gap for consumer hardware.',
@@ -628,6 +739,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Los LLMs locales son mejores para privacidad, tareas offline y coste cero; están 10–20 puntos por debajo de los modelos frontier en razonamiento a 7B y no tienen acceso a internet — usa APIs cloud cuando la precisión o los datos en tiempo real sean importantes.' }, { type: 'plain-terms', text: 'Ejecutar IA localmente significa que tus datos nunca salen de tu dispositivo y sin costes tras la instalación. El compromiso: los modelos locales son más lentos y menos capaces que GPT-5.5 o similar.' }],
           items: [
             'Brecha de calidad: los modelos locales 7B puntúan 10-20 puntos porcentuales por debajo de GPT-5.5 en benchmarks de razonamiento y codificación. La brecha se reduce significativamente a escala 70B, pero requiere 40-48 GB de RAM.',
             'Velocidad: la inferencia solo con CPU en un modelo 7B produce 10-25 tok/seg. Las APIs en la nube producen 50-200 tok/seg. El hardware Apple Silicon y las GPUs NVIDIA acortan esta brecha.',
@@ -1126,6 +1238,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'النماذج اللغوية المحلية الأفضل للخصوصية والعمل دون اتصال والتكلفة الصفرية؛ تأتي أقل بـ 10–20 نقطة من النماذج السحابية المتقدمة في الاستدلال عند 7B وبدون إنترنت — استخدم APIs السحابية حين تكون الدقة أو البيانات الآنية ضرورية.' }, { type: 'plain-terms', text: 'تشغيل الذكاء الاصطناعي محلياً يعني أن بياناتك لا تغادر جهازك أبداً، وبدون تكاليف بعد الإعداد. المقايضة: النماذج المحلية أبطأ وأقل قدرةً من GPT-5.5 أو ما شابهه.' }],
           items: [
             'فجوة الجودة: تحصل نماذج 7B المحلية على درجات أقل بـ 10-20 نقطة مئوية من GPT-5.5 في قياسات الاستدلال والبرمجة. تتقلص الفجوة بشكل ملحوظ على مستوى 70B، لكنها تتطلب 40-48 GB من RAM.',
             'السرعة: ينتج الاستدلال على CPU فقط لنموذج 7B سرعة 10-25 token/ثانية. تنتج واجهات API السحابية 50-200 token/ثانية. تقلِّص أجهزة Apple Silicon ووحدات GPU من NVIDIA هذه الفجوة.',
@@ -1541,6 +1654,7 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'LLMs locais são melhores para privacidade, tarefas offline e custo zero; ficam 10–20 pontos abaixo dos modelos frontier em raciocínio a 7B e sem acesso à internet — use APIs na nuvem quando precisão ou dados em tempo real importarem.' }, { type: 'plain-terms', text: 'Rodar IA localmente significa que seus dados nunca saem do dispositivo, sem custos após a configuração. A troca: modelos locais são mais lentos e menos capazes que GPT-5.5 ou similar.' }],
           items: [
             'LLMs locais são 10–40% piores em raciocínio de múltiplas etapas vs modelos de nuvem de topo (GPT-5.5, Claude 4.6).',
             'A inferência na CPU é 4–10× mais lenta (10–25 tok/s) que a nuvem (80–150 tok/s).',
@@ -1836,6 +1950,7 @@ schema: {
         },
         tldr: {
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Lokale LLMs eignen sich am besten für Datenschutz, Offline-Aufgaben und null Kosten; sie liegen bei 7B um 10–20 Benchmark-Punkte hinter Frontier-Cloud-Modellen beim Reasoning und haben keinen Internetzugang — Cloud-APIs nutzen, wenn Genauigkeit oder Echtzeit zählen.' }, { type: 'plain-terms', text: 'Lokale KI bedeutet: Deine Daten verlassen nie dein Gerät und nach dem Setup entstehen keine Kosten. Der Kompromiss: Lokale Modelle sind langsamer und weniger leistungsfähig als GPT-5.5 oder ähnliches.' }],
           title: 'Wichtigste Erkenntnisse',
           content: [
             '✓ Lokale Modelle sind 4–10× langsamer (CPU: 10–25 Token/s vs. Cloud: 80–150 Token/s).',
@@ -2472,6 +2587,7 @@ schema: {
         },
         tldr: {
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Les LLM locaux sont idéaux pour la confidentialité, les tâches hors ligne et le coût zéro ; ils sont 10–20 points en dessous des modèles frontier en raisonnement à 7B et n\'ont pas accès à internet — utilisez les API cloud quand la précision ou les données temps réel comptent.' }, { type: 'plain-terms', text: 'Faire tourner l\'IA localement signifie que vos données ne quittent jamais votre appareil, sans frais après installation. Le compromis : les modèles locaux sont plus lents et moins performants que GPT-5.5 ou similaire.' }],
           title: 'Points clés',
           content: [
             '✓ Modèles locaux 4–10 fois plus lents (CPU : 10–25 tokens/s vs. cloud : 80–150 tokens/s).',
@@ -3112,6 +3228,7 @@ schema: {
         },
         tldr: {
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'ローカルLLMはプライバシー・オフライン・コストゼロに最適。7BではReasoningでフロンティアクラウドモデルより10〜20ポイント劣り、インターネット接続もない — 精度やリアルタイムデータが必要なときはクラウドAPIを使用。' }, { type: 'plain-terms', text: 'ローカルでAIを動かすと、データは一切デバイスの外に出ず、セットアップ後の費用はゼロです。トレードオフ：ローカルモデルはGPT-5.5などより遅く能力も劣ります。' }],
           title: '重要ポイント',
           content: [
             '✓ ローカルモデル4–10倍遅い（CPU ： 10–25トークン/秒 vs. クラウド ： 80–150トークン/秒）。',
@@ -3652,6 +3769,7 @@ schema: {
         },
         tldr: {
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '本地LLM最适合隐私、离线任务和零成本场景；7B时推理能力比前沿云模型低10–20个基准分，且无法联网——当精度或实时数据很重要时使用云API。' }, { type: 'plain-terms', text: '在本地运行AI意味着数据不会离开你的设备，设置后没有持续费用。代价是：本地模型比GPT-5.5等速度更慢、能力更弱。' }],
           title: '要点总结',
           content: [
             '✓ 本地模型慢4–10倍（CPU：10–25 token/秒vs云：80–150 token/秒）。',
@@ -4115,6 +4233,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '로컬 LLM은 프라이버시·오프라인·무비용에 최적; 7B에서 추론 능력이 프론티어 클라우드 모델 대비 10–20점 낮고 인터넷 접근 불가 — 정확도나 실시간 데이터가 중요할 때는 클라우드 API 사용.' }, { type: 'plain-terms', text: 'AI를 로컬에서 실행하면 데이터가 기기 밖으로 나가지 않고 설치 후 비용이 없습니다. 단점: 로컬 모델은 GPT-5.5보다 느리고 능력이 낮습니다.' }],
           items: [
             '품질 격차: 로컬 7B 모델은 추론 및 코딩 벤치마크에서 GPT-5.5보다 10~20퍼센트 포인트 낮은 점수를 기록합니다. 70B 규모에서는 격차가 크게 줄어들지만 40~48GB의 RAM이 필요합니다.',
             '속도: 7B 모델에서 CPU 전용 추론은 초당 10~25 토큰을 생성합니다. 클라우드 API는 초당 50~200 토큰을 생성합니다. Apple Silicon과 NVIDIA GPU는 소비자용 하드웨어에서 이 격차를 줄입니다.',

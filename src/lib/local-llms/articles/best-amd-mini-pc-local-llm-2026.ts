@@ -78,6 +78,116 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'When AMD Mini PC Is the Wrong Choice', anchor: '#wrong-choice' },
       { label: 'FAQ', anchor: '#faq' },
     ],
+    quickAnswerTop: {
+        en: {
+          question: 'Which AMD mini PC is best for running local LLMs in 2026?',
+          answer: 'The best AMD mini PCs for local LLMs in 2026 use the Ryzen AI Max+ 395 chip with 64–128 GB unified DDR5X memory and a 50 TOPS NPU. Top picks: Minisforum MS-A2 ($1,599, 96 GB) is best overall and runs 70B Q4; Beelink GTR9 Pro ($1,899, 128 GB) is best for 70B Q5 with large context; GMKtec EVO-X2 ($1,199, 64 GB) is best budget pick for 30–40B models. All are 30–40% cheaper than a Mac Studio M4 Max with equivalent memory.',
+          bullets: [
+            '→ Minisforum MS-A2 ($1,599, 96 GB): best overall — runs 70B Q4 comfortably',
+            '→ Beelink GTR9 Pro ($1,899, 128 GB): max memory — runs 70B Q5 with large context',
+            '→ GMKtec EVO-X2 ($1,199, 64 GB): best budget — runs 30–40B models well',
+            '→ AOOSTAR GEM12 Pro ($1,799, 96 GB): unique OCuLink eGPU port for GPU expansion',
+            '→ All use Ryzen AI Max+ 395 with ROCm Linux, DDR5X RAM, Ollama/vLLM support; 30–40% cheaper than Mac Studio M4 Max',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'Welcher AMD Mini-PC ist 2026 am besten für lokale LLMs geeignet?',
+          answer: 'Die besten AMD Mini-PCs für lokale LLMs 2026 nutzen den Ryzen AI Max+ 395-Chip mit 64–128 GB vereinheitlichtem DDR5X-Speicher und einem 50 TOPS NPU. Top-Empfehlungen: Minisforum MS-A2 (1.599 $, 96 GB) ist das beste Allround-Gerät und führt 70B Q4 aus; Beelink GTR9 Pro (1.899 $, 128 GB) ist am besten für 70B Q5 mit großem Kontext; GMKtec EVO-X2 (1.199 $, 64 GB) ist das beste Budget-Gerät für 30–40B-Modelle. Alle 30–40 % günstiger als ein Mac Studio M4 Max mit gleichwertigem Speicher.',
+          bullets: [
+            '→ Minisforum MS-A2 (1.599 $, 96 GB): bestes Allround — 70B Q4 komfortabel',
+            '→ Beelink GTR9 Pro (1.899 $, 128 GB): max RAM — 70B Q5 mit großem Kontext',
+            '→ GMKtec EVO-X2 (1.199 $, 64 GB): bestes Budget — 30–40B-Modelle',
+            '→ AOOSTAR GEM12 Pro (1.799 $, 96 GB): einzigartiger OCuLink eGPU-Port',
+            '→ Alle: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 30–40 % günstiger als Mac Studio M4 Max',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'Quel mini PC AMD est le meilleur pour les LLM locaux en 2026 ?',
+          answer: "Les meilleurs mini PC AMD pour les LLM locaux en 2026 utilisent le chip Ryzen AI Max+ 395 avec 64–128 Go de mémoire DDR5X unifiée et un NPU de 50 TOPS. Top sélections : Minisforum MS-A2 (1 599 $, 96 Go) est le meilleur tout-en-un et fait tourner 70B Q4 ; Beelink GTR9 Pro (1 899 $, 128 Go) est le meilleur pour 70B Q5 avec grand contexte ; GMKtec EVO-X2 (1 199 $, 64 Go) est le meilleur budget pour les modèles 30–40B. Tous 30–40 % moins chers qu'un Mac Studio M4 Max avec mémoire équivalente.",
+          bullets: [
+            '→ Minisforum MS-A2 (1 599 $, 96 Go) : meilleur polyvalent — 70B Q4 confortablement',
+            '→ Beelink GTR9 Pro (1 899 $, 128 Go) : max mémoire — 70B Q5 avec grand contexte',
+            '→ GMKtec EVO-X2 (1 199 $, 64 Go) : meilleur budget — modèles 30–40B',
+            '→ AOOSTAR GEM12 Pro (1 799 $, 96 Go) : port OCuLink eGPU unique',
+            '→ Tous : Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM ; 30–40 % moins chers que Mac Studio M4 Max',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: '2026年ローカルLLM向けに最良のAMDミニPCはどれですか？',
+          answer: '2026年のローカルLLM向けベストAMDミニPCはRyzen AI Max+ 395チップ搭載、64〜128 GBユニファイドDDR5Xメモリ、50 TOPS NPU搭載機です。おすすめ：Minisforum MS-A2（1,599ドル、96 GB）がオールラウンド最良で70B Q4を快適に実行；Beelink GTR9 Pro（1,899ドル、128 GB）が大コンテキストで70B Q5向け最良；GMKtec EVO-X2（1,199ドル、64 GB）が30〜40Bモデル向け最良のバジェット機。すべてMac Studio M4 Maxより30〜40%安価。',
+          bullets: [
+            '→ Minisforum MS-A2（1,599ドル、96 GB）：オールラウンド最良 — 70B Q4を快適に実行',
+            '→ Beelink GTR9 Pro（1,899ドル、128 GB）：最大RAM — 大コンテキストで70B Q5',
+            '→ GMKtec EVO-X2（1,199ドル、64 GB）：バジェット最良 — 30〜40Bモデル向け',
+            '→ AOOSTAR GEM12 Pro（1,799ドル、96 GB）：独自OCuLink eGPUポート搭載',
+            '→ すべて：Ryzen AI Max+ 395、ROCm Linux、DDR5X、Ollama/vLLM対応；Mac Studio M4 Maxより30〜40%安価',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '2026年运行本地LLM最好的AMD迷你PC是哪款？',
+          answer: '2026年最佳AMD迷你PC搭载Ryzen AI Max+ 395芯片，64–128 GB统一DDR5X内存，50 TOPS NPU。推荐：Minisforum MS-A2（$1,599，96 GB）综合最佳，轻松运行70B Q4；Beelink GTR9 Pro（$1,899，128 GB）最大内存，大上下文70B Q5；GMKtec EVO-X2（$1,199，64 GB）预算最佳，适合30–40B模型。与相同内存的Mac Studio M4 Max相比便宜30–40%。',
+          bullets: [
+            '→ Minisforum MS-A2（$1,599，96 GB）：综合最佳——轻松运行70B Q4',
+            '→ Beelink GTR9 Pro（$1,899，128 GB）：最大内存——大上下文70B Q5',
+            '→ GMKtec EVO-X2（$1,199，64 GB）：预算最佳——适合30–40B模型',
+            '→ AOOSTAR GEM12 Pro（$1,799，96 GB）：独特OCuLink eGPU接口',
+            '→ 全部：Ryzen AI Max+ 395，ROCm Linux，DDR5X，支持Ollama/vLLM；比Mac Studio M4 Max便宜30–40%',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: '¿Cuál es el mejor mini PC AMD para LLMs locales en 2026?',
+          answer: 'Los mejores mini PCs AMD para LLMs locales en 2026 usan el chip Ryzen AI Max+ 395 con 64–128 GB de memoria DDR5X unificada y un NPU de 50 TOPS. Las mejores opciones: Minisforum MS-A2 ($1.599, 96 GB) es el mejor todo-en-uno y ejecuta 70B Q4; Beelink GTR9 Pro ($1.899, 128 GB) es el mejor para 70B Q5 con contexto amplio; GMKtec EVO-X2 ($1.199, 64 GB) es la mejor opción económica para modelos de 30–40B. Todos un 30–40% más baratos que el Mac Studio M4 Max con memoria equivalente.',
+          bullets: [
+            '→ Minisforum MS-A2 ($1.599, 96 GB): mejor todo-en-uno — 70B Q4 cómodamente',
+            '→ Beelink GTR9 Pro ($1.899, 128 GB): máxima memoria — 70B Q5 con contexto amplio',
+            '→ GMKtec EVO-X2 ($1.199, 64 GB): mejor económico — modelos de 30–40B',
+            '→ AOOSTAR GEM12 Pro ($1.799, 96 GB): puerto OCuLink eGPU único',
+            '→ Todos: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 30–40% más baratos que Mac Studio M4 Max',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'Qual é o melhor mini PC AMD para LLMs locais em 2026?',
+          answer: 'Os melhores mini PCs AMD para LLMs locais em 2026 usam o chip Ryzen AI Max+ 395 com 64–128 GB de memória DDR5X unificada e NPU de 50 TOPS. Melhores opções: Minisforum MS-A2 ($1.599, 96 GB) é o melhor versátil e roda 70B Q4; Beelink GTR9 Pro ($1.899, 128 GB) é o melhor para 70B Q5 com contexto longo; GMKtec EVO-X2 ($1.199, 64 GB) é o melhor econômico para modelos 30–40B. Todos 30–40% mais baratos que o Mac Studio M4 Max com memória equivalente.',
+          bullets: [
+            '→ Minisforum MS-A2 ($1.599, 96 GB): melhor versátil — roda 70B Q4 confortavelmente',
+            '→ Beelink GTR9 Pro ($1.899, 128 GB): memória máxima — 70B Q5 com contexto longo',
+            '→ GMKtec EVO-X2 ($1.199, 64 GB): melhor econômico — modelos 30–40B',
+            '→ AOOSTAR GEM12 Pro ($1.799, 96 GB): porta OCuLink eGPU única',
+            '→ Todos: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 30–40% mais baratos que Mac Studio M4 Max',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'ما أفضل ميني PC من AMD لتشغيل النماذج اللغوية المحلية عام 2026؟',
+          answer: 'أفضل أجهزة AMD ميني PC للنماذج المحلية في 2026 تستخدم شريحة Ryzen AI Max+ 395 مع 64–128 جيجابايت من ذاكرة DDR5X الموحدة وNPU بـ 50 TOPS. الخيارات الأفضل: Minisforum MS-A2 (1,599 $، 96 جيجابايت) الأفضل متعدد الأوجه ويشغّل 70B Q4؛ Beelink GTR9 Pro (1,899 $، 128 جيجابايت) الأفضل لـ 70B Q5 مع سياق كبير؛ GMKtec EVO-X2 (1,199 $، 64 جيجابايت) الأفضل اقتصادياً لنماذج 30–40B. جميعها أرخص بـ 30–40% من Mac Studio M4 Max بذاكرة مماثلة.',
+          bullets: [
+            '→ Minisforum MS-A2 (1,599 $، 96 جيجابايت): الأفضل متعدد الأوجه — 70B Q4 بشكل مريح',
+            '→ Beelink GTR9 Pro (1,899 $، 128 جيجابايت): أقصى ذاكرة — 70B Q5 مع سياق كبير',
+            '→ GMKtec EVO-X2 (1,199 $، 64 جيجابايت): الأفضل اقتصادياً — نماذج 30–40B',
+            '→ AOOSTAR GEM12 Pro (1,799 $، 96 جيجابايت): منفذ OCuLink eGPU فريد',
+            '→ الجميع: Ryzen AI Max+ 395، ROCm Linux، DDR5X، Ollama/vLLM؛ أرخص 30–40% من Mac Studio M4 Max',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '2026년 로컬 LLM 실행에 가장 좋은 AMD 미니 PC는?',
+          answer: '2026년 로컬 LLM용 최고의 AMD 미니 PC는 Ryzen AI Max+ 395 칩, 64–128 GB 통합 DDR5X 메모리, 50 TOPS NPU를 탑재합니다. 추천: Minisforum MS-A2($1,599, 96 GB)가 종합 최고로 70B Q4 쾌적 실행; Beelink GTR9 Pro($1,899, 128 GB)가 긴 컨텍스트 70B Q5용 최고; GMKtec EVO-X2($1,199, 64 GB)가 30–40B 모델 최고 가성비. 모두 동등한 메모리의 Mac Studio M4 Max 대비 30–40% 저렴.',
+          bullets: [
+            '→ Minisforum MS-A2($1,599, 96 GB): 종합 최고 — 70B Q4 쾌적 실행',
+            '→ Beelink GTR9 Pro($1,899, 128 GB): 최대 메모리 — 긴 컨텍스트 70B Q5',
+            '→ GMKtec EVO-X2($1,199, 64 GB): 가성비 최고 — 30–40B 모델',
+            '→ AOOSTAR GEM12 Pro($1,799, 96 GB): 독특한 OCuLink eGPU 포트',
+            '→ 모두: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM 지원; Mac Studio M4 Max 대비 30–40% 저렴',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
     sections: {
       updateNotice: {
         id: 'update-notice',
@@ -97,6 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Best AMD mini PCs for local LLMs in 2026: Minisforum MS-A2 ($1,599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1,899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1,199, 64 GB, 30–40B) — all using Ryzen AI Max+ 395 with unified DDR5X memory, 30–40% cheaper than Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 mini PCs use unified memory — like Apple Silicon, the CPU, GPU, and NPU share one memory pool, so a 96 GB mini PC can run a 70B model without splitting it. DDR5X is fast memory bandwidth. ROCm is AMD\'s software stack equivalent to NVIDIA CUDA for running LLM frameworks like vLLM or Ollama.' }],
         items: [
           'Best overall: Minisforum MS-A2 ($1,599, 96GB RAM). Runs Llama 3.3 70B Q4 comfortably. Best price-to-performance.',
           'Maximum RAM: Beelink GTR9 Pro ($1,899, 128GB). Runs 70B Q5 with massive context windows. Best for power users.',
@@ -573,6 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Mejores mini PCs AMD para LLMs locales en 2026: Minisforum MS-A2 ($1.599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1.899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1.199, 64 GB, 30–40B) — todos con Ryzen AI Max+ 395 y memoria DDR5X unificada, 30–40% más baratos que Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'Los mini PCs AMD Ryzen AI Max+ 395 usan memoria unificada — como Apple Silicon, CPU, GPU y NPU comparten un único banco de memoria. ROCm es el stack de software de AMD equivalente a NVIDIA CUDA para frameworks LLM como vLLM u Ollama.' }],
         items: [
           'Mejor general: Minisforum MS-A2 ($1.599, 96 GB RAM). Ejecuta Llama 3.3 70B Q4 sin problemas. Mejor relación precio-rendimiento.',
           'Máxima RAM: Beelink GTR9 Pro ($1.899, 128 GB). Ejecuta 70B Q5 con ventanas de contexto masivas. Mejor para usuarios avanzados.',
@@ -1106,6 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'أفضل ميني PC من AMD للنماذج المحلية في 2026: Minisforum MS-A2 (1,599 $، 96 جيجابايت، 70B Q4)، Beelink GTR9 Pro (1,899 $، 128 جيجابايت، 70B Q5)، GMKtec EVO-X2 (1,199 $، 64 جيجابايت، 30–40B) — جميعها بـ Ryzen AI Max+ 395 وذاكرة DDR5X موحدة، أرخص 30–40% من Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'أجهزة AMD Ryzen AI Max+ 395 تستخدم ذاكرة موحدة — كـ Apple Silicon، يشترك CPU وGPU وNPU في نفس مجمع الذاكرة. ROCm هو مكدس البرامج من AMD بديلاً عن CUDA من NVIDIA لأطر LLM مثل vLLM وOllama.' }],
         items: [
           'الأفضل عموماً: Minisforum MS-A2 (1,599 دولار، 96 GB RAM). يشغّل Llama 3.3 70B Q4 دون مشاكل. أفضل نسبة سعر إلى أداء.',
           'أقصى ذاكرة RAM: Beelink GTR9 Pro (1,899 دولار، 128 GB). يشغّل 70B Q5 بنوافذ سياق ضخمة. الأفضل للمستخدمين المتقدمين.',
@@ -1638,6 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Melhores mini PCs AMD para LLMs locais em 2026: Minisforum MS-A2 ($1.599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1.899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1.199, 64 GB, 30–40B) — todos com Ryzen AI Max+ 395 e memória DDR5X unificada, 30–40% mais baratos que Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'Mini PCs AMD Ryzen AI Max+ 395 usam memória unificada — como Apple Silicon, CPU, GPU e NPU compartilham um único pool de memória. ROCm é a pilha de software AMD equivalente ao CUDA da NVIDIA para frameworks LLM como vLLM ou Ollama.' }],
         items: [
           'Melhor geral: Minisforum MS-A2 (US$ 1.599, 96 GB RAM). Roda Llama 3.3 70B Q4 sem problemas. Melhor custo-benefício.',
           'Máxima RAM: Beelink GTR9 Pro (US$ 1.899, 128 GB). Roda 70B Q5 com janelas de contexto massivas. Melhor para usuários avançados.',
@@ -1777,6 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Beste AMD Mini-PCs für lokale LLMs 2026: Minisforum MS-A2 (1.599 $, 96 GB, 70B Q4), Beelink GTR9 Pro (1.899 $, 128 GB, 70B Q5), GMKtec EVO-X2 (1.199 $, 64 GB, 30–40B) — alle mit Ryzen AI Max+ 395 und vereinheitlichtem DDR5X-Speicher, 30–40 % günstiger als Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 Mini-PCs nutzen vereinheitlichten Speicher — wie Apple Silicon teilen sich CPU, GPU und NPU einen Speicherpool. ROCm ist AMDs Software-Stack, ähnlich NVIDIA CUDA, für LLM-Frameworks wie vLLM oder Ollama.' }],
         items: [
           'Beste Gesamtbalance: Minisforum MS-A2 (€1.599, 96GB RAM). Läuft Llama 3.3 70B Q4 komfortabel. Bestes Preis-Leistungs-Verhältnis.',
           'Maximale RAM: Beelink GTR9 Pro (€1.999, 128GB). Läuft 70B Q5 mit massiven Context-Fenstern. Best für Power-User.',
@@ -2172,6 +2287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Meilleurs mini PC AMD pour LLM locaux en 2026 : Minisforum MS-A2 (1 599 $, 96 Go, 70B Q4), Beelink GTR9 Pro (1 899 $, 128 Go, 70B Q5), GMKtec EVO-X2 (1 199 $, 64 Go, 30–40B) — tous avec Ryzen AI Max+ 395 et mémoire DDR5X unifiée, 30–40 % moins chers que Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'Les mini PC AMD Ryzen AI Max+ 395 utilisent une mémoire unifiée — comme Apple Silicon, CPU, GPU et NPU partagent un seul pool mémoire. ROCm est le stack logiciel AMD équivalent au CUDA NVIDIA pour les frameworks LLM comme vLLM ou Ollama.' }],
         items: [
           'Meilleur équilibre: Minisforum MS-A2 (€1.599, 96 Go RAM). Exécute Llama 3.3 70B Q4 confortablement. Meilleur rapport prix-performance.',
           'RAM maximum: Beelink GTR9 Pro (€1.999, 128 Go). Exécute 70B Q5 avec contextes massifs. Meilleur pour power users.',
@@ -2567,6 +2683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年ローカルLLM向けベストAMDミニPC：Minisforum MS-A2（1,599ドル・96 GB・70B Q4）、Beelink GTR9 Pro（1,899ドル・128 GB・70B Q5）、GMKtec EVO-X2（1,199ドル・64 GB・30〜40B）— すべてRyzen AI Max+ 395・DDR5X統合メモリ搭載、Mac Studio M4 Maxより30〜40%安価。' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395ミニPCはApple Siliconのように統合メモリを採用 — CPU・GPU・NPUが1つのメモリプールを共有するため、96 GBミニPCで70Bモデルを分割なしに実行できます。ROCmはvLLMやOllamaなどのLLMフレームワーク向けのAMD版CUDA相当のソフトウェアスタックです。' }],
         items: [
           'ベストバランス:Minisforum MS-A2(¥172,000、96GB RAM)。Llama 3.3 70B Q4を快適に実行。最高コスパ。',
           '最大メモリ:Beelink GTR9 Pro(¥205,000、128GB)。70B Q5を巨大コンテキストで実行。パワーユーザー向け。',
@@ -2937,6 +3054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年本地LLM最佳AMD迷你PC：Minisforum MS-A2（$1,599，96 GB，70B Q4）、Beelink GTR9 Pro（$1,899，128 GB，70B Q5）、GMKtec EVO-X2（$1,199，64 GB，30–40B）——均搭载Ryzen AI Max+ 395和统一DDR5X内存，比Mac Studio M4 Max便宜30–40%。' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395迷你PC使用统一内存——类似Apple Silicon，CPU、GPU和NPU共享同一内存池，96 GB迷你PC可直接运行70B模型。ROCm是AMD的软件栈，相当于NVIDIA CUDA，用于运行vLLM、Ollama等LLM框架。' }],
         items: [
           '综合最优:Minisforum MS-A2(¥10500、96GB内存)。Llama 3.3 70B Q4运行流畅。性价比最高。',
           '最大内存:Beelink GTR9 Pro(¥13700、128GB)。运行70B Q5且支持超大上下文。专业用户首选。',
@@ -3306,6 +3424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '2026년 로컬 LLM용 최고의 AMD 미니 PC: Minisforum MS-A2($1,599, 96 GB, 70B Q4), Beelink GTR9 Pro($1,899, 128 GB, 70B Q5), GMKtec EVO-X2($1,199, 64 GB, 30–40B) — 모두 Ryzen AI Max+ 395와 통합 DDR5X 메모리 탑재, Mac Studio M4 Max 대비 30–40% 저렴.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 미니 PC는 통합 메모리를 사용합니다 — Apple Silicon처럼 CPU, GPU, NPU가 메모리 풀을 공유합니다. ROCm은 vLLM, Ollama 같은 LLM 프레임워크를 위한 AMD의 소프트웨어 스택으로 NVIDIA CUDA의 AMD 버전입니다.' }],
         items: [
           '종합 최고: Minisforum MS-A2($1,599, 96GB RAM). Llama 3.3 70B Q4를 안정적으로 실행. 최고의 가성비.',
           '최대 RAM: Beelink GTR9 Pro($1,899, 128GB). 대형 컨텍스트 윈도우로 70B Q5 실행. 파워 유저에게 최적.',

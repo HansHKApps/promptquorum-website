@@ -67,6 +67,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Cloud GPU rental prices in May 2026: RunPod ($0.34–0.69/hr RTX 4090, best reliability), Vast.ai ($0.09–0.59/hr, cheapest interruptible), Lambda Labs ($1.79/hr A100, $2.99/hr H100, 99.9% uptime for teams).' },
+          { type: 'plain-terms', text: 'Cloud GPU rental lets you pay by the hour to use a powerful graphics card on someone else\'s server — no hardware to buy. Interruptible instances are cheaper but can be reclaimed at any time; reserved instances are stable and cost more. RTX 4090 handles LLM inference; A100/H100 handle training or very high throughput.' },
+        ],
+        items: [
+          '**RunPod:** $0.34–0.69/hr RTX 4090 — best balance of price and reliability (99% uptime SLA)',
+          '**Vast.ai:** $0.09–0.59/hr — cheapest option for interruptible spot workloads',
+          '**Lambda Labs:** $1.79/hr A100, $2.99/hr H100 — 99.9% uptime SLA for teams',
+          'Pricing verified May 2026 across all providers. Re-checked monthly.',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 May 2026 Update',
@@ -569,6 +583,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Precios de alquiler de GPU en la nube en mayo de 2026: RunPod ($0,34–0,69/h RTX 4090, mejor fiabilidad), Vast.ai ($0,09–0,59/h, más barato para workloads interrumpibles), Lambda Labs ($1,79/h A100, $2,99/h H100, 99,9% uptime para equipos).' },
+          { type: 'plain-terms', text: 'El alquiler de GPU en la nube permite pagar por hora para usar una tarjeta gráfica potente en el servidor de otro — sin necesidad de comprar hardware. Las instancias interrumpibles son más baratas pero pueden ser reclamadas en cualquier momento.' },
+        ],
+        items: [
+          '**RunPod:** $0,34–0,69/h RTX 4090 — mejor equilibrio precio/fiabilidad (SLA 99% uptime)',
+          '**Vast.ai:** $0,09–0,59/h — opción más barata para workloads spot interrumpibles',
+          '**Lambda Labs:** $1,79/h A100, $2,99/h H100 — SLA 99,9% uptime para equipos',
+          'Precios verificados mayo de 2026. Actualizados mensualmente.',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Actualización Mayo 2026',
@@ -1090,6 +1118,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'أسعار استئجار GPU السحابي في مايو 2026: RunPod (0.34–0.69 $/ساعة RTX 4090، أفضل موثوقية)، Vast.ai (0.09–0.59 $/ساعة، الأرخص لأعباء العمل القابلة للمقاطعة)، Lambda Labs (1.79 $/ساعة A100، 2.99 $/ساعة H100، 99.9% وقت تشغيل للفرق).' },
+          { type: 'plain-terms', text: 'استئجار GPU السحابي يتيح لك الدفع بالساعة لاستخدام بطاقة رسومات قوية على خادم شخص آخر — دون شراء أي أجهزة. المثيلات القابلة للمقاطعة أرخص لكن يمكن استردادها في أي وقت.' },
+        ],
+        items: [
+          '**RunPod:** 0.34–0.69 $/ساعة RTX 4090 — أفضل توازن بين السعر والموثوقية (99% وقت تشغيل)',
+          '**Vast.ai:** 0.09–0.59 $/ساعة — الخيار الأرخص لأعباء العمل الفورية القابلة للمقاطعة',
+          '**Lambda Labs:** 1.79 $/ساعة A100، 2.99 $/ساعة H100 — 99.9% وقت تشغيل للفرق',
+          'أسعار مُتحقَّق منها مايو 2026. تُحدَّث شهرياً.',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 تحديث مايو 2026',
@@ -1613,6 +1655,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Preços de aluguel de GPU na nuvem em maio de 2026: RunPod (US$0,34–0,69/h RTX 4090, melhor confiabilidade), Vast.ai (US$0,09–0,59/h, mais barato para workloads interruptíveis), Lambda Labs (US$1,79/h A100, US$2,99/h H100, 99,9% de uptime para equipes).' },
+          { type: 'plain-terms', text: 'O aluguel de GPU na nuvem permite pagar por hora para usar uma placa de vídeo poderosa no servidor de outra pessoa — sem precisar comprar hardware. Instâncias interruptíveis são mais baratas, mas podem ser reclamadas a qualquer momento.' },
+        ],
+        items: [
+          '**RunPod:** US$0,34–0,69/h RTX 4090 — melhor equilíbrio entre preço e confiabilidade (SLA 99% uptime)',
+          '**Vast.ai:** US$0,09–0,59/h — opção mais barata para workloads spot interruptíveis',
+          '**Lambda Labs:** US$1,79/h A100, US$2,99/h H100 — SLA 99,9% uptime para equipes',
+          'Preços verificados em maio de 2026. Atualizados mensalmente.',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: 'Atualização Maio 2026',
@@ -1722,6 +1778,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Cloud-GPU-Mietpreise im Mai 2026: RunPod (0,34–0,69 $/Std. RTX 4090, beste Zuverlässigkeit), Vast.ai (0,09–0,59 $/Std., günstigste unterbrechbare Instanzen), Lambda Labs (1,79 $/Std. A100, 2,99 $/Std. H100, 99,9 % Uptime für Teams).' },
+          { type: 'plain-terms', text: 'Cloud-GPU-Miete bedeutet stündliches Bezahlen für eine leistungsstarke Grafikkarte auf einem fremden Server — kein eigener Hardware-Kauf nötig. Unterbrechbare Instanzen sind günstiger, können aber jederzeit zurückgefordert werden. RTX 4090 eignet sich für LLM-Inferenz; A100/H100 für Training oder sehr hohen Durchsatz.' },
+        ],
+        items: [
+          '**RunPod:** 0,34–0,69 $/Std. RTX 4090 — bestes Preis-Leistungs-Verhältnis (SLA 99 % Uptime)',
+          '**Vast.ai:** 0,09–0,59 $/Std. — günstigste Option für unterbrechbare Spot-Workloads',
+          '**Lambda Labs:** 1,79 $/Std. A100, 2,99 $/Std. H100 — SLA 99,9 % Uptime für Teams',
+          'Preise verifiziert Mai 2026. Monatlich aktualisiert.',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Mai 2026 Update',
@@ -2137,6 +2207,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Prix de location GPU cloud en mai 2026 : RunPod (0,34–0,69 $/h RTX 4090, meilleure fiabilité), Vast.ai (0,09–0,59 $/h, moins cher pour les workloads interruptibles), Lambda Labs (1,79 $/h A100, 2,99 $/h H100, 99,9 % de disponibilité pour les équipes).' },
+          { type: 'plain-terms', text: 'La location de GPU cloud permet de payer à l\'heure pour utiliser une carte graphique puissante sur un serveur distant — sans acheter de matériel. Les instances interruptibles sont moins chères mais peuvent être récupérées à tout moment. Les instances réservées sont stables et plus coûteuses.' },
+        ],
+        items: [
+          '**RunPod :** 0,34–0,69 $/h RTX 4090 — meilleur équilibre prix/fiabilité (SLA 99 % de disponibilité)',
+          '**Vast.ai :** 0,09–0,59 $/h — option la moins chère pour les workloads spot interruptibles',
+          '**Lambda Labs :** 1,79 $/h A100, 2,99 $/h H100 — SLA 99,9 % de disponibilité pour les équipes',
+          'Tarifs vérifiés mai 2026. Mis à jour mensuellement.',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 Mise à jour mai 2026',
@@ -2501,6 +2585,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026年5月クラウドGPUレンタル価格：RunPod（0.34〜0.69ドル/時 RTX 4090、最良の信頼性）、Vast.ai（0.09〜0.59ドル/時、割り込み可能ワークロード最安値）、Lambda Labs（A100：1.79ドル/時、H100：2.99ドル/時、チーム向け99.9%稼働保証）。' },
+          { type: 'plain-terms', text: 'クラウドGPUレンタルとは、他者のサーバーにある強力なGPUを時間単位で利用できるサービスです。ハードウェアの購入は不要です。割り込み可能インスタンスは安価ですが、いつでも回収される可能性があります。予約済みインスタンスは安定していますが高コストです。' },
+        ],
+        items: [
+          '**RunPod：** RTX 4090 0.34〜0.69ドル/時 — 価格と信頼性の最良バランス（SLA 99%稼働保証）',
+          '**Vast.ai：** 0.09〜0.59ドル/時 — 割り込み可能スポットワークロード最安値',
+          '**Lambda Labs：** A100 1.79ドル/時、H100 2.99ドル/時 — チーム向けSLA 99.9%稼働保証',
+          '2026年5月に全プロバイダーで価格確認済み。毎月更新。',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 2026年5月更新',
@@ -2865,6 +2963,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: '2026年5月云GPU租赁价格：RunPod（RTX 4090：$0.34–0.69/小时，可靠性最佳）、Vast.ai（$0.09–0.59/小时，可中断工作负载最便宜）、Lambda Labs（A100：$1.79/小时，H100：$2.99/小时，团队99.9%正常运行时间）。' },
+          { type: 'plain-terms', text: '云GPU租赁让你按小时付费使用别人服务器上的强力显卡——无需购买硬件。可中断实例更便宜，但随时可能被收回；预留实例稳定但成本更高。' },
+        ],
+        items: [
+          '**RunPod：** RTX 4090 $0.34–0.69/小时 — 价格与可靠性最佳平衡（SLA 99%正常运行时间）',
+          '**Vast.ai：** $0.09–0.59/小时 — 可中断现货工作负载最便宜选项',
+          '**Lambda Labs：** A100 $1.79/小时，H100 $2.99/小时 — 团队SLA 99.9%正常运行时间',
+          '价格经2026年5月全提供商核实。每月更新。',
+        ],
+      },
       updateNotice: {
         id: 'update-notice',
         title: '🔄 2026年5月更新',
@@ -3233,6 +3345,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   sections: {
+    tldr: {
+      id: 'key-takeaways',
+      isTldr: true,
+      snippetBlocks: [
+        { type: 'one-sentence', text: '2026년 5월 클라우드 GPU 렌탈 가격: RunPod($0.34–0.69/hr RTX 4090, 최고 안정성), Vast.ai($0.09–0.59/hr, 인터럽트 가능 워크로드 최저가), Lambda Labs(A100 $1.79/hr, H100 $2.99/hr, 팀용 99.9% 가동 시간).' },
+        { type: 'plain-terms', text: '클라우드 GPU 렌탈은 다른 사람의 서버에 있는 강력한 그래픽 카드를 시간당 비용으로 사용하는 서비스입니다 — 하드웨어 구매 불필요. 인터럽트 가능 인스턴스는 저렴하지만 언제든 회수될 수 있습니다.' },
+      ],
+      items: [
+        '**RunPod:** RTX 4090 $0.34–0.69/시간 — 가격과 안정성의 최고 균형 (SLA 99% 가동 시간)',
+        '**Vast.ai:** $0.09–0.59/시간 — 인터럽트 가능 스팟 워크로드 최저가 옵션',
+        '**Lambda Labs:** A100 $1.79/시간, H100 $2.99/시간 — 팀용 SLA 99.9% 가동 시간',
+        '2026년 5월 전체 공급업체 기준으로 확인된 가격. 매월 업데이트됩니다.',
+      ],
+    },
     updateNotice: {
       id: 'update-notice',
       title: '🔄 2026년 5월 업데이트',

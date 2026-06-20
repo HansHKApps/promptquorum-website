@@ -70,6 +70,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'For Apple Silicon local LLMs: 16 GB handles 7B only (tight), 36 GB handles 13B comfortably, 64 GB handles 70B Q3 (tight) or 34B Q5 (comfortable), 128 GB handles 70B Q5 comfortably — buy maximum at purchase time as memory cannot be upgraded.' },
+          { type: 'plain-terms', text: 'Unified memory on a Mac is shared between the CPU, GPU, and AI engine — all of it is available for your model. Rule of thumb: a 7B model at Q4 needs about 5 GB; a 14B model needs about 9 GB; a 70B model at Q4 needs about 42 GB. Add 8 GB for the OS. If the model doesn\'t fit, it swaps to disk, which is 100× slower.' },
+        ],
         items: [
           'Unified memory = shared between CPU and GPU — all of it available to LLM models.',
           'RTX 4070 has 12GB VRAM + 32GB RAM (separate). Mac has unified = all available.',
@@ -286,6 +290,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Para LLMs locales en Apple Silicon: 16 GB solo para 7B (ajustado), 36 GB para 13B cómodamente, 64 GB para 70B Q3 (ajustado) o 34B Q5 (cómodo), 128 GB para 70B Q5 cómodamente — compra el máximo al adquirir el equipo, ya que la memoria no se puede actualizar.' },
+          { type: 'plain-terms', text: 'La memoria unificada en un Mac se comparte entre CPU, GPU y motor IA. Regla general: un modelo 7B en Q4 necesita unos 5 GB; un 14B unos 9 GB; un 70B en Q4 unos 42 GB. Añade 8 GB para el sistema operativo. Si el modelo no cabe, se vuelca al disco — 100× más lento.' },
+        ],
         items: [
           'Memoria unificada = compartida entre CPU y GPU — toda disponible para los modelos LLM.',
           'RTX 4070 tiene 12GB VRAM + 32GB RAM (separados). El Mac tiene memoria unificada = todo disponible.',
@@ -499,6 +507,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'للنماذج اللغوية المحلية على Apple Silicon: 16 جيجابايت لـ 7B فقط (ضيق)، 36 جيجابايت لـ 13B بشكل مريح، 64 جيجابايت لـ 70B Q3 (ضيق) أو 34B Q5 (مريح)، 128 جيجابايت لـ 70B Q5 بشكل مريح — اشترِ الحد الأقصى لأن الذاكرة لا يمكن ترقيتها لاحقاً.' },
+          { type: 'plain-terms', text: 'الذاكرة الموحدة في Mac مشتركة بين CPU وGPU ومحرك الذكاء الاصطناعي. القاعدة: نموذج 7B بضغط Q4 يحتاج نحو 5 جيجابايت؛ و14B نحو 9 جيجابايت؛ و70B بضغط Q4 نحو 42 جيجابايت. أضف 8 جيجابايت لنظام التشغيل. إن لم يتسع النموذج يُصرف إلى القرص — أبطأ 100 مرة.' },
+        ],
         items: [
           'الذاكرة الموحدة = مشتركة بين CPU و GPU — كلها متاحة لنماذج LLM.',
           'تمتلك RTX 4070 ذاكرة 12GB VRAM + 32GB RAM (منفصلة). أما Mac فلديه ذاكرة موحدة = كلها متاحة.',
@@ -681,6 +693,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Para LLMs locais no Apple Silicon: 16 GB suporta apenas 7B (apertado), 36 GB suporta 13B confortavelmente, 64 GB suporta 70B Q3 (apertado) ou 34B Q5 (confortável), 128 GB suporta 70B Q5 confortavelmente — compre o máximo, pois a memória não pode ser atualizada depois.' },
+          { type: 'plain-terms', text: 'A memória unificada em um Mac é compartilhada entre CPU, GPU e motor de IA. Regra geral: um modelo 7B em Q4 precisa de cerca de 5 GB; um 14B cerca de 9 GB; um 70B em Q4 cerca de 42 GB. Adicione 8 GB para o SO. Se o modelo não couber, vai para o disco — 100× mais lento.' },
+        ],
         items: [
           '**16GB:** apenas modelos até 7B (Llama 3.2 8B Q4 = ~5GB). Muito restrito para uso regular.',
           '**36GB:** 13B com conforto (7–8GB livres). 34B Q4 no limite (~33GB). Mínimo recomendado.',
@@ -834,6 +850,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Für Apple Silicon lokale LLMs: 16 GB nur für 7B (eng), 36 GB für 13B komfortabel, 64 GB für 70B Q3 (eng) oder 34B Q5 (komfortabel), 128 GB für 70B Q5 komfortabel — beim Kauf das Maximum wählen, da der Speicher nicht aufrüstbar ist.' },
+          { type: 'plain-terms', text: 'Unified Memory auf einem Mac wird zwischen CPU, GPU und KI-Engine geteilt. Faustregel: 7B-Modell bei Q4 braucht ca. 5 GB; 14B ca. 9 GB; 70B bei Q4 ca. 42 GB. Dazu 8 GB für das Betriebssystem. Passt das Modell nicht rein, wird auf die Festplatte ausgelagert — 100× langsamer.' },
+        ],
         items: [
           'Unified Memory = gemeinsam für CPU und GPU — alles davon für LLM-Modelle verfügbar.',
           'RTX 4070 hat 12 GB VRAM + 32 GB RAM (getrennt). Mac hat Unified Memory = alles verfügbar.',
@@ -1064,6 +1084,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Pour les LLM locaux sur Apple Silicon : 16 Go seulement pour les 7B (limité), 36 Go pour les 13B confortablement, 64 Go pour les 70B Q3 (limité) ou 34B Q5 (confortable), 128 Go pour les 70B Q5 confortablement — achetez le maximum car la mémoire n\'est pas évolutive.' },
+          { type: 'plain-terms', text: 'La mémoire unifiée sur un Mac est partagée entre CPU, GPU et moteur IA. Règle empirique : un modèle 7B en Q4 nécessite environ 5 Go ; un 14B environ 9 Go ; un 70B en Q4 environ 42 Go. Ajoutez 8 Go pour l\'OS. Si le modèle ne rentre pas, il bascule sur le disque — 100× plus lent.' },
+        ],
         items: [
           'La mémoire unifiée est partagée entre CPU et GPU — tout est disponible pour les modèles LLM.',
           'La RTX 4070 a 12 Go VRAM + 32 Go RAM (séparés). Le Mac a une mémoire unifiée = tout disponible.',
@@ -1305,6 +1329,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple SiliconのローカルLLM：16 GBは7Bのみ（ギリギリ）、36 GBは13Bを快適に、64 GBは70B Q3（タイト）または34B Q5（快適）、128 GBは70B Q5を快適に実行 — 後からメモリ増設できないので購入時に最大を選ぶこと。' },
+          { type: 'plain-terms', text: 'MacのユニファイドメモリはCPU・GPU・AIエンジンで共有されます。目安：7B Q4で約5 GB；14Bで約9 GB；70B Q4で約42 GB必要。OS用に8 GBを追加。モデルが収まらない場合はディスクに退避しますが、それは100倍遅くなります。' },
+        ],
         items: [
           'ユニファイドメモリ = CPUとGPUで共有——すべてLLMモデルに使用可能。',
           'RTX 4070は12GB VRAM + 32GB RAM（別々）。MacはUnified Memory = すべて使用可能。',
@@ -1558,6 +1586,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple Silicon本地LLM内存需求：16 GB仅支持7B（偏紧），36 GB轻松支持13B，64 GB支持70B Q3（偏紧）或34B Q5（轻松），128 GB轻松支持70B Q5——购买时选最大内存，因为后续无法升级。' },
+          { type: 'plain-terms', text: 'Mac的统一内存在CPU、GPU和AI引擎间共享。经验法则：7B模型Q4约需5 GB；14B约需9 GB；70B Q4约需42 GB。再加8 GB给操作系统。如果模型装不下，会交换到磁盘，速度慢100倍。' },
+        ],
         items: [
           '统一内存 = CPU和GPU共享——全部可用于LLM模型。',
           'RTX 4070有12GB VRAM + 32GB RAM（独立）。Mac有统一内存 = 全部可用。',
@@ -1760,6 +1792,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       keyTakeaways: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple Silicon 로컬 LLM: 16 GB는 7B만 가능(빠듯), 36 GB는 13B 쾌적, 64 GB는 70B Q3(빠듯) 또는 34B Q5(쾌적), 128 GB는 70B Q5 쾌적 — 메모리는 구매 후 업그레이드 불가, 처음부터 최대 용량으로 구매할 것.' },
+          { type: 'plain-terms', text: 'Mac의 통합 메모리는 CPU, GPU, AI 엔진 간에 공유됩니다. 경험 법칙: 7B 모델 Q4는 약 5 GB; 14B는 약 9 GB; 70B Q4는 약 42 GB 필요. OS용으로 8 GB 추가. 모델이 맞지 않으면 디스크로 스왑 — 100배 느려집니다.' },
+        ],
         items: [
           '통합 메모리 = CPU와 GPU 공유 — 전체 용량을 LLM 모델에 사용 가능합니다.',
           'RTX 4070은 12GB VRAM + 32GB RAM(분리). Mac은 통합 = 전체 사용 가능.',

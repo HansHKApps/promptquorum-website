@@ -37,10 +37,121 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
+      quickAnswerTop: {
+        en: {
+          question: 'GPU vs CPU vs Apple Silicon for local LLMs: which is fastest?',
+          answer: 'For local LLMs: NVIDIA RTX 5090 32GB (~$2,000) gives the fastest raw token speed (150–200 tok/s on 7B–14B) but can\'t run 30B+ models. Apple M5 Pro 64GB (~$2,399) is the best all-around — 40–60 tok/s on 30B models with only 25W power draw. RTX 5070 12GB (~$600) is best value GPU for 8B models (60–80 tok/s). CPU-only inference is 10–20 tok/s on 7B — usable but slow.',
+          bullets: [
+            '→ RTX 5090 32GB (~$2,000): fastest at 7B–14B (150–200 tok/s), but 30B+ need CPU offloading',
+            '→ Apple M5 Pro 64GB (~$2,399): best all-around — runs 30B at 40–60 tok/s, ~25W power draw',
+            '→ RTX 5080 16GB (~$1,000): 100–130 tok/s on 8B, can\'t fit 30B+ models',
+            '→ RTX 5070 12GB (~$600): 60–80 tok/s on 8B, best value consumer GPU for local LLMs',
+            '→ CPU-only: 10–20 tok/s on 7B — workable for occasional use, not for production',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'GPU vs CPU vs Apple Silicon für lokale LLMs: Was ist am schnellsten?',
+          answer: 'Für lokale LLMs: NVIDIA RTX 5090 32 GB (~2.000 $) liefert die schnellste rohe Token-Geschwindigkeit (150–200 Tok/s bei 7B–14B), kann aber keine 30B+-Modelle ausführen. Apple M5 Pro 64 GB (~2.399 $) ist das beste Allround-Gerät — 40–60 Tok/s bei 30B-Modellen bei nur 25 W. RTX 5070 12 GB (~600 $) ist der beste GPU für 8B-Modelle (60–80 Tok/s). CPU-only: 10–20 Tok/s bei 7B.',
+          bullets: [
+            '→ RTX 5090 32 GB (~2.000 $): schnellste bei 7B–14B (150–200 Tok/s), aber 30B+ braucht CPU-Offloading',
+            '→ Apple M5 Pro 64 GB (~2.399 $): bestes Allround — 30B bei 40–60 Tok/s, ~25 W',
+            '→ RTX 5080 16 GB (~1.000 $): 100–130 Tok/s bei 8B, keine 30B+-Modelle',
+            '→ RTX 5070 12 GB (~600 $): 60–80 Tok/s bei 8B, bestes Preis-Leistungs-Verhältnis',
+            '→ Nur CPU: 10–20 Tok/s bei 7B — nutzbar für gelegentliche Nutzung',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'GPU vs CPU vs Apple Silicon pour les LLM locaux : lequel est le plus rapide ?',
+          answer: 'Pour les LLM locaux : le NVIDIA RTX 5090 32 Go (~2 000 $) offre la vitesse de tokens brute la plus élevée (150–200 tok/s sur 7B–14B) mais ne peut pas faire tourner les modèles 30B+. L\'Apple M5 Pro 64 Go (~2 399 $) est le meilleur tout-en-un — 40–60 tok/s sur les modèles 30B avec seulement 25 W. Le RTX 5070 12 Go (~600 $) est le meilleur GPU rapport qualité/prix pour les modèles 8B.',
+          bullets: [
+            '→ RTX 5090 32 Go (~2 000 $) : le plus rapide sur 7B–14B (150–200 tok/s), mais 30B+ nécessite CPU offloading',
+            '→ Apple M5 Pro 64 Go (~2 399 $) : meilleur polyvalent — 30B à 40–60 tok/s, ~25 W',
+            '→ RTX 5080 16 Go (~1 000 $) : 100–130 tok/s sur 8B, impossible pour 30B+',
+            '→ RTX 5070 12 Go (~600 $) : 60–80 tok/s sur 8B, meilleur rapport qualité/prix',
+            '→ CPU seul : 10–20 tok/s sur 7B — utilisable mais lent',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: 'ローカルLLMでGPU・CPU・Apple Siliconはどれが最速ですか？',
+          answer: 'ローカルLLMでは：NVIDIA RTX 5090 32GB（約2,000ドル）が最速（7B〜14Bで150〜200トークン/秒）ですが、30B以上は実行不可。Apple M5 Pro 64GB（約2,399ドル）がオールラウンドで最良 — 30Bモデルで40〜60トークン/秒、消費電力25Wのみ。RTX 5070 12GB（約600ドル）が8Bモデルで最高コスパ（60〜80トークン/秒）。CPU単独では7Bで10〜20トークン/秒。',
+          bullets: [
+            '→ RTX 5090 32GB（約2,000ドル）：7B〜14Bで最速（150〜200トークン/秒）、30B以上はCPUオフロード必要',
+            '→ Apple M5 Pro 64GB（約2,399ドル）：オールラウンド最良 — 30Bで40〜60トークン/秒、約25W',
+            '→ RTX 5080 16GB（約1,000ドル）：8Bで100〜130トークン/秒、30B以上不可',
+            '→ RTX 5070 12GB（約600ドル）：8Bで60〜80トークン/秒、最高コスパGPU',
+            '→ CPU単独：7Bで10〜20トークン/秒 — 時々の利用には使える',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '本地LLM：GPU vs CPU vs Apple Silicon哪个最快？',
+          answer: '本地LLM对比：NVIDIA RTX 5090 32GB（约$2,000）原始token速度最快（7B–14B达150–200 tok/s），但无法运行30B以上模型。Apple M5 Pro 64GB（约$2,399）综合最佳——30B模型达40–60 tok/s，功耗仅约25W。RTX 5070 12GB（约$600）是8B模型性价比最高的GPU（60–80 tok/s）。仅CPU：7B约10–20 tok/s。',
+          bullets: [
+            '→ RTX 5090 32GB（约$2,000）：7B–14B最快（150–200 tok/s），30B以上需CPU卸载',
+            '→ Apple M5 Pro 64GB（约$2,399）：综合最佳——30B达40–60 tok/s，约25W功耗',
+            '→ RTX 5080 16GB（约$1,000）：8B达100–130 tok/s，无法运行30B以上',
+            '→ RTX 5070 12GB（约$600）：8B达60–80 tok/s，性价比最高GPU',
+            '→ 仅CPU：7B约10–20 tok/s——偶尔使用可以',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: 'GPU vs CPU vs Apple Silicon para LLMs locales: ¿cuál es más rápido?',
+          answer: 'Para LLMs locales: NVIDIA RTX 5090 32 GB (~2.000 $) ofrece la mayor velocidad bruta (150–200 tok/s en 7B–14B) pero no puede ejecutar modelos de 30B+. Apple M5 Pro 64 GB (~2.399 $) es el mejor todo-en-uno — 40–60 tok/s en modelos de 30B con solo 25 W. RTX 5070 12 GB (~600 $) es la mejor GPU en relación calidad/precio para modelos de 8B (60–80 tok/s). Solo CPU: 10–20 tok/s en 7B.',
+          bullets: [
+            '→ RTX 5090 32 GB (~2.000 $): más rápido en 7B–14B (150–200 tok/s), pero 30B+ necesita CPU offloading',
+            '→ Apple M5 Pro 64 GB (~2.399 $): mejor todo-en-uno — 30B a 40–60 tok/s, ~25 W',
+            '→ RTX 5080 16 GB (~1.000 $): 100–130 tok/s en 8B, no puede ejecutar 30B+',
+            '→ RTX 5070 12 GB (~600 $): 60–80 tok/s en 8B, mejor relación calidad/precio',
+            '→ Solo CPU: 10–20 tok/s en 7B — usable para uso ocasional',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'GPU vs CPU vs Apple Silicon para LLMs locais: qual é mais rápido?',
+          answer: 'Para LLMs locais: NVIDIA RTX 5090 32 GB (~$2.000) oferece a maior velocidade bruta de tokens (150–200 tok/s em 7B–14B), mas não roda modelos 30B+. Apple M5 Pro 64 GB (~$2.399) é o melhor versátil — 40–60 tok/s em modelos 30B com apenas 25 W. RTX 5070 12 GB (~$600) é a melhor GPU custo-benefício para modelos 8B (60–80 tok/s). Apenas CPU: 10–20 tok/s em 7B.',
+          bullets: [
+            '→ RTX 5090 32 GB (~$2.000): mais rápido em 7B–14B (150–200 tok/s), mas 30B+ precisa de CPU offloading',
+            '→ Apple M5 Pro 64 GB (~$2.399): melhor versátil — 30B a 40–60 tok/s, ~25 W',
+            '→ RTX 5080 16 GB (~$1.000): 100–130 tok/s em 8B, não roda 30B+',
+            '→ RTX 5070 12 GB (~$600): 60–80 tok/s em 8B, melhor custo-benefício',
+            '→ Apenas CPU: 10–20 tok/s em 7B — utilizável para uso ocasional',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'GPU مقابل CPU مقابل Apple Silicon للنماذج اللغوية المحلية: أيها الأسرع؟',
+          answer: 'للنماذج اللغوية المحلية: NVIDIA RTX 5090 بـ 32 جيجابايت (~2,000 $) يمنح أعلى سرعة رمزية خام (150–200 رمز/ثانية على 7B–14B) لكنه لا يستطيع تشغيل نماذج 30B+. Apple M5 Pro بـ 64 جيجابايت (~2,399 $) هو الأفضل متعدد الأوجه — 40–60 رمز/ثانية على نماذج 30B باستهلاك 25 واط فقط. RTX 5070 بـ 12 جيجابايت (~600 $) أفضل قيمة GPU لنماذج 8B (60–80 رمز/ثانية). المعالج فقط: 10–20 رمز/ثانية على 7B.',
+          bullets: [
+            '→ RTX 5090 32 جيجابايت (~2,000 $): الأسرع على 7B–14B (150–200 رمز/ث)، لكن 30B+ يحتاج CPU offloading',
+            '→ Apple M5 Pro 64 جيجابايت (~2,399 $): الأفضل متعدد الأوجه — 30B بـ 40–60 رمز/ث، ~25 واط',
+            '→ RTX 5080 16 جيجابايت (~1,000 $): 100–130 رمز/ث على 8B، لا يتحمل 30B+',
+            '→ RTX 5070 12 جيجابايت (~600 $): 60–80 رمز/ث على 8B، أفضل قيمة GPU',
+            '→ المعالج فقط: 10–20 رمز/ث على 7B — قابل للاستخدام أحياناً',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '로컬 LLM에서 GPU vs CPU vs Apple Silicon 중 무엇이 가장 빠른가요?',
+          answer: '로컬 LLM: NVIDIA RTX 5090 32GB(~$2,000)가 원시 토큰 속도 최고(7B–14B에서 150–200 tok/s)이지만 30B 이상 실행 불가. Apple M5 Pro 64GB(~$2,399)가 종합 최고 — 30B 모델에서 40–60 tok/s, 소비전력 약 25W. RTX 5070 12GB(~$600)가 8B 모델에서 최고 가성비(60–80 tok/s). CPU 단독: 7B에서 10–20 tok/s.',
+          bullets: [
+            '→ RTX 5090 32GB(~$2,000): 7B–14B에서 최속(150–200 tok/s), 30B 이상은 CPU 오프로딩 필요',
+            '→ Apple M5 Pro 64GB(~$2,399): 종합 최고 — 30B에서 40–60 tok/s, ~25W',
+            '→ RTX 5080 16GB(~$1,000): 8B에서 100–130 tok/s, 30B 이상 불가',
+            '→ RTX 5070 12GB(~$600): 8B에서 60–80 tok/s, 최고 가성비 GPU',
+            '→ CPU 단독: 7B에서 10–20 tok/s — 가끔 사용엔 가능',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'For local LLMs: Apple M5 Pro 64GB (~$2,399) is the best all-around at 40–60 tok/s on 30B models; RTX 5090 32GB (~$2,000) is fastest for 7B–14B (150–200 tok/s) but can\'t fit 30B+; RTX 5070 12GB (~$600) offers the best GPU value; CPU-only is 10–20 tok/s on 7B.' }, { type: 'plain-terms', text: 'GPUs are fastest for smaller models (under 14B) because they have huge compute bandwidth. Apple Silicon chips win for larger models (30B+) because they pair memory and compute in one chip with low power draw. CPU-only is the slowest but works on any laptop — expect slow output for large models.' }],
           items: [
             '**Apple M5 Pro (64 GB, ~$2,399)**: Best all-around for most users. 40–60 tok/s on 30B models, low power (~25W inference), no VRAM limit.',
             '**NVIDIA RTX 5090 (32 GB, $2,000)**: Fastest for 7B–14B models at 150–200 tok/s. Cannot fit 30B+ without CPU offloading. Best for production workloads.',
@@ -330,6 +441,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Para LLMs locales: Apple M5 Pro 64 GB (~2.399 $) es el mejor todo-en-uno a 40–60 tok/s en modelos de 30B; RTX 5090 32 GB (~2.000 $) es el más rápido para 7B–14B (150–200 tok/s) pero imposible para 30B+; RTX 5070 12 GB (~600 $) ofrece el mejor valor GPU; solo CPU: 10–20 tok/s en 7B.' }, { type: 'plain-terms', text: 'Las GPU son más rápidas en modelos pequeños (menos de 14B) por su alta capacidad de cómputo. Apple Silicon gana en modelos grandes (30B+) al integrar memoria y cómputo con bajo consumo. CPU solo es el más lento pero funciona en cualquier portátil.' }],
           items: [
             '**GPU (NVIDIA RTX 5090)**: 200 tokens/s para modelos de 8B. Mejor rendimiento, $2.000.',
             '**GPU (NVIDIA RTX 4090)**: 150 tokens/s para modelos de 8B. Mejor relación calidad-precio: RTX 4070 Ti a 80 tok/s por $600.',
@@ -619,6 +731,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'للنماذج المحلية: Apple M5 Pro 64 جيجابايت (~2,399 $) الأفضل متعدد الأوجه بـ 40–60 رمز/ث على نماذج 30B؛ RTX 5090 32 جيجابايت (~2,000 $) الأسرع على 7B–14B (150–200 رمز/ث) لكن 30B+ مستحيل؛ RTX 5070 12 جيجابايت (~600 $) أفضل قيمة GPU؛ المعالج فقط: 10–20 رمز/ث على 7B.' }, { type: 'plain-terms', text: 'GPU أسرع على النماذج الصغيرة (أقل من 14B) بفضل عرض النطاق الحوسبي العالي. Apple Silicon يتفوق على النماذج الكبيرة (30B+) بدمج الذاكرة والحوسبة باستهلاك منخفض للطاقة. المعالج وحده الأبطأ لكنه يعمل على أي حاسوب محمول.' }],
           items: [
             '**GPU (NVIDIA RTX 5090)**: 200 token/s لنماذج 8B. أفضل أداء، 2000$.',
             '**GPU (NVIDIA RTX 4090)**: 150 token/s لنماذج 8B. أفضل قيمة مقابل السعر: RTX 4070 Ti بـ 80 tok/s مقابل 600$.',
@@ -903,6 +1016,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Para LLMs locais: Apple M5 Pro 64 GB (~$2.399) é o melhor versátil com 40–60 tok/s em modelos 30B; RTX 5090 32 GB (~$2.000) é o mais rápido para 7B–14B (150–200 tok/s) mas não roda 30B+; RTX 5070 12 GB (~$600) oferece o melhor custo-benefício GPU; apenas CPU: 10–20 tok/s em 7B.' }, { type: 'plain-terms', text: 'GPUs são as mais rápidas em modelos menores (abaixo de 14B) pela alta largura de banda de computação. Apple Silicon vence em modelos maiores (30B+) ao integrar memória e computação com baixo consumo. Apenas CPU é o mais lento mas funciona em qualquer notebook.' }],
           items: [
             'GPU NVIDIA (RTX 5090): 200 tok/s em 8B — mais rápida para modelos até 24 GB VRAM.',
             'Apple Silicon (M-series): única arquitetura de consumo capaz de executar 70B nativamente.',
@@ -1021,6 +1135,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Für lokale LLMs: Apple M5 Pro 64 GB (~2.399 $) ist das beste Allround-Gerät mit 40–60 Tok/s bei 30B-Modellen; RTX 5090 32 GB (~2.000 $) ist am schnellsten für 7B–14B (150–200 Tok/s), aber kein 30B+; RTX 5070 12 GB (~600 $) bietet bestes GPU-Preis-Leistungs-Verhältnis; CPU-only: 10–20 Tok/s bei 7B.' }, { type: 'plain-terms', text: 'GPUs sind bei kleinen Modellen (unter 14B) am schnellsten dank hoher Compute-Bandbreite. Apple Silicon gewinnt bei größeren Modellen (30B+) durch integrierten Speicher und niedrige Leistungsaufnahme. CPU-only ist am langsamsten, funktioniert aber auf jedem Laptop.' }],
           items: [
             '**GPU (NVIDIA RTX 5090)**: 200 Token/s bei 8B-Modellen. Beste Leistung, 2.000 €.',
             '**GPU (NVIDIA RTX 4090)**: 150 Token/s bei 8B-Modellen. Bestes Preis-Leistungs-Verhältnis: RTX 4070 Ti mit 80 Tok/s für 600 €.',
@@ -1312,6 +1427,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Pour les LLM locaux : Apple M5 Pro 64 Go (~2 399 $) est le meilleur polyvalent à 40–60 tok/s sur les modèles 30B ; RTX 5090 32 Go (~2 000 $) est le plus rapide pour 7B–14B (150–200 tok/s) mais impossible pour 30B+ ; RTX 5070 12 Go (~600 $) offre le meilleur rapport qualité/prix GPU ; CPU seul : 10–20 tok/s sur 7B.' }, { type: 'plain-terms', text: 'Les GPU sont les plus rapides sur les petits modèles (moins de 14B) grâce à leur haute bande passante de calcul. Apple Silicon gagne sur les grands modèles (30B+) en intégrant mémoire et calcul avec une faible consommation. CPU seul est le plus lent mais fonctionne sur n\'importe quel ordinateur.' }],
           items: [
             '**GPU (NVIDIA RTX 5090)** : 200 tokens/s pour les modèles 8B. Meilleures performances, 2 000 €.',
             '**GPU (NVIDIA RTX 4090)** : 150 tokens/s pour les modèles 8B. Meilleur rapport qualité-prix : RTX 4070 Ti à 80 Tok/s pour 600 €.',
@@ -1593,6 +1709,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'ローカルLLM向け：Apple M5 Pro 64GB（約2,399ドル）が30Bモデルで40〜60トークン/秒のオールラウンド最良；RTX 5090 32GB（約2,000ドル）は7B〜14Bで最速（150〜200トークン/秒）だが30B以上は不可；RTX 5070 12GB（約600ドル）が最高コスパGPU；CPU単独は7Bで10〜20トークン/秒。' }, { type: 'plain-terms', text: 'GPUは小型モデル（14B未満）で最速です。Apple Siliconはメモリと計算を一体化し低消費電力で大型モデル（30B+）に最適。CPU単独は最も遅いですがあらゆるノートPCで動作します。' }],
           items: [
             '**GPU（NVIDIA RTX 5090）**：8B モデルで 200 トークン/秒。最高性能、2,000 ドル。',
             '**GPU（NVIDIA RTX 4090）**：8B モデルで 150 トークン/秒。ベストバリュー：RTX 4070 Ti は 80 Tok/s で 600 ドル。',
@@ -1840,6 +1957,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '本地LLM：Apple M5 Pro 64GB（约$2,399）综合最佳，30B模型达40–60 tok/s；RTX 5090 32GB（约$2,000）7B–14B最快（150–200 tok/s）但不支持30B以上；RTX 5070 12GB（约$600）性价比最高GPU；仅CPU：7B约10–20 tok/s。' }, { type: 'plain-terms', text: 'GPU在小模型（14B以下）上最快，因为拥有高计算带宽。Apple Silicon集成内存和计算，低功耗下适合大模型（30B+）。仅CPU是最慢的，但任何笔记本电脑都能运行。' }],
           items: [
             '**GPU（NVIDIA RTX 5090）**：8B 模型 200 令牌/秒。最高性能，2000 美元。',
             '**GPU（NVIDIA RTX 4090）**：8B 模型 150 令牌/秒。性价比最优：RTX 4070 Ti 80 Tok/s，仅需 600 美元。',
@@ -2087,6 +2205,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '로컬 LLM: Apple M5 Pro 64GB(~$2,399)가 30B 모델에서 40–60 tok/s로 종합 최고; RTX 5090 32GB(~$2,000)는 7B–14B 최속(150–200 tok/s)이지만 30B 이상 불가; RTX 5070 12GB(~$600)가 GPU 최고 가성비; CPU 단독: 7B에서 10–20 tok/s.' }, { type: 'plain-terms', text: 'GPU는 높은 컴퓨팅 대역폭으로 소형 모델(14B 미만)에서 가장 빠릅니다. Apple Silicon은 메모리와 컴퓨팅을 통합해 낮은 전력으로 대형 모델(30B+)에 최적입니다. CPU 단독은 가장 느리지만 어떤 노트북에서도 동작합니다.' }],
           items: [
             '**GPU (NVIDIA RTX 5090)**: 8B 모델에서 초당 200토큰. 최고 성능, $2,000.',
             '**GPU (NVIDIA RTX 4090)**: 8B 모델에서 초당 150토큰. 최고 가성비: RTX 4070 Ti, $600에 초당 80토큰.',

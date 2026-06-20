@@ -34,11 +34,122 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Real-Time Chat (Streaming)', anchor: '#streaming' },
         { label: 'FAQ', anchor: '#faq' },
       ],
+      quickAnswerTop: {
+        en: {
+          question: 'What is the best local LLM stack for each use case in 2026?',
+          answer: 'The best local LLM stack depends on your use case: writing tasks → Ollama + Open WebUI; coding and code review → vLLM + FastAPI + VS Code extension; local RAG / document search → LlamaIndex + Ollama or vLLM + Qdrant vector DB; AI agents and multi-step pipelines → LangGraph + vLLM; multi-user API → vLLM behind nginx load balancer; fine-tuning → HuggingFace Transformers + LoRA.',
+          bullets: [
+            '→ Writing assistant: Ollama + Open WebUI — zero-config, browser-based chat',
+            '→ Coding / code review: vLLM + FastAPI + VS Code extension — fast inference + IDE integration',
+            '→ Local RAG / document search: LlamaIndex + Ollama/vLLM + Qdrant vector DB',
+            '→ AI agents / multi-step pipelines: LangGraph + vLLM',
+            '→ Multi-user API: vLLM behind nginx; fine-tuning: HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'Was ist das beste lokale LLM-Stack für jeden Anwendungsfall 2026?',
+          answer: 'Das beste lokale LLM-Stack hängt vom Anwendungsfall ab: Schreibaufgaben → Ollama + Open WebUI; Coding und Code-Review → vLLM + FastAPI + VS Code-Erweiterung; lokales RAG/Dokumentensuche → LlamaIndex + Ollama oder vLLM + Qdrant-Vektordatenbank; KI-Agenten und mehrstufige Pipelines → LangGraph + vLLM; Multi-User-API → vLLM hinter nginx-Load-Balancer; Fine-Tuning → HuggingFace Transformers + LoRA.',
+          bullets: [
+            '→ Schreibassistent: Ollama + Open WebUI — Zero-Config, browserbasierter Chat',
+            '→ Coding/Code-Review: vLLM + FastAPI + VS Code-Erweiterung',
+            '→ Lokales RAG/Dokumentensuche: LlamaIndex + Ollama/vLLM + Qdrant-Vektordatenbank',
+            '→ KI-Agenten/mehrstufige Pipelines: LangGraph + vLLM',
+            '→ Multi-User-API: vLLM hinter nginx; Fine-Tuning: HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'Quel est le meilleur stack LLM local pour chaque cas d\'usage en 2026 ?',
+          answer: 'Le meilleur stack LLM local dépend du cas d\'usage : tâches d\'écriture → Ollama + Open WebUI ; codage et revue de code → vLLM + FastAPI + extension VS Code ; RAG local / recherche de documents → LlamaIndex + Ollama ou vLLM + Qdrant ; agents IA et pipelines multi-étapes → LangGraph + vLLM ; API multi-utilisateurs → vLLM derrière nginx ; fine-tuning → HuggingFace Transformers + LoRA.',
+          bullets: [
+            '→ Assistant rédaction : Ollama + Open WebUI — zéro config, chat navigateur',
+            '→ Codage / revue de code : vLLM + FastAPI + extension VS Code',
+            '→ RAG local / recherche documents : LlamaIndex + Ollama/vLLM + Qdrant',
+            '→ Agents IA / pipelines multi-étapes : LangGraph + vLLM',
+            '→ API multi-utilisateurs : vLLM derrière nginx ; fine-tuning : HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: '2026年のユースケース別ベストなローカルLLMスタックは何ですか？',
+          answer: 'ローカルLLMのベストスタックはユースケースによって異なります：文章作成 → Ollama + Open WebUI；コーディング・コードレビュー → vLLM + FastAPI + VS Code拡張；ローカルRAG/文書検索 → LlamaIndex + Ollama/vLLM + QdrantベクターDB；AIエージェント・多段パイプライン → LangGraph + vLLM；マルチユーザーAPI → nginx後ろのvLLM；ファインチューニング → HuggingFace Transformers + LoRA。',
+          bullets: [
+            '→ 文章作成アシスト：Ollama + Open WebUI — 設定不要、ブラウザチャット',
+            '→ コーディング/コードレビュー：vLLM + FastAPI + VS Code拡張',
+            '→ ローカルRAG/文書検索：LlamaIndex + Ollama/vLLM + Qdrantベクターdb',
+            '→ AIエージェント/多段パイプライン：LangGraph + vLLM',
+            '→ マルチユーザーAPI：nginx後ろのvLLM；ファインチューニング：HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '2026年各用途最好的本地LLM技术栈是什么？',
+          answer: '最佳本地LLM技术栈取决于用途：写作任务 → Ollama + Open WebUI；编程/代码审查 → vLLM + FastAPI + VS Code扩展；本地RAG/文档搜索 → LlamaIndex + Ollama/vLLM + Qdrant向量数据库；AI智能体/多步骤流水线 → LangGraph + vLLM；多用户API → vLLM + nginx负载均衡；微调 → HuggingFace Transformers + LoRA。',
+          bullets: [
+            '→ 写作助手：Ollama + Open WebUI — 零配置，浏览器聊天',
+            '→ 编程/代码审查：vLLM + FastAPI + VS Code扩展',
+            '→ 本地RAG/文档搜索：LlamaIndex + Ollama/vLLM + Qdrant向量数据库',
+            '→ AI智能体/多步骤流水线：LangGraph + vLLM',
+            '→ 多用户API：vLLM + nginx；微调：HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: '¿Cuál es el mejor stack de LLM local para cada caso de uso en 2026?',
+          answer: 'El mejor stack de LLM local depende del caso de uso: tareas de escritura → Ollama + Open WebUI; codificación y revisión de código → vLLM + FastAPI + extensión VS Code; RAG local / búsqueda de documentos → LlamaIndex + Ollama o vLLM + Qdrant; agentes IA y pipelines multi-paso → LangGraph + vLLM; API multi-usuario → vLLM detrás de nginx; ajuste fino → HuggingFace Transformers + LoRA.',
+          bullets: [
+            '→ Asistente de escritura: Ollama + Open WebUI — cero configuración, chat en navegador',
+            '→ Codificación / revisión de código: vLLM + FastAPI + extensión VS Code',
+            '→ RAG local / búsqueda de documentos: LlamaIndex + Ollama/vLLM + Qdrant',
+            '→ Agentes IA / pipelines multi-paso: LangGraph + vLLM',
+            '→ API multi-usuario: vLLM detrás de nginx; ajuste fino: HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'Qual é o melhor stack de LLM local para cada caso de uso em 2026?',
+          answer: 'O melhor stack de LLM local depende do caso de uso: tarefas de escrita → Ollama + Open WebUI; codificação e revisão de código → vLLM + FastAPI + extensão VS Code; RAG local / busca de documentos → LlamaIndex + Ollama ou vLLM + Qdrant; agentes de IA e pipelines multi-etapas → LangGraph + vLLM; API multi-usuário → vLLM atrás de nginx; ajuste fino → HuggingFace Transformers + LoRA.',
+          bullets: [
+            '→ Assistente de escrita: Ollama + Open WebUI — zero configuração, chat no navegador',
+            '→ Codificação / revisão de código: vLLM + FastAPI + extensão VS Code',
+            '→ RAG local / busca de documentos: LlamaIndex + Ollama/vLLM + Qdrant',
+            '→ Agentes de IA / pipelines multi-etapas: LangGraph + vLLM',
+            '→ API multi-usuário: vLLM atrás de nginx; ajuste fino: HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'ما هو أفضل مكدس LLM محلي لكل حالة استخدام في 2026؟',
+          answer: 'أفضل مكدس LLM محلي يعتمد على حالة الاستخدام: مهام الكتابة ← Ollama + Open WebUI؛ البرمجة ومراجعة الكود ← vLLM + FastAPI + إضافة VS Code؛ RAG المحلي / البحث في المستندات ← LlamaIndex + Ollama/vLLM + Qdrant؛ وكلاء الذكاء الاصطناعي وخطوط العمل متعددة الخطوات ← LangGraph + vLLM؛ API متعدد المستخدمين ← vLLM خلف nginx؛ الضبط الدقيق ← HuggingFace Transformers + LoRA.',
+          bullets: [
+            '→ مساعد الكتابة: Ollama + Open WebUI — بدون إعداد، دردشة عبر المتصفح',
+            '→ البرمجة / مراجعة الكود: vLLM + FastAPI + إضافة VS Code',
+            '→ RAG المحلي / البحث في المستندات: LlamaIndex + Ollama/vLLM + Qdrant',
+            '→ وكلاء الذكاء الاصطناعي / خطوط العمل متعددة الخطوات: LangGraph + vLLM',
+            '→ API متعدد المستخدمين: vLLM خلف nginx؛ الضبط الدقيق: HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '2026년 각 사용 사례에 맞는 최고의 로컬 LLM 스택은?',
+          answer: '최고의 로컬 LLM 스택은 사용 사례에 따라 다릅니다: 글쓰기 작업 → Ollama + Open WebUI; 코딩/코드 리뷰 → vLLM + FastAPI + VS Code 확장; 로컬 RAG/문서 검색 → LlamaIndex + Ollama/vLLM + Qdrant 벡터 DB; AI 에이전트/다단계 파이프라인 → LangGraph + vLLM; 다중 사용자 API → nginx 뒤의 vLLM; 파인튜닝 → HuggingFace Transformers + LoRA.',
+          bullets: [
+            '→ 글쓰기 어시스턴트: Ollama + Open WebUI — 제로 설정, 브라우저 채팅',
+            '→ 코딩/코드 리뷰: vLLM + FastAPI + VS Code 확장',
+            '→ 로컬 RAG/문서 검색: LlamaIndex + Ollama/vLLM + Qdrant 벡터 DB',
+            '→ AI 에이전트/다단계 파이프라인: LangGraph + vLLM',
+            '→ 다중 사용자 API: nginx 뒤의 vLLM; 파인튜닝: HuggingFace Transformers + LoRA',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       sections: {
         tldr: {
           id: 'tldr',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Best local LLM stacks by use case: writing → Ollama + Open WebUI; coding → vLLM + FastAPI + VS Code; local RAG → LlamaIndex + Qdrant; AI agents → LangGraph + vLLM; multi-user API → vLLM + nginx; fine-tuning → HuggingFace Transformers + LoRA.' }, { type: 'plain-terms', text: 'A "stack" is the combination of tools that work together for a specific job. Ollama is the local AI server; Open WebUI is the browser front-end. vLLM is a faster server built for production use. Qdrant stores your documents as vectors so the AI can find the relevant piece to answer a question. LoRA is a method to fine-tune a model on your own data without retraining from scratch.' }],
           items: [
             '**Writing/content creation:** Ollama + OpenWebUI. Zero config, beautiful chat UI, context window adjustable.',
             '**Coding/code review:** vLLM + FastAPI + VS Code extension. Batch processing, parallel inference, streaming.',
@@ -315,6 +426,7 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Mejores stacks de LLM local por caso de uso: escritura → Ollama + Open WebUI; codificación → vLLM + FastAPI + VS Code; RAG local → LlamaIndex + Qdrant; agentes IA → LangGraph + vLLM; API multi-usuario → vLLM + nginx; ajuste fino → HuggingFace Transformers + LoRA.' }, { type: 'plain-terms', text: 'Un "stack" es la combinación de herramientas que trabajan juntas para una tarea específica. Ollama es el servidor IA local; Open WebUI es la interfaz del navegador. vLLM es un servidor más rápido para uso en producción. Qdrant almacena documentos como vectores para que la IA encuentre el fragmento relevante. LoRA permite ajustar un modelo con tus propios datos sin reentrenar desde cero.' }],
           items: [
             '**Escritura/creación de contenido:** Ollama + OpenWebUI. Sin configuración, UI de chat excelente, ventana de contexto ajustable.',
             '**Código/revisión de código:** vLLM + FastAPI + extensión VS Code. Procesamiento por lotes, inferencia paralela, streaming.',
@@ -600,6 +712,7 @@ for filename, review in reviews:
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'أفضل مكدسات LLM المحلية حسب حالة الاستخدام: الكتابة ← Ollama + Open WebUI؛ البرمجة ← vLLM + FastAPI + VS Code؛ RAG المحلي ← LlamaIndex + Qdrant؛ وكلاء الذكاء الاصطناعي ← LangGraph + vLLM؛ API متعدد المستخدمين ← vLLM + nginx؛ الضبط الدقيق ← HuggingFace Transformers + LoRA.' }, { type: 'plain-terms', text: '"المكدس" هو مجموعة الأدوات التي تعمل معاً لإنجاز مهمة محددة. Ollama هو خادم الذكاء الاصطناعي المحلي؛ Open WebUI هو واجهة المتصفح. vLLM خادم أسرع للاستخدام الإنتاجي. Qdrant يخزّن المستندات كمتجهات ليجد الذكاء الاصطناعي المقطع المناسب. LoRA طريقة لضبط نموذج على بياناتك الخاصة دون إعادة التدريب من الصفر.' }],
           items: [
             '**الكتابة/إنشاء المحتوى:** Ollama + OpenWebUI. دون تهيئة، وواجهة دردشة ممتازة، ونافذة سياق قابلة للضبط.',
             '**البرمجة/مراجعة الكود:** vLLM + FastAPI + امتداد VS Code. معالجة بالدفعات، واستدلال متوازٍ، وstreaming.',
@@ -885,6 +998,7 @@ for filename, review in reviews:
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Melhores stacks de LLM local por caso de uso: escrita → Ollama + Open WebUI; codificação → vLLM + FastAPI + VS Code; RAG local → LlamaIndex + Qdrant; agentes IA → LangGraph + vLLM; API multi-usuário → vLLM + nginx; ajuste fino → HuggingFace Transformers + LoRA.' }, { type: 'plain-terms', text: 'Um "stack" é a combinação de ferramentas que trabalham juntas para uma tarefa específica. Ollama é o servidor de IA local; Open WebUI é a interface do navegador. vLLM é um servidor mais rápido para uso em produção. Qdrant armazena documentos como vetores para que a IA encontre o trecho relevante. LoRA ajusta um modelo com seus próprios dados sem retreinar do zero.' }],
           items: [
             '**Escrita/criação de conteúdo:** Ollama + OpenWebUI. Sem configuração, UI de chat excelente, janela de contexto ajustável.',
             '**Código/revisão de código:** vLLM + FastAPI + extensão VS Code. Processamento em lote, inferência paralela, streaming.',
@@ -996,6 +1110,7 @@ for filename, review in reviews:
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Beste lokale LLM-Stacks nach Anwendungsfall: Schreiben → Ollama + Open WebUI; Coding → vLLM + FastAPI + VS Code; lokales RAG → LlamaIndex + Qdrant; KI-Agenten → LangGraph + vLLM; Multi-User-API → vLLM + nginx; Fine-Tuning → HuggingFace Transformers + LoRA.' }, { type: 'plain-terms', text: 'Ein "Stack" ist die Kombination von Tools, die zusammen für eine bestimmte Aufgabe arbeiten. Ollama ist der lokale KI-Server; Open WebUI ist die Browser-Oberfläche. vLLM ist ein schnellerer Server für den Produktionseinsatz. Qdrant speichert Dokumente als Vektoren, damit die KI relevante Inhalte finden kann. LoRA ist eine Methode, ein Modell mit eigenen Daten anzupassen, ohne von Grund auf neu zu trainieren.' }],
           items: [
             '**Schreiben/Content-Erstellung:** Ollama + OpenWebUI. Keine Konfiguration, übersichtliche Chat-Oberfläche, Kontextfenster einstellbar.',
             '**Coding/Code-Review:** vLLM + FastAPI + VS-Code-Erweiterung. Batch-Verarbeitung, parallele Inferenz, Streaming.',
@@ -1276,6 +1391,7 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Meilleurs stacks LLM locaux par cas d\'usage : rédaction → Ollama + Open WebUI ; codage → vLLM + FastAPI + VS Code ; RAG local → LlamaIndex + Qdrant ; agents IA → LangGraph + vLLM ; API multi-utilisateurs → vLLM + nginx ; fine-tuning → HuggingFace Transformers + LoRA.' }, { type: 'plain-terms', text: 'Un "stack" est la combinaison d\'outils travaillant ensemble pour une tâche spécifique. Ollama est le serveur IA local ; Open WebUI est l\'interface navigateur. vLLM est un serveur plus rapide pour la production. Qdrant stocke vos documents sous forme de vecteurs pour que l\'IA retrouve le bon passage. LoRA permet d\'affiner un modèle sur vos propres données sans ré-entraîner de zéro.' }],
           items: [
             '**Rédaction/création de contenu :** Ollama + OpenWebUI. Aucune configuration, interface chat intuitive, fenêtre de contexte ajustable.',
             '**Coding/revue de code :** vLLM + FastAPI + extension VS Code. Traitement par lots, inférence parallèle, streaming.',
@@ -1552,6 +1668,7 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'ユースケース別ベストローカルLLMスタック：文章作成 → Ollama + Open WebUI；コーディング → vLLM + FastAPI + VS Code；ローカルRAG → LlamaIndex + Qdrant；AIエージェント → LangGraph + vLLM；マルチユーザーAPI → vLLM + nginx；ファインチューニング → HuggingFace Transformers + LoRA。' }, { type: 'plain-terms', text: '「スタック」とは特定の目的のために連携するツールの組み合わせです。OllamaはローカルAIサーバー、Open WebUIはブラウザ画面です。vLLMは本番向けの高速サーバーです。Qdrantは文書をベクターとして保存し、AIが関連部分を検索できるようにします。LoRAはゼロから再学習せずに独自データでモデルを調整する方法です。' }],
           items: [
             '**ライティング/コンテンツ作成：** Ollama + OpenWebUI。設定不要、美しいチャットUI、コンテキストウィンドウ調整可能。',
             '**コーディング/コードレビュー：** vLLM + FastAPI + VS Code拡張。バッチ処理、並列推論、ストリーミング対応。',
@@ -1828,6 +1945,7 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '各用途最佳本地LLM技术栈：写作 → Ollama + Open WebUI；编程 → vLLM + FastAPI + VS Code；本地RAG → LlamaIndex + Qdrant；AI智能体 → LangGraph + vLLM；多用户API → vLLM + nginx；微调 → HuggingFace Transformers + LoRA。' }, { type: 'plain-terms', text: '"技术栈"是为特定目标协同工作的工具组合。Ollama是本地AI服务器，Open WebUI是浏览器界面。vLLM是面向生产的更快服务器。Qdrant将文档存储为向量以便AI检索相关段落。LoRA是在不从头重训练的情况下用自己数据微调模型的方法。' }],
           items: [
             '**写作/内容创作：** Ollama + OpenWebUI。零配置、精美聊天界面、上下文窗口可调。',
             '**编程/代码审查：** vLLM + FastAPI + VS Code插件。批量处理、并行推理、流式传输。',
@@ -2105,6 +2223,7 @@ schema: {
     tldr: {
       id: 'tldr',
       isTldr: true,
+      snippetBlocks: [{ type: 'one-sentence', text: '사용 사례별 최고의 로컬 LLM 스택: 글쓰기 → Ollama + Open WebUI; 코딩 → vLLM + FastAPI + VS Code; 로컬 RAG → LlamaIndex + Qdrant; AI 에이전트 → LangGraph + vLLM; 다중 사용자 API → vLLM + nginx; 파인튜닝 → HuggingFace Transformers + LoRA.' }, { type: 'plain-terms', text: '"스택"은 특정 작업을 위해 함께 동작하는 도구의 조합입니다. Ollama는 로컬 AI 서버, Open WebUI는 브라우저 인터페이스입니다. vLLM은 프로덕션용 더 빠른 서버입니다. Qdrant는 AI가 관련 구절을 찾을 수 있도록 문서를 벡터로 저장합니다. LoRA는 처음부터 재훈련 없이 자체 데이터로 모델을 파인튜닝하는 방법입니다.' }],
       items: [
         '**글쓰기/콘텐츠 제작:** Ollama + OpenWebUI. 별도 설정 불필요, 우수한 채팅 UI, 컨텍스트 창 조절 가능.',
         '**코딩/코드 리뷰:** vLLM + FastAPI + VS Code 확장. 배치 처리, 병렬 추론, 스트리밍 지원.',

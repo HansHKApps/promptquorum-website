@@ -38,11 +38,122 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
       gammaDescription: 'The slide deck below covers 8 local LLM frontends -- Open WebUI (25,000+ stars, RAG), Enchanted UI (fastest), Jan AI (desktop), Continue.dev (code) -- with feature comparison table, setup guide, regional compliance context (EU/GDPR, Japan, China), and 5 common mistakes. Download the PDF as a Local LLM Frontend reference card.',
+      quickAnswerTop: {
+        en: {
+          question: 'What is the best frontend for running local LLMs in 2026?',
+          answer: 'The best local LLM frontend in April 2026: Open WebUI (RAG, multimodal, multi-user, 25,000+ GitHub stars, requires Docker, 12 GB RAM+) for feature-rich use. Enchanted UI (zero-setup, browser-based, 8 GB RAM) for instant simplicity. Jan AI (desktop app, offline, Windows/macOS) for non-technical users. All free and open-source.',
+          bullets: [
+            '→ Open WebUI: most features (RAG, multimodal, knowledge bases), requires Docker, 12 GB RAM+',
+            '→ Enchanted UI: fastest zero-setup, browser-based, 8 GB RAM, no Docker needed',
+            '→ Jan AI: desktop app (Windows/macOS), fully offline, no server setup required',
+            '→ Continue.dev: best for coding — VS Code extension, connects to local Ollama model',
+            '→ All top frontends free and open-source as of April 2026',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        de: {
+          question: 'Was ist das beste Frontend für lokale LLMs im Jahr 2026?',
+          answer: 'Das beste lokale LLM-Frontend im April 2026: Open WebUI (RAG, multimodal, Multi-User, 25.000+ GitHub-Stars, Docker erforderlich, 12 GB RAM+) für funktionsreiche Nutzung. Enchanted UI (Zero-Setup, browserbasiert, 8 GB RAM) für sofortige Einfachheit. Jan AI (Desktop-App, offline, Windows/macOS) für nicht-technische Nutzer.',
+          bullets: [
+            '→ Open WebUI: meiste Funktionen (RAG, multimodal, Wissensdatenbanken), Docker erforderlich, 12 GB RAM+',
+            '→ Enchanted UI: schnellstes Zero-Setup, browserbasiert, 8 GB RAM, kein Docker nötig',
+            '→ Jan AI: Desktop-App (Windows/macOS), vollständig offline, kein Server-Setup',
+            '→ Continue.dev: bestes für Coding — VS Code Erweiterung',
+            '→ Alle Top-Frontends kostenlos und quelloffen ab April 2026',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        fr: {
+          question: 'Quel est le meilleur frontend pour les LLM locaux en 2026 ?',
+          answer: 'Meilleur frontend LLM local en avril 2026 : Open WebUI (RAG, multimodal, multi-utilisateurs, 25 000+ étoiles GitHub, Docker requis, 12 Go RAM+) pour un usage riche. Enchanted UI (zéro-configuration, navigateur, 8 Go RAM) pour la simplicité. Jan AI (app desktop, hors ligne, Windows/macOS) pour les non-techniciens.',
+          bullets: [
+            '→ Open WebUI : le plus de fonctionnalités (RAG, multimodal), Docker requis, 12 Go RAM+',
+            '→ Enchanted UI : zéro configuration, basé navigateur, 8 Go RAM, sans Docker',
+            '→ Jan AI : app desktop (Windows/macOS), entièrement hors ligne',
+            '→ Continue.dev : meilleur pour le code — extension VS Code',
+            '→ Tous les frontends phares gratuits et open source en avril 2026',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        ja: {
+          question: '2026年のローカルLLMに最適なフロントエンドは何ですか？',
+          answer: '2026年4月のベストなローカルLLMフロントエンド：Open WebUI（RAG・マルチモーダル・マルチユーザー、GitHubスター25,000+、Docker必要、12 GB RAM+）機能豊富な用途に。Enchanted UI（ゼロセットアップ・ブラウザベース・8 GB RAM）即時シンプル利用に。Jan AI（デスクトップアプリ・オフライン・Windows/macOS）非技術ユーザーに。',
+          bullets: [
+            '→ Open WebUI：最多機能（RAG・マルチモーダル）、Docker必要、12 GB RAM+',
+            '→ Enchanted UI：最速ゼロセットアップ、ブラウザベース、8 GB RAM',
+            '→ Jan AI：デスクトップアプリ（Windows/macOS）、完全オフライン',
+            '→ Continue.dev：コーディング最優秀 — VS Code拡張',
+            '→ 2026年4月時点でトップフロントエンドはすべて無料でオープンソース',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        zh: {
+          question: '2026年运行本地LLM最好的前端是什么？',
+          answer: '2026年4月最佳本地LLM前端：功能丰富选Open WebUI（RAG、多模态、多用户，25,000+ GitHub星，需要Docker，12 GB RAM+）。零配置即用选Enchanted UI（浏览器运行，8 GB RAM）。离线桌面选Jan AI（Windows/macOS）。所有顶级前端均免费开源。',
+          bullets: [
+            '→ Open WebUI：功能最多（RAG、多模态），需要Docker，12 GB RAM+',
+            '→ Enchanted UI：最快零配置，基于浏览器，8 GB RAM',
+            '→ Jan AI：桌面应用（Windows/macOS），完全离线',
+            '→ Continue.dev：编程最佳——VS Code扩展',
+            '→ 2026年4月所有顶级前端均免费开源',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        es: {
+          question: '¿Cuál es el mejor frontend para LLMs locales en 2026?',
+          answer: 'Mejor frontend LLM local en abril de 2026: Open WebUI (RAG, multimodal, multi-usuario, 25.000+ estrellas GitHub, Docker requerido, 12 GB RAM+) para uso rico en funciones. Enchanted UI (cero configuración, navegador, 8 GB RAM) para simplicidad inmediata. Jan AI (app escritorio, offline, Windows/macOS) para no técnicos.',
+          bullets: [
+            '→ Open WebUI: más funciones (RAG, multimodal), Docker requerido, 12 GB RAM+',
+            '→ Enchanted UI: configuración cero más rápida, navegador, 8 GB RAM',
+            '→ Jan AI: app de escritorio (Windows/macOS), completamente offline',
+            '→ Continue.dev: mejor para código — extensión VS Code',
+            '→ Todos los frontends principales gratuitos y open source desde abril 2026',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        pt: {
+          question: 'Qual é o melhor frontend para LLMs locais em 2026?',
+          answer: 'Melhor frontend LLM local em abril de 2026: Open WebUI (RAG, multimodal, multi-usuário, 25.000+ estrelas GitHub, Docker, 12 GB RAM+) para uso rico. Enchanted UI (zero configuração, navegador, 8 GB RAM) para simplicidade. Jan AI (app desktop, offline, Windows/macOS) para não técnicos. Todos gratuitos e open source.',
+          bullets: [
+            '→ Open WebUI: mais recursos (RAG, multimodal), Docker, 12 GB RAM+',
+            '→ Enchanted UI: zero configuração mais rápida, navegador, 8 GB RAM',
+            '→ Jan AI: app desktop (Windows/macOS), totalmente offline',
+            '→ Continue.dev: melhor para código — extensão VS Code',
+            '→ Todos os principais frontends gratuitos e open source desde abril 2026',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        ar: {
+          question: 'ما هو أفضل واجهة مستخدم للنماذج اللغوية المحلية في عام 2026؟',
+          answer: 'أفضل واجهة مستخدم LLM محلية في أبريل 2026: Open WebUI (RAG، متعدد الوسائط، متعدد المستخدمين، 25,000+ نجمة GitHub، يتطلب Docker، 12 جيجابايت RAM+) للاستخدام الغني بالميزات. Enchanted UI (بدون إعداد، متصفح، 8 جيجابايت RAM). Jan AI (سطح مكتب، بدون إنترنت). جميعها مجانية ومفتوحة المصدر.',
+          bullets: [
+            '→ Open WebUI: أكثر الميزات (RAG، متعدد الوسائط)، يتطلب Docker، 12 جيجابايت RAM+',
+            '→ Enchanted UI: أسرع إعداد صفري، متصفح، 8 جيجابايت RAM',
+            '→ Jan AI: سطح مكتب (Windows/macOS)، يعمل بلا إنترنت كلياً',
+            '→ Continue.dev: الأفضل للبرمجة — إضافة VS Code',
+            '→ جميع أفضل الواجهات مجانية ومفتوحة المصدر منذ أبريل 2026',
+          ],
+          updatedDate: '2026-04-01',
+        },
+        ko: {
+          question: '2026년 로컬 LLM 실행에 가장 좋은 프론트엔드는?',
+          answer: '2026년 4월 최고의 로컬 LLM 프론트엔드: Open WebUI(RAG, 멀티모달, 다중 사용자, 25,000+ GitHub 스타, Docker 필요, 12 GB RAM+) 기능 풍부한 용도. Enchanted UI(제로 설치, 브라우저, 8 GB RAM) 간편한 즉시 사용. Jan AI(데스크탑, 오프라인, Windows/macOS) 비기술 사용자. 모두 무료 오픈소스.',
+          bullets: [
+            '→ Open WebUI: 최다 기능(RAG, 멀티모달), Docker 필요, 12 GB RAM+',
+            '→ Enchanted UI: 가장 빠른 제로 설치, 브라우저, 8 GB RAM',
+            '→ Jan AI: 데스크탑 앱(Windows/macOS), 완전 오프라인',
+            '→ Continue.dev: 코딩 최고 — VS Code 확장',
+            '→ 2026년 4월 기준 모든 주요 프론트엔드 무료 오픈소스',
+          ],
+          updatedDate: '2026-04-01',
+        },
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'The best local LLM frontends in April 2026: Open WebUI (most features, RAG, Docker, 12 GB RAM+), Enchanted UI (zero-setup browser app), Jan AI (offline desktop app) — all free and open-source.' }, { type: 'plain-terms', text: 'A "frontend" is the chat window you type in — it connects to Ollama or LM Studio running in the background. Open WebUI is the most powerful but needs Docker installed. Enchanted UI is simplest — open a URL and start chatting.' }],
           items: [
             'A local LLM frontend is the chat interface you use to talk to your model. Ollama provides the API; the frontend is the UI.',
             '**Open WebUI** is the most feature-rich (RAG, multimodal, knowledge bases, function calling). Requires Docker. 12 GB RAM+ recommended.',
@@ -360,6 +471,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Die besten lokalen LLM-Frontends im April 2026: Open WebUI (meiste Funktionen, RAG, Docker, 12 GB RAM+), Enchanted UI (Zero-Setup-Browser-App), Jan AI (Offline-Desktop-App) — alle kostenlos und quelloffen.' }, { type: 'plain-terms', text: 'Ein "Frontend" ist das Chat-Fenster, in das du tippst — es verbindet sich mit Ollama oder LM Studio im Hintergrund. Open WebUI ist am leistungsfähigsten, benötigt aber Docker. Enchanted UI ist am einfachsten — URL öffnen und loschatten.' }],
           items: [
             'Ein lokales LLM-Frontend ist die Chat-Oberfläche, die Sie zum Sprechen mit Ihrem Modell verwenden. Ollama bietet die API; das Frontend ist die Benutzeroberfläche.',
             '**Open WebUI** ist das funktionsreichste (RAG, Multimodal, Knowledge Bases, Function Calling). Erfordert Docker. 12 GB RAM+ empfohlen.',
@@ -670,6 +782,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Les meilleurs frontends LLM locaux en avril 2026 : Open WebUI (le plus de fonctionnalités, RAG, Docker, 12 Go RAM+), Enchanted UI (app navigateur zéro-configuration), Jan AI (app desktop hors ligne) — tous gratuits et open source.' }, { type: 'plain-terms', text: 'Un "frontend" est la fenêtre de chat où vous tapez — il se connecte à Ollama ou LM Studio en arrière-plan. Open WebUI est le plus puissant mais nécessite Docker. Enchanted UI est le plus simple — ouvrez une URL et commencez.' }],
           items: [
             'Une interface LLM locale est le chat avec lequel vous parlez à votre modèle. Ollama fournit l\'API ; l\'interface est l\'IU.',
             '**Open WebUI** est le plus riche en fonctionnalités (RAG, multimodal, knowledge bases, appels fonction). Nécessite Docker. 12 GB RAM+ recommandé.',
@@ -994,6 +1107,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年4月のベストなローカルLLMフロントエンド：Open WebUI（最多機能・RAG・Docker・12 GB RAM+）、Enchanted UI（ゼロセットアップブラウザアプリ）、Jan AI（オフラインデスクトップアプリ）— すべて無料でオープンソース。' }, { type: 'plain-terms', text: '「フロントエンド」とはタイピングするチャット画面のことで、バックグラウンドで動くOllamaやLM Studioに接続します。Open WebUIは最も強力ですがDockerが必要です。Enchanted UIはURLを開くだけで最も簡単です。' }],
           items: [
             'ローカルLLMフロントエンドはモデルとチャットするUIです。OllamaがAPI提供；フロントエンドはUI。',
             '**Open WebUI** は最機能豊富（RAG、マルチモーダル、知識ベース、関数呼び出し）。Docker必須。RAM 12GB以上推奨。',
@@ -1318,6 +1432,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年4月最佳本地LLM前端：Open WebUI（功能最多、RAG、Docker、12 GB RAM+）、Enchanted UI（零配置浏览器应用）、Jan AI（离线桌面应用）——均免费开源。' }, { type: 'plain-terms', text: '"前端"就是你输入内容的聊天窗口——它连接到在后台运行的Ollama或LM Studio。Open WebUI功能最强大但需要Docker。Enchanted UI最简单——打开URL即可开始聊天。' }],
           items: [
             '本地LLM前端是与模型聊天的UI。Ollama提供API；前端是UI。',
             '**Open WebUI**功能最丰富（RAG、多模态、知识库、函数调用）。需Docker。建议12GB+ RAM。',
@@ -1647,6 +1762,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Los mejores frontends LLM locales en abril de 2026: Open WebUI (más funciones, RAG, Docker, 12 GB RAM+), Enchanted UI (app de navegador sin configuración), Jan AI (app de escritorio offline) — todos gratuitos y open source.' }, { type: 'plain-terms', text: 'Un "frontend" es la ventana de chat donde escribes — se conecta a Ollama o LM Studio en segundo plano. Open WebUI es el más potente pero necesita Docker. Enchanted UI es el más simple — abre una URL y empieza.' }],
           items: [
             'Un frontend para LLM local es la interfaz de chat con la que hablas con tu modelo. Ollama proporciona la API; el frontend es la interfaz visual.',
             '**Open WebUI** es el más completo en funcionalidades (RAG, multimodal, bases de conocimiento, llamadas a funciones). Requiere Docker. Se recomiendan 12 GB de RAM o más.',
@@ -1967,6 +2083,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'أفضل واجهات المستخدم المحلية لـ LLM في أبريل 2026: Open WebUI (أكثر الميزات، RAG، Docker، 12 جيجابايت RAM+)، Enchanted UI (تطبيق متصفح بدون إعداد)، Jan AI (تطبيق سطح مكتب بدون إنترنت) — جميعها مجانية ومفتوحة المصدر.' }, { type: 'plain-terms', text: '"الواجهة الأمامية" هي نافذة المحادثة التي تكتب فيها — تتصل بـ Ollama أو LM Studio في الخلفية. Open WebUI هو الأقوى لكنه يتطلب Docker. Enchanted UI هو الأبسط — افتح رابطاً وابدأ.' }],
           items: [
             'الواجهة الأمامية لنموذج LLM المحلي هي واجهة الدردشة التي تتحدث بها مع نموذجك. يوفّر Ollama الـ API؛ والواجهة الأمامية هي الواجهة المرئية.',
             '**Open WebUI** هي الأكثر اكتمالاً في الميزات (RAG، متعددة الوسائط، قواعد المعرفة، استدعاء الدوال). تتطلب Docker. يُوصى بـ 12 GB من RAM أو أكثر.',
@@ -2288,6 +2405,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Os melhores frontends LLM locais em abril de 2026: Open WebUI (mais recursos, RAG, Docker, 12 GB RAM+), Enchanted UI (app de navegador sem configuração), Jan AI (app desktop offline) — todos gratuitos e open source.' }, { type: 'plain-terms', text: 'Um "frontend" é a janela de chat onde você digita — ele se conecta ao Ollama ou LM Studio que roda em segundo plano. Open WebUI é o mais poderoso mas requer Docker. Enchanted UI é o mais simples — abra uma URL e comece.' }],
           items: [
             'Um frontend para LLM local é a interface de chat com a qual você fala com o seu modelo. Ollama fornece a API; o frontend é a interface visual.',
             '**Open WebUI** é o mais completo em funcionalidades (RAG, multimodal, bases de conhecimento, chamadas de função). Requer Docker. 12 GB+ de RAM recomendados.',
@@ -2398,6 +2516,7 @@ schema: {
     tldr: {
       id: 'key-takeaways',
       isTldr: true,
+      snippetBlocks: [{ type: 'one-sentence', text: '2026년 4월 최고의 로컬 LLM 프론트엔드: Open WebUI(최다 기능, RAG, Docker, 12 GB RAM+), Enchanted UI(제로 설치 브라우저 앱), Jan AI(오프라인 데스크탑 앱) — 모두 무료 오픈소스.' }, { type: 'plain-terms', text: '"프론트엔드"는 타이핑하는 채팅 창입니다 — 백그라운드에서 실행 중인 Ollama나 LM Studio에 연결됩니다. Open WebUI는 가장 강력하지만 Docker가 필요합니다. Enchanted UI는 가장 간단 — URL 열고 바로 채팅 시작.' }],
       items: [
         '로컬 LLM 프론트엔드는 모델과 대화하기 위해 사용하는 채팅 인터페이스입니다. Ollama가 API를 제공하고, 프론트엔드는 UI를 담당합니다.',
         '**Open WebUI**는 가장 기능이 풍부합니다(RAG, 멀티모달, 지식 베이스, 함수 호출). Docker가 필요합니다. RAM 12 GB 이상을 권장합니다.',

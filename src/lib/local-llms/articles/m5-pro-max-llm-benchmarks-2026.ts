@@ -61,6 +61,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'M5 Pro (307 GB/s) runs Llama 3.3 8B Q4 at 50–60 tok/s and 70B Q4 at 8–12 tok/s; M5 Max (614 GB/s) doubles throughput — 100–120 tok/s on 8B, 15–20 tok/s on 70B Q5 — because memory bandwidth directly controls LLM generation speed on Apple Silicon.' },
+          { type: 'plain-terms', text: 'Memory bandwidth is how fast your chip can move data from memory to the processor. LLM generation is bottlenecked by this speed, not compute power. M5 Max has exactly 2× the bandwidth of M5 Pro, which is why it generates tokens almost 2× faster for the same model.' },
+        ],
         items: [
           'M5 Pro (307 GB/s) generates 50–60 tok/s on Llama 3.3 8B Q4. M5 Max (614 GB/s) generates 100–120 tok/s on the same model.',
           'Speed scales linearly with memory bandwidth. M5 Max has 2× bandwidth = 2× speed for identical models.',
@@ -319,6 +323,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'El M5 Pro (307 GB/s) alcanza 50–60 tok/s en Llama 3.3 8B Q4 y 8–12 tok/s en 70B Q4; el M5 Max (614 GB/s) dobla el rendimiento — 100–120 tok/s en 8B, 15–20 tok/s en 70B Q5 — porque el ancho de banda de memoria determina directamente la velocidad de generación LLM en Apple Silicon.' },
+          { type: 'plain-terms', text: 'El ancho de banda de memoria es la velocidad a la que el chip mueve datos al procesador. La generación LLM tiene como cuello de botella esta velocidad. El M5 Max tiene el doble de ancho de banda que el M5 Pro, generando tokens casi 2× más rápido con el mismo modelo.' },
+        ],
         items: [
           'M5 Pro (307 GB/s) genera 50–60 tok/s en Llama 3.3 8B Q4. M5 Max (614 GB/s) genera 100–120 tok/s en el mismo modelo.',
           'La velocidad escala linealmente con el ancho de banda de memoria. M5 Max tiene 2× ancho de banda = 2× velocidad para modelos idénticos.',
@@ -586,6 +594,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'M5 Pro (307 جيجابايت/ثانية) يصل إلى 50–60 رمزاً/ثانية على Llama 3.3 8B Q4 و8–12 رمزاً/ثانية على 70B Q4؛ M5 Max (614 جيجابايت/ثانية) يضاعف الإنتاجية — 100–120 رمز/ثانية على 8B، و15–20 رمز/ثانية على 70B Q5 — لأن عرض نطاق الذاكرة يحدد سرعة توليد LLM مباشرةً على Apple Silicon.' },
+          { type: 'plain-terms', text: 'عرض نطاق الذاكرة هو سرعة نقل الشريحة للبيانات إلى المعالج. توليد LLM محدود بهذه السرعة وليس بقوة الحوسبة. M5 Max لديه ضعف عرض نطاق M5 Pro، لذا يولّد الرموز بسرعة أكبر بمقدار مرتين تقريباً.' },
+        ],
         items: [
           'يولّد M5 Pro (307 GB/s) سرعة 50–60 tok/s على Llama 3.3 8B Q4. يولّد M5 Max (614 GB/s) سرعة 100–120 tok/s على النموذج نفسه.',
           'تتوسّع السرعة خطيًا مع عرض نطاق الذاكرة. M5 Max لديه 2× عرض نطاق = 2× سرعة للنماذج المتطابقة.',
@@ -853,6 +865,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'M5 Pro (307 GB/s) alcança 50–60 tok/s em Llama 3.3 8B Q4 e 8–12 tok/s em 70B Q4; M5 Max (614 GB/s) dobra o desempenho — 100–120 tok/s em 8B, 15–20 tok/s em 70B Q5 — pois a largura de banda de memória determina diretamente a velocidade de geração LLM no Apple Silicon.' },
+          { type: 'plain-terms', text: 'Largura de banda de memória é a velocidade com que o chip move dados para o processador. A geração LLM é limitada por essa velocidade. M5 Max tem 2× a largura de banda do M5 Pro, gerando tokens quase 2× mais rápido para o mesmo modelo.' },
+        ],
         items: [
           'M5 Pro (307 GB/s) gera 50–60 tok/s no Llama 3.3 8B Q4. M5 Max (614 GB/s) gera 100–120 tok/s no mesmo modelo.',
           'A velocidade escala linearmente com a largura de banda de memória. M5 Max tem 2× largura de banda = 2× velocidade para modelos idênticos.',
@@ -1141,6 +1157,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'M5 Pro (307 GB/s) erreicht 50–60 Tok/s bei Llama 3.3 8B Q4 und 8–12 Tok/s bei 70B Q4; M5 Max (614 GB/s) verdoppelt den Durchsatz — 100–120 Tok/s bei 8B, 15–20 Tok/s bei 70B Q5 — weil Speicherbandbreite die LLM-Generierungsgeschwindigkeit auf Apple Silicon direkt bestimmt.' },
+          { type: 'plain-terms', text: 'Speicherbandbreite ist die Geschwindigkeit, mit der ein Chip Daten vom Speicher zum Prozessor bewegt. LLM-Generierung ist dadurch begrenzt, nicht durch Rechenleistung. M5 Max hat genau die doppelte Bandbreite des M5 Pro und generiert Tokens fast 2× schneller.' },
+        ],
         items: [
           'M5 Pro (307 GB/s) generiert 50–60 tok/s bei Llama 3.3 8B Q4. M5 Max (614 GB/s) generiert 100–120 tok/s beim gleichen Modell.',
           'Geschwindigkeit skaliert linear mit Speicherbandbreite. M5 Max mit 2× Bandbreite = 2× Geschwindigkeit bei identischen Modellen.',
@@ -1425,6 +1445,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Le M5 Pro (307 Go/s) atteint 50–60 tok/s sur Llama 3.3 8B Q4 et 8–12 tok/s sur 70B Q4 ; le M5 Max (614 Go/s) double le débit — 100–120 tok/s sur 8B, 15–20 tok/s sur 70B Q5 — car la bande passante mémoire détermine directement la vitesse de génération LLM sur Apple Silicon.' },
+          { type: 'plain-terms', text: 'La bande passante mémoire est la vitesse à laquelle le chip déplace les données vers le processeur. La génération LLM est limitée par cette vitesse, pas par la puissance de calcul. Le M5 Max a 2× la bande passante du M5 Pro, d\'où une vitesse de génération presque 2× plus élevée.' },
+        ],
         items: [
           'M5 Pro (307 GB/s) génère 50–60 tok/s sur Llama 3.3 8B Q4. M5 Max (614 GB/s) génère 100–120 tok/s sur le même modèle.',
           'Vitesse évolue linéairement avec bande passante. M5 Max avec 2× bande = 2× vitesse sur modèles identiques.',
@@ -1720,6 +1744,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'M5 Pro（307 GB/s）はLlama 3.3 8B Q4で50〜60トークン/秒、70B Q4で8〜12トークン/秒；M5 Max（614 GB/s）はスループットを倍増 — 8Bで100〜120トークン/秒、70B Q5で15〜20トークン/秒 — Apple SiliconではメモリバンドウィズがLLM生成速度を直接決定するため。' },
+          { type: 'plain-terms', text: 'メモリ帯域幅とは、チップがメモリからプロセッサにデータを移動させる速度です。LLMの生成はこの速度によってボトルネックが生じます。M5 MaxはM5 Proの正確に2倍の帯域幅を持つため、ほぼ2倍速くトークンを生成します。' },
+        ],
         items: [
           'M5 Pro(307 GB/s)はLlama 3.3 8B Q4で50～60 tok/s。M5 Max(614 GB/s)は同一モデルで100～120 tok/s。',
           '速度はメモリ帯域幅に比例。M5 Max(2倍帯域幅) = 2倍速度(同一モデル)。',
@@ -2027,6 +2055,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'M5 Pro（307 GB/s）在Llama 3.3 8B Q4上达到50–60 tok/s，70B Q4达到8–12 tok/s；M5 Max（614 GB/s）吞吐量翻倍——8B达到100–120 tok/s，70B Q5达到15–20 tok/s——因为内存带宽直接决定Apple Silicon上的LLM生成速度。' },
+          { type: 'plain-terms', text: '内存带宽是芯片将数据从内存移到处理器的速度。LLM生成的瓶颈在于这个速度，而非计算能力。M5 Max的带宽正好是M5 Pro的2倍，因此token生成速度几乎快2倍。' },
+        ],
         items: [
           'M5 Pro(307 GB/s)在Llama 3.3 8B Q4上生成50-60 tok/s。M5 Max(614 GB/s)在同一模型上生成100-120 tok/s。',
           '速度与内存带宽线性扩展。M5 Max(2倍带宽) = 2倍速度(相同模型)。',
@@ -2282,6 +2314,10 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'M5 Pro(307 GB/s)는 Llama 3.3 8B Q4에서 50–60 tok/s, 70B Q4에서 8–12 tok/s; M5 Max(614 GB/s)는 처리량 2배 — 8B에서 100–120 tok/s, 70B Q5에서 15–20 tok/s — Apple Silicon에서 메모리 대역폭이 LLM 생성 속도를 직접 결정하기 때문.' },
+          { type: 'plain-terms', text: '메모리 대역폭은 칩이 메모리에서 프로세서로 데이터를 이동시키는 속도입니다. LLM 생성의 병목은 연산 능력이 아닌 이 속도입니다. M5 Max는 M5 Pro의 정확히 2배 대역폭으로 같은 모델에서 약 2배 빠르게 토큰을 생성합니다.' },
+        ],
         items: [
           'M5 Pro(307 GB/s)는 Llama 3.3 8B Q4에서 50–60 tok/s를 생성합니다. M5 Max(614 GB/s)는 동일 모델에서 100–120 tok/s를 생성합니다.',
           '속도는 메모리 대역폭에 선형적으로 비례합니다. M5 Max는 2배 대역폭 = 동일 모델에서 2배 속도입니다.',

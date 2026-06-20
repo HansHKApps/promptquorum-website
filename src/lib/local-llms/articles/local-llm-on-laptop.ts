@@ -49,6 +49,116 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Common Questions About Running Local LLMs on Laptops', anchor: '#faq' },
         { label: 'Sources', anchor: '#sources' },
       ],
+      quickAnswerTop: {
+        en: {
+          question: 'Can you run a local LLM on a laptop?',
+          answer: 'Yes. Apple Silicon MacBook Pro (M3/M4/M5) is the best laptop for local LLMs — 7B models run at 50–80 tok/s. Minimum requirements: 8 GB RAM for 7B models, 16 GB for 13B. On Windows/Linux: 8 GB handles Q4_K_M 7B, 16 GB handles 13B. Expect 20–40% speed drop after 10–15 min from thermal throttling, and 30–60% battery drain per hour during inference.',
+          bullets: [
+            '→ Apple Silicon MacBook Pro (M3/M4/M5): best laptop for LLMs — 7B at 50–80 tok/s',
+            '→ Minimum: 8 GB RAM for 7B models; 16 GB RAM for 13B models',
+            '→ Windows/Linux 8 GB: Q4_K_M 7B only; 16 GB: up to 13B',
+            '→ Thermal throttling: 20–40% speed loss after 10–15 min of sustained inference',
+            '→ Battery impact: 30–60% drain per hour during active LLM inference',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'Kann man ein lokales LLM auf einem Laptop ausführen?',
+          answer: 'Ja. Apple Silicon MacBook Pro (M3/M4/M5) ist der beste Laptop für lokale LLMs — 7B-Modelle laufen mit 50–80 Tok/s. Mindestanforderungen: 8 GB RAM für 7B-Modelle, 16 GB für 13B. Unter Windows/Linux: 8 GB für Q4_K_M 7B, 16 GB für 13B. Erwartet nach 10–15 min durch Thermal Throttling 20–40 % Geschwindigkeitsverlust und 30–60 % Akkuverbrauch pro Stunde.',
+          bullets: [
+            '→ Apple Silicon MacBook Pro (M3/M4/M5): bester Laptop für LLMs — 7B mit 50–80 Tok/s',
+            '→ Mindestens: 8 GB RAM für 7B; 16 GB RAM für 13B',
+            '→ Windows/Linux 8 GB: nur Q4_K_M 7B; 16 GB: bis zu 13B',
+            '→ Thermal Throttling: 20–40 % Geschwindigkeitsverlust nach 10–15 min',
+            '→ Akku: 30–60 % Verbrauch pro Stunde bei aktiver LLM-Inferenz',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'Peut-on faire tourner un LLM local sur un ordinateur portable ?',
+          answer: 'Oui. Le MacBook Pro Apple Silicon (M3/M4/M5) est le meilleur laptop pour les LLM locaux — les modèles 7B tournent à 50–80 tok/s. Prérequis minimums : 8 Go de RAM pour les 7B, 16 Go pour les 13B. Sur Windows/Linux : 8 Go pour Q4_K_M 7B, 16 Go pour 13B. Prévoir une perte de vitesse de 20–40 % après 10–15 min de charge soutenue (thermal throttling) et une décharge de 30–60 % de batterie par heure.',
+          bullets: [
+            '→ MacBook Pro Apple Silicon (M3/M4/M5) : meilleur laptop pour LLMs — 7B à 50–80 tok/s',
+            '→ Minimum : 8 Go RAM pour 7B ; 16 Go pour 13B',
+            "→ Windows/Linux 8 Go : Q4_K_M 7B seulement ; 16 Go : jusqu'à 13B",
+            '→ Thermal throttling : 20–40 % de perte de vitesse après 10–15 min',
+            "→ Batterie : 30–60 % par heure lors de l'inférence active",
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: 'ラップトップでローカルLLMを実行できますか？',
+          answer: 'はい。Apple Silicon MacBook Pro（M3/M4/M5）がローカルLLM向け最良のノートPCで、7Bモデルが50〜80トークン/秒で動作します。最低要件：7Bモデルに8 GB RAM、13Bモデルに16 GB RAM。Windows/Linux：8 GBでQ4_K_M 7B、16 GBで13B。10〜15分の持続負荷後にサーマルスロットリングで20〜40%速度低下、推論中1時間あたり30〜60%のバッテリー消耗が見込まれます。',
+          bullets: [
+            '→ Apple Silicon MacBook Pro（M3/M4/M5）：LLM向けノートPC最良 — 7Bで50〜80トークン/秒',
+            '→ 最低：7Bに8 GB RAM；13Bに16 GB RAM',
+            '→ Windows/Linux 8 GB：Q4_K_M 7Bのみ；16 GB：13Bまで',
+            '→ サーマルスロットリング：10〜15分後に20〜40%速度低下',
+            '→ バッテリー：推論中1時間あたり30〜60%消耗',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '可以在笔记本电脑上运行本地LLM吗？',
+          answer: '可以。Apple Silicon MacBook Pro（M3/M4/M5）是运行本地LLM的最佳笔记本，7B模型可达50–80 tok/s。最低要求：7B模型需8 GB内存，13B需16 GB。Windows/Linux：8 GB支持Q4_K_M 7B，16 GB支持13B。持续推理10–15分钟后因热降频速度下降20–40%，推理时每小时耗电30–60%。',
+          bullets: [
+            '→ Apple Silicon MacBook Pro（M3/M4/M5）：运行LLM的最佳笔记本 — 7B达50–80 tok/s',
+            '→ 最低：7B需8 GB内存；13B需16 GB内存',
+            '→ Windows/Linux 8 GB：仅支持Q4_K_M 7B；16 GB：支持13B',
+            '→ 热降频：持续推理10–15分钟后速度下降20–40%',
+            '→ 电池：推理期间每小时耗电30–60%',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: '¿Se puede ejecutar un LLM local en un portátil?',
+          answer: 'Sí. El MacBook Pro Apple Silicon (M3/M4/M5) es el mejor portátil para LLMs locales — los modelos 7B funcionan a 50–80 tok/s. Requisitos mínimos: 8 GB RAM para modelos 7B, 16 GB para 13B. En Windows/Linux: 8 GB para Q4_K_M 7B, 16 GB para 13B. Esperar una pérdida de velocidad del 20–40% tras 10–15 min por throttling térmico y un consumo de batería del 30–60% por hora.',
+          bullets: [
+            '→ MacBook Pro Apple Silicon (M3/M4/M5): mejor portátil para LLMs — 7B a 50–80 tok/s',
+            '→ Mínimo: 8 GB RAM para 7B; 16 GB RAM para 13B',
+            '→ Windows/Linux 8 GB: solo Q4_K_M 7B; 16 GB: hasta 13B',
+            '→ Throttling térmico: pérdida de velocidad 20–40% tras 10–15 min',
+            '→ Batería: 30–60% por hora durante la inferencia activa',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'É possível rodar um LLM local em um notebook?',
+          answer: 'Sim. MacBook Pro Apple Silicon (M3/M4/M5) é o melhor notebook para LLMs locais — modelos 7B rodam a 50–80 tok/s. Requisitos mínimos: 8 GB RAM para 7B, 16 GB para 13B. Windows/Linux: 8 GB suporta Q4_K_M 7B, 16 GB suporta 13B. Espere queda de velocidade de 20–40% após 10–15 min por throttling térmico e consumo de bateria de 30–60% por hora.',
+          bullets: [
+            '→ MacBook Pro Apple Silicon (M3/M4/M5): melhor notebook para LLMs — 7B a 50–80 tok/s',
+            '→ Mínimo: 8 GB RAM para 7B; 16 GB RAM para 13B',
+            '→ Windows/Linux 8 GB: apenas Q4_K_M 7B; 16 GB: até 13B',
+            '→ Throttling térmico: queda de 20–40% após 10–15 min de uso intenso',
+            '→ Bateria: 30–60% por hora durante a inferência ativa',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'هل يمكن تشغيل نموذج LLM محلي على حاسوب محمول؟',
+          answer: 'نعم. MacBook Pro بشريحة Apple Silicon (M3/M4/M5) هو أفضل حاسوب محمول للنماذج المحلية — نماذج 7B تعمل بـ 50–80 رمز/ثانية. الحد الأدنى: 8 جيجابايت RAM لنماذج 7B، 16 جيجابايت لـ 13B. على Windows/Linux: 8 جيجابايت لـ Q4_K_M 7B، و16 جيجابايت لـ 13B. توقّع فقداناً في السرعة 20–40% بعد 10–15 دقيقة بسبب التقييد الحراري، واستهلاك 30–60% من البطارية في الساعة.',
+          bullets: [
+            '→ MacBook Pro Apple Silicon (M3/M4/M5): أفضل محمول للنماذج — 7B بـ 50–80 رمز/ث',
+            '→ الحد الأدنى: 8 جيجابايت RAM لـ 7B؛ 16 جيجابايت لـ 13B',
+            '→ Windows/Linux 8 جيجابايت: Q4_K_M 7B فقط؛ 16 جيجابايت: حتى 13B',
+            '→ التقييد الحراري: خسارة 20–40% في السرعة بعد 10–15 دقيقة',
+            '→ البطارية: 30–60% استهلاك في الساعة أثناء الاستدلال النشط',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '노트북에서 로컬 LLM을 실행할 수 있나요?',
+          answer: '네. Apple Silicon MacBook Pro(M3/M4/M5)가 로컬 LLM용 최고의 노트북 — 7B 모델이 50–80 tok/s로 실행됩니다. 최소 요건: 7B 모델에 8 GB RAM, 13B에 16 GB. Windows/Linux: 8 GB는 Q4_K_M 7B, 16 GB는 13B 지원. 지속 추론 10–15분 후 열 쓰로틀링으로 20–40% 속도 감소, 추론 중 시간당 30–60% 배터리 소모 예상.',
+          bullets: [
+            '→ Apple Silicon MacBook Pro(M3/M4/M5): LLM용 최고 노트북 — 7B에서 50–80 tok/s',
+            '→ 최소: 7B에 8 GB RAM; 13B에 16 GB RAM',
+            '→ Windows/Linux 8 GB: Q4_K_M 7B만 가능; 16 GB: 13B까지',
+            '→ 열 쓰로틀링: 지속 추론 10–15분 후 20–40% 속도 감소',
+            '→ 배터리: 추론 중 시간당 30–60% 소모',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       sections: {
         quickAnswerByRam: {
           id: 'quick-answer-ram',
@@ -67,6 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Laptops can run local LLMs: Apple Silicon MacBook Pro (M3/M4/M5) is the best at 50–80 tok/s on 7B models; minimum 8 GB RAM for 7B, 16 GB for 13B; expect 20–40% speed drop from thermal throttling after 10–15 min of sustained inference.' }, { type: 'plain-terms', text: 'Your laptop\'s main bottleneck for local AI is RAM — the model must fit entirely in memory. Thermal throttling means your chip slows itself down to avoid overheating, which drops token speed after sustained use. Use a cooling pad or lower the quantization (e.g., Q4_K_S instead of Q4_K_M) to reduce heat.' }],
           items: [
             'A 3B or 7B model at Q4_K_M quantization runs usably on any modern laptop with 8 GB RAM.',
             'Apple Silicon MacBooks (M1, M2, M3, M4) outperform most Windows laptops for local inference due to unified memory and Metal GPU acceleration -- an M3 MacBook Pro runs a 7B model at 50-80 tok/sec.',
@@ -587,6 +698,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Los portátiles pueden ejecutar LLMs locales: MacBook Pro Apple Silicon (M3/M4/M5) es el mejor con 50–80 tok/s en modelos 7B; mínimo 8 GB RAM para 7B, 16 GB para 13B; esperar una pérdida de velocidad del 20–40% por throttling térmico tras 10–15 min de inferencia sostenida.' }, { type: 'plain-terms', text: 'El cuello de botella principal para IA local en portátiles es la RAM — el modelo debe caber completamente en memoria. El throttling térmico ralentiza el chip para evitar el sobrecalentamiento. Usa un soporte refrigerador o una cuantización más baja (Q4_K_S en vez de Q4_K_M) para reducir el calor.' }],
           items: [
             'Un modelo 3B o 7B con cuantización Q4_K_M funciona de forma utilizable en cualquier portátil moderno con 8 GB de RAM.',
             'Los MacBook con Apple Silicon (M1, M2, M3, M4) superan a la mayoría de portátiles Windows en inferencia local gracias a la memoria unificada y la aceleración GPU Metal -- un MacBook Pro M3 ejecuta un modelo 7B a 50–80 tok/seg.',
@@ -1112,6 +1224,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'الحواسيب المحمولة قادرة على تشغيل النماذج اللغوية المحلية: MacBook Pro بـ Apple Silicon (M3/M4/M5) الأفضل بـ 50–80 رمز/ث على نماذج 7B؛ 8 جيجابايت RAM كحد أدنى لـ 7B، و16 جيجابايت لـ 13B؛ توقّع فقداناً 20–40% في السرعة بسبب التقييد الحراري بعد 10–15 دقيقة.' }, { type: 'plain-terms', text: 'العقبة الرئيسية في الحواسيب المحمولة هي RAM — يجب أن يتسع النموذج بالكامل في الذاكرة. التقييد الحراري يعني إبطاء الشريحة لمنع الارتفاع الحراري. استخدم قاعدة تبريد أو اختر ضغطاً أقل (مثل Q4_K_S عوضاً عن Q4_K_M) لتقليل الحرارة.' }],
           items: [
             'نموذج 3B أو 7B بتكميم Q4_K_M يعمل بشكل قابل للاستخدام على أي لابتوب حديث بذاكرة 8 GB من RAM.',
             'أجهزة MacBook بـ Apple Silicon (M1، M2، M3، M4) تتفوق على معظم أجهزة لابتوب Windows في الاستدلال المحلي بفضل الذاكرة الموحدة وتسريع GPU من Metal -- يشغّل MacBook Pro M3 نموذج 7B بسرعة 50–80 tok/ث.',
@@ -1630,6 +1743,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Laptops können lokale LLMs ausführen: Apple Silicon MacBook Pro (M3/M4/M5) ist am besten mit 50–80 Tok/s bei 7B-Modellen; mindestens 8 GB RAM für 7B, 16 GB für 13B; 20–40 % Geschwindigkeitsverlust durch Thermal Throttling nach 10–15 min zu erwarten.' }, { type: 'plain-terms', text: 'Der Engpass bei lokaler KI auf Laptops ist RAM — das Modell muss vollständig in den Speicher passen. Thermal Throttling bedeutet, dass sich der Chip abkühlt und langsamer wird. Kühlpad oder niedrigere Quantisierung (z. B. Q4_K_S statt Q4_K_M) verwenden, um Wärme zu reduzieren.' }],
           items: [
             'Ein 3B- oder 7B-Modell in Q4_K_M-Quantisierung läuft auf jedem modernen Laptop mit 8 GB RAM nutzbar.',
             'Apple Silicon MacBooks (M1, M2, M3, M4, M5) übertreffen die meisten Windows-Laptops bei lokaler Inferenz aufgrund von vereinheitlichtem Speicher und Metal-GPU-Beschleunigung -- ein M3 MacBook Pro führt ein 7B-Modell mit 50-80 Token/Sek. aus.',
@@ -2024,6 +2138,7 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Notebooks podem rodar LLMs locais: MacBook Pro Apple Silicon (M3/M4/M5) é o melhor com 50–80 tok/s em modelos 7B; mínimo 8 GB RAM para 7B, 16 GB para 13B; espere queda de 20–40% de velocidade por throttling térmico após 10–15 min.' }, { type: 'plain-terms', text: 'O principal gargalo para IA local em notebooks é a RAM — o modelo precisa caber inteiramente na memória. Throttling térmico é quando o chip desacelera para evitar superaquecimento. Use um suporte resfriador ou quantização menor (Q4_K_S em vez de Q4_K_M) para reduzir calor.' }],
           items: [
             'Notebooks de 8 GB de RAM: use modelos 3B–7B em Q4_K_M. Velocidade na CPU: 10–25 tok/s.',
             'Apple Silicon M3/M4: 50–80 tok/s com Metal. O melhor hardware de notebook para LLMs locais.',
@@ -2084,6 +2199,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Les laptops peuvent faire tourner des LLM locaux : le MacBook Pro Apple Silicon (M3/M4/M5) est le meilleur à 50–80 tok/s sur les modèles 7B ; minimum 8 Go RAM pour 7B, 16 Go pour 13B ; prévoir 20–40 % de perte de vitesse due au thermal throttling après 10–15 min.' }, { type: 'plain-terms', text: "Le principal goulot d'étranglement pour l'IA locale sur laptop est la RAM — le modèle doit entièrement tenir en mémoire. Le thermal throttling ralentit le chip pour éviter la surchauffe. Utiliser un support de refroidissement ou une quantisation plus basse pour réduire la chaleur." }],
           items: [
             'Un modèle 3B ou 7B en quantification Q4_K_M fonctionne de manière utilisable sur n\'importe quel ordinateur portable moderne avec 8 GB de RAM.',
             'Les MacBooks Apple Silicon (M1, M2, M3, M4, M5) surpassent la plupart des ordinateurs portables Windows pour l\'inférence locale grâce à la mémoire unifiée et à l\'accélération GPU Metal -- un MacBook Pro M3 exécute un modèle 7B à 50-80 token/sec.',
@@ -2488,6 +2604,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'ノートPCでローカルLLMを実行可能：Apple Silicon MacBook Pro（M3/M4/M5）が7Bモデルで50〜80トークン/秒と最良；7Bに最低8 GB RAM、13Bに16 GB必要；10〜15分の連続推論後にサーマルスロットリングで20〜40%速度低下の見込み。' }, { type: 'plain-terms', text: 'ノートPCでのローカルAIの最大ボトルネックはRAMです。モデル全体がメモリに収まらなければなりません。サーマルスロットリングとは、過熱防止のためにチップが自動的に速度を下げる機能です。冷却パッドや低量子化（Q4_K_SなどQ4_K_Mより低い）で発熱を抑えましょう。' }],
           items: [
             'Q4_K_M量子化の3Bまたは7Bモデルは、8GBのRAMを備えたどのモダンノートパソコンでも実用的に実行されます。',
             'Apple Silicon MacBook（M1、M2、M3、M4）は統合メモリとMetal GPU加速のため、ほとんどのWindowsノートパソコンをローカル推論で上回ります--M3 MacBook Proは50-80トークン/秒で7Bモデルを実行します。',
@@ -2892,6 +3009,7 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '笔记本可以运行本地LLM：Apple Silicon MacBook Pro（M3/M4/M5）7B模型达50–80 tok/s最佳；7B最低需8 GB内存，13B需16 GB；持续推理10–15分钟后因热降频速度下降20–40%。' }, { type: 'plain-terms', text: '笔记本运行本地AI的主要瓶颈是内存——模型必须完全放入内存。热降频是指芯片为防止过热自动降速。可使用散热垫或降低量化精度（如Q4_K_S代替Q4_K_M）来减少发热。' }],
           items: [
             'Q4_K_M量化的3B或7B模型在任何配有8GB RAM的现代笔记本电脑上都可以实用地运行。',
             'Apple Silicon MacBook（M1、M2、M3、M4）由于统一内存和Metal GPU加速，在本地推理中超过大多数Windows笔记本 -- M3 MacBook Pro以50-80令牌/秒运行7B模型。',
@@ -3306,6 +3424,7 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: '노트북에서 로컬 LLM 실행 가능: Apple Silicon MacBook Pro(M3/M4/M5)가 7B 모델에서 50–80 tok/s로 최고; 7B에 최소 8 GB RAM, 13B에 16 GB 필요; 10–15분 지속 추론 후 열 쓰로틀링으로 20–40% 속도 저하 예상.' }, { type: 'plain-terms', text: '노트북 로컬 AI의 주요 병목은 RAM — 모델 전체가 메모리에 들어야 합니다. 열 쓰로틀링은 과열 방지를 위해 칩이 자동으로 속도를 낮추는 것입니다. 쿨링 패드 사용하거나 더 낮은 양자화(Q4_K_M 대신 Q4_K_S)로 발열을 줄이세요.' }],
           items: [
             'Q4_K_M 양자화 방식의 3B 또는 7B 모델은 8GB RAM이 탑재된 최신 노트북에서 실용적으로 사용할 수 있습니다.',
             'Apple Silicon MacBook(M1, M2, M3, M4)은 통합 메모리와 Metal GPU 가속 덕분에 대부분의 Windows 노트북보다 로컬 추론 성능이 뛰어납니다 -- M3 MacBook Pro는 7B 모델을 50~80토큰/초로 실행합니다.',

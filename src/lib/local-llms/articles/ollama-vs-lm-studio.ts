@@ -110,6 +110,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama (CLI, port 11434, OpenAI-compatible REST API) is best for developers and automation; LM Studio (GUI, port 1234, model browser) is best for beginners who prefer a visual interface — both are free and install in under 5 minutes.' },
+            { type: 'plain-terms', text: 'Both tools let you download and run AI models locally on your computer for free. Ollama uses your terminal (command line), exposes an API for apps to connect, and is better for automating tasks. LM Studio is a graphical app — you click to download models, browse them in a list, and chat in a built-in window.' },
+          ],
           items: [
             'Ollama and LM Studio are the two dominant local LLM tools. Both run the same models and produce identical inference speed.',
             '**Ollama** = lightweight CLI with REST API (OpenAI-compatible). No GUI. Works on macOS, Linux, Windows. Best for developers, production, automation.',
@@ -427,6 +431,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama (CLI, Port 11434, OpenAI-kompatibler REST API) ist am besten für Entwickler und Automatisierung; LM Studio (GUI, Port 1234, Modell-Browser) ist am besten für Einsteiger mit grafischer Oberfläche — beide kostenlos und in unter 5 Minuten installiert.' },
+            { type: 'plain-terms', text: 'Beide Tools ermöglichen das kostenlose lokale Ausführen von KI-Modellen. Ollama arbeitet über das Terminal, stellt eine API bereit und eignet sich besser für die Automatisierung. LM Studio ist eine grafische App — Modelle per Klick herunterladen, in einer Liste durchsuchen und in einem integrierten Fenster chatten.' },
+          ],
           items: [
             'Ollama und LM Studio sind die beiden führenden lokalen LLM-Tools. Beide laufen auf denselben Modellen und produzieren identische Inferenzgeschwindigkeit.',
             '**Ollama** = leichtgewichtiges CLI mit REST-API (OpenAI-kompatibel). Keine GUI. Funktioniert auf macOS, Linux, Windows. Ideal für Entwickler, Produktion, Automatisierung.',
@@ -751,6 +759,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama (CLI, port 11434, REST API compatible OpenAI) est idéal pour les développeurs et l\'automatisation ; LM Studio (GUI, port 1234, explorateur de modèles) est idéal pour les débutants préférant une interface visuelle — tous deux gratuits et installés en moins de 5 minutes.' },
+            { type: 'plain-terms', text: 'Les deux outils permettent de télécharger et d\'exécuter des modèles IA localement, gratuitement. Ollama utilise le terminal, expose une API et convient mieux à l\'automatisation. LM Studio est une application graphique — téléchargez des modèles en un clic, parcourez-les dans une liste et chattez dans une fenêtre intégrée.' },
+          ],
           items: [
             'Ollama et LM Studio sont les deux principaux outils LLM locaux. Tous deux exécutent les mêmes modèles et produisent une vitesse d\'inférence identique.',
             '**Ollama** = CLI léger avec API REST (compatible OpenAI). Pas de GUI. Fonctionne sur macOS, Linux, Windows. Idéal pour développeurs, production, automatisation.',
@@ -1073,6 +1085,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama（CLI、ポート11434、OpenAI互換REST API）は開発者・自動化に最適；LM Studio（GUI、ポート1234、モデルブラウザ）はビジュアルUIを好む初心者に最適 — どちらも無料、5分以内にインストール完了。' },
+            { type: 'plain-terms', text: 'どちらのツールも無料でAIモデルをローカルで実行できます。Ollamaはターミナルを使用しAPIを公開し、自動化に適しています。LM Studioはグラフィカルアプリで、クリックでモデルをダウンロードし、一覧から選び、内蔵ウィンドウでチャットできます。' },
+          ],
           items: [
             'Ollama と LM Studio は両トップ クラスのローカル LLM ツール。同一モデルで同一推論速度。',
             '**Ollama** = 軽量 CLI + REST API (OpenAI 互換)。GUI なし。macOS、Linux、Windows で動作。開発者、本番環境、自動化向き。',
@@ -1394,6 +1410,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama（CLI，端口11434，OpenAI兼容REST API）最适合开发者和自动化；LM Studio（GUI，端口1234，模型浏览器）最适合偏好可视化界面的初学者——两者均免费，5分钟内可安装完成。' },
+            { type: 'plain-terms', text: '两个工具都可免费在本地运行AI模型。Ollama使用命令行，提供API接口，更适合自动化。LM Studio是图形应用——点击下载模型，从列表中浏览，在内置窗口中聊天。' },
+          ],
           items: [
             'Ollama 和 LM Studio 是两大本地 LLM 工具。两者运行相同模型、产生相同推理速度。',
             '**Ollama** = 轻量级 CLI + REST API（OpenAI 兼容）。无 GUI。在 macOS、Linux、Windows 上运行。最适合开发者、生产、自动化。',
@@ -1718,6 +1738,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama (CLI, puerto 11434, REST API compatible con OpenAI) es mejor para desarrolladores y automatización; LM Studio (GUI, puerto 1234, explorador de modelos) es mejor para principiantes que prefieren una interfaz visual — ambos gratuitos e instalados en menos de 5 minutos.' },
+            { type: 'plain-terms', text: 'Ambas herramientas permiten descargar y ejecutar modelos de IA localmente de forma gratuita. Ollama usa la terminal, expone una API y es mejor para automatizar tareas. LM Studio es una app gráfica — descarga modelos con un clic, navega por ellos en una lista y chatea en una ventana integrada.' },
+          ],
           items: [
             'Ollama y LM Studio son las dos herramientas LLM locales dominantes. Ambas ejecutan los mismos modelos y producen velocidad de inferencia idéntica.',
             '**Ollama** = CLI ligero con REST API (compatible con OpenAI). Sin interfaz gráfica. Funciona en macOS, Linux, Windows. Ideal para desarrolladores, producción, automatización.',
@@ -2032,6 +2056,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama (CLI، المنفذ 11434، REST API متوافق مع OpenAI) هو الأفضل للمطورين والأتمتة؛ LM Studio (GUI، المنفذ 1234، متصفح النماذج) هو الأفضل للمبتدئين الذين يفضلون الواجهة المرئية — كلاهما مجاني ويُثبَّت في أقل من 5 دقائق.' },
+            { type: 'plain-terms', text: 'كلا الأداتين تتيحان تنزيل نماذج الذكاء الاصطناعي وتشغيلها محلياً مجاناً. Ollama يستخدم الطرفية ويكشف واجهة برمجية، وهو أفضل للأتمتة. LM Studio تطبيق رسومي — نزّل النماذج بنقرة واحدة، تصفّح القائمة، وتحدّث في نافذة مدمجة.' },
+          ],
           items: [
             'Ollama وLM Studio هما أداتا LLM المحلية المهيمنتان. كلاهما يشغّل نفس النماذج وينتج سرعة استدلال متطابقة.',
             '**Ollama** = CLI خفيف بـ API REST (متوافق مع OpenAI). بلا واجهة رسومية. يعمل على macOS وLinux وWindows. مثالي للمطورين والإنتاج والأتمتة.',
@@ -2294,6 +2322,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama (CLI, porta 11434, REST API compatível com OpenAI) é o melhor para desenvolvedores e automação; LM Studio (GUI, porta 1234, navegador de modelos) é o melhor para iniciantes que preferem interface visual — ambos gratuitos e instalados em menos de 5 minutos.' },
+            { type: 'plain-terms', text: 'Ambas as ferramentas permitem baixar e rodar modelos de IA localmente de graça. Ollama usa o terminal, expõe uma API e é melhor para automação. LM Studio é um app gráfico — baixe modelos com um clique, navegue por eles em uma lista e converse em uma janela integrada.' },
+          ],
           items: [
             '**Ollama:** CLI, REST API embutida, sem GUI, ideal para desenvolvedores e automação.',
             '**LM Studio:** GUI desktop, navegador de modelos, chat integrado, ideal para iniciantes.',
@@ -2580,6 +2612,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama(CLI, 포트 11434, OpenAI 호환 REST API)는 개발자와 자동화에 최적; LM Studio(GUI, 포트 1234, 모델 브라우저)는 시각적 인터페이스를 선호하는 초보자에 최적 — 둘 다 무료, 5분 이내 설치 완료.' },
+            { type: 'plain-terms', text: '두 도구 모두 AI 모델을 무료로 로컬에서 실행할 수 있습니다. Ollama는 터미널을 사용하고 API를 노출하며 자동화에 더 적합합니다. LM Studio는 그래픽 앱으로 클릭으로 모델을 다운로드하고, 목록에서 찾아보고, 내장 창에서 채팅할 수 있습니다.' },
+          ],
           items: [
             'Ollama와 LM Studio는 두 가지 주요 로컬 LLM 도구입니다. 두 도구는 동일한 모델을 실행하며 동일한 추론 속도를 제공합니다.',
             '**Ollama** = REST API(OpenAI 호환)를 갖춘 경량 CLI. GUI 없음. macOS, Linux, Windows 지원. 개발자, 운영 환경, 자동화에 최적.',

@@ -33,12 +33,123 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Full Comparison Table', anchor: '#full-comparison-table' },
         { label: 'Which Should You Choose?', anchor: '#which-should-you-choose' },
       ],
+      quickAnswerTop: {
+        en: {
+          question: 'Which local LLM installer is best in 2026: Ollama, LM Studio, Jan AI, or GPT4All?',
+          answer: 'All four install in under 5 minutes, use llama.cpp under the hood, and support GGUF model files. Best choice depends on your use case: Ollama (terminal, OpenAI-compatible API on port 11434, 4,500+ models) for developers; LM Studio (GUI, port 1234, built-in chat browser) for beginners; Jan AI (fully offline, no telemetry, local chat history) for privacy; GPT4All (single installer, easiest setup) for non-technical users.',
+          bullets: [
+            '→ Ollama: best for developers — terminal-first, REST API on port 11434, 4,500+ models',
+            '→ LM Studio: best for beginners — GUI, built-in chat, model browser, port 1234',
+            '→ Jan AI: best for privacy — fully offline, no telemetry, local chat history stored on-device',
+            '→ GPT4All: easiest setup — single installer, non-technical users, Windows/macOS/Linux',
+            '→ All four: <5 min install, llama.cpp backend, can share the same GGUF model files',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'Welches lokale LLM-Installationsprogramm ist 2026 am besten: Ollama, LM Studio, Jan AI oder GPT4All?',
+          answer: 'Alle vier werden in unter 5 Minuten installiert, verwenden llama.cpp im Hintergrund und unterstützen GGUF-Modelldateien. Beste Wahl nach Anwendungsfall: Ollama (Terminal, OpenAI-kompatibler API auf Port 11434, 4.500+ Modelle) für Entwickler; LM Studio (GUI, Port 1234, integrierter Chat-Browser) für Einsteiger; Jan AI (vollständig offline, kein Telemetrie, lokaler Chat-Verlauf) für Datenschutz; GPT4All (einziger Installer, einfachste Einrichtung) für nicht-technische Nutzer.',
+          bullets: [
+            '→ Ollama: bestes für Entwickler — Terminal-first, REST API auf Port 11434, 4.500+ Modelle',
+            '→ LM Studio: bestes für Einsteiger — GUI, integrierter Chat, Modell-Browser, Port 1234',
+            '→ Jan AI: bestes für Datenschutz — vollständig offline, kein Telemetrie, lokaler Chat-Verlauf',
+            '→ GPT4All: einfachste Einrichtung — einzelner Installer, nicht-technische Nutzer',
+            '→ Alle vier: <5 min Installation, llama.cpp-Backend, gemeinsame GGUF-Modelldateien nutzbar',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'Quel installateur LLM local est le meilleur en 2026 : Ollama, LM Studio, Jan AI ou GPT4All ?',
+          answer: 'Les quatre s\'installent en moins de 5 minutes, utilisent llama.cpp en arrière-plan et prennent en charge les fichiers de modèles GGUF. Meilleur choix selon l\'usage : Ollama (terminal, API compatible OpenAI sur port 11434, 4 500+ modèles) pour les développeurs ; LM Studio (GUI, port 1234, navigateur de chat intégré) pour les débutants ; Jan AI (entièrement hors ligne, sans télémétrie, historique local) pour la confidentialité ; GPT4All (installateur unique, configuration la plus facile) pour les non-techniciens.',
+          bullets: [
+            '→ Ollama : meilleur pour les développeurs — terminal, REST API port 11434, 4 500+ modèles',
+            '→ LM Studio : meilleur pour les débutants — GUI, chat intégré, explorateur de modèles, port 1234',
+            '→ Jan AI : meilleur pour la confidentialité — hors ligne, sans télémétrie, historique local',
+            '→ GPT4All : configuration la plus facile — installateur unique, non-techniciens',
+            '→ Les quatre : <5 min d\'installation, backend llama.cpp, fichiers GGUF partagés',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: '2026年にベストなローカルLLMインストーラーは：Ollama、LM Studio、Jan AI、GPT4All？',
+          answer: '4つすべてが5分以内にインストールでき、内部でllama.cppを使用し、GGUFモデルファイルをサポートしています。ユースケース別のベストチョイス：Ollama（ターミナル、ポート11434のOpenAI互換API、4,500以上のモデル）は開発者向け；LM Studio（GUI、ポート1234、内蔵チャットブラウザ）は初心者向け；Jan AI（完全オフライン、テレメトリなし、ローカルチャット履歴）はプライバシー重視向け；GPT4All（シングルインストーラー、最も簡単な設定）は非技術者向け。',
+          bullets: [
+            '→ Ollama：開発者向け最良 — ターミナルファースト、ポート11434 REST API、4,500以上のモデル',
+            '→ LM Studio：初心者向け最良 — GUI、内蔵チャット、モデルブラウザ、ポート1234',
+            '→ Jan AI：プライバシー向け最良 — 完全オフライン、テレメトリなし、ローカルチャット履歴',
+            '→ GPT4All：最も簡単なセットアップ — シングルインストーラー、非技術者向け',
+            '→ 4つすべて：5分未満インストール、llama.cppバックエンド、GGUFファイル共有可能',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '2026年最佳本地LLM安装器：Ollama、LM Studio、Jan AI还是GPT4All？',
+          answer: '四款安装均不超过5分钟，底层均使用llama.cpp，支持GGUF模型文件。按使用场景最优选择：Ollama（终端、11434端口OpenAI兼容API、4500+模型）适合开发者；LM Studio（GUI、1234端口、内置聊天浏览器）适合初学者；Jan AI（完全离线、无遥测、本地聊天记录）适合隐私需求；GPT4All（单一安装包、最易设置）适合非技术用户。',
+          bullets: [
+            '→ Ollama：开发者最佳 — 终端优先，11434端口REST API，4500+模型',
+            '→ LM Studio：初学者最佳 — GUI，内置聊天，模型浏览器，1234端口',
+            '→ Jan AI：隐私最佳 — 完全离线，无遥测，本地聊天记录',
+            '→ GPT4All：最易设置 — 单一安装包，适合非技术用户',
+            '→ 四款均：5分钟内安装，llama.cpp后端，可共享GGUF模型文件',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: '¿Cuál es el mejor instalador de LLM local en 2026: Ollama, LM Studio, Jan AI o GPT4All?',
+          answer: 'Los cuatro se instalan en menos de 5 minutos, usan llama.cpp internamente y admiten archivos de modelos GGUF. La mejor opción según el caso de uso: Ollama (terminal, API compatible OpenAI en puerto 11434, 4.500+ modelos) para desarrolladores; LM Studio (GUI, puerto 1234, navegador de chat integrado) para principiantes; Jan AI (totalmente offline, sin telemetría, historial de chat local) para privacidad; GPT4All (instalador único, configuración más sencilla) para usuarios no técnicos.',
+          bullets: [
+            '→ Ollama: mejor para desarrolladores — terminal, REST API en puerto 11434, 4.500+ modelos',
+            '→ LM Studio: mejor para principiantes — GUI, chat integrado, explorador de modelos, puerto 1234',
+            '→ Jan AI: mejor para privacidad — totalmente offline, sin telemetría, historial local',
+            '→ GPT4All: configuración más sencilla — instalador único, usuarios no técnicos',
+            '→ Los cuatro: <5 min instalación, backend llama.cpp, archivos GGUF compartidos',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'Qual é o melhor instalador de LLM local em 2026: Ollama, LM Studio, Jan AI ou GPT4All?',
+          answer: 'Os quatro se instalam em menos de 5 minutos, usam llama.cpp por baixo e suportam arquivos de modelo GGUF. Melhor escolha por caso de uso: Ollama (terminal, API compatível OpenAI na porta 11434, 4.500+ modelos) para desenvolvedores; LM Studio (GUI, porta 1234, navegador de chat integrado) para iniciantes; Jan AI (totalmente offline, sem telemetria, histórico local) para privacidade; GPT4All (instalador único, configuração mais simples) para usuários não técnicos.',
+          bullets: [
+            '→ Ollama: melhor para desenvolvedores — terminal, REST API na porta 11434, 4.500+ modelos',
+            '→ LM Studio: melhor para iniciantes — GUI, chat integrado, navegador de modelos, porta 1234',
+            '→ Jan AI: melhor para privacidade — totalmente offline, sem telemetria, histórico local',
+            '→ GPT4All: configuração mais simples — instalador único, usuários não técnicos',
+            '→ Os quatro: <5 min de instalação, backend llama.cpp, arquivos GGUF compartilháveis',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'أيها أفضل في 2026: Ollama أم LM Studio أم Jan AI أم GPT4All؟',
+          answer: 'الأربعة تُثبَّت في أقل من 5 دقائق، تستخدم llama.cpp في الخلفية، وتدعم ملفات نماذج GGUF. الأنسب حسب الاستخدام: Ollama (طرفية، API متوافق مع OpenAI على المنفذ 11434، 4,500+ نموذج) للمطورين؛ LM Studio (واجهة رسومية، منفذ 1234، متصفح دردشة مدمج) للمبتدئين؛ Jan AI (بلا إنترنت كلياً، بدون قياس عن بُعد، سجل دردشة محلي) للخصوصية؛ GPT4All (أسهل إعداد، مثبّت واحد) لغير التقنيين.',
+          bullets: [
+            '→ Ollama: الأفضل للمطورين — طرفية، REST API منفذ 11434، 4,500+ نموذج',
+            '→ LM Studio: الأفضل للمبتدئين — واجهة رسومية، دردشة مدمجة، متصفح نماذج، منفذ 1234',
+            '→ Jan AI: الأفضل للخصوصية — بدون إنترنت، بدون قياس عن بُعد، سجل دردشة محلي',
+            '→ GPT4All: الأسهل إعداداً — مثبّت واحد، للمستخدمين غير التقنيين',
+            '→ الأربعة: تثبيت أقل من 5 دقائق، خلفية llama.cpp، ملفات GGUF مشتركة',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '2026년 최고의 로컬 LLM 설치 도구: Ollama, LM Studio, Jan AI, GPT4All 중 무엇?',
+          answer: '네 가지 모두 5분 이내 설치, 내부적으로 llama.cpp 사용, GGUF 모델 파일 지원. 사용 목적별 최선: Ollama(터미널, 11434 포트 OpenAI 호환 API, 4,500개 이상 모델)는 개발자; LM Studio(GUI, 1234 포트, 내장 채팅 브라우저)는 초보자; Jan AI(완전 오프라인, 텔레메트리 없음, 로컬 채팅 기록)는 프라이버시; GPT4All(단일 설치 파일, 가장 쉬운 설정)은 비기술자.',
+          bullets: [
+            '→ Ollama: 개발자 최고 — 터미널 중심, 11434 포트 REST API, 4,500개 이상 모델',
+            '→ LM Studio: 초보자 최고 — GUI, 내장 채팅, 모델 브라우저, 1234 포트',
+            '→ Jan AI: 프라이버시 최고 — 완전 오프라인, 텔레메트리 없음, 로컬 채팅 기록',
+            '→ GPT4All: 가장 쉬운 설정 — 단일 설치 파일, 비기술자용',
+            '→ 네 가지 모두: 5분 이내 설치, llama.cpp 백엔드, GGUF 파일 공유 가능',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-en.svg',
           imageCaption: '4 one-click local LLM installers at a glance: Ollama (port 11434, developers), LM Studio (port 1234, beginners), Jan AI (port 1337, privacy users), GPT4All (port 4891, non-technical). All use llama.cpp and GGUF format.',
+          snippetBlocks: [{ type: 'one-sentence', text: 'In 2026, all major local LLM installers (Ollama, LM Studio, Jan AI, GPT4All) install in under 5 minutes using llama.cpp: Ollama is best for developers (CLI + API), LM Studio for beginners (GUI), Jan AI for privacy (offline), GPT4All for the easiest setup.' }, { type: 'plain-terms', text: 'A "one-click installer" bundles the AI engine, model downloader, and interface into one package — you don\'t need to configure Python or compile code. They all run the same types of models (GGUF files). The difference is the interface: command line vs graphical, and whether you want a local API for your own apps.' }],
           items: [
             '**Ollama**: best for developers -- terminal-first, OpenAI-compatible API, 4,500+ models, runs as a background service.',
             '**LM Studio**: best for beginners who prefer a GUI -- built-in chat, model browser, local server on port 1234.',
@@ -332,6 +443,7 @@ schema: {
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-es.svg',
           imageCaption: '4 instaladores de LLM local de un clic: Ollama (puerto 11434, desarrolladores), LM Studio (puerto 1234, principiantes), Jan AI (puerto 1337, usuarios de privacidad), GPT4All (puerto 4891, no técnicos). Todos usan llama.cpp y formato GGUF.',
+          snippetBlocks: [{ type: 'one-sentence', text: 'En 2026, todos los principales instaladores LLM locales (Ollama, LM Studio, Jan AI, GPT4All) se instalan en menos de 5 minutos usando llama.cpp: Ollama es mejor para desarrolladores (CLI + API), LM Studio para principiantes (GUI), Jan AI para privacidad (offline), GPT4All para la configuración más sencilla.' }, { type: 'plain-terms', text: 'Un "instalador de un clic" empaqueta el motor de IA, el gestor de modelos y la interfaz en un solo paquete — sin configurar Python ni compilar código. Todos ejecutan los mismos tipos de modelos (archivos GGUF). La diferencia está en la interfaz: línea de comandos vs gráfica.' }],
           items: [
             '**Ollama**: ideal para desarrolladores -- orientado a terminal, API compatible con OpenAI, más de 4.500 modelos, se ejecuta como servicio en segundo plano.',
             '**LM Studio**: ideal para principiantes que prefieren una GUI -- chat integrado, explorador de modelos, servidor local en el puerto 1234.',
@@ -625,6 +737,7 @@ schema: {
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-es.svg',
           imageCaption: '4 مثبّتات LLM محلية بنقرة واحدة: Ollama (المنفذ 11434، المطورون)، LM Studio (المنفذ 1234، المبتدئون)، Jan AI (المنفذ 1337، مستخدمو الخصوصية)، GPT4All (المنفذ 4891، غير التقنيين). جميعها تستخدم llama.cpp وصيغة GGUF.',
+          snippetBlocks: [{ type: 'one-sentence', text: 'في 2026، جميع مثبّتات LLM المحلية الرئيسية (Ollama وLM Studio وJan AI وGPT4All) تُثبَّت في أقل من 5 دقائق باستخدام llama.cpp: Ollama للمطورين (CLI + API)، LM Studio للمبتدئين (واجهة رسومية)، Jan AI للخصوصية (بدون إنترنت)، GPT4All للإعداد الأسهل.' }, { type: 'plain-terms', text: '"المثبّت بنقرة واحدة" يجمع محرك الذكاء الاصطناعي ومنزّل النماذج والواجهة في حزمة واحدة — دون الحاجة لإعداد Python أو تجميع الكود. جميعها تشغّل نفس أنواع النماذج (ملفات GGUF). الفرق في الواجهة: سطر أوامر أو رسومية.' }],
           items: [
             '**Ollama**: مثالي للمطورين -- موجّه نحو الطرفية، API متوافقة مع OpenAI، أكثر من 4,500 نموذج، يعمل كخدمة في الخلفية.',
             '**LM Studio**: مثالي للمبتدئين الذين يفضّلون واجهة رسومية -- محادثة مدمجة، مستكشف نماذج، خادم محلي على المنفذ 1234.',
@@ -929,6 +1042,7 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [{ type: 'one-sentence', text: 'Em 2026, todos os principais instaladores de LLM local (Ollama, LM Studio, Jan AI, GPT4All) instalam em menos de 5 minutos com llama.cpp: Ollama é o melhor para desenvolvedores (CLI + API), LM Studio para iniciantes (GUI), Jan AI para privacidade (offline), GPT4All para a configuração mais simples.' }, { type: 'plain-terms', text: 'Um "instalador de um clique" empacota o motor de IA, o downloader de modelos e a interface — sem configurar Python ou compilar código. Todos executam os mesmos tipos de modelos (arquivos GGUF). A diferença é a interface: linha de comando vs gráfica.' }],
           items: [
             'Ollama: terminal + API. Mais de 4.500 modelos curados. Compatível com OpenAI em localhost:11434. Licença MIT. Sem telemetria. Ideal para desenvolvedores.',
             'LM Studio: GUI desktop com busca no HuggingFace. Milhares de modelos GGUF. API em localhost:1234. Freeware de código fechado. Ideal para iniciantes.',
@@ -990,6 +1104,7 @@ schema: {
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-de.svg',
           imageCaption: '4 One-Click Lokale LLM-Installer verglichen -- Ollama (Port 11434), LM Studio (Port 1234), Jan AI (Port 1337), GPT4All (Port 4891): Einsatzbereich, Oberfläche, Open Source, Telemetrie.',
+          snippetBlocks: [{ type: 'one-sentence', text: '2026 installieren alle großen lokalen LLM-Installer (Ollama, LM Studio, Jan AI, GPT4All) in unter 5 Minuten mit llama.cpp: Ollama bestes für Entwickler (CLI + API), LM Studio für Einsteiger (GUI), Jan AI für Datenschutz (offline), GPT4All für einfachste Einrichtung.' }, { type: 'plain-terms', text: 'Ein "Ein-Klick-Installer" bündelt KI-Engine, Modell-Downloader und Oberfläche in einem Paket — kein Python-Setup oder Kompilierung erforderlich. Alle laufen mit den gleichen Modelltypen (GGUF-Dateien). Der Unterschied liegt in der Oberfläche: Kommandozeile vs. grafisch.' }],
           items: [
             '**Ollama**: am besten für Entwickler -- Terminal-first, OpenAI-kompatible API, 200+ Models, läuft als Hintergrunddienst.',
             '**LM Studio**: am besten für Anfänger mit GUI -- integrierter Chat, Model-Browser, lokaler Server auf Port 1234.',
@@ -1269,6 +1384,7 @@ schema: {
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-fr.svg',
           imageCaption: '4 installateurs LLM locaux one-click comparés -- Ollama (port 11434), LM Studio (port 1234), Jan AI (port 1337), GPT4All (port 4891) : cas d\'usage, interface, open source, télémétrie.',
+          snippetBlocks: [{ type: 'one-sentence', text: 'En 2026, tous les principaux installateurs LLM locaux (Ollama, LM Studio, Jan AI, GPT4All) s\'installent en moins de 5 minutes via llama.cpp : Ollama est le meilleur pour les développeurs (CLI + API), LM Studio pour les débutants (GUI), Jan AI pour la confidentialité (hors ligne), GPT4All pour la configuration la plus simple.' }, { type: 'plain-terms', text: 'Un "installateur en un clic" regroupe le moteur IA, le gestionnaire de modèles et l\'interface — pas besoin de configurer Python ou de compiler du code. Ils font tous tourner les mêmes types de modèles (fichiers GGUF). La différence est l\'interface : ligne de commande vs graphique.' }],
           items: [
             '**Ollama**: meilleur pour développeurs -- terminal-first, API compatible OpenAI, 200+ modèles, s\'exécute comme service de fond.',
             '**LM Studio**: meilleur pour débutants avec GUI -- chat intégré, navigateur de modèles, serveur local sur port 1234.',
@@ -1545,6 +1661,7 @@ schema: {
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-ja.svg',
           imageCaption: '4つのワンクリックローカルLLMインストーラー比較 -- Ollama（ポート11434）、LM Studio（ポート1234）、Jan AI（ポート1337）、GPT4All（ポート4891）：用途、インターフェース、OSS、テレメトリ。',
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年、主要なローカルLLMインストーラー（Ollama、LM Studio、Jan AI、GPT4All）はすべてllama.cppを使用して5分以内にインストール可能：開発者にはOllama（CLI+API）、初心者にはLM Studio（GUI）、プライバシーにはJan AI（オフライン）、最も簡単な設定にはGPT4All。' }, { type: 'plain-terms', text: '「ワンクリックインストーラー」はAIエンジン、モデルダウンローダー、インターフェースを一つにまとめたものです。PythonやコンパイルなしにAIをすぐ使えます。すべて同じタイプのモデル（GGUFファイル）で動作します。違いはインターフェース：コマンドラインかグラフィカルか、そして自分のアプリ用のローカルAPIが必要かどうかです。' }],
           items: [
             '**Ollama**：開発者向けが最適 -- ターミナルファースト、OpenAI互換API、200以上のモデル、バックグラウンドサービスとして動作。',
             '**LM Studio**：GUIを好む初心者向けが最適 -- 組み込みチャット、モデルブラウザ、ローカルサーバーはポート1234。',
@@ -1821,6 +1938,7 @@ schema: {
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-zh.svg',
           imageCaption: '4款一键本地LLM安装器对比 -- Ollama（端口11434）、LM Studio（端口1234）、Jan AI（端口1337）、GPT4All（端口4891）：各工具的最适用场景、界面类型、开源状态和遥测情况。',
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年，所有主流本地LLM安装器（Ollama、LM Studio、Jan AI、GPT4All）均使用llama.cpp在5分钟内安装完毕：Ollama最适合开发者（CLI+API），LM Studio适合初学者（GUI），Jan AI适合隐私需求（离线），GPT4All配置最简单。' }, { type: 'plain-terms', text: '"一键安装器"将AI引擎、模型下载器和界面打包在一起——无需配置Python或编译代码。它们都运行相同类型的模型（GGUF文件）。区别在于界面：命令行还是图形界面，以及是否需要供自己应用使用的本地API。' }],
           items: [
             '**Ollama**：最适合开发者 -- 终端优先、OpenAI兼容API、200+模型、作为后台服务运行。',
             '**LM Studio**：最适合喜欢GUI的初学者 -- 内置聊天、模型浏览器、本地服务器运行在端口1234。',
@@ -2098,6 +2216,7 @@ schema: {
           isTldr: true,
           image: '/images/local-llm-one-click-installers-tool-overview-en.svg',
           imageCaption: '한눈에 보는 4가지 원클릭 로컬 LLM 설치 도구: Ollama (포트 11434, 개발자용), LM Studio (포트 1234, 초보자용), Jan AI (포트 1337, 개인정보 보호 사용자용), GPT4All (포트 4891, 비기술자용). 모두 llama.cpp와 GGUF 형식을 사용합니다.',
+          snippetBlocks: [{ type: 'one-sentence', text: '2026년, 모든 주요 로컬 LLM 설치 도구(Ollama, LM Studio, Jan AI, GPT4All)는 llama.cpp를 사용해 5분 이내 설치: 개발자엔 Ollama(CLI+API), 초보자엔 LM Studio(GUI), 프라이버시엔 Jan AI(오프라인), 가장 쉬운 설정엔 GPT4All.' }, { type: 'plain-terms', text: '"원클릭 인스톨러"는 AI 엔진, 모델 다운로더, 인터페이스를 하나로 묶은 것 — Python 설정이나 컴파일 없이 바로 AI를 사용할 수 있습니다. 모두 동일한 유형의 모델(GGUF 파일)을 실행합니다. 차이는 인터페이스: 명령줄 vs 그래픽.' }],
           items: [
             '**Ollama**: 개발자에게 최적 -- 터미널 중심, OpenAI 호환 API, 4,500개 이상의 모델, 백그라운드 서비스로 실행됩니다.',
             '**LM Studio**: GUI를 선호하는 초보자에게 최적 -- 내장 채팅, 모델 브라우저, 포트 1234의 로컬 서버를 제공합니다.',
