@@ -121,11 +121,16 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
 }
 
 export function Footer({ lang = 'en' }: { lang?: Language }) {
-  const t = FOOTER_COPY[lang] || FOOTER_COPY['en']
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
   const NON_EN_LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const
+
+  // Derive active language from path prefix — avoids relying on the server-passed prop
+  // (which would require headers() in the root layout and break static rendering).
+  const pathLang = NON_EN_LANGS.find(l => pathname === `/${l}` || pathname.startsWith(`/${l}/`))
+  const effectiveLang: Language = pathLang ?? lang
+  const t = FOOTER_COPY[effectiveLang] || FOOTER_COPY['en']
 
   // Roots that are path-prefix routed for all non-EN langs (/de/<path>, …).
   // Keep in sync with PATH_LOCALE_CLUSTERS + PATH_PREFIX_LANG_CLUSTERS in src/middleware.ts.
@@ -173,7 +178,7 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
     return `${basePath}?${params.toString()}`
   }
 
-  const langPrefix = lang === 'en' ? '' : `/${lang}`
+  const langPrefix = effectiveLang === 'en' ? '' : `/${effectiveLang}`
 
   return (
     <footer className="py-12 px-4 sm:px-6 border-t border-gray-200 bg-white">
@@ -235,7 +240,7 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
             <span aria-hidden="true">•</span>
             <a href="/impressum" className="hover:text-primary transition-colors">{t.impressum}</a>
             <span aria-hidden="true">•</span>
-            <CookieSettingsLink lang={lang} />
+            <CookieSettingsLink lang={effectiveLang} />
             <span aria-hidden="true">•</span>
             <a href="mailto:hello@promptquorum.com" className="hover:text-primary transition-colors">{t.contact}</a>
           </div>

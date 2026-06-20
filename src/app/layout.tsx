@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { headers } from 'next/headers'
+import { Suspense } from 'react'
 import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic, Noto_Sans_KR } from 'next/font/google'
 import './globals.css'
 
@@ -33,7 +33,6 @@ const notoSansKR = Noto_Sans_KR({
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { getLangDir } from '@/lib/i18n/constants'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
@@ -109,20 +108,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const headersList = await headers()
-  const selectedLang = headersList.get('x-selected-lang') || 'en'
-
-  // Get current URL path + query (without lang param) for hreflang tags
-  const pathname = headersList.get('x-pathname') || '/'
-  const baseUrlWithoutLang = `https://www.promptquorum.com${pathname}`
-
   return (
-    <html lang={selectedLang} dir={getLangDir(selectedLang)} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable} ${notoSansKR.variable}`} suppressHydrationWarning>
+    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable} ${notoSansKR.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#6750A4" />
 
@@ -244,7 +236,7 @@ export default async function RootLayout({
           <ClarityRouteTracker />
           <OneSignalInit />
           <main id="main">{children}</main>
-          <Footer lang={selectedLang as any} />
+          <Suspense><Footer /></Suspense>
           <CookieBanner />
           <PushPromptBanner />
 
