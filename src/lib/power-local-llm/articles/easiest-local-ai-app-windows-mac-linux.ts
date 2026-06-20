@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is there any cost to running a local AI app?',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Gibt es Kosten für das Ausführen einer lokalen AI-App?',
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Quelle application est la plus rapide ?',
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'どのアプリが最速ですか？',
@@ -1775,7 +1775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: '哪个应用最快？',
@@ -2178,7 +2178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Tiene algún costo ejecutar una aplicación de IA local?',
@@ -2516,7 +2516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Há algum custo para executar um aplicativo de IA local?',
@@ -3192,7 +3192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '로컬 AI 앱 실행에 비용이 드나요?',

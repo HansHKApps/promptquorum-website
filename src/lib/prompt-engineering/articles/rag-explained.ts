@@ -316,6 +316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is RAG (Retrieval-Augmented Generation)?', a: 'RAG is a technique where an AI system retrieves relevant documents from a knowledge base before generating an answer. Instead of relying on what the model memorized during training, the answer is grounded in documents you provide and control.' },
@@ -664,6 +665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was ist RAG (Retrieval-Augmented Generation)?', a: 'RAG ist ein Verfahren, bei dem ein KI-System relevante Dokumente aus einer Wissensdatenbank abruft, bevor eine Antwort generiert wird. Anstatt sich auf das Trainingswissen des Modells zu verlassen, ist die Antwort in Dokumenten verankert, die Sie bereitstellen und kontrollieren.' },
@@ -1779,6 +1781,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Foire aux questions',
           faqs: [
             { q: 'Qu\'est-ce que RAG ?', a: 'Récupère documents pertinents avant de générer, au lieu de compter sur training. Réponse ancrée dans vos documents.' },
@@ -2094,6 +2097,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'RAG（Retrieval-Augmented Generation）とは？', a: '応答生成前に知識ベースから関連ドキュメントを取得するAI技術。訓練知識に依存でなく、あなたが提供・管理するドキュメントに基づく。' },
@@ -2422,6 +2426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: 'RAG（检索增强生成）是什么？', a: '生成答案前从知识库检索相关文档的AI技术。答案基于你提供和管理的文档，而非模型训练。' },
@@ -2775,6 +2780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: 'RAG(Retrieval-Augmented Generation)란 무엇입니까?', a: 'RAG는 AI 시스템이 답변을 생성하기 전에 지식 베이스에서 관련 문서를 검색하는 기술입니다. 모델이 학습 중에 기억한 내용에 의존하는 대신, 사용자가 제공하고 관리하는 문서를 기반으로 답변이 이루어집니다.' },

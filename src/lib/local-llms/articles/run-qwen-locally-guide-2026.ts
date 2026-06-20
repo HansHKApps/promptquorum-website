@@ -327,7 +327,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           { q: 'What is the minimum hardware to run Qwen 3 locally?', a: 'For Qwen 3.6 27B at Q4_K_M quantization: 16 GB VRAM (RTX 4080 or RTX 3090). For Apple Silicon: M3 Pro with 36 GB unified memory or M3 Max with 48 GB. For the smaller Qwen 3 14B: 9 GB VRAM (RTX 3080 or RTX 4070). Qwen 3 7B runs on 5 GB VRAM (GTX 1080 or better).' },
           { q: 'Why does Ollama truncate my prompts?', a: 'Ollama defaults to num_ctx 2048 tokens (~1,500 words). This is too small for most real-world coding tasks. You must set num_ctx to at least 32768 in your Modelfile. Create a Modelfile with `PARAMETER num_ctx 32768`, then run `ollama create qwen3-32k -f Modelfile` to build a model instance with the correct context window.' },
@@ -1576,7 +1576,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel est le matériel minimum pour exécuter Qwen 3 localement ?', a: 'Pour Qwen 3.6 27B en quantification Q4_K_M : 16 Go VRAM (RTX 4080 ou RTX 3090). Pour Apple Silicon : M3 Pro avec 36 Go de mémoire unifiée ou M3 Max avec 48 Go. Pour le plus petit Qwen 3 14B : 9 Go VRAM (RTX 3080 ou RTX 4070). Qwen 3 7B fonctionne sur 5 Go VRAM (GTX 1080 ou mieux).' },
           { q: 'Pourquoi Ollama tronque-t-il mes requêtes ?', a: 'Ollama utilise num_ctx 2 048 tokens par défaut (~1 500 mots). C\'est insuffisant pour la plupart des tâches de codage réelles. Vous devez définir num_ctx à au moins 32 768 dans votre Modelfile. Créez un Modelfile avec `PARAMETER num_ctx 32768`, puis exécutez `ollama create qwen3-32k -f Modelfile` pour créer une instance avec la fenêtre de contexte correcte.' },
@@ -2420,7 +2420,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: 'Qwen 3를 로컬에서 실행하기 위한 최소 하드웨어는 무엇인가요?', a: 'Q4_K_M 양자화의 Qwen 3.6 27B의 경우: 16GB VRAM GPU — RTX 4080 또는 RTX 3090. Apple Silicon의 경우: 36GB 통합 메모리의 M3 Pro 또는 48GB의 M3 Max. 더 작은 Qwen 3 14B의 경우: 9GB VRAM(RTX 3080 또는 RTX 4070). Qwen 3 7B는 5GB VRAM(GTX 1080 이상)에서 실행됩니다.' },
           { q: 'Ollama가 프롬프트를 잘라내는 이유는 무엇인가요?', a: 'Ollama는 기본값으로 num_ctx 2048 토큰(~1,500 단어)을 사용합니다. 이는 대부분의 실제 코딩 작업에 너무 작습니다. Modelfile에서 num_ctx를 최소 32768로 설정해야 합니다. `PARAMETER num_ctx 32768`로 Modelfile을 만들고 `ollama create qwen3-32k -f Modelfile`을 실행하여 올바른 컨텍스트 창을 갖춘 모델 인스턴스를 빌드하십시오.' },

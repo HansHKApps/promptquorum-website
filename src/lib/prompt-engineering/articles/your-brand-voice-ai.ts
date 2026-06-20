@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Qu\'est-ce que Brand Voice IA?', a: 'Brand Voice IA est une couche de configuration sur un modèle IA qui apprend votre ton, style et vocabulaire spécifiques à partir d\'exemples et les applique à tout contenu généré.' },
             { q: 'Comment entraîner l\'IA à matcher ma voix?', a: 'Définissez 3–5 piliers, rassemblez 5–10 exemples on-brand et 3–5 off-brand, écrivez un bloc d\'instructions et collez-le dans chaque prompt.' },
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             { q: 'ブランドボイスAIとは?', a: 'ブランドボイスAIは、汎用AIモデル上の設定層。例から特定トーン・スタイル・語彙学習、その後、生成・審査コンテンツにパターン適用。' },
             { q: 'AIをブランドボイスに合わせてトレーニングするには?', a: '3～5柱定義、5～10ブランド内・3～5ブランド外例集め、再利用可能指示ブロック作成、毎生成・QAプロンプトに貼付。' },

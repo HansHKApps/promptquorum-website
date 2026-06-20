@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which affiliate program has the highest single-sale commission for AI developers?', a: 'NordVPN pays the highest single-sale commission at 40–100% on the first sale, depending on the plan purchased and any active promotion. This makes it the highest short-term earner per conversion for AI developer audiences writing about privacy or security.' },
           { q: 'Does RunPod have an affiliate program or just a referral program?', a: 'RunPod has both. The referral program gives 3–5% in RunPod credits for referred spending. The affiliate program via PartnerStack pays 10% cash. For monetizing a blog or content site, the PartnerStack affiliate program is the better choice since it pays in cash.' },
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Welches Affiliate-Programm hat die höchste Einzelprovision für KI-Entwickler?', a: 'NordVPN zahlt die höchste Einzelprovision mit 40–100 % beim Erstkauf, je nach erworbenem Tarif und aktiver Promotion. Dies macht es zum stärksten kurzfristigen Verdiener pro Conversion für KI-Entwickler-Zielgruppen, die über Datenschutz oder Sicherheit schreiben.' },
           { q: 'Hat RunPod ein Affiliate-Programm oder nur ein Empfehlungsprogramm?', a: 'RunPod hat beides. Das Empfehlungsprogramm gibt 3–5 % in RunPod-Credits auf empfohlene Ausgaben. Das Affiliate-Programm über PartnerStack zahlt 10 % bar. Für die Monetarisierung eines Blogs ist das PartnerStack-Affiliate-Programm die bessere Wahl, da es in bar auszahlt.' },
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel programme d\'affiliation offre la commission unitaire la plus élevée pour les développeurs IA ?', a: 'NordVPN paie la commission unitaire la plus élevée avec 40 à 100 % à la première vente, selon le forfait acheté et la promotion active. C\'est le programme le plus rentable à court terme par conversion pour les audiences de développeurs IA traitant de confidentialité ou de sécurité.' },
           { q: 'RunPod dispose-t-il d\'un programme d\'affiliation ou seulement d\'un programme de parrainage ?', a: 'RunPod propose les deux. Le programme de parrainage donne 3–5 % en crédits RunPod sur les dépenses parrainées. Le programme affilié via PartnerStack paie 10 % en cash. Pour monétiser un blog ou un site de contenu, le programme PartnerStack est préférable car il paie en espèces.' },
@@ -1372,7 +1372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué programa de afiliados tiene la comisión por venta más alta para desarrolladores de IA?', a: 'NordVPN paga la comisión por venta más alta, entre el 40 y el 100% en la primera venta, según el plan comprado y cualquier promoción activa. Esto lo convierte en el programa de mayor rendimiento a corto plazo por conversión para audiencias de desarrolladores de IA que escriben sobre privacidad o seguridad.' },
           { q: '¿RunPod tiene un programa de afiliados o solo un programa de referidos?', a: 'RunPod tiene ambos. El programa de referidos ofrece entre un 3 y un 5% en créditos de RunPod por el gasto referido. El programa de afiliados vía PartnerStack paga un 10% en efectivo. Para monetizar un blog o sitio de contenido, el programa de afiliados de PartnerStack es la mejor opción, ya que paga en efectivo.' },
@@ -1621,7 +1621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           { q: 'Qual programa de afiliados tem a maior comissão por venda para desenvolvedores de IA?', a: 'A NordVPN paga a maior comissão por venda, de 40 a 100% na primeira venda, dependendo do plano comprado e de qualquer promoção ativa. Isso a torna o programa de maior rendimento de curto prazo por conversão para audiências de desenvolvedores de IA que escrevem sobre privacidade ou segurança.' },
           { q: 'A RunPod tem um programa de afiliados ou apenas um programa de indicações?', a: 'A RunPod tem ambos. O programa de indicações oferece de 3 a 5% em créditos da RunPod pelo gasto indicado. O programa de afiliados via PartnerStack paga 10% em dinheiro. Para monetizar um blog ou site de conteúdo, o programa de afiliados PartnerStack é a melhor escolha, já que paga em dinheiro.' },
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: 'AI 개발자에게 판매당 수수료가 가장 높은 제휴 프로그램은 무엇입니까?', a: 'NordVPN은 첫 판매 시 40~100%로 가장 높은 판매당 수수료를 지급합니다. 구매한 플랜과 진행 중인 프로모션에 따라 달라집니다. 이는 개인 정보 보호 또는 보안에 대해 글을 쓰는 AI 개발자 독자층을 대상으로 전환 기준 단기간에 가장 높은 성과를 낼 수 있는 프로그램입니다.' },
           { q: 'RunPod에 제휴 프로그램과 추천 프로그램이 모두 있습니까?', a: '두 프로그램 모두 있습니다. 추천 프로그램은 추천된 지출에 대해 RunPod 크레딧 3~5%를 제공합니다. PartnerStack을 통한 제휴 프로그램은 현금 10%를 지급합니다. 블로그나 콘텐츠 사이트를 수익화하려면 현금으로 지급하는 PartnerStack 제휴 프로그램이 최선의 선택입니다.' },

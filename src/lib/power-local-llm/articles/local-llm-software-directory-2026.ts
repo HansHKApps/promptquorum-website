@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'What is the difference between a local LLM runtime and a desktop app?',
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Was ist der Unterschied zwischen einer lokalen LLM-Laufzeitumgebung und einer Desktop-App?',
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Quelle est la différence entre un runtime LLM local et une application de bureau ?',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'ローカルLLMランタイムとデスクトップアプリの違いは何ですか？',
@@ -2426,7 +2426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Cuál es la diferencia entre un runtime LLM local y una app de escritorio?',
@@ -2852,7 +2852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Qual é a diferença entre um runtime LLM local e um app de desktop?',
@@ -3707,7 +3707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '로컬 LLM 런타임과 데스크톱 앱의 차이는 무엇입니까?',

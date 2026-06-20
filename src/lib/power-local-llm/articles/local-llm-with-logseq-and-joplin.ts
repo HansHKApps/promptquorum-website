@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can Logseq replace Notion for AI users?',
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Puede Logseq reemplazar a Notion para usuarios de IA?',
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'O Logseq pode substituir o Notion para usuários de IA?',
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Kann Logseq Notion für KI-Nutzer ersetzen?',
@@ -2083,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Logseq peut-il remplacer Notion pour les utilisateurs IA ?',
@@ -2505,7 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'Logseq は AI ユーザーにとって Notion を置き換えられますか？',
@@ -2926,7 +2926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: 'Logseq 能为 AI 用户替代 Notion 吗？',
@@ -3779,7 +3779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'Logseq가 AI 사용자에게 Notion을 대체할 수 있습니까?',

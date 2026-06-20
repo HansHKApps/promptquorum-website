@@ -589,7 +589,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'How much reference audio do I need for voice cloning with XTTS v2?',

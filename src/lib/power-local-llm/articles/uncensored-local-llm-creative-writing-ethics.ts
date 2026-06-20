@@ -314,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is it legal to run uncensored local LLMs?',
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Ist es legal, Uncensored lokale LLMs zu betreiben?',
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Est-il légal d\'utiliser des LLM locaux non censurés ?',
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: '無検閲ローカルLLMの実行は合法ですか？',
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Es legal ejecutar LLMs locales sin censura?',
@@ -2537,7 +2537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '무검열 로컬 LLM 실행이 합법적입니까?',
@@ -2915,7 +2915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'É legal executar LLMs locais sem censura?',

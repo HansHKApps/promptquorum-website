@@ -2003,7 +2003,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was ist das beste lokale LLM für Programmierung 2026?', a: 'Kimi K2.6 -- 58.6 SWE-Bench Pro (MoE, Modified MIT-Lizenz) ist insgesamt am besten. Bestes dichtes Modell: Qwen 3.6 27B -- 77,2% SWE-bench, 22 GB VRAM. Für agentic Coding: Devstral Small 24B. Für 8-GB-Maschinen: Qwen3 8B.' },
             { q: 'Was ist HumanEval und warum ist es wichtig?', a: 'HumanEval ist ein Benchmark mit 164 Python-Programmierungsproblemen. Das Modell muss einen korrekten Funktionstext für jedes generieren. Pass@1 (Prozentsatz beim ersten Versuch gelöst) ist die Standard-Metrik. Es ist das am weitesten verbreitete Maß für den Vergleich von Programmierungsmodellen.' },
@@ -2416,7 +2416,7 @@ schema: {
         },
         faqSection: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Quel est le meilleur LLM local pour la programmation en 2026?', a: 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, licence MIT modifiée) est le meilleur global. Meilleur modèle dense : Qwen 3.6 27B — 77,2% SWE-bench, 22 GB VRAM. Pour la programmation agentive : Devstral Small 24B. Pour les machines 8 GB : Qwen3 8B.' },
             { q: 'Qu\'est-ce que HumanEval et pourquoi c\'est important?', a: 'HumanEval est un benchmark de 164 problèmes de programmation Python. Le modèle doit générer un corps de fonction correct pour chacun. Les scores pass@1 (pourcentage résolu à la première tentative) sont la métrique standard. C\'est la mesure la plus largement utilisée pour comparer les modèles de programmation.' },

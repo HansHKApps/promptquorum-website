@@ -1209,6 +1209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             {
@@ -1549,6 +1550,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             {
@@ -1870,6 +1872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             {
@@ -2976,6 +2979,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ：提示词的构建模块',
           faqs: [
             {

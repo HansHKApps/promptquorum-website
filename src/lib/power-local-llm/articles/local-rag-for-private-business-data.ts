@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Does running RAG locally automatically meet GDPR?',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Erfüllt der lokale Betrieb von RAG automatisch die DSGVO?',
@@ -1790,7 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Faire tourner un RAG en local satisfait-il automatiquement le RGPD ?',
@@ -2401,7 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'RAGをローカルで動かせば自動的にGDPRを満たしますか？',
@@ -3639,7 +3639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: '¿Ejecutar RAG localmente cumple automáticamente el RGPD?',
@@ -4262,7 +4262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'RAG를 로컬에서 실행하면 자동으로 GDPR을 준수합니까?',
@@ -4896,7 +4896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Executar RAG localmente cumpre automaticamente o GDPR?',

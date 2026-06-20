@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Do I need a NAS for local AI models, or just an SSD?',
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Brauche ich ein NAS für lokale KI-Modelle oder nur eine SSD?',
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Ai-je besoin d\'un NAS pour les modèles IA locaux, ou seulement d\'un SSD ?',
@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'ローカルAIモデルにNASは必要ですか、それともSSDだけで足りますか？',
@@ -2775,7 +2775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Necesito un NAS para modelos de IA local, o solo un SSD?',
@@ -3255,7 +3255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Eu preciso de um NAS para modelos de IA local, ou só de um SSD?',
@@ -4216,7 +4216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '로컬 AI 모델에 NAS가 필요합니까, 아니면 SSD만 있으면 됩니까?',

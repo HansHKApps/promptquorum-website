@@ -552,7 +552,7 @@ curl -L -o ggml-base.bin \\
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is the transcription accuracy the same between whisper.cpp and faster-whisper?',

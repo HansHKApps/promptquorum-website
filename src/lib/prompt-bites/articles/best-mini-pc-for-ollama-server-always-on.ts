@@ -100,6 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Can a mini PC run 13B or larger models at useful speed?',
@@ -231,6 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Kann ein Mini-PC 13B- oder größere Modelle in nutzbarer Geschwindigkeit ausführen?',
@@ -357,6 +359,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Un mini PC peut-il faire tourner des modèles 13B ou plus à vitesse utile ?',
@@ -479,6 +482,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'ミニPCで13B以上のモデルを実用的な速度で動かせますか？',
@@ -554,6 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Puede un mini PC ejecutar modelos 13B o más grandes a velocidad útil?',
@@ -637,6 +642,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Um mini PC consegue executar modelos de 13B ou maiores em velocidade útil?',
@@ -768,6 +774,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '迷你PC能以实用速度运行13B或更大的模型吗？',
@@ -851,6 +858,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل يمكن لجهاز مصغر تشغيل نماذج 13B أو أكبر بسرعة مفيدة؟',
@@ -995,6 +1003,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '미니 PC로 13B 이상의 모델을 실용적인 속도로 실행할 수 있습니까?',

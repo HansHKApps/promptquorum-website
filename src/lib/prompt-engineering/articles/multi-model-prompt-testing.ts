@@ -1010,7 +1010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: "Qu'est-ce que le test multi-modèles ?", a: "C'est la pratique d'exécuter le même prompt sur 2+ modèles IA (GPT-5.5, Claude 4.6 Sonnet, Gemini 2.5 Flash) et de comparer les sorties sur des critères définis : conformité du format, verbosité, exactitude et suivi des instructions." },
           { q: "Pourquoi les mêmes prompts produisent-ils des résultats différents sur différents modèles ?", a: "Chaque modèle est entraîné sur des distributions de données différentes avec différentes préférences RLHF. Un prompt produisant un objet JSON concis sur GPT-5.5 peut produire une explication markdown sur Claude." },

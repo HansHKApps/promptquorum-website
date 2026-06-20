@@ -352,6 +352,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
 
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -755,6 +756,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
 
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
@@ -2143,6 +2145,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
 
         faq: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             {
@@ -2536,6 +2539,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
 
         faq: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -2929,6 +2933,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
 
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {

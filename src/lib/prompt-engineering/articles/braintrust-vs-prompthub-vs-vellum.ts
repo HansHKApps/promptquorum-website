@@ -792,7 +792,8 @@ tests:
         ],
       },
       'faq': {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Was ist der Hauptunterschied zwischen Braintrust und PromptHub?',
@@ -2107,7 +2108,8 @@ tests:
         ],
       },
       'faq': {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Différence principale Braintrust et PromptHub ?',
@@ -2255,7 +2257,7 @@ tests:
       'common-mistakes': { title: 'よくあるエラー', mistakes: [{ mistake: '4 つのツールをすべてまとめて購入', problem: '月 700€ 以上かかり、冗長。Braintrust と Vellum を完全に使用しません。', fix: 'ワークフローに適した 2 つのツールを選択。ほとんどのチームが必要：Braintrust + Vellum または Promptfoo + PromptHub。' }, { mistake: '評価で開始、デプロイメント忘却', problem: 'Braintrust は最高のプロンプトを表示しますが、手動でアプリにコピー。「デプロイ」ボタンなし。', fix: 'Braintrust を Vellum と組み合わせるか、手動デプロイ。評価なしのデプロイメント 無意味。' }, { mistake: 'Promptfoo ローカルのみで使用', problem: 'ローカルテストは優れていますが、本番レイテンシ、コスト、実際のエラーは表示されません。', fix: 'Promptfoo を CI/CD 回帰テストに使用し、Vellum またはカスタムインフラで本番にデプロイ。' }, { mistake: 'プロンプト最適化前にモデル選択', problem: 'Claude Opus で開始できますが、GPT-5.5 がより良い可能性があります — テストするまで知りません。', fix: 'PromptQuorum で最初に複数モデルを比較。次に Braintrust または Promptfoo で最高のモデルに最適化。' }] },
       'how-to-choose': { title: 'これら 4 つのツール間での選択方法', numberedItems: ['チームの 3 つの主な課題をリストアップ：(a) 評価、(b) バージョン管理、(c) 本番デプロイメント。', '各課題に対して最高のツール：(a) Braintrust、(b) PromptHub、(c) Vellum。', '課題が「どのモデルかわかりません」の場合は、PromptQuorum で開始。', '課題が「予算がない」の場合は、CI/CD に Promptfoo、バージョン管理に PromptHub を選択。', '2 つ以上のツールを購入しないでください。4 つのツールはいつも多すぎます。', '90 日間のコスト ベースラインを計画し、どのツールが最高の ROI かを評価します。'] },
       'japanese-context': { title: '日本ユーザーのための活用ポイント', content: ['日本の組織にとって、プロンプト管理ツール選択時の追加検討事項があります。', '**METI AI ガバナンスと企業デプロイメント：** 日本企業が METI（経済産業省）の AI ガバナンスフレームワーク 2024 に準拠する場合、Braintrust と Vellum はエンタープライズ向け選択肢。Promptfoo はローカルで実行でき、METI 準拠性が簡単。', '**データレジデンシー（データ主権）：** 機密情報を処理する場合（顧客データ、内部情報）、ローカルツール（Promptfoo をサーバーで実行）がデータ主権要件を満たすのは簡単。クラウドツール（Braintrust、Vellum）は明示的なセキュリティ認定が必要です。', '**推奨事項：** 日本チームの場合：まず PromptQuorum（無料）モデル選択、次に Promptfoo（無料、ローカル）CI/CD 回帰、PromptHub（安価）バージョン管理。このコンボは月 200€ 未満で METI フレームワーク準拠。本番スケール到達時のみ Braintrust または Vellum に移行。'] },
-      'faq': { title: 'FAQ', faqs: [{ q: 'Braintrust と PromptHub の主な違いは？', a: 'Braintrust は評価と実験向け。PromptHub はバージョン管理向け。Braintrust は「どのプロンプトが最良か」に答え、PromptHub は「以前使用したバージョンは」に答えます。両者を組み合わせ可能。' }, { q: 'Promptfoo は本当に無料？', a: 'はい、Promptfoo はオープンソース（MIT）で完全無料。ローカルまたは独自サーバーで実行。唯一のコスト：OpenAI、Anthropic などへの API 呼び出し。' }, { q: 'Braintrust または Vellum を選択すべき？', a: 'Braintrust は評価向け（どのプロンプトが最良かわかりません）。Vellum は本番向け（どのトラフィック分割が最良かわかりません）。異なる — 両者一緒が理想的。' }, { q: 'Vellum は Braintrust より高額？', a: 'Braintrust 月 500€ 程度。Vellum 月 200～500€（ボリューム依存）。つまり、Vellum は同じかもしくはより安いコスト本番トラフィックによります。' }, { q: 'Promptfoo を GitHub Actions に統合？', a: '`.github/workflows/test.yml` ファイルを作成し、`npx promptfoo eval` を呼び出し。Promptfoo は YAML テスト読み込み、実行、回帰表示。Actions は自動的に各プッシュで起動。' }, { q: 'PromptHub が Braintrust を置き換えられる？', a: 'いいえ。PromptHub はバージョン保存。Braintrust は品質評価。PromptHub はどのバージョンが最高かを測定できません。組み合わせ可能。' }, { q: 'Vellum はプロンプト管理プラットフォームと同じ？', a: 'いいえ、Vellum は本番デプロイメントツール、バージョン管理ではない。プロンプト保存のみ？PromptHub 使用。ライブトラフィック A/B テスト？Vellum。' }] },
+      'faq': { title: 'よくある質問', faqs: [{ q: 'Braintrust と PromptHub の主な違いは？', a: 'Braintrust は評価と実験向け。PromptHub はバージョン管理向け。Braintrust は「どのプロンプトが最良か」に答え、PromptHub は「以前使用したバージョンは」に答えます。両者を組み合わせ可能。' }, { q: 'Promptfoo は本当に無料？', a: 'はい、Promptfoo はオープンソース（MIT）で完全無料。ローカルまたは独自サーバーで実行。唯一のコスト：OpenAI、Anthropic などへの API 呼び出し。' }, { q: 'Braintrust または Vellum を選択すべき？', a: 'Braintrust は評価向け（どのプロンプトが最良かわかりません）。Vellum は本番向け（どのトラフィック分割が最良かわかりません）。異なる — 両者一緒が理想的。' }, { q: 'Vellum は Braintrust より高額？', a: 'Braintrust 月 500€ 程度。Vellum 月 200～500€（ボリューム依存）。つまり、Vellum は同じかもしくはより安いコスト本番トラフィックによります。' }, { q: 'Promptfoo を GitHub Actions に統合？', a: '`.github/workflows/test.yml` ファイルを作成し、`npx promptfoo eval` を呼び出し。Promptfoo は YAML テスト読み込み、実行、回帰表示。Actions は自動的に各プッシュで起動。' }, { q: 'PromptHub が Braintrust を置き換えられる？', a: 'いいえ。PromptHub はバージョン保存。Braintrust は品質評価。PromptHub はどのバージョンが最高かを測定できません。組み合わせ可能。' }, { q: 'Vellum はプロンプト管理プラットフォームと同じ？', a: 'いいえ、Vellum は本番デプロイメントツール、バージョン管理ではない。プロンプト保存のみ？PromptHub 使用。ライブトラフィック A/B テスト？Vellum。' }] },
       'related-reading': { title: '関連資料', items: ['[Best Prompt Engineering Tools 2026](/ja/prompt-engineering/best-prompt-engineering-tools-2026) — Braintrust、PromptHub、Vellum、Promptfoo を含むすべてのプロンプトツールの広範なランキングと 20+ その他', '[Best Prompt Optimization Tools for Teams](/ja/prompt-engineering/best-prompt-optimization-tools-for-teams) — DSPy、Helicone、OpenAI Evals を含むチーム最適化', '[How to Evaluate Prompt Quality](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — プロンプト評価のメトリクスとフレームワーク', '[Prompt Evaluation Metrics](/ja/prompt-engineering/prompt-evaluation-metrics) — 精度、レイテンシ、コスト、関連性、カスタムメトリクスの詳細'] },
       'sources': { title: 'ソース', items: ['[Braintrust — AI Evaluation Platform](https://braintrust.dev) — 公式ドキュメント；スコアリング関数、実験ダッシュボード、月 500€ Team プラン要求の基礎', '[PromptHub — Prompt Version Control](https://prompthub.ai) — 製品ホームページ；バージョン管理、Web UI、月 50～200€ 価格設定要求の基礎', '[Vellum — LLM Deployment and A/B Testing](https://www.vellum.ai) — 製品概要と価格設定ページ；トラフィック分割、承認ワークフロー、月 200～500€ 要求の基礎', '[Promptfoo — Open-Source Prompt Testing](https://www.promptfoo.dev) — GitHub リポジトリとドキュメント；MIT ライセンス、YAML 設定、GitHub Actions 統合要求の基礎', '[PromptQuorum — Multi-Model Dispatch](https://promptquorum.com) — マルチモデル比較ツール；25+ モデルディスパッチと cross-モデル比較要求の基礎'] },
     },

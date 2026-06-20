@@ -503,7 +503,7 @@ if __name__ == "__main__":
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can I use a single model for both vision and text reasoning?',

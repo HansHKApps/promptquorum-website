@@ -148,6 +148,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Why do prompts need documentation?', a: 'Prompts without documentation can\'t be reviewed, audited, or reproduced. When the author changes the prompt and leaves no record, the team can\'t diagnose regressions, can\'t roll back to a known-good version, and can\'t onboard new members.' },
@@ -325,6 +326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Warum brauchen Prompts eine Dokumentation?', a: 'Prompts ohne Dokumentation können nicht geprüft, auditiert oder reproduziert werden. Das Team kann keine Regressionen diagnostizieren und nicht auf bekannte gute Versionen zurückrollen.' },
@@ -503,6 +505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Por qué los prompts necesitan documentación?', a: 'Los prompts sin documentación no pueden revisarse, auditarse ni reproducirse. Cuando el autor cambia el prompt y no deja ningún registro, el equipo no puede diagnosticar regresiones, no puede volver a una versión conocida como buena ni puede incorporar a nuevos miembros.' },
@@ -681,6 +684,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'لماذا تحتاج الأوامر إلى توثيق؟', a: 'الأوامر غير الموثقة لا يمكن مراجعتها أو تدقيقها أو إعادة إنتاجها. عندما يغير المؤلف الأمر دون ترك أي سجل، لا يستطيع الفريق تشخيص التراجعات، ولا العودة إلى إصدار معروف بأنه جيد، ولا استقطاب أعضاء جدد.' },
@@ -857,6 +861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Por que os prompts precisam de documentação?', a: 'Os prompts sem documentação não podem ser revisados, auditados nem reproduzidos. Quando o autor altera o prompt e não deixa nenhum registro, a equipe não consegue diagnosticar regressões, não consegue voltar a uma versão conhecida como boa nem consegue integrar novos membros.' },
@@ -1033,6 +1038,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Pourquoi les prompts ont-ils besoin de documentation ?', a: 'Les prompts sans documentation ne peuvent être ni révisés, ni audités, ni reproduits. L\'équipe ne peut pas diagnostiquer les régressions ni revenir à une version fonctionnelle.' },
@@ -1208,6 +1214,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: 'なぜPromptには文書化が必要ですか？', a: '文書化されていないPromptはレビュー、監査、再現ができません。回帰を診断できず、既知の良い状態にロールバックできません。' },
@@ -1383,6 +1390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '为什么Prompt需要文档化？', a: '没有文档的Prompt无法被审查、审计或重现。团队无法诊断回归问题，无法回滚到已知可用的版本。' },
@@ -1561,6 +1569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     faq: {
+      id: 'faq',
       title: '자주 묻는 질문',
       faqs: [
         { q: '프롬프트에 왜 문서화가 필요합니까?', a: '문서화가 없는 프롬프트는 검토, 감사, 재현이 불가능합니다. 작성자가 프롬프트를 변경하고 기록을 남기지 않으면, 팀은 회귀를 진단할 수 없고, 알려진 정상 버전으로 롤백할 수 없으며, 새 팀원을 온보딩할 수 없습니다.' },

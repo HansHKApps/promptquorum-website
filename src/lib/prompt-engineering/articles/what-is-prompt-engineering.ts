@@ -301,6 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Prompt Engineering Basics',
           faqs: [
             {
@@ -630,6 +631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Prompt-Engineering-Grundlagen',
           faqs: [
             {
@@ -967,6 +969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Fundamentos del prompt engineering',
           faqs: [
             {
@@ -1305,6 +1308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة: أسس هندسة الطلبات',
           faqs: [
             {
@@ -1528,6 +1532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'FAQ: Fundamentos de prompt engineering',
           faqs: [
             {
@@ -1845,6 +1850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ : Les bases du prompt engineering',
           faqs: [
             {
@@ -2154,6 +2160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ：プロンプトエンジニアリングの基礎',
           faqs: [
             {
@@ -2469,6 +2476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ：提示词工程基础',
           faqs: [
             {
@@ -2814,6 +2822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: 프롬프트 엔지니어링 기초',
           faqs: [
             {

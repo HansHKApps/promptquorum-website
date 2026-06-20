@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can a Pixel 9 Pro run a 7B model?',
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Kann ein Pixel 9 Pro ein 7B-Modell betreiben?',
@@ -1680,7 +1680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Un Pixel 9 Pro peut-il exécuter un modèle 7B ?',
@@ -2263,7 +2263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Pixel 9 Pro は 7B モデルを実行できますか?',
@@ -2889,7 +2889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: '¿Puede un Pixel 9 Pro ejecutar un modelo de 7B?',
@@ -3468,7 +3468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Um Pixel 9 Pro consegue executar um modelo de 7B?',
@@ -4630,7 +4630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'Pixel 9 Pro에서 7B 모델을 실행할 수 있습니까?',

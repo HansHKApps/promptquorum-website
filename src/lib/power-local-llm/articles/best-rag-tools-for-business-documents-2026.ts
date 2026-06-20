@@ -143,6 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**Choose AnythingLLM if:** You need a working solution today with no coding, supporting multiple team members, handling diverse document formats.\n\n**Choose LlamaIndex if:** You are a developer building a custom RAG application, need metadata filtering, or want to integrate with an existing data pipeline.\n\n**Choose PrivateGPT if:** You are an individual user with a collection of PDFs and no server to maintain.\n\n**Choose Cognita if:** Your organization requires document-level access controls, compliance audit logs, or scanned PDF support.\n\n**Choose Chroma if:** You are building a custom stack and need a fast, free vector database that runs locally without a cloud account.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Can RAG tools work with SharePoint documents?',
@@ -268,6 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Funktionieren RAG-Tools mit SharePoint-Dokumenten?',
@@ -350,6 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Les outils RAG fonctionnent-ils avec les documents SharePoint ?',
@@ -428,6 +431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'RAGツールはSharePoint文書に対応していますか？',
@@ -506,6 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'RAG工具支持SharePoint文档吗？',
@@ -683,6 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**Elige AnythingLLM si:** Necesitas una solución funcional hoy sin programar, con soporte para varios miembros del equipo y diversos formatos de documentos.\n\n**Elige LlamaIndex si:** Eres un desarrollador que construye una aplicación RAG personalizada, necesitas filtrado por metadatos o quieres integrarte con un pipeline de datos existente.\n\n**Elige PrivateGPT si:** Eres un usuario individual con una colección de PDFs y sin servidor que mantener.\n\n**Elige Cognita si:** Tu organización requiere controles de acceso a documentos, registros de auditoría de cumplimiento o soporte para PDFs escaneados.\n\n**Elige Chroma si:** Estás construyendo un stack personalizado y necesitas una base de datos vectorial rápida y gratuita que funcione en local sin cuenta en la nube.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Las herramientas RAG funcionan con documentos de SharePoint?',
@@ -906,6 +912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**Escolha o AnythingLLM se:** Você precisa de uma solução funcional hoje sem programar, com suporte a vários membros de equipe e diversos formatos de documentos.\n\n**Escolha o LlamaIndex se:** Você é um desenvolvedor construindo uma aplicação RAG personalizada, precisa de filtragem por metadados ou quer integrar com um pipeline de dados existente.\n\n**Escolha o PrivateGPT se:** Você é um usuário individual com uma coleção de PDFs e nenhum servidor para manter.\n\n**Escolha o Cognita se:** Sua organização exige controles de acesso no nível do documento, registros de auditoria de conformidade ou suporte a PDFs digitalizados.\n\n**Escolha o Chroma se:** Você está construindo um stack personalizado e precisa de um banco de dados vetorial rápido e gratuito que roda localmente sem uma conta na nuvem.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'As ferramentas RAG funcionam com documentos do SharePoint?',
@@ -1132,6 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**اختر AnythingLLM إذا:** كنت تحتاج حلاً جاهزاً اليوم بدون برمجة مع دعم لأعضاء فريق متعددين وتنسيقات وثائق متنوعة.\n\n**اختر LlamaIndex إذا:** كنت مطوّراً تبني تطبيق RAG مخصصاً وتحتاج إلى تصفية البيانات الوصفية أو التكامل مع خط بيانات موجود.\n\n**اختر PrivateGPT إذا:** كنت مستخدماً فردياً لديك مجموعة من ملفات PDF ولا يوجد خادم للصيانة.\n\n**اختر Cognita إذا:** كانت مؤسستك تتطلب ضوابط وصول على مستوى الوثيقة ومسارات تدقيق الامتثال أو دعم ملفات PDF الممسوحة.\n\n**اختر Chroma إذا:** كنت تبني مكدساً مخصصاً وتحتاج قاعدة بيانات متجهة سريعة ومجانية تعمل محلياً بدون حساب سحابي.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل تعمل أدوات RAG مع وثائق SharePoint؟',

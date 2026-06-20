@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Do I need a VPN if my LLM already runs locally?',
@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Necesito una VPN si mi LLM ya se ejecuta localmente?',
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'LLM이 이미 로컬로 실행 중이라면 VPN이 필요합니까?',
@@ -1778,7 +1778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Preciso de uma VPN se o meu LLM já roda localmente?',
@@ -2242,7 +2242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Brauche ich ein VPN, wenn mein LLM bereits lokal läuft?',
@@ -2700,7 +2700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Ai-je besoin d\'un VPN si mon LLM s\'exécute déjà en local ?',
@@ -3150,7 +3150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'LLMをすでにローカルで実行しているなら、VPNは必要ですか？',

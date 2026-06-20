@@ -2192,6 +2192,7 @@ schema: {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'コーディングに最適なのはどれ：Qwen、Llama、Mistral？', a: 'Qwen3はすべてのサイズティアでコーディングベンチマークをリード。Qwen3 72Bは87% HumanEvalスコア；Llama 3.3 70Bは88%スコア；Mistral Small v0.3は39%スコア。7Bクラスの場合、Qwen3 7B（72% HumanEval）はMistral Small（39%）を大幅に上回り、Llama 3.3 8B（72%）と一致。' },
@@ -2471,6 +2472,7 @@ schema: {
           ],
         },
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '编码方面哪个最好：Qwen、Llama还是Mistral？', a: 'Qwen3在所有大小处领先编码基准。Qwen3 72B得分87% HumanEval；Llama 3.3 70B得分88%；Mistral Small v0.3得分39%。对于7B级，Qwen3 7B（72% HumanEval）显著超越Mistral Small（39%）并与Llama 3.3 8B（72%）相当。' },

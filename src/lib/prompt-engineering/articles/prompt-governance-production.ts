@@ -181,6 +181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is prompt governance?', a: 'Prompt governance is the system of roles, review processes, and deployment rules that controls which prompts reach production and how they are monitored. It includes who can author prompts, who must approve them, what tests must pass before deployment, and what happens when a prompt fails in production.' },
@@ -374,6 +375,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist Prompt-Governance?', a: 'Prompt-Governance ist das System aus Rollen, Reviewprozessen und Deployment-Regeln, das kontrolliert, welche Prompts in die Produktion gelangen und wie sie überwacht werden.' },
@@ -584,6 +586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es la governance de prompts?', a: 'La governance de prompts es el sistema de roles, procesos de revisión y reglas de despliegue que controla qué prompts llegan a producción y cómo se monitorizan. Incluye quién puede crear prompts, quién debe aprobarlos, qué pruebas deben superarse antes del despliegue y qué sucede cuando un prompt falla en producción.' },
@@ -793,6 +796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é governance de prompts?', a: 'A governance de prompts é o sistema de papéis, processos de revisão e regras de implantação que controla quais prompts chegam à produção e como são monitorados. Inclui quem pode criar prompts, quem deve aprová-los, quais testes devem ser aprovados antes da implantação e o que acontece quando um prompt falha em produção.' },
@@ -987,6 +991,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce que la gouvernance des prompts ?', a: 'La gouvernance des prompts est le système de rôles, de processus de révision et de règles de déploiement qui contrôle quels prompts atteignent la production et comment ils sont surveillés.' },
@@ -1179,6 +1184,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: 'Promptガバナンスとは何ですか？', a: 'どのPromptが本番環境に到達し、どのように監視されるかを制御する役割・プロセス・ルールのシステムです。' },
@@ -1389,6 +1395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'أسئلة مكررة',
         faqs: [
           { q: 'ما هي حوكمة التعليمات؟', a: 'حوكمة التعليمات هي منظومة الأدوار وعمليات المراجعة وقواعد النشر التي تتحكم في أي التعليمات تصل إلى الإنتاج وكيفية مراقبتها. تشمل من يمكنه إنشاء التعليمات ومن يجب أن يعتمدها وما الاختبارات التي يجب اجتيازها قبل النشر وما يحدث عند فشل التعليمة في الإنتاج.' },
@@ -1582,6 +1589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '什么是Prompt治理？', a: 'Prompt治理是控制哪些Prompt进入生产环境及如何监控的角色、流程和规则体系。' },
@@ -1792,6 +1800,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '프롬프트 거버넌스란 무엇입니까?', a: '프롬프트 거버넌스는 어떤 프롬프트가 프로덕션에 도달하는지, 어떻게 모니터링되는지를 제어하는 역할·검토 프로세스·배포 규칙의 체계입니다. 누가 프롬프트를 작성할 수 있는지, 누가 승인해야 하는지, 배포 전 어떤 테스트를 통과해야 하는지, 프롬프트가 프로덕션에서 실패했을 때 어떻게 되는지를 포함합니다.' },

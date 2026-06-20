@@ -476,6 +476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -947,6 +948,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
@@ -1306,6 +1308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es la Optimización para Motores Generativos (GEO)?', a: 'GEO es la práctica de estructurar el contenido para que los motores de búsqueda con IA lo citen al sintetizar respuestas. A diferencia del SEO tradicional, que apunta al posicionamiento en Google, GEO se centra en ser nombrado entre las 2–7 fuentes que un motor de IA cita por respuesta.' },
@@ -1642,6 +1645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هو تحسين محركات البحث التوليدية (GEO)؟', a: 'GEO هو ممارسة هيكلة المحتوى لكي تستشهد به محركات البحث بالذكاء الاصطناعي عند تركيب الإجابات. على عكس السيو التقليدي الذي يستهدف التصدر في Google، تتمحور GEO حول الذكر بين المصادر الـ2–7 التي يستشهد بها محرك الذكاء الاصطناعي في كل إجابة.' },
@@ -2202,6 +2206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             {
@@ -2627,6 +2632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -3052,6 +3058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {
@@ -3567,6 +3574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             {

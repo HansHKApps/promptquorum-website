@@ -220,7 +220,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What are prompt evaluation metrics?', a: 'Prompt evaluation metrics are quantitative signals that measure whether a prompt produces the intended output reliably. Key metrics include pass rate (binary correct/incorrect), BLEU score (n-gram overlap for translation and summarization), semantic similarity (embedding cosine similarity for paraphrase tasks), and LLM-as-judge (model-scored quality rubric for free text). Choosing the wrong metric for your output type produces misleading scores.' },
             { q: 'What is pass rate in prompt evaluation?', a: 'Pass rate is the percentage of test inputs where the output meets defined success criteria. It maps directly to production failure rate and is the most actionable metric for structured output prompts.' },
@@ -465,6 +466,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was sind Prompt-Evaluierungsmetriken?', a: 'Prompt-Evaluierungsmetriken sind quantitative Signale, die messen, ob ein Prompt die beabsichtigte Ausgabe zuverlässig produziert. Wichtige Metriken sind Pass Rate (binär richtig/falsch), BLEU-Score (n-Gramm-Überlap für Übersetzungen und Zusammenfassungen), semantische Ähnlichkeit (Cosinus-Ähnlichkeit von Embeddings für Paraphrasenaufgaben) und LLM-as-Judge (modellgestützte Qualitätsbewertung für Freitext). Die Auswahl der falschen Metrik für Ihren Ausgabetyp führt zu irreführenden Scores.' },
@@ -710,6 +712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué son las métricas de evaluación de prompts?', a: 'Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce la salida esperada de forma fiable. Las métricas clave incluyen pass rate (correcto/incorrecto binario), BLEU (superposición de n-gramas para traducción y resumen), similitud semántica (similitud coseno de embeddings) y LLM-as-judge (rúbrica de calidad para texto libre). Elegir la métrica incorrecta produce puntuaciones engañosas.' },
@@ -955,6 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما هي مقاييس تقييم البرومبتات؟', a: 'مقاييس تقييم البرومبتات إشارات كمية تقيس ما إذا كان البرومبت ينتج المخرجات المتوقعة بشكل موثوق. المقاييس الرئيسية تشمل pass rate وBLEU والتشابه الدلالي وLLM-as-judge. اختيار المقياس الخاطئ يُنتج درجات مضللة.' },
@@ -1196,6 +1200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que são métricas de avaliação de prompts?', a: 'Métricas de avaliação de prompts são sinais quantitativos que medem se um prompt produz a saída esperada de forma confiável. As métricas-chave incluem pass rate (correto/incorreto binário), BLEU (sobreposição de n-gramas para tradução e resumo), similaridade semântica (similaridade cosseno de embeddings) e LLM-as-judge (rubrica de qualidade para texto livre). Escolher a métrica errada produz pontuações enganosas.' },
@@ -1443,6 +1448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Questions fréquentes',
           faqs: [
             { q: 'Que sont les métriques d\'évaluation de prompts ?', a: 'Ce sont des signaux quantitatifs mesurant si un prompt produit la sortie souhaitée fiablement. Les clés incluent taux de réussite (correct/incorrect), BLEU (chevauchement pour traduction/résumé), similarité sémantique (embeddings pour paraphrases) et LLM-as-Judge (rubrique modèle pour texte libre). Choisir mal produit des scores trompeurs.' },
@@ -1690,6 +1696,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'プロンプト評価指標とは何ですか？', a: 'プロンプトが意図した出力を確実に生成するかを測定する定量的シグナルです。重要な指標：合格率（正誤）、BLEUスコア（翻訳・要約用n-gram）、意味的類似度（言い換え用埋め込みコサイン）、LLM-as-Judge（フリーテキスト用モデル評点）。出力タイプに間違った指標を選ぶと誤解を招くスコアになります。' },
@@ -1937,6 +1944,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '什么是提示词评估指标？', a: '定量信号，衡量提示词是否可靠地生成预期输出。关键指标包括通过率（正确/错误）、BLEU分数（翻译/摘要n-gram）、语义相似度（改写嵌入余弦）和LLM-as-Judge（自由文本模型评分）。为输出类型选择错误的指标会产生误导性的分数。' },
@@ -2182,7 +2190,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             { q: 'Prompt 평가 지표란 무엇입니까?', a: 'Prompt 평가 지표는 prompt가 의도한 출력을 안정적으로 생성하는지 측정하는 정량적 신호입니다. 주요 지표에는 pass rate, BLEU 점수, 시맨틱 유사성, LLM-as-judge가 포함됩니다. 출력 유형에 잘못된 지표를 선택하면 오해의 소지가 있는 점수가 나옵니다.' },
             { q: 'Prompt 평가에서 pass rate란 무엇입니까?', a: 'Pass rate는 출력이 정의된 성공 기준을 충족하는 테스트 입력의 비율입니다. 프로덕션 실패율에 직접 매핑되며 구조화된 출력 prompt에 가장 실행 가능한 지표입니다.' },

@@ -366,6 +366,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What are the main things LLMs can\'t do?', a: 'LLMs cannot access real-time data, verify their own outputs, retain memory across sessions, take real-world actions without tool scaffolding, or reason reliably through multi-step logic without chain-of-thought prompting. These are structural limits applying to every model — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and open-source alternatives alike.' },
@@ -746,6 +747,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was sind die wichtigsten Dinge, die LLMs nicht können?', a: 'LLMs können nicht auf Echtzeitdaten zugreifen, ihre eigenen Ausgaben überprüfen, Gedächtnis über Sitzungen hinweg behalten, ohne Tool-Gerüst Echtwelt-Aktionen durchführen oder zuverlässig durch mehrstufige Logik ohne Chain-of-Thought-Prompting schlussfolgern. Dies sind strukturelle Grenzen, die für jedes Modell gelten — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und Open-Source-Alternativen gleichermaßen.' },
@@ -948,6 +950,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuáles son las principales cosas que los LLMs no pueden hacer?', a: 'Los LLMs no pueden acceder a datos en tiempo real, verificar sus propios outputs, retener memoria entre sesiones, realizar acciones en el mundo real sin herramientas de scaffolding ni razonar de forma fiable a través de la lógica de varios pasos sin chain-of-thought prompting. Estas son restricciones estructurales que aplican a todos los modelos.' },
@@ -1151,6 +1154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'أسئلة شائعة',
           faqs: [
             { q: 'ما هي الأشياء الرئيسية التي لا تستطيع النماذج اللغوية الكبيرة فعلها؟', a: 'لا تستطيع النماذج اللغوية الكبيرة الوصول إلى البيانات في الوقت الحقيقي، أو التحقق من مخرجاتها، أو الاحتفاظ بالذاكرة بين الجلسات، أو تنفيذ إجراءات في العالم الحقيقي دون أدوات scaffolding، أو الاستدلال بشكل موثوق عبر منطق متعدد الخطوات دون صياغة سلسلة التفكير. هذه قيود هيكلية تُطبَّق على جميع النماذج.' },
@@ -1351,6 +1355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Quais são as principais coisas que os LLMs não podem fazer?', a: 'Os LLMs não podem acessar dados em tempo real, verificar suas próprias saídas, reter memória entre sessões, realizar ações no mundo real sem ferramentas de scaffolding nem raciocinar de forma confiável por meio de lógica de múltiplas etapas sem prompting chain-of-thought. Essas são restrições estruturais que se aplicam a todos os modelos.' },
@@ -1732,6 +1737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             { q: 'Quelles sont les principales choses que les LLMs ne peuvent pas faire ?', a: 'Les LLMs ne peuvent pas accéder aux données en temps réel, vérifier leurs propres sorties, retenir la mémoire entre sessions, effectuer des actions réelles sans infrastructure d\'outils, ni raisonner de manière fiable à travers une logique multi-étapes sans prompting chaîne-de-pensée. Ce sont des limites structurelles s\'appliquant à chaque modèle — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les alternatives open-source.' },
@@ -2112,6 +2118,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     faq: {
+      id: 'faq',
       title: 'よくある質問',
       faqs: [
         { q: 'LLMができない主なことは何ですか?', a: 'LLMはリアルタイムデータにアクセスできず、独自の出力を検証できず、セッション間でメモリを保持できず、ツールスキャフォルディングなしで実世界のアクションを実行できず、chain-of-thoughtプロンプトなしで複数ステップのロジックを確実に推論できません。これらは、すべてのモデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、およびオープンソースの代替案など）に適用される構造的な制限です。' },
@@ -2492,6 +2499,7 @@ zh: {
           ],
         },
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '大语言模型主要无法做什么？', a: '大语言模型无法获取实时数据、验证自己的输出、在会话间保留内存、在没有工具支架的情况下采取现实世界的操作，或在没有思维链提示词的情况下可靠地进行多步逻辑推理。这些是适用于每个模型的结构性限制 — GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro 和开源替代品。' },
@@ -2688,6 +2696,7 @@ zh: {
         ],
       },
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: 'LLM이 할 수 없는 주요 사항은 무엇입니까?', a: 'LLM은 실시간 데이터에 접근하거나, 자체 출력을 검증하거나, 세션 간 메모리를 유지하거나, 스케폴딩 도구 없이 실제 세계 행동을 수행하거나, chain-of-thought 프롬프팅 없이 다단계 논리를 통해 안정적으로 추론할 수 없습니다. 이것들은 모든 모델에 적용되는 구조적 제약사항입니다.' },

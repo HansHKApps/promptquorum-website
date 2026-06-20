@@ -266,7 +266,7 @@ dispatch_rules:
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           { q: 'Is Qwen 3.6 27B better than Claude Sonnet 4.6?', a: 'On coding benchmarks (HumanEval, SWE-bench), Qwen 3.6 27B outperforms Claude Sonnet 4.6 as of May 2026: 92.1% vs 89.4% HumanEval, 77.2% vs ~72% SWE-bench. Claude Sonnet 4.6 leads on MMLU (88.1% vs 86.4%) and MATH (91.2% vs 88.7%). For EU coding workflows, local Qwen 3.6 27B is the better choice. For broad knowledge tasks, Claude Sonnet 4.6 has the edge.' },
           { q: 'Can I use DeepSeek R2 for GDPR-covered data?', a: 'No, without significant legal safeguards. DeepSeek R2 processes data on servers in China. The EU Commission has not issued a China adequacy decision. Using DeepSeek R2 with EU personal data without an adequacy decision or appropriate safeguards (binding corporate rules, SCCs) constitutes a likely GDPR Article 44 violation. Consult your DPO before using DeepSeek R2 for any personal data.' },
@@ -479,7 +479,7 @@ dispatch_rules:
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Es Qwen 3.6 27B mejor que Claude Sonnet 4.6?', a: 'En benchmarks de código (HumanEval, SWE-bench), Qwen 3.6 27B supera a Claude Sonnet 4.6 a mayo de 2026: 92,1% vs 89,4% HumanEval, 77,2% vs ~72% SWE-bench. Claude Sonnet 4.6 lidera en MMLU (88,1% vs 86,4%) y MATH (91,2% vs 88,7%). Para flujos de trabajo de código en la UE, Qwen 3.6 27B local es la mejor opción. Para tareas de amplio conocimiento, Claude Sonnet 4.6 tiene ventaja.' },
           { q: '¿Puedo usar DeepSeek R2 con datos cubiertos por el GDPR?', a: 'No, sin salvaguardas legales significativas. DeepSeek R2 procesa datos en servidores en China. La Comisión de la UE no ha emitido una decisión de adecuación para China. El uso de DeepSeek R2 con datos personales de la UE sin una decisión de adecuación o salvaguardas apropiadas (normas corporativas vinculantes, CCE) constituye una probable violación del Artículo 44 del GDPR. Consulta a tu DPO antes de usar DeepSeek R2 con cualquier dato personal.' },
@@ -1395,7 +1395,7 @@ dispatch_rules:
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Qwen 3.6 27B est-il meilleur que Claude Sonnet 4.6 ?', a: 'Sur benchmarks code (HumanEval, SWE-bench), Qwen 3.6 27B dépasse Claude Sonnet 4.6 (mai 2026) : 92.1% vs 89.4% HumanEval, 77.2% vs ~72% SWE-bench. Claude mène MMLU (88.1% vs 86.4%) et MATH (91.2% vs 88.7%). Pour workflows code UE, Qwen 3.6 27B local est meilleur. Pour tâches larges connaissance, Claude a l\'avantage.' },
           { q: 'Puis-je utiliser DeepSeek R2 pour données RGPD ?', a: 'Non, sans garanties légales majeures. DeepSeek R2 traite les données en Chine. La Commission UE n\'a pas émis décision adéquation Chine. Utiliser DeepSeek R2 avec données perso UE sans décision adéquation ou mesures appropriées (CCS) constitue violation RGPD Article 44 probable. Consultez votre DPO avant DeepSeek R2 pour données perso.' },
@@ -2193,7 +2193,7 @@ dispatch_rules:
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: 'Qwen 3.6 27B가 Claude Sonnet 4.6보다 우수합니까?', a: '코딩 벤치마크(HumanEval, SWE-bench) 기준으로 2026년 5월 현재 Qwen 3.6 27B는 Claude Sonnet 4.6를 능가합니다: HumanEval 92.1% 대 89.4%, SWE-bench 77.2% 대 ~72%입니다. Claude Sonnet 4.6는 MMLU(88.1% 대 86.4%)와 MATH(91.2% 대 88.7%)에서 앞섭니다. EU 코딩 워크플로에는 로컬 Qwen 3.6 27B가 더 나은 선택입니다. 폭넓은 지식 작업에는 Claude Sonnet 4.6가 유리합니다.' },
           { q: 'GDPR 적용 데이터에 DeepSeek R2를 사용할 수 있습니까?', a: '상당한 법적 보호 조치 없이는 사용할 수 없습니다. DeepSeek R2는 중국 내 서버에서 데이터를 처리합니다. EU 집행위원회는 중국에 대한 적정성 결정을 내리지 않았습니다. 적정성 결정 또는 적절한 보호 조치(구속력 있는 기업 규칙, SCC) 없이 EU 개인 데이터에 DeepSeek R2를 사용하는 것은 GDPR 제44조 위반 가능성이 높습니다. 개인 데이터에 DeepSeek R2 사용 전 반드시 DPO와 상담하십시오.' },

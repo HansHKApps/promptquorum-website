@@ -189,6 +189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is a prompt framework?', a: 'A prompt framework is a structural template that defines which components to include in a prompt and in what order. Examples include CO-STAR (Context, Objective, Style, Tone, Audience, Response) and CRAFT (Context, Role, Action, Format, Target). Frameworks improve consistency and reduce the time spent writing prompts from scratch.' },
@@ -369,6 +370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist ein Prompt-Framework?', a: 'Ein Prompt-Framework ist eine strukturierte Vorlage, die festlegt, welche Komponenten ein Prompt enthalten soll und in welcher Reihenfolge. Beispiele sind CO-STAR und CRAFT. Frameworks verbessern die Konsistenz und reduzieren den Aufwand beim Erstellen neuer Prompts.' },
@@ -605,6 +607,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es un framework de prompts?', a: 'Un framework de prompts es una plantilla estructural que define qué componentes incluir en un prompt y en qué orden. Ejemplos incluyen CO-STAR y CRAFT. Los frameworks mejoran la consistencia y reducen el tiempo dedicado a escribir prompts desde cero.' },
@@ -843,6 +846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é um framework de prompts?', a: 'Um framework de prompts é um modelo estrutural que define quais componentes incluir em um prompt e em que ordem. Exemplos incluem CO-STAR e CRAFT. Os frameworks melhoram a consistência e reduzem o tempo gasto escrevendo prompts do zero.' },
@@ -1033,6 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce qu\'un framework de prompts ?', a: 'Un framework de prompts est un modèle structurel qui définit quels composants inclure dans un prompt et dans quel ordre. Les frameworks améliorent la cohérence et réduisent le temps de rédaction.' },
@@ -1233,6 +1238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: 'プロンプトフレームワークとは何ですか？', a: 'プロンプトフレームワークとは、プロンプトにどのコンポーネントをどの順序で含めるかを定義する構造化テンプレートです。一貫性を高め、プロンプト作成時間を短縮します。' },
@@ -1433,6 +1439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '什么是Prompt框架？', a: 'Prompt框架是一种结构化模板，定义了Prompt中应包含哪些组件及其顺序。框架提高了一致性，减少了从零开始编写Prompt的时间。' },
@@ -1669,6 +1676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو إطار عمل الأوامر؟', a: 'إطار عمل الأوامر هو قالب هيكلي يحدد المكونات التي يجب تضمينها في الأمر وترتيبها. تشمل الأمثلة CO-STAR وCRAFT. تحسّن أطر العمل الاتساق وتقلل الوقت المستغرق في كتابة الأوامر من الصفر.' },
@@ -1906,6 +1914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '프롬프트 프레임워크란 무엇입니까?', a: '프롬프트 프레임워크는 프롬프트에 어떤 구성 요소를 포함하고 어떤 순서로 배치할지 정의하는 구조적 템플릿입니다. CO-STAR와 CRAFT가 예시입니다. 프레임워크는 일관성을 향상시키고 처음부터 프롬프트를 작성하는 데 소요되는 시간을 줄입니다.' },

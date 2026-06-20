@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can local AI agents replace 100% of my Zapier workflows?',
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Können lokale KI-Agenten 100 % meiner Zapier-Workflows ersetzen?',
@@ -1359,7 +1359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Les agents IA locaux peuvent-ils remplacer 100 % de mes workflows Zapier ?',
@@ -1832,7 +1832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'ローカル AI エージェントが 100% の Zapier ワークフロー置き換え可？',
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: '本地 AI 代理能 100% 替代我的 Zapier 工作流吗？',
@@ -2778,7 +2778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Pueden los agentes de IA locales reemplazar el 100% de mis flujos de Zapier?',
@@ -3264,7 +3264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Os agentes de IA locais podem substituir 100% dos meus fluxos do Zapier?',
@@ -4042,7 +4042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '로컬 AI 에이전트가 내 Zapier 워크플로우의 100%를 대체할 수 있습니까?',

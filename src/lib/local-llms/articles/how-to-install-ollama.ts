@@ -1167,7 +1167,7 @@ schema: {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             {
               q: 'Ist Ollama kostenlos?',
@@ -1492,7 +1492,7 @@ schema: {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             {
               q: 'Ollama est-il gratuit ?',

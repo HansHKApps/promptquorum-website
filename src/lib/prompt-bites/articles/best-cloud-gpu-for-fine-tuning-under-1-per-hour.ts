@@ -90,6 +90,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Can I fine-tune a 14B model for under $1?',
@@ -219,6 +220,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Kann ich ein 14B-Modell für unter 1 $ fine-tunen?',
@@ -331,6 +333,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Puis-je fine-tuner un modèle 14B pour moins de 1 $ ?',
@@ -443,6 +446,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '14Bモデルを1ドル以下でファインチューニングできますか？',
@@ -555,6 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '14B模型能否在1美元以下完成微调？',
@@ -689,6 +694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Puedo hacer fine-tuning de un modelo 14B por menos de $1?',
@@ -828,6 +834,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Posso fazer fine-tuning de um modelo 14B por menos de $1?',
@@ -967,6 +974,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل يمكنني الضبط الدقيق لنموذج 14B بأقل من دولار واحد؟',
@@ -1108,6 +1116,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '$1 미만으로 14B 모델을 파인튜닝할 수 있습니까?',

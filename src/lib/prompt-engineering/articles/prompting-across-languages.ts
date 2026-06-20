@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Should I write my prompt in English or the target language?', a: 'For structural reasoning tasks, write the system prompt in English. For tone and formality, write the user message and register instructions in the target language.' },
           { q: 'Why does AI perform worse in non-English languages?', a: 'LLM training datasets are dominated by English (~46% of CommonCrawl). Languages with <5% training share have fewer patterns for the model to draw on, producing higher error rates.' },
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Sollte ich meinen Prompt auf Englisch oder in der Zielsprache schreiben?', a: 'Für strukturierte Reasoning-Aufgaben schreiben Sie den System-Prompt auf Englisch. Für Ton und Formalität schreiben Sie die Benutzeranweisung und die Register-Anweisungen in der Zielsprache.' },
           { q: 'Warum performt KI in nicht-englischen Sprachen schlechter?', a: 'LLM-Trainingsdaten bestehen zu ~46 % aus Englisch (CommonCrawl). Sprachen mit <5 % Trainingsanteil haben weniger Muster für das Modell, was zu höheren Fehlerraten führt.' },
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Debería escribir mi prompt en inglés o en el idioma objetivo?', a: 'Para tareas de razonamiento estructurado, escribe el prompt de sistema en inglés. Para tono y formalidad, escribe el mensaje del usuario y las instrucciones de registro en el idioma objetivo.' },
           { q: '¿Por qué la IA tiene peor rendimiento en idiomas distintos al inglés?', a: 'Los conjuntos de datos de entrenamiento de los LLMs están dominados por el inglés (~46 % de CommonCrawl). Los idiomas con menos del 5 % de participación en el entrenamiento tienen menos patrones de los que el modelo puede aprender, produciendo tasas de error más altas.' },
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           { q: 'Devo escrever meu prompt em inglês ou no idioma-alvo?', a: 'Para tarefas de raciocínio estruturado, escreva o prompt de sistema em inglês. Para tom e formalidade, escreva a mensagem do usuário e as instruções de registro no idioma-alvo.' },
           { q: 'Por que a IA tem desempenho inferior em idiomas diferentes do inglês?', a: 'Os conjuntos de dados de treinamento dos LLMs são dominados pelo inglês (~46% do CommonCrawl). Idiomas com menos de 5% de participação no treinamento têm menos padrões dos quais o modelo pode aprender, produzindo taxas de erro mais altas.' },
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Dois-je écrire mon prompt en anglais ou dans la langue cible ?', a: 'Pour les tâches de raisonnement structuré, rédigez le prompt système en anglais. Pour le ton et la formalité, rédigez le message utilisateur et les instructions de registre dans la langue cible.' },
           { q: 'Pourquoi l\'IA performe-t-elle moins bien en français ?', a: 'Les données d\'entraînement des LLM sont dominées par l\'anglais (~46 % de CommonCrawl). Le français ne représente qu\'environ 5 %, ce qui laisse moins de motifs au modèle et entraîne des taux d\'erreur plus élevés.' },
@@ -2211,7 +2211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           { q: 'System promptは英語と日本語、どちらで書くべきですか？', a: '推論・構造化タスクにはsystem promptを英語で書いてください。語調・敬語指示はuser messageで日本語を使うと効果的です。' },
           { q: 'なぜAIは非英語で性能が低下するのですか？', a: 'LLMのトレーニングデータは英語が約46%（CommonCrawl）を占めます。日本語は約3%のため、モデルが参照できる学習パターンが少なく、エラー率が高くなります。' },

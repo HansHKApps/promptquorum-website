@@ -431,6 +431,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -941,6 +942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
@@ -1261,6 +1263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuál es el mejor modelo de IA para escribir código en 2026?', a: 'Claude 4.8 Opus (Anthropic) produce los resultados más consistentes para código de backend, diseño de API y rastreo de bugs. GPT-5 (OpenAI) tiene una ligera ventaja en el diseño de algoritmos. Para bases de código sensibles a la privacidad, LLaMA 4 8B ejecutándose localmente mediante Ollama genera cero llamadas a API externas.' },
@@ -1542,6 +1545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما أفضل نموذج ذكاء اصطناعي لكتابة الكود في 2026؟', a: 'Claude 4.8 Opus (Anthropic) يُنتج أكثر النتائج اتساقًا لكود الخلفية وتصميم API وتتبع الأخطاء. GPT-5 (OpenAI) لديه ميزة طفيفة في تصميم الخوارزميات. لقواعد الكود الحساسة للخصوصية، LLaMA 4 8B يعمل محليًا عبر Ollama دون أي استدعاءات API خارجية.' },
@@ -1777,6 +1781,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Qual é o melhor modelo de IA para escrever código em 2026?', a: 'Claude 4.8 Opus (Anthropic) produz os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, LLaMA 4 8B rodando localmente via Ollama gera zero chamadas de API externas.' },
@@ -2242,6 +2247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
             {
@@ -2686,6 +2692,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -3179,6 +3186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {
@@ -3661,6 +3669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             {

@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           { q: 'Does GDPR ban cloud AI for EU organisations?', a: 'No. GDPR does not ban cloud AI. It requires that cross-border data transfers have a legal basis (Article 44). Standard Contractual Clauses (SCCs) are the most common legal basis for EU organisations using US-based cloud AI APIs. Cloud AI is legally usable with appropriate SCCs, Data Processing Agreements (DPAs), and data minimisation practices. Local LLMs offer a structurally simpler compliance posture by eliminating the transfer entirely.' },
           { q: 'Is DeepSeek R2 compliant with GDPR for EU personal data?', a: 'Using DeepSeek R2 for EU personal data is high-risk from a GDPR perspective. DeepSeek AI operates from China. The EU Commission has not issued a China adequacy decision. Without an adequacy decision, international transfers require SCCs or Binding Corporate Rules (BCRs). DeepSeek does not currently offer EU-standard SCCs. Consult your DPO before using DeepSeek R2 for any personal data.' },
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: 'GDPR이 EU 조직의 클라우드 AI 사용을 금지합니까?', a: '아닙니다. GDPR은 클라우드 AI를 금지하지 않습니다. 국경 간 데이터 이전에 법적 근거(제44조)가 있어야 한다고 요구합니다. 표준 계약 조항(SCC)은 미국 기반 클라우드 AI API를 사용하는 EU 조직의 가장 일반적인 법적 근거입니다. 클라우드 AI는 적절한 SCC, 데이터 처리 계약(DPA) 및 데이터 최소화 관행을 갖추면 법적으로 사용 가능합니다. 로컬 LLM은 이전을 완전히 제거함으로써 구조적으로 더 단순한 컴플라이언스 입장을 제공합니다.' },
           { q: 'DeepSeek R2는 EU 개인 데이터에 대해 GDPR을 준수합니까?', a: 'EU 개인 데이터에 DeepSeek R2를 사용하는 것은 GDPR 관점에서 고위험입니다. DeepSeek AI는 중국에서 운영됩니다. EU 집행위원회는 중국에 대한 적정성 결정을 내리지 않았습니다. 적정성 결정 없이는 국제 이전에 SCC 또는 구속력 있는 기업 규칙(BCR)이 필요합니다. DeepSeek은 현재 EU 표준 SCC를 제공하지 않습니다. 개인 데이터에 DeepSeek R2를 사용하기 전에 DPO와 상담하십시오.' },

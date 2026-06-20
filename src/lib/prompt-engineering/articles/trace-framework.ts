@@ -260,7 +260,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Frequently Asked Questions',
           faqs: [
             {
               q: 'What does TRACE stand for in prompt engineering?',
@@ -536,7 +537,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             {
               q: 'Wofür steht TRACE im Prompt Engineering?',
@@ -870,6 +872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             {
@@ -1175,6 +1178,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             {
@@ -1473,7 +1477,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Perguntas frequentes',
           faqs: [
             {
               q: 'O que significa TRACE em prompt engineering?',
@@ -1733,7 +1738,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'Questions fréquemment posées',
           faqs: [
             {
               q: 'Que signifie TRACE en ingénierie des prompts ?',
@@ -2035,7 +2041,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: 'よくある質問',
           faqs: [
             {
               q: 'プロンプト・エンジニアリングでTRACEは何を意味しますか？',
@@ -2338,6 +2345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {
@@ -2672,7 +2680,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
-          title: 'FAQ',
+          id: 'faq',
+          title: '자주 묻는 질문',
           faqs: [
             {
               q: '프롬프트 엔지니어링에서 TRACE는 무엇을 의미합니까?',

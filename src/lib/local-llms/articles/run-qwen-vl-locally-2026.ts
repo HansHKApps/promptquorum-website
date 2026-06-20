@@ -332,7 +332,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is the minimum hardware to run Qwen2-VL locally?', a: 'Qwen2-VL 7B at Q4_K_M quantization needs 8 GB of VRAM (RTX 4060, RTX 3060 12 GB, or RTX 2080). The smaller Qwen2-VL 2B runs in 4 GB. The 72B model needs ~48 GB — Apple Silicon with 64 GB+ unified memory or two 24 GB GPUs. Apple Silicon with 16 GB+ unified memory runs the 7B model comfortably.' },
           { q: 'Is Qwen2-VL better than LLaVA for OCR?', a: 'Yes, especially for non-English text. Qwen2-VL ties MiniCPM-V 2.6 and beats LLaVA 1.6 and Llama 3.2 Vision 11B on Chinese, Japanese, and Korean OCR. Its native 4096×4096 resolution reads high-DPI scans without downsampling, while LLaVA 1.6 caps at 672×672. LLaVA still has the largest community and the most tutorials.' },
@@ -675,7 +675,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Cuál es el hardware mínimo para ejecutar Qwen2-VL en local?', a: 'Qwen2-VL 7B con cuantización Q4_K_M necesita 8 GB de VRAM (RTX 4060, RTX 3060 12 GB o RTX 2080). El Qwen2-VL 2B más pequeño funciona con 4 GB. El modelo de 72B necesita ~48 GB — Apple Silicon con 64 GB+ de memoria unificada o dos GPU de 24 GB. Apple Silicon con 16 GB+ de memoria unificada ejecuta el modelo de 7B sin problemas.' },
           { q: '¿Qwen2-VL es mejor que LLaVA para OCR?', a: 'Sí, especialmente para texto que no sea inglés. Qwen2-VL iguala a MiniCPM-V 2.6 y supera a LLaVA 1.6 y Llama 3.2 Vision 11B en OCR de chino, japonés y coreano. Su resolución nativa de 4096×4096 lee escaneos de alta resolución sin reducción, mientras que LLaVA 1.6 tiene un límite de 672×672. LLaVA sigue teniendo la mayor comunidad y más tutoriales.' },
@@ -1466,7 +1466,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist die Mindest-Hardware, um Qwen2-VL lokal auszuführen?', a: 'Qwen2-VL 7B mit Q4_K_M-Quantisierung benötigt 8 GB VRAM (RTX 4060, RTX 3060 12 GB oder RTX 2080). Das kleinere Qwen2-VL 2B läuft mit 4 GB. Das 72B-Modell benötigt ~48 GB — Apple Silicon mit 64 GB+ Unified Memory oder zwei 24-GB-GPUs. Apple Silicon mit 16 GB+ Unified Memory führt das 7B-Modell problemlos aus.' },
           { q: 'Ist Qwen2-VL besser als LLaVA für OCR?', a: 'Ja, besonders für nicht-englischen Text. Qwen2-VL liegt gleichauf mit MiniCPM-V 2.6 und schlägt LLaVA 1.6 und Llama 3.2 Vision 11B bei chinesischer, japanischer und koreanischer OCR. Seine native Auflösung von 4096×4096 liest hochauflösende Scans ohne Verkleinerung, während LLaVA 1.6 auf 672×672 begrenzt ist. LLaVA hat weiterhin die größte Community und die meisten Tutorials.' },
@@ -2154,7 +2154,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           { q: 'Qwen2-VLをローカルで実行するための最小ハードウェアは？', a: 'Q4_K_M量子化のQwen2-VL 7Bには8 GBのVRAMが必要です（RTX 4060、RTX 3060 12 GB、またはRTX 2080）。より小さいQwen2-VL 2Bは4 GBで動作します。72Bモデルには約48 GBが必要です — 64 GB以上のユニファイドメモリを備えたApple Silicon、または24 GBのGPU 2基。16 GB以上のユニファイドメモリを備えたApple Siliconは7Bモデルを問題なく実行します。' },
           { q: 'Qwen2-VLはOCRでLLaVAより優れていますか？', a: 'はい、特に英語以外のテキストで優れています。Qwen2-VLはMiniCPM-V 2.6と並び、中国語・日本語・韓国語のOCRでLLaVA 1.6とLlama 3.2 Vision 11Bを上回ります。ネイティブ解像度の4096×4096により高解像度スキャンを縮小せずに読み取りますが、LLaVA 1.6は672×672が上限です。ただしLLaVAは依然として最大のコミュニティと最も多くのチュートリアルを持っています。' },
@@ -2497,7 +2497,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           { q: '在本地运行 Qwen2-VL 的最低硬件要求是什么？', a: 'Q4_K_M 量化的 Qwen2-VL 7B 需要 8 GB VRAM（RTX 4060、RTX 3060 12 GB 或 RTX 2080）。更小的 Qwen2-VL 2B 在 4 GB 下运行。72B 模型需要约 48 GB——配备 64 GB 以上统一内存的 Apple Silicon 或两块 24 GB 的 GPU。配备 16 GB 以上统一内存的 Apple Silicon 可轻松运行 7B 模型。' },
           { q: 'Qwen2-VL 在 OCR 上比 LLaVA 更好吗？', a: '是的，尤其是非英文文本。Qwen2-VL 与 MiniCPM-V 2.6 持平，在中文、日文和韩文 OCR 上优于 LLaVA 1.6 和 Llama 3.2 Vision 11B。它 4096×4096 的原生分辨率可直接读取高分辨率扫描件而不缩小，而 LLaVA 1.6 上限为 672×672。不过 LLaVA 仍拥有最大的社区和最多的教程。' },
@@ -2839,7 +2839,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: 'Qwen2-VL을 로컬로 실행하기 위한 최소 하드웨어는 무엇입니까?', a: 'Q4_K_M 양자화의 Qwen2-VL 7B는 8 GB VRAM (RTX 4060, RTX 3060 12 GB, 또는 RTX 2080)이 필요합니다. 더 작은 Qwen2-VL 2B는 4 GB에서 실행됩니다. 72B 모델은 약 48 GB가 필요합니다 — 64 GB 이상 통합 메모리의 Apple Silicon 또는 24 GB GPU 두 개. 16 GB 이상 통합 메모리의 Apple Silicon은 7B 모델을 원활히 실행합니다.' },
           { q: 'Qwen2-VL이 OCR에서 LLaVA보다 낫습니까?', a: '예, 특히 비영어 텍스트에서 그렇습니다. Qwen2-VL은 MiniCPM-V 2.6과 동등하며, 중국어·일본어·한국어 OCR에서 LLaVA 1.6 및 Llama 3.2 Vision 11B를 능가합니다. 네이티브 4096×4096 해상도는 LLaVA 1.6이 672×672로 제한되는 동안 다운샘플링 없이 고해상도 스캔을 읽습니다. LLaVA는 여전히 가장 큰 커뮤니티와 가장 많은 튜토리얼을 보유하고 있습니다.' },

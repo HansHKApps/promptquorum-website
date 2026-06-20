@@ -117,6 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Can Continue replace GitHub Copilot entirely for local use?',
@@ -274,6 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Kann Continue GitHub Copilot vollständig für lokale Nutzung ersetzen?',
@@ -407,6 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Continue peut-il remplacer entièrement GitHub Copilot pour un usage local ?',
@@ -540,6 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'ContinueはローカルでGitHub Copilotの完全な代替になれますか？',
@@ -673,6 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Continue能完全替代GitHub Copilot用于本地使用吗？',
@@ -840,6 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Puede Continue reemplazar completamente a GitHub Copilot para uso local?',
@@ -1038,6 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Continue와 Copilot의 차이점은 무엇입니까?',
@@ -1233,6 +1240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'O Continue pode substituir completamente o GitHub Copilot para uso local?',
@@ -1420,6 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل يمكن لـContinue أن يحل محل GitHub Copilot بالكامل للاستخدام المحلي؟',

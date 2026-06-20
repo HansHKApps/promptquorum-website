@@ -279,6 +279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
@@ -581,6 +582,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: "Häufig gestellte Fragen",
         faqs: [
           {
@@ -762,6 +764,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'FAQ: System Prompt vs User Prompt',
         faqs: [
           {
@@ -931,6 +934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '常见问题：系统提示词 vs 用户提示词',
         faqs: [
           {
@@ -1090,6 +1094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: "Perguntas Frequentes",
         faqs: [
           {
@@ -1260,6 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'أسئلة شائعة: System Prompt مقابل User Prompt',
         faqs: [
           {
@@ -1488,6 +1494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           {

@@ -145,6 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Is 8 GB VRAM enough for running LLMs locally?',
@@ -369,6 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Son suficientes 8 GB de VRAM para ejecutar LLMs localmente?',
@@ -605,6 +607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل 8 GB من VRAM كافية لتشغيل نماذج LLM محلياً؟',
@@ -843,6 +846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '8 GB de VRAM são suficientes para rodar LLMs localmente?',
@@ -1013,6 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Reichen 8 GB VRAM für lokale KI-Modelle?',
@@ -1131,6 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '8 Go de VRAM suffisent-ils pour les LLMs en local ?',
@@ -1249,6 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '8GB VRAMはローカルLLMに十分ですか？',
@@ -1368,6 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '8GB显存跑本地大模型够用吗？',
@@ -1562,6 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '8GB VRAM으로 로컬에서 LLM을 실행하기에 충분합니까?',

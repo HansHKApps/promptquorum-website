@@ -1532,7 +1532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           { q: 'Ist DeepSeek-R1 dasselbe wie die destillierten Modelle?', a: 'Nein. DeepSeek-R1 ist das 671B-MoE-Modell. Die destillierten Versionen (7B, 14B, 32B) sind separate dichte Modelle — praktisch für lokale Nutzung.' },
           { q: 'Benötigen DeepSeek und Qwen denselben VRAM?', a: 'Ja, bei gleicher Quantisierung. Beide 7B-Modelle benötigen ca. 5,5 GB bei Q4_K_M; beide 32B-Modelle benötigen 20,5 GB.' },
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       qwenModels: { id: 'qwen-models', title: 'Modèles locaux Qwen3 expliqués', content: 'Qwen3 est la version d\'octobre 2025 d\'Alibaba. Tous les modèles de base utilisent un contexte de 128K tokens et une licence Apache 2.0.', items: ['**Qwen3 7B :** 5,5 Go VRAM. Meilleur polyvalent 7B pour le code et le texte chinois.', '**Qwen3-Coder 32B :** 20,5 Go VRAM. 91,5 % HumanEval — meilleur modèle de code pour matériel grand public.', 'Commande Ollama : `ollama run qwen2.5:14b-instruct-q4_K_M`'] },
       macVsNvidia: { id: 'mac-vs-nvidia', title: 'Apple Silicon vs NVIDIA', content: 'Les deux familles fonctionnent bien sur Apple Silicon via Ollama avec accélération Metal.', columns: ['Matériel', 'Meilleur tier', 'Vitesse (7B)', 'Vitesse (32B)'], rows: [{ 'Matériel': 'M2/M3 16 Go', 'Meilleur tier': '7B uniquement', 'Vitesse (7B)': '30–50 t/s', 'Vitesse (32B)': 'N/A' }, { 'Matériel': 'M3 Max 48 Go', 'Meilleur tier': '32B confortablement', 'Vitesse (7B)': '80–120 t/s', 'Vitesse (32B)': '15–25 t/s' }, { 'Matériel': 'RTX 4090 24 Go', 'Meilleur tier': '32B', 'Vitesse (7B)': '100–150 t/s', 'Vitesse (32B)': '18–28 t/s' }], },
       useCaseVerdicts: { id: 'use-case-verdicts', title: 'Verdicts par cas d\'usage', content: 'Réponse en une phrase pour chaque usage courant :', items: ['**Maths / cours particuliers :** DS-R1-Distill-Qwen-7B — 88 % MATH-500 vs 62,5 % pour Qwen3 7B', '**Génération / révision de code :** Qwen3-Coder 32B — 91,5 % HumanEval', '**Chat en chinois :** Qwen3 7B — tokenisation CJK native, 30–40 % plus efficace', '**Conformité RGPD :** les deux options — exécution 100 % locale, pas de transfert de données'] },
-      faqSection: { id: 'faq', title: 'FAQ', faqs: [
+      faqSection: { id: 'faq', title: '常见问题', faqs: [
         { q: 'DeepSeek-R1 est-il identique aux modèles distillés ?', a: 'Non. DeepSeek-R1 est le modèle MoE 671B. Les versions distillées (7B, 14B, 32B) sont des modèles denses séparés, pratiques pour usage local.' },
         { q: 'DeepSeek et Qwen nécessitent-ils la même VRAM ?', a: 'Oui, à quantisation équivalente. Les deux modèles 7B nécessitent environ 5,5 Go en Q4_K_M ; les 32B nécessitent 20,5 Go.' },
         { q: 'Lequel est le mieux pour le texte chinois ?', a: 'Qwen3 est nettement meilleur. Il utilise un tokeniseur chinois natif, 30–40 % plus efficace sur le texte CJK.' },

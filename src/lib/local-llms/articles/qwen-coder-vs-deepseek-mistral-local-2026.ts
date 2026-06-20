@@ -278,7 +278,7 @@ DEEPSEEK_MODEL=deepseek-chat
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: 'Is Qwen 3.6 27B better than DeepSeek Coder for local coding?', a: 'For local deployment: Qwen 3.6 27B achieves 77.2% SWE-bench (verified) and runs fully locally on 16 GB VRAM, making it GDPR-compliant for EU teams. DeepSeek Coder is a cloud API costing ~$0.14/1M input tokens — the better choice for non-sensitive high-volume code generation where local hardware is not available. Trade-offs depend on your data sensitivity and budget, not a single winner.' },
           { q: 'What is Mistral Devstral and why is it mentioned here?', a: 'Mistral Devstral Small 24B is a coding-focused model from Mistral AI, released May 2026, designed specifically for agentic coding tasks — multi-file refactoring, tool use, and iterative code generation. It scores 90.1% HumanEval and runs on 14 GB VRAM. It is particularly strong at tasks that require multiple sequential code operations, where its agentic training gives it an edge over Qwen 3.6 27B\'s pure benchmark scores.' },
@@ -516,7 +516,7 @@ DEEPSEEK_MODEL=deepseek-chat
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Qwen 3.6 27B est-il meilleur que DeepSeek Coder pour le code local ?', a: 'Pour le déploiement local : Qwen 3.6 27B atteint 77,2% SWE-bench (vérifié) et fonctionne entièrement en local sur 16 Go VRAM, ce qui le rend conforme au RGPD pour les équipes européennes. DeepSeek Coder est une API cloud coûtant ~0,14 $/1M tokens en entrée — le meilleur choix pour la génération de code public non sensible à grand volume sans matériel local disponible. Le bon choix dépend de votre sensibilité des données et de votre budget, pas d\'un gagnant unique.' },
           { q: 'Qu\'est-ce que Mistral Devstral et pourquoi est-il mentionné ici ?', a: 'Mistral Devstral Small 24B est un modèle orienté code de Mistral AI, publié en mai 2026, conçu spécifiquement pour les tâches de codage agentique — refactoring multi-fichiers, utilisation d\'outils et génération de code itérative. Il obtient 90,1% HumanEval et fonctionne sur 14 Go VRAM. Il est particulièrement performant sur les tâches nécessitant plusieurs opérations de code séquentielles, où son entraînement agentique lui confère un avantage sur les scores bruts de Qwen 3.6 27B.' },
@@ -779,7 +779,7 @@ DEEPSEEK_MODEL=deepseek-chat
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Es Qwen 3.6 27B mejor que DeepSeek Coder para codificación local?', a: 'Para despliegue local: Qwen 3.6 27B alcanza 77.2% SWE-bench (verificado) y se ejecuta completamente en local en 16 GB VRAM, haciéndolo conforme al GDPR para equipos de la UE. DeepSeek Coder es una API cloud que cuesta ~$0.14/1M tokens de entrada — la mejor opción para generación de código público no sensible en alto volumen donde no hay hardware local disponible. La elección correcta depende de la sensibilidad de tus datos y presupuesto, no de un único ganador.' },
           { q: '¿Qué es Mistral Devstral y por qué se menciona aquí?', a: 'Mistral Devstral Small 24B es un modelo orientado a código de Mistral AI, lanzado en mayo de 2026, diseñado específicamente para tareas de codificación agéntica — refactorización multi-archivo, uso de herramientas y generación iterativa de código. Alcanza 90.1% HumanEval y se ejecuta en 14 GB VRAM. Es especialmente fuerte en tareas que requieren múltiples operaciones de código secuenciales, donde su entrenamiento agéntico le da ventaja sobre las puntuaciones brutas de Qwen 3.6 27B.' },

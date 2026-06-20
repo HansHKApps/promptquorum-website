@@ -94,6 +94,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: 'Best for budget creators who need unlimited audio generation without ongoing subscription costs.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Can I use AI TTS audio commercially?',
@@ -189,6 +190,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Darf ich KI-TTS-Audio kommerziell nutzen?',
@@ -254,6 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Puis-je utiliser l\'audio TTS IA à des fins commerciales ?',
@@ -315,6 +318,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'AI TTS音声を商業利用できますか？',
@@ -376,6 +380,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'AI TTS生成的音频可以商业使用吗？',
@@ -494,6 +499,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: 'Ideal para creadores con presupuesto limitado que necesitan generación de audio ilimitada sin costes de suscripción continuos.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Puedo usar audio TTS de IA comercialmente?',
@@ -633,6 +639,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: 'Ideal para criadores com orçamento limitado que precisam de geração de áudio ilimitada sem custos de assinatura contínuos.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Posso usar áudio TTS de IA comercialmente?',
@@ -772,6 +779,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: 'الأفضل للمنشئين ذوي الميزانية المحدودة الذين يحتاجون إلى توليد صوت غير محدود بدون تكاليف اشتراك مستمرة.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل يمكنني استخدام صوت الذكاء الاصطناعي تجارياً؟',
@@ -913,6 +921,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: '지속적인 구독 비용 없이 무제한 오디오 생성이 필요한 예산이 제한된 크리에이터에게 이상적입니다.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'AI TTS 오디오를 상업적으로 사용할 수 있습니까?',

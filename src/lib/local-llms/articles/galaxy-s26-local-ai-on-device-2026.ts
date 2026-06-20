@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faqSection: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Galaxy AI est-il totalement local ou utilise-t-il le cloud?',

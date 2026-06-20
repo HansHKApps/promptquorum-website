@@ -298,7 +298,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'What is PromptLayer used for?',
@@ -699,7 +700,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Wofür wird PromptLayer verwendet?',
@@ -1108,7 +1110,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Para qué se usa PromptLayer?',
@@ -1514,6 +1517,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           {
@@ -1853,7 +1857,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Perguntas frequentes',
         faqs: [
           { q: 'Para que serve o PromptLayer?', a: 'PromptLayer registra cada chamada à API LLM em um painel com histórico de solicitações, custo, latência e rastreamento de versões de prompts. As equipes o usam para depurar falhas LLM em produção, rastrear o custo de API por funcionalidade e comparar versões de prompts em tráfego real.' },
           { q: 'Mirascope é melhor que LangChain?', a: 'Eles resolvem problemas distintos. Mirascope se concentra em chamadas LLM type-safe e agnósticas ao provedor com validação Pydantic. LangChain é um framework de orquestração mais amplo com chains, agentes e memória. Mirascope é a melhor opção para equipes que querem chamadas LLM limpas sem o overhead de abstração do LangChain; LangChain é melhor para fluxos de trabalho de agentes complexos.' },
@@ -2209,7 +2214,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'À quoi sert PromptLayer ?',
@@ -2608,6 +2614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           {
@@ -3003,6 +3010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           {
@@ -3399,7 +3407,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: 'PromptLayer는 무엇에 사용됩니까?',

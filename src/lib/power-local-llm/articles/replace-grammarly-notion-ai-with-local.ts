@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Is a local LLM as good as Grammarly at grammar correction?',
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Es un LLM local tan bueno como Grammarly en corrección gramatical?',
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Um LLM local é tão bom quanto o Grammarly na correção gramatical?',
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Ist ein lokales LLM bei Grammatikkorrektur so gut wie Grammarly?',
@@ -1715,7 +1715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Un LLM local est-il aussi bon que Grammarly pour la correction grammaticale ?',
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'ローカルLLMは文法修正でGrammarlyと同等ですか？',
@@ -2408,7 +2408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: '本地 LLM 在语法修改上能与 Grammarly 媲美吗？',
@@ -3053,7 +3053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '로컬 LLM이 문법 교정에서 Grammarly만큼 좋습니까?',

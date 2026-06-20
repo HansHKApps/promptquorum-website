@@ -576,7 +576,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can a local LLM replace a human writing partner for fiction drafting?',
@@ -1195,7 +1195,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Kann ein lokales LLM einen menschlichen Schreibpartner für Belletristik-Entwürfe ersetzen?',
@@ -1823,7 +1823,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Un LLM local peut-il remplacer un partenaire d\'écriture humain pour la rédaction de fiction ?',
@@ -2451,7 +2451,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'ローカルLLMはフィクション起草において人間の執筆パートナーの代わりになれますか？',
@@ -3079,7 +3079,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: '本地LLM能替代人类写作伙伴进行小说起草吗？',
@@ -3707,7 +3707,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Puede un LLM local reemplazar a un compañero de escritura humano para la redacción de ficción?',
@@ -4341,7 +4341,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Um LLM local pode substituir um parceiro de escrita humano para a redação de ficção?',
@@ -5607,7 +5607,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '로컬 LLM이 소설 초안 작성을 위한 인간 글쓰기 파트너를 대체할 수 있습니까?',

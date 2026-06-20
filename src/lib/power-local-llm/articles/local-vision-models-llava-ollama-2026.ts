@@ -563,7 +563,7 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can I use LLaVA or Llama 3.2 Vision without Ollama?',
@@ -1022,7 +1022,7 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Kann ich LLaVA oder Llama 3.2 Vision ohne Ollama verwenden?',
@@ -1489,7 +1489,7 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Puis-je utiliser LLaVA ou Llama 3.2 Vision sans Ollama ?',

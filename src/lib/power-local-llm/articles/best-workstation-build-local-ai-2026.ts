@@ -147,6 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Should I build a workstation or rent cloud GPUs for running 70B models?',
@@ -337,6 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Sollte ich eine Workstation bauen oder Cloud-GPUs mieten?',
@@ -488,6 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Vaut-il mieux construire une workstation ou louer des GPU cloud ?',
@@ -636,6 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'ワークステーションを自作するべきか、クラウドGPUを借りるべきか？',
@@ -788,6 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '应该自建工作站还是租用云GPU？',
@@ -983,6 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Es mejor construir una workstation o alquilar GPU en la nube para ejecutar modelos de 70B?',
@@ -1207,6 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '70B 모델 실행을 위해 워크스테이션을 만드는 것이 낫습니까, 클라우드에서 GPU를 빌리는 것이 낫습니까?',
@@ -1431,6 +1438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'É melhor montar uma workstation ou alugar GPU na nuvem para rodar modelos de 70B?',
@@ -1658,6 +1666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل من الأفضل بناء محطة عمل أم استئجار GPU سحابية لتشغيل نماذج 70B؟',

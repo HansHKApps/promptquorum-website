@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Why do you need to test prompts across multiple models?', a: 'Models differ in instruction parsing, JSON output reliability, refusal patterns, and context windows. A prompt that passes on GPT-5.5 may fail silently on Claude Opus 4.8. Multi-model testing reveals these compatibility gaps before production deployment.' },
           { q: 'What is the difference between GPT-5.5 and Claude Opus 4.8 in prompt handling?', a: 'GPT-5.5 is stricter with system prompts and enforces JSON schema directives (~95% valid JSON rate). Claude Opus 4.8 is more forgiving of informal phrasing but applies stricter refusal patterns for safety-adjacent tasks. For input-heavy tasks, Claude costs $3 vs $5 per 1M input tokens — 40% cheaper.' },
@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Warum müssen Prompts über mehrere Modelle hinweg getestet werden?', a: 'Modelle unterscheiden sich in der Instruktionsverarbeitung, JSON-Ausgabezuverlässigkeit, Refusal-Mustern und Kontextfenstern. Ein Prompt, der bei GPT-5.5 erfolgreich ist, kann bei Claude Opus 4.8 lautlos scheitern. Multi-Modell-Testing deckt diese Kompatibilitätslücken auf.' },
           { q: 'Was ist der Unterschied zwischen GPT-5.5 und Claude Opus 4.8?', a: 'GPT-5.5 ist strenger mit System-Prompts (~95 % gültige JSON-Rate). Claude Opus 4.8 ist toleranter, wendet aber strengere Refusal-Muster an. Bei eingabelastigen Aufgaben kostet Claude 3 $ vs. 5 $ pro 1 Mio. Eingabe-Tokens – 40 % günstiger.' },
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Por qué necesitas probar prompts en múltiples modelos?', a: 'Los modelos difieren en la interpretación de instrucciones, la fiabilidad de salida JSON, los patrones de rechazo y los context windows. Un prompt que pasa en GPT-5.5 puede fallar silenciosamente en Claude Opus 4.8. Las pruebas multi-modelo revelan estas brechas de compatibilidad antes del despliegue en producción.' },
           { q: '¿Cuál es la diferencia entre GPT-5.5 y Claude Opus 4.8 en el manejo de prompts?', a: 'GPT-5.5 es más estricto con los prompts del sistema y aplica las directivas de schema JSON (~95 % de tasa de JSON válido). Claude Opus 4.8 es más tolerante con las formulaciones informales pero aplica patrones de rechazo más estrictos para tareas relacionadas con la seguridad. Para tareas con muchas entradas, Claude cuesta $3 vs $5 por 1M tokens de entrada — un 40 % más barato.' },
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           { q: 'Por que você precisa testar prompts em múltiplos modelos?', a: 'Os modelos diferem na interpretação de instruções, confiabilidade de saída JSON, padrões de recusa e janelas de contexto. Um prompt que passa no GPT-5.5 pode falhar silenciosamente no Claude Opus 4.8. Os testes multi-modelo revelam essas lacunas de compatibilidade antes da implantação em produção.' },
           { q: 'Qual é a diferença entre GPT-5.5 e Claude Opus 4.8 no tratamento de prompts?', a: 'O GPT-5.5 é mais rigoroso com prompts do sistema e aplica as diretivas de schema JSON (~95% de taxa de JSON válido). O Claude Opus 4.8 é mais tolerante com formulações informais, mas aplica padrões de recusa mais rigorosos para tarefas relacionadas à segurança. Para tarefas com muitas entradas, o Claude custa $3 vs $5 por 1M tokens de entrada — 40% mais barato.' },
@@ -1204,7 +1204,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Pourquoi faut-il tester les prompts sur plusieurs modèles ?', a: 'Les modèles diffèrent dans l\'analyse des instructions, la fiabilité JSON, les patterns de refus et les fenêtres de contexte. Un prompt valide sur GPT-5.5 peut échouer silencieusement sur Claude Opus 4.8. Les tests multi-modèles révèlent ces incompatibilités avant le déploiement.' },
           { q: 'Quelle est la différence entre GPT-5.5 et Claude Opus 4.8 ?', a: 'GPT-5.5 est plus strict avec les system prompts (~95 % de JSON valide). Claude Opus 4.8 est plus tolérant mais applique des refus plus stricts. Pour les tâches à forte entrée, Claude coûte 3 $ contre 5 $ par million de tokens — 40 % moins cher.' },
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: '여러 모델에서 프롬프트를 테스트해야 하는 이유는 무엇입니까?', a: '모델은 지시 파싱, JSON 출력 신뢰성, 거부 패턴, 컨텍스트 창에서 차이를 보입니다. GPT-5.5에서 통과한 프롬프트가 Claude Opus 4.8에서 조용히 실패할 수 있습니다. 멀티 모델 테스트는 프로덕션 배포 전에 이러한 호환성 격차를 드러냅니다.' },
           { q: '프롬프트 처리에서 GPT-5.5와 Claude Opus 4.8의 차이점은 무엇입니까?', a: 'GPT-5.5는 시스템 프롬프트에 더 엄격하고 JSON 스키마 지시를 강제합니다(~95% 유효 JSON 비율). Claude Opus 4.8은 비공식 표현에 더 관대하지만 안전 관련 작업에 더 엄격한 거부 패턴을 적용합니다. 입력 집약적 작업의 경우 Claude는 입력 1M 토큰당 $3 대 $5 — 40% 저렴합니다.' },

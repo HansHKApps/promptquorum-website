@@ -542,6 +542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Die Evolution des Prompt Engineerings',
           faqs: [
             {
@@ -743,6 +744,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: La evolución del prompt engineering',
           faqs: [
             {
@@ -928,6 +930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة: تطور هندسة البرومبت',
           faqs: [
             {
@@ -1125,6 +1128,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: A evolução do prompt engineering',
           faqs: [
             {
@@ -1330,6 +1334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ : L\'évolution du prompt engineering',
           faqs: [
             {
@@ -1561,6 +1566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ：プロンプトエンジニアリングの進化',
           faqs: [
             {
@@ -1766,6 +1772,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ：提示词工程的演变',
           faqs: [
             {

@@ -748,6 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'What is the EU AI Act and when does it apply?', a: 'The EU AI Act is the world\'s first comprehensive AI law, passed by the European Parliament in March 2024. Prohibited practices apply from August 2024. GPAI model obligations (for GPT-5.5, Claude, Gemini-class models) apply from August 2025. High-risk AI system requirements apply from August 2026. It applies to any organization placing AI on the EU market or using AI that affects EU residents.' },
@@ -1357,6 +1358,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was ist der EU AI Act und wann wird er angewendet?', a: 'Der EU AI Act ist das weltweite erste umfassende KI-Gesetz, verabschiedet durch das Europäische Parlament im März 2024. Verbotene Praktiken gelten ab August 2024. GPAI-Modell-Verpflichtungen (für GPT-5.5, Claude, Gemini-Klasse-Modelle) gelten ab August 2025. Hochrisiko-KI-System-Anforderungen gelten ab August 2026. Es wird angewendet auf jede Organisation, die KI auf dem EU-Markt platziert oder KI nutzt, die EU-Einwohner beeinflusst.' },
@@ -2005,6 +2007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Qué es el EU AI Act?', a: 'El EU AI Act es el primer marco legal integral del mundo para la inteligencia artificial, aprobado por el Parlamento Europeo en marzo de 2024 con 523 votos a favor. Clasifica los sistemas de IA en cuatro niveles de riesgo y se aplica a agosto de 2026.' },
@@ -2649,6 +2652,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'الأسئلة المتكررة',
           faqs: [
             { q: 'ما هو قانون الذكاء الاصطناعي الأوروبي؟', a: 'قانون الذكاء الاصطناعي الأوروبي هو أول إطار قانوني شامل في العالم للذكاء الاصطناعي، أقرّه البرلمان الأوروبي في مارس 2024 بـ523 صوتاً مؤيداً. يُصنّف أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر ويسري بدءاً من أغسطس 2026.' },
@@ -3349,6 +3353,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'Scholz souligne que l\'approche européenne est intentionnellement différente de celle des États-Unis — c\'est un choix de valeurs, pas une limitation.',
         },
         faq: {
+          id: 'faq',
           title: 'FAQ : Géopolitique de l\'IA',
           faqs: [
             {
@@ -4811,6 +4816,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O que é o EU AI Act e quando se aplica?', a: 'O EU AI Act é a primeira lei abrangente de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Práticas proibidas se aplicam a partir de agosto de 2024. Obrigações de modelos GPAI (para modelos GPT-5.5, Claude, classe Gemini) aplicam-se a partir de agosto de 2025. Requisitos de sistemas de IA de alto risco aplicam-se a partir de agosto de 2026. Aplica-se a qualquer organização que coloque IA no mercado da UE ou use IA que afete residentes da UE.' },
@@ -5018,6 +5024,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         imageCaption: 'EU: 컴플라이언스 비용 $50만~$200만+, 6~12개월, 규범적 규정. 미국: $5만~$30만, 2~4개월, 자발적. 중국: $20만~$100만+, CAC 승인 불확실.',
       },
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: 'EU AI법이란 무엇이며 언제 적용됩니까?', a: 'EU AI법은 세계 최초의 포괄적 AI 법률로, 2024년 3월 유럽 의회에서 523표 찬성으로 통과되었습니다. 금지 관행은 2024년 8월부터 적용됩니다. GPAI 모델 의무(GPT-5.5, Claude, Gemini급 모델)는 2025년 8월부터 적용됩니다. 고위험 AI 시스템 요건은 2026년 8월부터 적용됩니다. EU 시장에 AI를 출시하거나 EU 거주자에게 영향을 미치는 AI를 사용하는 모든 조직에 적용됩니다.' },

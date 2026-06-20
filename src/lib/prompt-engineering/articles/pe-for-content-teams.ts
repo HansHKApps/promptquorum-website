@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: "Comment les équipes contenu réduisent-elles les cycles d'examen avec le prompt engineering ?", a: "Les équipes contenu réduisent les cycles d'examen en encodant les critères qualité — ton, format, nombre de mots, vocabulaire de marque et listes d'exclusion — directement dans le prompt avant la génération." },
           { q: "Qu'est-ce que le framework CRAFT et quand les équipes contenu doivent-elles l'utiliser ?", a: "CRAFT signifie Contexte, Rôle, Action, Format et Ton. C'est un framework structuré adapté au travail créatif et contenu car il organise les cinq dimensions les plus pertinentes pour les sorties contenu." },

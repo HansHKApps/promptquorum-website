@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Which AI coding tool has the best local LLM support?',
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Welches KI-Coding-Tool hat die beste Unterstützung für lokale LLMs?',
@@ -1318,7 +1318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: "Quel outil de codage IA a la meilleure prise en charge des LLM locaux ?",
@@ -1769,7 +1769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'どのAIコーディングツールが最高のローカルLLMサポートを持っていますか?',
@@ -2671,7 +2671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Qué herramienta de programación con IA tiene el mejor soporte para LLM local?',
@@ -3135,7 +3135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Qual ferramenta de programação com IA tem o melhor suporte para LLM local?',
@@ -4063,7 +4063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '어떤 AI 코딩 도구가 로컬 LLM을 가장 잘 지원합니까?',

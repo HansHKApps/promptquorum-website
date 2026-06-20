@@ -293,7 +293,7 @@ jobs:
 
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'What is prompt version control?',
@@ -640,7 +640,7 @@ jobs:
 
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist Prompt-Versionskontrolle?', a: 'Prompt-Versionskontrolle ist ein System, das jede Änderung an einem KI-Prompt verfolgt, einen Rollback auf jede frühere Version ermöglicht und Autor sowie Grund jeder Änderung festhält. Es wendet semantisches Versioning (MAJOR.MINOR.PATCH) auf Prompts an: MAJOR für brechende Ausgabeformat-Änderungen, MINOR für Qualitätsverbesserungen, PATCH für Tippfehler-/Wortlautkorrekturen. Prompts werden als Textdateien in Git gespeichert, Änderungen durchlaufen PR-Reviews, und Releases werden getaggt.' },
           { q: 'Benötige ich ein separates Git-Repository für Prompts oder kann ich mein bestehendes App-Repo nutzen?', a: 'Für Teams unter 5 Entwicklern oder weniger als 20 Prompts: Verwenden Sie ein /prompts/-Verzeichnis im bestehenden App-Repo. Für größere Teams oder wenn Prompts über mehrere Dienste geteilt werden: Ein dediziertes Prompt-Repo bietet sauberere Eigentümerschaft, unabhängige Versionierung und Zugriffssteuerung. Nutzen Sie das App-Repo, wenn Prompts eng mit der App-Logik gekoppelt sind; ein separates Repo, wenn Prompts mehreren Diensten oder Teams dienen.' },
@@ -966,7 +966,7 @@ jobs:
 
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Qué es el control de versiones de prompts?',
@@ -1631,7 +1631,7 @@ jobs:
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é controle de versão de prompts?', a: 'O controle de versão de prompts é um sistema que rastreia cada alteração de um prompt de IA, permite o rollback para qualquer versão anterior e registra o autor e o motivo de cada modificação. Aplica o versionamento semântico (MAJOR.MINOR.PATCH) aos prompts: MAJOR para alterações de formato de saída que quebram compatibilidade, MINOR para melhorias de qualidade, PATCH para correções de erros tipográficos/redação.' },
           { q: 'Preciso de um repositório Git separado para prompts ou posso usar meu repositório de aplicação existente?', a: 'Para equipes de menos de 5 engenheiros ou menos de 20 prompts: use um diretório /prompts/ no seu repositório de aplicação existente. Para equipes maiores ou quando os prompts são compartilhados entre múltiplos serviços: um repositório de prompts dedicado oferece propriedade mais clara, versionamento independente e controle de acesso.' },
@@ -1950,7 +1950,7 @@ jobs:
 
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Qu\'est-ce que la gestion de versions des prompts ?', a: 'La gestion de versions des prompts est un système qui trace chaque modification d\'un prompt IA, permet de revenir à toute version précédente et enregistre l\'auteur et la raison de chaque changement. Elle applique le versioning sémantique (MAJOR.MINOR.PATCH) aux prompts : MAJOR pour les changements de format de sortie, MINOR pour les améliorations de qualité, PATCH pour les corrections de fautes. Les prompts sont stockés en tant que fichiers texte dans git, les changements passent par une pull request, et les versions sont taguées.' },
           { q: 'Faut-il un dépôt git séparé pour les prompts ou peut-on utiliser le dépôt applicatif existant ?', a: 'Pour les équipes de moins de 5 personnes ou avec moins de 20 prompts : un répertoire /prompts/ dans le dépôt existant suffit. Pour les équipes plus grandes ou quand les prompts sont partagés entre plusieurs services : un dépôt dédié offre une propriété plus claire, un versioning indépendant et un contrôle d\'accès. Utilisez le dépôt applicatif si les prompts sont étroitement couplés à la logique métier ; un dépôt séparé s\'ils servent plusieurs services ou équipes.' },

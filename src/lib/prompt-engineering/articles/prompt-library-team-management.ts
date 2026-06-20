@@ -151,6 +151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is a prompt library?', a: 'A prompt library is a shared, versioned repository where a team stores, searches, and reuses prompts. It typically includes a folder structure organized by theme or use case, named and versioned files, access control rules, and a review or approval process.' },
@@ -317,6 +318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist eine Prompt-Bibliothek?', a: 'Eine Prompt-Bibliothek ist ein gemeinsames, versioniertes Repository, in dem ein Team Prompts speichert, sucht und wiederverwendet. Sie umfasst Ordnerstruktur, Namenskonventionen, Zugriffssteuerungsregeln und einen Review-Prozess.' },
@@ -494,6 +496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es una biblioteca de prompts?', a: 'Una biblioteca de prompts es un repositorio compartido y versionado donde un equipo almacena, busca y reutiliza prompts. Típicamente incluye una estructura de carpetas organizada por tema o caso de uso, archivos nombrados y versionados, reglas de control de acceso y un proceso de revisión o aprobación.' },
@@ -669,6 +672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é uma biblioteca de prompts?', a: 'Uma biblioteca de prompts é um repositório compartilhado e versionado onde uma equipe armazena, pesquisa e reutiliza prompts. Tipicamente inclui uma estrutura de pastas organizada por tema ou caso de uso, arquivos nomeados e versionados, regras de controle de acesso e um processo de revisão ou aprovação.' },
@@ -834,6 +838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce qu\'une bibliothèque de prompts ?', a: 'Une bibliothèque de prompts est un dépôt partagé et versionné où l\'équipe stocke, recherche et réutilise des prompts. Elle comprend une structure de dossiers organisée par thème, des fichiers versionnés et des règles de contrôle d\'accès.' },
@@ -999,6 +1004,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: 'プロンプトライブラリとは何ですか？', a: 'プロンプトライブラリとは、チームがプロンプトを保存、検索、再利用する共有のバージョン管理されたリポジトリです。フォルダ構造、命名規則、アクセス制御ルール、レビュープロセスが含まれます。' },
@@ -1164,6 +1170,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '什么是Prompt库？', a: 'Prompt库是一个共享的、受版本控制的仓库，团队在其中存储、搜索和重用Prompt。它包括按主题组织的文件夹结构、版本控制文件和访问控制规则。' },
@@ -1341,6 +1348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '프롬프트 라이브러리란 무엇입니까?', a: '프롬프트 라이브러리는 팀이 프롬프트를 저장·검색·재사용하는 공유·버전 관리된 저장소입니다. 일반적으로 주제 또는 사용 사례별로 구성된 폴더 구조, 명명 및 버전 관리된 파일, 접근 제어 규칙, 검토 또는 승인 프로세스를 포함합니다.' },
@@ -1518,6 +1526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هي مكتبة التلقينات؟', a: 'مكتبة التلقينات هي مستودع مشترك ومُصدَر يخزن فيه الفريق التلقينات ويبحث فيها ويعيد استخدامها. تشمل عادةً بنية مجلدات منظمة حسب الموضوع أو حالة الاستخدام، وملفات مُسماة ومُصدَرة، وقواعد التحكم بالوصول، وعملية مراجعة أو موافقة.' },

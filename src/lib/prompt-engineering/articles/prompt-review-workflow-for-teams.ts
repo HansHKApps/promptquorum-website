@@ -338,7 +338,8 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'What should a prompt review checklist include?',
@@ -735,7 +736,8 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Was sollte eine Prompt-Review-Checkliste enthalten?',
@@ -1138,7 +1140,8 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Qué debe incluir una lista de verificación de revisión de prompts?',
@@ -1533,6 +1536,7 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
+        id: 'faq',
         title: 'أسئلة مكررة',
         faqs: [
           {
@@ -1926,7 +1930,8 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'O que deve incluir uma lista de verificação de revisão de prompts?',
@@ -2321,7 +2326,8 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Que doit contenir une checklist de revue de prompts ?',
@@ -2715,7 +2721,8 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: 'よくある質問',
         faqs: [
           {
             q: 'プロンプトレビューチェックリストに何を含めるべきですか？',
@@ -3419,6 +3426,7 @@ require_code_owner_reviews: true`,
       },
 
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           {

@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Preguntas frecuentes',
           faqs: [
             {
               q: '¿Qué tan rápida es la inferencia solo CPU comparada con una GPU?',
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Häufig gestellte Fragen',
           faqs: [
             {
               q: 'Wie schnell ist CPU-only-Inferenz im Vergleich zu einer GPU?',
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'Questions fréquemment posées',
           faqs: [
             {
               q: 'À quelle vitesse l\'inférence CPU-only est-elle comparée à un GPU?',
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         faq: {
           id: 'faq',
-          title: 'FAQ',
+          title: 'よくある質問',
           faqs: [
             {
               q: 'CPU-only 推論は GPU と比べて何倍遅いですか？',

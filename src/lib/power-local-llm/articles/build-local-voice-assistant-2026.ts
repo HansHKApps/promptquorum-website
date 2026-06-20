@@ -383,7 +383,7 @@ if __name__ == "__main__":
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can I use a local voice assistant for smart home control?',
@@ -1187,7 +1187,7 @@ if __name__ == "__main__":
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Puis-je utiliser un assistant vocal local pour contrôler ma domotique ?',

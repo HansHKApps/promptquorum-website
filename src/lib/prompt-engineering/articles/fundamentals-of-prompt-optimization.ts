@@ -450,6 +450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Prompt Optimization',
           faqs: [
             {
@@ -879,6 +880,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Prompt-Optimierung',
           faqs: [
             {
@@ -1401,6 +1403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Optimización de prompts',
           faqs: [
             { q: '¿Qué es la optimización de prompts?', a: 'La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad de la salida de IA para una tarea específica. Implica identificar un modo de fallo (formato incorrecto, alucinación, salida vaga), cambiar una variable (especificidad, contexto, ejemplos, restricciones, formato de salida o rol) y probar el resultado en modelos como GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro.' },
@@ -1860,6 +1863,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة: تحسين الموجّهات',
           faqs: [
             { q: 'ما تحسين الموجّهات؟', a: 'تحسين الموجّهات هو العملية التكرارية لمراجعة موجّه موجود لتحسين جودة مخرجات الذكاء الاصطناعي لمهمة محددة. يتضمن تحديد وضع فشل (تنسيق خاطئ، هلوسة، مخرجات غامضة)، وتغيير متغير واحد (التحديد الدقيق، السياق، الأمثلة، القيود، تنسيق المخرجات، أو الدور)، واختبار النتيجة على نماذج مثل GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro.' },
@@ -2250,6 +2254,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ : Optimisation de Prompt',
           faqs: [
             {
@@ -2700,6 +2705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ : プロンプト最適化',
           faqs: [
             { q: 'プロンプト最適化とは何ですか？', a: 'プロンプト最適化は、特定のタスクのためのAI出力品質を改善するために既存のプロンプトを改定する反復的なプロセスです。障害モード（形式が違う、幻覚、曖昧な出力）を識別し、1つの変数（具体性、コンテキスト、例、制約、出力フォーマット、またはロール）を変更し、GPT-5.5、Claude Opus 4.8、Gemini 3.1 Proなどのモデル全体で結果をテストします。' },
@@ -3017,6 +3023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {
@@ -3551,6 +3558,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ: Otimização de prompts',
           faqs: [
             {
@@ -4061,6 +4069,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'FAQ: 프롬프트 최적화',
         faqs: [
           { q: '프롬프트 최적화란 무엇입니까?', a: '프롬프트 최적화는 특정 작업에 대한 AI 출력 품질을 향상시키기 위해 기존 프롬프트를 반복적으로 수정하는 프로세스입니다. 실패 방식(잘못된 형식, 환각, 모호한 출력)을 식별하고, 하나의 변수(구체성, 컨텍스트, 예시, 제약 조건, 출력 형식 또는 역할)를 변경하고, GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro와 같은 모델에서 결과를 테스트합니다.' },

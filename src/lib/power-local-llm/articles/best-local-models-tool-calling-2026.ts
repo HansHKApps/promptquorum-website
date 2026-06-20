@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Which local model has the highest tool-call success rate in 2026?',
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Quel modèle local a le plus haut taux de réussite du Tool Calling en 2026 ?',
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           {
             q: '2026年でローカルツール呼び出しの最高い成功率を持つモデルは何ですか?',
@@ -1826,7 +1826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: '2026年本地工具调用中最高成功率的模型是什么？',
@@ -2196,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Qué modelo local tiene la tasa de éxito más alta en tool calling en 2026?',
@@ -2589,7 +2589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Qual modelo local tem a maior taxa de sucesso em tool calling em 2026?',
@@ -3376,7 +3376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           {
             q: '2026년 tool calling에서 가장 높은 성공률을 가진 로컬 모델은 무엇입니까?',

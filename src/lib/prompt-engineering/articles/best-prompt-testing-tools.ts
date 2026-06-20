@@ -519,7 +519,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     },
     faq: {
-      title: 'FAQ',
+      id: 'faq',
+      title: 'Frequently Asked Questions',
       faqs: [
         {
           q: 'Was ist Prompt-Testing?',
@@ -807,7 +808,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     },
     faq: {
-      title: 'FAQ',
+      id: 'faq',
+      title: 'Frequently Asked Questions',
       faqs: [
         { q: '¿Qué es el testing de prompts?', a: 'El testing de prompts verifica que tus outputs de LLM coincidan con una respuesta de referencia o pasen una regla LLM-as-judge. Los tests rápidos (unitarios) comprueban un solo prompt en segundos. Los tests lentos (batch) evalúan un dataset offline en minutos u horas.' },
         { q: '¿Cuándo debo testear prompts?', a: 'Testea siempre que cambies un prompt, especialmente antes de desplegar en producción. Usa testing CI/CD en cada commit y evaluación batch para la aprobación final.' },
@@ -1063,6 +1065,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     },
     faq: {
+      id: 'faq',
       title: 'الأسئلة الشائعة',
       faqs: [
         { q: 'ما هو اختبار البرامج النصية؟', a: 'يتحقق اختبار البرامج النصية من أن مخرجات نموذج LLM تتطابق مع إجابة مرجعية أو تجتاز قاعدة LLM-as-judge. تتحقق الاختبارات السريعة (الوحدة) من برنامج نصي واحد في ثوانٍ. أما الاختبارات البطيئة (الدفعية) فتقيّم مجموعة بيانات دون اتصال في دقائق أو ساعات.' },
@@ -1319,7 +1322,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     },
     faq: {
-      title: 'FAQ', // VERIFY
+      id: 'faq',
+      title: 'Frequently Asked Questions', // VERIFY
       faqs: [
         { q: 'O que é teste de prompts?', a: 'O teste de prompts verifica se seus outputs de LLM correspondem a uma resposta de referência ou passam por uma regra LLM-as-judge. Os testes rápidos (unitários) verificam um único prompt em segundos. Os testes lentos (em lote) avaliam um dataset offline em minutos ou horas.' }, // VERIFY
         { q: 'Quando devo testar prompts?', a: 'Teste sempre que mudar um prompt, especialmente antes de fazer deploy em produção. Use teste CI/CD a cada commit e avaliação em lote para a aprovação final.' }, // VERIFY
@@ -1880,6 +1884,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
       ]
     },
     faq: {
+      id: 'faq',
       title: '常见问题',
       faqs: [
         {
@@ -2167,7 +2172,8 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
         ]
       },
       faq: {
-        title: 'FAQ',
+        id: 'faq',
+        title: '자주 묻는 질문',
         faqs: [
           { q: '프롬프트 테스트란 무엇입니까?', a: '프롬프트 테스트는 LLM 출력이 기준 응답과 일치하는지 또는 LLM-as-judge 규칙을 통과하는지 검증합니다. 빠른 테스트(단위)는 단일 프롬프트를 초 단위로 확인합니다. 느린 테스트(배치)는 데이터셋을 오프라인으로 분 또는 시간 단위로 평가합니다.' },
           { q: '프롬프트를 언제 테스트해야 합니까?', a: '프롬프트를 변경할 때마다, 특히 프로덕션 배포 전에 테스트하십시오. 모든 커밋에 CI/CD 테스트를 사용하고 최종 승인을 위해 배치 평가를 사용하십시오.' },

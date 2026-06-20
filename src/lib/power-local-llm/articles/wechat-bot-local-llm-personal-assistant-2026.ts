@@ -115,6 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**WeChat Terms of Service:** WeChat\'s Terms of Service prohibit automated bots, scrapers, and third-party clients. Using WeChatFerry could result in account suspension if detected by WeChat\'s anti-automation systems. Use this setup for personal productivity only — not for mass messaging, marketing, or commercial automation.\n\n**Windows-only:** WeChatFerry uses Windows DLL injection to hook into the WeChat process. It does not work on macOS or Linux.\n\n**WeChat client version dependency:** WeChatFerry maintains compatibility with specific WeChat PC client versions. Verify the compatible version list in the WeChatFerry GitHub repository before updating WeChat.\n\n**Latency:** CPU-only inference on a 7B model takes 5–15 seconds per response, which can feel slow in chat. An 8GB GPU brings this down to 1–3 seconds.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Does this WeChat bot work on Mac?',
@@ -237,6 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Funktioniert der WeChat-Bot auch auf macOS?',
@@ -305,6 +307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Ce bot WeChat fonctionne-t-il sur Mac ?',
@@ -369,6 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'WeChatボットはMacで動作しますか？',
@@ -458,6 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '这个微信机器人在Mac上能用吗？',
@@ -618,6 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**Términos de Servicio de WeChat:** Los Términos de Servicio de WeChat prohíben los bots automatizados, los scrapers y los clientes de terceros. El uso de WeChatFerry podría acarrear la suspensión de la cuenta si los sistemas antifraude de WeChat lo detectan. Usa esta configuración solo para productividad personal — no para mensajería masiva, marketing o automatización comercial.\n\n**Solo Windows:** WeChatFerry utiliza inyección de DLL en Windows para conectarse al proceso de WeChat. No funciona en macOS ni en Linux.\n\n**Dependencia de la versión del cliente WeChat:** WeChatFerry mantiene compatibilidad con versiones específicas del cliente WeChat PC. Verifica la lista de versiones compatibles en el repositorio de GitHub de WeChatFerry antes de actualizar WeChat.\n\n**Latencia:** La inferencia solo en CPU con un modelo 7B tarda entre 5 y 15 segundos por respuesta, lo que puede resultar lento en el chat. Una GPU de 8 GB reduce ese tiempo a 1–3 segundos.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Este bot de WeChat funciona en Mac?',
@@ -816,6 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**WeChat 서비스 약관:** WeChat 서비스 약관은 자동화된 봇, 스크레이퍼, 타사 클라이언트를 금지합니다. WeChatFerry 사용은 WeChat의 사기 방지 시스템이 감지하면 계정 정지를 초래할 수 있습니다. 이 설정은 개인 생산성에만 사용하십시오 — 대량 메시지 발송, 마케팅, 상업적 자동화에는 사용하지 마십시오.\n\n**Windows 전용:** WeChatFerry는 WeChat 프로세스에 연결하기 위해 Windows에서 DLL 주입을 사용합니다. macOS나 Linux에서는 작동하지 않습니다.\n\n**WeChat 클라이언트 버전 의존성:** WeChatFerry는 특정 WeChat PC 클라이언트 버전과의 호환성을 유지합니다. WeChat을 업데이트하기 전에 WeChatFerry GitHub 저장소에서 지원되는 버전 목록을 확인하십시오.\n\n**지연:** 7B 모델로 CPU 전용 추론은 응답당 5–15초가 걸리며, 채팅에서 느릴 수 있습니다. 8 GB GPU는 그 시간을 1–3초로 줄입니다.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '이 WeChat 봇이 Mac에서 작동합니까?',
@@ -1014,6 +1021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**Termos de Serviço do WeChat:** Os Termos de Serviço do WeChat proíbem bots automatizados, scrapers e clientes de terceiros. O uso do WeChatFerry pode acarretar a suspensão da conta se os sistemas antiautomação do WeChat o detectarem. Use esta configuração apenas para produtividade pessoal — não para mensagens em massa, marketing ou automação comercial.\n\n**Apenas Windows:** O WeChatFerry utiliza injeção de DLL no Windows para se conectar ao processo do WeChat. Não funciona no macOS nem no Linux.\n\n**Dependência da versão do cliente WeChat:** O WeChatFerry mantém compatibilidade com versões específicas do cliente WeChat PC. Verifique a lista de versões compatíveis no repositório do GitHub do WeChatFerry antes de atualizar o WeChat.\n\n**Latência:** A inferência apenas em CPU com um modelo 7B leva de 5 a 15 segundos por resposta, o que pode parecer lento no chat. Uma GPU de 8 GB reduz esse tempo para 1–3 segundos.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Este bot de WeChat funciona no Mac?',
@@ -1215,6 +1223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '**شروط خدمة WeChat:** تحظر شروط خدمة WeChat البوتات الآلية والمخترقات وعملاء الطرف الثالث. قد يؤدي استخدام WeChatFerry إلى تعليق الحساب إذا اكتشفته أنظمة مكافحة الاحتيال في WeChat. استخدم هذا الإعداد للإنتاجية الشخصية فقط — لا للرسائل الجماعية أو التسويق أو الأتمتة التجارية.\n\n**Windows فقط:** يستخدم WeChatFerry حقن DLL على Windows للاتصال بعملية WeChat. لا يعمل على macOS أو Linux.\n\n**الاعتماد على إصدار عميل WeChat:** يحافظ WeChatFerry على التوافق مع إصدارات محددة من عميل WeChat PC. تحقق من قائمة الإصدارات المدعومة في مستودع GitHub لـ WeChatFerry قبل تحديث WeChat.\n\n**الكمون:** يستغرق الاستدلال على المعالج فقط مع نموذج 7B من 5 إلى 15 ثانية لكل رد، مما قد يكون بطيئًا في الدردشة. تُقلل بطاقة رسومية بـ 8 GB ذلك إلى 1–3 ثوانٍ.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل يعمل بوت WeChat هذا على Mac؟',

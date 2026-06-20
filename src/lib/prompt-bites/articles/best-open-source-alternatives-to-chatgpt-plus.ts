@@ -76,6 +76,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: 'Best for beginners and non-technical users who want a ChatGPT-like app without setup complexity.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Can open-source local models match ChatGPT Plus quality?',
@@ -164,6 +165,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Erreichen Open-Source-Modelle die Qualität von ChatGPT Plus?',
@@ -222,6 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Les modèles open source locaux peuvent-ils égaler ChatGPT Plus ?',
@@ -280,6 +283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'オープンソースのローカルモデルはChatGPT Plusの品質に匹敵しますか？',
@@ -345,6 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
@@ -433,6 +438,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '开源本地模型能达到ChatGPT Plus的质量吗？',
@@ -502,6 +508,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Os modelos open source locais conseguem igualar a qualidade do ChatGPT Plus?',
@@ -597,6 +604,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل يمكن لنماذج مفتوحة المصدر المحلية مجاراة جودة ChatGPT Plus؟',
@@ -728,6 +736,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: '설치 복잡성 없이 ChatGPT 유사 앱을 원하는 초보자와 비기술 사용자에게 최적입니다.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '오픈소스 로컬 모델이 ChatGPT Plus 품질에 필적할 수 있습니까?',

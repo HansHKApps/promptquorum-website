@@ -397,6 +397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'AI Code Review FAQ',
           faqs: [
             {
@@ -617,6 +618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'KI Code Review FAQ',
           faqs: [
             { q: 'Was ist das genaueste KI Code Review Tool im Jahr 2026?', a: 'Greptile erreicht die höchste Bug-Erkennungsrate mit 85% und einer unter-3% False-Positive-Rate, unter Verwendung vollständiger Codebase-Indexierung. Für sicherheitsorientierte Review von KI-generiertem Code erzielt Snyk Code + DeepCode AI 92/100 bei Erkennungs-Benchmarks.' },
@@ -1078,6 +1080,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes sobre revisión de código con IA',
           faqs: [
             {
@@ -1533,6 +1536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'أسئلة شائعة حول مراجعة الكود بالذكاء الاصطناعي',
           faqs: [
             {
@@ -1987,6 +1991,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'FAQ sobre revisão de código com IA',
           faqs: [
             {
@@ -2207,6 +2212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'FAQ sur la Révision de Code par IA',
           faqs: [
             { q: 'Quel est l\'outil de révision de code par IA le plus précis en 2026 ?', a: 'Greptile atteint le taux de détection de bugs le plus élevé avec 85% et un taux de faux positifs inférieur à 3%, utilisant l\'indexation complète de la base de code. Pour la révision orientée vers la sécurité du code généré par IA, Snyk Code + DeepCode AI atteint 92/100 sur les benchmarks de détection.' },
@@ -2433,6 +2439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'AI コードレビュー FAQ',
           faqs: [
             { q: '2026年で最も正確なAI コードレビューツールは何ですか？', a: 'Greptile は85%のバグ検出率と3%未満の誤検知率を達成、完全なコードベースインデックス化を使用。AI 生成コード向けのセキュリティ指向レビューの場合、Snyk Code + DeepCode AI は検出ベンチマークで92/100を達成。' },
@@ -2659,6 +2666,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'AI 代码审查常见问题',
           faqs: [
             { q: '2026 年最准确的 AI 代码审查工具是什么？', a: 'Greptile 以 85% 的错误检测率和 3% 以下的误报率达成，使用完整代码库索引。对于 AI 生成代码的安全导向审查，Snyk Code + DeepCode AI 在检测基准上达到 92/100。' },
@@ -3121,6 +3129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'AI 코드 리뷰에 관한 자주 묻는 질문',
         faqs: [
           {

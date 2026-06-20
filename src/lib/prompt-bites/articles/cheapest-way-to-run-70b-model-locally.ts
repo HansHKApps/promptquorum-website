@@ -108,6 +108,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         verdict: 'Best for Windows/Linux users who need maximum 70B inference speed and are comfortable building a PC.',
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Can I run a 70B model on a single consumer GPU?',
@@ -205,6 +206,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Kann ich ein 70B-Modell auf einer einzelnen Consumer-GPU betreiben?',
@@ -266,6 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Puis-je faire tourner un modèle 70B sur un seul GPU grand public ?',
@@ -323,6 +326,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '70BモデルをシングルコンシューマーGPUで動かせますか？',
@@ -404,6 +408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Puedo ejecutar un modelo 70B en una sola GPU de consumidor?',
@@ -506,6 +511,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '单张消费级GPU能运行70B模型吗？',
@@ -600,6 +606,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Posso executar um modelo 70B em uma única GPU de consumidor?',
@@ -718,6 +725,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل يمكنني تشغيل نموذج 70B على GPU واحد للمستهلكين؟',
@@ -874,6 +882,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '소비자용 단일 GPU로 70B 모델을 실행할 수 있습니까?',

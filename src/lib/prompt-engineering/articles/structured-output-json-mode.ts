@@ -393,6 +393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -710,6 +711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Was ist der Unterschied zwischen strukturierter Ausgabe und JSON-Modus?', a: 'Strukturierte Ausgabe ist die übergeordnete Kategorie, bei der Modelle Daten in einem festen Format (Listen, Tabellen, Schlüssel-Wert-Paare oder JSON) zurückgeben sollen. Der JSON-Modus ist eine strengere Variante, die valide JSON-Ausgabe erzwingt, oft mit API-Garantien des Modellanbieters.' },
@@ -1017,6 +1019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Cuál es la diferencia entre salida estructurada y modo JSON?', a: 'La salida estructurada es la categoría más amplia de pedirle al modelo que devuelva datos en un formato fijo (listas, tablas, pares clave-valor o JSON). El modo JSON es una variante más estricta que impone una salida JSON válida, a menudo con garantías a nivel de API del proveedor del modelo.' },
@@ -1324,6 +1327,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'ما الفرق بين المخرجات المهيكلة ووضع JSON؟', a: 'المخرجات المهيكلة هي الفئة الأوسع لطلب إعادة البيانات بصيغة ثابتة (قوائم أو جداول أو أزواج مفتاح-قيمة أو JSON). وضع JSON هو نوع أكثر صرامة يُلزم بمخرج JSON صالح، غالباً بضمانات على مستوى واجهة برمجة التطبيقات من مزود النموذج.' },
@@ -1443,6 +1447,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Perguntas Frequentes',
           faqs: [
             { q: 'O modo JSON garante o schema correto?', a: 'Não completamente. O modo JSON garante JSON sintaticamente correto, mas não impõe campos específicos. Use chamadas de função para schema crítico.' },
@@ -1752,6 +1757,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '구조화된 출력과 JSON 모드의 차이는 무엇입니까?', a: '구조화된 출력은 모델에 고정된 형식(목록, 표, 키-값 쌍 또는 JSON)으로 데이터를 반환하도록 요청하는 더 넓은 범주입니다. JSON 모드는 종종 모델 제공업체의 API 수준 보장과 함께 유효한 JSON 출력을 강제하는 더 엄격한 변형입니다.' },

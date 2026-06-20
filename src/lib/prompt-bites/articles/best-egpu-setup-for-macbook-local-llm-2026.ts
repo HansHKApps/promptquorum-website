@@ -86,6 +86,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?',
@@ -203,6 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Gibt es eine Möglichkeit, eine eGPU mit einem M4 MacBook Pro für KI zu nutzen?',
@@ -307,6 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Y a-t-il un moyen de faire fonctionner une eGPU avec un M4 MacBook Pro pour l\'IA ?',
@@ -411,6 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'M4 MacBook ProにeGPUをAIで使う方法はありますか？',
@@ -515,6 +519,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '有没有办法让eGPU在M4 MacBook Pro上用于AI？',
@@ -639,6 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Hay alguna forma de hacer funcionar una eGPU con un M4 MacBook Pro para IA?',
@@ -762,6 +768,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Existe alguma forma de fazer uma eGPU funcionar com um M4 MacBook Pro para IA?',
@@ -885,6 +892,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'هل توجد طريقة لتشغيل eGPU مع MacBook Pro M4 للذكاء الاصطناعي؟',
@@ -1018,6 +1026,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'M4 MacBook Pro에서 AI를 위해 eGPU를 작동시킬 방법이 있습니까?',

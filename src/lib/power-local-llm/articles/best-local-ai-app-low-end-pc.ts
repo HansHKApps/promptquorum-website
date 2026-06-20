@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Can I run local AI on 4 GB RAM?',
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Häufig gestellte Fragen',
         faqs: [
           {
             q: 'Kann ich lokale KI auf 4 GB RAM ausführen?',
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Puis-je faire tourner de l\'IA locale sur 4 Go RAM ?', a: 'Oui, mais uniquement avec des modèles sub-2B comme Llama 3.2 1B Q4_0 (≈ 0.7 Go sur disque) ou SmolLM 2 360M (≈ 0.25 Go sur disque). GPT4All est la seule des quatre apps qui liste 4 Go comme minimum officiel. Comptez 3–8 t/s sur un CPU moderne et un comportement UI nettement plus lent parce que l\'OS n\'a presque aucune marge.' },
           { q: 'Un ancien CPU Intel fonctionne-t-il pour l\'IA locale ?', a: 'Tout ce qui dispose d\'AVX2 (Haswell, 2013, ou plus récent) fonctionne en 2026. Le plancher pratique est un Intel Core i5-8250U ou un Ryzen 5 2500U plus ancien, où Phi-4 Mini Q4 tourne à 4–6 t/s. Les CPU sans AVX2 (pré-2013 Intel, AMD Bulldozer original) chargeront mais tourneront à 1–2 t/s, ce qui est inutilisable pour le chat.' },
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'よくある質問',
         faqs: [
           { q: '4 GB RAMでローカルAIを実行できますか？', a: 'はい、ただしLlama 3.2 1B Q4_0（ディスク上 ≈ 0.7 GB）やSmolLM 2 360M（ディスク上 ≈ 0.25 GB）のような2B未満のモデルに限ります。4 GBを公式最低要件としているのは4アプリ中GPT4Allのみです。最新CPUで3〜8 tok/秒、OSにほぼ余裕がないため、UI動作も明らかに鈍くなります。' },
           { q: '古いIntel CPUはローカルAIで使えますか？', a: 'AVX2搭載（Haswell、2013年以降）のものは2026年でも動作します。実用的な下限はIntel Core i5-8250Uや旧Ryzen 5 2500Uで、Phi-4 Mini Q4が4〜6 tok/秒で動作します。AVX2非対応CPU（2013年以前のIntel、初代AMD Bulldozer）はロードはできますが1〜2 tok/秒で動作し、チャット用途には使えません。' },
@@ -2050,7 +2050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Puedo ejecutar IA local con 4 GB RAM?',
@@ -2526,7 +2526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'Posso rodar IA local com 4 GB RAM?',
@@ -3317,7 +3317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '자주 묻는 질문',
         faqs: [
           { q: '4 GB RAM으로 로컬 AI를 실행할 수 있나요?', a: '네, 하지만 Llama 3.2 1B Q4_0 또는 SmolLM 2 360M처럼 2B 미만 모델만 가능합니다. GPT4All이 유일하게 공식 최소 요건으로 4 GB를 표시합니다.' },
           { q: '구형 Intel CPU로 로컬 AI를 실행할 수 있나요?', a: 'AVX2를 지원하는 CPU라면 (Haswell, 2013년 이상) 2026년에도 작동합니다. Intel Core i5-8250U에서 Phi-4 Mini Q4가 4~6 토큰/초로 실행됩니다.' },

@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: '常见问题',
         faqs: [
           {
             q: 'Is using a VPN for AI development legal in China?',
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Perguntas frequentes',
         faqs: [
           {
             q: 'É legal usar uma VPN para desenvolvimento de IA na China?',
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Preguntas frecuentes',
         faqs: [
           {
             q: '¿Es legal usar un VPN para desarrollo de IA en China?',

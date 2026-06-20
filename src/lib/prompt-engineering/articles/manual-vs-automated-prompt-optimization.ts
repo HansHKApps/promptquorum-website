@@ -169,6 +169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can I mix manual and automated optimization?', a: 'Yes, and this is best practice. Manual for your core task (1–3 prompts), automated for variants and scaling. Use Promptfoo to test all variants; use DSPy to generate new ones.' },
@@ -370,6 +371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ich manuelle und automatisierte Optimierung mischen?', a: 'Ja, und das ist Best Practice. Manuell für Ihre Kern-Aufgabe (1–3 Prompts), automatisiert für Varianten und Skalierung. Nutzen Sie Promptfoo, um alle Varianten zu testen; nutzen Sie DSPy, um neue zu generieren.' },
@@ -573,6 +575,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Puedo mezclar optimización manual y automatizada?', a: 'Sí, y esta es la mejor práctica. Manual para tu tarea core (1–3 prompts), automatizado para variantes y escala. Usa Promptfoo para testear todas las variantes; usa DSPy para generar nuevas.' },
@@ -771,6 +774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Posso combinar otimização manual e automatizada?', a: 'Sim, e esta é a melhor prática. Manual para sua tarefa core (1–3 prompts), automatizado para variantes e escala. Use o Promptfoo para testar todas as variantes; use o DSPy para gerar novas.' },
@@ -972,6 +976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Puis-je mélanger optimisation manuelle et automatisée ?', a: 'Oui, et c\'est la meilleure pratique. Manuel pour votre tâche cœur (1–3 prompts), automatisé pour variantes et scalabilité. Utilisez Promptfoo pour tester toutes variantes ; utilisez DSPy pour générer de nouvelles.' },
@@ -1174,6 +1179,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: 'マニュアルと自動最適化を混ぜられる？', a: 'はい、これがベストプラクティス。コアタスク(1–3プロンプト)はマニュアル、スケーリング用に亜種は自動化。Promptfooですべてをテスト；DSPyで新規を生成。' },
@@ -1376,6 +1382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '能混合手动和自动优化吗？', a: '能，这是最佳实践。核心任务手动（1–3个提示词），扩展的变体自动化。用Promptfoo测试全部；用DSPy生成新的。' },
@@ -1577,6 +1584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل يمكنني الجمع بين التحسين اليدوي والآلي؟', a: 'نعم، وهذا هو أفضل ممارسة. اليدوي للمهمة الأساسية (1–3 prompts)، والآلي للنسخ والتوسع. استخدم Promptfoo لاختبار جميع النسخ، وDSPy لإنتاج نسخ جديدة.' },
@@ -1778,6 +1786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '수동 최적화와 자동 최적화를 혼합할 수 있습니까?', a: '예, 이것이 모범 사례입니다. 핵심 태스크(1–3개 프롬프트)는 수동으로, 변형 및 확장은 자동화로 수행하십시오. 모든 변형을 테스트하려면 Promptfoo를 사용하고, 새 변형을 생성하려면 DSPy를 사용하십시오.' },

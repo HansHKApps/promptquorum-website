@@ -126,6 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'What is the break-even point for a local LLM workstation vs cloud GPU?',
@@ -239,6 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Wann lohnt sich eine lokale LLM-Workstation gegenüber Cloud-GPU?',
@@ -311,6 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Quand une workstation LLM locale est-elle rentable face au cloud ?',
@@ -379,6 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'ローカルLLMワークステーションはいつクラウドGPUより元が取れますか？',
@@ -524,6 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '¿Cuál es el punto de equilibrio de una workstation LLM local vs GPU cloud?',
@@ -726,6 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'ما نقطة تعادل محطة عمل LLM المحلية مقابل GPU السحابي؟',
@@ -852,6 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '自建本地LLM工作站何时比云GPU划算？',
@@ -1003,6 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: 'Qual é o ponto de equilíbrio de uma workstation de LLM local vs GPU em nuvem?',
@@ -1205,6 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         faqs: [
           {
             q: '로컬 LLM 워크스테이션과 클라우드 GPU의 손익분기점은 어떻게 됩니까?',

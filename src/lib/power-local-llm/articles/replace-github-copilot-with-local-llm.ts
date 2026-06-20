@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Frequently Asked Questions',
         faqs: [
           {
             q: 'Will Continue.dev work with models other than Qwen3-Coder?',
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: 'FAQ',
+        title: 'Questions fréquemment posées',
         faqs: [
           {
             q: 'Continue.dev fonctionne-t-il avec d\'autres modèles que Qwen3-Coder ?',

@@ -1085,6 +1085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
     
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
@@ -1379,6 +1380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿LLaMA 3.1 es realmente de código abierto o solo open-weights?', a: 'Solo open-weights. LLaMA 3.1 publica los pesos del modelo bajo la Licencia Comunitaria Llama 3.3.1, que no es compatible con OSI. La licencia permite uso comercial pero incluye restricciones de denominación y requiere atribución.' },
@@ -1638,6 +1640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل LLaMA 3.1 مفتوح المصدر حقًا أم مجرد أوزان مفتوحة؟', a: 'أوزان مفتوحة فقط. LLaMA 3.1 ينشر الأوزان بموجب رخصة مجتمع Llama 3.3.1، غير المتوافقة مع OSI. الرخصة تسمح بالاستخدام التجاري لكن تتضمن قيود التسمية وتتطلب الإسناد.' },
@@ -1895,6 +1898,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'O LLaMA 3.1 é realmente de código aberto ou apenas open-weights?', a: 'Apenas open-weights. O LLaMA 3.1 publica os pesos do modelo sob a Licença Comunitária Llama 3.3.1, que não é compatível com OSI. A licença permite uso comercial, mas inclui restrições de denominação e requer atribuição.' },
@@ -2396,6 +2400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             {
@@ -2933,6 +2938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -3485,6 +3491,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         faq: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             {
@@ -3780,6 +3787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         faq: {
+          id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
             { q: 'LLaMA 3.1은 진정한 오픈소스입니까, 아니면 오픈-웨이트입니까?', a: '오픈-웨이트만입니다. LLaMA 3.1은 OSI 호환이 아닌 Llama 3.3.1 커뮤니티 라이선스 하에 모델 가중치를 공개합니다. 라이선스는 상업적 사용을 허용하지만 이름 지정 제한이 있습니다.' },

@@ -144,6 +144,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'What is a repeatable prompt workflow?', a: 'A repeatable prompt workflow is a prompt-based process that runs automatically when a defined triggering condition is met, routes output to the next step, and handles errors without manual intervention. Unlike a one-off prompt, a workflow does not require a human to decide when to run it or what to do with the result.' },
@@ -313,6 +314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist ein wiederholbarer Prompt-Workflow?', a: 'Ein wiederholbarer Prompt-Workflow ist ein promptbasierter Prozess, der automatisch ausgelöst wird, wenn eine definierte Bedingung erfüllt ist, die Ausgabe an den nächsten Schritt weiterleitet und Fehler ohne manuellen Eingriff behandelt.' },
@@ -481,6 +483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué es un flujo de trabajo de prompts repetible?', a: 'Un flujo de trabajo de prompts repetible es un proceso basado en prompts que se ejecuta automáticamente cuando se cumple una condición de activación definida, enruta la salida al siguiente paso y maneja los errores sin intervención manual. A diferencia de un prompt de una sola vez, un flujo de trabajo no requiere que un humano decida cuándo ejecutarlo o qué hacer con el resultado.' },
@@ -649,6 +652,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو سير العمل القابل للتكرار؟', a: 'سير العمل القابل للتكرار هو عملية قائمة على الأوامر تعمل تلقائياً عند تحقق شرط تشغيل محدد، وتوجّه المخرجات إلى الخطوة التالية، وتعالج الأخطاء دون تدخل بشري. خلافاً للأمر الفردي، لا يحتاج سير العمل إلى إنسان يقرر متى يشغّله أو ماذا يفعل بالنتيجة.' },
@@ -817,6 +821,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'O que é um fluxo de trabalho de prompts repetível?', a: 'Um fluxo de trabalho de prompts repetível é um processo baseado em prompts que é executado automaticamente quando uma condição de acionamento definida é satisfeita, roteia a saída para a próxima etapa e trata erros sem intervenção manual. Diferente de um prompt único, um fluxo de trabalho não exige que um humano decida quando executá-lo ou o que fazer com o resultado.' },
@@ -985,6 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
           { q: 'Qu\'est-ce qu\'un workflow de prompts répétable ?', a: 'Un workflow de prompts répétable est un processus basé sur des prompts qui s\'exécute automatiquement lorsqu\'une condition de déclenchement définie est remplie, achemine la sortie et gère les erreurs sans intervention manuelle.' },
@@ -1153,6 +1159,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'よくある質問',
         faqs: [
           { q: '繰り返し可能なプロンプトワークフローとは何ですか？', a: '繰り返し可能なプロンプトワークフローとは、定義されたトリガー条件が満たされると自動的に実行され、出力を次のステップにルーティングし、手動介入なしにエラーを処理するプロンプトベースのプロセスです。' },
@@ -1321,6 +1328,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '常见问题',
         faqs: [
           { q: '什么是可重复的Prompt工作流？', a: '可重复的Prompt工作流是一个基于Prompt的流程，当定义的触发条件满足时自动运行，将输出路由到下一步，并在无需人工干预的情况下处理错误。' },
@@ -1491,6 +1499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
           { q: '반복 가능한 프롬프트 워크플로우란 무엇입니까?', a: '반복 가능한 프롬프트 워크플로우는 정의된 트리거 조건이 충족될 때 자동으로 실행되고, 출력을 다음 단계로 라우팅하며, 수동 개입 없이 오류를 처리하는 프롬프트 기반 프로세스입니다. 일회성 프롬프트와 달리, 워크플로우는 언제 실행할지 또는 결과를 어떻게 처리할지 결정하기 위해 인간을 필요로 하지 않습니다.' },
