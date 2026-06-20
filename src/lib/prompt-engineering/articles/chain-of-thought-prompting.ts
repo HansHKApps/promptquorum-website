@@ -60,6 +60,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Reasoning' },
           { '@type': 'Thing', name: 'Structured Output' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -473,6 +474,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Denken' },
       { '@type': 'Thing', name: 'Strukturierte Ausgabe' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],
@@ -884,6 +886,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Razonamiento' },
       { '@type': 'Thing', name: 'Salida Estructurada' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1295,6 +1298,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'الاستدلال' },
       { '@type': 'Thing', name: 'المخرجات المنظَّمة' },
     ],
+    'proficiencyLevel': 'متوسط',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1706,6 +1710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Raciocínio' },
       { '@type': 'Thing', name: 'Saída Estruturada' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2114,6 +2119,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Raisonnement' },
       { '@type': 'Thing', name: 'Sortie structurée' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2525,6 +2531,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: '推論' },
       { '@type': 'Thing', name: '構造化出力' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2939,6 +2946,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: '推理' },
       { '@type': 'Thing', name: '结构化输出' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3353,6 +3361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: '추론' },
       { '@type': 'Thing', name: '구조화된 출력' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['.article-intro', '.key-takeaways'],

@@ -177,6 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -377,6 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -581,6 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -785,6 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -987,6 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -1189,6 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -1391,6 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -1593,6 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },
@@ -1795,6 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'LGPD' },
         { '@type': 'Thing', name: 'data protection' },

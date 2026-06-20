@@ -29,6 +29,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['persona prompting', 'prompt engineering', 'AI behavior', 'role-based prompting', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Large Language Models' },
@@ -362,6 +363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['Persona-Prompting', 'Prompt Engineering', 'KI-Verhalten', 'rollenbasiertes Prompting', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Große Sprachmodelle' },
@@ -703,6 +705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['persona prompting', 'prompt engineering', 'comportamiento de IA', 'prompting basado en roles', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Large Language Models' },
@@ -902,6 +905,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['persona prompting', 'prompt engineering', 'comportamento de IA', 'prompting baseado em papéis', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Large Language Models' },
@@ -1103,6 +1107,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['persona prompting', 'prompt engineering', 'comportement IA', 'prompting basé sur rôles', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Grands Modèles de Langage' },
@@ -1450,6 +1455,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: '大規模言語モデル' },
         { '@type': 'Thing', name: 'ペルソナ設計' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1684,6 +1690,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: '大型语言模型' },
         { '@type': 'Thing', name: '人物角色设计' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1913,6 +1920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       inLanguage: 'ar',
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Large Language Models' },
@@ -2114,6 +2122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['페르소나 프롬프팅', '프롬프트 엔지니어링', 'AI 행동', '역할 기반 프롬프팅', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: '프롬프트 엔지니어링' },
         { '@type': 'Thing', name: '대규모 언어 모델' },

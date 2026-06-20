@@ -847,6 +847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Text Generation WebUI' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1270,6 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Text Generation WebUI' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2949,6 +2951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Text Generation WebUI' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3593,6 +3596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Text Generation WebUI' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -4237,6 +4241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Text Generation WebUI' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -4881,6 +4886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Text Generation WebUI' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],

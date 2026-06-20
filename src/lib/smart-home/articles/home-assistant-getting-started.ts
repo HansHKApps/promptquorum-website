@@ -178,6 +178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Home automation' }, { '@type': 'Thing', name: 'Local control' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -369,6 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'أتمتة المنزل' }, { '@type': 'Thing', name: 'التحكم المحلي' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -560,6 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Heimautomatisierung' }, { '@type': 'Thing', name: 'Lokale Steuerung' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -751,6 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Domótica' }, { '@type': 'Thing', name: 'Control local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -942,6 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '홈 자동화' }, { '@type': 'Thing', name: '로컬 제어' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1133,6 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Domotique' }, { '@type': 'Thing', name: 'Contrôle local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1324,6 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'ホームオートメーション' }, { '@type': 'Thing', name: 'ローカル制御' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1515,6 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Automação residencial' }, { '@type': 'Thing', name: 'Controle local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1706,6 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '家庭自动化' }, { '@type': 'Thing', name: '本地控制' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

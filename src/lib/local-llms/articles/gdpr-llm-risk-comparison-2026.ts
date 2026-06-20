@@ -400,6 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   ar: {
@@ -580,6 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   de: {
@@ -1064,6 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   // VERIFY: preços de hardware on-premise em BRL (RTX 4070 Ti ~R$ 4.500-6.500; multi-GPU ~R$ 40.000-120.000) e eletricidade (~R$ 50-90/mês, ~R$ 600/ano) são estimativas de varejo BR (jun/2026); custos de API/tokens da nuvem mantidos em USD (cobrados em dólar). Referências jurídicas latino-americanas do bloco es foram trocadas pela LGPD/ANPD do Brasil. Confirmar antes de publicar.

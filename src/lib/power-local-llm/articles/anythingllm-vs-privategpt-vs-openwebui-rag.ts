@@ -1850,6 +1850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-19',
       inLanguage: 'ja',
       url: '/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2508,6 +2509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-19',
       inLanguage: 'es',
       url: 'https://www.promptquorum.com/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3106,6 +3108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-19',
       inLanguage: 'pt-BR',
       url: 'https://www.promptquorum.com/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3704,6 +3707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-19',
       inLanguage: 'ar',
       url: 'https://www.promptquorum.com/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -4302,6 +4306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-19',
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],

@@ -44,7 +44,9 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Fra
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-rag',
-    inLanguage: 'ko'
+    inLanguage: 'ko',
+
+    'proficiencyLevel': 'Intermediate',
   },
   faqSchema: {
     '@context': 'https://schema.org',

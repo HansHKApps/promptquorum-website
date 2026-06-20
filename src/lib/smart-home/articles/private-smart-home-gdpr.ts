@@ -161,6 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'GDPR' }, { '@type': 'Thing', name: 'Smart home privacy' }, { '@type': 'Thing', name: 'Data residency' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -335,6 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'GDPR' }, { '@type': 'Thing', name: 'خصوصية المنزل الذكي' }, { '@type': 'Thing', name: 'إقامة البيانات' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -511,6 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'DSGVO' }, { '@type': 'Thing', name: 'Smart-Home-Datenschutz' }, { '@type': 'Thing', name: 'Datenresidenz' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -687,6 +690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'RGPD' }, { '@type': 'Thing', name: 'Privacidad del smart home' }, { '@type': 'Thing', name: 'Residencia de datos' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -861,6 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: '개인정보 보호법(PIPA)' }, { '@type': 'Thing', name: '스마트홈 프라이버시' }, { '@type': 'Thing', name: '데이터 상주' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1035,6 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'RGPD' }, { '@type': 'Thing', name: 'Confidentialité de la maison connectée' }, { '@type': 'Thing', name: 'Résidence des données' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1209,6 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'GDPR' }, { '@type': 'Thing', name: 'スマートホームのプライバシー' }, { '@type': 'Thing', name: 'データレジデンシー' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1383,6 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'LGPD' }, { '@type': 'Thing', name: 'GDPR' }, { '@type': 'Thing', name: 'Privacidade da casa inteligente' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1557,6 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'GDPR' }, { '@type': 'Thing', name: '智能家居隐私' }, { '@type': 'Thing', name: '数据本地化' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

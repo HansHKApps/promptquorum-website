@@ -27,6 +27,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -152,6 +153,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Prompt-Frameworks' },
@@ -277,6 +279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Frameworks de prompts' },
@@ -402,6 +405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: '提示词框架' },
@@ -528,6 +532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'frameworks de prompts', 'prompt engineering', 'prompts estruturados', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
         { '@type': 'Thing', name: 'Frameworks de Prompts' },
@@ -655,6 +660,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       keywords: ['هندسة البرومبت', 'إطار SPECS', 'البرومبتات المنظمة', 'نماذج اللغة الكبيرة', 'تصميم البرومبت'],
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       whatIsSPECS: {

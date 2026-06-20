@@ -1222,6 +1222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: {
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/prompt-bites/mac-mini-m4-local-llm',
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       items: [

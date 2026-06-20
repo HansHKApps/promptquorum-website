@@ -749,6 +749,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { position: 3, name: '지금 가장 좋은 LLM은 무엇입니까?', url: 'https://www.promptquorum.com/ko/prompt-bites/best-llm-right-now' },
         ],
       },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {

@@ -974,6 +974,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       url: 'https://www.promptquorum.com/ko/prompt-bites/cursor-pro-vs-continue-dev',
       datePublished: '2026-05-22',
       dateModified: '2026-05-22',
+      'proficiencyLevel': '중급',
     },
     breadcrumbSchema: {
       items: [

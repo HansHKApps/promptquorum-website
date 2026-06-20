@@ -28,6 +28,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['zero shot prompting', 'few shot prompting', 'prompt engineering', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         whatIsZeroShot: {
@@ -140,6 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'Prompt Engineering', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    'proficiencyLevel': 'Intermediate',
   },
   sections: {
     whatIsZeroShot: {
@@ -272,6 +274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     url: 'https://www.promptquorum.com/es/prompt-engineering/zero-shot-vs-few-shot',
     inLanguage: 'es',
+    'proficiencyLevel': 'Intermediate',
   },
   sections: {
     whatIsZeroShot: {
@@ -385,6 +388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     url: 'https://www.promptquorum.com/ar/prompt-engineering/zero-shot-vs-few-shot',
     inLanguage: 'ar',
+    'proficiencyLevel': 'متوسط',
   },
   sections: {
     whatIsZeroShot: {
@@ -497,6 +501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     url: 'https://www.promptquorum.com/pt/prompt-engineering/zero-shot-vs-few-shot',
     inLanguage: 'pt-BR',
+    'proficiencyLevel': 'Intermediate',
   },
   sections: {
     whatIsZeroShot: {
@@ -607,6 +612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'ingénierie des prompts', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    'proficiencyLevel': 'Intermediate',
   },
   sections: {
     whatIsZeroShot: {
@@ -731,6 +737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keywords: ['ゼロショットプロンプティング', 'フューショットプロンプティング', 'プロンプトエンジニアリング', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    'proficiencyLevel': '中級',
   },
   sections: {
     whatIsZeroShot: {
@@ -877,6 +884,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keywords: ['零样本提示', '少样本提示', '提示工程', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    'proficiencyLevel': '中级',
   },
   sections: {
     whatIsZeroShot: {
@@ -1002,6 +1010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['zero shot prompting', 'few shot prompting', 'prompt engineering', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         whatIsZeroShot: {

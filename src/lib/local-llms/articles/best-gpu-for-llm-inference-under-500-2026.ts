@@ -222,6 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-19',
       url: 'https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-2026',
       inLanguage: 'en',
+      'proficiencyLevel': 'Intermediate',
     },
   },
 
@@ -447,6 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'GPU para inferencia LLM' },
@@ -684,6 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'GPU للاستدلال على نماذج LLM' },
@@ -919,6 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'GPU para inferência de LLM' },
@@ -1639,6 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'LLM 추론용 GPU' },

@@ -68,6 +68,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'AI Agents' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -459,6 +460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'KI-Agenten' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -772,6 +774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'Agentes de IA' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1085,6 +1088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'وكلاء الذكاء الاصطناعي' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1394,6 +1398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'Agentes de IA' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1712,6 +1717,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'Agents IA' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -2029,6 +2035,7 @@ Réponse finale : [conclusion synthétisée]`,
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'AIエージェント' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -2347,6 +2354,7 @@ Final Answer: [総合結論]`,
         { '@type': 'Thing', name: 'ReAct 提示' },
         { '@type': 'Thing', name: 'AI 代理' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -2444,6 +2452,7 @@ Final Answer: [総合結論]`,
         { '@type': 'Thing', name: 'ReAct Prompting' },
         { '@type': 'Thing', name: 'AI 에이전트' },
       ],
+      'proficiencyLevel': 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {

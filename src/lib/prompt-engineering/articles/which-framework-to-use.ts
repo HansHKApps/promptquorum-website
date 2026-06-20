@@ -28,6 +28,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['prompt frameworks', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Large Language Models' },
@@ -228,6 +229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Prompt-Frameworks', 'Prompt Engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -416,6 +418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Modelos de Lenguaje de Gran Escala' },
@@ -618,6 +621,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['أطر الطلبات', 'هندسة الطلبات', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'متوسط',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'نماذج اللغة الكبيرة' },
@@ -818,6 +822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Grandes Modelos de Linguagem' },
@@ -980,6 +985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1166,6 +1172,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['プロンプトフレームワーク', 'プロンプトエンジニアリング', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1352,6 +1359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['提示框架', '提示工程', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1539,6 +1547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['prompt frameworks', 'prompt engineering', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Large Language Models' },

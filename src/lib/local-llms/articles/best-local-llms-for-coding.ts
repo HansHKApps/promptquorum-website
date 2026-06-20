@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding',
         'headline': 'Best Coding LLMs 2026: Kimi K2.6 (58.6 SWE-Bench Pro) vs Qwen 3.6 vs Devstral',
         'description': 'June 2026: Kimi K2.6 (58.6 SWE-Bench Pro) is the best local coding LLM. Compare with Qwen 3.6 27B (77.2% SWE-bench) and Devstral 24B. SWE-bench replaces HumanEval.',
@@ -1001,7 +1001,7 @@ schema: {
       },
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-coding',
         'headline': 'Mejores LLMs locales para programación 2026: Kimi K2.6 (58.6 SWE-Bench Pro) vs Qwen 3.6 vs Devstral',
         'description': 'Junio 2026: Kimi K2.6 (58.6 SWE-Bench Pro) es el mejor LLM local de programación. Comparación con Qwen 3.6 27B (77,2% SWE-bench) y Devstral 24B. SWE-bench reemplaza a HumanEval.',
@@ -1473,7 +1473,7 @@ schema: {
       },
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-local-llms-for-coding',
         'headline': 'أفضل نماذج LLM المحلية للبرمجة 2026: Kimi K2.6 (58.6 SWE-Bench Pro) مقابل Qwen 3.6 مقابل Devstral',
         'description': 'يونيو 2026: Kimi K2.6 (58.6 SWE-Bench Pro) هو أفضل نموذج LLM محلي للبرمجة. مقارنة بـ Qwen 3.6 27B (77.2% SWE-bench) وDevstral 24B. يحل SWE-bench محل HumanEval.',
@@ -2034,7 +2034,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-coding',
         'headline': 'Beste lokale LLMs für Programmierung 2026: Kimi K2.6 (58.6 SWE-Bench Pro) vs Qwen 3.6',
         'description': 'Juni 2026: Kimi K2.6 (58.6 SWE-Bench Pro) ist das beste lokale Programmier-LLM. Vergleich mit Qwen 3.6 27B (77,2% SWE-bench) und Devstral 24B. SWE-bench ersetzt HumanEval.',
@@ -2442,7 +2442,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-coding',
         'headline': 'Meilleurs LLMs locaux pour la programmation 2026 : Kimi K2.6 (58.6 SWE-Bench Pro) vs Qwen 3.6',
         'description': 'Juin 2026 : Kimi K2.6 (58.6 SWE-Bench Pro) est le meilleur LLM local pour la programmation. Comparé avec Qwen 3.6 27B (77,2% SWE-bench) et Devstral 24B. SWE-bench remplace HumanEval.',
@@ -2781,7 +2781,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         headline: '2026年最高のコーディング用ローカルLLM：Kimi K2.6（58.6 SWE-Bench Pro）vs Qwen 3.6',
         description: '2026年6月：Kimi K2.6（58.6 SWE-Bench Pro）はコーディング用最高のローカルLLM。Qwen 3.6 27B（77.2% SWE基準）とDevstral 24Bとの比較。SWE基準がHumanEvalに取って代わります。',
         datePublished: '2026-04-04',
@@ -3124,7 +3124,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         headline: '2026年最佳本地编码LLM：Kimi K2.6（58.6 SWE-Bench Pro）vs Qwen 3.6',
         description: '2026年6月：Kimi K2.6（58.6 SWE-Bench Pro）是最佳本地编码LLM。与Qwen 3.6 27B（77.2% SWE基准）和Devstral 24B对比。SWE基准取代HumanEval。',
         datePublished: '2026-04-04',

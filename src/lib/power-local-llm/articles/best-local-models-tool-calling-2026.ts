@@ -2262,6 +2262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2654,6 +2655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3047,6 +3049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3439,6 +3442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         name: 'PromptQuorum',
         url: 'https://www.promptquorum.com',
       },
+      'proficiencyLevel': 'Advanced',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],

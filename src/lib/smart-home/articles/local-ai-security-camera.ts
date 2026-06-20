@@ -176,6 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'AI security camera' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -365,6 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'كاميرا أمان بالذكاء الاصطناعي' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -554,6 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'KI-Sicherheitskamera' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -743,6 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Cámara de seguridad con IA' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -932,6 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'AI 보안 카메라' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1121,6 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Caméra de sécurité IA' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1310,6 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'AIセキュリティカメラ' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1499,6 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'Câmera de segurança com IA' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1688,6 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Frigate' }, { '@type': 'Thing', name: 'AI 安防摄像头' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Coral TPU' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

@@ -175,6 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Home automation history' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -363,6 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'تاريخ أتمتة المنزل' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -551,6 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Geschichte der Heimautomatisierung' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -739,6 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Historia de la domótica' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -927,6 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: '홈 자동화의 역사' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1115,6 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Histoire de la domotique' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1303,6 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'ホームオートメーションの歴史' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1491,6 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'História da automação residencial' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1679,6 +1687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: '家庭自动化历史' }, { '@type': 'Thing', name: 'X10' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

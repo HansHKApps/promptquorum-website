@@ -171,6 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Local LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -355,6 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'نموذج LLM محلي' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -539,6 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Lokales LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -723,6 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -907,6 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: '미니 PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '로컬 LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1091,6 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1275,6 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'ミニPC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'ローカルLLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1459,6 +1466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'LLM local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1643,6 +1651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: '迷你 PC' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '本地 LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

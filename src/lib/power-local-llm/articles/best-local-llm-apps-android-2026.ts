@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: 'Best Local LLM Apps for Android 2026: 6 Apps Tested on Real Phones',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -583,6 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   de: {
@@ -1162,7 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: 'Beste lokale LLM-Apps für Android 2026: 6 Apps im Vergleich auf echten Telefonen',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -1184,6 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   fr: {
@@ -1744,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: 'Meilleures applications IA locales pour Android 2026 : 6 applications comparées sur des téléphones réels',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -1766,6 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ja: {
@@ -2341,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: '2026年 Android 向けベスト・ローカル LLM アプリ：6つのアプリを実スマートフォンで比較',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -2363,6 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   zh: {
@@ -2947,7 +2951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: 'Las mejores apps de LLM local para Android en 2026: 6 apps comparadas en teléfonos reales',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -2969,6 +2973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   pt: {
@@ -3525,7 +3530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: 'Os melhores apps de LLM local para Android em 2026: 6 apps comparados em celulares reais',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -3547,6 +3552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ar: {
@@ -4103,7 +4109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: 'أفضل تطبيقات النماذج اللغوية المحلية لنظام Android في 2026: مقارنة 6 تطبيقات على هواتف حقيقية',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -4125,6 +4131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ko: {
@@ -4685,7 +4692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       headline: '2026년 Android용 최고의 로컬 LLM 앱: 실제 스마트폰으로 비교한 6가지 앱',
       datePublished: '2026-05-08',
       dateModified: '2026-06-14',
@@ -4707,6 +4714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',

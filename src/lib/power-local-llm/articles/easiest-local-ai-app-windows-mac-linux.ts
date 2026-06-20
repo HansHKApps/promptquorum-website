@@ -341,6 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-07',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Beginner',
     },
   },
   de: {
@@ -676,6 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Jan' },
         { '@type': 'SoftwareApplication', name: 'GPT4All' },
       ],
+      'proficiencyLevel': 'Beginner',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1062,6 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-07',
       dateModified: '2026-05-07',
       educationalLevel: 'Beginner',
+      'proficiencyLevel': 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
         { '@type': 'Thing', name: 'Jan' },
@@ -1468,6 +1471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Jan' },
         { '@type': 'SoftwareApplication', name: 'GPT4All' },
       ],
+      'proficiencyLevel': 'Beginner',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1866,6 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Jan' },
         { '@type': 'SoftwareApplication', name: 'GPT4All' },
       ],
+      'proficiencyLevel': 'Beginner',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2233,6 +2238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-07',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Beginner',
     },
   },
   pt: {
@@ -2570,6 +2576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-07',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Beginner',
     },
   },
   ar: {
@@ -2907,6 +2914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-07',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Beginner',
     },
   },
   ko: {
@@ -3244,6 +3252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-07',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Beginner',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',

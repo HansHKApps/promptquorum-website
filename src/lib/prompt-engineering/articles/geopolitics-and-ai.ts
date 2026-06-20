@@ -67,6 +67,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Person', name: 'Emmanuel Macron' },
           { '@type': 'Person', name: 'Rishi Sunak' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -849,6 +850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1424,6 +1426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -2067,6 +2070,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ar/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        'proficiencyLevel': 'متوسط',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -2743,6 +2747,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Person', name: 'Emmanuel Macron' },
           { '@type': 'Person', name: 'Rishi Sunak' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3464,6 +3469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Person', name: 'Emmanuel Macron' },
           { '@type': 'Person', name: 'Rishi Sunak' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3627,6 +3633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Person', name: 'Emmanuel Macron' },
           { '@type': 'Person', name: 'Rishi Sunak' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -4251,6 +4258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/pt/api/og/geopolitics-and-ai', width: 1200, height: 630 },
         inLanguage: 'pt-BR',
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {

@@ -166,6 +166,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/desktop-vs-webui-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -338,6 +339,7 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -511,6 +513,7 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -684,6 +687,7 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -856,6 +860,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/desktop-vs-webui-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1028,6 +1033,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/desktop-vs-webui-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1200,6 +1206,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ja/local-llms/desktop-vs-webui-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1372,6 +1379,7 @@ schema: {
         'url': 'https://www.promptquorum.com/zh/local-llms/desktop-vs-webui-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {

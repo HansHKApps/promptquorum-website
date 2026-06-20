@@ -287,6 +287,7 @@ while True:
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1364,6 +1365,7 @@ while True:
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1611,6 +1613,7 @@ while True:
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1858,6 +1861,7 @@ while True:
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -2106,6 +2110,7 @@ while True:
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'Qwen3 7B' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

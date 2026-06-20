@@ -145,6 +145,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'LLM Prompting Techniques' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -727,6 +728,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Técnicas de prompting para LLMs' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -840,6 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Técnicas de prompting para LLMs' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -947,6 +950,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'تقنيات الكتابة لنماذج LLM' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1068,6 +1072,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'LLM 프롬프팅 기법' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3' }, { '@type': 'SoftwareApplication', name: 'DeepSeek-R1' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     breadcrumbSchema: {

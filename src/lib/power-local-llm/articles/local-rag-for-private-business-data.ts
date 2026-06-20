@@ -3707,6 +3707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
 },
   ko: {
@@ -4329,6 +4330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-07',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
@@ -4962,6 +4964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   ar: {
@@ -5584,6 +5587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
 }

@@ -229,6 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Air-gapped LLM' }, { '@type': 'Thing', name: 'Offline AI deployment' }, { '@type': 'Thing', name: 'China Data Security Law' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -632,6 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'LLM air-gapped' }, { '@type': 'Thing', name: 'Despliegue de IA offline' }, { '@type': 'Thing', name: 'Cumplimiento normativo de datos' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -847,6 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'LLM 에어갭' }, { '@type': 'Thing', name: '오프라인 AI 배포' }, { '@type': 'Thing', name: '데이터 컴플라이언스' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1062,6 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'LLM air-gapped' }, { '@type': 'Thing', name: 'Implantação de IA offline' }, { '@type': 'Thing', name: 'Conformidade de residência de dados' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1277,6 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'LLM معزول air-gapped' }, { '@type': 'Thing', name: 'نشر الذكاء الاصطناعي بدون إنترنت' }, { '@type': 'Thing', name: 'قوانين إقامة البيانات' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

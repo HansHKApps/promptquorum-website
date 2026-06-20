@@ -738,6 +738,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-apps-android',
       datePublished: '2026-05-18',
       dateModified: '2026-05-18',
+      'proficiencyLevel': '초급',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',

@@ -699,6 +699,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
        dateModified: '2026-05-22',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Intermediate',
      },
   },
 
@@ -1054,6 +1055,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
        dateModified: '2026-05-22',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Intermediate',
      },
   },
 
@@ -1132,6 +1134,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       datePublished: '2026-05-22',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
 

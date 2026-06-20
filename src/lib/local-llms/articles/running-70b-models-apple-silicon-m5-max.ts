@@ -794,6 +794,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
       dateModified: '2026-06-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   ar: {
@@ -1160,6 +1161,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
       dateModified: '2026-06-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   pt: {
@@ -1253,6 +1255,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
       datePublished: '2026-05-15',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   de: {

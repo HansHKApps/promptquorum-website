@@ -2470,6 +2470,7 @@ if __name__ == "__main__":
        dateModified: '2026-05-24',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Advanced',
      },
   },
   ko: {
@@ -2894,6 +2895,7 @@ if __name__ == "__main__":
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
   pt: {
@@ -3334,6 +3336,7 @@ if __name__ == "__main__":
        dateModified: '2026-05-24',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Advanced',
      },
 },
 
@@ -3775,6 +3778,7 @@ if __name__ == "__main__":
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
   },
 }

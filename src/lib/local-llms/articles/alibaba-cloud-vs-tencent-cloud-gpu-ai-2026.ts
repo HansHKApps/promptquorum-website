@@ -309,6 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'en',
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
         { '@type': 'Thing', name: 'Tencent Cloud TI Platform' },
@@ -616,6 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/es/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'es',
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
@@ -930,6 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ar/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'ar',
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
@@ -1246,6 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'pt-BR',
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
@@ -1339,6 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/de/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   fr: {
@@ -1418,6 +1423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/fr/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ja: {
@@ -1497,6 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/ja/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   zh: {
@@ -1596,6 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/zh/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ko: {
@@ -1898,6 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/ko/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026',
       inLanguage: 'ko',
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Alibaba Cloud PAI' },
         { '@type': 'Thing', name: 'Tencent Cloud TI Platform' },

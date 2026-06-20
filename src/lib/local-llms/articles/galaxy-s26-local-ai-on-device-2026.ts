@@ -409,7 +409,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'en',
       'url': 'https://www.promptquorum.com/local-llms/galaxy-s26-local-ai-on-device-2026',
-      'articleBody': 'The Galaxy S26, launched February 25, 2026, brings Samsung\'s hybrid on-device and cloud AI platform—Galaxy AI—to your pocket. But unlike Apple\'s on-device-first approach, Samsung balances local processing with cloud features, letting you choose where your data goes.'
+      'articleBody': 'The Galaxy S26, launched February 25, 2026, brings Samsung\'s hybrid on-device and cloud AI platform—Galaxy AI—to your pocket. But unlike Apple\'s on-device-first approach, Samsung balances local processing with cloud features, letting you choose where your data goes.',
+
+      'proficiencyLevel': 'Intermediate',
     },
     faqSchema: {
       '@context': 'https://schema.org',

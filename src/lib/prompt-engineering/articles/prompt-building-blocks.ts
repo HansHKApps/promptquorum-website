@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'en',
         proficiencyLevel: 'Beginner',
         keywords: ['prompt structure', 'prompt building blocks', 'role and context', 'output format', 'prompt constraints', 'few-shot examples', 'prompt engineering', 'language models'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'Language Models' },
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'de',
         proficiencyLevel: 'Beginner',
         keywords: ['Prompt-Struktur', 'Prompt-Bausteine', 'Rolle und Kontext', 'Ausgabeformat', 'Prompt-Einschränkungen', 'Few-Shot-Beispiele', 'Prompt Engineering', 'Sprachmodelle'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'Language Models' },
@@ -1962,7 +1962,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'fr',
         proficiencyLevel: 'Beginner',
         keywords: ['Structure de prompt', 'Éléments de prompt', 'Rôle et contexte', 'Format de sortie', 'Contraintes de prompt', 'Exemples few-shot', 'Ingénierie des prompts', 'Modèles de langage'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'Language Models' },
@@ -3052,7 +3052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ko',
         proficiencyLevel: 'Beginner',
         keywords: ['프롬프트 구조', '프롬프트 구성 요소', '역할 및 맥락', '출력 형식', '프롬프트 제약 조건', 'few-shot 예시', '프롬프트 엔지니어링', '언어 모델'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'Language Models' },

@@ -189,6 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Voice assistant' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -392,6 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'مساعد صوتي' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -595,6 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Sprachassistent' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -798,6 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Asistente de voz' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1001,6 +1005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: '음성 어시스턴트' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1204,6 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Assistant vocal' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1407,6 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: '音声アシスタント' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1610,6 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Assistente de voz' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1813,6 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: '语音助手' }, { '@type': 'Thing', name: 'Home Assistant Assist' }, { '@type': 'Thing', name: 'Whisper' }, { '@type': 'Thing', name: 'Piper' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

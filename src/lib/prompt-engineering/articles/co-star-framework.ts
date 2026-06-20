@@ -40,6 +40,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -376,6 +377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -707,6 +709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -1006,6 +1009,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'متوسط',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -1296,6 +1300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -1591,6 +1596,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -1928,6 +1934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -2266,6 +2273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways', 'h2'],
@@ -2514,6 +2522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.ai' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', 'h2'],

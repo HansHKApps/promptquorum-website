@@ -371,6 +371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -779,6 +780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1179,6 +1181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1584,6 +1587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1896,6 +1900,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -2277,6 +2282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2671,6 +2677,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3065,6 +3072,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Mirascope' },
         { '@type': 'SoftwareApplication', name: 'PromptPerfect' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],

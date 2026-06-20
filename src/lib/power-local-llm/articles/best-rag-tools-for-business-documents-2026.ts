@@ -219,6 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       url: 'https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'en',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   de: {
@@ -300,6 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       url: 'https://www.promptquorum.com/de/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'de',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   fr: {
@@ -377,6 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       url: 'https://www.promptquorum.com/fr/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'fr',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ja: {
@@ -454,6 +457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       url: 'https://www.promptquorum.com/ja/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'ja',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   zh: {
@@ -535,6 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       url: 'https://www.promptquorum.com/zh/power-local-llm/best-rag-tools-for-business-documents-2026', inLanguage: 'zh',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   es: {
@@ -757,6 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   pt: {
@@ -979,6 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
 
@@ -1204,6 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'ar',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ko: {
@@ -1460,6 +1468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'ko',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
 }

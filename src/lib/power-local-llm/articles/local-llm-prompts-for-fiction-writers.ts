@@ -3767,6 +3767,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
 },
 
@@ -4400,6 +4401,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       dateModified: '2026-05-24',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
 },
   ar: {
@@ -5032,6 +5034,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       dateModified: '2026-05-07',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
 },
   ko: {
@@ -5664,6 +5667,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       dateModified: '2026-05-07',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
 }

@@ -232,6 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'ChatGLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1394,6 +1395,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'ChatGLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1629,6 +1631,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'ChatGLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1834,6 +1837,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'ChatGLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -2054,6 +2058,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Ollama' },
         { '@type': 'SoftwareApplication', name: 'ChatGLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     breadcrumbSchema: {

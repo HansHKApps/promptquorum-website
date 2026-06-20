@@ -729,6 +729,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-frontend-for-ollama',
       datePublished: '2026-05-18',
       dateModified: '2026-05-18',
+      'proficiencyLevel': '중급',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',

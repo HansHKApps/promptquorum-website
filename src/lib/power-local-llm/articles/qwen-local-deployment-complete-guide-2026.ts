@@ -501,6 +501,7 @@ docker run --gpus all \\
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'Qwen language models' },
         { '@type': 'Thing', name: 'Local LLM deployment' },
@@ -670,6 +671,7 @@ docker run --gpus all \\
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
     relatedReading: {
       items: [
@@ -782,6 +784,7 @@ docker run --gpus all \\
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
     relatedReading: {
       items: [
@@ -899,6 +902,7 @@ docker run --gpus all \\
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
     relatedReading: {
       items: [
@@ -1034,6 +1038,7 @@ docker run --gpus all \\
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
     },
     relatedReading: {
       items: [
@@ -1537,6 +1542,7 @@ docker run --gpus all \\
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'Modelos de lenguaje Qwen' },
         { '@type': 'Thing', name: 'Despliegue de LLM local' },
@@ -2066,6 +2072,7 @@ docker run --gpus all \\
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'Modelos de linguagem Qwen' },
         { '@type': 'Thing', name: 'Implantação de LLM local' },
@@ -2423,6 +2430,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'نماذج لغة Qwen' },
         { '@type': 'Thing', name: 'نشر نموذج LLM محلي' },
@@ -2952,6 +2960,7 @@ docker run --gpus all \
       dateModified: '2026-05-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'Qwen 언어 모델' },
         { '@type': 'Thing', name: '로컬 LLM 배포' },

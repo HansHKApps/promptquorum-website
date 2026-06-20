@@ -3683,6 +3683,7 @@ curl -L -o ggml-base.bin \\
        dateModified: '2026-06-15',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Intermediate',
      },
 },
 
@@ -4305,6 +4306,7 @@ curl -L -o ggml-base.bin \\
        dateModified: '2026-06-15',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Intermediate',
      },
 },
 
@@ -4927,6 +4929,7 @@ curl -L -o ggml-base.bin \\
        dateModified: '2026-06-15',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Intermediate',
      },
 },
   ko: {
@@ -5466,6 +5469,7 @@ for segment in segments:
       dateModified: '2026-05-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',

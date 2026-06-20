@@ -174,6 +174,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/best-local-rag-tools',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -365,6 +366,7 @@ schema: {
         datePublished: '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         about: [
           { '@type': 'Thing', 'name': 'RAG (Retrieval-Augmented Generation)' },
@@ -571,6 +573,7 @@ schema: {
         datePublished: '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         about: [
           { '@type': 'Thing', 'name': 'RAG (التوليد المعزّز بالاسترجاع)' },
@@ -777,6 +780,7 @@ schema: {
         datePublished: '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         about: [
           { '@type': 'Thing', 'name': 'RAG (Retrieval-Augmented Generation)' },
@@ -991,6 +995,7 @@ schema: {
         datePublished: '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1186,6 +1191,7 @@ schema: {
         datePublished: '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1390,6 +1396,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Weaviate' },
           { '@type': 'SoftwareApplication', name: 'Milvus' },
         ],
+        'proficiencyLevel': 'Intermediate to Advanced',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '#key-takeaways'],
@@ -1631,6 +1638,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Weaviate' },
           { '@type': 'SoftwareApplication', name: 'Milvus' },
         ],
+        'proficiencyLevel': 'Intermediate to Advanced',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '#key-takeaways'],

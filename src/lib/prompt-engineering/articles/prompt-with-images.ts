@@ -42,6 +42,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Vision-Language Models' },
           { '@type': 'Thing', name: 'Ollama' },
         ],
+        'proficiencyLevel': 'Beginner',
         about: [
           { '@type': 'Thing', name: 'Multimodal prompting' },
           { '@type': 'Thing', name: 'Vision-language models' },

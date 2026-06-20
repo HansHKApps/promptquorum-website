@@ -189,6 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'en',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   de: {
@@ -587,6 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'Costo de LLM local' },
@@ -789,6 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ar',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'تكلفة LLM المحلي' },
@@ -1064,6 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       about: [
         { '@type': 'Thing', name: 'Custo de LLM local' },
@@ -1264,6 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-05-26',
       url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ko',
+      'proficiencyLevel': 'Intermediate',
     },
   },
 }

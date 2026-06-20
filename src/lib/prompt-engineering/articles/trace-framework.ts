@@ -45,6 +45,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'prompt frameworks', 'prompt engineering', 'reasoning prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -347,6 +348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'Prompt Frameworks', 'Prompt Engineering', 'Reasoning Prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -653,6 +655,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Framework TRACE', 'Pensar Razonar Analizar Concluir Explicar', 'frameworks de prompt', 'prompt engineering', 'prompts de razonamiento', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Frameworks de Prompt' },
@@ -957,6 +960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['إطار TRACE', 'التفكير الاستدلال التحليل الاستنتاج الشرح', 'أطر الطلبات', 'هندسة الطلبات', 'طلبات الاستدلال', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'متوسط',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'أطر الطلبات' },
@@ -1258,6 +1262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Framework TRACE', 'Pensar Raciocinar Analisar Concluir Explicar', 'frameworks de prompt', 'prompt engineering', 'prompts de raciocínio', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Frameworks de Prompt' },
@@ -1555,6 +1560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Framework TRACE', 'raisonnement IA', 'frameworks de prompts', 'ingénierie des prompts', 'PromptQuorum', 'modèles de langage'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Ingénierie des prompts' },
           { '@type': 'Thing', name: 'Frameworks de prompts' },
@@ -1844,6 +1850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['TRACEフレームワーク', 'プロンプトフレームワーク', 'プロンプト・エンジニアリング', '推論', 'PromptQuorum', '大規模言語モデル'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'プロンプト・エンジニアリング' },
           { '@type': 'Thing', name: 'プロンプトフレームワーク' },
@@ -2145,6 +2152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['TRACE框架', '提示词框架', '提示词工程', '推理', 'PromptQuorum', '大语言模型'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: '提示词工程' },
           { '@type': 'Thing', name: '提示词框架' },
@@ -2448,6 +2456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain (사고-추론-분석-결론-설명)', 'prompt frameworks', 'prompt engineering', 'reasoning prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },

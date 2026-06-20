@@ -377,6 +377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -794,6 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1204,6 +1206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1612,6 +1615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'متوسط',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2019,6 +2023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2441,6 +2446,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2860,6 +2866,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3232,6 +3239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: '迭代式提示词' },
           { '@type': 'Thing', name: '提示词优化' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3641,6 +3649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],

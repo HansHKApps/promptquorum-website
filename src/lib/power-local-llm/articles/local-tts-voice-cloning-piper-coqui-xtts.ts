@@ -2809,6 +2809,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
        dateModified: '2026-06-15',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+       'proficiencyLevel': 'Intermediate',
      },
 },
   ko: {
@@ -3254,6 +3255,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       dateModified: '2026-06-15',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
@@ -3937,6 +3939,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       dateModified: '2026-06-15',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ar: {
@@ -4610,6 +4613,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       dateModified: '2026-06-15',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
     },
   },
 }

@@ -360,6 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
         ],
+        'proficiencyLevel': 'Beginner',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways']
@@ -683,6 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
         ],
+        'proficiencyLevel': 'Beginner',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways']
@@ -979,6 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
           { '@type': 'Thing', 'name': 'LLMs multilíngues' },
@@ -1316,6 +1319,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
@@ -1828,6 +1832,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
@@ -2326,6 +2331,7 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
         ],
+        'proficiencyLevel': 'Intermediate',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2']

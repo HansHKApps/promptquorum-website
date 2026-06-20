@@ -1263,6 +1263,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: {
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-ssd-fast-model-loading',
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       items: [

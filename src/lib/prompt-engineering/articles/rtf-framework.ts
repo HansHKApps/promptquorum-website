@@ -74,6 +74,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -532,6 +533,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1010,6 +1012,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1348,6 +1351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'متوسط',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1685,6 +1689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2018,6 +2023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2452,6 +2458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2913,6 +2920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3430,6 +3438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],

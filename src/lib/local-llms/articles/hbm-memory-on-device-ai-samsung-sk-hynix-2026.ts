@@ -363,7 +363,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'en',
       'url': 'https://www.promptquorum.com/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026',
-      'articleBody': 'Memory bandwidth, not compute TOPS, is the bottleneck for AI inference. The Galaxy S26 has LPDDR5X at 85.6 GB/s; data centers use HBM3E at 1.229 TB/s—a 14x difference.'
+      'articleBody': 'Memory bandwidth, not compute TOPS, is the bottleneck for AI inference. The Galaxy S26 has LPDDR5X at 85.6 GB/s; data centers use HBM3E at 1.229 TB/s—a 14x difference.',
+
+      'proficiencyLevel': 'Advanced',
     },
     faqSchema: {
       '@context': 'https://schema.org',

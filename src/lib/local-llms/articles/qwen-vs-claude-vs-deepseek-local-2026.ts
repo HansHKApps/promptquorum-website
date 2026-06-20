@@ -512,6 +512,7 @@ dispatch_rules:
         { '@type': 'SoftwareApplication', 'name': 'Claude' },
         { '@type': 'SoftwareApplication', 'name': 'DeepSeek' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['.article-intro', '.key-takeaways'],
@@ -753,6 +754,7 @@ dispatch_rules:
         { '@type': 'SoftwareApplication', 'name': 'Claude' },
         { '@type': 'SoftwareApplication', 'name': 'DeepSeek' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['.article-intro', '.key-takeaways'],
@@ -968,6 +970,7 @@ dispatch_rules:
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-16',
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         'cssSelector': ['.article-intro', '.key-takeaways'],

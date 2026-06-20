@@ -63,6 +63,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Temperature' },
         ],
         image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -542,6 +543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         image: 'https://www.promptquorum.com/de/api/og/write-better-code-with-ai',
         url: 'https://www.promptquorum.com/de/prompt-engineering/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1050,6 +1052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         image: 'https://www.promptquorum.com/es/api/og/write-better-code-with-ai',
         url: 'https://www.promptquorum.com/es/prompt-engineering/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {
@@ -1330,6 +1333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         image: 'https://www.promptquorum.com/ar/api/og/write-better-code-with-ai',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/write-better-code-with-ai',
+        'proficiencyLevel': 'متوسط',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {
@@ -1605,6 +1609,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         image: 'https://www.promptquorum.com/pt/api/og/write-better-code-with-ai',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       howToSchema: {
@@ -1851,6 +1856,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Température' },
         ],
         image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2356,6 +2362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         image: 'https://www.promptquorum.com/ja/api/og/write-better-code-with-ai',
         inLanguage: 'ja',
         url: 'https://www.promptquorum.com/ja/prompt-engineering/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2795,6 +2802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Temperature' },
         ],
         image: 'https://www.promptquorum.com/zh/api/og/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3285,6 +3293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Temperature' },
         ],
         image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai',
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],

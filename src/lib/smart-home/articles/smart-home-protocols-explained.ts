@@ -173,6 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -359,6 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -545,6 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -731,6 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -917,6 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1103,6 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1289,6 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1475,6 +1482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1661,6 +1669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Zigbee' }, { '@type': 'Thing', name: 'Z-Wave' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Matter' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

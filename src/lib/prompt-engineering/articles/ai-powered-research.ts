@@ -73,6 +73,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -600,6 +601,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1126,6 +1128,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1653,6 +1656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'متوسط',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -2179,6 +2183,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -2706,6 +2711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -3210,6 +3216,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           url: 'https://www.promptquorum.com',
         },
         keywords: ['AI研究ツール', 'AI幻想', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'マルチモデル検証'],
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -3462,6 +3469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           url: 'https://www.promptquorum.com',
         },
         keywords: ['AI研究工具', 'AI幻想', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', '多模型验证'],
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -3737,6 +3745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
         { '@type': 'Organization', name: 'PromptQuorum' },
       ],
+      'proficiencyLevel': '중급',
     },
     howToSchema: {
       '@context': 'https://schema.org',

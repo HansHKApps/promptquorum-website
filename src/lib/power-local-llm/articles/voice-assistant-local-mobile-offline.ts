@@ -904,6 +904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
@@ -1380,6 +1381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
@@ -1856,6 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
@@ -2332,6 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
@@ -2808,6 +2812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
@@ -3284,6 +3289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
@@ -3760,6 +3766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],
@@ -4237,6 +4244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Piper TTS' },
         { '@type': 'SoftwareApplication', name: 'Ollama' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways', '.faq'],

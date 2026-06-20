@@ -214,6 +214,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'vLLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -484,6 +485,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'vLLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -760,6 +762,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'vLLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -927,6 +930,7 @@ schema: {
         datePublished: '2026-04-04',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1154,6 +1158,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'vLLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1440,6 +1445,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'vLLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1716,6 +1722,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'vLLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -1992,6 +1999,7 @@ schema: {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'vLLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {

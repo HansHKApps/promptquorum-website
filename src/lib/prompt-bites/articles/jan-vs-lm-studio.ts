@@ -743,6 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: {
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/prompt-bites/jan-vs-lm-studio',
+      'proficiencyLevel': '중급',
     },
     breadcrumbSchema: {
       items: [

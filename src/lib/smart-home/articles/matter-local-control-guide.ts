@@ -173,6 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Local control' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -359,6 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'التحكم المحلي' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -545,6 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Lokale Steuerung' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -731,6 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Control local' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -917,6 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: '로컬 제어' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1103,6 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Contrôle local' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1289,6 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'ローカル制御' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1475,6 +1482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: 'Controle local' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1661,6 +1669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-04',
       about: [{ '@type': 'Thing', name: 'Matter' }, { '@type': 'Thing', name: 'Thread' }, { '@type': 'Thing', name: '本地控制' }, { '@type': 'Thing', name: 'Home Assistant' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

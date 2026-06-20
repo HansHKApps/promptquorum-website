@@ -225,7 +225,7 @@ schema: {
           '@type': 'Person',
           'name': 'Hans Kuepper',
           'url': 'https://www.promptquorum.com/about',
-          'sameAs': 'https://www.promptquorum.com/about'
+          'sameAs': 'https://www.linkedin.com/in/hanskuepper/'
         },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -594,7 +594,7 @@ schema: {
           '@type': 'Person',
           'name': 'Hans Kuepper',
           'url': 'https://www.promptquorum.com/about',
-          'sameAs': 'https://www.promptquorum.com/about'
+          'sameAs': 'https://www.linkedin.com/in/hanskuepper/'
         },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -976,7 +976,7 @@ schema: {
           '@type': 'Person',
           'name': 'Hans Kuepper',
           'url': 'https://www.promptquorum.com/about',
-          'sameAs': 'https://www.promptquorum.com/about'
+          'sameAs': 'https://www.linkedin.com/in/hanskuepper/'
         },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2071,7 +2071,7 @@ schema: {
           '@type': 'Person',
           'name': 'Hans Kuepper',
           'url': 'https://www.promptquorum.com/about',
-          'sameAs': 'https://www.promptquorum.com/about'
+          'sameAs': 'https://www.linkedin.com/in/hanskuepper/'
         },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2437,7 +2437,7 @@ schema: {
           '@type': 'Person',
           'name': 'Hans Kuepper',
           'url': 'https://www.promptquorum.com/about',
-          'sameAs': 'https://www.promptquorum.com/about'
+          'sameAs': 'https://www.linkedin.com/in/hanskuepper/'
         },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [

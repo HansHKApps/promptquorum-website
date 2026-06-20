@@ -187,6 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
+      'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
       items: [
@@ -501,6 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   es: {
@@ -691,6 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
+      'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
       items: [
@@ -888,6 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
+      'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
       items: [
@@ -1085,6 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
+      'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
       items: [
@@ -1285,6 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
+      'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
       items: [

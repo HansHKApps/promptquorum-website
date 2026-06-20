@@ -76,6 +76,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -581,6 +582,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'SoftwareApplication', name: 'Claude' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
       },
       faqSchema: {
@@ -1050,6 +1052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'SoftwareApplication', name: 'Claude' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
       },
       faqSchema: {
@@ -1385,6 +1388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'SoftwareApplication', name: 'Claude' },
         ],
+        'proficiencyLevel': 'مبتدئ',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
       },
       faqSchema: {
@@ -1684,6 +1688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['GEO', 'Generative Engine Optimization', 'SEO para IA', 'prompt engineering', 'PromptQuorum'],
+        'proficiencyLevel': 'Beginner',
       },
       sections: {
         tldr: {
@@ -1832,6 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'SoftwareApplication', name: 'Claude' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
       },
       faqSchema: {
@@ -2302,6 +2308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'SoftwareApplication', name: 'Claude' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
       },
       faqSchema: {
@@ -2726,6 +2733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'SoftwareApplication', name: 'Claude' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '#key-takeaways'] },
       },
       faqSchema: {
@@ -3159,6 +3167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini' },
           { '@type': 'Organization', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',

@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
-          sameAs: 'https://www.promptquorum.com/about',
+          sameAs: 'https://www.linkedin.com/in/hanskuepper/',
         },
         about: [
           { '@type': 'Thing', name: 'AI in education' },
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
-          sameAs: 'https://www.promptquorum.com/about',
+          sameAs: 'https://www.linkedin.com/in/hanskuepper/',
         },
         about: [
           { '@type': 'Thing', name: 'KI im Bildungswesen' },
@@ -2223,7 +2223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
-      sameAs: 'https://www.promptquorum.com/about',
+      sameAs: 'https://www.linkedin.com/in/hanskuepper/',
     },
     about: [
       { '@type': 'Thing', name: 'IA en éducation' },

@@ -127,6 +127,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Qwen3-Coder Local LLM' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3-Coder' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -623,6 +624,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Qwen3-Coder LLM Local' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3-Coder' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -722,6 +724,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Qwen3-Coder LLM Local' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3-Coder' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -816,6 +819,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Qwen3-Coder LLM Local' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3-Coder' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -923,6 +927,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'Qwen3-Coder LLM Local' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'Qwen3-Coder' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     breadcrumbSchema: {

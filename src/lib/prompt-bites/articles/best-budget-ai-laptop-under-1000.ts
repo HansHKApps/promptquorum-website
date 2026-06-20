@@ -1076,6 +1076,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       inLanguage: 'ko',
       articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-budget-ai-laptop-under-1000',
       imageUrl: 'https://www.promptquorum.com/images/prompt-bites/best-budget-ai-laptop-under-1000.png',
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       items: [

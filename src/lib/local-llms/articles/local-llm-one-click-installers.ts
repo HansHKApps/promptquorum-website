@@ -259,7 +259,7 @@ schema: {
         datePublished: '2026-04-04',
         dateModified: '2026-06-19',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.promptquorum.com/about', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },

@@ -992,6 +992,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-local-llm-japan',
         inLanguage: 'ko',
       },
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',

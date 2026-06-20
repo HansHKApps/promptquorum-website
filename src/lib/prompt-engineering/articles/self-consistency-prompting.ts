@@ -48,6 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Reasoning' },
           { '@type': 'Thing', name: 'Self-Consistency' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -302,6 +303,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Reasoning' },
           { '@type': 'Thing', name: 'Self-Consistency' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -560,6 +562,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Razonamiento' },
           { '@type': 'Thing', name: 'Self-Consistency' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -806,6 +809,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'الاستدلال' },
           { '@type': 'Thing', name: 'الاتساق الذاتي' },
         ],
+        'proficiencyLevel': 'متوسط',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1049,6 +1053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Raciocínio' },
           { '@type': 'Thing', name: 'Self-Consistency' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1290,6 +1295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Raisonnement' },
           { '@type': 'Thing', name: 'Self-Consistency' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1970,6 +1976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways']
@@ -2468,6 +2475,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' }
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways']
@@ -2515,6 +2523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: '추론' },
           { '@type': 'Thing', name: '자기 일관성' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

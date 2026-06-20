@@ -52,6 +52,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'JSON Mode' },
           { '@type': 'Thing', name: 'Prompt Engineering' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['h2', 'h3', 'p'],
@@ -467,6 +468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Strukturierte Ausgabe', 'JSON-Modus', 'Prompt Engineering', 'Schema-Design', 'Maschinenlesbare Ausgabe', 'JSON-Validierung', 'Prompt-Vorlagen'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -755,6 +757,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         url: 'https://www.promptquorum.com/es/prompt-engineering/structured-output-json-mode',
         inLanguage: 'es',
+        'proficiencyLevel': 'Intermediate',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1061,6 +1064,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         url: 'https://www.promptquorum.com/ar/prompt-engineering/structured-output-json-mode',
         inLanguage: 'ar',
+        'proficiencyLevel': 'متوسط',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1365,6 +1369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         keywords: ['saída estruturada', 'modo JSON', 'LLMs', 'JSON schema', 'prompt engineering', 'PromptQuorum'],
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         keyTakeaways: {
@@ -1487,6 +1492,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ko/prompt-engineering/structured-output-json-mode',
       inLanguage: 'ko',
+      'proficiencyLevel': 'Intermediate',
     },
     howToSchema: {
       '@context': 'https://schema.org',

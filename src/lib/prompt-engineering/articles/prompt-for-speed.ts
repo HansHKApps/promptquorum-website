@@ -35,6 +35,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Gemini 3.5 Pro' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
         ],
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         definition: {

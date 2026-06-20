@@ -381,6 +381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'en',
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
         { '@type': 'Thing', name: 'Qwen3-Coder' },
@@ -763,6 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/es/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'es',
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
         { '@type': 'Thing', name: 'Qwen3-Coder' },
@@ -1145,6 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'ko',
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
         { '@type': 'Thing', name: 'Qwen3-Coder' },
@@ -1232,6 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/de/power-local-llm/deepseek-vs-qwen-coding-local-2026',
+      'proficiencyLevel': 'Advanced',
     },
   },
   fr: {
@@ -1311,6 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/fr/power-local-llm/deepseek-vs-qwen-coding-local-2026',
+      'proficiencyLevel': 'Advanced',
     },
   },
   ja: {
@@ -1390,6 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/ja/power-local-llm/deepseek-vs-qwen-coding-local-2026',
+      'proficiencyLevel': 'Advanced',
     },
   },
   zh: {
@@ -1484,6 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/zh/power-local-llm/deepseek-vs-qwen-coding-local-2026',
+      'proficiencyLevel': 'Advanced',
     },
   },
 
@@ -1862,6 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'pt-BR',
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
         { '@type': 'Thing', name: 'Qwen3-Coder' },
@@ -2244,6 +2252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026',
       inLanguage: 'ar',
+      'proficiencyLevel': 'Advanced',
       about: [
         { '@type': 'Thing', name: 'DeepSeek-V3' },
         { '@type': 'Thing', name: 'Qwen3-Coder' },

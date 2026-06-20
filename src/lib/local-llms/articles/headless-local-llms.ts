@@ -147,6 +147,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -310,6 +311,7 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -483,6 +485,7 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -656,6 +659,7 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -837,6 +841,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1002,6 +1007,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/headless-local-llms',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1169,6 +1175,7 @@ schema: {
           { '@type': 'Thing', 'name': 'vLLM' },
           { '@type': 'Thing', 'name': 'Local LLM' },
         ],
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
@@ -1336,6 +1343,7 @@ schema: {
           { '@type': 'Thing', 'name': 'vLLM' },
           { '@type': 'Thing', 'name': '本地LLM' },
         ],
+        'proficiencyLevel': 'Intermediate to Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {

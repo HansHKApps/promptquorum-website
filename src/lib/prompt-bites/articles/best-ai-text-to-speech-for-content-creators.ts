@@ -146,6 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       url: 'https://www.promptquorum.com/prompt-bites/best-ai-text-to-speech-for-content-creators',
       inLanguage: 'en',
+      'proficiencyLevel': 'Beginner',
     },
   },
   de: {

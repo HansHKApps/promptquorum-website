@@ -570,7 +570,7 @@ schema: {
       },
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Guía de LLMs locales con RTX 3060 2026: qué modelos puedes ejecutar',
         'description': '¿Qué LLMs locales puedes ejecutar en RTX 3060 12GB o 6GB? Consulta los mejores modelos para código, chat y razonamiento en 2026 con límites reales de VRAM y consejos de rendimiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-budget-gpus-local-llm',
@@ -900,7 +900,7 @@ schema: {
       },
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'دليل نماذج LLM المحلية مع RTX 3060 2026: أي النماذج يمكنك تشغيلها',
         'description': 'أي نماذج LLM محلية يمكنك تشغيلها على RTX 3060 12GB أو 6GB؟ راجع أفضل النماذج للبرمجة والمحادثة والاستدلال في 2026 بحدود VRAM حقيقية ونصائح للأداء.',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-budget-gpus-local-llm',
@@ -1289,7 +1289,7 @@ schema: {
           'Compliance-Frameworks erfordern auditierbare Workflows. Etablieren Sie Governance-Standards für KI-Prompt-Qualität und -Review: [Prompt-Governance in der Produktion](https://www.promptquorum.com/de/prompt-engineering/prompt-governance-in-production) behandelt Richtlinien, Versionskontrolle und Freigabeprozesse.',
         ] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'NewsArticle', 'headline': 'RTX 3060 Leitfaden für lokale LLMs 2026: Welche Modelle laufen', 'description': 'Welche lokalen LLMs können Sie auf der RTX 3060 12GB oder 6GB betreiben? Sehen Sie die besten Modelle für Coding, Chat und Reasoning 2026 mit echten VRAM-Grenzen und Performance-Tipps.', 'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-06-19', 'inLanguage': 'de', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'RTX 3060 Leitfaden für lokale LLMs 2026: Welche Modelle laufen', 'description': 'Welche lokalen LLMs können Sie auf der RTX 3060 12GB oder 6GB betreiben? Sehen Sie die besten Modelle für Coding, Chat und Reasoning 2026 mit echten VRAM-Grenzen und Performance-Tipps.', 'url': 'https://www.promptquorum.com/de/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-06-19', 'inLanguage': 'de', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', 'mainEntity': [
         { '@type': 'Question', 'name': 'Lohnt sich die RTX 3060 12GB 2026 noch?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Sie ist über 4 Jahre alt, aber 12 GB VRAM sind zeitlos für 7B-13B-Modelle. Betreibt Qwen3 14B, Qwen3 8B und Mistral Small reibungslos. Ideal, wenn Sie eine gebraucht unter 250 € finden.' } },
         { '@type': 'Question', 'name': 'Soll ich die RTX 4060 oder RTX 4060 Ti für lokale LLMs kaufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4060 Ti. Die Basis-RTX-4060 (8 GB) und die RTX 4070 (12 GB) bieten ein schlechtes Preis-Leistungs-Verhältnis für LLM-Arbeit. Die Ti ist die preislich beste RTX-40-Serie-Karte für lokale Inferenz.' } },
@@ -1446,7 +1446,7 @@ schema: {
           'Les cadres de conformité exigent des flux de travail auditables. Établissez des normes de gouvernance pour la qualité et la revue des prompts IA : [gouvernance des prompts en production](https://www.promptquorum.com/fr/prompt-engineering/prompt-governance-in-production) couvre les politiques, le contrôle de version et les processus d\'approbation.',
         ] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'NewsArticle', 'headline': 'Guide RTX 3060 pour LLM locaux 2026 : quels modèles pouvez-vous exécuter', 'description': 'Quels LLM locaux pouvez-vous faire tourner sur une RTX 3060 12GB ou 6GB ? Découvrez les meilleurs modèles pour le code, le chat et le raisonnement en 2026, avec limites de VRAM réelles et conseils de performance.', 'url': 'https://www.promptquorum.com/fr/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-06-19', 'inLanguage': 'fr', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Guide RTX 3060 pour LLM locaux 2026 : quels modèles pouvez-vous exécuter', 'description': 'Quels LLM locaux pouvez-vous faire tourner sur une RTX 3060 12GB ou 6GB ? Découvrez les meilleurs modèles pour le code, le chat et le raisonnement en 2026, avec limites de VRAM réelles et conseils de performance.', 'url': 'https://www.promptquorum.com/fr/local-llms/best-budget-gpus-local-llm', 'datePublished': '2026-04-05', 'dateModified': '2026-06-19', 'inLanguage': 'fr', 'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'about': [ { '@type': 'Thing', 'name': 'budget GPU' }, { '@type': 'Thing', 'name': 'RTX 3060' }, { '@type': 'Thing', 'name': 'GPU VRAM' }, { '@type': 'Thing', 'name': 'local LLM inference' } ], 'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }, 'educationalLevel': 'Beginner' },
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'fr', 'mainEntity': [
         { '@type': 'Question', 'name': 'La RTX 3060 12GB vaut-elle encore l\'achat en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Elle a 4 ans et plus, mais ses 12GB de VRAM sont intemporels pour les modèles 7B-13B. Elle fait tourner Qwen3 14B, Qwen3 8B et Mistral Small sans accroc. Idéale si vous en trouvez une d\'occasion sous 250 €.' } },
         { '@type': 'Question', 'name': 'Faut-il acheter une RTX 4060 ou une RTX 4060 Ti pour les LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La RTX 4060 Ti. La RTX 4060 de base (8GB) et la RTX 4070 (12GB) offrent une mauvaise valeur pour le travail LLM. La Ti est la carte RTX série 40 au meilleur prix pour l\'inférence locale.' } },
@@ -1941,7 +1941,7 @@ schema: {
       },
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'RTX 3060 로컬 LLM 가이드 2026: 실행 가능한 모델 안내',
         'description': 'RTX 3060 12GB 또는 6GB에서 어떤 로컬 LLM을 실행할 수 있습니까? 실제 VRAM 한계 및 성능 팁과 함께 2026년 코딩, 채팅, 추론에 최적인 모델을 확인하십시오.',
         'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm',

@@ -28,6 +28,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['CRAFT Framework', 'prompt frameworks', 'prompt engineering', 'creative prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -179,6 +180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['CRAFT-Framework', 'Prompt-Frameworks', 'Prompt-Engineering', 'kreative Prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         whatIsCRAFT: {
@@ -317,6 +319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Framework CRAFT', 'frameworks de prompt', 'prompt engineering', 'prompts creativos', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Frameworks de Prompt' },
@@ -470,6 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['إطار CRAFT', 'أطر الموجّهات', 'هندسة الموجّهات', 'الموجّهات الإبداعية', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'متوسط',
         about: [
           { '@type': 'Thing', name: 'هندسة الموجّهات' },
           { '@type': 'Thing', name: 'أطر الموجّهات' },
@@ -622,6 +626,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Framework CRAFT', 'frameworks de prompt', 'prompt engineering', 'prompts criativos', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Frameworks de Prompt' },
@@ -772,6 +777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Framework CRAFT', 'Frameworks de prompt', 'Prompt Engineering', 'prompts créatifs', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         whatIsCRAFT: {
@@ -908,6 +914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['CRAFTフレームワーク', 'プロンプトフレームワーク', 'プロンプトエンジニアリング', 'creative prompts', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         whatIsCRAFT: {
@@ -1046,6 +1053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['CRAFT框架', '提示框架', '提示工程', '创意提示', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         whatIsCRAFT: {
@@ -1187,6 +1195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['CRAFT 프레임워크', '프롬프트 프레임워크', '프롬프트 엔지니어링', '창의적 프롬프트', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: '프롬프트 엔지니어링' },
         { '@type': 'Thing', name: '프롬프트 프레임워크' },

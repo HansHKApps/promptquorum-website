@@ -878,7 +878,7 @@ schema: {
       },
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Nuevos modelos Ollama junio de 2026: Últimos lanzamientos y actualizaciones',
         'description': '¿Buscas nuevos modelos de Ollama? Consulta los últimos lanzamientos de junio de 2026, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama',
@@ -1365,7 +1365,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Ollama Update Juni 2026: Neueste Version und neue Modelle',
         'description': 'Aktuelle Ollama-Version v0.30.8 (Juni 2026) und die neuesten Modelle: MiniMax M3, Kimi K2.6, Qwen 3.6, DeepSeek V4. Verifizierte Benchmarks, RAM, Pull-Befehle.',
         'url': 'https://www.promptquorum.com/de/local-llms/top-open-source-models-ollama',
@@ -1752,7 +1752,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Mise à jour Ollama juin 2026 : dernière version et nouveaux modèles',
         'description': 'Version actuelle d\'Ollama v0.30.8 (juin 2026) et les modèles les plus récents : MiniMax M3, Kimi K2.6, Qwen 3.6, DeepSeek V4. Benchmarks vérifiés, RAM, commandes pull.',
         'url': 'https://www.promptquorum.com/fr/local-llms/top-open-source-models-ollama',
@@ -2139,7 +2139,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Ollama 2026年6月更新：最新バージョンと新モデル',
         'description': '現在のOllamaバージョンv0.30.8（2026年6月）と最新モデル：MiniMax M3、Kimi K2.6、Qwen 3.6、DeepSeek V4。検証済みベンチマーク、RAM、pullコマンド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/top-open-source-models-ollama',
@@ -2506,7 +2506,7 @@ schema: {
       },
 schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Ollama 2026年6月更新：最新版本与新模型',
         'description': '当前Ollama版本v0.30.8（2026年6月）及最新模型：MiniMax M3、Kimi K2.6、Qwen 3.6、DeepSeek V4。验证基准、RAM需求、pull命令。',
         'url': 'https://www.promptquorum.com/zh/local-llms/top-open-source-models-ollama',

@@ -49,6 +49,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'EU AI Act compliance' },
           { '@type': 'Thing', name: 'LLM fine-tuning' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -650,6 +651,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'EU AI Act Compliance' },
           { '@type': 'Thing', name: 'LLM Fine-Tuning' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1188,6 +1190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Cumplimiento del AI Act de la UE' },
           { '@type': 'Thing', name: 'Fine-tuning de LLMs' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1446,6 +1449,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'الامتثال لقانون الذكاء الاصطناعي الأوروبي' },
           { '@type': 'Thing', name: 'الضبط الدقيق للنماذج اللغوية الكبيرة' },
         ],
+        'proficiencyLevel': 'متوسط',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1702,6 +1706,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Conformidade do AI Act da UE' },
           { '@type': 'Thing', name: 'Fine-tuning de LLMs' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -1961,6 +1966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Conformité EU AI Act' },
           { '@type': 'Thing', name: 'Fine-tuning de LLM' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2495,6 +2501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'METI AI規制' },
           { '@type': 'Thing', name: 'LLMファインチューニング' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3047,6 +3054,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: '数据隐私' },
           { '@type': 'Thing', name: 'LLM微调' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
@@ -3583,6 +3591,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'EU AI Act 컴플라이언스' },
           { '@type': 'Thing', name: 'LLM 파인튜닝' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],

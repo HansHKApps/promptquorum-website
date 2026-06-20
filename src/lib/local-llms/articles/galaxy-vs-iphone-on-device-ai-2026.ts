@@ -374,7 +374,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'en',
       'url': 'https://www.promptquorum.com/local-llms/galaxy-vs-iphone-on-device-ai-2026',
-      'articleBody': 'Samsung Galaxy S26 and Apple Intelligence represent two philosophies of on-device AI. Samsung is proactive; Apple is depth-first.'
+      'articleBody': 'Samsung Galaxy S26 and Apple Intelligence represent two philosophies of on-device AI. Samsung is proactive; Apple is depth-first.',
+
+      'proficiencyLevel': 'Intermediate',
     },
     faqSchema: {
       '@context': 'https://schema.org',

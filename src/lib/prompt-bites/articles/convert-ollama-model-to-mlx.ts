@@ -663,6 +663,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: {
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/prompt-bites/convert-ollama-model-to-mlx',
+      'proficiencyLevel': '중급',
     },
     breadcrumbSchema: {
       items: [

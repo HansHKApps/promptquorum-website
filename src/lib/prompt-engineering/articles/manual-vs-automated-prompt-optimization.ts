@@ -59,6 +59,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -259,6 +260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -461,6 +463,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -658,6 +661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -858,6 +862,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1058,6 +1063,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1259,6 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1460,6 +1467,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1660,6 +1668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'DSPy' },
         { '@type': 'Thing', name: 'TextGrad' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {

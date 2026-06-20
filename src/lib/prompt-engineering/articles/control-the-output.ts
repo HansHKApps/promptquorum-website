@@ -62,6 +62,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -425,6 +426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -801,6 +803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1135,6 +1138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'مبتدئ',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1467,6 +1471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1803,6 +1808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -2169,6 +2175,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -2535,6 +2542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Qwen 3' },
         ],
+        'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -2896,6 +2904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Ollama' },
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',

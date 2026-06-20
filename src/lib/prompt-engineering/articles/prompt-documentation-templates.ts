@@ -54,6 +54,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -232,6 +233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -407,6 +409,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -584,6 +587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -759,6 +763,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -936,6 +941,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -1110,6 +1116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -1284,6 +1291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
       image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+      'proficiencyLevel': 'Intermediate',
     },
     sections: {
       tldr: {
@@ -1459,6 +1467,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
     image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-documentation-templates', width: 1200, height: 630 },
+    'proficiencyLevel': 'Intermediate',
   },
   sections: {
     tldr: {

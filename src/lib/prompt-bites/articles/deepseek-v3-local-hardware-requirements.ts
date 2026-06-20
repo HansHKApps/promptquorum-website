@@ -129,6 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'DeepSeek V3 Local Deployment' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -640,6 +641,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'DeepSeek V3 implantação local' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -753,6 +755,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'DeepSeek V3 despliegue local' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -970,6 +973,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'DeepSeek V3 로컬 배포' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     breadcrumbSchema: {

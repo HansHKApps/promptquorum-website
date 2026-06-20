@@ -38,6 +38,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-05-04',
         'url': 'https://www.promptquorum.com/prompt-engineering/ape-framework',
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         keywords: ['APE Framework', 'Analyze Plan Execute', 'prompt frameworks', 'prompt engineering', 'structured reasoning', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -235,6 +236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['APE-Framework', 'Analyze Plan Execute', 'Prompt-Frameworks', 'Prompt-Engineering', 'strukturiertes Denken'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         faqSection: {
@@ -286,6 +288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         url: 'https://www.promptquorum.com/es/prompt-engineering/ape-framework',
         inLanguage: 'es',
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         keywords: ['Framework APE', 'Analizar Planificar Ejecutar', 'frameworks de prompt', 'prompt engineering', 'razonamiento estructurado', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -495,6 +498,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/ape-framework',
         inLanguage: 'ar',
+        'proficiencyLevel': 'متوسط',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         keywords: ['إطار APE', 'التحليل التخطيط التنفيذ', 'أطر التعليمات', 'هندسة التعليمات', 'الاستدلال المنظَّم', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -703,6 +707,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-05-04',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/ape-framework',
         inLanguage: 'pt-BR',
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
         keywords: ['Framework APE', 'Analisar Planejar Executar', 'frameworks de prompt', 'prompt engineering', 'raciocínio estruturado', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -901,6 +906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Framework APE', 'Analyze Plan Execute', 'Frameworks de prompt', 'Prompt Engineering', 'raisonnement structuré'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         faqSection: {
@@ -941,6 +947,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['APEフレームワーク', 'Analyze Plan Execute', 'プロンプトフレームワーク', 'プロンプトエンジニアリング', '構造化推論'],
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         faqSection: {
@@ -981,6 +988,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['APE框架', 'Analyze Plan Execute', '提示框架', '提示工程', '结构化推理'],
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
       },
       sections: {
         faqSection: {
@@ -1032,6 +1040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-04',
       url: 'https://www.promptquorum.com/ko/prompt-engineering/ape-framework',
       inLanguage: 'ko',
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       keywords: ['APE 프레임워크', '분석 계획 실행', '프롬프트 프레임워크', '프롬프트 엔지니어링', '구조화된 추론', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

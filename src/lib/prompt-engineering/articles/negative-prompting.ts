@@ -61,6 +61,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Large Language Models' },
           { '@type': 'Thing', name: 'Guardrails' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       sections: {
@@ -300,6 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Große Sprachmodelle' },
       { '@type': 'Thing', name: 'Digitale Schutzmaßnahmen' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {
@@ -521,6 +523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Large Language Models' },
       { '@type': 'Thing', name: 'Guardrails' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {
@@ -820,6 +823,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Large Language Models' },
       { '@type': 'Thing', name: 'Guardrails' },
     ],
+    'proficiencyLevel': 'متوسط',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {
@@ -1114,6 +1118,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Large Language Models' },
       { '@type': 'Thing', name: 'Guardrails' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {
@@ -1418,6 +1423,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Ingénierie des Invites' },
       { '@type': 'Thing', name: 'Garde-fous IA' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {
@@ -1764,6 +1770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
       { '@type': 'Thing', name: 'AI保護柵' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {
@@ -2084,6 +2091,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: '提示工程' },
           { '@type': 'Thing', name: '安全防护' },
         ],
+        'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       sections: {
@@ -2156,6 +2164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: '대규모 언어 모델' },
       { '@type': 'Thing', name: '가드레일' },
     ],
+    'proficiencyLevel': 'Intermediate',
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
   },
   sections: {

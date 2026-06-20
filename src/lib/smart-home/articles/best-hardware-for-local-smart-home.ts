@@ -187,6 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home Assistant hardware' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'Local LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -387,6 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'أجهزة Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'نموذج LLM محلي' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -587,6 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home-Assistant-Hardware' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'Lokales LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -787,6 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Hardware de Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'LLM local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -987,6 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home Assistant 하드웨어' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: '미니 PC' }, { '@type': 'Thing', name: '로컬 LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1187,6 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Matériel Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini-PC' }, { '@type': 'Thing', name: 'LLM local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1387,6 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home Assistant ハードウェア' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'ミニPC' }, { '@type': 'Thing', name: 'ローカルLLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1587,6 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Hardware do Home Assistant' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: 'Mini PC' }, { '@type': 'Thing', name: 'LLM local' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1787,6 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-06-04',
       dateModified: '2026-06-05',
       about: [{ '@type': 'Thing', name: 'Home Assistant 硬件' }, { '@type': 'Thing', name: 'Raspberry Pi' }, { '@type': 'Thing', name: '迷你 PC' }, { '@type': 'Thing', name: '本地 LLM' }],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

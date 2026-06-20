@@ -239,6 +239,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026',
       inLanguage: 'en',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   de: {
@@ -672,6 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/prompt-bites/best-vpn-for-ai-development-china-2026',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   es: {
@@ -794,6 +796,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/es/prompt-bites/best-vpn-for-ai-development-china-2026',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ar: {
@@ -916,6 +919,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/ar/prompt-bites/best-vpn-for-ai-development-china-2026',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   ko: {
@@ -1067,6 +1071,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-vpn-for-ai-development-china-2026',
+      'proficiencyLevel': 'Intermediate',
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',

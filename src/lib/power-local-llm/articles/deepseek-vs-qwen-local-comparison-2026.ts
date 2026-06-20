@@ -339,6 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -703,6 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1066,6 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1368,6 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -2046,6 +2050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: '로컬 LLM' },
       ],
+      'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {

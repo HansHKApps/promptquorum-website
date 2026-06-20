@@ -287,7 +287,7 @@ schema: {
       primaryTerm: 'AMD GPU',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Mejores GPUs AMD para LLMs locales 2026: RX 7900 XTX',
         'description': 'Compara AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuración de ROCm, rendimiento en vLLM, análisis de coste por TFLOP. Cuándo elegir AMD sobre CUDA. Abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
@@ -512,7 +512,7 @@ schema: {
       primaryTerm: 'AMD GPU',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'أفضل كروت رسوميات AMD لنماذج LLM المحلية 2026: RX 7900 XTX',
         'description': 'قارن AMD RX 7900 XTX و6800 XT مقابل NVIDIA RTX. إعداد ROCm، الأداء في vLLM، تحليل التكلفة لكل TFLOP. متى تختار AMD على CUDA. أبريل 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-amd-gpus-local-llm',
@@ -740,7 +740,7 @@ schema: {
       primaryTerm: 'AMD GPU',
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'NewsArticle',
+        '@type': 'TechArticle',
         'headline': 'Melhores GPUs AMD para LLMs locais 2026: RX 7900 XTX',
         'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuração de ROCm, desempenho no vLLM, análise de custo por TFLOP. Quando escolher AMD em vez de CUDA. Abril 2026.',
         'url': 'https://www.promptquorum.com/pt/local-llms/best-amd-gpus-local-llm',
@@ -1662,7 +1662,7 @@ schema: {
     primaryTerm: 'AMD GPU',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'TechArticle',
       'headline': '로컬 LLM용 최고의 AMD GPU 2026: RX 7900 XTX',
       'description': 'AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX 비교. ROCm 설치, vLLM 성능, TFLOP당 비용 분석. CUDA 대신 AMD를 선택해야 하는 경우. 2026년 4월.',
       'url': 'https://www.promptquorum.com/ko/local-llms/best-amd-gpus-local-llm',

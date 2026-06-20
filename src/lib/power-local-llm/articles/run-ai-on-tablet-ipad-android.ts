@@ -791,6 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
         { '@type': 'SoftwareApplication', 'name': 'Termux' },
       ],
+      'proficiencyLevel': 'Beginner',
       about: [
         { '@type': 'Thing', 'name': 'lokale KI-Inferenz' },
         { '@type': 'Thing', 'name': 'Tablet-LLMs' },
@@ -1191,6 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
         { '@type': 'SoftwareApplication', 'name': 'Termux' },
       ],
+      'proficiencyLevel': 'Beginner',
       about: [
         { '@type': 'Thing', 'name': 'inférence IA locale' },
         { '@type': 'Thing', 'name': 'LLMs tablette' },
@@ -1604,6 +1606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'iPad AIアプリ' },
         { '@type': 'Thing', 'name': 'AndroidタブレットAI推論' },
       ],
+      'proficiencyLevel': 'Beginner',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2008,6 +2011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Thing', 'name': 'iPad AI应用' },
         { '@type': 'Thing', 'name': '安卓平板AI推理' },
       ],
+      'proficiencyLevel': 'Beginner',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.article-intro', '.key-takeaways'],
@@ -2412,6 +2416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
         { '@type': 'SoftwareApplication', 'name': 'Termux' },
       ],
+      'proficiencyLevel': 'Beginner',
       about: [
         { '@type': 'Thing', 'name': 'inferencia de IA local' },
         { '@type': 'Thing', 'name': 'LLMs en tablet' },
@@ -2818,6 +2823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
         { '@type': 'SoftwareApplication', 'name': 'Termux' },
       ],
+      'proficiencyLevel': 'Beginner',
       about: [
         { '@type': 'Thing', 'name': '로컬 AI 추론' },
         { '@type': 'Thing', 'name': '태블릿 LLM' },
@@ -3221,6 +3227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', 'name': 'Open WebUI' },
         { '@type': 'SoftwareApplication', 'name': 'Termux' },
       ],
+      'proficiencyLevel': 'Beginner',
       about: [
         { '@type': 'Thing', 'name': 'inferência de IA local' },
         { '@type': 'Thing', 'name': 'LLMs no tablet' },
@@ -3482,6 +3489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'SoftwareApplication', name: 'Open WebUI' },
         { '@type': 'SoftwareApplication', name: 'Termux' },
       ],
+      'proficiencyLevel': 'Beginner',
       about: [
         { '@type': 'Thing', name: 'الاستدلال المحلي للذكاء الاصطناعي' },
         { '@type': 'Thing', name: 'نماذج LLM على اللوحي' },
