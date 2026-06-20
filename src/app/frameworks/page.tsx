@@ -5,6 +5,9 @@ import { FRAMEWORKS } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'

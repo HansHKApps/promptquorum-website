@@ -7,6 +7,9 @@ import { truncateTitle } from '@/lib/utils'
 import { generateLocalLlmsJsonLd } from '@/lib/local-llms/schema'
 import { buildLLMHubData } from '@/lib/local-llms/hub-data'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'

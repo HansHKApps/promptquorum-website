@@ -5,6 +5,9 @@ import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'
 import Link from 'next/link'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }

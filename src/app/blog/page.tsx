@@ -5,6 +5,9 @@ import {
 } from '@/lib/blog/page-helpers'
 import type { Language } from '@/lib/blog/blogContent'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }

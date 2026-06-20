@@ -6,6 +6,9 @@ Tracked issues that are non-blocking but should be addressed when touching relat
 |------|-------|----------|
 | `.next/types/validator.ts` TypeScript warning | Pre-existing, non-blocking. Appears in pre-commit hook type-check but does not block `npm run build`. Investigate when touching build config or upgrading Next.js. | Low |
 
+## Dead searchParams reads in EN hub pages (June 2026)
+`force-static` was added to all EN pages (cache/en-routes-static, 2026-06-20). For [slug] article pages (with `generateStaticParams`) this fully flips them to `●` SSG. For hub pages without `generateStaticParams` (`/`, `/local-llms`, `/prompt-engineering`, `/blog`, `/compare`, `/faq`, `/features`, `/frameworks`, `/how-it-works`, `/privacy`, `/download`, `/about`), the `await searchParams` in `generateMetadata` overrides `force-static` in Next.js 15 — they remain `ƒ` (dynamic). Fix = Option A: remove `searchParams` from `generateMetadata` signature on these hub files and hardcode `const selectedLang = 'en'` (middleware guarantees ?lang= never reaches EN pages). Trigger: next time touching hub page metadata, or if hub page caching becomes a priority. Affects ~12 files, 4-line change each.
+
 ## html lang/dir is client-set (June 2026)
 HtmlLangUpdater sets lang/dir post-hydration, so server HTML shows lang="en" on all locales; Arabic gets a post-hydration RTL flash + wrong server dir. hreflang is intact so the language signal is OK meanwhile. Proper fix = [locale] dynamic segment (Option C, route restructure). Trigger: before Arabic search demand grows, or next time doing route-level work. Not urgent.
 

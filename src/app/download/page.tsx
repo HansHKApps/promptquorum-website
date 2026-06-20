@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }

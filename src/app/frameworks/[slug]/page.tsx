@@ -5,6 +5,9 @@ import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 export function generateStaticParams() {
   return FRAMEWORK_SLUGS.map(slug => ({ slug }))
 }

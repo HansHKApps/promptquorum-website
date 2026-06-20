@@ -10,6 +10,9 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
 import { getLocalLLMGeoEntities, type Language } from '@/lib/geo-schema'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
   llms: 'LLMs',

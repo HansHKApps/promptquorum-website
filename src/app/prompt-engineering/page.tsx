@@ -8,6 +8,9 @@ import { peContent } from '@/lib/prompt-engineering/content'
 import type { Language } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'

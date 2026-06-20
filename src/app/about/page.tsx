@@ -5,6 +5,9 @@ import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import Link from 'next/link'
 import { AboutHeroClient } from '@/components/AboutHeroClient'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }

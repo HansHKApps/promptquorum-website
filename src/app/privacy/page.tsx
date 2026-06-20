@@ -4,6 +4,9 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { PrivacyPageClient } from '@/components/PrivacyPageClient'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }

@@ -12,6 +12,9 @@ import { toOutputLocale } from '@/lib/i18n/constants'
 import { getPEGeoEntities, type Language } from '@/lib/geo-schema'
 import { truncateTitle } from '@/lib/utils'
 
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
   llms: 'LLMs',
