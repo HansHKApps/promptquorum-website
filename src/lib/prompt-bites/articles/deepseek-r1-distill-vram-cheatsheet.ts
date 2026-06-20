@@ -47,6 +47,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'The full 671B DeepSeek-R1 is not on this table — it needs ~376–404 GB at Q4 (datacenter only).',
           'These are R1 reasoning distills, not DeepSeek-V3 (a chat model).',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'DeepSeek-R1 distills need roughly 0.6 GB VRAM per billion parameters at Q4_K_M — 7B ≈ 5.5 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Q4_K_M is a compressed model format that uses about 0.6 GB of GPU memory per billion parameters — so a 14B model needs roughly 9–10 GB. If the model exceeds your GPU\'s memory, it spills into slow system RAM and performance collapses.',
+          },
+        ],
       },
       masterTable: {
         id: 'vram-table',

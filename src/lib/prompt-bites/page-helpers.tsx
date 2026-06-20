@@ -101,17 +101,35 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const canonicalUrl = `${BASE}${promptBitesArticlePath(lang, slug)}`
   const quickAnswerEntry = (article as any).quickAnswerTop?.[lang]
 
+  const edLevel = (article as any).educationalLevel as string | undefined
+  const levelMap: Record<string, string> = {
+    Beginner: 'Beginner',
+    Intermediate: 'Intermediate',
+    Advanced: 'Expert',
+    Technical: 'Expert',
+  }
+  const proficiencyLevel = edLevel ? (levelMap[edLevel] ?? edLevel) : undefined
+
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'TechArticle',
     headline: article.title,
     description: (article as any).metaDescription ?? '',
     datePublished: article.publishDate,
+    dateModified: (article as any).dateModified ?? article.publishDate,
+    inLanguage: toOutputLocale(lang),
     url: canonicalUrl,
+    ...(proficiencyLevel && { proficiencyLevel }),
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
       url: 'https://www.promptquorum.com/about',
+      sameAs: [
+        'https://www.linkedin.com/in/hanskuepper/',
+        'https://x.com/HansKuepperAPPs',
+        'https://github.com/HansHKApps',
+        'https://bsky.app/profile/hhkbluesky.bsky.social',
+      ],
     },
     publisher: {
       '@type': 'Organization',

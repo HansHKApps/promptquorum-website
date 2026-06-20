@@ -47,6 +47,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Set temperature to 0.6 and use no system prompt to avoid R1 repetition failures.',
           'This is the R1 reasoning family — not DeepSeek-V3, which is a chat model.',
         ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Match your GPU\'s VRAM to the largest DeepSeek-R1 distill that fits: RTX 3060 12GB → 7B, RTX 4060 Ti 16GB → 14B, RTX 4090 → 32B, dual-GPU → 70B.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Pick the biggest DeepSeek-R1 reasoning model your graphics card\'s memory (VRAM) can hold — more VRAM means more reasoning power, and each model installs with one Ollama command.',
+          },
+        ],
       },
       gpuTable: {
         id: 'gpu-table',
