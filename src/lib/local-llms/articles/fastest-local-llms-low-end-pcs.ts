@@ -52,11 +52,125 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Regional Context', anchor: '#regional-context' },
         { label: 'FAQ', anchor: '#faq' },
       ],
+      quickAnswerTop: {
+        en: {
+          question: 'What is the fastest local LLM for a low-end PC with no GPU in 2026?',
+          answer: 'On 4 GB RAM (CPU only): Qwen3 1.7B Q4_K_M at 25–40 tok/s on a modern i5/Ryzen 5. On 8 GB RAM: Phi-4-mini 3.8B Q4_K_M at 15–25 tok/s — handles coding and reasoning. On 16 GB: Llama 3.1 8B Q4_K_M or Mistral Small 3.1 8B at 10–20 tok/s. All run via Ollama, no GPU required.',
+          bullets: [
+            '→ 4 GB RAM: Qwen3 1.7B Q4_K_M — 25–40 tok/s, fastest response on minimal hardware',
+            '→ 8 GB RAM (sweet spot): Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s, coding + reasoning',
+            '→ 16 GB RAM: Llama 3.1 8B Q4_K_M or Mistral Small 3.1 8B — 10–20 tok/s',
+            '→ Setup: install Ollama, then run: ollama pull phi4-mini',
+            '→ A used RTX 4060 8 GB (~$250) is 5–10× faster than any CPU',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        de: {
+          question: 'Was ist der schnellste lokale LLM für einen Low-End-PC ohne GPU im Jahr 2026?',
+          answer: 'Mit 4 GB RAM (nur CPU): Qwen3 1.7B Q4_K_M mit 25–40 Tok/s auf einem modernen i5/Ryzen 5. Mit 8 GB RAM: Phi-4-mini 3.8B Q4_K_M mit 15–25 Tok/s — für Coding und Reasoning. Mit 16 GB: Llama 3.1 8B Q4_K_M mit 10–20 Tok/s. Alle laufen über Ollama, ohne GPU.',
+          bullets: [
+            '→ 4 GB RAM: Qwen3 1.7B Q4_K_M — 25–40 Tok/s, schnellste Antwort auf minimaler Hardware',
+            '→ 8 GB RAM (optimaler Punkt): Phi-4-mini 3.8B Q4_K_M — 15–25 Tok/s, Coding und Reasoning',
+            '→ 16 GB RAM: Llama 3.1 8B Q4_K_M — 10–20 Tok/s',
+            '→ Setup: Ollama installieren, dann: ollama pull phi4-mini',
+            '→ Eine gebrauchte RTX 4060 8 GB (~250 $) ist 5–10× schneller als jede CPU',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        fr: {
+          question: 'Quel est le LLM local le plus rapide pour un PC d\'entrée de gamme sans GPU en 2026 ?',
+          answer: 'Avec 4 Go de RAM (CPU seul) : Qwen3 1.7B Q4_K_M à 25–40 tok/s sur un i5/Ryzen 5 moderne. Avec 8 Go : Phi-4-mini 3.8B Q4_K_M à 15–25 tok/s — adapté au code et au raisonnement. Avec 16 Go : Llama 3.1 8B Q4_K_M à 10–20 tok/s. Tous fonctionnent via Ollama, sans GPU.',
+          bullets: [
+            '→ 4 Go de RAM : Qwen3 1.7B Q4_K_M — 25–40 tok/s, réponse la plus rapide sur matériel minimal',
+            '→ 8 Go de RAM (point idéal) : Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s, code + raisonnement',
+            '→ 16 Go de RAM : Llama 3.1 8B Q4_K_M — 10–20 tok/s',
+            '→ Configuration : installer Ollama puis : ollama pull phi4-mini',
+            '→ Une RTX 4060 8 Go d\'occasion (~250 $) est 5–10× plus rapide que n\'importe quel CPU',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ja: {
+          question: '2026年にGPUなしのローエンドPCで最速のローカルLLMは何ですか？',
+          answer: 'RAM 4 GB（CPUのみ）：現代的なi5/Ryzen 5で25〜40トークン/秒のQwen3 1.7B Q4_K_M。RAM 8 GB：Phi-4-mini 3.8B Q4_K_M で15〜25トークン/秒 — コーディングと推論に対応。RAM 16 GB：Llama 3.1 8B Q4_K_M で10〜20トークン/秒。すべてOllamaで実行でき、GPUは不要。',
+          bullets: [
+            '→ RAM 4 GB：Qwen3 1.7B Q4_K_M — 25〜40トークン/秒、最小ハードウェアで最速',
+            '→ RAM 8 GB（スイートスポット）：Phi-4-mini 3.8B Q4_K_M — 15〜25トークン/秒、コーディング＆推論',
+            '→ RAM 16 GB：Llama 3.1 8B Q4_K_M — 10〜20トークン/秒',
+            '→ セットアップ：Ollamaをインストール後、ollama pull phi4-mini を実行',
+            '→ 中古のRTX 4060 8 GB（約250ドル）はどのCPUより5〜10倍速い',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        zh: {
+          question: '2026年没有GPU的低端PC上最快的本地LLM是什么？',
+          answer: '4 GB内存（仅CPU）：现代i5/Ryzen 5上Qwen3 1.7B Q4_K_M达25–40 tok/s。8 GB内存：Phi-4-mini 3.8B Q4_K_M达15–25 tok/s — 支持编程和推理。16 GB内存：Llama 3.1 8B Q4_K_M达10–20 tok/s。全部通过Ollama运行，无需GPU。',
+          bullets: [
+            '→ 4 GB内存：Qwen3 1.7B Q4_K_M — 25–40 tok/s，最低硬件上最快响应',
+            '→ 8 GB内存（最佳选择）：Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s，支持编程和推理',
+            '→ 16 GB内存：Llama 3.1 8B Q4_K_M — 10–20 tok/s',
+            '→ 设置：安装Ollama后运行：ollama pull phi4-mini',
+            '→ 二手RTX 4060 8 GB（约250美元）比任何CPU快5–10倍',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        es: {
+          question: '¿Cuál es el LLM local más rápido para un PC de gama baja sin GPU en 2026?',
+          answer: 'Con 4 GB de RAM (solo CPU): Qwen3 1.7B Q4_K_M a 25–40 tok/s en un i5/Ryzen 5 moderno. Con 8 GB: Phi-4-mini 3.8B Q4_K_M a 15–25 tok/s — maneja código y razonamiento. Con 16 GB: Llama 3.1 8B Q4_K_M a 10–20 tok/s. Todos funcionan vía Ollama, sin GPU.',
+          bullets: [
+            '→ 4 GB de RAM: Qwen3 1.7B Q4_K_M — 25–40 tok/s, respuesta más rápida en hardware mínimo',
+            '→ 8 GB de RAM (punto óptimo): Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s, código + razonamiento',
+            '→ 16 GB de RAM: Llama 3.1 8B Q4_K_M — 10–20 tok/s',
+            '→ Configuración: instalar Ollama y ejecutar: ollama pull phi4-mini',
+            '→ Una RTX 4060 8 GB de segunda mano (~250 $) es 5–10× más rápida que cualquier CPU',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        pt: {
+          question: 'Qual é o LLM local mais rápido para um PC de entrada sem GPU em 2026?',
+          answer: 'Com 4 GB de RAM (apenas CPU): Qwen3 1.7B Q4_K_M a 25–40 tok/s em um i5/Ryzen 5 moderno. Com 8 GB: Phi-4-mini 3.8B Q4_K_M a 15–25 tok/s — suporta programação e raciocínio. Com 16 GB: Llama 3.1 8B Q4_K_M a 10–20 tok/s. Todos rodam via Ollama, sem GPU.',
+          bullets: [
+            '→ 4 GB de RAM: Qwen3 1.7B Q4_K_M — 25–40 tok/s, resposta mais rápida em hardware mínimo',
+            '→ 8 GB de RAM (ponto ideal): Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s, programação + raciocínio',
+            '→ 16 GB de RAM: Llama 3.1 8B Q4_K_M — 10–20 tok/s',
+            '→ Configuração: instalar Ollama e executar: ollama pull phi4-mini',
+            '→ Uma RTX 4060 8 GB usada (~US$250) é 5–10× mais rápida que qualquer CPU',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ar: {
+          question: 'ما هو أسرع LLM محلي لجهاز كمبيوتر منخفض الأداء بدون GPU في عام 2026؟',
+          answer: 'مع 4 جيجابايت رام (CPU فقط): Qwen3 1.7B Q4_K_M بسرعة 25–40 رمزاً/ثانية على i5/Ryzen 5 حديث. مع 8 جيجابايت: Phi-4-mini 3.8B Q4_K_M بسرعة 15–25 رمزاً/ثانية — يدعم البرمجة والاستدلال. مع 16 جيجابايت: Llama 3.1 8B Q4_K_M بسرعة 10–20 رمزاً/ثانية. جميعها تعمل عبر Ollama بدون GPU.',
+          bullets: [
+            '→ 4 جيجابايت رام: Qwen3 1.7B Q4_K_M — 25–40 رمزاً/ثانية، أسرع استجابة على الأجهزة المحدودة',
+            '→ 8 جيجابايت رام (النقطة المثالية): Phi-4-mini 3.8B Q4_K_M — 15–25 رمزاً/ثانية، برمجة واستدلال',
+            '→ 16 جيجابايت رام: Llama 3.1 8B Q4_K_M — 10–20 رمزاً/ثانية',
+            '→ الإعداد: تثبيت Ollama ثم تشغيل: ollama pull phi4-mini',
+            '→ بطاقة RTX 4060 8 جيجابايت مستعملة (~250 دولار) أسرع 5–10 مرات من أي معالج CPU',
+          ],
+          updatedDate: '2026-06-01',
+        },
+        ko: {
+          question: '2026년 GPU 없는 저사양 PC에서 가장 빠른 로컬 LLM은?',
+          answer: '4 GB RAM(CPU만): 현대 i5/Ryzen 5에서 Qwen3 1.7B Q4_K_M이 25–40 tok/s. 8 GB RAM: Phi-4-mini 3.8B Q4_K_M이 15–25 tok/s — 코딩과 추론 지원. 16 GB RAM: Llama 3.1 8B Q4_K_M이 10–20 tok/s. 모두 Ollama로 실행, GPU 불필요.',
+          bullets: [
+            '→ 4 GB RAM: Qwen3 1.7B Q4_K_M — 25–40 tok/s, 최소 하드웨어에서 가장 빠른 응답',
+            '→ 8 GB RAM(최적): Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s, 코딩 + 추론',
+            '→ 16 GB RAM: Llama 3.1 8B Q4_K_M — 10–20 tok/s',
+            '→ 설정: Ollama 설치 후 실행: ollama pull phi4-mini',
+            '→ 중고 RTX 4060 8 GB(~$250)는 어떤 CPU보다 5–10배 빠름',
+          ],
+          updatedDate: '2026-06-01',
+        },
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'On a CPU-only PC with 8 GB RAM, Phi-4-mini 3.8B Q4_K_M runs at 15–25 tok/s and handles coding and reasoning; on 4 GB RAM, Qwen3 1.7B Q4_K_M hits 25–40 tok/s.' },
+            { type: 'plain-terms', text: 'You don\'t need a gaming GPU to run a local AI. These models run entirely on your CPU and regular RAM. Smaller models (1–4B parameters) are surprisingly capable for everyday tasks, and they\'re fast enough for a real conversation.' },
+          ],
           items: [
             '**4 GB RAM, CPU only:** Qwen3 1.7B Q4_K_M — 25–40 tok/s. Fastest response on minimal hardware.',
             '**8 GB RAM, CPU only (sweet spot):** Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s. Coding and reasoning on old laptops.',
@@ -426,6 +540,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'En un PC solo con CPU y 8 GB de RAM, Phi-4-mini 3.8B Q4_K_M funciona a 15–25 tok/s para código y razonamiento; con 4 GB, Qwen3 1.7B Q4_K_M alcanza 25–40 tok/s.' },
+            { type: 'plain-terms', text: 'No necesitas una GPU gaming para ejecutar IA local. Estos modelos funcionan completamente en tu CPU y RAM estándar. Los modelos pequeños (1–4B parámetros) son sorprendentemente capaces para tareas cotidianas y lo suficientemente rápidos para una conversación real.' },
+          ],
           items: [
             '**Solo CPU (sin GPU):** Phi-4 Mini 3.8B a 5–15 tok/s. Mejor opción en CPU para chat y resúmenes.',
             '**4 GB VRAM:** TinyLlama 1.1B Q5 a 20–40 tok/s. Respuestas rápidas, tareas simples.',
@@ -795,6 +913,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'على جهاز يعمل بالمعالج CPU فقط مع 8 جيجابايت رام، يعمل Phi-4-mini 3.8B Q4_K_M بسرعة 15–25 رمزاً/ثانية للبرمجة والاستدلال؛ مع 4 جيجابايت، يصل Qwen3 1.7B Q4_K_M إلى 25–40 رمزاً/ثانية.' },
+            { type: 'plain-terms', text: 'لا تحتاج إلى GPU للألعاب لتشغيل الذكاء الاصطناعي محلياً. هذه النماذج تعمل كلياً على المعالج والذاكرة العادية. النماذج الصغيرة (1–4B معامل) قادرة بشكل مدهش على المهام اليومية وسريعة بما يكفي لمحادثة حقيقية.' },
+          ],
           items: [
             '**CPU فقط (دون GPU):** Phi-4 Mini 3.8B بسرعة 5–15 tok/s. أفضل خيار على CPU للدردشة والتلخيصات.',
             '**4 GB VRAM:** TinyLlama 1.1B Q5 بسرعة 20–40 tok/s. ردود سريعة، مهام بسيطة.',
@@ -1144,6 +1266,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Em um PC apenas com CPU e 8 GB de RAM, Phi-4-mini 3.8B Q4_K_M roda a 15–25 tok/s para programação e raciocínio; com 4 GB, Qwen3 1.7B Q4_K_M atinge 25–40 tok/s.' },
+            { type: 'plain-terms', text: 'Você não precisa de uma GPU gaming para rodar IA local. Esses modelos funcionam completamente na CPU e na RAM comum. Modelos menores (1–4B parâmetros) são surpreendentemente capazes para tarefas do dia a dia e rápidos o suficiente para uma conversa real.' },
+          ],
           items: [
             '**Somente CPU:** Phi-4 Mini 3.8B — 5–15 tok/s, chat básico e resumos',
             '**4 GB VRAM:** TinyLlama 1.1B Q5 — 20–40 tok/s, respostas rápidas e tarefas simples',
@@ -1264,6 +1390,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Auf einem CPU-only-PC mit 8 GB RAM läuft Phi-4-mini 3.8B Q4_K_M mit 15–25 Tok/s für Coding und Reasoning; bei 4 GB RAM erreicht Qwen3 1.7B Q4_K_M 25–40 Tok/s.' },
+            { type: 'plain-terms', text: 'Du brauchst keine Gaming-GPU für eine lokale KI. Diese Modelle laufen komplett auf CPU und normalem RAM. Kleinere Modelle (1–4B Parameter) sind für Alltagsaufgaben überraschend leistungsfähig und schnell genug für echte Unterhaltungen.' },
+          ],
           items: [
             '**GPU (RTX 3060 8 GB):** Mistral Small Q4 mit 15 Tok/Sek. Bestes Geschwindigkeits-/Qualitätsverhältnis.',
             '**GPU (RTX 2060 4 GB):** Mistral Small Q2 (2-Bit) mit 20 Tok/Sek. Akzeptable Qualität, hohe Geschwindigkeit.',
@@ -1610,6 +1740,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Sur un PC CPU seul avec 8 Go de RAM, Phi-4-mini 3.8B Q4_K_M tourne à 15–25 tok/s pour le code et le raisonnement ; avec 4 Go de RAM, Qwen3 1.7B Q4_K_M atteint 25–40 tok/s.' },
+            { type: 'plain-terms', text: 'Vous n\'avez pas besoin d\'une GPU gaming pour faire tourner une IA locale. Ces modèles s\'exécutent entièrement sur votre CPU et votre RAM standard. Les petits modèles (1–4B paramètres) sont étonnamment capables pour les tâches quotidiennes.' },
+          ],
           items: [
             '**GPU (RTX 3060 8 Go) :** Mistral Small Q4 à 15 tok/sec. Meilleur rapport vitesse/qualité.',
             '**GPU (RTX 2060 4 Go) :** Mistral Small Q2 (2 bits) à 20 tok/sec. Qualité acceptable, vitesse élevée.',
@@ -1962,6 +2096,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RAM 8 GBのCPUのみのPCでは、Phi-4-mini 3.8B Q4_K_MがコーディングOK・15〜25トークン/秒で動作。RAM 4 GBでは、Qwen3 1.7B Q4_K_Mが25〜40トークン/秒を達成。' },
+            { type: 'plain-terms', text: 'ローカルAIを動かすためにゲーミングGPUは必要ありません。これらのモデルはCPUと通常のRAMだけで動作します。小さめのモデル（1〜4Bパラメータ）は日常的なタスクに意外なほど有能で、会話にも十分な速度があります。' },
+          ],
           items: [
             '**GPU（RTX 3060 8GB）：** Mistral Small Q4で15トークン/秒。速度と品質のベストバランス。',
             '**GPU（RTX 2060 4GB）：** Mistral Small Q2（2ビット）で20トークン/秒。品質許容範囲、高速。',
@@ -2314,6 +2452,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '8 GB内存纯CPU电脑上，Phi-4-mini 3.8B Q4_K_M以15–25 tok/s处理编程和推理；4 GB内存上，Qwen3 1.7B Q4_K_M达25–40 tok/s。' },
+            { type: 'plain-terms', text: '运行本地AI不需要游戏GPU。这些模型完全在CPU和普通内存上运行。小型模型（1–4B参数）在日常任务上出乎意料地强大，速度足以支持真实对话。' },
+          ],
           items: [
             '**GPU（RTX 3060 8GB）：** Mistral Small Q4，15词元/秒。最佳速度/质量。',
             '**GPU（RTX 2060 4GB）：** Mistral Small Q2（2位）20词元/秒。质量可接受，速度快。',
@@ -2669,6 +2811,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '8 GB RAM CPU 전용 PC에서 Phi-4-mini 3.8B Q4_K_M이 코딩·추론에 15–25 tok/s로 동작; 4 GB RAM에서는 Qwen3 1.7B Q4_K_M이 25–40 tok/s 달성.' },
+            { type: 'plain-terms', text: '로컬 AI를 실행하는 데 게이밍 GPU가 필요하지 않습니다. 이 모델들은 CPU와 일반 RAM만으로 완전히 작동합니다. 소형 모델(1–4B 파라미터)은 일상적인 작업에 놀랍도록 유능하며, 실제 대화에 충분한 속도입니다.' },
+          ],
           items: [
             '**CPU 전용 (GPU 없음):** Phi-4 Mini 3.8B, 초당 5–15 토큰. 채팅 및 요약을 위한 최고의 CPU 옵션.',
             '**VRAM 4 GB:** TinyLlama 1.1B Q5, 초당 20–40 토큰. 빠른 응답, 간단한 작업.',

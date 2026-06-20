@@ -113,6 +113,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen 3.6 27B wins for coding on consumer hardware (77.2% SWE-bench, fits 24 GB at Q4); Llama 4 Scout leads on long context and multimodal (10M context, MoE, ~55 GB at Q4).' },
+            { type: 'plain-terms', text: 'These are three of the most popular open-source AI model families you can run locally. Qwen3 (by Alibaba) excels at coding, Llama 4 (by Meta) handles very long documents and images, and Mistral (French AI) offers efficient smaller models. All are free to download and run offline.' },
+          ],
           items: [
             '**Coding**: Qwen 3.6 27B leads SWE-bench (77.2% real-world, best dense model). For agentic coding: Mistral Devstral Small 24B. For IDE autocomplete: Mistral Codestral 22B.',
             '**General reasoning**: Llama 3.3 70B and Qwen3 72B remain nearly tied; Llama 3.x is stronger in English, Qwen in multilingual.',
@@ -566,6 +570,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen 3.6 27B gana en programación en hardware de consumo (77,2% SWE-bench, cabe en 24 GB en Q4); Llama 4 Scout lidera en contexto largo y multimodal (10M de contexto, MoE, ~55 GB en Q4).' },
+            { type: 'plain-terms', text: 'Estas son tres de las familias de modelos de IA de código abierto más populares para ejecutar localmente. Qwen3 (de Alibaba) destaca en programación, Llama 4 (de Meta) maneja documentos muy largos e imágenes, y Mistral (IA francesa) ofrece modelos compactos eficientes. Todos son gratuitos y se pueden ejecutar sin conexión.' },
+          ],
           items: [
             '**Programación**: Qwen 3.6 27B lidera SWE-bench (77,2% en el mundo real, mejor modelo denso). Para programación agentiva: Mistral Devstral Small 24B. Para autocompletado en IDE: Mistral Codestral 22B.',
             '**Razonamiento general**: Llama 3.3 70B y Qwen3 72B siguen casi empatados; Llama 3.x es más fuerte en inglés, Qwen en multilingüe.',
@@ -972,6 +980,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يفوز Qwen 3.6 27B في البرمجة على أجهزة المستهلكين (77.2% SWE-bench، يناسب 24 جيجابايت بضغط Q4)؛ ويتصدر Llama 4 Scout في السياق الطويل ومتعدد الوسائط (10M سياق، MoE، ~55 جيجابايت بضغط Q4).' },
+            { type: 'plain-terms', text: 'هذه ثلاث من أشهر عائلات نماذج الذكاء الاصطناعي مفتوحة المصدر التي يمكن تشغيلها محلياً. Qwen3 (من Alibaba) يتفوق في البرمجة، وLlama 4 (من Meta) يعالج المستندات الطويلة جداً والصور، وMistral (ذكاء اصطناعي فرنسي) يوفر نماذج صغيرة فعّالة. جميعها مجانية وتعمل دون إنترنت.' },
+          ],
           items: [
             '**البرمجة**: يتصدر Qwen 3.6 27B في SWE-bench (77.2% في العالم الحقيقي، أفضل نموذج كثيف). للبرمجة بالوكلاء: Mistral Devstral Small 24B. للإكمال التلقائي في IDE: Mistral Codestral 22B.',
             '**الاستدلال العام**: Llama 3.3 70B وQwen3 72B لا يزالان شبه متعادلين؛ Llama 3.x أقوى في الإنجليزية، وQwen في متعدد اللغات.',
@@ -1366,6 +1378,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen 3.6 27B vence na programação em hardware de consumidor (77,2% SWE-bench, cabe em 24 GB no Q4); Llama 4 Scout lidera em contexto longo e multimodal (10M de contexto, MoE, ~55 GB no Q4).' },
+            { type: 'plain-terms', text: 'Estas são três das famílias de modelos de IA open source mais populares para rodar localmente. Qwen3 (Alibaba) se destaca em programação, Llama 4 (Meta) lida com documentos muito longos e imagens, e Mistral (IA francesa) oferece modelos compactos eficientes. Todos são gratuitos e rodam offline.' },
+          ],
           items: [
             '**Qwen 3.6 27B é o melhor em geral em hardware de consumo**: 77,2% SWE-bench (melhor modelo denso), cabe em 24 GB a Q4.',
             '**Llama 4 Scout 17B (MoE)**: melhor para contexto longo (10M tokens) e multimodal — mas requer ~55 GB de VRAM a Q4, não cabe em uma GPU de consumo de 24 GB com quantizações normais.',
@@ -1443,6 +1459,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen 3.6 27B gewinnt beim Coding auf Consumer-Hardware (77,2 % SWE-bench, passt in 24 GB bei Q4); Llama 4 Scout führt bei langem Kontext und Multimodal (10M Kontext, MoE, ~55 GB bei Q4).' },
+            { type: 'plain-terms', text: 'Dies sind drei der beliebtesten Open-Source-KI-Modellfamilien für lokale Ausführung. Qwen3 (von Alibaba) glänzt beim Coding, Llama 4 (von Meta) verarbeitet sehr lange Dokumente und Bilder, und Mistral (französische KI) bietet effiziente kleinere Modelle. Alle sind kostenlos herunterladbar.' },
+          ],
           items: [
             '**Coding**: Qwen3 gewinnt bei jeder Größe -- 87% HumanEval bei 72B, 79% bei 32B, 72% bei 7B.',
             '**Allgemeines Reasoning**: Llama 3.3 70B und Qwen3 72B liegen fast gleichauf; Llama 3.x ist stärker in Englisch, Qwen in mehrsprachig.',
@@ -1752,6 +1772,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen 3.6 27B s\'impose pour le code sur hardware grand public (77,2 % SWE-bench, tient en 24 Go en Q4) ; Llama 4 Scout domine pour le contexte long et le multimodal (10M de tokens, MoE, ~55 Go en Q4).' },
+            { type: 'plain-terms', text: 'Ce sont trois des familles de modèles IA open source les plus populaires à exécuter localement. Qwen3 (Alibaba) excelle en codage, Llama 4 (Meta) gère de très longs documents et des images, et Mistral (IA française) propose des modèles compacts efficaces.' },
+          ],
           items: [
             '**Codage dense** : Qwen 3.6 27B gagne à 77.2% SWE-bench (meilleur modèle dense), 32B à 69%, 7B à 58%.',
             '**Codage agentic multi-fichiers** : Devstral Small 24B excelle (conçu pour éditions sur plusieurs fichiers). Llama 4 Scout compétitif.',
@@ -2041,6 +2065,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'コンシューマーハードウェアでのコーディングはQwen 3.6 27Bが優勝（SWE-bench 77.2%、Q4で24 GBに収まる）。長文コンテキストとマルチモーダルはLlama 4 Scout（コンテキスト10M、MoE、Q4で約55 GB）がリード。' },
+            { type: 'plain-terms', text: 'これらはローカルで動かせる最も人気のあるオープンソースAIモデルファミリーの3つです。Qwen3（Alibaba製）はコーディングが得意、Llama 4（Meta製）は非常に長い文書や画像を処理でき、Mistral（フランスのAI）は効率的な小型モデルを提供しています。すべて無料でダウンロード・オフライン実行が可能です。' },
+          ],
           items: [
             '**コーディング**：Qwen3はすべてのサイズで勝つ----72Bで87% HumanEval、32Bで79%、7Bで72%。',
             '**一般的推論**：Llama 3.3 70BとQwen3 72Bはほぼ同等；Llama 3.xは英語が強く、Qwenは多言語が強い。',
@@ -2321,6 +2349,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen 3.6 27B在消费级硬件编程方面胜出（SWE-bench 77.2%，Q4适合24 GB显存）；Llama 4 Scout在长上下文和多模态方面领先（上下文10M，MoE，Q4约55 GB）。' },
+            { type: 'plain-terms', text: '这是三个最受欢迎的可本地运行开源AI模型系列。Qwen3（阿里巴巴）擅长编程，Llama 4（Meta）擅长处理超长文档和图像，Mistral（法国AI）提供高效的小型模型。所有模型均可免费下载，离线运行。' },
+          ],
           items: [
             '**编码**：Qwen3在每个大小处获胜----72B处87% HumanEval、32B处79%、7B处72%。',
             '**一般推理**：Llama 3.3 70B和Qwen3 72B几乎相等；Llama 3.x在英文上更强，Qwen在多语言上更强。',
@@ -2621,6 +2653,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen 3.6 27B은 소비자용 하드웨어 코딩에서 우승(SWE-bench 77.2%, Q4에서 24 GB에 적합). Llama 4 Scout는 긴 컨텍스트와 멀티모달에서 선두(10M 컨텍스트, MoE, Q4에서 ~55 GB).' },
+            { type: 'plain-terms', text: '이것들은 로컬에서 실행할 수 있는 가장 인기 있는 오픈소스 AI 모델 패밀리 3개입니다. Qwen3(Alibaba)은 코딩에 탁월하고, Llama 4(Meta)는 매우 긴 문서와 이미지를 처리하며, Mistral(프랑스 AI)은 효율적인 소형 모델을 제공합니다. 모두 무료로 다운로드하여 오프라인으로 실행할 수 있습니다.' },
+          ],
           items: [
             '**코딩**: Qwen 3.6 27B가 SWE-bench에서 선두(77.2% 실세계, 최고 밀집 모델). 에이전틱 코딩: Mistral Devstral Small 24B. IDE 자동완성: Mistral Codestral 22B.',
             '**일반 추론**: Llama 3.3 70B와 Qwen3 72B는 거의 동등합니다. Llama 3.x는 영어에서, Qwen은 다국어에서 강세를 보입니다.',

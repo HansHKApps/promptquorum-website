@@ -80,6 +80,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Local LLM hardware is determined by VRAM: 7B models need 8 GB, 13B–14B need 12–16 GB, and 70B models need 35–48 GB — a used RTX 4060 8 GB (~$250) is the best entry-level GPU in 2026.' },
+            { type: 'plain-terms', text: 'VRAM is the dedicated memory on your graphics card. The bigger the AI model, the more VRAM it needs. Rule of thumb: divide the model\'s size in gigabytes by its compression level (Q4 = divide by 8) to estimate VRAM. More VRAM means bigger models and faster responses.' },
+          ],
           items: [
             '**VRAM math**: (Model size in GB) ÷ Quantization = VRAM needed. Example: 70B at Q4 = 70 ÷ 8 = 8.75 GB × parameters ≈ 39 GB total.',
             '**12 GB VRAM (RTX 4070 Ti)**: Best model: Llama 3.1 8B Q8 (~9 GB, 80 tok/sec). Also: Qwen3 8B (~8 GB, best multilingual + coding). Note: Llama 4 Scout (17B active / 109B total MoE) needs ~55 GB at Q4 and does NOT fit 12 GB.',
@@ -736,6 +740,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'El hardware para LLMs locales se determina por la VRAM: los modelos 7B necesitan 8 GB, los 13–14B necesitan 12–16 GB, y los 70B necesitan 35–48 GB — una RTX 4060 8 GB de segunda mano (~250 $) es la mejor GPU de entrada en 2026.' },
+            { type: 'plain-terms', text: 'La VRAM es la memoria dedicada de tu tarjeta gráfica. Cuanto mayor es el modelo de IA, más VRAM necesita. Regla general: divide el tamaño del modelo en gigabytes entre el nivel de compresión (Q4 = dividir entre 8) para estimar la VRAM necesaria.' },
+          ],
           items: [
             '**Cálculo de VRAM**: (Tamaño del modelo en GB) ÷ Cuantización = VRAM necesaria. Ejemplo: 70B en Q4 = 70 ÷ 8 = 8,75 GB × parámetros ≈ 39 GB en total.',
             '**12 GB de VRAM (RTX 4070 Ti)**: Mejor modelo: Llama 3.1 8B Q8 (~9 GB, 80 tok/seg). También: Qwen3 8B (~8 GB, mejor multilingüe + programación). Nota: Llama 4 Scout (17B activos / 109B totales MoE) necesita ~55 GB en Q4 y NO cabe en 12 GB.',
@@ -1392,6 +1400,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تُحدَّد متطلبات أجهزة نماذج اللغة المحلية بذاكرة VRAM: نماذج 7B تحتاج 8 جيجابايت، و13–14B تحتاج 12–16 جيجابايت، و70B تحتاج 35–48 جيجابايت — بطاقة RTX 4060 8 جيجابايت المستعملة (≈250 دولار) هي أفضل خيار للمبتدئين في 2026.' },
+            { type: 'plain-terms', text: 'VRAM هي الذاكرة المخصصة في بطاقة الرسومات. كلما كان نموذج الذكاء الاصطناعي أكبر، احتاج ذاكرة VRAM أكثر. القاعدة العامة: اقسم حجم النموذج بالجيجابايت على مستوى الضغط (Q4 = اقسم على 8) للحصول على تقدير لـ VRAM المطلوبة.' },
+          ],
           items: [
             '**حساب VRAM**: (حجم النموذج بالـ GB) ÷ التكميم = VRAM المطلوب. مثال: 70B عند Q4 = 70 ÷ 8 = 8.75 GB × المعاملات ≈ 39 GB إجمالًا.',
             '**12 GB VRAM (RTX 4070 Ti)**: أفضل نموذج: Llama 3.1 8B Q8 (~9 GB، 80 tok/sec). أيضًا: Qwen3 8B (~8 GB، أفضل متعدد اللغات + برمجة). ملاحظة: يحتاج Llama 4 Scout (17B نشط / 109B إجمالي MoE) إلى ~55 GB عند Q4 ولا يتسع في 12 GB.',
@@ -2048,6 +2060,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O hardware para LLMs locais é determinado pela VRAM: modelos 7B precisam de 8 GB, 13–14B precisam de 12–16 GB, e modelos 70B precisam de 35–48 GB — uma RTX 4060 8 GB usada (~US$250) é a melhor GPU de entrada em 2026.' },
+            { type: 'plain-terms', text: 'VRAM é a memória dedicada da sua placa de vídeo. Quanto maior o modelo de IA, mais VRAM ele precisa. Regra geral: divida o tamanho do modelo em gigabytes pelo nível de compressão (Q4 = dividir por 8) para estimar a VRAM necessária.' },
+          ],
           items: [
             '**Cálculo de VRAM**: (Tamanho do modelo em GB) ÷ Quantização = VRAM necessária. Exemplo: 70B em Q4 = 70 ÷ 8 = 8,75 GB × parâmetros ≈ 39 GB no total.',
             '**12 GB de VRAM (RTX 4070 Ti)**: Melhor modelo: Llama 3.1 8B Q8 (~9 GB, 80 tok/sec). Também: Qwen3 8B (~8 GB, melhor em multilíngue + codificação). Nota: o Llama 4 Scout (17B ativos / 109B total MoE) precisa de ~55 GB em Q4 e NÃO cabe em 12 GB.',
@@ -2704,6 +2720,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Die Hardware für lokale LLMs wird durch VRAM bestimmt: 7B-Modelle benötigen 8 GB, 13–14B benötigen 12–16 GB, und 70B-Modelle benötigen 35–48 GB — eine gebrauchte RTX 4060 8 GB (~250 $) ist die beste Einsteiger-GPU 2026.' },
+            { type: 'plain-terms', text: 'VRAM ist der dedizierte Speicher auf deiner Grafikkarte. Je größer das KI-Modell, desto mehr VRAM wird benötigt. Faustregel: Teile die Modellgröße in Gigabyte durch den Komprimierungsgrad (Q4 = durch 8 teilen), um den VRAM-Bedarf abzuschätzen.' },
+          ],
           items: [
             '**VRAM-Berechnung**: (Modellgroesse in GB) ÷ Quantisierung = benoetigter VRAM. Beispiel: 70B bei Q4 = 70 ÷ 8 = 8,75 GB × Parameter ≈ 39 GB insgesamt.',
             '**12 GB VRAM (RTX 4070 Ti)**: Bestes Modell: Llama 3.1 8B Q8 (~9 GB, 80 tok/sec). Auch: Qwen3 8B (~8 GB, bestes mehrsprachig + Coding). Hinweis: Llama 4 Scout (17B aktiv / 109B gesamt MoE) braucht ~55 GB bei Q4 und passt NICHT in 12 GB.',
@@ -3360,6 +3380,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Le matériel pour les LLM locaux est déterminé par la VRAM : les modèles 7B ont besoin de 8 Go, les 13–14B de 12–16 Go, et les 70B de 35–48 Go — une RTX 4060 8 Go d\'occasion (~250 $) est la meilleure GPU d\'entrée de gamme en 2026.' },
+            { type: 'plain-terms', text: 'La VRAM est la mémoire dédiée de votre carte graphique. Plus le modèle d\'IA est grand, plus il a besoin de VRAM. Règle empirique : divisez la taille du modèle en gigaoctets par le niveau de compression (Q4 = diviser par 8) pour estimer la VRAM nécessaire.' },
+          ],
           items: [
             '**Calcul de VRAM** : (taille du modele en Go) / quantification = VRAM necessaire. Exemple : 70B en Q4 = 70 / 8 = 8,75 Go x parametres ≈ 39 Go au total.',
             '**12 Go de VRAM (RTX 4070 Ti)** : meilleur modele : Llama 3.1 8B Q8 (~9 Go, 80 tok/sec). Egalement : Qwen3 8B (~8 Go, meilleur multilingue + codage). Note : Llama 4 Scout (17B actifs / 109B total MoE) necessite ~55 Go en Q4 et NE tient PAS dans 12 Go.',
@@ -4016,6 +4040,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ローカルLLMのハードウェアはVRAMで決まる：7Bモデルは8 GB、13〜14Bは12〜16 GB、70Bモデルは35〜48 GBが必要。中古のRTX 4060 8 GB（約250ドル）が2026年のエントリーGPUとして最適。' },
+            { type: 'plain-terms', text: 'VRAMはグラフィックカードの専用メモリです。AIモデルが大きいほど、より多くのVRAMが必要になります。目安：モデルのサイズ（GB）を圧縮レベルで割ると必要なVRAMが推定できます（Q4なら8で割る）。' },
+          ],
           items: [
             '**VRAM計算**：（モデルサイズ GB）÷ 量子化 = 必要なVRAM。例：70BをQ4で = 70 ÷ 8 = 8.75 GB × パラメータ ≈ 合計約39 GB。',
             '**12 GB VRAM（RTX 4070 Ti）**：ベストモデル：Llama 3.1 8B Q8（約9 GB、80 tok/sec）。また：Qwen3 8B（約8 GB、多言語＋コーディング最良）。注：Llama 4 Scout（17Bアクティブ／109B合計 MoE）はQ4で約55 GBを必要とし、12 GBには収まりません。',
@@ -4672,6 +4700,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '本地LLM的硬件取决于显存：7B模型需要8 GB，13–14B需要12–16 GB，70B模型需要35–48 GB——2026年入门级最佳GPU是二手RTX 4060 8 GB（约250美元）。' },
+            { type: 'plain-terms', text: '显存（VRAM）是显卡上的专用内存。AI模型越大，需要的显存越多。经验法则：将模型大小（GB）除以压缩级别（Q4 = 除以8）即可估算所需显存。显存越大，可运行的模型越大，速度也越快。' },
+          ],
           items: [
             '**显存计算**：（模型大小，单位GB）÷ 量化 = 所需显存。示例：70B 在 Q4 下 = 70 ÷ 8 = 每参数 8.75 GB × 参数 ≈ 总共 39 GB。',
             '**12 GB 显存（RTX 4070 Ti）**：最佳模型：Llama 3.1 8B Q8（~9 GB，80 tok/sec）。另外：Qwen3 8B（~8 GB，最佳多语言+编程）。注意：Llama 4 Scout（17B 激活 / 109B 总 MoE）在 Q4 下需要约 55 GB，无法装入 12 GB。',
@@ -5325,6 +5357,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '로컬 LLM 하드웨어는 VRAM으로 결정됩니다: 7B 모델은 8 GB, 13–14B는 12–16 GB, 70B 모델은 35–48 GB가 필요합니다. 2026년 입문용 최적 GPU는 중고 RTX 4060 8 GB(약 $250)입니다.' },
+            { type: 'plain-terms', text: 'VRAM은 그래픽 카드의 전용 메모리입니다. AI 모델이 클수록 더 많은 VRAM이 필요합니다. 경험 법칙: 모델 크기(GB)를 압축 레벨로 나누면 필요한 VRAM을 추정할 수 있습니다(Q4 = 8로 나누기).' },
+          ],
           items: [
             '**VRAM 계산**: (모델 크기 GB) ÷ 양자화 = 필요 VRAM. 예: 70B @ Q4 = 70 ÷ 8 = 8.75GB × 파라미터 ≈ 총 39GB.',
             '**12GB VRAM(RTX 4070 Ti)**: 추천 모델: Llama 3.1 8B Q8(~9GB, 80 tok/sec). 또한: Qwen3 8B(~8GB, 최고 다국어 + 코딩). 참고: Llama 4 Scout(17B 활성 / 109B 총 MoE)는 Q4에서 ~55GB가 필요하며 12GB에서는 실행 불가.',

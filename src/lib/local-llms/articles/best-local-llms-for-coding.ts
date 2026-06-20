@@ -117,6 +117,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'The best local coding LLMs in June 2026 are Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT) for maximum quality and Qwen 3.6 27B (77.2% SWE-bench) for balanced performance on consumer hardware.' },
+            { type: 'plain-terms', text: 'SWE-bench measures how well an AI fixes real GitHub bugs — higher is better. Kimi K2.6 is a large "mixture-of-experts" model that activates only 32B of its 1T parameters per query, giving top accuracy at manageable GPU cost.' },
+          ],
           items: [
             '**Best overall coding model**: Kimi K2.6 — 58.6 SWE-Bench Pro, MoE architecture (32B active / 1T total), Modified MIT license. Best dense model: Qwen 3.6 27B — 77.2% SWE-bench.',
             '**Best for 8 GB RAM**: Qwen3 8B — 5 GB VRAM used, best quality-speed tradeoff at this tier.',
@@ -638,6 +642,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los mejores LLM locales para programación en junio de 2026 son Kimi K2.6 (58,6 SWE-Bench Pro, MoE, licencia Modified MIT) para máxima calidad y Qwen 3.6 27B (77,2% SWE-bench) para rendimiento equilibrado en hardware de consumo.' },
+            { type: 'plain-terms', text: 'SWE-bench mide qué tan bien una IA corrige bugs reales de GitHub — cuanto más alto, mejor. Kimi K2.6 es un modelo de "mezcla de expertos" que activa solo 32B de sus 1T de parámetros por consulta.' },
+          ],
           items: [
             '**Mejor modelo de programación en general**: Kimi K2.6 — 58.6 en SWE-Bench Pro, arquitectura MoE (32B activos / 1T total), licencia MIT modificada. Mejor modelo denso: Qwen 3.6 27B — 77,2% SWE-bench.',
             '**Mejor para 8 GB de RAM**: Qwen3 8B — usa solo 5 GB de VRAM, mejor equilibrio calidad-velocidad en este nivel.',
@@ -1110,6 +1118,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أفضل نماذج LLM المحلية للبرمجة في يونيو 2026: Kimi K2.6 (58.6 SWE-Bench Pro، MoE، ترخيص Modified MIT) للجودة القصوى، وQwen 3.6 27B (77.2% SWE-bench) للأداء المتوازن على أجهزة المستهلكين.' },
+            { type: 'plain-terms', text: 'يقيس SWE-bench مدى قدرة الذكاء الاصطناعي على إصلاح أخطاء GitHub الحقيقية — كلما ارتفع، كان أفضل. Kimi K2.6 نموذج "خليط من الخبراء" يُفعِّل 32B فقط من أصل 1T من المعاملات في كل استعلام.' },
+          ],
           items: [
             '**أفضل نموذج برمجة عموماً**: Kimi K2.6 — 58.6 في SWE-Bench Pro، بنية MoE (32B نشطة / 1T إجمالاً)، رخصة MIT معدّلة. أفضل نموذج كثيف: Qwen 3.6 27B — 77.2% SWE-bench.',
             '**الأفضل لـ 8 GB من RAM**: Qwen3 8B — يستخدم 5 GB من VRAM فقط، أفضل توازن جودة-سرعة في هذه الفئة.',
@@ -1577,6 +1589,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os melhores LLMs locais para programação em junho de 2026 são Kimi K2.6 (58,6 SWE-Bench Pro, MoE, licença Modified MIT) para qualidade máxima e Qwen 3.6 27B (77,2% SWE-bench) para desempenho equilibrado em hardware consumidor.' },
+            { type: 'plain-terms', text: 'SWE-bench mede quão bem uma IA corrige bugs reais do GitHub — quanto maior, melhor. Kimi K2.6 é um modelo de "mistura de especialistas" que ativa apenas 32B de seus 1T de parâmetros por consulta.' },
+          ],
           items: [
             '**Melhor no geral (junho 2026):** Kimi K2.6 -- 58,6 SWE-Bench Pro, MoE (32B ativo / 1T total), licença MIT modificada. Para máquinas com 24+ GB VRAM.',
             '**Melhor modelo denso:** Qwen 3.6 27B -- 77,2% SWE-bench, 22 GB VRAM. Mais simples de rodar que modelos MoE.',
@@ -1715,6 +1731,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Die besten lokalen Coding-LLMs im Juni 2026 sind Kimi K2.6 (58,6 SWE-Bench Pro, MoE, Modified MIT) für maximale Qualität und Qwen 3.6 27B (77,2 % SWE-bench) für ausgewogene Leistung auf Consumer-Hardware.' },
+            { type: 'plain-terms', text: 'SWE-bench misst, wie gut eine KI echte GitHub-Bugs behebt — höher ist besser. Kimi K2.6 ist ein großes „Mixture-of-Experts"-Modell, das pro Anfrage nur 32B von 1T Parametern aktiviert.' },
+          ],
           items: [
             '**Bestes Programmiermodell insgesamt**: Kimi K2.6 — 58.6 SWE-Bench Pro, MoE-Architektur (32B aktiv / 1T insgesamt), Modified MIT-Lizenz. Bestes dichtes Modell: Qwen 3.6 27B — 77,2% SWE-bench.',
             '**Best für 8 GB RAM**: Qwen3 8B — nutzt nur 5 GB VRAM, bestes Qualität-Geschwindigkeit-Verhältnis in dieser Klasse.',
@@ -2132,6 +2152,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Les meilleurs LLM locaux pour le code en juin 2026 sont Kimi K2.6 (58,6 SWE-Bench Pro, MoE, licence Modified MIT) pour la qualité maximale et Qwen 3.6 27B (77,2 % SWE-bench) pour les performances équilibrées.' },
+            { type: 'plain-terms', text: 'SWE-bench mesure la capacité d\'une IA à corriger de vrais bugs GitHub — plus le score est élevé, mieux c\'est. Kimi K2.6 est un modèle « mixture-of-experts » qui n\'active que 32B de ses 1T de paramètres par requête.' },
+          ],
           items: [
             '**Meilleur modèle de programmation global** : Kimi K2.6 — 58.6 SWE-Bench Pro, MoE (32B actif / 1T total), licence MIT modifiée. Meilleur modèle dense : Qwen 3.6 27B — 77,2% SWE-bench.',
             '**Meilleur pour 8 GB RAM** : Qwen3 8B — 72% HumanEval, s\'exécute à 15-25 jetons/sec sur CPU.',
@@ -2535,6 +2559,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年6月のベストなローカルコーディングLLMは、最高品質のKimi K2.6（SWE-Bench Pro 58.6、MoE、Modified MITライセンス）と、コンシューマーハードウェアでバランスの良いQwen 3.6 27B（SWE-bench 77.2%）。' },
+            { type: 'plain-terms', text: 'SWE-benchは、AIが実際のGitHubバグをどれだけ修正できるかを測定するスコアです。高いほど良い。Kimi K2.6はMixture-of-Expertsモデルで、クエリごとに1Tパラメータのうち32Bだけを使用します。' },
+          ],
           items: [
             '**最高のコーディングモデル**：Kimi K2.6――58.6 SWE-Bench Pro、MoE（32B active / 1T total）、Modified MITライセンス。最高の密集モデル：Qwen 3.6 27B――77.2% SWE-bench',
             '**8 GB RAMに最適**：Qwen3 8B――72% HumanEval、CPU上で15～25トークン/秒で動作',
@@ -2878,6 +2906,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年6月最佳本地编程LLM：Kimi K2.6（SWE-Bench Pro 58.6、MoE、Modified MIT许可）质量最高；Qwen 3.6 27B（SWE-bench 77.2%）在消费级硬件上性能均衡。' },
+            { type: 'plain-terms', text: 'SWE-bench衡量AI修复真实GitHub漏洞的能力，分数越高越好。Kimi K2.6是混合专家模型，每次查询只激活1T参数中的32B，在较高精度的同时降低了GPU成本。' },
+          ],
           items: [
             '**最佳编码模型**：Kimi K2.6——58.6 SWE-Bench Pro，MoE（32B active / 1T total），修改版MIT许可证。最佳密集模型：Qwen 3.6 27B——77.2% SWE-bench',
             '**8 GB RAM最优**：Qwen3 8B——72% HumanEval，CPU上15-25 token/秒',
@@ -3239,6 +3271,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026년 6월 최고의 로컬 코딩 LLM: 최대 품질을 위한 Kimi K2.6(SWE-Bench Pro 58.6, MoE, Modified MIT 라이선스)과 소비자용 하드웨어에서 균형 잡힌 성능의 Qwen 3.6 27B(SWE-bench 77.2%).' },
+            { type: 'plain-terms', text: 'SWE-bench는 AI가 실제 GitHub 버그를 얼마나 잘 수정하는지 측정합니다 — 높을수록 좋습니다. Kimi K2.6은 쿼리당 1T 파라미터 중 32B만 활성화하는 전문가 혼합 모델입니다.' },
+          ],
           items: [
             '**전체 최고 코딩 모델**: Kimi K2.6 — SWE-Bench Pro 58.6점, MoE 아키텍처 (32B 활성 / 1T 전체), Modified MIT 라이선스. 최고의 밀집형 모델: Qwen 3.6 27B — SWE-bench 77.2%.',
             '**8 GB RAM 최적**: Qwen3 8B — VRAM 5 GB 사용, 이 등급 최고의 품질-속도 균형.',
