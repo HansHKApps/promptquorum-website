@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Developers and writers learning structured prompting frameworks',
     parentArticle: '/prompt-engineering/co-star-framework',
-    siblingBites: ['best-llm-right-now'],
+    siblingBites: ['best-llm-right-now', 'ai-model-knowledge-cutoff-dates'],
     is_living_page: false,
     quickAnswerTop: {
       en: {

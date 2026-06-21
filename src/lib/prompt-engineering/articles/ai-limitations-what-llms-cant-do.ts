@@ -363,6 +363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — how LLM limitations create security risks in agentic and tool-use architectures',
             '[How LLMs Actually Work](/prompt-engineering/how-llms-actually-work) — the transformer architecture, tokenization, and RLHF that produce these limitations',
             '[Self-Consistency Prompting](/prompt-engineering/self-consistency-prompting) — the technique that partially addresses the self-verification and reasoning gaps',
+            '[Smarter Home Automations with a Local LLM](/smart-home/ai-automations-local-llm) — understand which LLM limitations matter most when automating home-control tasks, and how to design prompts around them',
           ],
         },
         faq: {
@@ -744,6 +745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) — Wie LLM-Einschränkungen Sicherheitsrisiken in Agenten- und Tool-Use-Architekturen schaffen',
             '[Wie LLMs wirklich funktionieren](/de/prompt-engineering/how-llms-actually-work) — Die Transformer-Architektur, Tokenisierung und RLHF, die diese Grenzen erzeugen',
             '[Self-Consistency-Prompting](/de/prompt-engineering/self-consistency-prompting) — Verifikationstechnik, die teilweise die Selbstverifikations- und Schlussfolgerungslücken anspricht',
+            '[Intelligentere Heimautomatisierung mit einem lokalen LLM](/de/smart-home/ai-automations-local-llm) — welche LLM-Einschränkungen bei der Heimautomatisierung am wichtigsten sind und wie Prompts um sie herum gestaltet werden',
           ],
         },
         faq: {
@@ -947,6 +949,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Alucinaciones de IA — Por qué la IA inventa cosas](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — análisis profundo de la limitación 2',
             '[Context Windows explicados — Por qué la IA olvida](/es/prompt-engineering/context-windows-explained-why-ai-forgets) — desglose detallado de los límites de tokens',
             '[Cómo funcionan realmente los LLMs](/es/prompt-engineering/how-llms-actually-work) — la arquitectura transformer, la tokenización y el RLHF que generan estos límites',
+            '[Automatizaciones del hogar más inteligentes con un LLM local](/es/smart-home/ai-automations-local-llm) — qué limitaciones de los LLMs importan más al automatizar tareas de control del hogar y cómo diseñar prompts en torno a ellas',
           ],
         },
         faq: {
@@ -1151,6 +1154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[هلوسات الذكاء الاصطناعي — لماذا تخترع الذكاء الاصطناعي الأشياء](/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — تحليل عميق للقيد الثاني',
             '[نوافذ السياق موضَّحة — لماذا تنسى الذكاء الاصطناعي](/ar/prompt-engineering/context-windows-explained-why-ai-forgets) — شرح تفصيلي لقيود الرموز',
             '[كيف تعمل النماذج اللغوية الكبيرة فعلًا](/ar/prompt-engineering/how-llms-actually-work) — معمارية المحوِّل والترميز وRLHF التي تُولِّد هذه القيود',
+            '[أتمتة أذكى للمنزل مع نموذج LLM محلي](/ar/smart-home/ai-automations-local-llm) — أي قيود LLM تهمّ أكثر عند أتمتة مهام التحكم المنزلي وكيفية تصميم prompts حولها',
           ],
         },
         faq: {
@@ -1352,6 +1356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Alucinações de IA — Por que a IA inventa coisas](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — análise profunda da limitação 2',
             '[Janelas de Contexto explicadas — Por que a IA esquece](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) — detalhamento detalhado dos limites de tokens',
             '[Como os LLMs realmente funcionam](/pt/prompt-engineering/how-llms-actually-work) — a arquitetura transformer, a tokenização e o RLHF que geram esses limites',
+            '[Automações domésticas mais inteligentes com um LLM local](/pt/smart-home/ai-automations-local-llm) — quais limitações dos LLMs são mais importantes ao automatizar tarefas de controle doméstico e como projetar prompts ao redor delas',
           ],
         },
         faq: {

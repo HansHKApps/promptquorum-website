@@ -302,6 +302,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         },
       ],
+      relatedBites: {
+        id: 'related-articles',
+        title: 'Related Guides',
+        items: [
+          '[Best LLM Right Now](/prompt-bites/best-llm-right-now) — compare current top models by cutoff freshness',
+          '[Can You Run Qwen3 on Ollama?](/prompt-bites/can-you-run-qwen3-on-ollama) — Qwen3 local deployment and its knowledge cutoff context',
+          '[Ollama Latest Version](/prompt-bites/ollama-latest-version) — track which model versions are available locally',
+          '[Local LLM Model Updates 2026](/local-llms/local-llm-model-updates-2026) — every major open-weight release and how it shifts the cutoff landscape',
+        ],
+      },
     },
   },
   de: {
@@ -321,6 +331,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Cloud-Modelle (ChatGPT, Gemini, Grok) kompensieren dies teilweise durch eingebaute Websuche',
           'Lokale LLMs (Llama, Qwen, Gemma, Phi, Mistral) haben KEINE Suchfunktion — ihr Cutoff ist eine absolute Wissensgrenze',
           'Mehrere große Modelle — Mistral Large, Llama 4, Qwen3 — haben keine öffentlichen Cutoff-Daten bekannt gegeben',
+        ],
+      },
+      relatedBites: {
+        id: 'related-articles',
+        title: 'Verwandte Anleitungen',
+        items: [
+          '[Bestes LLM gerade jetzt](/de/prompt-bites/best-llm-right-now) — aktuelle Top-Modelle nach Aktualität des Wissens-Cutoffs vergleichen',
+          '[Kann man Qwen3 mit Ollama ausführen?](/de/prompt-bites/can-you-run-qwen3-on-ollama) — Qwen3 lokale Bereitstellung und Wissens-Cutoff-Kontext',
+          '[Ollama Neueste Version](/de/prompt-bites/ollama-latest-version) — verfolgen, welche Modellversionen lokal verfügbar sind',
+          '[Lokale LLM-Modell-Updates 2026](/de/local-llms/local-llm-model-updates-2026) — alle wichtigen Open-Weight-Releases und deren Einfluss auf den Cutoff-Zeitraum',
         ],
       },
     },
@@ -344,6 +364,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Plusieurs grands modèles — Mistral Large, Llama 4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
         ],
       },
+      relatedBites: {
+        id: 'related-articles',
+        title: 'Guides associés',
+        items: [
+          '[Meilleur LLM en ce moment](/fr/prompt-bites/best-llm-right-now) — comparer les meilleurs modèles actuels par fraîcheur de coupure',
+          "[Peut-on exécuter Qwen3 sur Ollama ?](/fr/prompt-bites/can-you-run-qwen3-on-ollama) — déploiement local de Qwen3 et contexte de coupure",
+          '[Ollama dernière version](/fr/prompt-bites/ollama-latest-version) — suivre quelles versions de modèles sont disponibles localement',
+          '[Mises à jour des modèles LLM locaux 2026](/fr/local-llms/local-llm-model-updates-2026) — chaque version majeure open-weight et son impact sur la coupure',
+        ],
+      },
     },
   },
   ja: {
@@ -363,6 +393,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'クラウドモデル（ChatGPT、Gemini、Grok）は組み込みのウェブ検索で部分的に補完',
           'ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限',
           'Mistral Large、Llama 4、Qwen3など主要モデルのカットオフ日は非公開',
+        ],
+      },
+      relatedBites: {
+        id: 'related-articles',
+        title: '関連ガイド',
+        items: [
+          '[今すぐ最良のLLM](/ja/prompt-bites/best-llm-right-now) — カットオフの新しさで現在のトップモデルを比較',
+          '[Qwen3はOllamaで動かせる？](/ja/prompt-bites/can-you-run-qwen3-on-ollama) — Qwen3のローカル展開と知識カットオフのコンテキスト',
+          '[Ollamaの最新バージョン](/ja/prompt-bites/ollama-latest-version) — ローカルで利用できるモデルバージョンを追跡',
+          '[ローカルLLMモデル更新2026](/ja/local-llms/local-llm-model-updates-2026) — すべての主要なオープンウェイトリリースとカットオフへの影響',
         ],
       },
     },
@@ -386,6 +426,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mistral Large、Llama 4、Qwen3等多个主要模型未公开具体截止日期',
         ],
       },
+      relatedBites: {
+        id: 'related-articles',
+        title: '相关指南',
+        items: [
+          '[目前最佳LLM](/zh/prompt-bites/best-llm-right-now) — 按知识截止日期的新鲜度比较当前顶级模型',
+          '[Qwen3可以在Ollama上运行吗？](/zh/prompt-bites/can-you-run-qwen3-on-ollama) — Qwen3本地部署及其知识截止日期背景',
+          '[Ollama最新版本](/zh/prompt-bites/ollama-latest-version) — 追踪本地可用的模型版本',
+          '[本地LLM模型更新2026](/zh/local-llms/local-llm-model-updates-2026) — 所有主要开放权重发布及其对截止日期格局的影响',
+        ],
+      },
     },
   },
   ko: {
@@ -405,6 +455,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '클라우드 모델(ChatGPT, Gemini, Grok)은 내장된 웹 검색으로 이를 부분적으로 보완합니다',
           '로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없습니다 — 컷오프는 절대적인 지식의 한계입니다',
           'Mistral Large, Llama 4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
+        ],
+      },
+      relatedBites: {
+        id: 'related-articles',
+        title: '관련 가이드',
+        items: [
+          '[지금 최고의 LLM](/ko/prompt-bites/best-llm-right-now) — 지식 마감일 기준으로 현재 최고 모델 비교',
+          '[Qwen3을 Ollama에서 실행할 수 있나요?](/ko/prompt-bites/can-you-run-qwen3-on-ollama) — Qwen3 로컬 배포 및 지식 마감일 맥락',
+          '[Ollama 최신 버전](/ko/prompt-bites/ollama-latest-version) — 로컬에서 사용 가능한 모델 버전 추적',
+          '[로컬 LLM 모델 업데이트 2026](/ko/local-llms/local-llm-model-updates-2026) — 모든 주요 오픈 웨이트 출시와 마감일 변화',
         ],
       },
     },
@@ -428,6 +488,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Vários modelos principais — incluindo Mistral Large, Llama 4 e Qwen3 — não divulgaram datas de corte exatas',
         ],
       },
+      relatedBites: {
+        id: 'related-articles',
+        title: 'Guias relacionados',
+        items: [
+          '[Melhor LLM agora](/pt/prompt-bites/best-llm-right-now) — comparar os melhores modelos atuais pela data de corte',
+          '[O Qwen3 roda no Ollama?](/pt/prompt-bites/can-you-run-qwen3-on-ollama) — implantação local do Qwen3 e contexto de corte de conhecimento',
+          '[Última versão do Ollama](/pt/prompt-bites/ollama-latest-version) — acompanhar quais versões de modelos estão disponíveis localmente',
+          '[Atualizações de modelos LLM locais 2026](/pt/local-llms/local-llm-model-updates-2026) — todos os principais lançamentos open-weight e como afetam o panorama dos cortes',
+        ],
+      },
     },
   },
   ar: {
@@ -447,6 +517,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'نماذج السحابة (ChatGPT وGemini وGrok) تعوّض جزئيًا ببحث ويب مدمج',
           'نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد معرفي مطلق',
           'عدة نماذج رئيسية — بما فيها Mistral Large وLlama 4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
+        ],
+      },
+      relatedBites: {
+        id: 'related-articles',
+        title: 'أدلة ذات صلة',
+        items: [
+          '[أفضل LLM الآن](/ar/prompt-bites/best-llm-right-now) — مقارنة أفضل النماذج الحالية بحسب حداثة تاريخ الانقطاع',
+          '[هل يمكن تشغيل Qwen3 على Ollama؟](/ar/prompt-bites/can-you-run-qwen3-on-ollama) — نشر Qwen3 محليًا وسياق تاريخ انقطاع المعرفة',
+          '[أحدث إصدار من Ollama](/ar/prompt-bites/ollama-latest-version) — تتبع إصدارات النماذج المتاحة محليًا',
+          '[تحديثات نماذج LLM المحلية 2026](/ar/local-llms/local-llm-model-updates-2026) — جميع الإصدارات الرئيسية مفتوحة الأوزان وتأثيرها على مشهد الانقطاع',
         ],
       },
     },

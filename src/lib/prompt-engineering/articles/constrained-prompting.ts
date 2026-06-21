@@ -317,6 +317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — Providing examples is a form of implicit constraint.',
             '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Validate constrained prompts on multiple LLMs.',
             '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Safety constraints defend against adversarial input.',
+            '[Smarter Home Automations with a Local LLM](/smart-home/ai-automations-local-llm) — constrained prompting in action: define exactly what your LLM can and cannot do when controlling home devices',
           ],
         },
         faqSection: {
@@ -642,6 +643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Wenn Sie Reasoning-Schritte wünschen, nicht nur geconstraintetete Ausgabe.',
             '[KI-Halluzinationen: Wie man sie stoppt](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Constraints, die Halluzinations-Risiken reduzieren.',
             '[Grundlagen der Prompt-Engineering-Optimierung](/de/prompt-engineering/fundamentals-of-prompt-optimization) — Optimierungstechniken, die Constrained Prompting erweitern.',
+            '[Intelligentere Heimautomatisierung mit einem lokalen LLM](/de/smart-home/ai-automations-local-llm) — Constrained Prompting in der Praxis: definieren Sie genau, was Ihr LLM beim Steuern von Heimgeräten darf und nicht darf',
           ],
         },
         faqSection: {
@@ -977,6 +979,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Few-shot prompting](/es/prompt-engineering/zero-shot-vs-few-shot) — Proporcionar ejemplos es una forma de constraint implícita.',
             '[Cómo probar prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Valida prompts con constraints en múltiples LLMs.',
             '[Prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Las constraints de seguridad defienden contra entradas adversariales.',
+            '[Automatizaciones del hogar más inteligentes con un LLM local](/es/smart-home/ai-automations-local-llm) — constrained prompting en acción: define exactamente qué puede y no puede hacer tu LLM al controlar dispositivos del hogar',
           ],
         },
         faqSection: {
@@ -1305,6 +1308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[موجّهات القليل من الأمثلة](/ar/prompt-engineering/zero-shot-vs-few-shot) — تقديم الأمثلة هو شكل من أشكال القيود الضمنية.',
             '[كيفية اختبار الموجّهات عبر النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — التحقق من صحة الموجّهات المقيّدة على نماذج لغة متعددة.',
             '[حقن الموجّهات والأمان](/ar/prompt-engineering/prompt-injection-and-security) — قيود الأمان تحمي من المدخلات المعادية.',
+            '[أتمتة أذكى للمنزل مع نموذج LLM محلي](/ar/smart-home/ai-automations-local-llm) — الـ constrained prompting في التطبيق: حدد بدقة ما يمكن للنموذج فعله وما لا يمكنه عند التحكم في أجهزة المنزل',
           ],
         },
         faqSection: {
@@ -1631,6 +1635,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Few-shot prompting](/pt/prompt-engineering/zero-shot-vs-few-shot) — Fornecer exemplos é uma forma de restrição implícita.',
             '[Como testar prompts entre modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Valide prompts com restrições em múltiplos LLMs.',
             '[Injeção de prompt e segurança](/pt/prompt-engineering/prompt-injection-and-security) — Restrições de segurança defendem contra entradas adversariais.',
+            '[Automações domésticas mais inteligentes com um LLM local](/pt/smart-home/ai-automations-local-llm) — constrained prompting na prática: defina exatamente o que o LLM pode e não pode fazer ao controlar dispositivos domésticos',
           ],
         },
         faqSection: {
@@ -1936,7 +1941,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Fine-Tuning pour la Conformité de Sortie — Alternatives au prompting',
         '[Validation d\'Outputs LLM : Schémas et Tests — Cadre complet de validation',
         '[PromptQuorum : Dispatch Multi-Modèle](/fr/features/prompt-engineering/multi-model-prompt-testing-workflows) — Comment tester les contraintes à l\'échelle',
-        'API Conversationnelles avec LLM — Cas d\'usage réel : structures contrôlées dans les chatbots'
+        'API Conversationnelles avec LLM — Cas d\'usage réel : structures contrôlées dans les chatbots',
+        '[Automatisations domestiques plus intelligentes avec un LLM local](/fr/smart-home/ai-automations-local-llm) — le constrained prompting en action : définir exactement ce que votre LLM peut et ne peut pas faire lors du contrôle des appareils domestiques'
       ]
     },
     faqSection: {
@@ -2215,7 +2221,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '構造化出力向けファインチューニング — プロンプティングの代替手段',
         '[LLMアウトプット検証：スキーマとテスト — 総合検証フレームワーク',
         '[PromptQuorum：マルチモデルディスパッチ](/ja/features/prompt-engineering/multi-model-prompt-testing-workflows) — 大規模制約テスト',
-        '会話型API with LLM — 実例：チャットボットの制御出力'
+        '会話型API with LLM — 実例：チャットボットの制御出力',
+        '[ローカルLLMでスマートホームの自動化をよりスマートに](/ja/smart-home/ai-automations-local-llm) — 制約プロンプティングの実践：ホームデバイスを制御する際にLLMができることとできないことを明確に定義する'
       ]
     },
     faqSection: {
@@ -2708,7 +2715,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '结构化输出微调 — 提示工程的替代方案',
         '[LLM输出验证：架构和测试 — 完整验证框架',
         '[PromptQuorum：多模型分发](/zh/features/prompt-engineering/multi-model-prompt-testing-workflows) — 大规模测试约束',
-        '与LLM的会话API — 实例：聊天机器人的控制输出'
+        '与LLM的会话API — 实例：聊天机器人的控制输出',
+        '[用本地LLM实现更智能的家居自动化](/zh/smart-home/ai-automations-local-llm) — 约束提示词实践：精确定义LLM在控制家居设备时可以和不可以做什么'
       ]
     },
     faqSection: {
@@ -3276,6 +3284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 예시 제공은 암묵적 제약의 한 형태입니다.',
           '[여러 모델에서 프롬프트를 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — 여러 LLM에서 제약 프롬프트 검증.',
           '[프롬프트 인젝션과 보안](/prompt-engineering/prompt-injection-and-security) — 안전 제약이 적대적 입력을 방어합니다.',
+          '[로컬 LLM으로 더 스마트한 홈 자동화](/ko/smart-home/ai-automations-local-llm) — 제약 프롬프팅 실제 적용: 홈 기기를 제어할 때 LLM이 할 수 있는 것과 할 수 없는 것을 정확하게 정의',
         ],
       },
       faqSection: {

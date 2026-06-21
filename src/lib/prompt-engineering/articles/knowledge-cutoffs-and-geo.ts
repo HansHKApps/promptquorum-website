@@ -389,6 +389,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[RAG Explained: Retrieval-Augmented Generation](/prompt-engineering/rag-explained) — RAG is the primary solution to local LLM knowledge cutoff limits',
+            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — knowledge cutoff staleness is a leading cause of hallucinations',
+            "[AI Limitations: What LLMs Can't Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — structural constraints including frozen knowledge and the absence of live search",
+            '[AI Model Knowledge Cutoff Dates 2026: Cheat Sheet](/prompt-bites/ai-model-knowledge-cutoff-dates) — scannable reference table for all major cloud and local models',
+            '[Local LLM Model Updates 2026](/local-llms/local-llm-model-updates-2026) — track every major open-weight release and how it shifts the cutoff landscape',
+          ],
+        },
     },
   },
   ko: {
@@ -777,6 +787,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      relatedReading: {
+          title: '관련 읽기',
+          items: [
+            '[RAG 설명: 검색 증강 생성](/ko/prompt-engineering/rag-explained) — RAG는 로컬 LLM 지식 마감일 제한의 주요 해결책입니다',
+            '[AI 환각: AI가 잘못된 정보를 생성하는 이유](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 지식 마감일 노후화는 환각의 주요 원인입니다',
+            '[AI 한계: LLM이 할 수 없는 것](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — 동결된 지식과 실시간 검색 부재를 포함한 구조적 제약',
+            '[AI 모델 지식 마감일 2026: 치트 시트](/ko/prompt-bites/ai-model-knowledge-cutoff-dates) — 모든 주요 클라우드 및 로컬 모델의 빠른 참조 표',
+            '[로컬 LLM 모델 업데이트 2026](/ko/local-llms/local-llm-model-updates-2026) — 모든 주요 오픈 웨이트 출시와 마감일 변화 추적',
+          ],
+        },
     },
   },
   pt: {
@@ -1165,6 +1185,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[RAG Explicado: Geração com Recuperação Aumentada](/pt/prompt-engineering/rag-explained) — RAG é a principal solução para os limites de corte de conhecimento do LLM local',
+            '[Alucinações de IA: Por que a IA inventa coisas](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — o envelhecimento por corte de conhecimento é uma causa líder de alucinações',
+            '[Limitações da IA: O que os LLMs não conseguem fazer](/pt/prompt-engineering/ai-limitations-what-llms-cant-do) — restrições estruturais incluindo conhecimento congelado e ausência de pesquisa ao vivo',
+            '[Datas de corte de conhecimento de IA 2026: Folha de referência](/pt/prompt-bites/ai-model-knowledge-cutoff-dates) — tabela de referência para todos os principais modelos cloud e locais',
+            '[Atualizações de modelos LLM locais 2026](/pt/local-llms/local-llm-model-updates-2026) — acompanhe cada grande lançamento open-weight e como afeta o panorama de corte',
+          ],
+        },
     },
   },
   ar: {
@@ -1553,6 +1583,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      relatedReading: {
+          title: 'قراءة ذات صلة',
+          items: [
+            '[RAG موضّح: التوليد المعزّز بالاسترجاع](/ar/prompt-engineering/rag-explained) — RAG هو الحل الرئيسي لحدود قطع معرفة LLM المحلي',
+            '[هلوسة الذكاء الاصطناعي: لماذا يخترع الذكاء الاصطناعي معلومات](/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — قِدَم انقطاع المعرفة هو سبب رئيسي للهلوسة',
+            '[قيود الذكاء الاصطناعي: ما لا تستطيع نماذج LLM فعله](/ar/prompt-engineering/ai-limitations-what-llms-cant-do) — القيود الهيكلية بما فيها المعرفة المجمّدة وغياب البحث المباشر',
+            '[تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي 2026: ورقة مرجعية](/ar/prompt-bites/ai-model-knowledge-cutoff-dates) — جدول مرجعي قابل للمسح لجميع النماذج الرئيسية السحابية والمحلية',
+            '[تحديثات نماذج LLM المحلية 2026](/ar/local-llms/local-llm-model-updates-2026) — تتبع كل إصدار رئيسي مفتوح الأوزان وتأثيره على مشهد الانقطاع',
+          ],
+        },
     },
   },
 }

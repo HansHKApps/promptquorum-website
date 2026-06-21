@@ -2,6 +2,59 @@
 
 Tracked issues that are non-blocking but should be addressed when touching related code.
 
+## PE rename-orphans — alias-covered, no action needed (June 2026)
+
+The V2 inventory flagged 33 prompt-engineering articles as "orphans" because inbound links point at their **old** (pre-rename) URL slugs. These are **not broken**. `src/lib/prompt-engineering/slugs.ts` is an alias table: every old slug maps to the article's current internal key, so old URLs resolve to the correct article with HTTP 200.
+
+**Verification (2026-06-21):**
+- All 33 alias keys are present in `articles-barrel.ts` (code-verified)
+- 6 live spot-checks all returned 200: `how-prompt-engineering-evolved`, `ai-hallucinations-why-ai-makes-things-up`, `gpt-claude-or-gemini-how-to-pick-the-right-model`, `best-prompt-engineering-tools-2026`, `prompt-engineering-for-content-teams`, `prompt-engineering-setup-small-teams`
+
+**Decision:** No inbound-link backport (2,004 instances) needed or wanted. Alias handles it.
+
+**For future auditors:** These 33 old slugs will always appear as "orphans" in any tool that checks URLs against the slug map without understanding the alias pattern. They are **expected false-positives**. Do not re-file them as bugs.
+
+Complete alias table (old slug → article key):
+
+| Old slug (URL) | Article key |
+|---|---|
+| `how-prompt-engineering-evolved` | `prompt-engineering-history` |
+| `5-building-blocks-every-prompt-needs` | `prompt-building-blocks` |
+| `ai-hallucinations-why-ai-makes-things-up` | `ai-hallucinations-how-to-stop` |
+| `faster-ai-answers-how-to-prompt-for-speed` | `prompt-for-speed` |
+| `temperature-and-top-p-control-ai-creativity` | `temperature-and-top-p` |
+| `context-windows-explained-why-ai-forgets` | `context-windows-explained` |
+| `beyond-text-how-to-prompt-with-images` | `prompt-with-images` |
+| `tokens-costs-limits-economics-of-ai-prompting` | `tokens-costs-limits` |
+| `system-prompt-vs-user-prompt-whats-the-difference` | `system-prompt-vs-user-prompt` |
+| `gpt-claude-or-gemini-how-to-pick-the-right-model` | `gpt-claude-gemini-which-model` |
+| `which-prompt-framework-should-you-use` | `which-framework-to-use` |
+| `the-single-step-prompt-method` | `single-prompt-method` |
+| `googles-prompting-guide` | `google-prompting-guide` |
+| `build-your-own-prompt-framework` | `build-your-own-framework` |
+| `tree-of-thought-and-react` | `tree-of-thought-react` |
+| `structured-output-and-json-mode` | `structured-output-json-mode` |
+| `best-prompt-engineering-tools-2026` | `best-pe-tools-2026` |
+| `best-prompt-optimization-tools-for-teams` | `best-prompt-optimization-tools-teams` |
+| `best-prompt-testing-evaluation-tools` | `best-prompt-testing-tools` |
+| `braintrust-vs-prompthub-vs-vellum-vs-promptfoo` | `braintrust-vs-prompthub-vs-vellum` |
+| `prompt-engineering-vs-rag-decision` | `prompt-engineering-vs-rag` |
+| `prompt-version-control-workflows` | `prompt-version-control` |
+| `prompt-governance-in-production` | `prompt-governance-production` |
+| `prompt-security-tools-injection-testing` | `prompt-security-tools` |
+| `prompt-audit-and-regression-risk` | `prompt-audit-regression` |
+| `best-tools-structured-output-json` | `best-tools-structured-output` |
+| `multi-model-prompt-testing-workflows` | `multi-model-prompt-testing` |
+| `prompt-library-management-for-teams` | `prompt-library-team-management` |
+| `prompt-engineering-for-content-teams` | `pe-for-content-teams` |
+| `prompt-engineering-for-developers-workflow` | `pe-for-developers-workflow` |
+| `prompt-engineering-for-support-operations` | `pe-for-support-operations` |
+| `prompt-framework-selection-for-teams` | `prompt-framework-for-teams` |
+| `prompt-engineering-setup-small-teams` | `pe-setup-small-teams` |
+
+---
+
+
 | Item | Notes | Severity |
 |------|-------|----------|
 | `.next/types/validator.ts` TypeScript warning | Pre-existing, non-blocking. Appears in pre-commit hook type-check but does not block `npm run build`. Investigate when touching build config or upgrading Next.js. | Low |
