@@ -1739,6 +1739,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Comment les limitations des LLM créent des risques de sécurité dans les architectures d\'agents et d\'utilisation d\'outils',
             '[Comment les LLMs fonctionnent vraiment](/fr/prompt-engineering/how-llms-actually-work) — L\'architecture transformer, la tokenisation et le RLHF qui produisent ces limites',
             '[Prompting par cohérence automatique](/fr/prompt-engineering/self-consistency-prompting) — Technique qui aborde partiellement les lacunes d\'auto-vérification et de raisonnement',
+            '[Automatisations domestiques plus intelligentes avec un LLM local](/fr/smart-home/ai-automations-local-llm) — quelles limitations des LLMs comptent le plus lors de l\'automatisation des tâches domotiques et comment concevoir des prompts autour d\'elles',
           ],
         },
         faq: {
@@ -2120,6 +2121,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '[プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — LLM制限がエージェントおよびツール使用アーキテクチャでセキュリティリスクを生成する方法',
         '[LLMが実際にどのように機能するか](/ja/prompt-engineering/how-llms-actually-work) — これらの制限が存在する理由を説明するトランスフォーマーアーキテクチャ、トークン化、RLHF',
         '[自己一貫性プロンプティング](/ja/prompt-engineering/self-consistency-prompting) — 自己検証および推論ギャップに部分的に対処するテクニック',
+        '[ローカルLLMでスマートホームの自動化をよりスマートに](/ja/smart-home/ai-automations-local-llm) — ホーム制御タスクを自動化する際に最も重要なLLMの制限とそれらを回避するプロンプト設計',
       ],
     },
     faq: {
@@ -2501,6 +2503,7 @@ zh: {
             '[提示词注入和安全性](/zh/prompt-engineering/prompt-injection-and-security) — LLM 限制如何在代理和工具使用架构中产生安全风险',
             '[大语言模型如何实际工作](/zh/prompt-engineering/how-llms-actually-work) — 解释这些限制存在的 transformer 架构、标记化和 RLHF',
             '[自我一致性提示](/zh/prompt-engineering/self-consistency-prompting) — 在一定程度上解决自我验证和推理差距的技术',
+            '[用本地LLM实现更智能的家居自动化](/zh/smart-home/ai-automations-local-llm) — 在自动化家居控制任务时哪些LLM限制最重要，以及如何围绕这些限制设计提示词',
           ],
         },
         faq: {
@@ -2698,6 +2701,7 @@ zh: {
           '[AI 환각 — AI가 내용을 꽈먹는 이유](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 한계 2에 대한 심층 분석',
           '[컨텍스트 윈도우 설명 — AI가 잊어버리는 이유](/ko/prompt-engineering/context-windows-explained-why-ai-forgets) — 토큰 제한 상세 분석',
           '[LLM이 실제로 작동하는 방식](/ko/prompt-engineering/how-llms-actually-work) — 이러한 한계를 만드는 트랜스포머 아키텍체, 토크나이제이션, RLHF',
+          '[로컬 LLM으로 더 스마트한 홈 자동화](/ko/smart-home/ai-automations-local-llm) — 홈 제어 작업을 자동화할 때 가장 중요한 LLM 한계와 이를 중심으로 프롬프트를 설계하는 방법',
         ],
       },
       faq: {
