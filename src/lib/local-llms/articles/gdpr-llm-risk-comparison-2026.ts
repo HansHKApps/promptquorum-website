@@ -213,6 +213,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[DeepSeek Local Setup for Data Privacy 2026](/local-llms/deepseek-local-china-data-privacy-2026) -- DeepSeek local setup for data privacy',
+          '[Qwen GDPR Local Setup Guide 2026](/local-llms/qwen-local-gdpr-setup-guide-2026) -- Qwen GDPR local setup guide',
+          '[Enterprise Compliance with Local LLMs](/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[EU GDPR Cloud GPU Options 2026](/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR cloud GPU options',
+          '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- local LLM security & privacy checklist',
+        ],
+      },
     },
     snippetBlocks: [
       {
@@ -379,6 +390,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Es más caro ejecutar un LLM on-prem que usar APIs en la nube?',
             a: 'Por adelantado: sí. El hardware (RTX 4070 Ti) cuesta ~$500–1000. Mensualmente: no. La electricidad on-prem es de ~$5–10/mes. Las API en la nube cuestan $0,001–0,01 por 1K tokens, lo que para un uso intensivo (>1M tokens/mes) supera los $100. El punto de equilibrio suele ser de 6–12 meses para uso medio-alto. Si ejecutas <100K tokens/mes, las API en la nube son más baratas. Si ejecutas >1M tokens/mes, el on-prem es más barato. El cumplimiento RGPD es un argumento empresarial adicional: el on-prem elimina el costo legal de SCC/TIA.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Configuración local DeepSeek para privacidad de datos 2026](/es/local-llms/deepseek-local-china-data-privacy-2026) -- configuración local DeepSeek para privacidad de datos',
+          '[Guía de configuración local Qwen GDPR 2026](/es/local-llms/qwen-local-gdpr-setup-guide-2026) -- guía de configuración local Qwen GDPR',
+          '[Cumplimiento empresarial con LLMs locales](/es/local-llms/enterprise-compliance-local-llms) -- cumplimiento empresarial con LLMs locales',
+          '[Opciones de GPU en la nube GDPR de la UE 2026](/es/local-llms/eu-cloud-gpu-gdpr-2026) -- opciones de GPU en la nube GDPR de la UE',
+          '[Lista de seguridad y privacidad para LLMs locales](/es/local-llms/local-llm-security-privacy-checklist) -- lista de seguridad y privacidad para LLMs locales',
         ],
       },
     },
@@ -562,6 +584,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[إعداد DeepSeek المحلي لخصوصية البيانات 2026](/ar/local-llms/deepseek-local-china-data-privacy-2026) -- إعداد DeepSeek المحلي لخصوصية البيانات',
+          '[دليل إعداد Qwen المحلي GDPR 2026](/ar/local-llms/qwen-local-gdpr-setup-guide-2026) -- دليل إعداد Qwen المحلي GDPR',
+          '[امتثال المؤسسات مع نماذج LLM المحلية](/ar/local-llms/enterprise-compliance-local-llms) -- امتثال المؤسسات مع نماذج LLM المحلية',
+          '[خيارات GPU السحابي GDPR الأوروبي 2026](/ar/local-llms/eu-cloud-gpu-gdpr-2026) -- خيارات GPU السحابي GDPR الأوروبي',
+          '[قائمة تحقق الأمان والخصوصية لنماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) -- قائمة تحقق الأمان والخصوصية',
+        ],
+      },
     },
     snippetBlocks: [
       {
@@ -655,6 +688,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[DeepSeek lokal für Datenschutz 2026](/de/local-llms/deepseek-local-china-data-privacy-2026) -- DeepSeek lokal für Datenschutz',
+          '[Qwen GDPR lokales Setup Guide 2026](/de/local-llms/qwen-local-gdpr-setup-guide-2026) -- Qwen GDPR lokales Setup Guide',
+          '[Enterprise Compliance mit lokalen LLMs](/de/local-llms/enterprise-compliance-local-llms) -- Enterprise Compliance mit lokalen LLMs',
+          '[EU GDPR Cloud-GPU-Optionen 2026](/de/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR Cloud-GPU-Optionen',
+          '[Lokale LLM Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist) -- Lokale LLM Sicherheits- und Datenschutz-Checkliste',
+        ],
+      },
     },
   },
   fr: {
@@ -726,6 +770,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Que se passe-t-il si j\'enregistre mes prompts localement à des fins d\'audit ?',
             a: 'L\'enregistrement est encouragé pour la conformité Article 30. Enregistrez : nom du modèle, horodatage de la session, nombre de jetons d\'entrée, nombre de jetons de sortie et un hash SHA-256 du prompt et de la réponse. N\'enregistrez PAS le texte brut des prompts contenant des données personnelles. L\'enregistrement basé sur le hash satisfait l\'article 30 (registres des traitements) et l\'article 32 (sécurité).',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures recommandées',
+        items: [
+          '[Configuration locale DeepSeek pour la confidentialité 2026](/fr/local-llms/deepseek-local-china-data-privacy-2026) -- configuration locale DeepSeek pour la confidentialité',
+          '[Guide configuration locale Qwen GDPR 2026](/fr/local-llms/qwen-local-gdpr-setup-guide-2026) -- guide configuration locale Qwen GDPR',
+          '[Conformité entreprise avec les LLM locaux](/fr/local-llms/enterprise-compliance-local-llms) -- conformité entreprise avec les LLM locaux',
+          '[Options GPU cloud GDPR UE 2026](/fr/local-llms/eu-cloud-gpu-gdpr-2026) -- options GPU cloud GDPR UE',
+          '[Liste de contrôle sécurité LLM local](/fr/local-llms/local-llm-security-privacy-checklist) -- liste de contrôle sécurité LLM local',
         ],
       },
     },
@@ -801,6 +856,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[データプライバシーのためのDeepSeekローカル設定2026](/ja/local-llms/deepseek-local-china-data-privacy-2026) -- データプライバシーのためのDeepSeekローカル設定',
+          '[Qwen GDPR ローカルセットアップガイド 2026](/ja/local-llms/qwen-local-gdpr-setup-guide-2026) -- Qwen GDPR ローカルセットアップガイド',
+          '[ローカルLLMによる企業コンプライアンス](/ja/local-llms/enterprise-compliance-local-llms) -- ローカルLLMによる企業コンプライアンス',
+          '[EU GDPR クラウドGPUオプション 2026](/ja/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR クラウドGPUオプション',
+          '[ローカルLLMセキュリティ&プライバシーチェックリスト](/ja/local-llms/local-llm-security-privacy-checklist) -- ローカルLLMセキュリティ&プライバシーチェックリスト',
+        ],
+      },
     },
   },
   zh: {
@@ -872,6 +938,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '如果我在本地记录提示以供审计之用会怎样？',
             a: '建议记录以符合第30条。记录：模型名称、会话时间戳、输入令牌数、输出令牌数和提示与响应的SHA-256哈希。不要记录包含个人数据的提示的原始文本。基于哈希的日志记录满足第30条（处理记录）和第32条（安全性），同时不违反第5条第(1)项e（存储限制）。',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[DeepSeek本地设置与数据隐私2026](/zh/local-llms/deepseek-local-china-data-privacy-2026) -- DeepSeek本地设置与数据隐私',
+          '[Qwen GDPR本地设置指南2026](/zh/local-llms/qwen-local-gdpr-setup-guide-2026) -- Qwen GDPR本地设置指南',
+          '[本地LLM企业合规](/zh/local-llms/enterprise-compliance-local-llms) -- 本地LLM企业合规',
+          '[欧盟GDPR云GPU选项2026](/zh/local-llms/eu-cloud-gpu-gdpr-2026) -- 欧盟GDPR云GPU选项',
+          '[本地LLM安全和隐私检查清单](/zh/local-llms/local-llm-security-privacy-checklist) -- 本地LLM安全和隐私检查清单',
         ],
       },
     },
@@ -1045,6 +1122,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Rodar um LLM on-premise é mais caro que usar APIs em nuvem?',
             a: 'No investimento inicial: sim. O hardware (RTX 4070 Ti) custa ~R$ 4.500–6.500 no varejo brasileiro. Mensalmente: não. A eletricidade on-premise é de ~R$ 50–90/mês. As APIs em nuvem custam US$ 0,001–0,01 por 1K tokens (cobradas em dólar), o que para uso intenso (>1M tokens/mês) ultrapassa US$ 100. O ponto de equilíbrio costuma ser de 6–12 meses para uso médio a alto. Se você roda <100K tokens/mês, as APIs em nuvem são mais baratas. Se roda >1M tokens/mês, o on-premise é mais barato. A conformidade com GDPR/LGPD é um argumento de negócio adicional: o on-premise elimina o custo jurídico de SCC/TIA.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura Relacionada',
+        items: [
+          '[Configuração local DeepSeek para privacidade de dados 2026](/pt/local-llms/deepseek-local-china-data-privacy-2026) -- configuração local DeepSeek para privacidade de dados',
+          '[Guia de configuração local Qwen GDPR 2026](/pt/local-llms/qwen-local-gdpr-setup-guide-2026) -- guia de configuração local Qwen GDPR',
+          '[Conformidade empresarial com LLMs locais](/pt/local-llms/enterprise-compliance-local-llms) -- conformidade empresarial com LLMs locais',
+          '[Opções de GPU na nuvem GDPR da UE 2026](/pt/local-llms/eu-cloud-gpu-gdpr-2026) -- opções de GPU na nuvem GDPR da UE',
+          '[Lista de verificação de segurança e privacidade de LLM local](/pt/local-llms/local-llm-security-privacy-checklist) -- lista de verificação de segurança e privacidade de LLM local',
         ],
       },
     },
@@ -1239,6 +1327,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '온프레미스 LLM 실행이 클라우드 API보다 비용이 많이 듭니까?',
             a: '초기 비용: 그렇습니다. 하드웨어(RTX 4070 Ti) 비용은 약 $500–1000입니다. 월별 비용: 아닙니다. 온프레미스 전기 비용은 월 약 $5–10입니다. 클라우드 API는 1K 토큰당 $0.001–0.01이며, 대량 사용(월 >1M 토큰)의 경우 $100를 초과합니다. 손익분기점은 일반적으로 중간-대량 사용의 경우 6–12개월입니다. 월 <100K 토큰을 실행하는 경우 클라우드 API가 더 저렴합니다. 월 >1M 토큰을 실행하는 경우 온프레미스가 더 저렴합니다. GDPR 컴플라이언스는 추가적인 비즈니스 케이스입니다: 온프레미스는 SCC/TIA 법적 비용이 없습니다.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[데이터 프라이버시를 위한 DeepSeek 로컬 설정 2026](/ko/local-llms/deepseek-local-china-data-privacy-2026) -- 데이터 프라이버시를 위한 DeepSeek 로컬 설정',
+          '[Qwen GDPR 로컬 설정 가이드 2026](/ko/local-llms/qwen-local-gdpr-setup-guide-2026) -- Qwen GDPR 로컬 설정 가이드',
+          '[로컬 LLM을 이용한 기업 컴플라이언스](/ko/local-llms/enterprise-compliance-local-llms) -- 로컬 LLM을 이용한 기업 컴플라이언스',
+          '[EU GDPR 클라우드 GPU 옵션 2026](/ko/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR 클라우드 GPU 옵션',
+          '[로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) -- 로컬 LLM 보안 및 프라이버시 체크리스트',
         ],
       },
     },

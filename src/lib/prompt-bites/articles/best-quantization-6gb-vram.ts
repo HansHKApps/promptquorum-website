@@ -135,6 +135,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
+        ],
+      },
     },
   },
   de: {
@@ -214,6 +223,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Was passiert, wenn mein Modell 6 GB VRAM überschreitet?',
             a: 'Ollama lagert die überschüssigen Schichten in den CPU-RAM aus (mithilfe von llama.cpp Layer-Offloading). Das verursacht einen drastischen Geschwindigkeitseinbruch — von ~25 tok/s GPU-only auf ~3–5 tok/s mit teilweisem CPU-Offload. Wenn Sie "n_gpu_layers"-Warnungen sehen oder die Tokens-pro-Sekunde unter 5 fallen, ist Ihr Modell bei der gewählten Quantisierung zu groß für Ihren VRAM.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/de/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/de/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/de/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/de/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
         ],
       },
     },
@@ -297,6 +315,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/fr/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/fr/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/fr/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/fr/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
+        ],
+      },
     },
   },
   ja: {
@@ -376,6 +403,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'モデルが 6 GB VRAM を超えるとどうなりますか？',
             a: 'Ollama は超過したレイヤーを CPU RAM にオフロードします（llama.cpp のレイヤーオフロードを使用）。これにより速度が劇的に低下します — GPU のみの約 25 tok/s から、部分的な CPU オフロードで 3〜5 tok/s に。"n_gpu_layers" の警告が表示される場合や 1 秒あたりのトークン数が 5 を下回る場合、選択した量子化でのモデルが VRAM に対して大きすぎます。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/ja/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/ja/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/ja/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/ja/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
         ],
       },
     },
@@ -459,6 +495,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/zh/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/zh/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/zh/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/zh/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
+        ],
+      },
     },
   },
   pt: {
@@ -538,6 +583,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'O que acontece se meu modelo ultrapassar 6 GB de VRAM?',
             a: 'O Ollama descarrega as camadas excedentes para a RAM da CPU (usando o offloading de camadas do llama.cpp). Isso causa uma queda dramática de velocidade — de ~25 tok/s apenas com GPU para ~3–5 tok/s com offload parcial na CPU. Se você vir avisos de "n_gpu_layers" ou tokens por segundo abaixo de 5, seu modelo é grande demais para sua VRAM na quantização selecionada.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/pt/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/pt/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/pt/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/pt/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
         ],
       },
     },
@@ -621,6 +675,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/es/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/es/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/es/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/es/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
+        ],
+      },
     },
   },
   ar: {
@@ -700,6 +763,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'ماذا يحدث إذا تجاوز نموذجي حد 6 GB VRAM؟',
             a: 'Ollama يفرّغ الطبقات الزائدة إلى RAM لـCPU (باستخدام تفريغ الطبقات في llama.cpp). هذا يسبب انخفاضاً حاداً في السرعة — من ~25 رمز/ثانية على GPU فقط إلى ~3–5 رمز/ثانية مع التفريغ الجزئي على CPU. إذا رأيت تحذيرات "n_gpu_layers" أو انخفضت الرموز/ثانية إلى أقل من 5، نموذجك كبير جداً لـVRAM لديك مع التكميم المحدد.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Best Local LLM for 6 GB VRAM](/ar/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/ar/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/ar/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/ar/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
         ],
       },
     },
@@ -813,6 +885,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Ollama에서 컨텍스트 크기 설정하는 방법](/ko/prompt-bites/ollama-128k-context-models)',
           'GGUF란 무엇인가: 로컬 LLM 파일 형식 설명',
           '[RTX 3060에서 LLM 실행 가이드](/ko/prompt-bites/best-ollama-models-rtx-3060-12gb)',
+          '[Best Local LLM for 6 GB VRAM](/ko/prompt-bites/best-local-llm-6gb-vram) -- 6GB VRAM guide',
+          '[Best Ollama Models for 4 GB VRAM](/ko/prompt-bites/best-ollama-models-4gb-vram) -- 4GB VRAM models',
+          '[Q4_K_M vs Q8_0: Which Quantization to Use?](/ko/prompt-bites/q4-k-m-vs-q8-0) -- quantization comparison',
+          '[What Is Q4_K_M Quantization?](/ko/prompt-bites/what-is-q4-k-m-quantization) -- quantization explainer',
         ],
       },
     },

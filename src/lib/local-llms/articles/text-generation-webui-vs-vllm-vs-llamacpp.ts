@@ -234,6 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- vLLM and Ollama both expose OpenAI-compatible APIs.',
             '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) -- Integrate your inference engine with your editor.',
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) -- Frontends are UI layers on top of inference engines.',
+            '[Xinference: Run Llama, Qwen & ChatGLM Locally](/local-llms/xinference-llama-qwen-chatglm-mistral) -- Deploy open-source models via Xinference.',
           ],
         },
         sources: {
@@ -594,6 +595,7 @@ schema: {
             '[API local LLM compatible con OpenAI](/es/local-llms/local-llm-openai-compatible-api) -- vLLM y Ollama exponen ambos APIs compatibles con OpenAI.',
             '[LLMs locales con VS Code y Cursor](/es/local-llms/local-llms-with-vscode-cursor) -- Integra tu motor de inferencia con tu editor.',
             '[Los mejores frontends de LLM locales](/es/local-llms/best-local-llm-frontends) -- Los frontends son capas de UI sobre los motores de inferencia.',
+            '[Xinference: Llama, Qwen y ChatGLM localmente](/es/local-llms/xinference-llama-qwen-chatglm-mistral) -- Despliega modelos open-source con Xinference.',
           ],
         },
         sources: {
@@ -954,6 +956,7 @@ schema: {
             '[واجهة API لـ LLM محلي متوافقة مع OpenAI](/ar/local-llms/local-llm-openai-compatible-api) -- يعرض vLLM وOllama كلاهما واجهات API متوافقة مع OpenAI.',
             '[نماذج LLM المحلية مع VS Code وCursor](/ar/local-llms/local-llms-with-vscode-cursor) -- ادمج محرك الاستدلال مع محررك.',
             '[أفضل واجهات LLM المحلية الأمامية](/ar/local-llms/best-local-llm-frontends) -- الواجهات الأمامية طبقات واجهة مستخدم فوق محركات الاستدلال.',
+            '[Xinference: تشغيل Llama وQwen وChatGLM محلياً](/ar/local-llms/xinference-llama-qwen-chatglm-mistral) -- نشر النماذج مفتوحة المصدر عبر Xinference.',
           ],
         },
         sources: {
@@ -1355,6 +1358,7 @@ schema: {
           '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) -- vLLM und Ollama stellen beide OpenAI-kompatible APIs bereit.',
           '[Lokale LLMs mit VS Code und Cursor](/de/local-llms/local-llms-with-vscode-cursor) -- Integrieren Sie Ihre Inference-Engine mit Ihrem Editor.',
           '[Beste lokale LLM Frontends](/de/local-llms/best-local-llm-frontends) -- Frontends sind UI-Layer auf Inference-Engines.',
+          '[Xinference: Llama, Qwen & ChatGLM Lokal Ausführen](/de/local-llms/xinference-llama-qwen-chatglm-mistral) -- Open-Source-Modelle mit Xinference bereitstellen.',
         ],
       },
       sources: {
@@ -1615,6 +1619,7 @@ schema: {
             '[API locale LLM compatible OpenAI](/fr/local-llms/local-llm-openai-compatible-api) -- vLLM et Ollama exposent tous deux des APIs compatibles OpenAI.',
             '[LLMs locaux avec VS Code et Cursor](/fr/local-llms/local-llms-with-vscode-cursor) -- Intégrez votre moteur d\'inférence avec votre éditeur.',
             '[Meilleures interfaces LLM locales](/fr/local-llms/best-local-llm-frontends) -- Les interfaces sont des couches UI au-dessus des moteurs d\'inférence.',
+            '[Xinference: Exécuter Llama, Qwen et ChatGLM en Local](/fr/local-llms/xinference-llama-qwen-chatglm-mistral) -- Déployez des modèles open-source avec Xinference.',
           ],
         },
         sources: {
@@ -1956,6 +1961,7 @@ schema: {
             '[ローカル LLM OpenAI 互換 API](/ja/local-llms/local-llm-openai-compatible-api) -- vLLM と Ollama は両者が OpenAI 互換 API を露出。',
             '[VS Code と Cursor のローカル LLM](/ja/local-llms/local-llms-with-vscode-cursor) -- 推論エンジンをエディタと統合。',
             '[最良ローカル LLM フロントエンド](/ja/local-llms/best-local-llm-frontends) -- フロントエンドは推論エンジンの UI レイヤー。',
+            '[Xinference: Llama、Qwen、ChatGLMをローカルで実行する](/ja/local-llms/xinference-llama-qwen-chatglm-mistral) -- XinferenceでオープンソースモデルをDeployする。',
           ],
         },
         sources: {
@@ -2297,6 +2303,7 @@ schema: {
             '[本地 LLM OpenAI 兼容 API](/zh/local-llms/local-llm-openai-compatible-api) -- vLLM 和 Ollama 都暴露 OpenAI 兼容 API。',
             '[VS Code 和 Cursor 的本地 LLM](/zh/local-llms/local-llms-with-vscode-cursor) -- 将推理引擎与编辑器集成。',
             '[最佳本地 LLM 前端](/zh/local-llms/best-local-llm-frontends) -- 前端是推理引擎之上的 UI 层。',
+            '[Xinference: 本地运行Llama、Qwen和ChatGLM](/zh/local-llms/xinference-llama-qwen-chatglm-mistral) -- 通過Xinference部署开源模型。',
           ],
         },
         sources: {
@@ -2657,6 +2664,7 @@ schema: {
             '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- vLLM과 Ollama 모두 OpenAI 호환 API를 제공합니다.',
             '[VS Code 및 Cursor와 로컬 LLM 사용](/local-llms/local-llms-with-vscode-cursor) -- 추론 엔진을 편집기와 통합하십시오.',
             '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- 프론트엔드는 추론 엔진 위의 UI 계층입니다.',
+            '[Xinference: Llama, Qwen 및 ChatGLM 로컬 실행](/ko/local-llms/xinference-llama-qwen-chatglm-mistral) -- Xinference로 오픈소스 모델을 배포하세요.',
           ],
         },
         sources: {

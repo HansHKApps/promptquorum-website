@@ -193,6 +193,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Revisit framework choice when task requirements change.** If your summarization task shifts from \'extracting facts\' to \'synthesizing three perspectives,\' you might move from a direct summary (faster) to Chaining (more nuanced). Framework choice is iterative, not permanent.',
           ],
         },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[CO-STAR Prompt Framework](/prompt-engineering/co-star-framework)',
+            '[RISEN Framework](/prompt-engineering/risen-framework)',
+            '[RTF Framework: Role, Task, Format](/prompt-engineering/rtf-framework)',
+            '[SPECS Framework](/prompt-engineering/specs-framework)',
+            '[Build Your Own Prompt Framework](/prompt-engineering/build-your-own-framework)',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Frequently Asked Questions',
@@ -1710,6 +1720,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**복잡한 작업의 경우 프레임워크를 계층화하십시오: Persona로 어조를 설정하고, SPECS로 제약 조건을 정의하고, CoT로 엣지 케이스를 추론하십시오.** 하나의 프레임워크만 고수할 필요가 없습니다. 작업의 복잡성에 맞게 조합하십시오.',
             '**라이브러리의 각 프롬프트에 프레임워크를 선택한 이유를 문서화하십시오.** 예: \'버그 분석에는 CoT를 사용합니다. 모델이 오류를 파악하기 전에 실행을 추적해야 하기 때문입니다. 코드 생성에는 SPECS를 사용합니다. 결정론적이고 제약 조건을 준수하는 출력이 필요하기 때문입니다.\'',
             '**작업 요구사항이 변경되면 프레임워크 선택을 재검토하십시오.** 요약 작업이 \'사실 추출\'에서 \'세 가지 관점 종합\'으로 전환되면 직접 요약(더 빠름)에서 Chaining(더 세밀함)으로 이동할 수 있습니다. 프레임워크 선택은 반복적이며 영구적이지 않습니다.',
+          ],
+        },
+        relatedReading: {
+          title: '관련 자료',
+          items: [
+            '[CO-STAR 프롬프트 프레임워크](/ko/prompt-engineering/co-star-framework)',
+            '[RISEN 프레임워크](/ko/prompt-engineering/risen-framework)',
+            '[RTF 프레임워크: 역할, 과제, 형식](/ko/prompt-engineering/rtf-framework)',
+            '[SPECS 프레임워크](/ko/prompt-engineering/specs-framework)',
+            '[나만의 프롬프트 프레임워크 만들기](/ko/prompt-engineering/build-your-own-framework)',
           ],
         },
         faqSection: {

@@ -176,6 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) -- Cost, compliance, and control analysis.',
             '[How to Double Local LLM Speed](/local-llms/double-local-llm-speed) -- Production optimization techniques.',
             '[Best Small Local LLMs Under 4 GB](/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B models for edge and mobile.',
+            '[MRAM and In-Memory Computing: The Next Leap for On-Device AI?](/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM and in-memory computing for AI',
           ],
         },
         sources: {
@@ -447,6 +448,7 @@ schema: {
             '[Por qué las empresas usan LLMs locales](/es/local-llms/why-enterprises-use-local-llms) -- Análisis de costo, cumplimiento y control.',
             '[Cómo duplicar la velocidad de tu LLM local](/es/local-llms/double-local-llm-speed) -- Técnicas de optimización para producción.',
             '[Mejores LLMs locales pequeños bajo 4 GB](/es/prompt-bites/best-ollama-models-4gb-vram) -- Modelos 1–3B para edge y móvil.',
+            '[MRAM e Informática en Memoria: ¿El próximo salto para IA en dispositivo?](/es/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM e informática en memoria para IA',
           ],
         },
         sources: {
@@ -724,6 +726,7 @@ schema: {
             '[لماذا تستخدم الشركات نماذج LLM المحلية](/ar/local-llms/why-enterprises-use-local-llms) -- تحليل التكلفة والامتثال والتحكم.',
             '[كيفية مضاعفة سرعة نموذج LLM المحلي لديك](/ar/local-llms/double-local-llm-speed) -- تقنيات التحسين للإنتاج.',
             '[أفضل نماذج LLM المحلية الصغيرة أقل من 4 GB](/ar/prompt-bites/best-ollama-models-4gb-vram) -- نماذج 1–3B للحافة والمحمول.',
+            '[MRAM والحوسبة داخل الذاكرة: الخطوة التالية لذكاء اصطناعي على الجهاز؟](/ar/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM والحوسبة داخل الذاكرة للذكاء الاصطناعي',
           ],
         },
         sources: {
@@ -1120,6 +1123,7 @@ schema: {
             '[Warum Unternehmen lokale LLMs nutzen](/de/local-llms/why-enterprises-use-local-llms) -- Kosten-, Compliance- und Kontrollanalyse.',
             '[Lokale LLM-Geschwindigkeit verdoppeln](/de/local-llms/double-local-llm-speed) -- Produktions-Optimierungstechniken.',
             '[Beste kleine lokale LLMs unter 4 GB](/de/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B-Modelle für Edge und Mobile.',
+            '[MRAM und In-Memory-Computing: Der nächste Sprung für On-Device-KI?](/de/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM und In-Memory-Computing für KI',
           ],
         },
         sources: {
@@ -1407,6 +1411,7 @@ schema: {
             '[Pourquoi les entreprises utilisent les LLM locaux](/fr/local-llms/why-enterprises-use-local-llms) -- Analyse des coûts, conformité et contrôle.',
             '[Comment doubler la vitesse des LLM locaux](/fr/local-llms/double-local-llm-speed) -- Techniques d\'optimisation de la production.',
             '[Meilleurs petits LLM locaux sous 4 GB](/fr/prompt-bites/best-ollama-models-4gb-vram) -- Modèles 1–3B pour les appareils et mobiles.',
+            '[MRAM et informatique en mémoire: le prochain bond pour l\'IA sur appareil?](/fr/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM et informatique en mémoire pour IA',
           ],
         },
         sources: {
@@ -1684,6 +1689,7 @@ schema: {
             '[エンタープライズなぜローカルLLM](/ja/local-llms/why-enterprises-use-local-llms) -- コスト・コンプライアンス・コントロール分析',
             '[ローカルLLM速度2倍化](/ja/local-llms/double-local-llm-speed) -- 本番最適化技法',
             '[ベスト小型ローカルLLM 4GB以下](/ja/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B型エッジ・モバイル',
+            '[MRAMとメモリ内コンピューティング：オンデバイスAIの次のステップ?](/ja/local-llms/mram-in-memory-computing-local-ai-2026) -- AIのためのMRAMとメモリ内コンピューティング',
           ],
         },
         sources: {
@@ -1961,6 +1967,7 @@ schema: {
             '[企业为何使用本地LLM](/zh/local-llms/why-enterprises-use-local-llms) -- 成本、合规和控制分析',
             '[本地LLM速度加倍](/zh/local-llms/double-local-llm-speed) -- 生产优化技术',
             '[4GB以下最佳小型本地LLM](/zh/prompt-bites/best-ollama-models-4gb-vram) -- 1–3B边缘和移动模型',
+            '[MRAM与内存计算：片上AI的下一个飞跃？](/zh/local-llms/mram-in-memory-computing-local-ai-2026) -- AI的MRAM与内存计算',
           ],
         },
         sources: {
@@ -2238,6 +2245,7 @@ schema: {
             '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms) -- 비용, 규정 준수, 통제 분석.',
             '[로컬 LLM 속도를 두 배로 높이는 방법](/local-llms/double-local-llm-speed) -- 프로덕션 최적화 기법.',
             '[4 GB 미만 최고의 소형 로컬 LLM](/prompt-bites/best-ollama-models-4gb-vram) -- 엣지 및 모바일을 위한 1–3B 모델.',
+            '[MRAM과 인메모리 컴퓨팅: 온디바이스 AI의 다음 도약?](/ko/local-llms/mram-in-memory-computing-local-ai-2026) -- AI를 위한 MRAM과 인메모리 컴퓨팅',
           ],
         },
         sources: {

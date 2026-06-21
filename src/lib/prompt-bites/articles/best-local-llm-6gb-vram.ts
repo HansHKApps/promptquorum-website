@@ -133,6 +133,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Can You Run RAG on 2 GB RAM?](/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   de: {
@@ -195,6 +201,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Kann ich 6 GB VRAM auch für Bildgenerierung nutzen?',
             a: 'Nicht gut. Stable Diffusion XL benötigt mindestens 8 GB VRAM. Wenn Sie sowohl LLMs als auch Bildgenerierung auf einer 6-GB-Karte betreiben, müssen Sie ständig wechseln — bleiben Sie bei einer Aufgabe oder upgraden Sie auf 8 GB.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Kann man RAG mit 2 GB RAM ausführen?](/de/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },
@@ -261,6 +273,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Peut-on faire tourner RAG avec 2 Go de RAM ?](/fr/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   ja: {
@@ -325,6 +343,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[2 GBのRAMでRAGは実行できますか？](/ja/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   zh: {
@@ -387,6 +411,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '6 GB显存也能用于图像生成吗？',
             a: '效果不佳。Stable Diffusion XL至少需要8 GB显存。在6 GB显卡上同时运行LLM和图像生成需要频繁切换——建议专注于单一工作负载，或升级到8 GB。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[能在2 GB内存上运行RAG吗？](/zh/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },
@@ -465,6 +495,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[¿Puedes ejecutar RAG con 2 GB de RAM?](/es/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   pt: {
@@ -539,6 +575,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Posso usar 6 GB de VRAM também para geração de imagens?',
             a: 'Não muito bem. O Stable Diffusion XL requer no mínimo 8 GB de VRAM. Executar tanto LLMs quanto geração de imagens em uma placa de 6 GB significa trocar constantemente — foque em uma única carga de trabalho por vez ou atualize para 8 GB.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[É possível executar RAG com 2 GB de RAM?](/pt/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },
@@ -617,6 +659,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[هل يمكن تشغيل RAG بـ2 GB RAM؟](/ar/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   ko: {
@@ -691,6 +739,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '6 GB VRAM으로 이미지 생성도 가능합니까?',
             a: '충분하지 않습니다. Stable Diffusion XL은 최소 8 GB VRAM이 필요합니다. 6 GB 카드에서 LLM과 이미지 생성을 동시에 실행하면 지속적인 전환이 필요합니다. 한 번에 하나의 워크로드에 집중하거나 8 GB로 업그레이드하는 것을 권장합니다.',
           },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[2 GB RAM으로 RAG를 실행할 수 있습니까?](/ko/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },

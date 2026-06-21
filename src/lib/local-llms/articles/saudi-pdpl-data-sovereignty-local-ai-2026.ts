@@ -173,6 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) — compliance verification steps.',
           '[EU Cloud GPU & GDPR](/local-llms/eu-cloud-gpu-gdpr-2026) — the equivalent analysis for European data sovereignty.',
           '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — the business case for on-premises AI.',
+          '[ALLaM, AceGPT & the Best Saudi Arabic Local LLMs (2026)](/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi Arabic LLMs and ALLaM 2026',
         ],
       },
       sources: {
@@ -385,6 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[قائمة تحقق أمن وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) — خطوات التحقق من الامتثال.',
           '[GPU سحابي في الاتحاد الأوروبي وGDPR](/ar/local-llms/eu-cloud-gpu-gdpr-2026) — التحليل المكافئ لسيادة البيانات الأوروبية.',
           '[لماذا تستخدم المؤسسات نماذج LLM المحلية](/ar/local-llms/why-enterprises-use-local-llms) — الجدوى التجارية للذكاء الاصطناعي داخل المنشأة.',
+          '[ALLaM وAceGPT وأفضل نماذج LLM العربية السعودية المحلية (2026)](/ar/local-llms/best-saudi-arabic-local-llms-allam-2026) -- نماذج LLM العربية السعودية و ALLaM 2026',
         ],
       },
       sources: {
@@ -638,6 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Checkliste für Sicherheit & Datenschutz lokaler LLMs](/de/local-llms/local-llm-security-privacy-checklist) — Schritte zur Compliance-Verifikation.',
           '[EU-Cloud-GPU & GDPR](/de/local-llms/eu-cloud-gpu-gdpr-2026) — die entsprechende Analyse für europäische Datensouveränität.',
           '[Warum Unternehmen lokale LLMs nutzen](/de/local-llms/why-enterprises-use-local-llms) — der Business Case für KI vor Ort.',
+          '[ALLaM, AceGPT & die besten saudischen arabischen lokalen LLMs (2026)](/de/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi-Arabische LLMs und ALLaM 2026',
         ],
       },
       sources: {
@@ -885,6 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lista de verificación de seguridad y privacidad de LLM locales](/es/local-llms/local-llm-security-privacy-checklist) — pasos de verificación de cumplimiento.',
           '[GPU en la nube de la UE y GDPR](/es/local-llms/eu-cloud-gpu-gdpr-2026) — el análisis equivalente para la soberanía de datos europea.',
           '[Por qué las empresas usan LLM locales](/es/local-llms/why-enterprises-use-local-llms) — el caso de negocio de la IA en las instalaciones.',
+          '[ALLaM, AceGPT y los mejores LLM locales en árabe saudí (2026)](/es/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs árabe saudí y ALLaM 2026',
         ],
       },
       sources: {
@@ -1130,6 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Liste de vérification sécurité et confidentialité des LLM locaux](/fr/local-llms/local-llm-security-privacy-checklist) — étapes de vérification de conformité.',
           '[GPU en nuage UE et GDPR](/fr/local-llms/eu-cloud-gpu-gdpr-2026) — l\'analyse équivalente pour la souveraineté des données européenne.',
           '[Pourquoi les entreprises utilisent des LLM locaux](/fr/local-llms/why-enterprises-use-local-llms) — l\'analyse de rentabilité de l\'IA sur site.',
+          '[ALLaM, AceGPT et les meilleurs LLM locaux en arabe saoudien (2026)](/fr/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs arabe saoudien et ALLaM 2026',
         ],
       },
       sources: {
@@ -1375,6 +1380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルLLMセキュリティ・プライバシーチェックリスト](/ja/local-llms/local-llm-security-privacy-checklist) — コンプライアンス検証手順。',
           '[EUクラウドGPUとGDPR](/ja/local-llms/eu-cloud-gpu-gdpr-2026) — 欧州データ主権に関する同等の分析。',
           '[なぜ企業はローカルLLMを使うのか](/ja/local-llms/why-enterprises-use-local-llms) — オンプレミスAIのビジネスケース。',
+          '[ALLaM、AceGPT、そしてサウジアラビアの最良のアラビア語ローカルLLM (2026年)](/ja/local-llms/best-saudi-arabic-local-llms-allam-2026) -- サウジアラビアのLLMとALLaM 2026',
         ],
       },
       sources: {
@@ -1620,6 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lista de verificação de segurança e privacidade de LLMs locais](/pt/local-llms/local-llm-security-privacy-checklist) — passos de verificação de conformidade.',
           '[GPU em nuvem da UE e GDPR](/pt/local-llms/eu-cloud-gpu-gdpr-2026) — a análise equivalente para a soberania de dados europeia.',
           '[Por que as empresas usam LLMs locais](/pt/local-llms/why-enterprises-use-local-llms) — o caso de negócio da IA no local.',
+          '[ALLaM, AceGPT e os melhores LLMs locais de árabe saudita (2026)](/pt/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs de árabe saudita e ALLaM 2026',
         ],
       },
       sources: {
@@ -1865,6 +1872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地 LLM 安全与隐私核查清单](/zh/local-llms/local-llm-security-privacy-checklist) — 合规验证步骤。',
           '[欧盟云 GPU 与 GDPR](/zh/local-llms/eu-cloud-gpu-gdpr-2026) — 针对欧洲数据主权的同等分析。',
           '[企业为何使用本地 LLM](/zh/local-llms/why-enterprises-use-local-llms) — 本地 AI 的商业理由。',
+          '[ALLaM、AceGPT 及最佳沙特阿拉伯语本地大模型 (2026)](/zh/local-llms/best-saudi-arabic-local-llms-allam-2026) -- 沙特阿拉伯语LLM和ALLaM 2026',
         ],
       },
       sources: {
@@ -2110,6 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 LLM 보안·개인정보 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) — 컴플라이언스 검증 단계.',
           '[EU 클라우드 GPU와 GDPR](/ko/local-llms/eu-cloud-gpu-gdpr-2026) — 유럽 데이터 주권에 대한 동등한 분석.',
           '[기업이 로컬 LLM을 사용하는 이유](/ko/local-llms/why-enterprises-use-local-llms) — 온프레미스 AI의 비즈니스 사례.',
+          '[ALLaM, AceGPT 및 최고의 사우디 아랍어 로컬 LLM (2026)](/ko/local-llms/best-saudi-arabic-local-llms-allam-2026) -- 사우디 아랍어 LLM과 ALLaM 2026',
         ],
       },
       sources: {

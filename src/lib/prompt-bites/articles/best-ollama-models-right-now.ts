@@ -90,6 +90,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best VPN for Downloading AI Models](/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K Context Models](/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Ollama Latest Version: What\'s New?](/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
+        ],
+      },
     },
   },
   de: {
@@ -167,6 +176,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Sind Qwen-Modelle im Jahr 2026 besser als Llama-Modelle?',
             a: 'Für Coding: ja, Qwen 3 Coder führt. Für allgemeine Konversation und Instruction-Following im 8B-Tier: Llama 3 8B bleibt wettbewerbsfähig und läuft aufgrund seiner kleineren Größe auf gleicher Hardware schneller.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Bestes VPN zum Herunterladen von KI-Modellen](/de/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K-Kontext-Modelle](/de/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Ollama neueste Version: Was ist neu?](/de/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/de/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
         ],
       },
     },
@@ -248,6 +266,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Meilleur VPN pour télécharger des modèles IA](/fr/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Modèles Ollama à contexte 128K](/fr/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Dernière version Ollama : quoi de neuf ?](/fr/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/fr/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
+        ],
+      },
     },
   },
   ja: {
@@ -327,6 +354,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[AIモデルダウンロードに最適なVPN](/ja/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128Kコンテキストモデル](/ja/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Ollamaの最新バージョン：何が新しい？](/ja/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/ja/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
+        ],
+      },
     },
   },
   zh: {
@@ -400,6 +436,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '2026年Qwen模型比Llama模型更好吗？',
             a: '代码任务：是的，Qwen 3 Coder领先。通用对话和8B层级的指令跟随：Llama 3 8B仍具竞争力，且因体积更小在相同硬件上运行更快。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[下载AI模型的最佳VPN](/zh/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K上下文模型](/zh/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Ollama最新版本：有什么新功能？](/zh/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/zh/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
         ],
       },
     },
@@ -481,6 +526,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Mejor VPN para descargar modelos de IA](/es/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Modelos Ollama con contexto de 128K](/es/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Última versión de Ollama: ¿qué hay de nuevo?](/es/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/es/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
+        ],
+      },
     },
   },
   pt: {
@@ -560,6 +614,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Melhor VPN para baixar modelos de IA](/pt/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Modelos Ollama com contexto de 128K](/pt/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Versão mais recente do Ollama: o que há de novo?](/pt/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/pt/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
+        ],
+      },
     },
   },
   ar: {
@@ -637,6 +700,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل نماذج Qwen أفضل من نماذج Llama في 2026؟',
             a: 'للبرمجة: نعم، Qwen 3 Coder يتصدر. للمحادثة العامة واتباع التعليمات في مستوى 8B: Llama 3 8B لا يزال تنافسياً ويعمل بشكل أسرع على نفس العتاد بسبب حجمه الأصغر.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[أفضل VPN لتنزيل نماذج الذكاء الاصطناعي](/ar/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[نماذج Ollama ذات السياق 128K](/ar/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[أحدث إصدار Ollama: ما الجديد؟](/ar/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/ar/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
         ],
       },
     },
@@ -737,6 +809,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Ollama용 최고 오픈소스 모델](/ko/local-llms/top-open-source-models-ollama)',
           '[CPU 전용 최고 Ollama 모델](/ko/prompt-bites/best-ollama-models-cpu-only)',
           '[Ollama 최신 버전](/ko/prompt-bites/ollama-latest-version)',
+          '[AI 모델 다운로드를 위한 최고의 VPN](/ko/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K 컨텍스트 모델](/ko/prompt-bites/ollama-128k-context-models) -- long context models',
+          '[Ollama 최신 버전: 무엇이 새로운가?](/ko/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B](/ko/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- model comparison',
         ],
       },
     },

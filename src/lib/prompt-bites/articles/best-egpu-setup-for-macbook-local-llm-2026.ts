@@ -102,6 +102,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -216,6 +225,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/de/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/de/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/de/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/de/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -321,6 +339,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/fr/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/fr/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/fr/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/fr/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -424,6 +451,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'AppleはApple SiliconのeGPUサポートを復活させますか？',
             a: '可能性は低いです。AppleのMシリーズアーキテクチャはGPU、CPU、メモリを1チップに統合しており、設計思想は統合メモリであって拡張性ではありません。GPU拡張をサポートするApple製品はMac Pro（2023年）のみです。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/ja/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/ja/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/ja/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/ja/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
         ],
       },
     },
@@ -533,6 +569,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '能否用NVIDIA GPU做推理并将输出传给MacBook？',
             a: '可以——这是推荐方案。在配有NVIDIA GPU的Windows或Linux机器上运行Ollama，通过局域网暴露（OLLAMA_HOST=0.0.0.0），从MacBook通过Open WebUI、Cursor、Continue或任何OpenAI兼容客户端连接。MacBook负责界面，NVIDIA机器负责计算。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/zh/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/zh/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/zh/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/zh/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
         ],
       },
     },
@@ -660,6 +705,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/es/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/es/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/es/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/es/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -784,6 +838,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/pt/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/pt/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/pt/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/pt/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -906,6 +969,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل يمكنني استخدام معالج رسومات NVIDIA للاستدلال وتوجيه المخرجات إلى MacBook الخاص بي؟',
             a: 'نعم — هذا هو النهج الموصى به. شغّل Ollama على جهاز Windows أو Linux بمعالج رسومات NVIDIA، اكشفه على شبكتك المحلية (OLLAMA_HOST=0.0.0.0)، واتصل من MacBook عبر Open WebUI أو Cursor أو Continue أو أي عميل متوافق مع OpenAI.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Best Ollama Models for CPU-Only Inference](/ar/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/ar/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/ar/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/ar/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
         ],
       },
     },
@@ -1048,6 +1120,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[GPU vs CPU vs Apple Silicon — 로컬 LLM 비교](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/local-llms/local-llm-software-directory-2026)',
           '[MacBook에서 Ollama 실행하기](/ko/local-llms/ollama-on-mac-apple-silicon-setup-2026)',
+          '[Best Ollama Models for CPU-Only Inference](/ko/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
+          '[MLX vs Ollama vs llama.cpp: Which Backend?](/ko/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
+          '[How to Convert an Ollama Model to MLX](/ko/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
+          '[Best Local LLM for 16 GB RAM Laptop](/ko/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
         ],
       },
     },

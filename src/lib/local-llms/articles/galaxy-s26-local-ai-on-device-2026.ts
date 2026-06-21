@@ -386,7 +386,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Samsung Galaxy S26 Unpacked announcement (Feb 25, 2026) — official feature overview',
           'Nota AI EdgeFusion research paper — on-device Stable Diffusion optimization techniques',
-          'Knox security white paper — hardware security enclave architecture and threat model'
+          'Knox security white paper — hardware security enclave architecture and threat model',
+          '[Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/local-llms/mobile-local-llms) -- local LLMs on mobile devices',
+          '[On-Device AI & Memory: Why HBM Memory Drives Local AI Speed (2026)](/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM memory and on-device AI speed',
+          '[Galaxy vs iPhone On-Device AI: Samsung Galaxy AI vs Apple Intelligence (2026)](/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- Galaxy AI vs Apple Intelligence comparison',
+          '[Apple M5 for Local AI: Performance, Memory, and What Changed (2026)](/local-llms/apple-silicon-m5-local-llm) -- Apple M5 chip for local AI',
+          '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) -- which models to run on-device',
         ]
       }
     },
@@ -696,7 +701,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Samsung Galaxy S26 Unpacked 공지(2026년 2월 25일) — 공식 기능 개요',
           'Nota AI EdgeFusion 연구 논문 — 온디바이스 Stable Diffusion 최적화 기법',
-          'Knox 보안 백서 — 하드웨어 보안 암호화 저장소 아키텍처 및 위협 모델'
+          'Knox 보안 백서 — 하드웨어 보안 암호화 저장소 아키텍처 및 위협 모델',
+          '[모바일 로컬 LLM 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/ko/local-llms/mobile-local-llms) -- 모바일 기기에서 로컬 LLM 실행',
+          '[HBM과 온디바이스 AI: 삼성·SK하이닉스 메모리가 AI 속도를 결정하는 이유 (2026)](/ko/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM 메모리와 온디바이스 AI 속도',
+          '[갤럭시 AI vs 애플 인텔리전스: 온디바이스 AI 완전 비교 (2026)](/ko/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- 갤럭시 AI vs 애플 인텔리전스 비교',
+          '[Apple M5 로컬 AI](/ko/local-llms/apple-silicon-m5-local-llm) -- Apple M5 칩과 로컬 AI',
+          '[입문자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) -- 온디바이스로 실행할 모델',
         ]
       }
     },
@@ -1004,7 +1014,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Samsung Galaxy S26 Unpacked Ankündigung (25. Februar 2026) — Offizielle Feature-Übersicht',
           'Nota AI EdgeFusion Research Papier — On-Device Stable Diffusion Optimierungs-Techniken',
-          'Knox Sicherheits-Whitepaper — Hardware-Sicherheitsmodul-Architektur und Bedrohungs-Modell'
+          'Knox Sicherheits-Whitepaper — Hardware-Sicherheitsmodul-Architektur und Bedrohungs-Modell',
+          '[Mobile lokale LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/de/local-llms/mobile-local-llms) -- lokale LLMs auf mobilen Geräten',
+          '[On-Device KI und Speicher: Warum HBM die Geschwindigkeit lokaler KI antreibt (2026)](/de/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM-Speicher und On-Device-KI-Geschwindigkeit',
+          '[Galaxy vs iPhone On-Device AI: Samsung Galaxy AI vs Apple Intelligence (2026)](/de/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- Galaxy AI vs. Apple Intelligence Vergleich',
+          '[Apple M5 für lokale KI](/de/local-llms/apple-silicon-m5-local-llm) -- Apple M5 Chip für lokale KI',
+          '[Beste Einstiegs-LLM-Modelle für lokale Nutzung](/de/local-llms/best-beginner-local-llm-models) -- welche Modelle lokal laufen',
         ]
       }
     },
@@ -1297,7 +1312,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Annonce Samsung Galaxy S26 Unpacked (25 février 2026) — vue d\'ensemble features officielle',
           'Article de Recherche EdgeFusion Nota AI — techniques d\'optimisation on-device Stable Diffusion',
-          'Livre Blanc Sécurité Knox — architecture du module sécurité matériel et modèle menace'
+          'Livre Blanc Sécurité Knox — architecture du module sécurité matériel et modèle menace',
+          '[LLMs locaux mobiles 2026 : iPhone 16 Pro, iPad M4 & Snapdragon X](/fr/local-llms/mobile-local-llms) -- LLMs locaux sur appareils mobiles',
+          '[IA Sur Appareil et Mémoire: Pourquoi HBM Détermine la Vitesse de l\'IA Locale (2026)](/fr/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- mémoire HBM et vitesse IA locale',
+          '[Galaxy vs iPhone IA sur appareil: Samsung Galaxy AI vs Apple Intelligence (2026)](/fr/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- comparaison Galaxy AI vs Apple Intelligence',
+          '[Apple M5 pour l\'IA locale](/fr/local-llms/apple-silicon-m5-local-llm) -- puce Apple M5 pour l\'IA locale',
+          '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- quels modèles utiliser sur l\'appareil',
         ]
       }
     },
@@ -1363,7 +1383,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-06-15'
       }
     },
-    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] } },
+    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] }, relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[LLMs locales en móviles 2026: iPhone 16 Pro, iPad M4 y Snapdragon X](/es/local-llms/mobile-local-llms) -- LLMs locales en dispositivos móviles',
+            '[IA en Dispositivo y Memoria: Por Qué HBM Determina la Velocidad de IA Local (2026)](/es/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- memoria HBM y velocidad IA en dispositivo',
+            '[Galaxy vs iPhone IA en dispositivo: Samsung Galaxy AI vs Apple Intelligence (2026)](/es/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- Galaxy AI vs Apple Intelligence',
+            '[Apple M5 para IA local](/es/local-llms/apple-silicon-m5-local-llm) -- chip Apple M5 para IA local',
+            '[Mejores modelos LLM locales para principiantes](/es/local-llms/best-beginner-local-llm-models) -- qué modelos ejecutar en el dispositivo',
+          ],
+        } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Ejecutar IA Local en Galaxy S26: IA en Dispositivo Explicada (2026)', 'description': 'Galaxy S26 IA en dispositivo explicada: qué funciones Galaxy AI se ejecutan localmente, cuáles necesitan cloud, y cómo ejecutar Ollama o MLC Chat en Exynos 2600 o Snapdragon 8 Elite Gen 5.', 'image': 'https://www.promptquorum.com/og-images/galaxy-s26-local-ai-on-device-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-06-15', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'es', 'url': 'https://www.promptquorum.com/es/local-llms/galaxy-s26-local-ai-on-device-2026', 'articleBody': 'El Galaxy S26, lanzado el 25 de febrero de 2026, trae la plataforma híbrida de IA local y cloud de Samsung — Galaxy AI — a tu bolsillo.' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'es', 'mainEntity': [] }
   },
@@ -1399,7 +1429,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-06-15'
       }
     },
-    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] } },
+    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] }, relatedReading: {
+          id: 'related-reading',
+          title: '関連記事',
+          items: [
+            '[モバイル向けローカルLLM 2026：iPhone 16 Pro・iPad M4・Snapdragon X](/ja/local-llms/mobile-local-llms) -- モバイルデバイスでのローカルLLM',
+            '[オンデバイスAIとメモリ: HBMメモリがローカルAIを加速する理由 (2026)](/ja/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBMメモリとオンデバイスAI速度',
+            '[Galaxy vs iPhone オンデバイスAI: Samsung Galaxy AIとApple Intelligence(2026)](/ja/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- Galaxy AI vs Apple Intelligence比較',
+            '[Apple M5でのローカルAI](/ja/local-llms/apple-silicon-m5-local-llm) -- Apple M5チップとローカルAI',
+            '[初心者向けベストローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) -- オンデバイスで実行するモデル',
+          ],
+        } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Galaxy S26 でのローカル AI 実行: オンデバイス AI を完全解説 (2026)', 'description': 'Galaxy S26 オンデバイス AI 解説: Galaxy AI機能のうちローカル実行されるもの、クラウドが必要なもの、およびExynos 2600またはSnapdragon 8 Elite Gen 5でOllamaやMLC Chatを実行する方法。', 'image': 'https://www.promptquorum.com/og-images/galaxy-s26-local-ai-on-device-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-06-15', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'ja', 'url': 'https://www.promptquorum.com/ja/local-llms/galaxy-s26-local-ai-on-device-2026', 'articleBody': '2026年2月25日にリリースされたGalaxy S26は、Samsungのハイブリッドなオンデバイス・クラウド AI プラットフォーム「Galaxy AI」をあなたのポケットに持ち込みます。' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ja', 'mainEntity': [] }
   },
@@ -1435,7 +1475,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-06-15'
       }
     },
-    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] } },
+    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] }, relatedReading: {
+          id: 'related-reading',
+          title: '相关阅读',
+          items: [
+            '[移动本地LLM 2026：iPhone 16 Pro、iPad M4与Snapdragon X对比](/zh/local-llms/mobile-local-llms) -- 移动设备上的本地LLM',
+            '[设备上的AI和内存：为什么HBM内存驱动本地AI速度 (2026)](/zh/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM内存与本地AI速度',
+            '[Galaxy对iPhone本地AI: Samsung Galaxy AI对Apple Intelligence(2026)](/zh/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- Galaxy AI vs Apple Intelligence对比',
+            '[Apple M5本地AI](/zh/local-llms/apple-silicon-m5-local-llm) -- Apple M5芯片与本地AI',
+            '[初学者最佳本地LLM模型](/zh/local-llms/best-beginner-local-llm-models) -- 设备上运行哪些模型',
+          ],
+        } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': '在Galaxy S26上运行本地AI: 本地设备AI解析指南 (2026)', 'description': 'Galaxy S26本地设备AI解析: Galaxy AI哪些功能在本地运行、哪些需要云,以及如何在Exynos 2600或Snapdragon 8 Elite Gen 5上运行Ollama或MLC Chat。', 'image': 'https://www.promptquorum.com/og-images/galaxy-s26-local-ai-on-device-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-06-15', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'zh', 'url': 'https://www.promptquorum.com/zh/local-llms/galaxy-s26-local-ai-on-device-2026', 'articleBody': 'Galaxy S26于2026年2月25日推出,将三星的混合本地和云AI平台——Galaxy AI——带到您的口袋里。' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'zh', 'mainEntity': [] }
   },
@@ -1471,7 +1521,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-06-15'
       }
     },
-    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] } },
+    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] }, relatedReading: {
+          id: 'related-reading',
+          title: 'Leitura Relacionada',
+          items: [
+            '[LLMs Locais em Celulares 2026: iPhone 16 Pro, iPad M4 e Snapdragon X](/pt/local-llms/mobile-local-llms) -- LLMs locais em dispositivos móveis',
+            '[IA no Dispositivo e Memória: Por que a Memória HBM Impulsiona a Velocidade de IA Local (2026)](/pt/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- memória HBM e velocidade de IA local',
+            '[Galaxy vs iPhone IA em Dispositivo: Samsung Galaxy AI vs Apple Intelligence (2026)](/pt/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- comparação Galaxy AI vs Apple Intelligence',
+            '[Apple M5 para IA local](/pt/local-llms/apple-silicon-m5-local-llm) -- chip Apple M5 para IA local',
+            '[Melhores modelos LLM locais para iniciantes](/pt/local-llms/best-beginner-local-llm-models) -- quais modelos rodar no dispositivo',
+          ],
+        } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Executar IA Local no Galaxy S26: IA no Dispositivo Explicada (2026)', 'description': 'IA no dispositivo Galaxy S26 explicada: quais recursos do Galaxy AI rodam localmente, quais precisam de nuvem, e como executar Ollama ou MLC Chat localmente no Exynos 2600 ou Snapdragon 8 Elite Gen 5.', 'image': 'https://www.promptquorum.com/og-images/galaxy-s26-local-ai-on-device-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-06-15', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'pt', 'url': 'https://www.promptquorum.com/pt/local-llms/galaxy-s26-local-ai-on-device-2026', 'articleBody': 'O Galaxy S26, lançado em 25 de fevereiro de 2026, traz a plataforma híbrida de IA on-device e em nuvem da Samsung — Galaxy AI — ao seu bolso.' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'pt', 'mainEntity': [] }
   },
@@ -1507,7 +1567,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-06-15'
       }
     },
-    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] } },
+    sections: { tldr: { id: 'key-takeaways', isTldr: true, items: [] }, relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[نماذج LLM المحلية على الهواتف 2026: iPhone 16 Pro وiPad M4 وSnapdragon X](/ar/local-llms/mobile-local-llms) -- نماذج LLM المحلية على الأجهزة المحمولة',
+            '[الذكاء الاصطناعي على الجهاز والذاكرة: لماذا تدفع ذاكرة HBM سرعة الذكاء الاصطناعي المحلي (2026)](/ar/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- ذاكرة HBM وسرعة الذكاء الاصطناعي المحلي',
+            '[Galaxy مقابل iPhone على الجهاز AI: Samsung Galaxy AI مقابل Apple Intelligence (2026)](/ar/local-llms/galaxy-vs-iphone-on-device-ai-2026) -- مقارنة Galaxy AI مع Apple Intelligence',
+            '[Apple M5 للذكاء الاصطناعي المحلي](/ar/local-llms/apple-silicon-m5-local-llm) -- شريحة Apple M5 للذكاء الاصطناعي المحلي',
+            '[أفضل نماذج LLM المحلية للمبتدئين](/ar/local-llms/best-beginner-local-llm-models) -- أي النماذج تشغل على الجهاز',
+          ],
+        } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'تشغيل الذكاء الاصطناعي المحلي على Galaxy S26: شرح الذكاء الاصطناعي على الجهاز (2026)', 'description': 'شرح Galaxy S26 للذكاء الاصطناعي على الجهاز: ميزات Galaxy AI التي تعمل محليًا، أيها يحتاج سحابة، وكيفية تشغيل Ollama أو MLC Chat محليًا على Exynos 2600 أو Snapdragon 8 Elite Gen 5.', 'image': 'https://www.promptquorum.com/og-images/galaxy-s26-local-ai-on-device-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-06-15', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'ar', 'url': 'https://www.promptquorum.com/ar/local-llms/galaxy-s26-local-ai-on-device-2026', 'articleBody': 'يأتي Galaxy S26 الذي تم إطلاقه في 25 فبراير 2026 بمنصة Galaxy AI الهجينة للذكاء الاصطناعي - جزء محلي وجزء سحابي - إلى جيبك.' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ar', 'mainEntity': [] }
   }

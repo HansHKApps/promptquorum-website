@@ -122,6 +122,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Radeon 6800M for Local LLM: Full Setup Guide](/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Performance Guide](/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   de: {
@@ -195,6 +202,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Wie konvertiere ich ein Ollama-Modell in das MLX-Format?',
             a: 'Sie können ein Ollama-Modell nicht direkt in MLX konvertieren. Laden Sie die Original-Gewichte von Hugging Face herunter und verwenden Sie mlx-lms Konverter, oder finden Sie eine bereits konvertierte Version in der mlx-community-Organisation. Siehe <a href="/de/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">Wie man Ollama-Modelle in MLX konvertiert</a>.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Radeon 6800M für lokale LLMs: Vollständiger Setup-Leitfaden](/de/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Performance-Leitfaden](/de/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -272,6 +286,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Radeon 6800M pour LLM local : Guide complet](/fr/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan : Guide de performance](/fr/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   ja: {
@@ -345,6 +366,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'OllamaモデルをMLX形式に変換するにはどうすればよいですか？',
             a: 'OllamaモデルをMLXに直接変換することはできません。Hugging Faceから元のウェイトをダウンロードし、mlx-lmのコンバーターを使用するか、mlx-communityオーガニゼーションで事前変換されたバージョンを探してください。<a href="/ja/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">OllamaモデルをMLXに変換する方法</a>をご覧ください。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Radeon 6800MでローカルLLMを動かす：完全セットアップガイド](/ja/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan：パフォーマンスガイド](/ja/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -423,6 +451,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Radeon 6800M para LLM local: Guia completo de configuração](/pt/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Guia de desempenho](/pt/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   es: {
@@ -497,6 +532,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Cómo convierto modelos de Ollama a formato MLX?',
             a: 'No puedes convertir directamente modelos de Ollama a MLX. Descarga los pesos originales desde Hugging Face y usa el convertidor de mlx-lm, o busca versiones preconvertidas en la organización mlx-community. Consulta <a href="/es/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">Convertir modelos de Ollama a MLX</a>.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Radeon 6800M para LLM local: Guía completa de configuración](/es/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Guía de rendimiento](/es/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -574,6 +616,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Radeon 6800M本地LLM：完整设置指南](/zh/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan：性能指南](/zh/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   ar: {
@@ -648,6 +697,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'كيف أحوّل نماذج Ollama إلى صيغة MLX؟',
             a: 'لا يمكنك تحويل نماذج Ollama مباشرةً إلى MLX. نزّل الأوزان الأصلية من Hugging Face واستخدم محوّل mlx-lm، أو ابحث عن إصدارات محوّلة مسبقاً في منظمة mlx-community. راجع <a href="/ar/prompt-bites/convert-ollama-model-to-mlx" class="text-primary hover:underline">تحويل نماذج Ollama إلى MLX</a>.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Radeon 6800M للنماذج المحلية: دليل الإعداد الكامل](/ar/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: دليل الأداء](/ar/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -764,6 +820,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Ollama 모델을 MLX로 변환하는 방법](/ko/prompt-bites/convert-ollama-model-to-mlx)',
           '[Apple Silicon에서 Ollama와 MLX 비교](/ko/prompt-bites/ollama-mlx-apple-silicon)',
           '[Apple Silicon 로컬 LLM 완전 가이드 2026](/ko/local-llms/apple-silicon-local-llm-guide-2026)',
+          '[Strix Halo + Ollama + Vulkan: 성능 가이드](/ko/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+          '[Radeon 6800M 로컬 LLM: 완전 설치 가이드](/ko/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
         ],
       },
     },

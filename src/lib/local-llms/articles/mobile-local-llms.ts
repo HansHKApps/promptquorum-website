@@ -257,6 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Small Local LLMs Under 4 GB](/prompt-bites/best-ollama-models-4gb-vram) — 1–3B models ideal for mobile and edge deployment',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup guide for the inference engine powering most mobile LLM apps',
             '[Top Open Source Models for Ollama](/local-llms/top-open-source-models-ollama) — Llama, Qwen, Mistral model rankings and recommendations',
+            '[Apple\'s On-Device AI vs Real Local LLMs: What WWDC 2026 Actually Changed](/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs true local LLMs',
           ],
         },
         sources: {
@@ -678,6 +679,7 @@ schema: {
             '[Beste kleine lokale LLMs unter 4 GB](/de/prompt-bites/best-ollama-models-4gb-vram) — 1–3B-Modelle ideal für Mobile- und Edge-Einsatz',
             '[Wie man Ollama installiert](/de/local-llms/how-to-install-ollama) — Installationsanleitung für die Inferenz-Engine hinter den meisten mobilen LLM-Apps',
             '[Top Open-Source-Modelle für Ollama](/de/local-llms/top-open-source-models-ollama) — Llama, Qwen, Mistral Modellrankings und Empfehlungen',
+            '[Apples On-Device-KI vs. echte lokale LLMs: Was WWDC 2026 wirklich geändert hat](/de/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs. echte lokale LLMs',
           ],
         },
         sources: {
@@ -1030,6 +1032,7 @@ schema: {
             '[Meilleurs petits LLM locaux sous 4 Go](/fr/prompt-bites/best-ollama-models-4gb-vram) — Modèles 1–3B idéaux pour mobile et edge',
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — Guide d\'installation du moteur d\'inférence derrière la plupart des apps LLM mobiles',
             '[Meilleurs modèles open source pour Ollama](/fr/local-llms/top-open-source-models-ollama) — Classements et recommandations Llama, Qwen, Mistral',
+            '[L\'IA on-device d\'Apple vs les vrais LLM locaux : ce que WWDC 2026 a vraiment changé](/fr/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs vrais LLMs locaux',
           ],
         },
         sources: {
@@ -1380,6 +1383,7 @@ schema: {
             '[4 GB以下の最良小型ローカルLLM](/ja/prompt-bites/best-ollama-models-4gb-vram) — モバイル・エッジ展開に最適な1–3Bモデル',
             '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — モバイルLLMアプリの推論エンジンのセットアップガイド',
             '[Ollama向けトップオープンソースモデル](/ja/local-llms/top-open-source-models-ollama) — Llama、Qwen、Mistralのモデルランキングと推奨',
+            '[AppleのオンデバイスAI対ローカルLLM：WWDC 2026で実際に何が変わったか](/ja/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs 真のローカルLLM',
           ],
         },
         sources: {
@@ -1730,6 +1734,7 @@ schema: {
             '[4 GB以下最佳小型本地LLM](/zh/prompt-bites/best-ollama-models-4gb-vram) — 适合移动和边缘部署的1–3B模型',
             '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) — 大多数移动LLM应用的推理引擎安装指南',
             '[Ollama顶级开源模型](/zh/local-llms/top-open-source-models-ollama) — Llama、Qwen、Mistral模型排名和推荐',
+            '[Apple的本地AI与真正的本地LLM：WWDC 2026到底改变了什么](/zh/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs 真正本地LLM',
           ],
         },
         sources: {
@@ -2081,6 +2086,7 @@ schema: {
             '[Mejores LLMs locales pequeños de menos de 4 GB](/es/prompt-bites/best-ollama-models-4gb-vram) — Modelos 1–3B ideales para despliegue en móvil y dispositivos de borde',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Guía de configuración del motor de inferencia que impulsa la mayoría de las apps de LLM móvil',
             '[Top modelos de código abierto para Ollama](/es/local-llms/top-open-source-models-ollama) — Rankings y recomendaciones de modelos Llama, Qwen y Mistral',
+            '[La IA on-device de Apple vs los LLM locales reales: qué cambió realmente en WWDC 2026](/es/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs LLMs locales reales',
           ],
         },
         sources: {
@@ -2433,6 +2439,7 @@ schema: {
             '[أفضل نماذج LLM المحلية الصغيرة أقل من 4 GB](/ar/prompt-bites/best-ollama-models-4gb-vram) — نماذج 1–3B مثالية للنشر على الهواتف وأجهزة الحافة',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — دليل إعداد محرك الاستدلال الذي يشغّل معظم تطبيقات LLM للهواتف',
             '[أفضل النماذج مفتوحة المصدر لـ Ollama](/ar/local-llms/top-open-source-models-ollama) — تصنيفات وتوصيات نماذج Llama وQwen وMistral',
+            '[الذكاء الاصطناعي المحلي من Apple مقابل نماذج LLM المستضافة ذاتياً: ما الذي غيّرته WWDC 2026 فعلاً](/ar/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence مقابل نماذج LLM المحلية الحقيقية',
           ],
         },
         sources: {
@@ -2716,6 +2723,7 @@ schema: {
             '[Benchmarks LLM M5 Pro vs M5 Max 2026](/pt/local-llms/m5-pro-max-llm-benchmarks-2026) — Para desempenho real em hardware Apple mais poderoso',
             '[Mac Mini M5 como Servidor de IA Local](/pt/local-llms/mac-mini-m5-local-ai-server) — Alternativa de desktop para quem precisa de modelos maiores',
             '[LLMs Locais vs APIs na Nuvem](/pt/local-llms/local-llms-vs-cloud-apis) — Quando o local vale mais do que a nuvem',
+            '[A IA no dispositivo da Apple vs LLMs locais reais: o que a WWDC 2026 mudou de verdade](/pt/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs LLMs locais reais',
           ],
         },
         sources: {
@@ -2991,6 +2999,7 @@ schema: {
             '[4 GB 미만 최고의 소형 로컬 LLM](/prompt-bites/best-ollama-models-4gb-vram) — 모바일 및 엣지 배포에 적합한 1–3B 모델',
             '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 대부분의 모바일 LLM 앱을 구동하는 추론 엔진 설치 가이드',
             '[Ollama용 최고의 오픈 소스 모델](/local-llms/top-open-source-models-ollama) — Llama, Qwen, Mistral 모델 순위 및 추천',
+            '[Apple 온디바이스 AI vs 실제 로컬 LLM: WWDC 2026이 실제로 바꾼 것](/ko/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs 진정한 로컬 LLM',
           ],
         },
         sources: {

@@ -258,6 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Structured Output and JSON Mode](/prompt-engineering/structured-output-and-json-mode) -- Using the API to enforce output format.',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) -- Building multi-step API pipelines with local models.',
             '[Constrained Prompting](/prompt-engineering/constrained-prompting) -- API-level format enforcement.',
+            '[Headless Local LLMs: Running Models Without a UI (2026)](/local-llms/headless-local-llms) -- headless local LLM deployment',
           ],
         },
         sources: {
@@ -707,6 +708,7 @@ schema: {
             '[Strukturierte Output und JSON Mode](/prompt-engineering/structured-output-and-json-mode) -- Nutze API um Output Format durchzusetzen.',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) -- Baue Multi-Step API Pipelines mit lokalen Modellen.',
             '[Constrained Prompting](/prompt-engineering/constrained-prompting) -- API-Level Format Enforcement.',
+            '[Headless Local LLMs: Modelle ohne Benutzeroberfläche ausführen (2026)](/de/local-llms/headless-local-llms) -- Headless lokale LLM Bereitstellung',
           ],
         },
         sources: {
@@ -966,6 +968,7 @@ schema: {
             '[LLM locaux avec VS Code et Cursor](/fr/local-llms/local-llms-with-vscode-cursor) -- Éditeurs de code qui utilisent cette API.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/fr/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Différents backends exposant cette API.',
             '[Stack développeur LLM local](/fr/local-llms/local-llm-developer-stack) -- Pour une stack complète 3 niveaux au-delà de la compatibilité API.',
+            '[LLMs Headless locaux : exécuter des modèles sans interface utilisateur (2026)](/fr/local-llms/headless-local-llms) -- déploiement LLM local headless',
           ],
         },
         sources: {
@@ -1222,6 +1225,7 @@ schema: {
             '[VS Code・CursorでのローカルLLM](/ja/local-llms/local-llms-with-vscode-cursor) -- このAPIを使用するコードエディタ。',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ja/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- このAPIを公開する異なるバックエンド。',
             '[ローカルLLM開発者スタック](/ja/local-llms/local-llm-developer-stack) -- API互換性設定を超えた完全な3層スタック。',
+            '[Headless Local LLMs: UIなしでモデルを実行する (2026)](/ja/local-llms/headless-local-llms) -- ヘッドレスローカルLLMデプロイメント',
           ],
         },
         sources: {
@@ -1478,6 +1482,7 @@ schema: {
             '[VS Code和Cursor使用本地LLM](/zh/local-llms/local-llms-with-vscode-cursor) -- 使用此API的代码编辑器。',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/zh/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 公开此API的不同后端。',
             '[本地LLM开发者技术栈](/zh/local-llms/local-llm-developer-stack) -- 超越API兼容设置的完整三层技术栈。',
+            '[Headless本地LLMs: 无界面运行模型 (2026)](/zh/local-llms/headless-local-llms) -- 无界面本地LLM部署',
           ],
         },
         sources: {
@@ -1803,6 +1808,7 @@ schema: {
             '[Salida estructurada y modo JSON](/prompt-engineering/structured-output-and-json-mode) -- Usar la API para aplicar el formato de salida.',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) -- Construir pipelines de API de múltiples pasos con modelos locales.',
             '[Constrained Prompting](/prompt-engineering/constrained-prompting) -- Aplicación de formato a nivel de API.',
+            '[LLMs locales headless: ejecutar modelos sin interfaz de usuario (2026)](/es/local-llms/headless-local-llms) -- despliegue headless de LLMs locales',
           ],
         },
         sources: {
@@ -2252,6 +2258,7 @@ schema: {
             '[الإخراج المنظَّم ووضع JSON](/prompt-engineering/structured-output-and-json-mode) -- استخدام الواجهة لفرض تنسيق الإخراج.',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) -- بناء خطوط معالجة واجهة متعددة الخطوات بنماذج محلية.',
             '[Constrained Prompting](/prompt-engineering/constrained-prompting) -- فرض التنسيق على مستوى الواجهة.',
+            '[نماذج LLM المحلية بلا واجهة (headless): تشغيل النماذج دون واجهة مستخدم (2026)](/ar/local-llms/headless-local-llms) -- نشر نماذج LLM المحلية بلا واجهة',
           ],
         },
         sources: {
@@ -2767,6 +2774,7 @@ schema: {
             '[구조화된 출력 및 JSON 모드](/prompt-engineering/structured-output-and-json-mode) -- API를 사용하여 출력 형식을 강제하는 방법.',
             '[프롬프트 체이닝](/prompt-engineering/prompt-chaining) -- 로컬 모델로 다단계 API 파이프라인 구축.',
             '[제약 프롬프팅](/prompt-engineering/constrained-prompting) -- API 수준의 형식 강제.',
+            '[헤드리스 로컬 LLM: UI 없이 모델 실행하기 (2026)](/ko/local-llms/headless-local-llms) -- 헤드리스 로컬 LLM 배포',
           ],
         },
         sources: {

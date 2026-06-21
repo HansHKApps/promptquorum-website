@@ -760,6 +760,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Q4_K_M vs Q8_0: 결정 가이드](/ko/prompt-bites/q4-k-m-vs-q8-0)',
           '[로컬 LLM에 필요한 VRAM 용량](/ko/prompt-bites/how-much-vram-for-local-llm)',
           '[양자화 수준 전체 비교](/ko/local-llms/quantization-levels-comparison)',
+          '[6GB VRAM을 위한 최적의 양자화](/ko/prompt-bites/best-quantization-6gb-vram)',
         ],
       },
     },

@@ -89,6 +89,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Ollama 128K Context Models](/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   de: {
@@ -164,6 +170,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Unterstützen Vision-Modelle mehrere Bilder in einem Prompt?',
             a: 'Die Unterstützung variiert je nach Modell. LLaVA und Qwen-VL verarbeiten derzeit ein Bild pro Turn in Ollama. Llama 3.2 Vision unterstützt Multi-Bild-Eingaben je nach Ollama-Version und Client-Implementierung.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Ollama 128K Kontextmodelle](/de/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },
@@ -243,6 +255,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Modèles Ollama à contexte 128K](/fr/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   ja: {
@@ -318,6 +336,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Visionモデルは1つのプロンプトで複数の画像をサポートしていますか？',
             a: 'モデルによって対応状況が異なります。LLaVAとQwen-VLは現在Ollamaで1ターンに1枚の画像を処理します。Llama 3.2 VisionはOllamaのバージョンとクライアントの実装によってマルチ画像入力をサポートしています。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Ollama 128Kコンテキストモデル](/ja/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },
@@ -397,6 +421,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Ollama 128K上下文模型](/zh/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   pt: {
@@ -472,6 +502,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Os modelos de visão suportam múltiplas imagens em um único prompt?',
             a: 'O suporte varia por modelo. LLaVA e Qwen-VL atualmente processam uma imagem por turno no Ollama. Llama 3.2 Vision suporta entradas de múltiplas imagens dependendo da versão do Ollama e da implementação do cliente.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Modelos Ollama com contexto de 128K](/pt/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },
@@ -551,6 +587,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Modelos Ollama con contexto de 128K](/es/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   ar: {
@@ -626,6 +668,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل تدعم نماذج الرؤية صورًا متعددة في موجّه واحد؟',
             a: 'يتفاوت الدعم حسب النموذج. LLaVA و Qwen-VL يعالجان حاليًا صورة واحدة لكل دور في Ollama. يدعم Llama 3.2 Vision مدخلات صور متعددة حسب إصدار Ollama وتنفيذ العميل.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[نماذج Ollama ذات سياق 128K](/ar/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },

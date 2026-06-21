@@ -297,6 +297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Frameworks: CO-STAR Framework] — a structured template that organizes the fundamentals into a proven sequence',
             '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
             '[O Que É Engenharia de Prompts (Português)](/pt/prompt-engineering/what-is-prompt-engineering) — versão em português deste guia',
+            '[Teaching with AI: Prompt Strategies for Educators](/prompt-engineering/teaching-with-ai)',
           ],
         },
 
@@ -627,6 +628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Grundlagen: KI-Halluzinationen — Warum KI Dinge erfindet] — ein Kernverständnis der LLM-Grenzen',
             '[Techniken: Chain-of-Thought Prompting — LLMs zeigen lassen, wie sie denken] — die Schritt-für-Schritt-Technik, die die Genauigkeit verbessert',
             '[Frameworks: CO-STAR Framework] — eine strukturierte Vorlage, die die Grundlagen in einer bewährten Reihenfolge organisiert',
+            '[Mit KI unterrichten: Prompt-Strategien für Lehrende](/de/prompt-engineering/teaching-with-ai)',
           ],
         },
 
@@ -965,6 +967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Techniques: Chain-of-Thought Prompting — Make AI Show Its Reasoning] — la técnica paso a paso que mejora la precisión',
             '[Frameworks: CO-STAR Framework] — una plantilla estructurada que organiza los fundamentos en una secuencia probada',
             '[AI Limitations: What LLMs Can\'t Do](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — las ocho restricciones estructurales que comparten todos los LLMs y el workaround de ingeniería para cada una',
+            '[Enseñar con IA: Estrategias de prompts para educadores](/es/prompt-engineering/teaching-with-ai)',
           ],
         },
 
@@ -1304,6 +1307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[التقنيات: استدعاء Chain-of-Thought — اجعل الذكاء الاصطناعي يُظهر استدلاله] — التقنية خطوة بخطوة التي تحسّن الدقة',
             '[الأطر: إطار CO-STAR] — قالب منظم ينظّم الأساسيات في تسلسل مُجرَّب',
             '[قيود الذكاء الاصطناعي: ما لا تستطيع نماذج LLM فعله](/ar/prompt-engineering/ai-limitations-what-llms-cant-do) — القيود الهيكلية الثمانية المشتركة بين جميع نماذج LLM وحل الهندسة لكل منها',
+            '[التدريس بالذكاء الاصطناعي: استراتيجيات المطالبات للمعلمين](/ar/prompt-engineering/teaching-with-ai)',
           ],
         },
 
@@ -1898,6 +1902,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Fondamentaux : Les hallucinations de l\'IA — Pourquoi l\'IA invente des choses] — comprendre une limitation fondamentale des LLM',
             '[Techniques : Chain-of-Thought Prompting — Faire montrer son raisonnement à l\'IA] — la technique pas à pas qui améliore la précision',
             '[Frameworks : Framework CO-STAR] — un modèle structuré qui organise les fondamentaux dans une séquence éprouvée',
+            '[Enseigner avec l\'IA: Stratégies de prompts pour les éducateurs](/fr/prompt-engineering/teaching-with-ai)',
           ],
         },
 
@@ -2472,6 +2477,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[基础知识：AI 幻觉 — 为什么 AI 会虚构事实] — 理解大语言模型的核心局限',
             '[技术：思维链提示法 — 让 AI 展示其推理过程] — 改进准确性的逐步技术',
             '[框架：CO-STAR 框架] — 一个结构化模板，将基础知识按照已验证的顺序组织',
+            '[用AI教学：教育者的提示词策略](/zh/prompt-engineering/teaching-with-ai)',
           ],
         },
 
@@ -2818,6 +2824,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Frameworks: CO-STAR Framework] — 기본 요소를 검증된 순서로 구성하는 구조화된 템플릿',
             '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — 모든 LLM이 공유하는 여덟 가지 구조적 제약과 각각에 대한 엔지니어링 해결책',
             '[O Que É Engenharia de Prompts (Português)](/pt/prompt-engineering/what-is-prompt-engineering) — 이 가이드의 포르투갈어 버전',
+            '[AI로 가르치기: 교육자를 위한 프롬프트 전략](/ko/prompt-engineering/teaching-with-ai)',
           ],
         },
 

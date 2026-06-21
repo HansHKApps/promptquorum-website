@@ -121,6 +121,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Ollama Latest Version: What\'s New?](/prompt-bites/ollama-latest-version) -- Ollama updates',
+        ],
+      },
     },
   },
   de: {
@@ -193,6 +199,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Kann ich Ollama und mlx-lm gleichzeitig auf dem Mac verwenden?',
             a: 'Ja. Ollama läuft als Hintergrunddienst auf Port 11434; der Server von mlx-lm läuft auf einem von Ihnen angegebenen Port (Standard 8080). Sie kollidieren nicht. Sie können Ihre App zwischen den beiden Endpunkten wechseln, um die Leistung zu vergleichen. Siehe <a href="/de/prompt-bites/mlx-vs-ollama-vs-llamacpp" class="text-primary hover:underline">MLX vs Ollama vs llama.cpp</a> für den vollständigen Vergleich.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Ollama Neueste Version: Was ist neu?](/de/prompt-bites/ollama-latest-version) -- Ollama updates',
         ],
       },
     },
@@ -269,6 +281,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Ollama Dernière Version : Quoi de neuf ?](/fr/prompt-bites/ollama-latest-version) -- Ollama updates',
+        ],
+      },
     },
   },
   ja: {
@@ -343,6 +361,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Ollama最新バージョン：新機能は？](/ja/prompt-bites/ollama-latest-version) -- Ollama updates',
+        ],
+      },
     },
   },
   zh: {
@@ -415,6 +439,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '我可以在 Mac 上同时使用 Ollama 和 mlx-lm 吗？',
             a: '可以。Ollama 作为后台服务运行在端口 11434；mlx-lm 的服务器运行在您指定的端口（默认 8080）。它们不会冲突。您可以在两个端点之间切换应用程序以比较性能。完整对比请参阅 <a href="/zh/prompt-bites/mlx-vs-ollama-vs-llamacpp" class="text-primary hover:underline">MLX vs Ollama vs llama.cpp</a>。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Ollama最新版本：有什么新功能？](/zh/prompt-bites/ollama-latest-version) -- Ollama updates',
         ],
       },
     },
@@ -500,6 +530,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Ollama Última Versão: O que há de novo?](/pt/prompt-bites/ollama-latest-version) -- Ollama updates',
+        ],
+      },
     },
   },
   es: {
@@ -577,6 +613,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Ollama Última Versión: ¿Qué hay de nuevo?](/es/prompt-bites/ollama-latest-version) -- Ollama updates',
+        ],
+      },
     },
   },
   ar: {
@@ -651,6 +693,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل يجب أن أنتظر Ollama ليضيف دعم MLX؟',
             a: 'غير مرجح. Ollama يُولي الأولوية لكونه متعدد المنصات. MLX خاص بـ Apple Silicon. استخدم LM Studio عوضاً عن ذلك، إذ يدعم كلا الخلفيتين ويوفر واجهة مماثلة.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[أحدث إصدار من Ollama: ما الجديد؟](/ar/prompt-bites/ollama-latest-version) -- Ollama updates',
         ],
       },
     },
@@ -790,6 +838,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Ollama 모델을 MLX로 변환하기](/ko/prompt-bites/convert-ollama-model-to-mlx)',
           '[Ollama vs LM Studio 비교](/ko/prompt-bites/ollama-vs-lm-studio)',
           '[Apple Silicon 로컬 LLM 종합 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026)',
+          '[Ollama 최신 버전: 새로운 기능은?](/ko/prompt-bites/ollama-latest-version) -- Ollama updates',
         ],
       },
     },

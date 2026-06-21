@@ -124,6 +124,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   de: {
@@ -199,6 +205,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Mit welchem Ollama-Befehl wird Mixtral 8x22B gestartet?',
             a: '<code>ollama pull mixtral:8x7b</code> lädt das Q4_K_M-quantisierte GGUF herunter. Dann startet <code>ollama run mixtral:8x7b</code> es. Ollama verteilt den VRAM automatisch und lagert bei Bedarf auf den CPU-RAM aus.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Cursor Pro vs Continue.dev: Welches KI-Coding-Tool?](/de/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -278,6 +290,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Cursor Pro vs Continue.dev : quel outil de coding IA ?](/fr/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   ja: {
@@ -353,6 +371,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Mixtral 8x22B を起動する Ollama コマンドは？',
             a: '<code>ollama pull mixtral:8x7b</code> で Q4_K_M 量子化 GGUF をダウンロードします。次に <code>ollama run mixtral:8x7b</code> で起動します。Ollama は VRAM を自動配分し、必要に応じて CPU RAM にオフロードします。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Cursor Pro vs Continue.dev：どちらのAIコーディングツールが良いか？](/ja/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -432,6 +456,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Cursor Pro vs Continue.dev：哪款AI编程工具更好？](/zh/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   es: {
@@ -507,6 +537,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Qué comando de Ollama ejecuta Mixtral 8x22B?',
             a: '<code>ollama pull mixtral:8x7b</code> descarga el GGUF cuantizado Q4_K_M. Luego <code>ollama run mixtral:8x7b</code> lo inicia. Ollama asigna VRAM automáticamente y vierte a la RAM de la CPU si es necesario. Consulta los <a href="/es/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">requisitos de VRAM GPU por modelo</a> para confirmar que tu tarjeta puede manejarlo.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Cursor Pro vs Continue.dev: ¿Cuál herramienta de coding con IA?](/es/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -586,6 +622,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Cursor Pro vs Continue.dev: Qual ferramenta de coding com IA?](/pt/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   ar: {
@@ -663,6 +705,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Cursor Pro مقابل Continue.dev: أي أداة برمجة بالذكاء الاصطناعي؟](/ar/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   ko: {
@@ -738,6 +786,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Mixtral 8x22B를 실행하는 Ollama 명령은 무엇입니까?',
             a: '<code>ollama pull mixtral:8x7b</code>를 실행하면 Q4_K_M 양자화 GGUF가 다운로드됩니다. 이후 <code>ollama run mixtral:8x7b</code>로 시작합니다. Ollama는 VRAM을 자동으로 할당하며 필요 시 CPU RAM으로 오버플로우됩니다. 해당 GPU의 처리 가능 여부를 확인하려면 <a href="/ko/prompt-bites/best-models-amd-5700x-3070ti" class="text-primary hover:underline">모델별 GPU VRAM 요구사항</a>을 참조하십시오.',
           },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[Cursor Pro vs Continue.dev: 어떤 AI 코딩 도구?](/ko/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },

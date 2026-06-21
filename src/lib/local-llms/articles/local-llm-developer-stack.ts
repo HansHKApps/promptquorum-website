@@ -210,6 +210,8 @@ schema: {
             '[Ollama installation and setup guide](/local-llms/how-to-install-ollama)',
             '[Local LLMs with VS Code & Cursor](/local-llms/local-llms-with-vscode-cursor)',
             '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora)',
+            '[Headless Local LLMs: Running Models Without a UI (2026)](/local-llms/headless-local-llms) -- headless local LLM deployment',
+            '[Xinference: Run Llama, Qwen & ChatGLM Locally](/local-llms/xinference-llama-qwen-chatglm-mistral) -- Deploy open-source models via Xinference.',
           ],
         },
         'sources': {
@@ -447,6 +449,8 @@ schema: {
             '[Guía de instalación y configuración de Ollama](/es/local-llms/how-to-install-ollama)',
             '[LLMs locales con VS Code y Cursor](/es/local-llms/local-llms-with-vscode-cursor)',
             '[Fine-Tuning de LLMs locales con LoRA](/es/local-llms/fine-tuning-local-llms-lora)',
+            '[LLMs locales headless: ejecutar modelos sin interfaz de usuario (2026)](/es/local-llms/headless-local-llms) -- despliegue headless de LLMs locales',
+            '[Xinference: Llama, Qwen y ChatGLM localmente](/es/local-llms/xinference-llama-qwen-chatglm-mistral) -- Despliega modelos open-source con Xinference.',
           ],
         },
         'sources': {
@@ -687,6 +691,8 @@ schema: {
             '[دليل تثبيت وإعداد Ollama](/ar/local-llms/how-to-install-ollama)',
             '[نماذج LLM المحلية مع VS Code وCursor](/ar/local-llms/local-llms-with-vscode-cursor)',
             '[الضبط الدقيق لنماذج LLM المحلية باستخدام LoRA](/ar/local-llms/fine-tuning-local-llms-lora)',
+            '[نماذج LLM المحلية بلا واجهة (headless): تشغيل النماذج دون واجهة مستخدم (2026)](/ar/local-llms/headless-local-llms) -- نشر نماذج LLM المحلية بلا واجهة',
+            '[Xinference: تشغيل Llama وQwen وChatGLM محلياً](/ar/local-llms/xinference-llama-qwen-chatglm-mistral) -- نشر النماذج مفتوحة المصدر عبر Xinference.',
           ],
         },
         'sources': {
@@ -960,6 +966,8 @@ schema: {
             '[Ollama-Installations- und Einrichtungsanleitung](/de/local-llms/how-to-install-ollama)',
             '[Lokale LLMs mit VS Code & Cursor](/de/local-llms/local-llms-with-vscode-cursor)',
             '[Fine-Tuning lokaler LLMs mit LoRA](/de/local-llms/fine-tuning-local-llms-lora)',
+            '[Headless Local LLMs: Modelle ohne Benutzeroberfläche ausführen (2026)](/de/local-llms/headless-local-llms) -- Headless lokale LLM Bereitstellung',
+            '[Xinference: Llama, Qwen & ChatGLM Lokal Ausführen](/de/local-llms/xinference-llama-qwen-chatglm-mistral) -- Open-Source-Modelle mit Xinference bereitstellen.',
           ],
         },
         'sources': {
@@ -1163,6 +1171,8 @@ schema: {
             '[Guide d\'installation et de configuration d\'Ollama](/fr/local-llms/how-to-install-ollama)',
             '[LLMs locaux avec VS Code & Cursor](/fr/local-llms/local-llms-with-vscode-cursor)',
             '[Fine-Tuning de LLMs locaux avec LoRA](/fr/local-llms/fine-tuning-local-llms-lora)',
+            '[LLMs Headless locaux : exécuter des modèles sans interface utilisateur (2026)](/fr/local-llms/headless-local-llms) -- déploiement LLM local headless',
+            '[Xinference: Exécuter Llama, Qwen et ChatGLM en Local](/fr/local-llms/xinference-llama-qwen-chatglm-mistral) -- Déployez des modèles open-source avec Xinference.',
           ],
         },
         'sources': {
@@ -1365,6 +1375,8 @@ schema: {
             '[Ollamaのインストールとセットアップガイド](/ja/local-llms/how-to-install-ollama)',
             '[VS Code＆CursorでローカルLLMを使う](/ja/local-llms/local-llms-with-vscode-cursor)',
             '[LoRAによるローカルLLMのファインチューニング](/ja/local-llms/fine-tuning-local-llms-lora)',
+            '[Headless Local LLMs: UIなしでモデルを実行する (2026)](/ja/local-llms/headless-local-llms) -- ヘッドレスローカルLLMデプロイメント',
+            '[Xinference: Llama、Qwen、ChatGLMをローカルで実行する](/ja/local-llms/xinference-llama-qwen-chatglm-mistral) -- XinferenceでオープンソースモデルをDeployする。',
           ],
         },
         'sources': {
@@ -1567,6 +1579,8 @@ schema: {
             '[Ollama安装与配置指南](/zh/local-llms/how-to-install-ollama)',
             '[在VS Code和Cursor中使用本地LLM](/zh/local-llms/local-llms-with-vscode-cursor)',
             '[使用LoRA对本地LLM进行微调](/zh/local-llms/fine-tuning-local-llms-lora)',
+            '[Headless本地LLMs: 无界面运行模型 (2026)](/zh/local-llms/headless-local-llms) -- 无界面本地LLM部署',
+            '[Xinference: 本地运行Llama、Qwen和ChatGLM](/zh/local-llms/xinference-llama-qwen-chatglm-mistral) -- 通過Xinference部署开源模型。',
           ],
         },
         'sources': {
@@ -1782,6 +1796,8 @@ schema: {
             '[Ollama 설치 및 설정 가이드](/local-llms/how-to-install-ollama)',
             '[VS Code 및 Cursor와 로컬 LLM](/local-llms/local-llms-with-vscode-cursor)',
             '[LoRA로 로컬 LLM 파인튜닝](/local-llms/fine-tuning-local-llms-lora)',
+            '[헤드리스 로컬 LLM: UI 없이 모델 실행하기 (2026)](/ko/local-llms/headless-local-llms) -- 헤드리스 로컬 LLM 배포',
+            '[Xinference: Llama, Qwen 및 ChatGLM 로컬 실행](/ko/local-llms/xinference-llama-qwen-chatglm-mistral) -- Xinference로 오픈소스 모델을 배포하세요.',
           ],
         },
         'sources': {

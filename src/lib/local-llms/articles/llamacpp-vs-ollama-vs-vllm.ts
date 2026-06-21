@@ -223,6 +223,7 @@ schema: {
             '[Best Local LLM Frontends (2026)](/local-llms/best-local-llm-frontends) — OpenWebUI, Chatbot UI, and 8 other options ranked',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — 2-minute setup guide for macOS, Windows & Linux',
             '[Local LLM OpenAI-Compatible API Guide](/local-llms/local-llm-openai-compatible-api) — Drop-in replacement for the OpenAI API with local models',
+            '[Xinference: Run Llama, Qwen & ChatGLM Locally](/local-llms/xinference-llama-qwen-chatglm-mistral) -- Deploy open-source models via Xinference.',
           ],
         },
         'sources': {
@@ -458,6 +459,7 @@ schema: {
             '[Mejores frontends de LLM local (2026)](/es/local-llms/best-local-llm-frontends) — OpenWebUI, Chatbot UI y 8 opciones más clasificadas',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Guía de configuración en 2 minutos para macOS, Windows y Linux',
             '[Guía de API compatible con OpenAI para LLM local](/es/local-llms/local-llm-openai-compatible-api) — Reemplazo directo de la API de OpenAI con modelos locales',
+            '[Xinference: Llama, Qwen y ChatGLM localmente](/es/local-llms/xinference-llama-qwen-chatglm-mistral) -- Despliega modelos open-source con Xinference.',
           ],
         },
         'sources': {
@@ -693,6 +695,7 @@ schema: {
             '[أفضل واجهات LLM المحلية (2026)](/ar/local-llms/best-local-llm-frontends) — OpenWebUI و Chatbot UI و8 خيارات أخرى مصنّفة',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — دليل إعداد في دقيقتين لـ macOS و Windows و Linux',
             '[دليل API متوافق مع OpenAI لـ LLM محلي](/ar/local-llms/local-llm-openai-compatible-api) — بديل مباشر لـ API الخاص بـ OpenAI بنماذج محلية',
+            '[Xinference: تشغيل Llama وQwen وChatGLM محلياً](/ar/local-llms/xinference-llama-qwen-chatglm-mistral) -- نشر النماذج مفتوحة المصدر عبر Xinference.',
           ],
         },
         'sources': {
@@ -914,6 +917,7 @@ schema: {
             '[Ollama vs LM Studio: Qual escolher?](/pt/local-llms/ollama-vs-lm-studio) — Comparativo lado a lado das duas interfaces de LLM local mais populares',
             '[Melhor stack de LLM local por caso de uso (2026)](/pt/local-llms/best-local-llm-stack-use-case) — Combinações recomendadas para chat, programação e servidores API',
             '[LLM local com API compatível com OpenAI](/pt/local-llms/local-llm-openai-compatible-api) — Substituto direto da API OpenAI com modelos locais',
+            '[Xinference: Execute Llama, Qwen e ChatGLM Localmente](/pt/local-llms/xinference-llama-qwen-chatglm-mistral) -- Implante modelos com Xinference.',
           ],
         },
         'sources': {
@@ -1142,6 +1146,7 @@ schema: {
             '[Beste lokale LLM-Frontends (2026)](/de/local-llms/best-local-llm-frontends) — OpenWebUI, Chatbot UI und 8 weitere Optionen im Ranking',
             '[Ollama installieren](/de/local-llms/how-to-install-ollama) — 2-Minuten-Setup-Anleitung für macOS, Windows & Linux',
             '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) — Drop-in-Ersatz für die OpenAI API mit lokalen Modellen',
+            '[Xinference: Llama, Qwen & ChatGLM Lokal Ausführen](/de/local-llms/xinference-llama-qwen-chatglm-mistral) -- Open-Source-Modelle mit Xinference bereitstellen.',
           ],
         },
         'sources': {
@@ -1360,6 +1365,7 @@ schema: {
             '[Meilleurs frontends LLM locaux (2026)](/fr/local-llms/best-local-llm-frontends) — OpenWebUI, Chatbot UI et 8 autres options classées',
             '[Installer Ollama](/fr/local-llms/how-to-install-ollama) — Guide d\'installation en 2 minutes pour macOS, Windows & Linux',
             '[API compatible OpenAI pour LLM local](/fr/local-llms/local-llm-openai-compatible-api) — Remplacement drop-in de l\'API OpenAI avec des modèles locaux',
+            '[Xinference: Exécuter Llama, Qwen et ChatGLM en Local](/fr/local-llms/xinference-llama-qwen-chatglm-mistral) -- Déployez des modèles open-source avec Xinference.',
           ],
         },
         'sources': {
@@ -1584,6 +1590,7 @@ schema: {
             '[ベストローカルLLMフロントエンド（2026）](/ja/local-llms/best-local-llm-frontends) — OpenWebUI、Chatbot UIなざ8その他の選択肢ランキング',
             '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — macOS、Windows & Linux向、2分セットアップガイド',
             '[ローカルLLM OpenAI互换APIガイド](/ja/local-llms/local-llm-openai-compatible-api) — ローカルモデルによるOpenAI APIのドロップイン代替',
+            '[Xinference: Llama、Qwen、ChatGLMをローカルで実行する](/ja/local-llms/xinference-llama-qwen-chatglm-mistral) -- XinferenceでオープンソースモデルをDeployする。',
           ],
         },
         'sources': {
@@ -2179,6 +2186,7 @@ schema: {
             '[최고의 로컬 LLM 프론트엔드(2026)](/local-llms/best-local-llm-frontends) — OpenWebUI, Chatbot UI 및 8가지 다른 옵션 순위',
             '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — macOS, Windows 및 Linux를 위한 2분 설치 가이드',
             '[로컬 LLM OpenAI 호환 API 가이드](/local-llms/local-llm-openai-compatible-api) — 로컬 모델로 OpenAI API를 대체하는 방법',
+            '[Xinference: Llama, Qwen 및 ChatGLM 로컬 실행](/ko/local-llms/xinference-llama-qwen-chatglm-mistral) -- Xinference로 오픈소스 모델을 배포하세요.',
           ],
         },
         sources: {

@@ -89,6 +89,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Radeon 6800M for Local LLM: Full Setup Guide](/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Performance Guide](/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   de: {
@@ -164,6 +171,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Welche CPUs sind für lokale LLM-Inferenz am schnellsten?',
             a: 'Apple M-series-Chips (M3, M4) nutzen eine Unified-Memory-Architektur und erreichen 15–30 tok/s bei 7B-Modellen — weit überlegen gegenüber x86-CPUs bei reiner CPU-Inferenz. Unter den x86-CPUs schneiden diejenigen mit höherer Speicherbandbreite und großem L3-Cache am besten ab.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Radeon 6800M für lokale LLMs: Vollständiger Setup-Leitfaden](/de/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Leistungshandbuch](/de/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -243,6 +257,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Radeon 6800M pour LLM local : Guide complet](/fr/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Guide de performance](/fr/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   ja: {
@@ -318,6 +339,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'ローカルLLM推論で最速のCPUはどれですか？',
             a: 'Apple M-series チップ（M3、M4）はユニファイドメモリアーキテクチャを使用し、7Bモデルで15〜30 tok/sに達します — CPU専用推論でx86 CPUを大きく凌駕します。x86 CPUの中では、メモリ帯域幅が高く大容量のL3キャッシュを持つものが最良の性能を発揮します。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Radeon 6800MでローカルLLMを動かす：完全セットアップガイド](/ja/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: パフォーマンスガイド](/ja/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -397,6 +425,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Radeon 6800M本地LLM：完整设置指南](/zh/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: 性能指南](/zh/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   es: {
@@ -472,6 +507,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Qué CPUs son más rápidas para la inferencia de LLM local?',
             a: 'Los chips Apple M-series (M3, M4) utilizan arquitectura de memoria unificada y alcanzan entre 15 y 30 tok/s en modelos 7B — muy superiores a las CPUs x86 en inferencia solo con CPU. Entre las CPUs x86, las que tienen mayor ancho de banda de memoria y caché L3 grande rinden mejor.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Radeon 6800M para LLM local: Guía completa de configuración](/es/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Guía de rendimiento](/es/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -551,6 +593,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Radeon 6800M para LLM local: Guia completo de configuração](/pt/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: Guia de desempenho](/pt/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
+        ],
+      },
     },
   },
   ar: {
@@ -626,6 +675,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'ما بطاقات CPU الأسرع للاستدلال المحلي على نماذج اللغة الكبيرة؟',
             a: 'شرائح Apple M-series (M3، M4) تستخدم بنية ذاكرة موحدة وتصل إلى 15–30 رمز/ثانية على نماذج 7B — أفضل بكثير من CPUs x86 في الاستدلال بـCPU فقط. بين CPUs x86، التي تملك عرض نطاق ذاكرة أعلى وذاكرة تخزين مؤقت L3 كبيرة تؤدي أداءً أفضل.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Radeon 6800M للنماذج المحلية: دليل الإعداد الكامل](/ar/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: دليل الأداء](/ar/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },
@@ -707,6 +763,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '로컬 LLM 추론에 가장 빠른 CPU는 무엇입니까?',
             a: 'Apple M-series 칩(M3, M4)은 통합 메모리 아키텍처를 사용하여 7B 모델에서 15~30 tok/s에 도달합니다 — CPU 전용 추론에서 x86 CPU를 크게 능가합니다. x86 CPU 중에서는 메모리 대역폭이 높고 대용량 L3 캐시를 갖춘 CPU가 가장 좋은 성능을 발휘합니다.',
           },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[Radeon 6800M 로컬 LLM: 완전 설정 가이드](/ko/prompt-bites/radeon-6800m-local-llm) -- Radeon GPU guide',
+          '[Strix Halo + Ollama + Vulkan: 성능 가이드](/ko/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo guide',
         ],
       },
     },

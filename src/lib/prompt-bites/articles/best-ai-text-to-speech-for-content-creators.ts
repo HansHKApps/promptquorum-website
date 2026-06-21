@@ -110,6 +110,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        heading: 'Related Guides',
+        items: [
+          '[Best Open-Source Alternatives to ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- ChatGPT alternatives',
+          '[Best LLM Right Now](/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Local LLMs for Creative Writing](/local-llms/best-local-llms-for-creative-writing) -- creative writing guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',

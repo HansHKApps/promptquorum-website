@@ -562,6 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[DeepSeek v3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) -- Minimum VRAM to run DeepSeek v3 full and quantized variants.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
             '[Best Local Reasoning Model 2026: DeepSeek-R1 Distills Ranked](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Which DeepSeek-R1 distill fits your hardware tier — 7B to 70B — with benchmarks and Ollama setup.',
+            '[MRAM and In-Memory Computing: The Next Leap for On-Device AI?](/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM and in-memory computing for AI',
           ],
         },
         sources: {
@@ -1223,6 +1224,7 @@ schema: {
             '[Requisitos de hardware local de DeepSeek v3](/es/prompt-bites/deepseek-v3-local-hardware-requirements) -- VRAM mínima para ejecutar DeepSeek v3 en variantes completa y cuantizada.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
             '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 Distills clasificados](/es/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Qué distill DeepSeek-R1 encaja con tu nivel de hardware — 7B a 70B — con benchmarks y configuración de Ollama.',
+            '[MRAM e Informática en Memoria: ¿El próximo salto para IA en dispositivo?](/es/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM e informática en memoria para IA',
           ],
         },
         sources: {
@@ -1884,6 +1886,7 @@ schema: {
             '[متطلبات عتاد DeepSeek v3 المحلي](/ar/prompt-bites/deepseek-v3-local-hardware-requirements) -- الحد الأدنى من VRAM لتشغيل DeepSeek v3 الكامل والمتغيرات المكمّمة.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
             '[أفضل نموذج استدلال محلي 2026: ترتيب DeepSeek-R1 Distills](/ar/local-llms/best-local-reasoning-model-deepseek-r1-2026) — أي distill من DeepSeek-R1 يناسب مستوى عتادك — من 7B إلى 70B — مع بيانات المعيار وإعداد Ollama.',
+            '[MRAM والحوسبة داخل الذاكرة: الخطوة التالية لذكاء اصطناعي على الجهاز؟](/ar/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM والحوسبة داخل الذاكرة للذكاء الاصطناعي',
           ],
         },
         sources: {
@@ -2545,6 +2548,7 @@ schema: {
             '[Requisitos de Hardware Local do DeepSeek v3](/pt/prompt-bites/deepseek-v3-local-hardware-requirements) -- VRAM mínima para rodar o DeepSeek v3 completo e as variantes quantizadas.',
             '[Local LLM Hardware Guide 2026 (English)](/local-llms/local-llm-hardware-guide-2026) — versão em inglês deste guia',
             '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 Distills classificados](/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Qual distill DeepSeek-R1 se adapta ao seu nível de hardware — 7B a 70B — com benchmarks e configuração do Ollama.',
+            '[MRAM e Computação em Memória: O próximo salto para IA em dispositivo?](/pt/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM e computação em memória para IA',
           ],
         },
         sources: {
@@ -3206,6 +3210,7 @@ schema: {
             '[DeepSeek v3 Lokale Hardware-Anforderungen](/de/prompt-bites/deepseek-v3-local-hardware-requirements) -- Minimaler VRAM, um DeepSeek v3 voll und quantisiert zu betreiben.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
             '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 Distills im Ranking](/de/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Welches DeepSeek-R1-Distill passt zu Ihrem Hardware-Tier — 7B bis 70B — mit Benchmarks und Ollama-Einrichtung.',
+            '[MRAM und In-Memory-Computing: Der nächste Sprung für On-Device-KI?](/de/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM und In-Memory-Computing für KI',
           ],
         },
         sources: {
@@ -3867,6 +3872,7 @@ schema: {
             '[Besoins materiels locaux de DeepSeek v3](/fr/prompt-bites/deepseek-v3-local-hardware-requirements) -- VRAM minimale pour faire tourner DeepSeek v3 complet et ses variantes quantifiees.',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
             '[Meilleur modèle de raisonnement local 2026 : DeepSeek-R1 classé](/fr/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Quel distill DeepSeek-R1 correspond à votre niveau matériel — 7B à 70B — avec benchmarks et configuration Ollama.',
+            '[MRAM et informatique en mémoire: le prochain bond pour l\'IA sur appareil?](/fr/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM et informatique en mémoire pour IA',
           ],
         },
         sources: {
@@ -4528,6 +4534,7 @@ schema: {
             '[DeepSeek v3 ローカルハードウェア要件](/ja/prompt-bites/deepseek-v3-local-hardware-requirements) -- DeepSeek v3のフルおよび量子化バリアントを実行するための最小VRAM。',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
             '[2026年最高のローカル推論モデル：DeepSeek-R1 Distillランキング](/ja/local-llms/best-local-reasoning-model-deepseek-r1-2026) — ハードウェアティア別（7B〜70B）のDeepSeek-R1 Distill比較、ベンチマーク、Ollamaセットアップ。',
+            '[MRAMとメモリ内コンピューティング：オンデバイスAIの次のステップ?](/ja/local-llms/mram-in-memory-computing-local-ai-2026) -- AIのためのMRAMとメモリ内コンピューティング',
           ],
         },
         sources: {
@@ -5189,6 +5196,7 @@ schema: {
             '[DeepSeek v3 本地硬件要求](/zh/prompt-bites/deepseek-v3-local-hardware-requirements) -- 运行 DeepSeek v3 完整版和量化变体的最低显存。',
             '[Guia de Hardware para LLMs Locais 2026 (Português)](/pt/local-llms/local-llm-hardware-guide-2026) — versão em português deste guia',
             '[2026年最佳本地推理模型：DeepSeek-R1 Distill排名](/zh/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 各显存规格（7B至70B）对应的DeepSeek-R1 Distill推荐、基准测试数据及Ollama部署指南。',
+            '[MRAM与内存计算：片上AI的下一个飞跃？](/zh/local-llms/mram-in-memory-computing-local-ai-2026) -- AI的MRAM与内存计算',
           ],
         },
         sources: {
@@ -5813,6 +5821,7 @@ schema: {
             '[DeepSeek v3 로컬 하드웨어 요구 사항](/prompt-bites/deepseek-v3-local-hardware-requirements) -- DeepSeek v3 전체 및 양자화 변형을 실행하는 최소 VRAM.',
             '[로컬 LLM 하드웨어 가이드 2026 (포르투갈어)](/pt/local-llms/local-llm-hardware-guide-2026) — 이 가이드의 포르투갈어 버전',
             '[2026년 최고의 로컬 추론 모델: DeepSeek-R1 Distill 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 하드웨어 티어별(7B~70B) DeepSeek-R1 Distill 비교, 벤치마크 데이터 및 Ollama 설정 가이드.',
+            '[MRAM과 인메모리 컴퓨팅: 온디바이스 AI의 다음 도약?](/ko/local-llms/mram-in-memory-computing-local-ai-2026) -- AI를 위한 MRAM과 인메모리 컴퓨팅',
           ],
         },
         sources: {

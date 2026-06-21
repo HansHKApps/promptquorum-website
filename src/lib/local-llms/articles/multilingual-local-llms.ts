@@ -162,6 +162,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
           ],
         },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Related Reading',
+          items: [
+            '[ALLaM, AceGPT & the Best Saudi Arabic Local LLMs (2026)](/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi Arabic LLMs and ALLaM 2026',
+          ],
+        },
         sources: {
           id: 'sources',
           title: 'Sources',
@@ -323,6 +330,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: '¿Existen LLM locales multilingues que cumplan con el GDPR para organizaciones de la UE?',
               a: 'Sí. Ejecutar Qwen3 o Mistral localmente con Ollama mantiene todos los datos en las instalaciones y completamente sin conexión. Para el cumplimiento del Reglamento de IA de la UE (vigente desde febrero de 2025), la inferencia local elimina la preocupación del procesador de datos de terceros para aplicaciones de IA de alto riesgo. Mistral AI, con sede en Francia, es preferida por algunas organizaciones de la UE por razones de gobernanza de datos incluso para modelos desplegados localmente.',
             },
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lecturas relacionadas',
+          items: [
+            '[ALLaM, AceGPT y los mejores LLM locales en árabe saudí (2026)](/es/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs árabe saudí y ALLaM 2026',
           ],
         },
         sources: {
@@ -649,6 +663,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
           ],
         },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'قراءات ذات صلة',
+          items: [
+            '[ALLaM وAceGPT وأفضل نماذج LLM العربية السعودية المحلية (2026)](/ar/local-llms/best-saudi-arabic-local-llms-allam-2026) -- نماذج LLM العربية السعودية و ALLaM 2026',
+          ],
+        },
         sources: {
           id: 'sources',
           title: 'المصادر',
@@ -970,6 +991,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
           ],
         },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Leitura Relacionada',
+          items: [
+            '[ALLaM, AceGPT e os melhores LLMs locais de árabe saudita (2026)](/pt/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs de árabe saudita e ALLaM 2026',
+          ],
+        },
       },
       schema: {
         '@context': 'https://schema.org',
@@ -1279,7 +1307,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LM Studio vs. Ollama: Vergleich 2026](/de/local-llms/ollama-vs-lm-studio) -- Welches Tool ist für lokale Modelle besser?',
             '[Lokale LLM-Hardware-Anforderungen 2026](/de/local-llms/local-llm-hardware-guide-2026) -- GPU/CPU/RAM-Anforderungen für Qwen3, Llama, Mistral.',
             '[LLM-Quantisierung erklärt: Q4_K_M vs. Q5_K_M](/de/local-llms/llm-quantization-explained) -- Warum Q4_K_M Standard ist.',
-            '[Troubleshooting lokaler LLM-Setups](/de/local-llms/troubleshooting-local-llm-setup) -- Häufige Fehler und Lösungen (VRAM, Pfade, Quantisierungen).'
+            '[Troubleshooting lokaler LLM-Setups](/de/local-llms/troubleshooting-local-llm-setup) -- Häufige Fehler und Lösungen (VRAM, Pfade, Quantisierungen).',
+            '[ALLaM, AceGPT & die besten saudischen arabischen lokalen LLMs (2026)](/de/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi-Arabische LLMs und ALLaM 2026',
           ]
         },
         sources: {
@@ -1792,7 +1821,8 @@ schema: {
             '[LM Studio vs Ollama : Comparaison 2026](/fr/local-llms/ollama-vs-lm-studio) -- Quel outil est le meilleur pour les modèles locaux ?',
             '[Configuration matérielle des LLMs locaux 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences GPU/CPU/RAM pour Qwen3, Llama, Mistral.',
             '[Quantification LLM expliquée : Q4_K_M vs Q5_K_M](/fr/local-llms/llm-quantization-explained) -- Pourquoi Q4_K_M est la norme.',
-            '[Dépannage des configurations locales des LLMs](/fr/local-llms/troubleshooting-local-llm-setup) -- Erreurs courantes et solutions (VRAM, chemins, quantifications).'
+            '[Dépannage des configurations locales des LLMs](/fr/local-llms/troubleshooting-local-llm-setup) -- Erreurs courantes et solutions (VRAM, chemins, quantifications).',
+            '[ALLaM, AceGPT et les meilleurs LLM locaux en arabe saoudien (2026)](/fr/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs arabe saoudien et ALLaM 2026',
           ]
         },
         sources: {
@@ -2289,7 +2319,8 @@ schema: {
             '[LM Studio vs Ollama：2026 比較](/ja/local-llms/ollama-vs-lm-studio) -- ローカルモデルに最良のツール？',
             '[ローカルLLM ハードウェア要件 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- Qwen3、Llama、Mistral の GPU/CPU/RAM 要件。',
             '[LLM 量子化説明：Q4_K_M vs Q5_K_M](/ja/local-llms/llm-quantization-explained) -- Q4_K_M が標準な理由。',
-            '[ローカルLLM セットアップトラブルシューティング](/ja/local-llms/troubleshooting-local-llm-setup) -- 一般的エラーと解決策（VRAM、パス、量子化）。'
+            '[ローカルLLM セットアップトラブルシューティング](/ja/local-llms/troubleshooting-local-llm-setup) -- 一般的エラーと解決策（VRAM、パス、量子化）。',
+            '[ALLaM、AceGPT、そしてサウジアラビアの最良のアラビア語ローカルLLM (2026年)](/ja/local-llms/best-saudi-arabic-local-llms-allam-2026) -- サウジアラビアのLLMとALLaM 2026',
           ]
         },
         sources: {
@@ -2702,7 +2733,8 @@ schema: {
             '[LM Studio vs Ollama：2026对比](/zh/local-llms/ollama-vs-lm-studio) -- 本地模型最佳工具是哪个？',
             '[本地LLM硬件要求2026](/zh/local-llms/local-llm-hardware-guide-2026) -- Qwen3、Llama、Mistral的GPU/CPU/RAM要求。',
             '[LLM量化解释：Q4_K_M vs Q5_K_M](/zh/local-llms/llm-quantization-explained) -- 为什么Q4_K_M是标准。',
-            '[本地LLM配置故障排除](/zh/local-llms/troubleshooting-local-llm-setup) -- 常见错误与解决方案（VRAM、路径、量化）。'
+            '[本地LLM配置故障排除](/zh/local-llms/troubleshooting-local-llm-setup) -- 常见错误与解决方案（VRAM、路径、量化）。',
+            '[ALLaM、AceGPT 及最佳沙特阿拉伯语本地大模型 (2026)](/zh/local-llms/best-saudi-arabic-local-llms-allam-2026) -- 沙特阿拉伯语LLM和ALLaM 2026',
           ]
         },
         sources: {

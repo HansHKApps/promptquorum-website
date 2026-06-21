@@ -276,6 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) — On-premise deployment security',
           '[Ollama vs. LM Studio: Which Is Best?](/local-llms/ollama-vs-lm-studio) — Tool choice for Arabic model deployment',
           '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) — Calculate hardware requirements',
+          '[ALLaM, AceGPT & the Best Saudi Arabic Local LLMs (2026)](/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi Arabic LLMs and ALLaM 2026',
         ],
       },
       sources: {
@@ -622,6 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[قائمة التحقق من أمان وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) — أمان النشر داخل المؤسسة',
           '[Ollama مقابل LM Studio: أيهما الأفضل؟](/ar/local-llms/ollama-vs-lm-studio) — اختيار الأداة لنشر النموذج العربي',
           '[حاسبة VRAM لنماذج LLM المحلية](/ar/local-llms/vram-calculator-local-llm) — احسب متطلبات الأجهزة',
+          '[ALLaM وAceGPT وأفضل نماذج LLM العربية السعودية المحلية (2026)](/ar/local-llms/best-saudi-arabic-local-llms-allam-2026) -- نماذج LLM العربية السعودية و ALLaM 2026',
         ],
       },
       sources: {
@@ -968,6 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Checkliste für Sicherheit und Datenschutz lokaler LLMs](/de/local-llms/local-llm-security-privacy-checklist) — Sicherheit bei der On-Premise-Bereitstellung',
           '[Ollama vs. LM Studio: Was ist am besten?](/de/local-llms/ollama-vs-lm-studio) — Werkzeugwahl für die Bereitstellung arabischer Modelle',
           '[VRAM-Rechner für lokale LLMs](/de/local-llms/vram-calculator-local-llm) — Hardwareanforderungen berechnen',
+          '[ALLaM, AceGPT & die besten saudischen arabischen lokalen LLMs (2026)](/de/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi-Arabische LLMs und ALLaM 2026',
         ],
       },
       sources: {
@@ -1314,6 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lista de verificación de seguridad y privacidad de LLM locales](/es/local-llms/local-llm-security-privacy-checklist) — Seguridad del despliegue on-premise',
           '[Ollama vs. LM Studio: ¿cuál es mejor?](/es/local-llms/ollama-vs-lm-studio) — Elección de herramienta para el despliegue de modelos árabes',
           '[Calculadora de VRAM para LLM locales](/es/local-llms/vram-calculator-local-llm) — Calcula los requisitos de hardware',
+          '[ALLaM, AceGPT y los mejores LLM locales en árabe saudí (2026)](/es/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs árabe saudí y ALLaM 2026',
         ],
       },
       sources: {
@@ -1661,6 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Checklist de sécurité et de confidentialité des LLM locaux](/fr/local-llms/local-llm-security-privacy-checklist) — Sécurité du déploiement sur site',
           '[Ollama vs. LM Studio : lequel est le meilleur ?](/fr/local-llms/ollama-vs-lm-studio) — Choix d\'outil pour le déploiement de modèles arabes',
           '[Calculateur de VRAM pour LLM locaux](/fr/local-llms/vram-calculator-local-llm) — Calculez les besoins matériels',
+          '[ALLaM, AceGPT et les meilleurs LLM locaux en arabe saoudien (2026)](/fr/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs arabe saoudien et ALLaM 2026',
         ],
       },
       sources: {
@@ -2007,6 +2012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルLLMのセキュリティとプライバシーのチェックリスト](/ja/local-llms/local-llm-security-privacy-checklist) — オンプレミスデプロイのセキュリティ',
           '[Ollama対LM Studio：どちらがベスト？](/ja/local-llms/ollama-vs-lm-studio) — アラビア語モデルデプロイのツール選び',
           '[ローカルLLM向けVRAM計算ツール](/ja/local-llms/vram-calculator-local-llm) — ハードウェア要件を計算',
+          '[ALLaM、AceGPT、そしてサウジアラビアの最良のアラビア語ローカルLLM (2026年)](/ja/local-llms/best-saudi-arabic-local-llms-allam-2026) -- サウジアラビアのLLMとALLaM 2026',
         ],
       },
       sources: {
@@ -2353,6 +2359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Checklist de segurança e privacidade para LLMs locais](/pt/local-llms/local-llm-security-privacy-checklist) — Segurança de implantação on-premise',
           '[Ollama vs. LM Studio: qual é o melhor?](/pt/local-llms/ollama-vs-lm-studio) — Escolha de ferramenta para implantação de modelos em árabe',
           '[Calculadora de VRAM para LLMs locais](/pt/local-llms/vram-calculator-local-llm) — Calcule os requisitos de hardware',
+          '[ALLaM, AceGPT e os melhores LLMs locais de árabe saudita (2026)](/pt/local-llms/best-saudi-arabic-local-llms-allam-2026) -- LLMs de árabe saudita e ALLaM 2026',
         ],
       },
       sources: {
@@ -2700,6 +2707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地 LLM 安全与隐私清单](/zh/local-llms/local-llm-security-privacy-checklist) — 本地部署安全',
           '[Ollama vs. LM Studio：哪个更好？](/zh/local-llms/ollama-vs-lm-studio) — 阿拉伯语模型部署的工具选择',
           '[本地 LLM 的 VRAM 计算器](/zh/local-llms/vram-calculator-local-llm) — 计算硬件需求',
+          '[ALLaM、AceGPT 及最佳沙特阿拉伯语本地大模型 (2026)](/zh/local-llms/best-saudi-arabic-local-llms-allam-2026) -- 沙特阿拉伯语LLM和ALLaM 2026',
         ],
       },
       sources: {
@@ -3047,6 +3055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 LLM 보안 및 개인정보 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) — 온프레미스 배포 보안',
           '[Ollama vs. LM Studio: 어느 것이 최고인가?](/ko/local-llms/ollama-vs-lm-studio) — 아랍어 모델 배포를 위한 도구 선택',
           '[로컬 LLM용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) — 하드웨어 요구 사항 계산',
+          '[ALLaM, AceGPT 및 최고의 사우디 아랍어 로컬 LLM (2026)](/ko/local-llms/best-saudi-arabic-local-llms-allam-2026) -- 사우디 아랍어 LLM과 ALLaM 2026',
         ],
       },
       sources: {

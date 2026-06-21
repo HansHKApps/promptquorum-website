@@ -314,6 +314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Tool Use and Function Calling — structured output via tool definitions and function schemas',
             '[Tokens & Token Economics](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — understanding token costs for constrained decoding and two-stage pipelines',
             'Error Handling in LLM Applications — detecting and recovering from malformed output in production systems',
+            '[Prompts for Reliable Structured Data](/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
         howToStart: {
@@ -692,6 +693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Tool Use und Function Calling — Strukturierter Output via Tool-Definitionen und Funktionsschemata',
             '[Tokens & Token Economics](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Token-Kosten für Constrained Decoding und zweistufige Pipelines verstehen',
             'Fehlerbehandlung in LLM-Anwendungen — Fehlerhaften Output in Produktionssystemen erkennen und beheben',
+            '[Prompts für zuverlässige strukturierte Daten](/de/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
 
@@ -1040,6 +1042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Tool use y function calling — salida estructurada vía definiciones de herramientas y schemas de función',
             '[Tokens y economía de tokens](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — comprensión de los costos de tokens para constrained decoding y pipelines de dos etapas',
             'Manejo de errores en aplicaciones LLM — detección y recuperación de salida malformada en sistemas de producción',
+            '[Prompts para Datos Estructurados Confiables](/es/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
         howToStart: {
@@ -1374,6 +1377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[اكتب كودًا أفضل بالذكاء الاصطناعي](/ar/prompt-engineering/write-better-code-with-ai) — تطبيق تقنيات التحكم في المخرجات في سير عمل توليد الكود',
             'استخدام الأدوات واستدعاء الوظائف — المخرجات المنظّمة عبر تعريفات الأدوات ومخططات الوظائف',
             '[الرموز واقتصادياتها](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — فهم تكاليف الرموز للفك المقيّد ومسارات المرحلتين',
+            '[مطالبات للبيانات المنظمة الموثوقة](/ar/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
         howToStart: {
@@ -1704,6 +1708,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Tool use e function calling — saída estruturada via definições de ferramentas e schemas de função',
             '[Tokens e economia de tokens](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — compreensão dos custos de tokens para constrained decoding e pipelines de duas etapas',
             'Tratamento de erros em aplicações LLM — detecção e recuperação de saída malformada em sistemas de produção',
+            '[Prompts para Dados Estruturados Confiáveis](/pt/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
         howToStart: {
@@ -2068,6 +2073,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Tool Use et Function Calling — sortie structurée via les définitions de tools et les schémas de fonctions',
             '[Tokens et économie des tokens](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — comprendre les coûts en tokens pour le decoding contraint et les pipelines en deux étapes',
             'Gestion des erreurs dans les applications LLM — détecter et récupérer les sorties malformées en production',
+            '[Prompts pour des données structurées fiables](/fr/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
 
@@ -2436,6 +2442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Tool UseとFunction Calling — ツール定義と関数スキーマによる構造化出力',
             '[トークンとトークンエコノミクス](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 制約デコードと2段階パイプラインのトークンコスト理解',
             'LLMアプリケーションのエラー処理 — 本番システムで不正な出力を検出・回復する方法',
+            '[信頼性の高い構造化データのプロンプト](/ja/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
 
@@ -2804,6 +2811,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '工具使用和函数调用 — 通过工具定义和函数Schema实现结构化输出',
             '[词元与词元经济学](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 理解受限解码和两阶段流水线的词元成本',
             'LLM应用中的错误处理 — 在生产系统中检测和恢复格式错误输出',
+            '[可靠结构化数据的提示词](/zh/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
 
@@ -3165,6 +3173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '도구 사용 및 함수 호출 — 도구 정의와 함수 스키마를 통한 구조화 출력',
             '[토큰과 토큰 경제학](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 제약 디코딩과 2단계 파이프라인의 토큰 비용 이해',
             'LLM 애플리케이션의 오류 처리 — 프로덕션 시스템에서 잘못된 출력 감지 및 복구',
+            '[신뢰할 수 있는 구조화 데이터를 위한 프롬프트](/ko/prompt-engineering/prompts-for-reliable-structured-data)',
           ],
         },
 

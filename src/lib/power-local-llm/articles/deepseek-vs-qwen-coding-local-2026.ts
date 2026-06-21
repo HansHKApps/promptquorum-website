@@ -274,6 +274,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Replace GitHub Copilot with local LLM: /power-local-llm/replace-github-copilot-with-local-llm',
           'Best local coding models 2026: /power-local-llm/best-local-coding-models-2026',
           'Best local reasoning model 2026 — for reasoning (not coding) distills, this is the guide: /local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[Best IDE Plugins for Local LLMs in 2026 (VS Code & JetBrains)](/power-local-llm/best-local-llm-ide-plugins-2026) -- VS Code and JetBrains plugins for connecting local coding models',
+          '[Qwen Local Deployment: Complete Production Guide 2026](/power-local-llm/qwen-local-deployment-complete-guide-2026) -- deploy the Qwen coding model as a persistent local server',
         ],
       },
       faq: {
@@ -656,6 +658,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Reemplaza GitHub Copilot con un LLM local: /es/power-local-llm/replace-github-copilot-with-local-llm',
           'Mejores modelos de coding local 2026: /es/power-local-llm/best-local-coding-models-2026',
           'Mejor modelo de razonamiento local 2026 — para distills de razonamiento (no de código): /es/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[Mejores plugins IDE para LLMs locales en 2026 (VS Code y JetBrains)](/es/power-local-llm/best-local-llm-ide-plugins-2026) -- plugins de VS Code y JetBrains para conectar modelos de coding locales',
+          '[Despliegue Local de Qwen: Guía Completa de Producción 2026](/es/power-local-llm/qwen-local-deployment-complete-guide-2026) -- desplegar el modelo de coding Qwen como servidor local persistente',
         ],
       },
       faq: {
@@ -1040,6 +1044,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub Copilot을 로컬 LLM으로 교체: /ko/power-local-llm/replace-github-copilot-with-local-llm',
           '2026 최고 로컬 코딩 모델: /ko/power-local-llm/best-local-coding-models-2026',
           '2026년 최고의 로컬 추론 모델 — 추론용 Distill(코딩 아님) 가이드: /ko/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[2026년 최고의 로컬 LLM IDE 플러그인 5선](/ko/power-local-llm/best-local-llm-ide-plugins-2026) -- 로컬 코딩 모델을 연결하는 VS Code 및 JetBrains 플러그인',
+          '[Qwen 로컬 배포 완전 가이드 2026: 프로덕션 서버 구축](/ko/power-local-llm/qwen-local-deployment-complete-guide-2026) -- Qwen 코딩 모델을 영구 로컬 서버로 배포하기',
         ],
       },
       faq: {
@@ -1209,6 +1215,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Wenn der Code die eigene Maschine nicht verlassen darf: Qwen3-Coder 32B verwenden. Wenn eine Cloud-API akzeptabel ist: DeepSeek-V3 ist etwas besser für Python und JavaScript.' },
         ],
       },
+      internalLinks: {
+        id: 'see-also',
+        title: 'Verwandte Anleitungen',
+        items: [
+          'Qwen-Produktions-Deployment-Leitfaden: /de/power-local-llm/qwen-local-deployment-complete-guide-2026',
+          'Continue.dev vs. Cline vs. Aider Vergleich: /de/power-local-llm/continue-dev-vs-cline-vs-aider-local',
+          'GitHub Copilot durch lokales LLM ersetzen: /de/power-local-llm/replace-github-copilot-with-local-llm',
+          'Beste lokale Coding-Modelle 2026: /de/power-local-llm/best-local-coding-models-2026',
+          'Bestes lokales Reasoning-Modell 2026 — für Reasoning-Distills (nicht Coding): /de/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[Beste IDE-Plugins für lokale LLMs 2026 (VS Code & JetBrains)](/de/power-local-llm/best-local-llm-ide-plugins-2026) -- VS Code- und JetBrains-Plugins für lokale Coding-Modelle',
+          '[Qwen Lokales Deployment: Vollständiger Produktionsleitfaden 2026](/de/power-local-llm/qwen-local-deployment-complete-guide-2026) -- Qwen-Coding-Modell als persistenten lokalen Server deployen',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -1290,6 +1309,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Si le code ne doit pas quitter votre machine : utilisez Qwen3-Coder 32B. Si une API cloud est acceptable : DeepSeek-V3 est légèrement meilleur pour Python et JavaScript.' },
         ],
       },
+      internalLinks: {
+        id: 'see-also',
+        title: 'Guides associés',
+        items: [
+          'Guide de déploiement Qwen en production : /fr/power-local-llm/qwen-local-deployment-complete-guide-2026',
+          'Comparatif Continue.dev vs Cline vs Aider : /fr/power-local-llm/continue-dev-vs-cline-vs-aider-local',
+          'Remplacer GitHub Copilot par un LLM local : /fr/power-local-llm/replace-github-copilot-with-local-llm',
+          'Meilleurs modèles de coding local 2026 : /fr/power-local-llm/best-local-coding-models-2026',
+          'Meilleur modèle de raisonnement local 2026 — pour les distills de raisonnement (pas de code) : /fr/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[Meilleurs plugins IDE pour LLMs locaux 2026 (VS Code & JetBrains)](/fr/power-local-llm/best-local-llm-ide-plugins-2026) -- plugins VS Code et JetBrains pour modèles de coding locaux',
+          '[Déploiement Local de Qwen : Guide Complet de Production 2026](/fr/power-local-llm/qwen-local-deployment-complete-guide-2026) -- déployer le modèle de coding Qwen comme serveur local persistant',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
@@ -1368,6 +1400,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen3-Coder 32Bは2026年における最高の完全ローカルコーディングLLMであり、DeepSeek-V3はAPIを通じたPythonとJavaScriptでのみ上回る。' },
           { type: 'plain-terms', text: 'コードを自分のマシンから外に出したくない場合：Qwen3-Coder 32Bを使用。クラウドAPIが許容できる場合：DeepSeek-V3はPythonとJSで若干優秀。' },
+        ],
+      },
+      internalLinks: {
+        id: 'see-also',
+        title: '関連ガイド',
+        items: [
+          'Qwenプロダクション・デプロイメントガイド: /ja/power-local-llm/qwen-local-deployment-complete-guide-2026',
+          'Continue.dev vs Cline vs Aider 比較: /ja/power-local-llm/continue-dev-vs-cline-vs-aider-local',
+          'GitHub CopilotをローカルLLMに置き換える: /ja/power-local-llm/replace-github-copilot-with-local-llm',
+          '最高のローカルコーディングモデル2026: /ja/power-local-llm/best-local-coding-models-2026',
+          'ローカル推論モデル最良2026年版 — 推論Distill（コーディングでない）向け: /ja/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[ローカルLLM向けIDEプラグインおすすめ2026年版（VS Code・JetBrains）](/ja/power-local-llm/best-local-llm-ide-plugins-2026) -- ローカルコーディングモデルを接続するVS Code・JetBrainsプラグイン',
+          '[Qwenローカルデプロイ完全ガイド2026：Docker・APIサーバー・マルチGPU](/ja/power-local-llm/qwen-local-deployment-complete-guide-2026) -- Qwenコーディングモデルを永続的なローカルサーバーとしてデプロイ',
         ],
       },
       faq: {
@@ -1461,6 +1506,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'DeepSeek-R1-Distill-Qwen-32B（本地）', '1': '72.6%', '2': '39.4%', '3': '36.8%', '4': '本地推理任务' },
           { '0': 'Qwen3-Coder 32B（本地）', '1': '77.8%', '2': '38.2%', '3': '35.0%', '4': 'Rust、C++、重构' },
           { '0': 'Qwen3-Coder 14B（本地）', '1': '72.1%', '2': '33.6%', '3': '28.4%', '4': '自动补全、经济选择' },
+        ],
+      },
+      internalLinks: {
+        id: 'see-also',
+        title: '相关指南',
+        items: [
+          'Qwen本地部署生产指南: /zh/power-local-llm/qwen-local-deployment-complete-guide-2026',
+          'Continue.dev vs Cline vs Aider比较: /zh/power-local-llm/continue-dev-vs-cline-vs-aider-local',
+          '用本地LLM替换GitHub Copilot: /zh/power-local-llm/replace-github-copilot-with-local-llm',
+          '2026年最佳本地编程模型: /zh/power-local-llm/best-local-coding-models-2026',
+          '2026年最佳本地推理模型 — 推理Distill（非编程）指南: /zh/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[2026年本地LLM最佳IDE插件推荐（VS Code & JetBrains）](/zh/power-local-llm/best-local-llm-ide-plugins-2026) -- 连接本地编程模型的VS Code和JetBrains插件',
+          '[Qwen本地部署完整指南2026：Docker、API服务器、多GPU配置](/zh/power-local-llm/qwen-local-deployment-complete-guide-2026) -- 将Qwen编程模型部署为持久化本地服务器',
         ],
       },
       faq: {
@@ -1763,6 +1821,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Substitua o GitHub Copilot por um LLM local: /pt/power-local-llm/replace-github-copilot-with-local-llm',
           'Melhores modelos de codificação local 2026: /pt/power-local-llm/best-local-coding-models-2026',
           'Melhor modelo de raciocínio local 2026 — para distills de raciocínio (não de código): /pt/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[Melhores plugins de IDE para LLMs locais em 2026 (VS Code e JetBrains)](/pt/power-local-llm/best-local-llm-ide-plugins-2026) -- plugins de VS Code e JetBrains para conectar modelos de coding locais',
+          '[Implantação Local do Qwen: Guia Completo de Produção 2026](/pt/power-local-llm/qwen-local-deployment-complete-guide-2026) -- implantar o modelo de coding Qwen como servidor local persistente',
         ],
       },
       faq: {
@@ -2147,6 +2207,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'استبدال GitHub Copilot بنموذج لغوي محلي: /ar/power-local-llm/replace-github-copilot-with-local-llm',
           'أفضل نماذج البرمجة المحلية 2026: /ar/power-local-llm/best-local-coding-models-2026',
           'أفضل نموذج استدلال محلي 2026 — لـ distills الاستدلال (وليس البرمجة): /ar/local-llms/best-local-reasoning-model-deepseek-r1-2026',
+          '[أفضل إضافات IDE لنماذج LLM المحلية في 2026 (VS Code وJetBrains)](/ar/power-local-llm/best-local-llm-ide-plugins-2026) -- إضافات VS Code وJetBrains لتوصيل نماذج البرمجة المحلية',
+          '[نشر Qwen محليًا: الدليل الكامل للإنتاج 2026](/ar/power-local-llm/qwen-local-deployment-complete-guide-2026) -- نشر نموذج البرمجة Qwen كخادم محلي دائم',
         ],
       },
       faq: {

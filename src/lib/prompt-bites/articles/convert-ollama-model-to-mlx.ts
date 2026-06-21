@@ -119,6 +119,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Ollama + MLX on Apple Silicon](/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[MLX vs Ollama vs llama.cpp on Mac](/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[Best Ollama Models CPU-Only](/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[Best eGPU Setup for MacBook Local LLM 2026](/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
+        ],
+      },
     },
   },
   de: {
@@ -189,6 +198,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Welche Quantisierung sollte ich bei der MLX-Konvertierung verwenden?',
             a: 'Für die meisten 7B–14B-Modelle mit 16 GB Unified Memory empfiehlt sich 4-Bit-Quantisierung (Standard mit dem Flag <code>-q</code>). Bei einem 7B-Modell ergibt das ein ~4 GB großes Modell, das auf M1/M2/M3/M4-Chips gut läuft. Verwenden Sie 8-Bit nur, wenn Sie 32 GB oder mehr haben und höhere Ausgabequalität benötigen.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Ollama + MLX auf Apple Silicon](/de/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[MLX vs Ollama vs llama.cpp auf dem Mac](/de/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[Beste Ollama-Modelle nur für CPU](/de/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[Beste eGPU-Einrichtung für MacBook Local LLM 2026](/de/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
         ],
       },
     },
@@ -263,6 +281,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Ollama + MLX sur Apple Silicon](/fr/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[MLX vs Ollama vs llama.cpp sur Mac](/fr/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[Meilleurs modèles Ollama en mode CPU uniquement](/fr/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[Meilleure configuration eGPU pour MacBook LLM local 2026](/fr/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
+        ],
+      },
     },
   },
   ja: {
@@ -333,6 +360,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'MLXに変換する際にどの量子化を使用すべきですか？',
             a: '16 GBのユニファイドメモリを持つほとんどの7B〜14BモデルにはM1/M2/M3/M4チップで4ビット量子化（<code>-q</code>フラグのデフォルト）を使用してください。7Bモデルの場合、約4 GBのモデルが生成され、良好に動作します。8ビットは32 GB以上の場合で、より高い出力品質が必要な場合のみ使用してください。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Apple SiliconでのOllama + MLX](/ja/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[Mac上のMLX vs Ollama vs llama.cpp](/ja/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[CPU専用最適OllamaモデルBest](/ja/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[MacBook ローカルLLM 最適eGPUセットアップ 2026](/ja/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
         ],
       },
     },
@@ -407,6 +443,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Apple Silicon上的Ollama + MLX](/zh/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[Mac上MLX vs Ollama vs llama.cpp](/zh/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[纯CPU最佳Ollama模型](/zh/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[MacBook本地LLM最佳eGPU设置2026](/zh/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
+        ],
+      },
     },
   },
   pt: {
@@ -477,6 +522,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Qual quantização devo usar ao converter para MLX?',
             a: 'Para a maioria dos modelos 7B–14B em memória unificada de 16 GB, use quantização de 4 bits (é o padrão para o flag `-q`). Isso produz um modelo de ~4 GB que funciona bem nos chips M1/M2/M3/M4. Use quantização de 8 bits apenas se tiver 32+ GB de memória e precisar de maior qualidade de saída.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Ollama + MLX no Apple Silicon](/pt/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[MLX vs Ollama vs llama.cpp no Mac](/pt/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[Melhores modelos Ollama somente para CPU](/pt/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[Melhor configuração eGPU para MacBook LLM local 2026](/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
         ],
       },
     },
@@ -551,6 +605,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Ollama + MLX en Apple Silicon](/es/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[MLX vs Ollama vs llama.cpp en Mac](/es/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[Mejores modelos Ollama solo para CPU](/es/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[Mejor configuración eGPU para MacBook LLM local 2026](/es/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
+        ],
+      },
     },
   },
   ar: {
@@ -621,6 +684,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'ما مستوى الضغط المناسب عند التحويل إلى MLX؟',
             a: 'لمعظم نماذج 7B–14B على ذاكرة موحّدة 16 GB، استخدم الضغط 4 بت (الإعداد الافتراضي للعلامة `-q`). ينتج عنه نموذج ~4 GB يعمل بكفاءة على رقائق M1/M2/M3/M4. استخدم 8 بت فقط إذا كانت لديك 32 GB أو أكثر وتحتاج إلى جودة إخراج أعلى.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Ollama + MLX على Apple Silicon](/ar/prompt-bites/ollama-mlx-apple-silicon) -- Ollama + MLX on Apple Silicon',
+          '[MLX مقابل Ollama مقابل llama.cpp على Mac](/ar/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- MLX vs Ollama vs llama.cpp on Mac',
+          '[أفضل نماذج Ollama لـCPU فقط](/ar/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[أفضل إعداد eGPU لـMacBook LLM محلي 2026](/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
         ],
       },
     },
@@ -726,6 +798,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Apple Silicon에서 Ollama와 MLX 함께 사용하기](/ko/prompt-bites/ollama-mlx-apple-silicon)',
           '[Ollama vs LM Studio 비교](/ko/prompt-bites/ollama-vs-lm-studio)',
           '[Apple Silicon 로컬 LLM 가이드 2026](/ko/local-llms/apple-silicon-local-llm-guide-2026)',
+          '[CPU 전용 최고의 Ollama 모델](/ko/prompt-bites/best-ollama-models-cpu-only) -- best Ollama models CPU-only',
+          '[MacBook 로컬 LLM 최고의 eGPU 설정 2026](/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026) -- eGPU setup for MacBook',
         ],
       },
     },

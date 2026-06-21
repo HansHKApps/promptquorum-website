@@ -127,6 +127,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best MoE Models for Local Coding](/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   de: {
@@ -202,6 +209,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Ist ein dediziertes Coding-Modell besser als ein Allzweck-Modell für Code-Vervollständigung?',
             a: 'Ja, deutlich. Qwen 3 Coder 14B erzielt 78,4 % auf HumanEval. Ein allgemeines Mistral 12B ähnlicher Größe erzielt etwa 60 %. Der Unterschied von 18 Punkten spiegelt die coding-spezifischen Pretraining-Daten wider. Für ernsthaftes Coding immer ein code-optimiertes Modell einem Allzweck-Modell gleicher Größe vorziehen. Vergleiche im <a href="/de/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">Leitfaden Qwen Coder vs. DeepSeek Coder</a>.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Best MoE Models for Local Coding](/de/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/de/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -281,6 +295,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Best MoE Models for Local Coding](/fr/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/fr/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   ja: {
@@ -356,6 +377,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'コード補完において専用コーディングモデルは汎用モデルより優れていますか？',
             a: 'はい、大幅に優れています。Qwen 3 Coder 14BはHumanEvalで78.4%を記録します。同程度のサイズの汎用Mistral 12Bは約60%です。18ポイントの差はコード特化の事前学習データを反映しています。本格的なコーディング作業には同じサイズの汎用モデルではなく常にコード最適化モデルを選んでください。選択肢の比較は<a href="/ja/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">Qwen Coder対DeepSeek Coderガイド</a>をご覧ください。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Best MoE Models for Local Coding](/ja/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/ja/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -435,6 +463,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Best MoE Models for Local Coding](/zh/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/zh/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   es: {
@@ -510,6 +545,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Un modelo de programación dedicado es mejor que uno de propósito general para el completado de código?',
             a: 'Sí, notablemente. Qwen 3 Coder 14B obtiene 78,4 % en HumanEval. Un Mistral 12B de propósito general de tamaño similar obtiene alrededor de 60 %. La diferencia de 18 puntos refleja los datos de preentrenamiento específicos para código. Para trabajo de programación serio, elige siempre un modelo ajustado para código sobre un modelo de propósito general del mismo tamaño. Compara las opciones en la <a href="/es/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">guía Qwen Coder vs DeepSeek Coder</a>.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Best MoE Models for Local Coding](/es/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/es/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -589,6 +631,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Best MoE Models for Local Coding](/pt/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/pt/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+        ],
+      },
     },
   },
   ar: {
@@ -664,6 +713,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل نموذج البرمجة المخصص أفضل من النموذج متعدد الأغراض لإكمال الكود؟',
             a: 'نعم، بفارق كبير. Qwen 3 Coder 14B يحقق 78.4% على HumanEval. نموذج Mistral 12B متعدد الأغراض بحجم مماثل يحقق حوالي 60%. فارق 18 نقطة يعكس بيانات التدريب المسبق الخاصة بالكود. لأعمال البرمجة الجادة اختر دائماً نموذجاً مُضبَّطاً للكود بدلاً من نموذج متعدد الأغراض بنفس الحجم. قارن الخيارات في <a href="/ar/prompt-bites/qwen-coder-vs-deepseek-coder" class="text-primary hover:underline">دليل Qwen Coder مقابل DeepSeek Coder</a>.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Best MoE Models for Local Coding](/ar/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/ar/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -772,6 +828,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[14B 코딩 모델 비교](/ko/prompt-bites/best-14b-models-coding)',
           '[Qwen Coder vs DeepSeek Coder](/ko/prompt-bites/qwen-coder-vs-deepseek-coder)',
           '[코딩을 위한 최고의 로컬 LLM 가이드](/ko/local-llms/best-local-llms-for-coding)',
+          '[Best MoE Models for Local Coding](/ko/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
+          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/ko/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },

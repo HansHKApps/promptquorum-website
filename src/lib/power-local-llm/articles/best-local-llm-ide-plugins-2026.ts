@@ -137,6 +137,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[DeepSeek vs Qwen for Local Coding 2026: Which Wins?](/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- DeepSeek vs Qwen coding comparison — choose the model before setting up the IDE plugin',
+          '[Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm) -- full walkthrough for switching from Copilot to a self-hosted model',
+          '[Best Local Coding Models 2026](/power-local-llm/best-local-coding-models-2026) -- which models work best inside VS Code and JetBrains',
+          '[Continue.dev vs Cline vs Aider: Local LLM Coding Tools 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- compare IDE tools that work with local LLM backends',
+          '[Best RAG Tools for Business Documents 2026](/power-local-llm/best-rag-tools-for-business-documents-2026) -- extend local coding AI with document retrieval',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -291,6 +302,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[DeepSeek vs. Qwen für lokales Coding 2026: Wer gewinnt?](/de/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- DeepSeek vs. Qwen Coding-Vergleich — Modell vor dem IDE-Plugin-Setup wählen',
+          '[GitHub Copilot durch ein lokales LLM ersetzen](/de/power-local-llm/replace-github-copilot-with-local-llm) -- vollständige Anleitung zum Wechsel von Copilot zu einem selbst gehosteten Modell',
+          '[Beste lokale Coding-Modelle 2026](/de/power-local-llm/best-local-coding-models-2026) -- welche Modelle in VS Code und JetBrains am besten funktionieren',
+          '[Continue.dev vs. Cline vs. Aider: Lokale LLM-Coding-Tools 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- IDE-Tools mit lokalen LLM-Backends im Vergleich',
+          '[Beste RAG-Tools für Geschäftsdokumente 2026](/de/power-local-llm/best-rag-tools-for-business-documents-2026) -- lokale Coding-KI mit Dokumenten-Retrieval erweitern',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -425,6 +447,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures associées',
+        items: [
+          '[DeepSeek vs Qwen pour le Coding Local 2026 : Qui gagne ?](/fr/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- comparaison DeepSeek vs Qwen pour le coding — choisir le modèle avant de configurer le plugin IDE',
+          '[Remplacer GitHub Copilot par un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm) -- guide complet pour passer de Copilot à un modèle auto-hébergé',
+          '[Meilleurs modèles de coding local 2026](/fr/power-local-llm/best-local-coding-models-2026) -- quels modèles fonctionnent le mieux dans VS Code et JetBrains',
+          '[Continue.dev vs Cline vs Aider : Outils de coding LLM locaux 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- comparer les outils IDE compatibles avec des backends LLM locaux',
+          '[Meilleurs outils RAG pour documents professionnels 2026](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) -- étendre l\'IA de coding local avec la récupération de documents',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -557,6 +590,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'OllamaではなくLM Studioでこれらのプラグインを使えますか？',
             a: 'はい。LM StudioはデフォルトでポートNo 1234にOpenAI互換APIを公開します。プラグインのプロバイダーを「openai」に設定し、ベースURLを`http://localhost:1234/v1`にしてください。Continue、Cline、Aiderはすべてこの設定をサポートしています。',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[ローカルコーディングAI DeepSeek vs Qwen 2026：勝者は？](/ja/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- DeepSeek vs Qwenコーディング比較 — IDEプラグイン設定前にモデルを選ぶ',
+          '[GitHub CopilotをローカルLLMに置き換える](/ja/power-local-llm/replace-github-copilot-with-local-llm) -- CopilotからセルフホストモデルへのフルWalkthrough',
+          '[最高のローカルコーディングモデル2026](/ja/power-local-llm/best-local-coding-models-2026) -- VS CodeとJetBrainsで最も機能するモデルの解説',
+          '[Continue.dev vs Cline vs Aider：ローカルLLMコーディングツール2026](/ja/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- ローカルLLMバックエンドで動作するIDEツールの比較',
+          '[ビジネス文書向けRAGツール比較 2026年版](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) -- ドキュメント検索でローカルコーディングAIを拡張',
         ],
       },
     },
@@ -695,6 +739,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Tabby和Continue在代码补全上有什么区别？',
             a: 'Tabby使用专门为代码补全训练的小型FIM模型（StarCoder2等），延迟约100–200ms，体验更流畅。Continue使用你选择的Ollama模型（如Qwen3-Coder 7B），灵活性更高但延迟稍大（300–800ms）。如果补全速度是首要考虑，选Tabby；如果需要聊天+补全的综合体验，选Continue。',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[本地编程AI DeepSeek vs Qwen 2026：谁更胜一筹？](/zh/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- DeepSeek与Qwen编程对比 — 配置IDE插件前先选好模型',
+          '[用本地LLM替换GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm) -- 从Copilot切换到自托管模型的完整教程',
+          '[2026年最佳本地编程模型](/zh/power-local-llm/best-local-coding-models-2026) -- VS Code和JetBrains中表现最佳的模型推荐',
+          '[Continue.dev vs Cline vs Aider：本地LLM编程工具2026](/zh/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- 支持本地LLM后端的IDE工具横向对比',
+          '[2026年商业文档最佳RAG工具对比](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) -- 用文档检索扩展本地编程AI能力',
         ],
       },
     },
@@ -863,6 +918,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Puedo usar estos plugins con LM Studio en lugar de Ollama?',
             a: 'Sí. LM Studio expone una API compatible con OpenAI en el puerto 1234 por defecto. Define el proveedor de tu plugin como "openai" con la URL base `http://localhost:1234/v1` y usa cualquier nombre de modelo de tu biblioteca de LM Studio. Continue, Cline y Aider soportan todos esta configuración.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectura relacionada',
+        items: [
+          '[DeepSeek vs Qwen para Coding Local 2026: ¿Cuál Gana?](/es/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- comparación DeepSeek vs Qwen para coding — elige el modelo antes de configurar el plugin IDE',
+          '[Reemplazar GitHub Copilot con un LLM local](/es/power-local-llm/replace-github-copilot-with-local-llm) -- guía completa para pasar de Copilot a un modelo autoalojado',
+          '[Mejores modelos de coding local 2026](/es/power-local-llm/best-local-coding-models-2026) -- qué modelos funcionan mejor dentro de VS Code y JetBrains',
+          '[Continue.dev vs Cline vs Aider: Herramientas de coding LLM local 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- compara herramientas IDE que funcionan con backends LLM locales',
+          '[Mejores herramientas RAG para documentos de empresa 2026](/es/power-local-llm/best-rag-tools-for-business-documents-2026) -- amplía la IA de coding local con recuperación de documentos',
         ],
       },
     },
@@ -1064,6 +1130,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[로컬 코딩 AI DeepSeek vs Qwen 2026: 승자는?](/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- DeepSeek vs Qwen 코딩 비교 — IDE 플러그인 설정 전에 모델을 먼저 선택',
+          '[GitHub Copilot을 로컬 LLM으로 대체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm) -- Copilot에서 셀프호스팅 모델로 전환하는 전체 가이드',
+          '[2026년 최고의 로컬 코딩 모델](/ko/power-local-llm/best-local-coding-models-2026) -- VS Code와 JetBrains에서 가장 잘 작동하는 모델 소개',
+          '[Continue.dev vs Cline vs Aider: 로컬 LLM 코딩 도구 2026](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- 로컬 LLM 백엔드와 함께 작동하는 IDE 도구 비교',
+          '[2026년 기업 문서용 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) -- 문서 검색으로 로컬 코딩 AI 확장',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -1260,6 +1337,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[DeepSeek vs Qwen para Coding Local 2026: Qual Vence?](/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- comparação DeepSeek vs Qwen para coding — escolha o modelo antes de configurar o plugin IDE',
+          '[Substituir o GitHub Copilot por um LLM local](/pt/power-local-llm/replace-github-copilot-with-local-llm) -- guia completo para migrar do Copilot para um modelo auto-hospedado',
+          '[Melhores modelos de coding local 2026](/pt/power-local-llm/best-local-coding-models-2026) -- quais modelos funcionam melhor no VS Code e JetBrains',
+          '[Continue.dev vs Cline vs Aider: Ferramentas de coding LLM local 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- compare ferramentas IDE que funcionam com backends LLM locais',
+          '[Melhores ferramentas RAG para documentos corporativos 2026](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) -- expanda a IA de coding local com recuperação de documentos',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -1446,6 +1534,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يمكنني استخدام هذه الإضافات مع LM Studio بدلاً من Ollama؟',
             a: 'نعم. يعرض LM Studio API متوافقة مع OpenAI على المنفذ 1234 افتراضياً. عيّن موفر الإضافة على "openai" مع عنوان URL الأساسي `http://localhost:1234/v1` واستخدم أي اسم نموذج من مكتبة LM Studio. تدعم Continue وCline وAider جميعها هذا الإعداد.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'مقالات ذات صلة',
+        items: [
+          '[DeepSeek مقابل Qwen للبرمجة المحلية 2026: من يفوز؟](/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026) -- مقارنة DeepSeek مقابل Qwen للبرمجة — اختر النموذج قبل إعداد إضافة IDE',
+          '[استبدال GitHub Copilot بنموذج LLM محلي](/ar/power-local-llm/replace-github-copilot-with-local-llm) -- دليل كامل للتحول من Copilot إلى نموذج مستضاف ذاتياً',
+          '[أفضل نماذج البرمجة المحلية 2026](/ar/power-local-llm/best-local-coding-models-2026) -- أفضل النماذج أداءً داخل VS Code وJetBrains',
+          '[Continue.dev مقابل Cline مقابل Aider: أدوات البرمجة المحلية LLM 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- مقارنة أدوات IDE المتوافقة مع خلفيات LLM المحلية',
+          '[أفضل أدوات RAG لوثائق الشركات 2026](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) -- توسيع ذكاء البرمجة المحلي باسترداد الوثائق',
         ],
       },
     },

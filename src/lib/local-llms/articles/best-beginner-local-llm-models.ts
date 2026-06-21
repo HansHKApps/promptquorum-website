@@ -361,6 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Qwen Local Deployment Guide (2026)](/local-llms/qwen-local-deployment-guide-2026) -- Beginner-friendly Qwen3 7B setup via Ollama: one command to running.',
             '[Best Open-Source Alternatives to ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- No-code frontends for first-time local LLM users.',
             '[Melhores Modelos LLM para Iniciantes (Português)](/pt/local-llms/best-beginner-local-llm-models) — versão em português deste guia',
+            '[Best 7B Models for Consumer Hardware](/local-llms/best-7b-models-consumer-hardware) -- best 7B models for consumer hardware',
           ],
         },
         faqSection: {
@@ -731,6 +732,7 @@ schema: {
             '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Requisitos de GPU y RAM para pasar de modelos de 3B a 7B a 13B',
             '[Guía de despliegue local de Qwen (2026)](/es/local-llms/qwen-local-deployment-guide-2026) -- Configuración de Qwen3 7B para principiantes mediante Ollama: un comando para empezar.',
             '[Las mejores alternativas de código abierto a ChatGPT Plus](/es/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- Interfaces sin código para usuarios de LLM local por primera vez.',
+            '[Mejores modelos 7B para hardware de consumo](/es/local-llms/best-7b-models-consumer-hardware) -- mejores modelos 7B para hardware de consumo',
           ],
         },
         faqSection: {
@@ -1101,6 +1103,7 @@ schema: {
             '[دليل عتاد تشغيل LLM محلياً 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- متطلبات GPU وRAM للانتقال من نماذج 3B إلى 7B إلى 13B',
             '[دليل النشر المحلي لـ Qwen (2026)](/ar/local-llms/qwen-local-deployment-guide-2026) -- إعداد Qwen3 7B للمبتدئين عبر Ollama: أمر واحد للبدء.',
             '[أفضل بدائل ChatGPT Plus مفتوحة المصدر](/ar/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- واجهات بلا كود لمستخدمي LLM المحلي لأول مرة.',
+            '[أفضل نماذج 7B لعتاد المستهلك](/ar/local-llms/best-7b-models-consumer-hardware) -- أفضل نماذج 7B للمستهلكين',
           ],
         },
         faqSection: {
@@ -1345,6 +1348,7 @@ schema: {
             '[Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026)',
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama)',
             '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm)',
+            '[Melhores modelos 7B para hardware de consumo 2026](/pt/local-llms/best-7b-models-consumer-hardware) -- melhores modelos 7B para hardware de consumo',
           ],
         },
       },
@@ -1601,6 +1605,7 @@ schema: {
             '[Lokaler LLM Hardware-Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) – GPU- und RAM-Anforderungen für den Aufstieg von 3B auf 7B auf 13B-Modelle',
             '[Qwen Lokaler Deployment-Guide (2026)](/de/local-llms/qwen-local-deployment-guide-2026) -- Einsteigerfreundliches Qwen3 7B-Setup via Ollama: ein Befehl bis zum Laufen.',
             '[Beste Open-Source-Alternativen zu ChatGPT Plus](/de/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- No-Code-Frontends für Erstnutzer lokaler LLMs.',
+            '[Beste 7B-Modelle für Consumer-Hardware](/de/local-llms/best-7b-models-consumer-hardware) -- beste 7B-Modelle für Consumer-Hardware',
           ],
         },
         faqSection: {
@@ -1978,6 +1983,7 @@ schema: {
             '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Exigences GPU et RAM pour passer de 3B à 7B à 13B',
             '[Guide de déploiement local Qwen (2026)](/fr/local-llms/qwen-local-deployment-guide-2026) -- Configuration Qwen3 7B pour débutants via Ollama : une commande pour démarrer.',
             '[Meilleures alternatives open-source à ChatGPT Plus](/fr/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- Interfaces sans code pour les premiers utilisateurs de LLM locaux.',
+            '[Meilleurs modèles 7B pour les GPU grand public](/fr/local-llms/best-7b-models-consumer-hardware) -- meilleurs modèles 7B pour hardware grand public',
           ],
         },
         faqSection: {
@@ -2345,6 +2351,7 @@ schema: {
             '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 3Bから7B・13Bモデルへのアップグレードに必要なGPUとRAM要件',
             '[Qwenローカルデプロイガイド (2026)](/ja/local-llms/qwen-local-deployment-guide-2026) -- Ollamaを使った初心者向けQwen3 7Bセットアップ：一コマンドで起動。',
             '[ChatGPT Plusのベストオープンソース代替品](/ja/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 初めてのローカルLLMユーザー向けノーコードフロントエンド。',
+            '[コンシューマハードウェア向け最良の7Bモデル](/ja/local-llms/best-7b-models-consumer-hardware) -- コンシューマハードウェア向けベスト7Bモデル',
           ],
         },
         faqSection: {
@@ -2712,6 +2719,7 @@ schema: {
             '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 从3B升级到7B再到13B模型所需的GPU和内存要求',
             '[Qwen本地部署指南 (2026)](/zh/local-llms/qwen-local-deployment-guide-2026) -- 通过Ollama的初学者友好型Qwen3 7B设置：一条命令即可运行。',
             '[ChatGPT Plus最佳开源替代品](/zh/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 首次使用本地LLM用户的无代码前端。',
+            '[消费级硬件最佳7B模型](/zh/local-llms/best-7b-models-consumer-hardware) -- 消费级硬件最佳7B模型',
           ],
         },
         faqSection: {
@@ -3081,6 +3089,7 @@ schema: {
           '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 3B에서 7B, 13B 모델로 업그레이드하기 위한 GPU 및 RAM 요구사항',
           '[Qwen 로컬 배포 가이드 (2026)](/local-llms/qwen-local-deployment-guide-2026) -- Ollama를 통한 초보자 친화적 Qwen3 7B 설정: 실행까지 한 명령으로.',
           '[ChatGPT Plus 최고의 오픈소스 대안](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 처음 로컬 LLM을 사용하는 사용자를 위한 노코드 프론트엔드.',
+          '[소비자 하드웨어를 위한 최고의 7B 모델](/ko/local-llms/best-7b-models-consumer-hardware) -- 소비자 하드웨어를 위한 최고의 7B 모델',
         ],
       },
       faqSection: {

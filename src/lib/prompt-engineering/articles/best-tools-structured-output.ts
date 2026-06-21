@@ -269,7 +269,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — Measure accuracy, consistency, and instruction-following on your structured output schemas.',
           '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Run the same test set on GPT, Claude, and Gemini; compare pass rates.',
           '[Prompt Engineering vs Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning) — When structured prompting is enough vs. when you need model fine-tuning.',
-          '[Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams) — Building workflows with structured data output for teams of 2–15.'
+          '[Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams) — Building workflows with structured data output for teams of 2–15.',
+          '[Prompts for Reliable Structured Data](/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -590,7 +591,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Wie man Prompt-Qualität bewertet](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Genauigkeit, Konsistenz und Instruction-Following auf Structured Output-Schemas messen.',
           '[Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Denselben Test-Satz auf GPT, Claude und Gemini ausführen; Bestehensraten vergleichen.',
           '[Prompt Engineering vs. Fine-Tuning](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) — Wann strukturiertes Prompting ausreicht vs. wann Model Fine-Tuning benötigt wird.',
-          '[Prompt Engineering Setup für kleine Teams](/de/prompt-engineering/prompt-engineering-setup-small-teams) — Workflows mit strukturierter Datenausgabe für Teams von 2–15 Personen aufbauen.'
+          '[Prompt Engineering Setup für kleine Teams](/de/prompt-engineering/prompt-engineering-setup-small-teams) — Workflows mit strukturierter Datenausgabe für Teams von 2–15 Personen aufbauen.',
+          '[Prompts für zuverlässige strukturierte Daten](/de/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -931,7 +933,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Cómo evaluar la calidad de prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Mide precisión, consistencia y seguimiento de instrucciones en tus esquemas de structured output.',
           '[Cómo testear prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Ejecuta el mismo conjunto de tests en GPT, Claude y Gemini; compara tasas de paso.',
           '[Prompt Engineering vs Fine-Tuning](/es/prompt-engineering/prompt-engineering-vs-fine-tuning) — Cuándo el prompting estructurado es suficiente vs cuándo necesitas fine-tuning del modelo.',
-          '[Configuración de prompt engineering para equipos pequeños](/es/prompt-engineering/prompt-engineering-setup-small-teams) — Construir flujos de trabajo con salida de datos estructurada para equipos de 2–15.'
+          '[Configuración de prompt engineering para equipos pequeños](/es/prompt-engineering/prompt-engineering-setup-small-teams) — Construir flujos de trabajo con salida de datos estructurada para equipos de 2–15.',
+          '[Prompts para Datos Estructurados Confiables](/es/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -1262,7 +1265,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Como avaliar a qualidade de prompts](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — Meça precisão, consistência e seguimento de instruções em seus esquemas de structured output.',
           '[Como testar prompts entre modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Execute o mesmo conjunto de testes no GPT, Claude e Gemini; compare taxas de aprovação.',
           '[Prompt Engineering vs Fine-Tuning](/pt/prompt-engineering/prompt-engineering-vs-fine-tuning) — Quando o prompting estruturado é suficiente vs quando você precisa de fine-tuning do modelo.',
-          '[Configuração de prompt engineering para equipes pequenas](/pt/prompt-engineering/prompt-engineering-setup-small-teams) — Construir fluxos de trabalho com saída de dados estruturada para equipes de 2–15.'
+          '[Configuração de prompt engineering para equipes pequenas](/pt/prompt-engineering/prompt-engineering-setup-small-teams) — Construir fluxos de trabalho com saída de dados estruturada para equipes de 2–15.',
+          '[Prompts para Dados Estruturados Confiáveis](/pt/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -1584,7 +1588,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Évaluer la qualité des prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Mesurer la précision, la cohérence et le suivi des instructions sur vos schémas Structured Output.',
           '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécuter le même ensemble de tests sur GPT, Claude et Gemini ; comparer les taux de réussite.',
           '[Prompt Engineering vs Fine-Tuning](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) — Quand le prompt structuré suffit vs quand le fine-tuning de modèle est nécessaire.',
-          '[Configuration Prompt Engineering pour petites équipes](/fr/prompt-engineering/prompt-engineering-setup-small-teams) — Construire des workflows avec sortie de données structurées pour des équipes de 2 à 15 personnes.'
+          '[Configuration Prompt Engineering pour petites équipes](/fr/prompt-engineering/prompt-engineering-setup-small-teams) — Construire des workflows avec sortie de données structurées pour des équipes de 2 à 15 personnes.',
+          '[Prompts pour des données structurées fiables](/fr/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -1901,7 +1906,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[プロンプト品質の評価方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — Structured Outputスキーマの精度、一貫性、指示遵守を測定。',
           '[モデル間でプロンプトをテストする方法](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT、Claude、Geminiで同じテストセットを実行；合格率を比較。',
           '[プロンプトエンジニアリングとファインチューニング](/ja/prompt-engineering/prompt-engineering-vs-fine-tuning) — 構造化プロンプティングで十分な場合とモデルファインチューニングが必要な場合。',
-          '[小チーム向けプロンプトエンジニアリング設定](/ja/prompt-engineering/prompt-engineering-setup-small-teams) — 2〜15人のチーム向け構造化データ出力ワークフロー構築。'
+          '[小チーム向けプロンプトエンジニアリング設定](/ja/prompt-engineering/prompt-engineering-setup-small-teams) — 2〜15人のチーム向け構造化データ出力ワークフロー構築。',
+          '[信頼性の高い構造化データのプロンプト](/ja/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -2227,7 +2233,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[如何评估Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 在结构化输出模式上测量准确性、一致性和指令遵循度。',
           '[如何跨模型测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT、Claude和Gemini上运行相同测试集；比较通过率。',
           '[Prompt工程与微调对比](/zh/prompt-engineering/prompt-engineering-vs-fine-tuning) — 结构化Prompt何时足够，何时需要模型微调。',
-          '[小团队的Prompt工程配置](/zh/prompt-engineering/prompt-engineering-setup-small-teams) — 为2至15人团队构建结构化数据输出工作流。'
+          '[小团队的Prompt工程配置](/zh/prompt-engineering/prompt-engineering-setup-small-teams) — 为2至15人团队构建结构化数据输出工作流。',
+          '[可靠结构化数据的提示词](/zh/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -2569,7 +2576,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[كيف تُقيّم جودة الـ Prompt](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — قِس الدقة والاتساق واتباع التعليمات في مخططات structured output الخاصة بك.',
           '[كيف تختبر الـ Prompts عبر النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — شغّل نفس مجموعة الاختبارات عبر GPT و Claude و Gemini؛ قارن معدلات النجاح.',
           '[Prompt Engineering مقابل Fine-Tuning](/ar/prompt-engineering/prompt-engineering-vs-fine-tuning) — متى يكون الـ prompting المنظم كافياً مقابل متى تحتاج fine-tuning للنموذج.',
-          '[إعداد prompt engineering للفرق الصغيرة](/ar/prompt-engineering/prompt-engineering-setup-small-teams) — بناء سير عمل مع مخرجات بيانات منظمة للفرق من 2 إلى 15 شخصاً.'
+          '[إعداد prompt engineering للفرق الصغيرة](/ar/prompt-engineering/prompt-engineering-setup-small-teams) — بناء سير عمل مع مخرجات بيانات منظمة للفرق من 2 إلى 15 شخصاً.',
+          '[مطالبات للبيانات المنظمة الموثوقة](/ar/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {
@@ -2902,7 +2910,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — structured output 스키마에서 정확도, 일관성 및 지시 사항 준수를 측정하십시오.',
           '[모델 간 프롬프트 테스트 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT, Claude, Gemini에서 동일한 테스트 세트를 실행하고 통과율을 비교하십시오.',
           '[프롬프트 엔지니어링 vs. 파인튜닝](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning) — 구조화된 프롬프팅으로 충분한 시기 vs. 모델 파인튜닝이 필요한 시기.',
-          '[소규모 팀을 위한 프롬프트 엔지니어링 설정](/ko/prompt-engineering/prompt-engineering-setup-small-teams) — 2-15명 팀을 위한 구조화된 데이터 출력 워크플로우 구축.'
+          '[소규모 팀을 위한 프롬프트 엔지니어링 설정](/ko/prompt-engineering/prompt-engineering-setup-small-teams) — 2-15명 팀을 위한 구조화된 데이터 출력 워크플로우 구축.',
+          '[신뢰할 수 있는 구조화 데이터를 위한 프롬프트](/ko/prompt-engineering/prompts-for-reliable-structured-data)'
         ]
       },
       faq: {

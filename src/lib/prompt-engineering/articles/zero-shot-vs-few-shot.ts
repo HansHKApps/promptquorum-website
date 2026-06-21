@@ -119,6 +119,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Measure few-shot benefit on a test set before committing to it in production.** Run the same prompt with 0 examples and 5 examples on 50 test cases. If few-shot adds 10+ percentage points of accuracy, include examples. If the gain is <5%, stick with zero-shot.',
           ],
         },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting)',
+            '[Self-Consistency Prompting](/prompt-engineering/self-consistency-prompting)',
+            '[Prompt Building Blocks](/prompt-engineering/prompt-building-blocks)',
+            '[Negative Prompting](/prompt-engineering/negative-prompting)',
+          ],
+        },
       },
     },
     de: {
@@ -250,6 +259,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Zusammengefasst:** Zero-Shot Prompting bietet Geschwindigkeit und Skalierbarkeit für breite Aufgaben. Few-Shot Prompting bietet höhere Genauigkeit und Kontrolle für spezialisierte, format-empfindliche oder riskante Aufgaben. Beginnen Sie mit Zero-Shot, und upgraden Sie auf Few-Shot, wenn die Leistung unter Ihren Zielen liegt. PromptQuorum macht das Testen und Vergleichen über Modelle hinweg einfach.',
       ],
     },
+    relatedReading: {
+      title: 'Weiterführende Lektüre',
+      items: [
+        '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting)',
+        '[Self-Consistency Prompting](/de/prompt-engineering/self-consistency-prompting)',
+        '[Prompt Building Blocks](/de/prompt-engineering/prompt-building-blocks)',
+        '[Negative Prompting](/de/prompt-engineering/negative-prompting)',
+      ],
+    },
   },
 },
     es: {
@@ -362,6 +380,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Para tareas con distinciones sutiles o patrones poco frecuentes, añade 5–10 ejemplos (Few-Shot+).** Si tu tarea requiere detectar sarcasmo, sesgo dañino o matices específicos del dominio, más ejemplos ayudan.',
         '**Elige ejemplos que abarquen el rango de entradas que esperas.** Si clasificas reseñas de productos, incluye ejemplos entusiastas, tibios y negativos. No muestres solo los casos fáciles.',
         '**Mide el beneficio del Few-Shot en un conjunto de prueba antes de adoptarlo en producción.** Ejecuta el mismo prompt con 0 ejemplos y con 5 ejemplos en 50 casos de prueba. Si Few-Shot añade 10 o más puntos porcentuales de precisión, incluye ejemplos. Si la ganancia es < 5%, mantén Zero-Shot.',
+      ],
+    },
+    relatedReading: {
+      title: 'Lectura relacionada',
+      items: [
+        '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting)',
+        '[Self-Consistency Prompting](/es/prompt-engineering/self-consistency-prompting)',
+        '[Prompt Building Blocks](/es/prompt-engineering/prompt-building-blocks)',
+        '[Negative Prompting](/es/prompt-engineering/negative-prompting)',
       ],
     },
   },
@@ -478,6 +505,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**قِس فائدة Few-Shot على مجموعة اختبار قبل اعتمادها في الإنتاج.** شغّل الطلب ذاته بـ ٠ أمثلة وبـ ٥ أمثلة على ٥٠ حالة اختبار. إذا أضاف Few-Shot ١٠ نقاط مئوية أو أكثر في الدقة، أدرج الأمثلة. إذا كان الكسب < ٥٪، احتفظ بـ Zero-Shot.',
       ],
     },
+    relatedReading: {
+      title: 'قراءة ذات صلة',
+      items: [
+        '[Chain-of-Thought Prompting](/ar/prompt-engineering/chain-of-thought-prompting)',
+        '[Self-Consistency Prompting](/ar/prompt-engineering/self-consistency-prompting)',
+        '[Prompt Building Blocks](/ar/prompt-engineering/prompt-building-blocks)',
+        '[Negative Prompting](/ar/prompt-engineering/negative-prompting)',
+      ],
+    },
   },
 },
     pt: {
@@ -589,6 +625,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Para tarefas com distinções sutis ou padrões raros, adicione 5–10 exemplos (Few-Shot+).** Se sua tarefa requer detectar sarcasmo, viés prejudicial ou nuances específicas de domínio, mais exemplos ajudam.',
         '**Escolha exemplos que abranjam o intervalo de entradas que você espera.** Se você está classificando avaliações de produtos, inclua exemplos entusiastas, mornos e negativos. Não mostre apenas os casos fáceis.',
         '**Meça o benefício do Few-Shot em um conjunto de teste antes de adotá-lo em produção.** Execute o mesmo prompt com 0 exemplos e com 5 exemplos em 50 casos de teste. Se Few-Shot adicionar 10 ou mais pontos percentuais de precisão, inclua exemplos. Se o ganho for < 5%, mantenha Zero-Shot.',
+      ],
+    },
+    relatedReading: {
+      title: 'Leitura relacionada',
+      items: [
+        '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting)',
+        '[Self-Consistency Prompting](/pt/prompt-engineering/self-consistency-prompting)',
+        '[Prompt Building Blocks](/pt/prompt-engineering/prompt-building-blocks)',
+        '[Negative Prompting](/pt/prompt-engineering/negative-prompting)',
       ],
     },
   },
@@ -714,6 +759,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Avantage Zero-Shot:** Idéal pour les prototypes rapides, les nouvelles langues ou domaines, et les cas où vous n\'avez pas de données étiquetées.',
         '**Avantage Few-Shot:** Supérieur pour les tâches sensibles (classification juridique, extraction médicale), les formats stricts (JSON structuré) et les nuances multilingues.',
         '**Cas limite:** Si votre domaine est très spécialisé et que Few-Shot avec 5–10 exemples n\'améliore toujours pas la précision, envisagez le fine-tuning d\'un modèle sur des centaines d\'exemples (dépassant Few-Shot).',
+      ],
+    },
+    relatedReading: {
+      title: 'Lectures associées',
+      items: [
+        '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting)',
+        '[Self-Consistency Prompting](/fr/prompt-engineering/self-consistency-prompting)',
+        '[Prompt Building Blocks](/fr/prompt-engineering/prompt-building-blocks)',
+        '[Negative Prompting](/fr/prompt-engineering/negative-prompting)',
       ],
     },
   },
@@ -863,6 +917,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**本番環境にコミットする前に、テストセット上でフューショットの恩恵を測定してください。** 0個の例と5個の例で同じプロンプトを50個のテストケースで実行します。フューショットが精度を10ポイント以上改善すれば、例を含めます。改善が5％未満であれば、ゼロショットを維持してください。',
       ],
     },
+    relatedReading: {
+      title: '関連資料',
+      items: [
+        '[Chain-of-Thought Prompting](/ja/prompt-engineering/chain-of-thought-prompting)',
+        '[Self-Consistency Prompting](/ja/prompt-engineering/self-consistency-prompting)',
+        '[Prompt Building Blocks](/ja/prompt-engineering/prompt-building-blocks)',
+        '[Negative Prompting](/ja/prompt-engineering/negative-prompting)',
+      ],
+    },
   },
 },
     zh: {
@@ -987,6 +1050,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**在生产提交前测试测试集上的少样本益处。** 使用 0 个示例和 5 个示例对 50 个测试案例运行相同提示。如果少样本增加 10+ 个百分点的准确性，包含示例。如果收益 <5%，坚持零样本。',
       ],
     },
+    relatedReading: {
+      title: '相关阅读',
+      items: [
+        '[Chain-of-Thought Prompting](/zh/prompt-engineering/chain-of-thought-prompting)',
+        '[Self-Consistency Prompting](/zh/prompt-engineering/self-consistency-prompting)',
+        '[Prompt Building Blocks](/zh/prompt-engineering/prompt-building-blocks)',
+        '[Negative Prompting](/zh/prompt-engineering/negative-prompting)',
+      ],
+    },
   },
 },
   ko: {
@@ -1098,6 +1170,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**미묘한 구분이나 드문 패턴이 있는 작업의 경우 5–10개의 예시(few-shot+)를 추가하십시오.** 작업에서 빈정거림, 유해한 편향, 도메인 특화 뉘앙스를 감지해야 한다면 더 많은 예시가 도움이 됩니다.',
             '**예상되는 입력 범위를 아우르는 예시를 선택하십시오.** 제품 리뷰를 분류하는 경우 열정적인 리뷰, 미온적인 리뷰, 부정적인 리뷰를 포함하십시오. 쉬운 사례만 보여주지 마십시오.',
             '**프로덕션에 적용하기 전에 테스트 세트에서 few-shot의 이점을 측정하십시오.** 50개의 테스트 케이스에 대해 0개의 예시와 5개의 예시로 동일한 프롬프트를 실행하십시오. Few-shot이 정확도를 10퍼센트 포인트 이상 향상시키면 예시를 포함하십시오. 향상이 5% 미만이라면 zero-shot을 유지하십시오.',
+          ],
+        },
+        relatedReading: {
+          title: '관련 자료',
+          items: [
+            '[Chain-of-Thought Prompting](/ko/prompt-engineering/chain-of-thought-prompting)',
+            '[Self-Consistency Prompting](/ko/prompt-engineering/self-consistency-prompting)',
+            '[Prompt Building Blocks](/ko/prompt-engineering/prompt-building-blocks)',
+            '[Negative Prompting](/ko/prompt-engineering/negative-prompting)',
           ],
         },
       },

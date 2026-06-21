@@ -189,6 +189,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best VPN for Downloading AI Models](/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -302,6 +311,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'Muss ich das VPN vor der Einreise nach China kaufen?', a: 'Ja. Die Website des VPN-Anbieters ist möglicherweise in China gesperrt. Kaufen, herunterladen und testen Sie das VPN vor der Einreise.' },
         ],
       },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Best VPN for Downloading AI Models](/de/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/de/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/de/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/de/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -368,6 +386,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'Dois-je acheter le VPN avant d\'entrer en Chine ?', a: 'Oui. Le site du fournisseur VPN peut être bloqué en Chine. Achetez, installez et testez le VPN avant d\'entrer en Chine.' },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Best VPN for Downloading AI Models](/fr/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/fr/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/fr/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/fr/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -431,6 +458,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '中国でAI開発のためにVPNを使うことは合法ですか？', a: '法的に複雑です。企業によるVPN商用利用は規制対象で承認が必要。個人の技術職による利用はグレーゾーンで、ほとんど執行されません。これは法的アドバイスではありません——自己責任で判断してください。' },
           { q: 'VPNでHuggingFaceに中国からアクセスできますか？', a: 'できます。NordVPNとExpressVPNで8〜15 MB/sでのアクセスが可能。大型ファイル（40GB以上）は夜間ダウンロードを推奨。' },
           { q: 'VPNは中国に入国する前に購入が必要ですか？', a: 'はい。VPNプロバイダーのウェブサイト自体が中国でブロックされている可能性があります。入国前に購入、インストール、動作確認をしてください。' },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Best VPN for Downloading AI Models](/ja/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/ja/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/ja/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/ja/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
         ],
       },
     },
@@ -527,6 +563,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: '可以用VPN从中国访问HuggingFace吗？', a: '可以。NordVPN和ExpressVPN均可从中国以8-15 MB/s的速度访问HuggingFace。对于超大文件（40GB以上），建议安排夜间下载以应对速度波动。' },
           { q: '需要在进入中国前购买VPN吗？', a: '强烈建议这样做。VPN提供商的官网在中国境内可能被封锁，导致无法注册。请在入境前购买、下载并安装VPN，确认可正常使用。' },
           { q: '能用ModelScope镜像代替VPN下载模型吗？', a: '对于模型下载，可以。阿里云ModelScope和hf-mirror.com无需VPN即可访问，且速度往往更快。但GitHub、Docker Hub和npm仍需要VPN才能访问。' },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Best VPN for Downloading AI Models](/zh/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/zh/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/zh/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/zh/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
         ],
       },
     },
@@ -643,6 +688,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Posso usar espelhos do Alibaba Cloud para downloads de modelos em vez de uma VPN?',
             a: 'Alibaba Cloud ModelScope e hf-mirror.com são uma boa alternativa para download de modelos — acessíveis sem VPN e frequentemente mais rápidos para conexões da China. Porém, não resolvem o acesso ao GitHub, Docker Hub ou npm, que ainda exigem VPN.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Best VPN for Downloading AI Models](/pt/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/pt/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/pt/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/pt/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
         ],
       },
     },
@@ -768,6 +822,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Best VPN for Downloading AI Models](/es/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/es/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/es/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/es/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -889,6 +952,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل يمكن استخدام مرايا Alibaba Cloud لتنزيل النماذج بدلًا من VPN؟',
             a: 'Alibaba Cloud ModelScope وhf-mirror.com بديل جيد لـ VPN لتنزيل النماذج — يمكن الوصول إليهما دون VPN وغالبًا أسرع للاتصالات من الصين. لكنهما لا يحلّان مشكلة الوصول إلى GitHub وDocker Hub وnpm التي لا تزال تتطلب VPN.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Best VPN for Downloading AI Models](/ar/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/ar/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/ar/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/ar/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
         ],
       },
     },
@@ -1036,11 +1108,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       relatedReading: {
         id: 'related-reading',
-        title: '관련 자료',
+        title: '관련 가이드',
         items: [
-          '[AI 개발자를 위한 최고의 VPN 가이드](/ko/power-local-llm/best-vpn-ai-privacy-local-llm-2026)',
-          '[AI 모델 다운로드를 위한 최고의 VPN](/ko/prompt-bites/best-vpn-downloading-ai-models)',
-          '[중국에서 로컬 LLM 실행하기](/ko/local-llms)',
+          '[Best VPN for Downloading AI Models](/ko/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Is DeepSeek GDPR-Safe?](/ko/prompt-bites/is-deepseek-gdpr-safe) -- GDPR compliance check',
+          '[Is Qwen GDPR-Compliant?](/ko/prompt-bites/is-qwen-gdpr-compliant) -- Qwen GDPR guide',
+          '[DeepSeek Local: China Data Privacy 2026](/ko/local-llms/deepseek-local-china-data-privacy-2026) -- privacy guide',
         ],
       },
     },

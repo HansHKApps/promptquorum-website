@@ -137,6 +137,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Can You Run RAG on 2 GB RAM?](/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   de: {
@@ -203,6 +209,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Kann der CPU-only-Modus das 4-GB-VRAM-Limit umgehen?',
             a: 'Ja. Ohne GPU verwendet Llama 3 8B Q4 ~6 GB System-RAM und läuft mit 3–6 Tok/s auf einer modernen 8-Kern-CPU. Langsamer, funktioniert aber, wenn genug RAM vorhanden ist.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Kann man RAG mit 2 GB RAM ausführen?](/de/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },
@@ -273,6 +285,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Peut-on faire tourner RAG avec 2 Go de RAM ?](/fr/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   ja: {
@@ -341,6 +359,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[2 GBのRAMでRAGは実行できますか？](/ja/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   zh: {
@@ -407,6 +431,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '仅CPU模式能绕过4 GB显存限制吗？',
             a: '可以。不使用GPU时，Llama 3 8B Q4使用约6 GB系统内存，在现代8核CPU上以3–6 tok/s运行。速度较慢，但如果有足够内存则可用。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[能在2 GB内存上运行RAG吗？](/zh/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },
@@ -489,6 +519,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[¿Puedes ejecutar RAG con 2 GB de RAM?](/es/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   pt: {
@@ -569,6 +605,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[É possível executar RAG com 2 GB de RAM?](/pt/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
+        ],
+      },
     },
   },
   ar: {
@@ -647,6 +689,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل يمكن لوضع CPU فقط تجاوز حد 4 GB VRAM؟',
             a: 'نعم. بدون GPU، Llama 3 8B Q4 يستخدم ~6 GB من RAM النظام ويعمل بـ3–6 رمز/ثانية على CPU حديثة 8 أنوية. أبطأ، لكنه يعمل إذا كانت لديك RAM كافية.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[هل يمكن تشغيل RAG بـ2 GB RAM؟](/ar/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },
@@ -745,6 +793,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[6GB VRAM 최적 로컬 LLM](/ko/prompt-bites/best-local-llm-6gb-vram)',
           '[VRAM 요구사항 전체 가이드](/ko/prompt-bites/how-much-vram-for-local-llm)',
           '[저사양 PC용 최속 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)',
+          '[2 GB RAM으로 RAG를 실행할 수 있습니까?](/ko/prompt-bites/can-you-run-rag-on-2gb-ram) -- RAG on low RAM',
         ],
       },
     },

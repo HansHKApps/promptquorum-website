@@ -448,6 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'For local LLMs optimized specifically for the Japanese language, including Rinna 3.6B, ELYZA-7B, and CyberAgent CALM3, see our <a href="/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">guide to the best local LLMs for Japanese</a>.',
             '[Melhores LLMs Locais para Programação (Português)](/pt/local-llms/best-local-llms-for-coding) — versão em português deste guia',
             '[Best Local Reasoning Model 2026: DeepSeek-R1 Distills Ranked](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — For reasoning rather than coding, this is the guide: which DeepSeek-R1 distill fits your GPU, with benchmarks.',
+            '[Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice](/local-llms/best-local-llms-business-writing) -- best local LLMs for business writing',
           ],
         },
         faqSection: {
@@ -973,6 +974,7 @@ schema: {
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- configura cualquier modelo de programación de esta página en menos de 5 minutos',
             'Para LLMs locales optimizados específicamente para el idioma japonés, incluidos Rinna 3.6B, ELYZA-7B y CyberAgent CALM3, consulta nuestra <a href="/es/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">guía de los mejores LLMs locales para japonés</a>.',
             '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 Distills clasificados](/es/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Para razonamiento en lugar de código: qué distill DeepSeek-R1 encaja con tu GPU, con benchmarks.',
+            '[Mejores LLMs locales para redacción profesional en 2026: correos, propuestas y voz de marca](/es/local-llms/best-local-llms-business-writing) -- mejores LLMs locales para escritura empresarial',
           ],
         },
         faqSection: {
@@ -1450,6 +1452,7 @@ schema: {
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- إعداد أي نموذج برمجة في هذه الصفحة في أقل من 5 دقائق',
             'لنماذج LLM المحلية المحسّنة خصيصاً للغة اليابانية، بما فيها Rinna 3.6B وELYZA-7B وCyberAgent CALM3، راجع <a href="/ar/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">دليلنا لأفضل نماذج LLM المحلية لليابانية</a>.',
             '[أفضل نموذج استدلال محلي 2026: ترتيب DeepSeek-R1 Distills](/ar/local-llms/best-local-reasoning-model-deepseek-r1-2026) — للاستدلال بدلاً من البرمجة: أي distill من DeepSeek-R1 يناسب بطاقة الرسوميات لديك، مع بيانات المعيار.',
+            '[أفضل نماذج LLM المحلية للكتابة المهنية في 2026: رسائل البريد والمقترحات وصوت العلامة التجارية](/ar/local-llms/best-local-llms-business-writing) -- أفضل نماذج LLM لكتابة الأعمال',
           ],
         },
         faqSection: {
@@ -1676,6 +1679,7 @@ schema: {
             '[Melhor assistente de código IA para LLM local 2026](/pt/local-llms/best-ai-coding-assistant-local-llm)',
             '[Melhores LLMs locais para iniciantes 2026](/pt/local-llms/best-beginner-local-llm-models)',
             '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 Distills classificados](/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Para raciocínio em vez de código: qual distill DeepSeek-R1 se adapta à sua GPU, com benchmarks.',
+            '[Melhores LLMs locais para escrita profissional em 2026: e-mails, propostas e voz da marca](/pt/local-llms/best-local-llms-business-writing) -- melhores LLMs locais para escrita empresarial',
           ],
         },
       },
@@ -2024,6 +2028,7 @@ schema: {
             '[Wie man Ollama installiert](/de/local-llms/how-to-install-ollama) -- richte jedes Programmiermodell von dieser Seite in unter 5 Minuten ein',
             'Für lokale LLMs, die speziell für die japanische Sprache optimiert sind — darunter Rinna 3.6B, ELYZA-7B und CyberAgent CALM3 — lesen Sie unseren <a href="/de/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">Leitfaden zu den besten lokalen LLMs für Japanisch</a>.',
             '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 Distills im Ranking](/de/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Für Reasoning statt Coding: welches DeepSeek-R1-Distill zu Ihrer GPU passt, mit Benchmarks.',
+            '[Die besten lokalen LLMs für Geschäftskorrespondenz 2026: E-Mail, Angebote und Markenstimme](/de/local-llms/best-local-llms-business-writing) -- beste lokale LLMs für Geschäftskorrespondenz',
           ],
         },
         faqSection: {
@@ -2442,6 +2447,7 @@ schema: {
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — configurez n\'importe quel modèle de programmation de cette page en moins de 5 minutes',
             'Pour les LLMs locaux optimisés spécifiquement pour le japonais, notamment Rinna 3.6B, ELYZA-7B et CyberAgent CALM3, consultez notre <a href="/fr/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">guide des meilleurs LLMs locaux pour le japonais</a>.',
             '[Meilleur modèle de raisonnement local 2026 : DeepSeek-R1 classé](/fr/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Pour le raisonnement plutôt que le code : quel distill DeepSeek-R1 correspond à votre GPU, avec benchmarks.',
+            '[Meilleurs LLMs locaux pour rédaction professionnelle en 2026 : emails, propositions et voix de marque](/fr/local-llms/best-local-llms-business-writing) -- meilleurs LLMs locaux pour rédaction professionnelle',
           ],
         },
         faqSection: {
@@ -2800,6 +2806,7 @@ schema: {
             '[初心者向けベストモデル5選](/ja/local-llms/best-beginner-local-llm-models) — 最初のモデル選択',
             'Rinna 3.6B、ELYZA-7B、CyberAgent CALM3など、日本語専用に最適化されたローカルLLMについては、<a href="/ja/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">日本語ローカルLLMベストガイド</a>をご覧ください。',
             '[2026年最高のローカル推論モデル：DeepSeek-R1 Distillランキング](/ja/local-llms/best-local-reasoning-model-deepseek-r1-2026) — コーディングではなく推論向け：GPU別DeepSeek-R1 Distill比較とベンチマーク。',
+            '[2026年ビジネスライティング向けベストなローカルLLM: メール、提案、ブランドボイス](/ja/local-llms/best-local-llms-business-writing) -- ビジネスライティング向けベストなローカルLLM',
           ],
         },
         sources: {
@@ -3148,6 +3155,7 @@ schema: {
             '[初学者最佳模型5选](/zh/local-llms/best-beginner-local-llm-models) ——首选模型决策',
             '关于专为日语优化的本地LLM，包括Rinna 3.6B、ELYZA-7B和CyberAgent CALM3，请参阅我们的<a href="/zh/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">日语最佳本地LLM指南</a>。',
             '[2026年最佳本地推理模型：DeepSeek-R1 Distill排名](/zh/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 推理任务而非编程：各GPU对应的DeepSeek-R1 Distill推荐与基准数据。',
+            '[2026年商业写作最佳本地LLM：电子邮件、提案和品牌声音](/zh/local-llms/best-local-llms-business-writing) -- 商业写作最佳本地LLM',
           ],
         },
         sources: {
@@ -3610,6 +3618,7 @@ schema: {
             '일본어에 최적화된 로컬 LLM(Rinna 3.6B, ELYZA-7B, CyberAgent CALM3 포함)에 대해서는 <a href="/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">최고의 일본어 로컬 LLM 가이드</a>를 참조하십시오.',
             '[Melhores LLMs Locais para Programação (Português)](/pt/local-llms/best-local-llms-for-coding) — 포르투갈어 버전 가이드',
             '[2026년 최고의 로컬 추론 모델: DeepSeek-R1 Distill 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 코딩이 아닌 추론을 위한 안내: GPU별 DeepSeek-R1 Distill 비교 및 벤치마크.',
+            '[2026년 비즈니스 문서 작성을 위한 최고의 로컬 LLM: 이메일, 제안서, 브랜드 보이스](/ko/local-llms/best-local-llms-business-writing) -- 비즈니스 문서 작성을 위한 최고의 로컬 LLM',
           ],
         },
         faqSection: {

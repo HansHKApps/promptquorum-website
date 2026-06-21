@@ -169,6 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) -- Detailed compliance guide.',
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) -- Multi-user production setup.',
             '[Corporate RAG Local LLMs](/local-llms/corporate-rag-local-llms) -- Document Q&A for organizations.',
+            '[Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI](/local-llms/future-of-local-llms) -- the future of local LLMs',
           ],
         },
         sources: {
@@ -429,6 +430,7 @@ schema: {
             '[Cumplimiento empresarial con LLMs locales](/es/local-llms/enterprise-compliance-local-llms) — Guía de cumplimiento detallada.',
             '[Escalado de LLMs locales en empresas](/es/local-llms/scaling-local-llms-enterprise) — Configuración de producción multiusuario.',
             '[RAG corporativo con LLMs locales](/es/local-llms/corporate-rag-local-llms) — Preguntas y respuestas sobre documentos para organizaciones.',
+            '[Tendencias de LLM local 2026–2027: 5 predicciones clave para la adopción empresarial y la IA en dispositivo](/es/local-llms/future-of-local-llms) -- el futuro de los LLMs locales',
           ],
         },
         sources: {
@@ -690,6 +692,7 @@ schema: {
             '[الامتثال المؤسسي مع نماذج LLM المحلية](/ar/local-llms/enterprise-compliance-local-llms) — دليل امتثال مفصّل.',
             '[توسيع نطاق نماذج LLM المحلية في المؤسسات](/ar/local-llms/scaling-local-llms-enterprise) — إعداد إنتاجي متعدد المستخدمين.',
             '[RAG للشركات مع نماذج LLM المحلية](/ar/local-llms/corporate-rag-local-llms) — أسئلة وأجوبة عن المستندات للمؤسسات.',
+            '[اتجاهات LLM المحلية 2026–2027: 5 تنبؤات رئيسية لتبني المؤسسات والذكاء الاصطناعي على الجهاز](/ar/local-llms/future-of-local-llms) -- مستقبل نماذج LLM المحلية',
           ],
         },
         sources: {
@@ -1055,6 +1058,7 @@ schema: {
             '[Enterprise Compliance lokale LLMs](/de/local-llms/enterprise-compliance-local-llms) – Detaillierter Compliance-Leitfaden.',
             '[Skalierung lokaler LLMs Enterprise](/de/local-llms/scaling-local-llms-enterprise) – Multi-User Production-Setup.',
             '[Corporate RAG lokale LLMs](/de/local-llms/corporate-rag-local-llms) – Dokument-Q&A für Organisationen.',
+            '[Lokale LLM Trends 2026–2027: 5 Schlüsselvorhersagen für Enterprise-Adoption und On-Device-KI](/de/local-llms/future-of-local-llms) -- die Zukunft lokaler LLMs',
           ],
         },
         sources: {
@@ -1293,6 +1297,7 @@ schema: {
             '[Conformité Enterprise LLM locaux](/fr/local-llms/enterprise-compliance-local-llms) – Guide détaillé de conformité.',
             '[Mise à l\'échelle LLM locaux Enterprise](/fr/local-llms/scaling-local-llms-enterprise) – Installation multi-utilisateur en production.',
             '[RAG Corporate LLM locaux](/fr/local-llms/corporate-rag-local-llms) – Q&A documentaire pour les organisations.',
+            '[Tendances LLM local 2026–2027 : 5 prédictions clés pour l\'adoption entreprise et l\'IA sur appareil](/fr/local-llms/future-of-local-llms) -- l\'avenir des LLMs locaux',
           ],
         },
         sources: {
@@ -1531,6 +1536,7 @@ schema: {
             '[エンタープライズコンプライアンスローカルLLM](/ja/local-llms/enterprise-compliance-local-llms) – 詳細なコンプライアンスガイド。',
             '[ローカルLLM企業スケーリング](/ja/local-llms/scaling-local-llms-enterprise) – マルチユーザー本番セットアップ。',
             '[コーポレートRAGローカルLLM](/ja/local-llms/corporate-rag-local-llms) – 組織向けドキュメントQ&A。',
+            '[ローカルLLMトレンド2026–2027：エンタープライズ導入と端末AI予測](/ja/local-llms/future-of-local-llms) -- ローカルLLMの未来',
           ],
         },
         sources: {
@@ -1769,6 +1775,7 @@ schema: {
             '[企业合规本地LLM](/zh/local-llms/enterprise-compliance-local-llms) – 详细的合规性指南。',
             '[本地LLM企业扩展](/zh/local-llms/scaling-local-llms-enterprise) – 多用户生产设置。',
             '[企业RAG本地LLM](/zh/local-llms/corporate-rag-local-llms) – 组织的文档问答。',
+            '[本地LLM趋势2026–2027：企业采用与端设备AI的5大预测](/zh/local-llms/future-of-local-llms) -- 本地LLM的未来',
           ],
         },
         sources: {
@@ -2024,6 +2031,7 @@ schema: {
             '[엔터프라이즈 컴플라이언스 로컬 LLM](/local-llms/enterprise-compliance-local-llms) -- 상세 컴플라이언스 가이드.',
             '[엔터프라이즈 로컬 LLM 확장](/local-llms/scaling-local-llms-enterprise) -- 다중 사용자 프로덕션 설정.',
             '[기업용 RAG 로컬 LLM](/local-llms/corporate-rag-local-llms) -- 조직을 위한 문서 Q&A.',
+            '[로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측](/ko/local-llms/future-of-local-llms) -- 로컬 LLM의 미래',
           ],
         },
         sources: {

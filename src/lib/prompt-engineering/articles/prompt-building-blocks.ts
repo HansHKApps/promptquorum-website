@@ -435,6 +435,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Persona Prompting](/prompt-engineering/persona-prompting) — Deep dive into Block 1 (Role & Context) with 7 sub-components: how persona selection affects output quality and consistency.',
             '[Constrained Prompting](/prompt-engineering/constrained-prompting) — Deep dive into Block 4 (Constraints) including API-level enforcement: hard constraints that guarantee valid output.',
             '[Prompt Chaining](/prompt-engineering/prompt-chaining) — How to apply the 5 blocks across multi-step workflows: breaking complex tasks into sequential prompts.',
+            '[Your Brand Voice with AI: Prompt Guide](/prompt-engineering/your-brand-voice-ai)',
           ],
         },
 
@@ -901,6 +902,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Persona Prompting](/de/prompt-engineering/persona-prompting) — Tiefere Erkundung von Baustein 1 (Rolle & Kontext) mit 7 Unterkategorien: wie die Persona-Auswahl die Ausgabequalität und Konsistenz beeinflusst.',
             '[Constrained Prompting](/de/prompt-engineering/constrained-prompting) — Tiefere Erkundung von Baustein 4 (Einschränkungen) einschließlich API-Level-Durchsetzung: harte Einschränkungen, die gültige Ausgaben garantieren.',
             '[Prompt Chaining](/de/prompt-engineering/prompt-chaining) — Wie die 5 Bausteine über mehrstufige Arbeitsabläufe hinweg angewendet werden: Aufteilung komplexer Aufgaben in sequenzielle Prompts.',
+            '[Ihre Markenstimme mit KI: Prompt-Leitfaden](/de/prompt-engineering/your-brand-voice-ai)',
           ],
         },
 
@@ -1246,6 +1248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Zero-Shot vs. Few-Shot Prompting](/es/prompt-engineering/zero-shot-vs-few-shot) — Cuándo usar ejemplos y cuándo omitirlos: elegir el enfoque de prompting correcto para la tarea.',
             '[AI Hallucinations: Why AI Makes Things Up](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Por qué las restricciones y los ejemplos importan: las causas raíz de las alucinaciones y las contramedidas basadas en evidencia.',
             '[Which Prompt Framework Should You Use?](/es/prompt-engineering/which-prompt-framework-should-you-use) — Comparación de CRAFT, CO-STAR, SPECS y otros: elegir un framework que se adapte a tu caso de uso.',
+            '[Tu voz de marca con IA: Guía de prompts](/es/prompt-engineering/your-brand-voice-ai)',
           ],
         },
 
@@ -1587,6 +1590,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[البرومبت الصفري مقابل القليل الأمثلة](/ar/prompt-engineering/zero-shot-vs-few-shot) — متى تستخدم الأمثلة ومتى تغفلها: اختيار نهج البرومبت الصحيح للمهمة.',
             '[هلوسة الذكاء الاصطناعي: لماذا يختلق الذكاء الاصطناعي أشياء](/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — لماذا تهم القيود والأمثلة: الأسباب الجذرية للهلوسة والتدابير المضادة القائمة على الأدلة.',
             '[أي إطار برومبت يجب استخدامه؟](/ar/prompt-engineering/which-prompt-framework-should-you-use) — مقارنة CRAFT وCO-STAR وSPECS وغيرها: اختيار إطار يناسب حالة استخدامك.',
+            '[صوت علامتك التجارية مع الذكاء الاصطناعي: دليل المطالبات](/ar/prompt-engineering/your-brand-voice-ai)',
           ],
         },
 
@@ -1908,6 +1912,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Zero-Shot vs. Few-Shot Prompting](/pt/prompt-engineering/zero-shot-vs-few-shot) — Quando usar exemplos e quando omiti-los: escolher a abordagem de prompting correta para a tarefa.',
             '[AI Hallucinations: Why AI Makes Things Up](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Por que as restrições e os exemplos importam: as causas raíz das alucinações e as contramedidas baseadas em evidências.',
             '[Which Prompt Framework Should You Use?](/pt/prompt-engineering/which-prompt-framework-should-you-use) — Comparação de CRAFT, CO-STAR, SPECS e outros: escolher um framework que se adapte ao seu caso de uso.',
+            '[Sua Voz de Marca com IA: Guia de Prompts](/pt/prompt-engineering/your-brand-voice-ai)',
           ],
         },
         sources: {
@@ -2342,6 +2347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[AI Hallucinations: Why AI Makes Things Up](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Pourquoi les contraintes et exemples sont importants : les causes profondes des hallucinations et les contre-mesures basées sur les preuves.',
             '[Structured Output & JSON Mode](/fr/prompt-engineering/structured-output-and-json-mode) — Spécifier les formats de sortie précis : mode JSON, tableaux Markdown et autres approches structurées sur les modèles.',
             '[Which Prompt Framework Should You Use?](/fr/prompt-engineering/which-prompt-framework-should-you-use) — Comparaison de CRAFT, CO-STAR, SPECS et autres : choisir un framework qui correspond à votre cas d\'usage.',
+            '[Votre voix de marque avec l\'IA: Guide de prompts](/fr/prompt-engineering/your-brand-voice-ai)',
           ],
         },
 
@@ -2765,6 +2771,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[AI Hallucinations: Why AI Makes Things Up](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 制約と例が重要な理由。ハルシネーションの根本原因と証拠ベースの対策。',
             '[Structured Output & JSON Mode](/ja/prompt-engineering/structured-output-and-json-mode) — 正確な出力形式を指定。JSON、Markdown テーブル、その他の構造化アプローチ。',
             '[使うべきプロンプトフレームワークはどれ](/ja/prompt-engineering/which-prompt-framework-should-you-use) — CRAFT、CO-STAR、SPECS の比較。ユースケースに合ったフレームワークを選ぶ。',
+            '[AIであなたのブランドボイスを活かす：プロンプトガイド](/ja/prompt-engineering/your-brand-voice-ai)',
           ],
         },
 
@@ -3439,6 +3446,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[페르소나 프롬프팅](/prompt-engineering/persona-prompting) — 블록 1(역할 및 맥락)에 대한 심층 분석, 7가지 하위 구성 요소: 페르소나 선택이 결과물 품질과 일관성에 어떤 영향을 미치는가.',
             '[제약 프롬프팅](/prompt-engineering/constrained-prompting) — API 수준 적용을 포함한 블록 4(제약 조건)에 대한 심층 분석: 유효한 결과물을 보장하는 강력한 제약 조건.',
             '[프롬프트 체이닝](/prompt-engineering/prompt-chaining) — 다단계 워크플로에서 5가지 블록을 적용하는 방법: 복잡한 작업을 순차적 프롬프트로 분해하기.',
+            '[AI로 브랜드 보이스 구현하기: 프롬프트 가이드](/ko/prompt-engineering/your-brand-voice-ai)',
           ],
         },
 

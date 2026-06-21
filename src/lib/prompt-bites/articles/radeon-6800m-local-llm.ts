@@ -126,6 +126,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: Performance Guide](/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   de: {
@@ -203,6 +209,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Wie heiß wird die 6800M bei kontinuierlicher LLM-Inferenz?',
             a: 'Erwarten Sie 80–90°C unter kontinuierlicher Inferenzlast, ähnlich wie bei einer Gaming-Sitzung. Thermische Drosselung über ~100°C reduziert die Inferenzgeschwindigkeit. Verwenden Sie Radeon Software (Windows) oder CoreCtrl (Linux), um ein Undervolting-Profil einzustellen und ensure gute Belüftung.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: Leistungshandbuch](/de/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -284,6 +296,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: Guide de performance](/fr/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   ja: {
@@ -361,6 +379,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '6800M は継続的な LLM 推論を実行したときどのくらい熱くなりますか？',
             a: 'ゲーミングセッション同様に継続推論負荷下で 80～90°C を予想。~100°C 以上のサーマルスロットリングは推論速度を低下させます。Radeon Software（Windows）または CoreCtrl（Linux）を使用してアンダーボルティングプロファイルを設定し良好なエアフロー確保。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: パフォーマンスガイド](/ja/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -442,6 +466,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: 性能指南](/zh/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   pt: {
@@ -519,6 +549,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Quão quente fica a 6800M executando LLMs continuamente?',
             a: 'Espere 80–90°C sob carga de inferência sustentada, semelhante a uma sessão de jogos. Throttling térmico acima de ~100°C reduzirá a velocidade de inferência. Use Radeon Software (Windows) ou CoreCtrl (Linux) para definir um perfil de undervolting e garantir boa ventilação.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: Guia de desempenho](/pt/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -600,6 +636,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: Guía de rendimiento](/es/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   ar: {
@@ -677,6 +719,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'ما درجة حرارة 6800M أثناء الاستنتاج المستمر لنماذج اللغة؟',
             a: 'توقع 80–90°C تحت حمل الاستنتاج المستمر، مشابهًا لجلسة ألعاب. تخفيض الأداء الحراري فوق ~100°C سيُقلل سرعة الاستنتاج. استخدم Radeon Software (Windows) أو CoreCtrl (Linux) لضبط ملف تعريف undervolting وتأكد من التهوية الجيدة.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Strix Halo + Ollama + Vulkan: دليل الأداء](/ar/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -787,6 +835,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[로컬 LLM용 최고의 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)',
           '[AMD 5700X + RTX 3070 Ti 시스템에서의 최고 모델](/ko/prompt-bites/best-models-amd-5700x-3070ti)',
           '[12GB VRAM 로컬 코딩 최고의 LLM](/ko/prompt-bites/best-local-llm-coding-12gb-vram)',
+          '[Strix Halo Ollama Vulkan 설정 가이드](/ko/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },

@@ -106,6 +106,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -232,6 +241,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/de/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/de/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/de/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -345,6 +363,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/fr/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/fr/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/fr/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -456,6 +483,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'クラウドGPUでQLoRAファインチューニングに必要なソフトウェアは？',
             a: '最速のセットアップ：RunPodのUnslothテンプレートを使用（Python、CUDA、PyTorch、Hugging Face PEFT、Unsloth事前インストール済み）。セットアップ時間：5分未満。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/ja/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/ja/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/ja/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
     },
@@ -573,6 +609,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '微调和直接用更大基础模型相比是否值得？',
             a: '对于专业领域任务（医疗记录、法律文件、公司特定格式），微调7B–14B模型的效果往往超过通用70B模型，推理成本却只有其一小部分。有500个以上领域特定样本且需要一致输出格式时，微调是最佳选择。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/zh/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/zh/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/zh/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
     },
@@ -708,6 +753,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Vale la pena el fine-tuning frente a usar un modelo base más grande?',
             a: 'Para tareas específicas de dominio (notas médicas, documentos legales, formatos específicos de empresa), hacer fine-tuning de un modelo 7B–14B a menudo supera a un modelo genérico de 70B a una fracción del coste de inferencia. El punto óptimo: hacer fine-tuning cuando tienes más de 500 ejemplos específicos del dominio y quieres formato de salida consistente.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/es/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/es/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/es/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
     },
@@ -850,6 +904,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/pt/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/pt/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/pt/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -988,6 +1051,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل يستحق الضبط الدقيق الأمر مقارنةً باستخدام نموذج أساسي أكبر؟',
             a: 'للمهام الخاصة بمجال معين (ملاحظات طبية، وثائق قانونية، تنسيقات خاصة بالشركة)، يتفوق الضبط الدقيق لنموذج 7B–14B في أغلب الأحيان على نموذج عام بـ70B بجزء بسيط من تكلفة الاستدلال. النقطة المثلى: قم بالضبط الدقيق عندما لديك أكثر من 500 مثال خاص بالمجال وتريد تنسيق إخراج متسقاً.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/ar/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/ar/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/ar/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
     },
@@ -1133,10 +1205,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       relatedReading: {
+        title: '관련 가이드',
         items: [
-          '[클라우드 GPU 임대 비교 2026](/ko/local-llms/cloud-gpu-rental-comparison-2026)',
-          '[로컬 LLM 실행 가이드](/ko/local-llms)',
-          '[프롬프트 엔지니어링 기초](/ko/prompt-engineering)',
+          '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/ko/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
+          '[Cloud GPU Cost per Hour](/ko/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[Best DeepSeek Distill for Your GPU](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
     },

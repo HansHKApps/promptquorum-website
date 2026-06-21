@@ -718,6 +718,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Q4_K_M 양자화란 무엇입니까?](/ko/prompt-bites/what-is-q4-k-m-quantization)',
           '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)',
           '[양자화 레벨 비교](/ko/local-llms/quantization-levels-comparison)',
+          '[6GB VRAM을 위한 최적의 양자화](/ko/prompt-bites/best-quantization-6gb-vram)',
         ],
       },
     },

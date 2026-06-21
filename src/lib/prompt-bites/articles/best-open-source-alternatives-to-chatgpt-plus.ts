@@ -92,6 +92,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best LLM Right Now](/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/prompt-bites/jan-vs-lm-studio) -- client comparison',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -173,6 +182,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Best LLM Right Now](/de/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/de/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/de/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/de/prompt-bites/jan-vs-lm-studio) -- client comparison',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -232,6 +250,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Best LLM Right Now](/fr/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/fr/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/fr/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/fr/prompt-bites/jan-vs-lm-studio) -- client comparison',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -289,6 +316,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'オープンソースのローカルモデルはChatGPT Plusの品質に匹敵しますか？',
             a: 'Qwen3 72BとLlama 3.3 70Bは、ほとんどの推論・コーディング・ライティングベンチマークでGPT-5.5と同等の性能を発揮します。フル品質には24GB以上のVRAMが必要です。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Best LLM Right Now](/ja/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/ja/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/ja/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/ja/prompt-bites/jan-vs-lm-studio) -- client comparison',
         ],
       },
     },
@@ -363,6 +399,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Es Groq realmente gratis?',
             a: 'Groq ofrece un nivel gratuito con límites de tasa: ~30 solicitudes/minuto para Llama 3.3 70B. Para uso personal es suficiente. El nivel gratuito no requiere tarjeta de crédito. Para producción o uso intenso, planes pagos empiezan en ~$0.05 por millón de tokens.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Best LLM Right Now](/es/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/es/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/es/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/es/prompt-bites/jan-vs-lm-studio) -- client comparison',
         ],
       },
     },
@@ -450,6 +495,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Best LLM Right Now](/zh/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/zh/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/zh/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/zh/prompt-bites/jan-vs-lm-studio) -- client comparison',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -522,6 +576,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'O Groq é realmente gratuito?',
             a: 'O Groq oferece um nível gratuito com limites de taxa: ~30 solicitações/minuto para Llama 3.3 70B. Para uso pessoal, isso é suficiente. O nível gratuito não requer cartão de crédito. Para produção ou uso intenso, planos pagos começam em ~$0,05 por milhão de tokens.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Best LLM Right Now](/pt/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/pt/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/pt/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/pt/prompt-bites/jan-vs-lm-studio) -- client comparison',
         ],
       },
     },
@@ -618,6 +681,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل Groq مجاني فعلاً؟',
             a: 'Groq يقدم مستوى مجانياً بحدود معدل: ~30 طلب/دقيقة لـLlama 3.3 70B. للاستخدام الشخصي هذا كافٍ. المستوى المجاني لا يحتاج بطاقة ائتمان. للإنتاج أو الاستخدام المكثف، الخطط المدفوعة تبدأ من ~$0.05 لكل مليون رمز.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Best LLM Right Now](/ar/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/ar/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/ar/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/ar/prompt-bites/jan-vs-lm-studio) -- client comparison',
         ],
       },
     },
@@ -753,11 +825,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
       },
       relatedReading: {
-        heading: '관련 자료',
+        heading: '관련 가이드',
         items: [
-          '[LM Studio vs Jan vs GPT4All 2026](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
-          '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/how-to-install-ollama)',
-          '[Qwen3 로컬 설치 가이드 2026](/ko/local-llms/run-qwen-locally-guide-2026)',
+          '[Best LLM Right Now](/ko/prompt-bites/best-llm-right-now) -- current best LLMs',
+          '[Best Ollama Models Right Now](/ko/prompt-bites/best-ollama-models-right-now) -- top Ollama models',
+          '[Best Frontend for Ollama](/ko/prompt-bites/best-frontend-for-ollama) -- Ollama UI guide',
+          '[Jan vs LM Studio: Which Should You Use?](/ko/prompt-bites/jan-vs-lm-studio) -- client comparison',
         ],
       },
     },

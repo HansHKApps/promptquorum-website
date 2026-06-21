@@ -91,6 +91,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best VPN for Downloading AI Models](/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K Context Models](/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   de: {
@@ -169,6 +176,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Muss ich nach einem Ollama-Update auch meine installierten Modelle aktualisieren?',
             a: 'Nein. GGUF-Modelldateien sind vorwärtskompatibel. Dieselben Dateien, die Sie für eine ältere Ollama-Version heruntergeladen haben, laufen auf der aktuellen Version ohne erneuten Download.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Bestes VPN zum Herunterladen von KI-Modellen](/de/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K-Kontext-Modelle](/de/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },
@@ -251,6 +265,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Meilleur VPN pour télécharger des modèles IA](/fr/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Modèles Ollama à contexte 128K](/fr/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   ja: {
@@ -329,6 +350,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Ollamaを更新する際にインストール済みのモデルも更新が必要ですか？',
             a: 'いいえ。GGUFモデルファイルは前方互換性があります。古いOllamaバージョン用にダウンロードした同じファイルが、再ダウンロードなしで現在のバージョンで動作します。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[AIモデルダウンロードに最適なVPN](/ja/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128Kコンテキストモデル](/ja/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },
@@ -411,6 +439,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[下载AI模型的最佳VPN](/zh/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K上下文模型](/zh/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   pt: {
@@ -489,6 +524,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Atualizar o Ollama requer atualizar também os modelos instalados?',
             a: 'Não. Os arquivos de modelos GGUF são compatíveis para frente. Os mesmos arquivos que você baixou para uma versão mais antiga do Ollama funcionam na versão atual sem necessidade de baixar novamente.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Melhor VPN para baixar modelos de IA](/pt/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Modelos Ollama com contexto de 128K](/pt/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },
@@ -571,6 +613,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Mejor VPN para descargar modelos de IA](/es/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Modelos Ollama con contexto de 128K](/es/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   ar: {
@@ -651,6 +700,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[أفضل VPN لتنزيل نماذج الذكاء الاصطناعي](/ar/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[نماذج Ollama ذات السياق 128K](/ar/prompt-bites/ollama-128k-context-models) -- long context models',
+        ],
+      },
     },
   },
   ko: {
@@ -729,6 +785,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Ollama를 업데이트할 때 설치된 모델도 업데이트해야 합니까?',
             a: '아닙니다. GGUF 모델 파일은 전방 호환됩니다. 이전 Ollama 버전용으로 다운로드한 동일한 파일이 재다운로드 없이 현재 버전에서 작동합니다.',
           },
+        ],
+      },
+      relatedReading: {
+        title: '관련 가이드',
+        items: [
+          '[AI 모델 다운로드를 위한 최고의 VPN](/ko/prompt-bites/best-vpn-downloading-ai-models) -- VPN for AI downloads',
+          '[Ollama 128K 컨텍스트 모델](/ko/prompt-bites/ollama-128k-context-models) -- long context models',
         ],
       },
     },

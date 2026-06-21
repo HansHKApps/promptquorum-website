@@ -131,6 +131,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Style: Specify tone, language, and format preferences.** Example: \'Technical audience. Use precise terminology. Return as a markdown report.\'',
         ],
       },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '[Which Prompt Framework Should You Use?](/prompt-engineering/which-framework-to-use)',
+          '[CO-STAR Prompt Framework](/prompt-engineering/co-star-framework)',
+          '[RISEN Framework](/prompt-engineering/risen-framework)',
+          '[Build Your Own Prompt Framework](/prompt-engineering/build-your-own-framework)',
+        ],
+      },
     },
   },
   de: {
@@ -255,6 +264,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Examples: Geben Sie 2–3 konkrete Beispiele für gute Ausgaben.** Zeigen Sie für Analysen eine Beispieltabelle oder Befunde. Zeigen Sie für die Codegenerierung funktionierenden Code, der Ihrem Stil entspricht.',
           '**Constraints: Listen Sie harte Regeln und Präferenzen auf.** Beispiel: \'Verwenden Sie nur SQL (kein Python). Die Abfrage muss in unter 5 Sekunden laufen. Die Ausgabe muss anonymisiert sein (keine Patientennamen).\'',
           '**Style: Legen Sie Ton, Sprache und Formatpräferenzen fest.** Beispiel: \'Technisches Publikum. Verwenden Sie präzise Terminologie. Geben Sie einen Markdown-Bericht zurück.\'',
+        ],
+      },
+      relatedReading: {
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Welches Prompt-Framework sollten Sie verwenden?](/de/prompt-engineering/which-framework-to-use)',
+          '[CO-STAR Prompt-Framework](/de/prompt-engineering/co-star-framework)',
+          '[RISEN Framework](/de/prompt-engineering/risen-framework)',
+          '[Eigenes Prompt-Framework erstellen](/de/prompt-engineering/build-your-own-framework)',
         ],
       },
     },
@@ -383,6 +401,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Style (estilo): Especifica el tono, el idioma y el formato preferidos.** Ejemplo: \'Audiencia técnica. Usa terminología precisa. Devuelve un informe en markdown.\'',
         ],
       },
+      relatedReading: {
+        title: 'Lectura relacionada',
+        items: [
+          '[¿Qué framework de prompts deberías usar?](/es/prompt-engineering/which-framework-to-use)',
+          '[CO-STAR Prompt Framework](/es/prompt-engineering/co-star-framework)',
+          '[RISEN Framework](/es/prompt-engineering/risen-framework)',
+          '[Construye tu propio framework de prompts](/es/prompt-engineering/build-your-own-framework)',
+        ],
+      },
     },
   },
   zh: {
@@ -507,6 +534,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Examples（示例）：提供 2–3 个良好输出的具体示例。** 对于分析，展示一张表格或示例发现。对于代码生成，展示遵循你风格的可运行代码。',
           '**Constraints（约束）：列出严格的规则与偏好。** 示例：\'仅使用 SQL（不使用 Python）。查询必须在 5 秒内执行完毕。输出必须匿名化（不含患者姓名）。\'',
           '**Style（风格）：指定偏好的语气、语言和格式。** 示例：\'技术受众。使用精确术语。返回一份 markdown 报告。\'',
+        ],
+      },
+      relatedReading: {
+        title: '相关阅读',
+        items: [
+          '[应该使用哪种提示框架？](/zh/prompt-engineering/which-framework-to-use)',
+          '[CO-STAR 提示框架](/zh/prompt-engineering/co-star-framework)',
+          '[RISEN 框架](/zh/prompt-engineering/risen-framework)',
+          '[构建自己的提示框架](/zh/prompt-engineering/build-your-own-framework)',
         ],
       },
     },
@@ -636,6 +672,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Style (estilo): Especifique tom, linguagem e preferências de formato.** Exemplo: \'Público técnico. Use terminologia precisa. Retorne como relatório em markdown.\'',
         ],
       },
+      relatedReading: {
+        title: 'Leitura relacionada',
+        items: [
+          '[Qual framework de prompt você deve usar?](/pt/prompt-engineering/which-framework-to-use)',
+          '[CO-STAR Prompt Framework](/pt/prompt-engineering/co-star-framework)',
+          '[RISEN Framework](/pt/prompt-engineering/risen-framework)',
+          '[Construa seu próprio framework de prompts](/pt/prompt-engineering/build-your-own-framework)',
+        ],
+      },
     },
   },
 
@@ -747,6 +792,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'أنشئ قالب SPECS لهذا النوع من المهام وشاركه مع فريقك لتوحيد أسلوب كتابة البرومبتات.',
         ],
       },
+      relatedReading: {
+        title: 'قراءة ذات صلة',
+        items: [
+          '[أي إطار طلب يجب استخدامه؟](/ar/prompt-engineering/which-framework-to-use)',
+          '[إطار CO-STAR للطلبات](/ar/prompt-engineering/co-star-framework)',
+          '[إطار RISEN](/ar/prompt-engineering/risen-framework)',
+          '[بناء إطار طلباتك الخاص](/ar/prompt-engineering/build-your-own-framework)',
+        ],
+      },
     },
   },
   ko: {
@@ -849,6 +903,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Examples: 좋은 출력의 구체적인 예시를 2–3개 제공하십시오.** 분석의 경우 샘플 출력 테이블이나 결과를 보여주십시오. 코드 생성의 경우 스타일에 맞는 작동하는 코드를 보여주십시오.',
           '**Constraints: 엄격한 규칙과 선호사항을 나열하십시오.** 예시: \'SQL만 사용하십시오 (Python 불가). 쿼리는 5초 이내에 실행되어야 합니다. 출력물은 익명화되어야 합니다 (환자 이름 불가).\'',
           '**Style: 어조, 언어, 형식 선호사항을 지정하십시오.** 예시: \'기술적인 독자 대상. 정확한 용어를 사용하십시오. 마크다운 보고서로 반환하십시오.\'',
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-framework-to-use)',
+          '[CO-STAR 프롬프트 프레임워크](/ko/prompt-engineering/co-star-framework)',
+          '[RISEN 프레임워크](/ko/prompt-engineering/risen-framework)',
+          '[나만의 프롬프트 프레임워크 만들기](/ko/prompt-engineering/build-your-own-framework)',
         ],
       },
     },

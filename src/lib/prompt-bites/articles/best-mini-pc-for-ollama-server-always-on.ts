@@ -116,6 +116,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Ollama Latest Version: What\'s New?](/prompt-bites/ollama-latest-version) -- Ollama updates',
+          '[Best Mini PC for Local LLM](/prompt-bites/best-mini-pc-for-local-llm) -- mini PC guide',
+          '[How Much RAM Does a 7B Model Need?](/prompt-bites/how-much-ram-for-7b-model) -- RAM requirements',
+          '[Best Ollama Models for CPU-Only Inference](/prompt-bites/best-ollama-models-cpu-only) -- CPU inference guide',
+          '[Best SSD for Fast Model Loading](/prompt-bites/best-ssd-fast-model-loading) -- SSD guide',
+          '[Best VPN for Downloading AI Models](/prompt-bites/best-vpn-downloading-ai-models) -- VPN guide',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',

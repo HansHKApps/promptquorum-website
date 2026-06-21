@@ -343,12 +343,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Related Reading',
         items: [
-          'Nvidia H100 HBM3E specifications — understand data-center GPU memory',
-          'SK Hynix HBM market share (2025) — supply chain analysis',
-          'Samsung LPDDR5X-PIM research — processing-in-memory future roadmap'
-        ]
+          '[Running Local AI on the Galaxy S26: On-Device AI Explained (2026)](/local-llms/galaxy-s26-local-ai-on-device-2026) -- on-device AI on the Galaxy S26',
+          '[MRAM and In-Memory Computing: The Next Leap for On-Device AI?](/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM and in-memory computing for AI',
+          '[How Much VRAM Do You Need for Local LLMs?](/local-llms/how-much-vram-local-llm) -- how much VRAM you need for local LLMs',
+          '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- local LLM hardware guide 2026',
+          '[Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/local-llms/mobile-local-llms) -- local LLMs on mobile',
+        ],
       }
     },
     schema: {
@@ -510,12 +513,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       relatedReading: {
-        title: '관련 자료',
+        id: 'related-reading',
+        title: '관련 읽을거리',
         items: [
-          'Nvidia H100 HBM3E 명세 — 데이터 센터 GPU 메모리 이해',
-          'SK하이닉스 HBM 시장 점유율(2025) — 공급망 분석',
-          'Samsung LPDDR5X-PIM 연구 — 메모리 내 처리 미래 로드맵'
-        ]
+          '[갤럭시 S26 온디바이스 AI 완벽 가이드: Galaxy AI·NPU 작동 원리 (2026)](/ko/local-llms/galaxy-s26-local-ai-on-device-2026) -- 갤럭시 S26 온디바이스 AI',
+          '[MRAM과 인메모리 컴퓨팅: 온디바이스 AI의 다음 도약?](/ko/local-llms/mram-in-memory-computing-local-ai-2026) -- AI를 위한 MRAM과 인메모리 컴퓨팅',
+          '[로컬 LLM에 VRAM이 얼마나 필요한가?](/ko/local-llms/how-much-vram-local-llm) -- 로컬 LLM에 필요한 VRAM 용량',
+          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 로컬 LLM 하드웨어 가이드 2026',
+          '[모바일 로컬 LLM 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/ko/local-llms/mobile-local-llms) -- 모바일에서 로컬 LLM',
+        ],
       }
     },
     schema: {
@@ -570,7 +576,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: []
-      }
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Ejecutar IA Local en Galaxy S26: IA en Dispositivo Explicada (2026)](/es/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA en dispositivo en el Galaxy S26',
+          '[MRAM e Informática en Memoria: ¿El próximo salto para IA en dispositivo?](/es/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM e informática en memoria para IA',
+          '[¿Cuánta VRAM necesitas para LLMs locales?](/es/local-llms/how-much-vram-local-llm) -- cuánta VRAM necesitas para LLMs locales',
+          '[Guía de hardware para LLM locales 2026](/es/local-llms/local-llm-hardware-guide-2026) -- guía de hardware para LLM locales 2026',
+          '[LLMs locales en móviles 2026: iPhone 16 Pro, iPad M4 y Snapdragon X](/es/local-llms/mobile-local-llms) -- LLMs locales en móvil',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -615,7 +632,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: []
-      }
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Galaxy S26 Lokale KI Leitfaden: Galaxy AI & NPU erklärt (2026)](/de/local-llms/galaxy-s26-local-ai-on-device-2026) -- On-Device-KI auf dem Galaxy S26',
+          '[MRAM und In-Memory-Computing: Der nächste Sprung für On-Device-KI?](/de/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM und In-Memory-Computing für KI',
+          '[Wie viel VRAM braucht man für lokale LLMs?](/de/local-llms/how-much-vram-local-llm) -- Wie viel VRAM für lokale LLMs benötigt wird',
+          '[Lokale LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) -- lokaler LLM Hardware-Guide 2026',
+          '[Mobile lokale LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/de/local-llms/mobile-local-llms) -- lokale LLMs auf Mobilgeräten',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -660,7 +688,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: []
-      }
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures recommandées',
+        items: [
+          '[Guide Galaxy S26 IA Locale: Galaxy AI et NPU Expliqués (2026)](/fr/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA locale sur le Galaxy S26',
+          '[MRAM et informatique en mémoire: le prochain bond pour l\'IA sur appareil?](/fr/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM et informatique en mémoire pour IA',
+          '[Combien de VRAM faut-il pour les LLM locaux ?](/fr/local-llms/how-much-vram-local-llm) -- VRAM nécessaire pour les LLM locaux',
+          '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- guide matériel LLM local 2026',
+          '[LLMs locaux mobiles 2026 : iPhone 16 Pro, iPad M4 & Snapdragon X](/fr/local-llms/mobile-local-llms) -- LLMs locaux sur mobile',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -705,7 +744,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: []
-      }
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[Galaxy S26 でのローカル AI 実行: オンデバイス AI を完全解説 (2026)](/ja/local-llms/galaxy-s26-local-ai-on-device-2026) -- Galaxy S26のオンデバイスAI',
+          '[MRAMとメモリ内コンピューティング：オンデバイスAIの次のステップ?](/ja/local-llms/mram-in-memory-computing-local-ai-2026) -- AIのためのMRAMとメモリ内コンピューティング',
+          '[ローカルLLMに必要なVRAM容量は？](/ja/local-llms/how-much-vram-local-llm) -- ローカルLLMに必要なVRAM',
+          '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- ローカルLLMハードウェアガイド2026',
+          '[モバイル向けローカルLLM 2026：iPhone 16 Pro・iPad M4・Snapdragon X](/ja/local-llms/mobile-local-llms) -- モバイルのローカルLLM',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -750,7 +800,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: []
-      }
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[在Galaxy S26上运行本地AI: 本地设备AI解析指南 (2026)](/zh/local-llms/galaxy-s26-local-ai-on-device-2026) -- Galaxy S26上的本地AI',
+          '[MRAM与内存计算：片上AI的下一个飞跃？](/zh/local-llms/mram-in-memory-computing-local-ai-2026) -- AI的MRAM与内存计算',
+          '[本地LLM需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) -- 本地LLM所需VRAM',
+          '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) -- 本地LLM硬件指南2026',
+          '[移动本地LLM 2026：iPhone 16 Pro、iPad M4与Snapdragon X对比](/zh/local-llms/mobile-local-llms) -- 移动端本地LLM',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -795,7 +856,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: []
-      }
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura Relacionada',
+        items: [
+          '[Executar IA Local no Galaxy S26: IA no Dispositivo Explicada (2026)](/pt/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA no dispositivo no Galaxy S26',
+          '[MRAM e Computação em Memória: O próximo salto para IA em dispositivo?](/pt/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM e computação em memória para IA',
+          '[Quanta VRAM você precisa para LLMs locais?](/pt/local-llms/how-much-vram-local-llm) -- VRAM necessária para LLMs locais',
+          '[Guia de Hardware para LLM Local 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- guia de hardware LLM local 2026',
+          '[LLMs Locais em Celulares 2026: iPhone 16 Pro, iPad M4 e Snapdragon X](/pt/local-llms/mobile-local-llms) -- LLMs locais em celular',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -840,7 +912,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: []
-      }
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[تشغيل الذكاء الاصطناعي المحلي على Galaxy S26: شرح الذكاء الاصطناعي على الجهاز (2026)](/ar/local-llms/galaxy-s26-local-ai-on-device-2026) -- الذكاء الاصطناعي على الجهاز في Galaxy S26',
+          '[MRAM والحوسبة داخل الذاكرة: الخطوة التالية لذكاء اصطناعي على الجهاز؟](/ar/local-llms/mram-in-memory-computing-local-ai-2026) -- MRAM والحوسبة داخل الذاكرة للذكاء الاصطناعي',
+          '[كم من VRAM تحتاج لنماذج LLM المحلية؟](/ar/local-llms/how-much-vram-local-llm) -- VRAM المطلوبة لنماذج LLM المحلية',
+          '[دليل أجهزة LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- دليل أجهزة LLM المحلية 2026',
+          '[نماذج LLM المحلية على الهواتف 2026: iPhone 16 Pro وiPad M4 وSnapdragon X](/ar/local-llms/mobile-local-llms) -- نماذج LLM المحلية على الهاتف',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',

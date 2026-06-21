@@ -129,6 +129,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Best SSD for Fast Model Loading](/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: Performance Guide](/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   de: {
@@ -209,6 +216,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Wann sollte ich den Beelink SER8 dem Mac Mini M4 oder UM790 Pro vorziehen?',
             a: 'Wählen Sie Beelink SER8 wenn Sie: (1) GPU-Treiber und ROCm unter Linux vermeiden möchten; (2) Budget über Geschwindigkeit priorisieren (er ist günstiger als beide); (3) Windows laufen und DirectML nicht nutzen möchten; (4) gelegentliche Inferenz bei ~8 tok/s durchführen und CPU-basierte Inferenz bevorzugen. Er wird den Mac Mini M4 nicht in Geschwindigkeit schlagen oder den UM790 Pro in Skalierbarkeit, aber er ist die einfachste CPU-basierte Option.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Beste SSD für schnelles Modellladen](/de/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: Leistungshandbuch](/de/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -293,6 +307,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Meilleur SSD pour chargement rapide de modèles](/fr/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: Guide de performance](/fr/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   ja: {
@@ -373,6 +394,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Beelink SER8をMac Mini M4またはUM790 Proより選ぶべき時は？',
             a: 'Beelink SER8を選択する場合：(1) Linux上のGPUドライバとROCmを回避したい；(2) 速度より予算を優先（両方より安い）；(3) Windowsを実行しDirectMLを使いたくない；(4) 時々~8 tok/sで推論を行いCPUベース推論の単純性を好む。Mac Mini M4の速度やUM790 Proのスケーラビリティには勝りませんが、最も簡単なCPUのみオプションです。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[モデル高速ロードのための最適SSD](/ja/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: パフォーマンスガイド](/ja/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -457,6 +485,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[快速加载模型的最佳SSD](/zh/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: 性能指南](/zh/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   es: {
@@ -537,6 +572,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Cuándo debo elegir el Beelink SER8 sobre el Mac Mini M4 o el UM790 Pro?',
             a: 'Elige el Beelink SER8 si: (1) quieres evitar drivers de GPU y ROCm en Linux; (2) priorizas el presupuesto sobre la velocidad (es más barato que ambos); (3) usas Windows y no quieres usar DirectML; (4) haces inferencia ocasional a ~8 tok/s y prefieres la simplicidad de la inferencia por CPU. No superará al Mac Mini M4 en velocidad ni al UM790 Pro en escalabilidad, pero es la opción más sencilla solo por CPU.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Mejor SSD para carga rápida de modelos](/es/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: Guía de rendimiento](/es/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -621,6 +663,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Melhor SSD para carregamento rápido de modelos](/pt/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: Guia de desempenho](/pt/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
+        ],
+      },
     },
   },
   ar: {
@@ -701,6 +750,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'متى يجب اختيار Beelink SER8 على Mac Mini M4 أو UM790 Pro؟',
             a: 'اختر Beelink SER8 إذا: (1) أردت تجنب برامج تشغيل GPU وROCm على Linux؛ (2) أولّيت الميزانية على السرعة (أرخص من كليهما)؛ (3) استخدمت Windows ولم تُرِد استخدام DirectML؛ (4) أجريت استدلالاً عرضياً بـ~8 رمز/ثانية وتفضّل بساطة الاستدلال عبر CPU. لن يتفوق على Mac Mini M4 في السرعة ولا على UM790 Pro في قابلية التوسع، لكنه الخيار الأبسط عبر CPU فقط.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[أفضل SSD لتحميل النماذج بسرعة](/ar/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo + Ollama + Vulkan: دليل الأداء](/ar/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },
@@ -806,6 +862,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Ollama 최고의 프론트엔드](/ko/prompt-bites/best-frontend-for-ollama)',
           '[일본 로컬 LLM용 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-local-llm-japan)',
           '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/local-llms/local-llm-software-directory-2026)',
+          '[빠른 모델 로딩을 위한 최고의 SSD](/ko/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Strix Halo Ollama Vulkan 설정 가이드](/ko/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],
       },
     },

@@ -212,6 +212,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        heading: 'Related Reading',
+        items: [
+          '[GDPR Risk Comparison for LLM Providers 2026](/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Qwen Local Deployment Guide 2026](/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[How to Install Ollama](/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[Enterprise Compliance with Local LLMs](/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[Air-Gapped On-Prem Local LLM Setup](/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
+        ],
+      },
     },
   },
   de: {
@@ -303,6 +314,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Erfordert ein lokales LLM eine Datenschutz-Folgenabschätzung (DSFA)?', a: 'Möglicherweise. Eine DSFA ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko für Personen birgt — z. B. bei medizinischen Unterlagen, Mitarbeiterleistungsdaten oder Rechtsdokumenten im großen Maßstab. Ein einzelner Analyst, der Qwen 3 14B für Vertragsprüfung nutzt, löst wahrscheinlich keine obligatorische DSFA aus. Eine Gesundheitsorganisation, die täglich Hunderte von Patientenakten verarbeitet, wahrscheinlich schon.' },
           { q: 'Welches Qwen-Modell ist am besten für Rechts- und HR-Text in europäischen Sprachen?', a: 'Qwen 3 14B Q4_K_M ist die empfohlene Basis: stark in Deutsch, Französisch, Italienisch, Spanisch und Englisch auf dem 14B-Tier. Für VRAM-begrenzte Umgebungen (6–8 GB): Qwen 3 8B bietet gute mehrsprachige Leistung.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        heading: 'Weiterführende Artikel',
+        items: [
+          '[GDPR-Risikoverteilung für LLM-Anbieter 2026](/de/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Qwen lokaler Deployment-Guide 2026](/de/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[Enterprise Compliance mit lokalen LLMs](/de/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[On-Prem Air-Gapped LLM-Setup](/de/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
         ],
       },
     },
@@ -398,6 +420,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quel modèle Qwen est le mieux adapté aux textes juridiques et RH en langues européennes ?', a: 'Qwen 3 14B Q4_K_M est la base recommandée : fort sur l\'allemand, le français, l\'italien, l\'espagnol et l\'anglais au niveau 14B. Pour les environnements VRAM limités (6–8 Go) : Qwen 3 8B offre de bonnes performances multilingues.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        heading: 'Lectures recommandées',
+        items: [
+          '[Comparaison des risques GDPR pour les fournisseurs LLM 2026](/fr/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Guide de déploiement local Qwen 2026](/fr/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[Installer Ollama](/fr/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[Conformité entreprise avec les LLM locaux](/fr/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[Configuration LLM local on-premise isolé du réseau](/fr/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
+        ],
+      },
     },
   },
   ja: {
@@ -489,6 +522,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'ローカルLLMにはデータ保護影響評価（DPIA）が必要ですか？', a: '場合によります。DPIAは個人に高いリスクをもたらす可能性がある処理に必要です。Qwen 3 14Bを契約レビューに使う単一アナリストは義務的DPIAをおそらく要しません。毎日何百もの患者記録を処理する医療機関はおそらく必要です。' },
           { q: 'ヨーロッパ言語での法務・HRテキストに最適なQwenモデルはどれですか？', a: 'Qwen 3 14B Q4_K_Mが推奨基準：14Bティアでドイツ語・フランス語・イタリア語・スペイン語・英語に強い。VRAM制限環境（6〜8 GB）：Qwen 3 8Bが多言語テキストで良好なパフォーマンスを発揮。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        heading: '関連記事',
+        items: [
+          '[LLMプロバイダーのGDPRリスク比較2026](/ja/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Qwen ローカルデプロイメントガイド 2026](/ja/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[ローカルLLMによる企業コンプライアンス](/ja/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[エアギャップ型オンプレミスLLMセットアップ](/ja/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
         ],
       },
     },
@@ -622,6 +666,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Necesito un Acuerdo de Encargado del Tratamiento con Ollama?',
             a: 'No. Ollama es un entorno de ejecución local sin componente de servidor. No procesa datos en tu nombre — los pesos del modelo se ejecutan completamente en tu hardware. No existe ninguna entidad de Ollama actuando como encargado del tratamiento de datos bajo el Artículo 28 del RGPD. No necesitas un acuerdo de encargado del tratamiento.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        heading: 'Lecturas relacionadas',
+        items: [
+          '[Comparación de riesgos GDPR para proveedores LLM 2026](/es/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Guía de despliegue local de Qwen 2026](/es/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[Cumplimiento empresarial con LLMs locales](/es/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[Configuración LLM local en instalaciones aisladas de la red](/es/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
         ],
       },
     },
@@ -770,6 +825,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        heading: 'قراءات ذات صلة',
+        items: [
+          '[مقارنة مخاطر GDPR لمزودي LLM 2026](/ar/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[دليل نشر Qwen المحلي 2026](/ar/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[امتثال المؤسسات مع نماذج LLM المحلية](/ar/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[إعداد LLM المحلي المعزول داخلياً](/ar/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -874,6 +940,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '本地LLM是否需要数据保护影响评估（DPIA）？', a: '可能需要。当处理可能对个人产生高风险时（例如大规模处理医疗记录、员工绩效数据或法律文件）需要DPIA。单个分析师使用Qwen 3 14B进行合同审查可能不触发强制DPIA。每天处理数百份患者记录的医疗机构可能需要。' },
           { q: '哪种Qwen模型最适合欧洲语言的法律和HR文本？', a: 'Qwen 3 14B Q4_K_M是推荐基线：在14B级别上德语、法语、意大利语、西班牙语和英语都表现强劲。VRAM受限环境（6-8 GB）：Qwen 3 8B在多语言文本上表现良好。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        heading: '相关阅读',
+        items: [
+          '[LLM提供商GDPR风险比较2026](/zh/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Qwen本地部署指南2026](/zh/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[本地LLM企业合规](/zh/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[隔离内网本地LLM部署](/zh/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
         ],
       },
     },
@@ -1019,6 +1096,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Preciso de um Acordo de Operador de Tratamento com o Ollama?',
             a: 'Não. O Ollama é um ambiente de execução local sem componente de servidor. Ele não trata dados em seu nome — os pesos do modelo rodam inteiramente no seu hardware. Não existe nenhuma entidade Ollama atuando como operadora de tratamento de dados sob o Artigo 28 do GDPR. Você não precisa de um acordo de operador de tratamento.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        heading: 'Leitura Relacionada',
+        items: [
+          '[Comparação de Riscos GDPR para Provedores LLM 2026](/pt/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Guia de Implantação Local do Qwen 2026](/pt/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[Conformidade empresarial com LLMs locais](/pt/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[Configuração LLM local on-premise com air-gap](/pt/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
         ],
       },
     },
@@ -1204,6 +1292,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Ollama와 데이터 처리 계약(DPA)을 체결해야 합니까?',
             a: '아닙니다. Ollama는 서버 컴포넌트가 없는 로컬 런타임입니다. Ollama는 귀사를 대신하여 데이터를 처리하지 않으며, 모델 가중치가 귀사의 하드웨어에서 완전히 실행됩니다. GDPR 제28조상 데이터 처리자 역할을 하는 Ollama 법인이 존재하지 않으므로 DPA 체결이 필요하지 않습니다.',
           },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        heading: '관련 읽을거리',
+        items: [
+          '[LLM 제공업체 GDPR 위험 비교 2026](/ko/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
+          '[Qwen 로컬 배포 가이드 2026](/ko/local-llms/qwen-local-deployment-guide-2026) -- Qwen local deployment guide',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- how to install Ollama',
+          '[로컬 LLM을 이용한 기업 컴플라이언스](/ko/local-llms/enterprise-compliance-local-llms) -- enterprise compliance with local LLMs',
+          '[에어갭 온프레미스 로컬 LLM 설정](/ko/local-llms/on-prem-air-gapped-local-llm) -- air-gapped local LLM setup',
         ],
       },
     },

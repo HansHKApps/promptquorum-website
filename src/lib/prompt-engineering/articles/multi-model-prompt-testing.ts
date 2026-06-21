@@ -234,6 +234,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Cost Optimization: Choosing Between GPT-5.5, Claude, and Gemini', url: '/prompt-engineering/cost-optimization-model-selection' },
         ],
       },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality)',
+        ],
+      },
       sources: {
         id: 'sources',
         title: 'Sources',
@@ -396,6 +406,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Einführung in Promptfoo: Prompts lokal und in CI/CD testen', url: '/de/prompt-engineering/promptfoo-testing' },
           { title: 'Wann Konsens-Scoring über mehrere Modelle einsetzen', url: '/de/prompt-engineering/consensus-scoring-llm' },
           { title: 'Kostenoptimierung: Auswahl zwischen GPT-5.5, Claude und Gemini', url: '/de/prompt-engineering/cost-optimization-model-selection' },
+        ],
+      },
+      relatedReading: {
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[How to Test Prompts Across Models](/de/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/de/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/de/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/de/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/de/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -633,6 +653,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Optimización de costes: elegir entre GPT-5.5, Claude y Gemini', url: '/es/prompt-engineering/cost-optimization-model-selection' },
         ],
       },
+      relatedReading: {
+        title: 'Lectura relacionada',
+        items: [
+          '[How to Test Prompts Across Models](/es/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/es/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/es/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/es/prompt-engineering/how-to-evaluate-prompt-quality)',
+        ],
+      },
       sources: {
         id: 'sources',
         title: 'Fuentes',
@@ -867,6 +897,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Otimização de custos: escolher entre GPT-5.5, Claude e Gemini', url: '/pt/prompt-engineering/cost-optimization-model-selection' },
         ],
       },
+      relatedReading: {
+        title: 'Leitura relacionada',
+        items: [
+          '[How to Test Prompts Across Models](/pt/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/pt/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/pt/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/pt/prompt-engineering/how-to-evaluate-prompt-quality)',
+        ],
+      },
       sources: {
         id: 'sources',
         title: 'Fontes',
@@ -1029,6 +1069,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Introduction à Promptfoo : tester les prompts localement et en CI/CD', url: '/fr/prompt-engineering/promptfoo-testing' },
           { title: 'Quand utiliser le scoring par consensus entre modèles', url: '/fr/prompt-engineering/consensus-scoring-llm' },
           { title: 'Optimisation des coûts : choisir entre GPT-5.5, Claude et Gemini', url: '/fr/prompt-engineering/cost-optimization-model-selection' },
+        ],
+      },
+      relatedReading: {
+        title: 'Lectures associées',
+        items: [
+          '[How to Test Prompts Across Models](/fr/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/fr/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/fr/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/fr/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/fr/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -1195,6 +1245,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'コスト最適化：GPT-5.5、Claude、Gemini選択ガイド', url: '/ja/prompt-engineering/cost-optimization-model-selection' },
         ],
       },
+      relatedReading: {
+        title: '関連資料',
+        items: [
+          '[How to Test Prompts Across Models](/ja/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/ja/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/ja/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/ja/prompt-engineering/how-to-evaluate-prompt-quality)',
+        ],
+      },
       sources: {
         id: 'sources',
         title: 'ソース',
@@ -1339,6 +1399,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Promptfoo入门：本地和CI/CD中的提示词测试', url: '/zh/prompt-engineering/promptfoo-testing' },
           { title: '何时在多个模型间使用共识评分', url: '/zh/prompt-engineering/consensus-scoring-llm' },
           { title: '成本优化：GPT-5.5、Claude、Gemini选择指南', url: '/zh/prompt-engineering/cost-optimization-model-selection' },
+        ],
+      },
+      relatedReading: {
+        title: '相关阅读',
+        items: [
+          '[How to Test Prompts Across Models](/zh/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/zh/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/zh/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/zh/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
@@ -1595,6 +1665,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'تحسين التكلفة: الاختيار بين GPT-5.5 وClaude وGemini', url: '/ar/prompt-engineering/cost-optimization-model-selection' },
         ],
       },
+      relatedReading: {
+        title: 'قراءة ذات صلة',
+        items: [
+          '[How to Test Prompts Across Models](/ar/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/ar/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/ar/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/ar/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/ar/prompt-engineering/how-to-evaluate-prompt-quality)',
+        ],
+      },
       sources: {
         id: 'sources',
         title: 'المصادر',
@@ -1828,6 +1908,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Promptfoo 소개: 로컬 및 CI/CD에서 프롬프트 테스트', url: '/ko/prompt-engineering/promptfoo-testing' },
           { title: '여러 모델에서 합의 채점을 사용하는 시기', url: '/ko/prompt-engineering/consensus-scoring-llm' },
           { title: '비용 최적화: GPT-5.5, Claude, Gemini 중 선택', url: '/ko/prompt-engineering/cost-optimization-model-selection' },
+        ],
+      },
+      relatedReading: {
+        title: '관련 자료',
+        items: [
+          '[How to Test Prompts Across Models](/ko/prompt-engineering/how-to-test-prompts-across-models)',
+          '[Prompt Evaluation Metrics](/ko/prompt-engineering/prompt-evaluation-metrics)',
+          '[Best Prompt Testing Tools](/ko/prompt-engineering/best-prompt-testing-tools)',
+          '[Braintrust vs PromptHub vs Vellum](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum)',
+          '[How to Evaluate Prompt Quality](/ko/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {

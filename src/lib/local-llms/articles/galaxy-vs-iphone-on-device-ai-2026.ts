@@ -358,7 +358,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Apple WWDC 2026 announcement — AFM 3 architecture and PCC overview',
           'Samsung Galaxy S26 Unpacked (Feb 25, 2026) — Galaxy AI feature list',
-          'Apple Private Cloud Compute whitepaper — cryptographic attestation and threat model'
+          'Apple Private Cloud Compute whitepaper — cryptographic attestation and threat model',
+          '[Running Local AI on the Galaxy S26: On-Device AI Explained (2026)](/local-llms/galaxy-s26-local-ai-on-device-2026) -- running local AI on the Galaxy S26',
+          '[Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/local-llms/mobile-local-llms) -- local LLMs on mobile',
+          '[On-Device AI & Memory: Why HBM Memory Drives Local AI Speed (2026)](/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM memory in Samsung devices',
+          '[Apple\'s On-Device AI vs Real Local LLMs: What WWDC 2026 Actually Changed](/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs true local LLMs',
+          '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- on-device AI privacy checklist',
         ]
       }
     },
@@ -517,7 +522,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Apple WWDC 2026 공지 — AFM 3 아키텍처 및 PCC 개요',
           'Samsung Galaxy S26 Unpacked(2026년 2월 25일) — Galaxy AI 기능 목록',
-          'Apple Private Cloud Compute 백서 — 암호 감시 및 위협 모델'
+          'Apple Private Cloud Compute 백서 — 암호 감시 및 위협 모델',
+          '[갤럭시 S26 온디바이스 AI 완벽 가이드: Galaxy AI·NPU 작동 원리 (2026)](/ko/local-llms/galaxy-s26-local-ai-on-device-2026) -- 갤럭시 S26에서 로컬 AI 실행',
+          '[모바일 로컬 LLM 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/ko/local-llms/mobile-local-llms) -- 모바일 로컬 LLM',
+          '[HBM과 온디바이스 AI: 삼성·SK하이닉스 메모리가 AI 속도를 결정하는 이유 (2026)](/ko/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- 삼성 기기의 HBM 메모리',
+          '[Apple 온디바이스 AI vs 실제 로컬 LLM: WWDC 2026이 실제로 바꾼 것](/ko/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs 진정한 로컬 LLM',
+          '[로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) -- 온디바이스 AI 프라이버시 체크리스트',
         ]
       }
     },
@@ -675,7 +685,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           'Anuncio Apple WWDC 2026 — descripción general de arquitectura AFM 3 y PCC',
-          'Samsung Galaxy S26 Unpacked (25 de febrero de 2026) — lista de características Galaxy AI'
+          'Samsung Galaxy S26 Unpacked (25 de febrero de 2026) — lista de características Galaxy AI',
+          '[Ejecutar IA Local en Galaxy S26: IA en Dispositivo Explicada (2026)](/es/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA local en el Galaxy S26',
+          '[LLMs locales en móviles 2026: iPhone 16 Pro, iPad M4 y Snapdragon X](/es/local-llms/mobile-local-llms) -- LLMs locales en móvil',
+          '[IA en Dispositivo y Memoria: Por Qué HBM Determina la Velocidad de IA Local (2026)](/es/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM en dispositivos Samsung',
+          '[La IA on-device de Apple vs los LLM locales reales: qué cambió realmente en WWDC 2026](/es/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs LLMs locales reales',
+          '[Lista de seguridad y privacidad para LLM locales](/es/local-llms/local-llm-security-privacy-checklist) -- lista de privacidad IA en dispositivo',
         ]
       }
     },
@@ -710,19 +725,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     }
   },
   ja: {
-    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone オンデバイスAI: Samsung Galaxy AIとApple Intelligence(2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12分読む', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: 機能をパック、ユーザー制御。', 'Apple Intelligence: オンデバイス優先。', 'Exynos 2600 > Snapdragon > A18 Pro', 'プライバシー: Knox Vault vs PCC', 'クラウド: Samsung 積極的 vs Apple 3層', 'LLM実行: Galaxy S26勝利。'] }, relatedReading: { title: '関連記事', items: [] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'ja', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ja', mainEntity: [] } 
+    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone オンデバイスAI: Samsung Galaxy AIとApple Intelligence(2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12分読む', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: 機能をパック、ユーザー制御。', 'Apple Intelligence: オンデバイス優先。', 'Exynos 2600 > Snapdragon > A18 Pro', 'プライバシー: Knox Vault vs PCC', 'クラウド: Samsung 積極的 vs Apple 3層', 'LLM実行: Galaxy S26勝利。'] }, relatedReading: { title: '関連記事', items: [
+      '[Galaxy S26 でのローカル AI 実行: オンデバイス AI を完全解説 (2026)](/ja/local-llms/galaxy-s26-local-ai-on-device-2026) -- Galaxy S26でのローカルAI実行',
+      '[モバイル向けローカルLLM 2026：iPhone 16 Pro・iPad M4・Snapdragon X](/ja/local-llms/mobile-local-llms) -- モバイルのローカルLLM',
+      '[オンデバイスAIとメモリ: HBMメモリがローカルAIを加速する理由 (2026)](/ja/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- SamsungデバイスのHBMメモリ',
+      '[AppleのオンデバイスAI対ローカルLLM：WWDC 2026で実際に何が変わったか](/ja/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs 真のローカルLLM',
+      '[ローカルLLMセキュリティ&プライバシーチェックリスト](/ja/local-llms/local-llm-security-privacy-checklist) -- オンデバイスAIプライバシーチェックリスト',
+    ] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'ja', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ja', mainEntity: [] }
   },
   zh: {
-    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy对iPhone本地AI: Samsung Galaxy AI对Apple Intelligence(2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12分钟阅读', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: 功能范围，用户控制。', 'Apple Intelligence: 本地优先。', 'Exynos 2600速度最快', '隐私: Knox Vault vs PCC', '云策略: Samsung主动 vs Apple分层', 'LLM运行: Galaxy S26获胜。'] }, relatedReading: { title: '相关阅读', items: [] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'zh', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'zh', mainEntity: [] } 
+    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy对iPhone本地AI: Samsung Galaxy AI对Apple Intelligence(2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12分钟阅读', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: 功能范围，用户控制。', 'Apple Intelligence: 本地优先。', 'Exynos 2600速度最快', '隐私: Knox Vault vs PCC', '云策略: Samsung主动 vs Apple分层', 'LLM运行: Galaxy S26获胜。'] }, relatedReading: { title: '相关阅读', items: [
+      '[在Galaxy S26上运行本地AI: 本地设备AI解析指南 (2026)](/zh/local-llms/galaxy-s26-local-ai-on-device-2026) -- Galaxy S26上的本地AI',
+      '[移动本地LLM 2026：iPhone 16 Pro、iPad M4与Snapdragon X对比](/zh/local-llms/mobile-local-llms) -- 移动端本地LLM',
+      '[设备上的AI和内存：为什么HBM内存驱动本地AI速度 (2026)](/zh/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- 三星设备中的HBM内存',
+      '[Apple的本地AI与真正的本地LLM：WWDC 2026到底改变了什么](/zh/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs 真正本地LLM',
+      '[本地LLM安全和隐私检查清单](/zh/local-llms/local-llm-security-privacy-checklist) -- 本地AI隐私检查清单',
+    ] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'zh', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'zh', mainEntity: [] }
   },
   pt: {
-    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone IA em Dispositivo: Samsung Galaxy AI vs Apple Intelligence (2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12 min de leitura', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: empacotar funcionalidades, controle do usuário.', 'Apple Intelligence: primeiro em dispositivo.', 'Exynos 2600 mais rápido', 'Privacidade: Knox Vault vs PCC', 'Nuvem: Samsung proativo vs Apple 3 camadas', 'Executar LLM: Galaxy S26 vence.'] }, relatedReading: { title: 'Leitura Relacionada', items: [] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'pt', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'pt', mainEntity: [] } 
+    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone IA em Dispositivo: Samsung Galaxy AI vs Apple Intelligence (2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12 min de leitura', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: empacotar funcionalidades, controle do usuário.', 'Apple Intelligence: primeiro em dispositivo.', 'Exynos 2600 mais rápido', 'Privacidade: Knox Vault vs PCC', 'Nuvem: Samsung proativo vs Apple 3 camadas', 'Executar LLM: Galaxy S26 vence.'] }, relatedReading: { title: 'Leitura Relacionada', items: [
+      '[Executar IA Local no Galaxy S26: IA no Dispositivo Explicada (2026)](/pt/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA local no Galaxy S26',
+      '[LLMs Locais em Celulares 2026: iPhone 16 Pro, iPad M4 e Snapdragon X](/pt/local-llms/mobile-local-llms) -- LLMs locais em celular',
+      '[IA no Dispositivo e Memória: Por que a Memória HBM Impulsiona a Velocidade de IA Local (2026)](/pt/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM em dispositivos Samsung',
+      '[A IA no dispositivo da Apple vs LLMs locais reais: o que a WWDC 2026 mudou de verdade](/pt/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs LLMs locais reais',
+      '[Lista de verificação de segurança e privacidade de LLM local](/pt/local-llms/local-llm-security-privacy-checklist) -- lista de privacidade IA no dispositivo',
+    ] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'pt', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'pt', mainEntity: [] }
   },
   ar: {
-    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy مقابل iPhone على الجهاز AI: Samsung Galaxy AI مقابل Apple Intelligence (2026)', seoTitle: 'Galaxy S26 مقابل iPhone 16: الذكاء على الجهاز 2026', metaDescription: 'مقارنة الذكاء الاصطناعي على الجهاز: Galaxy S26 مقابل iPhone 16. ما يعمل محليًا على كل جهاز، أداء NPU، الخصوصية، وأيهما أفضل للذكاء بلا سحابة.', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12 دقيقة قراءة', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: ميزات، تحكم المستخدم.', 'Apple Intelligence: على الجهاز أولاً.', 'Exynos 2600 الأسرع', 'الخصوصية: Knox Vault مقابل PCC', 'السحابة: Samsung استباقي مقابل Apple 3 طبقات', 'تشغيل LLM: Galaxy S26 يفوز.'] }, relatedReading: { title: 'القراءة ذات الصلة', items: [] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'ar', 'articleBody': 'Galaxy مقابل iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ar', mainEntity: [] } 
+    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy مقابل iPhone على الجهاز AI: Samsung Galaxy AI مقابل Apple Intelligence (2026)', seoTitle: 'Galaxy S26 مقابل iPhone 16: الذكاء على الجهاز 2026', metaDescription: 'مقارنة الذكاء الاصطناعي على الجهاز: Galaxy S26 مقابل iPhone 16. ما يعمل محليًا على كل جهاز، أداء NPU، الخصوصية، وأيهما أفضل للذكاء بلا سحابة.', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12 دقيقة قراءة', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: ميزات، تحكم المستخدم.', 'Apple Intelligence: على الجهاز أولاً.', 'Exynos 2600 الأسرع', 'الخصوصية: Knox Vault مقابل PCC', 'السحابة: Samsung استباقي مقابل Apple 3 طبقات', 'تشغيل LLM: Galaxy S26 يفوز.'] }, relatedReading: { title: 'قراءات ذات صلة', items: [
+      '[تشغيل الذكاء الاصطناعي المحلي على Galaxy S26: شرح الذكاء الاصطناعي على الجهاز (2026)](/ar/local-llms/galaxy-s26-local-ai-on-device-2026) -- الذكاء الاصطناعي المحلي على Galaxy S26',
+      '[نماذج LLM المحلية على الهواتف 2026: iPhone 16 Pro وiPad M4 وSnapdragon X](/ar/local-llms/mobile-local-llms) -- نماذج LLM المحلية على الهاتف',
+      '[الذكاء الاصطناعي على الجهاز والذاكرة: لماذا تدفع ذاكرة HBM سرعة الذكاء الاصطناعي المحلي (2026)](/ar/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM في أجهزة Samsung',
+      '[الذكاء الاصطناعي المحلي من Apple مقابل نماذج LLM المستضافة ذاتياً: ما الذي غيّرته WWDC 2026 فعلاً](/ar/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence مقابل نماذج LLM المحلية الحقيقية',
+      '[قائمة تحقق الأمان والخصوصية لنماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) -- قائمة خصوصية الذكاء الاصطناعي المحلي',
+    ] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'ar', 'articleBody': 'Galaxy مقابل iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ar', mainEntity: [] }
   },
   de: {
-    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone On-Device AI: Samsung Galaxy AI vs Apple Intelligence (2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12 Min. Lesezeit', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: Features, Benutzerkontrolle.', 'Apple Intelligence: On-Device-First.', 'Exynos 2600 am schnellsten', 'Datenschutz: Knox Vault vs PCC', 'Cloud: Samsung proaktiv vs Apple 3-Schicht', 'LLM-Ausführung: Galaxy S26 gewinnt.'] }, relatedReading: { title: 'Weiterführende Literatur', items: [] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'de', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', mainEntity: [] } 
+    freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone On-Device AI: Samsung Galaxy AI vs Apple Intelligence (2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: '12 Min. Lesezeit', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: Features, Benutzerkontrolle.', 'Apple Intelligence: On-Device-First.', 'Exynos 2600 am schnellsten', 'Datenschutz: Knox Vault vs PCC', 'Cloud: Samsung proaktiv vs Apple 3-Schicht', 'LLM-Ausführung: Galaxy S26 gewinnt.'] }, relatedReading: { title: 'Weiterführende Literatur', items: [
+      '[Galaxy S26 Lokale KI Leitfaden: Galaxy AI & NPU erklärt (2026)](/de/local-llms/galaxy-s26-local-ai-on-device-2026) -- lokale KI auf dem Galaxy S26',
+      '[Mobile lokale LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X](/de/local-llms/mobile-local-llms) -- lokale LLMs auf Mobilgeräten',
+      '[On-Device KI und Speicher: Warum HBM die Geschwindigkeit lokaler KI antreibt (2026)](/de/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM-Speicher in Samsung-Geräten',
+      '[Apples On-Device-KI vs. echte lokale LLMs: Was WWDC 2026 wirklich geändert hat](/de/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs. echte lokale LLMs',
+      '[Local LLM Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist) -- Datenschutz-Checkliste für On-Device-KI',
+    ] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'de', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', mainEntity: [] }
   },
-  fr: { freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone IA sur appareil: Samsung Galaxy AI vs Apple Intelligence (2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: 'Lecture 12 min', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: fonctionnalités, contrôle utilisateur.', 'Apple Intelligence: d\'abord sur appareil.', 'Exynos 2600 le plus rapide', 'Confidentialité: Knox Vault vs PCC', 'Cloud: Samsung proactif vs Apple 3 niveaux', 'Exécution LLM: Galaxy S26 gagne.'] }, relatedReading: { title: 'Lectures associées', items: [] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'fr', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'fr', mainEntity: [] } }
+  fr: { freshness_tier: 'monthly', theme: 'Hardware & Performance', title: 'Galaxy vs iPhone IA sur appareil: Samsung Galaxy AI vs Apple Intelligence (2026)', publishDate: '2026-06-15', dateModified: '2026-06-15', readTime: 'Lecture 12 min', educationalLevel: 'Intermediate', sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['Galaxy S26: fonctionnalités, contrôle utilisateur.', 'Apple Intelligence: d\'abord sur appareil.', 'Exynos 2600 le plus rapide', 'Confidentialité: Knox Vault vs PCC', 'Cloud: Samsung proactif vs Apple 3 niveaux', 'Exécution LLM: Galaxy S26 gagne.'] }, relatedReading: { title: 'Lectures associées', items: [
+      '[Guide Galaxy S26 IA Locale: Galaxy AI et NPU Expliqués (2026)](/fr/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA locale sur le Galaxy S26',
+      '[LLMs locaux mobiles 2026 : iPhone 16 Pro, iPad M4 & Snapdragon X](/fr/local-llms/mobile-local-llms) -- LLMs locaux sur mobile',
+      '[IA Sur Appareil et Mémoire: Pourquoi HBM Détermine la Vitesse de l\'IA Locale (2026)](/fr/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026) -- HBM dans les appareils Samsung',
+      '[L\'IA on-device d\'Apple vs les vrais LLM locaux : ce que WWDC 2026 a vraiment changé](/fr/local-llms/apple-on-device-ai-vs-local-llms) -- Apple Intelligence vs vrais LLMs locaux',
+      '[Liste de contrôle sécurité et confidentialité LLM local](/fr/local-llms/local-llm-security-privacy-checklist) -- liste de confidentialité IA sur appareil',
+    ] } }, schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'inLanguage': 'fr', 'articleBody': 'Galaxy vs iPhone' }, faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'fr', mainEntity: [] } }
 };

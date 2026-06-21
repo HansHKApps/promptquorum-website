@@ -128,6 +128,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[How Much VRAM Does a 70B Model Need?](/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[DeepSeek R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[Cloud GPU Cost Per Hour 2026](/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -218,6 +227,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Wie viel VRAM braucht ein 70B-Modell?](/de/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[DeepSeek R1 Distill VRAM-Spickzettel](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[Bestes DeepSeek Distill für Ihre GPU](/de/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[Cloud-GPU-Kosten pro Stunde 2026](/de/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -274,6 +292,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Puis-je faire tourner un modèle 70B sur un seul GPU grand public ?',
             a: 'Aucun GPU grand public en 2026 n\'a assez de VRAM pour un 70B Q4_K_M (42 Go). Une RTX 4090 peut le faire tourner avec offloading CPU à 8–12 tok/s, mais nécessite 64 Go+ de RAM système.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Quelle VRAM pour un modèle 70B ?](/fr/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[Aide-mémoire VRAM DeepSeek R1 Distill](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[Meilleur DeepSeek Distill pour votre GPU](/fr/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[Coût GPU cloud par heure 2026](/fr/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
         ],
       },
     },
@@ -336,6 +363,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'CPU-onlyで70Bモデルを動かすには何GB必要ですか？',
             a: '70B Q4_K_Mには最低44GB RAMが必要です。実用的なCPU推論には64GBを推奨。速度はモダンなデスクトップCPUで1〜3 tok/s——使えますが低速です。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[70BモデルのVRAM要件](/ja/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[DeepSeek R1 Distill VRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[あなたのGPUに最適なDeepSeek Distill](/ja/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[クラウドGPUコスト毎時 2026](/ja/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
         ],
       },
     },
@@ -426,6 +462,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Cuál es la opción cloud más barata en lugar de eso?',
             a: 'RunPod precios spot para A40 48GB (GPU más pequeña que cabe 70B Q4 completamente) empieza en $0.44/hr. Groq API ofrece Llama 3.3 70B a $0.59 por millón tokens en nivel pagado. Para uso ocasional, Groq es más barato que cualquier opción de hardware.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[¿Cuánta VRAM necesita un modelo 70B?](/es/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[Cheatsheet VRAM DeepSeek R1 Distill](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[Mejor DeepSeek Distill para tu GPU](/es/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[Costo de GPU en nube por hora 2026](/es/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
         ],
       },
     },
@@ -527,6 +572,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[70B模型需要多少显存？](/zh/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[DeepSeek R1 Distill显存速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[为您GPU选择最佳DeepSeek Distill](/zh/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[云GPU每小时费用2026](/zh/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -624,6 +678,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Qual é a opção em nuvem mais barata em vez disso?',
             a: 'O preço spot do RunPod para um A40 48GB (a menor GPU que cabe 70B Q4 completamente) começa em $0,44/hora. A Groq API oferece Llama 3.3 70B a $0,59 por milhão de tokens no nível pago. Para uso ocasional, o Groq é mais barato do que qualquer opção de hardware.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Quanta VRAM um modelo 70B precisa?](/pt/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[Cheatsheet VRAM DeepSeek R1 Distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[Melhor DeepSeek Distill para sua GPU](/pt/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[Custo de GPU em nuvem por hora 2026](/pt/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
         ],
       },
     },
@@ -743,6 +806,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'ما أرخص خيار سحابي بديلًا عن ذلك؟',
             a: 'أسعار RunPod الفورية لـ A40 ذاكرة 48GB (أصغر GPU تستوعب 70B Q4 بالكامل) تبدأ من $0.44/ساعة. Groq API يقدّم Llama 3.3 70B بسعر $0.59 لكل مليون رمز في الخطة المدفوعة. للاستخدام العرضي، Groq أرخص من أي خيار أجهزة.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[كم VRAM يحتاج نموذج 70B؟](/ar/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[ورقة غش VRAM لـ DeepSeek R1 Distill](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[أفضل DeepSeek Distill لوحدة GPU الخاصة بك](/ar/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[تكلفة GPU السحابية في الساعة 2026](/ar/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
         ],
       },
     },
@@ -909,6 +981,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Llama 3.3 70B 로컬 실행 가이드',
           '[llama.cpp CPU 오프로드 설정 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally)',
           '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/local-llms/local-llm-software-directory-2026)',
+          '[70B 모델에 필요한 VRAM 용량](/ko/prompt-bites/vram-for-70b-model) -- how much VRAM for a 70B model',
+          '[DeepSeek R1 Distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- DeepSeek R1 distill VRAM cheatsheet',
+          '[내 GPU에 가장 적합한 DeepSeek Distill](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) -- best DeepSeek distill for your GPU',
+          '[클라우드 GPU 시간당 비용 2026](/ko/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU cost per hour',
         ],
       },
     },

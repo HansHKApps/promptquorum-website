@@ -133,6 +133,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Guides',
+        items: [
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B Comparison](/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[Best SSD for Fast Model Loading](/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Can You Run RAG on 2 GB RAM?](/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
+        ],
+      },
     },
   },
   de: {
@@ -195,6 +203,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Ist GPU-Inferenz immer besser als CPU?',
             a: 'Nicht für jeden Anwendungsfall. Für Batch-Aufgaben, geplante Verarbeitung oder nicht-interaktive Nutzung sind ~5 tok/s auf der CPU akzeptabel und vermeiden GPU-Kosten. Für Echtzeit-Chat oder Coding sind die 20–25 tok/s der GPU unverzichtbar.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B Vergleich](/de/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[Beste SSD für schnelles Modellladen](/de/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Kann man RAG mit 2 GB RAM ausführen?](/de/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
         ],
       },
     },
@@ -261,6 +277,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guides associés',
+        items: [
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B : comparaison](/fr/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[Meilleur SSD pour chargement rapide de modèles](/fr/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Peut-on exécuter RAG avec 2 Go de RAM ?](/fr/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
+        ],
+      },
     },
   },
   ja: {
@@ -325,6 +349,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '関連ガイド',
+        items: [
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B 比較](/ja/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[モデル高速ロードのための最適SSD](/ja/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[2 GB RAMでRAGは動かせる？](/ja/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
+        ],
+      },
     },
   },
   zh: {
@@ -387,6 +419,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'GPU推理总是优于CPU吗？',
             a: '并非适用于所有场景。对于批处理任务、定时处理或非交互式用途，CPU约5 tok/s是可接受的，并可节省GPU成本。对于实时对话或编程辅助，GPU的20–25 tok/s是必不可少的。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关指南',
+        items: [
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B对比](/zh/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[快速加载模型的最佳SSD](/zh/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[2 GB内存能运行RAG吗？](/zh/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
         ],
       },
     },
@@ -465,6 +505,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guías relacionadas',
+        items: [
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B: comparación](/es/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[Mejor SSD para carga rápida de modelos](/es/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[¿Puedes ejecutar RAG con 2 GB de RAM?](/es/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
+        ],
+      },
     },
   },
   pt: {
@@ -541,6 +589,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Guias relacionados',
+        items: [
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B: comparação](/pt/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[Melhor SSD para carregamento rápido de modelos](/pt/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[Pode executar RAG com 2 GB de RAM?](/pt/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
+        ],
+      },
     },
   },
   ar: {
@@ -615,6 +671,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل الاستدلال عبر GPU دائماً أفضل من CPU؟',
             a: 'ليس في كل الحالات. للمهام الدُفعية أو المعالجة المجدولة أو غير التفاعلية، ~5 توكن/ث على CPU مقبول ويتجنب تكاليف GPU. للمحادثة أو البرمجة الآنية، 20–25 توكن/ث عبر GPU ضرورية.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'أدلة ذات صلة',
+        items: [
+          '[Mistral Small 24B مقابل Qwen 14B مقابل Llama 8B: مقارنة](/ar/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[أفضل SSD لتحميل النماذج بسرعة](/ar/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[هل يمكنك تشغيل RAG بذاكرة 2 GB؟](/ar/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
         ],
       },
     },
@@ -711,6 +775,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[로컬 LLM에 필요한 VRAM 용량](/ko/prompt-bites/how-much-vram-for-local-llm)',
           '[70B 모델 VRAM 요구사항](/ko/prompt-bites/vram-for-70b-model)',
           '[로컬 LLM VRAM 완전 가이드](/ko/local-llms/how-much-vram-local-llm)',
+          '[Mistral Small 24B vs Qwen 14B vs Llama 8B 비교](/ko/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b) -- Mistral Small 24B vs Qwen 14B vs Llama 8B comparison',
+          '[빠른 모델 로딩을 위한 최고의 SSD](/ko/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
+          '[2 GB RAM으로 RAG를 실행할 수 있습니까?](/ko/prompt-bites/can-you-run-rag-on-2gb-ram) -- can you run RAG on 2 GB RAM?',
         ],
       },
     },

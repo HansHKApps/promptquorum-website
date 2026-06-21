@@ -171,6 +171,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '[Best GPU for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- GPU buying guide for every workstation tier',
+          '[Best Local AI App for Low-End PCs](/power-local-llm/best-local-ai-app-low-end-pc) -- software options if you are not ready for a full workstation',
+          '[Best Mac for Local AI 2026](/power-local-llm/best-mac-for-local-ai-2026) -- Apple Silicon alternative to a GPU workstation',
+          '[Best Laptops for Running Local LLMs: Buying Guide 2026](/power-local-llm/best-laptops-local-llm-2026) -- portable options before committing to a workstation build',
+          '[Qwen Local Deployment: Complete Production Guide 2026](/power-local-llm/qwen-local-deployment-complete-guide-2026) -- production deployment once your workstation is built',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -354,6 +364,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Beste GPU für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- GPU-Kaufratgeber für jede Workstation-Stufe',
+          '[Beste lokale KI-App für schwache PCs](/de/power-local-llm/best-local-ai-app-low-end-pc) -- Software-Optionen, wenn Sie noch keine vollständige Workstation bereit haben',
+          '[Bester Mac für lokale KI 2026](/de/power-local-llm/best-mac-for-local-ai-2026) -- Apple Silicon als Alternative zur GPU-Workstation',
+          '[Die besten Laptops für lokale LLMs: Kaufberatung 2026](/de/power-local-llm/best-laptops-local-llm-2026) -- mobile Optionen vor dem Kauf einer Workstation',
+          '[Qwen Lokales Deployment: Vollständiger Produktionsleitfaden 2026](/de/power-local-llm/qwen-local-deployment-complete-guide-2026) -- Produktions-Deployment nach dem Aufbau Ihrer Workstation',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -500,6 +520,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Faut-il NVLink pour faire tourner Ollama sur deux GPU ?',
             a: 'Non. Ollama utilise le parallélisme tensoriel CUDA via PCIe — NVLink n\'est pas nécessaire. La configuration dual RTX 3090 fonctionne parfaitement sans NVLink.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Lectures complémentaires',
+        items: [
+          '[Meilleure GPU pour les LLMs locaux 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- guide d\'achat GPU pour chaque niveau de workstation',
+          '[Meilleure appli IA locale pour PC modeste](/fr/power-local-llm/best-local-ai-app-low-end-pc) -- options logicielles si vous n\'êtes pas encore prêt pour une workstation complète',
+          '[Meilleur Mac pour IA locale 2026](/fr/power-local-llm/best-mac-for-local-ai-2026) -- alternative Apple Silicon à une workstation GPU',
+          '[Les meilleurs ordinateurs portables pour LLM locaux : guide d\'achat 2026](/fr/power-local-llm/best-laptops-local-llm-2026) -- options portables avant de vous engager dans un build workstation',
+          '[Déploiement Local de Qwen : Guide Complet de Production 2026](/fr/power-local-llm/qwen-local-deployment-complete-guide-2026) -- déploiement en production une fois votre workstation construite',
         ],
       },
     },
@@ -653,6 +683,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'プロビルドにRTX 4090の代わりにデュアルRTX 3090を使う理由は？',
             a: 'VRAMが決め手です。2枚のRTX 3090で合計48GB——Llama 3.3 70B Q4（約40GB）を収容できます。単体のRTX 4090は24GBのみ——70BはCPUオフロードなしでは収まりません。GPU速度での70B推論にはデュアル3090がVRAM/円で優れています。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '関連記事',
+        items: [
+          '[ローカルLLM最適GPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- 各ワークステーション段階向けGPU購入ガイド',
+          '[低スペックPCでもAIを動かす最高のローカルAIアプリ](/ja/power-local-llm/best-local-ai-app-low-end-pc) -- フルワークステーションに踏み切る前のソフトウェア選択肢',
+          '[ローカルAI向け最高のMac 2026](/ja/power-local-llm/best-mac-for-local-ai-2026) -- GPU ワークステーションに代わるApple Silicon選択肢',
+          '[ローカルLLM向けノートパソコンのおすすめ：購入ガイド2026](/ja/power-local-llm/best-laptops-local-llm-2026) -- ワークステーション購入前のモバイル選択肢',
+          '[Qwenローカルデプロイ完全ガイド2026：Docker・APIサーバー・マルチGPU](/ja/power-local-llm/qwen-local-deployment-complete-guide-2026) -- ワークステーション構築後の本番環境デプロイ',
         ],
       },
     },
@@ -810,6 +850,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '可以从预算方案升级到推荐方案吗？',
             a: '可以——第一档和第二档都使用AM5接口，可以更换更好的GPU或增加内存而不需要更换主板。第三档使用TRX50接口，从第一/二档升级到第三档需要更换主板和CPU。',
           },
+        ],
+      },
+      relatedReading: {
+        title: '相关阅读',
+        items: [
+          '[2026年本地LLM最佳GPU购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- 适用于每个工作站等级的GPU购买指南',
+          '[低配置PC最佳本地AI应用](/zh/power-local-llm/best-local-ai-app-low-end-pc) -- 还没准备好完整工作站时的软件选择',
+          '[2026年本地AI最佳Mac推荐](/zh/power-local-llm/best-mac-for-local-ai-2026) -- GPU工作站的Apple Silicon替代方案',
+          '[运行本地大语言模型的最佳笔记本电脑：2026 购买指南](/zh/power-local-llm/best-laptops-local-llm-2026) -- 在决定购买工作站之前的便携选择',
+          '[Qwen本地部署完整指南2026：Docker、API服务器、多GPU配置](/zh/power-local-llm/qwen-local-deployment-complete-guide-2026) -- 工作站搭建完成后的生产环境部署',
         ],
       },
     },
@@ -1010,6 +1060,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Qué toma de corriente necesito para el build profesional?',
             a: 'El build profesional (dual RTX 3090 + Threadripper) tiene un pico de ~900 W desde la toma. Un tomacorriente estándar de 15A/120V en EE.UU. soporta ~1800 W — es suficiente. Los tomacorrientes europeos de 16A/230V soportan ~3680 W. Usa una fuente de poder de calidad (Seasonic, Corsair, be quiet!) con eficiencia 80+ Platinum para minimizar el calor y el consumo.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Lectura relacionada',
+        items: [
+          '[Mejor GPU para LLMs locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- guía de compra de GPU para cada nivel de workstation',
+          '[Mejor app de IA local para PC de gama baja](/es/power-local-llm/best-local-ai-app-low-end-pc) -- opciones de software si aún no estás listo para una workstation completa',
+          '[Mejor Mac para IA local 2026](/es/power-local-llm/best-mac-for-local-ai-2026) -- alternativa Apple Silicon a una workstation GPU',
+          '[Los mejores portátiles para ejecutar LLMs locales: guía de compra 2026](/es/power-local-llm/best-laptops-local-llm-2026) -- opciones portátiles antes de comprometerte con un build de workstation',
+          '[Despliegue Local de Qwen: Guía Completa de Producción 2026](/es/power-local-llm/qwen-local-deployment-complete-guide-2026) -- despliegue en producción una vez construida tu workstation',
         ],
       },
     },
@@ -1237,6 +1297,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      relatedReading: {
+        title: '관련 읽기',
+        items: [
+          '[로컬 LLM 최적 GPU 구매 가이드 2026](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- 각 워크스테이션 단계별 GPU 구매 가이드',
+          '[저사양 PC 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-ai-app-low-end-pc) -- 풀 워크스테이션 준비가 되지 않은 경우 소프트웨어 선택지',
+          '[로컬 AI를 위한 최고의 Mac 2026](/ko/power-local-llm/best-mac-for-local-ai-2026) -- GPU 워크스테이션의 Apple Silicon 대안',
+          '[로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드](/ko/power-local-llm/best-laptops-local-llm-2026) -- 워크스테이션 빌드를 결정하기 전 휴대용 선택지',
+          '[Qwen 로컬 배포 완전 가이드 2026: 프로덕션 서버 구축](/ko/power-local-llm/qwen-local-deployment-complete-guide-2026) -- 워크스테이션 구축 후 프로덕션 배포',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -1460,6 +1530,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Qual tomada de energia preciso para o build profissional?',
             a: 'O build profissional (dual RTX 3090 + Threadripper) tem um pico de ~900 W na tomada. Uma tomada padrão de 15A/120V nos EUA suporta ~1800 W — é suficiente. As tomadas europeias de 16A/230V suportam ~3680 W. Use uma fonte de qualidade (Seasonic, Corsair, be quiet!) com eficiência 80+ Platinum para minimizar o calor e o consumo.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'Leitura relacionada',
+        items: [
+          '[Melhor GPU para LLMs locais 2026](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- guia de compra de GPU para cada nível de workstation',
+          '[Melhor aplicativo de IA local para PC de baixo custo](/pt/power-local-llm/best-local-ai-app-low-end-pc) -- opções de software se você ainda não está pronto para uma workstation completa',
+          '[Melhor Mac para IA local 2026](/pt/power-local-llm/best-mac-for-local-ai-2026) -- alternativa Apple Silicon a uma workstation GPU',
+          '[Os melhores notebooks para rodar LLMs locais: guia de compra 2026](/pt/power-local-llm/best-laptops-local-llm-2026) -- opções portáteis antes de se comprometer com um build de workstation',
+          '[Implantação Local do Qwen: Guia Completo de Produção 2026](/pt/power-local-llm/qwen-local-deployment-complete-guide-2026) -- implantação em produção depois de montar sua workstation',
         ],
       },
     },
@@ -1688,6 +1768,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'ما مخرج الطاقة الذي أحتاجه للإعداد الاحترافي؟',
             a: 'الإعداد الاحترافي (RTX 3090 مزدوجة + Threadripper) يصل ذروته عند ~900 واط من المخرج. مخرج أمريكي قياسي 15A/120V يدعم ~1800 واط — وهو كافٍ. المخارج الأوروبية 16A/230V تدعم ~3680 واط. استخدم مزود طاقة جيد (Seasonic أو Corsair أو be quiet!) بكفاءة 80+ Platinum للحدّ من الحرارة والاستهلاك.',
           },
+        ],
+      },
+      relatedReading: {
+        title: 'قراءة ذات صلة',
+        items: [
+          '[أفضل وحدة GPU للنماذج المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- دليل شراء GPU لكل مستوى من مستويات محطات العمل',
+          '[أفضل تطبيق AI محلي لأجهزة الكمبيوتر ذات المواصفات المنخفضة](/ar/power-local-llm/best-local-ai-app-low-end-pc) -- خيارات البرامج إذا لم تكن مستعداً لمحطة عمل كاملة',
+          '[أفضل Mac لتشغيل AI محلي 2026](/ar/power-local-llm/best-mac-for-local-ai-2026) -- بديل Apple Silicon لمحطة عمل GPU',
+          '[أفضل أجهزة الكمبيوتر المحمولة لتشغيل النماذج اللغوية المحلية: دليل الشراء 2026](/ar/power-local-llm/best-laptops-local-llm-2026) -- خيارات محمولة قبل الالتزام ببناء محطة عمل',
+          '[نشر Qwen محليًا: الدليل الكامل للإنتاج 2026](/ar/power-local-llm/qwen-local-deployment-complete-guide-2026) -- نشر الإنتاج بعد بناء محطة العمل',
         ],
       },
     },

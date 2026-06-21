@@ -214,6 +214,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Western cloud GPU comparison: /local-llms/cloud-gpu-rental-comparison-2026',
           'Qwen deployment guide: /power-local-llm/qwen-local-deployment-complete-guide-2026',
           'Cost calculator (build vs rent): /local-llms/local-llm-cost-calculator-build-vs-rent-2026',
+          '[EU GDPR Cloud GPU Options 2026](/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR cloud GPU options',
+          '[Local LLM vs Cloud GPU Cost Comparison](/local-llms/local-llm-vs-cloud-gpu-cost) -- local LLM vs cloud GPU cost',
+          '[GDPR Risk Comparison for LLM Providers 2026](/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR risk comparison for LLM providers',
         ],
       },
       faq: {
@@ -522,6 +525,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Comparativa de GPU en nube occidental: /es/local-llms/cloud-gpu-rental-comparison-2026',
           'Guía de despliegue de Qwen: /es/power-local-llm/qwen-local-deployment-complete-guide-2026',
           'Calculadora de costes (construir vs alquilar): /es/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
+          '[Opciones de GPU en la nube GDPR de la UE 2026](/es/local-llms/eu-cloud-gpu-gdpr-2026) -- opciones de GPU en la nube UE GDPR',
+          '[Comparación de costos LLM local vs GPU en la nube](/es/local-llms/local-llm-vs-cloud-gpu-cost) -- LLM local vs costo GPU en la nube',
+          '[Comparación de riesgos GDPR para proveedores LLM 2026](/es/local-llms/gdpr-llm-risk-comparison-2026) -- comparación de riesgos GDPR',
         ],
       },
       faq: {
@@ -836,6 +842,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مقارنة GPU السحابي الغربي: /ar/local-llms/cloud-gpu-rental-comparison-2026',
           'دليل نشر Qwen: /ar/power-local-llm/qwen-local-deployment-complete-guide-2026',
           'حاسبة التكلفة (البناء مقابل الإيجار): /ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
+          '[خيارات GPU السحابي GDPR الأوروبي 2026](/ar/local-llms/eu-cloud-gpu-gdpr-2026) -- خيارات GPU السحابي GDPR في الاتحاد الأوروبي',
+          '[مقارنة تكلفة LLM المحلي مقابل GPU السحابي](/ar/local-llms/local-llm-vs-cloud-gpu-cost) -- LLM المحلي مقابل تكلفة GPU السحابي',
+          '[مقارنة مخاطر GDPR لمزودي LLM 2026](/ar/local-llms/gdpr-llm-risk-comparison-2026) -- مقارنة مخاطر GDPR لمزودي LLM',
         ],
       },
       faq: {
@@ -1154,6 +1163,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Comparativo de GPU em nuvem ocidental: /pt/local-llms/cloud-gpu-rental-comparison-2026',
           'Guia de implantação do Qwen: /pt/power-local-llm/qwen-local-deployment-complete-guide-2026',
           'Calculadora de custos (montar vs alugar): /pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
+          '[Opções de GPU em nuvem GDPR da UE 2026](/pt/local-llms/eu-cloud-gpu-gdpr-2026) -- opções de GPU em nuvem GDPR da UE',
+          '[Comparação de custos LLM local vs GPU em nuvem](/pt/local-llms/local-llm-vs-cloud-gpu-cost) -- LLM local vs custo de GPU em nuvem',
+          '[Comparação de riscos GDPR para provedores LLM 2026](/pt/local-llms/gdpr-llm-risk-comparison-2026) -- comparação de riscos GDPR para provedores LLM',
         ],
       },
       faq: {
@@ -1324,6 +1336,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Gibt es eine kostenlose Testmöglichkeit für chinesische Cloud-GPUs?', a: 'Alibaba Cloud: ¥300 Startguthaben für neue Konten über intl.aliyun.com (ca. 30–40 Stunden A10-Inferenz). Tencent Cloud: ähnliche Promotions für neue Nutzer. AutoDL: ¥10 GPU-Guthaben (2–4 Stunden A100). Kein dauerhaft kostenloses GPU-Kontingent bei keinem Anbieter.' },
         ],
       },
+      internalLinks: {
+        id: 'see-also',
+        title: 'Verwandte Leitfäden',
+        items: [
+          '[EU GDPR Cloud-GPU-Optionen 2026](/de/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR Cloud-GPU-Optionen',
+          '[Kostenvergleich: Lokales LLM vs Cloud-GPU](/de/local-llms/local-llm-vs-cloud-gpu-cost) -- lokales LLM vs Cloud-GPU-Kosten',
+          '[GDPR-Risikoanalyse für LLM-Anbieter 2026](/de/local-llms/gdpr-llm-risk-comparison-2026) -- GDPR-Risikoanalyse für LLM-Anbieter',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -1404,6 +1425,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Y a-t-il un accès gratuit pour tester les GPU cloud chinois ?', a: 'Alibaba Cloud : ¥300 de crédit gratuit pour les nouveaux comptes (intl.aliyun.com), soit ~30–40 heures d\'inférence A10. AutoDL : ¥10 de crédit GPU (2–4 heures d\'A100). Aucun niveau gratuit permanent sur aucune plateforme.' },
         ],
       },
+      internalLinks: {
+        id: 'see-also',
+        title: 'Guides associés',
+        items: [
+          '[Options GPU cloud RGPD UE 2026](/fr/local-llms/eu-cloud-gpu-gdpr-2026) -- options GPU cloud RGPD de l\'UE',
+          '[Comparaison des coûts LLM local vs GPU cloud](/fr/local-llms/local-llm-vs-cloud-gpu-cost) -- LLM local vs coût GPU cloud',
+          '[Comparaison des risques RGPD pour les fournisseurs LLM 2026](/fr/local-llms/gdpr-llm-risk-comparison-2026) -- comparaison des risques RGPD',
+        ],
+      },
     },
     faqSchema: {
       '@context': 'https://schema.org',
@@ -1482,6 +1512,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '中国外からAlibaba Cloud GPUを使えますか？', a: 'はい。Alibaba Cloud International（intl.aliyun.com）は国際クレジットカード（Visa、Mastercard、American Express）に対応し、英語コンソールを提供します。国際版と中国国内版は別アカウントで、若干価格が異なります。' },
           { q: 'AutoDLは本番推論に使えますか？', a: 'AutoDLは研究・開発向けで、正式なSLAがなく、スポットインスタンスは予告なく中断される可能性があります。本番環境にはAlibaba Cloud PAIまたはテンセントクラウドTIのオンデマンドインスタンスが適しています。' },
           { q: 'Alibaba Cloud PAIはQwen推論でOllamaより何倍速いですか？', a: 'PAI-EASはA100 80GB上でQwen3 72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。' },
+        ],
+      },
+      internalLinks: {
+        id: 'see-also',
+        title: '関連ガイド',
+        items: [
+          '[EU GDPR クラウドGPUオプション 2026](/ja/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR クラウドGPUオプション',
+          '[ローカルLLM vs クラウドGPU コスト比較](/ja/local-llms/local-llm-vs-cloud-gpu-cost) -- ローカルLLM vs クラウドGPUコスト',
+          '[LLMプロバイダーのGDPRリスク比較 2026](/ja/local-llms/gdpr-llm-risk-comparison-2026) -- LLMプロバイダーのGDPRリスク比較',
         ],
       },
     },
@@ -1580,6 +1619,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '阿里云PAI比自己运行Ollama快多少？', a: '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen3 72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。' },
           { q: '有免费试用中国云GPU的方式吗？', a: '阿里云：新账户赠¥300免费额度（intl.aliyun.com国际用户可用，约30-40小时A10推理）。腾讯云：新用户有类似优惠活动。AutoDL：¥10 GPU体验额度（2-4小时A100）。三家均无永久免费GPU配额。' },
           { q: 'Qwen3 72B在中国云平台上用什么GPU最合适？', a: 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen3 72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。' },
+        ],
+      },
+      internalLinks: {
+        id: 'see-also',
+        title: '相关指南',
+        items: [
+          '[欧盟GDPR云GPU选项 2026](/zh/local-llms/eu-cloud-gpu-gdpr-2026) -- 欧盟GDPR云GPU选项',
+          '[本地LLM vs 云GPU成本对比](/zh/local-llms/local-llm-vs-cloud-gpu-cost) -- 本地LLM vs 云GPU成本',
+          '[2026年LLM服务商GDPR风险对比](/zh/local-llms/gdpr-llm-risk-comparison-2026) -- LLM服务商GDPR风险对比',
         ],
       },
     },
@@ -1810,6 +1858,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '서양 클라우드 GPU 비교: /local-llms/cloud-gpu-rental-comparison-2026',
           'Qwen 배포 가이드: /power-local-llm/qwen-local-deployment-complete-guide-2026',
           '비용 계산기 (직접 구축 vs 렌탈): /local-llms/local-llm-cost-calculator-build-vs-rent-2026',
+          '[EU GDPR 클라우드 GPU 옵션 2026](/ko/local-llms/eu-cloud-gpu-gdpr-2026) -- EU GDPR 클라우드 GPU 옵션',
+          '[로컬 LLM vs 클라우드 GPU 비용 비교](/ko/local-llms/local-llm-vs-cloud-gpu-cost) -- 로컬 LLM vs 클라우드 GPU 비용',
+          '[LLM 제공업체 GDPR 위험 비교 2026](/ko/local-llms/gdpr-llm-risk-comparison-2026) -- LLM 제공업체 GDPR 위험 비교',
         ],
       },
       faq: {

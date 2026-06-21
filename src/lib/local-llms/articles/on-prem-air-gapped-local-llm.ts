@@ -171,6 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) -- Regulatory requirements.',
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) -- Production deployment beyond single machine.',
             '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- 12-step security verification.',
+            '[Headless Local LLMs: Running Models Without a UI (2026)](/local-llms/headless-local-llms) -- headless local LLM deployment',
           ],
         },
         sources: {
@@ -432,6 +433,7 @@ schema: {
             '[Cumplimiento normativo para LLM locales en empresas](/es/local-llms/enterprise-compliance-local-llms) -- Requisitos regulatorios.',
             '[Escalado de LLM locales en empresas](/es/local-llms/scaling-local-llms-enterprise) -- Despliegue en producción más allá de una sola máquina.',
             '[Lista de verificación de seguridad y privacidad para LLM locales](/es/local-llms/local-llm-security-privacy-checklist) -- Verificación de seguridad en 12 pasos.',
+            '[LLMs locales headless: ejecutar modelos sin interfaz de usuario (2026)](/es/local-llms/headless-local-llms) -- despliegue headless de LLMs locales',
           ],
         },
         sources: {
@@ -693,6 +695,7 @@ schema: {
             '[الامتثال التنظيمي لنماذج LLM المحلية في الشركات](/ar/local-llms/enterprise-compliance-local-llms) -- المتطلبات التنظيمية.',
             '[توسيع نماذج LLM المحلية في الشركات](/ar/local-llms/scaling-local-llms-enterprise) -- النشر الإنتاجي بما يتجاوز جهازًا واحدًا.',
             '[قائمة تحقق الأمان والخصوصية لنماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) -- تحقق أمني من 12 خطوة.',
+            '[نماذج LLM المحلية بلا واجهة (headless): تشغيل النماذج دون واجهة مستخدم (2026)](/ar/local-llms/headless-local-llms) -- نشر نماذج LLM المحلية بلا واجهة',
           ],
         },
         sources: {
@@ -922,6 +925,7 @@ schema: {
             '[IA Local Privada para Empresas](/pt/local-llms/private-local-ai-for-business) — Implantação on-premises para conformidade empresarial',
             '[Multi-GPU LLMs Locais 2026](/pt/local-llms/multi-gpu-local-llms) — Infraestrutura multi-GPU para ambientes air-gapped',
             '[LLMs Locais vs APIs na Nuvem](/pt/local-llms/local-llms-vs-cloud-apis) — Por que o local supera a nuvem para dados sensíveis',
+            '[LLMs locais headless: rodar modelos sem interface de usuário (2026)](/pt/local-llms/headless-local-llms) -- implantação headless de LLMs locais',
           ],
         },
         sources: {
@@ -1123,6 +1127,7 @@ schema: {
             '[Enterprise-Compliance Local LLMs](/de/local-llms/enterprise-compliance-local-llms) -- Regulatorische Anforderungen.',
             '[Skalierung von Local LLMs Enterprise](/de/local-llms/scaling-local-llms-enterprise) -- Produktionsbereitstellung über einzelne Maschine hinaus.',
             '[Local LLM Sicherheits- und Datenschutz-Checkliste](/de/local-llms/local-llm-security-privacy-checklist) -- 12-Punkte-Sicherheitsverifizierung.',
+            '[Headless Local LLMs: Modelle ohne Benutzeroberfläche ausführen (2026)](/de/local-llms/headless-local-llms) -- Headless lokale LLM Bereitstellung',
           ],
         },
         sources: {
@@ -1340,6 +1345,7 @@ schema: {
             '[Conformité entreprise LLM local](/fr/local-llms/enterprise-compliance-local-llms) -- Exigences réglementaires.',
             '[Mise à l\'échelle des LLM locaux Enterprise](/fr/local-llms/scaling-local-llms-enterprise) -- Déploiement en production au-delà d\'une machine unique.',
             '[Liste de contrôle sécurité et confidentialité LLM local](/fr/local-llms/local-llm-security-privacy-checklist) -- Vérification de sécurité en 12 étapes.',
+            '[LLMs Headless locaux : exécuter des modèles sans interface utilisateur (2026)](/fr/local-llms/headless-local-llms) -- déploiement LLM local headless',
           ],
         },
         sources: {
@@ -1513,6 +1519,7 @@ schema: {
             '[ローカルLLMセキュリティガイド](/ja/local-llms/local-llm-security-privacy-checklist)',
             'エンタープライズLLMデプロイメント',
             '政府・防衛LLMコンプライアンス',
+            '[Headless Local LLMs: UIなしでモデルを実行する (2026)](/ja/local-llms/headless-local-llms) -- ヘッドレスローカルLLMデプロイメント',
           ],
         },
         'sources': {
@@ -1696,6 +1703,7 @@ schema: {
             '[企业合规与本地LLM](/zh/local-llms/enterprise-compliance-local-llms) -- 监管要求。',
             '[扩展企业本地LLM](/zh/local-llms/scaling-local-llms-enterprise) -- 单机以外的生产部署。',
             '[本地LLM安全和隐私检查清单](/zh/local-llms/local-llm-security-privacy-checklist) -- 12步安全验证。',
+            '[Headless本地LLMs: 无界面运行模型 (2026)](/zh/local-llms/headless-local-llms) -- 无界面本地LLM部署',
           ],
         },
         sources: {
@@ -1962,6 +1970,7 @@ schema: {
             '[엔터프라이즈 규정 준수 로컬 LLM](/local-llms/enterprise-compliance-local-llms) -- 규제 요건.',
             '[엔터프라이즈 로컬 LLM 확장](/local-llms/scaling-local-llms-enterprise) -- 단일 머신을 넘어선 프로덕션 배포.',
             '[로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist) -- 12단계 보안 검증.',
+            '[헤드리스 로컬 LLM: UI 없이 모델 실행하기 (2026)](/ko/local-llms/headless-local-llms) -- 헤드리스 로컬 LLM 배포',
           ],
         },
         sources: {
