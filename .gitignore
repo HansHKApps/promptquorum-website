@@ -26,3 +26,6 @@ geo-audit-report.csv
 
 # Screenshot / image artifacts dropped in the tree (e.g. Playwright captures)
 *.png
+
+# Claude Code working directory (agent worktrees, session state)
+.claude/
