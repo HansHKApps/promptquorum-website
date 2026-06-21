@@ -56,14 +56,13 @@ function ensureItemListSchemaValid(schema: any): any {
 
 interface PageProps {
   params: Promise<{ slug: string }>
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateStaticParams() {
   return Object.keys(LLM_SLUG_TO_KEY).map((slug) => ({ slug }))
 }
 
-export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const key = LLM_SLUG_TO_KEY[slug]
   if (!key) return notFound()
@@ -96,10 +95,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     }
   }
 
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
+  const selectedLang = 'en' as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = llmContent[key][selectedLang] ?? llmContent[key]['en']
   if (!article) return notFound()
@@ -148,7 +144,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   }
 }
 
-export default async function LocalLLMsArticlePage({ params, searchParams }: PageProps) {
+export default async function LocalLLMsArticlePage({ params }: PageProps) {
   const { slug } = await params
   const key = LLM_SLUG_TO_KEY[slug]
 
@@ -202,10 +198,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     )
   }
 
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
+  const selectedLang = 'en' as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
   const article = (llmContent[key][selectedLang] ?? llmContent[key]['en'])!
   const translationObj = llmContent[key][selectedLang] as any

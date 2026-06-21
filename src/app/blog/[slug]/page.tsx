@@ -11,29 +11,20 @@ export const revalidate = 86400
 
 interface PageProps {
   params: Promise<{ slug: string }>
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateStaticParams() {
   return getArticleStaticParams()
 }
 
-export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
-
+  const selectedLang = 'en' as Language
   return buildArticleMetadata(slug, selectedLang)
 }
 
-export default async function BlogPage({ params, searchParams }: PageProps) {
+export default async function BlogPage({ params }: PageProps) {
   const { slug } = await params
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
-
+  const selectedLang = 'en' as Language
   return buildArticlePageElement(slug, selectedLang)
 }

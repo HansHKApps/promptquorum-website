@@ -12,16 +12,12 @@ export function generateStaticParams() {
   return FRAMEWORK_SLUGS.map(slug => ({ slug }))
 }
 
-export async function generateMetadata({ params, searchParams }: { params: Promise<{ slug: string }>; searchParams?: Promise<{ [key: string]: string | string[] | undefined }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const fw = getFramework(slug)
   if (!fw) return {}
 
-  // Read language from searchParams, default to 'en'
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const selectedLang = 'en'
 
   const fwTitle = (fw as any).seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`
   const fwDesc = (fw as any).metaDescription ?? `${fw.expansion}. ${fw.tagline} See all fields, a real example, and when to use ${fw.name} vs other prompt frameworks.`
