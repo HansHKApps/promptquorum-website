@@ -364,6 +364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[How LLMs Actually Work](/prompt-engineering/how-llms-actually-work) — the transformer architecture, tokenization, and RLHF that produce these limitations',
             '[Self-Consistency Prompting](/prompt-engineering/self-consistency-prompting) — the technique that partially addresses the self-verification and reasoning gaps',
             '[Smarter Home Automations with a Local LLM](/smart-home/ai-automations-local-llm) — understand which LLM limitations matter most when automating home-control tasks, and how to design prompts around them',
+          '[AI Knowledge Cutoffs, Live Search, and GEO: The Complete Guide](/prompt-engineering/knowledge-cutoffs-and-geo) — structural constraints including frozen knowledge and the absence of live search',
           ],
         },
         faq: {
@@ -746,6 +747,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Wie LLMs wirklich funktionieren](/de/prompt-engineering/how-llms-actually-work) — Die Transformer-Architektur, Tokenisierung und RLHF, die diese Grenzen erzeugen',
             '[Self-Consistency-Prompting](/de/prompt-engineering/self-consistency-prompting) — Verifikationstechnik, die teilweise die Selbstverifikations- und Schlussfolgerungslücken anspricht',
             '[Intelligentere Heimautomatisierung mit einem lokalen LLM](/de/smart-home/ai-automations-local-llm) — welche LLM-Einschränkungen bei der Heimautomatisierung am wichtigsten sind und wie Prompts um sie herum gestaltet werden',
+          '[KI-Wissensstichtag, Live-Suche und GEO: Der vollständige Leitfaden](/de/prompt-engineering/knowledge-cutoffs-and-geo) — strukturelle Einschränkungen einschließlich eingefrorenem Wissen und fehlender Live-Suche',
           ],
         },
         faq: {
@@ -950,6 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Context Windows explicados — Por qué la IA olvida](/es/prompt-engineering/context-windows-explained-why-ai-forgets) — desglose detallado de los límites de tokens',
             '[Cómo funcionan realmente los LLMs](/es/prompt-engineering/how-llms-actually-work) — la arquitectura transformer, la tokenización y el RLHF que generan estos límites',
             '[Automatizaciones del hogar más inteligentes con un LLM local](/es/smart-home/ai-automations-local-llm) — qué limitaciones de los LLMs importan más al automatizar tareas de control del hogar y cómo diseñar prompts en torno a ellas',
+          '[Fechas de corte del conocimiento de la IA, búsqueda en vivo y GEO: guía completa](/es/prompt-engineering/knowledge-cutoffs-and-geo) — limitaciones estructurales incluyendo conocimiento congelado y ausencia de búsqueda en vivo',
           ],
         },
         faq: {
@@ -1155,6 +1158,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[نوافذ السياق موضَّحة — لماذا تنسى الذكاء الاصطناعي](/ar/prompt-engineering/context-windows-explained-why-ai-forgets) — شرح تفصيلي لقيود الرموز',
             '[كيف تعمل النماذج اللغوية الكبيرة فعلًا](/ar/prompt-engineering/how-llms-actually-work) — معمارية المحوِّل والترميز وRLHF التي تُولِّد هذه القيود',
             '[أتمتة أذكى للمنزل مع نموذج LLM محلي](/ar/smart-home/ai-automations-local-llm) — أي قيود LLM تهمّ أكثر عند أتمتة مهام التحكم المنزلي وكيفية تصميم prompts حولها',
+          '[تواريخ انقطاع معرفة الذكاء الاصطناعي والبحث المباشر و GEO: الدليل الكامل](/ar/prompt-engineering/knowledge-cutoffs-and-geo) — القيود الهيكلية بما فيها المعرفة المجمدة وغياب البحث المباشر',
           ],
         },
         faq: {
@@ -1357,6 +1361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Janelas de Contexto explicadas — Por que a IA esquece](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) — detalhamento detalhado dos limites de tokens',
             '[Como os LLMs realmente funcionam](/pt/prompt-engineering/how-llms-actually-work) — a arquitetura transformer, a tokenização e o RLHF que geram esses limites',
             '[Automações domésticas mais inteligentes com um LLM local](/pt/smart-home/ai-automations-local-llm) — quais limitações dos LLMs são mais importantes ao automatizar tarefas de controle doméstico e como projetar prompts ao redor delas',
+          '[Datas de Corte do Conhecimento da IA, Pesquisa ao Vivo e GEO: O Guia Completo](/pt/prompt-engineering/knowledge-cutoffs-and-geo) — limitações estruturais incluindo conhecimento congelado e ausência de pesquisa ao vivo',
           ],
         },
         faq: {
@@ -1740,6 +1745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Comment les LLMs fonctionnent vraiment](/fr/prompt-engineering/how-llms-actually-work) — L\'architecture transformer, la tokenisation et le RLHF qui produisent ces limites',
             '[Prompting par cohérence automatique](/fr/prompt-engineering/self-consistency-prompting) — Technique qui aborde partiellement les lacunes d\'auto-vérification et de raisonnement',
             '[Automatisations domestiques plus intelligentes avec un LLM local](/fr/smart-home/ai-automations-local-llm) — quelles limitations des LLMs comptent le plus lors de l\'automatisation des tâches domotiques et comment concevoir des prompts autour d\'elles',
+          '[Dates de coupure des modèles d\'IA, recherche en direct et GEO : guide complet](/fr/prompt-engineering/knowledge-cutoffs-and-geo) — contraintes structurelles incluant les connaissances figées et l\'absence de recherche en direct',
           ],
         },
         faq: {
@@ -2303,6 +2309,7 @@ zh: {
             '没有大语言模型在没有应用层内存系统的情况下记得前一个对话',
             '大语言模型在没有工具使用支架的情况下无法浏览网络、运行代码或采取操作',
             '每个限制都有已知的工程解决方案 — 了解限制是第一步',
+          '[AIの知識カットオフ、ライブ検索、GEO：完全ガイド](/ja/prompt-engineering/knowledge-cutoffs-and-geo) — 凍結された知識やライブ検索の欠如などの構造的制約',
           ],
         },
         whatAreLimitations: {
@@ -2702,6 +2709,7 @@ zh: {
           '[컨텍스트 윈도우 설명 — AI가 잊어버리는 이유](/ko/prompt-engineering/context-windows-explained-why-ai-forgets) — 토큰 제한 상세 분석',
           '[LLM이 실제로 작동하는 방식](/ko/prompt-engineering/how-llms-actually-work) — 이러한 한계를 만드는 트랜스포머 아키텍체, 토크나이제이션, RLHF',
           '[로컬 LLM으로 더 스마트한 홈 자동화](/ko/smart-home/ai-automations-local-llm) — 홈 제어 작업을 자동화할 때 가장 중요한 LLM 한계와 이를 중심으로 프롬프트를 설계하는 방법',
+        '[AI 지식 차단 날짜, 실시간 검색 및 GEO: 완전한 가이드](/ko/prompt-engineering/knowledge-cutoffs-and-geo) — 동결된 지식과 실시간 검색 부재를 포함한 구조적 제약',
         ],
       },
       faq: {

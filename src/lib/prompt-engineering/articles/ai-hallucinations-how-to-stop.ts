@@ -317,6 +317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Multi-Model Consensus Scoring — how comparing models detects disagreements and unreliability',
             'Self-Critique Prompting Techniques — how to get models to catch their own errors',
             '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
+          '[AI Knowledge Cutoffs, Live Search, and GEO: The Complete Guide](/prompt-engineering/knowledge-cutoffs-and-geo) — knowledge cutoff staleness is a leading cause of hallucinations; see how RAG and GEO address it',
           ],
         },
 
@@ -585,6 +586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) – die Grundkonzepte hinter der Strukturierung von Prompts',
             'Multi-Modell Consensus Scoring – wie das Vergleichen von Modellen Uneinigkeiten und Unzuverlässigkeit erkennt',
             'Self-Critique Prompting Techniken – wie man Modelle dazu bringt, ihre eigenen Fehler zu fangen',
+          '[KI-Wissensstichtag, Live-Suche und GEO: Der vollständige Leitfaden](/de/prompt-engineering/knowledge-cutoffs-and-geo) — veraltetes Wissen ist eine Hauptursache für Halluzinationen; RAG und GEO als Lösungen',
           ],
         },
         sources: {
@@ -769,6 +771,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — los conceptos básicos detrás de la estructuración de prompts',
             'Self-Critique Prompting Techniques — cómo hacer que los modelos atrapen sus propios errores',
+          '[Fechas de corte del conocimiento de la IA, búsqueda en vivo y GEO: guía completa](/es/prompt-engineering/knowledge-cutoffs-and-geo) — el conocimiento desactualizado es una causa principal de alucinaciones; RAG y GEO como soluciones',
           ],
         },
         sources: {
@@ -954,6 +957,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[ما هي هندسة التعليمات؟](/ar/prompt-engineering/what-is-prompt-engineering) — المفاهيم الأساسية وراء هيكلة التعليمات',
             'تقنيات النقد الذاتي في التعليمات — كيفية جعل النماذج تكتشف أخطاءها الخاصة',
+          '[تواريخ انقطاع معرفة الذكاء الاصطناعي والبحث المباشر و GEO: الدليل الكامل](/ar/prompt-engineering/knowledge-cutoffs-and-geo) — تقادم المعرفة سبب رئيسي للهلوسة؛ RAG وGEO كحلول',
           ],
         },
         sources: {
@@ -1242,6 +1246,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Pontuação de Consenso Multi-Modelo — como comparar modelos detecta discordâncias e falta de confiabilidade',
             'Técnicas de Prompting de Autocrítica — como fazer os modelos detectarem seus próprios erros',
             '[Limitações da IA: O que os LLMs não podem fazer](/pt/prompt-engineering/ai-limitations-what-llms-cant-do) — as oito restrições estruturais que todo LLM compartilha e a solução de engenharia para cada uma',
+          '[Datas de Corte do Conhecimento da IA, Pesquisa ao Vivo e GEO: O Guia Completo](/pt/prompt-engineering/knowledge-cutoffs-and-geo) — o conhecimento desatualizado é uma causa principal de alucinações; RAG e GEO como soluções',
           ],
         },
         sources: {
@@ -1510,6 +1515,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Qu\'est-ce que le prompt engineering?](/prompt-engineering/what-is-prompt-engineering) – les concepts fondamentaux derrière la structuration des prompts',
             'Consensus Scoring multi-modèles – comment comparer les modèles détecte les désaccords et l\'instabilité',
             'Techniques de prompt d\'autocritique – comment obtenir des modèles pour attraper leurs propres erreurs',
+          '[Dates de coupure des modèles d\'IA, recherche en direct et GEO : guide complet](/fr/prompt-engineering/knowledge-cutoffs-and-geo) — les données périmées sont une cause majeure d\'hallucinations ; RAG et GEO comme solutions',
           ],
         },
         sources: {
@@ -1777,6 +1783,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[プロンプトエンジニアリングとは何ですか？](/prompt-engineering/what-is-prompt-engineering) —プロンプト構造の背後にある基本的な概念',
             'マルチモデルコンセンサススコアリング —モデルの比較が不一致と不信頼を検出する方法',
             '自己批評プロンプト技術 —モデルに独自のエラーをキャッチさせる方法',
+          '[AIの知識カットオフ、ライブ検索、GEO：完全ガイド](/ja/prompt-engineering/knowledge-cutoffs-and-geo) — 知識の陳腐化は幻覚の主な原因；RAGとGEOによる解決策',
           ],
         },
         sources: {
@@ -2044,6 +2051,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering) —提示结构背后的基本概念',
             '多模型共识评分 —比较模型如何检测分歧和不信度',
             '自我批评提示技术 —如何让模型捕获自己的错误',
+          '[AI知识截止日期、实时搜索与GEO：完整指南](/zh/prompt-engineering/knowledge-cutoffs-and-geo) — 知识过时是幻觉的主要原因；RAG和GEO如何解决此问题',
           ],
         },
         sources: {
@@ -2229,6 +2237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 프롬프트 구조화 뒤의 기본 개념',
           '자기 비평 프롬프트 기술 — 모델이 자체 오류를 잡는 방법',
+        '[AI 지식 차단 날짜, 실시간 검색 및 GEO: 완전한 가이드](/ko/prompt-engineering/knowledge-cutoffs-and-geo) — 지식 노후화는 환각의 주요 원인; RAG와 GEO로 해결',
         ],
       },
       sources: {

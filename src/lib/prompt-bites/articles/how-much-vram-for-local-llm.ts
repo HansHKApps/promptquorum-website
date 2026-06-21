@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     audience: 'Developers and enthusiasts running local LLMs',
     parentArticle: '/local-llms/how-much-vram-local-llm',
-    siblingBites: ['how-much-ram-for-7b-model', 'best-local-llm-6gb-vram'],
+    siblingBites: ['how-much-ram-for-7b-model', 'best-local-llm-6gb-vram', 'vram-for-70b-model'],
     is_living_page: false,
     quickAnswerTop: {
       en: {

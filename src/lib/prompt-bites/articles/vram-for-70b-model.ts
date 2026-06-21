@@ -133,6 +133,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: 'Related Guides',
+      items: [
+        '[How Much VRAM Do You Need for a Local LLM?](/prompt-bites/how-much-vram-for-local-llm) — VRAM tier table for all model sizes',
+        '[Cheapest Way to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) — cost path when hardware exceeds budget',
+        '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — full hardware guide for 70B-capable builds',
+        '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — which 70B models are worth the hardware cost',
+      ],
+    },
     },
   },
   de: {
@@ -197,6 +207,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: 'Verwandte Anleitungen',
+      items: [
+        '[Wie viel VRAM braucht man für ein lokales LLM?](/de/prompt-bites/how-much-vram-for-local-llm) — VRAM-Tabelle für alle Modellgrößen',
+        '[Günstigster Weg, ein 70B-Modell lokal zu betreiben](/de/prompt-bites/cheapest-way-to-run-70b-model-locally) — Kostenpfad bei überteuert Hardware',
+        '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) — vollständiger Leitfaden für 70B-fähige Hardware',
+        '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) — welche 70B-Modelle den Hardwarepreis wert sind',
+      ],
+    },
     },
   },
   fr: {
@@ -261,6 +281,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: 'Guides connexes',
+      items: [
+        '[De combien de VRAM avez-vous besoin pour un LLM local ?](/fr/prompt-bites/how-much-vram-for-local-llm) — tableau VRAM pour toutes les tailles de modèles',
+        "[Moyen le moins cher d'exécuter un modèle 70B localement](/fr/prompt-bites/cheapest-way-to-run-70b-model-locally) — options économiques quand le matériel dépasse le budget",
+        '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — guide complet pour les configurations capables de 70B',
+        '[Meilleurs LLM locaux 2026](/fr/local-llms/best-local-llms-2026) — quels modèles 70B valent le coût matériel',
+      ],
+    },
     },
   },
   ja: {
@@ -325,6 +355,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: '関連ガイド',
+      items: [
+        '[ローカルLLMに必要なVRAM量は？](/ja/prompt-bites/how-much-vram-for-local-llm) — 全モデルサイズのVRAM早見表',
+        '[70Bモデルをローカルで動かす最安の方法](/ja/prompt-bites/cheapest-way-to-run-70b-model-locally) — ハードウェア予算超過時のコスト選択肢',
+        '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 70B対応構成の完全ガイド',
+        '[ベストローカルLLM 2026](/ja/local-llms/best-local-llms-2026) — ハードウェアコストに見合う70Bモデル',
+      ],
+    },
     },
   },
   zh: {
@@ -389,6 +429,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: '相关指南',
+      items: [
+        '[本地LLM需要多少VRAM？](/zh/prompt-bites/how-much-vram-for-local-llm) — 所有模型大小的VRAM快速参考表',
+        '[本地运行70B模型的最便宜方式](/zh/prompt-bites/cheapest-way-to-run-70b-model-locally) — 硬件超预算时的低成本路径',
+        '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 70B级别配置完整指南',
+        '[2026年最佳本地LLMs](/zh/local-llms/best-local-llms-2026) — 哪些70B模型值得硬件成本',
+      ],
+    },
     },
   },
   pt: {
@@ -465,6 +515,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: 'Guias Relacionados',
+      items: [
+        '[Quanto VRAM Você Precisa para um LLM Local?](/pt/prompt-bites/how-much-vram-for-local-llm) — tabela de VRAM para todos os tamanhos de modelo',
+        '[Forma Mais Barata de Executar um Modelo 70B Localmente](/pt/prompt-bites/cheapest-way-to-run-70b-model-locally) — opções de baixo custo quando o hardware excede o orçamento',
+        '[Guia de Hardware LLM Local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — guia completo para configurações capazes de 70B',
+        '[Melhores LLMs Locais 2026](/pt/local-llms/best-local-llms-2026) — quais modelos 70B valem o custo do hardware',
+      ],
+    },
     },
   },
   es: {
@@ -541,6 +601,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: 'Guías Relacionadas',
+      items: [
+        '[¿Cuánta VRAM Necesitas para un LLM Local?](/es/prompt-bites/how-much-vram-for-local-llm) — tabla de VRAM para todos los tamaños de modelo',
+        '[Forma Más Barata de Ejecutar un Modelo 70B Localmente](/es/prompt-bites/cheapest-way-to-run-70b-model-locally) — opciones de bajo costo cuando el hardware supera el presupuesto',
+        '[Guía de Hardware LLM Local 2026](/es/local-llms/local-llm-hardware-guide-2026) — guía completa para configuraciones capaces de 70B',
+        '[Mejores LLMs Locales 2026](/es/local-llms/best-local-llms-2026) — qué modelos 70B valen el costo del hardware',
+      ],
+    },
     },
   },
   ar: {
@@ -617,6 +687,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: 'أدلة ذات صلة',
+      items: [
+        '[كم تحتاج من VRAM لتشغيل نموذج LLM محلي؟](/ar/prompt-bites/how-much-vram-for-local-llm) — جدول VRAM لجميع أحجام النماذج',
+        '[أرخص طريقة لتشغيل نموذج 70B محلياً](/ar/prompt-bites/cheapest-way-to-run-70b-model-locally) — خيارات التكلفة المنخفضة عند تجاوز ميزانية الأجهزة',
+        '[دليل أجهزة LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — الدليل الكامل لتكوينات قادرة على 70B',
+        '[أفضل LLMs المحلية 2026](/ar/local-llms/best-local-llms-2026) — أي نماذج 70B تستحق تكلفة الأجهزة',
+      ],
+    },
     },
   },
   ko: {
@@ -693,6 +773,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+    relatedBites: {
+      id: 'related-articles',
+      title: '관련 가이드',
+      items: [
+        '[로컬 LLM에 VRAM이 얼마나 필요한가?](/ko/prompt-bites/how-much-vram-for-local-llm) — 모든 모델 크기의 VRAM 참조 표',
+        '[70B 모델을 로컬에서 실행하는 가장 저렴한 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally) — 하드웨어가 예산을 초과할 때의 비용 경로',
+        '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 70B 지원 구성을 위한 완전한 가이드',
+        '[2026년 최고의 로컬 LLMs](/ko/local-llms/best-local-llms-2026) — 하드웨어 비용에 가치 있는 70B 모델',
+      ],
+    },
     },
   },
 }

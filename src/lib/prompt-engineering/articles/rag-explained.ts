@@ -313,6 +313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — understanding why RAG is necessary to overcome LLM knowledge cutoff and hallucination limits',
             '[Build Quality Checks](/prompt-engineering/build-quality-checks) — validation patterns for RAG output including hallucination detection and source verification',
             '[RAG Explicado (Português)](/pt/prompt-engineering/rag-explained) — versão em português deste guia',
+          '[AI Knowledge Cutoffs, Live Search, and GEO: The Complete Guide](/prompt-engineering/knowledge-cutoffs-and-geo) — why local LLMs can\'t be reached by SEO and the GEO strategy for both cloud and local AI',
           ],
         },
         faq: {
@@ -662,6 +663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Open Source vs proprietäre LLMs](/de/prompt-engineering/open-source-vs-proprietary-llms) — wählen Sie zwischen Cloud und lokalen LLMs für die Generierungsstufe Ihrer RAG-Pipeline',
             '[KI-Grenzen — Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) — verstehen Sie, warum RAG notwendig ist, um LLM-Wissensstichtag und Halluzinations-Grenzen zu überwinden',
             '[Qualitätschecks aufbauen](/de/prompt-engineering/build-quality-checks) — Validierungsmuster für RAG-Ausgabe einschließlich Halluzinations-Erkennung und Quellen-Verifizierung',
+          '[KI-Wissensstand, Live-Suche und GEO: Der vollständige Leitfaden](/de/prompt-engineering/knowledge-cutoffs-and-geo) — warum lokale LLMs von SEO nicht erreicht werden können und die GEO-Strategie für Cloud und lokale KI',
           ],
         },
         faq: {
@@ -1778,6 +1780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Open Source vs LLMs propriétaires](/fr/prompt-engineering/open-source-vs-proprietary-llms) — Cloud vs local pour étape génération.',
             '[Limites de l\'IA — Ce que LLMs ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) — Pourquoi RAG nécessaire.',
             '[Construire des vérifications qualité](/fr/prompt-engineering/build-quality-checks) — Validation RAG : détection hallucinations, vérification sources.',
+          '[Dates de coupure des modèles d\'IA, recherche en direct et GEO : le guide complet](/fr/prompt-engineering/knowledge-cutoffs-and-geo) — pourquoi les LLM locaux ne peuvent pas être atteints par le SEO et la stratégie GEO pour l\'IA cloud et locale',
           ],
         },
         faq: {
@@ -2094,6 +2097,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[オープンソース vs 専有 LLM](/ja/prompt-engineering/open-source-vs-proprietary-llms) — RAG パイプラインの生成段階向けにクラウドとローカル LLM から選択',
             '[AI の限界―LLM ができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — LLM 知識カットオフとハルシネーション限界を克服するのに RAG がなぜ必要かを理解',
             '[品質チェックを構築](/ja/prompt-engineering/build-quality-checks) — RAG 出力検証パターン：ハルシネーション検出、ソース検証を含む',
+          '[AIの知識カットオフ、ライブ検索、GEO：完全ガイド](/ja/prompt-engineering/knowledge-cutoffs-and-geo) — なぜローカルLLMはSEOで到達できないのか、クラウドとローカルAIのGEO戦略',
           ],
         },
         faq: {
@@ -2423,6 +2427,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[开源vs专有LLM](/zh/prompt-engineering/open-source-vs-proprietary-llms) — 为RAG生成阶段选择云或本地LLM',
             '[AI限制—LLM无法做什么](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 理解为什么需要RAG来克服LLM知识截止和幻觉限制',
             '[构建质量检查](/zh/prompt-engineering/build-quality-checks) — RAG输出验证模式：幻觉检测、来源验证',
+          '[AI知识截止日期、实时搜索与GEO：完整指南](/zh/prompt-engineering/knowledge-cutoffs-and-geo) — 为什么本地LLM无法被SEO覆盖，以及云端和本地AI的GEO策略',
           ],
         },
         faq: {
@@ -2777,7 +2782,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[AI 한계 — LLM이 할 수 없는 것](/prompt-engineering/ai-limitations-what-llms-cant-do) — LLM 지식 차단 및 환각 한계를 극복하기 위해 RAG가 필요한 이유 이해',
             '[빌드 품질 검사](/prompt-engineering/build-quality-checks) — 환각 감지 및 소스 검증을 포함한 RAG 출력 검증 패턴',
             '[RAG Explicado (Português)](/pt/prompt-engineering/rag-explained) — 이 가이드의 포르투갈어 버전',
-          ],
+          '[AI 지식 차단 날짜, 실시간 검색 및 GEO: 완전한 가이드](/ko/prompt-engineering/knowledge-cutoffs-and-geo) — 로컬 LLM이 SEO로 도달할 수 없는 이유와 클라우드 및 로컬 AI를 위한 GEO 전략',
+        ],
         },
         faq: {
           id: 'faq',
