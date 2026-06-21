@@ -9,11 +9,8 @@ interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
-  const sp = await searchParams
-  const lang = (sp?.lang as string) || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+export async function generateMetadata(): Promise<Metadata> {
+  const selectedLang = 'en'
   const t = translations[selectedLang as keyof typeof translations]
 
   return {

@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function EsAboutPage() {
+export default function PtAboutPage() {
   return (
     <>
       <script
@@ -38,9 +38,9 @@ export default function EsAboutPage() {
               '@context': 'https://schema.org',
               '@type': 'AboutPage',
               'url': 'https://www.promptquorum.com/pt/about',
-              'name': 'About PromptQuorum',
-              'description': 'PromptQuorum is a privacy-first, multi-model AI dispatch and consensus tool built by Hans Kuepper.',
-              'inLanguage': 'pt-BR',
+              'name': 'Sobre o PromptQuorum',
+              'description': 'O PromptQuorum é uma ferramenta de despacho e consenso de IA multi-modelo com foco em privacidade, desenvolvida por Hans Kuepper.',
+              'inLanguage': 'pt',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
             {
@@ -49,7 +49,7 @@ export default function EsAboutPage() {
               '@id': 'https://www.promptquorum.com/pt/about#founder',
               'name': 'Hans Kuepper',
               'url': 'https://www.promptquorum.com/pt/about',
-              'jobTitle': 'Founder & Developer',
+              'jobTitle': 'Fundador e desenvolvedor',
               'worksFor': {
                 '@type': 'Organization',
                 'name': 'PromptQuorum',
@@ -78,19 +78,19 @@ export default function EsAboutPage() {
 
           {/* Hero */}
           <div className="py-16 border-b border-primary/20 mb-16">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">About</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Sobre</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
-              Built for people who need to trust their AI answers.
+              Construído para pessoas que precisam confiar nas suas respostas de IA.
             </h1>
             <p className="text-xl text-text-secondary leading-relaxed">
-              PromptQuorum is a multi-model AI dispatch and consensus tool. One prompt to every model.
-              One verdict you can actually trust.
+              O PromptQuorum é uma ferramenta de despacho e consenso de IA multi-modelo. Um prompt para cada modelo.
+              Um veredicto no qual você realmente pode confiar.
             </p>
           </div>
 
           {/* Founder */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">The Developer</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">O desenvolvedor</h2>
             <div className="bg-card border border-primary/20 rounded-2xl p-8">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -98,35 +98,38 @@ export default function EsAboutPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-1">Hans Kuepper</h3>
-                  <p className="text-sm text-primary font-medium mb-4">Founder &amp; Developer, PromptQuorum</p>
+                  <p className="text-sm text-primary font-medium mb-4">Fundador &amp; desenvolvedor, PromptQuorum</p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Background</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Experiência</h4>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    Hans is based in Baden-Württemberg, Germany, near Heidelberg in the Kraichgau hill country.
-                    He is a multilingual independent developer who speaks German, English, French, and Russian fluently.
-                    Over the past two decades, he has lived and worked in more than 20 countries across Europe, Asia, and beyond,
-                    collaborating with distributed teams and building tools for global audiences.
+                    Hans mora em Baden-Württemberg, Alemanha, perto de Heidelberg no Kraichgau.
+                    É um desenvolvedor independente multilíngue que fala alemão, inglês, francês e russo com fluência.
+                    Nas últimas duas décadas, viveu e trabalhou em mais de 20 países pela Europa, Ásia e além,
+                    colaborando com equipes distribuídas e criando ferramentas para públicos globais.
                   </p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Why PromptQuorum</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Por que o PromptQuorum</h4>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    PromptQuorum started from a simple frustration: when you need a reliable answer,
-                    querying one AI model is not enough. Different models hallucinate differently, make different mistakes,
-                    and succeed on different types of reasoning. The truth is in the overlap — where five independent
-                    models agree on an answer, confidence is dramatically higher than when one model answers alone.
+                    O PromptQuorum nasceu de uma frustração simples: quando você precisa de uma resposta confiável,
+                    consultar um único modelo de IA não é suficiente. Modelos diferentes alucinam de formas diferentes,
+                    cometem erros diferentes e têm sucesso em tipos diferentes de raciocínio. A verdade está na sobreposição —
+                    quando cinco modelos independentes concordam com uma resposta, a confiança é dramaticamente maior
+                    do que quando um único modelo responde sozinho.
                   </p>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    Before building PromptQuorum, Hans spent years working with enterprise AI workflows and saw the same
-                    problem repeatedly: teams and organizations trusting single-model outputs for high-stakes decisions —
-                    hiring decisions, medical research summaries, legal analysis, risk assessments — without any verification
-                    layer or consensus mechanism. High-stakes decisions deserve better. PromptQuorum is the tool he wanted to exist.
+                    Antes de construir o PromptQuorum, Hans passou anos trabalhando com fluxos de trabalho de IA empresarial
+                    e viu repetidamente o mesmo problema: equipes e organizações confiando nas saídas de um único modelo
+                    para decisões de alto risco — decisões de contratação, resumos de pesquisa médica, análises jurídicas,
+                    avaliações de risco — sem nenhuma camada de verificação ou mecanismo de consenso. Decisões de alto risco
+                    merecem algo melhor. O PromptQuorum é a ferramenta que ele queria que existisse.
                   </p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Philosophy</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Filosofia</h4>
                   <p className="text-text-secondary leading-relaxed mb-6">
-                    Hans believes that privacy and user agency should be non-negotiable in AI tools. PromptQuorum is built
-                    on a simple principle: your prompts, your API keys, and your responses belong to you. The tool facilitates
-                    consensus and comparison across AI models, but nothing passes through PromptQuorum's servers. You are in control.
+                    Hans acredita que privacidade e autonomia do usuário devem ser inegociáveis em ferramentas de IA.
+                    O PromptQuorum é construído sobre um princípio simples: seus prompts, suas chaves de API e suas respostas pertencem a você.
+                    A ferramenta facilita o consenso e a comparação entre modelos de IA, mas nada passa pelos servidores do PromptQuorum.
+                    Você está no controle.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -169,40 +172,40 @@ export default function EsAboutPage() {
 
           {/* Mission */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">Why PromptQuorum Exists</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">Por que o PromptQuorum existe</h2>
             <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
-                Every major AI model hallucinates. GPT-4o, Claude, Gemini — all of them fabricate facts,
-                miss context, and produce confident-sounding wrong answers. The difference is <em>which</em> facts
-                each one gets wrong, and <em>when</em>.
+                Todo grande modelo de IA alucina. GPT-4o, Claude, Gemini — todos fabricam fatos,
+                perdem contexto e produzem respostas erradas que soam confiantes. A diferença é <em>quais</em> fatos
+                cada um inventa e <em>quando</em>.
               </p>
               <p>
-                When five independent models agree on an answer, the probability that all five fabricated
-                the same specific detail is dramatically lower than when one model answers alone.
-                Consensus is a reliability signal. PromptQuorum makes it easy to collect that signal.
+                Quando cinco modelos independentes concordam com uma resposta, a probabilidade de que todos os cinco tenham fabricado
+                o mesmo detalhe específico é dramaticamente menor do que quando um único modelo responde sozinho.
+                Consenso é um sinal de confiabilidade. O PromptQuorum torna fácil coletar esse sinal.
               </p>
               <p>
-                The second problem is privacy. Most AI tools route your prompts through their own servers.
-                PromptQuorum does not. Your API keys connect directly from your browser to your chosen
-                providers. Nothing passes through PromptQuorum infrastructure — not your prompts,
-                not your API keys, not your responses.
+                O segundo problema é a privacidade. A maioria das ferramentas de IA roteia seus prompts por seus próprios servidores.
+                O PromptQuorum não faz isso. Suas chaves de API se conectam diretamente do seu navegador aos seus provedores escolhidos.
+                Nada passa pela infraestrutura do PromptQuorum — nem seus prompts,
+                nem suas chaves de API, nem suas respostas.
               </p>
             </div>
           </section>
 
           {/* Product facts */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">The Product</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">O produto</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { label: 'Launched', value: 'Beta — July 2026' },
-                { label: 'Pricing', value: 'Free. Bring your own API key.' },
-                { label: 'Privacy model', value: 'BYOM — zero server transmission' },
-                { label: 'AI models supported', value: '25+ cloud + unlimited local via Ollama' },
-                { label: 'Prompt frameworks', value: '9 built-in + 2 custom slots' },
-                { label: 'Quorum analysis types', value: '13, including hallucination detection' },
-                { label: 'Offline support', value: 'Full — via Ollama, LM Studio, Jan AI' },
-                { label: 'Registration required', value: 'None. Open the app and start.' },
+                { label: 'Lançamento', value: 'Beta — julho de 2026' },
+                { label: 'Preço', value: 'Gratuito. Traga sua própria chave de API.' },
+                { label: 'Modelo de privacidade', value: 'BYOM — zero transmissão por servidor' },
+                { label: 'Modelos de IA suportados', value: '25+ na nuvem + ilimitados locais via Ollama' },
+                { label: 'Frameworks de prompts', value: '9 integrados + 2 slots personalizados' },
+                { label: 'Tipos de análise Quorum', value: '13, incluindo detecção de alucinações' },
+                { label: 'Suporte offline', value: 'Completo — via Ollama, LM Studio, Jan AI' },
+                { label: 'Cadastro necessário', value: 'Nenhum. Abra o app e comece.' },
               ].map(({ label, value }) => (
                 <div key={label} className="bg-card border border-primary/20 rounded-xl p-4">
                   <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{label}</div>
@@ -214,9 +217,9 @@ export default function EsAboutPage() {
 
           {/* Contact */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-4">Contact</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Contato</h2>
             <p className="text-text-secondary mb-4">
-              For press enquiries, partnership proposals, or feedback:
+              Para consultas de imprensa, propostas de parceria ou feedback:
             </p>
             <a
               href="mailto:hello@promptquorum.com"
@@ -229,8 +232,8 @@ export default function EsAboutPage() {
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
             <Link href="/pt" className="text-primary hover:text-primary/80 font-medium text-sm">← Início</Link>
-            <Link href="/pt/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
-            <Link href="/pt/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
+            <Link href="/pt/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">Como funciona</Link>
+            <Link href="/pt/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Comparar ferramentas</Link>
             <Link href="/pt/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
           </div>
 

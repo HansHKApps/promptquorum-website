@@ -32,18 +32,18 @@ export default async function ArHowItWorksPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      'name': 'Como funciona o PromptQuorum — Escrever, Otimizar, Enviar, Quorum',
+      'name': 'كيف يعمل PromptQuorum — كتابة، تحسين، إرسال، Quorum',
       'url': 'https://www.promptquorum.com/ar/how-it-works',
       'inLanguage': 'ar',
-      'description': 'Guia completo do fluxo de trabalho de 4 etapas do PromptQuorum: escrita estruturada de prompts com 9 frameworks, otimização impulsionada por LLM, envio com um clique para 25+ serviços de IA e análise Quorum multi-modelo.',
+      'description': 'دليل شامل لسير عمل PromptQuorum المكوّن من 4 مراحل: كتابة موجّهات منظمة باستخدام 9 أُطر، والتحسين بالذكاء الاصطناعي، والإرسال بنقرة واحدة إلى أكثر من 25 خدمة ذكاء اصطناعي، وتحليل Quorum متعدد النماذج.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/ar' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Como funciona', 'item': 'https://www.promptquorum.com/ar/how-it-works' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'الرئيسية', 'item': 'https://www.promptquorum.com/ar' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'كيف يعمل', 'item': 'https://www.promptquorum.com/ar/how-it-works' },
       ],
     },
   ]

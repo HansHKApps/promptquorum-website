@@ -32,18 +32,18 @@ export default async function KoHowItWorksPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      'name': 'Como funciona o PromptQuorum — Escrever, Otimizar, Enviar, Quorum',
-      'url': 'https://www.promptquorum.com/ar/how-it-works',
+      'name': 'PromptQuorum 작동 방식 — 작성, 최적화, 전송, Quorum',
+      'url': 'https://www.promptquorum.com/ko/how-it-works',
       'inLanguage': 'ko',
-      'description': 'Guia completo do fluxo de trabalho de 4 etapas do PromptQuorum: escrita estruturada de prompts com 9 frameworks, otimização impulsionada por LLM, envio com um clique para 25+ serviços de IA e análise Quorum multi-modelo.',
+      'description': 'PromptQuorum 4단계 워크플로우 완전 가이드: 9개 프레임워크로 구조화된 프롬프트 작성, LLM 기반 최적화, 25개 이상 AI 서비스에 원클릭 전송, 다중 모델 Quorum 분석.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/ar' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Como funciona', 'item': 'https://www.promptquorum.com/ar/how-it-works' },
+        { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': 'https://www.promptquorum.com/ko' },
+        { '@type': 'ListItem', 'position': 2, 'name': '작동 방식', 'item': 'https://www.promptquorum.com/ko/how-it-works' },
       ],
     },
   ]

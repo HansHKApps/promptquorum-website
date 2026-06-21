@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t.aboutMetaTitle,
     description: t.aboutMetaDescription,
-    alternates: generateAlternates('/about', lang, true, undefined, ['zh']),
+    alternates: generateAlternates('/about', lang, true),
     openGraph: {
       title: t.aboutMetaTitle,
       description: t.aboutMetaDescription,
@@ -37,8 +37,8 @@ export default function ZhAboutPage() {
               '@context': 'https://schema.org',
               '@type': 'AboutPage',
               'url': 'https://www.promptquorum.com/zh/about',
-              'name': 'About PromptQuorum',
-              'description': 'PromptQuorum is a privacy-first, multi-model AI dispatch and consensus tool built by Hans Kuepper.',
+              'name': '关于 PromptQuorum',
+              'description': 'PromptQuorum 是由 Hans Kuepper 开发的注重隐私的多模型 AI 调度与共识工具。',
               'inLanguage': 'zh',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
@@ -48,7 +48,7 @@ export default function ZhAboutPage() {
               '@id': 'https://www.promptquorum.com/zh/about#founder',
               'name': 'Hans Kuepper',
               'url': 'https://www.promptquorum.com/zh/about',
-              'jobTitle': 'Founder & Developer',
+              'jobTitle': '创始人兼开发者',
               'worksFor': {
                 '@type': 'Organization',
                 'name': 'PromptQuorum',
@@ -64,7 +64,7 @@ export default function ZhAboutPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': '主页', 'item': 'https://www.promptquorum.com/zh' },
+                { '@type': 'ListItem', 'position': 1, 'name': '首页', 'item': 'https://www.promptquorum.com/zh' },
                 { '@type': 'ListItem', 'position': 2, 'name': '关于我们', 'item': 'https://www.promptquorum.com/zh/about' },
               ],
             },
@@ -77,19 +77,19 @@ export default function ZhAboutPage() {
 
           {/* Hero */}
           <div className="py-16 border-b border-primary/20 mb-16">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">About</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">关于我们</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
-              Built for people who need to trust their AI answers.
+              为需要信任 AI 答案的人而构建。
             </h1>
             <p className="text-xl text-text-secondary leading-relaxed">
-              PromptQuorum is a multi-model AI dispatch and consensus tool. One prompt to every model.
-              One verdict you can actually trust.
+              PromptQuorum 是一款多模型 AI 调度与共识工具。一个提示词发送给每个模型。
+              一个您真正可以信任的裁决。
             </p>
           </div>
 
           {/* Founder */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">The Developer</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">开发者</h2>
             <div className="bg-card border border-primary/20 rounded-2xl p-8">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -97,35 +97,38 @@ export default function ZhAboutPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-1">Hans Kuepper</h3>
-                  <p className="text-sm text-primary font-medium mb-4">Founder &amp; Developer, PromptQuorum</p>
+                  <p className="text-sm text-primary font-medium mb-4">创始人兼开发者，PromptQuorum</p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Background</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">背景</h4>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    Hans is based in Baden-Württemberg, Germany, near Heidelberg in the Kraichgau hill country.
-                    He is a multilingual independent developer who speaks German, English, French, and Russian fluently.
-                    Over the past two decades, he has lived and worked in more than 20 countries across Europe, Asia, and beyond,
-                    collaborating with distributed teams and building tools for global audiences.
+                    Hans 居住在德国巴登-符腾堡州海德堡附近的克莱希高地区。
+                    他是一位多语言独立开发者，能流利使用德语、英语、法语和俄语。
+                    在过去二十年里，他在欧洲、亚洲等地区的20多个国家生活和工作，
+                    与分布式团队合作，为全球用户构建工具。
                   </p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Why PromptQuorum</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">为什么是 PromptQuorum</h4>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    PromptQuorum started from a simple frustration: when you need a reliable answer,
-                    querying one AI model is not enough. Different models hallucinate differently, make different mistakes,
-                    and succeed on different types of reasoning. The truth is in the overlap — where five independent
-                    models agree on an answer, confidence is dramatically higher than when one model answers alone.
+                    PromptQuorum 源于一个简单的痛点：当您需要可靠的答案时，
+                    仅查询一个 AI 模型是不够的。不同模型以不同方式产生幻觉，
+                    犯不同类型的错误，在不同类型的推理上各有优劣。
+                    真相在于交叉点——当五个独立模型对一个答案达成一致时，
+                    其可信度远高于单个模型单独回答的情况。
                   </p>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    Before building PromptQuorum, Hans spent years working with enterprise AI workflows and saw the same
-                    problem repeatedly: teams and organizations trusting single-model outputs for high-stakes decisions —
-                    hiring decisions, medical research summaries, legal analysis, risk assessments — without any verification
-                    layer or consensus mechanism. High-stakes decisions deserve better. PromptQuorum is the tool he wanted to exist.
+                    在构建 PromptQuorum 之前，Hans 花了多年时间从事企业级 AI 工作流，
+                    反复看到同一个问题：团队和组织将单个模型的输出用于高风险决策——
+                    招聘决定、医学研究摘要、法律分析、风险评估——
+                    没有任何验证层或共识机制。高风险决策值得更好的工具。
+                    PromptQuorum 就是他一直希望存在的那个工具。
                   </p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Philosophy</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">理念</h4>
                   <p className="text-text-secondary leading-relaxed mb-6">
-                    Hans believes that privacy and user agency should be non-negotiable in AI tools. PromptQuorum is built
-                    on a simple principle: your prompts, your API keys, and your responses belong to you. The tool facilitates
-                    consensus and comparison across AI models, but nothing passes through PromptQuorum's servers. You are in control.
+                    Hans 认为，隐私和用户自主权在 AI 工具中应是不可妥协的。
+                    PromptQuorum 建立在一个简单原则之上：您的提示词、API 密钥和回答属于您。
+                    该工具促进 AI 模型间的共识与比较，但没有任何内容通过 PromptQuorum 的服务器传输。
+                    您掌控一切。
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -168,40 +171,40 @@ export default function ZhAboutPage() {
 
           {/* Mission */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">Why PromptQuorum Exists</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">PromptQuorum 存在的原因</h2>
             <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
-                Every major AI model hallucinates. GPT-4o, Claude, Gemini — all of them fabricate facts,
-                miss context, and produce confident-sounding wrong answers. The difference is <em>which</em> facts
-                each one gets wrong, and <em>when</em>.
+                每个主要 AI 模型都会产生幻觉。GPT-4o、Claude、Gemini——它们都会捏造事实、
+                遗漏上下文，并给出听起来自信却错误的回答。区别在于<em>哪些</em>事实
+                各自出错，以及<em>何时</em>出错。
               </p>
               <p>
-                When five independent models agree on an answer, the probability that all five fabricated
-                the same specific detail is dramatically lower than when one model answers alone.
-                Consensus is a reliability signal. PromptQuorum makes it easy to collect that signal.
+                当五个独立模型对一个答案达成一致时，五个模型都捏造了同一个具体细节的概率，
+                远低于单个模型单独回答的情况。
+                共识是可靠性的信号。PromptQuorum 让收集这个信号变得简单。
               </p>
               <p>
-                The second problem is privacy. Most AI tools route your prompts through their own servers.
-                PromptQuorum does not. Your API keys connect directly from your browser to your chosen
-                providers. Nothing passes through PromptQuorum infrastructure — not your prompts,
-                not your API keys, not your responses.
+                第二个问题是隐私。大多数 AI 工具会通过自己的服务器路由您的提示词。
+                PromptQuorum 不会这样做。您的 API 密钥直接从浏览器连接到您选择的提供商。
+                没有任何内容经过 PromptQuorum 基础设施——不是您的提示词，
+                不是您的 API 密钥，也不是您的回答。
               </p>
             </div>
           </section>
 
           {/* Product facts */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">The Product</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">产品</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { label: 'Launched', value: 'Beta — July 2026' },
-                { label: 'Pricing', value: 'Free. Bring your own API key.' },
-                { label: 'Privacy model', value: 'BYOM — zero server transmission' },
-                { label: 'AI models supported', value: '25+ cloud + unlimited local via Ollama' },
-                { label: 'Prompt frameworks', value: '9 built-in + 2 custom slots' },
-                { label: 'Quorum analysis types', value: '13, including hallucination detection' },
-                { label: 'Offline support', value: 'Full — via Ollama, LM Studio, Jan AI' },
-                { label: 'Registration required', value: 'None. Open the app and start.' },
+                { label: '发布时间', value: 'Beta 版 — 2026年7月' },
+                { label: '定价', value: '免费。带上您自己的 API 密钥。' },
+                { label: '隐私模式', value: 'BYOM — 零服务器传输' },
+                { label: '支持的 AI 模型', value: '25+ 云端 + 通过 Ollama 无限本地模型' },
+                { label: '提示词框架', value: '9 个内置 + 2 个自定义槽位' },
+                { label: 'Quorum 分析类型', value: '13 种，包含幻觉检测' },
+                { label: '离线支持', value: '完整支持 — 通过 Ollama、LM Studio、Jan AI' },
+                { label: '是否需要注册', value: '无需注册。打开应用即可开始。' },
               ].map(({ label, value }) => (
                 <div key={label} className="bg-card border border-primary/20 rounded-xl p-4">
                   <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{label}</div>
@@ -213,9 +216,9 @@ export default function ZhAboutPage() {
 
           {/* Contact */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-4">Contact</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">联系我们</h2>
             <p className="text-text-secondary mb-4">
-              For press enquiries, partnership proposals, or feedback:
+              媒体咨询、合作提案或反馈：
             </p>
             <a
               href="mailto:hello@promptquorum.com"
@@ -227,10 +230,10 @@ export default function ZhAboutPage() {
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/zh" className="text-primary hover:text-primary/80 font-medium text-sm">← 主页</Link>
-            <Link href="/zh/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
-            <Link href="/zh/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
-            <Link href="/zh/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
+            <Link href="/zh" className="text-primary hover:text-primary/80 font-medium text-sm">← 首页</Link>
+            <Link href="/zh/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">工作原理</Link>
+            <Link href="/zh/compare" className="text-primary hover:text-primary/80 font-medium text-sm">比较工具</Link>
+            <Link href="/zh/blog" className="text-primary hover:text-primary/80 font-medium text-sm">博客</Link>
           </div>
 
         </div>

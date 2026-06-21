@@ -38,8 +38,8 @@ export default function JaAboutPage() {
               '@context': 'https://schema.org',
               '@type': 'AboutPage',
               'url': 'https://www.promptquorum.com/ja/about',
-              'name': 'About PromptQuorum',
-              'description': 'PromptQuorum is a privacy-first, multi-model AI dispatch and consensus tool built by Hans Kuepper.',
+              'name': 'PromptQuorumについて',
+              'description': 'PromptQuorumはHans Kuepperが開発したプライバシー重視のマルチモデルAIディスパッチ＆コンセンサスツールです。',
               'inLanguage': 'ja',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
             },
@@ -49,7 +49,7 @@ export default function JaAboutPage() {
               '@id': 'https://www.promptquorum.com/ja/about#founder',
               'name': 'Hans Kuepper',
               'url': 'https://www.promptquorum.com/ja/about',
-              'jobTitle': 'Founder & Developer',
+              'jobTitle': '創業者・開発者',
               'worksFor': {
                 '@type': 'Organization',
                 'name': 'PromptQuorum',
@@ -66,7 +66,7 @@ export default function JaAboutPage() {
               '@type': 'BreadcrumbList',
               'itemListElement': [
                 { '@type': 'ListItem', 'position': 1, 'name': 'ホーム', 'item': 'https://www.promptquorum.com/ja' },
-                { '@type': 'ListItem', 'position': 2, 'name': '私たちについて', 'item': 'https://www.promptquorum.com/ja/about' },
+                { '@type': 'ListItem', 'position': 2, 'name': '概要', 'item': 'https://www.promptquorum.com/ja/about' },
               ],
             },
           ]),
@@ -78,19 +78,19 @@ export default function JaAboutPage() {
 
           {/* Hero */}
           <div className="py-16 border-b border-primary/20 mb-16">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">About</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">概要</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
-              Built for people who need to trust their AI answers.
+              AIの回答を信頼する必要がある人々のために構築されました。
             </h1>
             <p className="text-xl text-text-secondary leading-relaxed">
-              PromptQuorum is a multi-model AI dispatch and consensus tool. One prompt to every model.
-              One verdict you can actually trust.
+              PromptQuorumはマルチモデルAIディスパッチ＆コンセンサスツールです。すべてのモデルに1つのプロンプト。
+              本当に信頼できる1つの評決。
             </p>
           </div>
 
           {/* Founder */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">The Developer</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">開発者について</h2>
             <div className="bg-card border border-primary/20 rounded-2xl p-8">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -98,35 +98,38 @@ export default function JaAboutPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-1">Hans Kuepper</h3>
-                  <p className="text-sm text-primary font-medium mb-4">Founder &amp; Developer, PromptQuorum</p>
+                  <p className="text-sm text-primary font-medium mb-4">創業者・開発者、PromptQuorum</p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Background</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">経歴</h4>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    Hans is based in Baden-Württemberg, Germany, near Heidelberg in the Kraichgau hill country.
-                    He is a multilingual independent developer who speaks German, English, French, and Russian fluently.
-                    Over the past two decades, he has lived and worked in more than 20 countries across Europe, Asia, and beyond,
-                    collaborating with distributed teams and building tools for global audiences.
+                    Hansはドイツのバーデン＝ヴュルテンベルク州、ハイデルベルク近郊のクライヒガウに在住しています。
+                    ドイツ語、英語、フランス語、ロシア語を流暢に話す多言語の独立系開発者です。
+                    過去20年間にわたりヨーロッパ、アジアをはじめ世界20か国以上で生活・勤務し、
+                    分散チームと協力しながらグローバルなユーザー向けのツールを開発してきました。
                   </p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Why PromptQuorum</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">なぜPromptQuorumを作ったか</h4>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    PromptQuorum started from a simple frustration: when you need a reliable answer,
-                    querying one AI model is not enough. Different models hallucinate differently, make different mistakes,
-                    and succeed on different types of reasoning. The truth is in the overlap — where five independent
-                    models agree on an answer, confidence is dramatically higher than when one model answers alone.
+                    PromptQuorumはシンプルな不満から生まれました。信頼できる回答が必要なとき、
+                    1つのAIモデルに問い合わせるだけでは不十分です。モデルによってハルシネーションの仕方が異なり、
+                    犯すミスも、得意な推論のタイプも異なります。真実は重複する部分にあります——
+                    5つの独立したモデルが同じ回答に合意したとき、1つのモデルだけが回答する場合よりも
+                    信頼性が飛躍的に高まります。
                   </p>
                   <p className="text-text-secondary leading-relaxed mb-4">
-                    Before building PromptQuorum, Hans spent years working with enterprise AI workflows and saw the same
-                    problem repeatedly: teams and organizations trusting single-model outputs for high-stakes decisions —
-                    hiring decisions, medical research summaries, legal analysis, risk assessments — without any verification
-                    layer or consensus mechanism. High-stakes decisions deserve better. PromptQuorum is the tool he wanted to exist.
+                    PromptQuorumを構築する以前、Hansは企業のAIワークフローに長年携わり、同じ問題を繰り返し目にしました。
+                    チームや組織が、採用決定、医療研究のサマリー、法的分析、リスク評価といった
+                    高リスクな意思決定に単一モデルの出力をそのまま信頼し、
+                    検証レイヤーもコンセンサスメカニズムも持たないという問題です。
+                    高リスクな意思決定にはより良いものが必要です。PromptQuorumは彼が存在してほしかったツールです。
                   </p>
 
-                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">Philosophy</h4>
+                  <h4 className="text-base font-semibold text-text-primary mt-6 mb-3">理念</h4>
                   <p className="text-text-secondary leading-relaxed mb-6">
-                    Hans believes that privacy and user agency should be non-negotiable in AI tools. PromptQuorum is built
-                    on a simple principle: your prompts, your API keys, and your responses belong to you. The tool facilitates
-                    consensus and comparison across AI models, but nothing passes through PromptQuorum's servers. You are in control.
+                    Hansは、プライバシーとユーザーの自律性はAIツールにおいて譲れないものであると考えています。
+                    PromptQuorumはシンプルな原則の上に構築されています。あなたのプロンプト、APIキー、回答はあなたのものです。
+                    このツールはAIモデル間のコンセンサスと比較を容易にしますが、
+                    PromptQuorumのサーバーを通過するものは何もありません。あなたがコントロールします。
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -169,40 +172,40 @@ export default function JaAboutPage() {
 
           {/* Mission */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">Why PromptQuorum Exists</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">PromptQuorumが存在する理由</h2>
             <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
-                Every major AI model hallucinates. GPT-4o, Claude, Gemini — all of them fabricate facts,
-                miss context, and produce confident-sounding wrong answers. The difference is <em>which</em> facts
-                each one gets wrong, and <em>when</em>.
+                すべての主要AIモデルはハルシネーションを起こします。GPT-4o、Claude、Gemini——どれも事実を捏造し、
+                文脈を見落とし、自信たっぷりに聞こえる誤った回答を生成します。違いは、<em>どの</em>事実を
+                誰が間違えるか、そして<em>いつ</em>かということです。
               </p>
               <p>
-                When five independent models agree on an answer, the probability that all five fabricated
-                the same specific detail is dramatically lower than when one model answers alone.
-                Consensus is a reliability signal. PromptQuorum makes it easy to collect that signal.
+                5つの独立したモデルが同じ回答に合意したとき、5つすべてが同じ特定の詳細を捏造した確率は、
+                1つのモデルだけが回答する場合よりも飛躍的に低くなります。
+                コンセンサスは信頼性のシグナルです。PromptQuorumはそのシグナルを収集することを容易にします。
               </p>
               <p>
-                The second problem is privacy. Most AI tools route your prompts through their own servers.
-                PromptQuorum does not. Your API keys connect directly from your browser to your chosen
-                providers. Nothing passes through PromptQuorum infrastructure — not your prompts,
-                not your API keys, not your responses.
+                2つ目の問題はプライバシーです。ほとんどのAIツールはプロンプトを自社のサーバーを通じてルーティングします。
+                PromptQuorumはそうしません。あなたのAPIキーはブラウザから直接選択したプロバイダーに接続されます。
+                PromptQuorumのインフラを通過するものは何もありません——あなたのプロンプトも、
+                APIキーも、回答も。
               </p>
             </div>
           </section>
 
           {/* Product facts */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">The Product</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">製品概要</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { label: 'Launched', value: 'Beta — July 2026' },
-                { label: 'Pricing', value: 'Free. Bring your own API key.' },
-                { label: 'Privacy model', value: 'BYOM — zero server transmission' },
-                { label: 'AI models supported', value: '25+ cloud + unlimited local via Ollama' },
-                { label: 'Prompt frameworks', value: '9 built-in + 2 custom slots' },
-                { label: 'Quorum analysis types', value: '13, including hallucination detection' },
-                { label: 'Offline support', value: 'Full — via Ollama, LM Studio, Jan AI' },
-                { label: 'Registration required', value: 'None. Open the app and start.' },
+                { label: 'リリース', value: 'ベータ版 — 2026年7月' },
+                { label: '料金', value: '無料。自分のAPIキーを持参。' },
+                { label: 'プライバシーモデル', value: 'BYOM — サーバー転送なし' },
+                { label: '対応AIモデル数', value: '25以上のクラウド + Ollama経由で無制限のローカル' },
+                { label: 'プロンプトフレームワーク', value: '9種類内蔵 + カスタム2スロット' },
+                { label: 'クォーラム分析タイプ', value: '13種類（ハルシネーション検出を含む）' },
+                { label: 'オフラインサポート', value: '完全対応 — Ollama、LM Studio、Jan AI経由' },
+                { label: '登録必須', value: 'なし。アプリを開いてすぐ開始。' },
               ].map(({ label, value }) => (
                 <div key={label} className="bg-card border border-primary/20 rounded-xl p-4">
                   <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{label}</div>
@@ -214,9 +217,9 @@ export default function JaAboutPage() {
 
           {/* Contact */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-4">Contact</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">お問い合わせ</h2>
             <p className="text-text-secondary mb-4">
-              For press enquiries, partnership proposals, or feedback:
+              プレスに関するお問い合わせ、パートナーシップのご提案、フィードバックについては：
             </p>
             <a
               href="mailto:hello@promptquorum.com"
@@ -228,10 +231,10 @@ export default function JaAboutPage() {
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
-            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-            <Link href="/ja/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
-            <Link href="/ja/compare" className="text-primary hover:text-primary/80 font-medium text-sm">Compare Tools</Link>
-            <Link href="/ja/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
+            <Link href="/ja" className="text-primary hover:text-primary/80 font-medium text-sm">← ホーム</Link>
+            <Link href="/ja/how-it-works" className="text-primary hover:text-primary/80 font-medium text-sm">仕組み</Link>
+            <Link href="/ja/compare" className="text-primary hover:text-primary/80 font-medium text-sm">ツールを比較</Link>
+            <Link href="/ja/blog" className="text-primary hover:text-primary/80 font-medium text-sm">ブログ</Link>
           </div>
 
         </div>
