@@ -529,6 +529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Techniques: RAG Explained — Retrieval-Augmented Generation](/prompt-engineering/rag-explained) — How to extend any model (proprietary or open-weights) with external knowledge',
             '[Fundamentals: Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Detailed cost analysis and token economics',
             '[Fundamentals: Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Security considerations for both model classes',
+            '[Run Your Smart Home on a Local LLM](/smart-home/local-llm-smart-home-complete-guide) — the most concrete home-use application of local open model inference: no data leaves your network',
           ],
         },
 
@@ -1081,6 +1082,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Techniques: RAG Explained — Retrieval-Augmented Generation](/de/prompt-engineering/rag-explained) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
             '[Fundamentals: Tokens, Costs & Limits](/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Detaillierte Kostenanalyse und Token-Ökonomie',
             '[Fundamentals: Prompt Injection and Security](/de/prompt-engineering/prompt-injection-and-security) — Sicherheitsüberlegungen für beide Modellklassen',
+            '[Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) – die überzeugendste Heimanwendung für lokale Open-Modell-Inferenz: keine Daten verlassen Ihr Netzwerk',
           ],
         },
     
@@ -1377,6 +1379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Fundamentos: ¿GPT-5.5, Claude o Gemini? Cómo elegir el modelo correcto](/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Comparación detallada de modelos propietarios de frontera',
             '[Fundamentos: Tokens, costos y límites](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Análisis detallado de costos y economía de tokens',
             '[Fundamentos: Prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) — Consideraciones de seguridad para ambas clases de modelos',
+            '[Ejecuta tu smart home con un LLM local](/es/smart-home/local-llm-smart-home-complete-guide) — la aplicación doméstica más concreta de la inferencia con modelos locales abiertos: ningún dato sale de tu red',
           ],
         },
         faq: {
@@ -1637,6 +1640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[الأساسيات: GPT-5.5 أم Claude أم Gemini؟ كيف تختار النموذج الصحيح](/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — مقارنة تفصيلية للنماذج المملوكة المتقدمة',
             '[الأساسيات: الرموز والتكاليف والحدود](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — تحليل تفصيلي للتكاليف واقتصاد الرموز',
             '[الأساسيات: حقن البرومبت والأمان](/ar/prompt-engineering/prompt-injection-and-security) — اعتبارات الأمان لكلا فئتي النماذج',
+            '[تشغيل منزلك الذكي بنموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — التطبيق المنزلي الأكثر ملموسية لاستنتاج النموذج المفتوح المحلي: لا تغادر أي بيانات شبكتك',
           ],
         },
         faq: {
@@ -1895,6 +1899,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Fundamentos: GPT-5.5, Claude ou Gemini? Como escolher o modelo certo](/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Comparação detalhada de modelos proprietários de fronteira',
             '[Fundamentos: Tokens, custos e limites](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Análise detalhada de custos e economia de tokens',
             '[Fundamentos: Prompt injection e segurança](/pt/prompt-engineering/prompt-injection-and-security) — Considerações de segurança para ambas as classes de modelos',
+            '[Rodar sua casa inteligente em um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide) — a aplicação doméstica mais concreta de inferência com modelos locais abertos: nenhum dado sai da sua rede',
           ],
         },
         faq: {
@@ -2396,6 +2401,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Techniques : RAG expliqué — Retrieval-Augmented Generation](/fr/prompt-engineering/rag-explained) — Comment étendre n\'importe quel modèle (propriétaire ou open-weights) avec des connaissances externes',
             '[Fondamentaux : Tokens, coûts et limites](/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Analyse détaillée des coûts et économie des tokens',
             '[Fondamentaux : Injection de prompt et sécurité](/fr/prompt-engineering/prompt-injection-and-security) — Considérations de sécurité pour les deux classes de modèles',
+            '[Faire tourner votre maison connectée sur un LLM local](/fr/smart-home/local-llm-smart-home-complete-guide) — l\'application domestique la plus concrète de l\'inférence avec des modèles locaux open source : aucune donnée ne quitte votre réseau',
           ],
         },
 
@@ -2934,6 +2940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[テクニック：RAG解説 — Retrieval-Augmented Generation](/ja/prompt-engineering/rag-explained) — 任意のモデル（独自またはオープンウェイト）を外部知識で拡張する方法',
             '[基礎：トークン・コスト・制限](/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 詳細なコスト分析とトークンエコノミクス',
             '[基礎：プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 両モデルクラスのセキュリティ上の考慮事項',
+            '[ローカルLLMでスマートホームを動かす](/ja/smart-home/local-llm-smart-home-complete-guide) — ローカルオープンモデル推論の最もわかりやすいホーム活用例：データがネットワーク外に出ない',
           ],
         },
 
@@ -3487,6 +3494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[技术：RAG详解——检索增强生成](/zh/prompt-engineering/rag-explained) — 如何用外部知识扩展任意模型（专有或开放权重）',
             '[基础知识：Token、成本与限制](/zh/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 详细的成本分析和token经济学',
             '[基础知识：提示词注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 两类模型的安全注意事项',
+            '[用本地LLM运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide) — 本地开源模型推理最具体的家庭应用案例：数据不离开你的网络',
           ],
         },
 
@@ -3784,6 +3792,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[기초: GPT-5.5, Claude 또는 Gemini? 올바른 모델 선택 방법](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 최전선 독점 모델 상세 비교',
             '[기초: 토큰, 비용, 한계](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 자세한 비용 분석과 토큰 경제학',
             '[기초: Prompt 인젝션과 보안](/ko/prompt-engineering/prompt-injection-and-security) — 두 모델 클래스 모두에 대한 보안 고려사항',
+            '[로컬 LLM으로 스마트 홈 실행](/ko/smart-home/local-llm-smart-home-complete-guide) — 로컬 오픈 모델 추론의 가장 구체적인 가정 활용 사례: 데이터가 네트워크 밖으로 나가지 않음',
           ],
         },
         faq: {
