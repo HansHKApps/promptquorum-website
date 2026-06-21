@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Entscheidungsmatrix: Budget-Käufer → GMKtec NucBox K6 (~€540); die meisten Nutzer → Beelink SER7 (~€580); Power-Nutzer mit 64-GB-Erweiterungsbedarf → MINISFORUM UM790 Pro (~€700).',
           'Wo in Japan kaufen: Amazon.co.jp führt alle drei mit Prime-Lieferung. Yodobashi Camera (ヨドバシカメラ) online führt den Beelink SER7 und MINISFORUM UM790 Pro. Nutzen Sie Kakaku.com (価格.com) für den Echtzeit-Preisvergleich vor der Bestellung.',
           '<em>Hinweis: Dieser Artikel enthält Affiliate-Links. Bei einem Kauf über diese Links erhalten wir eine Provision – für Sie entstehen keine zusätzlichen Kosten. (§ 6 TMG Kennzeichnungspflicht)</em>',
-          'Die vollständige Hardware-Übersicht finden Sie im übergeordneten Leitfaden: <a href="/de/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Bester Mini-PC für lokale LLMs</a>. Für GPU-Setups, siehe <a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Beste Budget-GPUs für lokale LLMs</a>.',
+          'Die vollständige Hardware-Übersicht finden Sie im übergeordneten Leitfaden: <a href="/de/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Bester Mini-PC für lokale LLMs</a>. Für GPU-Setups, siehe <a href="/de/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Beste Budget-GPUs für lokale LLMs</a>.',
         ],
       },
       faq: {
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Matrice de décision : acheteur budget → GMKtec NucBox K6 (~€540) ; la plupart des utilisateurs → Beelink SER7 (~€580) ; utilisateurs puissance voulant 64 Go → MINISFORUM UM790 Pro (~€700).',
           'Où acheter au Japon : Amazon.co.jp stocke les trois avec livraison Prime. Yodobashi Camera (ヨドバシカメラ) en ligne propose le Beelink SER7 et le MINISFORUM UM790 Pro. Utilisez Kakaku.com (価格.com) pour comparer les prix en temps réel chez les distributeurs japonais avant de commander.',
           '<em>Divulgation : Cet article contient des liens d\'affiliation. Nous pouvons percevoir une commission si vous achetez via ces liens, sans frais supplémentaires pour vous.</em>',
-          'Voir le comparatif matériel complet dans le guide parent : <a href="/fr/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Meilleur Mini PC pour LLM Local</a>. Pour les configurations GPU, voir <a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Meilleures GPU budget pour LLM local</a>.',
+          'Voir le comparatif matériel complet dans le guide parent : <a href="/fr/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Meilleur Mini PC pour LLM Local</a>. Pour les configurations GPU, voir <a href="/fr/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Meilleures GPU budget pour LLM local</a>.',
         ],
       },
       faq: {
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '選択の判断基準：バジェット購入者 → GMKtec NucBox K6（約¥65,000）；ほとんどのユーザー → Beelink SER7（約¥70,000）；64 GB拡張が必要なパワーユーザー → MINISFORUM UM790 Pro（約¥85,000）。',
           '日本での購入先：Amazon.co.jpでは3機種すべてをプライム配送で取り扱っています。ヨドバシカメラオンラインではBeelink SER7とMINISFORUM UM790 Proを取り扱っています。注文前に価格.com（Kakaku.com）で日本の小売業者間のリアルタイム価格比較を行うことを推奨します。',
           '<em>開示：このページはアフィリエイトリンクを含みます。リンク経由での購入により収益が発生することがあります。特定商取引法に基づく表記に準じています。</em>',
-          '完全なハードウェア比較は親ガイドをご覧ください：<a href="/ja/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">ローカルLLMに最適なミニPC</a>。GPU専用セットアップについては<a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">ローカルLLM向けバジェットGPU</a>をご覧ください。',
+          '完全なハードウェア比較は親ガイドをご覧ください：<a href="/ja/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">ローカルLLMに最適なミニPC</a>。GPU専用セットアップについては<a href="/ja/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">ローカルLLM向けバジェットGPU</a>をご覧ください。',
         ],
       },
       faq: {
@@ -565,7 +565,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Matriz de decisión: comprador con presupuesto ajustado → GMKtec NucBox K6 (~¥65.000); la mayoría de usuarios → Beelink SER7 (~¥70.000); usuarios avanzados que quieren expansión a 64 GB → MINISFORUM UM790 Pro (~¥85.000).',
           'Dónde comprar en Japón: Amazon.co.jp tiene los tres con entrega Prime. Yodobashi Camera (ヨドバシカメラ) online tiene el Beelink SER7 y el MINISFORUM UM790 Pro. Usa Kakaku.com (価格.com) para comparar precios en tiempo real entre retailers japoneses antes de pedir.',
           '<em>Divulgación: Este artículo contiene enlaces de afiliado. Podemos ganar una comisión si compras a través de estos enlaces, sin costo adicional para ti.</em>',
-          'Consulta la comparativa completa de hardware en la guía principal: <a href="/es/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Mejor Mini PC para LLM Local</a>. Para configuraciones solo GPU, consulta <a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Mejores GPU económicas para LLM local</a>.',
+          'Consulta la comparativa completa de hardware en la guía principal: <a href="/es/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Mejor Mini PC para LLM Local</a>. Para configuraciones solo GPU, consulta <a href="/es/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Mejores GPU económicas para LLM local</a>.',
         ],
       },
       faq: {
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Matriz de decisão: comprador com orçamento → GMKtec NucBox K6 (~¥65.000); a maioria dos usuários → Beelink SER7 (~¥70.000); usuários avançados que precisam de expansão para 64 GB → MINISFORUM UM790 Pro (~¥85.000).',
           'Onde comprar no Japão: a Amazon.co.jp tem os três com entrega Prime. A Yodobashi Camera (ヨドバシカメラ) online tem o Beelink SER7 e o MINISFORUM UM790 Pro. Use o Kakaku.com (価格.com) para comparação de preços em tempo real entre varejistas japoneses antes de pedir.',
           '<em>Divulgação: Este artigo contém links de afiliado. Podemos ganhar uma comissão se você comprar por meio desses links, sem custo adicional para você.</em>',
-          'Consulte a comparação completa de hardware no guia principal: <a href="/pt/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Melhor Mini PC para LLM Local</a>. Para configurações somente de GPU, consulte <a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Melhores GPUs econômicas para LLM local</a>.',
+          'Consulte a comparação completa de hardware no guia principal: <a href="/pt/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">Melhor Mini PC para LLM Local</a>. Para configurações somente de GPU, consulte <a href="/pt/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">Melhores GPUs econômicas para LLM local</a>.',
         ],
       },
       faq: {
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '决策矩阵：预算购买者 → GMKtec NucBox K6（约¥2,900人民币）；大多数用户 → Beelink SER7（约¥3,200人民币）；需要64 GB扩展的高级用户 → MINISFORUM UM790 Pro（约¥3,800人民币）。',
           '日本购买渠道：亚马逊日本（Amazon.co.jp）均有三款产品，提供Prime配送。ヨドバシカメラ网店提供Beelink SER7和MINISFORUM UM790 Pro。下单前请使用価格.com（Kakaku.com）进行日本零售商实时价格比较。',
           '<em>披露：本文包含联盟链接。通过这些链接购买，我们可能获得佣金，您不会产生额外费用。</em>',
-          '在父级指南中查看完整硬件对比：<a href="/zh/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">本地LLM最佳迷你电脑</a>。GPU专用配置请参阅<a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">本地LLM最佳预算GPU</a>。',
+          '在父级指南中查看完整硬件对比：<a href="/zh/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">本地LLM最佳迷你电脑</a>。GPU专用配置请参阅<a href="/zh/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">本地LLM最佳预算GPU</a>。',
         ],
       },
       faq: {
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'مصفوفة القرار: المشتري ذو الميزانية → GMKtec NucBox K6 (~¥65.000)؛ معظم المستخدمين → Beelink SER7 (~¥70.000)؛ المستخدمون المتقدمون الذين يحتاجون التوسع إلى 64 GB → MINISFORUM UM790 Pro (~¥85.000).',
           'أماكن الشراء في اليابان: Amazon.co.jp تتوفر فيها الأجهزة الثلاثة مع توصيل Prime. Yodobashi Camera (ヨドバシカメラ) أونلاين يحمل Beelink SER7 وMINISFORUM UM790 Pro. استخدم Kakaku.com (価格.com) لمقارنة الأسعار الفورية بين تجار التجزئة اليابانيين قبل الطلب.',
           '<em>إفصاح: تحتوي هذه المقالة على روابط تابعة. قد نحصل على عمولة إذا اشتريت عبر هذه الروابط، دون تكلفة إضافية عليك.</em>',
-          'راجع المقارنة الشاملة للعتاد في الدليل الرئيسي: <a href="/ar/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">أفضل جهاز مصغر لنماذج اللغة الكبيرة المحلية</a>. للإعدادات القائمة على GPU فقط، راجع <a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">أفضل بطاقات GPU الاقتصادية لنماذج اللغة الكبيرة المحلية</a>.',
+          'راجع المقارنة الشاملة للعتاد في الدليل الرئيسي: <a href="/ar/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">أفضل جهاز مصغر لنماذج اللغة الكبيرة المحلية</a>. للإعدادات القائمة على GPU فقط، راجع <a href="/ar/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">أفضل بطاقات GPU الاقتصادية لنماذج اللغة الكبيرة المحلية</a>.',
         ],
       },
       faq: {
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '결정 매트릭스: 예산 구매자 → GMKtec NucBox K6 (~¥65,000); 대부분의 사용자 → Beelink SER7 (~¥70,000); 64 GB 확장이 필요한 고급 사용자 → MINISFORUM UM790 Pro (~¥85,000).',
           '일본에서 구매처: Amazon.co.jp는 세 제품 모두를 Prime 배송으로 재고합니다. Yodobashi Camera (ヨドバシカメラ) 온라인에서는 Beelink SER7과 MINISFORUM UM790 Pro를 판매합니다. 주문 전 일본 소매점 간 실시간 가격 비교를 위해 Kakaku.com (価格.com)을 사용하십시오.',
           '<em>공개: 이 기사에는 제휴 링크가 포함되어 있습니다. 이 링크를 통해 구매하시면 추가 비용 없이 수수료를 받을 수 있습니다.</em>',
-          '상위 가이드에서 전체 하드웨어 비교를 확인하십시오: <a href="/ko/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">로컬 LLM용 최고의 미니 PC</a>. GPU 전용 설정에 대해서는 <a href="/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">로컬 LLM용 최고의 저예산 GPU</a>를 참조하십시오.',
+          '상위 가이드에서 전체 하드웨어 비교를 확인하십시오: <a href="/ko/prompt-bites/best-mini-pc-for-local-llm" class="text-primary hover:underline">로컬 LLM용 최고의 미니 PC</a>. GPU 전용 설정에 대해서는 <a href="/ko/local-llms/best-budget-gpus-local-llm" class="text-primary hover:underline">로컬 LLM용 최고의 저예산 GPU</a>를 참조하십시오.',
         ],
       },
       faq: {

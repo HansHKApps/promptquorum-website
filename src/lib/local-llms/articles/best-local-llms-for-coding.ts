@@ -3615,7 +3615,7 @@ schema: {
             '[코드 리뷰를 위한 최고 로컬 LLM](/local-llms/best-local-llms-code-review) — 70B 모델로 코드 생성을 코드 리뷰 및 리팩토링으로 확장',
             '[소형 로컬 LLM 모델](/local-llms/small-local-llm-models) — 7B 이상이 너무 큰 경우 4B 미만 코딩 모델',
             '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 이 페이지의 코딩 모델을 5분 이내에 설정',
-            '일본어에 최적화된 로컬 LLM(Rinna 3.6B, ELYZA-7B, CyberAgent CALM3 포함)에 대해서는 <a href="/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">최고의 일본어 로컬 LLM 가이드</a>를 참조하십시오.',
+            '일본어에 최적화된 로컬 LLM(Rinna 3.6B, ELYZA-7B, CyberAgent CALM3 포함)에 대해서는 <a href="/ko/prompt-bites/best-japanese-language-models-local" class="text-primary hover:underline">최고의 일본어 로컬 LLM 가이드</a>를 참조하십시오.',
             '[Melhores LLMs Locais para Programação (Português)](/pt/local-llms/best-local-llms-for-coding) — 포르투갈어 버전 가이드',
             '[2026년 최고의 로컬 추론 모델: DeepSeek-R1 Distill 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 코딩이 아닌 추론을 위한 안내: GPU별 DeepSeek-R1 Distill 비교 및 벤치마크.',
             '[2026년 비즈니스 문서 작성을 위한 최고의 로컬 LLM: 이메일, 제안서, 브랜드 보이스](/ko/local-llms/best-local-llms-business-writing) -- 비즈니스 문서 작성을 위한 최고의 로컬 LLM',

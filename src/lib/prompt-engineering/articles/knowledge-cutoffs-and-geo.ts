@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: '빠른 참조',
-            text: '마감 날짜 표만 필요하신가요? <a href="/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">AI 지식 마감 날짜 치트 시트</a>를 확인하세요 — 모든 주요 모델에 대한 스캔 가능한 참조 표입니다.',
+            text: '마감 날짜 표만 필요하신가요? <a href="/ko/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">AI 지식 마감 날짜 치트 시트</a>를 확인하세요 — 모든 주요 모델에 대한 스캔 가능한 참조 표입니다.',
           },
         ],
       },
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: '로컬 LLM 한계',
-            text: '마감 날짜를 넘어 로컬 LLM이 할 수 없는 것에 대한 전체 분석은 <a href="/local-llms/local-llm-limitations" class="text-primary hover:underline">로컬 LLM 한계: 할 수 없는 것들</a>을 참조하세요.',
+            text: '마감 날짜를 넘어 로컬 LLM이 할 수 없는 것에 대한 전체 분석은 <a href="/ko/local-llms/local-llm-limitations" class="text-primary hover:underline">로컬 LLM 한계: 할 수 없는 것들</a>을 참조하세요.',
           },
         ],
       },
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: '로컬 RAG 리소스',
-            text: '자체 LLM 배포에 최신 지식을 제공하기 위한 로컬 RAG의 기술적 구현은 <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">로컬 RAG 2026: 최고의 도구 및 프레임워크</a>와 <a href="/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">로컬 LLM을 사용한 기업 RAG</a>를 참조하세요.',
+            text: '자체 LLM 배포에 최신 지식을 제공하기 위한 로컬 RAG의 기술적 구현은 <a href="/ko/local-llms/local-rag-2026" class="text-primary hover:underline">로컬 RAG 2026: 최고의 도구 및 프레임워크</a>와 <a href="/ko/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">로컬 LLM을 사용한 기업 RAG</a>를 참조하세요.',
           },
         ],
       },
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: 'Referência rápida',
-            text: 'Só precisa da tabela de datas de corte? Veja a <a href="/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">Folha de referência de datas de corte de conhecimento de IA</a>.',
+            text: 'Só precisa da tabela de datas de corte? Veja a <a href="/pt/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">Folha de referência de datas de corte de conhecimento de IA</a>.',
           },
         ],
       },
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: 'Limitações de LLM local',
-            text: 'Para análise completa do que LLMs locais não conseguem fazer além da data de corte, veja <a href="/local-llms/local-llm-limitations" class="text-primary hover:underline">Limitações de LLM local: o que eles não conseguem fazer</a>.',
+            text: 'Para análise completa do que LLMs locais não conseguem fazer além da data de corte, veja <a href="/pt/local-llms/local-llm-limitations" class="text-primary hover:underline">Limitações de LLM local: o que eles não conseguem fazer</a>.',
           },
         ],
       },
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: 'Recursos de RAG local',
-            text: 'Para implementação técnica de RAG local, veja <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">RAG local 2026: melhores ferramentas e frameworks</a> e <a href="/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">RAG corporativo com LLMs locais</a>.',
+            text: 'Para implementação técnica de RAG local, veja <a href="/pt/local-llms/local-rag-2026" class="text-primary hover:underline">RAG local 2026: melhores ferramentas e frameworks</a> e <a href="/pt/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">RAG corporativo com LLMs locais</a>.',
           },
         ],
       },
@@ -1340,7 +1340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: 'مرجع سريع',
-            text: 'تحتاج الجدول فقط؟ راجع <a href="/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">ورقة مرجع تواريخ انقطاع معرفة الذكاء الاصطناعي</a>.',
+            text: 'تحتاج الجدول فقط؟ راجع <a href="/ar/prompt-bites/ai-model-knowledge-cutoff-dates" class="text-primary hover:underline">ورقة مرجع تواريخ انقطاع معرفة الذكاء الاصطناعي</a>.',
           },
         ],
       },
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: 'قيود LLM المحلي',
-            text: 'للتحليل الكامل راجع <a href="/local-llms/local-llm-limitations" class="text-primary hover:underline">قيود LLM المحلي: ما لا يستطيع فعله</a>.',
+            text: 'للتحليل الكامل راجع <a href="/ar/local-llms/local-llm-limitations" class="text-primary hover:underline">قيود LLM المحلي: ما لا يستطيع فعله</a>.',
           },
         ],
       },
@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'info',
             label: 'موارد RAG المحلي',
-            text: 'للتطبيق التقني، راجع <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">RAG المحلي 2026: أفضل الأدوات والأطر</a> و<a href="/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">RAG المؤسسي مع نماذج LLM المحلية</a>.',
+            text: 'للتطبيق التقني، راجع <a href="/ar/local-llms/local-rag-2026" class="text-primary hover:underline">RAG المحلي 2026: أفضل الأدوات والأطر</a> و<a href="/ar/local-llms/corporate-rag-local-llms" class="text-primary hover:underline">RAG المؤسسي مع نماذج LLM المحلية</a>.',
           },
         ],
       },

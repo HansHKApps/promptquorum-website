@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Users comparing the best available LLMs across cloud and local',
     parentArticle: '/local-llms/best-local-llms-2026',
-    siblingBites: ['co-star-prompt-framework'],
+    siblingBites: ['co-star-prompt-framework', 'ai-model-knowledge-cutoff-dates'],
     is_living_page: true,
     quickAnswerTop: {
       en: {
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cómo se compara Gemini 2.5 Pro con Claude Opus 4.8 y GPT-5.5?',
-            a: 'Gemini 2.5 Pro lidera para tareas nativas multimodales como análisis de video e imágenes. Para puro razonamiento de texto y código, Claude Opus 4.8 y GPT-5.5 son las opciones más fuertes. Ve nuestra <a href="/prompt-bites/co-star-prompt-framework" class="text-primary hover:underline">guía del framework CO-STAR</a> para tips sobre mejorar output de cualquier modelo cloud.',
+            a: 'Gemini 2.5 Pro lidera para tareas nativas multimodales como análisis de video e imágenes. Para puro razonamiento de texto y código, Claude Opus 4.8 y GPT-5.5 son las opciones más fuertes. Ve nuestra <a href="/es/prompt-bites/co-star-prompt-framework" class="text-primary hover:underline">guía del framework CO-STAR</a> para tips sobre mejorar output de cualquier modelo cloud.',
           },
           {
             q: '¿Puede un LLM local igualar modelos cloud para tareas de código?',
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Usuários comparando os melhores LLMs disponíveis em cloud e local',
     parentArticle: '/prompt-engineering/best-local-llms-2026',
-    siblingBites: ['co-star-prompt-framework'],
+    siblingBites: ['co-star-prompt-framework', 'ai-model-knowledge-cutoff-dates'],
     is_living_page: true,
     quickAnswerTop: {
       pt: {
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Como Gemini 2.5 Pro se compara ao Claude Opus 4.8 e GPT-5.5?',
-            a: 'Gemini 2.5 Pro lidera para tarefas nativas multimodais como análise de vídeo e imagem. Para raciocínio de texto puro e código, Claude Opus 4.8 e GPT-5.5 são as escolhas mais fortes. Veja nosso <a href="/prompt-bites/co-star-prompt-framework" class="text-primary hover:underline">guia do framework CO-STAR</a> para dicas sobre como obter melhores resultados de qualquer modelo cloud.',
+            a: 'Gemini 2.5 Pro lidera para tarefas nativas multimodais como análise de vídeo e imagem. Para raciocínio de texto puro e código, Claude Opus 4.8 e GPT-5.5 são as escolhas mais fortes. Veja nosso <a href="/pt/prompt-bites/co-star-prompt-framework" class="text-primary hover:underline">guia do framework CO-STAR</a> para dicas sobre como obter melhores resultados de qualquer modelo cloud.',
           },
           {
             q: 'Um LLM local pode igualar modelos cloud para tarefas de código?',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'المستخدمون الذين يقارنون أفضل النماذج اللغوية الكبيرة المتاحة سحابياً ومحلياً',
     parentArticle: '/prompt-engineering/best-local-llms-2026',
-    siblingBites: ['co-star-prompt-framework'],
+    siblingBites: ['co-star-prompt-framework', 'ai-model-knowledge-cutoff-dates'],
     is_living_page: true,
     quickAnswerTop: {
       ar: {
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: '클라우드 및 로컬에서 이용 가능한 최고의 LLM을 비교하는 사용자',
     parentArticle: '/prompt-engineering/best-local-llms-2026',
-    siblingBites: ['co-star-prompt-framework'],
+    siblingBites: ['co-star-prompt-framework', 'ai-model-knowledge-cutoff-dates'],
     is_living_page: true,
     targetKeywords: ['최고의 LLM 2026', '지금 가장 좋은 AI 모델', 'Claude vs GPT 비교', '로컬 LLM 추천', 'Llama 4 Scout 한국어'],
     readTime: '4분 분량',
