@@ -220,6 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Melhores LLMs Locais em 2026 (Português)](/pt/local-llms/best-local-llms-2026) — versão em português deste guia',
             '[Best 7B Models for Consumer Hardware](/local-llms/best-7b-models-consumer-hardware) -- best 7B models for consumer hardware',
             '[Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice](/local-llms/best-local-llms-business-writing) -- best local LLMs for business writing',
+          '[Local LLM Model Updates 2026](/local-llms/local-llm-model-updates-2026) -- full timeline of every major open-weight release this year and Ollama availability.',
           ],
         },
         faqSection: {
@@ -506,6 +507,7 @@ schema: {
             '[Mejores mini PCs AMD para LLM local 2026](/es/local-llms/best-amd-mini-pc-local-llm-2026) -- AMD Ryzen AI Max+ 395: 64–128 GB de memoria unificada, 50 TOPS NPU, 1.200–2.500 €.',
             '[Mejores modelos 7B para hardware de consumo](/es/local-llms/best-7b-models-consumer-hardware) -- mejores modelos 7B para hardware de consumo',
             '[Mejores LLMs locales para redacción profesional en 2026: correos, propuestas y voz de marca](/es/local-llms/best-local-llms-business-writing) -- mejores LLMs locales para escritura empresarial',
+          '[Actualizaciones de Modelos LLM Locales 2026](/es/local-llms/local-llm-model-updates-2026) -- cronología completa de todos los lanzamientos principales de modelos de peso abierto y disponibilidad en Ollama.',
           ],
         },
         faqSection: {
@@ -792,6 +794,7 @@ schema: {
             '[أفضل أجهزة mini PC من AMD لنموذج LLM محلي 2026](/ar/local-llms/best-amd-mini-pc-local-llm-2026) -- AMD Ryzen AI Max+ 395: 64–128 GB من الذاكرة الموحدة، و50 TOPS NPU، و$1,200–2,500.',
             '[أفضل نماذج 7B لعتاد المستهلك](/ar/local-llms/best-7b-models-consumer-hardware) -- أفضل نماذج 7B للمستهلكين',
             '[أفضل نماذج LLM المحلية للكتابة المهنية في 2026: رسائل البريد والمقترحات وصوت العلامة التجارية](/ar/local-llms/best-local-llms-business-writing) -- أفضل نماذج LLM لكتابة الأعمال',
+          '[تحديثات نماذج LLM المحلية 2026](/ar/local-llms/local-llm-model-updates-2026) -- الجدول الزمني الكامل لجميع الإصدارات الرئيسية مفتوحة الأوزان وتوفر Ollama.',
           ],
         },
         faqSection: {
@@ -1042,6 +1045,7 @@ schema: {
             '[Melhores GPUs para LLMs locais](/pt/local-llms/best-gpus-for-local-llms)',
             '[Melhores modelos 7B para hardware de consumo 2026](/pt/local-llms/best-7b-models-consumer-hardware) -- melhores modelos 7B para hardware de consumo',
             '[Melhores LLMs locais para escrita profissional em 2026: e-mails, propostas e voz da marca](/pt/local-llms/best-local-llms-business-writing) -- melhores LLMs locais para escrita empresarial',
+          '[Atualizações de Modelos LLM Locais 2026](/pt/local-llms/local-llm-model-updates-2026) -- linha do tempo completa de todos os principais lançamentos de modelos de peso aberto e disponibilidade no Ollama.',
           ],
         },
         sources: {
@@ -1317,6 +1321,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'http
             '[Meilleurs mini-PC AMD pour Local LLM 2026](/fr/local-llms/best-amd-mini-pc-local-llm-2026) -- AMD Ryzen AI Max+ 395: 64–128 Go de mémoire unifiée, 50 TOPS NPU, €1.200–2.600.',
             '[Meilleurs modèles 7B pour les GPU grand public](/fr/local-llms/best-7b-models-consumer-hardware) -- meilleurs modèles 7B pour hardware grand public',
             '[Meilleurs LLMs locaux pour rédaction professionnelle en 2026 : emails, propositions et voix de marque](/fr/local-llms/best-local-llms-business-writing) -- meilleurs LLMs locaux pour rédaction professionnelle',
+          '[Mises à jour des modèles LLM locaux 2026](/fr/local-llms/local-llm-model-updates-2026) -- chronologie complète de toutes les versions majeures de modèles open-weight et disponibilité sur Ollama.',
           ],
         },
         sources: {
@@ -1562,6 +1567,7 @@ schema: {
             '[最佳AMD迷你PC Local LLM 2026](/ja/local-llms/best-amd-mini-pc-local-llm-2026) -- AMD Ryzen AI Max+ 395: 64–128GBユニファイドメモリ、50 TOPS NPU、¥172,000–205,000.',
             '[コンシューマハードウェア向け最良の7Bモデル](/ja/local-llms/best-7b-models-consumer-hardware) -- コンシューマハードウェア向けベスト7Bモデル',
             '[2026年ビジネスライティング向けベストなローカルLLM: メール、提案、ブランドボイス](/ja/local-llms/best-local-llms-business-writing) -- ビジネスライティング向けベストなローカルLLM',
+          '[ローカルLLMモデル更新情報2026](/ja/local-llms/local-llm-model-updates-2026) -- 今年の主要なオープンウェイトリリースとOllama対応状況の完全タイムライン。',
           ],
         },
         sources: {
@@ -1805,6 +1811,7 @@ schema: {
             '[最佳AMD迷你PC本地LLM 2026](/zh/local-llms/best-amd-mini-pc-local-llm-2026) -- AMD Ryzen AI Max+ 395: 64–128GB统一内存、50 TOPS NPU、¥10500–13700。',
             '[消费级硬件最佳7B模型](/zh/local-llms/best-7b-models-consumer-hardware) -- 消费级硬件最佳7B模型',
             '[2026年商业写作最佳本地LLM：电子邮件、提案和品牌声音](/zh/local-llms/best-local-llms-business-writing) -- 商业写作最佳本地LLM',
+          '[本地LLM模型更新2026](/zh/local-llms/local-llm-model-updates-2026) -- 今年所有主要开权重发布和Ollama可用性的完整时间线。',
           ],
         },
         sources: {

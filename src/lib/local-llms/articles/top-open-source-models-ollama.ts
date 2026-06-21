@@ -308,6 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- how to choose between Q4_K_M and Q8_0 for the models in this list',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- which tool to use for running these models depending on your workflow',
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) -- Open WebUI, Jan AI, and other interfaces that connect to any model in this list',
+          '[Local LLM Model Updates 2026](/local-llms/local-llm-model-updates-2026) -- full timeline of every major open-weight release this year with Ollama availability dates.',
           ],
         },
         nextSteps: {
@@ -805,6 +806,7 @@ schema: {
             '[Cuantización de LLMs explicada](/es/local-llms/llm-quantization-explained) -- cómo elegir entre Q4_K_M y Q8_0 para los modelos de esta lista',
             '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) -- qué herramienta usar para ejecutar estos modelos según tu flujo de trabajo',
             '[Mejores frontends de LLM local](/es/local-llms/best-local-llm-frontends) -- Open WebUI, Jan AI y otras interfaces que se conectan a cualquier modelo de esta lista',
+          '[Actualizaciones de Modelos LLM Locales 2026](/es/local-llms/local-llm-model-updates-2026) -- cronología completa de todos los lanzamientos principales de peso abierto con fechas de disponibilidad en Ollama.',
           ],
         },
         nextSteps: {
@@ -1350,6 +1352,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
             '[Wie installieren Sie Ollama auf Windows/Mac](/de/local-llms/how-to-install-ollama) -- Schritt-für-Schritt-Installations- und Umgebungskonfiguration.',
             '[Hardware für lokale LLMs: GPU-Anforderungen 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Welche GPU, RAM und Speicher für Ihr Modell erforderlich ist.',
             '[Troubleshooting: Ollama-Fehler und Lösungen](/de/local-llms/troubleshooting-local-llm-setup) -- CUDA, MPS, CPU-Fallback und häufige Fehler.',
+          '[Lokale LLM-Modell-Updates 2026](/de/local-llms/local-llm-model-updates-2026) -- vollständige Zeitleiste aller wichtigen Open-Weight-Releases mit Ollama-Verfügbarkeitsdaten.',
           ],
         },
         sources: {
@@ -1738,6 +1741,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             '[Comment installer Ollama sur Windows/Mac](/fr/local-llms/how-to-install-ollama) -- Configuration d\'installation étape par étape et configuration d\'environnement.',
             '[Matériel pour les modèles locaux : Exigences GPU 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Quelle GPU, RAM et stockage il faut pour votre modèle.',
             '[Dépannage : Erreurs Ollama et solutions](/fr/local-llms/troubleshooting-local-llm-setup) -- CUDA, MPS, fallback CPU et erreurs courantes.',
+          '[Mises à jour des modèles LLM locaux 2026](/fr/local-llms/local-llm-model-updates-2026) -- chronologie complète de toutes les versions majeures open-weight avec dates de disponibilité sur Ollama.',
           ],
         },
         sources: {
@@ -2125,6 +2129,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '[Ollama Windows/Mac インストール方法](/ja/local-llms/how-to-install-ollama) -- ステップバイステップ・環境設定。',
             '[ローカルLLM ハードウェアガイド2026 GPU要件](/ja/local-llms/local-llm-hardware-guide-2026) -- どのGPU・RAM・ストレージがモデルに必須。',
             '[トラブル：Ollama エラーと解策](/ja/local-llms/troubleshooting-local-llm-setup) -- CUDA・MPS・CPU落とし穴・一般エラー。',
+          '[ローカルLLMモデル更新情報2026](/ja/local-llms/local-llm-model-updates-2026) -- Ollama対応日付付きの主要オープンウェイトリリース完全タイムライン。',
           ],
         },
         sources: {
@@ -2492,6 +2497,7 @@ schema: {
             '[LLM量子化完全指南：Q4_K_M vs IQ3_M](/zh/local-llms/llm-quantization-explained)',
             '[Prompt Engineering框架：RTF框架](/zh/prompt-engineering/rtf-framework)',
             '[AI代码审查指南](/zh/prompt-engineering/ai-code-review)',
+          '[本地LLM模型更新2026](/zh/local-llms/local-llm-model-updates-2026) -- 包含Ollama可用日期的所有主要开权重发布完整时间线。',
           ],
         },
         sources: {
@@ -2876,7 +2882,8 @@ schema: {
             '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- 이 목록의 모델에 대해 Q4_K_M과 Q8_0 중 선택하는 방법',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 워크플로에 따라 이러한 모델 실행에 사용할 도구',
             '[최고 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- 이 목록의 모든 모델에 연결되는 Open WebUI, Jan AI 및 기타 인터페이스',
-          ],
+          '[로컬 LLM 모델 업데이트 2026](/ko/local-llms/local-llm-model-updates-2026) -- Ollama 가용 날짜가 포함된 올해 모든 주요 오픈 웨이트 출시 완전한 타임라인.',
+        ],
         },
         nextSteps: {
           id: 'next-steps',
@@ -3186,6 +3193,7 @@ schema: {
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) -- كيفية الاختيار بين Q4_K_M وQ8_0 للنماذج في هذه القائمة',
             '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- أي أداة تستخدم لتشغيل هذه النماذج حسب تدفق عملك',
             '[أفضل واجهات LLM المحلية](/ar/local-llms/best-local-llm-frontends) -- Open WebUI وJan AI وواجهات أخرى تتصل بأي نموذج في هذه القائمة',
+          '[تحديثات نماذج LLM المحلية 2026](/ar/local-llms/local-llm-model-updates-2026) -- الجدول الزمني الكامل لجميع الإصدارات الرئيسية مفتوحة الأوزان مع تواريخ توفر Ollama.',
           ],
         },
         nextSteps: {
