@@ -637,6 +637,23 @@ Links should be embedded in article body where relevant concepts are discussed, 
 - [ ] Links point to live articles, not stubs
 - [ ] Related Reading section includes 3–5 curated links with brief context
 
+#### Rule 10: Inbound Links + Locale Integrity (Orphan Prevention)
+
+Publishing a new article is not complete until existing articles link back to it. An article with zero inbound links is an orphan even if its own outbound links are perfect.
+
+**Inbound (links TO this article from existing articles):**
+- Add at least 2–3 links to this new article FROM existing related articles.
+- This is a required edit step: before marking an article done, identify and update 2–3 existing articles in the same or related cluster.
+
+**Locale integrity:**
+- A link inside a `de:` / `fr:` / `ja:` / `zh:` / `es:` / `pt:` / `ar:` / `ko:` block must point to the locale-prefixed equivalent of the target. Never put a bare EN path inside a non-EN locale block.
+- Propagate the same link structure to all 9 locale blocks (`en/de/fr/ja/zh/es/pt/ar/ko`).
+
+**Checklist for Rule 10:**
+- [ ] ≥2 existing articles now link to this new article (search codebase for the new slug to verify)
+- [ ] All links inside non-EN locale blocks use locale-prefixed targets — no bare EN paths
+- [ ] Link structure (body links + Related Reading) present in all 9 locale blocks
+
 ---
 
 ### SECTION G: Schema Markup (Rule 5)
@@ -2251,6 +2268,9 @@ Use this checklist before committing any new or edited article:
 - [ ] Article includes 5–10 internal links (4–7 in body, 3–5 in Related Reading)
 - [ ] All anchor text (internal & external) includes topic + intent, not generic labels ("learn more", "read this") — Rule 39
 - [ ] No more than 1 link per page to the same destination
+- [ ] Inbound: ≥2 existing articles now link to this new article (search codebase for the new slug to verify) — Rule 10
+- [ ] All links inside non-EN locale blocks use locale-prefixed targets — no bare EN paths inside de/fr/ja/zh/es/pt/ar/ko blocks — Rule 10
+- [ ] Link structure propagated to all 9 locale blocks (en/de/fr/ja/zh/es/pt/ar/ko) — Rule 10
 
 #### Metadata
 - [ ] Meta description is 140–160 characters
