@@ -12,9 +12,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Hardware Setups',
       next_refresh_due: '2026-12-19',
       title: 'Best Laptops for Running Local LLMs',
-      seoTitle: 'Best Laptops for Local LLMs June 2026: MacBook M5 Pro vs RTX 5080',
-      intro: '**The MacBook Pro M5 Pro ($2,199) is the best laptop for local LLMs in June 2026 — silent, 24 GB unified memory, and 45–60 tok/s on 14B models at Q4.** On the Windows side, the RTX 5080 laptop (~$2,799, 16 GB GDDR7) runs 7B–14B models at 60–80 tok/s. Both outperform any 2023-era RTX 4070 laptop by 30–50% in sustained LLM throughput.',
-      metaDescription: 'Best laptops for local LLMs June 2026: MacBook Pro M5 Pro ($2,199, 24GB unified), RTX 5080 laptop (~$2,799, 16GB VRAM), RTX 5070 Ti laptop (~$2,499, 12GB). Benchmarks and picks.',
+      seoTitle: 'Best Laptop for Local LLMs 2026: MacBook M5 Pro vs RTX 5080 Compared',
+      intro: '**The MacBook Pro M5 Pro ($2,199) is the best laptop for local LLMs in 2026 — silent, 24 GB unified memory, and 45–60 tok/s on 14B models at Q4.** On the Windows side, the RTX 5080 laptop (~$2,799, 16 GB GDDR7) runs 7B–14B models at 60–80 tok/s. Both outperform any 2023-era RTX 4070 laptop or notebook by 30–50% in sustained LLM throughput.',
+      metaDescription: 'MacBook Pro M5 Pro ($2,199, 24 GB) runs Qwen3 14B at 45–60 tok/s — best laptop for local LLMs in 2026. Windows: RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s). Full benchmark comparison.',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**The MacBook Pro M5 Pro ($2,199) is the best laptop for running local LLMs in June 2026: 24 GB unified memory, silent fanless design, and 45–60 tok/s on Qwen3 14B at Q4. Best Windows option: RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s). Best budget Windows: RTX 5070 Ti laptop (~$2,499, 12 GB VRAM, ~50 tok/s).**',
       audience: 'Developers and researchers who want to run 7B–14B models locally without cloud API calls',
@@ -22,16 +22,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Gaming Laptop',
       quickAnswerTop: {
-        question: 'What is the best laptop for running local LLMs in 2026?',
-        answer: '**The MacBook Pro M5 Pro ($2,199) is the best laptop for local LLMs in June 2026** — 24 GB unified memory, completely silent, 45–60 tok/s on Qwen3 14B. The RTX 5080 laptop (~$2,799) is the best Windows option at 16 GB VRAM and ~70 tok/s. The RTX 5070 Ti laptop (~$2,499) is the best budget Windows pick at 12 GB VRAM and ~50 tok/s.',
+        question: 'What is the best laptop for local LLMs in 2026?',
+        answer: '**The MacBook Pro M5 Pro ($2,199) is the best laptop for local LLMs in 2026** — 24 GB unified memory, completely silent, 45–60 tok/s on Qwen3 14B. The RTX 5080 laptop (~$2,799) is the best Windows option at 16 GB VRAM and ~70 tok/s. The RTX 5070 Ti laptop (~$2,499) is the best budget Windows pick at 12 GB VRAM and ~50 tok/s.',
         bullets: [
           '**Winner:** MacBook Pro M5 Pro ($2,199) — 24 GB unified memory, silent, 45–60 tok/s on Qwen3 14B Q4',
           'RTX 5080 laptop (~$2,799) — best Windows pick: 16 GB GDDR7 VRAM, ~70 tok/s on Llama 3.3 8B Q4',
           'RTX 5070 Ti laptop (~$2,499) — best budget Windows: 12 GB VRAM, ~50 tok/s on 7B',
           'MacBook Pro M5 Max ($3,199+) — 36–128 GB unified memory for 30B–70B models on the go',
-          '⚠️ RTX 4070 laptops (2023 era): still functional but 30–50% slower than RTX 5000-series for LLM inference',
+          '⚠️ RTX 4070 laptops/notebooks (2023 era): still functional but 30–50% slower than RTX 5000-series for LLM inference',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-06-21',
       },
       toc: [
         { label: 'TLDR', anchor: '#tldr' },
@@ -134,13 +134,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            { q: 'Is the MacBook Pro M5 Pro good for local LLMs?', a: 'Yes — it is the best laptop for local LLMs in June 2026. The 24 GB unified memory configuration ($2,199) runs Qwen3 14B at Q4 with 45–60 tok/s and no fan noise. Upgrade to 36 GB ($2,999) for comfortable 30B model headroom.' },
+            { q: 'Is the MacBook Pro M5 Pro good for local LLMs?', a: 'Yes — it is the best laptop for local LLMs in 2026. The 24 GB unified memory configuration ($2,199) runs Qwen3 14B at Q4 with 45–60 tok/s and no fan noise. Upgrade to 36 GB ($2,999) for comfortable 30B model headroom.' },
             { q: 'Which Windows laptop is best for running LLMs locally in 2026?', a: 'The RTX 5080 laptop (~$2,799, 16 GB GDDR7 VRAM) is the top Windows pick — ~70 tok/s on Llama 3.3 8B Q4. The RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best budget option at ~50 tok/s.' },
             { q: 'Can I run 14B models on an RTX 5070 Ti laptop?', a: 'Yes. The RTX 5070 Ti has 12 GB VRAM, which fits Qwen3 14B at Q4 comfortably. At Q8 (higher quality), 14B requires ~14 GB — you would need the RTX 5080 (16 GB) for Q8 on 14B.' },
             { q: 'Should I buy a gaming laptop or a mini PC for local LLMs?', a: 'Mini PC: cheaper, faster, more upgradeable, runs cooler. Gaming laptop: portable but thermal-limited. If you need portability, get MacBook Pro M5 Pro or an RTX 5080 laptop. If you stay at a desk, a desktop with RTX 4060 Ti 16GB outperforms any laptop and costs less.' },
             { q: 'Can I run a 7B model on battery on a Windows gaming laptop?', a: 'Technically yes, but the GPU switches to iGPU on battery. Inference drops to 2–4 tok/s (unusable for real work). MacBook Pro M5 Pro on battery delivers ~40 tok/s — much better for battery inference.' },
             { q: 'What is the best Apple laptop for local LLMs?', a: 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) for most users. MacBook Pro M5 Max 14" ($3,199+, 36 GB) for 30B–70B models. MacBook Pro M5 Max 16" ($3,499+, 64 GB) for researchers running 70B at Q8.' },
             { q: 'Are 2023 RTX 4070 laptops still worth buying for LLMs in 2026?', a: 'Only at a significant used discount ($800–1,100 on eBay). New RTX 5070 Ti laptops (~$2,499) are 30–50% faster for LLM inference. If you already own an RTX 4070 laptop, it still runs 7B–13B models adequately.' },
+            { q: 'What is the best notebook for local LLMs?', a: '"Notebook" and "laptop" refer to the same device category. The best notebook for local LLMs in 2026 is the MacBook Pro M5 Pro ($2,199, 24 GB unified memory) — 45–60 tok/s on Qwen3 14B, completely silent. Best Windows notebook: RTX 5080 gaming notebook (~$2,799, 16 GB VRAM). Avoid thin ultrabooks — integrated graphics deliver only 1–2 tok/s.' },
           ],
         },
         'relatedReading': {
@@ -170,11 +171,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Best Laptops for Local LLMs June 2026: MacBook M5 Pro vs RTX 5080',
-        'description': 'Best laptops for local LLMs in June 2026: MacBook Pro M5 Pro ($2,199, 24GB unified), RTX 5080 laptop (~$2,799, 16GB VRAM), RTX 5070 Ti laptop (~$2,499, 12GB). Benchmarks and picks.',
+        'headline': 'Best Laptop for Local LLMs 2026: MacBook M5 Pro vs RTX 5080 Compared',
+        'description': 'MacBook Pro M5 Pro ($2,199, 24 GB) runs Qwen3 14B at 45–60 tok/s — best laptop for local LLMs in 2026. Windows: RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s). Full benchmark comparison.',
         'url': 'https://www.promptquorum.com/local-llms/best-laptops-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-06-21',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -257,6 +258,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'MacBook Pro M5 Pro ($2,199, 24 GB unified memory) is the top pick — 45–60 tok/s on 14B, completely silent. RTX 5080 laptop (~$2,799, 16 GB VRAM) is the best Windows option at ~70 tok/s on 7B. RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best budget Windows pick at ~50 tok/s.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best notebook for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '"Notebook" and "laptop" refer to the same device category. The best notebook for local LLMs in 2026 is the MacBook Pro M5 Pro ($2,199, 24 GB unified memory) — 45–60 tok/s on Qwen3 14B, completely silent. Best Windows notebook: RTX 5080 gaming notebook (~$2,799, 16 GB VRAM). Avoid thin ultrabooks — integrated graphics deliver only 1–2 tok/s.'
             }
           },
         ],
