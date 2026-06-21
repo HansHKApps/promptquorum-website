@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Best Local LLMs for Creative Writing 2026: Fiction, Dialogue & Worldbuilding',
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The test held the prompt set, sampling settings, and frontend constant; only the model varied.** Same 50 prompts across fiction, dialogue, poetry, and worldbuilding tasks; output graded by the same rubric per task type.',
         items: [
-          '**Backend:** Ollama 0.5+ on macOS and Linux; same context limits per model; Q4_K_M quantization across all six picks (Q5_K_M for the smaller 32B–34B models where VRAM permitted, with no measurable difference in the rubric scores).',
+          '**Backend:** Ollama 0.7+ on macOS and Linux; same context limits per model; Q4_K_M quantization across all six picks (Q5_K_M for the smaller 32B–34B models where VRAM permitted, with no measurable difference in the rubric scores).',
           '**Frontend:** Open WebUI for the bulk of the test (chat-style work); SillyTavern for the dialogue-heavy and roleplay subset (matches how creative writers actually use these models).',
           '**Prompt set:** 50 prompts split across four task types — fiction (15: short-story openings, scene continuations, descriptive passages), dialogue (15: two-character exchanges, group scenes, voice differentiation), poetry (10: free verse, structured forms, lyrical prose), worldbuilding (10: setting descriptions, factional politics, magic systems). Each prompt run 3 times per model to capture variance.',
           '**Sampling:** temperature 0.95, top-p 0.92, repeat penalty 1.1 as the baseline; per-task adjustments noted in the per-model verdicts below.',
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Beste lokale LLMs für kreatives Schreiben 2026: Belletristik, Dialog & Weltenbau',
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Der Test hielt Prompt-Set, Sampling-Einstellungen und Frontend konstant; nur das Modell wurde variiert.** Dieselben 50 Prompts in Belletristik, Dialog, Poesie und Weltenbau; Ausgaben nach derselben Rubrik je Aufgabentyp bewertet.',
         items: [
-          '**Backend:** Ollama 0.5+ auf macOS und Linux; gleiche Kontextgrenzen je Modell; Q4_K_M-Quantisierung über alle sechs Picks (Q5_K_M für kleinere 32B–34B-Modelle, wo VRAM es erlaubte, ohne messbaren Unterschied in den Rubrik-Werten).',
+          '**Backend:** Ollama 0.7+ auf macOS und Linux; gleiche Kontextgrenzen je Modell; Q4_K_M-Quantisierung über alle sechs Picks (Q5_K_M für kleinere 32B–34B-Modelle, wo VRAM es erlaubte, ohne messbaren Unterschied in den Rubrik-Werten).',
           '**Frontend:** Open WebUI für den Großteil des Tests (Chat-artige Arbeit); SillyTavern für die dialog- und Roleplay-intensive Teilmenge.',
           '**Prompt-Set:** 50 Prompts aufgeteilt auf vier Aufgabentypen — Belletristik (15), Dialog (15), Poesie (10), Weltenbau (10). Jeder Prompt 3 Mal je Modell, um Varianz zu erfassen.',
           '**Sampling:** Temperatur 0,95, Top-p 0,92, Repeat Penalty 1,1 als Ausgangspunkt; aufgabenspezifische Anpassungen in den Modell-Urteilen.',
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Meilleurs LLM locaux pour l\'écriture créative 2026 : fiction, dialogue et construction de mondes',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Le test a maintenu constants le jeu de prompts, les paramètres de sampling et le frontend ; seul le modèle variait.** Mêmes 50 prompts sur des tâches de fiction, dialogue, poésie et construction de mondes ; sorties évaluées selon la même grille par type de tâche.',
         items: [
-          '**Backend :** Ollama 0.5+ sur macOS et Linux ; mêmes limites de contexte par modèle ; quantification Q4_K_M pour les six modèles (Q5_K_M pour les modèles plus petits 32B–34B quand le VRAM le permettait, sans différence mesurable dans les scores de grille).',
+          '**Backend :** Ollama 0.7+ sur macOS et Linux ; mêmes limites de contexte par modèle ; quantification Q4_K_M pour les six modèles (Q5_K_M pour les modèles plus petits 32B–34B quand le VRAM le permettait, sans différence mesurable dans les scores de grille).',
           '**Frontend :** Open WebUI pour l\'essentiel du test (travail en mode chat) ; SillyTavern pour la partie dialogue et roleplay (reproduit l\'usage réel des auteurs).',
           '**Jeu de prompts :** 50 prompts répartis sur quatre types de tâches — fiction (15 : débuts de nouvelles, continuations de scènes, passages descriptifs), dialogue (15 : échanges à deux personnages, scènes de groupe, différenciation des voix), poésie (10 : vers libres, formes structurées, prose lyrique), construction de mondes (10 : descriptions de décors, politiques factionnelles, systèmes de magie). Chaque prompt lancé 3 fois par modèle pour capturer la variance.',
           '**Sampling :** température 0,95, top-p 0,92, repeat penalty 1,1 comme base ; ajustements par tâche notés dans les verdicts par modèle ci-dessous.',
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'クリエイティブライティングに最適なローカルLLM 2026：小説・ダイアログ・世界構築',
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: '2026年创意写作最佳本地LLM：小说、对话与世界构建测评',
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**测试保持提示词集、采样设置和前端不变，只改变模型。** 在小说、对话、诗歌和世界构建任务上使用同一套50条提示词；每类任务按统一评分标准给出。',
         items: [
-          '**后端：** macOS和Linux上运行Ollama 0.5+；每款模型相同的上下文限制；六款模型全部使用Q4_K_M量化（较小的32B–34B模型在VRAM允许时使用Q5_K_M，评分标准得分无可测量差异）。',
+          '**后端：** macOS和Linux上运行Ollama 0.7+；每款模型相同的上下文限制；六款模型全部使用Q4_K_M量化（较小的32B–34B模型在VRAM允许时使用Q5_K_M，评分标准得分无可测量差异）。',
           '**前端：** 主体测试使用Open WebUI（对话式场景）；对话密集和角色扮演子集使用SillyTavern（契合创意写作者实际使用方式）。',
           '**提示词集：** 50条提示词分布于四类任务——小说（15条：短故事开场、场景续写、描写段落），对话（15条：双角色交流、群戏、声音区分），诗歌（10条：自由诗、格律形式、意象化散文），世界构建（10条：场景描写、派系政治、魔法体系）。每款模型每条提示词运行3次以捕捉差异。',
           '**采样：** 基准为温度0.95、top-p 0.92、重复惩罚1.1；各模型评测中注明了逐任务调整值。',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Mejores LLM locales para escritura creativa 2026: ficción, diálogo y construcción de mundos',
@@ -2052,7 +2052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La prueba mantuvo constante el conjunto de prompts, los ajustes de sampling y el frontend; solo variaba el modelo.** Los mismos 50 prompts en tareas de ficción, diálogo, poesía y construcción de mundos; salidas calificadas con la misma rúbrica por tipo de tarea.',
         items: [
-          '**Backend:** Ollama 0.5+ en macOS y Linux; mismos límites de contexto por modelo; cuantización Q4_K_M en los seis modelos (Q5_K_M para los modelos más pequeños de 32B–34B donde la VRAM lo permitía, sin diferencia medible en las puntuaciones de la rúbrica).',
+          '**Backend:** Ollama 0.7+ en macOS y Linux; mismos límites de contexto por modelo; cuantización Q4_K_M en los seis modelos (Q5_K_M para los modelos más pequeños de 32B–34B donde la VRAM lo permitía, sin diferencia medible en las puntuaciones de la rúbrica).',
           '**Frontend:** Open WebUI para la mayor parte de la prueba (trabajo en formato chat); SillyTavern para el subconjunto de diálogo intensivo y roleplay (coincide con el uso real de los escritores creativos).',
           '**Conjunto de prompts:** 50 prompts divididos en cuatro tipos de tareas — ficción (15: aperturas de cuentos cortos, continuaciones de escenas, pasajes descriptivos), diálogo (15: intercambios entre dos personajes, escenas grupales, diferenciación de voces), poesía (10: verso libre, formas estructuradas, prosa lírica), construcción de mundos (10: descripciones de escenarios, políticas de facciones, sistemas de magia). Cada prompt ejecutado 3 veces por modelo para capturar la varianza.',
           '**Sampling:** temperatura 0.95, top-p 0.92, repeat penalty 1.1 como base; ajustes por tarea anotados en los veredictos por modelo más abajo.',
@@ -2340,7 +2340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Melhores LLMs locais para escrita criativa 2026: ficção, diálogo e construção de mundos',
@@ -2446,7 +2446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O teste manteve constante o conjunto de prompts, os ajustes de sampling e o frontend; apenas o modelo variava.** Os mesmos 50 prompts em tarefas de ficção, diálogo, poesia e construção de mundos; saídas avaliadas pela mesma rubrica por tipo de tarefa.',
         items: [
-          '**Backend:** Ollama 0.5+ no macOS e Linux; mesmos limites de contexto por modelo; quantização Q4_K_M nos seis modelos (Q5_K_M para os modelos menores de 32B–34B onde a VRAM permitia, sem diferença mensurável nas pontuações da rubrica).',
+          '**Backend:** Ollama 0.7+ no macOS e Linux; mesmos limites de contexto por modelo; quantização Q4_K_M nos seis modelos (Q5_K_M para os modelos menores de 32B–34B onde a VRAM permitia, sem diferença mensurável nas pontuações da rubrica).',
           '**Frontend:** Open WebUI para a maior parte do teste (trabalho em formato chat); SillyTavern para o subconjunto de diálogo intensivo e roleplay (corresponde ao uso real dos escritores criativos).',
           '**Conjunto de prompts:** 50 prompts divididos em quatro tipos de tarefas — ficção (15: aberturas de contos, continuações de cenas, passagens descritivas), diálogo (15: trocas entre dois personagens, cenas em grupo, diferenciação de vozes), poesia (10: verso livre, formas estruturadas, prosa lírica), construção de mundos (10: descrições de cenários, políticas de facções, sistemas de magia). Cada prompt executado 3 vezes por modelo para capturar a variância.',
           '**Sampling:** temperatura 0.95, top-p 0.92, repeat penalty 1.1 como base; ajustes por tarefa anotados nos vereditos por modelo abaixo.',
@@ -2734,7 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'أفضل نماذج ⁨LLM⁩ المحلية للكتابة الإبداعية ⁨2026⁩: الخيال والحوار وبناء العوالم',
@@ -2840,7 +2840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**أبقى الاختبار مجموعة الطلبات وإعدادات الأخذ بالعينات والواجهة ثابتة؛ تغيّر النموذج وحده.** نفس الطلبات الخمسين عبر مهام الخيال والحوار والشعر وبناء العوالم؛ مخرجات مُقيَّمة بنفس المعيار حسب نوع المهمة.',
         items: [
-          '**الخلفية:** Ollama 0.5+ على macOS وLinux؛ نفس حدود السياق لكل نموذج؛ تكميم Q4_K_M للنماذج الستة (Q5_K_M للنماذج الأصغر من 32B–34B حيث سمح VRAM، دون فارق قابل للقياس في نقاط المعيار).',
+          '**الخلفية:** Ollama 0.7+ على macOS وLinux؛ نفس حدود السياق لكل نموذج؛ تكميم Q4_K_M للنماذج الستة (Q5_K_M للنماذج الأصغر من 32B–34B حيث سمح VRAM، دون فارق قابل للقياس في نقاط المعيار).',
           '**الواجهة:** Open WebUI لمعظم الاختبار (عمل بتنسيق الدردشة)؛ SillyTavern لمجموعة فرعية من الحوار المكثف ولعب الأدوار (يتطابق مع الاستخدام الفعلي للكتّاب الإبداعيين).',
           '**مجموعة الطلبات:** 50 طلباً مقسمة على أربعة أنواع مهام — خيال (15: مفتتحات القصص القصيرة، استمرارات المشاهد، المقاطع الوصفية)، حوار (15: تبادلات بين شخصيتين، مشاهد جماعية، تمييز الأصوات)، شعر (10: شعر حر، أشكال منظمة، نثر غنائي)، بناء العوالم (10: أوصاف السيناريو، سياسات الفصائل، أنظمة السحر). كل طلب نُفِّذ 3 مرات لكل نموذج لالتقاط التباين.',
           '**إعدادات الأخذ بالعينات:** حرارة 0.95، top-p 0.92، معاقبة التكرار 1.1 كخط أساسي؛ تعديلات خاصة بالمهمة موضّحة في أحكام النماذج أدناه.',
@@ -3128,7 +3128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-06-21',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 대화, 세계관 구축',
@@ -3234,7 +3234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**테스트는 프롬프트 집합, 샘플링 설정, 프론트엔드를 일정하게 유지하고 모델만 변경했습니다.** 소설, 대화, 시, 세계관 구축 작업에서 동일한 50개의 프롬프트; 작업 유형별로 동일한 채점 기준으로 출력물을 평가했습니다.',
         items: [
-          '**백엔드:** macOS 및 Linux의 Ollama 0.5+; 모델별 동일한 컨텍스트 제한; 6가지 모델 모두 Q4_K_M 양자화(VRAM이 허용하는 경우 32B–34B 소형 모델에서 Q5_K_M 사용, 채점 기준 점수에서 측정 가능한 차이 없음).',
+          '**백엔드:** macOS 및 Linux의 Ollama 0.7+; 모델별 동일한 컨텍스트 제한; 6가지 모델 모두 Q4_K_M 양자화(VRAM이 허용하는 경우 32B–34B 소형 모델에서 Q5_K_M 사용, 채점 기준 점수에서 측정 가능한 차이 없음).',
           '**프론트엔드:** 대부분의 테스트에서 Open WebUI(채팅 형식 작업); 집중적인 대화 및 롤플레이 하위 집합에서 SillyTavern(창작 작가의 실제 사용과 일치).',
           '**프롬프트 집합:** 4가지 작업 유형으로 나뉜 50개의 프롬프트 — 소설(15개: 단편 소설 오프닝, 장면 계속, 묘사적 구절), 대화(15개: 두 캐릭터 간 교환, 그룹 장면, 음성 분화), 시(10개: 자유시, 구조적 형식, 서정 산문), 세계관 구축(10개: 배경 묘사, 파벌 정치, 마법 시스템). 분산을 포착하기 위해 각 프롬프트를 모델당 3회 실행.',
           '**샘플링:** 기본으로 온도 0.95, top-p 0.92, repeat penalty 1.1; 아래 모델별 평가에 작업별 조정 사항 기재.',
@@ -3513,7 +3513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-06-21',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
