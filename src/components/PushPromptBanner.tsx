@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, usePathname } from 'next/navigation'
 import { Suspense } from 'react'
 
 const STORAGE_KEY = 'push_prompt_dismissed_until'
@@ -79,10 +79,20 @@ const COPY: Record<
 
 function PushPromptBannerInner() {
   const searchParams = useSearchParams()
+  const pathname = usePathname()
+
+  // Detect language from query param, pathname, or default to en
   const rawLang = searchParams?.get('lang') ?? ''
-  const lang = (
-    ['en', 'de', 'fr', 'ja', 'zh'].includes(rawLang) ? rawLang : 'en'
-  ) as string
+  let lang = 'en'
+  if (['en', 'de', 'fr', 'ja', 'zh'].includes(rawLang)) {
+    lang = rawLang
+  } else {
+    // Try to detect from pathname (e.g., /de/prompt-bites → de)
+    const pathMatch = pathname?.match(/^\/([a-z]{2})\//)
+    if (pathMatch && ['en', 'de', 'fr', 'ja', 'zh'].includes(pathMatch[1])) {
+      lang = pathMatch[1]
+    }
+  }
   const c = (COPY[lang as keyof typeof COPY] ?? COPY.en)!
 
   const [visible, setVisible] = useState(false)
