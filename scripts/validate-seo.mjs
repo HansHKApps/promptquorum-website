@@ -20,7 +20,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.join(__dirname, '..')
 const srcDir = path.join(rootDir, 'src')
 
-const LANGUAGES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+const LANGUAGES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 const MULTILINGUAL_PAGES = [
   'page.tsx',           // Home
   'blog/page.tsx',      // Blog index

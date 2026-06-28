@@ -37,7 +37,7 @@ const CLUSTERS = [
     slugsFile: 'src/lib/power-local-llm/slugs.ts',
     publishedFile: 'src/lib/power-local-llm/published.ts',
     // Mirrors isPowerLLMHubPublished() — all langs published.
-    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']),
+    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']),
   },
   {
     name: 'smart-home',
@@ -45,7 +45,7 @@ const CLUSTERS = [
     slugsFile: 'src/lib/smart-home/slugs.ts',
     publishedFile: 'src/lib/smart-home/published.ts',
     // Mirrors isSmartHomeHubPublished() — all langs published since launch 2026-06-05.
-    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']),
+    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']),
   },
 ]
 

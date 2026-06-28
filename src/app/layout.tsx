@@ -70,6 +70,7 @@ export const metadata: Metadata = {
       'es': 'https://www.promptquorum.com/es',
       'pt-BR': 'https://www.promptquorum.com/pt',
       'ar': 'https://www.promptquorum.com/ar',
+      'ko': 'https://www.promptquorum.com/ko',
       'x-default': 'https://www.promptquorum.com',
     }
   },
@@ -108,6 +109,11 @@ export const metadata: Metadata = {
   },
 }
 
+// TODO(2026-07-20): Option C [locale] segment refactor — move src/app/{de,fr,ja,zh,es,pt,ar,ko}/
+// into src/app/[locale]/ so params.locale reaches this layout and we can set
+// <html lang={params.locale} dir={params.locale === 'ar' ? 'rtl' : 'ltr'}>
+// server-side. HARD CONSTRAINTS: no headers() in root layout (caused June caching outage);
+// preserve s-maxage=86400; do NOT touch slugs.ts; verify with scripts/check-lang-dir-all-locales.mjs.
 export default function RootLayout({
   children,
 }: {

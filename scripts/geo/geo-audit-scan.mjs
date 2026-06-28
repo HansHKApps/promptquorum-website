@@ -20,7 +20,7 @@ const ARTICLE_DIRS = [
   'src/lib/smart-home/articles',
 ];
 
-const ALL_LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar'];
+const ALL_LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'];
 
 // Hardware/product keywords — articles with these themes get checked for regionalContext
 const HARDWARE_THEMES = /GPU|CPU|RAM|VRAM|mini.?PC|laptop|desktop|hardware|smart.?home|Raspberry|Apple.?Silicon|MacBook/i;

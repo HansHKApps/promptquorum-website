@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { ChevronDown } from 'lucide-react'
 
-type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'ko'
+type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 
 interface StageDetail {
   title: string

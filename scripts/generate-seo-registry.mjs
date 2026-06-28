@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const CHANGELOG_PATH = path.join(ROOT, 'src/data/seo-changelog.json')
 const OUTPUT_PATH = path.join(ROOT, 'public/data/seo-registry.json')
-const LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar']
+const LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 
 // Extract seoTitle and metaDescription per language from a PE article file.
 // Language blocks are at 4-space indent: "    en: {"
