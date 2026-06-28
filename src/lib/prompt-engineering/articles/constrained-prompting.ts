@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Chain-of-Thought vs. Structured Reasoning — Quand utiliser lequel',
         'Fine-Tuning pour la Conformité de Sortie — Alternatives au prompting',
         '[Validation d\'Outputs LLM : Schémas et Tests — Cadre complet de validation',
-        '[PromptQuorum : Dispatch Multi-Modèle](/fr/features/prompt-engineering/multi-model-prompt-testing-workflows) — Comment tester les contraintes à l\'échelle',
+        '[PromptQuorum : Dispatch Multi-Modèle](/fr/prompt-engineering/multi-model-prompt-testing-workflows) — Comment tester les contraintes à l\'échelle',
         'API Conversationnelles avec LLM — Cas d\'usage réel : structures contrôlées dans les chatbots',
         '[Automatisations domestiques plus intelligentes avec un LLM local](/fr/smart-home/ai-automations-local-llm) — le constrained prompting en action : définir exactement ce que votre LLM peut et ne peut pas faire lors du contrôle des appareils domestiques'
       ]
@@ -2220,7 +2220,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Chain-of-Thoughtと構造化推論 — 使い分け',
         '構造化出力向けファインチューニング — プロンプティングの代替手段',
         '[LLMアウトプット検証：スキーマとテスト — 総合検証フレームワーク',
-        '[PromptQuorum：マルチモデルディスパッチ](/ja/features/prompt-engineering/multi-model-prompt-testing-workflows) — 大規模制約テスト',
+        '[PromptQuorum：マルチモデルディスパッチ](/ja/prompt-engineering/multi-model-prompt-testing-workflows) — 大規模制約テスト',
         '会話型API with LLM — 実例：チャットボットの制御出力',
         '[ローカルLLMでスマートホームの自動化をよりスマートに](/ja/smart-home/ai-automations-local-llm) — 制約プロンプティングの実践：ホームデバイスを制御する際にLLMができることとできないことを明確に定義する'
       ]
@@ -2714,7 +2714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Chain-of-Thought vs 结构化推理 — 何时使用哪种',
         '结构化输出微调 — 提示工程的替代方案',
         '[LLM输出验证：架构和测试 — 完整验证框架',
-        '[PromptQuorum：多模型分发](/zh/features/prompt-engineering/multi-model-prompt-testing-workflows) — 大规模测试约束',
+        '[PromptQuorum：多模型分发](/zh/prompt-engineering/multi-model-prompt-testing-workflows) — 大规模测试约束',
         '与LLM的会话API — 实例：聊天机器人的控制输出',
         '[用本地LLM实现更智能的家居自动化](/zh/smart-home/ai-automations-local-llm) — 约束提示词实践：精确定义LLM在控制家居设备时可以和不可以做什么'
       ]

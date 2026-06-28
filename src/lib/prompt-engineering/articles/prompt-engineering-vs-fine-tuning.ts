@@ -243,7 +243,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Cost Optimization for LLMs', url: '/prompt-engineering/cost-optimization' },
           { title: 'Building RAG Systems', url: '/prompt-engineering/retrieval-augmented-generation' },
           { title: 'Model Selection Guide', url: '/prompt-engineering/model-selection' },
-          { title: 'LLM API Benchmarks', url: '/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {
@@ -501,7 +500,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Kostenoptimierung für LLMs', url: '/de/prompt-engineering/cost-optimization' },
           { title: 'RAG-Systeme aufbauen', url: '/de/prompt-engineering/retrieval-augmented-generation' },
           { title: 'Modellauswahlhandbuch', url: '/de/prompt-engineering/model-selection' },
-          { title: 'LLM API Benchmarks', url: '/de/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {
@@ -759,7 +757,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Optimización de costes para LLMs', url: '/es/prompt-engineering/cost-optimization' },
           { title: 'Construir sistemas RAG', url: '/es/prompt-engineering/retrieval-augmented-generation' },
           { title: 'Guía de selección de modelo', url: '/es/prompt-engineering/model-selection' },
-          { title: 'Benchmarks de API LLM', url: '/es/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {
@@ -1013,7 +1010,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Otimização de custos para LLMs', url: '/pt/prompt-engineering/cost-optimization' },
           { title: 'Construir sistemas RAG', url: '/pt/prompt-engineering/retrieval-augmented-generation' },
           { title: 'Guia de seleção de modelo', url: '/pt/prompt-engineering/model-selection' },
-          { title: 'Benchmarks de API LLM', url: '/pt/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {
@@ -1273,7 +1269,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'Optimisation des coûts pour les LLMs', url: '/fr/prompt-engineering/cost-optimization' },
           { title: 'Construire des systèmes RAG', url: '/fr/prompt-engineering/retrieval-augmented-generation' },
           { title: 'Guide de sélection de modèle', url: '/fr/prompt-engineering/model-selection' },
-          { title: 'Benchmarks API LLM', url: '/fr/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {
@@ -1533,7 +1528,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'LLMのコスト最適化', url: '/ja/prompt-engineering/cost-optimization' },
           { title: 'RAG システムの構築', url: '/ja/prompt-engineering/retrieval-augmented-generation' },
           { title: 'モデル選択ガイド', url: '/ja/prompt-engineering/model-selection' },
-          { title: 'LLM API ベンチマーク', url: '/ja/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {
@@ -2084,7 +2078,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'LLM을 위한 비용 최적화', url: '/ko/prompt-engineering/cost-optimization' },
           { title: 'RAG 시스템 구축', url: '/ko/prompt-engineering/retrieval-augmented-generation' },
           { title: '모델 선택 가이드', url: '/ko/prompt-engineering/model-selection' },
-          { title: 'LLM API 벤치마크', url: '/ko/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {
@@ -2342,7 +2335,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { title: 'تحسين تكاليف نماذج اللغة الكبيرة', url: '/ar/prompt-engineering/cost-optimization' },
           { title: 'بناء أنظمة RAG', url: '/ar/prompt-engineering/retrieval-augmented-generation' },
           { title: 'دليل اختيار النموذج', url: '/ar/prompt-engineering/model-selection' },
-          { title: 'معايير أداء API لنماذج اللغة', url: '/ar/prompt-engineering/llm-api-benchmarks' },
         ],
       },
       regionalContext: {

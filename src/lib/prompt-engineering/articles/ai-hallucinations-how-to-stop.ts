@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '来源',
           items: [
             'Wei, J., Wang, X., Schuurmans, D.,等。 (2022). "链式思考提示激发大型语言模型中的推理。" [ArXiv](https://arxiv.org/abs/2201.11903) —基础论文证明逐步推理可减少数学和逻辑任务的幻觉。',
-            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "论抽象摘要中的忠实和事实性。" [ACL程序](/aclanthology.org/2021.acl-long.200/) —关于神经文本生成中幻觉率和机制的经验研究。',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "论抽象摘要中的忠实和事实性。" [ACL程序](https://aclanthology.org/2021.acl-long.200/) —关于神经文本生成中幻觉率和机制的经验研究。',
             'Anthropic (2024)."宪法AI。" [https://www.anthropic.com/constitutional-ai](https://www.anthropic.com/constitutional-ai) —Anthropic通过基于原则的培训减少有害的输出和幻觉的方法。',
           ],
         },

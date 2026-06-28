@@ -356,7 +356,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             { title: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning', url: '/prompt-engineering/chain-of-thought-prompting' },
             { title: 'Few-Shot Prompting: The Power of Examples', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: 'Prompt Frameworks: Which Model Works Best?', url: '/prompt-engineering/prompt-frameworks-compared' },
             { title: 'RAG Explained: How to Ground AI Answers in Real Data', url: '/prompt-engineering/rag-explained' },
             { title: 'Context Windows Explained: Why Your AI Forgets', url: '/prompt-engineering/context-windows' },
             { title: 'Tokens, Costs & Limits: The Economics of AI Prompting', url: '/prompt-engineering/tokens-and-costs' },
@@ -2164,7 +2163,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             { title: '연쇄 사고 프롬프팅: AI가 추론 과정을 보이게 하기', url: '/prompt-engineering/chain-of-thought-prompting' },
             { title: '퓨샷 프롬프팅: 예제의 힘', url: '/prompt-engineering/zero-shot-vs-few-shot' },
-            { title: '프롬프트 프레임워크: 어떤 모델이 가장 잘 작동합니까?', url: '/prompt-engineering/prompt-frameworks-compared' },
             { title: 'RAG 설명: AI 답변을 실제 데이터에 기반시키는 방법', url: '/prompt-engineering/rag-explained' },
             { title: '컨텍스트 창 설명: AI가 잊어버리는 이유', url: '/prompt-engineering/context-windows' },
             { title: '토큰, 비용 및 한계: AI 프롬프팅의 경제학', url: '/prompt-engineering/tokens-and-costs' },
