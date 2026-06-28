@@ -27,6 +27,7 @@ import { article as a_multilingual_local_llms } from "./articles/multilingual-lo
 import { article as a_long_context_local_llms } from "./articles/long-context-local-llms";
 import { article as a_top_open_source_models_ollama } from "./articles/top-open-source-models-ollama";
 import { article as a_local_llm_model_updates_2026 } from "./articles/local-llm-model-updates-2026";
+import { article as a_glm_5_2_open_weights_frontier_2026 } from "./articles/glm-5-2-open-weights-frontier-2026";
 import { article as a_local_llms_vs_cloud_apis } from "./articles/local-llms-vs-cloud-apis";
 import { article as a_ollama_vs_lm_studio } from "./articles/ollama-vs-lm-studio";
 import { article as a_best_local_llm_frontends } from "./articles/best-local-llm-frontends";
@@ -164,6 +165,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "long-context-local-llms": a_long_context_local_llms,
   "top-open-source-models-ollama": a_top_open_source_models_ollama,
   "local-llm-model-updates-2026": a_local_llm_model_updates_2026,
+  "glm-5-2-open-weights-frontier-2026": a_glm_5_2_open_weights_frontier_2026,
   "local-llms-vs-cloud-apis": a_local_llms_vs_cloud_apis,
   "ollama-vs-lm-studio": a_ollama_vs_lm_studio,
   "best-local-llm-frontends": a_best_local_llm_frontends,

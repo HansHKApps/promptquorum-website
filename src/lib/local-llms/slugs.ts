@@ -28,6 +28,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'long-context-local-llms':              'long-context-local-llms',
   'top-open-source-models-ollama':        'top-open-source-models-ollama',
   'local-llm-model-updates-2026':         'local-llm-model-updates-2026',
+  'glm-5-2-open-weights-frontier-2026':   'glm-5-2-open-weights-frontier-2026',
 
   // Tools & Interfaces
   'ollama-vs-lm-studio':                  'ollama-vs-lm-studio',
