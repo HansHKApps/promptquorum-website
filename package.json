@@ -6,7 +6,7 @@
     "dev": "next dev",
     "validate-translations": "node scripts/validate-translation-integrity.mjs",
     "verify:locales": "node scripts/check-locale-coverage.mjs",
-    "prebuild": "npm run validate-translations && npm run verify:locales",
+    "prebuild": "npm run validate-translations && npm run verify:locales && node scripts/validate-internal-links.mjs",
     "build": "node build-with-fix.js",
     "postbuild": "node scripts/test-cluster-noindex.mjs",
     "start": "next start",
