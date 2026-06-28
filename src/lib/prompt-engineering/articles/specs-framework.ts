@@ -134,10 +134,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Related Reading',
         items: [
-          '[Which Prompt Framework Should You Use?](/prompt-engineering/which-framework-to-use)',
+          '[Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use)',
           '[CO-STAR Prompt Framework](/prompt-engineering/co-star-framework)',
           '[RISEN Framework](/prompt-engineering/risen-framework)',
-          '[Build Your Own Prompt Framework](/prompt-engineering/build-your-own-framework)',
+          '[Build Your Own Prompt Framework](/prompt-engineering/build-your-own-prompt-framework)',
         ],
       },
     },
@@ -269,10 +269,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Weiterführende Lektüre',
         items: [
-          '[Welches Prompt-Framework sollten Sie verwenden?](/de/prompt-engineering/which-framework-to-use)',
+          '[Welches Prompt-Framework sollten Sie verwenden?](/de/prompt-engineering/which-prompt-framework-should-you-use)',
           '[CO-STAR Prompt-Framework](/de/prompt-engineering/co-star-framework)',
           '[RISEN Framework](/de/prompt-engineering/risen-framework)',
-          '[Eigenes Prompt-Framework erstellen](/de/prompt-engineering/build-your-own-framework)',
+          '[Eigenes Prompt-Framework erstellen](/de/prompt-engineering/build-your-own-prompt-framework)',
         ],
       },
     },
@@ -404,10 +404,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Lectura relacionada',
         items: [
-          '[¿Qué framework de prompts deberías usar?](/es/prompt-engineering/which-framework-to-use)',
+          '[¿Qué framework de prompts deberías usar?](/es/prompt-engineering/which-prompt-framework-should-you-use)',
           '[CO-STAR Prompt Framework](/es/prompt-engineering/co-star-framework)',
           '[RISEN Framework](/es/prompt-engineering/risen-framework)',
-          '[Construye tu propio framework de prompts](/es/prompt-engineering/build-your-own-framework)',
+          '[Construye tu propio framework de prompts](/es/prompt-engineering/build-your-own-prompt-framework)',
         ],
       },
     },
@@ -539,10 +539,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: '相关阅读',
         items: [
-          '[应该使用哪种提示框架？](/zh/prompt-engineering/which-framework-to-use)',
+          '[应该使用哪种提示框架？](/zh/prompt-engineering/which-prompt-framework-should-you-use)',
           '[CO-STAR 提示框架](/zh/prompt-engineering/co-star-framework)',
           '[RISEN 框架](/zh/prompt-engineering/risen-framework)',
-          '[构建自己的提示框架](/zh/prompt-engineering/build-your-own-framework)',
+          '[构建自己的提示框架](/zh/prompt-engineering/build-your-own-prompt-framework)',
         ],
       },
     },
@@ -675,10 +675,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Leitura relacionada',
         items: [
-          '[Qual framework de prompt você deve usar?](/pt/prompt-engineering/which-framework-to-use)',
+          '[Qual framework de prompt você deve usar?](/pt/prompt-engineering/which-prompt-framework-should-you-use)',
           '[CO-STAR Prompt Framework](/pt/prompt-engineering/co-star-framework)',
           '[RISEN Framework](/pt/prompt-engineering/risen-framework)',
-          '[Construa seu próprio framework de prompts](/pt/prompt-engineering/build-your-own-framework)',
+          '[Construa seu próprio framework de prompts](/pt/prompt-engineering/build-your-own-prompt-framework)',
         ],
       },
     },
@@ -795,10 +795,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'قراءة ذات صلة',
         items: [
-          '[أي إطار طلب يجب استخدامه؟](/ar/prompt-engineering/which-framework-to-use)',
+          '[أي إطار طلب يجب استخدامه؟](/ar/prompt-engineering/which-prompt-framework-should-you-use)',
           '[إطار CO-STAR للطلبات](/ar/prompt-engineering/co-star-framework)',
           '[إطار RISEN](/ar/prompt-engineering/risen-framework)',
-          '[بناء إطار طلباتك الخاص](/ar/prompt-engineering/build-your-own-framework)',
+          '[بناء إطار طلباتك الخاص](/ar/prompt-engineering/build-your-own-prompt-framework)',
         ],
       },
     },
@@ -908,10 +908,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: '관련 자료',
         items: [
-          '[어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-framework-to-use)',
+          '[어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-prompt-framework-should-you-use)',
           '[CO-STAR 프롬프트 프레임워크](/ko/prompt-engineering/co-star-framework)',
           '[RISEN 프레임워크](/ko/prompt-engineering/risen-framework)',
-          '[나만의 프롬프트 프레임워크 만들기](/ko/prompt-engineering/build-your-own-framework)',
+          '[나만의 프롬프트 프레임워크 만들기](/ko/prompt-engineering/build-your-own-prompt-framework)',
         ],
       },
     },

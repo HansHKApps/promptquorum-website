@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[RISEN Framework](/prompt-engineering/risen-framework)',
             '[RTF Framework: Role, Task, Format](/prompt-engineering/rtf-framework)',
             '[SPECS Framework](/prompt-engineering/specs-framework)',
-            '[Build Your Own Prompt Framework](/prompt-engineering/build-your-own-framework)',
+            '[Build Your Own Prompt Framework](/prompt-engineering/build-your-own-prompt-framework)',
           ],
         },
         faqSection: {
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[RISEN 프레임워크](/ko/prompt-engineering/risen-framework)',
             '[RTF 프레임워크: 역할, 과제, 형식](/ko/prompt-engineering/rtf-framework)',
             '[SPECS 프레임워크](/ko/prompt-engineering/specs-framework)',
-            '[나만의 프롬프트 프레임워크 만들기](/ko/prompt-engineering/build-your-own-framework)',
+            '[나만의 프롬프트 프레임워크 만들기](/ko/prompt-engineering/build-your-own-prompt-framework)',
           ],
         },
         faqSection: {

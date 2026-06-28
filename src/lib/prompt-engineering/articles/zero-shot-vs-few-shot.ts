@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting)',
             '[Self-Consistency Prompting](/prompt-engineering/self-consistency-prompting)',
-            '[Prompt Building Blocks](/prompt-engineering/prompt-building-blocks)',
+            '[Prompt Building Blocks](/prompt-engineering/5-building-blocks-every-prompt-needs)',
             '[Negative Prompting](/prompt-engineering/negative-prompting)',
           ],
         },
@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting)',
         '[Self-Consistency Prompting](/de/prompt-engineering/self-consistency-prompting)',
-        '[Prompt Building Blocks](/de/prompt-engineering/prompt-building-blocks)',
+        '[Prompt Building Blocks](/de/prompt-engineering/5-building-blocks-every-prompt-needs)',
         '[Negative Prompting](/de/prompt-engineering/negative-prompting)',
       ],
     },
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting)',
         '[Self-Consistency Prompting](/es/prompt-engineering/self-consistency-prompting)',
-        '[Prompt Building Blocks](/es/prompt-engineering/prompt-building-blocks)',
+        '[Prompt Building Blocks](/es/prompt-engineering/5-building-blocks-every-prompt-needs)',
         '[Negative Prompting](/es/prompt-engineering/negative-prompting)',
       ],
     },
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '[Chain-of-Thought Prompting](/ar/prompt-engineering/chain-of-thought-prompting)',
         '[Self-Consistency Prompting](/ar/prompt-engineering/self-consistency-prompting)',
-        '[Prompt Building Blocks](/ar/prompt-engineering/prompt-building-blocks)',
+        '[Prompt Building Blocks](/ar/prompt-engineering/5-building-blocks-every-prompt-needs)',
         '[Negative Prompting](/ar/prompt-engineering/negative-prompting)',
       ],
     },
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting)',
         '[Self-Consistency Prompting](/pt/prompt-engineering/self-consistency-prompting)',
-        '[Prompt Building Blocks](/pt/prompt-engineering/prompt-building-blocks)',
+        '[Prompt Building Blocks](/pt/prompt-engineering/5-building-blocks-every-prompt-needs)',
         '[Negative Prompting](/pt/prompt-engineering/negative-prompting)',
       ],
     },
@@ -766,7 +766,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting)',
         '[Self-Consistency Prompting](/fr/prompt-engineering/self-consistency-prompting)',
-        '[Prompt Building Blocks](/fr/prompt-engineering/prompt-building-blocks)',
+        '[Prompt Building Blocks](/fr/prompt-engineering/5-building-blocks-every-prompt-needs)',
         '[Negative Prompting](/fr/prompt-engineering/negative-prompting)',
       ],
     },
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '[Chain-of-Thought Prompting](/ja/prompt-engineering/chain-of-thought-prompting)',
         '[Self-Consistency Prompting](/ja/prompt-engineering/self-consistency-prompting)',
-        '[Prompt Building Blocks](/ja/prompt-engineering/prompt-building-blocks)',
+        '[Prompt Building Blocks](/ja/prompt-engineering/5-building-blocks-every-prompt-needs)',
         '[Negative Prompting](/ja/prompt-engineering/negative-prompting)',
       ],
     },
@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [
         '[Chain-of-Thought Prompting](/zh/prompt-engineering/chain-of-thought-prompting)',
         '[Self-Consistency Prompting](/zh/prompt-engineering/self-consistency-prompting)',
-        '[Prompt Building Blocks](/zh/prompt-engineering/prompt-building-blocks)',
+        '[Prompt Building Blocks](/zh/prompt-engineering/5-building-blocks-every-prompt-needs)',
         '[Negative Prompting](/zh/prompt-engineering/negative-prompting)',
       ],
     },
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Chain-of-Thought Prompting](/ko/prompt-engineering/chain-of-thought-prompting)',
             '[Self-Consistency Prompting](/ko/prompt-engineering/self-consistency-prompting)',
-            '[Prompt Building Blocks](/ko/prompt-engineering/prompt-building-blocks)',
+            '[Prompt Building Blocks](/ko/prompt-engineering/5-building-blocks-every-prompt-needs)',
             '[Negative Prompting](/ko/prompt-engineering/negative-prompting)',
           ],
         },
