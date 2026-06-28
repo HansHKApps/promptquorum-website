@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
     title: 'Prompt Engineering for Content Teams: Templates, Review Flows, and Quality Checks',
+    dateModified: '2026-06-20',
     seoTitle: 'Prompt Engineering for Content Teams: Templates & Reviews',
     metaDescription: 'Content team prompts: brand voice encoding, 5 reusable templates (blog, social, summary, SEO meta, email), editorial review workflow, quality scoring.',
     ogDescription: 'Content team PE guide: how to encode brand voice in prompts, 5 reusable templates (blog draft, social post, summary, SEO meta, email), editorial review workflow, and quality scoring.',
@@ -185,10 +186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Related Reading',
         items: [
           { title: 'CRAFT Framework: Context, Role, Action, Format, Target', url: '/prompt-engineering/craft-framework' },
-          { title: 'How to Encode Brand Voice in Prompts', url: '/prompt-engineering/brand-voice-prompts' },
-          { title: 'Content Generation Workflows with GPT-5.5 and Claude', url: '/prompt-engineering/content-generation-workflows' },
-          { title: 'Quality Scoring and Evaluation for AI Content', url: '/prompt-engineering/quality-scoring-ai-content' },
-          { title: 'Integrating AI Content Tools into Editorial Review Processes', url: '/prompt-engineering/editorial-workflow-integration' },
+          { title: 'How to Encode Brand Voice in Prompts', url: '/prompt-engineering/your-brand-voice-ai' },
         ],
       },
       sources: {
@@ -456,9 +454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           { title: 'Framework CRAFT para equipos: prompting estructurado vs ad-hoc', url: '/es/prompt-engineering/prompt-framework-selection-for-teams' },
-          { title: 'Pruebas y validación de prompts: suites automatizadas para LLMs' },
-          { title: 'Marca en prompts de LLM: codificar voz, tono y terminología' },
-          { title: 'Flujos editoriales con IA: controles de calidad y cumplimiento' },
+          { title: 'Marca en prompts de LLM: codificar voz, tono y terminología', url: '/es/prompt-engineering/your-brand-voice-ai' },
           { title: 'Pruebas de prompts multi-modelo para creación de contenido', url: '/es/prompt-engineering/multi-model-prompt-testing-workflows' },
         ],
       },
@@ -610,9 +606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Leitura relacionada',
         items: [
           { title: 'Framework CRAFT para equipes: prompting estruturado vs ad-hoc', url: '/pt/prompt-engineering/prompt-framework-selection-for-teams' },
-          { title: 'Testes e validação de prompts: suites automatizadas para LLMs' },
-          { title: 'Marca em prompts de LLM: codificar voz, tom e terminologia' },
-          { title: 'Fluxos editoriais com IA: controles de qualidade e conformidade' },
+          { title: 'Marca em prompts de LLM: codificar voz, tom e terminologia', url: '/pt/prompt-engineering/your-brand-voice-ai' },
           { title: 'Testes de prompts multi-modelo para criação de conteúdo', url: '/pt/prompt-engineering/multi-model-prompt-testing-workflows' },
         ],
       },
@@ -757,10 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Lectures recommandées',
         items: [
           { title: 'Framework CRAFT pour équipes : prompting structuré vs ad-hoc', url: '/fr/prompt-engineering/prompt-framework-selection-for-teams' },
-          { title: 'Tests de prompts et validation : suites de tests automatisées pour LLM' },
-          { title: 'Branding en LLM-Prompts : encoder voix, ton et terminologie' },
-          { title: 'Workflows éditoriaux avec IA : contrôles qualité et conformité' },
-          { title: 'RGPD et contenu IA : confidentialité en texte automatisé', url: '/fr/prompt-engineering/rgpd-ai-content' },
+          { title: 'Branding en LLM-Prompts : encoder voix, ton et terminologie', url: '/fr/prompt-engineering/your-brand-voice-ai' },
         ],
       },
       sources: {
@@ -905,9 +896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '関連資料',
         items: [
           { title: 'チーム向けCRAFTフレームワーク：構造化 vs アドホックプロンプティング', url: '/ja/prompt-engineering/prompt-framework-selection-for-teams' },
-          { title: 'プロンプト試験と検証：LLM自動テストスイート' },
-          { title: 'LLMプロンプトでのブランディング：音声、語調、用語のエンコード' },
-          { title: 'AIによるエディトリアルワークフロー：品質チェックとコンプライアンス' },
+          { title: 'LLMプロンプトでのブランディング：音声、語調、用語のエンコード', url: '/ja/prompt-engineering/your-brand-voice-ai' },
           { title: 'コンテンツ作成のための複数モデルテスト：モデル比較ガイド', url: '/ja/prompt-engineering/multi-model-prompt-testing-workflows' },
         ],
       },
@@ -1052,9 +1041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '相关资料',
         items: [
           { title: '团队CRAFT框架：结构化与临时性提示词编制', url: '/zh/prompt-engineering/prompt-framework-selection-for-teams' },
-          { title: '提示词测试和验证：LLM自动化测试套件' },
-          { title: 'LLM提示词中的品牌：编码声音、语调和术语' },
-          { title: '使用AI的编辑工作流：质量检查和合规' },
+          { title: 'LLM提示词中的品牌：编码声音、语调和术语', url: '/zh/prompt-engineering/your-brand-voice-ai' },
           { title: '多模型提示词测试：模型选择指南', url: '/zh/prompt-engineering/multi-model-prompt-testing-workflows' },
         ],
       },
@@ -1221,9 +1208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           { title: 'إطار CRAFT للفرق: البرومبتات المنظّمة مقابل الارتجالية', url: '/ar/prompt-engineering/prompt-framework-selection-for-teams' },
-          { title: 'اختبار البرومبتات والتحقق منها: مجموعات الاختبار الآلي للنماذج اللغوية' },
-          { title: 'العلامة التجارية في برومبتات النماذج اللغوية: ترميز الصوت والنبرة والمصطلحات' },
-          { title: 'سير العمل التحريري مع الذكاء الاصطناعي: ضبط الجودة والامتثال' },
+          { title: 'العلامة التجارية في برومبتات النماذج اللغوية: ترميز الصوت والنبرة والمصطلحات', url: '/ar/prompt-engineering/your-brand-voice-ai' },
           { title: 'اختبار البرومبتات متعدد النماذج لإنشاء المحتوى', url: '/ar/prompt-engineering/multi-model-prompt-testing-workflows' },
         ],
       },
@@ -1421,11 +1406,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          { title: 'CRAFT 프레임워크: Context, Role, Action, Format, Target', url: '/prompt-engineering/craft-framework' },
-          { title: '프롬프트에 브랜드 보이스를 인코딩하는 방법', url: '/prompt-engineering/brand-voice-prompts' },
-          { title: 'GPT-5.5 및 Claude를 활용한 콘텐츠 생성 워크플로우', url: '/prompt-engineering/content-generation-workflows' },
-          { title: 'AI 콘텐츠를 위한 품질 점수화 및 평가', url: '/prompt-engineering/quality-scoring-ai-content' },
-          { title: 'AI 콘텐츠 도구를 편집 검토 프로세스에 통합하기', url: '/prompt-engineering/editorial-workflow-integration' },
+          { title: 'CRAFT 프레임워크: Context, Role, Action, Format, Target', url: '/ko/frameworks/craft' },
+          { title: '프롬프트에 브랜드 보이스를 인코딩하는 방법', url: '/ko/prompt-engineering/your-brand-voice-ai' },
         ],
       },
       sources: {

@@ -797,7 +797,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => {
-              const itemText = typeof item === 'string' ? item : `[${item.title}](${item.url})`;
+              const itemText = typeof item === 'string' ? item : (item.url ? `[${item.title}](${item.url})` : item.title);
               return (
                 <li key={i} className="flex gap-3 text-text-secondary text-sm">
                   <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
@@ -855,7 +855,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
         return (
           <ul className="space-y-3 my-4">
             {section.items!.map((item, i) => {
-              const itemText = typeof item === 'string' ? item : `[${item.title}](${item.url})`;
+              const itemText = typeof item === 'string' ? item : (item.url ? `[${item.title}](${item.url})` : item.title);
               return (
                 <li key={i} className="flex gap-3 text-text-secondary">
                   <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
