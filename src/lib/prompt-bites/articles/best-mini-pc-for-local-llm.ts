@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Ollama 최고의 프론트엔드](/ko/prompt-bites/best-frontend-for-ollama)',
           '[일본 로컬 LLM용 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-local-llm-japan)',
-          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/local-llms/local-llm-software-directory-2026)',
+          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/power-local-llm/local-llm-software-directory-2026)',
           '[빠른 모델 로딩을 위한 최고의 SSD](/ko/prompt-bites/best-ssd-fast-model-loading) -- best SSD for fast model loading',
           '[Strix Halo Ollama Vulkan 설정 가이드](/ko/prompt-bites/strix-halo-ollama-vulkan) -- Strix Halo Ollama Vulkan setup',
         ],

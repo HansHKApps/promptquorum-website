@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[로컬 TTS 및 음성 복제: Piper, Coqui XTTS 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[콘텐츠 크리에이터를 위한 프롬프트 엔지니어링](/ko/prompt-engineering)',
-          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/local-llms/local-llm-software-directory-2026)',
+          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/power-local-llm/local-llm-software-directory-2026)',
         ],
       },
     },

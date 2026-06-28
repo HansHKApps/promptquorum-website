@@ -451,7 +451,7 @@ schema: {
           content: [
             '**A cloud API requires creating an account, generating an API key, and making an HTTP call -- typically 5-10 minutes total.** A local LLM requires installing an inference engine (like [Ollama](/local-llms/run-first-local-llm) or LM Studio), downloading a model file (2-50 GB), configuring GPU offloading, and troubleshooting driver issues. [Ollama](https://ollama.com/) reduces this to a single binary installation, simplifying the process compared to manual setup.',
             'Maintenance adds ongoing complexity: new model releases must be manually downloaded, inference tools require updates, and hardware compatibility issues arise with OS updates. For a user who wants to focus on using AI rather than managing infrastructure, cloud APIs have a dramatically lower operational burden.',
-            'See [how to install Ollama](/local-llms/run-first-local-llm) for step-by-step instructions and [Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) for fixes to the most common errors. For a full setup time comparison, see [Setup Time: Local vs Cloud](/local-llms/local-llm-limitations-setup-time-en.svg).',
+            'See [how to install Ollama](/local-llms/run-first-local-llm) for step-by-step instructions and [Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) for fixes to the most common errors. For a full setup time comparison, see Setup Time: Local vs Cloud.',
           ],
           image: '/images/local-llm-limitations-setup-time-en.svg',
           imageCaption: 'Setup Time: Local vs Cloud — Local setup takes 20–40 minutes; cloud APIs are ready in 5 minutes',
@@ -4444,7 +4444,7 @@ schema: {
           content: [
             '**클라우드 API는 계정 생성, API 키 생성, HTTP 호출만 필요하며 일반적으로 총 5~10분이 소요됩니다.** 로컬 LLM은 추론 엔진([Ollama](/local-llms/run-first-local-llm) 또는 LM Studio 등) 설치, 모델 파일 다운로드(2~50GB), GPU 오프로딩 구성, 드라이버 문제 해결이 필요합니다. [Ollama](https://ollama.com/)는 단일 바이너리 설치로 이를 줄여 수동 설치보다 과정을 단순화합니다.',
             '유지 관리는 지속적인 복잡성을 추가합니다. 새 모델 릴리스는 수동으로 다운로드해야 하고, 추론 도구는 업데이트가 필요하며, OS 업데이트와 함께 하드웨어 호환성 문제가 발생합니다. AI를 관리하는 것보다 사용하는 데 집중하고 싶은 사용자에게는 클라우드 API가 훨씬 낮은 운영 부담을 가집니다.',
-            '단계별 지침은 [Ollama 설치 방법](/local-llms/run-first-local-llm)을 참조하고, 가장 일반적인 오류에 대한 수정사항은 [로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup)을 참조하십시오. 전체 설정 시간 비교는 [설정 시간: 로컬 vs 클라우드](/local-llms/local-llm-limitations-setup-time-en.svg)를 참조하십시오.',
+            '단계별 지침은 [Ollama 설치 방법](/local-llms/run-first-local-llm)을 참조하고, 가장 일반적인 오류에 대한 수정사항은 [로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup)을 참조하십시오. 전체 설정 시간 비교는 설정 시간: 로컬 vs 클라우드를 참조하십시오.',
           ],
           image: '/images/local-llm-limitations-setup-time-en.svg',
           imageCaption: '설정 시간: 로컬 vs 클라우드 — 로컬 설정은 20~40분; 클라우드 API는 5분이면 준비됩니다',

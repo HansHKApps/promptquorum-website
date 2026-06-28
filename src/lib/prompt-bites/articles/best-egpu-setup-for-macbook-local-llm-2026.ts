@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '관련 가이드',
         items: [
           '[GPU vs CPU vs Apple Silicon — 로컬 LLM 비교](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-          '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/local-llms/local-llm-software-directory-2026)',
+          '[2026년 최고의 로컬 LLM 소프트웨어 디렉토리](/ko/power-local-llm/local-llm-software-directory-2026)',
           '[MacBook에서 Ollama 실행하기](/ko/local-llms/ollama-on-mac-apple-silicon-setup-2026)',
           '[Best Ollama Models for CPU-Only Inference](/ko/prompt-bites/best-ollama-models-cpu-only) -- CPU-only inference guide',
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/ko/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',

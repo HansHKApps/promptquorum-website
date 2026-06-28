@@ -239,10 +239,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: 'How to Write Effective Prompts', url: '/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'Prompt Engineering Frameworks', url: '/prompt-engineering/frameworks' },
-          { title: 'Cost Optimization for LLMs', url: '/prompt-engineering/cost-optimization' },
-          { title: 'Building RAG Systems', url: '/prompt-engineering/retrieval-augmented-generation' },
-          { title: 'Model Selection Guide', url: '/prompt-engineering/model-selection' },
+          { title: 'Prompt Engineering Frameworks', url: '/frameworks' },
+          { title: 'Cost Optimization for LLMs', url: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'Building RAG Systems', url: '/prompt-engineering/rag-explained' },
+          { title: 'Model Selection Guide', url: '/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
@@ -496,10 +496,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: 'Effektive Prompts schreiben', url: '/de/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'Prompt-Engineering-Frameworks', url: '/de/prompt-engineering/frameworks' },
-          { title: 'Kostenoptimierung für LLMs', url: '/de/prompt-engineering/cost-optimization' },
-          { title: 'RAG-Systeme aufbauen', url: '/de/prompt-engineering/retrieval-augmented-generation' },
-          { title: 'Modellauswahlhandbuch', url: '/de/prompt-engineering/model-selection' },
+          { title: 'Prompt-Engineering-Frameworks', url: '/de/frameworks' },
+          { title: 'Kostenoptimierung für LLMs', url: '/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'RAG-Systeme aufbauen', url: '/de/prompt-engineering/rag-explained' },
+          { title: 'Modellauswahlhandbuch', url: '/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
@@ -753,10 +753,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: 'Cómo escribir prompts efectivos', url: '/es/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'Frameworks de prompt engineering', url: '/es/prompt-engineering/frameworks' },
-          { title: 'Optimización de costes para LLMs', url: '/es/prompt-engineering/cost-optimization' },
-          { title: 'Construir sistemas RAG', url: '/es/prompt-engineering/retrieval-augmented-generation' },
-          { title: 'Guía de selección de modelo', url: '/es/prompt-engineering/model-selection' },
+          { title: 'Frameworks de prompt engineering', url: '/es/frameworks' },
+          { title: 'Optimización de costes para LLMs', url: '/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'Construir sistemas RAG', url: '/es/prompt-engineering/rag-explained' },
+          { title: 'Guía de selección de modelo', url: '/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
@@ -1006,10 +1006,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: 'Como escrever prompts eficazes', url: '/pt/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'Frameworks de prompt engineering', url: '/pt/prompt-engineering/frameworks' },
-          { title: 'Otimização de custos para LLMs', url: '/pt/prompt-engineering/cost-optimization' },
-          { title: 'Construir sistemas RAG', url: '/pt/prompt-engineering/retrieval-augmented-generation' },
-          { title: 'Guia de seleção de modelo', url: '/pt/prompt-engineering/model-selection' },
+          { title: 'Frameworks de prompt engineering', url: '/pt/frameworks' },
+          { title: 'Otimização de custos para LLMs', url: '/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'Construir sistemas RAG', url: '/pt/prompt-engineering/rag-explained' },
+          { title: 'Guia de seleção de modelo', url: '/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
@@ -1265,10 +1265,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: 'Écrire des prompts efficaces', url: '/fr/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'Frameworks de prompt engineering', url: '/fr/prompt-engineering/frameworks' },
-          { title: 'Optimisation des coûts pour les LLMs', url: '/fr/prompt-engineering/cost-optimization' },
-          { title: 'Construire des systèmes RAG', url: '/fr/prompt-engineering/retrieval-augmented-generation' },
-          { title: 'Guide de sélection de modèle', url: '/fr/prompt-engineering/model-selection' },
+          { title: 'Frameworks de prompt engineering', url: '/fr/frameworks' },
+          { title: 'Optimisation des coûts pour les LLMs', url: '/fr/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'Construire des systèmes RAG', url: '/fr/prompt-engineering/rag-explained' },
+          { title: 'Guide de sélection de modèle', url: '/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
@@ -1524,10 +1524,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: '効果的なプロンプトを書く', url: '/ja/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'プロンプトエンジニアリングのフレームワーク', url: '/ja/prompt-engineering/frameworks' },
-          { title: 'LLMのコスト最適化', url: '/ja/prompt-engineering/cost-optimization' },
-          { title: 'RAG システムの構築', url: '/ja/prompt-engineering/retrieval-augmented-generation' },
-          { title: 'モデル選択ガイド', url: '/ja/prompt-engineering/model-selection' },
+          { title: 'プロンプトエンジニアリングのフレームワーク', url: '/ja/frameworks' },
+          { title: 'LLMのコスト最適化', url: '/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'RAG システムの構築', url: '/ja/prompt-engineering/rag-explained' },
+          { title: 'モデル選択ガイド', url: '/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
@@ -2074,10 +2074,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: '효과적인 Prompt 작성 방법', url: '/ko/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'Prompt Engineering 프레임워크', url: '/ko/prompt-engineering/frameworks' },
-          { title: 'LLM을 위한 비용 최적화', url: '/ko/prompt-engineering/cost-optimization' },
-          { title: 'RAG 시스템 구축', url: '/ko/prompt-engineering/retrieval-augmented-generation' },
-          { title: '모델 선택 가이드', url: '/ko/prompt-engineering/model-selection' },
+          { title: 'Prompt Engineering 프레임워크', url: '/ko/frameworks' },
+          { title: 'LLM을 위한 비용 최적화', url: '/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'RAG 시스템 구축', url: '/ko/prompt-engineering/rag-explained' },
+          { title: '모델 선택 가이드', url: '/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
@@ -2331,10 +2331,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related',
         items: [
           { title: 'كيفية كتابة أوامر فعّالة', url: '/ar/prompt-engineering/what-is-prompt-engineering' },
-          { title: 'أطر عمل هندسة الأوامر', url: '/ar/prompt-engineering/frameworks' },
-          { title: 'تحسين تكاليف نماذج اللغة الكبيرة', url: '/ar/prompt-engineering/cost-optimization' },
-          { title: 'بناء أنظمة RAG', url: '/ar/prompt-engineering/retrieval-augmented-generation' },
-          { title: 'دليل اختيار النموذج', url: '/ar/prompt-engineering/model-selection' },
+          { title: 'أطر عمل هندسة الأوامر', url: '/ar/frameworks' },
+          { title: 'تحسين تكاليف نماذج اللغة الكبيرة', url: '/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting' },
+          { title: 'بناء أنظمة RAG', url: '/ar/prompt-engineering/rag-explained' },
+          { title: 'دليل اختيار النموذج', url: '/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' },
         ],
       },
       regionalContext: {
