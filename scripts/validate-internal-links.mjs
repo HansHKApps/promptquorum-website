@@ -3,15 +3,19 @@
 //
 // Prebuild internal-link-resolution validator.
 // Walks every article's locale blocks, extracts internal links (structured
-// `url: '/...'` fields AND inline markdown `](/...)`), strips any /<lang>/ and
-// /<cluster>/ prefix, and resolves each remaining slug against that cluster's
-// slug map (or a next.config.ts redirect). Reports any unresolved target.
+// `url: '/...'` fields, `href: '/...'` nextStep fields, AND inline markdown
+// `](/...)`), strips any /<lang>/ and /<cluster>/ prefix, and resolves each
+// remaining slug against that cluster's slug map (or a next.config.ts redirect).
+// Also walks blog/blogContent.ts and validates framework slugs against
+// frameworksData.ts. Reports any unresolved target.
 //
-// MODE: WARN (non-blocking). Prints the full backlog and exits 0 so it does not
-// wall off deploys while the existing backlog is cleared. Once the backlog is at
-// zero, flip BLOCK_ON_UNRESOLVED to true to make it exit 1 (like the freshness
-// validator) so no broken internal link — structured or markdown, missing-url or
-// dead-url — can ship again.
+// Coverage:
+//   Clusters walked (article dirs): local-llms, prompt-engineering, power-local-llm,
+//     prompt-bites, smart-home
+//   Extra single files: src/lib/blog/blogContent.ts
+//   Link shapes: url: '/...', href: '/...' (nextStep), markdown ]( /...)
+//   Frameworks: validated against src/lib/frameworksData.ts slug list
+//   Smart-home absolute URLs (https://...): skipped intentionally (schema markup only)
 //
 // Run: node scripts/validate-internal-links.mjs   (wired into npm "prebuild")
 
@@ -46,6 +50,11 @@ const ARTICLE_DIRS = [
   'src/lib/smart-home/articles',
 ]
 
+// Single files to scan that are not in an ARTICLE_DIRS directory.
+const EXTRA_FILES = [
+  'src/lib/blog/blogContent.ts',
+]
+
 // Real routes that are not slug-mapped articles. Hub roots are added below.
 const STATIC_ALLOW = new Set([
   '/', '/features', '/features/optimization', '/features/quorum',
@@ -53,9 +62,7 @@ const STATIC_ALLOW = new Set([
   '/privacy', '/terms', '/glossary', '/contact',
 ])
 
-// Clusters that are real routes but have no slug map we can load here.
-// Links into them are allowed (not validated) to avoid false positives; noted.
-const UNVALIDATED_CLUSTERS = new Set(['frameworks'])
+// No more UNVALIDATED_CLUSTERS — frameworks is now covered by readFrameworkSlugs().
 
 function readSlugSet(file) {
   const set = new Set()
@@ -64,6 +71,18 @@ function readSlugSet(file) {
   const src = fs.readFileSync(abs, 'utf8')
   // Lines like:   'url-slug': 'key',  (value/key may be camelCase, numeric, etc.)
   const re = /^\s*'([a-z0-9-]+)'\s*:\s*'[^']+'/gm
+  let m
+  while ((m = re.exec(src))) set.add(m[1])
+  return set
+}
+
+// Read framework slugs from frameworksData.ts (slug: 'co-star' shape).
+function readFrameworkSlugs() {
+  const set = new Set()
+  const abs = path.join(ROOT, 'src/lib/frameworksData.ts')
+  if (!fs.existsSync(abs)) return set
+  const src = fs.readFileSync(abs, 'utf8')
+  const re = /^\s*slug:\s*'([a-z0-9-]+)'/gm
   let m
   while ((m = re.exec(src))) set.add(m[1])
   return set
@@ -83,8 +102,9 @@ function readRedirectSources() {
 // Build resolvable data.
 const slugSets = {}
 for (const [cluster, file] of Object.entries(CLUSTER_SLUGFILES)) slugSets[cluster] = readSlugSet(file)
+slugSets['frameworks'] = readFrameworkSlugs()
 const redirectSources = readRedirectSources()
-const clusterRoots = new Set(Object.keys(CLUSTER_SLUGFILES).concat([...UNVALIDATED_CLUSTERS]))
+const clusterRoots = new Set(Object.keys(CLUSTER_SLUGFILES).concat(['frameworks']))
 
 function normalize(p) {
   return p.split('#')[0].split('?')[0].replace(/\/$/, '') || '/'
@@ -93,6 +113,8 @@ function normalize(p) {
 // Returns null if resolvable, else a short reason string.
 function resolveLink(rawPath) {
   const p = normalize(rawPath)
+  // Skip static asset links — files with extensions (.pdf, .svg, .png, .xml, etc.)
+  if (/\.[a-z0-9]+$/i.test(p)) return null
   if (STATIC_ALLOW.has(p)) return null
   if (redirectSources.has(p)) return null
 
@@ -113,23 +135,31 @@ function resolveLink(rawPath) {
     return clusterRoots.has(cluster) ? null : `unknown route "${rest}"`
   }
   const slug = seg[1]
-  if (UNVALIDATED_CLUSTERS.has(cluster)) return null
   if (!(cluster in slugSets)) return `unknown cluster "${cluster}"`
   if (slugSets[cluster].has(slug)) return null
   return `slug "${slug}" not in ${cluster} slug map`
 }
 
-// Extract internal links from an article file. Returns [{line, url, title}].
+// Extract internal links from a source file. Returns [{line, url, title}].
+// Shapes covered:
+//   url: '/...'           — structured relatedReading / schema fields
+//   href: '/...'          — nextStep objects in local-llms articles
+//   ]( /...)              — inline markdown links (blog, article body text)
 function extractLinks(src) {
   const out = []
   const lines = src.split('\n')
   lines.forEach((line, i) => {
-    // structured url: '/...'
     let m
+    // structured url: '/...'
     const urlRe = /url:\s*'(\/[^']*)'/g
     while ((m = urlRe.exec(line))) {
       const t = line.match(/title:\s*'([^']*)'/)
       out.push({ line: i + 1, url: m[1], title: t ? t[1] : '' })
+    }
+    // nextStep href: '/...'
+    const hrefRe = /href:\s*'(\/[^']*)'/g
+    while ((m = hrefRe.exec(line))) {
+      out.push({ line: i + 1, url: m[1], title: '' })
     }
     // inline markdown ](/...)
     const mdRe = /\]\((\/[^)]*)\)/g
@@ -144,6 +174,7 @@ const findings = []
 let filesScanned = 0
 let linksChecked = 0
 
+// Walk article directories.
 for (const dir of ARTICLE_DIRS) {
   const absDir = path.join(ROOT, dir)
   if (!fs.existsSync(absDir)) continue
@@ -158,6 +189,22 @@ for (const dir of ARTICLE_DIRS) {
         const lang = (link.url.match(/^\/([a-z]{2})\//) || [])[1]
         findings.push({ file: `${dir}/${f}`, lang: LANGS.includes(lang) ? lang : 'en', ...link, reason })
       }
+    }
+  }
+}
+
+// Walk extra single files (blog, etc.).
+for (const file of EXTRA_FILES) {
+  const abs = path.join(ROOT, file)
+  if (!fs.existsSync(abs)) continue
+  filesScanned++
+  const src = fs.readFileSync(abs, 'utf8')
+  for (const link of extractLinks(src)) {
+    linksChecked++
+    const reason = resolveLink(link.url)
+    if (reason) {
+      const lang = (link.url.match(/^\/([a-z]{2})\//) || [])[1]
+      findings.push({ file, lang: LANGS.includes(lang) ? lang : 'en', ...link, reason })
     }
   }
 }
