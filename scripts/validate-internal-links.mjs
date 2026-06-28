@@ -23,7 +23,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 
 // Flip to true once the backlog is cleared to make broken links fail the build.
-const BLOCK_ON_UNRESOLVED = false
+const BLOCK_ON_UNRESOLVED = true
 
 const LANGS = ['de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 
