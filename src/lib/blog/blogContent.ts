@@ -15925,7 +15925,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Continue your research on AI models and prompt optimization:',
           ],
           items: [
-            '[AI Model Comparison Guide](/prompt-engineering/gpt-claude-gemini-which-model) — Multi-model comparison methodology and decision framework',
+            '[AI Model Comparison Guide](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Multi-model comparison methodology and decision framework',
             '[What Is AI Consensus Scoring?](/blog/what-is-ai-consensus-scoring) — How PromptQuorum aggregates responses across models',
             '[Prompt Optimization Best Practices](/prompt-engineering/fundamentals-of-prompt-optimization) — Structured refinement methods that improve outputs across all models',
             '[Prompt Engineering Hub](/prompt-engineering) — 50+ articles on frameworks, techniques, and optimization strategies',
@@ -16188,7 +16188,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Setzen Sie Ihre Recherche zu KI-Modellen und Prompt-Optimierung fort:',
           ],
           items: [
-            '[KI-Modell-Vergleichsleitfaden](/de/prompt-engineering/gpt-claude-gemini-which-model) — Multi-Modell-Vergleichsmethodik und Entscheidungsrahmen',
+            '[KI-Modell-Vergleichsleitfaden](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Multi-Modell-Vergleichsmethodik und Entscheidungsrahmen',
             '[Was ist KI-Konsens-Scoring?](/de/blog/what-is-ai-consensus-scoring) — Wie PromptQuorum Antworten über Modelle aggregiert',
             '[Prompt-Optimierungs-Best-Practices](/de/prompt-engineering/fundamentals-of-prompt-optimization) — Strukturierte Verfeinerungsmethoden, die Ausgaben über alle Modelle hinweg verbessern',
             '[Prompt-Engineering-Hub](/de/prompt-engineering) — 50+ Artikel zu Frameworks, Techniken und Optimierungsstrategien',
@@ -16451,7 +16451,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Poursuivez vos recherches sur les modèles IA et l\'optimisation des prompts :',
           ],
           items: [
-            '[Guide de comparaison des modèles IA](/fr/prompt-engineering/gpt-claude-gemini-which-model) — Méthodologie de comparaison multi-modèles et cadre de décision',
+            '[Guide de comparaison des modèles IA](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Méthodologie de comparaison multi-modèles et cadre de décision',
             '[Qu\'est-ce que le scoring de consensus IA ?](/fr/blog/what-is-ai-consensus-scoring) — Comment PromptQuorum agrège les réponses entre les modèles',
             '[Bonnes pratiques d\'optimisation des prompts](/fr/prompt-engineering/fundamentals-of-prompt-optimization) — Méthodes de raffinement structuré qui améliorent les sorties sur tous les modèles',
             '[Hub d\'ingénierie des prompts](/fr/prompt-engineering) — 50+ articles sur les frameworks, techniques et stratégies d\'optimisation',
@@ -16714,7 +16714,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'AIモデルとプロンプト最適化の研究を続けてください：',
           ],
           items: [
-            '[AIモデル比較ガイド](/ja/prompt-engineering/gpt-claude-gemini-which-model) — マルチモデル比較手法と意思決定フレームワーク',
+            '[AIモデル比較ガイド](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — マルチモデル比較手法と意思決定フレームワーク',
             '[AIコンセンサススコアリングとは？](/ja/blog/what-is-ai-consensus-scoring) — PromptQuorumがモデル間で回答を集約する方法',
             '[プロンプト最適化のベストプラクティス](/ja/prompt-engineering/fundamentals-of-prompt-optimization) — すべてのモデルで出力を改善する構造化された改善方法',
             '[プロンプトエンジニアリングハブ](/ja/prompt-engineering) — フレームワーク・技術・最適化戦略に関する50以上の記事',
@@ -16977,7 +16977,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '继续深入研究AI模型和提示词优化：',
           ],
           items: [
-            '[AI模型比较指南](/zh/prompt-engineering/gpt-claude-gemini-which-model) — 多模型比较方法论和决策框架',
+            '[AI模型比较指南](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 多模型比较方法论和决策框架',
             '[什么是AI共识评分？](/zh/blog/what-is-ai-consensus-scoring) — PromptQuorum如何跨模型聚合响应',
             '[提示词优化最佳实践](/zh/prompt-engineering/fundamentals-of-prompt-optimization) — 提升所有模型输出质量的结构化优化方法',
             '[提示词工程中心](/zh/prompt-engineering) — 50+篇关于框架、技术和优化策略的文章',
@@ -17240,7 +17240,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Continue sua pesquisa sobre modelos de IA e otimização de prompts:',
           ],
           items: [
-            '[Guia de Comparação de Modelos de IA](/pt/prompt-engineering/gpt-claude-gemini-which-model) — Metodologia de comparação de múltiplos modelos e estrutura de decisão',
+            '[Guia de Comparação de Modelos de IA](/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Metodologia de comparação de múltiplos modelos e estrutura de decisão',
             '[O Que É Pontuação de Consenso em IA?](/pt/blog/what-is-ai-consensus-scoring) — Como o PromptQuorum agrega respostas entre modelos',
             '[Melhores Práticas de Otimização de Prompts](/pt/prompt-engineering/fundamentals-of-prompt-optimization) — Métodos de refinamento estruturado que melhoram as saídas em todos os modelos',
             '[Hub de Engenharia de Prompts](/pt/prompt-engineering) — Mais de 50 artigos sobre frameworks, técnicas e estratégias de otimização',
@@ -18137,7 +18137,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'AI 모델 및 프롬프트 최적화에 대한 연구를 계속하세요:',
           ],
           items: [
-            '[AI 모델 비교 가이드](/prompt-engineering/gpt-claude-gemini-which-model) — 멀티모델 비교 방법론 및 의사결정 프레임워크',
+            '[AI 모델 비교 가이드](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 멀티모델 비교 방법론 및 의사결정 프레임워크',
             '[AI 합의 점수란 무엇입니까?](/blog/what-is-ai-consensus-scoring) — PromptQuorum이 모델 전체의 응답을 집계하는 방법',
             '[프롬프트 최적화 모범 사례](/prompt-engineering/fundamentals-of-prompt-optimization) — 모든 모델에서 출력을 개선하는 구조화된 개선 방법',
             '[프롬프트 엔지니어링 허브](/prompt-engineering) — 프레임워크, 기술, 최적화 전략에 관한 50개 이상의 기사',
