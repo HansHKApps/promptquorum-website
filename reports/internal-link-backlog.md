@@ -1,23 +1,30 @@
-# Internal-link backlog — ENRICHED (Phase 1 classification)
-Generated 2026-06-28 11:58 UTC by scripts/enrich-internal-link-backlog.mjs
-Total unresolved links: 174. Heuristic slug-token + title-token classification — NOT authoritative; TITLE_MATCH/AMBIGUOUS need human review. Phase 1 = enrich only, no edits.
+# Internal-link backlog — ENRICHED (live; Phase 2 in progress)
+Generated 2026-06-28 12:27 UTC by scripts/enrich-internal-link-backlog.mjs
+Total unresolved links: 131. Heuristic slug-token + title-token classification — NOT authoritative; TITLE_MATCH/AMBIGUOUS need human review.
+
+## Phase 2 progress
+- **Started at:** 174 unresolved (snapshot in commit 4b61098a).
+- **RESOLVED this session: 43** — 18 UNREGISTERED (registered `galaxy-s26-local-ai-on-device-2026` slug+barrel, commit e15ff310) + 25 RENAMED (repointed to canonical url-slugs in 3 clean files, commit 3c9eab0a).
+- **DEFERRED: 36 RENAMED** — they live in uncommitted-WIP files (`multi-model-prompt-testing.ts` 18, `pe-for-support-operations.ts` 18); cannot be touched until that WIP lands. These still appear below under prompt-engineering → RENAMED.
+- **REMAINING: 131** (36 RENAMED-deferred + 21 TITLE_MATCH + 39 AMBIGUOUS + 35 PHANTOM).
+- **Not yet triaged (separate approval):** TITLE_MATCH, AMBIGUOUS, PHANTOM. (PHANTOM caveats unchanged: 3 malformed `/features/` paths are fixable, 1 `aclanthology.org` is an external/malformed citation.)
 
 ## Summary — counts per category per cluster
 
 | cluster | RENAMED | UNREGISTERED | TITLE_MATCH | AMBIGUOUS | PHANTOM | total |
 |---|---|---|---|---|---|---|
-| prompt-engineering | 61 | 0 | 21 | 31 | 29 | 142 |
-| local-llms | 0 | 18 | 0 | 6 | 0 | 24 |
+| prompt-engineering | 36 | 0 | 21 | 31 | 29 | 117 |
+| local-llms | 0 | 0 | 0 | 6 | 0 | 6 |
 | power-local-llm | 0 | 0 | 0 | 2 | 0 | 2 |
 | prompt-bites | 0 | 0 | 0 | 0 | 1 | 1 |
 | blog | 0 | 0 | 0 | 0 | 1 | 1 |
 | aclanthology.org | 0 | 0 | 0 | 0 | 1 | 1 |
 | features | 0 | 0 | 0 | 0 | 3 | 3 |
-| **all** | **61** | **18** | **21** | **39** | **35** | **174** |
+| **all** | **36** | **0** | **21** | **39** | **35** | **131** |
 
-## Cluster: prompt-engineering (142)
+## Cluster: prompt-engineering (117)
 
-### RENAMED (61)
+### RENAMED (36)
 
 | file | locale | anchor title | broken url | candidate target | candidate real title |
 |---|---|---|---|---|---|
@@ -57,31 +64,6 @@ Total unresolved links: 174. Heuristic slug-token + title-token classification �
 | prompt-engineering/articles/pe-for-support-operations.ts | pt | Governança de prompts em produção | /pt/prompt-engineering/prompt-governance-production | prompt-governance-in-production | Prompt Governance in Production: Roles, Review Gates, and Deployment Rules — link uses internal key; repoint to url-slug |
 | prompt-engineering/articles/pe-for-support-operations.ts | zh | 构建你的提示词框架 | /zh/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
 | prompt-engineering/articles/pe-for-support-operations.ts | zh | 生产环境中的提示词治理 | /zh/prompt-engineering/prompt-governance-production | prompt-governance-in-production | Prompt Governance in Production: Roles, Review Gates, and Deployment Rules — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | ar |  | /ar/prompt-engineering/which-framework-to-use | which-prompt-framework-should-you-use | Which Prompt Framework Should You Use? — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | ar |  | /ar/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | de |  | /de/prompt-engineering/which-framework-to-use | which-prompt-framework-should-you-use | Which Prompt Framework Should You Use? — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | de |  | /de/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | en |  | /prompt-engineering/which-framework-to-use | which-prompt-framework-should-you-use | Which Prompt Framework Should You Use? — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | en |  | /prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | es |  | /es/prompt-engineering/which-framework-to-use | which-prompt-framework-should-you-use | Which Prompt Framework Should You Use? — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | es |  | /es/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | ko |  | /ko/prompt-engineering/which-framework-to-use | which-prompt-framework-should-you-use | Which Prompt Framework Should You Use? — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | ko |  | /ko/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | pt |  | /pt/prompt-engineering/which-framework-to-use | which-prompt-framework-should-you-use | Which Prompt Framework Should You Use? — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | pt |  | /pt/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | zh |  | /zh/prompt-engineering/which-framework-to-use | which-prompt-framework-should-you-use | Which Prompt Framework Should You Use? — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/specs-framework.ts | zh |  | /zh/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/which-framework-to-use.ts | en |  | /prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/which-framework-to-use.ts | ko |  | /ko/prompt-engineering/build-your-own-framework | build-your-own-prompt-framework | Build Your Own Prompt Framework: 5-Step Design Process — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | ar |  | /ar/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | de |  | /de/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | en |  | /prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | es |  | /es/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | fr |  | /fr/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | ja |  | /ja/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | ko |  | /ko/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | pt |  | /pt/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
-| prompt-engineering/articles/zero-shot-vs-few-shot.ts | zh |  | /zh/prompt-engineering/prompt-building-blocks | 5-building-blocks-every-prompt-needs | The 5 Building Blocks Every Prompt Needs — link uses internal key; repoint to url-slug |
 
 ### TITLE_MATCH (21)
 
@@ -179,30 +161,7 @@ Total unresolved links: 174. Heuristic slug-token + title-token classification �
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | pt | Construir sistemas RAG | /pt/prompt-engineering/retrieval-augmented-generation |  |  |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | pt | Benchmarks de API LLM | /pt/prompt-engineering/llm-api-benchmarks |  |  |
 
-## Cluster: local-llms (24)
-
-### UNREGISTERED (18)
-
-| file | locale | anchor title | broken url | candidate target | candidate real title |
-|---|---|---|---|---|---|
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | ar |  | /ar/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | de |  | /de/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | en |  | /local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | es |  | /es/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | fr |  | /fr/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | ja |  | /ja/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | ko |  | /ko/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | pt |  | /pt/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/galaxy-vs-iphone-on-device-ai-2026.ts | zh |  | /zh/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | ar |  | /ar/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | de |  | /de/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | en |  | /local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | es |  | /es/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | fr |  | /fr/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | ja |  | /ja/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | ko |  | /ko/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | pt |  | /pt/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
-| local-llms/articles/hbm-memory-on-device-ai-samsung-sk-hynix-2026.ts | zh |  | /zh/local-llms/galaxy-s26-local-ai-on-device-2026 | galaxy-s26-local-ai-on-device-2026 | Running Local AI on the Galaxy S26: On-Device AI Explained (2026) — register slug in slugs.ts + barrel |
+## Cluster: local-llms (6)
 
 ### AMBIGUOUS (6)
 
