@@ -4,6 +4,7 @@ import type { Language } from '@/lib/blog/blogContent'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared',
+    dateModified: '2026-06-21',
     seoTitle: 'Best AI Coding Assistant for Local LLM 2026',
     metaDescription: 'Compare 5 AI coding assistants with native local LLM support: Ollama, LM Studio, pricing, privacy. Cursor vs Continue.dev vs Cody—verified June 2026.',
     intro: 'AI coding assistants like Cursor, Continue.dev, and Sourcegraph Cody have become essential developer tools. But most comparisons miss the crucial angle: which tools actually support local LLMs? This guide compares five leading AI coding assistants specifically for developers who want Ollama, LM Studio, or llama.cpp integration—not just cloud APIs. We cover pricing, local LLM setup depth, IDE support, and real privacy implications.',

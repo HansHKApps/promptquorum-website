@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Best Mini PC for Local LLM?',
+    dateModified: '2026-06-21',
     seoTitle: 'Best Mini PC for Local LLM 2026 | PromptQuorum',
     metaDescription: 'Mac Mini M4 hits ~18 tok/s on 7B Q4. Minisforum UM790 Pro scales to 64 GB DDR5. Beelink SER8: ~8 tok/s on a budget. Three mini PC picks for local LLM 2026.',
     publishDate: '2026-05-18',

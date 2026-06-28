@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
       title: 'LoRA Fine-Tuning for Local LLMs 2026: Unsloth Tutorial on 8 GB VRAM with Llama 3.3',
+      dateModified: '2026-06-20',
       seoTitle: 'LoRA Fine-Tuning Local LLMs 2026: Unsloth on 8 GB VRAM',
       intro: 'Fine-tuning adapts a pre-trained model to your domain using LoRA (Low-Rank Adaptation) — add small adapter layers (0.4% of total weights) instead of retraining the entire model. A Llama 3.3 8B fine-tune requires 8 GB VRAM and 1–2 hours on consumer hardware using Unsloth (2× faster than standard training ([per unsloth.ai](https://github.com/unslothai/unsloth))). As of April 2026, LoRA and QLoRA (4-bit quantized LoRA) are production-ready across Ollama, LM Studio, and vLLM.',
       metaDescription: 'Fine-tune Llama 3.3 8B on 8 GB VRAM in 1–2 hours using Unsloth (up to 2× faster than standard training, QLoRA). 500 training examples minimum. Full code + LoRA vs RAG decision guide.',

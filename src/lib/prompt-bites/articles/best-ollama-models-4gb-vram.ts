@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Best Ollama Models for 4 GB VRAM?',
+    dateModified: '2026-06-21',
     seoTitle: 'Ollama 4 GB VRAM Models 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB VRAM is tight. Phi-4 Mini Q4 (3.2 GB), Gemma 2 2B (1.5 GB), SmolLM 1.7B (1.0 GB). Llama 3 8B will not fit. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

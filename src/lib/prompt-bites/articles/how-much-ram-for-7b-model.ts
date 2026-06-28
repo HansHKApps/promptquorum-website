@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'How Much RAM Does a 7B Model Need?',
+    dateModified: '2026-06-21',
     seoTitle: 'RAM for 7B Local Models 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'A 7B model at Q4 needs 5–6 GB RAM or VRAM. CPU gives ~5 tok/s; GPU gives ~25 tok/s on the same memory. Rule: params × 0.7 = GB at Q4. PromptQuorum.',
     publishDate: '2026-05-18',

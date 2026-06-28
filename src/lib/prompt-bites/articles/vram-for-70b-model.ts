@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'How Much VRAM for a 70B Model?',
+    dateModified: '2026-06-21',
     seoTitle: '70B VRAM: 3 Run Options 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'A 70B model at Q4_K_M needs ~40 GB VRAM. Options: dual RTX 3090 (48 GB), M5 Max 128 GB unified memory, or cloud GPU. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

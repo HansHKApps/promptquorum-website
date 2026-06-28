@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'MLX vs Ollama vs llama.cpp: Which Inference Engine Should You Use?',
+    dateModified: '2026-06-21',
     seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'On Apple Silicon, use MLX (~65 tok/s on M5 Pro). On NVIDIA GPUs, use Ollama for simplicity or llama.cpp for control. Ollama wraps llama.cpp. Quick answer.',
     publishDate: '2026-05-22',

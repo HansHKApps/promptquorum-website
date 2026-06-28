@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
     title: 'Is DeepSeek GDPR Safe to Use?',
+    dateModified: '2026-06-20',
     seoTitle: 'Is DeepSeek GDPR Safe? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'DeepSeek API is the highest-risk LLM for GDPR: Chinese data law jurisdiction, no EU adequacy decision. DeepSeek local weights are lower risk. May 2026 update.',
     publishDate: '2026-05-22',

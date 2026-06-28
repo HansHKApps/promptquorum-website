@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Ollama vs LM Studio: Which Should You Pick?',
+    dateModified: '2026-06-20',
     seoTitle: 'Ollama vs LM Studio? | Prompt Bites | PromptQuorum',
     metaDescription: 'Use Ollama if you use a terminal and build with APIs. Use LM Studio if you want a GUI. Both are free and run models locally. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

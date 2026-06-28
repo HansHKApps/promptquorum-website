@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared',
+    dateModified: '2026-06-20',
     seoTitle: 'M5 Pro vs M5 Max 2026: Apple Silicon Benchmark Comparison',
     metaDescription: 'Compare Apple M5 Pro, M5 Max, and Mac Studio for local LLM: unified memory, bandwidth, tokens/sec benchmarks. Choose the right Mac for Llama 3.3 70B. 2026.',
     publishDate: '2026-05-18',

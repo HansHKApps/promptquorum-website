@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Guides',
     title: 'Can You Run a Local LLM on an Xperia Phone?',
+    dateModified: '2026-06-20',
     seoTitle: 'Local LLM on Xperia Japan 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Xperia 1 VI (12 GB) handles Phi-4 Q4 and Rinna 3.6B. Xperia 5 V (8 GB) runs 3B models. Xperia 10 VI (6 GB) is limited to TinyLlama. Use MLC Chat, no root.',
     publishDate: '2026-05-27',

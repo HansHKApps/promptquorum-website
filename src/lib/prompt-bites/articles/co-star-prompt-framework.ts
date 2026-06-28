@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Prompt Engineering',
     title: 'What Is the CO-STAR Prompt Framework?',
+    dateModified: '2026-06-21',
     seoTitle: 'CO-STAR Framework 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR is a six-part prompt framework: Context, Objective, Style, Tone, Audience, Response. Structures prompts for consistent output in 60–120 words.',
     publishDate: '2026-05-18',

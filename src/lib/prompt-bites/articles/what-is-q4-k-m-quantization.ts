@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'What Is Q4_K_M Quantization?',
+    dateModified: '2026-06-21',
     seoTitle: 'Q4_K_M Quantization Guide 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M means 4-bit k-quant at medium quality. Better than Q4_0, smaller than Q8_0. Use Q4_K_M as your default for Ollama. Quick guide from PromptQuorum.',
     publishDate: '2026-05-18',

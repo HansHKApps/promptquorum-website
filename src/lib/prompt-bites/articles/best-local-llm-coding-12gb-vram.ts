@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
     title: 'Best Local LLM for Coding with 12 GB VRAM?',
+    dateModified: '2026-06-21',
     seoTitle: 'Best Coding LLM for 12 GB 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M: top coding model for 12 GB VRAM at ~10 GB, highest HumanEval. DeepSeek 14B Q4 alternative. Both fit RTX 3060/3080 Ti 12 GB.',
     publishDate: '2026-05-18',

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Multilingual Local LLMs: Best Models for Non-English Languages in 2026',
+      dateModified: '2026-06-21',
       seoTitle: 'Best Multilingual Local LLMs 2026: Qwen3 vs Mistral',
       intro: 'Qwen3 is the strongest multilingual local LLM family in 2026, with native support for 29 languages including Chinese, Japanese, Korean, Arabic, and all major European languages. For European languages specifically, Mistral and Llama 3.x models perform competitively. For Asian languages (Japanese, Korean, Chinese), Qwen3 outperforms all alternatives at every comparable model size.',
       metaDescription: 'Qwen3 dominates Asian languages (15-25% better than Llama on JMT-bench). Mistral competitive for European languages. Benchmark comparison -- April 2026.',

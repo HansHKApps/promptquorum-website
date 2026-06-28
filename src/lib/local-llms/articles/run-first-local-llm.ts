@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'Run Your First Local LLM in 10 Minutes: Install to First Response',
+      dateModified: '2026-06-20',
       seoTitle: 'Run Your First Local LLM in 10 Minutes (Step-by-Step)',
       intro: 'Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal -- no API key, no account, and no internet connection after the initial download. As of April 2026, the fastest beginner model is Llama 3.2 3B at 25-45 tokens/sec on a modern laptop CPU.',
       metaDescription: 'Run your first local LLM in under 10 minutes with Ollama: install, pull a 3B model, and get a response -- no API key or internet needed after download.',

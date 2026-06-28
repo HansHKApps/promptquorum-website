@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
     title: 'Which Ollama Models Support 128K Context?',
+    dateModified: '2026-06-20',
     seoTitle: 'Ollama 128K Context 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B and Qwen 3 14B support 128K+ context on Ollama. Qwen 3 reaches 1M tokens. Full context increases VRAM significantly. Updated 2026.',
     publishDate: '2026-05-18',

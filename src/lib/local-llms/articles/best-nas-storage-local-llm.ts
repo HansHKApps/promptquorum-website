@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       title: 'Best NAS and Storage for Local AI Models',
+      dateModified: '2026-06-20',
       seoTitle: 'NAS Storage for Local LLMs: RAID 6, Backup & Redundancy',
       intro: '**A NAS (Network-Attached Storage) keeps your model library organized, backed up, and accessible across machines.** As of April 2026, RAID 6 storage (2 drive fault tolerance) with automated backups is essential for production local LLM teams. Budget: $1,500-3,000 for 4-8TB usable capacity.',
       metaDescription: 'Best NAS for local LLMs: RAID 6 redundancy, backup strategy, and model library organization. Compare Synology, QNAP, and TrueNAS.',

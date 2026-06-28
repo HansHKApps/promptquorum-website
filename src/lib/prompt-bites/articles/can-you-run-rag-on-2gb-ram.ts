@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quick Answers',
     title: 'Can You Run RAG on 2 GB RAM?',
+    dateModified: '2026-06-20',
     seoTitle: 'Run RAG on 2 GB RAM 2026? | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 embeddings run RAG on 2 GB RAM with ~1.3–1.5 GB footprint. 7B+ models need 8 GB. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Qwen Coder vs DeepSeek Coder: Which Is Better?',
+    dateModified: '2026-06-20',
     seoTitle: 'Qwen Coder vs DeepSeek Coder? | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder wins for Python and TypeScript. DeepSeek Coder has broader language support. Both need ~10 GB VRAM at 14B Q4. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

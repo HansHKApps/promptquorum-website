@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Setup and Performance',
+    dateModified: '2026-06-20',
     seoTitle: 'Strix Halo Ollama Vulkan Setup 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB unified memory, runs 70B models via Ollama Vulkan on Linux. ~20 tok/s on Llama 3.3 8B. Quick answer from PromptQuorum.',
     publishDate: '2026-05-23',

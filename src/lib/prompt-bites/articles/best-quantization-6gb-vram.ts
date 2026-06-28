@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Best Quantization for 6 GB VRAM: Which Level Fits?',
+    dateModified: '2026-06-21',
     seoTitle: 'Best Quantization for 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M for 7B models: 4.9 GB, fits 6 GB VRAM with 1.1 GB for context. Q5_K_M fits tight. Q6_K and above exceed 6 GB. Quick answer from PromptQuorum.',
     publishDate: '2026-05-23',

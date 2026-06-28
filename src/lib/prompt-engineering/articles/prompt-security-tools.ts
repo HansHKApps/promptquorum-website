@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'evergreen',
     theme: 'Team Governance',
     title: 'Prompt Security Testing: Tools and Methods to Detect Injection Vulnerabilities',
+    dateModified: '2026-06-20',
     seoTitle: 'Prompt Injection Testing: Garak & PyRIT Tools',
     metaDescription: 'Test prompt injection with Garak (40+ attacks) and PyRIT (multi-turn). 4-layer defense: input filtering, schema, privilege separation, isolation.',
     ogDescription: 'Detect prompt injection vulnerabilities: direct and indirect attacks, Garak and PyRIT tools, 4-layer defense stack. Cross-model testing with PromptQuorum.',

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Enterprise',
       title: 'Why Enterprises Use Local LLMs: Cost, Compliance, and Control',
+      dateModified: '2026-06-21',
       seoTitle: 'Why Enterprises Choose Local LLMs',
       intro: 'Enterprises deploy local LLMs for three reasons: cost savings (eliminate per-token API fees), compliance (GDPR, HIPAA require data residency), and control (customize models, audit everything, no vendor lock-in). As of April 2026, 40% of enterprises with 500+ employees are evaluating or deploying on-premises AI.',
       metaDescription: 'Why enterprises use local LLMs: cost analysis, GDPR/HIPAA compliance, data sovereignty, vendor lock-in avoidance.',

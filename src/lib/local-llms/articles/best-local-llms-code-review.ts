@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Models by Use Case',
       title: 'Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM',
+      dateModified: '2026-06-20',
       seoTitle: 'Best Local LLMs for Code Review 2026: Accuracy vs Speed',
       intro: '**As of April 2026, the best local LLMs for code review are Qwen3-Coder 32B (best overall accuracy), Llama 3.3 70B (best security analysis), and DeepSeek-R1 14B (best algorithmic review).** 7B models catch ~45% of real bugs -- too low for serious review. 32B+ models catch 80-88% and are the practical minimum for pre-merge code review pipelines.',
       metaDescription: 'Qwen3-Coder 32B catches 88% of code review bugs. Llama 3.3 70B best for security. DeepSeek-R1 14B for algorithms. Comparison by code type -- 2026.',

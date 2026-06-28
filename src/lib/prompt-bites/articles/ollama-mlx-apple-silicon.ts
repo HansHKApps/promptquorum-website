@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Does Ollama Support MLX on Apple Silicon?',
+    dateModified: '2026-06-21',
     seoTitle: 'Ollama MLX Apple Silicon Support 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'No — Ollama uses llama.cpp + Metal, not MLX. For native MLX inference on Apple Silicon, use mlx-lm or LM Studio. LM Studio supports both MLX and llama.cpp backends.',
     publishDate: '2026-05-22',

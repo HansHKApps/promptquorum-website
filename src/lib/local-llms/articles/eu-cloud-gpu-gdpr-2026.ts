@@ -4,6 +4,7 @@ import type { Language } from '@/lib/blog/blogContent'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud (Tested May 2026)',
+    dateModified: '2026-06-21',
     seoTitle: 'EU GDPR Cloud GPU 2026: Hetzner, Scaleway, OVHcloud',
     metaDescription: 'Compare EU GDPR-compliant cloud GPU providers in 2026: Hetzner, Scaleway, OVHcloud. Pricing, data residency, AI Act compliance verified.',
     intro: 'EU customers processing personal data must use GDPR-compliant cloud GPU providers. This guide compares seven GDPR-native options (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) tested May 2026 by pricing, compliance posture, and Schrems II risk. All featured providers guarantee EU data residency and offer proper DPAs.',

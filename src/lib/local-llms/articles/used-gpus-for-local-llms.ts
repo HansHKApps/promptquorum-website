@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'GPU Buying Guides',
       title: 'Used GPUs for Local LLMs: Best Value Picks',
+      dateModified: '2026-06-20',
       seoTitle: 'Best Used GPUs for Local LLMs: RTX 3060, 3080, 4090 Buying Guide',
       intro: '**Used GPUs offer 30-50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080.** As of April 2026, the used market is flooded with ex-mining and ex-gaming cards at stable prices. Buying used makes sense for your first rig or when upgrading; mining cards are risky unless you can test on-site.',
       metaDescription: 'Best used GPUs for local LLMs: RTX 3060, 3080, 3090, 4090. Where to buy, risk assessment, how to bench-test.',

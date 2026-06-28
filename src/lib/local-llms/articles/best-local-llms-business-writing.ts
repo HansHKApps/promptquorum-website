@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Models by Use Case',
       title: 'Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice',
+      dateModified: '2026-06-20',
       seoTitle: 'Best Local LLMs for Business Writing 2026: Email & Memos',
       intro: '**As of April 2026, the best local LLMs for business writing are Mistral Small 3.1 24B (most concise, best tone control), Qwen3 7B (best non-English business writing), and Llama 3.3 8B (most adaptable to brand voice examples). For business writing, smaller 7B-24B models outperform 70B -- they produce cleaner, more concise output without over-explaining.**',
       metaDescription: 'Mistral Small 3.1 24B leads for emails and memos. Qwen3 7B excels at non-English writing. 7B-24B models outperform 70B. Ollama setup in 10 minutes.',

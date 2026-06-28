@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Run 70B LLMs on Consumer Hardware 2026: RAM & GPU Setup',
+      dateModified: '2026-06-20',
       seoTitle: '70B on Consumer Hardware 2026: RAM, GPU Setup Guide',
       intro: 'Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen3 72B are the two primary 70B models available.',
       metaDescription: 'Run Llama 3.3 and Qwen3 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- April 2026.',

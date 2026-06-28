@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'Jan AI vs LM Studio: Which Is Better for Local LLMs?',
+      dateModified: '2026-06-20',
       seoTitle: 'Jan AI vs LM Studio 2026: Features, Speed, UI Comparison',
       intro: '**LM Studio (v0.4.16) and Jan AI (v0.8.2) are both desktop apps for running local LLMs without CLI overhead.** As of June 2026, LM Studio excels at simplicity and model management; Jan AI is open-source and emphasizes privacy/extensibility. For casual users, LM Studio. For developers wanting control, Jan AI. Neither is dramatically faster than Ollama + OpenWebUI.',
       metaDescription: 'Jan AI vs LM Studio June 2026: Feature comparison, privacy, UI, API support. LM Studio 0.4.16 vs Jan AI 0.8.2. Which local LLM desktop app is better?',

@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quick Answers',
     title: 'Best Local LLM for a 16 GB RAM Laptop?',
+    dateModified: '2026-06-21',
     seoTitle: 'Best LLM 16 GB Laptop 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M (~5 tok/s) best for 16 GB laptops. Qwen 3 Coder 7B optimal for coding. Apple Silicon ~3× faster. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

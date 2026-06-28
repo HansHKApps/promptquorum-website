@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Qwen 14B vs Llama 3 8B: Which Runs Better Locally?',
+    dateModified: '2026-06-20',
     seoTitle: 'Qwen 14B vs Llama 3 8B: Which? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, higher benchmarks, 74.8% MMLU. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

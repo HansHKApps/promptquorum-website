@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Prompt Engineering',
     title: 'Best LLM Right Now?',
+    dateModified: '2026-06-21',
     seoTitle: 'Best LLM Models 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Cloud coding: Claude Opus 4.8 (87.6% SWE-Bench). General chat: GPT-5.5 Instant (52.5% fewer hallucinations). Local: Llama 4 Scout or Qwen 3 14B. Updated monthly.',
     publishDate: '2026-05-18',

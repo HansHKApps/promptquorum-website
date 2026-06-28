@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
     title: 'Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini',
+    dateModified: '2026-06-21',
     seoTitle: 'Multi-Model Prompt Testing: Compare GPT-5.5, Claude, Gemini',
     metaDescription: 'Multi-model prompt testing: why outputs differ on GPT-5.5, Claude 4.6, Gemini 2.5. Build a test matrix, score results with PromptQuorum and Promptfoo.',
     ogDescription: 'How to test prompts across multiple models — why outputs diverge, how to build a test matrix, scoring criteria, tools (PromptQuorum, Promptfoo), and how to read multi-model results.',

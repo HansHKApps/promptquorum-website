@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Best Local LLM Stack for Developers (April 2026)',
+      dateModified: '2026-06-21',
       seoTitle: 'Local LLM Dev Stack: CLI → API → Production Setup Guide 2026',
       intro: '**Developers should use vLLM + FastAPI + VS Code Copilot extension for production-grade local LLM inference.** As of April 2026, this stack enables real-time code completions, batch processing, and OpenAI API compatibility without vendor lock-in. Alternative (simpler): Ollama + llama.cpp CLI for one-off scripts.',
       metaDescription: 'Build a local LLM dev environment in 3 tiers: (1) Ollama CLI in 5 min, (2) vLLM + FastAPI server in 30 min, (3) production multi-GPU with nginx and Prometheus. VS Code and Cursor IDE integration. April 2026.',

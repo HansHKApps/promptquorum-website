@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'Scaling Local LLMs for Enterprise: Multi-User, Multi-GPU Production Deployment',
+      dateModified: '2026-06-20',
       seoTitle: 'Enterprise Scale Local LLMs',
       intro: 'Scaling from single-machine to production means: multi-user load balancing, redundancy, monitoring, and disaster recovery. As of April 2026, enterprise deployments use Kubernetes to orchestrate 5-50 GPUs across inference pods, serving 50-500 concurrent users, with 99.9% uptime requirements.',
       metaDescription: 'Scale local LLMs: Kubernetes, load balancing, redundancy, monitoring. Multi-GPU production deployment.',

@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
     title: 'Can You Run Local LLMs on a Radeon RX 6800M?',
+    dateModified: '2026-06-21',
     seoTitle: 'Radeon 6800M Local LLM? | Prompt Bites | PromptQuorum',
     metaDescription: 'Yes — Radeon RX 6800M (12 GB VRAM) runs LLMs via ROCm on Linux or llama.cpp on all platforms. Llama 3 8B Q4 runs at ~12 tok/s. Windows ROCm support is limited.',
     publishDate: '2026-05-18',

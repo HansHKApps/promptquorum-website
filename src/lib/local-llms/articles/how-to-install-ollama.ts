@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
+      dateModified: '2026-06-21',
       seoTitle: 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
       intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library -- no Python environment, no configuration files, and no GPU required to get started. As of April 2026, Ollama supports 200+ models including Meta Llama 3.3, Qwen3, and Mistral.',
       metaDescription: 'Install Ollama in 2 minutes on any OS: download, run `ollama run llama3.2`, start chatting. Complete setup guide with troubleshooting for Beginners 2026.',

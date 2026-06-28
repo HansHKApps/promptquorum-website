@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
       title: 'Multimodal Local LLMs: Vision, Audio, and Text Processing',
+      dateModified: '2026-06-20',
       seoTitle: 'Multimodal Local LLMs',
       intro: 'Multimodal models process images, text, and audio. As of April 2026, Llama 3.2 Vision, Gemma 3 Vision, and Qwen2-VL are practical multimodal models for local deployment. They enable document OCR, image analysis, and visual question-answering without cloud APIs.',
       metaDescription: 'Multimodal local LLMs 2026: vision, image processing, OCR, audio models. LLaVA, Qwen-VL guides with use cases.',

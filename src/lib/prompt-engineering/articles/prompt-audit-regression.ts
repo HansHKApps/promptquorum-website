@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'evergreen',
     theme: 'Team Governance',
     title: 'Prompt Audit & Regression Testing: Catch Silent Failures Before Production (2026)',
+    dateModified: '2026-06-20',
     seoTitle: 'Prompt Audit & Regression Testing: Catch Silent Failures',
     metaDescription: 'Build a prompt test suite with golden examples, edge cases, and adversarial inputs. Block deployment when pass rate drops >5%. Promptfoo, Braintrust, PromptQuorum compared.',
     ogDescription: 'Prompt regression testing: 3-component test suite, 5-step audit process, CI/CD gate at 5% threshold. Promptfoo (free), Braintrust (cloud), PromptQuorum (multi-model).',

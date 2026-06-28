@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Headless Local LLMs: Running Models Without a UI (2026)',
+      dateModified: '2026-06-20',
       seoTitle: 'Headless Local LLM Deployment',
       intro: 'A headless local LLM is a model running as a service (API) with no chat interface or UI. You interact via REST API from Python, Node.js, or curl. Headless deployments are ideal for production servers, batch processing, and automation. As of April 2026, this is the standard for production deployments.',
       metaDescription: 'Headless local LLM deployment 2026: run Ollama, vLLM, and inference APIs without UI. Production setup for servers and microservices.',

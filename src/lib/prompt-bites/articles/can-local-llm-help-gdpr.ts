@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
     title: 'Can a Local LLM Help with GDPR Compliance?',
+    dateModified: '2026-06-20',
     seoTitle: 'Can Local LLM Help GDPR Compliance? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Yes — running an open-weight LLM locally eliminates the GDPR Article 44 third-country transfer problem entirely. Best models for data-sensitive orgs in 2026.',
     publishDate: '2026-05-22',

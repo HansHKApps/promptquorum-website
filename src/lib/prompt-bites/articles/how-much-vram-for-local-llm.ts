@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'How Much VRAM Do You Need for a Local LLM?',
+    dateModified: '2026-06-21',
     seoTitle: 'VRAM Tiers for Local LLMs 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB runs Phi-4 Mini at Q4. 6 GB handles Llama 3 8B Q4_K_M. 12 GB unlocks Qwen 14B. Formula: params × 0.7 = GB at Q4. VRAM tier guide from PromptQuorum.',
     publishDate: '2026-05-18',

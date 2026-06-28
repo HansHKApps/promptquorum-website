@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tools & Interfaces',
     type: 'comparison',
     title: 'Best AI Text-to-Speech for Content Creators 2026',
+    dateModified: '2026-06-21',
     seoTitle: 'Best AI Text-to-Speech for Content Creators 2026',
     metaDescription: 'Best AI text-to-speech tools for content creators in 2026 — ElevenLabs, Kokoro, Piper, and Coqui XTTS compared by voice quality, pricing, and local vs cloud options.',
     educationalLevel: 'Beginner',

@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: Which to Run Locally?',
+    dateModified: '2026-06-20',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B: 4.9 GB VRAM. Qwen 3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. Pick by VRAM tier. Quick answer from PromptQuorum.',
     publishDate: '2026-05-23',

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain',
+      dateModified: '2026-06-20',
       seoTitle: 'Best Local RAG Tools Comparison',
       intro: 'RAG (Retrieval-Augmented Generation) lets your local LLM answer questions about your own documents. As of April 2026, Open WebUI has the easiest built-in RAG (upload documents, ask questions), while LlamaIndex and LangChain are professional-grade frameworks for building RAG pipelines. This guide covers 8 tools across ease-of-use, features, and production readiness.',
       metaDescription: 'Best local RAG tools: Open WebUI, LlamaIndex, LangChain, and more. Document Q&A, retrieval, chunking.',

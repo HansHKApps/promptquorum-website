@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'Best Ollama Models for RTX 3060 12 GB?',
+    dateModified: '2026-06-20',
     seoTitle: 'Best Ollama Models for RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Qwen3 7B (7 GB VRAM, 40 tok/s) for general tasks, Phi-4 Q4_K_M for reasoning, Mistral Nemo 12B for chat. All run at 30–50 tok/s. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

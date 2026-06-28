@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
     title: 'Can You Run Qwen 3 on Ollama?',
+    dateModified: '2026-06-20',
     seoTitle: 'Run Qwen 3 on Ollama 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Yes — Ollama supports all Qwen 3 sizes from 0.6B to 72B. Run with: ollama run qwen3:8b. The 8B model needs ~6 GB VRAM. MoE variant available. Updated May 2026.',
     publishDate: '2026-05-18',

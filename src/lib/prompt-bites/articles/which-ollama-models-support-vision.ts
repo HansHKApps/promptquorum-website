@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
     title: 'Which Ollama Models Support Vision?',
+    dateModified: '2026-06-21',
     seoTitle: 'Ollama Vision Models 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal, and Qwen-VL support vision on Ollama. Start: ollama run llava. All accept images via the Ollama API. Updated 2026.',
     publishDate: '2026-05-18',

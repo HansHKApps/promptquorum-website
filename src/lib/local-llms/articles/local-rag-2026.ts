@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
       title: 'Local RAG 2026: Build Document Q&A Systems Without Cloud APIs',
+      dateModified: '2026-06-20',
       seoTitle: 'Local RAG 2026 Guide',
       intro: 'Retrieval-Augmented Generation (RAG) lets your local LLM answer questions about your own documents. You upload PDFs and text files, the system converts them to embeddings, stores them in a vector database, and retrieves relevant chunks when answering questions. As of April 2026, local RAG is production-ready and eliminates API costs.',
       metaDescription: 'Local RAG 2026: build document Q&A systems, vector databases, chunking strategies, and retrieval optimization. Complete guide.',

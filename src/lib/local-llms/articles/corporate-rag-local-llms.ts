@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Enterprise',
       title: 'Corporate RAG With Local LLMs: Document Q&A for Organizations',
+      dateModified: '2026-06-20',
       seoTitle: 'Corporate RAG Local LLMs',
       intro: 'RAG (Retrieval-Augmented Generation) applied to corporate documents: policies, contracts, internal wikis, research papers. Local RAG keeps proprietary documents on-premises, eliminates API costs, and provides full audit trails. As of April 2026, corporate RAG is the #1 enterprise use case for local LLMs.',
       metaDescription: 'Corporate RAG with local LLMs: secure document Q&A, proprietary knowledge bases, audit trails, multi-user access control, enterprise.',

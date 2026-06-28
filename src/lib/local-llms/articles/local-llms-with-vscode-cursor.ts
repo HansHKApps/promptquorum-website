@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
+      dateModified: '2026-06-20',
       seoTitle: 'Local LLMs in VS Code and Cursor: 2026 Setup Guide',
       intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B-13B models and require 8-16 GB RAM. This guide covers setup, best models, and performance tuning.',
       metaDescription: 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Hardware Setups',
       title: 'Build a Local LLM PC: Best Workstation Setup (GPU, VRAM, 7B–70B Models)',
+      dateModified: '2026-06-20',
       seoTitle: 'Local LLM Workstation Build 2026: Dual RTX 4090, $4–6K, 70B Ready',
       intro: '**A professional workstation for production local LLM inference costs $4,000–6,000 and features dual RTX 4090 GPUs (48 GB VRAM combined), Threadripper 7970X CPU (32 cores), 128 GB DDR5 RAM, custom cooling, and a 2,000 W power supply.** As of April 2026, this tier serves 2–3 concurrent 70B users at 14 tok/s each, runs Llama 3.3 70B fine-tuning side-by-side with inference, and provides on-premises deployment without cloud API costs.',
       metaDescription: 'Build a powerful local LLM workstation with the right GPU, VRAM, and RAM. Exact PC setups to run 7B–70B models fast with Ollama and LM Studio.',

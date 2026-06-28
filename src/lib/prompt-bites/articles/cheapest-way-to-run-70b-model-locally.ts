@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware & Performance',
     type: 'comparison',
     title: 'Cheapest Way to Run a 70B Model Locally in 2026',
+    dateModified: '2026-06-21',
     seoTitle: 'Cheapest Way to Run 70B Model Locally 2026',
     metaDescription: 'The cheapest ways to run a 70B LLM locally in 2026: Mac Mini M4 Pro 48GB ($2,000), dual RTX 3090 ($2,200), and CPU-only with 128GB RAM. Performance vs cost compared.',
     educationalLevel: 'Intermediate',

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Install LM Studio: GUI Setup for macOS, Windows & Linux',
+      dateModified: '2026-06-20',
       seoTitle: 'Install LM Studio: GUI Setup for macOS, Windows & Linux',
       intro: 'LM Studio is a desktop application that lets you browse, download, and run local LLMs through a graphical interface -- no terminal commands required. It runs on macOS, Windows, and Linux, and includes a built-in chat UI and an OpenAI-compatible local server. As of April 2026, LM Studio supports any GGUF-quantized model from Hugging Face.',
       metaDescription: 'Install LM Studio on macOS, Windows, or Linux: download, load a model, and start chatting in 5 minutes. No terminal needed. Beginner guide 2026.',

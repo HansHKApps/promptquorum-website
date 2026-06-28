@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning',
+      dateModified: '2026-06-20',
       seoTitle: 'LM Studio vs Ollama: API Server, GPU Layers & LoRA 2026',
       intro: 'LM Studio is primarily a chat app, but it also includes advanced features for developers: GPU memory configuration, context window adjustment, OpenAI-compatible API, and integration with fine-tuning tools. As of April 2026, LM Studio is expanding beyond chat to support professional workflows like LoRA fine-tuning and batch inference.',
       metaDescription: "LM Studio's API server (port 1234), GPU layers slider, context window tuning, LoRA load/unload, and batch inference: advanced guide for 2026.",

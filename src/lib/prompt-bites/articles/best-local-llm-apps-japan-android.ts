@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'What Are the Best Local LLM Apps for Android in Japan?',
+    dateModified: '2026-06-20',
     seoTitle: 'Best Android LLMs Japan 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'MLC Chat runs Rinna 3.6B on 4 GB RAM. PocketPal AI handles ELYZA-7B on 6 GB. Termux+Ollama adds Qwen3 7B for 8 GB+ devices. All run offline in Japan.',
     publishDate: '2026-05-27',

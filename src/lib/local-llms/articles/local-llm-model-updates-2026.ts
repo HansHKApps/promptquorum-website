@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Local LLM Model Updates 2026: Every Major Open-Weight Release This Year',
+      dateModified: '2026-06-21',
       seoTitle: 'Local LLM 2026: Every Major Model Release + Ollama Status',
       intro: 'As of April 2026, the most significant local LLM releases this year include Meta Llama 3.3 70B (December 2025), DeepSeek-R1 (January 2025), Qwen3 and Qwen3-Coder families (September 2025), Microsoft Phi-4 (December 2024), and Google Gemma 3 (February 2026). This article tracks all major model releases with their key specifications and Ollama availability.',
       metaDescription: 'Local LLM model updates 2026: Gemma 3, Llama 4 Scout, Q1 releases tracked with specs, MMLU benchmarks, and Ollama availability. April 2026.',

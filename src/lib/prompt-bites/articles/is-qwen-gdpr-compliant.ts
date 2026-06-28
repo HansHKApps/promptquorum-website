@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
     title: 'Is Qwen GDPR Compliant?',
+    dateModified: '2026-06-20',
     seoTitle: 'Is Qwen GDPR Compliant? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen run locally is GDPR-compliant — no data transfer, no Article 44 issue. Qwen API (Alibaba Cloud) requires SCCs like any non-EU cloud provider. Updated May 2026.',
     publishDate: '2026-05-22',

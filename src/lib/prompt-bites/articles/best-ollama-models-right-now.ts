@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
     title: 'Best Ollama Models Right Now?',
+    dateModified: '2026-06-21',
     seoTitle: 'Best Ollama Models 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Best general Ollama model: Llama 3 8B Q4. Best coding: Qwen 3 Coder 14B Q4. Best compact: Phi-4 Mini Q4. Updated monthly. Last verified May 2026.',
     publishDate: '2026-05-18',

@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Hardware Setups',
       next_refresh_due: '2026-12-19',
       title: 'Best Laptops for Running Local LLMs',
+      dateModified: '2026-06-21',
       seoTitle: 'Best Laptop for Local LLMs 2026: MacBook M5 Pro vs RTX 5080 Compared',
       intro: '**The MacBook Pro M5 Pro ($2,199) is the best laptop for local LLMs in 2026 — silent, 24 GB unified memory, and 45–60 tok/s on 14B models at Q4.** On the Windows side, the RTX 5080 laptop (~$2,799, 16 GB GDDR7) runs 7B–14B models at 60–80 tok/s. Both outperform any 2023-era RTX 4070 laptop or notebook by 30–50% in sustained LLM throughput.',
       metaDescription: 'MacBook Pro M5 Pro ($2,199, 24 GB) runs Qwen3 14B at 45–60 tok/s — best laptop for local LLMs in 2026. Windows: RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s). Full benchmark comparison.',

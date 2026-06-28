@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
     title: 'Best Ollama Models for CPU Only?',
+    dateModified: '2026-06-21',
     seoTitle: 'Best Ollama Models Without GPU 2026 | PromptQuorum',
     metaDescription: 'Phi-4 Mini Q4 is the best CPU-only Ollama model: 4 GB RAM, ~5 tok/s. Llama 3 8B Q4 needs 8 GB RAM. Gemma 2B is fastest at ~6 tok/s. No GPU required.',
     publishDate: '2026-05-18',

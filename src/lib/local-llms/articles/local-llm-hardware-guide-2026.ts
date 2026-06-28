@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       next_refresh_due: '2026-07-15',
       last_full_refresh: '2026-06-15',
       lastFactChecked: '2026-06-15',
+      dateModified: '2026-06-21',
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
       seoTitle: 'Local LLM Hardware Requirements 2026: Best Models by VRAM',

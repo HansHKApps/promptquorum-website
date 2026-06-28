@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
       title: 'Desktop vs Web UI for Local LLMs: Which Interface Should You Choose?',
+      dateModified: '2026-06-20',
       seoTitle: 'Desktop vs Web UI for Local LLMs',
       intro: 'Local LLM tools come in two interface styles: desktop applications (LM Studio, Jan AI) and web UIs (Open WebUI, Enchanted UI). Desktop apps are simpler for consumers; web UIs are more powerful and shareable. As of April 2026, both approaches are mature, and the choice depends entirely on your workflow.',
       metaDescription: 'Desktop vs web UI for local LLMs 2026: comparison on interfaces, features, sharing, scalability. When to use each for production deployment.',

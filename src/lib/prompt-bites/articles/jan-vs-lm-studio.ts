@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Jan vs LM Studio: Which Is Better?',
+    dateModified: '2026-06-20',
     seoTitle: 'Jan vs LM Studio: Which to Use | Prompt Bites | PromptQuorum',
     metaDescription: 'Jan: open source, ~30 extensions. LM Studio: polished UI, larger library. For customization pick Jan; for ease, LM Studio. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',

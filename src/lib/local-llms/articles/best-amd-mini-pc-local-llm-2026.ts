@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared',
+    dateModified: '2026-06-21',
     seoTitle: 'Best Mini PC for Local LLM 2026: AMD Ryzen AI Max+ Compared',
     metaDescription: 'Best AMD mini PCs for running 70B local LLMs in 2026. Minisforum MS-A2, Beelink GTR9 Pro, GMKtec EVO-X2, AOOSTAR GEM12 Pro — benchmarks, Ollama setup, vs AceMagic & Geekom. June 2026.',
     publishDate: '2026-05-17',

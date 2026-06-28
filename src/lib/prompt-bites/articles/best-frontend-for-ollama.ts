@@ -5,6 +5,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Best Frontend for Ollama?',
+    dateModified: '2026-06-20',
     seoTitle: 'Best Frontend for Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI is the best Ollama frontend. SillyTavern for roleplay, Jan for model management. All three are free and open source. Updated May 2026.',
     publishDate: '2026-05-18',

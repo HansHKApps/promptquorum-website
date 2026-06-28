@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Isolated Deployment for Classified Environments',
+      dateModified: '2026-06-21',
       seoTitle: 'Air-Gapped Local LLM Deployment',
       intro: 'Air-gapped deployment means the LLM infrastructure is completely isolated from the internet. No internet connection, no external API calls, no data exfiltration risk. As of April 2026, this is standard for government, military, and financial institutions handling classified or highly sensitive data.',
       metaDescription: 'Air-gapped local LLM deployment: complete isolation architecture, network security, updates management, and classified data handling.',

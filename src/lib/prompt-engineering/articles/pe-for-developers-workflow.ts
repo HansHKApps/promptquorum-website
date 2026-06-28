@@ -6,6 +6,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
     title: 'Prompt Engineering Workflow for Developers: IDE Setup, Testing, and CI/CD Integration',
+    dateModified: '2026-06-20',
     seoTitle: 'Prompt Engineering for Developers: IDE & CI/CD Setup',
     metaDescription: '5-stage prompt workflow: write in Cursor/VS Code, test with Promptfoo in 30s, version in Git, gate CI/CD at 85% pass rate, monitor production.',
     ogDescription: 'Developer prompt workflow: Cursor or VS Code IDE, 30-second local test loop, Git versioning, GitHub Actions CI/CD gate, production quality monitoring.',

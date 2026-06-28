@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       title: 'VPNs and Local AI: What You Need to Know',
+      dateModified: '2026-06-20',
       seoTitle: 'VPNs for Local LLM Teams: Remote Access, Security, Split Tunneling',
       intro: '**Remote team members can access the local LLM server via corporate VPN without exposing it to the public internet.** As of April 2026, VPN + firewall rules replace cloud API subscription for distributed teams. This guide covers setup, performance impact, and security considerations.',
       metaDescription: 'VPN for local LLM server access: WireGuard, OpenVPN setup. Remote team access, security. Split tunneling guide.',
