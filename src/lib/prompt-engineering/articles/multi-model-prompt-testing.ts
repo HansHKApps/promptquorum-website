@@ -230,8 +230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'How to Evaluate and Compare LLM Models' },
           { title: 'Prompt Testing and Validation: Automated Test Suites for LLMs' },
-          { title: 'Introduction to Promptfoo: Testing Prompts Locally and in CI/CD', url: '/prompt-engineering/promptfoo-testing' },
-          { title: 'Cost Optimization: Choosing Between GPT-5.5, Claude, and Gemini', url: '/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Introduction to Promptfoo: Testing Prompts Locally and in CI/CD', url: '/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -403,8 +402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Wie man LLM-Modelle evaluiert und vergleicht' },
           { title: 'Prompt-Testing und Validierung: Automatisierte Test-Suites für LLMs' },
-          { title: 'Einführung in Promptfoo: Prompts lokal und in CI/CD testen', url: '/de/prompt-engineering/promptfoo-testing' },
-          { title: 'Kostenoptimierung: Auswahl zwischen GPT-5.5, Claude und Gemini', url: '/de/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Einführung in Promptfoo: Prompts lokal und in CI/CD testen', url: '/de/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -647,8 +645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Cómo evaluar y comparar modelos LLM' },
           { title: 'Pruebas y validación de prompts: suites automatizadas para LLMs' },
-          { title: 'Introducción a Promptfoo: probar prompts localmente y en CI/CD', url: '/es/prompt-engineering/promptfoo-testing' },
-          { title: 'Optimización de costes: elegir entre GPT-5.5, Claude y Gemini', url: '/es/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Introducción a Promptfoo: probar prompts localmente y en CI/CD', url: '/es/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -890,8 +887,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Como avaliar e comparar modelos LLM' },
           { title: 'Testes e validação de prompts: suítes automatizadas para LLMs' },
-          { title: 'Introdução ao Promptfoo: testar prompts localmente e em CI/CD', url: '/pt/prompt-engineering/promptfoo-testing' },
-          { title: 'Otimização de custos: escolher entre GPT-5.5, Claude e Gemini', url: '/pt/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Introdução ao Promptfoo: testar prompts localmente e em CI/CD', url: '/pt/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -1063,8 +1059,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'Comment évaluer et comparer les modèles LLM' },
           { title: 'Tests et validation de prompts : test suites pour LLMs' },
-          { title: 'Introduction à Promptfoo : tester les prompts localement et en CI/CD', url: '/fr/prompt-engineering/promptfoo-testing' },
-          { title: 'Optimisation des coûts : choisir entre GPT-5.5, Claude et Gemini', url: '/fr/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Introduction à Promptfoo : tester les prompts localement et en CI/CD', url: '/fr/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -1236,8 +1231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'LLMモデルの評価と比較方法' },
           { title: 'プロンプトテストと検証：LLM向けテストスイート自動化' },
-          { title: 'Promptfoo入門：ローカルとCI/CDでのPromptテスト', url: '/ja/prompt-engineering/promptfoo-testing' },
-          { title: 'コスト最適化：GPT-5.5、Claude、Gemini選択ガイド', url: '/ja/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Promptfoo入門：ローカルとCI/CDでのPromptテスト', url: '/ja/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -1391,8 +1385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: '如何评估和比较LLM模型' },
           { title: '提示词测试和验证：LLM自动化测试套件' },
-          { title: 'Promptfoo入门：本地和CI/CD中的提示词测试', url: '/zh/prompt-engineering/promptfoo-testing' },
-          { title: '成本优化：GPT-5.5、Claude、Gemini选择指南', url: '/zh/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Promptfoo入门：本地和CI/CD中的提示词测试', url: '/zh/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -1654,8 +1647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'كيفية تقييم نماذج LLM ومقارنتها' },
           { title: 'اختبار الـ prompt والتحقق منه: مجموعات اختبار تلقائية لنماذج LLM' },
-          { title: 'مقدمة إلى Promptfoo: اختبار الـ prompts محليًا وفي CI/CD', url: '/ar/prompt-engineering/promptfoo-testing' },
-          { title: 'تحسين التكلفة: الاختيار بين GPT-5.5 وClaude وGemini', url: '/ar/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'مقدمة إلى Promptfoo: اختبار الـ prompts محليًا وفي CI/CD', url: '/ar/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {
@@ -1898,8 +1890,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           { title: 'LLM 모델 평가 및 비교 방법' },
           { title: '프롬프트 테스트 및 검증: LLM을 위한 자동화된 테스트 스위트' },
-          { title: 'Promptfoo 소개: 로컬 및 CI/CD에서 프롬프트 테스트', url: '/ko/prompt-engineering/promptfoo-testing' },
-          { title: '비용 최적화: GPT-5.5, Claude, Gemini 중 선택', url: '/ko/prompt-engineering/cost-optimization-model-selection' },
+          { title: 'Promptfoo 소개: 로컬 및 CI/CD에서 프롬프트 테스트', url: '/ko/prompt-engineering/best-prompt-testing-evaluation-tools' },
         ],
       },
       relatedReading: {

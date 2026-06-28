@@ -238,7 +238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Related Articles',
         id: 'related',
         items: [
-          { title: 'How to Write Effective Prompts', url: '/prompt-engineering/how-to-write-effective-prompts' },
+          { title: 'How to Write Effective Prompts', url: '/prompt-engineering/what-is-prompt-engineering' },
           { title: 'Prompt Engineering Frameworks', url: '/prompt-engineering/frameworks' },
           { title: 'Cost Optimization for LLMs', url: '/prompt-engineering/cost-optimization' },
           { title: 'Building RAG Systems', url: '/prompt-engineering/retrieval-augmented-generation' },
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Ähnliche Artikel',
         id: 'related',
         items: [
-          { title: 'Effektive Prompts schreiben', url: '/de/prompt-engineering/how-to-write-effective-prompts' },
+          { title: 'Effektive Prompts schreiben', url: '/de/prompt-engineering/what-is-prompt-engineering' },
           { title: 'Prompt-Engineering-Frameworks', url: '/de/prompt-engineering/frameworks' },
           { title: 'Kostenoptimierung für LLMs', url: '/de/prompt-engineering/cost-optimization' },
           { title: 'RAG-Systeme aufbauen', url: '/de/prompt-engineering/retrieval-augmented-generation' },
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Artículos relacionados',
         id: 'related',
         items: [
-          { title: 'Cómo escribir prompts efectivos', url: '/es/prompt-engineering/how-to-write-effective-prompts' },
+          { title: 'Cómo escribir prompts efectivos', url: '/es/prompt-engineering/what-is-prompt-engineering' },
           { title: 'Frameworks de prompt engineering', url: '/es/prompt-engineering/frameworks' },
           { title: 'Optimización de costes para LLMs', url: '/es/prompt-engineering/cost-optimization' },
           { title: 'Construir sistemas RAG', url: '/es/prompt-engineering/retrieval-augmented-generation' },
@@ -1005,7 +1005,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Artigos relacionados',
         id: 'related',
         items: [
-          { title: 'Como escrever prompts eficazes', url: '/pt/prompt-engineering/how-to-write-effective-prompts' },
+          { title: 'Como escrever prompts eficazes', url: '/pt/prompt-engineering/what-is-prompt-engineering' },
           { title: 'Frameworks de prompt engineering', url: '/pt/prompt-engineering/frameworks' },
           { title: 'Otimização de custos para LLMs', url: '/pt/prompt-engineering/cost-optimization' },
           { title: 'Construir sistemas RAG', url: '/pt/prompt-engineering/retrieval-augmented-generation' },
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Articles connexes',
         id: 'related',
         items: [
-          { title: 'Écrire des prompts efficaces', url: '/fr/prompt-engineering/how-to-write-effective-prompts' },
+          { title: 'Écrire des prompts efficaces', url: '/fr/prompt-engineering/what-is-prompt-engineering' },
           { title: 'Frameworks de prompt engineering', url: '/fr/prompt-engineering/frameworks' },
           { title: 'Optimisation des coûts pour les LLMs', url: '/fr/prompt-engineering/cost-optimization' },
           { title: 'Construire des systèmes RAG', url: '/fr/prompt-engineering/retrieval-augmented-generation' },
@@ -1523,7 +1523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '関連記事',
         id: 'related',
         items: [
-          { title: '効果的なプロンプトを書く', url: '/ja/prompt-engineering/how-to-write-effective-prompts' },
+          { title: '効果的なプロンプトを書く', url: '/ja/prompt-engineering/what-is-prompt-engineering' },
           { title: 'プロンプトエンジニアリングのフレームワーク', url: '/ja/prompt-engineering/frameworks' },
           { title: 'LLMのコスト最適化', url: '/ja/prompt-engineering/cost-optimization' },
           { title: 'RAG システムの構築', url: '/ja/prompt-engineering/retrieval-augmented-generation' },
@@ -2073,7 +2073,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '관련 기사',
         id: 'related',
         items: [
-          { title: '효과적인 Prompt 작성 방법', url: '/ko/prompt-engineering/how-to-write-effective-prompts' },
+          { title: '효과적인 Prompt 작성 방법', url: '/ko/prompt-engineering/what-is-prompt-engineering' },
           { title: 'Prompt Engineering 프레임워크', url: '/ko/prompt-engineering/frameworks' },
           { title: 'LLM을 위한 비용 최적화', url: '/ko/prompt-engineering/cost-optimization' },
           { title: 'RAG 시스템 구축', url: '/ko/prompt-engineering/retrieval-augmented-generation' },
@@ -2330,7 +2330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'مقالات ذات صلة',
         id: 'related',
         items: [
-          { title: 'كيفية كتابة أوامر فعّالة', url: '/ar/prompt-engineering/how-to-write-effective-prompts' },
+          { title: 'كيفية كتابة أوامر فعّالة', url: '/ar/prompt-engineering/what-is-prompt-engineering' },
           { title: 'أطر عمل هندسة الأوامر', url: '/ar/prompt-engineering/frameworks' },
           { title: 'تحسين تكاليف نماذج اللغة الكبيرة', url: '/ar/prompt-engineering/cost-optimization' },
           { title: 'بناء أنظمة RAG', url: '/ar/prompt-engineering/retrieval-augmented-generation' },

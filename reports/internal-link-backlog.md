@@ -1,53 +1,22 @@
 # Internal-link backlog — ENRICHED (Phase 1 classification)
-Generated 2026-06-28 13:01 UTC by scripts/enrich-internal-link-backlog.mjs
-Total unresolved links: 70. Heuristic slug-token + title-token classification — NOT authoritative; TITLE_MATCH/AMBIGUOUS need human review. Phase 1 = enrich only, no edits.
+Generated 2026-06-28 13:15 UTC by scripts/enrich-internal-link-backlog.mjs
+Total unresolved links: 40. Heuristic slug-token + title-token classification — NOT authoritative; TITLE_MATCH/AMBIGUOUS need human review. Phase 1 = enrich only, no edits.
 
 ## Summary — counts per category per cluster
 
 | cluster | RENAMED | UNREGISTERED | TITLE_MATCH | AMBIGUOUS | PHANTOM | total |
 |---|---|---|---|---|---|---|
-| prompt-engineering | 0 | 0 | 21 | 31 | 10 | 62 |
+| prompt-engineering | 0 | 0 | 0 | 25 | 7 | 32 |
 | local-llms | 0 | 0 | 0 | 6 | 0 | 6 |
 | power-local-llm | 0 | 0 | 0 | 2 | 0 | 2 |
-| **all** | **0** | **0** | **21** | **39** | **10** | **70** |
+| **all** | **0** | **0** | **0** | **33** | **7** | **40** |
 
-## Cluster: prompt-engineering (62)
+## Cluster: prompt-engineering (32)
 
-### TITLE_MATCH (21)
-
-| file | locale | anchor title | broken url | candidate target | candidate real title |
-|---|---|---|---|---|---|
-| prompt-engineering/articles/multi-model-prompt-testing.ts | ar | مقدمة إلى Promptfoo: اختبار الـ prompts محليًا وفي CI/CD | /ar/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | ar | تحسين التكلفة: الاختيار بين GPT-5.5 وClaude وGemini | /ar/prompt-engineering/cost-optimization-model-selection | multi-model-prompt-testing-workflows | Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | de | Einführung in Promptfoo: Prompts lokal und in CI/CD testen | /de/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | de | Kostenoptimierung: Auswahl zwischen GPT-5.5, Claude und Gemini | /de/prompt-engineering/cost-optimization-model-selection | multi-model-prompt-testing-workflows | Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | en | Introduction to Promptfoo: Testing Prompts Locally and in CI/CD | /prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | en | Cost Optimization: Choosing Between GPT-5.5, Claude, and Gemini | /prompt-engineering/cost-optimization-model-selection | multi-model-prompt-testing-workflows | Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | es | Introducción a Promptfoo: probar prompts localmente y en CI/CD | /es/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | fr | Introduction à Promptfoo : tester les prompts localement et en CI/CD | /fr/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | ja | コスト最適化：GPT-5.5、Claude、Gemini選択ガイド | /ja/prompt-engineering/cost-optimization-model-selection | multi-model-prompt-testing-workflows | Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | ko | 비용 최적화: GPT-5.5, Claude, Gemini 중 선택 | /ko/prompt-engineering/cost-optimization-model-selection | multi-model-prompt-testing-workflows | Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | pt | Introdução ao Promptfoo: testar prompts localmente e em CI/CD | /pt/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | zh | 成本优化：GPT-5.5、Claude、Gemini选择指南 | /zh/prompt-engineering/cost-optimization-model-selection | multi-model-prompt-testing-workflows | Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini |
-| prompt-engineering/articles/prompt-engineering-history.ts | en | Context Windows Explained: Why Your AI Forgets | /prompt-engineering/context-windows | context-windows-explained-why-ai-forgets | Context Windows Explained: Why AI Forgets (and What to Do) |
-| prompt-engineering/articles/prompt-engineering-history.ts | en | Tokens, Costs & Limits: The Economics of AI Prompting | /prompt-engineering/tokens-and-costs | tokens-costs-limits-economics-of-ai-prompting | Tokens, Costs & Limits: The Economics of AI Prompting in 2026 |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ar | كيفية كتابة أوامر فعّالة | /ar/prompt-engineering/how-to-write-effective-prompts | write-better-code-with-ai | How to Write Better Code With AI: Prompts, Models, and Security in 2026 |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | de | Effektive Prompts schreiben | /de/prompt-engineering/how-to-write-effective-prompts | write-better-code-with-ai | How to Write Better Code With AI: Prompts, Models, and Security in 2026 |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | en | How to Write Effective Prompts | /prompt-engineering/how-to-write-effective-prompts | write-better-code-with-ai | How to Write Better Code With AI: Prompts, Models, and Security in 2026 |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | es | Cómo escribir prompts efectivos | /es/prompt-engineering/how-to-write-effective-prompts | write-better-code-with-ai | How to Write Better Code With AI: Prompts, Models, and Security in 2026 |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | fr | Écrire des prompts efficaces | /fr/prompt-engineering/how-to-write-effective-prompts | write-better-code-with-ai | How to Write Better Code With AI: Prompts, Models, and Security in 2026 |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ja | 効果的なプロンプトを書く | /ja/prompt-engineering/how-to-write-effective-prompts | write-better-code-with-ai | How to Write Better Code With AI: Prompts, Models, and Security in 2026 |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | pt | Como escrever prompts eficazes | /pt/prompt-engineering/how-to-write-effective-prompts | write-better-code-with-ai | How to Write Better Code With AI: Prompts, Models, and Security in 2026 |
-
-### AMBIGUOUS (31)
+### AMBIGUOUS (25)
 
 | file | locale | anchor title | broken url | candidate target | candidate real title |
 |---|---|---|---|---|---|
-| prompt-engineering/articles/multi-model-prompt-testing.ts | ja | Promptfoo入門：ローカルとCI/CDでのPromptテスト | /ja/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools \| prompt-review-workflow-for-teams \| prompt-engineering-for-developers-workflow | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval \| Prompt Review Workflow for Teams: Checklist & CI/CD Gates \| Prompt Engineering Workflow for Developers: IDE Setup, Testing, and CI/CD Integration |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | ko | Promptfoo 소개: 로컬 및 CI/CD에서 프롬프트 테스트 | /ko/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools \| build-quality-checks \| prompt-review-workflow-for-teams | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval \| AI Code Quality Checks: Catching Hallucinations in CI/CD \| Prompt Review Workflow for Teams: Checklist & CI/CD Gates |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | zh | Promptfoo入门：本地和CI/CD中的提示词测试 | /zh/prompt-engineering/promptfoo-testing | best-prompt-testing-evaluation-tools \| build-quality-checks \| prompt-review-workflow-for-teams | Prompt Testing & Evaluation Tools 2026: Promptfoo vs Braintrust vs DeepEval \| AI Code Quality Checks: Catching Hallucinations in CI/CD \| Prompt Review Workflow for Teams: Checklist & CI/CD Gates |
-| prompt-engineering/articles/prompt-engineering-history.ts | en | 컨텍스트 창 설명: AI가 잊어버리는 이유 | /prompt-engineering/context-windows | ai-hallucinations-why-ai-makes-things-up \| faster-ai-answers-how-to-prompt-for-speed \| temperature-and-top-p-control-ai-creativity | AI Hallucinations: Why AI Makes Things Up — and How to Stop Them \| Faster AI Answers: How to Prompt for Speed \| Temperature and Top-P: Control AI Creativity |
-| prompt-engineering/articles/prompt-engineering-history.ts | en | 토큰, 비용 및 한계: AI 프롬프팅의 경제학 | /prompt-engineering/tokens-and-costs | ai-hallucinations-why-ai-makes-things-up \| faster-ai-answers-how-to-prompt-for-speed \| temperature-and-top-p-control-ai-creativity | AI Hallucinations: Why AI Makes Things Up — and How to Stop Them \| Faster AI Answers: How to Prompt for Speed \| Temperature and Top-P: Control AI Creativity |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ar | تحسين تكاليف نماذج اللغة الكبيرة | /ar/prompt-engineering/cost-optimization | fundamentals-of-prompt-optimization \| best-prompt-optimization-tools-for-teams \| manual-vs-automated-prompt-optimization | How to Optimize Prompts: Prompt Optimization Techniques & Best Practices \| Best Prompt Optimization Tools for Teams \| Manual vs Automated Prompt Optimization: When to Iterate, When to Automate |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ar | بناء أنظمة RAG | /ar/prompt-engineering/retrieval-augmented-generation | rag-explained \| prompt-engineering-vs-rag-decision | RAG Explained: How to Ground AI Answers in Real Data (2026) \| Prompt Engineering vs RAG: How to Choose |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ar | دليل اختيار النموذج | /ar/prompt-engineering/model-selection | gpt-claude-or-gemini-how-to-pick-the-right-model \| control-the-output \| how-to-test-prompts-across-models | GPT, Claude or Gemini: How to Pick the Right AI Model \| Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection \| How To Test Prompts Across Models: Multi-Model Evaluation |
@@ -66,7 +35,6 @@ Total unresolved links: 70. Heuristic slug-token + title-token classification �
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ja | LLMのコスト最適化 | /ja/prompt-engineering/cost-optimization | fundamentals-of-prompt-optimization \| best-prompt-optimization-tools-for-teams \| manual-vs-automated-prompt-optimization | How to Optimize Prompts: Prompt Optimization Techniques & Best Practices \| Best Prompt Optimization Tools for Teams \| Manual vs Automated Prompt Optimization: When to Iterate, When to Automate |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ja | RAG システムの構築 | /ja/prompt-engineering/retrieval-augmented-generation | rag-explained \| prompt-engineering-vs-rag-decision | RAG Explained: How to Ground AI Answers in Real Data (2026) \| Prompt Engineering vs RAG: How to Choose |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ja | モデル選択ガイド | /ja/prompt-engineering/model-selection | gpt-claude-or-gemini-how-to-pick-the-right-model \| control-the-output \| how-to-test-prompts-across-models | GPT, Claude or Gemini: How to Pick the Right AI Model \| Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection \| How To Test Prompts Across Models: Multi-Model Evaluation |
-| prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ko | 효과적인 Prompt 작성 방법 | /ko/prompt-engineering/how-to-write-effective-prompts | what-is-prompt-engineering \| fundamentals-of-prompt-optimization \| how-prompt-engineering-evolved | What Is Prompt Engineering? — PromptQuorum Guide \| How to Optimize Prompts: Prompt Optimization Techniques & Best Practices \| From GPT-2 to Today: How Prompt Engineering Evolved |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ko | Prompt Engineering 프레임워크 | /ko/prompt-engineering/frameworks | what-is-prompt-engineering \| how-prompt-engineering-evolved \| prompt-engineering-glossary | What Is Prompt Engineering? — PromptQuorum Guide \| From GPT-2 to Today: How Prompt Engineering Evolved \| Prompt Engineering Glossary: 500 Key Terms |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ko | LLM을 위한 비용 최적화 | /ko/prompt-engineering/cost-optimization | fundamentals-of-prompt-optimization \| best-prompt-optimization-tools-for-teams \| manual-vs-automated-prompt-optimization | How to Optimize Prompts: Prompt Optimization Techniques & Best Practices \| Best Prompt Optimization Tools for Teams \| Manual vs Automated Prompt Optimization: When to Iterate, When to Automate |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ko | RAG 시스템 구축 | /ko/prompt-engineering/retrieval-augmented-generation | rag-explained \| prompt-engineering-vs-rag-decision | RAG Explained: How to Ground AI Answers in Real Data (2026) \| Prompt Engineering vs RAG: How to Choose |
@@ -75,13 +43,10 @@ Total unresolved links: 70. Heuristic slug-token + title-token classification �
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | pt | Otimização de custos para LLMs | /pt/prompt-engineering/cost-optimization | fundamentals-of-prompt-optimization \| best-prompt-optimization-tools-for-teams \| manual-vs-automated-prompt-optimization | How to Optimize Prompts: Prompt Optimization Techniques & Best Practices \| Best Prompt Optimization Tools for Teams \| Manual vs Automated Prompt Optimization: When to Iterate, When to Automate |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | pt | Guia de seleção de modelo | /pt/prompt-engineering/model-selection | gpt-claude-or-gemini-how-to-pick-the-right-model \| control-the-output \| how-to-test-prompts-across-models | GPT, Claude or Gemini: How to Pick the Right AI Model \| Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection \| How To Test Prompts Across Models: Multi-Model Evaluation |
 
-### PHANTOM (10)
+### PHANTOM (7)
 
 | file | locale | anchor title | broken url | candidate target | candidate real title |
 |---|---|---|---|---|---|
-| prompt-engineering/articles/multi-model-prompt-testing.ts | es | Optimización de costes: elegir entre GPT-5.5, Claude y Gemini | /es/prompt-engineering/cost-optimization-model-selection |  |  |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | fr | Optimisation des coûts : choisir entre GPT-5.5, Claude et Gemini | /fr/prompt-engineering/cost-optimization-model-selection |  |  |
-| prompt-engineering/articles/multi-model-prompt-testing.ts | pt | Otimização de custos: escolher entre GPT-5.5, Claude e Gemini | /pt/prompt-engineering/cost-optimization-model-selection |  |  |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | ar | أطر عمل هندسة الأوامر | /ar/prompt-engineering/frameworks |  |  |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | de | RAG-Systeme aufbauen | /de/prompt-engineering/retrieval-augmented-generation |  |  |
 | prompt-engineering/articles/prompt-engineering-vs-fine-tuning.ts | en | Building RAG Systems | /prompt-engineering/retrieval-augmented-generation |  |  |
