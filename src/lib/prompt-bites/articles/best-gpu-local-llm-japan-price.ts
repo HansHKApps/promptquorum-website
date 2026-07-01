@@ -5,11 +5,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Guides',
     title: 'What Is the Best Value GPU for Local LLMs in Japan?',
-    seoTitle: 'Best GPU for LLMs Japan 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Best Value GPU for Local LLM Japan 2026: RTX 3060–3090',
     metaDescription:
-      'RTX 3060 12 GB is the best value GPU for local LLMs in Japan: ~¥40,000 new, ¥25,000 used. 7B models at 20–25 tok/s. Available at Tsukumo and Dospara.',
+      'RTX 3060 12 GB is the best-value GPU for local LLMs in Japan (~¥40,000). Used RTX 3090 ~¥150,000 but 30-series were mining-abused — a new RTX 5060 Ti 16 GB is safer value.',
     publishDate: '2026-05-27',
-    dateModified: '2026-05-27',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: [],
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-ollama-models-rtx-3060-12gb', 'best-egpu-ollama-macbook'],
     is_living_page: false,
     leadAnswerBlock:
-      'In Japan, the RTX 3060 12 GB offers the best price-performance (new ~¥40,000, used ~¥25,000). 12 GB VRAM runs 7B models at 20–25 tok/s. Available at Tsukumo and Dospara in Akihabara.',
+      'In Japan, the RTX 3060 12 GB offers the best price-performance for local LLMs (new ~¥40,000, used ~¥25,000): 12 GB VRAM runs 7B models at 20–25 tok/s, sold at Tsukumo and Dospara in Akihabara. A used RTX 3090 24 GB now runs ~¥150,000 — but most 30-series cards were heavily used in the 2021–22 mining boom, so for cost-performance a new RTX 5060 Ti 16 GB (~¥90,000) or a used RX 7800 XT (~¥30,000s) is the safer value pick.',
     toc: [
       { label: 'GPUs by Price Range in Japan', anchor: '#gpus-by-price' },
       { label: 'Japan Buying Guide', anchor: '#buying-guide' },
@@ -37,9 +37,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'RTX 3060 12GB: ¥40K new / ¥25K used — best value for 7B models at 20-25 tok/s.',
           'RTX 4060 Ti 16GB: ¥65K new / ¥50K used — step up for 13B models at 18-22 tok/s.',
-          'RTX 3090 24GB used ¥90K — skip for Japan apartments: 340W draws ~¥8,000/month in electricity.',
+          'RTX 3090 24GB used ~¥150K — mostly mining-abused 30-series; skip for apartments (340W ~¥6,600/month) unless inspected.',
+          'Safer コスパ pick: new RTX 5060 Ti 16GB (~¥90K) or used RX 7800 XT (~¥30Ks) — avoids the mining-abuse risk.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
       de: {
         question: 'Welche GPU bietet in Japan das beste Preis-Leistungs-Verhältnis für lokale LLMs?',
@@ -112,7 +113,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'gpus-by-price',
         title: 'GPUs by Price Range in Japan',
         content: [
-          '<strong>As of May 2026, Japan GPU prices run 15–20% above equivalent US prices due to import costs and 10% consumption tax. The four cards below cover every realistic budget for local LLM inference from ¥25,000 used to ¥90,000 used.</strong>',
+          '<strong>As of July 2026, Japan GPU prices run 15–20% above equivalent US prices due to import costs and 10% consumption tax. The four cards below cover every realistic budget for local LLM inference from ~¥25,000 used (RTX 3060 12GB) to ~¥150,000 used (RTX 3090 24GB).</strong>',
           'The table below uses May 2026 street prices from Tsukumo, Dospara, and Yodobashi for new cards, and Mercari/Yahoo Auctions midpoints for used. Prices fluctuate — verify before buying.',
         ],
         columns: ['GPU + VRAM', 'New / Used Price (¥)', 'Best for'],
@@ -134,8 +135,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             'GPU + VRAM': 'RTX 3090 24GB',
-            'New / Used Price (¥)': '— / ¥90,000',
-            'Best for': '30B+ models (SKIP: 340W, too hot for apartments)',
+            'New / Used Price (¥)': '— / ~¥150,000',
+            'Best for': '30B+ models (CAUTION: mostly mining-abused; 340W, too hot for apartments)',
           },
         ],
         callouts: [
@@ -153,7 +154,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RTX 3090 24GB — SKIP for Japan apartments. 340W TDP draws ~¥8,000/month in electricity at ¥31/kWh. Buy only if you have a dedicated room with good ventilation.',
+            text: 'RTX 3090 24GB — used ~¥150,000 in July 2026, but most 30-series cards (3080/3090) were run 24/7 during the 2021–22 mining boom, so used stock is a gamble. It also draws 340W (~¥6,600/month at ¥31/kWh). Buy only if you can inspect the card and have a dedicated, ventilated room — otherwise a new RTX 5060 Ti 16GB (~¥90,000) is the safer value.',
           },
         ],
         items: [
@@ -246,6 +247,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'FAQ: Buying a GPU for Local LLMs in Japan',
         faqs: [
           {
+            q: 'Which GPU is the best コスパ (value) for local LLMs in Japan in 2026?',
+            a: 'For most people the RTX 3060 12GB (~¥40,000 new, ~¥25,000 used) is the best コスパ pick — 12 GB of VRAM runs every 7B model at 20–25 tok/s with zero CUDA setup. Step up to the RTX 4060 Ti 16GB (~¥65,000) for 13B models. A used RTX 3090 24GB (~¥150,000) gives you 24 GB for 30B-class models, but most 30-series cards were mining-abused in 2021–22 and draw 340W — so unless you can inspect the card, a new RTX 5060 Ti 16GB (~¥90,000) or a used RX 7800 XT (~¥30,000s) is the safer value.',
+          },
+          {
             q: 'What is the difference between the RTX 3060 12GB and 8GB versions?',
             a: 'The 8GB version cannot run 7B models at Q4_K_M quantization — a 7B model at Q4_K_M needs approximately 6 GB of VRAM, and the runtime overhead pushes it over the 8GB limit. The 12GB version clears that threshold with 5–6 GB to spare for context. Always buy the 12GB version for local LLMs. The 8GB variant is only worth buying for gaming workloads, not LLM inference.',
           },
@@ -273,11 +278,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Hardware Guides',
     title: 'Welche GPU bietet in Japan das beste Preis-Leistungs-Verhältnis für lokale LLMs?',
-    seoTitle: 'Beste GPU für LLMs Japan 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Beste Preis-Leistungs-GPU für LLMs Japan 2026',
     metaDescription:
-      'RTX 3060 12 GB ist die beste GPU für lokale LLMs in Japan: ~¥40.000 neu, ¥25.000 gebraucht. 7B-Modelle bei 20–25 tok/s. Erhältlich bei Tsukumo und Dospara.',
+      'RTX 3060 12 GB ist die Preis-Leistungs-Königin für lokale LLMs in Japan (~260 €). Gebrauchte RTX 3090 ~850 €, aber 30er-Serie war Mining-belastet — neue RTX 5060 Ti 16 GB ist die sicherere Wahl.',
     publishDate: '2026-05-27',
-    dateModified: '2026-05-27',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: [],
@@ -290,7 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '5 Min. Lesezeit',
     leadAnswerBlock:
-      'In Japan bietet die RTX 3060 12 GB das beste Preis-Leistungs-Verhältnis (neu ~¥40.000, gebraucht ~¥25.000). 12 GB VRAM für 7B-Modelle, 20–25 tok/s. Erhältlich bei Tsukumo und Dospara in Akihabara.',
+      'In Japan bietet die RTX 3060 12 GB das beste Preis-Leistungs-Verhältnis (neu ~260 €, gebraucht ~180 €; japanische Straßenpreise). 12 GB VRAM für 7B-Modelle bei 20–25 tok/s, erhältlich bei Tsukumo und Dospara in Akihabara. Eine gebrauchte RTX 3090 24 GB kostet mittlerweile ~850 € — die meisten 30er-Karten wurden jedoch im Mining-Boom 2021–22 stark belastet, daher sind eine neue RTX 5060 Ti 16 GB (~450 €) oder eine gebrauchte RX 7800 XT (~330 €) die sicherere Preis-Leistungs-Wahl.',
     toc: [
       { label: 'GPUs nach Preisklasse in Japan', anchor: '#gpus-by-price' },
       { label: 'Einkaufsführer für Japan', anchor: '#buying-guide' },
@@ -302,13 +307,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       de: {
         question: 'Welche GPU bietet in Japan das beste Preis-Leistungs-Verhältnis für lokale LLMs?',
         answer:
-          'Die RTX 3060 12 GB für ~¥40.000 neu (¥25.000 gebraucht) ist die beste Wahl in Japan. 12 GB VRAM führt jeden 7B-Modell bei 20–25 tok/s ohne CUDA-Konfigurationsaufwand aus.',
+          'Die RTX 3060 12 GB für ~260 € neu (~180 € gebraucht) ist die beste Wahl in Japan. 12 GB VRAM führt jeden 7B-Modell bei 20–25 tok/s ohne CUDA-Konfigurationsaufwand aus.',
         bullets: [
-          'RTX 3060 12 GB: ¥40K neu / ¥25K gebraucht — bestes Preis-Leistungs-Verhältnis für 7B-Modelle.',
-          'RTX 4060 Ti 16 GB: ¥65K neu / ¥50K gebraucht — Upgrade für 13B-Modelle bei 18–22 tok/s.',
-          'RTX 3090 24 GB gebraucht ¥90K — für japanische Apartments meiden: 340 W, ~¥8.000/Monat Strom.',
+          'RTX 3060 12 GB: ~260 € neu / ~180 € gebraucht — bestes Preis-Leistungs-Verhältnis für 7B-Modelle.',
+          'RTX 4060 Ti 16 GB: ~420 € neu / ~330 € gebraucht — Upgrade für 13B-Modelle bei 18–22 tok/s.',
+          'RTX 3090 24 GB gebraucht ~850 € — meist Mining-belastete 30er-Serie, für japanische Apartments meiden (340 W).',
+          'Sicherere Preis-Leistungs-Wahl: neue RTX 5060 Ti 16 GB (~450 €) oder gebrauchte RX 7800 XT (~330 €) — vermeidet das Mining-Risiko.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -316,20 +322,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Beste Wahl: RTX 3060 12 GB für ~¥40.000 neu / ¥25.000 gebraucht (Mai 2026) — 7B-Modelle bei 20–25 tok/s',
-          'Mittelklasse: RTX 4060 Ti 16 GB für ¥65.000 neu — 13B-Modelle bei 18–22 tok/s, 16 GB Kontextspielraum',
-          'AMD-Alternative: RX 7800 XT 16 GB für ¥70.000 — 16 GB VRAM, Vulkan/ROCm, ideal für Linux',
-          'Meiden: RTX 3090 24 GB in Japans Apartments — 340 W TDP zieht ~¥8.000/Monat bei ¥31/kWh',
+          'Beste Wahl: RTX 3060 12 GB für ~260 € neu / ~180 € gebraucht (Mai 2026) — 7B-Modelle bei 20–25 tok/s',
+          'Mittelklasse: RTX 4060 Ti 16 GB für ~420 € neu — 13B-Modelle bei 18–22 tok/s, 16 GB Kontextspielraum',
+          'AMD-Alternative: RX 7800 XT 16 GB für ~430 € — 16 GB VRAM, Vulkan/ROCm, ideal für Linux',
+          'Vorsicht: gebrauchte RTX 3090 24 GB (~850 €) meist Mining-belastet; neue RTX 5060 Ti 16 GB (~450 €) ist die sicherere Wahl',
           'Gebrauchtmarkt: Mercari (メルカリ), Yahoo Auctions (Yahoo!オークション), Janpara (じゃんぱら) in Akihabara',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Die RTX 3060 12 GB für ~¥40.000 neu ist die beste Wahl für lokale LLMs in Japan (Mai 2026).',
+            text: 'Die RTX 3060 12 GB für ~260 € neu ist die Preis-Leistungs-Königin für lokale LLMs in Japan (Mai 2026).',
           },
           {
             type: 'plain-terms',
-            text: 'GPU-Preise in Japan liegen 15–20 % über US-Preisen. Die RTX 3060 12 GB führt jeden 7B-Modell bei 20–25 tok/s aus und ist bei Tsukumo und Dospara in Akihabara oder gebraucht für ¥25.000 auf Mercari erhältlich.',
+            text: 'GPU-Preise in Japan liegen 15–20 % über US-Preisen. Die RTX 3060 12 GB führt jeden 7B-Modell bei 20–25 tok/s aus und ist bei Tsukumo und Dospara in Akihabara oder gebraucht für ~180 € auf Mercari erhältlich.',
           },
         ],
       },
@@ -337,30 +343,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'gpus-by-price',
         title: 'GPUs nach Preisklasse in Japan',
         content: [
-          '<strong>Stand Mai 2026 liegen GPU-Preise in Japan 15–20 % über den entsprechenden US-Preisen, bedingt durch Importkosten und 10 % Verbrauchsteuer. Die vier nachfolgenden Karten decken jedes realistische Budget für lokale LLM-Inferenz ab — von ¥25.000 gebraucht bis ¥90.000 gebraucht. EUR-Äquivalente: RTX 3060 12 GB ~€260 neu / €160 gebraucht; RTX 4060 Ti 16 GB ~€420 neu / €330 gebraucht.</strong>',
-          'Die folgende Tabelle verwendet Straßenpreise vom Mai 2026 von Tsukumo, Dospara und Yodobashi für neue Karten sowie Mittelwerte von Mercari/Yahoo Auctions für gebrauchte. Preise schwanken — vor dem Kauf nochmals prüfen.',
+          '<strong>Stand Juli 2026 liegen GPU-Preise in Japan 15–20 % über den entsprechenden US-Preisen, bedingt durch Importkosten und 10 % Verbrauchsteuer. Die vier nachfolgenden Karten decken jedes realistische Budget für lokale LLM-Inferenz ab — von ~180 € gebraucht (RTX 3060 12 GB) bis ~850 € gebraucht (RTX 3090 24 GB). Die Preise sind EUR-Äquivalente japanischer Straßenpreise.</strong>',
+          'Die folgende Tabelle verwendet Straßenpreise vom Mai 2026 von Tsukumo, Dospara und Yodobashi für neue Karten sowie Mittelwerte von Mercari/Yahoo Auctions für gebrauchte, jeweils als EUR-Äquivalent. Preise schwanken — vor dem Kauf nochmals prüfen.',
         ],
-        columns: ['GPU + VRAM', 'Neu / Gebraucht (¥)', 'Geeignet für'],
+        columns: ['GPU + VRAM', 'Neu / Gebraucht (€)', 'Geeignet für'],
         rows: [
           {
             'GPU + VRAM': 'RTX 3060 12 GB',
-            'Neu / Gebraucht (¥)': '¥40.000 / ¥25.000',
+            'Neu / Gebraucht (€)': '~260 € / ~180 €',
             'Geeignet für': '7B-Modelle, bestes Preis-Leistungs-Verhältnis',
           },
           {
             'GPU + VRAM': 'RTX 4060 Ti 16 GB',
-            'Neu / Gebraucht (¥)': '¥65.000 / ¥50.000',
+            'Neu / Gebraucht (€)': '~420 € / ~330 €',
             'Geeignet für': '13B-Modelle, Mittelklasse',
           },
           {
             'GPU + VRAM': 'RX 7800 XT 16 GB',
-            'Neu / Gebraucht (¥)': '¥70.000 / ¥55.000',
+            'Neu / Gebraucht (€)': '~430 € / ~330 €',
             'Geeignet für': 'AMD/Vulkan/ROCm unter Linux',
           },
           {
             'GPU + VRAM': 'RTX 3090 24 GB',
-            'Neu / Gebraucht (¥)': '— / ¥90.000',
-            'Geeignet für': '30B+-Modelle (MEIDEN: 340 W, zu laut für Apartments)',
+            'Neu / Gebraucht (€)': '— / ~850 €',
+            'Geeignet für': '30B+-Modelle (VORSICHT: meist Mining-belastet; 340 W, zu heiß für Apartments)',
           },
         ],
         callouts: [
@@ -378,7 +384,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RTX 3090 24 GB — FÜR JAPANISCHE APARTMENTS MEIDEN. 340 W TDP verursacht ~¥8.000/Monat Stromkosten bei ¥31/kWh. Nur kaufen, wenn Sie ein separates Zimmer mit guter Belüftung haben.',
+            text: 'RTX 3090 24 GB — gebraucht ~850 € (Juli 2026), aber die meisten 30er-Karten (3080/3090) liefen im Mining-Boom 2021–22 rund um die Uhr; Gebrauchtware ist daher ein Glücksspiel. Zudem 340 W (~6.600 ¥/Monat bei ¥31/kWh in Japan). Nur kaufen, wenn Sie die Karte prüfen können und ein separates, belüftetes Zimmer haben — sonst ist eine neue RTX 5060 Ti 16 GB (~450 €) die sicherere Wahl.',
           },
         ],
         items: [
@@ -390,28 +396,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             url: 'https://www.amazon.co.jp/s?k=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 GB',
             productCategory: 'gpu',
-            priceRange: '¥25.000–40.000',
+            priceRange: '~180–260 €',
             label: 'RTX 3060 12 GB Preis auf Amazon.co.jp prüfen',
           },
           {
             url: 'https://www.tsukumo.co.jp/search/?keyword=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 GB',
             productCategory: 'gpu',
-            priceRange: '¥40.000',
+            priceRange: '~260 €',
             label: 'RTX 3060 12 GB Preis bei Tsukumo (ツクモ) prüfen',
           },
           {
             url: 'https://www.dospara.co.jp/search/?keywords=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 GB',
             productCategory: 'gpu',
-            priceRange: '¥40.000',
+            priceRange: '~260 €',
             label: 'RTX 3060 12 GB Preis bei Dospara (ドスパラ) prüfen',
           },
           {
             url: 'https://www.amazon.co.jp/s?k=RTX+4060+Ti+16GB',
             productName: 'NVIDIA RTX 4060 Ti 16 GB',
             productCategory: 'gpu',
-            priceRange: '¥50.000–65.000',
+            priceRange: '~330–420 €',
             label: 'RTX 4060 Ti 16 GB Preis auf Amazon.co.jp prüfen',
           },
         ],
@@ -423,8 +429,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Japan bietet zwei zuverlässige Kaufkanäle für GPUs: neu bei autorisierten Händlern (Amazon.co.jp, Tsukumo, Dospara, Yodobashi Camera) und gebraucht bei Mercari, Yahoo Auctions oder Janpara in Akihabara.</strong> Für Erstkäufer hat Akihabara einen entscheidenden Vorteil: Sie können die Karte persönlich begutachten, das Personal zu Kompatibilität befragen und noch am selben Tag ausliefern lassen.',
           'Neue GPU-Händler in Japan (Mai 2026): Amazon.co.jp liefert bundesweit per Prime am nächsten Tag. Tsukumo (ツクモ) in der 1-chome Akihabara hat das breiteste Sortiment und kenntnisreiches Personal für LLM-Builds. Dospara (ドスパラ) Akihabara ist stark bei NVIDIA-Karten. Yodobashi Camera (ヨドバシカメラ) Multi Akiba führt alle großen Marken mit Yodobashi-Punkten.',
           'Gebraucht-Quellen: Mercari (メルカリ) und Yahoo! Auctions (Yahoo!オークション) bieten die größte Auswahl und niedrigsten Preise. Janpara (じゃんぱら) in Akihabara ist ein bewährter Gebrauchtspezialist mit 30 Tagen Rückgaberecht. Beim Kauf auf Mercari: Listing auf 保証 (Garantie)-Status prüfen, Verkäufer fragen, ob die GPU für マイニング (Mining) verwendet wurde, und Listings ohne mehrere klare Fotos der tatsächlichen Karte meiden. Mining-GPUs laufen 24/7 unter Volllast — ihre Lebensdauer ist deutlich kürzer.',
-          'Budget-Entscheidungsmatrix: Unter ¥30.000 → gebrauchte RTX 3060 12 GB auf Mercari. ¥30.000–50.000 → neue RTX 3060 12 GB bei Tsukumo oder Dospara. ¥50.000–70.000 → RTX 4060 Ti 16 GB (gebraucht) oder RX 7800 XT (neu). Über ¥70.000 → RX 7800 XT neu oder RTX 3090 gebraucht (nur bei separatem Zimmer mit guter Belüftung).',
-          'Stromkosten in Japan: Japan durchschnittlich ¥31/kWh (2026). Bei 8 Stunden täglicher Inferenz: RTX 3060 12 GB (170 W) ~¥3.200/Monat. RTX 4060 Ti 16 GB (165 W) ~¥3.100/Monat. RTX 3090 24 GB (350 W) ~¥6.600/Monat. Die ¥15.000 Ersparnis beim Kauf einer gebrauchten RTX 3090 gegenüber einer 3060 ist nach 2–3 Monaten durch den höheren Stromverbrauch aufgebraucht.',
+          'Budget-Entscheidungsmatrix (EUR-Äquivalente): Unter ~200 € → gebrauchte RTX 3060 12 GB auf Mercari. ~200–330 € → neue RTX 3060 12 GB bei Tsukumo oder Dospara. ~330–450 € → RTX 4060 Ti 16 GB (gebraucht) oder RX 7800 XT (neu). Über ~450 € → RX 7800 XT neu oder RTX 3090 gebraucht (nur bei separatem, belüftetem Zimmer und wenn Sie die Karte prüfen können).',
+          'Stromkosten in Japan: Japan durchschnittlich ¥31/kWh (2026). Bei 8 Stunden täglicher Inferenz: RTX 3060 12 GB (170 W) ~¥3.200/Monat. RTX 4060 Ti 16 GB (165 W) ~¥3.100/Monat. RTX 3090 24 GB (350 W) ~¥6.600/Monat. Der höhere Stromverbrauch einer gebrauchten RTX 3090 frisst die anfängliche Ersparnis gegenüber einer 3060 innerhalb weniger Monate auf.',
           'Für die Übersicht aller GPU-Klassen: [Beste Budget-GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm). Für AMD-spezifische Auswahl: [Beste AMD-GPUs für lokale LLMs](/local-llms/best-amd-gpus-local-llm).',
           '<em>Hinweis: Dieser Artikel enthält Affiliate-Links gemäß § 6 TMG. Bei einem Kauf über diese Links erhalten wir eine Provision – für Sie entstehen keine zusätzlichen Kosten.</em>',
         ],
@@ -433,21 +439,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             url: 'https://jp.mercari.com/search?keyword=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 GB (gebraucht)',
             productCategory: 'gpu',
-            priceRange: '¥20.000–25.000',
+            priceRange: '~145–180 €',
             label: 'Gebrauchte RTX 3060 12 GB auf Mercari (メルカリ) suchen',
           },
           {
             url: 'https://auctions.yahoo.co.jp/search/search?p=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 GB (gebraucht)',
             productCategory: 'gpu',
-            priceRange: '¥20.000–27.000',
+            priceRange: '~145–195 €',
             label: 'Gebrauchte RTX 3060 12 GB auf Yahoo Auctions (Yahoo!オークション) suchen',
           },
           {
             url: 'https://www.janpara.co.jp/sale/search/?KEYWORDS=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 GB (gebraucht)',
             productCategory: 'gpu',
-            priceRange: '¥25.000–30.000',
+            priceRange: '~180–215 €',
             label: 'Gebrauchte RTX 3060 12 GB bei Janpara (じゃんぱら) suchen',
           },
         ],
@@ -456,6 +462,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'FAQ: GPU für lokale LLMs in Japan kaufen',
         faqs: [
+          {
+            q: 'Welche GPU bietet 2026 das beste Preis-Leistungs-Verhältnis für lokale LLMs in Japan?',
+            a: 'Für die meisten ist die RTX 3060 12 GB (~260 € neu, ~180 € gebraucht) die Preis-Leistungs-Königin — 12 GB VRAM führen jeden 7B-Modell bei 20–25 tok/s ohne CUDA-Einrichtung aus. Für 13B-Modelle lohnt der Umstieg auf die RTX 4060 Ti 16 GB (~420 €). Eine gebrauchte RTX 3090 24 GB (~850 €) bietet 24 GB für Modelle der 30B-Klasse, aber die meisten 30er-Karten wurden 2021–22 im Mining stark belastet und ziehen 340 W — können Sie die Karte nicht prüfen, sind eine neue RTX 5060 Ti 16 GB (~450 €) oder eine gebrauchte RX 7800 XT (~330 €) die sicherere Wahl. (Preise als EUR-Äquivalent japanischer Straßenpreise.)',
+          },
           {
             q: 'Was ist der Unterschied zwischen RTX 3060 12 GB und 8 GB?',
             a: 'Die 8-GB-Version kann 7B-Modelle bei Q4_K_M-Quantisierung nicht ausführen — ein 7B-Modell bei Q4_K_M benötigt ca. 6 GB VRAM, und der Laufzeit-Overhead überschreitet das 8-GB-Limit. Die 12-GB-Version bewältigt das mit 5–6 GB Spielraum. Für lokale LLMs immer die 12-GB-Version kaufen.',
@@ -484,11 +494,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Hardware Guides',
     title: 'Quel est le GPU au meilleur rapport qualité-prix pour LLM locaux au Japon ?',
-    seoTitle: 'Meilleur GPU LLM Japon 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: 'Meilleur GPU qualité-prix LLM Japon 2026 : RTX 3060–3090',
     metaDescription:
-      'RTX 3060 12 Go, le meilleur GPU pour LLM local au Japon : ~¥40 000 neuve, ¥25 000 occasion. Modèles 7B à 20–25 tok/s chez Tsukumo et Dospara en 2026.',
+      'RTX 3060 12 Go, le meilleur rapport qualité-prix pour LLM local au Japon (~260 €). RTX 3090 d\'occasion ~850 €, mais la série 30 a été usée par le minage — la RTX 5060 Ti 16 Go neuve est plus sûre.',
     publishDate: '2026-05-27',
-    dateModified: '2026-05-27',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: [],
@@ -501,7 +511,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '5 min de lecture',
     leadAnswerBlock:
-      'Au Japon, la RTX 3060 12 Go offre le meilleur rapport qualité-prix (neuve ~¥40 000, occasion ~¥25 000). 12 Go VRAM pour les modèles 7B à 20–25 tok/s. Disponible chez Tsukumo et Dospara à Akihabara.',
+      'Au Japon, la RTX 3060 12 Go offre le meilleur rapport qualité-prix (neuve ~260 €, occasion ~180 € ; prix de rue japonais). 12 Go VRAM pour les modèles 7B à 20–25 tok/s, disponible chez Tsukumo et Dospara à Akihabara. Une RTX 3090 24 Go d\'occasion coûte désormais ~850 € — mais la plupart des cartes de la série 30 ont été fortement sollicitées pendant le boom du minage 2021–22, donc pour le rapport qualité-prix une RTX 5060 Ti 16 Go neuve (~450 €) ou une RX 7800 XT d\'occasion (~330 €) est le choix le plus sûr.',
     toc: [
       { label: 'GPU par gamme de prix au Japon', anchor: '#gpus-by-price' },
       { label: 'Guide d\'achat au Japon', anchor: '#buying-guide' },
@@ -513,13 +523,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       fr: {
         question: 'Quel est le GPU au meilleur rapport qualité-prix pour LLM locaux au Japon ?',
         answer:
-          'La RTX 3060 12 Go à ~¥40 000 neuve (¥25 000 d\'occasion) est le meilleur choix au Japon. 12 Go de VRAM fait tourner tout modèle 7B à 20–25 tok/s sans aucune configuration CUDA.',
+          'La RTX 3060 12 Go à ~260 € neuve (~180 € d\'occasion) est le meilleur choix au Japon. 12 Go de VRAM fait tourner tout modèle 7B à 20–25 tok/s sans aucune configuration CUDA.',
         bullets: [
-          'RTX 3060 12 Go : ¥40K neuve / ¥25K occasion — meilleur rapport qualité-prix pour 7B.',
-          'RTX 4060 Ti 16 Go : ¥65K neuve / ¥50K occasion — passage aux modèles 13B à 18–22 tok/s.',
-          'RTX 3090 24 Go d\'occasion ¥90K — à éviter dans les appartements japonais : 340 W, ~¥8 000/mois.',
+          'RTX 3060 12 Go : ~260 € neuve / ~180 € occasion — meilleur rapport qualité-prix pour 7B.',
+          'RTX 4060 Ti 16 Go : ~420 € neuve / ~330 € occasion — passage aux modèles 13B à 18–22 tok/s.',
+          'RTX 3090 24 Go d\'occasion ~850 € — série 30 souvent usée par le minage, à éviter en appartement (340 W).',
+          'Choix qualité-prix plus sûr : RTX 5060 Ti 16 Go neuve (~450 €) ou RX 7800 XT d\'occasion (~330 €) — évite le risque minage.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -527,20 +538,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Meilleur choix : RTX 3060 12 Go à ~¥40 000 neuve / ¥25 000 occasion (mai 2026) — modèles 7B à 20–25 tok/s',
-          'Gamme intermédiaire : RTX 4060 Ti 16 Go à ¥65 000 neuve — modèles 13B à 18–22 tok/s, 16 Go de marge',
-          'Alternative AMD : RX 7800 XT 16 Go à ¥70 000 — 16 Go VRAM, Vulkan/ROCm, idéal sous Linux',
-          'À éviter : RTX 3090 24 Go dans les appartements japonais — 340 W TDP, ~¥8 000/mois à ¥31/kWh',
+          'Meilleur choix : RTX 3060 12 Go à ~260 € neuve / ~180 € occasion (mai 2026) — modèles 7B à 20–25 tok/s',
+          'Gamme intermédiaire : RTX 4060 Ti 16 Go à ~420 € neuve — modèles 13B à 18–22 tok/s, 16 Go de marge',
+          'Alternative AMD : RX 7800 XT 16 Go à ~430 € — 16 Go VRAM, Vulkan/ROCm, idéal sous Linux',
+          'Attention : RTX 3090 24 Go d\'occasion (~850 €) souvent usée par le minage ; la RTX 5060 Ti 16 Go neuve (~450 €) est plus sûre',
           'Occasion : Mercari (メルカリ), Yahoo Auctions (Yahoo!オークション), Janpara (じゃんぱら) à Akihabara',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'La RTX 3060 12 Go à ~¥40 000 neuve est le GPU au meilleur rapport qualité-prix pour LLM locaux au Japon en mai 2026.',
+            text: 'La RTX 3060 12 Go à ~260 € neuve est le GPU au meilleur rapport qualité-prix pour LLM locaux au Japon en mai 2026.',
           },
           {
             type: 'plain-terms',
-            text: 'Les prix GPU au Japon sont 15–20 % plus élevés qu\'aux États-Unis. La RTX 3060 12 Go fait tourner tout modèle 7B à 20–25 tok/s et est disponible chez Tsukumo et Dospara à Akihabara, ou d\'occasion sur Mercari à ¥25 000.',
+            text: 'Les prix GPU au Japon sont 15–20 % plus élevés qu\'aux États-Unis. La RTX 3060 12 Go fait tourner tout modèle 7B à 20–25 tok/s et est disponible chez Tsukumo et Dospara à Akihabara, ou d\'occasion sur Mercari à ~180 €.',
           },
         ],
       },
@@ -548,30 +559,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'gpus-by-price',
         title: 'GPU par gamme de prix au Japon',
         content: [
-          '<strong>En mai 2026, les prix des GPU au Japon sont 15–20 % au-dessus des prix américains en raison des frais d\'importation et de la taxe à la consommation de 10 %. Les quatre cartes ci-dessous couvrent tous les budgets réalistes pour l\'inférence LLM locale, de ¥25 000 d\'occasion à ¥90 000 d\'occasion. Équivalents EUR : RTX 3060 12 Go ~€260 neuve / €160 d\'occasion ; RTX 4060 Ti 16 Go ~€420 neuve / €330 d\'occasion.</strong>',
-          'Le tableau ci-dessous utilise les prix de mai 2026 relevés chez Tsukumo, Dospara et Yodobashi pour les cartes neuves, et les médianes Mercari/Yahoo Auctions pour les cartes d\'occasion. Les prix fluctuent — vérifiez avant d\'acheter.',
+          '<strong>En juillet 2026, les prix des GPU au Japon sont 15–20 % au-dessus des prix américains en raison des frais d\'importation et de la taxe à la consommation de 10 %. Les quatre cartes ci-dessous couvrent tous les budgets réalistes pour l\'inférence LLM locale, de ~180 € d\'occasion (RTX 3060 12 Go) à ~850 € d\'occasion (RTX 3090 24 Go). Les prix sont des équivalents EUR des prix de rue japonais.</strong>',
+          'Le tableau ci-dessous utilise les prix de mai 2026 relevés chez Tsukumo, Dospara et Yodobashi pour les cartes neuves, et les médianes Mercari/Yahoo Auctions pour les cartes d\'occasion, en équivalent EUR. Les prix fluctuent — vérifiez avant d\'acheter.',
         ],
-        columns: ['GPU + VRAM', 'Neuve / Occasion (¥)', 'Idéal pour'],
+        columns: ['GPU + VRAM', 'Neuve / Occasion (€)', 'Idéal pour'],
         rows: [
           {
             'GPU + VRAM': 'RTX 3060 12 Go',
-            'Neuve / Occasion (¥)': '¥40 000 / ¥25 000',
+            'Neuve / Occasion (€)': '~260 € / ~180 €',
             'Idéal pour': 'Modèles 7B, meilleur rapport qualité-prix',
           },
           {
             'GPU + VRAM': 'RTX 4060 Ti 16 Go',
-            'Neuve / Occasion (¥)': '¥65 000 / ¥50 000',
+            'Neuve / Occasion (€)': '~420 € / ~330 €',
             'Idéal pour': 'Modèles 13B, gamme intermédiaire',
           },
           {
             'GPU + VRAM': 'RX 7800 XT 16 Go',
-            'Neuve / Occasion (¥)': '¥70 000 / ¥55 000',
+            'Neuve / Occasion (€)': '~430 € / ~330 €',
             'Idéal pour': 'AMD/Vulkan/ROCm sous Linux',
           },
           {
             'GPU + VRAM': 'RTX 3090 24 Go',
-            'Neuve / Occasion (¥)': '— / ¥90 000',
-            'Idéal pour': 'Modèles 30B+ (ÉVITER : 340 W, trop bruyant pour les appartements)',
+            'Neuve / Occasion (€)': '— / ~850 €',
+            'Idéal pour': 'Modèles 30B+ (ATTENTION : souvent usée par le minage ; 340 W, trop chaude pour les appartements)',
           },
         ],
         callouts: [
@@ -589,7 +600,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RTX 3090 24 Go — À ÉVITER dans les appartements japonais. 340 W TDP génère ~¥8 000/mois d\'électricité à ¥31/kWh. Achetez seulement si vous avez une pièce dédiée avec bonne ventilation.',
+            text: 'RTX 3090 24 Go — d\'occasion ~850 € (juillet 2026), mais la plupart des cartes de la série 30 (3080/3090) ont tourné 24h/24 pendant le boom du minage 2021–22 ; l\'occasion est donc un pari. Elle consomme aussi 340 W (~6 600 ¥/mois à ¥31/kWh au Japon). N\'achetez que si vous pouvez inspecter la carte et disposez d\'une pièce dédiée et ventilée — sinon une RTX 5060 Ti 16 Go neuve (~450 €) est plus sûre.',
           },
         ],
         items: [
@@ -601,28 +612,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             url: 'https://www.amazon.co.jp/s?k=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 Go',
             productCategory: 'gpu',
-            priceRange: '¥25 000–40 000',
+            priceRange: '~180–260 €',
             label: 'Vérifier le prix RTX 3060 12 Go sur Amazon.co.jp',
           },
           {
             url: 'https://www.tsukumo.co.jp/search/?keyword=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 Go',
             productCategory: 'gpu',
-            priceRange: '¥40 000',
+            priceRange: '~260 €',
             label: 'Vérifier le prix RTX 3060 12 Go chez Tsukumo (ツクモ)',
           },
           {
             url: 'https://www.dospara.co.jp/search/?keywords=RTX+3060+12GB',
             productName: 'NVIDIA RTX 3060 12 Go',
             productCategory: 'gpu',
-            priceRange: '¥40 000',
+            priceRange: '~260 €',
             label: 'Vérifier le prix RTX 3060 12 Go chez Dospara (ドスパラ)',
           },
           {
             url: 'https://www.amazon.co.jp/s?k=RTX+4060+Ti+16GB',
             productName: 'NVIDIA RTX 4060 Ti 16 Go',
             productCategory: 'gpu',
-            priceRange: '¥50 000–65 000',
+            priceRange: '~330–420 €',
             label: 'Vérifier le prix RTX 4060 Ti 16 Go sur Amazon.co.jp',
           },
         ],
@@ -634,8 +645,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Le Japon offre deux canaux d\'achat fiables pour les GPU : neufs chez des revendeurs agréés (Amazon.co.jp, Tsukumo, Dospara, Yodobashi Camera) et d\'occasion sur Mercari, Yahoo Auctions ou chez Janpara à Akihabara.</strong> Pour les primo-acheteurs, Akihabara présente un avantage décisif : vous pouvez inspecter la carte en personne, interroger le personnel sur la compatibilité et repartir le jour même.',
           'Revendeurs de GPU neufs au Japon (mai 2026) : Amazon.co.jp livre partout au Japon en Prime J+1. Tsukumo (ツクモ) au 1-chome d\'Akihabara propose le plus grand stock et un personnel expert pour les builds LLM. Dospara (ドスパラ) Akihabara est fort sur les cartes NVIDIA. Yodobashi Camera (ヨドバシカメラ) Multi Akiba couvre toutes les grandes marques avec des points Yodobashi.',
           'Sources d\'occasion : Mercari (メルカリ) et Yahoo! Auctions (Yahoo!オークション) offrent le plus grand choix aux prix les plus bas. Janpara (じゃんぱら) à Akihabara est un spécialiste de l\'occasion fiable avec 30 jours de retour. Lors d\'un achat sur Mercari : vérifiez le statut 保証 (garantie) dans l\'annonce, demandez au vendeur si le GPU a été utilisé pour le マイニング (minage), et évitez les annonces sans photos claires et multiples de la carte réelle. Les GPU de minage fonctionnent 24h/24 en pleine charge — leur durée de vie est nettement réduite.',
-          'Matrice de décision budgétaire : Moins de ¥30 000 → RTX 3060 12 Go d\'occasion sur Mercari. ¥30 000–50 000 → RTX 3060 12 Go neuve chez Tsukumo ou Dospara. ¥50 000–70 000 → RTX 4060 Ti 16 Go (d\'occasion) ou RX 7800 XT (neuve). Plus de ¥70 000 → RX 7800 XT neuve ou RTX 3090 d\'occasion (uniquement avec une pièce dédiée bien ventilée).',
-          'Coût de l\'électricité au Japon : moyenne ¥31/kWh (2026). À 8 heures d\'inférence quotidienne : RTX 3060 12 Go (170 W) ~¥3 200/mois. RTX 4060 Ti 16 Go (165 W) ~¥3 100/mois. RTX 3090 24 Go (350 W) ~¥6 600/mois. Les ¥15 000 économisés à l\'achat d\'une RTX 3090 d\'occasion vs une 3060 s\'effacent en 2–3 mois de surconsommation électrique.',
+          'Matrice de décision budgétaire (équivalents EUR) : Moins de ~200 € → RTX 3060 12 Go d\'occasion sur Mercari. ~200–330 € → RTX 3060 12 Go neuve chez Tsukumo ou Dospara. ~330–450 € → RTX 4060 Ti 16 Go (d\'occasion) ou RX 7800 XT (neuve). Plus de ~450 € → RX 7800 XT neuve ou RTX 3090 d\'occasion (uniquement avec une pièce dédiée bien ventilée et si vous pouvez inspecter la carte).',
+          'Coût de l\'électricité au Japon : moyenne ¥31/kWh (2026). À 8 heures d\'inférence quotidienne : RTX 3060 12 Go (170 W) ~¥3 200/mois. RTX 4060 Ti 16 Go (165 W) ~¥3 100/mois. RTX 3090 24 Go (350 W) ~¥6 600/mois. La surconsommation d\'une RTX 3090 d\'occasion efface toute économie initiale face à une 3060 en quelques mois.',
           'Pour la vue d\'ensemble de toutes les gammes de GPU : [meilleurs GPU budget pour LLM local](/local-llms/best-budget-gpus-local-llm). Pour les GPU AMD : [meilleurs GPU AMD pour LLM local](/local-llms/best-amd-gpus-local-llm).',
           '<em>Divulgation : Cet article contient des liens d\'affiliation (conformément à la réglementation FTC). Nous pouvons percevoir une commission sans frais supplémentaires pour vous.</em>',
         ],
@@ -695,11 +706,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Hardware Guides',
     title: '日本でコスパ最強のローカルLLM用GPUは？',
-    seoTitle: '日本のローカルLLM向けコスパ最強GPU 2026 | Prompt Bites | PromptQuorum',
+    seoTitle: '日本のローカルLLMコスパ最強GPU 2026：RTX 3060〜3090',
     metaDescription:
-      '日本でローカルLLMに最強コスパのGPU：RTX 3060 12GB（新品~¥40,000、中古~¥25,000、2026年5月）。秋葉原のツクモ、ドスパラで購入可。7Bモデルを20~25 tok/sで実行。',
+      'RTX 3060 12GBが日本のローカルLLMでコスパ最強（新品~¥40,000）。中古RTX 3090は~¥150,000だが30系はマイニング酷使が多く、新品RTX 5060 Ti 16GBのほうが安全なコスパ。',
     publishDate: '2026-05-27',
-    dateModified: '2026-05-27',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: [],
@@ -712,7 +723,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '5分で読める',
     leadAnswerBlock:
-      '日本ではRTX 3060 12 GBがコスパ最強（新品~¥40,000、中古~¥25,000）。12 GB VRAMで7Bモデルを20~25 tok/sで実行可能。秋葉原のツクモ（ツクモ）、ドスパラ（ドスパラ）で購入できます。',
+      '日本ではRTX 3060 12 GBがコスパ最強（新品~¥40,000、中古~¥25,000）。12 GB VRAMで7Bモデルを20~25 tok/sで実行でき、秋葉原のツクモ・ドスパラで購入できます。中古のRTX 3090 24 GBは現在~¥150,000ですが、30系カードの多くは2021〜22年のマイニングブームで酷使されているため、コスパを重視するなら新品のRTX 5060 Ti 16 GB（~¥90,000）か中古のRX 7800 XT（~¥30,000台）のほうが安全な選択です。',
     toc: [
       { label: '価格帯別GPU一覧（日本）', anchor: '#gpus-by-price' },
       { label: '日本での購入ガイド', anchor: '#buying-guide' },
@@ -728,9 +739,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'RTX 3060 12 GB：新品¥40K/中古¥25K — 7Bモデルに最高のコスパ（20~25 tok/s）。',
           'RTX 4060 Ti 16 GB：新品¥65K/中古¥50K — 13Bモデルへのステップアップ（18~22 tok/s）。',
-          'RTX 3090 24 GB 中古¥90K — 日本のアパートでは非推奨：340W、電気代約¥8,000/月。',
+          'RTX 3090 24 GB 中古~¥150K — 30系はマイニング酷使が多く見送り推奨。340Wで日本のアパートでは非推奨（電気代約¥6,600/月）。',
+          '安全なコスパ枠：新品RTX 5060 Ti 16 GB（~¥90K）または中古RX 7800 XT（~¥30K台）— マイニング酷使リスクを回避。',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -759,7 +771,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'gpus-by-price',
         title: '価格帯別GPU一覧（日本）',
         content: [
-          '<strong>2026年5月時点で、日本のGPU価格は輸入コストと10%消費税の影響により、米国価格より15〜20%高くなっています。以下の4枚は中古¥25,000から中古¥90,000まで、ローカルLLM推論のあらゆる現実的な予算をカバーします。</strong>',
+          '<strong>2026年7月時点で、日本のGPU価格は輸入コストと10%消費税の影響により、米国価格より15〜20%高くなっています。以下の4枚は中古¥25,000（RTX 3060 12GB）から中古~¥150,000（RTX 3090 24GB）まで、ローカルLLM推論のあらゆる現実的な予算をカバーします。</strong>',
           '以下の表は、ツクモ・ドスパラ・ヨドバシカメラの2026年5月時点の新品店頭価格と、メルカリ/Yahoo!オークションの中古相場中央値を使用しています。価格は変動しますので、購入前に必ず確認してください。',
         ],
         columns: ['GPU + VRAM', '新品 / 中古価格（¥）', '最適な用途'],
@@ -781,8 +793,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             'GPU + VRAM': 'RTX 3090 24 GB',
-            '新品 / 中古価格（¥）': '— / ¥90,000',
-            '最適な用途': '30B+モデル（非推奨：340W、アパートには不向き）',
+            '新品 / 中古価格（¥）': '— / ~¥150,000',
+            '最適な用途': '30B+モデル（要注意：マイニング酷使が多い。340W、アパートには不向き）',
           },
         ],
         callouts: [
@@ -800,7 +812,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             type: 'warning',
-            text: 'RTX 3090 24 GB — 日本のアパートには非推奨。340W TDPで¥31/kWhの電気代が月約¥8,000かかります。専用の部屋と十分な換気がある場合のみ購入を検討してください。',
+            text: 'RTX 3090 24 GB — 中古で2026年7月時点~¥150,000。ただし30系カード（3080/3090）の多くは2021〜22年のマイニングブームで24時間フル稼働されており、中古在庫はギャンブルです。340W（¥31/kWhで月約¥6,600）も消費します。実機を確認でき、専用の換気された部屋がある場合のみ購入してください。それ以外は新品のRTX 5060 Ti 16 GB（~¥90,000）のほうが安全なコスパです。',
           },
         ],
         items: [
@@ -892,6 +904,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'FAQ：日本でローカルLLM用GPUを購入する',
         faqs: [
+          {
+            q: '2026年、日本のローカルLLMでコスパ最強のGPUはどれですか？',
+            a: 'ほとんどの方にはRTX 3060 12 GB（新品~¥40,000、中古~¥25,000）がコスパ最強です。12 GBのVRAMで全7BモデルをCUDA設定なしに20〜25 tok/sで動かせます。13Bモデルを狙うならRTX 4060 Ti 16 GB（~¥65,000）へステップアップ。中古のRTX 3090 24 GB（~¥150,000）は30B級モデル向けに24 GBを確保できますが、30系カードの多くは2021〜22年にマイニングで酷使され340Wを消費します。実機を確認できないなら、新品のRTX 5060 Ti 16 GB（~¥90,000）か中古のRX 7800 XT（~¥30,000台）のほうが安全なコスパです。',
+          },
           {
             q: 'RTX 3060の12 GB版と8 GB版の違いは何ですか？',
             a: '8 GB版はQ4_K_M量子化での7Bモデル実行ができません。7BモデルをQ4_K_Mで動かすには約6 GBのVRAMが必要で、ランタイムのオーバーヘッドが加わると8GBの上限を超えてしまいます。12 GB版なら5〜6 GBの余裕を持って余裕でクリアできます。ローカルLLMには必ず12 GB版を購入してください。',

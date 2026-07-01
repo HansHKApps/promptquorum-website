@@ -4,11 +4,11 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    title: 'Best eGPU for Ollama on a MacBook in 2026?',
-    seoTitle: 'eGPU for Ollama on MacBook 2026 | Prompt Bites',
-    metaDescription: 'There is no working eGPU for Ollama on an Apple Silicon MacBook. Unified memory and no PCIe eGPU support rule it out. Use unified memory or a Linux laptop.',
+    title: 'eGPU for Ollama on a MacBook in 2026: Intel vs Apple Silicon',
+    seoTitle: 'eGPU for Ollama on MacBook 2026: Intel vs Apple Silicon',
+    metaDescription: 'eGPU + Ollama on a MacBook: Apple Silicon has no eGPU support at all. On an Intel MacBook, Ollama won\'t use an AMD eGPU either — but llama.cpp with Vulkan (MoltenVK) can.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['mac-mini-m4-local-llm', 'best-budget-ai-laptop-under-1000'],
     is_living_page: false,
     leadAnswerBlock:
-      'There is no working eGPU for Ollama on an Apple Silicon MacBook. Apple Silicon uses unified memory and does not expose PCIe to external GPUs — macOS dropped third-party eGPU drivers when Intel Macs were discontinued. eGPUs only help Linux laptops with Thunderbolt 4 or OCuLink.',
+      'There is no working eGPU for Ollama on an Apple Silicon MacBook — Apple Silicon uses unified memory and exposes no PCIe path to an external GPU. On an Intel MacBook (e.g., the 16" MacBook Pro) an AMD eGPU physically works over Thunderbolt 3, but Ollama still will not dispatch to it: Ollama only accelerates on Apple-Silicon Metal, not third-party GPUs. The workaround for Intel Macs is llama.cpp built with the Vulkan backend via MoltenVK, which can use an AMD eGPU (e.g., Radeon RX 6800/6900 XT) at roughly 15–17% Thunderbolt overhead. For Apple Silicon, the only path to faster local LLMs is more unified memory.',
     toc: [
       { label: 'Best Pick: Skip the eGPU, Use Unified Memory', anchor: '#best-pick' },
       { label: 'Why eGPUs Do Not Work on Apple Silicon', anchor: '#comparison' },
@@ -102,8 +102,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Apple Silicon MacBooks use unified memory and do not expose PCIe tunneling over Thunderbolt. Apple also dropped third-party eGPU drivers when Intel Macs were retired. There is no software path to make an external NVIDIA or AMD GPU work on macOS today.',
           },
           {
-            q: 'Did older Intel MacBooks support eGPUs?',
-            a: 'Yes, Intel MacBooks supported AMD eGPUs via Thunderbolt 3. That support ended with the Apple Silicon transition. New Macs and Ollama on Apple Silicon do not have an eGPU path.',
+            q: 'Can I use an eGPU with Ollama on an Intel MacBook?',
+            a: 'The eGPU works, but Ollama will not use it. Intel MacBooks (like the 16" MacBook Pro) support AMD eGPUs over Thunderbolt 3 at the macOS level, but Ollama only dispatches to Apple-Silicon Metal — it ignores third-party GPUs. The workaround is to build llama.cpp with the Vulkan backend via MoltenVK, which can run inference on an AMD eGPU (e.g., Radeon RX 6800/6900 XT) on an Intel Mac. Expect roughly 15–17% overhead from Thunderbolt bandwidth, and note it requires a manual compile — it is not as turnkey as Ollama on Apple Silicon.',
           },
           {
             q: 'What is the fastest way to speed up Ollama on a MacBook?',
@@ -128,11 +128,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    title: 'Bester eGPU für Ollama auf einem MacBook 2026?',
-    seoTitle: 'eGPU für Ollama auf MacBook 2026 | Prompt Bites',
-    metaDescription: 'eGPU mit Ollama am MacBook? Apple Silicon unterstützt keine eGPU – nur Intel-Macs (Thunderbolt 3, AMD). Für M1–M4: lokale Modelle oder Cloud-GPU.',
+    title: 'eGPU für Ollama auf einem MacBook 2026: Intel vs Apple Silicon',
+    seoTitle: 'eGPU für Ollama am MacBook 2026: Intel vs Apple Silicon',
+    metaDescription: 'eGPU + Ollama am MacBook: Apple Silicon unterstützt gar kein eGPU. Auf einem Intel-MacBook nutzt Ollama ein AMD-eGPU ebenfalls nicht — aber llama.cpp mit Vulkan (MoltenVK) kann es.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '3 Min. Lesezeit',
     leadAnswerBlock:
-      'Es gibt kein funktionierendes eGPU für Ollama auf einem Apple-Silicon-MacBook. Apple Silicon nutzt Unified Memory und stellt PCIe nicht für externe GPUs bereit — macOS hat Treiber von Drittanbietern beim Einstellen der Intel-Macs entfernt. eGPUs helfen nur Linux-Laptops mit Thunderbolt 4 oder OCuLink.',
+      'Es gibt kein funktionierendes eGPU für Ollama auf einem Apple-Silicon-MacBook — Apple Silicon nutzt Unified Memory und stellt keinen PCIe-Pfad zu einer externen GPU bereit. Auf einem Intel-MacBook (z. B. dem 16"-MacBook Pro) funktioniert ein AMD-eGPU physisch über Thunderbolt 3, aber Ollama nutzt es trotzdem nicht: Ollama beschleunigt nur über Apple-Silicon-Metal, nicht über GPUs von Drittanbietern. Der Workaround für Intel-Macs ist llama.cpp mit dem Vulkan-Backend über MoltenVK, das ein AMD-eGPU (z. B. Radeon RX 6800/6900 XT) mit rund 15–17 % Thunderbolt-Overhead ansprechen kann. Für Apple Silicon ist der einzige Weg zu schnelleren lokalen LLMs mehr Unified Memory.',
     toc: [
       { label: 'Beste Wahl: kein eGPU, mehr Unified Memory', anchor: '#best-pick' },
       { label: 'Warum eGPUs auf Apple Silicon nicht funktionieren', anchor: '#comparison' },
@@ -226,8 +226,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Apple-Silicon-MacBooks nutzen Unified Memory und legen PCIe-Tunneling über Thunderbolt nicht offen. Apple hat zudem Treiber von Drittanbietern beim Ende der Intel-Macs entfernt. Es gibt heute keinen Software-Pfad, um eine externe NVIDIA- oder AMD-GPU unter macOS zum Laufen zu bringen.',
           },
           {
-            q: 'Unterstützten ältere Intel-MacBooks eGPUs?',
-            a: 'Ja, Intel-MacBooks unterstützten AMD-eGPUs über Thunderbolt 3. Diese Unterstützung endete mit dem Wechsel zu Apple Silicon. Neue Macs und Ollama auf Apple Silicon haben keinen eGPU-Pfad.',
+            q: 'Kann ich ein eGPU mit Ollama auf einem Intel-MacBook nutzen?',
+            a: 'Das eGPU funktioniert, aber Ollama nutzt es nicht. Intel-MacBooks (wie das 16"-MacBook Pro) unterstützen AMD-eGPUs über Thunderbolt 3 auf macOS-Ebene, aber Ollama beschleunigt nur über Apple-Silicon-Metal — GPUs von Drittanbietern werden ignoriert. Der Workaround ist, llama.cpp mit dem Vulkan-Backend über MoltenVK zu bauen, das auf einem Intel-Mac Inferenz auf einem AMD-eGPU (z. B. Radeon RX 6800/6900 XT) ausführen kann. Rechnen Sie mit rund 15–17 % Overhead durch die Thunderbolt-Bandbreite, und beachten Sie: Es erfordert manuelles Kompilieren — es ist nicht so schlüsselfertig wie Ollama auf Apple Silicon.',
           },
           {
             q: 'Was beschleunigt Ollama auf einem MacBook am schnellsten?',
@@ -252,11 +252,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    title: 'Meilleur eGPU pour Ollama sur un MacBook en 2026 ?',
-    seoTitle: 'eGPU pour Ollama sur MacBook 2026 | Prompt Bites',
-    metaDescription: 'Aucun eGPU ne fonctionne pour Ollama sur un MacBook Apple Silicon. Mémoire unifiée et absence de PCIe l\'excluent. Plus de mémoire unifiée ou un laptop Linux.',
+    title: 'eGPU pour Ollama sur un MacBook en 2026 : Intel vs Apple Silicon',
+    seoTitle: 'eGPU Ollama sur MacBook 2026 : Intel vs Apple Silicon',
+    metaDescription: 'eGPU + Ollama sur un MacBook : Apple Silicon ne prend pas du tout en charge l\'eGPU. Sur un MacBook Intel, Ollama n\'utilise pas non plus un eGPU AMD — mais llama.cpp avec Vulkan (MoltenVK) le peut.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '3 min de lecture',
     leadAnswerBlock:
-      'Aucun eGPU ne fonctionne pour Ollama sur un MacBook Apple Silicon. Apple Silicon utilise la mémoire unifiée et n\'expose pas le PCIe aux GPU externes — macOS a abandonné les pilotes tiers à la fin des Mac Intel. Les eGPU n\'aident que les laptops Linux avec Thunderbolt 4 ou OCuLink.',
+      'Aucun eGPU ne fonctionne pour Ollama sur un MacBook Apple Silicon — Apple Silicon utilise la mémoire unifiée et n\'expose aucun chemin PCIe vers un GPU externe. Sur un MacBook Intel (par ex. le MacBook Pro 16"), un eGPU AMD fonctionne physiquement via Thunderbolt 3, mais Ollama ne l\'utilise toujours pas : Ollama n\'accélère que via Apple-Silicon Metal, pas les GPU tiers. La solution de contournement pour les Mac Intel est llama.cpp compilé avec le backend Vulkan via MoltenVK, qui peut exploiter un eGPU AMD (par ex. Radeon RX 6800/6900 XT) avec environ 15–17 % de surcoût Thunderbolt. Pour Apple Silicon, la seule voie vers des LLM locaux plus rapides est plus de mémoire unifiée.',
     toc: [
       { label: 'Meilleur choix : pas d\'eGPU, plus de mémoire unifiée', anchor: '#best-pick' },
       { label: 'Pourquoi les eGPU ne fonctionnent pas sur Apple Silicon', anchor: '#comparison' },
@@ -350,8 +350,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Les MacBook Apple Silicon utilisent la mémoire unifiée et n\'exposent pas le tunneling PCIe via Thunderbolt. Apple a également retiré les pilotes eGPU tiers à la fin des Mac Intel. Il n\'existe aujourd\'hui aucune voie logicielle pour faire fonctionner un GPU externe NVIDIA ou AMD sous macOS.',
           },
           {
-            q: 'Les anciens MacBook Intel prenaient-ils en charge les eGPU ?',
-            a: 'Oui, les MacBook Intel prenaient en charge les eGPU AMD via Thunderbolt 3. Cette prise en charge a pris fin avec la transition vers Apple Silicon. Les nouveaux Mac et Ollama sur Apple Silicon n\'ont aucune voie eGPU.',
+            q: 'Puis-je utiliser un eGPU avec Ollama sur un MacBook Intel ?',
+            a: 'L\'eGPU fonctionne, mais Ollama ne l\'utilise pas. Les MacBook Intel (comme le MacBook Pro 16") prennent en charge les eGPU AMD via Thunderbolt 3 au niveau de macOS, mais Ollama n\'accélère que via Apple-Silicon Metal — il ignore les GPU tiers. La solution de contournement consiste à compiler llama.cpp avec le backend Vulkan via MoltenVK, qui peut exécuter l\'inférence sur un eGPU AMD (par ex. Radeon RX 6800/6900 XT) sur un Mac Intel. Prévoyez environ 15–17 % de surcoût dû à la bande passante Thunderbolt, et notez que cela nécessite une compilation manuelle — ce n\'est pas aussi clé en main qu\'Ollama sur Apple Silicon.',
           },
           {
             q: 'Quel est le moyen le plus rapide d\'accélérer Ollama sur un MacBook ?',
