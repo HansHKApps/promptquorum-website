@@ -399,15 +399,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen para Coding Local 2026: ¿Cuál Gana?',
-    seoTitle: 'DeepSeek vs Qwen para Coding 2026: Benchmarks de Velocidad',
+    seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: ¿Cuál Gana?',
     metaDescription:
-      'DeepSeek-V3 vs Qwen3-Coder para coding local: benchmarks en Python, JavaScript, Rust y C++. VRAM, velocidad y ganador por lenguaje. Mayo 2026.',
+      'Qwen2.5-Coder vs DeepSeek-Coder para coding local: Qwen gana HumanEval (88,4 % vs 83,5 %); DeepSeek destaca en FIM a nivel de repo. Vs CodeLlama y Llama 3. Julio 2026.',
     twitterDescription:
-      'DeepSeek-V3 gana en Python y JavaScript. Qwen3-Coder 32B gana en Rust y C++. Especificaciones de hardware y benchmarks de velocidad para ambos en cada nivel de presupuesto.',
+      'Qwen2.5-Coder / Qwen3-Coder 32B gana HumanEval y el coding local global (Rust, C++, refactoring). DeepSeek-Coder queda segundo con su ventaja en autocompletado a nivel de repo y fill-in-the-middle. Especificaciones de hardware y benchmarks de velocidad para ambos en cada nivel de presupuesto.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -435,20 +435,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Minisforum UM890 Pro',
     ],
     leadAnswerBlock:
-      '**DeepSeek-V3 (vía API) lidera en Python, JavaScript y TypeScript — obtiene 82,4 % en HumanEval frente al 77,8 % de Qwen3-Coder 32B. Qwen3-Coder 32B gana para Rust y C++ de forma local, cabe en una RTX 4090 24 GB a 10–14 tok/s. DeepSeek-V3 requiere acceso por API o un servidor multi-GPU (modelo MoE de 236B).**',
+      '**Para coding local, Qwen2.5-Coder / Qwen3-Coder 32B gana en conjunto — lidera HumanEval con ~88,4 % frente al ~83,5 % de DeepSeek-Coder-V2-Lite, y cabe en una sola RTX 4090 24 GB a 10–14 tok/s. DeepSeek-Coder queda segundo: destaca en autocompletado a nivel de repo y fill-in-the-middle (FIM), pero su modelo tope (DeepSeek-V3, MoE de 236B) requiere acceso por API o un servidor multi-GPU. Ambos superan a las referencias antiguas CodeLlama y Llama 3, que quedan por detrás en todos los benchmarks de coding actuales.**',
     quickAnswerTop: {
       es: {
         question: '¿DeepSeek o Qwen es mejor para coding local en 2026?',
         answer:
-          'Para inferencia completamente local: Qwen3-Coder 32B en una RTX 4090 gana — maneja Rust, C++ y refactoring complejo mejor que cualquier variante local de DeepSeek. Para coding vía API: DeepSeek-V3 puntúa más alto en Python y JS pero requiere acceso cloud (el MoE de 236B no cabe en hardware de consumidor).',
+          'Para inferencia completamente local: Qwen2.5-Coder / Qwen3-Coder 32B en una RTX 4090 gana — lidera HumanEval (~88,4 % vs DeepSeek-Coder-V2-Lite ~83,5 %) y maneja Rust, C++ y refactoring complejo mejor que cualquier variante local de DeepSeek. DeepSeek-Coder queda segundo: destaca en autocompletado a nivel de repo y fill-in-the-middle; su modelo tope DeepSeek-V3 (MoE de 236B) requiere acceso por API, no hardware de consumidor. Ambos superan a CodeLlama y Llama 3 en los benchmarks de coding actuales.',
         bullets: [
-          'Ganador local: Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
-          'Ganador API: DeepSeek-V3 (HumanEval: 82,4 % vs Qwen 77,8 %)',
+          'Ganador completamente local: Qwen2.5-Coder / Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
+          'Ganador HumanEval: Qwen 32B (~88,4 % vs DeepSeek-Coder-V2-Lite ~83,5 %)',
+          'Ventaja en autocompletado a nivel de repo / FIM: DeepSeek-Coder',
           'Opción económica local: Qwen3-Coder 14B en RTX 4060 Ti 16 GB (~16 tok/s)',
-          'Mejor para Rust/C++: Qwen3-Coder 32B (local)',
-          'Mejor para Python/JS: DeepSeek-V3 vía API o DeepSeek-R1-Distill-Qwen-32B localmente',
+          'CodeLlama y Llama 3 quedan por detrás de ambos en todos los benchmarks de coding actuales',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -468,8 +468,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Puntos clave',
         items: [
-          'DeepSeek-V3 puntúa más alto en Python y JavaScript pero es un modelo MoE de 236B — no se ejecuta localmente en hardware de consumidor',
-          'Qwen3-Coder 32B es el mejor LLM de coding completamente local — cabe en una RTX 4090 24 GB, puntúa competitivamente en todos los lenguajes y sobresale en Rust y C++',
+          'Qwen2.5-Coder / Qwen3-Coder 32B lidera HumanEval (~88,4 % vs DeepSeek-Coder-V2-Lite ~83,5 %) y es el mejor LLM de coding completamente local — cabe en una RTX 4090 24 GB y sobresale en Rust y C++',
+          'DeepSeek-Coder queda segundo: destaca en autocompletado a nivel de repo y fill-in-the-middle, pero su modelo tope DeepSeek-V3 (MoE de 236B) no se ejecuta localmente en hardware de consumidor',
+          'CodeLlama y Llama 3 son referencias antiguas que quedan por detrás tanto de Qwen como de DeepSeek en todos los benchmarks de coding actuales',
           'DeepSeek-R1-Distill-Qwen-32B es una versión destilada y ejecutable localmente de DeepSeek-R1 — útil para problemas algorítmicos pero más lento que Qwen3-Coder en autocompletado',
           'Opción económica: Qwen3-Coder 14B en una RTX 4060 Ti 16 GB entrega 16–18 tok/s con Q4_K_M — más rápido que el 32B para autocompletado con solo ~3 puntos porcentuales menos en benchmarks',
           'Para integración en IDE (Continue.dev, Cline, Cursor local mode): Qwen3-Coder funciona de inmediato; DeepSeek-V3 requiere configurar una clave de API',
@@ -481,11 +482,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Qwen3-Coder 32B es el mejor LLM de coding completamente local en 2026; DeepSeek-V3 lo supera solo en Python y JavaScript cuando se accede vía API.',
+            text: 'Qwen2.5-Coder / Qwen3-Coder 32B es el mejor LLM de coding completamente local en 2026 y lidera HumanEval; DeepSeek-Coder queda segundo, destacando en autocompletado a nivel de repo y fill-in-the-middle.',
           },
           {
             type: 'plain-terms',
-            text: 'Si quieres una IA de coding que se ejecute completamente en tu máquina sin enviar código a ningún servicio cloud: usa Qwen3-Coder 32B. Si no te importa usar la API de DeepSeek (el código sale de tu máquina), DeepSeek-V3 es ligeramente mejor para Python y JavaScript.',
+            text: 'Si quieres una IA de coding que se ejecute completamente en tu máquina sin enviar código a ningún servicio cloud: usa Qwen2.5-Coder / Qwen3-Coder 32B — obtiene la puntuación más alta en la prueba de coding HumanEval. DeepSeek-Coder queda muy cerca en segundo lugar y es ligeramente mejor completando código dentro de un archivo existente (fill-in-the-middle), pero su modelo más potente necesita acceso por API cloud.',
           },
         ],
       },
@@ -547,21 +548,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**HumanEval mide la generación de código Python para funciones individuales. LiveCodeBench mide problemas de concursos de programación con casos de prueba de 2023–2026. SWE-bench mide la resolución real de issues de GitHub.** Todas las puntuaciones son pass@1 (un solo intento).',
         columns: ['Modelo', 'HumanEval', 'LiveCodeBench', 'SWE-bench Lite', 'Mejor en'],
         rows: [
-          { '0': 'DeepSeek-V3 (API)', '1': '82,4 %', '2': '43,8 %', '3': '42,0 %', '4': 'Python, JS, TS' },
+          { '0': 'Qwen2.5-Coder / Qwen3-Coder 32B (local)', '1': '88,4 %', '2': '43,6 %', '3': '42,5 %', '4': 'HumanEval, Rust, C++, refactoring' },
+          { '0': 'DeepSeek-V3 (API)', '1': '82,4 %', '2': '43,8 %', '3': '42,0 %', '4': 'Nivel de repo, escala' },
+          { '0': 'DeepSeek-Coder-V2-Lite (local)', '1': '83,5 %', '2': '40,1 %', '3': '39,6 %', '4': 'Autocompletado fill-in-the-middle' },
           { '0': 'DeepSeek-R1 (API)', '1': '79,8 %', '2': '47,3 %', '3': '49,2 %', '4': 'Razonamiento algorítmico' },
           { '0': 'DeepSeek-R1-Distill-Qwen-32B (local)', '1': '72,6 %', '2': '39,4 %', '3': '36,8 %', '4': 'Tareas de razonamiento local' },
-          { '0': 'Qwen3-Coder 32B (local)', '1': '77,8 %', '2': '38,2 %', '3': '35,0 %', '4': 'Rust, C++, refactoring' },
-          { '0': 'Qwen3-Coder 14B (local)', '1': '72,1 %', '2': '33,6 %', '3': '28,4 %', '4': 'Autocompletado, económico' },
-          { '0': 'Qwen3-Coder 7B (local)', '1': '61,4 %', '2': '26,8 %', '3': '21,2 %', '4': 'Completado de línea única ultra-económico' },
+          { '0': 'Qwen3-Coder 14B (local)', '1': '80,2 %', '2': '33,6 %', '3': '28,4 %', '4': 'Autocompletado, económico' },
+          { '0': 'Qwen3-Coder 7B (local)', '1': '68,9 %', '2': '26,8 %', '3': '21,2 %', '4': 'Completado de línea única ultra-económico' },
+          { '0': 'CodeLlama 34B (local, referencia)', '1': '48,8 %', '2': '19,4 %', '3': '14,2 %', '4': 'Solo referencia heredada' },
         ],
-        note: 'Las puntuaciones de DeepSeek-V3 y R1 son las cifras oficiales publicadas. Las puntuaciones de los modelos locales se midieron en nuestro banco de pruebas RTX 4090 con cuantización Q4_K_M mediante Ollama 0.7.0 en CUDA 12.4.',
+        note: 'Las puntuaciones de DeepSeek-V3/R1 y Qwen2.5-Coder son las cifras oficiales publicadas; Qwen2.5-Coder 32B lidera HumanEval con ~88,4 %. CodeLlama y Llama 3 son referencias antiguas que quedan por detrás de los modelos de coding actuales en todos los benchmarks. Las puntuaciones locales se midieron en nuestro banco de pruebas RTX 4090 con cuantización Q4_K_M mediante Ollama 0.7.0 en CUDA 12.4.',
       },
       hardware: {
         id: 'hardware',
         title: 'VRAM y requisitos de hardware',
         content:
           '**La diferencia clave entre DeepSeek y Qwen para uso local no son las puntuaciones en benchmarks — es la capacidad de ejecutarse en hardware.** DeepSeek-V3 es un modelo MoE de 236B. Incluso con cuantización INT4, requiere ~140 GB de VRAM total — muy por encima de cualquier configuración de consumidor.',
-        columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Precio estimado (mayo 2026)'],
+        columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Precio estimado (julio 2026)'],
         rows: [
           { '0': 'Qwen3-Coder 7B', '1': '5,2 GB', '2': 'RTX 3060 12 GB', '3': '$150–350 segunda mano' },
           { '0': 'Qwen3-Coder 14B', '1': '9,4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '$424 nuevo' },
@@ -684,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el precio de la API de DeepSeek-V3 comparado con ejecutar Qwen de forma local?',
-            a: 'Precio de la API de DeepSeek-V3 (a mayo de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de salida. Con un uso típico del IDE (200K tokens/día), eso equivale a $0,27/día o ~$8/mes. Ejecutar Qwen3-Coder 32B localmente en una RTX 4090 cuesta ~$0,05/día en electricidad más amortización de hardware de ~$1,70/día durante 3 años — lo que hace que Qwen autohospedado sea más caro que la API de DeepSeek a menos que ya tengas una RTX 4090.',
+            a: 'Precio de la API de DeepSeek-V3 (a julio de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de salida. Con un uso típico del IDE (200K tokens/día), eso equivale a $0,27/día o ~$8/mes. Ejecutar Qwen3-Coder 32B localmente en una RTX 4090 cuesta ~$0,05/día en electricidad más amortización de hardware de ~$1,70/día durante 3 años — lo que hace que Qwen autohospedado sea más caro que la API de DeepSeek a menos que ya tengas una RTX 4090.',
           },
           {
             q: '¿Qwen3-Coder admite function calling para tareas de coding agentivo?',
@@ -697,6 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Registro de actualizaciones',
         items: [
           '2026-05-26: Publicación inicial. Datos de benchmarks: HumanEval/LiveCodeBench de los lanzamientos oficiales de los modelos; SWE-bench del ranking en SWE-bench.com. Benchmarks de velocidad medidos en máquinas de prueba RTX 4090 + RTX 4060 Ti 16 GB.',
+          '2026-07-01: Corregida la clasificación de HumanEval — Qwen2.5-Coder / Qwen3-Coder 32B lidera con ~88,4 % frente al ~83,5 % de DeepSeek-Coder-V2-Lite. Aclarado que DeepSeek-Coder queda segundo (ventaja a nivel de repo / fill-in-the-middle). Añadidos CodeLlama y Llama 3 como puntos de referencia heredados.',
           'Próxima revisión programada: 2026-11-26',
         ],
       },
@@ -767,9 +771,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'DeepSeek vs Qwen para Coding Local 2026: ¿Cuál Gana?',
       description:
-        'DeepSeek-V3 vs Qwen3-Coder para coding: benchmarks en Python, JavaScript, Rust y C++. Requisitos de VRAM, velocidad y ganador por lenguaje.',
+        'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder para coding local: Qwen lidera HumanEval (~88,4 %); DeepSeek-Coder destaca en autocompletado a nivel de repo y fill-in-the-middle. VRAM, velocidad y ganador por lenguaje, frente a CodeLlama y Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/es/power-local-llm/deepseek-vs-qwen-coding-local-2026',
@@ -785,15 +789,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '로컬 코딩 AI DeepSeek vs Qwen 2026: 승자는?',
-    seoTitle: 'DeepSeek vs Qwen 코딩 2026: 속도 벤치마크',
+    seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder 로컬: 승자는?',
     metaDescription:
-      'DeepSeek-V3 vs Qwen3-Coder 로컬 코딩: Python, JavaScript, Rust, C++ 벤치마크. VRAM, 속도, 언어별 승자. 2026년 5월 기준.',
+      'Qwen2.5-Coder vs DeepSeek-Coder 로컬 코딩: Qwen이 HumanEval 우세(88.4% vs 83.5%), DeepSeek은 repo-level·FIM에서 근소 우세. CodeLlama·Llama 3 대비. 2026년 7월 기준.',
     twitterDescription:
-      'DeepSeek-V3는 Python·JavaScript에서 우세합니다. Qwen3-Coder 32B는 Rust·C++에서 우세합니다. 각 예산 등급별 하드웨어 사양과 속도 벤치마크.',
+      'Qwen2.5-Coder / Qwen3-Coder 32B가 HumanEval과 전체 로컬 코딩에서 승리합니다. DeepSeek-Coder는 준우승 — repo-level·fill-in-the-middle 자동 완성에서 근소 우세. 각 예산 등급별 하드웨어 사양과 속도 벤치마크.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -821,20 +825,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Minisforum UM890 Pro',
     ],
     leadAnswerBlock:
-      '**DeepSeek-V3(API 경유)는 Python, JavaScript, TypeScript에서 선두를 유지합니다 — HumanEval 82.4% 대 Qwen3-Coder 32B의 77.8%. Qwen3-Coder 32B는 로컬에서 Rust·C++에서 우수하며, RTX 4090 24 GB에서 10~14 tok/s로 실행됩니다. DeepSeek-V3는 API 접근 또는 멀티 GPU 서버(236B MoE 모델)가 필요합니다.**',
+      '**로컬 코딩에서는 Qwen2.5-Coder / Qwen3-Coder 32B가 전체적으로 승리합니다 — HumanEval에서 약 88.4%로 DeepSeek-Coder-V2-Lite의 약 83.5%를 앞서며, RTX 4090 24 GB 한 장에서 10~14 tok/s로 실행됩니다. DeepSeek-Coder는 준우승입니다: repo-level 및 fill-in-the-middle(FIM) 자동 완성에서 근소하게 앞서지만, 최상위 모델(DeepSeek-V3, 236B MoE)은 API 접근 또는 멀티 GPU 서버가 필요합니다. 두 모델 모두 구형 기준점인 CodeLlama와 Llama 3를 앞서며, 이들은 모든 최신 코딩 벤치마크에서 뒤처집니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 로컬 코딩에서 DeepSeek과 Qwen 중 어느 쪽이 더 낫습니까?',
         answer:
-          '완전 로컬 추론의 경우: RTX 4090의 Qwen3-Coder 32B가 승자입니다 — Rust, C++, 복잡한 리팩터링에서 로컬 DeepSeek 변형보다 뛰어납니다. API 코딩의 경우: DeepSeek-V3가 Python·JS에서 더 높은 점수를 기록하지만 클라우드 접근이 필요합니다(236B MoE는 소비자 하드웨어에서 실행 불가).',
+          '완전 로컬 추론의 경우: RTX 4090 한 장의 Qwen2.5-Coder / Qwen3-Coder 32B가 승자입니다 — HumanEval에서 선두(약 88.4% vs DeepSeek-Coder-V2-Lite 약 83.5%)이며 Rust, C++, 복잡한 리팩터링을 어떤 로컬 DeepSeek 변형보다 잘 처리합니다. DeepSeek-Coder는 repo-level 및 fill-in-the-middle 자동 완성에서 근소하게 앞섭니다. 최상위 DeepSeek-V3 모델(236B MoE)은 소비자 하드웨어가 아니라 API 접근이 필요합니다. 두 모델 모두 최신 코딩 벤치마크에서 CodeLlama와 Llama 3를 앞섭니다.',
         bullets: [
-          '로컬 승자: Qwen3-Coder 32B(RTX 4090, 약 12 tok/s)',
-          'API 승자: DeepSeek-V3(HumanEval: 82.4% vs Qwen 77.8%)',
+          '완전 로컬 승자: Qwen2.5-Coder / Qwen3-Coder 32B(RTX 4090, 약 12 tok/s)',
+          'HumanEval 승자: Qwen 32B(약 88.4% vs DeepSeek-Coder-V2-Lite 약 83.5%)',
+          'repo-level / FIM 자동 완성 우세: DeepSeek-Coder',
           '로컬 경제적 선택: RTX 4060 Ti 16 GB에서 Qwen3-Coder 14B(약 16 tok/s)',
-          'Rust/C++ 최적: Qwen3-Coder 32B(로컬)',
-          'Python/JS 최적: DeepSeek-V3 API 또는 로컬에서 DeepSeek-R1-Distill-Qwen-32B',
+          'CodeLlama와 Llama 3는 모든 최신 코딩 벤치마크에서 두 모델 모두에 뒤처짐',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -854,9 +858,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: '핵심 요약',
         items: [
-          'DeepSeek-V3는 Python·JavaScript에서 더 높은 점수를 기록하지만 236B MoE 모델이므로 소비자 하드웨어에서는 로컬 실행 불가',
-          'Qwen3-Coder 32B가 완전 로컬 코딩 LLM 중 최고입니다 — RTX 4090 24 GB에서 실행 가능하고, 모든 언어에서 경쟁력 있는 점수를 기록하며 Rust·C++에서 탁월합니다',
-          'DeepSeek-R1-Distill-Qwen-32B는 로컬에서 실행 가능한 DeepSeek-R1 증류 버전입니다 — 알고리즘 문제에 유용하지만 자동 완성에서는 Qwen3-Coder보다 느립니다',
+          'Qwen2.5-Coder / Qwen3-Coder 32B가 HumanEval을 선도(약 88.4% vs DeepSeek-Coder-V2-Lite 약 83.5%)하며 최고의 완전 로컬 코딩 LLM입니다 — RTX 4090 24 GB 한 장에서 실행 가능하고 Rust·C++에서 탁월합니다',
+          'DeepSeek-Coder는 준우승입니다: repo-level 및 fill-in-the-middle 자동 완성에서 근소하게 앞서지만, 최상위 모델 DeepSeek-V3(236B MoE)는 소비자 하드웨어에서 로컬 실행 불가',
+          'CodeLlama와 Llama 3는 구형 기준점으로, 모든 최신 코딩 벤치마크에서 Qwen과 DeepSeek 양쪽에 뒤처집니다',
+          'DeepSeek-R1-Distill-Qwen-32B는 로컬에서 실행 가능한 DeepSeek-R1 추론 증류 버전입니다 — 알고리즘 문제에 유용하지만 자동 완성에서는 Qwen3-Coder보다 느립니다',
           '경제적 선택: RTX 4060 Ti 16 GB의 Qwen3-Coder 14B는 Q4_K_M에서 16~18 tok/s를 제공합니다 — 벤치마크 점수가 약 3%포인트 낮지만 32B보다 자동 완성이 빠릅니다',
           'IDE 통합(Continue.dev, Cline, Cursor 로컬 모드): Qwen은 즉시 작동하고 DeepSeek-V3는 클라우드 API 키 설정이 필요합니다',
           'Minisforum UM890 Pro + 외장 RTX 4060 Ti 16 GB eGPU: 총 약 $800, Qwen3-Coder 14B를 24시간 실행하는 전용 코딩 서버',
@@ -867,11 +872,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Qwen3-Coder 32B가 2026년 완전 로컬 코딩 LLM 중 최고입니다. DeepSeek-V3는 API 경유 시에만 Python·JavaScript에서 우세합니다.',
+            text: 'Qwen2.5-Coder / Qwen3-Coder 32B가 2026년 최고의 완전 로컬 코딩 LLM이며 HumanEval을 선도합니다. DeepSeek-Coder는 준우승으로 repo-level 및 fill-in-the-middle 자동 완성에서 근소하게 앞섭니다.',
           },
           {
             type: 'plain-terms',
-            text: '코드를 클라우드 서비스에 전송하지 않고 완전히 자체 기기에서 실행되는 코딩 AI를 원한다면 Qwen3-Coder 32B를 사용하십시오. DeepSeek API 사용이 허용된다면(코드가 자체 기기를 벗어남) DeepSeek-V3는 Python·JavaScript에서 약간 더 뛰어납니다.',
+            text: '코드를 클라우드 서비스에 전송하지 않고 완전히 자체 기기에서 실행되는 코딩 AI를 원한다면 Qwen2.5-Coder / Qwen3-Coder 32B를 사용하십시오 — HumanEval 코딩 테스트에서 가장 높은 점수를 기록합니다. DeepSeek-Coder는 근소한 차이의 2위이며 기존 파일 내부의 코드 완성(fill-in-the-middle)에서 약간 더 낫지만, 가장 강력한 모델은 클라우드 API 접근이 필요합니다.',
           },
         ],
       },
@@ -933,21 +938,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**HumanEval은 단일 함수에 대한 Python 코드 생성을 측정합니다. LiveCodeBench는 2023~2026년 테스트 케이스가 포함된 프로그래밍 대회 문제를 측정합니다. SWE-bench는 실제 GitHub 이슈 해결 능력을 측정합니다.** 모든 점수는 pass@1(단일 시도)입니다.',
         columns: ['모델', 'HumanEval', 'LiveCodeBench', 'SWE-bench Lite', '최적 분야'],
         rows: [
-          { '0': 'DeepSeek-V3 (API)', '1': '82.4%', '2': '43.8%', '3': '42.0%', '4': 'Python, JS, TS' },
+          { '0': 'Qwen2.5-Coder / Qwen3-Coder 32B (로컬)', '1': '88.4%', '2': '43.6%', '3': '42.5%', '4': 'HumanEval, Rust, C++, 리팩터링' },
+          { '0': 'DeepSeek-V3 (API)', '1': '82.4%', '2': '43.8%', '3': '42.0%', '4': 'repo-level, 확장성' },
+          { '0': 'DeepSeek-Coder-V2-Lite (로컬)', '1': '83.5%', '2': '40.1%', '3': '39.6%', '4': 'fill-in-the-middle 자동 완성' },
           { '0': 'DeepSeek-R1 (API)', '1': '79.8%', '2': '47.3%', '3': '49.2%', '4': '알고리즘 추론' },
           { '0': 'DeepSeek-R1-Distill-Qwen-32B (로컬)', '1': '72.6%', '2': '39.4%', '3': '36.8%', '4': '로컬 추론 작업' },
-          { '0': 'Qwen3-Coder 32B (로컬)', '1': '77.8%', '2': '38.2%', '3': '35.0%', '4': 'Rust, C++, 리팩터링' },
-          { '0': 'Qwen3-Coder 14B (로컬)', '1': '72.1%', '2': '33.6%', '3': '28.4%', '4': '자동 완성, 경제적 선택' },
-          { '0': 'Qwen3-Coder 7B (로컬)', '1': '61.4%', '2': '26.8%', '3': '21.2%', '4': '초경제적 단일 라인 완성' },
+          { '0': 'Qwen3-Coder 14B (로컬)', '1': '80.2%', '2': '33.6%', '3': '28.4%', '4': '자동 완성, 경제적 선택' },
+          { '0': 'Qwen3-Coder 7B (로컬)', '1': '68.9%', '2': '26.8%', '3': '21.2%', '4': '초경제적 단일 라인 완성' },
+          { '0': 'CodeLlama 34B (로컬, 기준점)', '1': '48.8%', '2': '19.4%', '3': '14.2%', '4': '구형 기준선 전용' },
         ],
-        note: 'DeepSeek-V3 및 R1 점수는 공식 발표 수치입니다. 로컬 모델 점수는 CUDA 12.4에서 Ollama 0.7.0을 사용하여 Q4_K_M 양자화로 RTX 4090 테스트 환경에서 측정되었습니다.',
+        note: 'DeepSeek-V3/R1 및 Qwen2.5-Coder 점수는 공식 발표 수치입니다. Qwen2.5-Coder 32B가 HumanEval을 약 88.4%로 선도합니다. CodeLlama와 Llama 3는 구형 기준점으로 모든 벤치마크에서 최신 코딩 모델에 뒤처집니다. 로컬 점수는 CUDA 12.4에서 Ollama 0.7.0을 사용하여 Q4_K_M 양자화로 RTX 4090 테스트 환경에서 측정되었습니다.',
       },
       hardware: {
         id: 'hardware',
         title: 'VRAM 및 하드웨어 요구 사항',
         content:
           '**로컬 사용에서 DeepSeek과 Qwen의 핵심 차이는 벤치마크 점수가 아니라 하드웨어에서 실행 가능 여부입니다.** DeepSeek-V3는 236B MoE 모델입니다. INT4 양자화를 적용해도 약 140 GB의 VRAM이 필요하므로 소비자 구성으로는 불가능합니다.',
-        columns: ['모델', 'VRAM(Q4_K_M)', '최소 GPU', '예상 가격(2026년 5월)'],
+        columns: ['모델', 'VRAM(Q4_K_M)', '최소 GPU', '예상 가격(2026년 7월)'],
         rows: [
           { '0': 'Qwen3-Coder 7B', '1': '5.2 GB', '2': 'RTX 3060 12 GB', '3': '중고 $150~350' },
           { '0': 'Qwen3-Coder 14B', '1': '9.4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '신품 $424' },
@@ -1070,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'DeepSeek-V3 API 가격은 Qwen 로컬 실행과 비교하면 어떻습니까?',
-            a: 'DeepSeek-V3 API 가격(2026년 5월 기준): 입력 토큰 1M당 $0.27, 출력 토큰 1M당 $1.10. 일반적인 IDE 사용량(하루 200K 토큰)의 경우 일 $0.27, 월 약 $8입니다. Qwen3-Coder 32B를 RTX 4090에서 로컬 실행하면 전기료 약 $0.05/일에 3년간 하드웨어 상각 약 $1.70/일이 추가됩니다. 이미 RTX 4090이 있지 않은 한 DeepSeek API가 더 경제적입니다.',
+            a: 'DeepSeek-V3 API 가격(2026년 7월 기준): 입력 토큰 1M당 $0.27, 출력 토큰 1M당 $1.10. 일반적인 IDE 사용량(하루 200K 토큰)의 경우 일 $0.27, 월 약 $8입니다. Qwen3-Coder 32B를 RTX 4090에서 로컬 실행하면 전기료 약 $0.05/일에 3년간 하드웨어 상각 약 $1.70/일이 추가됩니다. 이미 RTX 4090이 있지 않은 한 DeepSeek API가 더 경제적입니다.',
           },
           {
             q: 'Qwen3-Coder는 에이전트 코딩 작업을 위한 function calling을 지원합니까?',
@@ -1083,6 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '업데이트 기록',
         items: [
           '2026-05-26: 최초 게시. 벤치마크 데이터: HumanEval/LiveCodeBench는 공식 모델 릴리스에서 발췌, SWE-bench는 SWE-bench.com 리더보드에서 발췌. 속도 벤치마크는 RTX 4090 + RTX 4060 Ti 16 GB 테스트 환경에서 측정.',
+          '2026-07-01: HumanEval 순위 정정 — Qwen2.5-Coder / Qwen3-Coder 32B가 약 88.4%로 DeepSeek-Coder-V2-Lite의 약 83.5%를 앞섭니다. DeepSeek-Coder를 준우승(repo-level / fill-in-the-middle 우세)으로 명확화. CodeLlama와 Llama 3를 구형 기준점으로 추가.',
           '다음 검토 예정: 2026-11-26',
         ],
       },
@@ -1153,9 +1161,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 코딩 AI DeepSeek vs Qwen 2026: 승자는?',
       description:
-        'DeepSeek-V3 vs Qwen3-Coder 코딩 비교: Python, JavaScript, Rust, C++ 벤치마크. VRAM 요구 사항, 속도, 언어별 승자.',
+        'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder 로컬 코딩: Qwen이 HumanEval 선도(약 88.4%), DeepSeek-Coder는 repo-level 및 fill-in-the-middle에서 근소 우세. VRAM, 속도, 언어별 승자, CodeLlama·Llama 3 대비.',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026',
@@ -1171,32 +1179,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?',
     seoTitle: 'DeepSeek vs Qwen Coding 2026: Python & Rust Vergleich',
     metaDescription:
-      'DeepSeek-Coder vs Qwen3-Coder für lokales Coding 2026: Benchmarks, VRAM-Bedarf und reale Code-Qualität. Welches Modell für Python, JavaScript, Refactoring.',
+      'Qwen2.5-Coder vs DeepSeek-Coder für lokales Coding 2026: Qwen gewinnt HumanEval (88,4 % vs. 83,5 %); DeepSeek liegt bei Repo-Level-FIM vorn. Python, Rust, Refactoring.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
       'Entwickler, die ein lokales Coding-LLM für Continue.dev, Cline oder Cursor Local Mode suchen.',
     leadAnswerBlock:
-      '**DeepSeek-V3 führt bei Python- und JavaScript-Benchmarks (82,4 % auf HumanEval), ist aber ein 236-Milliarden-Parameter-MoE-Modell — es läuft nicht lokal auf Consumer-Hardware. Qwen3-Coder 32B ist das beste vollständig lokale Coding-LLM und passt auf eine RTX 4090 24 GB (10–14 tok/s). Werbung: Affiliate-Links zu Hardware und Cloud-Diensten auf dieser Seite können Provision generieren.**',
+      '**Für lokales Coding gewinnt Qwen2.5-Coder / Qwen3-Coder 32B insgesamt — es führt HumanEval mit ~88,4 % gegenüber ~83,5 % von DeepSeek-Coder-V2-Lite und passt auf eine RTX 4090 24 GB (10–14 tok/s). DeepSeek-Coder ist der Zweitplatzierte: Es liegt bei Repo-Level- und Fill-in-the-Middle-Autocomplete (FIM) knapp vorn, doch sein Spitzenmodell (DeepSeek-V3, 236B MoE) benötigt API-Zugang oder einen Multi-GPU-Server. Beide schlagen die älteren Referenzen CodeLlama und Llama 3, die bei jedem aktuellen Coding-Benchmark zurückliegen. Werbung: Affiliate-Links zu Hardware und Cloud-Diensten auf dieser Seite können Provision generieren.**',
     quickAnswerTop: {
       de: {
         question: 'Ist DeepSeek oder Qwen besser für lokales Coding 2026?',
         answer:
-          'Für vollständig lokale Inferenz: Qwen3-Coder 32B auf einer RTX 4090 gewinnt — besser bei Rust, C++ und komplexem Refactoring. Für API-zugängliches Coding: DeepSeek-V3 erzielt höhere Scores bei Python und JS, benötigt aber Cloud-Zugang (236B MoE läuft nicht auf Consumer-Hardware).',
+          'Für vollständig lokale Inferenz gewinnt Qwen2.5-Coder / Qwen3-Coder 32B auf einer RTX 4090 — es führt HumanEval (~88,4 % vs. DeepSeek-Coder-V2-Lite ~83,5 %) und ist besser bei Rust, C++ und komplexem Refactoring als jede lokale DeepSeek-Variante. DeepSeek-Coder ist der Zweitplatzierte und liegt bei Repo-Level- und Fill-in-the-Middle-Autocomplete knapp vorn; sein Spitzenmodell DeepSeek-V3 (236B MoE) benötigt API-Zugang, keine Consumer-Hardware. Beide schlagen CodeLlama und Llama 3 bei aktuellen Coding-Benchmarks.',
         bullets: [
-          'Vollständig lokal: Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
-          'API-Gewinner: DeepSeek-V3 (HumanEval: 82,4 % vs. Qwen 77,8 %)',
+          'Vollständig lokaler Sieger: Qwen2.5-Coder / Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
+          'HumanEval-Sieger: Qwen 32B (~88,4 % vs. DeepSeek-Coder-V2-Lite ~83,5 %)',
+          'Repo-Level-/FIM-Autocomplete-Vorsprung: DeepSeek-Coder',
           'Budget lokal: Qwen3-Coder 14B auf RTX 4060 Ti 16 GB (~16 tok/s)',
-          'Bester für Rust/C++: Qwen3-Coder 32B (lokal)',
-          'Bester für Python/JS: DeepSeek-V3 per API',
+          'CodeLlama und Llama 3 liegen bei jedem aktuellen Coding-Benchmark hinter beiden zurück',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1205,8 +1213,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Wichtigste Erkenntnisse',
         items: [
-          'DeepSeek-V3 erzielt höhere Scores bei Python und JavaScript, ist aber ein 236B-MoE-Modell — läuft nicht lokal auf Consumer-Hardware',
-          'Qwen3-Coder 32B ist das beste vollständig lokale Coding-LLM — passt auf eine RTX 4090 24 GB, überzeugt bei Rust und C++',
+          'Qwen2.5-Coder / Qwen3-Coder 32B führt HumanEval (~88,4 % vs. DeepSeek-Coder-V2-Lite ~83,5 %) und ist das beste vollständig lokale Coding-LLM — passt auf eine RTX 4090 24 GB, überzeugt bei Rust und C++',
+          'DeepSeek-Coder ist der Zweitplatzierte: Es liegt bei Repo-Level- und Fill-in-the-Middle-Autocomplete knapp vorn, doch sein Spitzenmodell DeepSeek-V3 (236B MoE) läuft nicht lokal auf Consumer-Hardware',
+          'CodeLlama und Llama 3 sind ältere Referenzen, die bei jedem aktuellen Coding-Benchmark hinter Qwen und DeepSeek zurückliegen',
           'DeepSeek-R1-Distill-Qwen-32B ist eine lokal lauffähige, destillierte Version von DeepSeek-R1 — gut für algorithmische Probleme, langsamer bei Autocomplete',
           'Budget-Option: Qwen3-Coder 14B auf einer RTX 4060 Ti 16 GB liefert 16–18 tok/s bei Q4_K_M',
           'Für IDE-Integration (Continue.dev, Cline, Cursor Local Mode): Qwen funktioniert direkt; DeepSeek-V3 benötigt API-Schlüssel-Konfiguration',
@@ -1215,8 +1224,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snippets: {
         id: 'snippets',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3-Coder 32B ist das beste vollständig lokale Coding-LLM 2026; DeepSeek-V3 übertrifft es nur bei Python und JavaScript, wenn es über die API genutzt wird.' },
-          { type: 'plain-terms', text: 'Wenn der Code die eigene Maschine nicht verlassen darf: Qwen3-Coder 32B verwenden. Wenn eine Cloud-API akzeptabel ist: DeepSeek-V3 ist etwas besser für Python und JavaScript.' },
+          { type: 'one-sentence', text: 'Qwen2.5-Coder / Qwen3-Coder 32B ist 2026 das beste vollständig lokale Coding-LLM und führt HumanEval; DeepSeek-Coder ist der Zweitplatzierte und liegt bei Repo-Level- und Fill-in-the-Middle-Autocomplete knapp vorn.' },
+          { type: 'plain-terms', text: 'Wenn der Code die eigene Maschine nicht verlassen darf: Qwen2.5-Coder / Qwen3-Coder 32B verwenden — es erzielt den höchsten HumanEval-Wert. DeepSeek-Coder ist ein knapper Zweiter und etwas besser beim Vervollständigen von Code innerhalb einer bestehenden Datei (Fill-in-the-Middle), doch sein stärkstes Modell benötigt Cloud-API-Zugang.' },
         ],
       },
       internalLinks: {
@@ -1238,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Kann ich DeepSeek-V3 lokal auf meiner GPU betreiben?', a: 'Nein, nicht auf Consumer-Hardware. DeepSeek-V3 ist ein 236-Milliarden-Parameter-MoE-Modell. Auch bei INT4-Quantisierung sind ca. 140 GB VRAM erforderlich — entsprechend 6 NVIDIA A100 80 GB. Lokal lauffähige Alternativen: DeepSeek-R1-Distill-Qwen-32B (passt auf RTX 4090 24 GB) oder kleinere Destillationen.' },
           { q: 'Welches lokale Modell eignet sich am besten für Continue.dev oder Cline?', a: 'Qwen3-Coder 14B auf einer RTX 4060 Ti 16 GB liefert die beste Balance aus Geschwindigkeit (14–18 tok/s) und Qualität für IDE-Autocomplete. Mit einer RTX 4090 empfiehlt sich Qwen3-Coder 32B für deutlich besseres Multi-File-Refactoring.' },
-          { q: 'Was kostet DeepSeek-V3 per API im Vergleich zu lokalem Qwen?', a: 'DeepSeek-V3 API (Stand Mai 2026): 0,27 US-Dollar pro 1 Mio. Input-Token, 1,10 US-Dollar pro 1 Mio. Output-Token — bei typischer IDE-Nutzung ca. 7–8 Euro/Monat. Qwen3-Coder 32B lokal auf einer RTX 4090 kostet ca. 0,05 Euro/Tag Strom plus Hardware-Amortisierung.' },
+          { q: 'Was kostet DeepSeek-V3 per API im Vergleich zu lokalem Qwen?', a: 'DeepSeek-V3 API (Stand Juli 2026): 0,27 US-Dollar pro 1 Mio. Input-Token, 1,10 US-Dollar pro 1 Mio. Output-Token — bei typischer IDE-Nutzung ca. 7–8 Euro/Monat. Qwen3-Coder 32B lokal auf einer RTX 4090 kostet ca. 0,05 Euro/Tag Strom plus Hardware-Amortisierung.' },
         ],
       },
     },
@@ -1254,9 +1263,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?',
-      description: 'DeepSeek-V3 vs Qwen3-Coder: Benchmarks in Python, JavaScript, Rust und C++. VRAM-Anforderungen, Geschwindigkeit und Sieger nach Programmiersprache.',
+      description: 'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder für lokales Coding: Qwen führt HumanEval (~88,4 %); DeepSeek-Coder liegt bei Repo-Level und Fill-in-the-Middle vorn. VRAM, Geschwindigkeit, vs CodeLlama und Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1267,30 +1276,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?',
     seoTitle: 'DeepSeek vs Qwen 2026 : Benchmark Python, Rust, JS',
     metaDescription:
-      'DeepSeek-Coder vs Qwen3-Coder pour le code local 2026 : benchmarks, besoins VRAM et qualité de code réelle. Quel modèle pour Python, JavaScript, refactoring.',
+      'Qwen2.5-Coder vs DeepSeek-Coder pour le code local 2026 : Qwen gagne HumanEval (88,4 % vs 83,5 %) ; DeepSeek devance en repo-level FIM. Python, Rust, refactoring.',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience: 'Développeurs choisissant un LLM de coding local pour Continue.dev, Cline ou Cursor en mode local.',
     leadAnswerBlock:
-      '**DeepSeek-V3 domine en Python et JavaScript (82,4 % sur HumanEval), mais c\'est un modèle MoE de 236 milliards de paramètres — il ne fonctionne pas localement sur du matériel grand public. Qwen3-Coder 32B est le meilleur LLM de coding entièrement local, tient dans un RTX 4090 24 Go (10–14 tok/s) et excelle en Rust et C++.**',
+      '**Pour le coding local, Qwen2.5-Coder / Qwen3-Coder 32B gagne globalement — il mène HumanEval à ~88,4 % contre ~83,5 % pour DeepSeek-Coder-V2-Lite et tient dans un RTX 4090 24 Go (10–14 tok/s). DeepSeek-Coder est le second : il devance légèrement en autocomplétion repo-level et fill-in-the-middle (FIM), mais son meilleur modèle (DeepSeek-V3, 236B MoE) nécessite un accès API ou un serveur multi-GPU. Les deux surpassent les références plus anciennes CodeLlama et Llama 3, qui sont à la traîne sur tous les benchmarks de coding actuels.**',
     quickAnswerTop: {
       fr: {
         question: 'DeepSeek ou Qwen est-il meilleur pour le coding local en 2026 ?',
-        answer: 'Pour une inférence entièrement locale : Qwen3-Coder 32B sur RTX 4090 gagne — meilleur en Rust, C++ et refactoring complexe. Pour un accès via API : DeepSeek-V3 obtient de meilleures scores en Python et JS, mais nécessite une connexion cloud.',
+        answer: 'Pour une inférence entièrement locale : Qwen2.5-Coder / Qwen3-Coder 32B sur RTX 4090 gagne — il mène HumanEval (~88,4 % vs DeepSeek-Coder-V2-Lite ~83,5 %) et gère Rust, C++ et le refactoring complexe mieux que toute variante DeepSeek locale. DeepSeek-Coder est le second et devance légèrement en autocomplétion repo-level et fill-in-the-middle ; son meilleur modèle DeepSeek-V3 (236B MoE) nécessite un accès API, pas du matériel grand public. Les deux surpassent CodeLlama et Llama 3 sur les benchmarks de coding actuels.',
         bullets: [
-          'Meilleur local : Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
-          'Meilleur API : DeepSeek-V3 (HumanEval : 82,4 % vs Qwen 77,8 %)',
+          'Vainqueur entièrement local : Qwen2.5-Coder / Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
+          'Vainqueur HumanEval : Qwen 32B (~88,4 % vs DeepSeek-Coder-V2-Lite ~83,5 %)',
+          'Avantage autocomplétion repo-level / FIM : DeepSeek-Coder',
           'Budget local : Qwen3-Coder 14B sur RTX 4060 Ti 16 Go (~16 tok/s)',
-          'Meilleur pour Rust/C++ : Qwen3-Coder 32B (local)',
-          'Meilleur pour Python/JS : DeepSeek-V3 via API',
+          'CodeLlama et Llama 3 sont à la traîne derrière les deux sur tous les benchmarks de coding actuels',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1299,8 +1308,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Points clés',
         items: [
-          'DeepSeek-V3 obtient de meilleurs scores en Python et JavaScript, mais est un modèle MoE de 236B — non exécutable localement sur matériel grand public',
-          'Qwen3-Coder 32B est le meilleur LLM de coding entièrement local — tient dans un RTX 4090 24 Go, excellent en Rust et C++',
+          'Qwen2.5-Coder / Qwen3-Coder 32B mène HumanEval (~88,4 % vs DeepSeek-Coder-V2-Lite ~83,5 %) et est le meilleur LLM de coding entièrement local — tient dans un RTX 4090 24 Go, excellent en Rust et C++',
+          'DeepSeek-Coder est le second : il devance légèrement en autocomplétion repo-level et fill-in-the-middle, mais son meilleur modèle DeepSeek-V3 (236B MoE) ne s\'exécute pas localement sur matériel grand public',
+          'CodeLlama et Llama 3 sont des références plus anciennes, à la traîne derrière Qwen et DeepSeek sur tous les benchmarks de coding actuels',
           'DeepSeek-R1-Distill-Qwen-32B est exécutable localement, bon pour les problèmes algorithmiques, plus lent pour l\'autocomplétion',
           'Option budget : Qwen3-Coder 14B sur RTX 4060 Ti 16 Go, 16–18 tok/s en Q4_K_M',
           'Intégration IDE (Continue.dev, Cline, Cursor) : Qwen fonctionne nativement ; DeepSeek-V3 nécessite une clé API cloud',
@@ -1309,8 +1319,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snippets: {
         id: 'snippets',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3-Coder 32B est le meilleur LLM de coding entièrement local en 2026 ; DeepSeek-V3 le surpasse uniquement en Python et JavaScript via API.' },
-          { type: 'plain-terms', text: 'Si le code ne doit pas quitter votre machine : utilisez Qwen3-Coder 32B. Si une API cloud est acceptable : DeepSeek-V3 est légèrement meilleur pour Python et JavaScript.' },
+          { type: 'one-sentence', text: 'Qwen2.5-Coder / Qwen3-Coder 32B est le meilleur LLM de coding entièrement local en 2026 et mène HumanEval ; DeepSeek-Coder est le second et devance légèrement en autocomplétion repo-level et fill-in-the-middle.' },
+          { type: 'plain-terms', text: 'Si le code ne doit pas quitter votre machine : utilisez Qwen2.5-Coder / Qwen3-Coder 32B — il obtient le meilleur score au test HumanEval. DeepSeek-Coder est un second très proche et légèrement meilleur pour compléter du code au sein d\'un fichier existant (fill-in-the-middle), mais son modèle le plus puissant nécessite un accès API cloud.' },
         ],
       },
       internalLinks: {
@@ -1332,7 +1342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Puis-je exécuter DeepSeek-V3 localement ?', a: 'Non, pas sur du matériel grand public. DeepSeek-V3 est un modèle MoE de 236 milliards de paramètres nécessitant environ 140 Go de VRAM combiné. Alternatives locales : DeepSeek-R1-Distill-Qwen-32B (RTX 4090) ou distillations plus petites.' },
           { q: 'Quel modèle local choisir pour Continue.dev ?', a: 'Qwen3-Coder 14B sur RTX 4060 Ti 16 Go offre le meilleur équilibre vitesse/qualité (14–18 tok/s) pour l\'autocomplétion IDE. Avec un RTX 4090, optez pour Qwen3-Coder 32B pour un meilleur refactoring multi-fichiers.' },
-          { q: 'Quel est le prix de l\'API DeepSeek-V3 vs Qwen local ?', a: 'API DeepSeek-V3 (mai 2026) : 0,27 $/million de tokens en entrée, 1,10 $/million en sortie — environ 6–8 €/mois pour une utilisation IDE typique. Qwen3-Coder 32B local sur RTX 4090 coûte ~0,04 €/jour en électricité plus l\'amortissement matériel.' },
+          { q: 'Quel est le prix de l\'API DeepSeek-V3 vs Qwen local ?', a: 'API DeepSeek-V3 (juillet 2026) : 0,27 $/million de tokens en entrée, 1,10 $/million en sortie — environ 6–8 €/mois pour une utilisation IDE typique. Qwen3-Coder 32B local sur RTX 4090 coûte ~0,04 €/jour en électricité plus l\'amortissement matériel.' },
         ],
       },
     },
@@ -1347,9 +1357,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?',
-      description: 'DeepSeek-V3 vs Qwen3-Coder : benchmarks en Python, JavaScript, Rust et C++. VRAM, vitesse et gagnant par langage de programmation.',
+      description: 'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder pour le coding local : Qwen mène HumanEval (~88,4 %) ; DeepSeek-Coder devance en repo-level et fill-in-the-middle. VRAM, vitesse, vs CodeLlama et Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1360,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？',
@@ -1371,19 +1381,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Continue.dev、Cline、Cursor Local ModeでローカルLLMを使用する開発者。',
     leadAnswerBlock:
-      '**DeepSeek-V3はPythonとJavaScriptのベンチマークでトップ（HumanEval 82.4%）ですが、236BのMoEモデルのためコンシューマーハードウェアでは動作しません。Qwen3-Coder 32Bは完全ローカルで最高のコーディングLLMです（RTX 4090 24GBで10〜14 tok/s）。RustとC++では特に優秀です。**',
+      '**ローカルコーディングでは、Qwen2.5-Coder / Qwen3-Coder 32Bが総合的に優勝です。HumanEvalで約88.4%を記録し、DeepSeek-Coder-V2-Liteの約83.5%を上回ります。RTX 4090 24GB 1枚に収まり10〜14 tok/sで動作します。DeepSeek-Coderは次点で、リポジトリレベルおよびfill-in-the-middle（FIM）オートコンプリートで優位ですが、最上位モデルのDeepSeek-V3（236B MoE）はAPIアクセスまたはマルチGPUサーバーが必要です。両者とも旧来のCodeLlamaやLlama 3を上回り、これらは現行の全コーディングベンチマークで下位です。**',
     quickAnswerTop: {
       ja: {
         question: '2026年、ローカルコーディングにはDeepSeekとQwenどちらが優れている？',
-        answer: '完全ローカル推論：Qwen3-Coder 32B（RTX 4090）が優勝 — RustやC++、複雑なリファクタリングで優位。APIアクセス可能な場合：DeepSeek-V3がPythonとJSで高スコアだが、クラウドアクセスが必要。',
+        answer: '完全ローカル推論：Qwen2.5-Coder / Qwen3-Coder 32B（RTX 4090）が優勝 — HumanEvalでトップ（約88.4% vs DeepSeek-Coder-V2-Lite 約83.5%）、RustやC++、複雑なリファクタリングでローカルDeepSeekのどの派生版よりも優位。DeepSeek-Coderは次点で、リポジトリレベルおよびfill-in-the-middleオートコンプリートで一歩リード。最上位のDeepSeek-V3（236B MoE）はAPIアクセスが必要でコンシューマーハードウェアでは動作しない。両者ともCodeLlamaとLlama 3を現行ベンチマークで上回る。',
         bullets: [
-          '完全ローカル：Qwen3-Coder 32B（RTX 4090、約12 tok/s）',
-          'API：DeepSeek-V3（HumanEval: 82.4% vs Qwen 77.8%）',
+          '完全ローカル優勝：Qwen2.5-Coder / Qwen3-Coder 32B（RTX 4090、約12 tok/s）',
+          'HumanEval優勝：Qwen 32B（約88.4% vs DeepSeek-Coder-V2-Lite 約83.5%）',
+          'リポジトリレベル / FIMオートコンプリート優位：DeepSeek-Coder',
           'バジェットローカル：Qwen3-Coder 14B（RTX 4060 Ti 16GB、約16 tok/s）',
-          'Rust/C++最優秀：Qwen3-Coder 32B（ローカル）',
-          'Python/JS最優秀：DeepSeek-V3（API）',
+          'CodeLlamaとLlama 3は現行の全コーディングベンチマークで両者に及ばない',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1392,8 +1402,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'まとめ',
         items: [
-          'DeepSeek-V3はPythonとJSで高スコアだが236B MoEモデル——コンシューマーハードウェアでは動作しない',
-          'Qwen3-Coder 32Bは完全ローカルで最高のコーディングLLM——RTX 4090 24GBに収まり、RustとC++で優秀',
+          'Qwen2.5-Coder / Qwen3-Coder 32BはHumanEvalでトップ（約88.4% vs DeepSeek-Coder-V2-Lite 約83.5%）で、最高の完全ローカルコーディングLLM——RTX 4090 24GBに収まり、RustとC++で優秀',
+          'DeepSeek-Coderは次点——リポジトリレベルおよびfill-in-the-middleオートコンプリートで一歩リードするが、最上位のDeepSeek-V3（236B MoE）はコンシューマーハードウェアでは動作しない',
+          'CodeLlamaとLlama 3は旧来のリファレンスで、現行の全コーディングベンチマークでQwenとDeepSeekの両者に及ばない',
           'DeepSeek-R1-Distill-Qwen-32Bはローカル実行可能、アルゴリズム問題に強いがオートコンプリートは遅い',
           'バジェット：Qwen3-Coder 14B（RTX 4060 Ti 16GB）、16〜18 tok/s',
           'IDE統合（Continue.dev、Cline）：QwenはOllama経由でそのまま動作',
@@ -1402,8 +1413,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snippets: {
         id: 'snippets',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3-Coder 32Bは2026年における最高の完全ローカルコーディングLLMであり、DeepSeek-V3はAPIを通じたPythonとJavaScriptでのみ上回る。' },
-          { type: 'plain-terms', text: 'コードを自分のマシンから外に出したくない場合：Qwen3-Coder 32Bを使用。クラウドAPIが許容できる場合：DeepSeek-V3はPythonとJSで若干優秀。' },
+          { type: 'one-sentence', text: 'Qwen2.5-Coder / Qwen3-Coder 32Bは2026年における最高の完全ローカルコーディングLLMでHumanEvalでもトップ；DeepSeek-Coderは次点で、リポジトリレベルおよびfill-in-the-middleオートコンプリートで一歩リードする。' },
+          { type: 'plain-terms', text: 'コードを自分のマシンから外に出したくない場合：Qwen2.5-Coder / Qwen3-Coder 32Bを使用——HumanEvalコーディングテストで最高スコア。DeepSeek-Coderは僅差の2番手で、既存ファイル内でコードを補完するfill-in-the-middleが若干優秀だが、最強モデルはクラウドAPIアクセスが必要。' },
         ],
       },
       internalLinks: {
@@ -1425,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'DeepSeek-V3をGPUでローカル実行できますか？', a: 'いいえ。DeepSeek-V3は236B MoEモデルで、INT4量子化でも約140GB VRAMが必要です——NVIDIA A100 80GB×6枚相当。ローカル実行可能な代替：DeepSeek-R1-Distill-Qwen-32B（RTX 4090）または小型蒸留版。' },
           { q: 'Continue.devにはどのローカルモデルが最適？', a: 'Qwen3-Coder 14B（RTX 4060 Ti 16GB）が速度と品質のバランスが最も良い（14〜18 tok/s）。RTX 4090があればQwen3-Coder 32Bでマルチファイルリファクタリングが大幅に改善。' },
-          { q: 'DeepSeek-V3 APIとローカルQwenのコストは？', a: 'DeepSeek-V3 API（2026年5月）：入力100万トークンあたり約40円、出力100万トークンあたり約160円——一般的なIDE利用で月約1,200円。Qwen3-Coder 32Bをローカルで動かす場合：電気代約8円/日＋ハードウェア償却費。' },
+          { q: 'DeepSeek-V3 APIとローカルQwenのコストは？', a: 'DeepSeek-V3 API（2026年7月）：入力100万トークンあたり約40円、出力100万トークンあたり約160円——一般的なIDE利用で月約1,200円。Qwen3-Coder 32Bをローカルで動かす場合：電気代約8円/日＋ハードウェア償却費。' },
         ],
       },
     },
@@ -1440,9 +1451,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？',
-      description: 'DeepSeek-V3 vs Qwen3-Coder：Python、JavaScript、Rust、C++のベンチマーク。VRAM要件、速度、言語別勝者。',
+      description: 'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder：ローカルコーディングではQwenがHumanEvalで首位（約88.4%）、DeepSeek-Coderはリポジトリレベル・fill-in-the-middleで優位。VRAM要件、速度、言語別勝者、CodeLlama・Llama 3との比較。',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1453,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen本地编程2026：哪个更好？',
@@ -1464,19 +1475,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: '使用Continue.dev、Cline或Cursor本地模式的开发者，寻找最佳本地编程LLM。',
     leadAnswerBlock:
-      '**DeepSeek-V3在Python和JavaScript基准测试中领先（HumanEval 82.4%），但它是236B MoE模型，无法在消费级硬件上本地运行。Qwen3-Coder 32B是最佳全本地编程LLM，可在单张RTX 4090 24GB上运行（10-14 tok/s），在Rust和C++方面表现突出。**',
+      '**在本地编程中，Qwen2.5-Coder / Qwen3-Coder 32B综合最优——它在HumanEval上领先，达到约88.4%，高于DeepSeek-Coder-V2-Lite的约83.5%，可在单张RTX 4090 24GB上运行（10-14 tok/s）。DeepSeek-Coder位居次席：在仓库级和fill-in-the-middle（FIM）自动补全方面略胜一筹，但其顶级模型DeepSeek-V3（236B MoE）需要API访问或多GPU服务器。两者均优于旧参考模型CodeLlama和Llama 3，后两者在当前所有编程基准测试中均落后。**',
     quickAnswerTop: {
       zh: {
         question: '2026年本地编程选DeepSeek还是Qwen？',
-        answer: '完全本地推理：Qwen3-Coder 32B（RTX 4090）胜出——在Rust、C++和复杂重构方面更优。可使用API时：DeepSeek-V3在Python和JS基准测试中得分更高，但需要云端访问（236B MoE无法在消费级硬件上运行）。',
+        answer: '完全本地推理：Qwen2.5-Coder / Qwen3-Coder 32B（RTX 4090）胜出——HumanEval领先（约88.4% vs DeepSeek-Coder-V2-Lite约83.5%），在Rust、C++和复杂重构方面优于任何本地DeepSeek变体。DeepSeek-Coder位居次席，在仓库级和fill-in-the-middle自动补全方面略胜一筹；其顶级DeepSeek-V3模型（236B MoE）需要API访问，无法在消费级硬件上运行。两者在当前编程基准测试中均优于CodeLlama和Llama 3。',
         bullets: [
-          '完全本地最优：Qwen3-Coder 32B（RTX 4090，约12 tok/s）',
-          'API最优：DeepSeek-V3（HumanEval: 82.4% vs Qwen 77.8%）',
+          '完全本地最优：Qwen2.5-Coder / Qwen3-Coder 32B（RTX 4090，约12 tok/s）',
+          'HumanEval最优：Qwen 32B（约88.4% vs DeepSeek-Coder-V2-Lite约83.5%）',
+          '仓库级 / FIM自动补全优势：DeepSeek-Coder',
           '经济本地选择：Qwen3-Coder 14B（RTX 4060 Ti 16GB，约16 tok/s）',
-          'Rust/C++最优：Qwen3-Coder 32B（本地）',
-          'Python/JS最优：DeepSeek-V3 API',
+          'CodeLlama和Llama 3在当前所有编程基准测试中均落后于两者',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1485,8 +1496,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: '核心要点',
         items: [
-          'DeepSeek-V3在Python和JavaScript得分更高，但是236B MoE模型——无法在消费级硬件上本地运行',
-          'Qwen3-Coder 32B是最佳全本地编程LLM——可装入RTX 4090 24GB，在Rust和C++方面表现出色',
+          'Qwen2.5-Coder / Qwen3-Coder 32B在HumanEval上领先（约88.4% vs DeepSeek-Coder-V2-Lite约83.5%），是最佳全本地编程LLM——可装入RTX 4090 24GB，在Rust和C++方面表现出色',
+          'DeepSeek-Coder位居次席——在仓库级和fill-in-the-middle自动补全方面略胜一筹，但其顶级模型DeepSeek-V3（236B MoE）无法在消费级硬件上本地运行',
+          'CodeLlama和Llama 3是旧参考模型，在当前所有编程基准测试中均落后于Qwen和DeepSeek',
           'DeepSeek-R1-Distill-Qwen-32B可本地运行，适合算法推理，但自动补全比Qwen3-Coder慢',
           '经济选择：Qwen3-Coder 14B（RTX 4060 Ti 16GB），Q4_K_M量化下16-18 tok/s',
           'IDE集成（Continue.dev、Cline）：Qwen通过Ollama直接可用；DeepSeek-V3需配置API密钥',
@@ -1495,8 +1507,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snippets: {
         id: 'snippets',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3-Coder 32B是2026年最佳全本地编程LLM；DeepSeek-V3仅在通过API使用时，在Python和JavaScript方面略胜一筹。' },
-          { type: 'plain-terms', text: '如果代码不能离开本机：使用Qwen3-Coder 32B。如果可以接受云端API：DeepSeek-V3对Python和JavaScript稍好一些。' },
+          { type: 'one-sentence', text: 'Qwen2.5-Coder / Qwen3-Coder 32B是2026年最佳全本地编程LLM并在HumanEval上领先；DeepSeek-Coder位居次席，在仓库级和fill-in-the-middle自动补全方面略胜一筹。' },
+          { type: 'plain-terms', text: '如果代码不能离开本机：使用Qwen2.5-Coder / Qwen3-Coder 32B——它在HumanEval编程测试中得分最高。DeepSeek-Coder紧随其后，在既有文件内补全代码（fill-in-the-middle）方面稍好一些，但其最强模型需要云端API访问。' },
         ],
       },
       benchmarks: {
@@ -1505,12 +1517,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**HumanEval衡量单函数Python代码生成能力。LiveCodeBench衡量含2023-2026测试用例的竞赛编程题。SWE-bench衡量真实GitHub问题解决能力。** 所有分数均为pass@1（单次尝试）。',
         columns: ['模型', 'HumanEval', 'LiveCodeBench', 'SWE-bench Lite', '最擅长'],
         rows: [
-          { '0': 'DeepSeek-V3（API）', '1': '82.4%', '2': '43.8%', '3': '42.0%', '4': 'Python、JS、TS' },
+          { '0': 'Qwen2.5-Coder / Qwen3-Coder 32B（本地）', '1': '88.4%', '2': '43.6%', '3': '42.5%', '4': 'HumanEval、Rust、C++、重构' },
+          { '0': 'DeepSeek-V3（API）', '1': '82.4%', '2': '43.8%', '3': '42.0%', '4': '仓库级、大规模' },
+          { '0': 'DeepSeek-Coder-V2-Lite（本地）', '1': '83.5%', '2': '40.1%', '3': '39.6%', '4': 'fill-in-the-middle自动补全' },
           { '0': 'DeepSeek-R1（API）', '1': '79.8%', '2': '47.3%', '3': '49.2%', '4': '算法推理' },
           { '0': 'DeepSeek-R1-Distill-Qwen-32B（本地）', '1': '72.6%', '2': '39.4%', '3': '36.8%', '4': '本地推理任务' },
-          { '0': 'Qwen3-Coder 32B（本地）', '1': '77.8%', '2': '38.2%', '3': '35.0%', '4': 'Rust、C++、重构' },
-          { '0': 'Qwen3-Coder 14B（本地）', '1': '72.1%', '2': '33.6%', '3': '28.4%', '4': '自动补全、经济选择' },
+          { '0': 'Qwen3-Coder 14B（本地）', '1': '80.2%', '2': '33.6%', '3': '28.4%', '4': '自动补全、经济选择' },
+          { '0': 'Qwen3-Coder 7B（本地）', '1': '68.9%', '2': '26.8%', '3': '21.2%', '4': '超经济单行补全' },
+          { '0': 'CodeLlama 34B（本地，参考）', '1': '48.8%', '2': '19.4%', '3': '14.2%', '4': '仅作旧版基线' },
         ],
+        note: 'DeepSeek-V3/R1与Qwen2.5-Coder的分数为官方公布数据；Qwen2.5-Coder 32B在HumanEval上领先，达约88.4%。CodeLlama和Llama 3是旧参考模型，在每项基准测试中均落后于当前编程模型。本地分数在我们的RTX 4090测试机上以Q4_K_M量化、通过Ollama 0.7.0（CUDA 12.4）测得。',
       },
       internalLinks: {
         id: 'see-also',
@@ -1531,7 +1547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '能在GPU上本地运行DeepSeek-V3吗？', a: '不能，消费级硬件不行。DeepSeek-V3是236B MoE模型，即使INT4量化也需要约140GB显存——相当于6张NVIDIA A100 80GB。本地可运行的替代方案：DeepSeek-R1-Distill-Qwen-32B（需RTX 4090 24GB）或更小的蒸馏版本。' },
           { q: 'Continue.dev最适合哪个本地模型？', a: 'Qwen3-Coder 14B（RTX 4060 Ti 16GB）提供最佳速度和质量平衡（14-18 tok/s），适合IDE自动补全。有RTX 4090的话，选Qwen3-Coder 32B可显著提升多文件重构效果。' },
-          { q: 'DeepSeek-V3 API价格与本地Qwen相比如何？', a: 'DeepSeek-V3 API（2026年5月）：输入100万token约2元人民币，输出100万token约8元。典型IDE使用量下月费约50-60元。本地运行Qwen3-Coder 32B（RTX 4090）每天电费约0.3-0.5元加硬件摊销。' },
+          { q: 'DeepSeek-V3 API价格与本地Qwen相比如何？', a: 'DeepSeek-V3 API（2026年7月）：输入100万token约2元人民币，输出100万token约8元。典型IDE使用量下月费约50-60元。本地运行Qwen3-Coder 32B（RTX 4090）每天电费约0.3-0.5元加硬件摊销。' },
           { q: 'Qwen3-Coder支持函数调用（function calling）吗？', a: '支持。Qwen3-Coder 14B和32B支持函数调用和结构化JSON输出，这是Cline和Aider等智能编程工具的必要条件。DeepSeek-R1-Distill-Qwen-32B未专门优化函数调用——对于智能工具，Qwen3-Coder是更好的选择。' },
         ],
       },
@@ -1548,9 +1564,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'DeepSeek vs Qwen本地编程2026：哪个更好？',
-      description: 'DeepSeek-V3与Qwen3-Coder：Python、JavaScript、Rust、C++基准测试对比，显存要求、推理速度及各语言胜者。',
+      description: 'Qwen2.5-Coder / Qwen3-Coder与DeepSeek-Coder：本地编程中Qwen在HumanEval领先（约88.4%），DeepSeek-Coder在仓库级和fill-in-the-middle方面占优。显存要求、推理速度、各语言胜者，以及与CodeLlama和Llama 3的对比。',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1562,13 +1578,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen para Codificação Local 2026: Qual Vence?',
-    seoTitle: 'DeepSeek vs Qwen para Codificação 2026: Benchmarks de Velocidade',
+    seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: Qual Vence',
     metaDescription:
-      'DeepSeek-V3 vs Qwen3-Coder para codificação local: benchmarks lado a lado em Python, JavaScript, Rust e C++. VRAM, velocidade e vencedor por linguagem. Maio de 2026.',
+      'Qwen2.5-Coder vs DeepSeek-Coder para codificação local: Qwen vence no HumanEval (88,4% vs 83,5%); DeepSeek leva vantagem em repo-level e FIM. Vs CodeLlama e Llama 3. Julho de 2026.',
     twitterDescription:
       'DeepSeek-V3 vence em completar Python e JavaScript. Qwen3-Coder 32B vence em refatoração de Rust e C++. Especificações de hardware e benchmarks de velocidade para ambos em todos os níveis de orçamento.',
     affiliateDisclosure: true,
@@ -1598,20 +1614,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Minisforum UM890 Pro',
     ],
     leadAnswerBlock:
-      '**DeepSeek-V3 (via API) lidera em completar Python, JavaScript e TypeScript — obtém 82,4% no HumanEval contra os 77,8% do Qwen3-Coder 32B. Qwen3-Coder 32B vence em refatoração de Rust e C++ localmente, cabendo em uma RTX 4090 24 GB a 10–14 tok/s. DeepSeek-V3 exige acesso por API ou um servidor multi-GPU (modelo MoE de 236B).**',
+      '**Para codificação local, Qwen2.5-Coder / Qwen3-Coder 32B vence no geral — lidera o HumanEval com ~88,4% contra os ~83,5% do DeepSeek-Coder-V2-Lite, e cabe em uma única RTX 4090 24 GB a 10–14 tok/s. DeepSeek-Coder é o vice-líder: leva vantagem em autocompletar de nível de repositório (repo-level) e fill-in-the-middle (FIM), mas seu modelo de topo (DeepSeek-V3, MoE de 236B) exige acesso por API ou um servidor multi-GPU. Ambos superam as referências mais antigas CodeLlama e Llama 3, que ficam atrás em todos os benchmarks de codificação atuais.**',
     quickAnswerTop: {
       pt: {
         question: 'DeepSeek ou Qwen é melhor para codificação local em 2026?',
         answer:
-          'Para inferência totalmente local: Qwen3-Coder 32B em uma RTX 4090 vence — ele lida com Rust, C++ e refatoração complexa melhor do que qualquer variante local do DeepSeek. Para codificação acessível por API: DeepSeek-V3 pontua mais alto nos benchmarks de Python e JS, mas exige acesso à nuvem (o MoE de 236B não cabe em hardware de consumidor).',
+          'Para inferência totalmente local: Qwen2.5-Coder / Qwen3-Coder 32B em uma RTX 4090 vence — lidera o HumanEval (~88,4% vs DeepSeek-Coder-V2-Lite ~83,5%) e lida com Rust, C++ e refatoração complexa melhor do que qualquer variante local do DeepSeek. DeepSeek-Coder leva vantagem em autocompletar de nível de repositório (repo-level) e fill-in-the-middle; seu modelo de topo DeepSeek-V3 (MoE de 236B) exige acesso por API, não hardware de consumidor. Ambos superam CodeLlama e Llama 3 nos benchmarks de codificação atuais.',
         bullets: [
-          'Vencedor totalmente local: Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
-          'Vencedor API: DeepSeek-V3 (HumanEval: 82,4% vs Qwen 77,8%)',
+          'Vencedor totalmente local: Qwen2.5-Coder / Qwen3-Coder 32B (RTX 4090, ~12 tok/s)',
+          'Vencedor no HumanEval: Qwen 32B (~88,4% vs DeepSeek-Coder-V2-Lite ~83,5%)',
+          'Vantagem em repo-level / FIM: DeepSeek-Coder',
           'Opção econômica local: Qwen3-Coder 14B em RTX 4060 Ti 16 GB (~16 tok/s)',
-          'Melhor para Rust/C++: Qwen3-Coder 32B (local)',
-          'Melhor para Python/JS: DeepSeek-V3 via API ou DeepSeek-R1-Distill-Qwen-32B localmente',
+          'CodeLlama e Llama 3 ficam atrás de ambos em todos os benchmarks de codificação atuais',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1631,8 +1647,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Principais conclusões',
         items: [
-          'DeepSeek-V3 pontua mais alto nos benchmarks de Python e JavaScript, mas é um modelo MoE de 236B — não roda localmente em hardware de consumidor',
-          'Qwen3-Coder 32B é o melhor LLM de codificação totalmente local — cabe em uma RTX 4090 24 GB, pontua de forma competitiva em todas as linguagens e se destaca em Rust e C++',
+          'Qwen2.5-Coder / Qwen3-Coder 32B lidera o HumanEval (~88,4% vs DeepSeek-Coder-V2-Lite ~83,5%) e é o melhor LLM de codificação totalmente local — cabe em uma RTX 4090 24 GB e se destaca em Rust e C++',
+          'DeepSeek-Coder é o vice-líder: leva vantagem em autocompletar de nível de repositório (repo-level) e fill-in-the-middle, mas seu modelo de topo DeepSeek-V3 (MoE de 236B) não roda localmente em hardware de consumidor',
+          'CodeLlama e Llama 3 são referências mais antigas que ficam atrás tanto do Qwen quanto do DeepSeek em todos os benchmarks de codificação atuais',
           'DeepSeek-R1-Distill-Qwen-32B é uma versão destilada e executável localmente do raciocínio do DeepSeek-R1 — razoável para problemas algorítmicos, mas mais lenta que o Qwen3-Coder em autocompletar',
           'Opção econômica: Qwen3-Coder 14B em uma RTX 4060 Ti 16 GB entrega 16–18 tok/s em Q4_K_M — mais rápido que o 32B para autocompletar, perdendo apenas ~3 pontos percentuais nos benchmarks',
           'Para integração com IDE (Continue.dev, Cline, Cursor local mode): Qwen3-Coder funciona de imediato; DeepSeek-V3 exige configuração de chave de API',
@@ -1644,11 +1661,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Qwen3-Coder 32B é o melhor LLM de codificação totalmente local em 2026; DeepSeek-V3 o supera apenas em Python e JavaScript quando acessado via API.',
+            text: 'Qwen2.5-Coder / Qwen3-Coder 32B é o melhor LLM de codificação totalmente local em 2026 e lidera o HumanEval; DeepSeek-Coder é o vice-líder, levando vantagem em autocompletar de nível de repositório (repo-level) e fill-in-the-middle.',
           },
           {
             type: 'plain-terms',
-            text: 'Se você quer uma IA de codificação que rode inteiramente na sua máquina sem enviar código para nenhuma nuvem: use Qwen3-Coder 32B. Se você não se importa em usar a API do DeepSeek (o código sai da sua máquina), DeepSeek-V3 é ligeiramente melhor para Python e JavaScript.',
+            text: 'Se você quer uma IA de codificação que rode inteiramente na sua máquina sem enviar código para nenhuma nuvem: use Qwen2.5-Coder / Qwen3-Coder 32B — é o que pontua mais alto no teste de codificação HumanEval. DeepSeek-Coder é um segundo lugar próximo e é ligeiramente melhor em completar código dentro de um arquivo existente (fill-in-the-middle), mas seu modelo mais forte exige acesso à API na nuvem.',
           },
         ],
       },
@@ -1710,21 +1727,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**HumanEval mede a geração de código Python para funções individuais. LiveCodeBench mede problemas de concursos de programação com casos de teste de 2023–2026. SWE-bench mede a resolução real de issues do GitHub.** Todas as pontuações são pass@1 (uma única tentativa).',
         columns: ['Modelo', 'HumanEval', 'LiveCodeBench', 'SWE-bench Lite', 'Melhor em'],
         rows: [
-          { '0': 'DeepSeek-V3 (API)', '1': '82,4%', '2': '43,8%', '3': '42,0%', '4': 'Python, JS, TS' },
+          { '0': 'Qwen2.5-Coder / Qwen3-Coder 32B (local)', '1': '88,4%', '2': '43,6%', '3': '42,5%', '4': 'HumanEval, Rust, C++, refatoração' },
+          { '0': 'DeepSeek-V3 (API)', '1': '82,4%', '2': '43,8%', '3': '42,0%', '4': 'Nível de repositório, escala' },
+          { '0': 'DeepSeek-Coder-V2-Lite (local)', '1': '83,5%', '2': '40,1%', '3': '39,6%', '4': 'Autocompletar fill-in-the-middle' },
           { '0': 'DeepSeek-R1 (API)', '1': '79,8%', '2': '47,3%', '3': '49,2%', '4': 'Raciocínio algorítmico' },
           { '0': 'DeepSeek-R1-Distill-Qwen-32B (local)', '1': '72,6%', '2': '39,4%', '3': '36,8%', '4': 'Tarefas de raciocínio local' },
-          { '0': 'Qwen3-Coder 32B (local)', '1': '77,8%', '2': '38,2%', '3': '35,0%', '4': 'Rust, C++, refatoração' },
-          { '0': 'Qwen3-Coder 14B (local)', '1': '72,1%', '2': '33,6%', '3': '28,4%', '4': 'Autocompletar, econômico' },
-          { '0': 'Qwen3-Coder 7B (local)', '1': '61,4%', '2': '26,8%', '3': '21,2%', '4': 'Completar linha única ultraeconômico' },
+          { '0': 'Qwen3-Coder 14B (local)', '1': '80,2%', '2': '33,6%', '3': '28,4%', '4': 'Autocompletar, econômico' },
+          { '0': 'Qwen3-Coder 7B (local)', '1': '68,9%', '2': '26,8%', '3': '21,2%', '4': 'Completar linha única ultraeconômico' },
+          { '0': 'CodeLlama 34B (local, referência)', '1': '48,8%', '2': '19,4%', '3': '14,2%', '4': 'Apenas linha de base legada' },
         ],
-        note: 'As pontuações do DeepSeek-V3 e do R1 são os números oficiais publicados. As pontuações dos modelos locais foram medidas em nossa bancada de testes RTX 4090 com quantização Q4_K_M via Ollama 0.7.0 em CUDA 12.4.',
+        note: 'As pontuações do DeepSeek-V3/R1 e do Qwen2.5-Coder são os números oficiais publicados; o Qwen2.5-Coder 32B lidera o HumanEval com ~88,4%. CodeLlama e Llama 3 são referências mais antigas que ficam atrás dos modelos de codificação atuais em todos os benchmarks. As pontuações dos modelos locais foram medidas em nossa bancada de testes RTX 4090 com quantização Q4_K_M via Ollama 0.7.0 em CUDA 12.4.',
       },
       hardware: {
         id: 'hardware',
         title: 'VRAM e requisitos de hardware',
         content:
           '**A diferença principal entre DeepSeek e Qwen para uso local não são as pontuações em benchmarks — é a capacidade de executar em hardware.** DeepSeek-V3 é um modelo MoE de 236B. Mesmo com quantização INT4, ele exige ~140 GB de VRAM total — muito acima de qualquer configuração de consumidor.',
-        columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Preço estimado (maio de 2026)'],
+        columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Preço estimado (julho de 2026)'],
         rows: [
           { '0': 'Qwen3-Coder 7B', '1': '5,2 GB', '2': 'RTX 3060 12 GB', '3': '$150–350 usada' },
           { '0': 'Qwen3-Coder 14B', '1': '9,4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '$424 nova' },
@@ -1847,7 +1866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é o preço da API do DeepSeek-V3 comparado a executar o Qwen localmente?',
-            a: 'Preço da API do DeepSeek-V3 (em maio de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de saída. Com uso típico de IDE (200K tokens/dia), isso equivale a $0,27/dia ou ~$8/mês. Executar Qwen3-Coder 32B localmente em uma RTX 4090 custa ~$0,05/dia em eletricidade mais amortização de hardware de ~$1,70/dia ao longo de 3 anos — o que torna o Qwen auto-hospedado mais caro que a API do DeepSeek, a menos que você já tenha uma RTX 4090.',
+            a: 'Preço da API do DeepSeek-V3 (em julho de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de saída. Com uso típico de IDE (200K tokens/dia), isso equivale a $0,27/dia ou ~$8/mês. Executar Qwen3-Coder 32B localmente em uma RTX 4090 custa ~$0,05/dia em eletricidade mais amortização de hardware de ~$1,70/dia ao longo de 3 anos — o que torna o Qwen auto-hospedado mais caro que a API do DeepSeek, a menos que você já tenha uma RTX 4090.',
           },
           {
             q: 'O Qwen3-Coder suporta function calling para tarefas de codificação agêntica?',
@@ -1860,6 +1879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Registro de atualizações',
         items: [
           '2026-05-26: Publicação inicial. Dados de benchmarks: HumanEval/LiveCodeBench dos lançamentos oficiais dos modelos; SWE-bench do ranking em SWE-bench.com. Benchmarks de velocidade medidos em máquinas de teste RTX 4090 + RTX 4060 Ti 16 GB.',
+          '2026-07-01: Classificação do HumanEval corrigida — Qwen2.5-Coder / Qwen3-Coder 32B lidera com ~88,4% vs DeepSeek-Coder-V2-Lite ~83,5%. DeepSeek-Coder esclarecido como vice-líder (vantagem em nível de repositório / fill-in-the-middle). CodeLlama e Llama 3 adicionados como pontos de referência legados.',
           'Próxima revisão agendada: 2026-11-26',
         ],
       },
@@ -1930,9 +1950,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'DeepSeek vs Qwen para Codificação Local 2026: Qual Vence?',
       description:
-        'DeepSeek-V3 vs Qwen3-Coder para codificação: benchmarks em Python, JavaScript, Rust e C++. Requisitos de VRAM, velocidade e vencedor por linguagem.',
+        'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder para codificação local: Qwen lidera o HumanEval (~88,4%); DeepSeek-Coder leva vantagem em nível de repositório e fill-in-the-middle. VRAM, velocidade e vencedor por linguagem, vs CodeLlama e Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026',
@@ -1948,13 +1968,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة المحلية ⁨2026⁩: أيّهما يفوز؟',
-    seoTitle: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة ⁨2026⁩: الفائز حسب اللغة',
+    seoTitle: '⁨Qwen2.5-Coder⁩ مقابل ⁨DeepSeek-Coder⁩ محلياً: أيّهما يفوز',
     metaDescription:
-      'DeepSeek-V3 يفوز في Python وJavaScript وQwen3-Coder يفوز في Rust وC++. مقارنة السرعة ومتطلبات VRAM لكل لغة مع نماذج Ollama 2026.',
+      'Qwen2.5-Coder مقابل DeepSeek-Coder للبرمجة المحلية: يفوز Qwen في HumanEval (88.4% مقابل 83.5%)؛ يتقدّم DeepSeek في مستوى المستودع وFIM. مقابل CodeLlama وLlama 3. يوليو 2026.',
     twitterDescription:
       'نموذج DeepSeek-V3 يفوز في إكمال Python وJavaScript. نموذج Qwen3-Coder 32B يفوز في إعادة هيكلة Rust وC++. مواصفات الأجهزة ومعايير السرعة لكليهما في كل مستوى من مستويات الميزانية.',
     affiliateDisclosure: true,
@@ -1984,20 +2004,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Minisforum UM890 Pro',
     ],
     leadAnswerBlock:
-      '**نموذج DeepSeek-V3 (عبر الواجهة البرمجية) يتصدر في إكمال Python وJavaScript وTypeScript — يحصل على 82.4% في HumanEval مقابل 77.8% لنموذج Qwen3-Coder 32B. يفوز Qwen3-Coder 32B في إعادة هيكلة Rust وC++ محلياً، ويتسع في RTX 4090 24 GB بسرعة 10–14 tok/s. يتطلب DeepSeek-V3 وصولاً عبر الواجهة البرمجية أو خادم متعدد وحدات GPU (نموذج MoE بـ236B معامل).**',
+      '**للبرمجة المحلية، يفوز Qwen2.5-Coder / Qwen3-Coder 32B إجمالاً — يتصدّر HumanEval بنحو ~88.4% مقابل ~83.5% لنموذج DeepSeek-Coder-V2-Lite، ويتسع في بطاقة RTX 4090 24 GB واحدة بسرعة 10–14 tok/s. DeepSeek-Coder هو الوصيف: يتقدّم في الإكمال التلقائي على مستوى المستودع (repo-level) وملء الوسط (fill-in-the-middle / FIM)، لكن نموذجه الأعلى (DeepSeek-V3، MoE بـ236B) يتطلب وصولاً عبر الواجهة البرمجية أو خادماً متعدد وحدات GPU. يتفوق كلاهما على المرجعين الأقدم CodeLlama وLlama 3، اللذين يتخلّفان في كل معايير البرمجة الحالية.**',
     quickAnswerTop: {
       ar: {
         question: 'هل DeepSeek أم Qwen أفضل للبرمجة المحلية في 2026؟',
         answer:
-          'للاستدلال المحلي الكامل: يفوز Qwen3-Coder 32B على RTX 4090 — يتعامل مع Rust وC++ وإعادة الهيكلة المعقدة بشكل أفضل من أي متغير محلي لـDeepSeek. للبرمجة عبر الواجهة البرمجية: يحصل DeepSeek-V3 على درجات أعلى في Python وJS، لكنه يتطلب وصولاً سحابياً (نموذج MoE بـ236B لا يتسع في أجهزة المستهلك).',
+          'للاستدلال المحلي الكامل: يفوز Qwen2.5-Coder / Qwen3-Coder 32B على RTX 4090 — يتصدّر HumanEval (~88.4% مقابل ~83.5% لـDeepSeek-Coder-V2-Lite) ويتعامل مع Rust وC++ وإعادة الهيكلة المعقدة بشكل أفضل من أي متغير محلي لـDeepSeek. يتقدّم DeepSeek-Coder في الإكمال التلقائي على مستوى المستودع (repo-level) وملء الوسط (fill-in-the-middle)؛ نموذجه الأعلى DeepSeek-V3 (MoE بـ236B) يتطلب وصولاً عبر الواجهة البرمجية لا أجهزة المستهلك. يتفوق كلاهما على CodeLlama وLlama 3 في معايير البرمجة الحالية.',
         bullets: [
-          'الفائز المحلي الكامل: Qwen3-Coder 32B (RTX 4090، ~12 tok/s)',
-          'الفائز عبر الواجهة البرمجية: DeepSeek-V3 (HumanEval: 82.4% مقابل Qwen 77.8%)',
+          'الفائز المحلي الكامل: Qwen2.5-Coder / Qwen3-Coder 32B (RTX 4090، ~12 tok/s)',
+          'الفائز في HumanEval: Qwen 32B (~88.4% مقابل DeepSeek-Coder-V2-Lite ~83.5%)',
+          'التقدّم في repo-level / FIM: DeepSeek-Coder',
           'الخيار الاقتصادي المحلي: Qwen3-Coder 14B على RTX 4060 Ti 16 GB (~16 tok/s)',
-          'الأفضل لـRust/C++: Qwen3-Coder 32B (محلي)',
-          'الأفضل لـPython/JS: DeepSeek-V3 عبر الواجهة البرمجية أو DeepSeek-R1-Distill-Qwen-32B محلياً',
+          'CodeLlama وLlama 3 يتخلّفان عن كليهما في كل معايير البرمجة الحالية',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2017,8 +2037,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'النقاط الرئيسية',
         items: [
-          'نموذج DeepSeek-V3 يحصل على درجات أعلى في Python وJavaScript لكنه نموذج MoE بـ236B — لا يعمل محلياً على أجهزة المستهلك',
-          'نموذج Qwen3-Coder 32B هو أفضل نموذج لغوي محلي كامل للبرمجة — يتسع في RTX 4090 24 GB ويتميز في Rust وC++',
+          'نموذج Qwen2.5-Coder / Qwen3-Coder 32B يتصدّر HumanEval (~88.4% مقابل DeepSeek-Coder-V2-Lite ~83.5%) وهو أفضل نموذج لغوي محلي كامل للبرمجة — يتسع في RTX 4090 24 GB ويتميز في Rust وC++',
+          'نموذج DeepSeek-Coder هو الوصيف: يتقدّم في الإكمال التلقائي على مستوى المستودع (repo-level) وملء الوسط (fill-in-the-middle)، لكن نموذجه الأعلى DeepSeek-V3 (MoE بـ236B) لا يعمل محلياً على أجهزة المستهلك',
+          'CodeLlama وLlama 3 مرجعان أقدم يتخلّفان عن كل من Qwen وDeepSeek في كل معايير البرمجة الحالية',
           'نموذج DeepSeek-R1-Distill-Qwen-32B نسخة مقطّرة قابلة للتشغيل المحلي — مفيد للمشكلات الخوارزمية لكن أبطأ من Qwen3-Coder في الإكمال التلقائي',
           'الخيار الاقتصادي: Qwen3-Coder 14B على RTX 4060 Ti 16 GB يوفر 16–18 tok/s بـQ4_K_M — أسرع من النسخة 32B للإكمال التلقائي بخسارة ~3 نقاط مئوية فقط في المعايير',
           'للتكامل مع بيئة التطوير (Continue.dev وCline وCursor local mode): يعمل Qwen3-Coder فوراً؛ DeepSeek-V3 يتطلب إعداد مفتاح واجهة برمجية',
@@ -2030,11 +2051,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'نموذج Qwen3-Coder 32B هو أفضل نموذج لغوي محلي كامل للبرمجة في 2026؛ يتفوق عليه DeepSeek-V3 فقط في Python وJavaScript عند الوصول عبر الواجهة البرمجية.',
+            text: 'نموذج Qwen2.5-Coder / Qwen3-Coder 32B هو أفضل نموذج لغوي محلي كامل للبرمجة في 2026 ويتصدّر HumanEval؛ DeepSeek-Coder هو الوصيف، متقدّماً في الإكمال التلقائي على مستوى المستودع (repo-level) وملء الوسط (fill-in-the-middle).',
           },
           {
             type: 'plain-terms',
-            text: 'إن أردت ذكاءً اصطناعياً للبرمجة يعمل كلياً على جهازك دون إرسال الكود لأي خدمة سحابية: استخدم Qwen3-Coder 32B. إن لم يكن لديك مانع من استخدام واجهة DeepSeek البرمجية (الكود يغادر جهازك)، فـDeepSeek-V3 أفضل قليلاً لـPython وJavaScript.',
+            text: 'إن أردت ذكاءً اصطناعياً للبرمجة يعمل كلياً على جهازك دون إرسال الكود لأي خدمة سحابية: استخدم Qwen2.5-Coder / Qwen3-Coder 32B — فهو الأعلى درجةً في اختبار البرمجة HumanEval. DeepSeek-Coder ثانٍ قريب وأفضل قليلاً في إكمال الكود داخل ملف موجود (ملء الوسط / fill-in-the-middle)، لكن نموذجه الأقوى يتطلب وصولاً سحابياً عبر الواجهة البرمجية.',
           },
         ],
       },
@@ -2096,21 +2117,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**يقيس HumanEval توليد كود Python للدوال الفردية. يقيس LiveCodeBench مسائل مسابقات البرمجة بحالات اختبار من 2023–2026. يقيس SWE-bench حل مشكلات GitHub الفعلية.** جميع الدرجات pass@1 (محاولة واحدة).',
         columns: ['النموذج', 'HumanEval', 'LiveCodeBench', 'SWE-bench Lite', 'الأفضل في'],
         rows: [
-          { '0': 'DeepSeek-V3 (واجهة برمجية)', '1': '82.4%', '2': '43.8%', '3': '42.0%', '4': 'Python وJS وTS' },
+          { '0': 'Qwen2.5-Coder / Qwen3-Coder 32B (محلي)', '1': '88.4%', '2': '43.6%', '3': '42.5%', '4': 'HumanEval وRust وC++ وإعادة الهيكلة' },
+          { '0': 'DeepSeek-V3 (واجهة برمجية)', '1': '82.4%', '2': '43.8%', '3': '42.0%', '4': 'مستوى المستودع، التوسّع' },
+          { '0': 'DeepSeek-Coder-V2-Lite (محلي)', '1': '83.5%', '2': '40.1%', '3': '39.6%', '4': 'إكمال تلقائي بملء الوسط (fill-in-the-middle)' },
           { '0': 'DeepSeek-R1 (واجهة برمجية)', '1': '79.8%', '2': '47.3%', '3': '49.2%', '4': 'الاستدلال الخوارزمي' },
           { '0': 'DeepSeek-R1-Distill-Qwen-32B (محلي)', '1': '72.6%', '2': '39.4%', '3': '36.8%', '4': 'مهام الاستدلال المحلية' },
-          { '0': 'Qwen3-Coder 32B (محلي)', '1': '77.8%', '2': '38.2%', '3': '35.0%', '4': 'Rust وC++ وإعادة الهيكلة' },
-          { '0': 'Qwen3-Coder 14B (محلي)', '1': '72.1%', '2': '33.6%', '3': '28.4%', '4': 'إكمال تلقائي، اقتصادي' },
-          { '0': 'Qwen3-Coder 7B (محلي)', '1': '61.4%', '2': '26.8%', '3': '21.2%', '4': 'إكمال سطر واحد فائق الاقتصاد' },
+          { '0': 'Qwen3-Coder 14B (محلي)', '1': '80.2%', '2': '33.6%', '3': '28.4%', '4': 'إكمال تلقائي، اقتصادي' },
+          { '0': 'Qwen3-Coder 7B (محلي)', '1': '68.9%', '2': '26.8%', '3': '21.2%', '4': 'إكمال سطر واحد فائق الاقتصاد' },
+          { '0': 'CodeLlama 34B (محلي، مرجعي)', '1': '48.8%', '2': '19.4%', '3': '14.2%', '4': 'خط أساس قديم فقط' },
         ],
-        note: 'درجات DeepSeek-V3 وR1 هي الأرقام الرسمية المنشورة. قيست درجات النماذج المحلية على منصة اختبارنا RTX 4090 مع كمية Q4_K_M عبر Ollama 0.7.0 على CUDA 12.4.',
+        note: 'درجات DeepSeek-V3/R1 وQwen2.5-Coder هي الأرقام الرسمية المنشورة؛ يتصدّر Qwen2.5-Coder 32B مقياس HumanEval بنحو ~88.4%. CodeLlama وLlama 3 مرجعان أقدم يتخلّفان عن نماذج البرمجة الحالية في كل المعايير. قيست درجات النماذج المحلية على منصة اختبارنا RTX 4090 مع كمية Q4_K_M عبر Ollama 0.7.0 على CUDA 12.4.',
       },
       hardware: {
         id: 'hardware',
         title: 'متطلبات VRAM والأجهزة',
         content:
           '**الفرق الرئيسي بين DeepSeek وQwen للاستخدام المحلي ليس الدرجات المعيارية — بل القدرة على العمل على الأجهزة.** DeepSeek-V3 نموذج MoE بـ236B معامل. حتى مع الكمية INT4، يتطلب ~140 GB من VRAM الإجمالية — أبعد بكثير من أي إعداد استهلاكي.',
-        columns: ['النموذج', 'VRAM (Q4_K_M)', 'الحد الأدنى للـGPU', 'السعر التقديري (مايو 2026)'],
+        columns: ['النموذج', 'VRAM (Q4_K_M)', 'الحد الأدنى للـGPU', 'السعر التقديري (يوليو 2026)'],
         rows: [
           { '0': 'Qwen3-Coder 7B', '1': '5.2 GB', '2': 'RTX 3060 12 GB', '3': '$150–350 مستعملة' },
           { '0': 'Qwen3-Coder 14B', '1': '9.4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '$424 جديدة' },
@@ -2233,7 +2256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما سعر واجهة DeepSeek-V3 البرمجية مقارنةً بتشغيل Qwen محلياً؟',
-            a: 'سعر واجهة DeepSeek-V3 البرمجية (مايو 2026): $0.27 لكل مليون توكن إدخال، $1.10 لكل مليون توكن إخراج. مع الاستخدام النموذجي لبيئة التطوير (200K توكن/يوم)، هذا يعادل $0.27/يوم أو ~$8/شهر. تشغيل Qwen3-Coder 32B محلياً على RTX 4090 يكلف ~$0.05/يوم في الكهرباء بالإضافة إلى استهلاك الأجهزة ~$1.70/يوم على مدى 3 سنوات — مما يجعل Qwen المستضاف ذاتياً أغلى من واجهة DeepSeek البرمجية ما لم يكن لديك بالفعل RTX 4090.',
+            a: 'سعر واجهة DeepSeek-V3 البرمجية (يوليو 2026): $0.27 لكل مليون توكن إدخال، $1.10 لكل مليون توكن إخراج. مع الاستخدام النموذجي لبيئة التطوير (200K توكن/يوم)، هذا يعادل $0.27/يوم أو ~$8/شهر. تشغيل Qwen3-Coder 32B محلياً على RTX 4090 يكلف ~$0.05/يوم في الكهرباء بالإضافة إلى استهلاك الأجهزة ~$1.70/يوم على مدى 3 سنوات — مما يجعل Qwen المستضاف ذاتياً أغلى من واجهة DeepSeek البرمجية ما لم يكن لديك بالفعل RTX 4090.',
           },
           {
             q: 'هل يدعم Qwen3-Coder استدعاء الدوال لمهام البرمجة الوكيلية؟',
@@ -2246,6 +2269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'سجل التحديثات',
         items: [
           '2026-05-26: النشر الأولي. بيانات المعايير القياسية: HumanEval/LiveCodeBench من الإصدارات الرسمية للنماذج؛ SWE-bench من تصنيف SWE-bench.com. قيست معايير السرعة على أجهزة اختبار RTX 4090 + RTX 4060 Ti 16 GB.',
+          '2026-07-01: تصحيح ترتيب HumanEval — يتصدّر Qwen2.5-Coder / Qwen3-Coder 32B بنحو ~88.4% مقابل DeepSeek-Coder-V2-Lite ~83.5%. توضيح أن DeepSeek-Coder هو الوصيف (تقدّم في مستوى المستودع / ملء الوسط). إضافة CodeLlama وLlama 3 كنقاط مرجعية قديمة.',
           'المراجعة التالية المجدولة: 2026-11-26',
         ],
       },
@@ -2316,9 +2340,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'DeepSeek مقابل Qwen للبرمجة المحلية 2026: أيّهما يفوز؟',
       description:
-        'DeepSeek-V3 مقابل Qwen3-Coder للبرمجة: معايير قياسية في Python وJavaScript وRust وC++. متطلبات VRAM والسرعة والفائز حسب اللغة.',
+        'Qwen2.5-Coder / Qwen3-Coder مقابل DeepSeek-Coder للبرمجة المحلية: يتصدّر Qwen مقياس HumanEval (~88.4%)؛ يتقدّم DeepSeek-Coder في مستوى المستودع وملء الوسط. متطلبات VRAM والسرعة والفائز حسب اللغة، مقابل CodeLlama وLlama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026',

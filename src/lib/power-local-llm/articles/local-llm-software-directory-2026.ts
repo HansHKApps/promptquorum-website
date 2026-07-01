@@ -423,18 +423,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Das vollständige lokale LLM Software-Verzeichnis: 70+ Tools für KI auf eigener Hardware (2026)',
-    seoTitle: '87 Lokale LLM-Tools 2026: 9 Kategorien, Ollama bis RAG',
+    seoTitle: 'Lokale LLM-Tools 2026: 87 Apps aktualisiert (Ollama bis RAG)',
     affiliateDisclosure: true,
     intro:
-      'Das lokale LLM-Ökosystem ist 2026 so groß geworden, dass die falsche Tool-Wahl am Anfang Stunden, nicht Minuten kostet. Dieses Verzeichnis katalogisiert 87 aktiv gepflegte Projekte in neun Schichten — Laufzeitumgebungen, Desktop-Apps, Web-UIs, Coding-Assistenten, RAG-Systeme, Agenten-Frameworks, Sprache und Multimodal, Mobile-Clients und spezialisierte Produktivitäts-Plugins — jeweils mit Beschreibung, Lizenz und primärer URL. Verwenden Sie es als Übersichtskarte des Ist-Zustands, bevor Sie sich für einen Stack entscheiden; jede Kategorie endet mit einem Link zum vertiefenden PromptQuorum-Vergleichsartikel für diese Schicht.',
+      'Dies ist ein aktualisiertes 2026-Verzeichnis von 87 lokalen LLM-Tools, Apps, Frameworks und Deployment-Software — zuletzt aktualisiert im Juli 2026. Das lokale LLM-Ökosystem ist 2026 so groß geworden, dass die falsche Tool-Wahl am Anfang Stunden, nicht Minuten kostet. Dieses Verzeichnis katalogisiert 87 aktiv gepflegte Projekte in neun Schichten — Laufzeitumgebungen, Desktop-Apps, Web-UIs, Coding-Assistenten, RAG-Systeme, Agenten-Frameworks, Sprache und Multimodal, Mobile-Clients und spezialisierte Produktivitäts-Plugins — jeweils mit Beschreibung, Lizenz und primärer URL. Ob Sie lokale LLM-Tools, Deployment-Tools für Mehrbenutzer-Serving oder Frameworks zum Bau von Agenten auswählen — nutzen Sie es als Übersichtskarte des Ist-Zustands, bevor Sie sich für einen Stack entscheiden; jede Kategorie endet mit einem Link zum vertiefenden PromptQuorum-Vergleichsartikel für diese Schicht.',
     metaDescription:
-      'Ollama, LM Studio, GPT4All, Jan.ai — 87 LLM-Tools in 9 Kategorien: Runtimes, RAG, Agenten, Sprache & Mobile. Lizenzen, Links & aktuelle Versionen. Juni 2026.',
+      'Aktualisiertes 2026-Verzeichnis von 87 lokalen LLM-Tools, Apps, Frameworks & Deployment-Software in 9 Kategorien — Ollama, LM Studio, RAG, Agenten. Stand Juli 2026.',
     twitterDescription:
-      '87 lokale-LLM-Tools in 9 Kategorien — Laufzeiten, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multi-Agenten-Frameworks, Sprache, Mobile. Lizenzen, Links & aktuelle Versionen, Stand Juni 2026. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
+      '87 lokale-LLM-Tools in 9 Kategorien — Laufzeiten, Desktop-Apps, Web-UIs, Coding-Agenten, RAG, Multi-Agenten-Frameworks, Sprache, Mobile. Lizenzen, Links & aktuelle Versionen, Stand Juli 2026. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokales ki software ökosystem',
     ],
     leadAnswerBlock:
-      '**Das lokale LLM-Ökosystem 2026 gliedert sich klar in neun Schichten.** Laufzeitumgebungen (Ollama, llama.cpp, vLLM) führen Token durch das Modell; Desktop-Apps (LM Studio, Jan, GPT4All) kapseln eine Laufzeit in einer Chat-Oberfläche; Web-UIs (Open WebUI, LibreChat) tun dasselbe im Browser; Coding-Assistenten (Continue.dev, Cline, Aider) binden ein lokales Modell in Ihren Editor ein; RAG-Systeme (AnythingLLM, PrivateGPT) zeigen es auf Ihre eigenen Dokumente; Agenten-Frameworks (LangChain, CrewAI, LangGraph) verketten Aufrufe zu mehrstufigen Workflows; Sprach- und Multimodal-Stacks (Whisper.cpp, Piper, LLaVA) erweitern es über Text hinaus; Mobile-Clients (MLC Chat, PocketPal AI) bringen es aufs Smartphone; und spezialisierte Produktivitäts-Plugins (Obsidian, Logseq, AutoGPT) betten es in bereits genutzte Werkzeuge ein. Wählen Sie zuerst eine Laufzeitumgebung (Ollama für fast alle), und fügen Sie dann eine oder zwei Schichten darüber hinzu. Das Verzeichnis unten listet jedes erwähnenswerte Projekt je Schicht mit seiner Lizenz auf, damit Sie einen Stack planen können, der bei Bedarf von Anfang bis Ende quelloffen ist.**',
+      '**Dieses aktualisierte 2026-Verzeichnis (zuletzt aktualisiert im Juli 2026) erfasst 87 lokale LLM-Tools, Deployment-Tools und Frameworks in neun Schichten.** Das lokale LLM-Ökosystem 2026 gliedert sich klar in diese Schichten. Laufzeitumgebungen (Ollama, llama.cpp, vLLM) führen Token durch das Modell; Desktop-Apps (LM Studio, Jan, GPT4All) kapseln eine Laufzeit in einer Chat-Oberfläche; Web-UIs (Open WebUI, LibreChat) tun dasselbe im Browser; Coding-Assistenten (Continue.dev, Cline, Aider) binden ein lokales Modell in Ihren Editor ein; RAG-Systeme (AnythingLLM, PrivateGPT) zeigen es auf Ihre eigenen Dokumente; Agenten-Frameworks (LangChain, CrewAI, LangGraph) verketten Aufrufe zu mehrstufigen Workflows; Sprach- und Multimodal-Stacks (Whisper.cpp, Piper, LLaVA) erweitern es über Text hinaus; Mobile-Clients (MLC Chat, PocketPal AI) bringen es aufs Smartphone; und spezialisierte Produktivitäts-Plugins (Obsidian, Logseq, AutoGPT) betten es in bereits genutzte Werkzeuge ein. Wählen Sie zuerst eine Laufzeitumgebung (Ollama für fast alle), und fügen Sie dann eine oder zwei Schichten darüber hinzu. Das Verzeichnis unten listet jedes erwähnenswerte Projekt je Schicht mit seiner Lizenz auf, damit Sie einen Stack planen können, der bei Bedarf von Anfang bis Ende quelloffen ist.**',
     quickAnswerTop: {
       de: {
         question: 'Welches sind die besten lokalen LLM-Tools, um KI auf eigener Hardware zu betreiben (2026)?',
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für RAG: AnythingLLM (am einfachsten), PrivateGPT (offline-fokussiert), Open WebUI (integriertes RAG in der Chat-Oberfläche).',
           'Für Mobile: MLC Chat oder PocketPal AI auf Android, Private LLM oder Enchanted auf iOS — alle führen praxistaugliche 2-4B-Modelle auf aktuellen Smartphones aus.',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Aktualität des Verzeichnisses',
         content:
-          '**Dieses Verzeichnis wird alle sechs Monate überprüft — zuletzt im Juni 2026, nächste Aktualisierung November 2026.** Beim Durchgang im Juni 2026 wurden alle Links erneut geprüft und mehrere Projektnamen und Lizenzen korrigiert: Faraday heißt jetzt Backyard AI, der gepflegte Coqui-TTS-Fork wird von Idiap betreut und Cherry Studio steht unter AGPL 3.0. Aufnahmekriterien: Das Projekt wird aktiv gepflegt (Commits in den letzten 90 Tagen), verfügt über eine nachweisbare Open-Source-Lizenz oder eine klare Aussage zur kommerziellen Nutzbarkeit, und hat entweder einen relevanten Nutzeranteil im Jahr 2026 oder füllt eine Schicht aus, die sonst leer bliebe. Projekte, die länger als zwei Release-Zyklen inaktiv bleiben, werden entfernt; neue Einträge, die die Kriterien erfüllen, werden bei der nächsten Überprüfung aufgenommen. Einen Vorschlag für die Aufnahme können Sie über ein Issue oder einen Pull Request im PromptQuorum-Repository einreichen — bitte Projekt-URL, Lizenz und eine Kurzbeschreibung im Format der Tabellen oben beifügen.\n\n**Hinweis für DACH-Unternehmen:** Für Organisationen in Deutschland, Österreich und der Schweiz empfiehlt sich der Einsatz von Tools mit MIT- oder Apache-2.0-Lizenz, da diese die klarste Rechtsgrundlage für den kommerziellen Einsatz bieten. Bei der Verarbeitung personenbezogener Daten ist zu prüfen, ob lokale Inferenz als Auftragsverarbeitung im Sinne von Art. 28 DSGVO einzustufen ist — in der Regel liegt sie außerhalb des Anwendungsbereichs, solange keine Daten das lokale System verlassen. Der BSI-Grundschutz-Katalog (insbesondere die Bausteine SYS und APP) bietet einen praxisnahen Rahmen für die Absicherung von Self-Hosted-LLM-Infrastruktur in deutschen Unternehmen.',
+          '**Dieses Verzeichnis wird alle sechs Monate überprüft und zwischen den Durchgängen aktualisiert — zuletzt im Juli 2026, nächste Aktualisierung November 2026.** Beim jüngsten Durchgang wurden alle Links erneut geprüft und mehrere Projektnamen und Lizenzen korrigiert: Faraday heißt jetzt Backyard AI, der gepflegte Coqui-TTS-Fork wird von Idiap betreut und Cherry Studio steht unter AGPL 3.0. Aufnahmekriterien: Das Projekt wird aktiv gepflegt (Commits in den letzten 90 Tagen), verfügt über eine nachweisbare Open-Source-Lizenz oder eine klare Aussage zur kommerziellen Nutzbarkeit, und hat entweder einen relevanten Nutzeranteil im Jahr 2026 oder füllt eine Schicht aus, die sonst leer bliebe. Projekte, die länger als zwei Release-Zyklen inaktiv bleiben, werden entfernt; neue Einträge, die die Kriterien erfüllen, werden bei der nächsten Überprüfung aufgenommen. Einen Vorschlag für die Aufnahme können Sie über ein Issue oder einen Pull Request im PromptQuorum-Repository einreichen — bitte Projekt-URL, Lizenz und eine Kurzbeschreibung im Format der Tabellen oben beifügen.\n\n**Hinweis für DACH-Unternehmen:** Für Organisationen in Deutschland, Österreich und der Schweiz empfiehlt sich der Einsatz von Tools mit MIT- oder Apache-2.0-Lizenz, da diese die klarste Rechtsgrundlage für den kommerziellen Einsatz bieten. Bei der Verarbeitung personenbezogener Daten ist zu prüfen, ob lokale Inferenz als Auftragsverarbeitung im Sinne von Art. 28 DSGVO einzustufen ist — in der Regel liegt sie außerhalb des Anwendungsbereichs, solange keine Daten das lokale System verlassen. Der BSI-Grundschutz-Katalog (insbesondere die Bausteine SYS und APP) bietet einen praxisnahen Rahmen für die Absicherung von Self-Hosted-LLM-Infrastruktur in deutschen Unternehmen.',
       },
       sources: {
         id: 'sources',
@@ -811,7 +811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie häufig wird dieses Verzeichnis aktualisiert?',
-            a: 'Alle sechs Monate — zuletzt überprüft im Juni 2026, die nächste planmäßige Aktualisierung ist im November 2026. Zwischenzeitliche Änderungen (ein Projekt wird inaktiv, ein neues Tool gewinnt relevanten Marktanteil, eine Lizenz ändert sich) werden als Patch in den bestehenden Eintrag eingepflegt. Vollständig neue Kategorien oder Schichten warten auf die Überarbeitung, um die Struktur stabil zu halten.',
+            a: 'Alle sechs Monate — zuletzt überprüft im Juli 2026, die nächste planmäßige Aktualisierung ist im November 2026. Zwischenzeitliche Änderungen (ein Projekt wird inaktiv, ein neues Tool gewinnt relevanten Marktanteil, eine Lizenz ändert sich) werden als Patch in den bestehenden Eintrag eingepflegt. Vollständig neue Kategorien oder Schichten warten auf die Überarbeitung, um die Struktur stabil zu halten.',
           },
           {
             q: 'Muss ich bei der Verwendung dieser Tools die DSGVO beachten?',
@@ -844,18 +844,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels LLM locaux : 70+ outils pour faire tourner l\'IA sur votre propre matériel (2026)',
-    seoTitle: '87 outils LLM locaux 2026 : 9 catégories, Ollama au RAG',
+    seoTitle: 'Outils LLM locaux 2026 : 87 apps mises à jour (Ollama au RAG)',
     affiliateDisclosure: true,
     intro:
-      'L\'écosystème LLM local en 2026 est assez vaste pour que le mauvais choix initial coûte des heures. Ce répertoire recense 87 projets activement maintenus en neuf couches — runtimes, applications bureau, interfaces web, assistants de codage, systèmes RAG, frameworks d\'agents, voix et multimodal, clients mobiles, plugins de productivité — avec description, licence et URL pour chacun. Utilisez-le comme carte d\'orientation avant de vous engager dans une stack.',
+      'Voici un répertoire 2026 mis à jour de 87 outils, applications, frameworks et logiciels de déploiement LLM locaux — dernière mise à jour en juillet 2026. L\'écosystème LLM local en 2026 est assez vaste pour que le mauvais choix initial coûte des heures. Ce répertoire recense 87 projets activement maintenus en neuf couches — runtimes, applications bureau, interfaces web, assistants de codage, systèmes RAG, frameworks d\'agents, voix et multimodal, clients mobiles, plugins de productivité — avec description, licence et URL pour chacun. Que vous choisissiez des outils LLM locaux, des outils de déploiement pour le service multi-utilisateurs ou des frameworks pour construire des agents, utilisez-le comme carte d\'orientation avant de vous engager dans une stack.',
     metaDescription:
-      'Ollama, LM Studio, GPT4All, Jan.ai — 87 outils LLM locaux en 9 catégories : runtimes, RAG, agents, voix & mobile. Licences, liens & versions. Juin 2026.',
+      'Répertoire 2026 mis à jour de 87 outils, applications, frameworks & logiciels de déploiement LLM locaux en 9 catégories — Ollama, LM Studio, RAG, agents. Juillet 2026.',
     twitterDescription:
-      '87 outils LLM locaux en 9 catégories — runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile. Licences, liens & versions à jour, juin 2026. La carte d\'orientation avant de choisir votre stack.',
+      '87 outils LLM locaux en 9 catégories — runtimes, apps bureau, interfaces web, agents de codage, RAG, multi-agents, voix, mobile. Licences, liens & versions à jour, juillet 2026. La carte d\'orientation avant de choisir votre stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'écosystème ia locale',
     ],
     leadAnswerBlock:
-      '**L\'écosystème LLM local 2026 se divise clairement en neuf couches.** Les runtimes (Ollama, llama.cpp, vLLM) font circuler les tokens à travers le modèle ; les applications bureau (LM Studio, Jan, GPT4All) encapsulent un runtime dans une interface de chat ; les interfaces web (Open WebUI, LibreChat) font de même dans le navigateur ; les assistants de codage (Continue.dev, Cline, Aider) connectent un modèle local à votre éditeur ; les systèmes RAG (AnythingLLM, PrivateGPT) l\'orientent vers vos documents ; les frameworks d\'agents (LangChain, CrewAI, LangGraph) enchaînent les appels en workflows multi-étapes ; les stacks voix et multimodal (Whisper.cpp, Piper, LLaVA) étendent le tout au-delà du texte ; les clients mobiles (MLC Chat, PocketPal AI) le mettent sur téléphone ; et les plugins spécialisés (Obsidian, Logseq, AutoGPT) l\'intègrent dans vos outils existants. Choisissez d\'abord un runtime (Ollama pour presque tout le monde), puis ajoutez une ou deux couches au-dessus.**',
+      '**Ce répertoire 2026 mis à jour (dernière mise à jour en juillet 2026) cartographie 87 outils LLM locaux, outils de déploiement et frameworks en neuf couches.** L\'écosystème LLM local 2026 se divise clairement en ces couches. Les runtimes (Ollama, llama.cpp, vLLM) font circuler les tokens à travers le modèle ; les applications bureau (LM Studio, Jan, GPT4All) encapsulent un runtime dans une interface de chat ; les interfaces web (Open WebUI, LibreChat) font de même dans le navigateur ; les assistants de codage (Continue.dev, Cline, Aider) connectent un modèle local à votre éditeur ; les systèmes RAG (AnythingLLM, PrivateGPT) l\'orientent vers vos documents ; les frameworks d\'agents (LangChain, CrewAI, LangGraph) enchaînent les appels en workflows multi-étapes ; les stacks voix et multimodal (Whisper.cpp, Piper, LLaVA) étendent le tout au-delà du texte ; les clients mobiles (MLC Chat, PocketPal AI) le mettent sur téléphone ; et les plugins spécialisés (Obsidian, Logseq, AutoGPT) l\'intègrent dans vos outils existants. Choisissez d\'abord un runtime (Ollama pour presque tout le monde), puis ajoutez une ou deux couches au-dessus.**',
     quickAnswerTop: {
       fr: {
         question: 'Quels sont les meilleurs outils LLM locaux pour faire tourner l\'IA sur son propre matériel en 2026 ?',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour le RAG : AnythingLLM (le plus simple), PrivateGPT (hors ligne), Open WebUI (RAG intégré dans l\'interface de chat).',
           'Sur mobile : MLC Chat ou PocketPal AI sur Android, Private LLM ou Enchanted sur iOS — tous exécutent des modèles 2-4B utilisables sur les téléphones haut de gamme.',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Mise à jour du répertoire',
         content:
-          '**Ce répertoire est révisé tous les six mois — dernière révision en juin 2026, prochaine mise à jour en novembre 2026.** La révision de juin 2026 a revérifié tous les liens et corrigé plusieurs noms de projets et licences : Faraday s\'appelle désormais Backyard AI, le fork Coqui TTS maintenu est hébergé par Idiap et Cherry Studio est sous AGPL 3.0. Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format des tableaux ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
+          '**Ce répertoire est révisé tous les six mois et corrigé entre les révisions — dernière mise à jour en juillet 2026, prochaine révision prévue en novembre 2026.** La dernière révision a revérifié tous les liens et corrigé plusieurs noms de projets et licences : Faraday s\'appelle désormais Backyard AI, le fork Coqui TTS maintenu est hébergé par Idiap et Cherry Studio est sous AGPL 3.0. Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format des tableaux ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
       },
       sources: {
         id: 'sources',
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'À quelle fréquence ce répertoire est-il mis à jour ?',
-            a: 'Tous les six mois — dernière révision en juin 2026, la prochaine révision planifiée est en novembre 2026. Les modifications intermédiaires (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les nouvelles catégories attendent une révision pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
+            a: 'Tous les six mois — dernière révision en juillet 2026, la prochaine révision planifiée est en novembre 2026. Les modifications intermédiaires (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les nouvelles catégories attendent une révision pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
           },
         ],
       },
@@ -1257,18 +1257,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす70以上のツール（2026年版）',
-    seoTitle: 'ローカルLLM 87ツール2026：9カテゴリ完全一覧',
+    seoTitle: 'ローカルLLMツール2026：87アプリ更新（Ollama〜RAG）',
     affiliateDisclosure: true,
     intro:
-      '2026年のローカルLLMエコシステムは、最初に間違ったツールを選ぶだけで数時間を無駄にするほど広大です。このディレクトリでは、ランタイム・デスクトップアプリ・Web UI・コーディングアシスタント・RAGシステム・エージェントフレームワーク・音声/マルチモーダル・モバイルクライアント・専門プラグインの9層にわたる87のプロジェクトを、説明・ライセンス・URLとともに掲載しています。スタックを決める前の「何が存在するか」を把握するための地図としてご活用ください。',
+      'これは、87のローカルLLMツール・アプリ・フレームワーク・デプロイソフトウェアをまとめた更新版2026年ディレクトリです（最終更新：2026年7月）。2026年のローカルLLMエコシステムは、最初に間違ったツールを選ぶだけで数時間を無駄にするほど広大です。このディレクトリでは、ランタイム・デスクトップアプリ・Web UI・コーディングアシスタント・RAGシステム・エージェントフレームワーク・音声/マルチモーダル・モバイルクライアント・専門プラグインの9層にわたる87のプロジェクトを、説明・ライセンス・URLとともに掲載しています。ローカルLLMツール、マルチユーザー提供のためのデプロイツール、エージェント構築用フレームワークのいずれを選ぶ場合でも、スタックを決める前の「何が存在するか」を把握するための地図としてご活用ください。',
     metaDescription:
-      'Ollama・LM Studio・GPT4All・Jan.aiを含む87ローカルLLMツールを9カテゴリで比較：ランタイム、RAG、エージェント、音声、モバイル。ライセンス・リンク・最新版付き。2026年6月更新。',
+      '87のローカルLLMツール・アプリ・フレームワーク・デプロイソフトウェアを9カテゴリでまとめた更新版2026年ディレクトリ — Ollama、LM Studio、RAG、エージェント。2026年7月更新。',
     twitterDescription:
-      'ローカルLLMツール87件を9カテゴリで網羅 — ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェントフレームワーク、音声、モバイル。ライセンス・リンク・最新版付き、2026年6月更新。スタックを決める前の「全体像」マップです。',
+      'ローカルLLMツール87件を9カテゴリで網羅 — ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェントフレームワーク、音声、モバイル。ライセンス・リンク・最新版付き、2026年7月更新。スタックを決める前の「全体像」マップです。',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -1285,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルaiソフトウェアエコシステム',
     ],
     leadAnswerBlock:
-      '**2026年のローカルLLMエコシステムは明確に9層に分かれています。** ランタイム（Ollama、llama.cpp、vLLM）はモデルを通じてトークンを処理します。デスクトップアプリ（LM Studio、Jan、GPT4All）はランタイムをチャットUIでラップします。Web UI（Open WebUI、LibreChat）はブラウザで同じことを行います。コーディングアシスタント（Continue.dev、Cline、Aider）はローカルモデルをエディタに接続します。RAGシステム（AnythingLLM、PrivateGPT）はドキュメントに向けます。エージェントフレームワーク（LangChain、CrewAI、LangGraph）は呼び出しをマルチステップワークフローに連鎖させます。音声/マルチモーダルスタック（Whisper.cpp、Piper、LLaVA）はテキスト以外に拡張します。モバイルクライアント（MLC Chat、PocketPal AI）はスマートフォンで動作します。専門プラグイン（Obsidian、Logseq、AutoGPT）は既存ツールに統合します。まずランタイムを選び（ほぼ全員にOllama）、その上に1〜2層を追加してください。**',
+      '**この更新版2026年ディレクトリ（最終更新：2026年7月）は、87のローカルLLMツール・デプロイツール・フレームワークを9層にわたってマッピングしています。** 2026年のローカルLLMエコシステムは明確にこれらの層に分かれています。ランタイム（Ollama、llama.cpp、vLLM）はモデルを通じてトークンを処理します。デスクトップアプリ（LM Studio、Jan、GPT4All）はランタイムをチャットUIでラップします。Web UI（Open WebUI、LibreChat）はブラウザで同じことを行います。コーディングアシスタント（Continue.dev、Cline、Aider）はローカルモデルをエディタに接続します。RAGシステム（AnythingLLM、PrivateGPT）はドキュメントに向けます。エージェントフレームワーク（LangChain、CrewAI、LangGraph）は呼び出しをマルチステップワークフローに連鎖させます。音声/マルチモーダルスタック（Whisper.cpp、Piper、LLaVA）はテキスト以外に拡張します。モバイルクライアント（MLC Chat、PocketPal AI）はスマートフォンで動作します。専門プラグイン（Obsidian、Logseq、AutoGPT）は既存ツールに統合します。まずランタイムを選び（ほぼ全員にOllama）、その上に1〜2層を追加してください。**',
     quickAnswerTop: {
       ja: {
         question: '2026年に自分のハードウェアでAIを動かすための最良のローカルLLMツールは何ですか？',
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RAG用：AnythingLLM（最も簡単）、PrivateGPT（オフライン重視）、Open WebUI（チャットUIにRAG内蔵）。',
           'モバイル用：AndroidはMLC ChatまたはPocketPal AI、iOSはPrivate LLMまたはEnchanted — いずれもフラッグシップ機で実用的な2-4Bモデルを動作。',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'ディレクトリの最新性について',
         content:
-          '**このディレクトリは6か月ごとに見直されます（最終見直し：2026年6月、次回更新：2026年11月）。** 2026年6月の見直しでは全リンクを再確認し、複数のプロジェクト名とライセンスを修正しました：FaradayはBackyard AIに改称、メンテナンスされているCoqui TTSフォークはIdiapがホスト、Cherry StudioはAGPL 3.0です。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか空白層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載提案はPromptQuorumリポジトリのissueまたはPRで受け付けています — プロジェクトURL、ライセンス、上記テーブル形式の一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
+          '**このディレクトリは6か月ごとに見直され、見直しの合間にも更新されます（最終更新：2026年7月、次回見直し：2026年11月）。** 直近の見直しでは全リンクを再確認し、複数のプロジェクト名とライセンスを修正しました：FaradayはBackyard AIに改称、メンテナンスされているCoqui TTSフォークはIdiapがホスト、Cherry StudioはAGPL 3.0です。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか空白層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載提案はPromptQuorumリポジトリのissueまたはPRで受け付けています — プロジェクトURL、ライセンス、上記テーブル形式の一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
       },
       sources: {
         id: 'sources',
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'このディレクトリはどのくらいの頻度で更新されますか？',
-            a: '6か月ごと — 最終見直しは2026年6月、次回の予定更新は2026年11月です。中間の変更（プロジェクトが非活性になった、新しいツールが有意なシェアを獲得した、ライセンスが変わった）は既存エントリーへのパッチとして適用されます。新しいカテゴリや層は構造の安定性を保つため更新を待ちます。「参考文献」セクションに更新間のエコシステム監視に使用するコミュニティインデックスを掲載しています。',
+            a: '6か月ごと — 最終見直しは2026年7月、次回の予定更新は2026年11月です。中間の変更（プロジェクトが非活性になった、新しいツールが有意なシェアを獲得した、ライセンスが変わった）は既存エントリーへのパッチとして適用されます。新しいカテゴリや層は構造の安定性を保つため更新を待ちます。「参考文献」セクションに更新間のエコシステム監視に使用するコミュニティインデックスを掲載しています。',
           },
         ],
       },
@@ -1670,18 +1670,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地LLM软件完整目录：70+款工具，在自有硬件上运行AI（2026）',
-    seoTitle: '87个本地LLM工具2026：9大类，Ollama到RAG',
+    seoTitle: '本地LLM工具2026：87款应用更新（Ollama到RAG）',
     affiliateDisclosure: true,
     intro:
-      '2026年本地LLM生态系统已足够庞大，选错工具会浪费数小时而不只是几分钟。本目录整理了87个活跃维护的项目，覆盖九个层级——运行时、桌面应用、Web界面、编程助手、RAG系统、智能体框架、语音与多模态、移动端客户端以及专业化生产力插件——每项附有描述、许可证和主要链接。在确定技术栈之前，将其作为"现有工具"全景图使用；每个类别末尾附有PromptQuorum该层详细对比指南的链接。',
+      '这是一份收录87款本地LLM工具、应用、框架与部署软件的2026年更新版目录——最近更新于2026年7月。2026年本地LLM生态系统已足够庞大，选错工具会浪费数小时而不只是几分钟。本目录整理了87个活跃维护的项目，覆盖九个层级——运行时、桌面应用、Web界面、编程助手、RAG系统、智能体框架、语音与多模态、移动端客户端以及专业化生产力插件——每项附有描述、许可证和主要链接。无论您是在挑选本地LLM工具、面向多用户服务的部署工具，还是用于构建智能体的框架，都可在确定技术栈之前将其作为"现有工具"全景图使用；每个类别末尾附有PromptQuorum该层详细对比指南的链接。',
     metaDescription:
-      'Ollama、LM Studio、GPT4All、Jan.ai — 87个本地LLM工具，9大类：运行时、RAG、智能体、语音与移动端。含许可证、链接与最新版本。2026年6月更新。',
+      '收录87款本地LLM工具、应用、框架与部署软件的2026年更新版目录，覆盖9大类——Ollama、LM Studio、RAG、智能体。2026年7月更新。',
     twitterDescription:
-      '87个本地LLM工具，9大类别——运行时、桌面应用、Web界面、编程助手、RAG、多智能体框架、语音、移动端。含许可证、链接与最新版本，2026年6月更新。确定技术栈前的"现有工具"全景图。',
+      '87个本地LLM工具，9大类别——运行时、桌面应用、Web界面、编程助手、RAG、多智能体框架、语音、移动端。含许可证、链接与最新版本，2026年7月更新。确定技术栈前的"现有工具"全景图。',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地AI软件生态',
     ],
     leadAnswerBlock:
-      '**2026年本地LLM生态系统清晰地分为九个层级。**运行时（Ollama、llama.cpp、vLLM）将token送入模型；桌面应用（LM Studio、Jan、GPT4All）将运行时封装进聊天界面；Web界面（Open WebUI、LibreChat）在浏览器中实现相同功能；编程助手（Continue.dev、Cline、Aider）将本地模型接入编辑器；RAG系统（AnythingLLM、PrivateGPT）使模型能够回答基于自有文档的问题；智能体框架（LangChain、CrewAI、LangGraph）将调用串联成多步骤工作流；语音与多模态技术栈（Whisper.cpp、Piper、LLaVA）将能力延伸至文本以外；移动端客户端（MLC Chat、PocketPal AI）将其带到手机上；专业化生产力插件（Obsidian、Logseq、AutoGPT）将其嵌入您已在使用的工具。优先选择运行时（几乎所有人选Ollama），再在上面叠加一到两层。下方目录列出了每个层级中所有值得了解的项目及其许可证，方便您规划一个从头到尾完全开源的技术栈（如果这对您很重要）。**',
+      '**这份2026年更新版目录（最近更新于2026年7月）梳理了跨九个层级的87款本地LLM工具、部署工具与框架。**2026年本地LLM生态系统清晰地分为这些层级。运行时（Ollama、llama.cpp、vLLM）将token送入模型；桌面应用（LM Studio、Jan、GPT4All）将运行时封装进聊天界面；Web界面（Open WebUI、LibreChat）在浏览器中实现相同功能；编程助手（Continue.dev、Cline、Aider）将本地模型接入编辑器；RAG系统（AnythingLLM、PrivateGPT）使模型能够回答基于自有文档的问题；智能体框架（LangChain、CrewAI、LangGraph）将调用串联成多步骤工作流；语音与多模态技术栈（Whisper.cpp、Piper、LLaVA）将能力延伸至文本以外；移动端客户端（MLC Chat、PocketPal AI）将其带到手机上；专业化生产力插件（Obsidian、Logseq、AutoGPT）将其嵌入您已在使用的工具。优先选择运行时（几乎所有人选Ollama），再在上面叠加一到两层。下方目录列出了每个层级中所有值得了解的项目及其许可证，方便您规划一个从头到尾完全开源的技术栈（如果这对您很重要）。**',
     quickAnswerTop: {
       zh: {
         question: '2026年在自有硬件上运行AI的最佳本地LLM工具有哪些？',
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '文档问答：AnythingLLM（最简单）、PrivateGPT（偏离线）、Open WebUI（聊天界面内置RAG）。',
           '移动端：Android选MLC Chat或PocketPal AI，iOS选Private LLM或Enchanted——均可在旗舰手机上实际运行2-4B模型。',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: '本目录如何保持及时更新',
         content:
-          '**中国（数据安全法）：** 中国2021年《数据安全法》对数据本地化处理和跨境传输有明确规定。本地推理在技术上直接满足合规需求——模型权重和推理计算全部在本地完成，数据不经过任何第三方云服务器。对于需要处理中文企业文本的场景（金融报告、医疗记录、法律合同），在中文理解和指令遵循方面具有针对性优化的模型是本地部署的可选方案，可在满足数据留存要求的同时实现文档理解与知识问答。\n\n**亚太地区（数据跨境合规）：** 亚太地区各经济体正在建立和完善数据本地化框架。本地推理是满足跨境数据传输限制的技术路径——在本地运行模型意味着推理输入和输出不需要离开所在司法管辖区。对于在多个亚太市场运营的企业，在每个合规区域内部署独立的本地LLM实例，是规避数据主权合规风险的实践路径之一。\n\n**企业部署（金融、医疗、法律）：** 在受监管行业，金融机构、医院和律所通常面临严格的数据外发限制。本地LLM部署——尤其是与RAG系统结合后——可在不向外部云服务发送任何敏感数据的前提下实现文档理解、合同分析和知识库问答等用例。本目录每六个月审查一次（最近审查：2026年6月，下次更新：2026年11月）。2026年6月的审查重新核实了所有链接，并修正了若干项目名称与许可证：Faraday已更名为Backyard AI，维护中的Coqui TTS分支现由Idiap托管，Cherry Studio采用AGPL 3.0。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户基础或填补了某一层的空缺。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及上述格式的一句话描述。',
+          '**中国（数据安全法）：** 中国2021年《数据安全法》对数据本地化处理和跨境传输有明确规定。本地推理在技术上直接满足合规需求——模型权重和推理计算全部在本地完成，数据不经过任何第三方云服务器。对于需要处理中文企业文本的场景（金融报告、医疗记录、法律合同），在中文理解和指令遵循方面具有针对性优化的模型是本地部署的可选方案，可在满足数据留存要求的同时实现文档理解与知识问答。\n\n**亚太地区（数据跨境合规）：** 亚太地区各经济体正在建立和完善数据本地化框架。本地推理是满足跨境数据传输限制的技术路径——在本地运行模型意味着推理输入和输出不需要离开所在司法管辖区。对于在多个亚太市场运营的企业，在每个合规区域内部署独立的本地LLM实例，是规避数据主权合规风险的实践路径之一。\n\n**企业部署（金融、医疗、法律）：** 在受监管行业，金融机构、医院和律所通常面临严格的数据外发限制。本地LLM部署——尤其是与RAG系统结合后——可在不向外部云服务发送任何敏感数据的前提下实现文档理解、合同分析和知识库问答等用例。本目录每六个月审查一次，并在两次审查之间进行更新（最近更新：2026年7月，下次审查：2026年11月）。最近一次审查重新核实了所有链接，并修正了若干项目名称与许可证：Faraday已更名为Backyard AI，维护中的Coqui TTS分支现由Idiap托管，Cherry Studio采用AGPL 3.0。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户基础或填补了某一层的空缺。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及上述格式的一句话描述。',
       },
       sources: {
         id: 'sources',
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本目录多久更新一次？',
-            a: '每六个月更新一次——最近审查为2026年6月，下次计划更新为2026年11月。中期变化（项目失活、新工具取得显著份额、许可证变更）将以补丁形式应用到现有条目。全新类别或层级等待定期更新以保持结构稳定。上方"参考来源"部分列出了更新之间用于监测生态系统动态的社区索引。',
+            a: '每六个月更新一次——最近审查为2026年7月，下次计划更新为2026年11月。中期变化（项目失活、新工具取得显著份额、许可证变更）将以补丁形式应用到现有条目。全新类别或层级等待定期更新以保持结构稳定。上方"参考来源"部分列出了更新之间用于监测生态系统动态的社区索引。',
           },
         ],
       },
@@ -2083,18 +2083,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'El directorio completo de software LLM local: 70+ herramientas para ejecutar IA en tu propio hardware (2026)',
-    seoTitle: '87 herramientas LLM local 2026: 9 categorías, Ollama a RAG',
+    seoTitle: 'Herramientas LLM local 2026: 87 apps actualizadas (Ollama a RAG)',
     affiliateDisclosure: true,
     intro:
-      'El ecosistema de LLM local en 2026 es lo suficientemente amplio como para que elegir la herramienta incorrecta al inicio cueste horas, no minutos. Este directorio cataloga 87 proyectos en mantenimiento activo en nueve capas — runtimes, aplicaciones de escritorio, interfaces web, asistentes de código, sistemas RAG, frameworks de agentes, voz y multimodal, clientes móviles y plugins de productividad especializados — con descripción, licencia y URL principal para cada uno. Úsalo como el mapa de "qué existe" antes de comprometerte con un stack; cada categoría termina con un enlace a la guía de comparación más detallada de PromptQuorum para esa capa.',
+      'Este es un directorio actualizado de 2026 con 87 herramientas, aplicaciones, frameworks y software de despliegue de LLM local — última actualización en julio de 2026. El ecosistema de LLM local en 2026 es lo suficientemente amplio como para que elegir la herramienta incorrecta al inicio cueste horas, no minutos. Este directorio cataloga 87 proyectos en mantenimiento activo en nueve capas — runtimes, aplicaciones de escritorio, interfaces web, asistentes de código, sistemas RAG, frameworks de agentes, voz y multimodal, clientes móviles y plugins de productividad especializados — con descripción, licencia y URL principal para cada uno. Tanto si eliges herramientas LLM local, herramientas de despliegue para servicio multiusuario o frameworks para construir agentes, úsalo como el mapa de "qué existe" antes de comprometerte con un stack; cada categoría termina con un enlace a la guía de comparación más detallada de PromptQuorum para esa capa.',
     metaDescription:
-      'Ollama, LM Studio, GPT4All, Jan.ai — 87 herramientas LLM en 9 categorías: runtimes, RAG, agentes, voz & móvil. Licencias, enlaces & versiones. Junio 2026.',
+      'Directorio actualizado de 2026 con 87 herramientas, aplicaciones, frameworks & software de despliegue de LLM local en 9 categorías — Ollama, LM Studio, RAG, agentes. Julio 2026.',
     twitterDescription:
-      '87 herramientas LLM local en 9 categorías — runtimes, apps de escritorio, interfaces web, agentes de código, RAG, frameworks multiagente, voz, móvil. Licencias, enlaces y últimas versiones, junio de 2026. El mapa de "qué existe" antes de elegir tu stack.',
+      '87 herramientas LLM local en 9 categorías — runtimes, apps de escritorio, interfaces web, agentes de código, RAG, frameworks multiagente, voz, móvil. Licencias, enlaces y últimas versiones, julio de 2026. El mapa de "qué existe" antes de elegir tu stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ecosistema software ia local',
     ],
     leadAnswerBlock:
-      '**El ecosistema de LLM local en 2026 se divide claramente en nueve capas.** Los runtimes (Ollama, llama.cpp, vLLM) procesan tokens a través del modelo; las apps de escritorio (LM Studio, Jan, GPT4All) envuelven un runtime en una interfaz de chat; las interfaces web (Open WebUI, LibreChat) hacen lo mismo en el navegador; los asistentes de código (Continue.dev, Cline, Aider) conectan un modelo local a tu editor; los sistemas RAG (AnythingLLM, PrivateGPT) lo apuntan a tus documentos; los frameworks de agentes (LangChain, CrewAI, LangGraph) encadenan llamadas en flujos de trabajo de varios pasos; los stacks de voz y multimodal (Whisper.cpp, Piper, LLaVA) lo extienden más allá del texto; los clientes móviles (MLC Chat, PocketPal AI) lo llevan al teléfono; y los plugins de productividad especializados (Obsidian, Logseq, AutoGPT) lo integran en herramientas que ya usas. Elige primero un runtime (Ollama para casi todo el mundo), luego agrega una o dos capas encima. El directorio a continuación lista cada proyecto que vale la pena conocer en cada capa junto con su licencia, para que puedas planificar un stack completamente open-source de principio a fin si eso te importa.**',
+      '**Este directorio actualizado de 2026 (última actualización en julio de 2026) mapea 87 herramientas LLM local, herramientas de despliegue y frameworks en nueve capas.** El ecosistema de LLM local en 2026 se divide claramente en estas capas. Los runtimes (Ollama, llama.cpp, vLLM) procesan tokens a través del modelo; las apps de escritorio (LM Studio, Jan, GPT4All) envuelven un runtime en una interfaz de chat; las interfaces web (Open WebUI, LibreChat) hacen lo mismo en el navegador; los asistentes de código (Continue.dev, Cline, Aider) conectan un modelo local a tu editor; los sistemas RAG (AnythingLLM, PrivateGPT) lo apuntan a tus documentos; los frameworks de agentes (LangChain, CrewAI, LangGraph) encadenan llamadas en flujos de trabajo de varios pasos; los stacks de voz y multimodal (Whisper.cpp, Piper, LLaVA) lo extienden más allá del texto; los clientes móviles (MLC Chat, PocketPal AI) lo llevan al teléfono; y los plugins de productividad especializados (Obsidian, Logseq, AutoGPT) lo integran en herramientas que ya usas. Elige primero un runtime (Ollama para casi todo el mundo), luego agrega una o dos capas encima. El directorio a continuación lista cada proyecto que vale la pena conocer en cada capa junto con su licencia, para que puedas planificar un stack completamente open-source de principio a fin si eso te importa.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuáles son las mejores herramientas LLM local para ejecutar IA en mi propio hardware en 2026?',
@@ -2124,7 +2124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para RAG: AnythingLLM (el más fácil), PrivateGPT (orientado a offline), Open WebUI (RAG integrado dentro de la interfaz de chat).',
           'Para móvil: MLC Chat o PocketPal AI en Android, Private LLM o Enchanted en iOS — todos ejecutan modelos 2-4B realmente útiles en teléfonos de gama alta.',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -2415,7 +2415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Cómo se mantiene actualizado este directorio',
         content:
-          '**Este directorio se revisa cada seis meses — última revisión en junio de 2026, próxima actualización en noviembre de 2026.** La revisión de junio de 2026 verificó de nuevo todos los enlaces y corrigió varios nombres de proyectos y licencias: Faraday ahora es Backyard AI, el fork mantenido de Coqui TTS está alojado por Idiap y Cherry Studio es AGPL 3.0. Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena una capa que de otro modo estaría vacía. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
+          '**Este directorio se revisa cada seis meses y se corrige entre revisiones — última actualización en julio de 2026, próxima revisión en noviembre de 2026.** La revisión más reciente verificó de nuevo todos los enlaces y corrigió varios nombres de proyectos y licencias: Faraday ahora es Backyard AI, el fork mantenido de Coqui TTS está alojado por Idiap y Cherry Studio es AGPL 3.0. Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena una capa que de otro modo estaría vacía. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
       },
       sources: {
         id: 'sources',
@@ -2471,7 +2471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Con qué frecuencia se actualiza este directorio?',
-            a: 'Cada seis meses — última revisión en junio de 2026, la próxima actualización programada es en noviembre de 2026. Los cambios intermedios (un proyecto queda inactivo, una nueva herramienta gana cuota significativa, una licencia cambia) se aplican como parches a la entrada existente. Las categorías o capas completamente nuevas esperan a una revisión para mantener estable la estructura. La sección "Fuentes" arriba lista los índices comunitarios utilizados para monitorear lo que el ecosistema está haciendo entre revisiones.',
+            a: 'Cada seis meses — última revisión en julio de 2026, la próxima actualización programada es en noviembre de 2026. Los cambios intermedios (un proyecto queda inactivo, una nueva herramienta gana cuota significativa, una licencia cambia) se aplican como parches a la entrada existente. Las categorías o capas completamente nuevas esperan a una revisión para mantener estable la estructura. La sección "Fuentes" arriba lista los índices comunitarios utilizados para monitorear lo que el ecosistema está haciendo entre revisiones.',
           },
         ],
       },
@@ -2496,11 +2496,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'El directorio completo de software LLM local: 70+ herramientas para ejecutar IA en tu propio hardware (2026)',
-      description: '87 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias, enlaces y últimas versiones. Actualizado en junio de 2026.',
+      description: 'Directorio actualizado de 2026 con 87 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias, enlaces y últimas versiones. Actualizado en julio de 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-06-14',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2510,18 +2510,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
-    seoTitle: '87 ferramentas LLM local 2026: 9 categorias, Ollama a RAG',
+    seoTitle: 'Ferramentas LLM local 2026: 87 apps atualizados (Ollama a RAG)',
     affiliateDisclosure: true,
     intro:
-      'O ecossistema de LLM local em 2026 é suficientemente amplo para que escolher a ferramenta errada no início custe horas, não minutos. Este diretório cataloga 87 projetos em manutenção ativa em nove camadas — runtimes, aplicativos de desktop, interfaces web, assistentes de código, sistemas RAG, frameworks de agentes, voz e multimodal, clientes móveis e plugins de produtividade especializados — com descrição, licença e URL principal para cada um. Use-o como o mapa de "o que existe" antes de se comprometer com um stack; cada categoria termina com um link para o guia de comparação mais detalhado do PromptQuorum para essa camada.',
+      'Este é um diretório atualizado de 2026 com 87 ferramentas, aplicativos, frameworks e software de implantação de LLM local — última atualização em julho de 2026. O ecossistema de LLM local em 2026 é suficientemente amplo para que escolher a ferramenta errada no início custe horas, não minutos. Este diretório cataloga 87 projetos em manutenção ativa em nove camadas — runtimes, aplicativos de desktop, interfaces web, assistentes de código, sistemas RAG, frameworks de agentes, voz e multimodal, clientes móveis e plugins de produtividade especializados — com descrição, licença e URL principal para cada um. Seja escolhendo ferramentas LLM local, ferramentas de implantação para atendimento multiusuário ou frameworks para construir agentes, use-o como o mapa de "o que existe" antes de se comprometer com um stack; cada categoria termina com um link para o guia de comparação mais detalhado do PromptQuorum para essa camada.',
     metaDescription:
-      'Ollama, LM Studio, GPT4All, Jan.ai — 87 ferramentas LLM em 9 categorias: runtimes, RAG, agentes, voz & mobile. Licenças, links & versões. Junho 2026.',
+      'Diretório atualizado de 2026 com 87 ferramentas, aplicativos, frameworks & software de implantação de LLM local em 9 categorias — Ollama, LM Studio, RAG, agentes. Julho 2026.',
     twitterDescription:
-      '87 ferramentas LLM local em 9 categorias — runtimes, apps de desktop, interfaces web, agentes de código, RAG, frameworks multiagente, voz, mobile. Licenças, links e versões mais recentes, junho de 2026. O mapa de "o que existe" antes de escolher seu stack.',
+      '87 ferramentas LLM local em 9 categorias — runtimes, apps de desktop, interfaces web, agentes de código, RAG, frameworks multiagente, voz, mobile. Licenças, links e versões mais recentes, julho de 2026. O mapa de "o que existe" antes de escolher seu stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -2538,7 +2538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ecossistema software ia local',
     ],
     leadAnswerBlock:
-      '**O ecossistema de LLM local em 2026 se divide claramente em nove camadas.** Os runtimes (Ollama, llama.cpp, vLLM) processam tokens pelo modelo; os apps de desktop (LM Studio, Jan, GPT4All) envolvem um runtime em uma interface de chat; as interfaces web (Open WebUI, LibreChat) fazem o mesmo no navegador; os assistentes de código (Continue.dev, Cline, Aider) conectam um modelo local ao seu editor; os sistemas RAG (AnythingLLM, PrivateGPT) o apontam para seus documentos; os frameworks de agentes (LangChain, CrewAI, LangGraph) encadeiam chamadas em fluxos de trabalho de múltiplas etapas; os stacks de voz e multimodal (Whisper.cpp, Piper, LLaVA) o estendem além do texto; os clientes móveis (MLC Chat, PocketPal AI) o levam ao telefone; e os plugins de produtividade especializados (Obsidian, Logseq, AutoGPT) o integram às ferramentas que você já usa.**',
+      '**Este diretório atualizado de 2026 (última atualização em julho de 2026) mapeia 87 ferramentas LLM local, ferramentas de implantação e frameworks em nove camadas.** O ecossistema de LLM local em 2026 se divide claramente nessas camadas. Os runtimes (Ollama, llama.cpp, vLLM) processam tokens pelo modelo; os apps de desktop (LM Studio, Jan, GPT4All) envolvem um runtime em uma interface de chat; as interfaces web (Open WebUI, LibreChat) fazem o mesmo no navegador; os assistentes de código (Continue.dev, Cline, Aider) conectam um modelo local ao seu editor; os sistemas RAG (AnythingLLM, PrivateGPT) o apontam para seus documentos; os frameworks de agentes (LangChain, CrewAI, LangGraph) encadeiam chamadas em fluxos de trabalho de múltiplas etapas; os stacks de voz e multimodal (Whisper.cpp, Piper, LLaVA) o estendem além do texto; os clientes móveis (MLC Chat, PocketPal AI) o levam ao telefone; e os plugins de produtividade especializados (Obsidian, Logseq, AutoGPT) o integram às ferramentas que você já usa.**',
     quickAnswerTop: {
       pt: {
         question: 'Quais são as melhores ferramentas LLM local para executar IA no meu próprio hardware em 2026?',
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para RAG: AnythingLLM (o mais fácil), PrivateGPT (orientado a offline), Open WebUI (RAG integrado dentro da interface de chat).',
           'Para mobile: MLC Chat ou PocketPal AI no Android, Private LLM ou Enchanted no iOS — todos executam modelos 2–4B realmente úteis em telefones de alta gama.',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -2842,7 +2842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Como este diretório se mantém atualizado',
         content:
-          '**Este diretório é revisado a cada seis meses — última revisão em junho de 2026, próxima atualização em novembro de 2026.** A revisão de junho de 2026 reverificou todos os links e corrigiu vários nomes de projetos e licenças: Faraday agora é Backyard AI, o fork mantido do Coqui TTS é hospedado pela Idiap e o Cherry Studio é AGPL 3.0. Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
+          '**Este diretório é revisado a cada seis meses e corrigido entre as revisões — última atualização em julho de 2026, próxima revisão em novembro de 2026.** A revisão mais recente reverificou todos os links e corrigiu vários nomes de projetos e licenças: Faraday agora é Backyard AI, o fork mantido do Coqui TTS é hospedado pela Idiap e o Cherry Studio é AGPL 3.0. Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
       },
       sources: {
         id: 'sources',
@@ -2898,7 +2898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Com que frequência este diretório é atualizado?',
-            a: 'A cada seis meses — última revisão em junho de 2026, a próxima atualização programada é em novembro de 2026. As mudanças intermediárias (um projeto fica inativo, uma nova ferramenta ganha participação significativa, uma licença muda) são aplicadas como patches à entrada existente. Categorias ou camadas completamente novas aguardam uma revisão para manter a estrutura estável.',
+            a: 'A cada seis meses — última revisão em julho de 2026, a próxima atualização programada é em novembro de 2026. As mudanças intermediárias (um projeto fica inativo, uma nova ferramenta ganha participação significativa, uma licença muda) são aplicadas como patches à entrada existente. Categorias ou camadas completamente novas aguardam uma revisão para manter a estrutura estável.',
           },
         ],
       },
@@ -2923,11 +2923,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
-      description: '87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças, links e versões mais recentes. Atualizado em junho de 2026.',
+      description: 'Diretório atualizado de 2026 com 87 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças, links e versões mais recentes. Atualizado em julho de 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-06-14',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2936,18 +2936,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: ⁨70⁩+ أداة لتشغيل الذكاء الاصطناعي على أجهزتك (⁨2026⁩)',
-    seoTitle: '⁨87⁩ أداة ⁨LLM⁩ محلية ⁨2026⁩: ⁨Ollama⁩ و⁨RAG⁩ و⁨9⁩ فئات',
+    seoTitle: 'أدوات ⁨LLM⁩ محلية ⁨2026⁩: ⁨87⁩ تطبيقاً محدَّثاً (⁨Ollama⁩ إلى ⁨RAG⁩)',
     affiliateDisclosure: true,
     intro:
-      'منظومة النماذج اللغوية المحلية في 2026 واسعة بما يكفي لأن يكلفك اختيار الأداة الخاطئة في البداية ساعات لا دقائق. يُصنِّف هذا الدليل 87 مشروعاً نشطاً في تسع طبقات — رuntimes وتطبيقات سطح المكتب وواجهات الويب ومساعدو الكود وأنظمة RAG وأطر العملاء الذكيين والصوت والوسائط المتعددة والعملاء المحمولة والإضافات الإنتاجية المتخصصة — مع الوصف والترخيص وعنوان URL الرئيسي لكل منها. استخدمه كخريطة "ما الموجود" قبل الالتزام بـstack؛ تنتهي كل فئة برابط لدليل المقارنة الأكثر تفصيلاً من PromptQuorum لتلك الطبقة.',
+      'هذا دليل محدَّث لعام 2026 يضم 87 أداة وتطبيقاً وإطار عمل وبرنامج نشر للنماذج اللغوية المحلية — آخر تحديث في يوليو 2026. منظومة النماذج اللغوية المحلية في 2026 واسعة بما يكفي لأن يكلفك اختيار الأداة الخاطئة في البداية ساعات لا دقائق. يُصنِّف هذا الدليل 87 مشروعاً نشطاً في تسع طبقات — رuntimes وتطبيقات سطح المكتب وواجهات الويب ومساعدو الكود وأنظمة RAG وأطر العملاء الذكيين والصوت والوسائط المتعددة والعملاء المحمولة والإضافات الإنتاجية المتخصصة — مع الوصف والترخيص وعنوان URL الرئيسي لكل منها. سواء كنت تختار أدوات LLM محلية أو أدوات نشر للخدمة متعددة المستخدمين أو أطر عمل لبناء العملاء الذكيين، استخدمه كخريطة "ما الموجود" قبل الالتزام بـstack؛ تنتهي كل فئة برابط لدليل المقارنة الأكثر تفصيلاً من PromptQuorum لتلك الطبقة.',
     metaDescription:
-      'Ollama وLM Studio وJan AI — 87 أداة LLM محلية في 9 فئات: رuntimes وRAG وأطر الوكلاء والصوت والموبايل. التراخيص والروابط. يونيو 2026.',
+      'دليل محدَّث لعام 2026 يضم 87 أداة وتطبيقاً وإطار عمل وبرنامج نشر للنماذج اللغوية المحلية في 9 فئات — Ollama وLM Studio وRAG والوكلاء. آخر تحديث يوليو 2026.',
     twitterDescription:
-      '87 أداة للنماذج اللغوية المحلية في 9 فئات — رuntimes وتطبيقات سطح المكتب وواجهات الويب وعملاء الكود وRAG وأطر متعددة العملاء والصوت والمحمول. التراخيص والروابط وأحدث الإصدارات، يونيو 2026. خريطة "ما الموجود" قبل اختيار stack.',
+      '87 أداة للنماذج اللغوية المحلية في 9 فئات — رuntimes وتطبيقات سطح المكتب وواجهات الويب وعملاء الكود وRAG وأطر متعددة العملاء والصوت والمحمول. التراخيص والروابط وأحدث الإصدارات، يوليو 2026. خريطة "ما الموجود" قبل اختيار stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -2964,7 +2964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'منظومة برامج ذكاء اصطناعي محلي',
     ],
     leadAnswerBlock:
-      '**تنقسم منظومة النماذج اللغوية المحلية في 2026 بوضوح إلى تسع طبقات.** تعالج الـruntimes (Ollama وllama.cpp وvLLM) الرموز عبر النموذج؛ تُغلِّف تطبيقات سطح المكتب (LM Studio وJan وGPT4All) runtime في واجهة دردشة؛ تفعل واجهات الويب (Open WebUI وLibreChat) الأمر نفسه في المتصفح؛ تربط مساعدو الكود (Continue.dev وCline وAider) نموذجاً محلياً بمحررك؛ تُوجِّه أنظمة RAG (AnythingLLM وPrivateGPT) النموذج نحو مستنداتك؛ تُسلسِل أطر العملاء الذكيين (LangChain وCrewAI وLangGraph) الاستدعاءات في سير عمل متعدد الخطوات؛ تمتد stacks الصوت والوسائط المتعددة (Whisper.cpp وPiper وLLaVA) بالنموذج خارج النص؛ تحمل العملاء المحمولة (MLC Chat وPocketPal AI) النموذج إلى الهاتف؛ وتدمج الإضافات الإنتاجية المتخصصة (Obsidian وLogseq وAutoGPT) النموذج في الأدوات التي تستخدمها فعلاً. اختر runtime أولاً (Ollama لمعظم الجميع)، ثم أضف طبقة أو اثنتين فوقه.**',
+      '**يرسم هذا الدليل المحدَّث لعام 2026 (آخر تحديث في يوليو 2026) خريطة لـ87 أداة LLM محلية وأدوات نشر وأطر عمل عبر تسع طبقات.** تنقسم منظومة النماذج اللغوية المحلية في 2026 بوضوح إلى هذه الطبقات. تعالج الـruntimes (Ollama وllama.cpp وvLLM) الرموز عبر النموذج؛ تُغلِّف تطبيقات سطح المكتب (LM Studio وJan وGPT4All) runtime في واجهة دردشة؛ تفعل واجهات الويب (Open WebUI وLibreChat) الأمر نفسه في المتصفح؛ تربط مساعدو الكود (Continue.dev وCline وAider) نموذجاً محلياً بمحررك؛ تُوجِّه أنظمة RAG (AnythingLLM وPrivateGPT) النموذج نحو مستنداتك؛ تُسلسِل أطر العملاء الذكيين (LangChain وCrewAI وLangGraph) الاستدعاءات في سير عمل متعدد الخطوات؛ تمتد stacks الصوت والوسائط المتعددة (Whisper.cpp وPiper وLLaVA) بالنموذج خارج النص؛ تحمل العملاء المحمولة (MLC Chat وPocketPal AI) النموذج إلى الهاتف؛ وتدمج الإضافات الإنتاجية المتخصصة (Obsidian وLogseq وAutoGPT) النموذج في الأدوات التي تستخدمها فعلاً. اختر runtime أولاً (Ollama لمعظم الجميع)، ثم أضف طبقة أو اثنتين فوقه.**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل أدوات النماذج اللغوية المحلية لتشغيل الذكاء الاصطناعي على أجهزتي في 2026؟',
@@ -2977,7 +2977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لـRAG: AnythingLLM (الأسهل)، PrivateGPT (موجَّه للعمل دون اتصال)، Open WebUI (RAG مدمج داخل واجهة الدردشة).',
           'للمحمول: MLC Chat أو PocketPal AI على Android، Private LLM أو Enchanted على iOS — كلها تشغِّل نماذج 2-4B مفيدة فعلاً على الهواتف الراقية.',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -3268,7 +3268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'كيف يظل هذا الدليل محدَّثاً',
         content:
-          '**يُراجَع هذا الدليل كل ستة أشهر — آخر مراجعة في يونيو 2026، التحديث القادم في نوفمبر 2026.** تحققت مراجعة يونيو 2026 من جميع الروابط وصحَّحت عدة أسماء مشاريع وتراخيص: أصبح Faraday هو Backyard AI، والنسخة المُدارة من Coqui TTS مستضافة من Idiap وCherry Studio هو AGPL 3.0. معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين كبيرة في 2026 أو يملأ طبقة ستكون فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية.',
+          '**يُراجَع هذا الدليل كل ستة أشهر ويُحدَّث بين المراجعات — آخر تحديث في يوليو 2026، المراجعة القادمة في نوفمبر 2026.** تحققت أحدث مراجعة من جميع الروابط وصحَّحت عدة أسماء مشاريع وتراخيص: أصبح Faraday هو Backyard AI، والنسخة المُدارة من Coqui TTS مستضافة من Idiap وCherry Studio هو AGPL 3.0. معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين كبيرة في 2026 أو يملأ طبقة ستكون فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية.',
       },
       sources: {
         id: 'sources',
@@ -3324,7 +3324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم مرة يُحدَّث هذا الدليل؟',
-            a: 'كل ستة أشهر — آخر مراجعة في يونيو 2026، التحديث القادم المجدول في نوفمبر 2026. التغييرات الوسيطة (مشروع يصبح خاملاً، أداة جديدة تكتسب حصة كبيرة، ترخيص يتغير) تُطبَّق كتصحيحات على الإدخال القائم.',
+            a: 'كل ستة أشهر — آخر مراجعة في يوليو 2026، التحديث القادم المجدول في نوفمبر 2026. التغييرات الوسيطة (مشروع يصبح خاملاً، أداة جديدة تكتسب حصة كبيرة، ترخيص يتغير) تُطبَّق كتصحيحات على الإدخال القائم.',
           },
         ],
       },
@@ -3349,12 +3349,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: 70+ أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
-      description: '87 أداة لتشغيل النماذج اللغوية محلياً: Ollama وLM Studio وGPT4All وJan.ai إضافة للمحمول وRAG والصوت وأطر العملاء. التراخيص والروابط وأحدث الإصدارات. محدَّث في يونيو 2026.',
+      description: 'دليل محدَّث لعام 2026 يضم 87 أداة لتشغيل النماذج اللغوية محلياً: Ollama وLM Studio وGPT4All وJan.ai إضافة للمحمول وRAG والصوت وأطر العملاء. التراخيص والروابط وأحدث الإصدارات. محدَّث في يوليو 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-06-14',
-      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      dateModified: '2026-07-01',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
     },
@@ -3362,19 +3362,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     slug: 'local-llm-software-directory-2026',
     title: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 70개 이상의 도구 (2026)',
-    seoTitle: '로컬 LLM 87도구 2026: 9카테고리 완전 목록',
+    seoTitle: '로컬 LLM 도구 2026: 87개 앱 업데이트 (Ollama~RAG)',
     affiliateDisclosure: true,
     intro:
-      '2026년 로컬 LLM 생태계는 처음에 잘못된 도구를 선택하면 몇 분이 아니라 몇 시간을 낭비할 만큼 방대합니다. 이 디렉토리는 현재 활발히 유지되고 있는 87개 프로젝트를 9개 레이어(런타임, 데스크톱 앱, 웹 UI, 코딩 어시스턴트, RAG 시스템, 에이전트 프레임워크, 음성/멀티모달, 모바일 클라이언트, 전문 생산성 플러그인)로 분류하여 각 도구의 설명, 라이선스, 주요 URL을 함께 제공합니다. 스택을 결정하기 전에 "무엇이 존재하는지" 파악하는 지도로 활용하십시오. 각 카테고리 마지막에는 해당 레이어에 대한 PromptQuorum의 상세 비교 가이드 링크가 있습니다.',
+      '이것은 87개의 로컬 LLM 도구, 앱, 프레임워크, 배포 소프트웨어를 정리한 2026년 업데이트판 디렉토리입니다 — 최종 업데이트 2026년 7월. 2026년 로컬 LLM 생태계는 처음에 잘못된 도구를 선택하면 몇 분이 아니라 몇 시간을 낭비할 만큼 방대합니다. 이 디렉토리는 현재 활발히 유지되고 있는 87개 프로젝트를 9개 레이어(런타임, 데스크톱 앱, 웹 UI, 코딩 어시스턴트, RAG 시스템, 에이전트 프레임워크, 음성/멀티모달, 모바일 클라이언트, 전문 생산성 플러그인)로 분류하여 각 도구의 설명, 라이선스, 주요 URL을 함께 제공합니다. 로컬 LLM 도구, 멀티유저 서비스를 위한 배포 도구, 에이전트 구축용 프레임워크 중 무엇을 선택하든 스택을 결정하기 전에 "무엇이 존재하는지" 파악하는 지도로 활용하십시오. 각 카테고리 마지막에는 해당 레이어에 대한 PromptQuorum의 상세 비교 가이드 링크가 있습니다.',
     metaDescription:
-      'Ollama, LM Studio, GPT4All, Jan.ai — 로컬 LLM 도구 87개를 9카테고리로 정리: 런타임, RAG, 에이전트, 음성, 모바일. 라이선스·링크·최신 버전 포함. 2026년 6월 업데이트.',
+      '87개의 로컬 LLM 도구·앱·프레임워크·배포 소프트웨어를 9개 카테고리로 정리한 2026년 업데이트판 디렉토리 — Ollama, LM Studio, RAG, 에이전트. 2026년 7월 업데이트.',
     twitterDescription:
-      '로컬 LLM 도구 87개를 9개 카테고리로 정리 — 런타임, 데스크톱 앱, 웹 UI, 코드 에이전트, RAG, 멀티에이전트 프레임워크, 음성, 모바일. 라이선스·링크·최신 버전 수록, 2026년 6월 업데이트. 스택 선택 전 전체 지도 확인.',
+      '로컬 LLM 도구 87개를 9개 카테고리로 정리 — 런타임, 데스크톱 앱, 웹 UI, 코드 에이전트, RAG, 멀티에이전트 프레임워크, 음성, 모바일. 라이선스·링크·최신 버전 수록, 2026년 7월 업데이트. 스택 선택 전 전체 지도 확인.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -3391,7 +3391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 ai 소프트웨어 생태계',
     ],
     leadAnswerBlock:
-      '**2026년 로컬 LLM 생태계는 명확히 9개 레이어로 나뉩니다.** 런타임(Ollama, llama.cpp, vLLM)은 모델을 통해 토큰을 처리합니다. 데스크톱 앱(LM Studio, Jan, GPT4All)은 런타임을 채팅 UI로 감쌉니다. 웹 UI(Open WebUI, LibreChat)는 브라우저에서 동일한 역할을 합니다. 코딩 어시스턴트(Continue.dev, Cline, Aider)는 로컬 모델을 편집기에 연결합니다. RAG 시스템(AnythingLLM, PrivateGPT)은 모델이 사용자의 문서를 참조하도록 합니다. 에이전트 프레임워크(LangChain, CrewAI, LangGraph)는 호출을 멀티스텝 워크플로로 연결합니다. 음성/멀티모달 스택(Whisper.cpp, Piper, LLaVA)은 텍스트 이상으로 확장합니다. 모바일 클라이언트(MLC Chat, PocketPal AI)는 스마트폰에서 동작합니다. 전문 생산성 플러그인(Obsidian, Logseq, AutoGPT)은 이미 사용 중인 도구에 통합됩니다. 먼저 런타임을 선택하고(대부분 Ollama), 그 위에 1~2개 레이어를 추가하십시오.**',
+      '**이 2026년 업데이트판 디렉토리(최종 업데이트 2026년 7월)는 87개의 로컬 LLM 도구, 배포 도구, 프레임워크를 9개 레이어에 걸쳐 정리합니다.** 2026년 로컬 LLM 생태계는 명확히 이러한 레이어로 나뉩니다. 런타임(Ollama, llama.cpp, vLLM)은 모델을 통해 토큰을 처리합니다. 데스크톱 앱(LM Studio, Jan, GPT4All)은 런타임을 채팅 UI로 감쌉니다. 웹 UI(Open WebUI, LibreChat)는 브라우저에서 동일한 역할을 합니다. 코딩 어시스턴트(Continue.dev, Cline, Aider)는 로컬 모델을 편집기에 연결합니다. RAG 시스템(AnythingLLM, PrivateGPT)은 모델이 사용자의 문서를 참조하도록 합니다. 에이전트 프레임워크(LangChain, CrewAI, LangGraph)는 호출을 멀티스텝 워크플로로 연결합니다. 음성/멀티모달 스택(Whisper.cpp, Piper, LLaVA)은 텍스트 이상으로 확장합니다. 모바일 클라이언트(MLC Chat, PocketPal AI)는 스마트폰에서 동작합니다. 전문 생산성 플러그인(Obsidian, Logseq, AutoGPT)은 이미 사용 중인 도구에 통합됩니다. 먼저 런타임을 선택하고(대부분 Ollama), 그 위에 1~2개 레이어를 추가하십시오.**',
     quickAnswerTop: {
       ko: {
         question: '2026년에 직접 소유한 하드웨어에서 AI를 실행하기 위한 최고의 로컬 LLM 도구는 무엇입니까?',
@@ -3404,7 +3404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RAG용: AnythingLLM(가장 쉬운), PrivateGPT(오프라인 중심), Open WebUI(채팅 UI 내 RAG 내장).',
           '모바일용: Android는 MLC Chat 또는 PocketPal AI, iOS는 Private LLM 또는 Enchanted — 모두 플래그십 폰에서 실용적인 2-4B 모델 실행 가능.',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -3699,7 +3699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: '이 디렉토리를 최신 상태로 유지하는 방법',
         content:
-          '**이 디렉토리는 6개월마다 검토됩니다 — 2026년 6월 마지막 검토, 다음 업데이트는 2026년 11월 예정입니다.** 2026년 6월 검토에서는 모든 링크를 재확인하고 여러 프로젝트 이름 및 라이선스를 수정했습니다: Faraday는 이제 Backyard AI, 유지 관리되는 Coqui TTS 포크는 Idiap이 호스팅하며, Cherry Studio는 AGPL 3.0입니다. 포함 기준: 프로젝트가 활발히 유지 관리되고(최근 90일 내 커밋), 검증 가능한 오픈소스 라이선스 또는 명확한 상업적 사용 선언이 있으며, 2026년 기준으로 상당한 사용자 기반을 보유하거나 그렇지 않으면 비어 있을 레이어를 채웁니다. 두 릴리스 주기 이상 비활성화된 프로젝트는 제거됩니다. 기준을 충족하는 신규 프로젝트는 다음 검토 시 추가됩니다. 포함을 위한 프로젝트 제안은 PromptQuorum 저장소에 이슈 또는 PR을 열어주십시오 — 프로젝트 URL, 라이선스, 위의 형식으로 한 문장 설명을 포함하십시오.',
+          '**이 디렉토리는 6개월마다 검토되며 검토 사이에도 업데이트됩니다 — 2026년 7월 마지막 업데이트, 다음 검토는 2026년 11월 예정입니다.** 가장 최근 검토에서는 모든 링크를 재확인하고 여러 프로젝트 이름 및 라이선스를 수정했습니다: Faraday는 이제 Backyard AI, 유지 관리되는 Coqui TTS 포크는 Idiap이 호스팅하며, Cherry Studio는 AGPL 3.0입니다. 포함 기준: 프로젝트가 활발히 유지 관리되고(최근 90일 내 커밋), 검증 가능한 오픈소스 라이선스 또는 명확한 상업적 사용 선언이 있으며, 2026년 기준으로 상당한 사용자 기반을 보유하거나 그렇지 않으면 비어 있을 레이어를 채웁니다. 두 릴리스 주기 이상 비활성화된 프로젝트는 제거됩니다. 기준을 충족하는 신규 프로젝트는 다음 검토 시 추가됩니다. 포함을 위한 프로젝트 제안은 PromptQuorum 저장소에 이슈 또는 PR을 열어주십시오 — 프로젝트 URL, 라이선스, 위의 형식으로 한 문장 설명을 포함하십시오.',
       },
       sources: {
         id: 'sources',
@@ -3755,7 +3755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '이 디렉토리는 얼마나 자주 업데이트됩니까?',
-            a: '6개월마다 — 2026년 6월 마지막 검토, 다음 예정 업데이트는 2026년 11월입니다. 중간 변경사항(프로젝트가 비활성화, 새 도구가 상당한 점유율을 획득, 라이선스 변경)은 기존 항목에 패치로 적용됩니다. 완전히 새로운 카테고리나 레이어는 구조를 안정적으로 유지하기 위해 검토까지 기다립니다. 위의 "출처" 섹션에는 검토 사이에 생태계 동향을 모니터링하는 데 사용되는 커뮤니티 인덱스가 나열되어 있습니다.',
+            a: '6개월마다 — 2026년 7월 마지막 검토, 다음 예정 업데이트는 2026년 11월입니다. 중간 변경사항(프로젝트가 비활성화, 새 도구가 상당한 점유율을 획득, 라이선스 변경)은 기존 항목에 패치로 적용됩니다. 완전히 새로운 카테고리나 레이어는 구조를 안정적으로 유지하기 위해 검토까지 기다립니다. 위의 "출처" 섹션에는 검토 사이에 생태계 동향을 모니터링하는 데 사용되는 커뮤니티 인덱스가 나열되어 있습니다.',
           },
         ],
       },
@@ -3780,12 +3780,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 70개 이상의 도구 (2026)',
-      description: '로컬 LLM 실행 도구 87개: Ollama, LM Studio, GPT4All, Jan.ai, 모바일, RAG, 음성, 에이전트 프레임워크. 라이선스, 링크, 최신 버전 포함. 2026년 6월 업데이트.',
+      description: '로컬 LLM 실행 도구 87개를 정리한 2026년 업데이트판 디렉토리: Ollama, LM Studio, GPT4All, Jan.ai, 모바일, RAG, 음성, 에이전트 프레임워크. 라이선스, 링크, 최신 버전 포함. 2026년 7월 업데이트.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-06-03',
-      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      dateModified: '2026-07-01',
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
     },
