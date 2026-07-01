@@ -4,7 +4,7 @@
 // tags joined yet) and a neutral third-party-link notice. EN block first;
 // DE/FR/JA/ZH render as "Coming Soon" until translated.
 //
-// Prices: May 2026 snapshot. The 2026 memory-chip shortage pushed GPU prices
+// Prices: July 2026 snapshot. The 2026 memory-chip shortage pushed GPU prices
 // 1.5-2x above MSRP, which raises every build cost in this guide above earlier
 // figures. Component prices sourced from the audited PromptQuorum GPU buying
 // guide and workstation build articles.
@@ -16,17 +16,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'Local AI Workstation Build Guide 2026: 3 Budget Tiers',
     seoTitle: 'Local AI PC Build 2026: Budget to 70B Workstation',
     intro:
-      'Most local-AI build guides start with the CPU, but the GPU and its VRAM are what decide which models the machine can run — every other part is chosen to support that GPU. This guide gives three complete parts lists for a local-LLM PC: a budget build for 7B-13B models, a mid build for 14B-33B models, and an enthusiast build for 70B work. Each tier lists exact components, expected performance, and a total cost. One caveat on price: the 2026 memory-chip shortage pushed GPU prices 1.5-2x above MSRP, which raises every build cost here above what the same parts cost a year ago — treat each figure as a May 2026 snapshot and lean on the used GPU market where you can.',
+      'Most local-AI build guides start with the CPU, but the GPU and its VRAM are what decide which models the machine can run — every other part is chosen to support that GPU. This guide gives three complete parts lists for a local-LLM PC: a budget build for 7B-13B models, a mid build for 14B-33B models, and an enthusiast build for 70B work. Each tier lists exact components, expected performance, and a total cost. One caveat on price: the 2026 memory-chip shortage pushed GPU prices 1.5-2x above MSRP, which raises every build cost here above what the same parts cost a year ago — treat each figure as a July 2026 snapshot and lean on the used GPU market where you can.',
     metaDescription:
-      'Three complete local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B, and enthusiast 70B tiers. Exact parts lists, expected tokens/sec, and May 2026 total costs.',
+      'Three complete local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B, and enthusiast 70B tiers. Exact parts lists, expected tokens/sec, and July 2026 total costs.',
     twitterDescription:
-      'Local AI PC build guide: three budget tiers with full parts lists for 7B to 70B models. The 2026 GPU price surge raised every build cost — here are May 2026 totals.',
+      'Local AI PC build guide: three budget tiers with full parts lists for 7B to 70B models. The 2026 GPU price surge raised every build cost — here are July 2026 totals.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -61,14 +61,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'How do I build a PC for running local LLMs in 2026?',
         answer:
-          'Choose your tier by the largest model you want to run, then build around the GPU. A budget build (~$1,100) pairs an RTX 4060 Ti 16 GB with a Ryzen 7 CPU for 7B-13B models. A mid build (~$2,400) uses an RTX 4070 Ti Super 16 GB for 14B-33B models. An enthusiast build (~$5,000) uses an RTX 5090 32 GB for 70B work. The 2026 memory shortage pushed GPU prices well above MSRP, so every total is a May 2026 snapshot.',
+          'Choose your tier by the largest model you want to run, then build around the GPU. A budget build (~$1,100) pairs an RTX 4060 Ti 16 GB with a Ryzen 7 CPU for 7B-13B models. A mid build (~$2,400) uses an RTX 4070 Ti Super 16 GB for 14B-33B models. An enthusiast build (~$5,000) uses an RTX 5090 32 GB for 70B work. The 2026 memory shortage pushed GPU prices well above MSRP, so every total is a July 2026 snapshot.',
         bullets: [
           'Budget build ~$1,100: RTX 4060 Ti 16 GB, runs 7B-13B models',
           'Mid build ~$2,400: RTX 4070 Ti Super 16 GB, runs 14B-33B models',
           'Enthusiast build ~$5,000: RTX 5090 32 GB, runs 70B models at Q4',
           '2026 GPU prices run 1.5-2x above MSRP — buy GPUs used where you can',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**The GPU sets the tier; the rest of the build supports it.** A local-AI PC is chosen GPU-first because VRAM decides which models run. Pick the tier whose GPU VRAM fits your target model, then size the CPU, RAM, and power supply around it.',
-          '**2026 GPU prices raised every build cost.** A memory-chip shortage pushed GPU prices 1.5-2x above MSRP. The build totals here are May 2026 snapshots and run higher than the same parts cost a year ago — lean on the used GPU market.',
+          '**2026 GPU prices raised every build cost.** A memory-chip shortage pushed GPU prices 1.5-2x above MSRP. The build totals here are July 2026 snapshots and run higher than the same parts cost a year ago — lean on the used GPU market.',
           '**Budget build (~$1,100):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650 W PSU — runs 7B-13B models at usable speed. The cheapest complete machine for local AI.',
           '**Mid build (~$2,400):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB RAM, 2 TB SSD, 850 W PSU — runs 14B-33B models and makes 7B-14B feel instant.',
           '**Enthusiast build (~$5,000):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000 W PSU — the only single-GPU build that fits a 70B model at Q4.',
@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Three Build Tiers Compare in 2026',
         content:
-          'GPU VRAM and power figures are manufacturer specifications. Inference speeds are family-level estimates from PromptQuorum GPU testing for the tier\'s GPU. Build totals are May 2026 US snapshots — the 2026 GPU price surge pushed cards 1.5-2x above MSRP, so the GPU line dominates each total and moves week to week. Buying the GPU used lowers every total.',
+          'GPU VRAM and power figures are manufacturer specifications. Inference speeds are family-level estimates from PromptQuorum GPU testing for the tier\'s GPU. Build totals are July 2026 US snapshots — the 2026 GPU price surge pushed cards 1.5-2x above MSRP, so the GPU line dominates each total and moves week to week. Buying the GPU used lowers every total.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Think of the build as a team built around one star player, the GPU. The CPU, RAM, and power supply are the supporting cast — useful, but they exist to keep the GPU fed. Pick the GPU your model needs first, then assemble the rest around it.',
           },
         ],
-        columns: ['Build tier', 'GPU', 'VRAM', 'Runs', 'PSU', 'Total (May 2026)'],
+        columns: ['Build tier', 'GPU', 'VRAM', 'Runs', 'PSU', 'Total (July 2026)'],
         rows: [
           {
             'Build tier': 'Budget',
@@ -168,7 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Runs': '7B-13B models',
             'PSU': '650 W',
-            'Total (May 2026)': '~$1,100',
+            'Total (July 2026)': '~$1,100',
           },
           {
             'Build tier': 'Mid',
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Runs': '14B comfortably, light 22B-33B',
             'PSU': '850 W',
-            'Total (May 2026)': '~$2,400',
+            'Total (July 2026)': '~$2,400',
           },
           {
             'Build tier': 'Enthusiast',
@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Runs': '33B comfortably, 70B at Q4',
             'PSU': '1000 W',
-            'Total (May 2026)': '~$5,000',
+            'Total (July 2026)': '~$5,000',
           },
         ],
       },
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Because of the 2026 GPU price surge, every total in this guide is a fast-moving May 2026 snapshot. Always open the current retailer listing for the GPU before building — its price has moved week to week and it dominates the build cost.',
+            text: 'Because of the 2026 GPU price surge, every total in this guide is a fast-moving July 2026 snapshot. Always open the current retailer listing for the GPU before building — its price has moved week to week and it dominates the build cost.',
           },
         ],
         affiliateLinks: [
@@ -465,10 +465,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: May 2026 GPU prices and the 1.5-2x surge over MSRP used for the build totals here.',
+          '[Best GPU Buying Guide for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: July 2026 GPU prices and the 1.5-2x surge over MSRP used for the build totals here.',
           '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build) — PromptQuorum: dual-GPU 70B workstation parts list, cooling, and power-supply guidance behind the enthusiast tier.',
           '[NVIDIA GeForce RTX 40 and 50 Series Specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/) — Official VRAM capacity and power (TGP) figures for the RTX 4060 Ti, 4070 Ti Super, and 5090.',
-          '[PCPartPicker](https://pcpartpicker.com) — Live component pricing for AMD Ryzen CPUs, DDR5 RAM, NVMe SSDs, and power supplies as of May 2026.',
+          '[PCPartPicker](https://pcpartpicker.com) — Live component pricing for AMD Ryzen CPUs, DDR5 RAM, NVMe SSDs, and power supplies as of July 2026.',
         ],
       },
       faq: {
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'How much does it cost to build a PC for local AI in 2026?',
-            a: 'A budget local-AI PC costs roughly $1,100, a mid build roughly $2,400, and an enthusiast 70B build roughly $5,000. These are May 2026 snapshots — the 2026 memory-chip shortage pushed GPU prices 1.5-2x above MSRP, and since the GPU is the largest line in every build, it raised each total above what the same parts cost a year ago.',
+            a: 'A budget local-AI PC costs roughly $1,100, a mid build roughly $2,400, and an enthusiast 70B build roughly $5,000. These are July 2026 snapshots — the 2026 memory-chip shortage pushed GPU prices 1.5-2x above MSRP, and since the GPU is the largest line in every build, it raised each total above what the same parts cost a year ago.',
           },
           {
             q: 'What GPU should I put in a local-AI PC build?',
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Choose the GPU for your build with the full buying guide](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — eight GPUs across four budget tiers, with May 2026 prices and the surge math.',
+          '[Choose the GPU for your build with the full buying guide](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — eight GPUs across four budget tiers, with July 2026 prices and the surge math.',
           '[See the dual-GPU 70B workstation build for production use](/local-llms/local-llm-workstation-build) — the $4,000-6,000 multi-user tier beyond this guide\'s enthusiast build.',
           '[Compare building a PC against renting cloud GPUs](/power-local-llm/cloud-gpu-rental-guide-2026) — when renting beats owning hardware for occasional compute.',
           '[Work out the VRAM each model size needs before you build](/local-llms/how-much-vram-local-llm) — the complete VRAM-by-model-size method behind the tier choices here.',
@@ -525,17 +525,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'Lokale-KI-Workstation 2026 selbst bauen: 3 Budget-Stufen',
     seoTitle: 'Lokaler-KI-PC 2026: vom Budget-Build zur 70B-Workstation',
     intro:
-      'Die meisten Bauanleitungen für lokale KI beginnen mit der CPU, doch GPU und VRAM entscheiden darüber, welche Modelle die Maschine ausführen kann — jede andere Komponente wird so gewählt, dass sie diese GPU unterstützt. Diese Anleitung liefert drei vollständige Teilelisten für einen Lokal-LLM-PC: einen Budget-Build für 7B- bis 13B-Modelle, einen Mittelklasse-Build für 14B- bis 33B-Modelle und einen Enthusiasten-Build für die Arbeit mit 70B-Modellen. Jede Stufe nennt exakte Komponenten, die erwartete Leistung und die Gesamtkosten. Ein Hinweis zum Preis: Die Speicherchip-Knappheit von 2026 hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben, was jeden Build hier teurer macht als dieselben Teile vor einem Jahr — behandeln Sie jede Zahl als Momentaufnahme vom Mai 2026 und nutzen Sie den Gebrauchtmarkt für GPUs, wo es geht.',
+      'Die meisten Bauanleitungen für lokale KI beginnen mit der CPU, doch GPU und VRAM entscheiden darüber, welche Modelle die Maschine ausführen kann — jede andere Komponente wird so gewählt, dass sie diese GPU unterstützt. Diese Anleitung liefert drei vollständige Teilelisten für einen Lokal-LLM-PC: einen Budget-Build für 7B- bis 13B-Modelle, einen Mittelklasse-Build für 14B- bis 33B-Modelle und einen Enthusiasten-Build für die Arbeit mit 70B-Modellen. Jede Stufe nennt exakte Komponenten, die erwartete Leistung und die Gesamtkosten. Ein Hinweis zum Preis: Die Speicherchip-Knappheit von 2026 hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben, was jeden Build hier teurer macht als dieselben Teile vor einem Jahr — behandeln Sie jede Zahl als Momentaufnahme vom Juli 2026 und nutzen Sie den Gebrauchtmarkt für GPUs, wo es geht.',
     metaDescription:
       'Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090.',
     twitterDescription:
-      'Bauanleitung für einen Lokal-KI-PC: drei Budget-Stufen mit vollständigen Teilelisten für 7B- bis 70B-Modelle. Der GPU-Preisanstieg 2026 hat jeden Build verteuert — hier die Mai-2026-Summen.',
+      'Bauanleitung für einen Lokal-KI-PC: drei Budget-Stufen mit vollständigen Teilelisten für 7B- bis 70B-Modelle. Der GPU-Preisanstieg 2026 hat jeden Build verteuert — hier die Juli-2026-Summen.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -570,14 +570,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Wie baue ich 2026 einen PC für den Betrieb lokaler LLMs?',
         answer:
-          'Wählen Sie Ihre Stufe nach dem größten Modell, das Sie ausführen möchten, und bauen Sie dann um die GPU herum. Ein Budget-Build (ca. 1.250 €) kombiniert eine RTX 4060 Ti 16 GB mit einer Ryzen-7-CPU für 7B- bis 13B-Modelle. Ein Mittelklasse-Build (ca. 2.500 €) nutzt eine RTX 4070 Ti Super 16 GB für 14B- bis 33B-Modelle. Ein Enthusiasten-Build (ca. 5.200 €) setzt eine RTX 5090 32 GB für 70B-Arbeit ein. Die Speicherknappheit 2026 hat die GPU-Preise weit über die UVP getrieben, daher ist jede Summe eine Momentaufnahme vom Mai 2026.',
+          'Wählen Sie Ihre Stufe nach dem größten Modell, das Sie ausführen möchten, und bauen Sie dann um die GPU herum. Ein Budget-Build (ca. 1.250 €) kombiniert eine RTX 4060 Ti 16 GB mit einer Ryzen-7-CPU für 7B- bis 13B-Modelle. Ein Mittelklasse-Build (ca. 2.500 €) nutzt eine RTX 4070 Ti Super 16 GB für 14B- bis 33B-Modelle. Ein Enthusiasten-Build (ca. 5.200 €) setzt eine RTX 5090 32 GB für 70B-Arbeit ein. Die Speicherknappheit 2026 hat die GPU-Preise weit über die UVP getrieben, daher ist jede Summe eine Momentaufnahme vom Juli 2026.',
         bullets: [
           'Budget-Build ca. 1.250 €: RTX 4060 Ti 16 GB, führt 7B- bis 13B-Modelle aus',
           'Mittelklasse-Build ca. 2.500 €: RTX 4070 Ti Super 16 GB, führt 14B- bis 33B-Modelle aus',
           'Enthusiasten-Build ca. 5.200 €: RTX 5090 32 GB, führt 70B-Modelle bei Q4 aus',
           'GPU-Preise 2026 liegen beim 1,5- bis 2-Fachen der UVP — kaufen Sie GPUs gebraucht, wo es geht',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Die GPU legt die Stufe fest; der Rest des Builds unterstützt sie.** Ein Lokal-KI-PC wird GPU-zuerst geplant, weil das VRAM entscheidet, welche Modelle laufen. Wählen Sie die Stufe, deren GPU-VRAM zu Ihrem Zielmodell passt, und dimensionieren Sie CPU, RAM und Netzteil darum herum.',
-          '**Die GPU-Preise 2026 haben jeden Build verteuert.** Eine Speicherchip-Knappheit hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben. Die Build-Summen hier sind Momentaufnahmen vom Mai 2026 und liegen höher als dieselben Teile vor einem Jahr — nutzen Sie den Gebrauchtmarkt für GPUs.',
+          '**Die GPU-Preise 2026 haben jeden Build verteuert.** Eine Speicherchip-Knappheit hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben. Die Build-Summen hier sind Momentaufnahmen vom Juli 2026 und liegen höher als dieselben Teile vor einem Jahr — nutzen Sie den Gebrauchtmarkt für GPUs.',
           '**Budget-Build (ca. 1.250 €):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650-W-Netzteil — führt 7B- bis 13B-Modelle in brauchbarer Geschwindigkeit aus. Die günstigste vollständige Maschine für lokale KI.',
           '**Mittelklasse-Build (ca. 2.500 €):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB RAM, 2 TB SSD, 850-W-Netzteil — führt 14B- bis 33B-Modelle aus und lässt 7B- bis 14B-Modelle sofort reagieren.',
           '**Enthusiasten-Build (ca. 5.200 €):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000-W-Netzteil — der einzige Single-GPU-Build, in den ein 70B-Modell bei Q4 passt.',
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie die drei Build-Stufen 2026 abschneiden',
         content:
-          'GPU-VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenzgeschwindigkeiten sind Schätzungen auf Modellfamilien-Ebene aus PromptQuorum-GPU-Tests für die GPU der jeweiligen Stufe. Die Build-Summen sind US-Momentaufnahmen vom Mai 2026 — der GPU-Preisanstieg 2026 hat die Karten auf das 1,5- bis 2-Fache der UVP getrieben, sodass die GPU-Zeile jede Summe dominiert und sich von Woche zu Woche bewegt. Der Gebrauchtkauf der GPU senkt jede Summe.',
+          'GPU-VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenzgeschwindigkeiten sind Schätzungen auf Modellfamilien-Ebene aus PromptQuorum-GPU-Tests für die GPU der jeweiligen Stufe. Die Build-Summen sind US-Momentaufnahmen vom Juli 2026 — der GPU-Preisanstieg 2026 hat die Karten auf das 1,5- bis 2-Fache der UVP getrieben, sodass die GPU-Zeile jede Summe dominiert und sich von Woche zu Woche bewegt. Der Gebrauchtkauf der GPU senkt jede Summe.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Stellen Sie sich den Build wie eine Mannschaft vor, die um einen Star aufgebaut ist: die GPU. CPU, RAM und Netzteil sind das unterstützende Ensemble — nützlich, aber sie existieren, um die GPU zu versorgen. Wählen Sie zuerst die GPU, die Ihr Modell braucht, und stellen Sie den Rest darum herum zusammen.',
           },
         ],
-        columns: ['Build-Stufe', 'GPU', 'VRAM', 'Führt aus', 'Netzteil', 'Gesamt (Mai 2026)'],
+        columns: ['Build-Stufe', 'GPU', 'VRAM', 'Führt aus', 'Netzteil', 'Gesamt (Juli 2026)'],
         rows: [
           {
             'Build-Stufe': 'Budget',
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Führt aus': '7B- bis 13B-Modelle',
             'Netzteil': '650 W',
-            'Gesamt (Mai 2026)': 'ca. 1.250 €',
+            'Gesamt (Juli 2026)': 'ca. 1.250 €',
           },
           {
             'Build-Stufe': 'Mittelklasse',
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Führt aus': '14B bequem, leichte 22B-33B',
             'Netzteil': '850 W',
-            'Gesamt (Mai 2026)': 'ca. 2.500 €',
+            'Gesamt (Juli 2026)': 'ca. 2.500 €',
           },
           {
             'Build-Stufe': 'Enthusiast',
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Führt aus': '33B bequem, 70B bei Q4',
             'Netzteil': '1000 W',
-            'Gesamt (Mai 2026)': 'ca. 5.200 €',
+            'Gesamt (Juli 2026)': 'ca. 5.200 €',
           },
         ],
       },
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Wegen des GPU-Preisanstiegs 2026 ist jede Summe in dieser Anleitung eine schnelllebige Momentaufnahme vom Mai 2026. Öffnen Sie vor dem Bau stets das aktuelle Händlerangebot für die GPU — ihr Preis hat sich von Woche zu Woche bewegt und dominiert die Build-Kosten.',
+            text: 'Wegen des GPU-Preisanstiegs 2026 ist jede Summe in dieser Anleitung eine schnelllebige Momentaufnahme vom Juli 2026. Öffnen Sie vor dem Bau stets das aktuelle Händlerangebot für die GPU — ihr Preis hat sich von Woche zu Woche bewegt und dominiert die Build-Kosten.',
           },
         ],
         affiliateLinks: [
@@ -974,10 +974,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Bester GPU-Kaufratgeber für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: GPU-Preise vom Mai 2026 und der 1,5- bis 2-fache Anstieg über die UVP, der hier für die Build-Summen verwendet wird.',
+          '[Bester GPU-Kaufratgeber für lokale LLMs 2026](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: GPU-Preise vom Juli 2026 und der 1,5- bis 2-fache Anstieg über die UVP, der hier für die Build-Summen verwendet wird.',
           '[Lokale-LLM-Workstation bauen](/de/local-llms/local-llm-workstation-build) — PromptQuorum: Teileliste, Kühlung und Netzteilhinweise für eine Dual-GPU-70B-Workstation hinter der Enthusiasten-Stufe.',
           '[NVIDIA GeForce RTX 40- und 50-Serie Spezifikationen](https://www.nvidia.com/en-us/geforce/graphics-cards/) — Offizielle VRAM-Kapazitäts- und Leistungswerte (TGP) für RTX 4060 Ti, 4070 Ti Super und 5090.',
-          '[PCPartPicker](https://pcpartpicker.com) — Live-Komponentenpreise für AMD-Ryzen-CPUs, DDR5-RAM, NVMe-SSDs und Netzteile mit Stand Mai 2026.',
+          '[PCPartPicker](https://pcpartpicker.com) — Live-Komponentenpreise für AMD-Ryzen-CPUs, DDR5-RAM, NVMe-SSDs und Netzteile mit Stand Juli 2026.',
         ],
       },
       faq: {
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Was kostet es 2026, einen PC für lokale KI zu bauen?',
-            a: 'Ein Budget-Lokal-KI-PC kostet rund 1.250 €, ein Mittelklasse-Build rund 2.500 € und ein Enthusiasten-70B-Build rund 5.200 €. Das sind Momentaufnahmen vom Mai 2026 — die Speicherchip-Knappheit 2026 hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben, und da die GPU die größte Position in jedem Build ist, hat sie jede Summe gegenüber demselben Teilesatz vor einem Jahr angehoben.',
+            a: 'Ein Budget-Lokal-KI-PC kostet rund 1.250 €, ein Mittelklasse-Build rund 2.500 € und ein Enthusiasten-70B-Build rund 5.200 €. Das sind Momentaufnahmen vom Juli 2026 — die Speicherchip-Knappheit 2026 hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben, und da die GPU die größte Position in jedem Build ist, hat sie jede Summe gegenüber demselben Teilesatz vor einem Jahr angehoben.',
           },
           {
             q: 'Welche GPU sollte ich in einen Lokal-KI-PC einbauen?',
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Wählen Sie die GPU für Ihren Build mit dem vollständigen Kaufratgeber](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — acht GPUs über vier Budget-Stufen, mit Preisen vom Mai 2026 und der Rechnung zum Preisanstieg.',
+          '[Wählen Sie die GPU für Ihren Build mit dem vollständigen Kaufratgeber](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — acht GPUs über vier Budget-Stufen, mit Preisen vom Juli 2026 und der Rechnung zum Preisanstieg.',
           '[Sehen Sie den Dual-GPU-70B-Workstation-Build für den Produktiveinsatz](/de/local-llms/local-llm-workstation-build) — die 4.000-6.000-€-Mehrnutzer-Stufe jenseits des Enthusiasten-Builds dieser Anleitung.',
           '[Vergleichen Sie den PC-Bau mit der Miete von Cloud-GPUs](/de/power-local-llm/cloud-gpu-rental-guide-2026) — wann Mieten den Hardwarekauf für gelegentliche Rechenlast schlägt.',
           '[Ermitteln Sie das VRAM jeder Modellgröße vor dem Bau](/de/local-llms/how-much-vram-local-llm) — die vollständige VRAM-nach-Modellgröße-Methode hinter den Stufenwahlen hier.',
@@ -1042,17 +1042,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'Monter une station IA locale en 2026 : 3 niveaux de budget',
     seoTitle: 'PC pour IA locale 2026 : du budget à la station 70B',
     intro:
-      'La plupart des guides de montage pour IA locale commencent par le processeur, mais ce sont le GPU et sa VRAM qui déterminent les modèles que la machine peut exécuter — chaque autre pièce est choisie pour soutenir ce GPU. Ce guide fournit trois listes de pièces complètes pour un PC dédié aux LLM locaux : une configuration budget pour les modèles 7B-13B, une configuration intermédiaire pour les modèles 14B-33B et une configuration enthousiaste pour le travail sur des modèles 70B. Chaque niveau précise les composants exacts, les performances attendues et un coût total. Une réserve sur les prix : la pénurie de puces mémoire de 2026 a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé, ce qui renchérit chaque configuration ici par rapport aux mêmes pièces il y a un an — considérez chaque chiffre comme un instantané de mai 2026 et appuyez-vous sur le marché de l\'occasion pour les GPU lorsque c\'est possible.',
+      'La plupart des guides de montage pour IA locale commencent par le processeur, mais ce sont le GPU et sa VRAM qui déterminent les modèles que la machine peut exécuter — chaque autre pièce est choisie pour soutenir ce GPU. Ce guide fournit trois listes de pièces complètes pour un PC dédié aux LLM locaux : une configuration budget pour les modèles 7B-13B, une configuration intermédiaire pour les modèles 14B-33B et une configuration enthousiaste pour le travail sur des modèles 70B. Chaque niveau précise les composants exacts, les performances attendues et un coût total. Une réserve sur les prix : la pénurie de puces mémoire de 2026 a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé, ce qui renchérit chaque configuration ici par rapport aux mêmes pièces il y a un an — considérez chaque chiffre comme un instantané de juillet 2026 et appuyez-vous sur le marché de l\'occasion pour les GPU lorsque c\'est possible.',
     metaDescription:
       'Construire une station IA locale 2026 : CPU, GPU, RAM et stockage pour l\'inférence LLM. Guides de build complets par budget, du débutant à la RTX 5090.',
     twitterDescription:
-      'Guide de montage d\'un PC pour IA locale : trois niveaux de budget avec listes de pièces complètes pour les modèles 7B à 70B. La hausse des prix des GPU en 2026 a renchéri chaque configuration — voici les totaux de mai 2026.',
+      'Guide de montage d\'un PC pour IA locale : trois niveaux de budget avec listes de pièces complètes pour les modèles 7B à 70B. La hausse des prix des GPU en 2026 a renchéri chaque configuration — voici les totaux de juillet 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -1087,14 +1087,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Comment monter un PC pour exécuter des LLM locaux en 2026 ?',
         answer:
-          'Choisissez votre niveau selon le plus grand modèle que vous voulez exécuter, puis montez autour du GPU. Une configuration budget (env. 1 250 €) associe une RTX 4060 Ti 16 GB à un processeur Ryzen 7 pour les modèles 7B-13B. Une configuration intermédiaire (env. 2 550 €) utilise une RTX 4070 Ti Super 16 GB pour les modèles 14B-33B. Une configuration enthousiaste (env. 5 300 €) emploie une RTX 5090 32 GB pour le travail 70B. La pénurie de mémoire de 2026 a poussé les prix des GPU bien au-dessus du tarif conseillé, donc chaque total est un instantané de mai 2026.',
+          'Choisissez votre niveau selon le plus grand modèle que vous voulez exécuter, puis montez autour du GPU. Une configuration budget (env. 1 250 €) associe une RTX 4060 Ti 16 GB à un processeur Ryzen 7 pour les modèles 7B-13B. Une configuration intermédiaire (env. 2 550 €) utilise une RTX 4070 Ti Super 16 GB pour les modèles 14B-33B. Une configuration enthousiaste (env. 5 300 €) emploie une RTX 5090 32 GB pour le travail 70B. La pénurie de mémoire de 2026 a poussé les prix des GPU bien au-dessus du tarif conseillé, donc chaque total est un instantané de juillet 2026.',
         bullets: [
           'Configuration budget env. 1 250 € : RTX 4060 Ti 16 GB, exécute les modèles 7B-13B',
           'Configuration intermédiaire env. 2 550 € : RTX 4070 Ti Super 16 GB, exécute les modèles 14B-33B',
           'Configuration enthousiaste env. 5 300 € : RTX 5090 32 GB, exécute les modèles 70B en Q4',
           'Les prix des GPU en 2026 sont à 1,5-2 fois le tarif conseillé — achetez les GPU d\'occasion lorsque c\'est possible',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1120,7 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Le GPU fixe le niveau ; le reste de la configuration le soutient.** Un PC pour IA locale se choisit GPU en premier, car la VRAM décide des modèles exécutables. Choisissez le niveau dont la VRAM du GPU correspond à votre modèle visé, puis dimensionnez le processeur, la RAM et l\'alimentation autour de lui.',
-          '**Les prix des GPU en 2026 ont renchéri chaque configuration.** Une pénurie de puces mémoire a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé. Les totaux ici sont des instantanés de mai 2026 et dépassent ce que coûtaient les mêmes pièces il y a un an — appuyez-vous sur le marché de l\'occasion pour les GPU.',
+          '**Les prix des GPU en 2026 ont renchéri chaque configuration.** Une pénurie de puces mémoire a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé. Les totaux ici sont des instantanés de juillet 2026 et dépassent ce que coûtaient les mêmes pièces il y a un an — appuyez-vous sur le marché de l\'occasion pour les GPU.',
           '**Configuration budget (env. 1 250 €) :** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD 1 To, alimentation 650 W — exécute les modèles 7B-13B à vitesse utilisable. La machine complète la moins chère pour l\'IA locale.',
           '**Configuration intermédiaire (env. 2 550 €) :** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB de RAM, SSD 2 To, alimentation 850 W — exécute les modèles 14B-33B et rend les modèles 7B-14B instantanés.',
           '**Configuration enthousiaste (env. 5 300 €) :** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD 4 To, alimentation 1000 W — la seule configuration mono-GPU dans laquelle un modèle 70B tient en Q4.',
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment se comparent les trois niveaux en 2026',
         content:
-          'Les chiffres de VRAM et de puissance du GPU sont des spécifications constructeur. Les vitesses d\'inférence sont des estimations au niveau de la famille de modèles, issues des tests GPU de PromptQuorum pour le GPU du niveau concerné. Les totaux sont des instantanés américains de mai 2026 — la hausse des prix des GPU en 2026 a poussé les cartes à 1,5-2 fois le tarif conseillé, si bien que la ligne GPU domine chaque total et bouge d\'une semaine à l\'autre. Acheter le GPU d\'occasion abaisse chaque total.',
+          'Les chiffres de VRAM et de puissance du GPU sont des spécifications constructeur. Les vitesses d\'inférence sont des estimations au niveau de la famille de modèles, issues des tests GPU de PromptQuorum pour le GPU du niveau concerné. Les totaux sont des instantanés américains de juillet 2026 — la hausse des prix des GPU en 2026 a poussé les cartes à 1,5-2 fois le tarif conseillé, si bien que la ligne GPU domine chaque total et bouge d\'une semaine à l\'autre. Acheter le GPU d\'occasion abaisse chaque total.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Voyez la configuration comme une équipe bâtie autour d\'une vedette, le GPU. Le processeur, la RAM et l\'alimentation sont les seconds rôles — utiles, mais ils existent pour alimenter le GPU. Choisissez d\'abord le GPU dont votre modèle a besoin, puis assemblez le reste autour de lui.',
           },
         ],
-        columns: ['Niveau', 'GPU', 'VRAM', 'Exécute', 'Alimentation', 'Total (mai 2026)'],
+        columns: ['Niveau', 'GPU', 'VRAM', 'Exécute', 'Alimentation', 'Total (juillet 2026)'],
         rows: [
           {
             'Niveau': 'Budget',
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Exécute': 'modèles 7B-13B',
             'Alimentation': '650 W',
-            'Total (mai 2026)': 'env. 1 250 €',
+            'Total (juillet 2026)': 'env. 1 250 €',
           },
           {
             'Niveau': 'Intermédiaire',
@@ -1202,7 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Exécute': '14B aisément, 22B-33B léger',
             'Alimentation': '850 W',
-            'Total (mai 2026)': 'env. 2 550 €',
+            'Total (juillet 2026)': 'env. 2 550 €',
           },
           {
             'Niveau': 'Enthousiaste',
@@ -1210,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Exécute': '33B aisément, 70B en Q4',
             'Alimentation': '1000 W',
-            'Total (mai 2026)': 'env. 5 300 €',
+            'Total (juillet 2026)': 'env. 5 300 €',
           },
         ],
       },
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'En raison de la hausse des prix des GPU en 2026, chaque total de ce guide est un instantané de mai 2026 qui évolue vite. Ouvrez toujours l\'annonce actuelle du revendeur pour le GPU avant de monter — son prix a bougé d\'une semaine à l\'autre et il domine le coût de la configuration.',
+            text: 'En raison de la hausse des prix des GPU en 2026, chaque total de ce guide est un instantané de juillet 2026 qui évolue vite. Ouvrez toujours l\'annonce actuelle du revendeur pour le GPU avant de monter — son prix a bougé d\'une semaine à l\'autre et il domine le coût de la configuration.',
           },
         ],
         affiliateLinks: [
@@ -1491,10 +1491,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Meilleur guide d\'achat de GPU pour LLM locaux 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum : prix des GPU de mai 2026 et hausse de 1,5-2 fois au-dessus du tarif conseillé, utilisés ici pour les totaux des configurations.',
+          '[Meilleur guide d\'achat de GPU pour LLM locaux 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum : prix des GPU de juillet 2026 et hausse de 1,5-2 fois au-dessus du tarif conseillé, utilisés ici pour les totaux des configurations.',
           '[Monter une station de travail LLM locale](/fr/local-llms/local-llm-workstation-build) — PromptQuorum : liste de pièces, refroidissement et conseils d\'alimentation pour une station 70B bi-GPU au-delà du niveau enthousiaste.',
           '[Spécifications des séries NVIDIA GeForce RTX 40 et 50](https://www.nvidia.com/en-us/geforce/graphics-cards/) — Capacité de VRAM et puissance (TGP) officielles pour les RTX 4060 Ti, 4070 Ti Super et 5090.',
-          '[PCPartPicker](https://pcpartpicker.com) — Tarifs de composants en direct pour les processeurs AMD Ryzen, la RAM DDR5, les SSD NVMe et les alimentations en mai 2026.',
+          '[PCPartPicker](https://pcpartpicker.com) — Tarifs de composants en direct pour les processeurs AMD Ryzen, la RAM DDR5, les SSD NVMe et les alimentations en juillet 2026.',
         ],
       },
       faq: {
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Combien coûte le montage d\'un PC pour IA locale en 2026 ?',
-            a: 'Un PC budget pour IA locale coûte environ 1 250 €, une configuration intermédiaire environ 2 550 € et une configuration enthousiaste 70B environ 5 300 €. Ce sont des instantanés de mai 2026 — la pénurie de puces mémoire de 2026 a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé et, comme le GPU est la plus grande ligne de chaque configuration, elle a relevé chaque total par rapport aux mêmes pièces il y a un an.',
+            a: 'Un PC budget pour IA locale coûte environ 1 250 €, une configuration intermédiaire environ 2 550 € et une configuration enthousiaste 70B environ 5 300 €. Ce sont des instantanés de juillet 2026 — la pénurie de puces mémoire de 2026 a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé et, comme le GPU est la plus grande ligne de chaque configuration, elle a relevé chaque total par rapport aux mêmes pièces il y a un an.',
           },
           {
             q: 'Quel GPU mettre dans une configuration PC pour IA locale ?',
@@ -1539,7 +1539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Choisissez le GPU de votre configuration avec le guide d\'achat complet](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — huit GPU sur quatre niveaux de budget, avec les prix de mai 2026 et le calcul de la hausse.',
+          '[Choisissez le GPU de votre configuration avec le guide d\'achat complet](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — huit GPU sur quatre niveaux de budget, avec les prix de juillet 2026 et le calcul de la hausse.',
           '[Découvrez la configuration de station 70B bi-GPU pour un usage en production](/fr/local-llms/local-llm-workstation-build) — le niveau multi-utilisateur à 4 000-6 000 € au-delà de la configuration enthousiaste de ce guide.',
           '[Comparez le montage d\'un PC à la location de GPU cloud](/fr/power-local-llm/cloud-gpu-rental-guide-2026) — quand la location bat la possession de matériel pour un calcul occasionnel.',
           '[Calculez la VRAM nécessaire à chaque taille de modèle avant de monter](/fr/local-llms/how-much-vram-local-llm) — la méthode complète de VRAM par taille de modèle derrière les choix de niveau ici.',
@@ -1551,17 +1551,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'ローカルAIワークステーション自作ガイド2026：予算別3構成',
     seoTitle: 'ローカルAI PC自作2026：エントリーから70B対応機まで',
     intro:
-      'ローカルAI向けの自作ガイドの多くはCPUから始まりますが、マシンが実行できるモデルを決めるのはGPUとそのVRAMであり、他のすべてのパーツはそのGPUを支えるために選ばれます。本ガイドでは、ローカルLLM用PCの完全なパーツリストを3構成示します。7B〜13Bモデル向けのエントリー構成、14B〜33Bモデル向けのミドル構成、70B作業向けのハイエンド構成です。各ティアには正確なコンポーネント、想定される性能、合計コストを記載しています。価格について1点ご注意ください。2026年のメモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇し、本ガイドのすべての構成コストは1年前の同じパーツより高くなっています。各数値は2026年5月時点のスナップショットとして扱い、可能な範囲で中古GPU市場を活用してください。',
+      'ローカルAI向けの自作ガイドの多くはCPUから始まりますが、マシンが実行できるモデルを決めるのはGPUとそのVRAMであり、他のすべてのパーツはそのGPUを支えるために選ばれます。本ガイドでは、ローカルLLM用PCの完全なパーツリストを3構成示します。7B〜13Bモデル向けのエントリー構成、14B〜33Bモデル向けのミドル構成、70B作業向けのハイエンド構成です。各ティアには正確なコンポーネント、想定される性能、合計コストを記載しています。価格について1点ご注意ください。2026年のメモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇し、本ガイドのすべての構成コストは1年前の同じパーツより高くなっています。各数値は2026年7月時点のスナップショットとして扱い、可能な範囲で中古GPU市場を活用してください。',
     metaDescription:
       '2026年ローカルAIワークステーション構築：LLM推論向けのCPU、GPU、RAM、ストレージ。予算別の完全ビルドガイド。入門機からRTX 5090搭載ハイエンドまで解説。',
     twitterDescription:
-      'ローカルAI PC自作ガイド：7B〜70Bモデル向けの完全パーツリストを備えた予算別3構成。2026年のGPU価格高騰がすべての構成コストを押し上げた——2026年5月の合計はこちら。',
+      'ローカルAI PC自作ガイド：7B〜70Bモデル向けの完全パーツリストを備えた予算別3構成。2026年のGPU価格高騰がすべての構成コストを押し上げた——2026年7月の合計はこちら。',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -1596,14 +1596,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: '2026年にローカルLLMを動かすPCはどう組めばよいですか？',
         answer:
-          '実行したい最大のモデルでティアを選び、GPUを中心に組み立てます。エントリー構成（約¥185,000）はRTX 4060 Ti 16 GBとRyzen 7 CPUを組み合わせ、7B〜13Bモデルに対応します。ミドル構成（約¥400,000）はRTX 4070 Ti Super 16 GBを用いて14B〜33Bモデルに対応します。ハイエンド構成（約¥850,000）はRTX 5090 32 GBを用いて70B作業に対応します。2026年のメモリ不足によりGPU価格は希望小売価格を大きく上回っているため、いずれの合計も2026年5月時点のスナップショットです。',
+          '実行したい最大のモデルでティアを選び、GPUを中心に組み立てます。エントリー構成（約¥185,000）はRTX 4060 Ti 16 GBとRyzen 7 CPUを組み合わせ、7B〜13Bモデルに対応します。ミドル構成（約¥400,000）はRTX 4070 Ti Super 16 GBを用いて14B〜33Bモデルに対応します。ハイエンド構成（約¥850,000）はRTX 5090 32 GBを用いて70B作業に対応します。2026年のメモリ不足によりGPU価格は希望小売価格を大きく上回っているため、いずれの合計も2026年7月時点のスナップショットです。',
         bullets: [
           'エントリー構成 約¥185,000：RTX 4060 Ti 16 GB、7B〜13Bモデルを実行',
           'ミドル構成 約¥400,000：RTX 4070 Ti Super 16 GB、14B〜33Bモデルを実行',
           'ハイエンド構成 約¥850,000：RTX 5090 32 GB、70BモデルをQ4で実行',
           '2026年のGPU価格は希望小売価格の1.5〜2倍——可能な範囲でGPUは中古を購入',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**GPUがティアを決め、残りの構成がそれを支えます。** ローカルAI PCは、VRAMが実行可能なモデルを決めるため、GPUを起点に選びます。GPUのVRAMが対象モデルに合うティアを選び、CPU・RAM・電源をその周りに合わせて選定してください。',
-          '**2026年のGPU価格はすべての構成コストを押し上げました。** メモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇しました。本ガイドの構成合計は2026年5月時点のスナップショットで、1年前の同じパーツより高くなっています——中古GPU市場を活用してください。',
+          '**2026年のGPU価格はすべての構成コストを押し上げました。** メモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇しました。本ガイドの構成合計は2026年7月時点のスナップショットで、1年前の同じパーツより高くなっています——中古GPU市場を活用してください。',
           '**エントリー構成（約¥185,000）：** RTX 4060 Ti 16 GB、Ryzen 7 7700、32 GB RAM、1 TB SSD、650 W電源——7B〜13Bモデルを実用的な速度で実行します。ローカルAI向けで最も安価な完成機です。',
           '**ミドル構成（約¥400,000）：** RTX 4070 Ti Super 16 GB、Ryzen 9 7900X、64 GB RAM、2 TB SSD、850 W電源——14B〜33Bモデルを実行し、7B〜14Bモデルを即座に応答させます。',
           '**ハイエンド構成（約¥850,000）：** RTX 5090 32 GB、Ryzen 9 7950X、128 GB RAM、4 TB SSD、1000 W電源——70BモデルをQ4で収められる唯一のシングルGPU構成です。',
@@ -1684,7 +1684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年の3構成ティアの比較',
         content:
-          'GPUのVRAMと電力の数値はメーカー仕様です。推論速度は、各ティアのGPUに対するPromptQuorumのGPUテストに基づくモデルファミリーレベルの推定値です。構成合計は2026年5月時点の米国のスナップショットです——2026年のGPU価格高騰によりカード価格は希望小売価格の1.5〜2倍に上昇したため、GPUの行が各合計を支配し、週ごとに変動します。GPUを中古で購入すると、いずれの合計も下がります。',
+          'GPUのVRAMと電力の数値はメーカー仕様です。推論速度は、各ティアのGPUに対するPromptQuorumのGPUテストに基づくモデルファミリーレベルの推定値です。構成合計は2026年7月時点の米国のスナップショットです——2026年のGPU価格高騰によりカード価格は希望小売価格の1.5〜2倍に上昇したため、GPUの行が各合計を支配し、週ごとに変動します。GPUを中古で購入すると、いずれの合計も下がります。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1695,7 +1695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '構成を、1人のスター選手であるGPUを中心に組まれたチームと考えてください。CPU・RAM・電源は脇役で、有用ですがGPUに供給を続けるために存在します。まずモデルに必要なGPUを選び、その周りに残りを組み立てましょう。',
           },
         ],
-        columns: ['構成ティア', 'GPU', 'VRAM', '実行可能', '電源', '合計（2026年5月）'],
+        columns: ['構成ティア', 'GPU', 'VRAM', '実行可能', '電源', '合計（2026年7月）'],
         rows: [
           {
             '構成ティア': 'エントリー',
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '実行可能': '7B〜13Bモデル',
             '電源': '650 W',
-            '合計（2026年5月）': '約¥185,000',
+            '合計（2026年7月）': '約¥185,000',
           },
           {
             '構成ティア': 'ミドル',
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '実行可能': '14Bを快適に、軽めの22B〜33B',
             '電源': '850 W',
-            '合計（2026年5月）': '約¥400,000',
+            '合計（2026年7月）': '約¥400,000',
           },
           {
             '構成ティア': 'ハイエンド',
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             '実行可能': '33Bを快適に、70BをQ4で',
             '電源': '1000 W',
-            '合計（2026年5月）': '約¥850,000',
+            '合計（2026年7月）': '約¥850,000',
           },
         ],
       },
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '2026年のGPU価格高騰のため、本ガイドのすべての合計は変動の速い2026年5月時点のスナップショットです。組む前に必ずGPUの現在の販売店ページを開いてください——価格は週ごとに動いており、構成コストを支配します。',
+            text: '2026年のGPU価格高騰のため、本ガイドのすべての合計は変動の速い2026年7月時点のスナップショットです。組む前に必ずGPUの現在の販売店ページを開いてください——価格は週ごとに動いており、構成コストを支配します。',
           },
         ],
         affiliateLinks: [
@@ -2000,10 +2000,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         items: [
-          '[ローカルLLM向け最良のGPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum：本ガイドの構成合計に用いた2026年5月のGPU価格と、希望小売価格に対する1.5〜2倍の高騰。',
+          '[ローカルLLM向け最良のGPU購入ガイド2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum：本ガイドの構成合計に用いた2026年7月のGPU価格と、希望小売価格に対する1.5〜2倍の高騰。',
           '[ローカルLLMワークステーションを組む](/ja/local-llms/local-llm-workstation-build) — PromptQuorum：ハイエンドティアの先にあるデュアルGPU 70Bワークステーションのパーツリスト、冷却、電源の指針。',
           '[NVIDIA GeForce RTX 40・50シリーズ仕様](https://www.nvidia.com/en-us/geforce/graphics-cards/) — RTX 4060 Ti、4070 Ti Super、5090の公式VRAM容量と電力（TGP）の数値。',
-          '[PCPartPicker](https://pcpartpicker.com) — 2026年5月時点のAMD Ryzen CPU、DDR5 RAM、NVMe SSD、電源のリアルタイム部品価格。',
+          '[PCPartPicker](https://pcpartpicker.com) — 2026年7月時点のAMD Ryzen CPU、DDR5 RAM、NVMe SSD、電源のリアルタイム部品価格。',
         ],
       },
       faq: {
@@ -2012,7 +2012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026年にローカルAI用のPCを組む費用はいくらですか？',
-            a: 'エントリーのローカルAI PCはおよそ¥185,000、ミドル構成はおよそ¥400,000、ハイエンドの70B構成はおよそ¥850,000です。これらは2026年5月時点のスナップショットです——2026年のメモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇し、GPUはすべての構成で最大の項目であるため、1年前の同じパーツより各合計を引き上げました。',
+            a: 'エントリーのローカルAI PCはおよそ¥185,000、ミドル構成はおよそ¥400,000、ハイエンドの70B構成はおよそ¥850,000です。これらは2026年7月時点のスナップショットです——2026年のメモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇し、GPUはすべての構成で最大の項目であるため、1年前の同じパーツより各合計を引き上げました。',
           },
           {
             q: 'ローカルAI PCの構成にはどのGPUを入れるべきですか？',
@@ -2048,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[完全な購入ガイドで構成のGPUを選ぶ](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 4つの予算ティアにわたる8つのGPU、2026年5月の価格と高騰の計算付き。',
+          '[完全な購入ガイドで構成のGPUを選ぶ](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 4つの予算ティアにわたる8つのGPU、2026年7月の価格と高騰の計算付き。',
           '[本番運用向けのデュアルGPU 70Bワークステーション構成を見る](/ja/local-llms/local-llm-workstation-build) — 本ガイドのハイエンド構成の先にある、¥4,000〜6,000相当の多人数向けティア。',
           '[PCを組むこととクラウドGPUのレンタルを比較する](/ja/power-local-llm/cloud-gpu-rental-guide-2026) — たまの計算用途では、レンタルがハードウェア所有を上回る場合。',
           '[組む前に各モデルサイズが必要とするVRAMを算出する](/ja/local-llms/how-much-vram-local-llm) — ここでのティア選択の背景にある、モデルサイズ別VRAMの完全な算出法。',
@@ -2060,17 +2060,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: '2026 本地 AI 工作站装机指南：三档预算配置',
     seoTitle: '2026 本地 AI PC 装机：从入门到 70B 工作站',
     intro:
-      '大多数本地 AI 装机指南都从 CPU 讲起，但真正决定这台机器能跑哪些模型的是 GPU 及其显存——其他每个部件都是为支撑这块 GPU 而选定的。本指南为本地 LLM PC 提供三套完整配置清单：面向 7B-13B 模型的入门配置、面向 14B-33B 模型的中端配置，以及面向 70B 工作负载的发烧配置。每一档都列出确切部件、预期性能和总成本。关于价格有一点提醒：2026 年的存储芯片短缺将 GPU 价格推高至建议零售价的 1.5-2 倍，使本指南中每套配置的成本都高于一年前同样部件的价格——请把每个数字当作 2026 年 5 月的快照，并在可行时尽量利用二手 GPU 市场。',
+      '大多数本地 AI 装机指南都从 CPU 讲起，但真正决定这台机器能跑哪些模型的是 GPU 及其显存——其他每个部件都是为支撑这块 GPU 而选定的。本指南为本地 LLM PC 提供三套完整配置清单：面向 7B-13B 模型的入门配置、面向 14B-33B 模型的中端配置，以及面向 70B 工作负载的发烧配置。每一档都列出确切部件、预期性能和总成本。关于价格有一点提醒：2026 年的存储芯片短缺将 GPU 价格推高至建议零售价的 1.5-2 倍，使本指南中每套配置的成本都高于一年前同样部件的价格——请把每个数字当作 2026 年 7 月的快照，并在可行时尽量利用二手 GPU 市场。',
     metaDescription:
       '2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，全面解析硬件选择。',
     twitterDescription:
-      '本地 AI PC 装机指南：三档预算配置，附 7B 到 70B 模型的完整部件清单。2026 年 GPU 价格上涨抬高了每套配置的成本——这里是 2026 年 5 月的总价。',
+      '本地 AI PC 装机指南：三档预算配置，附 7B 到 70B 模型的完整部件清单。2026 年 GPU 价格上涨抬高了每套配置的成本——这里是 2026 年 7 月的总价。',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -2105,14 +2105,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '2026 年如何装一台运行本地 LLM 的 PC？',
         answer:
-          '按你想运行的最大模型选择档位，然后围绕 GPU 来组装。入门配置（约 1,100 美元）将 RTX 4060 Ti 16 GB 与一颗 Ryzen 7 CPU 搭配，可跑 7B-13B 模型。中端配置（约 2,400 美元）使用 RTX 4070 Ti Super 16 GB，可跑 14B-33B 模型。发烧配置（约 5,000 美元）使用 RTX 5090 32 GB，用于 70B 工作负载。2026 年的存储短缺把 GPU 价格推高至远超建议零售价，因此每套总价都是 2026 年 5 月的快照。',
+          '按你想运行的最大模型选择档位，然后围绕 GPU 来组装。入门配置（约 1,100 美元）将 RTX 4060 Ti 16 GB 与一颗 Ryzen 7 CPU 搭配，可跑 7B-13B 模型。中端配置（约 2,400 美元）使用 RTX 4070 Ti Super 16 GB，可跑 14B-33B 模型。发烧配置（约 5,000 美元）使用 RTX 5090 32 GB，用于 70B 工作负载。2026 年的存储短缺把 GPU 价格推高至远超建议零售价，因此每套总价都是 2026 年 7 月的快照。',
         bullets: [
           '入门配置约 1,100 美元：RTX 4060 Ti 16 GB，可跑 7B-13B 模型',
           '中端配置约 2,400 美元：RTX 4070 Ti Super 16 GB，可跑 14B-33B 模型',
           '发烧配置约 5,000 美元：RTX 5090 32 GB，以 Q4 跑 70B 模型',
           '2026 年 GPU 价格为建议零售价的 1.5-2 倍——可行时尽量买二手 GPU',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2138,7 +2138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**GPU 决定档位，配置的其余部分支撑它。** 本地 AI PC 之所以以 GPU 为先来选，是因为显存决定能跑哪些模型。选择 GPU 显存与目标模型相匹配的档位，再围绕它来确定 CPU、内存和电源的规格。',
-          '**2026 年的 GPU 价格抬高了每套配置成本。** 存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍。这里的配置总价是 2026 年 5 月的快照，高于一年前同样部件的价格——请利用二手 GPU 市场。',
+          '**2026 年的 GPU 价格抬高了每套配置成本。** 存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍。这里的配置总价是 2026 年 7 月的快照，高于一年前同样部件的价格——请利用二手 GPU 市场。',
           '**入门配置（约 1,100 美元）：** RTX 4060 Ti 16 GB、Ryzen 7 7700、32 GB 内存、1 TB SSD、650 W 电源——以可用速度运行 7B-13B 模型。这是本地 AI 最便宜的完整整机。',
           '**中端配置（约 2,400 美元）：** RTX 4070 Ti Super 16 GB、Ryzen 9 7900X、64 GB 内存、2 TB SSD、850 W 电源——可跑 14B-33B 模型，并让 7B-14B 模型即时响应。',
           '**发烧配置（约 5,000 美元）：** RTX 5090 32 GB、Ryzen 9 7950X、128 GB 内存、4 TB SSD、1000 W 电源——唯一能以 Q4 容纳 70B 模型的单 GPU 配置。',
@@ -2193,7 +2193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026 年三档配置如何对比',
         content:
-          'GPU 显存和功耗数字为厂商规格。推理速度是基于 PromptQuorum 对各档 GPU 的测试所得的模型族级别估计值。配置总价为 2026 年 5 月的美国快照——2026 年 GPU 价格上涨把显卡推高至建议零售价的 1.5-2 倍,因此 GPU 这一项主导每套总价,且逐周变动。买二手 GPU 会拉低每套总价。',
+          'GPU 显存和功耗数字为厂商规格。推理速度是基于 PromptQuorum 对各档 GPU 的测试所得的模型族级别估计值。配置总价为 2026 年 7 月的美国快照——2026 年 GPU 价格上涨把显卡推高至建议零售价的 1.5-2 倍,因此 GPU 这一项主导每套总价,且逐周变动。买二手 GPU 会拉低每套总价。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2204,7 +2204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '把这套配置想象成一支围绕一位明星球员——GPU——组建的球队。CPU、内存和电源是辅助阵容:有用,但它们的存在是为了让 GPU 持续得到供给。先选你的模型所需的 GPU,再围绕它组装其余部分。',
           },
         ],
-        columns: ['配置档位', 'GPU', '显存', '可运行', '电源', '总价（2026 年 5 月）'],
+        columns: ['配置档位', 'GPU', '显存', '可运行', '电源', '总价（2026 年 7 月）'],
         rows: [
           {
             '配置档位': '入门',
@@ -2212,7 +2212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '16 GB',
             '可运行': '7B-13B 模型',
             '电源': '650 W',
-            '总价（2026 年 5 月）': '约 1,100 美元',
+            '总价（2026 年 7 月）': '约 1,100 美元',
           },
           {
             '配置档位': '中端',
@@ -2220,7 +2220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '16 GB',
             '可运行': '从容跑 14B,轻量 22B-33B',
             '电源': '850 W',
-            '总价（2026 年 5 月）': '约 2,400 美元',
+            '总价（2026 年 7 月）': '约 2,400 美元',
           },
           {
             '配置档位': '发烧',
@@ -2228,7 +2228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '32 GB',
             '可运行': '从容跑 33B,以 Q4 跑 70B',
             '电源': '1000 W',
-            '总价（2026 年 5 月）': '约 5,000 美元',
+            '总价（2026 年 7 月）': '约 5,000 美元',
           },
         ],
       },
@@ -2451,7 +2451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '由于 2026 年 GPU 价格上涨,本指南中每套总价都是变动迅速的 2026 年 5 月快照。装机前请务必打开 GPU 当前的零售商商品页——它的价格逐周变动,且主导着配置成本。',
+            text: '由于 2026 年 GPU 价格上涨,本指南中每套总价都是变动迅速的 2026 年 7 月快照。装机前请务必打开 GPU 当前的零售商商品页——它的价格逐周变动,且主导着配置成本。',
           },
         ],
         affiliateLinks: [
@@ -2509,10 +2509,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         items: [
-          '[2026 本地 LLM 最佳 GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum：用于本指南配置总价的 2026 年 5 月 GPU 价格,以及高于建议零售价 1.5-2 倍的涨幅。',
+          '[2026 本地 LLM 最佳 GPU 购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum：用于本指南配置总价的 2026 年 7 月 GPU 价格,以及高于建议零售价 1.5-2 倍的涨幅。',
           '[搭建本地 LLM 工作站](/zh/local-llms/local-llm-workstation-build) — PromptQuorum：发烧档之外的双 GPU 70B 工作站部件清单、散热和电源指南。',
           '[NVIDIA GeForce RTX 40 与 50 系列规格](https://www.nvidia.com/en-us/geforce/graphics-cards/) — RTX 4060 Ti、4070 Ti Super 和 5090 的官方显存容量与功耗（TGP）数据。',
-          '[PCPartPicker](https://pcpartpicker.com) — 截至 2026 年 5 月,AMD Ryzen CPU、DDR5 内存、NVMe SSD 和电源的实时部件价格。',
+          '[PCPartPicker](https://pcpartpicker.com) — 截至 2026 年 7 月,AMD Ryzen CPU、DDR5 内存、NVMe SSD 和电源的实时部件价格。',
         ],
       },
       faq: {
@@ -2521,7 +2521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026 年装一台本地 AI PC 要花多少钱？',
-            a: '一台入门本地 AI PC 约 1,100 美元,中端配置约 2,400 美元,发烧级 70B 配置约 5,000 美元。这些是 2026 年 5 月的快照——2026 年的存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍,而由于 GPU 是每套配置中最大的一项,它把每套总价都抬到了高于一年前同样部件的水平。',
+            a: '一台入门本地 AI PC 约 1,100 美元,中端配置约 2,400 美元,发烧级 70B 配置约 5,000 美元。这些是 2026 年 7 月的快照——2026 年的存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍,而由于 GPU 是每套配置中最大的一项,它把每套总价都抬到了高于一年前同样部件的水平。',
           },
           {
             q: '本地 AI PC 配置该用哪块 GPU？',
@@ -2557,7 +2557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[用完整购买指南为你的配置选 GPU](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 横跨四个预算档位的八块 GPU,附 2026 年 5 月价格和涨价算账。',
+          '[用完整购买指南为你的配置选 GPU](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 横跨四个预算档位的八块 GPU,附 2026 年 7 月价格和涨价算账。',
           '[查看面向生产用途的双 GPU 70B 工作站配置](/zh/local-llms/local-llm-workstation-build) — 本指南发烧配置之外、4,000-6,000 美元的多用户档位。',
           '[把自己装 PC 与租用云 GPU 做对比](/zh/power-local-llm/cloud-gpu-rental-guide-2026) — 在偶尔需要算力时,租用何时优于自购硬件。',
           '[装机前算清每个模型规模所需的显存](/zh/local-llms/how-much-vram-local-llm) — 这里档位选择背后、按模型规模算显存的完整方法。',
@@ -2569,17 +2569,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'Guía para armar una PC con IA local 2026: 3 niveles de presupuesto',
     seoTitle: 'PC para IA local 2026: del básico a la estación 70B',
     intro:
-      'La mayoría de las guías para armar una PC con IA local empiezan por la CPU, pero es la GPU y su VRAM lo que decide qué modelos puede ejecutar la máquina — cada otra parte se elige para dar soporte a esa GPU. Esta guía ofrece tres listas de componentes completas para una PC dedicada a LLM locales: una configuración económica para modelos 7B-13B, una configuración media para modelos 14B-33B y una configuración entusiasta para trabajar con modelos 70B. Cada nivel incluye los componentes exactos, el rendimiento esperado y el costo total. Una advertencia sobre los precios: la escasez de chips de memoria de 2026 empujó los precios de las GPU a 1,5-2 veces por encima del precio de lista, lo que eleva el costo de cada configuración aquí respecto a los mismos componentes de hace un año — toma cada cifra como una instantánea de mayo de 2026 y aprovecha el mercado de GPU usadas cuando puedas.',
+      'La mayoría de las guías para armar una PC con IA local empiezan por la CPU, pero es la GPU y su VRAM lo que decide qué modelos puede ejecutar la máquina — cada otra parte se elige para dar soporte a esa GPU. Esta guía ofrece tres listas de componentes completas para una PC dedicada a LLM locales: una configuración económica para modelos 7B-13B, una configuración media para modelos 14B-33B y una configuración entusiasta para trabajar con modelos 70B. Cada nivel incluye los componentes exactos, el rendimiento esperado y el costo total. Una advertencia sobre los precios: la escasez de chips de memoria de 2026 empujó los precios de las GPU a 1,5-2 veces por encima del precio de lista, lo que eleva el costo de cada configuración aquí respecto a los mismos componentes de hace un año — toma cada cifra como una instantánea de julio de 2026 y aprovecha el mercado de GPU usadas cuando puedas.',
     metaDescription:
       'Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes exactas, tokens/s esperados y costos totales.',
     twitterDescription:
-      'Guía para armar una PC con IA local: tres niveles de presupuesto con listas de componentes completas para modelos de 7B a 70B. El aumento de precios de GPU en 2026 encareció cada configuración — aquí están los totales de mayo de 2026.',
+      'Guía para armar una PC con IA local: tres niveles de presupuesto con listas de componentes completas para modelos de 7B a 70B. El aumento de precios de GPU en 2026 encareció cada configuración — aquí están los totales de julio de 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -2614,14 +2614,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Cómo armo una PC para ejecutar LLM locales en 2026?',
         answer:
-          'Elige tu nivel según el modelo más grande que quieras ejecutar y luego arma la PC alrededor de la GPU. Una configuración económica (~$1.100) combina una RTX 4060 Ti 16 GB con una CPU Ryzen 7 para modelos 7B-13B. Una configuración media (~$2.400) usa una RTX 4070 Ti Super 16 GB para modelos 14B-33B. Una configuración entusiasta (~$5.000) usa una RTX 5090 32 GB para trabajo con 70B. La escasez de memoria de 2026 elevó los precios de GPU muy por encima del precio de lista, así que cada total es una instantánea de mayo de 2026.',
+          'Elige tu nivel según el modelo más grande que quieras ejecutar y luego arma la PC alrededor de la GPU. Una configuración económica (~$1.100) combina una RTX 4060 Ti 16 GB con una CPU Ryzen 7 para modelos 7B-13B. Una configuración media (~$2.400) usa una RTX 4070 Ti Super 16 GB para modelos 14B-33B. Una configuración entusiasta (~$5.000) usa una RTX 5090 32 GB para trabajo con 70B. La escasez de memoria de 2026 elevó los precios de GPU muy por encima del precio de lista, así que cada total es una instantánea de julio de 2026.',
         bullets: [
           'Configuración económica ~$1.100: RTX 4060 Ti 16 GB, ejecuta modelos 7B-13B',
           'Configuración media ~$2.400: RTX 4070 Ti Super 16 GB, ejecuta modelos 14B-33B',
           'Configuración entusiasta ~$5.000: RTX 5090 32 GB, ejecuta modelos 70B en Q4',
           'Los precios de GPU en 2026 son 1,5-2 veces el precio de lista — compra GPU usadas cuando puedas',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2647,7 +2647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**La GPU define el nivel; el resto de la configuración la soporta.** Una PC para IA local se elige primero por la GPU porque la VRAM decide qué modelos corren. Elige el nivel cuya VRAM de GPU encaje con tu modelo objetivo y luego dimensiona la CPU, la RAM y la fuente de alimentación alrededor de eso.',
-          '**Los precios de GPU de 2026 encarecieron cada configuración.** Una escasez de chips de memoria empujó los precios de GPU a 1,5-2 veces por encima del precio de lista. Los totales aquí son instantáneas de mayo de 2026 y son más altos que los mismos componentes de hace un año — aprovecha el mercado de GPU usadas.',
+          '**Los precios de GPU de 2026 encarecieron cada configuración.** Una escasez de chips de memoria empujó los precios de GPU a 1,5-2 veces por encima del precio de lista. Los totales aquí son instantáneas de julio de 2026 y son más altos que los mismos componentes de hace un año — aprovecha el mercado de GPU usadas.',
           '**Configuración económica (~$1.100):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB de RAM, SSD de 1 TB, fuente de 650 W — ejecuta modelos 7B-13B a velocidad usable. La máquina completa más económica para IA local.',
           '**Configuración media (~$2.400):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB de RAM, SSD de 2 TB, fuente de 850 W — ejecuta modelos 14B-33B y hace que los modelos 7B-14B respondan al instante.',
           '**Configuración entusiasta (~$5.000):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB de RAM, SSD de 4 TB, fuente de 1000 W — la única configuración de GPU única que cabe un modelo 70B en Q4.',
@@ -2702,7 +2702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan los tres niveles de configuración en 2026',
         content:
-          'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son estimaciones a nivel de familia de modelos de las pruebas de GPU de PromptQuorum para la GPU del nivel correspondiente. Los totales de configuración son instantáneas en USD de mayo de 2026 — el aumento de precios de GPU de 2026 empujó las tarjetas a 1,5-2 veces el precio de lista, por lo que la línea de GPU domina cada total y varía semana a semana. Comprar la GPU usada reduce cada total.',
+          'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son estimaciones a nivel de familia de modelos de las pruebas de GPU de PromptQuorum para la GPU del nivel correspondiente. Los totales de configuración son instantáneas en USD de julio de 2026 — el aumento de precios de GPU de 2026 empujó las tarjetas a 1,5-2 veces el precio de lista, por lo que la línea de GPU domina cada total y varía semana a semana. Comprar la GPU usada reduce cada total.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2713,7 +2713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Piensa en la configuración como un equipo construido alrededor de un jugador estrella: la GPU. La CPU, la RAM y la fuente de alimentación son el reparto de apoyo — útiles, pero existen para mantener a la GPU funcionando. Elige primero la GPU que necesita tu modelo y luego arma el resto alrededor de ella.',
           },
         ],
-        columns: ['Nivel', 'GPU', 'VRAM', 'Ejecuta', 'Fuente', 'Total (mayo 2026)'],
+        columns: ['Nivel', 'GPU', 'VRAM', 'Ejecuta', 'Fuente', 'Total (julio 2026)'],
         rows: [
           {
             'Nivel': 'Económica',
@@ -2721,7 +2721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Ejecuta': 'modelos 7B-13B',
             'Fuente': '650 W',
-            'Total (mayo 2026)': '~$1.100',
+            'Total (julio 2026)': '~$1.100',
           },
           {
             'Nivel': 'Media',
@@ -2729,7 +2729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Ejecuta': '14B con comodidad, 22B-33B ligero',
             'Fuente': '850 W',
-            'Total (mayo 2026)': '~$2.400',
+            'Total (julio 2026)': '~$2.400',
           },
           {
             'Nivel': 'Entusiasta',
@@ -2737,7 +2737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Ejecuta': '33B con comodidad, 70B en Q4',
             'Fuente': '1000 W',
-            'Total (mayo 2026)': '~$5.000',
+            'Total (julio 2026)': '~$5.000',
           },
         ],
       },
@@ -2960,7 +2960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Debido al aumento de precios de GPU de 2026, cada total en esta guía es una instantánea de mayo de 2026 que se mueve rápidamente. Siempre abre el listado actual del minorista para la GPU antes de armar — su precio ha variado semana a semana y domina el costo de la configuración.',
+            text: 'Debido al aumento de precios de GPU de 2026, cada total en esta guía es una instantánea de julio de 2026 que se mueve rápidamente. Siempre abre el listado actual del minorista para la GPU antes de armar — su precio ha variado semana a semana y domina el costo de la configuración.',
           },
         ],
         affiliateLinks: [
@@ -3018,10 +3018,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Mejor guía de compra de GPU para LLM locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: precios de GPU de mayo de 2026 y el aumento de 1,5-2 veces sobre el precio de lista usado para los totales de configuración aquí.',
+          '[Mejor guía de compra de GPU para LLM locales 2026](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: precios de GPU de julio de 2026 y el aumento de 1,5-2 veces sobre el precio de lista usado para los totales de configuración aquí.',
           '[Armado de workstation para LLM local](/es/local-llms/local-llm-workstation-build) — PromptQuorum: lista de componentes, refrigeración y guía de fuente de alimentación para la workstation 70B de GPU dual detrás del nivel entusiasta.',
           '[Especificaciones de NVIDIA GeForce RTX serie 40 y 50](https://www.nvidia.com/en-us/geforce/graphics-cards/) — Cifras oficiales de capacidad de VRAM y potencia (TGP) para la RTX 4060 Ti, 4070 Ti Super y 5090.',
-          '[PCPartPicker](https://pcpartpicker.com) — Precios de componentes en vivo para CPU AMD Ryzen, RAM DDR5, SSD NVMe y fuentes de alimentación a mayo de 2026.',
+          '[PCPartPicker](https://pcpartpicker.com) — Precios de componentes en vivo para CPU AMD Ryzen, RAM DDR5, SSD NVMe y fuentes de alimentación a julio de 2026.',
         ],
       },
       faq: {
@@ -3030,7 +3030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Cuánto cuesta armar una PC para IA local en 2026?',
-            a: 'Una PC para IA local económica cuesta aproximadamente $1.100, una configuración media aproximadamente $2.400 y una configuración entusiasta 70B aproximadamente $5.000. Estas son instantáneas de mayo de 2026 — la escasez de chips de memoria de 2026 empujó los precios de GPU a 1,5-2 veces por encima del precio de lista, y dado que la GPU es la línea más grande en cada configuración, elevó cada total respecto a los mismos componentes de hace un año.',
+            a: 'Una PC para IA local económica cuesta aproximadamente $1.100, una configuración media aproximadamente $2.400 y una configuración entusiasta 70B aproximadamente $5.000. Estas son instantáneas de julio de 2026 — la escasez de chips de memoria de 2026 empujó los precios de GPU a 1,5-2 veces por encima del precio de lista, y dado que la GPU es la línea más grande en cada configuración, elevó cada total respecto a los mismos componentes de hace un año.',
           },
           {
             q: '¿Qué GPU debo poner en una PC para IA local?',
@@ -3066,7 +3066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Elige la GPU para tu configuración con la guía de compra completa](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ocho GPU en cuatro niveles de presupuesto, con precios de mayo de 2026 y el cálculo del aumento.',
+          '[Elige la GPU para tu configuración con la guía de compra completa](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ocho GPU en cuatro niveles de presupuesto, con precios de julio de 2026 y el cálculo del aumento.',
           '[Ve la configuración de workstation 70B de GPU dual para uso en producción](/es/local-llms/local-llm-workstation-build) — el nivel multiusuario de $4.000-6.000 más allá de la configuración entusiasta de esta guía.',
           '[Compara armar una PC contra rentar GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026) — cuándo rentar supera tener hardware propio para cómputo ocasional.',
           '[Calcula la VRAM que necesita cada tamaño de modelo antes de armar](/es/local-llms/how-much-vram-local-llm) — el método completo de VRAM por tamaño de modelo detrás de las elecciones de nivel aquí.',
@@ -3078,11 +3078,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Guía para armar una PC con IA local 2026: 3 niveles de presupuesto',
-      description: 'Tres configuraciones completas de PC para IA local en 2026: económica 7B-13B, media 14B-33B y entusiasta 70B. Listas de componentes exactas, tokens por segundo esperados y costos totales de mayo de 2026.',
+      description: 'Tres configuraciones completas de PC para IA local en 2026: económica 7B-13B, media 14B-33B y entusiasta 70B. Listas de componentes exactas, tokens por segundo esperados y costos totales de julio de 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-workstation-build-guide-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3091,8 +3091,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'Guia para montar um PC com IA local 2026: 3 níveis de orçamento',
     seoTitle: 'PC para IA local 2026: do básico à estação de trabalho 70B',
@@ -3143,7 +3143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Configuração entusiasta ~$5.000: RTX 5090 32 GB, executa modelos 70B em Q4',
           'Os preços de GPU em 2026 são 1,5–2x o preço de lista — compre GPUs usadas quando puder',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -3235,7 +3235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pense na configuração como uma equipe construída ao redor de um jogador estrela: a GPU. A CPU, a RAM e a fonte de alimentação são o elenco de apoio — úteis, mas existem para manter a GPU funcionando. Escolha primeiro a GPU que o seu modelo precisa e depois monte o restante ao redor dela.',
           },
         ],
-        columns: ['Nível', 'GPU', 'VRAM', 'Executa', 'Fonte', 'Total (maio 2026)'],
+        columns: ['Nível', 'GPU', 'VRAM', 'Executa', 'Fonte', 'Total (julho 2026)'],
         rows: [
           {
             'Nível': 'Econômica',
@@ -3243,7 +3243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Executa': 'modelos 7B–13B',
             'Fonte': '650 W',
-            'Total (maio 2026)': '~$1.100',
+            'Total (julho 2026)': '~$1.100',
           },
           {
             'Nível': 'Intermediária',
@@ -3251,7 +3251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Executa': '14B confortavelmente, 22B–33B leve',
             'Fonte': '850 W',
-            'Total (maio 2026)': '~$2.400',
+            'Total (julho 2026)': '~$2.400',
           },
           {
             'Nível': 'Entusiasta',
@@ -3259,7 +3259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Executa': '33B confortavelmente, 70B em Q4',
             'Fonte': '1000 W',
-            'Total (maio 2026)': '~$5.000',
+            'Total (julho 2026)': '~$5.000',
           },
         ],
       },
@@ -3604,7 +3604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-workstation-build-guide-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3614,17 +3614,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'دليل بناء محطة عمل الذكاء الاصطناعي المحلي ⁨2026⁩: ⁨3⁩ مستويات ميزانية',
     seoTitle: 'بناء حاسوب ⁨LLM⁩ محلي ⁨2026⁩: ⁨3⁩ مستويات من ⁨7B⁩ حتى ⁨70B⁩',
     intro:
       'معظم أدلة بناء حاسوب للذكاء الاصطناعي المحلي تبدأ بالمعالج، لكن الـGPU وذاكرة VRAM الخاصة بها هي التي تحدد النماذج التي يستطيع الجهاز تشغيلها — وكل قطعة أخرى تُختار لدعم تلك الـGPU. يُقدّم هذا الدليل ثلاث قوائم مكوّنات كاملة لحاسوب مخصص لنماذج LLM المحلية: إعداد اقتصادي لنماذج 7B–13B، وإعداد متوسط لنماذج 14B–33B، وإعداد متحمس للعمل مع نماذج 70B. كل مستوى يتضمن المكوّنات الدقيقة والأداء المتوقع والتكلفة الإجمالية.',
     metaDescription:
-      '3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أداء توكن/ثانية وتكاليف مايو 2026.',
+      '3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أداء توكن/ثانية وتكاليف يوليو 2026.',
     twitterDescription:
-      'دليل بناء حاسوب للذكاء الاصطناعي المحلي: ثلاثة مستويات ميزانية بقوائم مكوّنات كاملة لنماذج من 7B إلى 70B. إليك إجماليات مايو 2026.',
+      'دليل بناء حاسوب للذكاء الاصطناعي المحلي: ثلاثة مستويات ميزانية بقوائم مكوّنات كاملة لنماذج من 7B إلى 70B. إليك إجماليات يوليو 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -3659,14 +3659,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'كيف أبني حاسوباً لتشغيل نماذج LLM المحلية في 2026؟',
         answer:
-          'اختر مستواك بناءً على أكبر نموذج تريد تشغيله ثم ابنِ الحاسوب حول الـGPU. الإعداد الاقتصادي (~1100 دولار) يجمع RTX 4060 Ti 16 GB مع معالج Ryzen 7 لنماذج 7B–13B. الإعداد المتوسط (~2400 دولار) يستخدم RTX 4070 Ti Super 16 GB لنماذج 14B–33B. الإعداد المتحمس (~5000 دولار) يستخدم RTX 5090 32 GB للعمل مع 70B. شحّ الذاكرة في 2026 رفع أسعار GPU بشكل كبير، لذا كل إجمالي هو لقطة من مايو 2026.',
+          'اختر مستواك بناءً على أكبر نموذج تريد تشغيله ثم ابنِ الحاسوب حول الـGPU. الإعداد الاقتصادي (~1100 دولار) يجمع RTX 4060 Ti 16 GB مع معالج Ryzen 7 لنماذج 7B–13B. الإعداد المتوسط (~2400 دولار) يستخدم RTX 4070 Ti Super 16 GB لنماذج 14B–33B. الإعداد المتحمس (~5000 دولار) يستخدم RTX 5090 32 GB للعمل مع 70B. شحّ الذاكرة في 2026 رفع أسعار GPU بشكل كبير، لذا كل إجمالي هو لقطة من يوليو 2026.',
         bullets: [
           'الإعداد الاقتصادي ~1100 دولار: RTX 4060 Ti 16 GB، يُشغّل نماذج 7B–13B.',
           'الإعداد المتوسط ~2400 دولار: RTX 4070 Ti Super 16 GB، يُشغّل نماذج 14B–33B.',
           'الإعداد المتحمس ~5000 دولار: RTX 5090 32 GB، يُشغّل نماذج 70B في Q4.',
           'أسعار GPU في 2026 أضعاف السعر الاسمي — اشتر GPU مستعملة إن أمكن.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -3692,7 +3692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**الـGPU تحدد المستوى؛ بقية المكوّنات تدعمها.** حاسوب الذكاء الاصطناعي المحلي يُختار أولاً بناءً على الـGPU لأن VRAM تحدد النماذج التي تعمل. اختر المستوى الذي تناسب VRAM الـGPU فيه نموذجك المستهدف، ثم حجّم المعالج والـRAM والمزوّد حول ذلك.',
-          '**أسعار GPU في 2026 رفعت كل إعداد.** شحّ رقائق الذاكرة دفع أسعار GPU إلى 1.5–2 ضعف السعر الاسمي. الإجماليات هنا لقطات من مايو 2026 وأعلى من نفس المكوّنات العام الماضي — استفد من سوق GPU المستعملة.',
+          '**أسعار GPU في 2026 رفعت كل إعداد.** شحّ رقائق الذاكرة دفع أسعار GPU إلى 1.5–2 ضعف السعر الاسمي. الإجماليات هنا لقطات من يوليو 2026 وأعلى من نفس المكوّنات العام الماضي — استفد من سوق GPU المستعملة.',
           '**الإعداد الاقتصادي (~1100 دولار):** RTX 4060 Ti 16 GB وRyzen 7 7700 و32 جيجابايت RAM وSSD 1 تيرابايت ومزوّد 650 واط — يُشغّل نماذج 7B–13B بسرعة مقبولة.',
           '**الإعداد المتوسط (~2400 دولار):** RTX 4070 Ti Super 16 GB وRyzen 9 7900X و64 جيجابايت RAM وSSD 2 تيرابايت ومزوّد 850 واط — يُشغّل نماذج 14B–33B ويجعل نماذج 7B–14B تستجيب فوراً.',
           '**الإعداد المتحمس (~5000 دولار):** RTX 5090 32 GB وRyzen 9 7950X و128 جيجابايت RAM وSSD 4 تيرابايت ومزوّد 1000 واط — الإعداد الوحيد بـGPU واحدة الذي يستوعب نموذج 70B في Q4.',
@@ -3747,7 +3747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقاطع المستويات الثلاثة في 2026',
         content:
-          'أرقام VRAM وطاقة الـGPU هي مواصفات الشركة المصنّعة. سرعات الاستدلال تقديرات على مستوى عائلة النماذج من اختبارات PromptQuorum للـGPU. الإجماليات لقطات بالدولار الأمريكي من مايو 2026.',
+          'أرقام VRAM وطاقة الـGPU هي مواصفات الشركة المصنّعة. سرعات الاستدلال تقديرات على مستوى عائلة النماذج من اختبارات PromptQuorum للـGPU. الإجماليات لقطات بالدولار الأمريكي من يوليو 2026.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3758,7 +3758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'فكّر في الإعداد كفريق مبني حول لاعب نجم: الـGPU. المعالج والـRAM والمزوّد هم طاقم الدعم — مفيدون، لكن موجودون ليبقوا الـGPU تعمل. اختر أولاً الـGPU التي يحتاجها نموذجك ثم ابنِ البقية حولها.',
           },
         ],
-        columns: ['المستوى', 'GPU', 'VRAM', 'يُشغّل', 'المزوّد', 'الإجمالي (مايو 2026)'],
+        columns: ['المستوى', 'GPU', 'VRAM', 'يُشغّل', 'المزوّد', 'الإجمالي (يوليو 2026)'],
         rows: [
           {
             'المستوى': 'اقتصادي',
@@ -3766,7 +3766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 جيجابايت',
             'يُشغّل': 'نماذج 7B–13B',
             'المزوّد': '650 واط',
-            'الإجمالي (مايو 2026)': '~1100 دولار',
+            'الإجمالي (يوليو 2026)': '~1100 دولار',
           },
           {
             'المستوى': 'متوسط',
@@ -3774,7 +3774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 جيجابايت',
             'يُشغّل': '14B بارتياح، 22B–33B خفيف',
             'المزوّد': '850 واط',
-            'الإجمالي (مايو 2026)': '~2400 دولار',
+            'الإجمالي (يوليو 2026)': '~2400 دولار',
           },
           {
             'المستوى': 'متحمس',
@@ -3782,7 +3782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 جيجابايت',
             'يُشغّل': '33B بارتياح، 70B في Q4',
             'المزوّد': '1000 واط',
-            'الإجمالي (مايو 2026)': '~5000 دولار',
+            'الإجمالي (يوليو 2026)': '~5000 دولار',
           },
         ],
       },
@@ -4005,7 +4005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'بسبب ارتفاع أسعار GPU في 2026، كل إجمالي في هذا الدليل لقطة من مايو 2026 تتحرك بسرعة. افتح دائماً إعلان التاجر الحالي للـGPU قبل الطلب — سعرها تغيّر أسبوعاً بعد أسبوع ويهيمن على تكلفة الإعداد.',
+            text: 'بسبب ارتفاع أسعار GPU في 2026، كل إجمالي في هذا الدليل لقطة من يوليو 2026 تتحرك بسرعة. افتح دائماً إعلان التاجر الحالي للـGPU قبل الطلب — سعرها تغيّر أسبوعاً بعد أسبوع ويهيمن على تكلفة الإعداد.',
           },
         ],
         affiliateLinks: [
@@ -4063,10 +4063,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[دليل شراء GPU لـLLMs المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: أسعار GPU من مايو 2026 وارتفاع 1.5–2 ضعف السعر الاسمي المُستخدَم للإجماليات هنا.',
+          '[دليل شراء GPU لـLLMs المحلية 2026](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: أسعار GPU من يوليو 2026 وارتفاع 1.5–2 ضعف السعر الاسمي المُستخدَم للإجماليات هنا.',
           '[بناء محطة عمل LLM محلي](/ar/local-llms/local-llm-workstation-build) — PromptQuorum: قائمة مكوّنات ودليل التبريد والمزوّد لمحطة عمل GPU مزدوجة 70B خلف المستوى المتحمس.',
           '[مواصفات NVIDIA GeForce RTX سلسلة 40 و50](https://www.nvidia.com/en-us/geforce/graphics-cards/) — أرقام رسمية لقدرة VRAM والطاقة (TGP) لـRTX 4060 Ti و4070 Ti Super و5090.',
-          '[PCPartPicker](https://pcpartpicker.com) — أسعار المكوّنات المباشرة لمعالجات AMD Ryzen وRAM DDR5 وSSD NVMe والمزوّدات في مايو 2026.',
+          '[PCPartPicker](https://pcpartpicker.com) — أسعار المكوّنات المباشرة لمعالجات AMD Ryzen وRAM DDR5 وSSD NVMe والمزوّدات في يوليو 2026.',
         ],
       },
       faq: {
@@ -4075,7 +4075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'كم يكلّف بناء حاسوب للذكاء الاصطناعي المحلي في 2026؟',
-            a: 'حاسوب اقتصادي للذكاء الاصطناعي المحلي يكلّف حوالي 1100 دولار، وإعداد متوسط حوالي 2400 دولار، وإعداد متحمس بـ70B حوالي 5000 دولار. هذه لقطات من مايو 2026 — شحّ رقائق الذاكرة دفع أسعار GPU إلى 1.5–2 ضعف السعر الاسمي، ورفع كل إجمالي عن نفس المكوّنات العام الماضي.',
+            a: 'حاسوب اقتصادي للذكاء الاصطناعي المحلي يكلّف حوالي 1100 دولار، وإعداد متوسط حوالي 2400 دولار، وإعداد متحمس بـ70B حوالي 5000 دولار. هذه لقطات من يوليو 2026 — شحّ رقائق الذاكرة دفع أسعار GPU إلى 1.5–2 ضعف السعر الاسمي، ورفع كل إجمالي عن نفس المكوّنات العام الماضي.',
           },
           {
             q: 'أي GPU يجب أن أضعها في حاسوب الذكاء الاصطناعي المحلي؟',
@@ -4111,7 +4111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          '[اختر الـGPU لإعدادك مع الدليل الكامل للشراء](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ثمانية GPU في أربعة مستويات ميزانية، مع أسعار مايو 2026 وحساب الارتفاع.',
+          '[اختر الـGPU لإعدادك مع الدليل الكامل للشراء](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — ثمانية GPU في أربعة مستويات ميزانية، مع أسعار يوليو 2026 وحساب الارتفاع.',
           '[شاهد إعداد محطة عمل 70B بـGPU مزدوجة للاستخدام الإنتاجي](/ar/local-llms/local-llm-workstation-build) — المستوى متعدد المستخدمين 4000–6000 دولار ما وراء الإعداد المتحمس في هذا الدليل.',
           '[قارن بناء حاسوب مقابل استئجار GPU في السحابة](/ar/power-local-llm/cloud-gpu-rental-guide-2026) — متى يتفوق الاستئجار على امتلاك أجهزة للحوسبة العرضية.',
           '[احسب VRAM التي يحتاجها كل حجم نموذج قبل البناء](/ar/local-llms/how-much-vram-local-llm) — الطريقة الكاملة لـVRAM حسب حجم النموذج خلف اختيارات المستوى هنا.',
@@ -4123,11 +4123,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'دليل بناء محطة عمل الذكاء الاصطناعي المحلي 2026: 3 مستويات ميزانية',
-      description: 'ثلاثة إعدادات كاملة لحاسوب الذكاء الاصطناعي المحلي في 2026: اقتصادي 7B–13B ومتوسط 14B–33B ومتحمس 70B. قوائم مكوّنات دقيقة وتوكن/ثانية متوقع وتكاليف إجمالية من مايو 2026.',
+      description: 'ثلاثة إعدادات كاملة لحاسوب الذكاء الاصطناعي المحلي في 2026: اقتصادي 7B–13B ومتوسط 14B–33B ومتحمس 70B. قوائم مكوّنات دقيقة وتوكن/ثانية متوقع وتكاليف إجمالية من يوليو 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-workstation-build-guide-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4136,17 +4136,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
-    next_refresh_due: '2026-11-22',
+    dateModified: '2026-07-01',
+    next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: '로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계',
     seoTitle: '로컬 AI PC 2026: 입문부터 70B 워크스테이션까지',
     intro:
-      '대부분의 로컬 AI PC 구성 가이드는 CPU부터 시작하지만, 실제로 어떤 모델을 실행할 수 있는지를 결정하는 것은 GPU와 그 VRAM입니다. 나머지 모든 부품은 GPU를 지원하기 위해 선택됩니다. 이 가이드는 로컬 LLM 전용 PC를 위한 세 가지 완전한 부품 목록을 제공합니다. 7B–13B 모델을 위한 보급형 구성, 14B–33B 모델을 위한 중급형 구성, 그리고 70B 모델 작업을 위한 고급형 구성입니다. 각 단계에는 정확한 부품, 예상 성능, 총 비용이 포함되어 있습니다. 가격에 관한 주의 사항: 2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, 이로 인해 각 구성의 비용이 1년 전 동일한 부품보다 높아졌습니다. 각 수치는 2026년 5월 기준 스냅샷으로 참고하시고, 가능하면 중고 GPU 시장을 활용하시기 바랍니다.',
+      '대부분의 로컬 AI PC 구성 가이드는 CPU부터 시작하지만, 실제로 어떤 모델을 실행할 수 있는지를 결정하는 것은 GPU와 그 VRAM입니다. 나머지 모든 부품은 GPU를 지원하기 위해 선택됩니다. 이 가이드는 로컬 LLM 전용 PC를 위한 세 가지 완전한 부품 목록을 제공합니다. 7B–13B 모델을 위한 보급형 구성, 14B–33B 모델을 위한 중급형 구성, 그리고 70B 모델 작업을 위한 고급형 구성입니다. 각 단계에는 정확한 부품, 예상 성능, 총 비용이 포함되어 있습니다. 가격에 관한 주의 사항: 2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, 이로 인해 각 구성의 비용이 1년 전 동일한 부품보다 높아졌습니다. 각 수치는 2026년 7월 기준 스냅샷으로 참고하시고, 가능하면 중고 GPU 시장을 활용하시기 바랍니다.',
     metaDescription:
       '2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 총 비용을 확인하십시오.',
     twitterDescription:
-      '로컬 AI PC 구성 가이드: 7B부터 70B 모델까지 완전한 부품 목록과 함께 예산별 3단계. 2026년 GPU 가격 급등으로 각 구성 비용이 상승했습니다. 2026년 5월 기준 총액을 확인하십시오.',
+      '로컬 AI PC 구성 가이드: 7B부터 70B 모델까지 완전한 부품 목록과 함께 예산별 3단계. 2026년 GPU 가격 급등으로 각 구성 비용이 상승했습니다. 2026년 7월 기준 총액을 확인하십시오.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 8B',
@@ -4181,14 +4181,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: '2026년에 로컬 LLM을 실행하기 위한 PC를 어떻게 구성합니까?',
         answer:
-          '실행하려는 가장 큰 모델에 따라 단계를 선택한 후 GPU를 중심으로 PC를 구성하십시오. 보급형 구성(약 $1,100)은 7B–13B 모델을 위해 RTX 4060 Ti 16 GB와 Ryzen 7 CPU를 조합합니다. 중급형 구성(약 $2,400)은 14B–33B 모델을 위해 RTX 4070 Ti Super 16 GB를 사용합니다. 고급형 구성(약 $5,000)은 70B 작업을 위해 RTX 5090 32 GB를 사용합니다. 2026년 메모리 공급 부족으로 GPU 가격이 정가를 크게 상회하므로, 각 총액은 2026년 5월 기준 스냅샷입니다.',
+          '실행하려는 가장 큰 모델에 따라 단계를 선택한 후 GPU를 중심으로 PC를 구성하십시오. 보급형 구성(약 $1,100)은 7B–13B 모델을 위해 RTX 4060 Ti 16 GB와 Ryzen 7 CPU를 조합합니다. 중급형 구성(약 $2,400)은 14B–33B 모델을 위해 RTX 4070 Ti Super 16 GB를 사용합니다. 고급형 구성(약 $5,000)은 70B 작업을 위해 RTX 5090 32 GB를 사용합니다. 2026년 메모리 공급 부족으로 GPU 가격이 정가를 크게 상회하므로, 각 총액은 2026년 7월 기준 스냅샷입니다.',
         bullets: [
           '보급형 약 $1,100: RTX 4060 Ti 16 GB, 7B–13B 모델 실행 가능',
           '중급형 약 $2,400: RTX 4070 Ti Super 16 GB, 14B–33B 모델 실행 가능',
           '고급형 약 $5,000: RTX 5090 32 GB, Q4 양자화로 70B 모델 실행 가능',
           '2026년 GPU 가격은 정가의 1.5~2배입니다. 가능하면 중고 GPU를 구매하십시오.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -4214,7 +4214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**GPU가 단계를 결정하고, 나머지 구성이 GPU를 지원합니다.** 로컬 AI PC는 VRAM이 어떤 모델을 실행할 수 있는지를 결정하기 때문에 GPU부터 선택합니다. 목표 모델에 맞는 GPU VRAM을 갖춘 단계를 선택한 후, CPU, RAM, 파워 서플라이를 그 주변에 맞게 구성하십시오.',
-          '**2026년 GPU 가격이 각 구성을 더 비싸게 만들었습니다.** 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했습니다. 여기에 제시된 총액은 2026년 5월 기준 스냅샷이며 1년 전 동일한 부품보다 높습니다. 중고 GPU 시장을 적극 활용하십시오.',
+          '**2026년 GPU 가격이 각 구성을 더 비싸게 만들었습니다.** 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했습니다. 여기에 제시된 총액은 2026년 7월 기준 스냅샷이며 1년 전 동일한 부품보다 높습니다. 중고 GPU 시장을 적극 활용하십시오.',
           '**보급형 구성 (~$1,100):** RTX 4060 Ti 16 GB, Ryzen 7 7700, 32 GB RAM, 1 TB SSD, 650 W 파워 서플라이 — 7B–13B 모델을 사용 가능한 속도로 실행합니다. 로컬 AI를 위한 가장 저렴한 완전 구성입니다.',
           '**중급형 구성 (~$2,400):** RTX 4070 Ti Super 16 GB, Ryzen 9 7900X, 64 GB RAM, 2 TB SSD, 850 W 파워 서플라이 — 14B–33B 모델을 실행하고, 7B–14B 모델을 즉각적인 응답 속도로 처리합니다.',
           '**고급형 구성 (~$5,000):** RTX 5090 32 GB, Ryzen 9 7950X, 128 GB RAM, 4 TB SSD, 1000 W 파워 서플라이 — Q4 양자화로 70B 모델을 실행할 수 있는 유일한 단일 GPU 구성입니다.',
@@ -4269,7 +4269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 세 가지 구성 단계 비교',
         content:
-          'VRAM 및 GPU 전력 수치는 제조사 사양입니다. 추론 속도는 해당 단계 GPU에 대한 PromptQuorum GPU 테스트의 모델 패밀리 수준 추정치입니다. 구성 총액은 2026년 5월 기준 USD 스냅샷입니다. 2026년 GPU 가격 급등으로 카드 가격이 정가의 1.5~2배까지 상승했으므로 GPU 항목이 각 총액을 주도하며 주간 단위로 변동합니다. 중고 GPU를 구입하면 각 총액을 줄일 수 있습니다.',
+          'VRAM 및 GPU 전력 수치는 제조사 사양입니다. 추론 속도는 해당 단계 GPU에 대한 PromptQuorum GPU 테스트의 모델 패밀리 수준 추정치입니다. 구성 총액은 2026년 7월 기준 USD 스냅샷입니다. 2026년 GPU 가격 급등으로 카드 가격이 정가의 1.5~2배까지 상승했으므로 GPU 항목이 각 총액을 주도하며 주간 단위로 변동합니다. 중고 GPU를 구입하면 각 총액을 줄일 수 있습니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4280,7 +4280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '구성을 스타 선수를 중심으로 구성된 팀으로 생각하십시오. GPU가 스타 선수이고, CPU, RAM, 파워 서플라이는 GPU를 작동 상태로 유지하기 위해 존재하는 지원 역할입니다. 필요한 모델에 맞는 GPU를 먼저 선택한 후 나머지를 그 주변에 구성하십시오.',
           },
         ],
-        columns: ['단계', 'GPU', 'VRAM', '실행 가능', '파워 서플라이', '총액 (2026년 5월)'],
+        columns: ['단계', 'GPU', 'VRAM', '실행 가능', '파워 서플라이', '총액 (2026년 7월)'],
         rows: [
           {
             '단계': '보급형',
@@ -4288,7 +4288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '실행 가능': '7B–13B 모델',
             '파워 서플라이': '650 W',
-            '총액 (2026년 5월)': '약 $1,100',
+            '총액 (2026년 7월)': '약 $1,100',
           },
           {
             '단계': '중급형',
@@ -4296,7 +4296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '실행 가능': '14B 편안하게, 22B–33B 경량',
             '파워 서플라이': '850 W',
-            '총액 (2026년 5월)': '약 $2,400',
+            '총액 (2026년 7월)': '약 $2,400',
           },
           {
             '단계': '고급형',
@@ -4304,7 +4304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             '실행 가능': '33B 편안하게, Q4 양자화 70B',
             '파워 서플라이': '1000 W',
-            '총액 (2026년 5월)': '약 $5,000',
+            '총액 (2026년 7월)': '약 $5,000',
           },
         ],
       },
@@ -4527,7 +4527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '2026년 GPU 가격 급등으로 이 가이드의 모든 총액은 빠르게 변동하는 2026년 5월 스냅샷입니다. 조립하기 전에 항상 GPU의 현재 소매 목록을 여십시오. 가격은 주간 단위로 변동했으며 구성 비용을 주도합니다.',
+            text: '2026년 GPU 가격 급등으로 이 가이드의 모든 총액은 빠르게 변동하는 2026년 7월 스냅샷입니다. 조립하기 전에 항상 GPU의 현재 소매 목록을 여십시오. 가격은 주간 단위로 변동했으며 구성 비용을 주도합니다.',
           },
         ],
         affiliateLinks: [
@@ -4585,10 +4585,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '[로컬 LLM 최적 GPU 구매 가이드 2026](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: 여기 구성 총액에 사용된 2026년 5월 GPU 가격 및 정가의 1.5~2배 가격 급등.',
+          '[로컬 LLM 최적 GPU 구매 가이드 2026](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — PromptQuorum: 여기 구성 총액에 사용된 2026년 7월 GPU 가격 및 정가의 1.5~2배 가격 급등.',
           '[로컬 LLM 워크스테이션 구성](/ko/local-llms/local-llm-workstation-build) — PromptQuorum: 고급형 단계 이면의 이중 GPU 70B 워크스테이션을 위한 부품 목록, 쿨링, 파워 서플라이 가이드.',
           '[NVIDIA GeForce RTX 40 및 50 시리즈 사양](https://www.nvidia.com/en-us/geforce/graphics-cards/) — RTX 4060 Ti, 4070 Ti Super, 5090의 공식 VRAM 용량 및 전력(TGP) 수치.',
-          '[PCPartPicker](https://pcpartpicker.com) — 2026년 5월 기준 AMD Ryzen CPU, DDR5 RAM, NVMe SSD, 파워 서플라이의 실시간 부품 가격.',
+          '[PCPartPicker](https://pcpartpicker.com) — 2026년 7월 기준 AMD Ryzen CPU, DDR5 RAM, NVMe SSD, 파워 서플라이의 실시간 부품 가격.',
         ],
       },
       faq: {
@@ -4597,7 +4597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '2026년에 로컬 AI PC를 구성하는 데 얼마나 비용이 듭니까?',
-            a: '보급형 로컬 AI PC는 약 $1,100, 중급형 구성은 약 $2,400, 고급형 70B 구성은 약 $5,000입니다. 이는 2026년 5월 기준 스냅샷입니다. 2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, GPU가 각 구성에서 가장 큰 항목이기 때문에 전년도 동일한 부품 대비 각 총액이 높아졌습니다.',
+            a: '보급형 로컬 AI PC는 약 $1,100, 중급형 구성은 약 $2,400, 고급형 70B 구성은 약 $5,000입니다. 이는 2026년 7월 기준 스냅샷입니다. 2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, GPU가 각 구성에서 가장 큰 항목이기 때문에 전년도 동일한 부품 대비 각 총액이 높아졌습니다.',
           },
           {
             q: '로컬 AI PC에 어떤 GPU를 사용해야 합니까?',
@@ -4633,7 +4633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[전체 구매 가이드로 구성에 맞는 GPU 선택](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 2026년 5월 가격과 가격 급등 계산이 포함된 네 가지 예산 단계의 GPU 8종.',
+          '[전체 구매 가이드로 구성에 맞는 GPU 선택](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 2026년 7월 가격과 가격 급등 계산이 포함된 네 가지 예산 단계의 GPU 8종.',
           '[프로덕션 사용을 위한 이중 GPU 70B 워크스테이션 구성 보기](/ko/local-llms/local-llm-workstation-build) — 이 가이드의 고급형 구성을 넘어서는 $4,000–6,000 다중 사용자 단계.',
           '[PC 구성 대 클라우드 GPU 대여 비교](/ko/power-local-llm/cloud-gpu-rental-guide-2026) — 가끔 컴퓨팅에는 자체 하드웨어 소유보다 대여가 나을 때.',
           '[구성 전 각 모델 크기에 필요한 VRAM 계산](/ko/local-llms/how-much-vram-local-llm) — 여기 단계 선택 이면의 모델 크기별 완전한 VRAM 방법론.',
@@ -4645,11 +4645,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계',
-      description: '2026년 로컬 AI PC 세 가지 완전 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 2026년 5월 총 비용.',
+      description: '2026년 로컬 AI PC 세 가지 완전 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 2026년 7월 총 비용.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
