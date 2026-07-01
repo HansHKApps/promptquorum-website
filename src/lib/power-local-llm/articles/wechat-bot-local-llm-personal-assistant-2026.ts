@@ -12,18 +12,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**You can build a WeChat personal assistant bot using WeChatFerry + Ollama in 2026. The bot runs entirely on your Windows PC, uses a local LLM (Qwen3 7B or 14B), and responds in real-time to WeChat messages without sending data to any cloud API.**',
+    leadAnswerBlock: '**You can build a WeChat personal assistant bot using WeChatFerry + Ollama in 2026. The bot runs entirely on your Windows PC, uses a local LLM (Qwen3 8B or 14B), and responds in real-time to WeChat messages without sending data to any cloud API.**',
     quickAnswerTop: {
       question: 'How do I build a WeChat bot with a local LLM?',
       answer: 'Use WeChatFerry (Windows) to hook into WeChat PC client, connect to Ollama via HTTP API, and route incoming messages to the local LLM. Total setup time: 30–60 minutes.',
       bullets: [
         'WeChatFerry: best Windows-based WeChat bot framework for 2026',
-        'Ollama: local LLM backend (Qwen3 7B recommended for Chinese)',
+        'Ollama: local LLM backend (Qwen3 8B recommended for Chinese)',
         'Python bridge: handle message routing and response formatting',
         'Context window: store conversation history for multi-turn chat',
         'Privacy: all data stays on your local machine, no cloud API calls',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama: the recommended local WeChat bot stack for 2026',
-          'Qwen3 7B: best local model for Chinese-language WeChat responses',
+          'Qwen3 8B: best local model for Chinese-language WeChat responses',
           'Windows required: WeChatFerry hooks into the WeChat PC client (Windows only)',
           'Setup time: 30–60 minutes for someone comfortable with Python',
           'No cloud API: all inference runs locally, no message data sent externally',
@@ -60,14 +60,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       requirements: {
         heading: 'Requirements',
-        body: 'Hardware and software needed before starting:\n\n- **Windows 10/11** (WeChatFerry requirement)\n- **WeChat PC client** — tested with WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** installed on the same machine\n- **8GB RAM minimum** (16GB recommended for smooth 7B model performance)\n- **6–8GB disk space** for the Qwen3 7B model weights\n\nRecommended model: **Qwen3:7b** — excellent Chinese language quality, 7B parameters fit in 8GB VRAM or run at acceptable speed on CPU with 16GB RAM.',
+        body: 'Hardware and software needed before starting:\n\n- **Windows 10/11** (WeChatFerry requirement)\n- **WeChat PC client** — tested with WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** installed on the same machine\n- **8GB RAM minimum** (16GB recommended for smooth 7B model performance)\n- **6–8GB disk space** for the Qwen3 8B model weights\n\nRecommended model: **Qwen3:8b** — excellent Chinese language quality, 7B parameters fit in 8GB VRAM or run at acceptable speed on CPU with 16GB RAM.',
       },
       installation: {
         heading: 'Step-by-Step Installation',
         numberedItems: [
           {
-            title: 'Install Ollama and pull Qwen3 7B',
-            whyItMatters: 'Download Ollama from ollama.com and run: `ollama pull qwen2.5:7b`',
+            title: 'Install Ollama and pull Qwen3 8B',
+            whyItMatters: 'Download Ollama from ollama.com and run: `ollama pull qwen3:8b`',
           },
           {
             title: 'Log in to WeChat PC',
@@ -97,14 +97,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       codeExample: {
         heading: 'Core Python Code',
-        body: 'The minimal working bot code uses WeChatFerry to receive messages and Ollama\'s HTTP API to generate responses:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen2.5:7b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
+        body: 'The minimal working bot code uses WeChatFerry to receive messages and Ollama\'s HTTP API to generate responses:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen3:8b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
       },
       modelChoice: {
         heading: 'Best Local Models for Chinese WeChat Conversations',
         body: 'Model choice significantly affects response quality for Chinese-language messages.',
         columns: ['Model', 'Size', 'Chinese Quality', 'Speed (CPU)', 'Speed (8GB VRAM)'],
         rows: [
-          { 'Model': 'Qwen3:7b', 'Size': '4.7 GB', 'Chinese Quality': 'Excellent', 'Speed (CPU)': '3–5 tok/s', 'Speed (8GB VRAM)': '30–45 tok/s' },
+          { 'Model': 'Qwen3:8b', 'Size': '4.7 GB', 'Chinese Quality': 'Excellent', 'Speed (CPU)': '3–5 tok/s', 'Speed (8GB VRAM)': '30–45 tok/s' },
           { 'Model': 'Qwen3:14b', 'Size': '9 GB', 'Chinese Quality': 'Best', 'Speed (CPU)': '1–2 tok/s', 'Speed (8GB VRAM)': '15–20 tok/s' },
           { 'Model': 'Qwen3:3b', 'Size': '2 GB', 'Chinese Quality': 'Good', 'Speed (CPU)': '8–12 tok/s', 'Speed (8GB VRAM)': '60+ tok/s' },
           { 'Model': 'Llama3.1:8b', 'Size': '4.7 GB', 'Chinese Quality': 'Moderate', 'Speed (CPU)': '3–5 tok/s', 'Speed (8GB VRAM)': '30–45 tok/s' },
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the best Ollama model for Chinese WeChat messages?',
-            a: 'Qwen3 7B is the best balance of quality and speed for Chinese-language WeChat responses — excellent Chinese comprehension, fast enough on most hardware, and the 4.7GB model fits in 8GB VRAM.',
+            a: 'Qwen3 8B is the best balance of quality and speed for Chinese-language WeChat responses — excellent Chinese comprehension, fast enough on most hardware, and the 4.7GB model fits in 8GB VRAM.',
           },
           {
             q: 'Can the bot handle group chats?',
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'What is the best model for Chinese WeChat messages?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Qwen3 7B is the best balance of quality and speed — excellent Chinese comprehension, 4.7GB fits in 8GB VRAM, responds in 1–3 seconds with a GPU.',
+            text: 'Qwen3 8B is the best balance of quality and speed — excellent Chinese comprehension, 4.7GB fits in 8GB VRAM, responds in 1–3 seconds with a GPU.',
           },
         },
       ],
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'HowTo',
       name: 'Build a WeChat Bot with Local LLM',
       step: [
-        { '@type': 'HowToStep', name: 'Install Ollama and pull Qwen3 7B', text: 'Download Ollama and run: ollama pull qwen2.5:7b' },
+        { '@type': 'HowToStep', name: 'Install Ollama and pull Qwen3 8B', text: 'Download Ollama and run: ollama pull qwen3:8b' },
         { '@type': 'HowToStep', name: 'Log in to WeChat PC', text: 'Open WeChat on Windows and keep it logged in' },
         { '@type': 'HowToStep', name: 'Install WeChatFerry', text: 'pip install wcferry' },
         { '@type': 'HowToStep', name: 'Create Python message handler', text: 'Write bot code to route WeChat messages to Ollama API' },
@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-01',
       'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
@@ -208,18 +208,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Mit WeChatFerry und Ollama kann 2026 ein persönlicher WeChat-Assistent-Bot auf dem eigenen Windows-PC aufgebaut werden — lokales LLM (Qwen3 7B), keine Cloud-API, alle Daten bleiben lokal.**',
+    leadAnswerBlock: '**Mit WeChatFerry und Ollama kann 2026 ein persönlicher WeChat-Assistent-Bot auf dem eigenen Windows-PC aufgebaut werden — lokales LLM (Qwen3 8B), keine Cloud-API, alle Daten bleiben lokal.**',
     quickAnswerTop: {
       question: 'Wie baue ich einen WeChat-Bot mit einem lokalen LLM?',
       answer: 'WeChatFerry (Windows) nutzen, um in den WeChat-PC-Client einzuhaken, über HTTP-API mit Ollama verbinden und Nachrichten an das lokale LLM weiterleiten. Einrichtungszeit: 30–60 Minuten.',
       bullets: [
         'WeChatFerry: bestes Windows-basiertes WeChat-Bot-Framework 2026',
-        'Ollama: lokales LLM-Backend (Qwen3 7B empfohlen für Chinesisch)',
+        'Ollama: lokales LLM-Backend (Qwen3 8B empfohlen für Chinesisch)',
         'Python-Brücke: Nachrichtenrouting und Antwortformatierung',
         'Kontextfenster: Gesprächsverlauf für Mehrfachanfragen speichern',
         'Datenschutz: alle Daten bleiben lokal, keine Cloud-API-Aufrufe',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       { type: 'one-sentence', text: 'WeChat-Persönlichkeitsassistent mit WeChatFerry und Ollama unter Windows — das LLM läuft lokal, keine Daten verlassen den Rechner.' },
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama: empfohlener lokaler WeChat-Bot-Stack 2026',
-          'Qwen3 7B: bestes lokales Modell für chinesischsprachige Antworten',
+          'Qwen3 8B: bestes lokales Modell für chinesischsprachige Antworten',
           'Nur Windows: WeChatFerry hakt in den WeChat-PC-Client ein',
           'Einrichtungszeit: 30–60 Minuten mit Python-Kenntnissen',
           'Keine Cloud-API: gesamte Inferenz läuft lokal',
@@ -246,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches Ollama-Modell eignet sich am besten für chinesische WeChat-Nachrichten?',
-            a: 'Qwen3 7B bietet die beste Balance aus Qualität und Geschwindigkeit — ausgezeichnetes Chinesisch-Verständnis, 4,7 GB passen in 8 GB VRAM.',
+            a: 'Qwen3 8B bietet die beste Balance aus Qualität und Geschwindigkeit — ausgezeichnetes Chinesisch-Verständnis, 4,7 GB passen in 8 GB VRAM.',
           },
         ],
       },
@@ -277,18 +277,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**En 2026, vous pouvez construire un bot assistant personnel WeChat avec WeChatFerry et Ollama sur Windows — LLM local (Qwen3 7B), sans API cloud, toutes les données restent sur votre machine.**',
+    leadAnswerBlock: '**En 2026, vous pouvez construire un bot assistant personnel WeChat avec WeChatFerry et Ollama sur Windows — LLM local (Qwen3 8B), sans API cloud, toutes les données restent sur votre machine.**',
     quickAnswerTop: {
       question: 'Comment créer un bot WeChat avec un LLM local ?',
       answer: 'Utilisez WeChatFerry (Windows) pour vous connecter au client WeChat PC, reliez-le à Ollama via HTTP API et routez les messages entrants vers le LLM local. Temps de configuration : 30–60 minutes.',
       bullets: [
         'WeChatFerry : meilleur framework de bot WeChat Windows 2026',
-        'Ollama : backend LLM local (Qwen3 7B recommandé pour le chinois)',
+        'Ollama : backend LLM local (Qwen3 8B recommandé pour le chinois)',
         'Bridge Python : routage des messages et formatage des réponses',
         'Fenêtre de contexte : historique pour conversations multi-tours',
         'Confidentialité : toutes les données restent locales, sans API cloud',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       { type: 'one-sentence', text: 'Construisez un assistant personnel WeChat avec WeChatFerry et Ollama sous Windows — le LLM tourne localement, aucune donnée ne quitte votre machine.' },
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama : stack recommandé pour bot WeChat local en 2026',
-          'Qwen3 7B : meilleur modèle local pour réponses en chinois',
+          'Qwen3 8B : meilleur modèle local pour réponses en chinois',
           'Windows requis : WeChatFerry s\'intègre dans le client WeChat PC Windows',
           'Temps de configuration : 30–60 minutes avec Python',
           'Aucune API cloud : toute l\'inférence tourne localement',
@@ -338,22 +338,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Productivity & Knowledge Tools',
     title: 'ローカルLLMでWeChatボット：個人アシスタント 2026年版',
     seoTitle: 'WeChatFerry + Ollamaで作るWeChat個人アシスタント完全ガイド 2026年版',
-    metaDescription: '2026年版ガイド：WeChatFerryとOllamaを組み合わせ、Windows上でWeChat個人アシスタントボットを構築する手順を詳解。ローカルLLM（Qwen3 7B推奨）で全データがデバイス内に留まりクラウドAPIへのデータ送信がゼロ。Pythonで30〜60分の構築時間。',
+    metaDescription: '2026年版ガイド：WeChatFerryとOllamaを組み合わせ、Windows上でWeChat個人アシスタントボットを構築する手順を詳解。ローカルLLM（Qwen3 8B推奨）で全データがデバイス内に留まりクラウドAPIへのデータ送信がゼロ。Pythonで30〜60分の構築時間。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**WeChatFerry + OllamaをWindowsで使えば、2026年にローカルLLM（Qwen3 7B推奨）を活用したWeChat個人アシスタントボットを構築できます。全データがローカルに留まり、クラウドAPIへの送信は一切ありません。**',
+    leadAnswerBlock: '**WeChatFerry + OllamaをWindowsで使えば、2026年にローカルLLM（Qwen3 8B推奨）を活用したWeChat個人アシスタントボットを構築できます。全データがローカルに留まり、クラウドAPIへの送信は一切ありません。**',
     quickAnswerTop: {
       question: 'ローカルLLMでWeChatボットを構築する方法は？',
       answer: 'WeChatFerry（Windows）でWeChat PCクライアントにフックし、HTTP APIでOllamaに接続、受信メッセージをローカルLLMにルーティングします。セットアップ時間：30〜60分。',
       bullets: [
         'WeChatFerry：2026年ベストWindowsベースWeChatボットフレームワーク',
-        'Ollama：ローカルLLMバックエンド（中国語にはQwen3 7B推奨）',
+        'Ollama：ローカルLLMバックエンド（中国語にはQwen3 8B推奨）',
         'Pythonブリッジ：メッセージルーティングと応答フォーマット',
         'コンテキストウィンドウ：複数ターンの会話履歴を保持',
         'プライバシー：全データがローカル、クラウドAPIコールなし',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       { type: 'one-sentence', text: 'WeChatFerryとOllamaをWindowsで使い、WeChat個人アシスタントボットをローカルLLMで構築——データは外部に送信されません。' },
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama：2026年のローカルWeChatボット推奨スタック',
-          'Qwen3 7B：中国語WeChat応答の最良ローカルモデル',
+          'Qwen3 8B：中国語WeChat応答の最良ローカルモデル',
           'Windows必須：WeChatFerryはWindows WeChat PCクライアントへのフック',
           'セットアップ時間：Pythonに慣れていれば30〜60分',
           'クラウドAPIなし：全推論がローカルで完結',
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '中国語WeChatメッセージに最良のOllamaモデルは？',
-            a: 'Qwen3 7Bが品質と速度の最良バランス——優れた中国語理解力、4.7GBで8GB VRAMに収まり、GPUがあれば1〜3秒で応答します。',
+            a: 'Qwen3 8Bが品質と速度の最良バランス——優れた中国語理解力、4.7GBで8GB VRAMに収まり、GPUがあれば1〜3秒で応答します。',
           },
         ],
       },
@@ -407,22 +407,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Productivity & Knowledge Tools',
     title: '用本地大模型搭建微信机器人：私人助理 2026',
     seoTitle: '本地大模型WeChat机器人实战 2026：WeChatFerry + Ollama完整配置教程',
-    metaDescription: '2026年微信私人助理机器人完整搭建教程：使用WeChatFerry在Windows上钩入微信PC客户端，搭配Ollama本地大模型（推荐Qwen3 7B Q4量化版）自动处理私信与群聊。全程本地推理，无需云端API，约30–60分钟完成部署。',
+    metaDescription: '2026年微信私人助理机器人完整搭建教程：使用WeChatFerry在Windows上钩入微信PC客户端，搭配Ollama本地大模型（推荐Qwen3 8B Q4量化版）自动处理私信与群聊。全程本地推理，无需云端API，约30–60分钟完成部署。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**2026年可用WeChatFerry + Ollama在Windows PC上搭建微信私人助理机器人——本地大模型（推荐Qwen3 7B），无需云端API，所有数据留在本地。**',
+    leadAnswerBlock: '**2026年可用WeChatFerry + Ollama在Windows PC上搭建微信私人助理机器人——本地大模型（推荐Qwen3 8B），无需云端API，所有数据留在本地。**',
     quickAnswerTop: {
       question: '如何用本地大模型搭建微信机器人？',
       answer: '使用WeChatFerry（Windows）注入微信PC客户端，通过HTTP API对接Ollama，将收到的微信消息路由给本地大模型。全程配置时间约30–60分钟。',
       bullets: [
         'WeChatFerry：2026年最佳Windows微信机器人框架',
-        'Ollama：本地大模型后端（中文推荐Qwen3 7B）',
+        'Ollama：本地大模型后端（中文推荐Qwen3 8B）',
         'Python桥接：消息路由与回复格式化',
         '上下文窗口：保存对话历史支持多轮对话',
         '隐私保护：所有数据留在本地，无云端API调用',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama：2026年推荐的本地微信机器人技术栈',
-          'Qwen3 7B：中文微信对话的最佳本地模型',
+          'Qwen3 8B：中文微信对话的最佳本地模型',
           '仅支持Windows：WeChatFerry注入微信PC客户端（Windows专属）',
           '配置时间：熟悉Python的用户约30–60分钟',
           '无云端API：全部推理在本地完成',
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         body: '模型选择对中文消息的回复质量影响显著。',
         columns: ['模型', '大小', '中文质量', 'CPU速度', '8GB显存速度'],
         rows: [
-          { '模型': 'Qwen3:7b', '大小': '4.7 GB', '中文质量': '优秀', 'CPU速度': '3–5 tok/s', '8GB显存速度': '30–45 tok/s' },
+          { '模型': 'Qwen3:8b', '大小': '4.7 GB', '中文质量': '优秀', 'CPU速度': '3–5 tok/s', '8GB显存速度': '30–45 tok/s' },
           { '模型': 'Qwen3:14b', '大小': '9 GB', '中文质量': '最佳', 'CPU速度': '1–2 tok/s', '8GB显存速度': '15–20 tok/s' },
           { '模型': 'Qwen3:3b', '大小': '2 GB', '中文质量': '良好', 'CPU速度': '8–12 tok/s', '8GB显存速度': '60+ tok/s' },
           { '模型': 'Llama3.1:8b', '大小': '4.7 GB', '中文质量': '一般', 'CPU速度': '3–5 tok/s', '8GB显存速度': '30–45 tok/s' },
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '推荐用哪个Ollama模型处理中文微信消息？',
-            a: 'Qwen3 7B是质量与速度的最佳平衡——中文理解能力优秀，4.7GB可装入8GB显存，有GPU时回复延迟仅1–3秒。',
+            a: 'Qwen3 8B是质量与速度的最佳平衡——中文理解能力优秀，4.7GB可装入8GB显存，有GPU时回复延迟仅1–3秒。',
           },
           {
             q: '机器人能处理微信群消息吗？',
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: '推荐用哪个Ollama模型处理中文微信消息？',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B是最佳选择——中文理解优秀，4.7GB可装入8GB显存，GPU推理延迟1–3秒。' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B是最佳选择——中文理解优秀，4.7GB可装入8GB显存，GPU推理延迟1–3秒。' },
         },
       ],
     },
@@ -520,18 +520,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**En 2026 puedes crear un bot asistente personal en WeChat usando WeChatFerry + Ollama. El bot se ejecuta completamente en tu PC con Windows, usa un LLM local (Qwen3 7B o 14B) y responde en tiempo real a los mensajes de WeChat sin enviar datos a ninguna API en la nube.**',
+    leadAnswerBlock: '**En 2026 puedes crear un bot asistente personal en WeChat usando WeChatFerry + Ollama. El bot se ejecuta completamente en tu PC con Windows, usa un LLM local (Qwen3 8B o 14B) y responde en tiempo real a los mensajes de WeChat sin enviar datos a ninguna API en la nube.**',
     quickAnswerTop: {
       question: '¿Cómo creo un bot de WeChat con un LLM local?',
       answer: 'Usa WeChatFerry (Windows) para conectarte al cliente WeChat PC, enlázalo a Ollama mediante HTTP API y enruta los mensajes entrantes al LLM local. Tiempo total de configuración: 30–60 minutos.',
       bullets: [
         'WeChatFerry: el mejor framework de bot WeChat para Windows en 2026',
-        'Ollama: backend de LLM local (se recomienda Qwen3 7B para chino)',
+        'Ollama: backend de LLM local (se recomienda Qwen3 8B para chino)',
         'Puente en Python: gestión del enrutamiento de mensajes y formato de respuestas',
         'Ventana de contexto: almacena el historial de conversación para chats de varios turnos',
         'Privacidad: todos los datos permanecen en tu máquina local, sin llamadas a API en la nube',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama: la combinación recomendada para un bot local de WeChat en 2026',
-          'Qwen3 7B: el mejor modelo local para respuestas en WeChat en chino',
+          'Qwen3 8B: el mejor modelo local para respuestas en WeChat en chino',
           'Solo Windows: WeChatFerry se inyecta en el cliente WeChat PC (solo Windows)',
           'Tiempo de configuración: 30–60 minutos para alguien familiarizado con Python',
           'Sin API en la nube: toda la inferencia se ejecuta localmente, ningún mensaje se envía al exterior',
@@ -568,14 +568,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       requirements: {
         heading: 'Requisitos',
-        body: 'Hardware y software necesarios antes de empezar:\n\n- **Windows 10/11** (requisito de WeChatFerry)\n- **Cliente WeChat PC** — probado con WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** instalado en la misma máquina\n- **8 GB de RAM como mínimo** (se recomiendan 16 GB para un rendimiento fluido con el modelo 7B)\n- **6–8 GB de espacio en disco** para los pesos del modelo Qwen3 7B\n\nModelo recomendado: **Qwen3:7b** — excelente calidad en chino, los 7B parámetros caben en 8 GB de VRAM o se ejecutan a velocidad aceptable en CPU con 16 GB de RAM.',
+        body: 'Hardware y software necesarios antes de empezar:\n\n- **Windows 10/11** (requisito de WeChatFerry)\n- **Cliente WeChat PC** — probado con WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** instalado en la misma máquina\n- **8 GB de RAM como mínimo** (se recomiendan 16 GB para un rendimiento fluido con el modelo 7B)\n- **6–8 GB de espacio en disco** para los pesos del modelo Qwen3 8B\n\nModelo recomendado: **Qwen3:8b** — excelente calidad en chino, los 7B parámetros caben en 8 GB de VRAM o se ejecutan a velocidad aceptable en CPU con 16 GB de RAM.',
       },
       installation: {
         heading: 'Instalación paso a paso',
         numberedItems: [
           {
-            title: 'Instalar Ollama y descargar Qwen3 7B',
-            whyItMatters: 'Descarga Ollama desde ollama.com y ejecuta: `ollama pull qwen2.5:7b`',
+            title: 'Instalar Ollama y descargar Qwen3 8B',
+            whyItMatters: 'Descarga Ollama desde ollama.com y ejecuta: `ollama pull qwen3:8b`',
           },
           {
             title: 'Iniciar sesión en WeChat PC',
@@ -605,14 +605,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       codeExample: {
         heading: 'Código Python esencial',
-        body: 'El código mínimo funcional del bot usa WeChatFerry para recibir mensajes y la HTTP API de Ollama para generar respuestas:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen2.5:7b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
+        body: 'El código mínimo funcional del bot usa WeChatFerry para recibir mensajes y la HTTP API de Ollama para generar respuestas:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen3:8b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
       },
       modelChoice: {
         heading: 'Mejores modelos locales para conversaciones de WeChat en chino',
         body: 'La elección del modelo afecta significativamente la calidad de las respuestas a mensajes en chino.',
         columns: ['Modelo', 'Tamaño', 'Calidad en chino', 'Velocidad (CPU)', 'Velocidad (8 GB VRAM)'],
         rows: [
-          { 'Modelo': 'Qwen3:7b', 'Tamaño': '4,7 GB', 'Calidad en chino': 'Excelente', 'Velocidad (CPU)': '3–5 tok/s', 'Velocidad (8 GB VRAM)': '30–45 tok/s' },
+          { 'Modelo': 'Qwen3:8b', 'Tamaño': '4,7 GB', 'Calidad en chino': 'Excelente', 'Velocidad (CPU)': '3–5 tok/s', 'Velocidad (8 GB VRAM)': '30–45 tok/s' },
           { 'Modelo': 'Qwen3:14b', 'Tamaño': '9 GB', 'Calidad en chino': 'Óptima', 'Velocidad (CPU)': '1–2 tok/s', 'Velocidad (8 GB VRAM)': '15–20 tok/s' },
           { 'Modelo': 'Qwen3:3b', 'Tamaño': '2 GB', 'Calidad en chino': 'Buena', 'Velocidad (CPU)': '8–12 tok/s', 'Velocidad (8 GB VRAM)': '60+ tok/s' },
           { 'Modelo': 'Llama3.1:8b', 'Tamaño': '4,7 GB', 'Calidad en chino': 'Moderada', 'Velocidad (CPU)': '3–5 tok/s', 'Velocidad (8 GB VRAM)': '30–45 tok/s' },
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el mejor modelo de Ollama para mensajes de WeChat en chino?',
-            a: 'Qwen3 7B es el mejor equilibrio entre calidad y velocidad para respuestas en WeChat en chino — excelente comprensión del chino, suficientemente rápido en la mayoría del hardware, y el modelo de 4,7 GB cabe en 8 GB de VRAM.',
+            a: 'Qwen3 8B es el mejor equilibrio entre calidad y velocidad para respuestas en WeChat en chino — excelente comprensión del chino, suficientemente rápido en la mayoría del hardware, y el modelo de 4,7 GB cabe en 8 GB de VRAM.',
           },
           {
             q: '¿Puede el bot gestionar chats grupales?',
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Cuál es el mejor modelo para mensajes de WeChat en chino?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Qwen3 7B es el mejor equilibrio entre calidad y velocidad — excelente comprensión del chino, 4,7 GB caben en 8 GB de VRAM, responde en 1–3 segundos con GPU.',
+            text: 'Qwen3 8B es el mejor equilibrio entre calidad y velocidad — excelente comprensión del chino, 4,7 GB caben en 8 GB de VRAM, responde en 1–3 segundos con GPU.',
           },
         },
       ],
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       name: 'Crear un bot de WeChat con LLM local',
       step: [
-        { '@type': 'HowToStep', name: 'Instalar Ollama y descargar Qwen3 7B', text: 'Descarga Ollama y ejecuta: ollama pull qwen2.5:7b' },
+        { '@type': 'HowToStep', name: 'Instalar Ollama y descargar Qwen3 8B', text: 'Descarga Ollama y ejecuta: ollama pull qwen3:8b' },
         { '@type': 'HowToStep', name: 'Iniciar sesión en WeChat PC', text: 'Abre WeChat en Windows y mantenlo conectado' },
         { '@type': 'HowToStep', name: 'Instalar WeChatFerry', text: 'pip install wcferry' },
         { '@type': 'HowToStep', name: 'Crear el manejador de mensajes en Python', text: 'Escribe el código del bot para enrutar mensajes de WeChat a la API de Ollama' },
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-01',
       'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
@@ -719,18 +719,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**2026년 WeChatFerry + Ollama를 사용하여 WeChat에서 개인 비서 봇을 만들 수 있습니다. 봇은 Windows PC에서 완전히 실행되며, 로컬 LLM(Qwen3 7B 또는 14B)을 사용하고 클라우드 API로 데이터를 전송하지 않고 실시간으로 WeChat 메시지에 응답합니다.**',
+    leadAnswerBlock: '**2026년 WeChatFerry + Ollama를 사용하여 WeChat에서 개인 비서 봇을 만들 수 있습니다. 봇은 Windows PC에서 완전히 실행되며, 로컬 LLM(Qwen3 8B 또는 14B)을 사용하고 클라우드 API로 데이터를 전송하지 않고 실시간으로 WeChat 메시지에 응답합니다.**',
     quickAnswerTop: {
       question: '로컬 LLM으로 WeChat 봇을 어떻게 만듭니까?',
       answer: 'WeChatFerry(Windows)를 사용하여 WeChat PC 클라이언트에 연결하고, HTTP API를 통해 Ollama에 연결하고, 들어오는 메시지를 로컬 LLM으로 라우팅하십시오. 총 설정 시간: 30–60분.',
       bullets: [
         'WeChatFerry: 2026년 Windows에서 최고의 WeChat 봇 프레임워크',
-        'Ollama: 로컬 LLM 백엔드(중국어에는 Qwen3 7B 권장)',
+        'Ollama: 로컬 LLM 백엔드(중국어에는 Qwen3 8B 권장)',
         'Python 브리지: 메시지 라우팅 및 응답 형식 관리',
         '컨텍스트 창: 다중 턴 채팅을 위한 대화 기록 저장',
         '개인 정보 보호: 모든 데이터가 로컬 기기에 유지됨, 클라우드 API 호출 없음',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama: 2026년 로컬 WeChat 봇을 위한 권장 조합',
-          'Qwen3 7B: WeChat에서 중국어 응답을 위한 최고의 로컬 모델',
+          'Qwen3 8B: WeChat에서 중국어 응답을 위한 최고의 로컬 모델',
           'Windows 전용: WeChatFerry는 WeChat PC 클라이언트에 주입됩니다(Windows 전용)',
           '설정 시간: Python에 익숙한 사람이 30–60분',
           '클라우드 API 없음: 모든 추론이 로컬에서 실행되며 어떤 메시지도 외부로 전송되지 않음',
@@ -767,14 +767,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       requirements: {
         heading: '요구 사항',
-        body: '시작하기 전에 필요한 하드웨어 및 소프트웨어:\n\n- **Windows 10/11**(WeChatFerry 요구 사항)\n- **WeChat PC 클라이언트** — WeChat 3.9.x로 테스트됨\n- **Python 3.10+**\n- **Ollama** 동일한 기기에 설치\n- **최소 8 GB RAM**(7B 모델로 원활한 성능을 위해 16 GB 권장)\n- 모델 가중치를 위해 **6–8 GB 디스크 공간** Qwen3 7B\n\n권장 모델: **Qwen3:7b** — 훌륭한 중국어 품질, 7B 매개변수가 8 GB VRAM에 맞거나 16 GB RAM에서 허용 가능한 속도로 CPU에서 실행됩니다.',
+        body: '시작하기 전에 필요한 하드웨어 및 소프트웨어:\n\n- **Windows 10/11**(WeChatFerry 요구 사항)\n- **WeChat PC 클라이언트** — WeChat 3.9.x로 테스트됨\n- **Python 3.10+**\n- **Ollama** 동일한 기기에 설치\n- **최소 8 GB RAM**(7B 모델로 원활한 성능을 위해 16 GB 권장)\n- 모델 가중치를 위해 **6–8 GB 디스크 공간** Qwen3 8B\n\n권장 모델: **Qwen3:8b** — 훌륭한 중국어 품질, 7B 매개변수가 8 GB VRAM에 맞거나 16 GB RAM에서 허용 가능한 속도로 CPU에서 실행됩니다.',
       },
       installation: {
         heading: '단계별 설치',
         numberedItems: [
           {
-            title: 'Ollama 설치 및 Qwen3 7B 다운로드',
-            whyItMatters: 'ollama.com에서 Ollama를 다운로드하고 실행: `ollama pull qwen2.5:7b`',
+            title: 'Ollama 설치 및 Qwen3 8B 다운로드',
+            whyItMatters: 'ollama.com에서 Ollama를 다운로드하고 실행: `ollama pull qwen3:8b`',
           },
           {
             title: 'WeChat PC에 로그인',
@@ -804,14 +804,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       codeExample: {
         heading: '핵심 Python 코드',
-        body: '최소한의 기능하는 봇 코드는 메시지를 받기 위해 WeChatFerry를 사용하고 응답을 생성하기 위해 Ollama HTTP API를 사용합니다:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen2.5:7b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
+        body: '최소한의 기능하는 봇 코드는 메시지를 받기 위해 WeChatFerry를 사용하고 응답을 생성하기 위해 Ollama HTTP API를 사용합니다:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen3:8b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
       },
       modelChoice: {
         heading: '중국어 WeChat 대화를 위한 최고의 로컬 모델',
         body: '모델 선택이 중국어 메시지 응답 품질에 크게 영향을 미칩니다.',
         columns: ['모델', '크기', '중국어 품질', '속도 (CPU)', '속도 (8 GB VRAM)'],
         rows: [
-          { '모델': 'Qwen3:7b', '크기': '4.7 GB', '중국어 품질': '우수', '속도 (CPU)': '3–5 tok/s', '속도 (8 GB VRAM)': '30–45 tok/s' },
+          { '모델': 'Qwen3:8b', '크기': '4.7 GB', '중국어 품질': '우수', '속도 (CPU)': '3–5 tok/s', '속도 (8 GB VRAM)': '30–45 tok/s' },
           { '모델': 'Qwen3:14b', '크기': '9 GB', '중국어 품질': '최적', '속도 (CPU)': '1–2 tok/s', '속도 (8 GB VRAM)': '15–20 tok/s' },
           { '모델': 'Qwen3:3b', '크기': '2 GB', '중국어 품질': '양호', '속도 (CPU)': '8–12 tok/s', '속도 (8 GB VRAM)': '60+ tok/s' },
           { '모델': 'Llama3.1:8b', '크기': '4.7 GB', '중국어 품질': '보통', '속도 (CPU)': '3–5 tok/s', '속도 (8 GB VRAM)': '30–45 tok/s' },
@@ -834,7 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '중국어 WeChat 메시지에 가장 좋은 Ollama 모델은 무엇입니까?',
-            a: 'Qwen3 7B는 중국어 WeChat 응답을 위한 최고의 품질-속도 균형입니다 — 뛰어난 중국어 이해, 대부분의 하드웨어에서 충분히 빠르며, 4.7 GB 모델이 8 GB VRAM에 맞습니다.',
+            a: 'Qwen3 8B는 중국어 WeChat 응답을 위한 최고의 품질-속도 균형입니다 — 뛰어난 중국어 이해, 대부분의 하드웨어에서 충분히 빠르며, 4.7 GB 모델이 8 GB VRAM에 맞습니다.',
           },
           {
             q: '봇이 그룹 채팅을 처리할 수 있습니까?',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '중국어 WeChat 메시지에 가장 좋은 모델은 무엇입니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Qwen3 7B는 최고의 품질-속도 균형입니다 — 뛰어난 중국어 이해, 4.7 GB가 8 GB VRAM에 맞으며, GPU로 1–3초 내에 응답합니다.',
+            text: 'Qwen3 8B는 최고의 품질-속도 균형입니다 — 뛰어난 중국어 이해, 4.7 GB가 8 GB VRAM에 맞으며, GPU로 1–3초 내에 응답합니다.',
           },
         },
       ],
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       name: '로컬 LLM으로 WeChat 봇 만들기',
       step: [
-        { '@type': 'HowToStep', name: 'Ollama 설치 및 Qwen3 7B 다운로드', text: 'Ollama를 다운로드하고 실행: ollama pull qwen2.5:7b' },
+        { '@type': 'HowToStep', name: 'Ollama 설치 및 Qwen3 8B 다운로드', text: 'Ollama를 다운로드하고 실행: ollama pull qwen3:8b' },
         { '@type': 'HowToStep', name: 'WeChat PC에 로그인', text: 'Windows에서 WeChat을 열고 연결 상태 유지' },
         { '@type': 'HowToStep', name: 'WeChatFerry 설치', text: 'pip install wcferry' },
         { '@type': 'HowToStep', name: 'Python 메시지 핸들러 생성', text: 'WeChat 메시지를 Ollama API로 라우팅하는 봇 코드 작성' },
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-01',
       'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
@@ -918,18 +918,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Em 2026, você pode criar um bot assistente pessoal no WeChat usando WeChatFerry + Ollama. O bot é executado inteiramente no seu PC com Windows, usa um LLM local (Qwen3 7B ou 14B) e responde em tempo real às mensagens do WeChat sem enviar dados para nenhuma API na nuvem.**',
+    leadAnswerBlock: '**Em 2026, você pode criar um bot assistente pessoal no WeChat usando WeChatFerry + Ollama. O bot é executado inteiramente no seu PC com Windows, usa um LLM local (Qwen3 8B ou 14B) e responde em tempo real às mensagens do WeChat sem enviar dados para nenhuma API na nuvem.**',
     quickAnswerTop: {
       question: 'Como eu crio um bot de WeChat com um LLM local?',
       answer: 'Use o WeChatFerry (Windows) para se conectar ao cliente WeChat PC, ligue-o ao Ollama via HTTP API e encaminhe as mensagens recebidas para o LLM local. Tempo total de configuração: 30–60 minutos.',
       bullets: [
         'WeChatFerry: o melhor framework de bot WeChat para Windows em 2026',
-        'Ollama: backend de LLM local (recomenda-se Qwen3 7B para chinês)',
+        'Ollama: backend de LLM local (recomenda-se Qwen3 8B para chinês)',
         'Ponte em Python: gerenciamento do roteamento de mensagens e formatação das respostas',
         'Janela de contexto: armazena o histórico da conversa para chats de vários turnos',
         'Privacidade: todos os dados permanecem na sua máquina local, sem chamadas a API na nuvem',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama: a combinação recomendada para um bot local de WeChat em 2026',
-          'Qwen3 7B: o melhor modelo local para respostas em chinês no WeChat',
+          'Qwen3 8B: o melhor modelo local para respostas em chinês no WeChat',
           'Apenas Windows: o WeChatFerry se injeta no cliente WeChat PC (apenas Windows)',
           'Tempo de configuração: 30–60 minutos para alguém familiarizado com Python',
           'Sem API na nuvem: toda a inferência é executada localmente, nenhuma mensagem é enviada para fora',
@@ -966,14 +966,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       requirements: {
         heading: 'Requisitos',
-        body: 'Hardware e software necessários antes de começar:\n\n- **Windows 10/11** (requisito do WeChatFerry)\n- **Cliente WeChat PC** — testado com WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** instalado na mesma máquina\n- **8 GB de RAM no mínimo** (recomendam-se 16 GB para um desempenho fluido com o modelo 7B)\n- **6–8 GB de espaço em disco** para os pesos do modelo Qwen3 7B\n\nModelo recomendado: **Qwen3:7b** — excelente qualidade em chinês, os 7B parâmetros cabem em 8 GB de VRAM ou são executados a uma velocidade aceitável em CPU com 16 GB de RAM.',
+        body: 'Hardware e software necessários antes de começar:\n\n- **Windows 10/11** (requisito do WeChatFerry)\n- **Cliente WeChat PC** — testado com WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** instalado na mesma máquina\n- **8 GB de RAM no mínimo** (recomendam-se 16 GB para um desempenho fluido com o modelo 7B)\n- **6–8 GB de espaço em disco** para os pesos do modelo Qwen3 8B\n\nModelo recomendado: **Qwen3:8b** — excelente qualidade em chinês, os 7B parâmetros cabem em 8 GB de VRAM ou são executados a uma velocidade aceitável em CPU com 16 GB de RAM.',
       },
       installation: {
         heading: 'Instalação passo a passo',
         numberedItems: [
           {
-            title: 'Instalar o Ollama e baixar o Qwen3 7B',
-            whyItMatters: 'Baixe o Ollama em ollama.com e execute: `ollama pull qwen2.5:7b`',
+            title: 'Instalar o Ollama e baixar o Qwen3 8B',
+            whyItMatters: 'Baixe o Ollama em ollama.com e execute: `ollama pull qwen3:8b`',
           },
           {
             title: 'Fazer login no WeChat PC',
@@ -1003,14 +1003,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       codeExample: {
         heading: 'Código Python essencial',
-        body: 'O código mínimo funcional do bot usa o WeChatFerry para receber mensagens e a HTTP API do Ollama para gerar respostas:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen2.5:7b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
+        body: 'O código mínimo funcional do bot usa o WeChatFerry para receber mensagens e a HTTP API do Ollama para gerar respostas:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen3:8b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    # keep last 10 turns\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
       },
       modelChoice: {
         heading: 'Melhores modelos locais para conversas de WeChat em chinês',
         body: 'A escolha do modelo afeta significativamente a qualidade das respostas a mensagens em chinês.',
         columns: ['Modelo', 'Tamanho', 'Qualidade em chinês', 'Velocidade (CPU)', 'Velocidade (8 GB VRAM)'],
         rows: [
-          { 'Modelo': 'Qwen3:7b', 'Tamanho': '4,7 GB', 'Qualidade em chinês': 'Excelente', 'Velocidade (CPU)': '3–5 tok/s', 'Velocidade (8 GB VRAM)': '30–45 tok/s' },
+          { 'Modelo': 'Qwen3:8b', 'Tamanho': '4,7 GB', 'Qualidade em chinês': 'Excelente', 'Velocidade (CPU)': '3–5 tok/s', 'Velocidade (8 GB VRAM)': '30–45 tok/s' },
           { 'Modelo': 'Qwen3:14b', 'Tamanho': '9 GB', 'Qualidade em chinês': 'Ótima', 'Velocidade (CPU)': '1–2 tok/s', 'Velocidade (8 GB VRAM)': '15–20 tok/s' },
           { 'Modelo': 'Qwen3:3b', 'Tamanho': '2 GB', 'Qualidade em chinês': 'Boa', 'Velocidade (CPU)': '8–12 tok/s', 'Velocidade (8 GB VRAM)': '60+ tok/s' },
           { 'Modelo': 'Llama3.1:8b', 'Tamanho': '4,7 GB', 'Qualidade em chinês': 'Moderada', 'Velocidade (CPU)': '3–5 tok/s', 'Velocidade (8 GB VRAM)': '30–45 tok/s' },
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é o melhor modelo do Ollama para mensagens de WeChat em chinês?',
-            a: 'O Qwen3 7B é o melhor equilíbrio entre qualidade e velocidade para respostas em chinês no WeChat — excelente compreensão do chinês, rápido o suficiente na maioria dos hardwares, e o modelo de 4,7 GB cabe em 8 GB de VRAM.',
+            a: 'O Qwen3 8B é o melhor equilíbrio entre qualidade e velocidade para respostas em chinês no WeChat — excelente compreensão do chinês, rápido o suficiente na maioria dos hardwares, e o modelo de 4,7 GB cabe em 8 GB de VRAM.',
           },
           {
             q: 'O bot consegue gerenciar chats em grupo?',
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Qual é o melhor modelo para mensagens de WeChat em chinês?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'O Qwen3 7B é o melhor equilíbrio entre qualidade e velocidade — excelente compreensão do chinês, 4,7 GB cabem em 8 GB de VRAM, responde em 1–3 segundos com GPU.',
+            text: 'O Qwen3 8B é o melhor equilíbrio entre qualidade e velocidade — excelente compreensão do chinês, 4,7 GB cabem em 8 GB de VRAM, responde em 1–3 segundos com GPU.',
           },
         },
       ],
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       name: 'Criar um bot de WeChat com LLM local',
       step: [
-        { '@type': 'HowToStep', name: 'Instalar o Ollama e baixar o Qwen3 7B', text: 'Baixe o Ollama e execute: ollama pull qwen2.5:7b' },
+        { '@type': 'HowToStep', name: 'Instalar o Ollama e baixar o Qwen3 8B', text: 'Baixe o Ollama e execute: ollama pull qwen3:8b' },
         { '@type': 'HowToStep', name: 'Fazer login no WeChat PC', text: 'Abra o WeChat no Windows e mantenha-o conectado' },
         { '@type': 'HowToStep', name: 'Instalar o WeChatFerry', text: 'pip install wcferry' },
         { '@type': 'HowToStep', name: 'Criar o manipulador de mensagens em Python', text: 'Escreva o código do bot para encaminhar mensagens do WeChat para a API do Ollama' },
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-01',
       'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
@@ -1118,19 +1118,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**في عام 2026، يمكنك إنشاء بوت مساعد شخصي في WeChat باستخدام WeChatFerry + Ollama. يعمل البوت بالكامل على حاسوبك الشخصي بنظام Windows، ويستخدم نموذج لغة محليًا (Qwen3 7B أو 14B)، ويستجيب للرسائل في الوقت الفعلي دون إرسال أي بيانات إلى أي واجهة API سحابية.**',
+    leadAnswerBlock: '**في عام 2026، يمكنك إنشاء بوت مساعد شخصي في WeChat باستخدام WeChatFerry + Ollama. يعمل البوت بالكامل على حاسوبك الشخصي بنظام Windows، ويستخدم نموذج لغة محليًا (Qwen3 8B أو 14B)، ويستجيب للرسائل في الوقت الفعلي دون إرسال أي بيانات إلى أي واجهة API سحابية.**',
     quickAnswerTop: {
       ar: {
         question: 'كيف أنشئ بوت WeChat مع نموذج لغة محلي؟',
         answer: 'استخدم WeChatFerry (Windows) للاتصال بعميل WeChat PC، واربطه بـ Ollama عبر HTTP API، وأعد توجيه الرسائل الواردة إلى النموذج اللغوي المحلي. الوقت الإجمالي للإعداد: 30–60 دقيقة.',
         bullets: [
           'WeChatFerry: أفضل إطار عمل لبوت WeChat على Windows في 2026',
-          'Ollama: الواجهة الخلفية للنموذج اللغوي المحلي (يُوصى بـ Qwen3 7B للغة الصينية)',
+          'Ollama: الواجهة الخلفية للنموذج اللغوي المحلي (يُوصى بـ Qwen3 8B للغة الصينية)',
           'جسر Python: إدارة توجيه الرسائل وتنسيق الردود',
           'نافذة السياق: حفظ تاريخ المحادثة للمحادثات متعددة الأدوار',
           'الخصوصية: تبقى جميع البيانات على جهازك المحلي، بدون استدعاءات API سحابية',
         ],
-        updatedDate: '2026-05-26',
+        updatedDate: '2026-07',
       },
     },
     snippetBlocks: [
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'WeChatFerry + Ollama: التوليفة الموصى بها لبوت WeChat المحلي في 2026',
-          'Qwen3 7B: أفضل نموذج محلي للردود باللغة الصينية في WeChat',
+          'Qwen3 8B: أفضل نموذج محلي للردود باللغة الصينية في WeChat',
           'Windows فقط: يُدمج WeChatFerry نفسه في عميل WeChat PC (Windows فقط)',
           'وقت الإعداد: 30–60 دقيقة لمن لديه خبرة بـ Python',
           'بدون API سحابية: تعمل الاستدلالات بالكامل محليًا، ولا يُرسل أي رسالة للخارج',
@@ -1168,14 +1168,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       requirements: {
         heading: 'المتطلبات',
-        body: 'الأجهزة والبرامج اللازمة قبل البدء:\n\n- **Windows 10/11** (مطلب WeChatFerry)\n- **عميل WeChat PC** — تم اختباره مع WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** مثبت على نفس الجهاز\n- **8 GB RAM كحد أدنى** (يُوصى بـ 16 GB لأداء سلس مع نموذج 7B)\n- **6–8 GB مساحة على القرص** لأوزان نموذج Qwen3 7B\n\nالنموذج الموصى به: **Qwen3:7b** — جودة ممتازة في اللغة الصينية، يشغل 8 GB VRAM أو يعمل بسرعة مقبولة على المعالج مع 16 GB RAM.',
+        body: 'الأجهزة والبرامج اللازمة قبل البدء:\n\n- **Windows 10/11** (مطلب WeChatFerry)\n- **عميل WeChat PC** — تم اختباره مع WeChat 3.9.x\n- **Python 3.10+**\n- **Ollama** مثبت على نفس الجهاز\n- **8 GB RAM كحد أدنى** (يُوصى بـ 16 GB لأداء سلس مع نموذج 7B)\n- **6–8 GB مساحة على القرص** لأوزان نموذج Qwen3 8B\n\nالنموذج الموصى به: **Qwen3:8b** — جودة ممتازة في اللغة الصينية، يشغل 8 GB VRAM أو يعمل بسرعة مقبولة على المعالج مع 16 GB RAM.',
       },
       installation: {
         heading: 'التثبيت خطوة بخطوة',
         numberedItems: [
           {
-            title: 'تثبيت Ollama وتنزيل Qwen3 7B',
-            whyItMatters: 'نزّل Ollama من ollama.com ونفّذ: `ollama pull qwen2.5:7b`',
+            title: 'تثبيت Ollama وتنزيل Qwen3 8B',
+            whyItMatters: 'نزّل Ollama من ollama.com ونفّذ: `ollama pull qwen3:8b`',
           },
           {
             title: 'تسجيل الدخول إلى WeChat PC',
@@ -1205,14 +1205,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       codeExample: {
         heading: 'الكود Python الأساسي',
-        body: 'الكود الأدنى الوظيفي للبوت يستخدم WeChatFerry لاستقبال الرسائل وHTTP API لـ Ollama لتوليد الردود:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen2.5:7b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
+        body: 'الكود الأدنى الوظيفي للبوت يستخدم WeChatFerry لاستقبال الرسائل وHTTP API لـ Ollama لتوليد الردود:\n\n```python\nimport requests\nfrom wcferry import Wcf, WxMsg\n\nOLLAMA_URL = "http://localhost:11434/api/chat"\nMODEL = "qwen3:8b"\nTRIGGER = "@ai"\n\nconversation_history: dict[str, list] = {}\n\ndef ask_ollama(contact_id: str, user_message: str) -> str:\n    if contact_id not in conversation_history:\n        conversation_history[contact_id] = []\n    history = conversation_history[contact_id]\n    history.append({"role": "user", "content": user_message})\n    if len(history) > 20:\n        history = history[-20:]\n    conversation_history[contact_id] = history\n    response = requests.post(OLLAMA_URL, json={\n        "model": MODEL,\n        "messages": history,\n        "stream": False\n    })\n    reply = response.json()["message"]["content"]\n    history.append({"role": "assistant", "content": reply})\n    return reply\n\ndef on_message(msg: WxMsg):\n    if msg.type == 1 and msg.content.startswith(TRIGGER):\n        user_text = msg.content[len(TRIGGER):].strip()\n        reply = ask_ollama(msg.sender, user_text)\n        wcf.send_text(reply, msg.sender)\n\nwcf = Wcf()\nwcf.enable_receiving_msg()\nfor msg in wcf.get_msgs():\n    on_message(msg)\n```',
       },
       modelChoice: {
         heading: 'أفضل النماذج المحلية لمحادثات WeChat باللغة الصينية',
         body: 'يؤثر اختيار النموذج بشكل كبير على جودة الردود على الرسائل باللغة الصينية.',
         columns: ['النموذج', 'الحجم', 'جودة اللغة الصينية', 'السرعة (CPU)', 'السرعة (8 GB VRAM)'],
         rows: [
-          { 'النموذج': 'Qwen3:7b', 'الحجم': '4.7 GB', 'جودة اللغة الصينية': 'ممتازة', 'السرعة (CPU)': '3–5 رمز/ثانية', 'السرعة (8 GB VRAM)': '30–45 رمز/ثانية' },
+          { 'النموذج': 'Qwen3:8b', 'الحجم': '4.7 GB', 'جودة اللغة الصينية': 'ممتازة', 'السرعة (CPU)': '3–5 رمز/ثانية', 'السرعة (8 GB VRAM)': '30–45 رمز/ثانية' },
           { 'النموذج': 'Qwen3:14b', 'الحجم': '9 GB', 'جودة اللغة الصينية': 'مثالية', 'السرعة (CPU)': '1–2 رمز/ثانية', 'السرعة (8 GB VRAM)': '15–20 رمز/ثانية' },
           { 'النموذج': 'Qwen3:3b', 'الحجم': '2 GB', 'جودة اللغة الصينية': 'جيدة', 'السرعة (CPU)': '8–12 رمز/ثانية', 'السرعة (8 GB VRAM)': '60+ رمز/ثانية' },
           { 'النموذج': 'Llama3.1:8b', 'الحجم': '4.7 GB', 'جودة اللغة الصينية': 'متوسطة', 'السرعة (CPU)': '3–5 رمز/ثانية', 'السرعة (8 GB VRAM)': '30–45 رمز/ثانية' },
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل نموذج Ollama لرسائل WeChat باللغة الصينية؟',
-            a: 'Qwen3 7B هو أفضل توازن بين الجودة والسرعة لردود WeChat باللغة الصينية — فهم ممتاز للغة الصينية، 4.7 GB تناسب 8 GB VRAM، يستجيب في 1–3 ثوانٍ مع بطاقة رسومية.',
+            a: 'Qwen3 8B هو أفضل توازن بين الجودة والسرعة لردود WeChat باللغة الصينية — فهم ممتاز للغة الصينية، 4.7 GB تناسب 8 GB VRAM، يستجيب في 1–3 ثوانٍ مع بطاقة رسومية.',
           },
           {
             q: 'هل يستطيع البوت إدارة محادثات المجموعة؟',
@@ -1270,7 +1270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'ما أفضل نموذج لرسائل WeChat باللغة الصينية؟',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Qwen3 7B هو أفضل توازن بين الجودة والسرعة — فهم ممتاز للغة الصينية، 4.7 GB تناسب 8 GB VRAM، يستجيب في 1–3 ثوانٍ مع بطاقة رسومية.',
+            text: 'Qwen3 8B هو أفضل توازن بين الجودة والسرعة — فهم ممتاز للغة الصينية، 4.7 GB تناسب 8 GB VRAM، يستجيب في 1–3 ثوانٍ مع بطاقة رسومية.',
           },
         },
       ],
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ar',
       name: 'كيفية إنشاء بوت WeChat مع نموذج لغة محلي',
       step: [
-        { '@type': 'HowToStep', name: 'تثبيت Ollama وتنزيل Qwen3 7B', text: 'نزّل Ollama ونفّذ: ollama pull qwen2.5:7b' },
+        { '@type': 'HowToStep', name: 'تثبيت Ollama وتنزيل Qwen3 8B', text: 'نزّل Ollama ونفّذ: ollama pull qwen3:8b' },
         { '@type': 'HowToStep', name: 'تسجيل الدخول إلى WeChat PC', text: 'افتح WeChat على Windows وأبقه متصلاً' },
         { '@type': 'HowToStep', name: 'تثبيت WeChatFerry', text: 'pip install wcferry' },
         { '@type': 'HowToStep', name: 'إنشاء معالج الرسائل بـ Python', text: 'اكتب كود البوت لتوجيه رسائل WeChat إلى API لـ Ollama' },
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-01',
       'proficiencyLevel': 'Intermediate',
     },
     relatedReading: {
