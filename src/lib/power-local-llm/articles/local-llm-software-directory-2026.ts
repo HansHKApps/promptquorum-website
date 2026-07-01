@@ -9,18 +9,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'The Complete Local LLM Software Directory: 70+ Tools to Run AI on Your Own Hardware (2026)',
-    seoTitle: '87 Local LLM Tools 2026: 9 Categories, Ollama to RAG',
+    seoTitle: 'Local LLM Tools 2026: 87 Apps Updated (Ollama to RAG)',
     affiliateDisclosure: true,
     intro:
-      'The local-LLM ecosystem in 2026 is large enough that picking the wrong tool first costs hours, not minutes. This directory catalogues 87 actively-maintained projects across nine layers — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice and multimodal, mobile clients, and specialized productivity plugins — with the description, licence, and primary URL for each. Use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',
+      'This is an updated 2026 directory of 87 local LLM tools, apps, frameworks, and deployment software — last updated July 2026. The local-LLM ecosystem in 2026 is large enough that picking the wrong tool first costs hours, not minutes. The directory catalogues 87 actively-maintained projects across nine layers — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice and multimodal, mobile clients, and specialized productivity plugins — with the description, licence, and primary URL for each. Whether you are picking local LLM tools, deployment tools for multi-user serving, or frameworks for building agents, use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',
     metaDescription:
-      '87 local LLM tools: Ollama, LM Studio, GPT4All, Jan.ai, RAG, agents & mobile. 9 categories with licences, links & versions. Pick the right stack faster.',
+      'Updated 2026 directory of 87 local LLM tools, apps, frameworks & deployment software across 9 categories — Ollama, LM Studio, RAG, agents. Updated July 2026.',
     twitterDescription:
-      '87 local-LLM tools across 9 categories — runtimes, desktop apps, web UIs, coding agents, RAG, multi-agent frameworks, voice, mobile. Licences, links & latest versions, updated June 2026. The "what exists" map before you commit to a stack.',
+      '87 local-LLM tools across 9 categories — runtimes, desktop apps, web UIs, coding agents, RAG, multi-agent frameworks, voice, mobile. Licences, links & latest versions, updated July 2026. The "what exists" map before you commit to a stack.',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai software ecosystem',
     ],
     leadAnswerBlock:
-      '**The local-LLM ecosystem in 2026 splits cleanly into nine layers.** Runtimes (Ollama, llama.cpp, vLLM) move tokens through the model; desktop apps (LM Studio, Jan, GPT4All) wrap a runtime in a chat UI; web UIs (Open WebUI, LibreChat) do the same in a browser; coding assistants (Continue.dev, Cline, Aider) plug a local model into your editor; RAG systems (AnythingLLM, PrivateGPT) point it at your documents; agent frameworks (LangChain, CrewAI, LangGraph) chain calls into multi-step workflows; voice and multimodal stacks (Whisper.cpp, Piper, LLaVA) extend it beyond text; mobile clients (MLC Chat, PocketPal AI) put it on a phone; and specialized productivity plugins (Obsidian, Logseq, AutoGPT) embed it in tools you already use. Pick a runtime first (Ollama for almost everyone), then add one or two layers above. The directory below lists every project worth knowing in each layer along with its licence, so you can plan a stack that is open-source end-to-end if that matters to you.**',
+      '**This updated 2026 directory (last updated July 2026) maps 87 local LLM tools, deployment tools, and frameworks across nine layers.** The local-LLM ecosystem in 2026 splits cleanly into these layers. Runtimes (Ollama, llama.cpp, vLLM) move tokens through the model; desktop apps (LM Studio, Jan, GPT4All) wrap a runtime in a chat UI; web UIs (Open WebUI, LibreChat) do the same in a browser; coding assistants (Continue.dev, Cline, Aider) plug a local model into your editor; RAG systems (AnythingLLM, PrivateGPT) point it at your documents; agent frameworks (LangChain, CrewAI, LangGraph) chain calls into multi-step workflows; voice and multimodal stacks (Whisper.cpp, Piper, LLaVA) extend it beyond text; mobile clients (MLC Chat, PocketPal AI) put it on a phone; and specialized productivity plugins (Obsidian, Logseq, AutoGPT) embed it in tools you already use. Pick a runtime first (Ollama for almost everyone), then add one or two layers above. The directory below lists every project worth knowing in each layer along with its licence, so you can plan a stack that is open-source end-to-end if that matters to you.**',
     quickAnswerTop: {
       en: {
         question: 'What are the best local LLM tools to run AI on my own hardware in 2026?',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For RAG: AnythingLLM (easiest), PrivateGPT (offline-leaning), Open WebUI (built-in RAG inside the chat UI).',
           'For mobile: MLC Chat or PocketPal AI on Android, Private LLM or Enchanted on iOS — all run actually-useful 2-4B models on flagship phones.',
         ],
-        updatedDate: '2026-06-03',
+        updatedDate: '2026-07-01',
       },
     },
     toc: [
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'How This Directory Stays Current',
         content:
-          '**This directory is reviewed every six months — last reviewed June 2026, next refresh November 2026.** The June 2026 pass reverified every link and corrected several project names and licences: Faraday is now Backyard AI, the maintained Coqui TTS fork moved to Idiap, and Cherry Studio is AGPL 3.0. Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a layer that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
+          '**This directory is reviewed every six months and patched between reviews — last updated July 2026, next scheduled refresh November 2026.** The most recent pass reverified every link and corrected several project names and licences: Faraday is now Backyard AI, the maintained Coqui TTS fork moved to Idiap, and Cherry Studio is AGPL 3.0. Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a layer that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
       },
       sources: {
         id: 'sources',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How often does this directory get updated?',
-            a: 'Every six months — last reviewed June 2026, the next scheduled refresh is November 2026. Mid-cycle changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories or layers wait for a refresh to keep the structure stable. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
+            a: 'Every six months — last updated July 2026, the next scheduled refresh is November 2026. Mid-cycle changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories or layers wait for a refresh to keep the structure stable. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
           },
         ],
       },
