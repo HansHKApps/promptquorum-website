@@ -4,7 +4,7 @@
 // tags joined yet) and a neutral third-party-link notice. EN block first;
 // DE/FR/JA/ZH render as "Coming Soon" until translated.
 //
-// Prices: May 2026 snapshot. Specs and speed figures reuse PromptQuorum on-site
+// Prices: July 2026 snapshot. Specs and speed figures reuse PromptQuorum on-site
 // data from /local-llms/best-laptops-local-llm and /local-llms/local-llm-on-laptop.
 // Laptop prices move with model cycles and sales — confirm before buying.
 
@@ -15,13 +15,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Best Laptops for Running Local LLMs: Buying Guide 2026',
     seoTitle: 'Best Laptop for Local LLMs 2026: MacBook to ThinkPad',
     intro:
-      'Most laptop advice for local LLMs starts with the GPU and stops there. The number that actually decides which model fits is memory: VRAM on a Windows gaming laptop, or unified memory on Apple Silicon — and a model that does not fit in memory either fails to load or crawls on swap. This guide compares four laptop families across three buying styles: an Apple MacBook Pro for the most memory in a portable body, a Lenovo ThinkPad or ASUS ROG gaming laptop for NVIDIA GPU speed, and a Framework Laptop 16 for repairability and upgrades. Expect a portable machine to run 20-30% slower than a desktop with the same chip because of thermal limits. Prices here are a May 2026 snapshot — laptop pricing moves with model cycles and sales, so confirm the current price before you buy.',
+      'Most laptop advice for local LLMs starts with the GPU and stops there. The number that actually decides which model fits is memory: VRAM on a Windows gaming laptop, or unified memory on Apple Silicon — and a model that does not fit in memory either fails to load or crawls on swap. This guide compares four laptop families across three buying styles: an Apple MacBook Pro for the most memory in a portable body, a Lenovo ThinkPad or ASUS ROG gaming laptop for NVIDIA GPU speed, and a Framework Laptop 16 for repairability and upgrades. Expect a portable machine to run 20-30% slower than a desktop with the same chip because of thermal limits. Prices here are a July 2026 snapshot — laptop pricing moves with model cycles and sales, so confirm the current price before you buy.',
     metaDescription:
       'Best laptops for running local LLMs in 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, GPU VRAM, and real token speeds compared by price tier.',
     twitterDescription:
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Repairable pick: Framework Laptop 16 — upgradeable RAM and storage',
           'Plan for 8 GB minimum, 16 GB+ recommended; expect 20-30% less speed than a desktop',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Memory minimums:** 8 GB runs 7B models at Q4_K_M, 16 GB runs 13B comfortably, and large MacBook Pro configurations reach much larger models. Always leave 2-4 GB of headroom for the operating system.',
           '**Expect a desktop gap.** A laptop runs roughly 20-30% slower than a desktop with the same chip because thermal limits keep clock speeds down under sustained load.',
           '**Battery changes everything on Windows.** A gaming laptop typically disables or throttles the discrete GPU on battery, dropping inference to a crawl — plan to run plugged in. Apple Silicon stays usable on battery and is far more efficient.',
-          '**Prices are a May 2026 snapshot.** Laptop pricing moves with model-refresh cycles and sales — treat every figure here as a range and confirm the live price before buying.',
+          '**Prices are a July 2026 snapshot.** Laptop pricing moves with model-refresh cycles and sales — treat every figure here as a range and confirm the live price before buying.',
         ],
       },
       quickFacts: {
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Four Laptop Families Compare for Local LLMs',
         content:
-          'Speed figures are reused from PromptQuorum on-site laptop testing — a 7B model runs 10-25 tok/s on a laptop CPU, 30-80 tok/s on Apple Silicon, and 60-90 tok/s on an RTX 4060 laptop GPU. The "best for" column reflects buying style, not a single SKU. Prices are a May 2026 snapshot expressed as ranges — laptop pricing moves with model cycles and sales, so confirm before buying.',
+          'Speed figures are reused from PromptQuorum on-site laptop testing — a 7B model runs 10-25 tok/s on a laptop CPU, 30-80 tok/s on Apple Silicon, and 60-90 tok/s on an RTX 4060 laptop GPU. The "best for" column reflects buying style, not a single SKU. Prices are a July 2026 snapshot expressed as ranges — laptop pricing moves with model cycles and sales, so confirm before buying.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -156,35 +156,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Think of memory as the size of the workbench and the model as the project on it. A faster chip finishes work quicker, but if the project does not fit on the bench at all, speed never matters. A laptop also has a smaller cooling system than a desktop, so it slows down under long jobs.',
           },
         ],
-        columns: ['Laptop family', 'Memory model', '7B speed (reused data)', 'Best for', 'Price (May 2026)'],
+        columns: ['Laptop family', 'Memory model', '7B speed (reused data)', 'Best for', 'Price (Jul 2026)'],
         rows: [
           {
             'Laptop family': 'Apple MacBook Pro',
             'Memory model': 'Unified memory (CPU + GPU shared)',
             '7B speed (reused data)': '30-80 tok/s on Apple Silicon',
             'Best for': 'Biggest models portably, best battery life',
-            'Price (May 2026)': 'Mid to premium; check current price',
+            'Price (Jul 2026)': 'Mid to premium; check current price',
           },
           {
             'Laptop family': 'Lenovo ThinkPad / workstation',
             'Memory model': 'NVIDIA RTX VRAM + system RAM',
             '7B speed (reused data)': '60-90 tok/s on an RTX 4060 GPU',
             'Best for': 'Durable build, plugged-in 7B-13B work',
-            'Price (May 2026)': 'Mid to premium; check current price',
+            'Price (Jul 2026)': 'Mid to premium; check current price',
           },
           {
             'Laptop family': 'ASUS ROG gaming laptop',
             'Memory model': 'NVIDIA RTX VRAM + system RAM',
             '7B speed (reused data)': '60-90 tok/s on an RTX 4060 GPU',
             'Best for': 'Fastest 7B-13B on AC power',
-            'Price (May 2026)': 'Mid range; check current price',
+            'Price (Jul 2026)': 'Mid range; check current price',
           },
           {
             'Laptop family': 'Framework Laptop 16',
             'Memory model': 'Upgradeable system RAM + GPU module',
             '7B speed (reused data)': 'Comparable to an RTX laptop on AC',
             'Best for': 'Repairability, upgrading memory later',
-            'Price (May 2026)': 'Mid range; check current price',
+            'Price (Jul 2026)': 'Mid range; check current price',
           },
         ],
       },
@@ -346,6 +346,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**32 GB+ — 13B with heavy multitasking, or larger models:** comfortable for 13B alongside other apps, and the entry point for stepping beyond 13B.',
           '**Large MacBook Pro unified memory — biggest portable models:** because the GPU shares the full memory pool, a high-memory MacBook Pro fits models well beyond a 16 GB Windows laptop.',
           '**Use 8 GB if** 7B models cover your work; **choose 16 GB+ if** you want 13B models or run a browser and editor alongside inference.',
+          '**6 GB VRAM (e.g. RTX 3050 laptop):** fits 7B models at Q4_K_M (~4.5 GB needed) — barely. System RAM (DDR4) does not extend VRAM; CUDA cannot use it for model weights. 13B models (need ~9 GB VRAM) will not load at any quantization.',
+          '**8 GB VRAM (RTX 3060 8GB, RTX 4060 laptop):** fits any 7B model comfortably. 13B at Q4_K_M needs ~9 GB and will not fit. The practical VRAM floor for a no-frustration Windows gaming laptop AI setup.',
+          '**12–16 GB VRAM (RTX 3080 12GB, RTX 4060 Ti 16GB, RTX 4080/4090 laptop):** 13B models fit comfortably; 30B+ possible at aggressive quantization.',
         ],
         snippetBlocks: [
           {
@@ -355,6 +358,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'plain-terms',
             text: 'Every model needs a certain amount of memory to load, and the operating system needs its own share on top. If the model does not fit, the laptop falls back on disk-based swap and slows to a crawl. Buy enough memory for your largest model with a few gigabytes to spare.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'If you already own a gaming laptop: your GPU\'s VRAM is the binding limit, not your system RAM. An RTX 3050 laptop almost always has 6 GB VRAM — enough for 7B models, not 13B. Open Task Manager → Performance → GPU to see your VRAM. System RAM (DDR4) cannot be used as VRAM for CUDA inference.',
           },
         ],
       },
@@ -394,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Every price band in this guide is a May 2026 snapshot. Laptop pricing moves with model cycles and sale events — always open the current retailer or manufacturer listing before buying.',
+            text: 'Every price band in this guide is a July 2026 snapshot. Laptop pricing moves with model cycles and sale events — always open the current retailer or manufacturer listing before buying.',
           },
         ],
         affiliateLinks: [
@@ -507,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Die besten Laptops für lokale LLMs: Kaufberatung 2026',
     seoTitle: 'Bester Laptop für lokale LLMs 2026: MacBook bis ThinkPad',
     intro:
-      'Die meisten Laptop-Empfehlungen für lokale LLMs beginnen bei der GPU und hören dort auch wieder auf. Die Kennzahl, die tatsächlich darüber entscheidet, welches Modell passt, ist der Arbeitsspeicher: VRAM bei einem Windows-Gaming-Laptop oder Unified Memory bei Apple Silicon — und ein Modell, das nicht in den Speicher passt, lädt entweder gar nicht erst oder kriecht über Swap dahin. Dieser Leitfaden vergleicht vier Laptop-Familien anhand von drei Kaufstilen: ein Apple MacBook Pro für den meisten Arbeitsspeicher in einem portablen Gehäuse, ein Lenovo ThinkPad oder ein ASUS-ROG-Gaming-Laptop für NVIDIA-GPU-Geschwindigkeit und ein Framework Laptop 16 für Reparierbarkeit und Aufrüstbarkeit. Rechnen Sie damit, dass ein portables Gerät 20-30 % langsamer läuft als ein Desktop mit demselben Chip, weil thermische Grenzen es ausbremsen. Die Preise hier sind eine Momentaufnahme vom Mai 2026 — Laptop-Preise bewegen sich mit Modellzyklen und Aktionen, prüfen Sie also den aktuellen Preis, bevor Sie kaufen.',
+      'Die meisten Laptop-Empfehlungen für lokale LLMs beginnen bei der GPU und hören dort auch wieder auf. Die Kennzahl, die tatsächlich darüber entscheidet, welches Modell passt, ist der Arbeitsspeicher: VRAM bei einem Windows-Gaming-Laptop oder Unified Memory bei Apple Silicon — und ein Modell, das nicht in den Speicher passt, lädt entweder gar nicht erst oder kriecht über Swap dahin. Dieser Leitfaden vergleicht vier Laptop-Familien anhand von drei Kaufstilen: ein Apple MacBook Pro für den meisten Arbeitsspeicher in einem portablen Gehäuse, ein Lenovo ThinkPad oder ein ASUS-ROG-Gaming-Laptop für NVIDIA-GPU-Geschwindigkeit und ein Framework Laptop 16 für Reparierbarkeit und Aufrüstbarkeit. Rechnen Sie damit, dass ein portables Gerät 20-30 % langsamer läuft als ein Desktop mit demselben Chip, weil thermische Grenzen es ausbremsen. Die Preise hier sind eine Momentaufnahme vom Juli 2026 — Laptop-Preise bewegen sich mit Modellzyklen und Aktionen, prüfen Sie also den aktuellen Preis, bevor Sie kaufen.',
     metaDescription:
       'Vier Laptop-Familien für lokale LLMs im Vergleich: MacBook Pro, ThinkPad, ASUS ROG und Framework 16. Erst nach Speicher kaufen – VRAM entscheidet.',
     twitterDescription:
@@ -584,7 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Speicher-Mindestwerte:** 8 GB führen 7B-Modelle bei Q4_K_M aus, 16 GB führen 13B mühelos aus, und große MacBook-Pro-Konfigurationen erreichen deutlich größere Modelle. Lassen Sie stets 2-4 GB Reserve für das Betriebssystem.',
           '**Rechnen Sie mit einem Abstand zum Desktop.** Ein Laptop läuft etwa 20-30 % langsamer als ein Desktop mit demselben Chip, weil thermische Grenzen die Taktraten unter Dauerlast niedrig halten.',
           '**Der Akku ändert unter Windows alles.** Ein Gaming-Laptop deaktiert oder drosselt die dedizierte GPU im Akkubetrieb typischerweise, was die Inferenz auf ein Kriechtempo drückt — planen Sie den Betrieb am Netzteil ein. Apple Silicon bleibt im Akkubetrieb nutzbar und ist weitaus effizienter.',
-          '**Die Preise sind eine Momentaufnahme vom Mai 2026.** Laptop-Preise bewegen sich mit Modellauffrischungszyklen und Aktionen — behandeln Sie jede Angabe hier als Spanne und prüfen Sie den Live-Preis vor dem Kauf.',
+          '**Die Preise sind eine Momentaufnahme vom Juli 2026.** Laptop-Preise bewegen sich mit Modellauffrischungszyklen und Aktionen — behandeln Sie jede Angabe hier als Spanne und prüfen Sie den Live-Preis vor dem Kauf.',
         ],
       },
       quickFacts: {
@@ -631,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'So vergleichen sich die vier Laptop-Familien für lokale LLMs',
         content:
-          'Die Geschwindigkeitsangaben stammen aus PromptQuorum-eigenen Laptop-Tests — ein 7B-Modell läuft mit 10-25 Tok/s auf einer Laptop-CPU, 30-80 Tok/s auf Apple Silicon und 60-90 Tok/s auf einer Laptop-GPU vom Typ RTX 4060. Die Spalte „Am besten für“ spiegelt den Kaufstil wider, nicht eine einzelne SKU. Die Preise sind eine Momentaufnahme vom Mai 2026, ausgedrückt als Spannen — Laptop-Preise bewegen sich mit Modellzyklen und Aktionen, prüfen Sie sie also vor dem Kauf.',
+          'Die Geschwindigkeitsangaben stammen aus PromptQuorum-eigenen Laptop-Tests — ein 7B-Modell läuft mit 10-25 Tok/s auf einer Laptop-CPU, 30-80 Tok/s auf Apple Silicon und 60-90 Tok/s auf einer Laptop-GPU vom Typ RTX 4060. Die Spalte „Am besten für“ spiegelt den Kaufstil wider, nicht eine einzelne SKU. Die Preise sind eine Momentaufnahme vom Juli 2026, ausgedrückt als Spannen — Laptop-Preise bewegen sich mit Modellzyklen und Aktionen, prüfen Sie sie also vor dem Kauf.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -642,35 +651,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Stellen Sie sich den Speicher als die Größe der Werkbank vor und das Modell als das darauf liegende Projekt. Ein schnellerer Chip erledigt die Arbeit zügiger, aber wenn das Projekt überhaupt nicht auf die Werkbank passt, spielt Geschwindigkeit nie eine Rolle. Ein Laptop hat zudem ein kleineres Kühlsystem als ein Desktop und wird daher bei langen Aufgaben langsamer.',
           },
         ],
-        columns: ['Laptop-Familie', 'Speichermodell', '7B-Geschwindigkeit (übernommene Daten)', 'Am besten für', 'Preis (Mai 2026)'],
+        columns: ['Laptop-Familie', 'Speichermodell', '7B-Geschwindigkeit (übernommene Daten)', 'Am besten für', 'Preis (Jul. 2026)'],
         rows: [
           {
             'Laptop-Familie': 'Apple MacBook Pro',
             'Speichermodell': 'Unified Memory (CPU + GPU gemeinsam)',
             '7B-Geschwindigkeit (übernommene Daten)': '30-80 Tok/s auf Apple Silicon',
             'Am besten für': 'Größte Modelle portabel, beste Akkulaufzeit',
-            'Preis (Mai 2026)': 'Mittel bis Premium; aktuellen Preis prüfen',
+            'Preis (Jul. 2026)': 'Mittel bis Premium; aktuellen Preis prüfen',
           },
           {
             'Laptop-Familie': 'Lenovo ThinkPad / Workstation',
             'Speichermodell': 'NVIDIA-RTX-VRAM + Systemspeicher',
             '7B-Geschwindigkeit (übernommene Daten)': '60-90 Tok/s auf einer RTX-4060-GPU',
             'Am besten für': 'Robuste Bauweise, 7B-13B-Arbeit am Netzteil',
-            'Preis (Mai 2026)': 'Mittel bis Premium; aktuellen Preis prüfen',
+            'Preis (Jul. 2026)': 'Mittel bis Premium; aktuellen Preis prüfen',
           },
           {
             'Laptop-Familie': 'ASUS-ROG-Gaming-Laptop',
             'Speichermodell': 'NVIDIA-RTX-VRAM + Systemspeicher',
             '7B-Geschwindigkeit (übernommene Daten)': '60-90 Tok/s auf einer RTX-4060-GPU',
             'Am besten für': 'Schnellste 7B-13B-Leistung im Netzbetrieb',
-            'Preis (Mai 2026)': 'Mittlere Preisklasse; aktuellen Preis prüfen',
+            'Preis (Jul. 2026)': 'Mittlere Preisklasse; aktuellen Preis prüfen',
           },
           {
             'Laptop-Familie': 'Framework Laptop 16',
             'Speichermodell': 'Aufrüstbarer Systemspeicher + GPU-Modul',
             '7B-Geschwindigkeit (übernommene Daten)': 'Vergleichbar mit einem RTX-Laptop im Netzbetrieb',
             'Am besten für': 'Reparierbarkeit, späteres Aufrüsten des Speichers',
-            'Preis (Mai 2026)': 'Mittlere Preisklasse; aktuellen Preis prüfen',
+            'Preis (Jul. 2026)': 'Mittlere Preisklasse; aktuellen Preis prüfen',
           },
         ],
       },
@@ -880,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Jede Preisspanne in diesem Leitfaden ist eine Momentaufnahme vom Mai 2026. Laptop-Preise bewegen sich mit Modellzyklen und Aktionszeiträumen — öffnen Sie stets die aktuelle Händler- oder Herstellerseite vor dem Kauf.',
+            text: 'Jede Preisspanne in diesem Leitfaden ist eine Momentaufnahme vom Juli 2026. Laptop-Preise bewegen sich mit Modellzyklen und Aktionszeiträumen — öffnen Sie stets die aktuelle Händler- oder Herstellerseite vor dem Kauf.',
           },
         ],
         affiliateLinks: [
@@ -1001,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Les meilleurs ordinateurs portables pour LLM locaux : guide d\'achat 2026',
     seoTitle: 'Meilleurs portables pour LLM locaux 2026 : Mac à ThinkPad',
     intro:
-      'La plupart des conseils sur les ordinateurs portables pour LLM locaux commencent par le GPU et s\'arrêtent là. Le chiffre qui décide réellement du modèle qui tient, c\'est la mémoire : la VRAM sur un portable de jeu Windows, ou la mémoire unifiée sur Apple Silicon — et un modèle qui ne tient pas en mémoire échoue à se charger ou rampe via le swap. Ce guide compare quatre familles de portables selon trois styles d\'achat : un Apple MacBook Pro pour le plus de mémoire dans un châssis portable, un Lenovo ThinkPad ou un portable de jeu ASUS ROG pour la vitesse du GPU NVIDIA, et un Framework Laptop 16 pour la réparabilité et les évolutions. Attendez-vous à ce qu\'une machine portable tourne 20-30 % plus lentement qu\'un poste fixe équipé de la même puce, en raison des limites thermiques. Les prix indiqués ici sont un instantané de mai 2026 — la tarification des portables évolue avec les cycles de modèles et les promotions, vérifiez donc le prix actuel avant d\'acheter.',
+      'La plupart des conseils sur les ordinateurs portables pour LLM locaux commencent par le GPU et s\'arrêtent là. Le chiffre qui décide réellement du modèle qui tient, c\'est la mémoire : la VRAM sur un portable de jeu Windows, ou la mémoire unifiée sur Apple Silicon — et un modèle qui ne tient pas en mémoire échoue à se charger ou rampe via le swap. Ce guide compare quatre familles de portables selon trois styles d\'achat : un Apple MacBook Pro pour le plus de mémoire dans un châssis portable, un Lenovo ThinkPad ou un portable de jeu ASUS ROG pour la vitesse du GPU NVIDIA, et un Framework Laptop 16 pour la réparabilité et les évolutions. Attendez-vous à ce qu\'une machine portable tourne 20-30 % plus lentement qu\'un poste fixe équipé de la même puce, en raison des limites thermiques. Les prix indiqués ici sont un instantané de juillet 2026 — la tarification des portables évolue avec les cycles de modèles et les promotions, vérifiez donc le prix actuel avant d\'acheter.',
     metaDescription:
       'Quatre familles de portables comparées pour les LLM locaux : MacBook Pro, Lenovo ThinkPad, ASUS ROG et Framework 16. Achetez d\'abord pour la mémoire — la VRAM ou la mémoire unifiée décide du modèle qui tient.',
     twitterDescription:
@@ -1078,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mémoire minimale :** 8 Go exécutent les modèles 7B en Q4_K_M, 16 Go exécutent le 13B sans difficulté, et les grandes configurations de MacBook Pro atteignent des modèles bien plus volumineux. Laissez toujours 2-4 Go de marge pour le système d\'exploitation.',
           '**Attendez-vous à un écart avec le poste fixe.** Un portable tourne environ 20-30 % plus lentement qu\'un poste fixe équipé de la même puce, car les limites thermiques maintiennent les fréquences basses sous charge soutenue.',
           '**La batterie change tout sous Windows.** Un portable de jeu désactive ou bride généralement le GPU dédié sur batterie, ramenant l\'inférence à un rythme d\'escargot — prévoyez de l\'utiliser branché. Apple Silicon reste utilisable sur batterie et est bien plus efficace.',
-          '**Les prix sont un instantané de mai 2026.** La tarification des portables évolue avec les cycles de renouvellement des modèles et les promotions — traitez chaque chiffre ici comme une fourchette et vérifiez le prix en direct avant d\'acheter.',
+          '**Les prix sont un instantané de juillet 2026.** La tarification des portables évolue avec les cycles de renouvellement des modèles et les promotions — traitez chaque chiffre ici comme une fourchette et vérifiez le prix en direct avant d\'acheter.',
         ],
       },
       quickFacts: {
@@ -1125,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment les quatre familles de portables se comparent pour les LLM locaux',
         content:
-          'Les chiffres de vitesse proviennent des tests de portables réalisés par PromptQuorum — un modèle 7B tourne à 10-25 tok/s sur un CPU de portable, 30-80 tok/s sur Apple Silicon et 60-90 tok/s sur un GPU de portable RTX 4060. La colonne « Idéal pour » reflète un style d\'achat, pas une référence unique. Les prix sont un instantané de mai 2026 exprimé en fourchettes — la tarification des portables évolue avec les cycles de modèles et les promotions, vérifiez donc avant d\'acheter.',
+          'Les chiffres de vitesse proviennent des tests de portables réalisés par PromptQuorum — un modèle 7B tourne à 10-25 tok/s sur un CPU de portable, 30-80 tok/s sur Apple Silicon et 60-90 tok/s sur un GPU de portable RTX 4060. La colonne « Idéal pour » reflète un style d\'achat, pas une référence unique. Les prix sont un instantané de juillet 2026 exprimé en fourchettes — la tarification des portables évolue avec les cycles de modèles et les promotions, vérifiez donc avant d\'acheter.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1136,35 +1145,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Voyez la mémoire comme la taille de l\'établi et le modèle comme le projet posé dessus. Une puce plus rapide termine le travail plus vite, mais si le projet ne tient pas du tout sur l\'établi, la vitesse ne compte jamais. Un portable a aussi un système de refroidissement plus petit qu\'un poste fixe, il ralentit donc lors de tâches longues.',
           },
         ],
-        columns: ['Famille de portables', 'Modèle de mémoire', 'Vitesse 7B (données reprises)', 'Idéal pour', 'Prix (mai 2026)'],
+        columns: ['Famille de portables', 'Modèle de mémoire', 'Vitesse 7B (données reprises)', 'Idéal pour', 'Prix (juil. 2026)'],
         rows: [
           {
             'Famille de portables': 'Apple MacBook Pro',
             'Modèle de mémoire': 'Mémoire unifiée (CPU + GPU partagée)',
             'Vitesse 7B (données reprises)': '30-80 tok/s sur Apple Silicon',
             'Idéal pour': 'Plus grands modèles de façon portable, meilleure autonomie',
-            'Prix (mai 2026)': 'Milieu à premium ; vérifier le prix actuel',
+            'Prix (juil. 2026)': 'Milieu à premium ; vérifier le prix actuel',
           },
           {
             'Famille de portables': 'Lenovo ThinkPad / station de travail',
             'Modèle de mémoire': 'VRAM NVIDIA RTX + RAM système',
             'Vitesse 7B (données reprises)': '60-90 tok/s sur un GPU RTX 4060',
             'Idéal pour': 'Construction durable, travail 7B-13B branché',
-            'Prix (mai 2026)': 'Milieu à premium ; vérifier le prix actuel',
+            'Prix (juil. 2026)': 'Milieu à premium ; vérifier le prix actuel',
           },
           {
             'Famille de portables': 'Portable de jeu ASUS ROG',
             'Modèle de mémoire': 'VRAM NVIDIA RTX + RAM système',
             'Vitesse 7B (données reprises)': '60-90 tok/s sur un GPU RTX 4060',
             'Idéal pour': 'Le plus rapide en 7B-13B sur secteur',
-            'Prix (mai 2026)': 'Milieu de gamme ; vérifier le prix actuel',
+            'Prix (juil. 2026)': 'Milieu de gamme ; vérifier le prix actuel',
           },
           {
             'Famille de portables': 'Framework Laptop 16',
             'Modèle de mémoire': 'RAM système évolutive + module GPU',
             'Vitesse 7B (données reprises)': 'Comparable à un portable RTX sur secteur',
             'Idéal pour': 'Réparabilité, augmentation ultérieure de la mémoire',
-            'Prix (mai 2026)': 'Milieu de gamme ; vérifier le prix actuel',
+            'Prix (juil. 2026)': 'Milieu de gamme ; vérifier le prix actuel',
           },
         ],
       },
@@ -1374,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Chaque fourchette de prix de ce guide est un instantané de mai 2026. La tarification des portables évolue avec les cycles de modèles et les périodes de promotion — ouvrez toujours l\'annonce actuelle du revendeur ou du fabricant avant d\'acheter.',
+            text: 'Chaque fourchette de prix de ce guide est un instantané de juillet 2026. La tarification des portables évolue avec les cycles de modèles et les périodes de promotion — ouvrez toujours l\'annonce actuelle du revendeur ou du fabricant avant d\'acheter.',
           },
         ],
         affiliateLinks: [
@@ -1487,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルLLM向けノートパソコンのおすすめ：購入ガイド2026',
     seoTitle: 'ローカルLLM向けノートPC 2026：MacBookからThinkPadまで',
     intro:
-      'ローカルLLM向けのノートパソコン選びのアドバイスの多くは、GPUから始まってそこで終わってしまいます。どのモデルが収まるかを実際に決める数値はメモリです。WindowsゲーミングノートパソコンであればVRAM、Apple Siliconであればunified memoryであり、メモリに収まらないモデルは読み込みに失敗するか、スワップに頼って這うように遅くなります。本ガイドでは、3つの購入スタイルにわたって4つのノートパソコン系統を比較します。携帯できる筐体で最大のメモリを得るためのApple MacBook Pro、NVIDIA GPUの速度を求めるためのLenovo ThinkPadまたはASUS ROGゲーミングノートパソコン、修理性とアップグレード性のためのFramework Laptop 16です。携帯機は熱的な制約により、同じチップを搭載したデスクトップより20～30%遅く動作すると考えてください。ここに記載した価格は2026年5月時点のスナップショットです。ノートパソコンの価格はモデルサイクルやセールに伴って変動するため、購入前に現在の価格を確認してください。',
+      'ローカルLLM向けのノートパソコン選びのアドバイスの多くは、GPUから始まってそこで終わってしまいます。どのモデルが収まるかを実際に決める数値はメモリです。WindowsゲーミングノートパソコンであればVRAM、Apple Siliconであればunified memoryであり、メモリに収まらないモデルは読み込みに失敗するか、スワップに頼って這うように遅くなります。本ガイドでは、3つの購入スタイルにわたって4つのノートパソコン系統を比較します。携帯できる筐体で最大のメモリを得るためのApple MacBook Pro、NVIDIA GPUの速度を求めるためのLenovo ThinkPadまたはASUS ROGゲーミングノートパソコン、修理性とアップグレード性のためのFramework Laptop 16です。携帯機は熱的な制約により、同じチップを搭載したデスクトップより20～30%遅く動作すると考えてください。ここに記載した価格は2026年7月時点のスナップショットです。ノートパソコンの価格はモデルサイクルやセールに伴って変動するため、購入前に現在の価格を確認してください。',
     metaDescription:
       'ローカルLLMの実行向けに4つのノートパソコン系統を比較：MacBook Pro、Lenovo ThinkPad、ASUS ROG、Framework 16。まずメモリで選ぶ — VRAMまたはunified memoryがどのモデルが収まるかを決めます。',
     twitterDescription:
@@ -1564,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**メモリの最低ライン：** 8 GBはQ4_K_Mで7Bモデルを実行し、16 GBは13Bを余裕をもって実行し、大容量のMacBook Pro構成ははるかに大きなモデルに届きます。OS用に常に2～4 GBの余裕を残してください。',
           '**デスクトップとの差を見込んでください。** ノートパソコンは、熱的な制約により持続的な負荷でクロックが下がるため、同じチップを搭載したデスクトップよりおよそ20～30%遅く動作します。',
           '**Windowsではバッテリーがすべてを変えます。** ゲーミングノートパソコンは通常、バッテリー駆動時に専用GPUを無効化または抑制し、推論を這うような速度まで落とします — 電源に接続して使う前提で計画してください。Apple Siliconはバッテリー駆動でも使用でき、はるかに効率的です。',
-          '**価格は2026年5月時点のスナップショットです。** ノートパソコンの価格はモデル更新サイクルやセールに伴って変動します — ここのすべての数値を幅として扱い、購入前にリアルタイムの価格を確認してください。',
+          '**価格は2026年7月時点のスナップショットです。** ノートパソコンの価格はモデル更新サイクルやセールに伴って変動します — ここのすべての数値を幅として扱い、購入前にリアルタイムの価格を確認してください。',
         ],
       },
       quickFacts: {
@@ -1611,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'ローカルLLM向けに4つのノートパソコン系統を比較する',
         content:
-          '速度の数値は、PromptQuorum自社のノートパソコンテストから引用しています — 7Bモデルは、ノートパソコンのCPUで10～25トークン/秒、Apple Siliconで30～80トークン/秒、RTX 4060搭載ノートパソコンのGPUで60～90トークン/秒で動作します。「最適な用途」の列は購入スタイルを反映しており、単一のSKUではありません。価格は2026年5月時点のスナップショットを幅として表しています — ノートパソコンの価格はモデルサイクルやセールに伴って変動するため、購入前に確認してください。',
+          '速度の数値は、PromptQuorum自社のノートパソコンテストから引用しています — 7Bモデルは、ノートパソコンのCPUで10～25トークン/秒、Apple Siliconで30～80トークン/秒、RTX 4060搭載ノートパソコンのGPUで60～90トークン/秒で動作します。「最適な用途」の列は購入スタイルを反映しており、単一のSKUではありません。価格は2026年7月時点のスナップショットを幅として表しています — ノートパソコンの価格はモデルサイクルやセールに伴って変動するため、購入前に確認してください。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1622,35 +1631,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'メモリを作業台の広さ、モデルをその上の作業対象だと考えてください。チップが速ければ作業は早く終わりますが、作業対象がそもそも作業台に乗らなければ、速度は決して意味を持ちません。ノートパソコンはデスクトップより冷却システムが小さいため、長時間の処理では遅くなります。',
           },
         ],
-        columns: ['ノートパソコン系統', 'メモリモデル', '7B速度（引用データ）', '最適な用途', '価格（2026年5月）'],
+        columns: ['ノートパソコン系統', 'メモリモデル', '7B速度（引用データ）', '最適な用途', '価格（2026年7月）'],
         rows: [
           {
             'ノートパソコン系統': 'Apple MacBook Pro',
             'メモリモデル': 'unified memory（CPU + GPU共有）',
             '7B速度（引用データ）': 'Apple Siliconで30～80トークン/秒',
             '最適な用途': '最大のモデルを携帯、最良のバッテリー寿命',
-            '価格（2026年5月）': '中位～プレミアム。現在の価格を確認',
+            '価格（2026年7月）': '中位～プレミアム。現在の価格を確認',
           },
           {
             'ノートパソコン系統': 'Lenovo ThinkPad / ワークステーション',
             'メモリモデル': 'NVIDIA RTX VRAM + システムRAM',
             '7B速度（引用データ）': 'RTX 4060 GPUで60～90トークン/秒',
             '最適な用途': '堅牢な作り、電源接続での7B～13B作業',
-            '価格（2026年5月）': '中位～プレミアム。現在の価格を確認',
+            '価格（2026年7月）': '中位～プレミアム。現在の価格を確認',
           },
           {
             'ノートパソコン系統': 'ASUS ROGゲーミングノートパソコン',
             'メモリモデル': 'NVIDIA RTX VRAM + システムRAM',
             '7B速度（引用データ）': 'RTX 4060 GPUで60～90トークン/秒',
             '最適な用途': '電源接続時に最も速い7B～13B',
-            '価格（2026年5月）': '中位の価格帯。現在の価格を確認',
+            '価格（2026年7月）': '中位の価格帯。現在の価格を確認',
           },
           {
             'ノートパソコン系統': 'Framework Laptop 16',
             'メモリモデル': 'アップグレード可能なシステムRAM + GPUモジュール',
             '7B速度（引用データ）': '電源接続時、RTXノートパソコンと同等',
             '最適な用途': '修理性、後からのメモリ増設',
-            '価格（2026年5月）': '中位の価格帯。現在の価格を確認',
+            '価格（2026年7月）': '中位の価格帯。現在の価格を確認',
           },
         ],
       },
@@ -1860,7 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '本ガイドのすべての価格帯は2026年5月時点のスナップショットです。ノートパソコンの価格はモデルサイクルやセールイベントに伴って変動します — 購入前に必ず現在の小売店またはメーカーの掲載ページを開いてください。',
+            text: '本ガイドのすべての価格帯は2026年7月時点のスナップショットです。ノートパソコンの価格はモデルサイクルやセールイベントに伴って変動します — 購入前に必ず現在の小売店またはメーカーの掲載ページを開いてください。',
           },
         ],
         affiliateLinks: [
@@ -1973,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '运行本地大语言模型的最佳笔记本电脑：2026 购买指南',
     seoTitle: '2026 本地大语言模型最佳笔记本：从 MacBook 到 ThinkPad',
     intro:
-      '大多数关于本地大语言模型笔记本的建议都从 GPU 说起，也止于 GPU。真正决定哪个模型能装下的数字是内存：Windows 游戏本上的 VRAM，或 Apple Silicon 上的统一内存——装不进内存的模型要么加载失败，要么靠交换分区慢得像爬。本指南按三种购买取向对比四个笔记本系列：追求便携机身中最大内存的 Apple MacBook Pro，追求 NVIDIA GPU 速度的 Lenovo ThinkPad 或 ASUS ROG 游戏本，以及追求可维修与可升级的 Framework Laptop 16。受散热限制，便携机型的运行速度通常比搭载同款芯片的台式机慢 20-30%。这里的价格是 2026 年 5 月的快照——笔记本定价会随机型周期和促销变动，请在购买前确认当前价格。',
+      '大多数关于本地大语言模型笔记本的建议都从 GPU 说起，也止于 GPU。真正决定哪个模型能装下的数字是内存：Windows 游戏本上的 VRAM，或 Apple Silicon 上的统一内存——装不进内存的模型要么加载失败，要么靠交换分区慢得像爬。本指南按三种购买取向对比四个笔记本系列：追求便携机身中最大内存的 Apple MacBook Pro，追求 NVIDIA GPU 速度的 Lenovo ThinkPad 或 ASUS ROG 游戏本，以及追求可维修与可升级的 Framework Laptop 16。受散热限制，便携机型的运行速度通常比搭载同款芯片的台式机慢 20-30%。这里的价格是 2026 年 7 月的快照——笔记本定价会随机型周期和促销变动，请在购买前确认当前价格。',
     metaDescription:
       '对比四个笔记本系列运行本地大语言模型的表现：MacBook Pro、Lenovo ThinkPad、ASUS ROG 和 Framework 16。先按内存选购——VRAM 或统一内存决定哪个模型能装下。',
     twitterDescription:
@@ -2050,7 +2059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**内存下限：** 8 GB 可在 Q4_K_M 下运行 7B 模型，16 GB 可从容运行 13B，而大容量 MacBook Pro 配置可达到大得多的模型。始终为操作系统留出 2-4 GB 余量。',
           '**预期与台式机存在差距。** 笔记本的运行速度比搭载同款芯片的台式机大约慢 20-30%，因为散热限制会在持续负载下压低主频。',
           '**在 Windows 上电池改变一切。** 游戏本在电池供电时通常会禁用或限制独立 GPU，使推理慢得像爬——请规划在接通电源下运行。Apple Silicon 在电池供电时仍可使用，且能效高得多。',
-          '**价格是 2026 年 5 月的快照。** 笔记本定价会随机型更新周期和促销变动——把这里的每个数字都视为一个区间，并在购买前确认实时价格。',
+          '**价格是 2026 年 7 月的快照。** 笔记本定价会随机型更新周期和促销变动——把这里的每个数字都视为一个区间，并在购买前确认实时价格。',
         ],
       },
       quickFacts: {
@@ -2097,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '四个笔记本系列在本地大语言模型上的对比',
         content:
-          '速度数据取自 PromptQuorum 自有的笔记本测试——7B 模型在笔记本 CPU 上为 10-25 tok/s，在 Apple Silicon 上为 30-80 tok/s，在 RTX 4060 笔记本 GPU 上为 60-90 tok/s。「最适合」一列反映的是购买取向，而非单一型号。价格是以区间表示的 2026 年 5 月快照——笔记本定价会随机型周期和促销变动，请在购买前确认。',
+          '速度数据取自 PromptQuorum 自有的笔记本测试——7B 模型在笔记本 CPU 上为 10-25 tok/s，在 Apple Silicon 上为 30-80 tok/s，在 RTX 4060 笔记本 GPU 上为 60-90 tok/s。「最适合」一列反映的是购买取向，而非单一型号。价格是以区间表示的 2026 年 7 月快照——笔记本定价会随机型周期和促销变动，请在购买前确认。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2108,35 +2117,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '把内存想成工作台的大小，把模型想成台面上的项目。更快的芯片能更早完成工作，但如果项目根本放不上工作台，速度就永远无关紧要。笔记本的散热系统也比台式机小，因此在长任务下会变慢。',
           },
         ],
-        columns: ['笔记本系列', '内存模型', '7B 速度（引用数据）', '最适合', '价格（2026 年 5 月）'],
+        columns: ['笔记本系列', '内存模型', '7B 速度（引用数据）', '最适合', '价格（2026 年 7 月）'],
         rows: [
           {
             '笔记本系列': 'Apple MacBook Pro',
             '内存模型': '统一内存（CPU + GPU 共享）',
             '7B 速度（引用数据）': 'Apple Silicon 上 30-80 tok/s',
             '最适合': '便携运行最大的模型，最佳续航',
-            '价格（2026 年 5 月）': '中端至高端；查看当前价格',
+            '价格（2026 年 7 月）': '中端至高端；查看当前价格',
           },
           {
             '笔记本系列': 'Lenovo ThinkPad / 工作站',
             '内存模型': 'NVIDIA RTX VRAM + 系统 RAM',
             '7B 速度（引用数据）': 'RTX 4060 GPU 上 60-90 tok/s',
             '最适合': '坚固做工，接通电源的 7B-13B 工作',
-            '价格（2026 年 5 月）': '中端至高端；查看当前价格',
+            '价格（2026 年 7 月）': '中端至高端；查看当前价格',
           },
           {
             '笔记本系列': 'ASUS ROG 游戏本',
             '内存模型': 'NVIDIA RTX VRAM + 系统 RAM',
             '7B 速度（引用数据）': 'RTX 4060 GPU 上 60-90 tok/s',
             '最适合': '交流供电下最快的 7B-13B',
-            '价格（2026 年 5 月）': '中端价位；查看当前价格',
+            '价格（2026 年 7 月）': '中端价位；查看当前价格',
           },
           {
             '笔记本系列': 'Framework Laptop 16',
             '内存模型': '可升级系统 RAM + GPU 模块',
             '7B 速度（引用数据）': '交流供电下与 RTX 笔记本相当',
             '最适合': '可维修性，日后升级内存',
-            '价格（2026 年 5 月）': '中端价位；查看当前价格',
+            '价格（2026 年 7 月）': '中端价位；查看当前价格',
           },
         ],
       },
@@ -2346,7 +2355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '本指南中的每个价格区间都是 2026 年 5 月的快照。笔记本定价会随机型周期和促销活动变动——购买前请务必打开当前的零售商或厂商页面。',
+            text: '本指南中的每个价格区间都是 2026 年 7 月的快照。笔记本定价会随机型周期和促销活动变动——购买前请务必打开当前的零售商或厂商页面。',
           },
         ],
         affiliateLinks: [
@@ -2459,7 +2468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Los mejores portátiles para ejecutar LLMs locales: guía de compra 2026',
     seoTitle: 'Mejor portátil para LLMs locales 2026: de MacBook a ThinkPad',
     intro:
-      'La mayoría de los consejos sobre portátiles para LLMs locales empiezan por la GPU y terminan ahí. El número que realmente decide qué modelo cabe es la memoria: la VRAM en un portátil gaming de Windows, o la memoria unificada en Apple Silicon — y un modelo que no cabe en memoria no logra cargarse o va arrastrándose en swap. Esta guía compara cuatro familias de portátiles según tres estilos de compra: un Apple MacBook Pro para tener la mayor memoria en un cuerpo portátil, un Lenovo ThinkPad o un portátil gaming ASUS ROG para velocidad de GPU NVIDIA, y un Framework Laptop 16 para reparabilidad y actualizaciones. Espera que una máquina portátil funcione entre un 20 y un 30 % más lento que un escritorio con el mismo chip debido a los límites térmicos. Los precios aquí son una instantánea de mayo de 2026 — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma el precio actual antes de comprar.',
+      'La mayoría de los consejos sobre portátiles para LLMs locales empiezan por la GPU y terminan ahí. El número que realmente decide qué modelo cabe es la memoria: la VRAM en un portátil gaming de Windows, o la memoria unificada en Apple Silicon — y un modelo que no cabe en memoria no logra cargarse o va arrastrándose en swap. Esta guía compara cuatro familias de portátiles según tres estilos de compra: un Apple MacBook Pro para tener la mayor memoria en un cuerpo portátil, un Lenovo ThinkPad o un portátil gaming ASUS ROG para velocidad de GPU NVIDIA, y un Framework Laptop 16 para reparabilidad y actualizaciones. Espera que una máquina portátil funcione entre un 20 y un 30 % más lento que un escritorio con el mismo chip debido a los límites térmicos. Los precios aquí son una instantánea de julio de 2026 — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma el precio actual antes de comprar.',
     metaDescription:
       'Los mejores portátiles para LLMs locales en 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad y ASUS ROG. RAM, VRAM y velocidades reales por rango de precio.',
     twitterDescription:
@@ -2536,7 +2545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mínimos de memoria:** 8 GB ejecuta modelos de 7B con Q4_K_M, 16 GB ejecuta el 13B con comodidad, y las configuraciones grandes de MacBook Pro alcanzan modelos mucho mayores. Deja siempre 2-4 GB de margen para el sistema operativo.',
           '**Espera una brecha con el escritorio.** Un portátil funciona aproximadamente entre un 20 y un 30 % más lento que un escritorio con el mismo chip porque los límites térmicos mantienen bajas las frecuencias de reloj bajo carga sostenida.',
           '**La batería lo cambia todo en Windows.** Un portátil gaming normalmente deshabilita o limita la GPU discreta con batería, reduciendo la inferencia a paso de tortuga — planifica usarlo enchufado. Apple Silicon sigue siendo usable con batería y es mucho más eficiente.',
-          '**Los precios son una instantánea de mayo de 2026.** Los precios de los portátiles cambian con los ciclos de actualización de modelos y las ofertas — trata cada cifra aquí como un rango y confirma el precio en tiempo real antes de comprar.',
+          '**Los precios son una instantánea de julio de 2026.** Los precios de los portátiles cambian con los ciclos de actualización de modelos y las ofertas — trata cada cifra aquí como un rango y confirma el precio en tiempo real antes de comprar.',
         ],
       },
       quickFacts: {
@@ -2583,7 +2592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan las cuatro familias de portátiles para LLMs locales',
         content:
-          'Las cifras de velocidad provienen de las pruebas de portátiles realizadas por PromptQuorum — un modelo de 7B funciona a 10-25 tok/s en una CPU de portátil, a 30-80 tok/s en Apple Silicon y a 60-90 tok/s en una GPU de portátil RTX 4060. La columna «mejor para» refleja el estilo de compra, no un SKU concreto. Los precios son una instantánea de mayo de 2026 expresada como rangos — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma antes de comprar.',
+          'Las cifras de velocidad provienen de las pruebas de portátiles realizadas por PromptQuorum — un modelo de 7B funciona a 10-25 tok/s en una CPU de portátil, a 30-80 tok/s en Apple Silicon y a 60-90 tok/s en una GPU de portátil RTX 4060. La columna «mejor para» refleja el estilo de compra, no un SKU concreto. Los precios son una instantánea de julio de 2026 expresada como rangos — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2594,35 +2603,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Piensa en la memoria como el tamaño del banco de trabajo y en el modelo como el proyecto sobre él. Un chip más rápido termina el trabajo antes, pero si el proyecto no cabe en el banco de trabajo, la velocidad nunca importa. Un portátil también tiene un sistema de refrigeración más pequeño que un escritorio, por lo que se ralentiza en tareas largas.',
           },
         ],
-        columns: ['Familia de portátiles', 'Modelo de memoria', 'Velocidad 7B (datos reutilizados)', 'Mejor para', 'Precio (mayo 2026)'],
+        columns: ['Familia de portátiles', 'Modelo de memoria', 'Velocidad 7B (datos reutilizados)', 'Mejor para', 'Precio (julio 2026)'],
         rows: [
           {
             'Familia de portátiles': 'Apple MacBook Pro',
             'Modelo de memoria': 'Memoria unificada (CPU + GPU compartida)',
             'Velocidad 7B (datos reutilizados)': '30-80 tok/s en Apple Silicon',
             'Mejor para': 'Modelos más grandes de forma portátil, mejor batería',
-            'Precio (mayo 2026)': 'Gama media a premium; consultar precio actual',
+            'Precio (julio 2026)': 'Gama media a premium; consultar precio actual',
           },
           {
             'Familia de portátiles': 'Lenovo ThinkPad / workstation',
             'Modelo de memoria': 'VRAM NVIDIA RTX + RAM del sistema',
             'Velocidad 7B (datos reutilizados)': '60-90 tok/s en una GPU RTX 4060',
             'Mejor para': 'Construcción duradera, trabajo 7B-13B enchufado',
-            'Precio (mayo 2026)': 'Gama media a premium; consultar precio actual',
+            'Precio (julio 2026)': 'Gama media a premium; consultar precio actual',
           },
           {
             'Familia de portátiles': 'Portátil gaming ASUS ROG',
             'Modelo de memoria': 'VRAM NVIDIA RTX + RAM del sistema',
             'Velocidad 7B (datos reutilizados)': '60-90 tok/s en una GPU RTX 4060',
             'Mejor para': 'El más rápido en 7B-13B con corriente alterna',
-            'Precio (mayo 2026)': 'Gama media; consultar precio actual',
+            'Precio (julio 2026)': 'Gama media; consultar precio actual',
           },
           {
             'Familia de portátiles': 'Framework Laptop 16',
             'Modelo de memoria': 'RAM del sistema actualizable + módulo GPU',
             'Velocidad 7B (datos reutilizados)': 'Comparable a un portátil RTX con corriente alterna',
             'Mejor para': 'Reparabilidad, aumentar memoria más adelante',
-            'Precio (mayo 2026)': 'Gama media; consultar precio actual',
+            'Precio (julio 2026)': 'Gama media; consultar precio actual',
           },
         ],
       },
@@ -2832,7 +2841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Cada rango de precios en esta guía es una instantánea de mayo de 2026. Los precios de los portátiles cambian con los ciclos de modelo y los eventos de oferta — abre siempre el listado actual del minorista o fabricante antes de comprar.',
+            text: 'Cada rango de precios en esta guía es una instantánea de julio de 2026. Los precios de los portátiles cambian con los ciclos de modelo y los eventos de oferta — abre siempre el listado actual del minorista o fabricante antes de comprar.',
           },
         ],
         affiliateLinks: [
@@ -2959,7 +2968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Os melhores notebooks para rodar LLMs locais: guia de compra 2026',
     seoTitle: 'Melhor notebook para LLMs locais 2026: do MacBook ao ThinkPad',
     intro:
-      'A maioria dos conselhos sobre notebooks para LLMs locais começa pela GPU e para por aí. O número que realmente decide qual modelo cabe é a memória: a VRAM em um notebook gamer Windows, ou a memória unificada no Apple Silicon — e um modelo que não cabe na memória ou não consegue carregar ou se arrasta no swap. Este guia compara quatro famílias de notebooks por três estilos de compra: um Apple MacBook Pro para a maior memória em um corpo portátil, um Lenovo ThinkPad ou notebook gamer ASUS ROG para velocidade de GPU NVIDIA, e um Framework Laptop 16 para reparabilidade e upgrades. Espere que uma máquina portátil rode de 20 a 30% mais devagar que um desktop com o mesmo chip por causa dos limites térmicos. Os preços aqui são um retrato de maio de 2026 — os preços de notebooks mudam com os ciclos de modelo e as promoções, então confirme o preço atual antes de comprar.',
+      'A maioria dos conselhos sobre notebooks para LLMs locais começa pela GPU e para por aí. O número que realmente decide qual modelo cabe é a memória: a VRAM em um notebook gamer Windows, ou a memória unificada no Apple Silicon — e um modelo que não cabe na memória ou não consegue carregar ou se arrasta no swap. Este guia compara quatro famílias de notebooks por três estilos de compra: um Apple MacBook Pro para a maior memória em um corpo portátil, um Lenovo ThinkPad ou notebook gamer ASUS ROG para velocidade de GPU NVIDIA, e um Framework Laptop 16 para reparabilidade e upgrades. Espere que uma máquina portátil rode de 20 a 30% mais devagar que um desktop com o mesmo chip por causa dos limites térmicos. Os preços aqui são um retrato de julho de 2026 — os preços de notebooks mudam com os ciclos de modelo e as promoções, então confirme o preço atual antes de comprar.',
     metaDescription:
       'Os melhores notebooks para rodar LLMs locais em 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, VRAM de GPU e velocidades reais de tokens comparadas por faixa de preço.',
     twitterDescription:
@@ -3036,7 +3045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mínimos de memória:** 8 GB roda modelos de 7B em Q4_K_M, 16 GB roda o 13B confortavelmente, e configurações grandes de MacBook Pro alcançam modelos muito maiores. Deixe sempre 2-4 GB de folga para o sistema operacional.',
           '**Espere uma diferença para o desktop.** Um notebook roda aproximadamente de 20 a 30% mais devagar que um desktop com o mesmo chip porque os limites térmicos mantêm as frequências de clock baixas sob carga sustentada.',
           '**A bateria muda tudo no Windows.** Um notebook gamer normalmente desativa ou limita a GPU dedicada na bateria, derrubando a inferência a passo de tartaruga — planeje rodar ligado na tomada. O Apple Silicon continua utilizável na bateria e é muito mais eficiente.',
-          '**Os preços são um retrato de maio de 2026.** Os preços de notebooks mudam com os ciclos de atualização de modelos e as promoções — trate cada número aqui como uma faixa e confirme o preço em tempo real antes de comprar.',
+          '**Os preços são um retrato de julho de 2026.** Os preços de notebooks mudam com os ciclos de atualização de modelos e as promoções — trate cada número aqui como uma faixa e confirme o preço em tempo real antes de comprar.',
         ],
       },
       quickFacts: {
@@ -3083,7 +3092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como as quatro famílias de notebooks se comparam para LLMs locais',
         content:
-          'As cifras de velocidade são reaproveitadas dos testes de notebooks no site da PromptQuorum — um modelo de 7B roda a 10-25 tok/s em uma CPU de notebook, 30-80 tok/s em Apple Silicon e 60-90 tok/s em uma GPU de notebook RTX 4060. A coluna "melhor para" reflete o estilo de compra, não um único SKU. Os preços são um retrato de maio de 2026 expressos como faixas — os preços de notebooks mudam com os ciclos de modelo e as promoções, então confirme antes de comprar.',
+          'As cifras de velocidade são reaproveitadas dos testes de notebooks no site da PromptQuorum — um modelo de 7B roda a 10-25 tok/s em uma CPU de notebook, 30-80 tok/s em Apple Silicon e 60-90 tok/s em uma GPU de notebook RTX 4060. A coluna "melhor para" reflete o estilo de compra, não um único SKU. Os preços são um retrato de julho de 2026 expressos como faixas — os preços de notebooks mudam com os ciclos de modelo e as promoções, então confirme antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3094,35 +3103,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pense na memória como o tamanho da bancada e no modelo como o projeto sobre ela. Um chip mais rápido termina o trabalho mais cedo, mas se o projeto não cabe na bancada, a velocidade nunca importa. Um notebook também tem um sistema de refrigeração menor que um desktop, então ele desacelera em tarefas longas.',
           },
         ],
-        columns: ['Família de notebooks', 'Modelo de memória', 'Velocidade 7B (dados reaproveitados)', 'Melhor para', 'Preço (maio de 2026)'],
+        columns: ['Família de notebooks', 'Modelo de memória', 'Velocidade 7B (dados reaproveitados)', 'Melhor para', 'Preço (julho de 2026)'],
         rows: [
           {
             'Família de notebooks': 'Apple MacBook Pro',
             'Modelo de memória': 'Memória unificada (CPU + GPU compartilhada)',
             'Velocidade 7B (dados reaproveitados)': '30-80 tok/s em Apple Silicon',
             'Melhor para': 'Maiores modelos de forma portátil, melhor bateria',
-            'Preço (maio de 2026)': 'Médio a premium; verificar preço atual',
+            'Preço (julho de 2026)': 'Médio a premium; verificar preço atual',
           },
           {
             'Família de notebooks': 'Lenovo ThinkPad / workstation',
             'Modelo de memória': 'VRAM NVIDIA RTX + RAM do sistema',
             'Velocidade 7B (dados reaproveitados)': '60-90 tok/s em uma GPU RTX 4060',
             'Melhor para': 'Construção durável, trabalho 7B-13B na tomada',
-            'Preço (maio de 2026)': 'Médio a premium; verificar preço atual',
+            'Preço (julho de 2026)': 'Médio a premium; verificar preço atual',
           },
           {
             'Família de notebooks': 'Notebook gamer ASUS ROG',
             'Modelo de memória': 'VRAM NVIDIA RTX + RAM do sistema',
             'Velocidade 7B (dados reaproveitados)': '60-90 tok/s em uma GPU RTX 4060',
             'Melhor para': 'Mais rápido em 7B-13B na tomada',
-            'Preço (maio de 2026)': 'Médio; verificar preço atual',
+            'Preço (julho de 2026)': 'Médio; verificar preço atual',
           },
           {
             'Família de notebooks': 'Framework Laptop 16',
             'Modelo de memória': 'RAM do sistema atualizável + módulo de GPU',
             'Velocidade 7B (dados reaproveitados)': 'Comparável a um notebook RTX na tomada',
             'Melhor para': 'Reparabilidade, aumentar a memória depois',
-            'Preço (maio de 2026)': 'Médio; verificar preço atual',
+            'Preço (julho de 2026)': 'Médio; verificar preço atual',
           },
         ],
       },
@@ -3332,7 +3341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Cada faixa de preço neste guia é um retrato de maio de 2026. Os preços de notebooks mudam com os ciclos de modelo e os eventos de promoção — abra sempre o anúncio atual do varejista ou fabricante antes de comprar.',
+            text: 'Cada faixa de preço neste guia é um retrato de julho de 2026. Os preços de notebooks mudam com os ciclos de modelo e os eventos de promoção — abra sempre o anúncio atual do varejista ou fabricante antes de comprar.',
           },
         ],
         affiliateLinks: [
@@ -3458,7 +3467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل أجهزة الكمبيوتر المحمولة لتشغيل النماذج اللغوية المحلية: دليل الشراء ⁨2026⁩',
     seoTitle: 'لابتوب لتشغيل ⁨LLMs⁩ محلياً ⁨2026⁩: ⁨MacBook⁩ و⁨ThinkPad⁩',
     intro:
-      'معظم النصائح المتعلقة بأجهزة الكمبيوتر المحمولة للنماذج اللغوية المحلية تبدأ بوحدة معالجة الرسومات وتتوقف عند ذلك. الرقم الذي يحدد حجم النموذج الذي يناسب الجهاز هو الذاكرة: VRAM في أجهزة Windows للألعاب، أو الذاكرة الموحدة في Apple Silicon — ونموذج لا يناسب الذاكرة إما لا يُحمَّل أو يفيض إلى swap ويصبح بطيئاً جداً للاستخدام التفاعلي. يقارن هذا الدليل أربع عائلات من أجهزة الكمبيوتر المحمولة بثلاثة أساليب شراء: Apple MacBook Pro للذاكرة الأكبر في جسم محمول، وLenovo ThinkPad أو ASUS ROG للألعاب لسرعة GPU من NVIDIA، وFramework Laptop 16 للقابلية للإصلاح والترقية. توقع أن يعمل الجهاز المحمول بسرعة أقل بنسبة 20-30% مقارنةً بسطح المكتب الذي يحمل نفس الرقاقة بسبب حدود الحرارة. ملاحظة: الأسعار هنا صورة من مايو 2026 — أسعار أجهزة الكمبيوتر المحمولة تتغير مع دورات الطرازات والعروض، لذا تأكد من السعر الحالي قبل الشراء.',
+      'معظم النصائح المتعلقة بأجهزة الكمبيوتر المحمولة للنماذج اللغوية المحلية تبدأ بوحدة معالجة الرسومات وتتوقف عند ذلك. الرقم الذي يحدد حجم النموذج الذي يناسب الجهاز هو الذاكرة: VRAM في أجهزة Windows للألعاب، أو الذاكرة الموحدة في Apple Silicon — ونموذج لا يناسب الذاكرة إما لا يُحمَّل أو يفيض إلى swap ويصبح بطيئاً جداً للاستخدام التفاعلي. يقارن هذا الدليل أربع عائلات من أجهزة الكمبيوتر المحمولة بثلاثة أساليب شراء: Apple MacBook Pro للذاكرة الأكبر في جسم محمول، وLenovo ThinkPad أو ASUS ROG للألعاب لسرعة GPU من NVIDIA، وFramework Laptop 16 للقابلية للإصلاح والترقية. توقع أن يعمل الجهاز المحمول بسرعة أقل بنسبة 20-30% مقارنةً بسطح المكتب الذي يحمل نفس الرقاقة بسبب حدود الحرارة. ملاحظة: الأسعار هنا صورة من يوليو 2026 — أسعار أجهزة الكمبيوتر المحمولة تتغير مع دورات الطرازات والعروض، لذا تأكد من السعر الحالي قبل الشراء.',
     metaDescription:
       'MacBook Pro M5 Max وASUS ROG وThinkPad مقارَنة لتشغيل LLMs: VRAM والذاكرة الموحدة تحدد النموذج المناسب. سرعات الرموز الفعلية لكل فئة سعرية 2026.',
     twitterDescription:
@@ -3535,7 +3544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الحد الأدنى للذاكرة:** 8 GB يُشغّل نماذج 7B بـQ4_K_M، و16 GB يُشغّل 13B براحة، وتكوينات MacBook Pro الكبيرة تصل إلى نماذج أكبر بكثير. اترك دائماً 2-4 GB هامش لنظام التشغيل.',
           '**توقع فجوة مع سطح المكتب.** اللابتوب يعمل بسرعة أقل بنحو 20-30% من سطح المكتب بنفس الرقاقة لأن حدود الحرارة تُبقي الترددات منخفضة تحت الحمل المستمر.',
           '**البطارية تغير كل شيء في Windows.** لابتوب الألعاب عادةً يعطّل أو يُقيّد GPU المخصصة على البطارية مما يُسقط الاستدلال إلى سرعة بطيئة جداً — خطط للتشغيل عند الاتصال بالكهرباء. Apple Silicon يبقى قابلاً للاستخدام على البطارية وأكثر كفاءة بكثير.',
-          '**الأسعار صورة من مايو 2026.** أسعار اللابتوب تتغير مع دورات تحديث الطرازات والعروض — عامل مع كل رقم هنا كنطاق وتأكد من السعر الحالي قبل الشراء.',
+          '**الأسعار صورة من يوليو 2026.** أسعار اللابتوب تتغير مع دورات تحديث الطرازات والعروض — عامل مع كل رقم هنا كنطاق وتأكد من السعر الحالي قبل الشراء.',
         ],
       },
       quickFacts: {
@@ -3582,7 +3591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقارن الأربع عائلات من اللابتوب للنماذج اللغوية المحلية',
         content:
-          'أرقام السرعة مأخوذة من اختبارات اللابتوب على موقع PromptQuorum — نموذج 7B يعمل بـ10-25 رمز/ثانية على CPU اللابتوب، و30-80 رمز/ثانية على Apple Silicon، و60-90 رمز/ثانية على GPU اللابتوب RTX 4060. عمود "الأفضل لـ" يعكس أسلوب الشراء لا SKU واحداً. الأسعار صورة من مايو 2026 كنطاقات — أسعار اللابتوب تتغير مع دورات الطرازات والعروض، تأكد من السعر قبل الشراء.',
+          'أرقام السرعة مأخوذة من اختبارات اللابتوب على موقع PromptQuorum — نموذج 7B يعمل بـ10-25 رمز/ثانية على CPU اللابتوب، و30-80 رمز/ثانية على Apple Silicon، و60-90 رمز/ثانية على GPU اللابتوب RTX 4060. عمود "الأفضل لـ" يعكس أسلوب الشراء لا SKU واحداً. الأسعار صورة من يوليو 2026 كنطاقات — أسعار اللابتوب تتغير مع دورات الطرازات والعروض، تأكد من السعر قبل الشراء.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3593,35 +3602,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'فكّر في الذاكرة كحجم طاولة العمل والنموذج كالمشروع فوقها. رقاقة أسرع تنهي العمل أبكر، لكن إذا لم يناسب المشروع الطاولة، فالسرعة لا تهم أبداً. اللابتوب أيضاً لديه نظام تبريد أصغر من سطح المكتب لذا يتباطأ في المهام الطويلة.',
           },
         ],
-        columns: ['عائلة اللابتوب', 'نموذج الذاكرة', 'سرعة 7B', 'الأفضل لـ', 'السعر (مايو 2026)'],
+        columns: ['عائلة اللابتوب', 'نموذج الذاكرة', 'سرعة 7B', 'الأفضل لـ', 'السعر (يوليو 2026)'],
         rows: [
           {
             'عائلة اللابتوب': 'Apple MacBook Pro',
             'نموذج الذاكرة': 'ذاكرة موحدة (CPU + GPU مشتركة)',
             'سرعة 7B': '30-80 رمز/ثانية على Apple Silicon',
             'الأفضل لـ': 'أكبر نماذج بشكل محمول وأفضل بطارية',
-            'السعر (مايو 2026)': 'متوسط إلى متميز؛ تحقق من السعر الحالي',
+            'السعر (يوليو 2026)': 'متوسط إلى متميز؛ تحقق من السعر الحالي',
           },
           {
             'عائلة اللابتوب': 'Lenovo ThinkPad / ورك ستيشن',
             'نموذج الذاكرة': 'NVIDIA RTX VRAM + RAM النظام',
             'سرعة 7B': '60-90 رمز/ثانية على GPU RTX 4060',
             'الأفضل لـ': 'بناء متين، عمل 7B-13B عند الاتصال بالكهرباء',
-            'السعر (مايو 2026)': 'متوسط إلى متميز؛ تحقق من السعر الحالي',
+            'السعر (يوليو 2026)': 'متوسط إلى متميز؛ تحقق من السعر الحالي',
           },
           {
             'عائلة اللابتوب': 'لابتوب ASUS ROG للألعاب',
             'نموذج الذاكرة': 'NVIDIA RTX VRAM + RAM النظام',
             'سرعة 7B': '60-90 رمز/ثانية على GPU RTX 4060',
             'الأفضل لـ': 'الأسرع في 7B-13B عند الاتصال بالكهرباء',
-            'السعر (مايو 2026)': 'متوسط؛ تحقق من السعر الحالي',
+            'السعر (يوليو 2026)': 'متوسط؛ تحقق من السعر الحالي',
           },
           {
             'عائلة اللابتوب': 'Framework Laptop 16',
             'نموذج الذاكرة': 'RAM النظام القابلة للترقية + وحدة GPU',
             'سرعة 7B': 'مماثل للابتوب RTX عند الاتصال بالكهرباء',
             'الأفضل لـ': 'قابلية الإصلاح، زيادة الذاكرة لاحقاً',
-            'السعر (مايو 2026)': 'متوسط؛ تحقق من السعر الحالي',
+            'السعر (يوليو 2026)': 'متوسط؛ تحقق من السعر الحالي',
           },
         ],
       },
@@ -3831,7 +3840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'كل نطاق سعر في هذا الدليل صورة من مايو 2026. أسعار اللابتوب تتغير مع دورات الطرازات وأحداث العروض — افتح دائماً الإعلان الحالي للبائع أو الشركة المصنّعة قبل الشراء.',
+            text: 'كل نطاق سعر في هذا الدليل صورة من يوليو 2026. أسعار اللابتوب تتغير مع دورات الطرازات وأحداث العروض — افتح دائماً الإعلان الحالي للبائع أو الشركة المصنّعة قبل الشراء.',
           },
         ],
         affiliateLinks: [
@@ -3957,7 +3966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드',
     seoTitle: '로컬 LLM 노트북 2026: MacBook부터 ThinkPad까지',
     intro:
-      '로컬 LLM을 위한 노트북 추천의 대부분은 GPU로 시작해서 거기서 끝납니다. 실제로 어떤 모델이 들어갈 수 있는지를 결정하는 수치는 메모리입니다. Windows 게이밍 노트북의 VRAM, 또는 Apple Silicon의 통합 메모리 — 메모리에 맞지 않는 모델은 로드되지 않거나 swap에서 느리게 실행됩니다. 이 가이드는 세 가지 구매 스타일에 따라 네 가지 노트북 제품군을 비교합니다: 휴대 가능한 폼팩터에서 가장 많은 메모리를 원하는 경우 Apple MacBook Pro, NVIDIA GPU 속도를 원하는 경우 Lenovo ThinkPad 또는 ASUS ROG 게이밍 노트북, 수리 및 업그레이드를 원하는 경우 Framework Laptop 16. 동일한 칩이 탑재된 데스크톱에 비해 노트북은 열 제한으로 인해 약 20~30% 느리게 동작합니다. 이 가이드의 가격은 2026년 5월 기준 스냅샷입니다 — 노트북 가격은 모델 사이클과 프로모션에 따라 변동하므로 구매 전에 현재 가격을 확인하십시오.',
+      '로컬 LLM을 위한 노트북 추천의 대부분은 GPU로 시작해서 거기서 끝납니다. 실제로 어떤 모델이 들어갈 수 있는지를 결정하는 수치는 메모리입니다. Windows 게이밍 노트북의 VRAM, 또는 Apple Silicon의 통합 메모리 — 메모리에 맞지 않는 모델은 로드되지 않거나 swap에서 느리게 실행됩니다. 이 가이드는 세 가지 구매 스타일에 따라 네 가지 노트북 제품군을 비교합니다: 휴대 가능한 폼팩터에서 가장 많은 메모리를 원하는 경우 Apple MacBook Pro, NVIDIA GPU 속도를 원하는 경우 Lenovo ThinkPad 또는 ASUS ROG 게이밍 노트북, 수리 및 업그레이드를 원하는 경우 Framework Laptop 16. 동일한 칩이 탑재된 데스크톱에 비해 노트북은 열 제한으로 인해 약 20~30% 느리게 동작합니다. 이 가이드의 가격은 2026년 7월 기준 스냅샷입니다 — 노트북 가격은 모델 사이클과 프로모션에 따라 변동하므로 구매 전에 현재 가격을 확인하십시오.',
     metaDescription:
       '2026년 로컬 LLM을 위한 최고의 노트북: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. 가격대별 RAM, VRAM, 실제 토큰 속도 비교.',
     twitterDescription:
@@ -4034,7 +4043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**메모리 최소 요구사항:** Q4_K_M으로 8GB는 7B 모델을 실행하고, 16GB는 13B를 편안하게 실행하며, 대용량 MacBook Pro 구성은 훨씬 더 큰 모델에 도달합니다. 운영체제를 위해 항상 2~4GB의 여유를 남겨 두십시오.',
           '**데스크톱과의 속도 차이를 예상하십시오.** 노트북은 열 제한이 지속적인 부하 하에서 클록 주파수를 낮게 유지하기 때문에 동일한 칩이 탑재된 데스크톱보다 약 20~30% 느리게 동작합니다.',
           '**Windows에서는 배터리가 모든 것을 바꿉니다.** 게이밍 노트북은 일반적으로 배터리 사용 시 외장 GPU를 비활성화하거나 제한하여 추론 속도를 매우 낮춥니다 — 전원을 연결하여 사용하도록 계획하십시오. Apple Silicon은 배터리로도 사용 가능하며 훨씬 더 효율적입니다.',
-          '**가격은 2026년 5월 기준 스냅샷입니다.** 노트북 가격은 모델 업데이트 사이클과 프로모션에 따라 변동합니다 — 각 수치를 범위로 취급하고 구매 전에 실시간 가격을 확인하십시오.',
+          '**가격은 2026년 7월 기준 스냅샷입니다.** 노트북 가격은 모델 업데이트 사이클과 프로모션에 따라 변동합니다 — 각 수치를 범위로 취급하고 구매 전에 실시간 가격을 확인하십시오.',
         ],
       },
       quickFacts: {
@@ -4081,7 +4090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '로컬 LLM을 위한 네 가지 노트북 제품군 비교',
         content:
-          '속도 수치는 PromptQuorum의 노트북 테스트에서 나온 것입니다 — 7B 모델은 노트북 CPU에서 10~25 tok/s, Apple Silicon에서 30~80 tok/s, RTX 4060 노트북 GPU에서 60~90 tok/s로 실행됩니다. "최적 용도" 열은 특정 SKU가 아닌 구매 스타일을 반영합니다. 가격은 2026년 5월 기준 범위로 표시됩니다 — 노트북 가격은 모델 사이클과 프로모션에 따라 변동하므로 구매 전에 확인하십시오.',
+          '속도 수치는 PromptQuorum의 노트북 테스트에서 나온 것입니다 — 7B 모델은 노트북 CPU에서 10~25 tok/s, Apple Silicon에서 30~80 tok/s, RTX 4060 노트북 GPU에서 60~90 tok/s로 실행됩니다. "최적 용도" 열은 특정 SKU가 아닌 구매 스타일을 반영합니다. 가격은 2026년 7월 기준 범위로 표시됩니다 — 노트북 가격은 모델 사이클과 프로모션에 따라 변동하므로 구매 전에 확인하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4092,35 +4101,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '메모리를 작업대 크기로, 모델을 그 위의 프로젝트로 생각하십시오. 더 빠른 칩은 작업을 더 빨리 마치지만, 프로젝트가 작업대에 맞지 않으면 속도는 중요하지 않습니다. 노트북은 데스크톱보다 냉각 시스템이 작아 긴 작업에서 속도가 떨어집니다.',
           },
         ],
-        columns: ['노트북 제품군', '메모리 모델', '7B 속도 (재사용 데이터)', '최적 용도', '가격 (2026년 5월)'],
+        columns: ['노트북 제품군', '메모리 모델', '7B 속도 (재사용 데이터)', '최적 용도', '가격 (2026년 7월)'],
         rows: [
           {
             '노트북 제품군': 'Apple MacBook Pro',
             '메모리 모델': '통합 메모리 (CPU + GPU 공유)',
             '7B 속도 (재사용 데이터)': 'Apple Silicon에서 30-80 tok/s',
             '최적 용도': '휴대 가능한 형태로 더 큰 모델, 더 나은 배터리',
-            '가격 (2026년 5월)': '중고가~프리미엄, 현재 가격 확인 필요',
+            '가격 (2026년 7월)': '중고가~프리미엄, 현재 가격 확인 필요',
           },
           {
             '노트북 제품군': 'Lenovo ThinkPad / 워크스테이션',
             '메모리 모델': 'NVIDIA RTX VRAM + 시스템 RAM',
             '7B 속도 (재사용 데이터)': 'RTX 4060 GPU에서 60-90 tok/s',
             '최적 용도': '견고한 빌드, 전원 연결 시 7B-13B 작업',
-            '가격 (2026년 5월)': '중고가~프리미엄, 현재 가격 확인 필요',
+            '가격 (2026년 7월)': '중고가~프리미엄, 현재 가격 확인 필요',
           },
           {
             '노트북 제품군': 'ASUS ROG 게이밍 노트북',
             '메모리 모델': 'NVIDIA RTX VRAM + 시스템 RAM',
             '7B 속도 (재사용 데이터)': 'RTX 4060 GPU에서 60-90 tok/s',
             '최적 용도': '전원 연결 시 7B-13B에서 가장 빠름',
-            '가격 (2026년 5월)': '중간 가격대, 현재 가격 확인 필요',
+            '가격 (2026년 7월)': '중간 가격대, 현재 가격 확인 필요',
           },
           {
             '노트북 제품군': 'Framework Laptop 16',
             '메모리 모델': '업그레이드 가능한 시스템 RAM + GPU 모듈',
             '7B 속도 (재사용 데이터)': '전원 연결 시 RTX 노트북과 유사',
             '최적 용도': '수리 가능성, 나중에 메모리 늘리기',
-            '가격 (2026년 5월)': '중간 가격대, 현재 가격 확인 필요',
+            '가격 (2026년 7월)': '중간 가격대, 현재 가격 확인 필요',
           },
         ],
       },
@@ -4330,7 +4339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '이 가이드의 각 가격 범위는 2026년 5월 기준 스냅샷입니다. 노트북 가격은 모델 사이클과 프로모션 이벤트에 따라 변동합니다 — 구매 전에 항상 소매점 또는 제조사의 현재 목록을 열어 확인하십시오.',
+            text: '이 가이드의 각 가격 범위는 2026년 7월 기준 스냅샷입니다. 노트북 가격은 모델 사이클과 프로모션 이벤트에 따라 변동합니다 — 구매 전에 항상 소매점 또는 제조사의 현재 목록을 열어 확인하십시오.',
           },
         ],
         affiliateLinks: [
