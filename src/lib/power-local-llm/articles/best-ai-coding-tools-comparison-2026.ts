@@ -4,8 +4,8 @@
 // tags joined yet) and a neutral third-party-link notice. EN block first;
 // DE/FR/JA/ZH render as "Coming Soon" until translated.
 //
-// Prices: June 2026 snapshot. Subscription pricing for developer tools moves
-// with plan changes — every price here is a May 2026 estimate, confirm on the
+// Prices: July 2026 snapshot. Subscription pricing for developer tools moves
+// with plan changes — every price here is a July 2026 estimate, confirm on the
 // vendor pricing page before subscribing. Pricing and local-LLM support reuse
 // audited data from /local-llms/best-ai-coding-assistant-local-llm.
 
@@ -16,15 +16,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Best AI Coding Tools Compared 2026: Cursor vs Continue.dev',
-    seoTitle: 'Best AI Coding Tools 2026: Cursor $20 vs Free Continue.dev',
+    seoTitle: 'Continue.dev vs Cursor 2026: Best Local LLM Coding Tool',
     intro:
-      'Most AI-coding-tool comparisons rank on autocomplete quality and miss the question that decides the purchase for many developers: does the tool run on a local LLM, or does it send your code to a third-party server? For proprietary code, NDA-bound work, or regulated industries, that single answer reorders the whole ranking. This guide compares four tools — Cursor, Continue.dev, GitHub Copilot, and Sourcegraph Cody — on the criteria that bind a real choice: local LLM support, price, IDE coverage, and where your code goes. One caveat on price: developer-tool subscriptions change with plan revisions, so every figure here is a June 2026 snapshot — confirm the current rate on the vendor site before you subscribe.',
+      'Most AI-coding-tool comparisons rank on autocomplete quality and miss the question that decides the purchase for many developers: does the tool run on a local LLM, or does it send your code to a third-party server? For proprietary code, NDA-bound work, or regulated industries, that single answer reorders the whole ranking. This guide compares four tools — Cursor, Continue.dev, GitHub Copilot, and Sourcegraph Cody — on the criteria that bind a real choice: local LLM support, price, IDE coverage, and where your code goes. One caveat on price: developer-tool subscriptions change with plan revisions, so every figure here is a July 2026 snapshot — confirm the current rate on the vendor site before you subscribe.',
     metaDescription:
-      'Cursor (~$20/mo), GitHub Copilot (~$10/mo), Continue.dev (free). Which AI coding tools run on a local LLM? 4 tools compared: pricing, privacy, autocomplete.',
+      'Continue.dev vs Cursor for local models: Continue.dev (free, native Ollama) wins local-first; Cursor (~$20/mo) for polish. Best Ollama model: Qwen3 Coder 14B.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — four AI coding tools compared. The decision rule most rankings skip: does it run on a local LLM?',
     affiliateDisclosure: true,
@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sourcegraph cody review 2026',
     ],
     leadAnswerBlock:
-      '**The best AI coding tool depends on whether you need local LLM support: Continue.dev is the free, open-source pick built around Ollama; Cursor is the most polished paid editor; GitHub Copilot is the cloud-only default for the GitHub ecosystem; and Sourcegraph Cody is the codebase-wide pick for teams.**',
+      '**Continue.dev vs Cursor for local models: choose Continue.dev if you want a free, open-source tool built around Ollama that keeps code on your machine; choose Cursor (~$20/month) if you want the most polished editor and will pay for it. The best Ollama model to pair with Continue.dev is Qwen3 Coder 14B (the mid-size default, ~16 GB VRAM); drop to Qwen3 Coder 7B for 8–12 GB GPUs, or move up to a 33B-class model on 24 GB. For the wider field, GitHub Copilot (~$10/month) is the cloud-only GitHub default and Sourcegraph Cody is the codebase-wide pick for teams.**',
     quickAnswerTop: {
       en: {
         question: 'What is the best AI coding tool in 2026?',
@@ -63,9 +63,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Most polished editor: Cursor, ~$20/month, local LLM via custom endpoint',
           'GitHub ecosystem default: GitHub Copilot, ~$10/month, cloud-only',
           'Best codebase-wide context for teams: Sourcegraph Cody, ~$9/user/month standard',
-          'Subscription prices change — treat every figure as a June 2026 snapshot',
+          'Subscription prices change — treat every figure as a July 2026 snapshot',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best codebase context for teams: Sourcegraph Cody** — codebase-wide context for refactoring, plus team admin and audit logs. Local LLM support via Ollama; the standard tier runs about $9/user/month and an enterprise tier costs more.',
           '**A local LLM needs a GPU.** Local coding models want roughly 8 GB of VRAM or more — Qwen3 Coder 7B fits smaller systems, 14B is the mid-size default, and 33B-class models want 24 GB. With no GPU, a cloud tool is the only option.',
           '**Cloud tools still win on raw quality and setup speed.** Top cloud coding models lead local options on hard problems, and a cloud tool is productive in minutes versus the longer setup of a local LLM stack.',
-          '**Prices change with plan revisions.** Treat every figure here as a June 2026 snapshot and confirm the current rate and tier on the vendor pricing page.',
+          '**Prices change with plan revisions.** Treat every figure here as a July 2026 snapshot and confirm the current rate and tier on the vendor pricing page.',
         ],
       },
       quickFacts: {
@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best for teams:** Sourcegraph Cody — codebase-wide context, admin console, and audit logs.',
           '**Local LLM hardware floor:** roughly 8 GB of VRAM; Qwen3 Coder 14B is the mid-size default coding model.',
           '**Open source:** only Continue.dev (Apache 2.0); Cursor, GitHub Copilot, and Cody IDE extensions are closed.',
-          '**2026 pricing reality:** developer-tool subscriptions change with plan revisions — treat figures as a June 2026 snapshot.',
+          '**2026 pricing reality:** developer-tool subscriptions change with plan revisions — treat figures as a July 2026 snapshot.',
         ],
       },
       editorsChoice: {
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Four AI Coding Tools Compare in 2026',
         content:
-          'Local LLM support, IDE coverage, and open-source status are taken from each vendor\'s published documentation. Pricing is a June 2026 snapshot of the standard individual or per-user tier — vendors revise plans, so confirm the current figure and tier on the vendor pricing page before subscribing. Local LLM support ranges from native (Continue.dev) to custom-endpoint configuration (Cursor) to Ollama configuration (Cody) to none (GitHub Copilot).',
+          'Local LLM support, IDE coverage, and open-source status are taken from each vendor\'s published documentation. Pricing is a July 2026 snapshot of the standard individual or per-user tier — vendors revise plans, so confirm the current figure and tier on the vendor pricing page before subscribing. Local LLM support ranges from native (Continue.dev) to custom-endpoint configuration (Cursor) to Ollama configuration (Cody) to none (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -150,12 +150,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Every AI coding tool needs a model to think with. Some can use a model running on your own computer, so your code never leaves the building. Others only use the vendor\'s cloud model, which means your code is uploaded. Decide which of those you need before comparing anything else.',
           },
         ],
-        columns: ['Tool', 'Local LLM', 'Price (June 2026)', 'Open source', 'IDEs', 'Best for'],
+        columns: ['Tool', 'Local LLM', 'Price (July 2026)', 'Open source', 'IDEs', 'Best for'],
         rows: [
           {
             'Tool': 'Continue.dev',
             'Local LLM': 'Native — Ollama, LM Studio, llama.cpp',
-            'Price (June 2026)': 'Free',
+            'Price (July 2026)': 'Free',
             'Open source': 'Yes — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Best for': 'Local-first developers',
@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Cursor',
             'Local LLM': 'Via custom OpenAI-compatible endpoint',
-            'Price (June 2026)': '~$20/month (Pro)',
+            'Price (July 2026)': '~$20/month (Pro)',
             'Open source': 'No — closed',
             'IDEs': 'Cursor (VS Code fork)',
             'Best for': 'Most polished editor experience',
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'GitHub Copilot',
             'Local LLM': 'No — cloud only',
-            'Price (June 2026)': '~$10/month',
+            'Price (July 2026)': '~$10/month',
             'Open source': 'No — closed',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Best for': 'GitHub ecosystem integration',
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Sourcegraph Cody',
             'Local LLM': 'Via Ollama configuration',
-            'Price (June 2026)': '~$9/user/month standard; enterprise tier costs more',
+            'Price (July 2026)': '~$9/user/month standard; enterprise tier costs more',
             'Open source': 'Partial — CLI open, IDE extensions closed',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Best for': 'Teams needing codebase-wide context',
@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cursor is the pick when you want the most polished AI coding experience and will pay roughly $20/month for it.** It is a VS Code fork with AI built in, the autocomplete quality is the strongest of the four, and it supports a local LLM through a custom OpenAI-compatible endpoint.',
         items: [
-          '**Price:** a limited free tier and a Pro tier at roughly $20/month as a June 2026 snapshot.',
+          '**Price:** a limited free tier and a Pro tier at roughly $20/month as a July 2026 snapshot.',
           '**Local LLM support:** available by configuring your local model as a custom OpenAI-compatible API endpoint — workable, but fiddlier than Continue.dev, roughly 15 minutes to set up.',
           '**Editor:** a VS Code fork, highly optimized; the autocomplete is the most polished in this comparison, and the agentic Composer mode handles multi-step edits.',
           '**Privacy caveat:** with cloud models, code context and selections are sent to Cursor\'s servers; its Privacy Mode reduces but does not eliminate data sharing, and some agentic features prefer cloud models.',
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**GitHub Copilot is the pick when your code is public or already on GitHub and you want the simplest cloud option — but it is cloud-only, with no local LLM mode.** At roughly $10/month it is the lowest-priced paid tool here, and it integrates tightly with the GitHub workflow.',
         items: [
-          '**Price:** roughly $10/month for the individual plan as a June 2026 snapshot — the cheapest paid tool in this comparison.',
+          '**Price:** roughly $10/month for the individual plan as a July 2026 snapshot — the cheapest paid tool in this comparison.',
           '**Local LLM support:** none. GitHub Copilot runs only on cloud models, so code context is sent to the provider — this is the decisive limitation for proprietary or regulated code.',
           '**IDEs:** VS Code, JetBrains, and Vim are supported, with the tightest fit inside the GitHub-centered workflow.',
           '**Privacy:** code context is sent to the provider; an enterprise tier adds compliance commitments but data still leaves your network.',
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sourcegraph Cody is the pick when a team needs codebase-wide context — it understands the whole project, which is what large refactorings and multi-file changes depend on.** It supports a local LLM through Ollama configuration and adds team admin controls and audit logs.',
         items: [
           '**Codebase context:** Cody reads across the entire project, making it the strongest of the four for refactoring and multi-file edits.',
-          '**Price:** a standard tier at roughly $9/user/month as a June 2026 snapshot, with an enterprise tier that costs more — confirm the current tiers on the vendor pricing page.',
+          '**Price:** a standard tier at roughly $9/user/month as a July 2026 snapshot, with an enterprise tier that costs more — confirm the current tiers on the vendor pricing page.',
           '**Local LLM support:** available via Ollama configuration; chat and completions can run locally, though Cody\'s design is cloud-first and local is the secondary path.',
           '**Team features:** an admin console, audit logs, and seat management — the reason Cody fits compliance-sensitive teams.',
           '**IDEs:** VS Code, JetBrains, and Neovim; the CLI is open source while the IDE extensions are closed.',
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sign up for each tool on the vendor\'s own site, and check which tier the advertised price covers.** The links below go straight to each vendor; they carry no affiliate tags and earn no commission.',
         items: [
           '**Continue.dev:** install from continue.dev — free and open source, no account needed for local-only use.',
-          '**Cursor:** subscribe at cursor.com — a limited free tier exists; the Pro tier is roughly $20/month as a June 2026 snapshot.',
+          '**Cursor:** subscribe at cursor.com — a limited free tier exists; the Pro tier is roughly $20/month as a July 2026 snapshot.',
           '**GitHub Copilot:** subscribe at github.com/features/copilot — roughly $10/month for the individual plan; cloud-only, with no local LLM mode.',
           '**Sourcegraph Cody:** sign up at sourcegraph.com/cody — a standard tier near $9/user/month and an enterprise tier that costs more; confirm the current tiers.',
           '**Try free first:** Continue.dev is free, and Cursor and Cody have free tiers — test against your real workflow before paying.',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Developer-tool pricing changes with plan revisions. Every figure in this guide is a June 2026 snapshot — open the vendor pricing page before subscribing and confirm which tier (individual, per-user, or enterprise) the price covers.',
+            text: 'Developer-tool pricing changes with plan revisions. Every figure in this guide is a July 2026 snapshot — open the vendor pricing page before subscribing and confirm which tier (individual, per-user, or enterprise) the price covers.',
           },
         ],
         affiliateLinks: [
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which tool is best for a development team?',
-            a: 'Sourcegraph Cody, when the team needs codebase-wide context. Cody reads across the whole project, which is what large refactorings depend on, and adds an admin console and audit logs for compliance-sensitive teams. Its standard tier runs about $9/user/month as a June 2026 snapshot, with an enterprise tier that costs more.',
+            a: 'Sourcegraph Cody, when the team needs codebase-wide context. Cody reads across the whole project, which is what large refactorings depend on, and adds an admin console and audit logs for compliance-sensitive teams. Its standard tier runs about $9/user/month as a July 2026 snapshot, with an enterprise tier that costs more.',
           },
           {
             q: 'Cursor or Continue.dev — which should I pick?',
@@ -468,15 +468,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Beste KI-Coding-Tools im Vergleich 2026: Cursor vs. Continue.dev',
-    seoTitle: 'KI-Coding-Tools 2026: Cursor $20 vs. Continue.dev kostenlos',
+    seoTitle: 'Continue.dev vs. Cursor 2026: Bestes Tool für lokale LLMs',
     intro:
-      'Die meisten Vergleiche von KI-Coding-Tools bewerten nach Autovervollständigungsqualität und übersehen die Frage, die für viele Entwickler über den Kauf entscheidet: Läuft das Tool auf einem lokalen LLM, oder sendet es Ihren Code an einen Drittanbieter-Server? Bei proprietärem Code, NDA-gebundener Arbeit oder regulierten Branchen ordnet diese eine Antwort die gesamte Rangfolge neu. Dieser Leitfaden vergleicht vier Tools — Cursor, Continue.dev, GitHub Copilot und Sourcegraph Cody — anhand der Kriterien, die eine echte Entscheidung bestimmen: Unterstützung für lokale LLMs, Preis, IDE-Abdeckung und wohin Ihr Code geht. Eine Einschränkung beim Preis: Abonnements für Entwickler-Tools ändern sich mit Tarifüberarbeitungen, daher ist jede Zahl hier eine Momentaufnahme von Mai 2026 — bestätigen Sie den aktuellen Tarif auf der Anbieter-Website, bevor Sie ein Abonnement abschließen.',
+      'Die meisten Vergleiche von KI-Coding-Tools bewerten nach Autovervollständigungsqualität und übersehen die Frage, die für viele Entwickler über den Kauf entscheidet: Läuft das Tool auf einem lokalen LLM, oder sendet es Ihren Code an einen Drittanbieter-Server? Bei proprietärem Code, NDA-gebundener Arbeit oder regulierten Branchen ordnet diese eine Antwort die gesamte Rangfolge neu. Dieser Leitfaden vergleicht vier Tools — Cursor, Continue.dev, GitHub Copilot und Sourcegraph Cody — anhand der Kriterien, die eine echte Entscheidung bestimmen: Unterstützung für lokale LLMs, Preis, IDE-Abdeckung und wohin Ihr Code geht. Eine Einschränkung beim Preis: Abonnements für Entwickler-Tools ändern sich mit Tarifüberarbeitungen, daher ist jede Zahl hier eine Momentaufnahme von Juli 2026 — bestätigen Sie den aktuellen Tarif auf der Anbieter-Website, bevor Sie ein Abonnement abschließen.',
     metaDescription:
-      'Cursor (~20 $/Mo), GitHub Copilot (~10 $/Mo), Continue.dev kostenlos. 4 KI-Tools verglichen: lokales LLM oder Cloud, Preise und Datenschutz auf einen Blick.',
+      'Continue.dev vs. Cursor für lokale Modelle: Continue.dev (kostenlos, natives Ollama) gewinnt local-first; Cursor (~20 $/Mo) für Politur. Bestes Ollama-Modell: Qwen3 Coder 14B.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — vier KI-Coding-Tools im Vergleich. Die Entscheidungsregel, die die meisten Rankings auslassen: Läuft es auf einem lokalen LLM?',
     affiliateDisclosure: true,
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sourcegraph cody test 2026',
     ],
     leadAnswerBlock:
-      '**Das beste KI-Coding-Tool hängt davon ab, ob Sie Unterstützung für lokale LLMs benötigen: Continue.dev ist die kostenlose, quelloffene Wahl rund um Ollama; Cursor ist der ausgereifteste kostenpflichtige Editor; GitHub Copilot ist die reine Cloud-Standardwahl für das GitHub-Ökosystem; und Sourcegraph Cody ist die Wahl für projektweiten Kontext in Teams.**',
+      '**Continue.dev vs. Cursor für lokale Modelle: Wählen Sie Continue.dev, wenn Sie ein kostenloses, quelloffenes Tool rund um Ollama wollen, das den Code auf Ihrem Rechner hält; wählen Sie Cursor (~20 $/Monat), wenn Sie den ausgereiftesten Editor wollen und dafür zahlen. Das beste Ollama-Modell für Continue.dev ist Qwen3 Coder 14B (der mittelgroße Standard, ~16 GB VRAM); wechseln Sie zu Qwen3 Coder 7B für GPUs mit 8-12 GB, oder steigen Sie auf ein Modell der 33B-Klasse auf 24 GB auf. Für das breitere Feld ist GitHub Copilot (~10 $/Monat) die reine Cloud-Standardwahl für GitHub und Sourcegraph Cody die Wahl für projektweiten Kontext in Teams.**',
     quickAnswerTop: {
       de: {
         question: 'Was ist das beste KI-Coding-Tool im Jahr 2026?',
@@ -515,9 +515,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ausgereiftester Editor: Cursor, ~20 $/Monat, lokales LLM über benutzerdefinierten Endpunkt',
           'Standard für das GitHub-Ökosystem: GitHub Copilot, ~10 $/Monat, reine Cloud',
           'Bester projektweiter Kontext für Teams: Sourcegraph Cody, ~9 $/Nutzer/Monat Standard',
-          'Abonnementpreise ändern sich — behandeln Sie jede Zahl als Momentaufnahme von Mai 2026',
+          'Abonnementpreise ändern sich — behandeln Sie jede Zahl als Momentaufnahme von Juli 2026',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Bester Codebasis-Kontext für Teams: Sourcegraph Cody** — projektweiter Kontext für Refactoring, dazu Team-Administration und Audit-Protokolle. Unterstützung für lokale LLMs über Ollama; die Standardstufe liegt bei etwa 9 $/Nutzer/Monat und eine Enterprise-Stufe kostet mehr.',
           '**Ein lokales LLM braucht eine GPU.** Lokale Coding-Modelle wollen ungefähr 8 GB VRAM oder mehr — Qwen3 Coder 7B passt auf kleinere Systeme, 14B ist der mittelgroße Standard und Modelle der 33B-Klasse wollen 24 GB. Ohne GPU ist ein Cloud-Tool die einzige Option.',
           '**Cloud-Tools gewinnen weiterhin bei reiner Qualität und Einrichtungsgeschwindigkeit.** Top-Cloud-Coding-Modelle führen lokale Optionen bei schwierigen Problemen an, und ein Cloud-Tool ist in Minuten produktiv, verglichen mit der längeren Einrichtung eines lokalen LLM-Stacks.',
-          '**Preise ändern sich mit Tarifüberarbeitungen.** Behandeln Sie jede Zahl hier als Momentaufnahme von Mai 2026 und bestätigen Sie den aktuellen Tarif und die Stufe auf der Anbieter-Preisseite.',
+          '**Preise ändern sich mit Tarifüberarbeitungen.** Behandeln Sie jede Zahl hier als Momentaufnahme von Juli 2026 und bestätigen Sie den aktuellen Tarif und die Stufe auf der Anbieter-Preisseite.',
         ],
       },
       quickFacts: {
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Am besten für Teams:** Sourcegraph Cody — projektweiter Kontext, Admin-Konsole und Audit-Protokolle.',
           '**Hardware-Untergrenze für lokale LLMs:** rund 8 GB VRAM; Qwen3 Coder 14B ist das mittelgroße Standard-Coding-Modell.',
           '**Quelloffen:** nur Continue.dev (Apache 2.0); die IDE-Erweiterungen von Cursor, GitHub Copilot und Cody sind closed.',
-          '**Preisrealität 2026:** Abonnements für Entwickler-Tools ändern sich mit Tarifüberarbeitungen — behandeln Sie Zahlen als Momentaufnahme von Mai 2026.',
+          '**Preisrealität 2026:** Abonnements für Entwickler-Tools ändern sich mit Tarifüberarbeitungen — behandeln Sie Zahlen als Momentaufnahme von Juli 2026.',
         ],
       },
       editorsChoice: {
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'So schneiden die vier KI-Coding-Tools 2026 ab',
         content:
-          'Unterstützung für lokale LLMs, IDE-Abdeckung und Open-Source-Status stammen aus der veröffentlichten Dokumentation des jeweiligen Anbieters. Die Preisangabe ist eine Momentaufnahme von Mai 2026 der Standard-Einzelnutzer- oder Pro-Nutzer-Stufe — Anbieter überarbeiten Tarife, bestätigen Sie also die aktuelle Zahl und Stufe auf der Anbieter-Preisseite, bevor Sie ein Abonnement abschließen. Die Unterstützung für lokale LLMs reicht von nativ (Continue.dev) über die Konfiguration eines benutzerdefinierten Endpunkts (Cursor) und die Ollama-Konfiguration (Cody) bis hin zu keiner (GitHub Copilot).',
+          'Unterstützung für lokale LLMs, IDE-Abdeckung und Open-Source-Status stammen aus der veröffentlichten Dokumentation des jeweiligen Anbieters. Die Preisangabe ist eine Momentaufnahme von Juli 2026 der Standard-Einzelnutzer- oder Pro-Nutzer-Stufe — Anbieter überarbeiten Tarife, bestätigen Sie also die aktuelle Zahl und Stufe auf der Anbieter-Preisseite, bevor Sie ein Abonnement abschließen. Die Unterstützung für lokale LLMs reicht von nativ (Continue.dev) über die Konfiguration eines benutzerdefinierten Endpunkts (Cursor) und die Ollama-Konfiguration (Cody) bis hin zu keiner (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -602,12 +602,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Jedes KI-Coding-Tool braucht ein Modell, mit dem es denkt. Manche können ein Modell nutzen, das auf Ihrem eigenen Rechner läuft, sodass Ihr Code das Haus nie verlässt. Andere nutzen nur das Cloud-Modell des Anbieters, was bedeutet, dass Ihr Code hochgeladen wird. Entscheiden Sie, welches davon Sie brauchen, bevor Sie irgendetwas anderes vergleichen.',
           },
         ],
-        columns: ['Tool', 'Lokales LLM', 'Preis (Mai 2026)', 'Quelloffen', 'IDEs', 'Am besten für'],
+        columns: ['Tool', 'Lokales LLM', 'Preis (Juli 2026)', 'Quelloffen', 'IDEs', 'Am besten für'],
         rows: [
           {
             'Tool': 'Continue.dev',
             'Lokales LLM': 'Nativ — Ollama, LM Studio, llama.cpp',
-            'Preis (Mai 2026)': 'Kostenlos',
+            'Preis (Juli 2026)': 'Kostenlos',
             'Quelloffen': 'Ja — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Am besten für': 'Local-First-Entwickler',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Cursor',
             'Lokales LLM': 'Über benutzerdefinierten OpenAI-kompatiblen Endpunkt',
-            'Preis (Mai 2026)': '~20 $/Monat (Pro)',
+            'Preis (Juli 2026)': '~20 $/Monat (Pro)',
             'Quelloffen': 'Nein — closed',
             'IDEs': 'Cursor (VS-Code-Fork)',
             'Am besten für': 'Ausgereiftestes Editor-Erlebnis',
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'GitHub Copilot',
             'Lokales LLM': 'Nein — reine Cloud',
-            'Preis (Mai 2026)': '~10 $/Monat',
+            'Preis (Juli 2026)': '~10 $/Monat',
             'Quelloffen': 'Nein — closed',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Am besten für': 'Integration ins GitHub-Ökosystem',
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Sourcegraph Cody',
             'Lokales LLM': 'Über Ollama-Konfiguration',
-            'Preis (Mai 2026)': '~9 $/Nutzer/Monat Standard; Enterprise-Stufe kostet mehr',
+            'Preis (Juli 2026)': '~9 $/Nutzer/Monat Standard; Enterprise-Stufe kostet mehr',
             'Quelloffen': 'Teilweise — CLI offen, IDE-Erweiterungen closed',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Am besten für': 'Teams, die projektweiten Kontext brauchen',
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cursor ist die Wahl, wenn Sie das ausgereifteste KI-Coding-Erlebnis wollen und dafür rund 20 $/Monat zahlen.** Es ist ein VS-Code-Fork mit eingebauter KI, die Autovervollständigungsqualität ist die stärkste der vier, und es unterstützt ein lokales LLM über einen benutzerdefinierten OpenAI-kompatiblen Endpunkt.',
         items: [
-          '**Preis:** eine eingeschränkte kostenlose Stufe und eine Pro-Stufe für rund 20 $/Monat als Momentaufnahme von Mai 2026.',
+          '**Preis:** eine eingeschränkte kostenlose Stufe und eine Pro-Stufe für rund 20 $/Monat als Momentaufnahme von Juli 2026.',
           '**Unterstützung für lokale LLMs:** verfügbar, indem Sie Ihr lokales Modell als benutzerdefinierten OpenAI-kompatiblen API-Endpunkt konfigurieren — machbar, aber fummeliger als Continue.dev, rund 15 Minuten zur Einrichtung.',
           '**Editor:** ein VS-Code-Fork, stark optimiert; die Autovervollständigung ist die ausgereifteste in diesem Vergleich, und der agentische Composer-Modus bewältigt mehrstufige Bearbeitungen.',
           '**Datenschutz-Einschränkung:** bei Cloud-Modellen werden Code-Kontext und Auswahl an die Server von Cursor gesendet; der Privacy Mode reduziert die Datenweitergabe, eliminiert sie aber nicht, und einige agentische Funktionen bevorzugen Cloud-Modelle.',
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**GitHub Copilot ist die Wahl, wenn Ihr Code öffentlich oder bereits auf GitHub ist und Sie die einfachste Cloud-Option wollen — aber es ist reine Cloud, ohne lokalen LLM-Modus.** Mit rund 10 $/Monat ist es das preisgünstigste kostenpflichtige Tool hier, und es lässt sich eng in den GitHub-Workflow integrieren.',
         items: [
-          '**Preis:** rund 10 $/Monat für den Einzelplan als Momentaufnahme von Mai 2026 — das günstigste kostenpflichtige Tool in diesem Vergleich.',
+          '**Preis:** rund 10 $/Monat für den Einzelplan als Momentaufnahme von Juli 2026 — das günstigste kostenpflichtige Tool in diesem Vergleich.',
           '**Unterstützung für lokale LLMs:** keine. GitHub Copilot läuft nur auf Cloud-Modellen, sodass der Code-Kontext an den Anbieter gesendet wird — das ist die entscheidende Einschränkung für proprietären oder regulierten Code.',
           '**IDEs:** VS Code, JetBrains und Vim werden unterstützt, mit der engsten Passung innerhalb des GitHub-zentrierten Workflows.',
           '**Datenschutz:** der Code-Kontext wird an den Anbieter gesendet; eine Enterprise-Stufe ergänzt Compliance-Zusagen, aber die Daten verlassen weiterhin Ihr Netzwerk.',
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sourcegraph Cody ist die Wahl, wenn ein Team projektweiten Kontext braucht — es versteht das gesamte Projekt, worauf große Refactorings und mehrdateiige Änderungen angewiesen sind.** Es unterstützt ein lokales LLM über die Ollama-Konfiguration und ergänzt Team-Administrationssteuerungen und Audit-Protokolle.',
         items: [
           '**Codebasis-Kontext:** Cody liest über das gesamte Projekt hinweg und ist damit das stärkste der vier für Refactoring und mehrdateiige Bearbeitungen.',
-          '**Preis:** eine Standardstufe für rund 9 $/Nutzer/Monat als Momentaufnahme von Mai 2026, mit einer Enterprise-Stufe, die mehr kostet — bestätigen Sie die aktuellen Stufen auf der Anbieter-Preisseite.',
+          '**Preis:** eine Standardstufe für rund 9 $/Nutzer/Monat als Momentaufnahme von Juli 2026, mit einer Enterprise-Stufe, die mehr kostet — bestätigen Sie die aktuellen Stufen auf der Anbieter-Preisseite.',
           '**Unterstützung für lokale LLMs:** verfügbar über die Ollama-Konfiguration; Chat und Vervollständigungen können lokal laufen, obwohl Codys Design Cloud-first ist und lokal der sekundäre Weg ist.',
           '**Team-Funktionen:** eine Admin-Konsole, Audit-Protokolle und Sitzplatzverwaltung — der Grund, warum Cody zu Compliance-sensiblen Teams passt.',
           '**IDEs:** VS Code, JetBrains und Neovim; die CLI ist quelloffen, während die IDE-Erweiterungen closed sind.',
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melden Sie sich für jedes Tool auf der eigenen Website des Anbieters an und prüfen Sie, welche Stufe der beworbene Preis abdeckt.** Die Links unten führen direkt zu jedem Anbieter; sie tragen keine Affiliate-Tags und verdienen keine Provision.',
         items: [
           '**Continue.dev:** Installation von continue.dev — kostenlos und quelloffen, für die rein lokale Nutzung ist kein Konto erforderlich.',
-          '**Cursor:** Abonnement auf cursor.com — eine eingeschränkte kostenlose Stufe existiert; die Pro-Stufe kostet rund 20 $/Monat als Momentaufnahme von Mai 2026.',
+          '**Cursor:** Abonnement auf cursor.com — eine eingeschränkte kostenlose Stufe existiert; die Pro-Stufe kostet rund 20 $/Monat als Momentaufnahme von Juli 2026.',
           '**GitHub Copilot:** Abonnement auf github.com/features/copilot — rund 10 $/Monat für den Einzelplan; reine Cloud, ohne lokalen LLM-Modus.',
           '**Sourcegraph Cody:** Anmeldung auf sourcegraph.com/cody — eine Standardstufe um 9 $/Nutzer/Monat und eine Enterprise-Stufe, die mehr kostet; bestätigen Sie die aktuellen Stufen.',
           '**Zuerst kostenlos testen:** Continue.dev ist kostenlos, und Cursor und Cody haben kostenlose Stufen — testen Sie gegen Ihren echten Workflow, bevor Sie zahlen.',
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Die Preise für Entwickler-Tools ändern sich mit Tarifüberarbeitungen. Jede Zahl in diesem Leitfaden ist eine Momentaufnahme von Mai 2026 — öffnen Sie die Anbieter-Preisseite, bevor Sie ein Abonnement abschließen, und bestätigen Sie, welche Stufe (Einzelnutzer, Pro-Nutzer oder Enterprise) der Preis abdeckt.',
+            text: 'Die Preise für Entwickler-Tools ändern sich mit Tarifüberarbeitungen. Jede Zahl in diesem Leitfaden ist eine Momentaufnahme von Juli 2026 — öffnen Sie die Anbieter-Preisseite, bevor Sie ein Abonnement abschließen, und bestätigen Sie, welche Stufe (Einzelnutzer, Pro-Nutzer oder Enterprise) der Preis abdeckt.',
           },
         ],
         affiliateLinks: [
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches Tool ist am besten für ein Entwicklerteam?',
-            a: 'Sourcegraph Cody, wenn das Team projektweiten Kontext braucht. Cody liest über das gesamte Projekt hinweg, worauf große Refactorings angewiesen sind, und ergänzt eine Admin-Konsole und Audit-Protokolle für Compliance-sensible Teams. Seine Standardstufe liegt bei etwa 9 $/Nutzer/Monat als Momentaufnahme von Mai 2026, mit einer Enterprise-Stufe, die mehr kostet.',
+            a: 'Sourcegraph Cody, wenn das Team projektweiten Kontext braucht. Cody liest über das gesamte Projekt hinweg, worauf große Refactorings angewiesen sind, und ergänzt eine Admin-Konsole und Audit-Protokolle für Compliance-sensible Teams. Seine Standardstufe liegt bei etwa 9 $/Nutzer/Monat als Momentaufnahme von Juli 2026, mit einer Enterprise-Stufe, die mehr kostet.',
           },
           {
             q: 'Cursor oder Continue.dev — welches sollte ich wählen?',
@@ -920,15 +920,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: "Meilleurs outils de codage IA comparés 2026 : Cursor vs Continue.dev",
-    seoTitle: "Outils IA 2026 : Cursor 20 $/mois vs Continue.dev gratuit",
+    seoTitle: "Continue.dev vs Cursor 2026 : meilleur outil LLM local",
     intro:
-      "La plupart des comparatifs d'outils de codage IA classent les produits sur la qualité de l'autocomplétion et passent à côté de la question qui décide l'achat pour de nombreux développeurs : l'outil tourne-t-il sur un LLM local, ou envoie-t-il votre code vers un serveur tiers ? Pour du code propriétaire, du travail sous NDA ou des secteurs régulés, cette seule réponse réordonne tout le classement. Ce guide compare quatre outils — Cursor, Continue.dev, GitHub Copilot et Sourcegraph Cody — sur les critères qui déterminent un vrai choix : prise en charge des LLM locaux, prix, couverture des IDE et destination de votre code. Une réserve sur le prix : les abonnements aux outils de développement évoluent avec les révisions de plans, donc chaque chiffre ici est un instantané de mai 2026 — confirmez le tarif courant sur le site de l'éditeur avant de souscrire.",
+      "La plupart des comparatifs d'outils de codage IA classent les produits sur la qualité de l'autocomplétion et passent à côté de la question qui décide l'achat pour de nombreux développeurs : l'outil tourne-t-il sur un LLM local, ou envoie-t-il votre code vers un serveur tiers ? Pour du code propriétaire, du travail sous NDA ou des secteurs régulés, cette seule réponse réordonne tout le classement. Ce guide compare quatre outils — Cursor, Continue.dev, GitHub Copilot et Sourcegraph Cody — sur les critères qui déterminent un vrai choix : prise en charge des LLM locaux, prix, couverture des IDE et destination de votre code. Une réserve sur le prix : les abonnements aux outils de développement évoluent avec les révisions de plans, donc chaque chiffre ici est un instantané de juillet 2026 — confirmez le tarif courant sur le site de l'éditeur avant de souscrire.",
     metaDescription:
-      "Cursor (~20 $/mois), Copilot (~10 $/mois), Continue.dev gratuit. Quel outil IA pour le codage tourne sur un LLM local ? 4 outils comparés : prix et confidentialité.",
+      "Continue.dev vs Cursor pour modèles locaux : Continue.dev (gratuit, Ollama natif) gagne en local-first ; Cursor (~20 $/mois) pour la finition. Meilleur modèle Ollama : Qwen3 Coder 14B.",
     twitterDescription:
       "Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatre outils de codage IA comparés. La règle de décision que la plupart des classements ignorent : tourne-t-il sur un LLM local ?",
     affiliateDisclosure: true,
@@ -956,7 +956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'avis sourcegraph cody 2026',
     ],
     leadAnswerBlock:
-      "**Le meilleur outil de codage IA dépend de votre besoin de prise en charge des LLM locaux : Continue.dev est le choix gratuit et open source bâti autour d'Ollama ; Cursor est l'éditeur payant le plus abouti ; GitHub Copilot est l'option cloud par défaut pour l'écosystème GitHub ; et Sourcegraph Cody est le choix à l'échelle du code source pour les équipes.**",
+      "**Continue.dev vs Cursor pour les modèles locaux : choisissez Continue.dev si vous voulez un outil gratuit et open source bâti autour d'Ollama qui garde le code sur votre machine ; choisissez Cursor (~20 $/mois) si vous voulez l'éditeur le plus abouti et acceptez de payer pour cela. Le meilleur modèle Ollama à associer à Continue.dev est Qwen3 Coder 14B (le choix de taille moyenne par défaut, ~16 Go de VRAM) ; descendez à Qwen3 Coder 7B pour les GPU de 8 à 12 Go, ou montez à un modèle de classe 33B sur 24 Go. Pour l'ensemble du panorama, GitHub Copilot (~10 $/mois) est l'option cloud par défaut de l'écosystème GitHub et Sourcegraph Cody est le choix à l'échelle du code source pour les équipes.**",
     quickAnswerTop: {
       fr: {
         question: "Quel est le meilleur outil de codage IA en 2026 ?",
@@ -967,9 +967,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Éditeur le plus abouti : Cursor, ~20 $/mois, LLM local via point de terminaison personnalisé",
           "Référence de l'écosystème GitHub : GitHub Copilot, ~10 $/mois, uniquement cloud",
           "Meilleur contexte à l'échelle du code source pour les équipes : Sourcegraph Cody, ~9 $/utilisateur/mois en standard",
-          "Les prix des abonnements changent — traitez chaque chiffre comme un instantané de mai 2026",
+          "Meilleur modèle Ollama pour Continue.dev : Qwen3 Coder 14B (~16 Go de VRAM ; 7B pour 8-12 Go, classe 33B sur 24 Go)",
+          "Les prix des abonnements changent — traitez chaque chiffre comme un instantané de juillet 2026",
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1001,7 +1002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Meilleur contexte de code source pour les équipes : Sourcegraph Cody** — contexte à l'échelle du code source pour le refactoring, plus administration d'équipe et journaux d'audit. Prise en charge de LLM local via Ollama ; le palier standard tourne autour de 9 $/utilisateur/mois et un palier entreprise coûte plus cher.",
           "**Un LLM local nécessite un GPU.** Les modèles de codage locaux veulent environ 8 Go de VRAM ou plus — Qwen3 Coder 7B convient aux systèmes plus modestes, le 14B est le choix de taille moyenne par défaut, et les modèles de classe 33B veulent 24 Go. Sans GPU, un outil cloud est la seule option.",
           "**Les outils cloud gardent l'avantage sur la qualité brute et la vitesse de mise en place.** Les meilleurs modèles de codage cloud devancent les options locales sur les problèmes difficiles, et un outil cloud est productif en quelques minutes contre une mise en place plus longue d'une pile LLM locale.",
-          "**Les prix changent avec les révisions de plans.** Traitez chaque chiffre ici comme un instantané de mai 2026 et confirmez le tarif et le palier courants sur la page de tarifs de l'éditeur.",
+          "**Les prix changent avec les révisions de plans.** Traitez chaque chiffre ici comme un instantané de juillet 2026 et confirmez le tarif et le palier courants sur la page de tarifs de l'éditeur.",
         ],
       },
       quickFacts: {
@@ -1014,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Idéal pour les équipes :** Sourcegraph Cody — contexte à l'échelle du code source, console d'administration et journaux d'audit.",
           "**Plancher matériel pour LLM local :** environ 8 Go de VRAM ; Qwen3 Coder 14B est le modèle de codage de taille moyenne par défaut.",
           "**Open source :** seul Continue.dev (Apache 2.0) ; les extensions IDE de Cursor, GitHub Copilot et Cody sont fermées.",
-          "**Réalité tarifaire 2026 :** les abonnements aux outils de développement changent avec les révisions de plans — traitez les chiffres comme un instantané de mai 2026.",
+          "**Réalité tarifaire 2026 :** les abonnements aux outils de développement changent avec les révisions de plans — traitez les chiffres comme un instantané de juillet 2026.",
         ],
       },
       editorsChoice: {
@@ -1043,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparaison des quatre outils de codage IA en 2026',
         content:
-          "La prise en charge des LLM locaux, la couverture des IDE et le statut open source proviennent de la documentation publiée par chaque éditeur. Les tarifs sont un instantané de mai 2026 du palier standard individuel ou par utilisateur — les éditeurs révisent leurs plans, donc confirmez le chiffre et le palier courants sur la page de tarifs de l'éditeur avant de souscrire. La prise en charge des LLM locaux va de native (Continue.dev) à la configuration d'un point de terminaison personnalisé (Cursor), à la configuration d'Ollama (Cody), à aucune (GitHub Copilot).",
+          "La prise en charge des LLM locaux, la couverture des IDE et le statut open source proviennent de la documentation publiée par chaque éditeur. Les tarifs sont un instantané de juillet 2026 du palier standard individuel ou par utilisateur — les éditeurs révisent leurs plans, donc confirmez le chiffre et le palier courants sur la page de tarifs de l'éditeur avant de souscrire. La prise en charge des LLM locaux va de native (Continue.dev) à la configuration d'un point de terminaison personnalisé (Cursor), à la configuration d'Ollama (Cody), à aucune (GitHub Copilot).",
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1054,12 +1055,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "Chaque outil de codage IA a besoin d'un modèle pour réfléchir. Certains peuvent utiliser un modèle tournant sur votre propre ordinateur, donc votre code ne quitte jamais les lieux. D'autres n'utilisent que le modèle cloud de l'éditeur, ce qui signifie que votre code est téléversé. Décidez de ce dont vous avez besoin avant de comparer quoi que ce soit d'autre.",
           },
         ],
-        columns: ['Outil', 'LLM local', 'Prix (mai 2026)', 'Open source', 'IDE', 'Idéal pour'],
+        columns: ['Outil', 'LLM local', 'Prix (juillet 2026)', 'Open source', 'IDE', 'Idéal pour'],
         rows: [
           {
             'Outil': 'Continue.dev',
             'LLM local': 'Natif — Ollama, LM Studio, llama.cpp',
-            'Prix (mai 2026)': 'Gratuit',
+            'Prix (juillet 2026)': 'Gratuit',
             'Open source': 'Oui — Apache 2.0',
             'IDE': 'VS Code, JetBrains, Vim',
             'Idéal pour': 'Développeurs local-first',
@@ -1067,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Outil': 'Cursor',
             'LLM local': 'Via point de terminaison personnalisé compatible OpenAI',
-            'Prix (mai 2026)': '~20 $/mois (Pro)',
+            'Prix (juillet 2026)': '~20 $/mois (Pro)',
             'Open source': 'Non — fermé',
             'IDE': 'Cursor (fork de VS Code)',
             'Idéal pour': "Expérience d'éditeur la plus aboutie",
@@ -1075,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Outil': 'GitHub Copilot',
             'LLM local': 'Non — uniquement cloud',
-            'Prix (mai 2026)': '~10 $/mois',
+            'Prix (juillet 2026)': '~10 $/mois',
             'Open source': 'Non — fermé',
             'IDE': 'VS Code, JetBrains, Vim',
             'Idéal pour': "Intégration à l'écosystème GitHub",
@@ -1083,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Outil': 'Sourcegraph Cody',
             'LLM local': "Via configuration d'Ollama",
-            'Prix (mai 2026)': '~9 $/utilisateur/mois en standard ; le palier entreprise coûte plus cher',
+            'Prix (juillet 2026)': '~9 $/utilisateur/mois en standard ; le palier entreprise coûte plus cher',
             'Open source': 'Partiel — CLI ouvert, extensions IDE fermées',
             'IDE': 'VS Code, JetBrains, Neovim',
             'Idéal pour': 'Équipes ayant besoin de contexte à l\'échelle du code source',
@@ -1141,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Cursor est le choix quand vous voulez l'expérience de codage IA la plus aboutie et acceptez de payer environ 20 $/mois pour cela.** C'est un fork de VS Code avec l'IA intégrée, la qualité de l'autocomplétion est la plus forte des quatre, et il prend en charge un LLM local via un point de terminaison personnalisé compatible OpenAI.",
         items: [
-          "**Prix :** un palier gratuit limité et un palier Pro à environ 20 $/mois en instantané de mai 2026.",
+          "**Prix :** un palier gratuit limité et un palier Pro à environ 20 $/mois en instantané de juillet 2026.",
           "**Prise en charge des LLM locaux :** disponible en configurant votre modèle local comme un point de terminaison d'API personnalisé compatible OpenAI — faisable, mais plus délicat que Continue.dev, environ 15 minutes de mise en place.",
           "**Éditeur :** un fork de VS Code, hautement optimisé ; l'autocomplétion est la plus aboutie de ce comparatif, et le mode agentique Composer gère les modifications en plusieurs étapes.",
           "**Réserve de confidentialité :** avec les modèles cloud, le contexte du code et les sélections sont envoyés aux serveurs de Cursor ; son mode Privacy réduit mais n'élimine pas le partage de données, et certaines fonctions agentiques préfèrent les modèles cloud.",
@@ -1170,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**GitHub Copilot est le choix quand votre code est public ou déjà sur GitHub et que vous voulez l'option cloud la plus simple — mais il est uniquement cloud, sans mode LLM local.** À environ 10 $/mois, c'est l'outil payant le moins cher ici, et il s'intègre étroitement au flux de travail GitHub.",
         items: [
-          "**Prix :** environ 10 $/mois pour le plan individuel en instantané de mai 2026 — l'outil payant le moins cher de ce comparatif.",
+          "**Prix :** environ 10 $/mois pour le plan individuel en instantané de juillet 2026 — l'outil payant le moins cher de ce comparatif.",
           "**Prise en charge des LLM locaux :** aucune. GitHub Copilot ne tourne que sur des modèles cloud, donc le contexte du code est envoyé au fournisseur — c'est la limitation décisive pour du code propriétaire ou régulé.",
           "**IDE :** VS Code, JetBrains et Vim sont pris en charge, avec l'ajustement le plus étroit dans le flux de travail centré sur GitHub.",
           "**Confidentialité :** le contexte du code est envoyé au fournisseur ; un palier entreprise ajoute des engagements de conformité mais les données quittent toujours votre réseau.",
@@ -1200,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Sourcegraph Cody est le choix quand une équipe a besoin de contexte à l'échelle du code source — il comprend l'ensemble du projet, ce dont dépendent les grands refactorings et les modifications multi-fichiers.** Il prend en charge un LLM local via la configuration d'Ollama et ajoute des contrôles d'administration d'équipe et des journaux d'audit.",
         items: [
           "**Contexte du code source :** Cody lit l'ensemble du projet, ce qui en fait le plus solide des quatre pour le refactoring et les modifications multi-fichiers.",
-          "**Prix :** un palier standard à environ 9 $/utilisateur/mois en instantané de mai 2026, avec un palier entreprise qui coûte plus cher — confirmez les paliers courants sur la page de tarifs de l'éditeur.",
+          "**Prix :** un palier standard à environ 9 $/utilisateur/mois en instantané de juillet 2026, avec un palier entreprise qui coûte plus cher — confirmez les paliers courants sur la page de tarifs de l'éditeur.",
           "**Prise en charge des LLM locaux :** disponible via la configuration d'Ollama ; le chat et les complétions peuvent tourner en local, bien que la conception de Cody soit cloud-first et que le local soit le chemin secondaire.",
           "**Fonctions d'équipe :** une console d'administration, des journaux d'audit et la gestion des sièges — la raison pour laquelle Cody convient aux équipes sensibles à la conformité.",
           "**IDE :** VS Code, JetBrains et Neovim ; la CLI est open source tandis que les extensions IDE sont fermées.",
@@ -1252,7 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Inscrivez-vous à chaque outil sur le site même de l'éditeur, et vérifiez quel palier couvre le prix annoncé.** Les liens ci-dessous mènent directement à chaque éditeur ; ils ne portent aucune balise d'affiliation et ne génèrent aucune commission.",
         items: [
           "**Continue.dev :** installez depuis continue.dev — gratuit et open source, aucun compte nécessaire pour un usage local uniquement.",
-          "**Cursor :** abonnez-vous sur cursor.com — un palier gratuit limité existe ; le palier Pro est d'environ 20 $/mois en instantané de mai 2026.",
+          "**Cursor :** abonnez-vous sur cursor.com — un palier gratuit limité existe ; le palier Pro est d'environ 20 $/mois en instantané de juillet 2026.",
           "**GitHub Copilot :** abonnez-vous sur github.com/features/copilot — environ 10 $/mois pour le plan individuel ; uniquement cloud, sans mode LLM local.",
           "**Sourcegraph Cody :** inscrivez-vous sur sourcegraph.com/cody — un palier standard proche de 9 $/utilisateur/mois et un palier entreprise qui coûte plus cher ; confirmez les paliers courants.",
           "**Essayez d'abord gratuitement :** Continue.dev est gratuit, et Cursor et Cody ont des paliers gratuits — testez sur votre vrai flux de travail avant de payer.",
@@ -1260,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: "La tarification des outils de développement change avec les révisions de plans. Chaque chiffre de ce guide est un instantané de mai 2026 — ouvrez la page de tarifs de l'éditeur avant de souscrire et confirmez quel palier (individuel, par utilisateur ou entreprise) le prix couvre.",
+            text: "La tarification des outils de développement change avec les révisions de plans. Chaque chiffre de ce guide est un instantané de juillet 2026 — ouvrez la page de tarifs de l'éditeur avant de souscrire et confirmez quel palier (individuel, par utilisateur ou entreprise) le prix couvre.",
           },
         ],
         affiliateLinks: [
@@ -1344,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: "Quel outil est le meilleur pour une équipe de développement ?",
-            a: "Sourcegraph Cody, quand l'équipe a besoin de contexte à l'échelle du code source. Cody lit l'ensemble du projet, ce dont dépendent les grands refactorings, et ajoute une console d'administration et des journaux d'audit pour les équipes sensibles à la conformité. Son palier standard tourne autour de 9 $/utilisateur/mois en instantané de mai 2026, avec un palier entreprise qui coûte plus cher.",
+            a: "Sourcegraph Cody, quand l'équipe a besoin de contexte à l'échelle du code source. Cody lit l'ensemble du projet, ce dont dépendent les grands refactorings, et ajoute une console d'administration et des journaux d'audit pour les équipes sensibles à la conformité. Son palier standard tourne autour de 9 $/utilisateur/mois en instantané de juillet 2026, avec un palier entreprise qui coûte plus cher.",
           },
           {
             q: "Cursor ou Continue.dev — lequel choisir ?",
@@ -1372,15 +1373,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '2026年 ベストAIコーディングツール比較: Cursor 対 Continue.dev',
-    seoTitle: '2026年AIコード比較：Cursor $20対Continue.dev無料',
+    seoTitle: 'Continue.dev vs Cursor 2026：ローカルLLM最適ツール',
     intro:
-      'AIコーディングツールの比較記事の多くは、オートコンプリートの品質でランク付けし、多くの開発者にとって購入を決定づける問いを見落としています。そのツールはローカルLLMで動作するのか、それともコードをサードパーティのサーバーに送信するのか、という問いです。プロプライエタリなコード、NDAに縛られた業務、規制対象の業界では、その単一の答えがランキング全体を組み替えます。本ガイドでは、4つのツール — Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — を、実際の選択を左右する基準で比較します。ローカルLLMサポート、価格、IDEカバレッジ、そしてコードがどこへ送られるか、です。価格について1つ注意点があります。開発者向けツールのサブスクリプションはプラン改定とともに変動するため、ここに記載した数値はすべて2026年5月時点のスナップショットです。契約前にベンダーサイトで現在のレートを確認してください。',
+      'AIコーディングツールの比較記事の多くは、オートコンプリートの品質でランク付けし、多くの開発者にとって購入を決定づける問いを見落としています。そのツールはローカルLLMで動作するのか、それともコードをサードパーティのサーバーに送信するのか、という問いです。プロプライエタリなコード、NDAに縛られた業務、規制対象の業界では、その単一の答えがランキング全体を組み替えます。本ガイドでは、4つのツール — Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — を、実際の選択を左右する基準で比較します。ローカルLLMサポート、価格、IDEカバレッジ、そしてコードがどこへ送られるか、です。価格について1つ注意点があります。開発者向けツールのサブスクリプションはプラン改定とともに変動するため、ここに記載した数値はすべて2026年7月時点のスナップショットです。契約前にベンダーサイトで現在のレートを確認してください。',
     metaDescription:
-      'Cursor（月約2,700円）、GitHub Copilot（月約1,350円）、Continue.dev（無料）。ローカルLLMで動くツールはどれ？4ツールを価格・プライバシー・補完品質で比較。',
+      'ローカルモデル向けContinue.dev vs Cursor：Continue.dev（無料・Ollamaネイティブ）がローカルファーストで有利、Cursor（月約20ドル）は完成度重視。最適なOllamaモデルはQwen3 Coder 14B。',
     twitterDescription:
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — 4つのAIコーディングツールを比較。多くのランキングが飛ばす判断基準: ローカルLLMで動作するか。',
     affiliateDisclosure: true,
@@ -1408,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sourcegraph cody レビュー 2026',
     ],
     leadAnswerBlock:
-      '**ベストなAIコーディングツールは、ローカルLLMサポートが必要かどうかで決まります。Continue.dev はOllamaを中心に作られた無料・オープンソースの選択肢、Cursor は最も洗練された有料エディタ、GitHub Copilot はGitHubエコシステム向けのクラウド専用の定番、Sourcegraph Cody はチーム向けのコードベース全体を扱う選択肢です。**',
+      '**ローカルモデル向けのContinue.dev vs Cursor：コードを自分のマシンに保つOllamaを中心に作られた無料・オープンソースのツールが欲しいなら Continue.dev、最も洗練されたエディタが欲しくそれに対価を払う意思があるなら Cursor（月約20ドル）を選んでください。Continue.dev と組み合わせるベストなOllamaモデルは Qwen3 Coder 14B です（中規模の標準、約16 GBのVRAM）。8～12 GBのGPUなら Qwen3 Coder 7B に下げ、24 GBなら33Bクラスのモデルに上げてください。より広い選択肢では、GitHub Copilot（月約10ドル）がクラウド専用のGitHub定番、Sourcegraph Cody がチーム向けのコードベース全体の選択肢です。**',
     quickAnswerTop: {
       ja: {
         question: '2026年でベストなAIコーディングツールは何ですか?',
@@ -1419,9 +1420,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '最も洗練されたエディタ: Cursor、約$20/month、カスタムエンドポイント経由のローカルLLM',
           'GitHubエコシステムの定番: GitHub Copilot、約$10/month、クラウド専用',
           'チーム向けのベストなコードベース全体コンテキスト: Sourcegraph Cody、標準で約$9/user/month',
-          'サブスクリプション価格は変動します — すべての数値を2026年5月時点のスナップショットとして扱ってください',
+          'サブスクリプション価格は変動します — すべての数値を2026年7月時点のスナップショットとして扱ってください',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1453,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**チーム向けのベストなコードベースコンテキスト: Sourcegraph Cody** — リファクタリング向けのコードベース全体のコンテキスト、加えてチーム管理と監査ログ。Ollama経由でローカルLLMをサポート。標準ティアは約$9/user/monthで、エンタープライズティアはさらに高くなります。',
           '**ローカルLLMにはGPUが必要です。** ローカルコーディングモデルはおよそ8 GB以上のVRAMを必要とします — Qwen3 Coder 7B は小規模なシステムに収まり、14B が中規模の標準、33Bクラスのモデルは24 GBを必要とします。GPUがなければ、クラウドツールが唯一の選択肢です。',
           '**クラウドツールは生の品質とセットアップ速度では依然として勝ります。** トップクラスのクラウドコーディングモデルは難しい問題でローカルの選択肢をリードし、クラウドツールは数分で生産的になるのに対し、ローカルLLMスタックのセットアップはより長くかかります。',
-          '**価格はプラン改定とともに変動します。** ここに記載した数値はすべて2026年5月時点のスナップショットとして扱い、ベンダーの価格ページで現在のレートとティアを確認してください。',
+          '**価格はプラン改定とともに変動します。** ここに記載した数値はすべて2026年7月時点のスナップショットとして扱い、ベンダーの価格ページで現在のレートとティアを確認してください。',
         ],
       },
       quickFacts: {
@@ -1466,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**チームに最適:** Sourcegraph Cody — コードベース全体のコンテキスト、管理コンソール、監査ログ。',
           '**ローカルLLMのハードウェア下限:** およそ8 GBのVRAM。Qwen3 Coder 14B が中規模の標準コーディングモデルです。',
           '**オープンソース:** Continue.dev のみ (Apache 2.0)。Cursor、GitHub Copilot、Cody のIDE拡張機能はクローズドです。',
-          '**2026年の価格の実情:** 開発者向けツールのサブスクリプションはプラン改定とともに変動します — 数値は2026年5月時点のスナップショットとして扱ってください。',
+          '**2026年の価格の実情:** 開発者向けツールのサブスクリプションはプラン改定とともに変動します — 数値は2026年7月時点のスナップショットとして扱ってください。',
         ],
       },
       editorsChoice: {
@@ -1495,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '4つのAIコーディングツールは2026年にどう比較されるか',
         content:
-          'ローカルLLMサポート、IDEカバレッジ、オープンソースのステータスは、各ベンダーの公開ドキュメントから取得しています。価格は標準的な個人またはユーザーごとのティアの2026年5月時点のスナップショットです — ベンダーはプランを改定するため、契約前にベンダーの価格ページで現在の数値とティアを確認してください。ローカルLLMサポートは、ネイティブ (Continue.dev)、カスタムエンドポイント設定 (Cursor)、Ollama設定 (Cody)、なし (GitHub Copilot) まで幅があります。',
+          'ローカルLLMサポート、IDEカバレッジ、オープンソースのステータスは、各ベンダーの公開ドキュメントから取得しています。価格は標準的な個人またはユーザーごとのティアの2026年7月時点のスナップショットです — ベンダーはプランを改定するため、契約前にベンダーの価格ページで現在の数値とティアを確認してください。ローカルLLMサポートは、ネイティブ (Continue.dev)、カスタムエンドポイント設定 (Cursor)、Ollama設定 (Cody)、なし (GitHub Copilot) まで幅があります。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1506,12 +1507,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'すべてのAIコーディングツールは、考えるためのモデルを必要とします。一部のツールは自分のコンピュータで動作するモデルを使えるため、コードが建物の外に出ません。他のツールはベンダーのクラウドモデルのみを使うため、コードがアップロードされます。他のものを比較する前に、どちらが必要かを決めてください。',
           },
         ],
-        columns: ['ツール', 'ローカルLLM', '価格 (2026年5月)', 'オープンソース', 'IDE', '最適な用途'],
+        columns: ['ツール', 'ローカルLLM', '価格 (2026年7月)', 'オープンソース', 'IDE', '最適な用途'],
         rows: [
           {
             'ツール': 'Continue.dev',
             'ローカルLLM': 'ネイティブ — Ollama、LM Studio、llama.cpp',
-            '価格 (2026年5月)': '無料',
+            '価格 (2026年7月)': '無料',
             'オープンソース': 'はい — Apache 2.0',
             'IDE': 'VS Code、JetBrains、Vim',
             '最適な用途': 'ローカルファースト志向の開発者',
@@ -1519,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'Cursor',
             'ローカルLLM': 'カスタムのOpenAI互換エンドポイント経由',
-            '価格 (2026年5月)': '約$20/month (Pro)',
+            '価格 (2026年7月)': '約$20/month (Pro)',
             'オープンソース': 'いいえ — クローズド',
             'IDE': 'Cursor (VS Codeのフォーク)',
             '最適な用途': '最も洗練されたエディタ体験',
@@ -1527,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'GitHub Copilot',
             'ローカルLLM': 'なし — クラウド専用',
-            '価格 (2026年5月)': '約$10/month',
+            '価格 (2026年7月)': '約$10/month',
             'オープンソース': 'いいえ — クローズド',
             'IDE': 'VS Code、JetBrains、Vim',
             '最適な用途': 'GitHubエコシステムとの統合',
@@ -1535,7 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'Sourcegraph Cody',
             'ローカルLLM': 'Ollama設定経由',
-            '価格 (2026年5月)': '標準で約$9/user/month。エンタープライズティアはさらに高い',
+            '価格 (2026年7月)': '標準で約$9/user/month。エンタープライズティアはさらに高い',
             'オープンソース': '一部 — CLIはオープン、IDE拡張機能はクローズド',
             'IDE': 'VS Code、JetBrains、Neovim',
             '最適な用途': 'コードベース全体のコンテキストが必要なチーム',
@@ -1593,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cursor は、最も洗練されたAIコーディング体験を求め、それに対しておよそ$20/monthを支払う意思があるときの選択肢です。** AIを内蔵したVS Codeのフォークであり、オートコンプリートの品質は4つの中で最も強く、カスタムのOpenAI互換エンドポイント経由でローカルLLMをサポートします。',
         items: [
-          '**価格:** 制限付きの無料ティアと、2026年5月時点のスナップショットでおよそ$20/monthのProティア。',
+          '**価格:** 制限付きの無料ティアと、2026年7月時点のスナップショットでおよそ$20/monthのProティア。',
           '**ローカルLLMサポート:** ローカルモデルをカスタムのOpenAI互換APIエンドポイントとして設定することで利用可能 — 機能はしますが、Continue.dev より手間がかかり、セットアップにおよそ15分かかります。',
           '**エディタ:** VS Codeのフォークで、高度に最適化されています。オートコンプリートはこの比較で最も洗練されており、エージェント的なComposerモードはマルチステップの編集を処理します。',
           '**プライバシーの注意点:** クラウドモデルでは、コードコンテキストと選択範囲が Cursor のサーバーに送信されます。プライバシーモードはデータ共有を減らしますが排除はしません。一部のエージェント機能はクラウドモデルを好みます。',
@@ -1622,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**GitHub Copilot は、コードが公開されているか、すでにGitHubにあり、最もシンプルなクラウドの選択肢が欲しいときの選択肢です — ただしクラウド専用で、ローカルLLMモードはありません。** およそ$10/monthでここでは最も低価格の有料ツールであり、GitHubのワークフローと密接に統合されています。',
         items: [
-          '**価格:** 2026年5月時点のスナップショットで個人プランがおよそ$10/month — この比較で最も安い有料ツールです。',
+          '**価格:** 2026年7月時点のスナップショットで個人プランがおよそ$10/month — この比較で最も安い有料ツールです。',
           '**ローカルLLMサポート:** なし。GitHub Copilot はクラウドモデルのみで動作するため、コードコンテキストはプロバイダーに送信されます — これがプロプライエタリまたは規制対象のコードにとって決定的な制約です。',
           '**IDE:** VS Code、JetBrains、Vim がサポートされ、GitHub中心のワークフロー内で最も密接にフィットします。',
           '**プライバシー:** コードコンテキストはプロバイダーに送信されます。エンタープライズティアはコンプライアンスのコミットメントを追加しますが、データは依然としてネットワークから出ます。',
@@ -1652,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sourcegraph Cody は、チームがコードベース全体のコンテキストを必要とするときの選択肢です — プロジェクト全体を理解し、それが大規模なリファクタリングやマルチファイルの変更が依存するものです。** Ollama設定経由でローカルLLMをサポートし、チーム管理コントロールと監査ログを追加します。',
         items: [
           '**コードベースコンテキスト:** Cody はプロジェクト全体を横断して読み込むため、リファクタリングとマルチファイル編集において4つの中で最も強力です。',
-          '**価格:** 2026年5月時点のスナップショットで標準ティアがおよそ$9/user/month、さらに高いエンタープライズティアがあります — 現在のティアはベンダーの価格ページで確認してください。',
+          '**価格:** 2026年7月時点のスナップショットで標準ティアがおよそ$9/user/month、さらに高いエンタープライズティアがあります — 現在のティアはベンダーの価格ページで確認してください。',
           '**ローカルLLMサポート:** Ollama設定経由で利用可能。チャットと補完はローカルで動作できますが、Cody の設計はクラウドファーストで、ローカルは二次的な経路です。',
           '**チーム機能:** 管理コンソール、監査ログ、シート管理 — Cody がコンプライアンスに敏感なチームに合う理由です。',
           '**IDE:** VS Code、JetBrains、Neovim。CLIはオープンソースですが、IDE拡張機能はクローズドです。',
@@ -1704,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**各ツールはベンダー自身のサイトで登録し、表示価格がどのティアをカバーするかを確認してください。** 以下のリンクは各ベンダーへ直接つながります。アフィリエイトタグは付いておらず、手数料を一切得ません。',
         items: [
           '**Continue.dev:** continue.dev からインストール — 無料・オープンソースで、ローカル専用の利用にはアカウントが不要です。',
-          '**Cursor:** cursor.com で契約 — 制限付きの無料ティアがあります。Proティアは2026年5月時点のスナップショットでおよそ$20/monthです。',
+          '**Cursor:** cursor.com で契約 — 制限付きの無料ティアがあります。Proティアは2026年7月時点のスナップショットでおよそ$20/monthです。',
           '**GitHub Copilot:** github.com/features/copilot で契約 — 個人プランでおよそ$10/month。クラウド専用で、ローカルLLMモードはありません。',
           '**Sourcegraph Cody:** sourcegraph.com/cody で登録 — 約$9/user/monthの標準ティアと、さらに高いエンタープライズティア。現在のティアを確認してください。',
           '**まず無料で試す:** Continue.dev は無料で、Cursor と Cody には無料ティアがあります — 支払う前に実際のワークフローでテストしてください。',
@@ -1712,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '開発者向けツールの価格はプラン改定とともに変動します。本ガイドのすべての数値は2026年5月時点のスナップショットです — 契約前にベンダーの価格ページを開き、価格がどのティア (個人、ユーザーごと、エンタープライズ) をカバーするか確認してください。',
+            text: '開発者向けツールの価格はプラン改定とともに変動します。本ガイドのすべての数値は2026年7月時点のスナップショットです — 契約前にベンダーの価格ページを開き、価格がどのティア (個人、ユーザーごと、エンタープライズ) をカバーするか確認してください。',
           },
         ],
         affiliateLinks: [
@@ -1796,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '開発チームに最適なツールはどれですか?',
-            a: 'Sourcegraph Cody です。チームがコードベース全体のコンテキストを必要とするときに。Cody はプロジェクト全体を横断して読み込み、それが大規模なリファクタリングが依存するものであり、コンプライアンスに敏感なチームのために管理コンソールと監査ログを追加します。標準ティアは2026年5月時点のスナップショットで約$9/user/monthで、さらに高いエンタープライズティアがあります。',
+            a: 'Sourcegraph Cody です。チームがコードベース全体のコンテキストを必要とするときに。Cody はプロジェクト全体を横断して読み込み、それが大規模なリファクタリングが依存するものであり、コンプライアンスに敏感なチームのために管理コンソールと監査ログを追加します。標準ティアは2026年7月時点のスナップショットで約$9/user/monthで、さらに高いエンタープライズティアがあります。',
           },
           {
             q: 'Cursor と Continue.dev — どちらを選ぶべきですか?',
@@ -1824,15 +1825,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '2026 年最佳 AI 编程工具对比：Cursor vs Continue.dev',
-    seoTitle: 'AI编程工具2026：本地LLM vs 云端，4款对比',
+    seoTitle: 'Continue.dev vs Cursor 2026：最佳本地 LLM 编程工具',
     intro:
-      '大多数 AI 编程工具的对比都以自动补全质量来排名，却忽略了对许多开发者真正决定购买的那个问题：这个工具能在本地 LLM 上运行吗，还是会把你的代码发送到第三方服务器？对于专有代码、受 NDA 约束的工作或受监管行业，这一个答案就会重排整个排名。本指南从真正决定选择的标准出发，对比四款工具——Cursor、Continue.dev、GitHub Copilot 和 Sourcegraph Cody：本地 LLM 支持、价格、IDE 覆盖范围，以及你的代码去往何处。关于价格有一点提醒：开发者工具的订阅会随套餐调整而变动，因此这里的每个数字都是 2026 年 5 月的快照——在订阅前请到厂商网站确认当前价格。',
+      '大多数 AI 编程工具的对比都以自动补全质量来排名，却忽略了对许多开发者真正决定购买的那个问题：这个工具能在本地 LLM 上运行吗，还是会把你的代码发送到第三方服务器？对于专有代码、受 NDA 约束的工作或受监管行业，这一个答案就会重排整个排名。本指南从真正决定选择的标准出发，对比四款工具——Cursor、Continue.dev、GitHub Copilot 和 Sourcegraph Cody：本地 LLM 支持、价格、IDE 覆盖范围，以及你的代码去往何处。关于价格有一点提醒：开发者工具的订阅会随套餐调整而变动，因此这里的每个数字都是 2026 年 7 月的快照——在订阅前请到厂商网站确认当前价格。',
     metaDescription:
-      'Cursor（约20美元/月）、GitHub Copilot（约10美元/月）、Continue.dev（免费）：哪款AI编程工具支持本地LLM？4款工具价格与隐私对比。',
+      '面向本地模型的 Continue.dev vs Cursor：Continue.dev（免费、原生 Ollama）在本地优先场景胜出；Cursor（约 20 美元/月）胜在完善度。最佳 Ollama 模型：Qwen3 Coder 14B。',
     twitterDescription:
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody——四款 AI 编程工具对比。大多数排名跳过的决策规则：它能在本地 LLM 上运行吗？',
     affiliateDisclosure: true,
@@ -1860,7 +1861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sourcegraph cody 评测 2026',
     ],
     leadAnswerBlock:
-      '**最佳 AI 编程工具取决于你是否需要本地 LLM 支持：Continue.dev 是围绕 Ollama 构建的免费开源之选；Cursor 是最精致的付费编辑器；GitHub Copilot 是 GitHub 生态的纯云端默认选择；而 Sourcegraph Cody 是面向团队的全代码库之选。**',
+      '**面向本地模型的 Continue.dev vs Cursor：如果你想要一款围绕 Ollama 构建、把代码留在自己机器上的免费开源工具，就选 Continue.dev；如果你想要最精致的编辑器并愿意为此付费，就选 Cursor（约 20 美元/月）。搭配 Continue.dev 的最佳 Ollama 模型是 Qwen3 Coder 14B（中等规模默认选择，约 16 GB VRAM）；8-12 GB 的 GPU 降到 Qwen3 Coder 7B，24 GB 则可上到 33B 级别的模型。放眼更广的选择，GitHub Copilot（约 10 美元/月）是 GitHub 生态的纯云端默认选择，而 Sourcegraph Cody 是面向团队的全代码库之选。**',
     quickAnswerTop: {
       zh: {
         question: '2026 年最佳的 AI 编程工具是哪个？',
@@ -1871,9 +1872,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '最精致的编辑器：Cursor，约 $20/month，通过自定义端点支持本地 LLM',
           'GitHub 生态默认选择：GitHub Copilot，约 $10/month，仅限云端',
           '面向团队的最佳全代码库上下文：Sourcegraph Cody，标准版约 $9/user/month',
-          '订阅价格会变动——把每个数字都当作 2026 年 5 月的快照',
+          '订阅价格会变动——把每个数字都当作 2026 年 7 月的快照',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1905,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**面向团队的最佳代码库上下文：Sourcegraph Cody**——为重构提供全代码库的上下文，外加团队管理和审计日志。通过 Ollama 支持本地 LLM；标准版约为 $9/user/month，企业版费用更高。',
           '**本地 LLM 需要 GPU。** 本地编程模型大约需要 8 GB 或以上的 VRAM——Qwen3 Coder 7B 适合较小的系统，14B 是中等规模的默认选择，33B 级别的模型需要 24 GB。没有 GPU 时，云端工具是唯一选择。',
           '**云端工具在原始质量和搭建速度上仍然占优。** 顶级云端编程模型在难题上领先于本地选项，而云端工具几分钟内就能投入使用，本地 LLM 技术栈的搭建则耗时更久。',
-          '**价格会随套餐调整而变动。** 把这里的每个数字都当作 2026 年 5 月的快照，并到厂商定价页面确认当前价格和套餐。',
+          '**价格会随套餐调整而变动。** 把这里的每个数字都当作 2026 年 7 月的快照，并到厂商定价页面确认当前价格和套餐。',
         ],
       },
       quickFacts: {
@@ -1918,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最适合团队：** Sourcegraph Cody——全代码库上下文、管理控制台和审计日志。',
           '**本地 LLM 硬件门槛：** 大约 8 GB 的 VRAM；Qwen3 Coder 14B 是中等规模的默认编程模型。',
           '**开源：** 只有 Continue.dev（Apache 2.0）；Cursor、GitHub Copilot 和 Cody 的 IDE 扩展均为闭源。',
-          '**2026 年定价现实：** 开发者工具的订阅会随套餐调整而变动——把这些数字当作 2026 年 5 月的快照。',
+          '**2026 年定价现实：** 开发者工具的订阅会随套餐调整而变动——把这些数字当作 2026 年 7 月的快照。',
         ],
       },
       editorsChoice: {
@@ -1947,7 +1948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '四款 AI 编程工具在 2026 年的对比',
         content:
-          '本地 LLM 支持、IDE 覆盖范围和开源状态均取自各厂商发布的官方文档。价格是标准个人版或按用户计费套餐在 2026 年 5 月的快照——厂商会修订套餐，因此订阅前请到厂商定价页面确认当前数字和套餐。本地 LLM 支持从原生（Continue.dev）到自定义端点配置（Cursor）、到 Ollama 配置（Cody）、再到没有（GitHub Copilot）不等。',
+          '本地 LLM 支持、IDE 覆盖范围和开源状态均取自各厂商发布的官方文档。价格是标准个人版或按用户计费套餐在 2026 年 7 月的快照——厂商会修订套餐，因此订阅前请到厂商定价页面确认当前数字和套餐。本地 LLM 支持从原生（Continue.dev）到自定义端点配置（Cursor）、到 Ollama 配置（Cody）、再到没有（GitHub Copilot）不等。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1958,12 +1959,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '每款 AI 编程工具都需要一个用来思考的模型。有些可以使用运行在你自己电脑上的模型，因此你的代码永不离开本地。其他的只使用厂商的云端模型，这意味着你的代码会被上传。在比较其他任何东西之前，先决定你需要哪一种。',
           },
         ],
-        columns: ['工具', '本地 LLM', '价格（2026 年 5 月）', '开源', 'IDE', '最适合'],
+        columns: ['工具', '本地 LLM', '价格（2026 年 7 月）', '开源', 'IDE', '最适合'],
         rows: [
           {
             '工具': 'Continue.dev',
             '本地 LLM': '原生——Ollama、LM Studio、llama.cpp',
-            '价格（2026 年 5 月）': '免费',
+            '价格（2026 年 7 月）': '免费',
             '开源': '是——Apache 2.0',
             'IDE': 'VS Code、JetBrains、Vim',
             '最适合': '本地优先的开发者',
@@ -1971,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '工具': 'Cursor',
             '本地 LLM': '通过自定义的 OpenAI 兼容端点',
-            '价格（2026 年 5 月）': '约 $20/month（Pro）',
+            '价格（2026 年 7 月）': '约 $20/month（Pro）',
             '开源': '否——闭源',
             'IDE': 'Cursor（VS Code 分支）',
             '最适合': '最精致的编辑器体验',
@@ -1979,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '工具': 'GitHub Copilot',
             '本地 LLM': '否——仅限云端',
-            '价格（2026 年 5 月）': '约 $10/month',
+            '价格（2026 年 7 月）': '约 $10/month',
             '开源': '否——闭源',
             'IDE': 'VS Code、JetBrains、Vim',
             '最适合': 'GitHub 生态集成',
@@ -1987,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '工具': 'Sourcegraph Cody',
             '本地 LLM': '通过 Ollama 配置',
-            '价格（2026 年 5 月）': '标准版约 $9/user/month；企业版费用更高',
+            '价格（2026 年 7 月）': '标准版约 $9/user/month；企业版费用更高',
             '开源': '部分——CLI 开源，IDE 扩展闭源',
             'IDE': 'VS Code、JetBrains、Neovim',
             '最适合': '需要全代码库上下文的团队',
@@ -2045,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**当你想要最精致的 AI 编程体验并愿意为此支付约 $20/month 时，Cursor 是首选。** 它是一个内置 AI 的 VS Code 分支，自动补全质量是四款中最强的，并通过自定义的 OpenAI 兼容端点支持本地 LLM。',
         items: [
-          '**价格：** 有限的免费套餐，以及 Pro 套餐约 $20/month，这是 2026 年 5 月的快照。',
+          '**价格：** 有限的免费套餐，以及 Pro 套餐约 $20/month，这是 2026 年 7 月的快照。',
           '**本地 LLM 支持：** 通过把你的本地模型配置为自定义的 OpenAI 兼容 API 端点即可使用——可行，但比 Continue.dev 更繁琐，大约 15 分钟搭建。',
           '**编辑器：** 一个高度优化的 VS Code 分支;自动补全是本次对比中最精致的，并且智能体式的 Composer 模式能处理多步骤编辑。',
           '**隐私提示：** 使用云端模型时，代码上下文和选中内容会被发送到 Cursor 的服务器;其隐私模式减少但不能消除数据共享，而且一些智能体式功能偏好云端模型。',
@@ -2074,7 +2075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**当你的代码是公开的或已经在 GitHub 上、并且想要最简单的云端选项时，GitHub Copilot 是首选——但它仅限云端，没有本地 LLM 模式。** 约 $10/month 的它是这里价格最低的付费工具，并与 GitHub 工作流程紧密集成。',
         items: [
-          '**价格：** 个人套餐约 $10/month，这是 2026 年 5 月的快照——本次对比中最便宜的付费工具。',
+          '**价格：** 个人套餐约 $10/month，这是 2026 年 7 月的快照——本次对比中最便宜的付费工具。',
           '**本地 LLM 支持：** 没有。GitHub Copilot 只在云端模型上运行，因此代码上下文会被发送给提供商——对于专有或受监管的代码，这是决定性的限制。',
           '**IDE：** 支持 VS Code、JetBrains 和 Vim，在以 GitHub 为中心的工作流程中契合度最高。',
           '**隐私：** 代码上下文会被发送给提供商;企业版增加了合规承诺，但数据仍会离开你的网络。',
@@ -2104,7 +2105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**当团队需要全代码库上下文时，Sourcegraph Cody 是首选——它理解整个项目，而这正是大型重构和多文件改动所依赖的。** 它通过 Ollama 配置支持本地 LLM，并增加了团队管理控制和审计日志。',
         items: [
           '**代码库上下文：** Cody 跨整个项目进行读取，使其成为四款中最适合重构和多文件编辑的工具。',
-          '**价格：** 标准版约 $9/user/month，这是 2026 年 5 月的快照，企业版费用更高——请到厂商定价页面确认当前套餐。',
+          '**价格：** 标准版约 $9/user/month，这是 2026 年 7 月的快照，企业版费用更高——请到厂商定价页面确认当前套餐。',
           '**本地 LLM 支持：** 通过 Ollama 配置即可使用;聊天和补全可以本地运行，不过 Cody 的设计是云端优先，本地是次要路径。',
           '**团队功能：** 管理控制台、审计日志和席位管理——这是 Cody 适合对合规敏感的团队的原因。',
           '**IDE：** VS Code、JetBrains 和 Neovim;CLI 是开源的，而 IDE 扩展是闭源的。',
@@ -2156,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**在每款工具厂商自己的网站上注册，并检查所标价格涵盖的是哪个套餐。** 下方链接直达各厂商;它们不带联盟标签，也不赚取佣金。',
         items: [
           '**Continue.dev：** 从 continue.dev 安装——免费且开源，仅本地使用无需账户。',
-          '**Cursor：** 在 cursor.com 订阅——存在有限的免费套餐;Pro 套餐约 $20/month，这是 2026 年 5 月的快照。',
+          '**Cursor：** 在 cursor.com 订阅——存在有限的免费套餐;Pro 套餐约 $20/month，这是 2026 年 7 月的快照。',
           '**GitHub Copilot：** 在 github.com/features/copilot 订阅——个人套餐约 $10/month;仅限云端，没有本地 LLM 模式。',
           '**Sourcegraph Cody：** 在 sourcegraph.com/cody 注册——标准版接近 $9/user/month，企业版费用更高;请确认当前套餐。',
           '**先免费试用：** Continue.dev 是免费的，而 Cursor 和 Cody 有免费套餐——在付费前对照你的真实工作流程进行测试。',
@@ -2164,7 +2165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '开发者工具的定价会随套餐调整而变动。本指南中的每个数字都是 2026 年 5 月的快照——订阅前请打开厂商定价页面，确认该价格涵盖的是哪个套餐（个人、按用户还是企业）。',
+            text: '开发者工具的定价会随套餐调整而变动。本指南中的每个数字都是 2026 年 7 月的快照——订阅前请打开厂商定价页面，确认该价格涵盖的是哪个套餐（个人、按用户还是企业）。',
           },
         ],
         affiliateLinks: [
@@ -2248,7 +2249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪款工具最适合开发团队？',
-            a: 'Sourcegraph Cody，当团队需要全代码库上下文时。Cody 跨整个项目进行读取，而这正是大型重构所依赖的，并为对合规敏感的团队增加了管理控制台和审计日志。其标准版约为 $9/user/month，这是 2026 年 5 月的快照，企业版费用更高。',
+            a: 'Sourcegraph Cody，当团队需要全代码库上下文时。Cody 跨整个项目进行读取，而这正是大型重构所依赖的，并为对合规敏感的团队增加了管理控制台和审计日志。其标准版约为 $9/user/month，这是 2026 年 7 月的快照，企业版费用更高。',
           },
           {
             q: 'Cursor 还是 Continue.dev——我该选哪个？',
@@ -2276,15 +2277,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Mejores herramientas de programación con IA 2026: Cursor vs Continue.dev',
-    seoTitle: 'Herramientas IA para código 2026: Cursor $20 vs gratis',
+    seoTitle: 'Continue.dev vs Cursor 2026: mejor herramienta LLM local',
     intro:
-      'La mayoría de comparativas de herramientas de programación con IA evalúan la calidad del autocompletado y pasan por alto la pregunta que realmente decide la compra para muchos desarrolladores: ¿la herramienta se ejecuta sobre un LLM local, o envía tu código a un servidor de terceros? Para código propietario, trabajo bajo NDA o sectores regulados, esa única respuesta reordena por completo el ranking. Esta guía compara cuatro herramientas — Cursor, Continue.dev, GitHub Copilot y Sourcegraph Cody — en los criterios que determinan una decisión real: compatibilidad con LLM local, precio, cobertura de IDE y a dónde va tu código. Un aviso sobre precios: las suscripciones a herramientas para desarrolladores cambian con las revisiones de planes, por lo que cada cifra aquí es una instantánea de mayo de 2026 — confirma la tarifa actual en el sitio del proveedor antes de suscribirte.',
+      'La mayoría de comparativas de herramientas de programación con IA evalúan la calidad del autocompletado y pasan por alto la pregunta que realmente decide la compra para muchos desarrolladores: ¿la herramienta se ejecuta sobre un LLM local, o envía tu código a un servidor de terceros? Para código propietario, trabajo bajo NDA o sectores regulados, esa única respuesta reordena por completo el ranking. Esta guía compara cuatro herramientas — Cursor, Continue.dev, GitHub Copilot y Sourcegraph Cody — en los criterios que determinan una decisión real: compatibilidad con LLM local, precio, cobertura de IDE y a dónde va tu código. Un aviso sobre precios: las suscripciones a herramientas para desarrolladores cambian con las revisiones de planes, por lo que cada cifra aquí es una instantánea de julio de 2026 — confirma la tarifa actual en el sitio del proveedor antes de suscribirte.',
     metaDescription:
-      'Cursor (~20 $/mes), Copilot (~10 $/mes), Continue.dev gratis. ¿Cuál IA corre en LLM local? 4 herramientas de programación comparadas: precios y privacidad.',
+      'Continue.dev vs Cursor para modelos locales: Continue.dev (gratis, Ollama nativo) gana en local-first; Cursor (~$20/mes) por su acabado. Mejor modelo Ollama: Qwen3 Coder 14B.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — cuatro herramientas de programación con IA comparadas. La regla de decisión que la mayoría de rankings omite: ¿funciona con un LLM local?',
     affiliateDisclosure: true,
@@ -2312,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sourcegraph cody opinión 2026',
     ],
     leadAnswerBlock:
-      '**La mejor herramienta de programación con IA depende de si necesitas soporte para LLM local: Continue.dev es la opción gratuita y de código abierto construida en torno a Ollama; Cursor es el editor de pago más pulido; GitHub Copilot es la opción predeterminada solo en la nube para el ecosistema GitHub; y Sourcegraph Cody es la opción para equipos que necesitan contexto de toda la base de código.**',
+      '**Continue.dev vs Cursor para modelos locales: elige Continue.dev si quieres una herramienta gratuita y de código abierto construida en torno a Ollama que mantiene el código en tu máquina; elige Cursor (~$20/mes) si quieres el editor más pulido y estás dispuesto a pagar por ello. El mejor modelo Ollama para combinar con Continue.dev es Qwen3 Coder 14B (el estándar de tamaño medio, ~16 GB de VRAM); baja a Qwen3 Coder 7B para GPUs de 8-12 GB, o sube a un modelo de clase 33B en 24 GB. Para el resto del campo, GitHub Copilot (~$10/mes) es la opción predeterminada solo en la nube del ecosistema GitHub y Sourcegraph Cody es la elección de contexto de toda la base de código para equipos.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la mejor herramienta de programación con IA en 2026?',
@@ -2323,9 +2324,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Editor más pulido: Cursor, ~$20/mes, LLM local vía endpoint personalizado',
           'Opción predeterminada del ecosistema GitHub: GitHub Copilot, ~$10/mes, solo nube',
           'Mejor contexto de base de código para equipos: Sourcegraph Cody, ~$9/usuario/mes en plan estándar',
-          'Los precios de suscripción cambian — trata cada cifra como una instantánea de mayo de 2026',
+          'Los precios de suscripción cambian — trata cada cifra como una instantánea de julio de 2026',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2357,7 +2358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor contexto de base de código para equipos: Sourcegraph Cody** — contexto de toda la base de código para refactorización, más administración de equipos y registros de auditoría. Soporte para LLM local vía Ollama; el plan estándar ronda los $9/usuario/mes y un plan empresarial cuesta más.',
           '**Un LLM local necesita una GPU.** Los modelos de programación locales necesitan aproximadamente 8 GB de VRAM o más — Qwen3 Coder 7B cabe en sistemas más pequeños, el 14B es el estándar de tamaño medio, y los modelos de clase 33B necesitan 24 GB. Sin GPU, una herramienta en la nube es la única opción.',
           '**Las herramientas en la nube siguen ganando en calidad bruta y velocidad de configuración.** Los mejores modelos de programación en la nube superan a las opciones locales en problemas difíciles, y una herramienta en la nube es productiva en minutos frente a la configuración más larga de un stack de LLM local.',
-          '**Los precios cambian con las revisiones de planes.** Trata cada cifra aquí como una instantánea de mayo de 2026 y confirma la tarifa y el plan actuales en la página de precios del proveedor.',
+          '**Los precios cambian con las revisiones de planes.** Trata cada cifra aquí como una instantánea de julio de 2026 y confirma la tarifa y el plan actuales en la página de precios del proveedor.',
         ],
       },
       quickFacts: {
@@ -2370,7 +2371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor para equipos:** Sourcegraph Cody — contexto de toda la base de código, consola de administración y registros de auditoría.',
           '**Mínimo de hardware para LLM local:** aproximadamente 8 GB de VRAM; Qwen3 Coder 14B es el modelo de programación estándar de tamaño medio.',
           '**Código abierto:** solo Continue.dev (Apache 2.0); las extensiones de IDE de Cursor, GitHub Copilot y Cody son de código cerrado.',
-          '**Realidad de precios 2026:** las suscripciones a herramientas para desarrolladores cambian con las revisiones de planes — trata las cifras como una instantánea de mayo de 2026.',
+          '**Realidad de precios 2026:** las suscripciones a herramientas para desarrolladores cambian con las revisiones de planes — trata las cifras como una instantánea de julio de 2026.',
         ],
       },
       editorsChoice: {
@@ -2399,7 +2400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan las cuatro herramientas de programación con IA en 2026',
         content:
-          'El soporte para LLM local, la cobertura de IDE y el estado de código abierto se toman de la documentación publicada por cada proveedor. Los precios son una instantánea de mayo de 2026 del plan estándar individual o por usuario — los proveedores revisan sus planes, así que confirma la cifra y el plan actuales en la página de precios del proveedor antes de suscribirte. El soporte para LLM local va desde nativo (Continue.dev) hasta configuración de endpoint personalizado (Cursor), configuración de Ollama (Cody) o ninguno (GitHub Copilot).',
+          'El soporte para LLM local, la cobertura de IDE y el estado de código abierto se toman de la documentación publicada por cada proveedor. Los precios son una instantánea de julio de 2026 del plan estándar individual o por usuario — los proveedores revisan sus planes, así que confirma la cifra y el plan actuales en la página de precios del proveedor antes de suscribirte. El soporte para LLM local va desde nativo (Continue.dev) hasta configuración de endpoint personalizado (Cursor), configuración de Ollama (Cody) o ninguno (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2410,12 +2411,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Toda herramienta de programación con IA necesita un modelo con el que pensar. Algunas pueden usar un modelo que se ejecuta en tu propio equipo, de modo que tu código nunca sale del edificio. Otras solo usan el modelo en la nube del proveedor, lo que significa que tu código se sube. Decide cuál de las dos necesitas antes de comparar cualquier otra cosa.',
           },
         ],
-        columns: ['Herramienta', 'LLM local', 'Precio (mayo 2026)', 'Código abierto', 'IDEs', 'Ideal para'],
+        columns: ['Herramienta', 'LLM local', 'Precio (julio 2026)', 'Código abierto', 'IDEs', 'Ideal para'],
         rows: [
           {
             'Herramienta': 'Continue.dev',
             'LLM local': 'Nativo — Ollama, LM Studio, llama.cpp',
-            'Precio (mayo 2026)': 'Gratuito',
+            'Precio (julio 2026)': 'Gratuito',
             'Código abierto': 'Sí — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Desarrolladores local-first',
@@ -2423,7 +2424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Herramienta': 'Cursor',
             'LLM local': 'Vía endpoint personalizado compatible con OpenAI',
-            'Precio (mayo 2026)': '~$20/mes (Pro)',
+            'Precio (julio 2026)': '~$20/mes (Pro)',
             'Código abierto': 'No — código cerrado',
             'IDEs': 'Cursor (bifurcación de VS Code)',
             'Ideal para': 'Experiencia de editor más pulida',
@@ -2431,7 +2432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Herramienta': 'GitHub Copilot',
             'LLM local': 'No — solo nube',
-            'Precio (mayo 2026)': '~$10/mes',
+            'Precio (julio 2026)': '~$10/mes',
             'Código abierto': 'No — código cerrado',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Integración con el ecosistema GitHub',
@@ -2439,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Herramienta': 'Sourcegraph Cody',
             'LLM local': 'Vía configuración de Ollama',
-            'Precio (mayo 2026)': '~$9/usuario/mes estándar; el plan empresarial cuesta más',
+            'Precio (julio 2026)': '~$9/usuario/mes estándar; el plan empresarial cuesta más',
             'Código abierto': 'Parcial — CLI abierto, extensiones IDE cerradas',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Ideal para': 'Equipos que necesitan contexto de toda la base de código',
@@ -2497,7 +2498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cursor es la elección cuando quieres la experiencia de programación con IA más pulida y estás dispuesto a pagar aproximadamente $20/mes por ello.** Es una bifurcación de VS Code con IA integrada, la calidad del autocompletado es la más alta de las cuatro, y soporta un LLM local a través de un endpoint personalizado compatible con OpenAI.',
         items: [
-          '**Precio:** un plan gratuito limitado y un plan Pro a aproximadamente $20/mes según la instantánea de mayo de 2026.',
+          '**Precio:** un plan gratuito limitado y un plan Pro a aproximadamente $20/mes según la instantánea de julio de 2026.',
           '**Soporte para LLM local:** disponible configurando tu modelo local como un endpoint de API personalizado compatible con OpenAI — funciona, pero es más engorroso que Continue.dev, aproximadamente 15 minutos de configuración.',
           '**Editor:** una bifurcación de VS Code, muy optimizada; el autocompletado es el más pulido de esta comparativa, y el modo agéntico Composer gestiona ediciones en múltiples pasos.',
           '**Advertencia de privacidad:** con modelos en la nube, el contexto del código y las selecciones se envían a los servidores de Cursor; su modo Privacy reduce pero no elimina el intercambio de datos, y algunas funciones agénticas prefieren modelos en la nube.',
@@ -2526,7 +2527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**GitHub Copilot es la elección cuando tu código es público o ya está en GitHub y quieres la opción en la nube más sencilla — pero es solo nube, sin modo LLM local.** A aproximadamente $10/mes es la herramienta de pago más barata aquí, y se integra estrechamente con el flujo de trabajo de GitHub.',
         items: [
-          '**Precio:** aproximadamente $10/mes para el plan individual según la instantánea de mayo de 2026 — la herramienta de pago más barata de esta comparativa.',
+          '**Precio:** aproximadamente $10/mes para el plan individual según la instantánea de julio de 2026 — la herramienta de pago más barata de esta comparativa.',
           '**Soporte para LLM local:** ninguno. GitHub Copilot solo funciona con modelos en la nube, por lo que el contexto del código se envía al proveedor — esta es la limitación decisiva para código propietario o regulado.',
           '**IDEs:** se soportan VS Code, JetBrains y Vim, con el mejor encaje dentro del flujo de trabajo centrado en GitHub.',
           '**Privacidad:** el contexto del código se envía al proveedor; un plan empresarial añade compromisos de cumplimiento, pero los datos igualmente salen de tu red.',
@@ -2556,7 +2557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sourcegraph Cody es la elección cuando un equipo necesita contexto de toda la base de código — entiende el proyecto completo, que es de lo que dependen las refactorizaciones grandes y los cambios en múltiples archivos.** Soporta un LLM local mediante configuración de Ollama y añade controles de administración de equipos y registros de auditoría.',
         items: [
           '**Contexto de base de código:** Cody lee todo el proyecto, lo que lo convierte en el más potente de los cuatro para refactorización y ediciones en múltiples archivos.',
-          '**Precio:** un plan estándar a aproximadamente $9/usuario/mes según la instantánea de mayo de 2026, con un plan empresarial que cuesta más — confirma los planes actuales en la página de precios del proveedor.',
+          '**Precio:** un plan estándar a aproximadamente $9/usuario/mes según la instantánea de julio de 2026, con un plan empresarial que cuesta más — confirma los planes actuales en la página de precios del proveedor.',
           '**Soporte para LLM local:** disponible mediante configuración de Ollama; el chat y las completaciones pueden ejecutarse en local, aunque el diseño de Cody es cloud-first y lo local es el camino secundario.',
           '**Funciones para equipos:** una consola de administración, registros de auditoría y gestión de asientos — la razón por la que Cody encaja en equipos sensibles al cumplimiento normativo.',
           '**IDEs:** VS Code, JetBrains y Neovim; la CLI es de código abierto mientras que las extensiones de IDE son de código cerrado.',
@@ -2608,7 +2609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Regístrate en cada herramienta en el sitio propio del proveedor y comprueba qué plan cubre el precio anunciado.** Los enlaces a continuación van directamente a cada proveedor; no llevan etiquetas de afiliado y no generan comisión.',
         items: [
           '**Continue.dev:** instala desde continue.dev — gratuita y de código abierto, no se necesita cuenta para uso exclusivamente local.',
-          '**Cursor:** suscríbete en cursor.com — existe un plan gratuito limitado; el plan Pro es aproximadamente $20/mes según la instantánea de mayo de 2026.',
+          '**Cursor:** suscríbete en cursor.com — existe un plan gratuito limitado; el plan Pro es aproximadamente $20/mes según la instantánea de julio de 2026.',
           '**GitHub Copilot:** suscríbete en github.com/features/copilot — aproximadamente $10/mes para el plan individual; solo nube, sin modo LLM local.',
           '**Sourcegraph Cody:** regístrate en sourcegraph.com/cody — un plan estándar cerca de $9/usuario/mes y un plan empresarial que cuesta más; confirma los planes actuales.',
           '**Prueba primero de forma gratuita:** Continue.dev es gratuita, y Cursor y Cody tienen planes gratuitos — prueba con tu flujo de trabajo real antes de pagar.',
@@ -2616,7 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Los precios de las herramientas para desarrolladores cambian con las revisiones de planes. Cada cifra en esta guía es una instantánea de mayo de 2026 — abre la página de precios del proveedor antes de suscribirte y confirma qué plan (individual, por usuario o empresarial) cubre el precio.',
+            text: 'Los precios de las herramientas para desarrolladores cambian con las revisiones de planes. Cada cifra en esta guía es una instantánea de julio de 2026 — abre la página de precios del proveedor antes de suscribirte y confirma qué plan (individual, por usuario o empresarial) cubre el precio.',
           },
         ],
         affiliateLinks: [
@@ -2700,7 +2701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué herramienta es mejor para un equipo de desarrollo?',
-            a: 'Sourcegraph Cody, cuando el equipo necesita contexto de toda la base de código. Cody lee todo el proyecto, de lo que dependen las grandes refactorizaciones, y añade una consola de administración y registros de auditoría para equipos sensibles al cumplimiento normativo. Su plan estándar ronda los $9/usuario/mes según la instantánea de mayo de 2026, con un plan empresarial que cuesta más.',
+            a: 'Sourcegraph Cody, cuando el equipo necesita contexto de toda la base de código. Cody lee todo el proyecto, de lo que dependen las grandes refactorizaciones, y añade una consola de administración y registros de auditoría para equipos sensibles al cumplimiento normativo. Su plan estándar ronda los $9/usuario/mes según la instantánea de julio de 2026, con un plan empresarial que cuesta más.',
           },
           {
             q: 'Cursor o Continue.dev — ¿cuál debería elegir?',
@@ -2732,7 +2733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2741,15 +2742,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Melhores ferramentas de programação com IA 2026: Cursor vs Continue.dev',
-    seoTitle: 'Ferramentas de IA 2026: Cursor $20 vs Continue.dev grátis',
+    seoTitle: 'Continue.dev vs Cursor 2026: melhor ferramenta LLM local',
     intro:
-      'A maioria das comparações de ferramentas de programação com IA avalia a qualidade do autocompletar e ignora a pergunta que realmente decide a compra para muitos desenvolvedores: a ferramenta roda sobre um LLM local, ou ela envia o seu código para um servidor de terceiros? Para código proprietário, trabalho sob NDA ou setores regulados, essa única resposta reordena todo o ranking. Este guia compara quatro ferramentas — Cursor, Continue.dev, GitHub Copilot e Sourcegraph Cody — nos critérios que determinam uma decisão real: compatibilidade com LLM local, preço, cobertura de IDE e para onde vai o seu código. Uma ressalva sobre preços: as assinaturas de ferramentas para desenvolvedores mudam com as revisões de planos, então cada valor aqui é um retrato de maio de 2026 — confirme a tarifa atual no site do fornecedor antes de assinar.',
+      'A maioria das comparações de ferramentas de programação com IA avalia a qualidade do autocompletar e ignora a pergunta que realmente decide a compra para muitos desenvolvedores: a ferramenta roda sobre um LLM local, ou ela envia o seu código para um servidor de terceiros? Para código proprietário, trabalho sob NDA ou setores regulados, essa única resposta reordena todo o ranking. Este guia compara quatro ferramentas — Cursor, Continue.dev, GitHub Copilot e Sourcegraph Cody — nos critérios que determinam uma decisão real: compatibilidade com LLM local, preço, cobertura de IDE e para onde vai o seu código. Uma ressalva sobre preços: as assinaturas de ferramentas para desenvolvedores mudam com as revisões de planos, então cada valor aqui é um retrato de julho de 2026 — confirme a tarifa atual no site do fornecedor antes de assinar.',
     metaDescription:
-      'Cursor (~20 $/mês), GitHub Copilot (~10 $/mês), Continue.dev grátis. Qual ferramenta roda em LLM local? 4 ferramentas comparadas: preços e privacidade.',
+      'Continue.dev vs Cursor para modelos locais: Continue.dev (grátis, Ollama nativo) vence no local-first; Cursor (~$20/mês) pelo acabamento. Melhor modelo Ollama: Qwen3 Coder 14B.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatro ferramentas de programação com IA comparadas. A regra de decisão que a maioria dos rankings ignora: ela funciona com um LLM local?',
     affiliateDisclosure: true,
@@ -2777,7 +2778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sourcegraph cody análise 2026',
     ],
     leadAnswerBlock:
-      '**A melhor ferramenta de programação com IA depende de você precisar de suporte para LLM local: o Continue.dev é a opção gratuita e de código aberto construída em torno do Ollama; o Cursor é o editor pago mais polido; o GitHub Copilot é a opção padrão somente na nuvem para o ecossistema GitHub; e o Sourcegraph Cody é a opção para times que precisam de contexto de toda a base de código.**',
+      '**Continue.dev vs Cursor para modelos locais: escolha o Continue.dev se você quer uma ferramenta gratuita e de código aberto construída em torno do Ollama que mantém o código na sua máquina; escolha o Cursor (~US$ 20/mês) se você quer o editor mais polido e está disposto a pagar por isso. O melhor modelo Ollama para combinar com o Continue.dev é o Qwen3 Coder 14B (o padrão de tamanho médio, ~16 GB de VRAM); baixe para o Qwen3 Coder 7B em GPUs de 8-12 GB, ou suba para um modelo da classe 33B em 24 GB. No campo mais amplo, o GitHub Copilot (~US$ 10/mês) é a opção padrão somente na nuvem para o ecossistema GitHub, e o Sourcegraph Cody é a escolha de contexto de toda a base de código para times.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual é a melhor ferramenta de programação com IA em 2026?',
@@ -2788,9 +2789,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Editor mais polido: Cursor, ~US$ 20/mês, LLM local via endpoint personalizado',
           'Opção padrão do ecossistema GitHub: GitHub Copilot, ~US$ 10/mês, somente nuvem',
           'Melhor contexto de base de código para times: Sourcegraph Cody, ~US$ 9/usuário/mês no plano padrão',
-          'Os preços de assinatura mudam — trate cada valor como um retrato de maio de 2026',
+          'Os preços de assinatura mudam — trate cada valor como um retrato de julho de 2026',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2822,7 +2823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melhor contexto de base de código para times: Sourcegraph Cody** — contexto de toda a base de código para refatoração, mais administração de times e registros de auditoria. Suporte para LLM local via Ollama; o plano padrão fica em torno de US$ 9/usuário/mês e um plano empresarial custa mais.',
           '**Um LLM local precisa de uma GPU.** Os modelos de programação locais precisam de aproximadamente 8 GB de VRAM ou mais — o Qwen3 Coder 7B cabe em sistemas menores, o 14B é o padrão de tamanho médio, e os modelos da classe 33B precisam de 24 GB. Sem GPU, uma ferramenta na nuvem é a única opção.',
           '**As ferramentas na nuvem ainda ganham em qualidade bruta e velocidade de configuração.** Os melhores modelos de programação na nuvem superam as opções locais em problemas difíceis, e uma ferramenta na nuvem é produtiva em minutos diante da configuração mais longa de um stack de LLM local.',
-          '**Os preços mudam com as revisões de planos.** Trate cada valor aqui como um retrato de maio de 2026 e confirme a tarifa e o plano atuais na página de preços do fornecedor.',
+          '**Os preços mudam com as revisões de planos.** Trate cada valor aqui como um retrato de julho de 2026 e confirme a tarifa e o plano atuais na página de preços do fornecedor.',
         ],
       },
       quickFacts: {
@@ -2835,7 +2836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melhor para times:** Sourcegraph Cody — contexto de toda a base de código, console de administração e registros de auditoria.',
           '**Mínimo de hardware para LLM local:** aproximadamente 8 GB de VRAM; o Qwen3 Coder 14B é o modelo de programação padrão de tamanho médio.',
           '**Código aberto:** apenas o Continue.dev (Apache 2.0); as extensões de IDE do Cursor, GitHub Copilot e Cody são de código fechado.',
-          '**Realidade de preços 2026:** as assinaturas de ferramentas para desenvolvedores mudam com as revisões de planos — trate os valores como um retrato de maio de 2026.',
+          '**Realidade de preços 2026:** as assinaturas de ferramentas para desenvolvedores mudam com as revisões de planos — trate os valores como um retrato de julho de 2026.',
         ],
       },
       editorsChoice: {
@@ -2864,7 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como as quatro ferramentas de programação com IA se comparam em 2026',
         content:
-          'O suporte para LLM local, a cobertura de IDE e o status de código aberto são extraídos da documentação publicada por cada fornecedor. Os preços são um retrato de maio de 2026 do plano padrão individual ou por usuário — os fornecedores revisam seus planos, então confirme o valor e o plano atuais na página de preços do fornecedor antes de assinar. O suporte para LLM local vai de nativo (Continue.dev) a configuração de endpoint personalizado (Cursor), configuração de Ollama (Cody) ou nenhum (GitHub Copilot).',
+          'O suporte para LLM local, a cobertura de IDE e o status de código aberto são extraídos da documentação publicada por cada fornecedor. Os preços são um retrato de julho de 2026 do plano padrão individual ou por usuário — os fornecedores revisam seus planos, então confirme o valor e o plano atuais na página de preços do fornecedor antes de assinar. O suporte para LLM local vai de nativo (Continue.dev) a configuração de endpoint personalizado (Cursor), configuração de Ollama (Cody) ou nenhum (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2875,12 +2876,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Toda ferramenta de programação com IA precisa de um modelo com o qual pensar. Algumas conseguem usar um modelo que roda no seu próprio equipamento, de modo que o seu código nunca sai do prédio. Outras só usam o modelo na nuvem do fornecedor, o que significa que o seu código é enviado. Decida qual das duas você precisa antes de comparar qualquer outra coisa.',
           },
         ],
-        columns: ['Ferramenta', 'LLM local', 'Preço (maio 2026)', 'Código aberto', 'IDEs', 'Ideal para'],
+        columns: ['Ferramenta', 'LLM local', 'Preço (julho 2026)', 'Código aberto', 'IDEs', 'Ideal para'],
         rows: [
           {
             'Ferramenta': 'Continue.dev',
             'LLM local': 'Nativo — Ollama, LM Studio, llama.cpp',
-            'Preço (maio 2026)': 'Gratuito',
+            'Preço (julho 2026)': 'Gratuito',
             'Código aberto': 'Sim — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Desenvolvedores local-first',
@@ -2888,7 +2889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ferramenta': 'Cursor',
             'LLM local': 'Via endpoint personalizado compatível com OpenAI',
-            'Preço (maio 2026)': '~US$ 20/mês (Pro)',
+            'Preço (julho 2026)': '~US$ 20/mês (Pro)',
             'Código aberto': 'Não — código fechado',
             'IDEs': 'Cursor (fork do VS Code)',
             'Ideal para': 'Experiência de editor mais polida',
@@ -2896,7 +2897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ferramenta': 'GitHub Copilot',
             'LLM local': 'Não — somente nuvem',
-            'Preço (maio 2026)': '~US$ 10/mês',
+            'Preço (julho 2026)': '~US$ 10/mês',
             'Código aberto': 'Não — código fechado',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Integração com o ecossistema GitHub',
@@ -2904,7 +2905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ferramenta': 'Sourcegraph Cody',
             'LLM local': 'Via configuração de Ollama',
-            'Preço (maio 2026)': '~US$ 9/usuário/mês padrão; o plano empresarial custa mais',
+            'Preço (julho 2026)': '~US$ 9/usuário/mês padrão; o plano empresarial custa mais',
             'Código aberto': 'Parcial — CLI aberto, extensões de IDE fechadas',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Ideal para': 'Times que precisam de contexto de toda a base de código',
@@ -2962,7 +2963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O Cursor é a escolha quando você quer a experiência de programação com IA mais polida e está disposto a pagar aproximadamente US$ 20/mês por isso.** É um fork do VS Code com IA integrada, a qualidade do autocompletar é a mais alta das quatro, e suporta um LLM local por meio de um endpoint personalizado compatível com OpenAI.',
         items: [
-          '**Preço:** um plano gratuito limitado e um plano Pro a aproximadamente US$ 20/mês conforme o retrato de maio de 2026.',
+          '**Preço:** um plano gratuito limitado e um plano Pro a aproximadamente US$ 20/mês conforme o retrato de julho de 2026.',
           '**Suporte para LLM local:** disponível ao configurar o seu modelo local como um endpoint de API personalizado compatível com OpenAI — funciona, mas é mais trabalhoso do que o Continue.dev, aproximadamente 15 minutos de configuração.',
           '**Editor:** um fork do VS Code, muito otimizado; o autocompletar é o mais polido desta comparação, e o modo agêntico Composer gerencia edições em múltiplas etapas.',
           '**Ressalva de privacidade:** com modelos na nuvem, o contexto do código e as seleções são enviados aos servidores do Cursor; seu modo Privacy reduz, mas não elimina, o compartilhamento de dados, e alguns recursos agênticos preferem modelos na nuvem.',
@@ -2991,7 +2992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O GitHub Copilot é a escolha quando o seu código é público ou já está no GitHub e você quer a opção na nuvem mais simples — mas é somente nuvem, sem modo LLM local.** A aproximadamente US$ 10/mês é a ferramenta paga mais barata aqui, e se integra estreitamente ao fluxo de trabalho do GitHub.',
         items: [
-          '**Preço:** aproximadamente US$ 10/mês para o plano individual conforme o retrato de maio de 2026 — a ferramenta paga mais barata desta comparação.',
+          '**Preço:** aproximadamente US$ 10/mês para o plano individual conforme o retrato de julho de 2026 — a ferramenta paga mais barata desta comparação.',
           '**Suporte para LLM local:** nenhum. O GitHub Copilot só funciona com modelos na nuvem, então o contexto do código é enviado ao fornecedor — esta é a limitação decisiva para código proprietário ou regulado.',
           '**IDEs:** VS Code, JetBrains e Vim são suportados, com o melhor encaixe dentro do fluxo de trabalho centrado no GitHub.',
           '**Privacidade:** o contexto do código é enviado ao fornecedor; um plano empresarial acrescenta compromissos de conformidade, mas os dados ainda assim saem da sua rede.',
@@ -3021,7 +3022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O Sourcegraph Cody é a escolha quando um time precisa de contexto de toda a base de código — ele entende o projeto inteiro, que é do que dependem as refatorações grandes e as alterações em múltiplos arquivos.** Suporta um LLM local mediante configuração de Ollama e acrescenta controles de administração de times e registros de auditoria.',
         items: [
           '**Contexto de base de código:** o Cody lê o projeto inteiro, o que o torna o mais potente dos quatro para refatoração e edições em múltiplos arquivos.',
-          '**Preço:** um plano padrão a aproximadamente US$ 9/usuário/mês conforme o retrato de maio de 2026, com um plano empresarial que custa mais — confirme os planos atuais na página de preços do fornecedor.',
+          '**Preço:** um plano padrão a aproximadamente US$ 9/usuário/mês conforme o retrato de julho de 2026, com um plano empresarial que custa mais — confirme os planos atuais na página de preços do fornecedor.',
           '**Suporte para LLM local:** disponível mediante configuração de Ollama; o chat e as conclusões podem rodar em local, embora o design do Cody seja cloud-first e o local seja o caminho secundário.',
           '**Recursos para times:** um console de administração, registros de auditoria e gestão de assentos — a razão pela qual o Cody encaixa em times sensíveis à conformidade.',
           '**IDEs:** VS Code, JetBrains e Neovim; a CLI é de código aberto enquanto as extensões de IDE são de código fechado.',
@@ -3073,7 +3074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cadastre-se em cada ferramenta no site do próprio fornecedor e verifique qual plano o preço anunciado cobre.** Os links a seguir vão diretamente a cada fornecedor; não levam etiquetas de afiliado e não geram comissão.',
         items: [
           '**Continue.dev:** instale a partir de continue.dev — gratuita e de código aberto, nenhuma conta necessária para uso exclusivamente local.',
-          '**Cursor:** assine em cursor.com — existe um plano gratuito limitado; o plano Pro é aproximadamente US$ 20/mês conforme o retrato de maio de 2026.',
+          '**Cursor:** assine em cursor.com — existe um plano gratuito limitado; o plano Pro é aproximadamente US$ 20/mês conforme o retrato de julho de 2026.',
           '**GitHub Copilot:** assine em github.com/features/copilot — aproximadamente US$ 10/mês para o plano individual; somente nuvem, sem modo LLM local.',
           '**Sourcegraph Cody:** cadastre-se em sourcegraph.com/cody — um plano padrão perto de US$ 9/usuário/mês e um plano empresarial que custa mais; confirme os planos atuais.',
           '**Teste primeiro de forma gratuita:** o Continue.dev é gratuito, e o Cursor e o Cody têm planos gratuitos — teste com o seu fluxo de trabalho real antes de pagar.',
@@ -3081,7 +3082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Os preços das ferramentas para desenvolvedores mudam com as revisões de planos. Cada valor neste guia é um retrato de maio de 2026 — abra a página de preços do fornecedor antes de assinar e confirme qual plano (individual, por usuário ou empresarial) o preço cobre.',
+            text: 'Os preços das ferramentas para desenvolvedores mudam com as revisões de planos. Cada valor neste guia é um retrato de julho de 2026 — abra a página de preços do fornecedor antes de assinar e confirme qual plano (individual, por usuário ou empresarial) o preço cobre.',
           },
         ],
         affiliateLinks: [
@@ -3165,7 +3166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual ferramenta é melhor para um time de desenvolvimento?',
-            a: 'Sourcegraph Cody, quando o time precisa de contexto de toda a base de código. O Cody lê o projeto inteiro, do que dependem as grandes refatorações, e acrescenta um console de administração e registros de auditoria para times sensíveis à conformidade. Seu plano padrão fica em torno de US$ 9/usuário/mês conforme o retrato de maio de 2026, com um plano empresarial que custa mais.',
+            a: 'Sourcegraph Cody, quando o time precisa de contexto de toda a base de código. O Cody lê o projeto inteiro, do que dependem as grandes refatorações, e acrescenta um console de administração e registros de auditoria para times sensíveis à conformidade. Seu plano padrão fica em torno de US$ 9/usuário/mês conforme o retrato de julho de 2026, com um plano empresarial que custa mais.',
           },
           {
             q: 'Cursor ou Continue.dev — qual devo escolher?',
@@ -3197,7 +3198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3206,15 +3207,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'أفضل أدوات البرمجة بالذكاء الاصطناعي ⁨2026⁩: ⁨Cursor⁩ مقابل ⁨Continue.dev⁩',
-    seoTitle: '⁨Cursor⁩ و⁨Continue.dev⁩ للكود ⁨2026⁩: محلي أم سحابي؟',
+    seoTitle: 'Continue.dev مقابل Cursor 2026: أفضل أداة LLM محلية',
     intro:
-      'تُقيّم معظم مقارنات أدوات البرمجة بالذكاء الاصطناعي جودة الإكمال التلقائي وتتجاهل السؤال الذي يحسم القرار فعلياً لدى كثير من المطورين: هل تعمل الأداة على نموذج لغوي محلي؟ أم تُرسل الكود إلى خادم طرف ثالث؟ بالنسبة للكود المملوك والعمل الخاضع لاتفاقيات عدم الإفصاح والقطاعات المنظَّمة، تُعيد هذه الإجابة الوحيدة ترتيب التصنيف بأكمله. يقارن هذا الدليل أربع أدوات — Cursor وContinue.dev وGitHub Copilot وSourcegraph Cody — وفق المعايير التي تحدد القرار الفعلي: التوافق مع النموذج المحلي، والسعر، وتغطية بيئة التطوير، ووجهة الكود. تحذير بشأن الأسعار: اشتراكات أدوات المطورين تتغير مع مراجعات الخطط، لذا كل رقم هنا صورة من مايو 2026 — تحقق من السعر الحالي على موقع المورّد قبل الاشتراك.',
+      'تُقيّم معظم مقارنات أدوات البرمجة بالذكاء الاصطناعي جودة الإكمال التلقائي وتتجاهل السؤال الذي يحسم القرار فعلياً لدى كثير من المطورين: هل تعمل الأداة على نموذج لغوي محلي؟ أم تُرسل الكود إلى خادم طرف ثالث؟ بالنسبة للكود المملوك والعمل الخاضع لاتفاقيات عدم الإفصاح والقطاعات المنظَّمة، تُعيد هذه الإجابة الوحيدة ترتيب التصنيف بأكمله. يقارن هذا الدليل أربع أدوات — Cursor وContinue.dev وGitHub Copilot وSourcegraph Cody — وفق المعايير التي تحدد القرار الفعلي: التوافق مع النموذج المحلي، والسعر، وتغطية بيئة التطوير، ووجهة الكود. تحذير بشأن الأسعار: اشتراكات أدوات المطورين تتغير مع مراجعات الخطط، لذا كل رقم هنا صورة من يوليو 2026 — تحقق من السعر الحالي على موقع المورّد قبل الاشتراك.',
     metaDescription:
-      'Cursor (~20 $/شهر) وCopilot (~10 $/شهر) وContinue.dev (مجاني). أيها يعمل على نموذج محلي؟ 4 أدوات: الأسعار والخصوصية مقارَنة.',
+      'Continue.dev مقابل Cursor للنماذج المحلية: يتفوّق Continue.dev (مجاني، Ollama أصلي) في النهج المحلي أولاً؛ وCursor (~20$ شهريًا) للإتقان. أفضل نموذج Ollama: Qwen3 Coder 14B.',
     twitterDescription:
       'Cursor وContinue.dev وGitHub Copilot وSourcegraph Cody — أربع أدوات برمجة بالذكاء الاصطناعي مقارَنة. قاعدة القرار التي يتجاهلها معظم التصنيفات: هل تعمل مع نموذج لغوي محلي؟',
     affiliateDisclosure: true,
@@ -3242,7 +3243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'مراجعة Sourcegraph Cody 2026',
     ],
     leadAnswerBlock:
-      '**تعتمد أفضل أداة برمجة بالذكاء الاصطناعي على ما إذا كنت تحتاج إلى دعم النموذج المحلي: Continue.dev هو الخيار المجاني مفتوح المصدر المبني حول Ollama؛ وCursor هو المحرر المدفوع الأكثر تطوراً؛ وGitHub Copilot هو الخيار السحابي الافتراضي لمنظومة GitHub؛ وSourcegraph Cody هو الخيار للفرق التي تحتاج إلى سياق قاعدة الكود بأكملها.**',
+      '**Continue.dev مقابل Cursor للنماذج المحلية: اختر Continue.dev إذا أردت أداة مجانية مفتوحة المصدر مبنية حول Ollama تُبقي الكود على جهازك؛ واختر Cursor (نحو 20 دولاراً/الشهر) إذا أردت المحرر الأكثر إتقاناً وأنت مستعد للدفع مقابله. أفضل نموذج Ollama يُقرَن مع Continue.dev هو Qwen3 Coder 14B (الخيار الافتراضي متوسط الحجم، نحو 16 جيجابايت VRAM)؛ انزل إلى Qwen3 Coder 7B لوحدات GPU بسعة 8-12 جيجابايت، أو ارتقِ إلى نموذج من فئة 33B على 24 جيجابايت. أما في الميدان الأوسع فـGitHub Copilot (نحو 10 دولارات/الشهر) هو الخيار السحابي الافتراضي لمنظومة GitHub، وSourcegraph Cody هو الخيار الأنسب للفرق على مستوى قاعدة الكود بأكملها.**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل أداة برمجة بالذكاء الاصطناعي في 2026؟',
@@ -3253,9 +3254,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر المحررات تطوراً: Cursor، نحو 20 دولاراً/الشهر، نموذج محلي عبر نقطة نهاية مخصصة',
           'الخيار الافتراضي لمنظومة GitHub: GitHub Copilot، نحو 10 دولارات/الشهر، سحابي حصراً',
           'أفضل سياق قاعدة كود للفرق: Sourcegraph Cody، نحو 9 دولارات/مستخدم/الشهر في الخطة المعيارية',
-          'أسعار الاشتراكات تتغير — تعامل مع كل رقم بوصفه صورة من مايو 2026',
+          'أسعار الاشتراكات تتغير — تعامل مع كل رقم بوصفه صورة من يوليو 2026',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -3287,7 +3288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أفضل سياق قاعدة كود للفرق: Sourcegraph Cody** — سياق قاعدة الكود بأكملها لإعادة الهيكلة، بالإضافة إلى إدارة الفرق وسجلات التدقيق. دعم النموذج المحلي عبر Ollama؛ الخطة المعيارية نحو 9 دولارات/مستخدم/الشهر والخطة المؤسسية أعلى.',
           '**النموذج المحلي يحتاج إلى وحدة معالجة رسومات (GPU).** نماذج البرمجة المحلية تحتاج إلى نحو 8 جيجابايت من VRAM أو أكثر — Qwen3 Coder 7B يناسب الأجهزة الأصغر، وحجم 14B هو المعيار متوسط الحجم، ونماذج فئة 33B تحتاج إلى 24 جيجابايت. بدون GPU، الأداة السحابية هي الخيار الوحيد.',
           '**الأدوات السحابية لا تزال تتفوق في الجودة الخام وسرعة الإعداد.** أفضل نماذج البرمجة السحابية تتجاوز الخيارات المحلية في المشكلات الصعبة، وأداة سحابية تكون منتجة في دقائق مقارنةً بالإعداد الأطول لمكدس النموذج المحلي.',
-          '**الأسعار تتغير مع مراجعات الخطط.** تعامل مع كل رقم هنا بوصفه صورة من مايو 2026 وتحقق من السعر والخطة الحاليين على صفحة أسعار المورّد.',
+          '**الأسعار تتغير مع مراجعات الخطط.** تعامل مع كل رقم هنا بوصفه صورة من يوليو 2026 وتحقق من السعر والخطة الحاليين على صفحة أسعار المورّد.',
         ],
       },
       quickFacts: {
@@ -3300,7 +3301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأفضل للفرق:** Sourcegraph Cody — سياق قاعدة الكود بأكملها ولوحة إدارة وسجلات تدقيق.',
           '**الحد الأدنى من الأجهزة للنموذج المحلي:** نحو 8 جيجابايت من VRAM؛ Qwen3 Coder 14B هو نموذج البرمجة المعياري متوسط الحجم.',
           '**مفتوح المصدر:** Continue.dev فحسب (Apache 2.0)؛ إضافات IDE في Cursor وGitHub Copilot وCody مغلقة المصدر.',
-          '**واقع الأسعار 2026:** اشتراكات أدوات المطورين تتغير مع مراجعات الخطط — تعامل مع الأرقام بوصفها صورة من مايو 2026.',
+          '**واقع الأسعار 2026:** اشتراكات أدوات المطورين تتغير مع مراجعات الخطط — تعامل مع الأرقام بوصفها صورة من يوليو 2026.',
         ],
       },
       editorsChoice: {
@@ -3329,7 +3330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقارن أدوات البرمجة بالذكاء الاصطناعي الأربع في 2026',
         content:
-          'دعم النموذج المحلي وتغطية بيئة التطوير وحالة المصدر المفتوح مستخرجة من وثائق كل مورّد المنشورة. الأسعار هي صورة من مايو 2026 للخطة الفردية أو للمستخدم المعيارية — الموردون يراجعون خططهم، لذا تحقق من القيمة والخطة الحاليتين على صفحة أسعار المورّد قبل الاشتراك. دعم النموذج المحلي يتراوح بين أصلي (Continue.dev) وإعداد نقطة نهاية مخصصة (Cursor) وإعداد Ollama (Cody) ولا شيء (GitHub Copilot).',
+          'دعم النموذج المحلي وتغطية بيئة التطوير وحالة المصدر المفتوح مستخرجة من وثائق كل مورّد المنشورة. الأسعار هي صورة من يوليو 2026 للخطة الفردية أو للمستخدم المعيارية — الموردون يراجعون خططهم، لذا تحقق من القيمة والخطة الحاليتين على صفحة أسعار المورّد قبل الاشتراك. دعم النموذج المحلي يتراوح بين أصلي (Continue.dev) وإعداد نقطة نهاية مخصصة (Cursor) وإعداد Ollama (Cody) ولا شيء (GitHub Copilot).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3340,12 +3341,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'كل أداة برمجة بالذكاء الاصطناعي تحتاج إلى نموذج للتفكير. بعضها يستطيع استخدام نموذج يعمل على جهازك الخاص، مما يعني أن كودك لا يغادر المبنى. وبعضها يستخدم فقط النموذج السحابي للمورّد، مما يعني إرسال كودك. قرر أيهما تحتاج قبل مقارنة أي شيء آخر.',
           },
         ],
-        columns: ['الأداة', 'النموذج المحلي', 'السعر (مايو 2026)', 'مفتوح المصدر', 'بيئات التطوير', 'الأنسب لـ'],
+        columns: ['الأداة', 'النموذج المحلي', 'السعر (يوليو 2026)', 'مفتوح المصدر', 'بيئات التطوير', 'الأنسب لـ'],
         rows: [
           {
             'الأداة': 'Continue.dev',
             'النموذج المحلي': 'أصلي — Ollama وLM Studio وllama.cpp',
-            'السعر (مايو 2026)': 'مجاني',
+            'السعر (يوليو 2026)': 'مجاني',
             'مفتوح المصدر': 'نعم — Apache 2.0',
             'بيئات التطوير': 'VS Code وJetBrains وVim',
             'الأنسب لـ': 'المطورون المحليون أولاً',
@@ -3353,7 +3354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الأداة': 'Cursor',
             'النموذج المحلي': 'عبر نقطة نهاية مخصصة متوافقة مع OpenAI',
-            'السعر (مايو 2026)': 'نحو 20 دولاراً/الشهر (مميز)',
+            'السعر (يوليو 2026)': 'نحو 20 دولاراً/الشهر (مميز)',
             'مفتوح المصدر': 'لا — مغلق المصدر',
             'بيئات التطوير': 'Cursor (تفرُّع من VS Code)',
             'الأنسب لـ': 'أكثر تجربة محرر تطوراً',
@@ -3361,7 +3362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الأداة': 'GitHub Copilot',
             'النموذج المحلي': 'لا — سحابي حصراً',
-            'السعر (مايو 2026)': 'نحو 10 دولارات/الشهر',
+            'السعر (يوليو 2026)': 'نحو 10 دولارات/الشهر',
             'مفتوح المصدر': 'لا — مغلق المصدر',
             'بيئات التطوير': 'VS Code وJetBrains وVim',
             'الأنسب لـ': 'التكامل مع منظومة GitHub',
@@ -3369,7 +3370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الأداة': 'Sourcegraph Cody',
             'النموذج المحلي': 'عبر إعداد Ollama',
-            'السعر (مايو 2026)': 'نحو 9 دولارات/مستخدم/الشهر معياري؛ الخطة المؤسسية أعلى',
+            'السعر (يوليو 2026)': 'نحو 9 دولارات/مستخدم/الشهر معياري؛ الخطة المؤسسية أعلى',
             'مفتوح المصدر': 'جزئي — CLI مفتوح، وإضافات IDE مغلقة',
             'بيئات التطوير': 'VS Code وJetBrains وNeovim',
             'الأنسب لـ': 'الفرق التي تحتاج إلى سياق قاعدة الكود بأكملها',
@@ -3427,7 +3428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cursor هو الاختيار عندما تريد أكثر تجربة برمجة بالذكاء الاصطناعي تطوراً وأنت مستعد لدفع نحو 20 دولاراً/الشهر مقابل ذلك.** إنه تفرُّع من VS Code مع ذكاء اصطناعي مدمج، وجودة الإكمال التلقائي هي الأعلى بين الأربعة، ويدعم النموذج المحلي عبر نقطة نهاية مخصصة متوافقة مع OpenAI.',
         items: [
-          '**السعر:** خطة مجانية محدودة وخطة مميزة بنحو 20 دولاراً/الشهر وفق صورة مايو 2026.',
+          '**السعر:** خطة مجانية محدودة وخطة مميزة بنحو 20 دولاراً/الشهر وفق صورة يوليو 2026.',
           '**دعم النموذج المحلي:** متاح عبر تكوين نموذجك المحلي كنقطة نهاية API مخصصة متوافقة مع OpenAI — يعمل، لكنه أكثر تعقيداً من Continue.dev، نحو 15 دقيقة من الإعداد.',
           '**المحرر:** تفرُّع من VS Code محسَّن جداً؛ الإكمال التلقائي هو الأكثر تطوراً في هذه المقارنة، ووضع Composer الوكيلي يدير التعديلات متعددة الخطوات.',
           '**تحفظ الخصوصية:** مع النماذج السحابية يُرسَل سياق الكود والتحديدات إلى خوادم Cursor؛ وضع الخصوصية لديه يقلل لكن لا يلغي مشاركة البيانات، وبعض الميزات الوكيلية تفضل النماذج السحابية.',
@@ -3456,7 +3457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**GitHub Copilot هو الاختيار عندما يكون كودك عاماً أو موجوداً بالفعل على GitHub وتريد الخيار السحابي الأبسط — لكنه سحابي حصراً، بدون وضع نموذج محلي.** بنحو 10 دولارات/الشهر هو أرخص الأدوات المدفوعة هنا، ويتكامل بإحكام مع سير عمل GitHub.',
         items: [
-          '**السعر:** نحو 10 دولارات/الشهر للخطة الفردية وفق صورة مايو 2026 — أرخص الأدوات المدفوعة في هذه المقارنة.',
+          '**السعر:** نحو 10 دولارات/الشهر للخطة الفردية وفق صورة يوليو 2026 — أرخص الأدوات المدفوعة في هذه المقارنة.',
           '**دعم النموذج المحلي:** لا يوجد. GitHub Copilot يعمل فقط مع النماذج السحابية، لذا يُرسَل سياق الكود إلى المورّد — هذا هو القيد الحاسم للكود المملوك أو المنظَّم.',
           '**بيئات التطوير:** VS Code وJetBrains وVim مدعومة، مع أفضل ملاءمة ضمن سير عمل يتمحور حول GitHub.',
           '**الخصوصية:** سياق الكود يُرسَل إلى المورّد؛ الخطة المؤسسية تضيف التزامات امتثال، لكن البيانات لا تزال تغادر شبكتك.',
@@ -3486,7 +3487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sourcegraph Cody هو الاختيار عندما يحتاج الفريق إلى سياق قاعدة الكود بأكملها — إنه يفهم المشروع بأكمله، وهو ما تعتمد عليه عمليات إعادة الهيكلة الكبيرة والتغييرات عبر ملفات متعددة.** يدعم النموذج المحلي عبر إعداد Ollama ويضيف ضوابط إدارة الفرق وسجلات التدقيق.',
         items: [
           '**سياق قاعدة الكود:** Cody يقرأ المشروع بأكمله، مما يجعله الأقوى بين الأربعة لإعادة الهيكلة والتعديلات عبر ملفات متعددة.',
-          '**السعر:** خطة معيارية بنحو 9 دولارات/مستخدم/الشهر وفق صورة مايو 2026، مع خطة مؤسسية أعلى — تحقق من الخطط الحالية على صفحة أسعار المورّد.',
+          '**السعر:** خطة معيارية بنحو 9 دولارات/مستخدم/الشهر وفق صورة يوليو 2026، مع خطة مؤسسية أعلى — تحقق من الخطط الحالية على صفحة أسعار المورّد.',
           '**دعم النموذج المحلي:** متاح عبر إعداد Ollama؛ المحادثة والإكمالات يمكن أن تعمل محلياً، وإن كان تصميم Cody سحابياً أولاً والمحلي هو المسار الثانوي.',
           '**ميزات الفرق:** لوحة إدارة وسجلات تدقيق وإدارة مقاعد — السبب الذي يجعل Cody مناسباً للفرق الحساسة للامتثال.',
           '**بيئات التطوير:** VS Code وJetBrains وNeovim؛ CLI مفتوح المصدر بينما إضافات IDE مغلقة المصدر.',
@@ -3538,7 +3539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**اشترك في كل أداة على موقع المورّد مباشرةً وتحقق من الخطة التي يغطيها السعر المُعلَن.** الروابط التالية تذهب مباشرةً إلى كل مورّد؛ لا تحمل علامات تابعة ولا تدرّ عمولة.',
         items: [
           '**Continue.dev:** ثبّته من continue.dev — مجاني ومفتوح المصدر، لا حاجة إلى حساب للاستخدام المحلي الحصري.',
-          '**Cursor:** اشترك في cursor.com — يوجد خطة مجانية محدودة؛ الخطة المميزة نحو 20 دولاراً/الشهر وفق صورة مايو 2026.',
+          '**Cursor:** اشترك في cursor.com — يوجد خطة مجانية محدودة؛ الخطة المميزة نحو 20 دولاراً/الشهر وفق صورة يوليو 2026.',
           '**GitHub Copilot:** اشترك في github.com/features/copilot — نحو 10 دولارات/الشهر للخطة الفردية؛ سحابي حصراً، بدون وضع نموذج محلي.',
           '**Sourcegraph Cody:** سجّل في sourcegraph.com/cody — خطة معيارية بنحو 9 دولارات/مستخدم/الشهر وخطة مؤسسية أعلى؛ تحقق من الخطط الحالية.',
           '**اختبر مجاناً أولاً:** Continue.dev مجاني، ولدى Cursor وCody خطط مجانية — اختبر مع سير عملك الفعلي قبل الدفع.',
@@ -3546,7 +3547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'أسعار أدوات المطورين تتغير مع مراجعات الخطط. كل رقم في هذا الدليل هو صورة من مايو 2026 — افتح صفحة أسعار المورّد قبل الاشتراك وتحقق من الخطة (فردية أو لكل مستخدم أو مؤسسية) التي يغطيها السعر.',
+            text: 'أسعار أدوات المطورين تتغير مع مراجعات الخطط. كل رقم في هذا الدليل هو صورة من يوليو 2026 — افتح صفحة أسعار المورّد قبل الاشتراك وتحقق من الخطة (فردية أو لكل مستخدم أو مؤسسية) التي يغطيها السعر.',
           },
         ],
         affiliateLinks: [
@@ -3630,7 +3631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي أداة أفضل لفريق تطوير؟',
-            a: 'Sourcegraph Cody، عندما يحتاج الفريق إلى سياق قاعدة الكود بأكملها. Cody يقرأ المشروع بأكمله، وهو ما تعتمد عليه عمليات إعادة الهيكلة الكبيرة، ويضيف لوحة إدارة وسجلات تدقيق للفرق الحساسة للامتثال. خطته المعيارية نحو 9 دولارات/مستخدم/الشهر وفق صورة مايو 2026، مع خطة مؤسسية أعلى.',
+            a: 'Sourcegraph Cody، عندما يحتاج الفريق إلى سياق قاعدة الكود بأكملها. Cody يقرأ المشروع بأكمله، وهو ما تعتمد عليه عمليات إعادة الهيكلة الكبيرة، ويضيف لوحة إدارة وسجلات تدقيق للفرق الحساسة للامتثال. خطته المعيارية نحو 9 دولارات/مستخدم/الشهر وفق صورة يوليو 2026، مع خطة مؤسسية أعلى.',
           },
           {
             q: 'Cursor أم Continue.dev — أيهما أختار؟',
@@ -3662,7 +3663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3671,15 +3672,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '2026년 최고의 AI 코딩 도구 비교: Cursor vs Continue.dev',
-    seoTitle: '2026년 최고의 AI 코딩 도구: Cursor, Continue.dev 등 비교',
+    seoTitle: 'Continue.dev vs Cursor 2026: 최고의 로컬 LLM 코딩 도구',
     intro:
-      'AI 코딩 도구 비교 자료 대부분은 자동완성 품질만 평가하고, 많은 개발자에게 실제 구매를 결정짓는 핵심 질문을 간과합니다. 바로 이것입니다: 해당 도구는 로컬 LLM 위에서 실행됩니까, 아니면 코드를 제3자 서버로 전송합니까? 독점 코드, NDA 적용 업무, 또는 규제 산업의 경우 이 단 하나의 답변이 순위를 완전히 뒤바꿉니다. 이 가이드는 실제 의사 결정을 좌우하는 기준 — 로컬 LLM 호환성, 가격, IDE 지원 범위, 코드 전송 여부 — 에 따라 네 가지 도구(Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody)를 비교합니다. 가격에 관한 주의 사항: 개발자 도구 구독 요금은 요금제 개편에 따라 변경되므로, 이 가이드의 모든 수치는 2026년 5월 기준 스냅샷입니다. 구독 전에 공급업체 사이트에서 현재 요금을 반드시 확인하십시오.',
+      'AI 코딩 도구 비교 자료 대부분은 자동완성 품질만 평가하고, 많은 개발자에게 실제 구매를 결정짓는 핵심 질문을 간과합니다. 바로 이것입니다: 해당 도구는 로컬 LLM 위에서 실행됩니까, 아니면 코드를 제3자 서버로 전송합니까? 독점 코드, NDA 적용 업무, 또는 규제 산업의 경우 이 단 하나의 답변이 순위를 완전히 뒤바꿉니다. 이 가이드는 실제 의사 결정을 좌우하는 기준 — 로컬 LLM 호환성, 가격, IDE 지원 범위, 코드 전송 여부 — 에 따라 네 가지 도구(Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody)를 비교합니다. 가격에 관한 주의 사항: 개발자 도구 구독 요금은 요금제 개편에 따라 변경되므로, 이 가이드의 모든 수치는 2026년 7월 기준 스냅샷입니다. 구독 전에 공급업체 사이트에서 현재 요금을 반드시 확인하십시오.',
     metaDescription:
-      '2026년 최고의 AI 코딩 도구 비교: GitHub Copilot, Cursor, Cline, Continue.dev. 가격, 로컬 vs 클라우드, 에이전트 기능 분석.',
+      '로컬 모델용 Continue.dev vs Cursor: Continue.dev(무료, 네이티브 Ollama)가 로컬 우선에서 우세, Cursor(월 약 $20)는 완성도. 최적 Ollama 모델: Qwen3 Coder 14B.',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — 4가지 AI 코딩 도구 비교. 대부분의 순위가 놓치는 결정적 기준: 로컬 LLM을 지원합니까?',
     affiliateDisclosure: true,
@@ -3707,7 +3708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sourcegraph cody 리뷰 2026',
     ],
     leadAnswerBlock:
-      '**최고의 AI 코딩 도구는 로컬 LLM 지원이 필요한지에 따라 달라집니다. Continue.dev는 Ollama를 중심으로 구축된 무료 오픈소스 옵션이고, Cursor는 가장 세련된 유료 편집기이며, GitHub Copilot은 GitHub 생태계의 클라우드 전용 기본 옵션이고, Sourcegraph Cody는 전체 코드베이스 컨텍스트가 필요한 팀을 위한 선택입니다.**',
+      '**로컬 모델용 Continue.dev vs Cursor: 코드를 자신의 컴퓨터에 유지하는, Ollama를 중심으로 구축된 무료 오픈소스 도구를 원한다면 Continue.dev를, 가장 세련된 편집기를 원하고 그에 대한 비용을 지불할 의향이 있다면 Cursor(월 약 $20)를 선택하십시오. Continue.dev와 함께 사용할 최적의 Ollama 모델은 Qwen3 Coder 14B입니다(중간 크기 기본값, 약 16GB VRAM); 8~12GB GPU에서는 Qwen3 Coder 7B로 낮추고, 24GB에서는 33B 클래스 모델로 올리십시오. 더 넓은 범위에서는 GitHub Copilot(월 약 $10)이 GitHub 생태계의 클라우드 전용 기본 옵션이고, Sourcegraph Cody는 전체 코드베이스 컨텍스트가 필요한 팀을 위한 선택입니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 최고의 AI 코딩 도구는 무엇입니까?',
@@ -3718,9 +3719,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '가장 세련된 편집기: Cursor, 월 약 $20, 맞춤형 엔드포인트를 통한 로컬 LLM 지원',
           'GitHub 생태계 기본 옵션: GitHub Copilot, 월 약 $10, 클라우드 전용',
           '팀을 위한 최고의 코드베이스 컨텍스트: Sourcegraph Cody, 표준 요금제 기준 사용자당 월 약 $9',
-          '구독 요금은 변경될 수 있습니다 — 각 수치를 2026년 5월 스냅샷으로 취급하십시오',
+          '구독 요금은 변경될 수 있습니다 — 각 수치를 2026년 7월 스냅샷으로 취급하십시오',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -3752,7 +3753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**팀을 위한 최고의 코드베이스 컨텍스트: Sourcegraph Cody** — 리팩터링을 위한 전체 코드베이스 컨텍스트, 팀 관리 기능 및 감사 로그를 제공합니다. Ollama를 통해 로컬 LLM을 지원하며, 표준 요금제는 사용자당 월 약 $9이고 엔터프라이즈 요금제는 더 비쌉니다.',
           '**로컬 LLM에는 GPU가 필요합니다.** 로컬 코딩 모델은 약 8GB 이상의 VRAM이 필요합니다 — Qwen3 Coder 7B는 소형 시스템에 적합하고, 14B는 중간 크기 표준이며, 33B 클래스 모델은 24GB가 필요합니다. GPU가 없으면 클라우드 도구가 유일한 옵션입니다.',
           '**클라우드 도구는 여전히 원시 품질과 설정 속도에서 앞섭니다.** 최고의 클라우드 코딩 모델은 어려운 문제에서 로컬 옵션을 능가하며, 클라우드 도구는 로컬 LLM 스택보다 훨씬 빠르게 생산적으로 사용할 수 있습니다.',
-          '**요금제 개편에 따라 가격이 변경됩니다.** 이 가이드의 모든 수치를 2026년 5월 스냅샷으로 취급하고, 구독 전에 공급업체 가격 페이지에서 현재 요금과 요금제를 확인하십시오.',
+          '**요금제 개편에 따라 가격이 변경됩니다.** 이 가이드의 모든 수치를 2026년 7월 스냅샷으로 취급하고, 구독 전에 공급업체 가격 페이지에서 현재 요금과 요금제를 확인하십시오.',
         ],
       },
       quickFacts: {
@@ -3765,7 +3766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**팀을 위한 최적:** Sourcegraph Cody — 전체 코드베이스 컨텍스트, 관리자 콘솔 및 감사 로그.',
           '**로컬 LLM을 위한 최소 하드웨어:** 약 8GB VRAM 이상; Qwen3 Coder 14B가 중간 크기 표준 코딩 모델입니다.',
           '**오픈소스:** Continue.dev만 해당(Apache 2.0); Cursor, GitHub Copilot, Cody의 IDE 확장은 소스 비공개.',
-          '**2026년 가격 현실:** 개발자 도구 구독은 요금제 개편에 따라 변경됩니다 — 수치를 2026년 5월 스냅샷으로 취급하십시오.',
+          '**2026년 가격 현실:** 개발자 도구 구독은 요금제 개편에 따라 변경됩니다 — 수치를 2026년 7월 스냅샷으로 취급하십시오.',
         ],
       },
       editorsChoice: {
@@ -3794,7 +3795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 4가지 AI 코딩 도구 비교',
         content:
-          '로컬 LLM 지원, IDE 지원 범위, 오픈소스 여부는 각 공급업체가 게시한 문서에서 가져왔습니다. 가격은 개인 또는 사용자당 표준 요금제의 2026년 5월 스냅샷입니다 — 공급업체는 요금제를 개편하므로, 구독 전에 공급업체 가격 페이지에서 현재 수치와 요금제를 확인하십시오. 로컬 LLM 지원은 네이티브(Continue.dev)부터 맞춤형 엔드포인트 설정(Cursor), Ollama 설정(Cody), 미지원(GitHub Copilot)까지 다양합니다.',
+          '로컬 LLM 지원, IDE 지원 범위, 오픈소스 여부는 각 공급업체가 게시한 문서에서 가져왔습니다. 가격은 개인 또는 사용자당 표준 요금제의 2026년 7월 스냅샷입니다 — 공급업체는 요금제를 개편하므로, 구독 전에 공급업체 가격 페이지에서 현재 수치와 요금제를 확인하십시오. 로컬 LLM 지원은 네이티브(Continue.dev)부터 맞춤형 엔드포인트 설정(Cursor), Ollama 설정(Cody), 미지원(GitHub Copilot)까지 다양합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3805,12 +3806,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '모든 AI 코딩 도구에는 생각할 모델이 필요합니다. 일부는 자신의 컴퓨터에서 실행되는 모델을 사용할 수 있어 코드가 건물 밖으로 나가지 않습니다. 다른 것들은 공급업체의 클라우드 모델만 사용하므로 코드가 전송됩니다. 다른 것을 비교하기 전에 어느 쪽이 필요한지 결정하십시오.',
           },
         ],
-        columns: ['도구', '로컬 LLM', '가격 (2026년 5월)', '오픈소스', 'IDE', '적합 대상'],
+        columns: ['도구', '로컬 LLM', '가격 (2026년 7월)', '오픈소스', 'IDE', '적합 대상'],
         rows: [
           {
             '도구': 'Continue.dev',
             '로컬 LLM': '네이티브 — Ollama, LM Studio, llama.cpp',
-            '가격 (2026년 5월)': '무료',
+            '가격 (2026년 7월)': '무료',
             '오픈소스': '예 — Apache 2.0',
             'IDE': 'VS Code, JetBrains, Vim',
             '적합 대상': '로컬 우선 개발자',
@@ -3818,7 +3819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'Cursor',
             '로컬 LLM': 'OpenAI 호환 맞춤형 엔드포인트를 통해',
-            '가격 (2026년 5월)': '월 약 $20 (Pro)',
+            '가격 (2026년 7월)': '월 약 $20 (Pro)',
             '오픈소스': '아니요 — 소스 비공개',
             'IDE': 'Cursor (VS Code 포크)',
             '적합 대상': '가장 세련된 편집기 경험',
@@ -3826,7 +3827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'GitHub Copilot',
             '로컬 LLM': '아니요 — 클라우드 전용',
-            '가격 (2026년 5월)': '월 약 $10',
+            '가격 (2026년 7월)': '월 약 $10',
             '오픈소스': '아니요 — 소스 비공개',
             'IDE': 'VS Code, JetBrains, Vim',
             '적합 대상': 'GitHub 생태계 통합',
@@ -3834,7 +3835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'Sourcegraph Cody',
             '로컬 LLM': 'Ollama 설정을 통해',
-            '가격 (2026년 5월)': '표준 사용자당 월 약 $9; 엔터프라이즈 요금제는 더 비쌈',
+            '가격 (2026년 7월)': '표준 사용자당 월 약 $9; 엔터프라이즈 요금제는 더 비쌈',
             '오픈소스': '부분 — CLI 오픈소스, IDE 확장 소스 비공개',
             'IDE': 'VS Code, JetBrains, Neovim',
             '적합 대상': '전체 코드베이스 컨텍스트가 필요한 팀',
@@ -3892,7 +3893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cursor는 가장 세련된 AI 코딩 경험을 원하고 월 약 $20을 지불할 의향이 있을 때 선택입니다.** VS Code의 포크로 AI가 내장되어 있으며, 네 가지 도구 중 자동완성 품질이 가장 높고, OpenAI 호환 맞춤형 엔드포인트를 통해 로컬 LLM을 지원합니다.',
         items: [
-          '**가격:** 제한된 무료 요금제와 2026년 5월 스냅샷 기준 월 약 $20의 Pro 요금제.',
+          '**가격:** 제한된 무료 요금제와 2026년 7월 스냅샷 기준 월 약 $20의 Pro 요금제.',
           '**로컬 LLM 지원:** 로컬 모델을 OpenAI 호환 맞춤형 API 엔드포인트로 설정하여 사용 가능합니다 — 작동하지만 Continue.dev보다 번거롭고 약 15분의 설정이 필요합니다.',
           '**편집기:** 고도로 최적화된 VS Code 포크; 이 비교에서 자동완성이 가장 세련되었으며, Composer 에이전트 모드가 다단계 편집을 처리합니다.',
           '**프라이버시 주의사항:** 클라우드 모델 사용 시 코드 컨텍스트와 선택 항목이 Cursor 서버로 전송됩니다; Privacy 모드는 데이터 공유를 줄이지만 완전히 제거하지는 않으며, 일부 에이전트 기능은 클라우드 모델을 선호합니다.',
@@ -3921,7 +3922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**GitHub Copilot은 코드가 공개적이거나 이미 GitHub에 있고 가장 간편한 클라우드 옵션을 원할 때 선택입니다 — 하지만 클라우드 전용으로 로컬 LLM 모드가 없습니다.** 월 약 $10으로 이 비교에서 가장 저렴한 유료 도구이며, GitHub 워크플로우와 긴밀하게 통합됩니다.',
         items: [
-          '**가격:** 2026년 5월 스냅샷 기준 개인 요금제 월 약 $10 — 이 비교에서 가장 저렴한 유료 도구.',
+          '**가격:** 2026년 7월 스냅샷 기준 개인 요금제 월 약 $10 — 이 비교에서 가장 저렴한 유료 도구.',
           '**로컬 LLM 지원:** 없습니다. GitHub Copilot은 클라우드 모델로만 작동하므로 코드 컨텍스트가 항상 공급업체에 전송됩니다 — 이것이 독점 코드나 규제 코드에 대한 결정적 제한입니다.',
           '**IDE:** VS Code, JetBrains, Vim을 지원하며, GitHub 중심 워크플로우 내에서 가장 잘 맞습니다.',
           '**프라이버시:** 코드 컨텍스트가 공급업체에 전송됩니다; 엔터프라이즈 요금제는 규정 준수 약정을 추가하지만 데이터는 여전히 네트워크를 떠납니다.',
@@ -3951,7 +3952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sourcegraph Cody는 팀이 전체 코드베이스 컨텍스트가 필요할 때 선택입니다 — 대규모 리팩터링과 여러 파일에 걸친 변경이 의존하는 전체 프로젝트를 이해합니다.** Ollama 설정을 통해 로컬 LLM을 지원하며, 팀 관리 제어 기능과 감사 로그를 추가합니다.',
         items: [
           '**코드베이스 컨텍스트:** Cody는 전체 프로젝트를 읽어, 리팩터링 및 여러 파일 편집에서 네 가지 중 가장 강력합니다.',
-          '**가격:** 2026년 5월 스냅샷 기준 표준 요금제 사용자당 월 약 $9, 엔터프라이즈 요금제는 더 비쌉니다 — 현재 요금제는 공급업체 가격 페이지에서 확인하십시오.',
+          '**가격:** 2026년 7월 스냅샷 기준 표준 요금제 사용자당 월 약 $9, 엔터프라이즈 요금제는 더 비쌉니다 — 현재 요금제는 공급업체 가격 페이지에서 확인하십시오.',
           '**로컬 LLM 지원:** Ollama 설정을 통해 사용 가능합니다; 채팅과 완성이 로컬에서 실행될 수 있지만, Cody의 설계는 클라우드 우선이며 로컬은 보조 경로입니다.',
           '**팀 기능:** 관리자 콘솔, 감사 로그, 좌석 관리 — 규정 준수에 민감한 팀에 Cody가 적합한 이유입니다.',
           '**IDE:** VS Code, JetBrains, Neovim; CLI는 오픈소스이지만 IDE 확장은 소스 비공개.',
@@ -4003,7 +4004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**각 도구는 공급업체 자체 사이트에서 가입하고 어떤 요금제가 해당 가격을 포함하는지 확인하십시오.** 아래 링크는 각 공급업체로 직접 연결됩니다; 제휴 태그가 없으며 수수료가 발생하지 않습니다.',
         items: [
           '**Continue.dev:** continue.dev에서 설치 — 무료, 오픈소스이며 로컬 전용 사용에는 계정이 필요하지 않습니다.',
-          '**Cursor:** cursor.com에서 구독 — 제한된 무료 요금제가 있으며, Pro 요금제는 2026년 5월 스냅샷 기준 월 약 $20.',
+          '**Cursor:** cursor.com에서 구독 — 제한된 무료 요금제가 있으며, Pro 요금제는 2026년 7월 스냅샷 기준 월 약 $20.',
           '**GitHub Copilot:** github.com/features/copilot에서 구독 — 개인 요금제 월 약 $10; 클라우드 전용, 로컬 LLM 모드 없음.',
           '**Sourcegraph Cody:** sourcegraph.com/cody에서 가입 — 표준 요금제 사용자당 월 약 $9, 엔터프라이즈 요금제는 더 비쌉니다; 현재 요금제를 확인하십시오.',
           '**먼저 무료로 시도:** Continue.dev는 무료이며, Cursor와 Cody에는 무료 요금제가 있습니다 — 비용을 지불하기 전에 실제 워크플로우로 테스트하십시오.',
@@ -4011,7 +4012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '개발자 도구 가격은 요금제 개편에 따라 변경됩니다. 이 가이드의 모든 수치는 2026년 5월 스냅샷입니다 — 구독 전에 공급업체 가격 페이지를 열고 어떤 요금제(개인, 사용자당, 엔터프라이즈)가 해당 가격을 포함하는지 확인하십시오.',
+            text: '개발자 도구 가격은 요금제 개편에 따라 변경됩니다. 이 가이드의 모든 수치는 2026년 7월 스냅샷입니다 — 구독 전에 공급업체 가격 페이지를 열고 어떤 요금제(개인, 사용자당, 엔터프라이즈)가 해당 가격을 포함하는지 확인하십시오.',
           },
         ],
         affiliateLinks: [
@@ -4095,7 +4096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '개발 팀에 가장 적합한 도구는 무엇입니까?',
-            a: '팀이 전체 코드베이스 컨텍스트가 필요할 때 Sourcegraph Cody입니다. Cody는 전체 프로젝트를 읽어 대규모 리팩터링에 의존하며, 규정 준수에 민감한 팀을 위한 관리자 콘솔과 감사 로그를 추가합니다. 표준 요금제는 2026년 5월 스냅샷 기준 사용자당 월 약 $9이며, 엔터프라이즈 요금제는 더 비쌉니다.',
+            a: '팀이 전체 코드베이스 컨텍스트가 필요할 때 Sourcegraph Cody입니다. Cody는 전체 프로젝트를 읽어 대규모 리팩터링에 의존하며, 규정 준수에 민감한 팀을 위한 관리자 콘솔과 감사 로그를 추가합니다. 표준 요금제는 2026년 7월 스냅샷 기준 사용자당 월 약 $9이며, 엔터프라이즈 요금제는 더 비쌉니다.',
           },
           {
             q: 'Cursor와 Continue.dev 중 어느 것을 선택해야 합니까?',
@@ -4127,7 +4128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
