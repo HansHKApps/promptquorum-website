@@ -851,11 +851,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'Beste NVMe-SSDs für lokales KI-Modell-Hosting 2026',
         content:
-          '**Die beste interne NVMe-SSD für ein lokales KI-Inferenz-Workload benötigt sequenzielle Lesegeschwindigkeit von mindestens 5 GB/s und mindestens 2 TB Kapazität — 4 TB, wenn Sie zwischen mehreren großen Modellen wechseln.** Ein 70B-Modell mit Q4-Quantisierung ist etwa 35-42 GB groß; ein einzelner Modellwechsel liest die gesamte Gewichtsdatei vom Datenträger. Die Lesegeschwindigkeit ist der Engpass zwischen einem Modellwechsel und dem ersten Ausgabe-Token. Die Empfehlungen unten erfüllen alle ≥ 5 GB/s sequenzielles Lesen auf PCIe-4.0- oder PCIe-5.0-Schnittstellen und sind in 4-TB-Konfigurationen erhältlich. Hinweis: 2026er Tarif- und Lieferkettenprobleme haben PCIe-4.0-SSDs (Samsung, WD) erheblich teurer gemacht als die schnellere PCIe-5.0-Crucial T705 — das Gen5-Laufwerk ist das klare Preis-Leistungs-Angebot zu Juli-2026-Preisen.',
+          '**Die beste interne NVMe-SSD für ein lokales KI-Inferenz-Workload benötigt sequenzielle Lesegeschwindigkeit von mindestens 5 GB/s und mindestens 2 TB Kapazität — 4 TB, wenn Sie zwischen mehreren großen Modellen wechseln.** Ein 70B-Modell mit Q4-Quantisierung ist etwa 35-42 GB groß; ein einzelner Modellwechsel liest die gesamte Gewichtsdatei vom Datenträger. Die Lesegeschwindigkeit ist der Engpass zwischen einem Modellwechsel und dem ersten Ausgabe-Token. Die Empfehlungen unten erfüllen alle ≥ 5 GB/s sequenzielles Lesen auf PCIe-4.0- oder PCIe-5.0-Schnittstellen und sind in 4-TB-Konfigurationen erhältlich. Hinweis: Im DACH-Handel liegt die schnellere PCIe-5.0-Crucial T705 preislich am unteren Ende, während die Samsung 990 Pro am oberen Ende rangiert — das Gen5-Laufwerk ist damit das Preis-Leistungs-Angebot zu Juli-2026-Preisen.',
         items: [
-          '**Crucial T705 4TB (~304–350 $, Juli 2026):** PCIe 5.0 NVMe, sequenzielle Leserate bis zu 14.500 MB/s. Trotz Gen5-Geschwindigkeit die günstigste der drei Optionen — bestes Preis-Leistungs-Verhältnis. Speichert nur Modellgewichte; VRAM führt die Inferenz aus, sobald das Modell geladen ist. Erfordert einen PCIe-5.0-M.2-Steckplatz.',
-          '**WD Black SN850X 4TB (~615–740 $, Juli 2026):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.300 MB/s, 5 Jahre Garantie. Die mittlere Option — deutlich teurer als die Crucial T705 4TB aufgrund von 2026er Lieferengpässen bei PCIe-4.0-NAND, aber gut verfügbar und bewährt.',
-          '**Samsung 990 Pro 4TB (~780–950 $, Juli 2026):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.450 MB/s, 5 Jahre Garantie mit 2.400 TBW Ausdauerrating. Die Premium-Option — im Juli 2026 aufgrund von Tarifen und Versorgungsengpässen am teuersten (Samsung UVP 1.099 $, Straßenpreis 780–950 $). Zuverlässige High-End-Leistung, aber die Crucial T705 4TB liefert mehr Geschwindigkeit zu einem deutlich niedrigeren Preis.',
+          '**Crucial T705 4TB (~450–560 €, Juli 2026):** PCIe 5.0 NVMe, sequenzielle Leserate bis zu 14.500 MB/s. Trotz Gen5-Geschwindigkeit die günstigste der drei Optionen — bestes Preis-Leistungs-Verhältnis. Speichert nur Modellgewichte; VRAM führt die Inferenz aus, sobald das Modell geladen ist. Erfordert einen PCIe-5.0-M.2-Steckplatz.',
+          '**WD Black SN850X 4TB (~510–580 €, Juli 2026):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.300 MB/s, 5 Jahre Garantie. Die mittlere Option — im DACH-Handel etwas teurer als die Crucial T705 4TB, aber gut verfügbar und bewährt.',
+          '**Samsung 990 Pro 4TB (~600–650 €, Juli 2026):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.450 MB/s, 5 Jahre Garantie mit 2.400 TBW Ausdauerrating. Die Premium-Option — im Juli 2026 die teuerste der drei (Samsung UVP ca. 700 €, Straßenpreis 600–650 €). Zuverlässige High-End-Leistung, aber die Crucial T705 4TB liefert mehr Geschwindigkeit zu einem niedrigeren Preis.',
         ],
         callouts: [
           {
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Die beste interne NVMe-SSD für ein selbst gehostetes lokales KI-Inferenz-Workload benötigt sequenzielle Lesegeschwindigkeit von mindestens 5 GB/s und mindestens 2-4 TB Kapazität — die Crucial T705 4TB (~304–350 $) ist das Preis-Leistungs-Angebot mit Gen5-Geschwindigkeit, während WD Black SN850X 4TB (~615–740 $) und Samsung 990 Pro 4TB (~780–950 $) aufgrund von 2026er Versorgungsengpässen deutlich teurer sind.',
+            text: 'Die beste interne NVMe-SSD für ein selbst gehostetes lokales KI-Inferenz-Workload benötigt sequenzielle Lesegeschwindigkeit von mindestens 5 GB/s und mindestens 2-4 TB Kapazität — die Crucial T705 4TB (~450–560 €) ist das Preis-Leistungs-Angebot mit Gen5-Geschwindigkeit, während WD Black SN850X 4TB (~510–580 €) und Samsung 990 Pro 4TB (~600–650 €) im Juli 2026 etwas teurer sind.',
           },
           {
             type: 'plain-terms',
@@ -1376,11 +1376,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'Meilleures NVMe pour l\'hébergement de modèles IA locaux 2026',
         content:
-          '**Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale doit atteindre une vitesse de lecture séquentielle d\'au moins 5 Go/s et disposer d\'au moins 2 To de capacité — 4 To si vous alternez entre plusieurs grands modèles.** Un modèle 70B en quantification Q4 pèse environ 35-42 Go ; un seul changement de modèle lit l\'intégralité du fichier de poids depuis le disque. La vitesse de lecture est le goulot d\'étranglement entre un changement de modèle et le premier token de sortie. Les choix ci-dessous atteignent tous ≥ 5 Go/s de lecture séquentielle sur des interfaces PCIe 4.0 ou PCIe 5.0 et sont disponibles en configurations 4 To. Note : les contraintes tarifaires et d\'approvisionnement de 2026 ont rendu les SSD PCIe 4.0 (Samsung, WD) nettement plus chers que le Crucial T705 PCIe 5.0 plus rapide — le lecteur Gen5 est le meilleur rapport qualité-prix aux prix de juillet 2026.',
+          '**Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale doit atteindre une vitesse de lecture séquentielle d\'au moins 5 Go/s et disposer d\'au moins 2 To de capacité — 4 To si vous alternez entre plusieurs grands modèles.** Un modèle 70B en quantification Q4 pèse environ 35-42 Go ; un seul changement de modèle lit l\'intégralité du fichier de poids depuis le disque. La vitesse de lecture est le goulot d\'étranglement entre un changement de modèle et le premier token de sortie. Les choix ci-dessous atteignent tous ≥ 5 Go/s de lecture séquentielle sur des interfaces PCIe 4.0 ou PCIe 5.0 et sont disponibles en configurations 4 To. Note : dans le commerce français, le Crucial T705 PCIe 5.0 plus rapide se situe dans le bas de la fourchette de prix tandis que le Samsung 990 Pro est le plus cher — le lecteur Gen5 offre donc le meilleur rapport qualité-prix aux prix de juillet 2026.',
         items: [
-          '**Crucial T705 4 To (~304–350 $, juillet 2026) :** NVMe PCIe 5.0, lectures séquentielles jusqu\'à 14 500 Mo/s. Malgré sa vitesse Gen5, c\'est le moins cher des trois — le meilleur rapport qualité-prix. Stocke uniquement les poids du modèle ; le VRAM exécute l\'inférence une fois chargé. Nécessite un slot M.2 PCIe 5.0.',
-          '**WD Black SN850X 4 To (~615–740 $, juillet 2026) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 300 Mo/s, garantie 5 ans. L\'option intermédiaire — nettement plus cher que le Crucial T705 4 To en raison des contraintes d\'approvisionnement PCIe 4.0 NAND en 2026, mais bien disponible et éprouvé.',
-          '**Samsung 990 Pro 4 To (~780–950 $, juillet 2026) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 450 Mo/s, garantie 5 ans avec 2 400 TBW. L\'option premium — la plus chère des trois en juillet 2026 en raison des tarifs et tensions d\'approvisionnement (Samsung MSRP 1 099 $, rue 780–950 $). Performances haut de gamme constantes, mais le Crucial T705 4 To offre plus de vitesse à un prix bien inférieur.',
+          '**Crucial T705 4 To (~450–560 €, juillet 2026) :** NVMe PCIe 5.0, lectures séquentielles jusqu\'à 14 500 Mo/s. Malgré sa vitesse Gen5, c\'est le moins cher des trois — le meilleur rapport qualité-prix. Stocke uniquement les poids du modèle ; le VRAM exécute l\'inférence une fois chargé. Nécessite un slot M.2 PCIe 5.0.',
+          '**WD Black SN850X 4 To (~510–580 €, juillet 2026) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 300 Mo/s, garantie 5 ans. L\'option intermédiaire — légèrement plus chère que le Crucial T705 4 To dans le commerce français, mais bien disponible et éprouvée.',
+          '**Samsung 990 Pro 4 To (~600–650 €, juillet 2026) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 450 Mo/s, garantie 5 ans avec 2 400 TBW. L\'option premium — la plus chère des trois en juillet 2026 (Samsung MSRP env. 700 €, rue 600–650 €). Performances haut de gamme constantes, mais le Crucial T705 4 To offre plus de vitesse à un prix inférieur.',
         ],
         callouts: [
           {
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale auto-hébergée nécessite une vitesse de lecture séquentielle d\'au moins 5 Go/s et au moins 2-4 To de capacité — le Crucial T705 4 To (~304–350 $) est le meilleur rapport qualité-prix à vitesse Gen5, tandis que le WD Black SN850X 4 To (~615–740 $) et le Samsung 990 Pro 4 To (~780–950 $) coûtent nettement plus cher en raison des contraintes d\'approvisionnement 2026.',
+            text: 'Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale auto-hébergée nécessite une vitesse de lecture séquentielle d\'au moins 5 Go/s et au moins 2-4 To de capacité — le Crucial T705 4 To (~450–560 €) est le meilleur rapport qualité-prix à vitesse Gen5, tandis que le WD Black SN850X 4 To (~510–580 €) et le Samsung 990 Pro 4 To (~600–650 €) coûtent un peu plus cher en juillet 2026.',
           },
           {
             type: 'plain-terms',
@@ -1895,9 +1895,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**ローカルAIインファレンスワークロード向けの最良の内蔵NVMe SSDは、シーケンシャル読み取り速度が5 GB/s以上で、最低でも2TBの容量が必要です — 複数の大型モデルを交互に使用する場合は4TBです。** 70BモデルのQ4量子化は約35-42 GBあり、1回のモデルスワップでディスクから重みファイル全体を読み込みます。読み取り速度がモデルスワッチと最初の出力トークンの間のボトルネックです。以下の選択肢はすべてPCIe 4.0またはPCIe 5.0インターフェース上でシーケンシャル読み取り5 GB/s以上を達成し、4TB構成で入手可能です。注意：2026年の関税・供給制約により、PCIe 4.0 SSD（Samsung、WD）はより高速なPCIe 5.0 Crucial T705より大幅に高価になっています — Gen5ドライブが2026年7月時点の価格での明確なコスパ最良の選択肢です。',
         items: [
-          '**Crucial T705 4TB（~$304–$350、2026年7月）：** PCIe 5.0 NVMe、シーケンシャル読み取り最大14,500 MB/s。Gen5の速度にもかかわらず3つの中で最も安価 — 最良のコスパ。モデルの重みのみを保存。モデルが読み込まれるとVRAMがインファレンスを実行します。PCIe 5.0 M.2スロットが必要です。',
-          '**WD Black SN850X 4TB（~$615–$740、2026年7月）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,300 MB/s、5年保証。中間の選択肢 — 2026年のPCIe 4.0 NANDの供給制約によりCrucial T705 4TBより大幅に高価ですが、在庫が豊富で実績があります。',
-          '**Samsung 990 Pro 4TB（~$780–$950、2026年7月）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,450 MB/s、5年保証、2,400 TBW耐久評価。プレミアムの選択肢 — 関税と供給不足により2026年7月時点で最も高価（Samsung希望小売価格$1,099、実売$780–$950）。一貫したハイエンドパフォーマンスですが、Crucial T705 4TBははるかに低価格でより高速です。',
+          '**Crucial T705 4TB（約¥98,000、2026年7月）：** PCIe 5.0 NVMe、シーケンシャル読み取り最大14,500 MB/s。Gen5の速度にもかかわらず3つの中で最も安価 — 最良のコスパ。モデルの重みのみを保存。モデルが読み込まれるとVRAMがインファレンスを実行します。PCIe 5.0 M.2スロットが必要です。',
+          '**WD Black SN850X 4TB（約¥99,800、2026年7月）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,300 MB/s、5年保証。中間の選択肢 — 2026年のPCIe 4.0 NANDの供給制約によりCrucial T705 4TBとほぼ同価格ですが、在庫が豊富で実績があります。',
+          '**Samsung 990 Pro 4TB（約¥154,000、2026年7月）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,450 MB/s、5年保証、2,400 TBW耐久評価。プレミアムの選択肢 — 関税と供給不足により2026年7月時点で最も高価（Samsung希望小売価格約¥170,000、実売約¥154,000）。一貫したハイエンドパフォーマンスですが、Crucial T705 4TBははるかに低価格でより高速です。',
         ],
         callouts: [
           {
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '自己ホスト型ローカルAIインファレンスワークロード向けの最良の内蔵NVMe SSDは、シーケンシャル読み取り速度5 GB/s以上と最低2-4TBの容量が必要です — Crucial T705 4TB（~$304–$350）はGen5速度でのコスパ最良の選択肢で、WD Black SN850X 4TB（~$615–$740）とSamsung 990 Pro 4TB（~$780–$950）は2026年の供給制約により大幅に高価です。',
+            text: '自己ホスト型ローカルAIインファレンスワークロード向けの最良の内蔵NVMe SSDは、シーケンシャル読み取り速度5 GB/s以上と最低2-4TBの容量が必要です — Crucial T705 4TB（約¥98,000）はGen5速度でのコスパ最良の選択肢で、WD Black SN850X 4TB（約¥99,800）とSamsung 990 Pro 4TB（約¥154,000）は2026年の供給制約により高価です。',
           },
           {
             type: 'plain-terms',
@@ -2669,11 +2669,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Qué NAS y almacenamiento debo comprar para modelos de IA local en 2026?',
         answer:
-          'Divide el presupuesto por tarea. Para cargar modelos rápidamente en el momento de la inferencia, compra un SSD NVMe de gama alta — el Samsung 990 Pro o el WD Black SN850X. Para la biblioteca de modelos que varias máquinas comparten y que necesita respaldo, compra un NAS de 4 bahías — Synology para el software más sencillo, QNAP para más hardware por dólar — y ejecútalo en RAID 6. Un desarrollador en solitario puede prescindir del NAS y usar un SSD más una unidad de respaldo externa.',
+          'Divide el presupuesto por tarea. Para cargar modelos rápidamente en el momento de la inferencia, compra un SSD NVMe de gama alta — el Samsung 990 Pro o el WD Black SN850X. Para la biblioteca de modelos que varias máquinas comparten y que necesita respaldo, compra un NAS de 4 bahías — Synology para el software más sencillo, QNAP para más hardware por euro — y ejecútalo en RAID 6. Un desarrollador en solitario puede prescindir del NAS y usar un SSD más una unidad de respaldo externa.',
         bullets: [
           'Carga rápida: SSD NVMe Samsung 990 Pro o WD Black SN850X, en la máquina de inferencia',
           'Biblioteca compartida: NAS Synology de 4 bahías — software más sencillo, ideal para equipos sin especialistas',
-          'Más hardware por dólar: NAS QNAP de 4 bahías — CPU más potente y más puertos a precio similar',
+          'Más hardware por euro: NAS QNAP de 4 bahías — CPU más potente y más puertos a precio similar',
           'Ejecuta el NAS en RAID 6: sobrevive a dos fallos de disco simultáneos',
           'Los precios de los SSD subieron con la escasez de memoria de 2026 — trata cada precio como una instantánea de julio de 2026',
         ],
@@ -2706,7 +2706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Un NAS no ejecuta inferencia.** Nunca cargues modelos para inferencia a través de la red — es demasiado lento. El NAS guarda la biblioteca; el SSD de la máquina GPU realiza la carga. Mantén esos roles separados.',
           '**Elección para carga rápida: Samsung 990 Pro o WD Black SN850X.** Un SSD NVMe PCIe 4.0 de gama alta acorta la espera cuando un modelo se carga desde el disco a la VRAM. Un modelo de 70B en Q4 pesa aproximadamente 35-42 GB, por lo que la velocidad de carga se nota en cada cambio de modelo.',
           '**Elección para biblioteca compartida (más sencillo): NAS Synology de 4 bahías.** El software DSM de Synology es el más accesible para equipos sin especialistas — las copias de seguridad, instantáneas y gestión de usuarios se realizan con clics.',
-          '**Elección para biblioteca compartida (más hardware por dólar): NAS QNAP de 4 bahías.** QNAP suele ofrecer una CPU más potente y más puertos a un precio similar, a costa de una curva de aprendizaje ligeramente más pronunciada.',
+          '**Elección para biblioteca compartida (más hardware por euro): NAS QNAP de 4 bahías.** QNAP suele ofrecer una CPU más potente y más puertos a un precio similar, a costa de una curva de aprendizaje ligeramente más pronunciada.',
           '**Ejecuta el NAS en RAID 6.** El RAID 6 sobrevive a dos fallos de disco simultáneos y es el estándar en producción; el RAID 5 con discos grandes arriesga un segundo fallo durante la reconstrucción de 24-48 horas.',
           '**RAID no es un respaldo.** RAID protege frente al fallo de disco, no frente al ransomware, robo o borrado. Sigue la regla 3-2-1: 3 copias, 2 tipos de medios, 1 fuera del sitio.',
           '**Los precios subieron en 2026.** La escasez de chips de memoria elevó los precios de NAND y SSD. Trata cada precio aquí como una instantánea de julio de 2026 y vuelve a comprobarlo antes de comprar.',
@@ -2730,7 +2730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Elección del editor: NAS Synology de 4 bahías + SSD Samsung 990 Pro',
         sponsoredSlot: true,
         content:
-          '**Para un equipo pequeño que construye una biblioteca de modelos de IA local, la combinación que realiza bien ambas tareas de almacenamiento es un NAS Synology de 4 bahías para la biblioteca y un SSD NVMe Samsung 990 Pro en la máquina de inferencia.** El software DSM de Synology hace que RAID 6, las instantáneas programadas y la configuración de respaldo sean accesibles sin un especialista en almacenamiento, y una unidad de 4 bahías ofrece aproximadamente 8 TB utilizables en RAID 6 — suficiente para una biblioteca grande de modelos cuantizados. El Samsung 990 Pro se ocupa de la otra tarea: carga rápida de los pesos del modelo desde el disco a la VRAM en cada cambio de modelo. Un desarrollador en solitario puede prescindir del NAS por completo y combinar el SSD con una única unidad de respaldo externa. Elige QNAP sobre Synology solo si específicamente quieres más CPU y puertos por dólar y aceptas una configuración más compleja.',
+          '**Para un equipo pequeño que construye una biblioteca de modelos de IA local, la combinación que realiza bien ambas tareas de almacenamiento es un NAS Synology de 4 bahías para la biblioteca y un SSD NVMe Samsung 990 Pro en la máquina de inferencia.** El software DSM de Synology hace que RAID 6, las instantáneas programadas y la configuración de respaldo sean accesibles sin un especialista en almacenamiento, y una unidad de 4 bahías ofrece aproximadamente 8 TB utilizables en RAID 6 — suficiente para una biblioteca grande de modelos cuantizados. El Samsung 990 Pro se ocupa de la otra tarea: carga rápida de los pesos del modelo desde el disco a la VRAM en cada cambio de modelo. Un desarrollador en solitario puede prescindir del NAS por completo y combinar el SSD con una única unidad de respaldo externa. Elige QNAP sobre Synology solo si específicamente quieres más CPU y puertos por euro y aceptas una configuración más compleja.',
         callouts: [
           {
             type: 'note',
@@ -2776,7 +2776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Biblioteca de modelos compartida',
             'Capacidad': '~8 TB utilizables en RAID 6 (4x 4 TB)',
             'Redundancia': 'RAID 6 — sobrevive a 2 fallos de disco',
-            'Precio (julio 2026)': '~$450-650 solo hardware',
+            'Precio (julio 2026)': '~850-1.150 € solo hardware',
             'Mejor para': 'Equipos que quieren el software más sencillo',
           },
           {
@@ -2784,7 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Biblioteca de modelos compartida',
             'Capacidad': '~8 TB utilizables en RAID 6 (4x 4 TB)',
             'Redundancia': 'RAID 6 — sobrevive a 2 fallos de disco',
-            'Precio (julio 2026)': '~$450-650 solo hardware',
+            'Precio (julio 2026)': '~700-870 € solo hardware',
             'Mejor para': 'Equipos que quieren más CPU y puertos',
           },
           {
@@ -2792,7 +2792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Carga rápida de modelos',
             'Capacidad': '1-4 TB por disco',
             'Redundancia': 'Ninguna — combina con un respaldo',
-            'Precio (julio 2026)': '~$150-250 para 2 TB',
+            'Precio (julio 2026)': '~290-340 € para 2 TB',
             'Mejor para': 'Carga más rápida, máquina única',
           },
           {
@@ -2800,7 +2800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Carga rápida de modelos',
             'Capacidad': '1-4 TB por disco',
             'Redundancia': 'Ninguna — combina con un respaldo',
-            'Precio (julio 2026)': '~$150-250 para 2 TB',
+            'Precio (julio 2026)': '~235-300 € para 2 TB',
             'Mejor para': 'Carga rápida, alternativa de valor',
           },
           {
@@ -2808,7 +2808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Respaldo sin conexión',
             'Capacidad': '2-8 TB',
             'Redundancia': 'Ninguna — es el respaldo',
-            'Precio (julio 2026)': '~$80-200',
+            'Precio (julio 2026)': '~120-200 €',
             'Mejor para': 'Desarrolladores en solitario, copia fuera del sitio',
           },
         ],
@@ -2824,7 +2824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Quiero la carga de modelos más rápida posible', 'Compra esto': 'SSD NVMe Samsung 990 Pro en la máquina GPU' },
           { 'Tu situación': 'Quiero carga rápida a un precio ligeramente menor', 'Compra esto': 'SSD NVMe WD Black SN850X' },
           { 'Tu situación': 'Mi equipo de 3-10 personas comparte una biblioteca de modelos', 'Compra esto': 'NAS Synology de 4 bahías en RAID 6' },
-          { 'Tu situación': 'Quiero más CPU y puertos por dólar y acepto una configuración más compleja', 'Compra esto': 'NAS QNAP de 4 bahías en RAID 6' },
+          { 'Tu situación': 'Quiero más CPU y puertos por euro y acepto una configuración más compleja', 'Compra esto': 'NAS QNAP de 4 bahías en RAID 6' },
           { 'Tu situación': 'Necesito el software de respaldo e instantáneas más sencillo', 'Compra esto': 'Synology — DSM es el más intuitivo' },
           { 'Tu situación': 'No estoy seguro y quiero una opción segura por defecto', 'Compra esto': 'SSD Samsung 990 Pro ahora; añade un NAS Synology cuando el equipo crezca' },
         ],
@@ -2838,7 +2838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Software:** Synology DSM es el sistema operativo NAS más accesible — la configuración de RAID, las instantáneas programadas y el respaldo en la nube son asistentes guiados, no archivos de configuración.',
           '**Capacidad:** una unidad de 4 bahías con cuatro discos de 4 TB ofrece aproximadamente 8 TB utilizables en RAID 6 — espacio para una biblioteca grande de modelos cuantizados (un modelo de 70B en Q4 pesa aproximadamente 35-42 GB).',
           '**Red:** un NAS en la misma LAN gigabit transfiere un modelo de 35 GB en aproximadamente una hora; eso es suficiente para el rol de biblioteca. El 10 GbE solo importa a partir de aproximadamente 20 usuarios.',
-          '**Precio:** aproximadamente $450-650 solo de hardware como instantánea de julio de 2026; presupuesta los discos aparte.',
+          '**Precio:** aproximadamente 850-1.150 € solo de hardware como instantánea de julio de 2026 (precios de retail en España; en Latinoamérica varían por impuestos de importación); presupuesta los discos aparte.',
           '**Por qué comprar Synology:** quieres una biblioteca compartida y respaldada con el menor esfuerzo de configuración y mantenimiento.',
           '**Por qué evitar Synology:** un desarrollador en solitario con una máquina no necesita un NAS — un SSD más una unidad externa es más barato y sencillo.',
         ],
@@ -2860,21 +2860,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qnapSection: {
         id: 'qnap',
-        title: 'NAS QNAP: más hardware por dólar',
+        title: 'NAS QNAP: más hardware por euro',
         content:
-          '**Un NAS QNAP de 4 bahías es la elección cuando quieres una CPU más potente y más conectividad por dólar que Synology, y aceptas una configuración ligeramente más compleja.** Cumple el mismo rol de biblioteca compartida — almacenamiento GGUF redundante y respaldado accesible desde varias máquinas — con más margen para servicios adicionales.',
+          '**Un NAS QNAP de 4 bahías es la elección cuando quieres una CPU más potente y más conectividad por euro que Synology, y aceptas una configuración ligeramente más compleja.** Cumple el mismo rol de biblioteca compartida — almacenamiento GGUF redundante y respaldado accesible desde varias máquinas — con más margen para servicios adicionales.',
         items: [
           '**Hardware:** los modelos QNAP suelen incluir una CPU más rápida y más puertos (incluyendo opciones de red más rápidas) a un precio similar al modelo Synology comparable.',
           '**Software:** QTS es capaz pero menos guiado que Synology DSM — espera más menús y una configuración inicial más compleja.',
           '**Capacidad:** una unidad de 4 bahías en RAID 6 con cuatro discos de 4 TB ofrece aproximadamente 8 TB utilizables — el mismo margen de biblioteca que el equivalente Synology.',
-          '**Precio:** aproximadamente $450-650 solo de hardware como instantánea de julio de 2026, discos aparte.',
-          '**Por qué comprar QNAP:** quieres más CPU y opciones de red más rápidas por dólar, y te resulta cómoda una configuración menos guiada.',
+          '**Precio:** aproximadamente 700-870 € solo de hardware como instantánea de julio de 2026 (retail en España; en Latinoamérica varían por impuestos de importación), discos aparte.',
+          '**Por qué comprar QNAP:** quieres más CPU y opciones de red más rápidas por euro, y te resulta cómoda una configuración menos guiada.',
           '**Por qué evitar QNAP:** si el equipo no tiene especialistas en almacenamiento y quiere el software más sencillo posible, Synology DSM es el camino más fácil.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Synology y QNAP cumplen el mismo rol para una biblioteca de modelos de IA local. Elige QNAP para más hardware por dólar, Synology para la curva de aprendizaje de software más suave — el resultado de almacenamiento es el mismo.',
+            text: 'Synology y QNAP cumplen el mismo rol para una biblioteca de modelos de IA local. Elige QNAP para más hardware por euro, Synology para la curva de aprendizaje de software más suave — el resultado de almacenamiento es el mismo.',
           },
         ],
         affiliateLinks: [
@@ -2896,7 +2896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** un SSD NVMe PCIe 4.0 de gama alta; la opción recomendada para la carga de modelos más rápida. Un modelo de 70B en Q4 pesa aproximadamente 35-42 GB, por lo que la velocidad de lectura se nota en cada cambio de modelo.',
           '**WD Black SN850X:** un SSD NVMe PCIe 4.0 de gama alta comparable; la alternativa de valor cuando el Samsung tiene un precio más alto en ese momento.',
           '**Capacidad:** 2 TB es el punto óptimo práctico para un conjunto de trabajo en la máquina; 4 TB si mantienes muchos modelos grandes cargados localmente en lugar de en el NAS.',
-          '**Precio:** aproximadamente $150-250 para un disco de 2 TB como instantánea de julio de 2026 — la escasez de chips de memoria elevó los precios de NAND, así que confirma antes de comprar.',
+          '**Precio:** aproximadamente 235-340 € para un disco de 2 TB como instantánea de julio de 2026 (retail en España; en Latinoamérica varían por impuestos de importación) — la escasez de chips de memoria elevó los precios de NAND, así que confirma antes de comprar.',
           '**Por qué comprar un SSD NVMe de gama alta:** el tiempo de carga del modelo se nota en cada cambio, y un SSD rápido elimina segundos de cada uno.',
           '**Por qué evitar la gama alta:** si cargas un modelo y rara vez cambias, un SSD NVMe de gama media es suficiente — la velocidad de lectura de gama alta importa más con cambios frecuentes.',
         ],
@@ -2927,11 +2927,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'Mejores NVMe para alojar modelos de IA locales 2026',
         content:
-          '**El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local necesita una velocidad de lectura secuencial de al menos 5 GB/s y al menos 2 TB de capacidad — 4 TB si alternas entre varios modelos grandes.** Un modelo de 70B en cuantización Q4 pesa aproximadamente 35-42 GB; un solo cambio de modelo lee el archivo de pesos completo desde el disco. La velocidad de lectura es el cuello de botella entre un cambio de modelo y el primer token de salida. Las opciones a continuación alcanzan todas ≥ 5 GB/s de lectura secuencial en interfaces PCIe 4.0 o PCIe 5.0 y están disponibles en configuraciones de 4 TB. Nota: las restricciones arancelarias y de suministro de 2026 han encarecido significativamente los SSD PCIe 4.0 (Samsung, WD) frente al Crucial T705 PCIe 5.0 más rápido — el disco Gen5 es la mejor relación calidad-precio a precios de julio de 2026.',
+          '**El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local necesita una velocidad de lectura secuencial de al menos 5 GB/s y al menos 2 TB de capacidad — 4 TB si alternas entre varios modelos grandes.** Un modelo de 70B en cuantización Q4 pesa aproximadamente 35-42 GB; un solo cambio de modelo lee el archivo de pesos completo desde el disco. La velocidad de lectura es el cuello de botella entre un cambio de modelo y el primer token de salida. Las opciones a continuación alcanzan todas ≥ 5 GB/s de lectura secuencial en interfaces PCIe 4.0 o PCIe 5.0 y están disponibles en configuraciones de 4 TB. Nota: en el retail español, el Crucial T705 PCIe 5.0 más rápido se sitúa en la parte baja de precios mientras que el Samsung 990 Pro es el más caro — el disco Gen5 es la mejor relación calidad-precio a precios de julio de 2026 (en Latinoamérica los precios varían por impuestos de importación).',
         items: [
-          '**Crucial T705 4TB (~304–350 $, julio 2026):** NVMe PCIe 5.0, lecturas secuenciales de hasta 14.500 MB/s. A pesar de su velocidad Gen5, es el más barato de los tres — la mejor relación calidad-precio. Solo almacena pesos del modelo; la VRAM ejecuta la inferencia una vez cargado. Requiere un slot M.2 PCIe 5.0.',
-          '**WD Black SN850X 4TB (~615–740 $, julio 2026):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.300 MB/s, garantía de 5 años. La opción intermedia — significativamente más caro que el Crucial T705 4TB debido a las restricciones de suministro de NAND PCIe 4.0 en 2026, pero bien disponible y probado.',
-          '**Samsung 990 Pro 4TB (~780–950 $, julio 2026):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.450 MB/s, garantía de 5 años con 2.400 TBW de calificación de resistencia. La opción premium — la más cara de las tres en julio de 2026 debido a aranceles y tensiones de suministro (PVP Samsung 1.099 $, calle 780–950 $). Rendimiento premium constante, pero el Crucial T705 4TB ofrece más velocidad a un precio mucho menor.',
+          '**Crucial T705 4TB (~450–560 €, julio 2026):** NVMe PCIe 5.0, lecturas secuenciales de hasta 14.500 MB/s. A pesar de su velocidad Gen5, es el más barato de los tres — la mejor relación calidad-precio. Solo almacena pesos del modelo; la VRAM ejecuta la inferencia una vez cargado. Requiere un slot M.2 PCIe 5.0.',
+          '**WD Black SN850X 4TB (~510–580 €, julio 2026):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.300 MB/s, garantía de 5 años. La opción intermedia — algo más cara que el Crucial T705 4TB en el retail español, pero bien disponible y probada.',
+          '**Samsung 990 Pro 4TB (~600–650 €, julio 2026):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.450 MB/s, garantía de 5 años con 2.400 TBW de calificación de resistencia. La opción premium — la más cara de las tres en julio de 2026 (PVP Samsung ~700 €, calle 600–650 €). Rendimiento premium constante, pero el Crucial T705 4TB ofrece más velocidad a un precio menor.',
         ],
         callouts: [
           {
@@ -2965,7 +2965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local auto-alojada necesita velocidad de lectura secuencial de al menos 5 GB/s y al menos 2-4 TB de capacidad — el Crucial T705 4TB (~304–350 $) es la mejor relación calidad-precio a velocidad Gen5, mientras que el WD Black SN850X 4TB (~615–740 $) y el Samsung 990 Pro 4TB (~780–950 $) cuestan significativamente más debido a las restricciones de suministro de 2026.',
+            text: 'El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local auto-alojada necesita velocidad de lectura secuencial de al menos 5 GB/s y al menos 2-4 TB de capacidad — el Crucial T705 4TB (~450–560 €) es la mejor relación calidad-precio a velocidad Gen5, mientras que el WD Black SN850X 4TB (~510–580 €) y el Samsung 990 Pro 4TB (~600–650 €) cuestan algo más en julio de 2026 (retail en España; en Latinoamérica varían por impuestos de importación).',
           },
           {
             type: 'plain-terms',
@@ -3003,7 +3003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cuatro preguntas, en orden, guían a la mayoría de los compradores hacia el almacenamiento correcto.**',
         items: [
           '**1. ¿Varias máquinas o personas comparten la biblioteca de modelos?** No: un SSD rápido más una unidad de respaldo externa es suficiente. Sí: necesitas un NAS — continúa.',
-          '**2. ¿Synology o QNAP?** Software más sencillo para un equipo sin especialistas: Synology. Más CPU y puertos por dólar: QNAP.',
+          '**2. ¿Synology o QNAP?** Software más sencillo para un equipo sin especialistas: Synology. Más CPU y puertos por euro: QNAP.',
           '**3. ¿Qué SSD para la máquina de inferencia?** Carga más rápida: Samsung 990 Pro. La misma categoría a menor precio cuando hay descuento: WD Black SN850X.',
           '**4. ¿Tiene el NAS respaldo fuera del sitio?** Si no, añade la tercera copia — RAID 6 no es un respaldo; aplica la regla 3-2-1 antes de entrar en producción.',
         ],
@@ -3105,7 +3105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Synology o QNAP para una biblioteca de modelos de IA local?',
-            a: 'Ambos cumplen el mismo rol de biblioteca compartida. Elige Synology si quieres el software más sencillo — su sistema operativo DSM hace que RAID 6, las instantáneas y el respaldo sean accesibles con clics, lo que se adapta a un equipo sin especialistas en almacenamiento. Elige QNAP si quieres una CPU más potente y más puertos por dólar y aceptas una configuración más compleja. El resultado de almacenamiento es idéntico.',
+            a: 'Ambos cumplen el mismo rol de biblioteca compartida. Elige Synology si quieres el software más sencillo — su sistema operativo DSM hace que RAID 6, las instantáneas y el respaldo sean accesibles con clics, lo que se adapta a un equipo sin especialistas en almacenamiento. Elige QNAP si quieres una CPU más potente y más puertos por euro y aceptas una configuración más compleja. El resultado de almacenamiento es idéntico.',
           },
           {
             q: '¿Qué SSD es más rápido para cargar LLMs locales?',
@@ -3199,11 +3199,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Qual NAS e armazenamento eu devo comprar para modelos de IA local em 2026?',
         answer:
-          'Divida o orçamento por tarefa. Para carregar modelos rapidamente no momento da inferência, compre um SSD NVMe de ponta — o Samsung 990 Pro ou o WD Black SN850X. Para a biblioteca de modelos que várias máquinas compartilham e que precisa de backup, compre um NAS de 4 baias — Synology para o software mais simples, QNAP para mais hardware por dólar — e execute-o em RAID 6. Um desenvolvedor solo pode dispensar o NAS e usar um SSD mais uma unidade de backup externa.',
+          'Divida o orçamento por tarefa. Para carregar modelos rapidamente no momento da inferência, compre um SSD NVMe de ponta — o Samsung 990 Pro ou o WD Black SN850X. Para a biblioteca de modelos que várias máquinas compartilham e que precisa de backup, compre um NAS de 4 baias — Synology para o software mais simples, QNAP para mais hardware por real — e execute-o em RAID 6. Um desenvolvedor solo pode dispensar o NAS e usar um SSD mais uma unidade de backup externa.',
         bullets: [
           'Carregamento rápido: SSD NVMe Samsung 990 Pro ou WD Black SN850X, na máquina de inferência',
           'Biblioteca compartilhada: NAS Synology de 4 baias — software mais simples, ideal para times sem especialistas',
-          'Mais hardware por dólar: NAS QNAP de 4 baias — CPU mais potente e mais portas a preço similar',
+          'Mais hardware por real: NAS QNAP de 4 baias — CPU mais potente e mais portas a preço similar',
           'Execute o NAS em RAID 6: sobrevive a duas falhas de disco simultâneas',
           'Os preços dos SSDs subiram com a escassez de memória de 2026 — trate cada preço como um instantâneo de julho de 2026',
         ],
@@ -3236,7 +3236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Um NAS não executa inferência.** Nunca carregue modelos para inferência através da rede — é lento demais. O NAS guarda a biblioteca; o SSD da máquina GPU realiza o carregamento. Mantenha esses papéis separados.',
           '**Escolha para carregamento rápido: Samsung 990 Pro ou WD Black SN850X.** Um SSD NVMe PCIe 4.0 de ponta encurta a espera quando um modelo é carregado do disco para a VRAM. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de carregamento se nota em cada troca de modelo.',
           '**Escolha para biblioteca compartilhada (mais simples): NAS Synology de 4 baias.** O software DSM da Synology é o mais acessível para times sem especialistas — os backups, os snapshots e o gerenciamento de usuários são feitos com cliques.',
-          '**Escolha para biblioteca compartilhada (mais hardware por dólar): NAS QNAP de 4 baias.** A QNAP costuma oferecer uma CPU mais potente e mais portas a um preço similar, ao custo de uma curva de aprendizado ligeiramente mais acentuada.',
+          '**Escolha para biblioteca compartilhada (mais hardware por real): NAS QNAP de 4 baias.** A QNAP costuma oferecer uma CPU mais potente e mais portas a um preço similar, ao custo de uma curva de aprendizado ligeiramente mais acentuada.',
           '**Execute o NAS em RAID 6.** O RAID 6 sobrevive a duas falhas de disco simultâneas e é o padrão em produção; o RAID 5 com discos grandes arrisca uma segunda falha durante a reconstrução de 24-48 horas.',
           '**RAID não é um backup.** O RAID protege contra falha de disco, não contra ransomware, roubo ou exclusão. Siga a regra 3-2-1: 3 cópias, 2 tipos de mídia, 1 fora do local.',
           '**Os preços subiram em 2026.** A escassez de chips de memória elevou os preços de NAND e SSD. Trate cada preço aqui como um instantâneo de julho de 2026 e verifique novamente antes de comprar.',
@@ -3260,7 +3260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Escolha do editor: NAS Synology de 4 baias + SSD Samsung 990 Pro',
         sponsoredSlot: true,
         content:
-          '**Para um time pequeno que constrói uma biblioteca de modelos de IA local, a combinação que realiza bem ambas as tarefas de armazenamento é um NAS Synology de 4 baias para a biblioteca e um SSD NVMe Samsung 990 Pro na máquina de inferência.** O software DSM da Synology faz com que RAID 6, os snapshots programados e a configuração de backup sejam acessíveis sem um especialista em armazenamento, e uma unidade de 4 baias oferece aproximadamente 8 TB utilizáveis em RAID 6 — suficiente para uma biblioteca grande de modelos quantizados. O Samsung 990 Pro cuida da outra tarefa: carregamento rápido dos pesos do modelo do disco para a VRAM em cada troca de modelo. Um desenvolvedor solo pode dispensar o NAS completamente e combinar o SSD com uma única unidade de backup externa. Escolha a QNAP em vez da Synology só se você especificamente quer mais CPU e portas por dólar e aceita uma configuração mais complexa.',
+          '**Para um time pequeno que constrói uma biblioteca de modelos de IA local, a combinação que realiza bem ambas as tarefas de armazenamento é um NAS Synology de 4 baias para a biblioteca e um SSD NVMe Samsung 990 Pro na máquina de inferência.** O software DSM da Synology faz com que RAID 6, os snapshots programados e a configuração de backup sejam acessíveis sem um especialista em armazenamento, e uma unidade de 4 baias oferece aproximadamente 8 TB utilizáveis em RAID 6 — suficiente para uma biblioteca grande de modelos quantizados. O Samsung 990 Pro cuida da outra tarefa: carregamento rápido dos pesos do modelo do disco para a VRAM em cada troca de modelo. Um desenvolvedor solo pode dispensar o NAS completamente e combinar o SSD com uma única unidade de backup externa. Escolha a QNAP em vez da Synology só se você especificamente quer mais CPU e portas por real e aceita uma configuração mais complexa.',
         callouts: [
           {
             type: 'note',
@@ -3306,7 +3306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Biblioteca de modelos compartilhada',
             'Capacidade': '~8 TB utilizáveis em RAID 6 (4x 4 TB)',
             'Redundância': 'RAID 6 — sobrevive a 2 falhas de disco',
-            'Preço (julho 2026)': '~$450-650 só hardware',
+            'Preço (julho 2026)': '~R$ 6.500-8.500 só hardware',
             'Melhor para': 'Times que querem o software mais simples',
           },
           {
@@ -3314,7 +3314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Biblioteca de modelos compartilhada',
             'Capacidade': '~8 TB utilizáveis em RAID 6 (4x 4 TB)',
             'Redundância': 'RAID 6 — sobrevive a 2 falhas de disco',
-            'Preço (julho 2026)': '~$450-650 só hardware',
+            'Preço (julho 2026)': '~R$ 5.500-7.500 só hardware',
             'Melhor para': 'Times que querem mais CPU e portas',
           },
           {
@@ -3322,7 +3322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Carregamento rápido de modelos',
             'Capacidade': '1-4 TB por disco',
             'Redundância': 'Nenhuma — combine com um backup',
-            'Preço (julho 2026)': '~$150-250 para 2 TB',
+            'Preço (julho 2026)': '~R$ 3.400-4.000 para 2 TB',
             'Melhor para': 'Carregamento mais rápido, máquina única',
           },
           {
@@ -3330,7 +3330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Carregamento rápido de modelos',
             'Capacidade': '1-4 TB por disco',
             'Redundância': 'Nenhuma — combine com um backup',
-            'Preço (julho 2026)': '~$150-250 para 2 TB',
+            'Preço (julho 2026)': '~R$ 2.900-3.500 para 2 TB',
             'Melhor para': 'Carregamento rápido, alternativa de valor',
           },
           {
@@ -3338,7 +3338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Backup sem conexão',
             'Capacidade': '2-8 TB',
             'Redundância': 'Nenhuma — é o backup',
-            'Preço (julho 2026)': '~$80-200',
+            'Preço (julho 2026)': '~R$ 700-1.600',
             'Melhor para': 'Desenvolvedores solo, cópia fora do local',
           },
         ],
@@ -3354,7 +3354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Quero o carregamento de modelos mais rápido possível', 'Compre isto': 'SSD NVMe Samsung 990 Pro na máquina GPU' },
           { 'Sua situação': 'Quero carregamento rápido a um preço ligeiramente menor', 'Compre isto': 'SSD NVMe WD Black SN850X' },
           { 'Sua situação': 'Meu time de 3-10 pessoas compartilha uma biblioteca de modelos', 'Compre isto': 'NAS Synology de 4 baias em RAID 6' },
-          { 'Sua situação': 'Quero mais CPU e portas por dólar e aceito uma configuração mais complexa', 'Compre isto': 'NAS QNAP de 4 baias em RAID 6' },
+          { 'Sua situação': 'Quero mais CPU e portas por real e aceito uma configuração mais complexa', 'Compre isto': 'NAS QNAP de 4 baias em RAID 6' },
           { 'Sua situação': 'Preciso do software de backup e snapshots mais simples', 'Compre isto': 'Synology — o DSM é o mais intuitivo' },
           { 'Sua situação': 'Não tenho certeza e quero uma opção segura por padrão', 'Compre isto': 'SSD Samsung 990 Pro agora; adicione um NAS Synology quando o time crescer' },
         ],
@@ -3368,7 +3368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Software:** o Synology DSM é o sistema operacional NAS mais acessível — a configuração de RAID, os snapshots programados e o backup na nuvem são assistentes guiados, não arquivos de configuração.',
           '**Capacidade:** uma unidade de 4 baias com quatro discos de 4 TB oferece aproximadamente 8 TB utilizáveis em RAID 6 — espaço para uma biblioteca grande de modelos quantizados (um modelo de 70B em Q4 pesa aproximadamente 35-42 GB).',
           '**Rede:** um NAS na mesma LAN gigabit transfere um modelo de 35 GB em aproximadamente uma hora; isso é suficiente para o papel de biblioteca. O 10 GbE só importa a partir de aproximadamente 20 usuários.',
-          '**Preço:** aproximadamente $450-650 só de hardware como instantâneo de julho de 2026; orce os discos à parte.',
+          '**Preço:** aproximadamente R$ 6.500-8.500 só de hardware como instantâneo de julho de 2026 (varejo brasileiro já com impostos de importação; o preço em dólar dos EUA é bem menor, mas a importação individual acrescenta imposto e frete); orce os discos à parte.',
           '**Por que comprar a Synology:** você quer uma biblioteca compartilhada e com backup com o menor esforço de configuração e manutenção.',
           '**Por que evitar a Synology:** um desenvolvedor solo com uma máquina não precisa de um NAS — um SSD mais uma unidade externa é mais barato e simples.',
         ],
@@ -3390,21 +3390,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qnapSection: {
         id: 'qnap',
-        title: 'NAS QNAP: mais hardware por dólar',
+        title: 'NAS QNAP: mais hardware por real',
         content:
-          '**Um NAS QNAP de 4 baias é a escolha quando você quer uma CPU mais potente e mais conectividade por dólar que a Synology, e aceita uma configuração ligeiramente mais complexa.** Ele cumpre o mesmo papel de biblioteca compartilhada — armazenamento GGUF redundante e com backup acessível por várias máquinas — com mais margem para serviços adicionais.',
+          '**Um NAS QNAP de 4 baias é a escolha quando você quer uma CPU mais potente e mais conectividade por real que a Synology, e aceita uma configuração ligeiramente mais complexa.** Ele cumpre o mesmo papel de biblioteca compartilhada — armazenamento GGUF redundante e com backup acessível por várias máquinas — com mais margem para serviços adicionais.',
         items: [
           '**Hardware:** os modelos QNAP costumam incluir uma CPU mais rápida e mais portas (incluindo opções de rede mais rápidas) a um preço similar ao modelo Synology comparável.',
           '**Software:** o QTS é capaz mas menos guiado que o Synology DSM — espere mais menus e uma configuração inicial mais complexa.',
           '**Capacidade:** uma unidade de 4 baias em RAID 6 com quatro discos de 4 TB oferece aproximadamente 8 TB utilizáveis — a mesma margem de biblioteca que o equivalente Synology.',
-          '**Preço:** aproximadamente $450-650 só de hardware como instantâneo de julho de 2026, discos à parte.',
-          '**Por que comprar a QNAP:** você quer mais CPU e opções de rede mais rápidas por dólar, e se sente confortável com uma configuração menos guiada.',
+          '**Preço:** aproximadamente R$ 5.500-7.500 só de hardware como instantâneo de julho de 2026 (varejo brasileiro com impostos de importação inclusos), discos à parte.',
+          '**Por que comprar a QNAP:** você quer mais CPU e opções de rede mais rápidas por real, e se sente confortável com uma configuração menos guiada.',
           '**Por que evitar a QNAP:** se o time não tem especialistas em armazenamento e quer o software mais simples possível, o Synology DSM é o caminho mais fácil.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Synology e QNAP cumprem o mesmo papel para uma biblioteca de modelos de IA local. Escolha a QNAP para mais hardware por dólar, a Synology para a curva de aprendizado de software mais suave — o resultado de armazenamento é o mesmo.',
+            text: 'Synology e QNAP cumprem o mesmo papel para uma biblioteca de modelos de IA local. Escolha a QNAP para mais hardware por real, a Synology para a curva de aprendizado de software mais suave — o resultado de armazenamento é o mesmo.',
           },
         ],
         affiliateLinks: [
@@ -3426,7 +3426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** um SSD NVMe PCIe 4.0 de ponta; a opção recomendada para o carregamento de modelos mais rápido. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo.',
           '**WD Black SN850X:** um SSD NVMe PCIe 4.0 de ponta comparável; a alternativa de valor quando o Samsung tem um preço mais alto no momento.',
           '**Capacidade:** 2 TB é o ponto ideal prático para um conjunto de trabalho na máquina; 4 TB se você mantém muitos modelos grandes carregados localmente em vez de no NAS.',
-          '**Preço:** aproximadamente $150-250 para um disco de 2 TB como instantâneo de julho de 2026 — a escassez de chips de memória elevou os preços de NAND, então confirme antes de comprar.',
+          '**Preço:** aproximadamente R$ 2.900-4.000 para um disco de 2 TB como instantâneo de julho de 2026 (varejo brasileiro com impostos de importação) — a escassez de chips de memória elevou os preços de NAND, então confirme antes de comprar.',
           '**Por que comprar um SSD NVMe de ponta:** o tempo de carregamento do modelo se nota em cada troca, e um SSD rápido elimina segundos de cada uma.',
           '**Por que evitar o topo de linha:** se você carrega um modelo e raramente troca, um SSD NVMe intermediário é suficiente — a velocidade de leitura de topo de linha importa mais com trocas frequentes.',
         ],
@@ -3457,11 +3457,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'Melhores NVMe para hospedar modelos de IA locais 2026',
         content:
-          '**O melhor SSD NVMe interno para uma carga de trabalho de inferência de IA local precisa de velocidade de leitura sequencial de pelo menos 5 GB/s e pelo menos 2 TB de capacidade — 4 TB se você alterna entre vários modelos grandes.** Um modelo de 70B em quantização Q4 pesa aproximadamente 35-42 GB; uma única troca de modelo lê o arquivo de pesos inteiro do disco. A velocidade de leitura é o gargalo entre uma troca de modelo e o primeiro token de saída. As opções abaixo atingem todas ≥ 5 GB/s de leitura sequencial em interfaces PCIe 4.0 ou PCIe 5.0 e estão disponíveis em configurações de 4 TB. Nota: restrições tarifárias e de fornecimento em 2026 tornaram os SSDs PCIe 4.0 (Samsung, WD) significativamente mais caros do que o Crucial T705 PCIe 5.0 mais rápido — o disco Gen5 é a melhor relação custo-benefício nos preços de julho de 2026.',
+          '**O melhor SSD NVMe interno para uma carga de trabalho de inferência de IA local precisa de velocidade de leitura sequencial de pelo menos 5 GB/s e pelo menos 2 TB de capacidade — 4 TB se você alterna entre vários modelos grandes.** Um modelo de 70B em quantização Q4 pesa aproximadamente 35-42 GB; uma única troca de modelo lê o arquivo de pesos inteiro do disco. A velocidade de leitura é o gargalo entre uma troca de modelo e o primeiro token de saída. As opções abaixo atingem todas ≥ 5 GB/s de leitura sequencial em interfaces PCIe 4.0 ou PCIe 5.0 e estão disponíveis em configurações de 4 TB. Nota: no varejo brasileiro (com impostos de importação embutidos), o Crucial T705 PCIe 5.0 mais rápido fica na faixa mais baixa de preço, enquanto o Samsung 990 Pro é o mais caro — o disco Gen5 é a melhor relação custo-benefício nos preços de julho de 2026.',
         items: [
-          '**Crucial T705 4TB (~$304–$350, julho 2026):** NVMe PCIe 5.0, leituras sequenciais de até 14.500 MB/s. Apesar da velocidade Gen5, é o mais barato dos três — a melhor relação custo-benefício. Armazena apenas pesos do modelo; a VRAM executa a inferência após o carregamento. Requer slot M.2 PCIe 5.0.',
-          '**WD Black SN850X 4TB (~$615–$740, julho 2026):** NVMe PCIe 4.0, leituras sequenciais de até 7.300 MB/s, garantia de 5 anos. A opção intermediária — significativamente mais caro que o Crucial T705 4TB devido às restrições de fornecimento de NAND PCIe 4.0 em 2026, mas bem disponível e comprovado.',
-          '**Samsung 990 Pro 4TB (~$780–$950, julho 2026):** NVMe PCIe 4.0, leituras sequenciais de até 7.450 MB/s, garantia de 5 anos com classificação de resistência de 2.400 TBW. A opção premium — a mais cara das três em julho de 2026 devido a tarifas e tensões de fornecimento (PVP Samsung $1.099, rua $780–$950). Desempenho premium consistente, mas o Crucial T705 4TB oferece mais velocidade a um preço muito menor.',
+          '**Crucial T705 4TB (~R$ 3.800-4.500, julho 2026):** NVMe PCIe 5.0, leituras sequenciais de até 14.500 MB/s. Apesar da velocidade Gen5, é o mais barato dos três — a melhor relação custo-benefício. Disponibilidade limitada no varejo nacional; a maior parte chega via importação, o que acrescenta imposto e frete — confirme o preço final. Armazena apenas pesos do modelo; a VRAM executa a inferência após o carregamento. Requer slot M.2 PCIe 5.0.',
+          '**WD Black SN850X 4TB (~R$ 5.500-5.900, julho 2026):** NVMe PCIe 4.0, leituras sequenciais de até 7.300 MB/s, garantia de 5 anos. A opção intermediária — mais caro que o Crucial T705 4TB no varejo brasileiro, mas bem disponível e comprovado.',
+          '**Samsung 990 Pro 4TB (~R$ 6.400-7.000, julho 2026):** NVMe PCIe 4.0, leituras sequenciais de até 7.450 MB/s, garantia de 5 anos com classificação de resistência de 2.400 TBW. A opção premium — a mais cara das três em julho de 2026 (varejo brasileiro com impostos de importação; PVP à vista no PIX cerca de R$ 6.439). Desempenho premium consistente, mas o Crucial T705 4TB oferece mais velocidade a um preço menor.',
         ],
         callouts: [
           {
@@ -3495,7 +3495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O melhor SSD NVMe interno para uma carga de trabalho de inferência de IA local auto-hospedada precisa de velocidade de leitura sequencial ≥ 5 GB/s e pelo menos 2-4 TB de capacidade — o Crucial T705 4TB (~$304–$350) é a melhor relação custo-benefício em velocidade Gen5, enquanto o WD Black SN850X 4TB (~$615–$740) e o Samsung 990 Pro 4TB (~$780–$950) custam significativamente mais devido às restrições de fornecimento de 2026.',
+            text: 'O melhor SSD NVMe interno para uma carga de trabalho de inferência de IA local auto-hospedada precisa de velocidade de leitura sequencial ≥ 5 GB/s e pelo menos 2-4 TB de capacidade — o Crucial T705 4TB (~R$ 3.800-4.500) é a melhor relação custo-benefício em velocidade Gen5, enquanto o WD Black SN850X 4TB (~R$ 5.500-5.900) e o Samsung 990 Pro 4TB (~R$ 6.400-7.000) custam mais no varejo brasileiro (preços já com impostos de importação).',
           },
           {
             type: 'plain-terms',
@@ -3533,7 +3533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Quatro perguntas, em ordem, guiam a maioria dos compradores para o armazenamento correto.**',
         items: [
           '**1. Várias máquinas ou pessoas compartilham a biblioteca de modelos?** Não: um SSD rápido mais uma unidade de backup externa é suficiente. Sim: você precisa de um NAS — continue.',
-          '**2. Synology ou QNAP?** Software mais simples para um time sem especialistas: Synology. Mais CPU e portas por dólar: QNAP.',
+          '**2. Synology ou QNAP?** Software mais simples para um time sem especialistas: Synology. Mais CPU e portas por real: QNAP.',
           '**3. Qual SSD para a máquina de inferência?** Carregamento mais rápido: Samsung 990 Pro. A mesma categoria a um preço menor quando há desconto: WD Black SN850X.',
           '**4. O NAS tem backup fora do local?** Se não, adicione a terceira cópia — o RAID 6 não é um backup; aplique a regra 3-2-1 antes de entrar em produção.',
         ],
@@ -3635,7 +3635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Synology ou QNAP para uma biblioteca de modelos de IA local?',
-            a: 'Ambos cumprem o mesmo papel de biblioteca compartilhada. Escolha a Synology se você quer o software mais simples — o seu sistema operacional DSM faz com que RAID 6, os snapshots e o backup sejam acessíveis com cliques, o que se adapta a um time sem especialistas em armazenamento. Escolha a QNAP se você quer uma CPU mais potente e mais portas por dólar e aceita uma configuração mais complexa. O resultado de armazenamento é idêntico.',
+            a: 'Ambos cumprem o mesmo papel de biblioteca compartilhada. Escolha a Synology se você quer o software mais simples — o seu sistema operacional DSM faz com que RAID 6, os snapshots e o backup sejam acessíveis com cliques, o que se adapta a um time sem especialistas em armazenamento. Escolha a QNAP se você quer uma CPU mais potente e mais portas por real e aceita uma configuração mais complexa. O resultado de armazenamento é idêntico.',
           },
           {
             q: 'Qual SSD é mais rápido para carregar LLMs locais?',
