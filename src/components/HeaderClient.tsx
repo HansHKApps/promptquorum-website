@@ -120,6 +120,18 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ko: '스마트 홈',
     ar: 'المنزل الذكي',
   },
+  balconySolar: {
+    // Labels match the primary term used in each locale's cluster articles.
+    en: 'Balcony Solar',
+    de: 'Balkonkraftwerk',
+    fr: 'Solaire balcon',
+    ja: 'ベランダ太陽光',
+    zh: '阳台光伏',
+    es: 'Solar de balcón',
+    pt: 'Solar de varanda',
+    ko: '베란다 태양광',
+    ar: 'طاقة شمسية للشرفة',
+  },
   waitlist: {
     en: 'Waitlist',
     de: 'Warteliste',
@@ -166,6 +178,10 @@ function smartHomeHref(lang: string) {
   return lang === 'en' ? '/smart-home' : `/${lang}/smart-home`
 }
 
+function balconySolarHref(lang: string) {
+  return lang === 'en' ? '/balcony-solar' : `/${lang}/balcony-solar`
+}
+
 function HeaderInner() {
   const { openWaitlist } = useWaitlist()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -203,6 +219,7 @@ function HeaderInner() {
           <Link href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
           <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
           <Link href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
+          <Link href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -319,6 +336,13 @@ function HeaderInner() {
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('smartHome', lang)}
+        </Link>
+        <Link
+          href={balconySolarHref(lang)}
+          className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {t('balconySolar', lang)}
         </Link>
         <a
           href="#waitlist"

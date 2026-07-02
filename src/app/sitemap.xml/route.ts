@@ -11,6 +11,7 @@ import { PROMPT_BITES_PUBLISHED_SLUGS, PROMPT_BITES_HUB_PUBLISHED } from '@/lib/
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { SMART_HOME_PUBLISHED_SLUGS, SMART_HOME_HUB_PUBLISHED } from '@/lib/smart-home/published'
+import { BALCONY_SOLAR_PUBLISHED_SLUGS, BALCONY_SOLAR_HUB_PUBLISHED } from '@/lib/balcony-solar/published'
 
 export const dynamic = 'force-static'
 
@@ -28,6 +29,7 @@ const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
   '/prompt-bites',
   '/smart-home', // Smart Home cluster: noindex + sitemap-excluded until launch (Phase 3 flip)
+  '/balcony-solar', // Balcony Solar cluster: gated by BALCONY_SOLAR_PUBLISHED_SLUGS; bypass below
 ]
 
 function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
@@ -253,6 +255,18 @@ const SMART_HOME_PAGES: Page[] = [
   })),
 ]
 
+const BALCONY_SOLAR_PAGES: Page[] = [
+  ...(BALCONY_SOLAR_HUB_PUBLISHED
+    ? [{ path: '/balcony-solar', priority: 0.9, changefreq: 'weekly' as const, lastmod: '2026-07-02' }]
+    : []),
+  ...Array.from(BALCONY_SOLAR_PUBLISHED_SLUGS).map(slug => ({
+    path: `/balcony-solar/${slug}`,
+    priority: 0.8,
+    changefreq: 'monthly' as const,
+    lastmod: '2026-07-02',
+  })),
+]
+
 const PAGES: Page[] = [
   ...STATIC_PAGES,
   ...PE_PAGES,
@@ -262,6 +276,7 @@ const PAGES: Page[] = [
   ...POWER_LOCAL_LLM_PAGES,
   ...PROMPT_BITES_PAGES,
   ...SMART_HOME_PAGES,
+  ...BALCONY_SOLAR_PAGES,
 ]
 
 const POWER_LLM_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
@@ -279,10 +294,16 @@ const SMART_HOME_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
   ...Array.from(SMART_HOME_PUBLISHED_SLUGS).map(slug => `/smart-home/${slug}`),
 ])
 
+const BALCONY_SOLAR_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
+  ...(BALCONY_SOLAR_HUB_PUBLISHED ? ['/balcony-solar'] : []),
+  ...Array.from(BALCONY_SOLAR_PUBLISHED_SLUGS).map(slug => `/balcony-solar/${slug}`),
+])
+
 function isExcluded(path: string): boolean {
   if (POWER_LLM_PUBLISHED_PATHS.has(path)) return false
   if (PROMPT_BITES_PUBLISHED_PATHS.has(path)) return false
   if (SMART_HOME_PUBLISHED_PATHS.has(path)) return false
+  if (BALCONY_SOLAR_PUBLISHED_PATHS.has(path)) return false
   return EXCLUDED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
 }
 
