@@ -8,22 +8,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Overview & Reference',
     title: 'Best Workstation Build for Local AI (2026): Three Budget Tiers',
     seoTitle: 'Best Workstation Build for Local AI 2026 (3 Tiers)',
-    metaDescription: 'Complete parts list for three local AI workstation builds in 2026: $1200 budget, $2500 recommended, $5000 professional. Run 7B–70B models at home.',
+    metaDescription: 'Complete parts list for three local AI workstation builds in 2026: ~$1500 budget, ~$4000 recommended, ~$5000 professional. Run 7B–70B models at home. Prices updated July 2026.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**The best local AI workstation in 2026 for most users is a $2500 build: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. It runs 7B models at 100–120 tok/s, 14B at Q8 without offloading, and 30B Q4 at 25–35 tok/s — covering 95% of real-world local LLM use cases.**',
+    leadAnswerBlock: '**The best local AI workstation in 2026 for most users is a ~$4000 build: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. It runs 7B models at 100–120 tok/s, 14B at Q8 without offloading, and 30B Q4 at 25–35 tok/s — covering 95% of real-world local LLM use cases. Note: RTX 4090 prices have risen to ~$2,500 as of mid-2026 due to end-of-life stock constraints.**',
     quickAnswerTop: {
       question: 'What is the best PC build for running AI models locally in 2026?',
-      answer: 'For most users: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000 at ~$2500. For a 70B model workstation: dual RTX 3090 (48 GB VRAM total) at ~$3500. Budget entry: used RTX 3090 + Ryzen 7 7700X at ~$1200.',
+      answer: 'For most users: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5-6000 at ~$4000. For a 70B model workstation: dual RTX 3090 (48 GB VRAM total) at ~$5000. Budget entry: used RTX 3090 + Ryzen 7 7700X at ~$1500.',
       bullets: [
-        '$1200 budget: used RTX 3090 (24 GB) + Ryzen 7 7700X + 64 GB DDR4 — runs 30B Q4',
-        '$2500 recommended: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — runs 30B Q4 at 25–35 tok/s',
-        '$5000 professional: dual RTX 3090 (48 GB) or RTX 4090 + Threadripper — runs 70B Q4 natively',
+        '~$1500 budget: used RTX 3090 (24 GB) + Ryzen 7 7700X + 64 GB DDR4 — runs 30B Q4',
+        '~$4000 recommended: RTX 4090 (24 GB) + Ryzen 9 9950X + 64 GB DDR5 — runs 30B Q4 at 25–35 tok/s',
+        '~$5000 professional: dual RTX 3090 (48 GB) or RTX 4090 + Threadripper — runs 70B Q4 natively',
         'All builds handle 7B and 14B models with ease; 70B needs dual GPU or CPU offloading',
         'PCIe Gen 5 NVMe recommended for fast model loading (>10 GB/s)',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'The $1200 budget build uses a used RTX 3090 (24 GB VRAM) as the core. It runs Llama 3.3 8B Q8 at 45–60 tok/s, Qwen3 14B Q8 at 20–28 tok/s, and Qwen3 32B Q4 at 12–18 tok/s entirely on GPU. The RTX 3090 draws 350 W — pair with a quality 850 W PSU.',
         columns: ['Component', 'Model', 'Price (May 2026)'],
         rows: [
-          { 'Component': 'GPU', 'Model': 'NVIDIA RTX 3090 (used, 24 GB)', 'Price (May 2026)': '~$440' },
+          { 'Component': 'GPU', 'Model': 'NVIDIA RTX 3090 (used, 24 GB)', 'Price (May 2026)': '~$750' },
           { 'Component': 'CPU', 'Model': 'AMD Ryzen 7 7700X', 'Price (May 2026)': '~$180' },
           { 'Component': 'Motherboard', 'Model': 'MSI MAG X670E Tomahawk WiFi', 'Price (May 2026)': '~$170' },
           { 'Component': 'RAM', 'Model': '64 GB DDR5-5600 (2×32 GB)', 'Price (May 2026)': '~$110' },
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Component': 'PSU', 'Model': '850 W Gold rated', 'Price (May 2026)': '~$90' },
           { 'Component': 'Case', 'Model': 'Mid-tower ATX, 3+ fan slots', 'Price (May 2026)': '~$70' },
           { 'Component': 'CPU Cooler', 'Model': '240mm AIO or Tower', 'Price (May 2026)': '~$60' },
-          { 'Component': 'Total', 'Model': '', 'Price (May 2026)': '~$1,210' },
+          { 'Component': 'Total', 'Model': '', 'Price (May 2026)': '~$1,520' },
         ],
         affiliateLinks: [
           { label: 'Used RTX 3090 on eBay', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'GPU' },
@@ -68,15 +68,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'The $2500 recommended build centers on the RTX 4090 (24 GB, ~1 TB/s memory bandwidth) paired with the AMD Ryzen 9 9950X (Zen 5, 16 cores). The 4090 is 30–40% faster than the 3090 per GB of VRAM and draws less power per token. This build handles 30B Q4 models fully on GPU and 70B models via CPU offloading at 10–15 tok/s with 64 GB RAM.',
         columns: ['Component', 'Model', 'Price (May 2026)'],
         rows: [
-          { 'Component': 'GPU', 'Model': 'NVIDIA GeForce RTX 4090 24 GB', 'Price (May 2026)': '~$1,650' },
-          { 'Component': 'CPU', 'Model': 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', 'Price (May 2026)': '~$420' },
+          { 'Component': 'GPU', 'Model': 'NVIDIA GeForce RTX 4090 24 GB', 'Price (May 2026)': '~$2,500' },
+          { 'Component': 'CPU', 'Model': 'AMD Ryzen 9 9950X (16C/32T, Zen 5)', 'Price (May 2026)': '~$580' },
           { 'Component': 'Motherboard', 'Model': 'ASUS ProArt X870E-Creator WiFi', 'Price (May 2026)': '~$350' },
           { 'Component': 'RAM', 'Model': '64 GB DDR5-6000 CL30 (2×32 GB)', 'Price (May 2026)': '~$145' },
           { 'Component': 'Storage', 'Model': '4 TB PCIe Gen 5 NVMe', 'Price (May 2026)': '~$200' },
           { 'Component': 'PSU', 'Model': '1000 W Platinum rated', 'Price (May 2026)': '~$150' },
           { 'Component': 'Case', 'Model': 'Full-tower ATX with strong airflow', 'Price (May 2026)': '~$120' },
           { 'Component': 'CPU Cooler', 'Model': '360mm AIO', 'Price (May 2026)': '~$90' },
-          { 'Component': 'Total', 'Model': '', 'Price (May 2026)': '~$3,125' },
+          { 'Component': 'Total', 'Model': '', 'Price (May 2026)': '~$4,135' },
         ],
         affiliateLinks: [
           { label: 'RTX 4090 on Amazon', url: 'https://www.amazon.com/s?k=RTX+4090', productName: 'NVIDIA RTX 4090', productCategory: 'GPU' },
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'The $5000 professional build targets 70B model inference at GPU speed (25–40 tok/s) using dual RTX 3090 GPUs for 48 GB total VRAM. The Ryzen Threadripper 7960X (24 cores, high memory bandwidth) accelerates CPU offloading for models that spill over 48 GB. With 256 GB DDR5, even 140B quantized models load entirely in RAM.',
         columns: ['Component', 'Model', 'Price (May 2026)'],
         rows: [
-          { 'Component': 'GPU ×2', 'Model': '2× NVIDIA RTX 3090 24 GB (used)', 'Price (May 2026)': '~$880' },
+          { 'Component': 'GPU ×2', 'Model': '2× NVIDIA RTX 3090 24 GB (used)', 'Price (May 2026)': '~$1,500' },
           { 'Component': 'CPU', 'Model': 'AMD Ryzen Threadripper 7960X (24C)', 'Price (May 2026)': '~$1,300' },
           { 'Component': 'Motherboard', 'Model': 'ASUS Pro WS TRX50-SAGE WiFi', 'Price (May 2026)': '~$650' },
           { 'Component': 'RAM', 'Model': '256 GB DDR5-5200 ECC (8×32 GB)', 'Price (May 2026)': '~$650' },
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Component': 'Case', 'Model': 'Full-tower HEDT ATX', 'Price (May 2026)': '~$180' },
           { 'Component': 'CPU Cooler', 'Model': '360mm AIO + extra case fans', 'Price (May 2026)': '~$120' },
           { 'Component': 'GPU Bridges/Cables', 'Model': 'NVLink not required (Ollama uses both)', 'Price (May 2026)': '~$0' },
-          { 'Component': 'Total', 'Model': '', 'Price (May 2026)': '~$4,420' },
+          { 'Component': 'Total', 'Model': '', 'Price (May 2026)': '~$5,040' },
         ],
         affiliateLinks: [
           { label: '2× RTX 3090 on eBay', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'GPU' },
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best Workstation Build for Local AI (2026): Three Budget Tiers',
       description: 'Complete parts lists for three local AI workstation builds: $1200 budget, $2500 recommended, $5000 professional. Includes performance benchmarks for 7B–70B models.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Alle Builds verarbeiten 7B und 14B problemlos; 70B braucht Dual-GPU oder CPU-Offloading',
         'PCIe Gen 5 NVMe empfohlen für schnelles Modell-Laden (>10 GB/s)',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '~5000 € Profi-Build', description: 'Dual RTX 3090 48 GB + Threadripper + 256 GB RAM — 70B Q4 mit GPU-Geschwindigkeit' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Beste Workstation für lokale KI 2026: Drei Budgetstufen', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/de/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Beste Workstation für lokale KI 2026: Drei Budgetstufen', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/de/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'de' },
   },
 
   fr: {
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '5000 € professionnel : dual RTX 3090 (48 Go) + Threadripper — 70B Q4 en natif',
         'Tous les builds gèrent 7B et 14B facilement ; 70B nécessite dual GPU ou déchargement CPU',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '~5000 € Build professionnel', description: 'Dual RTX 3090 48 Go + Threadripper + 256 Go RAM — 70B Q4 à vitesse GPU' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleure configuration workstation IA locale 2026 : 3 budgets', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/fr/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleure configuration workstation IA locale 2026 : 3 budgets', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/fr/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'fr' },
   },
 
   ja: {
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '約66万円プロ：デュアルRTX 3090（48GB）+ Threadripper — 70B Q4をGPUで実行',
         '全構成で7Bと14Bは問題なし；70Bはデュアルまたはオフロードが必要',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '約66万円プロビルド', description: 'デュアルRTX 3090 48GB + Threadripper + 256GB — 70B Q4をGPU速度で実行' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ローカルAI最高ワークステーション構成2026年版：3つの予算別ビルド', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ja/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'ローカルAI最高ワークステーション構成2026年版：3つの予算別ビルド', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ja/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'ja' },
   },
 
   zh: {
@@ -741,7 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '33000元专业：双RTX 3090（48GB）或RTX 4090 + Threadripper — 原生运行70B Q4',
         '所有配置轻松运行7B和14B；70B需要双GPU或CPU卸载',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -890,7 +890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: '约33000元专业方案', description: '双RTX 3090 48GB + Threadripper + 256GB — GPU速度运行70B Q4' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年本地AI最佳工作站配置：三档预算方案', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年本地AI最佳工作站配置：三档预算方案', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/zh/power-local-llm/best-workstation-build-local-ai-2026', inLanguage: 'zh' },
   },
 
   es: {
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Todos los builds manejan modelos de 7B y 14B sin problemas; el 70B requiere dual GPU o CPU offloading',
         'Se recomienda NVMe PCIe Gen 5 para cargar modelos rápidamente (>10 GB/s)',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor workstation para IA local 2026: tres niveles de presupuesto',
       description: 'Listas completas de componentes para tres builds de workstation de IA local: $1200 económico, $2500 recomendado, $5000 profesional. Incluye benchmarks de rendimiento para modelos de 7B a 70B.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1149,7 +1149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '모든 빌드에서 7B, 14B 모델은 문제 없이 실행됩니다. 70B는 듀얼 GPU 또는 CPU 오프로딩이 필요합니다.',
         '빠른 모델 로딩을 위해 NVMe PCIe Gen 5 권장 (>10 GB/s)',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 로컬 AI를 위한 최고의 워크스테이션: 3가지 예산 수준',
       description: '3가지 로컬 AI 워크스테이션 빌드의 완전한 부품 목록: $1,200 경제형, $2,500 추천형, $5,000 전문가형. 7B~70B 모델 성능 벤치마크 포함.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Todos os builds lidam com modelos de 7B e 14B sem problemas; o 70B exige dual GPU ou CPU offloading',
         'Recomenda-se NVMe PCIe Gen 5 para carregar modelos rapidamente (>10 GB/s)',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhor workstation para IA local 2026: três níveis de orçamento',
       description: 'Listas completas de componentes para três builds de workstation de IA local: $1200 econômico, $2500 recomendado, $5000 profissional. Inclui benchmarks de desempenho para modelos de 7B a 70B.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1621,7 +1621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'جميع الإعدادات تتعامل مع نماذج 7B و14B بسهولة؛ نموذج 70B يتطلب GPU مزدوجة أو CPU offloading',
           'يُوصى بـNVMe PCIe Gen 5 لتحميل النماذج بسرعة (أكثر من 10 GB/ثانية)',
         ],
-        updatedDate: '2026-05-26',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1828,7 +1828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل محطة عمل للذكاء الاصطناعي المحلي 2026: ثلاثة مستويات ميزانية',
       description: 'قوائم مكونات كاملة لثلاثة إعدادات محطات عمل للذكاء الاصطناعي المحلي: 1200 دولار اقتصادي، 2500 دولار موصى به، 5000 دولار احترافي. يتضمن معايير الأداء لنماذج من 7B إلى 70B.',
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

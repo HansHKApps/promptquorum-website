@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Cost & Comparisons',
     title: 'Local LLM Cost Calculator: Build vs Rent 2026',
     seoTitle: 'Local LLM Cost Calculator: Build vs Rent 2026',
-    metaDescription: 'Build vs rent LLM cost comparison 2026. Full TCO calculator for a local GPU workstation vs RunPod/Lambda Labs cloud — break-even at ~1,800 GPU hours.',
+    metaDescription: 'Build vs rent LLM cost comparison 2026. Full TCO calculator for a local GPU workstation vs RunPod/Lambda Labs cloud — break-even at ~1,800 GPU hours. Updated July 2026.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Electricity adds $0.02–0.08/hr to local costs',
         'Hidden cloud costs: egress fees, storage, idle compute billing',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 4090', VRAM: '24 GB', Provider: 'Vast.ai', 'Spot $/hr': '$0.32–0.48', 'On-Demand $/hr': '$0.89' },
           { GPU: 'A40', VRAM: '48 GB', Provider: 'RunPod', 'Spot $/hr': '$0.44–0.64', 'On-Demand $/hr': '$1.14' },
           { GPU: 'A100 80GB', VRAM: '80 GB', Provider: 'Lambda Labs', 'Spot $/hr': '$1.29', 'On-Demand $/hr': '$2.49' },
-          { GPU: 'H100 SXM', VRAM: '80 GB', Provider: 'RunPod', 'Spot $/hr': '$2.39', 'On-Demand $/hr': '$3.49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', Provider: 'RunPod', 'Spot $/hr': '$2.39', 'On-Demand $/hr': '$3.29' },
         ],
       },
       buildCosts: {
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What about depreciation on local hardware?',
-            a: 'GPU hardware depreciates 20–40% over 3 years. An RTX 4090 bought at $1,700 may resell for $900–1,200 in 2028. Factoring this in, the true cost of local hardware after 3 years is (purchase price − resale value + electricity). For the RTX 4090 workstation: ($3,200 − $1,200 + $180 electricity at 8hr/day US) = ~$2,180 over 3 years vs. cloud at $0.50/hr × 8hr/day × 365 × 3 = $4,380.',
+            a: 'GPU hardware depreciates 20–40% over 3 years. An RTX 4090 bought at $2,600 (mid-2026 market price) may resell for $1,200–1,600 in 2028–2029. Factoring this in, the true cost of local hardware after 3 years is (purchase price − resale value + electricity). For the RTX 4090 workstation: ($3,200 − $1,400 + $180 electricity at 8hr/day US) = ~$1,980 over 3 years vs. cloud at $0.50/hr × 8hr/day × 365 × 3 = $4,380.',
           },
           {
             q: 'How much does it cost to run a 70B model locally?',
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Complete TCO comparison for local GPU workstation vs cloud GPU rental for running LLMs in 2026.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Strom: in Deutschland ~0,15–0,20 €/Std. für RTX-4090-System',
         'Versteckte Cloud-Kosten: Speicher, Egress-Gebühren, Leerlauf-Abrechnung',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'LLM Kostenrechner: GPU kaufen vs. Cloud mieten 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'LLM Kostenrechner: GPU kaufen vs. Cloud mieten 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
   },
   fr: {
     freshness_tier: 'semi_annual',
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Électricité : ~0,14–0,18 $/h en France pour système RTX 4090',
         'Coûts cachés cloud : stockage, frais d\'egress, facturation en veille',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Calculateur de coût LLM : construire vs louer 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Calculateur de coût LLM : construire vs louer 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
   },
   ja: {
     freshness_tier: 'semi_annual',
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '電気代：日本（約30円/kWh）でRTX 4090システム1時間あたり約14円',
         'クラウドの隠れコスト：ストレージ・転送費・アイドル課金',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'LLMコスト計算：GPU購入 vs クラウドGPU 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'LLMコスト計算：GPU購入 vs クラウドGPU 2026年版', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'ja' },
   },
   es: {
     freshness_tier: 'semi_annual',
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'La electricidad añade 0,02–0,08 $/hr a los costos locales',
         'Costos ocultos del cloud: tarifas de egreso, almacenamiento, facturación en reposo',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 4090', VRAM: '24 GB', Proveedor: 'Vast.ai', 'Spot $/hr': '$0,32–0,48', 'Bajo Demanda $/hr': '$0,89' },
           { GPU: 'A40', VRAM: '48 GB', Proveedor: 'RunPod', 'Spot $/hr': '$0,44–0,64', 'Bajo Demanda $/hr': '$1,14' },
           { GPU: 'A100 80GB', VRAM: '80 GB', Proveedor: 'Lambda Labs', 'Spot $/hr': '$1,29', 'Bajo Demanda $/hr': '$2,49' },
-          { GPU: 'H100 SXM', VRAM: '80 GB', Proveedor: 'RunPod', 'Spot $/hr': '$2,39', 'Bajo Demanda $/hr': '$3,49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', Proveedor: 'RunPod', 'Spot $/hr': '$2,39', 'Bajo Demanda $/hr': '$3,29' },
         ],
       },
       buildCosts: {
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué pasa con la depreciación del hardware local?',
-            a: 'El hardware GPU se deprecia un 20–40 % en 3 años. Una RTX 4090 comprada a $1.700 puede revenderse por $900–1.200 en 2028. Teniendo esto en cuenta, el costo real del hardware local tras 3 años es (precio de compra − valor de reventa + electricidad). Para la workstation RTX 4090: ($3.200 − $1.200 + $180 electricidad a 8hr/día en EE.UU.) = ~$2.180 en 3 años vs. cloud a $0,50/hr × 8hr/día × 365 × 3 = $4.380.',
+            a: 'El hardware GPU se deprecia un 20–40 % en 3 años. Una RTX 4090 comprada a $2.600 (precio de mercado a mediados de 2026) puede revenderse por $1.200–1.600 en 2028–2029. Teniendo esto en cuenta, el costo real del hardware local tras 3 años es (precio de compra − valor de reventa + electricidad). Para la workstation RTX 4090: ($3.200 − $1.400 + $180 electricidad a 8hr/día en EE.UU.) = ~$1.980 en 3 años vs. cloud a $0,50/hr × 8hr/día × 365 × 3 = $4.380.',
           },
           {
             q: '¿Cuánto cuesta ejecutar un modelo 70B localmente?',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Comparativa TCO completa de workstation GPU local vs alquiler de GPU cloud para ejecutar LLMs en 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'تضيف الكهرباء 0.02–0.08 دولار/ساعة إلى التكاليف المحلية',
         'تكاليف السحابة الخفية: رسوم الإخراج، والتخزين، والفوترة في وضع الخمول',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -734,7 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 4090', VRAM: '24 GB', 'المزود': 'Vast.ai', 'فوري دولار/ساعة': '$0.32–0.48', 'حسب الطلب دولار/ساعة': '$0.89' },
           { GPU: 'A40', VRAM: '48 GB', 'المزود': 'RunPod', 'فوري دولار/ساعة': '$0.44–0.64', 'حسب الطلب دولار/ساعة': '$1.14' },
           { GPU: 'A100 80GB', VRAM: '80 GB', 'المزود': 'Lambda Labs', 'فوري دولار/ساعة': '$1.29', 'حسب الطلب دولار/ساعة': '$2.49' },
-          { GPU: 'H100 SXM', VRAM: '80 GB', 'المزود': 'RunPod', 'فوري دولار/ساعة': '$2.39', 'حسب الطلب دولار/ساعة': '$3.49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', 'المزود': 'RunPod', 'فوري دولار/ساعة': '$2.39', 'حسب الطلب دولار/ساعة': '$3.29' },
         ],
       },
       buildCosts: {
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ماذا عن إهلاك الأجهزة المحلية؟',
-            a: 'تُهلَك أجهزة GPU بنسبة 20–40% خلال 3 سنوات. قد تُعاد بيع RTX 4090 المشتراة بـ 1700 دولار مقابل 900–1200 دولار في 2028. بأخذ ذلك في الحسبان، تكون التكلفة الحقيقية للأجهزة المحلية بعد 3 سنوات (سعر الشراء − قيمة إعادة البيع + الكهرباء). لمحطة عمل RTX 4090: ($3,200 − $1,200 + $180 كهرباء عند 8 ساعات/يوم في الولايات المتحدة) = نحو $2,180 خلال 3 سنوات مقابل السحابة عند $0.50/ساعة × 8 ساعات/يوم × 365 × 3 = $4,380.',
+            a: 'تُهلَك أجهزة GPU بنسبة 20–40% خلال 3 سنوات. قد تُعاد بيع RTX 4090 المشتراة بـ 2600 دولار (سعر السوق منتصف 2026) مقابل 1200–1600 دولار في 2028–2029. بأخذ ذلك في الحسبان، تكون التكلفة الحقيقية للأجهزة المحلية بعد 3 سنوات (سعر الشراء − قيمة إعادة البيع + الكهرباء). لمحطة عمل RTX 4090: ($3,200 − $1,400 + $180 كهرباء عند 8 ساعات/يوم في الولايات المتحدة) = نحو $1,980 خلال 3 سنوات مقابل السحابة عند $0.50/ساعة × 8 ساعات/يوم × 365 × 3 = $4,380.',
           },
           {
             q: 'كم تكلفة تشغيل نموذج 70B محليًا؟',
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'مقارنة كاملة لإجمالي تكلفة الملكية بين محطة عمل GPU محلية واستئجار GPU سحابي لتشغيل نماذج LLM في 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ar',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -898,7 +898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '国内电费（0.6元/度）：RTX 4090系统约0.27元/小时',
         '云端隐性费用：存储、出口流量、空闲计费',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '本地LLM成本计算器：自建 vs 云租GPU 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '本地LLM成本计算器：自建 vs 云租GPU 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
   },
   // VERIFY: modelo de TCO mantido em USD de propósito — GPU em nuvem (RunPod/Lambda/Vast.ai) é cobrada em dólar mundialmente, então o cálculo de ponto de equilíbrio precisa de moeda única para ser coerente (converter só o hardware quebraria as tabelas de retorno). Preços de hardware no varejo brasileiro foram adicionados em BRL como contexto na seção "Custos de Hardware Local" e a eletricidade usa tarifa do Brasil. Links de afiliado ainda apontam para lojas globais — trocar por Amazon.com.br/Kabum/Pichau antes de publicar.
   pt: {
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'A eletricidade acrescenta US$ 0,02–0,08/h aos custos locais',
         'Custos ocultos da nuvem: taxas de egress, armazenamento, cobrança por computação ociosa',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -1034,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 4090', VRAM: '24 GB', Provedor: 'Vast.ai', 'Spot US$/h': 'US$ 0,32–0,48', 'Sob Demanda US$/h': 'US$ 0,89' },
           { GPU: 'A40', VRAM: '48 GB', Provedor: 'RunPod', 'Spot US$/h': 'US$ 0,44–0,64', 'Sob Demanda US$/h': 'US$ 1,14' },
           { GPU: 'A100 80GB', VRAM: '80 GB', Provedor: 'Lambda Labs', 'Spot US$/h': 'US$ 1,29', 'Sob Demanda US$/h': 'US$ 2,49' },
-          { GPU: 'H100 SXM', VRAM: '80 GB', Provedor: 'RunPod', 'Spot US$/h': 'US$ 2,39', 'Sob Demanda US$/h': 'US$ 3,49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', Provedor: 'RunPod', 'Spot US$/h': 'US$ 2,39', 'Sob Demanda US$/h': 'US$ 3,29' },
         ],
       },
       buildCosts: {
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'E quanto à depreciação do hardware local?',
-            a: 'O hardware de GPU se deprecia 20–40% em 3 anos. Uma RTX 4090 comprada por US$ 1.700 pode ser revendida por US$ 900–1.200 em 2028. Levando isso em conta, o custo real do hardware local após 3 anos é (preço de compra − valor de revenda + eletricidade). Para a workstation RTX 4090: (US$ 3.200 − US$ 1.200 + US$ 180 de eletricidade a 8h/dia nos EUA) = ~US$ 2.180 em 3 anos vs. nuvem a US$ 0,50/h × 8h/dia × 365 × 3 = US$ 4.380.',
+            a: 'O hardware de GPU se deprecia 20–40% em 3 anos. Uma RTX 4090 comprada por US$ 2.600 (preço de mercado em meados de 2026) pode ser revendida por US$ 1.200–1.600 em 2028–2029. Levando isso em conta, o custo real do hardware local após 3 anos é (preço de compra − valor de revenda + eletricidade). Para a workstation RTX 4090: (US$ 3.200 − US$ 1.400 + US$ 180 de eletricidade a 8h/dia nos EUA) = ~US$ 1.980 em 3 anos vs. nuvem a US$ 0,50/h × 8h/dia × 365 × 3 = US$ 4.380.',
           },
           {
             q: 'Quanto custa rodar um modelo 70B localmente?',
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Comparação completa de TCO entre workstation com GPU local e aluguel de GPU em nuvem para rodar LLMs em 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '전기 요금이 로컬 비용에 시간당 $0.02~0.08 추가됩니다',
         '클라우드 숨겨진 비용: 이그레스 요금, 스토리지, 유휴 컴퓨팅 청구',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 4090', VRAM: '24 GB', '제공업체': 'Vast.ai', '스팟 $/시간': '$0.32–0.48', '온디맨드 $/시간': '$0.89' },
           { GPU: 'A40', VRAM: '48 GB', '제공업체': 'RunPod', '스팟 $/시간': '$0.44–0.64', '온디맨드 $/시간': '$1.14' },
           { GPU: 'A100 80GB', VRAM: '80 GB', '제공업체': 'Lambda Labs', '스팟 $/시간': '$1.29', '온디맨드 $/시간': '$2.49' },
-          { GPU: 'H100 SXM', VRAM: '80 GB', '제공업체': 'RunPod', '스팟 $/시간': '$2.39', '온디맨드 $/시간': '$3.49' },
+          { GPU: 'H100 SXM', VRAM: '80 GB', '제공업체': 'RunPod', '스팟 $/시간': '$2.39', '온디맨드 $/시간': '$3.29' },
         ],
       },
       buildCosts: {
@@ -1317,7 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 하드웨어의 감가상각은 어떻게 됩니까?',
-            a: 'GPU 하드웨어는 3년에 걸쳐 20~40% 감가상각됩니다. $1,700에 구입한 RTX 4090은 2028년에 $900~1,200에 재판매될 수 있습니다. 이를 고려하면 3년 후 로컬 하드웨어의 실제 비용은 (구매 가격 − 재판매 가치 + 전기 요금)입니다. RTX 4090 워크스테이션의 경우: ($3,200 − $1,200 + $180 전기 요금, 하루 8시간 미국 기준) = 3년간 약 $2,180 vs. 클라우드 $0.50/시간 × 하루 8시간 × 365 × 3 = $4,380.',
+            a: 'GPU 하드웨어는 3년에 걸쳐 20~40% 감가상각됩니다. 2026년 중반 시장 가격인 $2,600에 구입한 RTX 4090은 2028~2029년에 $1,200~1,600에 재판매될 수 있습니다. 이를 고려하면 3년 후 로컬 하드웨어의 실제 비용은 (구매 가격 − 재판매 가치 + 전기 요금)입니다. RTX 4090 워크스테이션의 경우: ($3,200 − $1,400 + $180 전기 요금, 하루 8시간 미국 기준) = 3년간 약 $1,980 vs. 클라우드 $0.50/시간 × 하루 8시간 × 365 × 3 = $4,380.',
           },
           {
             q: '70B 모델을 로컬에서 실행하는 데 비용이 얼마나 듭니까?',
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: '2026년 LLM 운영을 위한 로컬 GPU 워크스테이션 대 클라우드 GPU 렌탈의 완전한 총소유비용(TCO) 비교.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ko',
       'proficiencyLevel': 'Intermediate',
