@@ -4,11 +4,11 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    title: 'Best GPU Under $300 for Local LLMs in 2026?',
-    seoTitle: 'Best GPU Under $300 for Local LLM 2026 | Prompt Bites',
-    metaDescription: 'Best GPU under $300 for local LLMs: used RTX 3060 12 GB ($150-250) wins on CUDA support. RX 6700 XT ($130-200) is cheaper. May 2026 snapshot.',
+    title: 'RTX 3060 12GB: Best GPU Under $300 for Local LLMs (2026)?',
+    seoTitle: 'RTX 3060 12GB for Local LLM 2026: Best GPU Under $300',
+    metaDescription: 'RTX 3060 12GB (~$200–250 used, 2026) is the best GPU under $300 for local LLMs — runs every 7B and most 14B at Q4; its 360 GB/s bandwidth beats the RTX 4060 on speed.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-600-local-llm', 'best-ollama-models-rtx-3060-12gb'],
     is_living_page: false,
     leadAnswerBlock:
-      'The best GPU under $300 for local LLMs is a used NVIDIA RTX 3060 12 GB ($150-250 in May 2026). Its 12 GB of VRAM runs every 7B model and most 13B models at Q4, and NVIDIA CUDA works out of the box with Ollama. The AMD RX 6700 XT ($130-200 used) is cheaper but needs ROCm setup.',
+      'The best GPU under $300 for local LLMs is a used NVIDIA RTX 3060 12 GB (~$200–250 in July 2026). Its 12 GB of VRAM runs every 7B model and most 14B models at Q4, NVIDIA CUDA works out of the box with Ollama, and its 360 GB/s memory bandwidth actually beats the newer RTX 4060 (272 GB/s) on inference speed. The AMD RX 6700 XT (roughly $40–60 cheaper used) is the budget alternative but needs a ROCm setup on Linux.',
     toc: [
       { label: 'Best Pick: Used RTX 3060 12 GB', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -32,13 +32,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What is the best GPU under $300 for running local LLMs?',
-        answer: 'Used RTX 3060 12GB at $150-220 is the best GPU under $300 for local LLMs — 12 GB VRAM runs all 7B and most 14B models.',
+        answer: 'Used RTX 3060 12GB at ~$200-250 is the best GPU under $300 for local LLMs — 12 GB VRAM runs all 7B and most 14B models.',
         bullets: [
           'RTX 3060 12 GB runs Llama 3 8B Q4_K_M at ~25 tok/s and Qwen 14B Q4_K_M at ~15 tok/s.',
-          'RX 6700 XT 12 GB is $20-40 cheaper but requires Linux for ROCm; avoid on Windows.',
+          'Its 360 GB/s bandwidth beats the newer RTX 4060 (272 GB/s) on LLM inference speed.',
+          'RX 6700 XT 12 GB is cheaper but requires Linux for ROCm; avoid on Windows.',
           'Avoid 8 GB GPUs under $300 — the VRAM ceiling blocks 14B models entirely.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
       de: {
         question: 'Was ist die beste GPU unter 300 € für lokale LLMs?',
@@ -183,11 +184,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    title: 'Beste GPU unter 300 € für lokale LLMs 2026?',
-    seoTitle: 'Beste GPU unter 300 € für lokale LLMs 2026 | Prompt Bites',
-    metaDescription: 'Beste GPU unter 300 € für lokale LLMs: gebrauchte RTX 3060 12 GB. CUDA läuft sofort mit Ollama. RX 6700 XT ist günstiger, braucht aber ROCm. Mai 2026.',
+    title: 'RTX 3060 12GB: Beste GPU unter 300 € für lokale LLMs (2026)?',
+    seoTitle: 'RTX 3060 12GB für lokale LLMs 2026: Beste GPU unter 300 €',
+    metaDescription: 'RTX 3060 12GB (~200–250 € gebraucht, 2026) ist die beste GPU unter 300 € für lokale LLMs — führt jedes 7B und die meisten 14B bei Q4 aus; ihre 360 GB/s Bandbreite schlägt die RTX 4060 beim Tempo.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -200,7 +201,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 Min. Lesezeit',
     leadAnswerBlock:
-      'Die beste GPU unter 300 € für lokale LLMs ist eine gebrauchte NVIDIA RTX 3060 12 GB. Ihre 12 GB VRAM führen jedes 7B-Modell und die meisten 13B-Modelle bei Q4 aus, und NVIDIA CUDA läuft mit Ollama sofort. Die AMD RX 6700 XT ist günstiger, benötigt aber eine ROCm-Einrichtung.',
+      'Die beste GPU unter 300 € für lokale LLMs ist eine gebrauchte NVIDIA RTX 3060 12 GB (~200–250 € im Juli 2026). Ihre 12 GB VRAM führen jedes 7B-Modell und die meisten 14B-Modelle bei Q4 aus, NVIDIA CUDA läuft mit Ollama sofort, und ihre 360 GB/s Speicherbandbreite schlägt die neuere RTX 4060 (272 GB/s) sogar bei der Inferenzgeschwindigkeit. Die AMD RX 6700 XT (gebraucht rund 40–60 € günstiger) ist die Budget-Alternative, benötigt aber eine ROCm-Einrichtung unter Linux.',
     toc: [
       { label: 'Beste Wahl: gebrauchte RTX 3060 12 GB', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -212,13 +213,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Was ist die beste GPU unter 300 € für lokale LLMs?',
-        answer: 'Gebrauchte RTX 3060 12 GB für 140-200 € ist die beste GPU unter 300 € für lokale LLMs — 12 GB VRAM führt alle 7B- und die meisten 14B-Modelle aus.',
+        answer: 'Gebrauchte RTX 3060 12 GB für 200–250 € ist die beste GPU unter 300 € für lokale LLMs — 12 GB VRAM führt alle 7B- und die meisten 14B-Modelle aus.',
         bullets: [
           'RTX 3060 12 GB läuft Llama 3 8B Q4_K_M mit ~25 tok/s und Qwen 14B Q4_K_M mit ~15 tok/s.',
-          'RX 6700 XT 12 GB ist 20-40 € günstiger, erfordert aber Linux für ROCm; Windows vermeiden.',
+          'Ihre 360 GB/s Bandbreite schlägt die neuere RTX 4060 (272 GB/s) bei der LLM-Inferenzgeschwindigkeit.',
+          'RX 6700 XT 12 GB ist rund 40–60 € günstiger, erfordert aber Linux für ROCm; Windows vermeiden.',
           'GPUs mit 8 GB unter 300 € vermeiden — die VRAM-Grenze blockiert 14B-Modelle vollständig.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -323,11 +325,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    title: 'Meilleur GPU sous 300 € pour LLM local en 2026 ?',
-    seoTitle: 'Meilleur GPU sous 300 € LLM local 2026 | Prompt Bites',
-    metaDescription: 'Meilleur GPU sous 300 € pour LLM local : RTX 3060 12 GB d\'occasion. CUDA fonctionne avec Ollama. RX 6700 XT moins chère mais nécessite ROCm. Mai 2026.',
+    title: 'RTX 3060 12GB : meilleur GPU sous 300 € pour LLM local (2026) ?',
+    seoTitle: 'RTX 3060 12GB pour LLM local 2026 : meilleur GPU sous 300 €',
+    metaDescription: 'RTX 3060 12GB (~200–250 € d\'occasion, 2026) est le meilleur GPU sous 300 € pour LLM local — exécute tout 7B et la plupart des 14B en Q4 ; ses 360 GB/s de bande passante battent la RTX 4060 en vitesse.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -340,7 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de lecture',
     leadAnswerBlock:
-      'Le meilleur GPU sous 300 € pour les LLM locaux est une NVIDIA RTX 3060 12 GB d\'occasion. Ses 12 GB de VRAM exécutent chaque modèle 7B et la plupart des 13B en Q4, et NVIDIA CUDA fonctionne avec Ollama sans configuration. La AMD RX 6700 XT est moins chère mais demande ROCm.',
+      'Le meilleur GPU sous 300 € pour les LLM locaux est une NVIDIA RTX 3060 12 GB d\'occasion (~200–250 € en juillet 2026). Ses 12 GB de VRAM exécutent chaque modèle 7B et la plupart des 14B en Q4, NVIDIA CUDA fonctionne avec Ollama sans configuration, et sa bande passante mémoire de 360 GB/s bat même la RTX 4060 plus récente (272 GB/s) en vitesse d\'inférence. La AMD RX 6700 XT (environ 40–60 € moins chère d\'occasion) est l\'alternative économique, mais nécessite une configuration ROCm sous Linux.',
     toc: [
       { label: 'Meilleur choix : RTX 3060 12 GB d\'occasion', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -352,13 +354,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Quelle est la meilleure GPU à moins de 300 € pour les LLMs locaux ?',
-        answer: 'RTX 3060 12 GB d\'occasion à 140-200 € est la meilleure GPU sous 300 € pour les LLMs locaux — 12 Go de VRAM suffit pour tous les modèles 7B et la plupart des 14B.',
+        answer: 'RTX 3060 12 GB d\'occasion à 200–250 € est la meilleure GPU sous 300 € pour les LLMs locaux — 12 Go de VRAM suffit pour tous les modèles 7B et la plupart des 14B.',
         bullets: [
           'RTX 3060 12 GB fait tourner Llama 3 8B Q4_K_M à ~25 tok/s et Qwen 14B Q4_K_M à ~15 tok/s.',
-          'RX 6700 XT 12 GB est 20-40 € moins cher mais nécessite Linux pour ROCm ; éviter sur Windows.',
+          'Sa bande passante de 360 GB/s bat la RTX 4060 plus récente (272 GB/s) en vitesse d\'inférence LLM.',
+          'RX 6700 XT 12 GB est environ 40–60 € moins chère mais nécessite Linux pour ROCm ; éviter sur Windows.',
           'Éviter les GPU 8 GB sous 300 € — le plafond VRAM bloque entièrement les modèles 14B.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -463,11 +466,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    title: '2026年のローカルLLM向け、300ドル以下で最適なGPUは？',
-    seoTitle: '300ドル以下のローカルLLM向けGPU 2026 | Prompt Bites',
-    metaDescription: '300ドル以下のローカルLLM向けベストGPUは中古RTX 3060 12 GB。CUDAがOllamaで即動作。RX 6700 XTは安いがROCm設定が必要。2026年5月時点。',
+    title: 'RTX 3060 12GB：ローカルLLM向け300ドル以下ベストGPU（2026年）？',
+    seoTitle: 'RTX 3060 12GB ローカルLLM 2026：300ドル以下ベストGPU',
+    metaDescription: 'RTX 3060 12GB（中古2万5千〜3万円、2026年）はローカルLLM向け300ドル以下ベストGPU — 全7Bと大半の14BをQ4で動作。360 GB/sの帯域幅は速度でRTX 4060を上回る。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -480,7 +483,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4分で読める',
     leadAnswerBlock:
-      'ローカルLLM向けに300ドル(または相当額)以下で最適なGPUは中古のNVIDIA RTX 3060 12 GBです。12 GBのVRAMで7Bモデル全てとほとんどの13BモデルをQ4で動かせ、NVIDIA CUDAはOllamaですぐ動きます。AMD RX 6700 XTは安価ですがROCm設定が必要です。',
+      'ローカルLLM向けに300ドル(または相当額)以下で最適なGPUは中古のNVIDIA RTX 3060 12 GB(2026年7月時点で2万5千〜3万円)です。12 GBのVRAMで7Bモデル全てとほとんどの14BモデルをQ4で動かせ、NVIDIA CUDAはOllamaですぐ動き、その360 GB/sのメモリ帯域幅は新しいRTX 4060(272 GB/s)を推論速度で上回ります。AMD RX 6700 XT(中古で4千〜6千円ほど安い)は予算重視の選択肢ですが、LinuxでのROCm設定が必要です。',
     toc: [
       { label: 'ベストピック：中古RTX 3060 12 GB', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -492,13 +495,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: '300ドル以下でローカルLLMに最適なGPUは？',
-        answer: '中古RTX 3060 12 GBが2万〜3万円でローカルLLM向け最高の300ドル以下GPU — 12 GB VRAMで全7Bと大半の14Bモデルを動かせます。',
+        answer: '中古RTX 3060 12 GBが2万5千〜3万円でローカルLLM向け最高の300ドル以下GPU — 12 GB VRAMで全7Bと大半の14Bモデルを動かせます。',
         bullets: [
           'RTX 3060 12 GBはLlama 3 8B Q4_K_Mを~25 tok/s、Qwen 14B Q4_K_Mを~15 tok/sで動作。',
-          'RX 6700 XT 12 GBは2,000〜4,000円安いがROCmにはLinux必須；Windowsは避ける。',
+          'その360 GB/sの帯域幅は新しいRTX 4060(272 GB/s)をLLM推論速度で上回る。',
+          'RX 6700 XT 12 GBは4,000〜6,000円安いがROCmにはLinux必須；Windowsは避ける。',
           '300ドル以下の8 GB GPUは避ける — VRAMの上限が14Bモデルを完全にブロック。',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -603,11 +607,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    title: '2026年300美元以下最适合本地LLM的GPU？',
-    seoTitle: '300美元以下本地LLM最佳GPU 2026 | Prompt Bites',
-    metaDescription: '300美元以下本地LLM最佳GPU：二手RTX 3060 12 GB。CUDA与Ollama即装即用。RX 6700 XT更便宜但需ROCm配置。2026年5月数据。',
+    title: 'RTX 3060 12GB：300美元以下本地LLM最佳GPU（2026）？',
+    seoTitle: 'RTX 3060 12GB 本地LLM 2026：300美元以下最佳GPU',
+    metaDescription: 'RTX 3060 12GB（二手约$200–250，2026年）是300美元以下本地LLM最佳GPU — 可在Q4下运行所有7B和大多数14B；其360 GB/s带宽在速度上超越RTX 4060。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -620,7 +624,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '阅读约4分钟',
     leadAnswerBlock:
-      '本地LLM在低预算下的最佳选择是二手NVIDIA RTX 3060 12 GB。12 GB VRAM可运行所有7B模型和大部分13B模型(Q4),NVIDIA CUDA与Ollama开箱即用。AMD RX 6700 XT更便宜但需ROCm配置。',
+      '本地LLM在300美元以下的最佳选择是二手NVIDIA RTX 3060 12 GB(2026年7月约$200–250)。12 GB VRAM可运行所有7B模型和大部分14B模型(Q4),NVIDIA CUDA与Ollama开箱即用,其360 GB/s显存带宽在推理速度上甚至超越较新的RTX 4060(272 GB/s)。AMD RX 6700 XT(二手约便宜$40–60)是预算替代方案,但需要在Linux上配置ROCm。',
     toc: [
       { label: '最佳选择：二手RTX 3060 12 GB', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -632,13 +636,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '300美元以下本地LLM最佳GPU是什么？',
-        answer: '二手RTX 3060 12 GB售价150-220美元，是300美元以下本地LLM最佳GPU — 12 GB显存可运行所有7B和大多数14B模型。',
+        answer: '二手RTX 3060 12 GB售价$200–250，是300美元以下本地LLM最佳GPU — 12 GB显存可运行所有7B和大多数14B模型。',
         bullets: [
           'RTX 3060 12 GB运行Llama 3 8B Q4_K_M约25 tok/s，Qwen 14B Q4_K_M约15 tok/s。',
-          'RX 6700 XT 12 GB便宜20-40美元，但ROCm需要Linux；Windows上避免使用。',
+          '其360 GB/s带宽在LLM推理速度上超越较新的RTX 4060(272 GB/s)。',
+          'RX 6700 XT 12 GB便宜$40–60，但ROCm需要Linux；Windows上避免使用。',
           '避免300美元以下的8 GB GPU — 显存上限完全阻止14B模型。',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -743,11 +748,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    title: '¿Mejor GPU por menos de $300 para LLMs locales en 2026?',
-    seoTitle: 'Mejor GPU por menos de $300 para LLM local 2026',
-    metaDescription: 'Mejor GPU bajo $300 para LLMs locales: RTX 3060 12 GB usada ($150–250), CUDA al instante con Ollama. La RX 6700 XT es más barata pero requiere ROCm.',
+    title: 'RTX 3060 12GB: mejor GPU bajo $300 para LLMs locales (2026)?',
+    seoTitle: 'RTX 3060 12GB para LLM local 2026: mejor GPU bajo $300',
+    metaDescription: 'RTX 3060 12GB (~200–250 € usada, 2026) es la mejor GPU bajo $300 para LLMs locales — ejecuta todo 7B y la mayoría de 14B en Q4; sus 360 GB/s de ancho de banda superan a la RTX 4060 en velocidad.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -760,7 +765,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de lectura',
     leadAnswerBlock:
-      'La mejor GPU por menos de $300 para LLMs locales es una NVIDIA RTX 3060 12 GB usada ($150-250 en mayo de 2026). Sus 12 GB de VRAM ejecutan todos los modelos 7B y la mayoría de los 13B en Q4, y NVIDIA CUDA funciona de inmediato con Ollama. La AMD RX 6700 XT ($130-200 usada) es más barata pero requiere configurar ROCm.',
+      'La mejor GPU por menos de $300 para LLMs locales es una NVIDIA RTX 3060 12 GB usada (~200–250 € en España, julio de 2026). Sus 12 GB de VRAM ejecutan todos los modelos 7B y la mayoría de los 14B en Q4, NVIDIA CUDA funciona de inmediato con Ollama, y sus 360 GB/s de ancho de banda de memoria superan incluso a la RTX 4060 más reciente (272 GB/s) en velocidad de inferencia. La AMD RX 6700 XT (unos 40–60 € más barata usada) es la alternativa económica, pero requiere configurar ROCm en Linux. Los precios en Latinoamérica varían según impuestos locales.',
     toc: [
       { label: 'Mejor opción: RTX 3060 12 GB usada', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -772,13 +777,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la mejor GPU por menos de $300 para ejecutar LLMs locales?',
-        answer: 'La RTX 3060 12 GB usada a $150-220 es la mejor GPU por menos de $300 para LLMs locales — 12 GB de VRAM ejecuta todos los modelos 7B y la mayoría de los 14B.',
+        answer: 'La RTX 3060 12 GB usada a ~200–250 € (España) es la mejor GPU por menos de $300 para LLMs locales — 12 GB de VRAM ejecuta todos los modelos 7B y la mayoría de los 14B.',
         bullets: [
           'RTX 3060 12 GB ejecuta Llama 3 8B Q4_K_M a ~25 tok/s y Qwen 14B Q4_K_M a ~15 tok/s.',
-          'RX 6700 XT 12 GB es $20-40 más barata pero requiere Linux para ROCm; evítala en Windows.',
+          'Sus 360 GB/s de ancho de banda superan a la RTX 4060 más reciente (272 GB/s) en velocidad de inferencia de LLM.',
+          'RX 6700 XT 12 GB es unos 40–60 € más barata pero requiere Linux para ROCm; evítala en Windows.',
           'Evita GPUs de 8 GB por menos de $300 — el límite de VRAM bloquea completamente los modelos 14B.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -883,11 +889,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    title: 'Melhor GPU por menos de $300 para LLMs locais em 2026?',
-    seoTitle: 'Melhor GPU por menos de $300 para LLM local 2026',
-    metaDescription: 'Melhor GPU abaixo de $300 para LLMs locais: RTX 3060 12 GB usada ($150-250). CUDA funciona ao instante com Ollama. RX 6700 XT é mais barata mas requer ROCm.',
+    title: 'RTX 3060 12GB: melhor GPU abaixo de $300 para LLMs locais (2026)?',
+    seoTitle: 'RTX 3060 12GB para LLM local 2026: melhor GPU abaixo de $300',
+    metaDescription: 'RTX 3060 12GB (~R$ 1.600–1.800 usada, 2026) é a melhor GPU abaixo de $300 para LLMs locais — roda todo 7B e a maioria dos 14B em Q4; seus 360 GB/s de banda superam a RTX 4060 em velocidade.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -900,7 +906,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de leitura',
     leadAnswerBlock:
-      'A melhor GPU por menos de $300 para LLMs locais é uma NVIDIA RTX 3060 12 GB usada ($150-250 em maio de 2026). Seus 12 GB de VRAM executam todos os modelos 7B e a maioria dos 13B em Q4, e o NVIDIA CUDA funciona ao instante com o Ollama. A AMD RX 6700 XT ($130-200 usada) é mais barata, mas requer configuração do ROCm.',
+      'A melhor GPU por menos de $300 para LLMs locais é uma NVIDIA RTX 3060 12 GB usada (~R$ 1.600–1.800 em julho de 2026). Seus 12 GB de VRAM executam todos os modelos 7B e a maioria dos 14B em Q4, o NVIDIA CUDA funciona ao instante com o Ollama, e seus 360 GB/s de banda de memória superam até a RTX 4060 mais recente (272 GB/s) em velocidade de inferência. A AMD RX 6700 XT (cerca de R$ 300–450 mais barata usada) é a alternativa econômica, mas requer configuração do ROCm no Linux. Os preços no Brasil variam bastante devido a impostos de importação.',
     toc: [
       { label: 'Melhor escolha: RTX 3060 12 GB usada', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT', anchor: '#comparison' },
@@ -912,13 +918,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Qual é a melhor GPU por menos de $300 para executar LLMs locais?',
-        answer: 'RTX 3060 12 GB usada a $150-220 é a melhor GPU por menos de $300 para LLMs locais — 12 GB VRAM executa todos os modelos 7B e a maioria dos 14B.',
+        answer: 'RTX 3060 12 GB usada a ~R$ 1.600–1.800 é a melhor GPU por menos de $300 para LLMs locais — 12 GB VRAM executa todos os modelos 7B e a maioria dos 14B.',
         bullets: [
           'RTX 3060 12 GB executa Llama 3 8B Q4_K_M a ~25 tok/s e Qwen 14B Q4_K_M a ~15 tok/s.',
-          'RX 6700 XT 12 GB é $20-40 mais barata, mas requer Linux para ROCm; evite no Windows.',
+          'Seus 360 GB/s de banda superam a RTX 4060 mais recente (272 GB/s) em velocidade de inferência de LLM.',
+          'RX 6700 XT 12 GB é cerca de R$ 300–450 mais barata, mas requer Linux para ROCm; evite no Windows.',
           'Evite GPUs de 8 GB por menos de $300 — o limite de VRAM bloqueia completamente os modelos 14B.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1023,11 +1030,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'أفضل بطاقة رسوميات بأقل من ⁨300⁩ دولار لنماذج اللغة المحلية في ⁨2026⁩؟',
-    seoTitle: 'أفضل ⁨GPU⁩ بأقل من ⁨300⁩ دولار لـ ⁨LLMs⁩ المحلية ⁨2026⁩',
-    metaDescription: '⁨RTX 3060 12 GB⁩ مستعملة (⁨150⁩–⁨250⁩ دولار) أفضل ⁨GPU⁩ بأقل من ⁨300⁩ دولار لـ ⁨LLMs⁩: ⁨12 GB VRAM⁩ تشغّل نماذج ⁨7B⁩ بـ ⁨25⁩ رمز/ثانية مع ⁨CUDA⁩ فوري عبر ⁨Ollama⁩.',
+    title: '⁨RTX 3060 12GB⁩: أفضل ⁨GPU⁩ بأقل من ⁨$300⁩ لنماذج اللغة المحلية (⁨2026⁩)؟',
+    seoTitle: '⁨RTX 3060 12GB⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩: أفضل ⁨GPU⁩ بأقل من ⁨$300⁩',
+    metaDescription: '⁨RTX 3060 12GB⁩ (مستعملة ~⁨$200–250⁩، ⁨2026⁩) أفضل ⁨GPU⁩ بأقل من ⁨$300⁩ لـ ⁨LLMs⁩ المحلية — تشغّل كل ⁨7B⁩ وأغلب ⁨14B⁩ بـ ⁨Q4⁩؛ عرض نطاقها ⁨360 GB/s⁩ يتفوق على ⁨RTX 4060⁩ في السرعة.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -1040,7 +1047,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 دقائق قراءة',
     leadAnswerBlock:
-      'أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية هي NVIDIA RTX 3060 12 GB مستعملة ($150-250 في مايو 2026). تتيح ذاكرة الفيديو البالغة 12 GB تشغيل جميع نماذج 7B وأغلب نماذج 13B بتكميم Q4، ويعمل NVIDIA CUDA فوراً مع Ollama. AMD RX 6700 XT ($130-200 مستعملة) أرخص لكنها تستلزم تهيئة ROCm.',
+      'أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية هي NVIDIA RTX 3060 12 GB مستعملة (~$200-250 في يوليو 2026). تتيح ذاكرة الفيديو البالغة 12 GB تشغيل جميع نماذج 7B وأغلب نماذج 14B بتكميم Q4، ويعمل NVIDIA CUDA فوراً مع Ollama، ويتفوق عرض نطاق ذاكرتها البالغ 360 GB/s على RTX 4060 الأحدث (272 GB/s) في سرعة الاستدلال. AMD RX 6700 XT (أرخص بنحو $40-60 مستعملة) هي البديل الاقتصادي، لكنها تستلزم تهيئة ROCm على Linux.',
     toc: [
       { label: 'الخيار الأفضل: RTX 3060 12 GB مستعملة', anchor: '#best-pick' },
       { label: 'RTX 3060 مقابل RX 6700 XT', anchor: '#comparison' },
@@ -1052,13 +1059,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل بطاقة رسوميات بأقل من 300 دولار لتشغيل نماذج اللغة المحلية؟',
-        answer: 'RTX 3060 12 GB مستعملة بسعر $150-220 هي أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية — 12 GB من ذاكرة الفيديو تشغّل جميع نماذج 7B وأغلب نماذج 14B.',
+        answer: 'RTX 3060 12 GB مستعملة بسعر ~$200-250 هي أفضل بطاقة رسوميات بأقل من 300 دولار لنماذج اللغة المحلية — 12 GB من ذاكرة الفيديو تشغّل جميع نماذج 7B وأغلب نماذج 14B.',
         bullets: [
           'RTX 3060 12 GB تشغّل Llama 3 8B Q4_K_M بسرعة ~25 tok/s وQwen 14B Q4_K_M بسرعة ~15 tok/s.',
-          'RX 6700 XT 12 GB أرخص بـ $20-40 لكنها تتطلب Linux لـ ROCm؛ تجنّبها على Windows.',
+          'عرض نطاقها البالغ 360 GB/s يتفوق على RTX 4060 الأحدث (272 GB/s) في سرعة استدلال نماذج اللغة.',
+          'RX 6700 XT 12 GB أرخص بنحو $40-60 لكنها تتطلب Linux لـ ROCm؛ تجنّبها على Windows.',
           'تجنّب بطاقات الرسوميات ذات 8 GB بأقل من 300 دولار — حدّ ذاكرة الفيديو يحجب نماذج 14B كلياً.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1163,11 +1171,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    title: '$300 이하 최고의 로컬 LLM용 GPU는? 2026년 추천',
-    seoTitle: '$300 이하 로컬 LLM GPU 추천 2026',
-    metaDescription: '로컬 LLM용 $300 이하 최고 GPU: 중고 RTX 3060 12 GB ($150-250). CUDA로 Ollama 즉시 실행 가능. RX 6700 XT는 더 저렴하지만 ROCm 설정 필요.',
+    title: 'RTX 3060 12GB: $300 이하 로컬 LLM 최고의 GPU (2026)?',
+    seoTitle: 'RTX 3060 12GB 로컬 LLM 2026: $300 이하 최고 GPU',
+    metaDescription: 'RTX 3060 12GB (중고 ~$200–250, 2026)는 $300 이하 로컬 LLM 최고 GPU — 모든 7B와 대부분의 14B를 Q4로 실행하며, 360 GB/s 대역폭이 속도에서 RTX 4060을 능가합니다.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -1187,7 +1195,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '30만원대 LLM GPU',
     ],
     leadAnswerBlock:
-      '로컬 LLM용 $300 이하 최고의 GPU는 중고 NVIDIA RTX 3060 12 GB ($150-250, 2026년 5월 기준)입니다. 12 GB VRAM으로 모든 7B 모델과 대부분의 13B 모델을 Q4 양자화로 실행할 수 있으며, NVIDIA CUDA는 Ollama와 즉시 호환됩니다. AMD RX 6700 XT ($130-200 중고)는 더 저렴하지만 ROCm 설정이 필요합니다.',
+      '로컬 LLM용 $300 이하 최고의 GPU는 중고 NVIDIA RTX 3060 12 GB (~$200–250, 2026년 7월 기준)입니다. 12 GB VRAM으로 모든 7B 모델과 대부분의 14B 모델을 Q4 양자화로 실행할 수 있고, NVIDIA CUDA는 Ollama와 즉시 호환되며, 360 GB/s 메모리 대역폭은 추론 속도에서 더 최신인 RTX 4060 (272 GB/s)마저 능가합니다. AMD RX 6700 XT (중고 기준 약 $40–60 저렴)는 예산 대안이지만 Linux에서 ROCm 설정이 필요합니다.',
     toc: [
       { label: '최고 추천: 중고 RTX 3060 12 GB', anchor: '#best-pick' },
       { label: 'RTX 3060 vs RX 6700 XT 비교', anchor: '#comparison' },
@@ -1199,13 +1207,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM 실행을 위한 $300 이하 최고의 GPU는 무엇입니까?',
-        answer: '중고 RTX 3060 12 GB ($150-220)는 로컬 LLM용 $300 이하 최고의 GPU입니다. 12 GB VRAM으로 모든 7B 모델과 대부분의 14B 모델을 실행할 수 있습니다.',
+        answer: '중고 RTX 3060 12 GB (~$200–250)는 로컬 LLM용 $300 이하 최고의 GPU입니다. 12 GB VRAM으로 모든 7B 모델과 대부분의 14B 모델을 실행할 수 있습니다.',
         bullets: [
           'RTX 3060 12 GB는 Llama 3 8B Q4_K_M을 ~25 tok/s, Qwen 14B Q4_K_M을 ~15 tok/s로 실행합니다.',
-          'RX 6700 XT 12 GB는 $20-40 더 저렴하지만 ROCm에 Linux가 필요합니다. Windows에서는 권장하지 않습니다.',
+          '360 GB/s 대역폭이 더 최신인 RTX 4060 (272 GB/s)을 LLM 추론 속도에서 능가합니다.',
+          'RX 6700 XT 12 GB는 약 $40–60 더 저렴하지만 ROCm에 Linux가 필요합니다. Windows에서는 권장하지 않습니다.',
           '$300 이하에서 8 GB GPU는 피하십시오. VRAM 제한으로 14B 모델 실행이 완전히 차단됩니다.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {

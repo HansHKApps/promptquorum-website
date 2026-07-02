@@ -5,9 +5,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Setup and Performance',
-    dateModified: '2026-06-20',
-    seoTitle: 'Strix Halo Ollama Vulkan Setup 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB unified memory, runs 70B models via Ollama Vulkan on Linux. ~20 tok/s on Llama 3.3 8B. Quick answer from PromptQuorum.',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan: Context Limit & Setup 2026',
+    metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: no hard 64K context cap — 64K–96K is safe for a 30B model (~40 GB), 128K+ is memory-bound. Setup, models, tok/s.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     audience: 'Linux users with a Ryzen AI Max 395 (Strix Halo) device wanting GPU-accelerated local LLM inference via Ollama Vulkan',
     readTime: '4 min read',
-    leadAnswerBlock: 'Yes — Ryzen AI Max 395 (Strix Halo) runs Ollama with GPU acceleration via the Vulkan backend on Linux. Install the standard Ollama binary, verify GPU detection with ollama ps, and set OLLAMA_FLASH_ATTENTION=1 for large-model sessions. The 96 GB unified memory pool lets you run 70B models that are impossible on any single desktop GPU.',
+    leadAnswerBlock: 'Yes — Ryzen AI Max 395 (Strix Halo) runs Ollama with GPU acceleration via the Vulkan backend on Linux. Install the standard Ollama binary, verify GPU detection with ollama ps, and set OLLAMA_FLASH_ATTENTION=1 for large-model sessions. The 96 GB unified memory pool lets you run 70B models that are impossible on any single desktop GPU. On context length there is no hard 64K limit — the ceiling is memory: set it with Ollama\'s num_ctx, run a 30B model comfortably at 64K–96K context (~36–45 GB total), and push 128K–200K only when you have the memory to spare (it is memory-bound and slower on Vulkan; a tuned ROCm build is ~3× faster at very long context).',
     intro: 'Strix Halo (Ryzen AI Max 395) is a high-memory APU found in mini PCs and laptops. Its RDNA 3.5 GPU runs Ollama via Vulkan on Linux with no extra drivers — and its 96 GB unified memory is the hardware advantage that makes 70B-class models viable on a single device.',
     toc: [
       { label: 'How to Run Ollama with Vulkan', anchor: '#setup' },
@@ -35,9 +35,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Linux: Ollama detects Strix Halo Vulkan automatically; set OLLAMA_FLASH_ATTENTION=1 for long context sessions',
           'Ryzen AI Max 395 (96 GB): fits Llama 70B Q4_K_M (~41 GB) and Qwen 32B Q4_K_M (~19 GB) simultaneously in memory',
+          'Context: no hard 64K cap — num_ctx sets it; 64K–96K is comfortable on a 30B model, 128K+ is memory-bound and slower on Vulkan',
           'Windows Vulkan path for Strix Halo is experimental; Linux is the stable platform for GPU-accelerated Ollama',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
       de: {
         question: 'Funktioniert Strix Halo (Ryzen AI Max) mit Ollama über Vulkan?',
@@ -149,6 +150,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'With 96 GB of unified memory, the Ryzen AI Max 395 fits Llama 3.3 70B at Q4_K_M (~41 GB) or Qwen 3 72B at Q4_K_M (~43 GB), each with memory to spare. For very large models, Qwen 3 72B at Q5_K_M (~55 GB) also fits, though speed drops to approximately 2 tok/s. Models requiring over 90 GB (e.g., 70B at Q8_0) exceed the available pool.',
           },
           {
+            q: 'What context window can Strix Halo handle in Ollama — is there a 64K limit?',
+            a: 'There is no hard 64K-token limit; the ceiling is your unified memory. On a 96 GB Ryzen AI Max 395, a 30B model at Q4_K_M comfortably runs a 64K–96K context (roughly 36–45 GB total for weights plus KV cache). Set the size with Ollama\'s num_ctx parameter (or the OLLAMA_CONTEXT_LENGTH environment variable), and keep OLLAMA_FLASH_ATTENTION=1 to reduce KV-cache memory. You can push 128K–200K, but it becomes memory-bound (~50–70 GB) and prompt processing slows on the Vulkan/RADV backend — a tuned ROCm build is roughly 3× faster at very long context (about 51 vs 17 tok/s prompt processing past ~130K).',
+          },
+          {
             q: 'How does Strix Halo compare to Mac Studio M4 Ultra for Ollama?',
             a: 'Mac Studio M4 Ultra has 192 GB unified memory and uses Metal acceleration via llama.cpp — significantly faster than Strix Halo Vulkan on a per-token basis (~12 tok/s on 70B Q4_K_M vs ~3 tok/s on Strix Halo). For large-model inference quality and speed, M4 Ultra wins. Strix Halo is competitive only in the 8B–32B range and runs a standard Linux workflow.',
           },
@@ -168,15 +173,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Einrichtung und Performance',
-    seoTitle: 'Strix Halo: Ollama mit Vulkan einrichten 2026',
-    metaDescription: 'AMD Strix Halo mit Ollama und Vulkan einrichten: Treiber, Konfiguration und Performance-Tuning für lokale LLMs auf der Ryzen AI Max APU.',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan: Kontextlimit & Setup 2026',
+    metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: kein hartes 64K-Kontextlimit — 64K–96K sind sicher für ein 30B-Modell (~40 GB), 128K+ ist speicherbegrenzt. Setup, Modelle, tok/s.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     affiliateDisclosure: true,
     audience: 'Linux-Nutzer mit einem Ryzen AI Max 395 (Strix Halo) Gerät, die GPU-beschleunigte lokale LLM-Inferenz über Ollama Vulkan einrichten wollen',
     readTime: '4 Min. Lesezeit',
-    leadAnswerBlock: 'Ja — Ryzen AI Max 395 (Strix Halo) betreibt Ollama mit GPU-Beschleunigung über das Vulkan-Backend unter Linux. Installieren Sie das Standard-Ollama-Binärprogramm, überprüfen Sie die GPU-Erkennung mit ollama ps und setzen Sie optional OLLAMA_FLASH_ATTENTION=1 für große Modelle. Der 96-GB-Unified-Memory-Pool ermöglicht 70B-Modelle, die auf keiner einzelnen Desktop-GPU möglich sind.',
+    leadAnswerBlock: 'Ja — Ryzen AI Max 395 (Strix Halo) betreibt Ollama mit GPU-Beschleunigung über das Vulkan-Backend unter Linux. Installieren Sie das Standard-Ollama-Binärprogramm, überprüfen Sie die GPU-Erkennung mit ollama ps und setzen Sie optional OLLAMA_FLASH_ATTENTION=1 für große Modelle. Der 96-GB-Unified-Memory-Pool ermöglicht 70B-Modelle, die auf keiner einzelnen Desktop-GPU möglich sind. Beim Kontext gibt es kein hartes 64K-Limit — die Obergrenze ist der Speicher: Setzen Sie ihn mit Ollamas num_ctx, betreiben Sie ein 30B-Modell komfortabel mit 64K–96K Kontext (~36–45 GB gesamt) und gehen Sie nur auf 128K–200K, wenn Sie Speicher übrig haben (es ist speicherbegrenzt und langsamer auf Vulkan; ein optimierter ROCm-Build ist bei sehr langem Kontext ~3× schneller).',
     intro: 'Strix Halo (Ryzen AI Max 395) ist ein hochspeicheriger APU in Mini-PCs und Laptops. Sein RDNA-3.5-GPU betreibt Ollama über Vulkan unter Linux ohne zusätzliche Treiber — und seine 96 GB Unified Memory sind der Hardware-Vorteil, der 70B-Klasse-Modelle auf einem einzelnen Gerät ermöglicht.',
     toc: [
       { label: 'Ollama mit Vulkan einrichten', anchor: '#setup' },
@@ -191,9 +197,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Linux: Ollama erkennt Strix Halo Vulkan automatisch; OLLAMA_FLASH_ATTENTION=1 für lange Kontextsitzungen setzen',
           'Ryzen AI Max 395 (96 GB): Llama 70B Q4_K_M (~41 GB) und Qwen 32B Q4_K_M (~19 GB) gleichzeitig im Speicher',
+          'Kontext: kein hartes 64K-Limit — num_ctx legt ihn fest; 64K–96K sind komfortabel bei einem 30B-Modell, 128K+ ist speicherbegrenzt und langsamer auf Vulkan',
           'Windows-Vulkan-Pfad für Strix Halo ist experimentell; Linux ist die stabile Plattform für GPU-beschleunigtes Ollama',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -265,6 +272,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Mit 96 GB Unified Memory nimmt der Ryzen AI Max 395 Llama 3.3 70B bei Q4_K_M (~41 GB) oder Qwen 3 72B bei Q4_K_M (~43 GB) auf, jeweils noch mit Speicherreserve. Für sehr große Modelle passt Qwen 3 72B bei Q5_K_M (~55 GB) ebenfalls, obwohl die Geschwindigkeit auf etwa 2 tok/s sinkt. Modelle, die über 90 GB benötigen (z. B. 70B bei Q8_0), überschreiten den verfügbaren Pool.',
           },
           {
+            q: 'Welches Kontextfenster schafft Strix Halo in Ollama — gibt es ein 64K-Limit?',
+            a: 'Es gibt kein hartes 64K-Token-Limit; die Obergrenze ist Ihr Unified Memory. Auf einem 96-GB-Ryzen AI Max 395 betreibt ein 30B-Modell bei Q4_K_M bequem einen Kontext von 64K–96K (etwa 36–45 GB gesamt für Gewichte plus KV-Cache). Legen Sie die Größe mit Ollamas num_ctx-Parameter (oder der Umgebungsvariable OLLAMA_CONTEXT_LENGTH) fest und behalten Sie OLLAMA_FLASH_ATTENTION=1 bei, um den KV-Cache-Speicher zu reduzieren. Sie können auf 128K–200K gehen, aber es wird speicherbegrenzt (~50–70 GB) und die Prompt-Verarbeitung verlangsamt sich auf dem Vulkan/RADV-Backend — ein optimierter ROCm-Build ist bei sehr langem Kontext etwa 3× schneller (rund 51 vs. 17 tok/s Prompt-Verarbeitung jenseits von ~130K).',
+          },
+          {
             q: 'Wie schneidet Strix Halo im Vergleich zu Mac Studio M4 Ultra für Ollama ab?',
             a: 'Mac Studio M4 Ultra verfügt über 192 GB Unified Memory und verwendet Metal-Beschleunigung via llama.cpp — deutlich schneller als Strix Halo Vulkan auf Token-Basis (~12 tok/s bei 70B Q4_K_M vs. ~3 tok/s auf Strix Halo). Für Inferenzqualität und -geschwindigkeit bei großen Modellen gewinnt M4 Ultra. Strix Halo ist nur im 8B–32B-Bereich wettbewerbsfähig und läuft auf einem Standard-Linux-Workflow.',
           },
@@ -284,15 +295,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan : configuration et performances',
-    seoTitle: 'Strix Halo Ollama Vulkan Configuration 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU) : 96 Go de mémoire unifiée, fait tourner les modèles 70B via Ollama Vulkan sous Linux. ~22 tok/s sur Llama 3.3 8B. Réponse rapide de PromptQuorum.',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan : limite de contexte 2026',
+    metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan : pas de plafond de contexte 64K — 64K–96K sont sûrs pour un modèle 30B (~40 Go), 128K+ est limité par la mémoire. Configuration, modèles, tok/s.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     affiliateDisclosure: true,
     audience: 'Utilisateurs Linux disposant d\'un Ryzen AI Max 395 (Strix Halo) souhaitant configurer l\'inférence LLM locale accélérée GPU via Ollama Vulkan',
     readTime: '4 min de lecture',
-    leadAnswerBlock: 'Oui — Ryzen AI Max 395 (Strix Halo) fait tourner Ollama avec accélération GPU via le backend Vulkan sous Linux. Installez le binaire Ollama standard, vérifiez la détection GPU avec ollama ps et définissez OLLAMA_FLASH_ATTENTION=1 pour les grands modèles. Le pool de 96 Go de mémoire unifiée permet de faire tourner des modèles 70B impossibles sur tout GPU de bureau unique.',
+    leadAnswerBlock: 'Oui — Ryzen AI Max 395 (Strix Halo) fait tourner Ollama avec accélération GPU via le backend Vulkan sous Linux. Installez le binaire Ollama standard, vérifiez la détection GPU avec ollama ps et définissez OLLAMA_FLASH_ATTENTION=1 pour les grands modèles. Le pool de 96 Go de mémoire unifiée permet de faire tourner des modèles 70B impossibles sur tout GPU de bureau unique. Côté contexte, il n\'y a pas de limite stricte à 64K — le plafond est la mémoire : définissez-le avec le num_ctx d\'Ollama, faites tourner un modèle 30B confortablement à 64K–96K de contexte (~36–45 Go au total) et ne montez à 128K–200K que si vous avez de la mémoire disponible (c\'est limité par la mémoire et plus lent sur Vulkan ; un build ROCm optimisé est ~3× plus rapide sur un contexte très long).',
     intro: 'Strix Halo (Ryzen AI Max 395) est un APU haute mémoire présent dans les mini PC et laptops. Son GPU RDNA 3.5 fait tourner Ollama via Vulkan sous Linux sans pilotes supplémentaires — et ses 96 Go de mémoire unifiée sont l\'avantage matériel qui rend les modèles de classe 70B viables sur un seul appareil.',
     toc: [
       { label: 'Comment configurer Ollama avec Vulkan', anchor: '#setup' },
@@ -307,9 +319,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Linux : Ollama détecte automatiquement Strix Halo Vulkan ; définissez OLLAMA_FLASH_ATTENTION=1 pour les sessions de long contexte',
           'Ryzen AI Max 395 (96 Go) : charge Llama 70B Q4_K_M (~41 Go) et Qwen 32B Q4_K_M (~19 Go) simultanément',
+          'Contexte : pas de plafond strict à 64K — num_ctx le définit ; 64K–96K sont confortables sur un modèle 30B, 128K+ est limité par la mémoire et plus lent sur Vulkan',
           'Le chemin Vulkan Windows pour Strix Halo est expérimental ; Linux est la plateforme stable pour Ollama accéléré GPU',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -381,6 +394,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Avec 96 Go de mémoire unifiée, le Ryzen AI Max 395 accueille Llama 3.3 70B à Q4_K_M (~41 Go) ou Qwen 3 72B à Q4_K_M (~43 Go), chacun avec de la mémoire disponible. Pour les très grands modèles, Qwen 3 72B à Q5_K_M (~55 Go) tient également, bien que la vitesse chute à environ 2 tok/s. Les modèles nécessitant plus de 90 Go (ex. 70B à Q8_0) dépassent le pool disponible.',
           },
           {
+            q: 'Quelle fenêtre de contexte Strix Halo gère-t-il dans Ollama — y a-t-il une limite de 64K ?',
+            a: 'Il n\'y a pas de limite stricte de 64K tokens ; le plafond est votre mémoire unifiée. Sur un Ryzen AI Max 395 de 96 Go, un modèle 30B en Q4_K_M fait tourner confortablement un contexte de 64K–96K (environ 36–45 Go au total pour les poids plus le KV-cache). Définissez la taille avec le paramètre num_ctx d\'Ollama (ou la variable d\'environnement OLLAMA_CONTEXT_LENGTH) et gardez OLLAMA_FLASH_ATTENTION=1 pour réduire la mémoire du KV-cache. Vous pouvez monter à 128K–200K, mais cela devient limité par la mémoire (~50–70 Go) et le traitement du prompt ralentit sur le backend Vulkan/RADV — un build ROCm optimisé est environ 3× plus rapide sur un contexte très long (environ 51 contre 17 tok/s de traitement du prompt au-delà de ~130K).',
+          },
+          {
             q: 'Comment Strix Halo se compare-t-il au Mac Studio M4 Ultra pour Ollama ?',
             a: 'Mac Studio M4 Ultra dispose de 192 Go de mémoire unifiée et utilise l\'accélération Metal via llama.cpp — significativement plus rapide que Strix Halo Vulkan en tokens par seconde (~12 tok/s sur 70B Q4_K_M vs ~3 tok/s sur Strix Halo). Pour la qualité et la vitesse d\'inférence sur les grands modèles, M4 Ultra l\'emporte. Strix Halo est compétitif uniquement dans la gamme 8B–32B et fonctionne avec un workflow Linux standard.',
           },
@@ -400,15 +417,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：セットアップとパフォーマンス',
-    seoTitle: 'Strix Halo Ollama Vulkan セットアップ 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395（Strix Halo、40 CU）：96 GB ユニファイドメモリ、Linux上でOllama Vulkan経由で70Bモデルを実行。Llama 3.3 8Bで~22 tok/s。PromptQuorumによる簡潔な回答。',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan：コンテキスト上限と設定 2026',
+    metaDescription: 'Strix Halo（Ryzen AI Max+ 395）+ Ollama Vulkan：64Kの固定コンテキスト上限なし — 30Bモデルでは64K–96Kが安全（~40 GB）、128K+はメモリ制約。設定、モデル、tok/s。',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     affiliateDisclosure: true,
     audience: 'Ryzen AI Max 395（Strix Halo）搭載デバイスでOllama VulkanによるGPU加速LLM推論を設定したいLinuxユーザー',
     readTime: '4分で読める',
-    leadAnswerBlock: 'はい — Ryzen AI Max 395（Strix Halo）はLinux上でVulkanバックエンド経由のGPU加速でOllamaを動作させます。標準のOllamaバイナリをインストールし、ollama psでGPU検出を確認し、大型モデルにはOLLAMA_FLASH_ATTENTION=1を設定してください。96 GBのユニファイドメモリプールにより、デスクトップGPU単体では不可能な70Bモデルが実行できます。',
+    leadAnswerBlock: 'はい — Ryzen AI Max 395（Strix Halo）はLinux上でVulkanバックエンド経由のGPU加速でOllamaを動作させます。標準のOllamaバイナリをインストールし、ollama psでGPU検出を確認し、大型モデルにはOLLAMA_FLASH_ATTENTION=1を設定してください。96 GBのユニファイドメモリプールにより、デスクトップGPU単体では不可能な70Bモデルが実行できます。コンテキストについては64Kの固定上限はなく、上限はメモリです：Ollamaのnum_ctxで設定し、30Bモデルを64K–96Kコンテキストで快適に実行でき（合計~36–45 GB）、メモリに余裕がある場合のみ128K–200Kまで拡張します（メモリ制約がありVulkanでは低速になります。最適化されたROCmビルドは非常に長いコンテキストで~3倍高速です）。',
     intro: 'Strix Halo（Ryzen AI Max 395）はミニPCやノートPCに搭載される大容量メモリAPUです。RDNA 3.5 GPUは追加ドライバなしでLinux上のOllama VulkanをサポートしてくれているものKの、96 GBユニファイドメモリが1台のデバイスで70Bクラスモデルを可能にするハードウェア上の優位点です。',
     toc: [
       { label: 'Ollama with Vulkanの設定方法', anchor: '#setup' },
@@ -423,9 +441,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Linux：OllamaはStrix Halo Vulkanを自動検出；長いコンテキストセッションにはOLLAMA_FLASH_ATTENTION=1を設定',
           'Ryzen AI Max 395（96 GB）：Llama 70B Q4_K_M（~41 GB）とQwen 32B Q4_K_M（~19 GB）を同時にメモリに格納可能',
+          'コンテキスト：64Kの固定上限なし — num_ctxで設定；30Bモデルでは64K–96Kが快適、128K+はメモリ制約がありVulkanでは低速',
           'Windows向けStrix Halo Vulkanパスは実験的；GPU加速Ollamaの安定プラットフォームはLinux',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -497,6 +516,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: '96 GBのユニファイドメモリで、Ryzen AI Max 395はLlama 3.3 70B（Q4_K_M、~41 GB）またはQwen 3 72B（Q4_K_M、~43 GB）を格納でき、それぞれメモリに余裕があります。非常に大きなモデルの場合、Qwen 3 72B（Q5_K_M、~55 GB）も収まりますが、速度は約2 tok/sに低下します。90 GB以上が必要なモデル（例：70B at Q8_0）は利用可能なプールを超えます。',
           },
           {
+            q: 'Strix HaloはOllamaでどのくらいのコンテキストウィンドウを扱えますか — 64Kの制限はありますか？',
+            a: '64Kトークンの固定上限はなく、上限はユニファイドメモリです。96 GBのRyzen AI Max 395では、Q4_K_Mの30Bモデルが64K–96Kコンテキストを快適に実行します（重みとKVキャッシュで合計およそ36–45 GB）。サイズはOllamaのnum_ctxパラメータ（またはOLLAMA_CONTEXT_LENGTH環境変数）で設定し、KVキャッシュのメモリを削減するためにOLLAMA_FLASH_ATTENTION=1を維持してください。128K–200Kまで拡張できますが、メモリ制約（~50–70 GB）となり、Vulkan/RADVバックエンドではプロンプト処理が遅くなります — 最適化されたROCmビルドは非常に長いコンテキストで約3倍高速です（~130K超でプロンプト処理が約51対17 tok/s）。',
+          },
+          {
             q: 'OllamaにおいてStrix HaloとMac Studio M4 Ultraはどう比較されますか？',
             a: 'Mac Studio M4 Ultraは192 GBのユニファイドメモリを持ち、llama.cpp経由でMetal加速を使用します — トークン毎秒ベースでStrix Halo Vulkanより大幅に高速（70B Q4_K_Mで~12 tok/s対Strix Haloの~3 tok/s）。大型モデルの推論品質と速度ではM4 Ultraが優れています。Strix Haloは8B〜32Bの範囲でのみ競争力があり、標準的なLinuxワークフローで動作します。',
           },
@@ -516,15 +539,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：配置与性能',
-    seoTitle: 'Strix Halo Ollama Vulkan 配置 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395（Strix Halo，40 CU）：96 GB 统一内存，在 Linux 上通过 Ollama Vulkan 运行 70B 模型。Llama 3.3 8B 约 22 tok/s。PromptQuorum 快速解答。',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan：上下文上限与配置 2026',
+    metaDescription: 'Strix Halo（Ryzen AI Max+ 395）+ Ollama Vulkan：无 64K 硬性上下文上限——30B 模型 64K–96K 安全（~40 GB），128K+ 受内存限制。配置、模型、tok/s。',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     affiliateDisclosure: true,
     audience: '希望通过 Ollama Vulkan 在 Linux 上配置 GPU 加速本地 LLM 推理的 Ryzen AI Max 395（Strix Halo）设备用户',
     readTime: '4 分钟阅读',
-    leadAnswerBlock: '可以——Ryzen AI Max 395（Strix Halo）在 Linux 上通过 Vulkan 后端以 GPU 加速运行 Ollama。安装标准 Ollama 二进制文件，用 ollama ps 验证 GPU 检测，并为大型模型设置 OLLAMA_FLASH_ATTENTION=1。96 GB 统一内存池让您可以运行任何单块桌面显卡都无法支持的 70B 模型。',
+    leadAnswerBlock: '可以——Ryzen AI Max 395（Strix Halo）在 Linux 上通过 Vulkan 后端以 GPU 加速运行 Ollama。安装标准 Ollama 二进制文件，用 ollama ps 验证 GPU 检测，并为大型模型设置 OLLAMA_FLASH_ATTENTION=1。96 GB 统一内存池让您可以运行任何单块桌面显卡都无法支持的 70B 模型。在上下文方面没有 64K 的硬性上限——上限取决于内存：用 Ollama 的 num_ctx 设置，30B 模型可在 64K–96K 上下文下舒适运行（总计 ~36–45 GB），仅在内存有余时才推至 128K–200K（此时受内存限制，在 Vulkan 上更慢；经过调优的 ROCm 构建在超长上下文下约快 3 倍）。',
     intro: 'Strix Halo（Ryzen AI Max 395）是一款搭载于迷你电脑和笔记本中的高内存 APU。其 RDNA 3.5 GPU 无需额外驱动即可在 Linux 上通过 Vulkan 运行 Ollama——96 GB 统一内存是让 70B 级别模型在单台设备上成为可能的硬件优势。',
     toc: [
       { label: '如何使用 Vulkan 运行 Ollama', anchor: '#setup' },
@@ -539,9 +563,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Linux：Ollama 自动检测 Strix Halo Vulkan；长上下文会话请设置 OLLAMA_FLASH_ATTENTION=1',
           'Ryzen AI Max 395（96 GB）：可同时在内存中加载 Llama 70B Q4_K_M（~41 GB）和 Qwen 32B Q4_K_M（~19 GB）',
+          '上下文：无 64K 硬性上限——由 num_ctx 设置；30B 模型 64K–96K 舒适，128K+ 受内存限制且在 Vulkan 上更慢',
           'Windows Strix Halo Vulkan 路径为实验性；Linux 是 GPU 加速 Ollama 的稳定平台',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -613,6 +638,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: '拥有 96 GB 统一内存，Ryzen AI Max 395 可容纳 Llama 3.3 70B（Q4_K_M，~41 GB）或 Qwen 3 72B（Q4_K_M，~43 GB），各有剩余内存。对于非常大的模型，Qwen 3 72B（Q5_K_M，~55 GB）也可以放入，但速度降至约 2 tok/s。需要超过 90 GB 的模型（如 70B at Q8_0）超出可用池。',
           },
           {
+            q: 'Strix Halo 在 Ollama 中能处理多大的上下文窗口——有 64K 限制吗？',
+            a: '没有 64K token 的硬性上限；上限取决于您的统一内存。在 96 GB 的 Ryzen AI Max 395 上，Q4_K_M 的 30B 模型可舒适运行 64K–96K 上下文（权重加 KV 缓存合计约 36–45 GB）。用 Ollama 的 num_ctx 参数（或 OLLAMA_CONTEXT_LENGTH 环境变量）设置大小，并保持 OLLAMA_FLASH_ATTENTION=1 以减少 KV 缓存内存。您可以推至 128K–200K，但会变为受内存限制（~50–70 GB），且提示处理在 Vulkan/RADV 后端上变慢——经过调优的 ROCm 构建在超长上下文下约快 3 倍（超过 ~130K 时提示处理约 51 对比 17 tok/s）。',
+          },
+          {
             q: 'Strix Halo 与 Mac Studio M4 Ultra 在 Ollama 上如何比较？',
             a: 'Mac Studio M4 Ultra 拥有 192 GB 统一内存，通过 llama.cpp 使用 Metal 加速——每 token 速度显著快于 Strix Halo Vulkan（70B Q4_K_M 约 12 tok/s 对比 Strix Halo 的约 3 tok/s）。在大型模型推理质量和速度方面，M4 Ultra 占优。Strix Halo 仅在 8B–32B 范围内具有竞争力，并运行标准 Linux 工作流。',
           },
@@ -632,15 +661,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   pt: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuração e desempenho',
-    seoTitle: 'Strix Halo Ollama Vulkan: configuração 2026 | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB unificados, executa modelos 70B via Ollama Vulkan no Linux. ~22 tok/s com Llama 3.3 8B. Resposta rápida.',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan: limite de contexto e config 2026',
+    metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: sem limite fixo de contexto de 64K — 64K–96K são seguros para um modelo 30B (~40 GB), 128K+ é limitado pela memória. Configuração, modelos, tok/s.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     affiliateDisclosure: true,
     audience: 'Usuários Linux com um dispositivo Ryzen AI Max 395 (Strix Halo) querendo configurar inferência LLM local com aceleração GPU via Ollama Vulkan',
     readTime: '4 min de leitura',
-    leadAnswerBlock: 'Sim — Ryzen AI Max 395 (Strix Halo) executa Ollama com aceleração GPU via o backend Vulkan no Linux. Instale o binário padrão do Ollama, verifique a detecção de GPU com ollama ps e configure OLLAMA_FLASH_ATTENTION=1 para modelos grandes. O pool de 96 GB de memória unificada permite executar modelos 70B impossíveis em qualquer GPU desktop individual.',
+    leadAnswerBlock: 'Sim — Ryzen AI Max 395 (Strix Halo) executa Ollama com aceleração GPU via o backend Vulkan no Linux. Instale o binário padrão do Ollama, verifique a detecção de GPU com ollama ps e configure OLLAMA_FLASH_ATTENTION=1 para modelos grandes. O pool de 96 GB de memória unificada permite executar modelos 70B impossíveis em qualquer GPU desktop individual. Quanto ao contexto, não há limite fixo de 64K — o teto é a memória: defina-o com o num_ctx do Ollama, execute um modelo 30B confortavelmente com 64K–96K de contexto (~36–45 GB no total) e só avance para 128K–200K quando tiver memória sobrando (é limitado pela memória e mais lento no Vulkan; um build ROCm otimizado é ~3× mais rápido em contexto muito longo).',
     intro: 'Strix Halo (Ryzen AI Max 395) é uma APU de alta memória encontrada em mini PCs e laptops. Sua GPU RDNA 3.5 executa Ollama via Vulkan no Linux sem drivers adicionais — e seus 96 GB de memória unificada são a vantagem de hardware que torna os modelos de classe 70B viáveis em um único dispositivo.',
     toc: [
       { label: 'Como executar Ollama com Vulkan', anchor: '#setup' },
@@ -729,6 +759,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Com 96 GB de memória unificada, o Ryzen AI Max 395 cabe Llama 3.3 70B em Q4_K_M (~41 GB) ou Qwen 3 72B em Q4_K_M (~43 GB), cada um com memória sobrando. Para modelos muito grandes, Qwen 3 72B em Q5_K_M (~55 GB) também cabe, embora a velocidade caia para aproximadamente 2 tok/s. Modelos que requerem mais de 90 GB (ex.: 70B em Q8_0) excedem o pool disponível.',
           },
           {
+            q: 'Qual janela de contexto o Strix Halo consegue no Ollama — existe um limite de 64K?',
+            a: 'Não há limite fixo de 64K tokens; o teto é a sua memória unificada. Em um Ryzen AI Max 395 de 96 GB, um modelo 30B em Q4_K_M roda confortavelmente um contexto de 64K–96K (cerca de 36–45 GB no total, para os pesos mais o KV-cache). Defina o tamanho com o parâmetro num_ctx do Ollama (ou a variável de ambiente OLLAMA_CONTEXT_LENGTH) e mantenha OLLAMA_FLASH_ATTENTION=1 para reduzir a memória do KV-cache. Você pode avançar para 128K–200K, mas isso passa a ser limitado pela memória (~50–70 GB) e o processamento do prompt fica mais lento no backend Vulkan/RADV — um build ROCm otimizado é cerca de 3× mais rápido em contexto muito longo (cerca de 51 contra 17 tok/s de processamento de prompt acima de ~130K).',
+          },
+          {
             q: 'Como Strix Halo se compara ao Mac Studio M4 Ultra para Ollama?',
             a: 'Mac Studio M4 Ultra tem 192 GB de memória unificada e usa aceleração Metal via llama.cpp — significativamente mais rápido que Strix Halo Vulkan por token (~12 tok/s em 70B Q4_K_M vs ~3 tok/s no Strix Halo). Para qualidade e velocidade de inferência em modelos grandes, M4 Ultra vence. Strix Halo é competitivo apenas na faixa de 8B–32B e roda em um fluxo de trabalho Linux padrão.',
           },
@@ -748,15 +782,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuración y rendimiento',
-    seoTitle: 'Strix Halo Ollama Vulkan: configuración 2026 | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB unificados, ejecuta modelos 70B vía Ollama Vulkan en Linux. ~22 tok/s con Llama 3.3 8B. Respuesta rápida.',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan: límite de contexto y config 2026',
+    metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: sin límite fijo de contexto de 64K — 64K–96K son seguros para un modelo 30B (~40 GB), 128K+ está limitado por la memoria. Configuración, modelos, tok/s.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     affiliateDisclosure: true,
     audience: 'Usuarios de Linux con un dispositivo Ryzen AI Max 395 (Strix Halo) que quieren configurar inferencia LLM local con aceleración GPU vía Ollama Vulkan',
     readTime: '4 min de lectura',
-    leadAnswerBlock: 'Sí — Ryzen AI Max 395 (Strix Halo) ejecuta Ollama con aceleración GPU vía el backend Vulkan en Linux. Instala el binario estándar de Ollama, verifica la detección de GPU con ollama ps y configura OLLAMA_FLASH_ATTENTION=1 para modelos grandes. El pool de 96 GB de memoria unificada permite ejecutar modelos 70B imposibles en cualquier GPU de escritorio individual.',
+    leadAnswerBlock: 'Sí — Ryzen AI Max 395 (Strix Halo) ejecuta Ollama con aceleración GPU vía el backend Vulkan en Linux. Instala el binario estándar de Ollama, verifica la detección de GPU con ollama ps y configura OLLAMA_FLASH_ATTENTION=1 para modelos grandes. El pool de 96 GB de memoria unificada permite ejecutar modelos 70B imposibles en cualquier GPU de escritorio individual. En cuanto al contexto, no hay un límite fijo de 64K — el techo es la memoria: defínelo con el num_ctx de Ollama, ejecuta un modelo 30B cómodamente con 64K–96K de contexto (~36–45 GB en total) y solo sube a 128K–200K cuando tengas memoria de sobra (está limitado por la memoria y es más lento en Vulkan; un build ROCm optimizado es ~3× más rápido en contexto muy largo).',
     intro: 'Strix Halo (Ryzen AI Max 395) es una APU de alta memoria que se encuentra en mini PCs y laptops. Su GPU RDNA 3.5 ejecuta Ollama vía Vulkan en Linux sin controladores adicionales — y sus 96 GB de memoria unificada son la ventaja de hardware que hace viables los modelos de clase 70B en un único dispositivo.',
     toc: [
       { label: 'Cómo ejecutar Ollama con Vulkan', anchor: '#setup' },
@@ -845,6 +880,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Con 96 GB de memoria unificada, el Ryzen AI Max 395 carga Llama 3.3 70B en Q4_K_M (~41 GB) o Qwen 3 72B en Q4_K_M (~43 GB), cada uno con memoria disponible. Para modelos muy grandes, Qwen 3 72B en Q5_K_M (~55 GB) también cabe, aunque la velocidad baja a aproximadamente 2 tok/s. Los modelos que requieren más de 90 GB (p. ej., 70B en Q8_0) superan el pool disponible.',
           },
           {
+            q: '¿Qué ventana de contexto maneja Strix Halo en Ollama — hay un límite de 64K?',
+            a: 'No hay un límite fijo de 64K tokens; el techo es tu memoria unificada. En un Ryzen AI Max 395 de 96 GB, un modelo 30B en Q4_K_M ejecuta cómodamente un contexto de 64K–96K (aproximadamente 36–45 GB en total para los pesos más el KV-cache). Define el tamaño con el parámetro num_ctx de Ollama (o la variable de entorno OLLAMA_CONTEXT_LENGTH) y mantén OLLAMA_FLASH_ATTENTION=1 para reducir la memoria del KV-cache. Puedes subir a 128K–200K, pero pasa a estar limitado por la memoria (~50–70 GB) y el procesamiento del prompt se ralentiza en el backend Vulkan/RADV — un build ROCm optimizado es aproximadamente 3× más rápido en contexto muy largo (alrededor de 51 frente a 17 tok/s de procesamiento de prompt más allá de ~130K).',
+          },
+          {
             q: '¿Cómo se compara Strix Halo con Mac Studio M4 Ultra para Ollama?',
             a: 'Mac Studio M4 Ultra tiene 192 GB de memoria unificada y usa aceleración Metal vía llama.cpp — significativamente más rápido que Strix Halo Vulkan por token (~12 tok/s en 70B Q4_K_M frente a ~3 tok/s en Strix Halo). Para calidad y velocidad de inferencia en modelos grandes, M4 Ultra gana. Strix Halo solo es competitivo en el rango de 8B–32B y funciona con un flujo de trabajo Linux estándar.',
           },
@@ -864,15 +903,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware-Specific',
     title: '⁨Strix Halo⁩ (⁨Ryzen AI Max⁩) + ⁨Ollama Vulkan⁩: الإعداد والأداء',
-    seoTitle: '⁨Strix Halo Ollama Vulkan⁩ على ⁨Linux 2026⁩: إعداد وأداء',
-    metaDescription: '⁨Ryzen AI Max 395⁩ (⁨Strix Halo⁩) يحمل ⁨96 GB⁩ ذاكرة موحدة ويشغّل ⁨Llama 70B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama Vulkan⁩ على ⁨Linux⁩. سرعة ~⁨22 tok/s⁩ مع ⁨Llama 3.3 8B⁩.',
+    dateModified: '2026-07-01',
+    seoTitle: '⁨Strix Halo Ollama Vulkan⁩: حد السياق والإعداد ⁨2026⁩',
+    metaDescription: '⁨Strix Halo⁩ (⁨Ryzen AI Max+ 395⁩) + ⁨Ollama Vulkan⁩: لا حد ثابت للسياق عند ⁨64K⁩ — نطاق ⁨64K–96K⁩ آمن لنموذج ⁨30B⁩ (~⁨40 GB⁩)، و⁨128K+⁩ محدود بالذاكرة. الإعداد والنماذج و⁨tok/s⁩.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     affiliateDisclosure: true,
     audience: 'مستخدمو Linux مع جهاز Ryzen AI Max 395 (Strix Halo) الراغبون في إعداد استنتاج نماذج اللغة المحلية بتسريع GPU عبر Ollama Vulkan',
     readTime: 'قراءة 4 دقائق',
-    leadAnswerBlock: 'نعم — Ryzen AI Max 395 (Strix Halo) يشغّل Ollama بتسريع GPU عبر الواجهة الخلفية Vulkan على Linux. ثبّت ملف Ollama القياسي، تحقق من اكتشاف GPU بـ ollama ps وضع OLLAMA_FLASH_ATTENTION=1 للنماذج الكبيرة. تتيح قدرة 96 GB من الذاكرة الموحدة تشغيل نماذج 70B المستحيلة على أي GPU مكتبية منفردة.',
+    leadAnswerBlock: 'نعم — Ryzen AI Max 395 (Strix Halo) يشغّل Ollama بتسريع GPU عبر الواجهة الخلفية Vulkan على Linux. ثبّت ملف Ollama القياسي، تحقق من اكتشاف GPU بـ ollama ps وضع OLLAMA_FLASH_ATTENTION=1 للنماذج الكبيرة. تتيح قدرة 96 GB من الذاكرة الموحدة تشغيل نماذج 70B المستحيلة على أي GPU مكتبية منفردة. أما بالنسبة للسياق فلا يوجد حد ثابت عند 64K — السقف هو الذاكرة: اضبطه بـ num_ctx في Ollama، وشغّل نموذج 30B بأريحية بسياق 64K–96K (~36–45 GB إجمالًا)، ولا ترتفع إلى 128K–200K إلا حين تتوفر ذاكرة فائضة (فهو محدود بالذاكرة وأبطأ على Vulkan؛ وبناء ROCm المُحسَّن أسرع بنحو 3× في السياق الطويل جدًا).',
     intro: 'Strix Halo (Ryzen AI Max 395) وحدة معالجة متقدمة عالية الذاكرة موجودة في أجهزة الحاسوب المصغرة والحواسيب المحمولة. تشغّل وحدة GPU RDNA 3.5 فيها Ollama عبر Vulkan على Linux بدون تعريفات إضافية — وتُعدّ 96 GB من الذاكرة الموحدة الميزة الجوهرية التي تجعل نماذج فئة 70B عملية على جهاز واحد.',
     toc: [
       { label: 'كيفية تشغيل Ollama مع Vulkan', anchor: '#setup' },
@@ -961,6 +1001,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'بـ 96 GB من الذاكرة الموحدة، يستوعب Ryzen AI Max 395 نموذج Llama 3.3 70B بـ Q4_K_M (~41 GB) أو Qwen 3 72B بـ Q4_K_M (~43 GB)، كل منهما مع ذاكرة متبقية. للنماذج الأكبر جدًا، يتسع Qwen 3 72B بـ Q5_K_M (~55 GB) أيضًا، وإن انخفضت السرعة إلى حوالي 2 tok/s. تتجاوز النماذج التي تتطلب أكثر من 90 GB (مثل 70B بـ Q8_0) المجمع المتاح.',
           },
           {
+            q: 'ما نافذة السياق التي يتحملها Strix Halo في Ollama — هل هناك حد 64K؟',
+            a: 'لا يوجد حد ثابت عند 64K رمز؛ السقف هو ذاكرتك الموحدة. على Ryzen AI Max 395 بسعة 96 GB، يشغّل نموذج 30B بـ Q4_K_M سياق 64K–96K بأريحية (نحو 36–45 GB إجمالًا للأوزان مع KV-cache). اضبط الحجم بمعامل num_ctx في Ollama (أو متغير البيئة OLLAMA_CONTEXT_LENGTH) وأبقِ OLLAMA_FLASH_ATTENTION=1 لتقليل ذاكرة KV-cache. يمكنك الارتفاع إلى 128K–200K، لكنه يصبح محدودًا بالذاكرة (~50–70 GB) وتتباطأ معالجة الموجّه على الواجهة الخلفية Vulkan/RADV — وبناء ROCm المُحسَّن أسرع بنحو 3× في السياق الطويل جدًا (نحو 51 مقابل 17 tok/s لمعالجة الموجّه بعد ~130K).',
+          },
+          {
             q: 'كيف يُقارَن Strix Halo بـ Mac Studio M4 Ultra لـ Ollama؟',
             a: 'يمتلك Mac Studio M4 Ultra ذاكرة موحدة بحجم 192 GB ويستخدم تسريع Metal عبر llama.cpp — أسرع بشكل ملحوظ من Strix Halo Vulkan لكل رمز (~12 tok/s على 70B Q4_K_M مقابل ~3 tok/s على Strix Halo). في جودة وسرعة استنتاج النماذج الكبيرة، يفوز M4 Ultra. Strix Halo تنافسي فقط في نطاق 8B–32B ويعمل بسير عمل Linux قياسي.',
           },
@@ -980,8 +1024,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ko: {
     theme: 'Hardware-Specific',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: 설정 및 성능',
-    seoTitle: 'Strix Halo Ollama Vulkan 설정 2026 | PromptQuorum',
-    metaDescription: 'Ryzen AI Max 395 (Strix Halo, 40 CU): 96 GB 통합 메모리, Linux에서 Ollama Vulkan으로 70B 모델 실행. Llama 3.3 8B에서 ~22 tok/s. 빠른 답변.',
+    dateModified: '2026-07-01',
+    seoTitle: 'Strix Halo Ollama Vulkan: 컨텍스트 한도 및 설정 2026',
+    metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: 고정 64K 컨텍스트 한도 없음 — 30B 모델은 64K–96K가 안전(~40 GB), 128K+는 메모리 제약. 설정, 모델, tok/s.',
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
@@ -995,7 +1040,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'Ryzen AI Max 395 LLM 추론',
       'Ollama Vulkan Linux AMD APU',
     ],
-    leadAnswerBlock: '예 — Ryzen AI Max 395 (Strix Halo)는 Linux에서 Vulkan 백엔드를 통해 GPU 가속으로 Ollama를 실행합니다. 표준 Ollama 바이너리를 설치하고, ollama ps로 GPU 감지를 확인한 후, 대형 모델 세션에는 OLLAMA_FLASH_ATTENTION=1을 설정하십시오. 96 GB 통합 메모리 풀을 통해 단일 데스크톱 GPU로는 불가능한 70B 모델을 실행할 수 있습니다.',
+    leadAnswerBlock: '예 — Ryzen AI Max 395 (Strix Halo)는 Linux에서 Vulkan 백엔드를 통해 GPU 가속으로 Ollama를 실행합니다. 표준 Ollama 바이너리를 설치하고, ollama ps로 GPU 감지를 확인한 후, 대형 모델 세션에는 OLLAMA_FLASH_ATTENTION=1을 설정하십시오. 96 GB 통합 메모리 풀을 통해 단일 데스크톱 GPU로는 불가능한 70B 모델을 실행할 수 있습니다. 컨텍스트에는 고정 64K 한도가 없으며 상한은 메모리입니다: Ollama의 num_ctx로 설정하고, 30B 모델을 64K–96K 컨텍스트에서 편안하게 실행하며(총 ~36–45 GB), 메모리 여유가 있을 때만 128K–200K로 올리십시오(메모리 제약이 있고 Vulkan에서 더 느립니다. 튜닝된 ROCm 빌드는 매우 긴 컨텍스트에서 약 3배 빠릅니다).',
     intro: 'Strix Halo (Ryzen AI Max 395)는 미니 PC와 노트북에서 발견되는 고메모리 APU입니다. RDNA 3.5 GPU는 추가 드라이버 없이 Linux에서 Vulkan을 통해 Ollama를 실행합니다. 96 GB 통합 메모리는 단일 기기에서 70B급 모델을 실현 가능하게 하는 핵심 하드웨어 강점입니다.',
     toc: [
       { label: 'Vulkan으로 Ollama 실행하는 방법', anchor: '#setup' },
@@ -1097,6 +1142,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Ryzen AI Max 395에 맞는 가장 큰 모델은 무엇입니까?',
             a: '96 GB 통합 메모리로 Ryzen AI Max 395는 Q4_K_M의 Llama 3.3 70B (~41 GB) 또는 Q4_K_M의 Qwen 3 72B (~43 GB)를 남는 메모리와 함께 로드합니다. 매우 큰 모델의 경우 Q5_K_M의 Qwen 3 72B (~55 GB)도 가능하지만 속도는 약 2 tok/s로 낮아집니다. 90 GB 이상을 필요로 하는 모델(예: Q8_0의 70B)은 가용 풀을 초과합니다.',
+          },
+          {
+            q: 'Strix Halo는 Ollama에서 어느 정도의 컨텍스트 윈도우를 처리합니까 — 64K 한도가 있습니까?',
+            a: '고정 64K 토큰 한도는 없으며 상한은 통합 메모리입니다. 96 GB Ryzen AI Max 395에서 Q4_K_M의 30B 모델은 64K–96K 컨텍스트를 편안하게 실행합니다(가중치와 KV 캐시를 합쳐 총 약 36–45 GB). 크기는 Ollama의 num_ctx 매개변수(또는 OLLAMA_CONTEXT_LENGTH 환경 변수)로 설정하고, KV 캐시 메모리를 줄이기 위해 OLLAMA_FLASH_ATTENTION=1을 유지하십시오. 128K–200K로 올릴 수 있지만 메모리 제약(~50–70 GB)이 생기고 Vulkan/RADV 백엔드에서 프롬프트 처리가 느려집니다 — 튜닝된 ROCm 빌드는 매우 긴 컨텍스트에서 약 3배 빠릅니다(~130K를 넘어서면 프롬프트 처리 약 51 대 17 tok/s).',
           },
           {
             q: 'Ollama를 위한 Strix Halo와 Mac Studio M4 Ultra 비교는 어떻습니까?',

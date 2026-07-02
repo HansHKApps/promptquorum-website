@@ -4,11 +4,11 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    title: 'Best Budget AI Laptop Under $1,000 in 2026?',
-    seoTitle: 'Best Budget AI Laptop Under $1000 2026 | Prompt Bites',
-    metaDescription: 'Best budget AI laptop under $1,000: a Ryzen 7 + 16 GB RAM laptop runs small LLMs on CPU. For GPU inference, save for a MacBook Air instead.',
+    title: 'Best Budget AI Laptop Under $1,000 in 2026 (Local LLM & ML)?',
+    seoTitle: 'Best Budget AI Laptop Under $1000 2026: LLM & ML Picks',
+    metaDescription: 'Best budget AI laptops under $1,000 for local LLMs and machine learning: a 16 GB-RAM Ryzen 7 runs 7B models on CPU; discounted RTX 4050/4060 8 GB gaming laptops add GPU. RAM/VRAM matter most.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -19,8 +19,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/local-llms/best-laptops-local-llm',
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
-    leadAnswerBlock:
-      'The best budget AI laptop under $1,000 is a Ryzen 7 with 16 GB of RAM — it runs small LLMs (3B-8B at Q4) on CPU acceptably. For GPU-accelerated inference, the under-$1,000 tier is too tight; save for a MacBook Air M-series instead, which uses unified memory for much faster local LLM work.',
+      leadAnswerBlock:
+      'The best budget AI laptop under $1,000 for local LLMs and machine learning is a Ryzen 7 (or Core i7) with 16 GB of RAM — it runs small LLMs (3B–8B at Q4) on CPU acceptably (~3–7 tok/s). RAM and VRAM matter more than the chip name. If you want GPU acceleration, watch for discounted RTX 4050/4060 (8 GB) gaming laptops that occasionally dip under $1,000 on sale — 8 GB VRAM handles 7B–8B models; true RTX "AI laptops" mostly start around $1,249. For the fastest local LLM work per dollar, a MacBook Air M-series (just above this tier) uses unified memory to beat any sub-$1,000 Windows laptop.',
     toc: [
       { label: 'Best Pick: Ryzen 7 + 16 GB RAM Laptop', anchor: '#best-pick' },
       { label: 'Budget Laptop Options Compared', anchor: '#comparison' },
@@ -102,6 +102,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About Budget AI Laptops',
         faqs: [
           {
+            q: 'What is the best budget laptop for machine learning under $1,000?',
+            a: 'For learning ML and running local LLMs, prioritize memory over the GPU name: 16 GB of RAM minimum (32 GB if you can find it) and, ideally, an NVIDIA GPU with 8 GB of VRAM (RTX 4050/4060) for CUDA-accelerated small-model training and inference. Under $1,000 that usually means a discounted gaming laptop; a 16 GB-RAM Ryzen 7 / Core i7 without a discrete GPU still works for CPU-based learning and inference. For real training of larger models, use a cloud GPU (Colab, RunPod) rather than any sub-$1,000 laptop — the local machine is for prototyping.',
+          },
+          {
             q: 'Can a $700-1,000 laptop run local LLMs?',
             a: 'Yes, but on CPU. A Ryzen 7 (or Intel Core i7) with 16 GB of RAM runs 3B and 7-8B models at 3-7 tokens per second using llama.cpp or Ollama CPU mode. Slow for long generations, acceptable for short prompts.',
           },
@@ -132,12 +136,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    title: 'Bestes Budget-KI-Notebook unter 1.000 € im Jahr 2026?',
-    seoTitle: 'Bestes Budget-KI-Notebook unter 1.000 € 2026 | Prompt Bites',
+    title: 'Bestes Budget-KI-Notebook unter 1.000 € im Jahr 2026 (Lokales LLM & ML)?',
+    seoTitle: 'Budget-KI-Notebook unter 1.000 € 2026: LLM & ML',
     metaDescription:
-      'Bestes Budget-KI-Notebook unter 1.000 €: ein Ryzen 7 mit 16 GB RAM betreibt kleine LLMs auf der CPU. Für GPU-Inferenz lieber für ein MacBook Air sparen.',
+      'Beste Budget-KI-Notebooks unter 1.000 € für lokale LLMs und Machine Learning: ein Ryzen 7 mit 16 GB RAM betreibt 7B-Modelle auf der CPU; reduzierte RTX 4050/4060 8 GB Gaming-Notebooks bringen GPU. RAM/VRAM zählen am meisten.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -149,7 +153,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      'Das beste Budget-KI-Notebook unter 1.000 € ist ein Ryzen 7 mit 16 GB RAM — kleine LLMs (3B-8B bei Q4) laufen auf der CPU brauchbar. Für GPU-beschleunigte Inferenz ist die Klasse unter 1.000 € zu knapp; spare lieber für ein MacBook Air M-Serie, das mit Unified Memory deutlich schneller arbeitet.',
+      'Das beste Budget-KI-Notebook unter 1.000 € für lokale LLMs und Machine Learning ist ein Ryzen 7 (oder Core i7) mit 16 GB RAM — kleine LLMs (3B-8B bei Q4) laufen auf der CPU brauchbar (~3-7 tok/s). RAM und VRAM zählen mehr als der Chipname. Für GPU-Beschleunigung: reduzierte RTX 4050/4060 (8 GB) Gaming-Notebooks fallen im Angebot gelegentlich unter 1.000 € — 8 GB VRAM bewältigen 7B-8B-Modelle; echte RTX-„KI-Notebooks" starten meist bei etwa 1.200-1.300 €. Für das schnellste lokale LLM-Arbeiten pro Euro schlägt ein MacBook Air M-Serie (knapp über dieser Klasse) mit Unified Memory jedes Windows-Notebook unter 1.000 €.',
     toc: [
       { label: 'Top-Tipp: Ryzen 7 + 16 GB RAM Notebook', anchor: '#best-pick' },
       { label: 'Budget-Notebook-Optionen im Vergleich', anchor: '#comparison' },
@@ -231,6 +235,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Kurze Antworten zu Budget-KI-Notebooks',
         faqs: [
           {
+            q: 'Welches ist das beste Budget-Notebook für Machine Learning unter 1.000 €?',
+            a: 'Zum ML-Lernen und für lokale LLMs zählt der Speicher mehr als der GPU-Name: mindestens 16 GB RAM (32 GB, wenn verfügbar) und idealerweise eine NVIDIA-GPU mit 8 GB VRAM (RTX 4050/4060) für CUDA-beschleunigtes Training und Inferenz kleiner Modelle. Unter 1.000 € bedeutet das meist ein reduziertes Gaming-Notebook; ein Ryzen 7 / Core i7 mit 16 GB RAM ohne dedizierte GPU funktioniert weiterhin für CPU-basiertes Lernen und Inferenz. Für echtes Training größerer Modelle nutzen Sie eine Cloud-GPU (Colab, RunPod) statt eines Notebooks unter 1.000 € — der lokale Rechner dient dem Prototyping.',
+          },
+          {
             q: 'Kann ein 700-1.000 €-Notebook lokale LLMs ausführen?',
             a: 'Ja, aber auf der CPU. Ein Ryzen 7 (oder Intel Core i7) mit 16 GB RAM betreibt 3B- und 7-8B-Modelle bei 3-7 Tokens pro Sekunde via llama.cpp oder Ollama im CPU-Modus. Langsam für lange Generierungen, brauchbar für kurze Prompts.',
           },
@@ -261,12 +269,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    title: 'Meilleur ordinateur portable IA à moins de 1 000 € en 2026 ?',
-    seoTitle: 'Meilleur PC portable IA à moins de 1 000 € 2026 | Prompt Bites',
+    title: 'Meilleur PC portable IA à moins de 1 000 € en 2026 (LLM local & ML) ?',
+    seoTitle: 'PC portable IA à moins de 1 000 € 2026 : LLM & ML',
     metaDescription:
-      'Meilleur PC portable IA à moins de 1 000 € : un Ryzen 7 avec 16 Go de RAM fait tourner les petits LLM sur CPU. Pour le GPU, économiser pour un MacBook Air.',
+      'Meilleurs PC portables IA à moins de 1 000 € pour LLM locaux et machine learning : un Ryzen 7 avec 16 Go de RAM fait tourner les modèles 7B sur CPU ; les portables gaming RTX 4050/4060 8 Go en promo ajoutent le GPU. La RAM/VRAM prime.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -278,7 +286,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      "Le meilleur PC portable IA à moins de 1 000 € est un Ryzen 7 avec 16 Go de RAM — il fait tourner les petits LLM (3B-8B en Q4) sur CPU de façon acceptable. Pour l'inférence accélérée par GPU, le palier sous 1 000 € est trop juste ; économisez plutôt pour un MacBook Air série M, dont la mémoire unifiée rend le travail LLM local bien plus rapide.",
+      "Le meilleur PC portable IA à moins de 1 000 € pour les LLM locaux et le machine learning est un Ryzen 7 (ou Core i7) avec 16 Go de RAM — il fait tourner les petits LLM (3B-8B en Q4) sur CPU de façon acceptable (~3-7 tok/s). La RAM et la VRAM comptent plus que le nom de la puce. Pour l'accélération GPU, guettez les portables gaming RTX 4050/4060 (8 Go) en promo qui passent parfois sous 1 000 € — 8 Go de VRAM gèrent les modèles 7B-8B ; les vrais « PC portables IA » RTX démarrent surtout autour de 1 200-1 300 €. Pour le travail LLM local le plus rapide par euro, un MacBook Air série M (juste au-dessus de ce palier) et sa mémoire unifiée battent tout portable Windows à moins de 1 000 €.",
     toc: [
       { label: 'Meilleur choix : portable Ryzen 7 + 16 Go', anchor: '#best-pick' },
       { label: 'Comparatif des options budget', anchor: '#comparison' },
@@ -360,6 +368,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Réponses rapides sur les PC portables IA à petit budget',
         faqs: [
           {
+            q: 'Quel est le meilleur portable pour le machine learning à moins de 1 000 € ?',
+            a: "Pour apprendre le ML et faire tourner des LLM locaux, privilégiez la mémoire au nom du GPU : 16 Go de RAM minimum (32 Go si possible) et, idéalement, un GPU NVIDIA doté de 8 Go de VRAM (RTX 4050/4060) pour l'entraînement et l'inférence de petits modèles accélérés par CUDA. Sous 1 000 €, cela signifie généralement un portable gaming en promo ; un Ryzen 7 / Core i7 avec 16 Go de RAM sans GPU dédié reste utilisable pour l'apprentissage et l'inférence sur CPU. Pour l'entraînement réel de modèles plus grands, utilisez un GPU cloud (Colab, RunPod) plutôt qu'un portable à moins de 1 000 € — la machine locale sert au prototypage.",
+          },
+          {
             q: 'Un portable à 700-1 000 € peut-il faire tourner des LLM locaux ?',
             a: "Oui, mais sur CPU. Un Ryzen 7 (ou Intel Core i7) avec 16 Go de RAM fait tourner les modèles 3B et 7-8B à 3-7 tokens par seconde avec llama.cpp ou Ollama en mode CPU. Lent pour des générations longues, acceptable pour des prompts courts.",
           },
@@ -390,12 +402,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    title: '2026年、15万円以下で買えるベストAIノートPCは？',
-    seoTitle: '15万円以下ベストAIノートPC 2026 | Prompt Bites',
+    title: '2026年、15万円以下のベストAIノートPCは？（ローカルLLM & ML）',
+    seoTitle: '15万円以下ベストAIノートPC 2026：LLM & ML',
     metaDescription:
-      '15万円以下のベストAIノートPC：Ryzen 7 + 16GBメモリ機ならCPUで小型LLMが動く。GPU推論が必要ならMacBook Airへ予算を積む方が現実的。',
+      '15万円以下でローカルLLMと機械学習に使えるベストAIノートPC：Ryzen 7 + 16GBメモリ機なら7BモデルがCPUで動く。値引きされたRTX 4050/4060 8GBゲーミングノートはGPUを追加。RAM/VRAMが最重要。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -407,7 +419,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '15万円以下のベストAIノートPCはRyzen 7 + 16GBメモリ機 — 3B〜8B（Q4）の小型LLMがCPUで実用速度で動きます。GPUによる高速推論が欲しい場合、15万円以下の枠は厳しいので、ユニファイドメモリでローカルLLMが格段に速いMacBook Air Mシリーズへ予算を積むのが現実的です。',
+      '15万円以下でローカルLLMと機械学習に使えるベストAIノートPCはRyzen 7（またはCore i7）+ 16GBメモリ機 — 3B〜8B（Q4）の小型LLMがCPUで実用速度（約3〜7 tok/s）で動きます。チップ名よりRAMとVRAMが重要です。GPU加速が欲しいなら、値引きされたRTX 4050/4060（8GB）のゲーミングノートがセールで15万円を下回ることがあります — 8GB VRAMなら7B〜8Bモデルに対応。本物のRTX「AIノートPC」は概ね約18万〜20万円から。1円あたり最速のローカルLLM作業なら、このクラスのすぐ上のMacBook Air Mシリーズがユニファイドメモリで15万円以下のWindowsノートを上回ります。',
     toc: [
       { label: 'ベスト：Ryzen 7 + 16GBメモリ機', anchor: '#best-pick' },
       { label: '予算別ノートPC比較', anchor: '#comparison' },
@@ -489,6 +501,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '予算別AIノートPCのよくある質問',
         faqs: [
           {
+            q: '15万円以下で機械学習に最適なノートPCは？',
+            a: 'MLの学習とローカルLLM実行では、GPUの名前よりメモリを優先します：最低16GB RAM（可能なら32GB）、理想的にはCUDA加速の小型モデル学習・推論のためにVRAM 8GBのNVIDIA GPU（RTX 4050/4060）。15万円以下では通常、値引きされたゲーミングノートを意味します。独立GPUなしのRyzen 7 / Core i7 + 16GB RAM機でも、CPUベースの学習・推論には使えます。より大きなモデルの本格的な学習には、15万円以下のノートPCではなくクラウドGPU（Colab、RunPod）を使いましょう — ローカル機はプロトタイピング用です。',
+          },
+          {
             q: '10〜15万円のノートPCでローカルLLMは動きますか？',
             a: 'はい、CPU推論なら動きます。Ryzen 7（またはIntel Core i7）+ 16GBメモリ機なら、llama.cppまたはOllamaのCPUモードで3B・7-8Bモデルが3〜7トークン/秒で動きます。長文生成は遅く、短いプロンプトには実用的です。',
           },
@@ -519,12 +535,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    title: '¿Cuál es el Mejor Laptop IA Económico por Menos de $1,000 en 2026?',
-    seoTitle: 'Mejor Laptop IA Económico bajo $1,000 2026 | Prompt Bites',
+    title: '¿Mejor Laptop IA Económico por Menos de 1.000 € en 2026 (LLM Local y ML)?',
+    seoTitle: 'Mejor Laptop IA bajo 1.000 € 2026: LLM y ML',
     metaDescription:
-      'El mejor laptop IA económico bajo $1,000: un Ryzen 7 con 16 GB de RAM ejecuta LLMs pequeños en CPU. Para inferencia GPU, mejor ahorrar para un MacBook Air.',
+      'Mejores laptops IA económicos bajo 1.000 € para LLMs locales y machine learning: un Ryzen 7 con 16 GB de RAM ejecuta modelos 7B en CPU; los laptops gaming RTX 4050/4060 8 GB rebajados añaden GPU. RAM/VRAM es lo que más importa.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -536,7 +552,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      'El mejor laptop IA económico por menos de $1,000 es un Ryzen 7 con 16 GB de RAM — ejecuta LLMs pequeños (3B-8B en Q4) en CPU de forma aceptable. Para inferencia acelerada por GPU, el rango bajo $1,000 es demasiado ajustado; es mejor ahorrar para un MacBook Air serie M, que usa Unified Memory para un trabajo con LLMs locales mucho más rápido. Los precios en tu país pueden variar según impuestos locales.',
+      'El mejor laptop IA económico por menos de 1.000 € para LLMs locales y machine learning es un Ryzen 7 (o Core i7) con 16 GB de RAM — ejecuta LLMs pequeños (3B-8B en Q4) en CPU de forma aceptable (~3-7 tok/s). La RAM y la VRAM importan más que el nombre del chip. Si quieres aceleración GPU, vigila los laptops gaming RTX 4050/4060 (8 GB) rebajados que a veces bajan de 1.000 € en oferta — 8 GB de VRAM manejan modelos 7B-8B; los verdaderos "laptops IA" RTX suelen empezar en torno a 1.200-1.300 €. Para el trabajo con LLMs locales más rápido por euro, un MacBook Air serie M (justo por encima de este rango) usa Unified Memory para superar a cualquier laptop Windows bajo 1.000 €. Los precios en tu país pueden variar según impuestos locales.',
     toc: [
       { label: 'Mejor elección: laptop Ryzen 7 + 16 GB de RAM', anchor: '#best-pick' },
       { label: 'Comparativa de opciones económicas', anchor: '#comparison' },
@@ -544,15 +560,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Lectura relacionada', anchor: '#related' },
     ],
     intro:
-      'Por menos de $1,000, un laptop con una GPU discreta capaz de manejar un LLM es poco común. La opción realista con este presupuesto es un Ryzen 7 con 16 GB de RAM usando inferencia en CPU. Si la aceleración GPU importa, el MacBook Air está justo por encima de este rango y es el mejor objetivo de ahorro. Los precios en tu país pueden variar.',
+      'Por menos de 1.000 €, un laptop con una GPU discreta capaz de manejar un LLM es poco común. La opción realista con este presupuesto es un Ryzen 7 con 16 GB de RAM usando inferencia en CPU. Si la aceleración GPU importa, el MacBook Air está justo por encima de este rango y es el mejor objetivo de ahorro. Los precios en tu país pueden variar.',
     sections: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Mejor elección bajo $1,000: un laptop Ryzen 7 + 16 GB de RAM — ejecuta modelos 3B-8B en CPU a velocidades utilizables',
+          'Mejor elección bajo 1.000 €: un laptop Ryzen 7 + 16 GB de RAM — ejecuta modelos 3B-8B en CPU a velocidades utilizables',
           'La inferencia en CPU en este rango da ~3-7 tokens por segundo en modelos 7B Q4 — aceptable para tareas cortas, lento para generaciones largas',
-          'Para inferencia GPU en tiempo real, el rango bajo $1,000 es demasiado ajustado — ahorra para un MacBook Air serie M con Unified Memory',
+          'Para inferencia GPU en tiempo real, el rango bajo 1.000 € es demasiado ajustado — ahorra para un MacBook Air serie M con Unified Memory',
           'Evita los laptops con 8 GB de RAM — no pueden cargar cómodamente un modelo 7B junto con el SO y las apps',
         ],
       },
@@ -560,9 +576,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'best-pick',
         title: 'Mejor Elección: un Laptop Ryzen 7 con 16 GB de RAM',
         content: [
-          '<strong>El mejor laptop IA económico por menos de $1,000 es un Ryzen 7 (o Intel Core i7 equivalente) con 16 GB de RAM — ejecuta modelos 3B y 7-8B en CPU a velocidades utilizables.</strong> Modelos como Mistral Small, Llama 3.2 3B y Phi-3 Mini corren a 3-7 tokens por segundo en inferencia CPU, lento pero aceptable para prompts cortos.',
-          'La limitación: este rango significa inferencia solo en CPU. La mayoría de los laptops bajo $1,000 no tienen GPU discreta o solo tienen una GPU de 4 GB, demasiado pequeña para trabajo serio con LLMs. La inferencia en CPU está bien para experimentar y aprender; es lenta para generaciones largas.',
-          'Si la inferencia acelerada por GPU es tu prioridad, el rango bajo $1,000 es demasiado ajustado. Ahorra para un MacBook Air serie M — su arquitectura de Unified Memory convierte la RAM del sistema en memoria LLM utilizable y ofrece muchos más tokens por segundo que cualquier laptop Windows bajo $1,000. Consulta los precios actuales en tu región.',
+          '<strong>El mejor laptop IA económico por menos de 1.000 € es un Ryzen 7 (o Intel Core i7 equivalente) con 16 GB de RAM — ejecuta modelos 3B y 7-8B en CPU a velocidades utilizables.</strong> Modelos como Mistral Small, Llama 3.2 3B y Phi-3 Mini corren a 3-7 tokens por segundo en inferencia CPU, lento pero aceptable para prompts cortos.',
+          'La limitación: este rango significa inferencia solo en CPU. La mayoría de los laptops bajo 1.000 € no tienen GPU discreta o solo tienen una GPU de 4 GB, demasiado pequeña para trabajo serio con LLMs. La inferencia en CPU está bien para experimentar y aprender; es lenta para generaciones largas.',
+          'Si la inferencia acelerada por GPU es tu prioridad, el rango bajo 1.000 € es demasiado ajustado. Ahorra para un MacBook Air serie M — su arquitectura de Unified Memory convierte la RAM del sistema en memoria LLM utilizable y ofrece muchos más tokens por segundo que cualquier laptop Windows bajo 1.000 €. Consulta los precios actuales en tu región.',
         ],
         affiliateLinks: [
           {
@@ -589,24 +605,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Comparativa de Laptops IA Económicos',
         content: [
-          '<strong>El factor decisivo es si aceptas inferencia en CPU (lenta pero barata) o ahorras para la aceleración de Unified Memory (rápida, justo por encima de $1,000).</strong> Los precios de modelos específicos varían — consulta las listas actuales en tu región.',
+          '<strong>El factor decisivo es si aceptas inferencia en CPU (lenta pero barata) o ahorras para la aceleración de Unified Memory (rápida, justo por encima de 1.000 €).</strong> Los precios de modelos específicos varían — consulta las listas actuales en tu región.',
         ],
         columns: ['Opción', 'Tipo de inferencia', 'Velocidad (7B Q4)', 'Veredicto'],
         rows: [
           {
-            'Opción': 'Laptop Ryzen 7 + 16 GB de RAM (~$700-1,000)',
+            'Opción': 'Laptop Ryzen 7 + 16 GB de RAM (~700-1.000 €)',
             'Tipo de inferencia': 'Solo CPU',
             'Velocidad (7B Q4)': '~3-7 tok/s',
             'Veredicto': 'Mejor elección bajo $1,000',
           },
           {
-            'Opción': 'Laptop económico con 8 GB de RAM (menos de $600)',
+            'Opción': 'Laptop económico con 8 GB de RAM (menos de 600 €)',
             'Tipo de inferencia': 'Solo CPU, ajustado',
             'Velocidad (7B Q4)': 'No cabe cómodamente',
             'Veredicto': 'Evitar — RAM insuficiente',
           },
           {
-            'Opción': 'MacBook Air serie M (justo por encima de $1,000)',
+            'Opción': 'MacBook Air serie M (justo por encima de 1.000 €)',
             'Tipo de inferencia': 'GPU Apple Metal',
             'Velocidad (7B Q4)': '~15-20 tok/s',
             'Veredicto': 'Ahorra — vale la espera',
@@ -618,7 +634,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respuestas Rápidas sobre Laptops IA Económicos',
         faqs: [
           {
-            q: '¿Un laptop de $700-1,000 puede ejecutar LLMs locales?',
+            q: '¿Cuál es el mejor laptop para machine learning por menos de 1.000 €?',
+            a: 'Para aprender ML y ejecutar LLMs locales, prioriza la memoria sobre el nombre de la GPU: 16 GB de RAM como mínimo (32 GB si lo encuentras) e, idealmente, una GPU NVIDIA con 8 GB de VRAM (RTX 4050/4060) para entrenamiento e inferencia de modelos pequeños acelerados por CUDA. Bajo 1.000 € eso suele significar un laptop gaming rebajado; un Ryzen 7 / Core i7 con 16 GB de RAM sin GPU discreta aún sirve para aprendizaje e inferencia en CPU. Para entrenamiento real de modelos más grandes, usa una GPU en la nube (Colab, RunPod) en lugar de cualquier laptop bajo 1.000 € — la máquina local es para prototipar.',
+          },
+          {
+            q: '¿Un laptop de 700-1.000 € puede ejecutar LLMs locales?',
             a: 'Sí, pero en CPU. Un Ryzen 7 (o Intel Core i7) con 16 GB de RAM ejecuta modelos 3B y 7-8B a 3-7 tokens por segundo usando llama.cpp o Ollama en modo CPU. Lento para generaciones largas, aceptable para prompts cortos.',
           },
           {
@@ -648,12 +668,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    title: 'Qual é o Melhor Notebook IA Econômico por Menos de $1.000 em 2026?',
-    seoTitle: 'Melhor Notebook IA Econômico abaixo de $1.000 2026 | Prompt Bites',
+    title: 'Melhor Notebook IA Econômico por Menos de R$ 6.000 em 2026 (LLM Local e ML)?',
+    seoTitle: 'Melhor Notebook IA até R$ 6.000 2026: LLM e ML',
     metaDescription:
-      'O melhor notebook IA econômico abaixo de $1.000: um Ryzen 7 com 16 GB de RAM executa LLMs pequenos na CPU. Para inferência GPU, melhor poupar para um MacBook Air.',
+      'Melhores notebooks IA econômicos para LLMs locais e machine learning: um Ryzen 7 com 16 GB de RAM executa modelos 7B na CPU; notebooks gamer RTX 4050/4060 8 GB em promoção adicionam GPU. RAM/VRAM importam mais.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -665,7 +685,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      'O melhor notebook IA econômico por menos de $1.000 é um Ryzen 7 com 16 GB de RAM — executa LLMs pequenos (3B-8B em Q4) na CPU de forma aceitável. Para inferência acelerada por GPU, a faixa abaixo de $1.000 é muito limitada; melhor poupar para um MacBook Air série M, que usa Unified Memory para um trabalho com LLMs locais muito mais rápido. Os preços no seu país podem variar conforme impostos locais.',
+      'O melhor notebook IA econômico para LLMs locais e machine learning é um Ryzen 7 (ou Core i7) com 16 GB de RAM — executa LLMs pequenos (3B-8B em Q4) na CPU de forma aceitável (~3-7 tok/s). RAM e VRAM importam mais do que o nome do chip. Se você quer aceleração por GPU, fique de olho nos notebooks gamer RTX 4050/4060 (8 GB) em promoção, que ocasionalmente caem para cerca de R$ 6.000 — 8 GB de VRAM dão conta de modelos 7B-8B; os verdadeiros "notebooks IA" RTX costumam começar por volta de R$ 7.500-8.000. Para o trabalho com LLMs locais mais rápido por real, um MacBook Air série M (logo acima dessa faixa) usa Unified Memory para superar qualquer notebook Windows econômico. Os preços no Brasil podem variar bastante devido a impostos de importação.',
     toc: [
       { label: 'Melhor escolha: notebook Ryzen 7 + 16 GB de RAM', anchor: '#best-pick' },
       { label: 'Comparativo de opções econômicas', anchor: '#comparison' },
@@ -777,11 +797,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    title: 'أفضل حاسب محمول للذكاء الاصطناعي بأقل من ⁨1⁩,⁨000⁩ دولار في ⁨2026⁩؟',
-    seoTitle: 'أفضل حاسب محمول للذكاء الاصطناعي دون ⁨1000⁩ دولار ⁨2026⁩',
-    metaDescription: '⁨Ryzen 7⁩ مع ⁨16 GB RAM⁩ يشغّل نماذج ⁨7B⁩ على ⁨CPU⁩ بـ ⁨3-7⁩ رمز/ثانية بأقل من ⁨1000⁩ دولار. للاستدلال ⁨GPU⁩ احفظ لشراء ⁨MacBook Air⁩ بمعالج سلسلة ⁨M⁩.',
+    title: 'أفضل حاسب محمول للذكاء الاصطناعي بأقل من ⁨1⁩,⁨000⁩ دولار في ⁨2026⁩ (LLM محلي و⁨ML⁩)؟',
+    seoTitle: 'أفضل حاسب ذكاء اصطناعي دون ⁨1000⁩ دولار ⁨2026⁩: LLM محلي و⁨ML⁩',
+    metaDescription: 'أفضل الحواسيب المحمولة الاقتصادية للذكاء الاصطناعي بأقل من ⁨1000⁩ دولار لتشغيل النماذج اللغوية الكبيرة محلياً وتعلم الآلة: ⁨Ryzen 7⁩ مع ⁨16 GB RAM⁩ يشغّل نماذج ⁨7B⁩ على ⁨CPU⁩؛ حواسيب الألعاب المخفّضة ⁨RTX 4050/4060⁩ بذاكرة ⁨8 GB⁩ تضيف ⁨GPU⁩. الذاكرة و⁨VRAM⁩ هما الأهم.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -793,7 +813,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      'أفضل حاسب محمول للذكاء الاصطناعي بأقل من 1,000 دولار هو Ryzen 7 مع 16 جيجابايت RAM — يشغّل النماذج الصغيرة (من 3 إلى 8 مليارات معامل بتكميم Q4) على وحدة المعالجة المركزية بشكل مقبول. للاستدلال المُسرَّع بمعالج الرسومات، تضيق الميزانية دون 1,000 دولار؛ وفّر المال لشراء MacBook Air بمعالج سلسلة M بدلاً من ذلك، إذ تتيح ذاكرته الموحدة أداءً محلياً أسرع بكثير.',
+      'أفضل حاسب محمول للذكاء الاصطناعي بأقل من 1,000 دولار للنماذج اللغوية الكبيرة المحلية وتعلم الآلة هو Ryzen 7 (أو Core i7) مع 16 جيجابايت RAM — يشغّل النماذج الصغيرة (من 3 إلى 8 مليارات معامل بتكميم Q4) على وحدة المعالجة المركزية بشكل مقبول (~3-7 رمز/ثانية). الذاكرة و VRAM أهم من اسم المعالج. للتسريع بمعالج الرسومات، راقب حواسيب الألعاب المخفّضة RTX 4050/4060 (8 جيجابايت) التي تنخفض أحياناً دون 1,000 دولار في العروض — 8 جيجابايت VRAM تتحمل نماذج 7B-8B؛ أما حواسيب RTX "للذكاء الاصطناعي" الحقيقية فتبدأ غالباً عند نحو 1,249 دولار. للحصول على أسرع أداء محلي مقابل كل دولار، يتفوق MacBook Air بمعالج سلسلة M (أعلى قليلاً من هذه الفئة) بذاكرته الموحدة على أي حاسب Windows بأقل من 1,000 دولار.',
     toc: [
       { label: 'أفضل اختيار: حاسب Ryzen 7 + 16 جيجابايت RAM', anchor: '#best-pick' },
       { label: 'مقارنة خيارات الحاسبات المحمولة الاقتصادية', anchor: '#comparison' },
@@ -875,6 +895,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أسئلة شائعة حول الحاسبات المحمولة الاقتصادية للذكاء الاصطناعي',
         faqs: [
           {
+            q: 'ما هو أفضل حاسب محمول اقتصادي لتعلم الآلة بأقل من 1,000 دولار؟',
+            a: 'لتعلم تعلم الآلة وتشغيل النماذج اللغوية الكبيرة محلياً، أعطِ الأولوية للذاكرة على اسم معالج الرسومات: 16 جيجابايت RAM كحد أدنى (32 جيجابايت إن توفرت)، ومثالياً معالج رسومات NVIDIA بـ8 جيجابايت VRAM (RTX 4050/4060) للتدريب والاستدلال المُسرَّع بـCUDA للنماذج الصغيرة. بأقل من 1,000 دولار يعني ذلك عادةً حاسب ألعاب مخفّض؛ ويظل حاسب Ryzen 7 / Core i7 بـ16 جيجابايت RAM دون معالج رسومات مستقل صالحاً للتعلم والاستدلال على وحدة المعالجة المركزية. للتدريب الحقيقي للنماذج الأكبر، استخدم معالج رسومات سحابياً (Colab أو RunPod) بدلاً من أي حاسب محمول بأقل من 1,000 دولار — فالجهاز المحلي مخصص للنمذجة الأولية.',
+          },
+          {
             q: 'هل يمكن لحاسب بـ700-1,000 دولار تشغيل النماذج اللغوية الكبيرة محلياً؟',
             a: 'نعم، لكن على وحدة المعالجة المركزية. يشغّل Ryzen 7 (أو Intel Core i7) مع 16 جيجابايت RAM نماذج 3B و7-8B بـ3-7 رموز/ثانية باستخدام llama.cpp أو Ollama في وضع وحدة المعالجة المركزية. بطيء في التوليدات الطويلة، مقبول للطلبات القصيرة.',
           },
@@ -905,12 +929,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    title: '2026年7,000元以下最佳AI笔记本电脑？',
-    seoTitle: '7,000元以下最佳AI笔记本2026 | Prompt Bites',
+    title: '2026年1,000美元以下最佳AI笔记本电脑（本地LLM与ML）？',
+    seoTitle: '1,000美元以下最佳AI笔记本2026：本地LLM与ML之选',
     metaDescription:
-      '7,000元以下最佳AI笔记本：Ryzen 7 + 16GB内存机型可用CPU运行小型LLM。需要GPU推理则建议加预算选MacBook Air。',
+      '1,000美元以下适合本地LLM与机器学习的最佳AI笔记本：16GB内存的Ryzen 7可用CPU运行7B模型；打折的RTX 4050/4060 8GB游戏本可加上GPU。内存与VRAM最关键。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -922,7 +946,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'mac-mini-m4-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '7,000元以下最佳AI笔记本是Ryzen 7 + 16GB内存机型 — 小型LLM（3B-8B Q4量化）能在CPU上跑出可用速度。如果要GPU加速推理，7,000元以下这一档太紧，建议加预算买MacBook Air M系列，统一内存让本地LLM快得多。',
+      '1,000美元以下适合本地LLM与机器学习的最佳AI笔记本是Ryzen 7（或Core i7）+ 16GB内存机型 — 小型LLM（3B-8B Q4量化）能在CPU上跑出可用速度（约3-7 tok/s）。内存与VRAM比芯片名称更重要。想要GPU加速，可留意打折的RTX 4050/4060（8GB）游戏本，促销时偶尔会跌破1,000美元 — 8GB VRAM能带动7B-8B模型；真正的RTX「AI笔记本」大多从约1,249美元起。若追求每美元最快的本地LLM性能，稍高于这一档的MacBook Air M系列凭统一内存可胜过任何1,000美元以下的Windows笔记本。',
     toc: [
       { label: '最佳推荐：Ryzen 7 + 16GB内存机型', anchor: '#best-pick' },
       { label: '预算笔记本对比', anchor: '#comparison' },
@@ -1004,6 +1028,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '预算AI笔记本常见问题',
         faqs: [
           {
+            q: '1,000美元以下最适合机器学习的预算笔记本是哪款？',
+            a: '学习机器学习并运行本地LLM时，内存比GPU名称更重要：至少16GB内存（能找到32GB更好），最好再配一块8GB VRAM的NVIDIA显卡（RTX 4050/4060），以支持CUDA加速的小模型训练与推理。1,000美元以下通常意味着一台打折的游戏本；没有独立显卡的16GB内存Ryzen 7 / Core i7同样能用于CPU学习与推理。要真正训练更大的模型，请使用云端GPU（Colab、RunPod），而不是任何1,000美元以下的笔记本 — 本地机器用于原型验证。',
+          },
+          {
             q: '5,000-7,000元的笔记本能跑本地LLM吗？',
             a: '能，但只能CPU推理。Ryzen 7（或Intel Core i7）+ 16GB内存机型用llama.cpp或Ollama的CPU模式可跑3B和7-8B模型，速度3-7 tokens/秒。长文偏慢，短prompt够用。',
           },
@@ -1034,12 +1062,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    title: '2026년 100만원 이하 최고의 예산형 AI 노트북은?',
-    seoTitle: '100만원 이하 최고의 AI 노트북 2026 | Prompt Bites',
+    title: '2026년 1,000달러 이하 최고의 예산형 AI 노트북은? (로컬 LLM & ML)',
+    seoTitle: '1,000달러 이하 최고의 AI 노트북 2026: 로컬 LLM & ML 추천',
     metaDescription:
-      '100만원 이하 최고의 AI 노트북: Ryzen 7 + 16GB RAM 모델이 CPU에서 소형 LLM을 실행합니다. GPU 추론이 필요하다면 MacBook Air M 시리즈를 목표로 저축하십시오.',
+      '1,000달러 이하 로컬 LLM 및 머신러닝용 최고의 예산형 AI 노트북: 16GB RAM Ryzen 7은 CPU에서 7B 모델을 실행하고, 할인된 RTX 4050/4060 8GB 게이밍 노트북은 GPU를 더합니다. RAM/VRAM이 가장 중요합니다.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -1059,7 +1087,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     ],
     readTime: '4분 분량',
     leadAnswerBlock:
-      '100만원 이하 최고의 AI 노트북은 Ryzen 7 + 16GB RAM 모델로, CPU에서 소형 LLM(3B-8B Q4 양자화)을 충분히 실행할 수 있습니다. GPU 가속 추론이 필요하다면 100만원 이하 구간은 너무 좁습니다. 유니파이드 메모리로 훨씬 빠른 로컬 LLM 작업이 가능한 MacBook Air M 시리즈를 목표로 저축하십시오.',
+      '1,000달러 이하 로컬 LLM 및 머신러닝용 최고의 AI 노트북은 Ryzen 7(또는 Core i7) + 16GB RAM 모델로, CPU에서 소형 LLM(3B-8B Q4 양자화)을 사용 가능한 속도(약 3-7 tok/s)로 실행합니다. 칩 이름보다 RAM과 VRAM이 더 중요합니다. GPU 가속을 원한다면 할인된 RTX 4050/4060(8GB) 게이밍 노트북을 노리십시오 — 세일 때 가끔 1,000달러 아래로 내려가며, 8GB VRAM은 7B-8B 모델을 감당합니다. 진짜 RTX "AI 노트북"은 대개 약 1,249달러부터 시작합니다. 달러당 가장 빠른 로컬 LLM 성능을 원한다면, 이 구간 바로 위의 MacBook Air M 시리즈가 유니파이드 메모리로 1,000달러 이하의 어떤 Windows 노트북보다 앞섭니다.',
     quickAnswerTop: {
       ko: {
         question: '100만원 이하에서 로컬 LLM을 실행할 수 있는 최고의 AI 노트북은 무엇입니까?',
@@ -1173,6 +1201,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '예산형 AI 노트북에 관한 자주 묻는 질문',
         faqs: [
+          {
+            q: '1,000달러 이하 머신러닝에 가장 좋은 예산형 노트북은 무엇입니까?',
+            a: '머신러닝 학습과 로컬 LLM 실행에는 GPU 이름보다 메모리를 우선하십시오: 최소 16GB RAM(가능하면 32GB), 그리고 이상적으로는 CUDA 가속 소형 모델 학습 및 추론을 위한 8GB VRAM NVIDIA GPU(RTX 4050/4060)입니다. 1,000달러 이하에서는 보통 할인된 게이밍 노트북을 의미합니다. 전용 GPU가 없는 16GB RAM Ryzen 7 / Core i7도 CPU 기반 학습과 추론에는 여전히 쓸 만합니다. 더 큰 모델의 실제 학습에는 1,000달러 이하 노트북 대신 클라우드 GPU(Colab, RunPod)를 사용하십시오 — 로컬 머신은 프로토타이핑용입니다.',
+          },
           {
             q: '70-100만원짜리 노트북으로 로컬 LLM을 실행할 수 있습니까?',
             a: '예, 가능합니다. 단, CPU 추론에 한정됩니다. Ryzen 7(또는 Intel Core i7) + 16GB RAM 노트북은 llama.cpp 또는 Ollama CPU 모드를 사용해 3B 및 7-8B 모델을 초당 3-7 토큰 속도로 실행합니다. 긴 생성에는 느리지만 짧은 프롬프트에는 충분합니다.',

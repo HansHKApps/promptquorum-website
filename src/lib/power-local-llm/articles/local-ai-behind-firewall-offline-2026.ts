@@ -214,6 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — Full RAG pipeline setup with open-source tools',
           '[Best NAS Storage for Local AI Models 2026](/power-local-llm/best-nas-storage-local-ai-models-2026) — NAS hardware comparison for model libraries',
           '[Qwen Local Deployment Guide 2026](/local-llms/qwen-local-deployment-guide-2026) — Hardware tiers for all Qwen3 variants',
+          '[WeChat Bot with Local LLM: Personal Assistant 2026](/power-local-llm/wechat-bot-local-llm-personal-assistant-2026) — build a private WeChat assistant with WeChatFerry + Ollama',
         ],
       },
     },
