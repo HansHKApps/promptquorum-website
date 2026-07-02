@@ -1378,4 +1378,157 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       about: ['베란다 태양광', '플러그인 태양광', 'Balkonkraftwerk', '마이크로인버터', '주거용 태양광'],
     },
   },
+  de: {
+    theme: 'Balcony Solar Foundations',
+    title: 'Was ist ein Balkonkraftwerk? Steckersolar-Anlagen erklärt',
+    seoTitle: 'Balkonkraftwerk erklärt: Wie Steckersolaranlagen funktionieren',
+    intro: 'Ein Balkonkraftwerk — auch Steckersolar oder Plug-in-Solar genannt — ermöglicht Mietern und Wohnungseigentümern, eigenen Strom zu erzeugen, ohne eine Dachanlage zu benötigen. Ein kompaktes Set aus Panel und Wechselrichter wird direkt in eine Haushaltssteckdose eingesteckt und speist Strom in das bestehende Hausnetz ein.',
+    metaDescription: 'Ein Balkonkraftwerk verbindet ein kleines Panel und einen Mikrowechselrichter mit der Steckdose, um den Strombezug aus dem Netz zu senken — kein Dach, kein Elektriker, kein Langzeitvertrag nötig.',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '8 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    audience: 'Mieter und Wohnungseigentümer, die Solarmöglichkeiten ohne Dachmontage erkunden',
+    primaryTerm: 'Balkonkraftwerk',
+    targetKeywords: ['Was ist ein Balkonkraftwerk', 'Steckersolar erklärt', 'Balkonkraftwerk Anleitung', 'Plug-in-Solar Anlage', 'Balkonkraftwerk kaufen'],
+    leadAnswerBlock: '**Ein Balkonkraftwerk ist eine kleine, selbst installierbare Solaranlage — in der Regel ein oder zwei Panels plus ein Mikrowechselrichter — die in eine Haushaltssteckdose eingesteckt wird und einen Teil des häuslichen Stromverbrauchs kompensiert.** Anders als eine Dachanlage erfordert es weder Dachfläche noch einen Elektriker noch bauliche Veränderungen. In Deutschland ist das Format durch das Solarpaketgesetz I besonders einfach nutzbar und hat sich von hier aus in andere Märkte verbreitet.',
+    quickAnswerTop: {
+      de: {
+        question: 'Was ist ein Balkonkraftwerk?',
+        answer: 'Ein Balkonkraftwerk ist eine Steckersolar-Anlage — ein oder zwei Panels, verbunden mit einem Mikrowechselrichter, der in eine normale Haushaltssteckdose gesteckt wird. Es speist Strom direkt ins Hausnetz ein und reduziert so den Strombezug aus dem öffentlichen Netz — ohne Dachmontage oder Elektrikerbesuch.',
+        bullets: [
+          'Befestigung an Balkongeländer, Wand oder Bodenständer — kein Dach erforderlich',
+          'Eingesteckt in eine Haushaltssteckdose über den Mikrowechselrichter, kein separater Stromkreis nötig',
+          'Reduziert den Netzbezug, ersetzt aber nicht die gesamte Stromversorgung',
+          'Gehört Ihnen vollständig und ist mobil — beim Umzug einfach mitnehmen',
+          'In Deutschland als Balkonkraftwerk bekannt, maximal 800 W Einspeiseleistung (Solarpaketgesetz I)',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Das Wichtigste in Kürze', anchor: '#key-takeaways' },
+      { label: 'Was ist ein Balkonkraftwerk?', anchor: '#what-is-it' },
+      { label: 'Wie funktioniert ein Balkonkraftwerk?', anchor: '#how-it-works' },
+      { label: 'Unterschied zur Dachanlage', anchor: '#vs-rooftop' },
+      { label: 'Für wen lohnt sich ein Balkonkraftwerk?', anchor: '#who-its-for' },
+      { label: 'Ist ein Balkonkraftwerk bei mir erlaubt?', anchor: '#legality' },
+      { label: 'Was kostet ein Balkonkraftwerk — und was spart es?', anchor: '#costs' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Ein Balkonkraftwerk ist ein Steckersolar-Set aus Panel und Wechselrichter, das den häuslichen Stromverbrauch senkt — ohne Dach, ohne Elektriker, ohne feste Installation.',
+          'Es unterscheidet sich von einer Dachanlage in Größe, Eigentümermodell und Installationsaufwand: Dachanlagen sind größer, werden professionell installiert und oft finanziert; Balkonkraftwerke sind klein, selbst installierbar und sofort im Eigentum.',
+          'Rechtliche Anforderungen und Leistungsgrenzen variieren je nach Land; in Deutschland gilt durch das Solarpaketgesetz I eine vereinfachte Regelung mit bis zu 800 W und Anmeldung im Marktstammdatenregister.',
+          'Ein Balkonkraftwerk versorgt kein ganzes Zuhause; es kompensiert einen Teil des Grundverbrauchs (Geräte mit Dauerbetrieb wie Kühlschrank oder Router).',
+          'Die Anlage ist mobil — da eingesteckt statt fest verdrahtet, können Sie sie beim Umzug mitnehmen.',
+          'Hauptzielgruppe sind Mieter, aber auch Eigentümer in Mehrfamilienhäusern ohne eigenen Dachzugang nutzen Balkonkraftwerke.',
+        ],
+      },
+      whatIsIt: {
+        id: 'what-is-it',
+        title: 'Was ist ein Balkonkraftwerk (Steckersolaranlage)?',
+        content: [
+          '**Ein Balkonkraftwerk ist ein kompaktes Steckersolar-Set — meist ein oder zwei Panels, die einen Mikrowechselrichter speisen, der in eine normale Haushaltssteckdose eingesteckt wird.** Der Mikrowechselrichter wandelt den vom Panel erzeugten Gleichstrom (DC) in den netzkonformen Wechselstrom (AC) um, den Ihre Haushaltsgeräte benötigen, und synchronisiert ihn mit Ihrem Netzanschluss.',
+          'Der Begriff „Balkonkraftwerk" ist in Deutschland entstanden, wo das Format entwickelt wurde und am weitesten verbreitet ist. In anderen Ländern wird dieselbe Produktkategorie oft als „Plug-in-Solar", „Steckersolar" oder „Mini-Solaranlage" bezeichnet.',
+          'Ein typisches Set umfasst das Panel oder die Panels, eine Halterung für Geländer, Wand oder Bodenständer, Kabel und den Mikrowechselrichter. Manche Sets enthalten zusätzlich einen kleinen Akku, um tagsüber überschüssigen Strom für den Abend zu speichern.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ein Balkonkraftwerk ist ein Steckersolar-Set aus Panel und Mikrowechselrichter, das Haushaltsstrom ohne Dachmontage erzeugt.' },
+          { type: 'plain-terms', text: 'Stellen Sie es sich vor wie einen Ladestecker für Ihr Zuhause: Panel einstecken, und die Anlage speist leise Strom ins Hausnetz ein, anstatt alles aus dem öffentlichen Netz zu beziehen.' },
+        ],
+      },
+      howItWorks: {
+        id: 'how-it-works',
+        title: 'Wie funktioniert ein Balkonkraftwerk?',
+        content: [
+          '**Der Strom fließt in drei Schritten: Das Panel fängt Sonnenlicht ein, der Mikrowechselrichter wandelt es in nutzbaren Wechselstrom um, und dieser Strom wird über die Steckdose ins Hausnetz eingespeist.** Ein Akku ist nicht zwingend erforderlich — die Anlage versorgt einfach das, was im Haushalt gerade Strom verbraucht.',
+          'Da die Anlage nicht unterscheidet, welches Gerät den Strom nutzt, senkt sie effektiv die *Nettomenge*, die Ihr Stromzähler erfasst. Produziert das Panel mehr als der Haushalt gerade verbraucht, wird der Überschuss nicht genutzt (oder in einem Akku gespeichert, falls vorhanden) — die meisten Balkonkraftwerke sind auf „Nulleinspeisung" konfiguriert, was die Anmeldung in vielen Märkten vereinfacht.',
+        ],
+        numberedItems: [
+          'Sonnenlicht trifft auf das Panel und erzeugt Gleichstrom (DC)',
+          'Der Mikrowechselrichter wandelt DC in netzkonformen Wechselstrom (AC) um',
+          'Der AC-Strom fließt über die Steckdose ins Hausstromnetz',
+          'Aktive Verbraucher im Haus beziehen zuerst diesen lokalen Strom und reduzieren so den Netzbezug',
+        ],
+        callouts: [
+          { type: 'tip', text: 'Die meisten Mikrowechselrichter liefern eine Begleit-App, die Ihre Produktionsdaten standardmäßig in die Cloud des Herstellers überträgt. Das ist technisch keine Voraussetzung — manche Geräte bieten stattdessen eine lokale API und lassen sich vollständig über Home Assistant überwachen, ohne dass Daten das Heimnetz verlassen. Weitere Infos unter [Balkonkraftwerk ohne Cloud](/de/balcony-solar/home-assistant-balcony-solar-no-cloud), falls Ihnen Datensparsamkeit wichtig ist.' },
+        ],
+      },
+      vsRooftop: {
+        id: 'vs-rooftop',
+        title: 'Wie unterscheidet sich ein Balkonkraftwerk von einer Dachanlage?',
+        content: [
+          '**Ein Balkonkraftwerk ist kleiner, selbst installierbar und sofort in Ihrem Eigentum; eine Dachanlage ist größer, wird professionell installiert und oft über viele Jahre finanziert.** Beide decken unterschiedliche Bedürfnisse ab — einen vollständigen Vergleich finden Sie im [Artikel Balkonkraftwerk vs. Dachanlage](/de/balcony-solar/balcony-vs-rooftop-solar).',
+        ],
+        rows: [
+          { Merkmal: 'Installation', Balkon: 'Selbstmontage, kein Elektriker erforderlich (in den meisten Märkten)', Dach: 'Fachbetrieb, Genehmigungen, Statikprüfung' },
+          { Merkmal: 'Leistung', Balkon: 'Einige hundert Watt', Dach: 'Mehrere Kilowatt, ausgelegt auf den Gesamtbedarf' },
+          { Merkmal: 'Eigentum', Balkon: 'Sofort Ihres, beim Umzug mitnehmbar', Dach: 'Oft finanziert oder geleast, an die Immobilie gebunden' },
+          { Merkmal: 'Netzinteraktion', Balkon: 'Typischerweise Nulleinspeisung, reduziert nur den eigenen Bezug', Dach: 'Überschuss wird oft vergütet oder verkauft' },
+          { Merkmal: 'Geeignet für', Balkon: 'Mieter, Wohnungseigentümer, Haushalte ohne Dachzugang', Dach: 'Eigentümer mit Dachzugang und langfristiger Bleibeperspektive' },
+        ],
+        columns: ['Merkmal', 'Balkon', 'Dach'],
+        tableFormat: true,
+      },
+      whoItsFor: {
+        id: 'who-its-for',
+        title: 'Für wen lohnt sich ein Balkonkraftwerk?',
+        content: [
+          '**Ein Balkonkraftwerk lohnt sich für alle, die Stromkosten senken möchten, ohne Dachzugang, Langzeitvertrag oder professionelle Installation.** Das betrifft eine breitere Zielgruppe als nur Mieter.',
+        ],
+        items: [
+          'Mieter, die weder ein Dach verändern noch einen Langzeitsolarvertrag für eine Immobilie abschließen können, die ihnen nicht gehört',
+          'Wohnungseigentümer in Mehrfamilienhäusern, wo eine Dach- oder Gemeinschaftssolaranlage nicht möglich ist',
+          'Hauseigentümer, die Solar mit niedrigem Aufwand und ohne Risiko testen möchten, bevor sie eine Dachanlage in Betracht ziehen',
+          'Alle, denen lokale Datenkontrolle wichtig ist — mehr dazu unter [Balkonkraftwerk ohne Cloud](/de/balcony-solar/home-assistant-balcony-solar-no-cloud)',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Ein Balkonkraftwerk versorgt kein ganzes Zuhause und kann für sich allein keine Hochverbraucher wie Klimaanlagen oder Elektroherde betreiben — es senkt den Grundverbrauch, ersetzt aber nicht den Gesamtbedarf.' },
+        ],
+      },
+      legality: {
+        id: 'legality',
+        title: 'Ist ein Balkonkraftwerk bei mir erlaubt?',
+        content: [
+          '**Rechtslage, Leistungsgrenzen und Anmeldepflichten unterscheiden sich erheblich je nach Land — in Deutschland gilt durch das Solarpaketgesetz I eine vereinfachte Regelung: bis zu 800 W Einspeiseleistung, vereinfachte Anmeldung im Marktstammdatenregister (MaStR) über die Bundesnetzagentur und Empfehlung einer Wieland-Schutzkontaktsteckdose statt normaler Schuko-Dose.** In anderen Ländern fallen Steckersolaranlagen oft unter die allgemeinen Regeln für Dachanlagen ohne eigenen, erleichterten Weg.',
+          'Da sich die Vorschriften laufend ändern, sollten Sie den aktuellen Stand für Ihren Standort immer direkt prüfen, bevor Sie kaufen.',
+        ],
+        links: [
+          { url: '/balcony-solar/is-balcony-solar-legal-country-guide', title: 'Ist ein Balkonkraftwerk erlaubt? Länderübersicht', description: 'Vollständiger Rechtsstatus-Überblick für alle wichtigen Märkte' },
+        ],
+      },
+      costs: {
+        id: 'costs',
+        title: 'Was kostet ein Balkonkraftwerk — und was spart es?',
+        content: [
+          '**Ein Balkonkraftwerk kostet erheblich weniger als eine Dachanlage, weil keine professionelle Installation anfällt und die erzeugte Leistung viel geringer ist.** Die tatsächliche Ersparnis hängt stark vom lokalen Strompreis (in Deutschland derzeit ca. 0,32–0,37 €/kWh), der Sonneneinstrahlung auf Ihren Balkon oder Ihre Wand und der Übereinstimmung Ihres Verbrauchsmusters mit den Sonnenstunden ab.',
+          'Konkrete Kitpreise und eine Amortisationsschätzung für Deutschland und andere Länder finden Sie auf den jeweiligen Unterseiten — eine einzige globale Zahl wäre aufgrund unterschiedlicher Hardware-Preise und Stromtarife irreführend.',
+        ],
+        links: [
+          { url: '/balcony-solar/best-balcony-solar-kits-2026', title: 'Die besten Balkonkraftwerk-Sets', description: 'Aktueller Kaufratgeber mit Preisen nach Kategorie' },
+          { url: '/balcony-solar/balcony-solar-payback-worth-it-2026', title: 'Lohnt sich ein Balkonkraftwerk? Amortisation erklärt', description: 'Amortisationsschätzungen nach Land' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Brauche ich einen Elektriker für die Installation eines Balkonkraftwerks?', a: 'In Deutschland und den meisten Märkten, die Steckersolar erlauben, nein — die Anlage ist für die Selbstinstallation über eine Steckdose ausgelegt. In einigen Märkten ist ab bestimmten Leistungsgrenzen ein Fachbetrieb vorgeschrieben; prüfen Sie daher vorab die lokalen Vorschriften.' },
+          { q: 'Kann ein Balkonkraftwerk meine ganze Wohnung versorgen?', a: 'Nein. Ein Balkonkraftwerk senkt einen Teil Ihres Grundverbrauchs — Geräte im Dauerbetrieb wie Kühlschrank oder Router — und ersetzt nicht die gesamte Stromversorgung.' },
+          { q: 'Brauche ich die Erlaubnis meines Vermieters oder der Eigentümergemeinschaft?', a: 'Oft ja, besonders wenn die Montage am Geländer oder an einer Außenwand sichtbar ist. In Deutschland haben Mieter seit der WEG-Reform ein gestärktes Recht auf Balkonkraftwerke, doch die Zustimmungspflicht im Einzelfall kann bestehen bleiben — klären Sie das vorab.' },
+          { q: 'Was passiert mit dem Überschussstrom meines Panels?', a: 'Die meisten Balkonkraftwerke sind auf Nulleinspeisung konfiguriert: Überschussstrom, der gerade nicht verbraucht wird, wird nicht genutzt statt ins Netz eingespeist. Einige Sets enthalten einen kleinen Akku zur Zwischenspeicherung.' },
+          { q: 'Ist ein Balkonkraftwerk dasselbe wie ein Solargenerator?', a: 'Nein. Ein tragbarer Solargenerator lädt einen integrierten Akku, den Sie mitnehmen und direkt an Geräte anschließen. Ein Balkonkraftwerk speist Strom über die Wandsteckdose ins Hausnetz ein und benötigt keinen Akkupack zum Mitnehmen.' },
+          { q: 'Wie lange hält ein Balkonkraftwerk?', a: 'Panels sind in der Regel für 20–25 Jahre Produktion ausgelegt, ähnlich wie Dachpanels — die tatsächliche Lebensdauer hängt von Qualität und Witterungsbelastung ab. Mikrowechselrichter haben typischerweise kürzere Garantiezeiten als die Panels.' },
+          { q: 'Kann ich mein Balkonkraftwerk beim Umzug mitnehmen?', a: 'Ja — das ist einer der Hauptvorteile gegenüber einer Dachanlage. Da die Anlage eingesteckt statt fest verdrahtet oder strukturell montiert ist, können Sie das gesamte Set abbauen und in der neuen Wohnung wieder aufbauen.' },
+          { q: 'Funktioniert ein Balkonkraftwerk auch ohne Balkon?', a: 'Ja. Trotz des Namens lassen sich Balkonkraftwerk-Sets auch an Außenwänden, Geländern, Bodenständern oder Flachdächern montieren — ein echter Balkon ist häufig, aber nicht zwingend erforderlich.' },
+        ],
+      },
+    },
+  },
 };

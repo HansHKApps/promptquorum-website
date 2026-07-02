@@ -755,6 +755,96 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       about: ['Balcony solar Spain', 'RD 244/2019', 'Mexico CFE interconnection', 'Vertido cero'],
     },
   },
+  de: {
+    theme: 'Balcony Solar Legislation',
+    title: 'Balkonkraftwerk in Spanien und Lateinamerika: Rechtslage erklärt',
+    seoTitle: 'Balkonkraftwerk Spanien rechtlich: Spanien und Lateinamerika',
+    intro: 'Die Rechtslage für Balkonkraftwerke in Spanien ist tatsächlich ungeklärt – die Quellen widersprechen sich, und dieser Leitfaden wird das nicht übertünchen, um Ihnen eine sauberere Antwort zu liefern. Mexiko, das hier als lateinamerikanischer Referenzpunkt behandelt wird, hat ein klareres, aber weniger günstiges Bild: Es gibt keinerlei Ausnahme für Kleinanlagen.',
+    metaDescription: 'Ist ein Balkonkraftwerk in Spanien legal? Die ehrliche Antwort lautet: ungeklärt – widersprüchliche Quellen zu einer 800-W-Ausnahme, erklärt. Plus Mexikos Einspeiseregelungen ohne Ausnahme.',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '8 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Käufer von Balkonkraftwerken in Spanien und lateinamerikanischen Märkten, die die Rechtslage recherchieren – darunter viele deutsche Auswanderer und Rentner an der spanischen Küste',
+    primaryTerm: 'Balkonkraftwerk Spanien',
+    targetKeywords: ['Balkonkraftwerk Spanien legal', 'Steckersolar Spanien Recht', 'Balkonkraftwerk Spanien Anmeldung', 'Solar Balkon Mexiko Regelung'],
+    leadAnswerBlock: '**Die Rechtslage für kleine Balkonkraftwerke in Spanien ist tatsächlich ungeklärt – Anbieter und Pressemeldungen behaupten, dass Anlagen unter ca. 800 W keine Anmeldung erfordern, während eine detaillierte rechtliche Quelle feststellt, dass Spanien kein dediziertes vereinfachtes System eingeführt hat und die vollständigen Eigenverbrauchsformalitäten nach wie vor gelten.** Diese Seite berichtet diesen Konflikt, anstatt ihn künstlich aufzulösen. Mexiko hingegen hat eine klare, aber weniger günstige Antwort: Es gibt keinerlei Ausnahme für Kleinanlagen – dasselbe vollständige CFE-Einspeiseverfahren gilt für jedes netzgekoppelte System unabhängig von der Größe.',
+    quickAnswerTop: {
+      de: {
+        question: 'Ist ein Balkonkraftwerk in Spanien legal?',
+        answer: 'Das ist tatsächlich ungeklärt – kein klares Ja oder Nein. Anbieter und Pressequellen sagen, dass Anlagen unter ca. 800 W ohne Projekt, Installateurbescheinigung oder Anmeldung installiert werden können. Eine detaillierte rechtliche Quelle widerspricht dem: Spanien habe kein dediziertes Balkonkraftwerk-Regime eingeführt, und die vollständigen Eigenverbrauchsformalitäten nach RD 244/2019 (CIE-Zertifikat, REBT-Konformität, regionales Register, Netzbetreibermeldung) gälten weiterhin. Bitte klären Sie das mit Ihrer zuständigen Autonomen Gemeinschaft, bevor Sie eine dieser Antworten annehmen.',
+        bullets: [
+          'Spanien: tatsächlich ungeklärt – Anbieterquellen und rechtliche Quellen widersprechen sich bei einer 800-W-Ausnahme',
+          'Die für Spanien häufig zitierte 800-W-Zahl scheint aus EU-Vorgaben oder Marketingaussagen zu stammen, nicht aus einem kodifizierten spanischen Schwellenwert',
+          'Die Eigenverbrauchsform "vertido cero" (Nulleinspeisung) ist nach RD 244/2019 von Netzanschluss-/Zugangserlaubnissen befreit, aber ob das als echter vereinfachter Weg speziell für Balkonkraftwerke gilt, ist unklar',
+          'Mexiko: klar, aber ungünstig – keine Ausnahme für Kleinanlagen, das vollständige CFE-Einspeiseverfahren gilt für jede Größe',
+          'Diese Seite wird Spaniens Status nicht als geklärt in eine Richtung darstellen, bis eine bessere Bestätigung durch eine Primärquelle vorliegt',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Wichtigste Punkte', anchor: '#key-takeaways' },
+      { label: 'Spanien: die ungeklärte Frage', anchor: '#spain-unresolved' },
+      { label: 'Was die widersprüchlichen Quellen wirklich sagen', anchor: '#conflicting-sources' },
+      { label: 'Mexiko: keine Ausnahme für Kleinanlagen', anchor: '#mexico' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Spaniens Status ist tatsächlich ungeklärt – dieser Leitfaden präsentiert keine abschließende Antwort, weil die zugrundeliegenden Quellen sich widersprechen.',
+          'Der für Spanien häufig zitierte 800-W-Ausnahmeschwellenwert scheint aus EU-Vorgaben oder Marketingaussagen zu stammen, nicht aus einer kodifizierten spanischen Rechtsvorschrift.',
+          'Die Eigenverbrauchsform „vertido cero" (Nulleinspeisung) ist nach RD 244/2019 von Netzanschlusserlaubnissen befreit, aber ihre Anwendbarkeit als echter vereinfachter Weg speziell für Balkonkraftwerke ist nicht klar.',
+          'Eine detaillierte rechtliche Quelle stellt fest, dass die vollständigen RD 244/2019-Formalitäten (CIE-Zertifikat, REBT-Konformität, regionales Register, Netzbetreibermeldung) in Spanien unabhängig von der Anlagengröße weiterhin gelten.',
+          'Mexiko hat eine klare Antwort, nur keine günstige: Es gibt keine Ausnahme für Kleinanlagen – dasselbe vollständige CFE-Einspeiseverfahren gilt, egal ob Sie 300 W oder 300 kW installieren.',
+          'Klären Sie das direkt mit Ihrer spezifischen spanischen Autonomen Gemeinschaft oder Ihrer mexikanischen CFE-Region, bevor Sie handeln – allgemeine nationale Leitlinien können das angesichts des Quellenkonflikts für Sie nicht lösen.',
+        ],
+      },
+      spainUnresolved: {
+        id: 'spain-unresolved',
+        title: 'Spanien: die ungeklärte Frage',
+        content: [
+          '**Die Rechtslage für kleine Balkonkraftwerke in Spanien ist tatsächlich ungeklärt – keine feststehende Tatsache, über die dieser Leitfaden in eine Richtung berichten könnte.** Das RD 244/2019 hat den Eigenverbrauch allgemein legalisiert, aber Quellen widersprechen sich aktiv darüber, ob kleine Plug-in-Geräte eine echte vereinfachte Ausnahme erhalten – Anbieter- und Pressemeldungen behaupten, Anlagen unter ca. 800 W benötigten kein Projekt, keine Installateurbescheinigung und keine Anmeldung, während eine detaillierte rechtliche Quelle feststellt, Spanien habe kein dediziertes Balkonkraftwerk-Regime eingeführt und die vollständigen Formalitäten gälten weiterhin unabhängig von der Größe.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Dieser Leitfaden löst Spaniens Status bewusst nicht in ein klares Ja oder Nein auf. Eine unbestätigte Ausnahme als Tatsache darzustellen wäre schlimmer als die echte Unklarheit zuzugeben – erkundigen Sie sich direkt bei der Energiebehörde Ihrer Autonomen Gemeinschaft, bevor Sie installieren. Viele deutsche Auswanderer und Rentner an der Costa Blanca, Costa del Sol oder auf den Kanaren sind von genau dieser Frage betroffen.' },
+        ],
+      },
+      conflictingSources: {
+        id: 'conflicting-sources',
+        title: 'Was die widersprüchlichen Quellen wirklich sagen',
+        content: [
+          '**Eine Gruppe von Quellen – Anbieterseiten und allgemeine Presseberichte – besagt, dass Plug-in-Geräte unter ca. 800 W ohne formales Projekt, Installateurbescheinigung oder Anmeldung installiert werden können, und behandelt den Eigenverbrauch mit „vertido cero" (Nulleinspeisung) als praktischen vereinfachten Weg.** Eine andere, detailliertere und rechtlich ausgerichtete Quelle widerspricht dem direkt: Spanien habe kein dediziertes Balkonkraftwerk-Regime vergleichbar mit Deutschland, Österreich oder den Niederlanden eingeführt, und die vollständigen RD 244/2019-Formalitäten gelten weiterhin unabhängig von der Anlagengröße: ein CIE-Zertifikat (Certificado de Instalación Eléctrica), REBT-Konformität (Elektrische Sicherheitsnorm), Registrierung bei Ihrer regionalen Comunidad Autónoma sowie Meldung an Ihren Stromnetzbetreiber.',
+          'Die 800-W-Zahl selbst ist als spanienspezifischer Schwellenwert ebenfalls fragwürdig – sie ähnelt stark den in anderen europäischen Märkten verwendeten Schwellenwerten, was darauf hindeutet, dass sie verallgemeinert wurde, anstatt konkret aus spanischem Gesetzestext zu stammen.',
+        ],
+      },
+      mexico: {
+        id: 'mexico',
+        title: 'Mexiko: keine Ausnahme für Kleinanlagen',
+        content: [
+          '**Mexiko hat keinen spezifischen Rahmen für Plug-in-Solaranlagen – jedes netzgekoppelte System, von der kleinsten Plug-in-Einheit bis zu 700 kW, durchläuft denselben formalen CFE-Einspeisevertragsprozess mit einem CRE-zertifizierten Installateur.** Der 700-kW-Schwellenwert des „trámite simplificado", der nach Mexikos Ley del Sector Eléctrico (in Kraft seit 19. März 2025) von 500 kW angehoben wurde, ist eine Grenze für die Genehmigungskomplexität, keine Ausnahme für Kleinanlagen – ein 300-W-Balkonkraftwerk und eine 690-kW-Anlage stehen vor denselben Formalitäten.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Ist ein Balkonkraftwerk in Spanien definitiv legal?', a: 'Das kann nicht mit Sicherheit beantwortet werden – Quellen widersprechen sich, ob kleine Geräte eine vereinfachte Ausnahme erhalten oder das vollständige RD 244/2019-Verfahren benötigen. Klären Sie das direkt mit Ihrer regionalen Energiebehörde.' },
+          { q: 'Ist die 800-W-Ausnahme für Spanien bestätigt?', a: 'Nein – sie scheint eine häufig wiederholte Zahl zu sein, die möglicherweise aus anderen europäischen Märkten stammt, nicht aus kodifiziertem spanischen Gesetzestext.' },
+          { q: 'Was ist „vertido cero" und hilft es Balkonkraftwerk-Käufern in Spanien?', a: 'Das ist eine Eigenverbrauchskategorie mit Nulleinspeisung, die nach RD 244/2019 von Netzanschluss-/Zugangserlaubnissen befreit ist. Ob es als echter vereinfachter Weg speziell für Balkonkraftwerke funktioniert – statt als allgemeine praktische Sicherheitsregelung –, ist aus den verfügbaren Quellen unklar.' },
+          { q: 'Erlaubt Mexiko Balkonkraftwerke?', a: 'Es ist nicht verboten, aber es gibt keine Ausnahme für Kleinanlagen – dasselbe vollständige CFE-Einspeiseverfahren (Vertrag, CRE-zertifizierter Installateur) gilt für jede Größe eines netzgekoppelten Systems, von 1 kW bis 700 kW.' },
+          { q: 'Welche Unterlagen könnte ich in Spanien für ein kleines Balkonkraftwerk benötigen?', a: 'Wenn die strengere rechtliche Auslegung gilt, möglicherweise ein CIE-Zertifikat, REBT-Konformitätsdokumentation, regionale Comunidad-Autónoma-Registrierung und Netzbetreibermeldung – klären Sie, welche davon tatsächlich für Ihre spezifische Anlagengröße und Region gelten.' },
+          { q: 'Als Rentner oder Auswanderer aus Deutschland in Spanien – was gilt für mich?', a: 'Dieselbe ungeklärte nationale Situation gilt für Sie. Manche Autonomen Gemeinschaften wie Andalusien oder die Kanaren können eigene Interpretationen haben – erkundigen Sie sich direkt bei der lokalen Energiebehörde Ihres Wohnsitzes.' },
+          { q: 'Deckt diese Seite ganz Lateinamerika ab?', a: 'Nur Mexiko wird hier mit verifizierten Daten abgedeckt. Andere lateinamerikanische Länder wurden für diesen Leitfaden nicht unabhängig recherchiert – gehen Sie nicht davon aus, dass Mexikos Status anderswo in der Region gilt.' },
+          { q: 'Wann wird Spaniens Status auf dieser Seite geklärt?', a: 'Wenn eine primäre Regulierungsquelle (statt Anbieter- oder allgemeiner Presseberichterstattung) eine kodifizierte vereinfachte Ausnahme bestätigen oder verneinen kann – diese Seite hat einen 6-Monats-Aktualisierungszyklus und wird bei entsprechender Klarheit aktualisiert.' },
+        ],
+      },
+    },
+  },
   ko: {
     theme: 'Balcony Solar Legislation',
     title: '스페인과 라틴아메리카의 발코니 태양광: 법적 상태 설명',

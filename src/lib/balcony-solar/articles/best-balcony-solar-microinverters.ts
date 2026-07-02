@@ -1178,4 +1178,120 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  de: {
+    theme: 'Balcony Solar Money Pages',
+    title: 'Beste Balkonkraftwerk Wechselrichter (2026): Hoymiles vs. Deye vs. APsystems',
+    seoTitle: 'Beste Balkonkraftwerk Wechselrichter 2026: Lokal vs. Cloud',
+    intro: 'Der Mikrowechselrichter ist die Komponente, die tatsächlich bestimmt, ob Ihr Balkonkraftwerk ein Cloud-Konto zur Überwachung benötigt — und ob er gut mit Home Assistant zusammenarbeitet. Hoymiles, Deye und APsystems dominieren den US-Plug-in-Markt, verfolgen beim Local- vs. Cloud-Control jedoch sehr unterschiedliche Ansätze.',
+    metaDescription: 'Hoymiles, Deye und APsystems: Balkonkraftwerk-Wechselrichter verglichen nach Preis, Monitoring und lokalem Zugriff — einschließlich des einzigen mit nativer lokaler API, geprüft Juli 2026.',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '9 Min. Lesezeit',
+    educationalLevel: 'Advanced',
+    audience: 'DIY-Balkonkraftwerk-Käufer, die Mikrowechselrichter-Marken vergleichen, insbesondere Home-Assistant-Nutzer',
+    primaryTerm: 'Balkonkraftwerk Wechselrichter',
+    targetKeywords: ['bester Balkonkraftwerk Wechselrichter', 'hoymiles vs deye vs apsystems', 'apsystems ez1 test', 'balkonkraftwerk lokale api', 'ul 3700 mikrowechselrichter'],
+    leadAnswerBlock: '**APsystems EZ1-M ist der einzige der drei großen Balkonkraftwerk-Mikrowechselrichter-Marken (Hoymiles, Deye, APsystems) mit einer herstellereigenen nativen lokalen API — kein Cloud-Konto oder Workaround erforderlich.** Hoymiles verwendet standardmäßig seine S-Miles-Cloud-Plattform mit nur DIY/Reverse-Engineering-basiertem lokalem Zugriff, während Deye einen inoffiziellen Cloud-freien Weg bietet, der von einer älteren Firmware-Version abhängt. Keine der drei Marken hat zum Zeitpunkt der Erstellung ein UL-3700-zertifiziertes Produkt auf dem Markt.',
+    quickAnswerTop: {
+      de: {
+        question: 'Welche Balkonkraftwerk-Mikrowechselrichter-Marke bietet die beste lokale Steuerung?',
+        answer: 'APsystems EZ1-M ist die klare Wahl für lokale Steuerung: Er wird mit einer offiziellen, dokumentierten lokalen HTTP-API geliefert (aktiviert per Bluetooth: Einstellungen > Lokaler Modus) und einer herstellernahen Open-Source-Home-Assistant-Integration, die kein Cloud-Konto erfordert. Hoymiles und Deye verwenden standardmäßig Cloud-Monitoring, mit nur inoffiziellen oder firmware-abhängigen lokalen Workarounds.',
+        bullets: [
+          'APsystems EZ1-M: 325 $ direkt aus dem US-Shop von APsystems, native lokale API, offiziell anmutende Home Assistant-Integration',
+          'Hoymiles HMS-800-2T-NA: ca. 279–290 $, S-Miles Cloud ist der vorgesehene Weg, lokaler Zugriff nur via Community-Modbus/DTU-Workarounds',
+          'Deye SUN600–1000G3: lokaler Zugriff via Community-Tools möglich, aber von einer älteren Firmware-Version abhängig, die neuere Updates entfernen könnten',
+          'Keine Marke hat bisher ein UL-3700-zertifiziertes Produkt — der Standard startete Jan 2026, Zertifizierungstests stehen branchenweit noch aus',
+          'Alle drei Marken haben bereits UL 1741 / IEEE 1547 Netzanschlusskompatiblität — das ist nicht dasselbe wie UL 3700 und älter',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Was macht ein Mikrowechselrichter?', anchor: '#what-it-does' },
+      { label: 'Hoymiles vs. Deye vs. APsystems: So haben wir verglichen', anchor: '#how-we-chose' },
+      { label: 'Cloud vs. lokales Monitoring: Der No-Cloud-Ansatz', anchor: '#cloud-vs-local' },
+      { label: 'Netzanschlussstandards: UL 1741, IEEE 1547 und UL 3700', anchor: '#grid-code' },
+      { label: 'Vergleichstabelle', anchor: '#comparison-table' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'APsystems EZ1-M (325 $, direkt von APsystems USA) ist die einzige große Marke mit einer herstellereigenen nativen lokalen API — kein Cloud-Konto oder Reverse Engineering erforderlich.',
+          'Hoymiles HMS-800-2T-NA (ca. 279–290 $) verwendet standardmäßig S-Miles Cloud-Monitoring; lokaler Zugriff besteht nur durch Community-DTU/Modbus-Workarounds, ist kein offizielles Feature.',
+          'Deye SUN600–1000G3 hat ein dokumentiertes Community-Tool ohne Cloud, hängt aber von einer älteren Firmware-Version (~1.57) ab, die neuere Updates sperren könnten — prüfen Sie die Firmware Ihrer Einheit, bevor Sie auf lokalen Zugriff vertrauen.',
+          'Kein Mikrowechselrichter irgendeiner Marke hat die UL-3700-Zertifizierung erhalten (Stand Juli 2026) — der Standard startete im Januar 2026, Zertifizierungstests stehen branchenweit noch aus.',
+          'Alle drei Marken haben bereits UL 1741 und IEEE 1547 Compliance, die vorbestehenden Netzanschlussstandards — das ist nicht dasselbe wie UL 3700 und ist um Jahre älter.',
+          'Für ein wirklich Cloud-freies Setup ist die Hardware-Wahl wichtiger als die Software-Konfiguration — Home Assistant kann keinem Gerät lokalen Zugriff hinzufügen, das ihn nicht anbietet.',
+        ],
+      },
+      whatItDoes: {
+        id: 'what-it-does',
+        title: 'Was macht ein Mikrowechselrichter?',
+        content: [
+          '**Ein Mikrowechselrichter wandelt den Gleichstrom (DC), den Ihr Solarmodul erzeugt, in den Wechselstrom (AC) um, den die Steckdosen und Geräte Ihres Haushalts verwenden, und synchronisiert diesen Ausgang mit der Spannung und Frequenz Ihres Netzanschlusses.** Bei Balkonkraftwerken übernimmt er auch typischerweise die Monitoring-Schicht — er sendet Produktionsdaten an die App oder das Dashboard des Herstellers.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Ein Mikrowechselrichter wandelt den DC-Ausgang des Solarmoduls in netzsynchronen AC-Strom um, den Ihr Haushalt direkt nutzen kann.' },
+          { type: 'plain-terms', text: 'Er ist der Übersetzer zwischen dem, was Ihr Panel erzeugt (DC), und dem, was Ihre Steckdosen erwarten (AC) — ohne ihn ist die Modulleistung in einem Standardhaushalt nicht nutzbar.' },
+        ],
+      },
+      howWeChose: {
+        id: 'how-we-chose',
+        title: 'Hoymiles vs. Deye vs. APsystems: So haben wir verglichen',
+        content: [
+          '**Wir haben jede Marke nach drei Kriterien bewertet: aktuelle US-Verfügbarkeit und Preis, ob lokales (nicht-Cloud-)Monitoring ein offiziell unterstütztes Feature oder ein inoffizieller Workaround ist, und vorbestehende Netzanschluss-Compliance.** Hoymiles und Deye sind etablierte Großvolumen-Marken; APsystems ist erst kürzlich in den US-Direktvertrieb eingestiegen, liefert aber Hardware, die speziell für lokale Steuerung ausgelegt ist.',
+        ],
+      },
+      cloudVsLocal: {
+        id: 'cloud-vs-local',
+        title: 'Cloud vs. lokales Monitoring: Der No-Cloud-Ansatz',
+        content: [
+          '**Wenn lokale Steuerung Ihre Priorität ist, hat APsystems EZ1-M als einziger der drei eine dokumentierte, herstellerunterstützte lokale HTTP-API — direkt auf dem Gerät per Bluetooth aktiviert (Einstellungen > Lokaler Modus), ohne Cloud-Konto.** Eine herstellernahe Open-Source-Home-Assistant-Integration ist direkt gegen diese lokale API aufgebaut, sodass die Einrichtung kein Reverse Engineering erfordert.',
+          '**Hoymiles leitet das Monitoring standardmäßig über seine S-Miles Cloud-Plattform**, und obwohl Community-Tools existieren, um Daten lokal via Modbus (RS485/RTU oder TCP) des DTU abzurufen, sind das DIY-Workarounds statt eines offiziell dokumentierten lokalen Modus — erwarten Sie mehr Einrichtungsaufwand und weniger Herstellersupport, falls etwas kaputt geht.',
+          '**Deyes SUN600–1000G3-Linie wird über die SOLARMAN-Cloud-Plattform überwacht** (eine von vielen Budget-Wechselrichter-Marken geteilte Plattform, nicht Deye-exklusiv), aber ein Open-Source-Community-Projekt dokumentiert eine wirklich Cloud-freie lokale Lesemethode via Modbus. Der Haken: Sie hängt von einer älteren Firmware-Version (~1.57) ab, und neuere Firmware-Updates könnten diesen Zugang entfernen — prüfen Sie die Firmware Ihrer spezifischen Einheit, bevor Sie darauf vertrauen.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Firmware-Updates können das lokale Zugriffs-Verhalten nach dem Kauf ändern. Was heute auf einer bestimmten Deye- oder Hoymiles-Einheit funktioniert, ist nicht garantiert nach dem nächsten Update weiterhin zu funktionieren.' },
+        ],
+      },
+      gridCode: {
+        id: 'grid-code',
+        title: 'Netzanschlussstandards: UL 1741, IEEE 1547 und UL 3700',
+        content: [
+          '**UL 1741 und IEEE 1547 sind die langjährig etablierten US-Netzanschlussstandards, die Hoymiles-, Deye- und APsystems-Mikrowechselrichter bereits erfüllen — UL 3700 ist ein neuerer, separater, balkonkraftwerk-spezifischer Standard, der im Januar 2026 gestartet ist und noch keine zertifizierten Produkte irgendeiner Marke liefert.** Verwechseln Sie nicht die vorhandene UL-1741/IEEE-1547-Konformität eines Produkts mit der UL-3700-Zertifizierung; das sind verschiedene Standards mit unterschiedlichem Geltungsbereich, und zum Zeitpunkt der Erstellung hat kein Mikrowechselrichter die UL-3700-Zertifizierungstests abgeschlossen.',
+          'Dies ist ein sich schnell entwickelndes Gebiet — UL Solutions öffnete das Zertifizierungsprogramm im Januar 2026, und zertifizierte Produkte werden voraussichtlich später 2026 erscheinen — überprüfen Sie daher den aktuellen Stand, bevor Sie sich auf diese Aussage verlassen.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Vergleichstabelle',
+        rows: [
+          { Marke: 'Hoymiles', Modell: 'HMS-800-2T-NA', Preis: 'ca. 279–290 $', Monitoring: 'S-Miles Cloud (Standard); lokal via DIY-Modbus/DTU-Workarounds', ul3700: 'Nicht zertifiziert' },
+          { Marke: 'Deye', Modell: 'SUN600–1000G3', Preis: 'US-Preis unklar — nur EU-Preis gefunden', Monitoring: 'SOLARMAN Cloud (Standard); inoffizielles Cloud-freies lokales Tool, firmware-abhängig', ul3700: 'Nicht zertifiziert' },
+          { Marke: 'APsystems', Modell: 'EZ1-M', Preis: '325 $ (direkt, APsystems USA)', Monitoring: 'Native lokale API (offiziell) + optionale Cloud', ul3700: 'Nicht zertifiziert' },
+        ],
+        columns: ['Marke', 'Modell', 'Preis', 'Monitoring', 'ul3700'],
+        tableFormat: true,
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Welcher Balkonkraftwerk-Mikrowechselrichter funktioniert mit Home Assistant ohne Cloud-Konto?', a: 'APsystems EZ1-M ist der einzige der drei Hauptmarken mit einer herstellereigenen nativen lokalen API und einer offiziell anmutenden Open-Source-Home-Assistant-Integration, die kein Cloud-Konto erfordert.' },
+          { q: 'Sind Hoymiles oder Deye vollständig auf die Cloud angewiesen?', a: 'Nicht vollständig — beide haben Community-entwickelte lokale Zugriffsmethoden (Modbus-basiert für Hoymiles DTU, ein Cloud-freies Tool für Deye), aber keines ist ein offiziell dokumentiertes Herstellerfeature, und Deyes Methode hängt von einer älteren Firmware-Version ab.' },
+          { q: 'Gibt es bereits die UL-3700-Zertifizierung für irgendeinen Mikrowechselrichter?', a: 'Nein. Zum Zeitpunkt der Erstellung hat kein Produkt irgendeiner Marke die UL-3700-Zertifizierung abgeschlossen — der Standard startete im Januar 2026 und Zertifizierungstests stehen branchenweit noch aus.' },
+          { q: 'Sind Hoymiles-, Deye- und APsystems-Mikrowechselrichter ohne UL-3700-Zertifizierung sicher zu verwenden?', a: 'Sie haben bereits UL-1741- und IEEE-1547-Compliance, die etablierten Netzanschlusssicherheitsstandards, die UL 3700 um Jahre vorausgehen. UL 3700 ist ein neuerer, zusätzlicher, balkonkraftwerk-spezifischer Standard — sein Fehlen bedeutet nicht, dass die Hardware generell nicht zertifiziert ist.' },
+          { q: 'Kann ich einen Mikrowechselrichter separat von einem kompletten Balkonkraftwerk-Kit kaufen?', a: 'Ja — alle drei hier behandelten Marken verkaufen Mikrowechselrichter als eigenständige Komponenten für DIY-Setups, nicht nur als Teil von Komplettkits.' },
+          { q: 'Kann ein Firmware-Update den lokalen Zugriff meines Mikrowechselrichters unterbrechen?', a: 'Das kann passieren, insbesondere bei Deye-Einheiten, die auf das Community-Cloud-freie-Tool angewiesen sind, das an eine ältere Firmware-Version gebunden ist. Überprüfen Sie aktuelle Community-Berichte für Ihr spezifisches Modell, bevor Sie davon ausgehen, dass der lokale Zugriff bestehen bleibt.' },
+          { q: 'Was ist der Preisunterschied zwischen diesen drei Marken?', a: 'Hoymiles liegt bei ca. 279–290 $ für sein HMS-800-2T-NA-Modell. APsystems EZ1-M kostet 325 $ direkt vom Hersteller. Deyes US-Preis konnte zum Zeitpunkt der Erstellung nicht zuverlässig gefunden werden — nur EU-Preise waren verfügbar.' },
+          { q: 'Brauche ich einen Elektriker zur Installation eines Mikrowechselrichters?', a: 'Bei Plug-in-Balkonkraftwerk-Kits typischerweise nicht in Märkten, die Selbstinstallation erlauben — prüfen Sie jedoch immer die lokalen Vorschriften, da die Anforderungen je nach Land und in den USA je nach Bundesstaat variieren. In Deutschland gilt die VDE-0100-Norm für den Netzanschluss — wenden Sie sich im Zweifel an einen zugelassenen Elektrofachbetrieb.' },
+        ],
+      },
+    },
+  },
 };

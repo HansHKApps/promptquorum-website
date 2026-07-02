@@ -148,6 +148,122 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  de: {
+    theme: 'Balcony Solar Foundations',
+    title: 'Balkonkraftwerk erzeugt keinen Strom? Häufige Ursachen und Lösungen',
+    seoTitle: 'Balkonkraftwerk funktioniert nicht? Schritt-für-Schritt-Diagnose',
+    intro: 'Ein Balkonkraftwerk, das plötzlich aufhört, Strom zu erzeugen, ist so gut wie nie auf ein defektes Gerät zurückzuführen — der Fehler liegt fast immer an einer überschaubaren Zahl von häufigen, behebbaren Ursachen. Hier erfahren Sie, wie Sie in der richtigen Reihenfolge vorgehen, beginnend mit der wahrscheinlichsten Ursache.',
+    metaDescription: 'Balkonkraftwerk erzeugt keinen Strom? Eine schrittweise Diagnoseanleitung, die die häufigsten Ursachen in der Reihenfolge behandelt, in der Sie sie tatsächlich prüfen sollten.',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '8 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    audience: 'Besitzer von Balkonkraftwerken, die ein System diagnostizieren, das aufgehört hat, Strom zu erzeugen',
+    primaryTerm: 'Balkonkraftwerk',
+    targetKeywords: ['Balkonkraftwerk erzeugt keinen Strom', 'Balkonkraftwerk funktioniert nicht', 'Balkonkraftwerk Fehlersuche', 'Solaranlage kein Ertrag Lösung'],
+    leadAnswerBlock: '**Wenn ein Balkonkraftwerk aufhört, Strom zu erzeugen, liegt die Ursache fast immer an einer losen Verbindung, unzureichender Sonneneinstrahlung auf das Modul, einem Problem mit der Steckdose oder dem Wechselrichter-Status oder einem Firmware-/App-Problem — nicht an einem defekten Gerät.** Gehen Sie diese Ursachen in der Reihenfolge ihrer Wahrscheinlichkeit durch, bevor Sie von einem Austausch oder einer Reparatur ausgehen.',
+    quickAnswerTop: {
+      de: {
+        question: 'Warum erzeugt mein Balkonkraftwerk keinen Strom?',
+        answer: 'Prüfen Sie der Reihe nach: Erstens, vergewissern Sie sich, dass die Verbindung zwischen Modul und Wechselrichter fest sitzt und unbeschädigt ist. Zweitens, prüfen Sie, ob Beschattung, Wetter oder die Tageszeit die niedrige oder fehlende Einspeisung erklären — dies ist die häufigste Ursache und wird oft mit einem Defekt verwechselt. Drittens, kontrollieren Sie die Status-LED oder App des Wechselrichters auf einen Fehlerstatus. Viertens, vergewissern Sie sich, dass die Steckdose selbst funktioniert und kein Sicherungsautomat ausgelöst hat. Ein tatsächlich defektes Gerät ist die unwahrscheinlichste Erklärung.',
+        bullets: [
+          'Prüfen Sie zuerst die Verbindung zwischen Modul und Wechselrichter — lose oder beschädigte Kabel sind eine häufige, leicht behebbare Ursache',
+          'Vergewissern Sie sich, dass das Modul ausreichend Sonnenlicht erhält — Beschattung, Wetter und Jahreszeit beeinflussen die Leistung erheblich',
+          'Kontrollieren Sie die Status-LED oder App/Dashboard des Wechselrichters auf einen Fehlercode, bevor Sie von einem Hardwarefehler ausgehen',
+          'Prüfen Sie, ob die Steckdose funktioniert und kein Sicherungsautomat ausgelöst hat — aus Sicht des Moduls sieht ein Steckdosenproblem identisch aus wie ein Systemfehler',
+          'Ein Firmware-Fehler oder ein App-seitiges Monitoring-Problem kann dazu führen, dass ein funktionierendes System scheinbar null Strom erzeugt',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Zuerst die Verbindung prüfen', anchor: '#check-connection' },
+      { label: 'Sonneneinstrahlung und Beschattung ausschließen', anchor: '#sunlight-shading' },
+      { label: 'Wechselrichter-Status prüfen', anchor: '#inverter-status' },
+      { label: 'Die Steckdose prüfen', anchor: '#outlet-check' },
+      { label: 'Wenn das Monitoring das Problem ist, nicht die Erzeugung', anchor: '#monitoring-vs-power' },
+      { label: 'Wann Sie den Support kontaktieren sollten', anchor: '#contact-support' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Links', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Gehen Sie die Ursachen in der Reihenfolge ihrer Wahrscheinlichkeit durch: Verbindungsprobleme, Sonneneinstrahlung/Beschattung, Wechselrichter-Status, Steckdosenprobleme — ein defektes Gerät ist die unwahrscheinlichste Erklärung.',
+          'Lose oder beschädigte Kabel zwischen Modul und Wechselrichter sind eine häufige, leicht behebbare Ursache für null Ertrag.',
+          'Beschattung, Wetter, Jahreszeit und Tageszeit beeinflussen die Leistung erheblich und werden häufig mit einem Defekt verwechselt.',
+          'Ein Steckdosenproblem (ausgelöster Sicherungsautomat, defekte Steckdose) sieht aus Sicht des Moduls identisch aus wie ein Systemdefekt — prüfen Sie dies immer gezielt.',
+          'Ein Monitoring- oder App-Fehler kann dazu führen, dass ein tatsächlich funktionierendes System scheinbar null Strom erzeugt — gehen Sie nicht allein aufgrund der App-Anzeige von einem Hardwarefehler aus.',
+          'Wenn Sie alle häufigen Ursachen geprüft haben und das System immer noch keinen Strom erzeugt, wenden Sie sich an den Support des Herstellers, bevor Sie selbst eine Reparatur versuchen.',
+        ],
+      },
+      checkConnection: {
+        id: 'check-connection',
+        title: 'Zuerst die Verbindung prüfen',
+        content: [
+          '**Vergewissern Sie sich, dass das Kabel zwischen Modul und Mikrowechselrichter vollständig eingesteckt und unbeschädigt ist — dies ist die häufigste Ursache für ein System, das null Strom erzeugt, obwohl ansonsten alles in Ordnung zu sein scheint.** Ein Stecker, der sich durch Vibration, Witterungseinflüsse oder eine anfänglich unvollständige Installation gelockert hat, lässt sich in den meisten Fällen einfach und sicher beheben.',
+        ],
+      },
+      sunlightShading: {
+        id: 'sunlight-shading',
+        title: 'Sonneneinstrahlung und Beschattung ausschließen',
+        content: [
+          '**Niedrige oder fehlende Einspeisung ist häufig einfach ein Problem mit der Sonneneinstrahlung und kein Defekt — prüfen Sie die Tageszeit, die Jahreszeit, das Wetter und ob etwas (ein neuer Ast, ein geparktes Fahrzeug, ein nahes Gebäude) das Modul neu beschattet.** Dies ist besonders leicht mit einem Hardwareproblem zu verwechseln, wenn sich das Schattenmuster allmählich verändert hat und die Ursache nicht auffiel.',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Geringer Ertrag beim Balkonkraftwerk ist oft einfach auf mangelnde Sonneneinstrahlung zurückzuführen, nicht auf einen Hardwareschaden — prüfen Sie Beschattung und Wetter, bevor Sie von einem Defekt ausgehen.' },
+        ],
+      },
+      inverterStatus: {
+        id: 'inverter-status',
+        title: 'Wechselrichter-Status prüfen',
+        content: [
+          '**Die meisten Mikrowechselrichter verfügen über eine Status-LED oder eine App/Dashboard, die Fehlerzustände meldet — prüfen Sie dies, bevor Sie von einem stillen Ausfall ausgehen.** Wenn Sie über Home Assistant ein lokales Monitoring eingerichtet haben, prüfen Sie dort direkt, anstatt sich allein auf die Hersteller-App zu verlassen, da [lokales Monitoring bei einem Cloud-Ausfall des Herstellers zuverlässiger sein kann](/de/balcony-solar/home-assistant-balcony-solar-no-cloud).',
+        ],
+      },
+      outletCheck: {
+        id: 'outlet-check',
+        title: 'Die Steckdose prüfen',
+        content: [
+          '**Vergewissern Sie sich, dass die Steckdose, in die Ihr Mikrowechselrichter eingesteckt ist, tatsächlich funktioniert und kein Sicherungsautomat ausgelöst hat — aus Sicht des Moduls sieht eine defekte Steckdose identisch aus wie ein Wechselrichterausfall.** Testen Sie die Steckdose mit einem anderen Gerät, wenn Sie unsicher sind, anstatt davon auszugehen, dass die Solaranlage das Problem ist.',
+        ],
+      },
+      monitoringVsPower: {
+        id: 'monitoring-vs-power',
+        title: 'Wenn das Monitoring das Problem ist, nicht die Erzeugung',
+        content: [
+          '**Manchmal erzeugt das Modul korrekt Strom, aber Ihre Monitoring-App oder Ihr Dashboard zeigt null an — das ist ein Berichtsfehler, kein tatsächliches Erzeugungsproblem, und tritt am häufigsten bei Cloud-abhängigem Monitoring während eines Hersteller-Ausfalls auf.** Wenn Ihre Einspeisung scheinbar genau in dem Moment aufgehört hat, als Sie ein App- oder Website-Problem bemerkt haben, ist das Monitoring wahrscheinlicher die Ursache als die Hardware.',
+        ],
+        callouts: [
+          { type: 'tip', text: 'Wenn Sie sehen können, dass die Kontrollleuchte Ihres Moduls normalen Betrieb anzeigt, während die App einen Fehler oder null Ertrag meldet, liegt das Problem sehr wahrscheinlich am Monitoring und nicht am eigentlichen Stromsystem.' },
+        ],
+      },
+      contactSupport: {
+        id: 'contact-support',
+        title: 'Wann Sie den Support kontaktieren sollten',
+        content: [
+          '**Wenn Sie die Verbindung geprüft, Beschattung und Wetter ausgeschlossen, den Wechselrichter-Status kontrolliert und die Steckdose überprüft haben — und das System immer noch keinen Strom erzeugt — wenden Sie sich an den Hersteller-Support, anstatt zu versuchen, das Gerät selbst zu öffnen oder zu reparieren.** Öffnen Sie einen Mikrowechselrichter niemals selbst; behandeln Sie ihn gemäß dem [Installationssicherheits-Leitfaden](/de/balcony-solar/how-to-install-balcony-solar) als versiegeltes, nicht wartbares Gerät.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Mein Balkonkraftwerk hat plötzlich aufgehört, Strom zu erzeugen — was ist die wahrscheinlichste Ursache?', a: 'Eine lose oder beschädigte Verbindung zwischen Modul und Mikrowechselrichter oder eine Veränderung der Sonneneinstrahlung/Beschattung sind die beiden häufigsten Ursachen — prüfen Sie diese, bevor Sie von einem Hardwaredefekt ausgehen.' },
+          { q: 'Ist eine defekte Steckdose eine häufige Ursache für Probleme beim Balkonkraftwerk?', a: 'Ja — aus Sicht des Moduls sieht eine defekte Steckdose oder ein ausgelöster Sicherungsautomat identisch aus wie ein Wechselrichterausfall. Testen Sie die Steckdose immer direkt mit einem anderen Gerät.' },
+          { q: 'Meine App zeigt null Ertrag an, aber das Modul sieht in Ordnung aus — was stimmt nicht?', a: 'Das ist wahrscheinlich ein Monitoring-Problem, kein tatsächliches Erzeugungsproblem — Cloud-abhängige Apps können während eines Hersteller-Ausfalls fehlerhafte Daten anzeigen, auch wenn die Hardware normal funktioniert.' },
+          { q: 'Kann das Wetter die Einspeisung meines Balkonkraftwerks wesentlich beeinflussen?', a: 'Ja — Bewölkung, Jahreszeit und Tageszeit beeinflussen die Einspeisung erheblich, und eine geringe Einspeisung bei schlechtem Wetter ist normal und kein Defekt.' },
+          { q: 'Sollte ich meinen Mikrowechselrichter selbst öffnen, um ein Problem zu prüfen?', a: 'Nein — behandeln Sie ihn als versiegeltes, nicht wartbares Gerät. Das Öffnen oder Modifizieren ist ein Sicherheitsrisiko und macht die Garantie wahrscheinlich ungültig.' },
+          { q: 'Wie erkenne ich, ob das Problem Beschattung und kein Hardwaredefekt ist?', a: 'Prüfen Sie, ob etwas Neues (ein Ast, ein geparktes Fahrzeug, ein nahes Gebäude) Schatten auf das Modul wirft, und beobachten Sie, ob die Einspeisung mit dem Sonnenstand im Tagesverlauf korreliert, anstatt unabhängig von den Bedingungen konstant null zu sein.' },
+          { q: 'Hilft lokales Monitoring bei der Fehlersuche?', a: 'Es kann helfen — wenn Sie über Home Assistant ein lokales Monitoring eingerichtet haben, bleibt es bei einem Cloud-Ausfall des Herstellers erreichbar und hilft Ihnen, ein Monitoring-Problem von einem tatsächlichen Erzeugungsproblem zu unterscheiden.' },
+          { q: 'Wann sollte ich den Hersteller kontaktieren, anstatt selbst weiter zu suchen?', a: 'Nachdem Sie die Verbindung geprüft, Beschattung/Wetter ausgeschlossen, den Wechselrichter-Status kontrolliert und die Steckdose geprüft haben — wenn das System zu diesem Zeitpunkt immer noch keinen Strom erzeugt, wenden Sie sich an den Support, anstatt selbst eine Reparatur zu versuchen.' },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Balcony Solar Foundations',
     title: '¿La energía solar de balcón no genera energía? Soluciones habituales',
@@ -579,19 +695,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
-    title: 'ベランダ太陽光発電が発電しない？よくある原因と対処法',
-    seoTitle: 'ベランダ太陽光発電が動作しない場合のトラブルシューティングガイド',
-    intro: 'ベランダ太陽光発電システムが突然発電しなくなった場合、ユニットの故障であることはほとんどありません。原因は、少数のよくある修正可能な問題のいずれかである場合がほとんどです。ここでは、最も可能性の高い原因から順に診断する方法を説明します。',
-    metaDescription: 'ベランダ太陽光発電が発電しない場合のステップバイステップ診断ガイド。実際に確認すべき順番で、よくある原因を解説します。',
+    title: 'バルコニー太陽光発電が発電しない？よくある原因と対処法',
+    seoTitle: 'バルコニー太陽光発電が動作しない場合のトラブルシューティングガイド',
+    intro: 'バルコニー太陽光発電システムが突然発電しなくなった場合、ユニットの故障であることはほとんどありません。原因は、少数のよくある修正可能な問題のいずれかである場合がほとんどです。ここでは、最も可能性の高い原因から順に診断する方法を説明します。',
+    metaDescription: 'バルコニー太陽光発電が発電しない場合のステップバイステップ診断ガイド。実際に確認すべき順番で、よくある原因を解説します。',
     readTime: '約8分',
     educationalLevel: 'Beginner',
-    audience: '発電が停止したシステムのトラブルシューティングを行うベランダ太陽光発電の所有者',
-    primaryTerm: 'ベランダ太陽光発電 発電しない',
-    targetKeywords: ['ベランダ太陽光発電 発電しない', 'ベランダ太陽光発電 動かない', 'ベランダ太陽光発電 トラブルシューティング', 'ソーラーパネル 出力なし 対処法'],
-    leadAnswerBlock: '**ベランダ太陽光発電システムが発電しなくなる原因は、ほとんどの場合、接続の緩み、パネルに届く日射不足、コンセントやインバーターの状態の問題、またはファームウェア/アプリの不具合であり、ユニットの故障ではありません。** 交換や修理が必要だと決めつける前に、これらの原因を可能性の高い順に確認してください。',
+    audience: '発電が停止したシステムのトラブルシューティングを行うバルコニー太陽光発電の所有者',
+    primaryTerm: 'バルコニー太陽光発電 発電しない',
+    targetKeywords: ['バルコニー太陽光発電 発電しない', 'バルコニー太陽光発電 動かない', 'バルコニー太陽光発電 トラブルシューティング', 'ソーラーパネル 出力なし 対処法'],
+    leadAnswerBlock: '**バルコニー太陽光発電システムが発電しなくなる原因は、ほとんどの場合、接続の緩み、パネルに届く日射不足、コンセントやインバーターの状態の問題、またはファームウェア/アプリの不具合であり、ユニットの故障ではありません。** 交換や修理が必要だと決めつける前に、これらの原因を可能性の高い順に確認してください。',
     quickAnswerTop: {
       ja: {
-        question: 'ベランダ太陽光発電システムが発電しないのはなぜですか？',
+        question: 'バルコニー太陽光発電システムが発電しないのはなぜですか？',
         answer: '次の順番で確認してください。まず、パネルとインバーター間の接続がしっかりと固定され、損傷していないかを確認します。次に、日陰、天候、時間帯が出力の低下やゼロを説明できるかを確認します。これは最もよくある原因で、故障と誤解されがちです。3番目に、インバーターのステータスランプやアプリでエラー状態を確認します。4番目に、コンセント自体が機能しており、ブレーカーが落ちていないかを確認します。実際にユニットが故障している可能性は最も低い説明です。',
         bullets: [
           'まずパネルとインバーター間の接続を確認する — 緩んだり損傷したりした配線はよくある、簡単に修正できる原因です',
@@ -641,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**出力の低下やゼロは、故障ではなく単なる日射の問題であることがよくあります。時間帯、季節、天候、そして何か（新しく伸びた木の枝、駐車した車両、近くの構造物）がパネルに新たに影を落としていないかを確認してください。** 日陰のパターンが徐々に変化し、その原因に気づかなかった場合、ハードウェアの問題と誤解しやすくなります。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'ベランダ太陽光発電の出力低下は、多くの場合ハードウェアの故障ではなく単なる日射不足です — 何かが壊れていると決めつける前に、日陰と天候を確認してください。' },
+          { type: 'one-sentence', text: 'バルコニー太陽光発電の出力低下は、多くの場合ハードウェアの故障ではなく単なる日射不足です — 何かが壊れていると決めつける前に、日陰と天候を確認してください。' },
         ],
       },
       inverterStatus: {
@@ -679,10 +795,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'ベランダ太陽光発電パネルが突然発電しなくなりました。最も可能性の高い原因は何ですか？', a: 'パネルとマイクロインバーター間の接続の緩みや損傷、または日射/日陰の変化が最もよくある2つの原因です。ハードウェアの欠陥だと決めつける前に、これらを確認してください。' },
-          { q: 'コンセントの故障はベランダ太陽光発電の問題のよくある原因ですか？', a: 'はい — パネル側から見ると、機能していないコンセントやブレーカーの落下は、インバーターの故障と全く同じに見えます。必ず別の機器でコンセントを直接テストしてください。' },
+          { q: 'バルコニー太陽光発電パネルが突然発電しなくなりました。最も可能性の高い原因は何ですか？', a: 'パネルとマイクロインバーター間の接続の緩みや損傷、または日射/日陰の変化が最もよくある2つの原因です。ハードウェアの欠陥だと決めつける前に、これらを確認してください。' },
+          { q: 'コンセントの故障はバルコニー太陽光発電の問題のよくある原因ですか？', a: 'はい — パネル側から見ると、機能していないコンセントやブレーカーの落下は、インバーターの故障と全く同じに見えます。必ず別の機器でコンセントを直接テストしてください。' },
           { q: 'アプリではゼロ発電と表示されていますが、パネルは問題なさそうです。何が起きていますか？', a: 'これは監視側の問題である可能性が高く、実際の発電の問題ではありません。クラウド依存型のアプリは、ハードウェアが正常に動作していても、メーカーのクラウド障害時に誤ったデータを表示することがあります。' },
-          { q: '天候はベランダ太陽光発電の出力に大きく影響しますか？', a: 'はい — 雲量、季節、時間帯はいずれも出力に大きく影響し、悪天候時の出力低下は正常であり、故障ではありません。' },
+          { q: '天候はバルコニー太陽光発電の出力に大きく影響しますか？', a: 'はい — 雲量、季節、時間帯はいずれも出力に大きく影響し、悪天候時の出力低下は正常であり、故障ではありません。' },
           { q: '自分でマイクロインバーターを開けて問題を確認すべきですか？', a: 'いいえ — 密閉された修理不可のユニットとして扱ってください。自分で開けたり改造したりすることは安全上のリスクであり、保証が無効になる可能性が高いです。' },
           { q: 'ハードウェアの故障ではなく日陰が原因かどうかはどうすれば分かりますか？', a: '新しいもの（木の枝、駐車した車両、近くの構造物）がパネルに影を落としていないかを確認し、条件に関係なく常にゼロであるのではなく、出力が一日の太陽の角度と相関しているかを観察してください。' },
           { q: 'ローカル監視はトラブルシューティングに役立ちますか？', a: '役立つことがあります — Home Assistantでローカル監視を設定している場合、メーカーのクラウド障害時にもアクセス可能な状態が保たれることが多く、監視の問題と実際の発電の問題を区別するのに役立ちます。' },
@@ -693,8 +809,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'ベランダ太陽光発電が発電しない？よくある原因と対処法',
-      description: 'ベランダ太陽光発電が発電しない場合のステップバイステップ診断ガイド。実際に確認すべき順番で、よくある原因を解説します。',
+      headline: 'バルコニー太陽光発電が発電しない？よくある原因と対処法',
+      description: 'バルコニー太陽光発電が発電しない場合のステップバイステップ診断ガイド。実際に確認すべき順番で、よくある原因を解説します。',
       datePublished: '2026-07-02',
       dateModified: '2026-07-02',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -703,13 +819,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
       educationalLevel: 'Beginner',
       proficiencyLevel: 'Beginner',
-      audience: { '@type': 'Audience', audienceType: '発電が停止したシステムのトラブルシューティングを行うベランダ太陽光発電の所有者' },
-      about: ['ベランダ太陽光発電のトラブルシューティング', 'マイクロインバーターの診断', 'ソーラーパネルの出力問題'],
+      audience: { '@type': 'Audience', audienceType: '発電が停止したシステムのトラブルシューティングを行うバルコニー太陽光発電の所有者' },
+      about: ['バルコニー太陽光発電のトラブルシューティング', 'マイクロインバーターの診断', 'ソーラーパネルの出力問題'],
     },
     howToSchema: {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'ベランダ太陽光発電が発電しない場合のトラブルシューティング方法',
+      name: 'バルコニー太陽光発電が発電しない場合のトラブルシューティング方法',
       inLanguage: 'ja',
       step: [
         { '@type': 'HowToStep', name: 'パネルとインバーター間の接続を確認する', text: '配線がしっかりと接続され、損傷していないことを確認してください。' },

@@ -1001,6 +1001,122 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  de: {
+    theme: 'Balcony Solar Money Pages',
+    title: 'EcoFlow vs. Anker vs. Zendure: Balkonkraftwerk-Ökosystem im Vergleich',
+    seoTitle: 'EcoFlow vs. Anker vs. Zendure Balkonkraftwerk Vergleich (2026)',
+    intro: 'Diese drei Marken dominieren die Diskussion über Balkonkraftwerke mit Speicher, doch sie sind nicht austauschbar — eine wird in den USA nicht einmal verkauft, und die anderen beiden verfolgen entgegengesetzte Ansätze beim Cloud- vs. Lokalsteuerung.',
+    metaDescription: 'EcoFlow vs. Anker vs. Zendure für Balkonkraftwerke: Ökosystem-Vergleich, Cloud- vs. Lokalsteuerung je Marke und US-Verfügbarkeit — geprüft Juli 2026.',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '10 Min. Lesezeit',
+    educationalLevel: 'Advanced',
+    audience: 'Käufer von Balkonkraftwerken, die die Ökosysteme von EcoFlow, Anker und Zendure vergleichen',
+    primaryTerm: 'EcoFlow Anker Zendure Balkonkraftwerk Vergleich',
+    targetKeywords: ['EcoFlow Anker Zendure Vergleich', 'Zendure SolarFlow Home Assistant', 'Anker SOLIX Balkonkraftwerk', 'EcoFlow STREAM Ultra vs Zendure'],
+    leadAnswerBlock: '**Die Anker SOLIX Solarbank-Modelle werden in den USA weder verkauft noch zertifiziert — direkt am US-Storefront von Anker (ankersolix.com) bestätigt, der 17 portable Powerstation-Produkte listet, aber kein Solarbank, zuzüglich der fehlenden UL-1741-Zertifizierung für netzgekoppelte Wechselrichter, die für den Netzverkauf in den USA gesetzlich vorgeschrieben ist.** Unter den beiden US-tauglichen Marken führt EcoFlows STREAM Ultra bei den Rohdaten, erfordert jedoch die Cloud-App ohne verifizierten lokalen API-Pfad; Zendures SolarFlow-Reihe hat hingegen das ausgereifteste lokale Steuerungsökosystem aller Balkonbatterie-Marken — dank Community-entwickelter zenSDK-REST-API-Integrationen, die ohne Cloud-Konto auskommen.',
+    quickAnswerTop: {
+      de: {
+        question: 'Welches Balkonkraftwerk-Ökosystem soll ich wählen: EcoFlow, Anker oder Zendure?',
+        answer: 'Wenn Sie in den USA sind, ist Anker SOLIX keine Option — die Marke wird dort nicht verkauft oder zertifiziert. Zwischen EcoFlow und Zendure: Wählen Sie EcoFlows STREAM Ultra für die stärksten Rohspezifikationen (derzeit nur in Utah installierbar), oder Zendures SolarFlow-Reihe, wenn lokale Steuerung ohne Cloud-Konto Priorität hat — sie verfügt über die ausgereifteste Open-Source-Home-Assistant-Integration der drei Marken.',
+        bullets: [
+          'Anker SOLIX: wird in den USA nicht verkauft oder zertifiziert — für US-Käufer sofort ausschließen',
+          'EcoFlow STREAM Ultra: stärkste Spezifikationen (1,92–11,52 kWh), Cloud-App erforderlich, derzeit nur in Utah installierbar',
+          'Zendure SolarFlow: ausgereiftestes lokales Steuerungsökosystem — Community-zenSDK-REST-API-Integrationen, kein Cloud-Konto nötig',
+          'Cloud vs. Lokal ist das klarste Unterscheidungsmerkmal zwischen EcoFlow und Zendure — die beiden sind auf dieser Achse nicht gleichwertig',
+          'Keine der drei Marken hat einen in den USA verifizierten lokalen API-Pfad speziell für EcoFlow — diese Lücke ist real, kein Versehen',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Fazit auf einen Blick', anchor: '#key-takeaways' },
+      { label: 'Ökosystem-Vergleichstabelle', anchor: '#comparison-table' },
+      { label: 'Cloud vs. Lokal je Marke', anchor: '#cloud-vs-local' },
+      { label: 'Warum ist Anker in den USA nicht erhältlich?', anchor: '#trade-note' },
+      { label: 'Preis und Garantie nach Region', anchor: '#price-warranty' },
+      { label: 'Fazit nach Anwendungsfall', anchor: '#verdict' },
+      { label: 'Quellen', anchor: '#sources' },
+      { label: 'Häufig gestellte Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Anker SOLIX Solarbank-Modelle werden in den USA weder verkauft noch zertifiziert — schließen Sie diese Marke sofort aus, wenn Sie aus den USA kaufen.',
+          'EcoFlows STREAM Ultra hat die stärksten Spezifikationen der US-tauglichen Optionen (1,92 kWh, erweiterbar auf 11,52 kWh), erfordert aber die Cloud-App — kein verifizierter lokaler API-Pfad für EcoFlow wurde gefunden.',
+          'Zendures SolarFlow-Reihe hat das ausgereifteste lokale Steuerungsökosystem aller Balkonbatterie-Marken — Community-entwickelte zenSDK-REST-API-Integrationen ermöglichen volle Home-Assistant-Kontrolle ohne Cloud-Konto, MQTT-Bridge oder HACS-Abhängigkeit.',
+          'Cloud vs. Lokal ist das klarste Unterscheidungsmerkmal zwischen den beiden US-tauglichen Marken — gehen Sie nicht davon aus, dass sie auf dieser Dimension austauschbar sind, nur weil ihre Hardware-Spezifikationen vergleichbar sind.',
+          'EcoFlows STREAM Ultra wird und ist derzeit nur in Utah verkäuflich und installierbar — eine wesentliche Verfügbarkeitsbeschränkung unabhängig von der Cloud/Lokal-Frage.',
+          'Dieser Vergleich deckt diese drei Marken speziell ab, weil sie am häufigsten zusammen gesucht werden — er ist kein erschöpfender Marktüberblick.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Ökosystem-Vergleichstabelle',
+        rows: [
+          { brand: 'EcoFlow (STREAM Ultra)', usAvailability: 'Nur Utah', control: 'Cloud-App (kein verifizierter lokaler API)', capacity: '1,92–11,52 kWh' },
+          { brand: 'Anker (SOLIX Solarbank)', usAvailability: 'In den USA nicht verkauft/zertifiziert', control: 'Nicht relevant für US-Käufer', capacity: 'Nicht relevant für US-Käufer' },
+          { brand: 'Zendure (SolarFlow)', usAvailability: 'Aktuelle Gesetzgebung je Bundesstaat und Modell prüfen', control: 'Lokale zenSDK-REST-API (ohne Cloud)', capacity: 'Je nach Modell (Hub 1200/2000, Hyper)' },
+        ],
+        columns: ['brand', 'usAvailability', 'control', 'capacity'],
+        tableFormat: true,
+      },
+      cloudVsLocal: {
+        id: 'cloud-vs-local',
+        title: 'Cloud vs. Lokal je Marke',
+        content: [
+          '**Zendure ist die klare Wahl, wenn lokale Steuerung für Sie wichtig ist — die SolarFlow-Reihe verfügt über Community-entwickelte zenSDK-REST-API-Integrationen, die Home Assistant volle lokale Kontrolle ohne Cloud-Konto, MQTT-Bridge oder HACS-Abhängigkeit ermöglichen, das ausgereifteste Setup aller in diesem Leitfaden behandelten Balkonbatterie-Marken.** EcoFlow hingegen erfordert im Allgemeinen seine Cloud-App für Monitoring und Steuerung; für die STREAM-Serie wurde kein verifizierter lokaler API-Pfad gefunden — eine echte Lücke, wenn ein Cloud-freies Setup eine harte Anforderung und keine bloße Präferenz ist.',
+          'Ankers lokale Steuerungsgeschichte ist für US-Käufer unerheblich, unabhängig von ihren Vorzügen anderswo, da SOLIX Solarbank-Modelle auf diesem Markt überhaupt nicht verkauft oder zertifiziert werden.',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'Warum ist Anker in den USA nicht erhältlich?',
+        content: [
+          '**Ankers Abwesenheit vom US-amerikanischen Solarbank-Markt liest sich als echte Zertifizierungs- und Regulierungslücke — keine UL-1741-Listung, keine bei der FCC eingereichte Gerätezulassung — und nicht als bewusste handelspolitische Blockade; Anker hat seine jüngsten Solarbank-Launches (einschließlich des Solarbank 4 Pro, der im Juni 2026 in Berlin vorgestellt und für den Vorbestellungen geöffnet wurden) ausdrücklich auf Deutschland, Österreich und die EU beschränkt, wobei die Presseberichterstattung nur festhält, dass Nordamerika möglicherweise "später" folgen könnte — ohne ein genanntes Datum.** Anker, EcoFlow und Zendure sind alle chinesisch hergestellt (Shenzhen-basierte) Marken, daher betrifft die im April 2026 abgeschaffte chinesische Ausfuhrsteuererstattung für PV-Komponenten, die die Komponentenkosten beeinflusst, alle drei unabhängig davon, wo die Endmontage oder Markengebung stattfindet — Ankers spezifische US-Abwesenheit ist ein separates, zertifizierungsgetriebenes Problem und kein Symptom dieser Handelsdynamik.',
+        ],
+      },
+      priceWarranty: {
+        id: 'price-warranty',
+        title: 'Preis und Garantie nach Region',
+        content: [
+          '**EcoFlows STREAM Ultra ist zum Preis von 1.279 USD (Listenpreis 1.899 USD) erhältlich, mit 10 Jahren Garantie auf die LFP-Zellen und einer Auslegung für 6.000 Zyklen bei 70 % Kapazitätserhalt — direkt von EcoFlows eigenem US-Produktseite (us.ecoflow.com/products/stream-ultra) zum Schreibzeitpunkt, 2026-07-02, entnommen. Für den deutschen Markt sind alle drei Marken — EcoFlow, Anker SOLIX Solarbank und Zendure SolarFlow — in Deutschland erhältlich; Preise in EUR inkl. MwSt. variieren und sollten direkt beim Händler geprüft werden.** Zendures SolarFlow-Reihe wurde in dieser Recherche nicht eigenständig bepreist; prüfen Sie die aktuellen Preise direkt angesichts der Schnelllebigkeit dieser Produktkategorie. Ankers US-Preis ist hier nicht zutreffend, da die Marke dort nicht verkauft wird.',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Fazit nach Anwendungsfall',
+        content: [
+          '**Wenn Sie in Utah (USA) sind und heute die stärksten verfügbaren Spezifikationen möchten, ist EcoFlows STREAM Ultra die Wahl.** Wenn lokale Steuerung ohne Cloud-Konto eine harte Anforderung ist, ist Zendures SolarFlow-Reihe dank seines ausgereiften zenSDK-Integrationsökosystems die stärkere Wahl. Wenn Sie sich außerhalb der USA befinden — was für die meisten deutschen Käufer zutrifft — wird Anker SOLIX zur Option und lohnt sich als eigenständige Recherche; der US-Marktfokus dieses Leitfadens deckt seine Vorzüge dort nicht ab.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        links: [
+          { url: 'https://us.ecoflow.com/products/stream-ultra', title: 'EcoFlow STREAM Ultra — offizielle US-Produktseite', description: 'Preis, Spezifikationen und Utah-only-Installationsbeschränkung, zum Schreibzeitpunkt direkt abgerufen' },
+          { url: 'https://ankersolix.com', title: 'Anker SOLIX US-Storefront', description: 'Bestätigt, dass Solarbank im 17-Produkte-US-Katalog zum Schreibzeitpunkt fehlt' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          { q: 'Kann ich Anker SOLIX für ein Balkonkraftwerk in den USA kaufen?', a: 'Nein — Anker SOLIX Solarbank-Modelle werden trotz breiter Verfügbarkeit in Europa nicht in den USA verkauft oder zertifiziert. Dies ist ein häufiger Verwechslungspunkt für US-Käufer, die diesen Vergleich recherchieren.' },
+          { q: 'Hat EcoFlow eine lokale API für Home Assistant?', a: 'In dieser Recherche wurde kein verifizierter lokaler API-Pfad für EcoFlows STREAM-Serie gefunden — anders als Zendure erfordert sie für Monitoring und Steuerung im Allgemeinen die Cloud-App.' },
+          { q: 'Welche Marke hat die beste Home-Assistant-Integration?', a: 'Zendure — die SolarFlow-Reihe verfügt über Community-entwickelte zenSDK-REST-API-Integrationen, die vollständige lokale Kontrolle ohne Cloud-Konto, MQTT-Bridge oder HACS-Abhängigkeit bieten.' },
+          { q: 'Ist EcoFlows STREAM Ultra außerhalb von Utah erhältlich?', a: 'Derzeit nicht für Plug-and-Play-Installation — EcoFlows eigene Produktseite bestätigt, dass es zum Schreibzeitpunkt nur in Utah verkauft und installierbar ist.' },
+          { q: 'Sind das die einzigen drei Balkonkraftwerk-Marken, die es wert sind, in Betracht gezogen zu werden?', a: 'Nein — dieser Vergleich deckt diese drei speziell ab, weil sie am häufigsten zusammen gesucht werden, nicht weil sie eine erschöpfende Marktbefragung darstellen. Weitere Informationen finden Sie in den speziellen Kauf-Ratgebern für Sets, Batterien und Mikrowechselrichter.' },
+          { q: 'Wie viel kostet Zendures SolarFlow?', a: 'In dieser Recherche nicht eigenständig bepreist — prüfen Sie aktuelle Preise direkt, da sich diese Produktkategorie und ihre Preise schnell ändern.' },
+          { q: 'Ist Anker im Allgemeinen eine schlechte Marke für Balkonkraftwerke?', a: 'Dieser Leitfaden kann das speziell für US-Käufer nicht beurteilen, da das Produkt dort nicht verkauft oder zertifiziert wird — seine Vorzüge oder Nachteile auf Märkten, auf denen es verfügbar ist (z. B. Deutschland und Europa), werden von diesem US-fokussierten Vergleich nicht abgedeckt.' },
+          { q: 'Welche ist die sicherere Wahl, wenn ich Herstellerabhängigkeit vermeiden möchte?', a: 'Zendures lokaler API-Ansatz reduziert speziell die Abhängigkeit von der eigenen Cloud-Infrastruktur des Herstellers, was eine bedeutende Form der Vermeidung von Vendor-Lock-in ist, auch wenn er andere Lock-in-Faktoren wie proprietäre Hardware-Anschlüsse nicht adressiert.' },
+        ],
+      },
+    },
+  },
   ko: {
     theme: 'Balcony Solar Money Pages',
     title: 'EcoFlow vs. Anker vs. Zendure: 발코니 태양광 생태계 비교',

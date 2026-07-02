@@ -1110,4 +1110,127 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       about: ['Balcony solar', 'Rooftop solar', 'Solar decision guide'],
     },
   },
+  de: {
+    theme: 'Balcony Solar Foundations',
+    title: 'Balkonkraftwerk vs. Dachanlage: Was ist die richtige Wahl?',
+    seoTitle: 'Balkonkraftwerk vs. Dachanlage: Wichtigste Unterschiede erklärt',
+    intro: 'Balkonkraftwerk und Dachanlage lösen unterschiedliche Probleme — das eine ist ein kleines, selbst montierbares System mit geringer Bindung, das andere eine große, professionell installierte Langzeitinvestition. Die Entscheidung zwischen beiden beginnt damit, was Sie tatsächlich besitzen und kontrollieren können — nicht damit, welches System mehr Strom erzeugt.',
+    metaDescription: 'Balkonkraftwerk vs. Dachanlage: Vergleich nach Installation, Eigentum, Leistung und Zielgruppe — ein Entscheidungsrahmen, kein Datenblattvergleich.',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '8 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    audience: 'Alle, die zwischen einem Balkonkraftwerk und einer vollständigen Dach-Solaranlage abwägen',
+    primaryTerm: 'Balkonkraftwerk vs. Dachanlage',
+    targetKeywords: ['Balkonkraftwerk vs Dachanlage', 'Steckersolar vs Dachanlage', 'lohnt sich Balkonkraftwerk statt Dachanlage', 'kleine Solaranlage vs Vollinstallation'],
+    leadAnswerBlock: '**Ein Balkonkraftwerk eignet sich für Mieter, Wohnungseigentümer und alle, die keinen Dachzugang oder keine langfristige Bleibeperspektive haben; eine Dachanlage eignet sich für Eigentümer mit Dachzugang, die lange genug bleiben, um eine größere Anfangsinvestition durch Ersparnisse zurückzugewinnen.** Beide konkurrieren nicht wirklich um dieselbe Käufergruppe — der entscheidende Faktor ist, was Sie rechtlich und praktisch installieren können, nicht welche Technologie abstrakt besser abschneidet.',
+    quickAnswerTop: {
+      de: {
+        question: 'Soll ich ein Balkonkraftwerk oder eine Dachanlage wählen?',
+        answer: 'Wählen Sie ein Balkonkraftwerk, wenn Sie zur Miete wohnen, in einer Wohnung ohne Dachzugang leben oder Solar mit minimalem Aufwand und ohne Fachbetrieb ausprobieren möchten. Wählen Sie eine Dachanlage, wenn Sie Eigentümer sind, nutzbaren Dachraum haben und planen, lange genug zu bleiben, um eine größere Anfangsinvestition durch Stromeinsparungen zu amortisieren.',
+        bullets: [
+          'Balkonkraftwerk: Selbstmontage, sofort Ihr Eigentum, mobil, klein',
+          'Dachanlage: Fachbetrieb, oft finanziert, groß, an die Immobilie gebunden',
+          'Balkonkraftwerk ist für die meisten Mieter und viele Wohnungseigentümer die einzig realistische Option',
+          'Dachanlagen erzeugen in der Regel deutlich mehr Gesamtstrom und decken einen Großteil des Haushaltsbedarfs',
+          'Beide lassen sich kombinieren: Dach für die Grundkapazität, Balkon als Ergänzung an einer separaten Struktur',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Das Wichtigste in Kürze', anchor: '#key-takeaways' },
+      { label: 'Schnellantwort', anchor: '#quick-answer' },
+      { label: 'Kostenvergleich', anchor: '#cost-comparison' },
+      { label: 'Wer sollte was wählen?', anchor: '#who-should-pick' },
+      { label: 'Zweites Auswahlkriterium: Cloud vs. lokales Monitoring', anchor: '#cloud-dependency' },
+      { label: 'Hinweis zu Verkaufsgesprächen bei Dachanlagen', anchor: '#rooftop-lead-gen' },
+      { label: 'Wann lohnt es sich, beides zu kombinieren?', anchor: '#when-to-combine' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Balkonkraftwerk und Dachanlage richten sich an unterschiedliche Käufergruppen — nicht an dieselbe Person, die nur nach Preis oder Leistung entscheidet.',
+          'Ein Balkonkraftwerk ist selbst montierbar, sofort Ihr Eigentum und mobil — beim Umzug nehmen Sie es mit.',
+          'Eine Dachanlage wird vom Fachbetrieb installiert, oft über Jahre finanziert und ist an die Immobilie gebunden.',
+          'Dachanlagen erzeugen deutlich mehr Gesamtstrom und eignen sich besser, um den gesamten Haushaltsbedarf zu decken.',
+          'Die meisten Verkaufsgespräche rund um Dachanlagen beginnen mit einer Anfrage und entwickeln sich zu einer dauerhaften Vertriebsbeziehung — gehen Sie darauf vorbereitet.',
+          'Beide schließen sich nicht aus: Eigentümer können eine Dachanlage für die Grundkapazität installieren und Balkonpanels an einer separaten Wand oder Struktur ergänzen, die das Dachsystem nicht abdeckt.',
+        ],
+      },
+      quickAnswer: {
+        id: 'quick-answer',
+        title: 'Schnellantwort',
+        content: [
+          '**Gehört Ihnen kein Dach — oder gehört es Ihnen, aber Sie möchten keine mehrjährige Bindung eingehen — ist das Balkonkraftwerk die realistische Wahl; die Dachanlage ist für Eigentümer, die lange genug bleiben, um eine größere Investition zurückzugewinnen.** Es geht weniger darum, welche Option mehr Strom erzeugt (die Dachanlage gewinnt diesen Vergleich klar), sondern vielmehr darum, wozu Sie tatsächlich in der Lage und bereit sind.',
+        ],
+      },
+      costComparison: {
+        id: 'cost-comparison',
+        title: 'Kostenvergleich',
+        content: [
+          '**Ein Balkonkraftwerk kostet einen Bruchteil einer Dachanlage, weil es eine viel geringere Erzeugungskapazität abdeckt und keine professionelle Installation, keine Genehmigungen und keine Strukturarbeiten erfordert.** Eine Dachanlage kostet erheblich mehr, ist aber so dimensioniert, dass sie einen großen Teil — manchmal den gesamten — Strombedarf eines Haushalts deckt, was ein Balkonkraftwerk nie leisten soll.',
+          'Aktuelle Marktpreise finden Sie im [Balkonkraftwerk-Kaufratgeber](/de/balcony-solar/best-balcony-solar-kits-2026) und im [Amortisationsrechner](/de/balcony-solar/balcony-solar-payback-worth-it-2026) — diese Seite vermeidet bewusst konkrete Eurobeträge, da Dachanlagen-Angebote je nach Anbieter, Region und Systemgröße stark variieren und schnell veralten.',
+        ],
+      },
+      whoShouldPick: {
+        id: 'who-should-pick',
+        title: 'Wer sollte was wählen?',
+        content: [
+          '**Das Balkonkraftwerk eignet sich für Mieter, Wohnungseigentümer ohne Dachzugang und alle, die Solar mit minimalem Aufwand ausprobieren möchten.** Die Dachanlage eignet sich für Eigentümer mit nutzbarem Dachraum und ausreichend Restmietdauer, um die Investition durch Einsparungen zurückzugewinnen.',
+        ],
+        rows: [
+          { Profil: 'Mieter', Empfehlung: 'Balkonkraftwerk — in den meisten Fällen die einzig realistische Option' },
+          { Profil: 'Wohnungseigentümer ohne Dachzugang', Empfehlung: 'Balkonkraftwerk' },
+          { Profil: 'Eigentümer mit Umzugsplan in wenigen Jahren', Empfehlung: 'Balkonkraftwerk, oder vorsichtiger Ansatz bei der Dachanlage angesichts der Amortisationszeit' },
+          { Profil: 'Eigentümer mit nutzbarem Dach und langfristiger Bleibeperspektive', Empfehlung: 'Dachanlage, optional ergänzt durch Balkonpanels' },
+          { Profil: 'Alle, die Solar mit geringem Risiko testen möchten, bevor sie sich stärker binden', Empfehlung: 'Balkonkraftwerk als risikoarmer Einstieg' },
+        ],
+        columns: ['Profil', 'Empfehlung'],
+        tableFormat: true,
+      },
+      cloudDependency: {
+        id: 'cloud-dependency',
+        title: 'Zweites Auswahlkriterium: Cloud vs. lokales Monitoring',
+        content: [
+          '**Unabhängig von der gewählten Größe ist das Monitoring eine separate Entscheidung, die bewusst getroffen werden sollte — Dachanlagen-Anbieter binden Sie häufig an ihre eigene Cloud-Plattform, während Ihnen die DIY-Natur des Balkonkraftwerks mehr Freiheit gibt, Hardware zu wählen, die das Monitoring lokal hält.** Wenn Ihnen die Vermeidung dauerhafter Cloud-Abhängigkeit genauso wichtig ist wie die Systemgröße, spricht das für das Balkonkraftwerk — auch für Käufer, die sich eine Dachanlage leisten könnten. Was Sie dabei beachten sollten, lesen Sie unter [Balkonkraftwerk ohne Cloud](/de/balcony-solar/home-assistant-balcony-solar-no-cloud).',
+        ],
+      },
+      rooftopLeadGen: {
+        id: 'rooftop-lead-gen',
+        title: 'Hinweis zu Verkaufsgesprächen bei Dachanlagen',
+        content: [
+          '**Eine Anfrage für ein Dachanlagen-Angebot startet in der Regel eine dauerhafte Vertriebsbeziehung, keine einmalige Preisanfrage** — viele Installationsbetriebe und Lead-Generierungsseiten geben Ihre Kontaktdaten an mehrere Unternehmen weiter, was monatelange Folgeanrufe auslöst. Beim Balkonkraftwerk ist das anders: Sie können es ohne Vertriebspipeline direkt recherchieren und kaufen.',
+        ],
+        callouts: [
+          { type: 'tip', text: 'Wenn Sie Dachanlagen nur aus Neugierde erkunden, überlegen Sie sorgfältig, auf welchen Seiten Sie Ihre Kontaktdaten hinterlassen — manche sind direkte Installationsbetriebe, andere sind Lead-Aggregatoren, die Ihre Daten gleichzeitig an mehrere Unternehmen verkaufen.' },
+        ],
+      },
+      whenToCombine: {
+        id: 'when-to-combine',
+        title: 'Wann lohnt es sich, beides zu kombinieren?',
+        content: [
+          '**Die Kombination beider Systeme macht Sinn, wenn ein Eigentümer bereits eine auf den üblichen Verbrauch ausgelegte Dachanlage betreibt, aber zusätzliche Wand-, Geländer- oder Bodenfläche hat, die ein Balkonkraftwerk nutzen könnte, um schrittweise mehr Kapazität hinzuzufügen — ohne die Dachinstallation zu erweitern.** Das ist eine ergänzende Strategie, kein Ersatz für die korrekte Dimensionierung der Dachanlage von Anfang an.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Ist ein Balkonkraftwerk günstiger als eine Dachanlage?', a: 'Ja, erheblich — ein Balkonkraftwerk kostet einen Bruchteil einer Dachanlage, erzeugt aber auch deutlich weniger Strom. Ein direkter Kosten-pro-Watt-Vergleich greift zu kurz, da beide unterschiedliche Bedarfsgrößen abdecken.' },
+          { q: 'Können Mieter eine Dachanlage installieren?', a: 'Selten, da eine Dachanlage das Eigentum am Dach und meist eine langfristige Bindung an die Immobilie erfordert — beides bietet ein typisches Mietverhältnis nicht. Für die meisten Mieter ist das Balkonkraftwerk die realistische Option.' },
+          { q: 'Erzeugt eine Dachanlage immer mehr Strom als ein Balkonkraftwerk?', a: 'Ja — Dachanlagen werden mit deutlich mehr Panels auf einer wesentlich größeren Fläche ausgelegt und erzeugen daher erheblich mehr Gesamtstrom als ein oder zwei Panels eines Balkonkraftwerks.' },
+          { q: 'Senkt ein Balkonkraftwerk meine Stromrechnung genauso stark wie eine Dachanlage?', a: 'Nein. Ein Balkonkraftwerk senkt einen Teil des Grundverbrauchs; eine Dachanlage ist darauf ausgelegt, einen viel größeren Anteil — manchmal den gesamten — Haushaltsstromverbrauch zu kompensieren.' },
+          { q: 'Kann ich Balkonkraftwerk und Dachanlage kombinieren?', a: 'Ja — Eigentümer mit Dachanlage können Balkonpanels an einer separaten Wand oder einem Geländer hinzufügen, um die Kapazität schrittweise zu erhöhen. Das ist jedoch eine ergänzende Strategie, kein Ersatz für eine korrekte Dimensionierung der Dachanlage.' },
+          { q: 'Brauche ich für ein Balkonkraftwerk wie bei der Dachanlage einen Fachbetrieb?', a: 'In Deutschland und den meisten Märkten, die Steckersolar erlauben, nein — die Anlage ist für die Selbstinstallation ausgelegt. Eine Dachanlage erfordert fast immer einen zugelassenen Fachbetrieb wegen Umfang, elektrischer Komplexität und Statikanforderungen.' },
+          { q: 'Ist ein Balkonkraftwerk ein Einstieg in die Dachanlage?', a: 'Für manche Käufer ja — es ermöglicht zu testen, ob Solar zum eigenen Verbrauchsmuster und zur Ausrichtung der Wohnung passt, bevor man sich für eine deutlich größere Dachinvestition entscheidet.' },
+          { q: 'Welche Option bietet den besseren Return on Investment?', a: 'Das hängt stark vom lokalen Strompreis (in Deutschland ca. 0,32–0,37 €/kWh), Ihrem Verbrauchsmuster und der geplanten Wohndauer ab — eine pauschale Antwort gibt es nicht. Nutzen Sie den Amortisationsrechner für eine länderspezifische Einschätzung statt allgemeiner Vergleiche.' },
+        ],
+      },
+    },
+  },
 };

@@ -174,6 +174,137 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       about: ['Balcony solar US law', 'UL 3700', 'State legislation', 'Plug-in solar legality'],
     },
   },
+  de: {
+    theme: 'Balcony Solar Legislation',
+    title: 'Ist Balkonkraftwerk in meinem Bundesstaat legal? US-Leitfaden nach Bundesstaaten',
+    seoTitle: 'Balkonkraftwerk legal nach Bundesstaat: US-Leitfaden (2026)',
+    intro: `Zum Redaktionsschluss haben ${signedStates.length} US-Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet, und ${pendingStates.length} weitere haben das Staatsgesetz verabschiedet und warten auf die Unterschrift des Gouverneurs. Es gibt keinen bundesweiten Rahmen — die Legalität wird vollständig auf Bundesstaatenebene bestimmt, und die meisten Bundesstaaten haben Balkonkraftwerke bisher noch nicht spezifisch geregelt.`,
+    metaDescription: `Ist Balkonkraftwerk in Ihrem US-Bundesstaat legal? ${signedStates.length} Bundesstaaten haben zum Redaktionsschluss Gesetze unterzeichnet, weitere stehen aus — verifizierter Status nach Bundesstaaten, aktualisiert Juli 2026.`,
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '10 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'US-Käufer, die prüfen möchten, ob Balkonkraftwerke in ihrem Bundesstaat legal sind',
+    primaryTerm: 'Balkonkraftwerk legal Bundesstaaten',
+    targetKeywords: ['Balkonkraftwerk legal in meinem Bundesstaat', 'Balkonkraftwerk Gesetze US-Bundesstaaten', 'Steckersolar legale Bundesstaaten', 'Balkonkraftwerk Gesetzgebung 2026'],
+    leadAnswerBlock: `**Zum Redaktionsschluss (2026-07-02) haben ${signedStates.length} US-Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet — Utah, Maine, Virginia, Maryland, Colorado und Connecticut — mit ${pendingStates.length} weiteren (New York, New Hampshire, Vermont), die das Staatsgesetz bereits verabschiedet haben und auf die Unterschrift des Gouverneurs warten.** Es gibt kein bundesweites Balkonkraftwerk-Gesetz; wenn Ihr Bundesstaat auf keiner der beiden Listen steht, ist der aktuelle Status schlicht ungeklärt und weder ausdrücklich legal noch illegal — erkundigen Sie sich bei Ihrem lokalen Netzbetreiber, bevor Sie eine Annahme treffen.`,
+    quickAnswerTop: {
+      de: {
+        question: 'Welche US-Bundesstaaten haben Balkonkraftwerke legalisiert?',
+        answer: `Zum Redaktionsschluss haben sechs Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet: Utah (als erster, HB 340), Maine, Virginia, Maryland, Colorado (höchste Wattgrenze mit 1.920 W) und Connecticut. Drei weitere — New York, New Hampshire und Vermont — haben ihre jeweiligen Staatsparlamente passiert und warten auf die Unterschrift des Gouverneurs. Es gibt keinen bundesweiten Rahmen; die meisten anderen Bundesstaaten haben Balkonkraftwerke bisher noch nicht spezifisch geregelt.`,
+        bullets: [
+          'Unterzeichnet: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), Connecticut (HB 5340)',
+          'Colorado hat die höchste bestätigte Wattgrenze aller Bundesstaaten mit 1.920 W',
+          'Warten auf Unterschrift des Gouverneurs: New York (SUNNY Act), New Hampshire, Vermont',
+          'Es gibt keinen bundesweiten Balkonkraftwerk-Rahmen — der Status jedes Bundesstaats ist unabhängig',
+          'Diese Zahl verändert sich monatlich — deshalb wird diese Seite alle 60 Tage aktualisiert',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Wichtigste Punkte', anchor: '#key-takeaways' },
+      { label: 'Bundesebene', anchor: '#federal-picture' },
+      { label: 'Bundesstaaten-Tabelle', anchor: '#state-table' },
+      { label: 'Utah', anchor: '#utah' },
+      { label: 'Maine', anchor: '#maine' },
+      { label: 'Virginia', anchor: '#virginia' },
+      { label: 'Beobachtungswerte Bundesstaaten', anchor: '#states-to-watch' },
+      { label: 'So prüfen Sie Ihren Netzbetreiber', anchor: '#check-your-utility' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          `${signedStates.length} Bundesstaaten haben zum Redaktionsschluss (2026-07-02) Gesetze zu Balkonkraftwerken unterzeichnet: Utah, Maine, Virginia, Maryland, Colorado und Connecticut.`,
+          `${pendingStates.length} weitere Bundesstaaten — New York, New Hampshire, Vermont — haben das Staatsparlament passiert und warten auf die Unterschrift des Gouverneurs; sie sind noch KEIN Gesetz.`,
+          'Colorado hat die höchste bestätigte staatliche Wattgrenze mit 1.920 W.',
+          'Es gibt keinen bundesweiten Balkonkraftwerk-Rahmen — der Status jedes Bundesstaats ist vollständig unabhängig, und die meisten Bundesstaaten haben das Thema noch gar nicht aufgegriffen.',
+          'Die Unterzeichnungsdaten für CO/MD/CT wurden nur über sekundäre Tracker und nicht anhand primärer Gesetzestexte verifiziert — vor Verwendung genauer Daten bitte mit offiziellen Bundesstaatenregistern bestätigen.',
+          'Diese Seite wird alle 60 Tage statt im Standard-Halbjahresrhythmus (semi_annual) aktualisiert, weil die Bundesstaatenzahl schneller wächst.',
+        ],
+      },
+      federalPicture: {
+        id: 'federal-picture',
+        title: 'Bundesebene',
+        content: [
+          '**Es gibt kein bundesweites Balkonkraftwerk-Gesetz — die Legalität wird vollständig auf Bundesstaatenebene bestimmt.** Die einzige bundesweite Entwicklung, die für Balkonkraftwerke relevant ist, ist UL 3700, ein Sicherheitszertifizierungsstandard (kein Legalisierungsrahmen), der im Januar 2026 eingeführt wurde.',
+        ],
+      },
+      federalStandard: {
+        id: 'federal-standard',
+        title: 'UL 3700 Zertifizierungsstatus',
+        content: [
+          '**UL 3700, der bundesweite Sicherheitszertifizierungsstandard für Steckersolar-Geräte, hat sein Test- und Zertifizierungsprogramm am 8. Januar 2026 gestartet — aber noch kein vollständiges Balkonkraftwerk-System hat die Zertifizierung erhalten.** Die Tests dauern Monate, und kein Produkt irgendeiner Marke hat den Prozess zum Redaktionsschluss abgeschlossen. Gehen Sie nicht davon aus, dass ein als „UL 3700-konform" oder ähnlich vermarktetes Produkt die Zertifizierung tatsächlich abgeschlossen hat — überprüfen Sie die konkrete Behauptung, bevor Sie sich darauf verlassen.',
+        ],
+      },
+      stateTable: {
+        id: 'state-table',
+        title: 'Bundesstaaten-Tabelle',
+        content: [
+          `**Diese Bundesstaatenzahl verändert sich monatlich, schneller als die meisten in diesem Leitfaden verfolgten Fakten — deshalb wird diese Seite alle 60 Tage statt im Standard-Halbjahresrhythmus aktualisiert.** Die Unterzeichnungsdaten für Colorado, Maryland und Connecticut wurden über sekundäre Tracker und nicht anhand primärer Gesetzestexte verifiziert — bitte genaue Daten mit offiziellen Bundesstaatenregistern bestätigen, bevor Sie sich bei zeitkritischen Dingen darauf verlassen.`,
+        ],
+        rows: stateRows,
+        columns: ['state', 'status', 'bill', 'signed', 'effective'],
+        tableFormat: true,
+      },
+      utah: {
+        id: 'utah',
+        title: 'Utah',
+        content: [
+          '**Utah war der erste US-Bundesstaat, der im März 2025 ein eigenes Balkonkraftwerk-Gesetz (HB 340) unterzeichnete, das am 7. Mai 2025 in Kraft trat.** Infolgedessen ist Utah nach wie vor der Bundesstaat mit dem etabliertesten Balkonkraftwerk-Markt — mehrere Hardware-Anbieter verweisen direkt auf der Produktseite auf Utah-spezifische Konformität.',
+        ],
+      },
+      maine: {
+        id: 'maine',
+        title: 'Maine',
+        content: [
+          '**Maine hat LD 1730 am 6. April 2026 unterzeichnet, mit einem Inkrafttreten im Juli 2026.**',
+        ],
+      },
+      virginia: {
+        id: 'virginia',
+        title: 'Virginia',
+        content: [
+          '**Virginia hat HB 395/SB 250 am 22. April 2026 unterzeichnet, mit einem Inkrafttreten im Januar 2027** — das Gesetz ist unterzeichnet, aber zum Redaktionsschluss noch nicht in Kraft.',
+        ],
+      },
+      statesToWatch: {
+        id: 'states-to-watch',
+        title: 'Beobachtungswerte Bundesstaaten',
+        content: [
+          '**New Yorks SUNNY Act sowie Gesetze in New Hampshire und Vermont haben ihre jeweiligen Staatsparlamente passiert und warten auf die Unterschrift des Gouverneurs — sie stehen noch aus, sind noch kein Gesetz und könnten sich vor der Unterzeichnung noch ändern.**',
+        ],
+      },
+      checkYourUtility: {
+        id: 'check-your-utility',
+        title: 'So prüfen Sie Ihren Netzbetreiber',
+        content: [
+          '**Wenn Ihr Bundesstaat nicht auf der unterzeichneten oder ausstehenden Liste steht, ist der beste nächste Schritt, direkt beim lokalen Netzbetreiber nachzufragen, da die Einspeisepolitik auf Netzbetreiberebene manchmal auch ohne staatliche Gesetzgebung eine Rolle spielen kann.** Gehen Sie nicht davon aus, dass Balkonkraftwerke in einem nicht gelisteten Bundesstaat legal oder illegal sind, ohne zu überprüfen — die ehrliche Antwort für die meisten US-Bundesstaaten lautet derzeit „ungeklärt", nicht ein klares Ja oder Nein.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Hardware vor der Bestätigung des Status Ihres Bundesstaats zu kaufen, kann Sie mit einem unnutzbaren System zurücklassen — mehrere Kits sind vom Hersteller ausdrücklich auf bestimmte Bundesstaaten beschränkt, nicht nur durch das Gesetz.' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Welche US-Bundesstaaten haben Balkonkraftwerke legalisiert?', a: 'Zum Redaktionsschluss haben sechs Bundesstaaten Gesetze unterzeichnet: Utah, Maine, Virginia, Maryland, Colorado und Connecticut. Drei weitere — New York, New Hampshire und Vermont — haben ihr Staatsparlament passiert und warten auf die Unterschrift des Gouverneurs.' },
+          { q: 'Sind Balkonkraftwerke in nicht gelisteten Bundesstaaten illegal?', a: 'Nicht notwendigerweise illegal — die meisten nicht gelisteten Bundesstaaten haben Balkonkraftwerke einfach noch nicht spezifisch geregelt. Der Status ist ungeklärt, nicht eindeutig legal oder illegal; erkundigen Sie sich beim lokalen Netzbetreiber.' },
+          { q: 'Welcher Bundesstaat hat die höchste Wattgrenze?', a: 'Colorado mit 1.920 W — die höchste bestätigte Grenze aller gefundenen US-Bundesstaatengesetze für Balkonkraftwerke.' },
+          { q: 'Gibt es ein bundesweites Balkonkraftwerk-Gesetz?', a: 'Nein. Es gibt keinen bundesweiten Legalisierungsrahmen — nur UL 3700, einen bundesweiten Sicherheitszertifizierungsstandard, der von der staatlichen Legalisierung getrennt ist und Balkonkraftwerke selbst nirgendwo legal macht.' },
+          { q: 'Wie oft ändert sich diese Bundesstaatenzahl?', a: 'Häufig genug, dass diese Seite alle 60 Tage statt im Standard-Halbjahresrhythmus des restlichen Leitfadens aktualisiert wird — die US-Bundesstaatengesetzgebung zu diesem Thema entwickelt sich schneller als die meisten anderen verfolgten Fakten.' },
+          { q: 'Sind die Unterzeichnungsdaten für Colorado, Maryland und Connecticut vollständig bestätigt?', a: 'Sie wurden über sekundäre Tracker (Branchentracker und Presseberichterstattung) verifiziert, aber in diesem Durchgang nicht unabhängig anhand primärer staatlicher Gesetzestexte überprüft — bitte genaue Daten mit offiziellen Bundesstaatenregistern bestätigen, bevor Sie sich bei zeitkritischen Dingen darauf verlassen.' },
+          { q: 'Kann ich Balkonkraftwerk-Hardware kaufen, bevor mein Bundesstaat ein Gesetz verabschiedet?', a: 'Einige Hardware ist unabhängig vom Gesetzgebungsstatus bundesweit erhältlich, aber mehrere Kits mit Speicher sind vom Hersteller ausdrücklich auf bestimmte Bundesstaaten beschränkt — prüfen Sie die Produktverfügbarkeit und nicht nur den Rechtsstatus, bevor Sie kaufen.' },
+          { q: 'Was passiert mit ausstehenden Gesetzen, wenn der Gouverneur nicht unterschreibt?', a: 'Das variiert je nach dem spezifischen Gesetzgebungsverfahren und den Fristen des jeweiligen Bundesstaats — ein Gesetz, das nicht innerhalb der anwendbaren Frist unterzeichnet wird, muss möglicherweise in einer künftigen Sitzungsperiode neu eingebracht werden, wobei die genauen Mechanismen je nach Bundesstaat unterschiedlich sind.' },
+        ],
+      },
+    },
+  },
   es: {
     theme: 'Balcony Solar Legislation',
     title: '¿Es legal el balcony solar en mi estado? Guía estado por estado en EE. UU.',

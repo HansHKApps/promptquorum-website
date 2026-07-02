@@ -564,6 +564,119 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  de: {
+    theme: 'Balcony Solar Foundations',
+    title: 'Balkonkraftwerk montieren: Geländer, Wand, Boden und Flachdach',
+    seoTitle: 'Balkonkraftwerk montieren: Alle Montageflächen im Überblick',
+    intro: 'Nicht jedes Balkonkraftwerk wird tatsächlich am Geländer befestigt – auch Wände, Bodenständer und Flachdächer sind mögliche Montageflächen, und jede hat andere Anforderungen an Windlast, Neigungswinkel und Sicherheit. Die richtige Montagemethode für Ihre spezifische Fläche zu wählen ist wichtiger, als die meisten Käufer erwarten.',
+    metaDescription: 'Wie Sie ein Balkonkraftwerk an Geländer, Wand, Bodenständer oder Flachdach montieren – Neigungswinkel-Empfehlungen und Windsicherheitsaspekte für jeden Flächentyp.',
+    publishDate: '2026-07-02',
+    dateModified: '2026-07-02',
+    readTime: '9 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Käufer eines Balkonkraftwerks, die eine Montagemethode für ihre spezifische Fläche wählen',
+    primaryTerm: 'Balkonkraftwerk montieren',
+    targetKeywords: ['Balkonkraftwerk montieren', 'Solarmodul Geländermontage', 'Balkonkraftwerk Wandmontage', 'Balkonkraftwerk Neigungswinkel', 'Balkonkraftwerk Bodenmontage'],
+    leadAnswerBlock: '**Solarmodule für Balkonkraftwerke werden an Geländern, Wänden, Bodenständern oder Flachdächern befestigt – die richtige Wahl hängt von Ihrer verfügbaren Fläche ab, nicht nur vom Modul selbst. Jede Methode hat ein unterschiedliches Windlast- und Neigungswinkelprofil, das Sie berücksichtigen müssen.** Die Geländermontage ist die häufigste und in der Regel die schnellste; Boden- und Flachdachmontagen bieten die größte Flexibilität beim Neigungswinkel, erfordern aber sorgfältigere Windlastplanung.',
+    quickAnswerTop: {
+      de: {
+        question: 'Welche Montageoptionen gibt es für ein Balkonkraftwerk?',
+        answer: 'Es gibt vier Hauptoptionen: Geländermontage (am schnellsten, am häufigsten bei Wohnungsbalkonien), Wandmontage (für Flächen ohne nutzbares Geländer), Boden- oder Gartenmontage (größte Neigungswinkel-Flexibilität) und Flachdach-/Ballasmontage (für Terrassen oder Flachdachzugang, kein Bohren erforderlich). Jede Option hat unterschiedliche Windlast- und Winkelaspekte – wählen Sie nach Ihrer verfügbaren Fläche, nicht allein nach Vorliebe.',
+        bullets: [
+          'Geländermontage: am schnellsten und häufigsten, funktioniert bei den meisten Standard-Wohnungsbalkon-Geländern',
+          'Wandmontage: nötig, wenn kein nutzbares Geländer vorhanden ist oder eine bessere Sonneneinstrahlung wichtiger ist als Montagekomfort',
+          'Boden-/Gartenmontage: größte Neigungswinkel-Flexibilität, gut für Häuser mit Garten oder Terrassenfläche',
+          'Flachdach-/Ballastmontage: verwendet Beschwerungsständer statt Bohrungen, häufig auf Terrassen',
+          'Die Windlast-Einstufung ist wichtiger als die Wahl der Montagemethode – prüfen Sie sie unabhängig von der verwendeten Fläche',
+        ],
+        updatedDate: '2026-07-02',
+      },
+    },
+    toc: [
+      { label: 'Das Wichtigste im Überblick', anchor: '#key-takeaways' },
+      { label: 'Geländermontage', anchor: '#railing-mount' },
+      { label: 'Wandmontage', anchor: '#wall-mount' },
+      { label: 'Flachdach-/Ballastmontage', anchor: '#flat-roof-mount' },
+      { label: 'Boden-/Gartenmontage', anchor: '#ground-mount' },
+      { label: 'Neigungswinkel nach Breitengrad', anchor: '#tilt-angle' },
+      { label: 'Wind und Sicherheit', anchor: '#wind-safety' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Es gibt vier Hauptmontagemethoden: Geländer, Wand, Boden/Garten und Flachdach/Ballast – gewählt nach verfügbarer Fläche, nicht allein nach Vorliebe.',
+          'Die Geländermontage ist bei Standard-Wohnungsbalkonien die schnellste und häufigste Methode.',
+          'Boden- und Flachdachmontagen bieten die größte Neigungswinkel-Flexibilität, erfordern aber sorgfältigere Windlastplanung.',
+          'Flachdach-/Ballastmontagen verwenden Beschwerungsständer statt Bohrungen – nützlich, wenn Sie die Dachfläche nicht durchbohren können oder möchten.',
+          'Der Neigungswinkel beeinflusst den Ertrag, aber bei den meisten Balkonsolarinstallationen schränkt die verfügbare Montagefläche Ihre Optionen stärker ein als die Theorie des optimalen Winkels.',
+          'Die Windlast-Einstufung ist unabhängig von der gewählten Montagemethode wichtig – prüfen Sie, ob Ihre Halterung für die Bedingungen an Ihrem genauen Standort ausgelegt ist.',
+        ],
+      },
+      railingMount: {
+        id: 'railing-mount',
+        title: 'Geländermontage',
+        content: [
+          '**Die Geländermontage ist bei Standard-Wohnungsbalkonien die schnellste und häufigste Methode – Halterungen werden ohne Bohren am Geländer befestigt, und die meisten Sets enthalten standardmäßig geländerkompatible Hardware.** Prüfen Sie vor dem Kauf das Material und die Stärke Ihres Geländers gegenüber dem kompatiblen Bereich Ihrer Halterung, da nicht alle Halterungen zu jedem Geländertyp passen.',
+        ],
+      },
+      wallMount: {
+        id: 'wall-mount',
+        title: 'Wandmontage',
+        content: [
+          '**Die Wandmontage eignet sich für Balkone ohne nutzbares Geländer oder für Situationen, in denen eine bessere Ausrichtung des Moduls zur Sonne wichtiger ist als Montagekomfort.** Diese Methode erfordert in der Regel das Bohren in die Wandfläche – bestätigen Sie, dass Sie dazu berechtigt sind, insbesondere bei Mietwohnungen oder Gebäuden mit WEG-Hausordnung.',
+        ],
+      },
+      flatRoofMount: {
+        id: 'flat-roof-mount',
+        title: 'Flachdach-/Ballastmontage',
+        content: [
+          '**Die Flachdach- oder Ballastmontage verwendet Beschwerungsständer statt Bohrungen – eine gute Option für Terrassen oder Flachdachzugänge, bei denen Sie die Fläche nicht durchbohren können oder möchten.** Das Ballastgewicht muss auf die lokalen Windverhältnisse abgestimmt sein – hier gilt: mehr Gewicht als notwendig erscheint, ist oft die sicherere Standardwahl.',
+        ],
+      },
+      groundMount: {
+        id: 'ground-mount',
+        title: 'Boden-/Gartenmontage',
+        content: [
+          '**Die Boden- oder Gartenmontage bietet die größte Neigungswinkel-Flexibilität aller Methoden, da Sie nicht durch den Winkel einer bestehenden Konstruktion eingeschränkt sind – nützlich für Häuser mit Garten oder Terrassenfläche.** Diese Methode erfordert dennoch eine sichere und stabile Basis; ein freistehender Bodenständer an einem exponierten, windigen Standort benötigt eine robustere Verankerung als derselbe Ständer an einem geschützten Ort.',
+        ],
+      },
+      tiltAngle: {
+        id: 'tilt-angle',
+        title: 'Neigungswinkel nach Breitengrad',
+        content: [
+          '**Ein steilerer Neigungswinkel eignet sich generell für höhere Breitengrade, ein flacherer Winkel für Standorte näher am Äquator – aber bei den meisten Balkonsolarinstallationen schränken die verfügbaren Montageflächen Ihre Möglichkeiten stärker ein als die Theorie eines theoretisch optimalen Winkels.** Ein am Geländer befestigtes Modul lässt sich unabhängig vom Breitengrad kaum weit von der Vertikalen neigen; Boden- und Flachdachmontagen bieten den größten Spielraum, den idealen Winkel für Ihren Standort tatsächlich anzunähern.',
+        ],
+      },
+      windSafety: {
+        id: 'wind-safety',
+        title: 'Wind und Sicherheit',
+        content: [
+          '**Windlast, nicht allein das Gewicht, ist die zentrale strukturelle Überlegung für jede Balkonkraftwerk-Montage – eine ordentlich verschraubte, aber unterdimensionierte Halterung kann bei starken Böen trotzdem versagen.** Prüfen Sie die Windlast-Einstufung Ihrer Halterung gegenüber den realistischen Bedingungen an Ihrem genauen Standort, insbesondere bei exponierten Balkonen in oberen Etagen oder offenen Bodenmontagen, und wählen Sie lieber eine robustere Einstufung als das Minimum, das Sie für ausreichend halten.',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Ein bei starkem Wind nicht ordentlich befestigtes Modul ist eine echte Sicherheitsgefahr für Personen und Eigentum darunter – nicht nur ein Risiko für das Gerät selbst. Behandeln Sie die Windlast-Einstufung als verbindliche Anforderung, nicht als optionale Empfehlung.' },
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufige Fragen',
+        faqs: [
+          { q: 'Welche Montagemethode ist am schnellsten zu installieren?', a: 'Die Geländermontage ist in der Regel die schnellste, da die meisten Sets standardmäßig geländerkompatible Hardware enthalten und kein Bohren erforderlich ist.' },
+          { q: 'Muss ich für die Balkonkraftwerk-Montage bohren?', a: 'Das hängt von der Methode ab – Geländer- und Flachdach-/Ballastmontagen erfordern in der Regel kein Bohren, während die Wandmontage es üblicherweise erfordert.' },
+          { q: 'Welche Montagemethode bietet den besten Neigungswinkel?', a: 'Die Boden- oder Gartenmontage bietet die größte Flexibilität zur Optimierung des Neigungswinkels für Ihren Breitengrad, da sie nicht durch den Winkel einer bestehenden Konstruktion eingeschränkt ist.' },
+          { q: 'Kann ich ein Balkonkraftwerk ohne Balkon montieren?', a: 'Ja – Wand-, Boden- und Flachdachmontagemethoden funktionieren alle ohne ein eigentliches Balkongeländer.' },
+          { q: 'Wie weiß ich, ob meine Montagehalterung für ausreichend Windlast ausgelegt ist?', a: 'Prüfen Sie die vom Hersteller angegebene Windlast-Einstufung gegenüber den realistischen Bedingungen an Ihrem genauen Standort – exponierte Balkone in oberen Etagen und offene Bodenmontagen benötigen generell eine robustere Einstufung als geschützte Standorte.' },
+          { q: 'Ist die Ballastmontage genauso sicher wie gebohrte Montage?', a: 'Das kann sie sein, sofern das Ballastgewicht korrekt auf die lokalen Windverhältnisse abgestimmt ist – unzureichendes Ballastgewicht ist das Hauptausfallrisiko bei dieser Methode.' },
+          { q: 'Brauche ich Genehmigungen vom Vermieter oder der WEG für die Wandmontage?', a: 'Oft ja, insbesondere da die Wandmontage üblicherweise Bohren erfordert – bestätigen Sie die Genehmigung vor Beginn der Arbeiten, besonders bei Mietobjekten.' },
+          { q: 'Beeinflusst die Montagemethode, wie viel Strom mein Modul erzeugt?', a: 'Indirekt, durch den Neigungswinkel und die Ausrichtung, die jede Methode ermöglicht – eine Methode, mit der Sie für Ihren Breitengrad einen besseren Winkel und eine bessere Ausrichtung erzielen, erzeugt in der Regel einen besseren Ertrag als eine, die Sie auf einen suboptimalen Winkel beschränkt.' },
+        ],
+      },
+    },
+  },
   ja: {
     theme: 'Balcony Solar Foundations',
     title: 'バルコニーソーラー取り付けガイド：手すり・壁・地面・陸屋根',
