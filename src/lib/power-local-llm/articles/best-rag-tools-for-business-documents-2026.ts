@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Cognita: enterprise RBAC and audit logs',
         'Chroma: best open-source vector database',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -91,14 +91,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'software',
           },
         ],
-        pros: ['No coding required', 'Multi-user workspaces', 'Supports 25+ document types', 'Desktop app + Docker options', 'Built-in agent tools (web search, SQL)'],
+        pros: ['No coding required', 'Multi-user workspaces', 'Supports 25+ document types', 'Desktop app + Docker options', 'Built-in agent tools (web search, SQL)', 'MCP support — works with Claude and other MCP-enabled systems'],
         cons: ['Enterprise features require paid plan', 'Chunking settings require tuning for long documents'],
         verdict: 'Best for small to mid-size business teams that want RAG running today without engineering resources.',
       },
       llamaindex: {
         heading: 'LlamaIndex — Best Developer Framework for Custom Pipelines',
         body: 'LlamaIndex is the most widely used Python framework for building production RAG systems. Unlike AnythingLLM, it has no built-in UI — instead it provides composable abstractions: data loaders, index types (VectorStore, KnowledgeGraph, Summary), query engines, and agent workflows.\n\nFor Ollama integration, install `llama-index-llms-ollama` and `llama-index-embeddings-ollama`. LlamaIndex supports Chroma, Qdrant, Weaviate, Pinecone, and 20+ other vector stores as backends. The framework handles chunking strategies, metadata filtering, and hybrid search automatically.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
-        pros: ['Maximum pipeline flexibility', 'Supports all major vector databases', 'Production-grade with enterprise support', 'Active community (30K+ GitHub stars)'],
+        pros: ['Maximum pipeline flexibility', 'Supports all major vector databases', 'Production-grade with enterprise support', 'Active community (50K+ GitHub stars)'],
         cons: ['Requires Python knowledge', 'No built-in UI', 'More configuration than turnkey tools'],
         verdict: 'Best for development teams building domain-specific RAG applications that need fine-grained control over chunking, retrieval, and re-ranking.',
       },
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       chroma: {
         heading: 'Chroma — Best Open-Source Vector Database',
-        body: 'Chroma is not a complete RAG application — it is an open-source vector database used as the storage layer in custom RAG stacks. If you are building your own pipeline with LlamaIndex or LangChain, Chroma provides a fast local alternative to hosted vector databases like Pinecone.\n\nChroma stores embeddings in SQLite (embedded mode) or runs as a standalone HTTP server for multi-client access. It supports metadata filtering, so you can scope retrieval to specific document collections or date ranges.',
+        body: 'Chroma is not a complete RAG application — it is an open-source vector database used as the storage layer in custom RAG stacks. If you are building your own pipeline with LlamaIndex or LangChain, Chroma provides a fast local alternative to hosted vector databases like Pinecone.\n\nChroma stores embeddings in SQLite (embedded mode) or runs as a standalone HTTP server for multi-client access. It supports metadata filtering, so you can scope retrieval to specific document collections or date ranges. Chroma Cloud, the managed serverless option, is also available for teams that want hosted infrastructure with new accounts receiving $5 in free credits.',
         pros: ['Lightweight embedded mode', 'Fast similarity search', 'Native Python and JavaScript clients', 'Free and open-source'],
         cons: ['No built-in UI', 'Needs companion LLM framework', 'Not a complete RAG solution alone'],
         verdict: 'Best as a vector storage component when building a custom RAG stack with LlamaIndex or LangChain.',
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compare AnythingLLM, LlamaIndex, PrivateGPT, Cognita, and Chroma for local business document RAG in 2026.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Cognita: RBAC und Audit-Protokolle für Unternehmen',
         'Chroma: beste Open-Source-Vektordatenbank',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Cognita : RBAC et journaux d\'audit pour entreprises',
         'Chroma : meilleure base vectorielle open source',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Cognita：RBAC・監査ログ付きエンタープライズRAG',
         'Chroma：ベストオープンソースベクターデータベース',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Cognita：企业级RBAC与审计日志',
         'Chroma：最佳开源向量数据库',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Cognita: RBAC empresarial y registros de auditoría',
         'Chroma: mejor base de datos vectorial open source',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaindex: {
         heading: 'LlamaIndex — El mejor framework para desarrolladores con pipelines personalizados',
         body: 'LlamaIndex es el framework de Python más utilizado para construir sistemas RAG en producción. A diferencia de AnythingLLM, no tiene interfaz propia — en su lugar ofrece abstracciones componibles: cargadores de datos, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta y flujos de trabajo de agentes.\n\nPara la integración con Ollama, instala `llama-index-llms-ollama` y `llama-index-embeddings-ollama`. LlamaIndex admite Chroma, Qdrant, Weaviate, Pinecone y más de 20 bases de datos vectoriales como backend. El framework gestiona automáticamente las estrategias de chunking, el filtrado de metadatos y la búsqueda híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
-        pros: ['Máxima flexibilidad en el pipeline', 'Compatible con todas las bases de datos vectoriales principales', 'Nivel de producción con soporte empresarial', 'Comunidad activa (más de 30.000 estrellas en GitHub)'],
+        pros: ['Máxima flexibilidad en el pipeline', 'Compatible con todas las bases de datos vectoriales principales', 'Nivel de producción con soporte empresarial', 'Comunidad activa (más de 50.000 estrellas en GitHub)'],
         cons: ['Requiere conocimientos de Python', 'Sin interfaz integrada', 'Más configuración que las herramientas llave en mano'],
         verdict: 'Ideal para equipos de desarrollo que construyen aplicaciones RAG específicas de dominio y necesitan control detallado sobre chunking, recuperación y re-ranking.',
       },
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compara AnythingLLM, LlamaIndex, PrivateGPT, Cognita y Chroma para RAG local de documentos empresariales en 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Cognita: RBAC corporativo e registros de auditoria',
         'Chroma: melhor banco de dados vetorial de código aberto',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     snippetBlocks: [
       {
@@ -927,7 +927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaindex: {
         heading: 'LlamaIndex — Melhor framework de desenvolvedor para pipelines personalizados',
         body: 'O LlamaIndex é o framework Python mais utilizado para construir sistemas RAG em produção. Diferente do AnythingLLM, ele não tem interface integrada — em vez disso, oferece abstrações combináveis: carregadores de dados, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta e fluxos de trabalho de agentes.\n\nPara a integração com o Ollama, instale `llama-index-llms-ollama` e `llama-index-embeddings-ollama`. O LlamaIndex suporta Chroma, Qdrant, Weaviate, Pinecone e mais de 20 outros bancos de dados vetoriais como backends. O framework lida automaticamente com estratégias de chunking, filtragem de metadados e busca híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
-        pros: ['Máxima flexibilidade de pipeline', 'Suporta todos os principais bancos de dados vetoriais', 'Nível de produção com suporte corporativo', 'Comunidade ativa (mais de 30 mil estrelas no GitHub)'],
+        pros: ['Máxima flexibilidade de pipeline', 'Suporta todos os principais bancos de dados vetoriais', 'Nível de produção com suporte corporativo', 'Comunidade ativa (mais de 50 mil estrelas no GitHub)'],
         cons: ['Requer conhecimento de Python', 'Sem interface integrada', 'Mais configuração que ferramentas prontas para uso'],
         verdict: 'Melhor para equipes de desenvolvimento que constroem aplicações RAG específicas de domínio e precisam de controle refinado sobre chunking, recuperação e re-ranking.',
       },
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Compare AnythingLLM, LlamaIndex, PrivateGPT, Cognita e Chroma para RAG local de documentos corporativos em 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cognita: RBAC على مستوى الشركات وسجلات التدقيق',
           'Chroma: أفضل قاعدة بيانات متجهة مفتوحة المصدر',
         ],
-        updatedDate: '2026-05-26',
+        updatedDate: '2026-07',
       },
     },
     snippetBlocks: [
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaindex: {
         heading: 'LlamaIndex — أفضل إطار عمل للمطوّرين مع خطوط أنابيب مخصصة',
         body: 'LlamaIndex هو إطار عمل Python الأكثر استخداماً لبناء أنظمة RAG في بيئة الإنتاج. على عكس AnythingLLM، ليس لديه واجهة مدمجة — بدلاً من ذلك يُقدّم تجريدات قابلة للتركيب: محمّلات البيانات وأنواع الفهرس (VectorStore وKnowledgeGraph وSummary) ومحركات الاستعلام وسير عمل الوكلاء.\n\nللتكامل مع Ollama، ثبّت `llama-index-llms-ollama` و`llama-index-embeddings-ollama`. يدعم LlamaIndex Chroma وQdrant وWeaviate وPinecone وأكثر من 20 قاعدة بيانات متجهة أخرى كخلفيات. يتعامل الإطار تلقائياً مع استراتيجيات التقطيع وتصفية البيانات الوصفية والبحث الهجين.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
-        pros: ['أقصى مرونة في خط الأنابيب', 'متوافق مع جميع قواعد البيانات المتجهة الرئيسية', 'مستوى إنتاج مع دعم للشركات', 'مجتمع نشط (أكثر من 30,000 نجمة على GitHub)'],
+        pros: ['أقصى مرونة في خط الأنابيب', 'متوافق مع جميع قواعد البيانات المتجهة الرئيسية', 'مستوى إنتاج مع دعم للشركات', 'مجتمع نشط (أكثر من 50,000 نجمة على GitHub)'],
         cons: ['يتطلب معرفة بـPython', 'لا توجد واجهة مدمجة', 'إعداد أكثر من الأدوات الجاهزة للاستخدام'],
         verdict: 'مثالي لفرق التطوير التي تبني تطبيقات RAG متخصصة في المجال وتحتاج إلى تحكم دقيق في التقطيع والاسترداد وإعادة الترتيب.',
       },
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'قارن AnythingLLM وLlamaIndex وPrivateGPT وCognita وChroma لـRAG المحلي لوثائق الشركات في 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'ar',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1312,7 +1312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-05-26',
+    dateModified: '2026-07-02',
     current_models_mentioned: ['Qwen3 14B', 'Qwen3 7B', 'Llama 3.3 8B', 'nomic-embed-text', 'mxbai-embed-large', 'multilingual-e5-large'],
     current_hardware_mentioned: ['RTX 3090', 'Mac Mini M4 Pro', 'Minisforum UM890 Pro'],
     leadAnswerBlock: '**AnythingLLM은 2026년 대부분의 기업 팀에 가장 적합한 RAG 도구입니다 — PDF, Word, Excel, URL을 기본으로 처리하며, Ollama와 함께 완전히 로컬에서 실행되고, 코딩 없이 멀티 사용자 워크스페이스를 지원합니다.**',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cognita: 기업 수준의 RBAC 및 감사 로그',
           'Chroma: 최고의 오픈소스 벡터 데이터베이스',
         ],
-        updatedDate: '2026-05-26',
+        updatedDate: '2026-07',
       },
     },
     snippetBlocks: [
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaindex: {
         heading: 'LlamaIndex — 맞춤형 파이프라인을 위한 최고의 개발자 프레임워크',
         body: 'LlamaIndex는 프로덕션 환경에서 RAG 시스템을 구축하기 위한 가장 많이 사용되는 Python 프레임워크입니다. AnythingLLM과 달리 내장 인터페이스가 없으며, 대신 조합 가능한 추상화를 제공합니다: 데이터 로더, 인덱스 유형(VectorStore, KnowledgeGraph, Summary), 쿼리 엔진 및 에이전트 워크플로우.\n\nOllama 통합을 위해 `llama-index-llms-ollama` 및 `llama-index-embeddings-ollama`를 설치하십시오. LlamaIndex는 Chroma, Qdrant, Weaviate, Pinecone 및 20개 이상의 다른 벡터 데이터베이스를 백엔드로 지원합니다. 프레임워크는 청킹 전략, 메타데이터 필터링 및 하이브리드 검색을 자동으로 처리합니다.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
-        pros: ['최대 파이프라인 유연성', '모든 주요 벡터 데이터베이스 지원', '기업 지원이 포함된 프로덕션 수준', '활발한 커뮤니티 (GitHub 별 30,000개 이상)'],
+        pros: ['최대 파이프라인 유연성', '모든 주요 벡터 데이터베이스 지원', '기업 지원이 포함된 프로덕션 수준', '활발한 커뮤니티 (GitHub 별 50,000개 이상)'],
         cons: ['Python 지식 필요', '내장 인터페이스 없음', '즉시 사용 가능한 도구보다 설정이 많음'],
         verdict: '도메인별 RAG 애플리케이션을 구축하고 청킹, 검색 및 재순위 지정에 대한 세밀한 제어가 필요한 개발팀에 가장 적합합니다.',
       },
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: '2026년 기업 문서의 로컬 RAG를 위해 AnythingLLM, LlamaIndex, PrivateGPT, Cognita, Chroma를 비교합니다.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-05-26',
+      dateModified: '2026-07-02',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-rag-tools-for-business-documents-2026',
       inLanguage: 'ko',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },

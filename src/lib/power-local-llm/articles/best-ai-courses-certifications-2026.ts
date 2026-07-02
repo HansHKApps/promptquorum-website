@@ -4,7 +4,7 @@
 // tags joined yet) and a neutral third-party-link notice. EN block first;
 // DE/FR/JA/ZH render as "Coming Soon" until translated.
 //
-// Prices: May 2026 snapshot. Course platform pricing changes with promotions and
+// Prices: July 2026 snapshot. Course platform pricing changes with promotions and
 // subscription tiers — every figure here is a range or "check current price".
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -14,13 +14,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Best AI Courses and Certifications: 2026 Buying Guide',
     seoTitle: 'Best AI Courses & Certifications 2026: Free & Paid',
     intro:
-      'Most "best AI course" lists rank courses by brand name and ignore the question that actually matters: what are you trying to do with the skill afterward? A free fundamentals course and a paid certification track are not competing products — they serve different goals. This guide sorts AI learning into three categories — free courses, paid structured courses, and certifications — and gives a clear pick for each goal: getting oriented for free, building hands-on depth, or producing a credential an employer recognizes. It also covers a fourth track that the big platforms underweight: prompt engineering as a skill in its own right. Course prices change with promotions and subscription tiers, so every figure here is a May 2026 snapshot — check the current price on the platform before enrolling.',
+      'Most "best AI course" lists rank courses by brand name and ignore the question that actually matters: what are you trying to do with the skill afterward? A free fundamentals course and a paid certification track are not competing products — they serve different goals. This guide sorts AI learning into three categories — free courses, paid structured courses, and certifications — and gives a clear pick for each goal: getting oriented for free, building hands-on depth, or producing a credential an employer recognizes. It also covers a fourth track that the big platforms underweight: prompt engineering as a skill in its own right. Course prices change with promotions and subscription tiers, so every figure here is a July 2026 snapshot — check the current price on the platform before enrolling.',
     metaDescription:
       'Three AI learning paths compared for 2026: free courses, paid structured courses, and certifications — with a clear pick for getting oriented, building depth, or earning a credential.',
     twitterDescription:
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Earn a credential: a certification track that issues a verifiable certificate',
           'Specialize in prompts: a dedicated prompt engineering course',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Prompt engineering is its own track.** General AI courses underweight prompt writing. If your work centers on getting good output from existing models, a dedicated prompt engineering course is the direct path.',
           '**Audit before you pay.** Most paid platforms let you preview or audit course material before purchase. Use that to confirm the level and teaching style fit before committing money.',
           '**Watch the subscription-versus-one-time math.** Some platforms charge a monthly subscription, others a one-time course fee — the cheaper option depends entirely on how fast you finish.',
-          '**Prices are a May 2026 snapshot.** Course platform pricing moves with promotions and subscription changes — check the current price on the platform before enrolling.',
+          '**Prices are a July 2026 snapshot.** Course platform pricing moves with promotions and subscription changes — check the current price on the platform before enrolling.',
         ],
       },
       quickFacts: {
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Four AI Learning Categories Compare in 2026',
         content:
-          'The "best for" column reflects learning goal, not a single course. Pricing is a May 2026 snapshot expressed qualitatively — course platform pricing changes with promotions and subscription tiers, so confirm the current price on the platform before enrolling.',
+          'The "best for" column reflects learning goal, not a single course. Pricing is a July 2026 snapshot expressed qualitatively — course platform pricing changes with promotions and subscription tiers, so confirm the current price on the platform before enrolling.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -144,31 +144,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Think of AI courses like tools in a toolbox. A free course is the one you reach for to see if you even like the work. A paid structured course is the one that actually builds the skill. A certification is the one you use to prove the skill to someone else. Picking the wrong tool for the job wastes money and time.',
           },
         ],
-        columns: ['Category', 'Best for', 'Outcome', 'Cost (May 2026)'],
+        columns: ['Category', 'Best for', 'Outcome', 'Cost (July 2026)'],
         rows: [
           {
             'Category': 'Free courses',
             'Best for': 'Getting oriented, deciding if AI is for you',
             'Outcome': 'Foundational understanding, no formal credential',
-            'Cost (May 2026)': 'Free to audit; check current price',
+            'Cost (July 2026)': 'Free to audit; check current price',
           },
           {
             'Category': 'Paid structured courses',
             'Best for': 'Building hands-on, applied skill',
             'Outcome': 'Working skill plus, often, a verifiable certificate',
-            'Cost (May 2026)': 'Subscription or one-time fee; check current price',
+            'Cost (July 2026)': 'Subscription or one-time fee; check current price',
           },
           {
             'Category': 'Certifications',
             'Best for': 'Earning a credential a role or employer asks for',
             'Outcome': 'A verifiable certificate for resumes and profiles',
-            'Cost (May 2026)': 'One-time fee; check current price',
+            'Cost (July 2026)': 'One-time fee; check current price',
           },
           {
             'Category': 'Prompt engineering courses',
             'Best for': 'Getting good output from existing models',
             'Outcome': 'Practical prompt-writing skill',
-            'Cost (May 2026)': 'Free to mid-range; check current price',
+            'Cost (July 2026)': 'Free to mid-range; check current price',
           },
         ],
       },
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Every price reference in this guide is a May 2026 snapshot. Course platform pricing changes with promotions and subscription tiers — always open the current platform listing before enrolling.',
+            text: 'Every price reference in this guide is a July 2026 snapshot. Course platform pricing changes with promotions and subscription tiers — always open the current platform listing before enrolling.',
           },
         ],
         affiliateLinks: [
@@ -492,13 +492,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Die besten KI-Kurse und Zertifizierungen: Kaufratgeber 2026',
     seoTitle: 'Beste KI-Kurse & Zertifizierungen 2026: Gratis & Bezahlt',
     intro:
-      'Die meisten Listen mit den „besten KI-Kursen“ ordnen Kurse nach dem Bekanntheitsgrad der Marke und übergehen die eigentlich entscheidende Frage: Was wollen Sie mit der erworbenen Kompetenz anschließend tun? Ein kostenloser Grundlagenkurs und ein kostenpflichtiger Zertifizierungspfad sind keine konkurrierenden Produkte – sie dienen unterschiedlichen Zielen. Dieser Ratgeber sortiert KI-Lernangebote in drei Kategorien – kostenlose Kurse, kostenpflichtige strukturierte Kurse und Zertifizierungen – und gibt für jedes Ziel eine klare Empfehlung: sich kostenlos orientieren, praktische Tiefe aufbauen oder einen von Arbeitgebern anerkannten Nachweis erwerben. Außerdem behandelt er einen vierten Pfad, den die großen Plattformen unterbewerten: Prompt Engineering als eigenständige Kompetenz. Kurspreise ändern sich mit Aktionen und Abostufen, daher ist jede Angabe hier eine Momentaufnahme vom Mai 2026 – prüfen Sie den aktuellen Preis auf der Plattform, bevor Sie sich einschreiben.',
+      'Die meisten Listen mit den „besten KI-Kursen“ ordnen Kurse nach dem Bekanntheitsgrad der Marke und übergehen die eigentlich entscheidende Frage: Was wollen Sie mit der erworbenen Kompetenz anschließend tun? Ein kostenloser Grundlagenkurs und ein kostenpflichtiger Zertifizierungspfad sind keine konkurrierenden Produkte – sie dienen unterschiedlichen Zielen. Dieser Ratgeber sortiert KI-Lernangebote in drei Kategorien – kostenlose Kurse, kostenpflichtige strukturierte Kurse und Zertifizierungen – und gibt für jedes Ziel eine klare Empfehlung: sich kostenlos orientieren, praktische Tiefe aufbauen oder einen von Arbeitgebern anerkannten Nachweis erwerben. Außerdem behandelt er einen vierten Pfad, den die großen Plattformen unterbewerten: Prompt Engineering als eigenständige Kompetenz. Kurspreise ändern sich mit Aktionen und Abostufen, daher ist jede Angabe hier eine Momentaufnahme vom Juli 2026 – prüfen Sie den aktuellen Preis auf der Plattform, bevor Sie sich einschreiben.',
     metaDescription:
       'Drei KI-Lernwege 2026 im Vergleich: kostenlose Kurse, bezahlte strukturierte Kurse und Zertifizierungen. Mit klarer Empfehlung je nach Ziel und Niveau.',
     twitterDescription:
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nachweis erwerben: ein Zertifizierungspfad, der ein überprüfbares Zertifikat ausstellt',
           'Auf Prompts spezialisieren: ein eigenständiger Prompt-Engineering-Kurs',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Prompt Engineering ist ein eigener Pfad.** Allgemeine KI-Kurse unterbewerten das Schreiben von Prompts. Wenn sich Ihre Arbeit darauf konzentriert, gute Ausgaben aus bestehenden Modellen zu erhalten, ist ein eigenständiger Prompt-Engineering-Kurs der direkte Weg.',
           '**Prüfen Sie als Gasthörer, bevor Sie zahlen.** Die meisten kostenpflichtigen Plattformen erlauben es, Kursmaterial vor dem Kauf anzusehen oder als Gasthörer zu prüfen. Nutzen Sie das, um Niveau und Lehrstil zu bestätigen, bevor Sie Geld investieren.',
           '**Achten Sie auf die Rechnung Abo gegen Einmalkauf.** Manche Plattformen berechnen ein monatliches Abo, andere eine einmalige Kursgebühr – welche Option günstiger ist, hängt ausschließlich davon ab, wie schnell Sie fertig werden.',
-          '**Preise sind eine Momentaufnahme vom Mai 2026.** Die Preisgestaltung von Kursplattformen ändert sich mit Aktionen und Aboänderungen – prüfen Sie den aktuellen Preis auf der Plattform, bevor Sie sich einschreiben.',
+          '**Preise sind eine Momentaufnahme vom Juli 2026.** Die Preisgestaltung von Kursplattformen ändert sich mit Aktionen und Aboänderungen – prüfen Sie den aktuellen Preis auf der Plattform, bevor Sie sich einschreiben.',
         ],
       },
       quickFacts: {
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie sich die vier KI-Lernkategorien 2026 vergleichen',
         content:
-          'Die Spalte „Am besten geeignet für“ spiegelt das Lernziel wider, nicht einen einzelnen Kurs. Die Preisangabe ist eine qualitativ ausgedrückte Momentaufnahme vom Mai 2026 – die Preisgestaltung von Kursplattformen ändert sich mit Aktionen und Abostufen, bestätigen Sie daher den aktuellen Preis auf der Plattform vor der Einschreibung.',
+          'Die Spalte „Am besten geeignet für” spiegelt das Lernziel wider, nicht einen einzelnen Kurs. Die Preisangabe ist eine qualitativ ausgedrückte Momentaufnahme vom Juli 2026 – die Preisgestaltung von Kursplattformen ändert sich mit Aktionen und Abostufen, bestätigen Sie daher den aktuellen Preis auf der Plattform vor der Einschreibung.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -622,31 +622,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Stellen Sie sich KI-Kurse wie Werkzeuge in einem Werkzeugkasten vor. Einen kostenlosen Kurs greifen Sie, um zu sehen, ob Ihnen die Arbeit überhaupt liegt. Einen kostenpflichtigen strukturierten Kurs greifen Sie, um die Kompetenz tatsächlich aufzubauen. Eine Zertifizierung nutzen Sie, um die Kompetenz jemand anderem nachzuweisen. Das falsche Werkzeug für die Aufgabe zu wählen, kostet Geld und Zeit.',
           },
         ],
-        columns: ['Kategorie', 'Am besten geeignet für', 'Ergebnis', 'Kosten (Mai 2026)'],
+        columns: ['Kategorie', 'Am besten geeignet für', 'Ergebnis', 'Kosten (Juli 2026)'],
         rows: [
           {
             'Kategorie': 'Kostenlose Kurse',
             'Am besten geeignet für': 'Sich orientieren, entscheiden, ob KI das Richtige für Sie ist',
             'Ergebnis': 'Grundlegendes Verständnis, kein formaler Nachweis',
-            'Kosten (Mai 2026)': 'Kostenlos als Gasthörer; aktuellen Preis prüfen',
+            'Kosten (Juli 2026)': 'Kostenlos als Gasthörer; aktuellen Preis prüfen',
           },
           {
             'Kategorie': 'Kostenpflichtige strukturierte Kurse',
             'Am besten geeignet für': 'Praktische, anwendbare Kompetenz aufbauen',
             'Ergebnis': 'Anwendbare Kompetenz und oft ein überprüfbares Zertifikat',
-            'Kosten (Mai 2026)': 'Abo oder Einmalgebühr; aktuellen Preis prüfen',
+            'Kosten (Juli 2026)': 'Abo oder Einmalgebühr; aktuellen Preis prüfen',
           },
           {
             'Kategorie': 'Zertifizierungen',
             'Am besten geeignet für': 'Einen Nachweis erwerben, den eine Stelle oder ein Arbeitgeber verlangt',
             'Ergebnis': 'Ein überprüfbares Zertifikat für Lebensläufe und Profile',
-            'Kosten (Mai 2026)': 'Einmalgebühr; aktuellen Preis prüfen',
+            'Kosten (Juli 2026)': 'Einmalgebühr; aktuellen Preis prüfen',
           },
           {
             'Kategorie': 'Prompt-Engineering-Kurse',
             'Am besten geeignet für': 'Gute Ausgaben aus bestehenden Modellen erhalten',
             'Ergebnis': 'Praktische Kompetenz im Schreiben von Prompts',
-            'Kosten (Mai 2026)': 'Kostenlos bis Mittelklasse; aktuellen Preis prüfen',
+            'Kosten (Juli 2026)': 'Kostenlos bis Mittelklasse; aktuellen Preis prüfen',
           },
         ],
       },
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Jede Preisangabe in diesem Ratgeber ist eine Momentaufnahme vom Mai 2026. Die Preisgestaltung von Kursplattformen ändert sich mit Aktionen und Abostufen – öffnen Sie immer die aktuelle Plattformseite, bevor Sie sich einschreiben.',
+            text: 'Jede Preisangabe in diesem Ratgeber ist eine Momentaufnahme vom Juli 2026. Die Preisgestaltung von Kursplattformen ändert sich mit Aktionen und Abostufen – öffnen Sie immer die aktuelle Plattformseite, bevor Sie sich einschreiben.',
           },
         ],
         affiliateLinks: [
@@ -978,13 +978,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Meilleurs cours et certifications en IA : guide d\'achat 2026',
     seoTitle: 'Cours et certifications IA 2026 : gratuits et payants',
     intro:
-      'La plupart des classements des « meilleurs cours d\'IA » classent les cours selon la notoriété de la marque et ignorent la question qui compte réellement : que voulez-vous faire de la compétence acquise ? Un cours de fondamentaux gratuit et un parcours de certification payant ne sont pas des produits concurrents : ils servent des objectifs différents. Ce guide répartit l\'apprentissage de l\'IA en trois catégories — cours gratuits, cours structurés payants et certifications — et donne une recommandation claire pour chaque objectif : se repérer gratuitement, acquérir de la profondeur pratique ou obtenir un titre reconnu par un employeur. Il couvre aussi un quatrième parcours que les grandes plateformes sous-estiment : le prompt engineering en tant que compétence à part entière. Les tarifs des cours évoluent avec les promotions et les formules d\'abonnement, chaque chiffre est donc un instantané de mai 2026 — vérifiez le prix actuel sur la plateforme avant de vous inscrire.',
+      'La plupart des classements des « meilleurs cours d\'IA » classent les cours selon la notoriété de la marque et ignorent la question qui compte réellement : que voulez-vous faire de la compétence acquise ? Un cours de fondamentaux gratuit et un parcours de certification payant ne sont pas des produits concurrents : ils servent des objectifs différents. Ce guide répartit l\'apprentissage de l\'IA en trois catégories — cours gratuits, cours structurés payants et certifications — et donne une recommandation claire pour chaque objectif : se repérer gratuitement, acquérir de la profondeur pratique ou obtenir un titre reconnu par un employeur. Il couvre aussi un quatrième parcours que les grandes plateformes sous-estiment : le prompt engineering en tant que compétence à part entière. Les tarifs des cours évoluent avec les promotions et les formules d\'abonnement, chaque chiffre est donc un instantané de juillet 2026 — vérifiez le prix actuel sur la plateforme avant de vous inscrire.',
     metaDescription:
       'Trois parcours d\'apprentissage de l\'IA comparés pour 2026 : cours gratuits, cours structurés payants et certifications — avec une recommandation claire pour se repérer, gagner en profondeur ou obtenir un titre.',
     twitterDescription:
@@ -1017,7 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obtenir un titre : un parcours de certification qui délivre un certificat vérifiable',
           'Se spécialiser dans les prompts : un cours de prompt engineering dédié',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Le prompt engineering est un parcours à part.** Les cours d\'IA généraux sous-estiment la rédaction de prompts. Si votre travail repose sur l\'obtention de bonnes sorties à partir de modèles existants, un cours de prompt engineering dédié est la voie directe.',
           '**Auditez avant de payer.** La plupart des plateformes payantes permettent de prévisualiser ou d\'auditer le contenu avant l\'achat. Utilisez cela pour confirmer que le niveau et le style d\'enseignement conviennent avant d\'engager de l\'argent.',
           '**Surveillez le calcul abonnement contre paiement unique.** Certaines plateformes facturent un abonnement mensuel, d\'autres des frais de cours uniques — l\'option la moins chère dépend entièrement de votre rapidité à terminer.',
-          '**Les prix sont un instantané de mai 2026.** La tarification des plateformes de cours évolue avec les promotions et les changements d\'abonnement — vérifiez le prix actuel sur la plateforme avant de vous inscrire.',
+          '**Les prix sont un instantané de juillet 2026.** La tarification des plateformes de cours évolue avec les promotions et les changements d\'abonnement — vérifiez le prix actuel sur la plateforme avant de vous inscrire.',
         ],
       },
       quickFacts: {
@@ -1097,7 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparaison des quatre catégories d\'apprentissage de l\'IA en 2026',
         content:
-          'La colonne « Idéal pour » reflète l\'objectif d\'apprentissage, pas un cours unique. Le prix est un instantané de mai 2026 exprimé qualitativement — la tarification des plateformes de cours évolue avec les promotions et les formules d\'abonnement, confirmez donc le prix actuel sur la plateforme avant de vous inscrire.',
+          'La colonne « Idéal pour » reflète l\'objectif d\'apprentissage, pas un cours unique. Le prix est un instantané de juillet 2026 exprimé qualitativement — la tarification des plateformes de cours évolue avec les promotions et les formules d\'abonnement, confirmez donc le prix actuel sur la plateforme avant de vous inscrire.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1108,31 +1108,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Voyez les cours d\'IA comme des outils dans une boîte à outils. Un cours gratuit est celui que vous prenez pour voir si le travail vous plaît. Un cours structuré payant est celui qui construit réellement la compétence. Une certification est celle que vous utilisez pour prouver la compétence à quelqu\'un d\'autre. Choisir le mauvais outil fait perdre de l\'argent et du temps.',
           },
         ],
-        columns: ['Catégorie', 'Idéal pour', 'Résultat', 'Coût (mai 2026)'],
+        columns: ['Catégorie', 'Idéal pour', 'Résultat', 'Coût (juillet 2026)'],
         rows: [
           {
             'Catégorie': 'Cours gratuits',
             'Idéal pour': 'Se repérer, décider si l\'IA vous convient',
             'Résultat': 'Compréhension de base, aucun titre formel',
-            'Coût (mai 2026)': 'Gratuit en auditeur libre ; vérifier le prix actuel',
+            'Coût (juillet 2026)': 'Gratuit en auditeur libre ; vérifier le prix actuel',
           },
           {
             'Catégorie': 'Cours structurés payants',
             'Idéal pour': 'Construire une compétence pratique et appliquée',
             'Résultat': 'Compétence opérationnelle et, souvent, un certificat vérifiable',
-            'Coût (mai 2026)': 'Abonnement ou frais uniques ; vérifier le prix actuel',
+            'Coût (juillet 2026)': 'Abonnement ou frais uniques ; vérifier le prix actuel',
           },
           {
             'Catégorie': 'Certifications',
             'Idéal pour': 'Obtenir un titre qu\'un poste ou un employeur exige',
             'Résultat': 'Un certificat vérifiable pour CV et profils',
-            'Coût (mai 2026)': 'Frais uniques ; vérifier le prix actuel',
+            'Coût (juillet 2026)': 'Frais uniques ; vérifier le prix actuel',
           },
           {
             'Catégorie': 'Cours de prompt engineering',
             'Idéal pour': 'Obtenir de bonnes sorties à partir de modèles existants',
             'Résultat': 'Compétence pratique en rédaction de prompts',
-            'Coût (mai 2026)': 'Gratuit à moyen de gamme ; vérifier le prix actuel',
+            'Coût (juillet 2026)': 'Gratuit à moyen de gamme ; vérifier le prix actuel',
           },
         ],
       },
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Chaque référence de prix dans ce guide est un instantané de mai 2026. La tarification des plateformes de cours évolue avec les promotions et les formules d\'abonnement — ouvrez toujours la fiche actuelle de la plateforme avant de vous inscrire.',
+            text: 'Chaque référence de prix dans ce guide est un instantané de juillet 2026. La tarification des plateformes de cours évolue avec les promotions et les formules d\'abonnement — ouvrez toujours la fiche actuelle de la plateforme avant de vous inscrire.',
           },
         ],
         affiliateLinks: [
@@ -1456,13 +1456,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '最良のAIコースと資格認定：2026年購入ガイド',
     seoTitle: '最良のAIコース2026：無料・有料・資格認定ガイド',
     intro:
-      '「最良のAIコース」を扱うリストの多くは、ブランド名でコースを並べ、実際に重要な問いを見落としています。すなわち、習得したスキルでその後に何をしたいのか、という問いです。無料の基礎コースと有料の資格認定コースは競合する商品ではなく、異なる目標に役立つものです。本ガイドはAI学習を3つのカテゴリー――無料コース、有料の体系的コース、資格認定――に分類し、それぞれの目標に対して明確な選択肢を示します。無料で全体像をつかむ、実践的な深さを身につける、雇用主が認める資格を取得する、という3つです。さらに、大手プラットフォームが軽視しがちな第4の道、すなわちprompt engineeringを独立したスキルとして扱う道も取り上げます。コース価格はキャンペーンやサブスクリプションの段階によって変動するため、本記事の数値はすべて2026年5月時点のスナップショットです。登録前にプラットフォームで現在の価格を確認してください。',
+      '「最良のAIコース」を扱うリストの多くは、ブランド名でコースを並べ、実際に重要な問いを見落としています。すなわち、習得したスキルでその後に何をしたいのか、という問いです。無料の基礎コースと有料の資格認定コースは競合する商品ではなく、異なる目標に役立つものです。本ガイドはAI学習を3つのカテゴリー――無料コース、有料の体系的コース、資格認定――に分類し、それぞれの目標に対して明確な選択肢を示します。無料で全体像をつかむ、実践的な深さを身につける、雇用主が認める資格を取得する、という3つです。さらに、大手プラットフォームが軽視しがちな第4の道、すなわちprompt engineeringを独立したスキルとして扱う道も取り上げます。コース価格はキャンペーンやサブスクリプションの段階によって変動するため、本記事の数値はすべて2026年7月時点のスナップショットです。登録前にプラットフォームで現在の価格を確認してください。',
     metaDescription:
       '2026年に向けて3つのAI学習経路を比較：無料コース、有料の体系的コース、資格認定――全体像をつかむ、深さを身につける、資格を取得する、それぞれに明確な選択肢を提示します。',
     twitterDescription:
@@ -1495,7 +1495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '資格を取得する：検証可能な証明書を発行する資格認定の経路',
           'プロンプトに特化する：専門のprompt engineeringコース',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**prompt engineeringは独立した道です。** 一般的なAIコースはプロンプトの作成を軽視します。仕事の中心が既存のモデルから良い出力を得ることであれば、専門のprompt engineeringコースが直接の道です。',
           '**支払う前に聴講しましょう。** 有料プラットフォームの多くは、購入前にコース教材をプレビューまたは聴講できます。これを使って、お金を投じる前に水準と指導スタイルが合うかを確認してください。',
           '**サブスクリプションと買い切りの計算に注意しましょう。** 月額サブスクリプションを課すプラットフォームもあれば、一度きりのコース料金を課すものもあります。どちらが安いかは、修了の速さに完全に左右されます。',
-          '**価格は2026年5月時点のスナップショットです。** コースプラットフォームの価格はキャンペーンやサブスクリプションの変更で動きます。登録前にプラットフォームで現在の価格を確認してください。',
+          '**価格は2026年7月時点のスナップショットです。** コースプラットフォームの価格はキャンペーンやサブスクリプションの変更で動きます。登録前にプラットフォームで現在の価格を確認してください。',
         ],
       },
       quickFacts: {
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '4つのAI学習カテゴリーは2026年にどう比較されるか',
         content:
-          '「最適な対象」の列は、単一のコースではなく学習目標を反映しています。価格は2026年5月時点のスナップショットで、定性的に表現しています。コースプラットフォームの価格はキャンペーンやサブスクリプションの段階によって変動するため、登録前にプラットフォームで現在の価格を確認してください。',
+          '「最適な対象」の列は、単一のコースではなく学習目標を反映しています。価格は2026年7月時点のスナップショットで、定性的に表現しています。コースプラットフォームの価格はキャンペーンやサブスクリプションの段階によって変動するため、登録前にプラットフォームで現在の価格を確認してください。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1586,31 +1586,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AIコースは道具箱の中の工具のようなものだと考えてください。無料コースは、その仕事が自分に合うかを見るために手に取るものです。有料の体系的コースは、スキルを実際に育てるものです。資格認定は、スキルを他人に証明するために使うものです。仕事に合わない工具を選べば、お金と時間を無駄にします。',
           },
         ],
-        columns: ['カテゴリー', '最適な対象', '成果', '費用（2026年5月）'],
+        columns: ['カテゴリー', '最適な対象', '成果', '費用（2026年7月）'],
         rows: [
           {
             'カテゴリー': '無料コース',
             '最適な対象': '全体像をつかみ、AIが自分に合うかを判断する',
             '成果': '基礎的な理解、正式な資格はなし',
-            '費用（2026年5月）': '聴講は無料；現在の価格を確認',
+            '費用（2026年7月）': '聴講は無料；現在の価格を確認',
           },
           {
             'カテゴリー': '有料の体系的コース',
             '最適な対象': '実践的で応用の利くスキルを育てる',
             '成果': '通用するスキルと、多くの場合は検証可能な証明書',
-            '費用（2026年5月）': 'サブスクリプションまたは買い切り料金；現在の価格を確認',
+            '費用（2026年7月）': 'サブスクリプションまたは買い切り料金；現在の価格を確認',
           },
           {
             'カテゴリー': '資格認定',
             '最適な対象': '職務や雇用主が求める資格を取得する',
             '成果': '履歴書やプロフィール向けの検証可能な証明書',
-            '費用（2026年5月）': '買い切り料金；現在の価格を確認',
+            '費用（2026年7月）': '買い切り料金；現在の価格を確認',
           },
           {
             'カテゴリー': 'prompt engineeringコース',
             '最適な対象': '既存のモデルから良い出力を得る',
             '成果': '実践的なプロンプト作成スキル',
-            '費用（2026年5月）': '無料から中価格帯；現在の価格を確認',
+            '費用（2026年7月）': '無料から中価格帯；現在の価格を確認',
           },
         ],
       },
@@ -1827,7 +1827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '本ガイドのすべての価格への言及は2026年5月時点のスナップショットです。コースプラットフォームの価格はキャンペーンやサブスクリプションの段階によって変動します。登録前に必ず現在のプラットフォームの掲載を開いてください。',
+            text: '本ガイドのすべての価格への言及は2026年7月時点のスナップショットです。コースプラットフォームの価格はキャンペーンやサブスクリプションの段階によって変動します。登録前に必ず現在のプラットフォームの掲載を開いてください。',
           },
         ],
         affiliateLinks: [
@@ -1934,13 +1934,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '最佳 AI 课程与认证：2026 选购指南',
     seoTitle: '2026 最佳 AI 课程：免费、付费与认证指南',
     intro:
-      '大多数“最佳 AI 课程”榜单按品牌知名度排列课程，却忽略了真正重要的问题：学到这项技能之后你想用它做什么？免费的基础课程和付费的认证路径并非相互竞争的产品，它们服务于不同的目标。本指南将 AI 学习分为三类——免费课程、付费的体系化课程和认证——并为每个目标给出明确的选择：免费打基础、建立动手深度，或拿到雇主认可的凭证。本指南还涵盖大平台往往低估的第四条路径：把 prompt engineering 当作一项独立技能。课程价格会随促销和订阅档位变化，因此本文每个数字都是 2026 年 5 月的快照——报名前请在平台上核对当前价格。',
+      '大多数“最佳 AI 课程”榜单按品牌知名度排列课程，却忽略了真正重要的问题：学到这项技能之后你想用它做什么？免费的基础课程和付费的认证路径并非相互竞争的产品，它们服务于不同的目标。本指南将 AI 学习分为三类——免费课程、付费的体系化课程和认证——并为每个目标给出明确的选择：免费打基础、建立动手深度，或拿到雇主认可的凭证。本指南还涵盖大平台往往低估的第四条路径：把 prompt engineering 当作一项独立技能。课程价格会随促销和订阅档位变化，因此本文每个数字都是 2026 年 7 月的快照——报名前请在平台上核对当前价格。',
     metaDescription:
       '2026年最佳AI课程与认证：从免费入门到付费专业课程。对比Coursera、DeepLearning.AI、fast.ai等平台，涵盖价格、时长、证书价值和就业前景分析。',
     twitterDescription:
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '获得凭证:一条颁发可验证证书的认证路径',
           '专攻提示词:一门专门的 prompt engineering 课程',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**prompt engineering 是一条独立的路径。** 通用 AI 课程低估了提示词写作。如果你的工作核心是从现有模型获得好的输出,专门的 prompt engineering 课程就是直接的路径。',
           '**付费之前先旁听。** 大多数付费平台允许在购买前预览或旁听课程材料。利用这一点,在投入资金之前确认难度和教学风格是否合适。',
           '**留意订阅与一次性付费的算账。** 有些平台收取按月订阅费,有些收取一次性课程费——哪个更便宜,完全取决于你完成的速度。',
-          '**价格是 2026 年 5 月的快照。** 课程平台的定价会随促销和订阅变动而变化——报名前请在平台上核对当前价格。',
+          '**价格是 2026 年 7 月的快照。** 课程平台的定价会随促销和订阅变动而变化——报名前请在平台上核对当前价格。',
         ],
       },
       quickFacts: {
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '四类 AI 学习类别在 2026 年如何对比',
         content:
-          '“最适合”一列反映的是学习目标,而不是某一门具体课程。价格是 2026 年 5 月的快照,以定性方式表述——课程平台的定价会随促销和订阅档位变化,因此报名前请在平台上确认当前价格。',
+          '”最适合”一列反映的是学习目标,而不是某一门具体课程。价格是 2026 年 7 月的快照,以定性方式表述——课程平台的定价会随促销和订阅档位变化,因此报名前请在平台上确认当前价格。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2064,31 +2064,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '把 AI 课程想象成工具箱里的工具。免费课程是你拿来看自己是否喜欢这份工作的那件。付费的体系化课程是真正培养技能的那件。认证是你用来向别人证明技能的那件。为某项任务选错工具,会浪费金钱和时间。',
           },
         ],
-        columns: ['类别', '最适合', '结果', '费用（2026 年 5 月）'],
+        columns: ['类别', '最适合', '结果', '费用（2026 年 7 月）'],
         rows: [
           {
             '类别': '免费课程',
             '最适合': '打基础,判断 AI 是否适合你',
             '结果': '基础理解,无正式凭证',
-            '费用（2026 年 5 月）': '旁听免费;核对当前价格',
+            '费用（2026 年 7 月）': '旁听免费;核对当前价格',
           },
           {
             '类别': '付费的体系化课程',
             '最适合': '建立动手的、可应用的技能',
             '结果': '可用技能,通常还有一份可验证证书',
-            '费用（2026 年 5 月）': '订阅或一次性费用;核对当前价格',
+            '费用（2026 年 7 月）': '订阅或一次性费用;核对当前价格',
           },
           {
             '类别': '认证',
             '最适合': '获得岗位或雇主要求的凭证',
             '结果': '一份用于简历和档案的可验证证书',
-            '费用（2026 年 5 月）': '一次性费用;核对当前价格',
+            '费用（2026 年 7 月）': '一次性费用;核对当前价格',
           },
           {
             '类别': 'prompt engineering 课程',
             '最适合': '从现有模型获得好的输出',
             '结果': '实用的提示词写作技能',
-            '费用（2026 年 5 月）': '免费到中等价位;核对当前价格',
+            '费用（2026 年 7 月）': '免费到中等价位;核对当前价格',
           },
         ],
       },
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '本指南中的每一处价格引用都是 2026 年 5 月的快照。课程平台的定价会随促销和订阅档位变化——报名前请始终打开当前的平台页面。',
+            text: '本指南中的每一处价格引用都是 2026 年 7 月的快照。课程平台的定价会随促销和订阅档位变化——报名前请始终打开当前的平台页面。',
           },
         ],
         affiliateLinks: [
@@ -2412,13 +2412,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Mejores cursos y certificaciones de IA: guía de compra 2026',
     seoTitle: 'Mejores cursos y certificaciones de IA 2026: gratis o pago',
     intro:
-      'La mayoría de las listas de "mejores cursos de IA" clasifican los cursos por el reconocimiento de la marca e ignoran la pregunta que realmente importa: ¿qué quieres hacer con esa habilidad después? Un curso gratuito de fundamentos y un itinerario de certificación de pago no son productos que compitan entre sí — sirven a objetivos distintos. Esta guía organiza el aprendizaje de IA en tres categorías — cursos gratuitos, cursos estructurados de pago y certificaciones — y da una recomendación clara para cada objetivo: orientarte sin coste, desarrollar profundidad práctica u obtener una credencial que un empleador reconozca. También cubre una cuarta vía que las grandes plataformas infravaloran: el prompt engineering como habilidad propia. Los precios de los cursos cambian con las promociones y los niveles de suscripción, por lo que cada cifra aquí es un snapshot de mayo de 2026 — consulta el precio actual en la plataforma antes de inscribirte.',
+      'La mayoría de las listas de "mejores cursos de IA" clasifican los cursos por el reconocimiento de la marca e ignoran la pregunta que realmente importa: ¿qué quieres hacer con esa habilidad después? Un curso gratuito de fundamentos y un itinerario de certificación de pago no son productos que compitan entre sí — sirven a objetivos distintos. Esta guía organiza el aprendizaje de IA en tres categorías — cursos gratuitos, cursos estructurados de pago y certificaciones — y da una recomendación clara para cada objetivo: orientarte sin coste, desarrollar profundidad práctica u obtener una credencial que un empleador reconozca. También cubre una cuarta vía que las grandes plataformas infravaloran: el prompt engineering como habilidad propia. Los precios de los cursos cambian con las promociones y los niveles de suscripción, por lo que cada cifra aquí es un snapshot de julio de 2026 — consulta el precio actual en la plataforma antes de inscribirte.',
     metaDescription:
       'Tres itinerarios de IA comparados para 2026: cursos gratuitos, cursos de pago estructurados y certificaciones, con una recomendación clara para cada objetivo.',
     twitterDescription:
@@ -2451,7 +2451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obtener una credencial: un itinerario de certificación que emite un certificado verificable',
           'Especializarte en prompts: un curso dedicado de prompt engineering',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2484,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El prompt engineering es su propio itinerario.** Los cursos generales de IA infravaloran la escritura de prompts. Si tu trabajo gira en torno a obtener buenas salidas de modelos existentes, un curso dedicado de prompt engineering es el camino directo.',
           '**Audita antes de pagar.** La mayoría de las plataformas de pago te permiten previsualizar o auditar el material del curso antes de comprarlo. Úsalo para confirmar que el nivel y el estilo de enseñanza encajan antes de comprometer dinero.',
           '**Vigila el cálculo suscripción frente a pago único.** Algunas plataformas cobran una suscripción mensual, otras una tarifa única por curso — la opción más barata depende enteramente de lo rápido que termines.',
-          '**Los precios son un snapshot de mayo de 2026.** Los precios de las plataformas de cursos se mueven con las promociones y los cambios de suscripción — comprueba el precio actual en la plataforma antes de inscribirte.',
+          '**Los precios son un snapshot de julio de 2026.** Los precios de las plataformas de cursos se mueven con las promociones y los cambios de suscripción — comprueba el precio actual en la plataforma antes de inscribirte.',
         ],
       },
       quickFacts: {
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan las cuatro categorías de aprendizaje de IA en 2026',
         content:
-          'La columna "Ideal para" refleja el objetivo de aprendizaje, no un curso concreto. El precio es un snapshot de mayo de 2026 expresado cualitativamente — los precios de las plataformas de cursos cambian con las promociones y los niveles de suscripción, así que confirma el precio actual en la plataforma antes de inscribirte.',
+          'La columna "Ideal para" refleja el objetivo de aprendizaje, no un curso concreto. El precio es un snapshot de julio de 2026 expresado cualitativamente — los precios de las plataformas de cursos cambian con las promociones y los niveles de suscripción, así que confirma el precio actual en la plataforma antes de inscribirte.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2542,31 +2542,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Piensa en los cursos de IA como herramientas en una caja. Un curso gratuito es el que coges para ver si te gusta el trabajo. Un curso estructurado de pago es el que realmente construye la habilidad. Una certificación es la que usas para demostrar esa habilidad a otra persona. Elegir la herramienta equivocada para la tarea desperdicia dinero y tiempo.',
           },
         ],
-        columns: ['Categoría', 'Ideal para', 'Resultado', 'Coste (mayo 2026)'],
+        columns: ['Categoría', 'Ideal para', 'Resultado', 'Coste (julio 2026)'],
         rows: [
           {
             'Categoría': 'Cursos gratuitos',
             'Ideal para': 'Orientarse, decidir si la IA es para ti',
             'Resultado': 'Comprensión básica, sin credencial formal',
-            'Coste (mayo 2026)': 'Gratis para auditar; comprobar precio actual',
+            'Coste (julio 2026)': 'Gratis para auditar; comprobar precio actual',
           },
           {
             'Categoría': 'Cursos estructurados de pago',
             'Ideal para': 'Desarrollar habilidad práctica y aplicada',
             'Resultado': 'Habilidad aplicable y, a menudo, un certificado verificable',
-            'Coste (mayo 2026)': 'Suscripción o tarifa única; comprobar precio actual',
+            'Coste (julio 2026)': 'Suscripción o tarifa única; comprobar precio actual',
           },
           {
             'Categoría': 'Certificaciones',
             'Ideal para': 'Obtener una credencial que un puesto o empleador pide',
             'Resultado': 'Un certificado verificable para CV y perfiles',
-            'Coste (mayo 2026)': 'Tarifa única; comprobar precio actual',
+            'Coste (julio 2026)': 'Tarifa única; comprobar precio actual',
           },
           {
             'Categoría': 'Cursos de prompt engineering',
             'Ideal para': 'Obtener buenas salidas de modelos existentes',
             'Resultado': 'Habilidad práctica de escritura de prompts',
-            'Coste (mayo 2026)': 'Gratis a precio medio; comprobar precio actual',
+            'Coste (julio 2026)': 'Gratis a precio medio; comprobar precio actual',
           },
         ],
       },
@@ -2783,7 +2783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Cada referencia de precio en esta guía es un snapshot de mayo de 2026. Los precios de las plataformas de cursos cambian con las promociones y los niveles de suscripción — abre siempre la página actual de la plataforma antes de inscribirte.',
+            text: 'Cada referencia de precio en esta guía es un snapshot de julio de 2026. Los precios de las plataformas de cursos cambian con las promociones y los niveles de suscripción — abre siempre la página actual de la plataforma antes de inscribirte.',
           },
         ],
         affiliateLinks: [
@@ -2894,7 +2894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-courses-certifications-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2903,13 +2903,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Melhores cursos e certificações de IA: guia de compra 2026',
     seoTitle: 'Melhores cursos e certificações de IA 2026: grátis ou pago',
     intro:
-      'A maioria das listas de "melhores cursos de IA" classifica os cursos pelo reconhecimento da marca e ignora a pergunta que realmente importa: o que você quer fazer com essa habilidade depois? Um curso gratuito de fundamentos e uma trilha de certificação paga não são produtos que competem entre si — eles servem a objetivos diferentes. Este guia organiza o aprendizado de IA em três categorias — cursos gratuitos, cursos estruturados pagos e certificações — e dá uma recomendação clara para cada objetivo: se orientar sem custo, desenvolver profundidade prática ou obter uma credencial que um empregador reconheça. Ele também cobre uma quarta via que as grandes plataformas subestimam: o prompt engineering como uma habilidade própria. Os preços dos cursos mudam com as promoções e os níveis de assinatura, portanto cada número aqui é um snapshot de maio de 2026 — verifique o preço atual na plataforma antes de se inscrever.',
+      'A maioria das listas de "melhores cursos de IA" classifica os cursos pelo reconhecimento da marca e ignora a pergunta que realmente importa: o que você quer fazer com essa habilidade depois? Um curso gratuito de fundamentos e uma trilha de certificação paga não são produtos que competem entre si — eles servem a objetivos diferentes. Este guia organiza o aprendizado de IA em três categorias — cursos gratuitos, cursos estruturados pagos e certificações — e dá uma recomendação clara para cada objetivo: se orientar sem custo, desenvolver profundidade prática ou obter uma credencial que um empregador reconheça. Ele também cobre uma quarta via que as grandes plataformas subestimam: o prompt engineering como uma habilidade própria. Os preços dos cursos mudam com as promoções e os níveis de assinatura, portanto cada número aqui é um snapshot de julho de 2026 — verifique o preço atual na plataforma antes de se inscrever.',
     metaDescription:
       'Três trilhas de IA comparadas para 2026: cursos gratuitos, cursos pagos estruturados e certificações, com uma recomendação clara para cada objetivo.',
     twitterDescription:
@@ -2942,7 +2942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obter uma credencial: uma trilha de certificação que emite um certificado verificável',
           'Especializar-se em prompts: um curso dedicado de prompt engineering',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -2975,7 +2975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O prompt engineering é a sua própria trilha.** Os cursos gerais de IA subestimam a escrita de prompts. Se o seu trabalho gira em torno de obter boas saídas de modelos existentes, um curso dedicado de prompt engineering é o caminho direto.',
           '**Audite antes de pagar.** A maioria das plataformas pagas permite pré-visualizar ou auditar o material do curso antes de comprá-lo. Use isso para confirmar que o nível e o estilo de ensino combinam antes de comprometer dinheiro.',
           '**Fique de olho no cálculo assinatura versus pagamento único.** Algumas plataformas cobram uma assinatura mensal, outras uma taxa única por curso — a opção mais barata depende inteiramente de quão rápido você termina.',
-          '**Os preços são um snapshot de maio de 2026.** Os preços das plataformas de cursos mudam com as promoções e as alterações de assinatura — verifique o preço atual na plataforma antes de se inscrever.',
+          '**Os preços são um snapshot de julho de 2026.** Os preços das plataformas de cursos mudam com as promoções e as alterações de assinatura — verifique o preço atual na plataforma antes de se inscrever.',
         ],
       },
       quickFacts: {
@@ -3022,7 +3022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como as quatro categorias de aprendizado de IA se comparam em 2026',
         content:
-          'A coluna "Ideal para" reflete o objetivo de aprendizado, não um curso específico. O preço é um snapshot de maio de 2026 expresso qualitativamente — os preços das plataformas de cursos mudam com as promoções e os níveis de assinatura, então confirme o preço atual na plataforma antes de se inscrever.',
+          'A coluna "Ideal para" reflete o objetivo de aprendizado, não um curso específico. O preço é um snapshot de julho de 2026 expresso qualitativamente — os preços das plataformas de cursos mudam com as promoções e os níveis de assinatura, então confirme o preço atual na plataforma antes de se inscrever.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3033,31 +3033,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pense nos cursos de IA como ferramentas em uma caixa. Um curso gratuito é o que você pega para ver se gosta do trabalho. Um curso estruturado pago é o que realmente constrói a habilidade. Uma certificação é a que você usa para provar essa habilidade a outra pessoa. Escolher a ferramenta errada para a tarefa desperdiça dinheiro e tempo.',
           },
         ],
-        columns: ['Categoría', 'Ideal para', 'Resultado', 'Coste (mayo 2026)'],
+        columns: ['Categoría', 'Ideal para', 'Resultado', 'Coste (julho 2026)'],
         rows: [
           {
             'Categoría': 'Cursos gratuitos',
             'Ideal para': 'Orientar-se, decidir se a IA é para você',
             'Resultado': 'Compreensão básica, sem credencial formal',
-            'Coste (mayo 2026)': 'Grátis para auditar; verificar preço atual',
+            'Coste (julho 2026)': 'Grátis para auditar; verificar preço atual',
           },
           {
             'Categoría': 'Cursos estruturados pagos',
             'Ideal para': 'Desenvolver habilidade prática e aplicada',
             'Resultado': 'Habilidade aplicável e, frequentemente, um certificado verificável',
-            'Coste (mayo 2026)': 'Assinatura ou taxa única; verificar preço atual',
+            'Coste (julho 2026)': 'Assinatura ou taxa única; verificar preço atual',
           },
           {
             'Categoría': 'Certificações',
             'Ideal para': 'Obter uma credencial que um cargo ou empregador pede',
             'Resultado': 'Um certificado verificável para currículos e perfis',
-            'Coste (mayo 2026)': 'Taxa única; verificar preço atual',
+            'Coste (julho 2026)': 'Taxa única; verificar preço atual',
           },
           {
             'Categoría': 'Cursos de prompt engineering',
             'Ideal para': 'Obter boas saídas de modelos existentes',
             'Resultado': 'Habilidade prática de escrita de prompts',
-            'Coste (mayo 2026)': 'Grátis a preço médio; verificar preço atual',
+            'Coste (julho 2026)': 'Grátis a preço médio; verificar preço atual',
           },
         ],
       },
@@ -3274,7 +3274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Cada referência de preço neste guia é um snapshot de maio de 2026. Os preços das plataformas de cursos mudam com as promoções e os níveis de assinatura — abra sempre a página atual da plataforma antes de se inscrever.',
+            text: 'Cada referência de preço neste guia é um snapshot de julho de 2026. Os preços das plataformas de cursos mudam com as promoções e os níveis de assinatura — abra sempre a página atual da plataforma antes de se inscrever.',
           },
         ],
         affiliateLinks: [
@@ -3385,7 +3385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-ai-courses-certifications-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3394,13 +3394,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'أفضل دورات وشهادات الذكاء الاصطناعي: دليل الشراء ⁨2026⁩',
     seoTitle: 'دورات وشهادات الذكاء الاصطناعي ⁨2026⁩: مجانية ومدفوعة',
     intro:
-      'تُصنّف معظم قوائم "أفضل دورات الذكاء الاصطناعي" الدوراتِ بحسب الاسم التجاري وتتجاهل السؤال الذي يهمّ فعلاً: ماذا تريد أن تفعل بهذه المهارة بعد ذلك؟ الدورة المجانية في الأساسيات ومسار الشهادة المدفوع ليسا منتجين متنافسين — كلٌّ منهما يخدم هدفاً مختلفاً. يُنظّم هذا الدليل تعلّم الذكاء الاصطناعي في ثلاث فئات — الدورات المجانية والدورات المدفوعة المنظَّمة والشهادات — ويقدّم توصية واضحة لكل هدف: التوجّه دون تكلفة، أو بناء العمق التطبيقي، أو الحصول على بيانات اعتماد يعترف بها صاحب عمل. يشمل الدليل أيضاً مساراً رابعاً تُقلّل منه المنصات الكبرى: هندسة الأوامر البرمجية بوصفها مهارة مستقلة. أسعار الدورات تتغير بالعروض الترويجية ومستويات الاشتراك، لذا كل رقم هنا هو صورة من مايو 2026 — تحقق من السعر الحالي على المنصة قبل التسجيل.',
+      'تُصنّف معظم قوائم "أفضل دورات الذكاء الاصطناعي" الدوراتِ بحسب الاسم التجاري وتتجاهل السؤال الذي يهمّ فعلاً: ماذا تريد أن تفعل بهذه المهارة بعد ذلك؟ الدورة المجانية في الأساسيات ومسار الشهادة المدفوع ليسا منتجين متنافسين — كلٌّ منهما يخدم هدفاً مختلفاً. يُنظّم هذا الدليل تعلّم الذكاء الاصطناعي في ثلاث فئات — الدورات المجانية والدورات المدفوعة المنظَّمة والشهادات — ويقدّم توصية واضحة لكل هدف: التوجّه دون تكلفة، أو بناء العمق التطبيقي، أو الحصول على بيانات اعتماد يعترف بها صاحب عمل. يشمل الدليل أيضاً مساراً رابعاً تُقلّل منه المنصات الكبرى: هندسة الأوامر البرمجية بوصفها مهارة مستقلة. أسعار الدورات تتغير بالعروض الترويجية ومستويات الاشتراك، لذا كل رقم هنا هو صورة من يوليو 2026 — تحقق من السعر الحالي على المنصة قبل التسجيل.',
     metaDescription:
       '3 مسارات لتعلّم الذكاء الاصطناعي في 2026: دورات مجانية للتوجّه، ومسارات مدفوعة لبناء العمق، وشهادات معترف بها من أصحاب العمل. اختر حسب هدفك.',
     twitterDescription:
@@ -3433,7 +3433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الحصول على بيانات اعتماد: مسار شهادة يُصدر شهادة قابلة للتحقق',
           'التخصص في الأوامر: دورة متخصصة في هندسة الأوامر البرمجية',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -3466,7 +3466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**هندسة الأوامر البرمجية مسارها المستقل.** الدورات العامة في الذكاء الاصطناعي تُقلّل من كتابة الأوامر. إذا كان عملك يتمحور حول الحصول على مخرجات جيدة من النماذج الموجودة، فالدورة المتخصصة في هندسة الأوامر هي الطريق المباشر.',
           '**دقّق قبل أن تدفع.** تتيح معظم المنصات المدفوعة معاينة مادة الدورة أو تدقيقها قبل الشراء. استخدم هذا للتأكد من أن المستوى وأسلوب التدريس مناسبان قبل الالتزام بالمال.',
           '**انتبه لحساب الاشتراك مقابل الدفعة الواحدة.** بعض المنصات تفرض اشتراكاً شهرياً وأخرى رسوماً لمرة واحدة لكل دورة — الخيار الأرخص يعتمد كلياً على مدى سرعة إتمامك.',
-          '**الأسعار صورة من مايو 2026.** أسعار منصات الدورات تتغير بالعروض الترويجية وتغييرات الاشتراك — تحقق دائماً من السعر الحالي على المنصة قبل التسجيل.',
+          '**الأسعار صورة من يوليو 2026.** أسعار منصات الدورات تتغير بالعروض الترويجية وتغييرات الاشتراك — تحقق دائماً من السعر الحالي على المنصة قبل التسجيل.',
         ],
       },
       quickFacts: {
@@ -3513,7 +3513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقارن فئات تعلّم الذكاء الاصطناعي الأربع في 2026',
         content:
-          'عمود "الأنسب لـ" يعكس هدف التعلّم لا دورة بعينها. السعر صورة نوعية من مايو 2026 — أسعار منصات الدورات تتغير بالعروض الترويجية ومستويات الاشتراك، لذا تأكد من السعر الحالي على المنصة قبل التسجيل.',
+          'عمود "الأنسب لـ" يعكس هدف التعلّم لا دورة بعينها. السعر صورة نوعية من يوليو 2026 — أسعار منصات الدورات تتغير بالعروض الترويجية ومستويات الاشتراك، لذا تأكد من السعر الحالي على المنصة قبل التسجيل.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3524,31 +3524,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'فكّر في دورات الذكاء الاصطناعي كأدوات في صندوق. الدورة المجانية هي ما تأخذه لترى إن كنت تحب العمل. الدورة المدفوعة المنظَّمة هي ما يبني المهارة فعلاً. الشهادة هي ما تستخدمه لإثبات تلك المهارة لشخص آخر. اختيار الأداة الخاطئة للمهمة يُضيّع المال والوقت.',
           },
         ],
-        columns: ['الفئة', 'الأنسب لـ', 'النتيجة', 'التكلفة (مايو 2026)'],
+        columns: ['الفئة', 'الأنسب لـ', 'النتيجة', 'التكلفة (يوليو 2026)'],
         rows: [
           {
             'الفئة': 'الدورات المجانية',
             'الأنسب لـ': 'التوجّه وتحديد ما إذا كان الذكاء الاصطناعي مناسباً لك',
             'النتيجة': 'فهم أساسي، بدون بيانات اعتماد رسمية',
-            'التكلفة (مايو 2026)': 'مجاني للتدقيق؛ تحقق من السعر الحالي',
+            'التكلفة (يوليو 2026)': 'مجاني للتدقيق؛ تحقق من السعر الحالي',
           },
           {
             'الفئة': 'الدورات المدفوعة المنظَّمة',
             'الأنسب لـ': 'بناء مهارة تطبيقية عملية',
             'النتيجة': 'مهارة قابلة للتطبيق وكثيراً ما تشمل شهادة قابلة للتحقق',
-            'التكلفة (مايو 2026)': 'اشتراك أو رسوم لمرة واحدة؛ تحقق من السعر الحالي',
+            'التكلفة (يوليو 2026)': 'اشتراك أو رسوم لمرة واحدة؛ تحقق من السعر الحالي',
           },
           {
             'الفئة': 'الشهادات',
             'الأنسب لـ': 'الحصول على بيانات اعتماد تطلبها وظيفة أو صاحب عمل',
             'النتيجة': 'شهادة قابلة للتحقق للسير الذاتية والملفات المهنية',
-            'التكلفة (مايو 2026)': 'رسوم لمرة واحدة؛ تحقق من السعر الحالي',
+            'التكلفة (يوليو 2026)': 'رسوم لمرة واحدة؛ تحقق من السعر الحالي',
           },
           {
             'الفئة': 'دورات هندسة الأوامر',
             'الأنسب لـ': 'الحصول على مخرجات جيدة من النماذج الموجودة',
             'النتيجة': 'مهارة عملية في كتابة الأوامر البرمجية',
-            'التكلفة (مايو 2026)': 'مجانية إلى متوسطة؛ تحقق من السعر الحالي',
+            'التكلفة (يوليو 2026)': 'مجانية إلى متوسطة؛ تحقق من السعر الحالي',
           },
         ],
       },
@@ -3765,7 +3765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'كل إشارة سعر في هذا الدليل هي صورة من مايو 2026. أسعار منصات الدورات تتغير بالعروض الترويجية ومستويات الاشتراك — افتح دائماً الصفحة الحالية للمنصة قبل التسجيل.',
+            text: 'كل إشارة سعر في هذا الدليل هي صورة من يوليو 2026. أسعار منصات الدورات تتغير بالعروض الترويجية ومستويات الاشتراك — افتح دائماً الصفحة الحالية للمنصة قبل التسجيل.',
           },
         ],
         affiliateLinks: [
@@ -3876,7 +3876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-ai-courses-certifications-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3885,13 +3885,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '최고의 AI 강좌 및 자격증: 2026 구매 가이드',
     seoTitle: '2026 최고의 AI 강좌 및 자격증: 무료 또는 유료',
     intro:
-      '"최고의 AI 강좌" 목록 대부분은 브랜드 인지도를 기준으로 강좌를 분류하며, 실제로 중요한 질문인 "그 기술을 배운 후 무엇을 할 것인가?"는 무시합니다. 무료 기초 강좌와 유료 자격증 과정은 서로 경쟁하는 제품이 아닙니다 — 서로 다른 목적을 위한 것입니다. 이 가이드는 AI 학습을 세 가지 범주로 정리합니다 — 무료 강좌, 구조화된 유료 강좌, 자격증 — 그리고 각 목적에 맞는 명확한 권장 사항을 제공합니다: 비용 없이 방향을 잡거나, 실용적인 깊이를 쌓거나, 고용주가 인정하는 자격증을 취득하거나. 대형 플랫폼이 과소평가하는 네 번째 경로인 prompt engineering도 별도의 기술로 다룹니다. 강좌 가격은 프로모션과 구독 수준에 따라 변동하므로 여기의 모든 수치는 2026년 5월 기준 스냅샷입니다 — 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+      '"최고의 AI 강좌" 목록 대부분은 브랜드 인지도를 기준으로 강좌를 분류하며, 실제로 중요한 질문인 "그 기술을 배운 후 무엇을 할 것인가?"는 무시합니다. 무료 기초 강좌와 유료 자격증 과정은 서로 경쟁하는 제품이 아닙니다 — 서로 다른 목적을 위한 것입니다. 이 가이드는 AI 학습을 세 가지 범주로 정리합니다 — 무료 강좌, 구조화된 유료 강좌, 자격증 — 그리고 각 목적에 맞는 명확한 권장 사항을 제공합니다: 비용 없이 방향을 잡거나, 실용적인 깊이를 쌓거나, 고용주가 인정하는 자격증을 취득하거나. 대형 플랫폼이 과소평가하는 네 번째 경로인 prompt engineering도 별도의 기술로 다룹니다. 강좌 가격은 프로모션과 구독 수준에 따라 변동하므로 여기의 모든 수치는 2026년 7월 기준 스냅샷입니다 — 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
     metaDescription:
       '2026년을 위한 세 가지 AI 학습 경로 비교: 무료 강좌, 구조화된 유료 강좌, 자격증 — 각 목적에 맞는 명확한 권장 사항 포함.',
     twitterDescription:
@@ -3924,7 +3924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '자격증 취득: 검증 가능한 수료증을 발급하는 자격증 과정',
           'Prompt 전문화: 전용 prompt engineering 강좌',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     toc: [
@@ -3957,7 +3957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Prompt engineering은 별도의 학습 경로입니다.** 일반 AI 강좌는 prompt 작성을 과소평가합니다. 업무가 기존 모델에서 좋은 결과를 얻는 것 위주라면 전용 prompt engineering 강좌가 직접적인 경로입니다.',
           '**지불 전에 청강하십시오.** 대부분의 유료 플랫폼에서는 구매 전에 강좌 자료를 미리 보거나 청강할 수 있습니다. 비용을 지불하기 전에 수준과 교육 방식이 맞는지 확인하십시오.',
           '**구독 대 일회성 지불 계산에 주의하십시오.** 일부 플랫폼은 월간 구독료를, 다른 플랫폼은 강좌당 일회성 요금을 청구합니다 — 가장 저렴한 옵션은 완전히 수강을 얼마나 빨리 마치느냐에 달려 있습니다.',
-          '**가격은 2026년 5월 기준 스냅샷입니다.** 강좌 플랫폼 가격은 프로모션 및 구독 변경에 따라 변동합니다 — 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+          '**가격은 2026년 7월 기준 스냅샷입니다.** 강좌 플랫폼 가격은 프로모션 및 구독 변경에 따라 변동합니다 — 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
         ],
       },
       quickFacts: {
@@ -4004,7 +4004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 네 가지 AI 학습 범주 비교',
         content:
-          '"이상적인 대상" 열은 특정 강좌가 아닌 학습 목표를 반영합니다. 가격은 2026년 5월 기준 정성적 스냅샷입니다 — 강좌 플랫폼 가격은 프로모션과 구독 수준에 따라 변동하므로 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+          '"이상적인 대상" 열은 특정 강좌가 아닌 학습 목표를 반영합니다. 가격은 2026년 7월 기준 정성적 스냅샷입니다 — 강좌 플랫폼 가격은 프로모션과 구독 수준에 따라 변동하므로 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4015,31 +4015,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AI 강좌를 공구함의 도구처럼 생각하십시오. 무료 강좌는 그 작업을 좋아하는지 알아보기 위해 집어드는 도구입니다. 구조화된 유료 강좌는 실제로 기술을 쌓는 도구입니다. 자격증은 다른 사람에게 그 기술을 증명하는 데 사용하는 도구입니다. 잘못된 작업에 잘못된 도구를 선택하면 돈과 시간을 낭비합니다.',
           },
         ],
-        columns: ['범주', '이상적인 대상', '결과', '비용 (2026년 5월)'],
+        columns: ['범주', '이상적인 대상', '결과', '비용 (2026년 7월)'],
         rows: [
           {
             '범주': '무료 강좌',
             '이상적인 대상': '방향 잡기, AI가 자신에게 맞는지 결정',
             '결과': '기본 이해, 공식 자격 없음',
-            '비용 (2026년 5월)': '청강 무료; 현재 가격 확인 필요',
+            '비용 (2026년 7월)': '청강 무료; 현재 가격 확인 필요',
           },
           {
             '범주': '구조화된 유료 강좌',
             '이상적인 대상': '실용적이고 응용 가능한 기술 개발',
             '결과': '적용 가능한 기술, 종종 검증 가능한 수료증 포함',
-            '비용 (2026년 5월)': '구독 또는 일회성 요금; 현재 가격 확인 필요',
+            '비용 (2026년 7월)': '구독 또는 일회성 요금; 현재 가격 확인 필요',
           },
           {
             '범주': '자격증',
             '이상적인 대상': '직책이나 고용주가 요구하는 자격 취득',
             '결과': '이력서 및 프로필용 검증 가능한 수료증',
-            '비용 (2026년 5월)': '일회성 요금; 현재 가격 확인 필요',
+            '비용 (2026년 7월)': '일회성 요금; 현재 가격 확인 필요',
           },
           {
             '범주': 'Prompt engineering 강좌',
             '이상적인 대상': '기존 모델에서 좋은 결과 얻기',
             '결과': '실용적인 prompt 작성 기술',
-            '비용 (2026년 5월)': '무료에서 중간 가격; 현재 가격 확인 필요',
+            '비용 (2026년 7월)': '무료에서 중간 가격; 현재 가격 확인 필요',
           },
         ],
       },
@@ -4256,7 +4256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '이 가이드의 모든 가격 참조는 2026년 5월 기준 스냅샷입니다. 강좌 플랫폼 가격은 프로모션과 구독 수준에 따라 변동합니다 — 등록하기 전에 항상 플랫폼의 현재 페이지를 여십시오.',
+            text: '이 가이드의 모든 가격 참조는 2026년 7월 기준 스냅샷입니다. 강좌 플랫폼 가격은 프로모션과 구독 수준에 따라 변동합니다 — 등록하기 전에 항상 플랫폼의 현재 페이지를 여십시오.',
           },
         ],
         affiliateLinks: [
@@ -4367,7 +4367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-courses-certifications-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

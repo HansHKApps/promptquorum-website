@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Best SSD for Fast LLM Model Loading 2026 | Prompt Bites',
     metaDescription: 'Best SSD for fast LLM model loading: a PCIe Gen4 NVMe like the Samsung 990 Pro 2 TB. High sequential read pulls multi-GB models into RAM in seconds.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -32,53 +32,53 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What SSD gives the fastest local LLM model loading?',
-        answer: 'Samsung 990 Pro 2TB at 7,450 MB/s loads a 7B Q4 model in under 2 seconds. Best price-to-speed ratio for AI model storage.',
+        answer: 'Samsung 990 Pro 2TB at 7,450 MB/s loads a 7B Q4 model in under 2 seconds. For those with a PCIe 5.0 motherboard slot, the Samsung 9100 Pro (~$350) now matches the 990 Pro on price while doubling the read speed.',
         bullets: [
           'A 7B Q4_K_M model (~4.1 GB) loads in ~0.8s on a 990 Pro vs ~3.5s on a SATA SSD.',
-          'Any NVMe Gen4 drive works — WD Black SN850X and Seagate FireCuda 530 are close alternatives.',
+          'Any NVMe Gen4 drive works — WD Black SN850X ($349) is a strong alternative at similar speed.',
           'Put your Ollama model cache (~/ollama/models) on the NVMe, not the OS drive, for fastest loads.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
       de: {
         question: 'Welche SSD ermöglicht das schnellste lokale LLM-Modell-Laden?',
-        answer: 'Samsung 990 Pro 2 TB mit 7.450 MB/s lädt ein 7B Q4-Modell in unter 2 Sekunden. Bestes Preis-Leistungs-Verhältnis für KI-Modellspeicher.',
+        answer: 'Samsung 990 Pro 2 TB mit 7.450 MB/s lädt ein 7B Q4-Modell in unter 2 Sekunden. Wer einen PCIe-5.0-Slot hat: Das Samsung 9100 Pro (~350 USD) kostet derzeit ähnlich viel, bietet aber doppelte Lesegeschwindigkeit.',
         bullets: [
           'Ein 7B Q4_K_M-Modell (~4,1 GB) lädt in ~0,8 s auf einer 990 Pro vs. ~3,5 s auf einer SATA-SSD.',
-          'Jedes NVMe Gen4-Laufwerk funktioniert — WD Black SN850X und Seagate FireCuda 530 sind nahe Alternativen.',
+          'Jedes NVMe Gen4-Laufwerk funktioniert — WD Black SN850X (~349 USD) ist eine nahe Alternative.',
           'Den Ollama-Modell-Cache (~/ollama/models) auf die NVMe legen, nicht auf das OS-Laufwerk.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
       fr: {
         question: 'Quel SSD offre le chargement de modèle LLM local le plus rapide ?',
-        answer: 'Samsung 990 Pro 2 To à 7 450 Mo/s charge un modèle 7B Q4 en moins de 2 secondes. Meilleur rapport qualité-prix pour le stockage de modèles IA.',
+        answer: 'Samsung 990 Pro 2 To à 7 450 Mo/s charge un modèle 7B Q4 en moins de 2 secondes. Pour les utilisateurs avec un slot PCIe 5.0, le Samsung 9100 Pro (~350 USD) est désormais au même prix et offre le double de vitesse de lecture.',
         bullets: [
           'Un modèle 7B Q4_K_M (~4,1 Go) se charge en ~0,8s sur un 990 Pro vs ~3,5s sur un SSD SATA.',
-          'N\'importe quel NVMe Gen4 convient — WD Black SN850X et Seagate FireCuda 530 sont des alternatives proches.',
+          'N\'importe quel NVMe Gen4 convient — WD Black SN850X (~349 USD) est une alternative proche.',
           'Placez le cache de modèles Ollama (~/ollama/models) sur le NVMe, pas sur le disque système.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
       ja: {
         question: 'ローカルLLMモデルの最速読み込みに最適なSSDは？',
-        answer: 'Samsung 990 Pro 2TBが7,450 MB/sで7B Q4モデルを2秒以内にロード。AIモデルストレージで最高のコスパ。',
+        answer: 'Samsung 990 Pro 2TBが7,450 MB/sで7B Q4モデルを2秒以内にロード。PCIe 5.0スロットがある場合、Samsung 9100 Pro（約350ドル）は現在990 Proとほぼ同価格で読み取り速度が2倍です。',
         bullets: [
           '7B Q4_K_Mモデル（~4.1 GB）は990 Proで~0.8秒、SATA SSDで~3.5秒でロード。',
-          'NVMe Gen4ドライブならどれでも可 — WD Black SN850XとSeagate FireCuda 530が近い代替品。',
+          'NVMe Gen4ドライブならどれでも可 — WD Black SN850X（約349ドル）が近い代替品。',
           'Ollamaモデルキャッシュ（~/ollama/models）はOSドライブではなくNVMeに置く。',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
       zh: {
         question: '哪款SSD能实现最快的本地LLM模型加载？',
-        answer: 'Samsung 990 Pro 2TB读速7,450 MB/s，可在2秒内加载7B Q4模型。AI模型存储性价比最佳。',
+        answer: 'Samsung 990 Pro 2TB读速7,450 MB/s，可在2秒内加载7B Q4模型。如有PCIe 5.0插槽，Samsung 9100 Pro（约350美元）目前与990 Pro价格相当，读速却翻倍。',
         bullets: [
           '7B Q4_K_M模型（~4.1 GB）在990 Pro上约0.8秒加载，SATA SSD需~3.5秒。',
-          '任意NVMe Gen4均可 — WD Black SN850X和Seagate FireCuda 530是近似替代品。',
+          '任意NVMe Gen4均可 — WD Black SN850X（约349美元）是近似替代品。',
           '将Ollama模型缓存（~/ollama/models）放在NVMe上而非系统盘，加载最快。',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Best Pick: Samsung 990 Pro 2 TB (PCIe Gen4 NVMe)',
         content: [
           '<strong>The Samsung 990 Pro 2 TB is the best SSD for fast LLM model loading because its ~7,000 MB/s sequential read pulls a 14B Q4 model (~9 GB) into RAM in under 5 seconds.</strong> A SATA SSD doing ~550 MB/s takes more than 15 seconds for the same model. On a slow HDD, the wait is over a minute.',
-          'PCIe Gen4 NVMe is the sweet spot. The Samsung 990 Pro, WD Black SN850X, and Crucial T500 all sit near 7,000 MB/s sequential read at similar prices. Gen5 drives push higher peak numbers but the gain for model loading is small — and Gen5 needs a compatible motherboard.',
+          'PCIe Gen4 NVMe is the default sweet spot. The Samsung 990 Pro (~$390) and WD Black SN850X (~$349) both hit ~7,000 MB/s sequential read. If your motherboard has a PCIe 5.0 M.2 slot (Intel 700-series, AMD X670E/B650E, or newer), the Samsung 9100 Pro (~$350, 14,700 MB/s) is now a better buy — it costs the same or less and cuts load times by roughly 35% on large models.',
           'Buy 2 TB or larger. Once you collect a handful of quantized models (7B, 8B, 13B, 14B at multiple quantizations), 1 TB fills quickly. 2 TB leaves room for the OS, frameworks, and a dozen models without rotating downloads. For current pricing, check retailer listings — NVMe pricing moves week to week.',
         ],
         affiliateLinks: [
@@ -130,10 +130,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         columns: ['Drive type', 'Sequential read', 'Time to load 9 GB model', 'Verdict'],
         rows: [
           {
+            'Drive type': 'PCIe Gen5 NVMe (e.g. Samsung 9100 Pro)',
+            'Sequential read': '~14,700 MB/s',
+            'Time to load 9 GB model': '~0.8 sec (theoretical), ~1.5-2 sec (real)',
+            'Verdict': 'Best pick if board supports Gen5 (~$350)',
+          },
+          {
             'Drive type': 'PCIe Gen4 NVMe (e.g. Samsung 990 Pro)',
             'Sequential read': '~7,000 MB/s',
             'Time to load 9 GB model': '~1.5 sec (theoretical), ~3-5 sec (real)',
-            'Verdict': 'Best pick',
+            'Verdict': 'Best pick for Gen4 boards (~$390)',
           },
           {
             'Drive type': 'PCIe Gen3 NVMe',
@@ -165,7 +171,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is PCIe Gen5 worth it over Gen4 for LLMs?',
-            a: 'For model loading, the gain is small. Gen5 drives peak above 12,000 MB/s, but the time to load a 9 GB model drops from ~1.5 sec to under 1 sec — most users will not notice. Gen5 also costs more and needs a Gen5 motherboard slot.',
+            a: 'It depends on your motherboard and budget. As of July 2026, the Samsung 9100 Pro (PCIe 5.0, 14,700 MB/s) is available for ~$350 — matching or undercutting the Samsung 990 Pro (PCIe 4.0) at ~$390. If you have a PCIe 5.0 M.2 slot (Intel 700-series, AMD X670E/B650E, or newer), the 9100 Pro is now the better buy. For older boards, the 990 Pro or WD Black SN850X (~$349) remain the right picks.',
           },
           {
             q: 'How much SSD storage do I need for local LLMs?',
@@ -194,7 +200,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste SSD für schnelles LLM-Modell-Laden 2026 | Prompt Bites',
     metaDescription: 'Schnelleres Laden lokaler LLMs mit der richtigen SSD: NVMe Gen4 lädt 70B in Sekunden. Lesegeschwindigkeit, Kapazität und Preis-Leistung im Vergleich.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -225,7 +231,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Jedes NVMe Gen4-Laufwerk funktioniert — WD Black SN850X und Seagate FireCuda 530 sind nahe Alternativen.',
           'Den Ollama-Modell-Cache (~/ollama/models) auf die NVMe legen, nicht auf das OS-Laufwerk.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -312,7 +318,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Lohnt PCIe Gen5 gegenüber Gen4 für LLMs?',
-            a: 'Fürs Modell-Laden ist der Gewinn klein. Gen5-Laufwerke erreichen über 12.000 MB/s, doch die Ladezeit eines 9-GB-Modells sinkt von ~1,5 Sek. auf unter 1 Sek. — kaum bemerkbar. Gen5 ist teurer und braucht einen Gen5-Mainboard-Slot.',
+            a: 'Das hängt vom Mainboard und Budget ab. Stand Juli 2026 ist das Samsung 9100 Pro (PCIe 5.0, 14.700 MB/s) für ~350 USD erhältlich — ähnlich viel wie die Samsung 990 Pro (~390 USD). Mit einem PCIe-5.0-M.2-Slot (Intel 700er-Reihe, AMD X670E/B650E oder neuer) ist das 9100 Pro derzeit die bessere Wahl. Für ältere Mainboards bleibt die 990 Pro oder WD Black SN850X (~349 USD) die richtige Option.',
           },
           {
             q: 'Wie viel SSD-Speicher brauche ich für lokale LLMs?',
@@ -341,7 +347,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur SSD pour charger les LLM 2026 | Prompt Bites',
     metaDescription: 'Meilleur SSD pour charger les modèles LLM : un NVMe PCIe Gen4 comme le Samsung 990 Pro 2 TB. Lecture séquentielle élevée, modèles multi-GB en RAM en secondes.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -372,7 +378,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'N\'importe quel NVMe Gen4 convient — WD Black SN850X et Seagate FireCuda 530 sont des alternatives proches.',
           'Placez le cache de modèles Ollama (~/ollama/models) sur le NVMe, pas sur le disque système.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -459,7 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'PCIe Gen5 vaut-il le coup par rapport à Gen4 pour les LLM ?',
-            a: 'Pour le chargement, le gain est faible. Les Gen5 dépassent 12 000 Mo/s, mais le temps de chargement d\'un 9 Go passe de ~1,5 s à moins de 1 s — la plupart ne remarqueront pas. Gen5 coûte plus cher et exige un slot Gen5.',
+            a: 'Cela dépend de la carte mère et du budget. En juillet 2026, le Samsung 9100 Pro (PCIe 5.0, 14 700 Mo/s) est disponible à ~350 USD — au même prix ou moins cher que le Samsung 990 Pro (~390 USD). Si votre carte mère dispose d\'un slot PCIe 5.0 M.2 (Intel série 700, AMD X670E/B650E ou plus récent), le 9100 Pro est désormais le meilleur choix. Pour les cartes mères plus anciennes, le 990 Pro ou WD Black SN850X (~349 USD) restent les bons choix.',
           },
           {
             q: 'Quelle capacité de SSD pour les LLM locaux ?',
@@ -488,7 +494,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '高速LLMモデル読み込み向けSSD 2026 | Prompt Bites',
     metaDescription: '高速LLMモデル読み込み向けSSDはSamsung 990 Pro 2 TBのようなPCIe Gen4 NVMe。高いシーケンシャルリードで数GBのモデルを数秒でRAMへ。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -519,7 +525,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'NVMe Gen4ドライブならどれでも可 — WD Black SN850XとSeagate FireCuda 530が近い代替品。',
           'Ollamaモデルキャッシュ（~/ollama/models）はOSドライブではなくNVMeに置く。',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -606,7 +612,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'LLMにはPCIe Gen5がGen4より価値ありますか？',
-            a: 'モデル読み込みでの差は小さいです。Gen5は12,000 MB/秒超に達しますが、9 GBモデルのロード時間は約1.5秒から1秒未満に短縮 — ほとんどのユーザーが体感できません。Gen5は高価でGen5対応マザーボードも必要です。',
+            a: 'マザーボードと予算によります。2026年7月時点で、Samsung 9100 Pro（PCIe 5.0、14,700 MB/秒）は約350ドルで入手可能 — Samsung 990 Pro（約390ドル）と同等かそれ以下の価格です。PCIe 5.0 M.2スロット（Intel 700シリーズ、AMD X670E/B650E以降）があれば、9100 Proが今は最良の選択です。旧マザーボードの場合は990 ProまたはWD Black SN850X（約349ドル）が適切です。',
           },
           {
             q: 'ローカルLLM用に必要なSSD容量は？',
@@ -635,7 +641,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '快速LLM模型加载SSD 2026 | Prompt Bites',
     metaDescription: '快速LLM模型加载首选PCIe Gen4 NVMe,如Samsung 990 Pro 2 TB。高顺序读取秒级把多GB模型拉入RAM。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -666,7 +672,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '任意NVMe Gen4均可 — WD Black SN850X和Seagate FireCuda 530是近似替代品。',
           '将Ollama模型缓存（~/ollama/models）放在NVMe上而非系统盘，加载最快。',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -756,7 +762,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'LLM场景PCIe Gen5比Gen4值吗？',
-            a: '模型加载收益小。Gen5峰值超12,000 MB/秒,但9 GB模型加载从~1.5秒缩到不到1秒,多数人感觉不到。Gen5更贵且需Gen5主板插槽。',
+            a: '取决于主板和预算。2026年7月,Samsung 9100 Pro（PCIe 5.0,14,700 MB/秒）约350美元——与Samsung 990 Pro（约390美元）价格相当甚至更低。如有PCIe 5.0 M.2插槽（Intel 700系列、AMD X670E/B650E或更新平台）,9100 Pro现在是更好的选择。旧主板用户仍推荐990 Pro或WD Black SN850X（约349美元）。',
           },
           {
             q: '本地LLM需要多大SSD？',
@@ -785,7 +791,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor SSD para carregamento rápido de modelos LLM 2026',
     metaDescription: 'Melhor SSD para carregamento rápido de modelos LLM: um NVMe PCIe Gen4 como o Samsung 990 Pro 2 TB. Leitura sequencial alta carrega modelos de vários GB na RAM em segundos.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -816,7 +822,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Qualquer NVMe Gen4 funciona — WD Black SN850X e Seagate FireCuda 530 são alternativas próximas.',
           'Coloque o cache de modelos do Ollama (~/ollama/models) no NVMe, não na unidade do sistema operacional.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -903,7 +909,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Vale a pena o PCIe Gen5 em relação ao Gen4 para LLMs?',
-            a: 'Para o carregamento de modelos, o ganho é pequeno. Unidades Gen5 atingem acima de 12.000 MB/s, mas o tempo de carregamento de um modelo de 9 GB cai de ~1,5 s para menos de 1 s — a maioria dos usuários não vai notar. Gen5 também custa mais e precisa de um slot Gen5 na placa-mãe.',
+            a: 'Depende da placa-mãe e do orçamento. Em julho de 2026, o Samsung 9100 Pro (PCIe 5.0, 14.700 MB/s) está disponível por ~$350 — o mesmo preço ou menos que o Samsung 990 Pro (~$390). Se a sua placa-mãe tem um slot PCIe 5.0 M.2 (Intel série 700, AMD X670E/B650E ou mais recente), o 9100 Pro é a melhor compra agora. Para placas-mãe mais antigas, o 990 Pro ou WD Black SN850X (~$349) continuam sendo as escolhas certas.',
           },
           {
             q: 'Quanta capacidade de SSD preciso para LLMs locais?',
@@ -932,7 +938,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor SSD para carga rápida de modelos LLM 2026',
     metaDescription: 'Mejor SSD para cargar modelos LLM rápido: un NVMe PCIe Gen4 como el Samsung 990 Pro 2 TB. Su lectura secuencial carga varios GB en RAM en segundos.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -963,7 +969,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Cualquier NVMe Gen4 funciona — WD Black SN850X y Seagate FireCuda 530 son alternativas cercanas.',
           'Coloca la caché de modelos de Ollama (~/ollama/models) en el NVMe, no en la unidad del sistema operativo.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1050,7 +1056,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Vale la pena PCIe Gen5 frente a Gen4 para LLMs?',
-            a: 'Para la carga de modelos, la ganancia es pequeña. Las unidades Gen5 superan los 12.000 MB/s, pero el tiempo de carga de un modelo de 9 GB baja de ~1,5 s a menos de 1 s — la mayoría de usuarios no lo notará. Gen5 también cuesta más y necesita un slot Gen5 en la placa base.',
+            a: 'Depende de la placa base y el presupuesto. En julio de 2026, el Samsung 9100 Pro (PCIe 5.0, 14.000 MB/s) está disponible por ~$350 — igual o más barato que el Samsung 990 Pro (~$390). Si tu placa base tiene un slot PCIe 5.0 M.2 (Intel serie 700, AMD X670E/B650E o más nueva), el 9100 Pro es la mejor opción ahora. Para placas más antiguas, el 990 Pro o WD Black SN850X (~$349) siguen siendo las elecciones correctas.',
           },
           {
             q: '¿Cuánto almacenamiento SSD necesito para LLMs locales?',
@@ -1079,7 +1085,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل ⁨SSD⁩ لتحميل نماذج ⁨LLM⁩ بسرعة ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Samsung 990 Pro 2 TB⁩ بسرعة ⁨7⁩,⁨000 MB/s⁩ يحمّل نموذج ⁨14B⁩ في أقل من ⁨5⁩ ثوانٍ. ⁨PCIe Gen4 NVMe⁩ أسرع ⁨7⁩ أضعاف من ⁨SSD SATA⁩ لتحميل نماذج ⁨LLM⁩.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -1110,7 +1116,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'أي محرك NVMe Gen4 يعمل — WD Black SN850X وSeagate FireCuda 530 بدائل قريبة.',
           'ضع ذاكرة تخزين Ollama (~/ollama/models) على NVMe وليس على محرك نظام التشغيل للتحميل الأسرع.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -1197,7 +1203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يستحق PCIe Gen5 على Gen4 لنماذج LLM؟',
-            a: 'بالنسبة لتحميل النماذج، المكسب صغير. محركات Gen5 تتجاوز 12,000 MB/s لكن وقت تحميل نموذج 9 GB ينخفض من ~1.5 ثانية إلى أقل من ثانية — معظم المستخدمين لن يلاحظوا ذلك. Gen5 أيضًا أغلى ويحتاج فتحة Gen5 في اللوحة الأم.',
+            a: 'يعتمد ذلك على اللوحة الأم والميزانية. اعتبارًا من يوليو 2026، أصبح Samsung 9100 Pro (PCIe 5.0، 14,700 MB/s) متاحًا بسعر ~350 دولارًا — مساوٍ أو أقل من Samsung 990 Pro (~390 دولارًا). إذا كانت لوحتك الأم تحتوي على فتحة PCIe 5.0 M.2 (Intel سلسلة 700، AMD X670E/B650E أو أحدث)، فإن 9100 Pro هو الخيار الأفضل الآن. للوحات الأم الأقدم، تظل 990 Pro أو WD Black SN850X (~349 دولارًا) الخيارات الصحيحة.',
           },
           {
             q: 'كم مساحة SSD أحتاج لنماذج LLM المحلية؟',
@@ -1226,7 +1232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026년 LLM 모델 빠른 로딩을 위한 최고의 SSD',
     metaDescription: 'LLM 모델을 빠르게 로딩하려면 Samsung 990 Pro 2 TB 같은 NVMe PCIe Gen4가 최선입니다. 순차 읽기 속도 약 7,000 MB/s로 수 기가바이트 모델 파일을 몇 초 만에 RAM에 올립니다.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -1257,7 +1263,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '어떤 NVMe Gen4든 사용 가능합니다. WD Black SN850X와 Seagate FireCuda 530이 유사한 대안입니다.',
           '빠른 로딩을 위해 Ollama 모델 캐시(~/ollama/models)를 OS 드라이브가 아닌 NVMe에 저장하십시오.',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     schema: {
@@ -1360,7 +1366,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'LLM에서 PCIe Gen5가 Gen4보다 더 낫습니까?',
-            a: '모델 로딩 측면에서는 차이가 작습니다. Gen5 드라이브는 12,000 MB/s를 초과하지만 9 GB 모델 로딩 시간은 약 1.5초에서 1초 미만으로 줄어드는 정도로, 대부분의 사용자가 체감하기 어렵습니다. Gen5는 가격도 높고 메인보드에 Gen5 슬롯이 필요합니다.',
+            a: '메인보드와 예산에 따라 다릅니다. 2026년 7월 기준으로 Samsung 9100 Pro(PCIe 5.0, 14,700 MB/s)는 약 $350에 구매 가능합니다 — Samsung 990 Pro(약 $390)와 같거나 더 저렴합니다. PCIe 5.0 M.2 슬롯이 있는 메인보드(Intel 700시리즈, AMD X670E/B650E 이상)를 사용 중이라면 지금은 9100 Pro가 더 나은 선택입니다. 구형 보드에서는 990 Pro 또는 WD Black SN850X(약 $349)가 여전히 적합합니다.',
           },
           {
             q: '로컬 LLM을 위해 SSD 용량이 얼마나 필요합니까?',
