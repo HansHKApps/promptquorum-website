@@ -12,6 +12,15 @@
  * - semi_annual: must have year in title/seoTitle, next_refresh_due
  * - annual: must have year in slug/URL, specific_year
  * - monthly: tightest tier, no structural requirements — just set the value
+ *
+ * 2026-07-02: rewritten to walk individual article files (the split-file/barrel
+ * architecture every cluster actually uses) instead of 2 hardcoded monolithic
+ * content.ts paths. The old version silently found 0 articles in local-llms and
+ * prompt-engineering (both migrated away from a single content.ts long ago) and
+ * never covered power-local-llm, smart-home, prompt-bites, or balcony-solar at
+ * all — it was reporting a false pass, not validating anything meaningful. See
+ * docs/BALCONY_SOLAR_Q1_2027_REFRESH_TODO.md / STEP 3.5 spot-check (2026-07-02)
+ * for how this was discovered.
  */
 
 import fs from 'fs';
@@ -19,10 +28,26 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, '..');
 
 const STRICT_FROM_DATE = '2026-04-21'; // Pages on/after this date require freshness_tier
 const ERRORS = [];
 const WARNINGS = [];
+
+// Article source dirs to walk (individual-file-per-article clusters).
+const ARTICLE_DIRS = [
+  'src/lib/local-llms/articles',
+  'src/lib/prompt-engineering/articles',
+  'src/lib/power-local-llm/articles',
+  'src/lib/prompt-bites/articles',
+  'src/lib/smart-home/articles',
+  'src/lib/balcony-solar/articles',
+]
+
+// Single monolithic files that still use the old 'slug': { en: {...} } shape.
+const MONOLITHIC_FILES = [
+  'src/lib/blog/blogContent.ts',
+]
 
 // Forbidden patterns for evergreen pages
 const EVERGREEN_FORBIDDEN = [
@@ -48,105 +73,146 @@ function readFileContent(filePath) {
   }
 }
 
-function extractArticles(filePath, isLLM = false) {
-  const content = readFileContent(filePath);
-  const articles = [];
+function walk(dir, out = []) {
+  const abs = path.join(ROOT, dir)
+  if (!fs.existsSync(abs)) return out
+  for (const entry of fs.readdirSync(abs, { withFileTypes: true })) {
+    const full = path.join(abs, entry.name)
+    if (entry.isDirectory()) walk(path.relative(ROOT, full), out)
+    else if (entry.isFile() && full.endsWith('.ts')) out.push(path.relative(ROOT, full))
+  }
+  return out
+}
 
-  // Match: 'slug-name': { ... }
-  // We'll extract from the EN block specifically
-  const articlePattern = /'([^']+)':\s*\{[^}]*?(?:en:\s*\{([\s\S]*?)(?=,\s*(?:de|fr|ja|zh):|},\s*\}|$))?/g;
+// Extract the { ... } block starting at the first '{' at or after fromIndex,
+// using brace-depth counting (handles nested objects reliably, unlike a
+// line-window heuristic).
+function extractBracedBlock(content, fromIndex) {
+  const start = content.indexOf('{', fromIndex)
+  if (start === -1) return null
+  let depth = 0
+  for (let i = start; i < content.length; i++) {
+    if (content[i] === '{') depth++
+    else if (content[i] === '}') {
+      depth--
+      if (depth === 0) return content.slice(start, i + 1)
+    }
+  }
+  return content.slice(start) // unterminated — return what we have
+}
 
-  let match;
-  let currentPos = 0;
+function fieldFrom(block, fieldName) {
+  const m = block.match(new RegExp(`${fieldName}:\\s*['"]([^'"]+)['"]`))
+  return m ? m[1] : ''
+}
 
-  // Simpler approach: find each 'slug': { structure and extract en block
-  const lines = content.split('\n');
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    // Match only top-level article entries (2 spaces indent only, not nested)
-    const slugMatch = line.match(/^  '([^']+)':\s*\{/);
+// Metadata fields that inherently/legitimately contain a year (dates, refresh
+// schedules) — these are not reader-facing prose and must not be scanned for
+// the evergreen "year reference" forbidden pattern, or every article (evergreen
+// or not) would fail on its own required publishDate/dateModified fields.
+const METADATA_DATE_FIELDS = [
+  'publishDate', 'dateModified', 'next_refresh_due', 'last_full_refresh',
+  'lastFactChecked', 'next_seo_review_due', 'last_seo_review', 'updatedDate',
+  'specific_year', 'datePublished', 'archive_after',
+]
 
-    if (slugMatch) {
-      const slug = slugMatch[1];
-      let enBlockStart = i + 1;
-      let foundEn = false;
-      let publishDate = '';
-      let freshnessTier = '';
-      let title = '';
-      let seoTitle = '';
-      let enContent = '';
+// Build a prose-only view of an en: {} block for the evergreen forbidden-
+// pattern scan: strips known metadata-date field lines, the entire schema/
+// supplementalSchema/howToSchema/faqSchema/itemListSchema sub-objects
+// (structured data mirroring the article's own dates/facts, not reader-facing
+// prose), and internal link url/href paths (which can legitimately contain
+// another article's year-bearing slug, e.g. linking to a "-2026" page, without
+// that being a freshness claim in this article's own prose).
+function stripToProseOnly(block) {
+  let prose = block
 
-      // Find the en: { block and extract fields
-      for (let j = i + 1; j < Math.min(i + 500, lines.length); j++) {
-        const curr = lines[j];
-
-        if (!foundEn && curr.includes('en: {')) {
-          foundEn = true;
-          enBlockStart = j;
-          continue;
-        }
-
-        if (foundEn) {
-          // Extract specific fields from en block
-          if (!publishDate && curr.includes('publishDate:')) {
-            // Try ISO format (2026-04-20) first
-            let match = curr.match(/(\d{4}-\d{2}-\d{2})/);
-            if (match) {
-              publishDate = match[1];
-            } else {
-              // Try "Published Month D, YYYY" format
-              match = curr.match(/(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d+),\s+(\d{4})/i);
-              if (match) {
-                const months = { January: '01', February: '02', March: '03', April: '04', May: '05', June: '06',
-                               July: '07', August: '08', September: '09', October: '10', November: '11', December: '12' };
-                const month = months[match[1].charAt(0).toUpperCase() + match[1].slice(1).toLowerCase()];
-                const day = match[2].padStart(2, '0');
-                const year = match[3];
-                publishDate = `${year}-${month}-${day}`;
-              }
-            }
-          }
-
-          if (!freshnessTier && curr.includes('freshness_tier:')) {
-            const match = curr.match(/freshness_tier:\s*['"]([^'"]+)['"]/);
-            if (match) freshnessTier = match[1];
-          }
-
-          if (!title && curr.includes('title:')) {
-            const match = curr.match(/title:\s*['"]([^'"]+)['"]/);
-            if (match) title = match[1];
-          }
-
-          if (!seoTitle && curr.includes('seoTitle:')) {
-            const match = curr.match(/seoTitle:\s*['"]([^'"]+)['"]/);
-            if (match) seoTitle = match[1];
-          }
-
-          // Stop collecting when we hit the next language block or end of article
-          if ((curr.includes('de: {') || curr.includes('fr: {') || curr.includes('ja: {') || curr.includes('zh: {') || curr.includes('},\n') || curr.includes('  },')) && j > enBlockStart + 5) {
-            // Build en block content from extracted lines
-            for (let k = enBlockStart; k < j; k++) {
-              enContent += lines[k] + '\n';
-            }
-            break;
-          }
-        }
-      }
-
-      if (publishDate && title) {
-        articles.push({
-          slug,
-          publishDate,
-          freshnessTier,
-          title,
-          seoTitle: seoTitle || title,
-          enContent: enContent,
-          type: filePath.includes('local-llms') ? 'llm' : filePath.includes('prompt-engineering') ? 'pe' : 'blog',
-        });
-      }
+  // Strip schema-shaped sub-objects entirely (brace-matched, not line-based,
+  // since they're multi-line and nested).
+  for (const key of ['schema', 'supplementalSchema', 'howToSchema', 'faqSchema', 'itemListSchema', 'softwareApplicationSchema', 'tableSchema', 'datasetSchema', 'breadcrumbSchema']) {
+    const re = new RegExp(`${key}:\\s*\\{`)
+    let m
+    while ((m = re.exec(prose))) {
+      const sub = extractBracedBlock(prose, m.index)
+      if (!sub) break
+      prose = prose.slice(0, m.index) + prose.slice(m.index + `${key}: `.length + sub.length)
     }
   }
 
+  // Strip metadata date-field lines.
+  for (const field of METADATA_DATE_FIELDS) {
+    prose = prose.replace(new RegExp(`${field}:\\s*['"][^'"]*['"],?`, 'g'), '')
+  }
+
+  // Strip internal link paths (url: '/...' and href: '/...') — a link target
+  // slug isn't a freshness claim in THIS article's own prose.
+  prose = prose.replace(/(?:url|href):\s*'\/[^']*'/g, '')
+
+  // Strip inline markdown link targets, e.g. [text](/balcony-solar/foo-2026) —
+  // same reasoning: the linked article's slug isn't a claim made by this one.
+  prose = prose.replace(/\]\(\/[^)]*\)/g, '](/)')
+
+  return prose
+}
+
+// Individual-file articles: `export const article: ... = { en: { ... }, de: {...} }`
+// Slug is derived from the filename (matches the `// Slug: xxx` header comment
+// convention used across every cluster).
+function extractFromArticleFile(filePath) {
+  const content = readFileContent(filePath)
+  if (!content) return null
+  const slug = path.basename(filePath, '.ts')
+
+  const enIdx = content.search(/\ben:\s*\{/)
+  if (enIdx === -1) return null
+  const enBlock = extractBracedBlock(content, enIdx)
+  if (!enBlock) return null
+
+  const publishDate = (enBlock.match(/publishDate:\s*['"](\d{4}-\d{2}-\d{2})['"]/) || [])[1] || ''
+  const freshnessTier = fieldFrom(enBlock, 'freshness_tier')
+  const title = fieldFrom(enBlock, 'title')
+  const seoTitle = fieldFrom(enBlock, 'seoTitle') || title
+
+  if (!publishDate || !title) return null
+
+  const type = filePath.includes('local-llms') ? 'llm'
+    : filePath.includes('prompt-engineering') ? 'pe'
+    : filePath.includes('power-local-llm') ? 'power-local-llm'
+    : filePath.includes('smart-home') ? 'smart-home'
+    : filePath.includes('prompt-bites') ? 'prompt-bites'
+    : filePath.includes('balcony-solar') ? 'balcony-solar'
+    : 'unknown'
+
+  return { slug, publishDate, freshnessTier, title, seoTitle, enContent: stripToProseOnly(enBlock), type }
+}
+
+// Monolithic-file articles (blog): 'slug': { ... en: { ... } } at 2-space indent.
+function extractFromMonolithicFile(filePath) {
+  const content = readFileContent(filePath);
+  const articles = [];
+  const lines = content.split('\n');
+
+  for (let i = 0; i < lines.length; i++) {
+    const slugMatch = lines[i].match(/^  '([^']+)':\s*\{/);
+    if (!slugMatch) continue
+    const slug = slugMatch[1];
+
+    const enIdxLocal = content.indexOf('en: {', content.indexOf(lines[i]))
+    // Re-locate using absolute offset from this line onward to avoid drift.
+    const fromOffset = lines.slice(0, i + 1).join('\n').length
+    const enIdx = content.indexOf('en: {', fromOffset)
+    if (enIdx === -1 || enIdx - fromOffset > 2000) continue // guard: en: { should be close by
+    const enBlock = extractBracedBlock(content, enIdx)
+    if (!enBlock) continue
+
+    const publishDate = (enBlock.match(/publishDate:\s*['"](\d{4}-\d{2}-\d{2})['"]/) || [])[1] || ''
+    const freshnessTier = fieldFrom(enBlock, 'freshness_tier')
+    const title = fieldFrom(enBlock, 'title')
+    const seoTitle = fieldFrom(enBlock, 'seoTitle') || title
+
+    if (publishDate && title) {
+      articles.push({ slug, publishDate, freshnessTier, title, seoTitle, enContent: stripToProseOnly(enBlock), type: 'blog' })
+    }
+  }
   return articles;
 }
 
@@ -157,7 +223,7 @@ function validateArticle(article) {
   if (isNewPage && !article.freshnessTier) {
     ERRORS.push(
       `[${article.type.toUpperCase()}] ${article.slug}: Missing freshness_tier on new page (published ${article.publishDate} >= ${STRICT_FROM_DATE}). ` +
-      `Add: freshness_tier: 'evergreen' | 'semi_annual' | 'annual'`
+      `Add: freshness_tier: 'evergreen' | 'semi_annual' | 'annual' | 'monthly'`
     );
     return;
   }
@@ -182,28 +248,41 @@ function validateArticle(article) {
   }
 
   // ─── Check 3 & 4: No additional format requirements ───
-  // semi_annual and annual tiers just need to be set
+  // semi_annual and annual tiers just need to be set. (Deliberately not
+  // enforcing next_refresh_due/specific_year presence here — a 2026-07-02
+  // attempt at that surfaced 129 pre-existing site-wide gaps unrelated to
+  // any current task; that's a real backlog worth a dedicated pass, not
+  // something this bugfix should silently turn into a new blocking gate.)
   // The update cadence is tracked separately (next_refresh_due, etc.)
 }
 
 function main() {
   console.log('🔍 Validating freshness tiers...\n');
 
-  // Read articles from all 3 content files
-  const llmArticles = extractArticles(path.join(__dirname, '../src/lib/local-llms/content.ts'), true);
-  const peArticles = extractArticles(path.join(__dirname, '../src/lib/prompt-engineering/content.ts'));
-  const blogArticles = extractArticles(path.join(__dirname, '../src/lib/blog/blogContent.ts'));
+  const perCluster = {}
+  const allArticles = []
 
-  const allArticles = [...llmArticles, ...peArticles, ...blogArticles];
+  for (const dir of ARTICLE_DIRS) {
+    const files = walk(dir)
+    const clusterArticles = files.map(extractFromArticleFile).filter(Boolean)
+    const clusterName = dir.split('/')[2] // src/lib/<cluster>/articles
+    perCluster[clusterName] = clusterArticles.length
+    allArticles.push(...clusterArticles)
+  }
 
-  console.log(`Found ${allArticles.length} articles (LLM: ${llmArticles.length}, PE: ${peArticles.length}, Blog: ${blogArticles.length})\n`);
+  for (const file of MONOLITHIC_FILES) {
+    const articles = extractFromMonolithicFile(path.join(ROOT, file))
+    perCluster['blog'] = articles.length
+    allArticles.push(...articles)
+  }
 
-  // Validate each article
+  const summary = Object.entries(perCluster).map(([k, v]) => `${k}: ${v}`).join(', ')
+  console.log(`Found ${allArticles.length} articles (${summary})\n`);
+
   for (const article of allArticles) {
     validateArticle(article);
   }
 
-  // Report
   console.log(`\n📊 VALIDATION RESULTS\n`);
   console.log(`✅ Articles checked: ${allArticles.length}`);
   console.log(`❌ Errors: ${ERRORS.length}`);
