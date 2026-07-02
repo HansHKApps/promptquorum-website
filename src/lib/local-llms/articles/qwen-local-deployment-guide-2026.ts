@@ -1984,7 +1984,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**ハードウェア判断基準**：VRAM 12GB → 14Bモデル；24GB → 32B；48GB+（デュアルGPUまたはApple Silicon 64GB）→ 72B。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3には3つのローカルデプロイ用サブファミリーがあります：汎用（7B〜72B）、コーディング（Coder 7B〜32B）、ビジョン（VL 7B〜72B）。すべてOllamaまたはLM Studioで実行可能。' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B（256Kコンテキスト、Q4_K_M約17GB）が新フラッグシップ。Qwenには4つのローカルデプロイ用サブファミリーがあります：汎用（7B〜72B）、コーディング（Coder 7B〜32B）、ビジョン（VL 7B〜72B）。すべてOllamaまたはLM Studioで実行可能。' },
           { type: 'plain-terms', text: 'モデルをローカルで動かすとは、AIがクラウドサーバーではなく自分のコンピュータ上で動作することを意味します。データが外部に出ず、ハードウェア購入後はトークンごとのコストもかかりません。' },
         ],
       },
@@ -2013,12 +2013,12 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'モデル': 'Qwen3 8B Q4_K_M', 'VRAM': '5.5GB', '最低GPU': 'RTX 3060 6GB、RTX 4060', 'Apple Silicon': 'M1/M2 8GB', '速度（RTX 3060）': '約57トークン/秒' },
-          { 'モデル': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5.5GB', '最低GPU': 'RTX 3060 6GB、RTX 4060', 'Apple Silicon': 'M1/M2 8GB', '速度（RTX 3060）': '約55トークン/秒' },
+          { 'モデル': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5.5GB', '最低GPU': 'RTX 3060 6GB、RTX 4060', 'Apple Silicon': 'M1/M2 8GB', '速度（RTX 3060）': '約55トークン/秒' },
           { 'モデル': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6.2GB', '最低GPU': 'RTX 3060 8GB、RTX 4060', 'Apple Silicon': 'M1/M2 16GB', '速度（RTX 4060）': '約38トークン/秒' },
-          { 'モデル': 'Qwen3 14B Q4_K_M', 'VRAM': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '約38トークン/秒' },
-          { 'モデル': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '約36トークン/秒' },
-          { 'モデル': 'Qwen3 32B Q4_K_M', 'VRAM': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '約28トークン/秒' },
-          { 'モデル': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '約27トークン/秒' },
+          { 'モデル': 'Qwen2.5 14B Q4_K_M', 'VRAM': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '約38トークン/秒' },
+          { 'モデル': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '約36トークン/秒' },
+          { 'モデル': 'Qwen2.5 32B Q4_K_M', 'VRAM': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '約28トークン/秒' },
+          { 'モデル': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '約27トークン/秒' },
           { 'モデル': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '約17GB', '最低GPU': 'RTX 4090 24GB', 'Apple Silicon': 'M3 Max 36GB', '速度（RTX 4090）': '約24トークン/秒' },
           { 'モデル': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46GB', '最低GPU': '2× RTX 3090（48GB）', 'Apple Silicon': 'M2 Ultra 64GB', '速度（2×RTX 4090）': '約12トークン/秒' },
         ],
@@ -2232,7 +2232,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: '通过一个界面调度Qwen3、DeepSeek和Llama →',
     ctaButton: '免费试用PromptQuorum',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**本地运行Qwen3 8B：安装Ollama并执行`ollama pull qwen2.5:7b`，仅需5.5GB显存，RTX 3060上可达57个token/秒。** 代码任务使用Qwen3-Coder；中日文档OCR使用Qwen2-VL。',
+    leadAnswerBlock: '**新旗舰是Qwen 3.6 27B——Apache 2.0授权的密集模型，256K上下文窗口，通过`ollama run qwen3.6:27b`在Q4_K_M量化下约17GB显存即可运行。** 更轻量的方案：安装Ollama并执行`ollama pull qwen2.5:7b`即可运行Qwen3 8B，仅需5.5GB显存，RTX 3060上可达57个token/秒。代码任务使用Qwen2.5-Coder；中日文档OCR使用Qwen2-VL。',
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
       { label: 'Qwen3模型家族概览', anchor: '#model-family' },
@@ -2248,12 +2248,12 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: '常见问题', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: '下方幻灯片涵盖：Qwen3模型家族全览（7B至72B）、各硬件层级显存要求、Qwen3-Coder 32B基准数据，以及Qwen vs DeepSeek vs Llama决策图表。可下载作为Qwen部署参考卡片。',
+    gammaDescription: '下方幻灯片涵盖：新旗舰Qwen 3.6 27B（256K上下文，Q4_K_M约17GB）、Qwen模型家族全览（Qwen3 0.6B至32B，Qwen2.5 7B至72B）、各硬件层级显存要求、Qwen3-Coder 32B基准数据，以及Qwen vs DeepSeek vs Llama决策图表。可下载作为Qwen部署参考卡片。',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Qwen本地部署指南2026：在各硬件层级运行Qwen3、Coder和VL',
-      description: 'Qwen3模型家族本地部署完整指南——显存要求、Ollama和LM Studio设置、量化方案、基准测试及硬件推荐。',
+      headline: 'Qwen本地部署指南2026：在各硬件层级运行Qwen 3.6 27B、Qwen3、Coder和VL',
+      description: 'Qwen模型家族本地部署完整指南——Qwen 3.6 27B、Qwen3、Qwen2.5、Coder和VL，显存要求、Ollama和LM Studio设置、量化方案、基准测试及硬件推荐。',
       datePublished: '2026-05-26',
       dateModified: '2026-07-02',
       inLanguage: 'zh',
@@ -2272,7 +2272,7 @@ curl http://localhost:11434/v1/chat/completions \\
         { '@type': 'Question', name: '本地运行最适合代码任务的Qwen模型是哪个？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 32B是最强的本地代码模型——HumanEval 92.7%，需要24GB GPU（RTX 3090或RTX 4090）。显存12GB或以下时，使用Qwen3-Coder 14B（HumanEval 85.2%，显存9.5GB）。' } },
         { '@type': 'Question', name: 'Qwen与DeepSeek本地部署对比如何？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3采用适合消费级硬件的Dense架构。DeepSeek-V2.5是236B MoE模型，Q4量化需约130GB内存，在没有服务器级GPU的情况下不可行。VRAM在48GB以下时，Qwen3是实际可行的选择。' } },
         { '@type': 'Question', name: '可以在Mac上运行Qwen吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。Apple Silicon使用统一内存——M2 Pro 32GB可流畅运行Qwen3 14B，约32 token/秒。M3 Max 64GB可处理Qwen3 32B，约22 token/秒。' } },
-        { '@type': 'Question', name: 'Qwen3的Ollama命令是什么？', acceptedAnswer: { '@type': 'Answer', text: '7B使用`ollama pull qwen2.5:7b`，14B使用`ollama pull qwen2.5:14b`，32B使用`ollama pull qwen2.5:32b`，代码版本使用`ollama pull qwen2.5-coder:32b`。始终使用明确的尺寸标签。' } },
+        { '@type': 'Question', name: 'Qwen的Ollama命令是什么？', acceptedAnswer: { '@type': 'Answer', text: '新旗舰使用`ollama run qwen3.6:27b`（约17GB显存）。Qwen3使用`ollama pull qwen3:8b`。Qwen2.5的7B使用`ollama pull qwen2.5:7b`，14B使用`ollama pull qwen2.5:14b`，32B使用`ollama pull qwen2.5:32b`，代码版本使用`ollama pull qwen2.5-coder:32b`。始终使用明确的尺寸标签。' } },
         { '@type': 'Question', name: 'Qwen适合中文任务吗？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3在大规模中文语料库上预训练，原生支持简体中文、繁体中文、日语、韩语、阿拉伯语等29种语言，在中文理解和生成任务上持续超越Llama 3.3和Mistral。' } },
         { '@type': 'Question', name: 'Qwen3应该使用哪种量化格式？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M是推荐的默认格式——相比FP16减少约55%显存，基准测试质量损失不足1%。显存充足时使用Q8_0获得接近FP16的质量。中文任务避免使用Q2_K，该格式会明显降低中文输出质量。' } },
         { '@type': 'Question', name: 'Qwen2-VL适合中文文档OCR吗？', acceptedAnswer: { '@type': 'Answer', text: '是的——Qwen2-VL 7B是CJK文档OCR领域最强的本地视觉模型。通过`ollama pull qwen2-vl:7b`在约6GB显存下运行，支持最高4096×4096像素分辨率读取中日韩文字。' } },
@@ -2285,33 +2285,35 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          '**Qwen 3.6 27B是新旗舰**：密集模型，Apache 2.0，256K上下文，Q4_K_M约17GB显存，`ollama run qwen3.6:27b`（2026年4月发布）。',
           '**Qwen3 8B仅需5.5GB显存**——执行`ollama pull qwen2.5:7b`即可启动，RTX 3060上达到57 token/秒。',
-          '**三个独立子系列**：Qwen3（通用）、Qwen3-Coder（代码，32B达HumanEval 92.7%）、Qwen2-VL（视觉，本地CJK OCR最强）。',
+          '**四个实用子系列**：Qwen3（通用，思考模式）、Qwen2.5（通用，验证最充分）、Qwen2.5-Coder（代码，32B达HumanEval 92.7%）、Qwen2-VL（视觉，本地CJK OCR最强）。',
           '**Dense架构=消费级友好**：与DeepSeek 236B MoE（需约130GB内存）不同，Qwen2.5-72B仅需46GB显存，两块RTX 3090即可运行。',
           '**原生多语言**：在中文、日语、韩语、阿拉伯语、德语、法语等29种语言上预训练，CJK任务持续超越Llama 3.3。',
           '**Q4_K_M是正确的量化选择**：对大多数用户而言减少约55%显存，质量损失不足1%。',
           '**硬件决策**：12GB显存→14B模型；24GB→32B；48GB+（双卡或Apple Silicon 64GB）→72B。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3覆盖三个本地部署子系列——通用（7B–72B）、代码（Coder 7B–32B）和视觉（VL 7B–72B），均可通过Ollama或LM Studio运行。' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B（256K上下文，Q4_K_M约17GB）是新旗舰。Qwen覆盖四个本地部署子系列——通用（7B–72B）、代码（Coder 7B–32B）和视觉（VL 7B–72B），均可通过Ollama或LM Studio运行。' },
           { type: 'plain-terms', text: '本地运行模型意味着AI在你自己的电脑上运行，而非云端服务器。数据不离开本机，购买硬件后也无需按token付费。' },
         ],
       },
       modelFamily: {
         id: 'model-family',
-        title: 'Qwen3模型家族概览',
+        title: 'Qwen模型家族概览',
         content: [
-          '**Qwen3家族覆盖三个独立任务：通用推理、代码和视觉**——每类均有从7B到72B的多种规格。所有模型均为阿里巴巴Qwen团队以Apache 2.0许可证发布的开放权重模型。',
-          '先选择子系列，再选择适合显存的规格。混合使用子系列很常见：代码补全用Qwen3-Coder 14B，文档摘要用Qwen3 8B。',
+          '**Qwen产品线现在涵盖五个实用选择：旗舰Qwen 3.6 27B、更新的Qwen3家族、通用推理的Qwen2.5、Qwen2.5-Coder，以及视觉领域的Qwen2-VL**——每类均有多种规格。所有模型均为阿里巴巴Qwen团队以Apache 2.0许可证发布的开放权重模型。',
+          '先选择子系列，再选择适合显存的规格。混合使用子系列很常见：代码补全用Qwen2.5-Coder 14B，文档摘要用Qwen3 8B或Qwen 3.6 27B。',
         ],
         rows: [
-          { '子系列': 'Qwen3', '可用规格': '7B, 14B, 32B, 72B', '主要用途': '通用推理、中文/多语言任务、RAG', 'Ollama标签前缀': 'qwen2.5:' },
-          { '子系列': 'Qwen3-Coder', '可用规格': '7B, 14B, 32B', '主要用途': '代码生成、调试、HumanEval、SWE-bench', 'Ollama标签前缀': 'qwen2.5-coder:' },
+          { '子系列': 'Qwen3', '可用规格': '0.6B, 1.7B, 4B, 8B, 14B, 32B', '主要用途': '通用推理、思考模式、多语言、智能体任务', 'Ollama标签前缀': 'qwen3:' },
+          { '子系列': 'Qwen2.5', '可用规格': '7B, 14B, 32B, 72B', '主要用途': '通用推理、中文/多语言任务、RAG', 'Ollama标签前缀': 'qwen2.5:' },
+          { '子系列': 'Qwen2.5-Coder', '可用规格': '7B, 14B, 32B', '主要用途': '代码生成、调试、HumanEval、SWE-bench', 'Ollama标签前缀': 'qwen2.5-coder:' },
           { '子系列': 'Qwen2-VL', '可用规格': '2B, 7B, 72B', '主要用途': '文档OCR、图像问答、CJK文字提取', 'Ollama标签前缀': 'qwen2-vl:' },
         ],
         columns: ['子系列', '可用规格', '主要用途', 'Ollama标签前缀'],
         tableFormat: true,
-        note: 'Qwen3（2026年Q1发布）增加了思维模式模型，但截至2026年5月，GGUF构建和Ollama覆盖率不如Qwen3广泛。本指南重点介绍硬件兼容性最广的Qwen3。',
+        note: 'Qwen 3.6 27B（2026年4月发布）是新旗舰——拥有256K上下文窗口的密集模型，通过`ollama run qwen3.6:27b`在Q4_K_M量化下约17GB显存即可运行。截至2026年中，Qwen2.5仍是验证最充分的家族，拥有最广泛的Ollama和GGUF支持。',
       },
       hardwareTiers: {
         id: 'hardware-tiers',
@@ -2321,12 +2323,13 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { '模型': 'Qwen3 8B Q4_K_M', '显存': '5.5GB', '最低GPU': 'RTX 3060 6GB、RTX 4060', 'Apple Silicon': 'M1/M2 8GB', '速度（RTX 3060）': '约57 token/秒' },
-          { '模型': 'Qwen3-Coder 7B Q4_K_M', '显存': '5.5GB', '最低GPU': 'RTX 3060 6GB、RTX 4060', 'Apple Silicon': 'M1/M2 8GB', '速度（RTX 3060）': '约55 token/秒' },
+          { '模型': 'Qwen2.5-Coder 7B Q4_K_M', '显存': '5.5GB', '最低GPU': 'RTX 3060 6GB、RTX 4060', 'Apple Silicon': 'M1/M2 8GB', '速度（RTX 3060）': '约55 token/秒' },
           { '模型': 'Qwen2-VL 7B Q4_K_M', '显存': '6.2GB', '最低GPU': 'RTX 3060 8GB、RTX 4060', 'Apple Silicon': 'M1/M2 16GB', '速度（RTX 4060）': '约38 token/秒' },
-          { '模型': 'Qwen3 14B Q4_K_M', '显存': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '约38 token/秒' },
-          { '模型': 'Qwen3-Coder 14B Q4_K_M', '显存': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '约36 token/秒' },
-          { '模型': 'Qwen3 32B Q4_K_M', '显存': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '约28 token/秒' },
-          { '模型': 'Qwen3-Coder 32B Q4_K_M', '显存': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '约27 token/秒' },
+          { '模型': 'Qwen2.5 14B Q4_K_M', '显存': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '约38 token/秒' },
+          { '模型': 'Qwen2.5-Coder 14B Q4_K_M', '显存': '9.5GB', '最低GPU': 'RTX 4070 12GB', 'Apple Silicon': 'M2 Pro 16GB', '速度（RTX 4070）': '约36 token/秒' },
+          { '模型': 'Qwen2.5 32B Q4_K_M', '显存': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '约28 token/秒' },
+          { '模型': 'Qwen2.5-Coder 32B Q4_K_M', '显存': '20.5GB', '最低GPU': 'RTX 3090 24GB', 'Apple Silicon': 'M3 Max 48GB', '速度（RTX 4090）': '约27 token/秒' },
+          { '模型': 'Qwen 3.6 27B Q4_K_M', '显存': '约17GB', '最低GPU': 'RTX 4090 24GB', 'Apple Silicon': 'M3 Max 36GB', '速度（RTX 4090）': '约24 token/秒' },
           { '模型': 'Qwen2.5-72B Q4_K_M', '显存': '46GB', '最低GPU': '2× RTX 3090（48GB合计）', 'Apple Silicon': 'M2 Ultra 64GB', '速度（2×RTX 4090）': '约12 token/秒' },
         ],
         columns: ['模型', '显存', '最低GPU', 'Apple Silicon', '速度（RTX 3060）'],
@@ -2355,10 +2358,12 @@ curl -fsSL https://ollama.com/install.sh | sh
 brew install ollama
 
 # 拉取模型 — 使用明确的标签
-ollama pull qwen2.5:7b           # 通用7B（约5.5GB）
-ollama pull qwen2.5:14b          # 通用14B（约9.5GB）
-ollama pull qwen2.5:32b          # 通用32B（约20.5GB）
-ollama pull qwen2.5-coder:32b    # 代码32B（约20.5GB）
+ollama pull qwen3.6:27b          # 旗舰模型，256K上下文（约17GB）
+ollama pull qwen3:8b             # Qwen3通用8B（约5.5GB）
+ollama pull qwen2.5:7b           # Qwen2.5通用7B（约5.5GB）
+ollama pull qwen2.5:14b          # Qwen2.5通用14B（约9.5GB）
+ollama pull qwen2.5:32b          # Qwen2.5通用32B（约20.5GB）
+ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B（约20.5GB）
 ollama pull qwen2-vl:7b          # 视觉7B（约6.2GB）
 
 # 交互式运行
@@ -2498,7 +2503,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { q: '本地运行最适合代码任务的Qwen模型？', a: 'Qwen3-Coder 32B——HumanEval 92.7%，需24GB GPU。显存12GB或以下：Qwen3-Coder 14B（85.2%，9.5GB显存）。' },
           { q: 'Qwen与DeepSeek本地部署对比？', a: 'Qwen3使用适合消费级硬件的Dense架构。DeepSeek-V2.5是236B MoE，需约130GB内存，没有服务器级GPU无法实现。' },
           { q: '可以在Mac上运行Qwen吗？', a: '可以。M2 Pro 32GB可流畅运行Qwen3 14B，约32 token/秒。M3 Max 64GB可处理Qwen3 32B，约22 token/秒。' },
-          { q: 'Qwen3的Ollama命令是什么？', a: '`ollama pull qwen2.5:7b`（7B），`:14b`（14B），`:32b`（32B），`qwen2.5-coder:32b`（代码版）。始终使用明确的尺寸标签。' },
+          { q: 'Qwen的Ollama命令是什么？', a: '旗舰模型使用`ollama run qwen3.6:27b`（约17GB显存）。Qwen3使用`ollama pull qwen3:8b`。Qwen2.5的7B用`ollama pull qwen2.5:7b`，14B用`:14b`，32B用`:32b`，代码版用`qwen2.5-coder:32b`。始终使用明确的尺寸标签。' },
           { q: 'Qwen适合中文任务吗？', a: '是的。Qwen3在大规模中文语料库上预训练，原生支持简体中文、繁体中文、日语、韩语等29种语言，中文任务持续超越Llama 3.3和Mistral。' },
           { q: 'Qwen3应该使用哪种量化格式？', a: 'Q4_K_M是推荐默认格式——相比FP16减少约55%显存，质量损失不足1%。显存充足时用Q8_0。中文任务避免Q2_K。' },
           { q: 'Qwen2-VL适合中文文档OCR吗？', a: '是的——`ollama pull qwen2-vl:7b`，约6GB显存，支持最高4096×4096像素中日韩文字识别。' },
@@ -2571,7 +2576,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'Qwen3, DeepSeek, Llama를 하나의 인터페이스에서 실행하십시오 →',
     ctaButton: 'PromptQuorum 무료로 사용해보기',
     ctaHref: '/waitlist',
-    leadAnswerBlock: 'Qwen3 8B를 로컬에서 실행하려면 Ollama를 설치하고 `ollama pull qwen2.5:7b`를 실행하십시오 — 5.5 GB의 VRAM이 필요하며 RTX 3060에서 초당 57 토큰을 처리합니다. 코딩 작업에는 Qwen3-Coder를, 중국어/일본어 문서 OCR에는 Qwen2-VL을 사용하십시오.',
+    leadAnswerBlock: '**새로운 플래그십 모델은 Qwen 3.6 27B입니다** — Apache 2.0 라이선스의 밀집 모델로, 256K 컨텍스트 창을 갖추고 있으며 `ollama run qwen3.6:27b`를 통해 Q4_K_M 기준 약 17GB의 VRAM으로 실행됩니다. 더 가벼운 설정을 원하면 Ollama를 설치하고 `ollama pull qwen2.5:7b`를 실행해 Qwen3 8B를 사용하십시오 — 5.5 GB의 VRAM이 필요하며 RTX 3060에서 초당 57 토큰을 처리합니다. 코딩 작업에는 Qwen2.5-Coder를, 중국어/일본어 문서 OCR에는 Qwen2-VL을 사용하십시오.',
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },
       { label: 'Qwen3 모델 패밀리 개요', anchor: '#model-family' },
@@ -2587,12 +2592,12 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: 7B부터 72B까지 한눈에 보는 Qwen3 모델 패밀리, 하드웨어 티어별 VRAM 요구사항, Qwen3-Coder 32B 벤치마크 데이터, Qwen vs DeepSeek vs Llama 의사결정 차트. Qwen 배포 참고 카드로 다운로드하십시오.',
+    gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: 새로운 플래그십 Qwen 3.6 27B(256K 컨텍스트, Q4_K_M 기준 약 17GB), Qwen 모델 패밀리 전체 개요(Qwen3 0.6B–32B, Qwen2.5 7B–72B), 하드웨어 티어별 VRAM 요구사항, Qwen3-Coder 32B 벤치마크 데이터, Qwen vs DeepSeek vs Llama 의사결정 차트. Qwen 배포 참고 카드로 다운로드하십시오.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Qwen 로컬 배포 가이드 2026: 모든 하드웨어 티어에서 Qwen3, Coder & VL 실행하기',
-      description: 'Qwen3 모델 패밀리를 로컬에서 배포하는 완전한 가이드 — VRAM 요구사항, Ollama 및 LM Studio 설정, 양자화, 벤치마크, 하드웨어 권장 사항.',
+      headline: 'Qwen 로컬 배포 가이드 2026: 모든 하드웨어 티어에서 Qwen 3.6 27B, Qwen3, Coder & VL 실행하기',
+      description: 'Qwen 모델 패밀리를 로컬에서 배포하는 완전한 가이드 — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder, VL, VRAM 요구사항, Ollama 및 LM Studio 설정, 양자화, 벤치마크, 하드웨어 권장 사항.',
       datePublished: '2026-05-26',
       dateModified: '2026-07-02',
       inLanguage: 'ko',
@@ -2627,8 +2632,8 @@ curl http://localhost:11434/v1/chat/completions \\
         },
         {
           '@type': 'Question',
-          name: 'Qwen3에 사용할 Ollama 명령어는 무엇입니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '7B 모델은 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 최적화 32B 변형은 `ollama pull qwen2.5-coder:32b`를 실행하십시오. 태그 없는 `qwen2.5`는 다른 버전으로 해석될 수 있으므로 항상 명시적인 크기 태그를 사용하십시오.' },
+          name: 'Qwen에 사용할 Ollama 명령어는 무엇입니까?',
+          acceptedAnswer: { '@type': 'Answer', text: '새로운 플래그십은 `ollama run qwen3.6:27b`(약 17GB VRAM)를 실행하십시오. Qwen3는 `ollama pull qwen3:8b`를 사용하십시오. Qwen2.5는 7B 모델의 경우 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 최적화 32B 변형은 `ollama pull qwen2.5-coder:32b`를 실행하십시오. 태그 없는 `qwen2.5`는 다른 버전으로 해석될 수 있으므로 항상 명시적인 크기 태그를 사용하십시오.' },
         },
         {
           '@type': 'Question',
@@ -2652,55 +2657,58 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          '**Qwen 3.6 27B가 새로운 플래그십 모델입니다**: 밀집 모델, Apache 2.0, 256K 컨텍스트, Q4_K_M 기준 약 17GB VRAM, `ollama run qwen3.6:27b`(2026년 4월 출시).',
           '**Qwen3 8B는 5.5 GB VRAM에서 실행됩니다** — `ollama pull qwen2.5:7b` 명령어 하나로 RTX 3060에서 초당 57 토큰 속도로 실행할 수 있습니다.',
-          '**세 가지 하위 패밀리**: Qwen3(범용), Qwen3-Coder(코딩, 32B에서 HumanEval 92.7%), Qwen2-VL(비전, 로컬에서 최고의 CJK OCR).',
+          '**네 가지 실용적인 하위 패밀리**: Qwen3(범용, 사고 모드), Qwen2.5(범용, 가장 폭넓게 검증됨), Qwen2.5-Coder(코딩, 32B에서 HumanEval 92.7%), Qwen2-VL(비전, 로컬에서 최고의 CJK OCR).',
           '**밀집 아키텍처 = 소비자 친화적**: DeepSeek의 236B MoE 모델(약 130 GB RAM 필요)과 달리, Qwen2.5-72B는 두 개의 RTX 3090에서 46 GB VRAM으로 실행됩니다.',
           '**네이티브 다국어**: 중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어 및 23개 언어로 사전 학습 — Qwen3는 CJK 작업에서 Llama 3.3을 지속적으로 능가합니다.',
           '**Q4_K_M이 적합한 양자화**: 대부분의 사용자에게 최적 — VRAM 약 55% 절감, 벤치마크 품질 손실 1% 미만.',
           '**하드웨어 결정**: VRAM 12 GB → 14B 모델; 24 GB → 32B; 48 GB 이상(GPU 두 개 또는 Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3는 범용(7B–72B), 코딩(Coder 7B–32B), 비전(VL 7B–72B) 세 가지 로컬 배포 하위 패밀리를 제공하며, 모두 Ollama 또는 LM Studio를 통해 실행 가능합니다.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B(256K 컨텍스트, Q4_K_M 기준 약 17GB)가 새로운 플래그십입니다. Qwen은 범용(7B–72B), 코딩(Coder 7B–32B), 비전(VL 7B–72B) 네 가지 로컬 배포 하위 패밀리를 제공하며, 모두 Ollama 또는 LM Studio를 통해 실행 가능합니다.' },
           { type: 'plain-terms', text: '모델을 로컬에서 실행한다는 것은 AI가 클라우드 서버가 아닌 여러분의 컴퓨터에서 실행된다는 의미입니다. 데이터가 외부로 전송되지 않으며, 하드웨어 구입 후에는 토큰당 비용이 발생하지 않습니다.' },
         ],
       },
       modelFamily: {
         id: 'model-family',
-        title: 'Qwen3 모델 패밀리 개요',
+        title: 'Qwen 모델 패밀리 개요',
         content: [
-          '**Qwen3 패밀리는 세 가지 작업을 다룹니다: 범용 추론, 코딩, 비전** — 각각 7B에서 72B 파라미터까지 다양한 크기 옵션을 제공합니다. 모두 Alibaba의 Qwen 팀이 Apache 2.0 라이선스로 Hugging Face에 공개한 오픈 웨이트 모델입니다.',
-          '먼저 하위 패밀리를 선택한 다음 VRAM에 맞는 크기를 고르십시오. 하위 패밀리를 혼합해 사용하는 것도 일반적입니다: 코드 완성에는 Qwen3-Coder 14B를, 문서 요약에는 Qwen3 8B를 사용하십시오.',
+          '**Qwen 라인업은 이제 다섯 가지 실용적인 선택지를 제공합니다: 플래그십 Qwen 3.6 27B, 더 새로운 Qwen3 패밀리, 범용 추론용 Qwen2.5, Qwen2.5-Coder, 비전용 Qwen2-VL** — 각각 다양한 크기 옵션을 제공합니다. 모두 Alibaba의 Qwen 팀이 Apache 2.0 라이선스로 Hugging Face에 공개한 오픈 웨이트 모델입니다.',
+          '먼저 하위 패밀리를 선택한 다음 VRAM에 맞는 크기를 고르십시오. 하위 패밀리를 혼합해 사용하는 것도 일반적입니다: 코드 완성에는 Qwen2.5-Coder 14B를, 문서 요약에는 Qwen3 8B 또는 Qwen 3.6 27B를 사용하십시오.',
         ],
         rows: [
-          { '하위 패밀리': 'Qwen3', '제공 크기': '7B, 14B, 32B, 72B', '주요 용도': '범용 추론, 중국어/다국어 작업, RAG', 'Ollama 태그 접두사': 'qwen2.5:' },
-          { '하위 패밀리': 'Qwen3-Coder', '제공 크기': '7B, 14B, 32B', '주요 용도': '코드 생성, 디버깅, HumanEval, SWE-bench', 'Ollama 태그 접두사': 'qwen2.5-coder:' },
+          { '하위 패밀리': 'Qwen3', '제공 크기': '0.6B, 1.7B, 4B, 8B, 14B, 32B', '주요 용도': '범용 추론, 사고 모드, 다국어, 에이전트 작업', 'Ollama 태그 접두사': 'qwen3:' },
+          { '하위 패밀리': 'Qwen2.5', '제공 크기': '7B, 14B, 32B, 72B', '주요 용도': '범용 추론, 중국어/다국어 작업, RAG', 'Ollama 태그 접두사': 'qwen2.5:' },
+          { '하위 패밀리': 'Qwen2.5-Coder', '제공 크기': '7B, 14B, 32B', '주요 용도': '코드 생성, 디버깅, HumanEval, SWE-bench', 'Ollama 태그 접두사': 'qwen2.5-coder:' },
           { '하위 패밀리': 'Qwen2-VL', '제공 크기': '2B, 7B, 72B', '주요 용도': '문서 OCR, 이미지 Q&A, CJK 텍스트 추출', 'Ollama 태그 접두사': 'qwen2-vl:' },
         ],
         columns: ['하위 패밀리', '제공 크기', '주요 용도', 'Ollama 태그 접두사'],
         tableFormat: true,
-        note: 'Qwen3(2026년 1분기 출시)는 사고 모드 모델을 추가했지만 2026년 5월 기준 Qwen3에 비해 GGUF 빌드가 적고 Ollama 지원 범위가 좁습니다. 이 가이드는 가장 폭넓은 하드웨어 지원과 테스트된 양자화를 갖춘 Qwen3에 초점을 맞춥니다. 더 넓은 모델 비교는 [2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026)을 참조하십시오.',
+        note: 'Qwen 3.6 27B(2026년 4월 출시)는 새로운 플래그십 모델입니다 — 256K 컨텍스트 창을 갖춘 밀집 모델로 `ollama run qwen3.6:27b`를 통해 Q4_K_M 기준 약 17GB의 VRAM으로 실행됩니다. Qwen2.5는 2026년 중반 기준 가장 폭넓게 검증된 패밀리로, Ollama와 GGUF 지원 범위가 가장 넓습니다. 더 넓은 모델 비교는 [2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026)을 참조하십시오.',
       },
       hardwareTiers: {
         id: 'hardware-tiers',
         title: '모델 크기별 하드웨어 요구사항',
         content: [
-          '**먼저 VRAM 티어를 결정한 다음, 적합한 최대 크기의 Qwen3 모델을 선택하십시오.** 아래 수치는 모두 표준 양자화인 Q4_K_M을 기준으로 하며, Ollama와 LM Studio에서 최고의 크기 대비 품질 비율을 제공합니다.',
+          '**먼저 VRAM 티어를 결정한 다음, 적합한 최대 크기의 Qwen 모델을 선택하십시오.** 아래 수치는 모두 표준 양자화인 Q4_K_M을 기준으로 하며, Ollama와 LM Studio에서 최고의 크기 대비 품질 비율을 제공합니다.',
         ],
         rows: [
           { '모델': 'Qwen3 8B Q4_K_M', 'VRAM': '5.5 GB', '최소 GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', '속도 (RTX 3060)': '~57 tok/s' },
-          { '모델': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5.5 GB', '최소 GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', '속도 (RTX 3060)': '~55 tok/s' },
+          { '모델': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5.5 GB', '최소 GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', '속도 (RTX 3060)': '~55 tok/s' },
           { '모델': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6.2 GB', '최소 GPU': 'RTX 3060 8 GB, RTX 4060', 'Apple Silicon': 'M1/M2 16 GB', '속도 (RTX 4060)': '~38 tok/s' },
-          { '모델': 'Qwen3 14B Q4_K_M', 'VRAM': '9.5 GB', '최소 GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', '속도 (RTX 4070)': '~38 tok/s' },
-          { '모델': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9.5 GB', '최소 GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', '속도 (RTX 4070)': '~36 tok/s' },
-          { '모델': 'Qwen3 32B Q4_K_M', 'VRAM': '20.5 GB', '최소 GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', '속도 (RTX 4090)': '~28 tok/s' },
-          { '모델': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20.5 GB', '최소 GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', '속도 (RTX 4090)': '~27 tok/s' },
+          { '모델': 'Qwen2.5 14B Q4_K_M', 'VRAM': '9.5 GB', '최소 GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', '속도 (RTX 4070)': '~38 tok/s' },
+          { '모델': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9.5 GB', '최소 GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', '속도 (RTX 4070)': '~36 tok/s' },
+          { '모델': 'Qwen2.5 32B Q4_K_M', 'VRAM': '20.5 GB', '최소 GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', '속도 (RTX 4090)': '~28 tok/s' },
+          { '모델': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20.5 GB', '최소 GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', '속도 (RTX 4090)': '~27 tok/s' },
+          { '모델': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '~17 GB', '최소 GPU': 'RTX 4090 24 GB', 'Apple Silicon': 'M3 Max 36 GB', '속도 (RTX 4090)': '~24 tok/s' },
           { '모델': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46 GB', '최소 GPU': '2× RTX 3090 (48 GB)', 'Apple Silicon': 'M2 Ultra 64 GB', '속도 (2×RTX 4090)': '~12 tok/s' },
         ],
         columns: ['모델', 'VRAM', '최소 GPU', 'Apple Silicon', '속도 (RTX 3060)'],
         tableFormat: true,
         note: 'VRAM 수치는 Ollama 라이브러리의 Q4_K_M GGUF 파일 기준입니다. 4K 컨텍스트에서 KV 캐시를 위해 1–2 GB를 추가하십시오. GPU VRAM이 모델 요구량보다 부족한 경우 Ollama가 자동으로 레이어를 시스템 RAM으로 오프로드합니다 — 동작하지만 속도가 크게 저하됩니다.',
         image: '/images/qwen-local-deployment-guide-2026-hardware.svg',
-        imageCaption: 'Qwen3 모델 크기별 VRAM 요구사항 (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Qwen 모델 크기별 VRAM 요구사항 (Q4_K_M) — PromptQuorum 2026',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -2722,10 +2730,12 @@ curl -fsSL https://ollama.com/install.sh | sh
 brew install ollama
 
 # Pull models — use explicit tags
-ollama pull qwen2.5:7b           # general 7B (~5.5 GB)
-ollama pull qwen2.5:14b          # general 14B (~9.5 GB)
-ollama pull qwen2.5:32b          # general 32B (~20.5 GB)
-ollama pull qwen2.5-coder:32b    # coding 32B (~20.5 GB)
+ollama pull qwen3.6:27b          # flagship, 256K context (~17 GB)
+ollama pull qwen3:8b             # Qwen3 general 8B (~5.5 GB)
+ollama pull qwen2.5:7b           # Qwen2.5 general 7B (~5.5 GB)
+ollama pull qwen2.5:14b          # Qwen2.5 general 14B (~9.5 GB)
+ollama pull qwen2.5:32b          # Qwen2.5 general 32B (~20.5 GB)
+ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20.5 GB)
 ollama pull qwen2-vl:7b          # vision 7B (~6.2 GB)
 
 # Run interactively
@@ -2865,7 +2875,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { q: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?', a: 'Qwen3-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen3-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
           { q: '로컬 배포에서 Qwen은 DeepSeek와 어떻게 비교됩니까?', a: 'Qwen2.5-72B와 DeepSeek-V2.5는 일반 작업에서 경쟁력이 있지만, Qwen은 소비자 하드웨어에 맞는 밀집 아키텍처를 사용합니다. DeepSeek-V2.5는 236B MoE 모델로 Q4에서 약 130 GB RAM이 필요하며 서버급 하드웨어 없이는 도달하기 어렵습니다. VRAM이 48 GB 미만인 경우 Qwen3가 실용적인 선택입니다.' },
           { q: 'Mac에서 Qwen을 실행할 수 있습니까?', a: '가능합니다. Apple Silicon은 통합 메모리를 사용합니다 — M2 Pro 32 GB는 Qwen3 14B를 초당 약 32 토큰으로 실행합니다. M3 Max 64 GB는 Qwen3 32B를 초당 약 22 토큰으로 처리합니다. 가장 간단한 설정을 위해 Ollama macOS 앱 또는 LM Studio를 사용하십시오.' },
-          { q: 'Qwen3에 사용할 Ollama 명령어는 무엇입니까?', a: '7B는 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 변형은 `ollama pull qwen2.5-coder:32b`를 사용하십시오. 항상 명시적 크기 태그를 사용하십시오.' },
+          { q: 'Qwen에 사용할 Ollama 명령어는 무엇입니까?', a: '플래그십 모델은 `ollama run qwen3.6:27b`(약 17GB VRAM)를 사용하십시오. Qwen3는 `ollama pull qwen3:8b`를 사용하십시오. Qwen2.5는 7B는 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 변형은 `ollama pull qwen2.5-coder:32b`를 사용하십시오. 항상 명시적 크기 태그를 사용하십시오.' },
           { q: 'Qwen은 중국어 작업에 적합합니까?', a: 'Qwen3는 대규모 중국어 코퍼스로 사전 학습되었으며 간체 중국어, 번체 중국어, 일본어, 한국어, 아랍어 및 24개 언어를 기본 지원합니다. 중국어 읽기 이해 및 생성에서 Llama 3.3과 Mistral을 지속적으로 능가합니다.' },
           { q: 'Qwen3에 어떤 양자화를 사용해야 합니까?', a: 'Q4_K_M이 권장 기본값입니다 — FP16 대비 VRAM을 약 55% 줄이면서 벤치마크 품질 손실이 1% 미만입니다. 여유 VRAM이 있고 FP16에 가까운 품질을 원한다면 Q8_0을 사용하십시오. 중국어 용도에는 Q2_K를 피하십시오.' },
           { q: 'Qwen2-VL이 중국어 문서 OCR에 효과적입니까?', a: '그렇습니다 — Qwen2-VL 7B는 CJK 문서 OCR에서 가장 강력한 로컬 비전 모델입니다. `ollama pull qwen2-vl:7b`를 통해 약 6 GB VRAM으로 실행되며 4096×4096 해상도에서 중국어, 일본어, 한국어 텍스트를 읽습니다. 전체 가이드는 /local-llms/run-qwen-vl-locally-2026에서 확인하십시오.' },
