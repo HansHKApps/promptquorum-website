@@ -17,15 +17,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**The Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) is the best mini PC for an always-on Ollama server in 2026: runs 7B models at 12–18 tok/s CPU-only, draws 25–45 W under load, and fits inside a drawer.**',
     quickAnswerTop: {
       question: 'What is the best mini PC for running Ollama as an always-on home server?',
-      answer: 'The Minisforum UM890 Pro is the top pick: fast CPU, up to 96 GB RAM for large models, 25–45 W power draw at load, and a Radeon 780M GPU that accelerates 7B–13B models. Budget pick: Beelink SER8 (~$350). eGPU users: AOOSTAR GEM12 Pro OCuLink.',
+      answer: 'The Minisforum UM890 Pro is the top pick: fast CPU, up to 96 GB RAM for large models, 25–45 W power draw at load, and a Radeon 780M GPU that accelerates 7B–13B models. Budget pick: Beelink SER8 (~$450). eGPU users: AOOSTAR GEM12 Pro OCuLink.',
       bullets: [
         'Minisforum UM890 Pro: best overall — Ryzen 9 8945HS, up to 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: best for eGPU — OCuLink port connects RTX 3080/3090',
-        'Beelink SER8: best budget — Ryzen 7 8745H, 32 GB, ~$350',
+        'Beelink SER8: best budget — Ryzen 7 8745HS, 32 GB, ~$450',
         'Apple Mac Mini M4 Pro: best for macOS — 48 GB unified memory, 15–30 W',
         'All draw under 50 W at idle — run 24/7 for ~$3–5/month in electricity',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Best Overall',
-            content: 'The Minisforum UM890 Pro runs the AMD Ryzen 9 8945HS (8-core, up to 5.2 GHz) and supports up to 96 GB DDR5-5600 dual-channel RAM — enough to load Llama 3.3 70B at Q4 entirely in RAM. The Radeon 780M iGPU (12 RDNA3 CUs) accelerates 7B and 13B models at 8–14 tok/s via ROCm. CPU-only 7B Q4 speed: ~12–18 tok/s. Idle power: ~15 W. Load (GPU active): ~35–45 W. Price: ~$450 (32 GB) to $550 (64 GB).',
+            content: 'The Minisforum UM890 Pro runs the AMD Ryzen 9 8945HS (8-core, up to 5.2 GHz) and supports up to 96 GB DDR5-5600 dual-channel RAM — enough to load Llama 3.3 70B at Q4 entirely in RAM. The Radeon 780M iGPU (12 RDNA3 CUs) accelerates 7B and 13B models at 8–14 tok/s via ROCm. CPU-only 7B Q4 speed: ~12–18 tok/s. Idle power: ~15 W. Load (GPU active): ~35–45 W. Price: ~$500 (32 GB/1 TB) to $600 (64 GB).',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro on Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
               { label: 'Minisforum UM890 Pro on Minisforum.com', url: 'https://minisforum.com/products/UM890-Pro.html' },
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 2,
             title: 'AOOSTAR GEM12 Pro OCuLink — Best for eGPU',
-            content: 'The AOOSTAR GEM12 Pro OCuLink adds an OCuLink port that connects to an external GPU at PCIe 4.0 x4 bandwidth (64 Gbps) — enough to run an RTX 3090 at full speed for Ollama. Without eGPU: same as other mini PCs, 13–18 tok/s CPU-only. With RTX 3090 eGPU: 60–80 tok/s on 7B Q4. The mini PC itself is an AMD Ryzen 9 8945HS with 32–96 GB DDR5. OCuLink to PCIe adapter required (~$30). Price: ~$480.',
+            content: 'The AOOSTAR GEM12 Pro OCuLink adds an OCuLink port that connects to an external GPU at PCIe 4.0 x4 bandwidth (64 Gbps) — enough to run an RTX 3090 at full speed for Ollama. Without eGPU: same as other mini PCs, 13–18 tok/s CPU-only. With RTX 3090 eGPU: 60–80 tok/s on 7B Q4. The mini PC itself runs AMD Ryzen 7 Pro 8845HS with 32–96 GB DDR5. OCuLink to PCIe adapter required (~$30). Barebone price: ~$380; configured (32 GB/1 TB): ~$480.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink on Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
             ],
@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 3,
             title: 'Beelink SER8 — Best Budget Pick',
-            content: 'The Beelink SER8 runs the AMD Ryzen 7 8745H (8-core) with 32 GB DDR5 and 500 GB NVMe SSD for ~$350. CPU-only Ollama speed: ~10–15 tok/s on 7B Q4. Idle power: 10–15 W. Not upgradeable to 64 GB (RAM soldered). If you want a low-cost entry into always-on Ollama without spending $450+, the SER8 covers 7B and 13B models well.',
+            content: 'The Beelink SER8 runs the AMD Ryzen 7 8745HS (8-core, up to 4.9 GHz) with 32 GB DDR5 and 1 TB NVMe SSD for ~$450. CPU-only Ollama speed: ~10–15 tok/s on 7B Q4. Idle power: 10–15 W. RAM is user-upgradeable (not soldered on current 8745HS revision). If you want a solid entry into always-on Ollama without spending $500+, the SER8 covers 7B and 13B models well.',
             affiliateLinks: [
               { label: 'Beelink SER8 on Amazon', url: 'https://www.amazon.com/s?k=Beelink+SER8' },
             ],
@@ -150,13 +150,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: 'Best Mini PCs for Always-On Ollama Server 2026',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Best overall — Ryzen 9 8945HS, up to 96 GB DDR5, ~$450' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Best for eGPU — OCuLink port, same CPU, ~$480' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Best budget — Ryzen 7 8745H, 32 GB, ~$350' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Best overall — Ryzen 9 8945HS, up to 96 GB DDR5, ~$500' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Best for eGPU — OCuLink port, Ryzen 7 Pro 8845HS, ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Best budget — Ryzen 7 8745HS, 32 GB, ~$450' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Best macOS — 48 GB unified memory, 32B models, ~$1399' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'en' },
   },
 
   de: {
@@ -174,15 +174,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) ist 2026 der beste Mini-PC für einen Always-On-Ollama-Server: 7B-Modelle mit 12–18 Tok/s nur per CPU, 25–45 W unter Last und passt in eine Schublade.**',
     quickAnswerTop: {
       question: 'Welcher Mini-PC eignet sich am besten für einen Ollama-Home-Server im Dauerbetrieb?',
-      answer: 'Der Minisforum UM890 Pro ist die erste Wahl: schnelle CPU, bis zu 96 GB RAM für große Modelle, 25–45 W Stromaufnahme unter Last und Radeon 780M iGPU für 7B–13B-Beschleunigung. Budget-Tipp: Beelink SER8 (~350 €). eGPU-Nutzer: AOOSTAR GEM12 Pro OCuLink.',
+      answer: 'Der Minisforum UM890 Pro ist die erste Wahl: schnelle CPU, bis zu 96 GB RAM für große Modelle, 25–45 W Stromaufnahme unter Last und Radeon 780M iGPU für 7B–13B-Beschleunigung. Budget-Tipp: Beelink SER8 (~420 €). eGPU-Nutzer: AOOSTAR GEM12 Pro OCuLink.',
       bullets: [
         'Minisforum UM890 Pro: Bestes Gesamtpaket — Ryzen 9 8945HS, bis 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: Beste eGPU-Option — OCuLink-Port für RTX 3080/3090',
-        'Beelink SER8: Bestes Budget — Ryzen 7 8745H, 32 GB, ~350 €',
+        'Beelink SER8: Bestes Budget — Ryzen 7 8745HS, 32 GB, ~420 €',
         'Apple Mac Mini M4 Pro: Bester macOS-Mini-PC — 48 GB Unified Memory, 15–30 W',
         'Alle Mini-PCs verbrauchen unter 50 W im Leerlauf — 24/7-Betrieb für ~3–5 €/Monat Strom',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Bestes Gesamtpaket',
-            content: 'Der Minisforum UM890 Pro läuft mit dem AMD Ryzen 9 8945HS (8-Kerne, bis 5,2 GHz) und unterstützt bis zu 96 GB DDR5-5600 Dual-Channel-RAM — genug, um Llama 3.3 70B bei Q4 vollständig in RAM zu laden. Die Radeon 780M iGPU (12 RDNA3-CUs) beschleunigt 7B- und 13B-Modelle auf 8–14 Tok/s via ROCm. CPU-only 7B Q4: ~12–18 Tok/s. Idle: ~15 W. Last (GPU aktiv): ~35–45 W. Preis: ~450 € (32 GB) bis 550 € (64 GB).',
+            content: 'Der Minisforum UM890 Pro läuft mit dem AMD Ryzen 9 8945HS (8-Kerne, bis 5,2 GHz) und unterstützt bis zu 96 GB DDR5-5600 Dual-Channel-RAM — genug, um Llama 3.3 70B bei Q4 vollständig in RAM zu laden. Die Radeon 780M iGPU (12 RDNA3-CUs) beschleunigt 7B- und 13B-Modelle auf 8–14 Tok/s via ROCm. CPU-only 7B Q4: ~12–18 Tok/s. Idle: ~15 W. Last (GPU aktiv): ~35–45 W. Preis: ~470 € (32 GB/1 TB) bis 570 € (64 GB).',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Minisforum+UM890+Pro' },
             ],
@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 2,
             title: 'AOOSTAR GEM12 Pro OCuLink — Beste eGPU-Option',
-            content: 'Der AOOSTAR GEM12 Pro OCuLink hat einen OCuLink-Port, der eine externe GPU mit PCIe 4.0 x4-Bandbreite (64 Gbps) verbindet — genug für volle RTX-3090-Geschwindigkeit in Ollama. Ohne eGPU: wie andere Mini-PCs, 13–18 Tok/s CPU-only. Mit RTX 3090 eGPU: 60–80 Tok/s bei 7B Q4. OCuLink-auf-PCIe-Adapter benötigt (~30 €). Preis: ~480 €.',
+            content: 'Der AOOSTAR GEM12 Pro OCuLink hat einen OCuLink-Port, der eine externe GPU mit PCIe 4.0 x4-Bandbreite (64 Gbps) verbindet — genug für volle RTX-3090-Geschwindigkeit in Ollama. Ohne eGPU: wie andere Mini-PCs, 13–18 Tok/s CPU-only. Mit RTX 3090 eGPU: 60–80 Tok/s bei 7B Q4. OCuLink-auf-PCIe-Adapter benötigt (~28 €). Preis Barebone: ~360 €; mit 32 GB/1 TB: ~450 €.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink bei Amazon.de', url: 'https://www.amazon.de/s?k=AOOSTAR+GEM12+Pro' },
             ],
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 3,
             title: 'Beelink SER8 — Bestes Budget-Angebot',
-            content: 'Der Beelink SER8 läuft mit dem AMD Ryzen 7 8745H (8-Kerne), 32 GB DDR5 und 500 GB NVMe-SSD für ~350 €. Ollama-Geschwindigkeit: ~10–15 Tok/s bei 7B Q4. Idle: 10–15 W. Kein Upgrade auf 64 GB möglich (RAM verlötet). Als günstiger Einstieg in Always-On-Ollama ohne 450+ € Investition deckt der SER8 7B- und 13B-Modelle gut ab.',
+            content: 'Der Beelink SER8 läuft mit dem AMD Ryzen 7 8745HS (8-Kerne, bis 4,9 GHz), 32 GB DDR5 und 1 TB NVMe-SSD für ~420 €. Ollama-Geschwindigkeit: ~10–15 Tok/s bei 7B Q4. Idle: 10–15 W. RAM nachrüstbar (nicht verlötet bei aktueller 8745HS-Revision). Als solider Einstieg in Always-On-Ollama ohne 500+ € deckt der SER8 7B- und 13B-Modelle gut ab.',
             affiliateLinks: [
               { label: 'Beelink SER8 bei Amazon.de', url: 'https://www.amazon.de/s?k=Beelink+SER8' },
             ],
@@ -277,13 +277,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: 'Beste Mini-PCs für Always-On Ollama Server 2026',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Bestes Gesamtpaket — Ryzen 9 8945HS, bis 96 GB DDR5, ~450 €' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Beste eGPU-Option — OCuLink-Port, ~480 €' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Bestes Budget — Ryzen 7 8745H, 32 GB, ~350 €' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Bestes Gesamtpaket — Ryzen 9 8945HS, bis 96 GB DDR5, ~470 €' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Beste eGPU-Option — OCuLink-Port, Ryzen 7 Pro 8845HS, ~450 €' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Bestes Budget — Ryzen 7 8745HS, 32 GB, ~420 €' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Bester macOS-Mini-PC — 48 GB Unified Memory, ~1399 €' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/de/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/de/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'de' },
   },
 
   fr: {
@@ -301,15 +301,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**Le Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 Go de RAM, iGPU Radeon 780M) est le meilleur mini PC pour un serveur Ollama always-on en 2026 : modèles 7B à 12–18 tok/s en CPU seul, 25–45 W sous charge, tient dans un tiroir.**',
     quickAnswerTop: {
       question: 'Quel est le meilleur mini PC pour faire tourner Ollama en tant que serveur maison en continu ?',
-      answer: 'Le Minisforum UM890 Pro est le premier choix : CPU rapide, jusqu\'à 96 Go de RAM pour les grands modèles, 25–45 W sous charge, iGPU Radeon 780M pour accélérer les modèles 7B–13B. Budget : Beelink SER8 (~350 €). eGPU : AOOSTAR GEM12 Pro OCuLink.',
+      answer: 'Le Minisforum UM890 Pro est le premier choix : CPU rapide, jusqu\'à 96 Go de RAM pour les grands modèles, 25–45 W sous charge, iGPU Radeon 780M pour accélérer les modèles 7B–13B. Budget : Beelink SER8 (~420 €). eGPU : AOOSTAR GEM12 Pro OCuLink.',
       bullets: [
         'Minisforum UM890 Pro : meilleur global — Ryzen 9 8945HS, jusqu\'à 96 Go DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink : meilleur pour eGPU — port OCuLink pour RTX 3080/3090',
-        'Beelink SER8 : meilleur budget — Ryzen 7 8745H, 32 Go, ~350 €',
+        'Beelink SER8 : meilleur budget — Ryzen 7 8745HS, 32 Go, ~420 €',
         'Apple Mac Mini M4 Pro : meilleur macOS — 48 Go de mémoire unifiée, 15–30 W',
         'Tous consomment moins de 50 W au repos — fonctionnement 24/7 pour ~3–5 €/mois',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — Meilleur choix global',
-            content: 'Le Minisforum UM890 Pro tourne avec l\'AMD Ryzen 9 8945HS (8 cœurs, jusqu\'à 5,2 GHz) et supporte jusqu\'à 96 Go de DDR5-5600 double canal — assez pour charger Llama 3.3 70B en Q4 entièrement en RAM. L\'iGPU Radeon 780M (12 CU RDNA3) accélère les modèles 7B et 13B à 8–14 tok/s via ROCm. CPU seul 7B Q4 : ~12–18 tok/s. Consommation au repos : ~15 W. Sous charge (GPU actif) : ~35–45 W. Prix : ~450 € (32 Go) à 550 € (64 Go).',
+            content: 'Le Minisforum UM890 Pro tourne avec l\'AMD Ryzen 9 8945HS (8 cœurs, jusqu\'à 5,2 GHz) et supporte jusqu\'à 96 Go de DDR5-5600 double canal — assez pour charger Llama 3.3 70B en Q4 entièrement en RAM. L\'iGPU Radeon 780M (12 CU RDNA3) accélère les modèles 7B et 13B à 8–14 tok/s via ROCm. CPU seul 7B Q4 : ~12–18 tok/s. Consommation au repos : ~15 W. Sous charge (GPU actif) : ~35–45 W. Prix : ~470 € (32 Go/1 To) à 570 € (64 Go).',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Minisforum+UM890+Pro' },
             ],
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 2,
             title: 'AOOSTAR GEM12 Pro OCuLink — Meilleur pour eGPU',
-            content: 'L\'AOOSTAR GEM12 Pro OCuLink ajoute un port OCuLink qui connecte une GPU externe en PCIe 4.0 x4 (64 Gbps) — assez pour faire tourner une RTX 3090 à pleine vitesse avec Ollama. Sans eGPU : comme les autres mini PC, 13–18 tok/s en CPU seul. Avec eGPU RTX 3090 : 60–80 tok/s sur 7B Q4. Adaptateur OCuLink vers PCIe requis (~30 €). Prix : ~480 €.',
+            content: 'L\'AOOSTAR GEM12 Pro OCuLink ajoute un port OCuLink qui connecte une GPU externe en PCIe 4.0 x4 (64 Gbps) — assez pour faire tourner une RTX 3090 à pleine vitesse avec Ollama. Sans eGPU : comme les autres mini PC, 13–18 tok/s en CPU seul. Avec eGPU RTX 3090 : 60–80 tok/s sur 7B Q4. Adaptateur OCuLink vers PCIe requis (~28 €). Prix nu : ~360 € ; avec 32 Go/1 To : ~450 €.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink sur Amazon.fr', url: 'https://www.amazon.fr/s?k=AOOSTAR+GEM12+Pro' },
             ],
@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 3,
             title: 'Beelink SER8 — Meilleur choix budget',
-            content: 'Le Beelink SER8 tourne avec l\'AMD Ryzen 7 8745H (8 cœurs), 32 Go de DDR5 et 500 Go de NVMe pour ~350 €. Vitesse Ollama : ~10–15 tok/s sur 7B Q4. Consommation au repos : 10–15 W. RAM non évolutive (soudée). Idéal pour débuter avec Ollama always-on sans dépenser 450+ €.',
+            content: 'Le Beelink SER8 tourne avec l\'AMD Ryzen 7 8745HS (8 cœurs, jusqu\'à 4,9 GHz), 32 Go de DDR5 et 1 To de NVMe pour ~420 €. Vitesse Ollama : ~10–15 tok/s sur 7B Q4. Consommation au repos : 10–15 W. RAM évolutive (non soudée sur la révision 8745HS actuelle). Idéal pour débuter avec Ollama always-on sans dépenser 500+ €.',
             affiliateLinks: [
               { label: 'Beelink SER8 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Beelink+SER8' },
             ],
@@ -400,13 +400,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: 'Meilleurs mini PC pour serveur Ollama always-on 2026',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Meilleur global — Ryzen 9 8945HS, jusqu\'à 96 Go DDR5, ~450 €' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Meilleur eGPU — port OCuLink, ~480 €' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Meilleur budget — Ryzen 7 8745H, 32 Go, ~350 €' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Meilleur global — Ryzen 9 8945HS, jusqu\'à 96 Go DDR5, ~470 €' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Meilleur eGPU — port OCuLink, Ryzen 7 Pro 8845HS, ~450 €' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Meilleur budget — Ryzen 7 8745HS, 32 Go, ~420 €' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Meilleur macOS — 48 Go mémoire unifiée, ~1399 €' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'fr' },
   },
 
   ja: {
@@ -424,15 +424,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**Minisforum UM890 Pro（AMD Ryzen 9 8945HS、32〜96GB RAM、Radeon 780M内蔵GPU）は2026年の常時稼働Ollamaサーバー向けミニPCとして最良の選択です：7BモデルをCPUのみで12〜18トークン/秒、負荷時25〜45W、引き出しに収まるサイズ。**',
     quickAnswerTop: {
       question: 'Ollamaを常時稼働ホームサーバーとして動かすのに最適なミニPCは何ですか？',
-      answer: 'Minisforum UM890 Proが最有力：高速CPU、最大96GBのRAMで大型モデルに対応、負荷時25〜45Wの省電力、Radeon 780M内蔵GPUで7B〜13B推論を加速。バジェット選択肢：Beelink SER8（約3万5000円）。eGPU利用者：AOOSTAR GEM12 Pro OCuLink。',
+      answer: 'Minisforum UM890 Proが最有力：高速CPU、最大96GBのRAMで大型モデルに対応、負荷時25〜45Wの省電力、Radeon 780M内蔵GPUで7B〜13B推論を加速。バジェット選択肢：Beelink SER8（約4万9000円）。eGPU利用者：AOOSTAR GEM12 Pro OCuLink。',
       bullets: [
         'Minisforum UM890 Pro：総合1位 — Ryzen 9 8945HS、最大96GB DDR5、25〜45W',
         'AOOSTAR GEM12 Pro OCuLink：eGPU最良 — OCuLinkポートでRTX 3080/3090接続可',
-        'Beelink SER8：バジェット最良 — Ryzen 7 8745H、32GB、約3万5000円',
+        'Beelink SER8：バジェット最良 — Ryzen 7 8745HS、32GB、約4万9000円',
         'Apple Mac Mini M4 Pro：macOS最良 — 48GB統合メモリ、32Bモデル対応',
         'すべてアイドル時50W以下 — 24時間365日稼働で電気代月約600〜1200円',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — 総合1位',
-            content: 'Minisforum UM890 ProはAMD Ryzen 9 8945HS（8コア、最大5.2GHz）を搭載し、最大96GB DDR5-5600デュアルチャンネルRAMに対応—Llama 3.3 70B Q4をRAMに完全収容できます。Radeon 780M内蔵GPU（12 RDNA3 CU）がROCm経由で7B・13Bモデルを8〜14トークン/秒に加速。CPUのみ7B Q4：12〜18トークン/秒。アイドル時：約15W。負荷時（GPU稼働）：35〜45W。価格：約4万5000円（32GB）〜5万5000円（64GB）。',
+            content: 'Minisforum UM890 ProはAMD Ryzen 9 8945HS（8コア、最大5.2GHz）を搭載し、最大96GB DDR5-5600デュアルチャンネルRAMに対応—Llama 3.3 70B Q4をRAMに完全収容できます。Radeon 780M内蔵GPU（12 RDNA3 CU）がROCm経由で7B・13Bモデルを8〜14トークン/秒に加速。CPUのみ7B Q4：12〜18トークン/秒。アイドル時：約15W。負荷時（GPU稼働）：35〜45W。価格：約5万4000円（32GB/1TB）〜6万4000円（64GB）。',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Minisforum+UM890+Pro' },
             ],
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 2,
             title: 'AOOSTAR GEM12 Pro OCuLink — eGPU最良',
-            content: 'AOOSTAR GEM12 Pro OCuLinkにはPCIe 4.0 x4帯域幅（64Gbps）で外部GPU接続できるOCuLinkポートがあります—OllamaでRTX 3090をフル速度で動かすのに十分です。eGPUなし：他のミニPCと同様13〜18トークン/秒。RTX 3090 eGPUあり：7B Q4で60〜80トークン/秒。OCuLink→PCIeアダプター必要（約3000円）。価格：約4万8000円。',
+            content: 'AOOSTAR GEM12 Pro OCuLinkにはPCIe 4.0 x4帯域幅（64Gbps）で外部GPU接続できるOCuLinkポートがあります—OllamaでRTX 3090をフル速度で動かすのに十分です。eGPUなし：他のミニPCと同様13〜18トークン/秒。RTX 3090 eGPUあり：7B Q4で60〜80トークン/秒。OCuLink→PCIeアダプター必要（約3000円）。ベアボーン価格：約4万1000円、32GB/1TB構成：約5万2000円。',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=AOOSTAR+GEM12+Pro' },
             ],
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 3,
             title: 'Beelink SER8 — バジェット最良',
-            content: 'Beelink SER8はAMD Ryzen 7 8745H（8コア）、32GB DDR5、500GB NVMe SSDで約3万5000円。Ollama速度：7B Q4で10〜15トークン/秒。アイドル時：10〜15W。RAM増設不可（ハンダ付け）。常時稼働Ollamaへの低コスト入門として7Bと13Bモデルを十分にカバーします。',
+            content: 'Beelink SER8はAMD Ryzen 7 8745HS（8コア、最大4.9GHz）、32GB DDR5、1TB NVMe SSDで約4万9000円。Ollama速度：7B Q4で10〜15トークン/秒。アイドル時：10〜15W。RAM増設可能（現行8745HSリビジョンはハンダ付けなし）。常時稼働Ollamaへの入門として7Bと13Bモデルを十分カバーします。',
             affiliateLinks: [
               { label: 'Beelink SER8 をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Beelink+SER8' },
             ],
@@ -523,13 +523,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: '常時稼働Ollamaサーバー向けミニPCランキング2026',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: '総合1位 — Ryzen 9 8945HS、最大96GB DDR5、約4万5000円' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'eGPU最良 — OCuLinkポート、約4万8000円' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'バジェット最良 — Ryzen 7 8745H、32GB、約3万5000円' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: '総合1位 — Ryzen 9 8945HS、最大96GB DDR5、約5万4000円' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'eGPU最良 — OCuLinkポート、Ryzen 7 Pro 8845HS、約5万2000円' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'バジェット最良 — Ryzen 7 8745HS、32GB、約4万9000円' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'macOS最良 — 48GB統合メモリ、約18万円' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ja' },
   },
 
   es: {
@@ -547,15 +547,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) es el mejor mini PC para servidor Ollama siempre encendido en 2026: ejecuta modelos 7B a 12–18 tok/s solo CPU, consume 25–45 W bajo carga, cabe en un cajón.**',
     quickAnswerTop: {
       question: '¿Cuál es el mejor mini PC para ejecutar Ollama como servidor casero siempre encendido?',
-      answer: 'El Minisforum UM890 Pro es la opción principal: CPU rápido, hasta 96 GB RAM para modelos grandes, consumo 25–45 W bajo carga, GPU Radeon 780M acelera modelos 7B–13B. Opción presupuesto: Beelink SER8 (~$350). Usuarios eGPU: AOOSTAR GEM12 Pro OCuLink.',
+      answer: 'El Minisforum UM890 Pro es la opción principal: CPU rápido, hasta 96 GB RAM para modelos grandes, consumo 25–45 W bajo carga, GPU Radeon 780M acelera modelos 7B–13B. Opción presupuesto: Beelink SER8 (~$450). Usuarios eGPU: AOOSTAR GEM12 Pro OCuLink.',
       bullets: [
         'Minisforum UM890 Pro: mejor general — Ryzen 9 8945HS, hasta 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: mejor para eGPU — puerto OCuLink conecta RTX 3080/3090',
-        'Beelink SER8: mejor presupuesto — Ryzen 7 8745H, 32 GB, ~$350',
+        'Beelink SER8: mejor presupuesto — Ryzen 7 8745HS, 32 GB, ~$450',
         'Apple Mac Mini M4 Pro: mejor para macOS — 48 GB memoria unificada, 15–30 W',
         'Todos consumen menos de 50 W en reposo — funcionamiento 24/7 por ~$3–5/mes en electricidad',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -608,13 +608,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: 'Mejores Mini PCs para Servidor Ollama Always-On 2026',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Mejor general — Ryzen 9 8945HS, hasta 96 GB DDR5, ~$450' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Mejor para eGPU — puerto OCuLink, ~$480' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Mejor presupuesto — Ryzen 7 8745H, 32 GB, ~$350' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Mejor general — Ryzen 9 8945HS, hasta 96 GB DDR5, ~$500' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Mejor para eGPU — puerto OCuLink, Ryzen 7 Pro 8845HS, ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Mejor presupuesto — Ryzen 7 8745HS, 32 GB, ~$450' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Mejor macOS — 48 GB memoria unificada, ~$1399' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/es/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'es' },
   },
   pt: {
     freshness_tier: 'semi_annual',
@@ -631,15 +631,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) é o melhor mini PC para um servidor Ollama sempre ligado em 2026: executa modelos 7B a 12–18 tok/s somente com CPU, consome 25–45 W sob carga, cabe numa gaveta.**',
     quickAnswerTop: {
       question: 'Qual é o melhor mini PC para executar o Ollama como servidor doméstico sempre ligado?',
-      answer: 'O Minisforum UM890 Pro é a principal escolha: CPU rápida, até 96 GB de RAM para modelos grandes, consumo de 25–45 W sob carga, GPU Radeon 780M acelera modelos 7B–13B. Opção de orçamento: Beelink SER8 (~$350). Usuários de eGPU: AOOSTAR GEM12 Pro OCuLink.',
+      answer: 'O Minisforum UM890 Pro é a principal escolha: CPU rápida, até 96 GB de RAM para modelos grandes, consumo de 25–45 W sob carga, GPU Radeon 780M acelera modelos 7B–13B. Opção de orçamento: Beelink SER8 (~$450). Usuários de eGPU: AOOSTAR GEM12 Pro OCuLink.',
       bullets: [
         'Minisforum UM890 Pro: melhor geral — Ryzen 9 8945HS, até 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: melhor para eGPU — porta OCuLink conecta RTX 3080/3090',
-        'Beelink SER8: melhor orçamento — Ryzen 7 8745H, 32 GB, ~$350',
+        'Beelink SER8: melhor orçamento — Ryzen 7 8745HS, 32 GB, ~$450',
         'Apple Mac Mini M4 Pro: melhor para macOS — 48 GB de memória unificada, 15–30 W',
         'Todos consomem menos de 50 W em repouso — funcionamento 24/7 por ~$3–5/mês em eletricidade',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -692,13 +692,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: 'Melhores Mini PCs para Servidor Ollama Always-On 2026',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Melhor geral — Ryzen 9 8945HS, até 96 GB DDR5, ~$450' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Melhor para eGPU — porta OCuLink, ~$480' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Melhor orçamento — Ryzen 7 8745H, 32 GB, ~$350' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Melhor geral — Ryzen 9 8945HS, até 96 GB DDR5, ~$500' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Melhor para eGPU — porta OCuLink, Ryzen 7 Pro 8845HS, ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Melhor orçamento — Ryzen 7 8745HS, 32 GB, ~$450' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Melhor macOS — 48 GB de memória unificada, ~$1399' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
+    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
   },
   zh: {
     freshness_tier: 'semi_annual',
@@ -715,15 +715,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**铭凡UM890 Pro（AMD Ryzen 9 8945HS、32–96GB内存、Radeon 780M核显）是2026年常驻Ollama服务器最佳迷你PC：纯CPU运行7B模型12–18 tok/s，负载功耗25–45W，能放进抽屉。**',
     quickAnswerTop: {
       question: '跑Ollama常驻家庭服务器用什么迷你PC最好？',
-      answer: '铭凡UM890 Pro是首选：高性能CPU、最高96GB内存支持大模型、负载25–45W省电，Radeon 780M核显加速7B–13B推理。预算选择：倍控SER8（约2400元）。eGPU用户：AOOSTAR GEM12 Pro OCuLink。',
+      answer: '铭凡UM890 Pro是首选：高性能CPU、最高96GB内存支持大模型、负载25–45W省电，Radeon 780M核显加速7B–13B推理。预算选择：倍控SER8（约3000元）。eGPU用户：AOOSTAR GEM12 Pro OCuLink。',
       bullets: [
         '铭凡UM890 Pro：综合最佳 — Ryzen 9 8945HS、最高96GB DDR5、25–45W',
         'AOOSTAR GEM12 Pro OCuLink：最佳eGPU方案 — OCuLink接口连接RTX 3080/3090',
-        '倍控SER8：最佳预算 — Ryzen 7 8745H、32GB、约2400元',
+        '倍控SER8：最佳预算 — Ryzen 7 8745HS、32GB、约3000元',
         'Apple Mac Mini M4 Pro：最佳macOS选择 — 48GB统一内存、15–30W',
         '所有机器闲置功耗低于50W — 24小时运行每月电费约25–40元',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: '铭凡UM890 Pro — 综合最佳',
-            content: '铭凡UM890 Pro搭载AMD Ryzen 9 8945HS（8核、最高5.2GHz），支持最高96GB DDR5-5600双通道内存——足以将Llama 3.3 70B Q4完整加载到内存。Radeon 780M核显（12个RDNA3 CU）通过ROCm将7B和13B模型加速至8–14 tok/s。纯CPU 7B Q4：约12–18 tok/s。闲置功耗：约15W。负载（GPU激活）：约35–45W。价格：约3100元（32GB）至3800元（64GB）。',
+            content: '铭凡UM890 Pro搭载AMD Ryzen 9 8945HS（8核、最高5.2GHz），支持最高96GB DDR5-5600双通道内存——足以将Llama 3.3 70B Q4完整加载到内存。Radeon 780M核显（12个RDNA3 CU）通过ROCm将7B和13B模型加速至8–14 tok/s。纯CPU 7B Q4：约12–18 tok/s。闲置功耗：约15W。负载（GPU激活）：约35–45W。价格：约3500元（32GB/1TB）至4200元（64GB）。',
             affiliateLinks: [
               { label: '在京东查看铭凡UM890 Pro', url: 'https://search.jd.com/Search?keyword=Minisforum+UM890+Pro' },
               { label: '在铭凡官网查看UM890 Pro', url: 'https://minisforum.com.cn' },
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 2,
             title: 'AOOSTAR GEM12 Pro OCuLink — 最佳eGPU选择',
-            content: 'AOOSTAR GEM12 Pro OCuLink配备OCuLink接口，以PCIe 4.0 x4带宽（64Gbps）连接外部显卡——足以让Ollama中的RTX 3090以全速运行。无eGPU：与其他迷你PC相同，纯CPU 13–18 tok/s。配RTX 3090 eGPU：7B Q4达60–80 tok/s。需要OCuLink转PCIe适配器（约200元）。价格：约3300元。',
+            content: 'AOOSTAR GEM12 Pro OCuLink配备OCuLink接口，以PCIe 4.0 x4带宽（64Gbps）连接外部显卡——足以让Ollama中的RTX 3090以全速运行。无eGPU：与其他迷你PC相同，纯CPU 13–18 tok/s。配RTX 3090 eGPU：7B Q4达60–80 tok/s。需要OCuLink转PCIe适配器（约200元）。裸机价格：约2600元；含32GB/1TB：约3300元。',
             affiliateLinks: [
               { label: '在京东查看AOOSTAR GEM12 Pro OCuLink', url: 'https://search.jd.com/Search?keyword=AOOSTAR+GEM12+Pro' },
             ],
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 3,
             title: '倍控SER8 — 最佳预算选择',
-            content: '倍控SER8搭载AMD Ryzen 7 8745H（8核）、32GB DDR5和500GB NVMe SSD，售价约2400元。Ollama速度：7B Q4约10–15 tok/s。闲置功耗：10–15W。内存不可升级（焊接）。作为低成本进入常驻Ollama的选择，SER8能很好处理7B和13B模型。',
+            content: '倍控SER8搭载AMD Ryzen 7 8745HS（8核、最高4.9GHz）、32GB DDR5和1TB NVMe SSD，售价约3000元。Ollama速度：7B Q4约10–15 tok/s。闲置功耗：10–15W。内存可升级（现款8745HS版本非焊接）。作为常驻Ollama的入门选择，SER8能很好处理7B和13B模型。',
             affiliateLinks: [
               { label: '在京东查看倍控SER8', url: 'https://search.jd.com/Search?keyword=Beelink+SER8' },
             ],
@@ -824,13 +824,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: '2026年Ollama常驻服务器最佳迷你PC排名',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '铭凡UM890 Pro', description: '综合最佳 — Ryzen 9 8945HS、最高96GB DDR5、约3100元' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: '最佳eGPU — OCuLink接口、约3300元' },
-        { '@type': 'ListItem', position: 3, name: '倍控SER8', description: '最佳预算 — Ryzen 7 8745H、32GB、约2400元' },
+        { '@type': 'ListItem', position: 1, name: '铭凡UM890 Pro', description: '综合最佳 — Ryzen 9 8945HS、最高96GB DDR5、约3500元' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: '最佳eGPU — OCuLink接口、Ryzen 7 Pro 8845HS、约3300元' },
+        { '@type': 'ListItem', position: 3, name: '倍控SER8', description: '最佳预算 — Ryzen 7 8745HS、32GB、约3000元' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: '最佳macOS — 48GB统一内存、约9800元' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
   },
   ar: {
     freshness_tier: 'semi_annual',
@@ -847,15 +847,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS، 32–96 GB RAM، Radeon 780M iGPU) هو أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل في 2026: يشغّل نماذج 7B بـ12–18 رمز/ثانية عبر CPU فقط، ويستهلك 25–45 W تحت الحمل، ويكفي حجم درج صغير.**',
     quickAnswerTop: {
       question: 'ما هو أفضل جهاز كمبيوتر مصغر لتشغيل Ollama كخادم منزلي دائم التشغيل؟',
-      answer: 'Minisforum UM890 Pro هو الخيار الأمثل: CPU سريع، وحتى 96 GB RAM للنماذج الكبيرة، واستهلاك 25–45 W تحت الحمل، وGPU Radeon 780M تسرّع نماذج 7B–13B. خيار الميزانية: Beelink SER8 (~$350). مستخدمو eGPU: AOOSTAR GEM12 Pro OCuLink.',
+      answer: 'Minisforum UM890 Pro هو الخيار الأمثل: CPU سريع، وحتى 96 GB RAM للنماذج الكبيرة، واستهلاك 25–45 W تحت الحمل، وGPU Radeon 780M تسرّع نماذج 7B–13B. خيار الميزانية: Beelink SER8 (~$450). مستخدمو eGPU: AOOSTAR GEM12 Pro OCuLink.',
       bullets: [
         'Minisforum UM890 Pro: الأفضل عموماً — Ryzen 9 8945HS، حتى 96 GB DDR5، 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: الأفضل للـeGPU — منفذ OCuLink يتصل بـRTX 3080/3090',
-        'Beelink SER8: الأفضل للميزانية — Ryzen 7 8745H، 32 GB، ~$350',
+        'Beelink SER8: الأفضل للميزانية — Ryzen 7 8745HS، 32 GB، ~$450',
         'Apple Mac Mini M4 Pro: الأفضل لـmacOS — 48 GB ذاكرة موحدة، 15–30 W',
         'جميعها تستهلك أقل من 50 W في وضع الخمول — تشغيل 24/7 بـ~$3–5 شهرياً للكهرباء',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -908,13 +908,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: 'أفضل الأجهزة المصغرة لخادم Ollama الدائم التشغيل 2026',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'الأفضل عموماً — Ryzen 9 8945HS، حتى 96 GB DDR5، ~$450' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'الأفضل للـeGPU — منفذ OCuLink، ~$480' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'الأفضل للميزانية — Ryzen 7 8745H، 32 GB، ~$350' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'الأفضل عموماً — Ryzen 9 8945HS، حتى 96 GB DDR5، ~$500' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'الأفضل للـeGPU — منفذ OCuLink، Ryzen 7 Pro 8845HS، ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'الأفضل للميزانية — Ryzen 7 8745HS، 32 GB، ~$450' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'الأفضل لـmacOS — 48 GB ذاكرة موحدة، ~$1399' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
+    schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
   },
   ko: {
     freshness_tier: 'semi_annual',
@@ -932,15 +932,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'Ollama 상시 홈 서버 운영에 가장 좋은 미니 PC는 무엇입니까?',
-        answer: 'Minisforum UM890 Pro가 최선의 선택입니다. 고성능 CPU, 대형 모델을 위한 최대 96 GB RAM, 부하 시 25–45 W 소비 전력, 그리고 Radeon 780M GPU가 7B–13B 모델 추론을 가속합니다. 보급형 선택: Beelink SER8 (~$350). eGPU 사용자: AOOSTAR GEM12 Pro OCuLink.',
+        answer: 'Minisforum UM890 Pro가 최선의 선택입니다. 고성능 CPU, 대형 모델을 위한 최대 96 GB RAM, 부하 시 25–45 W 소비 전력, 그리고 Radeon 780M GPU가 7B–13B 모델 추론을 가속합니다. 보급형 선택: Beelink SER8 (~$450). eGPU 사용자: AOOSTAR GEM12 Pro OCuLink.',
         bullets: [
           'Minisforum UM890 Pro: 종합 최고 — Ryzen 9 8945HS, 최대 96 GB DDR5, 25–45 W',
           'AOOSTAR GEM12 Pro OCuLink: eGPU 최고 — OCuLink 포트로 RTX 3080/3090 연결 가능',
-          'Beelink SER8: 가성비 최고 — Ryzen 7 8745H, 32 GB, ~$350',
+          'Beelink SER8: 가성비 최고 — Ryzen 7 8745HS, 32 GB, ~$450',
           'Apple Mac Mini M4 Pro: macOS 최고 — 48 GB 통합 메모리, 15–30 W',
           '전 모델 대기 전력 50 W 미만 — 24/7 운영 시 전기료 월 ~$3–5',
         ],
-        updatedDate: '2026-05-26',
+        updatedDate: '2026-07',
       },
     },
     targetKeywords: [
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 1,
             title: 'Minisforum UM890 Pro — 종합 최고',
-            content: 'Minisforum UM890 Pro는 AMD Ryzen 9 8945HS(8코어, 최대 5.2 GHz)를 탑재하고 최대 96 GB DDR5-5600 듀얼 채널 메모리를 지원합니다. 이는 Llama 3.3 70B Q4 모델 전체를 메모리에 적재하기에 충분합니다. Radeon 780M 내장 GPU(RDNA3 CU 12개)는 ROCm을 통해 7B 및 13B 모델을 8–14 tok/s로 가속합니다. CPU 전용 7B Q4: 약 12–18 tok/s. 대기 전력: 약 15 W. 부하(GPU 활성화) 시: 약 35–45 W. 가격: 약 $450(32 GB) ~ $600(64 GB).',
+            content: 'Minisforum UM890 Pro는 AMD Ryzen 9 8945HS(8코어, 최대 5.2 GHz)를 탑재하고 최대 96 GB DDR5-5600 듀얼 채널 메모리를 지원합니다. 이는 Llama 3.3 70B Q4 모델 전체를 메모리에 적재하기에 충분합니다. Radeon 780M 내장 GPU(RDNA3 CU 12개)는 ROCm을 통해 7B 및 13B 모델을 8–14 tok/s로 가속합니다. CPU 전용 7B Q4: 약 12–18 tok/s. 대기 전력: 약 15 W. 부하(GPU 활성화) 시: 약 35–45 W. 가격: 약 $500(32 GB/1 TB) ~ $620(64 GB).',
             affiliateLinks: [
               { label: 'Amazon에서 Minisforum UM890 Pro 보기', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
               { label: 'Minisforum 공식 사이트에서 UM890 Pro 보기', url: 'https://www.minisforum.com' },
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 2,
             title: 'AOOSTAR GEM12 Pro OCuLink — eGPU 최고 선택',
-            content: 'AOOSTAR GEM12 Pro OCuLink는 PCIe 4.0 x4 대역폭(64 Gbps)의 OCuLink 포트를 통해 외장 GPU를 연결합니다. 이는 Ollama에서 RTX 3090이 전속력으로 작동하기에 충분합니다. eGPU 없이: 다른 미니 PC와 동일하게 CPU 전용 13–18 tok/s. RTX 3090 eGPU 연결 시: 7B Q4 기준 60–80 tok/s. OCuLink to PCIe 어댑터 별도 필요(약 $30). 가격: 약 $480.',
+            content: 'AOOSTAR GEM12 Pro OCuLink는 PCIe 4.0 x4 대역폭(64 Gbps)의 OCuLink 포트를 통해 외장 GPU를 연결합니다. 이는 Ollama에서 RTX 3090이 전속력으로 작동하기에 충분합니다. eGPU 없이: 다른 미니 PC와 동일하게 CPU 전용 13–18 tok/s. RTX 3090 eGPU 연결 시: 7B Q4 기준 60–80 tok/s. OCuLink to PCIe 어댑터 별도 필요(약 $30). 베어본 가격: 약 $380; 32 GB/1 TB 구성: 약 $480.',
             affiliateLinks: [
               { label: 'Amazon에서 AOOSTAR GEM12 Pro OCuLink 보기', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro+OCuLink' },
             ],
@@ -998,7 +998,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 3,
             title: 'Beelink SER8 — 가성비 최고 선택',
-            content: 'Beelink SER8은 AMD Ryzen 7 8745H(8코어), 32 GB DDR5, 500 GB NVMe SSD를 약 $350에 제공합니다. Ollama 속도: 7B Q4 기준 약 10–15 tok/s. 대기 전력: 10–15 W. 메모리는 납땜 방식으로 업그레이드 불가합니다. 저비용 Ollama 상시 운영 진입점으로서 7B 및 13B 모델을 훌륭하게 처리합니다.',
+            content: 'Beelink SER8은 AMD Ryzen 7 8745HS(8코어, 최대 4.9 GHz), 32 GB DDR5, 1 TB NVMe SSD를 약 $450에 제공합니다. Ollama 속도: 7B Q4 기준 약 10–15 tok/s. 대기 전력: 10–15 W. 현행 8745HS 리비전은 메모리 업그레이드가 가능합니다(납땜 아님). Ollama 상시 운영의 합리적인 진입점으로서 7B 및 13B 모델을 훌륭하게 처리합니다.',
             affiliateLinks: [
               { label: 'Amazon에서 Beelink SER8 보기', url: 'https://www.amazon.com/s?k=Beelink+SER8' },
             ],
@@ -1062,9 +1062,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       name: '2026년 Ollama 상시 서버용 최고의 미니 PC 순위',
       numberOfItems: 4,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: '종합 최고 — Ryzen 9 8945HS, 최대 96 GB DDR5, ~$450' },
-        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'eGPU 최고 — OCuLink 포트, ~$480' },
-        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: '가성비 최고 — Ryzen 7 8745H, 32 GB, ~$350' },
+        { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: '종합 최고 — Ryzen 9 8945HS, 최대 96 GB DDR5, ~$500' },
+        { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'eGPU 최고 — OCuLink 포트, Ryzen 7 Pro 8845HS, ~$480' },
+        { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: '가성비 최고 — Ryzen 7 8745HS, 32 GB, ~$450' },
         { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'macOS 최고 — 48 GB 통합 메모리, ~$1399' },
       ],
     },
@@ -1077,6 +1077,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', item: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ko' },
+    schema: { '@type': 'TechArticle', headline: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ko' },
   },
 }

@@ -14,48 +14,51 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**MacBooks with Apple Silicon (M2–M5) cannot use eGPUs via Thunderbolt for GPU compute in 2026 — Apple removed Thunderbolt eGPU support in macOS Ventura. The workaround: pair an Intel Mac (or Mac Mini) with a Thunderbolt 3/4 eGPU enclosure, or use an AMD/Intel mini PC with OCuLink instead.**',
+    leadAnswerBlock: '**MacBooks with Apple Silicon (M2–M5) cannot use eGPUs via Thunderbolt for GPU compute through native macOS — Apple removed Thunderbolt eGPU support in macOS Ventura. However, as of April 2026, Tiny Corp\'s Apple-notarized TinyGPU driver adds NVIDIA/AMD eGPU compute support on Apple Silicon for AI workloads (not Metal, not display). For a fully supported path: use a Mac Mini M4 Pro (48 GB) or an AMD/Intel mini PC with OCuLink instead.**',
     quickAnswerTop: {
       question: 'Can I use an eGPU with a MacBook for local LLM inference?',
-      answer: 'No — Apple Silicon MacBooks (M2/M3/M4/M5) cannot use eGPUs for GPU compute. macOS Ventura and later dropped Thunderbolt eGPU support entirely. If you need a GPU for local LLM on Apple hardware, buy a Mac with more unified memory (Mac Mini M4 Pro, 48 GB) or use an AMD mini PC (UM890 Pro) with an OCuLink eGPU enclosure instead.',
+      answer: 'Native macOS eGPU compute is not supported on Apple Silicon (M2–M5) — Apple dropped Thunderbolt eGPU in macOS Ventura. As of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama and llama.cpp auto-detect it. For a simpler, fully supported path: Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC (UM890 Pro) with OCuLink.',
       bullets: [
-        'Apple Silicon MacBooks: eGPU NOT supported for GPU compute (macOS Ventura+)',
+        'Apple Silicon MacBooks: native eGPU compute NOT supported (macOS Ventura+)',
+        'TinyGPU driver (April 2026, Apple-notarized): enables NVIDIA/AMD CUDA compute on Apple Silicon via TB3/4 or USB4',
         'Intel MacBooks (2015–2020): eGPU works via Thunderbolt 3 — but Apple discontinued them',
-        'Best alternative: Mac Mini M4 Pro (48 GB unified memory) for macOS users',
+        'Best supported alternative: Mac Mini M4 Pro (48 GB unified memory) for macOS users',
         'Best GPU + portable setup: AMD mini PC (UM890 Pro) + OCuLink + RTX 3090 enclosure',
         'OCuLink delivers ~80% PCIe x16 bandwidth — no bottleneck for LLM inference',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Apple Silicon MacBooks cannot use eGPUs for compute — Apple removed the feature in macOS Ventura',
+          'Native macOS eGPU compute is not supported on Apple Silicon — Apple removed the feature in macOS Ventura',
+          'TinyGPU driver (April 2026, Apple-notarized): NVIDIA/AMD eGPU CUDA compute now works on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it',
           'Intel MacBooks (2018–2020) still support eGPU via Thunderbolt 3, but the Mac line-up is discontinued',
-          'For macOS: buy Mac Mini M4 Pro (48 GB) instead of trying to extend a MacBook with eGPU',
+          'For macOS without TinyGPU: buy Mac Mini M4 Pro (48 GB) — runs 32B+ models at 20–30 tok/s',
           'For portable + GPU: AMD mini PC (UM890 Pro) + RTX 3090 via OCuLink — runs Ollama at 60–80 tok/s',
           'Thunderbolt 4 eGPUs on x86 laptops (Windows/Linux) do work — 35–45% bandwidth penalty vs native PCIe',
         ],
       },
       mainContent: {
-        title: 'Why eGPU Doesn\'t Work for MacBooks in 2026',
+        title: 'eGPU on Apple Silicon Macs in 2026: What Changed',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'eGPUs do not work for GPU-accelerated local LLM inference on Apple Silicon MacBooks in 2026 because Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022) and has not restored it.',
+            text: 'Native macOS eGPU compute support was removed in macOS Ventura (2022) and remains absent — but as of April 2026, Tiny Corp\'s Apple-notarized TinyGPU driver enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt or USB4 for AI workloads including Ollama.',
           },
           {
             type: 'plain-terms',
-            text: 'An eGPU is an external graphics card in a box connected via Thunderbolt or OCuLink. On a MacBook with Apple\'s M-series chip, the GPU is built into the chip — you cannot swap or add GPUs externally for compute tasks. Apple\'s own drivers never supported CUDA (NVIDIA\'s API), and Metal (Apple\'s GPU API) doesn\'t extend to external GPUs on M-series hardware.',
+            text: 'An eGPU is an external graphics card in a box connected via Thunderbolt or OCuLink. Apple\'s own drivers (Metal) never supported external GPUs for compute on M-series chips. However, Tiny Corp released TinyGPU in early 2026 — a third-party driver signed by Apple — that exposes CUDA (NVIDIA) and ROCm (AMD) compute via Thunderbolt 3/4 or USB4. It does not use Metal and does not provide display output; it is purpose-built for AI and ML compute tasks.',
           },
         ],
-        content: 'Apple removed Thunderbolt eGPU support in macOS Ventura (released October 2022). All Apple Silicon MacBooks (M1, M2, M3, M4, M5) run on this or later macOS versions. Even if you physically connect an eGPU enclosure, macOS will not use the external GPU for GPU compute tasks — only the internal GPU is active. External display output via eGPU still works, but LLM inference does not use it.',
+        content: 'Apple removed Thunderbolt eGPU support in macOS Ventura (released October 2022). All Apple Silicon MacBooks (M1, M2, M3, M4, M5) run on this or later macOS versions. Native macOS (Metal) will not use an external GPU for GPU compute — only the internal GPU is active. However, on April 4, 2026, Apple officially signed and notarized Tiny Corp\'s TinyGPU driver — the first sanctioned path for NVIDIA and AMD eGPUs to run CUDA/ROCm compute on Apple Silicon. Ollama and llama.cpp auto-detect the TinyGPU CUDA backend. An RTX 4090 eGPU connected via Thunderbolt 4 delivers approximately 45–50 tok/s on 8B Q4 models. Supported GPUs: NVIDIA Ampere (RTX 3000) or newer; AMD RDNA3 or newer. Requires macOS 12.1 or later.',
         items: [
-          '**macOS 13 Ventura (2022)**: eGPU support dropped. All Apple Silicon Macs affected.',
-          '**macOS 14 Sonoma, 15 Sequoia**: Still no eGPU compute support.',
+          '**macOS 13 Ventura (2022)**: Native eGPU compute support dropped. All Apple Silicon Macs affected.',
+          '**macOS 14 Sonoma, 15 Sequoia**: Still no native (Metal) eGPU compute support.',
+          '**TinyGPU driver (April 2026)**: Apple-notarized third-party driver adds CUDA/ROCm eGPU compute on Apple Silicon via TB3/4 or USB4. Not Metal; not display output. Ollama auto-detects it.',
           '**Intel MacBooks (2018–2020)**: eGPU worked via Thunderbolt 3 on older macOS. These Macs are discontinued and will not receive macOS updates past macOS Tahoe.',
-          '**External display via eGPU**: Still works on older Macs as an output-only device.',
+          '**External display via eGPU**: Still works on older Intel Macs as an output-only device.',
         ],
       },
       alternatives: {
@@ -77,10 +80,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             ],
           },
           {
-            title: 'Thunderbolt 4 eGPU on Windows/Linux Laptop (If Not on Mac)',
-            content: 'On an x86 Windows or Linux laptop with Thunderbolt 4, eGPU does work for Ollama. The bandwidth penalty is ~35–45% vs a native PCIe x16 slot, but Ollama\'s inference is memory-bandwidth-limited (not PCIe-limited), so real-world speed drops are 10–20%. Recommended enclosure: Razer Core X (~$299) + RTX 3090. Expect 50–65 tok/s on 7B Q4 vs 65–80 tok/s for a native slot.',
+            title: 'TinyGPU Driver + eGPU on Apple Silicon Mac (New in 2026)',
+            content: 'As of April 2026, Tiny Corp\'s TinyGPU driver (Apple-signed) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported: NVIDIA Ampere (RTX 3000) or newer; AMD RDNA3 or newer. With an RTX 4090 eGPU, expect ~45–50 tok/s on 8B Q4. This is a third-party driver — not Apple-native Metal support — so expect occasional compatibility updates as macOS evolves.',
             affiliateLinks: [
-              { label: 'Razer Core X eGPU Enclosure on Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'RTX 4090 eGPU on Amazon (for TinyGPU setup)', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'Thunderbolt eGPU on Windows/Linux Laptop (If Not on Mac)',
+            content: 'On an x86 Windows or Linux laptop with Thunderbolt 4 or 5, eGPU does work for Ollama. The bandwidth penalty is ~35–45% vs a native PCIe x16 slot, but Ollama\'s inference is memory-bandwidth-limited (not PCIe-limited), so real-world speed drops are 10–20%. Current recommended enclosure: Razer Core X V2 ($349.99, Thunderbolt 5, Windows/USB4 only — macOS support dropped) or the original Razer Core X (still available, ~$249, Thunderbolt 3, includes PSU). Expect 50–65 tok/s on 7B Q4 vs 65–80 tok/s for a native slot.',
+            affiliateLinks: [
+              { label: 'Razer Core X V2 eGPU Enclosure on Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
+              { label: 'Razer Core X (original) on Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -90,7 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?',
-            a: 'Not for GPU compute. Apple\'s macOS does not expose an API for external GPUs to run Metal compute tasks on M-series hardware. The only path is to connect the MacBook to an Ollama server running on a separate machine (a mini PC or desktop with a dedicated GPU) over the local network. Set OLLAMA_HOST=0.0.0.0 on the server and point your MacBook\'s apps to that IP address.',
+            a: 'Yes — as of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported GPUs: NVIDIA Ampere (RTX 3000+) or AMD RDNA3+. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. Note: this is a third-party driver, not native Metal — it does not provide display output. The simpler path if you prefer stability: connect the MacBook to an Ollama server on a separate GPU machine over LAN (set OLLAMA_HOST=0.0.0.0 on the server).',
           },
           {
             q: 'Will Apple bring back eGPU support for Apple Silicon?',
@@ -121,7 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'Can I use an eGPU with a MacBook for local LLM inference?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. Apple Silicon MacBooks (M2/M3/M4/M5) cannot use eGPUs for GPU compute. Apple removed Thunderbolt eGPU support in macOS Ventura (2022). The alternative: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.',
+            text: 'Not via native macOS. Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022). However, as of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it. For a fully supported path: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.',
           },
         },
         {
@@ -129,12 +140,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           name: 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Not for GPU compute. Connect the MacBook to an Ollama server running on a separate machine with a dedicated GPU over your local network (OLLAMA_HOST=0.0.0.0 on the server).',
+            text: 'Yes — as of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4. Ollama auto-detects the CUDA backend. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. This is a third-party driver — not native Metal. Alternatively, connect the MacBook to an Ollama server on a separate GPU machine over LAN (OLLAMA_HOST=0.0.0.0 on the server).',
           },
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'en' },
   },
 
   de: {
@@ -160,7 +171,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Beste GPU + portable Lösung: AMD Mini-PC (UM890 Pro) + OCuLink + RTX 3090',
         'OCuLink liefert ~80% PCIe-x16-Bandbreite — kein Flaschenhals für LLM-Inferenz',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -249,7 +260,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU für MacBook und lokale KI: Was 2026 funktioniert', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/de/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU für MacBook und lokale KI: Was 2026 funktioniert', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/de/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'de' },
   },
 
   fr: {
@@ -275,7 +286,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Meilleure combo GPU + portable : mini PC AMD (UM890 Pro) + OCuLink + RTX 3090',
         'OCuLink offre ~80% de la bande passante PCIe x16 — pas de goulot d\'étranglement pour l\'inférence LLM',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -363,7 +374,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU pour MacBook et IA locale : ce qui marche en 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/fr/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU pour MacBook et IA locale : ce qui marche en 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/fr/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'fr' },
   },
 
   ja: {
@@ -389,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         '最良GPU+携帯性：AMDミニPC（UM890 Pro）+ OCuLink + RTX 3090',
         'OCuLinkはPCIe x16帯域幅の約80%を提供——LLM推論でのボトルネックなし',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -477,7 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPUとローカルAI：2026年に動作するもの', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ja/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPUとローカルAI：2026年に動作するもの', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ja/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ja' },
   },
 
   zh: {
@@ -503,7 +514,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         '最佳GPU+便携方案：AMD迷你PC（UM890 Pro）+ OCuLink + RTX 3090',
         'OCuLink提供约80%的PCIe x16带宽——LLM推理无瓶颈',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -603,7 +614,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU与本地AI：2026年什么有效', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU与本地AI：2026年什么有效', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/zh/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'zh' },
   },
 
   es: {
@@ -629,7 +640,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Mejor combinación GPU + portabilidad: mini PC AMD (UM890 Pro) + OCuLink + RTX 3090',
         'OCuLink ofrece ~80% del ancho de banda PCIe x16 — sin cuello de botella para inferencia LLM',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -680,10 +691,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             ],
           },
           {
-            title: 'eGPU Thunderbolt 4 en laptop Windows/Linux (si no estás en Mac)',
-            content: 'En un laptop x86 con Windows o Linux con Thunderbolt 4, la eGPU sí funciona para Ollama. La penalización de ancho de banda es ~35–45% vs un slot PCIe x16 nativo, pero la inferencia de Ollama está limitada por el ancho de banda de memoria (no por PCIe). Carcasa recomendada: Razer Core X (~$299) + RTX 3090.',
+            title: 'eGPU Thunderbolt en laptop Windows/Linux (si no estás en Mac)',
+            content: 'En un laptop x86 con Windows o Linux con Thunderbolt 4 o 5, la eGPU sí funciona para Ollama. La penalización de ancho de banda es ~35–45% vs un slot PCIe x16 nativo, pero la inferencia de Ollama está limitada por el ancho de banda de memoria (no por PCIe). Carcasa actual recomendada: Razer Core X V2 ($349,99, Thunderbolt 5, solo Windows/USB4) o el Razer Core X original (~$249, Thunderbolt 3, con fuente de alimentación incluida).',
             affiliateLinks: [
-              { label: 'Razer Core X eGPU Enclosure en Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'Razer Core X V2 eGPU Enclosure en Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
+              { label: 'Razer Core X (original) en Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -737,7 +749,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: qué funciona en 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: qué funciona en 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/es/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'es' },
   },
   pt: {
     freshness_tier: 'semi_annual',
@@ -762,7 +774,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Melhor combinação GPU + portabilidade: mini PC AMD (UM890 Pro) + OCuLink + RTX 3090',
         'OCuLink oferece ~80% da largura de banda PCIe x16 — sem gargalo para inferência LLM',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -813,10 +825,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             ],
           },
           {
-            title: 'eGPU Thunderbolt 4 em notebook Windows/Linux (se não estiver no Mac)',
-            content: 'Em um notebook x86 com Windows ou Linux com Thunderbolt 4, a eGPU funciona para o Ollama. A penalidade de largura de banda é ~35–45% vs um slot PCIe x16 nativo, mas a inferência do Ollama é limitada pela largura de banda de memória (não pelo PCIe). Gabinete recomendado: Razer Core X (~$299) + RTX 3090.',
+            title: 'eGPU Thunderbolt em notebook Windows/Linux (se não estiver no Mac)',
+            content: 'Em um notebook x86 com Windows ou Linux com Thunderbolt 4 ou 5, a eGPU funciona para o Ollama. A penalidade de largura de banda é ~35–45% vs um slot PCIe x16 nativo, mas a inferência do Ollama é limitada pela largura de banda de memória (não pelo PCIe). Gabinete atual recomendado: Razer Core X V2 ($349,99, Thunderbolt 5, somente Windows/USB4) ou o Razer Core X original (~$249, Thunderbolt 3, com fonte de alimentação incluída).',
             affiliateLinks: [
-              { label: 'Razer Core X eGPU Enclosure na Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'Razer Core X V2 eGPU Enclosure na Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
+              { label: 'Razer Core X (original) na Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -870,7 +883,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt-BR' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt-BR' },
   },
   ar: {
     freshness_tier: 'semi_annual',
@@ -895,7 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'أفضل مزيج من معالج الرسومات والحمولية: حاسب AMD مصغر (UM890 Pro) + OCuLink + RTX 3090',
         'يوفر OCuLink ~80% من نطاق PCIe x16 الترددي — بدون اختناق لاستدلال النماذج اللغوية الكبيرة',
       ],
-      updatedDate: '2026-05-26',
+      updatedDate: '2026-07',
     },
     sections: {
       tldr: {
@@ -946,10 +959,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             ],
           },
           {
-            title: 'eGPU عبر Thunderbolt 4 في حاسب محمول Windows/Linux (إذا لم تكن على Mac)',
-            content: 'في حاسب محمول x86 يعمل بنظام Windows أو Linux مع Thunderbolt 4، تعمل eGPU مع Ollama. عقوبة النطاق الترددي ~35–45% مقارنةً بفتحة PCIe x16 الأصلية، لكن استدلال Ollama محدود بنطاق ترددي الذاكرة (لا بـ PCIe). الحاوية الموصى بها: Razer Core X (~299 دولار) + RTX 3090.',
+            title: 'eGPU عبر Thunderbolt في حاسب محمول Windows/Linux (إذا لم تكن على Mac)',
+            content: 'في حاسب محمول x86 يعمل بنظام Windows أو Linux مع Thunderbolt 4 أو 5، تعمل eGPU مع Ollama. عقوبة النطاق الترددي ~35–45% مقارنةً بفتحة PCIe x16 الأصلية، لكن استدلال Ollama محدود بنطاق ترددي الذاكرة (لا بـ PCIe). الحاوية الموصى بها حالياً: Razer Core X V2 (349,99 دولار، Thunderbolt 5، لنظام Windows/USB4 فقط) أو Razer Core X الأصلية (~249 دولار، Thunderbolt 3، تشمل وحدة إمداد الطاقة).',
             affiliateLinks: [
-              { label: 'Razer Core X eGPU Enclosure على Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'Razer Core X V2 eGPU Enclosure على Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
+              { label: 'Razer Core X (الأصلية) على Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -1003,7 +1017,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ar' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ar' },
   },
   ko: {
     freshness_tier: 'semi_annual',
@@ -1029,7 +1043,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '최적 GPU + 휴대성 조합: AMD 미니 PC(UM890 Pro) + OCuLink + RTX 3090',
           'OCuLink은 PCIe x16 대역폭의 ~80% 제공 — LLM 추론 병목 없음',
         ],
-        updatedDate: '2026-05-26',
+        updatedDate: '2026-07',
       },
     },
     targetKeywords: [
@@ -1089,10 +1103,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             ],
           },
           {
-            title: 'Thunderbolt 4 eGPU(Windows/Linux 노트북 사용 시)',
-            content: 'Thunderbolt 4를 탑재한 Windows 또는 Linux x86 노트북에서는 Ollama에 eGPU가 작동합니다. 네이티브 PCIe x16 슬롯 대비 대역폭 손실은 ~35–45%이지만, Ollama 추론은 메모리 대역폭으로 제한됩니다(PCIe가 아님). 권장 케이스: Razer Core X(~$299) + RTX 3090.',
+            title: 'Thunderbolt eGPU(Windows/Linux 노트북 사용 시)',
+            content: 'Thunderbolt 4 또는 5가 탑재된 Windows 또는 Linux x86 노트북에서는 Ollama에 eGPU가 작동합니다. 네이티브 PCIe x16 슬롯 대비 대역폭 손실은 ~35–45%이지만, Ollama 추론은 메모리 대역폭으로 제한됩니다(PCIe가 아님). 현재 권장 케이스: Razer Core X V2($349.99, Thunderbolt 5, Windows/USB4 전용) 또는 기존 Razer Core X(~$249, Thunderbolt 3, PSU 포함).',
             affiliateLinks: [
-              { label: 'Amazon에서 Razer Core X eGPU Enclosure 보기', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'Amazon에서 Razer Core X V2 eGPU Enclosure 보기', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
+              { label: 'Amazon에서 Razer Core X(구형) 보기', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -1173,6 +1188,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가', datePublished: '2026-05-26', dateModified: '2026-05-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ko' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ko' },
   },
 }
