@@ -3,7 +3,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
     title: 'Prompt Library Management: How to Organize, Version, and Govern Team Prompts',
     seoTitle: 'Prompt Library Management: Organize & Version Team Prompts',
@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisierung',
     title: 'Prompt-Bibliothek für Teams: Organisieren, Versionieren & Verwalten (2026)',
     seoTitle: 'Prompt-Bibliothek: Organisation und Versionierung',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatización',
     title: 'Gestión de biblioteca de prompts: cómo organizar, versionar y gobernar los prompts del equipo',
     seoTitle: 'Gestión de biblioteca de prompts: organiza y versiona',
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisation',
     title: 'Gestion de bibliothèque de prompts : organiser, versionner et gouverner les prompts d\'équipe',
     seoTitle: 'Bibliothèque de prompts : organiser et versionner',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'ワークフローと自動化',
     title: 'プロンプトライブラリ管理：チームのプロンプトを整理、バージョン管理、統治する方法',
     seoTitle: 'プロンプトライブラリ管理：チームプロンプトの整理とバージョン管理',
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '工作流与自动化',
     title: 'Prompt库管理：如何组织、版本控制和治理团队Prompt',
     seoTitle: 'Prompt库管理：组织和版本控制团队Prompt',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatización',
     title: '프롬프트 라이브러리 관리: 팀 프롬프트 구성·버전 관리·거버넌스 방법',
     seoTitle: '프롬프트 라이브러리 관리: 구성과 버전 관리',
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
     title: 'إدارة مكتبة التلقينات: كيفية تنظيم تلقينات الفريق وإصدارها وحوكمتها',
     seoTitle: 'إدارة مكتبة ⁨Prompt⁩ للفريق: تنظيم وإصدار ⁨Git⁩',

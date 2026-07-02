@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     title: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
     intro: 'Persona prompting is the practice of defining a clear role, worldview, and behavior for an AI model so it consistently answers like a specific expert or character across many prompts and sessions.',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniken',
     title: 'Persona-Prompting: Geben Sie Ihrer KI eine Rolle und sehen Sie die Verbesserung',
     intro: 'Persona-Prompting ist die Praxis, ein klare Rolle, Weltanschauung und Verhalten für ein KI-Modell zu definieren, damit es konsistent wie ein spezifischer Experte oder eine Fachperson über viele Prompts und Sessions hinweg antwortet.',
@@ -690,7 +690,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     title: 'Persona Prompting: dale un rol a tu IA y observa cómo mejora',
     intro: 'El persona prompting es la práctica de definir un rol claro, una visión del mundo y un comportamiento para un modelo de IA, de modo que responda de forma consistente como un experto o personaje específico en muchos prompts y sesiones.',
@@ -1098,7 +1098,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     title: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
     intro: 'Le persona prompting est la pratique de définir un rôle clair, une vision du monde et un comportement pour un modèle d\'IA, afin qu\'il réponde de façon cohérente comme un expert spécifique ou un professionnel particulier, sur plusieurs prompts et sessions.',
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     title: 'ペルソナプロンプティング：AIに一貫性のある役割を与える',
     intro: 'ペルソナプロンプティングは、AIモデルに明確な役割、世界観、行動を定義して、複数のプロンプトやセッションにわたって特定の専門家やキャラクターのように一貫して回答させる実践です。',
@@ -1681,7 +1681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     title: '人物角色提示：引导AI表现出一致的专家行为',
     intro: '人物角色提示是一种定义明确的角色、世界观和行为的做法，使AI模型在多个提示和会话中能够像特定专家或角色一样一致地回答问题。',
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     title: 'توجيه الشخصية: امنح ذكاءك الاصطناعي دوراً وراقب كيف يتحسن',
     intro: 'توجيه الشخصية هو ممارسة تحديد دور واضح ورؤية للعالم وسلوك لنموذج الذكاء الاصطناعي، بحيث يستجيب باستمرار كخبير أو شخصية محددة عبر عدة طلبات وجلسات.',
@@ -2125,7 +2125,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '기법',
     title: '페르소나 프롬프팅: AI에게 역할을 부여하고 개선을 확인하십시오',
     intro: '페르소나 프롬프팅은 AI 모델이 여러 프롬프트와 세션에 걸쳐 특정 전문가나 캐릭터처럼 일관되게 응답하도록 명확한 역할, 세계관, 행동 방식을 정의하는 기법입니다.',

@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STAR Prompt Framework: Context, Objective, Style, Tone, Audience, Response — Complete Guide',
       seoTitle: 'CO-STAR Framework: Structure Complex Prompts in 6 Steps',
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     de: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STAR-Prompt-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response — Vollständiger Leitfaden',
       seoTitle: 'CO-STAR-Framework: Strukturierte KI-Prompts in 6 Schritten',
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta — Guía Completa',
       seoTitle: 'Framework CO-STAR: Estructura Prompts Complejos en 6 Pasos',
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ar: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'إطار ⁨CO-STAR⁩: السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة — دليل شامل',
       seoTitle: 'إطار ⁨CO-STAR⁩: هيكل موجّهاتك في ⁨6⁩ خطوات واضحة',
@@ -1267,7 +1267,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     pt: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta — Guia Completo',
       seoTitle: 'Framework CO-STAR: Estruture Prompts Complexos em 6 Passos',
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     fr: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Framework CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse — Guide complet',
       seoTitle: 'Framework CO-STAR : Structurer vos Prompts en 6 Étapes',
@@ -1904,7 +1904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス — 完全ガイド',
       seoTitle: 'CO-STARフレームワーク：複雑なプロンプト用6要素構造',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     zh: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STAR框架：背景、目标、风格、语调、受众、回应 — 完整指南',
       seoTitle: 'CO-STAR框架：复杂任务的6组件提示结构',
@@ -2489,7 +2489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'CO-STAR 프레임워크: 컨텍스트, 목표, 스타일, 어조, 대상, 응답 — 완전 가이드',
     seoTitle: 'CO-STAR 프레임워크: 6단계로 복잡한 프롬프트 구조화하기',

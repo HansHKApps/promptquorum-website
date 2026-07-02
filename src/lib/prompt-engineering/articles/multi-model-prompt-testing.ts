@@ -3,7 +3,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
     title: 'Multi-Model Prompt Testing: Compare Outputs Across GPT-5.5, Claude, and Gemini',
     dateModified: '2026-06-21',
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisierung',
     title: 'Multi-Modell-Prompt-Testing: Ausgaben über GPT-5.5, Claude und Gemini vergleichen',
     seoTitle: 'Multi-Modell-Tests: GPT-5.5, Claude, Gemini',
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatización',
     title: 'Pruebas de prompts multi-modelo: Comparar resultados en GPT-5.5, Claude y Gemini',
     seoTitle: 'Pruebas multi-modelo: GPT-5.5, Claude, Gemini',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisation',
     title: 'Test de prompts multi-modèles : comparer les sorties de GPT-5.5, Claude et Gemini',
     seoTitle: 'Test de prompts multi-modèles : GPT-5.5, Claude, Gemini',
@@ -1085,7 +1085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'ワークフローと自動化',
     title: 'マルチモデルプロンプトテスト：GPT-5.5、Claude、Geminiの出力比較',
     seoTitle: 'マルチモデルプロンプトテスト：GPT-5.5、Claude、Gemini比較',
@@ -1257,7 +1257,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '工作流与自动化',
     title: '多模型提示词测试：比较GPT-5.5、Claude和Gemini的输出',
     seoTitle: '多模型提示词测试：GPT-5.5、Claude、Gemini比较',
@@ -1430,7 +1430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
     title: 'اختبار النماذج المتعددة للـ ⁨prompt⁩: مقارنة المخرجات عبر ⁨GPT-5.5⁩ و⁨Claude⁩ و⁨Gemini⁩',
     seoTitle: 'اختبار النماذج المتعددة: ⁨GPT-5.5⁩ و⁨Claude⁩ و⁨Gemini⁩',
@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '워크플로우 및 자동화',
     title: '멀티모델 프롬프트 테스트: GPT-5.5, Claude, Gemini 출력 비교',
     seoTitle: '멀티모델 프롬프트 테스트: GPT-5.5, Claude, Gemini 비교',

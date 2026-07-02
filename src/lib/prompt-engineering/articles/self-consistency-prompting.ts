@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Self-Consistency Prompting: Generate Multiple Answers, Pick the One That\'s Right',
       intro: '**Self-consistency prompting generates 5-20 independent reasoning paths for the same question and selects the answer that appears most frequently.** Instead of trusting a single AI answer (which may be wrong), you ask the question multiple times at higher temperatures and let majority voting decide. This simple technique improves accuracy on math, logic, and multi-step analysis by 15-25 percentage points.',
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     de: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen',
       intro: '**Self-Consistency Prompting generiert 5–20 unabhängige Lösungswege für die gleiche Frage und wählt dann die am häufigsten auftretende Antwort aus.** Anstatt einer einzelnen KI-Antwort zu vertrauen, verlassen Sie sich auf den Konsens vieler. Diese einfache Technik verbessert die Genauigkeit bei Mathematik, Logik und mehrstufiger Analyse um 15–25 Prozentpunkte.',
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Self-Consistency Prompting: genera múltiples respuestas y elige la correcta',
       intro: '**El self-consistency prompting genera 5–20 caminos de razonamiento independientes para la misma pregunta y selecciona la respuesta que aparece con más frecuencia.** En lugar de confiar en una sola respuesta de IA (que puede ser incorrecta), haces la pregunta múltiples veces con temperaturas más altas y dejas que el voto mayoritario decida. Esta técnica sencilla mejora la precisión en matemáticas, lógica y análisis de múltiples pasos en 15–25 puntos porcentuales.',
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ar: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة',
       intro: '**يُولّد برومبت الاتساق الذاتي 5–20 مساراً استدلالياً مستقلاً للسؤال نفسه ويختار الإجابة التي تظهر في أغلب الأحيان.** بدلاً من الاعتماد على إجابة ذكاء اصطناعي واحدة (قد تكون خاطئة)، تطرح السؤال مرات عدة بدرجات حرارة أعلى وتدع التصويت الأغلبي يُقرر. هذه التقنية البسيطة تُحسّن الدقة في الرياضيات والمنطق والتحليل متعدد الخطوات بمقدار 15–25 نقطة مئوية.',
@@ -1255,7 +1255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     fr: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus',
       intro: '**Le Self-Consistency Prompting génère 5–20 chemins de raisonnement indépendants pour la même question, puis sélectionne la réponse qui apparaît le plus fréquemment.** Au lieu de faire confiance à une seule réponse IA, vous vous appuyez sur le consensus de plusieurs. Cette technique simple améliore la précision en mathématiques, logique et analyse multi-étapes de 15–25 points de pourcentage.',
@@ -1510,7 +1510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: '手法',
       title: 'セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ',
       intro: '**セルフコンシステンシープロンプティングは、同じ質問に対して5～20の独立した推論パスを生成し、最も一貫性のある答えを投票で選ぶ手法です。** このアプローチにより、より高い精度が得られます。特に数学や論理的な問題で有効です。',
@@ -1984,7 +1984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       }
     },
     zh: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: '技术',
       title: '自洽一致性提示：生成多个答案，投票选择最佳答案',
       intro: '**自洽一致性提示（Self-Consistency）让模型对同一个问题生成5-20条独立的推理路径，然后投票选择出现最频繁的答案。** 这个简单的技巧将数学、逻辑和复杂分析的准确率从56%提升到74%，比单次Chain-of-Thought推理提高18个百分点。',
@@ -2483,7 +2483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       }
     },
   ko: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: '자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오',
       intro: '**자기 일관성 프롬프팅은 동일한 질문에 대해 5~20개의 독립적인 추론 경로를 생성한 후 가장 자주 등장하는 답변을 선택합니다.** 단일 AI 답변을 신뢰하는 대신(틀릴 수 있으므로), 더 높은 temperature에서 동일한 질문을 여러 번 제시하고 다수결로 결론을 도출합니다. 이 간단한 기법은 수학, 논리, 다단계 분석의 정확도를 15~25 퍼센트포인트 향상시킵니다.',

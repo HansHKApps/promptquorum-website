@@ -42,8 +42,9 @@ const FORBIDDEN_PATTERNS = {
   'command': /Command\s+(?:R\+?|Light)/g,
   'palm': /Palm-?2/g,
 
-  // Version patterns
-  'version_numbers': /\b(?:v)?(\d+\.\d+(?:\.\d+)?)\b/g,
+  // Version patterns — require major version ≥ 1 (to avoid matching prices like
+  // €0.15/kWh, 0.29 EUR, etc.) or a "v" prefix (e.g., v0.86.2 for Aider)
+  'version_numbers': /\b(?:v\d+\.\d+(?:\.\d+)?|[1-9]\d*\.\d+(?:\.\d+)?)\b/g,
 
   // Years (2020-2030)
   'years': /\b(202[0-9]|203[0-9])\b/g,

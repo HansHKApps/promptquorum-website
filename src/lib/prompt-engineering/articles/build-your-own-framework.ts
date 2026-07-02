@@ -3,7 +3,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Build Your Own Prompt Framework: 5-Step Design Process',
     seoTitle: 'Build a Custom Prompt Framework: 5-Step Process',
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Eigenes Prompt-Framework erstellen: 5-Schritte-Prozess (2026)',
     seoTitle: 'Eigenes Prompt-Framework entwickeln: 5-Schritte-Anleitung',
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Construye tu propio framework de prompts: proceso de 5 pasos',
     seoTitle: 'Crear un framework de prompts personalizado: 5 pasos',
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   pt: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Construa seu próprio framework de prompts: processo de 5 etapas',
     seoTitle: 'Criar um framework de prompts personalizado: 5 etapas',
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Créer son propre framework de prompts : processus en 5 étapes',
     seoTitle: 'Créer un framework de prompts personnalisé : 5 étapes',
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'フレームワーク',
     title: '独自プロンプトフレームワークの構築：5ステップ設計プロセス',
     seoTitle: 'カスタムプロンプトフレームワーク構築：5ステップ手順',
@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '框架',
     title: '构建自己的Prompt框架：5步设计流程',
     seoTitle: '构建自定义Prompt框架：5步设计流程指南',
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'بناء إطار عمل خاص بك للأوامر: عملية من ⁨5⁩ خطوات',
     seoTitle: 'بناء إطار عمل ⁨Prompt⁩ مخصص: عملية ⁨5⁩ خطوات',
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: '나만의 프롬프트 프레임워크 만들기: 5단계 프로세스',
     seoTitle: '커스텀 프롬프트 프레임워크 만들기: 5단계 가이드',

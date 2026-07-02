@@ -3,7 +3,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: "Google's Prompting Guide",
     intro: "Google's Prompting Guide is a set of practical recommendations from Google DeepMind for writing prompts that make models more reliable, controllable, and useful in real-world applications. The guide emphasizes clarity, structure, and explicit constraints over clever wording. PromptQuorum integrates Google's Prompting Guide as a reusable framework that users can apply directly across all supported models.",
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Google Prompting Guide',
     intro: 'Der Google Prompting Guide ist eine Sammlung praktischer Empfehlungen von Google DeepMind für das strukturierte Schreiben von Prompts. Der Guide betont Klarheit, Struktur und explizite Beschränkungen statt cleverer Formulierungen. PromptQuorum bietet diese Anleitung als Framework an, das Benutzer direkt über alle unterstützten Modelle hinweg anwenden können.',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Guide Google pour la Rédaction de Prompts',
     intro: 'Le Guide Google pour la Rédaction de Prompts propose des pratiques concrètes de Google DeepMind pour rédiger des prompts clairs et structurés. Ces principes rendent les modèles plus fiables et prévisibles. PromptQuorum intègre ce guide comme framework directement applicable à tous les modèles supportés.',
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Googleプロンプト作成ガイド',
     intro: 'Googleプロンプトガイドは、Google DeepMindが提唱する実践的な原則の集まりです。明確さ、構造、安全性を重視し、巧い言い方より明白な指示を優先します。PromptQuorumはこのガイドをフレームワークとして統合しており、すべてのユーザーが直接活用できます。',
@@ -915,7 +915,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Google提示词撰写指南',
     intro: 'Google提示词撰写指南是Google DeepMind汇总的实用原则集，教你如何清晰、结构化地指示AI模型。这些原则对Gemini 3.1 Pro、GPT-5.5、Claude都同样有效。PromptQuorum已将此指南集成为框架，所有用户可直接使用。',
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: "La Guía de Prompts de Google",
     intro: "La Guía de Prompts de Google es un conjunto de recomendaciones prácticas de Google DeepMind para redactar prompts que hacen que los modelos sean más fiables, controlables y útiles en aplicaciones reales. La guía enfatiza la claridad, la estructura y las restricciones explícitas sobre la formulación ingeniosa. PromptQuorum integra la Guía de Prompts de Google como un framework reutilizable que los usuarios pueden aplicar directamente en todos los modelos compatibles.",
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'دليل ⁨Google⁩ للمطالبات',
     intro: 'دليل Google للمطالبات هو مجموعة من التوصيات العملية الصادرة عن Google DeepMind لكتابة المطالبات التي تجعل النماذج أكثر موثوقية وقابلية للتحكم وفائدةً في التطبيقات الواقعية. يُركّز الدليل على الوضوح والبنية والقيود الصريحة بدلاً من الصياغة الذكية. يُدمج PromptQuorum دليل Google للمطالبات بوصفه إطار عمل قابلاً لإعادة الاستخدام، يمكن للمستخدمين تطبيقه مباشرةً على جميع النماذج المدعومة.',
@@ -1836,7 +1836,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'Google 프롬프팅 가이드',
     intro: 'Google 프롬프팅 가이드는 Google DeepMind가 제공하는 실용적인 프롬프트 작성 권장 사항 모음입니다. 이 가이드는 영리한 문구보다 명확성, 구조, 명시적 제약을 강조합니다. PromptQuorum은 Google 프롬프팅 가이드를 재사용 가능한 프레임워크로 통합하여 사용자가 지원하는 모든 모델에 직접 적용할 수 있도록 합니다.',

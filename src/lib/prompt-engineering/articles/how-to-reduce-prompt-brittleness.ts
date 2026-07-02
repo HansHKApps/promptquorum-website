@@ -3,7 +3,7 @@ import type { PEArticle } from '@/lib/prompt-engineering/types';
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
     title: 'How to Reduce Prompt Brittleness: 7 Techniques for Reliable Prompts',
     intro: 'Prompt brittleness causes silent production failures. Learn 7 techniques — structured output, defensive instructions, regression testing — to make prompts reliable across input variations and model updates.',
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
     title: 'Prompt-Brittleness reduzieren: 7 Techniken für zuverlässige Prompts',
     intro: 'Prompt-Brittleness verursacht stille Produktionsfehler. Lernen Sie 7 Techniken — strukturierte Ausgabe, defensive Anweisungen, Regressionstests — um Prompts über Eingabevariationen und Modellaktualisierungen hinweg zuverlässig zu machen.',
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
     title: 'Cómo reducir la fragilidad de prompts: 7 técnicas para prompts fiables',
     intro: 'La fragilidad de prompts causa fallos silenciosos en producción. Aprende 7 técnicas — salida estructurada, instrucciones defensivas, pruebas de regresión — para que los prompts sean fiables ante variaciones de entrada y actualizaciones del modelo.',
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
     title: 'Réduire la Fragilité des Prompts : 7 Techniques pour des Prompts Fiables',
     intro: 'La fragilité des prompts provoque des défaillances silencieuses en production. Découvrez 7 techniques — sortie structurée, instructions défensives, tests de régression — pour rendre vos prompts fiables malgré les variations d\'entrée et les mises à jour du modèle.',
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '評価と信頼性',
     title: 'プロンプトの脆弱性を低減する7つのテクニック',
     intro: 'プロンプト脆弱性は本番環境での静かな失敗を引き起こします。構造化出力、防御的指示、回帰テストの7つのテクニックを学んで、入力変動とモデル更新全体でプロンプトを信頼できるようにしましょう。',
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '评估和可靠性',
     title: '减少Prompt脆弱性：7种可靠Prompt技术',
     intro: 'Prompt脆弱性导致生产环境中的静默失败。学习7种技术——结构化输出、防御性指令、回归测试——使Prompt在输入变化和模型更新中保持可靠。',
@@ -2035,7 +2035,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
     title: 'كيفية تقليل هشاشة الـ ⁨prompt⁩: ⁨7⁩ تقنيات للحصول على ⁨prompts⁩ موثوقة',
     intro: 'تُسبِّب هشاشة الـ prompt إخفاقاتٍ صامتةً في بيئة الإنتاج. تعرَّف على 7 تقنيات — الإخراج المهيكل، والتعليمات الدفاعية، واختبار الانحدار — لجعل الـ prompts موثوقةً في مواجهة التباينات في المدخلات وتحديثات النماذج.',
@@ -2324,7 +2324,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
     title: '프롬프트 취약성 줄이기: 신뢰할 수 있는 프롬프트를 위한 7가지 기법',
     intro: '프롬프트 취약성은 프로덕션에서 발생하는 조용한 실패의 원인입니다. 구조화된 출력, 방어적 지시문, 회귀 테스트 등 7가지 기법을 통해 입력 변형과 모델 업데이트에도 안정적으로 작동하는 프롬프트를 만드는 방법을 학습하십시오.',

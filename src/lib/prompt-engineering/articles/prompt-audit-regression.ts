@@ -3,7 +3,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Governance',
     title: 'Prompt Audit & Regression Testing: Catch Silent Failures Before Production (2026)',
     dateModified: '2026-06-20',
@@ -268,7 +268,7 @@ tests:
   },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team-Governance',
     title: 'Prompt-Audit & Regressionstests: Stille Fehler vor Produktion erkennen (2026)',
     seoTitle: 'Prompt-Audit & Regressionstests: Stille Fehler (2026)',
@@ -522,7 +522,7 @@ tests:
   },
 
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Governance',
     title: 'Auditoría de prompts y pruebas de regresión: detecta fallos silenciosos antes de producción (2026)',
     seoTitle: 'Auditoría y regresión de prompts: evita fallos silenciosos',
@@ -1035,7 +1035,7 @@ tests:
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Gouvernance d\'équipe',
     title: 'Audit de prompts & tests de régression : défaillances silencieuses (2026)',
     seoTitle: 'Audit & Tests de Régression : Défaillances Silencieuses',
@@ -1289,7 +1289,7 @@ tests:
   },
 
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'チームガバナンス',
     title: 'プロンプト監査と回帰テスト：本番前に静かな障害を検出（2026年）',
     seoTitle: 'プロンプト監査と回帰テスト：静かな障害検出（2026）',
@@ -1543,7 +1543,7 @@ tests:
   },
 
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '团队治理',
     title: '提示词审计与回归测试：生产前捕获静默故障（2026）',
     seoTitle: '提示词审计与回归测试：静默故障（2026）',
@@ -1797,7 +1797,7 @@ tests:
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Governance',
     title: 'تدقيق الـ ⁨Prompt⁩ واختبار الانحدار: اكتشف الأعطال الصامتة قبل الإنتاج',
     seoTitle: 'تدقيق الـ ⁨Prompt⁩ واختبار الانحدار: أعطال صامتة',
@@ -2053,7 +2053,7 @@ tests:
     },
   },
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '팀 거버넌스',
     title: '프롬프트 감사 및 회귀 테스트: 프로덕션 배포 전 무음 장애 포착 (2026)',
     seoTitle: '프롬프트 감사 및 회귀 테스트: 무음 장애 포착',

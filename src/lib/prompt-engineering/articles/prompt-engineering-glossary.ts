@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       title: 'Prompt Engineering Glossary: 500 Key Terms',
       intro: 'Concise definitions of the 500 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
@@ -1610,7 +1610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 },
   ko: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: '기초',
       title: '프롬프트 엔지니어링 용어집: 500개 핵심 용어',
       intro: '토큰과 컨텍스트 윈도우부터 에이전트 오케스트레이션, RAG, 평가 지표까지 — 프롬프트 엔지니어링에서 가장 중요한 500개 용어를 간결하게 정의합니다.',

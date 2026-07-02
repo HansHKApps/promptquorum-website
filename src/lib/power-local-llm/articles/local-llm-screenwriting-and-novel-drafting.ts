@@ -7,7 +7,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -1457,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -1818,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -2179,7 +2179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -2549,7 +2549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
 },
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
@@ -2919,7 +2919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
 },
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     theme: 'Creative & Roleplay',
