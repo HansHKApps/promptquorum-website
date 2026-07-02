@@ -3,7 +3,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Operations & Governance',
     title: 'Prompt Version Control: Tracking, Rollback & Team Workflows',
     intro: 'Unversioned prompts fail silently — without a change history, there is no rollback path when a prompt update degrades output quality or breaks downstream parsers. Semantic versioning (MAJOR.MINOR.PATCH), git branch workflows, automated regression tests, and structured changelogs apply the same discipline to prompt management that software teams already use for code.',
@@ -355,7 +355,7 @@ jobs:
   },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team-Betrieb & Governance',
     title: 'Prompt-Versionskontrolle: Tracking, Rollback & Team-Workflows',
     intro: 'Unveersionierte Prompts schlagen lautlos fehl — ohne Änderungshistorie gibt es keinen Rollback-Pfad, wenn ein Prompt-Update die Ausgabequalität verschlechtert oder nachgelagerte Parser beschädigt. Semantisches Versioning (MAJOR.MINOR.PATCH), Git-Branch-Workflows, automatisierte Regressionstests und strukturierte Changelogs wenden dieselbe Disziplin auf das Prompt-Management an, die Software-Teams bereits für Code einsetzen.',
@@ -680,7 +680,7 @@ jobs:
   },
 
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Operations & Governance',
     title: 'Control de versiones de prompts: seguimiento, rollback y flujos de trabajo en equipo',
     intro: 'Los prompts sin versionar fallan silenciosamente — sin un historial de cambios, no hay ruta de rollback cuando una actualización del prompt degrada la calidad de salida o rompe los parsers posteriores. El versionado semántico (MAJOR.MINOR.PATCH), los flujos de trabajo de branches de Git, las pruebas de regresión automatizadas y los changelogs estructurados aplican a la gestión de prompts la misma disciplina que los equipos de software ya usan para el código.',
@@ -1028,7 +1028,7 @@ jobs:
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Operations & Governance',
     title: 'التحكم في إصدارات الموجّهات: التتبع والتراجع وسير عمل الفريق',
     intro: 'الموجّهات غير الخاضعة للتحكم في الإصدارات تفشل بصمت — بدون سجل تغييرات، لا توجد مسار للتراجع عندما يُدهور تحديث الموجّه جودة المخرجات أو يُعطل المُحلِّلات اللاحقة. الإصدار الدلالي (MAJOR.MINOR.PATCH) وسير عمل فروع Git واختبارات الانحدار الآلية وسجلات التغييرات المهيكلة تطبّق على إدارة الموجّهات نفس الانضباط الذي تستخدمه فرق البرمجيات بالفعل للكود.',
@@ -1376,7 +1376,7 @@ jobs:
   },
 
   pt: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Operações e Governança de Equipe',
     title: 'Controle de versão de prompts: rastreamento, rollback e fluxos de trabalho em equipe',
     intro: 'Prompts sem controle de versão falham silenciosamente — sem histórico de alterações, não há caminho de rollback quando uma atualização de prompt degrada a qualidade da saída ou quebra os parsers posteriores. O versionamento semântico (MAJOR.MINOR.PATCH), fluxos de trabalho de branches do Git, testes de regressão automatizados e changelogs estruturados aplicam aos prompts a mesma disciplina que as equipes de software já usam para o código.',
@@ -1667,7 +1667,7 @@ jobs:
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Opérations d\'équipe & Gouvernance',
     title: 'Gestion de versions des prompts : Suivi, Rollback & Workflows d\'équipe',
     intro: 'Les prompts non versionnés échouent silencieusement — sans historique des changements, il n\'existe pas de chemin de rollback quand une mise à jour dégrade la qualité des sorties ou brise les parseurs en aval. Le versioning sémantique (MAJOR.MINOR.PATCH), les workflows git, les tests de régression automatisés et les changelogs structurés appliquent aux prompts la même discipline que les équipes logicielles utilisent déjà pour le code.',
@@ -1988,7 +1988,7 @@ jobs:
   },
 
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'チーム運用 & ガバナンス',
     title: 'プロンプトのバージョン管理：追跡・ロールバック・チームワークフロー',
     intro: 'バージョン管理のないプロンプトはサイレントに失敗します。変更履歴がなければ、プロンプト更新で出力品質が低下した際のロールバック手段がありません。セマンティックバージョニング（MAJOR.MINOR.PATCH）・Gitブランチワークフロー・自動回帰テストにより、ソフトウェア開発チームがコードに適用する規律をプロンプト管理にも実現できます。',
@@ -2348,7 +2348,7 @@ jobs:
   },
 
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '团队运营与治理',
     title: 'Prompt 版本控制：追踪、回滚与团队工作流',
     intro: '未版本化的 Prompt 会静默失败——没有变更历史，当 Prompt 更新降低输出质量或破坏下游解析器时，就无法回滚。语义化版本控制（MAJOR.MINOR.PATCH）、Git 分支工作流、自动化回归测试，将软件团队管理代码的规范同等应用于 Prompt 管理。',
@@ -2708,7 +2708,7 @@ jobs:
   },
 
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Operations & Governance',
     title: '프롬프트 버전 관리: 추적·롤백·팀 워크플로',
     intro: '버전 관리되지 않은 프롬프트는 조용히 실패합니다 — 변경 기록 없이는 프롬프트 업데이트가 출력 품질을 저하시키거나 다운스트림 파서를 깨뜨릴 때 롤백 경로가 없습니다. 시맨틱 버전 관리(MAJOR.MINOR.PATCH), Git 브랜치 워크플로, 자동화 회귀 테스트, 구조화된 체인지로그는 소프트웨어 팀이 이미 코드에 사용하는 동일한 규율을 프롬프트 관리에 적용합니다.',

@@ -10,6 +10,18 @@
  * - Time-sensitive terminology (latest, current, newest)
  *
  * Runs on staged content files before commit.
+ *
+ * 2026-07-02: the staged-file filter was `f.includes('content.ts') ||
+ * f.includes('blogContent.ts')` — every cluster except blog now uses
+ * individual per-article files under an articles-barrel.ts convention, so
+ * this hook silently checked nothing for local-llms, prompt-engineering,
+ * power-local-llm, smart-home, prompt-bites, or balcony-solar. Widened to
+ * match individual article files too. Also added metadata-field/link-target
+ * line skipping — without it, every article's own required `publishDate`/
+ * `dateModified` fields (which must contain a year) trip the "years" pattern,
+ * and inline markdown links to other year-bearing article slugs trip it too.
+ * See validate-freshness-tier.mjs's stripToProseOnly() for the same reasoning
+ * applied to that sibling validator.
  */
 
 import fs from 'fs';
@@ -30,8 +42,9 @@ const FORBIDDEN_PATTERNS = {
   'command': /Command\s+(?:R\+?|Light)/g,
   'palm': /Palm-?2/g,
 
-  // Version patterns
-  'version_numbers': /\b(?:v)?(\d+\.\d+(?:\.\d+)?)\b/g,
+  // Version patterns — require major version ≥ 1 (to avoid matching prices like
+  // €0.15/kWh, 0.29 EUR, etc.) or a "v" prefix (e.g., v0.86.2 for Aider)
+  'version_numbers': /\b(?:v\d+\.\d+(?:\.\d+)?|[1-9]\d*\.\d+(?:\.\d+)?)\b/g,
 
   // Years (2020-2030)
   'years': /\b(202[0-9]|203[0-9])\b/g,
@@ -53,6 +66,26 @@ const EXCEPTION_KEYWORDS = [
 function isInExceptionContext(line, keyword) {
   return EXCEPTION_KEYWORDS.some(exc => line.includes(exc));
 }
+
+// Metadata date fields that legitimately/necessarily contain a year — not
+// reader-facing prose, and every article (evergreen or not) must have them.
+const METADATA_DATE_LINE = /\b(publishDate|dateModified|datePublished|next_refresh_due|last_full_refresh|lastFactChecked|next_seo_review_due|last_seo_review|updatedDate|specific_year|archive_after)\s*:/;
+
+// A line whose only year-shaped content is a link target (structured
+// `url:`/`href:` field, or an inline markdown `](/path-2026)`) isn't making a
+// freshness claim in THIS article's own prose — it's just pointing at another
+// article whose slug happens to contain a year.
+function isPureLinkLine(line) {
+  const stripped = line
+    .replace(/(?:url|href):\s*'\/[^']*'/g, '')
+    .replace(/\]\(\/[^)]*\)/g, '](/)')
+  return !/\d/.test(stripped) && /\d/.test(line)
+}
+
+// "current" is also standard electrical-engineering terminology (direct
+// current / alternating current, DC/AC) — not every occurrence is a
+// freshness claim. Only exempt this specific, narrow phrase pattern.
+const ELECTRICAL_CURRENT = /\b(?:direct|alternating)\s+current\b/gi
 
 function validateEvergreen(filePath, content) {
   const violations = [];
@@ -86,10 +119,21 @@ function validateEvergreen(filePath, content) {
       continue;
     }
 
+    // Skip metadata date-field lines and link-only lines — see the 2026-07-02
+    // header note for why these aren't reader-facing freshness claims.
+    if (METADATA_DATE_LINE.test(line) || isPureLinkLine(line)) {
+      continue;
+    }
+
+    // Strip "direct current"/"alternating current" (DC/AC electrical
+    // terminology) before scanning — not a freshness claim, but only this
+    // narrow phrase is exempted, not every "current" on the line.
+    const scanLine = line.replace(ELECTRICAL_CURRENT, '');
+
     // Check for forbidden patterns
     for (const [patternName, pattern] of Object.entries(FORBIDDEN_PATTERNS)) {
-      if (pattern.test(line)) {
-        const match = line.match(pattern);
+      if (pattern.test(scanLine)) {
+        const match = scanLine.match(pattern);
         violations.push({
           file: filePath,
           line: lineNum,
@@ -107,12 +151,14 @@ function validateEvergreen(filePath, content) {
 // Main execution
 function main() {
   try {
-    // Get staged files
+    // Get staged files — both the old monolithic-file shape (content.ts,
+    // blogContent.ts) and individual per-article files under any cluster's
+    // articles/ directory (the convention every cluster now actually uses).
     const stagedFiles = execSync('git diff --cached --name-only')
       .toString()
       .split('\n')
       .filter(f =>
-        (f.includes('content.ts') || f.includes('blogContent.ts')) &&
+        (f.includes('content.ts') || f.includes('blogContent.ts') || /src\/lib\/[^/]+\/articles\/.*\.ts$/.test(f)) &&
         fs.existsSync(path.join(process.cwd(), f))
       );
 

@@ -6,7 +6,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/content";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate',
     seoTitle: 'Manual vs Automated Optimization: Choosing Your Approach',
@@ -208,7 +208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: 'Manuelle vs Automatisierte Prompt-Optimierung: Wann welcher Ansatz',
     seoTitle: 'Manuelle vs Automatisierte Optimierung: Entscheidungshilfe',
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: 'Optimización manual vs automatizada de prompts: cuándo iterar, cuándo automatizar',
     seoTitle: 'Optimización manual vs automatizada: elige tu enfoque',
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: 'Optimisation Manuelle vs Automatisée des Prompts : Quand Choisir Chaque Approche',
     seoTitle: 'Optimisation Manuelle vs Automatisée : Guide de Décision',
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: 'マニュアル vs 自動プロンプト最適化：いつどちらを使うか',
     seoTitle: 'マニュアル vs 自動最適化：判断フレームワーク',
@@ -1218,7 +1218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: '手动 vs 自动提示词优化：何时选择每种方法',
     seoTitle: '手动 vs 自动提示词优化：决策框架',
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: 'تحسين الـ ⁨prompts⁩ يدويًا أم تلقائيًا: متى تُكرر التجربة ومتى تُؤتمت العملية',
     seoTitle: 'تحسين الـ ⁨prompts⁩: يدوي أم آلي؟ إطار القرار',
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     title: '수동 vs 자동 프롬프트 최적화: 언제 반복하고 언제 자동화할 것인가',
     seoTitle: '수동 vs 자동 최적화: 접근 방식 선택 가이드',

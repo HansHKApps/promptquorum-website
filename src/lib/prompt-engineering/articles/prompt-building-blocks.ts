@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       title: 'The 5 Building Blocks Every Prompt Needs',
       seoTitle: 'The 5 Essential Parts of Any AI Prompt (With Template)',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     de: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       title: 'Die 5 Bausteine eines jeden Prompts',
       seoTitle: '5 Bausteine für jeden KI-Prompt mit Vorlage',
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       title: 'Los 5 bloques de construcción que todo prompt necesita',
       seoTitle: '5 bloques de construcción para cada prompt de IA',
@@ -1264,7 +1264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ar: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
       title: 'المكونات الخمسة التي يحتاجها كل برومبت',
       seoTitle: '⁨5⁩ مكونات البرومبت الأساسية لكل نموذج ⁨LLM⁩',
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     fr: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Fondamentaux',
       title: 'Les 5 éléments fondamentaux de tout prompt',
       seoTitle: '5 éléments essentiels de tout prompt IA',
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: '基礎',
       title: 'すべてのプロンプトに必要な5つの構成要素',
       seoTitle: 'AIプロンプトに必要な5つの基本要素と実装テンプレート',
@@ -2788,7 +2788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     zh: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: '基础知识',
       title: '每个提示词必需的5个构建模块',
       seoTitle: '每个AI提示词需要的5个构建模块（附模板）',
@@ -3018,7 +3018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   ko: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: '기초',
       title: '모든 프롬프트에 필요한 5가지 구성 요소',
       seoTitle: 'AI 프롬프트의 5가지 핵심 구성 요소 (템플릿 포함)',

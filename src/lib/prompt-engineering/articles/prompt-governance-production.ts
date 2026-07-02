@@ -3,7 +3,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Governance',
     title: 'Prompt Governance in Production: Roles, Review Gates, and Deployment Rules',
     seoTitle: 'Prompt Governance in Production: Roles & Review Gates',
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   de: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team-Steuerung',
     title: 'Prompt-Governance in Produktion: Rollen, Gates & Deployment (2026)',
     seoTitle: 'Prompt-Governance in Produktion: Rollen & Review-Gates',
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   es: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Governance',
     title: 'Governance de prompts en producción: roles, gates de revisión y reglas de despliegue',
     seoTitle: 'Gobernanza de prompts en producción: roles y revisión',
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   fr: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Gouvernance d\'équipe',
     title: 'Gouvernance des prompts en production : rôles, gates de révision et règles de déploiement',
     seoTitle: 'Gouvernance des prompts en production : rôles et révision',
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ja: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'チームガバナンス',
     title: '本番環境のPromptガバナンス：役割、レビューゲート、デプロイルール',
     seoTitle: '本番Promptガバナンス：役割とレビューゲートの設計',
@@ -1218,7 +1218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ar: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Governance',
     title: 'حوكمة التعليمات في بيئة الإنتاج: الأدوار وبوابات المراجعة وقواعد النشر',
     seoTitle: 'حوكمة ⁨Prompt⁩ في الإنتاج: أدوار وبوابات مراجعة',
@@ -1430,7 +1430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   zh: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: '团队治理',
     title: '生产环境中的Prompt治理：角色、审查门控与部署规则',
     seoTitle: '生产Prompt治理：角色定义与审查门控设计',
@@ -1624,7 +1624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Team Governance',
     title: '프롬프트 거버넌스 실전: 역할·검토 게이트·배포 규칙',
     seoTitle: '생산 환경 프롬프트 거버넌스: 역할과 검토 게이트',

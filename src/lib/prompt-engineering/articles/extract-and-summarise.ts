@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Extract and Summarise With AI',
       intro: 'AI-powered extraction and summarisation reduces document review time by 60–80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     de: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Extraction & Zusammenfassung',
       title: 'Datenextraktion und Zusammenfassung mit KI',
       seoTitle: 'KI-Dokumentenzusammenfassung: Extraktiv vs. Abstrakt',
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     es: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Extrae y resume con IA',
       intro: 'La extracción y el resumen con IA reduce el tiempo de revisión de documentos entre un 60 y un 80 % logrando tasas de alucinación de solo el 0,7 % en tareas de resumen ancladas a la fuente — la clave está en elegir el tipo de resumen, el modelo y la estructura de prompt correctos para cada categoría de documento.',
@@ -1642,7 +1642,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ar: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'استخراج المعلومات وتلخيص المحتوى بالذكاء الاصطناعي',
       intro: 'يقلّل استخراج المعلومات والتلخيص بالذكاء الاصطناعي وقت مراجعة الوثائق بنسبة تتراوح بين 60 و80٪، مع الحفاظ على معدلات هلوسة لا تتجاوز 0.7٪ في مهام التلخيص المرتكز على المصدر — والمفتاح هو اختيار نوع التلخيص والنموذج وبنية الموجّه المناسبة لكل فئة من فئات الوثائق.',
@@ -2165,7 +2165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     pt: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Extraia e resuma com IA',
       intro: 'A extração e o resumo com IA reduz o tempo de revisão de documentos entre 60 e 80% alcançando taxas de alucinação de apenas 0,7% em tarefas de resumo ancoradas na fonte — a chave está em escolher o tipo de resumo, o modelo e a estrutura de prompt corretos para cada categoria de documento.',
@@ -2687,7 +2687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     fr: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'Techniques',
       title: 'Extraire et résumer avec l\'IA',
       intro: 'L\'extraction et le résumé assistés par IA réduisent le temps d\'examen des documents de 60–80 % en atteignant des taux d\'hallucination de seulement 0.7 % pour les tâches de résumé ancrées à la source — la clé réside dans le choix du type de résumé, du modèle et de la structure de prompt appropriés à chaque catégorie de document.',
@@ -3213,7 +3213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ja: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: 'テクニック',
       title: 'AIで抽出と要約を実現',
       intro: 'AI支援の抽出と要約により、文書確認の時間が60～80％削減でき、信頼度の高い要約タスクで0.7％のハルシネーション率を達成します。重要なのは、各文書カテゴリーに適した要約タイプ、モデル、プロンプト構造を選択することです。',
@@ -3738,7 +3738,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     zh: {
-      freshness_tier: 'evergreen',
+      freshness_tier: 'semi_annual',
       theme: '技术',
       title: 'AI文档提取与总结',
       intro: 'AI驱动的提取和总结功能将文档审查时间减少60–80%，同时在有根据的总结任务上实现0.7%的幻觉率——关键是为每种文档类型选择正确的总结方法、正确的模型和正确的提示词结构。',
@@ -4265,7 +4265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
   ko: {
-    freshness_tier: 'evergreen',
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     title: 'AI로 문서 추출 및 요약하기',
     intro: 'AI 기반 추출 및 요약은 문서 검토 시간을 60~80% 단축하면서 소스 기반 요약 작업에서 환각률을 0.7%까지 낮춥니다 — 핵심은 각 문서 유형에 맞는 올바른 요약 방식, 모델, 프롬프트 구조를 선택하는 것입니다.',

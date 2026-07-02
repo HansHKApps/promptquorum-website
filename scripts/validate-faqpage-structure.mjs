@@ -18,7 +18,7 @@ const issues = []
 
 // Check all article files for problematic patterns
 function scanArticles() {
-  const articlesPattern = /src\/lib\/(local-llms|prompt-engineering|power-local-llm)\/articles/
+  const articlesPattern = /src\/lib\/(local-llms|prompt-engineering|power-local-llm|smart-home|prompt-bites|balcony-solar)\/articles/
 
   function walkDir(dir) {
     const files = fs.readdirSync(dir)
