@@ -43,6 +43,10 @@ import { article as a_do_you_need_a_battery_balcony_solar } from './articles/do-
 import { article as a_balcony_solar_payback_worth_it_2026 } from './articles/balcony-solar-payback-worth-it-2026'
 import { article as a_balcony_solar_not_producing_power_fixes } from './articles/balcony-solar-not-producing-power-fixes'
 
+// TIER 4 — US-specific commercial pages (BSOL-21)
+import { article as a_best_balcony_solar_home_battery_us_2026 } from './articles/best-balcony-solar-home-battery-us-2026'
+import { article as a_local_platforms_balcony_solar_home_assistant_alternatives } from './articles/local-platforms-balcony-solar-home-assistant-alternatives'
+
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
   'what-is-balcony-solar':                    a_what_is_balcony_solar,
@@ -71,4 +75,10 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
   'do-you-need-a-battery-balcony-solar':       a_do_you_need_a_battery_balcony_solar,
   'balcony-solar-payback-worth-it-2026':       a_balcony_solar_payback_worth_it_2026,
   'balcony-solar-not-producing-power-fixes':   a_balcony_solar_not_producing_power_fixes,
+
+  // TIER 4 — US-specific commercial pages
+  'best-balcony-solar-home-battery-us-2026':   a_best_balcony_solar_home_battery_us_2026,
+
+  // TIER 1 extension — Technical hub pair (platform-comparison companion to BSOL-05)
+  'local-platforms-balcony-solar-home-assistant-alternatives': a_local_platforms_balcony_solar_home_assistant_alternatives,
 }
