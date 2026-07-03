@@ -932,4 +932,468 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Beelink EQ14 レビュー（2026）：低予算のHome Assistant機',
+    seoTitle: 'Beelink EQ14 レビュー2026 — 低価格Home Assistant機',
+    intro:
+      'Beelink EQ14（Intel N150、16GB DDR4、デュアル2.5GbE）は、ローカル優先のスマートホーム向けの低価格ミニPCです。約29,800〜32,800円（2026年7月、価格変動あり）でHome Assistantと小型のローカルモデルを快適に動かせますが、これはハブ兼ネットワーク機であり、AIマシンではありません。このレビューでは仕様を検証し、ローカルLLMの速度に対する現実的な期待値を示し、Beelink SER8のようなRyzen機ではなくこれを選ぶべき場面を説明します。',
+    metaDescription:
+      'Beelink EQ14 レビュー2026：Intel N150、16GB DDR4、デュアル2.5GbE、約3万円。小型ローカルモデル向けの優秀な低価格Home Assistant機 — ローカルLLM速度の正直な限界を解説。',
+    twitterDescription:
+      'Beelink EQ14（2026）：Intel N150、16GB DDR4、デュアル2.5GbE、約3万円。低価格のHome Assistant機 — 1B〜3Bのローカルモデル向けで、7Bアシスタント向けではありません。',
+    readTime: '6分で読める',
+    educationalLevel: 'Beginner',
+    audience: 'Home Assistantと小型ローカルモデルを動かす、予算重視のユーザー',
+    primaryTerm: 'Beelink EQ14 レビュー',
+    targetKeywords: [
+      'beelink eq14 レビュー',
+      'beelink eq14 home assistant',
+      'beelink eq14 ローカルai',
+      'intel n150 ミニpc home assistant',
+      'beelink eq14 ローカルllm',
+    ],
+    leadAnswerBlock:
+      '**Beelink EQ14（Intel N150、16GB DDR4、デュアル2.5GbE）は、Home Assistantと小型の1B〜3Bローカルモデルを約29,800〜32,800円（2026年7月、変動あり）で快適に動かせる低価格ミニPCです。** 効率的なハブ兼ネットワーク機として購入してください。反応の良い7Bアシスタントが欲しい場合は、代わりにBeelink SER8のようなRyzen機を選びましょう。',
+    quickAnswerTop: {
+      ja: {
+        question: 'Beelink EQ14はHome AssistantとローカルAIに向いていますか？',
+        answer:
+          'Home Assistantには向いていますが、AIには制約があります。Intel N150（4コア）、Intel UHDグラフィックス、16GBのシングルチャネルDDR4は、Home Assistant、アドオン、小型の1B〜3Bローカルモデルを快適に動かします。7Bモデルは読み込めますが、シングルチャネルDDR4の帯域とAIアクセラレータの不在により動作は遅くなります。真の強みはデュアル2.5GbEネットワークで、低消費電力の強力なハブになります。約29,800〜32,800円（2026年7月、変動あり）で、低価格の選択肢であり、ローカルLLMマシンではありません。',
+        bullets: [
+          'CPU：Intel N150 — 4コア / 4スレッド、Intel UHDグラフィックス（24 EU）、NPUなし',
+          'RAM：16GB DDR4-3200、シングルチャネル、SO-DIMM 1スロット（最大16GB）',
+          'ローカルLLM（仕様からの推定）：1B〜3Bの4-bitが最適点。7Bは読み込めるが遅い',
+          '強み：デュアル2.5GbE（Intel i226-V）とデュアルHDMI — 低消費電力の強力なハブ',
+          '価格 約29,800〜32,800円（2026年7月、変動あり）— 低価格のHome Assistant機',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: 'tldr' },
+      { label: '結論', anchor: 'verdict' },
+      { label: '仕様', anchor: 'specs' },
+      { label: 'ローカルAIとLLM性能', anchor: 'local-ai' },
+      { label: '長所と短所', anchor: 'pros-cons' },
+      { label: '購入者向け情報：関税（2026）', anchor: 'trade-note' },
+      { label: '購入先', anchor: 'where-to-buy' },
+      { label: '代替候補', anchor: 'alternatives' },
+      { label: 'よくある質問', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Beelink EQ14は、Home Assistantと小型の1B〜3Bローカルモデルを動かす低価格のIntel N150ミニPCで、デュアル2.5GbEネットワークが際立った特長です。' },
+      { type: 'plain-terms', content: 'ミニPCとは、常時稼働の小型で低消費電力のコンピュータです。EQ14はその安価な一台で、スマートホームのハブと小型AIモデルは楽に動かせますが、大型で高速なチャットモデルは動きません。最大の強みは2つの高速ネットワークポートで、これによりすっきりした家庭内ネットワーク機にもなります。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '重要ポイント',
+        isTldr: true,
+        items: [
+          'EQ14はHome Assistantと小型の1B〜3Bローカルモデルを約3万円で快適に動かします',
+          'Intel N150：4コア、Intel UHDグラフィックス、16GBシングルチャネルDDR4（最大16GB）、NPUなし',
+          '7Bモデルは読み込めますが遅い — これはハブであり、AI機ではありません',
+          '強み：デュアル2.5GbE（Intel i226-V）により低消費電力の強力な家庭内ネットワークハブになります',
+          '反応の良い7Bアシスタントには、[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review)にステップアップしてください',
+          '中国製 — 2026年の米国/EUの輸入措置を最終価格に織り込んでください（関税の注記を参照）',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '結論 — 誰が買うべきか',
+        content:
+          '**Home Assistantと小型ローカルモデルを動かす安価で効率的な機体が欲しく、デュアル2.5GbEネットワークを重視するなら、Beelink EQ14を購入してください。** 約3万円で、ローカル優先のスマートホームへの良い入り口になります。高速なローカルアシスタントを期待して買ってはいけません — シングルチャネルDDR4のIntel N150は1B〜3Bモデルには十分ですが、それより大きいものには遅くなります。\n\n最も強い用途は、**本格的なネットワークを備えた常時稼働のHome Assistantハブ**です。2つの2.5GbEポートにより、ルーター近接の機体として使ったり、ハブをホストしながらネットワーク系アドオンを動かしたりできます。',
+        affiliateLinks: [
+          { label: '現在の価格を確認 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: '仕様',
+        content:
+          '**以下のすべての仕様は、2026年7月にBeelinkおよび独立系レビュー情報源と照合済みです。** RAMはDDR4、シングルチャネルで、16GBが上限である点に注意してください — AI作業では実際の制約になります。ストレージ容量はSKUによって異なります。',
+        columns: ['項目', 'Beelink EQ14 (N150)'],
+        rows: [
+          { '項目': 'CPU', 'Beelink EQ14 (N150)': 'Intel N150 (Twin Lake / Alder Lake-N)' },
+          { '項目': 'コア / スレッド', 'Beelink EQ14 (N150)': '4コア / 4スレッド、最大3.6 GHz' },
+          { '項目': 'iGPU', 'Beelink EQ14 (N150)': 'Intel UHD Graphics、24 EU' },
+          { '項目': 'NPU', 'Beelink EQ14 (N150)': 'なし' },
+          { '項目': 'RAM', 'Beelink EQ14 (N150)': '16GB DDR4-3200、シングルチャネル、SO-DIMM 1スロット（最大16GB）' },
+          { '項目': 'ストレージ', 'Beelink EQ14 (N150)': 'SKUにより500GB〜1TB；2× M.2 2280 PCIe 3.0；最大8TB' },
+          { '項目': 'ポート', 'Beelink EQ14 (N150)': 'USB-A 10Gbps ×3+、USB-A 2.0、USB-C 10Gbps（データのみ）、2× HDMI 2.0、3.5 mm' },
+          { '項目': 'ネットワーク', 'Beelink EQ14 (N150)': '2× 2.5GbE (Intel i226-V)、Wi-Fi 6、Bluetooth 5.2' },
+          { '項目': 'TDP', 'Beelink EQ14 (N150)': '基本 約6W；約20〜25Wに設定；コンセント実測アイドル 約6W' },
+          { '項目': '寸法', 'Beelink EQ14 (N150)': '126 × 126 × 39 mm、約432〜490 g' },
+          { '項目': 'OS', 'Beelink EQ14 (N150)': 'Windows 11 Home（Linux/Home Assistant OS 対応）' },
+          { '項目': '価格（目安）', 'Beelink EQ14 (N150)': '約29,800〜32,800円（2026年7月 — 変動あり、現在価格を確認）' },
+        ],
+        items: [
+          'USB-Cポートはデータ専用です — DisplayPort-Alt出力もPower Deliveryもありません。',
+          'デュアルディスプレイは2つのHDMI 2.0ポートから最大4K/60で出力します。',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'ローカルAIとLLM性能',
+        content:
+          '**EQ14では4-bitの1B〜3Bモデルが現実的な最適点です。7Bモデルは16GB内に読み込めますが、シングルチャネルDDR4の帯域と4つの高効率コアにより生成は遅くなります — すべての数値は検証済みハードウェアからの推定であり、実測ベンチマークではありません。** ここではIntel UHDグラフィックスによるLLM向けの加速はほとんど期待できないため、CPU律速の速度になります。',
+        items: [
+          '小型モデルでの軽量なローカルアシスタント、分類、要約に適しています。',
+          '対話型の7Bチャットアシスタントには不向きです — 帯域とコア数が限界です。',
+          'NPUがないため、モデルをオフロードするものはなく、CPUが処理を担います。',
+          'カメラの物体検出には、Home Assistantをより高性能な機体と組み合わせてください — [ローカルAI防犯カメラ](/ja/smart-home/local-ai-security-camera)を参照。',
+          '小型モデルを試すには[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama)を、背景には[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+        ],
+        affiliateLinks: [
+          { label: '現在の価格を確認 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: '長所と短所',
+        content: '**EQ14は、真に際立つ一点 — ネットワーク — を備えた低価格ハブです。** 以下にバランスの取れた見方を示します。',
+        items: [
+          '**長所**',
+          '非常に手頃 — 有能なHome Assistantハブが約3万円',
+          'デュアル2.5GbE（Intel i226-V）— この価格帯では珍しく、実際に役立つ',
+          '低消費電力：アイドル約6Wで、24時間365日の運用が安価',
+          '2つのM.2スロットとデュアルHDMIで、小型で柔軟な機体',
+          'RAMは交換可能なSO-DIMM（ただし上限16GB）',
+          '**短所**',
+          '16GBシングルチャネルDDR4の上限 — AIの主な制約',
+          'NPUなし、iGPU加速も弱い — 3Bモデルを超えると遅い',
+          'USB-Cはデータ専用（映像出力なし、Power Deliveryなし）',
+          '反応の良い7Bアシスタントが目的なら、適した機体ではありません',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: '購入者向け情報：関税と入手性（2026）',
+        content:
+          '**EQ14は中国で製造されているため、最終価格は2026年の貿易措置を反映します — どの価格も変動するものとして扱うべき理由です。** 以下の事実は購入者向けの情報であり、編集部の意見ではありません。',
+        items: [
+          '米国：中国製電子機器に対するSection 301関税は2026年も継続中です。別枠の2025年「IEEPA」関税は2026年2月に最高裁で無効とされ、期限付きで上限のあるSection 122関税に置き換えられました。直接輸入向けの800ドル未満の免税「デミニミス」も終了しました。',
+          'EU（DE/FRに影響）：完成品ミニPCへの広範なEU関税はありませんが、2026年7月から中国からの低額直送小包に対する150ユーロの免税枠が撤廃され、小包ごとの少額の取扱手数料が追加されました。',
+          '想定（製品ごとの事実ではなくマクロ傾向）：転換された中国の輸出能力により、これらのブランドのEUおよび米国での入手性は高く保たれ、競争的な価格が概ね支えられています。',
+          '正味の影響：購入前に販売店で現在価格を確認してください — ここでの約3万円は目安で、2026年7月時点のものです。',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '購入先と現在価格',
+        content:
+          '**価格は週ごとに変動するため、固定の数値を信用せず、リアルタイムの価格を確認してください。** 2026年7月時点で16GBのEQ14は約29,800〜32,800円、ストレージ容量の大きいSKUはより高くなります。',
+        items: [
+          'LANの構成を確認してください — 主流のN150 EQ14はデュアル2.5GbEを搭載しており、それが選ぶ理由です。',
+        ],
+        affiliateLinks: [
+          { label: '現在の価格を確認 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: '検討すべき代替候補',
+        content: '**EQ14では制約が大きすぎる場合（または別の低価格機が欲しい場合）は、これらを検討してください。**',
+        items: [
+          '[GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — もう一つの低価格N150機。RAMを32GBまで増設できるが、2.5GbEは1ポートのみ',
+          '[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — 上位機：Ryzen 7 8845HSが約9〜10万円で本格的な7Bアシスタントを動かします',
+          '[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review) — デュアル2.5GbEとeGPUポートを備えたミドルレンジのRyzen 9',
+          '[GEEKOM A9 Max](/ja/smart-home/geekom-a9-max-local-ai-review) — 最大128GB RAMの余裕を持つプレミアム機',
+          'まだ比較中ですか？ [Home Assistant + ローカルAI向けベストミニPCまとめ](/ja/smart-home/best-mini-pc-home-assistant-local-ai)から始めてください。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'Beelink EQ14はローカルLLMを動かせますか？', a: '小型なら動かせます。4-bitの1B〜3Bモデルが現実的な最適点です。7Bモデルは16GB内に読み込めますが、シングルチャネルDDR4の帯域と4コアのN150により生成は遅くなります。これは検証済みハードウェアからの推定であり、固定のベンチマークではありません。' },
+          { q: 'RAMにはどのくらいの大きさのモデルが収まりますか？', a: '合計16GB（OSと共有）では、1B〜3Bモデルは余裕があり、7Bの4-bitはぎりぎり収まりますが遅くなります。16GBの上限は動かせない制約で、N150プラットフォームと単一のSO-DIMMスロットではこれ以上増やせません。' },
+          { q: 'EQ14はHome Assistantと常時稼働に向いていますか？', a: 'はい。Home Assistantとアドオンを快適に動かし、アイドル時の消費は約6Wなので、つけっぱなしでも安価です。2つの2.5GbEポートにより、低消費電力の強力なハブ兼ネットワーク機になります。' },
+          { q: 'EQ14にはAI用のNPUがありますか？', a: 'いいえ。Intel N150にはNPUやAIアクセラレータがなく、内蔵グラフィックスもLLMではほとんど役立ちません。どのAIモデルもCPUで動くため、実用的なのは小型モデルのみです。' },
+          { q: 'RAMは増設できますか？', a: 'RAMは交換可能なDDR4 SO-DIMMですが、プラットフォームの上限が16GBのため、より大きなモデル向けの意味ある増設経路はありません。AI用にもっとメモリが必要なら、代わりにRyzen機を選んでください。' },
+          { q: 'EQ14の消費電力はどのくらいですか？', a: 'アイドル時 約6W、負荷時 約20〜25Wなので、連続運用してもコストはごくわずかです。この効率性は、ハブとしてN150機を選ぶ主な理由の一つです。' },
+          { q: 'EQ14とGMKtec G3 Plusのどちらが良いですか？', a: 'どちらもIntel N150を使っています。EQ14はデュアル2.5GbEでネットワーク重視のハブに向き、G3 Plusは2.5GbEが1つですが最大32GBのRAMに対応し、大きめのモデルで少し有利です。ネットワークとメモリの余裕のどちらを重視するかで選んでください。' },
+          { q: 'Beelink EQ14はどこで製造され、それは価格に影響しますか？', a: '中国で製造されています。2026年には米国の輸入措置（Section 301関税、800ドル未満のデミニミス免税の終了）やEUによる150ユーロの低額小包免税の撤廃が最終コストに影響し得るため、固定の数値に頼らず、販売店の現在価格を確認してください。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[Home Assistant + ローカルAI向けベストミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — このレビューが属するまとめ',
+          '[ローカルスマートホーム向けベストハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — Pi vs ミニPC vs NAS',
+          '[ローカルLLMでスマートホームを動かす](/ja/smart-home/local-llm-smart-home-complete-guide) — 機体が実際に動かすもの',
+          '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — EQ14で小型モデルを試す',
+          '[Home Assistantを始める](/ja/smart-home/home-assistant-getting-started) — ハブを設定する',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Beelink EQ14 レビュー（2026）：低予算のHome Assistant機',
+      reviewBody:
+        'Beelink EQ14は、16GB DDR4とデュアル2.5GbEを備えた低価格のIntel N150ミニPCで、Home Assistantと小型の1B〜3Bローカルモデルを約29,800〜32,800円（2026年7月）で動かします。ハブ兼ネットワーク機であり、ローカルLLMマシンではありません。',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/ja/smart-home/beelink-eq14-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '3.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'Beelink EQ14',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'Beelink' },
+        description: 'Intel N150、16GB DDR4、デュアル2.5GbEを備えた、Home Assistantと小型ローカルモデル向けの低価格ミニPC。',
+      },
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Beelink EQ14 评测（2026）：预算内的 Home Assistant 主机',
+    seoTitle: 'Beelink EQ14 评测2026 — 预算级 Home Assistant 主机',
+    intro:
+      'Beelink EQ14（Intel N150、16GB DDR4、双 2.5GbE）是面向本地优先智能家居的预算级迷你主机。约 $189–199（2026 年 7 月，价格波动）即可流畅运行 Home Assistant 和一个小型本地模型，但它是一台枢纽兼网络主机，而非 AI 机器。本评测核实其规格，对本地 LLM 速度给出诚实的预期，并说明何时应选它而非像 Beelink SER8 这样的 Ryzen 主机。',
+    metaDescription:
+      'Beelink EQ14 评测2026：Intel N150、16GB DDR4、双 2.5GbE、约 $190。适合小型本地模型的优秀预算级 Home Assistant 主机 — 诚实说明本地 LLM 速度的限制。',
+    twitterDescription:
+      'Beelink EQ14（2026）：Intel N150、16GB DDR4、双 2.5GbE、约 $190。预算级 Home Assistant 主机 — 运行 1B–3B 本地模型，而非 7B 助手。它适合这些场景。',
+    readTime: '阅读约6分钟',
+    educationalLevel: 'Beginner',
+    audience: '运行 Home Assistant 和小型本地模型的预算型用户',
+    primaryTerm: 'Beelink EQ14 评测',
+    targetKeywords: [
+      'beelink eq14 评测',
+      'beelink eq14 home assistant',
+      'beelink eq14 本地 ai',
+      'intel n150 迷你主机 home assistant',
+      'beelink eq14 本地 llm',
+    ],
+    leadAnswerBlock:
+      '**Beelink EQ14（Intel N150、16GB DDR4、双 2.5GbE）是一台预算级迷你主机，约 $189–199（2026 年 7 月，波动）即可流畅运行 Home Assistant 和一个 1B–3B 小型本地模型。** 把它当作高效的枢纽兼网络主机来买；如果你想要响应迅速的 7B 助手，请升级到像 Beelink SER8 这样的 Ryzen 主机。',
+    quickAnswerTop: {
+      zh: {
+        question: 'Beelink EQ14 适合 Home Assistant 和本地 AI 吗？',
+        answer:
+          '适合 Home Assistant，AI 方面有限制。Intel N150（4 核）、Intel UHD 核显以及 16GB 单通道 DDR4 可以从容运行 Home Assistant、插件以及一个 1B–3B 小型本地模型。7B 模型能加载，但由于单通道 DDR4 带宽和缺少 AI 加速器而运行缓慢。它真正的亮点是双 2.5GbE 网络，使其成为强大的低功耗枢纽。约 $189–199（2026 年 7 月，波动），它是预算之选，而非本地 LLM 机器。',
+        bullets: [
+          'CPU：Intel N150 — 4 核 / 4 线程，Intel UHD 核显（24 EU），无 NPU',
+          'RAM：16GB DDR4-3200，单通道，单个 SO-DIMM 插槽（最大 16GB）',
+          '本地 LLM（据规格估算）：1B–3B 的 4-bit 是最佳区间；7B 能加载但慢',
+          '亮点：双 2.5GbE（Intel i226-V）和双 HDMI — 强大的低功耗枢纽',
+          '价格约 $189–199（2026 年 7 月，波动）— 预算级 Home Assistant 主机',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: 'tldr' },
+      { label: '结论', anchor: 'verdict' },
+      { label: '规格', anchor: 'specs' },
+      { label: '本地 AI 与 LLM 性能', anchor: 'local-ai' },
+      { label: '优点与缺点', anchor: 'pros-cons' },
+      { label: '购买者须知：关税（2026）', anchor: 'trade-note' },
+      { label: '购买渠道', anchor: 'where-to-buy' },
+      { label: '替代选择', anchor: 'alternatives' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Beelink EQ14 是一台预算级 Intel N150 迷你主机，可运行 Home Assistant 和一个 1B–3B 小型本地模型，双 2.5GbE 网络是其突出特性。' },
+      { type: 'plain-terms', content: '迷你主机是一种小巧、低功耗、可长期开机的电脑。EQ14 是其中便宜的一款：它能轻松运行智能家居枢纽和一个小型 AI 模型，但跑不动又大又快的对话模型。它最拿手的是两个高速网口，这也让它成为一台整洁的家庭网络主机。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '核心要点',
+        isTldr: true,
+        items: [
+          'EQ14 约 $190 即可流畅运行 Home Assistant 和一个 1B–3B 小型本地模型',
+          'Intel N150：4 核、Intel UHD 核显、16GB 单通道 DDR4（最大 16GB）、无 NPU',
+          '7B 模型能加载但运行缓慢 — 这是枢纽，不是 AI 主机',
+          '亮点：双 2.5GbE（Intel i226-V）使其成为强大的低功耗家庭网络枢纽',
+          '若要响应迅速的 7B 助手，请升级到 [Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review)',
+          '中国制造 — 将 2026 年美国/欧盟进口措施计入到手成本（见关税说明）',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '结论 — 谁该买它',
+        content:
+          '**如果你想要一台便宜高效的主机来运行 Home Assistant 加一个小型本地模型，并且看重它的双 2.5GbE 网络，那就买 Beelink EQ14。** 约 $190，它是进入本地优先智能家居的不错起点。不要指望它是一台快速的本地助手 — 搭配单通道 DDR4 的 Intel N150 应付 1B–3B 模型没问题，但更大的就慢了。\n\n它最强的用例是一台**带真正网络的长期开机 Home Assistant 枢纽** — 两个 2.5GbE 端口让它兼作靠近路由器的主机，或在托管枢纽的同时运行网络类插件。',
+        affiliateLinks: [
+          { label: '查看当前价格 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: '规格',
+        content:
+          '**以下所有规格已于 2026 年 7 月与 Beelink 及独立评测来源核对。** 注意内存为 DDR4、单通道，并且上限为 16GB — 这是 AI 工作的真实制约。存储容量按 SKU 出货。',
+        columns: ['规格', 'Beelink EQ14 (N150)'],
+        rows: [
+          { '规格': 'CPU', 'Beelink EQ14 (N150)': 'Intel N150 (Twin Lake / Alder Lake-N)' },
+          { '规格': '核心 / 线程', 'Beelink EQ14 (N150)': '4 核 / 4 线程，最高 3.6 GHz' },
+          { '规格': 'iGPU', 'Beelink EQ14 (N150)': 'Intel UHD Graphics，24 EU' },
+          { '规格': 'NPU', 'Beelink EQ14 (N150)': '无' },
+          { '规格': 'RAM', 'Beelink EQ14 (N150)': '16GB DDR4-3200，单通道，单个 SO-DIMM（最大 16GB）' },
+          { '规格': '存储', 'Beelink EQ14 (N150)': '按 SKU 为 500GB–1TB；2× M.2 2280 PCIe 3.0；最高 8TB' },
+          { '规格': '接口', 'Beelink EQ14 (N150)': 'USB-A 10Gbps ×3+、USB-A 2.0、USB-C 10Gbps（仅数据）、2× HDMI 2.0、3.5 mm' },
+          { '规格': '网络', 'Beelink EQ14 (N150)': '2× 2.5GbE (Intel i226-V)、Wi-Fi 6、Bluetooth 5.2' },
+          { '规格': 'TDP', 'Beelink EQ14 (N150)': '基础约 6W；配置为约 20–25W；墙插空闲约 6W' },
+          { '规格': '尺寸', 'Beelink EQ14 (N150)': '126 × 126 × 39 mm，约 432–490 g' },
+          { '规格': '操作系统', 'Beelink EQ14 (N150)': 'Windows 11 Home（支持 Linux/Home Assistant OS）' },
+          { '规格': '价格（参考）', 'Beelink EQ14 (N150)': '约 $189–199（2026 年 7 月 — 波动，请查看当前价格）' },
+        ],
+        items: [
+          'USB-C 端口仅支持数据 — 无 DisplayPort-Alt 输出，也无 Power Delivery。',
+          '双显示器通过两个 HDMI 2.0 端口输出，最高 4K/60。',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: '本地 AI 与 LLM 性能',
+        content:
+          '**在 EQ14 上，4-bit 的 1B–3B 模型是现实的最佳区间；7B 模型能装进 16GB，但由于单通道 DDR4 带宽和四个能效核心而生成缓慢 — 所有数值均据核实过的硬件估算，而非实测跑分。** 这里的 Intel UHD 核显对 LLM 几乎没有加速作用，因此速度受 CPU 限制。',
+        items: [
+          '适合小型模型上的轻量本地助手、分类和摘要。',
+          '不适合交互式 7B 对话助手 — 带宽和核心数是瓶颈。',
+          '没有 NPU，所以没有东西为模型分担；由 CPU 承担全部工作。',
+          '对于摄像头目标检测，请将 Home Assistant 搭配更强的主机 — 见[本地 AI 安防摄像头](/zh/smart-home/local-ai-security-camera)。',
+          '参见[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) 来试跑一个小模型，以及[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 了解背景。',
+        ],
+        affiliateLinks: [
+          { label: '查看当前价格 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: '优点与缺点',
+        content: '**EQ14 是一台预算级枢纽，拥有一个真正的亮点 — 它的网络。** 下面是平衡的评价。',
+        items: [
+          '**优点**',
+          '非常实惠 — 约 $190 即可获得一台称职的 Home Assistant 枢纽',
+          '双 2.5GbE（Intel i226-V）— 在此价位罕见且确实实用',
+          '低功耗：空闲约 6W，7×24 运行成本很低',
+          '两个 M.2 插槽和双 HDMI，是一台小巧灵活的主机',
+          '内存是可更换的 SO-DIMM（尽管上限为 16GB）',
+          '**缺点**',
+          '16GB 单通道 DDR4 的上限 — AI 的主要制约',
+          '无 NPU，核显加速也弱 — 超过 3B 模型就慢',
+          'USB-C 仅支持数据（无视频输出，无 Power Delivery）',
+          '若目标是响应迅速的 7B 助手，它不是合适的主机',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: '购买者须知：关税与供货（2026）',
+        content:
+          '**EQ14 在中国制造，因此其到手价反映 2026 年的贸易措施 — 这也是把任何价格都视为动态目标的原因。** 下面是购买者须知，并非编辑观点。',
+        items: [
+          '美国：针对中国电子产品的 Section 301 关税在 2026 年仍然有效；单独的 2025 年“IEEPA”关税已于 2026 年 2 月被最高法院推翻，并由一项临时、有上限的 Section 122 关税取代。针对直邮进口、低于 800 美元的免税“de minimis”豁免也已终止。',
+          '欧盟（影响 DE/FR）：对成品迷你主机没有普遍的欧盟关税，但自 2026 年 7 月起，对来自中国的低值直邮包裹取消了 150 欧元免税门槛，并加收了每件包裹的小额手续费。',
+          '假设（宏观趋势，非逐一产品的事实）：转向的中国出口产能使这些品牌在欧盟和美国保持了较高供货，这大体上支撑了有竞争力的价格。',
+          '净效应：购买前请在零售商处核实当前价格 — 此处的约 $190 为参考值，标注日期为 2026 年 7 月。',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '购买渠道与当前价格',
+        content:
+          '**价格每周都在变动，因此请查看实时价格，而不要相信固定数字。** 截至 2026 年 7 月，16GB 版 EQ14 约为 $189–199，更大存储的 SKU 接近 $220。',
+        items: [
+          '确认 LAN 版本 — 主流的 N150 EQ14 配备双 2.5GbE，这正是选它的理由。',
+        ],
+        affiliateLinks: [
+          { label: '查看当前价格 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: '值得考虑的替代选择',
+        content: '**如果 EQ14 太受限（或你想要另一台预算主机），可以考虑这些。**',
+        items: [
+          '[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 另一台预算级 N150 主机；内存可升级到 32GB，但只有一个 2.5GbE 端口',
+          '[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 进阶之选：Ryzen 7 8845HS 约 $650 即可运行真正的 7B 助手',
+          '[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review) — 中端 Ryzen 9，配双 2.5GbE 和一个 eGPU 端口',
+          '[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review) — 高端余量主机，内存上限 128GB',
+          '还在比较？从[适合 Home Assistant + 本地 AI 的最佳迷你主机汇总](/zh/smart-home/best-mini-pc-home-assistant-local-ai)开始。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: 'Beelink EQ14 能运行本地 LLM 吗？', a: '小型的可以。4-bit 的 1B–3B 模型是现实的最佳区间。7B 模型能装进 16GB，但由于单通道 DDR4 带宽和四核 N150 而生成缓慢。这是据其核实过的硬件估算，而非固定跑分。' },
+          { q: '它的内存能装下多大的模型？', a: '总共 16GB（与操作系统共享）时，1B–3B 模型很从容，7B 的 4-bit 刚好装下但运行缓慢。16GB 上限是硬限制 — N150 平台和单个 SO-DIMM 插槽无法再高。' },
+          { q: 'EQ14 适合 Home Assistant 和长期开机吗？', a: '适合。它能从容运行 Home Assistant 和插件，空闲约 6W，因此长期开机很便宜。它的两个 2.5GbE 端口使其成为强大的低功耗枢纽和网络主机。' },
+          { q: 'EQ14 有用于 AI 的 NPU 吗？', a: '没有。Intel N150 没有 NPU 或 AI 加速器，集成显卡对 LLM 帮助也很小。任何 AI 模型都在 CPU 上运行，这就是只有小型模型才实用的原因。' },
+          { q: '内存可以升级吗？', a: '内存是可更换的 DDR4 SO-DIMM，但平台上限为 16GB，因此对更大的模型没有实质的升级空间。如果你需要更多内存用于 AI，请改选 Ryzen 主机。' },
+          { q: 'EQ14 耗电多少？', a: '空闲约 6W，负载下约 20–25W，因此持续运行成本很低。这种能效是选择 N150 主机作为枢纽的关键原因之一。' },
+          { q: 'EQ14 还是 GMKtec G3 Plus？', a: '两者都用 Intel N150。EQ14 有双 2.5GbE，适合网络繁重的枢纽；G3 Plus 只有一个 2.5GbE，但支持最高 32GB 内存，对更大的模型略有帮助。按你更看重网络还是内存余量来选。' },
+          { q: 'Beelink EQ14 在哪里制造，这会影响价格吗？', a: '它在中国制造。2026 年，美国的进口措施（Section 301 关税、低于 800 美元的 de minimis 豁免终止）以及欧盟取消 150 欧元低值包裹豁免都可能影响到手成本，因此请核实零售商的当前价格，而不要依赖固定数字。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[适合 Home Assistant + 本地 AI 的最佳迷你主机](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 本评测所属的汇总',
+          '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — Pi vs 迷你主机 vs NAS',
+          '[用本地 LLM 运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide) — 这台主机实际运行什么',
+          '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) — 在 EQ14 上试跑一个小模型',
+          '[Home Assistant 入门](/zh/smart-home/home-assistant-getting-started) — 设置枢纽',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Beelink EQ14 评测（2026）：预算内的 Home Assistant 主机',
+      reviewBody:
+        'Beelink EQ14 是一台预算级 Intel N150 迷你主机，配 16GB DDR4 和双 2.5GbE，约 $189–199（2026 年 7 月）即可运行 Home Assistant 和一个 1B–3B 小型本地模型。它是一台枢纽兼网络主机，而非本地 LLM 机器。',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/zh/smart-home/beelink-eq14-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '3.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'Beelink EQ14',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'Beelink' },
+        description: '预算级迷你主机，配 Intel N150、16GB DDR4 和双 2.5GbE，适合 Home Assistant 和小型本地模型。',
+      },
+    },
+  },
 }
