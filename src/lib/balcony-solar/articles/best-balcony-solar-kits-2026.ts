@@ -1567,7 +1567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bestes Budget-Set: Kein Komplettkit unter 400 $ konnte mit verifiziertem Zertifizierungsstatus gefunden werden — der APsystems EZ1 als Einzelkomponente (325 $, mit eigenen Panels kombinieren) ist der defensiblere Budget-Weg.',
           'Bestes Set mit Speicher: EcoFlow STREAM Ultra (1,92 kWh, erweiterbar auf 11,52 kWh, 1.279 $) ist die stärkste Speicher-Hardware, wird und installiert aber derzeit nur in Utah.',
           'Die Rechtslage im jeweiligen Bundesstaat ist das erste Kriterium, nicht der Preis — stellen Sie sicher, dass Ihr Bundesstaat Balkonkraftwerke erlaubt, bevor Sie nach Preis oder Spezifikation kaufen.',
-          'Kein Produkt von Hoymiles, Deye, EcoFlow oder APsystems hat bisher die UL-3700-Zertifizierung erhalten — der Standard startete im Januar 2026, aber die Zertifizierungstests sind branchenweit noch ausstehend. Hinweis für den DE-Markt: Wenn Sie ein Wieland-Steckersystem benötigen, prüfen Sie die Kompatibilität des Mikrowechselrichters gesondert, da US-Sets typischerweise für NEMA-Stecker ausgelegt sind.',
+          'Kein Produkt von Hoymiles, Deye, EcoFlow oder APsystems hat bisher die UL-3700-Zertifizierung erhalten — der Standard startete im Januar 2026, aber die Zertifizierungstests sind branchenweit noch ausstehend.',
         ],
       },
       howWeChose: {

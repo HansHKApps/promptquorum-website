@@ -34,4 +34,10 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
   'do-you-need-a-battery-balcony-solar':          'do-you-need-a-battery-balcony-solar',          // BSOL-18
   'balcony-solar-payback-worth-it-2026':          'balcony-solar-payback-worth-it-2026',          // BSOL-19
   'balcony-solar-not-producing-power-fixes':      'balcony-solar-not-producing-power-fixes',      // BSOL-20
+
+  // TIER 4 — US-specific commercial pages
+  'best-balcony-solar-home-battery-us-2026':      'best-balcony-solar-home-battery-us-2026',      // BSOL-21
+
+  // TIER 1 extension — Technical hub pair (platform-comparison companion to BSOL-05)
+  'local-platforms-balcony-solar-home-assistant-alternatives': 'local-platforms-balcony-solar-home-assistant-alternatives', // BSOL-22
 }

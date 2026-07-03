@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-determines-payback',
         title: 'Was die Amortisation wirklich bestimmt',
         content: [
-          '**Drei Faktoren bestimmen Ihren tatsächlichen Amortisationszeitraum: Ihren lokalen Strompreis (höhere Preise bedeuten, dass jede vom Panel erzeugte kWh mehr wert ist), den Hardwarepreis in Ihrem Land (niedrigere Kosten bedeuten weniger zurückzugewinnen) und Ihre Sonneneinstrahlung (mehr Ertrag bedeutet schnellere Amortisation).** Länderspezifische Hardwarepreise und den einzigen unabhängig verifizierten Ertragsvergleichspunkt in diesem Cluster finden Sie im [Sizing- und Amortisationsguide](/de/balcony-solar/balcony-solar-sizing-yield-payback). In Deutschland gilt seit 2023 (Solarpaketgesetz I) ein Grenzwert von 800 W für Balkonkraftwerke; die Einspeisevergütung für Überschussstrom (Einspeisevergütung) ist mit rund 0,08 €/kWh sehr gering, weshalb Eigenverbrauch das wirtschaftliche Kernargument ist.',
+          '**Drei Faktoren bestimmen Ihren tatsächlichen Amortisationszeitraum: Ihren lokalen Strompreis (höhere Preise bedeuten, dass jede vom Panel erzeugte kWh mehr wert ist), den Hardwarepreis in Ihrem Land (niedrigere Kosten bedeuten weniger zurückzugewinnen) und Ihre Sonneneinstrahlung (mehr Ertrag bedeutet schnellere Amortisation).** Länderspezifische Hardwarepreise und den einzigen unabhängig verifizierten Ertragsvergleichspunkt in diesem Cluster finden Sie im [Sizing- und Amortisationsguide](/de/balcony-solar/balcony-solar-sizing-yield-payback).',
         ],
       },
       priceTrend: {
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'clearly-worth-it',
         title: 'Wann es sich klar lohnt',
         content: [
-          '**Balkonkraftwerke haben das klarste Amortisationsprofil in Märkten, die hohe Strompreise, niedrige Hardwarepreise und gute Sonneneinstrahlung kombinieren — Deutschland und Portugal schneiden laut den verifizierten Daten dieses Clusters besonders bei Hardwarepreis und Regulierungseinfachheit gut ab.** Bei deutschen Strompreisen von rund 0,32–0,37 €/kWh (2026) und typischen Kit-Preisen von 600–900 € liegt die Amortisationszeit bei 3–5 Jahren, wenn der Eigenverbrauch optimiert wird. Südlichere Märkte profitieren zusätzlich von einem Ertragsplus — prüfen Sie aber alle Faktoren zusammen, anstatt allein auf die Sonnenstunden zu vertrauen.',
+          '**Balkonkraftwerke haben das klarste Amortisationsprofil in Märkten, die hohe Strompreise, niedrige Hardwarepreise und starke Sonneneinstrahlung kombinieren — Deutschland und Portugal schneiden laut den verifizierten Daten dieses Clusters besonders bei Hardwarepreis und Regulierungseinfachheit gut ab.** Südlichere, sonnenreichere Märkte bringen zusätzlich einen Ertragsvorteil, wobei Hardwarepreis und rechtliche Einfachheit unabhängig von der Sonneneinstrahlung variieren — prüfen Sie daher alle Faktoren gemeinsam, statt anzunehmen, dass Sonne allein den Ausschlag gibt.',
         ],
       },
       genuinelyNot: {
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'calculate-your-own',
         title: 'So berechnen Sie Ihre eigene Zahl',
         content: [
-          '**Kombinieren Sie den Hardwarepreis in Ihrem Land, Ihren lokalen Strompreis und die Sonneneinstrahlung Ihres Standorts, um Ihre eigene Amortisation zu schätzen — der [Sizing- und Amortisationsguide](/de/balcony-solar/balcony-solar-sizing-yield-payback) liefert Hardwarepreise und Ertragsdaten nach Land, aber die abschließende Berechnung erfordert Ihren konkreten Strompreis, den diese Seite ohne Ihre Angabe nicht kennen kann.** Für die Anmeldung im Marktstammdatenregister (MaStR) finden Sie dort ebenfalls Hinweise.',
+          '**Kombinieren Sie den Hardwarepreis in Ihrem Land, Ihren lokalen Strompreis und die Sonneneinstrahlung Ihres Standorts, um Ihre eigene Amortisation zu schätzen — der [Sizing- und Amortisationsguide](/de/balcony-solar/balcony-solar-sizing-yield-payback) liefert Hardwarepreise und Ertragsdaten nach Land, aber die abschließende Berechnung erfordert Ihren konkreten Strompreis, den diese Seite ohne Ihre Angabe nicht kennen kann.**',
         ],
       },
       faqSection: {
