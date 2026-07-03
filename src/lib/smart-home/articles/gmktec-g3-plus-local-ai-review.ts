@@ -234,4 +234,702 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'GMKtec G3 Plus Test (2026): Günstiges lokales Smart Home',
+    seoTitle: 'GMKtec G3 Plus Test 2026 — Günstige Smart-Home-Box',
+    intro:
+      'Der GMKtec NucBox G3 Plus (Intel N150, aufrüstbar auf 32 GB DDR4) ist ein günstiger Mini-PC für ein lokal betriebenes Smart Home. Für etwa 199–239 € (Stand Juli 2026, Preis schwankt) betreibt er Home Assistant und ein kleines lokales Modell — mit einem echten Vorteil gegenüber manchen Konkurrenten: Sein RAM ist ein austauschbares SO-DIMM, nicht verlötet. Dieser Test prüft die Spezifikationen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und erklärt, wo er sich gegenüber dem Beelink EQ14 und den Ryzen-Boxen einordnet.',
+    metaDescription:
+      'GMKtec G3 Plus Test 2026: Intel N150, aufrüstbar auf 32 GB DDR4, Dual-HDMI, einzelnes 2,5GbE, ca. 199–239 €. Eine günstige Home-Assistant-Box mit austauschbarem RAM — die komplette Spezifikationsanalyse.',
+    twitterDescription:
+      'GMKtec G3 Plus (2026): Intel N150, aufrüstbar auf 32 GB DDR4 (nicht verlötet), ca. 199–239 €. Eine günstige Home-Assistant-Box für ein kleines lokales Modell — hier passt sie hin.',
+    readTime: '6 Min. Lesezeit',
+    educationalLevel: 'Beginner',
+    audience: 'Sparsame Käufer, die Home Assistant und ein kleines lokales Modell betreiben',
+    primaryTerm: 'GMKtec G3 Plus Test',
+    targetKeywords: [
+      'gmktec g3 plus test',
+      'gmktec g3 plus home assistant',
+      'gmktec g3 plus lokale ki',
+      'gmktec nucbox g3 plus n150',
+      'gmktec g3 plus lokales llm',
+    ],
+    leadAnswerBlock:
+      '**Der GMKtec G3 Plus (Intel N150, aufrüstbar auf 32 GB DDR4) ist ein günstiger Mini-PC, der Home Assistant und ein kleines lokales 1B–8B-Modell für etwa 199–239 € betreibt (Stand Juli 2026, schwankend).** Sein Alleinstellungsmerkmal ist ein austauschbarer SO-DIMM-RAM-Steckplatz, der 32 GB erreicht — mehr Speicherreserve als ein Beelink EQ14 —, wobei er allerdings nur einen einzelnen 2,5GbE-Port und kein USB-C bietet.',
+    quickAnswerTop: {
+      de: {
+        question: 'Ist der GMKtec G3 Plus gut für Home Assistant und lokale KI?',
+        answer:
+          'Ja für Home Assistant, mit Einschränkungen bei KI. Der Intel N150 (4 Kerne), die Intel-UHD-Grafik und der DDR4-Speicher betreiben Home Assistant und ein kleines lokales Modell gut. Da sein einzelner SO-DIMM-Steckplatz 32 GB erreicht, hat er etwas mehr Reserve als die auf 16 GB begrenzten Konkurrenten — doch Single-Channel-DDR4 und der fehlende NPU machen alles jenseits eines kleinen Modells weiterhin langsam. Für etwa 199–239 € (Stand Juli 2026, schwankend) ist er eine günstige Box, keine LLM-Maschine.',
+        bullets: [
+          'CPU: Intel N150 — 4 Kerne / 4 Threads, Intel-UHD-Grafik (24 EU), kein NPU',
+          'RAM: DDR4-3200, einzelner SO-DIMM-Steckplatz, aufrüstbar auf 32 GB (austauschbar, nicht verlötet)',
+          'Lokales LLM (aus den Spezifikationen geschätzt): 1B–8B in 4-Bit passt; 7–8B nutzbar, aber langsam',
+          'Anschlüsse: Dual-HDMI (2× 4K/60), einzelnes 2,5GbE, Wi-Fi 6 — kein USB-C',
+          'Preis ca. 199–239 € (Stand Juli 2026, schwankend) — günstige Home-Assistant-Box',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: 'Kurzfassung', anchor: 'tldr' },
+      { label: 'Fazit', anchor: 'verdict' },
+      { label: 'Spezifikationen', anchor: 'specs' },
+      { label: 'Lokale KI & LLM-Leistung', anchor: 'local-ai' },
+      { label: 'Vorteile & Nachteile', anchor: 'pros-cons' },
+      { label: 'Käuferkontext: Zölle (2026)', anchor: 'trade-note' },
+      { label: 'Wo kaufen', anchor: 'where-to-buy' },
+      { label: 'Alternativen', anchor: 'alternatives' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Der GMKtec G3 Plus ist ein günstiger Intel-N150-Mini-PC, der Home Assistant und ein kleines lokales Modell betreibt, mit einem austauschbaren DDR4-Steckplatz, der 32 GB erreicht.' },
+      { type: 'plain-terms', content: 'Ein Mini-PC ist ein kleiner, stromsparender Dauerläufer-Computer. Der G3 Plus ist ein günstiger, der eine Smart-Home-Zentrale und ein kleines KI-Modell betreibt. Anders als manche Budget-Boxen lässt sich sein Speicher tauschen und auf 32 GB erhöhen, was etwas mehr Spielraum gibt — aber er bleibt eine Zentrale, keine schnelle KI-Maschine.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Kurzfassung',
+        isTldr: true,
+        items: [
+          'Der G3 Plus betreibt Home Assistant und ein kleines lokales 1B–8B-Modell für etwa 199–239 €',
+          'Intel N150: 4 Kerne, Intel-UHD-Grafik, DDR4 aufrüstbar auf 32 GB (austauschbares SO-DIMM), kein NPU',
+          'Ein 7–8B-Modell passt, läuft aber langsam — dies ist eine günstige Zentrale, keine KI-Box',
+          'Alleinstellungsmerkmal gegenüber dem [Beelink EQ14](/de/smart-home/beelink-eq14-local-ai-review): 32 GB RAM-Obergrenze (aber nur ein 2,5GbE-Port und kein USB-C)',
+          'Für einen flüssigen 7B-Assistenten greifen Sie zum [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review)',
+          'In China gefertigt — kalkulieren Sie die US-/EU-Importmaßnahmen 2026 in die Endkosten ein (siehe Zollhinweis)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Fazit — Für wen geeignet',
+        content:
+          '**Kaufen Sie den GMKtec G3 Plus, wenn Sie eine günstige Home-Assistant-Box möchten und Wert auf einen austauschbaren RAM-Steckplatz legen, der 32 GB erreicht.** Für etwa 199–239 € ist er ein solider, günstiger Einstieg in ein lokal betriebenes Smart Home, mit etwas mehr Speicherreserve als die auf 16 GB begrenzten Konkurrenten. Erwarten Sie keinen schnellen lokalen Assistenten — der Intel N150 mit Single-Channel-DDR4 bewältigt nur kleine Modelle.\n\nSein stärkster Anwendungsfall ist eine **kompakte, aufrüstbare Home-Assistant-Zentrale**, die auch ein kleines Modell hosten kann. Wenn Sie zwei Netzwerkports wollen, ist der Beelink EQ14 die bessere Zentrale; wenn Sie echte KI-Geschwindigkeit brauchen, steigen Sie auf eine Ryzen-Box um.',
+        affiliateLinks: [
+          { label: 'Aktuellen Preis prüfen — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: 'Spezifikationen',
+        content:
+          '**Alle folgenden Spezifikationen wurden im Juli 2026 gegen GMKtec und unabhängige Testquellen geprüft.** Der RAM ist ein austauschbares DDR4-SO-DIMM (nicht verlötet), das 32 GB erreicht. Dieses Modell hat keinen USB-C-Anschluss.',
+        columns: ['Spezifikation', 'GMKtec G3 Plus (N150)'],
+        rows: [
+          { Spezifikation: 'CPU', 'GMKtec G3 Plus (N150)': 'Intel N150 (Twin Lake / Alder Lake-N)' },
+          { Spezifikation: 'Kerne / Threads', 'GMKtec G3 Plus (N150)': '4 Kerne / 4 Threads, bis zu 3,6 GHz' },
+          { Spezifikation: 'iGPU', 'GMKtec G3 Plus (N150)': 'Intel UHD Graphics, 24 EU, bis zu 1000 MHz' },
+          { Spezifikation: 'NPU', 'GMKtec G3 Plus (N150)': 'Keine' },
+          { Spezifikation: 'RAM', 'GMKtec G3 Plus (N150)': 'DDR4-3200, einzelnes SO-DIMM, aufrüstbar auf 32 GB (austauschbar, nicht verlötet)' },
+          { Spezifikation: 'Speicher', 'GMKtec G3 Plus (N150)': 'M.2 2280 PCIe 3.0 NVMe (bis zu 4 TB) + M.2 2242 SATA (bis zu 2 TB)' },
+          { Spezifikation: 'Anschlüsse', 'GMKtec G3 Plus (N150)': '4× USB-A 3.2 (bis zu 10 Gbit/s), 2× HDMI 2.0, 3,5 mm — kein USB-C' },
+          { Spezifikation: 'Netzwerk', 'GMKtec G3 Plus (N150)': '1× 2,5GbE (Intel i226-V), Wi-Fi 6, Bluetooth 5.2' },
+          { Spezifikation: 'TDP', 'GMKtec G3 Plus (N150)': '~6 W Basis; ~6 W Leerlauf, ~21 W unter Last' },
+          { Spezifikation: 'Abmessungen', 'GMKtec G3 Plus (N150)': '114 × 106 × 42,5 mm, ~361 g' },
+          { Spezifikation: 'Betriebssystem', 'GMKtec G3 Plus (N150)': 'Windows 11 Pro (Linux/Home Assistant OS unterstützt)' },
+          { Spezifikation: 'Preis (Richtwert)', 'GMKtec G3 Plus (N150)': 'ca. 199–239 € (Juli 2026 — schwankend, aktuellen Preis prüfen)' },
+        ],
+        items: [
+          'Zwei Speichersteckplätze — ein NVMe (PCIe 3.0) und ein SATA (M.2 2242) — erlauben eine schnelle Systemplatte plus Massenspeicher.',
+          'Die USB-A-Geschwindigkeit variiert je nach Quelle und SKU (5–10 Gbit/s); prüfen Sie das Angebot, das Sie kaufen.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'Lokale KI & LLM-Leistung',
+        content:
+          '**Ein 1B–8B-Modell in 4-Bit passt auf den G3 Plus; ein 7–8B-Modell ist nutzbar, aber langsam, und die 32-GB-RAM-Option erlaubt einen größeren Kontext oder ein ~13B-Modell mit geringem Durchsatz — alle Werte sind aus der geprüften Hardware geschätzt, kein gemessener Benchmark.** Wie bei jeder N150-Box sind die Single-Channel-DDR4-Bandbreite und das fehlende NPU die Grenzen.',
+        items: [
+          'Gut für schlanke lokale Assistenten, Zusammenfassungen und Automatisierungen mit kleinen Modellen.',
+          'Die Aufrüstung auf 32 GB hilft der Kontextlänge mehr als der reinen Geschwindigkeit — die Speicherbandbreite bleibt unverändert.',
+          'Kein NPU und begrenzte iGPU-Beschleunigung, daher ist die Inferenz CPU-gebunden.',
+          'Für anspruchsvollere lokale KI (Vision, ein schneller 7B-Assistent) wählen Sie stattdessen eine Ryzen-Box.',
+          'Siehe [wie man Ollama installiert](/de/local-llms/how-to-install-ollama), um ein kleines Modell auszuprobieren, und den [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) für den Kontext.',
+        ],
+        affiliateLinks: [
+          { label: 'Aktuellen Preis prüfen — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: 'Vorteile & Nachteile',
+        content: '**Der G3 Plus tauscht Netzwerk gegen Speicherreserve gegenüber dem EQ14.** Ausgewogene Betrachtung unten.',
+        items: [
+          '**Vorteile**',
+          'Sehr günstig — etwa 199–239 € für eine Home-Assistant-Box',
+          'Austauschbares DDR4-SO-DIMM, aufrüstbar auf 32 GB — mehr Reserve als bei auf 16 GB begrenzten Konkurrenten',
+          'Zwei Speichersteckplätze: NVMe plus ein separater SATA-M.2 für Massenspeicher',
+          'Geringer Verbrauch: rund 6 W im Leerlauf, günstig im 24/7-Betrieb',
+          'Sehr kompakt (114 × 106 mm) und leicht (~361 g)',
+          '**Nachteile**',
+          'Nur ein einzelner 2,5GbE-Port (der EQ14 hat zwei)',
+          'Überhaupt kein USB-C-Anschluss',
+          'Single-Channel-DDR4 und kein NPU — langsam jenseits eines kleinen Modells',
+          'Die USB-A-Geschwindigkeit ist über die Angebote hinweg uneinheitlich; vor dem Kauf prüfen',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'Käuferkontext: Zölle & Verfügbarkeit (2026)',
+        content:
+          '**Der G3 Plus wird in China gefertigt, daher spiegelt sein Endpreis die Handelsmaßnahmen 2026 wider — ein Grund, jeden Preis als bewegliches Ziel zu behandeln.** Die folgenden Fakten sind Käuferkontext, keine redaktionelle Meinung.',
+        items: [
+          'USA: Die Section-301-Zölle auf chinesische Elektronik gelten 2026 weiterhin; die separaten "IEEPA"-Zölle von 2025 wurden im Februar 2026 vom Obersten Gerichtshof gekippt und durch einen befristeten, gedeckelten Section-122-Zoll ersetzt. Die zollfreie "De-minimis"-Ausnahme unter 800 USD für Direktimporte ist ebenfalls entfallen.',
+          'EU (betrifft DE/FR): Es gibt keinen breiten EU-Zoll auf fertige Mini-PCs, aber ab Juli 2026 wurde die zollfreie 150-€-Grenze für geringwertige Direktsendungen aus China aufgehoben und eine kleine Bearbeitungsgebühr pro Sendung eingeführt.',
+          'Annahme (Makrotrend, kein produktspezifischer Fakt): Umgeleitete chinesische Exportkapazitäten haben die Verfügbarkeit dieser Marken in EU und USA hochgehalten, was wettbewerbsfähige Preise insgesamt stützt.',
+          'Nettoeffekt: Prüfen Sie den aktuellen Preis beim Händler vor dem Kauf — der hier genannte Richtwert von ca. 199–239 € ist indikativ und mit Stand Juli 2026 datiert.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Wo kaufen & aktueller Preis',
+        content:
+          '**Die Preise ändern sich von Woche zu Woche, prüfen Sie also den Live-Preis statt einer festen Zahl zu vertrauen.** Stand Juli 2026 liegt der G3 Plus mit 16 GB / 512 GB bei etwa 199–239 €; die Herstellerseite zeigt möglicherweise einen Platzhalterpreis, der nicht den Straßenpreisen entspricht.',
+        items: [
+          'Bestätigen Sie RAM- und Speicherkapazität der genauen SKU — und dass Sie das SO-DIMM auf 32 GB aufrüsten können, falls Sie die Reserve möchten.',
+        ],
+        affiliateLinks: [
+          { label: 'Aktuellen Preis prüfen — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'Zu erwägende Alternativen',
+        content: '**Falls der G3 Plus nicht die richtige Budget-Box ist, ziehen Sie diese in Betracht.**',
+        items: [
+          '[Beelink EQ14](/de/smart-home/beelink-eq14-local-ai-review) — die andere günstige N150-Box; Dual-2,5GbE-Netzwerk, aber auf 16 GB RAM begrenzt',
+          '[Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — die nächste Stufe: Ryzen 7 8845HS betreibt einen echten 7B-Assistenten für etwa 650 €',
+          '[Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) — Mittelklasse-Ryzen-9 mit Dual-2,5GbE und einem eGPU-Port',
+          '[GEEKOM A9 Max](/de/smart-home/geekom-a9-max-local-ai-review) — Premium-Box mit Reserve und 128-GB-RAM-Obergrenze',
+          'Noch am Vergleichen? Starten Sie mit der [Übersicht der besten Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          { q: 'Kann der GMKtec G3 Plus lokale LLMs betreiben?', a: 'Er kann kleine betreiben. Ein 1B–8B-Modell in 4-Bit passt, und ein 7–8B-Modell ist nutzbar, aber langsam wegen der Single-Channel-DDR4-Bandbreite und des Vierkern-N150. Dies ist aus seiner geprüften Hardware geschätzt, kein fester Benchmark.' },
+          { q: 'Wie groß darf ein Modell für seinen RAM sein?', a: 'Mit den Basis-16 GB passt ein 7–8B-Modell in 4-Bit mit Reserve. Die Aufrüstung des SO-DIMM auf 32 GB erlaubt einen längeren Kontext oder ein etwa 13B großes Modell mit geringem Durchsatz, wobei die Geschwindigkeit durch die Speicherbandbreite begrenzt bleibt.' },
+          { q: 'Ist der RAM verlötet oder aufrüstbar?', a: 'Aufrüstbar. Entgegen mancher Annahmen nutzt der G3 Plus einen einzelnen austauschbaren DDR4-SO-DIMM-Steckplatz, keinen verlöteten Speicher, und unterstützt bis zu 32 GB. Dieser Aufrüstpfad ist ein echter Vorteil gegenüber Budget-Boxen mit fixem RAM.' },
+          { q: 'Ist der G3 Plus gut für Home Assistant und Dauerbetrieb?', a: 'Ja. Er betreibt Home Assistant und Add-ons gut und zieht im Leerlauf etwa 6 W, ist also günstig im Dauerbetrieb. Beachten Sie: Er hat nur einen 2,5GbE-Port, ist also weniger eine Netzwerk-Box als der Dual-LAN-Beelink-EQ14.' },
+          { q: 'Hat der G3 Plus einen USB-C-Anschluss?', a: 'Nein. Dieses Modell hat vier USB-A-Anschlüsse und zwei HDMI-Ausgänge, aber keinen USB-C-Anschluss, planen Sie Ihre Peripherie entsprechend.' },
+          { q: 'Wie viel Strom verbraucht der G3 Plus?', a: 'Etwa 6 W im Leerlauf und rund 21 W unter Last, sodass Dauerbetrieb sehr wenig kostet. Diese Effizienz ist ein Hauptgrund, eine N150-Box als Zentrale zu wählen.' },
+          { q: 'G3 Plus oder Beelink EQ14?', a: 'Beide nutzen den Intel N150. Der G3 Plus unterstützt bis zu 32 GB RAM, was Kontext und größere kleine Modelle begünstigt; der EQ14 ist bei 16 GB gedeckelt, ergänzt aber einen zweiten 2,5GbE-Port. Wählen Sie danach, ob Sie Speicherreserve oder Dual-Netzwerk schätzen.' },
+          { q: 'Wo wird der GMKtec G3 Plus gefertigt, und beeinflusst das den Preis?', a: 'Er wird in China gefertigt. 2026 können US-Importmaßnahmen (Section-301-Zölle, das Ende der De-minimis-Ausnahme unter 800 USD) und die EU-Aufhebung der 150-€-Grenze für geringwertige Sendungen die Endkosten beeinflussen, prüfen Sie also den aktuellen Händlerpreis, statt sich auf eine feste Zahl zu verlassen.' },
+          { q: 'Muss ich bei der Nutzung des GMKtec G3 Plus für lokale KI die DSGVO beachten?', a: 'Genau die lokale Verarbeitung erleichtert die DSGVO-Konformität. Weil Home Assistant und das lokale Modell die Daten auf dem Gerät halten, verlassen personenbezogene Daten nicht Ihr Netzwerk — das unterstützt die Datenresidenz- und Verarbeitungspflichten nach DSGVO-Artikel 28 und passt zu den BSI-Grundschutz-Katalogen. Für sensible Anwendungsfälle dokumentieren Sie den Datenfluss und sichern das Gerät im Netzwerk ab; die lokale Inferenz selbst vermeidet die Übermittlung an Dritte.' },
+          { q: 'Ist der G3 Plus für den deutschen Mittelstand geeignet?', a: 'Für leichte, lokal betriebene Aufgaben ja. Kleine und mittlere Unternehmen im DACH-Raum können den G3 Plus als günstige Home-Assistant- oder Automatisierungszentrale mit einem kleinen lokalen Modell einsetzen, ohne Cloud-Abhängigkeit. Für IT-Sicherheit orientieren Sie sich an den BSI-Grundschutz-Katalogen (Netzsegmentierung, Updates, Zugriffskontrolle). Für produktive KI-Arbeit über kleine Modelle hinaus ist eine Ryzen-Box die bessere Wahl.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die Übersicht, zu der dieser Test gehört',
+          '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — Pi vs. Mini-PC vs. NAS',
+          '[Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) — was die Box tatsächlich betreibt',
+          '[Wie man Ollama installiert](/de/local-llms/how-to-install-ollama) — ein kleines Modell auf dem G3 Plus ausprobieren',
+          '[Erste Schritte mit Home Assistant](/de/smart-home/home-assistant-getting-started) — die Zentrale einrichten',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'GMKtec G3 Plus Test (2026): Günstiges lokales Smart Home',
+      reviewBody:
+        'Der GMKtec NucBox G3 Plus ist ein günstiger Intel-N150-Mini-PC mit einem austauschbaren DDR4-SO-DIMM, aufrüstbar auf 32 GB. Er betreibt Home Assistant und ein kleines lokales Modell für etwa 199–239 € (Stand Juli 2026). Eine Zentrale mit Speicherreserve, keine schnelle KI-Maschine.',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/de/smart-home/gmktec-g3-plus-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '3.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'GMKtec NucBox G3 Plus',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'GMKtec' },
+        description: 'Günstiger Mini-PC mit Intel N150 und DDR4-RAM aufrüstbar auf 32 GB, für Home Assistant und ein kleines lokales Modell.',
+      },
+    },
+  },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Test GMKtec G3 Plus (2026) : maison connectée locale',
+    seoTitle: 'Test GMKtec G3 Plus 2026 — Mini-PC domotique abordable',
+    intro:
+      'Le GMKtec NucBox G3 Plus (Intel N150, extensible à 32 Go DDR4) est un mini-PC abordable pour une maison connectée locale. À environ 199–239 € (juillet 2026, prix volatil), il fait tourner Home Assistant et un petit modèle local, avec un vrai atout face à certains rivaux : sa RAM est un SO-DIMM remplaçable, non soudé. Ce test vérifie ses spécifications, fixe des attentes honnêtes sur la vitesse des LLM locaux et explique où il se situe face au Beelink EQ14 et aux boîtiers Ryzen.',
+    metaDescription:
+      'Test GMKtec G3 Plus 2026 : Intel N150, extensible à 32 Go DDR4, double HDMI, un seul 2,5GbE, ~199–239 €. Un boîtier Home Assistant abordable à RAM remplaçable — analyse complète.',
+    twitterDescription:
+      'GMKtec G3 Plus (2026) : Intel N150, extensible à 32 Go DDR4 (non soudée), ~199–239 €. Un boîtier Home Assistant abordable pour un petit modèle local — voici où il se situe.',
+    readTime: '6 min de lecture',
+    educationalLevel: 'Beginner',
+    audience: 'Acheteurs au budget serré faisant tourner Home Assistant et un petit modèle local',
+    primaryTerm: 'test GMKtec G3 Plus',
+    targetKeywords: [
+      'test gmktec g3 plus',
+      'gmktec g3 plus home assistant',
+      'gmktec g3 plus ia locale',
+      'gmktec nucbox g3 plus n150',
+      'gmktec g3 plus llm local',
+    ],
+    leadAnswerBlock:
+      '**Le GMKtec G3 Plus (Intel N150, extensible à 32 Go DDR4) est un mini-PC abordable qui fait tourner Home Assistant et un petit modèle local 1B–8B pour environ 199–239 € (juillet 2026, volatil).** Son point fort est un emplacement SO-DIMM remplaçable atteignant 32 Go — plus de marge mémoire qu\'un Beelink EQ14 — même s\'il n\'offre qu\'un seul port 2,5GbE et pas d\'USB-C.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Le GMKtec G3 Plus est-il bon pour Home Assistant et l\'IA locale ?',
+        answer:
+          'Oui pour Home Assistant, avec des limites pour l\'IA. L\'Intel N150 (4 cœurs), le GPU Intel UHD et la mémoire DDR4 font bien tourner Home Assistant et un petit modèle local. Comme son unique emplacement SO-DIMM atteint 32 Go, il offre un peu plus de marge que les rivaux limités à 16 Go — mais la DDR4 mono-canal et l\'absence de NPU rendent tout ce qui dépasse un petit modèle lent. À environ 199–239 € (juillet 2026, volatil), c\'est un boîtier abordable, pas une machine à LLM.',
+        bullets: [
+          'CPU : Intel N150 — 4 cœurs / 4 threads, GPU Intel UHD (24 EU), pas de NPU',
+          'RAM : DDR4-3200, un seul emplacement SO-DIMM, extensible à 32 Go (remplaçable, non soudée)',
+          'LLM local (estimé d\'après les specs) : 1B–8B en 4-bit tient ; 7–8B utilisable mais lent',
+          'Ports : double HDMI (double 4K/60), un seul 2,5GbE, Wi-Fi 6 — pas d\'USB-C',
+          'Prix ~199–239 € (juillet 2026, volatil) — boîtier Home Assistant abordable',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: 'En bref', anchor: 'tldr' },
+      { label: 'Verdict', anchor: 'verdict' },
+      { label: 'Spécifications', anchor: 'specs' },
+      { label: 'IA locale et performances LLM', anchor: 'local-ai' },
+      { label: 'Avantages et inconvénients', anchor: 'pros-cons' },
+      { label: 'Contexte acheteur : droits de douane (2026)', anchor: 'trade-note' },
+      { label: 'Où acheter', anchor: 'where-to-buy' },
+      { label: 'Alternatives', anchor: 'alternatives' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Le GMKtec G3 Plus est un mini-PC Intel N150 abordable qui fait tourner Home Assistant et un petit modèle local, avec un emplacement DDR4 remplaçable atteignant 32 Go.' },
+      { type: 'plain-terms', content: 'Un mini-PC est un petit ordinateur peu gourmand, allumé en permanence. Le G3 Plus est un modèle bon marché qui fait tourner un hub domotique et un petit modèle d\'IA. Contrairement à certains boîtiers d\'entrée de gamme, sa mémoire peut être remplacée et portée à 32 Go, ce qui donne un peu plus de marge — mais il reste un hub, pas une machine d\'IA rapide.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'En bref',
+        isTldr: true,
+        items: [
+          'Le G3 Plus fait tourner Home Assistant et un petit modèle local 1B–8B pour environ 199–239 €',
+          'Intel N150 : 4 cœurs, GPU Intel UHD, DDR4 extensible à 32 Go (SO-DIMM remplaçable), pas de NPU',
+          'Un modèle 7–8B tient mais tourne lentement — c\'est un hub abordable, pas un boîtier d\'IA',
+          'Atout face au [Beelink EQ14](/fr/smart-home/beelink-eq14-local-ai-review) : plafond de 32 Go de RAM (mais un seul port 2,5GbE et pas d\'USB-C)',
+          'Pour un assistant 7B réactif, montez en gamme vers un [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review)',
+          'Fabriqué en Chine — intégrez les mesures d\'importation US/UE 2026 au coût final (voir la note douanière)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Verdict — À qui il s\'adresse',
+        content:
+          '**Achetez le GMKtec G3 Plus si vous voulez un boîtier Home Assistant bon marché et que vous appréciez un emplacement RAM remplaçable atteignant 32 Go.** Pour environ 199–239 €, c\'est une porte d\'entrée solide et abordable vers une maison connectée locale, avec un peu plus de marge mémoire que les rivaux limités à 16 Go. N\'attendez pas un assistant local rapide — l\'Intel N150 avec DDR4 mono-canal ne gère que de petits modèles.\n\nSon meilleur usage est un **hub Home Assistant compact et évolutif** capable aussi d\'héberger un petit modèle. Si vous voulez deux ports réseau, le Beelink EQ14 est le meilleur hub ; si vous voulez une vraie vitesse d\'IA, passez à un boîtier Ryzen.',
+        affiliateLinks: [
+          { label: 'Vérifier le prix actuel — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: 'Spécifications',
+        content:
+          '**Toutes les spécifications ci-dessous ont été vérifiées auprès de GMKtec et de sources de test indépendantes en juillet 2026.** La RAM est un SO-DIMM DDR4 remplaçable (non soudé) atteignant 32 Go. Ce modèle n\'a pas de port USB-C.',
+        columns: ['Spécification', 'GMKtec G3 Plus (N150)'],
+        rows: [
+          { 'Spécification': 'CPU', 'GMKtec G3 Plus (N150)': 'Intel N150 (Twin Lake / Alder Lake-N)' },
+          { 'Spécification': 'Cœurs / threads', 'GMKtec G3 Plus (N150)': '4 cœurs / 4 threads, jusqu\'à 3.6 GHz' },
+          { 'Spécification': 'iGPU', 'GMKtec G3 Plus (N150)': 'Intel UHD Graphics, 24 EU, jusqu\'à 1000 MHz' },
+          { 'Spécification': 'NPU', 'GMKtec G3 Plus (N150)': 'Aucun' },
+          { 'Spécification': 'RAM', 'GMKtec G3 Plus (N150)': 'DDR4-3200, un seul SO-DIMM, extensible à 32 Go (remplaçable, non soudée)' },
+          { 'Spécification': 'Stockage', 'GMKtec G3 Plus (N150)': 'M.2 2280 PCIe 3.0 NVMe (jusqu\'à 4 To) + M.2 2242 SATA (jusqu\'à 2 To)' },
+          { 'Spécification': 'Ports', 'GMKtec G3 Plus (N150)': '4× USB-A 3.2 (jusqu\'à 10 Gbit/s), 2× HDMI 2.0, 3,5 mm — pas d\'USB-C' },
+          { 'Spécification': 'Réseau', 'GMKtec G3 Plus (N150)': '1× 2,5GbE (Intel i226-V), Wi-Fi 6, Bluetooth 5.2' },
+          { 'Spécification': 'TDP', 'GMKtec G3 Plus (N150)': '~6 W de base ; ~6 W au repos, ~21 W en charge' },
+          { 'Spécification': 'Dimensions', 'GMKtec G3 Plus (N150)': '114 × 106 × 42,5 mm, ~361 g' },
+          { 'Spécification': 'OS', 'GMKtec G3 Plus (N150)': 'Windows 11 Pro (Linux/Home Assistant OS pris en charge)' },
+          { 'Spécification': 'Prix (indicatif)', 'GMKtec G3 Plus (N150)': '~199–239 € (juillet 2026 — volatil, vérifier le prix actuel)' },
+        ],
+        items: [
+          'Deux emplacements de stockage — un NVMe (PCIe 3.0) et un SATA (M.2 2242) — permettent un disque système rapide plus du stockage de masse.',
+          'La vitesse des ports USB-A varie selon la source et la référence (5–10 Gbit/s) ; vérifiez sur l\'annonce que vous achetez.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'IA locale et performances LLM',
+        content:
+          '**Un modèle 1B–8B en 4-bit tient sur le G3 Plus ; un modèle 7–8B est utilisable mais lent, et l\'option 32 Go de RAM autorise un contexte plus large ou un modèle ~13B à faible débit — tous ces chiffres sont estimés d\'après le matériel vérifié, pas un benchmark mesuré.** Comme pour tout boîtier N150, la bande passante DDR4 mono-canal et l\'absence de NPU sont les limites.',
+        items: [
+          'Bon pour des assistants locaux légers, la synthèse et les automatisations sur de petits modèles.',
+          'Passer à 32 Go aide davantage la longueur de contexte que la vitesse brute — la bande passante mémoire reste inchangée.',
+          'Pas de NPU et une accélération iGPU limitée, donc l\'inférence dépend du CPU.',
+          'Pour une IA locale plus lourde (vision, un assistant 7B rapide), choisissez plutôt un boîtier Ryzen.',
+          'Consultez [comment installer Ollama](/fr/local-llms/how-to-install-ollama) pour essayer un petit modèle, et le [guide matériel des LLM locaux](/fr/local-llms/local-llm-hardware-guide-2026) pour le contexte.',
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier le prix actuel — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: 'Avantages et inconvénients',
+        content: '**Le G3 Plus échange le réseau contre de la marge mémoire face à l\'EQ14.** Vue équilibrée ci-dessous.',
+        items: [
+          '**Avantages**',
+          'Très abordable — environ 199–239 € pour un boîtier Home Assistant',
+          'SO-DIMM DDR4 remplaçable extensible à 32 Go — plus de marge que les rivaux limités à 16 Go',
+          'Deux emplacements de stockage : NVMe plus un SATA M.2 séparé pour le stockage de masse',
+          'Faible consommation : environ 6 W au repos, peu coûteux en 24/7',
+          'Très compact (114 × 106 mm) et léger (~361 g)',
+          '**Inconvénients**',
+          'Un seul port 2,5GbE (l\'EQ14 en a deux)',
+          'Aucun port USB-C',
+          'DDR4 mono-canal et pas de NPU — lent au-delà d\'un petit modèle',
+          'La vitesse des ports USB-A est incohérente selon les annonces ; vérifiez avant d\'acheter',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'Contexte acheteur : droits de douane et disponibilité (2026)',
+        content:
+          '**Le G3 Plus est fabriqué en Chine, donc son prix final reflète les mesures commerciales de 2026 — une raison de traiter tout prix comme une cible mouvante.** Les faits ci-dessous sont un contexte acheteur, pas un avis éditorial.',
+        items: [
+          'USA : les droits de douane Section 301 sur l\'électronique chinoise restent en vigueur en 2026 ; les droits « IEEPA » de 2025, distincts, ont été invalidés par la Cour suprême en février 2026 et remplacés par un droit Section 122 temporaire et plafonné. L\'exemption « de minimis » sans droits sous 800 USD pour les imports directs a également pris fin.',
+          'UE (concerne DE/FR) : il n\'y a pas de droit UE général sur les mini-PC finis, mais depuis juillet 2026 le seuil de 150 € sans droits sur les petits colis directs de Chine a été supprimé et de faibles frais de traitement par colis ajoutés.',
+          'Hypothèse (tendance macro, pas un fait par produit) : la capacité d\'export chinoise redirigée a maintenu une forte disponibilité de ces marques en UE et aux USA, ce qui soutient globalement des prix compétitifs.',
+          'Effet net : vérifiez le prix actuel chez le revendeur avant d\'acheter — le chiffre de ~199–239 € ici est indicatif et daté de juillet 2026.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Où acheter et prix actuel',
+        content:
+          '**Les prix bougent d\'une semaine à l\'autre, vérifiez donc le prix en direct plutôt que de vous fier à un chiffre fixe.** En juillet 2026, le G3 Plus 16 Go / 512 Go se situe autour de 199–239 € ; la page du fabricant peut afficher un prix indicatif qui ne reflète pas les annonces réelles.',
+        items: [
+          'Confirmez la RAM et la capacité de stockage de la référence exacte — et que vous pouvez porter le SO-DIMM à 32 Go si vous voulez la marge.',
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier le prix actuel — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'Alternatives à envisager',
+        content: '**Si le G3 Plus n\'est pas le bon boîtier abordable, envisagez ceux-ci.**',
+        items: [
+          '[Beelink EQ14](/fr/smart-home/beelink-eq14-local-ai-review) — l\'autre boîtier N150 abordable ; réseau double 2,5GbE mais plafonné à 16 Go de RAM',
+          '[Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — la montée en gamme : le Ryzen 7 8845HS fait tourner un vrai assistant 7B pour environ 650 €',
+          '[Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) — Ryzen 9 milieu de gamme avec double 2,5GbE et un port eGPU',
+          '[GEEKOM A9 Max](/fr/smart-home/geekom-a9-max-local-ai-review) — boîtier premium avec un plafond de 128 Go de RAM',
+          'Toujours en comparaison ? Commencez par le [comparatif des meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Foire aux questions',
+        faqs: [
+          { q: 'Le GMKtec G3 Plus peut-il faire tourner des LLM locaux ?', a: 'Il peut en faire tourner de petits. Un modèle 1B–8B en 4-bit tient, et un modèle 7–8B est utilisable mais lent à cause de la bande passante DDR4 mono-canal et du N150 à quatre cœurs. Ceci est estimé d\'après son matériel vérifié, pas un benchmark figé.' },
+          { q: 'Quelle taille de modèle tient dans sa RAM ?', a: 'Avec les 16 Go de base, un modèle 7–8B en 4-bit tient avec de la marge. Porter le SO-DIMM à 32 Go autorise un contexte plus long ou un modèle d\'environ 13B à faible débit, même si la vitesse reste limitée par la bande passante mémoire.' },
+          { q: 'La RAM est-elle soudée ou évolutive ?', a: 'Évolutive. Contrairement à certaines idées reçues, le G3 Plus utilise un seul emplacement SO-DIMM DDR4 remplaçable, pas de la mémoire soudée, et prend en charge jusqu\'à 32 Go. Cette possibilité d\'évolution est un vrai avantage face aux boîtiers d\'entrée de gamme à RAM fixe.' },
+          { q: 'Le G3 Plus est-il bon pour Home Assistant et un usage permanent ?', a: 'Oui. Il fait bien tourner Home Assistant et ses modules complémentaires et consomme environ 6 W au repos, il est donc peu coûteux à laisser allumé. Notez qu\'il n\'a qu\'un port 2,5GbE, il est donc moins un boîtier réseau que le Beelink EQ14 à double LAN.' },
+          { q: 'Le G3 Plus a-t-il un port USB-C ?', a: 'Non. Ce modèle a quatre ports USB-A et deux sorties HDMI mais pas de port USB-C, prévoyez vos périphériques en conséquence.' },
+          { q: 'Combien consomme le G3 Plus ?', a: 'Environ 6 W au repos et environ 21 W en charge, le fonctionnement continu coûte donc très peu. Cette efficacité est une raison clé de choisir un boîtier N150 comme hub.' },
+          { q: 'G3 Plus ou Beelink EQ14 ?', a: 'Les deux utilisent l\'Intel N150. Le G3 Plus prend en charge jusqu\'à 32 Go de RAM, ce qui aide le contexte et les petits modèles plus grands ; l\'EQ14 plafonne à 16 Go mais ajoute un second port 2,5GbE. Choisissez selon que vous privilégiez la marge mémoire ou le double réseau.' },
+          { q: 'Où le GMKtec G3 Plus est-il fabriqué, et cela affecte-t-il le prix ?', a: 'Il est fabriqué en Chine. En 2026, les mesures d\'importation américaines (droits Section 301, fin de l\'exemption de minimis sous 800 USD) et la suppression par l\'UE du seuil de 150 € pour les petits colis peuvent affecter le coût final, vérifiez donc le prix actuel du revendeur plutôt que de vous fier à un chiffre fixe.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — le comparatif auquel ce test appartient',
+          '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — Pi vs mini-PC vs NAS',
+          '[Faire tourner votre maison connectée sur un LLM local](/fr/smart-home/local-llm-smart-home-complete-guide) — ce que le boîtier fait réellement tourner',
+          '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — essayer un petit modèle sur le G3 Plus',
+          '[Débuter avec Home Assistant](/fr/smart-home/home-assistant-getting-started) — configurer le hub',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Test GMKtec G3 Plus (2026) : maison connectée locale',
+      reviewBody:
+        'Le GMKtec NucBox G3 Plus est un mini-PC Intel N150 abordable doté d\'un SO-DIMM DDR4 remplaçable extensible à 32 Go. Il fait tourner Home Assistant et un petit modèle local pour environ 199–239 € (juillet 2026). Un hub avec de la marge mémoire, pas une machine d\'IA rapide.',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/fr/smart-home/gmktec-g3-plus-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '3.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'GMKtec NucBox G3 Plus',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'GMKtec' },
+        description: 'Mini-PC abordable avec Intel N150 et RAM DDR4 extensible à 32 Go, pour Home Assistant et un petit modèle local.',
+      },
+    },
+  },
+  es: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Análisis GMKtec G3 Plus (2026): hogar inteligente local',
+    seoTitle: 'Análisis GMKtec G3 Plus 2026 — Mini PC domótica barata',
+    intro:
+      'El GMKtec NucBox G3 Plus (Intel N150, ampliable a 32 GB DDR4) es un mini PC económico para un hogar inteligente de tipo local-first. Por unos 199–239 € (julio de 2026, precio volátil) ejecuta Home Assistant y un modelo local pequeño, con una ventaja real frente a algunos rivales: su RAM es un SO-DIMM reemplazable, no soldado. Este análisis verifica sus especificaciones, fija expectativas honestas sobre la velocidad del LLM local y explica dónde encaja frente al Beelink EQ14 y las cajas Ryzen.',
+    metaDescription:
+      'Análisis GMKtec G3 Plus 2026: Intel N150, ampliable a 32 GB DDR4, HDMI doble, un solo 2.5GbE, ~199–239 €. Una caja Home Assistant económica con RAM reemplazable — desglose completo.',
+    twitterDescription:
+      'GMKtec G3 Plus (2026): Intel N150, ampliable a 32 GB DDR4 (no soldada), ~199–239 €. Una caja Home Assistant económica para un modelo local pequeño — aquí es donde encaja.',
+    readTime: '6 min de lectura',
+    educationalLevel: 'Beginner',
+    audience: 'Compradores con presupuesto ajustado que ejecutan Home Assistant y un modelo local pequeño',
+    primaryTerm: 'análisis GMKtec G3 Plus',
+    targetKeywords: [
+      'análisis gmktec g3 plus',
+      'gmktec g3 plus home assistant',
+      'gmktec g3 plus ia local',
+      'gmktec nucbox g3 plus n150',
+      'gmktec g3 plus llm local',
+    ],
+    leadAnswerBlock:
+      '**El GMKtec G3 Plus (Intel N150, ampliable a 32 GB DDR4) es un mini PC económico que ejecuta Home Assistant y un modelo local pequeño de 1B–8B por unos 199–239 € (julio de 2026, volátil).** Su punto fuerte es una ranura SO-DIMM reemplazable que llega a 32 GB — más margen de memoria que un Beelink EQ14 — aunque tiene un solo puerto 2.5GbE y no lleva USB-C.',
+    quickAnswerTop: {
+      es: {
+        question: '¿Es bueno el GMKtec G3 Plus para Home Assistant y la IA local?',
+        answer:
+          'Sí para Home Assistant, con límites para la IA. El Intel N150 (4 núcleos), la GPU Intel UHD y la memoria DDR4 ejecutan bien Home Assistant y un modelo local pequeño. Como su única ranura SO-DIMM llega a 32 GB, tiene algo más de margen que los rivales limitados a 16 GB — pero la DDR4 de un solo canal y la falta de NPU hacen lento todo lo que supere a un modelo pequeño. Por unos 199–239 € (julio de 2026, volátil) es una caja económica, no una máquina de LLM.',
+        bullets: [
+          'CPU: Intel N150 — 4 núcleos / 4 hilos, GPU Intel UHD (24 EU), sin NPU',
+          'RAM: DDR4-3200, una sola ranura SO-DIMM, ampliable a 32 GB (reemplazable, no soldada)',
+          'LLM local (estimado según las specs): 1B–8B en 4-bit entra; 7–8B usable pero lento',
+          'Puertos: HDMI doble (doble 4K/60), un solo 2.5GbE, Wi-Fi 6 — sin USB-C',
+          'Precio ~199–239 € (julio de 2026, volátil) — caja Home Assistant económica',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: 'Resumen', anchor: 'tldr' },
+      { label: 'Veredicto', anchor: 'verdict' },
+      { label: 'Especificaciones', anchor: 'specs' },
+      { label: 'IA local y rendimiento LLM', anchor: 'local-ai' },
+      { label: 'Pros y contras', anchor: 'pros-cons' },
+      { label: 'Contexto de compra: aranceles (2026)', anchor: 'trade-note' },
+      { label: 'Dónde comprar', anchor: 'where-to-buy' },
+      { label: 'Alternativas', anchor: 'alternatives' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'El GMKtec G3 Plus es un mini PC Intel N150 económico que ejecuta Home Assistant y un modelo local pequeño, con una ranura DDR4 reemplazable que llega a 32 GB.' },
+      { type: 'plain-terms', content: 'Un mini PC es un ordenador pequeño, de bajo consumo y siempre encendido. El G3 Plus es uno barato que ejecuta un concentrador domótico y un modelo de IA pequeño. A diferencia de algunas cajas económicas, su memoria se puede cambiar y subir hasta 32 GB, lo que da algo más de margen — pero sigue siendo un concentrador, no una máquina de IA rápida.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Resumen',
+        isTldr: true,
+        items: [
+          'El G3 Plus ejecuta Home Assistant y un modelo local pequeño de 1B–8B por unos 199–239 €',
+          'Intel N150: 4 núcleos, GPU Intel UHD, DDR4 ampliable a 32 GB (SO-DIMM reemplazable), sin NPU',
+          'Un modelo de 7–8B entra pero funciona lento — es un concentrador económico, no una caja de IA',
+          'Ventaja frente al [Beelink EQ14](/es/smart-home/beelink-eq14-local-ai-review): techo de 32 GB de RAM (pero un solo puerto 2.5GbE y sin USB-C)',
+          'Para un asistente 7B fluido, sube al [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review)',
+          'Fabricado en China — incluye las medidas de importación de EE. UU./UE de 2026 en el coste final (ver la nota sobre aranceles)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Veredicto — Para quién es',
+        content:
+          '**Compra el GMKtec G3 Plus si quieres una caja Home Assistant barata y valoras una ranura de RAM reemplazable que llega a 32 GB.** Por unos 199–239 € es una puerta de entrada sólida y económica a un hogar inteligente local, con algo más de margen de memoria que los rivales limitados a 16 GB. No esperes un asistente local rápido — el Intel N150 con DDR4 de un solo canal solo maneja modelos pequeños.\n\nSu mejor caso de uso es un **concentrador Home Assistant compacto y ampliable** que también puede alojar un modelo pequeño. Si quieres dos puertos de red, el Beelink EQ14 es el mejor concentrador; si quieres velocidad de IA real, sube a una caja Ryzen.',
+        affiliateLinks: [
+          { label: 'Consultar precio actual — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: 'Especificaciones',
+        content:
+          '**Todas las especificaciones siguientes se verificaron contra GMKtec y fuentes de análisis independientes en julio de 2026.** La RAM es un SO-DIMM DDR4 reemplazable (no soldado) que llega a 32 GB. Este modelo no tiene puerto USB-C.',
+        columns: ['Especificación', 'GMKtec G3 Plus (N150)'],
+        rows: [
+          { 'Especificación': 'CPU', 'GMKtec G3 Plus (N150)': 'Intel N150 (Twin Lake / Alder Lake-N)' },
+          { 'Especificación': 'Núcleos / hilos', 'GMKtec G3 Plus (N150)': '4 núcleos / 4 hilos, hasta 3.6 GHz' },
+          { 'Especificación': 'iGPU', 'GMKtec G3 Plus (N150)': 'Intel UHD Graphics, 24 EU, hasta 1000 MHz' },
+          { 'Especificación': 'NPU', 'GMKtec G3 Plus (N150)': 'Ninguna' },
+          { 'Especificación': 'RAM', 'GMKtec G3 Plus (N150)': 'DDR4-3200, un solo SO-DIMM, ampliable a 32 GB (reemplazable, no soldada)' },
+          { 'Especificación': 'Almacenamiento', 'GMKtec G3 Plus (N150)': 'M.2 2280 PCIe 3.0 NVMe (hasta 4 TB) + M.2 2242 SATA (hasta 2 TB)' },
+          { 'Especificación': 'Puertos', 'GMKtec G3 Plus (N150)': '4× USB-A 3.2 (hasta 10 Gbps), 2× HDMI 2.0, 3.5 mm — sin USB-C' },
+          { 'Especificación': 'Red', 'GMKtec G3 Plus (N150)': '1× 2.5GbE (Intel i226-V), Wi-Fi 6, Bluetooth 5.2' },
+          { 'Especificación': 'TDP', 'GMKtec G3 Plus (N150)': '~6 W base; ~6 W en reposo, ~21 W en carga' },
+          { 'Especificación': 'Dimensiones', 'GMKtec G3 Plus (N150)': '114 × 106 × 42.5 mm, ~361 g' },
+          { 'Especificación': 'SO', 'GMKtec G3 Plus (N150)': 'Windows 11 Pro (Linux/Home Assistant OS compatibles)' },
+          { 'Especificación': 'Precio (indicativo)', 'GMKtec G3 Plus (N150)': '~199–239 € (julio de 2026 — volátil, consultar precio actual)' },
+        ],
+        items: [
+          'Dos ranuras de almacenamiento — una NVMe (PCIe 3.0) y una SATA (M.2 2242) — permiten un disco de sistema rápido más almacenamiento masivo.',
+          'La velocidad de los puertos USB-A varía según la fuente y la referencia (5–10 Gbps); confírmalo en el anuncio que compres.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'IA local y rendimiento LLM',
+        content:
+          '**Un modelo de 1B–8B en 4-bit entra en el G3 Plus; un modelo de 7–8B es usable pero lento, y la opción de 32 GB de RAM permite un contexto mayor o un modelo ~13B con bajo rendimiento — todas las cifras están estimadas a partir del hardware verificado, no son un benchmark medido.** Como en cualquier caja N150, el ancho de banda DDR4 de un solo canal y la falta de NPU son los límites.',
+        items: [
+          'Bueno para asistentes locales ligeros, resúmenes y automatizaciones con modelos pequeños.',
+          'Subir a 32 GB ayuda más a la longitud de contexto que a la velocidad bruta — el ancho de banda de memoria no cambia.',
+          'Sin NPU y con aceleración iGPU limitada, así que la inferencia depende de la CPU.',
+          'Para IA local más exigente (visión, un asistente 7B rápido), elige una caja Ryzen en su lugar.',
+          'Consulta [cómo instalar Ollama](/es/local-llms/how-to-install-ollama) para probar un modelo pequeño, y la [guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide-2026) para el contexto.',
+        ],
+        affiliateLinks: [
+          { label: 'Consultar precio actual — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: 'Pros y contras',
+        content: '**El G3 Plus cambia red por margen de memoria frente al EQ14.** Vista equilibrada abajo.',
+        items: [
+          '**Pros**',
+          'Muy económico — unos 199–239 € por una caja Home Assistant',
+          'SO-DIMM DDR4 reemplazable ampliable a 32 GB — más margen que los rivales limitados a 16 GB',
+          'Dos ranuras de almacenamiento: NVMe más un SATA M.2 aparte para almacenamiento masivo',
+          'Bajo consumo: unos 6 W en reposo, barato de tener 24/7',
+          'Muy compacto (114 × 106 mm) y ligero (~361 g)',
+          '**Contras**',
+          'Solo un puerto 2.5GbE (el EQ14 tiene dos)',
+          'Ningún puerto USB-C',
+          'DDR4 de un solo canal y sin NPU — lento más allá de un modelo pequeño',
+          'La velocidad de los puertos USB-A es inconsistente entre anuncios; verifícalo antes de comprar',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'Contexto de compra: aranceles y disponibilidad (2026)',
+        content:
+          '**El G3 Plus se fabrica en China, así que su precio final refleja las medidas comerciales de 2026 — una razón para tratar cualquier precio como un objetivo móvil.** Los datos siguientes son contexto de compra, no una opinión editorial.',
+        items: [
+          'EE. UU.: los aranceles de la Sección 301 sobre electrónica china siguen vigentes en 2026; los aranceles «IEEPA» de 2025, distintos, fueron anulados por el Tribunal Supremo en febrero de 2026 y sustituidos por un arancel temporal y limitado de la Sección 122. La exención «de minimis» sin aranceles por debajo de 800 USD para importaciones directas también terminó.',
+          'UE (afecta a DE/FR): no hay un arancel general de la UE sobre mini PC terminados, pero desde julio de 2026 se eliminó el umbral de 150 € sin aranceles para paquetes pequeños directos de China y se añadió una pequeña tasa de gestión por paquete.',
+          'Supuesto (tendencia macro, no un dato por producto): la capacidad de exportación china redirigida ha mantenido alta la disponibilidad de estas marcas en la UE y EE. UU., lo que en general respalda precios competitivos.',
+          'Efecto neto: verifica el precio actual en el vendedor antes de comprar — la cifra de ~199–239 € aquí es indicativa y con fecha de julio de 2026.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Dónde comprar y precio actual',
+        content:
+          '**Los precios cambian semana a semana, así que consulta el precio en vivo en lugar de fiarte de una cifra fija.** En julio de 2026 el G3 Plus de 16 GB / 512 GB ronda los 199–239 €; la página del fabricante puede mostrar un precio orientativo que no refleja los anuncios reales.',
+        items: [
+          'Confirma la RAM y la capacidad de almacenamiento de la referencia exacta — y que puedes ampliar el SO-DIMM a 32 GB si quieres el margen.',
+        ],
+        affiliateLinks: [
+          { label: 'Consultar precio actual — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'Alternativas a considerar',
+        content: '**Si el G3 Plus no es la caja económica adecuada, considera estas.**',
+        items: [
+          '[Beelink EQ14](/es/smart-home/beelink-eq14-local-ai-review) — la otra caja N150 económica; red doble 2.5GbE pero limitada a 16 GB de RAM',
+          '[Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — el salto: el Ryzen 7 8845HS ejecuta un asistente 7B real por unos 650 €',
+          '[Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) — Ryzen 9 de gama media con doble 2.5GbE y un puerto eGPU',
+          '[GEEKOM A9 Max](/es/smart-home/geekom-a9-max-local-ai-review) — caja premium con techo de 128 GB de RAM',
+          '¿Aún comparando? Empieza por el [resumen de los mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          { q: '¿Puede el GMKtec G3 Plus ejecutar LLM locales?', a: 'Puede ejecutar los pequeños. Un modelo de 1B–8B en 4-bit entra, y un modelo de 7–8B es usable pero lento por el ancho de banda DDR4 de un solo canal y el N150 de cuatro núcleos. Esto está estimado a partir de su hardware verificado, no es un benchmark fijo.' },
+          { q: '¿Qué tamaño de modelo entra en su RAM?', a: 'Con los 16 GB de base, un modelo de 7–8B en 4-bit entra con margen. Ampliar el SO-DIMM a 32 GB permite un contexto más largo o un modelo de unos 13B con bajo rendimiento, aunque la velocidad sigue limitada por el ancho de banda de memoria.' },
+          { q: '¿La RAM está soldada o es ampliable?', a: 'Ampliable. A pesar de algunas suposiciones en contra, el G3 Plus usa una sola ranura SO-DIMM DDR4 reemplazable, no memoria soldada, y admite hasta 32 GB. Esa vía de ampliación es una ventaja real frente a las cajas económicas con RAM fija.' },
+          { q: '¿Es bueno el G3 Plus para Home Assistant y uso permanente?', a: 'Sí. Ejecuta bien Home Assistant y sus complementos y consume unos 6 W en reposo, así que es barato dejarlo encendido. Ten en cuenta que tiene un solo puerto 2.5GbE, así que es menos una caja de red que el Beelink EQ14 de doble LAN.' },
+          { q: '¿Tiene el G3 Plus un puerto USB-C?', a: 'No. Este modelo tiene cuatro puertos USB-A y dos salidas HDMI pero ningún puerto USB-C, así que planifica tus periféricos en consecuencia.' },
+          { q: '¿Cuánta energía consume el G3 Plus?', a: 'Unos 6 W en reposo y unos 21 W en carga, así que el funcionamiento continuo cuesta muy poco. Esa eficiencia es una razón clave para elegir una caja N150 como concentrador.' },
+          { q: '¿G3 Plus o Beelink EQ14?', a: 'Ambos usan el Intel N150. El G3 Plus admite hasta 32 GB de RAM, lo que ayuda al contexto y a modelos pequeños más grandes; el EQ14 se limita a 16 GB pero añade un segundo puerto 2.5GbE. Elige según valores el margen de memoria o la red doble.' },
+          { q: '¿Dónde se fabrica el GMKtec G3 Plus y afecta al precio?', a: 'Se fabrica en China. En 2026, las medidas de importación de EE. UU. (aranceles de la Sección 301, el fin de la exención de minimis por debajo de 800 USD) y la eliminación por la UE del umbral de 150 € para paquetes pequeños pueden afectar al coste final, así que consulta el precio actual del vendedor en lugar de fiarte de una cifra fija.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — el resumen al que pertenece este análisis',
+          '[Mejor hardware para un hogar inteligente local](/es/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
+          '[Ejecutar tu hogar inteligente con un LLM local](/es/smart-home/local-llm-smart-home-complete-guide) — lo que la caja realmente ejecuta',
+          '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — probar un modelo pequeño en el G3 Plus',
+          '[Primeros pasos con Home Assistant](/es/smart-home/home-assistant-getting-started) — configurar el concentrador',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Análisis GMKtec G3 Plus (2026): hogar inteligente local',
+      reviewBody:
+        'El GMKtec NucBox G3 Plus es un mini PC Intel N150 económico con un SO-DIMM DDR4 reemplazable ampliable a 32 GB. Ejecuta Home Assistant y un modelo local pequeño por unos 199–239 € (julio de 2026). Un concentrador con margen de memoria, no una máquina de IA rápida.',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/es/smart-home/gmktec-g3-plus-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '3.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'GMKtec NucBox G3 Plus',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'GMKtec' },
+        description: 'Mini PC económico con Intel N150 y RAM DDR4 ampliable a 32 GB, para Home Assistant y un modelo local pequeño.',
+      },
+    },
+  },
 }
