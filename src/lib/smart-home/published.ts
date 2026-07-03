@@ -40,6 +40,12 @@ export const SMART_HOME_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-mini-pc-home-assistant-local-ai',
   'local-vs-cloud-voice-assistant',
   'smart-home-without-subscriptions',
+  // Category 4 — Mini-PC single-product reviews (spokes of the roundup)
+  'geekom-a9-max-local-ai-review',
+  'beelink-ser8-local-ai-review',
+  'beelink-eq14-local-ai-review',
+  'gmktec-g3-plus-local-ai-review',
+  'minisforum-um890-pro-local-ai-review',
 ])
 
 export const SMART_HOME_HUB_PUBLISHED = true

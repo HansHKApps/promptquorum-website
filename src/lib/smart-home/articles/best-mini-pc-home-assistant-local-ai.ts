@@ -148,6 +148,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is the cheapest mini PC that runs a local LLM?', a: 'A low-power Intel N-series mini PC is the cheapest that can run Home Assistant plus a very small model, though responses are slower. For a snappier 7B-class assistant, step up to a Ryzen or Core i mini PC with a strong iGPU.' },
         ],
       },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: 'Full Reviews of Each Mini PC',
+        content:
+          '**Read the dedicated, spec-verified review of each unit in this guide.**',
+        items: [
+          '[Beelink SER8 — full review](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — full review](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — full review](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — full review](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — full review](/smart-home/gmktec-g3-plus-local-ai-review)',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: 'Related Reading',
@@ -332,6 +345,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'كم من RAM أحتاج؟', a: 'كافٍ لاستيعاب نموذجك المستهدف مع Home Assistant وأي إضافات. نموذج صغير يحتاج RAM متواضعًا، بينما يستفيد تشغيل نموذج 7B بشكل مريح إلى جانب المركز من RAM وافر. طابق RAM مع أكبر نموذج تخطط لتشغيله.' },
           { q: 'Intel أم AMD لـ mini PC بـ Home Assistant؟', a: 'كلاهما يعمل. صندوق Intel N-series منخفض الطاقة هو الأرخص للاستخدام الخفيف؛ mini PC بـ AMD Ryzen أو Intel Core i مع GPU متكاملة قوية يتعامل بشكل أفضل مع نموذج 7B. اختر حسب حجم النموذج وزمن الاستجابة الذي تريده.' },
           { q: 'ما أرخص mini PC يشغّل نموذج LLM محلي؟', a: 'Intel N-series mini PC منخفض الطاقة هو الأرخص الذي يمكنه تشغيل Home Assistant مع نموذج صغير جدًا، وإن كانت الاستجابات أبطأ. لمساعد 7B أسرع استجابةً، ترقَّ إلى Ryzen أو Core i mini PC مع iGPU قوية.' },
+        ],
+      },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: 'مراجعات مفصّلة لكل mini PC',
+        content:
+          '**اقرأ المراجعة المخصّصة والمُتحقَّق من مواصفاتها لكل جهاز في هذا الدليل.**',
+        items: [
+          '[Beelink SER8 — المراجعة الكاملة](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — المراجعة الكاملة](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — المراجعة الكاملة](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — المراجعة الكاملة](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — المراجعة الكاملة](/smart-home/gmktec-g3-plus-local-ai-review)',
         ],
       },
       relatedReading: {
@@ -520,6 +546,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist der günstigste Mini-PC, der ein lokales LLM betreibt?', a: 'Ein stromsparender Intel-N-Serie-Mini-PC ist der günstigste, der Home Assistant plus ein sehr kleines Modell betreiben kann, wenn auch mit langsameren Antworten. Für einen flotteren Assistenten der 7B-Klasse steigen Sie auf einen Ryzen- oder Core-i-Mini-PC mit starker iGPU um.' },
         ],
       },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: 'Ausführliche Tests der einzelnen Mini-PCs',
+        content:
+          '**Lesen Sie den ausführlichen, spezifikationsgeprüften Test jedes Geräts aus dieser Übersicht.**',
+        items: [
+          '[Beelink SER8 — ausführlicher Test](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — ausführlicher Test](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — ausführlicher Test](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — ausführlicher Test](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — ausführlicher Test](/smart-home/gmktec-g3-plus-local-ai-review)',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
@@ -704,6 +743,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cuánta RAM necesito?', a: 'Suficiente para alojar tu modelo objetivo más Home Assistant y cualquier complemento. Un modelo pequeño necesita poca RAM, mientras que ejecutar un modelo 7B cómodamente junto al hub se beneficia de RAM amplia. Ajusta la RAM al modelo más grande que planees ejecutar.' },
           { q: '¿Intel o AMD para un mini PC de Home Assistant?', a: 'Ambos funcionan. Un equipo de la serie N de Intel de bajo consumo es el más barato para uso ligero; un mini PC con AMD Ryzen o Intel Core i con una GPU integrada fuerte maneja mejor un modelo 7B. Elige según el tamaño de modelo y la latencia que quieras.' },
           { q: '¿Cuál es el mini PC más barato que ejecuta un LLM local?', a: 'Un mini PC de la serie N de Intel de bajo consumo es el más barato que puede ejecutar Home Assistant más un modelo muy pequeño, aunque las respuestas son más lentas. Para un asistente más ágil de clase 7B, sube a un mini PC Ryzen o Core i con una iGPU fuerte.' },
+        ],
+      },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: 'Análisis detallado de cada mini PC',
+        content:
+          '**Lee el análisis dedicado y verificado de cada equipo de esta guía.**',
+        items: [
+          '[Beelink SER8 — análisis completo](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — análisis completo](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — análisis completo](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — análisis completo](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — análisis completo](/smart-home/gmktec-g3-plus-local-ai-review)',
         ],
       },
       relatedReading: {
@@ -892,6 +944,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '로컬 LLM을 실행하는 가장 저렴한 미니 PC는 무엇입니까?', a: '저전력 Intel N-시리즈 미니 PC가 Home Assistant와 매우 소형 모델을 실행할 수 있는 가장 저렴한 것이지만 응답이 더 느립니다. 더 빠른 7B급 어시스턴트를 원한다면 강력한 iGPU가 있는 Ryzen 또는 Core i 미니 PC로 업그레이드하십시오.' },
         ],
       },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: '각 미니 PC 상세 리뷰',
+        content:
+          '**이 가이드에서 다룬 각 제품의 사양을 검증한 상세 리뷰를 확인하세요.**',
+        items: [
+          '[Beelink SER8 — 전체 리뷰](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — 전체 리뷰](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — 전체 리뷰](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — 전체 리뷰](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — 전체 리뷰](/smart-home/gmktec-g3-plus-local-ai-review)',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: '관련 읽을거리',
@@ -1076,6 +1141,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'De combien de RAM ai-je besoin ?', a: 'Assez pour contenir votre modèle cible plus Home Assistant et les add-ons. Un petit modèle ne nécessite que peu de RAM, tandis que faire tourner confortablement un modèle 7B aux côtés du hub profite d\'une RAM ample. Adaptez la RAM au plus gros modèle prévu.' },
           { q: 'Intel ou AMD pour un mini-PC Home Assistant ?', a: 'Les deux fonctionnent. Une machine de la série N d\'Intel basse consommation est la moins chère pour un usage léger ; un mini-PC AMD Ryzen ou Intel Core i avec un GPU intégré puissant gère mieux un modèle 7B. Choisissez selon la taille de modèle et la latence voulues.' },
           { q: 'Quel est le mini-PC le moins cher qui fait tourner un LLM local ?', a: 'Un mini-PC de la série N d\'Intel basse consommation est le moins cher qui puisse faire tourner Home Assistant plus un très petit modèle, bien que les réponses soient plus lentes. Pour un assistant de classe 7B plus vif, montez vers un mini-PC Ryzen ou Core i avec un iGPU puissant.' },
+        ],
+      },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: 'Tests détaillés de chaque mini-PC',
+        content:
+          '**Lisez le test détaillé et vérifié de chaque appareil de ce guide.**',
+        items: [
+          '[Beelink SER8 — test complet](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — test complet](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — test complet](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — test complet](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — test complet](/smart-home/gmktec-g3-plus-local-ai-review)',
         ],
       },
       relatedReading: {
@@ -1264,6 +1342,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ローカル LLM を動かせる最も安いミニPCは？', a: '低消費電力の Intel N シリーズのミニPCが、Home Assistant と非常に小さなモデルを動かせる最も安い機種ですが、応答は遅めです。よりキビキビした 7B クラスのアシスタントには、強力な iGPU を備えた Ryzen または Core i のミニPCへ上げましょう。' },
         ],
       },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: '各ミニPCの詳細レビュー',
+        content:
+          '**このガイドで取り上げた各機種の、仕様を検証した詳細レビューを読む。**',
+        items: [
+          '[Beelink SER8 — 詳細レビュー](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — 詳細レビュー](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — 詳細レビュー](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — 詳細レビュー](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — 詳細レビュー](/smart-home/gmktec-g3-plus-local-ai-review)',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: '関連記事',
@@ -1450,6 +1541,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qual o mini PC mais barato que roda um LLM local?', a: 'Um mini PC da série N da Intel de baixo consumo é o mais barato que pode rodar o Home Assistant mais um modelo muito pequeno, embora as respostas sejam mais lentas. Para um assistente de classe 7B mais ágil, suba para um mini PC Ryzen ou Core i com uma iGPU forte.' },
         ],
       },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: 'Análises detalhadas de cada mini PC',
+        content:
+          '**Leia a análise dedicada e verificada de cada equipamento deste guia.**',
+        items: [
+          '[Beelink SER8 — análise completa](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — análise completa](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — análise completa](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — análise completa](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — análise completa](/smart-home/gmktec-g3-plus-local-ai-review)',
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: 'Leituras relacionadas',
@@ -1634,6 +1738,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '我需要多少内存？', a: '足以容纳你的目标模型，外加 Home Assistant 和任何加载项。小型模型只需不多的内存，而要在中枢旁边从容运行 7B 模型则受益于充裕内存。把内存匹配到你计划运行的最大模型。' },
           { q: 'Home Assistant 迷你 PC 选 Intel 还是 AMD？', a: '两者都行。低功耗的 Intel N 系列机器在轻量使用上最便宜；配强力集成 GPU 的 AMD Ryzen 或 Intel Core i 迷你 PC 能更好地处理 7B 模型。按你想要的模型大小和延迟来选。' },
           { q: '能运行本地 LLM 的最便宜迷你 PC 是哪台？', a: '低功耗的 Intel N 系列迷你 PC 是能运行 Home Assistant 加一个非常小模型的最便宜机型，尽管响应较慢。要想 7B 级助手更灵敏，就升级到配强力 iGPU 的 Ryzen 或 Core i 迷你 PC。' },
+        ],
+      },
+      unitReviews: {
+        id: 'unit-reviews',
+        title: '各款迷你主机的详细评测',
+        content:
+          '**阅读本指南中每款机型经过规格核实的专门评测。**',
+        items: [
+          '[Beelink SER8 — 完整评测](/smart-home/beelink-ser8-local-ai-review)',
+          '[GEEKOM A9 Max — 完整评测](/smart-home/geekom-a9-max-local-ai-review)',
+          '[Minisforum UM890 Pro — 完整评测](/smart-home/minisforum-um890-pro-local-ai-review)',
+          '[Beelink EQ14 — 完整评测](/smart-home/beelink-eq14-local-ai-review)',
+          '[GMKtec G3 Plus — 完整评测](/smart-home/gmktec-g3-plus-local-ai-review)',
         ],
       },
       relatedReading: {

@@ -42,6 +42,12 @@ import { article as a_home_assistant_vs_alexa_vs_google } from './articles/home-
 import { article as a_best_mini_pc_home_assistant_local_ai } from './articles/best-mini-pc-home-assistant-local-ai'
 import { article as a_local_vs_cloud_voice_assistant } from './articles/local-vs-cloud-voice-assistant'
 import { article as a_smart_home_without_subscriptions } from './articles/smart-home-without-subscriptions'
+// Category 4 — Mini-PC single-product reviews (spokes of the best-mini-pc roundup)
+import { article as a_geekom_a9_max_local_ai_review } from './articles/geekom-a9-max-local-ai-review'
+import { article as a_beelink_ser8_local_ai_review } from './articles/beelink-ser8-local-ai-review'
+import { article as a_beelink_eq14_local_ai_review } from './articles/beelink-eq14-local-ai-review'
+import { article as a_gmktec_g3_plus_local_ai_review } from './articles/gmktec-g3-plus-local-ai-review'
+import { article as a_minisforum_um890_pro_local_ai_review } from './articles/minisforum-um890-pro-local-ai-review'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // Category 1 — Smart Home Foundations
@@ -72,4 +78,10 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'best-mini-pc-home-assistant-local-ai': a_best_mini_pc_home_assistant_local_ai,
   'local-vs-cloud-voice-assistant':       a_local_vs_cloud_voice_assistant,
   'smart-home-without-subscriptions':     a_smart_home_without_subscriptions,
+  // Category 4 — Mini-PC single-product reviews
+  'geekom-a9-max-local-ai-review':        a_geekom_a9_max_local_ai_review,
+  'beelink-ser8-local-ai-review':         a_beelink_ser8_local_ai_review,
+  'beelink-eq14-local-ai-review':         a_beelink_eq14_local_ai_review,
+  'gmktec-g3-plus-local-ai-review':       a_gmktec_g3_plus_local_ai_review,
+  'minisforum-um890-pro-local-ai-review': a_minisforum_um890_pro_local_ai_review,
 }

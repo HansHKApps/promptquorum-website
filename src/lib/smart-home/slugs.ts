@@ -39,4 +39,11 @@ export const SMART_HOME_SLUG_TO_KEY: Record<string, string> = {
   'best-mini-pc-home-assistant-local-ai':          'best-mini-pc-home-assistant-local-ai',
   'local-vs-cloud-voice-assistant':                'local-vs-cloud-voice-assistant',
   'smart-home-without-subscriptions':              'smart-home-without-subscriptions',
+
+  // Category 4 — Mini-PC single-product reviews (spokes of the roundup above)
+  'geekom-a9-max-local-ai-review':                 'geekom-a9-max-local-ai-review',
+  'beelink-ser8-local-ai-review':                  'beelink-ser8-local-ai-review',
+  'beelink-eq14-local-ai-review':                  'beelink-eq14-local-ai-review',
+  'gmktec-g3-plus-local-ai-review':                'gmktec-g3-plus-local-ai-review',
+  'minisforum-um890-pro-local-ai-review':          'minisforum-um890-pro-local-ai-review',
 }
