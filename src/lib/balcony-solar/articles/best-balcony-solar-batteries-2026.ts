@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra', 'BigBlue POWAFREE H1', 'Zendure SolarFlow'],
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Best Balcony Solar Batteries (2026): Store Your Surplus Power',
     seoTitle: 'Best Balcony Solar Batteries 2026: Storage Kits Compared',
     intro: 'A battery lets your balcony solar system store daytime surplus for evening use instead of exporting it to the grid at low or no compensation. It\'s an optional add-on, not a requirement — and in the US, it\'s also the most legally restricted part of a balcony solar setup.',
@@ -174,6 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Las mejores baterías de energía solar para balcón (2026): almacena tu excedente de energía',
     seoTitle: 'Mejores baterías solares de balcón 2026: kits de almacenamiento comparados',
     intro: 'Una batería permite que tu sistema solar de balcón almacene el excedente diurno para usarlo por la noche, en lugar de exportarlo a la red eléctrica con poca o ninguna compensación. Es un complemento opcional, no un requisito — y en Estados Unidos, es también la parte con más restricciones legales de una instalación solar de balcón.',
@@ -340,6 +342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'As melhores baterias solares de varanda (2026): armazene seu excedente de energia',
     seoTitle: 'Melhores baterias solares de varanda 2026: kits de armazenamento comparados',
     intro: 'Uma bateria permite que seu sistema solar de varanda armazene o excedente do dia para uso à noite, em vez de exportá-lo para a rede elétrica com pouca ou nenhuma compensação. É um complemento opcional, não um requisito — e nos Estados Unidos, também é a parte com mais restrições legais de uma instalação solar de varanda.',
@@ -506,6 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'أفضل بطاريات الطاقة الشمسية للشرفة (2026): خزّن فائض الطاقة لديك',
     seoTitle: 'أفضل بطاريات الطاقة الشمسية للشرفة 2026: مقارنة أطقم التخزين',
     intro: 'تتيح لك البطارية تخزين فائض الطاقة الشمسية النهاري الذي ينتجه نظام الشرفة لاستخدامه مساءً، بدلاً من تصديره إلى الشبكة الكهربائية مقابل تعويض منخفض أو معدوم. إنها إضافة اختيارية وليست شرطًا — وفي الولايات المتحدة، تُعد أيضًا الجزء الأكثر تقييدًا من الناحية القانونية في تركيب الطاقة الشمسية للشرفة.',
@@ -671,6 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'バルコニー太陽光発電用バッテリーおすすめ(2026年):余剰電力を蓄える',
     seoTitle: 'バルコニー太陽光バッテリー2026年比較:蓄電キットまとめ',
     intro: 'バッテリーを使うと、バルコニー太陽光発電システムが昼間に発電した余剰電力を蓄え、夜間に利用できるようになる。売電補償が低い、またはゼロの電力網へ余剰分を送るのではなく、自宅で活用できるのが利点だ。バッテリーはオプションの追加機器であり必須ではない――そして米国では、バルコニー太陽光発電の中でも法的制約が最も厳しい部分でもある。',
@@ -836,6 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: '2026年最佳阳台光伏电池推荐:储存你的多余电力',
     seoTitle: '2026年最佳阳台光伏电池对比:储能套件全面比较',
     intro: '电池可以让你的阳台光伏系统储存白天的多余电力,留到晚上使用,而不是以低廉甚至零补偿的价格将其输出到电网。电池是可选配件,并非必需品——而在美国,它也是阳台光伏系统中受法律限制最严格的部分。',
@@ -1001,6 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Meilleures batteries solaires de balcon (2026) : stockez votre surplus d\'énergie',
     seoTitle: 'Meilleures batteries solaires de balcon 2026 : kits de stockage comparés',
     intro: 'Une batterie permet à votre système solaire de balcon de stocker le surplus produit en journée pour une utilisation en soirée, au lieu de l\'exporter vers le réseau avec une compensation faible, voire nulle. C\'est un complément facultatif, pas une obligation — et aux États-Unis, c\'est aussi l\'élément le plus encadré juridiquement d\'une installation solaire de balcon.',
@@ -1167,6 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: '2026년 최고의 발코니 태양광 배터리: 남는 전력을 저장하세요',
     seoTitle: '2026년 최고의 발코니 태양광 배터리 비교: 저장 키트 총정리',
     intro: '배터리를 사용하면 발코니 태양광 시스템이 낮 동안 생산한 잉여 전력을 저장했다가 저녁에 사용할 수 있습니다. 보상이 낮거나 없는 전력망으로 그냥 내보내는 대신 활용할 수 있는 것이죠. 배터리는 선택 사항이지 필수품이 아니며, 미국에서는 발코니 태양광 설치 중 법적으로 가장 제한이 많은 부분이기도 합니다.',
@@ -1332,6 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Die besten Balkonkraftwerk Speicher (2026): Überschuss selbst nutzen statt einspeisen',
     seoTitle: 'Balkonkraftwerk Speicher 2026: Batterien im Vergleich',
     intro: 'Ein Speicher ermöglicht es Ihrem Balkonkraftwerk, den Tagesüberschuss für den Abend zu puffern, statt ihn zu einer niedrigen Einspeisevergütung ins Netz abzugeben. Er ist eine optionale Erweiterung, kein Muss — und in Deutschland lohnt er sich wirtschaftlich vor allem dann, wenn die Einspeisevergütung deutlich unter dem Strombezugspreis liegt.',
