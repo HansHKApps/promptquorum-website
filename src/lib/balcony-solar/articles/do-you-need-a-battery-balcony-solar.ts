@@ -104,6 +104,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What\'s a typical battery size for a balcony solar setup?', a: 'Sizing depends on your panel wattage and daily surplus generation rather than a fixed number — no vendor publishes a formal sizing formula. See the [sizing and payback guide](/balcony-solar/balcony-solar-sizing-yield-payback) for verified capacity guidance by system size.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Best Hardware for a Local Smart Home](/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS vs server: battery as part of your local home infrastructure',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -218,6 +225,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es una batería una buena primera compra para solar de balcón?', a: 'Generalmente no — la mayoría de las guías recomiendan comenzar con un kit de solo paneles, confirmar tu patrón de uso real y la estructura de tarifas de tu compañía eléctrica, y añadir una batería más tarde si la economía lo respalda.' },
           { q: '¿Todas las baterías solares de balcón funcionan igual?', a: 'No — la capacidad, el monitoreo en la nube vs. local, y el estatus legal pueden variar significativamente según la marca y el modelo. Consulta la guía de compra de baterías dedicada para una comparación verificada por marca.' },
           { q: '¿Cuál es un tamaño típico de batería para una configuración solar de balcón?', a: 'El dimensionamiento depende de la potencia de tu panel y la generación diaria de excedente en lugar de un número fijo — ningún fabricante publica una fórmula de dimensionamiento formal. Consulta la [guía de dimensionamiento y amortización](/es/balcony-solar/balcony-solar-sizing-yield-payback) para orientación de capacidad verificada según el tamaño del sistema.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS vs servidor: batería como parte de tu infraestructura doméstica local',
         ],
       },
     },
@@ -337,6 +351,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qual é um tamanho típico de bateria para uma configuração solar de varanda?', a: 'O dimensionamento depende da potência do seu painel e da geração diária de excedente em vez de um número fixo — nenhum fabricante publica uma fórmula de dimensionamento formal. Veja o [guia de dimensionamento e retorno](/pt/balcony-solar/balcony-solar-sizing-yield-payback) para orientação de capacidade verificada por tamanho de sistema.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS vs servidor: bateria como parte da sua infraestrutura local',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -452,6 +473,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل البطارية شراء أول جيد للطاقة الشمسية للشرفة؟', a: 'عادةً لا — توصي معظم الأدلة بالبدء بطقم ألواح فقط، وتأكيد نمط استخدامك الفعلي وهيكل تعرفة شركتك الكهربائية، وإضافة بطارية لاحقًا إذا كانت الاقتصاديات تدعم ذلك.' },
           { q: 'هل تعمل جميع بطاريات الطاقة الشمسية للشرفة بنفس الطريقة؟', a: 'لا — يمكن أن تختلف السعة والمراقبة السحابية مقابل المحلية والوضع القانوني بشكل كبير حسب العلامة التجارية والطراز. راجع دليل شراء البطاريات المخصص لمقارنة موثّقة لكل علامة تجارية.' },
           { q: 'ما هو الحجم النموذجي للبطارية لإعداد الطاقة الشمسية للشرفة؟', a: 'يعتمد التحجيم على قدرة لوحك ومعدل توليد الفائض اليومي بدلاً من رقم ثابت — لا يوجد بائع ينشر معادلة تحجيم رسمية. راجع [دليل التحجيم والعائد](/ar/balcony-solar/balcony-solar-sizing-yield-payback) لإرشادات سعة موثّقة حسب حجم النظام.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — Pi مقابل mini PC مقابل NAS مقابل خادم: البطارية كجزء من بنيتك المنزلية المحلية',
         ],
       },
     },
@@ -571,6 +599,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'バルコニーソーラー設備の一般的なバッテリーサイズはどのくらいですか？', a: 'サイジングは固定の数字ではなく、あなたのパネルワット数と日々の余剰発電量に依存します — どのベンダーも正式なサイジング公式を公開していません。システムサイズ別の検証済み容量ガイダンスについては[サイジングと回収期間ガイド](/ja/balcony-solar/balcony-solar-sizing-yield-payback)をご覧ください。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — Pi 対 ミニPC 対 NAS 対 サーバー：バッテリーはローカルホームインフラの一部',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -686,6 +721,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '电池是阳台光伏系统的良好首选购买项吗？', a: '通常不是——大多数指南建议先从纯面板套件开始，确认你实际的用电模式和电力公司的电价结构，如果经济效益支持的话，再在之后加装电池。' },
           { q: '所有阳台光伏电池的工作方式都一样吗？', a: '不一样——容量、云端与本地监控方式、法律状态都可能因品牌和型号而有很大差异。请参阅专门的电池购买指南，查看经核实的各品牌对比。' },
           { q: '阳台光伏配置的典型电池容量是多少？', a: '容量选择取决于你的面板功率和每日余电发电量，而不是一个固定数字——没有厂商公布正式的容量计算公式。请参阅[容量与回本指南](/zh/balcony-solar/balcony-solar-sizing-yield-payback)，按系统规模查看经核实的容量建议。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — Pi 对迷你PC 对 NAS 对服务器：电池作为本地家庭基础设施的一部分',
         ],
       },
     },
@@ -805,6 +847,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quelle est la taille de batterie typique pour une installation solaire de balcon ?', a: 'Le dimensionnement dépend de la puissance de votre panneau et de la production quotidienne de surplus plutôt que d\'un chiffre fixe — aucun fournisseur ne publie de formule de dimensionnement formelle. Consultez le [guide de dimensionnement et d\'amortissement](/fr/balcony-solar/balcony-solar-sizing-yield-payback) pour des conseils de capacité vérifiés par taille de système.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures connexes',
+        items: [
+          '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — Pi vs mini-PC vs NAS vs serveur : batterie dans votre infrastructure locale',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -922,6 +971,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '발코니 태양광 설치의 일반적인 배터리 크기는 얼마인가요?', a: '용량 산정은 고정된 수치가 아니라 귀하의 패널 와트수와 일일 잉여 발전량에 달려 있습니다 — 어떤 제조사도 공식적인 용량 산정 공식을 공개하지 않습니다. 시스템 규모별 검증된 용량 안내는 [용량 산정 및 투자회수 가이드](/ko/balcony-solar/balcony-solar-sizing-yield-payback)를 참고하십시오.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — Pi 대 미니 PC 대 NAS 대 서버: 로컬 홈 인프라의 일부인 배터리',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1037,6 +1093,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist ein Speicher eine gute erste Anschaffung für Balkonsolar?', a: 'Meist nicht — die meisten Ratgeber empfehlen, zunächst mit einem reinen Paneel-Kit zu starten, das tatsächliche Verbrauchsmuster und die Tarifstruktur Ihres Versorgers zu prüfen und erst später einen Speicher hinzuzufügen, falls sich die Wirtschaftlichkeit dafür ausspricht.' },
           { q: 'Funktionieren alle Balkonsolar-Speicher gleich?', a: 'Nein — Kapazität, Cloud- gegenüber lokaler Überwachung und rechtlicher Status können je nach Marke und Modell erheblich variieren. Den verifizierten Markenvergleich finden Sie im dedizierten Speicher-Ratgeber.' },
           { q: 'Welche Speichergröße ist für ein Balkonsolar-Setup typisch?', a: 'Die Dimensionierung hängt von der Panel-Leistung und der täglichen Überschusserzeugung ab, nicht von einer festen Zahl — kein Hersteller veröffentlicht eine formale Dimensionierungsformel. Verifizierte Kapazitätshinweise nach Systemgröße finden Sie im [Ratgeber zu Dimensionierung, Ertrag und Amortisation](/de/balcony-solar/balcony-solar-sizing-yield-payback).' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — Pi vs Mini-PC vs NAS vs Server: Batterie als Teil Ihrer lokalen Heiminfrastruktur',
         ],
       },
     },

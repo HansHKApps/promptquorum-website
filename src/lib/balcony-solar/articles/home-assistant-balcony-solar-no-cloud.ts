@@ -126,6 +126,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Will a firmware update break my local API access?', a: 'It can. Some vendors have removed or restricted local access in firmware updates after launch, which is another reason to check community reports rather than relying solely on the original spec sheet.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Best Mini PCs for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — the local server hardware that runs this Home Assistant integration',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -268,6 +275,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Kann ein Firmware-Update meinen lokalen API-Zugriff unterbrechen?', a: 'Das kann passieren. Manche Hersteller haben lokalen Zugriff in nachträglichen Firmware-Updates entfernt oder eingeschränkt, was ein weiterer Grund ist, Community-Berichte zu prüfen, statt sich allein auf das ursprüngliche Datenblatt zu verlassen.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Links',
+        items: [
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die lokale Server-Hardware für diese Home Assistant-Integration',
+        ],
+      },
     },
   },
   es: {
@@ -389,6 +403,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Elegir hardware de control local limita mis opciones de producto?', a: 'Las reduce, ya que no todas las marcas de solar de balcón soportan acceso local. Consulta las guías de compra de microinversores y kits enlazadas para conocer el estado verificado por modelo en lugar de asumirlo de una marca específica.' },
           { q: '¿Es el monitoreo local menos preciso que la app en la nube del fabricante?', a: 'No — el monitoreo local lee los mismos datos subyacentes que produce el dispositivo. La diferencia está en dónde se procesan y muestran esos datos, no en su precisión.' },
           { q: '¿Una actualización de firmware puede romper mi acceso a la API local?', a: 'Puede pasar. Algunos fabricantes han eliminado o restringido el acceso local en actualizaciones de firmware posteriores al lanzamiento, lo cual es otra razón para revisar los reportes de la comunidad en lugar de confiar únicamente en la hoja de especificaciones original.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — el hardware servidor local que ejecuta esta integración de Home Assistant',
         ],
       },
     },
@@ -534,6 +555,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Uma atualização de firmware pode quebrar meu acesso à API local?', a: 'Pode. Alguns fabricantes já removeram ou restringiram o acesso local em atualizações de firmware após o lançamento, o que é mais um motivo para checar relatos da comunidade em vez de confiar apenas na ficha técnica original.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o hardware servidor local que executa esta integração do Home Assistant',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -677,6 +705,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يمكن لتحديث firmware أن يعطل وصولي إلى local API؟', a: 'نعم، يمكن ذلك. أزالت بعض الشركات المصنعة أو قيّدت الوصول المحلي في تحديثات firmware بعد الإطلاق، وهذا سبب إضافي لمراجعة تقارير المجتمع بدلاً من الاعتماد فقط على ورقة المواصفات الأصلية.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل Mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — أجهزة الخادم المحلي التي تشغّل تكامل Home Assistant',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -814,6 +849,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ローカル制御対応のハードウェアを選ぶと製品の選択肢は狭まりますか？', a: 'すべてのバルコニーソーラーブランドがローカルアクセスに対応しているわけではないため、選択肢は狭まります。特定のブランドを前提にするのではなく、リンク先のマイクロインバーターとキットの購入ガイドでモデルごとの検証済みステータスを確認してください。' },
           { q: 'ローカル監視はベンダーのクラウドアプリより精度が低いですか？', a: 'いいえ — ローカル監視はデバイスが生成するのと同じ基礎データを読み取ります。違いはそのデータがどこで処理・表示されるかであり、精度ではありません。' },
           { q: 'ファームウェア更新でローカルAPIアクセスが壊れることはありますか？', a: 'あり得ます。一部のベンダーは発売後のファームウェア更新でローカルアクセスを削除または制限したことがあり、これも当初の仕様書だけに頼らずコミュニティの報告を確認すべき理由の一つです。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[Home Assistant + ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — この Home Assistant 統合を動かすローカルサーバーハードウェア',
         ],
       },
     },
@@ -955,6 +997,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '固件更新会不会破坏我的本地API访问？', a: '有可能。有些厂商曾在发布后的固件更新中移除或限制了本地访问,这也是为什么应该多参考社区反馈,而不是只依赖最初的规格表。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 运行此 Home Assistant 集成的本地服务器硬件',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1092,6 +1141,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Choisir du matériel à contrôle local limite-t-il mes options de produits ?', a: 'Cela les réduit, car toutes les marques de solaire de balcon ne prennent pas en charge l\'accès local. Consultez les guides d\'achat de micro-onduleurs et de kits liés pour connaître le statut vérifié par modèle plutôt que de vous fier à une marque en particulier.' },
           { q: 'La surveillance locale est-elle moins précise que l\'application cloud du fabricant ?', a: 'Non — la surveillance locale lit les mêmes données sous-jacentes produites par l\'appareil. La différence réside dans l\'endroit où ces données sont traitées et affichées, pas dans leur précision.' },
           { q: 'Une mise à jour du firmware peut-elle casser mon accès à l\'API locale ?', a: 'Cela peut arriver. Certains fabricants ont supprimé ou restreint l\'accès local dans des mises à jour de firmware postérieures au lancement, ce qui est une raison de plus de vérifier les retours de la communauté plutôt que de se fier uniquement à la fiche technique d\'origine.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — le serveur local qui fait tourner cette intégration Home Assistant',
         ],
       },
     },
@@ -1235,6 +1291,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '로컬 제어 하드웨어를 선택하면 제품 선택의 폭이 좁아지나요?', a: '좁아집니다. 모든 발코니 태양광 브랜드가 로컬 접근을 지원하는 것은 아니기 때문입니다. 특정 브랜드를 그냥 가정하기보다는, 연결된 마이크로인버터 및 키트 구매 가이드에서 모델별로 검증된 상태를 확인하세요.' },
           { q: '로컬 모니터링이 제조사의 클라우드 앱보다 정확도가 낮은가요?', a: '아닙니다 — 로컬 모니터링은 기기가 생성하는 동일한 기본 데이터를 읽습니다. 차이는 그 데이터가 어디에서 처리되고 표시되는지에 있을 뿐, 정확도에 있지 않습니다.' },
           { q: '펌웨어 업데이트가 로컬 API 접근을 망가뜨릴 수 있나요?', a: '그럴 수 있습니다. 일부 제조사는 출시 이후 펌웨어 업데이트에서 로컬 접근을 제거하거나 제한한 적이 있으며, 이는 최초 사양표만 믿지 말고 커뮤니티 보고를 확인해야 하는 또 다른 이유입니다.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 이 Home Assistant 통합을 실행하는 로컬 서버 하드웨어',
         ],
       },
     },

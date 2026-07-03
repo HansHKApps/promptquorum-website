@@ -134,6 +134,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Will battery-inclusive kits become available in more states soon?', a: 'Likely, given the pace of state legislation covering balcony solar generally, but this is genuinely uncertain and moves month to month — check the state-by-state legal guide for current status rather than assuming expansion.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Best Mini PCs for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — the local monitoring and automation hardware for your battery storage',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -289,6 +296,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Por qué hay tan pocos kits solares de balcón con batería disponibles a nivel nacional?', a: 'La legislación estatal de EE. UU. para energía solar de balcón ha avanzado más rápido en sistemas de solo panel más microinversor; los kits con almacenamiento incluido enfrentan restricciones adicionales estado por estado que la mayoría de los estados aún no ha abordado.' },
           { q: '¿Es Bluetti Balco una buena opción de control local?', a: 'Lista oficialmente compatibilidad con Home Assistant mediante una integración de GitHub del fabricante, pero no está verificado si esa integración es totalmente local o pasa por la nube de Bluetti — confírmalo directamente antes de confiar en ella para una configuración sin nube.' },
           { q: '¿Estarán disponibles los kits con batería en más estados pronto?', a: 'Probablemente, dado el ritmo de la legislación estatal sobre energía solar de balcón en general, pero esto es genuinamente incierto y cambia mes a mes — consulta la guía legal por estado para conocer el estado actual en lugar de asumir una expansión.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — el hardware local de monitoreo y automatización para tu almacenamiento de batería',
         ],
       },
     },
@@ -450,6 +464,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Os kits com bateria estarão disponíveis em mais estados em breve?', a: 'Provavelmente, dado o ritmo da legislação estadual sobre energia solar de varanda em geral, mas isso é genuinamente incerto e muda mês a mês — consulte o guia legal por estado para o status atual em vez de presumir expansão.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o hardware local de monitoramento e automação para seu armazenamento de bateria',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -607,6 +628,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'لماذا يوجد عدد قليل جدًا من أطقم الطاقة الشمسية للشرفة التي تتضمن بطارية ومتاحة على مستوى البلاد؟', a: 'تقدمت التشريعات الولائية الأمريكية للطاقة الشمسية للشرفة بشكل أسرع بالنسبة للأنظمة التي تقتصر على الألواح مع العاكس الصغير؛ أما الأطقم التي تتضمن تخزينًا فتواجه قيودًا إضافية تختلف من ولاية إلى أخرى ولم تتناولها معظم الولايات بعد.' },
           { q: 'هل يُعد Bluetti Balco خيارًا جيدًا للتحكم المحلي؟', a: 'يُدرج رسميًا توافقه مع Home Assistant عبر تكامل من الشركة المصنّعة على GitHub، لكن لم يتم التحقق مما إذا كان هذا التكامل يعمل محليًا بالكامل أم يمر عبر سحابة Bluetti — تحقق من ذلك مباشرة قبل الاعتماد عليه في إعداد خالٍ من السحابة.' },
           { q: 'هل ستصبح الأطقم التي تتضمن بطارية متاحة في المزيد من الولايات قريبًا؟', a: 'من المرجح ذلك، نظرًا لوتيرة التشريعات الولائية المتعلقة بالطاقة الشمسية للشرفة بشكل عام، لكن هذا الأمر غير مؤكد فعليًا ويتغير من شهر لآخر — راجع الدليل القانوني الخاص بكل ولاية للاطلاع على الوضع الحالي بدلاً من افتراض التوسع.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل Mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — أجهزة المراقبة والأتمتة المحلية لتخزين البطارية',
         ],
       },
     },
@@ -767,6 +795,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'バッテリー付きキットは今後さらに多くの州で入手可能になりますか?', a: 'バルコニー太陽光発電全般に関する州法整備のペースを踏まえると可能性は高いですが、これは月単位で変わりうる本質的に不確実な事柄です――拡大を前提とせず、州別の法的ガイドで最新状況を確認してください。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[Home Assistant + ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — バッテリーストレージのローカル監視・自動化ハードウェア',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -925,6 +960,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '含电池的套件未来会在更多州上市吗?', a: '考虑到阳台光伏整体立法的推进速度,这很有可能,但这确实存在不确定性,且每月都可能变化——请查阅各州法律指南以了解最新状态,而不要假设一定会扩大。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 本地电池储能监控和自动化硬件',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1081,6 +1123,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Pourquoi si peu de kits solaires de balcon incluant une batterie sont-ils disponibles à l\'échelle nationale ?', a: 'La législation étatique américaine sur le solaire de balcon a progressé plus rapidement pour les systèmes ne comportant que des panneaux et micro-onduleurs ; les kits incluant du stockage font face à des restrictions supplémentaires État par État que la plupart des États n\'ont pas encore traitées.' },
           { q: 'Bluetti Balco est-elle une bonne option pour le contrôle local ?', a: 'Elle annonce officiellement une compatibilité Home Assistant via une intégration GitHub du fabricant, mais on ignore si cette intégration est entièrement locale ou transite par le cloud de Bluetti — confirmez-le directement avant de vous y fier pour une configuration sans cloud.' },
           { q: 'Les kits incluant une batterie deviendront-ils bientôt disponibles dans davantage d\'États ?', a: 'Probablement, compte tenu du rythme de la législation étatique sur le solaire de balcon en général, mais c\'est réellement incertain et cela évolue mois après mois — consultez le guide juridique État par État pour connaître le statut actuel plutôt que de présumer une expansion.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — le matériel de surveillance et d\'automatisation local pour votre stockage par batterie',
         ],
       },
     },
@@ -1242,6 +1291,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '배터리가 포함된 키트가 곧 더 많은 주에서 판매될까요?', a: '발코니 태양광 관련 주 법률의 전반적인 진행 속도를 고려하면 가능성이 높지만, 이는 실제로 불확실하며 매달 변동됩니다 — 확대를 전제하기보다는 주별 법률 가이드를 통해 최신 상태를 확인하세요.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 배터리 저장장치를 위한 로컬 모니터링 및 자동화 하드웨어',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1400,6 +1456,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Werden mehr Speicher für Balkonkraftwerke verfügbar?', a: 'Wahrscheinlich — der Markt wächst schnell. Prüfen Sie aktuelle Verfügbarkeit und Zertifizierung direkt beim Händler, da sich das Angebot monatlich ändert.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die lokale Überwachungs- und Automatisierungs-Hardware für Ihren Batteriespeicher',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Die besten Balkonkraftwerk Speicher (2026): Überschuss selbst nutzen statt einspeisen',
+      description: 'Die besten Balkonkraftwerk Speicher 2026 — Kapazität, lokale Steuerung und Marktverfügbarkeit verglichen, inklusive Anker SOLIX Solarbank E1600 Pro und Zendure SolarFlow.',
+      datePublished: '2026-07-02',
+      dateModified: '2026-07-02',
+      inLanguage: 'de',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      url: 'https://www.promptquorum.com/de/balcony-solar/best-balcony-solar-batteries-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro'] },
+      educationalLevel: 'Intermediate',
+      proficiencyLevel: 'Intermediate',
+      audience: { '@type': 'Audience', audienceType: 'Käufer in Deutschland, die einen Speicher für ihr Balkonkraftwerk in Betracht ziehen' },
+      about: ['Balkonkraftwerk Speicher', 'Anker SOLIX Solarbank', 'Zendure SolarFlow', 'Home Assistant', 'Energiespeicher'],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      numberOfItems: 3,
+      inLanguage: 'de',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Anker SOLIX Solarbank E1600 Pro', description: 'Im deutschen Markt weit verbreitet — ca. 1,6 kWh, 500–900 €, ohne aufwändige Netzanmeldung nutzbar.' },
+        { '@type': 'ListItem', position: 2, name: 'Zendure SolarFlow', description: 'Bestes lokales Steuerungs-Ökosystem — ausgereifte zenSDK-REST-API-Integrationen, kein Cloud-Account erforderlich.' },
+        { '@type': 'ListItem', position: 3, name: 'EcoFlow STREAM Ultra', description: 'Stärkste Spezifikationen, aber primär US-ausgerichtet — Verfügbarkeit in Deutschland nicht verifiziert.' },
+      ],
     },
   },
 };
