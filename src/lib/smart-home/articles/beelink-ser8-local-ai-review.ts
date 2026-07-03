@@ -1396,4 +1396,236 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Beelink SER8 리뷰(2026): 로컬 AI와 홈 서버',
+    seoTitle: 'Beelink SER8 리뷰 2026 — 로컬 AI와 홈 서버',
+    intro:
+      'Beelink SER8(AMD Ryzen 7 8845HS, Radeon 780M, 32 GB DDR5)은 2026년 로컬 AI 스마트홈에 가장 가성비가 좋은 미니 PC입니다. 약 $650(2026년 7월, 가격 변동)에 Home Assistant, Frigate, Whisper, 그리고 Ollama의 7B 모델을 조용한 한 대의 기기에서 실행합니다. 이 리뷰는 사양을 검증하고, 로컬 LLM 속도에 대한 솔직한 기대치를 제시하며, 더 저렴한 Intel N150 기기와 더 비싼 GEEKOM A9 Max를 모두 앞서는 지점을 설명합니다.',
+    metaDescription:
+      'Beelink SER8 리뷰 2026: Ryzen 7 8845HS, Radeon 780M, 32 GB DDR5, 약 $650. Ollama에서 Home Assistant와 7B 로컬 LLM을 실행합니다. 가성비 최고의 로컬 AI 미니 PC — 전체 사양 분석.',
+    twitterDescription:
+      'Beelink SER8(2026): Ryzen 7 8845HS, Radeon 780M, 32 GB DDR5, 약 $650. Home Assistant와 7B 로컬 LLM에 가성비 최고의 미니 PC. 듀얼 SO-DIMM RAM, USB4, 65 W.',
+    readTime: '7분 읽기',
+    educationalLevel: 'Intermediate',
+    audience: 'Home Assistant와 로컬 LLM용 가성비 미니 PC를 고르는 구매자',
+    primaryTerm: 'Beelink SER8 리뷰',
+    targetKeywords: [
+      'beelink ser8 리뷰',
+      'beelink ser8 로컬 ai',
+      'beelink ser8 home assistant',
+      'beelink ser8 로컬 llm',
+      'ryzen 7 8845hs 미니 pc',
+    ],
+    leadAnswerBlock:
+      '**Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB DDR5)은 2026년 Home Assistant와 로컬 LLM을 함께 실행하기에 가장 가성비가 좋은 미니 PC입니다. 허브, Frigate, Whisper, Ollama의 7B 모델을 한 대에서 약 $650(2026년 7월, 변동)에 실행합니다.** 강력한 780M iGPU와 사용자가 교체할 수 있는 듀얼 SO-DIMM RAM 덕분에, 더 비싼 기기의 추가 여유가 필요하지 않은 한 기본 추천 기기입니다.',
+    quickAnswerTop: {
+      ko: {
+        question: 'Beelink SER8은 로컬 AI와 Home Assistant에 적합합니까?',
+        answer:
+          '예, 2026년 이 용도로 가장 가성비가 좋은 선택입니다. Ryzen 7 8845HS(8코어/16스레드), Radeon 780M iGPU, 32 GB DDR5가 Home Assistant, Ollama, Whisper, Frigate를 함께 실행하며, 7B 모델은 여유롭고 13B–14B(4비트)는 사용 가능하지만 메모리 대역폭에 제약을 받습니다. RAM은 사용자가 교체할 수 있는 두 개의 SO-DIMM 슬롯에 있어 나중에 64 GB로 늘릴 수 있습니다. 약 $650(2026년 7월, 변동)로 GEEKOM A9 Max의 약 절반 가격이면서 대부분의 동일한 스마트홈 작업을 처리합니다.',
+        bullets: [
+          'CPU: Ryzen 7 8845HS — 8코어 / 16스레드, Radeon 780M(12 CU, RDNA 3)',
+          'RAM: 32 GB DDR5-5600(2×16 GB), 듀얼 SO-DIMM, 사용자 교체 가능',
+          '로컬 LLM(사양 기반 추정): 7B 4비트 여유; 13B–14B 사용 가능하나 대역폭 제약',
+          '포트: USB4 40 Gbps, HDMI 2.1, DP 1.4, 2.5GbE, Wi-Fi 6(6E 아님)',
+          '가격 약 $650(2026년 7월, 변동) — 로컬 AI 홈 서버의 가성비 기준',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: '핵심 내용', anchor: 'tldr' },
+      { label: '총평', anchor: 'verdict' },
+      { label: '사양', anchor: 'specs' },
+      { label: '로컬 AI와 LLM 성능', anchor: 'local-ai' },
+      { label: '장점과 단점', anchor: 'pros-cons' },
+      { label: '구매자 배경: 관세(2026)', anchor: 'trade-note' },
+      { label: '구매처', anchor: 'where-to-buy' },
+      { label: '대안', anchor: 'alternatives' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Beelink SER8은 Ryzen 7 8845HS 미니 PC로, Ollama에서 Home Assistant와 7B 로컬 LLM을 약 $650에 실행하여 2026년 가장 가성비 좋은 로컬 AI 기기입니다.' },
+      { type: 'plain-terms', content: '미니 PC는 작고 조용한 상시 구동 컴퓨터입니다. SER8은 빠른 AMD 프로세서와 강력한 내장 그래픽, 32 GB 메모리를 갖춰, 고급 기기의 가격 없이도 전체 스마트홈과 중간 규모의 AI 채팅 모델을 동시에 실행할 수 있습니다. 메모리는 교체 가능한 두 개의 슬롯에 있어 나중에 추가할 수 있습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '핵심 내용',
+        isTldr: true,
+        items: [
+          'SER8은 Home Assistant, Frigate, Whisper, 7B 로컬 LLM을 한 대에서 약 $650에 실행합니다',
+          'Ryzen 7 8845HS: 8코어/16스레드, Radeon 780M iGPU, 사용자 교체 가능한 두 개의 SO-DIMM에 32 GB DDR5',
+          '로컬 LLM 속도는 780M iGPU와 DDR5 대역폭에서 나오며, 7B 모델은 여유롭습니다',
+          '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review)보다 저렴하고 단순하며, Intel N150 기기보다 훨씬 강력합니다',
+          'Wi-Fi는 6(6E 아님)이고 2.5GbE 포트가 하나 — 대부분의 홈 서버에 충분합니다',
+          '중국 제조 — 2026년 미국/EU 수입 조치를 도착 비용에 반영하십시오(관세 참고 참조)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '총평 — 누구에게 적합한가',
+        content:
+          '**Home Assistant와 함께 로컬 7B 모델을 사용 가능한 속도로 실행하는 가장 저렴한 기기를 원한다면 Beelink SER8을 구매하십시오.** 로컬 AI 스마트홈을 구축하는 대부분의 사람에게 이것이 올바른 기본 선택입니다. 강력한 Radeon 780M iGPU, 32 GB DDR5, 교체 가능한 듀얼 RAM 슬롯을 GEEKOM A9 Max의 약 절반 가격에 제공합니다.\n\n가장 강력한 용도는 **올인원 홈 서버**입니다. Home Assistant, Ollama, Whisper, Frigate를 조용한 한 대의 기기에서 실행합니다. 더 큰 모델(더 많은 RAM 여유)이나 외장 GPU 경로가 필요할 때만 상위 기기로 올리고, 아주 작은 모델로 충분할 때만 Intel N150 기기로 내리십시오.',
+        affiliateLinks: [
+          { label: '현재 가격 확인 — Beelink SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: '사양',
+        content:
+          '**아래 모든 사양은 2026년 7월에 Beelink 및 독립 리뷰 출처와 대조하여 검증했습니다.** 판매 시 RAM은 SKU에 따라 다르며(24, 32, 64 GB), 이 표는 주력 32 GB / 1 TB 모델을 반영합니다.',
+        columns: ['사양', 'Beelink SER8 (8845HS)'],
+        rows: [
+          { '사양': 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS(Zen 4, 4 nm)' },
+          { '사양': '코어 / 스레드', 'Beelink SER8 (8845HS)': '8코어 / 16스레드, 최대 5.1 GHz' },
+          { '사양': 'iGPU', 'Beelink SER8 (8845HS)': 'AMD Radeon 780M — 12 CU, RDNA 3' },
+          { '사양': 'NPU', 'Beelink SER8 (8845HS)': 'Ryzen AI, 16 TOPS(XDNA 1세대)' },
+          { '사양': 'RAM', 'Beelink SER8 (8845HS)': '32 GB DDR5-5600(2×16 GB); 듀얼 SO-DIMM; 사용자 교체 가능(최대 64 GB SKU)' },
+          { '사양': '스토리지', 'Beelink SER8 (8845HS)': '1 TB NVMe; 2× M.2 2280 PCIe 4.0; 최대 8 TB' },
+          { '사양': '포트', 'Beelink SER8 (8845HS)': '1× USB4(40 Gbps), 3× USB-A 10 Gbps, 2× USB-A 2.0, 1× USB-C 10 Gbps, HDMI 2.1, DP 1.4, 3.5 mm' },
+          { '사양': '네트워크', 'Beelink SER8 (8845HS)': '1× 2.5GbE, Wi-Fi 6(6E 아님), Bluetooth 5.2' },
+          { '사양': 'TDP', 'Beelink SER8 (8845HS)': '54–65 W(65 W 지속 구동)' },
+          { '사양': '크기', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm, 약 0.75 kg' },
+          { '사양': 'OS', 'Beelink SER8 (8845HS)': 'Windows 11 Pro(Linux/Proxmox 설치 지원)' },
+          { '사양': '가격(참고)', 'Beelink SER8 (8845HS)': '약 $650(2026년 7월 — 변동, 현재 가격 확인)' },
+        ],
+        items: [
+          '전용 GPU 없음: 모든 AI 추론은 시스템 RAM을 공유하는 CPU와 Radeon 780M iGPU에서 실행됩니다.',
+          '듀얼 SO-DIMM 슬롯은 사용자가 교체할 수 있으며, 이 플랫폼의 실용적인 DDR5 상한은 약 96 GB입니다.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: '로컬 AI와 LLM 성능',
+        content:
+          '**32 GB RAM이면 SER8은 Ollama에서 7B 모델을 여유롭게 실행하고 13B–14B 모델을 4비트로 로드할 수 있으나, 더 큰 모델은 용량보다 메모리 대역폭에 제약을 받습니다. 모든 수치는 검증된 하드웨어에서 추정한 것이며 측정된 벤치마크가 아닙니다.** 핵심은 Radeon 780M입니다. 듀얼 채널 DDR5-5600에서 Home Assistant와 함께 7B 어시스턴트를 반응성 있게 유지합니다.',
+        items: [
+          'Ollama, LM Studio, llama.cpp가 잘 실행되며, 780M은 Vulkan 또는 ROCm 백엔드를 통해 사용됩니다.',
+          '7B 모델이 편안한 스위트 스폿이며, 13B–14B는 비대화형 용도에서는 작동하지만 더 느리게 느껴집니다.',
+          '32B급 모델은 32 GB에 빠듯하게만 들어가고 느리게 실행됩니다 — 그런 용도에는 64 GB SKU로 올리십시오.',
+          '16 TOPS NPU는 주류 LLM 런타임에서 사용되지 않으며, iGPU와 RAM 대역폭이 지연 시간을 결정합니다.',
+          '모델 연결은 [Home Assistant의 Ollama](/ko/smart-home/home-assistant-ollama-integration)를, VRAM 깊이는 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참고하십시오.',
+        ],
+        affiliateLinks: [
+          { label: '현재 가격 확인 — Beelink SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: '장점과 단점',
+        content: '**SER8은 가성비 기준 기기이며, 홈 서버로서의 타협점은 사소합니다.** 균형 잡힌 관점은 아래와 같습니다.',
+        items: [
+          '**장점**',
+          '유능한 로컬 AI 기기로서 최고의 가성비 — 7B 지원 기기를 약 $650에',
+          '강력한 Radeon 780M iGPU와 32 GB DDR5가 Home Assistant와 7B 모델을 함께 처리',
+          '사용자 교체 가능한 듀얼 SO-DIMM 슬롯과 두 개의 M.2 슬롯 — 업그레이드 가능',
+          'USB4, HDMI 2.1, DP 1.4가 트리플 4K 출력을 지원',
+          '65 W로 구동 — 상시 구동 서버로서 검소함',
+          '**단점**',
+          'Wi-Fi는 6이며 6E가 아님 — 안정적인 유선 연결에는 2.5GbE 포트를 사용',
+          '2.5GbE 포트가 하나뿐(UM890 Pro 같은 경쟁 제품은 두 개 제공)',
+          '32 GB로는 업그레이드 없이 30B 이상 모델을 실행하기에 RAM이 부족',
+          'NPU는 로컬 LLM을 가속하지 않음',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: '구매자 배경: 관세와 재고(2026)',
+        content:
+          '**SER8은 중국에서 제조되므로 도착 가격은 2026년 무역 조치를 반영합니다 — 어떤 가격도 움직이는 목표로 다뤄야 하는 이유입니다.** 아래 사실은 구매자 배경이며 편집상의 의견이 아닙니다.',
+        items: [
+          '미국: 중국산 전자제품에 대한 Section 301 관세는 2026년에도 유효합니다. 별도의 2025년 "IEEPA" 관세는 2026년 2월 대법원에서 무효화되어 한시적이고 상한이 있는 Section 122 관세로 대체되었습니다. 직접 수입에 대한 800달러 미만 면세 "de minimis" 면제도 종료되었습니다.',
+          'EU(DE/FR에 영향): 완제품 미니 PC에 대한 광범위한 EU 관세는 없으나, 2026년 7월부터 중국발 저가 직배송 소포에 대한 150유로 면세 한도가 폐지되고 소포당 소액 처리 수수료가 추가되었습니다.',
+          '가정(거시 추세이며 개별 제품 사실이 아님): 중국의 재조정된 수출 능력이 EU와 미국에서 이들 브랜드의 재고를 높게 유지하여 전반적으로 경쟁력 있는 가격을 뒷받침합니다.',
+          '순 효과: 구매 전에 소매점에서 현재 가격을 확인하십시오 — 여기의 약 $650은 참고 수치이며 2026년 7월 기준입니다.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '구매처와 현재 가격',
+        content:
+          '**가격은 주 단위로 움직이므로, 고정된 수치를 신뢰하기보다 실시간 가격을 확인하십시오.** 2026년 7월 기준 32 GB / 1 TB SER8은 약 $650 안팎에 모여 있으며, 공식 스토어는 시장 판매가보다 높은 경우가 많습니다.',
+        items: [
+          'RAM SKU(24, 32, 64 GB)를 확인하십시오 — 32 GB 모델이 7B 모델의 가성비 스위트 스폿입니다.',
+        ],
+        affiliateLinks: [
+          { label: '현재 가격 확인 — Beelink SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: '고려할 만한 대안',
+        content: '**SER8이 맞지 않다면, 네 가지 기기가 가격과 성능 면에서 이를 둘러쌉니다.**',
+        items: [
+          '[GEEKOM A9 Max](/ko/smart-home/geekom-a9-max-local-ai-review) — 여유 중시 선택: 128 GB RAM 상한과 Wi-Fi 7, 가격은 약 두 배',
+          '[Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review) — 유사한 Radeon 780M이지만 듀얼 2.5GbE, Wi-Fi 6E, OCuLink eGPU 포트를 추가',
+          '[Beelink EQ14](/ko/smart-home/beelink-eq14-local-ai-review) — Home Assistant와 아주 작은 모델용 저가 Intel N150 기기',
+          '[GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — RAM 업그레이드가 가능한 또 다른 저가 N150 옵션',
+          '아직 비교 중이신가요? [Home Assistant + 로컬 AI 베스트 미니 PC 정리](/ko/smart-home/best-mini-pc-home-assistant-local-ai)에서 시작하십시오.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          { q: 'Beelink SER8은 로컬 LLM을 실행할 수 있습니까?', a: '예. 32 GB RAM과 Radeon 780M iGPU로 Ollama에서 7B 모델을 여유롭게 실행하고 13B–14B 모델을 4비트로 로드할 수 있습니다. 이는 고정 벤치마크가 아니라 검증된 하드웨어에서 추정한 것으로, 속도는 모델, 양자화, 백엔드에 따라 달라지기 때문입니다.' },
+          { q: '이 RAM에는 얼마나 큰 모델이 들어갑니까?', a: '32 GB에서는 7B 모델이 여유롭고 4비트 13B–14B는 사용 가능하지만 더 느립니다. 30B급 모델은 빠듯하게만 들어가고 느리게 실행되므로, 그런 경우 64 GB SKU나 RAM 상한이 더 높은 기기를 선택하십시오.' },
+          { q: 'SER8은 Home Assistant와 상시 구동에 적합합니까?', a: '예. Home Assistant, Ollama, Whisper, Frigate를 32 GB에서 함께 실행하며 부하 시 약 65 W를 소비하므로 지속 운영 비용이 저렴합니다. 안정적인 유선 연결에는 2.5GbE 포트를 사용하십시오.' },
+          { q: 'RAM은 업그레이드할 수 있습니까?', a: '예. SER8은 사용자가 교체할 수 있는 표준 DDR5 SO-DIMM 슬롯 두 개를 사용하므로 32 GB로 시작해 나중에 64 GB로 옮길 수 있습니다. 스토리지 확장을 위한 M.2 슬롯도 두 개 있습니다.' },
+          { q: 'SER8에는 Wi-Fi 6E가 있습니까?', a: '아니요. SER8은 Wi-Fi 6(Intel AX200 모듈)을 탑재하며 Wi-Fi 6E는 아닙니다. 홈 서버에서는 이것이 문제가 되는 경우가 드뭅니다 — 유선 2.5GbE 연결이 어떤 Wi-Fi 대역보다 안정적입니다.' },
+          { q: 'SER8은 전력을 얼마나 소비합니까?', a: '지속 부하에서 최대 65 W이며 유휴 시에는 훨씬 적으므로 계속 켜두어도 비용이 저렴합니다. 정확한 수치는 작업 부하와 선택한 전원 프로필에 따라 다릅니다.' },
+          { q: 'SER8입니까, GEEKOM A9 Max입니까?', a: 'SER8은 가성비 선택으로 약 $650에 대부분의 로컬 AI 스마트홈 요구를 충족합니다. 128 GB RAM 상한, Wi-Fi 7, 또는 추가적인 비전 여유가 필요할 때만 A9 Max를 선택하십시오. 비용은 약 두 배가 됩니다.' },
+          { q: 'Beelink SER8은 어디서 제조되며, 그것이 가격에 영향을 줍니까?', a: '중국에서 제조됩니다. 2026년에는 미국 수입 조치(Section 301 관세, 800달러 미만 de minimis 면제 종료)와 EU의 150유로 저가 소포 면제 폐지가 도착 비용에 영향을 줄 수 있으므로, 고정된 수치에 의존하기보다 소매점의 현재 가격을 확인하십시오.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[Home Assistant + 로컬 AI 베스트 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 이 리뷰가 속한 정리',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 클러스터 간: VRAM과 양자화 깊이',
+          '[로컬 LLM으로 스마트홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 이 기기가 실제로 실행하는 것',
+          '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 모델 연결',
+          '[로컬 스마트홈을 위한 최적 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — Pi 대 미니 PC 대 NAS',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Beelink SER8 리뷰(2026): 로컬 AI와 홈 서버',
+      reviewBody:
+        'Beelink SER8은 Radeon 780M iGPU와 32 GB DDR5를 갖춘 Ryzen 7 8845HS 미니 PC로, Ollama에서 Home Assistant와 7B 로컬 LLM을 약 $650(2026년 7월)에 실행합니다. 2026년 가장 가성비 좋은 로컬 AI 미니 PC입니다.',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/ko/smart-home/beelink-ser8-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '4.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'Beelink SER8',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'Beelink' },
+        description: 'AMD Ryzen 7 8845HS, Radeon 780M iGPU, 32 GB DDR5를 갖춘 미니 PC로, 로컬 AI와 홈 서버 용도입니다.',
+      },
+    },
+  },
 }
