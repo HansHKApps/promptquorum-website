@@ -1164,4 +1164,236 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'GMKtec G3 Plus 评测（2026）：入门级本地智能家居',
+    seoTitle: 'GMKtec G3 Plus 评测 2026 — 入门级智能家居主机',
+    intro:
+      'GMKtec NucBox G3 Plus（Intel N150，可升级至 32 GB DDR4）是一款面向本地优先智能家居的入门级迷你主机。约 $180–230（2026年7月，价格波动）即可运行 Home Assistant 和一个小型本地模型，并相比部分竞品有一个真正的优势：它的内存是可更换的 SO-DIMM，而非板载焊接。本评测核实其规格，对本地 LLM 的速度给出务实预期，并说明它相对 Beelink EQ14 及 Ryzen 级主机的定位。',
+    metaDescription:
+      'GMKtec G3 Plus 评测 2026：Intel N150，可升级至 32 GB DDR4，双 HDMI，单 2.5GbE，约 $180–230。一款内存可更换的入门级 Home Assistant 主机——完整规格解析。',
+    twitterDescription:
+      'GMKtec G3 Plus（2026）：Intel N150，可升级至 32 GB DDR4（非板载焊接），约 $180–230。面向小型本地模型的入门级 Home Assistant 主机——看它的定位。',
+    readTime: '阅读约6分钟',
+    educationalLevel: 'Beginner',
+    audience: '运行 Home Assistant 和小型本地模型的预算型用户',
+    primaryTerm: 'GMKtec G3 Plus 评测',
+    targetKeywords: [
+      'gmktec g3 plus 评测',
+      'gmktec g3 plus home assistant',
+      'gmktec g3 plus 本地 ai',
+      'gmktec nucbox g3 plus n150',
+      'gmktec g3 plus 本地 llm',
+    ],
+    leadAnswerBlock:
+      '**GMKtec G3 Plus（Intel N150，可升级至 32 GB DDR4）是一款入门级迷你主机，约 $180–230（2026年7月，价格波动）即可运行 Home Assistant 和一个 1B–8B 的小型本地模型。** 它的亮点是一个可更换的 SO-DIMM 插槽，最高支持 32 GB——比 Beelink EQ14 有更多内存余量——不过它只有单个 2.5GbE 端口，且没有 USB-C。',
+    quickAnswerTop: {
+      zh: {
+        question: 'GMKtec G3 Plus 适合 Home Assistant 和本地 AI 吗？',
+        answer:
+          '适合 Home Assistant，但 AI 有限制。Intel N150（4 核）、Intel UHD 核显和 DDR4 内存能很好地运行 Home Assistant 和小型本地模型。由于单 SO-DIMM 插槽可达 32 GB，它比上限 16 GB 的竞品多一点余量——但单通道 DDR4 和缺少 NPU 仍让超出小型模型的任务变慢。约 $180–230（2026年7月，波动）——它是入门级主机，不是本地 LLM 机器。',
+        bullets: [
+          'CPU：Intel N150——4 核 / 4 线程，Intel UHD 核显（24 EU），无 NPU',
+          '内存：DDR4-3200，单 SO-DIMM 插槽，可升级至 32 GB（可更换，非板载焊接）',
+          '本地 LLM（据规格估算）：1B–8B 的 4-bit 可运行；7–8B 可用但慢',
+          '端口：双 HDMI（双 4K/60）、单 2.5GbE、Wi-Fi 6——无 USB-C',
+          '价格约 $180–230（2026年7月，波动）——入门级 Home Assistant 主机',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: 'tldr' },
+      { label: '结论', anchor: 'verdict' },
+      { label: '规格', anchor: 'specs' },
+      { label: '本地 AI 与 LLM 性能', anchor: 'local-ai' },
+      { label: '优点与缺点', anchor: 'pros-cons' },
+      { label: '购买背景：关税（2026）', anchor: 'trade-note' },
+      { label: '在哪购买', anchor: 'where-to-buy' },
+      { label: '替代方案', anchor: 'alternatives' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'GMKtec G3 Plus 是一款入门级 Intel N150 迷你主机，可运行 Home Assistant 和小型本地模型，配备最高支持 32 GB 的可更换 DDR4 插槽。' },
+      { type: 'plain-terms', content: '迷你主机是一台小巧、低功耗、常年开机的电脑。G3 Plus 是其中便宜的一款，用来运行智能家居中枢和一个小型 AI 模型。与部分入门级主机不同，它的内存可更换并升级到 32 GB，因此多一点余量——但它仍是中枢，不是快速的 AI 机器。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '核心要点',
+        isTldr: true,
+        items: [
+          'G3 Plus 约 $180–230 即可运行 Home Assistant 和一个 1B–8B 的小型本地模型',
+          'Intel N150：4 核，Intel UHD 核显，DDR4 可升级至 32 GB（可更换 SO-DIMM），无 NPU',
+          '7–8B 模型能装下但运行慢——这是入门级中枢，不是 AI 主机',
+          '相对 [Beelink EQ14](/zh/smart-home/beelink-eq14-local-ai-review) 的亮点：32 GB 内存上限（但只有单个 2.5GbE 端口且无 USB-C）',
+          '想要响应更快的 7B 助手，请升级到 [Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review)',
+          '中国制造——将 2026 年美国/欧盟进口措施计入到手成本（见关税说明）',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '结论——谁该买',
+        content:
+          '**如果你想要一台便宜的 Home Assistant 主机，并看重可更换、最高 32 GB 的内存插槽，就买 GMKtec G3 Plus。** 约 $180–230，它是进入本地优先智能家居的扎实入门之选，比上限 16 GB 的竞品多一点内存余量。不要指望它是快速的本地助手——单通道 DDR4 的 Intel N150 只能处理小型模型。\n\n它最强的用途是一台**紧凑、可升级、还能承载小型模型的 Home Assistant 中枢**。如果你想要两个网口，Beelink EQ14 是更好的中枢；如果你想要真正的 AI 速度，请升级到 Ryzen 主机。',
+        affiliateLinks: [
+          { label: '查看当前价格 — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: '规格',
+        content:
+          '**以下所有规格已于 2026年7月对照 GMKtec 及独立评测来源核实。** 内存是最高支持 32 GB 的可更换 DDR4 SO-DIMM（非板载焊接）。此型号没有 USB-C 端口。',
+        columns: ['规格项', 'GMKtec G3 Plus (N150)'],
+        rows: [
+          { '规格项': 'CPU', 'GMKtec G3 Plus (N150)': 'Intel N150（Twin Lake / Alder Lake-N）' },
+          { '规格项': '核心 / 线程', 'GMKtec G3 Plus (N150)': '4 核 / 4 线程，最高 3.6 GHz' },
+          { '规格项': '核显', 'GMKtec G3 Plus (N150)': 'Intel UHD Graphics，24 EU，最高 1000 MHz' },
+          { '规格项': 'NPU', 'GMKtec G3 Plus (N150)': '无' },
+          { '规格项': '内存', 'GMKtec G3 Plus (N150)': 'DDR4-3200，单 SO-DIMM，可升级至 32 GB（可更换，非板载焊接）' },
+          { '规格项': '存储', 'GMKtec G3 Plus (N150)': 'M.2 2280 PCIe 3.0 NVMe（最高 4 TB）+ M.2 2242 SATA（最高 2 TB）' },
+          { '规格项': '端口', 'GMKtec G3 Plus (N150)': '4× USB-A 3.2（最高 10 Gbps）、2× HDMI 2.0、3.5 mm——无 USB-C' },
+          { '规格项': '网络', 'GMKtec G3 Plus (N150)': '1× 2.5GbE（Intel i226-V）、Wi-Fi 6、Bluetooth 5.2' },
+          { '规格项': 'TDP', 'GMKtec G3 Plus (N150)': '约 6 W 基础；空载约 6 W，满载约 21 W' },
+          { '规格项': '尺寸', 'GMKtec G3 Plus (N150)': '114 × 106 × 42.5 mm，约 361 g' },
+          { '规格项': '操作系统', 'GMKtec G3 Plus (N150)': 'Windows 11 Pro（支持 Linux/Home Assistant OS）' },
+          { '规格项': '价格（参考）', 'GMKtec G3 Plus (N150)': '约 $180–230（2026年7月——波动，请查看当前价格）' },
+        ],
+        items: [
+          '两个存储插槽——一个 NVMe（PCIe 3.0）和一个 SATA（M.2 2242）——可实现高速系统盘加大容量存储。',
+          'USB-A 端口速度因来源和 SKU 而异（5–10 Gbps）；请在你购买的商品页确认。',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: '本地 AI 与 LLM 性能',
+        content:
+          '**1B–8B 的 4-bit 模型可装入 G3 Plus；7–8B 模型可用但慢，32 GB 内存选项可支持更长上下文或以低吞吐运行约 13B 模型——所有数字均据核实过的硬件估算，并非实测基准。** 与任何 N150 主机一样，单通道 DDR4 带宽和缺少 NPU 是瓶颈。',
+        items: [
+          '适合轻量本地助手、摘要以及基于小型模型的自动化。',
+          '升级到 32 GB 对上下文长度的帮助大于原始速度——内存带宽不变。',
+          '无 NPU 且核显加速有限，因此推理受 CPU 限制。',
+          '对更重的本地 AI（视觉、快速的 7B 助手），请改选 Ryzen 主机。',
+          '参见[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) 试用小型模型，以及[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 了解背景。',
+        ],
+        affiliateLinks: [
+          { label: '查看当前价格 — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: '优点与缺点',
+        content: '**相对 EQ14，G3 Plus 用网络换取了内存余量。** 以下为均衡视角。',
+        items: [
+          '**优点**',
+          '非常实惠——一台 Home Assistant 主机约 $180–230',
+          '可更换 DDR4 SO-DIMM，可升级至 32 GB——比上限 16 GB 的竞品更有余量',
+          '两个存储插槽：NVMe 加一个独立 SATA M.2 用于大容量存储',
+          '低功耗：空载约 6 W，7×24 运行成本低',
+          '非常紧凑（114 × 106 mm）且轻（约 361 g）',
+          '**缺点**',
+          '只有单个 2.5GbE 端口（EQ14 有两个）',
+          '完全没有 USB-C 端口',
+          '单通道 DDR4 且无 NPU——超出小型模型即变慢',
+          'USB-A 端口速度在不同商品页间不一致；购买前请核实',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: '购买背景：关税与供货（2026）',
+        content:
+          '**G3 Plus 在中国制造，因此其到手价反映 2026 年的贸易措施——这也是把任何价格都视为动态目标的理由。** 以下是购买背景，而非编辑观点。',
+        items: [
+          '美国：对中国电子产品的 301 条款关税在 2026 年仍然有效；单独的 2025 年"IEEPA"关税已于 2026年2月被最高法院推翻，并由临时且有上限的 122 条款关税取代。针对直邮进口的 800 美元以下免税"最低限度"豁免也已终止。',
+          '欧盟（影响 DE/FR）：欧盟对成品迷你主机没有普遍关税，但自 2026年7月起，取消了对来自中国的低价值直邮包裹 150 欧元的免税门槛，并按包裹增加了少量处理费。',
+          '假设（宏观趋势，非单一产品事实）：中国出口产能的转向使这些品牌在欧盟和美国的供货保持充足，总体上支撑了有竞争力的价格。',
+          '净影响：购买前请在零售商处核实当前价格——此处约 $180–230 的数字为参考值，标注日期为 2026年7月。',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '在哪购买与当前价格',
+        content:
+          '**价格每周都在变动，因此请查看实时价格，而非相信一个固定数字。** 截至 2026年7月，16 GB / 512 GB 的 G3 Plus 约为 $180–230；厂商页面可能显示与实际售价不符的占位价格。',
+        items: [
+          '确认具体 SKU 的内存和存储容量——如果你想要余量，也确认可将 SO-DIMM 升级至 32 GB。',
+        ],
+        affiliateLinks: [
+          { label: '查看当前价格 — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: '可考虑的替代方案',
+        content: '**如果 G3 Plus 不是合适的入门级主机，可考虑这些。**',
+        items: [
+          '[Beelink EQ14](/zh/smart-home/beelink-eq14-local-ai-review)——另一款入门级 N150 主机；双 2.5GbE 网络但内存上限 16 GB',
+          '[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review)——升级之选：Ryzen 7 8845HS 约 $650 即可运行真正的 7B 助手',
+          '[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)——中端 Ryzen 9，配双 2.5GbE 和一个 eGPU 端口',
+          '[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review)——高端主机，内存上限达 128 GB',
+          '还在比较？先看[面向 Home Assistant + 本地 AI 的最佳迷你主机汇总](/zh/smart-home/best-mini-pc-home-assistant-local-ai)。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: 'GMKtec G3 Plus 能运行本地 LLM 吗？', a: '能运行小型的。1B–8B 的 4-bit 模型可装下，7–8B 模型可用但慢，原因是单通道 DDR4 带宽和四核 N150。这是据其核实过的硬件估算，并非固定基准。' },
+          { q: '它的内存能装多大的模型？', a: '在基础 16 GB 下，7–8B 的 4-bit 模型可留有余量装入。将 SO-DIMM 升级到 32 GB 可支持更长上下文或以低吞吐运行约 13B 模型，但速度仍受内存带宽限制。' },
+          { q: '内存是板载焊接还是可升级？', a: '可升级。与某些猜测相反，G3 Plus 使用单个可更换的 DDR4 SO-DIMM 插槽，而非板载焊接内存，并支持最高 32 GB。这个升级空间相对内存固定的入门级主机是真正的优势。' },
+          { q: 'G3 Plus 适合 Home Assistant 和常年开机使用吗？', a: '适合。它能很好地运行 Home Assistant 及其加载项，空载约 6 W，因此长期开机成本很低。注意它只有单个 2.5GbE 端口，因此作为网络主机不如双 LAN 的 Beelink EQ14。' },
+          { q: 'G3 Plus 有 USB-C 端口吗？', a: '没有。此型号有四个 USB-A 端口和两个 HDMI 输出，但没有 USB-C 端口，请据此规划外设。' },
+          { q: 'G3 Plus 耗电多少？', a: '空载约 6 W，满载约 21 W，因此持续运行成本极低。这种能效是选择 N150 主机作为中枢的关键原因。' },
+          { q: 'G3 Plus 还是 Beelink EQ14？', a: '两者都用 Intel N150。G3 Plus 支持最高 32 GB 内存，有利于上下文和更大的小型模型；EQ14 上限 16 GB，但增加了第二个 2.5GbE 端口。按你更看重内存余量还是双网络来选择。' },
+          { q: 'GMKtec G3 Plus 在哪里制造，是否影响价格？', a: '它在中国制造。2026 年美国进口措施（301 条款关税、800 美元以下最低限度豁免的终止）以及欧盟取消低价值包裹 150 欧元门槛都可能影响到手成本，因此请核实零售商当前价格，而非依赖固定数字。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[面向 Home Assistant + 本地 AI 的最佳迷你主机](/zh/smart-home/best-mini-pc-home-assistant-local-ai)——本评测所属的汇总',
+          '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)——Pi 对 迷你主机 对 NAS',
+          '[用本地 LLM 运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide)——这台主机实际运行什么',
+          '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama)——在 G3 Plus 上试用小型模型',
+          '[Home Assistant 入门](/zh/smart-home/home-assistant-getting-started)——搭建中枢',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'GMKtec G3 Plus 评测（2026）：入门级本地智能家居',
+      reviewBody:
+        'GMKtec NucBox G3 Plus 是一款入门级 Intel N150 迷你主机，配备可更换、最高升级至 32 GB 的 DDR4 SO-DIMM。约 $180–230（2026年7月）即可运行 Home Assistant 和小型本地模型。一台有内存余量的中枢，而非快速的 AI 机器。',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/zh/smart-home/gmktec-g3-plus-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '3.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'GMKtec NucBox G3 Plus',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'GMKtec' },
+        description: '搭载 Intel N150、DDR4 内存可升级至 32 GB 的入门级迷你主机，面向 Home Assistant 和小型本地模型。',
+      },
+    },
+  },
 }

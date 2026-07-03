@@ -1164,4 +1164,236 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Beelink SER8 评测（2026）：本地 AI 与家庭服务器',
+    seoTitle: 'Beelink SER8 评测 2026 — 本地 AI 与家庭服务器',
+    intro:
+      'Beelink SER8（AMD Ryzen 7 8845HS、Radeon 780M、32 GB DDR5）是 2026 年本地 AI 智能家居中性价比最高的迷你 PC。约 $650（2026 年 7 月，价格波动）即可在一台安静的机器上运行 Home Assistant、Frigate、Whisper 以及 Ollama 上的 7B 模型。本评测核实其规格，对本地 LLM 速度给出诚实的预期，并说明它在哪些方面同时胜过更便宜的 Intel N150 机型和更贵的 GEEKOM A9 Max。',
+    metaDescription:
+      'Beelink SER8 评测 2026：Ryzen 7 8845HS、Radeon 780M、32 GB DDR5，约 $650。可在 Ollama 上运行 Home Assistant 加一个 7B 本地 LLM。性价比最高的本地 AI 迷你 PC — 完整规格解析。',
+    twitterDescription:
+      'Beelink SER8（2026）：Ryzen 7 8845HS、Radeon 780M、32 GB DDR5，约 $650。运行 Home Assistant 加 7B 本地 LLM 性价比最高的迷你 PC。双 SO-DIMM 内存、USB4、65 W。',
+    readTime: '阅读约7分钟',
+    educationalLevel: 'Intermediate',
+    audience: '为 Home Assistant 和本地 LLM 挑选高性价比迷你 PC 的购买者',
+    primaryTerm: 'Beelink SER8 评测',
+    targetKeywords: [
+      'beelink ser8 评测',
+      'beelink ser8 本地 ai',
+      'beelink ser8 home assistant',
+      'beelink ser8 本地 llm',
+      'ryzen 7 8845hs 迷你 pc',
+    ],
+    leadAnswerBlock:
+      '**Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB DDR5）是 2026 年运行 Home Assistant 加本地 LLM 性价比最高的迷你 PC——它在一台机器上运行中枢、Frigate、Whisper 和 Ollama 上的 7B 模型，约 $650（2026 年 7 月，波动）。** 其强劲的 780M 核显和用户可更换的双 SO-DIMM 内存使其成为默认推荐，除非你需要更贵机型的额外余量。',
+    quickAnswerTop: {
+      zh: {
+        question: 'Beelink SER8 适合本地 AI 和 Home Assistant 吗？',
+        answer:
+          '适合——它是 2026 年该用途性价比最高的选择。Ryzen 7 8845HS（8 核/16 线程）、Radeon 780M 核显和 32 GB DDR5 可同时运行 Home Assistant、Ollama、Whisper 和 Frigate，7B 模型运行从容，13B–14B（4-bit）可用但受内存带宽限制。内存位于两个用户可更换的 SO-DIMM 插槽上，因此日后可升级到 64 GB。约 $650（2026 年 7 月，波动）大约是 GEEKOM A9 Max 的一半，却覆盖了大部分相同的智能家居工作。',
+        bullets: [
+          'CPU：Ryzen 7 8845HS — 8 核 / 16 线程，Radeon 780M（12 CU，RDNA 3）',
+          '内存：32 GB DDR5-5600（2×16 GB），双 SO-DIMM，用户可更换',
+          '本地 LLM（据规格估算）：7B 4-bit 从容；13B–14B 可用但受带宽限制',
+          '接口：USB4 40 Gbps、HDMI 2.1、DP 1.4、2.5GbE、Wi-Fi 6（非 6E）',
+          '价格约 $650（2026 年 7 月，波动）— 本地 AI 家庭服务器的性价比标杆',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: 'tldr' },
+      { label: '结论', anchor: 'verdict' },
+      { label: '规格', anchor: 'specs' },
+      { label: '本地 AI 与 LLM 性能', anchor: 'local-ai' },
+      { label: '优点与缺点', anchor: 'pros-cons' },
+      { label: '购买者背景：关税（2026）', anchor: 'trade-note' },
+      { label: '购买渠道', anchor: 'where-to-buy' },
+      { label: '替代方案', anchor: 'alternatives' },
+      { label: '常见问题', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Beelink SER8 是一款 Ryzen 7 8845HS 迷你 PC，约 $650 即可在 Ollama 上运行 Home Assistant 加一个 7B 本地 LLM，是 2026 年性价比最高的本地 AI 机型。' },
+      { type: 'plain-terms', content: '迷你 PC 是一台小巧、安静、全天候运行的电脑。SER8 配备快速的 AMD 处理器、强劲的集成显卡和 32 GB 内存——足以同时运行整个智能家居和一个中等规模的 AI 聊天模型，而无需高端机器的价格。内存位于两个可更换插槽中，日后可以加装。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '核心要点',
+        isTldr: true,
+        items: [
+          'SER8 在一台机器上运行 Home Assistant、Frigate、Whisper 和一个 7B 本地 LLM，约 $650',
+          'Ryzen 7 8845HS：8 核/16 线程，Radeon 780M 核显，32 GB DDR5 分布在两条用户可更换的 SO-DIMM 上',
+          '本地 LLM 速度来自 780M 核显和 DDR5 带宽——7B 模型运行从容',
+          '比 [GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review) 更便宜、更简单；比 Intel N150 机型强大得多',
+          'Wi-Fi 为 6（非 6E），有一个 2.5GbE 端口——对大多数家庭服务器足够',
+          '中国制造——将 2026 年美国/欧盟进口措施计入到岸成本（见关税说明）',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '结论——谁该购买',
+        content:
+          '**如果你想要在 Home Assistant 旁边仍能以可用速度运行本地 7B 模型的最便宜机器，请购买 Beelink SER8。** 对于大多数搭建本地 AI 智能家居的人来说，它是正确的默认选择：强劲的 Radeon 780M 核显、32 GB DDR5 和两个可更换内存插槽，价格约为 GEEKOM A9 Max 的一半。\n\n它最强的用例是**一体化家庭服务器**——在一台安静的机器上运行 Home Assistant、Ollama、Whisper 和 Frigate。只有当你需要更大的模型（更多内存余量）或外接 GPU 路径时才升级；只有当极小模型就够用时才降级到 Intel N150 机型。',
+        affiliateLinks: [
+          { label: '查看当前价格 — Beelink SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: '规格',
+        content:
+          '**以下所有规格均于 2026 年 7 月与 Beelink 及独立评测来源核对验证。** 出厂内存因 SKU 而异（24、32 或 64 GB）；本表反映主流的 32 GB / 1 TB 机型。',
+        columns: ['规格', 'Beelink SER8 (8845HS)'],
+        rows: [
+          { '规格': 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS（Zen 4，4 nm）' },
+          { '规格': '核心 / 线程', 'Beelink SER8 (8845HS)': '8 核 / 16 线程，最高 5.1 GHz' },
+          { '规格': '核显', 'Beelink SER8 (8845HS)': 'AMD Radeon 780M — 12 CU，RDNA 3' },
+          { '规格': 'NPU', 'Beelink SER8 (8845HS)': 'Ryzen AI，16 TOPS（XDNA 第一代）' },
+          { '规格': '内存', 'Beelink SER8 (8845HS)': '32 GB DDR5-5600（2×16 GB）；双 SO-DIMM；用户可更换（SKU 最高 64 GB）' },
+          { '规格': '存储', 'Beelink SER8 (8845HS)': '1 TB NVMe；2× M.2 2280 PCIe 4.0；最高 8 TB' },
+          { '规格': '接口', 'Beelink SER8 (8845HS)': '1× USB4（40 Gbps）、3× USB-A 10 Gbps、2× USB-A 2.0、1× USB-C 10 Gbps、HDMI 2.1、DP 1.4、3.5 mm' },
+          { '规格': '网络', 'Beelink SER8 (8845HS)': '1× 2.5GbE、Wi-Fi 6（非 6E）、Bluetooth 5.2' },
+          { '规格': 'TDP', 'Beelink SER8 (8845HS)': '54–65 W（持续 65 W 运行）' },
+          { '规格': '尺寸', 'Beelink SER8 (8845HS)': '135 × 135 × 44.7 mm，约 0.75 kg' },
+          { '规格': '操作系统', 'Beelink SER8 (8845HS)': 'Windows 11 Pro（支持安装 Linux/Proxmox）' },
+          { '规格': '价格（参考）', 'Beelink SER8 (8845HS)': '约 $650（2026 年 7 月 — 波动，请查看当前价格）' },
+        ],
+        items: [
+          '无独立 GPU：所有 AI 推理都在共享系统内存的 CPU 和 Radeon 780M 核显上运行。',
+          '双 SO-DIMM 插槽用户可更换；该平台的实际 DDR5 上限约为 96 GB。',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: '本地 AI 与 LLM 性能',
+        content:
+          '**凭借 32 GB 内存，SER8 可在 Ollama 上从容运行 7B 模型，并能以 4-bit 加载 13B–14B 模型，不过更大的模型受限于内存带宽而非容量——所有数据均据已验证硬件估算，并非实测基准。** Radeon 780M 是关键部件：在双通道 DDR5-5600 上，它让 7B 助手在 Home Assistant 旁保持响应迅速。',
+        items: [
+          'Ollama、LM Studio 和 llama.cpp 运行良好；780M 通过 Vulkan 或 ROCm 后端使用。',
+          '7B 模型是从容的甜蜜点；13B–14B 适合非交互用途，但感觉较慢。',
+          '32B 级模型在 32 GB 中仅勉强容纳且运行缓慢——这类用途请升级到 64 GB SKU。',
+          '16 TOPS 的 NPU 未被主流 LLM 运行时使用；核显和内存带宽决定延迟。',
+          '连接模型请参阅 [Home Assistant 上的 Ollama](/zh/smart-home/home-assistant-ollama-integration)，VRAM 深度请参阅 [本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+        ],
+        affiliateLinks: [
+          { label: '查看当前价格 — Beelink SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: '优点与缺点',
+        content: '**SER8 是性价比标杆；对家庭服务器而言，它的妥协很小。** 均衡观点如下。',
+        items: [
+          '**优点**',
+          '高性能本地 AI 机型的最佳性价比——约 $650 即可获得一台 7B 就绪的机器',
+          '强劲的 Radeon 780M 核显和 32 GB DDR5 兼顾 Home Assistant 与 7B 模型',
+          '两个用户可更换的 SO-DIMM 插槽和两个 M.2 插槽——可升级',
+          'USB4、HDMI 2.1 和 DP 1.4 支持三路 4K 输出',
+          '以 65 W 运行——对全天候服务器而言很节能',
+          '**缺点**',
+          'Wi-Fi 为 6，而非 6E——可靠有线连接请使用 2.5GbE 端口',
+          '仅一个 2.5GbE 端口（UM890 Pro 等对手提供两个）',
+          '32 GB 内存不足以在不升级的情况下运行 30B 以上的模型',
+          'NPU 不加速本地 LLM',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: '购买者背景：关税与供货（2026）',
+        content:
+          '**SER8 在中国制造，因此其到岸价格反映了 2026 年的贸易措施——这是把任何价格都当作移动目标的理由。** 以下事实是购买者背景，而非编辑观点。',
+        items: [
+          '美国：针对中国电子产品的第 301 条关税在 2026 年仍然有效；另行的 2025 年"IEEPA"关税于 2026 年 2 月被最高法院推翻，并由临时的、有上限的第 122 条关税取代。针对直接进口的 800 美元以下免税"de minimis"豁免也已终止。',
+          '欧盟（影响 DE/FR）：对成品迷你 PC 没有广泛的欧盟关税，但自 2026 年 7 月起，对来自中国的低价值直邮包裹的 150 欧元免税门槛被取消，并增加了每件包裹的小额处理费。',
+          '假设（宏观趋势，而非单品事实）：中国转向的出口产能使这些品牌在欧盟和美国保持高供货，总体上支撑了具有竞争力的价格。',
+          '净效应：购买前请在零售商处核实当前价格——此处约 $650 的数字是参考值，标注日期为 2026 年 7 月。',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '购买渠道与当前价格',
+        content:
+          '**价格逐周变动，因此请查看实时价格，而不要相信固定数字。** 截至 2026 年 7 月，32 GB / 1 TB 的 SER8 集中在 $650 左右，官方商店往往高于市场报价。',
+        items: [
+          '确认内存 SKU（24、32 或 64 GB）——32 GB 机型是 7B 模型的性价比甜蜜点。',
+        ],
+        affiliateLinks: [
+          { label: '查看当前价格 — Beelink SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: '值得考虑的替代方案',
+        content: '**如果 SER8 不合适，有四款机型在价格和性能上将其框定。**',
+        items: [
+          '[GEEKOM A9 Max](/zh/smart-home/geekom-a9-max-local-ai-review) — 追求余量之选：128 GB 内存上限和 Wi-Fi 7，价格约为两倍',
+          '[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review) — 类似的 Radeon 780M，但增加了双 2.5GbE、Wi-Fi 6E 和 OCuLink eGPU 端口',
+          '[Beelink EQ14](/zh/smart-home/beelink-eq14-local-ai-review) — 面向 Home Assistant 加一个极小模型的经济型 Intel N150 机型',
+          '[GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 另一款内存可升级的经济型 N150 选项',
+          '还在比较？请从 [Home Assistant + 本地 AI 最佳迷你 PC 汇总](/zh/smart-home/best-mini-pc-home-assistant-local-ai) 开始。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: 'Beelink SER8 能运行本地 LLM 吗？', a: '能。凭借 32 GB 内存和 Radeon 780M 核显，它可在 Ollama 上从容运行 7B 模型，并能以 4-bit 加载 13B–14B 模型。这是据其已验证硬件估算，而非固定基准，因为速度取决于模型、量化和后端。' },
+          { q: '它的内存能容纳多大的模型？', a: '在 32 GB 下，7B 模型运行从容，4-bit 的 13B–14B 可用但较慢。30B 级模型仅勉强容纳且运行缓慢；这类模型请选择 64 GB SKU 或内存上限更高的机型。' },
+          { q: 'SER8 适合 Home Assistant 和全天候运行吗？', a: '适合。它在 32 GB 上同时运行 Home Assistant、Ollama、Whisper 和 Frigate，负载下约耗 65 W，因此持续运行成本低廉。可靠有线连接请使用 2.5GbE 端口。' },
+          { q: '内存可以升级吗？', a: '可以。SER8 使用两个标准的、用户可更换的 DDR5 SO-DIMM 插槽，因此你可以从 32 GB 起步，日后升级到 64 GB。它还有两个用于扩展存储的 M.2 插槽。' },
+          { q: 'SER8 有 Wi-Fi 6E 吗？', a: '没有。SER8 出厂搭载 Wi-Fi 6（Intel AX200 模块），而非 Wi-Fi 6E。对家庭服务器而言这很少要紧——有线 2.5GbE 连接比任何 Wi-Fi 频段都更可靠。' },
+          { q: 'SER8 耗电多少？', a: '在持续负载下最高 65 W，空闲时远低于此，因此持续开机成本低廉。确切数值取决于工作负载和你选择的电源配置。' },
+          { q: 'SER8 还是 GEEKOM A9 Max？', a: 'SER8 是性价比之选，约 $650 即可覆盖大多数本地 AI 智能家居需求。只有当你需要其 128 GB 内存上限、Wi-Fi 7 或额外的视觉余量时才选 A9 Max，其成本大约翻倍。' },
+          { q: 'Beelink SER8 在哪里制造，这会影响价格吗？', a: '它在中国制造。2026 年，美国进口措施（第 301 条关税、800 美元以下 de minimis 豁免的终止）以及欧盟取消 150 欧元低价值包裹豁免都可能影响到岸成本，因此请核实零售商的当前价格，而不要依赖固定数字。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[Home Assistant + 本地 AI 最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 本评测所属的汇总',
+          '[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) — 跨集群：VRAM 与量化深度',
+          '[用本地 LLM 运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide) — 这台机器实际运行什么',
+          '[将 Ollama 连接到 Home Assistant](/zh/smart-home/home-assistant-ollama-integration) — 接入模型',
+          '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — Pi 对迷你 PC 对 NAS',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Beelink SER8 评测（2026）：本地 AI 与家庭服务器',
+      reviewBody:
+        'Beelink SER8 是一款配备 Radeon 780M 核显和 32 GB DDR5 的 Ryzen 7 8845HS 迷你 PC，约 $650（2026 年 7 月）即可在 Ollama 上运行 Home Assistant 加一个 7B 本地 LLM。它是 2026 年性价比最高的本地 AI 迷你 PC。',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/zh/smart-home/beelink-ser8-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '4.5', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'Beelink SER8',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'Beelink' },
+        description: '搭载 AMD Ryzen 7 8845HS、Radeon 780M 核显和 32 GB DDR5 的迷你 PC，用于本地 AI 和家庭服务器。',
+      },
+    },
+  },
 }
