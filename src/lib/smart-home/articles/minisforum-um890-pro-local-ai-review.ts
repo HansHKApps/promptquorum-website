@@ -1628,4 +1628,468 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Análise Minisforum UM890 Pro (2026): servidor de IA local',
+    seoTitle: 'Análise Minisforum UM890 Pro 2026 — servidor de IA',
+    intro:
+      'O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5) é o mini PC versátil de nível superior para uma casa inteligente com IA local. No exterior custa de cerca de $439 na versão barebone a $649 com 32 GB (julho de 2026, volátil); no Brasil, os preços variam bastante por causa dos impostos de importação (indicativamente, a partir de cerca de R$ 3.900 na versão barebone). Ele iguala um Beelink SER8 no modelo local, mas adiciona duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink para uma GPU externa. Esta análise verifica as especificações, define expectativas honestas sobre a velocidade do LLM local e explica quem deve pagar a diferença em relação a um SER8.',
+    metaDescription:
+      'Análise Minisforum UM890 Pro 2026: Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5, eGPU OCuLink, duas 2.5GbE. Roda Home Assistant + um LLM local 7B — o mini PC expansível de nível superior.',
+    twitterDescription:
+      'Minisforum UM890 Pro (2026): Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5, OCuLink para uma GPU externa, duas 2.5GbE. O servidor de IA local expansível — veja a análise.',
+    readTime: '7 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Compradores que querem um mini PC expansível para Home Assistant e IA local',
+    primaryTerm: 'análise Minisforum UM890 Pro',
+    targetKeywords: [
+      'análise minisforum um890 pro',
+      'minisforum um890 pro ia local',
+      'um890 pro home assistant',
+      'um890 pro llm local',
+      'ryzen 9 8945hs mini pc oculink',
+    ],
+    leadAnswerBlock:
+      '**O Minisforum UM890 Pro (Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5) roda Home Assistant mais um LLM local 7B como um Beelink SER8, mas adiciona duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink para uma GPU externa — de cerca de $439 na versão barebone a $649 com 32 GB no exterior (julho de 2026, volátil); no Brasil, indicativamente a partir de cerca de R$ 3.900 devido aos impostos de importação.** Compre se você quer um servidor doméstico expansível com um caminho real para uma inferência mais rápida de modelos grandes.',
+    quickAnswerTop: {
+      pt: {
+        question: 'O Minisforum UM890 Pro é bom para IA local e Home Assistant?',
+        answer:
+          'Sim — é a escolha expansível de nível superior. O Ryzen 9 8945HS (8 núcleos/16 threads), a iGPU Radeon 780M e até 96 GB de DDR5 rodam Home Assistant, Ollama, Whisper e Frigate juntos; um modelo 7B fica confortável e 13B–14B cabem com mais RAM. Seus diferenciais são duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink que conecta uma GPU externa para uma inferência de modelos grandes realmente rápida. No exterior custa de cerca de $439 (barebone) a $649 com 32 GB (julho de 2026, volátil); no Brasil, os preços variam muito por causa dos impostos de importação (indicativamente, a partir de cerca de R$ 3.900). Custa um pouco mais que um Beelink SER8, mas adiciona expansão real.',
+        bullets: [
+          'CPU: Ryzen 9 8945HS — 8 núcleos / 16 threads, Radeon 780M (12 CU, RDNA 3)',
+          'RAM: DDR5-5600 dois canais, dois SO-DIMMs atualizáveis pelo usuário, até 96 GB',
+          'LLM local (estimado pelas specs): 7B confortável; 13B–14B com mais RAM; eGPU OCuLink para modelos grandes rápidos',
+          'Rede/expansão: duas 2.5GbE, Wi-Fi 6E, 2× USB4, porta eGPU OCuLink',
+          'Preço ~$439 (barebone) / ~$649 com 32 GB no exterior (julho de 2026, volátil); no Brasil a partir de ~R$ 3.900 (importação) — nível superior expansível',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: 'Pontos principais', anchor: 'tldr' },
+      { label: 'Veredito', anchor: 'verdict' },
+      { label: 'Especificações', anchor: 'specs' },
+      { label: 'IA local e desempenho de LLM', anchor: 'local-ai' },
+      { label: 'Prós e contras', anchor: 'pros-cons' },
+      { label: 'Contexto do comprador: tarifas (2026)', anchor: 'trade-note' },
+      { label: 'Onde comprar', anchor: 'where-to-buy' },
+      { label: 'Alternativas', anchor: 'alternatives' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'O Minisforum UM890 Pro é um mini PC Ryzen 9 8945HS que roda Home Assistant mais um LLM local 7B e adiciona uma porta OCuLink para uma GPU externa.' },
+      { type: 'plain-terms', content: 'Um mini PC é um computador pequeno, silencioso e sempre ligado. O UM890 Pro é um modelo capaz que roda uma casa inteligente inteira e um modelo de IA de tamanho médio. Seu diferencial é uma porta que permite conectar depois uma placa de vídeo externa completa, para que modelos de IA grandes rodem muito mais rápido sem comprar uma máquina nova.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Pontos principais',
+        isTldr: true,
+        items: [
+          'O UM890 Pro roda Home Assistant, Frigate, Whisper e um LLM local 7B em uma única caixa',
+          'Ryzen 9 8945HS: 8 núcleos/16 threads, iGPU Radeon 780M, até 96 GB DDR5 em dois SO-DIMMs atualizáveis',
+          'Diferenciais em relação a um [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review): duas 2.5GbE, Wi-Fi 6E e uma porta eGPU OCuLink',
+          'A OCuLink oferece um caminho real para uma inferência rápida de modelos grandes com uma GPU externa',
+          'De cerca de $439 (barebone) a $649 com 32 GB no exterior; no Brasil a partir de ~R$ 3.900 (importação) — o nível superior expansível',
+          'Fabricado na China — inclua as medidas de importação EUA/UE de 2026 no custo final (veja a nota sobre tarifas)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Veredito — para quem é',
+        content:
+          '**Compre o Minisforum UM890 Pro se você quer uma caixa de IA local da classe SER8 com espaço para crescer — mais folga de RAM, duas 2.5GbE e uma porta OCuLink para uma GPU externa.** Para um modelo 7B no Home Assistant, ele se comporta como um Beelink SER8; o motivo para pagar um pouco mais é a expansão. Se você nunca pretende adicionar uma GPU ou um segundo link de rede, o SER8 economiza dinheiro com desempenho diário semelhante.\n\nSeu caso de uso mais forte é um **servidor doméstico expansível** — comece com a iGPU e adicione depois uma GPU externa OCuLink quando quiser inferência rápida de 13B–30B. A versão barebone também permite fornecer sua própria RAM e SSD.',
+        affiliateLinks: [
+          { label: 'Ver preço atual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: 'Especificações',
+        content:
+          '**Todas as especificações abaixo foram verificadas junto à Minisforum e a fontes de análise independentes em julho de 2026.** O teto de RAM é 96 GB na página oficial (algumas lojas ainda indicam 64 GB). É enviado em versão barebone ou pré-montado conforme a SKU.',
+        columns: ['Especificação', 'Minisforum UM890 Pro (8945HS)'],
+        rows: [
+          { 'Especificação': 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
+          { 'Especificação': 'Núcleos / threads', 'Minisforum UM890 Pro (8945HS)': '8 núcleos / 16 threads, até 5.2 GHz' },
+          { 'Especificação': 'iGPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Radeon 780M — 12 CU, RDNA 3' },
+          { 'Especificação': 'NPU', 'Minisforum UM890 Pro (8945HS)': 'Ryzen AI, 16 TOPS (39 TOPS de plataforma no total)' },
+          { 'Especificação': 'RAM', 'Minisforum UM890 Pro (8945HS)': 'DDR5-5600 dois canais; 2 slots SO-DIMM; até 96 GB (atualizável pelo usuário)' },
+          { 'Especificação': 'Armazenamento', 'Minisforum UM890 Pro (8945HS)': '2× M.2 2280 PCIe 4.0; até 8 TB' },
+          { 'Especificação': 'Portas', 'Minisforum UM890 Pro (8945HS)': '2× USB4 (40 Gbps, 100 W PD-in), 4× USB-A 10 Gbps, HDMI 2.1, DP 1.4, OCuLink (PCIe 4.0 ×4), 3.5 mm' },
+          { 'Especificação': 'Rede', 'Minisforum UM890 Pro (8945HS)': '2× 2.5GbE, Wi-Fi 6E, Bluetooth 5.3' },
+          { 'Especificação': 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W base, configurável até ~70 W' },
+          { 'Especificação': 'Dimensões', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
+          { 'Especificação': 'SO', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro nas SKUs pré-montadas (Linux/Proxmox suportados)' },
+          { 'Especificação': 'Preço (indicativo)', 'Minisforum UM890 Pro (8945HS)': '~$439 barebone / ~$649 com 32 GB no exterior; no Brasil a partir de ~R$ 3.900 (julho de 2026 — volátil por causa da importação, verifique o preço atual)' },
+        ],
+        items: [
+          'A porta OCuLink (PCIe 4.0 ×4, ~64 Gbps) conecta um dock de GPU externa — um caminho mais rápido que USB4/Thunderbolt para uma GPU dedicada.',
+          'Dois slots SO-DIMM e dois slots M.2 atualizáveis pelo usuário facilitam expandir a RAM e o armazenamento.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'IA local e desempenho de LLM',
+        content:
+          '**Na iGPU, o UM890 Pro roda confortavelmente um modelo 7B e comporta 13B–14B com mais RAM; sua real vantagem é a porta OCuLink, que conecta uma GPU externa para uma inferência de modelos grandes realmente rápida — todos os números são estimados a partir do hardware verificado, não um benchmark medido.** Sem uma GPU externa, os modelos grandes são limitados pela largura de banda da memória, como qualquer caixa de memória compartilhada.',
+        items: [
+          'Com 32 GB, um modelo 7B fica confortável; 64–96 GB abrem 13B–14B com conforto e um modelo 30B com baixa taxa de transferência.',
+          'A OCuLink adiciona uma GPU de desktop externa para uma velocidade que a iGPU não alcança — um diferencial em relação a caixas só com USB4.',
+          'Ollama, LM Studio e llama.cpp rodam bem; a NPU de 16 TOPS não é usada pelos runtimes de LLM mais comuns.',
+          'Duas 2.5GbE combinam com um servidor doméstico cabeado e confiável; veja [Ollama no Home Assistant](/pt/smart-home/home-assistant-ollama-integration).',
+          'Para VRAM e profundidade de quantização, veja o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) entre clusters.',
+        ],
+        affiliateLinks: [
+          { label: 'Ver preço atual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: 'Prós e contras',
+        content: '**O UM890 Pro é a escolha expansível; você paga um pouco mais por espaço para crescer.** Visão equilibrada abaixo.',
+        items: [
+          '**Prós**',
+          'Porta OCuLink para uma GPU externa rápida — um caminho real de upgrade para modelos grandes',
+          'Até 96 GB DDR5 em dois slots SO-DIMM atualizáveis pelo usuário',
+          'Duas 2.5GbE e Wi-Fi 6E — melhor conectividade que um Beelink SER8',
+          'Duas portas USB4 (100 W PD-in) e até quatro telas simultâneas',
+          'A versão barebone permite fornecer sua própria RAM e SSD',
+          '**Contras**',
+          'Custa mais que um Beelink SER8 para um desempenho semelhante apenas com iGPU',
+          'Gabinete maior (67 mm de altura) que a maioria das caixas aqui',
+          'Uma GPU externa significa custo, espaço e ruído extras — deixa de ser realmente "mini" depois de adicionada',
+          'A NPU não acelera os LLMs locais',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'Contexto do comprador: tarifas e disponibilidade (2026)',
+        content:
+          '**O UM890 Pro é fabricado na China, então seu preço final reflete as medidas comerciais de 2026 — um motivo para tratar qualquer preço como um alvo em movimento.** Os fatos abaixo são contexto para o comprador, não opinião editorial.',
+        items: [
+          'EUA: as tarifas da Seção 301 sobre eletrônicos chineses continuam em vigor em 2026; as tarifas "IEEPA" separadas de 2025 foram derrubadas pela Suprema Corte em fevereiro de 2026 e substituídas por uma tarifa temporária e limitada da Seção 122. A isenção "de minimis" livre de tarifas abaixo de US$ 800 para importações diretas também acabou.',
+          'UE (afeta DE/FR): não há uma tarifa ampla da UE sobre mini PCs acabados, mas desde julho de 2026 o limite livre de tarifas de 150 € para pequenas encomendas diretas da China foi removido e uma pequena taxa de processamento por encomenda foi adicionada.',
+          'Brasil: importações têm carga tributária alta (imposto de importação, ICMS e taxas), por isso os preços em reais costumam ser bem maiores que a conversão direta do dólar; compre de vendedores brasileiros com nota fiscal quando possível.',
+          'Efeito líquido: verifique o preço atual na loja antes de comprar — os números aqui são indicativos e datados de julho de 2026.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Onde comprar e preço atual',
+        content:
+          '**Os preços mudam de semana para semana, então verifique o preço ao vivo em vez de confiar em um valor fixo.** Em julho de 2026, o UM890 Pro vai de cerca de $439 (barebone) a $649 com 32 GB e $729 com 64 GB no exterior; no Brasil, com impostos de importação, os valores em reais são bem mais altos e variam bastante entre lojas.',
+        items: [
+          'Decida barebone vs pré-montado: barebone é mais barato se você já tem SO-DIMMs DDR5 e um SSD NVMe.',
+        ],
+        affiliateLinks: [
+          { label: 'Ver preço atual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'Alternativas a considerar',
+        content: '**Se o UM890 Pro não for a escolha certa, estas o cercam em preço e expansão.**',
+        items: [
+          '[Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — a escolha de custo-benefício com desempenho de iGPU semelhante por menos, sem OCuLink e LAN dupla',
+          '[GEEKOM A9 Max](/pt/smart-home/geekom-a9-max-local-ai-review) — caixa premium com folga, teto de 128 GB de RAM e Wi-Fi 7',
+          '[Beelink EQ14](/pt/smart-home/beelink-eq14-local-ai-review) — caixa Intel N150 econômica para Home Assistant mais um modelo pequeno',
+          '[GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — outra opção N150 econômica com RAM atualizável',
+          'Ainda comparando? Comece pelo [resumo dos melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'O Minisforum UM890 Pro consegue rodar LLMs locais?', a: 'Sim. Na iGPU Radeon 780M ele roda confortavelmente um modelo 7B no Ollama e comporta 13B–14B com mais RAM. Com uma GPU externa via OCuLink ele roda modelos grandes muito mais rápido. Esses números são estimados a partir do hardware verificado, não um benchmark fixo.' },
+          { q: 'Que tamanho de modelo cabe na RAM dele?', a: 'Com 32 GB, um modelo 7B fica confortável. Atualizar para 64–96 GB comporta 13B–14B com conforto e um modelo 30B com baixa taxa de transferência na iGPU. Para inferência rápida de modelos grandes, adicione uma GPU pela porta OCuLink.' },
+          { q: 'Para que serve a porta OCuLink?', a: 'A OCuLink é um conector PCIe 4.0 ×4 (cerca de 64 Gbps) que liga um dock de GPU externa. É mais rápido que USB4/Thunderbolt para uma GPU dedicada, dando ao UM890 Pro um caminho real de upgrade para uma inferência rápida de modelos grandes — o principal motivo para escolhê-lo em vez de um Beelink SER8.' },
+          { q: 'O UM890 Pro é bom para Home Assistant e uso contínuo?', a: 'Sim. Ele roda Home Assistant, Ollama, Whisper e Frigate juntos, e suas duas 2.5GbE e o Wi-Fi 6E fazem dele um servidor doméstico bem conectado. O consumo base é de 45 W, configurável até cerca de 70 W.' },
+          { q: 'A RAM é atualizável?', a: 'Sim. O UM890 Pro usa dois slots SO-DIMM DDR5 atualizáveis pelo usuário e suporta até 96 GB (algumas lojas indicam 64 GB). Ele também tem dois slots M.2 para armazenamento.' },
+          { q: 'Quanta energia o UM890 Pro consome?', a: 'Ele opera a 45 W de base e até cerca de 70 W sob carga no modo desempenho, com muito menos em repouso. Adicionar uma GPU externa via OCuLink aumenta bastante o consumo total.' },
+          { q: 'UM890 Pro ou Beelink SER8?', a: 'No dia a dia eles se comportam igual em um modelo 7B. Escolha o UM890 Pro pelo caminho eGPU OCuLink, pelas duas 2.5GbE, pelo Wi-Fi 6E e pelo teto de 96 GB de RAM; escolha o SER8 para economizar se você não precisa dessa expansão.' },
+          { q: 'Onde o Minisforum UM890 Pro é fabricado e isso afeta o preço?', a: 'Ele é fabricado na China. Em 2026, as medidas de importação dos EUA (tarifas da Seção 301, fim da isenção de minimis abaixo de US$ 800) e a remoção pela UE do limite de 150 € para pequenas encomendas podem afetar o custo final; no Brasil, os impostos de importação pesam bastante, então verifique o preço atual na loja em vez de confiar em um valor fixo.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o resumo ao qual esta análise pertence',
+          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) — entre clusters: VRAM e profundidade de quantização',
+          '[Rodando sua casa inteligente em um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide) — o que a caixa realmente roda',
+          '[Conectar o Ollama ao Home Assistant](/pt/smart-home/home-assistant-ollama-integration) — integrar o modelo',
+          '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Análise Minisforum UM890 Pro (2026): servidor de IA local',
+      reviewBody:
+        'O Minisforum UM890 Pro é um mini PC Ryzen 9 8945HS com iGPU Radeon 780M, até 96 GB DDR5 e uma porta OCuLink para uma GPU externa. Ele roda Home Assistant mais um LLM local 7B e é o mini PC expansível de nível superior, a partir de cerca de $439 na versão barebone no exterior (julho de 2026).',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/pt/smart-home/minisforum-um890-pro-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'Minisforum UM890 Pro',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'Minisforum' },
+        description: 'Mini PC com AMD Ryzen 9 8945HS, iGPU Radeon 780M, até 96 GB DDR5 e uma porta eGPU OCuLink, para IA local e uso como servidor doméstico.',
+      },
+    },
+  },
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'مراجعة Minisforum UM890 Pro (2026): خادم منزلي بذكاء اصطناعي محلي',
+    seoTitle: 'مراجعة Minisforum UM890 Pro 2026 — خادم ذكاء اصطناعي',
+    intro:
+      'جهاز Minisforum UM890 Pro (بمعالج AMD Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5) هو حاسوب mini PC متعدد الاستخدامات من الفئة الأعلى لمنزل ذكي يعتمد الذكاء الاصطناعي المحلي. بسعر يبدأ من نحو $439 بنسخة barebones وحتى $649 مع 32 GB (يوليو 2026، متقلب)، يوازي Beelink SER8 في النموذج المحلي لكنه يضيف منفذَي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink لبطاقة رسوميات خارجية. تتحقق هذه المراجعة من مواصفاته، وتضع توقعات صادقة لسرعة الـ LLM المحلي، وتوضح مَن ينبغي أن يدفع الفارق مقابل SER8.',
+    metaDescription:
+      'مراجعة Minisforum UM890 Pro 2026: Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5، وeGPU عبر OCuLink، ومنفذا 2.5GbE. يشغّل Home Assistant + نموذج LLM محلي 7B — الجهاز القابل للتوسّع.',
+    twitterDescription:
+      'Minisforum UM890 Pro (2026): Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5، وOCuLink لبطاقة رسوميات خارجية، ومنفذا 2.5GbE. الخادم المنزلي القابل للتوسّع بذكاء اصطناعي محلي — إليك التحليل.',
+    readTime: '7 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'المشترون الذين يريدون حاسوب mini PC قابلاً للتوسّع لـ Home Assistant والذكاء الاصطناعي المحلي',
+    primaryTerm: 'مراجعة Minisforum UM890 Pro',
+    targetKeywords: [
+      'مراجعة minisforum um890 pro',
+      'minisforum um890 pro الذكاء الاصطناعي المحلي',
+      'um890 pro home assistant',
+      'um890 pro llm محلي',
+      'ryzen 9 8945hs mini pc oculink',
+    ],
+    leadAnswerBlock:
+      '**جهاز Minisforum UM890 Pro (Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5) يشغّل Home Assistant إضافةً إلى نموذج LLM محلي 7B مثل Beelink SER8، لكنه يضيف منفذَي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink لبطاقة رسوميات خارجية — بسعر يبدأ من نحو $439 بنسخة barebones وحتى $649 مع 32 GB (يوليو 2026، متقلب).** اشترِه إذا أردت خادماً منزلياً قابلاً للتوسّع مع مسار حقيقي نحو استدلال أسرع للنماذج الكبيرة.',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل Minisforum UM890 Pro جيد للذكاء الاصطناعي المحلي و Home Assistant؟',
+        answer:
+          'نعم — إنه الخيار القابل للتوسّع من الفئة الأعلى. يشغّل معالج Ryzen 9 8945HS (8 أنوية/16 خيطاً) وكرت Radeon 780M المدمج وحتى 96 GB من DDR5 كلاً من Home Assistant وOllama وWhisper وFrigate في آنٍ واحد؛ ونموذج 7B يعمل بأريحية، ونماذج 13B–14B تتسع مع مزيد من الذاكرة. أما مميّزاته فهي منفذا 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink الذي يوصّل بطاقة رسوميات خارجية لاستدلال سريع فعلاً للنماذج الكبيرة. بسعر يبدأ من نحو $439 بنسخة barebones وحتى $649 مع 32 GB (يوليو 2026، متقلب)، يكلّف أكثر قليلاً من Beelink SER8 لكنه يضيف توسّعاً حقيقياً.',
+        bullets: [
+          'المعالج: Ryzen 9 8945HS — 8 أنوية / 16 خيطاً، Radeon 780M (12 CU، RDNA 3)',
+          'الذاكرة: DDR5-5600 ثنائية القناة، منفذا SO-DIMM قابلان للترقية من المستخدم، حتى 96 GB',
+          'LLM محلي (مقدَّر من المواصفات): 7B مريح؛ 13B–14B مع مزيد من الذاكرة؛ eGPU عبر OCuLink للنماذج الكبيرة السريعة',
+          'الشبكة/التوسّع: منفذا 2.5GbE، وWi-Fi 6E، و2× USB4، ومنفذ eGPU عبر OCuLink',
+          'السعر ~$439 barebones / ~$649 مع 32 GB (يوليو 2026، متقلب) — الفئة الأعلى القابلة للتوسّع',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: 'tldr' },
+      { label: 'الحكم', anchor: 'verdict' },
+      { label: 'المواصفات', anchor: 'specs' },
+      { label: 'الذكاء الاصطناعي المحلي وأداء LLM', anchor: 'local-ai' },
+      { label: 'المزايا والعيوب', anchor: 'pros-cons' },
+      { label: 'سياق الشراء: الرسوم الجمركية (2026)', anchor: 'trade-note' },
+      { label: 'أين تشتري', anchor: 'where-to-buy' },
+      { label: 'البدائل', anchor: 'alternatives' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'جهاز Minisforum UM890 Pro هو حاسوب mini PC بمعالج Ryzen 9 8945HS يشغّل Home Assistant إضافةً إلى نموذج LLM محلي 7B ويضيف منفذ OCuLink لبطاقة رسوميات خارجية.' },
+      { type: 'plain-terms', content: 'الـ mini PC حاسوب صغير هادئ يعمل باستمرار. وجهاز UM890 Pro خيار قادر منه يشغّل منزلاً ذكياً كاملاً ونموذج ذكاء اصطناعي متوسط الحجم. وميزته الخاصة منفذ يتيح لك لاحقاً توصيل بطاقة رسوميات خارجية كاملة، بحيث تعمل نماذج الذكاء الاصطناعي الكبيرة أسرع بكثير دون شراء جهاز جديد.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'النقاط الرئيسية',
+        isTldr: true,
+        items: [
+          'يشغّل UM890 Pro كلاً من Home Assistant وFrigate وWhisper ونموذج LLM محلي 7B في جهاز واحد',
+          'Ryzen 9 8945HS: 8 أنوية/16 خيطاً، وكرت Radeon 780M مدمج، وحتى 96 GB DDR5 على منفذَي SO-DIMM قابلين للترقية',
+          'مميّزات مقابل [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review): منفذا 2.5GbE، وWi-Fi 6E، ومنفذ eGPU عبر OCuLink',
+          'يوفّر OCuLink مساراً حقيقياً نحو استدلال سريع للنماذج الكبيرة ببطاقة رسوميات خارجية',
+          'بسعر يبدأ من ~$439 barebones وحتى ~$649 مع 32 GB — الفئة الأعلى القابلة للتوسّع',
+          'مصنوع في الصين — احسب إجراءات الاستيراد الأمريكية/الأوروبية لعام 2026 ضمن التكلفة النهائية (انظر ملاحظة الرسوم)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'الحكم — لمن هو مناسب',
+        content:
+          '**اشترِ Minisforum UM890 Pro إذا أردت جهاز ذكاء اصطناعي محلي من فئة SER8 مع هامش للنمو — مزيد من سعة الذاكرة، ومنفذا 2.5GbE، ومنفذ OCuLink لبطاقة رسوميات خارجية.** لنموذج 7B على Home Assistant يؤدي كأداء Beelink SER8؛ وسبب دفع القليل الإضافي هو التوسّع. إذا لم تنوِ أبداً إضافة بطاقة رسوميات أو وصلة شبكة ثانية، فإن SER8 يوفّر المال بأداء يومي مشابه.\n\nأقوى استخداماته هو **خادم منزلي قابل للتوسّع** — ابدأ بالكرت المدمج، ثم أضف بطاقة رسوميات خارجية عبر OCuLink لاحقاً حين تريد استدلالاً سريعاً بحجم 13B–30B. كما تتيح لك نسخة barebones وضع الذاكرة والـ SSD الخاصين بك.',
+        affiliateLinks: [
+          { label: 'تحقق من السعر الحالي — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: 'المواصفات',
+        content:
+          '**جرى التحقق من جميع المواصفات أدناه مقابل Minisforum ومصادر مراجعة مستقلة في يوليو 2026.** الحد الأقصى للذاكرة هو 96 GB في الصفحة الرسمية (لا يزال بعض البائعين يذكرون 64 GB). يُشحن بنسخة barebones أو مُعدّاً مسبقاً حسب الطراز.',
+        columns: ['المواصفة', 'Minisforum UM890 Pro (8945HS)'],
+        rows: [
+          { 'المواصفة': 'المعالج', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
+          { 'المواصفة': 'الأنوية / الخيوط', 'Minisforum UM890 Pro (8945HS)': '8 أنوية / 16 خيطاً، حتى 5.2 GHz' },
+          { 'المواصفة': 'الرسوميات المدمجة', 'Minisforum UM890 Pro (8945HS)': 'AMD Radeon 780M — 12 CU، RDNA 3' },
+          { 'المواصفة': 'NPU', 'Minisforum UM890 Pro (8945HS)': 'Ryzen AI، 16 TOPS (39 TOPS للمنصة إجمالاً)' },
+          { 'المواصفة': 'الذاكرة', 'Minisforum UM890 Pro (8945HS)': 'DDR5-5600 ثنائية القناة؛ منفذا SO-DIMM؛ حتى 96 GB (قابلة للترقية من المستخدم)' },
+          { 'المواصفة': 'التخزين', 'Minisforum UM890 Pro (8945HS)': '2× M.2 2280 PCIe 4.0؛ حتى 8 TB' },
+          { 'المواصفة': 'المنافذ', 'Minisforum UM890 Pro (8945HS)': '2× USB4 (40 Gbps، 100 W PD-in)، 4× USB-A 10 Gbps، HDMI 2.1، DP 1.4، OCuLink (PCIe 4.0 ×4)، 3.5 mm' },
+          { 'المواصفة': 'الشبكة', 'Minisforum UM890 Pro (8945HS)': '2× 2.5GbE، Wi-Fi 6E، Bluetooth 5.3' },
+          { 'المواصفة': 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W أساسي، قابل للضبط حتى ~70 W' },
+          { 'المواصفة': 'الأبعاد', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
+          { 'المواصفة': 'نظام التشغيل', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro على الطرازات المُعدّة مسبقاً (Linux/Proxmox مدعومان)' },
+          { 'المواصفة': 'السعر (استرشادي)', 'Minisforum UM890 Pro (8945HS)': '~$439 barebones / ~$649 مع 32 GB (يوليو 2026 — متقلب، تحقق من السعر الحالي)' },
+        ],
+        items: [
+          'منفذ OCuLink (PCIe 4.0 ×4، ~64 Gbps) يوصّل قاعدة GPU خارجية — مسار أسرع من USB4/Thunderbolt لبطاقة رسوميات منفصلة.',
+          'منفذا SO-DIMM ومنفذا M.2 قابلان للترقية من المستخدم يسهّلان توسيع الذاكرة والتخزين.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'الذكاء الاصطناعي المحلي وأداء LLM',
+        content:
+          '**على الكرت المدمج يشغّل UM890 Pro نموذج 7B بأريحية ويتّسع لـ 13B–14B مع مزيد من الذاكرة؛ وميزته الحقيقية منفذ OCuLink الذي يوصّل بطاقة رسوميات خارجية لاستدلال سريع فعلاً للنماذج الكبيرة — وكل الأرقام مقدَّرة من العتاد الذي جرى التحقق منه، لا اختباراً مقاساً.** بدون بطاقة رسوميات خارجية، تبقى النماذج الكبيرة مقيّدة بعرض نطاق الذاكرة كأي جهاز يتشارك الذاكرة.',
+        items: [
+          'مع 32 GB، يعمل نموذج 7B بأريحية؛ و64–96 GB تفتح 13B–14B بأريحية ونموذجاً بحجم 30B بإنتاجية منخفضة.',
+          'يضيف OCuLink بطاقة رسوميات مكتبية خارجية لسرعة لا يبلغها الكرت المدمج — ميزة مقابل الأجهزة ذات USB4 فقط.',
+          'يعمل Ollama وLM Studio وllama.cpp بشكل جيد؛ ولا تستخدم أطر تشغيل LLM الشائعة وحدة NPU بقدرة 16 TOPS.',
+          'منفذا 2.5GbE مناسبان لخادم منزلي سلكي وموثوق؛ انظر [Ollama على Home Assistant](/ar/smart-home/home-assistant-ollama-integration).',
+          'لمعرفة VRAM وعمق التكميم، راجع [دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide-2026) بين العناقيد.',
+        ],
+        affiliateLinks: [
+          { label: 'تحقق من السعر الحالي — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: 'المزايا والعيوب',
+        content: '**UM890 Pro هو الخيار القابل للتوسّع؛ تدفع أكثر قليلاً مقابل هامش النمو.** نظرة متوازنة أدناه.',
+        items: [
+          '**المزايا**',
+          'منفذ OCuLink لبطاقة رسوميات خارجية سريعة — مسار ترقية حقيقي للنماذج الكبيرة',
+          'حتى 96 GB DDR5 على منفذَي SO-DIMM قابلين للترقية من المستخدم',
+          'منفذا 2.5GbE وWi-Fi 6E — اتصال أفضل من Beelink SER8',
+          'منفذا USB4 (100 W PD-in) وحتى أربع شاشات في آنٍ واحد',
+          'تتيح نسخة barebones وضع الذاكرة والـ SSD الخاصين بك',
+          '**العيوب**',
+          'يكلّف أكثر من Beelink SER8 مقابل أداء مشابه بالكرت المدمج وحده',
+          'هيكل أكبر (بارتفاع 67 mm) من معظم الأجهزة هنا',
+          'بطاقة الرسوميات الخارجية تعني تكلفة ومساحة وضجيجاً إضافياً — لم يعد «mini» حقاً بعد إضافتها',
+          'وحدة الـ NPU لا تسرّع الـ LLM المحلية',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'سياق الشراء: الرسوم الجمركية والتوفر (2026)',
+        content:
+          '**يُصنَّع UM890 Pro في الصين، لذا يعكس سعره النهائي إجراءات التجارة لعام 2026 — سبب لمعاملة أي سعر كهدف متحرك.** الحقائق أدناه سياق للمشتري، لا رأي تحريري.',
+        items: [
+          'الولايات المتحدة: تبقى رسوم القسم 301 على الإلكترونيات الصينية سارية في 2026؛ أما رسوم "IEEPA" لعام 2025 المنفصلة فقد أبطلتها المحكمة العليا في فبراير 2026 واستُبدِلت برسم مؤقت ومحدود بسقف بموجب القسم 122. كما انتهى إعفاء "de minimis" المعفى من الرسوم دون 800 دولار للواردات المباشرة.',
+          'الاتحاد الأوروبي (يؤثر في DE/FR): لا توجد رسوم أوروبية واسعة على أجهزة mini PC الجاهزة، لكن اعتباراً من يوليو 2026 أُلغيت عتبة الإعفاء البالغة 150 يورو للطرود منخفضة القيمة المرسلة مباشرة من الصين، وأُضيفت رسوم مناولة صغيرة لكل طرد.',
+          'افتراض (اتجاه كلي لا حقيقة لكل منتج): أبقت الطاقة التصديرية الصينية المعاد توجيهها توفر هذه العلامات مرتفعاً في الاتحاد الأوروبي والولايات المتحدة، ما يدعم عموماً أسعاراً تنافسية.',
+          'الأثر الصافي: تحقق من السعر الحالي لدى البائع قبل الشراء — فالأرقام هنا استرشادية ومؤرَّخة بيوليو 2026.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'أين تشتري والسعر الحالي',
+        content:
+          '**تتحرك الأسعار من أسبوع لآخر، لذا تحقق من السعر المباشر بدل الوثوق برقم ثابت.** حتى يوليو 2026 يبدأ UM890 Pro من نحو $439 بنسخة barebones وحتى $649 مع 32 GB و$729 مع 64 GB.',
+        items: [
+          'قرّر بين barebones والنسخة المُعدّة مسبقاً: barebones أرخص إذا كان لديك بالفعل ذاكرة SO-DIMM من نوع DDR5 وقرص SSD من نوع NVMe.',
+        ],
+        affiliateLinks: [
+          { label: 'تحقق من السعر الحالي — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'بدائل تستحق النظر',
+        content: '**إذا لم يكن UM890 Pro الخيار المناسب لك، فهذه تحيط به من حيث السعر والتوسّع.**',
+        items: [
+          '[Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — الخيار القيمي بأداء كرت مدمج مشابه بسعر أقل، دون OCuLink وشبكة LAN مزدوجة',
+          '[GEEKOM A9 Max](/ar/smart-home/geekom-a9-max-local-ai-review) — جهاز متميز بهامش كبير وسقف ذاكرة 128 GB وWi-Fi 7',
+          '[Beelink EQ14](/ar/smart-home/beelink-eq14-local-ai-review) — جهاز Intel N150 اقتصادي لـ Home Assistant إضافةً إلى نموذج صغير',
+          '[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — خيار N150 اقتصادي آخر بذاكرة قابلة للترقية',
+          'ما زلت تقارن؟ ابدأ من [ملخص أفضل أجهزة mini PC لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'هل يمكن لـ Minisforum UM890 Pro تشغيل نماذج LLM محلية؟', a: 'نعم. على كرت Radeon 780M المدمج يشغّل نموذج 7B على Ollama بأريحية ويتّسع لـ 13B–14B مع مزيد من الذاكرة. ومع بطاقة رسوميات خارجية عبر OCuLink يشغّل النماذج الكبيرة أسرع بكثير. وهذه الأرقام مقدَّرة من عتاده الذي جرى التحقق منه، لا اختباراً ثابتاً.' },
+          { q: 'ما حجم النموذج الذي يتسع في ذاكرته؟', a: 'مع 32 GB، يعمل نموذج 7B بأريحية. والترقية إلى 64–96 GB تتّسع لـ 13B–14B بأريحية ولنموذج 30B بإنتاجية منخفضة على الكرت المدمج. ولاستدلال سريع للنماذج الكبيرة، أضف بطاقة رسوميات عبر منفذ OCuLink.' },
+          { q: 'ما فائدة منفذ OCuLink؟', a: 'OCuLink موصّل PCIe 4.0 ×4 (نحو 64 Gbps) يربط قاعدة GPU خارجية. وهو أسرع من USB4/Thunderbolt لبطاقة رسوميات منفصلة، ما يمنح UM890 Pro مسار ترقية حقيقياً نحو استدلال سريع للنماذج الكبيرة — السبب الرئيسي لاختياره على Beelink SER8.' },
+          { q: 'هل UM890 Pro جيد لـ Home Assistant والتشغيل الدائم؟', a: 'نعم. يشغّل Home Assistant وOllama وWhisper وFrigate معاً، ومنفذاه 2.5GbE وWi-Fi 6E يجعلانه خادماً منزلياً جيد الاتصال. الاستهلاك الأساسي 45 W، قابل للضبط حتى نحو 70 W.' },
+          { q: 'هل الذاكرة قابلة للترقية؟', a: 'نعم. يستخدم UM890 Pro منفذَي SO-DIMM من نوع DDR5 قابلين للترقية من المستخدم ويدعم حتى 96 GB (يذكر بعض البائعين 64 GB). كما يحتوي على منفذَي M.2 للتخزين.' },
+          { q: 'كم يستهلك UM890 Pro من الطاقة؟', a: 'يعمل عند 45 W أساسي وحتى نحو 70 W تحت الحمل في وضع الأداء، وبأقل بكثير في الخمول. وإضافة بطاقة رسوميات خارجية عبر OCuLink تزيد الاستهلاك الإجمالي بشكل ملحوظ.' },
+          { q: 'UM890 Pro أم Beelink SER8؟', a: 'في الاستخدام اليومي يؤديان بالمثل مع نموذج 7B. اختر UM890 Pro من أجل مسار eGPU عبر OCuLink، ومنفذَي 2.5GbE، وWi-Fi 6E، وسقف ذاكرة 96 GB؛ واختر SER8 لتوفير المال إذا لم تكن بحاجة إلى ذلك التوسّع.' },
+          { q: 'أين يُصنَّع Minisforum UM890 Pro، وهل يؤثر ذلك في السعر؟', a: 'يُصنَّع في الصين. في 2026 قد تؤثر إجراءات الاستيراد الأمريكية (رسوم القسم 301، وانتهاء إعفاء de minimis دون 800 دولار) وإلغاء الاتحاد الأوروبي لعتبة 150 يورو للطرود منخفضة القيمة في التكلفة النهائية، لذا تحقق من السعر الحالي لدى البائع بدل الاعتماد على رقم ثابت.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل أجهزة mini PC لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — الملخص الذي تنتمي إليه هذه المراجعة',
+          '[دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide-2026) — بين العناقيد: VRAM وعمق التكميم',
+          '[تشغيل منزلك الذكي على LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — ما الذي يشغّله الجهاز فعلاً',
+          '[ربط Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration) — دمج النموذج',
+          '[أفضل عتاد لمنزل ذكي محلي](/ar/smart-home/best-hardware-for-local-smart-home) — Pi مقابل mini PC مقابل NAS',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'مراجعة Minisforum UM890 Pro (2026): خادم منزلي بذكاء اصطناعي محلي',
+      reviewBody:
+        'جهاز Minisforum UM890 Pro هو حاسوب mini PC بمعالج Ryzen 9 8945HS مع كرت Radeon 780M مدمج، وحتى 96 GB DDR5، ومنفذ OCuLink لبطاقة رسوميات خارجية. يشغّل Home Assistant إضافةً إلى نموذج LLM محلي 7B وهو الجهاز القابل للتوسّع من الفئة الأعلى، بسعر يبدأ من نحو $439 بنسخة barebones (يوليو 2026).',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/ar/smart-home/minisforum-um890-pro-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'Minisforum UM890 Pro',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'Minisforum' },
+        description: 'حاسوب mini PC بمعالج AMD Ryzen 9 8945HS، وكرت Radeon 780M مدمج، وحتى 96 GB DDR5، ومنفذ eGPU عبر OCuLink، للذكاء الاصطناعي المحلي والاستخدام كخادم منزلي.',
+      },
+    },
+  },
 }

@@ -1628,4 +1628,467 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'Análise GEEKOM A9 Max (2026): IA local e servidor doméstico',
+    seoTitle: 'Análise GEEKOM A9 Max 2026 — IA local e servidor doméstico',
+    intro:
+      'O GEEKOM A9 Max é um mini PC premium baseado no AMD Ryzen AI 9 HX 370 (12 núcleos, Radeon 890M, até 128 GB DDR5). Para uma casa inteligente com IA local é a opção com folga de sobra: roda Home Assistant, Frigate e um modelo 7B–13B no Ollama com tranquilidade. No exterior custa cerca de $1.099–1.299 (julho de 2026, preço volátil); no Brasil, os preços variam bastante por causa dos impostos de importação (indicativamente, a partir de cerca de R$ 9.900), bem mais que um Beelink SER8 que cobre quase o mesmo. Esta análise verifica as especificações, define expectativas honestas sobre a velocidade do LLM local e diz a quem ele convém.',
+    metaDescription:
+      'Análise GEEKOM A9 Max 2026: Ryzen AI 9 HX 370, Radeon 890M, até 128 GB DDR5. Roda Home Assistant + um LLM local 7B–13B, mas é uma opção com folga de ~$1.099–1.299 (no Brasil ~R$ 9.900+ com importação), não um equipamento econômico.',
+    twitterDescription:
+      'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370, teto de 128 GB DDR5, Wi-Fi 7. Um equipamento premium para Home Assistant + IA local — a NPU não acelera os LLM; quem faz isso é a RAM e a iGPU.',
+    readTime: '7 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Compradores que decidem se o GEEKOM A9 Max vale a pena para um servidor doméstico com IA local',
+    primaryTerm: 'análise GEEKOM A9 Max',
+    targetKeywords: [
+      'análise geekom a9 max',
+      'geekom a9 max ia local',
+      'geekom a9 max home assistant',
+      'geekom a9 max llm local',
+      'ryzen ai 9 hx 370 mini pc',
+    ],
+    leadAnswerBlock:
+      '**O GEEKOM A9 Max (Ryzen AI 9 HX 370, Radeon 890M, 32 GB DDR5 no teste, até 128 GB) é a opção com folga para uma casa inteligente com IA local: roda Home Assistant, Frigate e um modelo 7B–13B no Ollama com soltura.** No exterior fica em cerca de $1.099–1.299 (julho de 2026, volátil; no Brasil, a partir de ~R$ 9.900 por causa dos impostos de importação), cerca do dobro de um Beelink SER8, então compre pelo teto de 128 GB de RAM, pelo Wi-Fi 7 e pela folga para visão, não para economizar.',
+    quickAnswerTop: {
+      pt: {
+        question: 'O GEEKOM A9 Max é bom para IA local e Home Assistant?',
+        answer:
+          'Sim, mas é uma opção premium. O Ryzen AI 9 HX 370 (12 núcleos/24 threads), a iGPU Radeon 890M e até 128 GB de DDR5 rodam Home Assistant, Ollama, Whisper e Frigate em um único equipamento com folga ampla: um modelo 7B–8B vai confortável e um 13B–14B (4-bit) entra com espaço para o contexto. Sua NPU de 50 TOPS ajuda em tarefas de visão como o Frigate, mas não acelera os LLM locais, que rodam na CPU e na iGPU. No exterior custa cerca de $1.099–1.299 (julho de 2026, volátil); no Brasil, os preços variam bastante por causa dos impostos de importação (indicativamente, a partir de cerca de R$ 9.900). Custa perto do dobro de um Beelink SER8, então é uma compra por folga e à prova de futuro, não por custo-benefício.',
+        bullets: [
+          'CPU: Ryzen AI 9 HX 370 — 12 núcleos / 24 threads, Radeon 890M (16 CU, RDNA 3.5)',
+          'RAM: 32 GB DDR5-5600 no teste, dois slots SO-DIMM, até 128 GB (substituível pelo usuário)',
+          'LLM local (estimado pelas specs): 7B–8B confortável, 13B–14B em 4-bit entra; 64–128 GB abrem 30B–70B (lento, limitado pela banda)',
+          'A NPU (50 TOPS) ajuda a visão do Frigate, não a velocidade do LLM; a iGPU e a banda da RAM definem a latência do LLM',
+          'Preço ~$1.099–1.299 no exterior (julho de 2026, volátil); no Brasil a partir de ~R$ 9.900 (importação) — um Beelink SER8 cobre a maioria das necessidades por bem menos.',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: 'Pontos principais', anchor: 'tldr' },
+      { label: 'Veredito', anchor: 'verdict' },
+      { label: 'Especificações', anchor: 'specs' },
+      { label: 'IA local e desempenho de LLM', anchor: 'local-ai' },
+      { label: 'Prós e contras', anchor: 'pros-cons' },
+      { label: 'Contexto do comprador: tarifas (2026)', anchor: 'trade-note' },
+      { label: 'Onde comprar', anchor: 'where-to-buy' },
+      { label: 'Alternativas', anchor: 'alternatives' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'O GEEKOM A9 Max é um mini PC premium com Ryzen AI 9 HX 370 que roda Home Assistant e um LLM local 7B–13B, com um teto de 128 GB de RAM para ter folga.' },
+      { type: 'plain-terms', content: 'Um mini PC é um computador pequeno e silencioso que você pode deixar ligado o dia todo. O A9 Max é de ponta: processador rápido, gráficos integrados fortes e espaço para muita memória. Esse teto de memória é o que permite rodar modelos de IA maiores que os equipamentos mais baratos, mas ele também custa bem mais, e seu chip de IA dedicado (a NPU) ajuda a detecção por câmera, não o modelo de chat.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Pontos principais',
+        isTldr: true,
+        items: [
+          'O A9 Max roda Home Assistant, Frigate, Whisper e um LLM local 7B–13B em um único equipamento com folga',
+          'Ryzen AI 9 HX 370: 12 núcleos/24 threads, iGPU Radeon 890M, até 128 GB DDR5 (dois SO-DIMM substituíveis pelo usuário)',
+          'A velocidade do LLM local vem da iGPU e da banda da RAM — a NPU de 50 TOPS acelera a visão, não os modelos de chat',
+          'Por ~$1.099–1.299 no exterior (no Brasil ~R$ 9.900+ com importação), cerca do dobro de um [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review)',
+          'Compre pelo teto de 128 GB, pelo Wi-Fi 7 e pela folga para visão; caso contrário, o SER8 oferece melhor custo-benefício',
+          'Fabricado na China — inclua as medidas de importação de EUA/UE de 2026 no custo final (veja a nota de tarifas)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Veredito — Quem deve comprar',
+        content:
+          '**Compre o GEEKOM A9 Max se você quer um único mini PC para uma casa inteligente com IA local e anos de folga, e aceita um preço premium.** Seu Ryzen AI 9 HX 370 de 12 núcleos, a iGPU Radeon 890M e o teto de 128 GB de RAM o tornam o equipamento mais preparado para o futuro desta seleção. Se o seu objetivo é a máquina capaz mais barata, pare por aqui e leia a análise do SER8 — o A9 Max é exagerado para um hub mais um modelo 7B.\n\nSeu caso de uso mais forte é um **servidor doméstico sempre ligado que roda Home Assistant, Frigate e um LLM local de tamanho médio ao mesmo tempo**, sem você pensar na RAM. O Wi-Fi 7, as duas portas 2.5GbE e as duas USB4 também o transformam em uma estação de trabalho capaz entre as tarefas da casa inteligente.',
+        affiliateLinks: [
+          { label: 'Conferir preço atual — GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: 'Especificações',
+        content:
+          '**Todas as especificações abaixo foram verificadas com a GEEKOM e fontes de análise independentes em julho de 2026.** Uma SKU à parte «2026 Edition» traz o Ryzen AI 9 HX 470 (86 TOPS no total) por um preço maior; a tabela reflete a unidade HX 370 mais comum.',
+        columns: ['Especificação', 'GEEKOM A9 Max (HX 370)'],
+        rows: [
+          { 'Especificação': 'CPU', 'GEEKOM A9 Max (HX 370)': 'AMD Ryzen AI 9 HX 370 (Zen 5, 4 nm)' },
+          { 'Especificação': 'Núcleos / threads', 'GEEKOM A9 Max (HX 370)': '12 núcleos / 24 threads, até 5.1 GHz' },
+          { 'Especificação': 'iGPU', 'GEEKOM A9 Max (HX 370)': 'AMD Radeon 890M — 16 CU, RDNA 3.5' },
+          { 'Especificação': 'NPU', 'GEEKOM A9 Max (HX 370)': 'XDNA 2, 50 TOPS (80 TOPS de plataforma no total)' },
+          { 'Especificação': 'RAM', 'GEEKOM A9 Max (HX 370)': '32 GB DDR5-5600 no teste; 2 slots SO-DIMM; até 128 GB (substituível pelo usuário)' },
+          { 'Especificação': 'Armazenamento', 'GEEKOM A9 Max (HX 370)': '1–2 TB NVMe; 2× M.2 PCIe 4.0; até 8 TB' },
+          { 'Especificação': 'Portas', 'GEEKOM A9 Max (HX 370)': '2× USB4 (40 Gbps), 5× USB-A 10 Gbps, 1× USB 2.0, 2× HDMI 2.1, leitor SD, 3.5 mm' },
+          { 'Especificação': 'Rede', 'GEEKOM A9 Max (HX 370)': '2× 2.5GbE, Wi-Fi 7, Bluetooth 5.4' },
+          { 'Especificação': 'TDP', 'GEEKOM A9 Max (HX 370)': '~54 W sustentado (PL1), 65 W em boost (PL2)' },
+          { 'Especificação': 'Dimensões', 'GEEKOM A9 Max (HX 370)': '135 × 132 × 46 mm' },
+          { 'Especificação': 'SO', 'GEEKOM A9 Max (HX 370)': 'Windows 11 Pro (instalação de Linux/Proxmox suportada)' },
+          { 'Especificação': 'Preço (indicativo)', 'GEEKOM A9 Max (HX 370)': '~$1.099–1.299 no exterior; no Brasil a partir de ~R$ 9.900 (julho de 2026 — volátil por causa da importação, confira o preço atual)' },
+        ],
+        items: [
+          'Sem GPU dedicada: toda a inferência de IA roda na CPU e na iGPU Radeon 890M, que compartilham a RAM do sistema.',
+          'Os dois slots SO-DIMM são substituíveis pelo usuário — você pode começar com 32 GB e passar para 64 GB ou 128 GB mais adiante.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'IA local e desempenho de LLM',
+        content:
+          '**Com 32 GB de RAM, o A9 Max roda com soltura um modelo 7B–8B no Ollama e comporta um 13B–14B em 4-bit com espaço para o contexto — todos os números são estimados a partir do hardware verificado, não um benchmark medido.** Passar para 64 GB abre modelos de classe 30B, e o teto de 128 GB permite carregar um 70B em 4-bit, embora os modelos grandes sejam limitados pela largura de banda da memória (DDR5-5600 de dois canais, sem VRAM dedicada) e sirvam mais para experimentar do que para um serviço rápido.',
+        items: [
+          'Ollama, LM Studio e llama.cpp funcionam bem; a Radeon 890M é usada pelos backends Vulkan ou ROCm.',
+          'A NPU de 50 TOPS acelera cargas de visão como a detecção de objetos do Frigate — não acelera os LLM locais, que os runtimes colocam na CPU/iGPU.',
+          'Home Assistant mais Ollama mais Whisper mais Frigate cabem juntos em 32 GB; adicione RAM se quiser um modelo maior junto da gravação de câmeras.',
+          'Os ~54 W sustentados sob carga mantêm baixo o custo de estar sempre ligado; veja [Ollama no Home Assistant](/pt/smart-home/home-assistant-ollama-integration) para conectar o modelo.',
+          'Para VRAM e profundidade de quantização entre equipamentos, veja o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) entre clusters.',
+        ],
+        affiliateLinks: [
+          { label: 'Conferir preço atual — GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: 'Prós e contras',
+        content: '**O A9 Max troca preço por folga.** Visão equilibrada abaixo.',
+        items: [
+          '**Prós**',
+          'Teto de 128 GB de RAM — o maior desta seleção, comporta os modelos locais mais grandes',
+          'Ryzen AI 9 HX 370 de 12 núcleos com Radeon 890M — iGPU potente para um mini PC',
+          'RAM SO-DIMM substituível pelo usuário e dois slots M.2 — ampliável mais adiante',
+          'Wi-Fi 7, duas 2.5GbE, duas portas USB4 — bem conectado para um servidor doméstico',
+          'Fica fresco e silencioso a ~54 W sustentados para um equipamento sempre ligado',
+          '**Contras**',
+          'Caro — cerca de $1.099–1.299 no exterior (no Brasil ~R$ 9.900+ com importação), quase o dobro de um Beelink SER8',
+          'A NPU de 50 TOPS não acelera os LLM locais (um erro comum)',
+          'O projeto de iGPU com memória compartilhada é limitado pela banda com modelos muito grandes',
+          'Exagerado se você só roda Home Assistant mais um modelo 7B',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'Contexto do comprador: tarifas e disponibilidade (2026)',
+        content:
+          '**O A9 Max é fabricado na China, então seu preço final reflete as medidas comerciais de 2026 — um motivo para tratar qualquer preço como um alvo em movimento.** Os fatos abaixo são contexto para o comprador, não opinião editorial.',
+        items: [
+          'EUA: as tarifas da Seção 301 sobre eletrônicos chineses continuam em vigor em 2026; as tarifas «IEEPA» separadas de 2025 foram derrubadas pela Suprema Corte em fevereiro de 2026 e substituídas por uma tarifa temporária e limitada da Seção 122. A isenção «de minimis» livre de tarifas abaixo de US$ 800 para importações diretas também acabou.',
+          'UE (afeta DE/FR): não há uma tarifa geral da UE sobre mini PCs prontos, mas desde julho de 2026 o limite livre de tarifas de 150 € para encomendas diretas de baixo valor da China foi removido e uma pequena taxa de processamento por encomenda foi adicionada.',
+          'Suposição (tendência macro, não um fato por produto): a capacidade de exportação chinesa redirecionada manteve alta a disponibilidade dessas marcas na UE e nos EUA, o que sustenta em geral preços competitivos.',
+          'Efeito líquido: verifique o preço atual na loja antes de comprar — os números desta análise são indicativos, datados de julho de 2026 e, no Brasil, fortemente influenciados pelos impostos de importação.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Onde comprar e preço atual',
+        content:
+          '**Os preços mudam de semana para semana, então confira o preço ao vivo em vez de confiar em um valor fixo.** Em julho de 2026, a configuração comum HX 370 / 32 GB / 2 TB fica em torno de $1.099–1.299 no exterior; no Brasil, com impostos de importação, os valores em reais são bem mais altos (indicativamente, a partir de ~R$ 9.900) e variam entre lojas, com a SKU «2026 Edition» HX 470 mais cara.',
+        items: [
+          'Confirme a SKU exata (HX 370 vs HX 470, capacidade de RAM e armazenamento) antes de pedir — o preço e as specs diferem.',
+        ],
+        affiliateLinks: [
+          { label: 'Conferir preço atual — GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'Alternativas a considerar',
+        content: '**Se o A9 Max é mais do que você precisa, três equipamentos mais baratos cobrem quase as mesmas tarefas.**',
+        items: [
+          '[Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — a opção de custo-benefício: Ryzen 7 8845HS, 32 GB, roda um modelo 7B com soltura',
+          '[Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) — adiciona uma porta OCuLink para uma GPU externa se você quiser inferência mais rápida de modelos grandes mais adiante',
+          '[Beelink EQ14](/pt/smart-home/beelink-eq14-local-ai-review) — equipamento Intel N150 econômico para Home Assistant mais um modelo pequeno',
+          '[GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — outra opção N150 econômica com RAM ampliável',
+          'Ainda comparando? Comece pelo [resumo dos melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          { q: 'O GEEKOM A9 Max consegue rodar LLM locais?', a: 'Sim. Com 32 GB de RAM ele roda com soltura um modelo 7B–8B no Ollama e comporta um 13B–14B em quantização de 4-bit com espaço para o contexto. Isso é estimado a partir do hardware verificado, não de um benchmark fixo, porque a velocidade depende do modelo, da quantização e do backend.' },
+          { q: 'Que tamanho de modelo cabe na RAM dele?', a: 'Com a capacidade testada de 32 GB, até um modelo 13B–14B em 4-bit é realista. Ampliar para 64 GB abre modelos de classe 30B, e o teto de 128 GB permite carregar um 70B em 4-bit, embora os modelos muito grandes rodem devagar porque a iGPU compartilha a memória do sistema e não tem VRAM dedicada.' },
+          { q: 'A NPU deixa os LLM locais mais rápidos?', a: 'Não. A NPU de 50 TOPS acelera a visão e algumas funções de IA do Windows, mas os runtimes de LLM local comuns, como Ollama e llama.cpp, rodam o modelo na CPU e na iGPU Radeon 890M. Considere a NPU uma vantagem para a detecção de câmeras do Frigate, não para a velocidade do modelo de chat.' },
+          { q: 'O A9 Max é bom para Home Assistant e uso contínuo?', a: 'Sim. Ele roda Home Assistant, Ollama, Whisper e Frigate juntos com folga, e seu consumo de ~54 W sustentados mantém baixo o custo de estar sempre ligado. Suas duas 2.5GbE e o Wi-Fi 7 também encaixam em um papel de servidor doméstico cabeado.' },
+          { q: 'A RAM é ampliável?', a: 'Sim. O A9 Max usa dois slots DDR5 SO-DIMM padrão substituíveis pelo usuário, então você pode começar com 32 GB e passar para 64 GB ou 128 GB mais adiante. É uma vantagem real frente aos mini PCs com memória soldada.' },
+          { q: 'Quanta energia ele consome?', a: 'Ele funciona a cerca de 54 W sustentados sob carga e bem menos em repouso, então deixá-lo ligado de forma contínua sai barato. O valor exato varia conforme o modelo que você roda e o perfil de energia que escolhe na BIOS.' },
+          { q: 'O A9 Max vale a pena frente a um Beelink SER8?', a: 'Só se você quiser a folga extra. O SER8 roda Home Assistant mais um modelo 7B por aproximadamente a metade do preço. O A9 Max vale o sobrepreço se você precisa do teto de 128 GB de RAM, do Wi-Fi 7 ou da folga para visão para os próximos anos.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o resumo ao qual esta análise pertence',
+          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) — entre clusters: VRAM e profundidade de quantização',
+          '[Rodando sua casa inteligente com um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide) — o que o equipamento realmente executa',
+          '[Conectar o Ollama ao Home Assistant](/pt/smart-home/home-assistant-ollama-integration) — integrar o modelo',
+          '[Câmeras de segurança com IA local](/pt/smart-home/local-ai-security-camera) — onde a NPU e a iGPU se pagam',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Análise GEEKOM A9 Max (2026): IA local e servidor doméstico',
+      reviewBody:
+        'O GEEKOM A9 Max é um mini PC premium com Ryzen AI 9 HX 370 que roda Home Assistant e um LLM local 7B–13B, com um teto de 128 GB de RAM. É uma compra por folga e à prova de futuro por cerca de $1.099–1.299 no exterior (julho de 2026; no Brasil a partir de ~R$ 9.900 com impostos de importação), perto do dobro de um Beelink SER8.',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/pt/smart-home/geekom-a9-max-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'GEEKOM A9 Max',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'GEEKOM' },
+        description: 'Mini PC com AMD Ryzen AI 9 HX 370, iGPU Radeon 890M, até 128 GB DDR5, para IA local e uso como servidor doméstico.',
+      },
+    },
+  },
+  ar: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-07-03',
+    dateModified: '2026-07-03',
+    next_refresh_due: '2027-01-03',
+    theme: 'Decision & Comparison',
+    affiliateDisclosure: true,
+    title: 'مراجعة GEEKOM A9 Max (2026): الذكاء الاصطناعي المحلي وخادم المنزل',
+    seoTitle: 'مراجعة GEEKOM A9 Max 2026 — ذكاء اصطناعي محلي وخادم منزلي',
+    intro:
+      'يُعد GEEKOM A9 Max حاسوبًا صغيرًا راقيًا مبنيًا على معالج AMD Ryzen AI 9 HX 370 (12 نواة، وRadeon 890M، وحتى 128 GB DDR5). لمنزل ذكي يعمل بالذكاء الاصطناعي المحلي، هو خيار الهامش الوفير: فهو يُشغّل Home Assistant وFrigate ونموذجًا 7B–13B على Ollama مع متسع كبير، لكن بسعر نحو $1,099–1,299 (يوليو 2026، السعر متقلب) يكلّف أكثر بكثير من Beelink SER8 الذي يغطي معظم المهام نفسها. تتحقق هذه المراجعة من مواصفاته، وتضع توقعات صادقة لسرعة النموذج اللغوي المحلي، وتوضح لمن يناسب.',
+    metaDescription:
+      'مراجعة GEEKOM A9 Max 2026: Ryzen AI 9 HX 370، وRadeon 890M، وحتى 128 GB DDR5. يُشغّل Home Assistant مع نموذج LLM محلي 7B–13B — لكنه خيار هامش بنحو $1,099–1,299، وليس جهازًا اقتصاديًا.',
+    twitterDescription:
+      'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370، وسقف 128 GB DDR5، وWi-Fi 7. جهاز راقٍ لـ Home Assistant + الذكاء الاصطناعي المحلي — وحدة NPU لا تُسرّع النماذج اللغوية؛ بل تفعل ذلك الذاكرة ومعالج الرسوميات المدمج.',
+    readTime: '7 دقائق للقراءة',
+    educationalLevel: 'Intermediate',
+    audience: 'المشترون الذين يقررون ما إذا كان GEEKOM A9 Max يستحق الشراء لخادم منزلي بذكاء اصطناعي محلي',
+    primaryTerm: 'مراجعة GEEKOM A9 Max',
+    targetKeywords: [
+      'مراجعة geekom a9 max',
+      'geekom a9 max ذكاء اصطناعي محلي',
+      'geekom a9 max home assistant',
+      'geekom a9 max llm محلي',
+      'ryzen ai 9 hx 370 حاسوب صغير',
+    ],
+    leadAnswerBlock:
+      '**يُعد GEEKOM A9 Max (Ryzen AI 9 HX 370، وRadeon 890M، و32 GB DDR5 في الاختبار، وحتى 128 GB) خيار الهامش الوفير لمنزل ذكي يعمل بالذكاء الاصطناعي المحلي — فهو يُشغّل Home Assistant وFrigate ونموذجًا 7B–13B على Ollama بأريحية.** بسعر نحو $1,099–1,299 (يوليو 2026، متقلب) يكلّف نحو ضعف سعر Beelink SER8، لذا اشترِه من أجل سقف الذاكرة البالغ 128 GB وWi-Fi 7 وهامش الرؤية، لا لتوفير المال.',
+    quickAnswerTop: {
+      ar: {
+        question: 'هل GEEKOM A9 Max جيد للذكاء الاصطناعي المحلي و Home Assistant؟',
+        answer:
+          'نعم، لكنه خيار راقٍ. يُشغّل معالج Ryzen AI 9 HX 370 (12 نواة/24 خيطًا)، ومعالج الرسوميات المدمج Radeon 890M، وحتى 128 GB من DDR5، كلًّا من Home Assistant وOllama وWhisper وFrigate على جهاز واحد بهامش كبير — فنموذج 7B–8B مريح، ونموذج 13B–14B (بدقة 4 بت) يدخل مع متسع للسياق. تساعد وحدة NPU بقدرة 50 TOPS في مهام الرؤية مثل Frigate لكنها لا تُسرّع النماذج اللغوية المحلية التي تعمل على المعالج ومعالج الرسوميات المدمج. بسعر نحو $1,099–1,299 (يوليو 2026، متقلب) يكلّف نحو ضعف سعر Beelink SER8، فهو شراء من أجل الهامش والتحضير للمستقبل، لا من أجل القيمة مقابل السعر.',
+        bullets: [
+          'المعالج: Ryzen AI 9 HX 370 — 12 نواة / 24 خيطًا، Radeon 890M (16 CU، RDNA 3.5)',
+          'الذاكرة: 32 GB DDR5-5600 في الاختبار، منفذا SO-DIMM، حتى 128 GB (قابلة للاستبدال من المستخدم)',
+          'النموذج المحلي (تقدير من المواصفات): 7B–8B مريح، و13B–14B بدقة 4 بت يدخل؛ و64–128 GB تفتح 30B–70B (بطيء، مقيّد بعرض النطاق)',
+          'تساعد وحدة NPU (50 TOPS) رؤية Frigate، لا سرعة النموذج اللغوي؛ ومعالج الرسوميات المدمج وعرض نطاق الذاكرة هما ما يحدد زمن استجابة النموذج',
+          'السعر نحو $1,099–1,299 (يوليو 2026، متقلب) — يغطي Beelink SER8 معظم الاحتياجات بنحو $650. قد تختلف الأسعار في بلدك حسب الضرائب المحلية.',
+        ],
+        updatedDate: '2026-07',
+      },
+    },
+    toc: [
+      { label: 'النقاط الرئيسية', anchor: 'tldr' },
+      { label: 'الحكم', anchor: 'verdict' },
+      { label: 'المواصفات', anchor: 'specs' },
+      { label: 'الذكاء الاصطناعي المحلي وأداء LLM', anchor: 'local-ai' },
+      { label: 'المزايا والعيوب', anchor: 'pros-cons' },
+      { label: 'سياق المشتري: الرسوم الجمركية (2026)', anchor: 'trade-note' },
+      { label: 'أين تشتري', anchor: 'where-to-buy' },
+      { label: 'البدائل', anchor: 'alternatives' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'GEEKOM A9 Max حاسوب صغير راقٍ بمعالج Ryzen AI 9 HX 370 يُشغّل Home Assistant مع نموذج LLM محلي 7B–13B، بسقف ذاكرة يبلغ 128 GB لتوفير الهامش.' },
+      { type: 'plain-terms', content: 'الحاسوب الصغير جهاز صغير وهادئ يمكنك تركه مشغّلًا طوال اليوم. وA9 Max جهاز من الفئة الراقية: معالج سريع، ورسوميات مدمجة قوية، ومتسع لكمية كبيرة من الذاكرة. سقف الذاكرة هذا هو سبب قدرته على تشغيل نماذج ذكاء اصطناعي أكبر من الأجهزة الأرخص — لكنه أيضًا يكلّف أكثر بكثير، وشريحة الذكاء الاصطناعي المخصصة فيه (وحدة NPU) تساعد في كشف الكاميرات، لا في نموذج المحادثة.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'النقاط الرئيسية',
+        isTldr: true,
+        items: [
+          'يُشغّل A9 Max كلًّا من Home Assistant وFrigate وWhisper ونموذج LLM محلي 7B–13B على جهاز واحد بهامش',
+          'Ryzen AI 9 HX 370: 12 نواة/24 خيطًا، ومعالج رسوميات مدمج Radeon 890M، وحتى 128 GB DDR5 (شريحتا SO-DIMM قابلتان للاستبدال من المستخدم)',
+          'تأتي سرعة النموذج المحلي من معالج الرسوميات المدمج وعرض نطاق الذاكرة — ووحدة NPU بقدرة 50 TOPS تُسرّع الرؤية، لا نماذج المحادثة',
+          'بسعر نحو $1,099–1,299 (يوليو 2026، متقلب)، نحو ضعف سعر [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review)',
+          'اشترِه من أجل سقف 128 GB وWi-Fi 7 وهامش الرؤية؛ وإلا فإن SER8 يقدّم قيمة أفضل مقابل السعر',
+          'صُنع في الصين — احسب تدابير الاستيراد الأمريكية/الأوروبية لعام 2026 في التكلفة النهائية (انظر ملاحظة التجارة)',
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'الحكم — لمن يناسب',
+        content:
+          '**اشترِ GEEKOM A9 Max إذا أردت حاسوبًا صغيرًا واحدًا يُشغّل منزلًا ذكيًا بذكاء اصطناعي محلي مع سنوات من الهامش، وقبلت سعرًا راقيًا.** إن معالج Ryzen AI 9 HX 370 ذا 12 نواة، ومعالج الرسوميات المدمج Radeon 890M، وسقف الذاكرة البالغ 128 GB تجعله الجهاز الأكثر تحضيرًا للمستقبل في هذه المجموعة. إذا كان هدفك هو أرخص جهاز قادر، فتوقّف هنا واقرأ مراجعة SER8 — فـ A9 Max مبالغ فيه لمحور مع نموذج 7B.\n\nأقوى استخداماته هو **خادم منزلي يعمل باستمرار يُشغّل Home Assistant وFrigate ونموذج LLM محلي متوسط الحجم في آنٍ واحد** دون أن تفكّر في الذاكرة. كما أن اتصال Wi-Fi 7، ومنفذَي 2.5GbE، ومنفذَي USB4 تجعله محطة عمل عامة قادرة بين مهام المنزل الذكي.',
+        affiliateLinks: [
+          { label: 'تحقق من السعر الحالي — GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      specs: {
+        id: 'specs',
+        title: 'المواصفات',
+        content:
+          '**جميع المواصفات أدناه جرى التحقق منها مقابل GEEKOM ومصادر مراجعة مستقلة في يوليو 2026.** يأتي إصدار «2026 Edition» منفصل بمعالج Ryzen AI 9 HX 470 (86 TOPS إجمالًا) بسعر أعلى؛ ويعكس الجدول وحدة HX 370 الأكثر شيوعًا.',
+        columns: ['المواصفة', 'GEEKOM A9 Max (HX 370)'],
+        rows: [
+          { 'المواصفة': 'المعالج', 'GEEKOM A9 Max (HX 370)': 'AMD Ryzen AI 9 HX 370 (Zen 5، 4 nm)' },
+          { 'المواصفة': 'الأنوية / الخيوط', 'GEEKOM A9 Max (HX 370)': '12 نواة / 24 خيطًا، حتى 5.1 GHz' },
+          { 'المواصفة': 'الرسوميات المدمجة', 'GEEKOM A9 Max (HX 370)': 'AMD Radeon 890M — 16 CU، RDNA 3.5' },
+          { 'المواصفة': 'NPU', 'GEEKOM A9 Max (HX 370)': 'XDNA 2، 50 TOPS (80 TOPS للمنصة إجمالًا)' },
+          { 'المواصفة': 'الذاكرة', 'GEEKOM A9 Max (HX 370)': '32 GB DDR5-5600 في الاختبار؛ منفذا SO-DIMM؛ حتى 128 GB (قابلة للاستبدال من المستخدم)' },
+          { 'المواصفة': 'التخزين', 'GEEKOM A9 Max (HX 370)': '1–2 TB NVMe؛ 2× M.2 PCIe 4.0؛ حتى 8 TB' },
+          { 'المواصفة': 'المنافذ', 'GEEKOM A9 Max (HX 370)': '2× USB4 (40 Gbps)، 5× USB-A 10 Gbps، 1× USB 2.0، 2× HDMI 2.1، قارئ SD، 3.5 mm' },
+          { 'المواصفة': 'الشبكة', 'GEEKOM A9 Max (HX 370)': '2× 2.5GbE، Wi-Fi 7، Bluetooth 5.4' },
+          { 'المواصفة': 'TDP', 'GEEKOM A9 Max (HX 370)': '~54 W مستمر (PL1)، 65 W في وضع التعزيز (PL2)' },
+          { 'المواصفة': 'الأبعاد', 'GEEKOM A9 Max (HX 370)': '135 × 132 × 46 mm' },
+          { 'المواصفة': 'نظام التشغيل', 'GEEKOM A9 Max (HX 370)': 'Windows 11 Pro (يدعم تثبيت Linux/Proxmox)' },
+          { 'المواصفة': 'السعر (إرشادي)', 'GEEKOM A9 Max (HX 370)': 'نحو $1,099–1,299 (يوليو 2026 — متقلب، تحقق من السعر الحالي)' },
+        ],
+        items: [
+          'لا توجد بطاقة رسوميات منفصلة: يعمل كل استدلال الذكاء الاصطناعي على المعالج ومعالج الرسوميات المدمج Radeon 890M اللذين يتشاركان ذاكرة النظام.',
+          'منفذا SO-DIMM قابلان للاستبدال من المستخدم — يمكنك البدء بـ 32 GB والانتقال إلى 64 GB أو 128 GB لاحقًا.',
+        ],
+      },
+      localAi: {
+        id: 'local-ai',
+        title: 'الذكاء الاصطناعي المحلي وأداء LLM',
+        content:
+          '**بذاكرة 32 GB، يُشغّل A9 Max نموذج 7B–8B على Ollama بأريحية ويستوعب نموذج 13B–14B بدقة 4 بت مع متسع للسياق — وجميع الأرقام مقدَّرة من العتاد المتحقق منه، وليست قياسًا مرجعيًا فعليًا.** يفتح الانتقال إلى 64 GB نماذج فئة 30B، ويتيح سقف 128 GB تحميل نموذج 70B بدقة 4 بت، مع أن النماذج الكبيرة مقيّدة بعرض نطاق الذاكرة (DDR5-5600 ثنائية القناة، دون VRAM مخصصة) وتصلح للتجربة أكثر من الخدمة السريعة.',
+        items: [
+          'يعمل Ollama وLM Studio وllama.cpp جميعها بشكل جيد؛ ويُستخدم Radeon 890M عبر خلفيات Vulkan أو ROCm.',
+          'تُسرّع وحدة NPU بقدرة 50 TOPS أحمال الرؤية مثل كشف الأجسام في Frigate — وهي لا تُسرّع النماذج اللغوية المحلية التي تضعها أطر التشغيل على المعالج/معالج الرسوميات المدمج.',
+          'يتّسع Home Assistant مع Ollama مع Whisper مع Frigate معًا في 32 GB؛ أضف ذاكرة إذا أردت نموذجًا أكبر إلى جانب تسجيل الكاميرات.',
+          'يُبقي استهلاك ~54 W المستمر تحت الحمل تكلفة التشغيل الدائم متواضعة؛ انظر [Ollama على Home Assistant](/ar/smart-home/home-assistant-ollama-integration) لربط النموذج.',
+          'لمعرفة VRAM وعمق التكميم بين الأجهزة، انظر [دليل عتاد النماذج المحلية](/ar/local-llms/local-llm-hardware-guide-2026) بين المجموعات.',
+        ],
+        affiliateLinks: [
+          { label: 'تحقق من السعر الحالي — GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      prosCons: {
+        id: 'pros-cons',
+        title: 'المزايا والعيوب',
+        content: '**يبادل A9 Max السعر بالهامش.** فيما يلي نظرة متوازنة.',
+        items: [
+          '**المزايا**',
+          'سقف ذاكرة 128 GB — الأكبر في هذه المجموعة، فيستوعب أكبر النماذج المحلية',
+          'Ryzen AI 9 HX 370 ذو 12 نواة مع Radeon 890M — معالج رسوميات مدمج قوي لحاسوب صغير',
+          'ذاكرة SO-DIMM قابلة للاستبدال من المستخدم ومنفذا M.2 — قابل للترقية لاحقًا',
+          'Wi-Fi 7، ومنفذا 2.5GbE، ومنفذا USB4 — متصل جيدًا لخادم منزلي',
+          'يعمل باردًا وهادئًا عند ~54 W مستمر لجهاز يعمل باستمرار',
+          '**العيوب**',
+          'باهظ — نحو $1,099–1,299، أي نحو ضعف سعر Beelink SER8',
+          'وحدة NPU بقدرة 50 TOPS لا تُسرّع النماذج اللغوية المحلية (خطأ شائع)',
+          'تصميم معالج الرسوميات المدمج بذاكرة مشتركة مقيّد بعرض النطاق مع النماذج الكبيرة جدًا',
+          'مبالغ فيه إذا كنت تُشغّل Home Assistant مع نموذج 7B فقط',
+        ],
+      },
+      tradeNote: {
+        id: 'trade-note',
+        title: 'سياق المشتري: الرسوم الجمركية والتوافر (2026)',
+        content:
+          '**يُصنَّع A9 Max في الصين، لذا يعكس سعره النهائي التدابير التجارية لعام 2026 — وهو سبب لمعاملة أي سعر كهدف متحرك.** الحقائق أدناه سياق للمشتري، وليست رأيًا تحريريًا.',
+        items: [
+          'الولايات المتحدة: تظل رسوم القسم 301 على الإلكترونيات الصينية سارية في 2026؛ أما رسوم «IEEPA» المنفصلة لعام 2025 فقد ألغتها المحكمة العليا في فبراير 2026 واستُبدلت برسم مؤقت ومحدود بسقف بموجب القسم 122. كما انتهى إعفاء «de minimis» المعفى من الرسوم لما دون 800 $ للواردات المباشرة.',
+          'الاتحاد الأوروبي (يؤثر في DE/FR وإسبانيا): لا توجد رسوم أوروبية واسعة على الحواسيب الصغيرة الجاهزة، لكن اعتبارًا من يوليو 2026 أُلغيت عتبة الإعفاء البالغة 150 يورو على الطرود المباشرة منخفضة القيمة القادمة من الصين، وأُضيفت رسوم مناولة صغيرة لكل طرد.',
+          'افتراض (اتجاه كلي، وليس حقيقة لكل منتج): أبقى إعادة توجيه القدرة التصديرية الصينية توافر هذه العلامات مرتفعًا في الاتحاد الأوروبي والولايات المتحدة، وهو ما يدعم عمومًا أسعارًا تنافسية.',
+          'الأثر الصافي: تحقق من السعر الحالي لدى المتجر قبل الشراء — فأرقام هذه المراجعة إرشادية ومؤرخة بيوليو 2026.',
+        ],
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'أين تشتري والسعر الحالي',
+        content:
+          '**تتحرك الأسعار أسبوعًا بأسبوع، لذا تحقق من السعر المباشر بدلًا من الوثوق برقم ثابت.** حتى يوليو 2026، تدور التهيئة الشائعة HX 370 / 32 GB / 2 TB حول $1,099–1,299، مع كون إصدار «2026 Edition» بمعالج HX 470 أغلى.',
+        items: [
+          'أكّد الإصدار الدقيق (HX 370 مقابل HX 470، وسعة الذاكرة والتخزين) قبل الطلب — فالسعر والمواصفات تختلف.',
+        ],
+        affiliateLinks: [
+          { label: 'تحقق من السعر الحالي — GEEKOM A9 Max', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
+        ],
+      },
+      alternatives: {
+        id: 'alternatives',
+        title: 'بدائل جديرة بالنظر',
+        content: '**إذا كان A9 Max أكثر مما تحتاج، فثلاثة أجهزة أرخص تغطي معظم المهام نفسها.**',
+        items: [
+          '[Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — الخيار القيمي: Ryzen 7 8845HS، و32 GB، بنحو $650، يُشغّل نموذج 7B بأريحية',
+          '[Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) — يضيف منفذ OCuLink لبطاقة رسوميات خارجية إذا أردت استدلالًا أسرع للنماذج الكبيرة لاحقًا',
+          '[Beelink EQ14](/ar/smart-home/beelink-eq14-local-ai-review) — جهاز Intel N150 اقتصادي لـ Home Assistant مع نموذج صغير',
+          '[GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — خيار N150 اقتصادي آخر بذاكرة قابلة للترقية',
+          'ما زلت تقارن؟ ابدأ من [ملخص أفضل الحواسيب الصغيرة لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai).',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          { q: 'هل يستطيع GEEKOM A9 Max تشغيل النماذج اللغوية المحلية؟', a: 'نعم. بذاكرة 32 GB يُشغّل نموذج 7B–8B على Ollama بأريحية ويستوعب نموذج 13B–14B بتكميم 4 بت مع متسع للسياق. وهذا تقدير من عتاده المتحقق منه وليس قياسًا مرجعيًا ثابتًا، لأن السرعة تعتمد على النموذج والتكميم والخلفية.' },
+          { q: 'ما حجم النموذج الذي يتسع في ذاكرته؟', a: 'بالسعة المختبَرة البالغة 32 GB، يكون نموذج حتى 13B–14B بدقة 4 بت واقعيًا. تفتح الترقية إلى 64 GB نماذج فئة 30B، ويتيح سقف 128 GB تحميل نموذج 70B بدقة 4 بت، مع أن النماذج الكبيرة جدًا تعمل ببطء لأن معالج الرسوميات المدمج يتشارك ذاكرة النظام ولا يملك VRAM مخصصة.' },
+          { q: 'هل تجعل وحدة NPU النماذج اللغوية المحلية أسرع؟', a: 'لا. تُسرّع وحدة NPU بقدرة 50 TOPS الرؤية وبعض ميزات الذكاء الاصطناعي في Windows، لكن أطر تشغيل النماذج اللغوية المحلية الشائعة مثل Ollama وllama.cpp تُشغّل النموذج على المعالج ومعالج الرسوميات المدمج Radeon 890M. اعتبر وحدة NPU ميزة لكشف كاميرات Frigate، لا لسرعة نموذج المحادثة.' },
+          { q: 'هل A9 Max جيد لـ Home Assistant والاستخدام المستمر؟', a: 'نعم. يُشغّل Home Assistant وOllama وWhisper وFrigate معًا بهامش، ويُبقي استهلاكه البالغ ~54 W مستمر تكلفة التشغيل الدائم متواضعة. كما أن منفذَي 2.5GbE وWi-Fi 7 يناسبان دور خادم منزلي سلكي.' },
+          { q: 'هل الذاكرة قابلة للترقية؟', a: 'نعم. يستخدم A9 Max منفذَي DDR5 SO-DIMM قياسيين قابلين للاستبدال من المستخدم، فيمكنك البدء بـ 32 GB والانتقال إلى 64 GB أو 128 GB لاحقًا. وهي ميزة حقيقية مقارنة بالحواسيب الصغيرة ذات الذاكرة الملحومة.' },
+          { q: 'كم يستهلك من الطاقة؟', a: 'يعمل عند نحو 54 W مستمر تحت الحمل وأقل بكثير في وضع الخمول، لذا تركه مشغّلًا باستمرار غير مكلف. ويختلف الرقم الدقيق بحسب النموذج الذي تُشغّله وملف الطاقة الذي تختاره في BIOS.' },
+          { q: 'هل يستحق A9 Max الشراء مقارنةً بـ Beelink SER8؟', a: 'فقط إذا أردت الهامش الإضافي. يُشغّل SER8 كلًّا من Home Assistant مع نموذج 7B بنحو نصف السعر. ويستحق A9 Max فارق السعر إذا احتجت سقف الذاكرة البالغ 128 GB أو Wi-Fi 7 أو هامش الرؤية للسنوات القادمة.' },
+          { q: 'أين يُصنع GEEKOM A9 Max وهل يؤثر ذلك في السعر؟', a: 'يُصنع في الصين. في 2026، قد تؤثر تدابير الاستيراد الأمريكية (رسوم القسم 301، وانتهاء إعفاء de minimis لما دون 800 $) وإلغاء الاتحاد الأوروبي لإعفاء الطرود منخفضة القيمة لما دون 150 يورو في التكلفة النهائية، لذا تحقق من السعر الحالي لدى المتجر بدلًا من الاعتماد على رقم ثابت.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل الحواسيب الصغيرة لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — الملخص الذي تنتمي إليه هذه المراجعة',
+          '[دليل عتاد النماذج المحلية](/ar/local-llms/local-llm-hardware-guide-2026) — بين المجموعات: VRAM وعمق التكميم',
+          '[كيفية تشغيل منزلك الذكي على نموذج محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — ما يشغّله الجهاز فعليًا',
+          '[ربط Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration) — دمج النموذج',
+          '[كاميرات المراقبة بالذكاء الاصطناعي المحلي](/ar/smart-home/local-ai-security-camera) — حيث تُثبت وحدة NPU ومعالج الرسوميات المدمج جدواهما',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'مراجعة GEEKOM A9 Max (2026): الذكاء الاصطناعي المحلي وخادم المنزل',
+      reviewBody:
+        'GEEKOM A9 Max حاسوب صغير راقٍ بمعالج Ryzen AI 9 HX 370 يُشغّل Home Assistant مع نموذج LLM محلي 7B–13B، بسقف ذاكرة يبلغ 128 GB. إنه شراء من أجل الهامش والتحضير للمستقبل بنحو $1,099–1,299 (يوليو 2026)، أي نحو ضعف سعر Beelink SER8.',
+      datePublished: '2026-07-03',
+      dateModified: '2026-07-03',
+      author: {
+        '@type': 'Person',
+        name: 'Hans Kuepper',
+        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+        logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+      },
+      url: 'https://www.promptquorum.com/ar/smart-home/geekom-a9-max-local-ai-review',
+      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5', worstRating: '1' },
+      itemReviewed: {
+        '@type': 'Product',
+        name: 'GEEKOM A9 Max',
+        category: 'Mini PC',
+        brand: { '@type': 'Brand', name: 'GEEKOM' },
+        description: 'حاسوب صغير بمعالج AMD Ryzen AI 9 HX 370، ومعالج رسوميات مدمج Radeon 890M، وحتى 128 GB DDR5، للذكاء الاصطناعي المحلي والاستخدام كخادم منزلي.',
+      },
+    },
+  },
 }
