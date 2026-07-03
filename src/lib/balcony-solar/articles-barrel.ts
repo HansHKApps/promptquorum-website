@@ -47,6 +47,9 @@ import { article as a_balcony_solar_not_producing_power_fixes } from './articles
 import { article as a_best_balcony_solar_home_battery_us_2026 } from './articles/best-balcony-solar-home-battery-us-2026'
 import { article as a_local_platforms_balcony_solar_home_assistant_alternatives } from './articles/local-platforms-balcony-solar-home-assistant-alternatives'
 
+// TIER 1 extension — Protocol-level integration guide (BSOL-23)
+import { article as a_connect_balcony_solar_home_assistant_local } from './articles/connect-balcony-solar-home-assistant-local'
+
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
   'what-is-balcony-solar':                    a_what_is_balcony_solar,
@@ -81,4 +84,7 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
 
   // TIER 1 extension — Technical hub pair (platform-comparison companion to BSOL-05)
   'local-platforms-balcony-solar-home-assistant-alternatives': a_local_platforms_balcony_solar_home_assistant_alternatives,
+
+  // TIER 1 extension — Protocol-level integration guide (BSOL-23)
+  'connect-balcony-solar-home-assistant-local':   a_connect_balcony_solar_home_assistant_local,
 }
