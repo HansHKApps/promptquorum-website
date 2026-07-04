@@ -12,14 +12,21 @@ import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { SMART_HOME_PUBLISHED_SLUGS, SMART_HOME_HUB_PUBLISHED } from '@/lib/smart-home/published'
 import { BALCONY_SOLAR_PUBLISHED_SLUGS, BALCONY_SOLAR_HUB_PUBLISHED } from '@/lib/balcony-solar/published'
+import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
+import { smartHomeContent } from '@/lib/smart-home/content'
+import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
+import { balconySolarContent } from '@/lib/balcony-solar/content'
 
 export const dynamic = 'force-static'
 
 const BASE = 'https://www.promptquorum.com'
 
-// Placeholder pages that should be noindexed and excluded from sitemap
+// Placeholder / robots-disallowed pages that must never appear in the sitemap.
+// Keep this in sync with robots.ts baseDisallow — any path Disallow'd there and
+// present in a PAGES list must be listed here so the guardrail in GET() drops it.
 const NOINDEX_PAGES = new Set([
   '/download',
+  '/image-license', // robots.ts Disallow'd — utility/attribution page, not indexable
   '/prompt-engineering/prompt-engineering-glossary',
   '/prompt-engineering/the-single-step-prompt-method',
 ])
@@ -155,7 +162,7 @@ type Page = {
 // Pages that exist only at the English canonical URL — no /{lang}/path routes.
 // Listing these with path-prefix alternates in the sitemap causes Google to crawl
 // non-existent URLs (e.g. /de/waitlist) and receive 404s.
-const ENGLISH_ONLY_PATHS = new Set(['/waitlist', '/image-license'])
+const ENGLISH_ONLY_PATHS = new Set(['/waitlist'])
 
 const STATIC_PAGES: Page[] = [
   { path: '', priority: 1.0, changefreq: 'weekly', lastmod: '2026-03-16' },
@@ -168,7 +175,6 @@ const STATIC_PAGES: Page[] = [
   { path: '/about', priority: 0.5, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/waitlist', priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/privacy', priority: 0.3, changefreq: 'monthly', lastmod: '2026-03-15' },
-  { path: '/image-license', priority: 0.3, changefreq: 'monthly', lastmod: '2026-04-20' },
 ]
 
 const PE_PAGES: Page[] = [
@@ -307,16 +313,63 @@ function isExcluded(path: string): boolean {
   return EXCLUDED_PATH_PREFIXES.some((prefix) => path === prefix || path.startsWith(`${prefix}/`))
 }
 
+const LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const
+
+function hasSections(article: any): boolean {
+  return !!article && Object.keys(article?.sections ?? {}).length > 0
+}
+
+// Returns the languages that actually have real content for an ARTICLE path, mirroring
+// the per-page `availableLangsForMeta` (hasSections) check the render routes use for their
+// own <link rel="alternate"> tags. Returns null for non-article paths (static pages, hubs,
+// frameworks) which are UI-translated and available in every language.
+// The sitemap must only emit a <loc> + hreflang alternate for a language that this returns,
+// so sitemap hreflang exactly matches what each live page declares.
+function availableLangsForPath(path: string): readonly string[] | null {
+  const clusters: Array<[string, Record<string, any>, Record<string, string>]> = [
+    ['/local-llms/', llmContent, LLM_SLUG_TO_KEY],
+    ['/prompt-engineering/', peContent, PE_SLUG_TO_KEY],
+    ['/power-local-llm/', powerLLMContent, POWER_LLM_SLUG_TO_KEY],
+    ['/prompt-bites/', promptBitesContent, PROMPT_BITES_SLUG_TO_KEY],
+    ['/smart-home/', smartHomeContent, SMART_HOME_SLUG_TO_KEY],
+    ['/balcony-solar/', balconySolarContent, BALCONY_SOLAR_SLUG_TO_KEY],
+  ]
+  for (const [prefix, contentMap, slugMap] of clusters) {
+    if (path.startsWith(prefix)) {
+      const slug = path.slice(prefix.length)
+      const key = slugMap[slug]
+      if (!key || !contentMap[key]) return ['en']
+      const langs = LANGS.filter((l) => hasSections(contentMap[key][l]))
+      return langs.length ? langs : ['en']
+    }
+  }
+  if (path.startsWith('/blog/')) {
+    const slug = path.slice('/blog/'.length)
+    const postId = (SLUG_TO_POST_ID as Record<string, string>)[slug]
+    const post = postId ? (blogContent as Record<string, any>)[postId] : undefined
+    if (!post) return ['en']
+    const langs = LANGS.filter((l) => hasSections(post[l]))
+    return langs.length ? langs : ['en']
+  }
+  return null // non-article (static / hub / frameworks) — all languages
+}
+
 export async function GET() {
-  const languages = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const
+  const languages = LANGS
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
 
   PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
     if (isExcluded(path)) return
+    if (NOINDEX_PAGES.has(path)) return // guardrail: never emit a robots-disallowed / noindex path
 
     const pageImages = getImagesForPage(path)
+
+    // Languages to emit for this path: article paths → only languages that actually have
+    // real content (matches the live page's own <link rel="alternate"> tags); non-article
+    // paths (static / hubs / frameworks) → all languages.
+    const emitLangs = availableLangsForPath(path) ?? languages
 
     // English-only pages: emit a single entry without lang-prefix variants so
     // Google doesn't crawl /{lang}/path URLs that don't exist.
@@ -330,14 +383,14 @@ export async function GET() {
       return
     }
 
-    languages.forEach((lang) => {
+    emitLangs.forEach((lang) => {
       const langPath = lang === 'en' ? path : (path === '' ? `/${lang}` : `/${lang}${path}`)
 
       xml += '  <url>\n'
       xml += `    <loc>${escapeXml(`${BASE}${langPath}`)}</loc>\n`
 
-      // Add hreflang alternates
-      languages.forEach((otherLang) => {
+      // Add hreflang alternates — only for languages this path actually serves
+      emitLangs.forEach((otherLang) => {
         const otherPath = otherLang === 'en' ? path : (path === '' ? `/${otherLang}` : `/${otherLang}${path}`)
         xml += `    <xhtml:link rel="alternate" hreflang="${otherLang}" href="${escapeXml(`${BASE}${otherPath}`)}" />\n`
       })
