@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     current_hardware_mentioned: ['APsystems EZ1-LV-NA', 'APsystems EZ1', 'EcoFlow STREAM Ultra', 'BigBlue POWAFREE H1'],
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Best Balcony Solar Kits (2026): Complete Plug-In Solar Systems Compared',
     seoTitle: 'Best Balcony Solar Kits 2026: Tested & Compared',
     intro: 'A complete balcony solar kit bundles the panel(s) and micro-inverter so you don\'t have to source components separately. State-by-state legality currently limits which kits actually ship where in the US — availability, not just price, is the first filter that matters.',
@@ -192,6 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Los Mejores Kits Solares de Balcón (2026): Sistemas Solares Enchufables Completos Comparados',
     seoTitle: 'Mejores Kits Solares de Balcón 2026: Comparativa',
     intro: 'Un kit solar de balcón completo incluye el panel (o paneles) y el microinversor, así que no tienes que buscar los componentes por separado. En Estados Unidos, la legalidad varía según el estado y actualmente limita qué kits realmente se pueden enviar a cada lugar — la disponibilidad, no solo el precio, es el primer filtro que importa.',
@@ -382,6 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Os Melhores Kits de Energia Solar para Varanda (2026): Sistemas Solares Plug-and-Play Completos Comparados',
     seoTitle: 'Melhores Kits de Energia Solar para Varanda 2026',
     intro: 'Um kit de energia solar para varanda completo já vem com o(s) painel(is) e o microinversor, então você não precisa buscar os componentes separadamente. A legalidade varia por estado nos EUA e atualmente limita quais kits realmente podem ser enviados para cada lugar — a disponibilidade, não só o preço, é o primeiro filtro que importa.',
@@ -572,6 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'أفضل أطقم الطاقة الشمسية للشرفة (2026): مقارنة كاملة لأنظمة الطاقة الشمسية الجاهزة للتوصيل',
     seoTitle: 'أفضل أطقم الطاقة الشمسية للشرفة 2026 في أمريكا',
     intro: 'يجمع طقم الطاقة الشمسية الكامل للشرفة بين اللوح (أو الألواح) والعاكس الصغير (microinverter) بحيث لا تحتاج إلى شراء المكونات بشكل منفصل. تختلف القوانين حاليًا من ولاية إلى أخرى في الولايات المتحدة، وهذا يحدّ من الأطقم التي يمكن شحنها فعليًا إلى كل مكان — التوفر، وليس السعر فقط، هو أول معيار مهم.',
@@ -761,6 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: '【2026年】おすすめバルコニーソーラーキット完全比較:プラグイン式太陽光発電システム',
     seoTitle: '2026年版 ベストバルコニーソーラーキット比較',
     intro: '完全なバルコニーソーラーキットには、パネルとマイクロインバーターがセットになっているため、部品を個別に探す必要がありません。米国では州ごとに合法性が異なり、現在どのキットが実際にどこへ発送できるかを左右しています——価格だけでなく入手可能性こそが最初に確認すべき条件です。',
@@ -950,6 +955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: '2026年最佳阳台光伏套装:插电式太阳能系统完整对比',
     seoTitle: '2026年最佳阳台光伏套装对比',
     intro: '一套完整的阳台光伏套装会把面板和微型逆变器打包在一起,这样你就不用单独采购各个部件。目前美国各州的合法性存在差异,这直接决定了哪些套装实际能发货到你所在的地方——可购买性,而不仅仅是价格,才是首先要考虑的筛选条件。',
@@ -1139,6 +1145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: "Meilleurs kits solaires de balcon (2026) : comparatif complet des systèmes solaires prêts à brancher",
     seoTitle: "Meilleurs kits solaires de balcon 2026 : comparatif",
     intro: "Un kit solaire de balcon complet regroupe le ou les panneaux et le micro-onduleur, ce qui évite d'avoir à chercher les composants séparément. Aux États-Unis, la légalité varie actuellement d'un État à l'autre et détermine quels kits peuvent réellement être expédiés à un endroit donné — la disponibilité, et pas seulement le prix, est le premier critère qui compte.",
@@ -1329,6 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: '2026년 최고의 발코니 태양광 키트: 완전한 플러그인 태양광 시스템 비교',
     seoTitle: '2026년 최고의 발코니 태양광 키트 비교',
     intro: '완전한 발코니 태양광 키트에는 패널과 마이크로인버터가 함께 포함되어 있어 부품을 따로 찾을 필요가 없습니다. 미국에서는 주(state)마다 합법성이 달라 현재 어떤 키트가 실제로 어디로 배송 가능한지가 결정됩니다——가격뿐 아니라 구매 가능 여부가 가장 먼저 확인해야 할 기준입니다.',
@@ -1518,6 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'Beste Balkonkraftwerk Sets (2026): Komplette Steckersolar-Systeme im Vergleich',
     seoTitle: 'Beste Balkonkraftwerk Sets 2026: Getestet & Verglichen',
     intro: 'Ein komplettes Balkonkraftwerk Set bündelt Panel(s) und Wechselrichter, sodass Sie keine Komponenten separat beschaffen müssen. Die Rechtslage in den USA variiert derzeit von Staat zu Staat und bestimmt, welche Sets tatsächlich wohin geliefert werden können — Verfügbarkeit, nicht nur der Preis, ist das erste wichtige Kriterium.',

@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra', 'Zendure SolarFlow', 'Anker SOLIX Solarbank'],
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: Balcony Solar Ecosystem Compared',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure Balcony Solar (2026)',
     intro: 'These three brands dominate the balcony-solar-with-storage conversation, but they\'re not interchangeable — one isn\'t even sold in the US, and the other two take opposite approaches to cloud vs. local control.',
@@ -151,6 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: comparativa del ecosistema de energía solar de balcón',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure solar de balcón (2026)',
     intro: 'Estas tres marcas dominan la conversación sobre energía solar de balcón con almacenamiento, pero no son intercambiables — una ni siquiera se vende en EE. UU., y las otras dos toman enfoques opuestos respecto al control en la nube frente al control local.',
@@ -293,6 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: comparativo do ecossistema de energia solar de varanda',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure solar de varanda (2026)',
     intro: 'Essas três marcas dominam a conversa sobre energia solar de varanda com armazenamento, mas não são intercambiáveis — uma nem sequer é vendida nos EUA, e as outras duas adotam abordagens opostas sobre controle na nuvem vs. controle local.',
@@ -435,6 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow مقابل Anker مقابل Zendure: مقارنة نظام الطاقة الشمسية للشرفة',
     seoTitle: 'EcoFlow مقابل Anker مقابل Zendure للطاقة الشمسية للشرفة (2026)',
     intro: 'تهيمن هذه العلامات التجارية الثلاث على النقاش حول الطاقة الشمسية للشرفة مع التخزين، لكنها غير قابلة للتبادل — إحداها لا تُباع حتى في الولايات المتحدة، والأخريان تتبعان نهجين متعارضين بشأن التحكم عبر السحابة مقابل التحكم المحلي.',
@@ -577,6 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure：バルコニーソーラーのエコシステム比較',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure バルコニーソーラー（2026年）',
     intro: 'この3ブランドはバルコニーソーラー＋蓄電池の議論を独占していますが、互換性があるわけではありません — 1つは米国では販売すらされておらず、残り2つはクラウド管理とローカル管理で正反対のアプローチを取っています。',
@@ -719,6 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure：阳台光伏储能生态系统对比',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure 阳台光伏（2026）',
     intro: '这三个品牌主导了阳台光伏＋储能的讨论，但它们并不可以互相替代——其中一个在美国甚至都没有销售，另外两个在云端管理与本地控制上采取了完全相反的路线。',
@@ -861,6 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure : comparatif de l\'écosystème solaire de balcon',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure solaire de balcon (2026)',
     intro: 'Ces trois marques dominent le débat sur le solaire de balcon avec stockage, mais elles ne sont pas interchangeables — l\'une n\'est même pas vendue aux États-Unis, et les deux autres adoptent des approches opposées entre contrôle cloud et contrôle local.',
@@ -1003,6 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: Balkonkraftwerk-Ökosystem im Vergleich',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure Balkonkraftwerk Vergleich (2026)',
     intro: 'Diese drei Marken dominieren die Diskussion über Balkonkraftwerke mit Speicher, doch sie sind nicht austauschbar — eine wird in den USA nicht einmal verkauft, und die anderen beiden verfolgen entgegengesetzte Ansätze beim Cloud- vs. Lokalsteuerung.',
@@ -1145,6 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: 발코니 태양광 생태계 비교',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure 발코니 태양광 (2026년)',
     intro: '이 세 브랜드는 저장장치를 갖춘 발코니 태양광 논의를 주도하고 있지만, 서로 대체 가능한 것은 아닙니다 — 한 브랜드는 미국에서 아예 판매되지 않으며, 나머지 두 브랜드는 클라우드 제어와 로컬 제어에 대해 정반대의 접근 방식을 취하고 있습니다.',
