@@ -9,16 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Local TTS & Voice Cloning Licenses 2026: Which Engines Allow Commercial Use (Piper, XTTS v2, F5-TTS, Coqui)',
-    seoTitle: 'Local TTS & Voice Cloning Licenses 2026: Commercial Use',
+    seoTitle: 'Coqui XTTS v2 License (CPML): Non-Commercial — Piper MIT, F5-TTS CC-BY-NC 2026',
     intro:
       'Can you use a local text-to-speech engine in a commercial product? It depends entirely on the license, and the licenses differ sharply. Piper, Bark, and StyleTTS 2 ship under MIT, Kokoro and Tortoise under Apache 2.0 — all four free for commercial use. The Coqui TTS toolkit is MPL 2.0 (commercial with conditions). But the two most popular voice-cloning models are restricted: XTTS v2 uses the Coqui Public Model License (CPML, non-commercial), and F5-TTS uses CC-BY-NC-4.0 (non-commercial). This guide gives the exact license for each engine, a clear "can I use this commercially?" answer per engine, the COQUI_TOS_AGREED environment variable for accepting the CPML non-interactively in Docker and CI, and a head-to-head comparison across quality, speed, VRAM, and voice cloning — so you can pick the right engine without sending audio to the cloud and without a license surprise in production. (Licenses verified June 2026; this is factual reference, not legal advice — read each license yourself before commercial use.)',
     metaDescription:
-      'Which local TTS engines allow commercial use? Licenses for Piper (MIT), XTTS v2 (CPML), F5-TTS (CC-BY-NC) & Coqui, plus the COQUI_TOS_AGREED env var. 2026 guide.',
+      'XTTS v2 = Coqui CPML (non-commercial only). Piper = MIT (commercial OK). F5-TTS = CC-BY-NC-4.0 (non-commercial). Full license table, COQUI_TOS_AGREED Docker setup, and quality comparison. 2026.',
     twitterDescription:
       'Local TTS licenses 2026: which voice-cloning engines allow commercial use? Piper/Bark/StyleTTS 2 (MIT), Kokoro/Tortoise (Apache 2.0), XTTS v2 (CPML non-commercial), F5-TTS (CC-BY-NC). Plus the COQUI_TOS_AGREED env var. All offline.',
     audience:
@@ -27,13 +27,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local text-to-speech',
     targetKeywords: [
+      'coqui xtts v2 license commercial use',
+      'coqui public model license commercial use',
+      'coqui xtts v2 license cpml',
+      'xtts v2 license open source voice cloning',
+      'f5-tts open source voice cloning license',
+      'piper tts license commercial use',
+      'COQUI_TOS_AGREED',
       'local TTS 2026',
       'best local TTS',
       'local voice cloning',
       'piper vs coqui',
       'XTTS v2 voice cloning',
       'F5-TTS voice cloning',
-      'F5-TTS local',
       'offline voice cloning',
       'bark TTS',
       'StyleTTS 2',
@@ -592,6 +598,14 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Frequently Asked Questions',
         faqs: [
           {
+            q: 'What is the Coqui Public Model License (CPML) and what does it allow?',
+            a: 'The Coqui Public Model License (CPML) is a custom license Coqui AI wrote for its XTTS v2 model weights. It permits personal use, research, academic work, and hobby projects — including using the generated audio outputs non-commercially. It prohibits commercial use: paid products, SaaS tools, ad-supported services, client deliverables, or any deployment that earns revenue. The CPML is not an open-source license (the Open Source Initiative has not approved it). Because Coqui Inc shut down in January 2024, there is no entity currently issuing commercial licenses for XTTS v2 — in practice, XTTS v2 is non-commercial only. This is factual reference, not legal advice.',
+          },
+          {
+            q: 'Is F5-TTS commercially usable?',
+            a: 'No. F5-TTS is released under CC-BY-NC-4.0 (Creative Commons Attribution Non-Commercial 4.0), which prohibits any commercial use. You cannot use F5-TTS in a paid product, SaaS tool, ad-supported application, or client project. For non-commercial voice cloning — personal projects, academic research, open-source demos — F5-TTS is freely usable with attribution. For commercial voice cloning, use Piper TTS (MIT) or Kokoro TTS (Apache 2.0) for synthesis, or Tortoise TTS (Apache 2.0) for slower but commercial-friendly cloning.',
+          },
+          {
             q: 'How much reference audio do I need for voice cloning with XTTS v2?',
             a: 'XTTS v2 requires a minimum of 3 seconds of clean reference audio, with 6+ seconds giving noticeably better results. The audio must be a single speaker with minimal background noise and no music. Higher quality source audio (recorded in a quiet room with a good microphone) produces better clones than compressed audio.',
           },
@@ -676,8 +690,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Lokale TTS- und Voice-Cloning-Lizenzen 2026: Welche Engines erlauben kommerzielle Nutzung (Piper, XTTS v2, F5-TTS, Coqui)',
@@ -1045,8 +1059,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Licences TTS local et clonage vocal 2026 : quels moteurs autorisent l\'usage commercial (Piper, XTTS v2, F5-TTS, Coqui)',
@@ -1399,8 +1413,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'ローカルTTSとボイスクローニングのライセンス2026：商用利用できるエンジンは？（Piper、XTTS v2、F5-TTS、Coqui）',
@@ -1768,8 +1782,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: '本地TTS与声音克隆许可证2026：哪些引擎允许商业使用（Piper、XTTS v2、F5-TTS、Coqui）',
@@ -2138,8 +2152,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Licencias de TTS local y clonación de voz 2026: qué motores permiten uso comercial (Piper, XTTS v2, F5-TTS, Coqui)',
@@ -2815,8 +2829,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: '로컬 TTS 및 음성 복제 라이선스 2026: 상업적 사용이 가능한 엔진 (Piper, XTTS v2, F5-TTS, Coqui)',
@@ -3270,8 +3284,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Licenças de TTS local e clonagem de voz 2026: quais motores permitem uso comercial (Piper, XTTS v2, F5-TTS, Coqui)',
@@ -3945,8 +3959,8 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-07-04',
+    lastFactChecked: '2026-07-04',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'تراخيص ⁨TTS⁩ المحلي واستنساخ الصوت ⁨2026⁩: أي المحركات تسمح بالاستخدام التجاري (⁨Piper⁩ و⁨XTTS v2⁩ و⁨F5-TTS⁩ و⁨Coqui⁩)',
