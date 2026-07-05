@@ -1,0 +1,88 @@
+name: IndexNow New-Page Submission
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: indexnow-on-push
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  submit-new-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Wait for Vercel deploy to finish
+        run: sleep 90
+
+      - name: Diff live sitemap against last known snapshot
+        id: diff
+        run: |
+          set -e
+          HOST="www.promptquorum.com"
+          SNAPSHOT_FILE=".github/indexnow-sitemap-snapshot.txt"
+          touch "$SNAPSHOT_FILE"
+
+          echo "📥 Fetching live sitemap from https://${HOST}/sitemap.xml..."
+          curl -s "https://${HOST}/sitemap.xml" \
+            | grep -oP '(?<=<loc>)[^<]+' \
+            | grep -vP "/${HOST}/[a-z]{2}(/|$)" \
+            | sort -u > /tmp/current_urls.txt
+
+          sort -u "$SNAPSHOT_FILE" > /tmp/previous_urls.txt
+          comm -13 /tmp/previous_urls.txt /tmp/current_urls.txt > /tmp/new_urls.txt
+
+          NEW_COUNT=$(wc -l < /tmp/new_urls.txt | tr -d ' ')
+          echo "new_count=$NEW_COUNT" >> "$GITHUB_OUTPUT"
+
+          if [ "$NEW_COUNT" != "0" ]; then
+            echo "🆕 $NEW_COUNT new URL(s) found:"
+            cat /tmp/new_urls.txt
+          else
+            echo "ℹ️ No new URLs — sitemap unchanged since last push. Nothing to submit."
+          fi
+
+          cp /tmp/current_urls.txt "$SNAPSHOT_FILE"
+
+      - name: Submit new URLs to Bing IndexNow
+        if: steps.diff.outputs.new_count != '0'
+        run: |
+          set -e
+          INDEXNOW_KEY="2fd43c75367b4c029c9ea4eef7ad34f8"
+          HOST="www.promptquorum.com"
+          KEY_LOCATION="https://${HOST}/${INDEXNOW_KEY}.txt"
+
+          URLS=$(jq -R . /tmp/new_urls.txt | jq -s .)
+          PAYLOAD=$(jq -n \
+            --arg host "$HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "$KEY_LOCATION" \
+            --argjson urlList "$URLS" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
+          RESPONSE=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+            -X POST https://api.indexnow.org/IndexNow \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD")
+          echo "Status: $RESPONSE"
+          cat /tmp/indexnow_response.txt
+          if [ "$RESPONSE" != "200" ] && [ "$RESPONSE" != "202" ]; then
+            echo "❌ Submission failed with status $RESPONSE"
+            exit 1
+          fi
+          echo "✅ Submitted new URL(s) to Bing IndexNow"
+
+      - name: Commit updated sitemap snapshot
+        if: steps.diff.outputs.new_count != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/indexnow-sitemap-snapshot.txt
+          git diff --cached --quiet || git commit -m "chore(indexnow): update sitemap snapshot after new-page submission [skip ci]"
+          git push
