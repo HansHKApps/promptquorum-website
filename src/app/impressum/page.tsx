@@ -47,6 +47,23 @@ export default function ImpressumPage() {
           </section>
 
           <section>
+            <h2 className="text-base font-semibold text-gray-900 mb-2">Streitschlichtung / Dispute Resolution</h2>
+            <p>
+              The European Commission provides a platform for online dispute resolution (ODR):{' '}
+              <a
+                href="https://ec.europa.eu/consumers/odr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-600 hover:underline"
+              >
+                https://ec.europa.eu/consumers/odr/
+              </a>
+              . Our email address is above. We are not obliged or willing to participate in
+              dispute-resolution proceedings before a consumer arbitration board.
+            </p>
+          </section>
+
+          <section>
             <h2 className="text-base font-semibold text-gray-900 mb-2">Inhaltlich Verantwortlicher</h2>
             <p>
               Hans-Helmut Kuepper (Anschrift wie oben)
