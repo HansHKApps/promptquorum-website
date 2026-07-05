@@ -16,12 +16,12 @@
            import http from 'http';
 
            const INDEXNOW_KEY: string =
-             process.env.INDEXNOW_KEY || 'eb7d1cdb86c44057b4ae4694d5c4ba7e';
+             process.env.INDEXNOW_KEY || '2fd43c75367b4c029c9ea4eef7ad34f8';
              const SITE_HOST: string =
                process.env.SITE_HOST || 'www.promptquorum.com';
                const SITEMAP_URL: string = `https://${SITE_HOST}/sitemap.xml`;
                const INDEXNOW_ENDPOINT: string = 'https://api.indexnow.org/IndexNow';
-               const KEY_LOCATION: string = `https://${SITE_HOST}/indexnow.json`;
+               const KEY_LOCATION: string = `https://${SITE_HOST}/${INDEXNOW_KEY}.txt`;
 
                /** Fetch a URL and return its body as a string. */
                function fetchText(url: string): Promise<string> {
