@@ -25,6 +25,39 @@ const FUSE_OPTIONS: import('fuse.js').IFuseOptions<SearchEntry> = {
   fieldNormWeight: 1.5,
 }
 
+// --- Query hardening -------------------------------------------------------
+// Latin queries shorter than this get exact word-PREFIX matching instead of
+// fuzzy substring matching. With ignoreLocation + minMatchCharLength 2, a
+// 3-char Latin query like "rag" otherwise matched mid-word ("f-rag-ilidad").
+// CJK/Arabic short queries are left on the fuzzy path — 2–3 chars there is a
+// whole word and substring matching is correct.
+const MIN_FUZZY_LEN = 4
+// A GPU/CPU-style model number, e.g. "rtx 4060", "m3 780". When present, the
+// digit block must appear verbatim in the doc — otherwise "rtx 4060" matched
+// "RTX 3060"/"4090" on the "RTX" token or the "060" fragment alone.
+const MODEL_NUM = /\b[a-z]{2,4}\s?\d{3,4}\b/i
+
+const norm = (s: string): string =>
+  s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+
+const isLatinShort = (q: string): boolean =>
+  q.length < MIN_FUZZY_LEN && /^[\p{Script=Latin}0-9\s]+$/u.test(q)
+
+const tokenize = (text: string): string[] =>
+  norm(text).split(/[^\p{L}\p{N}]+/u).filter(Boolean)
+
+const docText = (e: SearchEntry): string =>
+  [e.title, e.description, e.section, ...(e.tags ?? [])].join(' ')
+
+// Rank a doc for a short Latin prefix query: title > tags > description/section.
+// Returns null when no field has a word starting with the query.
+function shortPrefixRank(e: SearchEntry, nq: string): number | null {
+  if (tokenize(e.title).some((t) => t.startsWith(nq))) return 0
+  if (tokenize((e.tags ?? []).join(' ')).some((t) => t.startsWith(nq))) return 0.1
+  if (tokenize(`${e.description ?? ''} ${e.section ?? ''}`).some((t) => t.startsWith(nq))) return 0.2
+  return null
+}
+
 export function useSearch(lang: string) {
   const [allEntries, setAllEntries] = useState<SearchEntry[] | null>(null)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -33,7 +66,7 @@ export function useSearch(lang: string) {
   // match and surface on every other locale's site. Instead build one index PER
   // locale, memoised, so a query only ever fuzzy-matches same-locale documents.
   const fuseCtorRef = useRef<typeof Fuse | null>(null)
-  const indexCacheRef = useRef<Map<string, Fuse<SearchEntry>>>(new Map())
+  const indexCacheRef = useRef<Map<string, { fuse: Fuse<SearchEntry>; docs: SearchEntry[] }>>(new Map())
 
   const loadIndex = useCallback(async () => {
     if (allEntries) return
@@ -51,34 +84,62 @@ export function useSearch(lang: string) {
     }
   }, [allEntries])
 
-  // Lazily build (and cache) a Fuse index scoped to the active locale only.
-  const getLocaleIndex = useCallback((): Fuse<SearchEntry> | null => {
+  // Lazily build (and cache) a Fuse index + doc list scoped to the active locale.
+  const getLocaleData = useCallback((): { fuse: Fuse<SearchEntry>; docs: SearchEntry[] } | null => {
     if (!allEntries || !fuseCtorRef.current) return null
     const cache = indexCacheRef.current
     if (!cache.has(lang)) {
-      const localeDocs = allEntries.filter((e) => e.lang === lang)
-      cache.set(lang, new fuseCtorRef.current(localeDocs, FUSE_OPTIONS))
+      const docs = allEntries.filter((e) => e.lang === lang)
+      cache.set(lang, { fuse: new fuseCtorRef.current(docs, FUSE_OPTIONS), docs })
     }
     return cache.get(lang)!
   }, [allEntries, lang])
 
+  const dedupeSlice = (results: FuseResult[]): FuseResult[] => {
+    // Index is already locale-scoped, so each articleKey appears once; the dedup
+    // stays as a defensive guard and to keep the score-sorted output stable.
+    const seen = new Map<string, FuseResult>()
+    for (const result of results) {
+      const key = result.item.articleKey
+      if (!seen.has(key)) seen.set(key, result)
+    }
+    return Array.from(seen.values())
+      .sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity))
+      .slice(0, 20)
+  }
+
   const search = useCallback(
     (query: string): FuseResult[] => {
-      const fuse = getLocaleIndex()
-      if (!fuse || query.length < 2) return []
-      const raw = fuse.search(query).filter((r) => (r.score ?? 1) <= MAX_SCORE)
-      // Index is already locale-scoped, so each articleKey appears once; the
-      // dedup stays as a defensive guard and to keep the score-sorted output stable.
-      const seen = new Map<string, FuseResult>()
-      for (const result of raw) {
-        const key = result.item.articleKey
-        if (!seen.has(key)) seen.set(key, result)
+      const data = getLocaleData()
+      const q = query.trim()
+      if (!data || q.length < 2) return []
+
+      // Short Latin queries (1–3 chars): exact word-prefix only, no fuzzy
+      // substring. Kills mid-word false positives like "rag" → "fragilidad".
+      if (isLatinShort(q)) {
+        const nq = norm(q)
+        const prefixHits: FuseResult[] = []
+        data.docs.forEach((item, i) => {
+          const rank = shortPrefixRank(item, nq)
+          if (rank !== null) prefixHits.push({ item, refIndex: i, score: rank } as FuseResult)
+        })
+        return dedupeSlice(prefixHits)
       }
-      return Array.from(seen.values())
-        .sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity))
-        .slice(0, 20)
+
+      let raw = data.fuse.search(q).filter((r) => (r.score ?? 1) <= MAX_SCORE)
+
+      // Model-number queries ("rtx 4060"): require every digit block to appear
+      // verbatim, so we don't return "RTX 3060"/"4090" on the token/fragment.
+      if (MODEL_NUM.test(q)) {
+        const nums = q.match(/\d{3,4}/g) ?? []
+        if (nums.length > 0) {
+          raw = raw.filter((r) => nums.every((n) => norm(docText(r.item)).includes(n)))
+        }
+      }
+
+      return dedupeSlice(raw)
     },
-    [getLocaleIndex],
+    [getLocaleData],
   )
 
   const getPopular = useCallback((): SearchEntry[] => {
