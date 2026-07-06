@@ -124,6 +124,14 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#6750A4" />
 
+        {/* Resource hints — warm up connections to the only cross-origin hosts
+            the page uses, so their (deferred/lazy) requests resolve faster.
+            PageSpeed flagged "no origins were preconnected". */}
+        <link rel="preconnect" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://cdn.onesignal.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+
         {/* MCP discovery — Model Context Protocol manifest for AI agents */}
         <link rel="mcp" href="/mcp.json" type="application/json" />
         {/* AI crawler discovery hints */}
