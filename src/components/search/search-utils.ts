@@ -19,6 +19,8 @@ export const GROUP_ORDER = [
   'local-llms',
   'power-local-llm',
   'prompt-bites',
+  'balcony-solar',
+  'smart-home',
   'blog',
   'product',
 ]
@@ -28,6 +30,8 @@ export const HUB_LABELS: Record<string, string> = {
   'local-llms': 'Local LLMs',
   'power-local-llm': 'Power Local LLM',
   'prompt-bites': 'Prompt Bites',
+  'balcony-solar': 'Balcony Solar',
+  'smart-home': 'Smart Home',
   'blog': 'Blog',
   'product': 'PromptQuorum',
 }
@@ -37,6 +41,8 @@ export const HUB_DOT_COLOR: Record<string, string> = {
   'local-llms': 'bg-green-500',
   'power-local-llm': 'bg-emerald-600',
   'prompt-bites': 'bg-purple-500',
+  'balcony-solar': 'bg-yellow-500',
+  'smart-home': 'bg-cyan-500',
   'blog': 'bg-violet-600',
   'product': 'bg-amber-500',
 }
