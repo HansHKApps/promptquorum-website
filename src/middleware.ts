@@ -29,6 +29,17 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // /impressum is single-canonical — a German-law legal notice with no per-locale
+  // translation and no /<locale>/impressum route built. Crawlers and the language
+  // switcher's URL pattern still generate /<locale>/impressum by analogy with every
+  // other page, which 404s. Redirect to the one real page instead of letting it 404.
+  const IMPRESSUM_LOCALE_RE = /^\/(de|fr|ja|zh|es|pt|ar|ko)\/impressum\/?$/
+  if (IMPRESSUM_LOCALE_RE.test(url.pathname) && !isApiRoute && !isCronRoute) {
+    const target = url.clone()
+    target.pathname = '/impressum'
+    return NextResponse.redirect(target, 301)
+  }
+
   // Stacked-locale guard — /pt/zh/local-llms/x → 301 → /zh/local-llms/x
   // Happens when a bot or stale bookmark stacks two locale prefixes.
   // Derived from VALID_NON_EN_LANGS so the alternation never drifts.
