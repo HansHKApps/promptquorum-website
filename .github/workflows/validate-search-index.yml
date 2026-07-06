@@ -1,0 +1,29 @@
+name: Monthly Search-Index Cluster Check
+
+on:
+  schedule:
+    # 1st of every month at 8 AM UTC
+    - cron: '0 8 1 * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  validate-clusters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Verify every content cluster is wired into site search
+        run: node scripts/validate-search-index-clusters.mjs
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "⚠️ A content cluster is missing from the site search index."
+          echo "See the step above — add the cluster to src/app/api/search-index/route.ts."
+          exit 1
