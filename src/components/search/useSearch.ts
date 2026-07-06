@@ -58,6 +58,31 @@ function shortPrefixRank(e: SearchEntry, nq: string): number | null {
   return null
 }
 
+// Native-language hardware terms and brand transliterations aren't present in
+// the indexed fields — articles use the literal "GPU"/"NVIDIA" — so searching
+// "carte graphique" / "tarjeta gráfica" / "英伟达" returned zero. Expand such a
+// query to also search the canonical term. `terms` are pre-normalized (accent-
+// stripped, lowercased) to match norm() output.
+const SYNONYM_EXPANSIONS: { terms: string[]; expand: string[] }[] = [
+  { terms: ['carte graphique', 'cartes graphiques'], expand: ['gpu'] },
+  { terms: ['tarjeta grafica', 'tarjetas graficas'], expand: ['gpu'] },
+  { terms: ['grafikkarte', 'grafikkarten'], expand: ['gpu'] },
+  { terms: ['graphics card', 'graphics cards'], expand: ['gpu'] },
+  { terms: ['グラフィックカード', 'グラフィックス カード', 'グラボ'], expand: ['gpu'] },
+  { terms: ['그래픽 카드', '그래픽카드'], expand: ['gpu'] },
+  { terms: ['显卡', '圖形卡', '图形卡'], expand: ['gpu'] },
+  { terms: ['英伟达'], expand: ['nvidia'] },
+]
+
+// Extra query strings implied by native-term synonyms of the (normalized) query.
+function synonymExpansions(nq: string): string[] {
+  const out: string[] = []
+  for (const syn of SYNONYM_EXPANSIONS) {
+    if (syn.terms.some((t) => nq.includes(norm(t)))) out.push(...syn.expand)
+  }
+  return out
+}
+
 export function useSearch(lang: string) {
   const [allEntries, setAllEntries] = useState<SearchEntry[] | null>(null)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -96,24 +121,23 @@ export function useSearch(lang: string) {
   }, [allEntries, lang])
 
   const dedupeSlice = (results: FuseResult[]): FuseResult[] => {
-    // Index is already locale-scoped, so each articleKey appears once; the dedup
-    // stays as a defensive guard and to keep the score-sorted output stable.
+    // Index is already locale-scoped, so each articleKey appears once per query;
+    // when merging a query with its synonym expansions the same article can recur,
+    // so keep the best (lowest) score per key, then sort and cap.
     const seen = new Map<string, FuseResult>()
     for (const result of results) {
       const key = result.item.articleKey
-      if (!seen.has(key)) seen.set(key, result)
+      const prev = seen.get(key)
+      if (!prev || (result.score ?? Infinity) < (prev.score ?? Infinity)) seen.set(key, result)
     }
     return Array.from(seen.values())
       .sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity))
       .slice(0, 20)
   }
 
-  const search = useCallback(
-    (query: string): FuseResult[] => {
-      const data = getLocaleData()
-      const q = query.trim()
-      if (!data || q.length < 2) return []
-
+  // Run one query string through the locale index (short-prefix vs fuzzy branch).
+  const runOne = useCallback(
+    (q: string, data: { fuse: Fuse<SearchEntry>; docs: SearchEntry[] }): FuseResult[] => {
       // Short Latin queries (1–3 chars): exact word-prefix only, no fuzzy
       // substring. Kills mid-word false positives like "rag" → "fragilidad".
       if (isLatinShort(q)) {
@@ -123,7 +147,7 @@ export function useSearch(lang: string) {
           const rank = shortPrefixRank(item, nq)
           if (rank !== null) prefixHits.push({ item, refIndex: i, score: rank } as FuseResult)
         })
-        return dedupeSlice(prefixHits)
+        return prefixHits
       }
 
       let raw = data.fuse.search(q).filter((r) => (r.score ?? 1) <= MAX_SCORE)
@@ -137,9 +161,24 @@ export function useSearch(lang: string) {
         }
       }
 
-      return dedupeSlice(raw)
+      return raw
     },
-    [getLocaleData],
+    [],
+  )
+
+  const search = useCallback(
+    (query: string): FuseResult[] => {
+      const data = getLocaleData()
+      const q = query.trim()
+      if (!data || q.length < 2) return []
+
+      // Expand native hardware terms / brand transliterations to the canonical
+      // term (e.g. "carte graphique" → also search "gpu"), then merge.
+      const queries = [q, ...synonymExpansions(norm(q))]
+      const merged = queries.flatMap((sq) => runOne(sq, data))
+      return dedupeSlice(merged)
+    },
+    [getLocaleData, runOne],
   )
 
   const getPopular = useCallback((): SearchEntry[] => {
