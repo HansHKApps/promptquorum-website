@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSearch } from './useSearch'
-import { groupResults, type SearchEntry } from './search-utils'
-import { SearchResultGroup } from './SearchResultGroup'
+import { orderByRelevance, type SearchEntry } from './search-utils'
+import { SearchResultItem } from './SearchResultItem'
 import { translations } from '@/translations'
 
 interface Props {
@@ -22,9 +22,11 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
   const inputRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
 
-  const results = query.length >= 2 ? search(query) : []
-  const groups = groupResults(results)
-  const flatResults = groups.flatMap((g) => g.items.map((r) => r.item))
+  // Flat, relevance-first ordering — no category grouping. Users search for a
+  // term, so results are ranked by match quality (with an exact-title boost),
+  // not by a fixed category order. Each row still shows its category as a badge.
+  const ordered = query.length >= 2 ? orderByRelevance(search(query), query) : []
+  const flatResults = ordered.map((r) => r.item)
   const totalResults = flatResults.length
 
   const popularEntries = query.length < 2 ? getPopular() : []
@@ -111,8 +113,6 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
   }, [query])
 
   if (!isOpen) return null
-
-  let indexOffset = 0
 
   return (
     <>
@@ -217,25 +217,18 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
             </p>
           )}
 
-          {/* Search results */}
+          {/* Search results — flat, relevance-ordered list */}
           {isLoaded && totalResults > 0 && (
-            <div className="space-y-2">
-              {groups.map((group) => {
-                const offset = indexOffset
-                indexOffset += group.items.length
-                return (
-                  <SearchResultGroup
-                    key={`${group.hub}|||${group.section}`}
-                    hub={group.hub}
-                    section={group.section}
-                    items={group.items}
-                    activeIndex={activeIndex}
-                    indexOffset={offset}
-                    onHover={setActiveIndex}
-                    onSelect={handleSelect}
-                  />
-                )
-              })}
+            <div className="space-y-0.5">
+              {ordered.map((result, i) => (
+                <SearchResultItem
+                  key={result.item.id}
+                  result={result}
+                  isActive={activeIndex === i}
+                  onMouseEnter={() => setActiveIndex(i)}
+                  onClick={() => handleSelect(result.item)}
+                />
+              ))}
             </div>
           )}
 

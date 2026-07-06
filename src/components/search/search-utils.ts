@@ -81,6 +81,38 @@ export function groupResults(
     })
 }
 
+// Collapse digit + memory-unit spacing/hyphens so "16GB", "16 GB" and "16-GB"
+// all compare equal — used both to normalize the query (so those variants search
+// identically) and to test exact-title matches for the relevance boost.
+export function normalizeUnits(s: string): string {
+  return s.toLowerCase().replace(/(\d)[\s-]*(gb|tb|mb|kb)\b/g, '$1$2')
+}
+
+// Relevance score used for ordering: the Fuse score, boosted when the title
+// literally contains the query (exact/substring beats fuzzy). Lower = better,
+// matching Fuse's convention (0 = perfect).
+export function effectiveScore(
+  r: import('fuse.js').FuseResult<SearchEntry>,
+  query: string,
+): number {
+  const q = normalizeUnits(query.trim())
+  const title = normalizeUnits(r.item.title)
+  const exactBoost = q.length > 0 && title.includes(q) ? -1 : 0
+  return (r.score ?? 1) + exactBoost
+}
+
+// Flat, relevance-first ordering. Replaces category grouping so results are
+// ranked by how well they match the query, not by a fixed category order.
+export function orderByRelevance(
+  results: import('fuse.js').FuseResult<SearchEntry>[],
+  query: string,
+): import('fuse.js').FuseResult<SearchEntry>[] {
+  return results
+    .map((r) => ({ r, eff: effectiveScore(r, query) }))
+    .sort((a, b) => a.eff - b.eff)
+    .map((x) => x.r)
+}
+
 export function applyHighlight(
   text: string,
   matches: ReadonlyArray<import('fuse.js').FuseResultMatch> | undefined,
