@@ -33,10 +33,10 @@ const FUSE_OPTIONS: import('fuse.js').IFuseOptions<SearchEntry> = {
 // CJK/Arabic short queries are left on the fuzzy path — 2–3 chars there is a
 // whole word and substring matching is correct.
 const MIN_FUZZY_LEN = 4
-// A GPU/CPU-style model number, e.g. "rtx 4060", "m3 780". When present, the
-// digit block must appear verbatim in the doc — otherwise "rtx 4060" matched
-// "RTX 3060"/"4090" on the "RTX" token or the "060" fragment alone.
-const MODEL_NUM = /\b[a-z]{2,4}\s?\d{3,4}\b/i
+// A model-number token: up to 4 leading letters, 3–5 digits, up to 3 trailing
+// letters — matches "rtx4060", "4060", "5090ti", "600". A 2-digit "16gb"/"12gb"
+// does NOT qualify, so memory-size queries stay on the fuzzy path (Finding #6).
+const MODEL_TOKEN = /^[a-z]{0,4}\d{3,5}[a-z]{0,3}$/i
 
 const norm = (s: string): string =>
   s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -47,8 +47,23 @@ const isLatinShort = (q: string): boolean =>
 const tokenize = (text: string): string[] =>
   norm(text).split(/[^\p{L}\p{N}]+/u).filter(Boolean)
 
-const docText = (e: SearchEntry): string =>
-  [e.title, e.description, e.section, ...(e.tags ?? [])].join(' ')
+// Model-number tokens in a query, with any leading currency symbol stripped
+// ("$600" → "600"). Empty for prose queries, which keep the fuzzy behavior.
+const modelTokens = (q: string): string[] =>
+  q
+    .trim()
+    .split(/\s+/)
+    .map((t) => t.replace(/^[$€£¥]/, ''))
+    .filter((t) => MODEL_TOKEN.test(t))
+
+// Whether a model token appears as a WHOLE token in the title (unit-normalized).
+// "4060" must not match "3060", "40600", or an incidental "$600"; the digit run
+// must stand on word boundaries.
+const titleHasModelToken = (title: string, token: string): boolean => {
+  const hay = normalizeUnits(title)
+  const t = normalizeUnits(token).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return new RegExp(`\\b${t}\\b`, 'i').test(hay)
+}
 
 // Rank a doc for a short Latin prefix query: title > tags > description/section.
 // Returns null when no field has a word starting with the query.
@@ -153,13 +168,13 @@ export function useSearch(lang: string) {
 
       let raw = data.fuse.search(q).filter((r) => (r.score ?? 1) <= MAX_SCORE)
 
-      // Model-number queries ("rtx 4060"): require every digit block to appear
-      // verbatim, so we don't return "RTX 3060"/"4090" on the token/fragment.
-      if (MODEL_NUM.test(q)) {
-        const nums = q.match(/\d{3,4}/g) ?? []
-        if (nums.length > 0) {
-          raw = raw.filter((r) => nums.every((n) => norm(docText(r.item)).includes(n)))
-        }
+      // Model-number queries ("rtx 4060", "3060", "$600"): every model token must
+      // appear as a WHOLE token in the TITLE — not a mid-token digit fragment
+      // ("4060" ≠ "3060"/"$600") and not an incidental description mention. When
+      // no title truly matches the model, an empty result is the correct answer.
+      const mts = modelTokens(q)
+      if (mts.length > 0) {
+        raw = raw.filter((r) => mts.every((tk) => titleHasModelToken(r.item.title, tk)))
       }
 
       return raw
