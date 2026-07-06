@@ -3,6 +3,7 @@
 import { useCallback, useRef, useState } from 'react'
 import type Fuse from 'fuse.js'
 import type { SearchEntry } from './search-utils'
+import { normalizeUnits } from './search-utils'
 
 type FuseResult = import('fuse.js').FuseResult<SearchEntry>
 
@@ -169,7 +170,8 @@ export function useSearch(lang: string) {
   const search = useCallback(
     (query: string): FuseResult[] => {
       const data = getLocaleData()
-      const q = query.trim()
+      // Normalize memory-unit spacing so "16 GB" and "16GB" search identically.
+      const q = normalizeUnits(query.trim())
       if (!data || q.length < 2) return []
 
       // Expand native hardware terms / brand transliterations to the canonical
