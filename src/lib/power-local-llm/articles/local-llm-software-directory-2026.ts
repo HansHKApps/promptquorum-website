@@ -140,6 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Link', 'Description', 'License'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Description': 'Most polished GUI, built-in HuggingFace model browser, server mode', 'License': 'Free (closed)' },
+          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Description': 'Offline desktop and mobile chat app with one-click local agents', 'License': 'Apache 2.0' },
           { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Description': 'Privacy-focused offline ChatGPT clone, fully open-source', 'License': 'AGPL 3.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Description': 'Beginner-friendly with strong CPU-only support', 'License': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'RAG and document chat with built-in vector store', 'License': 'MIT' },
@@ -149,7 +150,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Native macOS/iOS minimal Ollama client', 'License': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Enterprise-feature-heavy desktop and server', 'License': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Lets local LLM control your computer and execute code', 'License': 'AGPL 3.0' },
-          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Description': 'Offline desktop and mobile chat app with one-click local agents', 'License': 'Apache 2.0' },
         ],
         note: 'Deeper guide: [LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -555,6 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Beschreibung': 'Ausgereifteste GUI, integrierter HuggingFace-Modell-Browser, Server-Modus', 'Lizenz': 'Kostenlos (proprietär)' },
+          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Beschreibung': 'Offline-Chat-App für Desktop und Mobilgeräte mit lokalen Ein-Klick-Agenten', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Beschreibung': 'Datenschutzorientierter Offline-ChatGPT-Klon, vollständig quelloffen', 'Lizenz': 'AGPL 3.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Beschreibung': 'Einsteigerfreundlich mit starker CPU-only-Unterstützung', 'Lizenz': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Beschreibung': 'RAG und Dokumenten-Chat mit integriertem Vektorspeicher', 'Lizenz': 'MIT' },
@@ -564,7 +565,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Beschreibung': 'Nativer macOS/iOS-Minimal-Client für Ollama', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Beschreibung': 'Funktionsreiche Enterprise-Desktop- und Serveranwendung', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Beschreibung': 'Erlaubt einem lokalen LLM, Ihren Computer zu steuern und Code auszuführen', 'Lizenz': 'AGPL 3.0' },
-          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Beschreibung': 'Offline-Chat-App für Desktop und Mobilgeräte mit lokalen Ein-Klick-Agenten', 'Lizenz': 'Apache 2.0' },
         ],
         note: 'Vertiefender Vergleich: [LM Studio vs Jan vs GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -977,6 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Link', 'Description', 'Licence'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Description': 'Interface la plus aboutie, navigateur HuggingFace intégré, mode serveur', 'Licence': 'Gratuit (propriétaire)' },
+          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Description': 'Application de chat hors ligne pour ordinateur et mobile avec agents locaux en un clic', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Description': 'Clone ChatGPT hors ligne axé vie privée, entièrement open source', 'Licence': 'AGPL 3.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Description': 'Accessible aux débutants, excellent support CPU uniquement', 'Licence': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'RAG et chat sur documents avec store vectoriel intégré', 'Licence': 'MIT' },
@@ -986,7 +987,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Client Ollama minimal natif macOS/iOS', 'Licence': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Application bureau et serveur riche en fonctionnalités enterprise', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Permet à un LLM local de contrôler votre ordinateur et d\'exécuter du code', 'Licence': 'AGPL 3.0' },
-          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Description': 'Application de chat hors ligne pour ordinateur et mobile avec agents locaux en un clic', 'Licence': 'Apache 2.0' },
         ],
         note: 'Comparatif approfondi : [LM Studio vs Jan vs GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -1391,6 +1391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', '概要': '最も洗練されたGUI。HuggingFaceモデルブラウザ内蔵、サーバーモード対応', 'ライセンス': '無料（プロプライエタリ）' },
+          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', '概要': 'デスクトップ・モバイル対応のオフラインチャットアプリ、ワンクリックでローカルエージェントを実行', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', '概要': 'プライバシー重視のオフラインChatGPTクローン。完全オープンソース', 'ライセンス': 'AGPL 3.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '概要': '初心者向け。CPU onlyでの動作が強力', 'ライセンス': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', '概要': 'ベクターストア内蔵のRAGとドキュメントチャット', 'ライセンス': 'MIT' },
@@ -1400,7 +1401,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '概要': 'ネイティブmacOS/iOS向け最小限のOllamaクライアント', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '概要': 'エンタープライズ機能が充実したデスクトップ・サーバーアプリ', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '概要': 'ローカルLLMがコンピュータを操作しコードを実行できる', 'ライセンス': 'AGPL 3.0' },
-          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', '概要': 'デスクトップ・モバイル対応のオフラインチャットアプリ、ワンクリックでローカルエージェントを実行', 'ライセンス': 'Apache 2.0' },
         ],
         note: '詳細比較：[LM Studio vs Jan vs GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -1805,6 +1805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Link', '描述', '许可证'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', '描述': '最精良的GUI，内置HuggingFace模型浏览器，支持服务器模式', '许可证': '免费（闭源）' },
+          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', '描述': '支持桌面和移动端的离线聊天应用，一键运行本地智能体', '许可证': 'Apache 2.0' },
           { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', '描述': '注重隐私的离线ChatGPT替代品，完全开源', '许可证': 'AGPL 3.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '描述': '面向初学者，纯CPU运行支持优秀', '许可证': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', '描述': '内置向量存储的RAG与文档问答工具', '许可证': 'MIT' },
@@ -1814,7 +1815,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '描述': 'macOS/iOS原生的极简Ollama客户端', '许可证': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '描述': '企业功能丰富的桌面与服务器方案', '许可证': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '描述': '允许本地LLM操控电脑并执行代码', '许可证': 'AGPL 3.0' },
-          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', '描述': '支持桌面和移动端的离线聊天应用，一键运行本地智能体', '许可证': 'Apache 2.0' },
         ],
         note: '深度指南：[LM Studio vs Jan vs GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -2219,6 +2219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
         rows: [
           { 'Tool': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Descripción': 'La GUI más pulida, explorador de modelos de HuggingFace integrado, modo servidor', 'Licencia': 'Gratuito (cerrado)' },
+          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Descripción': 'App de chat sin conexión para escritorio y móvil con agentes locales en un clic', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Descripción': 'Clon offline de ChatGPT centrado en la privacidad, totalmente open-source', 'Licencia': 'AGPL 3.0' },
           { 'Tool': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Descripción': 'Apto para principiantes con fuerte soporte de solo CPU', 'Licencia': 'MIT' },
           { 'Tool': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descripción': 'RAG y chat de documentos con almacén vectorial integrado', 'Licencia': 'MIT' },
@@ -2228,7 +2229,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descripción': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descripción': 'Escritorio y servidor con muchas funciones enterprise', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descripción': 'Permite que un LLM local controle tu computadora y ejecute código', 'Licencia': 'AGPL 3.0' },
-          { 'Tool': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Descripción': 'App de chat sin conexión para escritorio y móvil con agentes locales en un clic', 'Licencia': 'Apache 2.0' },
         ],
         note: 'Guía más detallada: [LM Studio vs Jan vs GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -2647,6 +2647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
         rows: [
           { 'Ferramenta': '**LM Studio**', 'Link': '[lmstudio.ai](https://lmstudio.ai)', 'Descrição': 'A GUI mais polida, explorador de modelos do HuggingFace integrado, modo servidor', 'Licença': 'Grátis (fechado)' },
+          { 'Ferramenta': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Descrição': 'App de chat offline para desktop e celular com agentes locais em um clique', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**Jan**', 'Link': '[jan.ai](https://jan.ai)', 'Descrição': 'Clone offline do ChatGPT com foco em privacidade, totalmente open-source', 'Licença': 'AGPL 3.0' },
           { 'Ferramenta': '**GPT4All**', 'Link': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'Descrição': 'Adequado para iniciantes com forte suporte de apenas CPU', 'Licença': 'MIT' },
           { 'Ferramenta': '**AnythingLLM**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descrição': 'RAG e chat de documentos com armazenamento vetorial integrado', 'Licença': 'MIT' },
@@ -2656,7 +2657,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descrição': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descrição': 'Desktop e servidor com muitos recursos enterprise', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descrição': 'Permite que um LLM local controle seu computador e execute código', 'Licença': 'AGPL 3.0' },
-          { 'Ferramenta': '**Atomic Chat**', 'Link': '[atomic.chat](https://atomic.chat)', 'Descrição': 'App de chat offline para desktop e celular com agentes locais em um clique', 'Licença': 'Apache 2.0' },
         ],
         note: 'Guia mais detalhado: [LM Studio vs Jan vs GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -3074,6 +3074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
         rows: [
           { 'الأداة': '**LM Studio**', 'الرابط': '[lmstudio.ai](https://lmstudio.ai)', 'الوصف': 'أكثر واجهة رسومية مصقولة، مستعرض نماذج HuggingFace مدمج، وضع خادم', 'الترخيص': 'مجاني (مغلق)' },
+          { 'الأداة': '**Atomic Chat**', 'الرابط': '[atomic.chat](https://atomic.chat)', 'الوصف': 'تطبيق دردشة يعمل دون اتصال للحاسوب والهاتف مع تشغيل وكلاء محليين بنقرة واحدة', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**Jan**', 'الرابط': '[jan.ai](https://jan.ai)', 'الوصف': 'استنساخ ChatGPT بدون اتصال يركز على الخصوصية، مفتوح المصدر بالكامل', 'الترخيص': 'AGPL 3.0' },
           { 'الأداة': '**GPT4All**', 'الرابط': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', 'الوصف': 'مناسب للمبتدئين مع دعم قوي للـCPU فقط', 'الترخيص': 'MIT' },
           { 'الأداة': '**AnythingLLM**', 'الرابط': '[anythingllm.com](https://anythingllm.com)', 'الوصف': 'RAG ودردشة مستندات مع مخزن متجهات مدمج', 'الترخيص': 'MIT' },
@@ -3083,7 +3084,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**Enchanted**', 'الرابط': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'الوصف': 'عميل Ollama أدنى حجماً أصلي لـmacOS/iOS', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**h2oGPT**', 'الرابط': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'الوصف': 'سطح مكتب وخادم مع ميزات مؤسسية كثيرة', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**Open Interpreter**', 'الرابط': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'الوصف': 'يتيح لنموذج لغوي محلي التحكم في جهازك وتنفيذ الكود', 'الترخيص': 'AGPL 3.0' },
-          { 'الأداة': '**Atomic Chat**', 'الرابط': '[atomic.chat](https://atomic.chat)', 'الوصف': 'تطبيق دردشة يعمل دون اتصال للحاسوب والهاتف مع تشغيل وكلاء محليين بنقرة واحدة', 'الترخيص': 'Apache 2.0' },
         ],
         note: 'دليل أكثر تفصيلاً: [LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -3506,6 +3506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['도구', '링크', '설명', '라이선스'],
         rows: [
           { '도구': '**LM Studio**', '링크': '[lmstudio.ai](https://lmstudio.ai)', '설명': '가장 세련된 GUI, HuggingFace 모델 탐색기 내장, 서버 모드', '라이선스': '무료(비공개)' },
+          { '도구': '**Atomic Chat**', '링크': '[atomic.chat](https://atomic.chat)', '설명': '데스크톱과 모바일용 오프라인 채팅 앱, 원클릭으로 로컬 에이전트 실행', '라이선스': 'Apache 2.0' },
           { '도구': '**Jan**', '링크': '[jan.ai](https://jan.ai)', '설명': '프라이버시 중심의 오프라인 ChatGPT 클론, 완전 오픈소스', '라이선스': 'AGPL 3.0' },
           { '도구': '**GPT4All**', '링크': '[nomic.ai/gpt4all](https://nomic.ai/gpt4all)', '설명': '강력한 CPU 전용 지원을 갖춘 입문자 친화적 앱', '라이선스': 'MIT' },
           { '도구': '**AnythingLLM**', '링크': '[anythingllm.com](https://anythingllm.com)', '설명': '내장 벡터 저장소를 갖춘 RAG 및 문서 채팅', '라이선스': 'MIT' },
@@ -3515,7 +3516,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**Enchanted**', '링크': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '설명': '최소한의 macOS/iOS 네이티브 Ollama 클라이언트', '라이선스': 'Apache 2.0' },
           { '도구': '**h2oGPT**', '링크': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '설명': '많은 엔터프라이즈 기능을 갖춘 데스크톱 및 서버', '라이선스': 'Apache 2.0' },
           { '도구': '**Open Interpreter**', '링크': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '설명': '로컬 LLM이 컴퓨터를 제어하고 코드를 실행하도록 허용', '라이선스': 'AGPL 3.0' },
-          { '도구': '**Atomic Chat**', '링크': '[atomic.chat](https://atomic.chat)', '설명': '데스크톱과 모바일용 오프라인 채팅 앱, 원클릭으로 로컬 에이전트 실행', '라이선스': 'Apache 2.0' },
         ],
         note: '상세 비교 가이드: [LM Studio vs Jan vs GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
