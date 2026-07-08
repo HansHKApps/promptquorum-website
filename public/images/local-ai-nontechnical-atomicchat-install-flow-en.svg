@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Atomic Chat — From Download to First Chat in ~5 Clicks</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">The same install flow works on desktop and on iPhone &amp; Android</text>
+  <!-- Step 1 -->
+  <circle cx="108" cy="118" r="26" fill="#6750A4"/>
+  <text x="108" y="127" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="108" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Download</text>
+  <text x="108" y="187" font-family="'SF Mono',Monaco,monospace" font-size="10" fill="#49454F" text-anchor="middle">atomic.chat</text>
+  <!-- Arrow -->
+  <text x="188" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="22" fill="#6750A4" text-anchor="middle">→</text>
+  <!-- Step 2 -->
+  <circle cx="304" cy="118" r="26" fill="#6750A4"/>
+  <text x="304" y="127" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="304" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Install</text>
+  <text x="304" y="187" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Accept defaults</text>
+  <!-- Arrow -->
+  <text x="384" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="22" fill="#6750A4" text-anchor="middle">→</text>
+  <!-- Step 3 -->
+  <circle cx="496" cy="118" r="26" fill="#6750A4"/>
+  <text x="496" y="127" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="496" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Pick a model</text>
+  <text x="496" y="187" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Llama 3.2 3B / Gemma 3 4B</text>
+  <!-- Arrow -->
+  <text x="592" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="22" fill="#6750A4" text-anchor="middle">→</text>
+  <!-- Step 4 -->
+  <circle cx="692" cy="118" r="26" fill="#34A853"/>
+  <text x="692" y="127" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="692" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Chat</text>
+  <text x="692" y="187" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Fully offline</text>
+  <!-- Footer banner -->
+  <rect x="22" y="216" width="756" height="34" rx="6" fill="#F7F2FA"/>
+  <text x="400" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">Apache 2.0 open source · Runs the model on the device itself · No terminal, no account, no cloud</text>
+  <!-- Attribution -->
+  <text x="400" y="283" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-ai-app-non-technical-users</text>
+</svg>

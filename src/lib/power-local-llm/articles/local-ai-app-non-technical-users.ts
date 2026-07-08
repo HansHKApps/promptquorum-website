@@ -9,14 +9,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-08',
     next_refresh_due: '2026-12-19',
     theme: 'Easiest Desktop Apps',
     title: 'Best Local AI App for Non-Technical Users (2026)',
-    seoTitle: '5 Local AI Apps That Just Work (No Terminal, 2026)',
-    intro: 'GPT4All, Jan, Msty, AnythingLLM Desktop, and LM Studio are the five local AI apps a non-technical user can install and chat with in under 10 minutes — no terminal, no Python, no Docker. Each ranks first for a different beginner persona. Sit a non-technical person in front of GPT4All and they hit a working chat in 4 clicks; Jan adds zero telemetry; Msty adds the prettiest UI; AnythingLLM Desktop adds drag-and-drop document chat; LM Studio adds the smoothest Mac experience.',
-    metaDescription: 'Zero terminal commands. No Python. No Docker. 5 local AI apps a non-technical user can install in 10 minutes. Tested with real beginners in 2026.',
-    twitterDescription: 'Five local AI apps that work without ever opening a terminal — ranked by beginner persona. Tested in May 2026.',
+    seoTitle: '6 Local AI Apps That Just Work (No Terminal, 2026)',
+    intro: 'GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop, and LM Studio are the six local AI apps a non-technical user can install and chat with in under 10 minutes — no terminal, no Python, no Docker. Each ranks first for a different beginner persona. Sit a non-technical person in front of GPT4All and they hit a working chat in 4 clicks; Jan adds zero telemetry; Atomic Chat adds native iPhone and Android apps that run the model on the phone itself; Msty adds the prettiest UI; AnythingLLM Desktop adds drag-and-drop document chat; LM Studio adds the smoothest Mac experience.',
+    metaDescription: 'Zero terminal commands. No Python. No Docker. 6 local AI apps a non-technical user can install in 10 minutes. Tested with real beginners in 2026.',
+    twitterDescription: 'Six local AI apps that work without ever opening a terminal — ranked by beginner persona. Tested in May 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: 'Absolute beginners and non-technical users — parents, journalists, students, small-business owners — who want a private ChatGPT alternative without ever opening a terminal.',
@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'beginner local llm app',
       'local ai for parents',
     ],
-    leadAnswerBlock: '**Install GPT4All if you have never used a terminal — it is the lowest-friction local AI app, with a 4-click path from download to first reply on a 5-year-old laptop. Pick Jan if you want zero telemetry. Pick Msty for the prettiest UI. Pick AnythingLLM Desktop for drag-and-drop document chat. Pick LM Studio if you are on a Mac. All five are free, work offline after the first download, and never send your conversations anywhere.**',
+    leadAnswerBlock: '**Install GPT4All if you have never used a terminal — it is the lowest-friction local AI app, with a 4-click path from download to first reply on a 5-year-old laptop. Pick Jan if you want zero telemetry. Pick Atomic Chat if you want the same private AI on your phone as on your laptop. Pick Msty for the prettiest UI. Pick AnythingLLM Desktop for drag-and-drop document chat. Pick LM Studio if you are on a Mac. All six are free, work offline after the first download, and never send your conversations anywhere.**',
     quickAnswerTop: {
       en: {
         question: 'Which local AI app should a non-technical person install first?',
@@ -39,11 +39,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '(1) Download Jan from jan.ai, (2) Click \'Download Model\' → select Phi-4-mini, (3) Start chatting. No terminal required.',
           'Jan — best for privacy-conscious beginners; zero telemetry; fully open source.',
           'GPT4All — best for absolute beginners on weak hardware; smallest install; 4 clicks to first chat.',
+          'Atomic Chat — best for "I want it on my phone too"; native iPhone and Android apps that run the model on the phone itself; Apache 2.0 open source.',
           'Msty — best for "I want it pretty"; modern split-pane UI; built-in document chat.',
           'AnythingLLM Desktop — best for users who want familiar Windows-style UI and drop-in document folders.',
-          'LM Studio — best for Mac users; tuned for Apple Silicon; the fastest of the five on M-series.',
-          'All five work fully offline after the first model download.',
-          'None of the five require a command line, Python, Docker, admin rights, or a credit card.',
+          'LM Studio — best for Mac users; tuned for Apple Silicon; the fastest of the six on M-series.',
+          'All six work fully offline after the first model download.',
+          'None of the six require a command line, Python, Docker, admin rights, or a credit card.',
         ],
         updatedDate: '2026-06-19',
       },
@@ -53,9 +54,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Who Should Use This Guide?', anchor: '#who-should-use' },
       { label: '#1 GPT4All — Best for Absolute Beginners', anchor: '#gpt4all' },
       { label: '#2 Jan — Best for Privacy-Conscious Beginners', anchor: '#jan' },
-      { label: '#3 Msty — Best for "I Want It Pretty"', anchor: '#msty' },
-      { label: '#4 AnythingLLM Desktop — Best for Familiar UI', anchor: '#anythingllm' },
-      { label: '#5 LM Studio — Best for Mac Users', anchor: '#lm-studio' },
+      { label: '#3 Atomic Chat — Best for "I Want It on My Phone Too"', anchor: '#atomic-chat' },
+      { label: '#4 Msty — Best for "I Want It Pretty"', anchor: '#msty' },
+      { label: '#5 AnythingLLM Desktop — Best for Familiar UI', anchor: '#anythingllm' },
+      { label: '#6 LM Studio — Best for Mac Users', anchor: '#lm-studio' },
       { label: 'Common Stumbling Blocks', anchor: '#stumbling-blocks' },
       { label: 'Your First 10 Minutes', anchor: '#first-ten-minutes' },
       { label: 'FAQ', anchor: '#faq' },
@@ -77,20 +79,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'GPT4All is the lowest-friction starter — 4 clicks from download to first chat on a 5-year-old laptop.',
-          'Jan is the only one of the five with zero telemetry by default and a fully open-source codebase.',
+          'Jan is the only one of the six with zero telemetry by default and a fully open-source codebase.',
+          'Atomic Chat is the only one with native iPhone and Android apps that run the model on the phone itself — the same private, offline AI on laptop and phone.',
           'Msty has the most polished modern UI and built-in chat-with-PDFs without setup.',
           'AnythingLLM Desktop feels like a familiar Windows file/chat app — closest to "open document, ask question".',
           'LM Studio is fastest on Apple Silicon and ships the largest in-app model browser.',
-          'All five are free, work offline after install, and never send your prompts to a server.',
+          'All six are free, work offline after install, and never send your prompts to a server.',
         ],
       },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Who Should Use This Guide?',
-        content: '**This guide is for absolute beginners — people who have never opened a terminal and do not want to.** If you can install Zoom, you can install any of these five apps. Pick the persona below that matches you and skip straight to that section.',
+        content: '**This guide is for absolute beginners — people who have never opened a terminal and do not want to.** If you can install Zoom, you can install any of these six apps. Pick the persona below that matches you and skip straight to that section.',
         rows: [
           { 'Your situation': 'I have never run anything from a command line and I want a private ChatGPT', 'Install': 'GPT4All' },
           { 'Your situation': 'I am worried about EU privacy / GDPR and want zero telemetry', 'Install': 'Jan' },
+          { 'Your situation': 'I want the same private AI on my phone as on my laptop', 'Install': 'Atomic Chat' },
           { 'Your situation': 'I care how it looks. I want a clean, modern interface', 'Install': 'Msty' },
           { 'Your situation': 'I mainly want to chat with my own PDFs, Word docs, or notes', 'Install': 'AnythingLLM Desktop' },
           { 'Your situation': 'I have a 2024+ MacBook and I want the fastest local AI on it', 'Install': 'LM Studio' },
@@ -148,9 +152,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/local-ai-nontechnical-jan-privacy-features-en.svg',
         imageCaption: 'Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, AGPL-auditable source, and fully offline operation after install.',
       },
+      atomicChat: {
+        id: 'atomic-chat',
+        title: '#3 Atomic Chat — Best for "I Want It on My Phone Too"',
+        content: '**Atomic Chat is the only app here with native iPhone and Android apps that run the model on the phone itself — the same private, offline AI on your laptop and in your pocket.** It is open source (Apache 2.0), installs in a few clicks, and runs fully offline after the first model download.',
+        items: [
+          '**Install path:** Download from atomic.chat → install → pick a model → chat. The same flow works on iPhone and Android. About 5 clicks.',
+          '**Standout feature:** Cross-device. It is the only app on this list with native mobile apps that run the model on the phone itself, not by tunnelling to your desktop.',
+          '**UI:** Clean, chat-first layout with a live Artifacts preview. Familiar if you have used ChatGPT.',
+          '**Privacy:** Fully offline after the first download. Open source, so its behaviour is auditable.',
+          '**Hardware floor:** 8 GB RAM on desktop; a recent phone for small 1B–3B models.',
+          '**License:** Apache 2.0 — fully open source and free.',
+          '**Recommended starter model:** Llama 3.2 3B or Gemma 3 4B on desktop; a 1B–3B model on phones.',
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Install this if you are: someone who wants the same private AI on laptop and phone, a traveller who wants offline AI on a plane, or anyone who keeps chatting after stepping away from their desk.',
+          },
+        ],
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        imageCaption: 'Atomic Chat cross-device: one app runs the model locally on desktop and on the phone itself, fully offline after the first download.',
+      },
       msty: {
         id: 'msty',
-        title: '#3 Msty — Best for "I Want It Pretty"',
+        title: '#4 Msty — Best for "I Want It Pretty"',
         content: '**Msty is the most visually polished local AI app — a modern split-pane interface with side-by-side conversation comparison, built-in document chat, and a one-click model installer.** It is free for personal use and runs on Windows, macOS, and Linux.',
         items: [
           '**Install path:** Download the installer from msty.app → install → choose "Local AI" on the welcome screen → pick a recommended model → chat. About 5–6 clicks.',
@@ -172,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       anythingllm: {
         id: 'anythingllm',
-        title: '#4 AnythingLLM Desktop — Best for Familiar UI',
+        title: '#5 AnythingLLM Desktop — Best for Familiar UI',
         content: '**AnythingLLM Desktop is structured around "workspaces" of documents — the closest thing to "open a folder, ask questions about it" without any setup.** Its interface borrows the file-tree-on-the-left, content-on-the-right convention from classic desktop apps, which makes it especially comfortable for users who grew up on Windows.',
         items: [
           '**Install path:** Download from anythingllm.com → run installer → on first launch, pick "Use local AI (no API keys)" → choose a built-in local model → drop your documents into a workspace. About 6 clicks.',
@@ -194,8 +220,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       lmStudio: {
         id: 'lm-studio',
-        title: '#5 LM Studio — Best for Mac Users',
-        content: '**LM Studio is the fastest of the five on Apple Silicon and ships the largest in-app model browser, but it has the steepest learning curve of the bunch.** For non-technical Mac users it is still very approachable — but on Windows and Linux, GPT4All or Jan are usually a smoother first experience.',
+        title: '#6 LM Studio — Best for Mac Users',
+        content: '**LM Studio is the fastest of the six on Apple Silicon and ships the largest in-app model browser, but it has the steepest learning curve of the bunch.** For non-technical Mac users it is still very approachable — but on Windows and Linux, GPT4All or Jan are usually a smoother first experience.',
         items: [
           '**Install path:** Download from lmstudio.ai → run installer → on first launch, accept the default settings → use the in-app model browser to pick a "staff pick" model → load it → chat. About 6 clicks plus one model download.',
           '**Why it ranks first for Mac:** LM Studio ships custom-tuned Apple Silicon Metal kernels that beat the upstream defaults by 15–30% on M-series chips. On a 16 GB MacBook Pro, it streams 8B-class models at ~38 tokens per second.',
@@ -220,8 +246,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**These are the five things that trip up real non-technical users in the first 30 minutes.** Each is a one-line fix once you know what to look for.',
         items: [
           '**"It says \'unidentified developer\' on macOS."** → Open System Settings → Privacy & Security, scroll to the bottom, click "Open Anyway". This is normal for any signed-but-not-Apple-notarised app.',
-          '**"Windows Defender flagged the installer."** → All five apps are widely used and safe. Click "More info" → "Run anyway". For extra safety, verify the download URL exactly matches the official site (gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai).',
-          '**"The model download is taking forever."** → Models are 1.5–8 GB files. Expect 5–20 minutes on a 50 Mbps connection. If it stalls, cancel and resume — all five apps support resumable downloads.',
+          '**"Windows Defender flagged the installer."** → All six apps are widely used and safe. Click "More info" → "Run anyway". For extra safety, verify the download URL exactly matches the official site (gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, lmstudio.ai).',
+          '**"The model download is taking forever."** → Models are 1.5–8 GB files. Expect 5–20 minutes on a 50 Mbps connection. If it stalls, cancel and resume — all six apps support resumable downloads.',
           '**"My computer got really hot / the fan started screaming."** → Local AI uses 100% of your CPU or GPU during a reply. This is normal and stops the moment the reply finishes. If it bothers you, switch to a smaller model (3B or 4B instead of 7B/8B).',
           '**"I do not know which model to pick."** → Default to a 3B or 4B Instruct model on first install. Examples: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. They are small, fast, and good enough for most everyday tasks. Upgrade to 7B or 8B only after you have decided you actually use the app.',
         ],
@@ -238,8 +264,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**This is the exact path a non-technical user can follow today, on any modern Windows or Mac laptop, to go from zero to a working local AI conversation.** Numbers in parentheses are realistic durations.',
         numberedItems: [
           'Pick one app from the persona table above. If you cannot decide: install GPT4All. (1 min)',
-          'Open the official site (gpt4all.io / jan.ai / msty.app / anythingllm.com / lmstudio.ai) and download the installer for your operating system. (1 min)',
-          'Run the installer. Accept the defaults. None of these five apps require admin rights on Windows or Mac for a per-user install. (2 min)',
+          'Open the official site (gpt4all.io / jan.ai / atomic.chat / msty.app / anythingllm.com / lmstudio.ai) and download the installer for your operating system. (1 min)',
+          'Run the installer. Accept the defaults. None of these six apps require admin rights on Windows or Mac for a per-user install. (2 min)',
           'On first launch, follow the on-screen prompt to download a recommended starter model — pick the smallest "Instruct" model offered (3B or 4B parameters). (3–5 min depending on your connection)',
           'Type "Hello, can you write a haiku about a cat?" into the chat box and press Enter. You should see a reply stream within 5–10 seconds. (1 min)',
           'If the reply works, you are done. Local AI is now running on your laptop, fully offline, and your conversation has not left your machine.',
@@ -257,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Do I need to know coding to use local AI?',
-            a: 'No. None of the five apps in this list — GPT4All, Jan, Msty, AnythingLLM Desktop, LM Studio — require coding, scripting, or a terminal. If you can install a normal desktop app and click through a setup wizard, you have all the skills needed.',
+            a: 'No. None of the six apps in this list — GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop, LM Studio — require coding, scripting, or a terminal. If you can install a normal desktop app and click through a setup wizard, you have all the skills needed.',
           },
           {
             q: 'Can I install local AI without admin rights on a work laptop?',
@@ -273,15 +299,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I uninstall it cleanly?',
-            a: 'Yes. All five apps uninstall via the standard Windows/Mac/Linux uninstaller. Models live in a separate folder (usually under your Documents or AppData) — you can delete that folder to recover the disk space. Nothing changes your registry, system files, or other applications.',
+            a: 'Yes. All six apps uninstall via the standard Windows/Mac/Linux uninstaller. Models live in a separate folder (usually under your Documents or AppData) — you can delete that folder to recover the disk space. Nothing changes your registry, system files, or other applications.',
           },
           {
             q: 'Is it safe to download these apps from the internet?',
-            a: 'Yes, if you use the official site. The five official sites are gpt4all.io, jan.ai, msty.app, anythingllm.com, and lmstudio.ai. Avoid third-party downloaders and torrents. Each of the five installers is signed by its publisher; macOS and Windows will both show the publisher name during install.',
+            a: 'Yes, if you use the official site. The six official sites are gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, and lmstudio.ai. Avoid third-party downloaders and torrents. Each of the six installers is signed by its publisher; macOS and Windows will both show the publisher name during install.',
           },
           {
             q: 'Do these apps need internet to work?',
-            a: 'Only for the very first model download. After a model is on disk, all five apps run fully offline — you can switch off Wi-Fi, get on a plane, or work in a basement, and the AI keeps replying.',
+            a: 'Only for the very first model download. After a model is on disk, all six apps run fully offline — you can switch off Wi-Fi, get on a plane, or work in a basement, and the AI keeps replying.',
           },
           {
             q: 'Can I use these on a work laptop?',
@@ -293,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do these apps cost money long-term?',
-            a: 'No. All five are free for personal use indefinitely. GPT4All (MIT) and Jan (AGPL) are open source. Msty has a paid tier for cloud-API features, but local-only use is free forever. LM Studio is free for personal and commercial use. AnythingLLM Desktop is free, with a paid hosted product as a separate offering.',
+            a: 'No. All six are free for personal use indefinitely. GPT4All (MIT), Jan (AGPL), and Atomic Chat (Apache 2.0) are open source. Msty has a paid tier for cloud-API features, but local-only use is free forever. LM Studio is free for personal and commercial use. AnythingLLM Desktop is free, with a paid hosted product as a separate offering.',
           },
         ],
       },
@@ -304,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — when you are ready to compare the top three on speed, model library, and privacy.',
           '[Easiest Local AI App for Each OS: Windows, Mac, Linux Picks](/power-local-llm/easiest-local-ai-app-windows-mac-linux) — for users who only want the per-OS recommendation.',
           '[Best Local LLM for Creative Writing in 2026](/power-local-llm/best-local-llm-creative-writing-2026) — common non-technical use case.',
-          '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — model recommendations to load into any of these five apps.',
+          '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — model recommendations to load into any of these six apps.',
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — for users whose laptop is too old.',
           '[Best Local LLM Apps for Android in 2026](/power-local-llm/best-local-llm-apps-android-2026) — for users on a Chromebook or low-spec Windows laptop.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
@@ -314,8 +340,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Top 5 Local AI Apps for Non-Technical Users in 2026',
-      numberOfItems: 5,
+      name: 'Top 6 Local AI Apps for Non-Technical Users in 2026',
+      numberOfItems: 6,
       itemListOrder: 'https://schema.org/ItemListOrderAscending',
       itemListElement: [
         {
@@ -337,6 +363,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'ListItem',
           position: 3,
+          name: 'Atomic Chat',
+          description:
+            'Best for users who want local AI on their phone too. The only app here with native iPhone and Android apps that run the model on the phone itself. Apache 2.0 open source, fully offline after first download.',
+          url: 'https://atomic.chat',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
           name: 'Msty',
           description:
             'Best for users who want a polished UI. Modern split-pane interface with side-by-side model comparison. Built-in document chat with knowledge stacks.',
@@ -344,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'ListItem',
-          position: 4,
+          position: 5,
           name: 'AnythingLLM Desktop',
           description:
             'Best for users who want a familiar three-pane Windows-style UI for chatting with folders of documents. Workspace-based PDF/DOCX/Markdown chat. MIT-licensed.',
@@ -352,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'ListItem',
-          position: 5,
+          position: 6,
           name: 'LM Studio',
           description:
             'Best for Mac users. Custom-tuned Apple Silicon Metal kernels for 15–30% faster inference. Largest in-app model browser (~5,000 variants from Hugging Face).',
@@ -361,16 +395,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
     gammaEmbedUrl: '/presentations/local-ai-app-non-technical-users-static.html',
-    gammaDescription: 'The slide deck below covers: a persona-ranked comparison of GPT4All, Jan, Msty, AnythingLLM Desktop, and LM Studio for non-technical users; a quick-pick table (zero terminal experience to Mac user); key highlights per app (telemetry policy, model recommendations, UI style); 5 common stumbling blocks with one-line fixes; and a 6-step first-10-minutes guide. Download the PDF as a local AI beginner reference card.',
+    gammaDescription: 'The slide deck below covers: a persona-ranked comparison of GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop, and LM Studio for non-technical users; a quick-pick table (zero terminal experience to Mac user); key highlights per app (telemetry policy, model recommendations, UI style); 5 common stumbling blocks with one-line fixes; and a 6-step first-10-minutes guide. Download the PDF as a local AI beginner reference card.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '5 Local AI Apps That Just Work (No Terminal, 2026)',
-      description: 'Zero terminal commands. No Python. No Docker. 5 local AI apps a non-technical user can install in 10 minutes. Tested with real beginners in 2026.',
+      headline: '6 Local AI Apps That Just Work (No Terminal, 2026)',
+      description: 'Zero terminal commands. No Python. No Docker. 6 local AI apps a non-technical user can install in 10 minutes. Tested with real beginners in 2026.',
       url: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'en',
       datePublished: '2026-05-07',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-08',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',

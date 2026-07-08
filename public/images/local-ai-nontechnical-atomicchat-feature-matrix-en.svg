@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Atomic Chat vs Typical Desktop-Only Local AI Apps</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">What a native mobile local AI app adds over a desktop-only one</text>
+  <!-- Highlight column background for Atomic Chat -->
+  <rect x="430" y="62" width="150" height="188" rx="6" fill="#F7F2FA"/>
+  <!-- Header row -->
+  <text x="40" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Capability</text>
+  <text x="505" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Atomic Chat</text>
+  <text x="680" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Desktop-only app</text>
+  <line x1="22" y1="90" x2="778" y2="90" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Row 1 -->
+  <text x="40" y="115" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Native iPhone &amp; Android app</text>
+  <text x="505" y="115" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓</text>
+  <text x="680" y="115" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#EA4335" text-anchor="middle">✗</text>
+  <line x1="22" y1="124" x2="778" y2="124" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 2 -->
+  <text x="40" y="149" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Model runs on the phone itself</text>
+  <text x="505" y="149" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓</text>
+  <text x="680" y="149" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#EA4335" text-anchor="middle">✗</text>
+  <line x1="22" y1="158" x2="778" y2="158" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 3 -->
+  <text x="40" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Fully offline after first download</text>
+  <text x="505" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓</text>
+  <text x="680" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓</text>
+  <line x1="22" y1="192" x2="778" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 4 -->
+  <text x="40" y="217" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">License</text>
+  <text x="505" y="217" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">Apache 2.0</text>
+  <text x="680" y="217" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Varies</text>
+  <line x1="22" y1="226" x2="778" y2="226" stroke="#F7F2FA" stroke-width="1"/>
+  <!-- Row 5 -->
+  <text x="40" y="245" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F">Clicks to first chat</text>
+  <text x="505" y="245" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#1C1B1F" text-anchor="middle">~5</text>
+  <text x="680" y="245" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">~4–6</text>
+  <!-- Attribution -->
+  <text x="400" y="283" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-ai-app-non-technical-users</text>
+</svg>
