@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 295" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="295" fill="#FFFFFF"/>
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Atomic Chat — La même IA locale sur ordinateur et téléphone</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Apache 2.0 open source · Le modèle s'exécute sur l'appareil lui-même · Entièrement hors ligne après le premier téléchargement</text>
+  <!-- Left panel: Desktop -->
+  <rect x="22" y="62" width="354" height="198" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="22" y="62" width="354" height="4" rx="0" fill="#6750A4"/>
+  <text x="199" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Ordinateur — Windows · macOS · Linux</text>
+  <!-- laptop glyph -->
+  <rect x="156" y="104" width="86" height="52" rx="4" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <rect x="144" y="158" width="110" height="6" rx="3" fill="#6750A4"/>
+  <text x="199" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">MODÈLE</text>
+  <text x="44" y="190" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F"><tspan fill="#34A853" font-weight="700">✓</tspan>  Minimum 8 GB de RAM, pas de GPU requis</text>
+  <text x="44" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F"><tspan fill="#34A853" font-weight="700">✓</tspan>  Llama 3.2 3B / Gemma 3 4B</text>
+  <text x="44" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F"><tspan fill="#34A853" font-weight="700">✓</tspan>  Aperçu Artifacts en direct</text>
+  <!-- Right panel: Phone -->
+  <rect x="424" y="62" width="354" height="198" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <rect x="424" y="62" width="354" height="4" rx="0" fill="#7D5260"/>
+  <text x="601" y="87" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#7D5260" text-anchor="middle">Téléphone — iPhone &amp; Android natifs</text>
+  <!-- phone glyph -->
+  <rect x="581" y="102" width="40" height="66" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+  <text x="601" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#7D5260" text-anchor="middle">MODÈLE</text>
+  <text x="446" y="190" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F"><tspan fill="#34A853" font-weight="700">✓</tspan>  Le modèle s'exécute sur le téléphone lui-même</text>
+  <text x="446" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F"><tspan fill="#34A853" font-weight="700">✓</tspan>  Modèle 1B–3B sur un téléphone récent</text>
+  <text x="446" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F"><tspan fill="#34A853" font-weight="700">✓</tspan>  IA hors ligne dans l'avion</text>
+  <!-- Footer -->
+  <text x="400" y="283" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/power-local-llm/local-ai-app-non-technical-users</text>
+</svg>

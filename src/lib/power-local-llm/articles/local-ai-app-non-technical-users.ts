@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: jemand sind, der dieselbe private KI auf Laptop und Telefon möchte, ein Reisender, der offline KI im Flugzeug möchte, oder jemand, der weiter chattet, nachdem er den Schreibtisch verlassen hat.',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-de.svg',
         imageCaption: 'Atomic Chat geräteübergreifend: eine App führt das Modell lokal auf dem Desktop und auf dem Telefon selbst aus, vollständig offline nach dem ersten Download.',
       },
       msty: {
@@ -965,7 +965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : quelqu\'un qui veut la même IA privée sur portable et téléphone, un voyageur qui veut de l\'IA hors ligne dans un avion, ou toute personne qui continue à discuter après avoir quitté son bureau.',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-fr.svg',
         imageCaption: 'Atomic Chat multi-appareils : une seule app exécute le modèle localement sur ordinateur de bureau et sur le téléphone lui-même, entièrement hors ligne après le premier téléchargement.',
       },
       msty: {
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：ラップトップとスマホで同じプライベートAIを使いたい人、飛行機の中でオフラインAIを使いたい旅行者、デスクを離れてもチャットを続けたい人。',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-ja.svg',
         imageCaption: 'Atomic Chatのクロスデバイス：1つのアプリがデスクトップでもスマホ自体でもモデルをローカルで動かし、最初のダウンロード後は完全にオフラインで動作します。',
       },
       msty: {
@@ -1751,7 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：想在笔记本和手机上使用相同私密AI的人、想在飞机上使用离线AI的旅行者，或离开办公桌后仍继续聊天的人。',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-zh.svg',
         imageCaption: 'Atomic Chat跨设备：一个应用在桌面和手机本机上本地运行模型，首次下载后完全离线。',
       },
       msty: {
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: alguien que quiere la misma IA privada en el portátil y en el teléfono, un viajero que quiere IA sin conexión en un avión, o cualquier persona que sigue chateando después de levantarse de su escritorio.',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-es.svg',
         imageCaption: 'Atomic Chat multidispositivo: una app ejecuta el modelo localmente en el escritorio y en el propio teléfono, completamente sin conexión tras la primera descarga.',
       },
       msty: {
@@ -2538,7 +2538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instale este se você é: alguém que quer a mesma IA privada no notebook e no celular, um viajante que quer IA offline em um avião, ou qualquer pessoa que continua conversando depois de sair da mesa.',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-pt.svg',
         imageCaption: 'Atomic Chat multidispositivo: um app roda o modelo localmente no desktop e no próprio celular, totalmente offline após o primeiro download.',
       },
       msty: {
@@ -2945,7 +2945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ثبّت هذا إن كنت: شخصاً يريد نفس الذكاء الاصطناعي الخاص على الحاسوب المحمول والهاتف، أو مسافراً يريد ذكاءً اصطناعياً بدون اتصال على متن طائرة، أو أي شخص يواصل الدردشة بعد الابتعاد عن مكتبه.',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-ar.svg',
         imageCaption: 'Atomic Chat عبر الأجهزة: تطبيق واحد يُشغّل النموذج محلياً على سطح المكتب وعلى الهاتف نفسه، بالكامل بدون اتصال بعد التنزيل الأول.',
       },
       msty: {
@@ -3352,7 +3352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '이 앱을 설치하세요: 노트북과 휴대폰에서 동일한 개인 AI를 원하는 분, 비행기에서 오프라인 AI를 사용하고 싶은 여행자, 또는 책상을 떠난 후에도 계속 대화하는 분.',
           },
         ],
-        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-en.svg',
+        image: '/images/local-ai-nontechnical-atomicchat-crossdevice-ko.svg',
         imageCaption: 'Atomic Chat 크로스 디바이스: 하나의 앱이 데스크톱과 휴대폰 자체에서 모델을 로컬로 실행하며, 최초 다운로드 후 완전 오프라인으로 작동합니다.',
       },
       msty: {
