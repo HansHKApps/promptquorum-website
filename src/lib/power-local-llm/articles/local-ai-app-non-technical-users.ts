@@ -1,6 +1,6 @@
 // Power Local LLM — Article 1.3 (Local AI for Non-Technical Users)
 // Slug: local-ai-app-non-technical-users
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// Fully localized: en, de, fr, ja, zh, es, pt, ar, ko.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
