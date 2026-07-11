@@ -177,6 +177,18 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // The desktop app fetches this on launch to check for newer versions.
+        // Must be public, CORS-open for the Electron client, and short-cached
+        // so version bumps propagate within minutes (overrides the catch-all
+        // `/:path*` Cache-Control above — last matching rule wins).
+        source: '/version.json',
+        headers: [
+          { key: 'Content-Type', value: 'application/json; charset=utf-8' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Cache-Control', value: 'public, max-age=300, s-maxage=300' },
+        ],
+      },
     ]
   },
 }

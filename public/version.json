@@ -1,0 +1,9 @@
+{
+  "currentVersion": "0.1.0",
+  "minimumSupportedVersion": "0.1.0",
+  "downloadUrl": "https://promptquorum.com/download",
+  "message": {
+    "en": "A newer free version of PromptQuorum is available.",
+    "de": "Eine neuere kostenlose Version von PromptQuorum ist verfügbar."
+  }
+}
