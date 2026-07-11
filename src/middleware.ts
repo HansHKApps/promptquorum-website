@@ -72,6 +72,21 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 301)
   }
 
+  // COST FIX: an already-locale-prefixed page (/de/…, /fr/…, etc.) with no ?lang
+  // override needs none of the work below. Locale is resolved from the literal
+  // /<locale>/ route segment, and nothing server-side reads x-selected-lang
+  // (root layout deliberately avoids headers() — see the June caching outage
+  // note). The only thing the terminal block does for these requests is attach a
+  // pq_lang Set-Cookie, which marks the response uncacheable and turns every
+  // force-static localized hub/article view into a fresh function invocation.
+  // The impressum, stacked-locale, and framework redirects above still run first,
+  // so malformed locale-prefixed paths are normalised before we bail here.
+  // Returning an untouched response lets the Edge CDN serve the cached static
+  // HTML (cache-control: public, x-vercel-cache: HIT).
+  if (PATH_LOCALE_RE.test(url.pathname) && langParam === null && !isApiRoute && !isCronRoute) {
+    return NextResponse.next()
+  }
+
   // LANG PARAM REDIRECT: convert any ?lang=XX URL to the canonical subdirectory form.
   // ?lang=en or unrecognised lang → strip param, stay at current path.
   // ?lang=jp normalised to ja (country-code alias).
@@ -155,7 +170,10 @@ export function middleware(request: NextRequest) {
   return response
 }
 
-// Run middleware on all routes
+// Run middleware on page routes only. Exclude Next internals, the /lib analytics
+// proxy, API/cron routes, and any static file (anything ending in an extension:
+// robots.txt, sitemap.xml, version.json, OG images, …). None need locale
+// handling, and all were paying an Edge Middleware invocation per request.
 export const config = {
-  matcher: '/:path*',
+  matcher: ['/((?!api/|cron/|_next/|lib/|.*\\.[a-zA-Z0-9]+$).*)'],
 }
