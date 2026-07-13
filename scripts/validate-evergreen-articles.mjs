@@ -87,6 +87,36 @@ function isPureLinkLine(line) {
 // freshness claim. Only exempt this specific, narrow phrase pattern.
 const ELECTRICAL_CURRENT = /\b(?:direct|alternating)\s+current\b/gi
 
+// Quality-scoring-rubric thresholds (e.g. "1.5+ score on a 0–2 scale") are
+// bare decimals that match the version_numbers pattern but aren't model
+// versions. Site content phrases these consistently across languages —
+// immediately followed by '+' or an "or higher/or above" word, or preceded
+// by a "below/under" word, all within a short window of the number. Tokens
+// below were extracted directly from the real 2026-07 false-positive case
+// (pe-for-content-teams.ts, all 9 language blocks) — narrow and testable,
+// not a general "any number near these words" loosening: this guard only
+// applies to the version_numbers pattern, checked in a tight ±20-char
+// window around each individual match, so it can't suppress a version
+// number (e.g. "Gemini 2.5") that merely happens to share a sentence with
+// one of these words further away.
+const SCORING_THRESHOLD_CONTEXT = new RegExp(
+  [
+    '+', 'or higher', 'or above', 'below',
+    'o superior', 'inferior a', 'debajo de', 'superior a',
+    '以上', '未満',
+    '或更高', '或以上',
+    'أو أعلى', 'دون', 'أعلى من',
+    '이상', '미만',
+  ].map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'),
+  'i'
+)
+
+function isScoringThreshold(line, matchIndex, matchLength) {
+  const windowStart = Math.max(0, matchIndex - 20)
+  const windowEnd = Math.min(line.length, matchIndex + matchLength + 20)
+  return SCORING_THRESHOLD_CONTEXT.test(line.slice(windowStart, windowEnd))
+}
+
 function validateEvergreen(filePath, content) {
   const violations = [];
   const lines = content.split('\n');
@@ -132,6 +162,22 @@ function validateEvergreen(filePath, content) {
 
     // Check for forbidden patterns
     for (const [patternName, pattern] of Object.entries(FORBIDDEN_PATTERNS)) {
+      if (patternName === 'version_numbers') {
+        // Per-match check (not just first-match) so a scoring-threshold
+        // false positive earlier in the line doesn't mask a real version
+        // number later in the same line, and vice versa.
+        for (const m of scanLine.matchAll(pattern)) {
+          if (isScoringThreshold(scanLine, m.index, m[0].length)) continue
+          violations.push({
+            file: filePath,
+            line: lineNum,
+            pattern: patternName,
+            content: line.trim(),
+            match: m[0],
+          });
+        }
+        continue
+      }
       if (pattern.test(scanLine)) {
         const match = scanLine.match(pattern);
         violations.push({
