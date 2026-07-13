@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'プロンプトエンジニアリングは2020年のGPT-3周辺での非公式な実験から、2026年までに名付けられた技術とフレームワークを備えた構造化された分野へと進化しました。このタイムラインは、プロンプティングをコア スキルにした主要な突破口、研究論文、および転換点を追跡しています。',
       metaDescription: 'プロンプトエンジニアリングは7段階で進化（2020年GPT-3から2026年Context Design）。12以上の研究引用、マイルストーン表、分野が変わったが消滅しなかった理由の分析をまとめた完全タイムライン。',
       publishDate: '2026-03-01',
-      dateModified: '2026-05-03',
+      dateModified: '2026-07-13',
       readTime: '10分で読める',
       educationalLevel: 'Beginner',
       audience: 'プロンプトエンジニアリングの歴史とAI技術を学ぶ知識労働者と開発者',
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'GPT-2から現在まで：プロンプトエンジニアリングの進化',
         description: '2020年のGPT-3とフューショットプロンプティングから2026年のコンテキストデザインまで、プロンプトエンジニアリングの歴史。主要なマイルストーン、論文、ターニングポイント。',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/ja/prompt-engineering/how-prompt-engineering-evolved',
         inLanguage: 'ja',
         keywords: ['プロンプトエンジニアリング歴史', 'GPT-3 フューショット学習', 'Chain-of-Thought プロンプティング', 'ChatGPT', 'コンテキストエンジニアリング', 'プロンプトエンジニアリング タイムライン', 'InstructGPT', 'RLHF'],
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqTest: {
           title: 'PromptQuorum マルチモデルテスト：フレームワークのモデル間での効果',
           content: [
-            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-5.5、Claude Opus 4.8、Gemini 3.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
+            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-5.6、Claude Opus 4.8、Gemini 3.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
             'PromptQuorumは、この期間に正式化された9つのフレームワーク — CO-STAR、CRAFT、RISEN、SPECS、TRACE、その他4つ — を単一のインターフェースに統合し、実践者が毎回ゼロから構築することなく各構造を適用できるようにしています。',
           ],
         },

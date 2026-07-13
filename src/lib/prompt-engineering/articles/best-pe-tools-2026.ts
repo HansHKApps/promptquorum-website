@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       twitterDescription: 'Promptfoo is free. Braintrust starts at $249/mo. PromptQuorum dispatches to 25+ models. Which stack fits your team? Full breakdown.',
       intro: '**Six tools dominate prompt engineering in 2026: PromptQuorum for multi-model dispatch, Braintrust for evaluation, Vellum for production, Promptfoo for testing, PromptHub for versioning, LangSmith for observability — each solves a different bottleneck. This guide ranks them by job and shows which pairs work together.**',
       publishDate: '2026-04-10',
-      dateModified: '2026-06-14',
+      dateModified: '2026-07-13',
       lastFactChecked: '2026-06-14 — all pricing and features verified against official documentation',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         datePublished: '2026-04-10',
-        dateModified: '2026-06-14',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-tools-2026',
         inLanguage: 'en',
         proficiencyLevel: 'Intermediate',
@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'HowToStep', position: 2, name: 'Start free', text: 'Sign up for PromptQuorum (multi-model comparison, free tier) and install Promptfoo (CI/CD testing, open-source). Both are free and cover the two most common starting points: model selection and test coverage.' },
           { '@type': 'HowToStep', position: 3, name: 'Add versioning early', text: 'Set up PromptHub or Git-based version control before your team grows past two people editing prompts. Without versioning you cannot roll back a broken prompt in production.' },
           { '@type': 'HowToStep', position: 4, name: 'Add evaluation when quality matters', text: 'Integrate Braintrust when you need scored ground truth datasets and human-in-the-loop feedback on output quality — accuracy, tone, and factual correctness.' },
-          { '@type': 'HowToStep', position: 5, name: 'Add production tooling last', text: 'Deploy Vellum when you ship prompts to end users and need A/B testing, fallback chains (GPT-5.5 → Claude 4.8 Opus → Gemini), and a monitoring dashboard for latency and cost.' },
+          { '@type': 'HowToStep', position: 5, name: 'Add production tooling last', text: 'Deploy Vellum when you ship prompts to end users and need A/B testing, fallback chains (GPT-5.6 → Claude 4.8 Opus → Gemini), and a monitoring dashboard for latency and cost.' },
           { '@type': 'HowToStep', position: 6, name: 'Audit overlap quarterly', text: 'Review your full stack every quarter. If two tools cover the same function — for example Braintrust and Promptfoo both testing — drop the one with less ROI.' }
         ]
       },
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keyTakeaways: {
           isTldr: true,
           items: [
-            'PromptQuorum: Multi-model dispatch (compare GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro, and 25+ models side by side before evaluating, testing, or deploying)',
+            'PromptQuorum: Multi-model dispatch (compare GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro, and 25+ models side by side before evaluating, testing, or deploying)',
             'Braintrust: Evaluation + observability platform (LLM judges, human feedback, production tracing, CI/CD gates) — Free / $249/mo Pro',
             'Confident AI: Automated evaluation with 50+ built-in metrics and red teaming — $19.99/user/mo Starter',
             'Vellum: Production (A/B testing, deployment, monitoring dashboard)',
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         wherePromptQuorum: {
           id: 'where-promptquorum-fits',
           title: 'Where Does PromptQuorum Fit in This Stack?',
-          content: '**[PromptQuorum](/features) solves a bottleneck none of the five tools above address: dispatching one prompt to multiple AI models simultaneously and comparing outputs side by side.** Braintrust evaluates one model\'s output against ground truth. Vellum deploys one model to production. Promptfoo tests one model in CI/CD. PromptQuorum lets you see how GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro, and local models via Ollama answer the same prompt — before you commit to a model or a prompt version.\n\nThis makes PromptQuorum the natural first step in the workflow: compare models → pick the best → then evaluate (Braintrust), test (Promptfoo), version (PromptHub), and deploy (Vellum).',
+          content: '**[PromptQuorum](/features) solves a bottleneck none of the five tools above address: dispatching one prompt to multiple AI models simultaneously and comparing outputs side by side.** Braintrust evaluates one model\'s output against ground truth. Vellum deploys one model to production. Promptfoo tests one model in CI/CD. PromptQuorum lets you see how GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro, and local models via Ollama answer the same prompt — before you commit to a model or a prompt version.\n\nThis makes PromptQuorum the natural first step in the workflow: compare models → pick the best → then evaluate (Braintrust), test (Promptfoo), version (PromptHub), and deploy (Vellum).',
           items: [
             'Dispatches to 25+ models including local LLMs via Ollama',
             '9 built-in prompt frameworks (TRACE, CO-STAR, CRAFT, RISEN, RTF, and more)',
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         vellum: {
           id: 'vellum-production',
           title: 'What Is Vellum? Production Deployment, Workflow Builder, and Monitoring',
-          content: '**Vellum has expanded beyond production deployment into a full LLM development platform.** Core: A/B testing, canary rollouts, fallback chains (GPT-5.5 → Claude 4.8 Opus → Gemini), and a monitoring dashboard for latency and cost. Additions: drag-and-drop visual workflow builder, Python SDK for code-defined pipelines, document retrieval and RAG integration, LLM Leaderboard for model benchmarking, and AWS Marketplace listing for enterprise procurement.',
+          content: '**Vellum has expanded beyond production deployment into a full LLM development platform.** Core: A/B testing, canary rollouts, fallback chains (GPT-5.6 → Claude 4.8 Opus → Gemini), and a monitoring dashboard for latency and cost. Additions: drag-and-drop visual workflow builder, Python SDK for code-defined pipelines, document retrieval and RAG integration, LLM Leaderboard for model benchmarking, and AWS Marketplace listing for enterprise procurement.',
           items: [
             'Best for production deployment — A/B testing, canary rollouts, monitoring',
             'Visual workflow builder: drag-and-drop agent construction without writing pipeline code',
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'What Is Promptfoo? Open-Source CI/CD Testing at No Cost',
           content: '**Promptfoo is the best free option.** CLI tool, runs tests from YAML config, integrates with CI/CD, includes red teaming (jailbreak detection, toxicity scoring). Start here for testing without cost.',
           items: [
-            'Supports GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro, and local models via Ollama and LM Studio natively',
+            'Supports GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro, and local models via Ollama and LM Studio natively',
             'Best for free, self-hosted CI/CD testing',
             'Red teaming built-in: jailbreak and toxicity detection',
           'Acquired by OpenAI (March 2026); remains free, open-source, and self-hosted'
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How Do You Choose the Right Prompt Engineering Tool?',
           content: '**Pick tools based on your workflow stage. All teams: start with PromptQuorum to compare models, then add specialist tools for your bottleneck.**',
           items: [
-            '**All teams — model selection:** Start with PromptQuorum (free) to compare GPT-5.5, Claude 4.8 Opus, Gemini, and local models side by side before committing to a stack.',
+            '**All teams — model selection:** Start with PromptQuorum (free) to compare GPT-5.6, Claude 4.8 Opus, Gemini, and local models side by side before committing to a stack.',
             '**Startups (<10 people):** PromptQuorum + Promptfoo (free) + PromptHub (versioning). Graduate to Braintrust when eval quality is critical.',
             '**Shipping to production:** Vellum (deployment/monitoring) + Promptfoo (CI/CD testing) + Braintrust or Confident AI (offline evals)',
             '**LangChain-heavy:** LangSmith (required for chain tracing) + Promptfoo (unit tests) + Confident AI or Braintrust (offline evals)',
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   twitterDescription: 'Promptfoo ist kostenlos. Braintrust ab 249 $/Monat. PromptQuorum dispatcht an 25+ Modelle. Welcher Stack passt zu Ihrem Team?',
   intro: '**Sechs Tools dominieren das Prompt Engineering 2026: PromptQuorum für Multi-Modell-Dispatch, Braintrust für Evaluierung, Vellum für Produktion, Promptfoo für Tests, PromptHub für Versionierung, LangSmith für Observability — jedes löst einen anderen Engpass. Dieser Guide vergleicht sie nach Anwendungsfall und zeigt, welche Tool-Paare zusammenpassen.**',
   publishDate: '2026-04-10',
-  dateModified: '2026-06-14',
+  dateModified: '2026-07-13',
   lastFactChecked: '2026-06-03 — alle Preise und Features gegen offizielle Dokumentation geprüft',
   readTime: '9 Min. Lesezeit',
   educationalLevel: 'Intermediate',
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     wherePromptQuorum: {
       id: 'where-promptquorum-fits',
       title: 'Wo passt PromptQuorum hin?',
-      content: 'PromptQuorum löst das zentrale Problem, das die anderen fünf Tools nicht lösen: das Vergleichen und Dispatchen zu mehreren Modellen. Bevor Sie Evaluierungs- oder Testing-Tools einführen, müssen Sie entscheiden, welches Modell (GPT-5.5, Claude 4.6 Sonnet, Gemini 3.1 Pro, Llama 3.3, etc.) am besten für Ihren Use-Case funktioniert. PromptQuorum sendet den gleichen Prompt zu 25+ Modellen gleichzeitig, zeigt Unterschiede in Qualität, Geschwindigkeit und Kosten, und erleichtert damit die Modellauswahl bevor Sie zu Braintrust, Promptfoo oder Vellum greifen.',
+      content: 'PromptQuorum löst das zentrale Problem, das die anderen fünf Tools nicht lösen: das Vergleichen und Dispatchen zu mehreren Modellen. Bevor Sie Evaluierungs- oder Testing-Tools einführen, müssen Sie entscheiden, welches Modell (GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro, Llama 3.3, etc.) am besten für Ihren Use-Case funktioniert. PromptQuorum sendet den gleichen Prompt zu 25+ Modellen gleichzeitig, zeigt Unterschiede in Qualität, Geschwindigkeit und Kosten, und erleichtert damit die Modellauswahl bevor Sie zu Braintrust, Promptfoo oder Vellum greifen.',
       items: [
         '**Multi-Modell-Dispatch:** Senden Sie einen Prompt zu 25+ Modellen gleichzeitig, sehen Sie Unterschiede nebeneinander',
         '**Side-by-Side-Vergleich:** Antwortqualität, Latenz, Kosten pro Token — alles auf einen Blick',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-13',
     url: 'https://www.promptquorum.com/de/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'de',
     proficiencyLevel: 'Intermediate',
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   twitterDescription: 'Promptfoo es gratis. Braintrust desde $249/mes. PromptQuorum despacha a 25+ modelos. ¿Qué stack encaja con tu equipo?',
   intro: '**Seis herramientas dominan el prompt engineering en 2026: PromptQuorum para despacho multi-modelo, Braintrust para evaluación, Vellum para producción, Promptfoo para testing, PromptHub para versionado y LangSmith para observabilidad — cada una resuelve un cuello de botella diferente. Esta guía las clasifica por tarea y muestra qué pares funcionan juntos.**',
   publishDate: '2026-04-10',
-  dateModified: '2026-06-14',
+  dateModified: '2026-07-13',
   lastFactChecked: '2026-06-03 — todos los precios y características verificados contra documentación oficial',
   readTime: '9 min de lectura',
   educationalLevel: 'Intermediate',
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-13',
     url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'es',
     proficiencyLevel: 'Intermediate',
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'HowToStep', position: 2, name: 'Empieza gratis', text: 'Regístrate en PromptQuorum (comparación multi-modelo, tier gratuito) e instala Promptfoo (testing CI/CD, open-source). Ambos son gratuitos y cubren los dos puntos de partida más comunes: selección de modelo y cobertura de tests.' },
       { '@type': 'HowToStep', position: 3, name: 'Añade versionado pronto', text: 'Configura PromptHub o control de versiones basado en Git antes de que tu equipo supere las dos personas editando prompts. Sin versionado no puedes hacer rollback de un prompt roto en producción.' },
       { '@type': 'HowToStep', position: 4, name: 'Añade evaluación cuando la calidad importe', text: 'Integra Braintrust cuando necesites datasets de ground truth con puntuación y feedback human-in-the-loop sobre la calidad del output — precisión, tono y corrección factual.' },
-      { '@type': 'HowToStep', position: 5, name: 'Añade herramientas de producción al final', text: 'Despliega Vellum cuando publiques prompts para usuarios finales y necesites A/B testing, cadenas de fallback (GPT-5.5 → Claude 4.8 Opus → Gemini) y un dashboard de monitorización de latencia y coste.' },
+      { '@type': 'HowToStep', position: 5, name: 'Añade herramientas de producción al final', text: 'Despliega Vellum cuando publiques prompts para usuarios finales y necesites A/B testing, cadenas de fallback (GPT-5.6 → Claude 4.8 Opus → Gemini) y un dashboard de monitorización de latencia y coste.' },
       { '@type': 'HowToStep', position: 6, name: 'Audita solapamientos trimestralmente', text: 'Revisa tu stack completo cada trimestre. Si dos herramientas cubren la misma función — por ejemplo Braintrust y Promptfoo ambos haciendo testing — elimina la de menor ROI.' }
     ]
   },
@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keyTakeaways: {
       isTldr: true,
       items: [
-        'PromptQuorum: Despacho multi-modelo (compara GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro y 25+ modelos lado a lado antes de evaluar, testear o desplegar)',
+        'PromptQuorum: Despacho multi-modelo (compara GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro y 25+ modelos lado a lado antes de evaluar, testear o desplegar)',
         'Braintrust: Plataforma de evaluación + observabilidad (jueces LLM, feedback humano, tracing en producción, gates CI/CD) — Gratis / $249/mes Pro',
         'Confident AI: Evaluación automatizada con 50+ métricas integradas y red teaming — $19.99/usuario/mes Starter',
         'Vellum: Producción (A/B testing, despliegue, dashboard de monitorización)',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     wherePromptQuorum: {
       id: 'where-promptquorum-fits',
       title: '¿Dónde encaja PromptQuorum en este stack?',
-      content: '**[PromptQuorum](/features) resuelve un cuello de botella que ninguna de las cinco herramientas anteriores aborda: despachar un prompt a múltiples modelos de IA simultáneamente y comparar los outputs lado a lado.** Braintrust evalúa el output de un modelo contra ground truth. Vellum despliega un modelo en producción. Promptfoo testea un modelo en CI/CD. PromptQuorum te permite ver cómo responden GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro y modelos locales vía Ollama al mismo prompt — antes de comprometerte con un modelo o una versión de prompt.\n\nEsto convierte a PromptQuorum en el primer paso natural del flujo de trabajo: compara modelos → elige el mejor → luego evalúa (Braintrust), testea (Promptfoo), versiona (PromptHub) y despliega (Vellum).',
+      content: '**[PromptQuorum](/features) resuelve un cuello de botella que ninguna de las cinco herramientas anteriores aborda: despachar un prompt a múltiples modelos de IA simultáneamente y comparar los outputs lado a lado.** Braintrust evalúa el output de un modelo contra ground truth. Vellum despliega un modelo en producción. Promptfoo testea un modelo en CI/CD. PromptQuorum te permite ver cómo responden GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro y modelos locales vía Ollama al mismo prompt — antes de comprometerte con un modelo o una versión de prompt.\n\nEsto convierte a PromptQuorum en el primer paso natural del flujo de trabajo: compara modelos → elige el mejor → luego evalúa (Braintrust), testea (Promptfoo), versiona (PromptHub) y despliega (Vellum).',
       items: [
         'Despacha a 25+ modelos incluyendo LLMs locales vía Ollama',
         '9 frameworks de prompts integrados (TRACE, CO-STAR, CRAFT, RISEN, RTF y más)',
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     vellum: {
       id: 'vellum-production',
       title: '¿Qué es Vellum? Despliegue en producción, workflow builder y monitorización',
-      content: '**Vellum ha expandido más allá del despliegue en producción para convertirse en una plataforma completa de desarrollo LLM.** Núcleo: A/B testing, rollouts canary, cadenas de fallback (GPT-5.5 → Claude 4.8 Opus → Gemini) y un dashboard de monitorización de latencia y coste. Añadidos: workflow builder visual drag-and-drop, Python SDK para pipelines definidos por código, integración de recuperación de documentos y RAG, LLM Leaderboard para benchmarking de modelos y listado en AWS Marketplace para adquisición empresarial.',
+      content: '**Vellum ha expandido más allá del despliegue en producción para convertirse en una plataforma completa de desarrollo LLM.** Núcleo: A/B testing, rollouts canary, cadenas de fallback (GPT-5.6 → Claude 4.8 Opus → Gemini) y un dashboard de monitorización de latencia y coste. Añadidos: workflow builder visual drag-and-drop, Python SDK para pipelines definidos por código, integración de recuperación de documentos y RAG, LLM Leaderboard para benchmarking de modelos y listado en AWS Marketplace para adquisición empresarial.',
       items: [
         'Ideal para despliegue en producción — A/B testing, rollouts canary, monitorización',
         'Workflow builder visual: construcción de agentes drag-and-drop sin escribir código de pipeline',
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '¿Qué es Promptfoo? Testing CI/CD open-source sin coste',
       content: '**Promptfoo es la mejor opción gratuita.** Herramienta CLI, ejecuta tests desde configuración YAML, se integra con CI/CD, incluye red teaming (detección de jailbreak, scoring de toxicidad). Empieza aquí para testing sin coste.',
       items: [
-        'Soporta GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro y modelos locales vía Ollama y LM Studio de forma nativa',
+        'Soporta GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro y modelos locales vía Ollama y LM Studio de forma nativa',
         'Ideal para testing CI/CD self-hosted gratuito',
         'Red teaming integrado: detección de jailbreak y toxicidad',
       'Adquirido por OpenAI (marzo 2026); sigue siendo gratuito, de código abierto y autoalojado'
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '¿Cómo eliges la herramienta de prompt engineering correcta?',
       content: '**Elige herramientas según tu etapa del flujo de trabajo. Todos los equipos: empieza con PromptQuorum para comparar modelos, luego añade herramientas especializadas para tu cuello de botella.**',
       items: [
-        '**Todos los equipos — selección de modelo:** Empieza con PromptQuorum (gratis) para comparar GPT-5.5, Claude 4.8 Opus, Gemini y modelos locales lado a lado antes de comprometerte con un stack.',
+        '**Todos los equipos — selección de modelo:** Empieza con PromptQuorum (gratis) para comparar GPT-5.6, Claude 4.8 Opus, Gemini y modelos locales lado a lado antes de comprometerte con un stack.',
         '**Startups (<10 personas):** PromptQuorum + Promptfoo (gratis) + PromptHub (versionado). Avanza a Braintrust cuando la calidad de eval sea crítica.',
         '**Desplegando en producción:** Vellum (despliegue/monitorización) + Promptfoo (testing CI/CD) + Braintrust o Confident AI (evals offline)',
         '**Uso intensivo de LangChain:** LangSmith (imprescindible para tracing de cadenas) + Promptfoo (tests unitarios) + Confident AI o Braintrust (evals offline)',
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   twitterDescription: '⁨Promptfoo⁩ مجاني. ⁨Braintrust⁩ من ⁨249⁩ دولار/شهر. ⁨PromptQuorum⁩ يُرسِل إلى ⁨25⁩+ نموذج. أي مجموعة أدوات تناسب فريقك؟',
   intro: '**ست أدوات تهيمن على هندسة التعليمات في 2026: PromptQuorum للإرسال متعدد النماذج، وBraintrust للتقييم، وVellum للإنتاج، وPromptfoo للاختبار، وPromptHub للإصدارات، وLangSmith للرصد — كل منها تحل عنق زجاجة مختلفًا. هذا الدليل يُصنِّفها حسب المهمة ويوضح أي أزواج تعمل معًا.**',
   publishDate: '2026-04-10',
-  dateModified: '2026-06-14',
+  dateModified: '2026-07-13',
   lastFactChecked: '2026-06-03 — جميع الأسعار والميزات مُتحقَّق منها مقابل الوثائق الرسمية',
   readTime: '٩ دقائق للقراءة',
   educationalLevel: 'متوسط',
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-13',
     url: 'https://www.promptquorum.com/ar/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'ar',
     proficiencyLevel: 'Intermediate',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'HowToStep', position: 2, name: 'ابدأ مجانًا', text: 'سجِّل في PromptQuorum (مقارنة متعددة النماذج، طبقة مجانية) وثبِّت Promptfoo (اختبار CI/CD، مفتوح المصدر). كلاهما مجاني ويغطيان أكثر نقطتي بداية شيوعًا: اختيار النموذج وتغطية الاختبار.' },
       { '@type': 'HowToStep', position: 3, name: 'أضف الإصدارات مبكرًا', text: 'أعِدَّ PromptHub أو تحكمًا في الإصدارات قائمًا على Git قبل أن يتجاوز فريقك شخصين يحررون التعليمات. بدون إصدارات لا يمكنك التراجع عن تعليمة معطوبة في الإنتاج.' },
       { '@type': 'HowToStep', position: 4, name: 'أضف التقييم حين تهم الجودة', text: 'ادمج Braintrust حين تحتاج مجموعات بيانات ground truth مع تسجيل وتغذية راجعة human-in-the-loop حول جودة المخرجات — الدقة والنبرة والصحة الواقعية.' },
-      { '@type': 'HowToStep', position: 5, name: 'أضف أدوات الإنتاج أخيرًا', text: 'انشر Vellum حين تنشر التعليمات للمستخدمين النهائيين وتحتاج اختبار A/B وسلاسل احتياطية (GPT-5.5 ← Claude 4.8 Opus ← Gemini) ولوحة رصد للزمن الاستجابة والتكلفة.' },
+      { '@type': 'HowToStep', position: 5, name: 'أضف أدوات الإنتاج أخيرًا', text: 'انشر Vellum حين تنشر التعليمات للمستخدمين النهائيين وتحتاج اختبار A/B وسلاسل احتياطية (GPT-5.6 ← Claude 4.8 Opus ← Gemini) ولوحة رصد للزمن الاستجابة والتكلفة.' },
       { '@type': 'HowToStep', position: 6, name: 'راجع التداخلات فصليًا', text: 'راجع مجموعة أدواتك الكاملة كل ربع سنة. إذا كانت أداتان تغطيان نفس الوظيفة — على سبيل المثال Braintrust وPromptfoo كلاهما يجريان الاختبار — احذف ذات عائد الاستثمار الأقل.' }
     ]
   },
@@ -1165,7 +1165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keyTakeaways: {
       isTldr: true,
       items: [
-        'PromptQuorum: إرسال متعدد النماذج (يقارن GPT-5.5 وClaude 4.8 Opus وGemini 3.1 Pro و25+ نموذج جنبًا إلى جنب قبل التقييم والاختبار والنشر)',
+        'PromptQuorum: إرسال متعدد النماذج (يقارن GPT-5.6 وClaude 4.8 Opus وGemini 3.1 Pro و25+ نموذج جنبًا إلى جنب قبل التقييم والاختبار والنشر)',
         'Braintrust: منصة تقييم + رصد (قضاة LLM وتغذية راجعة بشرية وتتبع في الإنتاج وبوابات CI/CD) — مجاني / 249 دولارًا/شهر Pro',
         'Confident AI: تقييم آلي مع 50+ مقياسًا مدمجًا وred teaming — 19.99 دولارًا/مستخدم/شهر Starter',
         'Vellum: الإنتاج (اختبار A/B والنشر ولوحة الرصد)',
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     wherePromptQuorum: {
       id: 'where-promptquorum-fits',
       title: 'أين يناسب PromptQuorum هذه المجموعة؟',
-      content: '**[PromptQuorum](/features) تحل عنق زجاجة لا تعالجه أي من الأدوات الخمس السابقة: إرسال تعليمة إلى نماذج ذكاء اصطناعي متعددة في آنٍ واحد ومقارنة المخرجات جنبًا إلى جنب.** Braintrust يُقيِّم مخرجات نموذج مقابل ground truth. Vellum ينشر نموذجًا في الإنتاج. Promptfoo يختبر نموذجًا في CI/CD. PromptQuorum يتيح رؤية كيفية استجابة GPT-5.5 وClaude 4.8 Opus وGemini 3.1 Pro والنماذج المحلية عبر Ollama لنفس التعليمة — قبل الالتزام بنموذج أو نسخة تعليمة.\n\nهذا يجعل PromptQuorum الخطوة الأولى الطبيعية في سير العمل: قارن النماذج ← اختَر الأفضل ← ثم قيِّم (Braintrust) واختبر (Promptfoo) وأصدِر نسخًا (PromptHub) وانشر (Vellum).',
+      content: '**[PromptQuorum](/features) تحل عنق زجاجة لا تعالجه أي من الأدوات الخمس السابقة: إرسال تعليمة إلى نماذج ذكاء اصطناعي متعددة في آنٍ واحد ومقارنة المخرجات جنبًا إلى جنب.** Braintrust يُقيِّم مخرجات نموذج مقابل ground truth. Vellum ينشر نموذجًا في الإنتاج. Promptfoo يختبر نموذجًا في CI/CD. PromptQuorum يتيح رؤية كيفية استجابة GPT-5.6 وClaude 4.8 Opus وGemini 3.1 Pro والنماذج المحلية عبر Ollama لنفس التعليمة — قبل الالتزام بنموذج أو نسخة تعليمة.\n\nهذا يجعل PromptQuorum الخطوة الأولى الطبيعية في سير العمل: قارن النماذج ← اختَر الأفضل ← ثم قيِّم (Braintrust) واختبر (Promptfoo) وأصدِر نسخًا (PromptHub) وانشر (Vellum).',
       items: [
         'إرسال إلى 25+ نموذج بما يشمل النماذج المحلية عبر Ollama',
         '9 أُطر تعليمات مدمجة (TRACE وCO-STAR وCRAFT وRISEN وRTF وأكثر)',
@@ -1209,7 +1209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     vellum: {
       id: 'vellum-production',
       title: 'ما هو Vellum؟ النشر في الإنتاج ومنشئ سير العمل والرصد',
-      content: '**توسَّع Vellum إلى ما وراء النشر في الإنتاج ليصبح منصة تطوير LLM متكاملة.** النواة: اختبار A/B والطرح التدريجي وسلاسل احتياطية (GPT-5.5 ← Claude 4.8 Opus ← Gemini) ولوحة رصد للزمن الاستجابة والتكلفة. الإضافات: منشئ سير عمل مرئي drag-and-drop وPython SDK لخطوط الأنابيب المعرَّفة بالكود وتكامل استرجاع المستندات وRAG ولوحة ترتيب LLM للمعايرة والإدراج في AWS Marketplace للاستحواذ المؤسسي.',
+      content: '**توسَّع Vellum إلى ما وراء النشر في الإنتاج ليصبح منصة تطوير LLM متكاملة.** النواة: اختبار A/B والطرح التدريجي وسلاسل احتياطية (GPT-5.6 ← Claude 4.8 Opus ← Gemini) ولوحة رصد للزمن الاستجابة والتكلفة. الإضافات: منشئ سير عمل مرئي drag-and-drop وPython SDK لخطوط الأنابيب المعرَّفة بالكود وتكامل استرجاع المستندات وRAG ولوحة ترتيب LLM للمعايرة والإدراج في AWS Marketplace للاستحواذ المؤسسي.',
       items: [
         'مثالي للنشر في الإنتاج — اختبار A/B والطرح التدريجي والرصد',
         'منشئ سير عمل مرئي: بناء وكلاء drag-and-drop دون كتابة كود خط أنابيب',
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'ما هو Promptfoo؟ اختبار CI/CD مفتوح المصدر بلا تكلفة',
       content: '**Promptfoo هو أفضل خيار مجاني.** أداة CLI، تشغِّل الاختبارات من تكوين YAML، تتكامل مع CI/CD، تشمل red teaming (كشف jailbreak وتسجيل السمية). ابدأ هنا لاختبار بلا تكلفة.',
       items: [
-        'يدعم GPT-5.5 وClaude 4.8 Opus وGemini 3.1 Pro والنماذج المحلية عبر Ollama وLM Studio أصليًا',
+        'يدعم GPT-5.6 وClaude 4.8 Opus وGemini 3.1 Pro والنماذج المحلية عبر Ollama وLM Studio أصليًا',
         'مثالي لاختبار CI/CD ذاتي الاستضافة مجانًا',
         'Red teaming مدمج: كشف jailbreak والسمية',
       'استُحوذت عليه OpenAI في مارس 2026؛ لا يزال مجانيًا ومفتوح المصدر وذاتي الاستضافة'
@@ -1279,7 +1279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'كيف تختار أداة هندسة التعليمات الصحيحة؟',
       content: '**اختَر الأدوات حسب مرحلتك في سير العمل. جميع الفرق: ابدأ بـ PromptQuorum لمقارنة النماذج، ثم أضف أدوات متخصصة لعنق الزجاجة لديك.**',
       items: [
-        '**جميع الفرق — اختيار النموذج:** ابدأ بـ PromptQuorum (مجاني) لمقارنة GPT-5.5 وClaude 4.8 Opus وGemini والنماذج المحلية جنبًا إلى جنب قبل الالتزام بمجموعة أدوات.',
+        '**جميع الفرق — اختيار النموذج:** ابدأ بـ PromptQuorum (مجاني) لمقارنة GPT-5.6 وClaude 4.8 Opus وGemini والنماذج المحلية جنبًا إلى جنب قبل الالتزام بمجموعة أدوات.',
         '**الشركات الناشئة (أقل من 10 أشخاص):** PromptQuorum + Promptfoo (مجاني) + PromptHub (إصدارات). تقدَّم إلى Braintrust حين تكون جودة التقييم حرجة.',
         '**النشر في الإنتاج:** Vellum (نشر/رصد) + Promptfoo (اختبار CI/CD) + Braintrust أو Confident AI (تقييمات غير متصلة)',
         '**الاستخدام المكثف لـ LangChain:** LangSmith (لازم لتتبع السلاسل) + Promptfoo (اختبارات الوحدة) + Confident AI أو Braintrust (تقييمات غير متصلة)',
@@ -1426,7 +1426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-13',
     url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'pt-BR',
     proficiencyLevel: 'Intermediate',
@@ -1486,7 +1486,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'HowToStep', position: 2, name: 'Comece de graça', text: 'Registre-se no PromptQuorum (comparação multi-modelo, tier gratuito) e instale o Promptfoo (testes CI/CD, open-source). Ambos são gratuitos e cobrem os dois pontos de partida mais comuns: seleção de modelo e cobertura de testes.' },
       { '@type': 'HowToStep', position: 3, name: 'Adicione versionamento cedo', text: 'Configure o PromptHub ou controle de versões baseado em Git antes que sua equipe ultrapasse duas pessoas editando prompts. Sem versionamento, você não consegue fazer rollback de um prompt quebrado em produção.' },
       { '@type': 'HowToStep', position: 4, name: 'Adicione avaliação quando a qualidade importar', text: 'Integre o Braintrust quando precisar de datasets de ground truth com pontuação e feedback human-in-the-loop sobre a qualidade da saída — precisão, tom e correção factual.' },
-      { '@type': 'HowToStep', position: 5, name: 'Adicione ferramentas de produção por último', text: 'Implante o Vellum quando publicar prompts para usuários finais e precisar de A/B testing, cadeias de fallback (GPT-5.5 → Claude 4.8 Opus → Gemini) e um dashboard de monitorização de latência e custo.' },
+      { '@type': 'HowToStep', position: 5, name: 'Adicione ferramentas de produção por último', text: 'Implante o Vellum quando publicar prompts para usuários finais e precisar de A/B testing, cadeias de fallback (GPT-5.6 → Claude 4.8 Opus → Gemini) e um dashboard de monitorização de latência e custo.' },
       { '@type': 'HowToStep', position: 6, name: 'Audite sobreposições trimestralmente', text: 'Revise seu stack completo a cada trimestre. Se duas ferramentas cobrem a mesma função — por exemplo Braintrust e Promptfoo ambas fazendo testes — elimine a de menor ROI.' }
     ]
   },
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keyTakeaways: {
       isTldr: true,
       items: [
-        'PromptQuorum: Despacho multi-modelo (compara GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro e 25+ modelos lado a lado antes de avaliar, testar ou implantar)',
+        'PromptQuorum: Despacho multi-modelo (compara GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro e 25+ modelos lado a lado antes de avaliar, testar ou implantar)',
         'Braintrust: Plataforma de avaliação + observabilidade (juízes LLM, feedback humano, tracing em produção, gates CI/CD) — Gratuito / $249/mês Pro',
         'Confident AI: Avaliação automatizada com 50+ métricas integradas e red teaming — $19,99/usuário/mês Starter',
         'Vellum: Produção (A/B testing, implantação, dashboard de monitorização)',
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     wherePromptQuorum: {
       id: 'where-promptquorum-fits',
       title: 'Onde o PromptQuorum se encaixa nesse stack?',
-      content: '**[PromptQuorum](/features) resolve um gargalo que nenhuma das cinco ferramentas anteriores aborda: despachar um prompt para múltiplos modelos de IA simultaneamente e comparar as saídas lado a lado.** Braintrust avalia a saída de um modelo contra ground truth. Vellum implanta um modelo em produção. Promptfoo testa um modelo em CI/CD. PromptQuorum permite ver como GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro e modelos locais via Ollama respondem ao mesmo prompt — antes de se comprometer com um modelo ou uma versão de prompt.\n\nIsso torna o PromptQuorum o primeiro passo natural do fluxo de trabalho: compare modelos → escolha o melhor → depois avalie (Braintrust), teste (Promptfoo), versione (PromptHub) e implante (Vellum).',
+      content: '**[PromptQuorum](/features) resolve um gargalo que nenhuma das cinco ferramentas anteriores aborda: despachar um prompt para múltiplos modelos de IA simultaneamente e comparar as saídas lado a lado.** Braintrust avalia a saída de um modelo contra ground truth. Vellum implanta um modelo em produção. Promptfoo testa um modelo em CI/CD. PromptQuorum permite ver como GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro e modelos locais via Ollama respondem ao mesmo prompt — antes de se comprometer com um modelo ou uma versão de prompt.\n\nIsso torna o PromptQuorum o primeiro passo natural do fluxo de trabalho: compare modelos → escolha o melhor → depois avalie (Braintrust), teste (Promptfoo), versione (PromptHub) e implante (Vellum).',
       items: [
         'Despacha para 25+ modelos incluindo LLMs locais via Ollama',
         '9 frameworks de prompts integrados (TRACE, CO-STAR, CRAFT, RISEN, RTF e mais)',
@@ -1551,7 +1551,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     vellum: {
       id: 'vellum-production',
       title: 'O que é Vellum? Implantação em produção, workflow builder e monitorização',
-      content: '**Vellum expandiu além da implantação em produção para se tornar uma plataforma completa de desenvolvimento LLM.** Núcleo: A/B testing, rollouts canary, cadeias de fallback (GPT-5.5 → Claude 4.8 Opus → Gemini) e um dashboard de monitorização de latência e custo. Adicionados: workflow builder visual drag-and-drop, Python SDK para pipelines definidos por código, integração de recuperação de documentos e RAG, LLM Leaderboard para benchmarking de modelos e listagem no AWS Marketplace para aquisição empresarial.',
+      content: '**Vellum expandiu além da implantação em produção para se tornar uma plataforma completa de desenvolvimento LLM.** Núcleo: A/B testing, rollouts canary, cadeias de fallback (GPT-5.6 → Claude 4.8 Opus → Gemini) e um dashboard de monitorização de latência e custo. Adicionados: workflow builder visual drag-and-drop, Python SDK para pipelines definidos por código, integração de recuperação de documentos e RAG, LLM Leaderboard para benchmarking de modelos e listagem no AWS Marketplace para aquisição empresarial.',
       items: [
         'Ideal para implantação em produção — A/B testing, rollouts canary, monitorização',
         'Workflow builder visual: construção de agentes drag-and-drop sem escrever código de pipeline',
@@ -1564,7 +1564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'O que é Promptfoo? Testes CI/CD open-source sem custo',
       content: '**Promptfoo é a melhor opção gratuita.** Ferramenta CLI, executa testes a partir de configuração YAML, integra com CI/CD, inclui red teaming (detecção de jailbreak, scoring de toxicidade). Comece aqui para testes sem custo.',
       items: [
-        'Suporta GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro e modelos locais via Ollama e LM Studio nativamente',
+        'Suporta GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro e modelos locais via Ollama e LM Studio nativamente',
         'Ideal para testes CI/CD self-hosted gratuitos',
         'Red teaming integrado: detecção de jailbreak e toxicidade',
       'Adquirido pela OpenAI (março de 2026); continua gratuito, de código aberto e auto-hospedado'
@@ -1621,7 +1621,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Como você escolhe a ferramenta de prompt engineering certa?',
       content: '**Escolha ferramentas conforme seu estágio do fluxo de trabalho. Todas as equipes: comece com PromptQuorum para comparar modelos, depois adicione ferramentas especializadas para seu gargalo.**',
       items: [
-        '**Todas as equipes — seleção de modelo:** Comece com PromptQuorum (gratuito) para comparar GPT-5.5, Claude 4.8 Opus, Gemini e modelos locais lado a lado antes de se comprometer com um stack.',
+        '**Todas as equipes — seleção de modelo:** Comece com PromptQuorum (gratuito) para comparar GPT-5.6, Claude 4.8 Opus, Gemini e modelos locais lado a lado antes de se comprometer com um stack.',
         '**Startups (<10 pessoas):** PromptQuorum + Promptfoo (gratuito) + PromptHub (versionamento). Avance para Braintrust quando a qualidade da avaliação for crítica.',
         '**Implantando em produção:** Vellum (implantação/monitorização) + Promptfoo (testes CI/CD) + Braintrust ou Confident AI (avaliações offline)',
         '**Uso intensivo de LangChain:** LangSmith (indispensável para tracing de cadeias) + Promptfoo (testes unitários) + Confident AI ou Braintrust (avaliações offline)',
@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   twitterDescription: 'Promptfoo est gratuit. Braintrust dès 249 $/mois. PromptQuorum dispatche vers 25+ modèles. Quel stack pour votre équipe ?',
   intro: '**Six outils dominent le prompt engineering en 2026 : PromptQuorum pour le dispatch multi-modèle, Braintrust pour l\'évaluation, Vellum pour la production, Promptfoo pour les tests, PromptHub pour le versioning, LangSmith pour l\'observabilité — chacun résout un goulot d\'étranglement spécifique. Ce guide les compare par cas d\'usage et montre quelles paires d\'outils fonctionnent ensemble.**',
   publishDate: '2026-04-10',
-  dateModified: '2026-06-14',
+  dateModified: '2026-07-13',
   lastFactChecked: '2026-06-03 — tous les tarifs et fonctionnalités vérifiés contre la documentation officielle',
   readTime: '10 min de lecture',
   educationalLevel: 'Intermediate',
@@ -1769,7 +1769,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keyTakeaways: { items: ['**PromptQuorum :** Dispatch vers 25+ modèles — idéal pour comparer plusieurs LLM', '**Braintrust :** Évaluation + observabilité (juges LLM, feedback humain, tracing production, contrôles CI/CD) — Gratuit / 249 $/mois Pro',
 '**Confident AI :** Évaluation automatisée avec 50+ métriques intégrées et red teaming — 19,99 $/utilisateur/mois Starter', '**Vellum :** Déploiement en production avec monitoring et tests A/B — gratuit / à partir de 50 $/mois', '**Promptfoo :** Tests open-source gratuits pour les pipelines CI/CD', '**PromptHub :** Versioning style Git avec collaboration en équipe — 50–300$/mois', '**LangSmith :** Observabilité et tracing pour LangChain — gratuit avec options premium', '**Stratégie :** Commencez avec PromptQuorum + Promptfoo (gratuits), ajoutez le versioning tôt, l\'évaluation seulement si nécessaire'] },
     whichProblem: { id: 'which-problem-each-tool-solves', title: 'Quel problème résout chaque outil ?', content: 'Les équipes de prompt engineering font face à cinq goulots classiques : (1) évaluer la qualité (précision, ton, factualité), (2) tester automatiquement en CI/CD, (3) versionner et revenir à une version antérieure, (4) déployer en production avec monitoring, (5) comparer et dispatcher vers plusieurs modèles. Chaque outil se spécialise sur un ou deux. L\'appairage correct économise des mois et prévient les défaillances coûteuses.', image: '/images/best-pe-tools-2026-bottlenecks-to-tools-fr.svg', imageCaption: '5 goulots d\'étranglement mappés aux outils spécialisés : Braintrust (évaluation), Promptfoo (tests), PromptHub (versioning), Vellum (déploiement), LangSmith (observabilité).' },
-    wherePromptQuorum: { id: 'where-promptquorum-fits', title: 'Où s\'inscrit PromptQuorum ?', content: 'PromptQuorum résout le problème central que les cinq autres ne résolvent pas : comparer et dispatcher vers plusieurs modèles. Avant d\'évaluer ou tester, vous devez choisir quel modèle (GPT-5.5, Claude 4.6 Sonnet, Gemini 3.1 Pro, Llama 3.3, etc.) fonctionne le mieux. PromptQuorum envoie le même prompt à 25+ modèles simultanément, affiche les différences en qualité, vitesse et coût, et facilite le choix avant d\'investir dans Braintrust, Promptfoo ou Vellum.', items: ['**Dispatch multi-modèle :** Envoyez un prompt à 25+ modèles en parallèle', '**Comparaison directe :** Qualité, latence, coût par token — tout sur un écran', '**Gratuit :** Testez toutes les fonctionnalités sans carte de crédit', '**Décision rapide :** Trouvez le modèle optimal avant d\'acheter des outils d\'évaluation'] },
+    wherePromptQuorum: { id: 'where-promptquorum-fits', title: 'Où s\'inscrit PromptQuorum ?', content: 'PromptQuorum résout le problème central que les cinq autres ne résolvent pas : comparer et dispatcher vers plusieurs modèles. Avant d\'évaluer ou tester, vous devez choisir quel modèle (GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro, Llama 3.3, etc.) fonctionne le mieux. PromptQuorum envoie le même prompt à 25+ modèles simultanément, affiche les différences en qualité, vitesse et coût, et facilite le choix avant d\'investir dans Braintrust, Promptfoo ou Vellum.', items: ['**Dispatch multi-modèle :** Envoyez un prompt à 25+ modèles en parallèle', '**Comparaison directe :** Qualité, latence, coût par token — tout sur un écran', '**Gratuit :** Testez toutes les fonctionnalités sans carte de crédit', '**Décision rapide :** Trouvez le modèle optimal avant d\'acheter des outils d\'évaluation'] },
     braintrust: { id: 'braintrust-evaluation', title: 'Qu\'est-ce que Braintrust ? Évaluation, observabilité et ground truth', content: '**Braintrust est devenu une plateforme complète d\'observabilité et d\'évaluation suite à sa levée de fonds Series B (80 M$, fév. 2026, valorisation 800 M$).** En plus de la boucle d\'évaluation principale (juges LLM, feedback humain, gestion de datasets), il couvre désormais : le tracing en production (spans, latence, coûts), les contrôles qualité CI/CD, l\'intégration serveur MCP et un Playground pour la comparaison de modèles côte à côte.', items: ['**Boucle d\'évaluation :** Quatre étapes de définition à dataset de vérité', '**Juges LLM + humains :** Combine automatisation et jugement manuel', '**Effet dataset :** L\'accumulation devient signal d\'entraînement pour de meilleures evals', 'Tarifs : Gratuit (1M traces, 10 k scores, utilisateurs illimités) ; Pro 249 $/mois ; Enterprise sur devis', 'Tracing en production : enregistre chaque span, latence et coût aux côtés des résultats d\'évaluation'], image: '/images/best-pe-tools-2026-braintrust-eval-loop-fr.svg', imageCaption: 'Boucle d\'évaluation 4 étapes de Braintrust : définir evals → exécuter automatiquement → noter avec feedback humain → compiler dataset. Juges LLM + feedback construisent la vérité pour les futures évaluations.' },
     vellum: { id: 'vellum-production', title: 'Qu\'est-ce que Vellum ? Déploiement, workflow builder et monitoring', content: '**Vellum a évolué bien au-delà du déploiement en production pour devenir une plateforme LLM complète.** Fonctions principales : tests A/B, canary rollouts, fallback chains, tableau de bord de monitoring pour latence et coût. Nouveautés : workflow builder visuel drag-and-drop, SDK Python pour des pipelines définis par code, intégration RAG pour la récupération de documents, LLM Leaderboard pour le benchmarking de modèles, et référencement sur AWS Marketplace pour les achats enterprise.', items: ['**Monitoring de prompts :** Enregistre texte, réponse, coûts, latence par request', '**Tests A/B :** Comparez différents prompts en production sur le trafic réel', '**Observabilité IA :** Pas des métriques infra génériques, mais des signaux spécifiques', 'Tarifs : Tier gratuit disponible ; Pro à partir de 50 $/mois ; Enterprise sur devis', 'Workflow builder visuel : construction d\'agents par drag-and-drop sans code de pipeline'] },
     promptfoo: { id: 'promptfoo-testing', title: 'Promptfoo : Tests open-source', content: 'Promptfoo est la colonne vertébrale des tests en CI/CD. Gratuit, open-source (GitHub), local ou pipeline. Vous écrivez des cas de test en YAML (entrée + sortie attendue), Promptfoo les exécute, évalue et affiche les taux de réussite. Avantage : vous attrapez les régressions avant la production. Inconvénient : vous devez définir des tests binaires — Promptfoo ne mesure pas "comment c\'était la réponse", juste "correspond-elle ?".', items: ['**Gratuit :** Repository GitHub, exécutable localement', '**Intégration CI/CD :** Teste les prompts automatiquement à chaque commit', '**Config YAML :** Les cas sont versionnable comme du code'] },
@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     faq: { id: 'faq', title: 'Questions fréquemment posées', faqs: [{ q: 'Quels sont les 5 meilleurs outils de prompt engineering en 2026 ?', a: 'Braintrust (évaluation), Vellum (production), Promptfoo (tests), PromptHub (versioning) et LangSmith (tracing). PromptQuorum est le sixième pour le dispatch multi-modèle. La plupart des équipes n\'en ont besoin que de 2–3.' }, { q: 'Quel est le meilleur outil pour tester les prompts ?', a: 'Promptfoo pour l\'automatisation CI/CD (gratuit, open-source). Braintrust si vous avez besoin de scores dimensionnels (juges LLM, feedback humain).' }, { q: 'Braintrust vs Promptfoo — quelle est la différence ?', a: 'Promptfoo teste si les prompts correspondent aux sorties attendues — binaire. Braintrust évalue la qualité sur des dimensions (ton, précision, factualité) avec juges ou humains. Promptfoo est rapide et gratuit. Braintrust est plus lent, cher, mais nuancé.' }, { q: 'Ai-je vraiment besoin du versioning ?', a: 'Oui. Sans versioning, vous ne pouvez pas identifier quel changement a causé une régression ou revenir à une bonne version. Traitez le versioning comme du versioning code dès le jour 1.' }, { q: 'Les modèles locaux (Ollama, LM Studio) fonctionnent-ils avec ces outils ?', a: 'PromptQuorum oui (25+ modèles locaux + cloud). Promptfoo oui. Braintrust oui. Vellum et PromptHub oui. LangSmith oui avec LangChain. Tous supportent les LLM self-hosted.' }, { q: 'Puis-je utiliser plusieurs outils ensemble ?', a: 'Oui. Setup typique : PromptQuorum (comparaison) + Promptfoo (CI/CD) + PromptHub (versioning). Vellum plus tard pour production. Braintrust si critique.' }, { q: 'Combien coûtent ces outils au total ?', a: 'Promptfoo gratuit. PromptQuorum gratuit. Braintrust gratuit (1M traces, 10 k scores) / Pro 249 $/mois. Vellum gratuit / Pro à partir de 50 $/mois. PromptHub gratuit / Team 20 $/utilisateur/mois. LangSmith Developer 0 $/siège (5 000 traces/mois) / Plus 39 $/siège/mois. Confident AI gratuit (5 tests/semaine) / Starter 19,99 $/utilisateur/mois.' }, { q: 'Y a-t-il un tier gratuit pour tous les outils ?', a: 'Promptfoo oui (complètement gratuit, open-source). PromptQuorum oui. LangSmith oui. Braintrust a un tier gratuit permanent (1M traces, 10 k scores, utilisateurs illimités). Confident AI a un tier gratuit (5 exécutions de test/semaine, 2 sièges). Vellum et PromptHub ont des tiers d\'entrée gratuits.' }, { q: 'Quelle est la différence entre tester et évaluer les prompts ?', a: 'Tester (Promptfoo) vérifie si un prompt produit la sortie attendue — automatisé en CI/CD, attrape les régressions. Évaluer (Braintrust) mesure la qualité (précision, ton, factualité) avec des juges ou humains. Le test est rapide et automatisé; l\'évaluation est plus lente et nuancée. La plupart des équipes ont besoin des deux.' }, { q: 'Comment sais-je que j\'ai outgrown Promptfoo et que je dois basculer vers Braintrust ?', a: 'Basculez vers Braintrust quand vous avez besoin de noter la qualité au-delà du binaire — par exemple, ton, précision ou respect de la marque. Promptfoo excelle aux tests corrects en CI/CD. Braintrust ajoute le scoring humain, les juges LLM et un dataset accumulé qui s\'améliore. La plupart des équipes atteignent ce point quand 3–5 personnes itèrent sur les prompts quotidiennement.' } ] },
     sources: { id: 'sources', title: 'Sources', items: ['[Documentation Braintrust](https://www.braintrust.dev/docs/) — Boucle d\'eval officielle et documentation feedback', '[Plateforme Vellum](https://www.vellum.ai) — Page produit Vellum avec déploiement, A/B tests et monitoring', '[Promptfoo GitHub](https://github.com/promptfoo/promptfoo) — Repository open-source avec docs YAML et red teaming', '[PromptHub](https://prompthub.com) — Plateforme de versioning et collaboration', '[Documentation LangSmith](https://docs.smith.langchain.com) — Tracing officiel et observabilité pour LangChain', '[Confident AI](https://www.confident-ai.com) — Plateforme d\'évaluation et red teaming basée sur DeepEval avec 50+ métriques intégrées'] }
   },
-  schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Meilleurs outils de prompt engineering 2026 : classés par usage', description: 'Top outils PE 2026 : Braintrust (éval), Vellum (production), Promptfoo (test), PromptHub (versioning), LangSmith (tracing). La plupart des équipes n\'en ont besoin que de 2–3.', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-04-10', dateModified: '2026-06-14', url: 'https://www.promptquorum.com/fr/prompt-engineering/best-prompt-engineering-tools-2026', inLanguage: 'fr', proficiencyLevel: 'Intermediate', about: [{ '@type': 'Thing', name: 'Outils de prompt engineering' }, { '@type': 'Thing', name: 'Évaluation LLM' }, { '@type': 'Thing', name: 'Gestion de prompts' }], mentions: [{ '@type': 'SoftwareApplication', name: 'PromptQuorum' }, { '@type': 'SoftwareApplication', name: 'Braintrust' }, { '@type': 'SoftwareApplication', name: 'Vellum' }, { '@type': 'SoftwareApplication', name: 'Promptfoo' }, { '@type': 'SoftwareApplication', name: 'PromptHub' }, { '@type': 'SoftwareApplication', name: 'LangSmith' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+  schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Meilleurs outils de prompt engineering 2026 : classés par usage', description: 'Top outils PE 2026 : Braintrust (éval), Vellum (production), Promptfoo (test), PromptHub (versioning), LangSmith (tracing). La plupart des équipes n\'en ont besoin que de 2–3.', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-04-10', dateModified: '2026-07-13', url: 'https://www.promptquorum.com/fr/prompt-engineering/best-prompt-engineering-tools-2026', inLanguage: 'fr', proficiencyLevel: 'Intermediate', about: [{ '@type': 'Thing', name: 'Outils de prompt engineering' }, { '@type': 'Thing', name: 'Évaluation LLM' }, { '@type': 'Thing', name: 'Gestion de prompts' }], mentions: [{ '@type': 'SoftwareApplication', name: 'PromptQuorum' }, { '@type': 'SoftwareApplication', name: 'Braintrust' }, { '@type': 'SoftwareApplication', name: 'Vellum' }, { '@type': 'SoftwareApplication', name: 'Promptfoo' }, { '@type': 'SoftwareApplication', name: 'PromptHub' }, { '@type': 'SoftwareApplication', name: 'LangSmith' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
   faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [{ '@type': 'Question', name: 'Quels sont les 5 meilleurs outils de prompt engineering en 2026 ?', acceptedAnswer: { '@type': 'Answer', text: 'Braintrust (évaluation), Vellum (production), Promptfoo (tests), PromptHub (versioning) et LangSmith (tracing). PromptQuorum est le sixième pour le dispatch multi-modèle. La plupart des équipes n\'en ont besoin que de 2–3.' } }, { '@type': 'Question', name: 'Quel est le meilleur outil pour tester les prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo pour l\'automatisation CI/CD (gratuit, open-source). Braintrust si vous avez besoin de scores dimensionnels (juges LLM, feedback humain).' } }, { '@type': 'Question', name: 'Braintrust vs Promptfoo — quelle est la différence ?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo teste si les prompts correspondent aux sorties attendues — binaire. Braintrust évalue la qualité sur des dimensions (ton, précision, factualité) avec juges ou humains. Promptfoo est rapide et gratuit. Braintrust est plus lent, cher, mais nuancé.' } }, { '@type': 'Question', name: 'Ai-je vraiment besoin du versioning ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Sans versioning, vous ne pouvez pas identifier quel changement a causé une régression ou revenir à une bonne version. Traitez le versioning comme du versioning code dès le jour 1.' } }, { '@type': 'Question', name: 'Les modèles locaux (Ollama, LM Studio) fonctionnent-ils avec ces outils ?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum oui (25+ modèles locaux + cloud). Promptfoo oui. Braintrust oui. Vellum et PromptHub oui. LangSmith oui avec LangChain. Tous supportent les LLM self-hosted.' } }, { '@type': 'Question', name: 'Puis-je utiliser plusieurs outils ensemble ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Setup typique : PromptQuorum (comparaison) + Promptfoo (CI/CD) + PromptHub (versioning). Vellum plus tard pour production. Braintrust si critique.' } }, { '@type': 'Question', name: 'Combien coûtent ces outils au total ?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo gratuit. PromptQuorum gratuit. Braintrust gratuit (1M traces, 10 k scores) / Pro 249 $/mois. Vellum gratuit / Pro à partir de 50 $/mois. PromptHub gratuit / Team 20 $/utilisateur/mois. LangSmith Developer 0 $/siège (5 000 traces/mois) / Plus 39 $/siège/mois. Confident AI gratuit (5 tests/semaine) / Starter 19,99 $/utilisateur/mois.' } }, { '@type': 'Question', name: 'Y a-t-il un tier gratuit pour tous les outils ?', acceptedAnswer: { '@type': 'Answer', text: 'Promptfoo oui (complètement gratuit, open-source). PromptQuorum oui. LangSmith oui. Braintrust a un tier gratuit permanent (1M traces, 10 k scores, utilisateurs illimités). Confident AI a un tier gratuit (5 exécutions de test/semaine, 2 sièges). Vellum et PromptHub ont des tiers d\'entrée gratuits.' } }, { '@type': 'Question', name: 'Quelle est la différence entre tester et évaluer les prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Tester (Promptfoo) vérifie si un prompt produit la sortie attendue — automatisé en CI/CD, attrape les régressions. Évaluer (Braintrust) mesure la qualité (précision, ton, factualité) avec des juges ou humains. Le test est rapide et automatisé; l\'évaluation est plus lente et nuancée. La plupart des équipes ont besoin des deux.' } }, { '@type': 'Question', name: 'Comment sais-je que j\'ai outgrown Promptfoo et que je dois basculer vers Braintrust ?', acceptedAnswer: { '@type': 'Answer', text: 'Basculez vers Braintrust quand vous avez besoin de noter la qualité au-delà du binaire — par exemple, ton, précision ou respect de la marque. Promptfoo excelle aux tests corrects en CI/CD. Braintrust ajoute le scoring humain, les juges LLM et un dataset accumulé qui s\'améliore. La plupart des équipes atteignent ce point quand 3–5 personnes itèrent sur les prompts quotidiennement.' } }] },
   howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Construire votre stack d\'outils de prompt engineering', description: 'Guide étape par étape pour construire un stack d\'outils efficace.', inLanguage: 'fr', step: [{ '@type': 'HowToStep', position: 1, name: 'Identifiez votre goulot', text: 'Où perdez-vous du temps ou argent ? Tests ? Évaluation ? Versioning ? Monitoring ? Commencez là.' }, { '@type': 'HowToStep', position: 2, name: 'Lancez-vous avec PromptQuorum gratuit', text: 'Comparez les modèles avant écrire des suites de tests. Économise des mois.' }, { '@type': 'HowToStep', position: 3, name: 'Ajoutez les tests Promptfoo en CI/CD', text: 'Automatisez les régressions. Tout gratuit, local.' }, { '@type': 'HowToStep', position: 4, name: 'Ajoutez le versioning tôt', text: 'Traitez chaque prompt comme du code : review, merge, rollback. PromptHub ou Vellum.' }, { '@type': 'HowToStep', position: 5, name: 'Évaluation seulement si critique', text: 'Braintrust pour noter les dimensions. Seulement si vos tests ne trouvent pas les régressions.' }, { '@type': 'HowToStep', position: 6, name: 'Monitoring en dernier', text: 'Vellum ou LangSmith. Seulement quand vous savez ce à monitorer.' }] },
   itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Meilleurs outils de prompt engineering 2026', description: 'Les six meilleurs outils de prompt engineering, classés par spécialité.', inLanguage: 'fr', numberOfItems: 6, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'PromptQuorum', description: 'Dispatch et comparaison multi-modèle — gratuit pour 25+ modèles' }, { '@type': 'ListItem', position: 2, name: 'Braintrust', description: 'Évaluation avec juges LLM et feedback humain — gratuit / 249 $/mois' }, { '@type': 'ListItem', position: 3, name: 'Confident AI', description: 'Évaluation automatisée avec 50+ métriques intégrées et red teaming — gratuit / 19,99 $/utilisateur/mois' }, { '@type': 'ListItem', position: 4, name: 'Vellum', description: 'Déploiement en production avec monitoring et tests A/B — gratuit / à partir de 50 $/mois' }, { '@type': 'ListItem', position: 5, name: 'Promptfoo', description: 'Tests open-source pour CI/CD — gratuit' }, { '@type': 'ListItem', position: 6, name: 'PromptHub', description: 'Versioning style Git avec collaboration — gratuit / 20 $/utilisateur/mois' }] }
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   twitterDescription: 'Promptfooは無料。Braintrustは月額249ドル〜。PromptQuorumは25+モデルに同時配信。最適なスタックは？',
   intro: '**Prompt Engineering 2026年を支配する6つのツール：PromptQuorum（マルチモデルディスパッチ）、Braintrust（評価）、Vellum（本番環境）、Promptfoo（テスト）、PromptHub（バージョン管理）、LangSmith（オブザーバビリティ）——各ツールは異なるボトルネックを解きます。このガイドはユースケース別にランク付けし、どのツールペアが組み合わさるかを示します。**',
   publishDate: '2026-04-10',
-  dateModified: '2026-06-14',
+  dateModified: '2026-07-13',
   lastFactChecked: '2026-06-03 — すべての価格とFeatureは公式ドキュメントに対して検証済み',
   readTime: '9分で読める',
   educationalLevel: 'Intermediate',
@@ -1838,7 +1838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Organization', name: 'PromptQuorum' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-13',
     url: 'https://www.promptquorum.com/ja/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'ja',
     proficiencyLevel: 'Intermediate',
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'HowToStep', position: 2, name: '無料から始める', text: 'PromptQuorum（マルチモデル比較、無料層）にサインアップしPromptfoo（CI/CDテスト、オープンソース）をインストールしてください。両方無料で、2つの最も一般的な開始点をカバーします：モデル選択とテストカバレッジ。' },
       { '@type': 'HowToStep', position: 3, name: 'バージョニングを早期に追加する', text: 'チームが2人を超えてプロンプトを編集するようになる前に、PromptHubまたはGitベースのバージョン管理をセットアップしてください。バージョニングなしで、本番環境で壊れたプロンプトをロールバックできません。' },
       { '@type': 'HowToStep', position: 4, name: '品質が重要な場合は評価を追加する', text: 'スコア付きグラウンドトゥルースデータセットが必要で、出力品質——精度、トーン、事実的正確性——に対する人間イン・ザ・ループフィードバックが必要な場合、Braintrustを統合してください。' },
-      { '@type': 'HowToStep', position: 5, name: '最後に本番ツーリングを追加する', text: 'プロンプトをエンドユーザーに送付し、A/Bテスト、フォールバックチェーン（GPT-5.5 → Claude 4.8 Opus → Gemini）、およびレイテンシとコストのモニタリングダッシュボードが必要な場合、Vellumをデプロイしてください。' },
+      { '@type': 'HowToStep', position: 5, name: '最後に本番ツーリングを追加する', text: 'プロンプトをエンドユーザーに送付し、A/Bテスト、フォールバックチェーン（GPT-5.6 → Claude 4.8 Opus → Gemini）、およびレイテンシとコストのモニタリングダッシュボードが必要な場合、Vellumをデプロイしてください。' },
       { '@type': 'HowToStep', position: 6, name: '四半期ごとにオーバーラップを監査する', text: 'フルスタックを3カ月ごとにレビューしてください。2つのツールが同じ機能をカバーしている場合——例えばBraintrustとPromptfooの両方がテスト——ROIが低いものを削除してください。' }
     ]
   },
@@ -1906,7 +1906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keyTakeaways: {
       isTldr: true,
       items: [
-        'PromptQuorum：マルチモデルディスパッチ（GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro、25+モデルを評価、テスト、またはデプロイ前に並べて比較）',
+        'PromptQuorum：マルチモデルディスパッチ（GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro、25+モデルを評価、テスト、またはデプロイ前に並べて比較）',
         'Braintrust：評価＋オブザーバビリティプラットフォーム（LLM判定、ヒューマンフィードバック、本番トレーシング、CI/CDゲート） — 無料 / Pro $249/月',
         'Confident AI：50以上の組み込みメトリクスとレッドチーミングによる自動評価 — Starter $19.99/ユーザー/月',
         'Vellum：本番環境（A/Bテスト、デプロイ、モニタリングダッシュボード）',
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     wherePromptQuorum: {
       id: 'where-promptquorum-fits',
       title: 'PromptQuorumはこのスタックのどこに当てはまりますか？',
-      content: '**PromptQuorumは、上記5つのツールがアドレスしないボトルネックを解きます：複数のAIモデルに1つのプロンプトをディスパッチし、出力を並べて比較します。** Braintrustはグラウンドトゥルースに対して1つのモデルの出力を評価します。Vellumは本番環境に1つのモデルをデプロイします。PromptfooはCI/CDで1つのモデルをテストします。PromptQuorumは、GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro、Ollama経由のローカルモデルがどのように同じプロンプトに答えるかを見ることができます——モデルまたはプロンプトバージョンをコミットする前に。\n\nこれはPromptQuorumをワークフローの自然な最初のステップにします：モデルを比較 → 最適を選択 → 次に評価（Braintrust）、テスト（Promptfoo）、バージョン（PromptHub）、デプロイ（Vellum）。',
+      content: '**PromptQuorumは、上記5つのツールがアドレスしないボトルネックを解きます：複数のAIモデルに1つのプロンプトをディスパッチし、出力を並べて比較します。** Braintrustはグラウンドトゥルースに対して1つのモデルの出力を評価します。Vellumは本番環境に1つのモデルをデプロイします。PromptfooはCI/CDで1つのモデルをテストします。PromptQuorumは、GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro、Ollama経由のローカルモデルがどのように同じプロンプトに答えるかを見ることができます——モデルまたはプロンプトバージョンをコミットする前に。\n\nこれはPromptQuorumをワークフローの自然な最初のステップにします：モデルを比較 → 最適を選択 → 次に評価（Braintrust）、テスト（Promptfoo）、バージョン（PromptHub）、デプロイ（Vellum）。',
       items: [
         'Ollama経由のローカルLLMを含む25+モデルへディスパッチ',
         '9つのビルトイン・プロンプトフレームワーク（TRACE、CO-STAR、CRAFT、RISEN、RTF、他）',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content: '**Braintrustはシリーズ B 調達（2026年2月、8,000万ドル、評価額8億ドル）を経て、フルObs + 評価プラットフォームに進化しました。** コアの評価ループ（LLM判定、ヒューマンフィードバック、データセット管理）に加え、本番トレーシング（スパン・レイテンシ・コスト）、CI/CDクオリティゲート、MCPサーバー統合、サイドバイサイドモデル比較のためのPlaygroundが追加されています。',
       items: [
         'ヒューマンイン・ザ・ループフィードバック付き構造化評価が必要な場合に最適',
-        'GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro、任意のOpenAI互換APIで機能',
+        'GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro、任意のOpenAI互換APIで機能',
         '料金：無料（100万トレース、1万スコア、ユーザー数無制限）；Pro $249/月；Enterprise要問い合わせ',
         '本番トレーシング：すべてのスパン・レイテンシ・コストを評価結果と合わせて記録'
       ],
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Promptfooとは？オープンソースCI/CDテスト無料',
       content: '**Promptfooは最良の無料オプション。** CLIツール、YAMLコンフィグからテスト実行、CI/CD統合、レッドチーミング（ジェイルブレイク検知、毒性スコアリング）ビルトイン。コストなしでテストをここから始めてください。',
       items: [
-        'GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro、OllamaおよびLM Studioローカルモデルをネイティブにサポート',
+        'GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro、OllamaおよびLM Studioローカルモデルをネイティブにサポート',
         '無料セルフホストCI/CDテストに最適',
         'ビルトイン・レッドチーミング：ジェイルブレイクと毒性検知',
       'OpenAIに買収（2026年3月）；無料・オープンソース・セルフホストを維持'
@@ -2022,7 +2022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'どのようにPrompt Engineeringツールを選択しますか？',
       content: 'ワークフロー段階に基づいてツールを選択してください。**すべてのチーム：モデル比較用にPromptQuorumから始めてください、次にボトルネック用に専門ツールを追加。**',
       items: [
-        '**すべてのチーム—モデル選択：** PromptQuorum（無料）から始めてGPT-5.5、Claude 4.8 Opus、Gemini、ローカルモデルをスタックをコミットする前に並べて比較。',
+        '**すべてのチーム—モデル選択：** PromptQuorum（無料）から始めてGPT-5.6、Claude 4.8 Opus、Gemini、ローカルモデルをスタックをコミットする前に並べて比較。',
         '**スタートアップ（<10人）：** PromptQuorum + Promptfoo（無料）+ PromptHub（バージョン管理）。評価品質が重要な場合Braintrustに昇格。',
         '**本番環境に送付：** Vellum（デプロイ/モニタリング）+ Promptfoo（CI/CDテスト）+ Braintrust（必要に応じてオフライン評価）',
         '**LangChain重い：** LangSmith（必須）+ Promptfoo（ユニットテスト）+ BraintrustまたはConfident AI（オフライン評価）',
@@ -2128,7 +2128,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   twitterDescription: 'Promptfoo免费开源。Braintrust起价500美元/月。PromptQuorum可同时向25+模型分发。哪个技术栈适合你？',
   intro: '**2026年，6款工具主导提示词工程领域：PromptQuorum用于多模型分发、Braintrust用于评估、Vellum用于生产、Promptfoo用于测试、PromptHub用于版本管理、LangSmith用于可观测性——各工具各司其职，解决不同的系统瓶颈。本指南按实际使用场景对它们排名，展示哪些工具组合协作最有效。**',
   publishDate: '2026-04-10',
-  dateModified: '2026-06-14',
+  dateModified: '2026-07-13',
   lastFactChecked: '2026-06-03 — 所有价格和功能已对照官方文档验证',
   readTime: '阅读约9分钟',
   educationalLevel: 'Intermediate',
@@ -2165,7 +2165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Organization', name: 'PromptQuorum' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-13',
     url: 'https://www.promptquorum.com/zh/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'zh',
     proficiencyLevel: 'Intermediate',
@@ -2231,7 +2231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keyTakeaways: {
       isTldr: true,
       items: [
-        'PromptQuorum：多模型分发（在评估、测试或部署前并排比较GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro和25+模型）',
+        'PromptQuorum：多模型分发（在评估、测试或部署前并排比较GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro和25+模型）',
         'Braintrust：评估+可观测性平台（LLM评判、人工反馈、生产追踪、CI/CD门控） — 免费 / Pro $249/月',
         'Confident AI：50+内置指标和红队测试的自动化评估 — Starter $19.99/用户/月',
         'Vellum：生产部署（A/B测试、部署、监控仪表板）',
@@ -2251,7 +2251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     wherePromptQuorum: {
       id: 'where-promptquorum-fits',
       title: 'PromptQuorum在这个堆栈中的位置',
-      content: '**PromptQuorum解决上述5个工具都不涉及的瓶颈：向多个AI模型分发一个提示词并并排比较输出。** Braintrust评估一个模型的输出。Vellum向生产部署一个模型。Promptfoo在CI/CD中测试一个模型。PromptQuorum让你看到GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro和通过Ollama的本地模型如何回答同一个提示词——在你承诺模型或提示词版本之前。\n\n这使PromptQuorum成为工作流的自然第一步：比较模型 → 选最好的 → 然后评估（Braintrust）、测试（Promptfoo）、版本（PromptHub）、部署（Vellum）。',
+      content: '**PromptQuorum解决上述5个工具都不涉及的瓶颈：向多个AI模型分发一个提示词并并排比较输出。** Braintrust评估一个模型的输出。Vellum向生产部署一个模型。Promptfoo在CI/CD中测试一个模型。PromptQuorum让你看到GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro和通过Ollama的本地模型如何回答同一个提示词——在你承诺模型或提示词版本之前。\n\n这使PromptQuorum成为工作流的自然第一步：比较模型 → 选最好的 → 然后评估（Braintrust）、测试（Promptfoo）、版本（PromptHub）、部署（Vellum）。',
       items: [
         '向包括Ollama本地LLM在内的25+模型分发',
         '9个内置提示词框架（TRACE、CO-STAR、CRAFT、RISEN、RTF等）',
@@ -2265,7 +2265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content: '**Braintrust在完成B轮融资（2026年2月，8000万美元，估值8亿美元）后，已发展成为完整的可观测性+评估平台。** 在核心评估循环（LLM评判、人工反馈、数据集管理）的基础上，新增了：生产追踪（spans、延迟、成本）、CI/CD质量门控、MCP服务器集成，以及用于并排模型对比的Playground。',
       items: [
         '最适合需要人工环路反馈的结构化评估',
-        '可与GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro和任何OpenAI兼容API配合',
+        '可与GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro和任何OpenAI兼容API配合',
         '定价：免费（100万次追踪、1万次评分、用户数无限）；Pro $249/月；企业版询价',
         '生产追踪：将每个span、延迟和成本与评估结果一并记录'
       ],
@@ -2288,7 +2288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Promptfoo是什么？开源CI/CD测试零成本',
       content: '**Promptfoo是最好的免费选择。** CLI工具、从YAML配置运行测试、CI/CD集成、内置红队（越狱检测、毒性评分）。无成本开始测试。',
       items: [
-        '原生支持GPT-5.5、Claude 4.8 Opus、Gemini 3.1 Pro和通过Ollama及LM Studio的本地模型',
+        '原生支持GPT-5.6、Claude 4.8 Opus、Gemini 3.1 Pro和通过Ollama及LM Studio的本地模型',
         '最适合免费自托管CI/CD测试',
         '内置红队：越狱和毒性检测',
       '被OpenAI收购（2026年3月）；仍免费、开源、自托管'
@@ -2347,7 +2347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '如何选择合适的提示词工程工具？',
       content: '**基于工作流阶段选择工具。所有团队：从PromptQuorum开始比较模型，然后为你的瓶颈添加专业工具。**',
       items: [
-        '**所有团队——模型选择：** 从免费的PromptQuorum开始，在承诺堆栈前并排比较GPT-5.5、Claude 4.8 Opus、Gemini和本地模型。',
+        '**所有团队——模型选择：** 从免费的PromptQuorum开始，在承诺堆栈前并排比较GPT-5.6、Claude 4.8 Opus、Gemini和本地模型。',
         '**初创（<10人）：** PromptQuorum + Promptfoo（免费）+ PromptHub（版本管理）。当评估质量关键时升级到Braintrust。',
         '**生产交付：** Vellum（部署/监控）+ Promptfoo（CI/CD测试）+ Braintrust（必要时离线评估）',
         '**LangChain重度用户：** LangSmith（必需）+ Promptfoo（单元测试）+ Braintrust或Confident AI（离线评估）',
@@ -2453,7 +2453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   twitterDescription: 'Promptfoo는 무료입니다. Braintrust는 월 $249부터. PromptQuorum은 25개 이상의 모델에 디스패치합니다. 어떤 스택이 팀에 맞습니까?',
   intro: '**2026년 프롬프트 엔지니어링을 지배하는 6가지 도구: 멀티모델 디스패치를 위한 PromptQuorum, 평가를 위한 Braintrust, 프로덕션을 위한 Vellum, 테스팅을 위한 Promptfoo, 버전 관리를 위한 PromptHub, 관찰 가능성을 위한 LangSmith — 각각 서로 다른 병목을 해결합니다. 이 가이드는 작업별로 순위를 매기고 어떤 조합이 함께 작동하는지 보여드립니다.**',
   publishDate: '2026-04-10',
-  dateModified: '2026-06-14',
+  dateModified: '2026-07-13',
   lastFactChecked: '2026-06-03 — 모든 가격 및 기능이 공식 문서에 대해 검증되었습니다',
   readTime: '9분 분량',
   educationalLevel: 'Intermediate',
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     datePublished: '2026-04-10',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-13',
     url: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-engineering-tools-2026',
     inLanguage: 'ko',
     proficiencyLevel: 'Intermediate',
@@ -2547,7 +2547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'HowToStep', position: 2, name: '무료로 시작', text: 'PromptQuorum(멀티모델 비교, 무료 티어)에 등록하고 Promptfoo(CI/CD 테스팅, 오픈소스)를 설치하십시오. 둘 다 무료이며 가장 일반적인 두 시작점인 모델 선택과 테스트 커버리지를 다룹니다.' },
       { '@type': 'HowToStep', position: 3, name: '초기에 버전 관리 추가', text: '팀이 프롬프트를 편집하는 2명을 초과하기 전에 PromptHub 또는 Git 기반 버전 관리를 설정하십시오. 버전 관리 없이는 프로덕션에서 손상된 프롬프트를 롤백할 수 없습니다.' },
       { '@type': 'HowToStep', position: 4, name: '품질이 중요할 때 평가 추가', text: '출력 품질(정확성, 어조, 사실적 정확성)에 대한 점수 매기기와 human-in-the-loop 피드백이 있는 ground truth 데이터셋이 필요할 때 Braintrust를 통합하십시오.' },
-      { '@type': 'HowToStep', position: 5, name: '마지막으로 프로덕션 도구 추가', text: '최종 사용자에게 프롬프트를 게시하고 A/B 테스팅, 폴백 체인(GPT-5.5 → Claude 4.8 Opus → Gemini), 지연 시간 및 비용 모니터링 대시보드가 필요할 때 Vellum을 배포하십시오.' },
+      { '@type': 'HowToStep', position: 5, name: '마지막으로 프로덕션 도구 추가', text: '최종 사용자에게 프롬프트를 게시하고 A/B 테스팅, 폴백 체인(GPT-5.6 → Claude 4.8 Opus → Gemini), 지연 시간 및 비용 모니터링 대시보드가 필요할 때 Vellum을 배포하십시오.' },
       { '@type': 'HowToStep', position: 6, name: '분기별 중복 감사', text: '매 분기마다 전체 스택을 검토하십시오. 두 도구가 동일한 기능을 다루고 있다면 — 예를 들어 Braintrust와 Promptfoo가 모두 테스팅을 수행하는 경우 — ROI가 낮은 것을 제거하십시오.' }
     ]
   },
@@ -2568,7 +2568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     keyTakeaways: {
       isTldr: true,
       items: [
-        'PromptQuorum: 멀티모델 디스패치 (평가, 테스팅, 배포 전에 GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro 및 25개 이상의 모델을 나란히 비교)',
+        'PromptQuorum: 멀티모델 디스패치 (평가, 테스팅, 배포 전에 GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro 및 25개 이상의 모델을 나란히 비교)',
         'Braintrust: 평가 + 관찰 가능성 플랫폼 (LLM 판사, 인간 피드백, 프로덕션 트레이싱, CI/CD 게이트) — 무료 / 월 $249 Pro',
         'Confident AI: 50개 이상의 내장 메트릭과 red teaming이 있는 자동화 평가 — Starter 사용자당 월 $19.99',
         'Vellum: 프로덕션 (A/B 테스팅, 배포, 모니터링 대시보드)',
@@ -2588,7 +2588,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     wherePromptQuorum: {
       id: 'where-promptquorum-fits',
       title: '이 스택에서 PromptQuorum은 어디에 적합합니까?',
-      content: '**[PromptQuorum](/features)은 앞서 언급한 5가지 도구 중 어느 것도 다루지 않는 병목을 해결합니다: 여러 AI 모델에 동시에 프롬프트를 디스패치하고 출력을 나란히 비교합니다.** Braintrust는 모델 출력을 ground truth와 비교하여 평가합니다. Vellum은 프로덕션에 모델을 배포합니다. Promptfoo는 CI/CD에서 모델을 테스트합니다. PromptQuorum을 사용하면 GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro, Ollama를 통한 로컬 모델이 동일한 프롬프트에 어떻게 응답하는지 확인할 수 있습니다 — 모델이나 프롬프트 버전에 투자하기 전에.\n\n이것이 PromptQuorum을 워크플로의 자연스러운 첫 번째 단계로 만듭니다: 모델 비교 → 최선 선택 → 그런 다음 평가(Braintrust), 테스트(Promptfoo), 버전 관리(PromptHub), 배포(Vellum).',
+      content: '**[PromptQuorum](/features)은 앞서 언급한 5가지 도구 중 어느 것도 다루지 않는 병목을 해결합니다: 여러 AI 모델에 동시에 프롬프트를 디스패치하고 출력을 나란히 비교합니다.** Braintrust는 모델 출력을 ground truth와 비교하여 평가합니다. Vellum은 프로덕션에 모델을 배포합니다. Promptfoo는 CI/CD에서 모델을 테스트합니다. PromptQuorum을 사용하면 GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro, Ollama를 통한 로컬 모델이 동일한 프롬프트에 어떻게 응답하는지 확인할 수 있습니다 — 모델이나 프롬프트 버전에 투자하기 전에.\n\n이것이 PromptQuorum을 워크플로의 자연스러운 첫 번째 단계로 만듭니다: 모델 비교 → 최선 선택 → 그런 다음 평가(Braintrust), 테스트(Promptfoo), 버전 관리(PromptHub), 배포(Vellum).',
       items: [
         'Ollama를 통한 로컬 LLM을 포함하여 25개 이상의 모델에 디스패치',
         '9가지 내장 프롬프트 프레임워크 (TRACE, CO-STAR, CRAFT, RISEN, RTF 등)',
@@ -2612,7 +2612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     vellum: {
       id: 'vellum-production',
       title: 'Vellum이란 무엇입니까? 프로덕션 배포, 워크플로 빌더, 모니터링',
-      content: '**Vellum은 프로덕션 배포를 넘어 완전한 LLM 개발 플랫폼으로 확장되었습니다.** 핵심: A/B 테스팅, 카나리 롤아웃, 폴백 체인(GPT-5.5 → Claude 4.8 Opus → Gemini), 지연 시간 및 비용 모니터링 대시보드. 추가 기능: 드래그 앤 드롭 시각적 워크플로 빌더, 코드 정의 파이프라인을 위한 Python SDK, 문서 검색 및 RAG 통합, 모델 벤치마킹을 위한 LLM Leaderboard, 엔터프라이즈 조달을 위한 AWS Marketplace 등록.',
+      content: '**Vellum은 프로덕션 배포를 넘어 완전한 LLM 개발 플랫폼으로 확장되었습니다.** 핵심: A/B 테스팅, 카나리 롤아웃, 폴백 체인(GPT-5.6 → Claude 4.8 Opus → Gemini), 지연 시간 및 비용 모니터링 대시보드. 추가 기능: 드래그 앤 드롭 시각적 워크플로 빌더, 코드 정의 파이프라인을 위한 Python SDK, 문서 검색 및 RAG 통합, 모델 벤치마킹을 위한 LLM Leaderboard, 엔터프라이즈 조달을 위한 AWS Marketplace 등록.',
       items: [
         '프로덕션 배포에 이상적 — A/B 테스팅, 카나리 롤아웃, 모니터링',
         '시각적 워크플로 빌더: 파이프라인 코드 없이 드래그 앤 드롭 에이전트 구축',
@@ -2625,7 +2625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Promptfoo란 무엇입니까? 비용 없는 오픈소스 CI/CD 테스팅',
       content: '**Promptfoo는 최고의 무료 옵션입니다.** CLI 도구로, YAML 구성에서 테스트를 실행하고 CI/CD와 통합되며 red teaming(탈옥 탐지, 독성 점수)을 포함합니다. 비용 없이 테스팅하려면 여기서 시작하십시오.',
       items: [
-        'GPT-5.5, Claude 4.8 Opus, Gemini 3.1 Pro 및 Ollama와 LM Studio를 통한 로컬 모델을 기본으로 지원',
+        'GPT-5.6, Claude 4.8 Opus, Gemini 3.1 Pro 및 Ollama와 LM Studio를 통한 로컬 모델을 기본으로 지원',
         '무료 자체 호스팅 CI/CD 테스팅에 이상적',
         '내장 red teaming: 탈옥 및 독성 탐지',
       'OpenAI에 인수됨(2026년 3월); 무료·오픈소스·자체 호스팅 유지'
@@ -2682,7 +2682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '올바른 프롬프트 엔지니어링 도구를 어떻게 선택합니까?',
       content: '**워크플로 단계에 따라 도구를 선택하십시오. 모든 팀: 모델 비교를 위해 PromptQuorum으로 시작한 다음 병목에 맞는 전문 도구를 추가하십시오.**',
       items: [
-        '**모든 팀 — 모델 선택:** 스택에 투자하기 전에 GPT-5.5, Claude 4.8 Opus, Gemini, 로컬 모델을 나란히 비교하기 위해 PromptQuorum(무료)으로 시작하십시오.',
+        '**모든 팀 — 모델 선택:** 스택에 투자하기 전에 GPT-5.6, Claude 4.8 Opus, Gemini, 로컬 모델을 나란히 비교하기 위해 PromptQuorum(무료)으로 시작하십시오.',
         '**스타트업(<10명):** PromptQuorum + Promptfoo(무료) + PromptHub(버전 관리). 평가 품질이 중요해질 때 Braintrust로 발전하십시오.',
         '**프로덕션 배포:** Vellum(배포/모니터링) + Promptfoo(CI/CD 테스팅) + Braintrust 또는 Confident AI(오프라인 평가)',
         '**LangChain 집중 사용:** LangSmith(체인 트레이싱에 필수) + Promptfoo(단위 테스트) + Confident AI 또는 Braintrust(오프라인 평가)',

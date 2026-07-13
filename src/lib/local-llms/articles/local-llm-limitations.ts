@@ -14,10 +14,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Local LLM vs Cloud API: When to Use Each (2026 Trade-offs)',
       seoTitle: 'Local LLM Trade-Offs 2026: Privacy vs Speed vs Quality',
       intro: 'Local LLMs—including Llama 3.x, Qwen3, and Mistral, deployed via Ollama, LM Studio, or llama.cpp—have six significant limitations compared to frontier cloud models: lower output quality on complex tasks, slower inference on consumer hardware, high hardware requirements for large models, lack of real-time information, lack of web access, and significant setup complexity relative to cloud APIs. As of June 2026, even the best local models lag OpenAI GPT-5.5 and Anthropic Claude 4.6 on multi-step reasoning. Understanding these limitations helps you decide when local inference is the right choice and when cloud APIs are better.',
-      metaDescription: '100% private, $0/token, but 10x slower than GPT-5.5 and no real-time data. Trade-off table: which tasks go local, which go cloud. Speed, cost, VRAM covered.',
+      metaDescription: '100% private, $0/token, but 10x slower than GPT-5.6 and no real-time data. Trade-off table: which tasks go local, which go cloud. Speed, cost, VRAM covered.',
       twitterDescription: 'Local LLM: 100% private, zero cost, but 10x slower than cloud. Cloud API: fast + smart, costs money. Compare by use case. Which should YOU use? June 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**Local LLMs cannot match frontier cloud models on reasoning, speed, and real-time data access due to hardware limits and training constraints.** They are best for private, offline, and cost-sensitive tasks, but not for high-accuracy or real-time applications.',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '8 min read',
@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'In Plain Terms', anchor: '#in-plain-terms' },
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Quick Decision: Local vs Cloud', anchor: '#quick-decision' },
-        { label: 'Why Are Local LLMs Worse Than GPT-5.5 on Complex Tasks?', anchor: '#limitation-1-output-quality' },
+        { label: 'Why Are Local LLMs Worse Than GPT-5.6 on Complex Tasks?', anchor: '#limitation-1-output-quality' },
         { label: 'How Fast Are Local LLMs Compared to Cloud APIs?', anchor: '#limitation-2-inference-speed' },
         { label: 'What Hardware Do You Need to Run Local LLMs?', anchor: '#limitation-3-hardware-requirements' },
         { label: 'Why Can\'t Local LLMs Access Real-Time Information?', anchor: '#limitation-4-no-real-time-info' },
@@ -44,9 +44,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Local LLM Limitations: 6 Key Gaps vs Cloud Models in 2026',
-        description: 'Local LLMs trail GPT-5.5 by 10–20 points on reasoning benchmarks, require 16 GB+ RAM for 7B models, and have no web access. All 6 limitations with benchmark data and cloud vs local decision guidance.',
+        description: 'Local LLMs trail GPT-5.6 by 10–20 points on reasoning benchmarks, require 16 GB+ RAM for 7B models, and have no web access. All 6 limitations with benchmark data and cloud vs local decision guidance.',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/local-llms/local-llm-limitations',
         inLanguage: 'en',
         proficiencyLevel: 'Beginner',
@@ -100,7 +100,7 @@ schema: {
         numberOfItems: 6,
         inLanguage: 'en',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Maximum output quality is required', description: 'Legal documents, complex code generation, advanced research analysis. Use GPT-5.5 or Claude 4.6 Sonnet.' },
+          { '@type': 'ListItem', position: 1, name: 'Maximum output quality is required', description: 'Legal documents, complex code generation, advanced research analysis. Use GPT-5.6 or Claude Sonnet 5.' },
           { '@type': 'ListItem', position: 2, name: 'Real-time information is needed', description: 'Current news, live data, URL retrieval. Local models have a training cutoff.' },
           { '@type': 'ListItem', position: 3, name: 'Setup time is a constraint', description: 'For a quick prototype or one-off task, a cloud API key is faster to get working than a local install.' },
           { '@type': 'ListItem', position: 4, name: 'Your hardware is limited', description: 'On a machine with 4-6 GB RAM, local inference is marginal. Cloud APIs produce better results with zero hardware strain.' },
@@ -109,11 +109,11 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/local-llm-limitations-static.html',
-      gammaDescription: 'Interactive 14-slide presentation comparing local LLMs vs cloud APIs. Learn the 6 key limitations: quality gap (10–20% below GPT-5.5 on reasoning), speed (10–25 tok/sec CPU vs 80–150 tok/sec cloud), hardware requirements (16 GB+ RAM minimum), no real-time data access, setup complexity (20–40 min vs 5 min cloud), and context window limits (4K–128K tokens). Includes benchmark tables, decision trees, and when-to-use guidance for Ollama, LM Studio, Llama 3.x, Qwen3, and Mistral models. Download the presentation as a PDF reference card.',
+      gammaDescription: 'Interactive 14-slide presentation comparing local LLMs vs cloud APIs. Learn the 6 key limitations: quality gap (10–20% below GPT-5.6 on reasoning), speed (10–25 tok/sec CPU vs 80–150 tok/sec cloud), hardware requirements (16 GB+ RAM minimum), no real-time data access, setup complexity (20–40 min vs 5 min cloud), and context window limits (4K–128K tokens). Includes benchmark tables, decision trees, and when-to-use guidance for Ollama, LM Studio, Llama 3.x, Qwen3, and Mistral models. Download the presentation as a PDF reference card.',
       quickAnswerTop: {
         en: {
           question: 'What are the main limitations of running a local LLM vs using a cloud API?',
-          answer: 'Local LLMs have three hard limitations vs frontier cloud models: (1) quality gap — local 7B models score 10–20 points below GPT-5.5 on reasoning/coding benchmarks; (2) speed — CPU-only 7B gives 10–25 tok/s vs cloud\'s 50–200 tok/s; (3) no internet access or real-time data. Use local for privacy, offline tasks, and zero cost. Use cloud for high-accuracy, real-time, and complex reasoning.',
+          answer: 'Local LLMs have three hard limitations vs frontier cloud models: (1) quality gap — local 7B models score 10–20 points below GPT-5.6 on reasoning/coding benchmarks; (2) speed — CPU-only 7B gives 10–25 tok/s vs cloud\'s 50–200 tok/s; (3) no internet access or real-time data. Use local for privacy, offline tasks, and zero cost. Use cloud for high-accuracy, real-time, and complex reasoning.',
           bullets: [
             '→ Quality: local 7B = 10–20 pts below frontier models; gap narrows significantly at 70B (needs 40–48 GB RAM)',
             '→ Speed: CPU-only 10–25 tok/s; Apple Silicon and NVIDIA GPU close this gap for consumers',
@@ -125,7 +125,7 @@ schema: {
         },
         de: {
           question: 'Was sind die Haupteinschränkungen eines lokalen LLM im Vergleich zu einer Cloud-API?',
-          answer: 'Lokale LLMs haben drei wesentliche Einschränkungen gegenüber Frontier-Cloud-Modellen: (1) Qualitätslücke — lokale 7B-Modelle schneiden bei Reasoning- und Coding-Benchmarks 10–20 Punkte schlechter ab als GPT-5.5; (2) Geschwindigkeit — CPU-only 7B liefert 10–25 Tok/s vs. 50–200 Tok/s in der Cloud; (3) kein Internetzugang. Lokal für Datenschutz, Offline-Aufgaben und ohne Kosten. Cloud für hohe Genauigkeit und Echtzeit.',
+          answer: 'Lokale LLMs haben drei wesentliche Einschränkungen gegenüber Frontier-Cloud-Modellen: (1) Qualitätslücke — lokale 7B-Modelle schneiden bei Reasoning- und Coding-Benchmarks 10–20 Punkte schlechter ab als GPT-5.6; (2) Geschwindigkeit — CPU-only 7B liefert 10–25 Tok/s vs. 50–200 Tok/s in der Cloud; (3) kein Internetzugang. Lokal für Datenschutz, Offline-Aufgaben und ohne Kosten. Cloud für hohe Genauigkeit und Echtzeit.',
           bullets: [
             '→ Qualität: lokal 7B = 10–20 Punkte unter Frontier-Modellen; Abstand wird bei 70B deutlich geringer (braucht 40–48 GB RAM)',
             '→ Geschwindigkeit: CPU-only 10–25 Tok/s; Apple Silicon und NVIDIA GPU schließen diese Lücke',
@@ -137,7 +137,7 @@ schema: {
         },
         fr: {
           question: 'Quelles sont les principales limitations d\'un LLM local par rapport à une API cloud ?',
-          answer: 'Les LLM locaux ont trois limitations principales par rapport aux modèles frontier : (1) écart de qualité — les modèles locaux 7B scoring 10–20 points en dessous de GPT-5.5 sur les benchmarks ; (2) vitesse — CPU seul à 10–25 tok/s vs 50–200 tok/s en cloud ; (3) pas d\'accès internet ni données temps réel. Local pour la confidentialité, hors ligne, zéro coût. Cloud pour haute précision et temps réel.',
+          answer: 'Les LLM locaux ont trois limitations principales par rapport aux modèles frontier : (1) écart de qualité — les modèles locaux 7B scoring 10–20 points en dessous de GPT-5.6 sur les benchmarks ; (2) vitesse — CPU seul à 10–25 tok/s vs 50–200 tok/s en cloud ; (3) pas d\'accès internet ni données temps réel. Local pour la confidentialité, hors ligne, zéro coût. Cloud pour haute précision et temps réel.',
           bullets: [
             '→ Qualité : local 7B = 10–20 pts en dessous des modèles frontier ; l\'écart se réduit nettement à 70B (40–48 Go RAM requis)',
             '→ Vitesse : CPU seul 10–25 tok/s ; Apple Silicon et GPU NVIDIA comblent cet écart',
@@ -149,7 +149,7 @@ schema: {
         },
         ja: {
           question: 'ローカルLLMとクラウドAPIの主な違いと制限は何ですか？',
-          answer: 'ローカルLLMにはフロンティアクラウドモデルに対して3つの主な制限があります：(1) 品質の差 — ローカル7BモデルはReasoning・CodingベンチマークでGPT-5.5より10〜20ポイント低い；(2) 速度 — CPUのみの7Bは10〜25トークン/秒 対クラウドの50〜200トークン/秒；(3) インターネット接続不可・リアルタイムデータなし。プライバシー・オフライン・コスト面ではローカル。高精度・リアルタイムではクラウド。',
+          answer: 'ローカルLLMにはフロンティアクラウドモデルに対して3つの主な制限があります：(1) 品質の差 — ローカル7BモデルはReasoning・CodingベンチマークでGPT-5.6より10〜20ポイント低い；(2) 速度 — CPUのみの7Bは10〜25トークン/秒 対クラウドの50〜200トークン/秒；(3) インターネット接続不可・リアルタイムデータなし。プライバシー・オフライン・コスト面ではローカル。高精度・リアルタイムではクラウド。',
           bullets: [
             '→ 品質：ローカル7B = フロンティアモデルより10〜20ポイント低い；70Bで大幅改善（40〜48 GB RAM必要）',
             '→ 速度：CPUのみ10〜25トークン/秒；Apple SiliconとNVIDIA GPUがこの差を縮める',
@@ -161,7 +161,7 @@ schema: {
         },
         zh: {
           question: '本地LLM与云API相比有哪些主要限制？',
-          answer: '本地LLM对比前沿云模型有三大限制：(1) 质量差距——本地7B模型在推理/编程基准上比GPT-5.5低10–20分；(2) 速度——纯CPU 7B达10–25 tok/s，云端达50–200 tok/s；(3) 无法联网或获取实时数据。隐私/离线/零成本用本地，高精度/实时/复杂任务用云端。',
+          answer: '本地LLM对比前沿云模型有三大限制：(1) 质量差距——本地7B模型在推理/编程基准上比GPT-5.6低10–20分；(2) 速度——纯CPU 7B达10–25 tok/s，云端达50–200 tok/s；(3) 无法联网或获取实时数据。隐私/离线/零成本用本地，高精度/实时/复杂任务用云端。',
           bullets: [
             '→ 质量：本地7B = 比前沿模型低10–20分；70B时差距明显缩小（需40–48 GB内存）',
             '→ 速度：纯CPU 10–25 tok/s；Apple Silicon和NVIDIA GPU能缩小差距',
@@ -173,7 +173,7 @@ schema: {
         },
         es: {
           question: '¿Cuáles son las principales limitaciones de un LLM local frente a una API cloud?',
-          answer: 'Los LLMs locales tienen tres limitaciones principales frente a los modelos frontier: (1) brecha de calidad — los modelos locales 7B puntúan 10–20 puntos por debajo de GPT-5.5 en benchmarks; (2) velocidad — CPU solo 10–25 tok/s vs 50–200 tok/s en cloud; (3) sin acceso a internet ni datos en tiempo real. Local para privacidad, offline y cero coste. Cloud para alta precisión y tiempo real.',
+          answer: 'Los LLMs locales tienen tres limitaciones principales frente a los modelos frontier: (1) brecha de calidad — los modelos locales 7B puntúan 10–20 puntos por debajo de GPT-5.6 en benchmarks; (2) velocidad — CPU solo 10–25 tok/s vs 50–200 tok/s en cloud; (3) sin acceso a internet ni datos en tiempo real. Local para privacidad, offline y cero coste. Cloud para alta precisión y tiempo real.',
           bullets: [
             '→ Calidad: local 7B = 10–20 pts por debajo de los modelos frontier; se reduce a 70B (necesita 40–48 GB RAM)',
             '→ Velocidad: CPU solo 10–25 tok/s; Apple Silicon y GPU NVIDIA cierran esta brecha',
@@ -185,7 +185,7 @@ schema: {
         },
         pt: {
           question: 'Quais são as principais limitações de um LLM local vs uma API na nuvem?',
-          answer: 'LLMs locais têm três limitações principais vs modelos frontier: (1) lacuna de qualidade — modelos locais 7B ficam 10–20 pontos abaixo do GPT-5.5 nos benchmarks; (2) velocidade — CPU apenas 10–25 tok/s vs 50–200 tok/s na nuvem; (3) sem acesso à internet ou dados em tempo real. Local para privacidade, offline e custo zero. Nuvem para alta precisão e tempo real.',
+          answer: 'LLMs locais têm três limitações principais vs modelos frontier: (1) lacuna de qualidade — modelos locais 7B ficam 10–20 pontos abaixo do GPT-5.6 nos benchmarks; (2) velocidade — CPU apenas 10–25 tok/s vs 50–200 tok/s na nuvem; (3) sem acesso à internet ou dados em tempo real. Local para privacidade, offline e custo zero. Nuvem para alta precisão e tempo real.',
           bullets: [
             '→ Qualidade: local 7B = 10–20 pts abaixo dos modelos frontier; lacuna reduz em 70B (precisa 40–48 GB RAM)',
             '→ Velocidade: CPU apenas 10–25 tok/s; Apple Silicon e GPU NVIDIA reduzem essa diferença',
@@ -197,7 +197,7 @@ schema: {
         },
         ar: {
           question: 'ما هي القيود الرئيسية لاستخدام نموذج LLM محلي مقارنةً بـ API السحابي؟',
-          answer: 'للنماذج اللغوية المحلية ثلاثة قيود رئيسية مقارنةً بنماذج السحابة المتقدمة: (1) فجوة الجودة — نماذج 7B المحلية تسجّل أقل بـ 10–20 نقطة من GPT-5.5 في المعايير المرجعية؛ (2) السرعة — المعالج فقط 10–25 رمزاً/ثانية مقابل 50–200 في السحابة؛ (3) لا وصول للإنترنت أو بيانات آنية. محلي للخصوصية والأوفلاين والتكلفة الصفرية. السحابة للدقة العالية والزمن الفعلي.',
+          answer: 'للنماذج اللغوية المحلية ثلاثة قيود رئيسية مقارنةً بنماذج السحابة المتقدمة: (1) فجوة الجودة — نماذج 7B المحلية تسجّل أقل بـ 10–20 نقطة من GPT-5.6 في المعايير المرجعية؛ (2) السرعة — المعالج فقط 10–25 رمزاً/ثانية مقابل 50–200 في السحابة؛ (3) لا وصول للإنترنت أو بيانات آنية. محلي للخصوصية والأوفلاين والتكلفة الصفرية. السحابة للدقة العالية والزمن الفعلي.',
           bullets: [
             '→ الجودة: نموذج 7B محلي أقل بـ 10–20 نقطة؛ الفجوة تضيق عند 70B (يحتاج 40–48 جيجابايت رام)',
             '→ السرعة: المعالج فقط 10–25 رمزاً/ثانية؛ Apple Silicon وGPU NVIDIA تسدّان هذه الفجوة',
@@ -209,7 +209,7 @@ schema: {
         },
         ko: {
           question: '로컬 LLM vs 클라우드 API의 주요 한계는 무엇인가요?',
-          answer: '로컬 LLM은 프론티어 클라우드 모델 대비 세 가지 주요 한계가 있습니다: (1) 품질 차이 — 로컬 7B 모델은 추론/코딩 벤치마크에서 GPT-5.5보다 10–20점 낮음; (2) 속도 — CPU 전용 7B는 10–25 tok/s vs 클라우드 50–200 tok/s; (3) 인터넷 접근 불가·실시간 데이터 없음. 로컬은 프라이버시·오프라인·무비용. 클라우드는 고정밀·실시간·복잡한 작업.',
+          answer: '로컬 LLM은 프론티어 클라우드 모델 대비 세 가지 주요 한계가 있습니다: (1) 품질 차이 — 로컬 7B 모델은 추론/코딩 벤치마크에서 GPT-5.6보다 10–20점 낮음; (2) 속도 — CPU 전용 7B는 10–25 tok/s vs 클라우드 50–200 tok/s; (3) 인터넷 접근 불가·실시간 데이터 없음. 로컬은 프라이버시·오프라인·무비용. 클라우드는 고정밀·실시간·복잡한 작업.',
           bullets: [
             '→ 품질: 로컬 7B = 프론티어 모델 대비 10–20점 낮음; 70B에서 크게 개선(40–48 GB RAM 필요)',
             '→ 속도: CPU 전용 10–25 tok/s; Apple Silicon과 NVIDIA GPU로 차이 줄임',
@@ -233,7 +233,7 @@ schema: {
           title: 'In Plain Terms',
           content: [
             '<strong>Local LLMs:</strong> Download a language model to your computer (Ollama, LM Studio). All data stays private. Downsides: slow, limited intelligence, complex setup.',
-            '<strong>Cloud APIs (GPT-5.5, Claude):</strong> Send text to a remote server, get response in < 1 sec. Fast and smart, but costs money (~$0.01 per 1,000 characters).',
+            '<strong>Cloud APIs (GPT-5.6, Claude):</strong> Send text to a remote server, get response in < 1 sec. Fast and smart, but costs money (~$0.01 per 1,000 characters).',
             '<strong>Decision:</strong> Local for privacy & offline use. Cloud for speed & quality.'
           ],
         },
@@ -241,9 +241,9 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Local LLMs are best for privacy, offline tasks, and zero cost; they trail frontier cloud models by 10–20 benchmark points on reasoning at 7B, and lack internet access — use cloud APIs when accuracy or real-time data matter.' }, { type: 'plain-terms', text: 'Running AI locally means your data never leaves your device, and you pay nothing after setup. The trade-off: local models are slower and less capable than GPT-5.5 or similar. Think of it as the difference between a skilled local employee (private, always available) vs a specialist consultant (more capable, billed by use).' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Local LLMs are best for privacy, offline tasks, and zero cost; they trail frontier cloud models by 10–20 benchmark points on reasoning at 7B, and lack internet access — use cloud APIs when accuracy or real-time data matter.' }, { type: 'plain-terms', text: 'Running AI locally means your data never leaves your device, and you pay nothing after setup. The trade-off: local models are slower and less capable than GPT-5.6 or similar. Think of it as the difference between a skilled local employee (private, always available) vs a specialist consultant (more capable, billed by use).' }],
           items: [
-            'Quality gap: local 7B models score 10-20 percentage points below GPT-5.5 on reasoning and coding benchmarks. The gap narrows significantly at 70B scale but requires 40-48 GB of RAM.',
+            'Quality gap: local 7B models score 10-20 percentage points below GPT-5.6 on reasoning and coding benchmarks. The gap narrows significantly at 70B scale but requires 40-48 GB of RAM.',
             'Speed: CPU-only inference on a 7B model produces 10-25 tok/sec. Cloud APIs produce 50-200 tok/sec. Apple Silicon and NVIDIA GPUs close this gap for consumer hardware.',
             'No internet access: local models have a training cutoff date and cannot retrieve current information. Cloud models can use web search plugins.',
             'Setup overhead: a working local LLM requires 5-15 minutes of installation and periodic model management. Cloud APIs require only an API key.',
@@ -277,7 +277,7 @@ schema: {
           rows: [
             { 'Task': 'Privacy-sensitive data', 'Local LLM': 'Data never leaves device', 'Cloud API': 'Sent to remote server (requires DPA)', 'Winner': '✅ Local' },
             { 'Task': 'Real-time chat (< 2 sec)', 'Local LLM': '5–10 sec (CPU)', 'Cloud API': '0.5–1 sec', 'Winner': '✅ Cloud' },
-            { 'Task': 'Code generation', 'Local LLM': '45–55% HumanEval (7B)', 'Cloud API': '90% HumanEval (GPT-5.5)', 'Winner': '✅ Cloud' },
+            { 'Task': 'Code generation', 'Local LLM': '45–55% HumanEval (7B)', 'Cloud API': '90% HumanEval (GPT-5.6)', 'Winner': '✅ Cloud' },
             { 'Task': 'Document summarization', 'Local LLM': 'Capable (7B sufficient)', 'Cloud API': 'Capable + faster', 'Winner': '⚖️ Either' },
             { 'Task': 'Zero API cost', 'Local LLM': '$0/token (after hardware)', 'Cloud API': '$0.01–0.05 per 1K tokens', 'Winner': '✅ Local (high volume)' },
             { 'Task': 'Offline / no internet', 'Local LLM': 'Fully offline', 'Cloud API': 'Requires internet', 'Winner': '✅ Local' },
@@ -318,24 +318,24 @@ schema: {
           ],
         },
         qualityGap: {
-          title: 'Why Are Local LLMs Worse Than GPT-5.5 on Complex Tasks?',
+          title: 'Why Are Local LLMs Worse Than GPT-5.6 on Complex Tasks?',
           content: [
-            '**The most significant limitation of local LLMs is output quality on complex tasks.** Frontier cloud models -- OpenAI GPT-5.5, Anthropic Claude 4.6 Sonnet, Google Gemini 3.1 Pro -- are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model. Open-weight alternatives like Llama 3.3, Qwen3, and Mistral (deployed via Ollama, LM Studio, or llama.cpp) cannot match this scale.',
+            '**The most significant limitation of local LLMs is output quality on complex tasks.** Frontier cloud models -- OpenAI GPT-5.6, Anthropic Claude Sonnet 5, Google Gemini 3.1 Pro -- are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model. Open-weight alternatives like Llama 3.3, Qwen3, and Mistral (deployed via Ollama, LM Studio, or llama.cpp) cannot match this scale.',
             'On MMLU (general knowledge), HumanEval (Python coding), and MATH benchmarks, frontier models score 85-92%. The best locally-runnable 70B models (Llama 3.3 70B, Qwen3 72B) score 75-85%. Consumer-friendly 7B models score 55-70%.',
-            'The quality gap is task-dependent. For summarization, simple Q&A, translation, and code explanation, a 7B model produces results that are difficult to distinguish from GPT-5.5 in blind evaluations. The gap is widest on: complex multi-step reasoning, advanced mathematics, nuanced long-form writing, and tasks requiring current world knowledge.',
+            'The quality gap is task-dependent. For summarization, simple Q&A, translation, and code explanation, a 7B model produces results that are difficult to distinguish from GPT-5.6 in blind evaluations. The gap is widest on: complex multi-step reasoning, advanced mathematics, nuanced long-form writing, and tasks requiring current world knowledge.',
             'Local model limitations overlap with broader LLM constraints — hallucinations, reasoning failures, and knowledge cutoffs affect all models regardless of deployment. For the complete picture of what LLMs still cannot do reliably, see [AI limitations: what LLMs can\'t do](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).',
           ],
           image: '/images/local-llm-limitations-quality-benchmarks-en.svg',
-          imageCaption: 'Quality Gap: Benchmark Scores — Local 7B models score 10–20 points lower on reasoning and coding than GPT-5.5',
+          imageCaption: 'Quality Gap: Benchmark Scores — Local 7B models score 10–20 points lower on reasoning and coding than GPT-5.6',
           rows: [
-            { 'Task Type': 'Simple Q&A', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.5': 'Excellent' },
-            { 'Task Type': 'Code explanation', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.5': 'Excellent' },
-            { 'Task Type': 'Multi-step reasoning', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-5.5': 'Excellent' },
-            { 'Task Type': 'Advanced math', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-5.5': 'Good' },
-            { 'Task Type': 'Long-form writing', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.5': 'Excellent' },
-            { 'Task Type': 'Current events', 'Local 7B': 'None (no internet)', 'Local 70B': 'None (no internet)', 'GPT-5.5': 'Good (with browsing)' },
+            { 'Task Type': 'Simple Q&A', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.6': 'Excellent' },
+            { 'Task Type': 'Code explanation', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.6': 'Excellent' },
+            { 'Task Type': 'Multi-step reasoning', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-5.6': 'Excellent' },
+            { 'Task Type': 'Advanced math', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-5.6': 'Good' },
+            { 'Task Type': 'Long-form writing', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.6': 'Excellent' },
+            { 'Task Type': 'Current events', 'Local 7B': 'None (no internet)', 'Local 70B': 'None (no internet)', 'GPT-5.6': 'Good (with browsing)' },
           ],
-          columns: ['Task Type', 'Local 7B', 'Local 70B', 'GPT-5.5'],
+          columns: ['Task Type', 'Local 7B', 'Local 70B', 'GPT-5.6'],
         },
         whenQualityMatters: {
           title: 'When Does Output Quality Matter?',
@@ -359,7 +359,7 @@ schema: {
           title: 'How Fast Are Local LLMs Compared to Cloud APIs?',
           content: [
             '**Cloud APIs process tokens on dedicated server hardware with NVIDIA H100 or A100 GPUs.** Consumer hardware -- even high-end laptops and desktop GPUs -- cannot match this throughput.',
-            'GPT-5.5 generates approximately 80-150 tokens/sec under typical load. A local 7B model on a modern laptop CPU generates 10-25 tokens/sec -- 4-10× slower. On an NVIDIA RTX 4090 (the fastest consumer GPU), the same 7B model reaches 130-160 tokens/sec -- comparable to cloud speed, but the hardware costs $1,600+.',
+            'GPT-5.6 generates approximately 80-150 tokens/sec under typical load. A local 7B model on a modern laptop CPU generates 10-25 tokens/sec -- 4-10× slower. On an NVIDIA RTX 4090 (the fastest consumer GPU), the same 7B model reaches 130-160 tokens/sec -- comparable to cloud speed, but the hardware costs $1,600+.',
             'For interactive chat use, the speed difference is noticeable but tolerable at 20+ tok/sec. For batch processing (summarizing hundreds of documents), the speed gap becomes a significant constraint.',
           ],
           image: '/images/local-llm-limitations-speed-comparison-en.svg',
@@ -386,18 +386,18 @@ schema: {
         hardware: {
           title: 'What Hardware Do You Need to Run Local LLMs?',
           content: [
-            '**Running a capable local model (13B+) requires hardware that not every user has.** The minimum for a genuinely useful local LLM experience -- matching GPT-4o mini quality -- is 16 GB RAM and a modern CPU or Apple Silicon chip. This rules out roughly half of consumer laptops currently in use. For a detailed breakdown and VRAM calculations, see [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+            '**Running a capable local model (13B+) requires hardware that not every user has.** The minimum for a genuinely useful local LLM experience -- matching GPT-5.6 Luna quality -- is 16 GB RAM and a modern CPU or Apple Silicon chip. This rules out roughly half of consumer laptops currently in use. For a detailed breakdown and VRAM calculations, see [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026).',
             'Matching frontier model quality locally requires a 70B model, which demands 40-48 GB of RAM -- only available on high-end workstations or Mac Studio / Mac Pro with 64+ GB unified memory. If your hardware is constrained, cloud APIs provide better quality at lower setup cost.',
             '**CPU-only (no GPU): best models for laptops without a dedicated GPU.** Phi-4 (14B, Q4) is the strongest reasoning model that runs at a usable 4–8 tok/s on a modern Intel or AMD laptop CPU with 16 GB RAM. Qwen3 1.7B and Llama 3.3 8B Q4 are also practical at 5–10 tok/s CPU-only. Apple Silicon (M-series) is the exception — the unified memory architecture runs at 45–120 tok/s on the same model sizes that a PC CPU would run at 5 tok/s, making it far more practical for CPU-only local inference.',
           ],
           image: '/images/local-llm-limitations-hardware-requirements-en.svg',
           imageCaption: 'Hardware Requirements by Model Size — 16 GB RAM minimum for usable 7B models · 40+ GB for frontier-quality 70B models',
           rows: [
-            { 'Hardware': 'Basic laptop (8 GB RAM, CPU only)', 'Max Useful Model': '7B at Q4_K_M', 'Quality Equivalent': 'Below GPT-4o mini' },
-            { 'Hardware': 'Mid-range laptop (16 GB RAM)', 'Max Useful Model': '13B at Q4_K_M', 'Quality Equivalent': 'Roughly GPT-4o mini' },
-            { 'Hardware': 'Apple M3 Pro (18 GB)', 'Max Useful Model': '13B full quality', 'Quality Equivalent': 'GPT-4o mini to GPT-4 (task dependent)' },
+            { 'Hardware': 'Basic laptop (8 GB RAM, CPU only)', 'Max Useful Model': '7B at Q4_K_M', 'Quality Equivalent': 'Below GPT-5.6 Luna' },
+            { 'Hardware': 'Mid-range laptop (16 GB RAM)', 'Max Useful Model': '13B at Q4_K_M', 'Quality Equivalent': 'Roughly GPT-5.6 Luna' },
+            { 'Hardware': 'Apple M3 Pro (18 GB)', 'Max Useful Model': '13B full quality', 'Quality Equivalent': 'GPT-5.6 Luna to GPT-4 (task dependent)' },
             { 'Hardware': 'NVIDIA RTX 4090 (24 GB VRAM)', 'Max Useful Model': '34B at Q4_K_M', 'Quality Equivalent': 'Close to GPT-4' },
-            { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Max Useful Model': '70B full quality', 'Quality Equivalent': 'Competitive with GPT-5.5' },
+            { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Max Useful Model': '70B full quality', 'Quality Equivalent': 'Competitive with GPT-5.6' },
           ],
           columns: ['Hardware', 'Max Useful Model', 'Quality Equivalent'],
         },
@@ -424,7 +424,7 @@ schema: {
           title: 'Why Can\'t Local LLMs Access Real-Time Information?',
           content: [
             '**Local LLMs have a training data cutoff.** They cannot access the internet, cannot retrieve current news, cannot check live prices or stock data, and cannot visit URLs. A model trained with a cutoff of early 2024 will not know about events after that date.',
-            'Cloud models with browsing capabilities (GPT-5.5 with web search, Gemini with Google Search integration) can retrieve and cite current information. No consumer-grade local inference tool replicates this capability without significant additional infrastructure (RAG with a live web crawler).',
+            'Cloud models with browsing capabilities (GPT-5.6 with web search, Gemini with Google Search integration) can retrieve and cite current information. No consumer-grade local inference tool replicates this capability without significant additional infrastructure (RAG with a live web crawler).',
             'For tasks that require current information -- news summaries, recent product comparisons, live data analysis -- cloud APIs are the practical choice. See [Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis) for a full comparison.',
           ],
         },
@@ -478,7 +478,7 @@ schema: {
         contextWindow: {
           title: 'How Large Is the Context Window of Local LLMs?',
           content: [
-            '**Most practical local models support 4K-128K token context windows.** Google Gemini 3.1 Pro supports 1M tokens; OpenAI GPT-5.5 supports 128K tokens. While 128K is available locally (Llama 3.3, Qwen3), the inference speed for very long contexts degrades significantly -- processing a 100K token context on a 7B model may take several minutes on consumer hardware.',
+            '**Most practical local models support 4K-128K token context windows.** Google Gemini 3.1 Pro supports 1M tokens; OpenAI GPT-5.6 supports 128K tokens. While 128K is available locally (Llama 3.3, Qwen3), the inference speed for very long contexts degrades significantly -- processing a 100K token context on a 7B model may take several minutes on consumer hardware.',
             'For tasks involving very long documents (entire books, large codebases, hours of transcripts), cloud APIs with large context windows are more practical than local inference.',
           ],
         },
@@ -512,7 +512,7 @@ schema: {
         whenCloud: {
           title: 'When Should You Use a Cloud API Instead of a Local LLM?',
           items: [
-            '**Maximum output quality is required** -- legal documents, complex code generation, advanced research analysis. Use GPT-5.5 or Claude 4.6 Sonnet. For a full comparison, see [Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis).',
+            '**Maximum output quality is required** -- legal documents, complex code generation, advanced research analysis. Use GPT-5.6 or Claude Sonnet 5. For a full comparison, see [Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis).',
             '**Real-time information is needed** -- current news, live data, URL retrieval. Local models have a training cutoff.',
             '**Setup time is a constraint** -- for a quick prototype or one-off task, a cloud API key is faster to get working than a local install.',
             '**Your hardware is limited** -- on a machine with 4-6 GB RAM, local inference is marginal. Cloud APIs produce better results with zero hardware strain.',
@@ -526,7 +526,7 @@ schema: {
           content: [
             'Local LLMs are the wrong choice in these scenarios:',
             '',
-            '**Complex multi-step reasoning** -- Your task requires breaking down a problem, using intermediate results, and iterating. Local 7B models fail on these tasks. Use GPT-5.5 or Claude 4.6 Sonnet instead.',
+            '**Complex multi-step reasoning** -- Your task requires breaking down a problem, using intermediate results, and iterating. Local 7B models fail on these tasks. Use GPT-5.6 or Claude Sonnet 5 instead.',
             '',
             '**Real-time information requirements** -- You need current news, live data feeds, or the ability to visit URLs. Local models have a training cutoff and no internet access. Cloud APIs with web search are required.',
             '',
@@ -542,8 +542,8 @@ schema: {
           title: '🏆 Best Local LLM by Use Case',
           content: [
             '- **Best for privacy and compliance** → Local LLM (Ollama + Llama 3.3 70B or Qwen3 7B)',
-            '- **Best for reasoning and coding** → Cloud API (OpenAI GPT-5.5 or Anthropic Claude Opus 4.8)',
-            '- **Best for speed with good quality** → Cloud API (OpenAI GPT-5.5 mini for 10× cheaper token cost)',
+            '- **Best for reasoning and coding** → Cloud API (OpenAI GPT-5.6 or Anthropic Claude Opus 4.8)',
+            '- **Best for speed with good quality** → Cloud API (OpenAI GPT-5.6 Luna for 10× cheaper token cost)',
             '- **Best for cost at scale** → Local LLM (if you have the hardware; amortized cost approaches zero)',
             '- **Best for trying both approaches** → [PromptQuorum](/) (dispatch to both local and cloud, see the quality difference before choosing)',
           ],
@@ -554,7 +554,7 @@ schema: {
           columns: ['Metric', 'Local LLM (CPU)', 'Local LLM (GPU)', 'Cloud API'],
           rows: [
             { 'Metric': 'Speed', 'Local LLM (CPU)': '10–25 tokens/sec', 'Local LLM (GPU)': '50–130 tokens/sec', 'Cloud API': '80–150 tokens/sec' },
-            { 'Metric': 'Quality Gap', 'Local LLM (CPU)': '~15–20% below GPT-5.5', 'Local LLM (GPU)': '~5–10% below GPT-5.5', 'Cloud API': 'Frontier level' },
+            { 'Metric': 'Quality Gap', 'Local LLM (CPU)': '~15–20% below GPT-5.6', 'Local LLM (GPU)': '~5–10% below GPT-5.6', 'Cloud API': 'Frontier level' },
             { 'Metric': 'RAM Required', 'Local LLM (CPU)': '16 GB (minimum)', 'Local LLM (GPU)': '24 GB VRAM (GPU)', 'Cloud API': 'None (cloud-managed)' },
             { 'Metric': 'Setup Time', 'Local LLM (CPU)': '20–40 minutes', 'Local LLM (GPU)': '30–60 minutes', 'Cloud API': '5 minutes' },
             { 'Metric': 'Context Window', 'Local LLM (CPU)': '4K–128K tokens', 'Local LLM (GPU)': '4K–128K tokens', 'Cloud API': '128K–1M+ tokens' },
@@ -593,7 +593,7 @@ schema: {
           id: 'sources',
           title: 'Sources',
           items: [
-            '[GPT-5.5 Technical Report](https://openai.com/gpt-4o/) -- Benchmark comparisons and capability analysis from OpenAI',
+            '[GPT-5.6 Technical Report](https://openai.com/gpt-4o/) -- Benchmark comparisons and capability analysis from OpenAI',
             '[Meta Llama 3.3 Model Card](https://www.llama.com/) -- Official performance metrics and limitations',
             '[Understanding Hallucination in LLMs](https://arxiv.org/abs/2110.01852) -- Academic research on model accuracy and error patterns',
           ],
@@ -601,7 +601,7 @@ schema: {
         commonMistakes: {
           title: 'Common Mistakes Regarding LLM Limitations',
           items: [
-            '**Expecting 7B models to match GPT-5.5:** They are 10–20% lower on reasoning. HumanEval: local 7B scores 45–55% vs GPT-5.5\'s 90%. Use 70B locally or cloud for complex tasks.',
+            '**Expecting 7B models to match GPT-5.6:** They are 10–20% lower on reasoning. HumanEval: local 7B scores 45–55% vs GPT-5.6\'s 90%. Use 70B locally or cloud for complex tasks.',
             '**Ignoring hardware limits:** 16 GB RAM is the minimum for useful models. Below that, quality degrades significantly. Check [hardware requirements](/local-llms/local-llm-hardware-guide-2026) before starting.',
             '**Assuming local = faster:** CPU inference is 4–10× slower (10–25 tok/sec vs 80–150 tok/sec cloud). Requires $1,600+ GPU to match cloud speed.',
             '**Underestimating setup time:** Local setup takes 20–40 minutes. Cloud is 5 minutes. Add ongoing maintenance (updates, drivers) to your local cost calculation.',
@@ -625,10 +625,10 @@ schema: {
       title: 'LLM Local vs API en la Nube: Cuándo Usar Cada Uno (Comparativa 2026)',
       seoTitle: 'LLM Local vs Nube 2026: Privacidad vs Velocidad vs Calidad',
       intro: 'Los LLMs locales —incluyendo Llama 3.x, Qwen3 y Mistral, desplegados con Ollama, LM Studio o llama.cpp— tienen seis limitaciones significativas frente a los modelos en la nube de última generación: menor calidad en tareas complejas, inferencia más lenta en hardware de consumo, altos requisitos de hardware para modelos grandes, falta de información en tiempo real, falta de acceso a la web y una complejidad de configuración considerable. A partir de junio de 2026, incluso los mejores modelos locales quedan por detrás de OpenAI GPT-5.5 y Anthropic Claude 4.6 en razonamiento de múltiples pasos. Comprender estas limitaciones te ayuda a decidir cuándo la inferencia local es la opción correcta y cuándo las APIs en la nube son mejores.',
-      metaDescription: '100% privado y $0/token, pero 10× más lento que GPT-5.5 y sin datos en tiempo real. Tabla: qué tareas van en local y cuáles en la nube. Velocidad, costo y VRAM.',
+      metaDescription: '100% privado y $0/token, pero 10× más lento que GPT-5.6 y sin datos en tiempo real. Tabla: qué tareas van en local y cuáles en la nube. Velocidad, costo y VRAM.',
       twitterDescription: 'LLM Local: 100% privado, sin costo, pero 10x más lento que la nube. API en la nube: rápida + inteligente, tiene costo. Compara por caso de uso. ¿Cuál deberías usar? Abril 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**Los LLMs locales no pueden igualar a los modelos en la nube de última generación en razonamiento, velocidad y acceso a datos en tiempo real, debido a las limitaciones de hardware y las restricciones de entrenamiento.** Son ideales para tareas privadas, sin conexión y sensibles al costo, pero no para aplicaciones de alta precisión o en tiempo real.',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '8 min de lectura',
@@ -639,7 +639,7 @@ schema: {
         { label: 'En términos simples', anchor: '#in-plain-terms' },
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Decisión rápida: Local vs Nube', anchor: '#quick-decision' },
-        { label: '¿Por qué los LLMs locales son peores que GPT-5.5 en tareas complejas?', anchor: '#limitation-1-output-quality' },
+        { label: '¿Por qué los LLMs locales son peores que GPT-5.6 en tareas complejas?', anchor: '#limitation-1-output-quality' },
         { label: '¿Qué tan rápidos son los LLMs locales frente a las APIs en la nube?', anchor: '#limitation-2-inference-speed' },
         { label: '¿Qué hardware necesitas para ejecutar LLMs locales?', anchor: '#limitation-3-hardware-requirements' },
         { label: '¿Por qué los LLMs locales no tienen acceso a información en tiempo real?', anchor: '#limitation-4-no-real-time-info' },
@@ -655,9 +655,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Limitaciones de los LLMs Locales: 6 Brechas Clave vs Modelos en la Nube en 2026',
-        description: 'Los LLMs locales están 10–20 puntos por debajo de GPT-5.5 en benchmarks de razonamiento, requieren 16 GB+ de RAM para modelos 7B y no tienen acceso a la web. Las 6 limitaciones con datos de benchmarks y orientación para decidir entre local y nube.',
+        description: 'Los LLMs locales están 10–20 puntos por debajo de GPT-5.6 en benchmarks de razonamiento, requieren 16 GB+ de RAM para modelos 7B y no tienen acceso a la web. Las 6 limitaciones con datos de benchmarks y orientación para decidir entre local y nube.',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/es/local-llms/local-llm-limitations',
         inLanguage: 'es',
         proficiencyLevel: 'Beginner',
@@ -711,7 +711,7 @@ schema: {
         numberOfItems: 6,
         inLanguage: 'es',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Se requiere máxima calidad de salida', description: 'Documentos legales, generación de código complejo, análisis de investigación avanzada. Usa GPT-5.5 o Claude 4.6 Sonnet.' },
+          { '@type': 'ListItem', position: 1, name: 'Se requiere máxima calidad de salida', description: 'Documentos legales, generación de código complejo, análisis de investigación avanzada. Usa GPT-5.6 o Claude Sonnet 5.' },
           { '@type': 'ListItem', position: 2, name: 'Se necesita información en tiempo real', description: 'Noticias actuales, datos en vivo, recuperación de URLs. Los modelos locales tienen una fecha de corte de entrenamiento.' },
           { '@type': 'ListItem', position: 3, name: 'El tiempo de configuración es una restricción', description: 'Para un prototipo rápido o una tarea puntual, una clave de API en la nube es más rápida de usar que una instalación local.' },
           { '@type': 'ListItem', position: 4, name: 'Tu hardware es limitado', description: 'En una máquina con 4-6 GB de RAM, la inferencia local es marginal. Las APIs en la nube producen mejores resultados sin demandar hardware.' },
@@ -720,7 +720,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/local-llm-limitations-static.html',
-      gammaDescription: 'Presentación interactiva de 14 diapositivas que compara LLMs locales vs APIs en la nube. Aprende las 6 limitaciones clave: brecha de calidad (10–20% por debajo de GPT-5.5 en razonamiento), velocidad (10–25 tok/seg CPU vs 80–150 tok/seg nube), requisitos de hardware (16 GB+ RAM mínimo), sin acceso a datos en tiempo real, complejidad de configuración (20–40 min vs 5 min nube) y límites de ventana de contexto (4K–128K tokens). Incluye tablas de benchmarks, árboles de decisión y orientación sobre cuándo usar Ollama, LM Studio, Llama 3.x, Qwen3 y Mistral. Descarga la presentación como tarjeta de referencia en PDF.',
+      gammaDescription: 'Presentación interactiva de 14 diapositivas que compara LLMs locales vs APIs en la nube. Aprende las 6 limitaciones clave: brecha de calidad (10–20% por debajo de GPT-5.6 en razonamiento), velocidad (10–25 tok/seg CPU vs 80–150 tok/seg nube), requisitos de hardware (16 GB+ RAM mínimo), sin acceso a datos en tiempo real, complejidad de configuración (20–40 min vs 5 min nube) y límites de ventana de contexto (4K–128K tokens). Incluye tablas de benchmarks, árboles de decisión y orientación sobre cuándo usar Ollama, LM Studio, Llama 3.x, Qwen3 y Mistral. Descarga la presentación como tarjeta de referencia en PDF.',
       sections: {
         inOneSentence: {
           id: 'in-one-sentence',
@@ -734,16 +734,16 @@ schema: {
           title: 'En términos simples',
           content: [
             '<strong>LLMs locales:</strong> Descargas un modelo de lenguaje en tu computadora (Ollama, LM Studio). Todos los datos permanecen privados. Desventajas: lento, inteligencia limitada, configuración compleja.',
-            '<strong>APIs en la nube (GPT-5.5, Claude):</strong> Envías texto a un servidor remoto y obtienes respuesta en < 1 seg. Rápido e inteligente, pero tiene costo (~$0.01 por 1,000 caracteres).',
+            '<strong>APIs en la nube (GPT-5.6, Claude):</strong> Envías texto a un servidor remoto y obtienes respuesta en < 1 seg. Rápido e inteligente, pero tiene costo (~$0.01 por 1,000 caracteres).',
             '<strong>Decisión:</strong> Local para privacidad y uso sin conexión. Nube para velocidad y calidad.',
           ],
         },
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Los LLMs locales son mejores para privacidad, tareas offline y coste cero; están 10–20 puntos por debajo de los modelos frontier en razonamiento a 7B y no tienen acceso a internet — usa APIs cloud cuando la precisión o los datos en tiempo real sean importantes.' }, { type: 'plain-terms', text: 'Ejecutar IA localmente significa que tus datos nunca salen de tu dispositivo y sin costes tras la instalación. El compromiso: los modelos locales son más lentos y menos capaces que GPT-5.5 o similar.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Los LLMs locales son mejores para privacidad, tareas offline y coste cero; están 10–20 puntos por debajo de los modelos frontier en razonamiento a 7B y no tienen acceso a internet — usa APIs cloud cuando la precisión o los datos en tiempo real sean importantes.' }, { type: 'plain-terms', text: 'Ejecutar IA localmente significa que tus datos nunca salen de tu dispositivo y sin costes tras la instalación. El compromiso: los modelos locales son más lentos y menos capaces que GPT-5.6 o similar.' }],
           items: [
-            'Brecha de calidad: los modelos locales 7B puntúan 10-20 puntos porcentuales por debajo de GPT-5.5 en benchmarks de razonamiento y codificación. La brecha se reduce significativamente a escala 70B, pero requiere 40-48 GB de RAM.',
+            'Brecha de calidad: los modelos locales 7B puntúan 10-20 puntos porcentuales por debajo de GPT-5.6 en benchmarks de razonamiento y codificación. La brecha se reduce significativamente a escala 70B, pero requiere 40-48 GB de RAM.',
             'Velocidad: la inferencia solo con CPU en un modelo 7B produce 10-25 tok/seg. Las APIs en la nube producen 50-200 tok/seg. El hardware Apple Silicon y las GPUs NVIDIA acortan esta brecha.',
             'Sin acceso a internet: los modelos locales tienen una fecha de corte de entrenamiento y no pueden recuperar información actual. Los modelos en la nube pueden usar plugins de búsqueda web.',
             'Carga de configuración: un LLM local funcional requiere 5-15 minutos de instalación y gestión periódica del modelo. Las APIs en la nube solo requieren una clave de API.',
@@ -777,7 +777,7 @@ schema: {
           rows: [
             { 'Tarea': 'Datos privados y sensibles', 'LLM local': 'Los datos nunca salen del dispositivo', 'API en la nube': 'Se envían a servidor remoto (requiere DPA)', 'Ganador': '✅ Local' },
             { 'Tarea': 'Chat en tiempo real (< 2 seg)', 'LLM local': '5–10 seg (CPU)', 'API en la nube': '0.5–1 seg', 'Ganador': '✅ Nube' },
-            { 'Tarea': 'Generación de código', 'LLM local': '45–55% HumanEval (7B)', 'API en la nube': '90% HumanEval (GPT-5.5)', 'Ganador': '✅ Nube' },
+            { 'Tarea': 'Generación de código', 'LLM local': '45–55% HumanEval (7B)', 'API en la nube': '90% HumanEval (GPT-5.6)', 'Ganador': '✅ Nube' },
             { 'Tarea': 'Resumen de documentos', 'LLM local': 'Capaz (7B suficiente)', 'API en la nube': 'Capaz + más rápido', 'Ganador': '⚖️ Cualquiera' },
             { 'Tarea': 'Costo de API cero', 'LLM local': '$0/token (tras el hardware)', 'API en la nube': '$0.01–0.05 por 1K tokens', 'Ganador': '✅ Local (alto volumen)' },
             { 'Tarea': 'Offline / sin internet', 'LLM local': 'Completamente offline', 'API en la nube': 'Requiere internet', 'Ganador': '✅ Local' },
@@ -818,24 +818,24 @@ schema: {
           ],
         },
         qualityGap: {
-          title: '¿Por qué los LLMs locales son peores que GPT-5.5 en tareas complejas?',
+          title: '¿Por qué los LLMs locales son peores que GPT-5.6 en tareas complejas?',
           content: [
-            '**La limitación más significativa de los LLMs locales es la calidad de salida en tareas complejas.** Los modelos en la nube de última generación —OpenAI GPT-5.5, Anthropic Claude 4.6 Sonnet, Google Gemini 3.1 Pro— se entrenan con más datos, más cómputo y con un ajuste RLHF más sofisticado que cualquier modelo local disponible públicamente. Las alternativas de código abierto como Llama 3.3, Qwen3 y Mistral (desplegados con Ollama, LM Studio o llama.cpp) no pueden igualar esta escala.',
+            '**La limitación más significativa de los LLMs locales es la calidad de salida en tareas complejas.** Los modelos en la nube de última generación —OpenAI GPT-5.6, Anthropic Claude Sonnet 5, Google Gemini 3.1 Pro— se entrenan con más datos, más cómputo y con un ajuste RLHF más sofisticado que cualquier modelo local disponible públicamente. Las alternativas de código abierto como Llama 3.3, Qwen3 y Mistral (desplegados con Ollama, LM Studio o llama.cpp) no pueden igualar esta escala.',
             'En los benchmarks MMLU (conocimiento general), HumanEval (codificación Python) y MATH, los modelos de última generación puntúan 85-92%. Los mejores modelos de 70B ejecutables localmente (Llama 3.3 70B, Qwen3 72B) puntúan 75-85%. Los modelos 7B amigables para el consumidor puntúan 55-70%.',
-            'La brecha de calidad depende de la tarea. Para resumen, Q&A simple, traducción y explicación de código, un modelo 7B produce resultados difíciles de distinguir de GPT-5.5 en evaluaciones ciegas. La brecha es mayor en: razonamiento complejo de múltiples pasos, matemáticas avanzadas, escritura larga y matizada, y tareas que requieren conocimiento actual del mundo.',
+            'La brecha de calidad depende de la tarea. Para resumen, Q&A simple, traducción y explicación de código, un modelo 7B produce resultados difíciles de distinguir de GPT-5.6 en evaluaciones ciegas. La brecha es mayor en: razonamiento complejo de múltiples pasos, matemáticas avanzadas, escritura larga y matizada, y tareas que requieren conocimiento actual del mundo.',
             'Las limitaciones de los modelos locales se superponen con las restricciones más amplias de los LLMs — las alucinaciones, los fallos de razonamiento y los cortes de conocimiento afectan a todos los modelos independientemente del despliegue. Para el panorama completo de lo que los LLMs aún no pueden hacer de forma fiable, consulta [Limitaciones de la IA: lo que los LLMs no pueden hacer](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).',
           ],
           image: '/images/local-llm-limitations-quality-benchmarks-es.svg',
-          imageCaption: 'Brecha de calidad: puntuaciones en benchmarks — Los modelos locales 7B puntúan 10–20 puntos menos en razonamiento y codificación que GPT-5.5',
+          imageCaption: 'Brecha de calidad: puntuaciones en benchmarks — Los modelos locales 7B puntúan 10–20 puntos menos en razonamiento y codificación que GPT-5.6',
           rows: [
-            { 'Tipo de tarea': 'Q&A simple', 'Local 7B': 'Adecuado', 'Local 70B': 'Bueno', 'GPT-5.5': 'Excelente' },
-            { 'Tipo de tarea': 'Explicación de código', 'Local 7B': 'Adecuado', 'Local 70B': 'Bueno', 'GPT-5.5': 'Excelente' },
-            { 'Tipo de tarea': 'Razonamiento de múltiples pasos', 'Local 7B': 'Deficiente', 'Local 70B': 'Adecuado', 'GPT-5.5': 'Excelente' },
-            { 'Tipo de tarea': 'Matemáticas avanzadas', 'Local 7B': 'Deficiente', 'Local 70B': 'Adecuado', 'GPT-5.5': 'Bueno' },
-            { 'Tipo de tarea': 'Escritura larga', 'Local 7B': 'Adecuado', 'Local 70B': 'Bueno', 'GPT-5.5': 'Excelente' },
-            { 'Tipo de tarea': 'Eventos actuales', 'Local 7B': 'Ninguno (sin internet)', 'Local 70B': 'Ninguno (sin internet)', 'GPT-5.5': 'Bueno (con navegación)' },
+            { 'Tipo de tarea': 'Q&A simple', 'Local 7B': 'Adecuado', 'Local 70B': 'Bueno', 'GPT-5.6': 'Excelente' },
+            { 'Tipo de tarea': 'Explicación de código', 'Local 7B': 'Adecuado', 'Local 70B': 'Bueno', 'GPT-5.6': 'Excelente' },
+            { 'Tipo de tarea': 'Razonamiento de múltiples pasos', 'Local 7B': 'Deficiente', 'Local 70B': 'Adecuado', 'GPT-5.6': 'Excelente' },
+            { 'Tipo de tarea': 'Matemáticas avanzadas', 'Local 7B': 'Deficiente', 'Local 70B': 'Adecuado', 'GPT-5.6': 'Bueno' },
+            { 'Tipo de tarea': 'Escritura larga', 'Local 7B': 'Adecuado', 'Local 70B': 'Bueno', 'GPT-5.6': 'Excelente' },
+            { 'Tipo de tarea': 'Eventos actuales', 'Local 7B': 'Ninguno (sin internet)', 'Local 70B': 'Ninguno (sin internet)', 'GPT-5.6': 'Bueno (con navegación)' },
           ],
-          columns: ['Tipo de tarea', 'Local 7B', 'Local 70B', 'GPT-5.5'],
+          columns: ['Tipo de tarea', 'Local 7B', 'Local 70B', 'GPT-5.6'],
         },
         whenQualityMatters: {
           title: '¿Cuándo importa la calidad de salida?',
@@ -859,7 +859,7 @@ schema: {
           title: '¿Qué tan rápidos son los LLMs locales frente a las APIs en la nube?',
           content: [
             '**Las APIs en la nube procesan tokens en hardware de servidor dedicado con GPUs NVIDIA H100 o A100.** El hardware de consumo — incluso los laptops y las GPUs de escritorio de alta gama — no puede igualar este rendimiento.',
-            'GPT-5.5 genera aproximadamente 80-150 tokens/seg bajo carga típica. Un modelo 7B local en una CPU moderna de laptop genera 10-25 tokens/seg — 4-10× más lento. En una NVIDIA RTX 4090 (la GPU de consumo más rápida), el mismo modelo 7B alcanza 130-160 tokens/seg — comparable a la velocidad de la nube, pero el hardware cuesta $1,600+.',
+            'GPT-5.6 genera aproximadamente 80-150 tokens/seg bajo carga típica. Un modelo 7B local en una CPU moderna de laptop genera 10-25 tokens/seg — 4-10× más lento. En una NVIDIA RTX 4090 (la GPU de consumo más rápida), el mismo modelo 7B alcanza 130-160 tokens/seg — comparable a la velocidad de la nube, pero el hardware cuesta $1,600+.',
             'Para uso de chat interactivo, la diferencia de velocidad es notable pero tolerable a 20+ tok/seg. Para procesamiento por lotes (resumir cientos de documentos), la brecha de velocidad se convierte en una restricción significativa.',
           ],
           image: '/images/local-llm-limitations-speed-comparison-es.svg',
@@ -886,17 +886,17 @@ schema: {
         hardware: {
           title: '¿Qué hardware necesitas para ejecutar LLMs locales?',
           content: [
-            '**Ejecutar un modelo local capaz (13B+) requiere hardware que no todos los usuarios tienen.** El mínimo para una experiencia local genuinamente útil — igualando la calidad de GPT-4o mini — es 16 GB de RAM y una CPU moderna o chip Apple Silicon. Esto excluye a aproximadamente la mitad de los laptops de consumo actualmente en uso. Para un desglose detallado y cálculos de VRAM, consulta la [Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+            '**Ejecutar un modelo local capaz (13B+) requiere hardware que no todos los usuarios tienen.** El mínimo para una experiencia local genuinamente útil — igualando la calidad de GPT-5.6 Luna — es 16 GB de RAM y una CPU moderna o chip Apple Silicon. Esto excluye a aproximadamente la mitad de los laptops de consumo actualmente en uso. Para un desglose detallado y cálculos de VRAM, consulta la [Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026).',
             'Igualar la calidad de los modelos de última generación localmente requiere un modelo 70B, que demanda 40-48 GB de RAM — solo disponible en estaciones de trabajo de alta gama o Mac Studio / Mac Pro con 64+ GB de memoria unificada. Si tu hardware es limitado, las APIs en la nube ofrecen mejor calidad a un menor costo de configuración.',
           ],
           image: '/images/local-llm-limitations-hardware-requirements-es.svg',
           imageCaption: 'Requisitos de hardware por tamaño de modelo — 16 GB de RAM mínimo para modelos 7B utilizables · 40+ GB para modelos 70B de calidad de última generación',
           rows: [
-            { 'Hardware': 'Laptop básico (8 GB RAM, solo CPU)', 'Modelo máx. útil': '7B a Q4_K_M', 'Equivalente de calidad': 'Por debajo de GPT-4o mini' },
-            { 'Hardware': 'Laptop de gama media (16 GB RAM)', 'Modelo máx. útil': '13B a Q4_K_M', 'Equivalente de calidad': 'Aproximadamente GPT-4o mini' },
-            { 'Hardware': 'Apple M3 Pro (18 GB)', 'Modelo máx. útil': '13B calidad completa', 'Equivalente de calidad': 'GPT-4o mini a GPT-4 (según la tarea)' },
+            { 'Hardware': 'Laptop básico (8 GB RAM, solo CPU)', 'Modelo máx. útil': '7B a Q4_K_M', 'Equivalente de calidad': 'Por debajo de GPT-5.6 Luna' },
+            { 'Hardware': 'Laptop de gama media (16 GB RAM)', 'Modelo máx. útil': '13B a Q4_K_M', 'Equivalente de calidad': 'Aproximadamente GPT-5.6 Luna' },
+            { 'Hardware': 'Apple M3 Pro (18 GB)', 'Modelo máx. útil': '13B calidad completa', 'Equivalente de calidad': 'GPT-5.6 Luna a GPT-4 (según la tarea)' },
             { 'Hardware': 'NVIDIA RTX 4090 (24 GB VRAM)', 'Modelo máx. útil': '34B a Q4_K_M', 'Equivalente de calidad': 'Cercano a GPT-4' },
-            { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Modelo máx. útil': '70B calidad completa', 'Equivalente de calidad': 'Competitivo con GPT-5.5' },
+            { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Modelo máx. útil': '70B calidad completa', 'Equivalente de calidad': 'Competitivo con GPT-5.6' },
           ],
           columns: ['Hardware', 'Modelo máx. útil', 'Equivalente de calidad'],
         },
@@ -923,7 +923,7 @@ schema: {
           title: '¿Por qué los LLMs locales no tienen acceso a información en tiempo real?',
           content: [
             '**Los LLMs locales tienen una fecha de corte de datos de entrenamiento.** No pueden acceder a internet, no pueden recuperar noticias actuales, no pueden verificar precios en vivo ni datos de acciones, y no pueden visitar URLs. Un modelo entrenado con corte de principios de 2024 no sabrá nada de eventos posteriores a esa fecha.',
-            'Los modelos en la nube con capacidades de navegación (GPT-5.5 con búsqueda web, Gemini con integración de Google Search) pueden recuperar y citar información actual. Ninguna herramienta de inferencia local de nivel consumidor replica esta capacidad sin infraestructura adicional significativa (RAG con un rastreador web en vivo).',
+            'Los modelos en la nube con capacidades de navegación (GPT-5.6 con búsqueda web, Gemini con integración de Google Search) pueden recuperar y citar información actual. Ninguna herramienta de inferencia local de nivel consumidor replica esta capacidad sin infraestructura adicional significativa (RAG con un rastreador web en vivo).',
             'Para tareas que requieren información actual — resúmenes de noticias, comparaciones de productos recientes, análisis de datos en vivo — las APIs en la nube son la opción práctica. Consulta [LLMs locales vs APIs en la nube](/es/local-llms/local-llms-vs-cloud-apis) para una comparación completa.',
           ],
         },
@@ -977,7 +977,7 @@ schema: {
         contextWindow: {
           title: '¿Cuál es la ventana de contexto de los LLMs locales?',
           content: [
-            '**La mayoría de los modelos locales prácticos admiten ventanas de contexto de 4K-128K tokens.** Google Gemini 3.1 Pro admite 1M de tokens; OpenAI GPT-5.5 admite 128K tokens. Si bien 128K está disponible localmente (Llama 3.3, Qwen3), la velocidad de inferencia para contextos muy largos se degrada significativamente — procesar un contexto de 100K tokens en un modelo 7B puede tomar varios minutos en hardware de consumo.',
+            '**La mayoría de los modelos locales prácticos admiten ventanas de contexto de 4K-128K tokens.** Google Gemini 3.1 Pro admite 1M de tokens; OpenAI GPT-5.6 admite 128K tokens. Si bien 128K está disponible localmente (Llama 3.3, Qwen3), la velocidad de inferencia para contextos muy largos se degrada significativamente — procesar un contexto de 100K tokens en un modelo 7B puede tomar varios minutos en hardware de consumo.',
             'Para tareas que involucran documentos muy largos (libros completos, bases de código grandes, horas de transcripciones), las APIs en la nube con ventanas de contexto grandes son más prácticas que la inferencia local.',
           ],
         },
@@ -1011,7 +1011,7 @@ schema: {
         whenCloud: {
           title: '¿Cuándo deberías usar una API en la nube en lugar de un LLM local?',
           items: [
-            '**Se requiere máxima calidad de salida** — documentos legales, generación de código complejo, análisis de investigación avanzada. Usa GPT-5.5 o Claude 4.6 Sonnet. Para una comparación completa, consulta [LLMs locales vs APIs en la nube](/es/local-llms/local-llms-vs-cloud-apis).',
+            '**Se requiere máxima calidad de salida** — documentos legales, generación de código complejo, análisis de investigación avanzada. Usa GPT-5.6 o Claude Sonnet 5. Para una comparación completa, consulta [LLMs locales vs APIs en la nube](/es/local-llms/local-llms-vs-cloud-apis).',
             '**Se necesita información en tiempo real** — noticias actuales, datos en vivo, recuperación de URLs. Los modelos locales tienen una fecha de corte de entrenamiento.',
             '**El tiempo de configuración es una restricción** — para un prototipo rápido o una tarea puntual, una clave de API en la nube es más rápida de usar que una instalación local.',
             '**Tu hardware es limitado** — en una máquina con 4-6 GB de RAM, la inferencia local es marginal. Las APIs en la nube producen mejores resultados sin demandar hardware.',
@@ -1025,7 +1025,7 @@ schema: {
           content: [
             'Los LLMs locales son la opción incorrecta en estos escenarios:',
             '',
-            '**Razonamiento complejo de múltiples pasos** — Tu tarea requiere desglosar un problema, usar resultados intermedios e iterar. Los modelos locales 7B fallan en estas tareas. Usa GPT-5.5 o Claude 4.6 Sonnet en su lugar.',
+            '**Razonamiento complejo de múltiples pasos** — Tu tarea requiere desglosar un problema, usar resultados intermedios e iterar. Los modelos locales 7B fallan en estas tareas. Usa GPT-5.6 o Claude Sonnet 5 en su lugar.',
             '',
             '**Requisitos de información en tiempo real** — Necesitas noticias actuales, feeds de datos en vivo o la capacidad de visitar URLs. Los modelos locales tienen fecha de corte y sin acceso a internet. Se requieren APIs en la nube con búsqueda web.',
             '',
@@ -1041,8 +1041,8 @@ schema: {
           title: '🏆 Mejor LLM local por caso de uso',
           content: [
             '- **Mejor para privacidad y cumplimiento** → LLM local (Ollama + Llama 3.3 70B o Qwen3 7B)',
-            '- **Mejor para razonamiento y codificación** → API en la nube (OpenAI GPT-5.5 o Anthropic Claude Opus 4.8)',
-            '- **Mejor para velocidad con buena calidad** → API en la nube (OpenAI GPT-5.5 mini a 10× menor costo por token)',
+            '- **Mejor para razonamiento y codificación** → API en la nube (OpenAI GPT-5.6 o Anthropic Claude Opus 4.8)',
+            '- **Mejor para velocidad con buena calidad** → API en la nube (OpenAI GPT-5.6 Luna a 10× menor costo por token)',
             '- **Mejor para costo a escala** → LLM local (si tienes el hardware; el costo amortizado se acerca a cero)',
             '- **Mejor para probar ambos enfoques** → [PromptQuorum](/) (envía a ambos local y nube, ve la diferencia de calidad antes de elegir)',
           ],
@@ -1053,7 +1053,7 @@ schema: {
           columns: ['Métrica', 'LLM local (CPU)', 'LLM local (GPU)', 'API en la nube'],
           rows: [
             { 'Métrica': 'Velocidad', 'LLM local (CPU)': '10–25 tokens/seg', 'LLM local (GPU)': '50–130 tokens/seg', 'API en la nube': '80–150 tokens/seg' },
-            { 'Métrica': 'Brecha de calidad', 'LLM local (CPU)': '~15–20% por debajo de GPT-5.5', 'LLM local (GPU)': '~5–10% por debajo de GPT-5.5', 'API en la nube': 'Nivel de última generación' },
+            { 'Métrica': 'Brecha de calidad', 'LLM local (CPU)': '~15–20% por debajo de GPT-5.6', 'LLM local (GPU)': '~5–10% por debajo de GPT-5.6', 'API en la nube': 'Nivel de última generación' },
             { 'Métrica': 'RAM requerida', 'LLM local (CPU)': '16 GB (mínimo)', 'LLM local (GPU)': '24 GB VRAM (GPU)', 'API en la nube': 'Ninguna (gestionado en la nube)' },
             { 'Métrica': 'Tiempo de configuración', 'LLM local (CPU)': '20–40 minutos', 'LLM local (GPU)': '30–60 minutos', 'API en la nube': '5 minutos' },
             { 'Métrica': 'Ventana de contexto', 'LLM local (CPU)': '4K–128K tokens', 'LLM local (GPU)': '4K–128K tokens', 'API en la nube': '128K–1M+ tokens' },
@@ -1092,7 +1092,7 @@ schema: {
           id: 'sources',
           title: 'Fuentes',
           items: [
-            '[Informe técnico de GPT-5.5](https://openai.com/gpt-4o/) — Comparaciones de benchmarks y análisis de capacidades de OpenAI',
+            '[Informe técnico de GPT-5.6](https://openai.com/gpt-4o/) — Comparaciones de benchmarks y análisis de capacidades de OpenAI',
             '[Meta Llama 3.3 Model Card](https://www.llama.com/) — Métricas de rendimiento oficiales y limitaciones',
             '[Comprendiendo las alucinaciones en los LLMs](https://arxiv.org/abs/2110.01852) — Investigación académica sobre precisión y patrones de error en los modelos',
           ],
@@ -1100,7 +1100,7 @@ schema: {
         commonMistakes: {
           title: 'Errores comunes sobre las limitaciones de los LLMs',
           items: [
-            '**Esperar que los modelos 7B igualen a GPT-5.5:** Son un 10–20% inferiores en razonamiento. HumanEval: los 7B locales puntúan 45–55% vs el 90% de GPT-5.5. Usa 70B localmente o la nube para tareas complejas.',
+            '**Esperar que los modelos 7B igualen a GPT-5.6:** Son un 10–20% inferiores en razonamiento. HumanEval: los 7B locales puntúan 45–55% vs el 90% de GPT-5.6. Usa 70B localmente o la nube para tareas complejas.',
             '**Ignorar los límites del hardware:** 16 GB de RAM es el mínimo para modelos útiles. Por debajo de eso, la calidad se degrada significativamente. Verifica los [requisitos de hardware](/es/local-llms/local-llm-hardware-guide-2026) antes de empezar.',
             '**Asumir que local = más rápido:** La inferencia en CPU es 4–10× más lenta (10–25 tok/seg vs 80–150 tok/seg en la nube). Requiere una GPU de $1,600+ para igualar la velocidad de la nube.',
             '**Subestimar el tiempo de configuración:** La configuración local toma 20–40 minutos. La nube tarda 5 minutos. Añade el mantenimiento continuo (actualizaciones, drivers) a tu cálculo de costos local.',
@@ -1124,10 +1124,10 @@ schema: {
       title: '⁨LLM⁩ المحلي مقابل واجهة ⁨API⁩ السحابية: متى تستخدم كلًا منهما (مقارنة ⁨2026⁩)',
       seoTitle: 'قيود ⁨LLM⁩ المحلي مقابل السحابة: متى تختار كلًا منهما',
       intro: 'تتمتع نماذج LLM المحلية —بما فيها Llama 3.x وQwen3 وMistral، المنشورة عبر Ollama أو LM Studio أو llama.cpp— بست قيود مهمة مقارنةً بنماذج السحابة المتطورة: جودة أقل في المهام المعقدة، واستدلال أبطأ على أجهزة المستهلك، ومتطلبات أجهزة عالية للنماذج الكبيرة، وغياب المعلومات في الوقت الفعلي، وغياب الوصول إلى الويب، وتعقيد إعداد ملحوظ. اعتبارًا من يونيو 2026، تظل حتى أفضل النماذج المحلية متأخرة عن OpenAI GPT-5.5 وAnthropic Claude 4.6 في الاستدلال متعدد الخطوات. يساعدك فهم هذه القيود على تقرير متى يكون الاستدلال المحلي هو الخيار الصحيح ومتى تكون واجهات API السحابية أفضل.',
-      metaDescription: '⁨LLM⁩ المحلي خاص ⁨100%⁩ وبلا تكلفة لكل رمز، لكنه أبطأ بـ ⁨10⁩× من ⁨GPT-5.5⁩ وبلا بيانات فورية. جدول يحدد أي المهام للمحلي وأيها يحتاج السحابة.',
+      metaDescription: '⁨LLM⁩ المحلي خاص ⁨100%⁩ وبلا تكلفة لكل رمز، لكنه أبطأ بـ ⁨10⁩× من ⁨GPT-5.6⁩ وبلا بيانات فورية. جدول يحدد أي المهام للمحلي وأيها يحتاج السحابة.',
       twitterDescription: '⁨LLM⁩ المحلي: خاص بنسبة ⁨100%⁩، بلا تكلفة، لكنه أبطأ بـ ⁨10x⁩ من السحابة. واجهة ⁨API⁩ السحابية: سريعة + ذكية، لها تكلفة. قارن حسب حالة الاستخدام. أيهما ينبغي أن تستخدم؟ أبريل ⁨2026⁩.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**لا يمكن لنماذج LLM المحلية مجاراة نماذج السحابة المتطورة في الاستدلال والسرعة والوصول إلى البيانات في الوقت الفعلي، بسبب قيود الأجهزة وقيود التدريب.** فهي مثالية للمهام الخاصة وغير المتصلة والحساسة للتكلفة، لكن ليس للتطبيقات عالية الدقة أو في الوقت الفعلي.',
       audience: 'المبتدئون الذين يُشغِّلون أول نموذج LLM محلي على أجهزة المستهلك',
       readTime: '8 دقائق للقراءة',
@@ -1138,7 +1138,7 @@ schema: {
         { label: 'بكلمات بسيطة', anchor: '#in-plain-terms' },
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'قرار سريع: محلي مقابل سحابة', anchor: '#quick-decision' },
-        { label: 'لماذا تكون نماذج LLM المحلية أسوأ من GPT-5.5 في المهام المعقدة؟', anchor: '#limitation-1-output-quality' },
+        { label: 'لماذا تكون نماذج LLM المحلية أسوأ من GPT-5.6 في المهام المعقدة؟', anchor: '#limitation-1-output-quality' },
         { label: 'ما مدى سرعة نماذج LLM المحلية مقابل واجهات API السحابية؟', anchor: '#limitation-2-inference-speed' },
         { label: 'أي أجهزة تحتاج لتشغيل نماذج LLM المحلية؟', anchor: '#limitation-3-hardware-requirements' },
         { label: 'لماذا لا تملك نماذج LLM المحلية وصولًا إلى المعلومات في الوقت الفعلي؟', anchor: '#limitation-4-no-real-time-info' },
@@ -1154,9 +1154,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'قيود نماذج LLM المحلية: 6 فجوات رئيسية مقابل نماذج السحابة في 2026',
-        description: 'تقل نماذج LLM المحلية بـ 10–20 نقطة عن GPT-5.5 في قياسات الاستدلال، وتتطلب 16 GB+ من RAM لنماذج 7B، وليس لها وصول إلى الويب. القيود الست ببيانات قياسية وإرشاد لاتخاذ القرار بين المحلي والسحابة.',
+        description: 'تقل نماذج LLM المحلية بـ 10–20 نقطة عن GPT-5.6 في قياسات الاستدلال، وتتطلب 16 GB+ من RAM لنماذج 7B، وليس لها وصول إلى الويب. القيود الست ببيانات قياسية وإرشاد لاتخاذ القرار بين المحلي والسحابة.',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/ar/local-llms/local-llm-limitations',
         inLanguage: 'ar',
         proficiencyLevel: 'Beginner',
@@ -1210,7 +1210,7 @@ schema: {
         numberOfItems: 6,
         inLanguage: 'ar',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'تُطلَب أقصى جودة للمخرجات', description: 'مستندات قانونية، توليد كود معقد، تحليل بحثي متقدم. استخدم GPT-5.5 أو Claude 4.6 Sonnet.' },
+          { '@type': 'ListItem', position: 1, name: 'تُطلَب أقصى جودة للمخرجات', description: 'مستندات قانونية، توليد كود معقد، تحليل بحثي متقدم. استخدم GPT-5.6 أو Claude Sonnet 5.' },
           { '@type': 'ListItem', position: 2, name: 'يلزم الحصول على معلومات في الوقت الفعلي', description: 'أخبار حالية، بيانات حية، استرجاع عناوين URL. للنماذج المحلية تاريخ قطع تدريب.' },
           { '@type': 'ListItem', position: 3, name: 'وقت الإعداد قيد', description: 'لنموذج أولي سريع أو مهمة عابرة، يكون استخدام مفتاح API سحابي أسرع من تثبيت محلي.' },
           { '@type': 'ListItem', position: 4, name: 'أجهزتك محدودة', description: 'على جهاز بـ 4-6 GB من RAM، يكون الاستدلال المحلي هامشيًا. تنتج واجهات API السحابية نتائج أفضل دون طلب أجهزة.' },
@@ -1219,7 +1219,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/local-llm-limitations-static.html',
-      gammaDescription: 'عرض تقديمي تفاعلي من 14 شريحة يقارن نماذج LLM المحلية مقابل واجهات API السحابية. تعلَّم القيود الست الرئيسية: فجوة الجودة (10–20% دون GPT-5.5 في الاستدلال)، والسرعة (10–25 token/ثانية على CPU مقابل 80–150 token/ثانية في السحابة)، ومتطلبات الأجهزة (16 GB+ RAM كحد أدنى)، وغياب الوصول إلى بيانات في الوقت الفعلي، وتعقيد الإعداد (20–40 دقيقة مقابل 5 دقائق في السحابة)، وحدود نافذة السياق (4K–128K token). يتضمن جداول قياسية وأشجار قرار وإرشادًا حول متى تستخدم Ollama وLM Studio وLlama 3.x وQwen3 وMistral. نزِّل العرض بوصفه بطاقة مرجعية بصيغة PDF.',
+      gammaDescription: 'عرض تقديمي تفاعلي من 14 شريحة يقارن نماذج LLM المحلية مقابل واجهات API السحابية. تعلَّم القيود الست الرئيسية: فجوة الجودة (10–20% دون GPT-5.6 في الاستدلال)، والسرعة (10–25 token/ثانية على CPU مقابل 80–150 token/ثانية في السحابة)، ومتطلبات الأجهزة (16 GB+ RAM كحد أدنى)، وغياب الوصول إلى بيانات في الوقت الفعلي، وتعقيد الإعداد (20–40 دقيقة مقابل 5 دقائق في السحابة)، وحدود نافذة السياق (4K–128K token). يتضمن جداول قياسية وأشجار قرار وإرشادًا حول متى تستخدم Ollama وLM Studio وLlama 3.x وQwen3 وMistral. نزِّل العرض بوصفه بطاقة مرجعية بصيغة PDF.',
       sections: {
         inOneSentence: {
           id: 'in-one-sentence',
@@ -1233,16 +1233,16 @@ schema: {
           title: 'بكلمات بسيطة',
           content: [
             '<strong>نماذج LLM المحلية:</strong> تُنزِّل نموذج لغة على حاسوبك (Ollama، LM Studio). تبقى جميع البيانات خاصة. العيوب: بطيء، ذكاء محدود، إعداد معقد.',
-            '<strong>واجهات API السحابية (GPT-5.5، Claude):</strong> ترسل نصًا إلى خادم بعيد وتحصل على رد في < 1 ثانية. سريع وذكي، لكن له تكلفة (~$0.01 لكل 1,000 حرف).',
+            '<strong>واجهات API السحابية (GPT-5.6، Claude):</strong> ترسل نصًا إلى خادم بعيد وتحصل على رد في < 1 ثانية. سريع وذكي، لكن له تكلفة (~$0.01 لكل 1,000 حرف).',
             '<strong>القرار:</strong> محلي للخصوصية والاستخدام دون اتصال. سحابة للسرعة والجودة.',
           ],
         },
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'النماذج اللغوية المحلية الأفضل للخصوصية والعمل دون اتصال والتكلفة الصفرية؛ تأتي أقل بـ 10–20 نقطة من النماذج السحابية المتقدمة في الاستدلال عند 7B وبدون إنترنت — استخدم APIs السحابية حين تكون الدقة أو البيانات الآنية ضرورية.' }, { type: 'plain-terms', text: 'تشغيل الذكاء الاصطناعي محلياً يعني أن بياناتك لا تغادر جهازك أبداً، وبدون تكاليف بعد الإعداد. المقايضة: النماذج المحلية أبطأ وأقل قدرةً من GPT-5.5 أو ما شابهه.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'النماذج اللغوية المحلية الأفضل للخصوصية والعمل دون اتصال والتكلفة الصفرية؛ تأتي أقل بـ 10–20 نقطة من النماذج السحابية المتقدمة في الاستدلال عند 7B وبدون إنترنت — استخدم APIs السحابية حين تكون الدقة أو البيانات الآنية ضرورية.' }, { type: 'plain-terms', text: 'تشغيل الذكاء الاصطناعي محلياً يعني أن بياناتك لا تغادر جهازك أبداً، وبدون تكاليف بعد الإعداد. المقايضة: النماذج المحلية أبطأ وأقل قدرةً من GPT-5.6 أو ما شابهه.' }],
           items: [
-            'فجوة الجودة: تحصل نماذج 7B المحلية على درجات أقل بـ 10-20 نقطة مئوية من GPT-5.5 في قياسات الاستدلال والبرمجة. تتقلص الفجوة بشكل ملحوظ على مستوى 70B، لكنها تتطلب 40-48 GB من RAM.',
+            'فجوة الجودة: تحصل نماذج 7B المحلية على درجات أقل بـ 10-20 نقطة مئوية من GPT-5.6 في قياسات الاستدلال والبرمجة. تتقلص الفجوة بشكل ملحوظ على مستوى 70B، لكنها تتطلب 40-48 GB من RAM.',
             'السرعة: ينتج الاستدلال على CPU فقط لنموذج 7B سرعة 10-25 token/ثانية. تنتج واجهات API السحابية 50-200 token/ثانية. تقلِّص أجهزة Apple Silicon ووحدات GPU من NVIDIA هذه الفجوة.',
             'بلا وصول إلى الإنترنت: للنماذج المحلية تاريخ قطع تدريب ولا يمكنها استرجاع المعلومات الحالية. يمكن لنماذج السحابة استخدام إضافات البحث على الويب.',
             'عبء الإعداد: يتطلب نموذج LLM محلي فعّال 5-15 دقيقة من التثبيت وإدارة دورية للنموذج. تتطلب واجهات API السحابية مفتاح API فقط.',
@@ -1276,7 +1276,7 @@ schema: {
           rows: [
             { 'Tarea': 'بيانات خاصة وحساسة', 'LLM local': 'لا تغادر البيانات الجهاز أبدًا', 'API en la nube': 'تُرسَل إلى خادم بعيد (يتطلب DPA)', 'Ganador': '✅ محلي' },
             { 'Tarea': 'محادثة في الوقت الفعلي (< 2 ث)', 'LLM local': '5–10 ث (CPU)', 'API en la nube': '0.5–1 ث', 'Ganador': '✅ سحابة' },
-            { 'Tarea': 'توليد الكود', 'LLM local': '45–55% HumanEval (7B)', 'API en la nube': '90% HumanEval (GPT-5.5)', 'Ganador': '✅ سحابة' },
+            { 'Tarea': 'توليد الكود', 'LLM local': '45–55% HumanEval (7B)', 'API en la nube': '90% HumanEval (GPT-5.6)', 'Ganador': '✅ سحابة' },
             { 'Tarea': 'تلخيص المستندات', 'LLM local': 'قادر (7B كافٍ)', 'API en la nube': 'قادر + أسرع', 'Ganador': '⚖️ أي منهما' },
             { 'Tarea': 'تكلفة API صفرية', 'LLM local': '$0/token (بعد الأجهزة)', 'API en la nube': '$0.01–0.05 لكل 1K token', 'Ganador': '✅ محلي (حجم مرتفع)' },
             { 'Tarea': 'دون اتصال / بلا إنترنت', 'LLM local': 'دون اتصال بالكامل', 'API en la nube': 'يتطلب إنترنت', 'Ganador': '✅ محلي' },
@@ -1317,24 +1317,24 @@ schema: {
           ],
         },
         qualityGap: {
-          title: 'لماذا تكون نماذج LLM المحلية أسوأ من GPT-5.5 في المهام المعقدة؟',
+          title: 'لماذا تكون نماذج LLM المحلية أسوأ من GPT-5.6 في المهام المعقدة؟',
           content: [
-            '**القيد الأكثر أهمية لنماذج LLM المحلية هو جودة المخرجات في المهام المعقدة.** تُدرَّب نماذج السحابة المتطورة —OpenAI GPT-5.5 وAnthropic Claude 4.6 Sonnet وGoogle Gemini 3.1 Pro— على بيانات أكثر وحوسبة أكثر وضبط RLHF أكثر تطورًا من أي نموذج محلي متاح للعامة. لا يمكن للبدائل مفتوحة المصدر مثل Llama 3.3 وQwen3 وMistral (المنشورة عبر Ollama أو LM Studio أو llama.cpp) مجاراة هذا الحجم.',
+            '**القيد الأكثر أهمية لنماذج LLM المحلية هو جودة المخرجات في المهام المعقدة.** تُدرَّب نماذج السحابة المتطورة —OpenAI GPT-5.6 وAnthropic Claude Sonnet 5 وGoogle Gemini 3.1 Pro— على بيانات أكثر وحوسبة أكثر وضبط RLHF أكثر تطورًا من أي نموذج محلي متاح للعامة. لا يمكن للبدائل مفتوحة المصدر مثل Llama 3.3 وQwen3 وMistral (المنشورة عبر Ollama أو LM Studio أو llama.cpp) مجاراة هذا الحجم.',
             'في قياسات MMLU (المعرفة العامة) وHumanEval (برمجة Python) وMATH، تحصل النماذج المتطورة على 85-92%. تحصل أفضل نماذج 70B القابلة للتشغيل محليًا (Llama 3.3 70B، Qwen3 72B) على 75-85%. تحصل نماذج 7B الصديقة للمستهلك على 55-70%.',
-            'تعتمد فجوة الجودة على المهمة. للتلخيص والأسئلة والأجوبة البسيطة والترجمة وشرح الكود، تُنتج نماذج 7B نتائج يصعب تمييزها عن GPT-5.5 في التقييمات العمياء. تكون الفجوة أكبر في: الاستدلال المعقد متعدد الخطوات، والرياضيات المتقدمة، والكتابة الطويلة الدقيقة، والمهام التي تتطلب معرفة حالية بالعالم.',
+            'تعتمد فجوة الجودة على المهمة. للتلخيص والأسئلة والأجوبة البسيطة والترجمة وشرح الكود، تُنتج نماذج 7B نتائج يصعب تمييزها عن GPT-5.6 في التقييمات العمياء. تكون الفجوة أكبر في: الاستدلال المعقد متعدد الخطوات، والرياضيات المتقدمة، والكتابة الطويلة الدقيقة، والمهام التي تتطلب معرفة حالية بالعالم.',
             'تتداخل قيود النماذج المحلية مع القيود الأوسع لنماذج LLM — تؤثر الهلوسات وإخفاقات الاستدلال وحدود المعرفة في جميع النماذج بصرف النظر عن النشر. للصورة الكاملة لما لا تزال نماذج LLM عاجزة عن فعله بموثوقية، راجع [قيود الذكاء الاصطناعي: ما لا تستطيع نماذج LLM فعله](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).',
           ],
           image: '/images/local-llm-limitations-quality-benchmarks-es.svg',
-          imageCaption: 'فجوة الجودة: الدرجات في القياسات — تحصل نماذج 7B المحلية على درجات أقل بـ 10–20 نقطة في الاستدلال والبرمجة من GPT-5.5',
+          imageCaption: 'فجوة الجودة: الدرجات في القياسات — تحصل نماذج 7B المحلية على درجات أقل بـ 10–20 نقطة في الاستدلال والبرمجة من GPT-5.6',
           rows: [
-            { 'Tipo de tarea': 'أسئلة وأجوبة بسيطة', 'Local 7B': 'مناسب', 'Local 70B': 'جيد', 'GPT-5.5': 'ممتاز' },
-            { 'Tipo de tarea': 'شرح الكود', 'Local 7B': 'مناسب', 'Local 70B': 'جيد', 'GPT-5.5': 'ممتاز' },
-            { 'Tipo de tarea': 'استدلال متعدد الخطوات', 'Local 7B': 'ضعيف', 'Local 70B': 'مناسب', 'GPT-5.5': 'ممتاز' },
-            { 'Tipo de tarea': 'رياضيات متقدمة', 'Local 7B': 'ضعيف', 'Local 70B': 'مناسب', 'GPT-5.5': 'جيد' },
-            { 'Tipo de tarea': 'كتابة طويلة', 'Local 7B': 'مناسب', 'Local 70B': 'جيد', 'GPT-5.5': 'ممتاز' },
-            { 'Tipo de tarea': 'أحداث حالية', 'Local 7B': 'لا شيء (بلا إنترنت)', 'Local 70B': 'لا شيء (بلا إنترنت)', 'GPT-5.5': 'جيد (مع التصفح)' },
+            { 'Tipo de tarea': 'أسئلة وأجوبة بسيطة', 'Local 7B': 'مناسب', 'Local 70B': 'جيد', 'GPT-5.6': 'ممتاز' },
+            { 'Tipo de tarea': 'شرح الكود', 'Local 7B': 'مناسب', 'Local 70B': 'جيد', 'GPT-5.6': 'ممتاز' },
+            { 'Tipo de tarea': 'استدلال متعدد الخطوات', 'Local 7B': 'ضعيف', 'Local 70B': 'مناسب', 'GPT-5.6': 'ممتاز' },
+            { 'Tipo de tarea': 'رياضيات متقدمة', 'Local 7B': 'ضعيف', 'Local 70B': 'مناسب', 'GPT-5.6': 'جيد' },
+            { 'Tipo de tarea': 'كتابة طويلة', 'Local 7B': 'مناسب', 'Local 70B': 'جيد', 'GPT-5.6': 'ممتاز' },
+            { 'Tipo de tarea': 'أحداث حالية', 'Local 7B': 'لا شيء (بلا إنترنت)', 'Local 70B': 'لا شيء (بلا إنترنت)', 'GPT-5.6': 'جيد (مع التصفح)' },
           ],
-          columns: ['Tipo de tarea', 'Local 7B', 'Local 70B', 'GPT-5.5'],
+          columns: ['Tipo de tarea', 'Local 7B', 'Local 70B', 'GPT-5.6'],
         },
         whenQualityMatters: {
           title: 'متى تهم جودة المخرجات؟',
@@ -1358,7 +1358,7 @@ schema: {
           title: 'ما مدى سرعة نماذج LLM المحلية مقابل واجهات API السحابية؟',
           content: [
             '**تعالج واجهات API السحابية الـ token على أجهزة خادم مخصصة بوحدات GPU من نوع NVIDIA H100 أو A100.** لا يمكن لأجهزة المستهلك — حتى اللابتوبات ووحدات GPU المكتبية الراقية — مجاراة هذا الأداء.',
-            'يولِّد GPT-5.5 نحو 80-150 token/ثانية تحت حمل نموذجي. يولِّد نموذج 7B محلي على CPU لابتوب حديث سرعة 10-25 token/ثانية — أبطأ بـ 4-10×. على NVIDIA RTX 4090 (أسرع GPU استهلاكية)، يبلغ نموذج 7B نفسه سرعة 130-160 token/ثانية — مكافئ لسرعة السحابة، لكن الأجهزة تكلف $1,600+.',
+            'يولِّد GPT-5.6 نحو 80-150 token/ثانية تحت حمل نموذجي. يولِّد نموذج 7B محلي على CPU لابتوب حديث سرعة 10-25 token/ثانية — أبطأ بـ 4-10×. على NVIDIA RTX 4090 (أسرع GPU استهلاكية)، يبلغ نموذج 7B نفسه سرعة 130-160 token/ثانية — مكافئ لسرعة السحابة، لكن الأجهزة تكلف $1,600+.',
             'للاستخدام التفاعلي في المحادثة، يكون فرق السرعة ملحوظًا لكنه محتمل عند 20+ token/ثانية. للمعالجة على دفعات (تلخيص مئات المستندات)، تصبح فجوة السرعة قيدًا كبيرًا.',
           ],
           image: '/images/local-llm-limitations-speed-comparison-es.svg',
@@ -1385,17 +1385,17 @@ schema: {
         hardware: {
           title: 'أي أجهزة تحتاج لتشغيل نماذج LLM المحلية؟',
           content: [
-            '**يتطلب تشغيل نموذج محلي قادر (13B+) أجهزة لا يمتلكها كل المستخدمين.** الحد الأدنى لتجربة محلية مفيدة فعلًا — مجارية لجودة GPT-4o mini — هو 16 GB من RAM وCPU حديث أو شريحة Apple Silicon. يستبعد هذا نحو نصف لابتوبات المستهلك المستخدمة حاليًا. للتفصيل الكامل وحسابات VRAM، راجع [دليل أجهزة نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026).',
+            '**يتطلب تشغيل نموذج محلي قادر (13B+) أجهزة لا يمتلكها كل المستخدمين.** الحد الأدنى لتجربة محلية مفيدة فعلًا — مجارية لجودة GPT-5.6 Luna — هو 16 GB من RAM وCPU حديث أو شريحة Apple Silicon. يستبعد هذا نحو نصف لابتوبات المستهلك المستخدمة حاليًا. للتفصيل الكامل وحسابات VRAM، راجع [دليل أجهزة نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026).',
             'تتطلب مجاراة جودة النماذج المتطورة محليًا نموذج 70B، الذي يستلزم 40-48 GB من RAM — متاح فقط في محطات عمل راقية أو Mac Studio / Mac Pro بذاكرة موحَّدة 64+ GB. إذا كانت أجهزتك محدودة، تقدم واجهات API السحابية جودة أفضل بتكلفة إعداد أقل.',
           ],
           image: '/images/local-llm-limitations-hardware-requirements-es.svg',
           imageCaption: 'متطلبات الأجهزة حسب حجم النموذج — 16 GB من RAM كحد أدنى لنماذج 7B قابلة للاستخدام · 40+ GB لنماذج 70B بجودة متطورة',
           rows: [
-            { 'Hardware': 'لابتوب أساسي (8 GB RAM، CPU فقط)', 'Modelo máx. útil': '7B بصيغة Q4_K_M', 'Equivalente de calidad': 'دون GPT-4o mini' },
-            { 'Hardware': 'لابتوب متوسط (16 GB RAM)', 'Modelo máx. útil': '13B بصيغة Q4_K_M', 'Equivalente de calidad': 'نحو GPT-4o mini' },
-            { 'Hardware': 'Apple M3 Pro (18 GB)', 'Modelo máx. útil': '13B بجودة كاملة', 'Equivalente de calidad': 'GPT-4o mini إلى GPT-4 (حسب المهمة)' },
+            { 'Hardware': 'لابتوب أساسي (8 GB RAM، CPU فقط)', 'Modelo máx. útil': '7B بصيغة Q4_K_M', 'Equivalente de calidad': 'دون GPT-5.6 Luna' },
+            { 'Hardware': 'لابتوب متوسط (16 GB RAM)', 'Modelo máx. útil': '13B بصيغة Q4_K_M', 'Equivalente de calidad': 'نحو GPT-5.6 Luna' },
+            { 'Hardware': 'Apple M3 Pro (18 GB)', 'Modelo máx. útil': '13B بجودة كاملة', 'Equivalente de calidad': 'GPT-5.6 Luna إلى GPT-4 (حسب المهمة)' },
             { 'Hardware': 'NVIDIA RTX 4090 (24 GB VRAM)', 'Modelo máx. útil': '34B بصيغة Q4_K_M', 'Equivalente de calidad': 'قريب من GPT-4' },
-            { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Modelo máx. útil': '70B بجودة كاملة', 'Equivalente de calidad': 'منافس لـ GPT-5.5' },
+            { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Modelo máx. útil': '70B بجودة كاملة', 'Equivalente de calidad': 'منافس لـ GPT-5.6' },
           ],
           columns: ['Hardware', 'Modelo máx. útil', 'Equivalente de calidad'],
         },
@@ -1422,7 +1422,7 @@ schema: {
           title: 'لماذا لا تملك نماذج LLM المحلية وصولًا إلى المعلومات في الوقت الفعلي؟',
           content: [
             '**لنماذج LLM المحلية تاريخ قطع لبيانات التدريب.** لا يمكنها الوصول إلى الإنترنت، ولا استرجاع الأخبار الحالية، ولا التحقق من الأسعار الحية أو بيانات الأسهم، ولا زيارة عناوين URL. لن يعرف نموذج مُدرَّب بتاريخ قطع أوائل 2024 أي شيء عن أحداث بعد ذلك التاريخ.',
-            'يمكن لنماذج السحابة ذات قدرات التصفح (GPT-5.5 مع البحث على الويب، Gemini مع تكامل Google Search) استرجاع المعلومات الحالية والاستشهاد بها. لا تُكرِّر أي أداة استدلال محلية بمستوى المستهلك هذه القدرة دون بنية تحتية إضافية كبيرة (RAG مع زاحف ويب حي).',
+            'يمكن لنماذج السحابة ذات قدرات التصفح (GPT-5.6 مع البحث على الويب، Gemini مع تكامل Google Search) استرجاع المعلومات الحالية والاستشهاد بها. لا تُكرِّر أي أداة استدلال محلية بمستوى المستهلك هذه القدرة دون بنية تحتية إضافية كبيرة (RAG مع زاحف ويب حي).',
             'للمهام التي تتطلب معلومات حالية — ملخصات الأخبار، ومقارنات المنتجات الحديثة، وتحليل البيانات الحية — تكون واجهات API السحابية الخيار العملي. راجع [نماذج LLM المحلية مقابل واجهات API السحابية](/ar/local-llms/local-llms-vs-cloud-apis) لمقارنة كاملة.',
           ],
         },
@@ -1476,7 +1476,7 @@ schema: {
         contextWindow: {
           title: 'ما نافذة سياق نماذج LLM المحلية؟',
           content: [
-            '**تدعم معظم النماذج المحلية العملية نوافذ سياق من 4K-128K token.** يدعم Google Gemini 3.1 Pro مليون token؛ ويدعم OpenAI GPT-5.5 سياق 128K token. ومع أن 128K متاح محليًا (Llama 3.3، Qwen3)، تتدهور سرعة الاستدلال للسياقات الطويلة جدًا بشكل ملحوظ — قد تستغرق معالجة سياق 100K token على نموذج 7B عدة دقائق على أجهزة المستهلك.',
+            '**تدعم معظم النماذج المحلية العملية نوافذ سياق من 4K-128K token.** يدعم Google Gemini 3.1 Pro مليون token؛ ويدعم OpenAI GPT-5.6 سياق 128K token. ومع أن 128K متاح محليًا (Llama 3.3، Qwen3)، تتدهور سرعة الاستدلال للسياقات الطويلة جدًا بشكل ملحوظ — قد تستغرق معالجة سياق 100K token على نموذج 7B عدة دقائق على أجهزة المستهلك.',
             'للمهام التي تتضمن مستندات طويلة جدًا (كتب كاملة، قواعد كود كبيرة، ساعات من النصوص)، تكون واجهات API السحابية ذات نوافذ السياق الكبيرة أكثر عملية من الاستدلال المحلي.',
           ],
         },
@@ -1510,7 +1510,7 @@ schema: {
         whenCloud: {
           title: 'متى ينبغي أن تستخدم واجهة API سحابية بدلًا من نموذج LLM محلي؟',
           items: [
-            '**تُطلَب أقصى جودة للمخرجات** — مستندات قانونية، توليد كود معقد، تحليل بحثي متقدم. استخدم GPT-5.5 أو Claude 4.6 Sonnet. لمقارنة كاملة، راجع [نماذج LLM المحلية مقابل واجهات API السحابية](/ar/local-llms/local-llms-vs-cloud-apis).',
+            '**تُطلَب أقصى جودة للمخرجات** — مستندات قانونية، توليد كود معقد، تحليل بحثي متقدم. استخدم GPT-5.6 أو Claude Sonnet 5. لمقارنة كاملة، راجع [نماذج LLM المحلية مقابل واجهات API السحابية](/ar/local-llms/local-llms-vs-cloud-apis).',
             '**يلزم الحصول على معلومات في الوقت الفعلي** — أخبار حالية، بيانات حية، استرجاع عناوين URL. للنماذج المحلية تاريخ قطع تدريب.',
             '**وقت الإعداد قيد** — لنموذج أولي سريع أو مهمة عابرة، يكون استخدام مفتاح API سحابي أسرع من تثبيت محلي.',
             '**أجهزتك محدودة** — على جهاز بـ 4-6 GB من RAM، يكون الاستدلال المحلي هامشيًا. تنتج واجهات API السحابية نتائج أفضل دون طلب أجهزة.',
@@ -1524,7 +1524,7 @@ schema: {
           content: [
             'تكون نماذج LLM المحلية الخيار الخاطئ في هذه السيناريوهات:',
             '',
-            '**الاستدلال المعقد متعدد الخطوات** — تتطلب مهمتك تفكيك مشكلة واستخدام نتائج وسيطة والتكرار. تفشل نماذج 7B المحلية في هذه المهام. استخدم GPT-5.5 أو Claude 4.6 Sonnet بدلًا منها.',
+            '**الاستدلال المعقد متعدد الخطوات** — تتطلب مهمتك تفكيك مشكلة واستخدام نتائج وسيطة والتكرار. تفشل نماذج 7B المحلية في هذه المهام. استخدم GPT-5.6 أو Claude Sonnet 5 بدلًا منها.',
             '',
             '**متطلبات المعلومات في الوقت الفعلي** — تحتاج إلى أخبار حالية أو تدفقات بيانات حية أو القدرة على زيارة عناوين URL. للنماذج المحلية تاريخ قطع وبلا وصول إلى الإنترنت. تُطلَب واجهات API سحابية بالبحث على الويب.',
             '',
@@ -1540,8 +1540,8 @@ schema: {
           title: '🏆 أفضل LLM محلي حسب حالة الاستخدام',
           content: [
             '- **الأفضل للخصوصية والامتثال** ← LLM محلي (Ollama + Llama 3.3 70B أو Qwen3 7B)',
-            '- **الأفضل للاستدلال والبرمجة** ← واجهة API سحابية (OpenAI GPT-5.5 أو Anthropic Claude Opus 4.8)',
-            '- **الأفضل للسرعة بجودة جيدة** ← واجهة API سحابية (OpenAI GPT-5.5 mini بتكلفة أقل بـ 10× لكل token)',
+            '- **الأفضل للاستدلال والبرمجة** ← واجهة API سحابية (OpenAI GPT-5.6 أو Anthropic Claude Opus 4.8)',
+            '- **الأفضل للسرعة بجودة جيدة** ← واجهة API سحابية (OpenAI GPT-5.6 Luna بتكلفة أقل بـ 10× لكل token)',
             '- **الأفضل للتكلفة على نطاق واسع** ← LLM محلي (إذا امتلكت الأجهزة؛ تقترب التكلفة المُستهلَكة من الصفر)',
             '- **الأفضل لتجربة كلا النهجين** ← [PromptQuorum](/) (أرسل إلى كل من المحلي والسحابة، وانظر فرق الجودة قبل الاختيار)',
           ],
@@ -1552,7 +1552,7 @@ schema: {
           columns: ['Métrica', 'LLM local (CPU)', 'LLM local (GPU)', 'API en la nube'],
           rows: [
             { 'Métrica': 'السرعة', 'LLM local (CPU)': '10–25 token/ثانية', 'LLM local (GPU)': '50–130 token/ثانية', 'API en la nube': '80–150 token/ثانية' },
-            { 'Métrica': 'فجوة الجودة', 'LLM local (CPU)': '~15–20% دون GPT-5.5', 'LLM local (GPU)': '~5–10% دون GPT-5.5', 'API en la nube': 'مستوى متطور' },
+            { 'Métrica': 'فجوة الجودة', 'LLM local (CPU)': '~15–20% دون GPT-5.6', 'LLM local (GPU)': '~5–10% دون GPT-5.6', 'API en la nube': 'مستوى متطور' },
             { 'Métrica': 'RAM المطلوبة', 'LLM local (CPU)': '16 GB (الحد الأدنى)', 'LLM local (GPU)': '24 GB VRAM (GPU)', 'API en la nube': 'لا شيء (مُدار في السحابة)' },
             { 'Métrica': 'وقت الإعداد', 'LLM local (CPU)': '20–40 دقيقة', 'LLM local (GPU)': '30–60 دقيقة', 'API en la nube': '5 دقائق' },
             { 'Métrica': 'نافذة السياق', 'LLM local (CPU)': '4K–128K token', 'LLM local (GPU)': '4K–128K token', 'API en la nube': '128K–1M+ token' },
@@ -1591,7 +1591,7 @@ schema: {
           id: 'sources',
           title: 'المصادر',
           items: [
-            '[الورقة التقنية لـ GPT-5.5](https://openai.com/gpt-4o/) — مقارنات قياسية وتحليل قدرات من OpenAI',
+            '[الورقة التقنية لـ GPT-5.6](https://openai.com/gpt-4o/) — مقارنات قياسية وتحليل قدرات من OpenAI',
             '[Meta Llama 3.3 Model Card](https://www.llama.com/) — مقاييس الأداء الرسمية والقيود',
             '[فهم الهلوسات في نماذج LLM](https://arxiv.org/abs/2110.01852) — بحث أكاديمي حول الدقة وأنماط الخطأ في النماذج',
           ],
@@ -1599,7 +1599,7 @@ schema: {
         commonMistakes: {
           title: 'الأخطاء الشائعة حول قيود نماذج LLM',
           items: [
-            '**توقُّع أن تجاري نماذج 7B جودة GPT-5.5:** فهي أدنى بنسبة 10–20% في الاستدلال. HumanEval: تحصل نماذج 7B المحلية على 45–55% مقابل 90% لـ GPT-5.5. استخدم 70B محليًا أو السحابة للمهام المعقدة.',
+            '**توقُّع أن تجاري نماذج 7B جودة GPT-5.6:** فهي أدنى بنسبة 10–20% في الاستدلال. HumanEval: تحصل نماذج 7B المحلية على 45–55% مقابل 90% لـ GPT-5.6. استخدم 70B محليًا أو السحابة للمهام المعقدة.',
             '**تجاهل حدود الأجهزة:** 16 GB من RAM هي الحد الأدنى للنماذج المفيدة. دون ذلك، تتدهور الجودة بشكل ملحوظ. تحقق من [متطلبات الأجهزة](/ar/local-llms/local-llm-hardware-guide-2026) قبل البدء.',
             '**افتراض أن المحلي = أسرع:** الاستدلال على CPU أبطأ بـ 4–10× (10–25 token/ثانية مقابل 80–150 token/ثانية في السحابة). يتطلب GPU بسعر $1,600+ لمجاراة سرعة السحابة.',
             '**التقليل من تقدير وقت الإعداد:** يستغرق الإعداد المحلي 20–40 دقيقة. تستغرق السحابة 5 دقائق. أضِف الصيانة المستمرة (تحديثات، برامج تشغيل) إلى حساب تكلفتك المحلية.',
@@ -1656,9 +1656,9 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'LLMs locais são melhores para privacidade, tarefas offline e custo zero; ficam 10–20 pontos abaixo dos modelos frontier em raciocínio a 7B e sem acesso à internet — use APIs na nuvem quando precisão ou dados em tempo real importarem.' }, { type: 'plain-terms', text: 'Rodar IA localmente significa que seus dados nunca saem do dispositivo, sem custos após a configuração. A troca: modelos locais são mais lentos e menos capazes que GPT-5.5 ou similar.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'LLMs locais são melhores para privacidade, tarefas offline e custo zero; ficam 10–20 pontos abaixo dos modelos frontier em raciocínio a 7B e sem acesso à internet — use APIs na nuvem quando precisão ou dados em tempo real importarem.' }, { type: 'plain-terms', text: 'Rodar IA localmente significa que seus dados nunca saem do dispositivo, sem custos após a configuração. A troca: modelos locais são mais lentos e menos capazes que GPT-5.6 ou similar.' }],
           items: [
-            'LLMs locais são 10–40% piores em raciocínio de múltiplas etapas vs modelos de nuvem de topo (GPT-5.5, Claude 4.6).',
+            'LLMs locais são 10–40% piores em raciocínio de múltiplas etapas vs modelos de nuvem de topo (GPT-5.6, Claude Sonnet 5).',
             'A inferência na CPU é 4–10× mais lenta (10–25 tok/s) que a nuvem (80–150 tok/s).',
             'LLMs locais não têm acesso à internet em tempo real — a data de corte de treinamento é fixa.',
             'Hardware mínimo para uso real: 16 GB de RAM + GPU com 8 GB+ de VRAM.',
@@ -1693,7 +1693,7 @@ schema: {
       metaDescription: 'Grenzen lokaler LLMs 2026: Kontextfenster, Reasoning-Lücken und Hardware-Engpässe. Was lokale Modelle nicht können und wann Cloud-APIs besser sind.',
       twitterDescription: 'Lokales LLM: datenschutzsicher, kostenlos, aber 10x langsamer. Cloud: schnell + intelligent, kostet Geld. Vergleich nach Anwendungsfall. June 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**Lokale LLMs können Frontier Cloud-Modelle beim Reasoning, der Geschwindigkeit und dem Echtzeit-Datenzugriff aufgrund von Hardware- und Trainingsabschränkungen nicht erreichen.** Sie eignen sich am besten für private, Offline- und kostensensitive Aufgaben, aber nicht für High-Accuracy oder Echtzeit-Anwendungen.',
       audience: 'Entwickler und Mittelstands-IT-Leiter, die zwischen lokalen und Cloud-LLMs entscheiden müssen',
       readTime: '8 Min. Lesezeit',
@@ -1722,7 +1722,7 @@ schema: {
         headline: 'Grenzen von lokalen LLMs: Was lokale Modelle nicht können (und wann Cloud stattdessen besser ist)',
         description: 'Lokale vs. Cloud-LLMs: 6 Grenzen (Geschwindigkeit, Qualität, Hardware). Entscheidungsbaum für Mittelstand und Unternehmen. Benchmarks + Kostenvergleich.',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/de/local-llms/local-llm-limitations',
         inLanguage: 'de',
         about: [
@@ -1732,8 +1732,8 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' }
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
+          { '@type': 'SoftwareApplication', 'name': 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 5' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -1758,7 +1758,7 @@ schema: {
             name: 'Sind lokale LLMs langsamer als Cloud APIs?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ja, lokale LLMs sind deutlich langsamer. CPU-Inferenz erzeugt 10–25 Token pro Sekunde, während Cloud APIs (GPT-5.5) 80–150 Token pro Sekunde erreichen. Selbst mit GPU (RTX 4090) erreichen Sie nur 130–160 Token/s. Cloud ist 4–10× schneller für Echtzeitanwendungen.'
+              text: 'Ja, lokale LLMs sind deutlich langsamer. CPU-Inferenz erzeugt 10–25 Token pro Sekunde, während Cloud APIs (GPT-5.6) 80–150 Token pro Sekunde erreichen. Selbst mit GPU (RTX 4090) erreichen Sie nur 130–160 Token/s. Cloud ist 4–10× schneller für Echtzeitanwendungen.'
             }
           },
           {
@@ -1774,7 +1774,7 @@ schema: {
             name: 'Welche lokalen Modelle sind am besten?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Für 16 GB RAM: Llama 3.3 13B oder Mistral Small (Qualität ≈ GPT-4o mini). Für 40 GB RAM: Llama 3.3 70B oder Qwen 72B (Qualität ≈ GPT-4). Verwenden Sie Q4_K_M-Quantisierung für optimale Effizienz. Für beste Qualität nutzen Sie Cloud APIs (GPT-5.5, Claude Sonnet 4.6).'
+              text: 'Für 16 GB RAM: Llama 3.3 13B oder Mistral Small (Qualität ≈ GPT-5.6 Luna). Für 40 GB RAM: Llama 3.3 70B oder Qwen 72B (Qualität ≈ GPT-4). Verwenden Sie Q4_K_M-Quantisierung für optimale Effizienz. Für beste Qualität nutzen Sie Cloud APIs (GPT-5.6, Claude Sonnet 5).'
             }
           },
           {
@@ -1790,7 +1790,7 @@ schema: {
             name: 'Was ist das maximale Kontextfenster für lokale Modelle?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Die meisten lokalen Modelle unterstützen 4K–32K Token Kontext. Llama 3.3 hat standardmäßig 4K, kann aber auf 32K erweitert werden. Cloud APIs bieten viel mehr: GPT-5.5 = 128K, Claude Sonnet 4.6 = 200K. Für große Dokumente ist Cloud besser.'
+              text: 'Die meisten lokalen Modelle unterstützen 4K–32K Token Kontext. Llama 3.3 hat standardmäßig 4K, kann aber auf 32K erweitert werden. Cloud APIs bieten viel mehr: GPT-5.6 = 128K, Claude Sonnet 5 = 200K. Für große Dokumente ist Cloud besser.'
             }
           },
           {
@@ -1819,10 +1819,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            name: 'Kann ich GPT-5.5 lokal ausführen?',
+            name: 'Kann ich GPT-5.6 lokal ausführen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nein, OpenAI stellt GPT-5.5-Gewichte nicht zur Verfügung. Sie können GPT-5.5 nur über die OpenAI API verwenden. Es gibt lokale Open-Source-Alternativen (Llama 3.3 70B, Qwen 72B), die ähnliche (aber nicht identische) Qualität bieten. Für garantierte GPT-5.5-Qualität: Cloud API.'
+              text: 'Nein, OpenAI stellt GPT-5.6-Gewichte nicht zur Verfügung. Sie können GPT-5.6 nur über die OpenAI API verwenden. Es gibt lokale Open-Source-Alternativen (Llama 3.3 70B, Qwen 72B), die ähnliche (aber nicht identische) Qualität bieten. Für garantierte GPT-5.6-Qualität: Cloud API.'
             }
           },
           {
@@ -1919,13 +1919,13 @@ schema: {
             '@type': 'ListItem',
             position: 4,
             name: 'Beste Ausgabequalität (Coding, Analyse)',
-            description: 'GPT-5.5 und Claude Sonnet 4.6 schlagen lokale Modelle um 10–20 Punkte bei Benchmarks.'
+            description: 'GPT-5.6 und Claude Sonnet 5 schlagen lokale Modelle um 10–20 Punkte bei Benchmarks.'
           },
           {
             '@type': 'ListItem',
             position: 5,
             name: 'Lange Kontextfenster',
-            description: '100K+ Token. Cloud APIs (GPT-5.5 128K, Claude 200K) verarbeiten große Dokumente; lokale Modelle begrenzt auf 4K–32K.'
+            description: '100K+ Token. Cloud APIs (GPT-5.6 128K, Claude 200K) verarbeiten große Dokumente; lokale Modelle begrenzt auf 4K–32K.'
           },
           {
             '@type': 'ListItem',
@@ -1946,20 +1946,20 @@ schema: {
           title: 'In einfachen Worten',
           content: [
             '<strong>Lokale LLMs:</strong> Sie laden ein Sprachmodell auf Ihren Computer herunter (Ollama, LM Studio). Alle Daten bleiben privat. Nachteil: langsam, begrenzte Intelligenz, kompliziertes Setup.',
-            '<strong>Cloud APIs (GPT-5.5, Claude):</strong> Sie senden Text an einen Remote-Server, bekommen Antwort in < 1 Sekunde. Schnell und intelligent, aber kostet Geld (~$0,01 pro 1.000 Zeichen).',
+            '<strong>Cloud APIs (GPT-5.6, Claude):</strong> Sie senden Text an einen Remote-Server, bekommen Antwort in < 1 Sekunde. Schnell und intelligent, aber kostet Geld (~$0,01 pro 1.000 Zeichen).',
             '<strong>Entscheidung:</strong> Lokal für Datenschutz & Offline-Nutzung. Cloud für Geschwindigkeit & Qualität.'
           ]
         },
         tldr: {
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Lokale LLMs eignen sich am besten für Datenschutz, Offline-Aufgaben und null Kosten; sie liegen bei 7B um 10–20 Benchmark-Punkte hinter Frontier-Cloud-Modellen beim Reasoning und haben keinen Internetzugang — Cloud-APIs nutzen, wenn Genauigkeit oder Echtzeit zählen.' }, { type: 'plain-terms', text: 'Lokale KI bedeutet: Deine Daten verlassen nie dein Gerät und nach dem Setup entstehen keine Kosten. Der Kompromiss: Lokale Modelle sind langsamer und weniger leistungsfähig als GPT-5.5 oder ähnliches.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Lokale LLMs eignen sich am besten für Datenschutz, Offline-Aufgaben und null Kosten; sie liegen bei 7B um 10–20 Benchmark-Punkte hinter Frontier-Cloud-Modellen beim Reasoning und haben keinen Internetzugang — Cloud-APIs nutzen, wenn Genauigkeit oder Echtzeit zählen.' }, { type: 'plain-terms', text: 'Lokale KI bedeutet: Deine Daten verlassen nie dein Gerät und nach dem Setup entstehen keine Kosten. Der Kompromiss: Lokale Modelle sind langsamer und weniger leistungsfähig als GPT-5.6 oder ähnliches.' }],
           title: 'Wichtigste Erkenntnisse',
           content: [
             '✓ Lokale Modelle sind 4–10× langsamer (CPU: 10–25 Token/s vs. Cloud: 80–150 Token/s).',
-            '✓ Qualitätslücke: 7B-Modelle liegen 10–20 Punkte unter GPT-5.5 bei MMLU und HumanEval Benchmarks.',
+            '✓ Qualitätslücke: 7B-Modelle liegen 10–20 Punkte unter GPT-5.6 bei MMLU und HumanEval Benchmarks.',
             '✓ Hardwareanforderung: Minimum 16 GB RAM für praktische Nutzung; 40 GB für beste Qualität (70B Modelle).',
             '✓ Einrichtungszeit: 20–40 Minuten lokal (Download + Konfiguration); Cloud APIs in 5 Minuten einsatzbereit.',
-            '✓ Kontextfenster: Lokal 4K–32K; Cloud 128K–200K (GPT-5.5, Claude). Cloud besser für lange Dokumente.',
+            '✓ Kontextfenster: Lokal 4K–32K; Cloud 128K–200K (GPT-5.6, Claude). Cloud besser für lange Dokumente.',
             '✓ Beste Anwendungsfälle lokal: Datenschutz-kritische Aufgaben, Offline-Szenarien, nicht-zeitkritische Batch-Verarbeitung.',
             '✓ Beste Anwendungsfälle Cloud: Echtzeit-Chat, Hochvolumen-Batch, Produktion mit SLA, beste Ausgabequalität.'
           ]
@@ -1988,7 +1988,7 @@ schema: {
           rows: [
             { 'Aufgabe': 'Datenschutzkritische Daten', 'Lokales LLM': 'Daten verlassen nie das Gerät', 'Cloud API': 'An Remote-Server gesendet (erfordert DPA)', 'Empfehlung': '✅ Lokal' },
             { 'Aufgabe': 'Echtzeit-Chat (< 2 Sekunden)', 'Lokales LLM': '5–10 Sekunden (CPU)', 'Cloud API': '0,5–1 Sekunde', 'Empfehlung': '✅ Cloud' },
-            { 'Aufgabe': 'Code-Generierung', 'Lokales LLM': '45–55% HumanEval (7B)', 'Cloud API': '90% HumanEval (GPT-5.5)', 'Empfehlung': '✅ Cloud' },
+            { 'Aufgabe': 'Code-Generierung', 'Lokales LLM': '45–55% HumanEval (7B)', 'Cloud API': '90% HumanEval (GPT-5.6)', 'Empfehlung': '✅ Cloud' },
             { 'Aufgabe': 'Dokumentenzusammenfassung', 'Lokales LLM': 'Fähig (7B ausreichend)', 'Cloud API': 'Fähig + schneller', 'Empfehlung': '⚖️ Beide' },
             { 'Aufgabe': 'Null API-Kosten', 'Lokales LLM': '$0/Token (nach Hardware)', 'Cloud API': '$0,01–0,05 pro 1K Token', 'Empfehlung': '✅ Lokal (hohes Volumen)' },
             { 'Aufgabe': 'Offline/Kein Internet', 'Lokales LLM': 'Vollständig offline', 'Cloud API': 'Erfordert Internet', 'Empfehlung': '✅ Lokal' },
@@ -2029,15 +2029,15 @@ schema: {
           ],
         },
         qualityGap: {
-          title: 'Grenze 2: Qualitätslücke — Lokale Modelle erreichen GPT-5.5 nicht',
-          content: ['Lokale 7B-Modelle liegen bei Standard-Benchmarks (MMLU, HumanEval) 10–20 Punkte unter GPT-5.5. Das klingt nicht viel, bedeutet in der Praxis aber: schwächeres Reasoning, häufigere Fehler bei Code und Mathe, weniger Nuancenverständnis.', 'Einschränkungen lokaler Modelle überschneiden sich mit allgemeinen LLM-Grenzen — Halluzinationen, Reasoning-Fehler und Wissens-Cutoffs betreffen alle Modelle unabhängig vom Deployment. Das vollständige Bild über das, was LLMs noch immer nicht zuverlässig können, bietet [KI-Einschränkungen: Was LLMs nicht können](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
+          title: 'Grenze 2: Qualitätslücke — Lokale Modelle erreichen GPT-5.6 nicht',
+          content: ['Lokale 7B-Modelle liegen bei Standard-Benchmarks (MMLU, HumanEval) 10–20 Punkte unter GPT-5.6. Das klingt nicht viel, bedeutet in der Praxis aber: schwächeres Reasoning, häufigere Fehler bei Code und Mathe, weniger Nuancenverständnis.', 'Einschränkungen lokaler Modelle überschneiden sich mit allgemeinen LLM-Grenzen — Halluzinationen, Reasoning-Fehler und Wissens-Cutoffs betreffen alle Modelle unabhängig vom Deployment. Das vollständige Bild über das, was LLMs noch immer nicht zuverlässig können, bietet [KI-Einschränkungen: Was LLMs nicht können](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
           image: '/images/local-llm-limitations-quality-benchmarks-de.svg',
           imageCaption: 'Benchmark-Vergleich: Lokale LLMs wie Llama 3 8B vs. GPT-4 auf MMLU und HumanEval — Qualitätsunterschiede in Prozent.',
           columns: ['Modell', 'MMLU (allgemeines Wissen)', 'HumanEval (Python-Coding)'],
           rows: [
             { 'Modell': 'Lokal 7B', 'MMLU (allgemeines Wissen)': '62–68%', 'HumanEval (Python-Coding)': '45–55%' },
             { 'Modell': 'Lokal 70B', 'MMLU (allgemeines Wissen)': '75–80%', 'HumanEval (Python-Coding)': '65–75%' },
-            { 'Modell': 'GPT-5.5', 'MMLU (allgemeines Wissen)': '88,7%', 'HumanEval (Python-Coding)': '90,2%' }
+            { 'Modell': 'GPT-5.6', 'MMLU (allgemeines Wissen)': '88,7%', 'HumanEval (Python-Coding)': '90,2%' }
           ]
         },
         whenQualityMatters: {
@@ -2049,7 +2049,7 @@ schema: {
               'Sentiment-Analyse ist ausreichend (auch 7B zuverlässig)',
             ],
             cloudIf: [
-              'Code-Generierung & Debugging (Fehlerquote bei lokal 7B: 35–45% vs. GPT-5.5 10%)',
+              'Code-Generierung & Debugging (Fehlerquote bei lokal 7B: 35–45% vs. GPT-5.6 10%)',
               'Finanzielle oder medizinische Analyse (Fehler sind teuer)',
             ],
             quick: [
@@ -2191,8 +2191,8 @@ schema: {
           items: [
             '<strong>Echtzeit-Chatbot:</strong> Nutzer erwartet < 2 Sekunden Antwort. Lokal: 5–10 Sekunden (4–10× langsamer). Cloud: 0,5–1 Sekunde (4–10× schneller).',
             '<strong>Hochvolumen-Batch:</strong> 1.000+ Dokumente/Tag. Lokale GPU wird Engpass; Cloud skaliert automatisch mit Parallelisierung.',
-            '<strong>Code-Generierung:</strong> GPT-5.5 hat 90% Coding-Akuranz; lokale 7B nur 45–55%. Für Production-Code: Cloud.',
-            '<strong>Lange Dokumente (100K+ Tokens):</strong> GPT-5.5 128K Kontext; Llama 3.3 maximal 32K. Cloud besser für ganze Bücher, Papers.',
+            '<strong>Code-Generierung:</strong> GPT-5.6 hat 90% Coding-Akuranz; lokale 7B nur 45–55%. Für Production-Code: Cloud.',
+            '<strong>Lange Dokumente (100K+ Tokens):</strong> GPT-5.6 128K Kontext; Llama 3.3 maximal 32K. Cloud besser für ganze Bücher, Papers.',
             '<strong>Zero-Wartung:</strong> Cloud = automatische Updates, Patches, Monitoring. Lokal = Ihre IT muss CUDA-Treiber, Firmware, Uptime verwalten.',
             '<strong>Hohe Verfügbarkeit:</strong> Cloud bietet 99,9% SLA; lokal = fragil (Absturz = Downtime).'
           ]
@@ -2201,7 +2201,7 @@ schema: {
           title: 'Wann Sie KEINE lokalen Modelle verwenden sollten',
           content: [
             '<strong>❌ Nicht lokal für Produktion ohne SLA-Backup:</strong> Wenn Ihr Service Kundendaten behandelt und Downtime kostet. Lokale Hardware crasht; Cloud hat Redundanz.',
-            '<strong>❌ Nicht lokal für komplexes Coding:</strong> Fehlerquote lokal 7B = 35–45%, GPT-5.5 = 10%. Für Production-Code zu riskant.',
+            '<strong>❌ Nicht lokal für komplexes Coding:</strong> Fehlerquote lokal 7B = 35–45%, GPT-5.6 = 10%. Für Production-Code zu riskant.',
             '<strong>❌ Nicht lokal ohne IT-Team:</strong> Wenn Du allein Developer bist und keine Zeit für GPU-Setup / CUDA-Probleme. Cloud API ist schneller zum Produktiv-Status.',
             '<strong>❌ Nicht lokal wenn schnell > privat:</strong> Echtzeit-Chat braucht Cloud-Geschwindigkeit. Datenschutz kann kompromissen werden (mit DPA) wenn Performance kritisch ist.',
             '<strong>❌ Nicht lokal für > 30 gleichzeitige Nutzer:</strong> Eine Single GPU ist Engpass. Cloud skaliert horizontal (kosten, aber funktioniert). Lokal = Infrastruktur-Mega-Projekt.'
@@ -2213,10 +2213,10 @@ schema: {
           columns: ['Anwendungsfall', '16 GB RAM', '40+ GB RAM', 'Empfehlung'],
           rows: [
             { 'Anwendungsfall': 'Allgemeines Wissen / Q&A', '16 GB RAM': 'Llama 3.3 13B', '40+ GB RAM': 'Llama 3.3 70B', 'Empfehlung': 'Lokal OK, oder Cloud für bessere Qualität' },
-            { 'Anwendungsfall': 'Code-Assistent', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', 'Empfehlung': 'Cloud besser (GPT-5.5 90% Akuranz vs. 50%)' },
+            { 'Anwendungsfall': 'Code-Assistent', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', 'Empfehlung': 'Cloud besser (GPT-5.6 90% Akuranz vs. 50%)' },
             { 'Anwendungsfall': 'Textgenerierung / Schreiben', '16 GB RAM': 'Mistral Small, Qwen 7B', '40+ GB RAM': 'Llama 3.3 70B, Qwen 72B', 'Empfehlung': 'Lokal OK' },
             { 'Anwendungsfall': 'Datenschutz-kritische Verarbeitung', '16 GB RAM': 'Llama 3.3 13B (DSGVO OK)', '40+ GB RAM': 'Llama 3.3 70B (beste Qualität)', 'Empfehlung': 'Lokal empfohlen (privat + DSGVO konform)' },
-            { 'Anwendungsfall': 'Chat-Assistenz (Echtzeit)', '16 GB RAM': 'Nicht empfohlen (zu langsam)', '40+ GB RAM': 'GPU erforderlich (RTX 4090)', 'Empfehlung': 'Cloud (GPT-5.5, Claude) — 4–10× schneller' },
+            { 'Anwendungsfall': 'Chat-Assistenz (Echtzeit)', '16 GB RAM': 'Nicht empfohlen (zu langsam)', '40+ GB RAM': 'GPU erforderlich (RTX 4090)', 'Empfehlung': 'Cloud (GPT-5.6, Claude) — 4–10× schneller' },
             { 'Anwendungsfall': 'Batch-Analyse (100+ Docs)', '16 GB RAM': 'Lokal ist OK, dauert Stunden', '40+ GB RAM': 'Lokal besser als Cloud (kein Kosten)', 'Empfehlung': 'Nachts lokal laufen lassen' }
           ]
         },
@@ -2225,7 +2225,7 @@ schema: {
           columns: ['Kriterium', 'Lokal (Ollama/LM Studio)', 'Cloud (OpenAI/Anthropic)'],
           rows: [
             { 'Kriterium': 'Geschwindigkeit', 'Lokal (Ollama/LM Studio)': '10–160 Token/s (CPU/GPU)', 'Cloud (OpenAI/Anthropic)': '80–150 Token/s' },
-            { 'Kriterium': 'Qualität (Benchmarks)', 'Lokal (Ollama/LM Studio)': '7B: 62–68% MMLU; 70B: 75–80%', 'Cloud (OpenAI/Anthropic)': 'GPT-5.5: 88,7% MMLU' },
+            { 'Kriterium': 'Qualität (Benchmarks)', 'Lokal (Ollama/LM Studio)': '7B: 62–68% MMLU; 70B: 75–80%', 'Cloud (OpenAI/Anthropic)': 'GPT-5.6: 88,7% MMLU' },
             { 'Kriterium': 'Hardware', 'Lokal (Ollama/LM Studio)': '16–40 GB RAM oder GPU', 'Cloud (OpenAI/Anthropic)': 'Keine Hardware nötig' },
             { 'Kriterium': 'Einrichtungszeit', 'Lokal (Ollama/LM Studio)': '20–40 Minuten', 'Cloud (OpenAI/Anthropic)': '5 Minuten' },
             { 'Kriterium': 'Datenschutz', 'Lokal (Ollama/LM Studio)': '100% privat (DSGVO-OK)', 'Cloud (OpenAI/Anthropic)': 'DPA erforderlich' },
@@ -2248,7 +2248,7 @@ schema: {
             },
             {
               q: 'Welche lokalen Modelle sind am besten?',
-              a: 'Llama 3.3 13B oder Mistral Small für 16 GB RAM (≈ GPT-4o mini). Llama 3.3 70B für 40 GB RAM (≈ GPT-4). Für beste Qualität: Cloud APIs (GPT-5.5, Claude).'
+              a: 'Llama 3.3 13B oder Mistral Small für 16 GB RAM (≈ GPT-5.6 Luna). Llama 3.3 70B für 40 GB RAM (≈ GPT-4). Für beste Qualität: Cloud APIs (GPT-5.6, Claude).'
             },
             {
               q: 'Kann ich lokal offline arbeiten?',
@@ -2256,7 +2256,7 @@ schema: {
             },
             {
               q: 'Was ist das maximale Kontextfenster lokal?',
-              a: 'Typischerweise 4K–32K Token. Cloud APIs bieten 128K–200K (GPT-5.5, Claude). Für lange Dokumente ist Cloud besser.'
+              a: 'Typischerweise 4K–32K Token. Cloud APIs bieten 128K–200K (GPT-5.6, Claude). Für lange Dokumente ist Cloud besser.'
             },
             {
               q: 'Benötige ich eine GPU für lokale LLMs?',
@@ -2271,7 +2271,7 @@ schema: {
               a: 'Ollama = CLI, schneller, für Automation. LM Studio = GUI, für Anfänger. Beide führen dieselben Modelle aus.'
             },
             {
-              q: 'Kann ich GPT-5.5 lokal ausführen?',
+              q: 'Kann ich GPT-5.6 lokal ausführen?',
               a: 'Nein, OpenAI gibt Gewichte nicht frei. Lokale Alternativen (Llama 70B, Qwen 72B) sind ähnlich gut, aber nicht identisch.'
             },
             {
@@ -2308,7 +2308,7 @@ schema: {
             '[Llama 3.3 Model Card (Meta)](https://huggingface.co/meta-llama/Llama-2-70b)',
             '[HumanEval Benchmarks (OpenAI)](https://github.com/openai/human-eval)',
             '[MMLU Benchmark (AI2)](https://github.com/jair-bolt/mmlu)',
-            '[OpenAI GPT-5.5 Technischer Report](https://openai.com/research/gpt-4)',
+            '[OpenAI GPT-5.6 Technischer Report](https://openai.com/research/gpt-4)',
             '[Anthropic Claude 3.5 Model Card](https://www.anthropic.com/)',
             '[BSI-Grundschutz-Kataloge (Deutsches Bundesamt für Sicherheit)](https://www.bsi.bund.de)',
             '[DSGVO Compliance Guide für KI-Systeme (EU Parlament)](https://www.europarl.europa.eu)',
@@ -2346,7 +2346,7 @@ schema: {
       metaDescription: 'Local = données 100% privées, 0 € par token, 10x plus lent. Cloud = 50–150 tokens/s, 0,01–0,05 € par 1K tokens, accès web. Tableau comparatif complet + guide décisionnel. Avril 2026.',
       twitterDescription: 'LLM local : données privées, gratuit, mais 10x plus lent. Cloud : rapide + intelligent, coûte de l\'argent. Comparaison par cas d\'usage. Avril 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**Les LLMs locaux ne peuvent pas égaler les modèles cloud frontier en raisonnement, vitesse et accès aux données en temps réel en raison des limites matérielles et des contraintes d\'entraînement.** Ils conviennent mieux aux tâches privées, hors ligne et sensibles au coût, mais pas pour les applications haute précision ou temps réel.',
       audience: 'Développeurs et directeurs IT de PME devant choisir entre LLMs locaux et Cloud APIs',
       readTime: '7 min de lecture',
@@ -2375,7 +2375,7 @@ schema: {
         headline: 'Limitations des LLMs locaux : ce que les modèles locaux ne peuvent pas faire (et quand privilégier le cloud)',
         description: 'LLMs locaux vs cloud : 6 limitations (vitesse, qualité, matériel). Arbre décisionnel pour PME et entreprises. Benchmarks + comparaison de coûts.',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/fr/local-llms/local-llm-limitations',
         inLanguage: 'fr',
         about: [
@@ -2385,8 +2385,8 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' }
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
+          { '@type': 'SoftwareApplication', 'name': 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 5' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -2411,7 +2411,7 @@ schema: {
             name: 'Les LLMs locaux sont-ils plus lents que les Cloud APIs ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Oui, considérablement. L\'inférence CPU génère 10–25 tokens par seconde, tandis que les Cloud APIs (GPT-5.5) en génèrent 80–150. Même avec GPU (RTX 4090), vous n\'atteindrez que 130–160 tokens/s. Cloud est 4–10 fois plus rapide pour les applications temps réel.'
+              text: 'Oui, considérablement. L\'inférence CPU génère 10–25 tokens par seconde, tandis que les Cloud APIs (GPT-5.6) en génèrent 80–150. Même avec GPU (RTX 4090), vous n\'atteindrez que 130–160 tokens/s. Cloud est 4–10 fois plus rapide pour les applications temps réel.'
             }
           },
           {
@@ -2427,7 +2427,7 @@ schema: {
             name: 'Quels sont les meilleurs LLMs locaux ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Pour 16 GB RAM : Llama 3.3 13B ou Mistral Small (qualité ≈ GPT-4o mini). Pour 40 GB RAM : Llama 3.3 70B ou Qwen 72B (qualité ≈ GPT-4). Utilisez la quantification Q4_K_M pour une efficacité optimale. Pour la meilleure qualité : Cloud APIs (GPT-5.5, Claude Sonnet 4.6).'
+              text: 'Pour 16 GB RAM : Llama 3.3 13B ou Mistral Small (qualité ≈ GPT-5.6 Luna). Pour 40 GB RAM : Llama 3.3 70B ou Qwen 72B (qualité ≈ GPT-4). Utilisez la quantification Q4_K_M pour une efficacité optimale. Pour la meilleure qualité : Cloud APIs (GPT-5.6, Claude Sonnet 5).'
             }
           },
           {
@@ -2443,7 +2443,7 @@ schema: {
             name: 'Quelle est la fenêtre de contexte maximale pour les LLMs locaux ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'La plupart des modèles locaux supportent 4K–32K tokens de contexte. Llama 3.3 a 4K par défaut, mais peut être étendu à 32K. Les Cloud APIs offrent bien plus : GPT-5.5 = 128K, Claude Sonnet 4.6 = 200K. Pour les gros documents, Cloud est mieux.'
+              text: 'La plupart des modèles locaux supportent 4K–32K tokens de contexte. Llama 3.3 a 4K par défaut, mais peut être étendu à 32K. Les Cloud APIs offrent bien plus : GPT-5.6 = 128K, Claude Sonnet 5 = 200K. Pour les gros documents, Cloud est mieux.'
             }
           },
           {
@@ -2472,10 +2472,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            name: 'Puis-je exécuter GPT-5.5 localement ?',
+            name: 'Puis-je exécuter GPT-5.6 localement ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Non, OpenAI ne fournit pas les poids GPT-5.5. Vous ne pouvez utiliser GPT-5.5 que via l\'API OpenAI. Il existe des alternatives open-source locales (Llama 3.3 70B, Qwen 72B) offrant qualité similaire (mais non identique). Pour qualité GPT-5.5 garantie : Cloud API.'
+              text: 'Non, OpenAI ne fournit pas les poids GPT-5.6. Vous ne pouvez utiliser GPT-5.6 que via l\'API OpenAI. Il existe des alternatives open-source locales (Llama 3.3 70B, Qwen 72B) offrant qualité similaire (mais non identique). Pour qualité GPT-5.6 garantie : Cloud API.'
             }
           },
           {
@@ -2556,13 +2556,13 @@ schema: {
             '@type': 'ListItem',
             position: 4,
             name: 'Meilleure qualité de sortie (code, analyse)',
-            description: 'GPT-5.5 et Claude Sonnet 4.6 surpassent modèles locaux de 10–20 points en benchmarks.'
+            description: 'GPT-5.6 et Claude Sonnet 5 surpassent modèles locaux de 10–20 points en benchmarks.'
           },
           {
             '@type': 'ListItem',
             position: 5,
             name: 'Longues fenêtres de contexte',
-            description: '100K+ tokens. Cloud APIs (GPT-5.5 128K, Claude 200K) traitent gros documents ; local limité 4K–32K.'
+            description: '100K+ tokens. Cloud APIs (GPT-5.6 128K, Claude 200K) traitent gros documents ; local limité 4K–32K.'
           },
           {
             '@type': 'ListItem',
@@ -2583,20 +2583,20 @@ schema: {
           title: 'En termes simples',
           content: [
             '<strong>LLMs locaux :</strong> Vous téléchargez un modèle de langage sur votre ordinateur (Ollama, LM Studio). Toutes les données restent privées. Inconvénients : lent, intelligence limitée, installation complexe.',
-            '<strong>Cloud APIs (GPT-5.5, Claude) :</strong> Vous envoyez du texte à un serveur distant, obtenez réponse en < 1 sec. Rapide et intelligent, mais coûte argent (~0.01 $ par 1.000 caractères).',
+            '<strong>Cloud APIs (GPT-5.6, Claude) :</strong> Vous envoyez du texte à un serveur distant, obtenez réponse en < 1 sec. Rapide et intelligent, mais coûte argent (~0.01 $ par 1.000 caractères).',
             '<strong>Décision :</strong> Local pour confidentialité & usage hors ligne. Cloud pour vitesse & qualité.'
           ]
         },
         tldr: {
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Les LLM locaux sont idéaux pour la confidentialité, les tâches hors ligne et le coût zéro ; ils sont 10–20 points en dessous des modèles frontier en raisonnement à 7B et n\'ont pas accès à internet — utilisez les API cloud quand la précision ou les données temps réel comptent.' }, { type: 'plain-terms', text: 'Faire tourner l\'IA localement signifie que vos données ne quittent jamais votre appareil, sans frais après installation. Le compromis : les modèles locaux sont plus lents et moins performants que GPT-5.5 ou similaire.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Les LLM locaux sont idéaux pour la confidentialité, les tâches hors ligne et le coût zéro ; ils sont 10–20 points en dessous des modèles frontier en raisonnement à 7B et n\'ont pas accès à internet — utilisez les API cloud quand la précision ou les données temps réel comptent.' }, { type: 'plain-terms', text: 'Faire tourner l\'IA localement signifie que vos données ne quittent jamais votre appareil, sans frais après installation. Le compromis : les modèles locaux sont plus lents et moins performants que GPT-5.6 ou similaire.' }],
           title: 'Points clés',
           content: [
             '✓ Modèles locaux 4–10 fois plus lents (CPU : 10–25 tokens/s vs. cloud : 80–150 tokens/s).',
-            '✓ Écart qualité : modèles 7B scored 10–20 points sous GPT-5.5 en benchmarks MMLU et HumanEval.',
+            '✓ Écart qualité : modèles 7B scored 10–20 points sous GPT-5.6 en benchmarks MMLU et HumanEval.',
             '✓ Exigence matériel : minimum 16 GB RAM pour usage pratique ; 40 GB pour meilleure qualité (modèles 70B).',
             '✓ Temps de configuration : 20–40 minutes local (téléchargement + config) ; cloud APIs prêtes en 5 minutes.',
-            '✓ Fenêtre de contexte : local 4K–32K ; cloud 128K–200K (GPT-5.5, Claude). Cloud mieux pour gros documents.',
+            '✓ Fenêtre de contexte : local 4K–32K ; cloud 128K–200K (GPT-5.6, Claude). Cloud mieux pour gros documents.',
             '✓ Meilleurs cas d\'usage local : tâches sensibles données, scénarios hors ligne, traitement batch non urgent.',
             '✓ Meilleurs cas d\'usage cloud : chat temps réel, batch haut volume, production avec SLA, meilleure qualité.'
           ]
@@ -2625,7 +2625,7 @@ schema: {
           rows: [
             { 'Tâche': 'Données sensibles confidentialité', 'LLM local': 'Données ne quittent pas l\'appareil', 'API cloud': 'Envoyées serveur distant (DPA requis)', 'Gagnant': '✅ Local' },
             { 'Tâche': 'Chat temps réel (< 2 sec)', 'LLM local': '5–10 sec (CPU)', 'API cloud': '0.5–1 sec', 'Gagnant': '✅ Cloud' },
-            { 'Tâche': 'Génération code', 'LLM local': '45–55% HumanEval (7B)', 'API cloud': '90% HumanEval (GPT-5.5)', 'Gagnant': '✅ Cloud' },
+            { 'Tâche': 'Génération code', 'LLM local': '45–55% HumanEval (7B)', 'API cloud': '90% HumanEval (GPT-5.6)', 'Gagnant': '✅ Cloud' },
             { 'Tâche': 'Résumé documents', 'LLM local': 'Capable (7B suffisant)', 'API cloud': 'Capable + plus rapide', 'Gagnant': '⚖️ Soit' },
             { 'Tâche': 'Coût API zéro', 'LLM local': '$0/token (après hardware)', 'API cloud': '$0.01–0.05 par 1K tokens', 'Gagnant': '✅ Local (volume élevé)' },
             { 'Tâche': 'Offline / pas Internet', 'LLM local': 'Complètement offline', 'API cloud': 'Nécessite Internet', 'Gagnant': '✅ Local' },
@@ -2666,15 +2666,15 @@ schema: {
           ],
         },
         qualityGap: {
-          title: 'Limitation 2 : écart de qualité — modèles locaux n\'atteignent pas GPT-5.5',
-          content: ['Modèles locaux 7B score 10–20 points sous GPT-5.5 sur benchmarks standard (MMLU, HumanEval). Cela semble peu, mais en pratique : raisonnement plus faible, erreurs plus fréquentes code et maths, compréhension moins nuancée.', 'Les limitations des modèles locaux recoupent les contraintes générales des LLM — hallucinations, échecs de raisonnement et coupures de connaissances affectent tous les modèles quel que soit le déploiement. Pour le tableau complet de ce que les LLM ne peuvent toujours pas faire de manière fiable, voir [limites de l\'IA : ce que les LLM ne peuvent pas faire](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
+          title: 'Limitation 2 : écart de qualité — modèles locaux n\'atteignent pas GPT-5.6',
+          content: ['Modèles locaux 7B score 10–20 points sous GPT-5.6 sur benchmarks standard (MMLU, HumanEval). Cela semble peu, mais en pratique : raisonnement plus faible, erreurs plus fréquentes code et maths, compréhension moins nuancée.', 'Les limitations des modèles locaux recoupent les contraintes générales des LLM — hallucinations, échecs de raisonnement et coupures de connaissances affectent tous les modèles quel que soit le déploiement. Pour le tableau complet de ce que les LLM ne peuvent toujours pas faire de manière fiable, voir [limites de l\'IA : ce que les LLM ne peuvent pas faire](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do).'],
           image: '/images/local-llm-limitations-quality-benchmarks-fr.svg',
           imageCaption: 'Comparatif de benchmarks : LLM locaux (Llama 3 8B) face à GPT-4 sur MMLU et HumanEval — écart de qualité en pourcentage.',
           columns: ['Modèle', 'MMLU (connaissance générale)', 'HumanEval (code Python)'],
           rows: [
             { 'Modèle': 'Local 7B', 'MMLU (connaissance générale)': '62–68%', 'HumanEval (code Python)': '45–55%' },
             { 'Modèle': 'Local 70B', 'MMLU (connaissance générale)': '75–80%', 'HumanEval (code Python)': '65–75%' },
-            { 'Modèle': 'GPT-5.5', 'MMLU (connaissance générale)': '88.7%', 'HumanEval (code Python)': '90.2%' }
+            { 'Modèle': 'GPT-5.6', 'MMLU (connaissance générale)': '88.7%', 'HumanEval (code Python)': '90.2%' }
           ]
         },
         whenQualityMatters: {
@@ -2686,7 +2686,7 @@ schema: {
               'Analyse sentiment suffisante (même 7B fiable)',
             ],
             cloudIf: [
-              'Génération code & débogage (taux erreur local 7B : 35–45% vs. GPT-5.5 10%)',
+              'Génération code & débogage (taux erreur local 7B : 35–45% vs. GPT-5.6 10%)',
               'Analyse financière ou médicale (erreurs coûtent cher)',
               'Raisonnement complexe sur 3+ étapes',
             ],
@@ -2829,8 +2829,8 @@ schema: {
           items: [
             '<strong>Chatbot temps réel :</strong> Utilisateur attend < 2 sec. Local : 5–10 sec (4–10 fois plus lent). Cloud : 0.5–1 sec (4–10 fois plus rapide).',
             '<strong>Batch haut volume :</strong> 1.000+ docs/jour. GPU local devient goulot ; cloud scale automatiquement avec parallélisation.',
-            '<strong>Génération code :</strong> GPT-5.5 = 90% coding accuracy ; local 7B seulement 45–55%. Pour code production : cloud.',
-            '<strong>Longs documents (100K+ tokens) :</strong> GPT-5.5 128K contexte ; Llama 3.3 max 32K. Cloud mieux pour livres entiers, papers.',
+            '<strong>Génération code :</strong> GPT-5.6 = 90% coding accuracy ; local 7B seulement 45–55%. Pour code production : cloud.',
+            '<strong>Longs documents (100K+ tokens) :</strong> GPT-5.6 128K contexte ; Llama 3.3 max 32K. Cloud mieux pour livres entiers, papers.',
             '<strong>Zéro maintenance :</strong> Cloud = mises à jour auto, patches, monitoring. Local = votre IT doit gérer CUDA drivers, firmware, uptime.',
             '<strong>Haute disponibilité :</strong> Cloud offre 99.9% SLA ; local = fragile (crash = downtime).'
           ]
@@ -2839,7 +2839,7 @@ schema: {
           title: 'Quand NE PAS utiliser modèles locaux',
           content: [
             '<strong>❌ Pas local pour production sans backup SLA :</strong> Si service traite données client et downtime coûte. Matériel local crash ; cloud redondance.',
-            '<strong>❌ Pas local pour code complexe :</strong> Taux erreur local 7B = 35–45%, GPT-5.5 = 10%. Pour code production trop risqué.',
+            '<strong>❌ Pas local pour code complexe :</strong> Taux erreur local 7B = 35–45%, GPT-5.6 = 10%. Pour code production trop risqué.',
             '<strong>❌ Pas local sans équipe IT :</strong> Si vous seul dev et pas temps GPU setup/CUDA troubleshooting. Cloud API plus rapide productivité.',
             '<strong>❌ Pas local quand vitesse > confidentialité :</strong> Chat temps réel exige vitesse cloud. Confidentialité peut compromise (avec DPA) si perf critique.',
             '<strong>❌ Pas local pour > 30 utilisateurs simultanés :</strong> Single GPU = goulot. Cloud scale horizontal (coûteux mais fonctionne). Local = mega-projet infrastructure.'
@@ -2851,10 +2851,10 @@ schema: {
           columns: ['Cas d\'usage', '16 GB RAM', '40+ GB RAM', 'Recommandation'],
           rows: [
             { 'Cas d\'usage': 'Connaissance générale / Q&A', '16 GB RAM': 'Llama 3.3 13B', '40+ GB RAM': 'Llama 3.3 70B', 'Recommandation': 'Local OK, ou cloud pour meilleure qualité' },
-            { 'Cas d\'usage': 'Assistant code', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', 'Recommandation': 'Cloud mieux (GPT-5.5 90% vs. 50%)' },
+            { 'Cas d\'usage': 'Assistant code', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', 'Recommandation': 'Cloud mieux (GPT-5.6 90% vs. 50%)' },
             { 'Cas d\'usage': 'Génération texte / rédaction', '16 GB RAM': 'Mistral Small, Qwen 7B', '40+ GB RAM': 'Llama 3.3 70B, Qwen 72B', 'Recommandation': 'Local OK' },
             { 'Cas d\'usage': 'Traitement données sensibles', '16 GB RAM': 'Llama 3.3 13B (RGPD OK)', '40+ GB RAM': 'Llama 3.3 70B (meilleure qualité)', 'Recommandation': 'Local recommandé (privé + RGPD conforme)' },
-            { 'Cas d\'usage': 'Chat assistant (temps réel)', '16 GB RAM': 'Pas recommandé (trop lent)', '40+ GB RAM': 'GPU requis (RTX 4090)', 'Recommandation': 'Cloud (GPT-5.5, Claude) — 4–10 fois plus rapide' },
+            { 'Cas d\'usage': 'Chat assistant (temps réel)', '16 GB RAM': 'Pas recommandé (trop lent)', '40+ GB RAM': 'GPU requis (RTX 4090)', 'Recommandation': 'Cloud (GPT-5.6, Claude) — 4–10 fois plus rapide' },
             { 'Cas d\'usage': 'Batch analyse (100+ docs)', '16 GB RAM': 'Local OK, prend heures', '40+ GB RAM': 'Local mieux que cloud (pas coûts)', 'Recommandation': 'Lancer nuit localement' }
           ]
         },
@@ -2863,7 +2863,7 @@ schema: {
           columns: ['Critère', 'Local (Ollama/LM Studio)', 'Cloud (OpenAI/Anthropic)'],
           rows: [
             { 'Critère': 'Vitesse', 'Local (Ollama/LM Studio)': '10–160 tokens/s (CPU/GPU)', 'Cloud (OpenAI/Anthropic)': '80–150 tokens/s' },
-            { 'Critère': 'Qualité (benchmarks)', 'Local (Ollama/LM Studio)': '7B: 62–68% MMLU; 70B: 75–80%', 'Cloud (OpenAI/Anthropic)': 'GPT-5.5: 88.7% MMLU' },
+            { 'Critère': 'Qualité (benchmarks)', 'Local (Ollama/LM Studio)': '7B: 62–68% MMLU; 70B: 75–80%', 'Cloud (OpenAI/Anthropic)': 'GPT-5.6: 88.7% MMLU' },
             { 'Critère': 'Matériel', 'Local (Ollama/LM Studio)': '16–40 GB RAM ou GPU', 'Cloud (OpenAI/Anthropic)': 'Pas matériel requis' },
             { 'Critère': 'Temps config', 'Local (Ollama/LM Studio)': '20–40 minutes', 'Cloud (OpenAI/Anthropic)': '5 minutes' },
             { 'Critère': 'Confidentialité', 'Local (Ollama/LM Studio)': '100% privé (RGPD OK)', 'Cloud (OpenAI/Anthropic)': 'DPA requis' },
@@ -2886,7 +2886,7 @@ schema: {
             },
             {
               q: 'Quels meilleurs LLMs locaux ?',
-              a: 'Llama 3.3 13B ou Mistral Small pour 16 GB (≈ GPT-4o mini). Llama 3.3 70B pour 40 GB (≈ GPT-4). Pour meilleure qualité : Cloud APIs.'
+              a: 'Llama 3.3 13B ou Mistral Small pour 16 GB (≈ GPT-5.6 Luna). Llama 3.3 70B pour 40 GB (≈ GPT-4). Pour meilleure qualité : Cloud APIs.'
             },
             {
               q: 'Puis-je utiliser local hors ligne ?',
@@ -2894,7 +2894,7 @@ schema: {
             },
             {
               q: 'Fenêtre contexte max local ?',
-              a: 'Typiquement 4K–32K tokens. Cloud APIs offrent 128K–200K (GPT-5.5, Claude). Cloud mieux pour gros documents.'
+              a: 'Typiquement 4K–32K tokens. Cloud APIs offrent 128K–200K (GPT-5.6, Claude). Cloud mieux pour gros documents.'
             },
             {
               q: 'Ai-je besoin GPU pour LLMs locaux ?',
@@ -2909,7 +2909,7 @@ schema: {
               a: 'Ollama = CLI, rapide, automation. LM Studio = GUI, débutants. Tous deux exécutent mêmes modèles.'
             },
             {
-              q: 'Puis-je exécuter GPT-5.5 localement ?',
+              q: 'Puis-je exécuter GPT-5.6 localement ?',
               a: 'Non, OpenAI ne fournit pas poids. Alternatives local (Llama 70B, Qwen 72B) similaires, non identiques.'
             },
             {
@@ -2946,7 +2946,7 @@ schema: {
             '[Llama 3.3 Model Card (Meta)](https://huggingface.co/meta-llama/Llama-2-70b)',
             '[HumanEval Benchmarks (OpenAI)](https://github.com/openai/human-eval)',
             '[MMLU Benchmark (AI2)](https://github.com/jair-bolt/mmlu)',
-            '[OpenAI GPT-5.5 Technical Report](https://openai.com/research/gpt-4)',
+            '[OpenAI GPT-5.6 Technical Report](https://openai.com/research/gpt-4)',
             '[Anthropic Claude 3.5 Model Card](https://www.anthropic.com/)',
             '[Recommandations CNIL pour l\'IA](https://www.cnil.fr)',
             '[RGPD Guide de conformité (Commission EU)](https://www.edpb.europa.eu)',
@@ -2984,7 +2984,7 @@ schema: {
       metaDescription: 'ローカル=100%プライバシー・無料・10倍遅い。クラウド=毎秒50–150トークン・1000トークン0.01–0.05ドル・ウェブ検索可。全比較表とAI使い分けガイド。2026年6月。',
       twitterDescription: 'ローカルLLM：完全プライベート・無料・遅い。クラウド：高速・スマート・有料。使い分け完全ガイド。2026年6月。',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**ローカルLLMはハードウェアとトレーニングの制約により、推論、速度、リアルタイムデータアクセスでクラウド frontier モデルに匹敵しません。** プライベート、オフライン、コスト重視のタスクに最適ですが、高精度またはリアルタイムアプリケーションには向きません。',
       audience: 'ローカルLLMとCloud APIのどちらを選ぶか決める必要があるエンジニアと IT リーダー',
       readTime: '7分で読める',
@@ -3013,7 +3013,7 @@ schema: {
         headline: 'ローカルLLMの限界：ローカルモデルができないこと（そしていつクラウドを使うべきか）',
         description: 'ローカルLLM vs クラウド：6つの限界（速度、品質、ハードウェア）。企業向け決定ツリー。ベンチマーク＋コスト比較。',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/ja/local-llms/local-llm-limitations',
         inLanguage: 'ja',
         about: [
@@ -3023,8 +3023,8 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' }
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
+          { '@type': 'SoftwareApplication', 'name': 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 5' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -3052,7 +3052,7 @@ schema: {
             name: 'ローカルLLMはCloud APIより遅いですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'はい、かなり遅いです。CPU推論で毎秒10–25トークン生成します。Cloud API（GPT-5.5）は80–150トークン/秒です。GPU（RTX 4090）でも130–160トークン/秒にしかなりません。クラウドは4–10倍高速です。'
+              text: 'はい、かなり遅いです。CPU推論で毎秒10–25トークン生成します。Cloud API（GPT-5.6）は80–150トークン/秒です。GPU（RTX 4090）でも130–160トークン/秒にしかなりません。クラウドは4–10倍高速です。'
             }
           },
           {
@@ -3068,7 +3068,7 @@ schema: {
             name: 'ベストなローカルLLMはどれですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '16 GB RAM の場合 ： Llama 3.3 13B または Mistral Small（品質 ≈ GPT-4o mini）。40 GB RAM の場合 ： Llama 3.3 70B または Qwen 72B（品質 ≈ GPT-4）。最適な効率には Q4_K_M 量子化を使用します。最高品質：Cloud API（GPT-5.5、Claude Sonnet 4.6）。'
+              text: '16 GB RAM の場合 ： Llama 3.3 13B または Mistral Small（品質 ≈ GPT-5.6 Luna）。40 GB RAM の場合 ： Llama 3.3 70B または Qwen 72B（品質 ≈ GPT-4）。最適な効率には Q4_K_M 量子化を使用します。最高品質：Cloud API（GPT-5.6、Claude Sonnet 5）。'
             }
           },
           {
@@ -3084,7 +3084,7 @@ schema: {
             name: 'ローカルLLMの最大コンテキストウィンドウはいくつですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'ほとんどのローカルモデルは 4K–32K トークンコンテキストをサポートします。Llama 3.3 はデフォルト 4K ですが 32K に拡張可能。Cloud API ははるかに大きい ： GPT-5.5 = 128K、Claude Sonnet 4.6 = 200K。大きなドキュメントはクラウドがより良いです。'
+              text: 'ほとんどのローカルモデルは 4K–32K トークンコンテキストをサポートします。Llama 3.3 はデフォルト 4K ですが 32K に拡張可能。Cloud API ははるかに大きい ： GPT-5.6 = 128K、Claude Sonnet 5 = 200K。大きなドキュメントはクラウドがより良いです。'
             }
           },
           {
@@ -3113,10 +3113,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            name: 'GPT-5.5 をローカルで実行できますか？',
+            name: 'GPT-5.6 をローカルで実行できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'いいえ、OpenAI は GPT-5.5 ウェイトを提供していません。GPT-5.5 は OpenAI API 経由だけ。ローカルオープンソース代替案（Llama 3.3 70B、Qwen 72B）は同様の品質（非同一）。GPT-5.5 品質保証：Cloud API。'
+              text: 'いいえ、OpenAI は GPT-5.6 ウェイトを提供していません。GPT-5.6 は OpenAI API 経由だけ。ローカルオープンソース代替案（Llama 3.3 70B、Qwen 72B）は同様の品質（非同一）。GPT-5.6 品質保証：Cloud API。'
             }
           },
           {
@@ -3197,13 +3197,13 @@ schema: {
             '@type': 'ListItem',
             position: 4,
             name: '最高品質出力（コード、分析）',
-            description: 'GPT-5.5 と Claude Sonnet 4.6 はベンチマークで 10–20ポイント上。'
+            description: 'GPT-5.6 と Claude Sonnet 5 はベンチマークで 10–20ポイント上。'
           },
           {
             '@type': 'ListItem',
             position: 5,
             name: '長いコンテキストウィンドウ',
-            description: '100K+トークン。Cloud（GPT-5.5 128K、Claude 200K）は大きなドキュメント処理可；ローカルは 4K–32K 制限。'
+            description: '100K+トークン。Cloud（GPT-5.6 128K、Claude 200K）は大きなドキュメント処理可；ローカルは 4K–32K 制限。'
           },
           {
             '@type': 'ListItem',
@@ -3224,20 +3224,20 @@ schema: {
           title: '簡潔に説明',
           content: [
             '<strong>ローカルLLM ：</strong> 言語モデルをコンピュータにダウンロード（Ollama、LM Studio）。すべてのデータはプライベート。短所 ： 遅い、能力限定、セットアップ複雑。',
-            '<strong>Cloud API（GPT-5.5、Claude） ：</strong> テキストをリモートサーバーに送信、< 1秒で応答。高速で知的、でもコスト（~1,000文字あたり $0.01）。',
+            '<strong>Cloud API（GPT-5.6、Claude） ：</strong> テキストをリモートサーバーに送信、< 1秒で応答。高速で知的、でもコスト（~1,000文字あたり $0.01）。',
             '<strong>判断 ：</strong> ローカルはプライバシー＆オフライン。クラウドは速度＆品質。'
           ]
         },
         tldr: {
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'ローカルLLMはプライバシー・オフライン・コストゼロに最適。7BではReasoningでフロンティアクラウドモデルより10〜20ポイント劣り、インターネット接続もない — 精度やリアルタイムデータが必要なときはクラウドAPIを使用。' }, { type: 'plain-terms', text: 'ローカルでAIを動かすと、データは一切デバイスの外に出ず、セットアップ後の費用はゼロです。トレードオフ：ローカルモデルはGPT-5.5などより遅く能力も劣ります。' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'ローカルLLMはプライバシー・オフライン・コストゼロに最適。7BではReasoningでフロンティアクラウドモデルより10〜20ポイント劣り、インターネット接続もない — 精度やリアルタイムデータが必要なときはクラウドAPIを使用。' }, { type: 'plain-terms', text: 'ローカルでAIを動かすと、データは一切デバイスの外に出ず、セットアップ後の費用はゼロです。トレードオフ：ローカルモデルはGPT-5.6などより遅く能力も劣ります。' }],
           title: '重要ポイント',
           content: [
             '✓ ローカルモデル4–10倍遅い（CPU ： 10–25トークン/秒 vs. クラウド ： 80–150トークン/秒）。',
-            '✓ 品質ギャップ ： 7Bモデルは MMLU、HumanEval ベンチマークで GPT-5.5 の10–20ポイント下。',
+            '✓ 品質ギャップ ： 7Bモデルは MMLU、HumanEval ベンチマークで GPT-5.6 の10–20ポイント下。',
             '✓ ハードウェア要件 ： 実用最小16 GB RAM；最高品質は40 GB（70Bモデル）。',
             '✓ セットアップ時間 ： 20–40分ローカル（ダウンロード＋設定）；Cloud API は5分で準備完了。',
-            '✓ コンテキストウィンドウ ： ローカル4K–32K；クラウド128K–200K（GPT-5.5、Claude）。クラウドは大型ドキュメント対応。',
+            '✓ コンテキストウィンドウ ： ローカル4K–32K；クラウド128K–200K（GPT-5.6、Claude）。クラウドは大型ドキュメント対応。',
             '✓ ローカル最適用途 ： データ機密タスク、オフラインシナリオ、緊急でないバッチ。',
             '✓ クラウド最適用途 ： リアルタイムチャット、大量バッチ、SLA付き本番、最高品質。'
           ]
@@ -3266,7 +3266,7 @@ schema: {
           rows: [
             { 'タスク': 'プライバシー・機密データ', 'ローカルLLM': 'デバイス内に留まる', 'クラウドAPI': 'リモートサーバーに送信（DPA必須）', '推奨': '✅ ローカル' },
             { 'タスク': 'リアルタイムチャット（< 2秒）', 'ローカルLLM': '5–10秒（CPU）', 'クラウドAPI': '0.5–1秒', '推奨': '✅ クラウド' },
-            { 'タスク': 'コード生成', 'ローカルLLM': '45–55% HumanEval（7B）', 'クラウドAPI': '90% HumanEval（GPT-5.5）', '推奨': '✅ クラウド' },
+            { 'タスク': 'コード生成', 'ローカルLLM': '45–55% HumanEval（7B）', 'クラウドAPI': '90% HumanEval（GPT-5.6）', '推奨': '✅ クラウド' },
             { 'タスク': 'ドキュメント要約', 'ローカルLLM': '対応可能（7Bで十分）', 'クラウドAPI': '対応可能＋高速', '推奨': '⚖️ いずれでも可' },
             { 'タスク': 'ゼロAPI費用', 'ローカルLLM': '$0/トークン（ハード後）', 'クラウドAPI': '$0.01–0.05 per 1K tokens', '推奨': '✅ ローカル（高ボリューム）' },
             { 'タスク': 'オフライン/インターネットなし', 'ローカルLLM': '完全オフライン', 'クラウドAPI': 'インターネット必須', '推奨': '✅ ローカル' },
@@ -3307,15 +3307,15 @@ schema: {
           ],
         },
         qualityGap: {
-          title: '限界2：品質ギャップ — ローカルモデルは GPT-5.5 に及びません',
-          content: ['ローカルの 7Bモデルは標準ベンチマーク（MMLU、HumanEval）で GPT-5.5 から10–20ポイント低い。少なく見えますが実際は ： 弱い推論、コード・数学エラー多い、微妙さの理解不足。', 'ローカルモデルの制約はより広いLLMの限界と重なります——ハルシネーション、推論の失敗、知識カットオフはデプロイ方法に関わらずすべてのモデルに影響します。LLMがいまだに確実にできないことの全体像は[AI制限：LLMにできないこと](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)をご覧ください。'],
+          title: '限界2：品質ギャップ — ローカルモデルは GPT-5.6 に及びません',
+          content: ['ローカルの 7Bモデルは標準ベンチマーク（MMLU、HumanEval）で GPT-5.6 から10–20ポイント低い。少なく見えますが実際は ： 弱い推論、コード・数学エラー多い、微妙さの理解不足。', 'ローカルモデルの制約はより広いLLMの限界と重なります——ハルシネーション、推論の失敗、知識カットオフはデプロイ方法に関わらずすべてのモデルに影響します。LLMがいまだに確実にできないことの全体像は[AI制限：LLMにできないこと](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)をご覧ください。'],
           image: '/images/local-llm-limitations-quality-benchmarks-ja.svg',
           imageCaption: 'ベンチマーク比較:ローカルLLM(Llama 3 8B)とGPT-4のMMLUおよびHumanEvalスコアの品質差。',
           columns: ['モデル', 'MMLU（一般知識）', 'HumanEval（Python コード）'],
           rows: [
             { 'モデル': 'Local 7B', 'MMLU（一般知識）': '62–68%', 'HumanEval（Python コード）': '45–55%' },
             { 'モデル': 'Local 70B', 'MMLU（一般知識）': '75–80%', 'HumanEval（Python コード）': '65–75%' },
-            { 'モデル': 'GPT-5.5', 'MMLU（一般知識）': '88.7%', 'HumanEval（Python コード）': '90.2%' }
+            { 'モデル': 'GPT-5.6', 'MMLU（一般知識）': '88.7%', 'HumanEval（Python コード）': '90.2%' }
           ]
         },
         whenQualityMatters: {
@@ -3327,7 +3327,7 @@ schema: {
               'センチメント分析十分（7Bも信頼可）',
             ],
             cloudIf: [
-              'コード生成＆デバッグ（ローカル 7B エラー率 35–45% vs. GPT-5.5 10%）',
+              'コード生成＆デバッグ（ローカル 7B エラー率 35–45% vs. GPT-5.6 10%）',
               '財務または医療分析（エラーは高い）',
               '3段階以上の複雑推論',
             ],
@@ -3462,7 +3462,7 @@ schema: {
           content: [
             '<strong>日本（METI AI Governance 2024）：</strong> 日本はデータ主権のための地元・連邦モデルを推進。金融、医療などの規制業界にはローカル推論推奨。Government 2024ガイドラインで明示的に AI ガバナンスサポート。Cloud API ： ローカルキャッシュ/エッジコンピューティングで許容。',
             '<strong>東アジア・APAC（データ越境規制）：</strong> 各地域でデータレジデンシー要件が異なる。マルチASDN/APAC準拠パターン。ローカル推論はほぼ常に許容されて且つ推奨される。',
-            '<strong>グローバル（最高品質・スケール優先）：</strong> ローカルで最高品質が不可能な大規模アプリケーションはクラウドAPI（GPT-5.5、Claude Sonnet 4.6）推奨。'
+            '<strong>グローバル（最高品質・スケール優先）：</strong> ローカルで最高品質が不可能な大規模アプリケーションはクラウドAPI（GPT-5.6、Claude Sonnet 5）推奨。'
           ]
         },
         whenCloud: {
@@ -3470,8 +3470,8 @@ schema: {
           items: [
             '<strong>リアルタイムチャットボット ：</strong> ユーザーは < 2秒待機。ローカル ： 5–10秒（4–10倍遅い）。クラウド ： 0.5–1秒（4–10倍高速）。',
             '<strong>大量バッチ ：</strong> 1,000+ドキュメント/日。ローカルGPU がボトルネック；クラウド並列化で自動スケール。',
-            '<strong>コード生成 ：</strong> GPT-5.5 = 90%コード精度；ローカル7B = 45–55%。本番コード ： クラウド。',
-            '<strong>長いドキュメント（100K+トークン） ：</strong> GPT-5.5 128K コンテキスト；Llama 3.3 最大32K。本全体、論文 ： クラウド。',
+            '<strong>コード生成 ：</strong> GPT-5.6 = 90%コード精度；ローカル7B = 45–55%。本番コード ： クラウド。',
+            '<strong>長いドキュメント（100K+トークン） ：</strong> GPT-5.6 128K コンテキスト；Llama 3.3 最大32K。本全体、論文 ： クラウド。',
             '<strong>メンテナンス0 ：</strong> クラウド = 自動更新、パッチ、監視。ローカル = IT が CUDA ドライバ、ファームウェア、稼働時間管理。',
             '<strong>高可用性 ：</strong> クラウド99.9% SLA；ローカル = 脆弱（クラッシュ = ダウンタイム）。'
           ]
@@ -3480,7 +3480,7 @@ schema: {
           title: 'ローカルLLMを使ってはいけない場合',
           content: [
             '<strong>❌ SLA バックアップなし本番に非ローカル ：</strong> サービスが顧客データ処理でダウンタイム = コスト。ローカルハードは落ちる；クラウド = 冗長。',
-            '<strong>❌ 複雑コード非ローカル ：</strong> ローカル7B エラー率 = 35–45%、GPT-5.5 = 10%。本番コードへのリスク高い。',
+            '<strong>❌ 複雑コード非ローカル ：</strong> ローカル7B エラー率 = 35–45%、GPT-5.6 = 10%。本番コードへのリスク高い。',
             '<strong>❌ IT チームなし非ローカル ：</strong> 独りエンジニアで GPU セットアップ/CUDA トラブル時間ない。Cloud API が生産速い。',
             '<strong>❌ 速度 > プライバシーの場合非ローカル ：</strong> リアルタイムチャット = クラウド速度必須。プライバシー妥協可（DPA ）パフォーマンス重要なら。',
             '<strong>❌ > 30同時ユーザー非ローカル ：</strong> 単一GPU = ボトルネック。クラウド = 水平スケール（高いが機能）。ローカル = mega インフラプロジェクト。'
@@ -3492,10 +3492,10 @@ schema: {
           columns: ['用途', '16 GB RAM', '40+ GB RAM', '推奨'],
           rows: [
             { '用途': '一般知識 / Q&A', '16 GB RAM': 'Llama 3.3 13B', '40+ GB RAM': 'Llama 3.3 70B', '推奨': 'ローカルOK、品質重視ならクラウド' },
-            { '用途': 'コードアシスタント', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', '推奨': 'クラウド勝ち（GPT-5.5 90% vs. 50%）' },
+            { '用途': 'コードアシスタント', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', '推奨': 'クラウド勝ち（GPT-5.6 90% vs. 50%）' },
             { '用途': 'テキスト生成/執筆', '16 GB RAM': 'Mistral Small、Qwen 7B', '40+ GB RAM': 'Llama 3.3 70B、Qwen 72B', '推奨': 'ローカルOK' },
             { '用途': 'データ機密処理', '16 GB RAM': 'Llama 3.3 13B（GDPR OK）', '40+ GB RAM': 'Llama 3.3 70B（最高品質）', '推奨': 'ローカル推奨（プライベート＋GDPR準拠）' },
-            { '用途': 'チャットアシスタント（リアルタイム）', '16 GB RAM': '非推奨（遅い）', '40+ GB RAM': 'GPU 必須（RTX 4090）', '推奨': 'クラウド（GPT-5.5、Claude）— 4–10倍高速' },
+            { '用途': 'チャットアシスタント（リアルタイム）', '16 GB RAM': '非推奨（遅い）', '40+ GB RAM': 'GPU 必須（RTX 4090）', '推奨': 'クラウド（GPT-5.6、Claude）— 4–10倍高速' },
             { '用途': 'バッチ分析（100+ドキュメント）', '16 GB RAM': 'ローカルOK、時間かかる', '40+ GB RAM': 'ローカル勝ち（クラウドコストなし）', '推奨': '夜間ローカル実行' }
           ]
         },
@@ -3504,7 +3504,7 @@ schema: {
           columns: ['指標', 'Local（Ollama/LM Studio）', 'Cloud（OpenAI/Anthropic）'],
           rows: [
             { '指標': '速度', 'Local（Ollama/LM Studio）': '10–160 トークン/秒（CPU/GPU）', 'Cloud（OpenAI/Anthropic）': '80–150 トークン/秒' },
-            { '指標': '品質（ベンチマーク）', 'Local（Ollama/LM Studio）': '7B: 62–68% MMLU；70B: 75–80%', 'Cloud（OpenAI/Anthropic）': 'GPT-5.5: 88.7% MMLU' },
+            { '指標': '品質（ベンチマーク）', 'Local（Ollama/LM Studio）': '7B: 62–68% MMLU；70B: 75–80%', 'Cloud（OpenAI/Anthropic）': 'GPT-5.6: 88.7% MMLU' },
             { '指標': 'ハード', 'Local（Ollama/LM Studio）': '16–40 GB RAM または GPU', 'Cloud（OpenAI/Anthropic）': 'ハード不要' },
             { '指標': 'セットアップ時間', 'Local（Ollama/LM Studio）': '20–40分', 'Cloud（OpenAI/Anthropic）': '5分' },
             { '指標': 'プライバシー', 'Local（Ollama/LM Studio）': '100% プライベート（GDPR OK）', 'Cloud（OpenAI/Anthropic）': 'DPA 必須' },
@@ -3527,7 +3527,7 @@ schema: {
             },
             {
               q: 'ベストなローカルLLMはどれですか？',
-              a: 'Llama 3.3 13B または Mistral Small（16GB；≈GPT-4o mini）。Llama 3.3 70B（40GB；≈GPT-4）。最高品質：Cloud API。'
+              a: 'Llama 3.3 13B または Mistral Small（16GB；≈GPT-5.6 Luna）。Llama 3.3 70B（40GB；≈GPT-4）。最高品質：Cloud API。'
             },
             {
               q: 'ローカルをオフラインで使用できますか？',
@@ -3535,7 +3535,7 @@ schema: {
             },
             {
               q: 'ローカルコンテキスト最大サイズは？',
-              a: 'ふつう4K–32Kトークン。クラウドAPI = 128K–200K（GPT-5.5、Claude）。大きいドキュメントはクラウド。'
+              a: 'ふつう4K–32Kトークン。クラウドAPI = 128K–200K（GPT-5.6、Claude）。大きいドキュメントはクラウド。'
             },
             {
               q: 'ローカルLLMに GPU が必要ですか？',
@@ -3550,8 +3550,8 @@ schema: {
               a: 'Ollama = CLI、高速、自動化簡単。LM Studio = GUI、初級者。本番 = Ollama。試験 = LM Studio。同じモデル実行。'
             },
             {
-              q: 'GPT-5.5 をローカルで実行できますか？',
-              a: 'いいえ、OpenAI は重みを提供しません。GPT-5.5 は OpenAI API のみ。ローカル代替案（Llama 70B、Qwen 72B）似た、非同一。'
+              q: 'GPT-5.6 をローカルで実行できますか？',
+              a: 'いいえ、OpenAI は重みを提供しません。GPT-5.6 は OpenAI API のみ。ローカル代替案（Llama 70B、Qwen 72B）似た、非同一。'
             },
             {
               q: 'ローカルLLMセットアップの時間は？',
@@ -3587,7 +3587,7 @@ schema: {
             '[Llama 3.3 Model Card（Meta）](https://huggingface.co/meta-llama/Llama-2-70b)',
             '[HumanEval ベンチマーク（OpenAI）](https://github.com/openai/human-eval)',
             '[MMLU ベンチマーク（AI2）](https://github.com/jair-bolt/mmlu)',
-            '[OpenAI GPT-5.5 テクニカルレポート](https://openai.com/research/gpt-4)',
+            '[OpenAI GPT-5.6 テクニカルレポート](https://openai.com/research/gpt-4)',
             '[Anthropic Claude 3.5 Model Card](https://www.anthropic.com/)',
             '[METI AI ガバナンス 2024](https://www.meti.go.jp)',
             '[日本データ保護ガイドライン](https://www.ppc.go.jp)',
@@ -3625,7 +3625,7 @@ schema: {
       metaDescription: '本地LLM=100%隐私、免费、速度慢10倍。云API=每秒50–150词元、1K词元0.01–0.05美元、支持网络搜索。完整对比表+选择指南。2026年6月。',
       twitterDescription: '本地LLM：数据安全、免费、较慢。云API：高速、强大、付费。按用途选择指南。2026年6月。',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**由于硬件和训练限制，本地LLM在推理、速度和实时数据访问方面无法与云端frontier模型匹敌。** 它们最适合私密、离线和成本敏感的任务，但不适合高准确度或实时应用。',
       audience: '需要在本地LLM和Cloud API之间做出选择的开发人员和IT负责人',
       readTime: '阅读约7分钟',
@@ -3654,7 +3654,7 @@ schema: {
         headline: '本地LLM的限制：本地模型无法做什么（以及何时应该使用云API）',
         description: '本地LLM vs 云：6个限制（速度、质量、硬件）。企业决策框架。基准测试+成本对比。',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/zh/local-llms/local-llm-limitations',
         inLanguage: 'zh',
         about: [
@@ -3664,8 +3664,8 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' }
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', 'name': 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 4.6' },
+          { '@type': 'SoftwareApplication', 'name': 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', 'name': 'Claude Sonnet 5' },
           { '@type': 'Thing', 'name': 'Llama 3.3' },
           { '@type': 'Thing', 'name': 'Mistral' }
         ],
@@ -3688,15 +3688,15 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: '本地LLM比Cloud API慢吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，明显慢。CPU推理每秒生成10–25个token。Cloud API（GPT-5.5）每秒生成80–150个token。即使用GPU（RTX 4090）也只能达到130–160 token/秒。云的速度快4–10倍。' } },
+          { '@type': 'Question', name: '本地LLM比Cloud API慢吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，明显慢。CPU推理每秒生成10–25个token。Cloud API（GPT-5.6）每秒生成80–150个token。即使用GPU（RTX 4090）也只能达到130–160 token/秒。云的速度快4–10倍。' } },
           { '@type': 'Question', name: '我能在笔记本电脑上运行70B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '不能。70B模型至少需要40 GB RAM或VRAM。具有16 GB的笔记本电脑最多只能运行压缩的13B模型。70B模型需要Mac Studio、工作站或多GPU设置（成本：$3,000+）。' } },
-          { '@type': 'Question', name: '最好的本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '16 GB RAM：Llama 3.3 13B或Mistral Small（质量≈GPT-4o mini）。40 GB RAM：Llama 3.3 70B或Qwen 72B（质量≈GPT-4）。使用Q4_K_M量子化以获得最佳效率。最高质量：Cloud API（GPT-5.5、Claude Sonnet 4.6）。' } },
+          { '@type': 'Question', name: '最好的本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '16 GB RAM：Llama 3.3 13B或Mistral Small（质量≈GPT-5.6 Luna）。40 GB RAM：Llama 3.3 70B或Qwen 72B（质量≈GPT-4）。使用Q4_K_M量子化以获得最佳效率。最高质量：Cloud API（GPT-5.6、Claude Sonnet 5）。' } },
           { '@type': 'Question', name: '我能离线使用本地模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，这是主要优势。下载后，一切在本地运行——不需要互联网。Cloud API始终需要网络连接，但提供自动更新和可用性保证。' } },
-          { '@type': 'Question', name: '本地LLM的最大上下文窗口是多少？', acceptedAnswer: { '@type': 'Answer', text: '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.5 = 128K，Claude Sonnet 4.6 = 200K。大文档云更好。' } },
+          { '@type': 'Question', name: '本地LLM的最大上下文窗口是多少？', acceptedAnswer: { '@type': 'Answer', text: '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.6 = 128K，Claude Sonnet 5 = 200K。大文档云更好。' } },
           { '@type': 'Question', name: '本地LLM需要GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '不需要，但强烈推荐。CPU推理慢10–50倍。带GPU（RTX 4090、RTX 4070）可达50–160 token/秒。仅CPU：10–25 token/秒，实时聊天不可行。' } },
           { '@type': 'Question', name: '本地LLM要花多少钱？', acceptedAnswer: { '@type': 'Answer', text: '免费下载和运行（Ollama免费）。硬件贵：GPU（RTX 4090）= $1,600+，Mac Studio = $2,000+。Cloud API：每1,000 token $0.01–0.10。小到中等规模的云更便宜。' } },
           { '@type': 'Question', name: '我应该用Ollama还是LM Studio？', acceptedAnswer: { '@type': 'Answer', text: 'Ollama是CLI，更快，易于自动化。LM Studio有GUI，适合初学者。生产和API：Ollama。探索性实验：LM Studio。两者运行相同的模型。' } },
-          { '@type': 'Question', name: '我能在本地运行GPT-5.5吗？', acceptedAnswer: { '@type': 'Answer', text: '不能，OpenAI不提供GPT-5.5权重。GPT-5.5仅通过OpenAI API提供。本地开源替代方案（Llama 3.3 70B、Qwen 72B）提供类似质量（非完全相同）。GPT-5.5质量保证：Cloud API。' } },
+          { '@type': 'Question', name: '我能在本地运行GPT-5.6吗？', acceptedAnswer: { '@type': 'Answer', text: '不能，OpenAI不提供GPT-5.6权重。GPT-5.6仅通过OpenAI API提供。本地开源替代方案（Llama 3.3 70B、Qwen 72B）提供类似质量（非完全相同）。GPT-5.6质量保证：Cloud API。' } },
           { '@type': 'Question', name: '设置本地LLM需要多长时间？', acceptedAnswer: { '@type': 'Answer', text: '总共20–40分钟。(1)安装Ollama/LM Studio：2–3分钟。(2)下载7B模型（4 GB）：5–10分钟。(3)配置GPU（可选，CUDA/Metal）：5–10分钟。Cloud API：从开始到第一次API调用5分钟。' } },
           {
             '@type': 'Question',
@@ -3749,8 +3749,8 @@ schema: {
           { '@type': 'ListItem', position: 1, name: '实时聊天机器人', description: '用户期望< 2秒响应。Cloud API快4–10倍。' },
           { '@type': 'ListItem', position: 2, name: '大批量处理', description: '1,000+文件/天。云自动扩展；本地GPU变成瓶颈。' },
           { '@type': 'ListItem', position: 3, name: '生产SLA要求', description: '99.9%+可用性。云保证SLA；本地硬件需要冗余（成本）。' },
-          { '@type': 'ListItem', position: 4, name: '最高输出质量（代码、分析）', description: 'GPT-5.5和Claude Sonnet 4.6在基准测试中高10–20个百分点。' },
-          { '@type': 'ListItem', position: 5, name: '长上下文窗口', description: '100K+token。Cloud API（GPT-5.5 128K、Claude 200K）处理大型文件；本地限制4K–32K。' },
+          { '@type': 'ListItem', position: 4, name: '最高输出质量（代码、分析）', description: 'GPT-5.6和Claude Sonnet 5在基准测试中高10–20个百分点。' },
+          { '@type': 'ListItem', position: 5, name: '长上下文窗口', description: '100K+token。Cloud API（GPT-5.6 128K、Claude 200K）处理大型文件；本地限制4K–32K。' },
           { '@type': 'ListItem', position: 6, name: '无需维护', description: '云=零维护、自动更新。本地需要IT管理CUDA驱动、固件、监控。' }
         ]
       },
@@ -3765,20 +3765,20 @@ schema: {
           title: '简单来说',
           content: [
             '<strong>本地LLM ：</strong> 将语言模型下载到电脑（Ollama、LM Studio）。所有数据保持私密。缺点：慢、能力有限、设置复杂。',
-            '<strong>Cloud API（GPT-5.5、Claude） ：</strong> 将文本发送到远程服务器，< 1秒获得响应。快速聪慧，但要花钱（约每1,000个字符$0.01）。',
+            '<strong>Cloud API（GPT-5.6、Claude） ：</strong> 将文本发送到远程服务器，< 1秒获得响应。快速聪慧，但要花钱（约每1,000个字符$0.01）。',
             '<strong>决定 ：</strong> 本地用于隐私和离线。云用于速度和质量。'
           ]
         },
         tldr: {
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: '本地LLM最适合隐私、离线任务和零成本场景；7B时推理能力比前沿云模型低10–20个基准分，且无法联网——当精度或实时数据很重要时使用云API。' }, { type: 'plain-terms', text: '在本地运行AI意味着数据不会离开你的设备，设置后没有持续费用。代价是：本地模型比GPT-5.5等速度更慢、能力更弱。' }],
+          snippetBlocks: [{ type: 'one-sentence', text: '本地LLM最适合隐私、离线任务和零成本场景；7B时推理能力比前沿云模型低10–20个基准分，且无法联网——当精度或实时数据很重要时使用云API。' }, { type: 'plain-terms', text: '在本地运行AI意味着数据不会离开你的设备，设置后没有持续费用。代价是：本地模型比GPT-5.6等速度更慢、能力更弱。' }],
           title: '要点总结',
           content: [
             '✓ 本地模型慢4–10倍（CPU：10–25 token/秒vs云：80–150 token/秒）。',
-            '✓ 质量差距：7B模型在MMLU和HumanEval基准上比GPT-5.5低10–20分。',
+            '✓ 质量差距：7B模型在MMLU和HumanEval基准上比GPT-5.6低10–20分。',
             '✓ 硬件要求：可用最低16 GB RAM；最高质量40 GB（70B模型）。',
             '✓ 设置时间：本地20–40分钟（下载+配置）；云API 5分钟内准备就绪。',
-            '✓ 上下文窗口：本地4K–32K；云128K–200K（GPT-5.5、Claude）。云更好处理大文档。',
+            '✓ 上下文窗口：本地4K–32K；云128K–200K（GPT-5.6、Claude）。云更好处理大文档。',
             '✓ 本地最佳用途：数据机密任务、离线场景、非紧急批处理。',
             '✓ 云最佳用途：实时聊天、大批量处理、生产SLA、最高质量。'
           ]
@@ -3807,7 +3807,7 @@ schema: {
           rows: [
             { '任务': '隐私敏感数据', '本地LLM': '数据不离开设备', '云API': '发送到远程服务器（需DPA）', '推荐': '✅ 本地' },
             { '任务': '实时聊天（< 2秒）', '本地LLM': '5–10秒（CPU）', '云API': '0.5–1秒', '推荐': '✅ 云' },
-            { '任务': '代码生成', '本地LLM': '45–55% HumanEval（7B）', '云API': '90% HumanEval（GPT-5.5）', '推荐': '✅ 云' },
+            { '任务': '代码生成', '本地LLM': '45–55% HumanEval（7B）', '云API': '90% HumanEval（GPT-5.6）', '推荐': '✅ 云' },
             { '任务': '文档摘要', '本地LLM': '可行（7B足够）', '云API': '可行+更快', '推荐': '⚖️ 任一都行' },
             { '任务': '零API成本', '本地LLM': '$0/token（硬件后）', '云API': '每1K token $0.01–0.05', '推荐': '✅ 本地（高用量）' },
             { '任务': '离线/无互联网', '本地LLM': '完全离线', '云API': '需互联网', '推荐': '✅ 本地' },
@@ -3848,15 +3848,15 @@ schema: {
           ],
         },
         qualityGap: {
-          title: '限制2：质量差距——本地模型赶不上GPT-5.5',
-          content: ['本地7B模型在标准基准（MMLU、HumanEval）上比GPT-5.5低10–20分。听起来不多，但实际上：推理弱、代码和数学错误多、细微理解不足。', '本地模型的限制与更广泛的LLM约束重叠——幻觉、推理失败和知识截止影响所有模型，无论如何部署。了解LLM至今仍无法可靠完成的完整内容，请参阅[AI局限性：LLM不能做什么](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)。'],
+          title: '限制2：质量差距——本地模型赶不上GPT-5.6',
+          content: ['本地7B模型在标准基准（MMLU、HumanEval）上比GPT-5.6低10–20分。听起来不多，但实际上：推理弱、代码和数学错误多、细微理解不足。', '本地模型的限制与更广泛的LLM约束重叠——幻觉、推理失败和知识截止影响所有模型，无论如何部署。了解LLM至今仍无法可靠完成的完整内容，请参阅[AI局限性：LLM不能做什么](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)。'],
           image: '/images/local-llm-limitations-quality-benchmarks-zh.svg',
           imageCaption: '基准测试对比:本地大模型(Llama 3 8B)与 GPT-4 在 MMLU 和 HumanEval 上的质量差距。',
           columns: ['模型', 'MMLU（一般知识）', 'HumanEval（Python编码）'],
           rows: [
             { '模型': '本地7B', 'MMLU（一般知识）': '62–68%', 'HumanEval（Python编码）': '45–55%' },
             { '模型': '本地70B', 'MMLU（一般知识）': '75–80%', 'HumanEval（Python编码）': '65–75%' },
-            { '模型': 'GPT-5.5', 'MMLU（一般知识）': '88.7%', 'HumanEval（Python编码）': '90.2%' }
+            { '模型': 'GPT-5.6', 'MMLU（一般知识）': '88.7%', 'HumanEval（Python编码）': '90.2%' }
           ]
         },
         whenQualityMatters: {
@@ -3868,7 +3868,7 @@ schema: {
               '情感分析足够（7B也可靠）',
             ],
             cloudIf: [
-              '代码生成和调试（本地7B错误率35–45% vs GPT-5.5 10%）',
+              '代码生成和调试（本地7B错误率35–45% vs GPT-5.6 10%）',
               '金融或医疗分析（错误很昂贵）',
               '3步以上复杂推理',
             ],
@@ -4011,8 +4011,8 @@ schema: {
           items: [
             '<strong>实时聊天机器人：</strong> 用户期望< 2秒。本地：5–10秒（4–10倍慢）。云：0.5–1秒（4–10倍快）。',
             '<strong>大批量处理：</strong> 1,000+文件/天。本地GPU变瓶颈；云用并行处理自动扩展。',
-            '<strong>代码生成：</strong> GPT-5.5 = 90%代码精度；本地7B = 45–55%。生产代码：云。',
-            '<strong>长文件（100K+token）：</strong> GPT-5.5 128K上下文；Llama 3.3最多32K。整本书、论文：云。',
+            '<strong>代码生成：</strong> GPT-5.6 = 90%代码精度；本地7B = 45–55%。生产代码：云。',
+            '<strong>长文件（100K+token）：</strong> GPT-5.6 128K上下文；Llama 3.3最多32K。整本书、论文：云。',
             '<strong>零维护：</strong> 云=自动更新、补丁、监控。本地=IT管理CUDA驱动、固件、运行时间。',
             '<strong>高可用性：</strong> 云提供99.9% SLA；本地=脆弱（崩溃=停机）。'
           ]
@@ -4021,7 +4021,7 @@ schema: {
           title: '不应该使用本地LLM的情况',
           content: [
             '<strong>❌ 生产无SLA备份时不用本地：</strong> 如果服务处理客户数据且停机很贵。本地硬件会崩溃；云有冗余。',
-            '<strong>❌ 复杂代码不用本地：</strong> 本地7B错误率35–45%，GPT-5.5 = 10%。生产代码太危险。',
+            '<strong>❌ 复杂代码不用本地：</strong> 本地7B错误率35–45%，GPT-5.6 = 10%。生产代码太危险。',
             '<strong>❌ 无IT团队时不用本地：</strong> 如果你是独自开发者且没时间GPU设置/CUDA故障排除。云API生产力更快。',
             '<strong>❌ 速度>隐私时不用本地：</strong> 实时聊天=云速度必需。隐私可妥协（用DPA）如果性能关键。',
             '<strong>❌ > 30同时用户不用本地：</strong> 单GPU=瓶颈。云=水平扩展（贵但能用）。本地=mega基础设施项目。'
@@ -4033,10 +4033,10 @@ schema: {
           columns: ['用途', '16 GB RAM', '40+ GB RAM', '建议'],
           rows: [
             { '用途': '一般知识/Q&A', '16 GB RAM': 'Llama 3.3 13B', '40+ GB RAM': 'Llama 3.3 70B', '建议': '本地OK，或云获更好质量' },
-            { '用途': '代码助手', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', '建议': '云赢（GPT-5.5 90% vs 50%）' },
+            { '用途': '代码助手', '16 GB RAM': 'Mistral Small', '40+ GB RAM': 'Codellama 34B', '建议': '云赢（GPT-5.6 90% vs 50%）' },
             { '用途': '文本生成/写作', '16 GB RAM': 'Mistral Small、Qwen 7B', '40+ GB RAM': 'Llama 3.3 70B、Qwen 72B', '建议': '本地OK' },
             { '用途': '敏感数据处理', '16 GB RAM': 'Llama 3.3 13B（GDPR OK）', '40+ GB RAM': 'Llama 3.3 70B（最高质量）', '建议': '本地推荐（私密+合规）' },
-            { '用途': '聊天助手（实时）', '16 GB RAM': '不推荐（太慢）', '40+ GB RAM': 'GPU必需（RTX 4090）', '建议': '云（GPT-5.5、Claude）— 4–10倍快' },
+            { '用途': '聊天助手（实时）', '16 GB RAM': '不推荐（太慢）', '40+ GB RAM': 'GPU必需（RTX 4090）', '建议': '云（GPT-5.6、Claude）— 4–10倍快' },
             { '用途': '批量分析（100+文件）', '16 GB RAM': '本地OK、耗时', '40+ GB RAM': '本地赢（云无成本）', '建议': '夜间运行本地' }
           ]
         },
@@ -4045,7 +4045,7 @@ schema: {
           columns: ['指标', '本地（Ollama/LM Studio）', '云（OpenAI/Anthropic）'],
           rows: [
             { '指标': '速度', '本地（Ollama/LM Studio）': '10–160 token/秒（CPU/GPU）', '云（OpenAI/Anthropic）': '80–150 token/秒' },
-            { '指标': '质量（基准）', '本地（Ollama/LM Studio）': '7B: 62–68% MMLU；70B: 75–80%', '云（OpenAI/Anthropic）': 'GPT-5.5: 88.7% MMLU' },
+            { '指标': '质量（基准）', '本地（Ollama/LM Studio）': '7B: 62–68% MMLU；70B: 75–80%', '云（OpenAI/Anthropic）': 'GPT-5.6: 88.7% MMLU' },
             { '指标': '硬件', '本地（Ollama/LM Studio）': '16–40 GB RAM或GPU', '云（OpenAI/Anthropic）': '无需硬件' },
             { '指标': '设置时间', '本地（Ollama/LM Studio）': '20–40分钟', '云（OpenAI/Anthropic）': '5分钟' },
             { '指标': '隐私', '本地（Ollama/LM Studio）': '100%私密（GDPR OK）', '云（OpenAI/Anthropic）': '需DPA' },
@@ -4060,13 +4060,13 @@ schema: {
           faqs: [
             { q: '本地LLM比Cloud API慢吗？', a: '是的，明显。CPU = 10–25 token/秒，云= 80–150 token/秒。实时聊天本地太慢。批处理本地OK。' },
             { q: '我能在笔记本上运行70B模型吗？', a: '不能。70B需要40 GB RAM/VRAM最少。16 GB笔记本最多只能运行压缩13B。' },
-            { q: '最好的本地LLM是什么？', a: 'Llama 3.3 13B或Mistral Small（16GB；≈GPT-4o mini）。Llama 3.3 70B（40GB；≈GPT-4）。最高质量：Cloud API。' },
+            { q: '最好的本地LLM是什么？', a: 'Llama 3.3 13B或Mistral Small（16GB；≈GPT-5.6 Luna）。Llama 3.3 70B（40GB；≈GPT-4）。最高质量：Cloud API。' },
             { q: '我能离线使用本地LLM吗？', a: '可以，主要优势。下载后本地运行——不需互联网。云API总是需网络。' },
-            { q: '本地上下文最大多少？', a: '通常4K–32K token。云API = 128K–200K（GPT-5.5、Claude）。大文件云更好。' },
+            { q: '本地上下文最大多少？', a: '通常4K–32K token。云API = 128K–200K（GPT-5.6、Claude）。大文件云更好。' },
             { q: '本地LLM需要GPU吗？', a: '不需但强烈推荐。CPU = 10–25 token/秒（太慢）。GPU = 50–160 token/秒（可用）。实时聊天GPU必需。' },
             { q: '本地LLM要花多少钱？', a: '下载运行免费。硬件贵（GPU ¥270,000+）。云：每1K token $0.01–0.10。小量云更便宜。' },
             { q: '用Ollama还是LM Studio？', a: 'Ollama = CLI、快速、易自动化。LM Studio = GUI、初学者。生产 = Ollama。试验 = LM Studio。两者运行相同模型。' },
-            { q: '能在本地运行GPT-5.5吗？', a: '不能，OpenAI不提供GPT-5.5权重。GPT-5.5只通过OpenAI API。本地替代方案（Llama 70B、Qwen 72B）相似、非完全相同。' },
+            { q: '能在本地运行GPT-5.6吗？', a: '不能，OpenAI不提供GPT-5.6权重。GPT-5.6只通过OpenAI API。本地替代方案（Llama 70B、Qwen 72B）相似、非完全相同。' },
             { q: '设置本地LLM需多久？', a: '总共20–40分钟。(1)安装2–3分钟。(2)下载5–10分钟。(3)GPU配置（可选）5–10分钟。云：5分钟。' },
             { q: '我应该使用本地LLM还是云API？', a: '如果隐私至关重要则使用本地。如果速度或实时数据至关重要则使用云。不确定？用PromptQuorum测试两者——同时将一个prompt发送到本地Ollama和25+个云模型，比较您特定任务的质量。' },
             { q: '本地LLM比云API快吗？', a: '不快。云API每秒生成80–150个token。本地LLM在CPU上每秒生成10–25个token——慢4–10倍。GPU帮助：NVIDIA RTX 4090达到每秒130–160个token，与云相当，但成本$1,600+。' },
@@ -4083,7 +4083,7 @@ schema: {
             '[Llama 3.3 Model Card（Meta）](https://huggingface.co/meta-llama/Llama-2-70b)',
             '[HumanEval基准（OpenAI）](https://github.com/openai/human-eval)',
             '[MMLU基准（AI2）](https://github.com/jair-bolt/mmlu)',
-            '[OpenAI GPT-5.5技术报告](https://openai.com/research/gpt-4)',
+            '[OpenAI GPT-5.6技术报告](https://openai.com/research/gpt-4)',
             '[Anthropic Claude 3.5 Model Card](https://www.anthropic.com/)',
             '[中国数据安全法（2021）](https://www.cac.gov.cn)',
             '[阿里云LLM合规指南](https://www.aliyun.com)',
@@ -4119,10 +4119,10 @@ schema: {
       title: '로컬 LLM vs 클라우드 API: 각각의 적합한 사용 시기 (2026년 트레이드오프)',
       seoTitle: '로컬 LLM 트레이드오프 2026: 개인정보 보호 vs 속도 vs 품질',
       intro: 'Ollama, LM Studio 또는 llama.cpp를 통해 배포되는 Llama 3.x, Qwen3, Mistral 등 로컬 LLM은 최첨단 클라우드 모델과 비교하여 여섯 가지 중요한 한계를 가지고 있습니다. 복잡한 작업에서의 낮은 출력 품질, 소비자용 하드웨어에서의 느린 추론 속도, 대형 모델에 대한 높은 하드웨어 요구사항, 실시간 정보 부재, 웹 액세스 불가, 그리고 클라우드 API에 비해 상당한 설정 복잡성이 그것입니다. 2026년 4월 기준으로, 최고의 로컬 모델조차 다단계 추론에서 OpenAI GPT-5.5 및 Anthropic Claude 4.6에 뒤처지고 있습니다. 이러한 한계를 이해하면 로컬 추론이 적합한 선택인 경우와 클라우드 API가 더 나은 경우를 결정하는 데 도움이 됩니다.',
-      metaDescription: '100% 비공개, 토큰당 $0이지만 GPT-5.5보다 10배 느리고 실시간 데이터가 없습니다. 트레이드오프 표: 어떤 작업은 로컬에, 어떤 작업은 클라우드에. 속도, 비용, VRAM 포함.',
+      metaDescription: '100% 비공개, 토큰당 $0이지만 GPT-5.6보다 10배 느리고 실시간 데이터가 없습니다. 트레이드오프 표: 어떤 작업은 로컬에, 어떤 작업은 클라우드에. 속도, 비용, VRAM 포함.',
       twitterDescription: '로컬 LLM: 100% 비공개, 무료지만 클라우드보다 10배 느립니다. 클라우드 API: 빠르고 스마트하지만 비용이 듭니다. 사용 사례별 비교. 어떤 것을 선택해야 할까요? 2026년 4월.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       leadAnswerBlock: '**로컬 LLM은 하드웨어 한계와 학습 제약으로 인해 추론 능력, 속도, 실시간 데이터 접근 면에서 최첨단 클라우드 모델과 동등한 수준에 이를 수 없습니다.** 개인정보 보호, 오프라인, 비용에 민감한 작업에 가장 적합하지만, 높은 정확도나 실시간 애플리케이션에는 적합하지 않습니다.',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
       readTime: '8분 읽기',
@@ -4133,7 +4133,7 @@ schema: {
         { label: '쉬운 설명', anchor: '#in-plain-terms' },
         { label: '핵심 요점', anchor: '#key-takeaways' },
         { label: '빠른 결정: 로컬 vs 클라우드', anchor: '#quick-decision' },
-        { label: '로컬 LLM이 복잡한 작업에서 GPT-5.5보다 왜 더 나쁜가?', anchor: '#limitation-1-output-quality' },
+        { label: '로컬 LLM이 복잡한 작업에서 GPT-5.6보다 왜 더 나쁜가?', anchor: '#limitation-1-output-quality' },
         { label: '로컬 LLM은 클라우드 API와 비교하여 얼마나 빠른가?', anchor: '#limitation-2-inference-speed' },
         { label: '로컬 LLM을 실행하려면 어떤 하드웨어가 필요한가?', anchor: '#limitation-3-hardware-requirements' },
         { label: '로컬 LLM이 실시간 정보에 접근할 수 없는 이유는?', anchor: '#limitation-4-no-real-time-info' },
@@ -4149,9 +4149,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '로컬 LLM 한계: 2026년 클라우드 모델 대비 6가지 핵심 격차',
-        description: '로컬 LLM은 추론 벤치마크에서 GPT-5.5보다 10~20점 낮고, 7B 모델에 16GB 이상의 RAM이 필요하며, 웹 접근이 불가능합니다. 벤치마크 데이터 및 클라우드 vs 로컬 결정 안내를 포함한 6가지 한계를 설명합니다.',
+        description: '로컬 LLM은 추론 벤치마크에서 GPT-5.6보다 10~20점 낮고, 7B 모델에 16GB 이상의 RAM이 필요하며, 웹 접근이 불가능합니다. 벤치마크 데이터 및 클라우드 vs 로컬 결정 안내를 포함한 6가지 한계를 설명합니다.',
         datePublished: '2026-04-04',
-        dateModified: '2026-06-21',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/local-llms/local-llm-limitations',
         inLanguage: 'ko',
         proficiencyLevel: 'Beginner',
@@ -4205,7 +4205,7 @@ schema: {
         numberOfItems: 6,
         inLanguage: 'ko',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '최대 출력 품질이 필요한 경우', description: '법률 문서, 복잡한 코드 생성, 고급 연구 분석. GPT-5.5 또는 Claude 4.6 Sonnet을 사용하십시오.' },
+          { '@type': 'ListItem', position: 1, name: '최대 출력 품질이 필요한 경우', description: '법률 문서, 복잡한 코드 생성, 고급 연구 분석. GPT-5.6 또는 Claude Sonnet 5을 사용하십시오.' },
           { '@type': 'ListItem', position: 2, name: '실시간 정보가 필요한 경우', description: '최신 뉴스, 실시간 데이터, URL 검색. 로컬 모델은 학습 데이터 마감일이 있습니다.' },
           { '@type': 'ListItem', position: 3, name: '설정 시간이 제한적인 경우', description: '빠른 프로토타입이나 일회성 작업의 경우, 클라우드 API 키가 로컬 설치보다 더 빨리 작동합니다.' },
           { '@type': 'ListItem', position: 4, name: '하드웨어가 제한적인 경우', description: 'RAM이 4~6GB인 기기에서는 로컬 추론이 한계에 달합니다. 클라우드 API는 하드웨어 부담 없이 더 나은 결과를 제공합니다.' },
@@ -4214,7 +4214,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/local-llm-limitations-static.html',
-      gammaDescription: '로컬 LLM과 클라우드 API를 비교하는 인터랙티브 14슬라이드 프레젠테이션입니다. 6가지 핵심 한계를 학습하십시오: 품질 격차(추론에서 GPT-5.5보다 10~20% 낮음), 속도(CPU 10~25 tok/sec vs 클라우드 80~150 tok/sec), 하드웨어 요구사항(최소 16GB RAM), 실시간 데이터 접근 불가, 설정 복잡성(클라우드 5분 대비 20~40분), 컨텍스트 윈도우 제한(4K~128K 토큰). Ollama, LM Studio, Llama 3.x, Qwen3 및 Mistral 모델에 대한 벤치마크 표, 결정 트리 및 사용 시기 안내를 포함합니다. 프레젠테이션을 PDF 참조 카드로 다운로드하십시오.',
+      gammaDescription: '로컬 LLM과 클라우드 API를 비교하는 인터랙티브 14슬라이드 프레젠테이션입니다. 6가지 핵심 한계를 학습하십시오: 품질 격차(추론에서 GPT-5.6보다 10~20% 낮음), 속도(CPU 10~25 tok/sec vs 클라우드 80~150 tok/sec), 하드웨어 요구사항(최소 16GB RAM), 실시간 데이터 접근 불가, 설정 복잡성(클라우드 5분 대비 20~40분), 컨텍스트 윈도우 제한(4K~128K 토큰). Ollama, LM Studio, Llama 3.x, Qwen3 및 Mistral 모델에 대한 벤치마크 표, 결정 트리 및 사용 시기 안내를 포함합니다. 프레젠테이션을 PDF 참조 카드로 다운로드하십시오.',
       sections: {
         inOneSentence: {
           id: 'in-one-sentence',
@@ -4228,16 +4228,16 @@ schema: {
           title: '쉬운 설명',
           content: [
             '<strong>로컬 LLM:</strong> 언어 모델을 컴퓨터에 다운로드합니다(Ollama, LM Studio). 모든 데이터는 비공개로 유지됩니다. 단점: 느리고, 지능이 제한적이며, 설정이 복잡합니다.',
-            '<strong>클라우드 API(GPT-5.5, Claude):</strong> 텍스트를 원격 서버에 전송하고 1초 이내에 응답을 받습니다. 빠르고 스마트하지만 비용이 듭니다(약 1,000자당 $0.01).',
+            '<strong>클라우드 API(GPT-5.6, Claude):</strong> 텍스트를 원격 서버에 전송하고 1초 이내에 응답을 받습니다. 빠르고 스마트하지만 비용이 듭니다(약 1,000자당 $0.01).',
             '<strong>결정 기준:</strong> 개인정보 보호 및 오프라인 사용에는 로컬. 속도와 품질에는 클라우드.'
           ],
         },
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: '로컬 LLM은 프라이버시·오프라인·무비용에 최적; 7B에서 추론 능력이 프론티어 클라우드 모델 대비 10–20점 낮고 인터넷 접근 불가 — 정확도나 실시간 데이터가 중요할 때는 클라우드 API 사용.' }, { type: 'plain-terms', text: 'AI를 로컬에서 실행하면 데이터가 기기 밖으로 나가지 않고 설치 후 비용이 없습니다. 단점: 로컬 모델은 GPT-5.5보다 느리고 능력이 낮습니다.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: '로컬 LLM은 프라이버시·오프라인·무비용에 최적; 7B에서 추론 능력이 프론티어 클라우드 모델 대비 10–20점 낮고 인터넷 접근 불가 — 정확도나 실시간 데이터가 중요할 때는 클라우드 API 사용.' }, { type: 'plain-terms', text: 'AI를 로컬에서 실행하면 데이터가 기기 밖으로 나가지 않고 설치 후 비용이 없습니다. 단점: 로컬 모델은 GPT-5.6보다 느리고 능력이 낮습니다.' }],
           items: [
-            '품질 격차: 로컬 7B 모델은 추론 및 코딩 벤치마크에서 GPT-5.5보다 10~20퍼센트 포인트 낮은 점수를 기록합니다. 70B 규모에서는 격차가 크게 줄어들지만 40~48GB의 RAM이 필요합니다.',
+            '품질 격차: 로컬 7B 모델은 추론 및 코딩 벤치마크에서 GPT-5.6보다 10~20퍼센트 포인트 낮은 점수를 기록합니다. 70B 규모에서는 격차가 크게 줄어들지만 40~48GB의 RAM이 필요합니다.',
             '속도: 7B 모델에서 CPU 전용 추론은 초당 10~25 토큰을 생성합니다. 클라우드 API는 초당 50~200 토큰을 생성합니다. Apple Silicon과 NVIDIA GPU는 소비자용 하드웨어에서 이 격차를 줄입니다.',
             '인터넷 접근 불가: 로컬 모델은 학습 데이터 마감일이 있으며 현재 정보를 검색할 수 없습니다. 클라우드 모델은 웹 검색 플러그인을 사용할 수 있습니다.',
             '설정 부담: 작동하는 로컬 LLM을 구성하려면 5~15분의 설치 및 주기적인 모델 관리가 필요합니다. 클라우드 API는 API 키만 있으면 됩니다.',
@@ -4271,7 +4271,7 @@ schema: {
           rows: [
             { '작업': '개인정보 보호가 필요한 데이터', '로컬 LLM': '데이터가 기기 밖으로 나가지 않음', '클라우드 API': '원격 서버로 전송(DPA 필요)', '승자': '✅ 로컬' },
             { '작업': '실시간 채팅(2초 미만)', '로컬 LLM': '5~10초(CPU)', '클라우드 API': '0.5~1초', '승자': '✅ 클라우드' },
-            { '작업': '코드 생성', '로컬 LLM': 'HumanEval 45~55%(7B)', '클라우드 API': 'HumanEval 90%(GPT-5.5)', '승자': '✅ 클라우드' },
+            { '작업': '코드 생성', '로컬 LLM': 'HumanEval 45~55%(7B)', '클라우드 API': 'HumanEval 90%(GPT-5.6)', '승자': '✅ 클라우드' },
             { '작업': '문서 요약', '로컬 LLM': '가능(7B으로 충분)', '클라우드 API': '가능 + 더 빠름', '승자': '⚖️ 둘 다 가능' },
             { '작업': 'API 비용 없음', '로컬 LLM': '토큰당 $0(하드웨어 이후)', '클라우드 API': '1K 토큰당 $0.01~0.05', '승자': '✅ 로컬(대용량)' },
             { '작업': '오프라인/인터넷 없음', '로컬 LLM': '완전 오프라인', '클라우드 API': '인터넷 필요', '승자': '✅ 로컬' },
@@ -4312,24 +4312,24 @@ schema: {
           ],
         },
         qualityGap: {
-          title: '로컬 LLM이 복잡한 작업에서 GPT-5.5보다 왜 더 나쁩니까?',
+          title: '로컬 LLM이 복잡한 작업에서 GPT-5.6보다 왜 더 나쁩니까?',
           content: [
-            '**로컬 LLM의 가장 중요한 한계는 복잡한 작업에서의 출력 품질입니다.** 최첨단 클라우드 모델인 OpenAI GPT-5.5, Anthropic Claude 4.6 Sonnet, Google Gemini 3.1 Pro는 공개적으로 사용 가능한 어떤 로컬 모델보다 더 많은 데이터, 더 많은 컴퓨팅 자원, 더 정교한 RLHF 파인튜닝으로 학습되었습니다. Ollama, LM Studio 또는 llama.cpp를 통해 배포되는 Llama 3.3, Qwen3, Mistral과 같은 오픈 웨이트 대안은 이 규모에 맞설 수 없습니다.',
+            '**로컬 LLM의 가장 중요한 한계는 복잡한 작업에서의 출력 품질입니다.** 최첨단 클라우드 모델인 OpenAI GPT-5.6, Anthropic Claude Sonnet 5, Google Gemini 3.1 Pro는 공개적으로 사용 가능한 어떤 로컬 모델보다 더 많은 데이터, 더 많은 컴퓨팅 자원, 더 정교한 RLHF 파인튜닝으로 학습되었습니다. Ollama, LM Studio 또는 llama.cpp를 통해 배포되는 Llama 3.3, Qwen3, Mistral과 같은 오픈 웨이트 대안은 이 규모에 맞설 수 없습니다.',
             'MMLU(일반 지식), HumanEval(Python 코딩), MATH 벤치마크에서 최첨단 모델은 85~92%를 기록합니다. 로컬에서 실행 가능한 최고의 70B 모델(Llama 3.3 70B, Qwen3 72B)은 75~85%를 기록합니다. 소비자 친화적인 7B 모델은 55~70%를 기록합니다.',
-            '품질 격차는 작업에 따라 다릅니다. 요약, 단순 Q&A, 번역, 코드 설명의 경우, 7B 모델은 블라인드 평가에서 GPT-5.5와 구분하기 어려운 결과를 생성합니다. 격차가 가장 큰 경우는: 복잡한 다단계 추론, 고급 수학, 미묘한 장문 작성, 현재 세계 지식이 필요한 작업입니다.',
+            '품질 격차는 작업에 따라 다릅니다. 요약, 단순 Q&A, 번역, 코드 설명의 경우, 7B 모델은 블라인드 평가에서 GPT-5.6와 구분하기 어려운 결과를 생성합니다. 격차가 가장 큰 경우는: 복잡한 다단계 추론, 고급 수학, 미묘한 장문 작성, 현재 세계 지식이 필요한 작업입니다.',
             '로컬 모델 한계는 더 광범위한 LLM 제약과 겹칩니다. 환각, 추론 실패, 지식 마감일은 배포 방식에 관계없이 모든 모델에 영향을 미칩니다. LLM이 아직 안정적으로 할 수 없는 것에 대한 전체적인 내용은 [AI 한계: LLM이 할 수 없는 것](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)을 참조하십시오.',
           ],
           image: '/images/local-llm-limitations-quality-benchmarks-en.svg',
-          imageCaption: '품질 격차: 벤치마크 점수 — 로컬 7B 모델은 추론 및 코딩에서 GPT-5.5보다 10~20점 낮은 점수를 기록합니다',
+          imageCaption: '품질 격차: 벤치마크 점수 — 로컬 7B 모델은 추론 및 코딩에서 GPT-5.6보다 10~20점 낮은 점수를 기록합니다',
           rows: [
-            { '작업 유형': '단순 Q&A', '로컬 7B': '충분함', '로컬 70B': '양호', 'GPT-5.5': '우수' },
-            { '작업 유형': '코드 설명', '로컬 7B': '충분함', '로컬 70B': '양호', 'GPT-5.5': '우수' },
-            { '작업 유형': '다단계 추론', '로컬 7B': '불량', '로컬 70B': '충분함', 'GPT-5.5': '우수' },
-            { '작업 유형': '고급 수학', '로컬 7B': '불량', '로컬 70B': '충분함', 'GPT-5.5': '양호' },
-            { '작업 유형': '장문 작성', '로컬 7B': '충분함', '로컬 70B': '양호', 'GPT-5.5': '우수' },
-            { '작업 유형': '현재 이벤트', '로컬 7B': '불가(인터넷 없음)', '로컬 70B': '불가(인터넷 없음)', 'GPT-5.5': '양호(브라우징 포함)' },
+            { '작업 유형': '단순 Q&A', '로컬 7B': '충분함', '로컬 70B': '양호', 'GPT-5.6': '우수' },
+            { '작업 유형': '코드 설명', '로컬 7B': '충분함', '로컬 70B': '양호', 'GPT-5.6': '우수' },
+            { '작업 유형': '다단계 추론', '로컬 7B': '불량', '로컬 70B': '충분함', 'GPT-5.6': '우수' },
+            { '작업 유형': '고급 수학', '로컬 7B': '불량', '로컬 70B': '충분함', 'GPT-5.6': '양호' },
+            { '작업 유형': '장문 작성', '로컬 7B': '충분함', '로컬 70B': '양호', 'GPT-5.6': '우수' },
+            { '작업 유형': '현재 이벤트', '로컬 7B': '불가(인터넷 없음)', '로컬 70B': '불가(인터넷 없음)', 'GPT-5.6': '양호(브라우징 포함)' },
           ],
-          columns: ['작업 유형', '로컬 7B', '로컬 70B', 'GPT-5.5'],
+          columns: ['작업 유형', '로컬 7B', '로컬 70B', 'GPT-5.6'],
         },
         whenQualityMatters: {
           title: '출력 품질이 중요한 경우는?',
@@ -4353,7 +4353,7 @@ schema: {
           title: '로컬 LLM은 클라우드 API와 비교하여 얼마나 빠릅니까?',
           content: [
             '**클라우드 API는 NVIDIA H100 또는 A100 GPU가 탑재된 전용 서버 하드웨어에서 토큰을 처리합니다.** 고급 노트북 및 데스크톱 GPU를 포함한 소비자용 하드웨어는 이 처리량에 맞설 수 없습니다.',
-            'GPT-5.5는 일반적인 부하 하에서 초당 약 80~150 토큰을 생성합니다. 현대 노트북 CPU의 로컬 7B 모델은 초당 10~25 토큰을 생성하여 4~10배 느립니다. 가장 빠른 소비자용 GPU인 NVIDIA RTX 4090에서 동일한 7B 모델은 초당 130~160 토큰에 도달하여 클라우드 속도와 비슷하지만, 하드웨어 비용이 $1,600 이상 듭니다.',
+            'GPT-5.6는 일반적인 부하 하에서 초당 약 80~150 토큰을 생성합니다. 현대 노트북 CPU의 로컬 7B 모델은 초당 10~25 토큰을 생성하여 4~10배 느립니다. 가장 빠른 소비자용 GPU인 NVIDIA RTX 4090에서 동일한 7B 모델은 초당 130~160 토큰에 도달하여 클라우드 속도와 비슷하지만, 하드웨어 비용이 $1,600 이상 듭니다.',
             '인터랙티브 채팅의 경우, 초당 20 토큰 이상에서는 속도 차이가 눈에 띄지만 허용 가능한 수준입니다. 배치 처리(수백 개의 문서 요약)의 경우, 속도 격차가 상당한 제약이 됩니다.',
           ],
           image: '/images/local-llm-limitations-speed-comparison-en.svg',
@@ -4380,17 +4380,17 @@ schema: {
         hardware: {
           title: '로컬 LLM을 실행하려면 어떤 하드웨어가 필요합니까?',
           content: [
-            '**유능한 로컬 모델(13B 이상)을 실행하려면 모든 사용자가 갖추지 못한 하드웨어가 필요합니다.** GPT-4o mini 품질에 맞는 진정으로 유용한 로컬 LLM 경험을 위한 최소 조건은 16GB RAM과 현대적인 CPU 또는 Apple Silicon 칩입니다. 이는 현재 사용 중인 소비자용 노트북의 약 절반을 제외합니다. 자세한 내용과 VRAM 계산은 [로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
+            '**유능한 로컬 모델(13B 이상)을 실행하려면 모든 사용자가 갖추지 못한 하드웨어가 필요합니다.** GPT-5.6 Luna 품질에 맞는 진정으로 유용한 로컬 LLM 경험을 위한 최소 조건은 16GB RAM과 현대적인 CPU 또는 Apple Silicon 칩입니다. 이는 현재 사용 중인 소비자용 노트북의 약 절반을 제외합니다. 자세한 내용과 VRAM 계산은 [로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
             '로컬에서 최첨단 모델 품질에 맞추려면 70B 모델이 필요하며, 이는 40~48GB의 RAM을 요구합니다. 이는 고급 워크스테이션이나 64GB 이상의 통합 메모리가 있는 Mac Studio/Mac Pro에서만 가능합니다. 하드웨어가 제한적이라면, 클라우드 API가 더 낮은 설정 비용으로 더 나은 품질을 제공합니다.',
           ],
           image: '/images/local-llm-limitations-hardware-requirements-en.svg',
           imageCaption: '모델 크기별 하드웨어 요구사항 — 사용 가능한 7B 모델에 최소 16GB RAM · 최첨단 품질 70B 모델에 40GB 이상',
           rows: [
-            { '하드웨어': '기본 노트북(8GB RAM, CPU 전용)', '최대 유용 모델': 'Q4_K_M의 7B', '품질 동등': 'GPT-4o mini 미만' },
-            { '하드웨어': '중급 노트북(16GB RAM)', '최대 유용 모델': 'Q4_K_M의 13B', '품질 동등': '대략 GPT-4o mini' },
-            { '하드웨어': 'Apple M3 Pro(18GB)', '최대 유용 모델': '13B 전체 품질', '품질 동등': '작업에 따라 GPT-4o mini에서 GPT-4' },
+            { '하드웨어': '기본 노트북(8GB RAM, CPU 전용)', '최대 유용 모델': 'Q4_K_M의 7B', '품질 동등': 'GPT-5.6 Luna 미만' },
+            { '하드웨어': '중급 노트북(16GB RAM)', '최대 유용 모델': 'Q4_K_M의 13B', '품질 동등': '대략 GPT-5.6 Luna' },
+            { '하드웨어': 'Apple M3 Pro(18GB)', '최대 유용 모델': '13B 전체 품질', '품질 동등': '작업에 따라 GPT-5.6 Luna에서 GPT-4' },
             { '하드웨어': 'NVIDIA RTX 4090(24GB VRAM)', '최대 유용 모델': 'Q4_K_M의 34B', '품질 동등': 'GPT-4에 근접' },
-            { '하드웨어': 'Mac Studio M2 Ultra(192GB)', '최대 유용 모델': '70B 전체 품질', '품질 동등': 'GPT-5.5와 경쟁적' },
+            { '하드웨어': 'Mac Studio M2 Ultra(192GB)', '최대 유용 모델': '70B 전체 품질', '품질 동등': 'GPT-5.6와 경쟁적' },
           ],
           columns: ['하드웨어', '최대 유용 모델', '품질 동등'],
         },
@@ -4417,7 +4417,7 @@ schema: {
           title: '로컬 LLM이 실시간 정보에 접근할 수 없는 이유는?',
           content: [
             '**로컬 LLM에는 학습 데이터 마감일이 있습니다.** 인터넷에 접근할 수 없으며, 현재 뉴스를 검색할 수 없고, 실시간 가격이나 주식 데이터를 확인할 수 없으며, URL을 방문할 수 없습니다. 2024년 초를 마감일로 하여 학습된 모델은 그 이후의 이벤트를 알지 못합니다.',
-            '웹 검색 기능이 있는 클라우드 모델(GPT-5.5의 웹 검색, Gemini의 Google 검색 통합)은 현재 정보를 검색하고 인용할 수 있습니다. 소비자 등급의 로컬 추론 도구는 상당한 추가 인프라(라이브 웹 크롤러가 있는 RAG) 없이는 이 기능을 복제할 수 없습니다.',
+            '웹 검색 기능이 있는 클라우드 모델(GPT-5.6의 웹 검색, Gemini의 Google 검색 통합)은 현재 정보를 검색하고 인용할 수 있습니다. 소비자 등급의 로컬 추론 도구는 상당한 추가 인프라(라이브 웹 크롤러가 있는 RAG) 없이는 이 기능을 복제할 수 없습니다.',
             '현재 정보가 필요한 작업(뉴스 요약, 최신 제품 비교, 실시간 데이터 분석)에는 클라우드 API가 실용적인 선택입니다. 전체 비교는 [로컬 LLM vs 클라우드 API](/local-llms/local-llms-vs-cloud-apis)를 참조하십시오.',
           ],
         },
@@ -4471,7 +4471,7 @@ schema: {
         contextWindow: {
           title: '로컬 LLM의 컨텍스트 윈도우 크기는 얼마입니까?',
           content: [
-            '**대부분의 실용적인 로컬 모델은 4K~128K 토큰 컨텍스트 윈도우를 지원합니다.** Google Gemini 3.1 Pro는 1M 토큰을 지원하고, OpenAI GPT-5.5는 128K 토큰을 지원합니다. 128K가 로컬에서 사용 가능하지만(Llama 3.3, Qwen3), 매우 긴 컨텍스트에 대한 추론 속도는 크게 저하됩니다. 소비자용 하드웨어의 7B 모델에서 100K 토큰 컨텍스트를 처리하는 데 수 분이 걸릴 수 있습니다.',
+            '**대부분의 실용적인 로컬 모델은 4K~128K 토큰 컨텍스트 윈도우를 지원합니다.** Google Gemini 3.1 Pro는 1M 토큰을 지원하고, OpenAI GPT-5.6는 128K 토큰을 지원합니다. 128K가 로컬에서 사용 가능하지만(Llama 3.3, Qwen3), 매우 긴 컨텍스트에 대한 추론 속도는 크게 저하됩니다. 소비자용 하드웨어의 7B 모델에서 100K 토큰 컨텍스트를 처리하는 데 수 분이 걸릴 수 있습니다.',
             '매우 긴 문서(전체 책, 대형 코드베이스, 수 시간의 트랜스크립트)를 처리하는 작업에는 대형 컨텍스트 윈도우가 있는 클라우드 API가 로컬 추론보다 더 실용적입니다.',
           ],
         },
@@ -4505,7 +4505,7 @@ schema: {
         whenCloud: {
           title: '로컬 LLM 대신 클라우드 API를 언제 사용해야 합니까?',
           items: [
-            '**최대 출력 품질이 필요한 경우** -- 법률 문서, 복잡한 코드 생성, 고급 연구 분석. GPT-5.5 또는 Claude 4.6 Sonnet을 사용하십시오. 전체 비교는 [로컬 LLM vs 클라우드 API](/local-llms/local-llms-vs-cloud-apis)를 참조하십시오.',
+            '**최대 출력 품질이 필요한 경우** -- 법률 문서, 복잡한 코드 생성, 고급 연구 분석. GPT-5.6 또는 Claude Sonnet 5을 사용하십시오. 전체 비교는 [로컬 LLM vs 클라우드 API](/local-llms/local-llms-vs-cloud-apis)를 참조하십시오.',
             '**실시간 정보가 필요한 경우** -- 현재 뉴스, 실시간 데이터, URL 검색. 로컬 모델에는 학습 데이터 마감일이 있습니다.',
             '**설정 시간이 제한적인 경우** -- 빠른 프로토타입이나 일회성 작업의 경우, 클라우드 API 키가 로컬 설치보다 더 빨리 작동합니다.',
             '**하드웨어가 제한적인 경우** -- RAM이 4~6GB인 기기에서는 로컬 추론이 한계에 달합니다. 클라우드 API는 하드웨어 부담 없이 더 나은 결과를 제공합니다.',
@@ -4519,7 +4519,7 @@ schema: {
           content: [
             '로컬 LLM은 다음과 같은 시나리오에서 잘못된 선택입니다:',
             '',
-            '**복잡한 다단계 추론** -- 작업에 문제 분해, 중간 결과 사용, 반복이 필요합니다. 로컬 7B 모델은 이러한 작업에 실패합니다. 대신 GPT-5.5 또는 Claude 4.6 Sonnet을 사용하십시오.',
+            '**복잡한 다단계 추론** -- 작업에 문제 분해, 중간 결과 사용, 반복이 필요합니다. 로컬 7B 모델은 이러한 작업에 실패합니다. 대신 GPT-5.6 또는 Claude Sonnet 5을 사용하십시오.',
             '',
             '**실시간 정보 요구사항** -- 현재 뉴스, 실시간 데이터 피드, 또는 URL 방문 기능이 필요합니다. 로컬 모델에는 학습 데이터 마감일이 있으며 인터넷 접근이 불가합니다. 웹 검색이 있는 클라우드 API가 필요합니다.',
             '',
@@ -4535,8 +4535,8 @@ schema: {
           title: '🏆 사용 사례별 최적 로컬 LLM',
           content: [
             '- **개인정보 보호 및 컴플라이언스에 최적** → 로컬 LLM(Ollama + Llama 3.3 70B 또는 Qwen3 7B)',
-            '- **추론 및 코딩에 최적** → 클라우드 API(OpenAI GPT-5.5 또는 Anthropic Claude Opus 4.8)',
-            '- **양질의 빠른 속도에 최적** → 클라우드 API(10배 저렴한 토큰 비용의 OpenAI GPT-5.5 mini)',
+            '- **추론 및 코딩에 최적** → 클라우드 API(OpenAI GPT-5.6 또는 Anthropic Claude Opus 4.8)',
+            '- **양질의 빠른 속도에 최적** → 클라우드 API(10배 저렴한 토큰 비용의 OpenAI GPT-5.6 Luna)',
             '- **대규모 비용에 최적** → 로컬 LLM(하드웨어가 있다면; 상각 비용은 거의 0에 가까워짐)',
             '- **두 가지 방식 모두 시도하기에 최적** → [PromptQuorum](/) (로컬과 클라우드 모두에 전송하여, 선택하기 전에 품질 차이 확인)',
           ],
@@ -4547,7 +4547,7 @@ schema: {
           columns: ['지표', '로컬 LLM(CPU)', '로컬 LLM(GPU)', '클라우드 API'],
           rows: [
             { '지표': '속도', '로컬 LLM(CPU)': '초당 10~25 토큰', '로컬 LLM(GPU)': '초당 50~130 토큰', '클라우드 API': '초당 80~150 토큰' },
-            { '지표': '품질 격차', '로컬 LLM(CPU)': 'GPT-5.5보다 약 15~20% 낮음', '로컬 LLM(GPU)': 'GPT-5.5보다 약 5~10% 낮음', '클라우드 API': '최첨단 수준' },
+            { '지표': '품질 격차', '로컬 LLM(CPU)': 'GPT-5.6보다 약 15~20% 낮음', '로컬 LLM(GPU)': 'GPT-5.6보다 약 5~10% 낮음', '클라우드 API': '최첨단 수준' },
             { '지표': 'RAM 요구사항', '로컬 LLM(CPU)': '16GB(최소)', '로컬 LLM(GPU)': '24GB VRAM(GPU)', '클라우드 API': '없음(클라우드 관리)' },
             { '지표': '설정 시간', '로컬 LLM(CPU)': '20~40분', '로컬 LLM(GPU)': '30~60분', '클라우드 API': '5분' },
             { '지표': '컨텍스트 윈도우', '로컬 LLM(CPU)': '4K~128K 토큰', '로컬 LLM(GPU)': '4K~128K 토큰', '클라우드 API': '128K~1M+ 토큰' },
@@ -4586,7 +4586,7 @@ schema: {
           id: 'sources',
           title: '출처',
           items: [
-            '[GPT-5.5 기술 보고서](https://openai.com/gpt-4o/) -- OpenAI의 벤치마크 비교 및 기능 분석',
+            '[GPT-5.6 기술 보고서](https://openai.com/gpt-4o/) -- OpenAI의 벤치마크 비교 및 기능 분석',
             '[Meta Llama 3.3 모델 카드](https://www.llama.com/) -- 공식 성능 지표 및 한계',
             '[LLM의 환각 이해](https://arxiv.org/abs/2110.01852) -- 모델 정확도 및 오류 패턴에 관한 학술 연구',
           ],
@@ -4594,7 +4594,7 @@ schema: {
         commonMistakes: {
           title: 'LLM 한계에 관한 일반적인 오해',
           items: [
-            '**7B 모델이 GPT-5.5와 동등하다고 기대하는 것:** 추론에서 10~20% 더 낮습니다. HumanEval: 로컬 7B는 45~55%, GPT-5.5는 90%를 기록합니다. 복잡한 작업에는 로컬 70B 또는 클라우드를 사용하십시오.',
+            '**7B 모델이 GPT-5.6와 동등하다고 기대하는 것:** 추론에서 10~20% 더 낮습니다. HumanEval: 로컬 7B는 45~55%, GPT-5.6는 90%를 기록합니다. 복잡한 작업에는 로컬 70B 또는 클라우드를 사용하십시오.',
             '**하드웨어 한계를 무시하는 것:** 유용한 모델에는 16GB RAM이 최소입니다. 그 이하에서는 품질이 크게 저하됩니다. 시작하기 전에 [하드웨어 요구사항](/local-llms/local-llm-hardware-guide-2026)을 확인하십시오.',
             '**로컬 = 더 빠름이라고 가정하는 것:** CPU 추론은 4~10배 더 느립니다(초당 10~25 tok vs 클라우드 80~150 tok). 클라우드 속도에 맞추려면 $1,600 이상의 GPU가 필요합니다.',
             '**설정 시간을 과소평가하는 것:** 로컬 설정은 20~40분이 소요됩니다. 클라우드는 5분입니다. 로컬 비용 계산에 지속적인 유지 관리(업데이트, 드라이버)를 추가하십시오.',

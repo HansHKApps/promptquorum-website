@@ -10,18 +10,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'GDPR Risk Matrix: LLM Comparison Qwen DeepSeek Llama Claude | PromptQuorum',
     metaDescription: 'GDPR-compliant LLM comparison: DeepSeek API (highest risk), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements. Updated May 2026.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8 min read',
     educationalLevel: 'Advanced',
     audience: 'CISOs, procurement teams, and compliance officers choosing between proprietary and open-weight LLMs',
     primaryTerm: 'GDPR risk comparison LLM models',
-    leadAnswerBlock: '**DeepSeek API presents the highest GDPR risk of any major LLM due to Chinese data-access law (PIPL); Qwen and Llama run locally carry equivalent low risk; Claude and GPT-5.5 APIs with EU residency carry medium risk and require Standard Contractual Clauses (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    leadAnswerBlock: '**DeepSeek API presents the highest GDPR risk of any major LLM due to Chinese data-access law (PIPL); Qwen and Llama run locally carry equivalent low risk; Claude and GPT-5.6 APIs with EU residency carry medium risk and require Standard Contractual Clauses (SCCs).**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       en: {
         question: 'Which LLM is safest under GDPR?',
-        answer: 'Qwen 3 14B or Llama 4 Scout run locally on your own hardware—no data leaves your jurisdiction, no Article 44 transfer, no SCC or TIA needed. DeepSeek API is highest-risk because servers obey Chinese data law (PIPL). Claude and GPT-5.5 APIs require EU data residency + SCCs for medium-risk compliance.',
+        answer: 'Qwen 3 14B or Llama 4 Scout run locally on your own hardware—no data leaves your jurisdiction, no Article 44 transfer, no SCC or TIA needed. DeepSeek API is highest-risk because servers obey Chinese data law (PIPL). Claude and GPT-5.6 APIs require EU data residency + SCCs for medium-risk compliance.',
         bullets: [
           'Qwen local: Lowest risk. No transfer, Apache 2.0 weights, 12–24 GB VRAM, <30 min setup.',
           'DeepSeek API: Highest risk. PIPL jurisdiction, no EU adequacy, ToS allows state-mandated data sharing.',
@@ -31,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       de: {
         question: 'Welches LLM ist unter DSGVO am sichersten?',
-        answer: 'Qwen 3 14B oder Llama 4 Scout lokal auf eigener Hardware — keine Daten verlassen die Gerichtsbarkeit, kein Artikel-44-Transfer, keine SCC oder TIA erforderlich. DeepSeek API ist höchstes Risiko, da Server chinesisches Datenrecht (PIPL) befolgen. Claude und GPT-5.5 APIs erfordern EU-Datenspeicherung + SCCs für mittleres Konformitätsrisiko.',
+        answer: 'Qwen 3 14B oder Llama 4 Scout lokal auf eigener Hardware — keine Daten verlassen die Gerichtsbarkeit, kein Artikel-44-Transfer, keine SCC oder TIA erforderlich. DeepSeek API ist höchstes Risiko, da Server chinesisches Datenrecht (PIPL) befolgen. Claude und GPT-5.6 APIs erfordern EU-Datenspeicherung + SCCs für mittleres Konformitätsrisiko.',
         bullets: [
           'Qwen lokal: Geringestes Risiko. Kein Transfer, Apache-2.0-Gewichte, 12–24 GB VRAM, <30-Minuten-Setup.',
           'DeepSeek API: Höchstes Risiko. PIPL-Jurisdiktion, keine EU-Adäquanz, ToS ermöglicht staatlich angeforderte Datenteilung.',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fr: {
         question: 'Quel LLM est le plus sûr selon le RGPD ?',
-        answer: 'Qwen 3 14B ou Llama 4 Scout exécutés localement sur votre propre matériel — aucune donnée ne quitte votre juridiction, aucun transfert Article 44, aucune SCC ou TIA requise. DeepSeek API présente le risque le plus élevé car les serveurs obéissent à la loi chinoise sur les données (PIPL). Les API Claude et GPT-5.5 nécessitent une résidence des données dans l\'UE + SCC pour un risque de conformité moyen.',
+        answer: 'Qwen 3 14B ou Llama 4 Scout exécutés localement sur votre propre matériel — aucune donnée ne quitte votre juridiction, aucun transfert Article 44, aucune SCC ou TIA requise. DeepSeek API présente le risque le plus élevé car les serveurs obéissent à la loi chinoise sur les données (PIPL). Les API Claude et GPT-5.6 nécessitent une résidence des données dans l\'UE + SCC pour un risque de conformité moyen.',
         bullets: [
           'Qwen local : Risque le plus faible. Aucun transfert, poids Apache 2.0, 12–24 Go VRAM, configuration < 30 min.',
           'DeepSeek API : Risque le plus élevé. Juridiction PIPL, pas d\'adéquation UE, ToS permet le partage de données mandaté par l\'État.',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       ja: {
         question: 'GDPRの下で最も安全なLLMは何ですか？',
-        answer: 'Qwen 3 14BまたはLlama 4 Scoutを自分のハードウェア上でローカル実行——データはあなたの管轄権を離れず、第44条転送なし、SCC or TIA不要。DeepSeek APIは中国データ法（PIPL）に従うサーバーのため最高リスク。Claude/GPT-5.5 APIはEUデータ拠点+SCCで中程度リスク対応が必要。',
+        answer: 'Qwen 3 14BまたはLlama 4 Scoutを自分のハードウェア上でローカル実行——データはあなたの管轄権を離れず、第44条転送なし、SCC or TIA不要。DeepSeek APIは中国データ法（PIPL）に従うサーバーのため最高リスク。Claude/GPT-5.6 APIはEUデータ拠点+SCCで中程度リスク対応が必要。',
         bullets: [
           'Qwen local：最低リスク。転送なし、Apache 2.0ウェイト、12–24 GB VRAM、<30分セットアップ。',
           'DeepSeek API：最高リスク。PIPL管轄権、EU妥当性なし、ToS国家命令によるデータ共有を許可。',
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       zh: {
         question: '在GDPR下哪个LLM最安全？',
-        answer: 'Qwen 3 14B或Llama 4 Scout在您自己的硬件上本地运行——数据不离开您的司法管辖区、无第44条转移、无需SCC或TIA。DeepSeek API风险最高，因为服务器受中国数据法律（PIPL）约束。Claude和GPT-5.5 API需要EU数据驻留+SCC才能获得中等风险合规。',
+        answer: 'Qwen 3 14B或Llama 4 Scout在您自己的硬件上本地运行——数据不离开您的司法管辖区、无第44条转移、无需SCC或TIA。DeepSeek API风险最高，因为服务器受中国数据法律（PIPL）约束。Claude和GPT-5.6 API需要EU数据驻留+SCC才能获得中等风险合规。',
         bullets: [
           'Qwen本地：风险最低。无转移，Apache 2.0权重，12–24 GB VRAM，<30分钟设置。',
           'DeepSeek API：风险最高。PIPL管辖权、无EU充分性、ToS允许政府命令数据共享。',
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'DeepSeek API is highest-risk: servers are subject to Chinese data-access law (PIPL), there is no EU adequacy decision for China, and the ToS explicitly allows data sharing with Chinese authorities',
           'Qwen 3 14B and Llama 4 Scout run locally are lowest-risk: no Article 44 transfer, no SCC required, data stays on your hardware',
-          'Claude API and GPT-5.5 Instant are medium-risk: US jurisdiction requires Standard Contractual Clauses + Transfer Impact Assessment; EU-data-residency options (Claude EU) reduce risk',
+          'Claude API and GPT-5.6 Luna are medium-risk: US jurisdiction requires Standard Contractual Clauses + Transfer Impact Assessment; EU-data-residency options (Claude EU) reduce risk',
           'Recommended stacks: startups (Claude + SCC), data-sensitive orgs (Qwen 24 GB local), enterprises (multi-GPU Qwen + air-gap)',
           'Risk decision matrix covers five vectors: data residency, training-data jurisdiction, ToS data retention, SCC requirement, and legal verdict',
         ],
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Deployment: 'DeepSeek API', 'Data Residency': 'China (Alibaba Cloud)', 'Training-Data Jurisdiction': 'China (PIPL)', 'ToS Retention Risk': 'Explicitly reserves right to share with authorities', 'SCC / TIA Required?': 'Yes, but ineffective (no EU-China adequacy)', 'Overall Risk Level': '🔴 Highest' },
           { Deployment: 'Claude API (US)', 'Data Residency': 'US (Virginia)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'Anthropic commits to deletion on request; 30-day default retention', 'SCC / TIA Required?': 'Yes, requires SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
-          { Deployment: 'GPT-5.5 (US)', 'Data Residency': 'US (multiple regions)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'OpenAI may retain for model improvement; policy opaque', 'SCC / TIA Required?': 'Yes, requires SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
+          { Deployment: 'GPT-5.6 (US)', 'Data Residency': 'US (multiple regions)', 'Training-Data Jurisdiction': 'US', 'ToS Retention Risk': 'OpenAI may retain for model improvement; policy opaque', 'SCC / TIA Required?': 'Yes, requires SCC + TIA', 'Overall Risk Level': '🟠 Medium-High' },
           { Deployment: 'Claude (EU data residency)', 'Data Residency': 'EU (Ireland or Germany)', 'Training-Data Jurisdiction': 'US (Anthropic), data stays EU', 'ToS Retention Risk': 'Anthropic commits to EU-only residency + GDPR compliance', 'SCC / TIA Required?': 'Yes, SCC adequate due to EU processing', 'Overall Risk Level': '🟡 Medium' },
           { Deployment: 'Llama 4 Scout (local)', 'Data Residency': 'Your hardware (LAN)', 'Training-Data Jurisdiction': 'Open-source, no commercial retention', 'ToS Retention Risk': 'You control retention via local logs only', 'SCC / TIA Required?': 'No', 'Overall Risk Level': '🟢 Lowest' },
           { Deployment: 'Qwen 3 14B (local)', 'Data Residency': 'Your hardware (LAN)', 'Training-Data Jurisdiction': 'Open-source (Apache 2.0), no commercial retention', 'ToS Retention Risk': 'You control retention via local logs only', 'SCC / TIA Required?': 'No', 'Overall Risk Level': '🟢 Lowest' },
@@ -143,14 +143,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Claude API (US) — Medium risk, manageable with SCC + TIA',
-            text: 'Claude API requires Standard Contractual Clauses and a Transfer Impact Assessment, but is more compliant than GPT-5.5 because: (1) Anthropic has a clearer commitment to deletion on request; (2) Anthropic has published Data Processing Addenda (DPA) that explicitly reference GDPR Articles 28 and 32; (3) US law, while allowing law-enforcement access, does not mandate commercial data retention. For non-sensitive personal data (job titles, generic business context), Claude API with SCC + TIA is acceptable. For high-sensitivity data (health, financial, biometric), local deployment is required.',
+            text: 'Claude API requires Standard Contractual Clauses and a Transfer Impact Assessment, but is more compliant than GPT-5.6 because: (1) Anthropic has a clearer commitment to deletion on request; (2) Anthropic has published Data Processing Addenda (DPA) that explicitly reference GDPR Articles 28 and 32; (3) US law, while allowing law-enforcement access, does not mandate commercial data retention. For non-sensitive personal data (job titles, generic business context), Claude API with SCC + TIA is acceptable. For high-sensitivity data (health, financial, biometric), local deployment is required.',
           },
           {
             title: 'Claude (EU data residency) — Medium risk, lower due to EU processing',
             text: 'Anthropic offers an EU data residency option where prompts are processed in Ireland or Germany. This reduces risk because: (1) data stays within the EU during processing; (2) data is deleted after 30 days; (3) Anthropic commits to GDPR compliance. However, the training data behind Claude models is still US-trained, and Anthropic is a US company, so full Article 44 compliance still requires SCCs. Better than US Claude for GDPR, but not equivalent to local deployment.',
           },
           {
-            title: 'GPT-5.5 / GPT-5.5 Instant — Medium-high risk',
+            title: 'GPT-5.6 / GPT-5.6 Luna — Medium-high risk',
             text: 'OpenAI APIs carry higher risk than Claude because: (1) OpenAI\'s data retention policy is opaque — the company has said it may retain user data for "research and safety improvements"; (2) no published DPA; (3) no EU data residency option. If you choose OpenAI, require explicit SCC + comprehensive TIA, and avoid sending high-sensitivity data (health, financial, biometric, genetic). For low-sensitivity tasks, acceptable with SCC.',
           },
           {
@@ -241,13 +241,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Matriz de riesgo RGPD: Qwen, DeepSeek, Llama y Claude',
     metaDescription: 'Comparación de LLM conforme al RGPD: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8 min de lectura',
     educationalLevel: 'Advanced',
     audience: 'CISOs, equipos de adquisiciones y responsables de cumplimiento que eligen entre LLMs propietarios y de pesos abiertos',
     primaryTerm: 'comparación de riesgo RGPD modelos LLM',
-    leadAnswerBlock: '**La API de DeepSeek presenta el mayor riesgo RGPD de cualquier LLM importante debido a la ley china de acceso a datos (PIPL); Qwen y Llama ejecutados localmente tienen un riesgo igualmente bajo; las API de Claude y GPT-5.5 con residencia EU tienen riesgo medio y requieren Cláusulas Contractuales Estándar (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    leadAnswerBlock: '**La API de DeepSeek presenta el mayor riesgo RGPD de cualquier LLM importante debido a la ley china de acceso a datos (PIPL); Qwen y Llama ejecutados localmente tienen un riesgo igualmente bajo; las API de Claude y GPT-5.6 con residencia EU tienen riesgo medio y requieren Cláusulas Contractuales Estándar (SCCs).**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'Cuatro vectores de riesgo RGPD para LLMs', anchor: 'risk-vectors' },
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'La API de DeepSeek tiene el mayor riesgo RGPD de todos los LLMs importantes: los servidores están sujetos a la ley china de acceso a datos (PIPL), no existe decisión de adecuación UE-China, y los ToS permiten explícitamente compartir datos con las autoridades chinas',
           'Qwen 3 14B y Llama 4 Scout ejecutados localmente son los de menor riesgo: sin transferencia según el Artículo 44, sin SCC requerida, los datos permanecen en tu hardware',
-          'Las API de Claude y GPT-5.5 Instant tienen riesgo medio: la jurisdicción estadounidense requiere Cláusulas Contractuales Estándar más Evaluación de Impacto de Transferencia; las opciones de residencia de datos en la UE (Claude EU) reducen el riesgo',
+          'Las API de Claude y GPT-5.6 Luna tienen riesgo medio: la jurisdicción estadounidense requiere Cláusulas Contractuales Estándar más Evaluación de Impacto de Transferencia; las opciones de residencia de datos en la UE (Claude EU) reducen el riesgo',
           'Stacks recomendados: startups (Claude + SCC), organizaciones con datos sensibles (Qwen 24 GB local), empresas (Qwen multi-GPU + air-gap)',
           'La matriz de decisión de riesgo cubre cinco vectores: residencia de datos, jurisdicción de datos de entrenamiento, retención de datos en ToS, requisito SCC y veredicto legal',
         ],
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Despliegue: 'DeepSeek API', 'Residencia de datos': 'China (Alibaba Cloud)', 'Jurisdicción de datos de entrenamiento': 'China (PIPL)', 'Riesgo de retención en ToS': 'Se reserva explícitamente el derecho a compartir datos con las autoridades', '¿SCC / TIA requerida?': 'Sí, pero ineficaz (sin adecuación UE-China)', 'Nivel de riesgo global': '🔴 Mayor' },
           { Despliegue: 'Claude API (EE. UU.)', 'Residencia de datos': 'EE. UU. (Virginia)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'Anthropic se compromete a eliminar los datos bajo petición; retención por defecto de 30 días', '¿SCC / TIA requerida?': 'Sí, requiere SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
-          { Despliegue: 'GPT-5.5 (EE. UU.)', 'Residencia de datos': 'EE. UU. (múltiples regiones)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'OpenAI puede retener datos para mejorar el modelo; política opaca', '¿SCC / TIA requerida?': 'Sí, requiere SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
+          { Despliegue: 'GPT-5.6 (EE. UU.)', 'Residencia de datos': 'EE. UU. (múltiples regiones)', 'Jurisdicción de datos de entrenamiento': 'EE. UU.', 'Riesgo de retención en ToS': 'OpenAI puede retener datos para mejorar el modelo; política opaca', '¿SCC / TIA requerida?': 'Sí, requiere SCC + TIA', 'Nivel de riesgo global': '🟠 Medio-alto' },
           { Despliegue: 'Claude (residencia de datos UE)', 'Residencia de datos': 'UE (Irlanda o Alemania)', 'Jurisdicción de datos de entrenamiento': 'EE. UU. (Anthropic), datos permanecen en la UE', 'Riesgo de retención en ToS': 'Anthropic se compromete a residencia solo en la UE + cumplimiento RGPD', '¿SCC / TIA requerida?': 'Sí, SCC adecuada por procesamiento en la UE', 'Nivel de riesgo global': '🟡 Medio' },
           { Despliegue: 'Llama 4 Scout (local)', 'Residencia de datos': 'Tu hardware (LAN)', 'Jurisdicción de datos de entrenamiento': 'Código abierto, sin retención comercial', 'Riesgo de retención en ToS': 'Tú controlas la retención solo a través de logs locales', '¿SCC / TIA requerida?': 'No', 'Nivel de riesgo global': '🟢 Menor' },
           { Despliegue: 'Qwen 3 14B (local)', 'Residencia de datos': 'Tu hardware (LAN)', 'Jurisdicción de datos de entrenamiento': 'Código abierto (Apache 2.0), sin retención comercial', 'Riesgo de retención en ToS': 'Tú controlas la retención solo a través de logs locales', '¿SCC / TIA requerida?': 'No', 'Nivel de riesgo global': '🟢 Menor' },
@@ -322,14 +322,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Claude API (EE. UU.) — Riesgo medio, gestionable con SCC + TIA',
-            text: 'La API de Claude requiere Cláusulas Contractuales Estándar y una Evaluación de Impacto de Transferencia, pero es más conforme que GPT-5.5 porque: (1) Anthropic tiene un compromiso más claro de eliminación bajo petición; (2) Anthropic ha publicado Addendas de Procesamiento de Datos (DPA) que hacen referencia explícita a los Artículos 28 y 32 del RGPD; (3) la ley de EE. UU., aunque permite el acceso de las autoridades, no obliga a retener datos comerciales. Para datos personales no sensibles (cargos de trabajo, contexto empresarial genérico), la API de Claude con SCC + TIA es aceptable. Para datos de alta sensibilidad (salud, financieros, biométricos), se requiere despliegue local.',
+            text: 'La API de Claude requiere Cláusulas Contractuales Estándar y una Evaluación de Impacto de Transferencia, pero es más conforme que GPT-5.6 porque: (1) Anthropic tiene un compromiso más claro de eliminación bajo petición; (2) Anthropic ha publicado Addendas de Procesamiento de Datos (DPA) que hacen referencia explícita a los Artículos 28 y 32 del RGPD; (3) la ley de EE. UU., aunque permite el acceso de las autoridades, no obliga a retener datos comerciales. Para datos personales no sensibles (cargos de trabajo, contexto empresarial genérico), la API de Claude con SCC + TIA es aceptable. Para datos de alta sensibilidad (salud, financieros, biométricos), se requiere despliegue local.',
           },
           {
             title: 'Claude (residencia de datos UE) — Riesgo medio, reducido por procesamiento en la UE',
             text: 'Anthropic ofrece una opción de residencia de datos en la UE donde los prompts se procesan en Irlanda o Alemania. Esto reduce el riesgo porque: (1) los datos permanecen dentro de la UE durante el procesamiento; (2) los datos se eliminan a los 30 días; (3) Anthropic se compromete al cumplimiento del RGPD. Sin embargo, los datos de entrenamiento detrás de los modelos Claude son de entrenamiento en EE. UU., y Anthropic es una empresa estadounidense, por lo que el cumplimiento total del Artículo 44 sigue requiriendo SCCs. Mejor que Claude EE. UU. para el RGPD, pero no equivalente al despliegue local.',
           },
           {
-            title: 'GPT-5.5 / GPT-5.5 Instant — Riesgo medio-alto',
+            title: 'GPT-5.6 / GPT-5.6 Luna — Riesgo medio-alto',
             text: 'Las API de OpenAI conllevan mayor riesgo que Claude porque: (1) la política de retención de datos de OpenAI es opaca — la empresa ha dicho que puede retener datos de usuarios para "mejoras de investigación y seguridad"; (2) no hay DPA publicada; (3) no hay opción de residencia de datos en la UE. Si eliges OpenAI, exige SCC explícita + TIA exhaustiva, y evita enviar datos de alta sensibilidad (salud, financieros, biométricos, genéticos). Para tareas de baja sensibilidad, es aceptable con SCC.',
           },
           {
@@ -419,7 +419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/local-llms/gdpr-llm-risk-comparison-2026',
       inLanguage: 'es',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -433,13 +433,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'مخاطر ⁨GDPR⁩ لنماذج ⁨LLM⁩: ⁨Qwen⁩ و⁨DeepSeek⁩ و⁨Llama⁩ و⁨Claude⁩',
     metaDescription: '⁨DeepSeek API⁩ أعلى مخاطر ⁨GDPR⁩؛ ⁨Qwen⁩ المحلي الأدنى خطراً؛ ⁨Claude/GPT API⁩ مخاطر متوسطة. مصفوفة مقارنة بالولاية القضائية وإقامة البيانات و⁨SCC⁩.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Advanced',
     audience: 'مديرو أمن المعلومات وفرق المشتريات ومسؤولو الامتثال الذين يختارون بين نماذج LLM الاحتكارية ومفتوحة الأوزان',
     primaryTerm: 'مقارنة مخاطر GDPR لنماذج LLM',
-    leadAnswerBlock: '**يمثل DeepSeek API أعلى مخاطر GDPR بين جميع نماذج LLM الرئيسية بسبب قانون الوصول إلى البيانات الصيني (PIPL)؛ ويتمتع Qwen و Llama المشغّلان محليًا بمخاطر منخفضة بالقدر نفسه؛ وتنطوي واجهات Claude و GPT-5.5 مع إقامة بيانات في الاتحاد الأوروبي على مخاطر متوسطة وتتطلب البنود التعاقدية القياسية (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    leadAnswerBlock: '**يمثل DeepSeek API أعلى مخاطر GDPR بين جميع نماذج LLM الرئيسية بسبب قانون الوصول إلى البيانات الصيني (PIPL)؛ ويتمتع Qwen و Llama المشغّلان محليًا بمخاطر منخفضة بالقدر نفسه؛ وتنطوي واجهات Claude و GPT-5.6 مع إقامة بيانات في الاتحاد الأوروبي على مخاطر متوسطة وتتطلب البنود التعاقدية القياسية (SCCs).**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'أربعة متجهات مخاطر GDPR لنماذج LLM', anchor: 'risk-vectors' },
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'يمتلك DeepSeek API أعلى مخاطر GDPR بين جميع نماذج LLM الرئيسية: تخضع الخوادم لقانون الوصول إلى البيانات الصيني (PIPL)، ولا يوجد قرار كفاية بين الاتحاد الأوروبي والصين، وتسمح شروط الخدمة صراحةً بمشاركة البيانات مع السلطات الصينية',
           'يُعد Qwen 3 14B و Llama 4 Scout المشغّلان محليًا الأقل مخاطرة: لا نقل بموجب المادة 44، ولا حاجة لـ SCC، وتبقى البيانات على أجهزتك',
-          'تنطوي واجهات Claude و GPT-5.5 Instant على مخاطر متوسطة: تتطلب الولاية القضائية الأمريكية البنود التعاقدية القياسية إضافةً إلى تقييم أثر النقل؛ وتقلل خيارات إقامة البيانات في الاتحاد الأوروبي (Claude EU) من المخاطر',
+          'تنطوي واجهات Claude و GPT-5.6 Luna على مخاطر متوسطة: تتطلب الولاية القضائية الأمريكية البنود التعاقدية القياسية إضافةً إلى تقييم أثر النقل؛ وتقلل خيارات إقامة البيانات في الاتحاد الأوروبي (Claude EU) من المخاطر',
           'الحزم الموصى بها: الشركات الناشئة (Claude + SCC)، المؤسسات ذات البيانات الحساسة (Qwen 24 GB محلي)، الشركات الكبرى (Qwen multi-GPU + عزل شبكي)',
           'تغطي مصفوفة قرار المخاطر خمسة متجهات: إقامة البيانات، الولاية القضائية لبيانات التدريب، الاحتفاظ بالبيانات في شروط الخدمة، اشتراط SCC، والحكم القانوني',
         ],
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'النشر': 'DeepSeek API', 'إقامة البيانات': 'الصين (Alibaba Cloud)', 'الولاية القضائية لبيانات التدريب': 'الصين (PIPL)', 'مخاطر الاحتفاظ في شروط الخدمة': 'تحتفظ صراحةً بحق مشاركة البيانات مع السلطات', 'هل SCC / TIA مطلوبة؟': 'نعم، لكنها غير فعّالة (لا كفاية بين الاتحاد الأوروبي والصين)', 'مستوى المخاطر الإجمالي': '🔴 الأعلى' },
           { 'النشر': 'Claude API (الولايات المتحدة)', 'إقامة البيانات': 'الولايات المتحدة (فرجينيا)', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'تلتزم Anthropic بحذف البيانات عند الطلب؛ احتفاظ افتراضي 30 يومًا', 'هل SCC / TIA مطلوبة؟': 'نعم، تتطلب SCC + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
-          { 'النشر': 'GPT-5.5 (الولايات المتحدة)', 'إقامة البيانات': 'الولايات المتحدة (مناطق متعددة)', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'قد تحتفظ OpenAI بالبيانات لتحسين النموذج؛ سياسة غامضة', 'هل SCC / TIA مطلوبة؟': 'نعم، تتطلب SCC + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
+          { 'النشر': 'GPT-5.6 (الولايات المتحدة)', 'إقامة البيانات': 'الولايات المتحدة (مناطق متعددة)', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة', 'مخاطر الاحتفاظ في شروط الخدمة': 'قد تحتفظ OpenAI بالبيانات لتحسين النموذج؛ سياسة غامضة', 'هل SCC / TIA مطلوبة؟': 'نعم، تتطلب SCC + TIA', 'مستوى المخاطر الإجمالي': '🟠 متوسط-مرتفع' },
           { 'النشر': 'Claude (إقامة بيانات في الاتحاد الأوروبي)', 'إقامة البيانات': 'الاتحاد الأوروبي (أيرلندا أو ألمانيا)', 'الولاية القضائية لبيانات التدريب': 'الولايات المتحدة (Anthropic)، تبقى البيانات في الاتحاد الأوروبي', 'مخاطر الاحتفاظ في شروط الخدمة': 'تلتزم Anthropic بإقامة في الاتحاد الأوروبي فقط + امتثال GDPR', 'هل SCC / TIA مطلوبة؟': 'نعم، SCC مناسبة لمعالجة في الاتحاد الأوروبي', 'مستوى المخاطر الإجمالي': '🟡 متوسط' },
           { 'النشر': 'Llama 4 Scout (محلي)', 'إقامة البيانات': 'أجهزتك (LAN)', 'الولاية القضائية لبيانات التدريب': 'مفتوح المصدر، لا احتفاظ تجاري', 'مخاطر الاحتفاظ في شروط الخدمة': 'أنت تتحكم في الاحتفاظ عبر السجلات المحلية فقط', 'هل SCC / TIA مطلوبة؟': 'لا', 'مستوى المخاطر الإجمالي': '🟢 الأدنى' },
           { 'النشر': 'Qwen 3 14B (محلي)', 'إقامة البيانات': 'أجهزتك (LAN)', 'الولاية القضائية لبيانات التدريب': 'مفتوح المصدر (Apache 2.0)، لا احتفاظ تجاري', 'مخاطر الاحتفاظ في شروط الخدمة': 'أنت تتحكم في الاحتفاظ عبر السجلات المحلية فقط', 'هل SCC / TIA مطلوبة؟': 'لا', 'مستوى المخاطر الإجمالي': '🟢 الأدنى' },
@@ -514,14 +514,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Claude API (الولايات المتحدة) — مخاطر متوسطة، قابلة للإدارة بـ SCC + TIA',
-            text: 'يتطلب Claude API البنود التعاقدية القياسية وتقييم أثر النقل، لكنه أكثر امتثالًا من GPT-5.5 لأن: (1) لدى Anthropic التزام أوضح بالحذف عند الطلب؛ (2) نشرت Anthropic ملاحق معالجة بيانات (DPA) تشير صراحةً إلى المادتين 28 و32 من GDPR؛ (3) القانون الأمريكي، رغم سماحه بوصول السلطات، لا يُلزم بالاحتفاظ بالبيانات التجارية. وللبيانات الشخصية غير الحساسة (المسميات الوظيفية، السياق المؤسسي العام)، يكون Claude API مع SCC + TIA مقبولًا. أما للبيانات شديدة الحساسية (الصحية، المالية، الحيوية)، فيلزم النشر المحلي.',
+            text: 'يتطلب Claude API البنود التعاقدية القياسية وتقييم أثر النقل، لكنه أكثر امتثالًا من GPT-5.6 لأن: (1) لدى Anthropic التزام أوضح بالحذف عند الطلب؛ (2) نشرت Anthropic ملاحق معالجة بيانات (DPA) تشير صراحةً إلى المادتين 28 و32 من GDPR؛ (3) القانون الأمريكي، رغم سماحه بوصول السلطات، لا يُلزم بالاحتفاظ بالبيانات التجارية. وللبيانات الشخصية غير الحساسة (المسميات الوظيفية، السياق المؤسسي العام)، يكون Claude API مع SCC + TIA مقبولًا. أما للبيانات شديدة الحساسية (الصحية، المالية، الحيوية)، فيلزم النشر المحلي.',
           },
           {
             title: 'Claude (إقامة بيانات في الاتحاد الأوروبي) — مخاطر متوسطة، مخففة بالمعالجة داخل الاتحاد',
             text: 'تقدم Anthropic خيار إقامة بيانات في الاتحاد الأوروبي حيث تُعالج prompts في أيرلندا أو ألمانيا. يقلل ذلك المخاطر لأن: (1) تبقى البيانات داخل الاتحاد أثناء المعالجة؛ (2) تُحذف البيانات بعد 30 يومًا؛ (3) تلتزم Anthropic بامتثال GDPR. ومع ذلك، فإن بيانات التدريب خلف نماذج Claude مدرَّبة في الولايات المتحدة، و Anthropic شركة أمريكية، لذا يظل الامتثال الكامل للمادة 44 يتطلب SCCs. أفضل من Claude الأمريكي لـ GDPR، لكنه ليس معادلًا للنشر المحلي.',
           },
           {
-            title: 'GPT-5.5 / GPT-5.5 Instant — مخاطر متوسطة-مرتفعة',
+            title: 'GPT-5.6 / GPT-5.6 Luna — مخاطر متوسطة-مرتفعة',
             text: 'تحمل واجهات OpenAI مخاطر أعلى من Claude لأن: (1) سياسة الاحتفاظ بالبيانات لدى OpenAI غامضة — صرّحت الشركة بأنها قد تحتفظ ببيانات المستخدمين لأغراض "تحسينات البحث والأمان"؛ (2) لا توجد DPA منشورة؛ (3) لا يوجد خيار إقامة بيانات في الاتحاد الأوروبي. إذا اخترت OpenAI، فاشترط SCC صريحة + TIA شاملة، وتجنّب إرسال بيانات شديدة الحساسية (صحية، مالية، حيوية، جينية). وللمهام منخفضة الحساسية تكون مقبولة مع SCC.',
           },
           {
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/local-llms/gdpr-llm-risk-comparison-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'DSGVO-Risikomatrix 2026: Qwen, DeepSeek, Llama, Claude',
     metaDescription: 'DSGVO-LLM-Vergleich: DeepSeek API (höchstes Risiko), Qwen lokal (niedrigstes), Llama lokal, Claude/GPT API. Risikomatrix nach Speicherung und ToS.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8 min Lesedauer',
     sections: {
       tldr: {
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek API trägt das höchste DSGVO-Risiko aller großen LLMs, da Server dem chinesischen Datenzugangsgesetz (PIPL) unterliegen; Qwen und Llama lokal haben gleichwertiges niedriges Risiko',
-          'Claude und GPT-5.5 APIs mit EU-Datenspeicherung tragen mittleres Risiko und erfordern Standardvertragsklauseln (SVKs)',
+          'Claude und GPT-5.6 APIs mit EU-Datenspeicherung tragen mittleres Risiko und erfordern Standardvertragsklauseln (SVKs)',
           'Empfohlene Stacks: Startups (Claude + SVK), datenempfindliche Orgs (Qwen 24 GB lokal), Unternehmen (Multi-GPU Qwen + Air-Gap)',
           'Risikoentscheidungsmatrix behandelt fünf Vektoren: Datenspeicherung, Ausbildungsdaten-Gerichtsbarkeit, ToS-Datenspeicherung, SVK-Anforderung und rechtliches Urteil',
           'Lokale Qwen- und Llama-Modelle erfüllen Artikel 44 (kein Transfer), Artikel 25 (Datenschutz durch Design) und Artikel 32 (Sicherheit)',
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Matrice de risque RGPD : comparaison LLM Qwen DeepSeek Llama Claude | PromptQuorum',
     metaDescription: 'Comparaison LLM conforme au RGPD : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction, ToS et exigences SCC. Mise à jour mai 2026.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8 min de lecture',
     sections: {
       tldr: {
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek API présente le risque RGPD le plus élevé de tous les grands LLM car les serveurs sont soumis à la loi chinoise sur l\'accès aux données (PIPL) ; Qwen et Llama locaux portent un risque équivalent plus faible',
-          'Claude et les API GPT-5.5 avec résidence des données dans l\'UE portent un risque moyen et nécessitent des clauses contractuelles types (CCT)',
+          'Claude et les API GPT-5.6 avec résidence des données dans l\'UE portent un risque moyen et nécessitent des clauses contractuelles types (CCT)',
           'Piles recommandées : startups (Claude + CCT), organisations sensibles aux données (Qwen 24 Go local), entreprises (Qwen multi-GPU + air-gap)',
           'La matrice de décision des risques couvre cinq vecteurs : résidence des données, juridiction des données d\'entraînement, conservation des données ToS et exigence CCT/TIA',
           'Les modèles Qwen et Llama locaux satisfont les articles 44 (pas de transfert), 25 (protection des données dès la conception) et 32 (sécurité)',
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'GDPR リスク行列: LLM 比較 Qwen DeepSeek Llama Claude | PromptQuorum',
     metaDescription: 'GDPR準拠のLLM比較: DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。2026年5月更新。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8分間の読取',
     sections: {
       tldr: {
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek APIはすべての主要なLLMの中で最高のGDPRリスクを持っています。サーバーが中国のデータアクセス法（PIPL）の対象となるためです。QwenおよびLlamaをローカルで実行すると、同等の低リスクになります。',
-          'ClaudeおよびGPT-5.5 APIはEUデータ拠点を備えた場合、中程度のリスクを負い、標準契約条項（SCC）が必要です。',
+          'ClaudeおよびGPT-5.6 APIはEUデータ拠点を備えた場合、中程度のリスクを負い、標準契約条項（SCC）が必要です。',
           '推奨スタック：スタートアップ（Claude + SCC）、データ敏感な組織（Qwen 24 GBローカル）、エンタープライズ（マルチGPU Qwen + エアギャップ）',
           'リスク決定行列は5つのベクトルをカバーしています：データ拠点、トレーニングデータ管轄権、ToSデータ保持、SCC要件、および法的判断',
           'ローカルQwenおよびLlamaモデルは、第44条（転送なし）、第25条（デザインによるデータ保護）、および第32条（セキュリティ）を満たします。',
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'GDPR 风险矩阵: LLM 比较 Qwen DeepSeek Llama Claude | PromptQuorum',
     metaDescription: 'GDPR合规LLM比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。更新于2026年5月。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8分钟阅读',
     sections: {
       tldr: {
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'DeepSeek API在所有主要LLM中呈现最高的GDPR风险，因为服务器受中国数据访问法（PIPL）约束；Qwen和Llama本地运行风险相同且最低',
-          'Claude和GPT-5.5 API具有欧盟数据驻留时承担中等风险，需要标准合同条款（SCC）',
+          'Claude和GPT-5.6 API具有欧盟数据驻留时承担中等风险，需要标准合同条款（SCC）',
           '推荐堆栈：初创企业（Claude + SCC）、数据敏感组织（Qwen 24GB本地）、企业（多GPU Qwen + 气隙）',
           '风险决策矩阵涵盖五个向量：数据驻留、训练数据管辖权、ToS数据保留、SCC要求和法律裁定',
           '本地Qwen和Llama模型满足第44条（无转移）、第25条（设计中的数据保护）和第32条（安全性）',
@@ -961,18 +961,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Matriz de risco GDPR: Qwen, DeepSeek, Llama e Claude',
     metaDescription: 'Comparação de LLMs em conformidade com GDPR/LGPD: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8 min de leitura',
     educationalLevel: 'Advanced',
     audience: 'CISOs, equipes de compras e responsáveis por conformidade que escolhem entre LLMs proprietários e de pesos abertos',
     primaryTerm: 'comparação de risco GDPR modelos LLM',
-    leadAnswerBlock: '**A API da DeepSeek apresenta o maior risco de GDPR entre os principais LLMs por causa da lei chinesa de acesso a dados (PIPL); Qwen e Llama executados localmente têm risco igualmente baixo; as APIs de Claude e GPT-5.5 com residência na UE têm risco médio e exigem Cláusulas Contratuais Padrão (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    leadAnswerBlock: '**A API da DeepSeek apresenta o maior risco de GDPR entre os principais LLMs por causa da lei chinesa de acesso a dados (PIPL); Qwen e Llama executados localmente têm risco igualmente baixo; as APIs de Claude e GPT-5.6 com residência na UE têm risco médio e exigem Cláusulas Contratuais Padrão (SCCs).**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       pt: {
         question: 'Qual LLM é mais seguro sob o GDPR?', // VERIFY
-        answer: 'Qwen 3 14B ou Llama 4 Scout executados localmente no seu próprio hardware — nenhum dado sai da sua jurisdição, sem transferência do Artigo 44, sem SCC ou TIA necessária. A API da DeepSeek é a de maior risco porque os servidores obedecem à lei chinesa de dados (PIPL). As APIs de Claude e GPT-5.5 exigem residência de dados na UE + SCCs para conformidade de risco médio.', // VERIFY
+        answer: 'Qwen 3 14B ou Llama 4 Scout executados localmente no seu próprio hardware — nenhum dado sai da sua jurisdição, sem transferência do Artigo 44, sem SCC ou TIA necessária. A API da DeepSeek é a de maior risco porque os servidores obedecem à lei chinesa de dados (PIPL). As APIs de Claude e GPT-5.6 exigem residência de dados na UE + SCCs para conformidade de risco médio.', // VERIFY
         bullets: [
           'Qwen local: menor risco. Sem transferência, pesos Apache 2.0, 12–24 GB VRAM, configuração em <30 min.', // VERIFY
           'DeepSeek API: maior risco. Jurisdição PIPL, sem adequação da UE, os ToS permitem compartilhamento de dados determinado pelo Estado.', // VERIFY
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A API da DeepSeek tem o maior risco de GDPR entre todos os principais LLMs: os servidores estão sujeitos à lei chinesa de acesso a dados (PIPL), não existe decisão de adequação UE-China, e os ToS permitem explicitamente compartilhar dados com as autoridades chinesas',
           'Qwen 3 14B e Llama 4 Scout executados localmente têm o menor risco: sem transferência segundo o Artigo 44, sem SCC exigida, os dados permanecem no seu hardware',
-          'As APIs de Claude e GPT-5.5 Instant têm risco médio: a jurisdição dos EUA exige Cláusulas Contratuais Padrão mais Avaliação de Impacto da Transferência; as opções de residência de dados na UE (Claude EU) reduzem o risco',
+          'As APIs de Claude e GPT-5.6 Luna têm risco médio: a jurisdição dos EUA exige Cláusulas Contratuais Padrão mais Avaliação de Impacto da Transferência; as opções de residência de dados na UE (Claude EU) reduzem o risco',
           'Stacks recomendados: startups (Claude + SCC), organizações com dados sensíveis (Qwen 24 GB local), empresas (Qwen multi-GPU + air-gap)',
           'A matriz de decisão de risco cobre cinco vetores: residência de dados, jurisdição dos dados de treinamento, retenção de dados nos ToS, exigência de SCC e veredito jurídico',
         ],
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Implantação': 'DeepSeek API', 'Residência de dados': 'China (Alibaba Cloud)', 'Jurisdição dos dados de treinamento': 'China (PIPL)', 'Risco de retenção nos ToS': 'Reserva-se explicitamente o direito de compartilhar dados com as autoridades', 'SCC / TIA exigida?': 'Sim, mas ineficaz (sem adequação UE-China)', 'Nível de risco geral': '🔴 Maior' },
           { 'Implantação': 'Claude API (EUA)', 'Residência de dados': 'EUA (Virgínia)', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'A Anthropic se compromete a excluir os dados mediante solicitação; retenção padrão de 30 dias', 'SCC / TIA exigida?': 'Sim, exige SCC + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
-          { 'Implantação': 'GPT-5.5 (EUA)', 'Residência de dados': 'EUA (várias regiões)', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'A OpenAI pode reter para melhoria do modelo; política opaca', 'SCC / TIA exigida?': 'Sim, exige SCC + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
+          { 'Implantação': 'GPT-5.6 (EUA)', 'Residência de dados': 'EUA (várias regiões)', 'Jurisdição dos dados de treinamento': 'EUA', 'Risco de retenção nos ToS': 'A OpenAI pode reter para melhoria do modelo; política opaca', 'SCC / TIA exigida?': 'Sim, exige SCC + TIA', 'Nível de risco geral': '🟠 Médio-alto' },
           { 'Implantação': 'Claude (residência de dados na UE)', 'Residência de dados': 'UE (Irlanda ou Alemanha)', 'Jurisdição dos dados de treinamento': 'EUA (Anthropic), dados permanecem na UE', 'Risco de retenção nos ToS': 'A Anthropic se compromete com residência apenas na UE + conformidade com GDPR', 'SCC / TIA exigida?': 'Sim, SCC adequada por processamento na UE', 'Nível de risco geral': '🟡 Médio' },
           { 'Implantação': 'Llama 4 Scout (local)', 'Residência de dados': 'Seu hardware (LAN)', 'Jurisdição dos dados de treinamento': 'Código aberto, sem retenção comercial', 'Risco de retenção nos ToS': 'Você controla a retenção apenas via logs locais', 'SCC / TIA exigida?': 'Não', 'Nível de risco geral': '🟢 Menor' },
           { 'Implantação': 'Qwen 3 14B (local)', 'Residência de dados': 'Seu hardware (LAN)', 'Jurisdição dos dados de treinamento': 'Código aberto (Apache 2.0), sem retenção comercial', 'Risco de retenção nos ToS': 'Você controla a retenção apenas via logs locais', 'SCC / TIA exigida?': 'Não', 'Nível de risco geral': '🟢 Menor' },
@@ -1054,14 +1054,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Claude API (EUA) — Risco médio, gerenciável com SCC + TIA',
-            text: 'A API do Claude exige Cláusulas Contratuais Padrão e uma Avaliação de Impacto da Transferência, mas é mais conforme que o GPT-5.5 porque: (1) a Anthropic tem um compromisso mais claro de exclusão mediante solicitação; (2) a Anthropic publicou Adendos de Processamento de Dados (DPA) que fazem referência explícita aos Artigos 28 e 32 do GDPR; (3) a lei dos EUA, embora permita o acesso das autoridades, não obriga a retenção comercial de dados. Para dados pessoais não sensíveis (cargos, contexto empresarial genérico), a API do Claude com SCC + TIA é aceitável. Para dados de alta sensibilidade (saúde, financeiros, biométricos), é necessária a implantação local.',
+            text: 'A API do Claude exige Cláusulas Contratuais Padrão e uma Avaliação de Impacto da Transferência, mas é mais conforme que o GPT-5.6 porque: (1) a Anthropic tem um compromisso mais claro de exclusão mediante solicitação; (2) a Anthropic publicou Adendos de Processamento de Dados (DPA) que fazem referência explícita aos Artigos 28 e 32 do GDPR; (3) a lei dos EUA, embora permita o acesso das autoridades, não obriga a retenção comercial de dados. Para dados pessoais não sensíveis (cargos, contexto empresarial genérico), a API do Claude com SCC + TIA é aceitável. Para dados de alta sensibilidade (saúde, financeiros, biométricos), é necessária a implantação local.',
           },
           {
             title: 'Claude (residência de dados na UE) — Risco médio, reduzido pelo processamento na UE',
             text: 'A Anthropic oferece uma opção de residência de dados na UE em que os prompts são processados na Irlanda ou na Alemanha. Isso reduz o risco porque: (1) os dados permanecem dentro da UE durante o processamento; (2) os dados são excluídos após 30 dias; (3) a Anthropic se compromete com a conformidade com o GDPR. Porém, os dados de treinamento por trás dos modelos Claude ainda são treinados nos EUA, e a Anthropic é uma empresa americana, então a conformidade total com o Artigo 44 ainda exige SCCs. Melhor que o Claude dos EUA para o GDPR, mas não equivalente à implantação local.',
           },
           {
-            title: 'GPT-5.5 / GPT-5.5 Instant — Risco médio-alto',
+            title: 'GPT-5.6 / GPT-5.6 Luna — Risco médio-alto',
             text: 'As APIs da OpenAI carregam maior risco que o Claude porque: (1) a política de retenção de dados da OpenAI é opaca — a empresa já disse que pode reter dados de usuários para "melhorias de pesquisa e segurança"; (2) não há DPA publicado; (3) não há opção de residência de dados na UE. Se você escolher a OpenAI, exija SCC explícita + TIA abrangente e evite enviar dados de alta sensibilidade (saúde, financeiros, biométricos, genéticos). Para tarefas de baixa sensibilidade, é aceitável com SCC.',
           },
           {
@@ -1151,7 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/local-llms/gdpr-llm-risk-comparison-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -1166,18 +1166,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'GDPR 리스크 매트릭스: Qwen·DeepSeek·Llama·Claude 비교',
     metaDescription: 'GDPR 준수 LLM 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스. 2026년 5월 업데이트.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-07-13',
     readTime: '8분 읽기',
     educationalLevel: 'Advanced',
     audience: '독점적 LLM과 오픈 웨이트 LLM 중에서 선택하는 CISO, 조달팀, 컴플라이언스 담당자',
     primaryTerm: 'GDPR 리스크 비교 LLM 모델',
-    leadAnswerBlock: '**DeepSeek API는 중국 데이터 접근법(PIPL)으로 인해 주요 LLM 중 GDPR 리스크가 가장 높습니다. Qwen과 Llama를 로컬로 실행하면 동등하게 낮은 위험을 가집니다. EU 데이터 거주지를 갖춘 Claude 및 GPT-5.5 API는 중간 위험을 가지며 표준 계약 조항(SCC)이 필요합니다.**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 4.6', 'GPT-5.5 Instant', 'Claude Opus 4.8'],
+    leadAnswerBlock: '**DeepSeek API는 중국 데이터 접근법(PIPL)으로 인해 주요 LLM 중 GDPR 리스크가 가장 높습니다. Qwen과 Llama를 로컬로 실행하면 동등하게 낮은 위험을 가집니다. EU 데이터 거주지를 갖춘 Claude 및 GPT-5.6 API는 중간 위험을 가지며 표준 계약 조항(SCC)이 필요합니다.**',
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       ko: {
         question: 'GDPR 하에서 가장 안전한 LLM은 무엇입니까?',
-        answer: 'Qwen 3 14B 또는 Llama 4 Scout을 자체 하드웨어에서 로컬로 실행하는 것이 가장 안전합니다. 데이터가 관할권을 벗어나지 않으며, 제44조 이전도 없고, SCC나 TIA도 필요하지 않습니다. DeepSeek API는 서버가 중국 데이터법(PIPL)을 따르기 때문에 위험도가 가장 높습니다. Claude 및 GPT-5.5 API는 중간 수준의 규정 준수를 위해 EU 데이터 거주지 + SCC가 필요합니다.',
+        answer: 'Qwen 3 14B 또는 Llama 4 Scout을 자체 하드웨어에서 로컬로 실행하는 것이 가장 안전합니다. 데이터가 관할권을 벗어나지 않으며, 제44조 이전도 없고, SCC나 TIA도 필요하지 않습니다. DeepSeek API는 서버가 중국 데이터법(PIPL)을 따르기 때문에 위험도가 가장 높습니다. Claude 및 GPT-5.6 API는 중간 수준의 규정 준수를 위해 EU 데이터 거주지 + SCC가 필요합니다.',
         bullets: [
           'Qwen 로컬: 최저 위험. 이전 없음, Apache 2.0 가중치, 12–24 GB VRAM, 30분 이내 설정.',
           'DeepSeek API: 최고 위험. PIPL 관할권, EU 적정성 결정 없음, ToS는 국가 명령에 의한 데이터 공유를 허용.',
@@ -1200,7 +1200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'DeepSeek API는 최고 위험: 서버가 중국 데이터 접근법(PIPL)의 적용을 받으며, 중국에 대한 EU 적정성 결정이 없고, ToS는 중국 당국과의 데이터 공유를 명시적으로 허용합니다',
           'Qwen 3 14B 및 Llama 4 Scout을 로컬로 실행하면 최저 위험: 제44조 이전 없음, SCC 불필요, 데이터가 자체 하드웨어에 보관됩니다',
-          'Claude API 및 GPT-5.5 Instant는 중간 위험: 미국 관할권은 표준 계약 조항 + 이전 영향 평가를 필요로 하며, EU 데이터 거주지 옵션(Claude EU)이 위험을 줄여줍니다',
+          'Claude API 및 GPT-5.6 Luna는 중간 위험: 미국 관할권은 표준 계약 조항 + 이전 영향 평가를 필요로 하며, EU 데이터 거주지 옵션(Claude EU)이 위험을 줄여줍니다',
           '권장 스택: 스타트업(Claude + SCC), 데이터 민감 조직(Qwen 24 GB 로컬), 기업(멀티 GPU Qwen + 에어갭)',
           '리스크 결정 매트릭스는 데이터 거주지, 학습 데이터 관할권, ToS 데이터 보존, SCC 요건, 법적 판정의 5가지 벡터를 다룹니다',
         ],
@@ -1240,7 +1240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '배포 환경': 'DeepSeek API', '데이터 거주지': '중국(Alibaba Cloud)', '학습 데이터 관할권': '중국(PIPL)', 'ToS 보존 위험': '당국 공유 권한 명시적 유보', 'SCC / TIA 필요 여부': '필요하나 효과 없음(EU-중국 적정성 결정 없음)', '전체 위험 수준': '🔴 최고' },
           { '배포 환경': 'Claude API (미국)', '데이터 거주지': '미국(버지니아)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'Anthropic은 요청 시 삭제 약정; 기본 30일 보존', 'SCC / TIA 필요 여부': 'SCC + TIA 필요', '전체 위험 수준': '🟠 중상' },
-          { '배포 환경': 'GPT-5.5 (미국)', '데이터 거주지': '미국(다수 지역)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'OpenAI는 모델 개선 목적 보존 가능; 정책 불투명', 'SCC / TIA 필요 여부': 'SCC + TIA 필요', '전체 위험 수준': '🟠 중상' },
+          { '배포 환경': 'GPT-5.6 (미국)', '데이터 거주지': '미국(다수 지역)', '학습 데이터 관할권': '미국', 'ToS 보존 위험': 'OpenAI는 모델 개선 목적 보존 가능; 정책 불투명', 'SCC / TIA 필요 여부': 'SCC + TIA 필요', '전체 위험 수준': '🟠 중상' },
           { '배포 환경': 'Claude (EU 데이터 거주지)', '데이터 거주지': 'EU(아일랜드 또는 독일)', '학습 데이터 관할권': '미국(Anthropic), 데이터는 EU에 보관', 'ToS 보존 위험': 'Anthropic은 EU 전용 거주지 + GDPR 준수 약정', 'SCC / TIA 필요 여부': 'EU 처리로 SCC 충분', '전체 위험 수준': '🟡 중간' },
           { '배포 환경': 'Llama 4 Scout (로컬)', '데이터 거주지': '자체 하드웨어(LAN)', '학습 데이터 관할권': '오픈소스, 상업적 보존 없음', 'ToS 보존 위험': '로컬 로그를 통해 사용자가 보존 통제', 'SCC / TIA 필요 여부': '없음', '전체 위험 수준': '🟢 최저' },
           { '배포 환경': 'Qwen 3 14B (로컬)', '데이터 거주지': '자체 하드웨어(LAN)', '학습 데이터 관할권': '오픈소스(Apache 2.0), 상업적 보존 없음', 'ToS 보존 위험': '로컬 로그를 통해 사용자가 보존 통제', 'SCC / TIA 필요 여부': '없음', '전체 위험 수준': '🟢 최저' },
@@ -1259,14 +1259,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Claude API (미국) — 중간 위험, SCC + TIA로 관리 가능',
-            text: 'Claude API는 표준 계약 조항 및 이전 영향 평가가 필요하지만 GPT-5.5보다 더 준수됩니다. (1) Anthropic은 요청 시 삭제에 대한 명확한 약정을 가지고 있으며, (2) Anthropic은 GDPR 제28조 및 제32조를 명시적으로 참조하는 데이터 처리 부속서(DPA)를 공개했고, (3) 미국법은 법 집행 기관의 접근을 허용하지만 상업적 데이터 보존을 의무화하지는 않습니다. 민감하지 않은 개인정보(직함, 일반 비즈니스 컨텍스트)의 경우 SCC + TIA를 갖춘 Claude API가 허용됩니다. 고감도 데이터(건강, 금융, 생체정보)는 로컬 배포가 필요합니다.',
+            text: 'Claude API는 표준 계약 조항 및 이전 영향 평가가 필요하지만 GPT-5.6보다 더 준수됩니다. (1) Anthropic은 요청 시 삭제에 대한 명확한 약정을 가지고 있으며, (2) Anthropic은 GDPR 제28조 및 제32조를 명시적으로 참조하는 데이터 처리 부속서(DPA)를 공개했고, (3) 미국법은 법 집행 기관의 접근을 허용하지만 상업적 데이터 보존을 의무화하지는 않습니다. 민감하지 않은 개인정보(직함, 일반 비즈니스 컨텍스트)의 경우 SCC + TIA를 갖춘 Claude API가 허용됩니다. 고감도 데이터(건강, 금융, 생체정보)는 로컬 배포가 필요합니다.',
           },
           {
             title: 'Claude (EU 데이터 거주지) — 중간 위험, EU 처리로 위험 감소',
             text: 'Anthropic은 프롬프트가 아일랜드 또는 독일에서 처리되는 EU 데이터 거주지 옵션을 제공합니다. (1) 처리 중 데이터가 EU 내에 보관되고, (2) 30일 후 삭제되며, (3) Anthropic이 GDPR 준수를 약정합니다. 그러나 Claude 모델의 학습 데이터는 여전히 미국에서 학습되었고 Anthropic은 미국 기업이므로, 완전한 제44조 준수를 위해서는 여전히 SCC가 필요합니다. 미국 Claude보다 GDPR 측면에서 낫지만 로컬 배포와 동등하지는 않습니다.',
           },
           {
-            title: 'GPT-5.5 / GPT-5.5 Instant — 중상 위험',
+            title: 'GPT-5.6 / GPT-5.6 Luna — 중상 위험',
             text: 'OpenAI API는 Claude보다 높은 위험을 가집니다. (1) OpenAI의 데이터 보존 정책이 불투명하며 "연구 및 안전 개선"을 위해 사용자 데이터를 보존할 수 있다고 밝혔고, (2) 공개된 DPA가 없으며, (3) EU 데이터 거주지 옵션이 없습니다. OpenAI를 선택하는 경우, 명시적인 SCC + 포괄적인 TIA가 필요하며 고감도 데이터(건강, 금융, 생체정보, 유전자 정보)는 전송하지 마십시오. 저감도 작업의 경우 SCC를 갖추면 허용됩니다.',
           },
           {

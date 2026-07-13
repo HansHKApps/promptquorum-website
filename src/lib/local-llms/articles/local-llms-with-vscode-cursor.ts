@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
-      dateModified: '2026-06-20',
+      dateModified: '2026-07-13',
       seoTitle: 'Local LLMs in VS Code and Cursor: 2026 Setup Guide',
       intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B-13B models and require 8-16 GB RAM. This guide covers setup, best models, and performance tuning.',
       metaDescription: 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Not tuning debounce latency.** If completions feel "laggy", increase debounceWaitMs (e.g., to 400 ms) to avoid showing incomplete suggestions.',
             '**Using a model too large for your VRAM.** A 13B model + editor overhead can use 12+ GB. On 8GB machines, stick with 7B models.',
-            '**Expecting cloud-level code quality.** GPT-5.5 is significantly better at code than any 7B model. Local completions are 70-80% of cloud quality.',
+            '**Expecting cloud-level code quality.** GPT-5.6 is significantly better at code than any 7B model. Local completions are 70-80% of cloud quality.',
             '**Running inference on CPU.** CPU completions are impractical (5-10 second latency). GPU is required for usable completions.',
           ],
         },
@@ -152,7 +152,7 @@ schema: {
         'description': 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-04',
+        'dateModified': '2026-07-13',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -344,7 +344,7 @@ schema: {
           items: [
             '**Keine Debounce-Latenz-Optimierung**: Falls Vervollständigungen sich "langsam" anfühlen, erhöhen Sie debounceWaitMs (z.B. auf 400 ms), um unvollständige Vorschläge zu vermeiden.',
             '**Verwendung eines für Ihren VRAM zu großen Modells**: Ein 13B-Modell + Editor-Overhead kann 12+ GB verwenden. Bei 8GB-Maschinen bleiben Sie mit 7B-Modellen.',
-            '**Erwartung von Cloud-Level-Code-Qualität**: GPT-5.5 ist deutlich besser bei Code als jedes 7B-Modell. Lokale Vervollständigungen sind 70-80% der Cloud-Qualität.',
+            '**Erwartung von Cloud-Level-Code-Qualität**: GPT-5.6 ist deutlich besser bei Code als jedes 7B-Modell. Lokale Vervollständigungen sind 70-80% der Cloud-Qualität.',
             '**Ausführung von Inferenz auf CPU**: CPU-Vervollständigungen sind unpraktisch (5-10 Sekunden Latenz). GPU ist erforderlich für nutzbare Vervollständigungen.',
           ],
         },
@@ -375,7 +375,7 @@ schema: {
           title: 'Lokale LLMs für deutsche Entwickler: DSGVO, Cursor Pro und Privacy',
           content: [
             'Für deutsche Softwareentwickler ist Cursor Pro ein zweischneidiges Schwert: Leistungsstarke KI-Features, aber Code wird an US-Server übertragen. Bei Projekten mit personenbezogenen Daten, Kundendaten oder vertraulichem Quellcode ist dies nach DSGVO Art. 28 (Auftragsverarbeitung) problematisch ohne entsprechenden DPA mit Anthropic/OpenAI.',
-            'Die datenschutzkonforme Alternative: Continue.dev mit lokalem LLM (Ollama + DeepSeek Coder oder Qwen3-Coder). Kein Code verlässt das Gerät, kein DPA nötig, BSI Grundschutz-kompatibel. Abstriche bei der Modellqualität gegenüber Claude Sonnet 4.6 sind bei einigen Tasks spürbar, bei anderen nicht.',
+            'Die datenschutzkonforme Alternative: Continue.dev mit lokalem LLM (Ollama + DeepSeek Coder oder Qwen3-Coder). Kein Code verlässt das Gerät, kein DPA nötig, BSI Grundschutz-kompatibel. Abstriche bei der Modellqualität gegenüber Claude Sonnet 5 sind bei einigen Tasks spürbar, bei anderen nicht.',
           ],
           items: [
             '**DSGVO und Cursor Pro:** Cursor überträgt Code-Snippets zur KI-Verarbeitung. Für Open-Source-Projekte unproblematisch. Für Projekte mit Gesundheits-, Finanz- oder personenbezogenen Daten: Cursor Business mit EU Data Residency-Option prüfen oder auf lokale Alternative wechseln.',
@@ -534,7 +534,7 @@ schema: {
           items: [
             '**Ne pas optimiser la latence de debounce** : Si les complétions semblent « lentes », augmentez debounceWaitMs (par exemple à 400 ms) pour éviter les suggestions incomplètes.',
             '**Utiliser un modèle trop grand pour votre RAM** : Un modèle 13B + surcharge d\'éditeur peut utiliser 12+ Go. Sur les machines 8Go, restez avec les modèles 7B.',
-            '**Attendre une qualité de code au niveau du cloud** : GPT-5.5 est bien meilleur pour le code que n\'importe quel modèle 7B. Les complétions locales représentent 70-80% de la qualité cloud.',
+            '**Attendre une qualité de code au niveau du cloud** : GPT-5.6 est bien meilleur pour le code que n\'importe quel modèle 7B. Les complétions locales représentent 70-80% de la qualité cloud.',
             '**Exécution de l\'inférence sur CPU** : Les complétions CPU sont impratiques (latence 5-10 secondes). GPU est requis pour les complétions utilisables.',
           ],
         },
@@ -708,7 +708,7 @@ schema: {
           items: [
             '**Debounceレイテンシを調整しない**：補完が「遅い」と感じたら、debounceWaitMsを増やす（例えば400 ms）して不完全な提案を表示しない。',
             '**VRAMに対して大きすぎるモデルを使用**：13Bモデル+エディタオーバーヘッドは12+ GB使用できる。8GBマシンでは7Bモデルを使用。',
-            '**クラウドレベルのコード品質を期待**：GPT-5.5はどの7Bモデルよりもコードで大幅に優れている。ローカル補完はクラウド品質の70〜80%。',
+            '**クラウドレベルのコード品質を期待**：GPT-5.6はどの7Bモデルよりもコードで大幅に優れている。ローカル補完はクラウド品質の70〜80%。',
             '**CPUで推論を実行**：CPU補完は非実用的（5〜10秒レイテンシ）。GPUは有用な補完に必要。',
           ],
         },
@@ -897,7 +897,7 @@ schema: {
           items: [
             '**不调整去抖延迟**：如果补全感觉"迟缓"，增加debounceWaitMs（例如400毫秒）以避免显示不完整建议。',
             '**使用对您的显存来说过大的模型**：13B模型+编辑器开销可使用12+ GB。在8GB机器上，使用7B模型。',
-            '**期望云级代码质量**：GPT-5.5在代码方面比任何7B模型好得多。本地补全达到云质量的70-80%。',
+            '**期望云级代码质量**：GPT-5.6在代码方面比任何7B模型好得多。本地补全达到云质量的70-80%。',
             '**在CPU上运行推理**：CPU补全不实用（5-10秒延迟）。显存对有用补全是必需的。',
           ],
         },
@@ -1073,7 +1073,7 @@ schema: {
           items: [
             '**No ajustar la latencia de debounce**: Si las completaciones se sienten "lentas", aumenta debounceWaitMs (por ejemplo, a 400 ms) para evitar mostrar sugerencias incompletas.',
             '**Usar un modelo demasiado grande para tu VRAM**: Un modelo 13B más la sobrecarga del editor puede usar más de 12 GB. En máquinas de 8 GB, quédate con modelos 7B.',
-            '**Esperar calidad de código al nivel de la nube**: GPT-5.5 es significativamente mejor en código que cualquier modelo 7B. Las completaciones locales representan el 70-80% de la calidad de la nube.',
+            '**Esperar calidad de código al nivel de la nube**: GPT-5.6 es significativamente mejor en código que cualquier modelo 7B. Las completaciones locales representan el 70-80% de la calidad de la nube.',
             '**Ejecutar la inferencia en CPU**: Las completaciones en CPU son poco prácticas (latencia de 5-10 segundos). La GPU es necesaria para obtener completaciones utilizables.',
           ],
         },
@@ -1249,7 +1249,7 @@ schema: {
           items: [
             '**عدم ضبط زمن استجابة debounce**: إذا بدت الإكمالات "بطيئة"، زِد debounceWaitMs (مثلًا إلى 400 مللي ثانية) لتجنّب عرض اقتراحات غير مكتملة.',
             '**استخدام نموذج كبير جدًا على VRAM الخاص بك**: نموذج 13B زائد عبء المحرر قد يستخدم أكثر من 12 GB. على أجهزة 8 GB، التزم بنماذج 7B.',
-            '**توقّع جودة شيفرة بمستوى السحابة**: GPT-5.5 أفضل بشكل كبير في الشيفرة من أي نموذج 7B. تمثّل الإكمالات المحلية 70-80% من جودة السحابة.',
+            '**توقّع جودة شيفرة بمستوى السحابة**: GPT-5.6 أفضل بشكل كبير في الشيفرة من أي نموذج 7B. تمثّل الإكمالات المحلية 70-80% من جودة السحابة.',
             '**تشغيل الاستدلال على CPU**: الإكمالات على CPU غير عملية (زمن استجابة 5-10 ثوانٍ). GPU ضرورية للحصول على إكمالات قابلة للاستخدام.',
           ],
         },
@@ -1425,7 +1425,7 @@ schema: {
           items: [
             '**Não ajustar a latência de debounce**: Se os completamentos parecerem "lentos", aumente o debounceWaitMs (por exemplo, para 400 ms) para evitar mostrar sugestões incompletas.',
             '**Usar um modelo grande demais para a sua VRAM**: Um modelo 13B mais o overhead do editor pode usar mais de 12 GB. Em máquinas de 8 GB, fique com modelos 7B.',
-            '**Esperar qualidade de código no nível da nuvem**: O GPT-5.5 é significativamente melhor em código que qualquer modelo 7B. Os completamentos locais representam 70-80% da qualidade da nuvem.',
+            '**Esperar qualidade de código no nível da nuvem**: O GPT-5.6 é significativamente melhor em código que qualquer modelo 7B. Os completamentos locais representam 70-80% da qualidade da nuvem.',
             '**Rodar a inferência na CPU**: Os completamentos na CPU são pouco práticos (latência de 5-10 segundos). A GPU é necessária para completamentos utilizáveis.',
           ],
         },
@@ -1594,7 +1594,7 @@ schema: {
           items: [
             '**디바운스 지연 시간 미조정.** 자동 완성이 "느리게" 느껴진다면 debounceWaitMs를 늘리십시오(예: 400ms). 불완전한 제안이 나타나는 것을 방지할 수 있습니다.',
             '**VRAM에 비해 너무 큰 모델 사용.** 13B 모델과 편집기 오버헤드를 합치면 12GB 이상이 필요할 수 있습니다. 8GB 머신에서는 7B 모델을 사용하십시오.',
-            '**클라우드 수준의 코드 품질 기대.** GPT-5.5는 7B 모델보다 코드 품질이 현저히 높습니다. 로컬 자동 완성은 클라우드 품질의 70~80% 수준입니다.',
+            '**클라우드 수준의 코드 품질 기대.** GPT-5.6는 7B 모델보다 코드 품질이 현저히 높습니다. 로컬 자동 완성은 클라우드 품질의 70~80% 수준입니다.',
             '**CPU에서 추론 실행.** CPU 자동 완성은 비실용적입니다(5~10초 지연). 실용적인 자동 완성을 위해서는 GPU가 필요합니다.',
           ],
         },

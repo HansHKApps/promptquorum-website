@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
         description: 'What prompt chaining is, why it matters, and how to design multi-step AI workflows that are easier to control and reuse.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-07-13',
         keywords: ['prompt chaining', 'prompt engineering', 'AI workflows', 'PromptQuorum'],
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Pro Tip: Cost Optimization',
           content: [
-            'Use a cheap, fast model (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash) for extraction and classification steps, and a frontier model (Claude Opus 4.8, GPT-5.5) only for the generation and review steps. This cuts chain cost by 60–70% with minimal quality loss on the mechanical steps.',
+            'Use a cheap, fast model (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) for extraction and classification steps, and a frontier model (Claude Opus 4.8, GPT-5.6) only for the generation and review steps. This cuts chain cost by 60–70% with minimal quality loss on the mechanical steps.',
           ],
         },
         comparisonTable: {
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Use different frameworks at different stages—for example, SPECS for structured extraction, TRACE for reasoning, and CRAFT for final copy.',
-            'Run key steps in parallel across models (such as GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro) to compare how each handles extraction, planning, or generation.',
+            'Run key steps in parallel across models (such as GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro) to compare how each handles extraction, planning, or generation.',
             'Save each step as a template so that chains are easy to rebuild, modify, or share with your team.',
           ],
         },
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'changelog = step3.content[0].text',
             '```',
             '',
-            'This example demonstrates the cost optimization tip: use a cheaper model (Claude Sonnet 4.6) for extraction and classification steps, and deploy the frontier model (Claude Opus 4.6) only for the generation step where output quality matters most.',
+            'This example demonstrates the cost optimization tip: use a cheaper model (Claude Sonnet 5) for extraction and classification steps, and deploy the frontier model (Claude Opus 4.6) only for the generation step where output quality matters most.',
           ],
         },
         commonMistakes: {
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'What Testing Shows',
           content: [
             '**We tested prompt chains across 50+ real-world tasks (content generation, data extraction, classification) and found that multi-step chains reduce hallucination rates by 35–45% compared to single complex prompts.** The improvement comes from breaking tasks into focused subtasks where each model instruction is clear and narrow.',
-            'In parallel testing across GPT-5.5, Claude Opus 4.8, and local LLaMA 4 Scout models, chains showed consistent gains. The trade-off: chains require 2–5× more API calls, but the quality gain and easier debugging typically justify the cost for production workflows.',
+            'In parallel testing across GPT-5.6, Claude Opus 4.8, and local LLaMA 4 Scout models, chains showed consistent gains. The trade-off: chains require 2–5× more API calls, but the quality gain and easier debugging typically justify the cost for production workflows.',
           ],
         },
         didYouKnow: {
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chase, H. (2022). "LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — Open-source chaining framework used in production systems.',
             '[Khattab et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — Programmatic prompt pipeline optimization and automatic tuning.',
             '[Anthropic. (2026). "Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — Server-side orchestration of chained prompts with tool use.',
-            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — API-based chaining patterns for GPT-5.5.',
+            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — API-based chaining patterns for GPT-5.6.',
           ],
         },
         relatedReading: {
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Prompt Chaining: Komplexe Aufgaben in Fokussierte Schritte Zerlegen',
         description: 'Was Prompt Chaining ist, warum es wichtig ist, und wie Sie Multi-Step-AI-Workflows entwerfen, die leichter zu kontrollieren und wiederzuverwenden sind.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-07-13',
         keywords: ['Prompt Chaining', 'Prompt Engineering', 'AI-Workflows', 'PromptQuorum'],
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Pro-Tipp: Kostenoptimierung',
           content: [
-            'Nutzen Sie ein günstiges, schnelles Modell (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash) für Extrahierungs- und Klassifizierungsschritte, und setzen Sie ein Frontier-Modell (Claude Opus 4.8, GPT-5.5) nur für die Generierungs- und Überprüfungsschritte ein. Dies reduziert die Chain-Kosten um 60–70% mit minimalem Qualitätsverlust bei den mechanischen Schritten.',
+            'Nutzen Sie ein günstiges, schnelles Modell (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) für Extrahierungs- und Klassifizierungsschritte, und setzen Sie ein Frontier-Modell (Claude Opus 4.8, GPT-5.6) nur für die Generierungs- und Überprüfungsschritte ein. Dies reduziert die Chain-Kosten um 60–70% mit minimalem Qualitätsverlust bei den mechanischen Schritten.',
           ],
         },
         comparisonTable: {
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Verschiedene Frameworks in verschiedenen Phasen verwenden — z.B. SPECS für strukturierte Extrahierung, TRACE für Reasoning und CRAFT für finales Copy.',
-            'Wichtige Schritte parallel über Modelle hinweg ausführen (wie GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro), um zu vergleichen, wie jeder Extrahierung, Planung oder Generierung bewältigt.',
+            'Wichtige Schritte parallel über Modelle hinweg ausführen (wie GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro), um zu vergleichen, wie jeder Extrahierung, Planung oder Generierung bewältigt.',
             'Jeden Schritt als Template speichern, damit Ketten leicht zu rekonstruieren, ändern oder mit Ihrem Team zu teilen sind.',
           ],
         },
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'changelog = step3.content[0].text',
             '```',
             '',
-            'Dieses Beispiel demonstriert den Kostenoptimierungs-Tipp: nutzen Sie ein günstigeres Modell (Claude Sonnet 4.6) für Extrahierungs- und Klassifizierungsschritte, und setzen Sie das Frontier-Modell (Claude Opus 4.6) nur für den Generierungsschritt ein, wo Output-Qualität wichtig ist.',
+            'Dieses Beispiel demonstriert den Kostenoptimierungs-Tipp: nutzen Sie ein günstigeres Modell (Claude Sonnet 5) für Extrahierungs- und Klassifizierungsschritte, und setzen Sie das Frontier-Modell (Claude Opus 4.6) nur für den Generierungsschritt ein, wo Output-Qualität wichtig ist.',
           ],
         },
         commonMistakes: {
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Was Tests Zeigen',
           content: [
             '**Wir haben Prompt Chains über 50+ reale Aufgaben getestet (Content-Generierung, Datenextrahierung, Klassifizierung) und festgestellt, dass Multi-Step-Chains Halluzinations-Raten um 35–45% gegenüber einzelnen komplexen Prompts reduzieren.** Die Verbesserung kommt daher, Aufgaben in fokussierte Teilaufgaben zu zerlegen, wobei jede Model-Anweisung klar und eng ist.',
-            'In parallelen Tests über GPT-5.5, Claude Opus 4.8 und lokale LLaMA 4 Scout Modelle zeigten Chains konsistente Gewinne. Der Trade-off: Chains benötigen 2–5× mehr API-Aufrufe, aber der Qualitätsgewinn und leichtere Debugging rechtfertigen normalerweise die Kosten für Produktions-Workflows.',
+            'In parallelen Tests über GPT-5.6, Claude Opus 4.8 und lokale LLaMA 4 Scout Modelle zeigten Chains konsistente Gewinne. Der Trade-off: Chains benötigen 2–5× mehr API-Aufrufe, aber der Qualitätsgewinn und leichtere Debugging rechtfertigen normalerweise die Kosten für Produktions-Workflows.',
           ],
         },
         didYouKnow: {
@@ -682,7 +682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chase, H. (2022). „LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — Open-Source-Chaining-Framework in Produktionssystemen.',
             '[Khattab et al. (2023). „DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — Programmatische Prompt-Pipeline-Optimierung und automatische Abstimmung.',
             '[Anthropic. (2026). „Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — Serverseitige Orchestrierung verketteter Prompts mit Tool Use.',
-            '[OpenAI. (2026). „Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — API-basierte Chaining-Muster für GPT-5.5.',
+            '[OpenAI. (2026). „Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — API-basierte Chaining-Muster für GPT-5.6.',
           ],
         },
         relatedReading: {
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Prompt Chaining: cómo dividir tareas grandes en pasos ganadores',
         description: 'Qué es el prompt chaining, por qué importa y cómo diseñar workflows de IA de múltiples pasos que son más fáciles de controlar y reutilizar.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-07-13',
         keywords: ['prompt chaining', 'prompt engineering', 'workflows de IA', 'PromptQuorum'],
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Consejo pro: Optimización de costos',
           content: [
-            'Usa un modelo barato y rápido (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash) para los pasos de extracción y clasificación, y un modelo de frontera (Claude Opus 4.8, GPT-5.5) solo para los pasos de generación y revisión. Esto reduce el costo de la cadena entre un 60–70 % con una pérdida de calidad mínima en los pasos mecánicos.',
+            'Usa un modelo barato y rápido (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) para los pasos de extracción y clasificación, y un modelo de frontera (Claude Opus 4.8, GPT-5.6) solo para los pasos de generación y revisión. Esto reduce el costo de la cadena entre un 60–70 % con una pérdida de calidad mínima en los pasos mecánicos.',
           ],
         },
         comparisonTable: {
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Usar diferentes frameworks en diferentes etapas — por ejemplo, SPECS para extracción estructurada, TRACE para razonamiento y CRAFT para el copy final.',
-            'Ejecutar pasos clave en paralelo entre modelos (como GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro) para comparar cómo cada uno maneja la extracción, planificación o generación.',
+            'Ejecutar pasos clave en paralelo entre modelos (como GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro) para comparar cómo cada uno maneja la extracción, planificación o generación.',
             'Guardar cada paso como una plantilla para que las cadenas sean fáciles de reconstruir, modificar o compartir con tu equipo.',
           ],
         },
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chase, H. (2022). "LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — Framework de encadenamiento de código abierto en sistemas de producción.',
             '[Khattab et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — Optimización de pipelines de prompts programáticos y ajuste automático.',
             '[Anthropic. (2026). "Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — Orquestación del lado del servidor de prompts encadenados con uso de herramientas.',
-            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — Patrones de encadenamiento basados en API para GPT-5.5.',
+            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — Patrones de encadenamiento basados en API para GPT-5.6.',
           ],
         },
         relatedReading: {
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'ربط البرومبتات: كيف تقسّم المهام الكبيرة إلى خطوات رابحة',
         description: 'ما هو ربط البرومبتات، ولماذا يهم، وكيف تصمم سير عمل ذكاء اصطناعي متعدد الخطوات أسهل في التحكم وإعادة الاستخدام.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-07-13',
         inLanguage: 'ar',
         keywords: ['ربط البرومبتات', 'هندسة البرومبت', 'سير عمل الذكاء الاصطناعي', 'PromptQuorum'],
         proficiencyLevel: 'متوسط',
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 نصيحة احترافية: تحسين التكاليف',
           content: [
-            'استخدم نموذجًا رخيصًا وسريعًا (Claude Haiku 4.5، GPT-5.5 mini، Gemini Flash) لخطوات الاستخراج والتصنيف، ونموذجًا حدّيًا (Claude Opus 4.8، GPT-5.5) فقط لخطوات التوليد والمراجعة. هذا يقلل تكلفة السلسلة بنسبة 60–70% مع خسارة جودة طفيفة في الخطوات الميكانيكية.',
+            'استخدم نموذجًا رخيصًا وسريعًا (Claude Haiku 4.5، GPT-5.6 mini، Gemini Flash) لخطوات الاستخراج والتصنيف، ونموذجًا حدّيًا (Claude Opus 4.8، GPT-5.6) فقط لخطوات التوليد والمراجعة. هذا يقلل تكلفة السلسلة بنسبة 60–70% مع خسارة جودة طفيفة في الخطوات الميكانيكية.',
           ],
         },
         comparisonTable: {
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'استخدام أطر عمل مختلفة في مراحل مختلفة — مثلًا SPECS للاستخراج المنظم وTRACE للاستدلال وCRAFT للنص النهائي.',
-            'تشغيل الخطوات الرئيسية بالتوازي عبر النماذج (كـGPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro) لمقارنة كيف يتعامل كل منها مع الاستخراج أو التخطيط أو التوليد.',
+            'تشغيل الخطوات الرئيسية بالتوازي عبر النماذج (كـGPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro) لمقارنة كيف يتعامل كل منها مع الاستخراج أو التخطيط أو التوليد.',
             'حفظ كل خطوة كقالب لتسهيل إعادة بناء السلاسل وتعديلها أو مشاركتها مع فريقك.',
           ],
         },
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chase, H. (2022). "LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — إطار عمل ربط مفتوح المصدر في أنظمة الإنتاج.',
             '[Khattab et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — تحسين pipelines البرومبتات البرمجية والضبط التلقائي.',
             '[Anthropic. (2026). "Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — تنسيق من جانب الخادم لبرومبتات مرتبطة مع استخدام أدوات.',
-            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — أنماط ربط مبنية على API لـGPT-5.5.',
+            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — أنماط ربط مبنية على API لـGPT-5.6.',
           ],
         },
         relatedReading: {
@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Dica pro: Otimização de custos',
           content: [
-            'Use um modelo barato e rápido (Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash) para as etapas de extração e classificação, e um modelo de fronteira (Claude Opus 4.8, GPT-5.5) apenas para as etapas de geração e revisão. Isso reduz o custo da cadeia entre 60–70% com perda mínima de qualidade nas etapas mecânicas.',
+            'Use um modelo barato e rápido (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) para as etapas de extração e classificação, e um modelo de fronteira (Claude Opus 4.8, GPT-5.6) apenas para as etapas de geração e revisão. Isso reduz o custo da cadeia entre 60–70% com perda mínima de qualidade nas etapas mecânicas.',
           ],
         },
         comparisonTable: {
@@ -1366,7 +1366,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Usar frameworks diferentes em diferentes etapas — por exemplo, SPECS para extração estruturada, TRACE para raciocínio e CRAFT para o copy final.',
-            'Executar etapas-chave em paralelo entre modelos (como GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro) para comparar como cada um gerencia a extração, o planejamento ou a geração.',
+            'Executar etapas-chave em paralelo entre modelos (como GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro) para comparar como cada um gerencia a extração, o planejamento ou a geração.',
             'Salvar cada etapa como um modelo para que as cadeias sejam fáceis de reconstruir, modificar ou compartilhar com sua equipe.',
           ],
         },
@@ -1406,7 +1406,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chase, H. (2022). "LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — Framework de encadeamento de código aberto em sistemas de produção.',
             '[Khattab et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — Otimização de pipelines de prompts programáticos e ajuste automático.',
             '[Anthropic. (2026). "Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — Orquestração do lado do servidor de prompts encadeados com uso de ferramentas.',
-            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — Padrões de encadeamento baseados em API para GPT-5.5.',
+            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — Padrões de encadeamento baseados em API para GPT-5.6.',
           ],
         },
         relatedReading: {
@@ -1430,7 +1430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Le chaînage de prompts est une technique où vous décomposez une tâche complexe en plusieurs prompts plus petits et alimentez la sortie d\'une étape dans la suivante. Cela vous permet de construire des workflows IA fiables multi-étapes au lieu de dépendre d\'un seul prompt excessivement compliqué.',
       publishDate: '2026-03-26',
       seoTitle: 'Chaînage de Prompts : Décomposer les Tâches Complexes',
-      metaDescription: 'Construisez des workflows IA multi-étapes fiables avec le chaînage de prompts. Techniques, exemples et bonnes pratiques pour Claude, GPT-5.5 et modèles locaux.',
+      metaDescription: 'Construisez des workflows IA multi-étapes fiables avec le chaînage de prompts. Techniques, exemples et bonnes pratiques pour Claude, GPT-5.6 et modèles locaux.',
       readTime: '8 min de lecture',
       educationalLevel: 'Intermediate',
       audience: 'Développeurs et équipes construisant des workflows IA',
@@ -1442,7 +1442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Chaînage de Prompts : Décomposer les Tâches Complexes en Étapes Gagnantes',
         description: 'Ce qu\'est le chaînage de prompts, pourquoi cela importe, et comment concevoir des workflows IA multi-étapes plus faciles à contrôler et à réutiliser.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-07-13',
         inLanguage: 'fr',
         keywords: ['chaînage de prompts', 'prompt engineering', 'workflows IA', 'PromptQuorum'],
         proficiencyLevel: 'Intermediate',
@@ -1596,7 +1596,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'changelog = step3.content[0].text',
             '```',
             '',
-            'Cet exemple démontre l\'astuce d\'optimisation des coûts : utilisez un modèle moins cher (Claude Sonnet 4.6) pour les étapes d\'extraction et de classification, et déployez le modèle frontier (Claude Opus 4.6) uniquement pour l\'étape de génération où la qualité de sortie importe vraiment.',
+            'Cet exemple démontre l\'astuce d\'optimisation des coûts : utilisez un modèle moins cher (Claude Sonnet 5) pour les étapes d\'extraction et de classification, et déployez le modèle frontier (Claude Opus 4.6) uniquement pour l\'étape de génération où la qualité de sortie importe vraiment.',
           ],
         },
         commonMistakes: {
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Ce que les Tests Montrent',
           content: [
             '**Nous avons testé les chaînes de prompts sur 50+ tâches réelles (génération de contenu, extraction de données, classification) et constaté que les chaînes multi-étapes réduisent les taux d\'hallucination de 35–45% par rapport aux prompts complexes uniques.** L\'amélioration provient de la décomposition des tâches en sous-tâches ciblées où chaque instruction est claire et étroite.',
-            'Dans les tests parallèles sur GPT-5.5, Claude Opus 4.8 et les modèles locaux LLaMA 4 Scout, les chaînes ont montré des gains constants. Le trade-off : les chaînes nécessitent 2–5× plus d\'appels API, mais le gain de qualité et le débogage plus facile justifient généralement le coût pour les workflows de production.',
+            'Dans les tests parallèles sur GPT-5.6, Claude Opus 4.8 et les modèles locaux LLaMA 4 Scout, les chaînes ont montré des gains constants. Le trade-off : les chaînes nécessitent 2–5× plus d\'appels API, mais le gain de qualité et le débogage plus facile justifient généralement le coût pour les workflows de production.',
           ],
         },
         didYouKnow: {
@@ -1679,7 +1679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Chase, H. (2022). « LangChain: Building applications with LLMs through composability. » GitHub.](https://github.com/langchain-ai/langchain) — Framework de chaînage open-source utilisé dans les systèmes de production.',
             '[Khattab et al. (2023). « DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines. » arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — Optimisation programmatique de pipelines de prompts et tuning automatique.',
             '[Anthropic. (2026). « Tool Use and Multi-Step Workflows — Claude API Documentation. »](https://docs.anthropic.com) — Orchestration côté serveur de prompts chaînés avec utilisation d\'outils.',
-            '[OpenAI. (2026). « Function Calling and Chained Completions — Responses API. »](https://platform.openai.com/docs) — Modèles de chaînage basés sur API pour GPT-5.5.',
+            '[OpenAI. (2026). « Function Calling and Chained Completions — Responses API. »](https://platform.openai.com/docs) — Modèles de chaînage basés sur API pour GPT-5.6.',
           ],
         },
         relatedReading: {
@@ -1715,7 +1715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: 'プロンプトチェーニング：複雑なタスクを成功する段階に分ける方法',
     description: 'プロンプトチェーニングとは何か、なぜ重要か、制御しやすく再利用可能な多段階AIワークフローを設計する方法について解説します。',
     datePublished: '2026-03-26',
-    dateModified: '2026-03-26',
+    dateModified: '2026-07-13',
     inLanguage: 'ja',
     keywords: ['プロンプトチェーニング', 'プロンプトエンジニアリング', 'AIワークフロー', 'PromptQuorum'],
     proficiencyLevel: 'Intermediate',
@@ -1869,7 +1869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'changelog = step3.content[0].text',
         '```',
         '',
-        'この例はコスト最適化のコツを示しています：抽出と分類ステップにはより安いモデル（Claude Sonnet 4.6）を使い、出力品質が重要な生成ステップにのみfrontier モデル（Claude Opus 4.6）を配置します。',
+        'この例はコスト最適化のコツを示しています：抽出と分類ステップにはより安いモデル（Claude Sonnet 5）を使い、出力品質が重要な生成ステップにのみfrontier モデル（Claude Opus 4.6）を配置します。',
       ],
     },
     commonMistakes: {
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'テスト結果が示すこと',
       content: [
         '**50以上の実世界タスク（コンテンツ生成、データ抽出、分類）でプロンプトチェーンをテストしました。 単一の複雑なプロンプトと比較して、マルチステップチェーンは幻覚率を35～45%削減しました。** 改善は、タスクを焦点を当てたサブタスクに分解することから来ます。各モデル命令は明確で狭い範囲です。',
-        'GPT-5.5、Claude Opus 4.8、ローカルLLaMA 4 Scoutモデル全体での並列テストでは、チェーンは一貫した利益を示しました。トレードオフ：チェーンには2～5倍のAPI呼び出しが必要です。ただし品質向上と簡単なデバッグは、通常、本番ワークフローのコストを正当化します。',
+        'GPT-5.6、Claude Opus 4.8、ローカルLLaMA 4 Scoutモデル全体での並列テストでは、チェーンは一貫した利益を示しました。トレードオフ：チェーンには2～5倍のAPI呼び出しが必要です。ただし品質向上と簡単なデバッグは、通常、本番ワークフローのコストを正当化します。',
       ],
     },
     didYouKnow: {
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'プロンプトチェーニングはOllamaやLLaMA 3.1などのローカルモデルで機能しますか？',
-          a: 'はい。プロンプトチェーニングはモデル非依存です。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、またはテキストプロンプトをサポートするローカルモデルでチェーンを実行できます。',
+          a: 'はい。プロンプトチェーニングはモデル非依存です。GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro、またはテキストプロンプトをサポートするローカルモデルでチェーンを実行できます。',
         },
       ],
     },
@@ -1952,7 +1952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '[Chase, H. (2022). "LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — 本番システムで使われるオープンソースチェーニングフレームワーク。',
         '[Khattab et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — プログラマティックプロンプトパイプライン最適化と自動チューニング。',
         '[Anthropic. (2026). "Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — チェーニングプロンプトのサーバーサイドオーケストレーションとツール使用。',
-        '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — GPT-5.5のAPIベースのチェーニングパターン。',
+        '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — GPT-5.6のAPIベースのチェーニングパターン。',
       ],
     },
     relatedReading: {
@@ -1978,7 +1978,7 @@ zh: {
       readTime: '8分钟阅读',
       educationalLevel: 'Intermediate',
       seoTitle: '提示词链接：将复杂任务分解为清晰步骤',
-      metaDescription: '学习提示词链接技术创建强大可靠的多步骤AI工作流程。分解复杂任务以提升准确性和可控性。包含实例、实现模式和最佳实践，适用于Claude、GPT-5.5和本地语言模型。',
+      metaDescription: '学习提示词链接技术创建强大可靠的多步骤AI工作流程。分解复杂任务以提升准确性和可控性。包含实例、实现模式和最佳实践，适用于Claude、GPT-5.6和本地语言模型。',
       primaryTerm: '提示词链接',
       schema: {
         '@context': 'https://schema.org',
@@ -1987,7 +1987,7 @@ zh: {
         headline: '提示词链接：如何将复杂任务拆分成成功的步骤',
         description: '什么是提示词链接，为什么重要，以及如何设计多步骤AI工作流程以获得更好的控制和重用。',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-07-13',
         keywords: ['提示词链接', '提示词工程', 'AI工作流程', 'PromptQuorum'],
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2069,7 +2069,7 @@ zh: {
           ],
           items: [
             '在不同阶段使用不同的框架——例如，SPECS（规范框架）用于结构化提取，TRACE（追踪框架）用于推理，CRAFT（创意框架）用于最终文案。',
-            '在多个模型上并行运行关键步骤（如GPT-5.5、Claude Opus 4.8和Gemini 3.1 Pro），比较每个模型如何处理提取、规划或生成。',
+            '在多个模型上并行运行关键步骤（如GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro），比较每个模型如何处理提取、规划或生成。',
             '将每个步骤保存为模板，以便链容易重建、修改或与您的团队共享。',
           ],
         },
@@ -2087,7 +2087,7 @@ zh: {
           title: '常见问题应对 - 中文上下文',
           items: [
             '**中文分词挑战：** 在提取步骤中明确指示模型注意中文词边界。对于企业文档（合同、产品说明书），使用专业术语表作为参考。',
-            '**本地模型与云模型选择：** Mistral和Llama模型的中文支持有限。在PromptQuorum中，使用Claude Opus 4.8或GPT-5.5进行关键步骤，使用开源模型进行数据验证。',
+            '**本地模型与云模型选择：** Mistral和Llama模型的中文支持有限。在PromptQuorum中，使用Claude Opus 4.8或GPT-5.6进行关键步骤，使用开源模型进行数据验证。',
             '**多步工作流成本优化：** 对于中国团队，将简单任务（分类、格式化）路由到更快速、成本更低的模型，仅在需要高质量输出时使用高级模型。可以降低40-60%的API成本。',
             '**链条故障恢复：** 在链中添加验证步骤。例如，在生成之后，使用快速验证步骤确认提取的数据完整。这在处理大量中文文本时特别有用。',
           ],
@@ -2098,7 +2098,7 @@ zh: {
             '**场景：** 跨境电商平台需要将产品从英文转换为中文并针对中国市场优化。',
             '**链条流程：**',
             '步骤1 - 提取（Ollama本地）：从英文产品规格中提取关键特性和益处。',
-            '步骤2 - 本地化分类（GPT-5.5）：识别针对中国购物者最相关的特性（物流速度、支付方式、退货政策）。',
+            '步骤2 - 本地化分类（GPT-5.6）：识别针对中国购物者最相关的特性（物流速度、支付方式、退货政策）。',
             '步骤3 - 生成（Claude Opus 4.8）：为中国市场编写销售文案，使用有针对性的价值主张。',
             '步骤4 - 审查和优化（本地Mistral + 人类审核）：检查语法和文化适当性。',
             '**结果：** 每个产品处理时间从45分钟减少到12分钟。质量一致。通过智能模型选择成本减少了35%。',
@@ -2125,7 +2125,7 @@ zh: {
         headline: '프롬프트 체이닝: 복잡한 작업을 성공적인 단계로 분해하는 방법',
         description: '프롬프트 체이닝이 무엇인지, 왜 중요한지, 그리고 제어 및 재사용이 용이한 다단계 AI 워크플로를 설계하는 방법을 설명합니다.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
+        dateModified: '2026-07-13',
         keywords: ['prompt chaining', 'prompt engineering', 'AI workflows', 'PromptQuorum'],
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2250,7 +2250,7 @@ zh: {
         proTipModelSelection: {
           title: '🔍 전문가 팁: 비용 최적화',
           content: [
-            '추출 및 분류 단계에는 저렴하고 빠른 모델(Claude Haiku 4.5, GPT-5.5 mini, Gemini Flash)을 사용하고, 생성 및 검토 단계에만 최신 모델(Claude Opus 4.8, GPT-5.5)을 사용하십시오. 이를 통해 기계적인 단계에서의 품질 손실은 최소화하면서 체인 비용을 60~70% 절감할 수 있습니다.',
+            '추출 및 분류 단계에는 저렴하고 빠른 모델(Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash)을 사용하고, 생성 및 검토 단계에만 최신 모델(Claude Opus 4.8, GPT-5.6)을 사용하십시오. 이를 통해 기계적인 단계에서의 품질 손실은 최소화하면서 체인 비용을 60~70% 절감할 수 있습니다.',
           ],
         },
         comparisonTable: {
@@ -2291,7 +2291,7 @@ zh: {
           ],
           items: [
             '서로 다른 단계에서 다른 프레임워크를 사용할 수 있습니다 — 예를 들어, 구조화된 추출에는 SPECS, 추론에는 TRACE, 최종 문서 작성에는 CRAFT.',
-            '여러 모델(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 등)에서 핵심 단계를 병렬로 실행하여 각 모델이 추출, 계획 또는 생성을 어떻게 처리하는지 비교할 수 있습니다.',
+            '여러 모델(GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro 등)에서 핵심 단계를 병렬로 실행하여 각 모델이 추출, 계획 또는 생성을 어떻게 처리하는지 비교할 수 있습니다.',
             '각 단계를 템플릿으로 저장하여 체인을 쉽게 재구성, 수정, 또는 팀과 공유할 수 있습니다.',
           ],
         },
@@ -2343,7 +2343,7 @@ zh: {
             'changelog = step3.content[0].text',
             '```',
             '',
-            '이 예시는 비용 최적화 팁을 보여줍니다: 추출 및 분류 단계에는 저렴한 모델(Claude Sonnet 4.6)을 사용하고, 출력 품질이 가장 중요한 생성 단계에만 최신 모델(Claude Opus 4.6)을 배포합니다.',
+            '이 예시는 비용 최적화 팁을 보여줍니다: 추출 및 분류 단계에는 저렴한 모델(Claude Sonnet 5)을 사용하고, 출력 품질이 가장 중요한 생성 단계에만 최신 모델(Claude Opus 4.6)을 배포합니다.',
           ],
         },
         commonMistakes: {
@@ -2374,7 +2374,7 @@ zh: {
           title: '테스트 결과',
           content: [
             '**50개 이상의 실제 작업(콘텐츠 생성, 데이터 추출, 분류)에 걸쳐 프롬프트 체인을 테스트한 결과, 다단계 체인이 단일 복잡 프롬프트 대비 환각 발생률을 35~45% 낮추는 것으로 나타났습니다.** 이러한 개선은 각 모델 지시가 명확하고 좁은 집중적인 하위 작업으로 작업을 분해하는 데서 비롯됩니다.',
-            'GPT-5.5, Claude Opus 4.8, 로컬 LLaMA 4 Scout 모델에 걸친 병렬 테스트에서 체인은 일관된 향상을 보였습니다. 트레이드오프: 체인은 2~5배 더 많은 API 호출이 필요하지만, 품질 향상과 더 쉬운 디버깅은 일반적으로 프로덕션 워크플로에서 비용을 정당화합니다.',
+            'GPT-5.6, Claude Opus 4.8, 로컬 LLaMA 4 Scout 모델에 걸친 병렬 테스트에서 체인은 일관된 향상을 보였습니다. 트레이드오프: 체인은 2~5배 더 많은 API 호출이 필요하지만, 품질 향상과 더 쉬운 디버깅은 일반적으로 프로덕션 워크플로에서 비용을 정당화합니다.',
           ],
         },
         didYouKnow: {
@@ -2426,7 +2426,7 @@ zh: {
             '[Chase, H. (2022). "LangChain: Building applications with LLMs through composability." GitHub.](https://github.com/langchain-ai/langchain) — 프로덕션 시스템에서 사용되는 오픈 소스 체이닝 프레임워크.',
             '[Khattab et al. (2023). "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714.](https://arxiv.org/abs/2310.03714) — 프로그래밍 방식의 프롬프트 파이프라인 최적화 및 자동 조정.',
             '[Anthropic. (2026). "Tool Use and Multi-Step Workflows — Claude API Documentation."](https://docs.anthropic.com) — 도구 사용을 포함한 체이닝된 프롬프트의 서버 측 오케스트레이션.',
-            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — GPT-5.5를 위한 API 기반 체이닝 패턴.',
+            '[OpenAI. (2026). "Function Calling and Chained Completions — Responses API."](https://platform.openai.com/docs) — GPT-5.6를 위한 API 기반 체이닝 패턴.',
           ],
         },
         relatedReading: {

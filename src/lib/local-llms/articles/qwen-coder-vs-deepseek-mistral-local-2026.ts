@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Qwen 3.6 27B scores 77.2% SWE-bench locally on 16 GB VRAM, matching DeepSeek Coder (91.6% HumanEval, ~75% SWE-bench) and outperforming Mistral Devstral Small 24B (90.1% HumanEval, ~73% SWE-bench) on agentic coding. All three run locally on consumer hardware. This benchmark covers HumanEval, SWE-bench, MBPP, per-token cost math, latency at different quantizations, hardware profiles, and multi-model dispatch strategy for coding workloads.',
     metaDescription: 'Local coding model benchmark: Qwen 3.6 27B (92.1% HumanEval, 77.2% SWE-bench), DeepSeek Coder ($0.14/1M), Mistral Devstral (agentic tasks). Cost, latency, hardware.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'Software developers choosing a local coding LLM for daily development workflows',
@@ -127,11 +127,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Why Local Coding Models Caught Up',
         content: [
           'For the first three years of the LLM era, cloud models led local models on every coding benchmark by 10–20 percentage points. That gap closed in 2025–2026 as open-weight models scaled into the 27–72B parameter range with coding-specific training on large code corpora.',
-          'Qwen 3.6 27B, released April 2026, achieved 77.2% SWE-bench — a benchmark that tests whether models can resolve real GitHub issues in open-source codebases. This score compares directly to Claude Sonnet 4.6 (~72%) and GPT-5.5 (~73%), both significantly larger and cloud-only. The architectural insight is that focused coding pre-training on filtered code data (Alibaba published 3T code tokens for Qwen 3) compensates for the parameter size gap.',
+          'Qwen 3.6 27B, released April 2026, achieved 77.2% SWE-bench — a benchmark that tests whether models can resolve real GitHub issues in open-source codebases. This score compares directly to Claude Sonnet 5 (~72%) and GPT-5.6 (~73%), both significantly larger and cloud-only. The architectural insight is that focused coding pre-training on filtered code data (Alibaba published 3T code tokens for Qwen 3) compensates for the parameter size gap.',
           'Three factors drove the convergence: (1) high-quality code training data at scale, (2) RLHF tuned on real software engineering tasks rather than generic instruction following, and (3) improved GGUF quantization that preserves coding ability at Q4 precision better than earlier quantization methods.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 3.6 27B scores 77.2% SWE-bench locally — matching or beating Claude Sonnet 4.6 and GPT-5.5 on real-world GitHub issue resolution.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B scores 77.2% SWE-bench locally — matching or beating Claude Sonnet 5 and GPT-5.6 on real-world GitHub issue resolution.' },
           { type: 'plain-terms', text: 'SWE-bench tests whether an AI can actually fix bugs in real open-source codebases like Django, Flask, and NumPy. A score of 77.2% means the model resolved 77 out of 100 real GitHub issues without human help.' },
         ],
       },
@@ -269,7 +269,7 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Full 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — Full 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[How to Run Qwen 3 Locally — Ollama + LM Studio Guide](/local-llms/run-qwen-locally-guide-2026)',
           '[Compare Models on PromptQuorum](/compare)',
           '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding)',
@@ -298,7 +298,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'Qwen 3.6 27B erreicht 92,1% HumanEval und 77,2% SWE-bench lokal auf 16 GB VRAM. DeepSeek Coder erreicht 91,6% HumanEval als Cloud-API. Mistral Devstral Small 24B erreicht 90,1% HumanEval und fuehrt bei agentischen Multi-Datei-Aufgaben.',
     metaDescription: 'Qwen 3 Coder vs. DeepSeek vs. Mistral für lokales Coding 2026: Benchmarks, VRAM-Bedarf und Performance. Das beste lokale Coding-Modell.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9 min Lesezeit',
     sections: {
       tldr: {
@@ -322,7 +322,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local sur 16 Go VRAM, rivalisant avec DeepSeek Coder (91,6% HumanEval, ~75% SWE-bench) et surpassant Mistral Devstral Small 24B (90,1% HumanEval, ~73% SWE-bench) sur les tâches de codage agentique. Les trois modèles fonctionnent localement sur du matériel grand public. Ce benchmark couvre HumanEval, SWE-bench, MBPP, le coût par token, la latence selon les quantisations, les profils matériels et la stratégie de dispatch multi-modèles pour les charges de travail de codage.',
     metaDescription: 'Benchmark code : Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder (0,14 $/1M), Mistral Devstral (tâches agents). Coûts, latence, matériel requis.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs logiciel choisissant un LLM de code local pour leurs workflows de développement quotidien',
@@ -366,11 +366,11 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Pourquoi les modèles de code locaux ont rattrapé leur retard',
         content: [
           'Durant les trois premières années de l\'ère LLM, les modèles cloud devançaient les modèles locaux de 10 à 20 points de pourcentage sur tous les benchmarks de code. Cet écart s\'est comblé en 2025–2026 lorsque les modèles open-weight ont atteint la plage des 27–72 milliards de paramètres, avec un entraînement spécialisé sur de larges corpus de code.',
-          'Qwen 3.6 27B, publié en avril 2026, atteint 77,2% SWE-bench — un benchmark qui teste si les modèles peuvent résoudre de vraies issues GitHub dans des bases de code open source. Ce score se compare directement à Claude Sonnet 4.6 (~72%) et GPT-5.5 (~73%), tous deux bien plus volumineux et accessibles uniquement en cloud. L\'insight architectural est que le pré-entraînement intensif sur du code filtré (Alibaba a publié 3T tokens de code pour Qwen 3) compense le déficit en nombre de paramètres.',
+          'Qwen 3.6 27B, publié en avril 2026, atteint 77,2% SWE-bench — un benchmark qui teste si les modèles peuvent résoudre de vraies issues GitHub dans des bases de code open source. Ce score se compare directement à Claude Sonnet 5 (~72%) et GPT-5.6 (~73%), tous deux bien plus volumineux et accessibles uniquement en cloud. L\'insight architectural est que le pré-entraînement intensif sur du code filtré (Alibaba a publié 3T tokens de code pour Qwen 3) compense le déficit en nombre de paramètres.',
           'Trois facteurs ont conduit à cette convergence : (1) des données d\'entraînement code de haute qualité à grande échelle, (2) un RLHF ajusté sur de vraies tâches d\'ingénierie logicielle plutôt que sur du suivi d\'instructions générique, et (3) une quantisation GGUF améliorée qui préserve mieux les capacités de codage en précision Q4 qu\'avec les méthodes antérieures.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local — rivalisant avec ou surpassant Claude Sonnet 4.6 et GPT-5.5 sur la résolution réelle d\'issues GitHub.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local — rivalisant avec ou surpassant Claude Sonnet 5 et GPT-5.6 sur la résolution réelle d\'issues GitHub.' },
           { type: 'plain-terms', text: 'SWE-bench teste si une IA peut véritablement corriger des bugs dans de vraies bases de code open source comme Django, Flask et NumPy. Un score de 77,2% signifie que le modèle a résolu 77 issues GitHub réelles sur 100 sans aide humaine.' },
         ],
       },
@@ -507,7 +507,7 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparaison complète 2026](/fr/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — Comparaison complète 2026](/fr/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Comment faire tourner Qwen 3 en local — Guide Ollama + LM Studio](/fr/local-llms/run-qwen-locally-guide-2026)',
           '[Comparer les modèles sur PromptQuorum](/fr/compare)',
           '[Meilleurs LLM locaux pour le code en 2026](/fr/local-llms/best-local-llms-for-coding)',
@@ -536,7 +536,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'Qwen 3.6 27Bは16 GB VRAMでローカル実行して92.1% HumanEvalと77.2% SWE-benchを達成。DeepSeek CoderはクラウドAPIで91.6% HumanEval。Mistral Devstral Small 24Bは90.1% HumanEvalで、エージェント型マルチファイルタスクに最適。',
     metaDescription: 'コードベンチマーク：Qwen 3.6 27B（92.1% HumanEval、77.2% SWE-bench）、DeepSeek Coder（$0.14/1M）、Mistral Devstral（エージェントタスク）。コスト、レイテンシ、ハードウェア要件。',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9分で読めます',
     sections: {
       tldr: {
@@ -560,7 +560,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'Qwen 3.6 27B在16 GB显存下本地运行达到92.1% HumanEval和77.2% SWE-bench。DeepSeek Coder作为云API达到91.6% HumanEval。Mistral Devstral Small 24B达到90.1% HumanEval，在智能体多文件任务上领先。',
     metaDescription: '编码基准：Qwen 3.6 27B（92.1% HumanEval、77.2% SWE-bench）、DeepSeek Coder（$0.14/1M）、Mistral Devstral（智能体任务）。成本、延迟、硬件要求详解。',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9分钟阅读',
     sections: {
       tldr: {
@@ -584,7 +584,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'Qwen 3.6 27B alcanza 77.2% SWE-bench localmente en 16 GB VRAM, igualando a DeepSeek Coder (91.6% HumanEval, ~75% SWE-bench) y superando a Mistral Devstral Small 24B (90.1% HumanEval, ~73% SWE-bench) en codificación agéntica. Los tres modelos se ejecutan localmente en hardware de consumo. Este benchmark cubre HumanEval, SWE-bench, MBPP, matemáticas de coste por token, latencia con distintas cuantizaciones, perfiles de hardware y estrategia de despacho multi-modelo para cargas de trabajo de codificación.',
     metaDescription: 'Benchmark de código local: Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder ($0,14/1M) y Mistral Devstral. Coste, latencia y hardware.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores de software eligiendo un LLM local de código para sus flujos de trabajo diarios',
@@ -628,11 +628,11 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Por qué los modelos locales de código han alcanzado a los cloud',
         content: [
           'Durante los tres primeros años de la era LLM, los modelos cloud superaban a los locales en todos los benchmarks de código por 10–20 puntos porcentuales. Esta brecha se cerró en 2025–2026 cuando los modelos open-weight escalaron al rango de 27–72B parámetros con entrenamiento específico en código sobre grandes corpus.',
-          'Qwen 3.6 27B, lanzado en abril de 2026, alcanza 77.2% SWE-bench — un benchmark que prueba si los modelos pueden resolver issues reales de GitHub en bases de código open source. Esta puntuación se compara directamente con Claude Sonnet 4.6 (~72%) y GPT-5.5 (~73%), ambos significativamente más grandes y solo disponibles en cloud. La clave arquitectónica es que el pre-entrenamiento enfocado en código filtrado (Alibaba publicó 3T tokens de código para Qwen 3) compensa la diferencia en número de parámetros.',
+          'Qwen 3.6 27B, lanzado en abril de 2026, alcanza 77.2% SWE-bench — un benchmark que prueba si los modelos pueden resolver issues reales de GitHub en bases de código open source. Esta puntuación se compara directamente con Claude Sonnet 5 (~72%) y GPT-5.6 (~73%), ambos significativamente más grandes y solo disponibles en cloud. La clave arquitectónica es que el pre-entrenamiento enfocado en código filtrado (Alibaba publicó 3T tokens de código para Qwen 3) compensa la diferencia en número de parámetros.',
           'Tres factores impulsaron la convergencia: (1) datos de entrenamiento de código de alta calidad a escala, (2) RLHF ajustado en tareas reales de ingeniería de software en lugar de seguimiento genérico de instrucciones, y (3) cuantización GGUF mejorada que preserva mejor la capacidad de codificación en precisión Q4 que los métodos anteriores.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 3.6 27B alcanza 77.2% SWE-bench localmente — igualando o superando a Claude Sonnet 4.6 y GPT-5.5 en resolución real de issues de GitHub.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B alcanza 77.2% SWE-bench localmente — igualando o superando a Claude Sonnet 5 y GPT-5.6 en resolución real de issues de GitHub.' },
           { type: 'plain-terms', text: 'SWE-bench prueba si una IA puede realmente corregir bugs en bases de código open source reales como Django, Flask y NumPy. Una puntuación del 77.2% significa que el modelo resolvió 77 de 100 issues reales de GitHub sin ayuda humana.' },
         ],
       },
@@ -770,7 +770,7 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparación completa 2026](/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — Comparación completa 2026](/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Cómo ejecutar Qwen 3 localmente — Guía Ollama + LM Studio](/es/local-llms/run-qwen-locally-guide-2026)',
           '[Comparar modelos en PromptQuorum](/es/compare)',
           '[Los mejores LLMs locales para código en 2026](/es/local-llms/best-local-llms-for-coding)',
@@ -799,7 +799,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'يحقق Qwen 3.6 27B نسبة 77.2% في SWE-bench محليًا على 16 GB من VRAM، مساويًا DeepSeek Coder (91.6% HumanEval، ~75% SWE-bench) ومتفوقًا على Mistral Devstral Small 24B (90.1% HumanEval، ~73% SWE-bench) في البرمجة بالوكلاء. تعمل النماذج الثلاثة محليًا على أجهزة استهلاكية. يغطي هذا المعيار HumanEval وSWE-bench وMBPP وحسابات تكلفة الـ token والكمون عند مستويات تكميم مختلفة وملفات الأجهزة واستراتيجية التوزيع متعدد النماذج لأعباء عمل البرمجة.',
     metaDescription: '⁨Qwen 3.6 27B⁩ يحقق ⁨92.1% HumanEval⁩ و⁨77.2% SWE-bench⁩ محليًا بـ ⁨16 GB VRAM⁩. مقارنة ⁨DeepSeek Coder⁩ ($⁨0.14/1M⁩) و⁨Mistral Devstral⁩: تكلفة وكمون وأجهزة.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9 دقائق قراءة',
     educationalLevel: 'Intermediate',
     audience: 'مطورو البرمجيات الذين يختارون نموذج LLM محلي للكود لسير عملهم اليومي',
@@ -843,11 +843,11 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'لماذا لحقت نماذج الكود المحلية بالنماذج السحابية',
         content: [
           'خلال السنوات الثلاث الأولى من عصر نماذج LLM، تفوقت النماذج السحابية على المحلية في جميع معايير الكود بمقدار 10–20 نقطة مئوية. أُغلقت هذه الفجوة في 2025–2026 عندما توسّعت النماذج مفتوحة الأوزان إلى نطاق 27–72B معامل مع تدريب خاص بالكود على مجموعات نصية ضخمة.',
-          'يحقق Qwen 3.6 27B، الذي صدر في أبريل 2026، نسبة 77.2% في SWE-bench — وهو معيار يختبر ما إذا كانت النماذج قادرة على حل مشكلات GitHub الحقيقية في قواعد الكود مفتوحة المصدر. تُقارن هذه الدرجة مباشرة بـ Claude Sonnet 4.6 (~72%) وGPT-5.5 (~73%)، وكلاهما أكبر بكثير ومتاح في السحابة فقط. المفتاح المعماري هو أن التدريب المسبق المركّز على الكود المُرشّح (نشرت Alibaba 3T token من الكود لـ Qwen 3) يعوّض الفرق في عدد المعاملات.',
+          'يحقق Qwen 3.6 27B، الذي صدر في أبريل 2026، نسبة 77.2% في SWE-bench — وهو معيار يختبر ما إذا كانت النماذج قادرة على حل مشكلات GitHub الحقيقية في قواعد الكود مفتوحة المصدر. تُقارن هذه الدرجة مباشرة بـ Claude Sonnet 5 (~72%) وGPT-5.6 (~73%)، وكلاهما أكبر بكثير ومتاح في السحابة فقط. المفتاح المعماري هو أن التدريب المسبق المركّز على الكود المُرشّح (نشرت Alibaba 3T token من الكود لـ Qwen 3) يعوّض الفرق في عدد المعاملات.',
           'دفعت ثلاثة عوامل التقارب: (1) بيانات تدريب كود عالية الجودة على نطاق واسع، (2) RLHF مضبوط على مهام هندسة برمجيات حقيقية بدلًا من اتباع تعليمات عام، و(3) تكميم GGUF محسّن يحفظ قدرة البرمجة في دقة Q4 بشكل أفضل من الأساليب السابقة.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'يحقق Qwen 3.6 27B نسبة 77.2% في SWE-bench محليًا — مساويًا أو متفوقًا على Claude Sonnet 4.6 وGPT-5.5 في حل مشكلات GitHub الحقيقية.' },
+          { type: 'one-sentence', text: 'يحقق Qwen 3.6 27B نسبة 77.2% في SWE-bench محليًا — مساويًا أو متفوقًا على Claude Sonnet 5 وGPT-5.6 في حل مشكلات GitHub الحقيقية.' },
           { type: 'plain-terms', text: 'يختبر SWE-bench ما إذا كان الذكاء الاصطناعي قادرًا فعلًا على إصلاح العلل في قواعد كود مفتوحة المصدر حقيقية مثل Django وFlask وNumPy. درجة 77.2% تعني أن النموذج حلّ 77 من 100 مشكلة GitHub حقيقية دون مساعدة بشرية.' },
         ],
       },
@@ -985,7 +985,7 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[Qwen 3 مقابل Claude Sonnet 4.6 مقابل DeepSeek R2 — مقارنة كاملة 2026](/ar/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 مقابل Claude Sonnet 5 مقابل DeepSeek R2 — مقارنة كاملة 2026](/ar/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[كيفية تشغيل Qwen 3 محليًا — دليل Ollama + LM Studio](/ar/local-llms/run-qwen-locally-guide-2026)',
           '[قارن النماذج في PromptQuorum](/ar/compare)',
           '[أفضل نماذج LLM المحلية للكود في 2026](/ar/local-llms/best-local-llms-for-coding)',
@@ -1015,7 +1015,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'O Qwen 3.6 27B atinge 77,2% no SWE-bench localmente em 16 GB de VRAM, igualando o DeepSeek Coder (91,6% HumanEval, ~75% SWE-bench) e superando o Mistral Devstral Small 24B (90,1% HumanEval, ~73% SWE-bench) em codificação agêntica. Os três modelos rodam localmente em hardware de consumo. Este benchmark cobre HumanEval, SWE-bench, MBPP, matemática de custo por token, latência com diferentes quantizações, perfis de hardware e estratégia de despacho multimodelo para cargas de trabalho de codificação.',
     metaDescription: 'Benchmark de código local: Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder ($0,14/1M) e Mistral Devstral. Custo, latência e hardware.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores de software que escolhem um LLM local de código para seus fluxos de trabalho diários',
@@ -1073,11 +1073,11 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Por que os modelos locais de código alcançaram os da nuvem',
         content: [
           'Durante os três primeiros anos da era dos LLMs, os modelos em nuvem superavam os locais em todos os benchmarks de código por 10–20 pontos percentuais. Essa diferença foi fechada em 2025–2026, quando os modelos de pesos abertos escalaram para a faixa de 27–72B parâmetros com treinamento específico em código sobre grandes corpora.',
-          'O Qwen 3.6 27B, lançado em abril de 2026, atinge 77,2% no SWE-bench — um benchmark que testa se os modelos conseguem resolver issues reais do GitHub em bases de código open source. Essa pontuação se compara diretamente ao Claude Sonnet 4.6 (~72%) e ao GPT-5.5 (~73%), ambos significativamente maiores e disponíveis apenas na nuvem. A chave arquitetural é que o pré-treinamento focado em código filtrado (a Alibaba publicou 3T de tokens de código para o Qwen 3) compensa a diferença no número de parâmetros.',
+          'O Qwen 3.6 27B, lançado em abril de 2026, atinge 77,2% no SWE-bench — um benchmark que testa se os modelos conseguem resolver issues reais do GitHub em bases de código open source. Essa pontuação se compara diretamente ao Claude Sonnet 5 (~72%) e ao GPT-5.6 (~73%), ambos significativamente maiores e disponíveis apenas na nuvem. A chave arquitetural é que o pré-treinamento focado em código filtrado (a Alibaba publicou 3T de tokens de código para o Qwen 3) compensa a diferença no número de parâmetros.',
           'Três fatores impulsionaram a convergência: (1) dados de treinamento de código de alta qualidade em escala, (2) RLHF ajustado em tarefas reais de engenharia de software em vez de seguimento genérico de instruções, e (3) quantização GGUF aprimorada que preserva melhor a capacidade de codificação em precisão Q4 do que os métodos anteriores.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'O Qwen 3.6 27B atinge 77,2% no SWE-bench localmente — igualando ou superando o Claude Sonnet 4.6 e o GPT-5.5 na resolução real de issues do GitHub.' },
+          { type: 'one-sentence', text: 'O Qwen 3.6 27B atinge 77,2% no SWE-bench localmente — igualando ou superando o Claude Sonnet 5 e o GPT-5.6 na resolução real de issues do GitHub.' },
           { type: 'plain-terms', text: 'O SWE-bench testa se uma IA consegue realmente corrigir bugs em bases de código open source reais como Django, Flask e NumPy. Uma pontuação de 77,2% significa que o modelo resolveu 77 de 100 issues reais do GitHub sem ajuda humana.' },
         ],
       },
@@ -1215,7 +1215,7 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparação completa 2026](/pt/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — Comparação completa 2026](/pt/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Como executar o Qwen 3 localmente — Guia Ollama + LM Studio](/pt/local-llms/run-qwen-locally-guide-2026)',
           '[Comparar modelos no PromptQuorum](/pt/compare)',
           '[Os melhores LLMs locais para código em 2026](/pt/local-llms/best-local-llms-for-coding)',
@@ -1244,7 +1244,7 @@ DEEPSEEK_MODEL=deepseek-chat
     intro: 'Qwen 3.6 27B는 16 GB VRAM에서 로컬로 SWE-bench 77.2%를 기록하며, DeepSeek Coder(HumanEval 91.6%, SWE-bench ~75%)와 동등하고 에이전트 코딩에서 Mistral Devstral Small 24B(HumanEval 90.1%, SWE-bench ~73%)를 능가합니다. 세 모델 모두 소비자용 하드웨어에서 로컬로 실행할 수 있습니다. 본 벤치마크는 HumanEval, SWE-bench, MBPP, 토큰당 비용 계산, 다양한 양자화 수준에서의 지연 시간, 하드웨어 프로필, 코딩 워크로드를 위한 멀티 모델 디스패치 전략을 다룹니다.',
     metaDescription: '로컬 코딩 모델 벤치마크: Qwen 3.6 27B(HumanEval 92.1%, SWE-bench 77.2%), DeepSeek Coder($0.14/1M), Mistral Devstral(에이전트 작업). 비용, 지연 시간, 하드웨어.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: '일상적인 개발 워크플로우에서 사용할 로컬 코딩 LLM을 선택하는 소프트웨어 개발자',
@@ -1302,11 +1302,11 @@ DEEPSEEK_MODEL=deepseek-chat
         title: '로컬 코딩 모델이 따라잡은 이유',
         content: [
           'LLM 시대 처음 3년간 클라우드 모델은 모든 코딩 벤치마크에서 로컬 모델보다 10–20 퍼센트포인트 앞서 있었습니다. 이 격차는 2025–2026년 오픈 웨이트 모델이 대규모 코드 코퍼스를 활용한 코딩 특화 학습으로 27–72B 파라미터 범위까지 확장되면서 좁혀졌습니다.',
-          '2026년 4월에 출시된 Qwen 3.6 27B는 오픈소스 코드베이스의 실제 GitHub 이슈를 모델이 해결할 수 있는지 테스트하는 벤치마크인 SWE-bench에서 77.2%를 달성하였습니다. 이 점수는 훨씬 더 크고 클라우드 전용인 Claude Sonnet 4.6(~72%) 및 GPT-5.5(~73%)와 직접 비교됩니다. 핵심 설계 관점은 필터링된 코드 데이터에 대한 집중적인 코딩 사전 학습(Alibaba는 Qwen 3에 3T 코드 토큰을 공개)이 파라미터 크기 격차를 보완한다는 것입니다.',
+          '2026년 4월에 출시된 Qwen 3.6 27B는 오픈소스 코드베이스의 실제 GitHub 이슈를 모델이 해결할 수 있는지 테스트하는 벤치마크인 SWE-bench에서 77.2%를 달성하였습니다. 이 점수는 훨씬 더 크고 클라우드 전용인 Claude Sonnet 5(~72%) 및 GPT-5.6(~73%)와 직접 비교됩니다. 핵심 설계 관점은 필터링된 코드 데이터에 대한 집중적인 코딩 사전 학습(Alibaba는 Qwen 3에 3T 코드 토큰을 공개)이 파라미터 크기 격차를 보완한다는 것입니다.',
           '수렴을 이끈 세 가지 요인: (1) 대규모 고품질 코드 학습 데이터, (2) 일반 지시 수행이 아닌 실제 소프트웨어 엔지니어링 작업에 맞춰 조정된 RLHF, (3) 이전 양자화 방식보다 Q4 정밀도에서 코딩 능력을 더 잘 보존하는 개선된 GGUF 양자화.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen 3.6 27B는 로컬에서 SWE-bench 77.2%를 기록하여 실제 GitHub 이슈 해결 능력에서 Claude Sonnet 4.6 및 GPT-5.5와 동등하거나 이를 능가합니다.' },
+          { type: 'one-sentence', text: 'Qwen 3.6 27B는 로컬에서 SWE-bench 77.2%를 기록하여 실제 GitHub 이슈 해결 능력에서 Claude Sonnet 5 및 GPT-5.6와 동등하거나 이를 능가합니다.' },
           { type: 'plain-terms', text: 'SWE-bench는 AI가 Django, Flask, NumPy와 같은 실제 오픈소스 코드베이스에서 버그를 실제로 수정할 수 있는지 테스트합니다. 77.2%라는 점수는 이 모델이 인간의 도움 없이 실제 GitHub 이슈 100개 중 77개를 해결하였음을 의미합니다.' },
         ],
       },
@@ -1444,7 +1444,7 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026년 전체 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년 전체 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/local-llms/run-qwen-locally-guide-2026)',
           '[PromptQuorum에서 모델 비교하기](/compare)',
           '[2026년 코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding)',

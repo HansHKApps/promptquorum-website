@@ -9,22 +9,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Best Local LLMs for Creative Writing 2026: Fiction, Dialogue & Worldbuilding',
     seoTitle: 'Best Local LLMs for Creative Writing 2026: Tested Picks',
     intro:
-      'Creative writing is the workload where local LLMs win on more than privacy and price. The best instruct-tuned and uncensored open-weight models in 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B, and the Hermes/Dolphin uncensored derivatives — produce fiction, dialogue, and worldbuilding that holds up against frontier cloud models on most prompts. The differences are in voice consistency, willingness to handle dark or adult themes, and how naturally they take direction. This guide tests six picks against 50+ creative prompts across fiction, dialogue, poetry, and worldbuilding, with the temperature and top-p settings each one wants.',
+      'Creative writing is the workload where local LLMs win on more than privacy and price. The best instruct-tuned and uncensored open-weight models in 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B, and the Hermes/Dolphin uncensored derivatives — produce fiction, dialogue, and worldbuilding that holds up against frontier cloud models on most prompts. The differences are in voice consistency, willingness to handle dark or adult themes, and how naturally they take direction. This guide tests six picks against 50+ creative prompts across fiction, dialogue, poetry, and worldbuilding, with the temperature and top-p settings each one wants.',
     metaDescription:
-      'Compare 6 local models for creative writing: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5, and uncensored variants. Tested on 50+ creative prompts.',
+      'Compare 6 local models for creative writing: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5, and uncensored variants. Tested on 50+ creative prompts.',
     twitterDescription:
-      '6 local models for fiction, dialogue, and worldbuilding tested on 50+ creative prompts. Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5, plus uncensored picks. Verdict per task type.',
+      '6 local models for fiction, dialogue, and worldbuilding tested on 50+ creative prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5, plus uncensored picks. Verdict per task type.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -48,17 +48,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm worldbuilding',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70B is the best all-round local pick for creative writing in May 2026 — strong voice consistency, takes direction well, and handles dark themes without refusing if the system prompt frames the work as fiction. Qwen3 32B is the right 24 GB-rig pick: nearly as strong on prose, lighter on hardware. Mistral Large wins long-form continuity (novel-length drafting) on its native 128K context. Command R+ 104B has the cleanest dialogue voice. Yi-1.5 34B is the niche pick for poetry and lyrical prose. For workflows that the instruct-tuned models refuse, Hermes 3 (Llama 3.3 base) and Dolphin 3.0 are the uncensored picks — same architecture, RLHF safety layer removed. Temperature 0.8–1.1 and top-p 0.9–0.95 are the creative-writing range; 0.7 and below produces flat prose. Uncensored ≠ unethical — it means the model follows the prompt instead of refusing; the writer is still the author.**',
+      '**Llama 3.3 70B is the best all-round local pick for creative writing in May 2026 — strong voice consistency, takes direction well, and handles dark themes without refusing if the system prompt frames the work as fiction. Qwen3 32B is the right 24 GB-rig pick: nearly as strong on prose, lighter on hardware. Mistral Large wins long-form continuity (novel-length drafting) on its native 128K context. Command A+ has the cleanest dialogue voice. Yi-1.5 34B is the niche pick for poetry and lyrical prose. For workflows that the instruct-tuned models refuse, Hermes 3 (Llama 3.3 base) and Dolphin 3.0 are the uncensored picks — same architecture, RLHF safety layer removed. Temperature 0.8–1.1 and top-p 0.9–0.95 are the creative-writing range; 0.7 and below produces flat prose. Uncensored ≠ unethical — it means the model follows the prompt instead of refusing; the writer is still the author.**',
     quickAnswerTop: {
       en: {
         question: 'Which local LLM is best for creative writing in 2026?',
         answer:
-          'Llama 3.3 70B is the best all-round local pick — strong on prose, dialogue, and worldbuilding, with voice consistency that holds across long sessions. On 24 GB hardware where 70B will not fit, Qwen3 32B is the lighter alternative without much quality loss. Mistral Large is the long-context pick for novel-length drafting (128K context out of the box). Command R+ 104B has the most natural dialogue voice. Yi-1.5 34B is the poetry and lyrical-prose specialist. For workflows that hit the instruct-tuned safety layer (mature fiction, conflict scenes, morally complex characters), the Hermes 3 and Dolphin 3.0 derivatives use the same base models with the safety RLHF layer removed — they follow the prompt instead of refusing. Temperature 0.8–1.1 and top-p 0.9–0.95 are the creative-writing range; coding-style settings (0.2–0.4) produce flat prose.',
+          'Llama 3.3 70B is the best all-round local pick — strong on prose, dialogue, and worldbuilding, with voice consistency that holds across long sessions. On 24 GB hardware where 70B will not fit, Qwen3 32B is the lighter alternative without much quality loss. Mistral Large is the long-context pick for novel-length drafting (128K context out of the box). Command A+ has the most natural dialogue voice. Yi-1.5 34B is the poetry and lyrical-prose specialist. For workflows that hit the instruct-tuned safety layer (mature fiction, conflict scenes, morally complex characters), the Hermes 3 and Dolphin 3.0 derivatives use the same base models with the safety RLHF layer removed — they follow the prompt instead of refusing. Temperature 0.8–1.1 and top-p 0.9–0.95 are the creative-writing range; coding-style settings (0.2–0.4) produce flat prose.',
         bullets: [
           'Best overall: Llama 3.3 70B — strongest voice consistency, takes direction well, handles dark themes without refusal when framed as fiction.',
           'Best 24 GB rig: Qwen3 32B — nearly as strong as Llama 70B on prose, much lighter on hardware.',
           'Best long-form: Mistral Large — 128K context out of the box; novel-length drafting without losing thread.',
-          'Best dialogue: Command R+ 104B — the most natural conversational voice across characters.',
+          'Best dialogue: Command A+ — the most natural conversational voice across characters.',
           'Best poetry / lyrical: Yi-1.5 34B — niche pick for verse and stylised prose.',
           'When instruct refuses: Hermes 3 (Llama base) or Dolphin 3.0 — uncensored, same architecture, prompt-following.',
           'Sampling: temperature 0.8–1.1, top-p 0.9–0.95 for prose; lower for tight dialogue, higher for surreal/genre work.',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B is the best all-round creative-writing local model in May 2026.** Strongest voice consistency, takes direction well, handles dark themes without refusal when the system prompt frames the work as fiction.',
           '**Qwen3 32B is the right 24 GB-rig pick.** Nearly Llama 70B prose quality without the 48 GB+ VRAM bill. The default for most laptops and desktops.',
           '**Mistral Large wins long-form continuity.** 128K context out of the box; novel-length drafting without losing thread or character voice.',
-          '**Command R+ 104B has the cleanest dialogue voice.** Most natural conversational beats across characters; the pick when dialogue is the load-bearing part of the work.',
+          '**Command A+ has the cleanest dialogue voice.** Most natural conversational beats across characters; the pick when dialogue is the load-bearing part of the work.',
           '**Yi-1.5 34B is the poetry and lyrical-prose specialist.** Niche pick for verse, stylised prose, and short-form work where rhythm matters.',
           '**Uncensored derivatives (Hermes 3, Dolphin 3.0) are the right move when instruct-tuned models refuse.** Same base models; the RLHF safety layer is removed; the model follows the prompt instead of declining. Mature fiction, conflict scenes, and morally complex characters become writable.',
           '**Sampling matters more than people think.** Temperature 0.8–1.1 and top-p 0.9–0.95 are the creative range. Coding-style settings (0.2–0.4) produce flat, predictable prose. Higher (1.2+) is genre/surreal territory.',
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best overall:** Llama 3.3 70B at Q4_K_M, ~42 GB VRAM. Strongest voice consistency in this set.',
           '**Best 24 GB-rig:** Qwen3 32B at Q4_K_M, ~20 GB VRAM. The default for most users.',
           '**Best long-form:** Mistral Large at Q4_K_M, ~75 GB total VRAM (heavy). 128K context out of the box.',
-          '**Best dialogue:** Command R+ 104B at Q4_K_M, ~62 GB VRAM. Cleanest character-voice differentiation.',
+          '**Best dialogue:** Command A+ at Q4_K_M, ~62 GB VRAM. Cleanest character-voice differentiation.',
           '**Best poetry:** Yi-1.5 34B at Q4_K_M, ~21 GB VRAM. Lyrical prose specialist.',
           '**Uncensored options:** Hermes 3 (Llama 3.3 base, ~42 GB) and Dolphin 3.0 (multiple base sizes, 13–42 GB).',
           '**Sampling default for prose:** temperature 0.95, top-p 0.92, repeat penalty 1.1. Adjust per task type.',
@@ -138,11 +138,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70B is the strongest all-round creative model; Qwen3 32B is the lighter alternative; Mistral Large wins long-form; Command R+ wins dialogue; Yi-1.5 wins poetry; Hermes/Dolphin handle scenes the others refuse.',
+            text: 'Llama 3.3 70B is the strongest all-round creative model; Qwen3 32B is the lighter alternative; Mistral Large wins long-form; Command A+ wins dialogue; Yi-1.5 wins poetry; Hermes/Dolphin handle scenes the others refuse.',
           },
           {
             type: 'plain-terms',
-            text: 'No single model is best at everything. Llama 3.3 70B is the safe default if you have the hardware. Qwen3 32B is the smart pick on a 24 GB GPU. Pick a specialist (Mistral for novels, Command R+ for dialogue, Yi-1.5 for poetry) when one task type is the load-bearing part of the work. Pick an uncensored derivative when the instruct-tuned model refuses scenes you need to write.',
+            text: 'No single model is best at everything. Llama 3.3 70B is the safe default if you have the hardware. Qwen3 32B is the smart pick on a 24 GB GPU. Pick a specialist (Mistral for novels, Command A+ for dialogue, Yi-1.5 for poetry) when one task type is the load-bearing part of the work. Pick an uncensored derivative when the instruct-tuned model refuses scenes you need to write.',
           },
         ],
         columns: ['Model', 'Size', 'VRAM (Q4_K_M)', 'Fiction', 'Dialogue', 'Poetry', 'Worldbuilding', 'Best for'],
@@ -150,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Llama 3.3 70B', 'Size': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Fiction': 'Best', 'Dialogue': 'Strong', 'Poetry': 'Strong', 'Worldbuilding': 'Best', 'Best for': 'Best all-round; default if hardware fits' },
           { 'Model': 'Qwen3 32B', 'Size': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'Fiction': 'Strong', 'Dialogue': 'Strong', 'Poetry': 'OK', 'Worldbuilding': 'Strong', 'Best for': '24 GB-rig default; small loss vs Llama 70B' },
           { 'Model': 'Mistral Large', 'Size': '123B', 'VRAM (Q4_K_M)': '~75 GB', 'Fiction': 'Strong (long-form)', 'Dialogue': 'Strong', 'Poetry': 'OK', 'Worldbuilding': 'Strong', 'Best for': 'Novel-length continuity, 128K context' },
-          { 'Model': 'Command R+', 'Size': '104B', 'VRAM (Q4_K_M)': '~62 GB', 'Fiction': 'Strong', 'Dialogue': 'Best', 'Poetry': 'OK', 'Worldbuilding': 'Strong', 'Best for': 'Dialogue-heavy work, group scenes' },
+          { 'Model': 'Command A+', 'Size': 'Not disclosed', 'VRAM (Q4_K_M)': '~62 GB', 'Fiction': 'Strong', 'Dialogue': 'Best', 'Poetry': 'OK', 'Worldbuilding': 'Strong', 'Best for': 'Dialogue-heavy work, group scenes' },
           { 'Model': 'Yi-1.5 34B', 'Size': '34B', 'VRAM (Q4_K_M)': '~21 GB', 'Fiction': 'OK', 'Dialogue': 'OK', 'Poetry': 'Best', 'Worldbuilding': 'OK', 'Best for': 'Poetry, lyrical prose, stylised work' },
           { 'Model': 'Hermes 3 / Dolphin 3.0', 'Size': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', 'Fiction': 'Same as base', 'Dialogue': 'Same as base', 'Poetry': 'Same as base', 'Worldbuilding': 'Same as base', 'Best for': 'Scenes instruct-tuned models refuse' },
         ],
@@ -168,7 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — best all-round. Strongest voice consistency in the test set; characters keep the same speech patterns across long scenes. Takes direction well — when the system prompt specifies POV, tone, or genre conventions, Llama 3.3 follows. Handles dark themes (violence, grief, morally grey characters) without refusal when the prompt frames the work as fiction. Where it falls short: long passages occasionally drift into generic "literary" voice; small models in the same family (8B) lose this strength.',
           '**Qwen3 32B** — best 24 GB-rig pick. Slightly less voice consistency than Llama 3.3 70B but the gap is small enough that most writers will not notice on prose-heavy work. Strongest of the smaller models on direction-following. Where it falls short: poetry and stylised prose lag noticeably; default to Yi-1.5 for those.',
           '**Mistral Large** — best long-form continuity. 128K context window means a 50,000-word draft fits without truncation; the model holds character details, plot threads, and world rules across chapters. Where it falls short: hardware bar is the highest in this set (~75 GB at Q4_K_M); per-token speed slows on long inputs. Use Mistral La Plateforme on EU infrastructure if local hardware is the constraint.',
-          '**Command R+ 104B** — best dialogue. Distinct character voices that hold across exchanges; group scenes (3+ speakers) stay legible without the "everyone sounds the same" failure mode common to other models. Where it falls short: prose paragraphs between dialogue beats are competent but not lyrical; for purely descriptive passages, Llama 3.3 wins.',
+          '**Command A+** — best dialogue. Distinct character voices that hold across exchanges; group scenes (3+ speakers) stay legible without the "everyone sounds the same" failure mode common to other models. Where it falls short: prose paragraphs between dialogue beats are competent but not lyrical; for purely descriptive passages, Llama 3.3 wins.',
           '**Yi-1.5 34B** — best poetry and lyrical prose. Rhythm-aware, comfortable with structured forms (sonnet, villanelle, haiku), produces verse that holds up better than the larger general models. Where it falls short: long-form fiction is competent but not its strength; pick Llama 3.3 or Qwen3 for narrative work.',
           '**Hermes 3 (Llama 3.3 base) and Dolphin 3.0** — uncensored derivatives. Same architecture and base weights as Llama 3.3 70B; the RLHF safety layer is removed during fine-tuning. The model follows the prompt rather than refusing or sanitising mature content. Quality on non-mature prompts is identical to the base model; the difference is only visible on prompts where instruct-tuned versions refuse. Use these when the work requires it (mature fiction, violent scenes, morally complex characters) and stick with the instruct-tuned base otherwise.',
         ],
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Llama 3.3 70B', 'Typical opening phrasing': 'Action-first, immediate sensory detail', 'Typical descriptor pattern': 'Concrete and physical; avoids abstract nouns; socially grounded' },
           { 'Model': 'Qwen3 32B', 'Typical opening phrasing': 'Environmental observation before character action', 'Typical descriptor pattern': 'Efficient; social/atmospheric detail; slight structural tell' },
           { 'Model': 'Yi-1.5 34B', 'Typical opening phrasing': 'Metaphor or simile from the first clause', 'Typical descriptor pattern': 'Abstract imagery; rhythmic variation; denser; occasional purple streak' },
-          { 'Model': 'Command R+ 104B', 'Typical opening phrasing': 'Character voice or dialogue-adjacent opener', 'Typical descriptor pattern': 'Conversational; strong distinct voice; weaker solo description' },
+          { 'Model': 'Command A+', 'Typical opening phrasing': 'Character voice or dialogue-adjacent opener', 'Typical descriptor pattern': 'Conversational; strong distinct voice; weaker solo description' },
           { 'Model': 'Mistral Large', 'Typical opening phrasing': 'Scene-setting paragraph; slower start', 'Typical descriptor pattern': 'Even and controlled; consistent across long passages; slightly generic' },
         ],
         callouts: [
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**The chat UI you write in matters as much as the model.** Three frontends are credible picks for creative-writing workflows in 2026; pick by workflow shape.',
         items: [
           '**Open WebUI** — the general-purpose pick. ChatGPT-like interface, model switching in one click, character cards via system prompts, document upload for context. Best for prose-heavy work where the chat shape matches your drafting flow.',
-          '**SillyTavern** — the roleplay and dialogue pick. Character card ecosystem (Tavern v2 spec), persona management, lore books for worldbuilding, group chat for multi-character scenes. Best for dialogue-driven work and long-running character or world projects. Pairs well with Command R+ and uncensored derivatives.',
+          '**SillyTavern** — the roleplay and dialogue pick. Character card ecosystem (Tavern v2 spec), persona management, lore books for worldbuilding, group chat for multi-character scenes. Best for dialogue-driven work and long-running character or world projects. Pairs well with Command A+ and uncensored derivatives.',
           '**Agnai and RisuAI** — narrower SillyTavern alternatives. Lighter feature sets, easier first-run, less customisation. Pick when SillyTavern feels overbuilt for your workflow.',
           '**Plain Ollama CLI plus a text editor** — the minimal pick. `ollama run llama3.3:70b` and pipe scenes through the terminal into your draft document. Loses the persistent character context but wins on writer focus.',
           'For the head-to-head comparison of the roleplay-focused frontends, see [SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I have 48 GB+ VRAM and want one model for everything', 'Pick': 'Llama 3.3 70B (instruct) + Hermes 3 (uncensored) on the same Ollama' },
           { 'Your situation': 'I have a 24 GB GPU or 32 GB Mac and want a strong default', 'Pick': 'Qwen3 32B' },
           { 'Your situation': 'I am drafting a novel — long-form continuity is the priority', 'Pick': 'Mistral Large (or Mistral La Plateforme on EU hardware if local does not fit)' },
-          { 'Your situation': 'My work is dialogue-heavy — character voices need to stay distinct', 'Pick': 'Command R+ 104B (or Llama 3.3 70B as a lighter alternative)' },
+          { 'Your situation': 'My work is dialogue-heavy — character voices need to stay distinct', 'Pick': 'Command A+ (or Llama 3.3 70B as a lighter alternative)' },
           { 'Your situation': 'I write poetry, verse, or lyrical prose', 'Pick': 'Yi-1.5 34B' },
           { 'Your situation': 'The instruct model is refusing scenes I need to write', 'Pick': 'Hermes 3 (Llama 3.3 base) or Dolphin 3.0 — keep the instruct version installed for non-mature work' },
           { 'Your situation': 'I want one model to start with and will iterate', 'Pick': 'Qwen3 32B — covers most workflows on consumer hardware; switch up when one task type becomes the load-bearing part' },
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Pick Qwen3 32B as the default if you have a 24 GB GPU; Llama 3.3 70B if you have 48 GB+; Mistral Large for novel-length work; Command R+ for dialogue; Yi-1.5 for poetry; Hermes/Dolphin for scenes the instruct models refuse.',
+            text: 'Pick Qwen3 32B as the default if you have a 24 GB GPU; Llama 3.3 70B if you have 48 GB+; Mistral Large for novel-length work; Command A+ for dialogue; Yi-1.5 for poetry; Hermes/Dolphin for scenes the instruct models refuse.',
           },
           {
             type: 'plain-terms',
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Common Mistakes Picking and Using Local Models for Creative Writing',
         items: [
-          '**Mistake 1: chasing the biggest model on benchmarks.** Creative writing scores poorly correlate with general benchmark leaderboards. Yi-1.5 34B beats Llama 3.3 70B on poetry; Command R+ beats both on dialogue. Pick by task, not by leaderboard rank.',
+          '**Mistake 1: chasing the biggest model on benchmarks.** Creative writing scores poorly correlate with general benchmark leaderboards. Yi-1.5 34B beats Llama 3.3 70B on poetry; Command A+ beats both on dialogue. Pick by task, not by leaderboard rank.',
           '**Mistake 2: using coding-style sampling settings.** Temperature 0.2–0.4 produces flat, predictable prose. Creative writing wants 0.8–1.1 with top-p 0.9–0.95. The default settings in most chat UIs are tuned for Q&A, not prose.',
           '**Mistake 3: defaulting to the instruct model and giving up when it refuses.** The instruct version refuses scenes you have explicitly framed as fiction; the uncensored derivative of the same base model writes them. Two installs in Ollama is the workaround.',
           '**Mistake 4: thin system prompts.** "You are a helpful assistant" is the worst possible prompt for creative work. A system prompt with character notes, voice samples, POV, tense, and tone does more for output quality than any model switch. Pair with [negative prompting](/prompt-engineering/negative-prompting) to specify what NOT to do (no exposition, no purple prose, no "she felt").',
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Hugging Face model cards for Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5](https://huggingface.co/) — official model documentation and licensing.',
+          '[Hugging Face model cards for Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5](https://huggingface.co/) — official model documentation and licensing.',
           '[Hermes 3 (NousResearch) GitHub and model card](https://huggingface.co/NousResearch) — uncensored Llama 3.3-based fine-tunes.',
           '[Dolphin 3.0 (Cognitive Computations) model cards](https://huggingface.co/cognitivecomputations) — uncensored fine-tunes across multiple base models.',
           '[Ollama Model Library](https://ollama.com/library) — available models, quantization options, tool-call support flags referenced above.',
@@ -390,22 +390,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Beste lokale LLMs für kreatives Schreiben 2026: Belletristik, Dialog & Weltenbau',
     seoTitle: 'Beste lokale LLMs für kreatives Schreiben 2026',
     intro:
-      'Beim kreativen Schreiben punkten lokale LLMs nicht nur mit Datenschutz und Kosteneffizienz. Die besten Instruct-tuned und Uncensored Open-Weight-Modelle 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B sowie die Hermes/Dolphin-Uncensored-Derivate — liefern Belletristik, Dialog und Weltenbau, die auf den meisten Prompts mit führenden Cloud-Modellen mithalten können. Die Unterschiede liegen in der Stimmkonsistenz, der Bereitschaft für dunkle oder erwachsene Themen und der Fähigkeit, Anweisungen natürlich umzusetzen. Dieser Leitfaden testet sechs Modelle auf 50+ kreative Prompts aus Belletristik, Dialog, Poesie und Weltenbau — inklusive der optimalen Temperatur- und Top-p-Einstellungen.',
+      'Beim kreativen Schreiben punkten lokale LLMs nicht nur mit Datenschutz und Kosteneffizienz. Die besten Instruct-tuned und Uncensored Open-Weight-Modelle 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B sowie die Hermes/Dolphin-Uncensored-Derivate — liefern Belletristik, Dialog und Weltenbau, die auf den meisten Prompts mit führenden Cloud-Modellen mithalten können. Die Unterschiede liegen in der Stimmkonsistenz, der Bereitschaft für dunkle oder erwachsene Themen und der Fähigkeit, Anweisungen natürlich umzusetzen. Dieser Leitfaden testet sechs Modelle auf 50+ kreative Prompts aus Belletristik, Dialog, Poesie und Weltenbau — inklusive der optimalen Temperatur- und Top-p-Einstellungen.',
     metaDescription:
-      '6 lokale Modelle für kreatives Schreiben verglichen: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 und Uncensored-Varianten. Getestet auf 50+ Prompts.',
+      '6 lokale Modelle für kreatives Schreiben verglichen: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 und Uncensored-Varianten. Getestet auf 50+ Prompts.',
     twitterDescription:
-      '6 lokale Modelle für Belletristik, Dialog und Weltenbau getestet auf 50+ Prompts. Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 plus Uncensored-Picks. Urteil je Aufgabentyp.',
+      '6 lokale Modelle für Belletristik, Dialog und Weltenbau getestet auf 50+ Prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 plus Uncensored-Picks. Urteil je Aufgabentyp.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -429,17 +429,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale llm weltenbau',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70B ist im Mai 2026 der beste Allrounder unter den lokalen Modellen für kreatives Schreiben — starke Stimmkonsistenz, folgt Anweisungen präzise und bearbeitet dunkle Themen ohne Ablehnung, wenn der System-Prompt die Arbeit als Belletristik kennzeichnet. Qwen3 32B ist die richtige Wahl für 24-GB-Systeme: nahezu gleich stark in der Prosa, deutlich geringerer Hardwarebedarf. Mistral Large gewinnt bei der Langform-Kontinuität (Novel-Länge) dank seinem nativen 128K-Kontext. Command R+ 104B hat die sauberste Dialog-Stimme. Yi-1.5 34B ist die Nischenempfehlung für Poesie und lyrische Prosa. Für Workflows, die Instruct-Modelle ablehnen, sind Hermes 3 (Llama-3.3-Basis) und Dolphin 3.0 die Uncensored-Picks — gleiche Architektur, RLHF-Sicherheitsschicht entfernt. Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich; 0,7 und darunter erzeugt flache Prosa. Uncensored ≠ unethisch — es bedeutet, dass das Modell dem Prompt folgt statt ihn abzulehnen; der Autor trägt weiterhin die Verantwortung.**',
+      '**Llama 3.3 70B ist im Mai 2026 der beste Allrounder unter den lokalen Modellen für kreatives Schreiben — starke Stimmkonsistenz, folgt Anweisungen präzise und bearbeitet dunkle Themen ohne Ablehnung, wenn der System-Prompt die Arbeit als Belletristik kennzeichnet. Qwen3 32B ist die richtige Wahl für 24-GB-Systeme: nahezu gleich stark in der Prosa, deutlich geringerer Hardwarebedarf. Mistral Large gewinnt bei der Langform-Kontinuität (Novel-Länge) dank seinem nativen 128K-Kontext. Command A+ hat die sauberste Dialog-Stimme. Yi-1.5 34B ist die Nischenempfehlung für Poesie und lyrische Prosa. Für Workflows, die Instruct-Modelle ablehnen, sind Hermes 3 (Llama-3.3-Basis) und Dolphin 3.0 die Uncensored-Picks — gleiche Architektur, RLHF-Sicherheitsschicht entfernt. Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich; 0,7 und darunter erzeugt flache Prosa. Uncensored ≠ unethisch — es bedeutet, dass das Modell dem Prompt folgt statt ihn abzulehnen; der Autor trägt weiterhin die Verantwortung.**',
     quickAnswerTop: {
       de: {
         question: 'Welches lokale LLM eignet sich 2026 am besten für kreatives Schreiben?',
         answer:
-          'Llama 3.3 70B ist bei ausreichender Hardware der beste Allrounder — stark in Prosa, Dialog und Weltenbau, mit Stimmkonsistenz über lange Sessions. Auf 24-GB-Hardware, wo 70B nicht passt, ist Qwen3 32B die leichtere Alternative ohne großen Qualitätsverlust. Mistral Large ist die Wahl für den langen Kontext bei Novel-Länge (128K out of the box). Command R+ 104B hat die natürlichste Dialog-Stimme. Yi-1.5 34B ist der Spezialist für Poesie und lyrische Prosa. Für Workflows, die an der Instruct-Sicherheitsschicht scheitern (reife Belletristik, Konfliktszenen, moralisch komplexe Charaktere), verwenden Hermes 3 und Dolphin 3.0 dieselben Basismodelle mit entfernter RLHF-Sicherheitsschicht. Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich; Coding-Einstellungen (0,2–0,4) erzeugen flache Prosa.',
+          'Llama 3.3 70B ist bei ausreichender Hardware der beste Allrounder — stark in Prosa, Dialog und Weltenbau, mit Stimmkonsistenz über lange Sessions. Auf 24-GB-Hardware, wo 70B nicht passt, ist Qwen3 32B die leichtere Alternative ohne großen Qualitätsverlust. Mistral Large ist die Wahl für den langen Kontext bei Novel-Länge (128K out of the box). Command A+ hat die natürlichste Dialog-Stimme. Yi-1.5 34B ist der Spezialist für Poesie und lyrische Prosa. Für Workflows, die an der Instruct-Sicherheitsschicht scheitern (reife Belletristik, Konfliktszenen, moralisch komplexe Charaktere), verwenden Hermes 3 und Dolphin 3.0 dieselben Basismodelle mit entfernter RLHF-Sicherheitsschicht. Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich; Coding-Einstellungen (0,2–0,4) erzeugen flache Prosa.',
         bullets: [
           'Bester Allrounder: Llama 3.3 70B — stärkste Stimmkonsistenz, folgt Anweisungen gut, bearbeitet dunkle Themen ohne Ablehnung.',
           'Bestes 24-GB-System: Qwen3 32B — nahezu so stark wie Llama 70B in der Prosa, deutlich geringerer Hardwarebedarf.',
           'Beste Langform: Mistral Large — 128K-Kontext out of the box; Novel-Länge ohne Fadenriss.',
-          'Bester Dialog: Command R+ 104B — die natürlichste Gesprächsstimme über mehrere Charaktere.',
+          'Bester Dialog: Command A+ — die natürlichste Gesprächsstimme über mehrere Charaktere.',
           'Beste Poesie/Lyrik: Yi-1.5 34B — Nischenempfehlung für Verse und stilisierte Prosa.',
           'Bei Ablehnung durch Instruct: Hermes 3 (Llama-Basis) oder Dolphin 3.0 — Uncensored, gleiche Architektur, Prompt-folgsam.',
           'Sampling: Temperatur 0,8–1,1, Top-p 0,9–0,95 für Prosa; niedriger für engen Dialog, höher für surreale/Genre-Arbeiten.',
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B ist im Mai 2026 das beste lokale Allround-Modell für kreatives Schreiben.** Stärkste Stimmkonsistenz im Test, folgt Anweisungen präzise, bearbeitet dunkle Themen ohne Ablehnung, wenn der System-Prompt die Arbeit als Belletristik kennzeichnet.',
           '**Qwen3 32B ist die richtige Wahl für 24-GB-Systeme.** Nahezu Llama-70B-Prosaqualität ohne den 48-GB+-VRAM-Bedarf. Standard für die meisten Laptops und Desktops.',
           '**Mistral Large gewinnt bei der Langform-Kontinuität.** 128K-Kontext out of the box; Novel-Länge ohne Fadenriss oder Charakterstimm-Drift.',
-          '**Command R+ 104B hat die sauberste Dialog-Stimme.** Natürlichste Gesprächsbeats über Charaktere hinweg; die Wahl, wenn Dialog die tragende Funktion im Werk übernimmt.',
+          '**Command A+ hat die sauberste Dialog-Stimme.** Natürlichste Gesprächsbeats über Charaktere hinweg; die Wahl, wenn Dialog die tragende Funktion im Werk übernimmt.',
           '**Yi-1.5 34B ist der Spezialist für Poesie und lyrische Prosa.** Nischenempfehlung für Verse, stilisierte Prosa und Kurzformen, bei denen Rhythmus zählt.',
           '**Uncensored-Derivate (Hermes 3, Dolphin 3.0) sind der richtige Schritt, wenn Instruct-Modelle ablehnen.** Gleiche Basismodelle; RLHF-Sicherheitsschicht entfernt; das Modell folgt dem Prompt statt abzulehnen. Reife Belletristik, Konfliktszenen und moralisch komplexe Charaktere werden schreibbar.',
           '**Sampling ist wichtiger als viele denken.** Temperatur 0,8–1,1 und Top-p 0,9–0,95 sind der kreative Bereich. Coding-Einstellungen (0,2–0,4) erzeugen flache, vorhersehbare Prosa. Höher (1,2+) ist Genre-/Surrealismusbereich.',
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Bester Allrounder:** Llama 3.3 70B bei Q4_K_M, ~42 GB VRAM. Stärkste Stimmkonsistenz in diesem Set.',
           '**Bestes 24-GB-System:** Qwen3 32B bei Q4_K_M, ~20 GB VRAM. Standard für die meisten Nutzer.',
           '**Beste Langform:** Mistral Large bei Q4_K_M, ~75 GB VRAM gesamt (hoch). 128K-Kontext out of the box.',
-          '**Bester Dialog:** Command R+ 104B bei Q4_K_M, ~62 GB VRAM. Sauberste Charakterstimm-Differenzierung.',
+          '**Bester Dialog:** Command A+ bei Q4_K_M, ~62 GB VRAM. Sauberste Charakterstimm-Differenzierung.',
           '**Beste Poesie:** Yi-1.5 34B bei Q4_K_M, ~21 GB VRAM. Lyrischer-Prosa-Spezialist.',
           '**Uncensored-Optionen:** Hermes 3 (Llama-3.3-Basis, ~42 GB) und Dolphin 3.0 (mehrere Basisgrößen, 13–42 GB).',
           '**Standard-Sampling für Prosa:** Temperatur 0,95, Top-p 0,92, Repeat Penalty 1,1. Je nach Aufgabentyp anpassen.',
@@ -519,11 +519,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70B ist das stärkste Allround-Kreativmodell; Qwen3 32B die leichtere Alternative; Mistral Large gewinnt Langform; Command R+ gewinnt Dialog; Yi-1.5 gewinnt Poesie; Hermes/Dolphin übernehmen Szenen, die die anderen ablehnen.',
+            text: 'Llama 3.3 70B ist das stärkste Allround-Kreativmodell; Qwen3 32B die leichtere Alternative; Mistral Large gewinnt Langform; Command A+ gewinnt Dialog; Yi-1.5 gewinnt Poesie; Hermes/Dolphin übernehmen Szenen, die die anderen ablehnen.',
           },
           {
             type: 'plain-terms',
-            text: 'Kein einzelnes Modell ist in allem am besten. Llama 3.3 70B ist der sichere Standard, wenn die Hardware passt. Qwen3 32B ist die kluge Wahl auf einer 24-GB-GPU. Einen Spezialisten wählen (Mistral für Romane, Command R+ für Dialog, Yi-1.5 für Poesie), wenn ein Aufgabentyp die tragende Funktion im Werk übernimmt. Ein Uncensored-Derivat wählen, wenn das Instruct-Modell Szenen ablehnt, die du schreiben musst.',
+            text: 'Kein einzelnes Modell ist in allem am besten. Llama 3.3 70B ist der sichere Standard, wenn die Hardware passt. Qwen3 32B ist die kluge Wahl auf einer 24-GB-GPU. Einen Spezialisten wählen (Mistral für Romane, Command A+ für Dialog, Yi-1.5 für Poesie), wenn ein Aufgabentyp die tragende Funktion im Werk übernimmt. Ein Uncensored-Derivat wählen, wenn das Instruct-Modell Szenen ablehnt, die du schreiben musst.',
           },
         ],
         columns: ['Modell', 'Größe', 'VRAM (Q4_K_M)', 'Belletristik', 'Dialog', 'Poesie', 'Weltenbau', 'Ideal für'],
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Llama 3.3 70B', 'Größe': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Belletristik': 'Bester', 'Dialog': 'Stark', 'Poesie': 'Stark', 'Weltenbau': 'Bester', 'Ideal für': 'Bester Allrounder; Standard wenn Hardware ausreicht' },
           { 'Modell': 'Qwen3 32B', 'Größe': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'Belletristik': 'Stark', 'Dialog': 'Stark', 'Poesie': 'OK', 'Weltenbau': 'Stark', 'Ideal für': '24-GB-System-Standard; geringer Qualitätsverlust vs. Llama 70B' },
           { 'Modell': 'Mistral Large', 'Größe': '123B', 'VRAM (Q4_K_M)': '~75 GB', 'Belletristik': 'Stark (Langform)', 'Dialog': 'Stark', 'Poesie': 'OK', 'Weltenbau': 'Stark', 'Ideal für': 'Langform-Kontinuität, 128K-Kontext' },
-          { 'Modell': 'Command R+', 'Größe': '104B', 'VRAM (Q4_K_M)': '~62 GB', 'Belletristik': 'Stark', 'Dialog': 'Bester', 'Poesie': 'OK', 'Weltenbau': 'Stark', 'Ideal für': 'Dialogintensive Werke, Gruppenszenen' },
+          { 'Modell': 'Command A+', 'Größe': 'Nicht veröffentlicht', 'VRAM (Q4_K_M)': '~62 GB', 'Belletristik': 'Stark', 'Dialog': 'Bester', 'Poesie': 'OK', 'Weltenbau': 'Stark', 'Ideal für': 'Dialogintensive Werke, Gruppenszenen' },
           { 'Modell': 'Yi-1.5 34B', 'Größe': '34B', 'VRAM (Q4_K_M)': '~21 GB', 'Belletristik': 'OK', 'Dialog': 'OK', 'Poesie': 'Bester', 'Weltenbau': 'OK', 'Ideal für': 'Poesie, lyrische Prosa, stilisierte Texte' },
           { 'Modell': 'Hermes 3 / Dolphin 3.0', 'Größe': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', 'Belletristik': 'Wie Basismodell', 'Dialog': 'Wie Basismodell', 'Poesie': 'Wie Basismodell', 'Weltenbau': 'Wie Basismodell', 'Ideal für': 'Szenen, die Instruct-Modelle ablehnen' },
         ],
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — bester Allrounder. Stärkste Stimmkonsistenz im Test; Charaktere behalten dieselben Sprachmuster über lange Szenen. Folgt Anweisungen präzise — wenn der System-Prompt POV, Ton oder Genre-Konventionen vorgibt, hält Llama 3.3 diese ein. Bearbeitet dunkle Themen ohne Ablehnung, wenn der Prompt die Arbeit als Belletristik kennzeichnet. Schwachpunkt: lange Passagen driften gelegentlich in einen generischen „literarischen" Stil; kleine Modelle in derselben Familie (8B) verlieren diese Stärke.',
           '**Qwen3 32B** — bestes 24-GB-System-Modell. Leicht geringere Stimmkonsistenz als Llama 3.3 70B, aber der Abstand ist klein genug, dass die meisten Autoren ihn bei prosaschwerem Schreiben nicht bemerken. Stärkstes der kleineren Modelle beim Anweisungsfolgen. Schwachpunkt: Poesie und stilisierte Prosa bleiben merklich hinter der Konkurrenz; für diese auf Yi-1.5 wechseln.',
           '**Mistral Large** — beste Langform-Kontinuität. 128K-Kontextfenster bedeutet, ein 50.000-Wörter-Entwurf passt ohne Kürzung; das Modell hält Charakterdetails, Handlungsfäden und Weltregeln über Kapitel hinweg. Schwachpunkt: höchste Hardware-Anforderung im Set (~75 GB bei Q4_K_M); Token-Geschwindigkeit sinkt bei langen Eingaben. Mistral La Plateforme auf EU-Infrastruktur nutzen, wenn lokale Hardware der Engpass ist.',
-          '**Command R+ 104B** — bester Dialog. Eigenständige Charakterstimmen, die über Exchanges hinweg bestehen; Gruppenszenen (3+ Sprecher) bleiben lesbar ohne den „alle klingen gleich"-Fehler, der bei anderen Modellen häufig vorkommt. Schwachpunkt: Prosaabsätze zwischen Dialog-Beats sind kompetent, aber nicht lyrisch; für rein beschreibende Passagen gewinnt Llama 3.3.',
+          '**Command A+** — bester Dialog. Eigenständige Charakterstimmen, die über Exchanges hinweg bestehen; Gruppenszenen (3+ Sprecher) bleiben lesbar ohne den „alle klingen gleich"-Fehler, der bei anderen Modellen häufig vorkommt. Schwachpunkt: Prosaabsätze zwischen Dialog-Beats sind kompetent, aber nicht lyrisch; für rein beschreibende Passagen gewinnt Llama 3.3.',
           '**Yi-1.5 34B** — beste Poesie und lyrische Prosa. Rhythmusbewusst, sicher in strukturierten Formen (Sonett, Villanelle, Haiku), erzeugt Verse, die sich gegenüber den größeren Allgemeinmodellen behaupten. Schwachpunkt: Langform-Belletristik ist kompetent, aber nicht seine Stärke; für narrative Arbeit Llama 3.3 oder Qwen3 wählen.',
           '**Hermes 3 (Llama-3.3-Basis) und Dolphin 3.0** — Uncensored-Derivate. Gleiche Architektur und Basisgewichte wie Llama 3.3 70B; die RLHF-Sicherheitsschicht wird beim Fine-tuning entfernt. Das Modell folgt dem Prompt statt reife Inhalte abzulehnen oder zu entschärfen. Qualität bei nicht-reifen Prompts ist identisch mit dem Basismodell; der Unterschied ist nur bei Prompts sichtbar, bei denen Instruct-Versionen ablehnen. Diese verwenden, wenn die Arbeit es erfordert (reife Belletristik, Gewaltszenen, moralisch komplexe Charaktere) — ansonsten beim Instruct-Basismodell bleiben.',
         ],
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Llama 3.3 70B', 'Typische Einleitung': 'Aktion zuerst, sofortiges Sinnesdetail', 'Typisches Beschreibungsmuster': 'Konkret und physisch; vermeidet abstrakte Substantive; sozial verankert' },
           { 'Modell': 'Qwen3 32B', 'Typische Einleitung': 'Umgebungsbeobachtung vor Charakteraktion', 'Typisches Beschreibungsmuster': 'Effizient; soziales/atmosphärisches Detail; leichtes strukturelles Anzeichen' },
           { 'Modell': 'Yi-1.5 34B', 'Typische Einleitung': 'Metapher oder Vergleich ab der ersten Klausel', 'Typisches Beschreibungsmuster': 'Abstrakte Bildsprache; rhythmische Variation; dichter; gelegentliche Überladenheit' },
-          { 'Modell': 'Command R+ 104B', 'Typische Einleitung': 'Charakterstimme oder dialognahe Einleitung', 'Typisches Beschreibungsmuster': 'Konversationell; starke eigenständige Stimme; schwächere Solo-Beschreibung' },
+          { 'Modell': 'Command A+', 'Typische Einleitung': 'Charakterstimme oder dialognahe Einleitung', 'Typisches Beschreibungsmuster': 'Konversationell; starke eigenständige Stimme; schwächere Solo-Beschreibung' },
           { 'Modell': 'Mistral Large', 'Typische Einleitung': 'Szenenaufbau-Absatz; langsamerer Start', 'Typisches Beschreibungsmuster': 'Ausgeglichen und kontrolliert; konsistent über lange Passagen; leicht generisch' },
         ],
         callouts: [
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Das Chat-UI, in dem du schreibst, ist genauso wichtig wie das Modell.** Drei Frontends sind 2026 glaubwürdige Picks für Kreativschreib-Workflows; nach Workflow-Form wählen.',
         items: [
           '**Open WebUI** — der Allzweck-Pick. ChatGPT-ähnliche Oberfläche, Modellwechsel per Klick, Charakterkarten über System-Prompts, Dokument-Upload für Kontext. Bestes für prosaschweree Arbeit, bei der die Chat-Form zum Entwurfsfluss passt.',
-          '**SillyTavern** — der Roleplay- und Dialog-Pick. Charakterkarten-Ökosystem (Tavern v2 Spec), Persona-Verwaltung, Lore Books für Weltenbau, Gruppen-Chat für Mehrfigurenszenen. Bestes für dialoggetriebene Arbeit und langfristige Charakter- oder Weltenprojekte. Passt gut zu Command R+ und Uncensored-Derivaten.',
+          '**SillyTavern** — der Roleplay- und Dialog-Pick. Charakterkarten-Ökosystem (Tavern v2 Spec), Persona-Verwaltung, Lore Books für Weltenbau, Gruppen-Chat für Mehrfigurenszenen. Bestes für dialoggetriebene Arbeit und langfristige Charakter- oder Weltenprojekte. Passt gut zu Command A+ und Uncensored-Derivaten.',
           '**Agnai und RisuAI** — engere SillyTavern-Alternativen. Schlankere Feature-Sets, einfacherer Einstieg, weniger Anpassung. Wählen, wenn SillyTavern für den eigenen Workflow überdimensioniert wirkt.',
           '**Plain Ollama CLI plus Texteditor** — der minimale Pick. `ollama run llama3.3:70b` und Szenen über das Terminal in das Entwurfsdokument leiten. Verliert den persistenten Charakterkontext, gewinnt aber an Schreibfokus.',
           'Für den Direktvergleich der Roleplay-fokussierten Frontends, siehe [SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Meine Situation': 'Ich habe 48+ GB VRAM und möchte ein Modell für alles', 'Empfehlung': 'Llama 3.3 70B (Instruct) + Hermes 3 (Uncensored) im selben Ollama' },
           { 'Meine Situation': 'Ich habe eine 24-GB-GPU oder einen 32-GB-Mac und möchte einen starken Standard', 'Empfehlung': 'Qwen3 32B' },
           { 'Meine Situation': 'Ich schreibe an einem Roman — Langform-Kontinuität ist die Priorität', 'Empfehlung': 'Mistral Large (oder Mistral La Plateforme auf EU-Hardware, wenn lokal nicht möglich)' },
-          { 'Meine Situation': 'Mein Werk ist dialogintensiv — Charakterstimmen müssen unterscheidbar bleiben', 'Empfehlung': 'Command R+ 104B (oder Llama 3.3 70B als leichtere Alternative)' },
+          { 'Meine Situation': 'Mein Werk ist dialogintensiv — Charakterstimmen müssen unterscheidbar bleiben', 'Empfehlung': 'Command A+ (oder Llama 3.3 70B als leichtere Alternative)' },
           { 'Meine Situation': 'Ich schreibe Gedichte, Verse oder lyrische Prosa', 'Empfehlung': 'Yi-1.5 34B' },
           { 'Meine Situation': 'Das Instruct-Modell lehnt Szenen ab, die ich schreiben muss', 'Empfehlung': 'Hermes 3 (Llama-3.3-Basis) oder Dolphin 3.0 — Instruct-Version für reguläre Arbeit installiert lassen' },
           { 'Meine Situation': 'Ich möchte mit einem Modell starten und dann anpassen', 'Empfehlung': 'Qwen3 32B — deckt die meisten Workflows auf Consumer-Hardware ab; wechseln, wenn ein Aufgabentyp zum Schwerpunkt wird' },
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Qwen3 32B als Standard wählen auf einer 24-GB-GPU; Llama 3.3 70B bei 48 GB+; Mistral Large für Novel-Länge; Command R+ für Dialog; Yi-1.5 für Poesie; Hermes/Dolphin für Szenen, die Instruct-Modelle ablehnen.',
+            text: 'Qwen3 32B als Standard wählen auf einer 24-GB-GPU; Llama 3.3 70B bei 48 GB+; Mistral Large für Novel-Länge; Command A+ für Dialog; Yi-1.5 für Poesie; Hermes/Dolphin für Szenen, die Instruct-Modelle ablehnen.',
           },
           {
             type: 'plain-terms',
@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Häufige Fehler bei der Wahl und Nutzung lokaler Modelle für kreatives Schreiben',
         items: [
-          '**Fehler 1: dem größten Modell auf Benchmarks nachjagen.** Kreativschreib-Wertungen korrelieren schlecht mit allgemeinen Benchmark-Leaderboards. Yi-1.5 34B schlägt Llama 3.3 70B bei Poesie; Command R+ schlägt beide bei Dialog. Nach Aufgabe wählen, nicht nach Leaderboard-Rang.',
+          '**Fehler 1: dem größten Modell auf Benchmarks nachjagen.** Kreativschreib-Wertungen korrelieren schlecht mit allgemeinen Benchmark-Leaderboards. Yi-1.5 34B schlägt Llama 3.3 70B bei Poesie; Command A+ schlägt beide bei Dialog. Nach Aufgabe wählen, nicht nach Leaderboard-Rang.',
           '**Fehler 2: Coding-Sampling-Einstellungen verwenden.** Temperatur 0,2–0,4 erzeugt flache, vorhersehbare Prosa. Kreatives Schreiben braucht 0,8–1,1 mit Top-p 0,9–0,95. Die Standardeinstellungen der meisten Chat-UIs sind für Q&A optimiert, nicht für Prosa.',
           '**Fehler 3: beim Instruct-Modell bleiben und aufgeben, wenn es ablehnt.** Die Instruct-Version lehnt Szenen ab, die explizit als Belletristik gerahmt wurden; das Uncensored-Derivat desselben Basismodells schreibt sie. Zwei Installs in Ollama ist die Lösung.',
           '**Fehler 4: dünne System-Prompts.** „Du bist ein hilfreicher Assistent" ist der schlechtestmögliche Prompt für kreative Arbeit. Ein System-Prompt mit Charakternotizen, Stimmproben, POV, Tempus und Ton tut mehr für die Ausgabequalität als jeder Modellwechsel. Mit [Negativem Prompting](/de/prompt-engineering/negative-prompting) kombinieren, um vorzugeben, was NICHT zu schreiben ist.',
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Hugging Face Modellkarten für Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5](https://huggingface.co/) — offizielle Modelldokumentation und Lizenzen.',
+          '[Hugging Face Modellkarten für Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5](https://huggingface.co/) — offizielle Modelldokumentation und Lizenzen.',
           '[Hermes 3 (NousResearch) GitHub und Modellkarte](https://huggingface.co/NousResearch) — Uncensored Llama-3.3-basierte Fine-tunes.',
           '[Dolphin 3.0 (Cognitive Computations) Modellkarten](https://huggingface.co/cognitivecomputations) — Uncensored Fine-tunes über mehrere Basismodelle.',
           '[Ollama Model Library](https://ollama.com/library) — verfügbare Modelle, Quantisierungsoptionen, Tool-Call-Support-Flags.',
@@ -779,22 +779,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Meilleurs LLM locaux pour l\'écriture créative 2026 : fiction, dialogue et construction de mondes',
     seoTitle: 'LLM locaux pour l\'écriture créative 2026 : comparatif testé',
     intro:
-      'L\'écriture créative est le domaine où les LLM locaux s\'imposent au-delà de la seule confidentialité et du coût. Les meilleurs modèles open-weight instruction-tuned et non censurés de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B et les dérivés non censurés Hermes/Dolphin — produisent de la fiction, des dialogues et de la construction de mondes comparables aux modèles cloud frontaux sur la plupart des prompts. Les différences portent sur la cohérence de la voix narrative, la capacité à traiter des thèmes sombres ou adultes, et la façon dont ils suivent les directives. Ce guide teste six modèles sur plus de 50 prompts créatifs couvrant fiction, dialogue, poésie et construction de mondes, avec les paramètres de température et de top-p adaptés à chacun.',
+      'L\'écriture créative est le domaine où les LLM locaux s\'imposent au-delà de la seule confidentialité et du coût. Les meilleurs modèles open-weight instruction-tuned et non censurés de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B et les dérivés non censurés Hermes/Dolphin — produisent de la fiction, des dialogues et de la construction de mondes comparables aux modèles cloud frontaux sur la plupart des prompts. Les différences portent sur la cohérence de la voix narrative, la capacité à traiter des thèmes sombres ou adultes, et la façon dont ils suivent les directives. Ce guide teste six modèles sur plus de 50 prompts créatifs couvrant fiction, dialogue, poésie et construction de mondes, avec les paramètres de température et de top-p adaptés à chacun.',
     metaDescription:
-      '6 LLM locaux comparés pour l\'écriture créative : Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 et variantes non censurées. Testés sur plus de 50 prompts créatifs.',
+      '6 LLM locaux comparés pour l\'écriture créative : Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 et variantes non censurées. Testés sur plus de 50 prompts créatifs.',
     twitterDescription:
-      '6 modèles locaux pour la fiction, le dialogue et la construction de mondes testés sur 50+ prompts. Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 et options non censurées. Verdict par type de tâche.',
+      '6 modèles locaux pour la fiction, le dialogue et la construction de mondes testés sur 50+ prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 et options non censurées. Verdict par type de tâche.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -818,17 +818,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm local construction de monde',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70B est le meilleur choix local polyvalent pour l\'écriture créative en mai 2026 — cohérence de voix solide, suit bien les directives et traite les thèmes sombres sans refus si le prompt système cadre le travail comme de la fiction. Qwen3 32B est le bon choix sur un rig 24 Go : qualité de prose presque équivalente, moins gourmand en matériel. Mistral Large gagne sur la continuité long format (rédaction de romans) grâce à son contexte natif de 128K. Command R+ 104B a la voix de dialogue la plus naturelle. Yi-1.5 34B est le choix de niche pour la poésie et la prose lyrique. Pour les workflows que les modèles instruction-tuned refusent, Hermes 3 (base Llama 3.3) et Dolphin 3.0 sont les options non censurées — même architecture, couche de sécurité RLHF retirée. Température 0,8–1,1 et top-p 0,9–0,95 définissent la plage créative ; en dessous de 0,7 la prose devient plate. Non censuré ≠ contraire à l\'éthique — cela signifie que le modèle suit le prompt au lieu de refuser ; l\'auteur reste l\'auteur.**',
+      '**Llama 3.3 70B est le meilleur choix local polyvalent pour l\'écriture créative en mai 2026 — cohérence de voix solide, suit bien les directives et traite les thèmes sombres sans refus si le prompt système cadre le travail comme de la fiction. Qwen3 32B est le bon choix sur un rig 24 Go : qualité de prose presque équivalente, moins gourmand en matériel. Mistral Large gagne sur la continuité long format (rédaction de romans) grâce à son contexte natif de 128K. Command A+ a la voix de dialogue la plus naturelle. Yi-1.5 34B est le choix de niche pour la poésie et la prose lyrique. Pour les workflows que les modèles instruction-tuned refusent, Hermes 3 (base Llama 3.3) et Dolphin 3.0 sont les options non censurées — même architecture, couche de sécurité RLHF retirée. Température 0,8–1,1 et top-p 0,9–0,95 définissent la plage créative ; en dessous de 0,7 la prose devient plate. Non censuré ≠ contraire à l\'éthique — cela signifie que le modèle suit le prompt au lieu de refuser ; l\'auteur reste l\'auteur.**',
     quickAnswerTop: {
       fr: {
         question: 'Quel LLM local est le meilleur pour l\'écriture créative en 2026 ?',
         answer:
-          'Llama 3.3 70B est le meilleur choix local polyvalent — solide sur la prose, le dialogue et la construction de mondes, avec une cohérence de voix qui tient sur de longues sessions. Sur un matériel 24 Go où un 70B ne passe pas, Qwen3 32B est l\'alternative plus légère sans grande perte de qualité. Mistral Large est le choix long-contexte pour la rédaction de romans (contexte 128K natif). Command R+ 104B a la voix de dialogue la plus naturelle. Yi-1.5 34B est le spécialiste de la poésie et de la prose lyrique. Pour les workflows qui butent sur la couche de sécurité instruction-tuned (fiction mature, scènes de conflit, personnages moralement complexes), les dérivés Hermes 3 et Dolphin 3.0 utilisent les mêmes modèles de base avec la couche de sécurité RLHF retirée — ils suivent le prompt au lieu de refuser. Température 0,8–1,1 et top-p 0,9–0,95 définissent la plage créative ; les paramètres type code (0,2–0,4) produisent une prose plate.',
+          'Llama 3.3 70B est le meilleur choix local polyvalent — solide sur la prose, le dialogue et la construction de mondes, avec une cohérence de voix qui tient sur de longues sessions. Sur un matériel 24 Go où un 70B ne passe pas, Qwen3 32B est l\'alternative plus légère sans grande perte de qualité. Mistral Large est le choix long-contexte pour la rédaction de romans (contexte 128K natif). Command A+ a la voix de dialogue la plus naturelle. Yi-1.5 34B est le spécialiste de la poésie et de la prose lyrique. Pour les workflows qui butent sur la couche de sécurité instruction-tuned (fiction mature, scènes de conflit, personnages moralement complexes), les dérivés Hermes 3 et Dolphin 3.0 utilisent les mêmes modèles de base avec la couche de sécurité RLHF retirée — ils suivent le prompt au lieu de refuser. Température 0,8–1,1 et top-p 0,9–0,95 définissent la plage créative ; les paramètres type code (0,2–0,4) produisent une prose plate.',
         bullets: [
           'Meilleur au global : Llama 3.3 70B — cohérence de voix la plus solide, suit bien les directives, gère les thèmes sombres sans refus si cadré comme fiction.',
           'Meilleur sur rig 24 Go : Qwen3 32B — presque aussi fort que Llama 70B sur la prose, bien plus léger en matériel.',
           'Meilleur long format : Mistral Large — contexte 128K natif ; rédaction de roman sans perte de fil.',
-          'Meilleur dialogue : Command R+ 104B — la voix conversationnelle la plus naturelle entre les personnages.',
+          'Meilleur dialogue : Command A+ — la voix conversationnelle la plus naturelle entre les personnages.',
           'Meilleur poésie / lyrique : Yi-1.5 34B — choix de niche pour les vers et la prose stylisée.',
           'Quand instruct refuse : Hermes 3 (base Llama) ou Dolphin 3.0 — non censurés, même architecture, prompt-following.',
           'Sampling : température 0,8–1,1, top-p 0,9–0,95 pour la prose ; plus bas pour le dialogue serré, plus haut pour le surréalisme ou la fiction de genre.',
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B est le meilleur modèle local polyvalent pour l\'écriture créative en mai 2026.** Cohérence de voix la plus solide du comparatif, suit bien les directives, gère les thèmes sombres sans refus dès que le prompt système cadre le travail comme de la fiction.',
           '**Qwen3 32B est le bon choix sur rig 24 Go.** Qualité de prose presque équivalente à Llama 70B sans la facture VRAM de 48 Go+. Le choix par défaut pour la plupart des ordinateurs portables et de bureau.',
           '**Mistral Large gagne sur la continuité long format.** Contexte 128K natif ; rédaction de roman sans perte de fil ou de voix des personnages.',
-          '**Command R+ 104B a la voix de dialogue la plus propre.** Les beats conversationnels les plus naturels entre les personnages ; le choix quand le dialogue est la partie structurante du travail.',
+          '**Command A+ a la voix de dialogue la plus propre.** Les beats conversationnels les plus naturels entre les personnages ; le choix quand le dialogue est la partie structurante du travail.',
           '**Yi-1.5 34B est le spécialiste de la poésie et de la prose lyrique.** Choix de niche pour les vers, la prose stylisée et le travail en format court où le rythme compte.',
           '**Les dérivés non censurés (Hermes 3, Dolphin 3.0) sont la bonne option quand les modèles instruction-tuned refusent.** Mêmes modèles de base ; la couche de sécurité RLHF est retirée ; le modèle suit le prompt au lieu de décliner. Fiction mature, scènes de conflit et personnages moralement complexes deviennent rédigeable.',
           '**Le sampling compte plus qu\'on ne le croit.** Température 0,8–1,1 et top-p 0,9–0,95 définissent la plage créative. Les paramètres type code (0,2–0,4) produisent une prose plate et prévisible. Au-dessus de 1,2, on entre dans le territoire du genre/surréalisme.',
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Meilleur au global :** Llama 3.3 70B en Q4_K_M, ~42 Go de VRAM. Cohérence de voix la plus solide de ce comparatif.',
           '**Meilleur sur rig 24 Go :** Qwen3 32B en Q4_K_M, ~20 Go de VRAM. Le choix par défaut pour la plupart des utilisateurs.',
           '**Meilleur long format :** Mistral Large en Q4_K_M, ~75 Go de VRAM au total (lourd). Contexte 128K natif.',
-          '**Meilleur dialogue :** Command R+ 104B en Q4_K_M, ~62 Go de VRAM. Meilleure différenciation des voix des personnages.',
+          '**Meilleur dialogue :** Command A+ en Q4_K_M, ~62 Go de VRAM. Meilleure différenciation des voix des personnages.',
           '**Meilleur poésie :** Yi-1.5 34B en Q4_K_M, ~21 Go de VRAM. Spécialiste de la prose lyrique.',
           '**Options non censurées :** Hermes 3 (base Llama 3.3, ~42 Go) et Dolphin 3.0 (plusieurs tailles de base, 13–42 Go).',
           '**Sampling par défaut pour la prose :** température 0,95, top-p 0,92, repeat penalty 1,1. Ajuster par type de tâche.',
@@ -908,11 +908,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70B est le modèle créatif polyvalent le plus solide ; Qwen3 32B est l\'alternative plus légère ; Mistral Large gagne en long format ; Command R+ gagne en dialogue ; Yi-1.5 gagne en poésie ; Hermes/Dolphin gèrent les scènes que les autres refusent.',
+            text: 'Llama 3.3 70B est le modèle créatif polyvalent le plus solide ; Qwen3 32B est l\'alternative plus légère ; Mistral Large gagne en long format ; Command A+ gagne en dialogue ; Yi-1.5 gagne en poésie ; Hermes/Dolphin gèrent les scènes que les autres refusent.',
           },
           {
             type: 'plain-terms',
-            text: 'Aucun modèle n\'est meilleur sur tout. Llama 3.3 70B est la valeur sûre si le matériel le permet. Qwen3 32B est le choix intelligent sur un GPU de 24 Go. Choisir un spécialiste (Mistral pour les romans, Command R+ pour le dialogue, Yi-1.5 pour la poésie) quand un type de tâche est la partie structurante du travail. Choisir un dérivé non censuré quand le modèle instruction-tuned refuse des scènes à écrire.',
+            text: 'Aucun modèle n\'est meilleur sur tout. Llama 3.3 70B est la valeur sûre si le matériel le permet. Qwen3 32B est le choix intelligent sur un GPU de 24 Go. Choisir un spécialiste (Mistral pour les romans, Command A+ pour le dialogue, Yi-1.5 pour la poésie) quand un type de tâche est la partie structurante du travail. Choisir un dérivé non censuré quand le modèle instruction-tuned refuse des scènes à écrire.',
           },
         ],
         columns: ['Modèle', 'Taille', 'VRAM (Q4_K_M)', 'Fiction', 'Dialogue', 'Poésie', 'Construction de monde', 'Idéal pour'],
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Llama 3.3 70B', 'Taille': '70B', 'VRAM (Q4_K_M)': '~42 Go', 'Fiction': 'Meilleur', 'Dialogue': 'Bon', 'Poésie': 'Bon', 'Construction de monde': 'Meilleur', 'Idéal pour': 'Meilleur au global ; par défaut si le matériel le permet' },
           { 'Modèle': 'Qwen3 32B', 'Taille': '32B', 'VRAM (Q4_K_M)': '~20 Go', 'Fiction': 'Bon', 'Dialogue': 'Bon', 'Poésie': 'Correct', 'Construction de monde': 'Bon', 'Idéal pour': 'Par défaut sur rig 24 Go ; faible écart vs Llama 70B' },
           { 'Modèle': 'Mistral Large', 'Taille': '123B', 'VRAM (Q4_K_M)': '~75 Go', 'Fiction': 'Bon (long format)', 'Dialogue': 'Bon', 'Poésie': 'Correct', 'Construction de monde': 'Bon', 'Idéal pour': 'Rédaction long format, contexte 128K' },
-          { 'Modèle': 'Command R+', 'Taille': '104B', 'VRAM (Q4_K_M)': '~62 Go', 'Fiction': 'Bon', 'Dialogue': 'Meilleur', 'Poésie': 'Correct', 'Construction de monde': 'Bon', 'Idéal pour': 'Travaux à dominante dialogue, scènes de groupe' },
+          { 'Modèle': 'Command A+', 'Taille': 'Non communiqué', 'VRAM (Q4_K_M)': '~62 Go', 'Fiction': 'Bon', 'Dialogue': 'Meilleur', 'Poésie': 'Correct', 'Construction de monde': 'Bon', 'Idéal pour': 'Travaux à dominante dialogue, scènes de groupe' },
           { 'Modèle': 'Yi-1.5 34B', 'Taille': '34B', 'VRAM (Q4_K_M)': '~21 Go', 'Fiction': 'Correct', 'Dialogue': 'Correct', 'Poésie': 'Meilleur', 'Construction de monde': 'Correct', 'Idéal pour': 'Poésie, prose lyrique, style travaillé' },
           { 'Modèle': 'Hermes 3 / Dolphin 3.0', 'Taille': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 Go', 'Fiction': 'Identique au modèle de base', 'Dialogue': 'Identique au modèle de base', 'Poésie': 'Identique au modèle de base', 'Construction de monde': 'Identique au modèle de base', 'Idéal pour': 'Scènes refusées par les modèles instruction-tuned' },
         ],
@@ -938,7 +938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — meilleur au global. Cohérence de voix la plus solide du comparatif ; les personnages gardent les mêmes schémas de discours sur de longues scènes. Suit bien les directives — quand le prompt système précise le PDV, le ton ou les conventions de genre, Llama 3.3 s\'y tient. Gère les thèmes sombres (violence, deuil, personnages moralement gris) sans refus quand le prompt cadre le travail comme de la fiction. Limites : les longs passages dérivent parfois vers une voix "littéraire" générique ; les petits modèles de la même famille (8B) perdent cette force.',
           '**Qwen3 32B** — meilleur sur rig 24 Go. Cohérence de voix légèrement inférieure à Llama 3.3 70B, mais l\'écart est suffisamment petit pour que la plupart des auteurs ne le remarquent pas sur un travail à dominante prose. Le plus solide des modèles plus petits sur le suivi de directives. Limites : poésie et prose stylisée sont nettement en retrait ; préférer Yi-1.5 pour ces usages.',
           '**Mistral Large** — meilleur pour la continuité long format. La fenêtre de contexte de 128K permet à un brouillon de 50 000 mots de tenir sans troncature ; le modèle garde les détails des personnages, les fils de l\'intrigue et les règles du monde sur plusieurs chapitres. Limites : la barre matérielle est la plus haute de ce comparatif (~75 Go en Q4_K_M) ; la vitesse par token ralentit sur les longues entrées. Utiliser Mistral La Plateforme sur infrastructure EU si le matériel local est la contrainte.',
-          '**Command R+ 104B** — meilleur pour le dialogue. Voix de personnages distinctes qui tiennent sur les échanges ; les scènes de groupe (3+ locuteurs) restent lisibles sans le mode d\'échec "tout le monde sonne pareil" courant chez les autres modèles. Limites : les paragraphes de prose entre les répliques de dialogue sont compétents mais pas lyriques ; pour les passages purement descriptifs, Llama 3.3 gagne.',
+          '**Command A+** — meilleur pour le dialogue. Voix de personnages distinctes qui tiennent sur les échanges ; les scènes de groupe (3+ locuteurs) restent lisibles sans le mode d\'échec "tout le monde sonne pareil" courant chez les autres modèles. Limites : les paragraphes de prose entre les répliques de dialogue sont compétents mais pas lyriques ; pour les passages purement descriptifs, Llama 3.3 gagne.',
           '**Yi-1.5 34B** — meilleur pour la poésie et la prose lyrique. Conscient du rythme, à l\'aise avec les formes structurées (sonnet, villanelle, haïku), produit des vers qui tiennent mieux que les grands modèles généralistes. Limites : la fiction long format est compétente mais pas son point fort ; préférer Llama 3.3 ou Qwen3 pour le travail narratif.',
           '**Hermes 3 (base Llama 3.3) et Dolphin 3.0** — dérivés non censurés. Même architecture et mêmes poids de base que Llama 3.3 70B ; la couche de sécurité RLHF est retirée lors du fine-tuning. Le modèle suit le prompt plutôt que de refuser ou d\'édulcorer le contenu mature. La qualité sur les prompts non-matures est identique au modèle de base ; la différence n\'est visible que sur les prompts où les versions instruction-tuned refusent. À utiliser quand le travail l\'exige (fiction mature, scènes violentes, personnages moralement complexes) et rester sur le modèle instruct sinon.',
         ],
@@ -964,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Llama 3.3 70B', 'Introduction typique': 'Action en premier, détail sensoriel immédiat', 'Motif descriptif typique': 'Concret et physique ; évite les noms abstraits ; ancrage social' },
           { 'Modèle': 'Qwen3 32B', 'Introduction typique': 'Observation environnementale avant l\'action du personnage', 'Motif descriptif typique': 'Efficace ; détails sociaux/atmosphériques ; légèrement structuré' },
           { 'Modèle': 'Yi-1.5 34B', 'Introduction typique': 'Métaphore ou comparaison dès la première proposition', 'Motif descriptif typique': 'Images abstraites ; variation rythmique ; plus dense ; notes pourpres occasionnelles' },
-          { 'Modèle': 'Command R+ 104B', 'Introduction typique': 'Voix du personnage ou ouverture proche du dialogue', 'Motif descriptif typique': 'Conversationnel ; voix propre et distincte ; description solo plus faible' },
+          { 'Modèle': 'Command A+', 'Introduction typique': 'Voix du personnage ou ouverture proche du dialogue', 'Motif descriptif typique': 'Conversationnel ; voix propre et distincte ; description solo plus faible' },
           { 'Modèle': 'Mistral Large', 'Introduction typique': 'Paragraphe de mise en scène ; démarrage plus lent', 'Motif descriptif typique': 'Régulier et maîtrisé ; cohérent sur les longs passages ; légèrement générique' },
         ],
         callouts: [
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**L\'interface de chat dans laquelle on écrit compte autant que le modèle.** Trois interfaces sont des choix crédibles pour les workflows d\'écriture créative en 2026 ; choisir en fonction de la forme du workflow.',
         items: [
           '**Open WebUI** — le choix polyvalent. Interface type ChatGPT, changement de modèle en un clic, fiches de personnages via les prompts système, import de documents pour le contexte. Meilleur pour les travaux à dominante prose où la forme chat correspond au flux de rédaction.',
-          '**SillyTavern** — le choix roleplay et dialogue. Écosystème de fiches de personnages (spec Tavern v2), gestion de personas, lore books pour la construction de mondes, chat de groupe pour les scènes multi-personnages. Meilleur pour les travaux à dominante dialogue et les projets de personnages ou de monde sur le long terme. S\'associe bien avec Command R+ et les dérivés non censurés.',
+          '**SillyTavern** — le choix roleplay et dialogue. Écosystème de fiches de personnages (spec Tavern v2), gestion de personas, lore books pour la construction de mondes, chat de groupe pour les scènes multi-personnages. Meilleur pour les travaux à dominante dialogue et les projets de personnages ou de monde sur le long terme. S\'associe bien avec Command A+ et les dérivés non censurés.',
           '**Agnai et RisuAI** — alternatives plus légères à SillyTavern. Moins de fonctionnalités, première prise en main plus facile, moins de personnalisation. À choisir quand SillyTavern semble trop complexe pour le workflow.',
           '**Ollama CLI simple plus un éditeur de texte** — le choix minimaliste. `ollama run llama3.3:70b` et faire passer les scènes par le terminal dans le document de brouillon. Perd le contexte de personnage persistant mais gagne en concentration de l\'auteur.',
           'Pour le comparatif des interfaces focalisées sur le roleplay, voir [SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ma situation': 'J\'ai plus de 48 Go de VRAM et je veux un seul modèle pour tout', 'Recommandation': 'Llama 3.3 70B (instruct) + Hermes 3 (non censuré) sur le même Ollama' },
           { 'Ma situation': 'J\'ai un GPU de 24 Go ou un Mac de 32 Go et je veux une bonne valeur par défaut', 'Recommandation': 'Qwen3 32B' },
           { 'Ma situation': 'Je rédige un roman — la continuité long format est prioritaire', 'Recommandation': 'Mistral Large (ou Mistral La Plateforme sur infrastructure EU si le matériel local ne suffit pas)' },
-          { 'Ma situation': 'Mon travail est à dominante dialogue — les voix des personnages doivent rester distinctes', 'Recommandation': 'Command R+ 104B (ou Llama 3.3 70B comme alternative plus légère)' },
+          { 'Ma situation': 'Mon travail est à dominante dialogue — les voix des personnages doivent rester distinctes', 'Recommandation': 'Command A+ (ou Llama 3.3 70B comme alternative plus légère)' },
           { 'Ma situation': 'J\'écris de la poésie, des vers ou de la prose lyrique', 'Recommandation': 'Yi-1.5 34B' },
           { 'Ma situation': 'Le modèle instruct refuse des scènes que je dois écrire', 'Recommandation': 'Hermes 3 (base Llama 3.3) ou Dolphin 3.0 — conserver la version instruct pour le travail sans contenu adulte' },
           { 'Ma situation': 'Je veux commencer avec un seul modèle et itérer ensuite', 'Recommandation': 'Qwen3 32B — couvre la plupart des usages sur matériel grand public ; basculer quand un type de tâche spécifique devient prépondérant' },
@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Choisir Qwen3 32B par défaut avec un GPU de 24 Go ; Llama 3.3 70B avec 48 Go+ ; Mistral Large pour les travaux de longueur roman ; Command R+ pour le dialogue ; Yi-1.5 pour la poésie ; Hermes/Dolphin pour les scènes que les modèles instruct refusent.',
+            text: 'Choisir Qwen3 32B par défaut avec un GPU de 24 Go ; Llama 3.3 70B avec 48 Go+ ; Mistral Large pour les travaux de longueur roman ; Command A+ pour le dialogue ; Yi-1.5 pour la poésie ; Hermes/Dolphin pour les scènes que les modèles instruct refusent.',
           },
           {
             type: 'plain-terms',
@@ -1073,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Erreurs courantes lors du choix et de l\'utilisation de modèles locaux pour l\'écriture créative',
         items: [
-          '**Erreur 1 : courir après le plus grand modèle sur les benchmarks.** Les scores d\'écriture créative corrèlent faiblement avec les classements de benchmarks généraux. Yi-1.5 34B surpasse Llama 3.3 70B en poésie ; Command R+ surpasse les deux en dialogue. Choisir par type de tâche, pas par rang de classement.',
+          '**Erreur 1 : courir après le plus grand modèle sur les benchmarks.** Les scores d\'écriture créative corrèlent faiblement avec les classements de benchmarks généraux. Yi-1.5 34B surpasse Llama 3.3 70B en poésie ; Command A+ surpasse les deux en dialogue. Choisir par type de tâche, pas par rang de classement.',
           '**Erreur 2 : utiliser les paramètres de sampling type code.** Une température de 0,2–0,4 produit une prose plate et prévisible. L\'écriture créative nécessite 0,8–1,1 avec top-p 0,9–0,95. Les paramètres par défaut de la plupart des interfaces de chat sont calibrés pour les Q&R, pas pour la prose.',
           '**Erreur 3 : se contenter du modèle instruct et abandonner quand il refuse.** La version instruct refuse des scènes qu\'on a explicitement cadrées comme de la fiction ; le dérivé non censuré du même modèle de base les rédige. Deux installations dans Ollama est la solution.',
           '**Erreur 4 : prompts système légers.** "Tu es un assistant utile" est le pire prompt possible pour le travail créatif. Un prompt système avec des notes de personnage, des échantillons de voix, le PDV, le temps et le ton fait plus pour la qualité de la sortie que n\'importe quel changement de modèle. Associer avec le [negative prompting](/fr/prompt-engineering/negative-prompting) pour spécifier ce qu\'il ne faut PAS faire (pas d\'exposition, pas de prose pourpre, pas de "elle ressentit").',
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Fiches modèles Hugging Face pour Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5](https://huggingface.co/) — documentation officielle des modèles et licences.',
+          '[Fiches modèles Hugging Face pour Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5](https://huggingface.co/) — documentation officielle des modèles et licences.',
           '[Hermes 3 (NousResearch) GitHub et fiche modèle](https://huggingface.co/NousResearch) — fine-tunes non censurés basés sur Llama 3.3.',
           '[Fiches modèles Dolphin 3.0 (Cognitive Computations)](https://huggingface.co/cognitivecomputations) — fine-tunes non censurés sur plusieurs modèles de base.',
           '[Bibliothèque de modèles Ollama](https://ollama.com/library) — modèles disponibles, options de quantification, flags de support d\'appels d\'outils référencés ci-dessus.',
@@ -1168,22 +1168,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'クリエイティブライティングに最適なローカルLLM 2026：小説・ダイアログ・世界構築',
     seoTitle: 'クリエイティブライティング向けローカルLLM 2026：比較・実測ガイド',
     intro:
-      'クリエイティブライティングは、ローカルLLMがプライバシーやコスト以外の面でも優位性を発揮するワークロードです。2026年のベストなinstruct-tuned・無検閲オープンウェイトモデル——Llama 3.3 70B、Qwen3 32B、Mistral Large、Command R+、Yi-1.5 34B、そしてHermes/Dolphinの無検閲派生版——は、ほとんどのプロンプトでフロンティアクラウドモデルに匹敵する小説・ダイアログ・世界構築を生成します。違いは声の一貫性、ダークまたは成人向けテーマの扱い、方向性への従いやすさにあります。本ガイドでは、6つのモデルを小説・ダイアログ・詩・世界構築にまたがる50以上のクリエイティブプロンプトでテストし、各モデルに適した温度とTop-Pの設定も紹介します。',
+      'クリエイティブライティングは、ローカルLLMがプライバシーやコスト以外の面でも優位性を発揮するワークロードです。2026年のベストなinstruct-tuned・無検閲オープンウェイトモデル——Llama 3.3 70B、Qwen3 32B、Mistral Large、Command A+、Yi-1.5 34B、そしてHermes/Dolphinの無検閲派生版——は、ほとんどのプロンプトでフロンティアクラウドモデルに匹敵する小説・ダイアログ・世界構築を生成します。違いは声の一貫性、ダークまたは成人向けテーマの扱い、方向性への従いやすさにあります。本ガイドでは、6つのモデルを小説・ダイアログ・詩・世界構築にまたがる50以上のクリエイティブプロンプトでテストし、各モデルに適した温度とTop-Pの設定も紹介します。',
     metaDescription:
-      'クリエイティブライティング向けローカルLLM 6モデル比較：Llama 3.3、Qwen3、Mistral Large、Command R+、Yi-1.5、無検閲版。50以上のプロンプトで実測。',
+      'クリエイティブライティング向けローカルLLM 6モデル比較：Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5、無検閲版。50以上のプロンプトで実測。',
     twitterDescription:
-      '小説・ダイアログ・世界構築向けローカルLLM 6モデルを50以上のプロンプトでテスト。Llama 3.3、Qwen3、Mistral Large、Command R+、Yi-1.5と無検閲オプション。タスク別評価。',
+      '小説・ダイアログ・世界構築向けローカルLLM 6モデルを50以上のプロンプトでテスト。Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5と無検閲オプション。タスク別評価。',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -1207,17 +1207,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルLLM 世界構築',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70Bは2026年5月現在、クリエイティブライティングにおける総合最良のローカル選択です——声の一貫性が高く、方向性への追従も良好で、システムプロンプトでフィクションとして定義されていればダークなテーマも拒否せずに扱います。Qwen3 32Bは24 GBリグでの適切な選択：散文の品質はほぼ同等で、ハードウェア要件はより軽量です。Mistral Largeはネイティブ128Kコンテキストによる長編継続性で勝ります。Command R+ 104Bは最もクリーンなダイアログの声を持っています。Yi-1.5 34Bは詩と抒情的な散文のニッチな選択です。instructモデルが拒否するワークフローには、Hermes 3（Llama 3.3ベース）とDolphin 3.0が無検閲の選択肢となります——同じアーキテクチャで、RLHFセーフティレイヤーが除去されています。温度0.8〜1.1、Top-P 0.9〜0.95がクリエイティブライティングの範囲です。0.7以下は平坦な散文を生成します。無検閲≠非倫理的——それはモデルが拒否する代わりにプロンプトに従うことを意味します。著者は依然として著者です。**',
+      '**Llama 3.3 70Bは2026年5月現在、クリエイティブライティングにおける総合最良のローカル選択です——声の一貫性が高く、方向性への追従も良好で、システムプロンプトでフィクションとして定義されていればダークなテーマも拒否せずに扱います。Qwen3 32Bは24 GBリグでの適切な選択：散文の品質はほぼ同等で、ハードウェア要件はより軽量です。Mistral Largeはネイティブ128Kコンテキストによる長編継続性で勝ります。Command A+は最もクリーンなダイアログの声を持っています。Yi-1.5 34Bは詩と抒情的な散文のニッチな選択です。instructモデルが拒否するワークフローには、Hermes 3（Llama 3.3ベース）とDolphin 3.0が無検閲の選択肢となります——同じアーキテクチャで、RLHFセーフティレイヤーが除去されています。温度0.8〜1.1、Top-P 0.9〜0.95がクリエイティブライティングの範囲です。0.7以下は平坦な散文を生成します。無検閲≠非倫理的——それはモデルが拒否する代わりにプロンプトに従うことを意味します。著者は依然として著者です。**',
     quickAnswerTop: {
       ja: {
         question: '2026年のクリエイティブライティングに最適なローカルLLMは何ですか？',
         answer:
-          'Llama 3.3 70Bが総合最良のローカル選択です——散文・ダイアログ・世界構築において優秀で、長いセッションを通じて声の一貫性を維持します。ハードウェアが48 GBに満たない24 GBリグでは、Qwen3 32Bが品質損失の少ない軽量な代替です。Mistral Largeは長編執筆（128Kコンテキスト）のための選択です。Command R+ 104Bは最もナチュラルなダイアログの声を持ちます。Yi-1.5 34Bは詩と抒情散文のスペシャリストです。instructモデルのセーフティレイヤーにぶつかるワークフロー（成熟したフィクション、争闘シーン、道徳的に複雑なキャラクター）には、Hermes 3とDolphin 3.0の派生版が同じベースモデルでRLHFセーフティレイヤーを除去したものです——拒否の代わりにプロンプトに従います。温度0.8〜1.1、Top-P 0.9〜0.95がクリエイティブライティングの範囲です。コーディングスタイルの設定（0.2〜0.4）は平坦な散文を生成します。',
+          'Llama 3.3 70Bが総合最良のローカル選択です——散文・ダイアログ・世界構築において優秀で、長いセッションを通じて声の一貫性を維持します。ハードウェアが48 GBに満たない24 GBリグでは、Qwen3 32Bが品質損失の少ない軽量な代替です。Mistral Largeは長編執筆（128Kコンテキスト）のための選択です。Command A+は最もナチュラルなダイアログの声を持ちます。Yi-1.5 34Bは詩と抒情散文のスペシャリストです。instructモデルのセーフティレイヤーにぶつかるワークフロー（成熟したフィクション、争闘シーン、道徳的に複雑なキャラクター）には、Hermes 3とDolphin 3.0の派生版が同じベースモデルでRLHFセーフティレイヤーを除去したものです——拒否の代わりにプロンプトに従います。温度0.8〜1.1、Top-P 0.9〜0.95がクリエイティブライティングの範囲です。コーディングスタイルの設定（0.2〜0.4）は平坦な散文を生成します。',
         bullets: [
           '総合最良：Llama 3.3 70B——声の一貫性が最も高く、方向性への追従も良好、フィクションとして定義されれば拒否せずダークなテーマも扱える。',
           '24 GBリグのベスト：Qwen3 32B——散文品質はLlama 70Bにほぼ匹敵し、ハードウェア要件がはるかに軽い。',
           '長編ベスト：Mistral Large——128Kコンテキスト標準搭載；長編執筆でも話の流れを維持。',
-          'ダイアログベスト：Command R+ 104B——キャラクター間で最もナチュラルな会話の声。',
+          'ダイアログベスト：Command A+——キャラクター間で最もナチュラルな会話の声。',
           '詩・抒情ベスト：Yi-1.5 34B——韻文・スタイル散文のニッチな選択。',
            'instructが拒否する場合：Hermes 3（Llamaベース）またはDolphin 3.0——無検閲版、同じアーキテクチャ、プロンプト追従。',
           'サンプリング：散文には温度0.8〜1.1、Top-P 0.9〜0.95；タイトなダイアログはより低く、サリアル/ジャンル作品はより高く。',
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70Bは2026年5月現在、クリエイティブライティングにおける総合最良のローカルモデルです。** 声の一貫性が最も高く、方向性への追従も良好で、システムプロンプトでフィクションと定義されていれば拒否せずにダークなテーマを扱います。',
           '**Qwen3 32Bは24 GBリグの適切な選択です。** 48 GB以上のVRAMを必要とせずにほぼLlama 70Bの散文品質を実現します。ほとんどのラップトップ・デスクトップのデフォルト選択です。',
           '**Mistral Largeは長編継続性で勝ります。** 128Kコンテキスト標準搭載；長編執筆でもキャラクターの詳細や話の流れを失いません。',
-          '**Command R+ 104Bは最もクリーンなダイアログの声を持ちます。** キャラクター間で最もナチュラルな会話のビートを持ち、ダイアログが構造的要素の中心となる作品に最適です。',
+          '**Command A+は最もクリーンなダイアログの声を持ちます。** キャラクター間で最もナチュラルな会話のビートを持ち、ダイアログが構造的要素の中心となる作品に最適です。',
           '**Yi-1.5 34Bは詩と抒情散文のスペシャリストです。** 韻・スタイル散文・リズムが重要な短編作品のためのニッチな選択です。',
           '**無検閲派生版（Hermes 3、Dolphin 3.0）はinstructモデルが拒否するときの適切な選択です。** 同じベースモデルで、RLHFセーフティレイヤーが除去されています。成熟したフィクション・争闘シーン・道徳的に複雑なキャラクターが書けるようになります。',
           '**サンプリングは多くの人が思うより重要です。** 温度0.8〜1.1、Top-P 0.9〜0.95がクリエイティブ範囲です。コーディングスタイルの設定（0.2〜0.4）は平坦で予測可能な散文を生成します。1.2以上はジャンル/シュルレアリスムの領域です。',
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**総合最良：** Llama 3.3 70B（Q4_K_M）、約42 GB VRAM。このセットで最高の声の一貫性。',
           '**24 GBリグのベスト：** Qwen3 32B（Q4_K_M）、約20 GB VRAM。ほとんどのユーザーのデフォルト。',
           '**長編ベスト：** Mistral Large（Q4_K_M）、約75 GB VRAM（重量級）。128Kコンテキスト標準搭載。',
-          '**ダイアログベスト：** Command R+ 104B（Q4_K_M）、約62 GB VRAM。最もクリーンなキャラクター声の分化。',
+          '**ダイアログベスト：** Command A+（Q4_K_M）、約62 GB VRAM。最もクリーンなキャラクター声の分化。',
           '**詩のベスト：** Yi-1.5 34B（Q4_K_M）、約21 GB VRAM。抒情散文スペシャリスト。',
           '**無検閲オプション：** Hermes 3（Llama 3.3ベース、約42 GB）とDolphin 3.0（複数ベースサイズ、13〜42 GB）。',
           '**散文のデフォルトサンプリング：** 温度0.95、Top-P 0.92、リピートペナルティ1.1。タスクタイプごとに調整。',
@@ -1297,11 +1297,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70Bは総合最強のクリエイティブモデル；Qwen3 32Bはより軽い代替；Mistral Largeは長編で優位；Command R+はダイアログで優位；Yi-1.5は詩で優位；Hermes/Dolphinは他のモデルが拒否するシーンを扱う。',
+            text: 'Llama 3.3 70Bは総合最強のクリエイティブモデル；Qwen3 32Bはより軽い代替；Mistral Largeは長編で優位；Command A+はダイアログで優位；Yi-1.5は詩で優位；Hermes/Dolphinは他のモデルが拒否するシーンを扱う。',
           },
           {
             type: 'plain-terms',
-            text: 'どの1つのモデルも全ての面で最高ではありません。Llama 3.3 70Bはハードウェアが許せば安全なデフォルトです。Qwen3 32Bは24 GB GPUでの賢い選択です。特定のタスクタイプが構造的要素の中心となる場合はスペシャリスト（長編ならMistral、ダイアログならCommand R+、詩ならYi-1.5）を選んでください。instructモデルが書く必要のあるシーンを拒否する場合は無検閲派生版を選んでください。',
+            text: 'どの1つのモデルも全ての面で最高ではありません。Llama 3.3 70Bはハードウェアが許せば安全なデフォルトです。Qwen3 32Bは24 GB GPUでの賢い選択です。特定のタスクタイプが構造的要素の中心となる場合はスペシャリスト（長編ならMistral、ダイアログならCommand A+、詩ならYi-1.5）を選んでください。instructモデルが書く必要のあるシーンを拒否する場合は無検閲派生版を選んでください。',
           },
         ],
         columns: ['モデル', 'サイズ', 'VRAM (Q4_K_M)', '小説', 'ダイアログ', '詩', '世界構築', '用途'],
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Llama 3.3 70B', 'サイズ': '70B', 'VRAM (Q4_K_M)': '約42 GB', '小説': '最良', 'ダイアログ': '優秀', '詩': '優秀', '世界構築': '最良', '用途': '総合最良；ハードウェアが許す場合のデフォルト' },
           { 'モデル': 'Qwen3 32B', 'サイズ': '32B', 'VRAM (Q4_K_M)': '約20 GB', '小説': '優秀', 'ダイアログ': '優秀', '詩': '可', '世界構築': '優秀', '用途': '24 GBリグのデフォルト；Llama 70Bとの差は小さい' },
           { 'モデル': 'Mistral Large', 'サイズ': '123B', 'VRAM (Q4_K_M)': '約75 GB', '小説': '優秀（長編）', 'ダイアログ': '優秀', '詩': '可', '世界構築': '優秀', '用途': '長編継続性、128Kコンテキスト' },
-          { 'モデル': 'Command R+', 'サイズ': '104B', 'VRAM (Q4_K_M)': '約62 GB', '小説': '優秀', 'ダイアログ': '最良', '詩': '可', '世界構築': '優秀', '用途': 'ダイアログ多用の作品、グループシーン' },
+          { 'モデル': 'Command A+', 'サイズ': '非公開', 'VRAM (Q4_K_M)': '約62 GB', '小説': '優秀', 'ダイアログ': '最良', '詩': '可', '世界構築': '優秀', '用途': 'ダイアログ多用の作品、グループシーン' },
           { 'モデル': 'Yi-1.5 34B', 'サイズ': '34B', 'VRAM (Q4_K_M)': '約21 GB', '小説': '可', 'ダイアログ': '可', '詩': '最良', '世界構築': '可', '用途': '詩、抒情散文、スタイル重視の作品' },
           { 'モデル': 'Hermes 3 / Dolphin 3.0', 'サイズ': '13B〜70B', 'VRAM (Q4_K_M)': '約9〜42 GB', '小説': 'ベースと同等', 'ダイアログ': 'ベースと同等', '詩': 'ベースと同等', '世界構築': 'ベースと同等', '用途': 'instructモデルが拒否するシーン' },
         ],
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — 総合最良。テストセット内で最高の声の一貫性；キャラクターは長いシーンにわたって同じ話し方のパターンを維持します。方向性への追従が良好——システムプロンプトでPOV・トーン・ジャンル規則を指定すると、Llama 3.3は従います。フィクションとしてプロンプトで定義されていれば、ダークなテーマ（暴力・悲嘆・道徳的にグレーなキャラクター）を拒否せずに扱います。弱点：長い文章が時々一般的な「文学的」な声に流れることがある；同じファミリーの小さいモデル（8B）はこの強みを失います。',
           '**Qwen3 32B** — 24 GBリグのベスト。Llama 3.3 70Bよりわずかに声の一貫性が低いですが、散文が多い作業ではほとんどの作者が気づかない差です。より小さいモデルの中では方向性への追従が最も優秀です。弱点：詩とスタイル散文は明らかに劣ります；それらにはYi-1.5を優先してください。',
           '**Mistral Large** — 長編継続性のベスト。128Kのコンテキストウィンドウにより5万語の草稿が切り捨てなしに収まります；キャラクターの詳細・プロットの糸・世界のルールを複数の章にわたって維持します。弱点：このセットで最も高いハードウェア要件（Q4_K_Mで約75 GB）；長い入力ではトークンごとの速度が低下します。ローカルハードウェアが制約の場合はEUインフラ上のMistral La Plateformeを使用してください。',
-          '**Command R+ 104B** — ダイアログのベスト。交換にわたって区別できるキャラクターの声を維持します；グループシーン（3人以上の話者）は他のモデルで一般的な「全員が同じように聞こえる」失敗モードなしに読み取れます。弱点：ダイアログのビート間の散文段落は有能ですが抒情的ではありません；純粋に描写的な文章にはLlama 3.3が勝ります。',
+          '**Command A+** — ダイアログのベスト。交換にわたって区別できるキャラクターの声を維持します；グループシーン（3人以上の話者）は他のモデルで一般的な「全員が同じように聞こえる」失敗モードなしに読み取れます。弱点：ダイアログのビート間の散文段落は有能ですが抒情的ではありません；純粋に描写的な文章にはLlama 3.3が勝ります。',
           '**Yi-1.5 34B** — 詩と抒情散文のベスト。リズムを意識し、構造的な形式（ソネット・ビラネル・俳句）に慣れており、大きな汎用モデルよりもしっかりした詩を生成します。弱点：長編小説は有能ですが強みではありません；物語の作業にはLlama 3.3またはQwen3を選んでください。',
           '**Hermes 3（Llama 3.3ベース）とDolphin 3.0** — 無検閲派生版。Llama 3.3 70Bと同じアーキテクチャとベースウェイト；ファインチューニング中にRLHFセーフティレイヤーが除去されています。モデルは成熟したコンテンツを拒否またはサニタイズする代わりにプロンプトに従います。非成熟なプロンプトでの品質はベースモデルと同等です；違いはinstructバージョンが拒否するプロンプトでのみ現れます。作業が必要な場合（成熟したフィクション・暴力的なシーン・道徳的に複雑なキャラクター）に使用し、それ以外はinstructベースのモデルを使用してください。',
         ],
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Llama 3.3 70B', '典型的な書き出し': 'アクション優先、即座の感覚的描写', '典型的な描写パターン': '具体的・身体的；抽象名詞を避ける；社会的根拠あり' },
           { 'モデル': 'Qwen3 32B', '典型的な書き出し': 'キャラクターの行動前に環境観察', '典型的な描写パターン': '効率的；社会的・雰囲気的描写；わずかな構造的特徴あり' },
           { 'モデル': 'Yi-1.5 34B', '典型的な書き出し': '最初の節から比喩または直喩', '典型的な描写パターン': '抽象的なイメージ；リズム変化；より密度が高い；時折過度に凝った表現' },
-          { 'モデル': 'Command R+ 104B', '典型的な書き出し': 'キャラクターの声またはダイアログに近い書き出し', '典型的な描写パターン': '会話的；強く独特な声；単独描写はやや弱い' },
+          { 'モデル': 'Command A+', '典型的な書き出し': 'キャラクターの声またはダイアログに近い書き出し', '典型的な描写パターン': '会話的；強く独特な声；単独描写はやや弱い' },
           { 'モデル': 'Mistral Large', '典型的な書き出し': 'シーン設定段落；ゆっくりした始まり', '典型的な描写パターン': '均一でコントロールされている；長文でも一貫；やや汎用的' },
         ],
         callouts: [
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**執筆するチャットUIはモデルと同じくらい重要です。** 2026年のクリエイティブライティングワークフローには3つの信頼できるフロントエンドの選択肢があります；ワークフローの形に合わせて選んでください。',
         items: [
           '**Open WebUI** — 汎用選択。ChatGPTのようなインターフェース、ワンクリックでモデル切り替え、システムプロンプトによるキャラクターカード、コンテキスト用のドキュメントアップロード。チャットの形があなたの起草フローに合う散文多用の作業に最適です。',
-          '**SillyTavern** — ロールプレイとダイアログの選択。キャラクターカードエコシステム（Tavern v2仕様）、ペルソナ管理、世界構築のためのロアブック、複数キャラクターシーンのグループチャット。ダイアログ主導の作業と長期的なキャラクターや世界のプロジェクトに最適です。Command R+と無検閲派生版との相性が良いです。',
+          '**SillyTavern** — ロールプレイとダイアログの選択。キャラクターカードエコシステム（Tavern v2仕様）、ペルソナ管理、世界構築のためのロアブック、複数キャラクターシーンのグループチャット。ダイアログ主導の作業と長期的なキャラクターや世界のプロジェクトに最適です。Command A+と無検閲派生版との相性が良いです。',
           '**AgnaiとRisuAI** — SillyTavernの代替として絞り込まれたもの。軽量な機能セット、より簡単な初回実行、カスタマイズは少ない。SillyTavernがワークフローに対してオーバービルドに感じる場合に選んでください。',
           '**プレーンなOllama CLIとテキストエディタ** — 最小限の選択。`ollama run llama3.3:70b`を実行し、ターミナルからシーンを草稿ドキュメントにパイプします。持続的なキャラクターコンテキストは失いますが、著者の集中力を得ます。',
           'ロールプレイ重視のフロントエンドのヘッドtoヘッド比較については、[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)をご覧ください。',
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '状況': '48 GB以上のVRAMがあり、1つのモデルで全てをこなしたい', 'おすすめ': 'Llama 3.3 70B（instruct）+ Hermes 3（無検閲版）を同じOllamaで' },
           { '状況': '24 GB GPUまたは32 GB Macがあり、安定したデフォルトを求めている', 'おすすめ': 'Qwen3 32B' },
           { '状況': '小説を執筆中——長編の継続性を最優先にしたい', 'おすすめ': 'Mistral Large（ローカルが厳しければMistral La PlatformeのEUインフラ）' },
-          { '状況': 'ダイアログが多い作品——キャラクターの声を一貫させたい', 'おすすめ': 'Command R+ 104B（軽量代替としてLlama 3.3 70B）' },
+          { '状況': 'ダイアログが多い作品——キャラクターの声を一貫させたい', 'おすすめ': 'Command A+（軽量代替としてLlama 3.3 70B）' },
           { '状況': '詩・韻文・抒情散文を書いている', 'おすすめ': 'Yi-1.5 34B' },
           { '状況': 'instructモデルが書く必要のあるシーンを拒否する', 'おすすめ': 'Hermes 3（Llama 3.3ベース）またはDolphin 3.0——成人向け以外はinstruct版を使用' },
           { '状況': '最初は1つのモデルから始めて段階的に改善したい', 'おすすめ': 'Qwen3 32B——コンシューマーハードウェアでほとんどのワークフローをカバー；特定タスクが主軸になったら切り替える' },
@@ -1444,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '24 GB GPUならQwen3 32Bをデフォルトに；48 GB以上ならLlama 3.3 70Bを；長編作品ならMistral Largeを；ダイアログならCommand R+を；詩ならYi-1.5を；instructモデルが拒否するシーンにはHermes/Dolphinを。',
+            text: '24 GB GPUならQwen3 32Bをデフォルトに；48 GB以上ならLlama 3.3 70Bを；長編作品ならMistral Largeを；ダイアログならCommand A+を；詩ならYi-1.5を；instructモデルが拒否するシーンにはHermes/Dolphinを。',
           },
           {
             type: 'plain-terms',
@@ -1462,7 +1462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'クリエイティブライティングのためのローカルモデルを選ぶ・使う際のよくある間違い',
         items: [
-          '**間違い1：ベンチマークで最大のモデルを追いかける。** クリエイティブライティングのスコアは一般的なベンチマークリーダーボードとの相関が低いです。Yi-1.5 34Bは詩でLlama 3.3 70Bを上回り；Command R+は両方をダイアログで上回ります。リーダーボードのランクではなく、タスクで選んでください。',
+          '**間違い1：ベンチマークで最大のモデルを追いかける。** クリエイティブライティングのスコアは一般的なベンチマークリーダーボードとの相関が低いです。Yi-1.5 34Bは詩でLlama 3.3 70Bを上回り；Command A+は両方をダイアログで上回ります。リーダーボードのランクではなく、タスクで選んでください。',
           '**間違い2：コーディングスタイルのサンプリング設定を使用する。** 温度0.2〜0.4は平坦で予測可能な散文を生成します。クリエイティブライティングにはTop-P 0.9〜0.95で0.8〜1.1が必要です。ほとんどのチャットUIのデフォルト設定はQ&Aに合わせられており、散文には合っていません。',
           '**間違い3：instructモデルをデフォルトにして、拒否されたら諦める。** instructバージョンはフィクションとして明示的に定義したシーンを拒否します；同じベースモデルの無検閲派生版はそれらを書きます。Ollamaに2つのインストールが回避策です。',
           '**間違い4：薄いシステムプロンプト。** 「あなたは役立つアシスタントです」はクリエイティブ作業にとって最悪のプロンプトです。キャラクターノート・声のサンプル・POV・時制・トーンを含むシステムプロンプトは、どんなモデル切り替えよりも出力品質に対してより多くのことをします。何をすべきでないかを指定するために[ネガティブプロンプティング](/ja/prompt-engineering/negative-prompting)と組み合わせてください（説明なし、過剰な装飾なし、「彼女は感じた」なし）。',
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '参考文献',
         items: [
-          '[Llama 3.3、Qwen3、Mistral Large、Command R+、Yi-1.5のHugging Faceモデルカード](https://huggingface.co/) — 公式モデルドキュメントとライセンス。',
+          '[Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5のHugging Faceモデルカード](https://huggingface.co/) — 公式モデルドキュメントとライセンス。',
           '[Hermes 3（NousResearch）GitHubとモデルカード](https://huggingface.co/NousResearch) — Llama 3.3ベースの無検閲ファインチューン。',
           '[Dolphin 3.0（Cognitive Computations）モデルカード](https://huggingface.co/cognitivecomputations) — 複数のベースモデルにわたる無検閲ファインチューン。',
           '[Ollamaモデルライブラリ](https://ollama.com/library) — 利用可能なモデル、量子化オプション、上記で参照されるツール呼び出しサポートフラグ。',
@@ -1557,22 +1557,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: '2026年创意写作最佳本地LLM：小说、对话与世界构建测评',
     seoTitle: '2026年创意写作最佳本地LLM：实测推荐',
     intro:
-      '创意写作是本地LLM在隐私和价格之外更能体现优势的工作场景。2026年最优秀的指令调优和无审查开放权重模型——Llama 3.3 70B、Qwen3 32B、Mistral Large、Command R+、Yi-1.5 34B，以及Hermes/Dolphin无审查衍生版——在大多数提示词上，其小说、对话和世界构建输出已能与前沿云端模型比肩。差异体现在声音一致性、处理黑暗或成人题材的意愿，以及对创作方向指令的响应自然度。本指南在50余条创意提示词上对六款模型展开测试，覆盖小说、对话、诗歌、世界构建，并给出每款模型适用的温度与top-p设置。',
+      '创意写作是本地LLM在隐私和价格之外更能体现优势的工作场景。2026年最优秀的指令调优和无审查开放权重模型——Llama 3.3 70B、Qwen3 32B、Mistral Large、Command A+、Yi-1.5 34B，以及Hermes/Dolphin无审查衍生版——在大多数提示词上，其小说、对话和世界构建输出已能与前沿云端模型比肩。差异体现在声音一致性、处理黑暗或成人题材的意愿，以及对创作方向指令的响应自然度。本指南在50余条创意提示词上对六款模型展开测试，覆盖小说、对话、诗歌、世界构建，并给出每款模型适用的温度与top-p设置。',
     metaDescription:
-      '对比6款本地创意写作模型：Llama 3.3、Qwen3、Mistral Large、Command R+、Yi-1.5及无审查衍生版，在50余条创意提示词上测试完成。',
+      '对比6款本地创意写作模型：Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5及无审查衍生版，在50余条创意提示词上测试完成。',
     twitterDescription:
-      '6款本地模型在小说、对话、世界构建上的50余条实测结果。Llama 3.3、Qwen3、Mistral Large、Command R+、Yi-1.5及无审查选择，逐任务给出结论。',
+      '6款本地模型在小说、对话、世界构建上的50余条实测结果。Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5及无审查选择，逐任务给出结论。',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -1596,17 +1596,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm worldbuilding',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70B是2026年5月综合表现最佳的本地创意写作模型——声音一致性突出，对指令方向响应良好，系统提示词将创作框定为小说时可处理黑暗题材而不拒绝。Qwen3 32B是24 GB显卡的最优选：文笔接近Llama 70B，硬件需求低得多。Mistral Large凭借原生128K上下文赢在长篇续写连贯性。Command R+ 104B拥有最干净的对话声音。Yi-1.5 34B是诗歌和意象化散文的小众专用选择。对于指令调优版拒绝的场景，Hermes 3（Llama 3.3基底）和Dolphin 3.0是无审查选项——架构相同，RLHF安全层已移除。温度0.8–1.1、top-p 0.9–0.95是创意写作区间；0.7及以下会产生平淡散文。无审查不等于不道德——它意味着模型遵从提示词而非拒绝；作者仍是创作主体。**',
+      '**Llama 3.3 70B是2026年5月综合表现最佳的本地创意写作模型——声音一致性突出，对指令方向响应良好，系统提示词将创作框定为小说时可处理黑暗题材而不拒绝。Qwen3 32B是24 GB显卡的最优选：文笔接近Llama 70B，硬件需求低得多。Mistral Large凭借原生128K上下文赢在长篇续写连贯性。Command A+拥有最干净的对话声音。Yi-1.5 34B是诗歌和意象化散文的小众专用选择。对于指令调优版拒绝的场景，Hermes 3（Llama 3.3基底）和Dolphin 3.0是无审查选项——架构相同，RLHF安全层已移除。温度0.8–1.1、top-p 0.9–0.95是创意写作区间；0.7及以下会产生平淡散文。无审查不等于不道德——它意味着模型遵从提示词而非拒绝；作者仍是创作主体。**',
     quickAnswerTop: {
       zh: {
         question: '2026年最适合创意写作的本地LLM是哪款？',
         answer:
-          'Llama 3.3 70B是综合表现最佳的本地选择——在文笔、对话和世界构建上均表现突出，跨长会话的声音一致性持续稳定。在24 GB硬件上Qwen3 32B是质量损失极小的轻量替代。Mistral Large是长篇草稿的长上下文首选（原生128K）。Command R+ 104B拥有最自然的对话声音。Yi-1.5 34B是诗歌和意象化散文的专用选择。对于触发指令调优安全层的场景，Hermes 3和Dolphin 3.0衍生版使用相同的基础模型但移除了安全RLHF层——它们遵从提示词而不拒绝。温度0.8–1.1、top-p 0.9–0.95是创意写作区间；编程风格设置（0.2–0.4）会产生平淡散文。',
+          'Llama 3.3 70B是综合表现最佳的本地选择——在文笔、对话和世界构建上均表现突出，跨长会话的声音一致性持续稳定。在24 GB硬件上Qwen3 32B是质量损失极小的轻量替代。Mistral Large是长篇草稿的长上下文首选（原生128K）。Command A+拥有最自然的对话声音。Yi-1.5 34B是诗歌和意象化散文的专用选择。对于触发指令调优安全层的场景，Hermes 3和Dolphin 3.0衍生版使用相同的基础模型但移除了安全RLHF层——它们遵从提示词而不拒绝。温度0.8–1.1、top-p 0.9–0.95是创意写作区间；编程风格设置（0.2–0.4）会产生平淡散文。',
         bullets: [
           '综合最佳：Llama 3.3 70B——声音一致性最强，对指令方向响应好，框定为小说时处理黑暗题材不拒绝。',
           '24 GB显卡最优：Qwen3 32B——文笔接近Llama 70B，硬件需求低得多。',
           '长篇最佳：Mistral Large——原生128K上下文；不丢失线索地完成长篇小说草稿。',
-          '对话最佳：Command R+ 104B——跨角色最自然的对话声音。',
+          '对话最佳：Command A+——跨角色最自然的对话声音。',
           '诗歌/意象化散文最佳：Yi-1.5 34B——格律诗和意象化散文的小众专用选择。',
           '指令版拒绝时：Hermes 3（Llama基底）或Dolphin 3.0——无审查，架构相同，遵从提示词。',
           '采样：文笔用温度0.8–1.1、top-p 0.9–0.95；紧凑对话用低一档，超现实/类型小说用高一档。',
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B是2026年5月综合表现最佳的本地创意写作模型。** 声音一致性最强，对指令方向响应良好，系统提示词将创作框定为小说时处理黑暗题材不拒绝。',
           '**Qwen3 32B是24 GB显卡的最优选。** 文笔质量接近Llama 70B，但无需48 GB以上VRAM。是大多数笔记本和台式机用户的默认选择。',
           '**Mistral Large赢在长篇续写连贯性。** 原生128K上下文；长篇小说草稿不丢失线索或角色声音。',
-          '**Command R+ 104B拥有最干净的对话声音。** 跨角色最自然的对话节奏；对话是作品核心内容时的首选。',
+          '**Command A+拥有最干净的对话声音。** 跨角色最自然的对话节奏；对话是作品核心内容时的首选。',
           '**Yi-1.5 34B是诗歌和意象化散文的专用选择。** 格律诗、意象化散文和节奏重要的短篇创作的小众首选。',
           '**无审查衍生版（Hermes 3、Dolphin 3.0）是指令调优版拒绝时的正确选择。** 基础模型相同；RLHF安全层已移除；模型遵从提示词而不拒绝。成熟小说、冲突场景和道德复杂角色变得可写。',
           '**采样设置比大多数人意识到的重要得多。** 温度0.8–1.1、top-p 0.9–0.95是创意区间。编程风格设置（0.2–0.4）产生平淡、可预测的散文。1.2以上进入类型/超现实领域。',
@@ -1651,7 +1651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**综合最佳：** Llama 3.3 70B（Q4_K_M量化），约42 GB VRAM。本测试集中声音一致性最强。',
           '**24 GB显卡最优：** Qwen3 32B（Q4_K_M），约20 GB VRAM。大多数用户的默认选择。',
           '**长篇最佳：** Mistral Large（Q4_K_M），约75 GB总VRAM（重型）。原生128K上下文。',
-          '**对话最佳：** Command R+ 104B（Q4_K_M），约62 GB VRAM。角色声音区分度最佳。',
+          '**对话最佳：** Command A+（Q4_K_M），约62 GB VRAM。角色声音区分度最佳。',
           '**诗歌最佳：** Yi-1.5 34B（Q4_K_M），约21 GB VRAM。意象化散文专家。',
           '**无审查选项：** Hermes 3（Llama 3.3基底，约42 GB）和Dolphin 3.0（多基底，13–42 GB）。',
           '**散文默认采样：** 温度0.95、top-p 0.92、重复惩罚1.1。按任务类型调整。',
@@ -1686,11 +1686,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70B是综合最强的创意模型；Qwen3 32B是轻量替代；Mistral Large赢长篇；Command R+赢对话；Yi-1.5赢诗歌；Hermes/Dolphin处理其他模型拒绝的场景。',
+            text: 'Llama 3.3 70B是综合最强的创意模型；Qwen3 32B是轻量替代；Mistral Large赢长篇；Command A+赢对话；Yi-1.5赢诗歌；Hermes/Dolphin处理其他模型拒绝的场景。',
           },
           {
             type: 'plain-terms',
-            text: '没有一款模型在所有任务上最优。Llama 3.3 70B是硬件够用时的安全默认选择。Qwen3 32B是24 GB显卡的明智之选。当某类任务成为创作核心时，选专用模型（长篇用Mistral、对话用Command R+、诗歌用Yi-1.5）。指令调优版拒绝你需要写的场景时，选无审查衍生版。',
+            text: '没有一款模型在所有任务上最优。Llama 3.3 70B是硬件够用时的安全默认选择。Qwen3 32B是24 GB显卡的明智之选。当某类任务成为创作核心时，选专用模型（长篇用Mistral、对话用Command A+、诗歌用Yi-1.5）。指令调优版拒绝你需要写的场景时，选无审查衍生版。',
           },
         ],
         columns: ['模型', '大小', 'VRAM (Q4_K_M)', '小说', '对话', '诗歌', '世界构建', '适用场景'],
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Llama 3.3 70B', '大小': '70B', 'VRAM (Q4_K_M)': '~42 GB', '小说': '最佳', '对话': '强', '诗歌': '强', '世界构建': '最佳', '适用场景': '最全能首选；硬件够用时的默认选择' },
           { '模型': 'Qwen3 32B', '大小': '32B', 'VRAM (Q4_K_M)': '~20 GB', '小说': '强', '对话': '强', '诗歌': '一般', '世界构建': '强', '适用场景': '24 GB显卡默认选择；与Llama 70B差距小' },
           { '模型': 'Mistral Large', '大小': '123B', 'VRAM (Q4_K_M)': '~75 GB', '小说': '强（长篇）', '对话': '强', '诗歌': '一般', '世界构建': '强', '适用场景': '长篇续写，原生128K上下文' },
-          { '模型': 'Command R+', '大小': '104B', 'VRAM (Q4_K_M)': '~62 GB', '小说': '强', '对话': '最佳', '诗歌': '一般', '世界构建': '强', '适用场景': '对话密集型创作，群戏场景' },
+          { '模型': 'Command A+', '大小': '未公开', 'VRAM (Q4_K_M)': '~62 GB', '小说': '强', '对话': '最佳', '诗歌': '一般', '世界构建': '强', '适用场景': '对话密集型创作，群戏场景' },
           { '模型': 'Yi-1.5 34B', '大小': '34B', 'VRAM (Q4_K_M)': '~21 GB', '小说': '一般', '对话': '一般', '诗歌': '最佳', '世界构建': '一般', '适用场景': '诗歌、意象化散文、文体创作' },
           { '模型': 'Hermes 3 / Dolphin 3.0', '大小': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', '小说': '与基础模型相同', '对话': '与基础模型相同', '诗歌': '与基础模型相同', '世界构建': '与基础模型相同', '适用场景': '指令调优版拒绝写的场景' },
         ],
@@ -1716,7 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — 综合最佳。测试集中声音一致性最强；角色在长场景中保持相同的语言风格。对指令响应良好——当系统提示词指定POV、基调或类型惯例时，Llama 3.3会遵从。在提示词框定为小说时处理黑暗题材（暴力、悲痛、道德灰色地带角色）不拒绝。不足之处：长段落偶尔飘向通用"文学"腔调；同系家族的小模型（8B）不具备这一优势。',
           '**Qwen3 32B** — 24 GB显卡最优选。声音一致性略逊于Llama 3.3 70B，但差距小到大多数作者在文笔为主的创作中感知不到。较小模型中指令遵从性最强。不足之处：诗歌和意象化散文明显落后；这类创作默认选Yi-1.5。',
           '**Mistral Large** — 长篇续写连贯性最佳。128K上下文窗口意味着5万字草稿不会截断；模型能跨章节保持角色细节、情节线索和世界规则。不足之处：本测试集中硬件要求最高（Q4_K_M约75 GB）；长输入时每token速度减慢。若本地硬件不足，可使用欧盟基础设施上的Mistral La Plateforme。',
-          '**Command R+ 104B** — 对话最佳。在多轮交流中保持鲜明的角色声音；群戏（3人以上）不出现"所有人听起来一样"的通病。不足之处：对话间的散文段落称职但不出彩；纯描写段落Llama 3.3更胜一筹。',
+          '**Command A+** — 对话最佳。在多轮交流中保持鲜明的角色声音；群戏（3人以上）不出现"所有人听起来一样"的通病。不足之处：对话间的散文段落称职但不出彩；纯描写段落Llama 3.3更胜一筹。',
           '**Yi-1.5 34B** — 诗歌和意象化散文最佳。节奏感强，驾驭格律形式（十四行诗、六行诗、俳句）游刃有余，诗歌质量优于较大的通用模型。不足之处：长篇小说称职但非强项；叙事类创作请选Llama 3.3或Qwen3。',
           '**Hermes 3（Llama 3.3基底）和Dolphin 3.0** — 无审查衍生版。与Llama 3.3 70B架构和基础权重相同；微调期间移除了RLHF安全层。模型遵从提示词而不拒绝或净化成熟内容。在非成熟提示词上的质量与基础模型相同；差异仅在指令调优版拒绝的提示词上可见。需要时使用（成熟小说、暴力场景、道德复杂角色），其余情况坚持使用指令调优基础版。',
         ],
@@ -1742,7 +1742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Llama 3.3 70B', '典型开场方式': '行动先行，立即呈现感官细节', '典型描述模式': '具体、有实体感；避免抽象名词；有社会场景感' },
           { '模型': 'Qwen3 32B', '典型开场方式': '先描绘环境，再带入人物动作', '典型描述模式': '简洁；注重社会氛围细节；略带结构感' },
           { '模型': 'Yi-1.5 34B', '典型开场方式': '首句即用比喻或明喻', '典型描述模式': '抽象意象；节奏有变化；密度较高；偶有华丽散文倾向' },
-          { '模型': 'Command R+ 104B', '典型开场方式': '以人物声音或近对话式开场', '典型描述模式': '对话感强；人物个性鲜明；独立描写时略弱' },
+          { '模型': 'Command A+', '典型开场方式': '以人物声音或近对话式开场', '典型描述模式': '对话感强；人物个性鲜明；独立描写时略弱' },
           { '模型': 'Mistral Large', '典型开场方式': '场景铺垫段落；开场节奏较慢', '典型描述模式': '平稳克制；长篇中保持一致；偶有通用感' },
         ],
         callouts: [
@@ -1803,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**你用来写作的聊天界面和模型本身同样重要。** 2026年有三款前端在创意写作工作流中值得认真考虑；按工作流形态选择。',
         items: [
           '**Open WebUI** — 通用首选。类ChatGPT界面，一键切换模型，通过系统提示词支持角色卡，文档上传用于背景资料。适合以散文为主的创作，对话式界面与草稿流程匹配。',
-          '**SillyTavern** — 角色扮演和对话首选。角色卡生态系统（Tavern v2规范），角色管理，世界构建用书本功能，群聊用于多角色场景。适合对话驱动的创作和长期角色或世界项目。与Command R+和无审查衍生版搭配良好。',
+          '**SillyTavern** — 角色扮演和对话首选。角色卡生态系统（Tavern v2规范），角色管理，世界构建用书本功能，群聊用于多角色场景。适合对话驱动的创作和长期角色或世界项目。与Command A+和无审查衍生版搭配良好。',
           '**Agnai和RisuAI** — SillyTavern的精简替代选项。功能集更轻量，首次运行更简便，定制化程度较低。当SillyTavern对你的工作流显得过于复杂时选择。',
           '**纯Ollama命令行加文本编辑器** — 最简配置。`ollama run llama3.3:70b`，通过终端将场景导入草稿文档。失去持久角色背景，但赢得写作专注度。',
           '关于角色扮演专注型前端的横向对比，请参阅[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)。',
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '我的情况': '我有48 GB以上VRAM，想用一个模型包揽所有任务', '推荐': 'Llama 3.3 70B（指令版）+ Hermes 3（无审查版）同时挂在Ollama中' },
           { '我的情况': '我有24 GB显卡或32 GB内存Mac，想要一个靠谱的默认选择', '推荐': 'Qwen3 32B' },
           { '我的情况': '我在写长篇小说——长篇续写连贯性是首要需求', '推荐': 'Mistral Large（若本地硬件不够，可用欧洲服务器上的Mistral La Plateforme）' },
-          { '我的情况': '我的作品以对话为主——角色声音要保持各自独立', '推荐': 'Command R+ 104B（或Llama 3.3 70B作为更轻量的替代）' },
+          { '我的情况': '我的作品以对话为主——角色声音要保持各自独立', '推荐': 'Command A+（或Llama 3.3 70B作为更轻量的替代）' },
           { '我的情况': '我写诗歌、格律诗或意象化散文', '推荐': 'Yi-1.5 34B' },
           { '我的情况': '指令版模型拒绝写我需要的场景', '推荐': 'Hermes 3（Llama 3.3基底）或Dolphin 3.0——保留指令版用于一般内容' },
           { '我的情况': '我想先从一款模型开始，之后再调整', '推荐': 'Qwen3 32B——覆盖消费级硬件上的大多数场景；当某类任务成为主要需求时再换专用模型' },
@@ -1833,7 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '24 GB显卡选Qwen3 32B作为默认；48 GB以上选Llama 3.3 70B；长篇小说选Mistral Large；对话选Command R+；诗歌选Yi-1.5；指令版拒绝的场景选Hermes/Dolphin。',
+            text: '24 GB显卡选Qwen3 32B作为默认；48 GB以上选Llama 3.3 70B；长篇小说选Mistral Large；对话选Command A+；诗歌选Yi-1.5；指令版拒绝的场景选Hermes/Dolphin。',
           },
           {
             type: 'plain-terms',
@@ -1851,7 +1851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '选用和使用本地模型进行创意写作的常见错误',
         items: [
-          '**错误一：追逐基准榜上最大的模型。** 创意写作得分与通用基准榜单的相关性很低。Yi-1.5 34B在诗歌上胜过Llama 3.3 70B；Command R+在对话上胜过两者。按任务类型选，不按榜单排名选。',
+          '**错误一：追逐基准榜上最大的模型。** 创意写作得分与通用基准榜单的相关性很低。Yi-1.5 34B在诗歌上胜过Llama 3.3 70B；Command A+在对话上胜过两者。按任务类型选，不按榜单排名选。',
           '**错误二：使用编程风格的采样设置。** 温度0.2–0.4产出平淡可预测的散文。创意写作需要0.8–1.1配合top-p 0.9–0.95。大多数聊天界面的默认设置是为问答调整的，不是为散文设计的。',
           '**错误三：默认使用指令版，遇到拒绝就放弃。** 指令版拒绝你明确框定为小说的场景；相同基础模型的无审查衍生版会写。在Ollama中安装两个版本是解决办法。',
           '**错误四：系统提示词过于单薄。** "你是一个有帮助的助手"是创意写作最糟糕的提示词。一个附有角色备注、语音示例、POV、时态和基调的系统提示词，对输出质量的改善远超任何模型切换。搭配[负向提示词](/zh/prompt-engineering/negative-prompting)来指定不该做什么。',
@@ -1868,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '参考来源',
         items: [
-          '[Hugging Face上的Llama 3.3、Qwen3、Mistral Large、Command R+、Yi-1.5模型卡](https://huggingface.co/) — 官方模型文档和许可证。',
+          '[Hugging Face上的Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5模型卡](https://huggingface.co/) — 官方模型文档和许可证。',
           '[Hermes 3（NousResearch）GitHub及模型卡](https://huggingface.co/NousResearch) — 基于Llama 3.3的无审查微调版。',
           '[Dolphin 3.0（Cognitive Computations）模型卡](https://huggingface.co/cognitivecomputations) — 多基础模型的无审查微调版。',
           '[Ollama模型库](https://ollama.com/library) — 可用模型、量化选项、上文引用的工具调用支持标志。',
@@ -1946,22 +1946,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Mejores LLM locales para escritura creativa 2026: ficción, diálogo y construcción de mundos',
     seoTitle: 'Mejores LLM locales para escritura creativa 2026: 6 modelos',
     intro:
-      'La escritura creativa es la carga de trabajo en la que los LLM locales ganan por más que solo privacidad y precio. Los mejores modelos de peso abierto con ajuste de instrucciones y sin censura de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B y los derivados sin censura Hermes/Dolphin — producen ficción, diálogo y construcción de mundos que se mantiene a la par de los modelos cloud de frontera en la mayoría de los prompts. Las diferencias están en la consistencia de voz, la disposición para manejar temas oscuros o para adultos y la naturalidad con que siguen instrucciones. Esta guía prueba seis modelos en más de 50 prompts creativos de ficción, diálogo, poesía y construcción de mundos, con los valores de temperatura y top-p que requiere cada uno.',
+      'La escritura creativa es la carga de trabajo en la que los LLM locales ganan por más que solo privacidad y precio. Los mejores modelos de peso abierto con ajuste de instrucciones y sin censura de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B y los derivados sin censura Hermes/Dolphin — producen ficción, diálogo y construcción de mundos que se mantiene a la par de los modelos cloud de frontera en la mayoría de los prompts. Las diferencias están en la consistencia de voz, la disposición para manejar temas oscuros o para adultos y la naturalidad con que siguen instrucciones. Esta guía prueba seis modelos en más de 50 prompts creativos de ficción, diálogo, poesía y construcción de mundos, con los valores de temperatura y top-p que requiere cada uno.',
     metaDescription:
-      '6 modelos locales para escritura creativa comparados: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 y variantes sin censura. Probados en 50+ prompts.',
+      '6 modelos locales para escritura creativa comparados: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 y variantes sin censura. Probados en 50+ prompts.',
     twitterDescription:
-      '6 modelos locales para ficción, diálogo y construcción de mundos probados en 50+ prompts. Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 y opciones sin censura. Veredicto por tipo de tarea.',
+      '6 modelos locales para ficción, diálogo y construcción de mundos probados en 50+ prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 y opciones sin censura. Veredicto por tipo de tarea.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -1985,17 +1985,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm local construccion mundos',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70B es la mejor opción local integral para escritura creativa en mayo de 2026 — sólida consistencia de voz, sigue instrucciones bien y maneja temas oscuros sin rechazar cuando el system prompt enmarca el trabajo como ficción. Qwen3 32B es la opción correcta para rigs de 24 GB: casi igual de fuerte en prosa, más ligero en hardware. Mistral Large gana en continuidad de largo formato (redacción de novelas) con su contexto nativo de 128K. Command R+ 104B tiene la voz de diálogo más limpia. Yi-1.5 34B es la opción de nicho para poesía y prosa lírica. Para flujos de trabajo que los modelos con ajuste de instrucciones rechazan, Hermes 3 (base Llama 3.3) y Dolphin 3.0 son las opciones sin censura — misma arquitectura, capa de seguridad RLHF eliminada. Temperatura 0.8–1.1 y top-p 0.9–0.95 son el rango creativo; 0.7 y por debajo produce prosa plana. Sin censura no es igual a no ético — significa que el modelo sigue el prompt en lugar de rechazarlo; el escritor sigue siendo el autor.**',
+      '**Llama 3.3 70B es la mejor opción local integral para escritura creativa en mayo de 2026 — sólida consistencia de voz, sigue instrucciones bien y maneja temas oscuros sin rechazar cuando el system prompt enmarca el trabajo como ficción. Qwen3 32B es la opción correcta para rigs de 24 GB: casi igual de fuerte en prosa, más ligero en hardware. Mistral Large gana en continuidad de largo formato (redacción de novelas) con su contexto nativo de 128K. Command A+ tiene la voz de diálogo más limpia. Yi-1.5 34B es la opción de nicho para poesía y prosa lírica. Para flujos de trabajo que los modelos con ajuste de instrucciones rechazan, Hermes 3 (base Llama 3.3) y Dolphin 3.0 son las opciones sin censura — misma arquitectura, capa de seguridad RLHF eliminada. Temperatura 0.8–1.1 y top-p 0.9–0.95 son el rango creativo; 0.7 y por debajo produce prosa plana. Sin censura no es igual a no ético — significa que el modelo sigue el prompt en lugar de rechazarlo; el escritor sigue siendo el autor.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué LLM local es el mejor para escritura creativa en 2026?',
         answer:
-          'Llama 3.3 70B es la mejor opción local integral — fuerte en prosa, diálogo y construcción de mundos, con consistencia de voz que se mantiene en sesiones largas. En hardware de 24 GB donde un 70B no cabe, Qwen3 32B es la alternativa más ligera sin mucha pérdida de calidad. Mistral Large es la opción de contexto largo para redacción de novelas (128K de contexto de fábrica). Command R+ 104B tiene la voz de diálogo más natural. Yi-1.5 34B es el especialista en poesía y prosa lírica. Para flujos de trabajo que chocan con la capa de seguridad del ajuste de instrucciones (ficción madura, escenas de conflicto, personajes moralmente complejos), los derivados Hermes 3 y Dolphin 3.0 usan los mismos modelos base con la capa de seguridad RLHF eliminada — siguen el prompt en lugar de rechazar. Temperatura 0.8–1.1 y top-p 0.9–0.95 son el rango creativo; los ajustes estilo código (0.2–0.4) producen prosa plana.',
+          'Llama 3.3 70B es la mejor opción local integral — fuerte en prosa, diálogo y construcción de mundos, con consistencia de voz que se mantiene en sesiones largas. En hardware de 24 GB donde un 70B no cabe, Qwen3 32B es la alternativa más ligera sin mucha pérdida de calidad. Mistral Large es la opción de contexto largo para redacción de novelas (128K de contexto de fábrica). Command A+ tiene la voz de diálogo más natural. Yi-1.5 34B es el especialista en poesía y prosa lírica. Para flujos de trabajo que chocan con la capa de seguridad del ajuste de instrucciones (ficción madura, escenas de conflicto, personajes moralmente complejos), los derivados Hermes 3 y Dolphin 3.0 usan los mismos modelos base con la capa de seguridad RLHF eliminada — siguen el prompt en lugar de rechazar. Temperatura 0.8–1.1 y top-p 0.9–0.95 son el rango creativo; los ajustes estilo código (0.2–0.4) producen prosa plana.',
         bullets: [
           'Mejor en general: Llama 3.3 70B — la mayor consistencia de voz, sigue instrucciones bien, maneja temas oscuros sin rechazo cuando se enmarca como ficción.',
           'Mejor rig de 24 GB: Qwen3 32B — casi tan fuerte como Llama 70B en prosa, mucho más ligero en hardware.',
           'Mejor largo formato: Mistral Large — 128K de contexto de fábrica; redacción de novela sin perder el hilo.',
-          'Mejor diálogo: Command R+ 104B — la voz conversacional más natural entre personajes.',
+          'Mejor diálogo: Command A+ — la voz conversacional más natural entre personajes.',
           'Mejor poesía / lírica: Yi-1.5 34B — opción de nicho para verso y prosa estilizada.',
           'Cuando instruct rechaza: Hermes 3 (base Llama) o Dolphin 3.0 — sin censura, misma arquitectura, siguen el prompt.',
           'Sampling: temperatura 0.8–1.1, top-p 0.9–0.95 para prosa; más bajo para diálogo ajustado, más alto para trabajo surrealista/de género.',
@@ -2027,7 +2027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B es el mejor modelo local integral para escritura creativa en mayo de 2026.** La mayor consistencia de voz del conjunto, sigue instrucciones bien, maneja temas oscuros sin rechazo cuando el system prompt enmarca el trabajo como ficción.',
           '**Qwen3 32B es la opción correcta para rigs de 24 GB.** Calidad de prosa casi igual a Llama 70B sin el coste de 48 GB+ de VRAM. El predeterminado para la mayoría de portátiles y ordenadores de sobremesa.',
           '**Mistral Large gana en continuidad de largo formato.** 128K de contexto de fábrica; redacción de novela sin perder el hilo ni la voz de los personajes.',
-          '**Command R+ 104B tiene la voz de diálogo más limpia.** Los ritmos conversacionales más naturales entre personajes; la opción cuando el diálogo es la parte estructural del trabajo.',
+          '**Command A+ tiene la voz de diálogo más limpia.** Los ritmos conversacionales más naturales entre personajes; la opción cuando el diálogo es la parte estructural del trabajo.',
           '**Yi-1.5 34B es el especialista en poesía y prosa lírica.** Opción de nicho para verso, prosa estilizada y trabajo en formato corto donde el ritmo importa.',
           '**Los derivados sin censura (Hermes 3, Dolphin 3.0) son el movimiento correcto cuando los modelos con ajuste de instrucciones rechazan.** Mismos modelos base; la capa de seguridad RLHF está eliminada; el modelo sigue el prompt en lugar de declinar. La ficción madura, las escenas de conflicto y los personajes moralmente complejos se vuelven escribibles.',
           '**El sampling importa más de lo que la gente cree.** Temperatura 0.8–1.1 y top-p 0.9–0.95 son el rango creativo. Los ajustes estilo código (0.2–0.4) producen prosa plana y predecible. Por encima de 1.2 es territorio de género/surrealismo.',
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor en general:** Llama 3.3 70B con Q4_K_M, ~42 GB VRAM. Mayor consistencia de voz de este conjunto.',
           '**Mejor rig de 24 GB:** Qwen3 32B con Q4_K_M, ~20 GB VRAM. El predeterminado para la mayoría de usuarios.',
           '**Mejor largo formato:** Mistral Large con Q4_K_M, ~75 GB VRAM total (pesado). 128K de contexto de fábrica.',
-          '**Mejor diálogo:** Command R+ 104B con Q4_K_M, ~62 GB VRAM. La mejor diferenciación de voces de personajes.',
+          '**Mejor diálogo:** Command A+ con Q4_K_M, ~62 GB VRAM. La mejor diferenciación de voces de personajes.',
           '**Mejor poesía:** Yi-1.5 34B con Q4_K_M, ~21 GB VRAM. Especialista en prosa lírica.',
           '**Opciones sin censura:** Hermes 3 (base Llama 3.3, ~42 GB) y Dolphin 3.0 (múltiples tamaños base, 13–42 GB).',
           '**Sampling predeterminado para prosa:** temperatura 0.95, top-p 0.92, repeat penalty 1.1. Ajustar según el tipo de tarea.',
@@ -2075,11 +2075,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70B es el modelo creativo integral más fuerte; Qwen3 32B es la alternativa más ligera; Mistral Large gana en largo formato; Command R+ gana en diálogo; Yi-1.5 gana en poesía; Hermes/Dolphin manejan escenas que los otros rechazan.',
+            text: 'Llama 3.3 70B es el modelo creativo integral más fuerte; Qwen3 32B es la alternativa más ligera; Mistral Large gana en largo formato; Command A+ gana en diálogo; Yi-1.5 gana en poesía; Hermes/Dolphin manejan escenas que los otros rechazan.',
           },
           {
             type: 'plain-terms',
-            text: 'Ningún modelo es el mejor en todo. Llama 3.3 70B es el predeterminado seguro si tienes el hardware. Qwen3 32B es la elección inteligente en una GPU de 24 GB. Elige un especialista (Mistral para novelas, Command R+ para diálogo, Yi-1.5 para poesía) cuando un tipo de tarea sea la parte estructural del trabajo. Elige un derivado sin censura cuando el modelo con ajuste de instrucciones rechace escenas que necesitas escribir.',
+            text: 'Ningún modelo es el mejor en todo. Llama 3.3 70B es el predeterminado seguro si tienes el hardware. Qwen3 32B es la elección inteligente en una GPU de 24 GB. Elige un especialista (Mistral para novelas, Command A+ para diálogo, Yi-1.5 para poesía) cuando un tipo de tarea sea la parte estructural del trabajo. Elige un derivado sin censura cuando el modelo con ajuste de instrucciones rechace escenas que necesitas escribir.',
           },
         ],
         columns: ['Modelo', 'Tamaño', 'VRAM (Q4_K_M)', 'Ficción', 'Diálogo', 'Poesía', 'Construcción de mundos', 'Mejor para'],
@@ -2087,7 +2087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Llama 3.3 70B', 'Tamaño': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Ficción': 'Mejor', 'Diálogo': 'Fuerte', 'Poesía': 'Fuerte', 'Construcción de mundos': 'Mejor', 'Mejor para': 'Mejor en general; predeterminado si el hardware lo permite' },
           { 'Modelo': 'Qwen3 32B', 'Tamaño': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'Ficción': 'Fuerte', 'Diálogo': 'Fuerte', 'Poesía': 'Regular', 'Construcción de mundos': 'Fuerte', 'Mejor para': 'Predeterminado en rig de 24 GB; pequeña diferencia vs Llama 70B' },
           { 'Modelo': 'Mistral Large', 'Tamaño': '123B', 'VRAM (Q4_K_M)': '~75 GB', 'Ficción': 'Fuerte (largo formato)', 'Diálogo': 'Fuerte', 'Poesía': 'Regular', 'Construcción de mundos': 'Fuerte', 'Mejor para': 'Continuidad de largo formato, contexto 128K' },
-          { 'Modelo': 'Command R+', 'Tamaño': '104B', 'VRAM (Q4_K_M)': '~62 GB', 'Ficción': 'Fuerte', 'Diálogo': 'Mejor', 'Poesía': 'Regular', 'Construcción de mundos': 'Fuerte', 'Mejor para': 'Trabajo con diálogo intensivo, escenas grupales' },
+          { 'Modelo': 'Command A+', 'Tamaño': 'No revelado', 'VRAM (Q4_K_M)': '~62 GB', 'Ficción': 'Fuerte', 'Diálogo': 'Mejor', 'Poesía': 'Regular', 'Construcción de mundos': 'Fuerte', 'Mejor para': 'Trabajo con diálogo intensivo, escenas grupales' },
           { 'Modelo': 'Yi-1.5 34B', 'Tamaño': '34B', 'VRAM (Q4_K_M)': '~21 GB', 'Ficción': 'Regular', 'Diálogo': 'Regular', 'Poesía': 'Mejor', 'Construcción de mundos': 'Regular', 'Mejor para': 'Poesía, prosa lírica, trabajo estilizado' },
           { 'Modelo': 'Hermes 3 / Dolphin 3.0', 'Tamaño': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', 'Ficción': 'Igual que el base', 'Diálogo': 'Igual que el base', 'Poesía': 'Igual que el base', 'Construcción de mundos': 'Igual que el base', 'Mejor para': 'Escenas que los modelos con ajuste de instrucciones rechazan' },
         ],
@@ -2105,7 +2105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — mejor en general. La mayor consistencia de voz del conjunto de prueba; los personajes mantienen los mismos patrones de habla en escenas largas. Sigue instrucciones bien — cuando el system prompt especifica POV, tono o convenciones de género, Llama 3.3 los respeta. Maneja temas oscuros (violencia, duelo, personajes moralmente grises) sin rechazar cuando el prompt enmarca el trabajo como ficción. Donde falla: los pasajes largos ocasionalmente derivan hacia una voz "literaria" genérica; los modelos pequeños de la misma familia (8B) pierden esta fortaleza.',
           '**Qwen3 32B** — mejor opción en rig de 24 GB. Consistencia de voz ligeramente inferior a Llama 3.3 70B pero la brecha es lo suficientemente pequeña como para que la mayoría de los escritores no la noten en trabajo con mucha prosa. El más fuerte de los modelos más pequeños en seguimiento de instrucciones. Donde falla: la poesía y la prosa estilizada se quedan notablemente atrás; cambia a Yi-1.5 para esas tareas.',
           '**Mistral Large** — mejor continuidad de largo formato. La ventana de contexto de 128K significa que un borrador de 50,000 palabras cabe sin truncamiento; el modelo mantiene detalles de personajes, hilos argumentales y reglas del mundo a lo largo de capítulos. Donde falla: la barra de hardware es la más alta de este conjunto (~75 GB en Q4_K_M); la velocidad por token se ralentiza en entradas largas. Usa Mistral La Plateforme en infraestructura de la UE si el hardware local es la restricción.',
-          '**Command R+ 104B** — mejor diálogo. Voces de personajes distintas que se mantienen en los intercambios; las escenas grupales (3+ hablantes) se mantienen legibles sin el modo de fallo "todos suenan igual" común en otros modelos. Donde falla: los párrafos de prosa entre los ritmos de diálogo son competentes pero no líricos; para pasajes puramente descriptivos, Llama 3.3 gana.',
+          '**Command A+** — mejor diálogo. Voces de personajes distintas que se mantienen en los intercambios; las escenas grupales (3+ hablantes) se mantienen legibles sin el modo de fallo "todos suenan igual" común en otros modelos. Donde falla: los párrafos de prosa entre los ritmos de diálogo son competentes pero no líricos; para pasajes puramente descriptivos, Llama 3.3 gana.',
           '**Yi-1.5 34B** — mejor poesía y prosa lírica. Consciente del ritmo, cómodo con formas estructuradas (soneto, villanela, haiku), produce verso que aguanta mejor que los modelos generales más grandes. Donde falla: la ficción de largo formato es competente pero no es su punto fuerte; elige Llama 3.3 o Qwen3 para trabajo narrativo.',
           '**Hermes 3 (base Llama 3.3) y Dolphin 3.0** — derivados sin censura. Misma arquitectura y pesos base que Llama 3.3 70B; la capa de seguridad RLHF se elimina durante el ajuste fino. El modelo sigue el prompt en lugar de rechazar o sanitizar contenido maduro. La calidad en prompts no maduros es idéntica al modelo base; la diferencia solo es visible en prompts donde las versiones con ajuste de instrucciones rechazan. Úsalos cuando el trabajo lo requiera (ficción madura, escenas violentas, personajes moralmente complejos) y quédate con la base con ajuste de instrucciones en los demás casos.',
         ],
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Llama 3.3 70B', 'Apertura típica': 'Acción primero, detalle sensorial inmediato', 'Patrón descriptivo típico': 'Concreto y físico; evita sustantivos abstractos; socialmente anclado' },
           { 'Modelo': 'Qwen3 32B', 'Apertura típica': 'Observación del entorno antes de la acción del personaje', 'Patrón descriptivo típico': 'Eficiente; detalle social/atmosférico; ligera señal estructural' },
           { 'Modelo': 'Yi-1.5 34B', 'Apertura típica': 'Metáfora o símil desde la primera cláusula', 'Patrón descriptivo típico': 'Imágenes abstractas; variación rítmica; más denso; ocasionalmente exuberante' },
-          { 'Modelo': 'Command R+ 104B', 'Apertura típica': 'Voz del personaje o apertura próxima al diálogo', 'Patrón descriptivo típico': 'Conversacional; voz propia y distinta; descripción en solitario más débil' },
+          { 'Modelo': 'Command A+', 'Apertura típica': 'Voz del personaje o apertura próxima al diálogo', 'Patrón descriptivo típico': 'Conversacional; voz propia y distinta; descripción en solitario más débil' },
           { 'Modelo': 'Mistral Large', 'Apertura típica': 'Párrafo de ambientación; arranque más lento', 'Patrón descriptivo típico': 'Parejo y controlado; consistente en pasajes largos; ligeramente genérico' },
         ],
         callouts: [
@@ -2192,7 +2192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La interfaz de chat en la que escribes importa tanto como el modelo.** Tres frontends son opciones creíbles para flujos de trabajo de escritura creativa en 2026; elige según la forma del flujo de trabajo.',
         items: [
           '**Open WebUI** — la opción de propósito general. Interfaz tipo ChatGPT, cambio de modelo con un clic, fichas de personajes mediante system prompts, carga de documentos para contexto. Mejor para trabajo con mucha prosa donde el formato de chat encaja con tu flujo de redacción.',
-          '**SillyTavern** — la opción de roleplay y diálogo. Ecosistema de fichas de personajes (especificación Tavern v2), gestión de personas, lore books para construcción de mundos, chat grupal para escenas con múltiples personajes. Mejor para trabajo impulsado por diálogo y proyectos largos de personajes o mundos. Combina bien con Command R+ y los derivados sin censura.',
+          '**SillyTavern** — la opción de roleplay y diálogo. Ecosistema de fichas de personajes (especificación Tavern v2), gestión de personas, lore books para construcción de mundos, chat grupal para escenas con múltiples personajes. Mejor para trabajo impulsado por diálogo y proyectos largos de personajes o mundos. Combina bien con Command A+ y los derivados sin censura.',
           '**Agnai y RisuAI** — alternativas más reducidas a SillyTavern. Conjuntos de funciones más ligeros, primera ejecución más sencilla, menos personalización. Elige cuando SillyTavern parezca demasiado para tu flujo de trabajo.',
           '**Ollama CLI simple más un editor de texto** — la opción mínima. `ollama run llama3.3:70b` y canaliza escenas por el terminal hacia tu documento de borrador. Pierde el contexto persistente del personaje pero gana en enfoque del escritor.',
           'Para la comparativa cara a cara de los frontends centrados en roleplay, ver [SillyTavern vs Agnai vs RisuAI: mejor frontend local de roleplay](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
@@ -2214,7 +2214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Tengo 48 GB+ de VRAM y quiero un modelo para todo', 'Elección': 'Llama 3.3 70B (instruct) + Hermes 3 (sin censura) en el mismo Ollama' },
           { 'Tu situación': 'Tengo una GPU de 24 GB o un Mac de 32 GB y quiero un predeterminado sólido', 'Elección': 'Qwen3 32B' },
           { 'Tu situación': 'Estoy redactando una novela — la continuidad de largo formato es la prioridad', 'Elección': 'Mistral Large (o Mistral La Plateforme en infraestructura de la UE si el hardware local no alcanza)' },
-          { 'Tu situación': 'Mi trabajo es muy intensivo en diálogo — las voces de los personajes deben mantenerse distintas', 'Elección': 'Command R+ 104B (o Llama 3.3 70B como alternativa más ligera)' },
+          { 'Tu situación': 'Mi trabajo es muy intensivo en diálogo — las voces de los personajes deben mantenerse distintas', 'Elección': 'Command A+ (o Llama 3.3 70B como alternativa más ligera)' },
           { 'Tu situación': 'Escribo poesía, verso o prosa lírica', 'Elección': 'Yi-1.5 34B' },
           { 'Tu situación': 'El modelo instruct rechaza escenas que necesito escribir', 'Elección': 'Hermes 3 (base Llama 3.3) o Dolphin 3.0 — mantén la versión instruct instalada para trabajo no maduro' },
           { 'Tu situación': 'Quiero empezar con un modelo e iterar', 'Elección': 'Qwen3 32B — cubre la mayoría de flujos de trabajo en hardware de consumo; cambia cuando un tipo de tarea se convierta en la parte esencial' },
@@ -2222,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Elige Qwen3 32B como predeterminado si tienes una GPU de 24 GB; Llama 3.3 70B si tienes 48 GB+; Mistral Large para trabajo de longitud de novela; Command R+ para diálogo; Yi-1.5 para poesía; Hermes/Dolphin para escenas que los modelos instruct rechazan.',
+            text: 'Elige Qwen3 32B como predeterminado si tienes una GPU de 24 GB; Llama 3.3 70B si tienes 48 GB+; Mistral Large para trabajo de longitud de novela; Command A+ para diálogo; Yi-1.5 para poesía; Hermes/Dolphin para escenas que los modelos instruct rechazan.',
           },
           {
             type: 'plain-terms',
@@ -2240,7 +2240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Errores comunes al elegir y usar modelos locales para escritura creativa',
         items: [
-          '**Error 1: perseguir el modelo más grande en los benchmarks.** Las puntuaciones de escritura creativa correlacionan mal con los rankings de benchmarks generales. Yi-1.5 34B supera a Llama 3.3 70B en poesía; Command R+ supera a ambos en diálogo. Elige por tipo de tarea, no por rango en el ranking.',
+          '**Error 1: perseguir el modelo más grande en los benchmarks.** Las puntuaciones de escritura creativa correlacionan mal con los rankings de benchmarks generales. Yi-1.5 34B supera a Llama 3.3 70B en poesía; Command A+ supera a ambos en diálogo. Elige por tipo de tarea, no por rango en el ranking.',
           '**Error 2: usar ajustes de sampling estilo código.** Temperatura 0.2–0.4 produce prosa plana y predecible. La escritura creativa requiere 0.8–1.1 con top-p 0.9–0.95. Los ajustes predeterminados de la mayoría de interfaces de chat están ajustados para preguntas y respuestas, no para prosa.',
           '**Error 3: quedarse con el modelo instruct y rendirse cuando rechaza.** La versión instruct rechaza escenas que has enmarcado explícitamente como ficción; el derivado sin censura del mismo modelo base las escribe. Dos instalaciones en Ollama es la solución.',
           '**Error 4: system prompts débiles.** "Eres un asistente útil" es el peor prompt posible para trabajo creativo. Un system prompt con notas de personaje, muestras de voz, POV, tiempo verbal y tono hace más por la calidad de salida que cualquier cambio de modelo. Combina con [negative prompting](/es/prompt-engineering/negative-prompting) para especificar qué NO hacer (sin exposición, sin prosa exuberante, sin "ella sintió").',
@@ -2257,7 +2257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[Fichas de modelos de Hugging Face para Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5](https://huggingface.co/) — documentación oficial de modelos y licencias.',
+          '[Fichas de modelos de Hugging Face para Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5](https://huggingface.co/) — documentación oficial de modelos y licencias.',
           '[Hermes 3 (NousResearch) GitHub y ficha de modelo](https://huggingface.co/NousResearch) — ajustes finos sin censura basados en Llama 3.3.',
           '[Fichas de modelos Dolphin 3.0 (Cognitive Computations)](https://huggingface.co/cognitivecomputations) — ajustes finos sin censura en múltiples modelos base.',
           '[Biblioteca de modelos Ollama](https://ollama.com/library) — modelos disponibles, opciones de cuantización, indicadores de compatibilidad con llamadas a herramientas mencionados anteriormente.',
@@ -2327,11 +2327,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores LLM locales para escritura creativa 2026: ficción, diálogo y construcción de mundos',
-      description: 'Comparativa de 6 modelos locales para escritura creativa: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 y variantes sin censura. Probados en más de 50 prompts creativos.',
+      description: 'Comparativa de 6 modelos locales para escritura creativa: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 y variantes sin censura. Probados en más de 50 prompts creativos.',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-creative-writing-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2340,22 +2340,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Melhores LLMs locais para escrita criativa 2026: ficção, diálogo e construção de mundos',
     seoTitle: 'Melhores LLMs locais para escrita criativa 2026: 6 modelos',
     intro:
-      'A escrita criativa é a carga de trabalho em que os LLMs locais vencem por mais do que apenas privacidade e preço. Os melhores modelos de peso aberto com ajuste de instruções e sem censura de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B e os derivados sem censura Hermes/Dolphin — produzem ficção, diálogo e construção de mundos que se mantém à altura dos modelos de nuvem de fronteira na maioria dos prompts. As diferenças estão na consistência de voz, na disposição para lidar com temas sombrios ou adultos e na naturalidade com que seguem instruções. Este guia testa seis modelos em mais de 50 prompts criativos de ficção, diálogo, poesia e construção de mundos, com os valores de temperatura e top-p que cada um exige.',
+      'A escrita criativa é a carga de trabalho em que os LLMs locais vencem por mais do que apenas privacidade e preço. Os melhores modelos de peso aberto com ajuste de instruções e sem censura de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B e os derivados sem censura Hermes/Dolphin — produzem ficção, diálogo e construção de mundos que se mantém à altura dos modelos de nuvem de fronteira na maioria dos prompts. As diferenças estão na consistência de voz, na disposição para lidar com temas sombrios ou adultos e na naturalidade com que seguem instruções. Este guia testa seis modelos em mais de 50 prompts criativos de ficção, diálogo, poesia e construção de mundos, com os valores de temperatura e top-p que cada um exige.',
     metaDescription:
-      '6 modelos locais para escrita criativa comparados: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 e variantes sem censura. Testados em mais de 50 prompts.',
+      '6 modelos locais para escrita criativa comparados: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 e variantes sem censura. Testados em mais de 50 prompts.',
     twitterDescription:
-      '6 modelos locais para ficção, diálogo e construção de mundos testados em mais de 50 prompts. Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 e opções sem censura. Veredito por tipo de tarefa.',
+      '6 modelos locais para ficção, diálogo e construção de mundos testados em mais de 50 prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 e opções sem censura. Veredito por tipo de tarefa.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -2379,17 +2379,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm local construcao mundos',
     ],
     leadAnswerBlock:
-      '**O Llama 3.3 70B é a melhor opção local completa para escrita criativa em maio de 2026 — sólida consistência de voz, segue instruções bem e lida com temas sombrios sem recusar quando o system prompt enquadra o trabalho como ficção. O Qwen3 32B é a escolha certa para rigs de 24 GB: quase tão forte em prosa, mais leve em hardware. O Mistral Large vence em continuidade de formato longo (escrita de romances) com seu contexto nativo de 128K. O Command R+ 104B tem a voz de diálogo mais limpa. O Yi-1.5 34B é a opção de nicho para poesia e prosa lírica. Para fluxos de trabalho que os modelos com ajuste de instruções recusam, o Hermes 3 (base Llama 3.3) e o Dolphin 3.0 são as opções sem censura — mesma arquitetura, camada de segurança RLHF removida. Temperatura 0.8–1.1 e top-p 0.9–0.95 são a faixa criativa; 0.7 e abaixo produz prosa plana. Sem censura não é igual a antiético — significa que o modelo segue o prompt em vez de recusá-lo; o escritor continua sendo o autor.**',
+      '**O Llama 3.3 70B é a melhor opção local completa para escrita criativa em maio de 2026 — sólida consistência de voz, segue instruções bem e lida com temas sombrios sem recusar quando o system prompt enquadra o trabalho como ficção. O Qwen3 32B é a escolha certa para rigs de 24 GB: quase tão forte em prosa, mais leve em hardware. O Mistral Large vence em continuidade de formato longo (escrita de romances) com seu contexto nativo de 128K. O Command A+ tem a voz de diálogo mais limpa. O Yi-1.5 34B é a opção de nicho para poesia e prosa lírica. Para fluxos de trabalho que os modelos com ajuste de instruções recusam, o Hermes 3 (base Llama 3.3) e o Dolphin 3.0 são as opções sem censura — mesma arquitetura, camada de segurança RLHF removida. Temperatura 0.8–1.1 e top-p 0.9–0.95 são a faixa criativa; 0.7 e abaixo produz prosa plana. Sem censura não é igual a antiético — significa que o modelo segue o prompt em vez de recusá-lo; o escritor continua sendo o autor.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual LLM local é o melhor para escrita criativa em 2026?',
         answer:
-          'O Llama 3.3 70B é a melhor opção local completa — forte em prosa, diálogo e construção de mundos, com consistência de voz que se mantém em sessões longas. Em hardware de 24 GB onde um 70B não cabe, o Qwen3 32B é a alternativa mais leve sem muita perda de qualidade. O Mistral Large é a opção de contexto longo para escrita de romances (128K de contexto de fábrica). O Command R+ 104B tem a voz de diálogo mais natural. O Yi-1.5 34B é o especialista em poesia e prosa lírica. Para fluxos de trabalho que esbarram na camada de segurança do ajuste de instruções (ficção madura, cenas de conflito, personagens moralmente complexos), os derivados Hermes 3 e Dolphin 3.0 usam os mesmos modelos base com a camada de segurança RLHF removida — eles seguem o prompt em vez de recusar. Temperatura 0.8–1.1 e top-p 0.9–0.95 são a faixa criativa; ajustes estilo código (0.2–0.4) produzem prosa plana.',
+          'O Llama 3.3 70B é a melhor opção local completa — forte em prosa, diálogo e construção de mundos, com consistência de voz que se mantém em sessões longas. Em hardware de 24 GB onde um 70B não cabe, o Qwen3 32B é a alternativa mais leve sem muita perda de qualidade. O Mistral Large é a opção de contexto longo para escrita de romances (128K de contexto de fábrica). O Command A+ tem a voz de diálogo mais natural. O Yi-1.5 34B é o especialista em poesia e prosa lírica. Para fluxos de trabalho que esbarram na camada de segurança do ajuste de instruções (ficção madura, cenas de conflito, personagens moralmente complexos), os derivados Hermes 3 e Dolphin 3.0 usam os mesmos modelos base com a camada de segurança RLHF removida — eles seguem o prompt em vez de recusar. Temperatura 0.8–1.1 e top-p 0.9–0.95 são a faixa criativa; ajustes estilo código (0.2–0.4) produzem prosa plana.',
         bullets: [
           'Melhor no geral: Llama 3.3 70B — a maior consistência de voz, segue instruções bem, lida com temas sombrios sem recusa quando enquadrado como ficção.',
           'Melhor rig de 24 GB: Qwen3 32B — quase tão forte quanto o Llama 70B em prosa, muito mais leve em hardware.',
           'Melhor formato longo: Mistral Large — 128K de contexto de fábrica; escrita de romance sem perder o fio.',
-          'Melhor diálogo: Command R+ 104B — a voz conversacional mais natural entre personagens.',
+          'Melhor diálogo: Command A+ — a voz conversacional mais natural entre personagens.',
           'Melhor poesia / lírica: Yi-1.5 34B — opção de nicho para verso e prosa estilizada.',
           'Quando o instruct recusa: Hermes 3 (base Llama) ou Dolphin 3.0 — sem censura, mesma arquitetura, seguem o prompt.',
           'Sampling: temperatura 0.8–1.1, top-p 0.9–0.95 para prosa; mais baixo para diálogo ajustado, mais alto para trabalho surreal/de gênero.',
@@ -2421,7 +2421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O Llama 3.3 70B é o melhor modelo local completo para escrita criativa em maio de 2026.** A maior consistência de voz do conjunto, segue instruções bem, lida com temas sombrios sem recusa quando o system prompt enquadra o trabalho como ficção.',
           '**O Qwen3 32B é a escolha certa para rigs de 24 GB.** Qualidade de prosa quase igual ao Llama 70B sem o custo de 48 GB+ de VRAM. O padrão para a maioria dos laptops e desktops.',
           '**O Mistral Large vence em continuidade de formato longo.** 128K de contexto de fábrica; escrita de romance sem perder o fio nem a voz dos personagens.',
-          '**O Command R+ 104B tem a voz de diálogo mais limpa.** Os ritmos conversacionais mais naturais entre personagens; a opção quando o diálogo é a parte estrutural do trabalho.',
+          '**O Command A+ tem a voz de diálogo mais limpa.** Os ritmos conversacionais mais naturais entre personagens; a opção quando o diálogo é a parte estrutural do trabalho.',
           '**O Yi-1.5 34B é o especialista em poesia e prosa lírica.** Opção de nicho para verso, prosa estilizada e trabalho em formato curto onde o ritmo importa.',
           '**Os derivados sem censura (Hermes 3, Dolphin 3.0) são o movimento certo quando os modelos com ajuste de instruções recusam.** Mesmos modelos base; a camada de segurança RLHF é removida; o modelo segue o prompt em vez de declinar. A ficção madura, as cenas de conflito e os personagens moralmente complexos se tornam escrevíveis.',
           '**O sampling importa mais do que as pessoas pensam.** Temperatura 0.8–1.1 e top-p 0.9–0.95 são a faixa criativa. Os ajustes estilo código (0.2–0.4) produzem prosa plana e previsível. Acima de 1.2 é território de gênero/surrealismo.',
@@ -2434,7 +2434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melhor no geral:** Llama 3.3 70B com Q4_K_M, ~42 GB VRAM. A maior consistência de voz deste conjunto.',
           '**Melhor rig de 24 GB:** Qwen3 32B com Q4_K_M, ~20 GB VRAM. O padrão para a maioria dos usuários.',
           '**Melhor formato longo:** Mistral Large com Q4_K_M, ~75 GB de VRAM total (pesado). 128K de contexto de fábrica.',
-          '**Melhor diálogo:** Command R+ 104B com Q4_K_M, ~62 GB VRAM. A melhor diferenciação de vozes de personagens.',
+          '**Melhor diálogo:** Command A+ com Q4_K_M, ~62 GB VRAM. A melhor diferenciação de vozes de personagens.',
           '**Melhor poesia:** Yi-1.5 34B com Q4_K_M, ~21 GB VRAM. Especialista em prosa lírica.',
           '**Opções sem censura:** Hermes 3 (base Llama 3.3, ~42 GB) e Dolphin 3.0 (múltiplos tamanhos base, 13–42 GB).',
           '**Sampling padrão para prosa:** temperatura 0.95, top-p 0.92, repeat penalty 1.1. Ajustar conforme o tipo de tarefa.',
@@ -2469,11 +2469,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O Llama 3.3 70B é o modelo criativo completo mais forte; o Qwen3 32B é a alternativa mais leve; o Mistral Large vence em formato longo; o Command R+ vence em diálogo; o Yi-1.5 vence em poesia; o Hermes/Dolphin lidam com cenas que os outros recusam.',
+            text: 'O Llama 3.3 70B é o modelo criativo completo mais forte; o Qwen3 32B é a alternativa mais leve; o Mistral Large vence em formato longo; o Command A+ vence em diálogo; o Yi-1.5 vence em poesia; o Hermes/Dolphin lidam com cenas que os outros recusam.',
           },
           {
             type: 'plain-terms',
-            text: 'Nenhum modelo é o melhor em tudo. O Llama 3.3 70B é o padrão seguro se você tiver o hardware. O Qwen3 32B é a escolha inteligente em uma GPU de 24 GB. Escolha um especialista (Mistral para romances, Command R+ para diálogo, Yi-1.5 para poesia) quando um tipo de tarefa for a parte estrutural do trabalho. Escolha um derivado sem censura quando o modelo com ajuste de instruções recusar cenas que você precisa escrever.',
+            text: 'Nenhum modelo é o melhor em tudo. O Llama 3.3 70B é o padrão seguro se você tiver o hardware. O Qwen3 32B é a escolha inteligente em uma GPU de 24 GB. Escolha um especialista (Mistral para romances, Command A+ para diálogo, Yi-1.5 para poesia) quando um tipo de tarefa for a parte estrutural do trabalho. Escolha um derivado sem censura quando o modelo com ajuste de instruções recusar cenas que você precisa escrever.',
           },
         ],
         columns: ['Modelo', 'Tamanho', 'VRAM (Q4_K_M)', 'Ficção', 'Diálogo', 'Poesia', 'Construção de mundos', 'Melhor para'],
@@ -2481,7 +2481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Llama 3.3 70B', 'Tamanho': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Ficção': 'Melhor', 'Diálogo': 'Forte', 'Poesia': 'Forte', 'Construção de mundos': 'Melhor', 'Melhor para': 'Melhor no geral; padrão se o hardware permitir' },
           { 'Modelo': 'Qwen3 32B', 'Tamanho': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'Ficção': 'Forte', 'Diálogo': 'Forte', 'Poesia': 'Regular', 'Construção de mundos': 'Forte', 'Melhor para': 'Padrão em rig de 24 GB; pequena diferença vs Llama 70B' },
           { 'Modelo': 'Mistral Large', 'Tamanho': '123B', 'VRAM (Q4_K_M)': '~75 GB', 'Ficção': 'Forte (formato longo)', 'Diálogo': 'Forte', 'Poesia': 'Regular', 'Construção de mundos': 'Forte', 'Melhor para': 'Continuidade de formato longo, contexto 128K' },
-          { 'Modelo': 'Command R+', 'Tamanho': '104B', 'VRAM (Q4_K_M)': '~62 GB', 'Ficção': 'Forte', 'Diálogo': 'Melhor', 'Poesia': 'Regular', 'Construção de mundos': 'Forte', 'Melhor para': 'Trabalho com diálogo intensivo, cenas em grupo' },
+          { 'Modelo': 'Command A+', 'Tamanho': 'Não divulgado', 'VRAM (Q4_K_M)': '~62 GB', 'Ficção': 'Forte', 'Diálogo': 'Melhor', 'Poesia': 'Regular', 'Construção de mundos': 'Forte', 'Melhor para': 'Trabalho com diálogo intensivo, cenas em grupo' },
           { 'Modelo': 'Yi-1.5 34B', 'Tamanho': '34B', 'VRAM (Q4_K_M)': '~21 GB', 'Ficção': 'Regular', 'Diálogo': 'Regular', 'Poesia': 'Melhor', 'Construção de mundos': 'Regular', 'Melhor para': 'Poesia, prosa lírica, trabalho estilizado' },
           { 'Modelo': 'Hermes 3 / Dolphin 3.0', 'Tamanho': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', 'Ficção': 'Igual ao base', 'Diálogo': 'Igual ao base', 'Poesia': 'Igual ao base', 'Construção de mundos': 'Igual ao base', 'Melhor para': 'Cenas que os modelos com ajuste de instruções recusam' },
         ],
@@ -2499,7 +2499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — melhor no geral. A maior consistência de voz do conjunto de teste; os personagens mantêm os mesmos padrões de fala em cenas longas. Segue instruções bem — quando o system prompt especifica POV, tom ou convenções de gênero, o Llama 3.3 os respeita. Lida com temas sombrios (violência, luto, personagens moralmente cinzentos) sem recusar quando o prompt enquadra o trabalho como ficção. Onde falha: as passagens longas ocasionalmente derivam para uma voz "literária" genérica; os modelos pequenos da mesma família (8B) perdem essa força.',
           '**Qwen3 32B** — melhor opção em rig de 24 GB. Consistência de voz ligeiramente inferior ao Llama 3.3 70B, mas a diferença é pequena o suficiente para que a maioria dos escritores não a note em trabalho com muita prosa. O mais forte dos modelos menores em seguimento de instruções. Onde falha: a poesia e a prosa estilizada ficam notavelmente para trás; mude para o Yi-1.5 para essas tarefas.',
           '**Mistral Large** — melhor continuidade de formato longo. A janela de contexto de 128K significa que um rascunho de 50.000 palavras cabe sem truncamento; o modelo mantém detalhes de personagens, fios narrativos e regras do mundo ao longo de capítulos. Onde falha: a barra de hardware é a mais alta deste conjunto (~75 GB em Q4_K_M); a velocidade por token desacelera em entradas longas. Use o Mistral La Plateforme em infraestrutura da UE se o hardware local for a restrição.',
-          '**Command R+ 104B** — melhor diálogo. Vozes de personagens distintas que se mantêm nas trocas; as cenas em grupo (3+ falantes) permanecem legíveis sem o modo de falha "todos soam igual" comum em outros modelos. Onde falha: os parágrafos de prosa entre os ritmos de diálogo são competentes, mas não líricos; para passagens puramente descritivas, o Llama 3.3 vence.',
+          '**Command A+** — melhor diálogo. Vozes de personagens distintas que se mantêm nas trocas; as cenas em grupo (3+ falantes) permanecem legíveis sem o modo de falha "todos soam igual" comum em outros modelos. Onde falha: os parágrafos de prosa entre os ritmos de diálogo são competentes, mas não líricos; para passagens puramente descritivas, o Llama 3.3 vence.',
           '**Yi-1.5 34B** — melhor poesia e prosa lírica. Consciente do ritmo, à vontade com formas estruturadas (soneto, vilanela, haicai), produz verso que se mantém melhor do que os modelos gerais maiores. Onde falha: a ficção de formato longo é competente, mas não é seu ponto forte; escolha o Llama 3.3 ou o Qwen3 para trabalho narrativo.',
           '**Hermes 3 (base Llama 3.3) e Dolphin 3.0** — derivados sem censura. Mesma arquitetura e pesos base que o Llama 3.3 70B; a camada de segurança RLHF é removida durante o ajuste fino. O modelo segue o prompt em vez de recusar ou sanitizar conteúdo maduro. A qualidade em prompts não maduros é idêntica ao modelo base; a diferença só é visível em prompts onde as versões com ajuste de instruções recusam. Use-os quando o trabalho exigir (ficção madura, cenas violentas, personagens moralmente complexos) e fique com a base com ajuste de instruções nos demais casos.',
         ],
@@ -2525,7 +2525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Llama 3.3 70B', 'Abertura típica': 'Ação primeiro, detalhe sensorial imediato', 'Padrão descritivo típico': 'Concreto e físico; evita substantivos abstratos; socialmente ancorado' },
           { 'Modelo': 'Qwen3 32B', 'Abertura típica': 'Observação do ambiente antes da ação do personagem', 'Padrão descritivo típico': 'Eficiente; detalhe social/atmosférico; ligeiro sinal estrutural' },
           { 'Modelo': 'Yi-1.5 34B', 'Abertura típica': 'Metáfora ou símile desde a primeira cláusula', 'Padrão descritivo típico': 'Imagens abstratas; variação rítmica; mais denso; ocasionalmente exuberante' },
-          { 'Modelo': 'Command R+ 104B', 'Abertura típica': 'Voz do personagem ou abertura próxima ao diálogo', 'Padrão descritivo típico': 'Conversacional; voz própria e distinta; descrição em solo mais fraca' },
+          { 'Modelo': 'Command A+', 'Abertura típica': 'Voz do personagem ou abertura próxima ao diálogo', 'Padrão descritivo típico': 'Conversacional; voz própria e distinta; descrição em solo mais fraca' },
           { 'Modelo': 'Mistral Large', 'Abertura típica': 'Parágrafo de ambientação; início mais lento', 'Padrão descritivo típico': 'Parelho e controlado; consistente em passagens longas; ligeiramente genérico' },
         ],
         callouts: [
@@ -2586,7 +2586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A interface de chat em que você escreve importa tanto quanto o modelo.** Três frontends são opções credíveis para fluxos de trabalho de escrita criativa em 2026; escolha conforme o formato do fluxo de trabalho.',
         items: [
           '**Open WebUI** — a opção de uso geral. Interface tipo ChatGPT, troca de modelo com um clique, fichas de personagens via system prompts, upload de documentos para contexto. Melhor para trabalho com muita prosa onde o formato de chat encaixa no seu fluxo de redação.',
-          '**SillyTavern** — a opção de roleplay e diálogo. Ecossistema de fichas de personagens (especificação Tavern v2), gestão de personas, lore books para construção de mundos, chat em grupo para cenas com múltiplos personagens. Melhor para trabalho movido por diálogo e projetos longos de personagens ou mundos. Combina bem com o Command R+ e os derivados sem censura.',
+          '**SillyTavern** — a opção de roleplay e diálogo. Ecossistema de fichas de personagens (especificação Tavern v2), gestão de personas, lore books para construção de mundos, chat em grupo para cenas com múltiplos personagens. Melhor para trabalho movido por diálogo e projetos longos de personagens ou mundos. Combina bem com o Command A+ e os derivados sem censura.',
           '**Agnai e RisuAI** — alternativas mais reduzidas ao SillyTavern. Conjuntos de recursos mais leves, primeira execução mais simples, menos personalização. Escolha quando o SillyTavern parecer demais para o seu fluxo de trabalho.',
           '**Ollama CLI simples mais um editor de texto** — a opção mínima. `ollama run llama3.3:70b` e canalize cenas pelo terminal para o seu documento de rascunho. Perde o contexto persistente do personagem, mas ganha em foco do escritor.',
           'Para a comparação frente a frente dos frontends voltados para roleplay, ver [SillyTavern vs Agnai vs RisuAI: melhor frontend local de roleplay](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
@@ -2608,7 +2608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Tenho 48 GB+ de VRAM e quero um modelo para tudo', 'Escolha': 'Llama 3.3 70B (instruct) + Hermes 3 (sem censura) no mesmo Ollama' },
           { 'Sua situação': 'Tenho uma GPU de 24 GB ou um Mac de 32 GB e quero um padrão sólido', 'Escolha': 'Qwen3 32B' },
           { 'Sua situação': 'Estou redigindo um romance — a continuidade de formato longo é a prioridade', 'Escolha': 'Mistral Large (ou Mistral La Plateforme em infraestrutura da UE se o hardware local não bastar)' },
-          { 'Sua situação': 'Meu trabalho é muito intensivo em diálogo — as vozes dos personagens devem se manter distintas', 'Escolha': 'Command R+ 104B (ou Llama 3.3 70B como alternativa mais leve)' },
+          { 'Sua situação': 'Meu trabalho é muito intensivo em diálogo — as vozes dos personagens devem se manter distintas', 'Escolha': 'Command A+ (ou Llama 3.3 70B como alternativa mais leve)' },
           { 'Sua situação': 'Escrevo poesia, verso ou prosa lírica', 'Escolha': 'Yi-1.5 34B' },
           { 'Sua situação': 'O modelo instruct recusa cenas que preciso escrever', 'Escolha': 'Hermes 3 (base Llama 3.3) ou Dolphin 3.0 — mantenha a versão instruct instalada para trabalho não maduro' },
           { 'Sua situação': 'Quero começar com um modelo e iterar', 'Escolha': 'Qwen3 32B — cobre a maioria dos fluxos de trabalho em hardware de consumo; mude quando um tipo de tarefa se tornar a parte essencial' },
@@ -2616,7 +2616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Escolha o Qwen3 32B como padrão se você tem uma GPU de 24 GB; o Llama 3.3 70B se você tem 48 GB+; o Mistral Large para trabalho de tamanho de romance; o Command R+ para diálogo; o Yi-1.5 para poesia; o Hermes/Dolphin para cenas que os modelos instruct recusam.',
+            text: 'Escolha o Qwen3 32B como padrão se você tem uma GPU de 24 GB; o Llama 3.3 70B se você tem 48 GB+; o Mistral Large para trabalho de tamanho de romance; o Command A+ para diálogo; o Yi-1.5 para poesia; o Hermes/Dolphin para cenas que os modelos instruct recusam.',
           },
           {
             type: 'plain-terms',
@@ -2634,7 +2634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Erros comuns ao escolher e usar modelos locais para escrita criativa',
         items: [
-          '**Erro 1: perseguir o maior modelo nos benchmarks.** As pontuações de escrita criativa correlacionam mal com os rankings de benchmarks gerais. O Yi-1.5 34B supera o Llama 3.3 70B em poesia; o Command R+ supera ambos em diálogo. Escolha por tipo de tarefa, não por posição no ranking.',
+          '**Erro 1: perseguir o maior modelo nos benchmarks.** As pontuações de escrita criativa correlacionam mal com os rankings de benchmarks gerais. O Yi-1.5 34B supera o Llama 3.3 70B em poesia; o Command A+ supera ambos em diálogo. Escolha por tipo de tarefa, não por posição no ranking.',
           '**Erro 2: usar ajustes de sampling estilo código.** Temperatura 0.2–0.4 produz prosa plana e previsível. A escrita criativa exige 0.8–1.1 com top-p 0.9–0.95. Os ajustes padrão da maioria das interfaces de chat são ajustados para perguntas e respostas, não para prosa.',
           '**Erro 3: ficar com o modelo instruct e desistir quando ele recusa.** A versão instruct recusa cenas que você enquadrou explicitamente como ficção; o derivado sem censura do mesmo modelo base as escreve. Duas instalações no Ollama é a solução.',
           '**Erro 4: system prompts fracos.** "Você é um assistente útil" é o pior prompt possível para trabalho criativo. Um system prompt com notas de personagem, amostras de voz, POV, tempo verbal e tom faz mais pela qualidade da saída do que qualquer troca de modelo. Combine com [negative prompting](/pt/prompt-engineering/negative-prompting) para especificar o que NÃO fazer (sem exposição, sem prosa exuberante, sem "ela sentiu").',
@@ -2651,7 +2651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[Fichas de modelos do Hugging Face para Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5](https://huggingface.co/) — documentação oficial de modelos e licenças.',
+          '[Fichas de modelos do Hugging Face para Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5](https://huggingface.co/) — documentação oficial de modelos e licenças.',
           '[Hermes 3 (NousResearch) GitHub e ficha de modelo](https://huggingface.co/NousResearch) — ajustes finos sem censura baseados no Llama 3.3.',
           '[Fichas de modelos Dolphin 3.0 (Cognitive Computations)](https://huggingface.co/cognitivecomputations) — ajustes finos sem censura em múltiplos modelos base.',
           '[Biblioteca de modelos Ollama](https://ollama.com/library) — modelos disponíveis, opções de quantização, indicadores de compatibilidade com chamadas de ferramentas mencionados acima.',
@@ -2721,11 +2721,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores LLMs locais para escrita criativa 2026: ficção, diálogo e construção de mundos',
-      description: 'Comparação de 6 modelos locais para escrita criativa: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 e variantes sem censura. Testados em mais de 50 prompts criativos.',
+      description: 'Comparação de 6 modelos locais para escrita criativa: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 e variantes sem censura. Testados em mais de 50 prompts criativos.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-creative-writing-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2734,22 +2734,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'أفضل نماذج ⁨LLM⁩ المحلية للكتابة الإبداعية ⁨2026⁩: الخيال والحوار وبناء العوالم',
     seoTitle: '⁨LLMs⁩ محلية للكتابة الإبداعية ⁨2026⁩: ⁨Llama⁩ و⁨Qwen3⁩',
     intro:
-      'الكتابة الإبداعية هي المهمة التي تتفوق فيها نماذج LLM المحلية لأسباب تتجاوز الخصوصية والسعر. أفضل نماذج الأوزان المفتوحة المضبوطة على التعليمات وغير المقيدة في 2026 — Llama 3.3 70B وQwen3 32B وMistral Large وCommand R+ وYi-1.5 34B ومشتقات Hermes/Dolphin غير المقيدة — تنتج خيالاً وحواراً وبناءً للعوالم يضاهي نماذج السحابة الحديثة في معظم الطلبات. تكمن الفوارق في اتساق الأسلوب والاستعداد للتعامل مع الموضوعات المظلمة أو البالغين، ومدى طبيعية استجابتها للتوجيهات. يختبر هذا الدليل ستة نماذج على أكثر من 50 طلباً إبداعياً عبر الخيال والحوار والشعر وبناء العوالم، مع إعدادات الحرارة وtop-p التي تناسب كل نموذج.',
+      'الكتابة الإبداعية هي المهمة التي تتفوق فيها نماذج LLM المحلية لأسباب تتجاوز الخصوصية والسعر. أفضل نماذج الأوزان المفتوحة المضبوطة على التعليمات وغير المقيدة في 2026 — Llama 3.3 70B وQwen3 32B وMistral Large وCommand A+ وYi-1.5 34B ومشتقات Hermes/Dolphin غير المقيدة — تنتج خيالاً وحواراً وبناءً للعوالم يضاهي نماذج السحابة الحديثة في معظم الطلبات. تكمن الفوارق في اتساق الأسلوب والاستعداد للتعامل مع الموضوعات المظلمة أو البالغين، ومدى طبيعية استجابتها للتوجيهات. يختبر هذا الدليل ستة نماذج على أكثر من 50 طلباً إبداعياً عبر الخيال والحوار والشعر وبناء العوالم، مع إعدادات الحرارة وtop-p التي تناسب كل نموذج.',
     metaDescription:
-      '6 نماذج محلية اختُبرت على 50+ طلباً إبداعياً: Llama 3.3 70B وQwen3 32B وMistral Large وCommand R+ وYi-1.5. مقارنة الأسلوب والإعدادات المثلى.',
+      '6 نماذج محلية اختُبرت على 50+ طلباً إبداعياً: Llama 3.3 70B وQwen3 32B وMistral Large وCommand A+ وYi-1.5. مقارنة الأسلوب والإعدادات المثلى.',
     twitterDescription:
-      '6 نماذج محلية للخيال والحوار وبناء العوالم اختُبرت على أكثر من 50 طلباً. Llama 3.3 وQwen3 وMistral Large وCommand R+ وYi-1.5 إلى جانب النماذج غير المقيدة. الحكم لكل نوع مهمة.',
+      '6 نماذج محلية للخيال والحوار وبناء العوالم اختُبرت على أكثر من 50 طلباً. Llama 3.3 وQwen3 وMistral Large وCommand A+ وYi-1.5 إلى جانب النماذج غير المقيدة. الحكم لكل نوع مهمة.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -2773,17 +2773,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'نموذج llm محلي لبناء العوالم',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70B هو أفضل خيار محلي شامل للكتابة الإبداعية في مايو 2026 — اتساق أسلوبي قوي؛ يتبع التوجيهات بشكل جيد؛ ويتعامل مع الموضوعات المظلمة دون رفض عندما يُصوَّر العمل في موجّه النظام باعتباره خيالاً. Qwen3 32B هو الخيار المناسب لأجهزة 24 GB: يكاد يماثله في جودة النثر مع متطلبات أجهزة أخف. Mistral Large يفوز في الاستمرارية الطويلة (صياغة الروايات) بفضل سياقه الأصلي البالغ 128K. Command R+ 104B يمتلك أنقى أسلوب حواري. Yi-1.5 34B هو الخيار المتخصص للشعر والنثر الغنائي. لسير العمل التي ترفضها النماذج المضبوطة على التعليمات، Hermes 3 (قاعدة Llama 3.3) وDolphin 3.0 هما الخياران غير المقيدَين — البنية ذاتها، مع إزالة طبقة أمان RLHF. الحرارة 0.8–1.1 وtop-p 0.9–0.95 هي النطاق الإبداعي؛ 0.7 وما دون ينتج نثراً مسطحاً. غير مقيد ≠ غير أخلاقي — يعني أن النموذج يتبع الموجّه بدلاً من الرفض؛ والكاتب لا يزال هو المؤلف.**',
+      '**Llama 3.3 70B هو أفضل خيار محلي شامل للكتابة الإبداعية في مايو 2026 — اتساق أسلوبي قوي؛ يتبع التوجيهات بشكل جيد؛ ويتعامل مع الموضوعات المظلمة دون رفض عندما يُصوَّر العمل في موجّه النظام باعتباره خيالاً. Qwen3 32B هو الخيار المناسب لأجهزة 24 GB: يكاد يماثله في جودة النثر مع متطلبات أجهزة أخف. Mistral Large يفوز في الاستمرارية الطويلة (صياغة الروايات) بفضل سياقه الأصلي البالغ 128K. Command A+ يمتلك أنقى أسلوب حواري. Yi-1.5 34B هو الخيار المتخصص للشعر والنثر الغنائي. لسير العمل التي ترفضها النماذج المضبوطة على التعليمات، Hermes 3 (قاعدة Llama 3.3) وDolphin 3.0 هما الخياران غير المقيدَين — البنية ذاتها، مع إزالة طبقة أمان RLHF. الحرارة 0.8–1.1 وtop-p 0.9–0.95 هي النطاق الإبداعي؛ 0.7 وما دون ينتج نثراً مسطحاً. غير مقيد ≠ غير أخلاقي — يعني أن النموذج يتبع الموجّه بدلاً من الرفض؛ والكاتب لا يزال هو المؤلف.**',
     quickAnswerTop: {
       ar: {
         question: 'ما نموذج LLM المحلي الأفضل للكتابة الإبداعية في 2026؟',
         answer:
-          'Llama 3.3 70B هو أفضل خيار محلي شامل — قوي في النثر والحوار وبناء العوالم، مع اتساق أسلوبي يمتد عبر جلسات طويلة. على أجهزة 24 GB حيث لا يتسع النموذج 70B، يُعد Qwen3 32B البديل الأخف دون خسارة تُذكر في الجودة. Mistral Large هو خيار السياق الطويل لصياغة الروايات (128K سياق جاهزاً). Command R+ 104B يمتلك أكثر الأصوات الحوارية طبيعية. Yi-1.5 34B هو المتخصص في الشعر والنثر الغنائي. لسير العمل التي تصطدم بطبقة أمان النماذج المضبوطة (الخيال الناضج ومشاهد الصراع والشخصيات المعقدة أخلاقياً)، تستخدم مشتقات Hermes 3 وDolphin 3.0 نفس النماذج الأساسية مع إزالة طبقة أمان RLHF — تتبع الموجّه بدلاً من الرفض. الحرارة 0.8–1.1 وtop-p 0.9–0.95 هي النطاق الإبداعي؛ إعدادات نمط الكود (0.2–0.4) تنتج نثراً مسطحاً.',
+          'Llama 3.3 70B هو أفضل خيار محلي شامل — قوي في النثر والحوار وبناء العوالم، مع اتساق أسلوبي يمتد عبر جلسات طويلة. على أجهزة 24 GB حيث لا يتسع النموذج 70B، يُعد Qwen3 32B البديل الأخف دون خسارة تُذكر في الجودة. Mistral Large هو خيار السياق الطويل لصياغة الروايات (128K سياق جاهزاً). Command A+ يمتلك أكثر الأصوات الحوارية طبيعية. Yi-1.5 34B هو المتخصص في الشعر والنثر الغنائي. لسير العمل التي تصطدم بطبقة أمان النماذج المضبوطة (الخيال الناضج ومشاهد الصراع والشخصيات المعقدة أخلاقياً)، تستخدم مشتقات Hermes 3 وDolphin 3.0 نفس النماذج الأساسية مع إزالة طبقة أمان RLHF — تتبع الموجّه بدلاً من الرفض. الحرارة 0.8–1.1 وtop-p 0.9–0.95 هي النطاق الإبداعي؛ إعدادات نمط الكود (0.2–0.4) تنتج نثراً مسطحاً.',
         bullets: [
           'الأفضل عموماً: Llama 3.3 70B — أقوى اتساق أسلوبي، يتبع التوجيهات جيداً، يتعامل مع الموضوعات المظلمة دون رفض عند تأطير العمل خيالاً.',
           'الأفضل لأجهزة 24 GB: Qwen3 32B — يكاد يضاهي Llama 70B في النثر مع متطلبات أجهزة أخف بكثير.',
           'الأفضل للصياغة الطويلة: Mistral Large — 128K سياق جاهزاً؛ صياغة بطول الرواية دون فقدان الخيط.',
-          'الأفضل للحوار: Command R+ 104B — أكثر الأصوات التحادثية طبيعية عبر الشخصيات.',
+          'الأفضل للحوار: Command A+ — أكثر الأصوات التحادثية طبيعية عبر الشخصيات.',
           'الأفضل للشعر/الغنائي: Yi-1.5 34B — الخيار المتخصص للنظم والنثر المصطنع.',
           'عند رفض النموذج المضبوط: Hermes 3 (قاعدة Llama) أو Dolphin 3.0 — غير مقيد، البنية ذاتها، يتبع الموجّه.',
           'إعدادات الأخذ بالعينات: حرارة 0.8–1.1، top-p 0.9–0.95 للنثر؛ أقل للحوار المتسق، أعلى للعمل الخيالي/السريالي.',
@@ -2815,7 +2815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B هو أفضل نموذج محلي شامل للكتابة الإبداعية في مايو 2026.** أقوى اتساق أسلوبي في المجموعة؛ يتبع التوجيهات جيداً؛ يتعامل مع الموضوعات المظلمة دون رفض عندما يُصوَّر العمل في موجّه النظام باعتباره خيالاً.',
           '**Qwen3 32B هو الخيار المناسب لأجهزة 24 GB.** جودة نثر تكاد تضاهي Llama 70B دون تكلفة 48 GB+ من VRAM. الخيار الافتراضي لمعظم الحواسيب المحمولة والمكتبية.',
           '**Mistral Large يفوز في الاستمرارية الطويلة.** 128K سياق جاهزاً؛ صياغة بطول الرواية دون فقدان الخيط أو صوت الشخصية.',
-          '**Command R+ 104B يمتلك أنقى أسلوب حواري.** أكثر إيقاعات التحادث طبيعية بين الشخصيات؛ الخيار عندما يكون الحوار هو الجزء الهيكلي في العمل.',
+          '**Command A+ يمتلك أنقى أسلوب حواري.** أكثر إيقاعات التحادث طبيعية بين الشخصيات؛ الخيار عندما يكون الحوار هو الجزء الهيكلي في العمل.',
           '**Yi-1.5 34B هو المتخصص في الشعر والنثر الغنائي.** الخيار المتخصص للنظم والنثر المصطنع والعمل القصير حيث يهم الإيقاع.',
           '**المشتقات غير المقيدة (Hermes 3 وDolphin 3.0) هي الخطوة الصحيحة عندما ترفض النماذج المضبوطة.** نفس النماذج الأساسية؛ طبقة أمان RLHF محذوفة؛ يتبع النموذج الموجّه بدلاً من الرفض. الخيال الناضج ومشاهد الصراع والشخصيات المعقدة أخلاقياً تصبح قابلة للكتابة.',
           '**إعدادات الأخذ بالعينات أهم مما يعتقد الناس.** الحرارة 0.8–1.1 وtop-p 0.9–0.95 هي النطاق الإبداعي. إعدادات نمط الكود (0.2–0.4) تنتج نثراً مسطحاً ومتوقعاً. فوق 1.2 هو إقليم الخيال/السريالي.',
@@ -2828,7 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأفضل عموماً:** Llama 3.3 70B مع Q4_K_M، ~42 GB VRAM. أقوى اتساق أسلوبي في هذه المجموعة.',
           '**الأفضل لأجهزة 24 GB:** Qwen3 32B مع Q4_K_M، ~20 GB VRAM. الخيار الافتراضي لمعظم المستخدمين.',
           '**الأفضل للصياغة الطويلة:** Mistral Large مع Q4_K_M، ~75 GB VRAM إجمالاً (ثقيل). 128K سياق جاهزاً.',
-          '**الأفضل للحوار:** Command R+ 104B مع Q4_K_M، ~62 GB VRAM. أفضل تمييز لأصوات الشخصيات.',
+          '**الأفضل للحوار:** Command A+ مع Q4_K_M، ~62 GB VRAM. أفضل تمييز لأصوات الشخصيات.',
           '**الأفضل للشعر:** Yi-1.5 34B مع Q4_K_M، ~21 GB VRAM. متخصص في النثر الغنائي.',
           '**الخيارات غير المقيدة:** Hermes 3 (قاعدة Llama 3.3، ~42 GB) وDolphin 3.0 (أحجام أساسية متعددة، 13–42 GB).',
           '**إعدادات الأخذ بالعينات الافتراضية للنثر:** حرارة 0.95، top-p 0.92، معاقبة التكرار 1.1. اضبط وفقاً لنوع المهمة.',
@@ -2863,11 +2863,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70B هو أقوى نموذج إبداعي شامل؛ Qwen3 32B هو البديل الأخف؛ Mistral Large يفوز في الصياغة الطويلة؛ Command R+ يفوز في الحوار؛ Yi-1.5 يفوز في الشعر؛ Hermes/Dolphin يتعاملان مع المشاهد التي ترفضها النماذج الأخرى.',
+            text: 'Llama 3.3 70B هو أقوى نموذج إبداعي شامل؛ Qwen3 32B هو البديل الأخف؛ Mistral Large يفوز في الصياغة الطويلة؛ Command A+ يفوز في الحوار؛ Yi-1.5 يفوز في الشعر؛ Hermes/Dolphin يتعاملان مع المشاهد التي ترفضها النماذج الأخرى.',
           },
           {
             type: 'plain-terms',
-            text: 'لا يوجد نموذج أفضل في كل شيء. Llama 3.3 70B هو الخيار الآمن الافتراضي إن توفر الجهاز. Qwen3 32B هو الاختيار الذكي على GPU بسعة 24 GB. اختر متخصصاً (Mistral للروايات، Command R+ للحوار، Yi-1.5 للشعر) عندما يكون نوع مهمة واحد هو الجزء الهيكلي في عملك. اختر مشتقاً غير مقيد عندما يرفض النموذج المضبوط المشاهد التي تحتاج لكتابتها.',
+            text: 'لا يوجد نموذج أفضل في كل شيء. Llama 3.3 70B هو الخيار الآمن الافتراضي إن توفر الجهاز. Qwen3 32B هو الاختيار الذكي على GPU بسعة 24 GB. اختر متخصصاً (Mistral للروايات، Command A+ للحوار، Yi-1.5 للشعر) عندما يكون نوع مهمة واحد هو الجزء الهيكلي في عملك. اختر مشتقاً غير مقيد عندما يرفض النموذج المضبوط المشاهد التي تحتاج لكتابتها.',
           },
         ],
         columns: ['النموذج', 'الحجم', 'VRAM (Q4_K_M)', 'الخيال', 'الحوار', 'الشعر', 'بناء العوالم', 'الأفضل لـ'],
@@ -2875,7 +2875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Llama 3.3 70B', 'الحجم': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'الخيال': 'الأفضل', 'الحوار': 'قوي', 'الشعر': 'قوي', 'بناء العوالم': 'الأفضل', 'الأفضل لـ': 'الأفضل عموماً؛ الافتراضي إن سمح الجهاز' },
           { 'النموذج': 'Qwen3 32B', 'الحجم': '32B', 'VRAM (Q4_K_M)': '~20 GB', 'الخيال': 'قوي', 'الحوار': 'قوي', 'الشعر': 'متوسط', 'بناء العوالم': 'قوي', 'الأفضل لـ': 'الافتراضي على جهاز 24 GB؛ فارق بسيط عن Llama 70B' },
           { 'النموذج': 'Mistral Large', 'الحجم': '123B', 'VRAM (Q4_K_M)': '~75 GB', 'الخيال': 'قوي (طويل)', 'الحوار': 'قوي', 'الشعر': 'متوسط', 'بناء العوالم': 'قوي', 'الأفضل لـ': 'استمرارية الصياغة الطويلة، سياق 128K' },
-          { 'النموذج': 'Command R+', 'الحجم': '104B', 'VRAM (Q4_K_M)': '~62 GB', 'الخيال': 'قوي', 'الحوار': 'الأفضل', 'الشعر': 'متوسط', 'بناء العوالم': 'قوي', 'الأفضل لـ': 'العمل المكثف بالحوار، المشاهد الجماعية' },
+          { 'النموذج': 'Command A+', 'الحجم': 'غير معلن', 'VRAM (Q4_K_M)': '~62 GB', 'الخيال': 'قوي', 'الحوار': 'الأفضل', 'الشعر': 'متوسط', 'بناء العوالم': 'قوي', 'الأفضل لـ': 'العمل المكثف بالحوار، المشاهد الجماعية' },
           { 'النموذج': 'Yi-1.5 34B', 'الحجم': '34B', 'VRAM (Q4_K_M)': '~21 GB', 'الخيال': 'متوسط', 'الحوار': 'متوسط', 'الشعر': 'الأفضل', 'بناء العوالم': 'متوسط', 'الأفضل لـ': 'الشعر والنثر الغنائي والعمل المصطنع' },
           { 'النموذج': 'Hermes 3 / Dolphin 3.0', 'الحجم': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', 'الخيال': 'مثل الأساسي', 'الحوار': 'مثل الأساسي', 'الشعر': 'مثل الأساسي', 'بناء العوالم': 'مثل الأساسي', 'الأفضل لـ': 'المشاهد التي ترفضها النماذج المضبوطة' },
         ],
@@ -2893,7 +2893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — الأفضل عموماً. أقوى اتساق أسلوبي في مجموعة الاختبار؛ تحافظ الشخصيات على نفس أنماط كلامها عبر المشاهد الطويلة. يتبع التوجيهات جيداً — عندما يحدد موجّه النظام وجهة النظر والنبرة وقواعد الأسلوب الأدبي، يحترمها Llama 3.3. يتعامل مع الموضوعات المظلمة (العنف، الحزن، الشخصيات الرمادية أخلاقياً) دون رفض عند تأطير الطلب باعتباره خيالاً. حيث يُخفق: المقاطع الطويلة قد تنجرف أحياناً نحو صوت "أدبي" عام؛ النماذج الصغيرة من نفس العائلة (8B) تفقد هذه الميزة.',
           '**Qwen3 32B** — أفضل خيار على جهاز 24 GB. اتساق أسلوبي أدنى قليلاً من Llama 3.3 70B لكن الفجوة صغيرة بما يكفي ألا يلاحظها معظم الكتّاب في العمل النثري المكثف. الأقوى بين النماذج الأصغر في اتباع التعليمات. حيث يُخفق: الشعر والنثر المصطنع يتأخران بوضوح؛ انتقل إلى Yi-1.5 لهذه المهام.',
           '**Mistral Large** — أفضل استمرارية للصياغة الطويلة. نافذة سياق 128K تعني أن مسودة 50,000 كلمة تتسع دون اقتطاع؛ يحافظ النموذج على تفاصيل الشخصيات وخيوط الحبكة وقواعد العالم عبر الفصول. حيث يُخفق: حاجز الجهاز هو الأعلى في هذه المجموعة (~75 GB بتكميم Q4_K_M)؛ تتباطأ السرعة لكل رمز في المدخلات الطويلة. استخدم Mistral La Plateforme على بنية تحتية أوروبية إذا كان الجهاز المحلي هو القيد.',
-          '**Command R+ 104B** — أفضل حوار. أصوات شخصيات مميزة تتمسك بها في التبادلات؛ المشاهد الجماعية (3+ متحدثين) تظل قابلة للقراءة دون نمط الفشل "الجميع يبدو متشابهاً" الشائع في النماذج الأخرى. حيث يُخفق: فقرات النثر بين إيقاعات الحوار كفوءة لكنها ليست غنائية؛ للمقاطع الوصفية البحتة، يفوز Llama 3.3.',
+          '**Command A+** — أفضل حوار. أصوات شخصيات مميزة تتمسك بها في التبادلات؛ المشاهد الجماعية (3+ متحدثين) تظل قابلة للقراءة دون نمط الفشل "الجميع يبدو متشابهاً" الشائع في النماذج الأخرى. حيث يُخفق: فقرات النثر بين إيقاعات الحوار كفوءة لكنها ليست غنائية؛ للمقاطع الوصفية البحتة، يفوز Llama 3.3.',
           '**Yi-1.5 34B** — أفضل شعر ونثر غنائي. واعٍ بالإيقاع، مرتاح للأشكال المنظمة (السونيتة، الفيلانيل، الهايكو)، ينتج شعراً يصمد أفضل من النماذج العامة الأكبر. حيث يُخفق: الخيال الطويل كفوء لكنه ليس نقطة قوته؛ اختر Llama 3.3 أو Qwen3 للعمل السردي.',
           '**Hermes 3 (قاعدة Llama 3.3) وDolphin 3.0** — المشتقات غير المقيدة. نفس البنية والأوزان الأساسية مثل Llama 3.3 70B؛ طبقة أمان RLHF تُزال خلال الضبط الدقيق. يتبع النموذج الموجّه بدلاً من رفض المحتوى الناضج أو تعقيمه. الجودة في الطلبات غير الناضجة مطابقة للنموذج الأساسي؛ الفارق يظهر فقط في الطلبات التي ترفضها نسخ instruct. استخدمها عند اقتضاء العمل (الخيال الناضج، المشاهد العنيفة، الشخصيات المعقدة أخلاقياً) وابق مع النسخة instruct في الحالات الأخرى.',
         ],
@@ -2919,7 +2919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Llama 3.3 70B', 'المفتتح النموذجي': 'الفعل أولاً، التفصيل الحسي فورياً', 'نمط الوصف النموذجي': 'ملموس وجسدي؛ يتجنب الأسماء المجردة؛ مرسوم اجتماعياً' },
           { 'النموذج': 'Qwen3 32B', 'المفتتح النموذجي': 'ملاحظة البيئة قبل فعل الشخصية', 'نمط الوصف النموذجي': 'فعّال؛ تفصيل اجتماعي/جوي؛ إشارة هيكلية خفيفة' },
           { 'النموذج': 'Yi-1.5 34B', 'المفتتح النموذجي': 'استعارة أو تشبيه من الجملة الأولى', 'نمط الوصف النموذجي': 'صور مجردة؛ تنويع إيقاعي؛ أكثر كثافة؛ مبالغ فيه أحياناً' },
-          { 'النموذج': 'Command R+ 104B', 'المفتتح النموذجي': 'صوت الشخصية أو مفتتح قريب من الحوار', 'نمط الوصف النموذجي': 'محادثي؛ صوت متميز خاص؛ الوصف المنفرد أضعف' },
+          { 'النموذج': 'Command A+', 'المفتتح النموذجي': 'صوت الشخصية أو مفتتح قريب من الحوار', 'نمط الوصف النموذجي': 'محادثي؛ صوت متميز خاص؛ الوصف المنفرد أضعف' },
           { 'النموذج': 'Mistral Large', 'المفتتح النموذجي': 'فقرة إعداد؛ بداية أبطأ', 'نمط الوصف النموذجي': 'متسو ومنضبط؛ متسق عبر المقاطع الطويلة؛ عام قليلاً' },
         ],
         callouts: [
@@ -2980,7 +2980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**واجهة الدردشة التي تكتب فيها تهم بقدر أهمية النموذج.** ثلاث واجهات هي خيارات موثوقة لسير عمل الكتابة الإبداعية في 2026؛ اختر وفقاً لشكل سير العمل.',
         items: [
           '**Open WebUI** — الخيار متعدد الأغراض. واجهة بنمط ChatGPT، تبديل النموذج بنقرة، بطاقات الشخصيات عبر موجّهات النظام، تحميل المستندات للسياق. الأفضل للعمل النثري المكثف حيث يتلاءم تنسيق الدردشة مع سير كتابتك.',
-          '**SillyTavern** — خيار لعب الأدوار والحوار. نظام بيئي لبطاقات الشخصيات (مواصفة Tavern v2)، إدارة الشخصيات، دفاتر المعرفة لبناء العوالم، دردشة جماعية للمشاهد متعددة الشخصيات. الأفضل للعمل المدفوع بالحوار والمشاريع الطويلة المتمحورة حول الشخصيات أو العوالم. يتناسب جيداً مع Command R+ والمشتقات غير المقيدة.',
+          '**SillyTavern** — خيار لعب الأدوار والحوار. نظام بيئي لبطاقات الشخصيات (مواصفة Tavern v2)، إدارة الشخصيات، دفاتر المعرفة لبناء العوالم، دردشة جماعية للمشاهد متعددة الشخصيات. الأفضل للعمل المدفوع بالحوار والمشاريع الطويلة المتمحورة حول الشخصيات أو العوالم. يتناسب جيداً مع Command A+ والمشتقات غير المقيدة.',
           '**Agnai وRisuAI** — بدائل أخف من SillyTavern. مجموعات ميزات أخف، بدء تشغيل أبسط، تخصيص أقل. اختر عندما يبدو SillyTavern أكثر مما تحتاجه في سير عملك.',
           '**واجهة سطر أوامر Ollama البسيطة وأي محرر نصوص** — الخيار الأدنى. `ollama run llama3.3:70b` وأمرر المشاهد عبر الطرفية إلى مستند المسودة. تفقد السياق المستمر للشخصية لكن تكسب تركيز الكاتب.',
           'للمقارنة المباشرة للواجهات المتمحورة حول لعب الأدوار، انظر [SillyTavern مقابل Agnai مقابل RisuAI: أفضل واجهة لعب أدوار محلية](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay).',
@@ -3002,7 +3002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'وضعك': 'لدي 48 GB+ من VRAM وأريد نموذجاً للجميع', 'الاختيار': 'Llama 3.3 70B (instruct) + Hermes 3 (غير مقيد) على نفس Ollama' },
           { 'وضعك': 'لدي GPU بسعة 24 GB أو Mac بذاكرة 32 GB وأريد افتراضياً متيناً', 'الاختيار': 'Qwen3 32B' },
           { 'وضعك': 'أصوغ رواية — الاستمرارية الطويلة هي الأولوية', 'الاختيار': 'Mistral Large (أو Mistral La Plateforme على البنية الأوروبية إذا لم يكفِ الجهاز المحلي)' },
-          { 'وضعك': 'عملي مكثف جداً بالحوار — أصوات الشخصيات يجب أن تبقى متميزة', 'الاختيار': 'Command R+ 104B (أو Llama 3.3 70B كبديل أخف)' },
+          { 'وضعك': 'عملي مكثف جداً بالحوار — أصوات الشخصيات يجب أن تبقى متميزة', 'الاختيار': 'Command A+ (أو Llama 3.3 70B كبديل أخف)' },
           { 'وضعك': 'أكتب شعراً أو نظماً أو نثراً غنائياً', 'الاختيار': 'Yi-1.5 34B' },
           { 'وضعك': 'النموذج instruct يرفض المشاهد التي أحتاج لكتابتها', 'الاختيار': 'Hermes 3 (قاعدة Llama 3.3) أو Dolphin 3.0 — احتفظ بنسخة instruct مثبتة للعمل غير الناضج' },
           { 'وضعك': 'أريد البدء بنموذج واحد والتكيف', 'الاختيار': 'Qwen3 32B — يغطي معظم سير العمل على جهاز للمستهلكين؛ انتقل عندما يصبح نوع مهمة ما هو الجزء الجوهري' },
@@ -3010,7 +3010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'اختر Qwen3 32B افتراضياً إذا كان لديك GPU بسعة 24 GB؛ Llama 3.3 70B إذا كان لديك 48 GB+؛ Mistral Large للعمل بطول الرواية؛ Command R+ للحوار؛ Yi-1.5 للشعر؛ Hermes/Dolphin للمشاهد التي ترفضها نماذج instruct.',
+            text: 'اختر Qwen3 32B افتراضياً إذا كان لديك GPU بسعة 24 GB؛ Llama 3.3 70B إذا كان لديك 48 GB+؛ Mistral Large للعمل بطول الرواية؛ Command A+ للحوار؛ Yi-1.5 للشعر؛ Hermes/Dolphin للمشاهد التي ترفضها نماذج instruct.',
           },
           {
             type: 'plain-terms',
@@ -3028,7 +3028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'الأخطاء الشائعة عند اختيار واستخدام النماذج المحلية للكتابة الإبداعية',
         items: [
-          '**الخطأ 1: مطاردة النموذج الأكبر في المعايير.** درجات الكتابة الإبداعية ترتبط ارتباطاً ضعيفاً بتصنيفات المعايير العامة. Yi-1.5 34B يتفوق على Llama 3.3 70B في الشعر؛ Command R+ يتفوق على كليهما في الحوار. اختر حسب نوع المهمة لا حسب الترتيب.',
+          '**الخطأ 1: مطاردة النموذج الأكبر في المعايير.** درجات الكتابة الإبداعية ترتبط ارتباطاً ضعيفاً بتصنيفات المعايير العامة. Yi-1.5 34B يتفوق على Llama 3.3 70B في الشعر؛ Command A+ يتفوق على كليهما في الحوار. اختر حسب نوع المهمة لا حسب الترتيب.',
           '**الخطأ 2: استخدام إعدادات أخذ عينات بنمط الكود.** الحرارة 0.2–0.4 تنتج نثراً مسطحاً ومتوقعاً. الكتابة الإبداعية تتطلب 0.8–1.1 مع top-p 0.9–0.95. الإعدادات الافتراضية لمعظم واجهات الدردشة مضبوطة للأسئلة والأجوبة، لا للنثر.',
           '**الخطأ 3: البقاء مع نموذج instruct والاستسلام عند الرفض.** نسخة instruct ترفض مشاهد صوّرتها صراحةً خيالاً؛ المشتق غير المقيد من نفس النموذج الأساسي يكتبها. تثبيتان في Ollama هو الحل.',
           '**الخطأ 4: موجّهات النظام الضعيفة.** "أنت مساعد مفيد" هو أسوأ موجّه ممكن للعمل الإبداعي. موجّه نظام بملاحظات الشخصية ونماذج الصوت ووجهة النظر والزمن الصرفي والنبرة يصنع أكثر لجودة المخرجات من أي تغيير في النموذج. اجمع مع [التوجيه السلبي](/ar/prompt-engineering/negative-prompting) لتحديد ما لا يُفعل.',
@@ -3045,7 +3045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[بطاقات نماذج Hugging Face لـ Llama 3.3 وQwen3 وMistral Large وCommand R+ وYi-1.5](https://huggingface.co/) — توثيق رسمي للنماذج والتراخيص.',
+          '[بطاقات نماذج Hugging Face لـ Llama 3.3 وQwen3 وMistral Large وCommand A+ وYi-1.5](https://huggingface.co/) — توثيق رسمي للنماذج والتراخيص.',
           '[Hermes 3 (NousResearch) GitHub وبطاقة النموذج](https://huggingface.co/NousResearch) — ضبط دقيق غير مقيد مبني على Llama 3.3.',
           '[بطاقات نماذج Dolphin 3.0 (Cognitive Computations)](https://huggingface.co/cognitivecomputations) — ضبط دقيق غير مقيد على نماذج أساسية متعددة.',
           '[مكتبة نماذج Ollama](https://ollama.com/library) — النماذج المتاحة وخيارات التكميم ومؤشرات توافق استدعاء الأدوات.',
@@ -3115,11 +3115,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل نماذج LLM المحلية للكتابة الإبداعية 2026: الخيال والحوار وبناء العوالم',
-      description: 'مقارنة 6 نماذج محلية للكتابة الإبداعية: Llama 3.3 وQwen3 وMistral Large وCommand R+ وYi-1.5 والمتغيرات غير المقيدة. اختُبرت على أكثر من 50 طلباً إبداعياً.',
+      description: 'مقارنة 6 نماذج محلية للكتابة الإبداعية: Llama 3.3 وQwen3 وMistral Large وCommand A+ وYi-1.5 والمتغيرات غير المقيدة. اختُبرت على أكثر من 50 طلباً إبداعياً.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-local-llm-creative-writing-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3128,22 +3128,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 대화, 세계관 구축',
     seoTitle: '2026년 창작 글쓰기 로컬 LLM 비교: 6가지 모델',
     intro:
-      '창작 글쓰기는 로컬 LLM이 단순히 프라이버시와 비용 측면에서만 앞서는 것이 아니라 진정한 가치를 발휘하는 작업입니다. 2026년 최고의 오픈 웨이트 인스트럭션 튜닝 및 비검열 모델인 Llama 3.3 70B, Qwen3 32B, Mistral Large, Command R+, Yi-1.5 34B, 그리고 비검열 파생 모델 Hermes/Dolphin은 대부분의 프롬프트에서 최첨단 클라우드 모델과 대등한 소설, 대화, 세계관 구축 결과물을 생성합니다. 차이는 음성 일관성, 어두운 주제나 성인 소재 처리 의지, 그리고 지시 사항 자연스러운 준수 능력에 있습니다. 이 가이드는 50개 이상의 소설, 대화, 시, 세계관 구축 창작 프롬프트에서 6가지 모델을 테스트하며, 각 모델에 필요한 온도 및 top-p 값을 함께 제공합니다.',
+      '창작 글쓰기는 로컬 LLM이 단순히 프라이버시와 비용 측면에서만 앞서는 것이 아니라 진정한 가치를 발휘하는 작업입니다. 2026년 최고의 오픈 웨이트 인스트럭션 튜닝 및 비검열 모델인 Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B, 그리고 비검열 파생 모델 Hermes/Dolphin은 대부분의 프롬프트에서 최첨단 클라우드 모델과 대등한 소설, 대화, 세계관 구축 결과물을 생성합니다. 차이는 음성 일관성, 어두운 주제나 성인 소재 처리 의지, 그리고 지시 사항 자연스러운 준수 능력에 있습니다. 이 가이드는 50개 이상의 소설, 대화, 시, 세계관 구축 창작 프롬프트에서 6가지 모델을 테스트하며, 각 모델에 필요한 온도 및 top-p 값을 함께 제공합니다.',
     metaDescription:
-      '창작 글쓰기를 위한 로컬 모델 6가지 비교: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 및 비검열 변형. 50개 이상의 프롬프트에서 테스트 완료.',
+      '창작 글쓰기를 위한 로컬 모델 6가지 비교: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 및 비검열 변형. 50개 이상의 프롬프트에서 테스트 완료.',
     twitterDescription:
-      '소설, 대화, 세계관 구축을 위한 로컬 모델 6가지를 50개 이상의 프롬프트에서 테스트했습니다. Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 및 비검열 옵션. 작업 유형별 최종 평가.',
+      '소설, 대화, 세계관 구축을 위한 로컬 모델 6가지를 50개 이상의 프롬프트에서 테스트했습니다. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 및 비검열 옵션. 작업 유형별 최종 평가.',
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
-      'Command R+ 104B',
+      'Command A+',
       'Yi-1.5 34B',
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Llama',
@@ -3167,17 +3167,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 llm 세계관 구축',
     ],
     leadAnswerBlock:
-      '**Llama 3.3 70B는 2026년 5월 현재 창작 글쓰기를 위한 가장 완성도 높은 로컬 모델입니다 — 탄탄한 음성 일관성, 우수한 지시 사항 준수, 시스템 프롬프트에서 허구로 명시된 경우 어두운 소재도 거부 없이 처리합니다. Qwen3 32B는 24 GB 리그에 최적입니다: 산문 품질은 거의 동등하면서 하드웨어 요구는 더 낮습니다. Mistral Large는 128K 네이티브 컨텍스트로 장편 소설 집필 연속성에서 우위를 보입니다. Command R+ 104B는 가장 자연스러운 대화 음성을 보유합니다. Yi-1.5 34B는 시와 서정 산문의 틈새 선택입니다. 인스트럭션 튜닝 모델이 거부하는 작업 흐름에는 Hermes 3(Llama 3.3 기반)와 Dolphin 3.0이 비검열 옵션입니다 — 동일한 아키텍처, RLHF 안전 레이어 제거. 온도 0.8–1.1과 top-p 0.9–0.95가 창작 범위이며, 0.7 이하는 평평한 산문을 만듭니다. 비검열은 비윤리와 동일하지 않습니다 — 모델이 거부하는 대신 프롬프트를 따른다는 의미이며, 작가는 여전히 저자입니다.**',
+      '**Llama 3.3 70B는 2026년 5월 현재 창작 글쓰기를 위한 가장 완성도 높은 로컬 모델입니다 — 탄탄한 음성 일관성, 우수한 지시 사항 준수, 시스템 프롬프트에서 허구로 명시된 경우 어두운 소재도 거부 없이 처리합니다. Qwen3 32B는 24 GB 리그에 최적입니다: 산문 품질은 거의 동등하면서 하드웨어 요구는 더 낮습니다. Mistral Large는 128K 네이티브 컨텍스트로 장편 소설 집필 연속성에서 우위를 보입니다. Command A+는 가장 자연스러운 대화 음성을 보유합니다. Yi-1.5 34B는 시와 서정 산문의 틈새 선택입니다. 인스트럭션 튜닝 모델이 거부하는 작업 흐름에는 Hermes 3(Llama 3.3 기반)와 Dolphin 3.0이 비검열 옵션입니다 — 동일한 아키텍처, RLHF 안전 레이어 제거. 온도 0.8–1.1과 top-p 0.9–0.95가 창작 범위이며, 0.7 이하는 평평한 산문을 만듭니다. 비검열은 비윤리와 동일하지 않습니다 — 모델이 거부하는 대신 프롬프트를 따른다는 의미이며, 작가는 여전히 저자입니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 창작 글쓰기에 가장 좋은 로컬 LLM은 무엇입니까?',
         answer:
-          'Llama 3.3 70B가 가장 완성도 높은 로컬 선택입니다 — 산문, 대화, 세계관 구축에 강하며 긴 세션에서도 음성 일관성이 유지됩니다. 70B가 들어가지 않는 24 GB 하드웨어에서는 Qwen3 32B가 품질 손실이 적은 경량 대안입니다. Mistral Large는 소설 집필을 위한 장문 컨텍스트 선택입니다(128K 기본 컨텍스트). Command R+ 104B는 가장 자연스러운 대화 음성을 가지고 있습니다. Yi-1.5 34B는 시와 서정 산문 전문입니다. 인스트럭션 튜닝의 안전 레이어에 막히는 작업 흐름(성인 소설, 갈등 장면, 도덕적으로 복잡한 캐릭터)에는 Hermes 3와 Dolphin 3.0이 동일한 기본 모델에서 RLHF 안전 레이어를 제거한 파생 모델로, 거부하는 대신 프롬프트를 따릅니다. 온도 0.8–1.1과 top-p 0.9–0.95가 창작 범위이며, 코드 스타일 설정(0.2–0.4)은 평평한 산문을 생성합니다.',
+          'Llama 3.3 70B가 가장 완성도 높은 로컬 선택입니다 — 산문, 대화, 세계관 구축에 강하며 긴 세션에서도 음성 일관성이 유지됩니다. 70B가 들어가지 않는 24 GB 하드웨어에서는 Qwen3 32B가 품질 손실이 적은 경량 대안입니다. Mistral Large는 소설 집필을 위한 장문 컨텍스트 선택입니다(128K 기본 컨텍스트). Command A+는 가장 자연스러운 대화 음성을 가지고 있습니다. Yi-1.5 34B는 시와 서정 산문 전문입니다. 인스트럭션 튜닝의 안전 레이어에 막히는 작업 흐름(성인 소설, 갈등 장면, 도덕적으로 복잡한 캐릭터)에는 Hermes 3와 Dolphin 3.0이 동일한 기본 모델에서 RLHF 안전 레이어를 제거한 파생 모델로, 거부하는 대신 프롬프트를 따릅니다. 온도 0.8–1.1과 top-p 0.9–0.95가 창작 범위이며, 코드 스타일 설정(0.2–0.4)은 평평한 산문을 생성합니다.',
         bullets: [
           '전반적 최고: Llama 3.3 70B — 가장 높은 음성 일관성, 지시 사항 준수 우수, 허구로 명시된 경우 어두운 소재도 거부 없이 처리.',
           '24 GB 리그 최고: Qwen3 32B — 산문에서 Llama 70B에 거의 근접한 품질, 하드웨어 요구는 훨씬 낮음.',
           '장편 최고: Mistral Large — 128K 기본 컨텍스트; 맥락과 캐릭터 음성을 잃지 않고 소설 집필 가능.',
-          '대화 최고: Command R+ 104B — 캐릭터 간 가장 자연스러운 대화 음성.',
+          '대화 최고: Command A+ — 캐릭터 간 가장 자연스러운 대화 음성.',
           '시/서정 최고: Yi-1.5 34B — 운문과 스타일화된 산문의 틈새 선택.',
           '인스트럭트 거부 시: Hermes 3(Llama 기반) 또는 Dolphin 3.0 — 비검열, 동일 아키텍처, 프롬프트 준수.',
           '샘플링: 산문에는 온도 0.8–1.1, top-p 0.9–0.95; 정밀한 대화에는 낮게, 초현실/장르 작업에는 높게.',
@@ -3209,7 +3209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B는 2026년 5월 현재 창작 글쓰기를 위한 가장 완성도 높은 로컬 모델입니다.** 테스트 집합에서 가장 높은 음성 일관성을 보이며, 지시 사항을 잘 준수하고, 시스템 프롬프트에서 작업이 허구로 명시된 경우 어두운 소재도 거부 없이 처리합니다.',
           '**Qwen3 32B는 24 GB 리그의 올바른 선택입니다.** 48 GB+ VRAM 비용 없이 Llama 70B와 거의 동등한 산문 품질을 제공합니다. 대부분의 노트북과 데스크톱의 기본값입니다.',
           '**Mistral Large는 장편 연속성에서 우위를 보입니다.** 128K 기본 컨텍스트; 맥락이나 캐릭터 음성을 잃지 않고 소설 집필이 가능합니다.',
-          '**Command R+ 104B는 가장 깔끔한 대화 음성을 가지고 있습니다.** 캐릭터 간 가장 자연스러운 대화 리듬; 대화가 작업의 구조적 부분일 때의 선택입니다.',
+          '**Command A+는 가장 깔끔한 대화 음성을 가지고 있습니다.** 캐릭터 간 가장 자연스러운 대화 리듬; 대화가 작업의 구조적 부분일 때의 선택입니다.',
           '**Yi-1.5 34B는 시와 서정 산문 전문가입니다.** 운문, 스타일화된 산문, 리듬이 중요한 단편 형식 작업의 틈새 선택입니다.',
           '**비검열 파생 모델(Hermes 3, Dolphin 3.0)은 인스트럭션 튜닝 모델이 거부할 때 올바른 선택입니다.** 동일한 기본 모델; RLHF 안전 레이어 제거; 모델이 거부하는 대신 프롬프트를 따릅니다. 성인 소설, 갈등 장면, 도덕적으로 복잡한 캐릭터를 작성할 수 있게 됩니다.',
           '**샘플링은 사람들이 생각하는 것보다 더 중요합니다.** 온도 0.8–1.1과 top-p 0.9–0.95가 창작 범위입니다. 코드 스타일 설정(0.2–0.4)은 평평하고 예측 가능한 산문을 생성합니다. 1.2 이상은 장르/초현실 영역입니다.',
@@ -3222,7 +3222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**전반적 최고:** Q4_K_M의 Llama 3.3 70B, ~42 GB VRAM. 이 집합에서 가장 높은 음성 일관성.',
           '**24 GB 리그 최고:** Q4_K_M의 Qwen3 32B, ~20 GB VRAM. 대부분의 사용자를 위한 기본값.',
           '**장편 최고:** Q4_K_M의 Mistral Large, ~75 GB 총 VRAM(무거움). 128K 기본 컨텍스트.',
-          '**대화 최고:** Q4_K_M의 Command R+ 104B, ~62 GB VRAM. 최고의 캐릭터 음성 분화.',
+          '**대화 최고:** Q4_K_M의 Command A+, ~62 GB VRAM. 최고의 캐릭터 음성 분화.',
           '**시 최고:** Q4_K_M의 Yi-1.5 34B, ~21 GB VRAM. 서정 산문 전문가.',
           '**비검열 옵션:** Hermes 3(Llama 3.3 기반, ~42 GB) 및 Dolphin 3.0(다양한 기본 크기, 13–42 GB).',
           '**산문 기본 샘플링:** 온도 0.95, top-p 0.92, repeat penalty 1.1. 작업 유형에 따라 조정.',
@@ -3257,11 +3257,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Llama 3.3 70B는 가장 강력한 전반적 창작 모델이고, Qwen3 32B는 경량 대안이며, Mistral Large는 장편에서 우세하고, Command R+는 대화에서 우세하며, Yi-1.5는 시에서 우세하고, Hermes/Dolphin은 다른 모델이 거부하는 장면을 처리합니다.',
+            text: 'Llama 3.3 70B는 가장 강력한 전반적 창작 모델이고, Qwen3 32B는 경량 대안이며, Mistral Large는 장편에서 우세하고, Command A+는 대화에서 우세하며, Yi-1.5는 시에서 우세하고, Hermes/Dolphin은 다른 모델이 거부하는 장면을 처리합니다.',
           },
           {
             type: 'plain-terms',
-            text: '모든 면에서 최고인 모델은 없습니다. 하드웨어가 허용한다면 Llama 3.3 70B가 안전한 기본값입니다. Qwen3 32B는 24 GB GPU에서 스마트한 선택입니다. 한 가지 작업 유형이 작업의 구조적 부분이 될 때는 전문 모델을 선택하십시오(소설에는 Mistral, 대화에는 Command R+, 시에는 Yi-1.5). 인스트럭션 튜닝 모델이 작성해야 할 장면을 거부하는 경우 비검열 파생 모델을 선택하십시오.',
+            text: '모든 면에서 최고인 모델은 없습니다. 하드웨어가 허용한다면 Llama 3.3 70B가 안전한 기본값입니다. Qwen3 32B는 24 GB GPU에서 스마트한 선택입니다. 한 가지 작업 유형이 작업의 구조적 부분이 될 때는 전문 모델을 선택하십시오(소설에는 Mistral, 대화에는 Command A+, 시에는 Yi-1.5). 인스트럭션 튜닝 모델이 작성해야 할 장면을 거부하는 경우 비검열 파생 모델을 선택하십시오.',
           },
         ],
         columns: ['모델', '크기', 'VRAM (Q4_K_M)', '소설', '대화', '시', '세계관 구축', '최적 용도'],
@@ -3269,7 +3269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Llama 3.3 70B', '크기': '70B', 'VRAM (Q4_K_M)': '~42 GB', '소설': '최고', '대화': '강함', '시': '강함', '세계관 구축': '최고', '최적 용도': '전반적 최고; 하드웨어가 허용하면 기본값' },
           { '모델': 'Qwen3 32B', '크기': '32B', 'VRAM (Q4_K_M)': '~20 GB', '소설': '강함', '대화': '강함', '시': '보통', '세계관 구축': '강함', '최적 용도': '24 GB 리그 기본값; Llama 70B 대비 작은 품질 차이' },
           { '모델': 'Mistral Large', '크기': '123B', 'VRAM (Q4_K_M)': '~75 GB', '소설': '강함 (장편)', '대화': '강함', '시': '보통', '세계관 구축': '강함', '최적 용도': '장편 연속성, 128K 컨텍스트' },
-          { '모델': 'Command R+', '크기': '104B', 'VRAM (Q4_K_M)': '~62 GB', '소설': '강함', '대화': '최고', '시': '보통', '세계관 구축': '강함', '최적 용도': '집중적인 대화 작업, 그룹 장면' },
+          { '모델': 'Command A+', '크기': '비공개', 'VRAM (Q4_K_M)': '~62 GB', '소설': '강함', '대화': '최고', '시': '보통', '세계관 구축': '강함', '최적 용도': '집중적인 대화 작업, 그룹 장면' },
           { '모델': 'Yi-1.5 34B', '크기': '34B', 'VRAM (Q4_K_M)': '~21 GB', '소설': '보통', '대화': '보통', '시': '최고', '세계관 구축': '보통', '최적 용도': '시, 서정 산문, 스타일화된 작업' },
           { '모델': 'Hermes 3 / Dolphin 3.0', '크기': '13B–70B', 'VRAM (Q4_K_M)': '~9–42 GB', '소설': '기본과 동일', '대화': '기본과 동일', '시': '기본과 동일', '세계관 구축': '기본과 동일', '최적 용도': '인스트럭션 튜닝 모델이 거부하는 장면' },
         ],
@@ -3287,7 +3287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.3 70B** — 전반적 최고. 테스트 집합에서 가장 높은 음성 일관성; 캐릭터가 긴 장면에서 동일한 말하기 패턴을 유지합니다. 지시 사항을 잘 준수합니다 — 시스템 프롬프트가 POV, 어조, 장르 관습을 지정하면 Llama 3.3이 이를 존중합니다. 프롬프트가 작업을 허구로 명시하면 어두운 소재(폭력, 슬픔, 도덕적으로 회색인 캐릭터)를 거부 없이 처리합니다. 한계: 긴 구절이 때때로 일반적인 "문학적" 목소리로 흘러가고, 동일 계열 소형 모델(8B)은 이 강점을 잃습니다.',
           '**Qwen3 32B** — 24 GB 리그 최고 선택. Llama 3.3 70B보다 약간 낮은 음성 일관성이지만, 산문이 많은 작업에서 대부분의 작가가 알아채지 못할 정도로 차이가 작습니다. 소형 모델 중 지시 사항 준수가 가장 강합니다. 한계: 시와 스타일화된 산문이 눈에 띄게 뒤처지며, 이러한 작업에는 Yi-1.5로 전환하십시오.',
           '**Mistral Large** — 최고 장편 연속성. 128K 컨텍스트 창은 50,000단어 초안이 잘림 없이 들어간다는 것을 의미하며; 모델이 여러 챕터에 걸쳐 캐릭터 세부 사항, 플롯 스레드, 세계 규칙을 유지합니다. 한계: 이 집합에서 하드웨어 기준이 가장 높습니다(Q4_K_M에서 ~75 GB); 긴 입력에서 토큰당 속도가 느려집니다. 로컬 하드웨어가 제약인 경우 EU 인프라에서 Mistral La Plateforme을 사용하십시오.',
-          '**Command R+ 104B** — 최고 대화. 교환에서 유지되는 뚜렷한 캐릭터 음성; 그룹 장면(3인 이상)이 다른 모델에서 흔한 "모두 같은 소리" 실패 모드 없이 가독성을 유지합니다. 한계: 대화 리듬 사이의 산문 단락은 유능하지만 서정적이지 않습니다; 순수하게 묘사적인 구절에서는 Llama 3.3이 우위를 차지합니다.',
+          '**Command A+** — 최고 대화. 교환에서 유지되는 뚜렷한 캐릭터 음성; 그룹 장면(3인 이상)이 다른 모델에서 흔한 "모두 같은 소리" 실패 모드 없이 가독성을 유지합니다. 한계: 대화 리듬 사이의 산문 단락은 유능하지만 서정적이지 않습니다; 순수하게 묘사적인 구절에서는 Llama 3.3이 우위를 차지합니다.',
           '**Yi-1.5 34B** — 최고 시 및 서정 산문. 리듬 인식이 있고, 구조적 형식(소네트, 빌라넬, 하이쿠)에 익숙하며, 더 큰 일반 모델보다 더 잘 견디는 시를 생성합니다. 한계: 장편 소설은 유능하지만 강점이 아닙니다; 서사 작업에는 Llama 3.3 또는 Qwen3을 선택하십시오.',
           '**Hermes 3(Llama 3.3 기반) 및 Dolphin 3.0** — 비검열 파생 모델. Llama 3.3 70B와 동일한 아키텍처 및 기본 가중치; RLHF 안전 레이어가 파인 튜닝 중에 제거됩니다. 모델이 성인 콘텐츠를 거부하거나 순화하는 대신 프롬프트를 따릅니다. 성숙하지 않은 프롬프트에서의 품질은 기본 모델과 동일합니다; 차이는 인스트럭션 튜닝 버전이 거부하는 프롬프트에서만 나타납니다. 작업이 필요할 때(성인 소설, 폭력적인 장면, 도덕적으로 복잡한 캐릭터) 사용하고, 다른 경우에는 인스트럭션 튜닝 기본 모델을 사용하십시오.',
         ],
@@ -3313,7 +3313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Llama 3.3 70B', '일반적인 오프닝': '먼저 행동, 즉각적인 감각적 세부 사항', '일반적인 묘사 패턴': '구체적이고 물리적; 추상 명사 회피; 사회적으로 정박됨' },
           { '모델': 'Qwen3 32B', '일반적인 오프닝': '캐릭터 행동 전 환경 관찰', '일반적인 묘사 패턴': '효율적; 사회적/대기적 세부 사항; 약간의 구조적 신호' },
           { '모델': 'Yi-1.5 34B', '일반적인 오프닝': '첫 번째 절부터 은유 또는 직유', '일반적인 묘사 패턴': '추상적 이미지; 리듬 변화; 더 밀도 높음; 때때로 화려함' },
-          { '모델': 'Command R+ 104B', '일반적인 오프닝': '캐릭터 음성 또는 대화에 가까운 오프닝', '일반적인 묘사 패턴': '대화적; 독특하고 뚜렷한 목소리; 독립적인 묘사는 약함' },
+          { '모델': 'Command A+', '일반적인 오프닝': '캐릭터 음성 또는 대화에 가까운 오프닝', '일반적인 묘사 패턴': '대화적; 독특하고 뚜렷한 목소리; 독립적인 묘사는 약함' },
           { '모델': 'Mistral Large', '일반적인 오프닝': '배경 단락; 더 느린 시작', '일반적인 묘사 패턴': '균일하고 통제됨; 긴 구절에서 일관성; 약간 일반적' },
         ],
         callouts: [
@@ -3374,7 +3374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**글을 쓰는 채팅 인터페이스는 모델만큼 중요합니다.** 2026년에 세 가지 프론트엔드가 창작 글쓰기 작업 흐름의 신뢰할 수 있는 옵션입니다; 작업 흐름의 형태에 따라 선택하십시오.',
         items: [
           '**Open WebUI** — 범용 옵션. ChatGPT 스타일 인터페이스, 원클릭 모델 전환, 시스템 프롬프트를 통한 캐릭터 카드, 컨텍스트를 위한 문서 업로드. 채팅 형식이 글쓰기 흐름에 맞는 산문 중심 작업에 최적입니다.',
-          '**SillyTavern** — 롤플레이 및 대화 옵션. 캐릭터 카드 생태계(Tavern v2 사양), 페르소나 관리, 세계관 구축을 위한 로어북, 멀티 캐릭터 장면을 위한 그룹 채팅. 대화 중심 작업 및 장편 캐릭터 또는 세계 프로젝트에 최적입니다. Command R+와 비검열 파생 모델과 잘 결합됩니다.',
+          '**SillyTavern** — 롤플레이 및 대화 옵션. 캐릭터 카드 생태계(Tavern v2 사양), 페르소나 관리, 세계관 구축을 위한 로어북, 멀티 캐릭터 장면을 위한 그룹 채팅. 대화 중심 작업 및 장편 캐릭터 또는 세계 프로젝트에 최적입니다. Command A+와 비검열 파생 모델과 잘 결합됩니다.',
           '**Agnai 및 RisuAI** — SillyTavern의 경량 대안. 더 가벼운 기능 세트, 더 간단한 첫 실행, 커스터마이징이 적음. SillyTavern이 작업 흐름에 과하게 느껴질 때 선택하십시오.',
           '**일반 Ollama CLI 및 텍스트 편집기** — 최소 옵션. `ollama run llama3.3:70b`를 실행하고 터미널에서 초안 문서로 장면을 파이프합니다. 지속적인 캐릭터 컨텍스트를 잃지만 작가 집중력을 얻습니다.',
           '롤플레이 중심 프론트엔드의 직접 비교는 [SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 프론트엔드](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)를 참조하십시오.',
@@ -3396,7 +3396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': '48 GB+ VRAM이 있고 모든 것을 위한 모델을 원함', '선택': '같은 Ollama에 Llama 3.3 70B(인스트럭트) + Hermes 3(비검열)' },
           { '상황': '24 GB GPU 또는 32 GB Mac이 있고 안정적인 기본값을 원함', '선택': 'Qwen3 32B' },
           { '상황': '소설을 집필 중 — 장편 연속성이 우선순위', '선택': 'Mistral Large (또는 로컬 하드웨어가 부족한 경우 EU 인프라에서 Mistral La Plateforme)' },
-          { '상황': '작업이 대화 중심 — 캐릭터 음성이 뚜렷하게 유지되어야 함', '선택': 'Command R+ 104B (또는 경량 대안으로 Llama 3.3 70B)' },
+          { '상황': '작업이 대화 중심 — 캐릭터 음성이 뚜렷하게 유지되어야 함', '선택': 'Command A+ (또는 경량 대안으로 Llama 3.3 70B)' },
           { '상황': '시, 운문 또는 서정 산문을 씀', '선택': 'Yi-1.5 34B' },
           { '상황': '인스트럭트 모델이 작성해야 할 장면을 거부함', '선택': 'Hermes 3(Llama 3.3 기반) 또는 Dolphin 3.0 — 비성숙한 작업을 위해 인스트럭트 버전을 설치된 상태로 유지' },
           { '상황': '한 모델로 시작해서 반복하고 싶음', '선택': 'Qwen3 32B — 소비자 하드웨어에서 대부분의 작업 흐름을 커버하며; 한 작업 유형이 필수적인 부분이 될 때 전환' },
@@ -3404,7 +3404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '24 GB GPU가 있으면 기본값으로 Qwen3 32B를 선택하고, 48 GB+가 있으면 Llama 3.3 70B를, 소설 길이 작업에는 Mistral Large를, 대화에는 Command R+를, 시에는 Yi-1.5를, 인스트럭트 모델이 거부하는 장면에는 Hermes/Dolphin을 선택하십시오.',
+            text: '24 GB GPU가 있으면 기본값으로 Qwen3 32B를 선택하고, 48 GB+가 있으면 Llama 3.3 70B를, 소설 길이 작업에는 Mistral Large를, 대화에는 Command A+를, 시에는 Yi-1.5를, 인스트럭트 모델이 거부하는 장면에는 Hermes/Dolphin을 선택하십시오.',
           },
           {
             type: 'plain-terms',
@@ -3422,7 +3422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '창작 글쓰기를 위한 로컬 모델 선택 및 사용 시 일반적인 실수',
         items: [
-          '**실수 1: 벤치마크에서 가장 큰 모델 추구.** 창작 글쓰기 점수는 일반 벤치마크 순위와 관련성이 낮습니다. Yi-1.5 34B는 시에서 Llama 3.3 70B를 능가하고; Command R+는 대화에서 둘 다를 능가합니다. 전반적인 순위가 아닌 작업 유형별로 선택하십시오.',
+          '**실수 1: 벤치마크에서 가장 큰 모델 추구.** 창작 글쓰기 점수는 일반 벤치마크 순위와 관련성이 낮습니다. Yi-1.5 34B는 시에서 Llama 3.3 70B를 능가하고; Command A+는 대화에서 둘 다를 능가합니다. 전반적인 순위가 아닌 작업 유형별로 선택하십시오.',
           '**실수 2: 코드 스타일 샘플링 설정 사용.** 온도 0.2–0.4는 평평하고 예측 가능한 산문을 생성합니다. 창작 글쓰기는 top-p 0.9–0.95와 함께 0.8–1.1이 필요합니다. 대부분의 채팅 인터페이스의 기본 설정은 산문이 아닌 질문과 답변을 위해 조정되어 있습니다.',
           '**실수 3: 인스트럭트 모델을 고집하다가 거부할 때 포기.** 인스트럭트 버전이 허구로 명시한 장면을 거부하면; 동일한 기본 모델의 비검열 파생 모델이 작성합니다. Ollama에 두 가지 설치가 해결책입니다.',
           '**실수 4: 약한 시스템 프롬프트.** "당신은 도움이 되는 어시스턴트입니다"는 창작 작업에 가능한 최악의 프롬프트입니다. 캐릭터 노트, 음성 샘플, POV, 시제, 어조가 포함된 시스템 프롬프트는 어떤 모델 변경보다 출력 품질에 더 큰 영향을 미칩니다. [네거티브 프롬프팅](/ko/prompt-engineering/negative-prompting)과 결합하여 하지 말아야 할 것(설명 없이, 화려한 산문 없이, "그녀는 느꼈다" 없이)을 지정하십시오.',
@@ -3439,7 +3439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '[Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5에 대한 Hugging Face 모델 카드](https://huggingface.co/) — 공식 모델 문서 및 라이선스.',
+          '[Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5에 대한 Hugging Face 모델 카드](https://huggingface.co/) — 공식 모델 문서 및 라이선스.',
           '[Hermes 3(NousResearch) GitHub 및 모델 카드](https://huggingface.co/NousResearch) — Llama 3.3 기반 비검열 파인 튜닝.',
           '[Dolphin 3.0 모델 카드(Cognitive Computations)](https://huggingface.co/cognitivecomputations) — 여러 기본 모델의 비검열 파인 튜닝.',
           '[Ollama 모델 라이브러리](https://ollama.com/library) — 사용 가능한 모델, 양자화 옵션, 앞서 언급한 도구 호출 호환성 플래그.',
@@ -3509,11 +3509,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 대화, 세계관 구축',
-      description: '창작 글쓰기를 위한 로컬 모델 6가지 비교: Llama 3.3, Qwen3, Mistral Large, Command R+, Yi-1.5 및 비검열 변형. 50개 이상의 창작 프롬프트에서 테스트 완료.',
+      description: '창작 글쓰기를 위한 로컬 모델 6가지 비교: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 및 비검열 변형. 50개 이상의 창작 프롬프트에서 테스트 완료.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-06-21',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
