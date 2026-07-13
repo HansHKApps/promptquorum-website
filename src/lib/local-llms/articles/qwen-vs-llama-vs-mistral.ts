@@ -208,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'Mistral Small v0.3', 'Tool Calling': '⚠️ Limited', 'Reasoning (MATH)': '28%', 'Best For': 'Not recommended for tool use' },
           ],
           columns: ['Model', 'Tool Calling', 'Reasoning (MATH)', 'Best For'],
-          note: 'For reasoning-heavy tasks (math, logic, code review): DeepSeek-R1 (MIT licence, 7B-32B) outperforms all three families on MATH benchmarks. Consider it alongside these three for analytical workflows.',
+          note: 'For reasoning-heavy tasks (math, logic, code review): DeepSeek-R1 (MIT licence, 7B-32B) outperforms all three families on MATH benchmarks. Consider it alongside these three for analytical workflows. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
         },
         byTask: {
           id: 'which-family-wins-by-task',
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modelo': 'Mistral Small v0.3', 'Tool Calling': '⚠️ Limitado', 'Razonamiento (MATH)': '28%', 'Mejor para': 'No recomendado para tool calling' },
           ],
           columns: ['Modelo', 'Tool Calling', 'Razonamiento (MATH)', 'Mejor para'],
-          note: 'Para tareas intensivas en razonamiento (matemáticas, lógica, revisión de código): DeepSeek-R1 (licencia MIT, 7B-32B) supera a las tres familias en benchmarks MATH. Considera incluirlo junto a estas tres para flujos de trabajo analíticos.',
+          note: 'Para tareas intensivas en razonamiento (matemáticas, lógica, revisión de código): DeepSeek-R1 (licencia MIT, 7B-32B) supera a las tres familias en benchmarks MATH. Considera incluirlo junto a estas tres para flujos de trabajo analíticos. (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
         },
         byTask: {
           id: 'which-family-wins-by-task',
@@ -1075,7 +1075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modelo': 'Mistral Small v0.3', 'Tool Calling': '⚠️ محدود', 'Razonamiento (MATH)': '28%', 'Mejor para': 'غير موصى به لاستدعاء الأدوات' },
           ],
           columns: ['Modelo', 'Tool Calling', 'Razonamiento (MATH)', 'Mejor para'],
-          note: 'للمهام كثيفة الاستدلال (الرياضيات، المنطق، مراجعة الكود): يتفوق DeepSeek-R1 (ترخيص MIT، 7B-32B) على العائلات الثلاث في معايير MATH. فكّر في تضمينه إلى جانب هذه الثلاث لسير العمل التحليلي.',
+          note: 'للمهام كثيفة الاستدلال (الرياضيات، المنطق، مراجعة الكود): يتفوق DeepSeek-R1 (ترخيص MIT، 7B-32B) على العائلات الثلاث في معايير MATH. فكّر في تضمينه إلى جانب هذه الثلاث لسير العمل التحليلي. (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
         },
         byTask: {
           id: 'which-family-wins-by-task',
@@ -1552,7 +1552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modell': 'Mistral Small v0.3', 'Tool Calling': '⚠️ Begrenzt', 'Reasoning (MATH)': '28%', 'Best For': 'Nicht empfohlen für Tool-Nutzung' },
           ],
           columns: ['Modell', 'Tool Calling', 'Reasoning (MATH)', 'Best For'],
-          note: 'Für Reasoning-intensive Tasks (Mathe, Logik, Code-Review): DeepSeek-R1 (MIT-Lizenz, 7B-32B) übertrifft alle drei Familien bei MATH-Benchmarks.',
+          note: 'Für Reasoning-intensive Tasks (Mathe, Logik, Code-Review): DeepSeek-R1 (MIT-Lizenz, 7B-32B) übertrifft alle drei Familien bei MATH-Benchmarks. (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
         },
         byTask: {
           id: 'which-family-wins-by-task',
@@ -2143,7 +2143,7 @@ schema: {
             { 'モデル': 'Mistral Small v0.3', 'ツール呼び出し': '⚠️ 制限あり', '推論 (MATH)': '28%', 'ベストフォー': 'ツール使用は推奨されない' },
           ],
           columns: ['モデル', 'ツール呼び出し', '推論 (MATH)', 'ベストフォー'],
-          note: '推論集約的なタスク（数学、ロジック、コード レビュー）の場合：DeepSeek-R1（MIT ライセンス、7B-32B）は MATH ベンチマークですべての 3 つのファミリーを上回ります。',
+          note: '推論集約的なタスク（数学、ロジック、コード レビュー）の場合：DeepSeek-R1（MIT ライセンス、7B-32B）は MATH ベンチマークですべての 3 つのファミリーを上回ります。 (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
         },
         byTask: {
           title: 'タスク別にはどのモデルファミリーが勝つ？',
@@ -2427,7 +2427,7 @@ schema: {
             { '模型': 'Mistral Small v0.3', '工具调用': '⚠️ 有限', '推理 (MATH)': '28%', '最佳用途': '不推荐工具使用' },
           ],
           columns: ['模型', '工具调用', '推理 (MATH)', '最佳用途'],
-          note: '对于推理密集型任务（数学、逻辑、代码审查）：DeepSeek-R1（MIT许可证，7B-32B）在MATH基准上超过所有三个系列。',
+          note: '对于推理密集型任务（数学、逻辑、代码审查）：DeepSeek-R1（MIT许可证，7B-32B）在MATH基准上超过所有三个系列。 (DeepSeek 此后发布了开源权重新一代模型 DeepSeek-V4——Flash/Pro;R1/V3 仍可在本地正常使用。)',
         },
         byTask: {
           title: '按任务划分，哪个模型族获胜？',
@@ -2748,7 +2748,7 @@ schema: {
             { 'Model': 'Mistral Small v0.3', 'Tool Calling': '⚠️ 제한적', 'Reasoning (MATH)': '28%', 'Best For': '툴 사용 비권장' },
           ],
           columns: ['Model', 'Tool Calling', 'Reasoning (MATH)', 'Best For'],
-          note: '추론 집중 작업(수학, 논리, 코드 리뷰)의 경우: DeepSeek-R1(MIT 라이선스, 7B-32B)이 MATH 벤치마크에서 세 패밀리 모두를 능가합니다. 분석 워크플로우에서는 이 세 모델과 함께 고려하십시오.',
+          note: '추론 집중 작업(수학, 논리, 코드 리뷰)의 경우: DeepSeek-R1(MIT 라이선스, 7B-32B)이 MATH 벤치마크에서 세 패밀리 모두를 능가합니다. 분석 워크플로우에서는 이 세 모델과 함께 고려하십시오. (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
         },
         byTask: {
           id: 'which-family-wins-by-task',

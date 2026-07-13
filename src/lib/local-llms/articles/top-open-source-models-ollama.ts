@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→gpt-oss:20b — best small model, runs in 16 GB, ~o3-mini level, adjustable reasoning',
             '→qwen3:30b — balanced all-round model; qwen3-coder:30b for code completion',
             '→Llama 4 Scout — long-context (10M tokens) + multimodal, ~55 GB at Q4',
-            '→DeepSeek-R1 — best reasoning/math; gpt-oss:20b for adjustable reasoning',
+            '→DeepSeek-R1 — best reasoning/math; gpt-oss:20b for adjustable reasoning (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
           ],
           updatedDate: '2026-06-21',
         },
@@ -626,7 +626,7 @@ schema: {
           items: [
             '**Mejor general en hardware de consumo**: Qwen 3.6 27B (77,2% SWE-bench, cabe en 24 GB con Q4). Equilibrado todoterreno: qwen3:30b.',
             '**Más descargados**: Llama 3.2 3B (tutoriales) y la familia Llama -- soporte más amplio de herramientas.',
-            '**Mejor razonamiento**: DeepSeek-R1 (chain-of-thought) y gpt-oss:20b (razonamiento ajustable, ~nivel o3-mini).',
+            '**Mejor razonamiento**: DeepSeek-R1 (chain-of-thought) y gpt-oss:20b (razonamiento ajustable, ~nivel o3-mini). (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
             '**Mejor programación**: Kimi K2.6 (MoE de frontera), Qwen 3.6 27B (mejor denso), Devstral Small 24B (mejor agéntico), qwen3-coder:30b (completado) -- benchmarks más altos en sus tamaños.',
             '**Mejor pequeño / 16 GB**: gpt-oss:20b. **Mejor visión/multimodal**: Gemma 4 (E4B+). **Mejor contexto largo (10M) / multimodal grande**: Llama 4 Scout (~55 GB).',
             'A partir de junio de 2026, la biblioteca de Ollama contiene más de 4.500 modelos. Todos disponibles mediante `ollama pull <nombre>`.',
@@ -1036,7 +1036,7 @@ schema: {
             '→gpt-oss:20b — melhor modelo pequeno, roda em 16 GB, nível ~o3-mini, raciocínio ajustável', // VERIFY
             '→qwen3:30b — modelo equilibrado para tudo; qwen3-coder:30b para autocompletar código', // VERIFY
             '→Llama 4 Scout — contexto longo (10M tokens) + multimodal, ~55 GB com Q4', // VERIFY
-            '→DeepSeek-R1 — melhor raciocínio/matemática; gpt-oss:20b para raciocínio ajustável', // VERIFY
+            '→DeepSeek-R1 — melhor raciocínio/matemática; gpt-oss:20b para raciocínio ajustável (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)', // VERIFY
           ],
           updatedDate: '2026-06-21',
         },
@@ -1128,7 +1128,7 @@ schema: {
           items: [
             '**Bestes Modell fuer Consumer-Hardware**: Qwen 3.6 27B (77,2% SWE-bench, passt in 24 GB bei Q4). Ausgewogen: qwen3:30b.',
             '**Am meisten heruntergeladen**: Llama 3.2 3B (Tutorials) und die Llama-Familie.',
-            '**Bestes Reasoning**: DeepSeek-R1 (Chain-of-Thought) und gpt-oss:20b (einstellbares Reasoning, ~o3-mini-Niveau).',
+            '**Bestes Reasoning**: DeepSeek-R1 (Chain-of-Thought) und gpt-oss:20b (einstellbares Reasoning, ~o3-mini-Niveau). (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
             '**Bestes Coding**: Kimi K2.6 (Frontier MoE), Qwen 3.6 27B (beste dicht), Devstral Small 24B (beste agentic), qwen3-coder:30b (Vervollstaendigung).',
             '**Bestes kleines / 16 GB**: gpt-oss:20b. **Beste Vision/multimodal**: Gemma 4 (E4B+). **Bester Long-Context (10M) / grosse Multimodalitaet**: Llama 4 Scout (~55 GB).',
             'Ollama-Bibliothek Juni 2026: 4.500+ Modelle. Alle über `ollama pull <name>` verfügbar.',
@@ -1524,7 +1524,7 @@ schema: {
           items: [
             '**Meilleur global sur materiel grand public** : Qwen 3.6 27B (77,2% SWE-bench, tient en 24 Go en Q4). Polyvalent : qwen3:30b.',
             '**Plus téléchargés** : Llama 3.2 3B (tutoriels) et la famille Llama.',
-            '**Meilleur raisonnement** : DeepSeek-R1 (Chain-of-Thought) et gpt-oss:20b (raisonnement reglable, ~niveau o3-mini).',
+            '**Meilleur raisonnement** : DeepSeek-R1 (Chain-of-Thought) et gpt-oss:20b (raisonnement reglable, ~niveau o3-mini). (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
             '**Meilleur coding** : Kimi K2.6 (Frontier MoE), Qwen 3.6 27B (meilleur dense), Devstral Small 24B (meilleur agentic), qwen3-coder:30b (completion).',
             '**Meilleur petit / 16 Go** : gpt-oss:20b. **Meilleure vision/multimodal** : Gemma 4 (E4B+). **Meilleur long contexte (10M) / grand multimodal** : Llama 4 Scout (~55 Go).',
             'Bibliothèque Ollama juin 2026 : 4.500+ modèles. Tous disponibles via `ollama pull <nom>`.',
@@ -1912,7 +1912,7 @@ schema: {
           items: [
             '**コンシューマー向け総合最高**：Qwen 3.6 27B（77.2% SWE-bench、Q4で24GBに収まる）。バランス型：qwen3:30b。',
             '**最多ダウンロード**：Llama 3.2 3B（チュートリアル向け）とLlamaファミリー。',
-            '**推論最強**：DeepSeek-R1（Chain-of-Thought）とgpt-oss:20b（推論調整可能、~o3-miniレベル）。',
+            '**推論最強**：DeepSeek-R1（Chain-of-Thought）とgpt-oss:20b（推論調整可能、~o3-miniレベル）。 (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
             '**コーディング最強**：Kimi K2.6（Frontier MoE）、Qwen 3.6 27B（最高密度）、Devstral Small 24B（最高エージェント）、qwen3-coder:30b（補完）。',
             '**小型・16GB最強**：gpt-oss:20b。**ビジョン/マルチモーダル最強**：Gemma 4（E4B以上）。**長コンテキスト（10M）/ 大規模マルチモーダル最強**：Llama 4 Scout（~55GB）。',
             'Ollamaライブラリ6月2026：4,500+モデル。すべて`ollama pull <名前>`で利用可。',
@@ -2308,7 +2308,7 @@ schema: {
           items: [
             '**消费级硬件综合最佳**：Qwen 3.6 27B（77.2% SWE-bench、Q4下可装入24GB）。均衡全能：qwen3:30b。',
             '**最多下载**：Llama 3.2 3B（教程向）和Llama系列。',
-            '**最强推理**：DeepSeek-R1（思维链）和gpt-oss:20b（推理可调、~o3-mini水平）。',
+            '**最强推理**：DeepSeek-R1（思维链）和gpt-oss:20b（推理可调、~o3-mini水平）。 (DeepSeek 此后发布了开源权重新一代模型 DeepSeek-V4——Flash/Pro;R1/V3 仍可在本地正常使用。)',
             '**最强编程**：Kimi K2.6（前沿MoE）、Qwen 3.6 27B（最优密度）、Devstral Small 24B（最优智能体）、qwen3-coder:30b（补全）。',
             '**小型/16GB最强**：gpt-oss:20b。**视觉/多模态最强**：Gemma 4（E4B及以上）。**长上下文（10M）/ 大型多模态最强**：Llama 4 Scout（~55GB）。',
             '2026年6月Ollama库：4,500+模型。全部通过`ollama pull <名称>`可用。',
@@ -2671,7 +2671,7 @@ schema: {
             '→gpt-oss:20b — 소형 최강 모델, 16GB에서 실행, ~o3-mini 수준, 조정 가능한 추론',
             '→qwen3:30b — 균형잡힌 범용 모델; 코드 완성에는 qwen3-coder:30b',
             '→Llama 4 Scout — 긴 컨텍스트(10M 토큰) + 멀티모달, Q4에서 ~55GB',
-            '→DeepSeek-R1 — 추론/수학 최강; 조정 가능한 추론에는 gpt-oss:20b',
+            '→DeepSeek-R1 — 추론/수학 최강; 조정 가능한 추론에는 gpt-oss:20b (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
           ],
           updatedDate: '2026-06-21',
         },
@@ -2982,7 +2982,7 @@ schema: {
             '→gpt-oss:20b — أفضل نموذج صغير، يعمل في 16 GB، بمستوى ~o3-mini، استدلال قابل للضبط',
             '→qwen3:30b — نموذج متوازن لكل الاستخدامات؛ وqwen3-coder:30b لإكمال الشيفرة',
             '→Llama 4 Scout — سياق طويل (10M توكن) + متعدد الوسائط، ~55 GB عند Q4',
-            '→DeepSeek-R1 — أفضل استدلال/رياضيات؛ وgpt-oss:20b للاستدلال القابل للضبط',
+            '→DeepSeek-R1 — أفضل استدلال/رياضيات؛ وgpt-oss:20b للاستدلال القابل للضبط (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
           ],
           updatedDate: '2026-06-21',
         },

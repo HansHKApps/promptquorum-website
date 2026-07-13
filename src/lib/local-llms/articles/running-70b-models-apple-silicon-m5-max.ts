@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Can I run 70B models on M5 Max 128GB?',
-        answer: 'Yes — the Apple M5 Max (64 GB) runs 70B models locally via Ollama in Q4 quantization. **DeepSeek-R1-Distill-Llama-70B** and **Llama 3.3 70B** are the best choices for this hardware, running at approximately 20–30+ tokens/second.',
+        answer: 'Yes — the Apple M5 Max (64 GB) runs 70B models locally via Ollama in Q4 quantization. **DeepSeek-R1-Distill-Llama-70B** and **Llama 3.3 70B** are the best choices for this hardware, running at approximately 20–30+ tokens/second. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
         bullets: [
           '70B Q4_K_M: 42 GB, 15–20 tok/s, good quality',
           '70B Q5_K_M: 49 GB, 12–16 tok/s, very good (recommended)',
@@ -645,7 +645,7 @@ def detect_recursion(threshold=900):
           { 'Modelo': 'Mixtral 8x22B (MoE)', 'Tamaño (Q4)': '88 GB', 'Ideal para': 'Razonamiento de alta calidad', 'tok/s en M5 Max': '18–22' },
           { 'Modelo': 'Cohere Command R+ 104B', 'Tamaño (Q4)': '73 GB', 'Ideal para': 'RAG, contexto 128K', 'tok/s en M5 Max': '8–12' },
         ],
-        note: 'Recomendaciones por caso de uso: Razonamiento general → Llama 3.3 70B Q5. Código → DeepSeek 67B. No inglés → Qwen3 72B. Preguntas sobre documentos → Command R+. Máxima velocidad → Mixtral 8x22B (MoE usa menos parámetros activos).',
+        note: 'Recomendaciones por caso de uso: Razonamiento general → Llama 3.3 70B Q5. Código → DeepSeek 67B. No inglés → Qwen3 72B. Preguntas sobre documentos → Command R+. Máxima velocidad → Mixtral 8x22B (MoE usa menos parámetros activos). (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
       },
       alternativesPull: {
         id: 'alternatives-pull',
@@ -1014,7 +1014,7 @@ def detect_recursion(threshold=900):
           { 'Modelo': 'Mixtral 8x22B (MoE)', 'Tamaño (Q4)': '88 GB', 'Ideal para': 'استدلال عالي الجودة', 'tok/s en M5 Max': '18–22' },
           { 'Modelo': 'Cohere Command R+ 104B', 'Tamaño (Q4)': '73 GB', 'Ideal para': 'RAG، سياق 128K', 'tok/s en M5 Max': '8–12' },
         ],
-        note: 'توصيات حسب حالة الاستخدام: استدلال عام ← Llama 3.3 70B Q5. كود ← DeepSeek 67B. غير الإنجليزية ← Qwen3 72B. أسئلة عن المستندات ← Command R+. أقصى سرعة ← Mixtral 8x22B (يستخدم MoE معاملات نشطة أقل).',
+        note: 'توصيات حسب حالة الاستخدام: استدلال عام ← Llama 3.3 70B Q5. كود ← DeepSeek 67B. غير الإنجليزية ← Qwen3 72B. أسئلة عن المستندات ← Command R+. أقصى سرعة ← Mixtral 8x22B (يستخدم MoE معاملات نشطة أقل). (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
       },
       alternativesPull: {
         id: 'alternatives-pull',
@@ -1248,7 +1248,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
           '[Melhores modelos LLM para Apple Silicon](/pt/local-llms/best-models-apple-silicon-2026) — Recomendações de modelos por configuração Mac',
           '[MLX vs Ollama vs llama.cpp no Mac](/pt/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — Comparação de velocidade de frameworks',
           '[Quantização de LLMs explicada](/pt/local-llms/llm-quantization-explained) — Análise profunda Q4/Q5/Q8/FP16',
-          '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 Distills classificados](/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Distill de raciocínio 70B para este hardware: benchmarks, configuração do Ollama e desempenho no M5 Max.',
+          '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 Distills classificados](/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026) — Distill de raciocínio 70B para este hardware: benchmarks, configuração do Ollama e desempenho no M5 Max. (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)',
           '[Guia de VRAM para DeepSeek-R1 Distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — VRAM exata por tamanho de distill (Q4_K_M): 70B → 42 GB — confirme que seu M5 Max é compatível.',
         ],
       },
@@ -1487,7 +1487,7 @@ def detect_recursion(threshold=900):
           { 'Modell': 'Mixtral 8x22B (MoE)', 'Größe (Q4)': '88 GB', 'Ideal für': 'Hochwertiges Schlussfolgern', 'tok/s auf M5 Max': '18–22' },
           { 'Modell': 'Cohere Command R+ 104B', 'Größe (Q4)': '73 GB', 'Ideal für': 'RAG, 128K Kontext', 'tok/s auf M5 Max': '8–12' },
         ],
-        note: 'Empfehlungen nach Anwendungsfall: Allgemeines Schlussfolgern → Llama 3.3 70B Q5. Code → DeepSeek 67B. Nicht-Englisch → Qwen3 72B. Dokument-Q&A → Command R+. Maximale Geschwindigkeit → Mixtral 8x22B (MoE verwendet weniger aktive Parameter).',
+        note: 'Empfehlungen nach Anwendungsfall: Allgemeines Schlussfolgern → Llama 3.3 70B Q5. Code → DeepSeek 67B. Nicht-Englisch → Qwen3 72B. Dokument-Q&A → Command R+. Maximale Geschwindigkeit → Mixtral 8x22B (MoE verwendet weniger aktive Parameter). (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
       },
       alternativesPull: {
         id: 'alternatives-pull',
@@ -1733,7 +1733,7 @@ for chunk in stream_generate(model, tokenizer, "Erkläre Quantencomputing", max_
         items: [
           'Llama 3.3 70B : Le modèle standard. Meilleure performance globale. Recommandé.',
           'Qwen3 72B : Légèrement plus rapide que Llama 70B, meilleur pour le code. Recommandé pour les programmeurs.',
-          'DeepSeek 67B : Bonne alternative, compétitif avec Llama. Recommandé si vous utilisez l\'API DeepSeek.',
+          'DeepSeek 67B : Bonne alternative, compétitif avec Llama. Recommandé si vous utilisez l\'API DeepSeek. (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
           'Mixtral 8x22B : Architecture MoE (Mixture of Experts). Plus rapide, mais plus grand (ca. 50 GB Q5). Utilisez si vous voulez parler plus vite.',
           'Llama 3.3 405B (Q3) : Modèles massifs. Seulement possible sur M5 Ultra 256GB. Attendez M5 Ultra si vous en avez besoin.',
         ],
@@ -2071,7 +2071,7 @@ def detect_recursion(threshold=900):
           { 'モデル': 'Mixtral 8x22B (MoE)', 'サイズ（Q4）': '88 GB', '最適な用途': '高品質な推論', 'M5 Max上のtok/s': '18〜22' },
           { 'モデル': 'Cohere Command R+ 104B', 'サイズ（Q4）': '73 GB', '最適な用途': 'RAG、128Kコンテキスト', 'M5 Max上のtok/s': '8〜12' },
         ],
-        note: 'ユースケース別推奨：汎用推論 → Llama 3.3 70B Q5。コード → DeepSeek 67B。英語以外 → Qwen3 72B。文書Q&A → Command R+。最大速度 → Mixtral 8x22B（MoEはアクティブパラメーター数が少ない）。',
+        note: 'ユースケース別推奨：汎用推論 → Llama 3.3 70B Q5。コード → DeepSeek 67B。英語以外 → Qwen3 72B。文書Q&A → Command R+。最大速度 → Mixtral 8x22B（MoEはアクティブパラメーター数が少ない）。 (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
       },
       alternativesPull: {
         id: 'alternatives-pull',
@@ -2445,7 +2445,7 @@ def detect_recursion(threshold=900):
           { '模型': 'Mixtral 8x22B (MoE)', '大小（Q4）': '88 GB', '最适合': '高质量推理', 'M5 Max上的tok/s': '18–22' },
           { '模型': 'Cohere Command R+ 104B', '大小（Q4）': '73 GB', '最适合': 'RAG、128K上下文', 'M5 Max上的tok/s': '8–12' },
         ],
-        note: '按用例推荐：通用推理 → Llama 3.3 70B Q5。代码 → DeepSeek 67B。非英语（含中文）→ Qwen3 72B。文档问答 → Command R+。最高速度 → Mixtral 8x22B（MoE使用的活跃参数更少）。',
+        note: '按用例推荐：通用推理 → Llama 3.3 70B Q5。代码 → DeepSeek 67B。非英语（含中文）→ Qwen3 72B。文档问答 → Command R+。最高速度 → Mixtral 8x22B（MoE使用的活跃参数更少）。 (DeepSeek 此后发布了开源权重新一代模型 DeepSeek-V4——Flash/Pro;R1/V3 仍可在本地正常使用。)',
       },
       alternativesPull: {
         id: 'alternatives-pull',
@@ -2775,7 +2775,7 @@ def detect_recursion(threshold=900):
           { '모델': 'Mixtral 8x22B (MoE)', '크기 (Q4)': '88 GB', '최적 용도': '고품질 추론', 'M5 Max tok/s': '18–22' },
           { '모델': 'Cohere Command R+ 104B', '크기 (Q4)': '73 GB', '최적 용도': 'RAG, 128K 컨텍스트', 'M5 Max tok/s': '8–12' },
         ],
-        note: '용도별 권장사항: 범용 추론 → Llama 3.3 70B Q5. 코드 → DeepSeek 67B. 비영어권 → Qwen3 72B. 문서 Q&A → Command R+. 최대 속도 → Mixtral 8x22B (MoE는 더 적은 활성 파라미터를 사용).',
+        note: '용도별 권장사항: 범용 추론 → Llama 3.3 70B Q5. 코드 → DeepSeek 67B. 비영어권 → Qwen3 72B. 문서 Q&A → Command R+. 최대 속도 → Mixtral 8x22B (MoE는 더 적은 활성 파라미터를 사용). (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
       },
       alternativesPull: {
         id: 'alternatives-pull',

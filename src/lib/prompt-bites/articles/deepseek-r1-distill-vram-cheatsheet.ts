@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM Cheatsheet 2026: Every Quant',
     metaDescription: 'Every DeepSeek-R1 distill (1.5B–70B) by quantization — exact VRAM, model file size, and minimum GPU. The bookmark-it reference table. Q4_K_M, Q8, FP16.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Local LLM users sizing a GPU for a DeepSeek-R1 distill across quantization levels',
     affiliateDisclosure: true,
@@ -93,6 +93,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: Don\'t Confuse Them',
         content: [
           '**DeepSeek-V3 is a chat model; DeepSeek-R1 (and these distills) are reasoning models.** This table is for the R1 reasoning family only. If you are looking for V3, it is a 671B MoE chat model that is also not consumer-runnable — see the [DeepSeek V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
         ],
       },
       faq: {
@@ -125,7 +126,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM-Tabelle 2026: Jede Quant',
     metaDescription: 'Jeder DeepSeek-R1 Distill (1.5B–70B) nach Quantisierung — exakter VRAM, Modell-Dateigröße und Mindest-GPU. Die Referenztabelle zum Merken. Q4_K_M, Q8, FP16.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Lokale-LLM-Nutzer, die eine GPU für einen DeepSeek-R1 Distill über mehrere Quantisierungsstufen hinweg dimensionieren',
     affiliateDisclosure: true,
@@ -207,6 +208,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs. R1: Nicht verwechseln',
         content: [
           '**DeepSeek-V3 ist ein Chat-Modell; DeepSeek-R1 (und diese Distills) sind Reasoning-Modelle.** Diese Tabelle gilt nur für die R1-Reasoning-Familie. Wenn Sie V3 suchen: Es ist ein 671B-MoE-Chat-Modell, das ebenfalls nicht auf Consumer-Hardware läuft — siehe den [DeepSeek V3 Hardware-Bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
         ],
       },
       faq: {
@@ -239,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM DeepSeek-R1 Distill 2026 : chaque quant',
     metaDescription: 'Chaque distillation DeepSeek-R1 (1.5B–70B) par quantification — VRAM exacte, taille du fichier modèle et GPU minimum. Le tableau de référence à garder. Q4_K_M, Q8, FP16.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs de LLM locaux dimensionnant un GPU pour une distillation DeepSeek-R1 selon les niveaux de quantification',
     affiliateDisclosure: true,
@@ -321,6 +323,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1 : ne les confondez pas',
         content: [
           '**DeepSeek-V3 est un modèle de chat ; DeepSeek-R1 (et ces distillations) sont des modèles de raisonnement.** Ce tableau concerne uniquement la famille de raisonnement R1. Si vous cherchez V3, c\'est un modèle de chat MoE 671B qui n\'est pas non plus exécutable par le grand public — voir le [bite matériel DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
         ],
       },
       faq: {
@@ -353,7 +356,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM早見表 2026：全量子化',
     metaDescription: 'DeepSeek-R1の全Distill（1.5B〜70B）を量子化別に — 正確なVRAM、モデルファイルサイズ、最小GPUを掲載。ブックマーク必須の参照表。Q4_K_M、Q8、FP16。',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: '量子化レベルを横断してDeepSeek-R1 Distill向けにGPUをサイジングするローカルLLMユーザー',
     affiliateDisclosure: true,
@@ -435,6 +438,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3とR1：混同しないでください',
         content: [
           '**DeepSeek-V3はチャットモデルで、DeepSeek-R1（およびこれらのDistill）は推論モデルです。** この表はR1推論ファミリー専用です。V3をお探しの場合、それは671B MoEチャットモデルで、これも一般消費者向けハードウェアでは動作しません — [DeepSeek V3ハードウェアbite](/prompt-bites/deepseek-v3-local-hardware-requirements)をご覧ください。',
+          '**更新:** DeepSeekはその後、新しいフラッグシップ世代としてDeepSeek-V4(FlashおよびPro)をリリースしました。オープンウェイトとしても提供されています。本記事で扱うR1の蒸留モデルは廃止されるものではなく、引き続きローカルで問題なく利用できます。最新のアーキテクチャを求める場合は、V4もあわせて検討する価値があります。',
         ],
       },
       faq: {
@@ -467,7 +471,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill 显存速查表 2026：全量化',
     metaDescription: '按量化等级列出每个 DeepSeek-R1 distill（1.5B–70B）——精确显存、模型文件大小和最低 GPU。值得收藏的参考表。Q4_K_M、Q8、FP16。',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: '需要为跨量化等级的 DeepSeek-R1 distill 选配 GPU 的本地 LLM 用户',
     affiliateDisclosure: true,
@@ -549,6 +553,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 与 R1：不要混淆',
         content: [
           '**DeepSeek-V3 是对话模型；DeepSeek-R1（以及这些 distill）是推理模型。** 此表仅针对 R1 推理系列。如果你要找的是 V3，它是一款 671B MoE 对话模型，同样无法在消费级硬件上运行——参见 [DeepSeek V3 硬件速览](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
+          '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
         ],
       },
       faq: {
@@ -581,7 +586,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM de DeepSeek-R1 Distill 2026: cada cuant.',
     metaDescription: 'Cada distill de DeepSeek-R1 (1.5B–70B) por cuantización: VRAM exacta, tamaño del archivo del modelo y GPU mínima. La tabla de referencia para guardar. Q4_K_M, Q8, FP16.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de LLM locales que dimensionan una GPU para un distill de DeepSeek-R1 según los niveles de cuantización',
     affiliateDisclosure: true,
@@ -663,6 +668,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: no los confundas',
         content: [
           '**DeepSeek-V3 es un modelo de chat; DeepSeek-R1 (y estos distills) son modelos de razonamiento.** Esta tabla es solo para la familia de razonamiento R1. Si buscas V3, es un modelo de chat MoE de 671B que tampoco puede ejecutarse en hardware de consumo; consulta el [resumen de hardware de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
         ],
       },
       faq: {
@@ -695,7 +701,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM do DeepSeek-R1 Distill 2026: cada quant.',
     metaDescription: 'Cada distill do DeepSeek-R1 (1.5B–70B) por quantização: VRAM exata, tamanho do arquivo do modelo e GPU mínima. A tabela de referência para salvar. Q4_K_M, Q8, FP16.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Usuários de LLMs locais dimensionando uma GPU para um distill do DeepSeek-R1 entre níveis de quantização',
     affiliateDisclosure: true,
@@ -777,6 +783,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: não confunda',
         content: [
           '**O DeepSeek-V3 é um modelo de chat; o DeepSeek-R1 (e estes distills) são modelos de raciocínio.** Esta tabela é só para a família de raciocínio R1. Se você procura o V3, ele é um modelo de chat MoE de 671B que também não roda em hardware de consumo — veja a [análise de hardware do DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
         ],
       },
       faq: {
@@ -809,7 +816,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'جدول ⁨VRAM⁩ لـ ⁨DeepSeek-R1 Distill 2026⁩',
     metaDescription: 'كل نموذج ⁨DeepSeek-R1 distill⁩ (من ⁨1.5B⁩ إلى ⁨70B⁩) حسب التكميم — ⁨VRAM⁩ الدقيق وحجم ملف النموذج وأدنى ⁨GPU⁩. جدول مرجعي يستحق الحفظ. ⁨Q4⁩_⁨K⁩_⁨M⁩ و⁨Q8⁩ و⁨FP16⁩.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو نماذج LLM المحلية الذين يحددون حجم GPU لنموذج DeepSeek-R1 distill عبر مستويات التكميم',
     affiliateDisclosure: true,
@@ -891,6 +898,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 مقابل R1: لا تخلط بينهما',
         content: [
           '**DeepSeek-V3 نموذج محادثة؛ أما DeepSeek-R1 (وهذه النماذج المقطّرة distill) فهي نماذج استدلال.** هذا الجدول مخصص لعائلة الاستدلال R1 فقط. إذا كنت تبحث عن V3، فهو نموذج محادثة MoE بحجم 671B لا يمكن تشغيله أيضًا على عتاد المستهلك — راجع [موجز عتاد DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
         ],
       },
       faq: {
@@ -923,7 +931,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM 치트시트 2026',
     metaDescription: '모든 DeepSeek-R1 distill(1.5B–70B)을 양자화별로 정리 — 정확한 VRAM, 모델 파일 크기, 최소 GPU. 북마크할 참조 표입니다. Q4_K_M, Q8, FP16.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: '양자화 수준 전반에 걸쳐 DeepSeek-R1 distill용 GPU를 산정하는 로컬 LLM 사용자',
     affiliateDisclosure: true,
@@ -1005,6 +1013,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: 혼동하지 마십시오',
         content: [
           '**DeepSeek-V3은 채팅 모델이고, DeepSeek-R1(및 이 distill들)은 추론 모델입니다.** 이 표는 R1 추론 계열 전용입니다. V3을 찾고 있다면, 그것은 671B MoE 채팅 모델로 역시 소비자용 하드웨어에서 구동할 수 없습니다 — [DeepSeek V3 하드웨어 요약](/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오.',
+          '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
         ],
       },
       faq: {

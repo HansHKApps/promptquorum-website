@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What are the current AI model knowledge cutoff dates?',
-        answer: 'Verified cutoffs: GPT-5.5 August 2025 (ChatGPT searches Bing by default; GPT-4o legacy Oct 2023); Claude Opus 4.8 January 2026 (reliable cutoff); Grok 4.3 November 2024 (searches X); Gemini 3.1 Pro January 2025 (native Google Search); DeepSeek-V3 July 2024; Gemma 3 27B August 2024; Phi-4 June 2024; Qwen2.5 December 2023. Several major models — including Mistral Large, Llama 4, and Qwen3 — have not publicly disclosed exact cutoff dates. Local LLMs have no web search and their cutoff is absolute.',
+        answer: 'Verified cutoffs: GPT-5.5 August 2025 (ChatGPT searches Bing by default; GPT-4o legacy Oct 2023); Claude Opus 4.8 January 2026 (reliable cutoff); Grok 4.3 November 2024 (searches X); Gemini 3.1 Pro January 2025 (native Google Search); DeepSeek-V3 July 2024; Gemma 3 27B August 2024; Phi-4 June 2024; Qwen2.5 December 2023. Several major models — including Mistral Large, Llama 4, and Qwen3 — have not publicly disclosed exact cutoff dates. Local LLMs have no web search and their cutoff is absolute. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
         bullets: [
           'GPT-5.5 (ChatGPT): Aug 2025 cutoff — partially offset by Bing search default',
           'Claude (Opus 4.8): Jan 2026 reliable cutoff — web search requires explicit tool activation',

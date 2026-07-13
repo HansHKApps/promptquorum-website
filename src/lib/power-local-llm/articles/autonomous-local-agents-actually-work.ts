@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm agent comparison',
     ],
     leadAnswerBlock:
-      '**In May 2026, two local agent stacks land real work without constant babysitting: Cline + Ollama and Continue.dev Agent mode. Both are scoped, well-maintained, and run a tool-calling model (Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B) inside a single editor with explicit approval gates. Three stacks fail in surprising ways — LangGraph + Ollama (orchestration is brittle on long horizons), OpenInterpreter (executes shell commands too eagerly to leave unattended), and MetaGPT local (multi-agent role-play loses the plot past two hand-offs). One stack was effectively unusable in our May 2026 evaluation: AutoGPT-local — dependencies conflicted with Python 3.11/Ollama 0.3.x, and the planning loop drifted into circular tool calls in every trial run. Check current project status before drawing permanent conclusions. The pattern is consistent: scoped, opinionated harnesses around one strong tool-calling model beat ambitious autonomous agents on every task we ran.**',
+      '**In May 2026, two local agent stacks land real work without constant babysitting: Cline + Ollama and Continue.dev Agent mode. Both are scoped, well-maintained, and run a tool-calling model (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) inside a single editor with explicit approval gates. Three stacks fail in surprising ways — LangGraph + Ollama (orchestration is brittle on long horizons), OpenInterpreter (executes shell commands too eagerly to leave unattended), and MetaGPT local (multi-agent role-play loses the plot past two hand-offs). One stack was effectively unusable in our May 2026 evaluation: AutoGPT-local — dependencies conflicted with Python 3.11/Ollama 0.3.x, and the planning loop drifted into circular tool calls in every trial run. Check current project status before drawing permanent conclusions. The pattern is consistent: scoped, opinionated harnesses around one strong tool-calling model beat ambitious autonomous agents on every task we ran.**',
     quickAnswerTop: {
       en: {
         question: 'Do autonomous local AI agents actually work in 2026?',
@@ -58,7 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Two stacks ship real work: Cline + Ollama and Continue.dev Agent. Both are scoped to a single IDE, run one tool-calling model, and require human approval per step.',
           'Three stacks fail in non-obvious ways: LangGraph + Ollama (brittle on long horizons), OpenInterpreter (too eager to execute shell), MetaGPT local (multi-agent role-play breaks down).',
           'AutoGPT-local was effectively unusable in our May 2026 evaluation (Python 3.11, Ollama 0.3.x, 5 task runs) — stalled project, dependency conflicts, planning loop drifted into circular calls in every run. Verify current project status before drawing conclusions.',
-          'Tool-call reliability comes from the model, not the harness. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, and Llama 3.3 70B work in any of the reliable stacks. Models under 7B fail in all of them.',
+          'Tool-call reliability comes from the model, not the harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, and Llama 3.3 70B work in any of the reliable stacks. Models under 7B fail in all of them.',
           'Supervision cost is the metric that matters. The "best" agent is the one whose approvals you actually read — not the one with the longest autonomous run.',
           'The 2027 outlook: longer-horizon planning will improve incrementally. Unsupervised autonomy on real tasks is not happening this year, regardless of what the demos show.',
         ],
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Two stacks land real work in May 2026:** Cline + Ollama (autonomous coding agent inside VS Code) and Continue.dev Agent mode. Both are scoped to one editor, one model, and one approval gate per step.',
           '**Three stacks fail in surprising ways:** LangGraph + Ollama orchestration is brittle past 4–5 step horizons, OpenInterpreter executes shell commands too eagerly to leave unattended, MetaGPT local multi-agent role-play breaks down past two hand-offs.',
           '**One stack is unusable as of May 2026 testing:** AutoGPT-local — dependencies did not resolve against Python 3.11/Ollama 0.3.x, the planning loop drifted into circular tool calls in all 5 evaluation runs, and no maintainer responded to open issues at time of testing. Check the GitHub repository for current activity before drawing permanent conclusions.',
-          '**Tool-call reliability is a property of the model, not the harness.** Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, and Llama 3.3 70B emit clean tool calls in every reliable stack. Models under 7B emit malformed calls regardless of which agent wraps them.',
+          '**Tool-call reliability is a property of the model, not the harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, and Llama 3.3 70B emit clean tool calls in every reliable stack. Models under 7B emit malformed calls regardless of which agent wraps them.',
           '**The "supervised assistant" model wins in 2026.** Agents that propose multi-step actions and stop for approval finish more tasks than agents that try to run unattended. This is a properties-of-2026-LLMs limit, not a UX preference.',
           '**Supervision cost is the metric that matters.** A 30-minute task that requires three approvals is shippable. A 2-hour task that requires twenty approvals is not — you are doing the work, the agent is just slowing it down.',
           '**Cost is real but small.** Local-only inference, no API spend, electricity is the only marginal cost. Token consumption per task is the constraint — agent loops burn 30K–80K tokens for a multi-step task, so 32K-context models hit the wall fast and 128K-context models are comfortable.',
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks tested:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (custom), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tasks tested:** topic research, multi-file refactor, email-draft triage, scrape-and-summarize, bug debugging.',
           '**Hardware:** Apple M5 Max 64 GB unified memory and 2× NVIDIA RTX 3090 24 GB box; both run Qwen3-Coder 30B Q4_K_M comfortably at 32K context.',
-          '**Models:** Qwen3-Coder 30B (primary), GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B (the four reliable tool-callers in May 2026).',
+          '**Models:** Qwen3-Coder 30B (primary), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (the four reliable tool-callers in May 2026).',
           '**Verdict shape:** 2 stacks reliable across all 5 tasks, 3 stacks reliable on 1–2 tasks each, 1 stack unusable.',
           '**Cost:** $0 in API fees. ~$0.10–$0.30 in electricity per multi-step task on a 350W desktop GPU rig (under $0.05 on a Mac).',
           '**Supervision pattern that works:** auto-approve read tools, manual approve every write/shell tool, review the audit log after long sessions.',
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The test held the model constant and varied only the agent harness.** Every stack received the same five tasks against the same backend (Ollama serving Qwen3-Coder 30B at Q4_K_M), so failures attribute to the harness, not the model.',
         items: [
-          '**Backend:** Ollama 0.5+ on macOS and Linux. Primary model Qwen3-Coder 30B Q4_K_M (32K context). Secondary models (GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B) used to verify tool-call failures were not a single-model artefact.',
+          '**Backend:** Ollama 0.5+ on macOS and Linux. Primary model Qwen3-Coder 30B Q4_K_M (32K context). Secondary models (GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B) used to verify tool-call failures were not a single-model artefact.',
           '**Hardware:** one Apple M5 Max 64 GB MacBook Pro and one Linux desktop with 2× RTX 3090 24 GB. Both sustain Qwen3-Coder 30B at usable speed (>15 tokens/s).',
           '**Tasks:** topic research (collect, deduplicate, summarize 8 sources on a niche subject), multi-file refactor (rename a service across 12 TypeScript files), email-draft triage (summarize and draft replies for a folder of 40 messages), scrape-and-summarize (read 5 URLs and produce a comparison brief), bug debugging (find why an existing test is flaky).',
           '**Run cadence:** each task ran 3 times per stack across the 30-day window, with a fresh prompt each time. Outcome graded as "complete unattended", "complete with supervision", "partial", or "stalled / failed".',
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Where it shines:** multi-file refactors (rename a service across 12 files in one task), exploratory bug debugging ("find why this test is flaky" — Cline reads adjacent test files, traces dependencies, proposes a hypothesis, edits, runs the test), and scoped research that produces a markdown deliverable inside the project.',
           '**Where it stumbles:** non-coding tasks that require external HTTP (no native browser). Email-draft triage works only if you wire in an MCP server or shell tools — and at that point you are configuring three things to do what a smaller, scoped tool would do directly.',
           '**Supervision cost:** ~5–12 approvals per task. Most are read tools (cheap, fast accept). The expensive ones are write_to_file and execute_command — set those to require manual approval and you will catch the rare bad call before it lands.',
-          '**Token cost:** high. Full file contents stream into the conversation as the agent reads them. A 12-file refactor on Qwen3-Coder 30B at 32K context burns through the window fast — switch to a 128K-context model (DeepSeek Coder V3, Llama 3.3 70B) for non-trivial work.',
+          '**Token cost:** high. Full file contents stream into the conversation as the agent reads them. A 12-file refactor on Qwen3-Coder 30B at 32K context burns through the window fast — switch to a 128K-context model (DeepSeek Coder V3, Llama 3.3 70B) for non-trivial work. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
           'For deeper Cline configuration including auto-approve allow-lists, see [Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Common Mistakes Picking and Running Local Agents',
         items: [
           '**Mistake 1: optimising for autonomy.** "How long can it run unattended" is the wrong metric. "How few approvals to land the task" is the right one. Picking a stack on autonomy benchmarks gets you AutoGPT; picking on supervision-cost gets you Cline.',
-          '**Mistake 2: small models for tool-call work.** Anything below 7B (and most 7B–13B general-purpose models without tool-call fine-tuning) emits malformed tool calls. Use Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, or Llama 3.3 70B and stop fighting the harness.',
+          '**Mistake 2: small models for tool-call work.** Anything below 7B (and most 7B–13B general-purpose models without tool-call fine-tuning) emits malformed tool calls. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, or Llama 3.3 70B and stop fighting the harness.',
           '**Mistake 3: 32K context for multi-file work.** Cline streams full file contents into the conversation; an 8-file task can blow through 32K tokens before reasoning. Use a 128K-context model (DeepSeek Coder V3, Llama 3.3 70B) for non-trivial multi-file tasks.',
           '**Mistake 4: auto-approve everything.** The "approve all" toggle is the on-ramp to "the agent deleted my files". Auto-approve read tools only; require manual approval for writes and shell.',
           '**Mistake 5: production database writes from an agent.** Run a read-only role by default. A separate writable role lives only for the duration of tasks that explicitly need it. The cost of one bad write is unbounded.',
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can agents handle multi-step tasks without breaking?',
-            a: 'Up to 5–8 steps reliably with a strong tool-calling model (Qwen3-Coder 30B, Gemma 4 27B, GLM-5.1 32B, Llama 3.3 70B). Beyond that, plan horizons drift — the agent re-reads files, re-runs the same searches, or proposes contradictory next steps. The right pattern is "model proposes a plan, human approves the plan, model executes one step at a time" — not autonomous 25-step execution.',
+            a: 'Up to 5–8 steps reliably with a strong tool-calling model (Qwen3-Coder 30B, Gemma 4 27B, GLM-4.7 32B, Llama 3.3 70B). Beyond that, plan horizons drift — the agent re-reads files, re-runs the same searches, or proposes contradictory next steps. The right pattern is "model proposes a plan, human approves the plan, model executes one step at a time" — not autonomous 25-step execution.',
           },
           {
             q: 'Why do agents fail on long-horizon tasks?',
@@ -443,7 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026](/power-local-llm/local-ai-agents-with-mcp-2026) — what enables agents under the hood; protocol layer for filesystem, database, browser, and GitHub tools.',
-          '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — the model layer; head-to-head benchmarks for the tool-callers recommended above (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — the model layer; head-to-head benchmarks for the tool-callers recommended above (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local) — adjacent harness comparison for coding-shaped work.',
           '[Local AI Agents Business Workflows EU Compliance](/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — applied context for businesses operating under GDPR / EU AI Act.',
           '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — model authority for the broader open-weights landscape.',
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparativa de agentes llm locales',
     ],
     leadAnswerBlock:
-      '**En mayo de 2026, dos stacks de agentes locales completan trabajo real sin supervisión constante: Cline + Ollama y Continue.dev en modo Agent. Ambos son acotados, bien mantenidos y ejecutan un modelo con tool-calling (Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B) dentro de un único editor con puertas de aprobación explícitas. Tres stacks fallan de formas sorprendentes: LangGraph + Ollama (la orquestación es frágil en horizontes largos), OpenInterpreter (ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido) y MetaGPT local (el juego de roles multiagente pierde el hilo tras dos traspasos). Un stack es prácticamente inutilizable: AutoGPT-local, el proyecto está estancado, las dependencias no coinciden con el Ollama moderno y el bucle de planificación deriva hacia llamadas circulares de herramientas en minutos. El patrón es consistente: los harnesses acotados y con criterio propio alrededor de un modelo fuerte con tool-calling superan a los agentes autónomos ambiciosos en cada tarea que ejecutamos.**',
+      '**En mayo de 2026, dos stacks de agentes locales completan trabajo real sin supervisión constante: Cline + Ollama y Continue.dev en modo Agent. Ambos son acotados, bien mantenidos y ejecutan un modelo con tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de un único editor con puertas de aprobación explícitas. Tres stacks fallan de formas sorprendentes: LangGraph + Ollama (la orquestación es frágil en horizontes largos), OpenInterpreter (ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido) y MetaGPT local (el juego de roles multiagente pierde el hilo tras dos traspasos). Un stack es prácticamente inutilizable: AutoGPT-local, el proyecto está estancado, las dependencias no coinciden con el Ollama moderno y el bucle de planificación deriva hacia llamadas circulares de herramientas en minutos. El patrón es consistente: los harnesses acotados y con criterio propio alrededor de un modelo fuerte con tool-calling superan a los agentes autónomos ambiciosos en cada tarea que ejecutamos.**',
     quickAnswerTop: {
       es: {
         question: '¿Los agentes de IA autónomos locales realmente funcionan en 2026?',
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dos stacks entregan trabajo real: Cline + Ollama y Continue.dev Agent. Ambos están acotados a un único IDE, ejecutan un modelo con tool-calling y requieren aprobación humana por paso.',
           'Tres stacks fallan de formas no evidentes: LangGraph + Ollama (frágil en horizontes largos), OpenInterpreter (demasiado ansioso por ejecutar shell), MetaGPT local (el juego de roles multiagente se rompe).',
           'AutoGPT-local resultó prácticamente inutilizable en nuestra evaluación de mayo de 2026 (Python 3.11, Ollama 0.3.x, 5 ejecuciones de tareas) — conflictos de dependencias, el bucle de planificación derivó hacia llamadas circulares en cada ejecución. Verifique el estado actual del proyecto antes de sacar conclusiones.',
-          'La fiabilidad de las llamadas a herramientas proviene del modelo, no del harness. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B y Llama 3.3 70B funcionan en cualquiera de los stacks fiables. Los modelos por debajo de 7B fallan en todos.',
+          'La fiabilidad de las llamadas a herramientas proviene del modelo, no del harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B y Llama 3.3 70B funcionan en cualquiera de los stacks fiables. Los modelos por debajo de 7B fallan en todos.',
           'El coste de supervisión es la métrica que importa. El "mejor" agente es aquel cuyas aprobaciones realmente lees, no el que tiene la ejecución autónoma más larga.',
           'Las perspectivas para 2027: la planificación a largo plazo mejorará de forma incremental. La autonomía sin supervisión en tareas reales no va a ocurrir este año, independientemente de lo que muestren los demos.',
         ],
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dos stacks entregan trabajo real en mayo de 2026:** Cline + Ollama (agente de codificación autónomo en VS Code) y Continue.dev en modo Agent. Ambos están acotados a un editor, un modelo y una puerta de aprobación por paso.',
           '**Tres stacks fallan de formas sorprendentes:** la orquestación de LangGraph + Ollama es frágil más allá de horizontes de 4–5 pasos, OpenInterpreter ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido, y el juego de roles multiagente de MetaGPT local se rompe tras dos traspasos.',
           '**Un stack resultó inutilizable en las pruebas de mayo de 2026:** AutoGPT-local — las dependencias no se resolvieron con Python 3.11/Ollama 0.3.x, el bucle de planificación derivó hacia llamadas circulares en las 5 ejecuciones de evaluación y ningún mantenedor respondió a los problemas abiertos en el momento de las pruebas. Consulte el repositorio de GitHub para ver la actividad actual antes de sacar conclusiones permanentes.',
-          '**La fiabilidad de las llamadas a herramientas es una propiedad del modelo, no del harness.** Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B y Llama 3.3 70B emiten llamadas a herramientas limpias en cada stack fiable. Los modelos por debajo de 7B emiten llamadas malformadas independientemente del agente que los envuelva.',
+          '**La fiabilidad de las llamadas a herramientas es una propiedad del modelo, no del harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B y Llama 3.3 70B emiten llamadas a herramientas limpias en cada stack fiable. Los modelos por debajo de 7B emiten llamadas malformadas independientemente del agente que los envuelva.',
           '**El modelo de "asistente supervisado" gana en 2026.** Los agentes que proponen acciones en múltiples pasos y se detienen para pedir aprobación completan más tareas que los agentes que intentan ejecutarse sin supervisión. Es un límite de las propiedades de los LLM de 2026, no una preferencia de UX.',
           '**El coste de supervisión es la métrica que importa.** Una tarea de 30 minutos que requiere tres aprobaciones es entregable. Una tarea de 2 horas que requiere veinte aprobaciones no lo es: tú estás haciendo el trabajo, el agente solo lo ralentiza.',
           '**El coste es real pero pequeño.** Inferencia solo local, sin gasto en API, la electricidad es el único coste marginal. El consumo de tokens por tarea es la restricción: los bucles de agentes consumen 30K–80K tokens en una tarea de varios pasos, por lo que los modelos con contexto de 32K llegan al límite rápido y los de 128K son cómodos.',
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks probados:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (personalizado), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tareas probadas:** investigación de temas, refactorización de múltiples archivos, triaje de borradores de correo, scrape-y-resumen, depuración de bugs.',
           '**Hardware:** Apple M5 Max 64 GB de memoria unificada y equipo con 2× NVIDIA RTX 3090 24 GB; ambos ejecutan Qwen3-Coder 30B Q4_K_M cómodamente con contexto de 32K.',
-          '**Modelos:** Qwen3-Coder 30B (principal), GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B (los cuatro tool-callers fiables en mayo de 2026).',
+          '**Modelos:** Qwen3-Coder 30B (principal), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (los cuatro tool-callers fiables en mayo de 2026).',
           '**Forma del veredicto:** 2 stacks fiables en las 5 tareas, 3 stacks fiables en 1–2 tareas cada uno, 1 stack inutilizable.',
           '**Coste:** 0 € en tarifas de API. ~0,10–0,30 € en electricidad por tarea de varios pasos en un equipo de escritorio con GPU de 350W (menos de 0,05 € en un Mac).',
           '**Patrón de supervisión que funciona:** aprobar automáticamente las herramientas de lectura, aprobar manualmente cada herramienta de escritura/shell, revisar el registro de auditoría tras sesiones largas.',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La prueba mantuvo el modelo constante y solo varió el harness del agente.** Cada stack recibió las mismas cinco tareas contra el mismo backend (Ollama sirviendo Qwen3-Coder 30B en Q4_K_M), por lo que los fallos se atribuyen al harness, no al modelo.',
         items: [
-          '**Backend:** Ollama 0.5+ en macOS y Linux. Modelo principal Qwen3-Coder 30B Q4_K_M (contexto de 32K). Modelos secundarios (GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B) usados para verificar que los fallos en las llamadas a herramientas no eran un artefacto de un único modelo.',
+          '**Backend:** Ollama 0.5+ en macOS y Linux. Modelo principal Qwen3-Coder 30B Q4_K_M (contexto de 32K). Modelos secundarios (GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B) usados para verificar que los fallos en las llamadas a herramientas no eran un artefacto de un único modelo.',
           '**Hardware:** un MacBook Pro Apple M5 Max 64 GB y un escritorio Linux con 2× RTX 3090 24 GB. Ambos mantienen Qwen3-Coder 30B a una velocidad usable (>15 tokens/s).',
           '**Tareas:** investigación de temas (recopilar, deduplicar y resumir 8 fuentes sobre un tema de nicho), refactorización de múltiples archivos (renombrar un servicio en 12 archivos TypeScript), triaje de borradores de correo (resumir y redactar respuestas para una carpeta de 40 mensajes), scrape-y-resumen (leer 5 URLs y producir un resumen comparativo), depuración de bugs (encontrar por qué un test existente es inestable).',
           '**Cadencia de ejecución:** cada tarea se ejecutó 3 veces por stack durante el período de 30 días, con un prompt nuevo cada vez. El resultado se calificó como "completo sin supervisión", "completo con supervisión", "parcial" o "bloqueado / fallido".',
@@ -648,7 +648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Donde destaca:** refactorizaciones de múltiples archivos (renombrar un servicio en 12 archivos en una sola tarea), depuración exploratoria de bugs ("encuentra por qué este test es inestable": Cline lee archivos de test adyacentes, rastrea dependencias, propone una hipótesis, edita, ejecuta el test) e investigación acotada que produce un entregable en markdown dentro del proyecto.',
           '**Donde tropieza:** tareas que no son de codificación y que requieren HTTP externo (sin navegador nativo). El triaje de borradores de correo solo funciona si conectas un servidor MCP o herramientas de shell, y en ese punto estás configurando tres cosas para hacer lo que haría directamente una herramienta más pequeña y acotada.',
           '**Coste de supervisión:** ~5–12 aprobaciones por tarea. La mayoría son herramientas de lectura (baratas, aceptación rápida). Las costosas son write_to_file y execute_command: configúralas para requerir aprobación manual y capturarás la rara llamada errónea antes de que aterrice.',
-          '**Coste de tokens:** alto. Los contenidos completos de los archivos se transmiten a la conversación mientras el agente los lee. Una refactorización de 12 archivos con Qwen3-Coder 30B en contexto de 32K agota la ventana rápido: cambia a un modelo con contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para trabajo no trivial.',
+          '**Coste de tokens:** alto. Los contenidos completos de los archivos se transmiten a la conversación mientras el agente los lee. Una refactorización de 12 archivos con Qwen3-Coder 30B en contexto de 32K agota la ventana rápido: cambia a un modelo con contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para trabajo no trivial. (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
           'Para una configuración más detallada de Cline, incluidas las listas de aprobación automática, consulta [Continue.dev vs Cline vs Aider: mejor agente de codificación local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Errores comunes al elegir y ejecutar agentes locales',
         items: [
           '**Error 1: optimizar para la autonomía.** "¿Cuánto tiempo puede ejecutarse sin supervisión?" es la métrica incorrecta. "¿Cuántas aprobaciones para completar la tarea?" es la correcta. Elegir un stack según benchmarks de autonomía te da AutoGPT; elegir según el coste de supervisión te da Cline.',
-          '**Error 2: modelos pequeños para trabajo de tool-calling.** Cualquier cosa por debajo de 7B (y la mayoría de los modelos de propósito general de 7B–13B sin fine-tuning de tool-calling) emite llamadas a herramientas malformadas. Usa Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B o Llama 3.3 70B y deja de pelear con el harness.',
+          '**Error 2: modelos pequeños para trabajo de tool-calling.** Cualquier cosa por debajo de 7B (y la mayoría de los modelos de propósito general de 7B–13B sin fine-tuning de tool-calling) emite llamadas a herramientas malformadas. Usa Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B o Llama 3.3 70B y deja de pelear con el harness.',
           '**Error 3: contexto de 32K para trabajo de múltiples archivos.** Cline transmite el contenido completo de los archivos a la conversación; una tarea de 8 archivos puede agotar los 32K tokens antes de razonar. Usa un modelo con contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para tareas de múltiples archivos no triviales.',
           '**Error 4: aprobar todo automáticamente.** El interruptor de "aprobar todo" es la rampa de entrada a "el agente borró mis archivos". Aprueba automáticamente solo las herramientas de lectura; exige aprobación manual para escrituras y shell.',
           '**Error 5: escrituras en bases de datos de producción desde un agente.** Ejecuta un rol de solo lectura por defecto. Un rol de escritura separado existe solo durante la duración de las tareas que lo requieran explícitamente. El coste de una escritura errónea es ilimitado.',
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Pueden los agentes manejar tareas de múltiples pasos sin romperse?',
-            a: 'Hasta 5–8 pasos de forma fiable con un modelo fuerte de tool-calling (Qwen3-Coder 30B, Gemma 4 27B, GLM-5.1 32B, Llama 3.3 70B). Más allá, los horizontes de plan derivan: el agente relee archivos, vuelve a ejecutar las mismas búsquedas o propone pasos siguientes contradictorios. El patrón correcto es "el modelo propone un plan, el humano aprueba el plan, el modelo ejecuta un paso a la vez", no una ejecución autónoma de 25 pasos.',
+            a: 'Hasta 5–8 pasos de forma fiable con un modelo fuerte de tool-calling (Qwen3-Coder 30B, Gemma 4 27B, GLM-4.7 32B, Llama 3.3 70B). Más allá, los horizontes de plan derivan: el agente relee archivos, vuelve a ejecutar las mismas búsquedas o propone pasos siguientes contradictorios. El patrón correcto es "el modelo propone un plan, el humano aprueba el plan, el modelo ejecuta un paso a la vez", no una ejecución autónoma de 25 pasos.',
           },
           {
             q: '¿Por qué los agentes fallan en tareas de horizonte largo?',
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Conectar Ollama a bases de datos y APIs con MCP: configuración de agentes locales 2026](/es/power-local-llm/local-ai-agents-with-mcp-2026) — lo que habilita a los agentes bajo el capó; capa de protocolo para herramientas de sistema de archivos, base de datos, navegador y GitHub.',
-          '[Mejores modelos locales para tool calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — la capa del modelo; benchmarks cara a cara de los tool-callers recomendados (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Mejores modelos locales para tool calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — la capa del modelo; benchmarks cara a cara de los tool-callers recomendados (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: mejor agente de codificación local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparativa de harnesses adyacentes para trabajo de tipo codificación.',
           '[Agentes de IA locales para flujos de trabajo empresariales y cumplimiento en la UE](/es/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — contexto aplicado para empresas que operan bajo GDPR / EU AI Act.',
           '[Mejores LLM locales en 2026](/es/local-llms/best-local-llms-2026) — referencia de modelos para el panorama más amplio de pesos abiertos.',
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparaison agents llm locaux',
     ],
     leadAnswerBlock:
-      '**En mai 2026, deux stacks d\'agents locaux accomplissent du travail réel sans surveillance constante : Cline + Ollama et Continue.dev Agent mode. Les deux sont limités, bien maintenus, et exécutent un modèle de tool-calling (Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B) à l\'intérieur d\'un seul éditeur avec des portes d\'approbation explicites. Trois stacks échouent de façon surprenante — LangGraph + Ollama (l\'orchestration est fragile sur les longs horizons), OpenInterpreter (exécute les commandes shell trop facilement pour être laissé sans surveillance), et MetaGPT local (le jeu de rôles multi-agents perd le fil après deux échanges). Un stack est pratiquement inutilisable : AutoGPT-local — le projet a stagné, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes. Le schéma est cohérent : les harnesses limités et opinionnés autour d\'un modèle de tool-calling puissant battent les agents autonomes ambitieux sur chaque tâche que nous avons testée.**',
+      '**En mai 2026, deux stacks d\'agents locaux accomplissent du travail réel sans surveillance constante : Cline + Ollama et Continue.dev Agent mode. Les deux sont limités, bien maintenus, et exécutent un modèle de tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) à l\'intérieur d\'un seul éditeur avec des portes d\'approbation explicites. Trois stacks échouent de façon surprenante — LangGraph + Ollama (l\'orchestration est fragile sur les longs horizons), OpenInterpreter (exécute les commandes shell trop facilement pour être laissé sans surveillance), et MetaGPT local (le jeu de rôles multi-agents perd le fil après deux échanges). Un stack est pratiquement inutilisable : AutoGPT-local — le projet a stagné, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes. Le schéma est cohérent : les harnesses limités et opinionnés autour d\'un modèle de tool-calling puissant battent les agents autonomes ambitieux sur chaque tâche que nous avons testée.**',
     quickAnswerTop: {
       fr: {
         question: 'Les agents IA autonomes locaux fonctionnent-ils réellement en 2026 ?',
@@ -963,7 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Deux stacks livrent du travail réel : Cline + Ollama et Continue.dev Agent. Les deux sont limités à un seul IDE, exécutent un modèle de tool-calling, et nécessitent une approbation humaine par étape.',
           'Trois stacks échouent de façon non-évidente : LangGraph + Ollama (fragile sur les longs horizons), OpenInterpreter (trop pressé d\'exécuter le shell), MetaGPT local (le jeu de rôles multi-agents s\'effondre).',
           'AutoGPT-local est pratiquement inutilisable en mai 2026 — projet stagnant, dépendances cassées, la boucle de planification dévie en quelques minutes.',
-          'La fiabilité des appels d\'outils provient du modèle, pas du harness. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, et Llama 3.3 70B fonctionnent dans n\'importe quel stack fiable. Les modèles sous 7B échouent dans tous.',
+          'La fiabilité des appels d\'outils provient du modèle, pas du harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B fonctionnent dans n\'importe quel stack fiable. Les modèles sous 7B échouent dans tous.',
           'Le coût de supervision est la métrique qui compte. Le « meilleur » agent est celui dont vous lisez réellement les approbations — pas celui avec la plus longue exécution autonome.',
           'Les perspectives pour 2027 : la planification à long horizon s\'améliorera graduellement. L\'autonomie sans supervision sur les tâches réelles ne se produit pas cette année, indépendamment de ce que les démos montrent.',
         ],
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Deux stacks livrent du travail réel en mai 2026 :** Cline + Ollama (agent de codage autonome dans VS Code) et Continue.dev Agent mode. Les deux sont limités à un éditeur, un modèle, et une porte d\'approbation par étape.',
           '**Trois stacks échouent de façon surprenante :** LangGraph + Ollama, l\'orchestration est fragile au-delà de 4–5 étapes, OpenInterpreter exécute les commandes shell trop facilement pour être laissé sans surveillance, MetaGPT local, le jeu de rôles multi-agents s\'effondre après deux échanges.',
           '**Un stack est inutilisable :** AutoGPT-local est effectivement abandonné — les dépendances ne correspondent pas à Ollama moderne, la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes, et il n\'y a pas de mainteneur répondant aux problèmes.',
-          '**La fiabilité des appels d\'outils est une propriété du modèle, pas du harness.** Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, et Llama 3.3 70B émettent des appels d\'outils propres dans chaque stack fiable. Les modèles sous 7B émettent des appels malformés indépendamment du harness qui les enveloppe.',
+          '**La fiabilité des appels d\'outils est une propriété du modèle, pas du harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B émettent des appels d\'outils propres dans chaque stack fiable. Les modèles sous 7B émettent des appels malformés indépendamment du harness qui les enveloppe.',
           '**Le modèle « assistant supervisé » gagne en 2026.** Les agents qui proposent des actions multi-étapes et s\'arrêtent pour approbation terminent plus de tâches que les agents qui essaient de s\'exécuter sans surveillance. C\'est une limite des propriétés des LLM de 2026, pas une préférence UX.',
           '**Le coût de supervision est la métrique qui compte.** Une tâche de 30 minutes qui nécessite trois approbations est livrable. Une tâche de 2 heures qui nécessite vingt approbations ne l\'est pas — vous faites le travail, l\'agent le ralentit juste.',
           '**Le coût est réel mais petit.** L\'inférence locale uniquement, pas de dépenses API, l\'électricité est le seul coût marginal. La consommation de tokens par tâche est la contrainte — les boucles d\'agents consomment 30K–80K tokens pour une tâche multi-étapes, donc les modèles 32K-context heurtent le mur rapidement et les modèles 128K-context sont confortables.',
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks testés :** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (personnalisé), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tâches testées :** recherche de sujets, refonte multi-fichiers, triage de brouillons d\'e-mails, scrape-et-résumé, débogage de bugs.',
           '**Matériel :** Apple M5 Max 64 GB mémoire unifiée et boîtier 2× NVIDIA RTX 3090 24 GB ; les deux exécutent Qwen3-Coder 30B Q4_K_M confortablement à 32K context.',
-          '**Modèles :** Qwen3-Coder 30B (primaire), GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B (les quatre outils de tool-calling fiables en mai 2026).',
+          '**Modèles :** Qwen3-Coder 30B (primaire), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (les quatre outils de tool-calling fiables en mai 2026).',
           '**Forme du verdict :** 2 stacks fiables sur les 5 tâches, 3 stacks fiables sur 1–2 tâches chacun, 1 stack inutilisable.',
           '**Coût :** 0 € en frais API. ~0,10–0,30 € en électricité par tâche multi-étapes sur un rig GPU de bureau 350W (moins de 0,05 € sur un Mac).',
           '**Schéma de supervision qui fonctionne :** approbation automatique des outils de lecture, approbation manuelle de chaque outil d\'écriture/shell, examen du journal d\'audit après les sessions longues.',
@@ -1026,7 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Le test a maintenu le modèle constant et n\'a varié que le harness d\'agent.** Chaque stack a reçu les mêmes cinq tâches contre le même backend (Ollama servant Qwen3-Coder 30B à Q4_K_M), donc les échecs s\'attribuent au harness, pas au modèle.',
         items: [
-          '**Backend :** Ollama 0.5+ sur macOS et Linux. Modèle primaire Qwen3-Coder 30B Q4_K_M (32K context). Modèles secondaires (GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B) utilisés pour vérifier que les échecs de tool-call n\'étaient pas un artefact d\'un seul modèle.',
+          '**Backend :** Ollama 0.5+ sur macOS et Linux. Modèle primaire Qwen3-Coder 30B Q4_K_M (32K context). Modèles secondaires (GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B) utilisés pour vérifier que les échecs de tool-call n\'étaient pas un artefact d\'un seul modèle.',
           '**Matériel :** un MacBook Pro Apple M5 Max 64 GB et un ordinateur de bureau Linux avec 2× RTX 3090 24 GB. Les deux soutiennent Qwen3-Coder 30B à une vitesse utilisable (>15 tokens/s).',
           '**Tâches :** recherche de sujets (collecter, dédupliquer, résumer 8 sources sur un sujet de niche), refonte multi-fichiers (renommer un service sur 12 fichiers TypeScript), triage de brouillons d\'e-mails (résumer et rédiger des réponses pour un dossier de 40 messages), scrape-et-résumé (lire 5 URL et produire un résumé comparatif), débogage de bugs (découvrir pourquoi un test existant est instable).',
           '**Cadence de test :** chaque tâche s\'est exécutée 3 fois par stack sur la fenêtre de 30 jours, avec un nouveau prompt chaque fois. Le résultat évalué comme « complet sans surveillance », « complet avec supervision », « partiel », ou « bloqué / échoué ».',
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Où ça brille :** refontes multi-fichiers (renommer un service sur 12 fichiers en une tâche), débogage exploratoire de bugs (« découvrir pourquoi ce test est instable » — Cline lit les fichiers de test adjacents, retrace les dépendances, propose une hypothèse, édite, exécute le test), et recherche limitée qui produit un livrable markdown à l\'intérieur du projet.',
           '**Où ça trébuche :** tâches non-codage qui nécessitent HTTP externe (pas de navigateur natif). Le triage de brouillons d\'e-mails fonctionne seulement si vous connectez un serveur MCP ou des outils shell — et à ce moment-là vous configurez trois choses pour faire ce qu\'un outil plus petit et limité ferait directement.',
           '**Coût de supervision :** ~5–12 approbations par tâche. La plupart sont des outils de lecture (bon marché, acceptation rapide). Les coûteux sont write_to_file et execute_command — réglez-les pour exiger une approbation manuelle et vous attraperez l\'appel rare mauvais avant qu\'il se produise.',
-          '**Coût des tokens :** élevé. Les contenus de fichier complets entrent dans la conversation alors que l\'agent les lit. Une refonte de 12 fichiers sur Qwen3-Coder 30B à 32K context épuise la fenêtre rapidement — basculez vers un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour le travail non-trivial.',
+          '**Coût des tokens :** élevé. Les contenus de fichier complets entrent dans la conversation alors que l\'agent les lit. Une refonte de 12 fichiers sur Qwen3-Coder 30B à 32K context épuise la fenêtre rapidement — basculez vers un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour le travail non-trivial. (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
           'Pour la configuration Cline plus approfondie, y compris les listes d\'approbation automatique, voir [Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
@@ -1276,7 +1276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erreurs courantes à choisir et exécuter des agents locaux',
         items: [
           '**Erreur 1 : optimiser pour l\'autonomie.** « Combien de temps peut-il s\'exécuter sans surveillance » est la mauvaise métrique. « Combien d\'approbations pour atterrir la tâche » est la bonne. Choisir un stack sur les benchmarks d\'autonomie vous obtient AutoGPT ; choisir sur le coût de supervision vous obtient Cline.',
-          '**Erreur 2 : petits modèles pour le travail des appels d\'outils.** N\'importe quoi sous 7B (et la plupart des modèles de 7B–13B de but général sans fine-tuning des appels d\'outils) émet des appels d\'outils malformés. Utilisez Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, ou Llama 3.3 70B et arrêtez de combattre le harness.',
+          '**Erreur 2 : petits modèles pour le travail des appels d\'outils.** N\'importe quoi sous 7B (et la plupart des modèles de 7B–13B de but général sans fine-tuning des appels d\'outils) émet des appels d\'outils malformés. Utilisez Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, ou Llama 3.3 70B et arrêtez de combattre le harness.',
           '**Erreur 3 : context 32K pour le travail multi-fichiers.** Cline diffuse les contenus de fichier complets dans la conversation ; une tâche de 8 fichiers peut faire exploser les tokens 32K avant le raisonnement. Utilisez un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour les tâches non-triviales multi-fichiers.',
           '**Erreur 4 : auto-approuver tout.** Le toggle « approuver tout » est la rampe d\'accès à « l\'agent a supprimé mes fichiers ». Auto-approuvez seulement les outils de lecture ; exigez une approbation manuelle pour les écritures et le shell.',
           '**Erreur 5 : écritures de base de données de production d\'un agent.** Exécutez un rôle de lecture seule par défaut. Un rôle inscriptible séparé existe seulement pour la durée des tâches qui l\'exigent explicitement. Le coût d\'une mauvaise écriture est non borné.',
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Les agents peuvent-ils gérer les tâches multi-étapes sans se casser ?',
-            a: 'Jusqu\'à 5–8 étapes de manière fiable avec un modèle de tool-calling puissant (Qwen3-Coder 30B, Gemma 4 27B, GLM-5.1 32B, Llama 3.3 70B). Au-delà, les horizons du plan dérivent — l\'agent relit les fichiers, réexécute les mêmes recherches, ou propose les prochaines étapes contradictoires. Le bon schéma est « le modèle propose un plan, l\'humain approuve le plan, le modèle exécute une étape à la fois » — pas d\'exécution autonome de 25 étapes.',
+            a: 'Jusqu\'à 5–8 étapes de manière fiable avec un modèle de tool-calling puissant (Qwen3-Coder 30B, Gemma 4 27B, GLM-4.7 32B, Llama 3.3 70B). Au-delà, les horizons du plan dérivent — l\'agent relit les fichiers, réexécute les mêmes recherches, ou propose les prochaines étapes contradictoires. Le bon schéma est « le modèle propose un plan, l\'humain approuve le plan, le modèle exécute une étape à la fois » — pas d\'exécution autonome de 25 étapes.',
           },
           {
             q: 'Pourquoi les agents échouent-ils sur les tâches d\'horizons longs ?',
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Connecter Ollama aux bases de données et API avec MCP : Configuration locale des agents 2026](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — ce qui active les agents sous le capot ; couche de protocole pour les outils système de fichiers, base de données, navigateur, et GitHub.',
-          '[Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — la couche modèle ; benchmarks tête-à-tête pour les outils de tool-calling recommandés ci-dessus (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — la couche modèle ; benchmarks tête-à-tête pour les outils de tool-calling recommandés ci-dessus (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparaison de harness adjacent pour le travail de type codage.',
           '[Agents IA locaux Workflows professionnels Conformité EU](/fr/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — contexte appliqué pour les entreprises opérant sous GDPR / EU AI Act.',
           '[Meilleurs LLMs locaux en 2026](/fr/local-llms/best-local-llms-2026) — autorité modèle pour le paysage des poids ouverts plus large.',
@@ -1375,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -1793,7 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -1817,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale llm agent vergleich',
     ],
     leadAnswerBlock:
-      '**Im Mai 2026 landen zwei lokale Agent-Stacks echte Arbeit ohne ständiges Babysitting: Cline + Ollama und Continue.dev Agent mode. Beide sind scoped, gut gewartet und führen ein Tool-Calling-Modell (Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B) in einem einzelnen Editor mit expliziten Approval Gates aus. Drei Stacks fehlschlagen auf überraschende Weise — LangGraph + Ollama (Orchestrierung ist zerbrechlich über lange Horizonte), OpenInterpreter (führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden), und MetaGPT lokal (Multi-Agent-Rollenspiel verliert den Plot nach zwei Hand-offs). Ein Stack ist praktisch unbrauchbar: AutoGPT-local — das Projekt ist stagniert, Abhängigkeiten passen nicht zu modernem Ollama, und die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten. Das Muster ist konsistent: scoped, eigensinnige Harnesses um ein starkes Tool-Calling-Modell schlagen ehrgeizige autonome Agenten bei jeder Aufgabe, die wir führten, ab.**',
+      '**Im Mai 2026 landen zwei lokale Agent-Stacks echte Arbeit ohne ständiges Babysitting: Cline + Ollama und Continue.dev Agent mode. Beide sind scoped, gut gewartet und führen ein Tool-Calling-Modell (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) in einem einzelnen Editor mit expliziten Approval Gates aus. Drei Stacks fehlschlagen auf überraschende Weise — LangGraph + Ollama (Orchestrierung ist zerbrechlich über lange Horizonte), OpenInterpreter (führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden), und MetaGPT lokal (Multi-Agent-Rollenspiel verliert den Plot nach zwei Hand-offs). Ein Stack ist praktisch unbrauchbar: AutoGPT-local — das Projekt ist stagniert, Abhängigkeiten passen nicht zu modernem Ollama, und die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten. Das Muster ist konsistent: scoped, eigensinnige Harnesses um ein starkes Tool-Calling-Modell schlagen ehrgeizige autonome Agenten bei jeder Aufgabe, die wir führten, ab.**',
     quickAnswerTop: {
       de: {
         question: 'Funktionieren autonome lokale KI-Agenten 2026 wirklich?',
@@ -1827,7 +1827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zwei Stacks liefern echte Arbeit: Cline + Ollama und Continue.dev Agent. Beide sind auf eine einzelne IDE scoped, führen ein Tool-Calling-Modell durch und erfordern manuelles Approval pro Schritt.',
           'Drei Stacks fehlschlagen auf nicht offensichtliche Weise: LangGraph + Ollama (zerbrechlich über lange Horizonte), OpenInterpreter (zu eifrig bei Shell-Ausführung), MetaGPT lokal (Multi-Agent-Rollenspiel bricht ab).',
           'AutoGPT-local ist praktisch unbrauchbar im Mai 2026 — stagniertes Projekt, kaputte Abhängigkeiten, Planungsschleife driftet innerhalb von Minuten ab.',
-          'Tool-Call-Zuverlässigkeit kommt vom Modell, nicht vom Harness. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B und Llama 3.3 70B funktionieren in jedem der zuverlässigen Stacks. Modelle unter 7B fehlschlagen in allen.',
+          'Tool-Call-Zuverlässigkeit kommt vom Modell, nicht vom Harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B funktionieren in jedem der zuverlässigen Stacks. Modelle unter 7B fehlschlagen in allen.',
           'Überwachungskosten sind die Metrik, die zählt. Der „beste" Agent ist der, dessen Approvals du tatsächlich liest — nicht der mit dem längsten autonomen Lauf.',
           'Der Outlook für 2027: Planung über längere Horizonte wird schrittweise verbessern. Unbeaufsichtigte Autonomie bei echten Aufgaben passiert nicht dieses Jahr, unabhängig davon, was die Demos zeigen.',
         ],
@@ -1865,7 +1865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Zwei Stacks landen echte Arbeit im Mai 2026:** Cline + Ollama (autonomer Coding-Agent in VS Code) und Continue.dev Agent mode. Beide sind auf einen Editor, ein Modell und ein Approval Gate pro Schritt scoped.',
           '**Drei Stacks fehlschlagen auf überraschende Weise:** LangGraph + Ollama-Orchestrierung ist über 4–5-Schritt-Horizonte zerbrechlich, OpenInterpreter führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden, MetaGPT lokal Multi-Agent-Rollenspiel bricht nach zwei Hand-offs ab.',
           '**Ein Stack ist unbrauchbar:** AutoGPT-local ist praktisch aufgegeben — Abhängigkeiten passen nicht zu modernem Ollama, die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten ab, und es gibt keinen Maintainer, der auf Probleme antwortet.',
-          '**Tool-Call-Zuverlässigkeit ist eine Eigenschaft des Modells, nicht des Harness.** Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B und Llama 3.3 70B geben saubere Tool Calls in jedem zuverlässigen Stack aus. Modelle unter 7B geben malformed calls aus, egal welcher Agent sie umhüllt.',
+          '**Tool-Call-Zuverlässigkeit ist eine Eigenschaft des Modells, nicht des Harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B geben saubere Tool Calls in jedem zuverlässigen Stack aus. Modelle unter 7B geben malformed calls aus, egal welcher Agent sie umhüllt.',
           '**Das „beaufsichtigte Assistenten"-Modell gewinnt 2026.** Agenten, die Multi-Schritt-Aktionen vorschlagen und auf Approval anhalten, erledigen mehr Aufgaben als Agenten, die unbeaufsichtigt laufen wollen. Das ist eine Eigenschaft von 2026-LLMs, nicht eine UX-Präferenz.',
           '**Überwachungskosten sind die Metrik, die zählt.** Eine 30-Minuten-Aufgabe, die drei Approvals erfordert, ist lieferbar. Eine 2-Stunden-Aufgabe, die zwanzig Approvals erfordert, ist nicht — du machst die Arbeit, der Agent verlangsamt sie nur.',
           '**Kosten sind real, aber klein.** Nur lokale Inferenz, kein API-Ausgaben, Elektrizität ist der einzige Grenzkosten. Token-Verbrauch pro Aufgabe ist die Einschränkung — Agent-Schleifen verbrennen 30K–80K Token für eine Multi-Schritt-Aufgabe, also 32K-Context-Modelle treffen die Wand schnell und 128K-Context-Modelle sind komfortabel.',
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Getestete Stacks:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (custom), AutoGPT-local, OpenInterpreter, MetaGPT lokal.',
           '**Getestete Aufgaben:** Themenrecherche, Multi-Datei-Umstrukturierung, E-Mail-Draft-Triage, Scrape-and-Summarize, Bug-Debugging.',
           '**Hardware:** Apple M5 Max 64 GB unified memory und 2× NVIDIA RTX 3090 24 GB box; beide führen Qwen3-Coder 30B Q4_K_M komfortabel bei 32K context durch.',
-          '**Modelle:** Qwen3-Coder 30B (Primär), GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B (die vier zuverlässigen Tool-Caller im Mai 2026).',
+          '**Modelle:** Qwen3-Coder 30B (Primär), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (die vier zuverlässigen Tool-Caller im Mai 2026).',
           '**Verdikt-Form:** 2 Stacks zuverlässig über alle 5 Aufgaben, 3 Stacks zuverlässig bei 1–2 Aufgaben jeweils, 1 Stack unbrauchbar.',
           '**Kosten:** 0 $ in API-Gebühren. ~0,10–0,30 $ Elektrizität pro Multi-Schritt-Aufgabe auf einer 350W-Desktop-GPU-Anlage (unter 0,05 $ auf einem Mac).',
           '**Überwachungsmuster, das funktioniert:** auto-approve Lese-Tools, manuell approve jeden Schreib-/Shell-Tool, überprüfe das Audit-Log nach langen Sitzungen.',
@@ -1890,7 +1890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Der Test hielt das Modell konstant und variierte nur das Agent-Harness.** Jeder Stack erhielt die gleichen fünf Aufgaben gegen das gleiche Backend (Ollama, das Qwen3-Coder 30B bei Q4_K_M serviert), also fehlschlagen Attribute zum Harness, nicht zum Modell.',
         items: [
-          '**Backend:** Ollama 0.5+ auf macOS und Linux. Primäres Modell Qwen3-Coder 30B Q4_K_M (32K context). Sekundäre Modelle (GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B) zur Verifikation, dass Tool-Call-Fehler keine Single-Model-Artefakte waren.',
+          '**Backend:** Ollama 0.5+ auf macOS und Linux. Primäres Modell Qwen3-Coder 30B Q4_K_M (32K context). Sekundäre Modelle (GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B) zur Verifikation, dass Tool-Call-Fehler keine Single-Model-Artefakte waren.',
           '**Hardware:** eine Apple M5 Max 64 GB MacBook Pro und ein Linux-Desktop mit 2× RTX 3090 24 GB. Beide behalten Qwen3-Coder 30B bei brauchbarer Geschwindigkeit (>15 tokens/s).',
           '**Aufgaben:** Themenrecherche (sammeln, deduplizieren, zusammenfassen 8 Quellen zu einem Nischen-Thema), Multi-Datei-Refactor (umbenennen ein Service über 12 TypeScript-Dateien), E-Mail-Draft-Triage (zusammenfassen und Draft-Antworten für einen Ordner mit 40 Nachrichten), Scrape-and-Summarize (5 URLs lesen und eine Vergleichs-Brief produzieren), Bug-Debugging (finden, warum ein vorhandener Test flaky ist).',
           '**Run-Kadenz:** jede Aufgabe lief 3 Mal pro Stack über das 30-Tage-Fenster, mit einem frischen Prompt jedes Mal. Ergebnis bewertet als „vollständig unbeaufsichtigt", „vollständig mit Überwachung", „teilweise" oder „stagniert/fehlgeschlagen".',
@@ -1971,7 +1971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wo es glänzt:** Multi-Datei-Umstrukturierungen (umbenennen ein Service über 12 Dateien in einer Aufgabe), explorative Bug-Debugging („finde, warum dieser Test flaky ist" — Cline liest angrenzende Test-Dateien, verfolgt Abhängigkeiten, schlägt eine Hypothese vor, bearbeitet, führt den Test durch), und scoped Research, das ein Markdown-Deliverable in dem Projekt produziert.',
           '**Wo es stolpert:** nicht-Code-Aufgaben, die externe HTTP erfordern (kein natives Browser). E-Mail-Draft-Triage funktioniert nur, wenn du einen MCP-Server oder Shell-Tools verdrahtest — und an diesem Punkt konfigurierst du drei Dinge, um das zu tun, was ein kleineres, scoped-Tool direkt tun würde.',
           '**Überwachungskosten:** ~5–12 Approvals pro Aufgabe. Die meisten sind Lese-Tools (billig, schnelles Akzeptieren). Die teuren sind write_to_file und execute_command — stelle diese auf manuelles Approval-Erfordernis und du wirst den seltenen schlechten Call vor dem Landen fangen.',
-          '**Token-Kosten:** hoch. Vollständige Datei-Inhalte streamen in das Gespräch, während der Agent sie liest. Eine 12-Datei-Umstrukturierung auf Qwen3-Coder 30B bei 32K context brennt das Fenster schnell durch — wechsle zu einem 128K-Context-Modell (DeepSeek Coder V3, Llama 3.3 70B) für nicht-triviale Arbeit.',
+          '**Token-Kosten:** hoch. Vollständige Datei-Inhalte streamen in das Gespräch, während der Agent sie liest. Eine 12-Datei-Umstrukturierung auf Qwen3-Coder 30B bei 32K context brennt das Fenster schnell durch — wechsle zu einem 128K-Context-Modell (DeepSeek Coder V3, Llama 3.3 70B) für nicht-triviale Arbeit. (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
           'Für tiefere Cline-Konfiguration einschließlich auto-approve Allow-Lists, siehe [Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
@@ -2140,7 +2140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufige Fehler beim Wählen und Laufen lokaler Agenten',
         items: [
           '**Fehler 1: Optimierung für Autonomie.** „Wie lange kann es unbeaufsichtigt laufen" ist die falsche Metrik. „Wie wenig Approvals zum Landen der Aufgabe" ist die richtige. Ein Stack auf Autonomie-Benchmarks wählen bekommt dir AutoGPT; wählen auf Überwachungs-Kosten bekommt dir Cline.',
-          '**Fehler 2: Kleine Modelle für Tool-Call-Arbeit.** Alles unter 7B (und die meisten 7B–13B General-Purpose-Modelle ohne Tool-Call Fine-Tuning) strahlten malformed Tool Calls. Verwende Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, oder Llama 3.3 70B und höre auf, mit dem Harness zu kämpfen.',
+          '**Fehler 2: Kleine Modelle für Tool-Call-Arbeit.** Alles unter 7B (und die meisten 7B–13B General-Purpose-Modelle ohne Tool-Call Fine-Tuning) strahlten malformed Tool Calls. Verwende Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, oder Llama 3.3 70B und höre auf, mit dem Harness zu kämpfen.',
           '**Fehler 3: 32K Context für Multi-Datei-Arbeit.** Cline streamt volle Datei-Inhalte in das Gespräch; eine 8-Datei-Aufgabe kann 32K Tokens durchbrennen, bevor Überlegung. Verwende einen 128K-Context-Modell (DeepSeek Coder V3, Llama 3.3 70B) für nicht-triviale Multi-Datei-Aufgaben.',
           '**Fehler 4: Auto-approve alles.** Der „alle genehmigen"-Toggle ist die Einfahrt zu „der Agent löschte meine Dateien". Auto-approve nur Lese-Tools; erfordere manuelle Genehmigung für Schreib- und Shell-Tools.',
           '**Fehler 5: Production-Datenbank-Schreiben von einem Agent.** Laufe eine Read-Only-Rolle standardmäßig. Eine separate schreibbare Rolle lebt nur für die Dauer von Aufgaben, die sie explizit benötigen. Die Kosten eines schlechten Schreibens sind unbegrenzt.',
@@ -2183,7 +2183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Können Agenten Multi-Schritt-Aufgaben ohne Brechen behandeln?',
-            a: 'Bis zu 5–8 Schritte zuverlässig mit einem starken Tool-Calling-Modell (Qwen3-Coder 30B, Gemma 4 27B, GLM-5.1 32B, Llama 3.3 70B). Darüber, Plan-Horizonte driften — der Agent liest Dateien erneut, führt die gleichen Suchen erneut aus, oder schlägt widersprüchliche nächste Schritte vor. Das richtige Muster ist „Modell schlägt einen Plan vor, Mensch genehmigt den Plan, Modell führt einen Schritt zur Zeit aus" — nicht autonome 25-Schritt-Ausführung.',
+            a: 'Bis zu 5–8 Schritte zuverlässig mit einem starken Tool-Calling-Modell (Qwen3-Coder 30B, Gemma 4 27B, GLM-4.7 32B, Llama 3.3 70B). Darüber, Plan-Horizonte driften — der Agent liest Dateien erneut, führt die gleichen Suchen erneut aus, oder schlägt widersprüchliche nächste Schritte vor. Das richtige Muster ist „Modell schlägt einen Plan vor, Mensch genehmigt den Plan, Modell führt einen Schritt zur Zeit aus" — nicht autonome 25-Schritt-Ausführung.',
           },
           {
             q: 'Warum fehlschlagen Agenten bei Langzeitaufgaben?',
@@ -2212,7 +2212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           '[Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026](/de/power-local-llm/local-ai-agents-with-mcp-2026) — was Agenten unter der Haube ermöglicht; Protokoll-Schicht für Dateisystem, Datenbank, Browser und GitHub-Tools.',
-          '[Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — die Modell-Schicht; Kopf-an-Kopf-Benchmarks für die oben empfohlenen Tool-Caller (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — die Modell-Schicht; Kopf-an-Kopf-Benchmarks für die oben empfohlenen Tool-Caller (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local) — angrenzender Harness-Vergleich für Code-formige Arbeit.',
           '[Lokale KI-Agenten Business-Workflows EU-Compliance](/de/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — angewendeter Kontext für Unternehmen, die unter GDPR/EU AI Act operieren.',
           '[Beste lokale LLMs in 2026](/de/local-llms/best-local-llms-2026) — Modell-Autorität für die breitere Open-Weights-Landschaft.',
@@ -2239,7 +2239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**两个框架完成真实工作：Cline + Ollama 和 Continue.dev Agent。** 两者都限制在单个IDE、运行一个Tool-calling模型、每步需要人类批准。',
           '**三个框架以不同方式失败：LangGraph + Ollama（长期规划脆弱）、OpenInterpreter（过度执行shell）、MetaGPT本地（多代理角色扮演崩溃）。**',
           '**AutoGPT-local在2026年5月实际上无法使用——项目停滞、依赖损坏、规划循环在几分钟内漂移。**',
-          '**Tool-call可靠性来自模型，不是框架。** Qwen3-Coder 30B、GLM-5.1 32B、Gemma 4 27B 和 Llama 3.3 70B 在任何可靠框架中工作。7B以下的模型在所有框架中都失败。',
+          '**Tool-call可靠性来自模型，不是框架。** Qwen3-Coder 30B、GLM-4.7 32B、Gemma 4 27B 和 Llama 3.3 70B 在任何可靠框架中工作。7B以下的模型在所有框架中都失败。',
           '**监督成本是重要的指标。** "最好的"代理是你实际阅读其批准的——而不是自主运行时间最长的。',
           '**2027年展望：更长期规划会逐步改进。无论演示显示什么，无监督的真实任务自主性今年都不会发生。**',
         ],
@@ -2667,7 +2667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparação de agentes llm locais',
     ],
     leadAnswerBlock:
-      '**Em maio de 2026, dois stacks de agentes locais completam trabalho real sem babysitting constante: Cline + Ollama e Continue.dev no modo Agent. Ambos são delimitados, bem mantidos e executam um modelo com tool-calling (Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B) dentro de um único editor com portas de aprovação explícitas. Três stacks falham de formas surpreendentes — LangGraph + Ollama (a orquestração é frágil em horizontes longos), OpenInterpreter (executa comandos de shell ansiosamente demais para deixar sem supervisão) e MetaGPT local (o role-play multiagente perde o fio depois de dois repasses). Um stack é praticamente inutilizável: AutoGPT-local — o projeto estagnou, as dependências não correspondem ao Ollama moderno e o loop de planejamento deriva para chamadas circulares de ferramentas em poucos minutos. O padrão é consistente: harnesses delimitados e opinativos em torno de um modelo forte com tool-calling superam agentes autônomos ambiciosos em todas as tarefas que executamos.**',
+      '**Em maio de 2026, dois stacks de agentes locais completam trabalho real sem babysitting constante: Cline + Ollama e Continue.dev no modo Agent. Ambos são delimitados, bem mantidos e executam um modelo com tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de um único editor com portas de aprovação explícitas. Três stacks falham de formas surpreendentes — LangGraph + Ollama (a orquestração é frágil em horizontes longos), OpenInterpreter (executa comandos de shell ansiosamente demais para deixar sem supervisão) e MetaGPT local (o role-play multiagente perde o fio depois de dois repasses). Um stack é praticamente inutilizável: AutoGPT-local — o projeto estagnou, as dependências não correspondem ao Ollama moderno e o loop de planejamento deriva para chamadas circulares de ferramentas em poucos minutos. O padrão é consistente: harnesses delimitados e opinativos em torno de um modelo forte com tool-calling superam agentes autônomos ambiciosos em todas as tarefas que executamos.**',
     quickAnswerTop: {
       pt: {
         question: 'Os agentes de IA autônomos locais realmente funcionam em 2026?',
@@ -2701,7 +2701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dois stacks entregam trabalho real: Cline + Ollama e Continue.dev Agent. Ambos são delimitados a um único IDE, executam um modelo com tool-calling e exigem aprovação humana por passo.',
           'Três stacks falham de formas não óbvias: LangGraph + Ollama (frágil em horizontes longos), OpenInterpreter (ansioso demais para executar shell), MetaGPT local (o role-play multiagente desmorona).',
           'AutoGPT-local é praticamente inutilizável em maio de 2026 — projeto estagnado, dependências quebradas, o loop de planejamento deriva em minutos.',
-          'A confiabilidade das chamadas de ferramentas vem do modelo, não do harness. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B e Llama 3.3 70B funcionam em qualquer um dos stacks confiáveis. Modelos abaixo de 7B falham em todos eles.',
+          'A confiabilidade das chamadas de ferramentas vem do modelo, não do harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B funcionam em qualquer um dos stacks confiáveis. Modelos abaixo de 7B falham em todos eles.',
           'O custo de supervisão é a métrica que importa. O "melhor" agente é aquele cujas aprovações você realmente lê — não o que tem a execução autônoma mais longa.',
           'Perspectiva para 2027: o planejamento de horizonte longo melhorará de forma incremental. Autonomia sem supervisão em tarefas reais não vai acontecer este ano, independentemente do que os demos mostrem.',
         ],
@@ -2739,7 +2739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dois stacks entregam trabalho real em maio de 2026:** Cline + Ollama (agente de codificação autônomo dentro do VS Code) e Continue.dev no modo Agent. Ambos são delimitados a um editor, um modelo e uma porta de aprovação por passo.',
           '**Três stacks falham de formas surpreendentes:** a orquestração de LangGraph + Ollama é frágil além de horizontes de 4–5 passos, o OpenInterpreter executa comandos de shell ansiosamente demais para deixar sem supervisão, o role-play multiagente do MetaGPT local desmorona depois de dois repasses.',
           '**Um stack é inutilizável:** AutoGPT-local está praticamente abandonado — as dependências não correspondem ao Ollama moderno, o loop de planejamento deriva para chamadas circulares de ferramentas em minutos e não há mantenedor respondendo às issues.',
-          '**A confiabilidade das chamadas de ferramentas é uma propriedade do modelo, não do harness.** Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B e Llama 3.3 70B emitem chamadas de ferramentas limpas em todos os stacks confiáveis. Modelos abaixo de 7B emitem chamadas malformadas, independentemente de qual agente os envolve.',
+          '**A confiabilidade das chamadas de ferramentas é uma propriedade do modelo, não do harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B emitem chamadas de ferramentas limpas em todos os stacks confiáveis. Modelos abaixo de 7B emitem chamadas malformadas, independentemente de qual agente os envolve.',
           '**O modelo de "assistente supervisionado" vence em 2026.** Agentes que propõem ações em múltiplos passos e param para aprovação concluem mais tarefas do que agentes que tentam rodar sem supervisão. Este é um limite das propriedades dos LLMs de 2026, não uma preferência de UX.',
           '**O custo de supervisão é a métrica que importa.** Uma tarefa de 30 minutos que exige três aprovações é entregável. Uma tarefa de 2 horas que exige vinte aprovações não é — você está fazendo o trabalho, o agente só está te atrasando.',
           '**O custo é real, mas pequeno.** Inferência apenas local, sem gasto de API, a eletricidade é o único custo marginal. O consumo de tokens por tarefa é a restrição — loops de agente queimam 30K–80K tokens em uma tarefa de múltiplos passos, então modelos com contexto de 32K batem no limite rápido e modelos com contexto de 128K ficam confortáveis.',
@@ -2752,7 +2752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks testados:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (personalizado), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tarefas testadas:** pesquisa de tópico, refatoração multiarquivo, triagem de rascunho de e-mail, scrape-e-resumo, depuração de bug.',
           '**Hardware:** Apple M5 Max 64 GB de memória unificada e máquina com 2× NVIDIA RTX 3090 24 GB; ambos rodam Qwen3-Coder 30B Q4_K_M confortavelmente a 32K de contexto.',
-          '**Modelos:** Qwen3-Coder 30B (primário), GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B (os quatro tool-callers confiáveis em maio de 2026).',
+          '**Modelos:** Qwen3-Coder 30B (primário), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (os quatro tool-callers confiáveis em maio de 2026).',
           '**Formato do veredito:** 2 stacks confiáveis em todas as 5 tarefas, 3 stacks confiáveis em 1–2 tarefas cada, 1 stack inutilizável.',
           '**Custo:** $0 em taxas de API. ~$0,10–$0,30 em eletricidade por tarefa de múltiplos passos em uma máquina desktop com GPU de 350W (menos de $0,05 em um Mac).',
           '**Padrão de supervisão que funciona:** aprovar automaticamente ferramentas de leitura, aprovar manualmente toda ferramenta de escrita/shell, revisar o log de auditoria após sessões longas.',
@@ -2764,7 +2764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O teste manteve o modelo constante e variou apenas o harness do agente.** Cada stack recebeu as mesmas cinco tarefas contra o mesmo backend (Ollama servindo Qwen3-Coder 30B em Q4_K_M), então as falhas são atribuídas ao harness, não ao modelo.',
         items: [
-          '**Backend:** Ollama 0.5+ no macOS e Linux. Modelo primário Qwen3-Coder 30B Q4_K_M (32K de contexto). Modelos secundários (GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B) usados para verificar que as falhas de tool-call não eram um artefato de um único modelo.',
+          '**Backend:** Ollama 0.5+ no macOS e Linux. Modelo primário Qwen3-Coder 30B Q4_K_M (32K de contexto). Modelos secundários (GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B) usados para verificar que as falhas de tool-call não eram um artefato de um único modelo.',
           '**Hardware:** um MacBook Pro Apple M5 Max 64 GB e um desktop Linux com 2× RTX 3090 24 GB. Ambos sustentam Qwen3-Coder 30B a uma velocidade utilizável (>15 tokens/s).',
           '**Tarefas:** pesquisa de tópico (coletar, deduplicar, resumir 8 fontes sobre um assunto de nicho), refatoração multiarquivo (renomear um serviço em 12 arquivos TypeScript), triagem de rascunho de e-mail (resumir e redigir respostas para uma pasta de 40 mensagens), scrape-e-resumo (ler 5 URLs e produzir um briefing comparativo), depuração de bug (descobrir por que um teste existente está instável).',
           '**Cadência de execução:** cada tarefa rodou 3 vezes por stack ao longo da janela de 30 dias, com um prompt novo a cada vez. Resultado avaliado como "completo sem supervisão", "completo com supervisão", "parcial" ou "travado / falhou".',
@@ -2845,7 +2845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Onde ele brilha:** refatorações multiarquivo (renomear um serviço em 12 arquivos em uma tarefa), depuração exploratória de bugs ("descubra por que este teste está instável" — o Cline lê arquivos de teste adjacentes, rastreia dependências, propõe uma hipótese, edita, roda o teste) e pesquisa delimitada que produz um entregável em markdown dentro do projeto.',
           '**Onde ele tropeça:** tarefas não relacionadas a código que exigem HTTP externo (sem navegador nativo). A triagem de rascunho de e-mail só funciona se você conectar um servidor MCP ou ferramentas de shell — e nesse ponto você está configurando três coisas para fazer o que uma ferramenta menor e delimitada faria diretamente.',
           '**Custo de supervisão:** ~5–12 aprovações por tarefa. A maioria são ferramentas de leitura (baratas, aceitação rápida). As caras são write_to_file e execute_command — configure essas para exigir aprovação manual e você vai pegar a rara chamada ruim antes que ela aconteça.',
-          '**Custo de tokens:** alto. O conteúdo completo dos arquivos é transmitido para a conversa à medida que o agente os lê. Uma refatoração de 12 arquivos no Qwen3-Coder 30B a 32K de contexto consome a janela rápido — mude para um modelo com contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para trabalho não trivial.',
+          '**Custo de tokens:** alto. O conteúdo completo dos arquivos é transmitido para a conversa à medida que o agente os lê. Uma refatoração de 12 arquivos no Qwen3-Coder 30B a 32K de contexto consome a janela rápido — mude para um modelo com contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para trabalho não trivial. (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)',
           'Para uma configuração mais profunda do Cline, incluindo allow-lists de aprovação automática, veja [Continue.dev vs Cline vs Aider: melhor agente de codificação local em 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erros comuns ao escolher e executar agentes locais',
         items: [
           '**Erro 1: otimizar para a autonomia.** "Por quanto tempo ele consegue rodar sem supervisão" é a métrica errada. "Com quão poucas aprovações conclui a tarefa" é a certa. Escolher um stack por benchmarks de autonomia te dá o AutoGPT; escolher por custo de supervisão te dá o Cline.',
-          '**Erro 2: modelos pequenos para trabalho de tool-calling.** Qualquer coisa abaixo de 7B (e a maioria dos modelos de propósito geral de 7B–13B sem fine-tuning de tool-calling) emite chamadas de ferramentas malformadas. Use Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B ou Llama 3.3 70B e pare de brigar com o harness.',
+          '**Erro 2: modelos pequenos para trabalho de tool-calling.** Qualquer coisa abaixo de 7B (e a maioria dos modelos de propósito geral de 7B–13B sem fine-tuning de tool-calling) emite chamadas de ferramentas malformadas. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B ou Llama 3.3 70B e pare de brigar com o harness.',
           '**Erro 3: contexto de 32K para trabalho multiarquivo.** O Cline transmite o conteúdo completo dos arquivos para a conversa; uma tarefa de 8 arquivos pode estourar 32K tokens antes do raciocínio. Use um modelo com contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para tarefas multiarquivo não triviais.',
           '**Erro 4: aprovar tudo automaticamente.** O botão "aprovar tudo" é a rampa de entrada para "o agente apagou meus arquivos". Aprove automaticamente apenas as ferramentas de leitura; exija aprovação manual para escritas e shell.',
           '**Erro 5: escritas em banco de dados de produção a partir de um agente.** Rode um papel somente leitura por padrão. Um papel gravável separado vive apenas pela duração das tarefas que explicitamente precisam dele. O custo de uma escrita ruim é ilimitado.',
@@ -3057,7 +3057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Os agentes conseguem lidar com tarefas de múltiplos passos sem quebrar?',
-            a: 'Até 5–8 passos de forma confiável com um modelo forte de tool-calling (Qwen3-Coder 30B, Gemma 4 27B, GLM-5.1 32B, Llama 3.3 70B). Além disso, os horizontes de plano derivam — o agente relê arquivos, refaz as mesmas buscas ou propõe próximos passos contraditórios. O padrão certo é "o modelo propõe um plano, o humano aprova o plano, o modelo executa um passo de cada vez" — não uma execução autônoma de 25 passos.',
+            a: 'Até 5–8 passos de forma confiável com um modelo forte de tool-calling (Qwen3-Coder 30B, Gemma 4 27B, GLM-4.7 32B, Llama 3.3 70B). Além disso, os horizontes de plano derivam — o agente relê arquivos, refaz as mesmas buscas ou propõe próximos passos contraditórios. O padrão certo é "o modelo propõe um plano, o humano aprova o plano, o modelo executa um passo de cada vez" — não uma execução autônoma de 25 passos.',
           },
           {
             q: 'Por que os agentes falham em tarefas de horizonte longo?',
@@ -3086,7 +3086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agente local 2026](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — o que habilita os agentes por baixo dos panos; camada de protocolo para ferramentas de sistema de arquivos, banco de dados, navegador e GitHub.',
-          '[Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — a camada do modelo; benchmarks cara a cara dos tool-callers recomendados acima (Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3).',
+          '[Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — a camada do modelo; benchmarks cara a cara dos tool-callers recomendados acima (Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3).',
           '[Continue.dev vs Cline vs Aider: melhor agente de codificação local em 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local) — comparação de harnesses adjacentes para trabalho no formato de codificação.',
           '[Agentes de IA locais para fluxos de trabalho empresariais e conformidade na UE](/pt/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — contexto aplicado para empresas que operam sob GDPR / EU AI Act.',
           '[Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026) — referência de modelos para o panorama mais amplo de pesos abertos.',
@@ -3126,7 +3126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -3150,7 +3150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'مقارنة وكلاء نماذج اللغة المحلية',
     ],
     leadAnswerBlock:
-      '**في مايو 2026، يُتمّ اثنان من أطر عمل الوكلاء المحليين العمل الفعلي دون إشراف مستمر: Cline + Ollama وContinue.dev في وضع Agent. كلاهما محدود النطاق وجيد الصيانة ويُشغّل نموذجاً بقدرة استدعاء الأدوات (Qwen3-Coder 30B وGLM-5.1 32B وGemma 4 27B) داخل محرر واحد مع بوابات موافقة صريحة. يفشل ثلاثة أطر عمل بطرق مفاجئة: LangGraph + Ollama (تنسيق هش على آفاق طويلة)، وOpenInterpreter (ينفّذ أوامر الصدفة بسرعة لا تصلح معها للعمل دون إشراف)، وMetaGPT المحلي (يضيع تمثيل الأدوار متعدد الوكلاء بعد عمليتَي نقل). إطار عمل واحد عديم الفائدة عملياً: AutoGPT المحلي — توقّف المشروع، والاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات دائرية للأدوات في دقائق. النمط ثابت: الأطر المحدودة والمُعِدّة مسبقاً حول نموذج قوي بقدرة استدعاء الأدوات تتفوق على الوكلاء المستقلين الطموحين في كل مهمة نفّذناها.**',
+      '**في مايو 2026، يُتمّ اثنان من أطر عمل الوكلاء المحليين العمل الفعلي دون إشراف مستمر: Cline + Ollama وContinue.dev في وضع Agent. كلاهما محدود النطاق وجيد الصيانة ويُشغّل نموذجاً بقدرة استدعاء الأدوات (Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B) داخل محرر واحد مع بوابات موافقة صريحة. يفشل ثلاثة أطر عمل بطرق مفاجئة: LangGraph + Ollama (تنسيق هش على آفاق طويلة)، وOpenInterpreter (ينفّذ أوامر الصدفة بسرعة لا تصلح معها للعمل دون إشراف)، وMetaGPT المحلي (يضيع تمثيل الأدوار متعدد الوكلاء بعد عمليتَي نقل). إطار عمل واحد عديم الفائدة عملياً: AutoGPT المحلي — توقّف المشروع، والاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات دائرية للأدوات في دقائق. النمط ثابت: الأطر المحدودة والمُعِدّة مسبقاً حول نموذج قوي بقدرة استدعاء الأدوات تتفوق على الوكلاء المستقلين الطموحين في كل مهمة نفّذناها.**',
     quickAnswerTop: {
       ar: {
         question: 'هل تعمل وكلاء الذكاء الاصطناعي المستقلون المحليون فعلاً في 2026؟',
@@ -3160,7 +3160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'اثنان يُسلّمان عملاً حقيقياً: Cline + Ollama وContinue.dev Agent. كلاهما محدود النطاق لبيئة تطوير واحدة، ويُشغّل نموذجاً بقدرة استدعاء الأدوات، ويستلزم موافقة بشرية لكل خطوة.',
           'ثلاثة تفشل بطرق غير واضحة: LangGraph + Ollama (هش على آفاق طويلة)، وOpenInterpreter (متسرّع جداً في تنفيذ الصدفة)، وMetaGPT المحلي (تمثيل الأدوار متعدد الوكلاء ينهار).',
           'AutoGPT المحلي عديم الفائدة عملياً في مايو 2026 — مشروع متوقف، اعتماديات مكسورة، حلقة التخطيط تنجرف في دقائق.',
-          'موثوقية استدعاء الأدوات تأتي من النموذج لا من الإطار. Qwen3-Coder 30B وGLM-5.1 32B وGemma 4 27B وLlama 3.3 70B تعمل في أي من الأطر الموثوقة. النماذج دون 7B تفشل في جميعها.',
+          'موثوقية استدعاء الأدوات تأتي من النموذج لا من الإطار. Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تعمل في أي من الأطر الموثوقة. النماذج دون 7B تفشل في جميعها.',
           'تكلفة الإشراف هي المقياس المهم. "أفضل" وكيل هو ذاك الذي تقرأ موافقاته فعلاً، لا الذي لديه أطول تشغيل مستقل.',
           'التوقعات لـ2027: التخطيط طويل الأمد سيتحسن تدريجياً. الاستقلالية دون إشراف في المهام الحقيقية لن تحدث هذا العام بغض النظر عمّا تُظهره العروض.',
         ],
@@ -3198,7 +3198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**اثنان يُسلّمان عملاً حقيقياً في مايو 2026:** Cline + Ollama (وكيل برمجة مستقل داخل VS Code) وContinue.dev في وضع Agent. كلاهما محدود النطاق لمحرر واحد ونموذج واحد وبوابة موافقة لكل خطوة.',
           '**ثلاثة يفشلون بطرق مفاجئة:** تنسيق LangGraph + Ollama هش ما وراء آفاق 4–5 خطوات، وOpenInterpreter ينفّذ أوامر الصدفة بسرعة تجعله خطراً دون إشراف، وتمثيل الأدوار متعدد الوكلاء في MetaGPT المحلي ينهار بعد عمليتَي نقل.',
           '**إطار عمل واحد عديم الفائدة:** AutoGPT المحلي مهجور عملياً — الاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات أدوات دائرية في دقائق، ولا يوجد مُعتمد يرد على المشكلات.',
-          '**موثوقية استدعاء الأدوات خاصية نموذجية لا إطارية.** Qwen3-Coder 30B وGLM-5.1 32B وGemma 4 27B وLlama 3.3 70B تُصدر استدعاءات أدوات نظيفة في كل الأطر الموثوقة. النماذج دون 7B تُصدر استدعاءات مشوّهة بصرف النظر عن الوكيل الذي يلفّها.',
+          '**موثوقية استدعاء الأدوات خاصية نموذجية لا إطارية.** Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تُصدر استدعاءات أدوات نظيفة في كل الأطر الموثوقة. النماذج دون 7B تُصدر استدعاءات مشوّهة بصرف النظر عن الوكيل الذي يلفّها.',
           '**نموذج "المساعد تحت الإشراف" يفوز في 2026.** الوكلاء الذين يقترحون إجراءات متعددة الخطوات ويتوقفون للموافقة يُكملون مهاماً أكثر ممن يحاولون العمل دون إشراف. هذا حد لخصائص نماذج اللغة في 2026، لا تفضيل واجهة.',
           '**تكلفة الإشراف هي المقياس المهم.** مهمة من 30 دقيقة تستلزم ثلاث موافقات قابلة للتسليم. مهمة من ساعتين تستلزم عشرين موافقة ليست كذلك — أنت من يؤدي العمل والوكيل يُبطّئك فحسب.',
           '**التكلفة حقيقية لكنها صغيرة.** استدلال محلي بالكامل دون إنفاق على الواجهة البرمجية، والكهرباء هي التكلفة الهامشية الوحيدة. استهلاك الرموز لكل مهمة هو القيد — حلقات الوكلاء تحرق 30K–80K رمز في مهمة متعددة الخطوات، فالنماذج ذات سياق 32K تصل للحد سريعاً بينما 128K مريحة.',
@@ -3211,7 +3211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأطر المختبرة:** Cline + Ollama، وContinue.dev Agent، وLangGraph + Ollama (مخصّص)، وAutoGPT المحلي، وOpenInterpreter، وMetaGPT المحلي.',
           '**المهام المختبرة:** بحث في موضوع، وإعادة هيكلة متعددة الملفات، وفرز مسودات البريد، وجمع وتلخيص، وتصحيح أخطاء.',
           '**الأجهزة:** Apple M5 Max 64 GB ذاكرة موحّدة وجهاز بـ2× NVIDIA RTX 3090 24 GB؛ كلاهما يُشغّل Qwen3-Coder 30B Q4_K_M بارتياح بسياق 32K.',
-          '**النماذج:** Qwen3-Coder 30B (الرئيسي)، وGLM-5.1 32B، وGemma 4 27B، وLlama 3.3 70B (الأدوات الاستدعائية الموثوقة الأربعة في مايو 2026).',
+          '**النماذج:** Qwen3-Coder 30B (الرئيسي)، وGLM-4.7 32B، وGemma 4 27B، وLlama 3.3 70B (الأدوات الاستدعائية الموثوقة الأربعة في مايو 2026).',
           '**شكل الحكم:** إطاران موثوقان في المهام الخمس، وثلاثة موثوقان في 1–2 مهمة لكل منهما، وإطار واحد عديم الفائدة.',
           '**التكلفة:** 0 دولار في رسوم الواجهة البرمجية. ~0.10–0.30 دولار كهرباء لكل مهمة متعددة الخطوات على جهاز سطح مكتب بوحدة GPU بـ350W (أقل من 0.05 دولار على Mac).',
           '**نمط الإشراف الناجح:** الموافقة التلقائية على أدوات القراءة، والموافقة اليدوية على كل أداة كتابة/صدفة، ومراجعة سجل التدقيق بعد الجلسات الطويلة.',
@@ -3223,7 +3223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**أبقى الاختبار النموذجَ ثابتاً وغيّر إطار الوكيل فحسب.** تلقّى كل إطار المهام الخمس ذاتها مقابل نفس الخلفية (Ollama يخدم Qwen3-Coder 30B بـQ4_K_M)، فتُنسب الإخفاقات للإطار لا للنموذج.',
         items: [
-          '**الخلفية:** Ollama 0.5+ على macOS وLinux. النموذج الأساسي Qwen3-Coder 30B Q4_K_M (سياق 32K). النماذج الثانوية (GLM-5.1 32B، وGemma 4 27B، وLlama 3.3 70B) استُخدمت للتحقق من أن إخفاقات استدعاء الأدوات لم تكن حكراً على نموذج واحد.',
+          '**الخلفية:** Ollama 0.5+ على macOS وLinux. النموذج الأساسي Qwen3-Coder 30B Q4_K_M (سياق 32K). النماذج الثانوية (GLM-4.7 32B، وGemma 4 27B، وLlama 3.3 70B) استُخدمت للتحقق من أن إخفاقات استدعاء الأدوات لم تكن حكراً على نموذج واحد.',
           '**الأجهزة:** MacBook Pro Apple M5 Max 64 GB وسطح مكتب Linux بـ2× RTX 3090 24 GB. كلاهما يُبقي Qwen3-Coder 30B بسرعة مفيدة (>15 رمز/ثانية).',
           '**المهام:** بحث في موضوع (جمع ومزيلة تكرار وتلخيص 8 مصادر حول موضوع متخصّص)، وإعادة هيكلة متعددة الملفات (إعادة تسمية خدمة في 12 ملف TypeScript)، وفرز مسودات البريد (تلخيص وصياغة ردود لصندوق 40 رسالة)، وجمع وتلخيص (قراءة 5 روابط وإنتاج ملخص مقارن)، وتصحيح أخطاء (معرفة سبب عدم استقرار اختبار قائم).',
           '**وتيرة التشغيل:** نُفّذت كل مهمة 3 مرات لكل إطار خلال فترة الثلاثين يوماً بموجّه جديد في كل مرة. صُنّفت النتيجة "مكتملة دون إشراف"، أو "مكتملة بإشراف"، أو "جزئية"، أو "متوقفة/فاشلة".',
@@ -3304,7 +3304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أين يتألق:** إعادة الهيكلة متعددة الملفات (إعادة تسمية خدمة في 12 ملفاً في مهمة واحدة)، وتصحيح الأخطاء الاستكشافي ("اعرف لماذا هذا الاختبار غير مستقر" — يقرأ Cline الملفات المجاورة ويتتبع التبعيات ويقترح فرضية ويُعدّل ويُشغّل الاختبار)، والبحث المحدود الذي ينتج تسليمة markdown داخل المشروع.',
           '**أين يتعثر:** المهام غير البرمجية التي تتطلب HTTP خارجي (لا متصفح أصلي). فرز مسودات البريد يعمل فقط إن وصّلت خادم MCP أو أدوات صدفة، وعندها أنت تُعدّ ثلاثة أشياء لتفعل ما تفعله مباشرةً أداة أصغر وأكثر تحديداً.',
           '**تكلفة الإشراف:** ~5–12 موافقة لكل مهمة. معظمها أدوات قراءة (رخيصة، قبول سريع). الغالية هي write_to_file وexecute_command — اضبطها لتستلزم موافقة يدوية وستلتقط الاستدعاء الخاطئ النادر قبل حدوثه.',
-          '**تكلفة الرموز:** مرتفعة. يُنقل محتوى الملفات كاملاً إلى المحادثة كلما قرأها الوكيل. إعادة هيكلة 12 ملفاً بـQwen3-Coder 30B بسياق 32K تستنزف النافذة سريعاً — انتقل لنموذج بسياق 128K (DeepSeek Coder V3 أو Llama 3.3 70B) للعمل غير البسيط.',
+          '**تكلفة الرموز:** مرتفعة. يُنقل محتوى الملفات كاملاً إلى المحادثة كلما قرأها الوكيل. إعادة هيكلة 12 ملفاً بـQwen3-Coder 30B بسياق 32K تستنزف النافذة سريعاً — انتقل لنموذج بسياق 128K (DeepSeek Coder V3 أو Llama 3.3 70B) للعمل غير البسيط. (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
           'للإعداد المعمّق لـCline بما في ذلك قوائم الموافقة التلقائية، راجع [Continue.dev مقابل Cline مقابل Aider: أفضل وكيل برمجة محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
@@ -3473,7 +3473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأخطاء الشائعة في اختيار الوكلاء المحليين وتشغيلهم',
         items: [
           '**الخطأ الأول: تحسين الاستقلالية.** "كم يعمل دون إشراف؟" هو المقياس الخاطئ. "بكم موافقة يُكمل المهمة؟" هو الصحيح. اختيار إطار بناءً على معايير الاستقلالية يُعطيك AutoGPT؛ الاختيار بناءً على تكلفة الإشراف يُعطيك Cline.',
-          '**الخطأ الثاني: نماذج صغيرة لعمل استدعاء الأدوات.** أي شيء دون 7B (ومعظم نماذج الأغراض العامة من 7B–13B بلا ضبط دقيق لاستدعاء الأدوات) تُصدر استدعاءات مشوّهة. استخدم Qwen3-Coder 30B أو GLM-5.1 32B أو Gemma 4 27B أو Llama 3.3 70B وأوقف نزالك مع الإطار.',
+          '**الخطأ الثاني: نماذج صغيرة لعمل استدعاء الأدوات.** أي شيء دون 7B (ومعظم نماذج الأغراض العامة من 7B–13B بلا ضبط دقيق لاستدعاء الأدوات) تُصدر استدعاءات مشوّهة. استخدم Qwen3-Coder 30B أو GLM-4.7 32B أو Gemma 4 27B أو Llama 3.3 70B وأوقف نزالك مع الإطار.',
           '**الخطأ الثالث: سياق 32K للعمل متعدد الملفات.** Cline ينقل محتوى الملفات كاملاً للمحادثة؛ مهمة 8 ملفات قد تتجاوز 32K رمز قبل التفكير. استخدم نموذجاً بسياق 128K (DeepSeek Coder V3 أو Llama 3.3 70B) للمهام متعددة الملفات غير البسيطة.',
           '**الخطأ الرابع: الموافقة التلقائية على كل شيء.** زر "الموافقة على الكل" هو المنحدر الذي يقود إلى "الوكيل حذف ملفاتي". وافق تلقائياً على أدوات القراءة فحسب؛ استلزم موافقة يدوية للكتابة والصدفة.',
           '**الخطأ الخامس: الكتابة في قواعد بيانات الإنتاج من وكيل.** شغّل دوراً للقراءة فقط افتراضياً. دور كتابة منفصل موجود فقط لمدة المهام التي تستلزمه صراحةً. تكلفة كتابة خاطئة غير محدودة.',
@@ -3516,7 +3516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تستطيع الوكلاء التعامل مع مهام متعددة الخطوات دون أن تنكسر؟',
-            a: 'حتى 5–8 خطوات بموثوقية مع نموذج قوي لاستدعاء الأدوات (Qwen3-Coder 30B وGemma 4 27B وGLM-5.1 32B وLlama 3.3 70B). بعد ذلك تنجرف آفاق الخطط — يُعيد الوكيل قراءة الملفات، أو يُعيد البحوث ذاتها، أو يقترح خطوات تالية متناقضة. النمط الصحيح هو "النموذج يقترح خطة، البشر يوافقون على الخطة، النموذج ينفّذ خطوة في كل مرة" — لا تشغيل مستقل من 25 خطوة.',
+            a: 'حتى 5–8 خطوات بموثوقية مع نموذج قوي لاستدعاء الأدوات (Qwen3-Coder 30B وGemma 4 27B وGLM-4.7 32B وLlama 3.3 70B). بعد ذلك تنجرف آفاق الخطط — يُعيد الوكيل قراءة الملفات، أو يُعيد البحوث ذاتها، أو يقترح خطوات تالية متناقضة. النمط الصحيح هو "النموذج يقترح خطة، البشر يوافقون على الخطة، النموذج ينفّذ خطوة في كل مرة" — لا تشغيل مستقل من 25 خطوة.',
           },
           {
             q: 'لماذا تفشل الوكلاء في مهام الأفق الطويل؟',
@@ -3545,7 +3545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[ربط Ollama بقواعد البيانات وواجهات برمجة التطبيقات عبر MCP: إعداد الوكيل المحلي 2026](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — ما يُمكّن الوكلاء تحت السطح؛ طبقة البروتوكول لأدوات نظام الملفات وقاعدة البيانات والمتصفح وGitHub.',
-          '[أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — طبقة النموذج؛ معايير مقارنة مباشرة لأدوات الاستدعاء الموصى بها (Qwen3-Coder وGemma 4 وGLM-5.1 وLlama 3.3).',
+          '[أفضل النماذج المحلية لاستدعاء الأدوات في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — طبقة النموذج؛ معايير مقارنة مباشرة لأدوات الاستدعاء الموصى بها (Qwen3-Coder وGemma 4 وGLM-4.7 وLlama 3.3).',
           '[Continue.dev مقابل Cline مقابل Aider: أفضل وكيل برمجة محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local) — مقارنة الأطر المجاورة لعمل ذي طابع برمجي.',
           '[وكلاء الذكاء الاصطناعي المحليون لسير عمل الأعمال والامتثال في الاتحاد الأوروبي](/ar/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — سياق تطبيقي للمؤسسات التي تعمل بموجب GDPR/قانون الذكاء الاصطناعي الأوروبي.',
           '[أفضل نماذج اللغة المحلية في 2026](/ar/local-llms/best-local-llms-2026) — مرجع النماذج للمشهد الأشمل للأوزان المفتوحة.',
@@ -3585,7 +3585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Coder 30B',
       'Qwen3 32B',
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Llama 3.3 70B',
       'DeepSeek Coder V3',
     ],
@@ -3609,7 +3609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 llm 에이전트 비교',
     ],
     leadAnswerBlock:
-      '**2026년 5월 기준, 두 가지 로컬 에이전트 스택이 지속적인 감독 없이 실제 작업을 완수합니다: Cline + Ollama와 Continue.dev Agent 모드입니다. 두 스택 모두 범위가 제한되어 있고, 잘 유지 관리되며, 하나의 에디터 내에서 명시적인 승인 게이트를 통해 tool-calling 모델(Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B)을 실행합니다. 세 가지 스택은 놀라운 방식으로 실패합니다. LangGraph + Ollama(오케스트레이션이 긴 계획 범위에서 취약함), OpenInterpreter(감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행함), MetaGPT local(두 번의 핸드오프 후 멀티에이전트 역할극이 방향을 잃음)입니다. 한 가지 스택은 사실상 사용 불가입니다: AutoGPT-local — 프로젝트가 정체되었고, 의존성이 최신 Ollama와 맞지 않으며, 계획 루프가 몇 분 내에 순환 tool 호출로 표류합니다. 패턴은 일관됩니다: 강력한 tool-calling 모델 주변에 범위가 제한된 주견 있는 하네스가 우리가 실행한 모든 작업에서 야심 찬 자율 에이전트를 능가합니다.**',
+      '**2026년 5월 기준, 두 가지 로컬 에이전트 스택이 지속적인 감독 없이 실제 작업을 완수합니다: Cline + Ollama와 Continue.dev Agent 모드입니다. 두 스택 모두 범위가 제한되어 있고, 잘 유지 관리되며, 하나의 에디터 내에서 명시적인 승인 게이트를 통해 tool-calling 모델(Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B)을 실행합니다. 세 가지 스택은 놀라운 방식으로 실패합니다. LangGraph + Ollama(오케스트레이션이 긴 계획 범위에서 취약함), OpenInterpreter(감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행함), MetaGPT local(두 번의 핸드오프 후 멀티에이전트 역할극이 방향을 잃음)입니다. 한 가지 스택은 사실상 사용 불가입니다: AutoGPT-local — 프로젝트가 정체되었고, 의존성이 최신 Ollama와 맞지 않으며, 계획 루프가 몇 분 내에 순환 tool 호출로 표류합니다. 패턴은 일관됩니다: 강력한 tool-calling 모델 주변에 범위가 제한된 주견 있는 하네스가 우리가 실행한 모든 작업에서 야심 찬 자율 에이전트를 능가합니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년에 로컬 자율 AI 에이전트가 실제로 작동합니까?',
@@ -3619,7 +3619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '실제 작업을 완수하는 두 스택: Cline + Ollama와 Continue.dev Agent. 두 스택 모두 단일 IDE로 범위가 제한되고, tool-calling 모델을 실행하며, 단계마다 인간 승인이 필요합니다.',
           '세 가지 스택이 명확하지 않은 방식으로 실패합니다: LangGraph + Ollama(긴 계획 범위에서 취약), OpenInterpreter(셸 실행에 너무 적극적), MetaGPT local(멀티에이전트 역할극 붕괴).',
           'AutoGPT-local은 2026년 5월 기준 사실상 사용 불가입니다. 프로젝트가 정체되고, 의존성이 깨졌으며, 계획 루프가 몇 분 내에 표류합니다.',
-          'Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 어떤 스택에서든 작동합니다. 7B 이하 모델은 모든 스택에서 실패합니다.',
+          'Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 어떤 스택에서든 작동합니다. 7B 이하 모델은 모든 스택에서 실패합니다.',
           '감독 비용이 중요한 지표입니다. "최고의" 에이전트는 자율 실행 시간이 가장 긴 것이 아니라, 실제로 승인을 읽게 되는 것입니다.',
           '2027년 전망: 장기 계획이 점진적으로 개선될 것입니다. 실제 작업에서의 무감독 자율성은 데모가 무엇을 보여주든 올해는 실현되지 않을 것입니다.',
         ],
@@ -3657,7 +3657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2026년 5월 실제 작업을 완수하는 두 가지 스택:** Cline + Ollama(VS Code에서의 자율 코딩 에이전트)와 Continue.dev Agent 모드입니다. 두 스택 모두 하나의 에디터, 하나의 모델, 단계별 하나의 승인 게이트로 범위가 제한됩니다.',
           '**세 가지 스택이 놀라운 방식으로 실패합니다:** LangGraph + Ollama 오케스트레이션은 4–5단계를 초과하는 계획 범위에서 취약하고, OpenInterpreter는 감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행하며, MetaGPT local의 멀티에이전트 역할극은 두 번의 핸드오프 후 붕괴됩니다.',
           '**하나의 스택은 사용 불가입니다:** AutoGPT-local은 사실상 방치되어 있습니다. 의존성이 최신 Ollama와 맞지 않고, 계획 루프가 몇 분 내에 순환 tool 호출로 표류하며, 문제에 응답하는 유지 관리자가 없습니다.',
-          '**Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다.** Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 모든 스택에서 깔끔한 tool 호출을 실행합니다. 7B 이하 모델은 이를 감싸는 에이전트에 관계없이 잘못 형성된 호출을 실행합니다.',
+          '**Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 모든 스택에서 깔끔한 tool 호출을 실행합니다. 7B 이하 모델은 이를 감싸는 에이전트에 관계없이 잘못 형성된 호출을 실행합니다.',
           '**2026년에는 "감독받는 어시스턴트" 모델이 승리합니다.** 다단계 행동을 제안하고 승인을 위해 멈추는 에이전트가 감독 없이 실행하려는 에이전트보다 더 많은 작업을 완수합니다. 이것은 2026년 LLM 특성의 한계이지 UX 선호도가 아닙니다.',
           '**감독 비용이 중요한 지표입니다.** 세 번의 승인이 필요한 30분 작업은 납품 가능합니다. 스무 번의 승인이 필요한 2시간 작업은 그렇지 않습니다. 당신이 작업을 하고 있고 에이전트는 그저 속도를 늦추고 있는 것입니다.',
           '**비용은 실재하지만 작습니다.** 로컬 추론만, API 지출 없음, 전기가 유일한 한계 비용입니다. 작업당 토큰 소비가 제약입니다. 에이전트 루프는 다단계 작업에서 30K–80K 토큰을 소비하므로 32K context 모델은 빨리 한계에 부딪히고 128K context 모델이 편안합니다.',
@@ -3670,7 +3670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**테스트된 스택:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama(맞춤형), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**테스트된 작업:** 주제 리서치, 다중 파일 리팩터링, 이메일 초안 트리아지, 스크레이프-요약, 버그 디버깅.',
           '**하드웨어:** Apple M5 Max 64 GB 통합 메모리와 2× NVIDIA RTX 3090 24 GB 데스크톱. 두 기기 모두 Qwen3-Coder 30B Q4_K_M을 32K context로 편안하게 실행합니다.',
-          '**모델:** Qwen3-Coder 30B(주), GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B(2026년 5월 기준 신뢰할 수 있는 4가지 tool-caller).',
+          '**모델:** Qwen3-Coder 30B(주), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B(2026년 5월 기준 신뢰할 수 있는 4가지 tool-caller).',
           '**평가 형태:** 2개 스택이 5가지 작업 모두에서 신뢰할 수 있고, 3개 스택은 각 1–2가지 작업에서 신뢰할 수 있으며, 1개 스택은 사용 불가입니다.',
           '**비용:** API 수수료 0원. 350W GPU 데스크톱에서 다단계 작업당 약 전기 비용 ~150–450원(Mac에서는 75원 미만).',
           '**효과적인 감독 패턴:** 읽기 도구는 자동 승인, 모든 쓰기/셸 도구는 수동 승인, 긴 세션 후 감사 로그 검토.',
@@ -3682,7 +3682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**테스트는 모델을 일정하게 유지하고 에이전트 하네스만 변경하였습니다.** 각 스택은 동일한 백엔드(Ollama로 Qwen3-Coder 30B Q4_K_M 제공)에 대해 동일한 다섯 가지 작업을 받았으므로, 실패는 모델이 아닌 하네스에 귀속됩니다.',
         items: [
-          '**백엔드:** macOS와 Linux에서 Ollama 0.5+. 주 모델 Qwen3-Coder 30B Q4_K_M (32K context). 보조 모델(GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B)은 tool 호출 실패가 단일 모델의 아티팩트가 아님을 확인하는 데 사용하였습니다.',
+          '**백엔드:** macOS와 Linux에서 Ollama 0.5+. 주 모델 Qwen3-Coder 30B Q4_K_M (32K context). 보조 모델(GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B)은 tool 호출 실패가 단일 모델의 아티팩트가 아님을 확인하는 데 사용하였습니다.',
           '**하드웨어:** Apple M5 Max 64 GB MacBook Pro 하나와 2× RTX 3090 24 GB Linux 데스크톱. 두 기기 모두 Qwen3-Coder 30B를 사용 가능한 속도(>15 tokens/s)로 유지합니다.',
           '**작업:** 주제 리서치(틈새 주제에 대한 8개 출처 수집, 중복 제거, 요약), 다중 파일 리팩터링(12개 TypeScript 파일에서 서비스 이름 변경), 이메일 초안 트리아지(40개 메시지 폴더에 대한 요약 및 응답 초안 작성), 스크레이프-요약(5개 URL 읽기 및 비교 요약 작성), 버그 디버깅(기존 테스트가 불안정한 이유 파악).',
           '**실행 빈도:** 각 작업은 30일 기간 동안 스택당 3번 실행되었으며, 매번 새로운 프롬프트를 사용하였습니다. 결과는 "감독 없이 완료", "감독 포함 완료", "부분적", "막힘/실패"로 채점하였습니다.',
@@ -3763,7 +3763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**뛰어난 곳:** 다중 파일 리팩터링(단일 작업에서 12개 파일의 서비스 이름 변경), 탐색적 버그 디버깅("이 테스트가 불안정한 이유 찾기": Cline이 인접한 테스트 파일을 읽고, 의존성을 추적하고, 가설을 제안하고, 편집하고, 테스트를 실행함), 프로젝트 내에서 markdown 결과물을 생성하는 범위 제한적 리서치.',
           '**어려움을 겪는 곳:** 외부 HTTP가 필요한 비코딩 작업(네이티브 브라우저 없음). 이메일 초안 트리아지는 MCP 서버나 셸 도구를 연결해야만 작동하며, 그 시점에는 더 작고 범위가 제한된 도구가 직접 할 수 있는 일을 위해 세 가지를 설정하고 있는 것입니다.',
           '**감독 비용:** 작업당 약 5–12번 승인. 대부분은 읽기 도구(저렴하고 빠른 수락)입니다. 비용이 드는 것은 write_to_file과 execute_command입니다. 수동 승인이 필요하도록 설정하면 드문 잘못된 호출이 실행되기 전에 잡을 수 있습니다.',
-          '**토큰 비용:** 높음. 에이전트가 파일을 읽는 동안 전체 파일 내용이 대화로 스트리밍됩니다. 32K context의 Qwen3-Coder 30B로 12개 파일 리팩터링은 윈도우를 빠르게 소진합니다. 사소하지 않은 작업에는 128K context 모델(DeepSeek Coder V3, Llama 3.3 70B)로 전환하십시오.',
+          '**토큰 비용:** 높음. 에이전트가 파일을 읽는 동안 전체 파일 내용이 대화로 스트리밍됩니다. 32K context의 Qwen3-Coder 30B로 12개 파일 리팩터링은 윈도우를 빠르게 소진합니다. 사소하지 않은 작업에는 128K context 모델(DeepSeek Coder V3, Llama 3.3 70B)로 전환하십시오. (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
           '자동 승인 목록을 포함한 더 자세한 Cline 설정은 [Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코딩 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local)를 참조하십시오.',
         ],
         callouts: [
@@ -3932,7 +3932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '로컬 에이전트를 선택하고 실행할 때의 흔한 실수',
         items: [
           '**실수 1: 자율성 최적화.** "감독 없이 얼마나 오래 실행할 수 있나?"는 잘못된 지표입니다. "작업을 완수하기 위한 승인 횟수?"가 올바릅니다. 자율성 벤치마크로 스택을 선택하면 AutoGPT가 됩니다. 감독 비용으로 선택하면 Cline이 됩니다.',
-          '**실수 2: tool-calling 작업에 소형 모델 사용.** 7B 이하(그리고 tool-calling fine-tuning 없는 대부분의 7B–13B 범용 모델)는 잘못 형성된 tool 호출을 실행합니다. Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B를 사용하고 하네스와 싸우는 것을 멈추십시오.',
+          '**실수 2: tool-calling 작업에 소형 모델 사용.** 7B 이하(그리고 tool-calling fine-tuning 없는 대부분의 7B–13B 범용 모델)는 잘못 형성된 tool 호출을 실행합니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B를 사용하고 하네스와 싸우는 것을 멈추십시오.',
           '**실수 3: 다중 파일 작업에 32K context 사용.** Cline이 전체 파일 내용을 대화로 스트리밍합니다. 8개 파일 작업이 추론 전에 32K 토큰을 소진할 수 있습니다. 사소하지 않은 다중 파일 작업에는 128K context 모델(DeepSeek Coder V3, Llama 3.3 70B)을 사용하십시오.',
           '**실수 4: 모든 것을 자동으로 승인.** "모두 승인" 스위치는 "에이전트가 내 파일을 삭제했다"로 이어지는 진입로입니다. 읽기 도구만 자동 승인하고, 쓰기와 셸에는 수동 승인을 요구하십시오.',
           '**실수 5: 에이전트에서 프로덕션 데이터베이스 쓰기.** 기본적으로 읽기 전용 역할을 실행하십시오. 별도의 쓰기 역할은 명시적으로 필요한 작업 기간 동안만 존재합니다. 잘못된 쓰기의 비용은 무제한입니다.',
@@ -3975,7 +3975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '에이전트가 다단계 작업을 망가지지 않고 처리할 수 있습니까?',
-            a: '강력한 tool-calling 모델(Qwen3-Coder 30B, Gemma 4 27B, GLM-5.1 32B, Llama 3.3 70B)로 최대 5–8단계까지 안정적으로 가능합니다. 그 이상에서는 계획 범위가 표류합니다. 에이전트가 파일을 다시 읽고, 동일한 검색을 다시 실행하거나 모순된 다음 단계를 제안합니다. 올바른 패턴은 "모델이 계획을 제안하고, 인간이 계획을 승인하고, 모델이 한 번에 한 단계씩 실행"이며, 25단계의 자율 실행이 아닙니다.',
+            a: '강력한 tool-calling 모델(Qwen3-Coder 30B, Gemma 4 27B, GLM-4.7 32B, Llama 3.3 70B)로 최대 5–8단계까지 안정적으로 가능합니다. 그 이상에서는 계획 범위가 표류합니다. 에이전트가 파일을 다시 읽고, 동일한 검색을 다시 실행하거나 모순된 다음 단계를 제안합니다. 올바른 패턴은 "모델이 계획을 제안하고, 인간이 계획을 승인하고, 모델이 한 번에 한 단계씩 실행"이며, 25단계의 자율 실행이 아닙니다.',
           },
           {
             q: '에이전트가 장기 계획에서 실패하는 이유는 무엇입니까?',
@@ -4004,7 +4004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 자료',
         items: [
           '[MCP로 Ollama를 데이터베이스와 API에 연결하기: 2026년 로컬 에이전트 설정](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 에이전트를 지원하는 것. 파일 시스템, 데이터베이스, 브라우저, GitHub 도구를 위한 프로토콜 레이어.',
-          '[2026년 Tool Calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 모델 레이어. 권장 tool-caller(Qwen3-Coder, Gemma 4, GLM-5.1, Llama 3.3)의 직접 벤치마크 비교.',
+          '[2026년 Tool Calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 모델 레이어. 권장 tool-caller(Qwen3-Coder, Gemma 4, GLM-4.7, Llama 3.3)의 직접 벤치마크 비교.',
           '[Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코딩 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local) — 코딩 유형 작업을 위한 인접 하네스 비교.',
           '[EU 준법 및 기업 워크플로를 위한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-business-workflows-eu-compliance) — GDPR/EU AI Act 하에 운영하는 기업을 위한 응용 컨텍스트.',
           '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 더 넓은 오픈 웨이트 환경의 모델 참조.',
