@@ -104,6 +104,21 @@ rule requires including them):
   Cohere the same way as the other 12 labs from now on, don't rely on this
   note to remember it)
 
+**Co-primary sources for labs with both open-weights and a hosted API**
+(added 2026-07 cycle, after the Kimi K2.6 methodology miss — see
+`docs/CONTENT_FOLLOWUPS.md` for the incident writeup): for any lab that
+publishes BOTH an open-weights GitHub org AND a hosted API, the GitHub org
+page is NOT sufficient verification on its own. Check the hosted
+API/pricing docs page and the official Hugging Face model card
+**alongside** GitHub, as co-primary sources — not as a fallback used only
+when GitHub is unclear. Root cause: Moonshot AI's hosted API and
+Hugging Face releases (Kimi K2.6) shipped ahead of their GitHub org page's
+pinned repos, so a GitHub-only check concluded K2.6 didn't exist when it
+had already been generally available for months. This applies to any lab
+with the same shape (open-weights repo + hosted API) — Zhipu/Z.ai,
+Alibaba/Qwen, Mistral AI, and DeepSeek all fit this pattern, not just
+Moonshot.
+
 For each: WebFetch the official page. Extract model name, release date,
 open/closed status, and whether it has been superseded. If a fact can't be
 verified from an official source, leave the field null and note
