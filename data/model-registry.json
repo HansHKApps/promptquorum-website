@@ -503,7 +503,43 @@
       "superseded_by": "Kimi K2.5",
       "source_url": "https://github.com/MoonshotAI/Kimi-K2",
       "verified_date": "2026-07-13",
-      "notes": "1T total / 32B active params, MoE. Site mentions 'Kimi K2.6' (4x) — could NOT verify a K2.6 release from any official Moonshot source in this pass (found K2, K2 Thinking, K2.5 only, corroborated independently by AWS Bedrock's Moonshot catalog which also stops at K2.5/K2-Thinking). Flag 'Kimi K2.6' site mentions for a dedicated manual check — this may be a site error (K2.6 vs K2.5) rather than a staleness issue."
+      "notes": "1T total / 32B active params, MoE. Site mentions 'Kimi K2.6' (4x) — could NOT verify a K2.6 release from any official Moonshot source (checked github.com/MoonshotAI org page, Kimi-K2 and Kimi-K2.5 repos, and the Kimi API newsletter blog; lineage confirmed is K1.5 -> K2 -> K2 Thinking / K2 Thinking Turbo -> K2.5, no K2.6). AWS Bedrock's Moonshot catalog independently stops at K2.5/K2-Thinking too. Git history shows the site's 'K2.6' active-param figure (32B) was corrected from an earlier wrong 42B on 2026-06-01, but the version label 'K2.6' was kept — the corrected 32B/1T figure exactly matches plain Kimi K2's real spec, not any K2.5/K2.6 release. Strong evidence 'Kimi K2.6' is a naming error for 'Kimi K2', not a staleness issue. See docs/MODEL_REGISTRY_REFRESH.md 2026-07 cycle notes before editing."
+    },
+    {
+      "company": "Cohere",
+      "family": "Command",
+      "model": "Command A+",
+      "type": "closed",
+      "release_date": "2026-05",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.cohere.com/docs/models",
+      "verified_date": "2026-07-13",
+      "notes": "command-a-plus-05-2026. Cohere's own docs: 'the last model in the Command A family', current flagship with vision/reasoning/translation."
+    },
+    {
+      "company": "Cohere",
+      "family": "Command",
+      "model": "Command A",
+      "type": "closed",
+      "release_date": "2025-03",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.cohere.com/docs/models",
+      "verified_date": "2026-07-13",
+      "notes": "command-a-03-2025. High-performance model for agents and RAG; still listed as available alongside Command A+ variants (translate/reasoning/vision specializations)."
+    },
+    {
+      "company": "Cohere",
+      "family": "Command",
+      "model": "Command R+",
+      "type": "closed",
+      "release_date": "2024-08",
+      "status": "superseded",
+      "superseded_by": "Command A",
+      "source_url": "https://docs.cohere.com/docs/models",
+      "verified_date": "2026-07-13",
+      "notes": "command-r-plus-08-2024. Cohere's own docs state Command A supersedes Command R+ for enterprise deployment. Site mentions 'Command R+ 104B' (4x) — added to source-lab coverage this cycle per the spec's 'adjust list if a lab is added/dropped from site content' rule."
     }
   ]
 }

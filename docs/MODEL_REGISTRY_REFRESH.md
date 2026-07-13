@@ -94,11 +94,15 @@ is added/dropped from site content):
 - Microsoft (for Phi family, azure.microsoft.com)
 
 **Added for this repo** (site content references these families heavily
-enough — GLM 25+ mentions incl. GLM-5.1, Kimi 5+ mentions incl. K2.6 — that
-the "adjust list only if a lab is added/dropped from site content" rule
-requires including them):
+enough — GLM 25+ mentions, Kimi 5+ mentions, Cohere Command R+ 4 mentions —
+that the "adjust list only if a lab is added/dropped from site content"
+rule requires including them):
 - Zhipu AI / Z.ai (GLM family — open.bigmodel.cn, docs.z.ai)
 - Moonshot AI (Kimi family — platform.moonshot.ai, github.com/MoonshotAI)
+- Cohere (Command family — docs.cohere.com; added 2026-07 cycle follow-up
+  after the initial pass missed it despite 4 site mentions — check for
+  Cohere the same way as the other 12 labs from now on, don't rely on this
+  note to remember it)
 
 For each: WebFetch the official page. Extract model name, release date,
 open/closed status, and whether it has been superseded. If a fact can't be

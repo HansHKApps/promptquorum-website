@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen for Local Coding 2026: Which Wins?',
@@ -105,8 +105,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelOverview: {
         id: 'model-overview',
         title: 'Model Overview — What You Are Comparing',
-        content:
+        content: [
           '**DeepSeek and Qwen approach coding assistance differently: DeepSeek optimizes for benchmark scores at scale, while Qwen optimizes for consumer hardware runability.** This distinction determines which model is actually usable locally.',
+          '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The DeepSeek models covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
+        ],
         columns: ['Model', 'Parameters', 'Architecture', 'Local-runnable?', 'Recommended use'],
         rows: [
           {
@@ -383,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder for local coding: Qwen leads HumanEval (~88.4%); DeepSeek-Coder edges repo-level and fill-in-the-middle. VRAM, speed, and winner by language, vs CodeLlama and Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026',
@@ -399,7 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen para Coding Local 2026: ¿Cuál Gana?',
@@ -493,8 +495,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelOverview: {
         id: 'model-overview',
         title: 'Descripción de modelos — Qué estás comparando',
-        content:
+        content: [
           '**DeepSeek y Qwen abordan la asistencia de coding de forma diferente: DeepSeek optimiza para puntuaciones en benchmarks a gran escala, mientras que Qwen optimiza para ejecutarse en hardware de consumidor.** Esta distinción determina qué modelo es realmente utilizable de forma local.',
+          '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Los modelos de DeepSeek tratados aquí no se están descontinuando y siguen siendo totalmente válidos para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
+        ],
         columns: ['Modelo', 'Parámetros', 'Arquitectura', '¿Ejecutable localmente?', 'Uso recomendado'],
         rows: [
           {
@@ -773,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder para coding local: Qwen lidera HumanEval (~88,4 %); DeepSeek-Coder destaca en autocompletado a nivel de repo y fill-in-the-middle. VRAM, velocidad y ganador por lenguaje, frente a CodeLlama y Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/es/power-local-llm/deepseek-vs-qwen-coding-local-2026',
@@ -789,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '로컬 코딩 AI DeepSeek vs Qwen 2026: 승자는?',
@@ -883,8 +887,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelOverview: {
         id: 'model-overview',
         title: '모델 개요 — 비교 대상',
-        content:
+        content: [
           '**DeepSeek과 Qwen은 코딩 지원에 대한 접근 방식이 다릅니다: DeepSeek는 대규모 벤치마크 점수 최적화에 초점을 맞추고, Qwen은 소비자 하드웨어에서의 실행 가능성을 최적화합니다.** 이 차이가 어느 모델이 실제로 로컬에서 사용 가능한지를 결정합니다.',
+          '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 DeepSeek 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
+        ],
         columns: ['모델', '파라미터', '아키텍처', '로컬 실행 가능?', '권장 사용 사례'],
         rows: [
           {
@@ -1163,7 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder 로컬 코딩: Qwen이 HumanEval 선도(약 88.4%), DeepSeek-Coder는 repo-level 및 fill-in-the-middle에서 근소 우세. VRAM, 속도, 언어별 승자, CodeLlama·Llama 3 대비.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026',
@@ -1179,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?',
@@ -1228,6 +1234,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Wenn der Code die eigene Maschine nicht verlassen darf: Qwen2.5-Coder / Qwen3-Coder 32B verwenden — es erzielt den höchsten HumanEval-Wert. DeepSeek-Coder ist ein knapper Zweiter und etwas besser beim Vervollständigen von Code innerhalb einer bestehenden Datei (Fill-in-the-Middle), doch sein stärkstes Modell benötigt Cloud-API-Zugang.' },
         ],
       },
+      modelUpdate: {
+        id: 'deepseek-v4-update',
+        title: 'Update',
+        content:
+          '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten DeepSeek-Modelle werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
+      },
       internalLinks: {
         id: 'see-also',
         title: 'Verwandte Anleitungen',
@@ -1265,7 +1277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?',
       description: 'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder für lokales Coding: Qwen führt HumanEval (~88,4 %); DeepSeek-Coder liegt bei Repo-Level und Fill-in-the-Middle vorn. VRAM, Geschwindigkeit, vs CodeLlama und Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1276,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?',
@@ -1323,6 +1335,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Si le code ne doit pas quitter votre machine : utilisez Qwen2.5-Coder / Qwen3-Coder 32B — il obtient le meilleur score au test HumanEval. DeepSeek-Coder est un second très proche et légèrement meilleur pour compléter du code au sein d\'un fichier existant (fill-in-the-middle), mais son modèle le plus puissant nécessite un accès API cloud.' },
         ],
       },
+      modelUpdate: {
+        id: 'deepseek-v4-update',
+        title: 'Mise à jour',
+        content:
+          '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les modèles DeepSeek présentés ici ne sont pas abandonnés et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
+      },
       internalLinks: {
         id: 'see-also',
         title: 'Guides associés',
@@ -1359,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?',
       description: 'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder pour le coding local : Qwen mène HumanEval (~88,4 %) ; DeepSeek-Coder devance en repo-level et fill-in-the-middle. VRAM, vitesse, vs CodeLlama et Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1370,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？',
@@ -1417,6 +1435,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'コードを自分のマシンから外に出したくない場合：Qwen2.5-Coder / Qwen3-Coder 32Bを使用——HumanEvalコーディングテストで最高スコア。DeepSeek-Coderは僅差の2番手で、既存ファイル内でコードを補完するfill-in-the-middleが若干優秀だが、最強モデルはクラウドAPIアクセスが必要。' },
         ],
       },
+      modelUpdate: {
+        id: 'deepseek-v4-update',
+        title: '更新情報',
+        content:
+          '**更新:** DeepSeekはその後、新しいフラッグシップ世代としてDeepSeek-V4(FlashおよびPro)をリリースしました。オープンウェイトとしても提供されています。本記事で扱うDeepSeekモデルは廃止されるものではなく、引き続きローカルで問題なく利用できます。最新のアーキテクチャを求める場合は、V4もあわせて検討する価値があります。',
+      },
       internalLinks: {
         id: 'see-also',
         title: '関連ガイド',
@@ -1453,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？',
       description: 'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder：ローカルコーディングではQwenがHumanEvalで首位（約88.4%）、DeepSeek-Coderはリポジトリレベル・fill-in-the-middleで優位。VRAM要件、速度、言語別勝者、CodeLlama・Llama 3との比較。',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1464,7 +1488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen本地编程2026：哪个更好？',
@@ -1514,7 +1538,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: '基准测试结果——HumanEval、LiveCodeBench和SWE-bench',
-        content: '**HumanEval衡量单函数Python代码生成能力。LiveCodeBench衡量含2023-2026测试用例的竞赛编程题。SWE-bench衡量真实GitHub问题解决能力。** 所有分数均为pass@1（单次尝试）。',
+        content: [
+          '**HumanEval衡量单函数Python代码生成能力。LiveCodeBench衡量含2023-2026测试用例的竞赛编程题。SWE-bench衡量真实GitHub问题解决能力。** 所有分数均为pass@1（单次尝试）。',
+          '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 DeepSeek 模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
+        ],
         columns: ['模型', 'HumanEval', 'LiveCodeBench', 'SWE-bench Lite', '最擅长'],
         rows: [
           { '0': 'Qwen2.5-Coder / Qwen3-Coder 32B（本地）', '1': '88.4%', '2': '43.6%', '3': '42.5%', '4': 'HumanEval、Rust、C++、重构' },
@@ -1566,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'DeepSeek vs Qwen本地编程2026：哪个更好？',
       description: 'Qwen2.5-Coder / Qwen3-Coder与DeepSeek-Coder：本地编程中Qwen在HumanEval领先（约88.4%），DeepSeek-Coder在仓库级和fill-in-the-middle方面占优。显存要求、推理速度、各语言胜者，以及与CodeLlama和Llama 3的对比。',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
@@ -1578,7 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen para Codificação Local 2026: Qual Vence?',
@@ -1672,8 +1699,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelOverview: {
         id: 'model-overview',
         title: 'Visão geral dos modelos — O que você está comparando',
-        content:
+        content: [
           '**DeepSeek e Qwen abordam a assistência de codificação de formas diferentes: o DeepSeek otimiza para pontuações em benchmarks em escala, enquanto o Qwen otimiza para executar em hardware de consumidor.** Essa distinção determina qual modelo é de fato utilizável localmente.',
+          '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. Os modelos da DeepSeek abordados aqui não estão sendo descontinuados e continuam totalmente válidos para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
+        ],
         columns: ['Modelo', 'Parâmetros', 'Arquitetura', 'Executável localmente?', 'Uso recomendado'],
         rows: [
           {
@@ -1952,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Qwen2.5-Coder / Qwen3-Coder vs DeepSeek-Coder para codificação local: Qwen lidera o HumanEval (~88,4%); DeepSeek-Coder leva vantagem em nível de repositório e fill-in-the-middle. VRAM, velocidade e vencedor por linguagem, vs CodeLlama e Llama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026',
@@ -1968,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة المحلية ⁨2026⁩: أيّهما يفوز؟',
@@ -2062,8 +2091,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelOverview: {
         id: 'model-overview',
         title: 'نظرة عامة على النماذج — ما الذي تقارنه',
-        content:
+        content: [
           '**يقارب DeepSeek وQwen مساعدة البرمجة بطريقتين مختلفتين: DeepSeek يُحسّن للحصول على درجات معيارية عالية، بينما يُحسّن Qwen للعمل على أجهزة المستهلك.** هذا الفارق يحدد أيّ النموذجين قابل فعلاً للاستخدام محلياً.',
+          '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نماذج DeepSeek المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
+        ],
         columns: ['النموذج', 'المعاملات', 'البنية', 'قابل للتشغيل المحلي؟', 'الاستخدام الموصى به'],
         rows: [
           {
@@ -2342,7 +2373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description:
         'Qwen2.5-Coder / Qwen3-Coder مقابل DeepSeek-Coder للبرمجة المحلية: يتصدّر Qwen مقياس HumanEval (~88.4%)؛ يتقدّم DeepSeek-Coder في مستوى المستودع وملء الوسط. متطلبات VRAM والسرعة والفائز حسب اللغة، مقابل CodeLlama وLlama 3.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-01',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026',

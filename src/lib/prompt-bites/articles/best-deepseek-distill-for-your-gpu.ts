@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Best DeepSeek Distill for Your GPU 2026 + Ollama Cmd',
     metaDescription: 'Your GPU → the exact DeepSeek-R1 distill to run + the Ollama command. RTX 3060 to dual-GPU, matched in one table. R1 reasoning family (not V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Local LLM users matching a DeepSeek-R1 reasoning distill to the GPU they own',
     affiliateDisclosure: true,
@@ -95,6 +95,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: This Table Is R1 Only',
         content: [
           '**DeepSeek-R1 is the reasoning family these commands install; DeepSeek-V3 is a separate chat model.** Do not expect a V3 experience from these distills — they are tuned to show step-by-step reasoning for math and logic. V3 is also a 671B MoE and not consumer-runnable; see the [DeepSeek V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
         ],
       },
       faq: {
@@ -127,7 +128,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste DeepSeek-Distill für Ihre GPU 2026 + Ollama-Befehl',
     metaDescription: 'Ihre GPU → die passende DeepSeek-R1-Distill plus den Ollama-Befehl. Von RTX 3060 bis Dual-GPU, in einer Tabelle. R1-Reasoning-Familie (nicht V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Local-LLM-Nutzer, die eine DeepSeek-R1-Reasoning-Distill auf ihre vorhandene GPU abstimmen',
     affiliateDisclosure: true,
@@ -211,6 +212,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs. R1: Diese Tabelle gilt nur für R1',
         content: [
           '**DeepSeek-R1 ist die Reasoning-Familie, die diese Befehle installieren; DeepSeek-V3 ist ein separates Chat-Modell.** Erwarten Sie von diesen Distills kein V3-Erlebnis — sie sind darauf abgestimmt, Schritt-für-Schritt-Reasoning für Mathematik und Logik zu zeigen. V3 ist zudem ein 671B-MoE und nicht auf Consumer-Hardware lauffähig; siehe den [DeepSeek-V3-Hardware-Bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
         ],
       },
       faq: {
@@ -243,7 +245,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleure distillation DeepSeek pour GPU 2026 + Ollama',
     metaDescription: 'Votre GPU → la distillation DeepSeek-R1 à exécuter et la commande Ollama. De la RTX 3060 au double GPU, dans un tableau. Famille R1 (pas V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs de LLM locaux associant une distillation de raisonnement DeepSeek-R1 au GPU dont ils disposent',
     affiliateDisclosure: true,
@@ -327,6 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1 : ce tableau ne concerne que R1',
         content: [
           '**DeepSeek-R1 est la famille de raisonnement qu\'installent ces commandes ; DeepSeek-V3 est un modèle de chat distinct.** N\'attendez pas une expérience V3 de ces distillations — elles sont réglées pour montrer un raisonnement étape par étape en mathématiques et en logique. V3 est en outre un MoE 671B non exécutable sur du matériel grand public ; voir la [fiche matériel DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
         ],
       },
       faq: {
@@ -359,7 +362,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill GPU別おすすめ + Ollamaコマンド 2026',
     metaDescription: 'お使いのGPU → 実行すべきDeepSeek-R1 distillとOllamaコマンド。RTX 3060からデュアルGPUまで1つの表に。R1推論ファミリー（V3ではありません）。',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: '所有するGPUにDeepSeek-R1推論distillを合わせたいローカルLLMユーザー',
     affiliateDisclosure: true,
@@ -443,6 +446,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3とR1：この表はR1専用です',
         content: [
           '**DeepSeek-R1はこれらのコマンドがインストールする推論ファミリーであり、DeepSeek-V3は別個のチャットモデルです。** これらのdistillにV3のような体験を期待しないでください。数学と論理の段階的な推論を示すよう調整されています。さらにV3は671B MoEであり、コンシューマー向けハードウェアでは実行できません。[DeepSeek V3ハードウェアバイト](/prompt-bites/deepseek-v3-local-hardware-requirements)を参照してください。',
+          '**更新:** DeepSeekはその後、新しいフラッグシップ世代としてDeepSeek-V4(FlashおよびPro)をリリースしました。オープンウェイトとしても提供されています。本記事で扱うR1の蒸留モデルは廃止されるものではなく、引き続きローカルで問題なく利用できます。最新のアーキテクチャを求める場合は、V4もあわせて検討する価値があります。',
         ],
       },
       faq: {
@@ -475,7 +479,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'GPU 最佳 DeepSeek 蒸馏模型 2026 + Ollama 命令',
     metaDescription: '你的 GPU → 应运行的 DeepSeek-R1 蒸馏模型加 Ollama 命令。从 RTX 3060 到双 GPU，一张表对应。R1 推理家族（非 V3）。',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: '希望将 DeepSeek-R1 推理蒸馏模型与自己 GPU 匹配的本地 LLM 用户',
     affiliateDisclosure: true,
@@ -559,6 +563,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 与 R1：此表仅针对 R1',
         content: [
           '**DeepSeek-R1 是这些命令安装的推理家族；DeepSeek-V3 是另一个独立的聊天模型。** 不要指望这些蒸馏模型提供 V3 体验——它们经过调优以展示数学和逻辑的逐步推理。此外 V3 是 671B MoE，无法在消费级硬件上运行；参见 [DeepSeek V3 硬件简报](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
+          '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
         ],
       },
       faq: {
@@ -591,7 +596,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor destilación DeepSeek para tu GPU 2026 + Ollama',
     metaDescription: 'Tu GPU → la destilación DeepSeek-R1 exacta a ejecutar más el comando Ollama. De la RTX 3060 a doble GPU, en una tabla. Familia R1 (no V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de LLM locales que emparejan una destilación de razonamiento DeepSeek-R1 con la GPU que tienen',
     affiliateDisclosure: true,
@@ -675,6 +680,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: esta tabla es solo para R1',
         content: [
           '**DeepSeek-R1 es la familia de razonamiento que instalan estos comandos; DeepSeek-V3 es un modelo de chat aparte.** No esperes una experiencia V3 de estas destilaciones: están ajustadas para mostrar razonamiento paso a paso en matemáticas y lógica. Además, V3 es un MoE de 671B y no se puede ejecutar en hardware de consumo; consulta la [ficha de hardware de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
         ],
       },
       faq: {
@@ -707,7 +713,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor destilação DeepSeek para sua GPU 2026 + Ollama',
     metaDescription: 'Sua GPU → a destilação DeepSeek-R1 exata para rodar mais o comando Ollama. Da RTX 3060 ao GPU duplo, em uma tabela. Família R1 (não V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'Usuários de LLM local que combinam uma destilação de raciocínio DeepSeek-R1 com a GPU que possuem',
     affiliateDisclosure: true,
@@ -791,6 +797,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: esta tabela é só de R1',
         content: [
           '**A DeepSeek-R1 é a família de raciocínio que estes comandos instalam; a DeepSeek-V3 é um modelo de chat separado.** Não espere uma experiência V3 dessas destilações — elas são ajustadas para mostrar raciocínio passo a passo em matemática e lógica. A V3 também é um MoE de 671B e não roda em hardware de consumo; veja a [ficha de hardware da DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
         ],
       },
       faq: {
@@ -823,7 +830,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل ⁨DeepSeek⁩ مقطّر لكرت الشاشة ⁨2026⁩ + أمر ⁨Ollama⁩',
     metaDescription: 'كرت الشاشة لديك → نموذج ⁨DeepSeek-R1⁩ المقطّر المناسب وأمر ⁨Ollama⁩. من ⁨RTX 3060⁩ إلى كرتين، في جدول واحد. عائلة ⁨R1⁩ الاستدلالية (وليس ⁨V3⁩).',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو نماذج LLM المحلية الذين يطابقون نموذج DeepSeek-R1 المقطّر للاستدلال مع كرت الشاشة الذي يمتلكونه',
     affiliateDisclosure: true,
@@ -907,6 +914,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 مقابل R1: هذا الجدول لـ R1 فقط',
         content: [
           '**DeepSeek-R1 هي العائلة الاستدلالية التي تثبّتها هذه الأوامر؛ أما DeepSeek-V3 فهو نموذج محادثة منفصل.** لا تتوقع تجربة V3 من هذه النماذج المقطّرة — فهي مضبوطة لإظهار الاستدلال خطوة بخطوة في الرياضيات والمنطق. كما أن V3 هو نموذج MoE بحجم 671B ولا يمكن تشغيله على عتاد المستهلك؛ راجع [بطاقة عتاد DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
         ],
       },
       faq: {
@@ -939,7 +947,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'GPU별 최적 DeepSeek 디스틸 2026 + Ollama 명령어',
     metaDescription: '내 GPU → 실행할 DeepSeek-R1 디스틸과 Ollama 명령어. RTX 3060부터 듀얼 GPU까지 한 표로. R1 추론 계열(V3 아님).',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-13',
     educationalLevel: 'Intermediate',
     audience: '보유한 GPU에 DeepSeek-R1 추론 디스틸을 맞추려는 로컬 LLM 사용자',
     affiliateDisclosure: true,
@@ -1023,6 +1031,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 대 R1: 이 표는 R1 전용입니다',
         content: [
           '**DeepSeek-R1은 이 명령어가 설치하는 추론 계열이며, DeepSeek-V3는 별도의 채팅 모델입니다.** 이 디스틸에서 V3 경험을 기대하지 마십시오 — 이들은 수학과 논리에 대한 단계별 추론을 보여주도록 조정되어 있습니다. 또한 V3는 671B MoE이며 소비자 하드웨어에서 실행할 수 없습니다. [DeepSeek V3 하드웨어 바이트](/prompt-bites/deepseek-v3-local-hardware-requirements)를 참조하십시오.',
+          '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
         ],
       },
       faq: {

@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The budget tier runs every 7B model and most 13B models — and for most first-time local-LLM users, that is all the capability they need.** The RTX 3060 12 GB is the recommended pick; the RX 6700 XT is the cheaper alternative if you accept AMD setup friction. The used market matters most in this tier — new prices have risen sharply with the 2026 surge.',
         items: [
-          '**RTX 3060 12 GB ($150-220 used, $350-680 new):** 12 GB VRAM, 170 W, 15-20 tok/s on 7B models at Q4. Runs Mistral Small, Qwen3 8B, DeepSeek-R1 7B, and most 13B models. The 12 GB variant is the one to buy — avoid the 6 GB variant, which is limited to 3B models. Buy used — new stock is discontinued and inflated.',
+          '**RTX 3060 12 GB ($150-220 used, $350-680 new):** 12 GB VRAM, 170 W, 15-20 tok/s on 7B models at Q4. Runs Mistral Small, Qwen3 8B, DeepSeek-R1 7B, and most 13B models. The 12 GB variant is the one to buy — avoid the 6 GB variant, which is limited to 3B models. Buy used — new stock is discontinued and inflated. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
           '**RX 6700 XT ($130-200 used, discontinued new):** 12 GB VRAM, 230 W, 10-14 tok/s on 7B models. The cheapest way into local LLMs, but slower than the RTX 3060 and dependent on AMD ROCm, which adds setup time.',
           '**Why buy this tier:** lowest cost of entry, low power draw on the RTX 3060, and enough VRAM for the 7B-13B models that cover general chat, coding assistance, and summarization.',
           '**Why skip this tier:** if you already know you want 14B or larger models, the budget tier will frustrate you within weeks — start at the mid tier instead.',
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Die Budget-Klasse führt jedes 7B-Modell und die meisten 13B-Modelle aus — und für die meisten Erstnutzer lokaler LLMs ist genau das die gesamte benötigte Leistung.** Die RTX 3060 12 GB ist die empfohlene Wahl; die RX 6700 XT ist die günstigere Alternative, wenn Sie den AMD-Einrichtungsaufwand in Kauf nehmen. In dieser Klasse zählt der Gebrauchtmarkt am meisten — die Neupreise sind mit dem Anstieg 2026 stark gestiegen, der Gebrauchtmarkt läuft in Deutschland vor allem über eBay Kleinanzeigen.',
         items: [
-          '**RTX 3060 12 GB (neu 545–575 €, gebraucht deutlich günstiger):** 12 GB VRAM, 170 W, 15–20 Token/s bei 7B-Modellen mit Q4. Führt Mistral Small, Qwen3 8B, DeepSeek-R1 7B und die meisten 13B-Modelle aus. Kaufen Sie ausdrücklich die 12-GB-Variante — meiden Sie die 6-GB-Variante, die auf 3B-Modelle beschränkt ist. Kaufen Sie gebraucht, wo möglich; der Neupreis hat sich im Preisanstieg ungefähr verdoppelt.',
+          '**RTX 3060 12 GB (neu 545–575 €, gebraucht deutlich günstiger):** 12 GB VRAM, 170 W, 15–20 Token/s bei 7B-Modellen mit Q4. Führt Mistral Small, Qwen3 8B, DeepSeek-R1 7B und die meisten 13B-Modelle aus. Kaufen Sie ausdrücklich die 12-GB-Variante — meiden Sie die 6-GB-Variante, die auf 3B-Modelle beschränkt ist. Kaufen Sie gebraucht, wo möglich; der Neupreis hat sich im Preisanstieg ungefähr verdoppelt. (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
           '**RX 6700 XT (gebraucht — Preis prüfen):** 12 GB VRAM, 230 W, 10–14 Token/s bei 7B-Modellen. Der günstigste Einstieg in lokale LLMs, aber langsamer als die RTX 3060 und auf AMD ROCm angewiesen, was Einrichtungszeit kostet.',
           '**Warum diese Klasse kaufen:** niedrigste Einstiegskosten, geringe Leistungsaufnahme bei der RTX 3060 und genug VRAM für die 7B–13B-Modelle, die allgemeinen Chat, Programmierhilfe und Zusammenfassungen abdecken.',
           '**Warum diese Klasse überspringen:** Wenn Sie bereits wissen, dass Sie 14B-Modelle oder größer wollen, wird die Budget-Klasse Sie binnen Wochen frustrieren — beginnen Sie stattdessen in der Mittelklasse.',
@@ -1412,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La gamme budget exécute tout modèle 7B et la plupart des modèles 13B — et pour la plupart des nouveaux utilisateurs de LLM locaux, c\'est toute la capacité dont ils ont besoin.** Le RTX 3060 12 Go est le choix recommandé ; le RX 6700 XT est l\'alternative moins chère si vous acceptez la friction de configuration AMD. Le marché de l\'occasion compte le plus dans cette gamme — les prix du neuf ont fortement grimpé avec la flambée de 2026.',
         items: [
-          '**RTX 3060 12 Go (env. 340-400 € neuf, moins cher d\'occasion) :** 12 Go de VRAM, 170 W, 15-20 tok/s sur les modèles 7B en Q4. Exécute Mistral Small, Qwen3 8B, DeepSeek-R1 7B et la plupart des modèles 13B. La variante 12 Go est celle à acheter — évitez la variante 6 Go, limitée aux modèles 3B. Achetez d\'occasion — le stock neuf est en fin de production et gonflé.',
+          '**RTX 3060 12 Go (env. 340-400 € neuf, moins cher d\'occasion) :** 12 Go de VRAM, 170 W, 15-20 tok/s sur les modèles 7B en Q4. Exécute Mistral Small, Qwen3 8B, DeepSeek-R1 7B et la plupart des modèles 13B. La variante 12 Go est celle à acheter — évitez la variante 6 Go, limitée aux modèles 3B. Achetez d\'occasion — le stock neuf est en fin de production et gonflé. (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
           '**RX 6700 XT (env. 430-490 €, fin de production) :** 12 Go de VRAM, 230 W, 10-14 tok/s sur les modèles 7B. La façon la moins chère d\'entrer dans les LLM locaux, mais plus lente que le RTX 3060 et dépendante d\'AMD ROCm, ce qui ajoute du temps de configuration.',
           '**Pourquoi acheter cette gamme :** le coût d\'entrée le plus bas, une faible consommation sur le RTX 3060, et assez de VRAM pour les modèles 7B-13B qui couvrent le chat général, l\'aide au code et le résumé.',
           '**Pourquoi éviter cette gamme :** si vous savez déjà que vous voulez des modèles 14B ou plus, la gamme budget vous frustrera en quelques semaines — commencez plutôt au milieu de gamme.',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**低予算帯はあらゆる7Bモデルとほとんどの13Bモデルを動かします。そして初めてローカルLLMを使う多くの人にとって、それが必要なすべての能力です。** RTX 3060 12 GBが推奨の選択肢で、AMDのセットアップの手間を許容できるならRX 6700 XTがより安い代替です。この帯では中古市場が最も重要です — 新品価格は2026年の急騰で大きく上がりました。',
         items: [
-          '**RTX 3060 12 GB（新品¥40,000前後、中古はさらに安い）：** 12 GB VRAM、170 W、7BモデルをQ4で15～20 tok/s。Mistral Small、Qwen3 8B、DeepSeek-R1 7B、ほとんどの13Bモデルを動かします。買うべきは12 GB版です — 3Bモデルに限られる6 GB版は避けてください。中古で買ってください — 新品在庫は生産終了で価格も高騰しています。',
+          '**RTX 3060 12 GB（新品¥40,000前後、中古はさらに安い）：** 12 GB VRAM、170 W、7BモデルをQ4で15～20 tok/s。Mistral Small、Qwen3 8B、DeepSeek-R1 7B、ほとんどの13Bモデルを動かします。買うべきは12 GB版です — 3Bモデルに限られる6 GB版は避けてください。中古で買ってください — 新品在庫は生産終了で価格も高騰しています。 (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
           '**RX 6700 XT（新品¥44,000前後）：** 12 GB VRAM、230 W、7Bモデルで10～14 tok/s。ローカルLLMへの最も安い入口ですが、RTX 3060より遅く、AMD ROCmに依存するためセットアップ時間が加わります。',
           '**この帯を買う理由：** 最も低い導入コスト、RTX 3060の低消費電力、そして一般的なチャット・コーディング支援・要約をカバーする7B～13Bモデルに十分なVRAM。',
           '**この帯を避ける理由：** 14B以上のモデルがほしいとすでに分かっているなら、低予算帯は数週間で物足りなくなります — 代わりに中位帯から始めてください。',
@@ -2566,7 +2566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**预算档能运行任何 7B 模型和大多数 13B 模型——对大多数首次使用本地大模型的用户来说，这就是他们需要的全部能力。** RTX 3060 12 GB 是推荐之选；如果你接受 AMD 配置的摩擦，RX 6700 XT 是更便宜的替代。这一档次中二手市场最为重要——全新价格随 2026 年涨价大幅上升。',
         items: [
-          '**RTX 3060 12 GB（二手 $150-250，全新 $350-680）：** 12 GB 显存，170 W，7B 模型以 Q4 运行 15-20 tok/s。能运行 Mistral Small、Qwen3 8B、DeepSeek-R1 7B 和大多数 13B 模型。要买的是 12 GB 版本——避开 6 GB 版本，它只能运行 3B 模型。买二手——全新货源已停产且价格虚高。',
+          '**RTX 3060 12 GB（二手 $150-250，全新 $350-680）：** 12 GB 显存，170 W，7B 模型以 Q4 运行 15-20 tok/s。能运行 Mistral Small、Qwen3 8B、DeepSeek-R1 7B 和大多数 13B 模型。要买的是 12 GB 版本——避开 6 GB 版本，它只能运行 3B 模型。买二手——全新货源已停产且价格虚高。 (DeepSeek 此后发布了开源权重新一代模型 DeepSeek-V4——Flash/Pro；R1/V3 仍可在本地正常使用。)',
           '**RX 6700 XT（二手 $130-200，全新已停产）：** 12 GB 显存，230 W，7B 模型 10-14 tok/s。进入本地大模型最便宜的方式，但比 RTX 3060 慢，且依赖 AMD ROCm，会增加配置时间。',
           '**为何买这一档：** 入门成本最低，RTX 3060 功耗低，且有足够显存运行覆盖通用对话、编程辅助和摘要的 7B-13B 模型。',
           '**为何跳过这一档：** 如果你已经知道想要 14B 或更大的模型，预算档会在几周内让你受挫——不如直接从中端档开始。',
@@ -3143,7 +3143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El rango de presupuesto ejecuta cualquier modelo de 7B y la mayoría de los de 13B — y para la mayoría de los usuarios principiantes en LLMs locales, eso es toda la capacidad que necesitan.** La RTX 3060 12 GB es la elección recomendada; la RX 6700 XT es la alternativa más barata si aceptas la fricción de configuración de AMD. El mercado de segunda mano importa más en este rango — los precios de nuevos han subido notablemente con la subida de 2026.',
         items: [
-          '**RTX 3060 12 GB ($150-250 de segunda mano, $350-680 nueva):** 12 GB de VRAM, 170 W, 15-20 tok/s en modelos de 7B en Q4. Ejecuta Mistral Small, Qwen3 8B, DeepSeek-R1 7B y la mayoría de los modelos de 13B. La variante de 12 GB es la que hay que comprar — evita la variante de 6 GB, que se limita a modelos de 3B. Compra de segunda mano — el stock nuevo está descontinuado y tiene precio inflado.',
+          '**RTX 3060 12 GB ($150-250 de segunda mano, $350-680 nueva):** 12 GB de VRAM, 170 W, 15-20 tok/s en modelos de 7B en Q4. Ejecuta Mistral Small, Qwen3 8B, DeepSeek-R1 7B y la mayoría de los modelos de 13B. La variante de 12 GB es la que hay que comprar — evita la variante de 6 GB, que se limita a modelos de 3B. Compra de segunda mano — el stock nuevo está descontinuado y tiene precio inflado. (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
           '**RX 6700 XT ($130-200 de segunda mano, descontinuada nueva):** 12 GB de VRAM, 230 W, 10-14 tok/s en modelos de 7B. La forma más barata de entrar a los LLMs locales, pero más lenta que la RTX 3060 y dependiente de AMD ROCm, lo que añade tiempo de configuración.',
           '**Por qué comprar en este rango:** costo de entrada más bajo, bajo consumo energético en la RTX 3060, y suficiente VRAM para los modelos de 7B-13B que cubren chat general, asistencia de código y resumen.',
           '**Por qué saltarse este rango:** si ya sabes que quieres modelos de 14B o más grandes, el rango de presupuesto te frustrará en pocas semanas — empieza en el rango medio en su lugar.',
@@ -3733,7 +3733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A faixa econômica executa qualquer modelo 7B e a maioria dos modelos 13B — e para a maioria dos usuários iniciantes em LLMs locais, essa é toda a capacidade necessária.** A RTX 3060 12 GB é a escolha recomendada; a RX 6700 XT é a alternativa mais barata se você aceitar o atrito de configuração da AMD. O mercado de usados importa mais nesta faixa — os preços novos subiram acentuadamente com o aumento de 2026.',
         items: [
-          '**RTX 3060 12 GB ($150–250 usada, $350–680 nova):** 12 GB de VRAM, 170 W, 15–20 tok/s em modelos 7B em Q4. Executa Mistral Small, Qwen3 8B, DeepSeek-R1 7B e a maioria dos modelos 13B. A variante de 12 GB é a que você deve comprar — evite a variante de 6 GB, que se limita a modelos 3B. Compre usado — o estoque novo está descontinuado e inflacionado.',
+          '**RTX 3060 12 GB ($150–250 usada, $350–680 nova):** 12 GB de VRAM, 170 W, 15–20 tok/s em modelos 7B em Q4. Executa Mistral Small, Qwen3 8B, DeepSeek-R1 7B e a maioria dos modelos 13B. A variante de 12 GB é a que você deve comprar — evite a variante de 6 GB, que se limita a modelos 3B. Compre usado — o estoque novo está descontinuado e inflacionado. (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)',
           '**RX 6700 XT ($130–200 usada, descontinuada nova):** 12 GB de VRAM, 230 W, 10–14 tok/s em modelos 7B. A forma mais barata de entrar nos LLMs locais, mas mais lenta que a RTX 3060 e dependente do AMD ROCm, que adiciona tempo de configuração.',
           '**Por que comprar nesta faixa:** menor custo de entrada, baixo consumo de energia na RTX 3060 e VRAM suficiente para modelos 7B–13B que cobrem chat geral, assistência de código e resumo.',
           '**Por que pular esta faixa:** se você já sabe que quer modelos 14B ou maiores, a faixa econômica vai frustrá-lo em semanas — comece pela faixa intermediária.',
@@ -4778,7 +4778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**보급형은 7B 모델과 대부분의 13B 모델을 실행할 수 있습니다. 로컬 LLM 초보자 대부분에게는 이것으로 충분합니다.** RTX 3060 12 GB가 추천 선택이고, RX 6700 XT는 AMD 설정 작업을 감수할 경우 더 저렴한 대안입니다. 이 등급에서는 중고 시장이 더욱 중요합니다. 2026년 가격 급등으로 신품 가격이 크게 상승했기 때문입니다.',
         items: [
-          '**RTX 3060 12 GB (중고 $150-250, 신품 $350-680):** VRAM 12 GB, 170 W, Q4에서 7B 모델 15-20 토큰/초. Mistral Small, Qwen3 8B, DeepSeek-R1 7B, 대부분의 13B 모델을 실행합니다. 12 GB 버전을 구매하십시오 — 6 GB 버전은 3B 모델로 제한됩니다. 중고로 구매하십시오. 신품 재고는 단종되어 가격이 부풀려져 있습니다.',
+          '**RTX 3060 12 GB (중고 $150-250, 신품 $350-680):** VRAM 12 GB, 170 W, Q4에서 7B 모델 15-20 토큰/초. Mistral Small, Qwen3 8B, DeepSeek-R1 7B, 대부분의 13B 모델을 실행합니다. 12 GB 버전을 구매하십시오 — 6 GB 버전은 3B 모델로 제한됩니다. 중고로 구매하십시오. 신품 재고는 단종되어 가격이 부풀려져 있습니다. (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
           '**RX 6700 XT (중고 $130-200, 신품 단종):** VRAM 12 GB, 230 W, 7B 모델 10-14 토큰/초. 로컬 LLM 입문의 가장 저렴한 방법이지만, RTX 3060보다 느리고 AMD ROCm 설정이 필요하여 설정 시간이 추가됩니다.',
           '**이 등급을 선택하는 이유:** 가장 낮은 초기 비용, RTX 3060의 낮은 전력 소비, 일반 채팅, 코드 지원, 요약을 포괄하는 7B-13B 모델에 충분한 VRAM.',
           '**이 등급을 건너뛰는 이유:** 14B 이상의 모델을 원한다는 것을 이미 알고 있다면, 보급형은 몇 주 내에 불만족스러울 것입니다. 대신 중급형에서 시작하십시오.',
