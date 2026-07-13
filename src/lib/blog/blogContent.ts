@@ -23536,7 +23536,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Do I need Ollama or LM Studio to use PromptQuorum?',
-              a: 'No. Local AI (Ollama or LM Studio) keeps prompts on your machine and avoids API costs, but you can skip it and use a cloud provider with your own API key instead.',
+              a: 'Yes. PromptQuorum needs an AI backend to run prompts — Ollama or LM Studio is the easiest way to run one locally, but you can also use your own API key for a cloud provider (OpenAI, Anthropic, etc.) instead.',
             },
             {
               q: 'Why does my operating system warn that the app cannot be verified?',
@@ -23578,7 +23578,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Do I need Ollama or LM Studio to use PromptQuorum?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No. Local AI (Ollama or LM Studio) keeps prompts on your machine and avoids API costs, but you can skip it and use a cloud provider with your own API key instead.',
+              text: 'Yes. PromptQuorum needs an AI backend to run prompts — Ollama or LM Studio is the easiest way to run one locally, but you can also use your own API key for a cloud provider (OpenAI, Anthropic, etc.) instead.',
             },
           },
           {
@@ -23718,7 +23718,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'هل أحتاج إلى Ollama أو LM Studio لاستخدام PromptQuorum؟',
-              a: 'لا. يحافظ الذكاء الاصطناعي المحلي (Ollama أو LM Studio) على الأوامر داخل جهازك ويجنّبك تكاليف API، لكن يمكنك تجاوزه واستخدام مزود سحابي بمفتاح API الخاص بك بدلًا من ذلك.',
+              a: 'نعم. يحتاج PromptQuorum إلى محرك ذكاء اصطناعي (AI backend) لتشغيل الأوامر — Ollama أو LM Studio هما أبسط طريقة لتشغيله محليًا، لكن يمكنك أيضًا استخدام مفتاح API الخاص بك للاتصال بمزود سحابي بدلًا من ذلك.',
             },
             {
               q: 'لماذا يحذّر نظام التشغيل لدي من تعذّر التحقق من التطبيق؟',
@@ -23760,7 +23760,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'هل أحتاج إلى Ollama أو LM Studio لاستخدام PromptQuorum؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'لا. يحافظ الذكاء الاصطناعي المحلي (Ollama أو LM Studio) على الأوامر داخل جهازك ويجنّبك تكاليف API، لكن يمكنك تجاوزه واستخدام مزود سحابي بمفتاح API الخاص بك بدلًا من ذلك.',
+              text: 'نعم. يحتاج PromptQuorum إلى محرك ذكاء اصطناعي (AI backend) لتشغيل الأوامر — Ollama أو LM Studio هما أبسط طريقة لتشغيله محليًا، لكن يمكنك أيضًا استخدام مفتاح API الخاص بك للاتصال بمزود سحابي بدلًا من ذلك.',
             },
           },
           {
@@ -23900,7 +23900,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Benötige ich Ollama oder LM Studio, um PromptQuorum zu nutzen?',
-              a: 'Nein. Lokale KI (Ollama oder LM Studio) hält Prompts auf Ihrem Rechner und vermeidet API-Kosten, Sie können dies aber überspringen und stattdessen einen Cloud-Anbieter mit Ihrem eigenen API-Key nutzen.',
+              a: 'Ja. PromptQuorum benötigt ein KI-Backend, um Prompts auszuführen — Ollama oder LM Studio ist der einfachste Weg, eines lokal zu betreiben, Sie können aber auch Ihren eigenen API-Key für einen Cloud-Anbieter nutzen.',
             },
             {
               q: 'Warum warnt mein Betriebssystem, dass die App nicht verifiziert werden kann?',
@@ -23942,7 +23942,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Benötige ich Ollama oder LM Studio, um PromptQuorum zu nutzen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nein. Lokale KI (Ollama oder LM Studio) hält Prompts auf Ihrem Rechner und vermeidet API-Kosten, Sie können dies aber überspringen und stattdessen einen Cloud-Anbieter mit Ihrem eigenen API-Key nutzen.',
+              text: 'Ja. PromptQuorum benötigt ein KI-Backend, um Prompts auszuführen — Ollama oder LM Studio ist der einfachste Weg, eines lokal zu betreiben, Sie können aber auch Ihren eigenen API-Key für einen Cloud-Anbieter nutzen.',
             },
           },
           {
@@ -24082,7 +24082,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '¿Necesito Ollama o LM Studio para usar PromptQuorum?',
-              a: 'No. La IA local (Ollama o LM Studio) mantiene los prompts en tu máquina y evita costos de API, pero puedes omitirla y usar en su lugar un proveedor en la nube con tu propia API key.',
+              a: 'Sí. PromptQuorum necesita un backend de IA para ejecutar prompts — Ollama o LM Studio es la forma más sencilla de ejecutar uno en local, pero también puedes usar tu propia API key para un proveedor en la nube.',
             },
             {
               q: '¿Por qué mi sistema operativo advierte que la app no se puede verificar?',
@@ -24124,7 +24124,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Necesito Ollama o LM Studio para usar PromptQuorum?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No. La IA local (Ollama o LM Studio) mantiene los prompts en tu máquina y evita costos de API, pero puedes omitirla y usar en su lugar un proveedor en la nube con tu propia API key.',
+              text: 'Sí. PromptQuorum necesita un backend de IA para ejecutar prompts — Ollama o LM Studio es la forma más sencilla de ejecutar uno en local, pero también puedes usar tu propia API key para un proveedor en la nube.',
             },
           },
           {
@@ -24264,7 +24264,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Ai-je besoin d\'Ollama ou de LM Studio pour utiliser PromptQuorum ?',
-              a: 'Non. L\'IA locale (Ollama ou LM Studio) garde les prompts sur votre machine et évite les coûts d\'API, mais vous pouvez vous en passer et utiliser un fournisseur cloud avec votre propre clé API.',
+              a: 'Oui. PromptQuorum nécessite un moteur IA pour exécuter les prompts — Ollama ou LM Studio est la façon la plus simple d\'en exécuter un en local, mais vous pouvez aussi utiliser votre propre clé API pour un fournisseur cloud.',
             },
             {
               q: 'Pourquoi mon système d\'exploitation avertit-il que l\'application ne peut pas être vérifiée ?',
@@ -24306,7 +24306,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Ai-je besoin d\'Ollama ou de LM Studio pour utiliser PromptQuorum ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Non. L\'IA locale (Ollama ou LM Studio) garde les prompts sur votre machine et évite les coûts d\'API, mais vous pouvez vous en passer et utiliser un fournisseur cloud avec votre propre clé API.',
+              text: 'Oui. PromptQuorum nécessite un moteur IA pour exécuter les prompts — Ollama ou LM Studio est la façon la plus simple d\'en exécuter un en local, mais vous pouvez aussi utiliser votre propre clé API pour un fournisseur cloud.',
             },
           },
           {
@@ -24446,7 +24446,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'PromptQuorumを使うにはOllamaやLM Studioが必要ですか?',
-              a: 'いいえ。ローカルAI(OllamaまたはLM Studio)を使うとプロンプトが自分のマシン内にとどまりAPI費用もかかりませんが、省略して自分のAPIキーでクラウドプロバイダーを使うこともできます。',
+              a: 'はい。PromptQuorumがプロンプトを実行するにはAIバックエンドが必要です。ローカルで動かす最も簡単な方法はOllamaまたはLM Studioですが、自分のAPIキーを使ってクラウドプロバイダーを利用することもできます。',
             },
             {
               q: 'なぜOSが「アプリを確認できません」と警告するのですか?',
@@ -24488,7 +24488,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'PromptQuorumを使うにはOllamaやLM Studioが必要ですか?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'いいえ。ローカルAI(OllamaまたはLM Studio)を使うとプロンプトが自分のマシン内にとどまりAPI費用もかかりませんが、省略して自分のAPIキーでクラウドプロバイダーを使うこともできます。',
+              text: 'はい。PromptQuorumがプロンプトを実行するにはAIバックエンドが必要です。ローカルで動かす最も簡単な方法はOllamaまたはLM Studioですが、自分のAPIキーを使ってクラウドプロバイダーを利用することもできます。',
             },
           },
           {
@@ -24628,7 +24628,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'PromptQuorum을 사용하려면 Ollama 또는 LM Studio가 필요합니까?',
-              a: '아니요. 로컬 AI(Ollama 또는 LM Studio)를 사용하면 프롬프트가 기기에 유지되고 API 비용이 발생하지 않지만, 이를 건너뛰고 본인의 API 키로 클라우드 제공업체를 사용할 수도 있습니다.',
+              a: '예. PromptQuorum이 프롬프트를 실행하려면 AI 백엔드가 필요합니다 — Ollama 또는 LM Studio가 로컬에서 가장 쉽게 실행하는 방법이지만, 본인의 API 키로 클라우드 제공업체를 사용할 수도 있습니다.',
             },
             {
               q: '운영체제에서 앱을 확인할 수 없다는 경고가 표시되는 이유는 무엇입니까?',
@@ -24670,7 +24670,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'PromptQuorum을 사용하려면 Ollama 또는 LM Studio가 필요합니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '아니요. 로컬 AI(Ollama 또는 LM Studio)를 사용하면 프롬프트가 기기에 유지되고 API 비용이 발생하지 않지만, 이를 건너뛰고 본인의 API 키로 클라우드 제공업체를 사용할 수도 있습니다.',
+              text: '예. PromptQuorum이 프롬프트를 실행하려면 AI 백엔드가 필요합니다 — Ollama 또는 LM Studio가 로컬에서 가장 쉽게 실행하는 방법이지만, 본인의 API 키로 클라우드 제공업체를 사용할 수도 있습니다.',
             },
           },
           {
@@ -24810,7 +24810,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: 'Preciso do Ollama ou do LM Studio para usar o PromptQuorum?',
-              a: 'Não. A IA local (Ollama ou LM Studio) mantém os prompts na sua máquina e evita custos de API, mas você pode pular essa etapa e usar um provedor em nuvem com sua própria chave de API.',
+              a: 'Sim. O PromptQuorum precisa de um backend de IA para executar prompts — o Ollama ou o LM Studio é a forma mais simples de rodar um localmente, mas você também pode usar sua própria chave de API para um provedor em nuvem.',
             },
             {
               q: 'Por que meu sistema operacional avisa que o aplicativo não pode ser verificado?',
@@ -24852,7 +24852,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Preciso do Ollama ou do LM Studio para usar o PromptQuorum?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Não. A IA local (Ollama ou LM Studio) mantém os prompts na sua máquina e evita custos de API, mas você pode pular essa etapa e usar um provedor em nuvem com sua própria chave de API.',
+              text: 'Sim. O PromptQuorum precisa de um backend de IA para executar prompts — o Ollama ou o LM Studio é a forma mais simples de rodar um localmente, mas você também pode usar sua própria chave de API para um provedor em nuvem.',
             },
           },
           {
@@ -24992,7 +24992,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             },
             {
               q: '使用 PromptQuorum 是否需要 Ollama 或 LM Studio？',
-              a: '不需要。本地 AI（Ollama 或 LM Studio）可将提示词保留在本机并避免 API 费用，但你也可以跳过它，改用自己 API 密钥接入的云端提供商。',
+              a: '需要。PromptQuorum 需要一个 AI 后端才能运行提示词——Ollama 或 LM Studio 是本地运行的最简单方式，但你也可以使用自己的 API 密钥接入云端提供商。',
             },
             {
               q: '为什么我的操作系统会提示该应用无法验证？',
@@ -25034,7 +25034,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '使用 PromptQuorum 是否需要 Ollama 或 LM Studio？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '不需要。本地 AI（Ollama 或 LM Studio）可将提示词保留在本机并避免 API 费用，但你也可以跳过它，改用自己 API 密钥接入的云端提供商。',
+              text: '需要。PromptQuorum 需要一个 AI 后端才能运行提示词——Ollama 或 LM Studio 是本地运行的最简单方式，但你也可以使用自己的 API 密钥接入云端提供商。',
             },
           },
           {

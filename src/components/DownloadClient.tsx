@@ -6,13 +6,16 @@ import type { Lang } from '@/hooks/useLang'
 // Current shipping build. Bump this (and public/version.json) on each release.
 const APP_VERSION = '0.1.0'
 
-// Installer filenames follow the electron-builder output naming.
+// Exact filenames as uploaded to the shared beta Google Drive folder — must
+// match verbatim so testers can find the right file inside it. NOT the
+// electron-builder default naming; update by hand whenever the Drive folder
+// contents change (these are ad-hoc per-batch names, not a fixed pattern).
 const FILES = {
-  macArm: `PromptQuorum-${APP_VERSION}-arm64.dmg`,
-  macIntel: `PromptQuorum-${APP_VERSION}.dmg`,
-  win: `PromptQuorum Setup ${APP_VERSION}.exe`,
-  linuxX64: `PromptQuorum-${APP_VERSION}.AppImage`,
-  linuxArm64: `PromptQuorum-${APP_VERSION}-arm64.AppImage`,
+  macArm: 'PromptQuorum 0.1.0 - Apple Silicon (M1-M5) (July13-final).dmg',
+  macIntel: 'PromptQuorum 0.1.0 - Apple Intel Chip (July13-final).dmg',
+  win: 'PromptQuorum 0.1.0 - Windows 10 and 11 (July13-final).zip',
+  linuxX64: 'PromptQuorum 0.1.0 - Linux (Ubuntu and other distros) (July13-final).AppImage',
+  linuxArm64: 'PromptQuorum 0.1.0 - Linux ARM64 (Raspberry Pi 5 etc) (July13-final).AppImage',
 }
 
 // Interim distribution: a single shared Google Drive folder containing every
