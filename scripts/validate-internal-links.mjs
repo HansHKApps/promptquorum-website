@@ -61,7 +61,7 @@ const EXTRA_FILES = [
 const STATIC_ALLOW = new Set([
   '/', '/features', '/features/optimization', '/features/quorum',
   '/how-it-works', '/compare', '/faq', '/about', '/blog', '/waitlist',
-  '/privacy', '/terms', '/glossary', '/contact',
+  '/privacy', '/terms', '/glossary', '/contact', '/download',
 ])
 
 // No more UNVALIDATED_CLUSTERS — frameworks is now covered by readFrameworkSlugs().

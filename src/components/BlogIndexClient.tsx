@@ -20,6 +20,7 @@ function getDateISO(dateStr: string): string {
 }
 
 const blogPosts = [
+  { key: 'desktopAppBeta' as const, slug: 'promptquorum-desktop-app-beta' },
   { key: 'frameworks' as const, slug: 'prompt-frameworks' },
   { key: 'localAI' as const, slug: 'local-ai-vs-cloud' },
   { key: 'comparison' as const, slug: 'ai-model-comparison' },

@@ -28,16 +28,18 @@ configured in `next.config.ts` → `headers()`. The short TTL means version bump
   must upgrade.
 - **`message.{en,de}`** — the notification copy. Keep it short and honest.
 
-## 2. `src/app/download/page.tsx`
+## 2. `src/components/DownloadClient.tsx`
 
-The `/download` page users are routed to. On each release, update:
+Rendered by `src/app/download/page.tsx` — the `/download` page users are routed to. On each release, update:
 
 - **`APP_VERSION`** — drives the version badge and the installer filenames
-  (`PromptQuorum-<version>-arm64.dmg`, `PromptQuorum-<version>.dmg`, `PromptQuorum Setup <version>.exe`).
+  (`PromptQuorum-<version>-arm64.dmg`, `PromptQuorum-<version>.dmg`, `PromptQuorum Setup <version>.exe`,
+  `PromptQuorum-<version>.AppImage`, `PromptQuorum-<version>-arm64.AppImage`).
 - **`INSTALLER_URLS`** — currently TODO placeholders (`[[INSTALLER_URL_MACOS_ARM64]]`,
-  `[[INSTALLER_URL_MACOS_INTEL]]`, `[[INSTALLER_URL_WINDOWS]]`). Replace with the real hosted
-  installer URLs. Until they are real (not starting with `[[`), the page shows a disabled
-  "Download link pending" state instead of a broken link.
+  `[[INSTALLER_URL_MACOS_INTEL]]`, `[[INSTALLER_URL_WINDOWS]]`, `[[INSTALLER_URL_LINUX_X64]]`,
+  `[[INSTALLER_URL_LINUX_ARM64]]`). Replace with the real hosted installer URLs. Until they are
+  real (not starting with `[[`), the page shows a disabled "Download link pending" state instead
+  of a broken link.
 
 ### Where to host the installers
 Installers are large (~122–218 MB). Pick one:

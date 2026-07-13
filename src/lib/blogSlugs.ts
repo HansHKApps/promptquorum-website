@@ -13,6 +13,7 @@ export const SLUG_TO_POST_ID = {
   'frontier-models-prompt-library': 'frontierModelsPromptLibrary',
   'geopolitics-and-ai': 'geopolitics-and-ai',
   'eu-companies-local-qwen-gdpr-shift': 'euCompaniesLocalQwenGdpr',
+  'promptquorum-desktop-app-beta': 'desktopAppBeta',
 } as const
 
 export type BlogSlug = keyof typeof SLUG_TO_POST_ID

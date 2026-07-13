@@ -12,6 +12,8 @@ const FILES = {
   macArm: `PromptQuorum-${APP_VERSION}-arm64.dmg`,
   macIntel: `PromptQuorum-${APP_VERSION}.dmg`,
   win: `PromptQuorum Setup ${APP_VERSION}.exe`,
+  linuxX64: `PromptQuorum-${APP_VERSION}.AppImage`,
+  linuxArm64: `PromptQuorum-${APP_VERSION}-arm64.AppImage`,
 }
 
 // TODO(Hans): when installers are built + hosted (Drive interim, or a proper
@@ -24,6 +26,8 @@ const INSTALLER_URLS = {
   macArm: '[[INSTALLER_URL_MACOS_ARM64]]',
   macIntel: '[[INSTALLER_URL_MACOS_INTEL]]',
   win: '[[INSTALLER_URL_WINDOWS]]',
+  linuxX64: '[[INSTALLER_URL_LINUX_X64]]',
+  linuxArm64: '[[INSTALLER_URL_LINUX_ARM64]]',
 }
 
 type Copy = {
@@ -34,6 +38,8 @@ type Copy = {
   macArm: string
   macIntel: string
   win: string
+  linuxX64: string
+  linuxArm64: string
   fileLabel: string
   download: string
   betaNote: string
@@ -42,6 +48,7 @@ type Copy = {
   unsignedIntro: string
   macStep: string
   winStep: string
+  linuxStep: string
   backHome: string
 }
 
@@ -51,12 +58,14 @@ const COPY: Record<string, Copy> = {
   en: {
     heading: 'Download PromptQuorum',
     tagline:
-      'Dispatch one prompt to many AI models, compare their answers, and run consensus analysis — on macOS and Windows.',
+      'Dispatch one prompt to many AI models, compare their answers, and run consensus analysis — on macOS, Windows, and Linux.',
     beta: 'Beta',
     versionLabel: 'Current version',
-    macArm: 'macOS — Apple Silicon (M1–M4)',
+    macArm: 'macOS — Apple Silicon (M1–M5)',
     macIntel: 'macOS — Intel',
     win: 'Windows',
+    linuxX64: 'Linux — x64 (Intel/AMD)',
+    linuxArm64: 'Linux — ARM64 (Raspberry Pi 5, etc.)',
     fileLabel: 'File',
     download: 'Download',
     betaNote:
@@ -69,17 +78,21 @@ const COPY: Record<string, Copy> = {
       'macOS: right-click (or Control-click) the app and choose "Open", then confirm "Open" in the dialog. If you double-click and see "unidentified developer", use right-click → Open instead.',
     winStep:
       'Windows: if SmartScreen shows "Windows protected your PC" / "unknown publisher", click "More info" → "Run anyway".',
+    linuxStep:
+      'Linux: make the AppImage executable first — chmod +x [filename].AppImage — then run it directly, no installation needed. If Ubuntu blocks it, launch from a terminal with --no-sandbox.',
     backHome: '← Back to Home',
   },
   de: {
     heading: 'PromptQuorum herunterladen',
     tagline:
-      'Senden Sie einen Prompt an viele KI-Modelle, vergleichen Sie die Antworten und führen Sie eine Konsensanalyse durch — für macOS und Windows.',
+      'Senden Sie einen Prompt an viele KI-Modelle, vergleichen Sie die Antworten und führen Sie eine Konsensanalyse durch — für macOS, Windows und Linux.',
     beta: 'Beta',
     versionLabel: 'Aktuelle Version',
-    macArm: 'macOS — Apple Silicon (M1–M4)',
+    macArm: 'macOS — Apple Silicon (M1–M5)',
     macIntel: 'macOS — Intel',
     win: 'Windows',
+    linuxX64: 'Linux — x64 (Intel/AMD)',
+    linuxArm64: 'Linux — ARM64 (z. B. Raspberry Pi 5)',
     fileLabel: 'Datei',
     download: 'Herunterladen',
     betaNote:
@@ -92,6 +105,8 @@ const COPY: Record<string, Copy> = {
       'macOS: Klicken Sie mit der rechten Maustaste (oder Ctrl-Klick) auf die App und wählen Sie „Öffnen", dann im Dialog erneut „Öffnen". Bei einem Doppelklick erscheint „nicht verifizierter Entwickler" — nutzen Sie stattdessen Rechtsklick → Öffnen.',
     winStep:
       'Windows: Zeigt SmartScreen „Der Computer wurde durch Windows geschützt" / „unbekannter Herausgeber", klicken Sie auf „Weitere Informationen" → „Trotzdem ausführen".',
+    linuxStep:
+      'Linux: Machen Sie die AppImage-Datei zuerst ausführbar — chmod +x [Dateiname].AppImage — und starten Sie sie direkt, ohne Installation. Blockiert Ubuntu den Start, starten Sie sie im Terminal mit --no-sandbox.',
     backHome: '← Zurück zur Startseite',
   },
 }
@@ -167,6 +182,8 @@ export function DownloadClient({ initialLang }: { initialLang?: Lang }) {
           <PlatformCard name={c.macArm} file={FILES.macArm} href={INSTALLER_URLS.macArm} fileLabel={c.fileLabel} download={c.download} />
           <PlatformCard name={c.macIntel} file={FILES.macIntel} href={INSTALLER_URLS.macIntel} fileLabel={c.fileLabel} download={c.download} />
           <PlatformCard name={c.win} file={FILES.win} href={INSTALLER_URLS.win} fileLabel={c.fileLabel} download={c.download} />
+          <PlatformCard name={c.linuxX64} file={FILES.linuxX64} href={INSTALLER_URLS.linuxX64} fileLabel={c.fileLabel} download={c.download} />
+          <PlatformCard name={c.linuxArm64} file={FILES.linuxArm64} href={INSTALLER_URLS.linuxArm64} fileLabel={c.fileLabel} download={c.download} />
         </div>
 
         {/*
@@ -199,6 +216,10 @@ export function DownloadClient({ initialLang }: { initialLang?: Lang }) {
             <li className="flex gap-2">
               <span aria-hidden className="text-tertiary">•</span>
               <span>{c.winStep}</span>
+            </li>
+            <li className="flex gap-2">
+              <span aria-hidden className="text-tertiary">•</span>
+              <span>{c.linuxStep}</span>
             </li>
           </ul>
         </div>
