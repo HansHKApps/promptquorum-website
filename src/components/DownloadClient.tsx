@@ -2,7 +2,6 @@
 
 import { useLang } from '@/hooks/useLang'
 import type { Lang } from '@/hooks/useLang'
-import { useWaitlist } from '@/context/WaitlistContext'
 
 // Current shipping build. Bump this (and public/version.json) on each release.
 const APP_VERSION = '0.1.0'
@@ -16,18 +15,20 @@ const FILES = {
   linuxArm64: `PromptQuorum-${APP_VERSION}-arm64.AppImage`,
 }
 
-// TODO(Hans): when installers are built + hosted (Drive interim, or a proper
-// host later), fill these with the real download URLs. Any entry NOT starting
-// with `[[` automatically renders a real download button on its platform card,
-// at which point the interim waitlist CTA below can be removed. Until then the
-// page routes interested testers to the existing waitlist.
-// See docs/APP_VERSION_RELEASE.md.
+// Interim distribution: a single shared Google Drive folder containing every
+// platform's installer (Drive doesn't give distinct per-file public URLs
+// without per-file sharing setup). All platform buttons point here until
+// installers are hosted individually. See docs/APP_VERSION_RELEASE.md.
+const GOOGLE_DRIVE_URL = 'https://tnpvzv.s.gy/vx3ueD'
+
+// TODO(Hans): swap these for distinct per-file URLs once installers are
+// hosted individually (Vercel static / GitHub Release assets / etc.).
 const INSTALLER_URLS = {
-  macArm: '[[INSTALLER_URL_MACOS_ARM64]]',
-  macIntel: '[[INSTALLER_URL_MACOS_INTEL]]',
-  win: '[[INSTALLER_URL_WINDOWS]]',
-  linuxX64: '[[INSTALLER_URL_LINUX_X64]]',
-  linuxArm64: '[[INSTALLER_URL_LINUX_ARM64]]',
+  macArm: GOOGLE_DRIVE_URL,
+  macIntel: GOOGLE_DRIVE_URL,
+  win: GOOGLE_DRIVE_URL,
+  linuxX64: GOOGLE_DRIVE_URL,
+  linuxArm64: GOOGLE_DRIVE_URL,
 }
 
 type Copy = {
@@ -43,7 +44,6 @@ type Copy = {
   fileLabel: string
   download: string
   betaNote: string
-  joinCta: string
   unsignedHeading: string
   unsignedIntro: string
   macStep: string
@@ -69,8 +69,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: 'File',
     download: 'Download',
     betaNote:
-      'PromptQuorum is currently in private beta. Join the waitlist to get early access — installers are sent to invited testers.',
-    joinCta: 'Join the waitlist for access',
+      'PromptQuorum is in private beta. All installers are hosted in one shared folder — pick the button for your platform above.',
     unsignedHeading: 'Opening the app on a beta (unsigned) build',
     unsignedIntro:
       'PromptQuorum is in beta and not yet code-signed, so your operating system may warn you the first time you open it. This is expected — the app is safe to run.',
@@ -96,8 +95,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: 'Datei',
     download: 'Herunterladen',
     betaNote:
-      'PromptQuorum befindet sich derzeit in einer privaten Beta. Tragen Sie sich in die Warteliste ein, um frühen Zugang zu erhalten — Installer werden an eingeladene Tester gesendet.',
-    joinCta: 'Für Zugang auf die Warteliste',
+      'PromptQuorum befindet sich in der privaten Beta. Alle Installer liegen in einem gemeinsamen Ordner — wählen Sie oben die Schaltfläche für Ihre Plattform.',
     unsignedHeading: 'Die App aus einem Beta-Build (unsigniert) öffnen',
     unsignedIntro:
       'PromptQuorum befindet sich in der Beta-Phase und ist noch nicht code-signiert. Ihr Betriebssystem zeigt beim ersten Öffnen möglicherweise eine Warnung an. Das ist normal — die App kann sicher ausgeführt werden.',
@@ -124,8 +122,7 @@ function PlatformCard({
   fileLabel: string
   download: string
 }) {
-  // A real URL lights up a download button; placeholders show none (the shared
-  // waitlist CTA covers the interim). This is what makes swap-in trivial later.
+  // A real URL lights up a download button; placeholders show none.
   const isPlaceholder = href.startsWith('[[')
   return (
     <div className="flex flex-col rounded-lg border border-primary/15 bg-surface-elevated p-6 shadow-sm">
@@ -138,6 +135,8 @@ function PlatformCard({
         <div className="mt-auto pt-5">
           <a
             href={href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {download}
@@ -150,17 +149,9 @@ function PlatformCard({
 
 export function DownloadClient({ initialLang }: { initialLang?: Lang }) {
   const lang = useLang(initialLang)
-  const { openWaitlist } = useWaitlist()
   const c = COPY[lang] ?? COPY.en
   const dir = lang === 'ar' ? 'rtl' : undefined
   const homeHref = lang === 'en' ? '/' : `/?lang=${lang}`
-
-  // Same mechanism as the nav "Waitlist" item: open the modal. The href="/waitlist"
-  // is a progressive-enhancement fallback — that page auto-opens the modal if JS is off.
-  const handleWaitlist = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    openWaitlist()
-  }
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" dir={dir}>
@@ -186,23 +177,8 @@ export function DownloadClient({ initialLang }: { initialLang?: Lang }) {
           <PlatformCard name={c.linuxArm64} file={FILES.linuxArm64} href={INSTALLER_URLS.linuxArm64} fileLabel={c.fileLabel} download={c.download} />
         </div>
 
-        {/*
-          INTERIM STATE — private beta, no public installers yet.
-          Route interested users to the EXISTING waitlist (same modal the nav
-          "Waitlist" item opens) instead of showing dead download buttons.
-          TODO: when installers are built + hosted, fill INSTALLER_URLS above
-          (which lights the per-card download buttons) and remove this waitlist
-          CTA. See docs/APP_VERSION_RELEASE.md.
-        */}
         <div className="mt-8 rounded-lg border border-primary/15 bg-surface p-8 text-center">
           <p className="mx-auto max-w-2xl text-sm text-text-secondary">{c.betaNote}</p>
-          <a
-            href="/waitlist"
-            onClick={handleWaitlist}
-            className="mt-5 inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            {c.joinCta}
-          </a>
         </div>
 
         <div className="mt-8 rounded-lg border border-tertiary/25 bg-surface p-6">
