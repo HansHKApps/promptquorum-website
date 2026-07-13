@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
     title: 'Prompt Engineering Workflow for Developers: IDE Setup, Testing, and CI/CD Integration',
-    dateModified: '2026-06-20',
+    dateModified: '2026-07-13',
     seoTitle: 'Prompt Engineering for Developers: IDE & CI/CD Setup',
     metaDescription: '5-stage prompt workflow: write in Cursor/VS Code, test with Promptfoo in 30s, version in Git, gate CI/CD at 85% pass rate, monitor production.',
     ogDescription: 'Developer prompt workflow: Cursor or VS Code IDE, 30-second local test loop, Git versioning, GitHub Actions CI/CD gate, production quality monitoring.',
@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Decision: use Cursor if you work primarily in TypeScript or Python and your team uses cloud APIs. Use VS Code + Continue.dev if you need local model support, open-source requirements, or your organization has restrictions on cloud API usage.',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursor for prompt iteration speed', text: 'Cursor lets you run Claude 4.6 Sonnet directly on prompt files from inside the editor. This reduces the write-test cycle from minutes to seconds for teams already using Cursor for code.' },
+          { type: 'tip', label: 'Cursor for prompt iteration speed', text: 'Cursor lets you run a frontier model directly on prompt files from inside the editor. This reduces the write-test cycle from minutes to seconds for teams already using Cursor for code.' },
         ],
       },
       local_test_loop: {
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Writing prompts directly in application code', problem: 'Hardcoded prompts can\'t be versioned, tested, or changed without a full deployment', fix: 'Store prompts as separate files in a /prompts directory. Load them at runtime.' },
           { mistake: 'Testing only locally, never in CI/CD', problem: 'Local tests are skipped under time pressure; CI/CD gates are mandatory', fix: 'Add a Promptfoo test step to GitHub Actions. Block merge if pass rate drops below 85%.' },
           { mistake: 'No production monitoring', problem: 'Prompt quality degrades post-deployment with no visibility', fix: 'Log pass rate per prompt per day. Alert if pass rate drops 5% week-over-week.' },
-          { mistake: 'Testing on one model only', problem: 'A prompt that works on GPT-5.5 may fail on Claude 4.6 Sonnet', fix: 'Run your test suite against at least 2 models in CI/CD.' },
+          { mistake: 'Testing on one model only', problem: 'A prompt that works on one model may fail on another', fix: 'Run your test suite against at least 2 models in CI/CD.' },
         ],
       },
       key_takeaways: {
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: 'What should you log for production prompt monitoring?', a: 'Log prompt inputs (or a hash of them if they contain PII), model responses, latency, token counts, and a quality score from an evaluator. For prompts handling user data, retain logs for at least 30 days and set up alerts for quality score drops greater than 10% over a 24-hour rolling window.' },
           { q: 'How do I store prompts in a Git repository?', a: 'Store each prompt as a plain text file in a `/prompts/[theme]/` directory. Name files with slug and version: `classify-intent-v2.txt`. Add YAML frontmatter with: version, author, dateModified, model, and a one-line description. This makes prompts searchable, diffable, and reviewable in standard code review tools.' },
           { q: 'What is a CI/CD gate for prompts?', a: 'A CI/CD gate is an automated test step that runs your prompt test suite on every PR and blocks the merge if the pass rate drops below your threshold (typically 85%). Implement it in GitHub Actions using Promptfoo\'s CLI: `npx promptfoo eval --threshold 0.85`. If any test fails, the PR is blocked automatically.' },
-          { q: 'Which IDE is best for prompt engineering?', a: 'Cursor is the best IDE for prompt engineering because it has built-in AI assistance for prompt iteration and lets you run Claude 4.6 Sonnet directly on prompt files. VS Code with Continue.dev is a strong alternative for teams that need open-source tooling. Both support syntax highlighting for prompt formats and integrate with Git.' },
+          { q: 'Which IDE is best for prompt engineering?', a: 'Cursor is the best IDE for prompt engineering because it has built-in AI assistance for prompt iteration and lets you run a frontier model directly on prompt files. VS Code with Continue.dev is a strong alternative for teams that need open-source tooling. Both support syntax highlighting for prompt formats and integrate with Git.' },
         ],
       },
       related_reading: {
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisierung',
-    title: 'Prompt-Engineering-Workflow für Entwickler: IDE, Tests & CI/CD (2026)',
+    title: 'Prompt-Engineering-Workflow für Entwickler: IDE, Tests & CI/CD',
     seoTitle: 'Prompt Engineering für Entwickler: IDE & CI/CD-Setup',
     metaDescription: 'Entwickler-Prompt-Workflow: Cursor/VS Code, Promptfoo-Tests in 30s, Git-Versionierung, CI/CD-Gate bei 85% Pass-Rate, Produktions-Monitoring.',
     ogDescription: 'Entwickler-Prompt-Workflow: Cursor oder VS Code IDE, 30-Sekunden-Testschleife, Git-Versionierung, GitHub Actions CI/CD-Gate, Produktionsqualitätsmonitoring.',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'VS Code mit Continue.dev ist Open Source, unterstützt lokale Modelle über Ollama und funktioniert mit jedem Sprachökosystem. Continue.dev bietet In-Editor-Prompt-Vervollständigung und -Bearbeitung. Verwenden Sie VS Code + Continue.dev bei Open-Source-Anforderungen oder bei der Notwendigkeit, Modelle lokal auszuführen.',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursor für schnelle Prompt-Iteration', text: 'Cursor ermöglicht das direkte Ausführen von Claude 4.6 Sonnet auf Prompt-Dateien aus dem Editor heraus. Das reduziert den Schreib-Test-Zyklus für Teams, die bereits Cursor für Code verwenden, von Minuten auf Sekunden.' },
+          { type: 'tip', label: 'Cursor für schnelle Prompt-Iteration', text: 'Cursor ermöglicht das direkte Ausführen eines Frontier-Modells auf Prompt-Dateien aus dem Editor heraus. Das reduziert den Schreib-Test-Zyklus für Teams, die bereits Cursor für Code verwenden, von Minuten auf Sekunden.' },
         ],
       },
       local_test_loop: {
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Prompts direkt im Anwendungscode schreiben', problem: 'Hardcodierte Prompts können nicht versioniert, getestet oder ohne vollständiges Deployment geändert werden', fix: 'Prompts als separate Dateien in einem /prompts-Verzeichnis speichern. Zur Laufzeit laden.' },
           { mistake: 'Nur lokal testen, nie in CI/CD', problem: 'Lokale Tests werden unter Zeitdruck übersprungen; CI/CD-Gates sind obligatorisch', fix: 'Einen Promptfoo-Testschritt zu GitHub Actions hinzufügen. Merge blockieren, wenn Bestehensquote unter 85% fällt.' },
           { mistake: 'Kein Produktionsmonitoring', problem: 'Prompt-Qualität verschlechtert sich nach dem Deployment ohne Sichtbarkeit', fix: 'Bestehensquote pro Prompt pro Tag loggen. Alarmieren, wenn Bestehensquote wöchentlich um 5% fällt.' },
-          { mistake: 'Nur auf einem Modell testen', problem: 'Ein Prompt, der auf GPT-5.5 funktioniert, kann auf Claude 4.6 Sonnet scheitern', fix: 'Testsuite gegen mindestens 2 Modelle in CI/CD ausführen.' },
+          { mistake: 'Nur auf einem Modell testen', problem: 'Ein Prompt, der auf einem Modell funktioniert, kann auf einem anderen scheitern', fix: 'Testsuite gegen mindestens 2 Modelle in CI/CD ausführen.' },
         ],
       },
       key_takeaways: {
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: 'Was sollte für das Produktionsmonitoring geloggt werden?', a: 'Prompt-Inputs (oder deren Hash bei personenbezogenen Daten), Modellantworten, Latenz, Token-Anzahl und Qualitätsscore loggen. Logs mindestens 30 Tage aufbewahren.' },
           { q: 'Wie speichert man Prompts in einem Git-Repository?', a: 'Jeden Prompt als Textdatei in `/prompts/[theme]/` speichern. Benennung: `classify-intent-v2.txt`. YAML-Frontmatter mit Version, Autor, Datum, Modell und Beschreibung hinzufügen.' },
           { q: 'Was ist ein CI/CD-Gate für Prompts?', a: 'Ein CI/CD-Gate ist ein automatisierter Testschritt, der die Prompt-Testsuite bei jedem PR ausführt und den Merge blockiert, wenn die Bestehensquote unter den Schwellenwert fällt (typischerweise 85%).' },
-          { q: 'Welche IDE ist beste für Prompt Engineering?', a: 'Cursor ist die beste IDE für Prompt Engineering wegen integrierter KI-Unterstützung und direktem Claude 4.6 Sonnet-Zugriff auf Prompt-Dateien. VS Code mit Continue.dev ist eine gute Alternative für Open-Source-Tooling.' },
+          { q: 'Welche IDE ist beste für Prompt Engineering?', a: 'Cursor ist die beste IDE für Prompt Engineering wegen integrierter KI-Unterstützung und direktem Zugriff auf ein Frontier-Modell für Prompt-Dateien. VS Code mit Continue.dev ist eine gute Alternative für Open-Source-Tooling.' },
         ],
       },
       related_reading: {
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'VS Code con Continue.dev es de código abierto, soporta modelos locales a través de Ollama y funciona con cualquier ecosistema de lenguajes. Continue.dev proporciona completado y modificación de prompts en el editor. Usa VS Code + Continue.dev para requisitos de código abierto o cuando necesites ejecutar modelos localmente.',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursor para velocidad de iteración de prompts', text: 'Cursor te permite ejecutar Claude 4.6 Sonnet directamente sobre archivos de prompt desde dentro del editor. Esto reduce el ciclo de escritura-prueba de minutos a segundos para equipos que ya usan Cursor para código.' },
+          { type: 'tip', label: 'Cursor para velocidad de iteración de prompts', text: 'Cursor te permite ejecutar un modelo de frontera directamente sobre archivos de prompt desde dentro del editor. Esto reduce el ciclo de escritura-prueba de minutos a segundos para equipos que ya usan Cursor para código.' },
         ],
       },
       local_test_loop: {
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Escribir prompts directamente en el código de la aplicación', problem: 'Los prompts codificados no pueden versionarse, probarse ni cambiarse sin un despliegue completo', fix: 'Almacena los prompts como archivos separados en un directorio /prompts. Cárgalos en tiempo de ejecución.' },
           { mistake: 'Probar solo localmente, nunca en CI/CD', problem: 'Las pruebas locales se omiten bajo presión de tiempo; los gates CI/CD son obligatorios', fix: 'Añade un paso de prueba con Promptfoo a GitHub Actions. Bloquea el merge si la tasa de aprobación cae por debajo del 85%.' },
           { mistake: 'Sin monitoreo en producción', problem: 'La calidad de los prompts se degrada después del despliegue sin visibilidad', fix: 'Registra la tasa de aprobación por prompt por día. Alerta si la tasa de aprobación cae un 5% semana a semana.' },
-          { mistake: 'Probar con un solo modelo', problem: 'Un prompt que funciona en GPT-5.5 puede fallar en Claude 4.6 Sonnet', fix: 'Ejecuta tu suite de pruebas en al menos 2 modelos en CI/CD.' },
+          { mistake: 'Probar con un solo modelo', problem: 'Un prompt que funciona en un modelo puede fallar en otro', fix: 'Ejecuta tu suite de pruebas en al menos 2 modelos en CI/CD.' },
         ],
       },
       key_takeaways: {
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: '¿Qué deberías registrar para el monitoreo de prompts en producción?', a: 'Registra las entradas del prompt (o un hash si contienen PII), respuestas del modelo, latencia, recuento de tokens y puntuación de calidad de un evaluador. Conserva los registros durante al menos 30 días.' },
           { q: '¿Cómo almaceno los prompts en un repositorio Git?', a: 'Almacena cada prompt como un archivo de texto plano en `/prompts/[tema]/`. Nombra los archivos con slug y versión: `classify-intent-v2.txt`. Añade YAML frontmatter con: versión, autor, fecha, modelo y descripción.' },
           { q: '¿Qué es un gate CI/CD para prompts?', a: 'Un gate CI/CD es un paso de prueba automatizado que ejecuta tu suite de pruebas de prompts en cada PR y bloquea el merge si la tasa de aprobación cae por debajo de tu umbral (típicamente 85%). Impleméntalo en GitHub Actions usando la CLI de Promptfoo: `npx promptfoo eval --threshold 0.85`.' },
-          { q: '¿Qué IDE es mejor para el prompt engineering?', a: 'Cursor es el mejor IDE para el prompt engineering porque permite ejecutar Claude 4.6 Sonnet directamente sobre archivos de prompt desde dentro del editor. VS Code con Continue.dev es una buena alternativa para equipos que necesitan herramientas de código abierto.' },
+          { q: '¿Qué IDE es mejor para el prompt engineering?', a: 'Cursor es el mejor IDE para el prompt engineering porque permite ejecutar un modelo de frontera directamente sobre archivos de prompt desde dentro del editor. VS Code con Continue.dev es una buena alternativa para equipos que necesitan herramientas de código abierto.' },
         ],
       },
       related_reading: {
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'O VS Code com Continue.dev é de código aberto, suporta modelos locais via Ollama e funciona com qualquer ecossistema de linguagens. O Continue.dev fornece preenchimento e modificação de prompts no editor. Use o VS Code + Continue.dev para requisitos de código aberto ou quando precisar executar modelos localmente.',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursor para velocidade de iteração de prompts', text: 'O Cursor permite executar Claude 4.6 Sonnet diretamente sobre arquivos de prompt a partir do editor. Isso reduz o ciclo de escrita-teste de minutos para segundos para equipes que já usam o Cursor para código.' },
+          { type: 'tip', label: 'Cursor para velocidade de iteração de prompts', text: 'O Cursor permite executar um modelo de fronteira diretamente sobre arquivos de prompt a partir do editor. Isso reduz o ciclo de escrita-teste de minutos para segundos para equipes que já usam o Cursor para código.' },
         ],
       },
       local_test_loop: {
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Escrever prompts diretamente no código da aplicação', problem: 'Os prompts codificados não podem ser versionados, testados nem alterados sem uma implantação completa', fix: 'Armazene os prompts como arquivos separados em um diretório /prompts. Carregue-os em tempo de execução.' },
           { mistake: 'Testar apenas localmente, nunca em CI/CD', problem: 'Os testes locais são pulados sob pressão de tempo; os gates CI/CD são obrigatórios', fix: 'Adicione uma etapa de teste com Promptfoo ao GitHub Actions. Bloqueie o merge se a taxa de aprovação cair abaixo de 85%.' },
           { mistake: 'Sem monitoramento em produção', problem: 'A qualidade dos prompts se degrada após a implantação sem visibilidade', fix: 'Registre a taxa de aprovação por prompt por dia. Alerte se a taxa de aprovação cair 5% semana a semana.' },
-          { mistake: 'Testar com um único modelo', problem: 'Um prompt que funciona no GPT-5.5 pode falhar no Claude 4.6 Sonnet', fix: 'Execute sua suite de testes em pelo menos 2 modelos em CI/CD.' },
+          { mistake: 'Testar com um único modelo', problem: 'Um prompt que funciona em um modelo pode falhar em outro', fix: 'Execute sua suite de testes em pelo menos 2 modelos em CI/CD.' },
         ],
       },
       key_takeaways: {
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: 'O que você deve registrar para o monitoramento de prompts em produção?', a: 'Registre as entradas do prompt (ou um hash se contiverem PII), respostas do modelo, latência, contagem de tokens e pontuação de qualidade de um avaliador. Mantenha os registros por pelo menos 30 dias.' },
           { q: 'Como armazeno os prompts em um repositório Git?', a: 'Armazene cada prompt como um arquivo de texto simples em `/prompts/[tema]/`. Nomeie os arquivos com slug e versão: `classify-intent-v2.txt`. Adicione YAML frontmatter com: versão, autor, data, modelo e descrição.' },
           { q: 'O que é um gate CI/CD para prompts?', a: 'Um gate CI/CD é uma etapa de teste automatizado que executa sua suite de testes de prompts em cada PR e bloqueia o merge se a taxa de aprovação cair abaixo do seu limite (tipicamente 85%). Implemente-o no GitHub Actions usando a CLI do Promptfoo: `npx promptfoo eval --threshold 0.85`.' },
-          { q: 'Qual IDE é melhor para o prompt engineering?', a: 'O Cursor é o melhor IDE para o prompt engineering porque permite executar Claude 4.6 Sonnet diretamente sobre arquivos de prompt a partir do editor. O VS Code com Continue.dev é uma boa alternativa para equipes que precisam de ferramentas de código aberto.' },
+          { q: 'Qual IDE é melhor para o prompt engineering?', a: 'O Cursor é o melhor IDE para o prompt engineering porque permite executar um modelo de fronteira diretamente sobre arquivos de prompt a partir do editor. O VS Code com Continue.dev é uma boa alternativa para equipes que precisam de ferramentas de código aberto.' },
         ],
       },
       related_reading: {
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'VS Code avec Continue.dev est open source, prend en charge les modèles locaux via Ollama et fonctionne avec tout écosystème de langage. Continue.dev fournit la complétion et la modification de prompts dans l\'éditeur. Utilisez VS Code + Continue.dev pour les exigences open source ou si vous devez exécuter des modèles localement.',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursor pour la vitesse d\'itération', text: 'Cursor permet d\'exécuter Claude 4.6 Sonnet directement sur les fichiers de prompt depuis l\'éditeur. Cela réduit le cycle écriture-test de minutes à secondes pour les équipes utilisant déjà Cursor pour le code.' },
+          { type: 'tip', label: 'Cursor pour la vitesse d\'itération', text: 'Cursor permet d\'exécuter un modèle frontière directement sur les fichiers de prompt depuis l\'éditeur. Cela réduit le cycle écriture-test de minutes à secondes pour les équipes utilisant déjà Cursor pour le code.' },
         ],
       },
       local_test_loop: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'Écrire des prompts directement dans le code de l\'application', problem: 'Les prompts codés en dur ne peuvent pas être versionnés, testés ou modifiés sans un déploiement complet', fix: 'Stocker les prompts comme fichiers séparés dans un répertoire /prompts. Les charger à l\'exécution.' },
           { mistake: 'Tester uniquement localement, jamais en CI/CD', problem: 'Les tests locaux sont sautés sous pression ; les gates CI/CD sont obligatoires', fix: 'Ajouter une étape de test Promptfoo à GitHub Actions. Bloquer la fusion si le taux de réussite descend sous 85%.' },
           { mistake: 'Pas de monitoring en production', problem: 'La qualité des prompts se dégrade après le déploiement sans visibilité', fix: 'Journaliser le taux de réussite par prompt par jour. Alerter si le taux chute de 5% semaine après semaine.' },
-          { mistake: 'Tester sur un seul modèle', problem: 'Un prompt qui fonctionne sur GPT-5.5 peut échouer sur Claude 4.6 Sonnet', fix: 'Exécuter la suite de tests contre au moins 2 modèles en CI/CD.' },
+          { mistake: 'Tester sur un seul modèle', problem: 'Un prompt qui fonctionne sur un modèle peut échouer sur un autre', fix: 'Exécuter la suite de tests contre au moins 2 modèles en CI/CD.' },
         ],
       },
       key_takeaways: {
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: 'Que faut-il journaliser pour le monitoring en production ?', a: 'Journaliser les entrées (ou leur hash si DCP), réponses, latence, tokens et score de qualité. Conserver les logs 30 jours minimum.' },
           { q: 'Comment stocker les prompts dans un référentiel Git ?', a: 'Stocker chaque prompt comme fichier texte dans `/prompts/[thème]/`. Nommer : `classify-intent-v2.txt`. Ajouter un frontmatter YAML avec version, auteur, date, modèle et description.' },
           { q: 'Qu\'est-ce qu\'un gate CI/CD pour les prompts ?', a: 'Un gate CI/CD est une étape de test automatisée qui bloque la fusion si le taux de réussite descend sous le seuil (typiquement 85%). Utiliser `npx promptfoo eval --threshold 0.85` dans GitHub Actions.' },
-          { q: 'Quel IDE est le meilleur pour le prompt engineering ?', a: 'Cursor est le meilleur IDE pour le prompt engineering car il permet d\'exécuter Claude 4.6 Sonnet directement sur les fichiers de prompt. VS Code avec Continue.dev est une bonne alternative pour les équipes open source.' },
+          { q: 'Quel IDE est le meilleur pour le prompt engineering ?', a: 'Cursor est le meilleur IDE pour le prompt engineering car il permet d\'exécuter un modèle frontière directement sur les fichiers de prompt. VS Code avec Continue.dev est une bonne alternative pour les équipes open source.' },
         ],
       },
       related_reading: {
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'VS Code + Continue.devはオープンソースで、Ollama経由でローカルモデルをサポートし、あらゆる言語エコシステムで動作します。オープンソース要件がある場合、またはプライバシーやコストの理由でモデルをローカルで実行する必要がある場合に使用します。',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursorでプロンプト反復速度向上', text: 'CursorはエディタからClaude 4.6 Sonnetをプロンプトファイルに直接実行できます。Cursorをすでにコードに使用しているチームでは、記述-テストサイクルが分単位から秒単位に短縮されます。' },
+          { type: 'tip', label: 'Cursorでプロンプト反復速度向上', text: 'Cursorはエディタからフロンティアモデルをプロンプトファイルに直接実行できます。Cursorをすでにコードに使用しているチームでは、記述-テストサイクルが分単位から秒単位に短縮されます。' },
         ],
       },
       local_test_loop: {
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'プロンプトをアプリケーションコードに直接書く', problem: 'ハードコードされたプロンプトは完全なデプロイメントなしにバージョン管理、テスト、変更ができない', fix: 'プロンプトを/promptsディレクトリに別ファイルとして保存し、ランタイムに読み込む。' },
           { mistake: 'ローカルのみでテストし、CI/CDでテストしない', problem: 'ローカルテストは時間的プレッシャー下でスキップされる；CI/CDゲートは必須', fix: 'GitHub ActionsにPromptfooテストステップを追加。合格率が85%を下回った場合にマージをブロック。' },
           { mistake: '本番監視なし', problem: 'プロンプト品質はデプロイ後に可視性なく劣化する', fix: '1日あたりプロンプトごとの合格率をログに記録。週次で5%低下した場合にアラートを発する。' },
-          { mistake: '1つのモデルでのみテスト', problem: 'GPT-5.5で動作するプロンプトがClaude 4.6 Sonnetで失敗する可能性がある', fix: 'CI/CDで少なくとも2つのモデルに対してテストスイートを実行。' },
+          { mistake: '1つのモデルでのみテスト', problem: 'あるモデルで動作するプロンプトが別のモデルで失敗する可能性がある', fix: 'CI/CDで少なくとも2つのモデルに対してテストスイートを実行。' },
         ],
       },
       key_takeaways: {
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: '本番プロンプト監視のために何をログに記録すべきですか？', a: 'プロンプト入力（PII含む場合はハッシュ）、レスポンス、レイテンシ、トークン数、品質スコアをログに記録します。少なくとも30日間保持します。' },
           { q: 'Gitリポジトリにプロンプトをどのように保存しますか？', a: '各プロンプトを`/prompts/[theme]/`にテキストファイルとして保存します。命名：`classify-intent-v2.txt`。バージョン、著者、日付、モデルを含むYAMLフロントマターを追加します。' },
           { q: 'プロンプトのCI/CDゲートとは何ですか？', a: 'CI/CDゲートは、すべてのPRでプロンプトテストスイートを実行し、合格率がしきい値を下回った場合にマージをブロックする自動化されたテストステップです（通常85%）。' },
-          { q: 'プロンプトエンジニアリングに最適なIDEはどれですか？', a: 'CursorはプロンプトファイルにClaude 4.6 Sonnetを直接実行できる組み込みAIアシスタンスがあるため、プロンプトエンジニアリングに最適なIDEです。VS Code + Continue.devはオープンソースツールが必要なチームに最適です。' },
+          { q: 'プロンプトエンジニアリングに最適なIDEはどれですか？', a: 'Cursorはプロンプトファイルにフロンティアモデルを直接実行できる組み込みAIアシスタンスがあるため、プロンプトエンジニアリングに最適なIDEです。VS Code + Continue.devはオープンソースツールが必要なチームに最適です。' },
         ],
       },
       related_reading: {
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'VS Code + Continue.dev是开源的，通过Ollama支持本地模型，适用于任何语言生态系统。Continue.dev提供编辑器内的提示词补全和修改功能。如果有开源要求或需要在本地运行模型，请使用VS Code + Continue.dev。',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursor提升提示词迭代速度', text: 'Cursor允许您从编辑器内直接在提示词文件上运行Claude 4.6 Sonnet。对于已经使用Cursor编写代码的团队，这将编写-测试周期从分钟缩短到秒。' },
+          { type: 'tip', label: 'Cursor提升提示词迭代速度', text: 'Cursor允许您从编辑器内直接在提示词文件上运行前沿模型。对于已经使用Cursor编写代码的团队，这将编写-测试周期从分钟缩短到秒。' },
         ],
       },
       local_test_loop: {
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: '将提示词直接写入应用程序代码', problem: '硬编码的提示词无法在没有完整部署的情况下进行版本控制、测试或更改', fix: '将提示词作为单独文件存储在/prompts目录中，在运行时加载。' },
           { mistake: '仅在本地测试，从不在CI/CD中测试', problem: '本地测试在时间压力下被跳过；CI/CD门控是强制性的', fix: '向GitHub Actions添加Promptfoo测试步骤。如果通过率低于85%则阻止合并。' },
           { mistake: '没有生产监控', problem: '提示词质量在部署后无可见性地退化', fix: '每天记录每个提示词的通过率。如果通过率每周下降5%则发出警报。' },
-          { mistake: '仅在一个模型上测试', problem: '在GPT-5.5上工作的提示词可能在Claude 4.6 Sonnet上失败', fix: '在CI/CD中针对至少2个模型运行测试套件。' },
+          { mistake: '仅在一个模型上测试', problem: '在一个模型上有效的提示词可能在另一个模型上失败', fix: '在CI/CD中针对至少2个模型运行测试套件。' },
         ],
       },
       key_takeaways: {
@@ -1157,7 +1157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: '生产提示词监控应该记录什么？', a: '记录提示词输入（如果包含个人信息则记录哈希值）、模型响应、延迟、令牌数量和评估器的质量分数。对于处理用户数据的提示词，日志至少保留30天，并设置24小时内质量分数下降超过10%的警报。' },
           { q: '如何在Git仓库中存储提示词？', a: '将每个提示词作为纯文本文件存储在`/prompts/[主题]/`目录中。使用slug和版本命名文件：`classify-intent-v2.txt`。添加包含版本、作者、日期、模型和一行描述的YAML前言。' },
           { q: '什么是提示词的CI/CD门控？', a: 'CI/CD门控是一个自动化测试步骤，在每个PR上运行提示词测试套件，如果通过率低于阈值（通常为85%），则阻止合并。在GitHub Actions中使用`npx promptfoo eval --threshold 0.85`实现。' },
-          { q: '提示词工程最适合哪个IDE？', a: 'Cursor是提示词工程最适合的IDE，因为它有内置AI辅助功能，可以直接在提示词文件上运行Claude 4.6 Sonnet。VS Code + Continue.dev是需要开源工具的团队的有力替代方案。' },
+          { q: '提示词工程最适合哪个IDE？', a: 'Cursor是提示词工程最适合的IDE，因为它有内置AI辅助功能，可以直接在提示词文件上运行前沿模型。VS Code + Continue.dev是需要开源工具的团队的有力替代方案。' },
         ],
       },
       related_reading: {
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'VS Code مع Continue.dev مصدر مفتوح، يدعم النماذج المحلية عبر Ollama، ويعمل مع أي منظومة لغة. يُوفّر Continue.dev إكمال البرومبت وتعديله داخل المحرر.',
         ],
         callouts: [
-          { type: 'tip', label: 'Cursor لسرعة تكرار البرومبت', text: 'يتيح لك Cursor تشغيل Claude 4.6 Sonnet مباشرةً على ملفات البرومبت من داخل المحرر. يُقلّص هذا دورة الكتابة-الاختبار من دقائق إلى ثوانٍ للفرق التي تستخدم Cursor بالفعل للكود.' },
+          { type: 'tip', label: 'Cursor لسرعة تكرار البرومبت', text: 'يتيح لك Cursor تشغيل نموذج متطور مباشرةً على ملفات البرومبت من داخل المحرر. يُقلّص هذا دورة الكتابة-الاختبار من دقائق إلى ثوانٍ للفرق التي تستخدم Cursor بالفعل للكود.' },
         ],
       },
       local_test_loop: {
@@ -1300,7 +1300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: 'كتابة البرومبتات مباشرةً في كود التطبيق', problem: 'البرومبتات المُضمَّنة في الكود لا يمكن إصدارها أو اختبارها أو تغييرها دون نشر كامل', fix: 'احفظ البرومبتات كملفات منفصلة في مجلد /prompts. حمّلها في وقت التشغيل.' },
           { mistake: 'الاختبار محلياً فقط دون CI/CD', problem: 'الاختبارات المحلية تُهمَل تحت ضغط الوقت؛ بوابات CI/CD إلزامية', fix: 'أضف خطوة اختبار مع Promptfoo إلى GitHub Actions. احظر الدمج إذا انخفضت نسبة النجاح دون 85%.' },
           { mistake: 'عدم وجود مراقبة في الإنتاج', problem: 'جودة البرومبتات تتدهوّر بعد النشر دون رؤية', fix: 'سجّل نسبة النجاح لكل برومبت يومياً. أطلق تنبيهاً إذا انخفضت النسبة بنسبة 5% أسبوعياً.' },
-          { mistake: 'الاختبار بنموذج واحد فقط', problem: 'برومبت يعمل في GPT-5.5 قد يفشل في Claude 4.6 Sonnet', fix: 'شغّل مجموعة اختباراتك على نموذجين على الأقل في CI/CD.' },
+          { mistake: 'الاختبار بنموذج واحد فقط', problem: 'برومبت يعمل في نموذج ما قد يفشل في نموذج آخر', fix: 'شغّل مجموعة اختباراتك على نموذجين على الأقل في CI/CD.' },
         ],
       },
       key_takeaways: {
@@ -1324,7 +1324,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: 'ما الذي ينبغي تسجيله لمراقبة البرومبتات في الإنتاج؟', a: 'سجّل مدخلات البرومبت (أو تجزئتها إذا تضمّنت بيانات شخصية)، استجابات النموذج، الكمون، عدد الرموز المميزة، ودرجة الجودة من مقيّم. احتفظ بالسجلات لمدة 30 يوماً على الأقل.' },
           { q: 'كيف أخزّن البرومبتات في مستودع Git؟', a: 'احفظ كل برومبت كملف نص عادي في `/prompts/[موضوع]/`. سمّ الملفات بالمُعرِّف والإصدار: `classify-intent-v2.txt`. أضف YAML frontmatter يتضمّن: الإصدار، المؤلف، التاريخ، النموذج، الوصف.' },
           { q: 'ما بوابة CI/CD للبرومبتات؟', a: 'بوابة CI/CD خطوة اختبار آلية تُشغّل مجموعة اختبارات البرومبت في كل طلب دمج وتحظر الدمج إذا انخفضت نسبة النجاح دون عتبتك (عادةً 85%). طبّقها في GitHub Actions باستخدام CLI الـPromptfoo: `npx promptfoo eval --threshold 0.85`.' },
-          { q: 'ما أفضل بيئة تطوير لهندسة البرومبت؟', a: 'Cursor أفضل بيئة تطوير لأنها تُتيح تشغيل Claude 4.6 Sonnet مباشرةً على ملفات البرومبت من داخل المحرر. VS Code مع Continue.dev بديل جيد للفرق التي تحتاج أدوات مصدر مفتوح.' },
+          { q: 'ما أفضل بيئة تطوير لهندسة البرومبت؟', a: 'Cursor أفضل بيئة تطوير لأنها تُتيح تشغيل نموذج متطور مباشرةً على ملفات البرومبت من داخل المحرر. VS Code مع Continue.dev بديل جيد للفرق التي تحتاج أدوات مصدر مفتوح.' },
         ],
       },
       related_reading: {
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '결정 기준: TypeScript 또는 Python을 주로 사용하고 팀이 클라우드 API를 사용한다면 Cursor를 사용하십시오. 로컬 모델 지원, 오픈소스 요구사항, 또는 조직에서 클라우드 API 사용에 제한이 있다면 VS Code + Continue.dev를 사용하십시오.',
         ],
         callouts: [
-          { type: 'tip', label: '프롬프트 반복 속도를 위한 Cursor', text: 'Cursor를 사용하면 편집기 내부에서 프롬프트 파일에 Claude 4.6 Sonnet을 직접 실행할 수 있습니다. 이미 코드 작업에 Cursor를 사용하는 팀의 경우 작성-테스트 주기가 수 분에서 수 초로 단축됩니다.' },
+          { type: 'tip', label: '프롬프트 반복 속도를 위한 Cursor', text: 'Cursor를 사용하면 편집기 내부에서 프롬프트 파일에 프론티어 모델을 직접 실행할 수 있습니다. 이미 코드 작업에 Cursor를 사용하는 팀의 경우 작성-테스트 주기가 수 분에서 수 초로 단축됩니다.' },
         ],
       },
       local_test_loop: {
@@ -1477,7 +1477,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { mistake: '애플리케이션 코드에 직접 프롬프트 작성', problem: '하드코딩된 프롬프트는 전체 배포 없이는 버전 관리, 테스트, 변경이 불가능합니다', fix: '프롬프트를 /prompts 디렉터리에 별도 파일로 저장하십시오. 런타임에 로드하십시오.' },
           { mistake: '로컬에서만 테스트하고 CI/CD에서는 테스트하지 않음', problem: '로컬 테스트는 시간 압박 하에 건너뛰게 됩니다; CI/CD 게이트는 필수입니다', fix: 'GitHub Actions에 Promptfoo 테스트 단계를 추가하십시오. 통과율이 85% 이하로 떨어지면 병합을 차단하십시오.' },
           { mistake: '프로덕션 모니터링 없음', problem: '프롬프트 품질이 배포 후 가시성 없이 저하됩니다', fix: '프롬프트별 일별 통과율을 기록하십시오. 통과율이 주간 5% 이상 하락하면 알림을 발송하십시오.' },
-          { mistake: '하나의 모델로만 테스트', problem: 'GPT-5.5에서 작동하는 프롬프트가 Claude 4.6 Sonnet에서는 실패할 수 있습니다', fix: 'CI/CD에서 최소 2개의 모델에 대해 테스트 스위트를 실행하십시오.' },
+          { mistake: '하나의 모델로만 테스트', problem: '한 모델에서 작동하는 프롬프트가 다른 모델에서는 실패할 수 있습니다', fix: 'CI/CD에서 최소 2개의 모델에 대해 테스트 스위트를 실행하십시오.' },
         ],
       },
       key_takeaways: {
@@ -1502,7 +1502,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: '프로덕션 프롬프트 모니터링을 위해 무엇을 기록해야 합니까?', a: '프롬프트 입력(PII가 포함된 경우 해시), 모델 응답, 지연 시간, 토큰 수, 평가자의 품질 점수를 기록하십시오. 사용자 데이터를 처리하는 프롬프트의 경우, 로그를 최소 30일간 보관하고 24시간 롤링 윈도우 기준 품질 점수 10% 이상 하락 시 알림을 설정하십시오.' },
           { q: 'Git 리포지터리에 프롬프트를 어떻게 저장합니까?', a: '각 프롬프트를 `/prompts/[theme]/` 디렉터리에 일반 텍스트 파일로 저장하십시오. 슬러그와 버전으로 파일명을 지정하십시오: `classify-intent-v2.txt`. 버전, 작성자, 수정일, 모델, 한 줄 설명이 포함된 YAML 프론트매터를 추가하십시오. 이렇게 하면 프롬프트를 표준 코드 리뷰 도구에서 검색, 비교, 검토할 수 있습니다.' },
           { q: '프롬프트용 CI/CD 게이트란 무엇입니까?', a: 'CI/CD 게이트는 모든 PR에서 프롬프트 테스트 스위트를 실행하고 통과율이 임계값(일반적으로 85%) 이하로 떨어지면 병합을 차단하는 자동화된 테스트 단계입니다. Promptfoo의 CLI를 사용하여 GitHub Actions에서 구현하십시오: `npx promptfoo eval --threshold 0.85`. 테스트가 실패하면 PR이 자동으로 차단됩니다.' },
-          { q: '프롬프트 엔지니어링에 가장 좋은 IDE는 어느 것입니까?', a: 'Cursor는 프롬프트 반복을 위한 내장 AI 지원과 프롬프트 파일에서 Claude 4.6 Sonnet을 직접 실행할 수 있는 기능 때문에 프롬프트 엔지니어링에 가장 좋은 IDE입니다. Continue.dev가 탑재된 VS Code는 오픈소스 툴링이 필요한 팀에게 강력한 대안입니다. 두 IDE 모두 프롬프트 형식의 구문 강조 표시를 지원하고 Git과 통합됩니다.' },
+          { q: '프롬프트 엔지니어링에 가장 좋은 IDE는 어느 것입니까?', a: 'Cursor는 프롬프트 반복을 위한 내장 AI 지원과 프롬프트 파일에서 프론티어 모델을 직접 실행할 수 있는 기능 때문에 프롬프트 엔지니어링에 가장 좋은 IDE입니다. Continue.dev가 탑재된 VS Code는 오픈소스 툴링이 필요한 팀에게 강력한 대안입니다. 두 IDE 모두 프롬프트 형식의 구문 강조 표시를 지원하고 Git과 통합됩니다.' },
         ],
       },
       related_reading: {
