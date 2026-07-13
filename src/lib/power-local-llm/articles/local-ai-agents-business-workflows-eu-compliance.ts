@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Local AI agents + EU compliance: 5 workflow templates, GDPR controls, EU AI Act classification, DACH specifics. No data leaves your infrastructure.',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'works council ai agent',
     ],
     leadAnswerBlock:
-      '**Local AI agents are GDPR-compatible by architecture, not by accident — but only when the entire stack (model, tool servers, audit log, vector store) runs inside the controller\'s infrastructure with zero egress. Five business workflows cover most production demand: document intake and classification, email triage with draft replies, meeting summary and action extraction, compliance report generation, and invoice processing with PO matching. Each has a different EU AI Act classification (most are Limited-risk, HR screening is High-risk, none of the templates are Prohibited) and a different DPIA threshold. The recommended stack is Ollama or vLLM serving Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (tool-calling models) with Cline or Goose+MCP as the agent runtime, an immutable audit log, and human approval on every write or send action. Deploying without a DPIA, mixing personal and business data in one workspace, and skipping approval gates on send actions are the three most common mistakes.**',
+      '**Local AI agents are GDPR-compatible by architecture, not by accident — but only when the entire stack (model, tool servers, audit log, vector store) runs inside the controller\'s infrastructure with zero egress. Five business workflows cover most production demand: document intake and classification, email triage with draft replies, meeting summary and action extraction, compliance report generation, and invoice processing with PO matching. Each has a different EU AI Act classification (most are Limited-risk, HR screening is High-risk, none of the templates are Prohibited) and a different DPIA threshold. The recommended stack is Ollama or vLLM serving Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (tool-calling models) with Cline or Goose+MCP as the agent runtime, an immutable audit log, and human approval on every write or send action. Deploying without a DPIA, mixing personal and business data in one workspace, and skipping approval gates on send actions are the three most common mistakes.**',
     quickAnswerTop: {
       en: {
         question: 'Are local AI agents GDPR-compliant for business workflows?',
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Local-only architecture removes the cloud-LLM threat model. The remaining GDPR work is data minimisation, lawful basis, security of processing, audit logging, and a DPIA where the workflow warrants one.',
           '5 business workflow templates cover most demand: document intake, email triage, meeting summary, compliance reports, invoice processing.',
           'EU AI Act classification: most templates are Limited-risk (transparency only); HR screening is High-risk (full conformity assessment); workplace emotion recognition and social scoring are Prohibited.',
-          'Stack: Ollama or vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (tool-calling) + Cline or Goose+MCP + immutable audit log + manual approval on every write/send.',
+          'Stack: Ollama or vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (tool-calling) + Cline or Goose+MCP + immutable audit log + manual approval on every write/send.',
           'DACH adds two layers: Betriebsrat co-determination for workflows touching employee data; §203 StGB professional confidentiality for lawyers, doctors, auditors.',
           'Three common mistakes: deploying without a DPIA, mixing personal and business data in one workspace, skipping approval gates on send actions.',
         ],
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/local-ai-agents-business-workflows-eu-compliance-static.html',
-    gammaDescription: 'The slide deck below covers: 5 production workflow templates for EU-compliant local AI agents (document intake, email triage, meeting summary, compliance reports, invoice processing), EU AI Act risk classification (Limited vs High-risk vs Prohibited), 6 GDPR controls (lawful basis, data minimisation, DPIA), DACH specifics (Works Council BetrVG §87, §203 StGB professional confidentiality), model selection table (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B), and 5 common deployment mistakes. Download the PDF as an EU AI compliance reference card.',
+    gammaDescription: 'The slide deck below covers: 5 production workflow templates for EU-compliant local AI agents (document intake, email triage, meeting summary, compliance reports, invoice processing), EU AI Act risk classification (Limited vs High-risk vs Prohibited), 6 GDPR controls (lawful basis, data minimisation, DPIA), DACH specifics (Works Council BetrVG §87, §203 StGB professional confidentiality), model selection table (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B), and 5 common deployment mistakes. Download the PDF as an EU AI compliance reference card.',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**EU AI Act tiers determine the obligations.** Most business workflows fall into Limited-risk (transparency to the user that AI is involved). HR screening, credit decisions, and benefits eligibility are High-risk and require a full conformity assessment. Workplace emotion recognition and social scoring are Prohibited.',
           '**GDPR work is unchanged by going local.** Lawful basis (Article 6), data minimisation (Article 5), security of processing (Article 32), audit logging, and a DPIA (Article 35) for high-impact workflows. The local stack makes these controls easier to evidence, not optional.',
           '**DACH adds two layers.** Works Council co-determination (BetrVG §87) applies any time the agent touches employee data — even passively. §203 StGB professional confidentiality (lawyers, doctors, auditors, tax advisers) makes the local-only architecture not optional but mandatory.',
-          '**The reference stack:** Ollama or vLLM serving a tool-calling model (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B for general work; Llama 3.2 3B for lightweight email triage) with Cline or Goose+MCP as the agent runtime, an immutable append-only audit log, and human approval on every write or send action.',
+          '**The reference stack:** Ollama or vLLM serving a tool-calling model (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B for general work; Llama 3.2 3B for lightweight email triage) with Cline or Goose+MCP as the agent runtime, an immutable append-only audit log, and human approval on every write or send action.',
           '**Three failure modes to avoid:** deploying without a DPIA on a workflow that needs one, mixing personal and business data in a single agent workspace, and skipping approval gates on outbound actions (email send, contract sign, payment authorisation).',
         ],
       },
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Workflows covered:** document intake, email triage, meeting summary, compliance reporting, invoice processing.',
           '**EU AI Act distribution across the 5 templates:** 4 Limited-risk, 1 High-risk (when used for HR screening), 0 Prohibited.',
           '**DPIA threshold:** mandatory for High-risk, trigger-based (Article 35 criteria) for the others. Most teams should run one for any workflow that touches special-category data.',
-          '**Hardware sizing:** Gemma 4 27B and Qwen3 32B fit on 24 GB VRAM at Q4_K_M; GLM-5.1 32B and Llama 3.3 70B want 48 GB+ for unconstrained context.',
+          '**Hardware sizing:** Gemma 4 27B and Qwen3 32B fit on 24 GB VRAM at Q4_K_M; GLM-4.7 32B and Llama 3.3 70B want 48 GB+ for unconstrained context.',
           '**Audit-log retention:** GDPR Article 30 record-of-processing requirements drive the floor; sectoral rules (financial services, health) extend it. 6 years is the safe default for most enterprise contexts.',
           '**Cost:** zero in API spend; hardware amortises against an enterprise SaaS-AI subscription bill within 6–12 months for a team of 20+ users.',
         ],
@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Document intake and classification.** Trigger: PDF or scan lands in a watched folder or email. Tools: filesystem (read), OCR (when needed), classification model, database (write). Model: Gemma 4 27B or Qwen3 32B for tool calling and structured output. Approval pattern: auto for read and classify, manual for routing if the document mentions a person. AI Act tier: Limited-risk. DPIA: trigger-based.',
           '**2. Email triage with draft replies.** Trigger: new message in a monitored inbox. Tools: IMAP/Graph API (read-only), classification model, draft store (write), notification. Model: Llama 3.2 3B is enough for triage; Gemma 4 27B for draft generation. Approval pattern: auto for classify and draft, manual for send (always). AI Act tier: Limited-risk. DPIA: trigger-based; mandatory if the inbox handles employee data.',
           '**3. Meeting summary and action extraction.** Trigger: transcript lands in storage (Whisper or vendor). Tools: filesystem (read), summarisation model, extraction model, output target (Notion/Jira/internal wiki via API). Model: Qwen3 32B for long context (128K) on hour-long transcripts. Approval pattern: auto for summary, manual for action items posted to external systems. AI Act tier: Limited-risk; verify each transcript has consent capture before processing.',
-          '**4. Compliance report generation.** Trigger: scheduled (monthly, quarterly). Tools: database (read), report-template store, report renderer, reviewer notification. Model: GLM-5.1 32B or Llama 3.3 70B — long context, structured output, low hallucination. Approval pattern: auto for data extraction, manual for the published report. AI Act tier: Limited-risk; verify the underlying data sources have a documented lawful basis. Pair with [structured output and JSON mode](/prompt-engineering/structured-output-and-json-mode) to keep the report shape stable.',
+          '**4. Compliance report generation.** Trigger: scheduled (monthly, quarterly). Tools: database (read), report-template store, report renderer, reviewer notification. Model: GLM-4.7 32B or Llama 3.3 70B — long context, structured output, low hallucination. Approval pattern: auto for data extraction, manual for the published report. AI Act tier: Limited-risk; verify the underlying data sources have a documented lawful basis. Pair with [structured output and JSON mode](/prompt-engineering/structured-output-and-json-mode) to keep the report shape stable.',
           '**5. Invoice processing and validation.** Trigger: invoice lands in finance inbox or AP folder. Tools: filesystem (read), OCR, ERP integration (read PO and vendor), exception queue (write). Model: Gemma 4 27B for tool calling; Qwen3 32B when invoices have non-standard layouts. Approval pattern: auto for extraction and PO match, manual for any exception (mismatch, new vendor, large amount). AI Act tier: Limited-risk. DPIA: usually not triggered.',
           '**Common pattern across all five:** the read steps auto-approve; the write steps that affect external systems or people\'s rights manually approve. The audit log captures every decision.',
         ],
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tool-call reliability is a model property, not a harness property.** The same harness paired with a small general-purpose model fails; paired with a tool-call-tuned 27B+ model it succeeds. Pick the model first.',
         items: [
           '**Gemma 4 27B (`gemma4:27b`).** Best general-purpose tool-caller in May 2026. Fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M. Reliable on document intake, email triage, and invoice processing. Slightly conservative on chained tool calls — fine for business workflows where each step has explicit approval anyway.',
-          '**GLM-5.1 32B (`glm5:32b`).** 128K context out of the box. Strong tool-call reliability. The pick for compliance reporting and meeting summarisation where the input is long. Wants 24 GB+ VRAM at Q4_K_M for unconstrained context.',
+          '**GLM-4.7 32B (`glm5:32b`).** 128K context out of the box. Strong tool-call reliability. The pick for compliance reporting and meeting summarisation where the input is long. Wants 24 GB+ VRAM at Q4_K_M for unconstrained context.',
           '**Qwen3 32B (`qwen3:32b`).** Well-rounded, very reliable on multi-step plans. Good fallback when Gemma 4 is conservative. 32K context out of the box; fine for most business tasks.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Highest ceiling, heaviest hardware. 48 GB+ VRAM or 64 GB unified memory at Q4_K_M. Use for compliance reports and exception handling where reliability matters more than speed.',
           '**Llama 3.2 3B (`llama3.2:3b`).** Lightweight pick for high-volume triage. Runs comfortably on 8 GB VRAM. Good enough for "is this email customer support / sales / spam"; not good enough for drafting replies. Pair with a 27B+ model for the drafting step.',
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What model size handles business workflows reliably?',
-            a: 'Gemma 4 27B is the reliable default for general-purpose tool-calling. GLM-5.1 32B is the pick when input is long (compliance reporting, hour-long meeting transcripts) — 128K context out of the box. Qwen3 32B is the well-rounded fallback. Llama 3.3 70B has the highest ceiling but wants 48 GB+ VRAM. Llama 3.2 3B is fine for high-volume classification but not for drafting. Models below 7B emit malformed tool calls regardless of which agent runtime wraps them.',
+            a: 'Gemma 4 27B is the reliable default for general-purpose tool-calling. GLM-4.7 32B is the pick when input is long (compliance reporting, hour-long meeting transcripts) — 128K context out of the box. Qwen3 32B is the well-rounded fallback. Llama 3.3 70B has the highest ceiling but wants 48 GB+ VRAM. Llama 3.2 3B is fine for high-volume classification but not for drafting. Models below 7B emit malformed tool calls regardless of which agent runtime wraps them.',
           },
           {
             q: 'How do I audit what the agent did?',
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Lokale KI-Agenten + EU-Compliance: 5 Workflow-Vorlagen, DSGVO-Kontrollen, EU-AI-Act-Klassifizierung, DACH-Spezifika. Keine Daten verlassen Ihre Infrastruktur.',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'betriebsrat ki-agent',
     ],
     leadAnswerBlock:
-      '**Lokale KI-Agenten sind DSGVO-kompatibel durch Architektur, nicht durch Zufall — aber nur dann, wenn der gesamte Stack (Modell, Tool-Server, Audit-Log, Vektor-Store) innerhalb der Infrastruktur des Verantwortlichen mit null Egress läuft. Fünf Geschäftsworkflows decken den Großteil der Produktionsanforderungen ab: Dokumentenannahme und -klassifizierung, E-Mail-Triage mit Antwortentwürfen, Meeting-Zusammenfassungen mit Aufgabenextraktion, Compliance-Reporting und Rechnungsverarbeitung mit Bestellabgleich. Jeder hat eine andere EU-AI-Act-Klassifizierung (die meisten sind Limited-Risk, HR-Screening ist High-Risk, keine der Vorlagen ist verboten) und eine andere DSFA-Schwelle. Der empfohlene Stack: Ollama oder vLLM mit Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (Tool-Calling-Modelle), Cline oder Goose+MCP als Agent-Runtime, ein unveränderliches Audit-Log und manuelle Freigabe für jede Schreib- oder Sendeaktion. Bereitstellung ohne DSFA, das Vermischen personenbezogener und geschäftlicher Daten in einem Workspace und das Auslassen von Freigabe-Gates bei Sendeaktionen sind die drei häufigsten Fehler.**',
+      '**Lokale KI-Agenten sind DSGVO-kompatibel durch Architektur, nicht durch Zufall — aber nur dann, wenn der gesamte Stack (Modell, Tool-Server, Audit-Log, Vektor-Store) innerhalb der Infrastruktur des Verantwortlichen mit null Egress läuft. Fünf Geschäftsworkflows decken den Großteil der Produktionsanforderungen ab: Dokumentenannahme und -klassifizierung, E-Mail-Triage mit Antwortentwürfen, Meeting-Zusammenfassungen mit Aufgabenextraktion, Compliance-Reporting und Rechnungsverarbeitung mit Bestellabgleich. Jeder hat eine andere EU-AI-Act-Klassifizierung (die meisten sind Limited-Risk, HR-Screening ist High-Risk, keine der Vorlagen ist verboten) und eine andere DSFA-Schwelle. Der empfohlene Stack: Ollama oder vLLM mit Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (Tool-Calling-Modelle), Cline oder Goose+MCP als Agent-Runtime, ein unveränderliches Audit-Log und manuelle Freigabe für jede Schreib- oder Sendeaktion. Bereitstellung ohne DSFA, das Vermischen personenbezogener und geschäftlicher Daten in einem Workspace und das Auslassen von Freigabe-Gates bei Sendeaktionen sind die drei häufigsten Fehler.**',
     quickAnswerTop: {
       de: {
         question: 'Sind lokale KI-Agenten für Geschäftsworkflows DSGVO-konform?',
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lokale Architektur entfernt das Cloud-LLM-Bedrohungsmodell. Verbleibende DSGVO-Arbeit: Datenminimierung, Rechtsgrundlage, Sicherheit der Verarbeitung, Audit-Logging und eine DSFA, wo der Workflow es rechtfertigt.',
           '5 Workflow-Vorlagen decken den Großteil der Nachfrage ab: Dokumentenannahme, E-Mail-Triage, Meeting-Zusammenfassung, Compliance-Reports, Rechnungsverarbeitung.',
           'EU-AI-Act-Klassifizierung: Die meisten Vorlagen sind Limited-Risk (nur Transparenz); HR-Screening ist High-Risk (volle Konformitätsbewertung); Emotionserkennung am Arbeitsplatz und Social Scoring sind verboten.',
-          'Stack: Ollama oder vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (Tool-Calling) + Cline oder Goose+MCP + unveränderliches Audit-Log + manuelle Freigabe für jede Schreib-/Sendeaktion.',
+          'Stack: Ollama oder vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (Tool-Calling) + Cline oder Goose+MCP + unveränderliches Audit-Log + manuelle Freigabe für jede Schreib-/Sendeaktion.',
           'DACH ergänzt zwei Ebenen: Mitbestimmung des Betriebsrats für Workflows, die Mitarbeiterdaten berühren; §203 StGB für Berufsgeheimnisträger (Anwälte, Ärzte, Wirtschaftsprüfer).',
           'Drei häufige Fehler: Bereitstellung ohne DSFA, Vermischung personenbezogener und geschäftlicher Daten in einem Workspace, Auslassen von Freigabe-Gates bei Sendeaktionen.',
         ],
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**EU-AI-Act-Stufen bestimmen die Pflichten.** Die meisten Geschäftsworkflows fallen in Limited-Risk (Transparenz gegenüber dem Nutzer, dass KI beteiligt ist). HR-Screening, Kreditentscheidungen und Anspruchsprüfungen sind High-Risk und erfordern eine vollständige Konformitätsbewertung. Emotionserkennung am Arbeitsplatz und Social Scoring sind verboten.',
           '**DSGVO-Arbeit ändert sich nicht durch lokalen Betrieb.** Rechtsgrundlage (Artikel 6), Datenminimierung (Artikel 5), Sicherheit der Verarbeitung (Artikel 32), Audit-Logging und eine DSFA (Artikel 35) für hochwirksame Workflows. Der lokale Stack erleichtert den Nachweis dieser Kontrollen, macht sie aber nicht optional.',
           '**DACH ergänzt zwei Ebenen.** Mitbestimmung des Betriebsrats (BetrVG §87) gilt immer, wenn der Agent Mitarbeiterdaten berührt — auch passiv. §203 StGB für Berufsgeheimnisträger (Anwälte, Ärzte, Wirtschaftsprüfer, Steuerberater) macht die rein lokale Architektur nicht zur Präferenz, sondern zur Pflicht.',
-          '**Der Referenz-Stack:** Ollama oder vLLM mit einem Tool-Calling-Modell (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B für allgemeine Arbeit; Llama 3.2 3B für leichte E-Mail-Triage), Cline oder Goose+MCP als Agent-Runtime, ein unveränderliches Append-only-Audit-Log und manuelle Freigabe für jede Schreib- oder Sendeaktion.',
+          '**Der Referenz-Stack:** Ollama oder vLLM mit einem Tool-Calling-Modell (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B für allgemeine Arbeit; Llama 3.2 3B für leichte E-Mail-Triage), Cline oder Goose+MCP als Agent-Runtime, ein unveränderliches Append-only-Audit-Log und manuelle Freigabe für jede Schreib- oder Sendeaktion.',
           '**Drei zu vermeidende Fehlermodi:** Bereitstellung ohne DSFA für einen Workflow, der eine benötigt; Vermischung personenbezogener und geschäftlicher Daten in einem Agent-Workspace; Auslassen von Freigabe-Gates bei ausgehenden Aktionen (E-Mail-Versand, Vertragsunterzeichnung, Zahlungsfreigabe).',
         ],
       },
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Abgedeckte Workflows:** Dokumentenannahme, E-Mail-Triage, Meeting-Zusammenfassung, Compliance-Reporting, Rechnungsverarbeitung.',
           '**EU-AI-Act-Verteilung über die 5 Vorlagen:** 4 Limited-Risk, 1 High-Risk (bei Einsatz für HR-Screening), 0 verboten.',
           '**DSFA-Schwelle:** verpflichtend für High-Risk, auslöser-basiert (Artikel 35-Kriterien) für die anderen. Die meisten Teams sollten eine für jeden Workflow durchführen, der besondere Datenkategorien berührt.',
-          '**Hardware-Dimensionierung:** Gemma 4 27B und Qwen3 32B passen auf 24 GB VRAM bei Q4_K_M; GLM-5.1 32B und Llama 3.3 70B benötigen 48 GB+ für vollen Kontext.',
+          '**Hardware-Dimensionierung:** Gemma 4 27B und Qwen3 32B passen auf 24 GB VRAM bei Q4_K_M; GLM-4.7 32B und Llama 3.3 70B benötigen 48 GB+ für vollen Kontext.',
           '**Audit-Log-Aufbewahrung:** DSGVO-Artikel-30-Verzeichnispflichten setzen die Untergrenze; sektorale Vorgaben (Finanzdienstleistungen, Gesundheitswesen) verlängern sie. 6 Jahre sind die sichere Voreinstellung für die meisten Enterprise-Kontexte.',
           '**Kosten:** null bei API-Ausgaben; Hardware amortisiert sich gegen ein Enterprise-SaaS-KI-Abo bei einem Team von 20+ Nutzern innerhalb von 6–12 Monaten.',
         ],
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Dokumentenannahme und -klassifizierung.** Trigger: PDF oder Scan landet in einem überwachten Ordner oder einer E-Mail. Tools: Dateisystem (lesen), OCR (bei Bedarf), Klassifizierungsmodell, Datenbank (schreiben). Modell: Gemma 4 27B oder Qwen3 32B für Tool-Calling und strukturierte Ausgabe. Freigabe-Muster: automatisch für Lesen und Klassifizieren, manuell für Routing, wenn das Dokument eine Person erwähnt. AI-Act-Stufe: Limited-Risk. DSFA: auslöser-basiert.',
           '**2. E-Mail-Triage mit Antwortentwürfen.** Trigger: neue Nachricht in einem überwachten Posteingang. Tools: IMAP/Graph API (nur lesen), Klassifizierungsmodell, Entwurfs-Speicher (schreiben), Benachrichtigung. Modell: Llama 3.2 3B reicht für Triage; Gemma 4 27B für Entwurfserstellung. Freigabe-Muster: automatisch für Klassifizierung und Entwurf, manuell für den Versand (immer). AI-Act-Stufe: Limited-Risk. DSFA: auslöser-basiert; verpflichtend, wenn der Posteingang Mitarbeiterdaten verarbeitet.',
           '**3. Meeting-Zusammenfassung und Aufgabenextraktion.** Trigger: Transkript landet im Speicher (Whisper oder Anbieter). Tools: Dateisystem (lesen), Zusammenfassungsmodell, Extraktionsmodell, Ausgabeziel (Notion/Jira/internes Wiki über API). Modell: Qwen3 32B für langen Kontext (128K) bei einstündigen Transkripten. Freigabe-Muster: automatisch für Zusammenfassung, manuell für Aktionspunkte, die in externe Systeme veröffentlicht werden. AI-Act-Stufe: Limited-Risk; Einwilligungserfassung pro Transkript prüfen.',
-          '**4. Compliance-Report-Erzeugung.** Trigger: zeitgesteuert (monatlich, vierteljährlich). Tools: Datenbank (lesen), Report-Vorlagen-Speicher, Report-Renderer, Reviewer-Benachrichtigung. Modell: GLM-5.1 32B oder Llama 3.3 70B — langer Kontext, strukturierte Ausgabe, geringe Halluzination. Freigabe-Muster: automatisch für Datenextraktion, manuell für den veröffentlichten Report. AI-Act-Stufe: Limited-Risk; verifizieren Sie, dass die zugrunde liegenden Datenquellen eine dokumentierte Rechtsgrundlage haben. Kombinieren Sie mit [strukturierter Ausgabe und JSON-Modus](/de/prompt-engineering/structured-output-and-json-mode), um die Report-Struktur stabil zu halten.',
+          '**4. Compliance-Report-Erzeugung.** Trigger: zeitgesteuert (monatlich, vierteljährlich). Tools: Datenbank (lesen), Report-Vorlagen-Speicher, Report-Renderer, Reviewer-Benachrichtigung. Modell: GLM-4.7 32B oder Llama 3.3 70B — langer Kontext, strukturierte Ausgabe, geringe Halluzination. Freigabe-Muster: automatisch für Datenextraktion, manuell für den veröffentlichten Report. AI-Act-Stufe: Limited-Risk; verifizieren Sie, dass die zugrunde liegenden Datenquellen eine dokumentierte Rechtsgrundlage haben. Kombinieren Sie mit [strukturierter Ausgabe und JSON-Modus](/de/prompt-engineering/structured-output-and-json-mode), um die Report-Struktur stabil zu halten.',
           '**5. Rechnungsverarbeitung und -validierung.** Trigger: Rechnung landet im Finanz-Posteingang oder AP-Ordner. Tools: Dateisystem (lesen), OCR, ERP-Integration (Bestellung und Lieferant lesen), Ausnahme-Warteschlange (schreiben). Modell: Gemma 4 27B für Tool-Calling; Qwen3 32B bei Rechnungen mit nicht-standardisierten Layouts. Freigabe-Muster: automatisch für Extraktion und Bestellabgleich, manuell für jede Ausnahme (Abweichung, neuer Lieferant, hoher Betrag). AI-Act-Stufe: Limited-Risk. DSFA: in der Regel nicht ausgelöst.',
           '**Gemeinsames Muster über alle fünf:** Die Leseschritte werden automatisch freigegeben; die Schreibschritte, die externe Systeme oder Rechte von Personen betreffen, manuell. Das Audit-Log erfasst jede Entscheidung.',
         ],
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tool-Call-Zuverlässigkeit ist eine Modelleigenschaft, keine Harness-Eigenschaft.** Dieselbe Harness mit einem kleinen Allzweckmodell scheitert; mit einem auf Tool-Calls trainierten 27B+-Modell gelingt sie. Wählen Sie zuerst das Modell.',
         items: [
           '**Gemma 4 27B (`gemma4:27b`).** Bester Allzweck-Tool-Caller im Mai 2026. Passt in 16 GB Unified Memory oder 24 GB VRAM bei Q4_K_M. Zuverlässig bei Dokumentenannahme, E-Mail-Triage und Rechnungsverarbeitung. Etwas konservativ bei verketteten Tool-Aufrufen — passt zu Geschäftsworkflows, in denen jeder Schritt ohnehin explizit freigegeben wird.',
-          '**GLM-5.1 32B (`glm5:32b`).** 128K Kontext out-of-the-box. Starke Tool-Call-Zuverlässigkeit. Die Wahl für Compliance-Reporting und Meeting-Zusammenfassungen mit langer Eingabe. Möchte 24 GB+ VRAM bei Q4_K_M für vollen Kontext.',
+          '**GLM-4.7 32B (`glm5:32b`).** 128K Kontext out-of-the-box. Starke Tool-Call-Zuverlässigkeit. Die Wahl für Compliance-Reporting und Meeting-Zusammenfassungen mit langer Eingabe. Möchte 24 GB+ VRAM bei Q4_K_M für vollen Kontext.',
           '**Qwen3 32B (`qwen3:32b`).** Ausgewogen, sehr zuverlässig bei mehrstufigen Plänen. Guter Fallback, wenn Gemma 4 zu konservativ ist. 32K Kontext out-of-the-box; passt für die meisten Geschäftsaufgaben.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Höchste Decke, schwerste Hardware. 48 GB+ VRAM oder 64 GB Unified Memory bei Q4_K_M. Verwenden Sie es für Compliance-Reports und Ausnahmebehandlung, wenn Zuverlässigkeit wichtiger ist als Geschwindigkeit.',
           '**Llama 3.2 3B (`llama3.2:3b`).** Leichte Wahl für Hochvolumen-Triage. Läuft komfortabel auf 8 GB VRAM. Gut genug für "Ist das Kundensupport / Vertrieb / Spam"; nicht gut genug für das Verfassen von Antworten. Kombinieren Sie mit einem 27B+-Modell für den Entwurfsschritt.',
@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Modellgröße bewältigt Geschäftsworkflows zuverlässig?',
-            a: 'Gemma 4 27B ist die zuverlässige Voreinstellung für Allzweck-Tool-Calling. GLM-5.1 32B ist die Wahl bei langer Eingabe (Compliance-Reporting, einstündige Meeting-Transkripte) — 128K Kontext out-of-the-box. Qwen3 32B ist der ausgewogene Fallback. Llama 3.3 70B hat die höchste Decke, möchte aber 48 GB+ VRAM. Llama 3.2 3B reicht für Hochvolumen-Klassifikation, nicht für Entwürfe. Modelle unter 7B emittieren fehlerhafte Tool-Aufrufe, unabhängig von der umgebenden Agent-Runtime.',
+            a: 'Gemma 4 27B ist die zuverlässige Voreinstellung für Allzweck-Tool-Calling. GLM-4.7 32B ist die Wahl bei langer Eingabe (Compliance-Reporting, einstündige Meeting-Transkripte) — 128K Kontext out-of-the-box. Qwen3 32B ist der ausgewogene Fallback. Llama 3.3 70B hat die höchste Decke, möchte aber 48 GB+ VRAM. Llama 3.2 3B reicht für Hochvolumen-Klassifikation, nicht für Entwürfe. Modelle unter 7B emittieren fehlerhafte Tool-Aufrufe, unabhängig von der umgebenden Agent-Runtime.',
           },
           {
             q: 'Wie auditiere ich, was der Agent getan hat?',
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Agents IA locaux + conformité UE : 5 modèles de workflows, contrôles RGPD, classification EU AI Act, spécificités CNIL. Aucune donnée ne sort de votre infrastructure.',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'cnil agent ia local',
     ],
     leadAnswerBlock:
-      '**Les agents IA locaux sont compatibles RGPD par architecture, et non par hasard — mais uniquement lorsque l\'ensemble du stack (modèle, serveurs d\'outils, journal d\'audit, vector store) s\'exécute dans l\'infrastructure du responsable de traitement avec zéro flux sortant. Cinq workflows métier couvrent l\'essentiel des besoins en production : ingestion et classification documentaire, tri d\'e-mails avec brouillons de réponse, synthèse de réunion avec extraction d\'actions, génération de rapports de conformité, et traitement de factures avec rapprochement de bons de commande. Chacun a une classification EU AI Act différente (la plupart sont à risque limité, le screening RH est à haut risque, aucun n\'est interdit) et un seuil d\'AIPD différent. Le stack recommandé : Ollama ou vLLM servant Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (modèles avec tool-calling), Cline ou Goose+MCP comme runtime d\'agent, un journal d\'audit immuable, et validation humaine sur chaque action d\'écriture ou d\'envoi. Déployer sans AIPD, mélanger données personnelles et données métier dans un même workspace, et omettre les portes de validation sur les actions d\'envoi sont les trois erreurs les plus fréquentes.**',
+      '**Les agents IA locaux sont compatibles RGPD par architecture, et non par hasard — mais uniquement lorsque l\'ensemble du stack (modèle, serveurs d\'outils, journal d\'audit, vector store) s\'exécute dans l\'infrastructure du responsable de traitement avec zéro flux sortant. Cinq workflows métier couvrent l\'essentiel des besoins en production : ingestion et classification documentaire, tri d\'e-mails avec brouillons de réponse, synthèse de réunion avec extraction d\'actions, génération de rapports de conformité, et traitement de factures avec rapprochement de bons de commande. Chacun a une classification EU AI Act différente (la plupart sont à risque limité, le screening RH est à haut risque, aucun n\'est interdit) et un seuil d\'AIPD différent. Le stack recommandé : Ollama ou vLLM servant Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (modèles avec tool-calling), Cline ou Goose+MCP comme runtime d\'agent, un journal d\'audit immuable, et validation humaine sur chaque action d\'écriture ou d\'envoi. Déployer sans AIPD, mélanger données personnelles et données métier dans un même workspace, et omettre les portes de validation sur les actions d\'envoi sont les trois erreurs les plus fréquentes.**',
     quickAnswerTop: {
       fr: {
         question: 'Les agents IA locaux sont-ils conformes au RGPD pour les workflows métier ?',
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'architecture locale supprime le modèle de menace LLM-cloud. Le travail RGPD restant : minimisation, base légale, sécurité du traitement, journalisation d\'audit, et une AIPD lorsque le workflow le justifie.',
           '5 modèles de workflows couvrent l\'essentiel des besoins : ingestion documentaire, tri d\'e-mails, synthèse de réunion, rapports de conformité, traitement de factures.',
           'Classification EU AI Act : la plupart des modèles sont à risque limité (transparence uniquement) ; le screening RH est à haut risque (évaluation complète) ; reconnaissance d\'émotions au travail et scoring social sont interdits.',
-          'Stack : Ollama ou vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (tool-calling) + Cline ou Goose+MCP + journal d\'audit immuable + validation humaine sur chaque écriture/envoi.',
+          'Stack : Ollama ou vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (tool-calling) + Cline ou Goose+MCP + journal d\'audit immuable + validation humaine sur chaque écriture/envoi.',
           'France : la CNIL recommande l\'IA locale pour données sensibles professionnelles (cabinets médicaux, juridiques, financiers, comptables).',
           'Trois erreurs fréquentes : déployer sans AIPD, mélanger données personnelles et métier dans un workspace partagé, omettre les portes de validation sur les actions d\'envoi.',
         ],
@@ -749,7 +749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les niveaux EU AI Act déterminent les obligations.** La plupart des workflows métier sont à risque limité (transparence vis-à-vis de l\'utilisateur sur l\'implication de l\'IA). Le screening RH, les décisions de crédit et l\'éligibilité aux prestations sont à haut risque et requièrent une évaluation complète. La reconnaissance d\'émotions au travail et le scoring social sont interdits.',
           '**Le travail RGPD reste identique en local.** Base légale (article 6), minimisation (article 5), sécurité du traitement (article 32), journal d\'audit, et AIPD (article 35) pour les workflows à fort impact. Le stack local facilite la preuve de ces contrôles ; il ne les rend pas optionnels.',
           '**France : la CNIL recommande l\'IA locale pour les données professionnelles sensibles** — santé, juridique, finance. La conformité §203 StGB allemande s\'applique aussi aux structures opérant en DACH (cabinets d\'avocats, médecins, experts-comptables).',
-          '**Le stack de référence :** Ollama ou vLLM avec un modèle tool-calling (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B pour les tâches générales ; Llama 3.2 3B pour le tri d\'e-mails léger), Cline ou Goose+MCP comme runtime d\'agent, un journal d\'audit append-only immuable, et validation humaine sur chaque action d\'écriture ou d\'envoi.',
+          '**Le stack de référence :** Ollama ou vLLM avec un modèle tool-calling (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B pour les tâches générales ; Llama 3.2 3B pour le tri d\'e-mails léger), Cline ou Goose+MCP comme runtime d\'agent, un journal d\'audit append-only immuable, et validation humaine sur chaque action d\'écriture ou d\'envoi.',
           '**Trois modes d\'échec à éviter :** déployer sans AIPD un workflow qui en nécessite une, mélanger données personnelles et métier dans un workspace d\'agent unique, et omettre les portes de validation sur les actions sortantes (envoi d\'e-mail, signature de contrat, autorisation de paiement).',
         ],
       },
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Workflows couverts :** ingestion documentaire, tri d\'e-mails, synthèse de réunion, reporting de conformité, traitement de factures.',
           '**Répartition EU AI Act sur les 5 modèles :** 4 à risque limité, 1 à haut risque (lorsqu\'utilisé pour le screening RH), 0 interdit.',
           '**Seuil AIPD :** obligatoire pour le haut risque, déclenchée selon les critères de l\'article 35 pour les autres. La plupart des équipes devraient en réaliser une pour tout workflow touchant des données sensibles.',
-          '**Dimensionnement matériel :** Gemma 4 27B et Qwen3 32B tiennent sur 24 GB VRAM en Q4_K_M ; GLM-5.1 32B et Llama 3.3 70B demandent 48 GB+ pour un contexte étendu.',
+          '**Dimensionnement matériel :** Gemma 4 27B et Qwen3 32B tiennent sur 24 GB VRAM en Q4_K_M ; GLM-4.7 32B et Llama 3.3 70B demandent 48 GB+ pour un contexte étendu.',
           '**Conservation des journaux :** les obligations du registre des activités (article 30 RGPD) fixent le plancher ; les règles sectorielles (services financiers, santé) l\'allongent. 6 ans est la valeur par défaut sûre dans la plupart des contextes entreprise.',
           '**Coût :** zéro en dépenses API ; le matériel s\'amortit face à un abonnement IA SaaS d\'entreprise en 6 à 12 mois pour une équipe de 20+ utilisateurs.',
         ],
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Ingestion et classification documentaire.** Déclencheur : un PDF ou scan arrive dans un dossier surveillé ou par e-mail. Outils : système de fichiers (lecture), OCR (si nécessaire), modèle de classification, base de données (écriture). Modèle : Gemma 4 27B ou Qwen3 32B pour le tool-calling et la sortie structurée. Validation : automatique pour la lecture et la classification, manuelle pour le routage si le document mentionne une personne. Niveau AI Act : risque limité. AIPD : déclenchée selon contexte.',
           '**2. Tri d\'e-mails avec brouillons de réponse.** Déclencheur : nouveau message dans une boîte surveillée. Outils : IMAP/Graph API (lecture seule), modèle de classification, stockage des brouillons (écriture), notification. Modèle : Llama 3.2 3B suffit pour le tri ; Gemma 4 27B pour la rédaction. Validation : automatique pour classification et brouillon, manuelle pour l\'envoi (toujours). Niveau AI Act : risque limité. AIPD : déclenchée ; obligatoire si la boîte traite des données salariales.',
           '**3. Synthèse de réunion et extraction d\'actions.** Déclencheur : une transcription arrive dans le stockage (Whisper ou prestataire). Outils : système de fichiers (lecture), modèle de synthèse, modèle d\'extraction, cible de sortie (Notion/Jira/wiki interne via API). Modèle : Qwen3 32B pour le contexte long (128K) sur des transcriptions d\'une heure. Validation : automatique pour la synthèse, manuelle pour les actions publiées dans des systèmes externes. Niveau AI Act : risque limité ; vérifier la capture du consentement par transcription.',
-          '**4. Génération de rapports de conformité.** Déclencheur : programmé (mensuel, trimestriel). Outils : base de données (lecture), stockage de modèles de rapports, moteur de rendu, notification au relecteur. Modèle : GLM-5.1 32B ou Llama 3.3 70B — contexte long, sortie structurée, faible hallucination. Validation : automatique pour l\'extraction de données, manuelle pour le rapport publié. Niveau AI Act : risque limité ; vérifier que les sources de données ont une base légale documentée. Combiner avec [sortie structurée et mode JSON](/fr/prompt-engineering/structured-output-and-json-mode) pour stabiliser la forme du rapport.',
+          '**4. Génération de rapports de conformité.** Déclencheur : programmé (mensuel, trimestriel). Outils : base de données (lecture), stockage de modèles de rapports, moteur de rendu, notification au relecteur. Modèle : GLM-4.7 32B ou Llama 3.3 70B — contexte long, sortie structurée, faible hallucination. Validation : automatique pour l\'extraction de données, manuelle pour le rapport publié. Niveau AI Act : risque limité ; vérifier que les sources de données ont une base légale documentée. Combiner avec [sortie structurée et mode JSON](/fr/prompt-engineering/structured-output-and-json-mode) pour stabiliser la forme du rapport.',
           '**5. Traitement et validation de factures.** Déclencheur : une facture arrive dans la boîte finance ou le dossier AP. Outils : système de fichiers (lecture), OCR, intégration ERP (lecture du BC et du fournisseur), file d\'exceptions (écriture). Modèle : Gemma 4 27B pour le tool-calling ; Qwen3 32B pour les factures à mise en page non standard. Validation : automatique pour extraction et rapprochement BC, manuelle pour toute exception (écart, nouveau fournisseur, montant élevé). Niveau AI Act : risque limité. AIPD : généralement non déclenchée.',
           '**Schéma commun aux cinq :** les étapes de lecture sont auto-validées ; les étapes d\'écriture qui affectent des systèmes externes ou des droits de personnes sont validées manuellement. Le journal d\'audit capture chaque décision.',
         ],
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La fiabilité du tool-calling est une propriété du modèle, pas du harness.** Le même harness associé à un petit modèle généraliste échoue ; associé à un modèle 27B+ entraîné au tool-calling, il réussit. Choisissez d\'abord le modèle.',
         items: [
           '**Gemma 4 27B (`gemma4:27b`).** Meilleur tool-caller généraliste en mai 2026. Tient sur 16 GB de mémoire unifiée ou 24 GB VRAM en Q4_K_M. Fiable sur ingestion documentaire, tri d\'e-mails et traitement de factures. Légèrement conservateur sur les enchaînements d\'outils — adapté aux workflows métier où chaque étape est de toute façon explicitement validée.',
-          '**GLM-5.1 32B (`glm5:32b`).** 128K de contexte par défaut. Fiabilité tool-calling forte. Le choix pour le reporting de conformité et la synthèse de réunions à entrée longue. Demande 24 GB+ VRAM en Q4_K_M pour un contexte étendu.',
+          '**GLM-4.7 32B (`glm5:32b`).** 128K de contexte par défaut. Fiabilité tool-calling forte. Le choix pour le reporting de conformité et la synthèse de réunions à entrée longue. Demande 24 GB+ VRAM en Q4_K_M pour un contexte étendu.',
           '**Qwen3 32B (`qwen3:32b`).** Bien équilibré, très fiable sur les plans multi-étapes. Bon repli quand Gemma 4 est trop conservateur. 32K de contexte par défaut ; convient à la plupart des tâches métier.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Plafond le plus élevé, matériel le plus lourd. 48 GB+ VRAM ou 64 GB de mémoire unifiée en Q4_K_M. À utiliser pour les rapports de conformité et la gestion d\'exceptions où la fiabilité prime sur la vitesse.',
           '**Llama 3.2 3B (`llama3.2:3b`).** Choix léger pour le tri à fort volume. Tourne confortablement sur 8 GB VRAM. Suffisant pour "support client / commercial / spam" ; insuffisant pour rédiger des réponses. À combiner avec un 27B+ pour l\'étape de rédaction.',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle taille de modèle gère les workflows métier de manière fiable ?',
-            a: 'Gemma 4 27B est la valeur par défaut fiable pour le tool-calling généraliste. GLM-5.1 32B est le choix lorsque l\'entrée est longue (reporting de conformité, transcriptions de réunion d\'une heure) — 128K de contexte par défaut. Qwen3 32B est le repli équilibré. Llama 3.3 70B a le plafond le plus élevé mais demande 48 GB+ VRAM. Llama 3.2 3B convient au tri à fort volume mais pas à la rédaction. Les modèles sous 7B émettent des appels d\'outils malformés quel que soit le runtime d\'agent qui les enveloppe.',
+            a: 'Gemma 4 27B est la valeur par défaut fiable pour le tool-calling généraliste. GLM-4.7 32B est le choix lorsque l\'entrée est longue (reporting de conformité, transcriptions de réunion d\'une heure) — 128K de contexte par défaut. Qwen3 32B est le repli équilibré. Llama 3.3 70B a le plafond le plus élevé mais demande 48 GB+ VRAM. Llama 3.2 3B convient au tri à fort volume mais pas à la rédaction. Les modèles sous 7B émettent des appels d\'outils malformés quel que soit le runtime d\'agent qui les enveloppe.',
           },
           {
             q: 'Comment auditer ce qu\'a fait l\'agent ?',
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAIエージェント + EU準拠：5つのワークフローテンプレート、GDPR管理、EU AI Act分類、DACH固有事項。データはインフラから出ません。',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -1005,7 +1005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '経済産業省 AIガバナンス',
     ],
     leadAnswerBlock:
-      '**ローカルAIエージェントは、アーキテクチャによってGDPR互換となります。ただし、スタック全体（モデル・ツールサーバー・監査ログ・ベクトルストア）が管理者のインフラ内でゼロエグレスで動作する場合に限ります。本番需要の大半は5つの業務ワークフローでカバー可能です：文書取り込みと分類、ドラフト返信付きメールトリアージ、議事録要約とアクション抽出、コンプライアンスレポート生成、発注書照合付き請求書処理。各ワークフローはEU AI Act分類が異なります（多くはLimited-risk、HRスクリーニングはHigh-risk、いずれも禁止対象ではありません）。DPIA基準も異なります。推奨スタック：Ollama または vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B（tool-calling対応モデル）+ Cline または Goose+MCP（エージェントランタイム）+ 不変監査ログ + すべての書き込み・送信アクションへの人間承認。DPIAなしの展開、個人情報と業務データを同一ワークスペースで混在、送信アクションの承認ゲート省略——この3つが最も多い失敗パターンです。**',
+      '**ローカルAIエージェントは、アーキテクチャによってGDPR互換となります。ただし、スタック全体（モデル・ツールサーバー・監査ログ・ベクトルストア）が管理者のインフラ内でゼロエグレスで動作する場合に限ります。本番需要の大半は5つの業務ワークフローでカバー可能です：文書取り込みと分類、ドラフト返信付きメールトリアージ、議事録要約とアクション抽出、コンプライアンスレポート生成、発注書照合付き請求書処理。各ワークフローはEU AI Act分類が異なります（多くはLimited-risk、HRスクリーニングはHigh-risk、いずれも禁止対象ではありません）。DPIA基準も異なります。推奨スタック：Ollama または vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B（tool-calling対応モデル）+ Cline または Goose+MCP（エージェントランタイム）+ 不変監査ログ + すべての書き込み・送信アクションへの人間承認。DPIAなしの展開、個人情報と業務データを同一ワークスペースで混在、送信アクションの承認ゲート省略——この3つが最も多い失敗パターンです。**',
     quickAnswerTop: {
       ja: {
         question: 'ローカルAIエージェントは業務ワークフローでGDPR準拠ですか？',
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ローカルアーキテクチャはクラウドLLMの脅威モデルを除去。残るGDPR作業：データ最小化、適法根拠、処理のセキュリティ、監査ログ、ワークフローが正当化する場合のDPIA。',
           '5つのワークフローテンプレートが需要の大半をカバー：文書取り込み、メールトリアージ、議事録要約、コンプライアンスレポート、請求書処理。',
           'EU AI Act分類：多くのテンプレートはLimited-risk（透明性のみ）、HRスクリーニングはHigh-risk（完全な適合性評価）、職場感情認識・ソーシャルスコアリングは禁止。',
-          'スタック：Ollama または vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B（tool-calling）+ Cline または Goose+MCP + 不変監査ログ + すべての書き込み・送信アクションへの人間承認。',
+          'スタック：Ollama または vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B（tool-calling）+ Cline または Goose+MCP + 不変監査ログ + すべての書き込み・送信アクションへの人間承認。',
           '日本企業向け：経済産業省AIガバナンス2024、個人情報保護法（APPI）と整合。DACH関連子会社がある場合は§203 StGBとBetriebsratも確認。',
           '3つのよくある失敗：DPIAなしでの展開、個人情報と業務データを単一ワークスペースで混在、送信アクションの承認ゲート省略。',
         ],
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**EU AI Actレベルが義務を決定します。** 多くの業務ワークフローはLimited-riskに該当（AI関与の利用者向け透明性）。HRスクリーニング、与信判断、給付資格判定はHigh-riskで完全な適合性評価が必要。職場での感情認識とソーシャルスコアリングは禁止。',
           '**ローカル運用でもGDPR作業は変わりません。** 適法根拠（第6条）、データ最小化（第5条）、処理のセキュリティ（第32条）、監査ログ、影響が大きいワークフローに対するDPIA（第35条）。ローカルスタックは管理策の証跡を容易にしますが、省略可能にはしません。',
           '**日本企業向け：経済産業省AIガバナンス2024と個人情報保護法に整合します。** DACH地域に子会社がある場合、Betriebsrat共同決定（BetrVG §87）と§203 StGB（弁護士・医師・税理士の守秘義務）の追加レイヤーが適用されます。',
-          '**リファレンススタック：** Ollama または vLLM + tool-calling対応モデル（一般業務はGemma 4 27B / GLM-5.1 32B / Qwen3 32B、軽量メールトリアージはLlama 3.2 3B）+ Cline または Goose+MCP（エージェントランタイム）+ 不変append-only監査ログ + すべての書き込み・送信アクションへの人間承認。',
+          '**リファレンススタック：** Ollama または vLLM + tool-calling対応モデル（一般業務はGemma 4 27B / GLM-4.7 32B / Qwen3 32B、軽量メールトリアージはLlama 3.2 3B）+ Cline または Goose+MCP（エージェントランタイム）+ 不変append-only監査ログ + すべての書き込み・送信アクションへの人間承認。',
           '**回避すべき3つの失敗モード：** DPIAが必要なワークフローをDPIAなしで展開、個人情報と業務データを単一エージェントワークスペースで混在、送信アクション（メール送信、契約署名、支払い承認）の承認ゲート省略。',
         ],
       },
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**カバーするワークフロー：** 文書取り込み、メールトリアージ、議事録要約、コンプライアンスレポート、請求書処理。',
           '**5テンプレートのEU AI Act分布：** Limited-risk 4件、High-risk 1件（HRスクリーニング用途時）、禁止 0件。',
           '**DPIA基準：** High-riskは必須、その他は条件発動（第35条基準）。特別カテゴリーデータを扱うワークフローについては実施を推奨。',
-          '**ハードウェアサイジング：** Gemma 4 27B と Qwen3 32B は Q4_K_M で 24 GB VRAM に収まる。GLM-5.1 32B と Llama 3.3 70B は十分なコンテキスト確保のため 48 GB+ を推奨。',
+          '**ハードウェアサイジング：** Gemma 4 27B と Qwen3 32B は Q4_K_M で 24 GB VRAM に収まる。GLM-4.7 32B と Llama 3.3 70B は十分なコンテキスト確保のため 48 GB+ を推奨。',
           '**監査ログ保存：** GDPR第30条記録要件が下限。業界別規則（金融、医療）で延長。多くのエンタープライズ環境で6年が安全なデフォルト。',
           '**コスト：** APIコストはゼロ。ハードウェアは20名以上のチームで6〜12ヶ月でエンタープライズSaaS AIサブスクリプションコストを回収。',
         ],
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. 文書取り込みと分類。** トリガー：PDFまたはスキャンが監視フォルダまたはメールに到着。ツール：ファイルシステム（読み取り）、OCR（必要時）、分類モデル、データベース（書き込み）。モデル：tool-callingと構造化出力にGemma 4 27BまたはQwen3 32B。承認パターン：読み取りと分類は自動、文書が個人を言及する場合のルーティングは手動。AI Actレベル：Limited-risk。DPIA：条件発動。',
           '**2. ドラフト返信付きメールトリアージ。** トリガー：監視受信箱への新着メッセージ。ツール：IMAP/Graph API（読み取り専用）、分類モデル、ドラフト保存（書き込み）、通知。モデル：トリアージはLlama 3.2 3Bで十分、ドラフト生成はGemma 4 27B。承認パターン：分類とドラフトは自動、送信は手動（常時）。AI Actレベル：Limited-risk。DPIA：条件発動；受信箱が従業員データを扱う場合は必須。',
           '**3. 議事録要約とアクション抽出。** トリガー：トランスクリプトがストレージに到着（Whisperまたはベンダー）。ツール：ファイルシステム（読み取り）、要約モデル、抽出モデル、出力先（API経由でNotion/Jira/社内wiki）。モデル：1時間級トランスクリプトの長文コンテキスト（128K）にQwen3 32B。承認パターン：要約は自動、外部システムに投稿されるアクションアイテムは手動。AI Actレベル：Limited-risk；トランスクリプトごとに同意取得を確認。',
-          '**4. コンプライアンスレポート生成。** トリガー：スケジュール（月次、四半期）。ツール：データベース（読み取り）、レポートテンプレート保存、レポートレンダラー、レビュアー通知。モデル：GLM-5.1 32BまたはLlama 3.3 70B——長文コンテキスト、構造化出力、低ハルシネーション。承認パターン：データ抽出は自動、公開レポートは手動。AI Actレベル：Limited-risk；元データソースが文書化された適法根拠を持つことを確認。レポート構造を安定化するため [構造化出力とJSONモード](/ja/prompt-engineering/structured-output-and-json-mode) と組み合わせ。',
+          '**4. コンプライアンスレポート生成。** トリガー：スケジュール（月次、四半期）。ツール：データベース（読み取り）、レポートテンプレート保存、レポートレンダラー、レビュアー通知。モデル：GLM-4.7 32BまたはLlama 3.3 70B——長文コンテキスト、構造化出力、低ハルシネーション。承認パターン：データ抽出は自動、公開レポートは手動。AI Actレベル：Limited-risk；元データソースが文書化された適法根拠を持つことを確認。レポート構造を安定化するため [構造化出力とJSONモード](/ja/prompt-engineering/structured-output-and-json-mode) と組み合わせ。',
           '**5. 請求書処理と検証。** トリガー：請求書が経理受信箱またはAPフォルダに到着。ツール：ファイルシステム（読み取り）、OCR、ERP統合（POおよびベンダー読み取り）、例外キュー（書き込み）。モデル：tool-callingにGemma 4 27B、非標準レイアウトの請求書にはQwen3 32B。承認パターン：抽出とPO照合は自動、例外（不一致、新規ベンダー、高額）は手動。AI Actレベル：Limited-risk。DPIA：通常は発動せず。',
           '**5つに共通するパターン：** 読み取りステップは自動承認、外部システムや個人の権利に影響する書き込みステップは手動承認。監査ログがすべての判断を記録。',
         ],
@@ -1161,7 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tool-callの信頼性はモデルのプロパティであり、ハーネスのプロパティではありません。** 同じハーネスでも小さな汎用モデルと組み合わせると失敗、tool-call調整済み27B+モデルと組み合わせると成功。先にモデルを選びましょう。',
         items: [
           '**Gemma 4 27B（`gemma4:27b`）。** 2026年5月時点で最高の汎用tool-caller。16 GB ユニファイドメモリまたは Q4_K_M で 24 GB VRAM に収まる。文書取り込み、メールトリアージ、請求書処理で信頼性が高い。連鎖tool-callでやや保守的——各ステップが明示的承認を伴う業務ワークフローに適合。',
-          '**GLM-5.1 32B（`glm5:32b`）。** デフォルトで128Kコンテキスト。Tool-call信頼性が強い。長い入力（コンプライアンスレポート、1時間級議事録）のコンプライアンスレポートと議事録要約に最適。コンテキスト無制約で Q4_K_M で 24 GB+ VRAM が望ましい。',
+          '**GLM-4.7 32B（`glm5:32b`）。** デフォルトで128Kコンテキスト。Tool-call信頼性が強い。長い入力（コンプライアンスレポート、1時間級議事録）のコンプライアンスレポートと議事録要約に最適。コンテキスト無制約で Q4_K_M で 24 GB+ VRAM が望ましい。',
           '**Qwen3 32B（`qwen3:32b`）。** バランスが良く、複数ステップ計画で非常に信頼できる。Gemma 4が保守的すぎる場合の良いフォールバック。デフォルトで32Kコンテキスト；多くの業務タスクに十分。',
           '**Llama 3.3 70B（`llama3.3:70b`）。** 最高の天井、最重量ハードウェア。Q4_K_M で 48 GB+ VRAM または 64 GB ユニファイドメモリ。速度より信頼性が重要なコンプライアンスレポートと例外処理に使用。',
           '**Llama 3.2 3B（`llama3.2:3b`）。** 高ボリュームトリアージ向けの軽量選択。8 GB VRAMで快適に動作。「これはカスタマーサポート / 営業 / スパムか」には十分；返信ドラフトには不十分。ドラフトステップには27B+モデルとペアリング。',
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'どのモデルサイズが業務ワークフローを信頼できるレベルで処理しますか？',
-            a: 'Gemma 4 27Bは汎用tool-callingの信頼できるデフォルト。GLM-5.1 32Bは入力が長い場合（コンプライアンスレポート、1時間級議事録）の選択——デフォルトで128Kコンテキスト。Qwen3 32Bはバランスの取れたフォールバック。Llama 3.3 70Bは最高の天井ですが48 GB+ VRAMが必要。Llama 3.2 3Bは高ボリューム分類に十分ですが、ドラフトには不十分。7B未満のモデルは、ラップするエージェントランタイムにかかわらず、不正なtool-callを発します。',
+            a: 'Gemma 4 27Bは汎用tool-callingの信頼できるデフォルト。GLM-4.7 32Bは入力が長い場合（コンプライアンスレポート、1時間級議事録）の選択——デフォルトで128Kコンテキスト。Qwen3 32Bはバランスの取れたフォールバック。Llama 3.3 70Bは最高の天井ですが48 GB+ VRAMが必要。Llama 3.2 3Bは高ボリューム分類に十分ですが、ドラフトには不十分。7B未満のモデルは、ラップするエージェントランタイムにかかわらず、不正なtool-callを発します。',
           },
           {
             q: 'エージェントが何をしたかをどう監査しますか？',
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地AI智能体 + 欧盟合规：5个工作流模板、GDPR控制、EU AI Act分类、DACH地区特性。数据不离开您的基础设施。',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -1305,7 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '数据安全法 AI智能体',
     ],
     leadAnswerBlock:
-      '**本地AI智能体在架构上与GDPR兼容（非偶然）——但前提是整个技术栈（模型、工具服务器、审计日志、向量存储）在数据控制者的基础设施内运行且零数据外流。5个业务工作流覆盖大部分生产需求：文档摄入与分类、带回复草稿的邮件分流、会议摘要与行动项提取、合规报告生成、带采购单匹配的发票处理。每个工作流的EU AI Act分类不同（多数为有限风险，HR筛选为高风险，无禁止类）和DPIA阈值也不同。推荐技术栈：Ollama或vLLM运行Gemma 4 27B / GLM-5.1 32B / Qwen3 32B（工具调用模型）+ Cline或Goose+MCP作为智能体运行时 + 不可变审计日志 + 每个写入或发送动作均需人工批准。无DPIA即部署、个人数据与业务数据混入同一工作空间、发送动作未设审批门——这是三个最常见的失败模式。**',
+      '**本地AI智能体在架构上与GDPR兼容（非偶然）——但前提是整个技术栈（模型、工具服务器、审计日志、向量存储）在数据控制者的基础设施内运行且零数据外流。5个业务工作流覆盖大部分生产需求：文档摄入与分类、带回复草稿的邮件分流、会议摘要与行动项提取、合规报告生成、带采购单匹配的发票处理。每个工作流的EU AI Act分类不同（多数为有限风险，HR筛选为高风险，无禁止类）和DPIA阈值也不同。推荐技术栈：Ollama或vLLM运行Gemma 4 27B / GLM-4.7 32B / Qwen3 32B（工具调用模型）+ Cline或Goose+MCP作为智能体运行时 + 不可变审计日志 + 每个写入或发送动作均需人工批准。无DPIA即部署、个人数据与业务数据混入同一工作空间、发送动作未设审批门——这是三个最常见的失败模式。**',
     quickAnswerTop: {
       zh: {
         question: '本地AI智能体业务工作流是否符合GDPR要求？',
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本地架构消除云LLM威胁模型。剩余GDPR工作：数据最小化、合法依据、处理安全性、审计日志，以及工作流需要时的DPIA。',
           '5个工作流模板覆盖多数需求：文档摄入、邮件分流、会议摘要、合规报告、发票处理。',
           'EU AI Act分类：多数模板为有限风险（仅透明度）；HR筛选为高风险（完整合规评估）；工作场所情绪识别和社会信用评分被禁止。',
-          '技术栈：Ollama或vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B（工具调用）+ Cline或Goose+MCP + 不可变审计日志 + 每个写入/发送动作均需人工批准。',
+          '技术栈：Ollama或vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B（工具调用）+ Cline或Goose+MCP + 不可变审计日志 + 每个写入/发送动作均需人工批准。',
           '中国企业：本地架构天然契合《数据安全法》（2021）和《个人信息保护法》（2021）的本地化要求，特别适合金融、医疗、法律等敏感行业。',
           '三个常见错误：未做DPIA即部署，个人数据与业务数据混入同一工作空间，发送动作未设审批门。',
         ],
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**EU AI Act等级决定义务。** 多数业务工作流落入有限风险（向用户透明AI参与）。HR筛选、信贷决策和福利资格判定为高风险，需要完整合规评估。工作场所情绪识别和社会信用评分被禁止。',
           '**本地化运行不改变GDPR工作。** 合法依据（第6条）、数据最小化（第5条）、处理安全性（第32条）、审计日志，以及对高影响工作流的DPIA（第35条）。本地技术栈使这些控制更容易举证，但不会让它们变成可选项。',
           '**中国企业部署：** 本地架构天然契合《数据安全法》和《个人信息保护法》的数据本地化要求。金融、医疗、法律等敏感行业首选本地方案；DACH地区子公司还需考虑Betriebsrat共同决定（BetrVG §87）和§203 StGB。',
-          '**参考技术栈：** Ollama或vLLM + 工具调用模型（一般工作用Gemma 4 27B、GLM-5.1 32B、Qwen3 32B；轻量邮件分流用Llama 3.2 3B）+ Cline或Goose+MCP作为智能体运行时 + 不可变append-only审计日志 + 每个写入或发送动作的人工批准。',
+          '**参考技术栈：** Ollama或vLLM + 工具调用模型（一般工作用Gemma 4 27B、GLM-4.7 32B、Qwen3 32B；轻量邮件分流用Llama 3.2 3B）+ Cline或Goose+MCP作为智能体运行时 + 不可变append-only审计日志 + 每个写入或发送动作的人工批准。',
           '**应避免的三种失败模式：** 在需要DPIA的工作流上未做DPIA即部署；个人数据与业务数据混入同一智能体工作空间；对外发送动作（邮件发送、合同签署、付款授权）未设审批门。',
         ],
       },
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**覆盖工作流：** 文档摄入、邮件分流、会议摘要、合规报告、发票处理。',
           '**5个模板的EU AI Act分布：** 4个有限风险，1个高风险（用于HR筛选时），0个禁止类。',
           '**DPIA阈值：** 高风险类必须；其余按第35条标准触发。涉及特殊类别数据的工作流，多数团队都应执行一次DPIA。',
-          '**硬件配置：** Gemma 4 27B和Qwen3 32B在Q4_K_M下需24 GB显存；GLM-5.1 32B和Llama 3.3 70B在完整上下文下推荐48 GB+。',
+          '**硬件配置：** Gemma 4 27B和Qwen3 32B在Q4_K_M下需24 GB显存；GLM-4.7 32B和Llama 3.3 70B在完整上下文下推荐48 GB+。',
           '**审计日志保留：** GDPR第30条处理记录要求是下限；行业规则（金融服务、医疗）会延长。多数企业环境的安全默认值为6年。',
           '**成本：** API开支为零；硬件在20+用户团队中6–12个月即可与企业SaaS AI订阅成本持平。',
         ],
@@ -1399,7 +1399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. 文档摄入与分类。** 触发器：PDF或扫描件落入监控文件夹或邮箱。工具：文件系统（读）、OCR（必要时）、分类模型、数据库（写）。模型：Gemma 4 27B或Qwen3 32B用于工具调用和结构化输出。审批模式：读取和分类自动，文档涉及个人时路由步骤手动。AI Act等级：有限风险。DPIA：按触发条件。',
           '**2. 带回复草稿的邮件分流。** 触发器：监控收件箱有新邮件。工具：IMAP/Graph API（只读）、分类模型、草稿存储（写）、通知。模型：分流用Llama 3.2 3B足够；草稿生成用Gemma 4 27B。审批模式：分类和草稿自动，发送（始终）手动。AI Act等级：有限风险。DPIA：按触发条件；如收件箱处理员工数据则强制。',
           '**3. 会议摘要与行动项提取。** 触发器：转录文件落入存储（Whisper或供应商）。工具：文件系统（读）、摘要模型、提取模型、输出目标（通过API的Notion/Jira/内部wiki）。模型：Qwen3 32B用于一小时长转录的长上下文（128K）。审批模式：摘要自动，发布到外部系统的行动项手动。AI Act等级：有限风险；验证每个转录文件都有同意记录。',
-          '**4. 合规报告生成。** 触发器：定时（月度、季度）。工具：数据库（读）、报告模板存储、报告渲染器、审阅者通知。模型：GLM-5.1 32B或Llama 3.3 70B——长上下文、结构化输出、低幻觉。审批模式：数据提取自动，发布报告手动。AI Act等级：有限风险；验证底层数据源有文档化的合法依据。配合[结构化输出与JSON模式](/zh/prompt-engineering/structured-output-and-json-mode)以保持报告结构稳定。',
+          '**4. 合规报告生成。** 触发器：定时（月度、季度）。工具：数据库（读）、报告模板存储、报告渲染器、审阅者通知。模型：GLM-4.7 32B或Llama 3.3 70B——长上下文、结构化输出、低幻觉。审批模式：数据提取自动，发布报告手动。AI Act等级：有限风险；验证底层数据源有文档化的合法依据。配合[结构化输出与JSON模式](/zh/prompt-engineering/structured-output-and-json-mode)以保持报告结构稳定。',
           '**5. 发票处理与校验。** 触发器：发票落入财务收件箱或AP文件夹。工具：文件系统（读）、OCR、ERP集成（读取采购单和供应商）、异常队列（写）。模型：Gemma 4 27B用于工具调用；非标准布局发票用Qwen3 32B。审批模式：提取和采购单匹配自动，任何异常（不匹配、新供应商、大额）手动。AI Act等级：有限风险。DPIA：通常不触发。',
           '**5个模板的共同模式：** 读取步骤自动批准；影响外部系统或个人权利的写入步骤手动批准。审计日志记录每个决策。',
         ],
@@ -1461,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**工具调用可靠性是模型属性，而非harness属性。** 同一harness配以小型通用模型会失败；配以27B+工具调用调优模型则成功。先选模型。',
         items: [
           '**Gemma 4 27B（`gemma4:27b`）。** 2026年5月最佳通用工具调用模型。在16 GB统一内存或24 GB显存（Q4_K_M）下运行。在文档摄入、邮件分流和发票处理上可靠。链式工具调用略保守——很适合业务工作流，因为每步本就有显式批准。',
-          '**GLM-5.1 32B（`glm5:32b`）。** 默认128K上下文。工具调用可靠性强。输入较长时（合规报告、一小时会议转录）的最佳选择。完整上下文需24 GB+显存（Q4_K_M）。',
+          '**GLM-4.7 32B（`glm5:32b`）。** 默认128K上下文。工具调用可靠性强。输入较长时（合规报告、一小时会议转录）的最佳选择。完整上下文需24 GB+显存（Q4_K_M）。',
           '**Qwen3 32B（`qwen3:32b`）。** 各方面均衡，多步规划下非常可靠。Gemma 4过于保守时的良好回退。默认32K上下文；适合多数业务任务。',
           '**Llama 3.3 70B（`llama3.3:70b`）。** 最高上限，最重硬件。Q4_K_M需48 GB+显存或64 GB统一内存。可靠性比速度更重要的合规报告和异常处理使用。',
           '**Llama 3.2 3B（`llama3.2:3b`）。** 大批量分流的轻量选择。8 GB显存即可舒适运行。"是客户支持/销售/垃圾邮件"够用；起草回复不够。起草步骤需配合27B+模型。',
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '什么模型尺寸能可靠处理业务工作流？',
-            a: 'Gemma 4 27B是通用工具调用的可靠默认。GLM-5.1 32B是输入较长时（合规报告、一小时会议转录）的选择——默认128K上下文。Qwen3 32B是均衡的回退。Llama 3.3 70B上限最高但需48 GB+显存。Llama 3.2 3B适合大批量分类，但不适合起草。7B以下模型不论智能体运行时如何包装，都会发出畸形工具调用。',
+            a: 'Gemma 4 27B是通用工具调用的可靠默认。GLM-4.7 32B是输入较长时（合规报告、一小时会议转录）的选择——默认128K上下文。Qwen3 32B是均衡的回退。Llama 3.3 70B上限最高但需48 GB+显存。Llama 3.2 3B适合大批量分类，但不适合起草。7B以下模型不论智能体运行时如何包装，都会发出畸形工具调用。',
           },
           {
             q: '如何审计智能体做了什么？',
@@ -1580,7 +1580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Agentes de IA locales + cumplimiento UE: 5 plantillas de flujos de trabajo, controles GDPR, clasificación EU AI Act, especificidades DACH. Los datos no salen de tu infraestructura.',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -1605,7 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'consejo empresa agente ia',
     ],
     leadAnswerBlock:
-      '**Los agentes de IA locales son compatibles con el GDPR por arquitectura, no por casualidad, pero solo cuando todo el stack (modelo, servidores de herramientas, registro de auditoría, almacén vectorial) corre dentro de la infraestructura del responsable del tratamiento con cero egreso de datos. Cinco flujos de trabajo empresariales cubren la mayor parte de la demanda en producción: ingesta y clasificación de documentos, triaje de correos con borradores de respuesta, resumen de reuniones con extracción de acciones, generación de informes de cumplimiento y procesamiento de facturas con conciliación de pedidos. Cada uno tiene una clasificación diferente bajo el EU AI Act (la mayoría son de riesgo limitado, el cribado de RRHH es de alto riesgo, ninguna plantilla está prohibida) y un umbral de DPIA distinto. El stack recomendado es Ollama o vLLM sirviendo Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (modelos con tool-calling), con Cline o Goose+MCP como runtime del agente, un registro de auditoría inmutable y aprobación humana en cada acción de escritura o envío. Desplegar sin DPIA, mezclar datos personales y empresariales en un mismo workspace y omitir las puertas de aprobación en las acciones de envío son los tres errores más frecuentes.**',
+      '**Los agentes de IA locales son compatibles con el GDPR por arquitectura, no por casualidad, pero solo cuando todo el stack (modelo, servidores de herramientas, registro de auditoría, almacén vectorial) corre dentro de la infraestructura del responsable del tratamiento con cero egreso de datos. Cinco flujos de trabajo empresariales cubren la mayor parte de la demanda en producción: ingesta y clasificación de documentos, triaje de correos con borradores de respuesta, resumen de reuniones con extracción de acciones, generación de informes de cumplimiento y procesamiento de facturas con conciliación de pedidos. Cada uno tiene una clasificación diferente bajo el EU AI Act (la mayoría son de riesgo limitado, el cribado de RRHH es de alto riesgo, ninguna plantilla está prohibida) y un umbral de DPIA distinto. El stack recomendado es Ollama o vLLM sirviendo Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (modelos con tool-calling), con Cline o Goose+MCP como runtime del agente, un registro de auditoría inmutable y aprobación humana en cada acción de escritura o envío. Desplegar sin DPIA, mezclar datos personales y empresariales en un mismo workspace y omitir las puertas de aprobación en las acciones de envío son los tres errores más frecuentes.**',
     quickAnswerTop: {
       es: {
         question: '¿Son los agentes de IA locales compatibles con el GDPR para flujos de trabajo empresariales?',
@@ -1615,7 +1615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La arquitectura local elimina el modelo de amenaza del LLM en la nube. El trabajo GDPR restante: minimización de datos, base jurídica, seguridad del tratamiento, registro de auditoría y una DPIA cuando el flujo de trabajo lo justifique.',
           '5 plantillas de flujos de trabajo cubren la mayor parte de la demanda: ingesta de documentos, triaje de correos, resumen de reuniones, informes de cumplimiento, procesamiento de facturas.',
           'Clasificación bajo el EU AI Act: la mayoría de las plantillas son de riesgo limitado (solo transparencia); el cribado de RRHH es de alto riesgo (evaluación de conformidad completa); el reconocimiento de emociones en el trabajo y la puntuación social están prohibidos.',
-          'Stack: Ollama o vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (tool-calling) + Cline o Goose+MCP + registro de auditoría inmutable + aprobación humana en cada acción de escritura/envío.',
+          'Stack: Ollama o vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (tool-calling) + Cline o Goose+MCP + registro de auditoría inmutable + aprobación humana en cada acción de escritura/envío.',
           'DACH añade dos capas: codecisión del Consejo de Empresa para flujos que manejan datos de empleados; §203 StGB de confidencialidad profesional para abogados, médicos y auditores.',
           'Tres errores frecuentes: desplegar sin DPIA, mezclar datos personales y empresariales en un mismo workspace, omitir las puertas de aprobación en acciones de envío.',
         ],
@@ -1660,7 +1660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los niveles del EU AI Act determinan las obligaciones.** La mayoría de los flujos de trabajo empresariales son de riesgo limitado (transparencia al usuario de que la IA está involucrada). El cribado de RRHH, las decisiones de crédito y la elegibilidad a prestaciones son de alto riesgo y requieren una evaluación de conformidad completa. El reconocimiento de emociones en el entorno laboral y la puntuación social están prohibidos.',
           '**El trabajo del GDPR no cambia al operar en local.** Base jurídica (artículo 6), minimización de datos (artículo 5), seguridad del tratamiento (artículo 32), registro de auditoría y una DPIA (artículo 35) para flujos de trabajo de alto impacto. El stack local facilita evidenciar estos controles, pero no los hace opcionales.',
           '**DACH añade dos capas.** La codecisión del Consejo de Empresa (BetrVG §87) se aplica siempre que el agente toque datos de empleados, incluso de forma pasiva. El §203 StGB de confidencialidad profesional (abogados, médicos, auditores, asesores fiscales) convierte la arquitectura local en un requisito obligatorio, no en una preferencia.',
-          '**El stack de referencia:** Ollama o vLLM sirviendo un modelo con tool-calling (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B para trabajo general; Llama 3.2 3B para triaje de correos ligero), con Cline o Goose+MCP como runtime del agente, un registro de auditoría append-only inmutable y aprobación humana en cada acción de escritura o envío.',
+          '**El stack de referencia:** Ollama o vLLM sirviendo un modelo con tool-calling (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B para trabajo general; Llama 3.2 3B para triaje de correos ligero), con Cline o Goose+MCP como runtime del agente, un registro de auditoría append-only inmutable y aprobación humana en cada acción de escritura o envío.',
           '**Tres modos de fallo a evitar:** desplegar sin DPIA un flujo de trabajo que la necesite, mezclar datos personales y empresariales en un único workspace de agente, y omitir las puertas de aprobación en acciones salientes (envío de correo, firma de contrato, autorización de pago).',
         ],
       },
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Flujos de trabajo cubiertos:** ingesta de documentos, triaje de correos, resumen de reuniones, informes de cumplimiento, procesamiento de facturas.',
           '**Distribución bajo el EU AI Act en las 5 plantillas:** 4 de riesgo limitado, 1 de alto riesgo (cuando se usa para cribado de RRHH), 0 prohibidas.',
           '**Umbral de DPIA:** obligatoria para el alto riesgo, basada en criterios del artículo 35 para las demás. La mayoría de los equipos debería ejecutar una para cualquier flujo que toque datos de categorías especiales.',
-          '**Dimensionamiento de hardware:** Gemma 4 27B y Qwen3 32B caben en 24 GB de VRAM en Q4_K_M; GLM-5.1 32B y Llama 3.3 70B necesitan 48 GB+ para contexto sin restricciones.',
+          '**Dimensionamiento de hardware:** Gemma 4 27B y Qwen3 32B caben en 24 GB de VRAM en Q4_K_M; GLM-4.7 32B y Llama 3.3 70B necesitan 48 GB+ para contexto sin restricciones.',
           '**Retención del registro de auditoría:** los requisitos del registro de actividades del tratamiento del artículo 30 del GDPR marcan el mínimo; las normas sectoriales (servicios financieros, sanidad) lo amplían. 6 años es el valor seguro por defecto para la mayoría de los entornos empresariales.',
           '**Coste:** cero en gasto de API; el hardware se amortiza frente a una suscripción SaaS de IA empresarial en 6–12 meses para un equipo de 20+ usuarios.',
         ],
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Ingesta y clasificación de documentos.** Desencadenador: PDF o escaneo llega a una carpeta vigilada o por correo. Herramientas: sistema de archivos (lectura), OCR (cuando sea necesario), modelo de clasificación, base de datos (escritura). Modelo: Gemma 4 27B o Qwen3 32B para tool-calling y salida estructurada. Patrón de aprobación: automático para lectura y clasificación, manual para enrutamiento si el documento menciona a una persona. Nivel en el AI Act: riesgo limitado. DPIA: basada en criterios.',
           '**2. Triaje de correos con borradores de respuesta.** Desencadenador: nuevo mensaje en una bandeja de entrada monitorizada. Herramientas: IMAP/Graph API (solo lectura), modelo de clasificación, almacén de borradores (escritura), notificación. Modelo: Llama 3.2 3B es suficiente para el triaje; Gemma 4 27B para generar borradores. Patrón de aprobación: automático para clasificación y borrador, manual para envío (siempre). Nivel en el AI Act: riesgo limitado. DPIA: basada en criterios; obligatoria si la bandeja de entrada maneja datos de empleados.',
           '**3. Resumen de reuniones y extracción de acciones.** Desencadenador: transcripción llega al almacenamiento (Whisper o proveedor). Herramientas: sistema de archivos (lectura), modelo de resumen, modelo de extracción, destino de salida (Notion/Jira/wiki interno vía API). Modelo: Qwen3 32B para contexto largo (128K) en transcripciones de una hora. Patrón de aprobación: automático para el resumen, manual para los elementos de acción publicados en sistemas externos. Nivel en el AI Act: riesgo limitado; verifica la captura del consentimiento antes de procesar cada transcripción.',
-          '**4. Generación de informes de cumplimiento.** Desencadenador: programado (mensual, trimestral). Herramientas: base de datos (lectura), almacén de plantillas de informes, renderizador de informes, notificación al revisor. Modelo: GLM-5.1 32B o Llama 3.3 70B: contexto largo, salida estructurada, baja alucinación. Patrón de aprobación: automático para extracción de datos, manual para el informe publicado. Nivel en el AI Act: riesgo limitado; verifica que las fuentes de datos subyacentes tienen una base jurídica documentada. Combínalo con [salida estructurada y modo JSON](/es/prompt-engineering/structured-output-and-json-mode) para mantener estable la forma del informe.',
+          '**4. Generación de informes de cumplimiento.** Desencadenador: programado (mensual, trimestral). Herramientas: base de datos (lectura), almacén de plantillas de informes, renderizador de informes, notificación al revisor. Modelo: GLM-4.7 32B o Llama 3.3 70B: contexto largo, salida estructurada, baja alucinación. Patrón de aprobación: automático para extracción de datos, manual para el informe publicado. Nivel en el AI Act: riesgo limitado; verifica que las fuentes de datos subyacentes tienen una base jurídica documentada. Combínalo con [salida estructurada y modo JSON](/es/prompt-engineering/structured-output-and-json-mode) para mantener estable la forma del informe.',
           '**5. Procesamiento y validación de facturas.** Desencadenador: factura llega a la bandeja de entrada de finanzas o carpeta de AP. Herramientas: sistema de archivos (lectura), OCR, integración ERP (lectura de pedido y proveedor), cola de excepciones (escritura). Modelo: Gemma 4 27B para tool-calling; Qwen3 32B cuando las facturas tienen diseños no estándar. Patrón de aprobación: automático para extracción y conciliación de pedidos, manual para cualquier excepción (discrepancia, proveedor nuevo, importe elevado). Nivel en el AI Act: riesgo limitado. DPIA: normalmente no se activa.',
           '**Patrón común en las cinco:** los pasos de lectura se aprueban automáticamente; los pasos de escritura que afectan a sistemas externos o a los derechos de las personas se aprueban manualmente. El registro de auditoría captura cada decisión.',
         ],
@@ -1810,7 +1810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La fiabilidad del tool-calling es una propiedad del modelo, no del harness.** El mismo harness combinado con un modelo pequeño de propósito general falla; combinado con un modelo de 27B+ ajustado para tool-calling funciona. Elige primero el modelo.',
         items: [
           '**Gemma 4 27B (`gemma4:27b`).** El mejor modelo de tool-calling de propósito general en mayo de 2026. Cabe en 16 GB de memoria unificada o 24 GB de VRAM en Q4_K_M. Fiable en ingesta de documentos, triaje de correos y procesamiento de facturas. Algo conservador en llamadas encadenadas a herramientas, lo que encaja bien con flujos de trabajo empresariales donde cada paso tiene aprobación explícita de todos modos.',
-          '**GLM-5.1 32B (`glm5:32b`).** 128K de contexto de serie. Fuerte fiabilidad de tool-calling. La opción para informes de cumplimiento y resúmenes de reuniones con entradas largas. Necesita 24 GB+ de VRAM en Q4_K_M para contexto sin restricciones.',
+          '**GLM-4.7 32B (`glm5:32b`).** 128K de contexto de serie. Fuerte fiabilidad de tool-calling. La opción para informes de cumplimiento y resúmenes de reuniones con entradas largas. Necesita 24 GB+ de VRAM en Q4_K_M para contexto sin restricciones.',
           '**Qwen3 32B (`qwen3:32b`).** Equilibrado, muy fiable en planes de múltiples pasos. Buen respaldo cuando Gemma 4 es demasiado conservador. 32K de contexto de serie; suficiente para la mayoría de las tareas empresariales.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Mayor techo, hardware más pesado. 48 GB+ de VRAM o 64 GB de memoria unificada en Q4_K_M. Úsalo para informes de cumplimiento y gestión de excepciones donde la fiabilidad importa más que la velocidad.',
           '**Llama 3.2 3B (`llama3.2:3b`).** Opción ligera para triaje de alto volumen. Corre cómodamente en 8 GB de VRAM. Suficiente para "¿es este correo de soporte al cliente / ventas / spam?"; no suficiente para redactar respuestas. Combínalo con un modelo de 27B+ para el paso de redacción.',
@@ -1895,7 +1895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué tamaño de modelo maneja flujos de trabajo empresariales de forma fiable?',
-            a: 'Gemma 4 27B es el valor fiable por defecto para tool-calling de propósito general. GLM-5.1 32B es la opción cuando la entrada es larga (informes de cumplimiento, transcripciones de reuniones de una hora): 128K de contexto de serie. Qwen3 32B es el respaldo equilibrado. Llama 3.3 70B tiene el mayor techo pero necesita 48 GB+ de VRAM. Llama 3.2 3B es suficiente para clasificación de alto volumen, no para redactar. Los modelos por debajo de 7B emiten llamadas a herramientas malformadas independientemente del runtime del agente que los envuelva.',
+            a: 'Gemma 4 27B es el valor fiable por defecto para tool-calling de propósito general. GLM-4.7 32B es la opción cuando la entrada es larga (informes de cumplimiento, transcripciones de reuniones de una hora): 128K de contexto de serie. Qwen3 32B es el respaldo equilibrado. Llama 3.3 70B tiene el mayor techo pero necesita 48 GB+ de VRAM. Llama 3.2 3B es suficiente para clasificación de alto volumen, no para redactar. Los modelos por debajo de 7B emiten llamadas a herramientas malformadas independientemente del runtime del agente que los envuelva.',
           },
           {
             q: '¿Cómo audito lo que hizo el agente?',
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Agentes de IA locais + conformidade UE: 5 modelos de fluxos de trabalho, controles GDPR/LGPD, classificação EU AI Act. Os dados não saem da sua infraestrutura.',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gdpr lgpd agente ia dpia',
     ],
     leadAnswerBlock:
-      '**Os agentes de IA locais são compatíveis com o GDPR/LGPD por arquitetura, não por acaso, mas apenas quando todo o stack (modelo, servidores de ferramentas, log de auditoria, armazenamento vetorial) roda dentro da infraestrutura do controlador com zero egresso de dados. Cinco fluxos de trabalho empresariais cobrem a maior parte da demanda em produção: ingestão e classificação de documentos, triagem de e-mails com rascunhos de resposta, resumo de reuniões com extração de ações, geração de relatórios de conformidade e processamento de faturas com conciliação de pedidos. Cada um tem uma classificação diferente sob o EU AI Act (a maioria é de risco limitado, a triagem de RH é de alto risco, nenhum modelo está proibido) e um limiar de DPIA distinto. O stack recomendado é Ollama ou vLLM servindo Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (modelos com tool-calling), com Cline ou Goose+MCP como runtime do agente, um log de auditoria imutável e aprovação humana em cada ação de escrita ou envio.**',
+      '**Os agentes de IA locais são compatíveis com o GDPR/LGPD por arquitetura, não por acaso, mas apenas quando todo o stack (modelo, servidores de ferramentas, log de auditoria, armazenamento vetorial) roda dentro da infraestrutura do controlador com zero egresso de dados. Cinco fluxos de trabalho empresariais cobrem a maior parte da demanda em produção: ingestão e classificação de documentos, triagem de e-mails com rascunhos de resposta, resumo de reuniões com extração de ações, geração de relatórios de conformidade e processamento de faturas com conciliação de pedidos. Cada um tem uma classificação diferente sob o EU AI Act (a maioria é de risco limitado, a triagem de RH é de alto risco, nenhum modelo está proibido) e um limiar de DPIA distinto. O stack recomendado é Ollama ou vLLM servindo Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (modelos com tool-calling), com Cline ou Goose+MCP como runtime do agente, um log de auditoria imutável e aprovação humana em cada ação de escrita ou envio.**',
     quickAnswerTop: {
       pt: {
         question: 'Os agentes de IA locais são compatíveis com LGPD/GDPR para fluxos de trabalho empresariais?',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A arquitetura local elimina o modelo de ameaça do LLM na nuvem. O trabalho LGPD/GDPR restante: minimização de dados, base jurídica, segurança do tratamento, log de auditoria e uma DPIA/RIPD quando o fluxo de trabalho justificar.',
           '5 modelos de fluxos de trabalho cobrem a maior parte da demanda: ingestão de documentos, triagem de e-mails, resumo de reuniões, relatórios de conformidade, processamento de faturas.',
           'Classificação sob o EU AI Act: a maioria dos modelos é de risco limitado (apenas transparência); a triagem de RH é de alto risco (avaliação de conformidade completa); o reconhecimento de emoções no trabalho e a pontuação social estão proibidos.',
-          'Stack: Ollama ou vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (tool-calling) + Cline ou Goose+MCP + log de auditoria imutável + aprovação humana em cada ação de escrita/envio.',
+          'Stack: Ollama ou vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (tool-calling) + Cline ou Goose+MCP + log de auditoria imutável + aprovação humana em cada ação de escrita/envio.',
           'LGPD (Brasil) adiciona: encarregado de proteção de dados (DPO), RIPD (equivalente da DPIA) e notificação à ANPD em caso de incidentes.',
           'Três erros frequentes: implantar sem DPIA/RIPD, misturar dados pessoais e empresariais em um único workspace, omitir as portas de aprovação em ações de envio.',
         ],
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**5 modelos de fluxos de trabalho cobrem a maior parte da demanda em produção:** ingestão e classificação de documentos, triagem de e-mails com rascunhos de resposta, resumo de reuniões com extração de ações, geração de relatórios de conformidade, processamento de faturas com conciliação de pedidos.',
           '**Os níveis do EU AI Act determinam as obrigações.** A maioria dos fluxos de trabalho empresariais é de risco limitado (transparência ao usuário de que a IA está envolvida). A triagem de RH, decisões de crédito e elegibilidade a benefícios são de alto risco e requerem uma avaliação de conformidade completa. O reconhecimento de emoções no ambiente de trabalho e a pontuação social estão proibidos.',
           '**O trabalho de LGPD/GDPR não muda ao operar localmente.** Base jurídica, minimização de dados, segurança do tratamento, log de auditoria e uma DPIA para fluxos de trabalho de alto impacto. O stack local facilita evidenciar esses controles, mas não os torna opcionais.',
-          '**O stack de referência:** Ollama ou vLLM servindo um modelo com tool-calling (Gemma 4 27B, GLM-5.1 32B, Qwen3 32B para trabalho geral; Llama 3.2 3B para triagem leve de e-mails), com Cline ou Goose+MCP como runtime do agente, um log de auditoria append-only imutável e aprovação humana em cada ação de escrita ou envio.',
+          '**O stack de referência:** Ollama ou vLLM servindo um modelo com tool-calling (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B para trabalho geral; Llama 3.2 3B para triagem leve de e-mails), com Cline ou Goose+MCP como runtime do agente, um log de auditoria append-only imutável e aprovação humana em cada ação de escrita ou envio.',
           '**Três modos de falha a evitar:** implantar sem DPIA um fluxo de trabalho que a requer, misturar dados pessoais e empresariais em um único workspace de agente, e omitir as portas de aprovação em ações de saída (envio de e-mail, assinatura de contrato, autorização de pagamento).',
         ],
       },
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Fluxos de trabalho cobertos:** ingestão de documentos, triagem de e-mails, resumo de reuniões, relatórios de conformidade, processamento de faturas.',
           '**Distribuição sob o EU AI Act nos 5 modelos:** 4 de risco limitado, 1 de alto risco (quando usado para triagem de RH), 0 proibidos.',
           '**Limiar de DPIA:** obrigatória para alto risco, baseada em critérios do artigo 35 para os demais. A maioria das equipes deveria executar uma para qualquer fluxo que toque dados de categorias especiais.',
-          '**Dimensionamento de hardware:** Gemma 4 27B e Qwen3 32B cabem em 24 GB de VRAM em Q4_K_M; GLM-5.1 32B e Llama 3.3 70B precisam de 48 GB+ para contexto sem restrições.',
+          '**Dimensionamento de hardware:** Gemma 4 27B e Qwen3 32B cabem em 24 GB de VRAM em Q4_K_M; GLM-4.7 32B e Llama 3.3 70B precisam de 48 GB+ para contexto sem restrições.',
           '**Retenção do log de auditoria:** os requisitos do registro de atividades de tratamento do artigo 30 do GDPR marcam o mínimo; normas setoriais (serviços financeiros, saúde) ampliam. 6 anos é o padrão seguro para a maioria dos ambientes empresariais.',
           '**Custo:** zero em gastos de API; o hardware se amortiza em relação a uma assinatura SaaS de IA empresarial em 6–12 meses para uma equipe de 20+ usuários.',
         ],
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. Ingestão e classificação de documentos.** Gatilho: PDF ou escaneamento chega a uma pasta monitorada ou por e-mail. Ferramentas: sistema de arquivos (leitura), OCR (quando necessário), modelo de classificação, banco de dados (escrita). Modelo: Gemma 4 27B ou Qwen3 32B para tool-calling e saída estruturada. Padrão de aprovação: automático para leitura e classificação, manual para roteamento se o documento mencionar uma pessoa. Nível no AI Act: risco limitado.',
           '**2. Triagem de e-mails com rascunhos de resposta.** Gatilho: nova mensagem em uma caixa de entrada monitorada. Ferramentas: IMAP/Graph API (somente leitura), modelo de classificação, armazenamento de rascunhos (escrita), notificação. Modelo: Llama 3.2 3B é suficiente para triagem; Gemma 4 27B para gerar rascunhos. Padrão de aprovação: automático para classificação e rascunho, manual para envio (sempre). Nível no AI Act: risco limitado.',
           '**3. Resumo de reuniões e extração de ações.** Gatilho: transcrição chega ao armazenamento (Whisper ou provedor). Ferramentas: sistema de arquivos (leitura), modelo de resumo, modelo de extração, destino de saída via API. Modelo: Qwen3 32B para contexto longo (128K) em transcrições de uma hora. Padrão de aprovação: automático para o resumo, manual para os itens de ação publicados em sistemas externos. Nível no AI Act: risco limitado.',
-          '**4. Geração de relatórios de conformidade.** Gatilho: programado (mensal, trimestral). Ferramentas: banco de dados (leitura), armazenamento de modelos de relatórios, renderizador de relatórios, notificação ao revisor. Modelo: GLM-5.1 32B ou Llama 3.3 70B: contexto longo, saída estruturada, baixa alucinação. Padrão de aprovação: automático para extração de dados, manual para o relatório publicado. Nível no AI Act: risco limitado.',
+          '**4. Geração de relatórios de conformidade.** Gatilho: programado (mensal, trimestral). Ferramentas: banco de dados (leitura), armazenamento de modelos de relatórios, renderizador de relatórios, notificação ao revisor. Modelo: GLM-4.7 32B ou Llama 3.3 70B: contexto longo, saída estruturada, baixa alucinação. Padrão de aprovação: automático para extração de dados, manual para o relatório publicado. Nível no AI Act: risco limitado.',
           '**5. Processamento e validação de faturas.** Gatilho: fatura chega à caixa de entrada de finanças ou pasta de AP. Ferramentas: sistema de arquivos (leitura), OCR, integração ERP (leitura de pedido e fornecedor), fila de exceções (escrita). Modelo: Gemma 4 27B para tool-calling; Qwen3 32B quando as faturas têm layouts não padrão. Padrão de aprovação: automático para extração e conciliação de pedidos, manual para qualquer exceção. Nível no AI Act: risco limitado.',
           '**Padrão comum nos cinco:** as etapas de leitura são aprovadas automaticamente; as etapas de escrita que afetam sistemas externos ou os direitos das pessoas são aprovadas manualmente. O log de auditoria captura cada decisão.',
         ],
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A confiabilidade do tool-calling é uma propriedade do modelo, não do harness.** Escolha primeiro o modelo.',
         items: [
           '**Gemma 4 27B (`gemma4:27b`).** O melhor modelo de tool-calling de propósito geral em maio de 2026. Cabe em 16 GB de memória unificada ou 24 GB de VRAM em Q4_K_M.',
-          '**GLM-5.1 32B (`glm5:32b`).** 128K de contexto nativo. Forte confiabilidade de tool-calling. A opção para relatórios de conformidade e resumos de reuniões com entradas longas.',
+          '**GLM-4.7 32B (`glm5:32b`).** 128K de contexto nativo. Forte confiabilidade de tool-calling. A opção para relatórios de conformidade e resumos de reuniões com entradas longas.',
           '**Qwen3 32B (`qwen3:32b`).** Equilibrado, muito confiável em planos de múltiplas etapas. Bom substituto quando o Gemma 4 é muito conservador.',
           '**Llama 3.3 70B (`llama3.3:70b`).** Maior teto, hardware mais pesado. 48 GB+ de VRAM ou 64 GB de memória unificada em Q4_K_M.',
           '**Llama 3.2 3B (`llama3.2:3b`).** Opção leve para triagem de alto volume. Roda confortavelmente em 8 GB de VRAM.',
@@ -2223,7 +2223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual tamanho de modelo lida com fluxos de trabalho empresariais de forma confiável?',
-            a: 'O Gemma 4 27B é o padrão confiável para tool-calling de propósito geral. O GLM-5.1 32B é a opção quando a entrada é longa (relatórios de conformidade, transcrições de reuniões de uma hora): 128K de contexto nativo. O Qwen3 32B é o substituto equilibrado. O Llama 3.3 70B tem o maior teto mas precisa de 48 GB+ de VRAM. O Llama 3.2 3B é suficiente para classificação de alto volume, não para redigir.',
+            a: 'O Gemma 4 27B é o padrão confiável para tool-calling de propósito geral. O GLM-4.7 32B é a opção quando a entrada é longa (relatórios de conformidade, transcrições de reuniões de uma hora): 128K de contexto nativo. O Qwen3 32B é o substituto equilibrado. O Llama 3.3 70B tem o maior teto mas precisa de 48 GB+ de VRAM. O Llama 3.2 3B é suficiente para classificação de alto volume, não para redigir.',
           },
           {
             q: 'Como audito o que o agente fez?',
@@ -2269,7 +2269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'وكلاء الذكاء الاصطناعي المحلي + الامتثال الأوروبي: 5 قوالب لسير العمل، وضوابط GDPR، وتصنيف EU AI Act. البيانات لا تغادر بنيتك التحتية.',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -2293,7 +2293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gdpr وكيل ذكاء اصطناعي dpia',
     ],
     leadAnswerBlock:
-      '**وكلاء الذكاء الاصطناعي المحلي متوافقون مع GDPR بحكم البنية لا بالصدفة — لكن فقط حين يعمل المكدس بأكمله (النموذج وخوادم الأدوات وسجل التدقيق ومخزن المتجهات) داخل بنية تحتية المتحكم في البيانات مع صفر تسرّب خارجي. خمسة سير عمل مؤسسية تغطي معظم الطلب في الإنتاج: استيعاب المستندات وتصنيفها، وفرز البريد الإلكتروني مع مسودات الردود، وملخص الاجتماعات واستخراج الإجراءات، وإنشاء تقارير الامتثال، ومعالجة الفواتير ومطابقة أوامر الشراء. لكل سير عمل تصنيف مختلف بموجب EU AI Act (معظمها محدود المخاطر، وفرز الموارد البشرية عالي المخاطر، ولا تقع أيٌّ من القوالب في الفئة المحظورة) وحد أدنى مختلف لـDPIA. المكدس الموصى به هو Ollama أو vLLM مع Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (نماذج استدعاء الأدوات) بالإضافة إلى Cline أو Goose+MCP كبيئة تشغيل للوكيل، وسجل تدقيق غير قابل للتغيير، وموافقة بشرية على كل إجراء كتابة أو إرسال.**',
+      '**وكلاء الذكاء الاصطناعي المحلي متوافقون مع GDPR بحكم البنية لا بالصدفة — لكن فقط حين يعمل المكدس بأكمله (النموذج وخوادم الأدوات وسجل التدقيق ومخزن المتجهات) داخل بنية تحتية المتحكم في البيانات مع صفر تسرّب خارجي. خمسة سير عمل مؤسسية تغطي معظم الطلب في الإنتاج: استيعاب المستندات وتصنيفها، وفرز البريد الإلكتروني مع مسودات الردود، وملخص الاجتماعات واستخراج الإجراءات، وإنشاء تقارير الامتثال، ومعالجة الفواتير ومطابقة أوامر الشراء. لكل سير عمل تصنيف مختلف بموجب EU AI Act (معظمها محدود المخاطر، وفرز الموارد البشرية عالي المخاطر، ولا تقع أيٌّ من القوالب في الفئة المحظورة) وحد أدنى مختلف لـDPIA. المكدس الموصى به هو Ollama أو vLLM مع Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (نماذج استدعاء الأدوات) بالإضافة إلى Cline أو Goose+MCP كبيئة تشغيل للوكيل، وسجل تدقيق غير قابل للتغيير، وموافقة بشرية على كل إجراء كتابة أو إرسال.**',
     quickAnswerTop: {
       ar: {
         question: 'هل وكلاء الذكاء الاصطناعي المحلي متوافقون مع GDPR لسير العمل المؤسسي؟',
@@ -2303,7 +2303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'البنية المحلية فقط تُزيل نموذج التهديد الخاص بنماذج اللغة السحابية. العمل المتبقي لـGDPR: تقليل البيانات والأساس القانوني وأمن المعالجة وسجل التدقيق وDPIA عند الاقتضاء.',
           '5 قوالب لسير عمل مؤسسية تغطي معظم الطلب: استيعاب المستندات، وفرز البريد الإلكتروني، وملخص الاجتماعات، وتقارير الامتثال، ومعالجة الفواتير.',
           'تصنيف EU AI Act: معظم القوالب محدودة المخاطر (الشفافية فقط)؛ فرز الموارد البشرية عالي المخاطر (تقييم المطابقة الكامل)؛ التعرف على المشاعر في بيئة العمل والتسجيل الاجتماعي محظوران.',
-          'المكدس: Ollama أو vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (استدعاء الأدوات) + Cline أو Goose+MCP + سجل تدقيق غير قابل للتغيير + موافقة بشرية على كل إجراء كتابة/إرسال.',
+          'المكدس: Ollama أو vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (استدعاء الأدوات) + Cline أو Goose+MCP + سجل تدقيق غير قابل للتغيير + موافقة بشرية على كل إجراء كتابة/إرسال.',
           'ثلاثة أخطاء شائعة: النشر بدون DPIA، وخلط البيانات الشخصية والتجارية في مساحة عمل واحدة، وتجاهل بوابات الموافقة على إجراءات الإرسال.',
         ],
         updatedDate: '2026-05-07',
@@ -2346,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**5 قوالب لسير عمل تغطي معظم الطلب في الإنتاج:** استيعاب المستندات وتصنيفها، وفرز البريد الإلكتروني مع مسودات الردود، وملخص الاجتماعات واستخراج الإجراءات، وإنشاء تقارير الامتثال، ومعالجة الفواتير ومطابقة أوامر الشراء. لكل منها تصنيف بيانات وأساس قانوني ومستوى في قانون الذكاء الاصطناعي وتنسيق سجل تدقيق محدد.',
           '**تُحدد مستويات EU AI Act الالتزامات.** معظم سير العمل المؤسسي محدود المخاطر (الشفافية للمستخدم بأن الذكاء الاصطناعي متورط). أعمال الموارد البشرية والقرارات الائتمانية والأهلية للمنافع عالية المخاطر وتستلزم تقييم مطابقة كاملاً. التعرف على المشاعر في بيئة العمل والتسجيل الاجتماعي محظوران.',
           '**عمل GDPR لا يتغير عند التشغيل المحلي.** الأساس القانوني (المادة 6)، وتقليل البيانات (المادة 5)، وأمن المعالجة (المادة 32)، وسجل التدقيق، وDPIA (المادة 35) لسير العمل عالي الأثر. المكدس المحلي يُيسّر إثبات هذه الضوابط لكنه لا يجعلها اختيارية.',
-          '**المكدس المرجعي:** Ollama أو vLLM مع نموذج استدعاء أدوات (Gemma 4 27B، وGLM-5.1 32B، وQwen3 32B للعمل العام؛ وLlama 3.2 3B للفرز الخفيف للبريد الإلكتروني)، مع Cline أو Goose+MCP كبيئة تشغيل للوكيل، وسجل تدقيق غير قابل للتغيير (append-only)، وموافقة بشرية على كل إجراء كتابة أو إرسال.',
+          '**المكدس المرجعي:** Ollama أو vLLM مع نموذج استدعاء أدوات (Gemma 4 27B، وGLM-4.7 32B، وQwen3 32B للعمل العام؛ وLlama 3.2 3B للفرز الخفيف للبريد الإلكتروني)، مع Cline أو Goose+MCP كبيئة تشغيل للوكيل، وسجل تدقيق غير قابل للتغيير (append-only)، وموافقة بشرية على كل إجراء كتابة أو إرسال.',
           '**ثلاثة إخفاقات يجب تجنبها:** نشر سير عمل يستلزم DPIA بدونها، وخلط البيانات الشخصية والتجارية في مساحة عمل واحدة للوكيل، وإغفال بوابات الموافقة على الإجراءات الصادرة (إرسال البريد الإلكتروني، وتوقيع العقود، وتفويض المدفوعات).',
         ],
       },
@@ -2358,7 +2358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**سير العمل المشمولة:** استيعاب المستندات، وفرز البريد الإلكتروني، وملخص الاجتماعات، وتقارير الامتثال، ومعالجة الفواتير.',
           '**التوزيع بموجب EU AI Act في القوالب الخمسة:** 4 محدودة المخاطر، و1 عالية المخاطر (عند استخدامها لفرز الموارد البشرية)، و0 محظورة.',
           '**حد DPIA:** إلزامية للمخاطر العالية، وقائمة على المعايير لغيرها. يجب على معظم الفرق تشغيل DPIA لأي سير عمل يمس بيانات الفئات الخاصة.',
-          '**أحجام الأجهزة:** Gemma 4 27B وQwen3 32B تتسعان في 24 جيجابايت VRAM بـQ4_K_M؛ GLM-5.1 32B وLlama 3.3 70B يحتاجان 48 جيجابايت+ للسياق غير المقيد.',
+          '**أحجام الأجهزة:** Gemma 4 27B وQwen3 32B تتسعان في 24 جيجابايت VRAM بـQ4_K_M؛ GLM-4.7 32B وLlama 3.3 70B يحتاجان 48 جيجابايت+ للسياق غير المقيد.',
           '**احتفاظ سجل التدقيق:** متطلبات سجل أنشطة المعالجة في المادة 30 من GDPR تُحدد الحد الأدنى؛ المعايير القطاعية (الخدمات المالية والرعاية الصحية) تُوسّعها. 6 سنوات هو الافتراضي الآمن لمعظم البيئات المؤسسية.',
           '**التكلفة:** صفر إنفاق على API؛ يُستهلك الأجهزة في مقابل اشتراك SaaS للذكاء الاصطناعي المؤسسي في غضون 6 إلى 12 شهراً لفريق من 20 مستخدم أو أكثر.',
         ],
@@ -2395,7 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. استيعاب المستندات وتصنيفها.** المحفّز: وصول PDF أو مسح ضوئي إلى مجلد مُراقب أو عبر البريد الإلكتروني. الأدوات: نظام الملفات (قراءة)، وOCR (عند الحاجة)، ونموذج التصنيف، وقاعدة البيانات (كتابة). النموذج: Gemma 4 27B أو Qwen3 32B لاستدعاء الأدوات والمخرجات المنظّمة. نمط الموافقة: تلقائي للقراءة والتصنيف، ويدوي للتوجيه إذا ذكر المستند شخصاً. المستوى في قانون الذكاء الاصطناعي: محدود المخاطر. DPIA: قائمة على المعايير.',
           '**2. فرز البريد الإلكتروني مع مسودات الردود.** المحفّز: رسالة جديدة في بريد وارد مُراقَب. الأدوات: IMAP/Graph API (قراءة فقط)، ونموذج التصنيف، ومخزن المسودات (كتابة)، وإشعار. النموذج: Llama 3.2 3B كافٍ للفرز؛ Gemma 4 27B لإنشاء المسودات. نمط الموافقة: تلقائي للتصنيف والمسودة، ويدوي دائماً للإرسال. المستوى في قانون الذكاء الاصطناعي: محدود المخاطر. DPIA: قائمة على المعايير؛ إلزامية إذا كان البريد الوارد يتعامل مع بيانات الموظفين.',
           '**3. ملخص الاجتماعات واستخراج الإجراءات.** المحفّز: وصول النص المكتوب إلى التخزين (عبر Whisper أو مزوّد). الأدوات: نظام الملفات (قراءة)، ونموذج التلخيص، ونموذج الاستخراج، ووجهة المخرجات (Notion/Jira/wiki داخلي عبر API). النموذج: Qwen3 32B للسياق الطويل (128K) في ملفات الاجتماعات الممتدة لساعة. نمط الموافقة: تلقائي للملخص، ويدوي لبنود الإجراءات المنشورة في الأنظمة الخارجية. المستوى في قانون الذكاء الاصطناعي: محدود المخاطر؛ تحقق من التقاط الموافقة قبل معالجة كل ملف.',
-          '**4. إنشاء تقارير الامتثال.** المحفّز: مجدوَل (شهري أو ربع سنوي). الأدوات: قاعدة البيانات (قراءة)، ومخزن قوالب التقارير، وعارض التقارير، وإشعار للمراجع. النموذج: GLM-5.1 32B أو Llama 3.3 70B: سياق طويل، ومخرجات منظّمة، وتلفيق منخفض. نمط الموافقة: تلقائي لاستخراج البيانات، ويدوي للتقرير المنشور. المستوى في قانون الذكاء الاصطناعي: محدود المخاطر؛ تحقق من وجود أساس قانوني موثّق لمصادر البيانات الأساسية.',
+          '**4. إنشاء تقارير الامتثال.** المحفّز: مجدوَل (شهري أو ربع سنوي). الأدوات: قاعدة البيانات (قراءة)، ومخزن قوالب التقارير، وعارض التقارير، وإشعار للمراجع. النموذج: GLM-4.7 32B أو Llama 3.3 70B: سياق طويل، ومخرجات منظّمة، وتلفيق منخفض. نمط الموافقة: تلقائي لاستخراج البيانات، ويدوي للتقرير المنشور. المستوى في قانون الذكاء الاصطناعي: محدود المخاطر؛ تحقق من وجود أساس قانوني موثّق لمصادر البيانات الأساسية.',
           '**5. معالجة الفواتير والتحقق منها.** المحفّز: وصول الفاتورة إلى بريد المالية أو مجلد AP. الأدوات: نظام الملفات (قراءة)، وOCR، وتكامل ERP (قراءة أوامر الشراء والموردين)، وقائمة الاستثناءات (كتابة). النموذج: Gemma 4 27B لاستدعاء الأدوات؛ Qwen3 32B حين تحتوي الفواتير على تخطيطات غير قياسية. نمط الموافقة: تلقائي للاستخراج ومطابقة أوامر الشراء، ويدوي لأي استثناء (تباين، ومورّد جديد، ومبلغ كبير). المستوى في قانون الذكاء الاصطناعي: محدود المخاطر. DPIA: لا تُفعَّل عادةً.',
           '**النمط المشترك في القوالب الخمسة:** خطوات القراءة تُوافق عليها تلقائياً؛ خطوات الكتابة التي تؤثر على الأنظمة الخارجية أو حقوق الأشخاص تُوافق عليها يدوياً. سجل التدقيق يلتقط كل قرار.',
         ],
@@ -2488,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**موثوقية استدعاء الأدوات خاصية تعتمد على النموذج لا على إطار التشغيل.** نفس الإطار مع نموذج صغير للأغراض العامة يفشل؛ مع نموذج 27B+ مُضبوط دقيقاً لاستدعاء الأدوات ينجح. اختر النموذج أولاً.',
         items: [
           '**Gemma 4 27B (`gemma4:27b`).** أفضل نموذج استدعاء أدوات للأغراض العامة في مايو 2026. يتسع في 16 جيجابايت ذاكرة موحدة أو 24 جيجابايت VRAM بـQ4_K_M. موثوق في استيعاب المستندات وفرز البريد الإلكتروني ومعالجة الفواتير.',
-          '**GLM-5.1 32B (`glm5:32b`).** سياق 128K أصلي. موثوقية قوية في استدعاء الأدوات. الخيار لتقارير الامتثال وملخصات الاجتماعات بالمدخلات الطويلة. يحتاج 24 جيجابايت+ VRAM بـQ4_K_M للسياق غير المقيد.',
+          '**GLM-4.7 32B (`glm5:32b`).** سياق 128K أصلي. موثوقية قوية في استدعاء الأدوات. الخيار لتقارير الامتثال وملخصات الاجتماعات بالمدخلات الطويلة. يحتاج 24 جيجابايت+ VRAM بـQ4_K_M للسياق غير المقيد.',
           '**Qwen3 32B (`qwen3:32b`).** متوازن وموثوق جداً في الخطط متعددة الخطوات. بديل جيد حين يكون Gemma 4 محافظاً جداً. سياق 32K أصلي؛ كافٍ لمعظم المهام المؤسسية.',
           '**Llama 3.3 70B (`llama3.3:70b`).** السقف الأعلى، أجهزة أثقل. 48 جيجابايت+ VRAM أو 64 جيجابايت ذاكرة موحدة بـQ4_K_M. استخدمه لتقارير الامتثال وإدارة الاستثناءات حيث الموثوقية أهم من السرعة.',
           '**Llama 3.2 3B (`llama3.2:3b`).** خيار خفيف للفرز عالي الحجم. يعمل بشكل مريح بـ8 جيجابايت VRAM. كافٍ لـ"هل هذا البريد دعم عملاء / مبيعات / بريد مزعج؟"؛ ليس كافياً لصياغة الردود.',
@@ -2565,7 +2565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما حجم النموذج الذي يتعامل مع سير العمل المؤسسي بشكل موثوق؟',
-            a: 'Gemma 4 27B هو الافتراضي الموثوق لاستدعاء الأدوات للأغراض العامة. GLM-5.1 32B هو الخيار حين تكون المدخلات طويلة (تقارير الامتثال، ونصوص اجتماعات لساعة): سياق 128K أصلي. Qwen3 32B هو البديل المتوازن. Llama 3.3 70B له أعلى سقف لكنه يحتاج 48 جيجابايت+ VRAM. Llama 3.2 3B كافٍ للتصنيف عالي الحجم لا للصياغة.',
+            a: 'Gemma 4 27B هو الافتراضي الموثوق لاستدعاء الأدوات للأغراض العامة. GLM-4.7 32B هو الخيار حين تكون المدخلات طويلة (تقارير الامتثال، ونصوص اجتماعات لساعة): سياق 128K أصلي. Qwen3 32B هو البديل المتوازن. Llama 3.3 70B له أعلى سقف لكنه يحتاج 48 جيجابايت+ VRAM. Llama 3.2 3B كافٍ للتصنيف عالي الحجم لا للصياغة.',
           },
           {
             q: 'كيف أُدقّق في ما فعله الوكيل؟',
@@ -2612,7 +2612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 AI 에이전트 + EU 규정 준수: 5가지 워크플로 템플릿, GDPR 통제, EU AI Act 분류, DACH 특수 사항. 데이터는 인프라 밖으로 나가지 않습니다.',
     current_models_mentioned: [
       'Gemma 4 27B',
-      'GLM-5.1 32B',
+      'GLM-4.7 32B',
       'Qwen3 32B',
       'Llama 3.2 3B',
       'Llama 3.3 70B',
@@ -2637,7 +2637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '사업장 협의회 ai 에이전트',
     ],
     leadAnswerBlock:
-      '**로컬 AI 에이전트는 아키텍처적으로 GDPR과 호환됩니다. 단, 모델, 도구 서버, 감사 로그, 벡터 저장소 등 전체 스택이 데이터 컨트롤러의 인프라 내에서 실행되고 데이터가 외부로 유출되지 않을 때만 그렇습니다. 프로덕션에서 수요의 대부분을 충족하는 5가지 기업 워크플로가 있습니다. 문서 수집 및 분류, 이메일 분류와 초안 작성, 회의록 요약과 액션 아이템 추출, 규정 준수 보고서 생성, 청구서 처리와 주문 대조입니다. 각 워크플로는 EU AI Act 하에서 다른 분류를 받습니다. 대부분은 제한적 위험이며, HR 선별은 고위험이고, 금지된 템플릿은 없습니다. 또한 각각 다른 DPIA 기준점을 가집니다. 권장 스택은 Gemma 4 27B / GLM-5.1 32B / Qwen3 32B(tool-calling 지원 모델)를 제공하는 Ollama 또는 vLLM이며, 에이전트 런타임으로 Cline 또는 Goose+MCP, 불변 감사 로그, 그리고 모든 쓰기 또는 전송 작업에 대한 인간 승인이 포함됩니다. 가장 흔한 세 가지 실수는 DPIA 없이 배포하는 것, 단일 워크스페이스에서 개인 데이터와 업무 데이터를 혼합하는 것, 전송 작업에서 승인 게이트를 생략하는 것입니다.**',
+      '**로컬 AI 에이전트는 아키텍처적으로 GDPR과 호환됩니다. 단, 모델, 도구 서버, 감사 로그, 벡터 저장소 등 전체 스택이 데이터 컨트롤러의 인프라 내에서 실행되고 데이터가 외부로 유출되지 않을 때만 그렇습니다. 프로덕션에서 수요의 대부분을 충족하는 5가지 기업 워크플로가 있습니다. 문서 수집 및 분류, 이메일 분류와 초안 작성, 회의록 요약과 액션 아이템 추출, 규정 준수 보고서 생성, 청구서 처리와 주문 대조입니다. 각 워크플로는 EU AI Act 하에서 다른 분류를 받습니다. 대부분은 제한적 위험이며, HR 선별은 고위험이고, 금지된 템플릿은 없습니다. 또한 각각 다른 DPIA 기준점을 가집니다. 권장 스택은 Gemma 4 27B / GLM-4.7 32B / Qwen3 32B(tool-calling 지원 모델)를 제공하는 Ollama 또는 vLLM이며, 에이전트 런타임으로 Cline 또는 Goose+MCP, 불변 감사 로그, 그리고 모든 쓰기 또는 전송 작업에 대한 인간 승인이 포함됩니다. 가장 흔한 세 가지 실수는 DPIA 없이 배포하는 것, 단일 워크스페이스에서 개인 데이터와 업무 데이터를 혼합하는 것, 전송 작업에서 승인 게이트를 생략하는 것입니다.**',
     quickAnswerTop: {
       ko: {
         question: '로컬 AI 에이전트는 기업 워크플로에서 GDPR과 호환됩니까?',
@@ -2647,7 +2647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '로컬 아키텍처는 클라우드 LLM 위협 모델을 제거합니다. 남은 GDPR 작업: 데이터 최소화, 법적 근거, 처리 보안, 감사 로그, 워크플로가 이를 정당화할 때 DPIA.',
           '5가지 워크플로 템플릿이 대부분의 수요를 충족합니다: 문서 수집, 이메일 분류, 회의록 요약, 규정 준수 보고서, 청구서 처리.',
           'EU AI Act 분류: 대부분의 템플릿은 제한적 위험(투명성만); HR 선별은 고위험(전체 적합성 평가); 직장 내 감정 인식과 사회적 점수제는 금지.',
-          '스택: Ollama 또는 vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B (tool-calling) + Cline 또는 Goose+MCP + 불변 감사 로그 + 모든 쓰기/전송 작업에 인간 승인.',
+          '스택: Ollama 또는 vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B (tool-calling) + Cline 또는 Goose+MCP + 불변 감사 로그 + 모든 쓰기/전송 작업에 인간 승인.',
           'DACH는 두 가지 레이어를 추가합니다: 직원 데이터를 처리하는 워크플로에 대한 사업장 협의회의 공동 결정, 그리고 변호사, 의사, 감사인에 대한 §203 StGB 직업 기밀 유지.',
           '세 가지 흔한 실수: DPIA 없이 배포, 단일 워크스페이스에서 개인 데이터와 업무 데이터 혼합, 전송 작업에서 승인 게이트 생략.',
         ],
@@ -2701,7 +2701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**EU AI Act 등급이 의무 사항을 결정합니다.** 대부분의 기업 워크플로는 제한적 위험(AI가 관여함을 사용자에게 투명하게 알림)에 해당합니다. HR 선별, 신용 결정, 급여 자격은 고위험으로 전체 적합성 평가가 필요합니다. 직장 내 감정 인식과 사회적 점수제는 금지됩니다.',
           '**GDPR 작업은 로컬 운영 시에도 변하지 않습니다.** 법적 근거(제6조), 데이터 최소화(제5조), 처리 보안(제32조), 감사 로그, 그리고 고영향 워크플로에 대한 DPIA(제35조)가 여전히 적용됩니다. 로컬 스택은 이러한 통제를 입증하기 쉽게 하지만 선택 사항으로 만들지는 않습니다.',
           '**DACH는 두 가지 레이어를 추가합니다.** 사업장 협의회의 공동 결정(BetrVG §87)은 에이전트가 직원 데이터를 간접적으로라도 처리할 때마다 적용됩니다. §203 StGB 직업 기밀 유지(변호사, 의사, 감사인, 세무사)는 로컬 아키텍처를 선호도가 아닌 필수 요건으로 만듭니다.',
-          '**참조 스택:** Ollama 또는 vLLM이 tool-calling 지원 모델(일반 작업용 Gemma 4 27B, GLM-5.1 32B, Qwen3 32B; 가벼운 이메일 분류용 Llama 3.2 3B)을 제공하고, Cline 또는 Goose+MCP가 에이전트 런타임으로 사용되며, 불변 추가 전용(append-only) 감사 로그와 모든 쓰기 또는 전송 작업에 대한 인간 승인이 포함됩니다.',
+          '**참조 스택:** Ollama 또는 vLLM이 tool-calling 지원 모델(일반 작업용 Gemma 4 27B, GLM-4.7 32B, Qwen3 32B; 가벼운 이메일 분류용 Llama 3.2 3B)을 제공하고, Cline 또는 Goose+MCP가 에이전트 런타임으로 사용되며, 불변 추가 전용(append-only) 감사 로그와 모든 쓰기 또는 전송 작업에 대한 인간 승인이 포함됩니다.',
           '**피해야 할 세 가지 실패 방식:** DPIA가 필요한 워크플로를 DPIA 없이 배포하는 것, 단일 에이전트 워크스페이스에서 개인 데이터와 업무 데이터를 혼합하는 것, 발신 작업(이메일 전송, 계약 서명, 결제 승인)에서 승인 게이트를 생략하는 것.',
         ],
       },
@@ -2713,7 +2713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**지원하는 워크플로:** 문서 수집, 이메일 분류, 회의록 요약, 규정 준수 보고서, 청구서 처리.',
           '**5가지 템플릿의 EU AI Act 분포:** 제한적 위험 4개, 고위험 1개(HR 선별에 사용될 때), 금지 0개.',
           '**DPIA 기준점:** 고위험에 대해 의무적이며, 나머지는 제35조 기준에 따라 판단. 대부분의 팀은 특수 범주 데이터를 처리하는 워크플로에 대해 실행해야 합니다.',
-          '**하드웨어 크기 조정:** Gemma 4 27B 및 Qwen3 32B는 Q4_K_M에서 24GB VRAM에 맞습니다; GLM-5.1 32B 및 Llama 3.3 70B는 무제한 컨텍스트를 위해 48GB 이상이 필요합니다.',
+          '**하드웨어 크기 조정:** Gemma 4 27B 및 Qwen3 32B는 Q4_K_M에서 24GB VRAM에 맞습니다; GLM-4.7 32B 및 Llama 3.3 70B는 무제한 컨텍스트를 위해 48GB 이상이 필요합니다.',
           '**감사 로그 보존:** GDPR 제30조 처리 활동 기록 요건이 최소 기준입니다. 업종별 규정(금융 서비스, 의료)은 이를 연장합니다. 6년이 대부분의 기업 환경에 대한 안전한 기본값입니다.',
           '**비용:** API 지출 없음; 하드웨어는 20명 이상의 팀에 대한 기업 AI SaaS 구독과 비교해 6~12개월 내에 상각됩니다.',
         ],
@@ -2751,7 +2751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**1. 문서 수집 및 분류.** 트리거: PDF 또는 스캔이 감시 폴더 또는 이메일로 도착. 도구: 파일 시스템(읽기), OCR(필요시), 분류 모델, 데이터베이스(쓰기). 모델: tool-calling 및 구조화된 출력을 위한 Gemma 4 27B 또는 Qwen3 32B. 승인 패턴: 읽기 및 분류는 자동, 문서에 개인이 언급된 경우 라우팅은 수동. AI Act 등급: 제한적 위험. DPIA: 기준에 따라 판단.',
           '**2. 이메일 분류와 응답 초안 작성.** 트리거: 모니터링되는 받은 편지함에 새 메시지 도착. 도구: IMAP/Graph API(읽기 전용), 분류 모델, 초안 저장소(쓰기), 알림. 모델: 분류에는 Llama 3.2 3B로 충분, 초안 생성에는 Gemma 4 27B. 승인 패턴: 분류 및 초안은 자동, 전송은 수동(항상). AI Act 등급: 제한적 위험. DPIA: 기준에 따라 판단; 받은 편지함이 직원 데이터를 처리하면 의무적.',
           '**3. 회의록 요약과 액션 아이템 추출.** 트리거: 스크립트가 저장소에 도착(Whisper 또는 제공업체). 도구: 파일 시스템(읽기), 요약 모델, 추출 모델, 출력 대상(API를 통한 Notion/Jira/내부 위키). 모델: 한 시간짜리 스크립트에서 긴 컨텍스트(128K)를 위한 Qwen3 32B. 승인 패턴: 요약은 자동, 외부 시스템에 게시되는 액션 아이템은 수동. AI Act 등급: 제한적 위험; 각 스크립트를 처리하기 전에 동의 캡처를 확인하십시오.',
-          '**4. 규정 준수 보고서 생성.** 트리거: 예약됨(월별, 분기별). 도구: 데이터베이스(읽기), 보고서 템플릿 저장소, 보고서 렌더러, 검토자 알림. 모델: GLM-5.1 32B 또는 Llama 3.3 70B: 긴 컨텍스트, 구조화된 출력, 낮은 환각. 승인 패턴: 데이터 추출은 자동, 게시된 보고서는 수동. AI Act 등급: 제한적 위험; 기본 데이터 소스에 문서화된 법적 근거가 있는지 확인하십시오. 보고서 형식을 안정적으로 유지하려면 [구조화된 출력과 JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode)와 결합하십시오.',
+          '**4. 규정 준수 보고서 생성.** 트리거: 예약됨(월별, 분기별). 도구: 데이터베이스(읽기), 보고서 템플릿 저장소, 보고서 렌더러, 검토자 알림. 모델: GLM-4.7 32B 또는 Llama 3.3 70B: 긴 컨텍스트, 구조화된 출력, 낮은 환각. 승인 패턴: 데이터 추출은 자동, 게시된 보고서는 수동. AI Act 등급: 제한적 위험; 기본 데이터 소스에 문서화된 법적 근거가 있는지 확인하십시오. 보고서 형식을 안정적으로 유지하려면 [구조화된 출력과 JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode)와 결합하십시오.',
           '**5. 청구서 처리 및 검증.** 트리거: 청구서가 재무 받은 편지함 또는 AP 폴더에 도착. 도구: 파일 시스템(읽기), OCR, ERP 통합(주문 및 공급업체 읽기), 예외 큐(쓰기). 모델: tool-calling을 위한 Gemma 4 27B; 비표준 레이아웃의 청구서에는 Qwen3 32B. 승인 패턴: 추출 및 주문 대조는 자동, 모든 예외(불일치, 새 공급업체, 높은 금액)는 수동. AI Act 등급: 제한적 위험. DPIA: 일반적으로 적용되지 않음.',
           '**5가지 전체의 공통 패턴:** 읽기 단계는 자동으로 승인되고, 외부 시스템이나 개인의 권리에 영향을 미치는 쓰기 단계는 수동으로 승인됩니다. 감사 로그는 모든 결정을 캡처합니다.',
         ],
@@ -2851,7 +2851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**tool-calling 신뢰성은 하네스가 아닌 모델의 속성입니다.** 동일한 하네스가 소형 범용 모델과 결합하면 실패하고, 27B 이상의 tool-calling에 맞게 조정된 모델과 결합하면 작동합니다. 먼저 모델을 선택하십시오.',
         items: [
           '**Gemma 4 27B (`gemma4:27b`).** 2026년 5월 범용 tool-calling의 최고 모델. Q4_K_M에서 통합 메모리 16GB 또는 VRAM 24GB에 맞습니다. 문서 수집, 이메일 분류, 청구서 처리에 신뢰할 수 있습니다. 연쇄 도구 호출에서 다소 보수적인데, 이는 어차피 모든 단계에 명시적 승인이 있는 기업 워크플로에 잘 맞습니다.',
-          '**GLM-5.1 32B (`glm5:32b`).** 기본 제공 128K 컨텍스트. 강력한 tool-calling 신뢰성. 긴 입력이 있는 규정 준수 보고서 및 회의록 요약을 위한 선택. Q4_K_M에서 무제한 컨텍스트를 위해 24GB 이상의 VRAM 필요.',
+          '**GLM-4.7 32B (`glm5:32b`).** 기본 제공 128K 컨텍스트. 강력한 tool-calling 신뢰성. 긴 입력이 있는 규정 준수 보고서 및 회의록 요약을 위한 선택. Q4_K_M에서 무제한 컨텍스트를 위해 24GB 이상의 VRAM 필요.',
           '**Qwen3 32B (`qwen3:32b`).** 균형 잡혔고, 다단계 계획에서 매우 신뢰할 수 있습니다. Gemma 4가 너무 보수적일 때 좋은 대안. 기본 제공 32K 컨텍스트; 대부분의 기업 작업에 충분합니다.',
           '**Llama 3.3 70B (`llama3.3:70b`).** 더 높은 한계, 더 무거운 하드웨어. Q4_K_M에서 48GB 이상의 VRAM 또는 통합 메모리 64GB. 신뢰성이 속도보다 중요한 규정 준수 보고서 및 예외 관리에 사용하십시오.',
           '**Llama 3.2 3B (`llama3.2:3b`).** 대용량 분류를 위한 경량 선택. VRAM 8GB에서 편안하게 실행됩니다. "이 이메일이 고객 지원 / 영업 / 스팸인가?"에 충분합니다. 응답 초안 작성에는 충분하지 않습니다. 초안 작성 단계를 위해 27B 이상의 모델과 결합하십시오.',
@@ -2936,7 +2936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '어떤 모델 크기가 기업 워크플로를 신뢰할 수 있게 처리합니까?',
-            a: 'Gemma 4 27B가 범용 tool-calling에 신뢰할 수 있는 기본값입니다. GLM-5.1 32B는 입력이 길 때 선택입니다(규정 준수 보고서, 한 시간짜리 회의록): 기본 제공 128K 컨텍스트. Qwen3 32B는 균형 잡힌 대안입니다. Llama 3.3 70B는 더 높은 한계를 가지지만 48GB 이상의 VRAM이 필요합니다. Llama 3.2 3B는 대용량 분류에 충분하지만 초안 작성에는 충분하지 않습니다. 7B 미만의 모델은 그것을 감싸는 에이전트 런타임과 관계없이 잘못 형성된 도구 호출을 생성합니다.',
+            a: 'Gemma 4 27B가 범용 tool-calling에 신뢰할 수 있는 기본값입니다. GLM-4.7 32B는 입력이 길 때 선택입니다(규정 준수 보고서, 한 시간짜리 회의록): 기본 제공 128K 컨텍스트. Qwen3 32B는 균형 잡힌 대안입니다. Llama 3.3 70B는 더 높은 한계를 가지지만 48GB 이상의 VRAM이 필요합니다. Llama 3.2 3B는 대용량 분류에 충분하지만 초안 작성에는 충분하지 않습니다. 7B 미만의 모델은 그것을 감싸는 에이전트 런타임과 관계없이 잘못 형성된 도구 호출을 생성합니다.',
           },
           {
             q: '에이전트가 한 일을 어떻게 감사합니까?',
