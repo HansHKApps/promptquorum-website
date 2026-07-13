@@ -1,0 +1,1039 @@
+{
+  "Claude Opus 4.8": [
+    "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/prompt-bites/articles/best-llm-right-now.ts",
+    "src/lib/blog/blogContent.ts",
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
+  "GPT-5.5": [
+    "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "Gemini 3.5 Pro": [
+    "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts"
+  ],
+  "Llama 3.3 70B": [
+    "src/lib/prompt-engineering/articles/how-to-test-prompts-across-models.ts",
+    "src/lib/power-local-llm/articles/best-vpn-ai-privacy-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-workstation-build-guide-2026.ts",
+    "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
+    "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
+    "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
+    "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
+    "src/lib/power-local-llm/articles/best-gpu-buying-guide-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/easiest-local-ai-app-windows-mac-linux.ts",
+    "src/lib/power-local-llm/articles/cloud-gpu-rental-guide-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-email-and-calendar-automation.ts",
+    "src/lib/power-local-llm/articles/best-nas-storage-local-ai-models-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
+    "src/lib/power-local-llm/articles/replace-grammarly-notion-ai-with-local.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-with-mcp-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts",
+    "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
+    "src/lib/local-llms/articles/ollama-on-mac-apple-silicon-setup-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+    "src/lib/local-llms/articles/llm-quantization-explained.ts",
+    "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts",
+    "src/lib/local-llms/articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026.ts",
+    "src/lib/local-llms/articles/m5-pro-max-llm-benchmarks-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
+    "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts",
+    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
+    "src/lib/local-llms/articles/mlx-vs-ollama-vs-llama-cpp-mac.ts"
+  ],
+  "ChatGPT": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "DeepSeek-V3": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
+    "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+    "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
+    "src/lib/local-llms/articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026.ts"
+  ],
+  "GPT-4o": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/blog/blogContent.ts"
+  ],
+  "Gemini 3.1 Pro": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/blog/blogContent.ts"
+  ],
+  "Gemma 3 27B": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "Grok 4.3": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "Llama 4 Scout": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/prompt-bites/articles/best-llm-right-now.ts",
+    "src/lib/prompt-bites/articles/can-local-llm-help-gdpr.ts",
+    "src/lib/power-local-llm/articles/best-gpu-buying-guide-local-llm-2026.ts",
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/qwen-local-gdpr-setup-guide-2026.ts",
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts",
+    "src/lib/local-llms/articles/how-much-vram-local-llm.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
+  ],
+  "Mistral Large 3": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts"
+  ],
+  "Perplexity": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts"
+  ],
+  "Phi-4": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/best-local-llm-6gb-vram.ts",
+    "src/lib/prompt-bites/articles/best-japanese-language-models-local.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/prompt-bites/articles/best-ollama-models-rtx-3060-12gb.ts",
+    "src/lib/prompt-bites/articles/run-local-llm-on-xperia-japan.ts",
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts",
+    "src/lib/local-llms/articles/m5-pro-max-llm-benchmarks-2026.ts",
+    "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts",
+    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
+    "src/lib/local-llms/articles/mlx-vs-ollama-vs-llama-cpp-mac.ts"
+  ],
+  "Qwen3 14B": [
+    "src/lib/prompt-engineering/articles/knowledge-cutoffs-and-geo.ts",
+    "src/lib/prompt-bites/articles/ai-model-knowledge-cutoff-dates.ts",
+    "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-email-and-calendar-automation.ts",
+    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts",
+    "src/lib/power-local-llm/articles/replace-grammarly-notion-ai-with-local.ts",
+    "src/lib/power-local-llm/articles/best-rag-tools-for-business-documents-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+    "src/lib/local-llms/articles/best-local-llms-2026.ts",
+    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts",
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts"
+  ],
+  "DeepSeek R1": [
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts",
+    "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts"
+  ],
+  "Doubao": [
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts"
+  ],
+  "ERNIE 4.0": [
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts"
+  ],
+  "Mistral Large 2": [
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts"
+  ],
+  "Qwen 3": [
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts"
+  ],
+  "Z.ai GLM-4": [
+    "src/lib/prompt-engineering/articles/geopolitics-and-ai.ts"
+  ],
+  "Llama 3 8B": [
+    "src/lib/prompt-bites/articles/best-models-amd-5700x-3070ti.ts",
+    "src/lib/prompt-bites/articles/best-local-llm-6gb-vram.ts",
+    "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
+    "src/lib/prompt-bites/articles/how-much-vram-for-local-llm.ts",
+    "src/lib/prompt-bites/articles/how-much-ram-for-7b-model.ts",
+    "src/lib/prompt-bites/articles/qwen-14b-vs-llama-8b.ts",
+    "src/lib/prompt-bites/articles/radeon-6800m-local-llm.ts",
+    "src/lib/prompt-bites/articles/best-ollama-models-right-now.ts"
+  ],
+  "Mistral Small": [
+    "src/lib/prompt-bites/articles/best-models-amd-5700x-3070ti.ts",
+    "src/lib/prompt-bites/articles/best-local-llm-6gb-vram.ts",
+    "src/lib/prompt-bites/articles/how-much-vram-for-local-llm.ts",
+    "src/lib/prompt-bites/articles/how-much-ram-for-7b-model.ts",
+    "src/lib/power-local-llm/articles/best-vpn-ai-privacy-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-workstation-build-guide-2026.ts",
+    "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
+    "src/lib/power-local-llm/articles/run-ai-on-tablet-ipad-android.ts",
+    "src/lib/power-local-llm/articles/best-gpu-buying-guide-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/easiest-local-ai-app-windows-mac-linux.ts",
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts",
+    "src/lib/power-local-llm/articles/cloud-gpu-rental-guide-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-email-and-calendar-automation.ts",
+    "src/lib/power-local-llm/articles/best-nas-storage-local-ai-models-2026.ts",
+    "src/lib/power-local-llm/articles/replace-grammarly-notion-ai-with-local.ts",
+    "src/lib/power-local-llm/articles/local-rag-on-your-pdfs-step-by-step.ts",
+    "src/lib/local-llms/articles/ollama-on-mac-apple-silicon-setup-2026.ts",
+    "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts",
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/m5-pro-max-llm-benchmarks-2026.ts",
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts",
+    "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
+    "src/lib/local-llms/articles/mlx-vs-ollama-vs-llama-cpp-mac.ts"
+  ],
+  "Gemma 2 2B": [
+    "src/lib/prompt-bites/articles/best-ollama-models-4gb-vram.ts"
+  ],
+  "Phi-4 Mini": [
+    "src/lib/prompt-bites/articles/best-ollama-models-4gb-vram.ts",
+    "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
+    "src/lib/prompt-bites/articles/how-much-vram-for-local-llm.ts",
+    "src/lib/prompt-bites/articles/best-ollama-models-right-now.ts",
+    "src/lib/power-local-llm/articles/local-ai-app-with-built-in-rag.ts",
+    "src/lib/power-local-llm/articles/run-ai-on-tablet-ipad-android.ts",
+    "src/lib/power-local-llm/articles/best-local-ai-app-low-end-pc.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
+    "src/lib/power-local-llm/articles/easiest-local-ai-app-windows-mac-linux.ts",
+    "src/lib/power-local-llm/articles/local-ai-app-non-technical-users.ts",
+    "src/lib/power-local-llm/articles/local-llm-email-and-calendar-automation.ts",
+    "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts",
+    "src/lib/power-local-llm/articles/local-llm-personal-knowledge-base-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
+    "src/lib/power-local-llm/articles/lm-studio-vs-jan-vs-gpt4all-2026.ts",
+    "src/lib/power-local-llm/articles/replace-grammarly-notion-ai-with-local.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts",
+    "src/lib/power-local-llm/articles/local-rag-on-your-pdfs-step-by-step.ts",
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/best-cpu-only-llm.ts"
+  ],
+  "SmolLM 1.7B": [
+    "src/lib/prompt-bites/articles/best-ollama-models-4gb-vram.ts"
+  ],
+  "Gemma 2B": [
+    "src/lib/prompt-bites/articles/best-ollama-models-cpu-only.ts",
+    "src/lib/prompt-bites/articles/run-local-llm-on-xperia-japan.ts"
+  ],
+  "ELYZA-7B": [
+    "src/lib/prompt-bites/articles/best-local-llm-apps-japan-android.ts",
+    "src/lib/prompt-bites/articles/best-japanese-language-models-local.ts"
+  ],
+  "Qwen3 7B": [
+    "src/lib/prompt-bites/articles/best-local-llm-apps-japan-android.ts",
+    "src/lib/prompt-bites/articles/best-japanese-language-models-local.ts",
+    "src/lib/prompt-bites/articles/best-ollama-models-rtx-3060-12gb.ts",
+    "src/lib/power-local-llm/articles/best-vpn-ai-privacy-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/replace-zapier-with-local-ai-agents.ts",
+    "src/lib/power-local-llm/articles/best-nas-storage-local-ai-models-2026.ts",
+    "src/lib/power-local-llm/articles/best-laptops-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-personal-knowledge-base-2026.ts",
+    "src/lib/power-local-llm/articles/best-rag-tools-for-business-documents-2026.ts",
+    "src/lib/local-llms/articles/best-cpu-only-llm.ts"
+  ],
+  "Rinna 3.6B": [
+    "src/lib/prompt-bites/articles/best-local-llm-apps-japan-android.ts",
+    "src/lib/prompt-bites/articles/best-japanese-language-models-local.ts",
+    "src/lib/prompt-bites/articles/run-local-llm-on-xperia-japan.ts"
+  ],
+  "Qwen 14B": [
+    "src/lib/prompt-bites/articles/how-much-vram-for-local-llm.ts"
+  ],
+  "Llama 3.3 8B": [
+    "src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts",
+    "src/lib/prompt-bites/articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b.ts",
+    "src/lib/prompt-bites/articles/ollama-128k-context-models.ts",
+    "src/lib/power-local-llm/articles/local-ai-app-with-built-in-rag.ts",
+    "src/lib/power-local-llm/articles/local-ai-workstation-build-guide-2026.ts",
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts",
+    "src/lib/power-local-llm/articles/chat-with-1000-pdfs-locally.ts",
+    "src/lib/power-local-llm/articles/cloud-gpu-rental-guide-2026.ts",
+    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts",
+    "src/lib/power-local-llm/articles/best-laptops-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/lm-studio-vs-jan-vs-gpt4all-2026.ts",
+    "src/lib/power-local-llm/articles/best-rag-tools-for-business-documents-2026.ts",
+    "src/lib/power-local-llm/articles/local-rag-on-your-pdfs-step-by-step.ts",
+    "src/lib/local-llms/articles/ollama-on-mac-apple-silicon-setup-2026.ts",
+    "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts",
+    "src/lib/local-llms/articles/llm-quantization-explained.ts",
+    "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts",
+    "src/lib/local-llms/articles/m5-pro-max-llm-benchmarks-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
+    "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts",
+    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts",
+    "src/lib/local-llms/articles/mlx-vs-ollama-vs-llama-cpp-mac.ts"
+  ],
+  "Qwen 3 14B": [
+    "src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts",
+    "src/lib/prompt-bites/articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b.ts",
+    "src/lib/prompt-bites/articles/is-qwen-gdpr-compliant.ts",
+    "src/lib/prompt-bites/articles/best-llm-right-now.ts",
+    "src/lib/prompt-bites/articles/qwen-14b-vs-llama-8b.ts",
+    "src/lib/prompt-bites/articles/ollama-128k-context-models.ts",
+    "src/lib/prompt-bites/articles/can-local-llm-help-gdpr.ts",
+    "src/lib/power-local-llm/articles/chat-with-1000-pdfs-locally.ts",
+    "src/lib/local-llms/articles/qwen-local-gdpr-setup-guide-2026.ts",
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
+  "Qwen 3 32B": [
+    "src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts",
+    "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
+    "src/lib/power-local-llm/articles/cloud-gpu-rental-guide-2026.ts"
+  ],
+  "Mistral Small 3.1 24B": [
+    "src/lib/prompt-bites/articles/mistral-small-24b-vs-qwen-14b-vs-llama-8b.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
+  ],
+  "CyberAgent CALM3-22B": [
+    "src/lib/prompt-bites/articles/best-japanese-language-models-local.ts"
+  ],
+  "Llama 3": [
+    "src/lib/prompt-bites/articles/convert-ollama-model-to-mlx.ts",
+    "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts"
+  ],
+  "Mistral": [
+    "src/lib/prompt-bites/articles/convert-ollama-model-to-mlx.ts",
+    "src/lib/local-llms/articles/llm-quantization-explained.ts"
+  ],
+  "Qwen": [
+    "src/lib/prompt-bites/articles/convert-ollama-model-to-mlx.ts",
+    "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts"
+  ],
+  "Llama 3 70B": [
+    "src/lib/prompt-bites/articles/vram-for-70b-model.ts"
+  ],
+  "DeepSeek-R1-0528-Qwen3-8B": [
+    "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
+    "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "DeepSeek-R1-Distill-Llama-70B": [
+    "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
+    "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+    "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
+    "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "DeepSeek-R1-Distill-Qwen-14B": [
+    "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
+    "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+    "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
+    "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "DeepSeek-R1-Distill-Qwen-32B": [
+    "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
+    "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+    "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
+    "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
+    "src/lib/local-llms/articles/best-local-llms-2026.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "DeepSeek-R1-Distill-Qwen-7B": [
+    "src/lib/prompt-bites/articles/best-deepseek-distill-for-your-gpu.ts",
+    "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+    "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "Qwen 3 8B": [
+    "src/lib/prompt-bites/articles/is-qwen-gdpr-compliant.ts",
+    "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
+    "src/lib/prompt-bites/articles/can-local-llm-help-gdpr.ts",
+    "src/lib/local-llms/articles/qwen-local-gdpr-setup-guide-2026.ts"
+  ],
+  "DeepSeek Coder 14B": [
+    "src/lib/prompt-bites/articles/best-local-llm-coding-12gb-vram.ts",
+    "src/lib/prompt-bites/articles/best-14b-models-coding.ts"
+  ],
+  "Qwen 3 Coder 14B": [
+    "src/lib/prompt-bites/articles/best-local-llm-coding-12gb-vram.ts",
+    "src/lib/prompt-bites/articles/best-14b-models-coding.ts",
+    "src/lib/prompt-bites/articles/best-ollama-models-right-now.ts",
+    "src/lib/prompt-bites/articles/qwen-coder-vs-deepseek-coder.ts",
+    "src/lib/local-llms/articles/qwen-local-gdpr-setup-guide-2026.ts"
+  ],
+  "Phi-2": [
+    "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts"
+  ],
+  "TinyLlama": [
+    "src/lib/prompt-bites/articles/can-you-run-rag-on-2gb-ram.ts",
+    "src/lib/prompt-bites/articles/run-local-llm-on-xperia-japan.ts"
+  ],
+  "GPT-5.5 Instant": [
+    "src/lib/prompt-bites/articles/best-llm-right-now.ts",
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
+  "Gemini 2.5 Pro": [
+    "src/lib/prompt-bites/articles/best-llm-right-now.ts"
+  ],
+  "Mistral Nemo 12B": [
+    "src/lib/prompt-bites/articles/best-ollama-models-rtx-3060-12gb.ts"
+  ],
+  "Gemma 3": [
+    "src/lib/prompt-bites/articles/which-ollama-models-support-vision.ts"
+  ],
+  "LLaVA": [
+    "src/lib/prompt-bites/articles/which-ollama-models-support-vision.ts",
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts"
+  ],
+  "Qwen-VL": [
+    "src/lib/prompt-bites/articles/which-ollama-models-support-vision.ts"
+  ],
+  "Qwen3 3B": [
+    "src/lib/prompt-bites/articles/run-local-llm-on-xperia-japan.ts"
+  ],
+  "Gemma 3 12B": [
+    "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts"
+  ],
+  "Llama 3.1 8B": [
+    "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts"
+  ],
+  "Phi-4-mini": [
+    "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts",
+    "src/lib/local-llms/articles/best-local-llms-2026.ts"
+  ],
+  "Qwen3 8B": [
+    "src/lib/prompt-bites/articles/best-local-llm-16gb-ram-laptop.ts",
+    "src/lib/power-local-llm/articles/local-ai-workstation-build-guide-2026.ts",
+    "src/lib/power-local-llm/articles/best-gpu-buying-guide-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/easiest-local-ai-app-windows-mac-linux.ts",
+    "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
+    "src/lib/power-local-llm/articles/lm-studio-vs-jan-vs-gpt4all-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
+  ],
+  "DeepSeek Coder V2": [
+    "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts",
+    "src/lib/prompt-bites/articles/qwen-coder-vs-deepseek-coder.ts",
+    "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts"
+  ],
+  "DeepSeek V3": [
+    "src/lib/prompt-bites/articles/is-deepseek-gdpr-safe.ts"
+  ],
+  "DeepSeek-R1-Distill-Llama-8B": [
+    "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "DeepSeek-R1-Distill-Qwen-1.5B": [
+    "src/lib/prompt-bites/articles/deepseek-r1-distill-vram-cheatsheet.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "DeepSeek V2": [
+    "src/lib/prompt-bites/articles/best-moe-models-local-coding.ts"
+  ],
+  "Mixtral 8x22B": [
+    "src/lib/prompt-bites/articles/best-moe-models-local-coding.ts",
+    "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts",
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts"
+  ],
+  "Qwen 3 0.6B": [
+    "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts"
+  ],
+  "Qwen 3 72B": [
+    "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts"
+  ],
+  "DeepSeek Coder V3": [
+    "src/lib/power-local-llm/articles/local-llm-code-review-ci-cd.ts",
+    "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
+    "src/lib/power-local-llm/articles/local-coding-llm-without-internet.ts",
+    "src/lib/power-local-llm/articles/replace-github-copilot-with-local-llm.ts",
+    "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts"
+  ],
+  "Qwen3-Coder 30B": [
+    "src/lib/power-local-llm/articles/local-llm-code-review-ci-cd.ts",
+    "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
+    "src/lib/power-local-llm/articles/local-coding-llm-without-internet.ts",
+    "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
+    "src/lib/power-local-llm/articles/replace-github-copilot-with-local-llm.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-with-mcp-2026.ts",
+    "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts"
+  ],
+  "Qwen3-Coder 7B": [
+    "src/lib/power-local-llm/articles/local-llm-code-review-ci-cd.ts",
+    "src/lib/power-local-llm/articles/local-coding-llm-without-internet.ts",
+    "src/lib/power-local-llm/articles/replace-github-copilot-with-local-llm.ts",
+    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+    "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "DeepSeek Coder 33B": [
+    "src/lib/power-local-llm/articles/best-ai-coding-tools-comparison-2026.ts"
+  ],
+  "Qwen3 Coder 14B": [
+    "src/lib/power-local-llm/articles/best-ai-coding-tools-comparison-2026.ts"
+  ],
+  "Qwen3 Coder 7B": [
+    "src/lib/power-local-llm/articles/best-ai-coding-tools-comparison-2026.ts"
+  ],
+  "BAAI/bge-small-en-v1.5": [
+    "src/lib/power-local-llm/articles/local-ai-app-with-built-in-rag.ts",
+    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts"
+  ],
+  "all-MiniLM-L6-v2": [
+    "src/lib/power-local-llm/articles/local-ai-app-with-built-in-rag.ts",
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "nomic-embed-text v1.5": [
+    "src/lib/power-local-llm/articles/local-ai-app-with-built-in-rag.ts",
+    "src/lib/power-local-llm/articles/local-coding-llm-without-internet.ts",
+    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts"
+  ],
+  "Llama 3.3 33B": [
+    "src/lib/power-local-llm/articles/local-ai-workstation-build-guide-2026.ts"
+  ],
+  "InternVL 2.5 (8B)": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "LLaVA 1.6 (7B and 13B)": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "Llama 3.2 Vision 11B": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts",
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
+  ],
+  "Llama 3.2 Vision 90B": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "MiniCPM-V 4.5 (8B)": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "Moondream 2 (1.9B)": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "PaliGemma 2 3B": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "Qwen3-VL 72B": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "Qwen3-VL 8B": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "SmolVLM 2.2B": [
+    "src/lib/power-local-llm/articles/local-vision-models-llava-ollama-2026.ts"
+  ],
+  "Qwen2.5": [
+    "src/lib/power-local-llm/articles/deepseek-offline-china-self-hosted-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts"
+  ],
+  "Bark": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts"
+  ],
+  "Coqui TTS": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts",
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts"
+  ],
+  "F5-TTS": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts"
+  ],
+  "Kokoro TTS": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts"
+  ],
+  "Piper TTS": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts",
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts",
+    "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts",
+    "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts"
+  ],
+  "StyleTTS 2": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts"
+  ],
+  "Tortoise TTS": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts"
+  ],
+  "XTTS v2": [
+    "src/lib/power-local-llm/articles/local-tts-voice-cloning-piper-coqui-xtts.ts"
+  ],
+  "GLM-5.1 32B": [
+    "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
+    "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-with-mcp-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts"
+  ],
+  "Gemma 4 27B": [
+    "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
+    "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-with-mcp-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts"
+  ],
+  "Qwen3 32B": [
+    "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
+    "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
+    "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
+    "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
+    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-with-mcp-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "Codestral 22B": [
+    "src/lib/power-local-llm/articles/local-coding-llm-without-internet.ts",
+    "src/lib/power-local-llm/articles/replace-github-copilot-with-local-llm.ts",
+    "src/lib/power-local-llm/articles/continue-dev-vs-cline-vs-aider-local.ts",
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
+  ],
+  "LLaVA 1.6 7B": [
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
+  ],
+  "Moondream 2": [
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
+  ],
+  "Qwen2-VL 7B": [
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "whisper.cpp large-v3": [
+    "src/lib/power-local-llm/articles/local-multimodal-pipeline-voice-vision-text.ts",
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts"
+  ],
+  "Command R+ 104B": [
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
+    "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
+    "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts"
+  ],
+  "Dolphin 3.0 Llama": [
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts"
+  ],
+  "Hermes 3 Llama 3.3": [
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
+    "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
+    "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
+    "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts"
+  ],
+  "Mistral Large": [
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
+    "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
+    "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
+    "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts"
+  ],
+  "Yi-1.5 34B": [
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts"
+  ],
+  "Llama 3.3 34B": [
+    "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts"
+  ],
+  "Dolphin 3.0 Mistral": [
+    "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts"
+  ],
+  "Gemma 3 4B": [
+    "src/lib/power-local-llm/articles/run-ai-on-tablet-ipad-android.ts",
+    "src/lib/power-local-llm/articles/best-local-ai-app-low-end-pc.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
+    "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
+    "src/lib/power-local-llm/articles/local-ai-app-non-technical-users.ts",
+    "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
+    "src/lib/power-local-llm/articles/lm-studio-vs-jan-vs-gpt4all-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts"
+  ],
+  "Llama 3.2 3B": [
+    "src/lib/power-local-llm/articles/run-ai-on-tablet-ipad-android.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
+    "src/lib/power-local-llm/articles/easiest-local-ai-app-windows-mac-linux.ts",
+    "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
+    "src/lib/power-local-llm/articles/replace-zapier-with-local-ai-agents.ts",
+    "src/lib/power-local-llm/articles/local-ai-app-non-technical-users.ts",
+    "src/lib/power-local-llm/articles/best-laptops-local-llm-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-personal-knowledge-base-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts",
+    "src/lib/power-local-llm/articles/local-ai-agents-business-workflows-eu-compliance.ts",
+    "src/lib/local-llms/articles/best-local-llms-2026.ts",
+    "src/lib/local-llms/articles/best-cpu-only-llm.ts"
+  ],
+  "Qwen3 1.7B": [
+    "src/lib/power-local-llm/articles/run-ai-on-tablet-ipad-android.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts"
+  ],
+  "Llama 3.2 1B": [
+    "src/lib/power-local-llm/articles/best-local-ai-app-low-end-pc.ts"
+  ],
+  "Qwen 3 1.5B": [
+    "src/lib/power-local-llm/articles/best-local-ai-app-low-end-pc.ts",
+    "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts"
+  ],
+  "SmolLM 2 1.7B": [
+    "src/lib/power-local-llm/articles/best-local-ai-app-low-end-pc.ts",
+    "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-iphone-2026.ts"
+  ],
+  "mxbai-embed-large": [
+    "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
+    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts",
+    "src/lib/power-local-llm/articles/local-llm-personal-knowledge-base-2026.ts",
+    "src/lib/power-local-llm/articles/best-rag-tools-for-business-documents-2026.ts"
+  ],
+  "nomic-embed-text": [
+    "src/lib/power-local-llm/articles/local-llm-with-logseq-and-joplin.ts",
+    "src/lib/power-local-llm/articles/local-llm-with-obsidian-2026.ts",
+    "src/lib/power-local-llm/articles/local-llm-personal-knowledge-base-2026.ts",
+    "src/lib/power-local-llm/articles/best-rag-tools-for-business-documents-2026.ts"
+  ],
+  "DeepSeek-R1 7B": [
+    "src/lib/power-local-llm/articles/best-gpu-buying-guide-local-llm-2026.ts",
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts"
+  ],
+  "Phi-4-mini 3.8B": [
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts"
+  ],
+  "Whisper base": [
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts"
+  ],
+  "Whisper small": [
+    "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-whisper-metal-benchmark.ts"
+  ],
+  "BGE-M3": [
+    "src/lib/power-local-llm/articles/chat-with-1000-pdfs-locally.ts"
+  ],
+  "BGE-reranker-v2-m3": [
+    "src/lib/power-local-llm/articles/chat-with-1000-pdfs-locally.ts"
+  ],
+  "nomic-embed-text-v1.5": [
+    "src/lib/power-local-llm/articles/chat-with-1000-pdfs-locally.ts",
+    "src/lib/power-local-llm/articles/local-rag-on-your-pdfs-step-by-step.ts"
+  ],
+  "Whisper base (74M)": [
+    "src/lib/power-local-llm/articles/local-whisper-stt-comparison-2026.ts"
+  ],
+  "Whisper large-v3 (1.55B)": [
+    "src/lib/power-local-llm/articles/local-whisper-stt-comparison-2026.ts"
+  ],
+  "Whisper medium (769M)": [
+    "src/lib/power-local-llm/articles/local-whisper-stt-comparison-2026.ts"
+  ],
+  "Whisper small (244M)": [
+    "src/lib/power-local-llm/articles/local-whisper-stt-comparison-2026.ts"
+  ],
+  "Whisper tiny (39M)": [
+    "src/lib/power-local-llm/articles/local-whisper-stt-comparison-2026.ts"
+  ],
+  "distil-large-v3 (~756M)": [
+    "src/lib/power-local-llm/articles/local-whisper-stt-comparison-2026.ts"
+  ],
+  "Qwen2.5-72B": [
+    "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "Qwen3-Coder 32B": [
+    "src/lib/power-local-llm/articles/qwen-local-deployment-complete-guide-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+    "src/lib/local-llms/articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026.ts"
+  ],
+  "DeepSeek-R1 70B": [
+    "src/lib/power-local-llm/articles/cloud-gpu-rental-guide-2026.ts"
+  ],
+  "Gemma 3 1B": [
+    "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts"
+  ],
+  "Phi-4 Mini 3.8B": [
+    "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts"
+  ],
+  "Qwen 3 1.7B": [
+    "src/lib/power-local-llm/articles/mobile-llm-models-phi4-gemma-smollm.ts"
+  ],
+  "Phi-3.5 Mini 3.8B": [
+    "src/lib/power-local-llm/articles/replace-zapier-with-local-ai-agents.ts"
+  ],
+  "Qwen3 4B": [
+    "src/lib/power-local-llm/articles/local-ai-app-non-technical-users.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts"
+  ],
+  "Whisper Medium": [
+    "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts"
+  ],
+  "Whisper Small": [
+    "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts"
+  ],
+  "WhisperKit": [
+    "src/lib/power-local-llm/articles/voice-assistant-local-mobile-offline.ts"
+  ],
+  "BAAI/bge-m3": [
+    "src/lib/power-local-llm/articles/anythingllm-vs-privategpt-vs-openwebui-rag.ts",
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "Llama 3.3 13B": [
+    "src/lib/power-local-llm/articles/best-laptops-local-llm-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
+    "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts"
+  ],
+  "Mistral Small v0.3": [
+    "src/lib/power-local-llm/articles/best-laptops-local-llm-2026.ts"
+  ],
+  "bge-m3": [
+    "src/lib/power-local-llm/articles/local-llm-personal-knowledge-base-2026.ts"
+  ],
+  "SmolLM2 1.7B": [
+    "src/lib/power-local-llm/articles/best-local-llm-apps-android-2026.ts"
+  ],
+  "DeepSeek-R1": [
+    "src/lib/power-local-llm/articles/deepseek-r1-vs-distills-explained-2026.ts",
+    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+    "src/lib/local-llms/articles/deepseek-local-china-data-privacy-2026.ts",
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
+  ],
+  "Qwen3-Coder 14B": [
+    "src/lib/power-local-llm/articles/deepseek-vs-qwen-coding-local-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "multilingual-e5-large": [
+    "src/lib/power-local-llm/articles/best-rag-tools-for-business-documents-2026.ts"
+  ],
+  "BAAI/bge-large-en-v1.5": [
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "OpenAI text-embedding-3-large": [
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "gte-large": [
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "jina-embeddings-v3": [
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "mxbai-embed-large-v1": [
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "nomic-embed-text-v2": [
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "snowflake-arctic-embed-l-v2.0": [
+    "src/lib/power-local-llm/articles/best-embedding-models-local-rag-2026.ts"
+  ],
+  "Granite Code 34B": [
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts"
+  ],
+  "Granite Code 8B": [
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts"
+  ],
+  "Llama 3.3 Code": [
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts"
+  ],
+  "StarCoder 2 15B": [
+    "src/lib/power-local-llm/articles/best-local-coding-models-2026.ts"
+  ],
+  "Apple AFM 3 Cloud Pro": [
+    "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts"
+  ],
+  "Apple AFM 3 Core Advanced": [
+    "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts"
+  ],
+  "Apple AFM Core": [
+    "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts"
+  ],
+  "Gemma": [
+    "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts"
+  ],
+  "Google Gemini": [
+    "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts"
+  ],
+  "Llama": [
+    "src/lib/local-llms/articles/apple-on-device-ai-vs-local-llms.ts"
+  ],
+  "InternVL 2.5 8B": [
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
+  ],
+  "MiniCPM-V 2.6": [
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
+  ],
+  "Qwen2-VL 2B": [
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts"
+  ],
+  "Qwen2-VL 72B": [
+    "src/lib/local-llms/articles/run-qwen-vl-locally-2026.ts",
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "Whisper large-v3": [
+    "src/lib/local-llms/articles/apple-silicon-whisper-metal-benchmark.ts",
+    "src/lib/local-llms/articles/mac-mini-m5-local-ai-server.ts",
+    "src/lib/local-llms/articles/m5-pro-max-llm-benchmarks-2026.ts",
+    "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts"
+  ],
+  "Whisper tiny": [
+    "src/lib/local-llms/articles/apple-silicon-whisper-metal-benchmark.ts"
+  ],
+  "DeepSeek-V2.5": [
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "Qwen 3.6 27B": [
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts",
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
+  ],
+  "Qwen3 0.6B": [
+    "src/lib/local-llms/articles/qwen-local-deployment-guide-2026.ts"
+  ],
+  "Qwen3": [
+    "src/lib/local-llms/articles/llm-quantization-explained.ts"
+  ],
+  "DeepSeek 67B": [
+    "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts"
+  ],
+  "Qwen3 72B": [
+    "src/lib/local-llms/articles/running-70b-models-apple-silicon-m5-max.ts",
+    "src/lib/local-llms/articles/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026.ts"
+  ],
+  "Qwen2.5-Coder 7B": [
+    "src/lib/local-llms/articles/best-local-llms-2026.ts"
+  ],
+  "DeepSeek V4 Pro": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
+  ],
+  "Devstral Small 24B": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
+  ],
+  "GLM-5.1": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
+  ],
+  "Gemma 4": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
+  ],
+  "Kimi K2.6": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/how-much-vram-local-llm.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
+  ],
+  "MiniMax M3": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
+  ],
+  "NVIDIA Nemotron 3 Ultra": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
+  ],
+  "gpt-oss:120b": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts"
+  ],
+  "gpt-oss:20b": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/how-much-vram-local-llm.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
+  ],
+  "qwen3-coder:30b": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts",
+    "src/lib/local-llms/articles/best-local-llms-for-coding.ts"
+  ],
+  "qwen3:30b": [
+    "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
+  ],
+  "Gemma 3 2B": [
+    "src/lib/local-llms/articles/best-cpu-only-llm.ts"
+  ],
+  "Mistral Small Q4": [
+    "src/lib/local-llms/articles/best-cpu-only-llm.ts"
+  ],
+  "DeepSeek Coder V2 16B": [
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts"
+  ],
+  "Qwen3 34B": [
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts",
+    "src/lib/local-llms/articles/how-much-unified-memory-for-local-llm.ts",
+    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts"
+  ],
+  "Whisper": [
+    "src/lib/local-llms/articles/apple-silicon-vs-nvidia-gpu-local-llm.ts"
+  ],
+  "ChatGLM4 9B": [
+    "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+  ],
+  "Llama 3.3 70B Instruct": [
+    "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+  ],
+  "Llama 3.3 8B Instruct": [
+    "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+  ],
+  "Mistral Small Instruct v0.3": [
+    "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+  ],
+  "Mixtral 8x22B Instruct": [
+    "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+  ],
+  "Qwen 3 72B Instruct": [
+    "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+  ],
+  "Qwen 3 7B Instruct": [
+    "src/lib/local-llms/articles/xinference-llama-qwen-chatglm-mistral.ts"
+  ],
+  "Claude Sonnet 4.6": [
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
+  "DeepSeek": [
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
+  "DeepSeek API": [
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
+  "Qwen local": [
+    "src/lib/local-llms/articles/gdpr-llm-risk-comparison-2026.ts"
+  ],
+  "DeepSeek V4-Flash": [
+    "src/lib/local-llms/articles/how-much-vram-local-llm.ts"
+  ],
+  "Qwen 3.6 35B-A3B": [
+    "src/lib/local-llms/articles/how-much-vram-local-llm.ts"
+  ],
+  "OpenAI o1-mini": [
+    "src/lib/local-llms/articles/best-local-reasoning-model-deepseek-r1-2026.ts"
+  ],
+  "Mistral 8x7B": [
+    "src/lib/local-llms/articles/best-models-apple-silicon-2026.ts"
+  ],
+  "Qwen3.6-35B-A3B": [
+    "src/lib/local-llms/articles/qwen-vs-llama-vs-mistral.ts"
+  ],
+  "Gemma 4 E12B": [
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts"
+  ],
+  "Gemma 4 E4B": [
+    "src/lib/local-llms/articles/best-budget-gpus-local-llm.ts"
+  ],
+  "LLaVA 7B": [
+    "src/lib/local-llms/articles/apple-silicon-local-llm-guide-2026.ts"
+  ]
+}
