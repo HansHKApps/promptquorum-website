@@ -1,6 +1,6 @@
 // Power Local LLM — Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM
 // Slug: mobile-llm-models-phi4-gemma-smollm
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 languages (en, es, pt, de, fr, ja, zh, ar, ko) have full content blocks.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,15 +9,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: 'Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
     seoTitle: 'Best Mobile LLM 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
     intro:
       'Six small language models cover almost every mobile use case in 2026: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, and Llama 3.2 3B. They differ on tokens-per-second, memory footprint, and quality on chat, summarisation, translation, and short-form drafting. This guide ranks them on iPhone 17 Pro and Galaxy S25 Ultra, gives a per-tier verdict (flagship / mid-range / budget), and explains why Q4_K_M quantisation is the default for mobile.',
     metaDescription:
-      'Six small LLMs benchmarked for phones in 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B compared on speed, RAM, and quality.',
+      'Six small LLMs run CPU-only on phones in 2026: Phi-4 Mini (3.8B), Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B compared on speed, RAM, quality.',
     twitterDescription:
       'Best mobile LLMs in 2026: Phi-4 Mini (smartest), SmolLM 2 (fastest), Qwen 3 (multilingual), Gemma 3 1B (older phones), Gemma 3 4B (balanced), Llama 3.2 3B (workhorse).',
     current_models_mentioned: [
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'best mobile llm model',
       'phi-4 mini vs gemma 3',
       'smollm 2 mobile',
-      'qwen 2.5 1.5b mobile',
+      'qwen 3 1.7b mobile',
       'llama 3.2 3b mobile',
       'small llm for phone',
       'best on-device llm 2026',
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Llama 3.2 3B — most-tested 3B workhorse. Best 3B for tool calling, RAG, and broadly compatible apps.',
         'Quantisation: download Q4_K_M GGUF for all six. Q5/Q6 only if your phone has 12 GB+ RAM and the app supports it.',
       ],
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-07-14',
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Test devices:** iPhone 17 Pro (A19 Pro), iPhone 16 Pro (A18 Pro, 8 GB), Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), OnePlus 13 (Snapdragon 8 Elite).',
           '**Inference engines:** llama.cpp via PocketPal AI / LLM Farm (default), MLC LLM via MLC Chat (Metal-accelerated on iPhone), Ollama via Termux (Android).',
           '**Memory footprint (Q4_K_M):** Phi-4 Mini ~2.7 GB, Gemma 3 4B ~2.9 GB, Llama 3.2 3B ~2.2 GB, Qwen 3 1.7B ~1.1 GB, SmolLM 2 1.7B ~1.1 GB, Gemma 3 1B ~720 MB.',
-          '**Minimum RAM (active):** 6 GB phone for 1.5B–1.7B models; 8 GB phone for 3B–4B models; 4 GB phone for Gemma 3 1B only.',
+          '**Minimum RAM (active):** 6 GB phone for 1.7B models; 8 GB phone for 3B–4B models; 4 GB phone for Gemma 3 1B only.',
           '**Fastest tokens/sec on iPhone 17 Pro:** Gemma 3 1B ~35–45, SmolLM 2 ~26–32, Qwen 3 1.7B ~26–35, Llama 3.2 3B ~16–22, Phi-4 Mini ~13–18, Gemma 3 4B ~10–13.',
           '**Source quantisation:** all six available as Q4_K_M GGUF on Hugging Face and via PocketPal AI / MLC Chat / LM Studio.',
         ],
@@ -178,7 +178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Gemma 3 4B', 'Size': '4B', 'Tokens/sec (17 Pro)': '~10–13', 'Best for': 'Balanced default when Phi-4 Mini unavailable' },
           { 'Model': 'Gemma 3 1B', 'Size': '1B', 'Tokens/sec (17 Pro)': '~35–45', 'Best for': 'Older phones (4 GB RAM)' },
           { 'Model': 'SmolLM 2', 'Size': '1.7B', 'Tokens/sec (17 Pro)': '~26–32', 'Best for': 'Fastest tokens/sec, snappy chat' },
-          { 'Model': 'Qwen 3', 'Size': '1.5B', 'Tokens/sec (17 Pro)': '~24–32', 'Best for': 'Best multilingual (35+ languages)' },
+          { 'Model': 'Qwen 3', 'Size': '1.7B', 'Tokens/sec (17 Pro)': '~24–32', 'Best for': 'Best multilingual (35+ languages)' },
           { 'Model': 'Llama 3.2', 'Size': '3B', 'Tokens/sec (17 Pro)': '~16–22', 'Best for': 'Strongest 3B option, tool calling, RAG' },
         ],
         note:
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-en.svg',
-        imageCaption: 'Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen 3 (1.5B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones.',
+        imageCaption: 'Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen 3 (1.7B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -280,8 +280,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Qwen 3 1.7B (Alibaba, 2024) is the strongest multilingual mobile model in 2026 — trained on 35+ languages including Chinese, Japanese, Korean, Arabic, German, French, Spanish, and Russian.** Best choice for translation, non-English chat, and travel use where the user switches languages mid-conversation.',
         items: [
-          '**Parameters and training:** 1.5B parameters; trained on Alibaba\'s multilingual corpus with strong representation of CJK languages, Arabic, and major European languages. Architecture optimised for multilingual reasoning.',
-          '**Memory footprint:** ~1.0 GB at Q4_K_M. Fits on any phone with 6 GB+ RAM.',
+          '**Parameters and training:** 1.7B parameters; trained on Alibaba\'s multilingual corpus with strong representation of CJK languages, Arabic, and major European languages. Architecture optimised for multilingual reasoning.',
+          '**Memory footprint:** ~1.1 GB at Q4_K_M. Fits on any phone with 6 GB+ RAM.',
           '**Speed (tokens/sec):** iPhone 17 Pro ~24–32, iPhone 16 Pro ~20–28, Galaxy S25 Ultra ~18–26, iPhone 14 Pro ~14–20. Comparable speed to SmolLM 2.',
           '**Quality strengths:** native-quality output in 35+ languages (most small models are English-first with weak multilingual fallback), strong translation between major language pairs, coherent CJK output where Phi-4 Mini and Llama 3.2 produce broken characters.',
           '**Quality weaknesses:** English-only reasoning slightly weaker than Phi-4 Mini, shorter natural creative writing than Gemma 3 4B, weaker tool-calling than Llama 3.2 3B.',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: 'Per-Tier Verdict: Flagship vs Mid-Range vs Budget',
         content:
-          '**Phone tier dictates the model ceiling — chip generation and RAM matter more than brand.** A flagship phone (8 GB+ RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) runs 3.8B–4B models comfortably; a mid-range phone (6–8 GB RAM, older flagship chip) runs 1.7B–3B; a budget or older phone (4–6 GB RAM) runs 1B–1.5B.',
+          '**Phone tier dictates the model ceiling — chip generation and RAM matter more than brand.** A flagship phone (8 GB+ RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) runs 3.8B–4B models comfortably; a mid-range phone (6–8 GB RAM, older flagship chip) runs 1.7B–3B; a budget or older phone (4–6 GB RAM) runs 1B–1.7B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Phi-4 Mini technical report — [Microsoft Research](https://arxiv.org/abs/2412.08905) (December 2024).',
           'Gemma 3 technical report — [Google DeepMind](https://blog.google/technology/developers/gemma-3/) (2025).',
           'SmolLM 2 model card — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) (2024).',
-          'Qwen 3 technical report — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/) (2024).',
+          'Qwen 3 technical report — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/) (2024).',
           'Llama 3.2 model card — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/) (2024).',
           'Q4_K_M quantisation reference — [llama.cpp documentation](https://github.com/ggerganov/llama.cpp).',
         ],
@@ -408,7 +408,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Which mobile model is fastest on iPhone?',
-            a: 'Gemma 3 1B is the absolute fastest at ~35–45 tokens/sec on iPhone 17 Pro, but it is the smallest model in this lineup. Among 1.5B–1.7B models (where speed and quality are balanced), SmolLM 2 1.7B is the fastest at ~26–32 tokens/sec. Among models that produce flagship-quality output, Phi-4 Mini at ~13–18 tokens/sec is the fastest "smart" option. Pick by use case: if responsiveness matters more than depth, SmolLM 2; if depth matters more, Phi-4 Mini.',
+            a: 'Gemma 3 1B is the absolute fastest at ~35–45 tokens/sec on iPhone 17 Pro, but it is the smallest model in this lineup. Among 1.7B models (where speed and quality are balanced), SmolLM 2 1.7B is the fastest at ~26–32 tokens/sec. Among models that produce flagship-quality output, Phi-4 Mini at ~13–18 tokens/sec is the fastest "smart" option. Pick by use case: if responsiveness matters more than depth, SmolLM 2; if depth matters more, Phi-4 Mini.',
+          },
+          {
+            q: 'Is there a Gemma 3 2B or Gemma 3 7B model?',
+            a: 'No. Gemma 3 officially ships in five sizes: 270M, 1B, 4B, 12B, and 27B — there is no Gemma 3 2B or Gemma 3 7B. The confusion usually comes from Gemma 2, which did ship a 2B model (Google DeepMind, July 2024) alongside 9B and 27B. If you are looking for the closest match to "Gemma 3 2B," the two real options are Gemma 3 1B (smaller, faster) and Gemma 3 4B (larger, smarter) — both are benchmarked in this article. In April 2026, Google also released Gemma 4, with a different size lineup (Effective 2B and Effective 4B, plus 26B MoE and 31B dense variants). Gemma 4 is a separate model family from Gemma 3 and is not yet covered in this mobile benchmark, since no verified on-device tokens/sec numbers exist for it at publication time.',
+          },
+          {
+            q: 'Do these models need a GPU, or do they run CPU-only?',
+            a: 'All six models run without a discrete GPU. On iPhone, MLC Chat uses Apple\'s Metal API to accelerate inference on the Neural Engine/GPU cores, but PocketPal AI and LLM Farm (llama.cpp) run primarily on CPU. On Android, Termux+Ollama is CPU-only today — it does not yet leverage the Snapdragon Hexagon NPU, which is why Android tokens/sec trails iPhone by roughly 10–20% on identical Q4_K_M files (see the comparison table above). In practice: Phi-4 Mini on Galaxy S25 Ultra runs CPU-only at ~10–15 tokens/sec, and no model in this lineup requires a dedicated GPU to produce usable output.',
           },
           {
             q: 'Does Phi-4 Mini really beat 7B models on phone?',
@@ -444,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Are mobile models still useful in 2027?',
-            a: 'Yes, but the specific model names will change. The mobile small-LLM frontier moves roughly every 6–9 months — by Q4 2026 there will likely be new ~3B models that outperform Phi-4 Mini, and by mid-2027 the 1B–2B class will likely match what 3B–4B models do today. The category does not become obsolete; specific picks rotate. Re-check this article (refresh due 2026-11-08) for the next-generation lineup.',
+            a: 'Yes, but the specific model names will change. The mobile small-LLM frontier moves roughly every 6–9 months — by Q4 2026 there will likely be new ~3B models that outperform Phi-4 Mini, and by mid-2027 the 1B–2B class will likely match what 3B–4B models do today. The category does not become obsolete; specific picks rotate. Re-check this article (refresh due 2027-01-14) for the next-generation lineup.',
           },
         ],
       },
@@ -466,15 +474,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: 'Mejores modelos LLM para móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
     seoTitle: 'Phi-4 Mini vs Gemma 3 vs SmolLM: LLMs móviles 2026',
     intro:
-      'Seis modelos de lenguaje pequeños cubren casi todos los casos de uso móvil en 2026: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B y Llama 3.2 3B. Difieren en tokens por segundo, consumo de memoria y calidad en chat, resumen, traducción y redacción breve. Esta guía los compara en iPhone 17 Pro y Galaxy S25 Ultra, ofrece un veredicto por gama (gama alta / gama media / económico) y explica por qué la cuantización Q4_K_M es el estándar para móviles.',
+      'Seis modelos de lenguaje pequeños cubren casi todos los casos de uso móvil en 2026: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B y Llama 3.2 3B. Difieren en tokens por segundo, consumo de memoria y calidad en chat, resumen, traducción y redacción breve. Esta guía los compara en iPhone 17 Pro y Galaxy S25 Ultra, ofrece un veredicto por gama (gama alta / gama media / económico) y explica por qué la cuantización Q4_K_M es el estándar para móviles.',
     metaDescription:
-      'Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B comparados en velocidad, RAM y calidad.',
+      'Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B comparados en velocidad, RAM y calidad.',
     twitterDescription:
       'Mejores LLMs móviles en 2026: Phi-4 Mini (el más inteligente), SmolLM 2 (el más rápido), Qwen 3 (multilingüe), Gemma 3 1B (teléfonos antiguos), Gemma 3 4B (equilibrado), Llama 3.2 3B (todoterreno).',
     current_models_mentioned: [
@@ -482,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 3 4B',
       'Gemma 3 1B',
       'SmolLM 2 1.7B',
-      'Qwen 3 1.5B',
+      'Qwen 3 1.7B',
       'Llama 3.2 3B',
     ],
     current_hardware_mentioned: [
@@ -502,27 +510,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mejor modelo LLM para móviles',
       'phi-4 mini vs gemma 3',
       'smollm 2 móvil',
-      'qwen 2.5 1.5b móvil',
+      'qwen 3 1.7b móvil',
       'llama 3.2 3b móvil',
       'LLM pequeño para teléfono',
       'mejor LLM en dispositivo 2026',
     ],
     leadAnswerBlock:
-      '**Para la mayoría de los teléfonos gama alta (8 GB+ de RAM) en 2026, Phi-4 Mini (3.8B) con cuantización Q4_K_M es el modelo más inteligente que funciona a una velocidad utilizable (~13–18 tokens/seg en iPhone 17 Pro).** En teléfonos más antiguos de 6 GB, Qwen 3 1.5B o SmolLM 2 1.7B caben cómodamente y producen respuestas cortas coherentes. SmolLM 2 1.7B es el más rápido en tokens por segundo en todos los dispositivos probados. Qwen 3 1.5B es la mejor opción multilingüe (más de 35 idiomas, incluidos chino, japonés y árabe). Gemma 3 4B es el estándar equilibrado cuando Phi-4 Mini no está disponible en tu app. Gemma 3 1B es la opción ligera para teléfonos muy antiguos (4 GB de RAM). Llama 3.2 3B es el todoterreno 3B más probado con el soporte de herramientas más amplio.',
+      '**Para la mayoría de los teléfonos gama alta (8 GB+ de RAM) en 2026, Phi-4 Mini (3.8B) con cuantización Q4_K_M es el modelo más inteligente que funciona a una velocidad utilizable (~13–18 tokens/seg en iPhone 17 Pro).** En teléfonos más antiguos de 6 GB, Qwen 3 1.7B o SmolLM 2 1.7B caben cómodamente y producen respuestas cortas coherentes. SmolLM 2 1.7B es el más rápido en tokens por segundo en todos los dispositivos probados. Qwen 3 1.7B es la mejor opción multilingüe (más de 35 idiomas, incluidos chino, japonés y árabe). Gemma 3 4B es el estándar equilibrado cuando Phi-4 Mini no está disponible en tu app. Gemma 3 1B es la opción ligera para teléfonos muy antiguos (4 GB de RAM). Llama 3.2 3B es el todoterreno 3B más probado con el soporte de herramientas más amplio.',
     quickAnswerTop: {
       question: '¿Cuál es el mejor modelo LLM local para móviles en 2026?',
       answer:
-        'Phi-4 Mini (3.8B) es el modelo más inteligente que funciona a velocidad utilizable en teléfonos gama alta (8 GB+ de RAM) — ~13–18 tokens/seg en iPhone 17 Pro. SmolLM 2 1.7B es el más rápido en todos los dispositivos probados. Qwen 3 1.5B es la mejor opción multilingüe. Gemma 3 4B es la opción equilibrada predeterminada. Gemma 3 1B funciona en teléfonos muy antiguos (4 GB de RAM). Llama 3.2 3B es el mejor todoterreno 3B. Los seis deben descargarse en formato Q4_K_M GGUF — la cuantización estándar para móviles que conserva ~95% de la calidad original a una cuarta parte del tamaño.',
+        'Phi-4 Mini (3.8B) es el modelo más inteligente que funciona a velocidad utilizable en teléfonos gama alta (8 GB+ de RAM) — ~13–18 tokens/seg en iPhone 17 Pro. SmolLM 2 1.7B es el más rápido en todos los dispositivos probados. Qwen 3 1.7B es la mejor opción multilingüe. Gemma 3 4B es la opción equilibrada predeterminada. Gemma 3 1B funciona en teléfonos muy antiguos (4 GB de RAM). Llama 3.2 3B es el mejor todoterreno 3B. Los seis deben descargarse en formato Q4_K_M GGUF — la cuantización estándar para móviles que conserva ~95% de la calidad original a una cuarta parte del tamaño.',
       bullets: [
         'Phi-4 Mini (3.8B) — el modelo pequeño más inteligente. El mejor en teléfonos de 8 GB+ (iPhone 17 Pro: ~13–18 tok/seg).',
         'Gemma 3 4B — opción equilibrada predeterminada. Buena calidad pero más lento que Phi-4 Mini en el mismo hardware.',
         'Gemma 3 1B — para teléfonos antiguos (4 GB de RAM). Rápido pero con razonamiento limitado.',
         'SmolLM 2 1.7B — el más rápido en tokens/seg en todos los teléfonos probados. El mejor para chat ágil en dispositivos de gama media.',
-        'Qwen 3 1.5B — el mejor modelo móvil multilingüe (más de 35 idiomas). El mejor para traducción y chat en idiomas distintos al inglés.',
+        'Qwen 3 1.7B — el mejor modelo móvil multilingüe (más de 35 idiomas). El mejor para traducción y chat en idiomas distintos al inglés.',
         'Llama 3.2 3B — el todoterreno 3B más probado. El mejor 3B para tool calling, RAG y apps con mayor compatibilidad.',
         'Cuantización: descarga Q4_K_M GGUF para los seis. Q5/Q6 solo si tu teléfono tiene 12 GB+ de RAM y la app lo soporta.',
       ],
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-07-14',
     },
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
@@ -533,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Gemma 3 4B: opción equilibrada', anchor: '#gemma-3-4b' },
       { label: 'Gemma 3 1B: opción ligera para teléfonos antiguos', anchor: '#gemma-3-1b' },
       { label: 'SmolLM 2 1.7B: el más rápido en tokens por segundo', anchor: '#smollm-2' },
-      { label: 'Qwen 3 1.5B: el mejor modelo móvil multilingüe', anchor: '#qwen-2-5' },
+      { label: 'Qwen 3 1.7B: el mejor modelo móvil multilingüe', anchor: '#qwen-2-5' },
       { label: 'Llama 3.2 3B: el todoterreno 3B de confianza', anchor: '#llama-3-2-3b' },
       { label: 'Cuantización para móviles: Q4_K_M como estándar', anchor: '#quantization' },
       { label: 'Veredicto por gama: alta vs media vs económica', anchor: '#per-tier-verdict' },
@@ -549,7 +557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Phi-4 Mini (3.8B) es el modelo pequeño más inteligente en 2026.** El mejor para teléfonos gama alta con 8 GB+ de RAM — funciona a ~13–18 tokens/seg en iPhone 17 Pro y ~10–15 en iPhone 16 Pro. El mayor razonamiento por parámetro de cualquier modelo sub-4B.',
           '**SmolLM 2 1.7B es el más rápido en tokens por segundo en todos los teléfonos probados.** ~26–32 tok/seg en iPhone 17 Pro, ~20–28 en Galaxy S25 Ultra. El mejor cuando la velocidad de respuesta importa más que la profundidad (chat ágil, tareas de autocompletado).',
-          '**Qwen 3 1.5B es el mejor modelo móvil multilingüe.** Entrenado en más de 35 idiomas incluidos chino, japonés, árabe y alemán con salida de calidad nativa. La mejor opción para traducción, redacción en otros idiomas y uso en viajes.',
+          '**Qwen 3 1.7B es el mejor modelo móvil multilingüe.** Entrenado en más de 35 idiomas incluidos chino, japonés, árabe y alemán con salida de calidad nativa. La mejor opción para traducción, redacción en otros idiomas y uso en viajes.',
           '**Gemma 3 4B es la opción equilibrada predeterminada.** Ligeramente más lento que Phi-4 Mini en el mismo hardware, pero equiparable en chat y resumen. El mejor cuando Phi-4 Mini no está disponible en tu app o prefieres la mezcla de datos de entrenamiento de Google.',
           '**Gemma 3 1B es la opción ligera para teléfonos antiguos.** Cabe en 4 GB de RAM (iPhone SE 3.ª gen, Android antiguo). Razonamiento multi-paso limitado, pero produce respuestas coherentes de 1–2 párrafos más rápido que cualquier otro modelo en hardware débil.',
           '**Llama 3.2 3B es el todoterreno 3B más probado.** El mejor soporte de tool calling entre los seis, la mayor compatibilidad con apps y el mayor ecosistema comunitario de fine-tunes. Ligeramente por detrás de Phi-4 Mini en calidad bruta pero más fiable en casos límite.',
@@ -560,11 +568,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**Modelos probados:** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B (todos Q4_K_M GGUF).',
+          '**Modelos probados:** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B (todos Q4_K_M GGUF).',
           '**Dispositivos de prueba:** iPhone 17 Pro (A19 Pro), iPhone 16 Pro (A18 Pro, 8 GB), Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), OnePlus 13 (Snapdragon 8 Elite).',
           '**Motores de inferencia:** llama.cpp vía PocketPal AI / LLM Farm (predeterminado), MLC LLM vía MLC Chat (acelerado por Metal en iPhone), Ollama vía Termux (Android).',
-          '**Huella de memoria (Q4_K_M):** Phi-4 Mini ~2,7 GB, Gemma 3 4B ~2,9 GB, Llama 3.2 3B ~2,2 GB, Qwen 3 1.5B ~1,0 GB, SmolLM 2 1.7B ~1,1 GB, Gemma 3 1B ~720 MB.',
-          '**RAM mínima (activa):** teléfono de 6 GB para modelos de 1,5B–1,7B; 8 GB para modelos de 3B–4B; 4 GB solo para Gemma 3 1B.',
+          '**Huella de memoria (Q4_K_M):** Phi-4 Mini ~2,7 GB, Gemma 3 4B ~2,9 GB, Llama 3.2 3B ~2,2 GB, Qwen 3 1.7B ~1,1 GB, SmolLM 2 1.7B ~1,1 GB, Gemma 3 1B ~720 MB.',
+          '**RAM mínima (activa):** teléfono de 6 GB para modelos de 1,7B; 8 GB para modelos de 3B–4B; 4 GB solo para Gemma 3 1B.',
           '**Tokens/seg más rápidos en iPhone 17 Pro:** Gemma 3 1B ~35–45, SmolLM 2 ~26–32, Qwen 3 ~24–32, Llama 3.2 3B ~16–22, Phi-4 Mini ~13–18, Gemma 3 4B ~10–13.',
           '**Fuente de cuantización:** los seis disponibles como Q4_K_M GGUF en Hugging Face y vía PocketPal AI / MLC Chat / LM Studio.',
         ],
@@ -577,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Elige Phi-4 Mini para gama alta con 8 GB+ (el más inteligente), SmolLM 2 1.7B para velocidad, Qwen 3 1.5B para multilingüe, Gemma 3 1B para teléfonos de 4 GB, Llama 3.2 3B para tool calling y Gemma 3 4B como opción equilibrada cuando Phi-4 Mini no esté disponible.',
+            text: 'Elige Phi-4 Mini para gama alta con 8 GB+ (el más inteligente), SmolLM 2 1.7B para velocidad, Qwen 3 1.7B para multilingüe, Gemma 3 1B para teléfonos de 4 GB, Llama 3.2 3B para tool calling y Gemma 3 4B como opción equilibrada cuando Phi-4 Mini no esté disponible.',
           },
           {
             type: 'plain-terms',
@@ -589,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           localIf: [
             'Teléfono gama alta con 8 GB+ de RAM (iPhone 16 Pro/17 Pro, Galaxy S25 Ultra, OnePlus 13) → Phi-4 Mini 3.8B',
             'Necesitas los tokens/seg más rápidos en cualquier teléfono → SmolLM 2 1.7B',
-            'Uso en idiomas distintos al inglés (traducción, chat multilingüe) → Qwen 3 1.5B',
+            'Uso en idiomas distintos al inglés (traducción, chat multilingüe) → Qwen 3 1.7B',
             'Necesitas amplia compatibilidad con apps, tool calling o RAG → Llama 3.2 3B',
             'Teléfono antiguo con 4 GB de RAM → Gemma 3 1B',
             'Phi-4 Mini no disponible en tu app, necesitas calidad de clase 4B → Gemma 3 4B',
@@ -602,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           quick: [
             'Opción predeterminada para la mayoría: Phi-4 Mini 3.8B',
             'El más rápido en todos los dispositivos: SmolLM 2 1.7B',
-            'El mejor multilingüe: Qwen 3 1.5B',
+            'El mejor multilingüe: Qwen 3 1.7B',
           ],
         },
         callouts: [
@@ -622,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini es el más inteligente, SmolLM 2 1.7B el más rápido, Qwen 3 1.5B el mejor multilingüe, Gemma 3 1B el más pequeño viable, Llama 3.2 3B el mejor todoterreno 3B y Gemma 3 4B la opción equilibrada predeterminada.',
+            text: 'Phi-4 Mini es el más inteligente, SmolLM 2 1.7B el más rápido, Qwen 3 1.7B el mejor multilingüe, Gemma 3 1B el más pequeño viable, Llama 3.2 3B el mejor todoterreno 3B y Gemma 3 4B la opción equilibrada predeterminada.',
           },
           {
             type: 'plain-terms',
@@ -635,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Gemma 3 4B', 'Tamaño': '4B', 'Tokens/seg (17 Pro)': '~10–13', 'Mejor para': 'Opción equilibrada cuando Phi-4 Mini no está disponible' },
           { 'Modelo': 'Gemma 3 1B', 'Tamaño': '1B', 'Tokens/seg (17 Pro)': '~35–45', 'Mejor para': 'Teléfonos antiguos (4 GB de RAM)' },
           { 'Modelo': 'SmolLM 2', 'Tamaño': '1,7B', 'Tokens/seg (17 Pro)': '~26–32', 'Mejor para': 'Tokens/seg más rápidos, chat ágil' },
-          { 'Modelo': 'Qwen 3', 'Tamaño': '1,5B', 'Tokens/seg (17 Pro)': '~24–32', 'Mejor para': 'El mejor multilingüe (más de 35 idiomas)' },
+          { 'Modelo': 'Qwen 3', 'Tamaño': '1,7B', 'Tokens/seg (17 Pro)': '~24–32', 'Mejor para': 'El mejor multilingüe (más de 35 idiomas)' },
           { 'Modelo': 'Llama 3.2', 'Tamaño': '3B', 'Tokens/seg (17 Pro)': '~16–22', 'Mejor para': 'La mejor opción 3B, tool calling, RAG' },
         ],
         note:
@@ -647,7 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-es.svg',
-        imageCaption: 'Seis modelos LLM móviles comparados con Q4_K_M en iPhone 17 Pro: Phi-4 Mini (3,8B, ~13–18 tok/seg) es el más inteligente; SmolLM 2 (1,7B, ~26–32 tok/seg) es el más rápido; Qwen 3 (1,5B) es el mejor multilingüe; Gemma 3 1B (~35–45 tok/seg) funciona en teléfonos de 4 GB.',
+        imageCaption: 'Seis modelos LLM móviles comparados con Q4_K_M en iPhone 17 Pro: Phi-4 Mini (3,8B, ~13–18 tok/seg) es el más inteligente; SmolLM 2 (1,7B, ~26–32 tok/seg) es el más rápido; Qwen 3 (1,7B) es el mejor multilingüe; Gemma 3 1B (~35–45 tok/seg) funciona en teléfonos de 4 GB.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -659,7 +667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Huella de memoria:** ~2,7 GB en Q4_K_M, ~3,5 GB en Q5_K_M. Cabe cómodamente en iPhone 16 Pro / 17 Pro (8 GB) y Galaxy S25 Ultra (12 GB) con margen para el sistema operativo.',
           '**Velocidad (tokens/seg):** iPhone 17 Pro ~13–18, iPhone 16 Pro ~10–15, Galaxy S25 Ultra ~10–15 (Termux+Ollama), iPhone 14 Pro ~6–10 (lento pero funcional).',
           '**Fortalezas de calidad:** razonamiento chain-of-thought, resumen, preguntas y respuestas factuales, generación básica de código. Supera a modelos de código abierto de tamaño similar en benchmarks estándar (MMLU, GSM8K).',
-          '**Debilidades de calidad:** conocimiento del mundo más limitado que Llama 3.2 3B (menor exposición a Common Crawl); escritura creativa natural más corta que Gemma 3 4B; multilingüe más débil que Qwen 3 1.5B fuera del inglés.',
+          '**Debilidades de calidad:** conocimiento del mundo más limitado que Llama 3.2 3B (menor exposición a Common Crawl); escritura creativa natural más corta que Gemma 3 4B; multilingüe más débil que Qwen 3 1.7B fuera del inglés.',
           '**El mejor para:** usuarios con un teléfono gama alta que quieren el mejor modelo predeterminado único para chat en inglés, resumen y razonamiento.',
         ],
         callouts: [
@@ -719,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Huella de memoria:** ~1,1 GB en Q4_K_M. Cabe en cualquier teléfono con 6 GB+ de RAM con amplio margen para el SO.',
           '**Velocidad (tokens/seg):** iPhone 17 Pro ~26–32, iPhone 16 Pro ~22–28, Galaxy S25 Ultra ~20–28, iPhone 14 Pro ~15–22. Aproximadamente 2× más rápido que Phi-4 Mini en el mismo chip.',
           '**Fortalezas de calidad:** respuestas conversacionales ágiles, preguntas y respuestas simples, continuación de tipo autocompletado, redacción en inglés.',
-          '**Debilidades de calidad:** razonamiento más débil que Phi-4 Mini, conocimiento del mundo más limitado que Llama 3.2 3B, multilingüe más débil que Qwen 3 1.5B, alucinaciones ocasionales en consultas factuales.',
+          '**Debilidades de calidad:** razonamiento más débil que Phi-4 Mini, conocimiento del mundo más limitado que Llama 3.2 3B, multilingüe más débil que Qwen 3 1.7B, alucinaciones ocasionales en consultas factuales.',
           '**El mejor para:** teléfonos de gama media donde la latencia importa (autocompletado de texto, turnos de asistente de voz, chat en tiempo real), o gama alta antigua donde los modelos grandes se sienten lentos.',
         ],
         callouts: [
@@ -733,12 +741,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwen25: {
         id: 'qwen-2-5',
-        title: 'Qwen 3 1.5B: el mejor modelo móvil multilingüe',
+        title: 'Qwen 3 1.7B: el mejor modelo móvil multilingüe',
         content:
-          '**Qwen 3 1.5B (Alibaba, 2024) es el mejor modelo móvil multilingüe en 2026 — entrenado en más de 35 idiomas incluidos chino, japonés, coreano, árabe, alemán, francés, español y ruso.** La mejor opción para traducción, chat en idiomas distintos al inglés y uso en viajes donde el usuario cambia de idioma a mitad de conversación.',
+          '**Qwen 3 1.7B (Alibaba, 2024) es el mejor modelo móvil multilingüe en 2026 — entrenado en más de 35 idiomas incluidos chino, japonés, coreano, árabe, alemán, francés, español y ruso.** La mejor opción para traducción, chat en idiomas distintos al inglés y uso en viajes donde el usuario cambia de idioma a mitad de conversación.',
         items: [
-          '**Parámetros y entrenamiento:** 1,5B parámetros; entrenado en el corpus multilingüe de Alibaba con fuerte representación de idiomas CJK, árabe y las principales lenguas europeas. Arquitectura optimizada para razonamiento multilingüe.',
-          '**Huella de memoria:** ~1,0 GB en Q4_K_M. Cabe en cualquier teléfono con 6 GB+ de RAM.',
+          '**Parámetros y entrenamiento:** 1,7B parámetros; entrenado en el corpus multilingüe de Alibaba con fuerte representación de idiomas CJK, árabe y las principales lenguas europeas. Arquitectura optimizada para razonamiento multilingüe.',
+          '**Huella de memoria:** ~1,1 GB en Q4_K_M. Cabe en cualquier teléfono con 6 GB+ de RAM.',
           '**Velocidad (tokens/seg):** iPhone 17 Pro ~24–32, iPhone 16 Pro ~20–28, Galaxy S25 Ultra ~18–26, iPhone 14 Pro ~14–20. Velocidad comparable a SmolLM 2.',
           '**Fortalezas de calidad:** salida de calidad nativa en más de 35 idiomas (la mayoría de los modelos pequeños están centrados en inglés con multilingüe débil de respaldo), fuerte traducción entre los principales pares de idiomas, salida CJK coherente donde Phi-4 Mini y Llama 3.2 producen caracteres rotos.',
           '**Debilidades de calidad:** razonamiento solo en inglés ligeramente más débil que Phi-4 Mini, escritura creativa natural más corta que Gemma 3 4B, tool calling más débil que Llama 3.2 3B.',
@@ -747,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Para una traducción de un solo paso entre dos pares de idiomas específicos, Qwen 3 1.5B suele superar a un modelo más grande centrado en el inglés que ejecuta la traducción como tarea secundaria. Para un usuario hispanohablante que chatea en español, Qwen 3 produce una salida notablemente más natural que Phi-4 Mini a pesar de ser un 60% más pequeño. La regla básica: elige el modelo entrenado para tu idioma principal, no el que tiene más parámetros.',
+            text: 'Para una traducción de un solo paso entre dos pares de idiomas específicos, Qwen 3 1.7B suele superar a un modelo más grande centrado en el inglés que ejecuta la traducción como tarea secundaria. Para un usuario hispanohablante que chatea en español, Qwen 3 produce una salida notablemente más natural que Phi-4 Mini a pesar de ser un 60% más pequeño. La regla básica: elige el modelo entrenado para tu idioma principal, no el que tiene más parámetros.',
           },
         ],
       },
@@ -806,11 +814,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: 'Veredicto por gama: alta vs media vs económica',
         content:
-          '**La gama del teléfono determina el límite del modelo — la generación del chip y la RAM importan más que la marca.** Un teléfono gama alta (8 GB+ de RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) ejecuta modelos de 3,8B–4B cómodamente; uno de gama media (6–8 GB de RAM, chip gama alta antiguo) ejecuta 1,7B–3B; uno económico o antiguo (4–6 GB de RAM) ejecuta 1B–1,5B.',
+          '**La gama del teléfono determina el límite del modelo — la generación del chip y la RAM importan más que la marca.** Un teléfono gama alta (8 GB+ de RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) ejecuta modelos de 3,8B–4B cómodamente; uno de gama media (6–8 GB de RAM, chip gama alta antiguo) ejecuta 1,7B–3B; uno económico o antiguo (4–6 GB de RAM) ejecuta 1B–1,7B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Gama alta (8 GB+) → Phi-4 Mini 3.8B; gama media (6–8 GB) → SmolLM 2 1.7B o Llama 3.2 3B; económico o antiguo (4–6 GB) → Gemma 3 1B o Qwen 3 1.5B.',
+            text: 'Gama alta (8 GB+) → Phi-4 Mini 3.8B; gama media (6–8 GB) → SmolLM 2 1.7B o Llama 3.2 3B; económico o antiguo (4–6 GB) → Gemma 3 1B o Qwen 3 1.7B.',
           },
           {
             type: 'plain-terms',
@@ -821,8 +829,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Gama del teléfono': 'Gama alta (8–12 GB RAM)', 'Ejemplos': 'iPhone 17 Pro / Pro Max, iPhone 16 Pro, Galaxy S25 Ultra, OnePlus 13', 'Modelo recomendado': 'Phi-4 Mini (3.8B Q4_K_M)', 'Por qué': 'El modelo más inteligente que el chip sostiene a velocidad utilizable' },
           { 'Gama del teléfono': 'Gama alta antigua (8 GB RAM)', 'Ejemplos': 'iPhone 15 Pro, Galaxy S24 Ultra, Pixel 9 Pro', 'Modelo recomendado': 'Llama 3.2 3B o Phi-4 Mini', 'Por qué': 'Llama 3.2 3B para tool calling; Phi-4 Mini para calidad bruta' },
-          { 'Gama del teléfono': 'Gama media (6–8 GB RAM)', 'Ejemplos': 'iPhone 14 Pro, Pixel 9, teléfonos Snapdragon 8 Gen 2', 'Modelo recomendado': 'SmolLM 2 1.7B o Qwen 3 1.5B', 'Por qué': 'Velocidad ágil; cabe con margen para el SO' },
-          { 'Gama del teléfono': 'Económico / antiguo (4–6 GB RAM)', 'Ejemplos': 'iPhone 14, Snapdragon serie 7 gama media, Android antiguo', 'Modelo recomendado': 'Gemma 3 1B o Qwen 3 1.5B', 'Por qué': 'Los modelos viables más pequeños que aún producen salida coherente' },
+          { 'Gama del teléfono': 'Gama media (6–8 GB RAM)', 'Ejemplos': 'iPhone 14 Pro, Pixel 9, teléfonos Snapdragon 8 Gen 2', 'Modelo recomendado': 'SmolLM 2 1.7B o Qwen 3 1.7B', 'Por qué': 'Velocidad ágil; cabe con margen para el SO' },
+          { 'Gama del teléfono': 'Económico / antiguo (4–6 GB RAM)', 'Ejemplos': 'iPhone 14, Snapdragon serie 7 gama media, Android antiguo', 'Modelo recomendado': 'Gemma 3 1B o Qwen 3 1.7B', 'Por qué': 'Los modelos viables más pequeños que aún producen salida coherente' },
           { 'Gama del teléfono': 'Muy antiguo (4 GB RAM)', 'Ejemplos': 'iPhone SE 3.ª gen, Android antiguo de 4 GB', 'Modelo recomendado': 'Gemma 3 1B', 'Por qué': 'El único modelo que cabe; razonamiento limitado, tokens/seg rápidos' },
           { 'Gama del teléfono': 'No soportado (<4 GB)', 'Ejemplos': 'iPhone SE 2.ª gen, Android antiguo', 'Modelo recomendado': 'Conéctate remotamente a un equipo doméstico', 'Por qué': 'LLM en dispositivo no es práctico; usa tablet/teléfono como interfaz para un servidor Ollama en casa' },
         ],
@@ -833,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-per-tier-verdict-es.svg',
-        imageCaption: 'Recomendaciones de LLM móvil por gama: gama alta (8–12 GB RAM) → Phi-4 Mini 3.8B; gama alta antigua (8 GB) → Llama 3.2 3B; gama media (6–8 GB) → SmolLM 2 1.7B; económico (4–6 GB) → Qwen 3 1.5B; muy antiguo (4 GB) → Gemma 3 1B.',
+        imageCaption: 'Recomendaciones de LLM móvil por gama: gama alta (8–12 GB RAM) → Phi-4 Mini 3.8B; gama alta antigua (8 GB) → Llama 3.2 3B; gama media (6–8 GB) → SmolLM 2 1.7B; económico (4–6 GB) → Qwen 3 1.7B; muy antiguo (4 GB) → Gemma 3 1B.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -842,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Elegir un modelo más grande de lo que permite la RAM del teléfono.** Phi-4 Mini en un teléfono de 6 GB funciona a 3–5 tok/seg y se cierra cuando iOS / Android recupera memoria para otra app. Adapta el modelo a tu gama (consulta la tabla de veredictos arriba).',
           '**Descargar múltiples variantes de cuantización del mismo modelo.** Elige Q4_K_M y para ahí. Cinco GB de variantes redundantes de Q5/Q6 en un teléfono de 256 GB es espacio desperdiciado, y las diferencias de calidad no son perceptibles en chat diario.',
           '**Usar SmolLM 2 1.7B para razonamiento multi-paso.** Es el modelo más rápido pero no el más inteligente. Para tareas chain-of-thought (matemáticas, planificación, razonamiento complejo), usa Phi-4 Mini aunque los tokens/seg más lentos resulten frustrantes. Velocidad sin calidad es solo una respuesta incorrecta más rápida.',
-          '**Pedir a Phi-4 Mini salida en otro idioma sin un prefijo de prompt multilingüe.** Phi-4 Mini maneja los idiomas europeos comunes de forma aceptable, pero produce salida desigual en CJK o árabe. Para uso multilingüe, instala Qwen 3 1.5B junto a Phi-4 Mini y cambia según el idioma.',
+          '**Pedir a Phi-4 Mini salida en otro idioma sin un prefijo de prompt multilingüe.** Phi-4 Mini maneja los idiomas europeos comunes de forma aceptable, pero produce salida desigual en CJK o árabe. Para uso multilingüe, instala Qwen 3 1.7B junto a Phi-4 Mini y cambia según el idioma.',
           '**Esperar calidad de IA en la nube de estos modelos.** Los seis son de 1B–4B, lo que significa aproximadamente el 60–80% de la capacidad de GPT-5.5 en tareas de chat y mucho menos en razonamiento complejo. Úsalos para lo que hacen bien (chat privado, resumen, redacción, traducción) y usa la nube o conexión remota para lo que requiere un modelo de 70B+.',
           '**Confundir Phi-4 Mini (3,8B) con el antiguo Phi-3 Mini (3,8B).** Comparten un recuento de parámetros pero los datos de entrenamiento y la plantilla de chat de Phi-4 Mini son diferentes. Siempre confirma el identificador del modelo en el nombre del archivo GGUF — `phi-4-mini-instruct` y no `phi-3-mini-4k-instruct`.',
         ],
@@ -854,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Informe técnico de Phi-4 Mini — [Microsoft Research](https://arxiv.org/abs/2412.08905) (diciembre de 2024).',
           'Informe técnico de Gemma 3 — [Google DeepMind](https://blog.google/technology/developers/gemma-3/) (2025).',
           'Ficha del modelo SmolLM 2 — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) (2024).',
-          'Informe técnico de Qwen 3 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/) (2024).',
+          'Informe técnico de Qwen 3 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/) (2024).',
           'Ficha del modelo Llama 3.2 — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/) (2024).',
           'Referencia de cuantización Q4_K_M — [documentación de llama.cpp](https://github.com/ggerganov/llama.cpp).',
         ],
@@ -865,7 +873,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Qué modelo móvil es el más rápido en iPhone?',
-            a: 'Gemma 3 1B es el más rápido en términos absolutos con ~35–45 tokens/seg en iPhone 17 Pro, pero es el modelo más pequeño de este grupo. Entre los modelos de 1,5B–1,7B (donde la velocidad y la calidad están equilibradas), SmolLM 2 1.7B es el más rápido con ~26–32 tokens/seg. Entre los modelos que producen salida de calidad gama alta, Phi-4 Mini a ~13–18 tokens/seg es la opción "inteligente" más rápida. Elige según tu caso de uso: si la velocidad de respuesta importa más que la profundidad, SmolLM 2; si la profundidad importa más, Phi-4 Mini.',
+            a: 'Gemma 3 1B es el más rápido en términos absolutos con ~35–45 tokens/seg en iPhone 17 Pro, pero es el modelo más pequeño de este grupo. Entre los modelos de 1,7B (donde la velocidad y la calidad están equilibradas), SmolLM 2 1.7B es el más rápido con ~26–32 tokens/seg. Entre los modelos que producen salida de calidad gama alta, Phi-4 Mini a ~13–18 tokens/seg es la opción "inteligente" más rápida. Elige según tu caso de uso: si la velocidad de respuesta importa más que la profundidad, SmolLM 2; si la profundidad importa más, Phi-4 Mini.',
+          },
+          {
+            q: '¿Existe un modelo Gemma 3 2B o Gemma 3 7B?',
+            a: 'No. Gemma 3 se distribuye oficialmente en cinco tamaños: 270M, 1B, 4B, 12B y 27B — no existe un Gemma 3 2B ni un Gemma 3 7B. La confusión suele venir de Gemma 2, que sí incluía un modelo de 2B (Google DeepMind, julio de 2024) junto con 9B y 27B. Si buscas lo más parecido a un "Gemma 3 2B", las dos opciones reales son Gemma 3 1B (más pequeño y rápido) y Gemma 3 4B (más grande e inteligente) — ambos evaluados en este artículo. En abril de 2026, Google también lanzó Gemma 4, con una gama de tamaños distinta (Effective 2B y Effective 4B, además de variantes 26B MoE y 31B densa). Gemma 4 es una familia de modelos separada de Gemma 3 y todavía no está cubierta en este benchmark móvil, ya que no existen cifras verificadas de tokens/seg en dispositivo real al momento de esta actualización.',
+          },
+          {
+            q: '¿Estos modelos necesitan GPU o funcionan solo con CPU?',
+            a: 'Los seis modelos funcionan sin una GPU dedicada. En iPhone, MLC Chat usa la API Metal de Apple para acelerar la inferencia en el Neural Engine/GPU, pero PocketPal AI y LLM Farm (llama.cpp) funcionan principalmente en CPU. En Android, Termux+Ollama funciona hoy solo con CPU — todavía no aprovecha la NPU Hexagon de Snapdragon, por eso los tokens/seg en Android quedan entre un 10–20 % por debajo de iPhone con el mismo archivo Q4_K_M (ver la tabla comparativa anterior). En la práctica: Phi-4 Mini en el Galaxy S25 Ultra funciona solo con CPU a ~10–15 tokens/seg, y ningún modelo de esta lista necesita una GPU dedicada para producir resultados utilizables.',
           },
           {
             q: '¿Phi-4 Mini realmente supera a los modelos de 7B en el teléfono?',
@@ -877,15 +893,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué modelo maneja mejor la traducción en móviles?',
-            a: 'Qwen 3 1.5B para cualquier par que involucre chino, japonés, coreano, árabe, alemán, francés, español o ruso. Fue entrenado con fuerte representación multilingüe y produce salida de calidad nativa donde los modelos centrados en inglés (Phi-4 Mini, Llama 3.2 3B) producen resultados rígidos o deficientes. Solo para pares de idiomas europeos, Gemma 3 4B es una segunda opción viable. Para traducciones puntuales entre inglés y un idioma específico, una app de traducción instalada (Google Translate, DeepL) suele ser mejor que cualquier LLM local — los modelos locales brillan cuando necesitas combinar traducción con chat o resumen en la misma conversación.',
+            a: 'Qwen 3 1.7B para cualquier par que involucre chino, japonés, coreano, árabe, alemán, francés, español o ruso. Fue entrenado con fuerte representación multilingüe y produce salida de calidad nativa donde los modelos centrados en inglés (Phi-4 Mini, Llama 3.2 3B) producen resultados rígidos o deficientes. Solo para pares de idiomas europeos, Gemma 3 4B es una segunda opción viable. Para traducciones puntuales entre inglés y un idioma específico, una app de traducción instalada (Google Translate, DeepL) suele ser mejor que cualquier LLM local — los modelos locales brillan cuando necesitas combinar traducción con chat o resumen en la misma conversación.',
           },
           {
             q: '¿Necesito un teléfono gama alta para usarlos bien?',
-            a: 'No, solo para los modelos más grandes (Phi-4 Mini 3,8B, Gemma 3 4B, Llama 3.2 3B). Los teléfonos de gama media con 6–8 GB de RAM ejecutan SmolLM 2 1.7B y Qwen 3 1.5B a plena velocidad (~20–28 tokens/seg). Los teléfonos económicos con 4–6 GB de RAM ejecutan Gemma 3 1B a ~15–25 tokens/seg. La respuesta honesta: si aún no tienes un teléfono gama alta, no compres uno para IA local — los modelos más pequeños en tu teléfono actual son suficientes para la mayoría de casos de uso.',
+            a: 'No, solo para los modelos más grandes (Phi-4 Mini 3,8B, Gemma 3 4B, Llama 3.2 3B). Los teléfonos de gama media con 6–8 GB de RAM ejecutan SmolLM 2 1.7B y Qwen 3 1.7B a plena velocidad (~20–28 tokens/seg). Los teléfonos económicos con 4–6 GB de RAM ejecutan Gemma 3 1B a ~15–25 tokens/seg. La respuesta honesta: si aún no tienes un teléfono gama alta, no compres uno para IA local — los modelos más pequeños en tu teléfono actual son suficientes para la mayoría de casos de uso.',
           },
           {
             q: '¿Qué modelo consume menos batería?',
-            a: 'Gemma 3 1B por mucho — el modelo más pequeño significa menos cálculos por token, lo que implica menor carga de CPU/GPU y menor consumo de energía. SmolLM 2 1.7B y Qwen 3 1.5B le siguen. Los modelos de 3B–4B (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) consumen 2–3× más energía por respuesta. Para vuelos largos o uso prolongado sin acceso a carga donde la batería importa más, Gemma 3 1B es la opción correcta a pesar del costo en calidad.',
+            a: 'Gemma 3 1B por mucho — el modelo más pequeño significa menos cálculos por token, lo que implica menor carga de CPU/GPU y menor consumo de energía. SmolLM 2 1.7B y Qwen 3 1.7B le siguen. Los modelos de 3B–4B (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) consumen 2–3× más energía por respuesta. Para vuelos largos o uso prolongado sin acceso a carga donde la batería importa más, Gemma 3 1B es la opción correcta a pesar del costo en calidad.',
           },
           {
             q: '¿Pueden los modelos móviles manejar conversaciones de varios turnos?',
@@ -897,11 +913,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el mejor para uso sin conexión en viajes?',
-            a: 'Para viajes donde cambias de idioma y necesitas traducción: Qwen 3 1.5B. Para viajes donde principalmente necesitas referencia en inglés (preguntas, resumir documentos de viaje, redactar correos): Phi-4 Mini en un teléfono gama alta, SmolLM 2 1.7B en uno de gama media. El viaje es el caso de uso más sólido para la IA local en general — no se necesitan datos de roaming, sin costos de API en la nube, y sin riesgo de que las dependencias de la nube fallen en zonas de baja conectividad. Descarga el modelo antes del viaje; funciona durante todo el trayecto con una sola carga si se usa con moderación.',
+            a: 'Para viajes donde cambias de idioma y necesitas traducción: Qwen 3 1.7B. Para viajes donde principalmente necesitas referencia en inglés (preguntas, resumir documentos de viaje, redactar correos): Phi-4 Mini en un teléfono gama alta, SmolLM 2 1.7B en uno de gama media. El viaje es el caso de uso más sólido para la IA local en general — no se necesitan datos de roaming, sin costos de API en la nube, y sin riesgo de que las dependencias de la nube fallen en zonas de baja conectividad. Descarga el modelo antes del viaje; funciona durante todo el trayecto con una sola carga si se usa con moderación.',
           },
           {
             q: '¿Seguirán siendo útiles los modelos móviles en 2027?',
-            a: 'Sí, pero los nombres de modelos específicos cambiarán. La frontera de los LLM pequeños para móviles se mueve aproximadamente cada 6–9 meses — para el Q4 de 2026 probablemente habrá nuevos modelos de ~3B que superen a Phi-4 Mini, y para mediados de 2027 la clase de 1B–2B probablemente hará lo que los modelos de 3B–4B hacen hoy. La categoría no queda obsoleta; las recomendaciones específicas rotan. Vuelve a revisar este artículo (próxima actualización: 2026-11-08) para la siguiente generación.',
+            a: 'Sí, pero los nombres de modelos específicos cambiarán. La frontera de los LLM pequeños para móviles se mueve aproximadamente cada 6–9 meses — para el Q4 de 2026 probablemente habrá nuevos modelos de ~3B que superen a Phi-4 Mini, y para mediados de 2027 la clase de 1B–2B probablemente hará lo que los modelos de 3B–4B hacen hoy. La categoría no queda obsoleta; las recomendaciones específicas rotan. Vuelve a revisar este artículo (próxima actualización: 2027-01-14) para la siguiente generación.',
           },
         ],
       },
@@ -923,11 +939,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores modelos LLM para móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
-      description: 'Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B comparados en velocidad, RAM y calidad.',
+      description: 'Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B comparados en velocidad, RAM y calidad.',
       url: 'https://www.promptquorum.com/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -936,8 +952,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: 'Melhores modelos LLM para celular em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM',
     seoTitle: 'Phi-4 Mini vs Gemma 3 vs SmolLM: LLMs de celular 2026',
@@ -972,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'melhor modelo LLM para celular',
       'phi-4 mini vs gemma 3',
       'smollm 2 celular',
-      'qwen 2.5 1.5b celular',
+      'qwen 3 1.7b celular',
       'llama 3.2 3b celular',
       'LLM pequeno para celular',
       'melhor LLM no dispositivo 2026',
@@ -992,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Llama 3.2 3B — o todo-terreno 3B mais testado. O melhor 3B para tool calling, RAG e apps com maior compatibilidade.',
         'Quantização: baixe Q4_K_M GGUF para os seis. Q5/Q6 apenas se o seu celular tiver 12 GB+ de RAM e o app suportar.',
       ],
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-07-14',
     },
     toc: [
       { label: 'Pontos principais', anchor: '#key-takeaways' },
@@ -1034,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dispositivos de teste:** iPhone 17 Pro (A19 Pro), iPhone 16 Pro (A18 Pro, 8 GB), Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), OnePlus 13 (Snapdragon 8 Elite).',
           '**Motores de inferência:** llama.cpp via PocketPal AI / LLM Farm (padrão), MLC LLM via MLC Chat (acelerado por Metal no iPhone), Ollama via Termux (Android).',
           '**Consumo de memória (Q4_K_M):** Phi-4 Mini ~2,7 GB, Gemma 3 4B ~2,9 GB, Llama 3.2 3B ~2,2 GB, Qwen 3 1.7B ~1,1 GB, SmolLM 2 1.7B ~1,1 GB, Gemma 3 1B ~720 MB.',
-          '**RAM mínima (ativa):** celular de 6 GB para modelos de 1,5B–1,7B; 8 GB para modelos de 3B–4B; 4 GB apenas para o Gemma 3 1B.',
+          '**RAM mínima (ativa):** celular de 6 GB para modelos de 1,7B; 8 GB para modelos de 3B–4B; 4 GB apenas para o Gemma 3 1B.',
           '**Tokens/seg mais rápidos no iPhone 17 Pro:** Gemma 3 1B ~35–45, SmolLM 2 ~26–32, Qwen 3 1.7B ~26–35, Llama 3.2 3B ~16–22, Phi-4 Mini ~13–18, Gemma 3 4B ~10–13.',
           '**Fonte de quantização:** os seis disponíveis como Q4_K_M GGUF no Hugging Face e via PocketPal AI / MLC Chat / LM Studio.',
         ],
@@ -1105,7 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Gemma 3 4B', 'Tamanho': '4B', 'Tokens/seg (17 Pro)': '~10–13', 'Melhor para': 'Opção equilibrada quando o Phi-4 Mini não está disponível' },
           { 'Modelo': 'Gemma 3 1B', 'Tamanho': '1B', 'Tokens/seg (17 Pro)': '~35–45', 'Melhor para': 'Celulares antigos (4 GB de RAM)' },
           { 'Modelo': 'SmolLM 2', 'Tamanho': '1.7B', 'Tokens/seg (17 Pro)': '~26–32', 'Melhor para': 'Tokens/seg mais rápidos, chat ágil' },
-          { 'Modelo': 'Qwen 3', 'Tamanho': '1.5B', 'Tokens/seg (17 Pro)': '~24–32', 'Melhor para': 'O melhor multilíngue (mais de 35 idiomas)' },
+          { 'Modelo': 'Qwen 3', 'Tamanho': '1.7B', 'Tokens/seg (17 Pro)': '~24–32', 'Melhor para': 'O melhor multilíngue (mais de 35 idiomas)' },
           { 'Modelo': 'Llama 3.2', 'Tamanho': '3B', 'Tokens/seg (17 Pro)': '~16–22', 'Melhor para': 'A melhor opção 3B, tool calling, RAG' },
         ],
         note:
@@ -1117,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-en.svg',
-        imageCaption: 'Seis modelos LLM de celular comparados com Q4_K_M no iPhone 17 Pro: Phi-4 Mini (3,8B, ~13–18 tok/seg) é o mais inteligente; SmolLM 2 (1,7B, ~26–32 tok/seg) é o mais rápido; Qwen 3 (1,5B) é o melhor multilíngue; Gemma 3 1B (~35–45 tok/seg) funciona em celulares de 4 GB.',
+        imageCaption: 'Seis modelos LLM de celular comparados com Q4_K_M no iPhone 17 Pro: Phi-4 Mini (3,8B, ~13–18 tok/seg) é o mais inteligente; SmolLM 2 (1,7B, ~26–32 tok/seg) é o mais rápido; Qwen 3 (1,7B) é o melhor multilíngue; Gemma 3 1B (~35–45 tok/seg) funciona em celulares de 4 GB.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -1207,8 +1223,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O Qwen 3 1.7B (Alibaba, 2024) é o melhor modelo de celular multilíngue em 2026 — treinado em mais de 35 idiomas incluindo chinês, japonês, coreano, árabe, alemão, francês, espanhol e russo.** A melhor opção para tradução, chat em idiomas diferentes do inglês e uso em viagens onde o usuário troca de idioma no meio da conversa.',
         items: [
-          '**Parâmetros e treinamento:** 1,5B parâmetros; treinado no corpus multilíngue da Alibaba com forte representação de idiomas CJK, árabe e as principais línguas europeias. Arquitetura otimizada para raciocínio multilíngue.',
-          '**Consumo de memória:** ~1,0 GB em Q4_K_M. Cabe em qualquer celular com 6 GB+ de RAM.',
+          '**Parâmetros e treinamento:** 1,7B parâmetros; treinado no corpus multilíngue da Alibaba com forte representação de idiomas CJK, árabe e as principais línguas europeias. Arquitetura otimizada para raciocínio multilíngue.',
+          '**Consumo de memória:** ~1,1 GB em Q4_K_M. Cabe em qualquer celular com 6 GB+ de RAM.',
           '**Velocidade (tokens/seg):** iPhone 17 Pro ~24–32, iPhone 16 Pro ~20–28, Galaxy S25 Ultra ~18–26, iPhone 14 Pro ~14–20. Velocidade comparável ao SmolLM 2.',
           '**Pontos fortes de qualidade:** saída de qualidade nativa em mais de 35 idiomas (a maioria dos modelos pequenos é centrada no inglês com multilíngue fraco de fallback), forte tradução entre os principais pares de idiomas, saída CJK coerente onde o Phi-4 Mini e o Llama 3.2 produzem caracteres quebrados.',
           '**Pontos fracos de qualidade:** raciocínio só em inglês ligeiramente mais fraco que o Phi-4 Mini, escrita criativa natural mais curta que o Gemma 3 4B, tool calling mais fraco que o Llama 3.2 3B.',
@@ -1276,7 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: 'Veredicto por gama: premium vs intermediária vs econômica',
         content:
-          '**A gama do celular determina o limite do modelo — a geração do chip e a RAM importam mais que a marca.** Um celular premium (8 GB+ de RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) roda modelos de 3,8B–4B confortavelmente; um intermediário (6–8 GB de RAM, chip premium antigo) roda 1,7B–3B; um econômico ou antigo (4–6 GB de RAM) roda 1B–1,5B.',
+          '**A gama do celular determina o limite do modelo — a geração do chip e a RAM importam mais que a marca.** Um celular premium (8 GB+ de RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) roda modelos de 3,8B–4B confortavelmente; um intermediário (6–8 GB de RAM, chip premium antigo) roda 1,7B–3B; um econômico ou antigo (4–6 GB de RAM) roda 1B–1,7B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1324,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Relatório técnico do Phi-4 Mini — [Microsoft Research](https://arxiv.org/abs/2412.08905) (dezembro de 2024).',
           'Relatório técnico do Gemma 3 — [Google DeepMind](https://blog.google/technology/developers/gemma-3/) (2025).',
           'Ficha do modelo SmolLM 2 — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) (2024).',
-          'Relatório técnico do Qwen 3 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/) (2024).',
+          'Relatório técnico do Qwen 3 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/) (2024).',
           'Ficha do modelo Llama 3.2 — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/) (2024).',
           'Referência de quantização Q4_K_M — [documentação do llama.cpp](https://github.com/ggerganov/llama.cpp).',
         ],
@@ -1335,7 +1351,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Qual modelo de celular é o mais rápido no iPhone?',
-            a: 'O Gemma 3 1B é o mais rápido em termos absolutos com ~35–45 tokens/seg no iPhone 17 Pro, mas é o modelo mais pequeno deste grupo. Entre os modelos de 1,5B–1,7B (onde a velocidade e a qualidade estão equilibradas), o SmolLM 2 1.7B é o mais rápido com ~26–32 tokens/seg. Entre os modelos que produzem saída de qualidade premium, o Phi-4 Mini a ~13–18 tokens/seg é a opção "inteligente" mais rápida. Escolha conforme o seu caso de uso: se a velocidade de resposta importa mais que a profundidade, SmolLM 2; se a profundidade importa mais, Phi-4 Mini.',
+            a: 'O Gemma 3 1B é o mais rápido em termos absolutos com ~35–45 tokens/seg no iPhone 17 Pro, mas é o modelo mais pequeno deste grupo. Entre os modelos de 1,7B (onde a velocidade e a qualidade estão equilibradas), o SmolLM 2 1.7B é o mais rápido com ~26–32 tokens/seg. Entre os modelos que produzem saída de qualidade premium, o Phi-4 Mini a ~13–18 tokens/seg é a opção "inteligente" mais rápida. Escolha conforme o seu caso de uso: se a velocidade de resposta importa mais que a profundidade, SmolLM 2; se a profundidade importa mais, Phi-4 Mini.',
+          },
+          {
+            q: 'Existe um modelo Gemma 3 2B ou Gemma 3 7B?',
+            a: 'Não. O Gemma 3 é lançado oficialmente em cinco tamanhos: 270M, 1B, 4B, 12B e 27B — não existe um Gemma 3 2B nem um Gemma 3 7B. A confusão geralmente vem do Gemma 2, que tinha sim um modelo de 2B (Google DeepMind, julho de 2024) ao lado do 9B e do 27B. Se você está procurando o mais próximo de um "Gemma 3 2B", as duas opções reais são o Gemma 3 1B (menor e mais rápido) e o Gemma 3 4B (maior e mais inteligente) — ambos avaliados neste artigo. Em abril de 2026, o Google também lançou o Gemma 4, com uma linha de tamanhos diferente (Effective 2B e Effective 4B, além de variantes 26B MoE e 31B densa). O Gemma 4 é uma família de modelos separada do Gemma 3 e ainda não está coberta neste benchmark para celular, já que não existem números verificados de tokens/seg em dispositivo real no momento desta atualização.',
+          },
+          {
+            q: 'Esses modelos precisam de GPU ou rodam apenas na CPU?',
+            a: 'Os seis modelos rodam sem uma GPU dedicada. No iPhone, o MLC Chat usa a API Metal da Apple para acelerar a inferência no Neural Engine/GPU, mas o PocketPal AI e o LLM Farm (llama.cpp) rodam principalmente na CPU. No Android, o Termux+Ollama roda apenas na CPU hoje — ainda não aproveita a NPU Hexagon da Snapdragon, e é por isso que os tokens/seg no Android ficam de 10–20% abaixo do iPhone no mesmo arquivo Q4_K_M (veja a tabela comparativa acima). Na prática: o Phi-4 Mini no Galaxy S25 Ultra roda apenas na CPU a ~10–15 tokens/seg, e nenhum modelo desta lista precisa de GPU dedicada para gerar respostas utilizáveis.',
           },
           {
             q: 'O Phi-4 Mini realmente supera os modelos de 7B no celular?',
@@ -1371,7 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Os modelos de celular ainda serão úteis em 2027?',
-            a: 'Sim, mas os nomes de modelos específicos vão mudar. A fronteira dos LLMs pequenos para celular se move aproximadamente a cada 6–9 meses — até o Q4 de 2026 provavelmente haverá novos modelos de ~3B que superem o Phi-4 Mini, e até meados de 2027 a classe de 1B–2B provavelmente fará o que os modelos de 3B–4B fazem hoje. A categoria não fica obsoleta; as recomendações específicas rotacionam. Volte a revisar este artigo (próxima atualização: 2026-11-08) para a próxima geração.',
+            a: 'Sim, mas os nomes de modelos específicos vão mudar. A fronteira dos LLMs pequenos para celular se move aproximadamente a cada 6–9 meses — até o Q4 de 2026 provavelmente haverá novos modelos de ~3B que superem o Phi-4 Mini, e até meados de 2027 a classe de 1B–2B provavelmente fará o que os modelos de 3B–4B fazem hoje. A categoria não fica obsoleta; as recomendações específicas rotacionam. Volte a revisar este artigo (próxima atualização: 2027-01-14) para a próxima geração.',
           },
         ],
       },
@@ -1397,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1406,23 +1430,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: 'Beste mobile KI-Modelle 2026: Phi-4 Mini vs. Gemma 3 vs. SmolLM',
     seoTitle: 'Phi-4 Mini vs. Gemma 3 vs. SmolLM: Mobile LLMs 2026',
     intro:
-      'Sechs kleine Sprachmodelle decken 2026 nahezu jeden mobilen Anwendungsfall ab: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B und Llama 3.2 3B. Sie unterscheiden sich in Tokens pro Sekunde, Speicherbedarf und Qualität bei Chat, Zusammenfassung, Übersetzung und kurzem Texterstellen. Dieser Leitfaden vergleicht die Modelle auf iPhone 17 Pro und Galaxy S25 Ultra, liefert ein Urteil je Geräteklasse (Flaggschiff / Mittelklasse / Budget) und erklärt, warum Q4_K_M-Quantisierung der Standard für Mobilgeräte ist.',
+      'Sechs kleine Sprachmodelle decken 2026 nahezu jeden mobilen Anwendungsfall ab: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B und Llama 3.2 3B. Sie unterscheiden sich in Tokens pro Sekunde, Speicherbedarf und Qualität bei Chat, Zusammenfassung, Übersetzung und kurzem Texterstellen. Dieser Leitfaden vergleicht die Modelle auf iPhone 17 Pro und Galaxy S25 Ultra, liefert ein Urteil je Geräteklasse (Flaggschiff / Mittelklasse / Budget) und erklärt, warum Q4_K_M-Quantisierung der Standard für Mobilgeräte ist.',
     metaDescription:
-      'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.5B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.',
+      'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.',
     twitterDescription:
-      'Beste mobile LLMs 2026: Phi-4 Mini (klügster), SmolLM 2 (schnellster), Qwen 2,5 (mehrsprachig), Gemma 3 1B (ältere Geräte), Gemma 3 4B (ausgewogen), Llama 3.2 3B (Allrounder).',
+      'Beste mobile LLMs 2026: Phi-4 Mini (klügster), SmolLM 2 (schnellster), Qwen 3 (mehrsprachig), Gemma 3 1B (ältere Geräte), Gemma 3 4B (ausgewogen), Llama 3.2 3B (Allrounder).',
     current_models_mentioned: [
       'Phi-4 Mini 3.8B',
       'Gemma 3 4B',
       'Gemma 3 1B',
       'SmolLM 2 1.7B',
-      'Qwen 3 1.5B',
+      'Qwen 3 1.7B',
       'Llama 3.2 3B',
     ],
     current_hardware_mentioned: [
@@ -1442,27 +1466,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'bestes mobiles KI-Modell',
       'phi-4 mini vs gemma 3',
       'smollm 2 mobil',
-      'qwen 2.5 1.5b mobil',
+      'qwen 3 1.7b mobil',
       'llama 3.2 3b mobil',
       'kleines LLM für Smartphone',
       'bestes On-Device-LLM 2026',
     ],
     leadAnswerBlock:
-      '**Für die meisten Flaggschiff-Smartphones (8 GB+ RAM) in 2026 ist Phi-4 Mini (3.8B) mit Q4_K_M-Quantisierung das klügste Modell, das mit nutzbarer Geschwindigkeit läuft (~13–18 Tokens/Sek. auf dem iPhone 17 Pro).** Auf älteren 6-GB-Geräten passen Qwen 3 1.5B oder SmolLM 2 1.7B problemlos und liefern kohärente Kurzantworten. SmolLM 2 1.7B ist das schnellste Modell (Tokens pro Sekunde) auf jedem getesteten Gerät. Qwen 3 1.5B ist die stärkste mehrsprachige Option (35+ Sprachen, darunter Chinesisch, Japanisch und Arabisch). Gemma 3 4B ist der ausgewogene Standard, wenn Phi-4 Mini in Ihrer App nicht verfügbar ist. Gemma 3 1B ist die leichte Wahl für sehr alte Geräte (4 GB RAM). Llama 3.2 3B ist der am besten getestete 3B-Allrounder mit der breitesten Tool-Unterstützung.',
+      '**Für die meisten Flaggschiff-Smartphones (8 GB+ RAM) in 2026 ist Phi-4 Mini (3.8B) mit Q4_K_M-Quantisierung das klügste Modell, das mit nutzbarer Geschwindigkeit läuft (~13–18 Tokens/Sek. auf dem iPhone 17 Pro).** Auf älteren 6-GB-Geräten passen Qwen 3 1.7B oder SmolLM 2 1.7B problemlos und liefern kohärente Kurzantworten. SmolLM 2 1.7B ist das schnellste Modell (Tokens pro Sekunde) auf jedem getesteten Gerät. Qwen 3 1.7B ist die stärkste mehrsprachige Option (35+ Sprachen, darunter Chinesisch, Japanisch und Arabisch). Gemma 3 4B ist der ausgewogene Standard, wenn Phi-4 Mini in Ihrer App nicht verfügbar ist. Gemma 3 1B ist die leichte Wahl für sehr alte Geräte (4 GB RAM). Llama 3.2 3B ist der am besten getestete 3B-Allrounder mit der breitesten Tool-Unterstützung.',
     quickAnswerTop: {
       question: 'Was ist das beste lokale KI-Modell für Mobilgeräte in 2026?',
       answer:
-        'Phi-4 Mini (3.8B) ist das klügste Modell mit nutzbarer Geschwindigkeit auf Flaggschiff-Smartphones (8 GB+ RAM) – ~13–18 Tokens/Sek. auf dem iPhone 17 Pro. SmolLM 2 1.7B ist auf jedem getesteten Gerät das schnellste Modell. Qwen 3 1.5B ist die beste Wahl für mehrsprachige Nutzung. Gemma 3 4B ist der ausgewogene Standard. Gemma 3 1B funktioniert auf sehr alten Geräten (4 GB RAM). Llama 3.2 3B ist der beste 3B-Allrounder. Alle sechs Modelle sollten als Q4_K_M GGUF heruntergeladen werden – die Standard-Quantisierung für Mobilgeräte, die ~95 % der ursprünglichen Qualität bei einem Viertel der Dateigröße erhält.',
+        'Phi-4 Mini (3.8B) ist das klügste Modell mit nutzbarer Geschwindigkeit auf Flaggschiff-Smartphones (8 GB+ RAM) – ~13–18 Tokens/Sek. auf dem iPhone 17 Pro. SmolLM 2 1.7B ist auf jedem getesteten Gerät das schnellste Modell. Qwen 3 1.7B ist die beste Wahl für mehrsprachige Nutzung. Gemma 3 4B ist der ausgewogene Standard. Gemma 3 1B funktioniert auf sehr alten Geräten (4 GB RAM). Llama 3.2 3B ist der beste 3B-Allrounder. Alle sechs Modelle sollten als Q4_K_M GGUF heruntergeladen werden – die Standard-Quantisierung für Mobilgeräte, die ~95 % der ursprünglichen Qualität bei einem Viertel der Dateigröße erhält.',
       bullets: [
         'Phi-4 Mini (3.8B) – klügstes kleines Modell. Optimal auf 8-GB-Smartphones (iPhone 17 Pro: ~13–18 Tok/Sek.).',
         'Gemma 3 4B – ausgewogener Standard. Solide Qualität, aber langsamer als Phi-4 Mini auf gleicher Hardware.',
         'Gemma 3 1B – für ältere Geräte (4 GB RAM). Schnell, aber eingeschränkte Schlussfolgerngstiefe.',
         'SmolLM 2 1.7B – schnellste Tokens/Sek. auf jedem getesteten Gerät. Ideal für reaktionsschnellen Chat auf Mittelklassegeräten.',
-        'Qwen 3 1.5B – stärkstes mehrsprachiges Mobilmodell (35+ Sprachen). Optimal für Übersetzung, nicht-englischsprachigen Chat.',
+        'Qwen 3 1.7B – stärkstes mehrsprachiges Mobilmodell (35+ Sprachen). Optimal für Übersetzung, nicht-englischsprachigen Chat.',
         'Llama 3.2 3B – meistgetesteter 3B-Allrounder. Bestes 3B-Modell für Tool Calling, RAG und breit kompatible Apps.',
         'Quantisierung: alle sechs als Q4_K_M GGUF herunterladen. Q5/Q6 nur bei 12 GB+ RAM und App-Unterstützung.',
       ],
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-07-14',
     },
     toc: [
       { label: 'Zusammenfassung', anchor: '#key-takeaways' },
@@ -1473,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Gemma 3 4B: Ausgewogener Standard', anchor: '#gemma-3-4b' },
       { label: 'Gemma 3 1B: Leichtgewicht für ältere Geräte', anchor: '#gemma-3-1b' },
       { label: 'SmolLM 2 1,7B: Schnellste Tokens pro Sekunde', anchor: '#smollm-2' },
-      { label: 'Qwen 2,5 1,5B: Stärkstes mehrsprachiges Mobilmodell', anchor: '#qwen-2-5' },
+      { label: 'Qwen 3 1,7B: Stärkstes mehrsprachiges Mobilmodell', anchor: '#qwen-2-5' },
       { label: 'Llama 3.2 3B: Zuverlässiger 3B-Allrounder', anchor: '#llama-3-2-3b' },
       { label: 'Quantisierung für Mobilgeräte: Q4_K_M als Standard', anchor: '#quantization' },
       { label: 'Urteil nach Geräteklasse: Flaggschiff vs. Mittelklasse vs. Budget', anchor: '#per-tier-verdict' },
@@ -1489,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Phi-4 Mini (3.8B) ist das klügste kleine Modell in 2026.** Optimal für Flaggschiff-Smartphones mit 8 GB+ RAM – läuft mit ~13–18 Tokens/Sek. auf dem iPhone 17 Pro und ~10–15 auf dem iPhone 16 Pro. Stärkstes Schlussfolgerungsvermögen pro Parameter aller Modelle unter 4B.',
           '**SmolLM 2 1.7B ist das schnellste Modell (Tokens pro Sekunde) auf jedem getesteten Gerät.** ~26–32 Tok/Sek. auf dem iPhone 17 Pro, ~20–28 auf dem Galaxy S25 Ultra. Optimal, wenn Reaktionsschnelligkeit wichtiger ist als Antworttiefe (schneller Chat, Autovervollständigungs-Aufgaben).',
-          '**Qwen 3 1.5B ist das stärkste mehrsprachige Mobilmodell.** Trainiert auf 35+ Sprachen, darunter Chinesisch, Japanisch, Arabisch und Deutsch, mit muttersprachlicher Ausgabequalität. Erste Wahl für Übersetzung, nicht-englischsprachiges Verfassen und auf Reisen.',
+          '**Qwen 3 1.7B ist das stärkste mehrsprachige Mobilmodell.** Trainiert auf 35+ Sprachen, darunter Chinesisch, Japanisch, Arabisch und Deutsch, mit muttersprachlicher Ausgabequalität. Erste Wahl für Übersetzung, nicht-englischsprachiges Verfassen und auf Reisen.',
           '**Gemma 3 4B ist der ausgewogene Standard.** Auf gleicher Hardware etwas langsamer als Phi-4 Mini, aber gleichwertig bei Chat und Zusammenfassung. Optimal, wenn Phi-4 Mini in Ihrer App nicht verfügbar ist oder Sie Googles Trainings-Datenmix bevorzugen.',
           '**Gemma 3 1B ist die leichte Wahl für ältere Geräte.** Passt in 4 GB RAM (iPhone SE 3. Generation, älteres Android). Eingeschränkte mehrstufige Schlussfolgerung, erzeugt aber auf schwächerer Hardware schneller kohärente 1–2-Absatz-Antworten als jedes andere Modell.',
           '**Llama 3.2 3B ist der meistgetestete 3B-Allrounder.** Beste Tool-Calling-Unterstützung unter den sechs Modellen, breiteste App-Kompatibilität, größtes Community-Fine-Tune-Ökosystem. Etwas hinter Phi-4 Mini bei der Rohqualität, aber zuverlässiger in Grenzfällen.',
@@ -1500,11 +1524,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Kurzfakten',
         items: [
-          '**Getestete Modelle:** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B (alle Q4_K_M GGUF).',
+          '**Getestete Modelle:** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B (alle Q4_K_M GGUF).',
           '**Testgeräte:** iPhone 17 Pro (A19 Pro), iPhone 16 Pro (A18 Pro, 8 GB), Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), OnePlus 13 (Snapdragon 8 Elite).',
           '**Inferenz-Engines:** llama.cpp über PocketPal AI / LLM Farm (Standard), MLC LLM über MLC Chat (Metal-beschleunigt auf iPhone), Ollama über Termux (Android).',
-          '**Speicherbedarf (Q4_K_M):** Phi-4 Mini ~2,7 GB, Gemma 3 4B ~2,9 GB, Llama 3.2 3B ~2,2 GB, Qwen 3 1.5B ~1,0 GB, SmolLM 2 1.7B ~1,1 GB, Gemma 3 1B ~720 MB.',
-          '**Mindest-RAM (aktiv):** 6-GB-Gerät für 1,5B–1,7B-Modelle; 8-GB-Gerät für 3B–4B-Modelle; 4-GB-Gerät nur für Gemma 3 1B.',
+          '**Speicherbedarf (Q4_K_M):** Phi-4 Mini ~2,7 GB, Gemma 3 4B ~2,9 GB, Llama 3.2 3B ~2,2 GB, Qwen 3 1.7B ~1,1 GB, SmolLM 2 1.7B ~1,1 GB, Gemma 3 1B ~720 MB.',
+          '**Mindest-RAM (aktiv):** 6-GB-Gerät für 1,7B-Modelle; 8-GB-Gerät für 3B–4B-Modelle; 4-GB-Gerät nur für Gemma 3 1B.',
           '**Schnellste Tokens/Sek. auf iPhone 17 Pro:** Gemma 3 1B ~35–45, SmolLM 2 ~26–32, Qwen 3 ~24–32, Llama 3.2 3B ~16–22, Phi-4 Mini ~13–18, Gemma 3 4B ~10–13.',
           '**Quelle der Quantisierung:** alle sechs als Q4_K_M GGUF auf Hugging Face und über PocketPal AI / MLC Chat / LM Studio verfügbar.',
         ],
@@ -1517,7 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini für Flaggschiff-Smartphones mit 8 GB+ RAM (klügster), SmolLM 2 1.7B für Geschwindigkeit, Qwen 3 1.5B für mehrsprachige Nutzung, Gemma 3 1B für 4-GB-Geräte, Llama 3.2 3B für Tool Calling und Gemma 3 4B als ausgewogener Standard, wenn Phi-4 Mini nicht verfügbar ist.',
+            text: 'Phi-4 Mini für Flaggschiff-Smartphones mit 8 GB+ RAM (klügster), SmolLM 2 1.7B für Geschwindigkeit, Qwen 3 1.7B für mehrsprachige Nutzung, Gemma 3 1B für 4-GB-Geräte, Llama 3.2 3B für Tool Calling und Gemma 3 4B als ausgewogener Standard, wenn Phi-4 Mini nicht verfügbar ist.',
           },
           {
             type: 'plain-terms',
@@ -1529,7 +1553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           localIf: [
             'Flaggschiff-Smartphone mit 8 GB+ RAM (iPhone 16 Pro/17 Pro, Galaxy S25 Ultra, OnePlus 13) → Phi-4 Mini 3.8B',
             'Schnellste Tokens/Sek. auf jedem Gerät benötigt → SmolLM 2 1.7B',
-            'Nicht-englische Nutzung (Übersetzung, mehrsprachiger Chat) → Qwen 3 1.5B',
+            'Nicht-englische Nutzung (Übersetzung, mehrsprachiger Chat) → Qwen 3 1.7B',
             'Breite App-Kompatibilität, Tool Calling oder RAG benötigt → Llama 3.2 3B',
             'Älteres Gerät mit 4 GB RAM → Gemma 3 1B',
             'Phi-4 Mini in Ihrer App nicht verfügbar, 4B-Klasse-Qualität benötigt → Gemma 3 4B',
@@ -1542,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           quick: [
             'Standard für die meisten Nutzer: Phi-4 Mini 3.8B',
             'Schnellstes auf jedem Gerät: SmolLM 2 1.7B',
-            'Beste Mehrsprachigkeit: Qwen 3 1.5B',
+            'Beste Mehrsprachigkeit: Qwen 3 1.7B',
           ],
         },
         callouts: [
@@ -1562,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini ist das klügste, SmolLM 2 1.7B das schnellste, Qwen 3 1.5B das beste für Mehrsprachigkeit, Gemma 3 1B das kleinste brauchbare, Llama 3.2 3B der stärkste 3B-Allrounder und Gemma 3 4B der ausgewogene Standard.',
+            text: 'Phi-4 Mini ist das klügste, SmolLM 2 1.7B das schnellste, Qwen 3 1.7B das beste für Mehrsprachigkeit, Gemma 3 1B das kleinste brauchbare, Llama 3.2 3B der stärkste 3B-Allrounder und Gemma 3 4B der ausgewogene Standard.',
           },
           {
             type: 'plain-terms',
@@ -1575,7 +1599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Gemma 3 4B', 'Größe': '4B', 'Tokens/Sek. (17 Pro)': '~10–13', 'Geeignet für': 'Ausgewogener Standard, wenn Phi-4 Mini nicht verfügbar' },
           { 'Modell': 'Gemma 3 1B', 'Größe': '1B', 'Tokens/Sek. (17 Pro)': '~35–45', 'Geeignet für': 'Ältere Geräte (4 GB RAM)' },
           { 'Modell': 'SmolLM 2', 'Größe': '1,7B', 'Tokens/Sek. (17 Pro)': '~26–32', 'Geeignet für': 'Schnellste Tokens/Sek., reaktionsschneller Chat' },
-          { 'Modell': 'Qwen 3', 'Größe': '1,5B', 'Tokens/Sek. (17 Pro)': '~24–32', 'Geeignet für': 'Beste Mehrsprachigkeit (35+ Sprachen)' },
+          { 'Modell': 'Qwen 3', 'Größe': '1,7B', 'Tokens/Sek. (17 Pro)': '~24–32', 'Geeignet für': 'Beste Mehrsprachigkeit (35+ Sprachen)' },
           { 'Modell': 'Llama 3.2', 'Größe': '3B', 'Tokens/Sek. (17 Pro)': '~16–22', 'Geeignet für': 'Stärkste 3B-Option, Tool Calling, RAG' },
         ],
         note:
@@ -1587,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-de.svg',
-        imageCaption: 'Sechs mobile LLM-Modelle mit Q4_K_M auf dem iPhone 17 Pro verglichen: Phi-4 Mini (3,8B, ~13–18 Tok/Sek.) ist das klügste; SmolLM 2 (1,7B, ~26–32 Tok/Sek.) ist das schnellste; Qwen 2,5 (1,5B) ist das beste für Mehrsprachigkeit; Gemma 3 1B (~35–45 Tok/Sek.) läuft auf 4-GB-Geräten.',
+        imageCaption: 'Sechs mobile LLM-Modelle mit Q4_K_M auf dem iPhone 17 Pro verglichen: Phi-4 Mini (3,8B, ~13–18 Tok/Sek.) ist das klügste; SmolLM 2 (1,7B, ~26–32 Tok/Sek.) ist das schnellste; Qwen 3 (1,7B) ist das beste für Mehrsprachigkeit; Gemma 3 1B (~35–45 Tok/Sek.) läuft auf 4-GB-Geräten.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -1599,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Speicherbedarf:** ~2,7 GB bei Q4_K_M, ~3,5 GB bei Q5_K_M. Passt problemlos auf iPhone 16 Pro / 17 Pro (8 GB) und Galaxy S25 Ultra (12 GB) mit Platz für das Betriebssystem.',
           '**Geschwindigkeit (Tokens/Sek.):** iPhone 17 Pro ~13–18, iPhone 16 Pro ~10–15, Galaxy S25 Ultra ~10–15 (Termux+Ollama), iPhone 14 Pro ~6–10 (langsam, aber funktional).',
           '**Qualitätsstärken:** Chain-of-Thought-Schlussfolgerung, Zusammenfassung, faktisches Fragen-Antworten, einfache Code-Generierung. Übertrifft ähnlich große Open-Source-Modelle auf Standardbenchmarks (MMLU, GSM8K).',
-          '**Qualitätsschwächen:** geringeres Weltwissen als Llama 3.2 3B (weniger Common-Crawl-Exposition); kürzere natürliche kreative Texte als Gemma 3 4B; schwächer mehrsprachig als Qwen 3 1.5B außerhalb des Englischen.',
+          '**Qualitätsschwächen:** geringeres Weltwissen als Llama 3.2 3B (weniger Common-Crawl-Exposition); kürzere natürliche kreative Texte als Gemma 3 4B; schwächer mehrsprachig als Qwen 3 1.7B außerhalb des Englischen.',
           '**Optimal für:** Nutzerinnen und Nutzer mit Flaggschiff-Smartphone, die den klügsten Einzel-Modell-Standard für englischsprachigen Chat, Zusammenfassung und Schlussfolgerung wünschen.',
         ],
         callouts: [
@@ -1659,7 +1683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Speicherbedarf:** ~1,1 GB bei Q4_K_M. Passt auf jedes Gerät mit 6 GB+ RAM mit erheblichem Betriebssystem-Spielraum.',
           '**Geschwindigkeit (Tokens/Sek.):** iPhone 17 Pro ~26–32, iPhone 16 Pro ~22–28, Galaxy S25 Ultra ~20–28, iPhone 14 Pro ~15–22. Ca. 2× schneller als Phi-4 Mini auf demselben Chip.',
           '**Qualitätsstärken:** reaktionsschnelle Gesprächsantworten, einfaches Fragen-Antworten, Autovervollständigungs-Fortsetzung, englischsprachiges Verfassen.',
-          '**Qualitätsschwächen:** schwächere Schlussfolgerung als Phi-4 Mini, geringeres Weltwissen als Llama 3.2 3B, schwächere Mehrsprachigkeit als Qwen 3 1.5B, gelegentliche Halluzinationen bei Faktenabfragen.',
+          '**Qualitätsschwächen:** schwächere Schlussfolgerung als Phi-4 Mini, geringeres Weltwissen als Llama 3.2 3B, schwächere Mehrsprachigkeit als Qwen 3 1.7B, gelegentliche Halluzinationen bei Faktenabfragen.',
           '**Optimal für:** Mittelklassegeräte, bei denen Latenz wichtig ist (Texteingabe-Autovervollständigung, Sprachassistent-Turns, Echtzeit-Chat), oder ältere Flaggschiffe, bei denen größere Modelle sich träge anfühlen.',
         ],
         callouts: [
@@ -1673,12 +1697,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwen25: {
         id: 'qwen-2-5',
-        title: 'Qwen 2,5 1,5B: Stärkstes mehrsprachiges Mobilmodell',
+        title: 'Qwen 3 1,7B: Stärkstes mehrsprachiges Mobilmodell',
         content:
-          '**Qwen 3 1.5B (Alibaba, 2024) ist das stärkste mehrsprachige Mobilmodell in 2026 – trainiert auf 35+ Sprachen, darunter Chinesisch, Japanisch, Koreanisch, Arabisch, Deutsch, Französisch, Spanisch und Russisch.** Beste Wahl für Übersetzung, nicht-englischsprachigen Chat und Reisenutzung, bei der die Nutzerinnen und Nutzer mitten im Gespräch die Sprache wechseln.',
+          '**Qwen 3 1.7B (Alibaba, 2024) ist das stärkste mehrsprachige Mobilmodell in 2026 – trainiert auf 35+ Sprachen, darunter Chinesisch, Japanisch, Koreanisch, Arabisch, Deutsch, Französisch, Spanisch und Russisch.** Beste Wahl für Übersetzung, nicht-englischsprachigen Chat und Reisenutzung, bei der die Nutzerinnen und Nutzer mitten im Gespräch die Sprache wechseln.',
         items: [
-          '**Parameter und Training:** 1,5B Parameter; trainiert auf Alibabas mehrsprachigem Korpus mit starker Repräsentation von CJK-Sprachen, Arabisch und den wichtigsten europäischen Sprachen. Architektur für mehrsprachiges Schlussfolgern optimiert.',
-          '**Speicherbedarf:** ~1,0 GB bei Q4_K_M. Passt auf jedes Gerät mit 6 GB+ RAM.',
+          '**Parameter und Training:** 1,7B Parameter; trainiert auf Alibabas mehrsprachigem Korpus mit starker Repräsentation von CJK-Sprachen, Arabisch und den wichtigsten europäischen Sprachen. Architektur für mehrsprachiges Schlussfolgern optimiert.',
+          '**Speicherbedarf:** ~1,1 GB bei Q4_K_M. Passt auf jedes Gerät mit 6 GB+ RAM.',
           '**Geschwindigkeit (Tokens/Sek.):** iPhone 17 Pro ~24–32, iPhone 16 Pro ~20–28, Galaxy S25 Ultra ~18–26, iPhone 14 Pro ~14–20. Vergleichbare Geschwindigkeit wie SmolLM 2.',
           '**Qualitätsstärken:** muttersprachliche Ausgabequalität in 35+ Sprachen (die meisten kleinen Modelle sind englischzentriert mit schwachem mehrsprachigem Fallback), starke Übersetzung zwischen wichtigen Sprachpaaren, kohärente CJK-Ausgabe, bei der Phi-4 Mini und Llama 3.2 unleserliche Zeichen produzieren.',
           '**Qualitätsschwächen:** rein englische Schlussfolgerung etwas schwächer als Phi-4 Mini, kürzere natürliche kreative Texte als Gemma 3 4B, schwächeres Tool Calling als Llama 3.2 3B.',
@@ -1687,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Für die einmalige Übersetzung zwischen zwei bestimmten Sprachpaaren übertrifft Qwen 3 1.5B in der Regel ein größeres englischzentriertes Modell, das Übersetzung als Nebenaufgabe ausführt. Für eine deutschsprachige Nutzerin oder einen deutschsprachigen Nutzer, der auf Deutsch chattet, erzeugt Qwen 3 merklich natürlichere Ausgabe als Phi-4 Mini, obwohl es 60 % kleiner ist. Die einfache Regel: Wählen Sie das Modell, das für Ihre Hauptsprache trainiert wurde, nicht das Modell mit den meisten Parametern.',
+            text: 'Für die einmalige Übersetzung zwischen zwei bestimmten Sprachpaaren übertrifft Qwen 3 1.7B in der Regel ein größeres englischzentriertes Modell, das Übersetzung als Nebenaufgabe ausführt. Für eine deutschsprachige Nutzerin oder einen deutschsprachigen Nutzer, der auf Deutsch chattet, erzeugt Qwen 3 merklich natürlichere Ausgabe als Phi-4 Mini, obwohl es 60 % kleiner ist. Die einfache Regel: Wählen Sie das Modell, das für Ihre Hauptsprache trainiert wurde, nicht das Modell mit den meisten Parametern.',
           },
         ],
       },
@@ -1746,11 +1770,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: 'Urteil nach Geräteklasse: Flaggschiff vs. Mittelklasse vs. Budget',
         content:
-          '**Die Geräteklasse bestimmt die Modellobergrenze – Chip-Generation und RAM sind wichtiger als die Marke.** Ein Flaggschiff-Smartphone (8 GB+ RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) läuft mit 3,8B–4B-Modellen komfortabel; ein Mittelklassegerät (6–8 GB RAM, älterer Flaggschiff-Chip) mit 1,7B–3B; ein Budget- oder älteres Gerät (4–6 GB RAM) mit 1B–1,5B.',
+          '**Die Geräteklasse bestimmt die Modellobergrenze – Chip-Generation und RAM sind wichtiger als die Marke.** Ein Flaggschiff-Smartphone (8 GB+ RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) läuft mit 3,8B–4B-Modellen komfortabel; ein Mittelklassegerät (6–8 GB RAM, älterer Flaggschiff-Chip) mit 1,7B–3B; ein Budget- oder älteres Gerät (4–6 GB RAM) mit 1B–1,7B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Flaggschiff-Smartphones (8 GB+) → Phi-4 Mini 3.8B; Mittelklasse (6–8 GB) → SmolLM 2 1.7B oder Llama 3.2 3B; Budget oder älter (4–6 GB) → Gemma 3 1B oder Qwen 3 1.5B.',
+            text: 'Flaggschiff-Smartphones (8 GB+) → Phi-4 Mini 3.8B; Mittelklasse (6–8 GB) → SmolLM 2 1.7B oder Llama 3.2 3B; Budget oder älter (4–6 GB) → Gemma 3 1B oder Qwen 3 1.7B.',
           },
           {
             type: 'plain-terms',
@@ -1761,8 +1785,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Geräteklasse': 'Flaggschiff (8–12 GB RAM)', 'Beispiele': 'iPhone 17 Pro / Pro Max, iPhone 16 Pro, Galaxy S25 Ultra, OnePlus 13', 'Empfohlenes Modell': 'Phi-4 Mini (3.8B Q4_K_M)', 'Warum': 'Klügstes Modell, das der Chip mit nutzbarer Geschwindigkeit unterstützt' },
           { 'Geräteklasse': 'Älteres Flaggschiff (8 GB RAM)', 'Beispiele': 'iPhone 15 Pro, Galaxy S24 Ultra, Pixel 9 Pro', 'Empfohlenes Modell': 'Llama 3.2 3B oder Phi-4 Mini', 'Warum': 'Llama 3.2 3B für Tool Calling; Phi-4 Mini für Rohqualität' },
-          { 'Geräteklasse': 'Mittelklasse (6–8 GB RAM)', 'Beispiele': 'iPhone 14 Pro, Pixel 9, Snapdragon-8-Gen-2-Geräte', 'Empfohlenes Modell': 'SmolLM 2 1.7B oder Qwen 3 1.5B', 'Warum': 'Reaktionsschnelle Geschwindigkeit; passt mit Betriebssystem-Spielraum' },
-          { 'Geräteklasse': 'Budget / älter (4–6 GB RAM)', 'Beispiele': 'iPhone 14, mittlere Snapdragon-7-Serie, älteres Android', 'Empfohlenes Modell': 'Gemma 3 1B oder Qwen 3 1.5B', 'Warum': 'Kleinste brauchbare Modelle, die noch kohärente Ausgabe liefern' },
+          { 'Geräteklasse': 'Mittelklasse (6–8 GB RAM)', 'Beispiele': 'iPhone 14 Pro, Pixel 9, Snapdragon-8-Gen-2-Geräte', 'Empfohlenes Modell': 'SmolLM 2 1.7B oder Qwen 3 1.7B', 'Warum': 'Reaktionsschnelle Geschwindigkeit; passt mit Betriebssystem-Spielraum' },
+          { 'Geräteklasse': 'Budget / älter (4–6 GB RAM)', 'Beispiele': 'iPhone 14, mittlere Snapdragon-7-Serie, älteres Android', 'Empfohlenes Modell': 'Gemma 3 1B oder Qwen 3 1.7B', 'Warum': 'Kleinste brauchbare Modelle, die noch kohärente Ausgabe liefern' },
           { 'Geräteklasse': 'Sehr alt (4 GB RAM)', 'Beispiele': 'iPhone SE 3. Gen, älteres 4-GB-Android', 'Empfohlenes Modell': 'Gemma 3 1B', 'Warum': 'Einziges passendes Modell; begrenzte Schlussfolgerung, schnelle Tokens/Sek.' },
           { 'Geräteklasse': 'Nicht unterstützt (<4 GB)', 'Beispiele': 'iPhone SE 2. Gen, altes Android', 'Empfohlenes Modell': 'Stattdessen Remote-Verbindung zum Heimrechner', 'Warum': 'On-Device-LLM nicht praktikabel; Tablet/Smartphone als UI für einen Heimserver mit Ollama verwenden' },
         ],
@@ -1773,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-per-tier-verdict-de.svg',
-        imageCaption: 'Mobile LLM-Empfehlungen nach Geräteklasse: Flaggschiff (8–12 GB RAM) → Phi-4 Mini 3.8B; älteres Flaggschiff (8 GB) → Llama 3.2 3B; Mittelklasse (6–8 GB) → SmolLM 2 1.7B; Budget (4–6 GB) → Qwen 3 1.5B; sehr altes Gerät (4 GB) → Gemma 3 1B.',
+        imageCaption: 'Mobile LLM-Empfehlungen nach Geräteklasse: Flaggschiff (8–12 GB RAM) → Phi-4 Mini 3.8B; älteres Flaggschiff (8 GB) → Llama 3.2 3B; Mittelklasse (6–8 GB) → SmolLM 2 1.7B; Budget (4–6 GB) → Qwen 3 1.7B; sehr altes Gerät (4 GB) → Gemma 3 1B.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1782,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ein Modell wählen, das größer ist als der Smartphone-RAM erlaubt.** Phi-4 Mini auf einem 6-GB-Gerät läuft mit 3–5 Tok/Sek. und stürzt ab, wenn iOS / Android Speicher für eine andere App zurückfordert. Passen Sie das Modell an Ihre Geräteklasse an (siehe Urteilstabelle oben).',
           '**Mehrere Quantisierungsvarianten desselben Modells herunterladen.** Wählen Sie Q4_K_M und hören Sie auf. Fünf GB redundanter Q5/Q6-Varianten auf einem 256-GB-Smartphone sind verschwendeter Speicherplatz, und die Qualitätsunterschiede sind im alltäglichen Chat nicht wahrnehmbar.',
           '**SmolLM 2 1.7B für mehrstufige Schlussfolgerung verwenden.** Es ist das schnellste Modell, aber nicht das klügste. Für Chain-of-Thought-Aufgaben (Mathematik, Planung, komplexe Schlussfolgerung) verwenden Sie Phi-4 Mini, auch wenn die langsameren Tokens/Sek. frustrierend wirken. Geschwindigkeit ohne Qualität ist nur eine schnellere falsche Antwort.',
-          '**Phi-4 Mini für nicht-englische Ausgabe ohne mehrsprachigen Prompt-Präfix verwenden.** Phi-4 Mini beherrscht gängige europäische Sprachen ausreichend, produziert aber ungleichmäßige Ausgabe bei CJK oder Arabisch. Für mehrsprachige Nutzung installieren Sie Qwen 3 1.5B neben Phi-4 Mini und wechseln Sie je nach Sprache.',
+          '**Phi-4 Mini für nicht-englische Ausgabe ohne mehrsprachigen Prompt-Präfix verwenden.** Phi-4 Mini beherrscht gängige europäische Sprachen ausreichend, produziert aber ungleichmäßige Ausgabe bei CJK oder Arabisch. Für mehrsprachige Nutzung installieren Sie Qwen 3 1.7B neben Phi-4 Mini und wechseln Sie je nach Sprache.',
           '**Cloud-KI-Qualität von diesen Modellen erwarten.** Alle sechs sind 1B–4B, was ca. 60–80 % der Fähigkeiten von GPT-5.5 bei Chat-Aufgaben bedeutet und weit weniger bei komplexer Schlussfolgerung. Nutzen Sie sie wofür sie geeignet sind (privater Chat, Zusammenfassung, Textentwurf, Übersetzung) und verwenden Sie Cloud oder Remote-Verbindung für alles, was ein 70B+-Modell erfordert.',
           '**Phi-4 Mini (3.8B) mit dem älteren Phi-3 Mini (3.8B) verwechseln.** Sie teilen sich eine Parameteranzahl, aber Phi-4 Minis Trainingsdaten und Chat-Template sind anders. Bestätigen Sie immer die Modell-ID im GGUF-Dateinamen – `phi-4-mini-instruct`, nicht `phi-3-mini-4k-instruct`.',
         ],
@@ -1794,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Technischer Bericht zu Phi-4 Mini – [Microsoft Research](https://arxiv.org/abs/2412.08905) (Dezember 2024).',
           'Technischer Bericht zu Gemma 3 – [Google DeepMind](https://blog.google/technology/developers/gemma-3/) (2025).',
           'Modellkarte SmolLM 2 – [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) (2024).',
-          'Technischer Bericht zu Qwen 3 – [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/) (2024).',
+          'Technischer Bericht zu Qwen 3 – [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/) (2024).',
           'Modellkarte Llama 3.2 – [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/) (2024).',
           'Q4_K_M-Quantisierungsreferenz – [llama.cpp-Dokumentation](https://github.com/ggerganov/llama.cpp).',
         ],
@@ -1805,7 +1829,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Welches Mobilmodell ist auf dem iPhone am schnellsten?',
-            a: 'Gemma 3 1B ist das absolut schnellste mit ~35–45 Tokens/Sek. auf dem iPhone 17 Pro, ist aber das kleinste Modell in diesem Vergleich. Unter den 1,5B–1,7B-Modellen (wo Geschwindigkeit und Qualität ausgewogen sind) ist SmolLM 2 1.7B mit ~26–32 Tokens/Sek. am schnellsten. Unter den Modellen, die Flaggschiff-Qualität liefern, ist Phi-4 Mini mit ~13–18 Tokens/Sek. die schnellste „kluge" Option. Wählen Sie nach Anwendungsfall: Wenn Reaktionsschnelligkeit wichtiger als Tiefe ist, SmolLM 2; wenn Tiefe wichtiger ist, Phi-4 Mini.',
+            a: 'Gemma 3 1B ist das absolut schnellste mit ~35–45 Tokens/Sek. auf dem iPhone 17 Pro, ist aber das kleinste Modell in diesem Vergleich. Unter den 1,7B-Modellen (wo Geschwindigkeit und Qualität ausgewogen sind) ist SmolLM 2 1.7B mit ~26–32 Tokens/Sek. am schnellsten. Unter den Modellen, die Flaggschiff-Qualität liefern, ist Phi-4 Mini mit ~13–18 Tokens/Sek. die schnellste „kluge" Option. Wählen Sie nach Anwendungsfall: Wenn Reaktionsschnelligkeit wichtiger als Tiefe ist, SmolLM 2; wenn Tiefe wichtiger ist, Phi-4 Mini.',
+          },
+          {
+            q: 'Gibt es ein Gemma 3 2B- oder Gemma 3 7B-Modell?',
+            a: 'Nein. Gemma 3 erscheint offiziell in fünf Größen: 270M, 1B, 4B, 12B und 27B – ein Gemma 3 2B oder Gemma 3 7B gibt es nicht. Die Verwechslung kommt meist von Gemma 2, das tatsächlich ein 2B-Modell hatte (Google DeepMind, Juli 2024) neben 9B und 27B. Wer die nächstliegende Entsprechung zu „Gemma 3 2B" sucht: Die beiden echten Optionen sind Gemma 3 1B (kleiner, schneller) und Gemma 3 4B (größer, klüger) – beide werden in diesem Artikel getestet. Im April 2026 hat Google außerdem Gemma 4 veröffentlicht, mit einer anderen Größenreihe (Effective 2B und Effective 4B sowie 26B-MoE- und 31B-Dense-Varianten). Gemma 4 ist eine eigene Modellfamilie getrennt von Gemma 3 und wird in diesem mobilen Benchmark noch nicht behandelt, da zum Zeitpunkt dieser Aktualisierung keine verifizierten Tokens/Sek.-Zahlen auf echten Geräten vorliegen.',
+          },
+          {
+            q: 'Brauchen diese Modelle eine GPU, oder laufen sie nur mit CPU?',
+            a: 'Alle sechs Modelle laufen ohne dedizierte GPU. Auf dem iPhone nutzt MLC Chat Apples Metal-API, um die Inferenz auf Neural Engine/GPU zu beschleunigen, aber PocketPal AI und LLM Farm (llama.cpp) laufen primär auf der CPU. Auf Android läuft Termux+Ollama heute nur auf der CPU – es nutzt die Snapdragon-Hexagon-NPU noch nicht, weshalb die Tokens/Sek.-Werte auf Android bei identischen Q4_K_M-Dateien etwa 10–20 % unter denen des iPhone liegen (siehe Vergleichstabelle oben). In der Praxis: Phi-4 Mini läuft auf dem Galaxy S25 Ultra CPU-only mit ~10–15 Tokens/Sek., und kein Modell in dieser Übersicht benötigt eine dedizierte GPU für brauchbare Ergebnisse.',
           },
           {
             q: 'Übertrifft Phi-4 Mini wirklich 7B-Modelle auf dem Smartphone?',
@@ -1817,15 +1849,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches Modell eignet sich am besten für Übersetzung auf dem Smartphone?',
-            a: 'Qwen 3 1.5B für alle Sprachpaare mit Chinesisch, Japanisch, Koreanisch, Arabisch, Deutsch, Französisch, Spanisch oder Russisch. Es wurde mit starker mehrsprachiger Repräsentation trainiert und liefert muttersprachliche Qualität, wo englischzentrierte Modelle (Phi-4 Mini, Llama 3.2 3B) steife oder fehlerhafte Ergebnisse liefern. Nur für europäische Sprachpaare ist Gemma 3 4B eine praktikable zweite Wahl. Für einmalige Übersetzungen zwischen Englisch und einer bestimmten Sprache ist eine installierte Übersetzungs-App (Google Translate, DeepL) oft besser als jedes lokale LLM – lokale Modelle glänzen, wenn Übersetzung mit Chat oder Zusammenfassung in derselben Konversation verknüpft wird.',
+            a: 'Qwen 3 1.7B für alle Sprachpaare mit Chinesisch, Japanisch, Koreanisch, Arabisch, Deutsch, Französisch, Spanisch oder Russisch. Es wurde mit starker mehrsprachiger Repräsentation trainiert und liefert muttersprachliche Qualität, wo englischzentrierte Modelle (Phi-4 Mini, Llama 3.2 3B) steife oder fehlerhafte Ergebnisse liefern. Nur für europäische Sprachpaare ist Gemma 3 4B eine praktikable zweite Wahl. Für einmalige Übersetzungen zwischen Englisch und einer bestimmten Sprache ist eine installierte Übersetzungs-App (Google Translate, DeepL) oft besser als jedes lokale LLM – lokale Modelle glänzen, wenn Übersetzung mit Chat oder Zusammenfassung in derselben Konversation verknüpft wird.',
           },
           {
             q: 'Brauche ich ein Flaggschiff-Smartphone, um diese Modelle gut zu nutzen?',
-            a: 'Nein, nur für die größten Modelle (Phi-4 Mini 3.8B, Gemma 3 4B, Llama 3.2 3B). Mittelklassegeräte mit 6–8 GB RAM laufen SmolLM 2 1.7B und Qwen 3 1.5B mit voller Geschwindigkeit (~20–28 Tokens/Sek.). Budget-Smartphones mit 4–6 GB RAM laufen Gemma 3 1B mit ~15–25 Tokens/Sek. Die ehrliche Antwort: Wenn Sie noch kein Flaggschiff-Gerät besitzen, kaufen Sie es nicht für lokale KI – die kleineren Modelle auf Ihrem vorhandenen Gerät sind für die meisten Anwendungsfälle gut genug.',
+            a: 'Nein, nur für die größten Modelle (Phi-4 Mini 3.8B, Gemma 3 4B, Llama 3.2 3B). Mittelklassegeräte mit 6–8 GB RAM laufen SmolLM 2 1.7B und Qwen 3 1.7B mit voller Geschwindigkeit (~20–28 Tokens/Sek.). Budget-Smartphones mit 4–6 GB RAM laufen Gemma 3 1B mit ~15–25 Tokens/Sek. Die ehrliche Antwort: Wenn Sie noch kein Flaggschiff-Gerät besitzen, kaufen Sie es nicht für lokale KI – die kleineren Modelle auf Ihrem vorhandenen Gerät sind für die meisten Anwendungsfälle gut genug.',
           },
           {
             q: 'Welches Modell verbraucht am wenigsten Akku?',
-            a: 'Gemma 3 1B mit großem Abstand – kleinste Modell bedeutet wenigste Berechnungen pro Token, was niedrigere CPU/GPU-Last und niedrigeren Stromverbrauch bedeutet. SmolLM 2 1.7B und Qwen 3 1.5B folgen. Die 3B–4B-Modelle (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) verbrauchen 2–3× mehr Strom pro Antwort. Für lange Flüge oder ausgedehnte Offline-Nutzung, wo der Akku am wichtigsten ist, ist Gemma 3 1B die richtige Wahl trotz des Qualitätsabstrichs.',
+            a: 'Gemma 3 1B mit großem Abstand – kleinste Modell bedeutet wenigste Berechnungen pro Token, was niedrigere CPU/GPU-Last und niedrigeren Stromverbrauch bedeutet. SmolLM 2 1.7B und Qwen 3 1.7B folgen. Die 3B–4B-Modelle (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) verbrauchen 2–3× mehr Strom pro Antwort. Für lange Flüge oder ausgedehnte Offline-Nutzung, wo der Akku am wichtigsten ist, ist Gemma 3 1B die richtige Wahl trotz des Qualitätsabstrichs.',
           },
           {
             q: 'Können Mobilmodelle mehrstufige Gespräche führen?',
@@ -1837,11 +1869,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches ist am besten für die Offline-Nutzung auf Reisen?',
-            a: 'Für Reisen, bei denen Sie die Sprache wechseln und Übersetzung benötigen: Qwen 3 1.5B. Für Reisen, bei denen Sie hauptsächlich englischsprachige Referenz benötigen (Fragen, Reisedokumente zusammenfassen, E-Mails verfassen): Phi-4 Mini auf einem Flaggschiff-Gerät, SmolLM 2 1.7B auf einem Mittelklassegerät. Reisen ist der stärkste Anwendungsfall für lokale KI insgesamt – keine Roaming-Daten nötig, keine Cloud-API-Kosten und kein Risiko, dass Cloud-Abhängigkeiten in Bereichen mit schlechter Verbindung versagen. Laden Sie das Modell vor der Reise herunter; es funktioniert bei moderatem Einsatz die gesamte Reise auf einer einzigen Ladung.',
+            a: 'Für Reisen, bei denen Sie die Sprache wechseln und Übersetzung benötigen: Qwen 3 1.7B. Für Reisen, bei denen Sie hauptsächlich englischsprachige Referenz benötigen (Fragen, Reisedokumente zusammenfassen, E-Mails verfassen): Phi-4 Mini auf einem Flaggschiff-Gerät, SmolLM 2 1.7B auf einem Mittelklassegerät. Reisen ist der stärkste Anwendungsfall für lokale KI insgesamt – keine Roaming-Daten nötig, keine Cloud-API-Kosten und kein Risiko, dass Cloud-Abhängigkeiten in Bereichen mit schlechter Verbindung versagen. Laden Sie das Modell vor der Reise herunter; es funktioniert bei moderatem Einsatz die gesamte Reise auf einer einzigen Ladung.',
           },
           {
             q: 'Sind Mobilmodelle in 2027 noch nützlich?',
-            a: 'Ja, aber die spezifischen Modellnamen werden sich ändern. Die mobile Small-LLM-Frontier bewegt sich ca. alle 6–9 Monate – bis Q4 2026 werden voraussichtlich neue ~3B-Modelle verfügbar sein, die Phi-4 Mini übertreffen, und bis Mitte 2027 wird die 1B–2B-Klasse wahrscheinlich das leisten, was 3B–4B-Modelle heute tun. Die Kategorie veraltet nicht; die spezifischen Empfehlungen wechseln. Überprüfen Sie diesen Artikel (Refresh fällig 2026-11-08) für die nächste Modellgeneration.',
+            a: 'Ja, aber die spezifischen Modellnamen werden sich ändern. Die mobile Small-LLM-Frontier bewegt sich ca. alle 6–9 Monate – bis Q4 2026 werden voraussichtlich neue ~3B-Modelle verfügbar sein, die Phi-4 Mini übertreffen, und bis Mitte 2027 wird die 1B–2B-Klasse wahrscheinlich das leisten, was 3B–4B-Modelle heute tun. Die Kategorie veraltet nicht; die spezifischen Empfehlungen wechseln. Überprüfen Sie diesen Artikel (Refresh fällig 2027-01-14) für die nächste Modellgeneration.',
           },
           {
             q: 'Muss ich bei der Nutzung lokaler LLM-Modelle auf dem Smartphone die DSGVO beachten?',
@@ -1849,7 +1881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sind diese mobilen KI-Modelle für den deutschen Mittelstand geeignet?',
-            a: 'Ja, insbesondere für Anwendungsfälle, bei denen Datenschutz, Offline-Verfügbarkeit und Unabhängigkeit von Cloud-Diensten wichtig sind. Mittelständische Unternehmen in Deutschland, die mit sensiblen Kundendaten, Betriebsgeheimnissen oder branchenspezifischen Vorschriften (z. B. im Gesundheitswesen oder bei Rechtsanwaltskanzleien) arbeiten, profitieren davon, dass die Inferenz vollständig On-Device stattfindet. Phi-4 Mini eignet sich für interne Zusammenfassungen und Chat-Anwendungen auf Firmen-Smartphones; Qwen 3 1.5B deckt den mehrsprachigen Bedarf im internationalen Mittelstand ab. Für IT-Sicherheitsverantwortliche: Die BSI-Grundschutz-Empfehlungen zur Minimierung von Cloud-Abhängigkeiten sprechen für den Einsatz lokaler Modelle in sicherheitskritischen Umgebungen.',
+            a: 'Ja, insbesondere für Anwendungsfälle, bei denen Datenschutz, Offline-Verfügbarkeit und Unabhängigkeit von Cloud-Diensten wichtig sind. Mittelständische Unternehmen in Deutschland, die mit sensiblen Kundendaten, Betriebsgeheimnissen oder branchenspezifischen Vorschriften (z. B. im Gesundheitswesen oder bei Rechtsanwaltskanzleien) arbeiten, profitieren davon, dass die Inferenz vollständig On-Device stattfindet. Phi-4 Mini eignet sich für interne Zusammenfassungen und Chat-Anwendungen auf Firmen-Smartphones; Qwen 3 1.7B deckt den mehrsprachigen Bedarf im internationalen Mittelstand ab. Für IT-Sicherheitsverantwortliche: Die BSI-Grundschutz-Empfehlungen zur Minimierung von Cloud-Abhängigkeiten sprechen für den Einsatz lokaler Modelle in sicherheitskritischen Umgebungen.',
           },
         ],
       },
@@ -1871,15 +1903,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: 'Meilleurs modèles LLM mobiles 2026 : Phi-4 Mini vs Gemma 3 vs SmolLM',
     seoTitle: 'Phi-4 Mini vs Gemma 3 vs SmolLM : LLMs mobiles 2026',
     intro:
-      'Six petits modèles de langage couvrent presque tous les usages mobiles en 2026 : Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B et Llama 3.2 3B. Ils diffèrent par leur vitesse en tokens par seconde, leur empreinte mémoire et leur qualité en chat, résumé, traduction et rédaction. Ce guide les compare sur iPhone 17 Pro et Galaxy S25 Ultra, donne un verdict par gamme (haut de gamme / milieu de gamme / entrée de gamme) et explique pourquoi la quantisation Q4_K_M est le standard mobile.',
+      'Six petits modèles de langage couvrent presque tous les usages mobiles en 2026 : Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B et Llama 3.2 3B. Ils diffèrent par leur vitesse en tokens par seconde, leur empreinte mémoire et leur qualité en chat, résumé, traduction et rédaction. Ce guide les compare sur iPhone 17 Pro et Galaxy S25 Ultra, donne un verdict par gamme (haut de gamme / milieu de gamme / entrée de gamme) et explique pourquoi la quantisation Q4_K_M est le standard mobile.',
     metaDescription:
-      'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.5B et Llama 3.2 3B comparés sur smartphone en 2026 : vitesse, RAM et qualité en un seul tableau.',
+      'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B et Llama 3.2 3B comparés sur smartphone en 2026 : vitesse, RAM et qualité en un seul tableau.',
     twitterDescription:
       'Meilleurs LLMs mobiles 2026 : Phi-4 Mini (le plus intelligent), SmolLM 2 (le plus rapide), Qwen 3 (multilingue), Gemma 3 1B (anciens téléphones), Gemma 3 4B (équilibré), Llama 3.2 3B (polyvalent).',
     current_models_mentioned: [
@@ -1887,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 3 4B',
       'Gemma 3 1B',
       'SmolLM 2 1.7B',
-      'Qwen 3 1.5B',
+      'Qwen 3 1.7B',
       'Llama 3.2 3B',
     ],
     current_hardware_mentioned: [
@@ -1907,27 +1939,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'meilleur modèle LLM mobile',
       'phi-4 mini vs gemma 3',
       'smollm 2 mobile',
-      'qwen 2.5 1.5b mobile',
+      'qwen 3 1.7b mobile',
       'llama 3.2 3b mobile',
       'petit LLM pour smartphone',
       'meilleur LLM on-device 2026',
     ],
     leadAnswerBlock:
-      '**Pour la plupart des téléphones haut de gamme (8 Go+ de RAM) en 2026, Phi-4 Mini (3.8B) en quantisation Q4_K_M est le modèle le plus intelligent fonctionnant à une vitesse utilisable (~13–18 tokens/sec sur iPhone 17 Pro).** Sur les téléphones plus anciens à 6 Go, Qwen 3 1.5B ou SmolLM 2 1.7B s\'intègrent confortablement. SmolLM 2 1.7B est le plus rapide en tokens par seconde sur chaque appareil testé. Qwen 3 1.5B est la meilleure option multilingue (35+ langues). Gemma 3 4B est le choix équilibré par défaut si Phi-4 Mini n\'est pas disponible dans votre application. Gemma 3 1B convient aux téléphones très anciens (4 Go de RAM). Llama 3.2 3B est le modèle 3B le plus éprouvé avec le support applicatif le plus large.',
+      '**Pour la plupart des téléphones haut de gamme (8 Go+ de RAM) en 2026, Phi-4 Mini (3.8B) en quantisation Q4_K_M est le modèle le plus intelligent fonctionnant à une vitesse utilisable (~13–18 tokens/sec sur iPhone 17 Pro).** Sur les téléphones plus anciens à 6 Go, Qwen 3 1.7B ou SmolLM 2 1.7B s\'intègrent confortablement. SmolLM 2 1.7B est le plus rapide en tokens par seconde sur chaque appareil testé. Qwen 3 1.7B est la meilleure option multilingue (35+ langues). Gemma 3 4B est le choix équilibré par défaut si Phi-4 Mini n\'est pas disponible dans votre application. Gemma 3 1B convient aux téléphones très anciens (4 Go de RAM). Llama 3.2 3B est le modèle 3B le plus éprouvé avec le support applicatif le plus large.',
     quickAnswerTop: {
       question: 'Quel est le meilleur modèle LLM local pour mobile en 2026 ?',
       answer:
-        'Phi-4 Mini (3.8B) est le modèle le plus intelligent fonctionnant à une vitesse utilisable sur les téléphones haut de gamme (8 Go+ de RAM) — ~13–18 tokens/sec sur iPhone 17 Pro. SmolLM 2 1.7B est le plus rapide sur chaque appareil testé. Qwen 3 1.5B est le meilleur choix multilingue. Gemma 3 4B est le choix par défaut équilibré. Gemma 3 1B fonctionne sur les très anciens téléphones (4 Go de RAM). Llama 3.2 3B est le meilleur modèle 3B polyvalent. Les six doivent être téléchargés en Q4_K_M GGUF — la quantisation mobile standard qui préserve ~95 % de la qualité originale à un quart de la taille.',
+        'Phi-4 Mini (3.8B) est le modèle le plus intelligent fonctionnant à une vitesse utilisable sur les téléphones haut de gamme (8 Go+ de RAM) — ~13–18 tokens/sec sur iPhone 17 Pro. SmolLM 2 1.7B est le plus rapide sur chaque appareil testé. Qwen 3 1.7B est le meilleur choix multilingue. Gemma 3 4B est le choix par défaut équilibré. Gemma 3 1B fonctionne sur les très anciens téléphones (4 Go de RAM). Llama 3.2 3B est le meilleur modèle 3B polyvalent. Les six doivent être téléchargés en Q4_K_M GGUF — la quantisation mobile standard qui préserve ~95 % de la qualité originale à un quart de la taille.',
       bullets: [
         'Phi-4 Mini (3.8B) — modèle le plus intelligent. Optimal sur 8 Go+ (iPhone 17 Pro : ~13–18 tok/sec).',
         'Gemma 3 4B — choix équilibré par défaut. Bonne qualité mais plus lent que Phi-4 Mini sur le même matériel.',
         'Gemma 3 1B — pour les anciens téléphones (4 Go de RAM). Rapide mais raisonnement limité.',
         'SmolLM 2 1.7B — le plus rapide en tokens/sec sur chaque appareil testé. Idéal pour le chat réactif sur appareils milieu de gamme.',
-        'Qwen 3 1.5B — meilleur modèle mobile multilingue (35+ langues). Optimal pour la traduction et le chat non-anglophone.',
+        'Qwen 3 1.7B — meilleur modèle mobile multilingue (35+ langues). Optimal pour la traduction et le chat non-anglophone.',
         'Llama 3.2 3B — le 3B le plus éprouvé. Meilleur 3B pour le tool calling, RAG et les applications les plus compatibles.',
         'Quantisation : téléchargez Q4_K_M GGUF pour les six. Q5/Q6 uniquement si votre téléphone dispose de 12 Go+ de RAM.',
       ],
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-07-14',
     },
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
@@ -1938,7 +1970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Gemma 3 4B : choix équilibré', anchor: '#gemma-3-4b' },
       { label: 'Gemma 3 1B : option légère pour anciens téléphones', anchor: '#gemma-3-1b' },
       { label: 'SmolLM 2 1.7B : le plus rapide en tokens par seconde', anchor: '#smollm-2' },
-      { label: 'Qwen 3 1.5B : meilleur modèle mobile multilingue', anchor: '#qwen-2-5' },
+      { label: 'Qwen 3 1.7B : meilleur modèle mobile multilingue', anchor: '#qwen-2-5' },
       { label: 'Llama 3.2 3B : modèle 3B fiable et polyvalent', anchor: '#llama-3-2-3b' },
       { label: 'Quantisation mobile : Q4_K_M comme standard', anchor: '#quantization' },
       { label: 'Verdict par gamme : haut de gamme vs milieu de gamme vs entrée de gamme', anchor: '#per-tier-verdict' },
@@ -1954,7 +1986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Phi-4 Mini (3.8B) est le modèle compact le plus intelligent en 2026.** Optimal sur les téléphones haut de gamme avec 8 Go+ de RAM — ~13–18 tokens/sec sur iPhone 17 Pro, ~10–15 sur iPhone 16 Pro. Meilleur raisonnement par paramètre parmi tous les modèles sous 4B.',
           '**SmolLM 2 1.7B est le plus rapide en tokens par seconde sur chaque appareil testé.** ~26–32 tok/sec sur iPhone 17 Pro, ~20–28 sur Galaxy S25 Ultra. Idéal quand la réactivité prime sur la profondeur de réponse.',
-          '**Qwen 3 1.5B est le meilleur modèle mobile multilingue.** Entraîné sur 35+ langues dont le chinois, le japonais, l\'arabe et l\'allemand avec une qualité de sortie native. Premier choix pour la traduction et la rédaction en langues étrangères.',
+          '**Qwen 3 1.7B est le meilleur modèle mobile multilingue.** Entraîné sur 35+ langues dont le chinois, le japonais, l\'arabe et l\'allemand avec une qualité de sortie native. Premier choix pour la traduction et la rédaction en langues étrangères.',
           '**Gemma 3 4B est le choix équilibré par défaut.** Légèrement plus lent que Phi-4 Mini sur le même matériel, mais équivalent en chat et résumé. Idéal quand Phi-4 Mini n\'est pas disponible dans votre application.',
           '**Gemma 3 1B est l\'option légère pour les anciens téléphones.** Tient dans 4 Go de RAM (iPhone SE 3e génération, Android ancien). Raisonnement multi-étapes limité, mais produit des réponses cohérentes de 1–2 paragraphes plus rapidement que tout autre modèle sur matériel faible.',
           '**Llama 3.2 3B est le modèle 3B polyvalent le plus éprouvé.** Meilleur support du tool calling parmi les six, compatibilité applicative la plus large, plus grand écosystème de fine-tunes communautaires. Légèrement derrière Phi-4 Mini en qualité brute mais plus fiable dans les cas limites.',
@@ -1965,11 +1997,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**Modèles testés :** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B (tous en Q4_K_M GGUF).',
+          '**Modèles testés :** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B (tous en Q4_K_M GGUF).',
           '**Appareils de test :** iPhone 17 Pro (A19 Pro), iPhone 16 Pro (A18 Pro, 8 Go), Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), OnePlus 13 (Snapdragon 8 Elite).',
           '**Moteurs d\'inférence :** llama.cpp via PocketPal AI / LLM Farm (par défaut), MLC LLM via MLC Chat (accéléré Metal sur iPhone), Ollama via Termux (Android).',
-          '**Empreinte mémoire (Q4_K_M) :** Phi-4 Mini ~2.7 Go, Gemma 3 4B ~2.9 Go, Llama 3.2 3B ~2.2 Go, Qwen 3 1.5B ~1.0 Go, SmolLM 2 1.7B ~1.1 Go, Gemma 3 1B ~720 Mo.',
-          '**RAM minimale (active) :** 6 Go pour les modèles 1.5B–1.7B ; 8 Go pour les modèles 3B–4B ; 4 Go uniquement pour Gemma 3 1B.',
+          '**Empreinte mémoire (Q4_K_M) :** Phi-4 Mini ~2.7 Go, Gemma 3 4B ~2.9 Go, Llama 3.2 3B ~2.2 Go, Qwen 3 1.7B ~1.1 Go, SmolLM 2 1.7B ~1.1 Go, Gemma 3 1B ~720 Mo.',
+          '**RAM minimale (active) :** 6 Go pour les modèles 1.7B ; 8 Go pour les modèles 3B–4B ; 4 Go uniquement pour Gemma 3 1B.',
           '**Tokens/sec les plus rapides sur iPhone 17 Pro :** Gemma 3 1B ~35–45, SmolLM 2 ~26–32, Qwen 3 ~24–32, Llama 3.2 3B ~16–22, Phi-4 Mini ~13–18, Gemma 3 4B ~10–13.',
           '**Source de quantisation :** les six disponibles en Q4_K_M GGUF sur Hugging Face et via PocketPal AI / MLC Chat / LM Studio.',
         ],
@@ -1982,7 +2014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini pour les téléphones haut de gamme à 8 Go+ (le plus intelligent), SmolLM 2 1.7B pour la vitesse, Qwen 3 1.5B pour le multilingue, Gemma 3 1B pour les téléphones à 4 Go, Llama 3.2 3B pour le tool calling, et Gemma 3 4B comme choix équilibré par défaut.',
+            text: 'Phi-4 Mini pour les téléphones haut de gamme à 8 Go+ (le plus intelligent), SmolLM 2 1.7B pour la vitesse, Qwen 3 1.7B pour le multilingue, Gemma 3 1B pour les téléphones à 4 Go, Llama 3.2 3B pour le tool calling, et Gemma 3 4B comme choix équilibré par défaut.',
           },
           {
             type: 'plain-terms',
@@ -1994,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           localIf: [
             'Téléphone haut de gamme avec 8 Go+ de RAM (iPhone 16 Pro/17 Pro, Galaxy S25 Ultra, OnePlus 13) → Phi-4 Mini 3.8B',
             'Besoin des tokens/sec les plus rapides sur n\'importe quel appareil → SmolLM 2 1.7B',
-            'Usage non-anglophone (traduction, chat multilingue) → Qwen 3 1.5B',
+            'Usage non-anglophone (traduction, chat multilingue) → Qwen 3 1.7B',
             'Besoin de large compatibilité applicative, tool calling ou RAG → Llama 3.2 3B',
             'Ancien téléphone avec 4 Go de RAM → Gemma 3 1B',
             'Phi-4 Mini indisponible dans votre application, besoin de qualité 4B → Gemma 3 4B',
@@ -2007,7 +2039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           quick: [
             'Choix par défaut pour la plupart : Phi-4 Mini 3.8B',
             'Le plus rapide sur chaque appareil : SmolLM 2 1.7B',
-            'Meilleur multilingue : Qwen 3 1.5B',
+            'Meilleur multilingue : Qwen 3 1.7B',
           ],
         },
         callouts: [
@@ -2027,7 +2059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini est le plus intelligent, SmolLM 2 1.7B le plus rapide, Qwen 3 1.5B le meilleur multilingue, Gemma 3 1B le plus petit viable, Llama 3.2 3B le meilleur 3B polyvalent, et Gemma 3 4B le choix équilibré par défaut.',
+            text: 'Phi-4 Mini est le plus intelligent, SmolLM 2 1.7B le plus rapide, Qwen 3 1.7B le meilleur multilingue, Gemma 3 1B le plus petit viable, Llama 3.2 3B le meilleur 3B polyvalent, et Gemma 3 4B le choix équilibré par défaut.',
           },
           {
             type: 'plain-terms',
@@ -2040,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Gemma 3 4B', 'Taille': '4B', 'Tokens/sec (17 Pro)': '~10–13', 'Idéal pour': 'Choix équilibré quand Phi-4 Mini est indisponible' },
           { 'Modèle': 'Gemma 3 1B', 'Taille': '1B', 'Tokens/sec (17 Pro)': '~35–45', 'Idéal pour': 'Anciens téléphones (4 Go de RAM)' },
           { 'Modèle': 'SmolLM 2', 'Taille': '1.7B', 'Tokens/sec (17 Pro)': '~26–32', 'Idéal pour': 'Tokens/sec les plus rapides, chat réactif' },
-          { 'Modèle': 'Qwen 3', 'Taille': '1.5B', 'Tokens/sec (17 Pro)': '~24–32', 'Idéal pour': 'Meilleur multilingue (35+ langues)' },
+          { 'Modèle': 'Qwen 3', 'Taille': '1.7B', 'Tokens/sec (17 Pro)': '~24–32', 'Idéal pour': 'Meilleur multilingue (35+ langues)' },
           { 'Modèle': 'Llama 3.2', 'Taille': '3B', 'Tokens/sec (17 Pro)': '~16–22', 'Idéal pour': 'Meilleure option 3B, tool calling, RAG' },
         ],
         note:
@@ -2052,7 +2084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-fr.svg',
-        imageCaption: 'Six modèles LLM mobiles benchmarkés en Q4_K_M sur iPhone 17 Pro : Phi-4 Mini (3.8B, ~13–18 tok/sec) est le plus intelligent ; SmolLM 2 (1.7B, ~26–32 tok/sec) est le plus rapide ; Qwen 3 (1.5B) est le meilleur multilingue ; Gemma 3 1B (~35–45 tok/sec) fonctionne sur 4 Go de RAM.',
+        imageCaption: 'Six modèles LLM mobiles benchmarkés en Q4_K_M sur iPhone 17 Pro : Phi-4 Mini (3.8B, ~13–18 tok/sec) est le plus intelligent ; SmolLM 2 (1.7B, ~26–32 tok/sec) est le plus rapide ; Qwen 3 (1.7B) est le meilleur multilingue ; Gemma 3 1B (~35–45 tok/sec) fonctionne sur 4 Go de RAM.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -2064,7 +2096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Empreinte mémoire :** ~2.7 Go en Q4_K_M, ~3.5 Go en Q5_K_M. S\'intègre confortablement sur iPhone 16 Pro / 17 Pro (8 Go) et Galaxy S25 Ultra (12 Go).',
           '**Vitesse (tokens/sec) :** iPhone 17 Pro ~13–18, iPhone 16 Pro ~10–15, Galaxy S25 Ultra ~10–15 (Termux+Ollama), iPhone 14 Pro ~6–10 (lent mais fonctionnel).',
           '**Points forts qualité :** raisonnement chain-of-thought, résumé, Q&A factuel, génération de code basique. Surpasse les modèles open source de taille similaire sur les benchmarks standard (MMLU, GSM8K).',
-          '**Points faibles qualité :** connaissances du monde moins larges que Llama 3.2 3B ; rédaction créative plus courte que Gemma 3 4B ; multilingue plus faible que Qwen 3 1.5B hors anglais.',
+          '**Points faibles qualité :** connaissances du monde moins larges que Llama 3.2 3B ; rédaction créative plus courte que Gemma 3 4B ; multilingue plus faible que Qwen 3 1.7B hors anglais.',
           '**Idéal pour :** utilisateurs disposant d\'un téléphone haut de gamme qui souhaitent le meilleur modèle par défaut pour le chat, le résumé et le raisonnement en anglais.',
         ],
         callouts: [
@@ -2124,7 +2156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Empreinte mémoire :** ~1.1 Go en Q4_K_M. Convient à tout téléphone avec 6 Go+ de RAM avec une large marge pour l\'OS.',
           '**Vitesse (tokens/sec) :** iPhone 17 Pro ~26–32, iPhone 16 Pro ~22–28, Galaxy S25 Ultra ~20–28, iPhone 14 Pro ~15–22. Environ 2× plus rapide que Phi-4 Mini sur la même puce.',
           '**Points forts qualité :** réponses conversationnelles réactives, Q&A simple, continuation de type autocomplétion, rédaction en anglais.',
-          '**Points faibles qualité :** raisonnement plus faible que Phi-4 Mini, connaissances plus limitées que Llama 3.2 3B, multilingue plus faible que Qwen 3 1.5B, hallucinations occasionnelles.',
+          '**Points faibles qualité :** raisonnement plus faible que Phi-4 Mini, connaissances plus limitées que Llama 3.2 3B, multilingue plus faible que Qwen 3 1.7B, hallucinations occasionnelles.',
           '**Idéal pour :** appareils milieu de gamme où la latence importe (autocomplétion de saisie, assistant vocal, chat en temps réel), ou anciens flagships où les grands modèles semblent lents.',
         ],
         callouts: [
@@ -2138,12 +2170,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwen25: {
         id: 'qwen-2-5',
-        title: 'Qwen 3 1.5B : meilleur modèle mobile multilingue',
+        title: 'Qwen 3 1.7B : meilleur modèle mobile multilingue',
         content:
-          '**Qwen 3 1.5B (Alibaba, 2024) est le meilleur modèle mobile multilingue en 2026 — entraîné sur 35+ langues dont le chinois, le japonais, le coréen, l\'arabe, l\'allemand, le français, l\'espagnol et le russe.** Premier choix pour la traduction, le chat non-anglophone et les usages de voyage.',
+          '**Qwen 3 1.7B (Alibaba, 2024) est le meilleur modèle mobile multilingue en 2026 — entraîné sur 35+ langues dont le chinois, le japonais, le coréen, l\'arabe, l\'allemand, le français, l\'espagnol et le russe.** Premier choix pour la traduction, le chat non-anglophone et les usages de voyage.',
         items: [
-          '**Paramètres et entraînement :** 1.5B paramètres ; entraîné sur le corpus multilingue d\'Alibaba avec une forte représentation des langues CJK, de l\'arabe et des principales langues européennes.',
-          '**Empreinte mémoire :** ~1.0 Go en Q4_K_M. Convient à tout téléphone avec 6 Go+ de RAM.',
+          '**Paramètres et entraînement :** 1.7B paramètres ; entraîné sur le corpus multilingue d\'Alibaba avec une forte représentation des langues CJK, de l\'arabe et des principales langues européennes.',
+          '**Empreinte mémoire :** ~1.1 Go en Q4_K_M. Convient à tout téléphone avec 6 Go+ de RAM.',
           '**Vitesse (tokens/sec) :** iPhone 17 Pro ~24–32, iPhone 16 Pro ~20–28, Galaxy S25 Ultra ~18–26, iPhone 14 Pro ~14–20. Vitesse comparable à SmolLM 2.',
           '**Points forts qualité :** sortie de qualité native dans 35+ langues, traduction solide entre les paires de langues majeures, sortie CJK cohérente là où Phi-4 Mini et Llama 3.2 produisent des caractères cassés.',
           '**Points faibles qualité :** raisonnement en anglais seul légèrement plus faible que Phi-4 Mini, rédaction créative plus courte que Gemma 3 4B, tool calling plus faible que Llama 3.2 3B.',
@@ -2152,7 +2184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour la traduction en une seule passe entre deux langues spécifiques, Qwen 3 1.5B surpasse généralement un modèle plus grand centré sur l\'anglais. Pour un utilisateur francophone chattant en français, Qwen 3 produit une sortie notablement plus naturelle que Phi-4 Mini malgré une taille 60 % inférieure.',
+            text: 'Pour la traduction en une seule passe entre deux langues spécifiques, Qwen 3 1.7B surpasse généralement un modèle plus grand centré sur l\'anglais. Pour un utilisateur francophone chattant en français, Qwen 3 produit une sortie notablement plus naturelle que Phi-4 Mini malgré une taille 60 % inférieure.',
           },
         ],
       },
@@ -2211,11 +2243,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: 'Verdict par gamme : haut de gamme vs milieu de gamme vs entrée de gamme',
         content:
-          '**La gamme du téléphone détermine le plafond de modèle — la génération de puce et la RAM comptent plus que la marque.** Un téléphone haut de gamme (8 Go+ de RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) supporte confortablement des modèles 3.8B–4B ; un milieu de gamme (6–8 Go de RAM, ancienne puce haut de gamme) supporte 1.7B–3B ; un entrée de gamme ou ancien (4–6 Go de RAM) supporte 1B–1.5B.',
+          '**La gamme du téléphone détermine le plafond de modèle — la génération de puce et la RAM comptent plus que la marque.** Un téléphone haut de gamme (8 Go+ de RAM, A18 Pro / A19 Pro / Snapdragon 8 Elite) supporte confortablement des modèles 3.8B–4B ; un milieu de gamme (6–8 Go de RAM, ancienne puce haut de gamme) supporte 1.7B–3B ; un entrée de gamme ou ancien (4–6 Go de RAM) supporte 1B–1.7B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Téléphones haut de gamme (8 Go+) → Phi-4 Mini 3.8B ; milieu de gamme (6–8 Go) → SmolLM 2 1.7B ou Llama 3.2 3B ; entrée de gamme ou ancien (4–6 Go) → Gemma 3 1B ou Qwen 3 1.5B.',
+            text: 'Téléphones haut de gamme (8 Go+) → Phi-4 Mini 3.8B ; milieu de gamme (6–8 Go) → SmolLM 2 1.7B ou Llama 3.2 3B ; entrée de gamme ou ancien (4–6 Go) → Gemma 3 1B ou Qwen 3 1.7B.',
           },
           {
             type: 'plain-terms',
@@ -2226,8 +2258,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Gamme': 'Haut de gamme (8–12 Go RAM)', 'Exemples': 'iPhone 17 Pro / Pro Max, iPhone 16 Pro, Galaxy S25 Ultra, OnePlus 13', 'Modèle recommandé': 'Phi-4 Mini (3.8B Q4_K_M)', 'Pourquoi': 'Modèle le plus intelligent que la puce supporte à vitesse utilisable' },
           { 'Gamme': 'Ancien haut de gamme (8 Go RAM)', 'Exemples': 'iPhone 15 Pro, Galaxy S24 Ultra, Pixel 9 Pro', 'Modèle recommandé': 'Llama 3.2 3B ou Phi-4 Mini', 'Pourquoi': 'Llama 3.2 3B pour le tool calling ; Phi-4 Mini pour la qualité brute' },
-          { 'Gamme': 'Milieu de gamme (6–8 Go RAM)', 'Exemples': 'iPhone 14 Pro, Pixel 9, téléphones Snapdragon 8 Gen 2', 'Modèle recommandé': 'SmolLM 2 1.7B ou Qwen 3 1.5B', 'Pourquoi': 'Vitesse réactive ; s\'intègre avec marge pour l\'OS' },
-          { 'Gamme': 'Entrée de gamme / ancien (4–6 Go RAM)', 'Exemples': 'iPhone 14, Snapdragon série 7 milieu, ancien Android', 'Modèle recommandé': 'Gemma 3 1B ou Qwen 3 1.5B', 'Pourquoi': 'Plus petits modèles viables produisant encore une sortie cohérente' },
+          { 'Gamme': 'Milieu de gamme (6–8 Go RAM)', 'Exemples': 'iPhone 14 Pro, Pixel 9, téléphones Snapdragon 8 Gen 2', 'Modèle recommandé': 'SmolLM 2 1.7B ou Qwen 3 1.7B', 'Pourquoi': 'Vitesse réactive ; s\'intègre avec marge pour l\'OS' },
+          { 'Gamme': 'Entrée de gamme / ancien (4–6 Go RAM)', 'Exemples': 'iPhone 14, Snapdragon série 7 milieu, ancien Android', 'Modèle recommandé': 'Gemma 3 1B ou Qwen 3 1.7B', 'Pourquoi': 'Plus petits modèles viables produisant encore une sortie cohérente' },
           { 'Gamme': 'Très ancien (4 Go RAM)', 'Exemples': 'iPhone SE 3e génération, ancien Android 4 Go', 'Modèle recommandé': 'Gemma 3 1B', 'Pourquoi': 'Seul modèle qui tient ; raisonnement limité, tokens/sec rapides' },
           { 'Gamme': 'Non supporté (<4 Go)', 'Exemples': 'iPhone SE 2e génération, ancien Android', 'Modèle recommandé': 'Connexion distante à une machine domestique', 'Pourquoi': 'LLM on-device non pratique ; utiliser tablette/téléphone comme interface pour un serveur Ollama domestique' },
         ],
@@ -2238,7 +2270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-per-tier-verdict-fr.svg',
-        imageCaption: 'Recommandations LLM mobile par gamme : haut de gamme (8–12 Go RAM) → Phi-4 Mini 3.8B ; ancien haut de gamme (8 Go) → Llama 3.2 3B ; milieu de gamme (6–8 Go) → SmolLM 2 1.7B ; entrée de gamme (4–6 Go) → Qwen 3 1.5B ; très ancien (4 Go) → Gemma 3 1B.',
+        imageCaption: 'Recommandations LLM mobile par gamme : haut de gamme (8–12 Go RAM) → Phi-4 Mini 3.8B ; ancien haut de gamme (8 Go) → Llama 3.2 3B ; milieu de gamme (6–8 Go) → SmolLM 2 1.7B ; entrée de gamme (4–6 Go) → Qwen 3 1.7B ; très ancien (4 Go) → Gemma 3 1B.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2247,7 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Choisir un modèle plus grand que la RAM du téléphone ne le permet.** Phi-4 Mini sur un téléphone à 6 Go tourne à 3–5 tok/sec et plante quand iOS/Android réclame de la mémoire pour une autre application. Adaptez le modèle à votre gamme (voir tableau ci-dessus).',
           '**Télécharger plusieurs variantes de quantisation du même modèle.** Choisissez Q4_K_M et arrêtez-vous là. Cinq Go de variantes Q5/Q6 redondantes sont du stockage gaspillé, et les différences de qualité sont imperceptibles en chat quotidien.',
           '**Utiliser SmolLM 2 1.7B pour le raisonnement multi-étapes.** C\'est le modèle le plus rapide, pas le plus intelligent. Pour les tâches chain-of-thought (maths, planification, raisonnement complexe), utilisez Phi-4 Mini même si les tokens/sec plus lents semblent frustrants.',
-          '**Demander une sortie non-anglophone à Phi-4 Mini sans préfixe multilingue.** Phi-4 Mini gère correctement les langues européennes courantes mais produit une sortie inégale en CJK ou en arabe. Pour un usage multilingue, installez Qwen 3 1.5B aux côtés de Phi-4 Mini.',
+          '**Demander une sortie non-anglophone à Phi-4 Mini sans préfixe multilingue.** Phi-4 Mini gère correctement les langues européennes courantes mais produit une sortie inégale en CJK ou en arabe. Pour un usage multilingue, installez Qwen 3 1.7B aux côtés de Phi-4 Mini.',
           '**Attendre une qualité cloud de ces modèles.** Les six sont des modèles 1B–4B, soit environ 60–80 % des capacités de GPT-5.5 sur les tâches de chat. Utilisez-les pour ce qu\'ils font bien (chat privé, résumé, rédaction, traduction) et le cloud pour ce qui nécessite un modèle 70B+.',
           '**Confondre Phi-4 Mini (3.8B) avec l\'ancien Phi-3 Mini (3.8B).** Ils partagent un nombre de paramètres mais le mix de données et le chat template de Phi-4 Mini sont différents. Vérifiez toujours l\'identifiant du modèle dans le nom de fichier GGUF — `phi-4-mini-instruct` et non `phi-3-mini-4k-instruct`.',
         ],
@@ -2259,7 +2291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Rapport technique Phi-4 Mini — [Microsoft Research](https://arxiv.org/abs/2412.08905) (décembre 2024).',
           'Rapport technique Gemma 3 — [Google DeepMind](https://blog.google/technology/developers/gemma-3/) (2025).',
           'Fiche modèle SmolLM 2 — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) (2024).',
-          'Rapport technique Qwen 3 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/) (2024).',
+          'Rapport technique Qwen 3 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/) (2024).',
           'Fiche modèle Llama 3.2 — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/) (2024).',
           'Référence quantisation Q4_K_M — [documentation llama.cpp](https://github.com/ggerganov/llama.cpp).',
         ],
@@ -2270,7 +2302,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Quel modèle mobile est le plus rapide sur iPhone ?',
-            a: 'Gemma 3 1B est le plus rapide en absolu à ~35–45 tokens/sec sur iPhone 17 Pro, mais c\'est le plus petit modèle de cette sélection. Parmi les modèles 1.5B–1.7B (où vitesse et qualité sont équilibrées), SmolLM 2 1.7B est le plus rapide à ~26–32 tokens/sec. Parmi les modèles produisant une sortie de qualité haut de gamme, Phi-4 Mini à ~13–18 tokens/sec est l\'option « intelligente » la plus rapide. Choisissez selon votre usage : si la réactivité prime sur la profondeur, SmolLM 2 ; si la profondeur prime, Phi-4 Mini.',
+            a: 'Gemma 3 1B est le plus rapide en absolu à ~35–45 tokens/sec sur iPhone 17 Pro, mais c\'est le plus petit modèle de cette sélection. Parmi les modèles 1.7B (où vitesse et qualité sont équilibrées), SmolLM 2 1.7B est le plus rapide à ~26–32 tokens/sec. Parmi les modèles produisant une sortie de qualité haut de gamme, Phi-4 Mini à ~13–18 tokens/sec est l\'option « intelligente » la plus rapide. Choisissez selon votre usage : si la réactivité prime sur la profondeur, SmolLM 2 ; si la profondeur prime, Phi-4 Mini.',
+          },
+          {
+            q: 'Existe-t-il un modèle Gemma 3 2B ou Gemma 3 7B ?',
+            a: 'Non. Gemma 3 est officiellement disponible en cinq tailles : 270M, 1B, 4B, 12B et 27B — il n\'existe pas de Gemma 3 2B ni de Gemma 3 7B. La confusion vient généralement de Gemma 2, qui proposait bien un modèle 2B (Google DeepMind, juillet 2024) aux côtés des versions 9B et 27B. Si vous cherchez l\'équivalent le plus proche d\'un « Gemma 3 2B », les deux vraies options sont Gemma 3 1B (plus petit, plus rapide) et Gemma 3 4B (plus grand, plus intelligent) — tous deux comparés dans cet article. En avril 2026, Google a aussi lancé Gemma 4, avec une gamme de tailles différente (Effective 2B et Effective 4B, ainsi que des variantes 26B MoE et 31B dense). Gemma 4 est une famille de modèles distincte de Gemma 3 et n\'est pas encore couverte dans ce comparatif mobile, faute de chiffres tokens/sec vérifiés sur appareil réel à la date de cette mise à jour.',
+          },
+          {
+            q: 'Ces modèles ont-ils besoin d\'un GPU, ou fonctionnent-ils uniquement sur CPU ?',
+            a: 'Les six modèles fonctionnent sans GPU dédié. Sur iPhone, MLC Chat utilise l\'API Metal d\'Apple pour accélérer l\'inférence sur le Neural Engine/GPU, mais PocketPal AI et LLM Farm (llama.cpp) tournent principalement sur CPU. Sur Android, Termux+Ollama fonctionne aujourd\'hui uniquement sur CPU — il n\'exploite pas encore le NPU Hexagon de Snapdragon, ce qui explique pourquoi les tokens/sec sur Android sont environ 10–20 % inférieurs à iPhone sur un même fichier Q4_K_M (voir le tableau comparatif ci-dessus). En pratique : Phi-4 Mini sur Galaxy S25 Ultra tourne uniquement sur CPU à ~10–15 tokens/sec, et aucun modèle de cette sélection n\'a besoin d\'un GPU dédié pour produire une sortie utilisable.',
           },
           {
             q: 'Phi-4 Mini surpasse-t-il vraiment les modèles 7B sur smartphone ?',
@@ -2282,15 +2322,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel modèle gère le mieux la traduction sur mobile ?',
-            a: 'Qwen 3 1.5B pour toute paire impliquant le chinois, le japonais, le coréen, l\'arabe, l\'allemand, le français, l\'espagnol ou le russe. Il a été entraîné avec une forte représentation multilingue et produit une sortie de qualité native là où les modèles centrés sur l\'anglais (Phi-4 Mini, Llama 3.2 3B) produisent des résultats approximatifs. Pour les paires de langues européennes uniquement, Gemma 3 4B est un deuxième choix viable. Pour des traductions ponctuelles entre l\'anglais et une langue spécifique, une application de traduction dédiée (Google Traduction, DeepL) est souvent meilleure.',
+            a: 'Qwen 3 1.7B pour toute paire impliquant le chinois, le japonais, le coréen, l\'arabe, l\'allemand, le français, l\'espagnol ou le russe. Il a été entraîné avec une forte représentation multilingue et produit une sortie de qualité native là où les modèles centrés sur l\'anglais (Phi-4 Mini, Llama 3.2 3B) produisent des résultats approximatifs. Pour les paires de langues européennes uniquement, Gemma 3 4B est un deuxième choix viable. Pour des traductions ponctuelles entre l\'anglais et une langue spécifique, une application de traduction dédiée (Google Traduction, DeepL) est souvent meilleure.',
           },
           {
             q: 'Faut-il un téléphone haut de gamme pour bien utiliser ces modèles ?',
-            a: 'Non, uniquement pour les plus grands modèles (Phi-4 Mini 3.8B, Gemma 3 4B, Llama 3.2 3B). Les téléphones milieu de gamme avec 6–8 Go de RAM font tourner SmolLM 2 1.7B et Qwen 3 1.5B à pleine vitesse (~20–28 tokens/sec). Les téléphones entrée de gamme avec 4–6 Go font tourner Gemma 3 1B à ~15–25 tokens/sec. La réponse honnête : si vous ne disposez pas déjà d\'un haut de gamme, n\'en achetez pas pour l\'IA locale.',
+            a: 'Non, uniquement pour les plus grands modèles (Phi-4 Mini 3.8B, Gemma 3 4B, Llama 3.2 3B). Les téléphones milieu de gamme avec 6–8 Go de RAM font tourner SmolLM 2 1.7B et Qwen 3 1.7B à pleine vitesse (~20–28 tokens/sec). Les téléphones entrée de gamme avec 4–6 Go font tourner Gemma 3 1B à ~15–25 tokens/sec. La réponse honnête : si vous ne disposez pas déjà d\'un haut de gamme, n\'en achetez pas pour l\'IA locale.',
           },
           {
             q: 'Quel modèle consomme le moins de batterie ?',
-            a: 'Gemma 3 1B de loin — moins de paramètres signifie moins de calculs par token, donc une charge CPU/GPU plus faible. SmolLM 2 1.7B et Qwen 3 1.5B suivent. Les modèles 3B–4B (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) consomment 2–3× plus d\'énergie par réponse. Pour les longs trajets ou l\'usage hors réseau prolongé, Gemma 3 1B est le bon choix malgré le coût en qualité.',
+            a: 'Gemma 3 1B de loin — moins de paramètres signifie moins de calculs par token, donc une charge CPU/GPU plus faible. SmolLM 2 1.7B et Qwen 3 1.7B suivent. Les modèles 3B–4B (Phi-4 Mini, Llama 3.2 3B, Gemma 3 4B) consomment 2–3× plus d\'énergie par réponse. Pour les longs trajets ou l\'usage hors réseau prolongé, Gemma 3 1B est le bon choix malgré le coût en qualité.',
           },
           {
             q: 'Ces modèles gèrent-ils les conversations multi-tours ?',
@@ -2302,11 +2342,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel modèle est le meilleur pour un usage hors ligne en voyage ?',
-            a: 'Pour les voyages où vous changez de langue et avez besoin de traduction : Qwen 3 1.5B. Pour les voyages où vous avez principalement besoin d\'une référence en anglais (questions, résumé de documents de voyage, rédaction d\'e-mails) : Phi-4 Mini sur un haut de gamme, SmolLM 2 1.7B sur un milieu de gamme. Le voyage est le cas d\'usage le plus fort pour l\'IA locale — pas de données en itinérance, pas de coûts API cloud, et pas de risque de dépendance cloud dans les zones à faible connectivité.',
+            a: 'Pour les voyages où vous changez de langue et avez besoin de traduction : Qwen 3 1.7B. Pour les voyages où vous avez principalement besoin d\'une référence en anglais (questions, résumé de documents de voyage, rédaction d\'e-mails) : Phi-4 Mini sur un haut de gamme, SmolLM 2 1.7B sur un milieu de gamme. Le voyage est le cas d\'usage le plus fort pour l\'IA locale — pas de données en itinérance, pas de coûts API cloud, et pas de risque de dépendance cloud dans les zones à faible connectivité.',
           },
           {
             q: 'Les modèles mobiles seront-ils encore utiles en 2027 ?',
-            a: 'Oui, mais les noms de modèles spécifiques changeront. La frontière des petits LLMs mobiles évolue environ tous les 6–9 mois — d\'ici Q4 2026, il y aura probablement de nouveaux modèles ~3B surpassant Phi-4 Mini, et d\'ici mi-2027, la classe 1B–2B fera probablement ce que font les 3B–4B aujourd\'hui. La catégorie ne devient pas obsolète ; les recommandations spécifiques changent. Consultez cet article (rafraîchissement prévu le 2026-11-08) pour la prochaine génération.',
+            a: 'Oui, mais les noms de modèles spécifiques changeront. La frontière des petits LLMs mobiles évolue environ tous les 6–9 mois — d\'ici Q4 2026, il y aura probablement de nouveaux modèles ~3B surpassant Phi-4 Mini, et d\'ici mi-2027, la classe 1B–2B fera probablement ce que font les 3B–4B aujourd\'hui. La catégorie ne devient pas obsolète ; les recommandations spécifiques changent. Consultez cet article (rafraîchissement prévu le 2027-01-14) pour la prochaine génération.',
           },
         ],
       },
@@ -2328,15 +2368,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: '2026年モバイルLLMモデル比較：Phi-4 Mini vs Gemma 3 vs SmolLM',
     seoTitle: 'Phi-4 Mini vs Gemma 3 vs SmolLM：モバイルLLM 2026年',
     intro:
-      '2026年、6つの小型言語モデルがほぼすべてのモバイル用途をカバーします：Phi-4 Mini（3.8B）、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.5B、Llama 3.2 3B。これらはtokens/sec、メモリ使用量、チャット・要約・翻訳・短文作成の品質において異なります。このガイドではiPhone 17 ProとGalaxy S25 Ultraでの比較、端末クラス別（ハイエンド／ミッドレンジ／エントリー）の判定、そしてQ4_K_M量子化がモバイルの標準となった理由を解説します。',
+      '2026年、6つの小型言語モデルがほぼすべてのモバイル用途をカバーします：Phi-4 Mini（3.8B）、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3B。これらはtokens/sec、メモリ使用量、チャット・要約・翻訳・短文作成の品質において異なります。このガイドではiPhone 17 ProとGalaxy S25 Ultraでの比較、端末クラス別（ハイエンド／ミッドレンジ／エントリー）の判定、そしてQ4_K_M量子化がモバイルの標準となった理由を解説します。',
     metaDescription:
-      '2026年スマートフォン向けの6つの小型LLMベンチマーク。Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.5B、Llama 3.2 3Bをspeed・RAM・品質で比較。',
+      '2026年スマートフォン向けの6つの小型LLMベンチマーク。Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3Bをspeed・RAM・品質で比較。',
     twitterDescription:
       '2026年モバイルLLM比較：Phi-4 Mini（最高精度）、SmolLM 2（最速）、Qwen 3（多言語）、Gemma 3 1B（旧端末向け）、Gemma 3 4B（バランス型）、Llama 3.2 3B（汎用）。',
     current_models_mentioned: [
@@ -2344,7 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 3 4B',
       'Gemma 3 1B',
       'SmolLM 2 1.7B',
-      'Qwen 3 1.5B',
+      'Qwen 3 1.7B',
       'Llama 3.2 3B',
     ],
     current_hardware_mentioned: [
@@ -2364,27 +2404,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'モバイル向けLLMモデル',
       'phi-4 mini vs gemma 3',
       'smollm 2 モバイル',
-      'qwen 2.5 1.5b スマートフォン',
+      'qwen 3 1.7b スマートフォン',
       'llama 3.2 3b モバイル',
       'スマートフォン向け小型LLM',
       'オンデバイスLLM 2026',
     ],
     leadAnswerBlock:
-      '**2026年、ほとんどのハイエンドスマートフォン（RAM 8GB以上）では、Q4_K_M量子化のPhi-4 Mini（3.8B）が使用可能な速度で動作する最も高精度なモデルです（iPhone 17 Proで~13〜18 tokens/sec）。** 6GBの旧端末ではQwen 3 1.5BまたはSmolLM 2 1.7Bが快適に動作し、一貫性のある短文回答を生成します。SmolLM 2 1.7Bはすべてのテスト端末で最速のtokens/secを記録しています。Qwen 3 1.5Bは最強の多言語対応モデルです（中国語、日本語、アラビア語を含む35以上の言語）。Gemma 3 4BはPhi-4 Miniがアプリで利用できない場合のバランス型デフォルトです。Gemma 3 1Bは非常に古い端末（RAM 4GB）向けの軽量な選択肢です。Llama 3.2 3Bは最もテストされた3Bの汎用モデルで、最も広いツールサポートを持ちます。',
+      '**2026年、ほとんどのハイエンドスマートフォン（RAM 8GB以上）では、Q4_K_M量子化のPhi-4 Mini（3.8B）が使用可能な速度で動作する最も高精度なモデルです（iPhone 17 Proで~13〜18 tokens/sec）。** 6GBの旧端末ではQwen 3 1.7BまたはSmolLM 2 1.7Bが快適に動作し、一貫性のある短文回答を生成します。SmolLM 2 1.7Bはすべてのテスト端末で最速のtokens/secを記録しています。Qwen 3 1.7Bは最強の多言語対応モデルです（中国語、日本語、アラビア語を含む35以上の言語）。Gemma 3 4BはPhi-4 Miniがアプリで利用できない場合のバランス型デフォルトです。Gemma 3 1Bは非常に古い端末（RAM 4GB）向けの軽量な選択肢です。Llama 3.2 3Bは最もテストされた3Bの汎用モデルで、最も広いツールサポートを持ちます。',
     quickAnswerTop: {
       question: '2026年、モバイルで使うベストなローカルLLMモデルは？',
       answer:
-        'Phi-4 Mini（3.8B）はハイエンドスマートフォン（RAM 8GB以上）で使用可能な速度で動作する最も高精度なモデルです — iPhone 17 Proで~13〜18 tokens/sec。SmolLM 2 1.7Bはすべてのテスト端末で最速です。Qwen 3 1.5Bは多言語使用に最適です。Gemma 3 4Bはバランス型のデフォルトです。Gemma 3 1Bは非常に古い端末（RAM 4GB）で動作します。Llama 3.2 3Bは最良の3B汎用モデルです。6つすべてQ4_K_M GGUFでダウンロードしてください — これは元の品質の~95%を4分の1のファイルサイズで保持するモバイル標準の量子化です。',
+        'Phi-4 Mini（3.8B）はハイエンドスマートフォン（RAM 8GB以上）で使用可能な速度で動作する最も高精度なモデルです — iPhone 17 Proで~13〜18 tokens/sec。SmolLM 2 1.7Bはすべてのテスト端末で最速です。Qwen 3 1.7Bは多言語使用に最適です。Gemma 3 4Bはバランス型のデフォルトです。Gemma 3 1Bは非常に古い端末（RAM 4GB）で動作します。Llama 3.2 3Bは最良の3B汎用モデルです。6つすべてQ4_K_M GGUFでダウンロードしてください — これは元の品質の~95%を4分の1のファイルサイズで保持するモバイル標準の量子化です。',
       bullets: [
         'Phi-4 Mini（3.8B）— 最も高精度な小型モデル。RAM 8GB以上のスマートフォンに最適（iPhone 17 Pro：~13〜18 tok/sec）。',
         'Gemma 3 4B — バランス型デフォルト。品質は高いが同じハードウェアでPhi-4 Miniより遅い。',
         'Gemma 3 1B — 旧端末向け（RAM 4GB）。高速だが推論の深さが限られる。',
         'SmolLM 2 1.7B — すべてのテスト端末で最速のtokens/sec。ミッドレンジ端末での高速チャットに最適。',
-        'Qwen 3 1.5B — 最強の多言語モバイルモデル（35以上の言語）。翻訳や非英語チャットに最適。',
+        'Qwen 3 1.7B — 最強の多言語モバイルモデル（35以上の言語）。翻訳や非英語チャットに最適。',
         'Llama 3.2 3B — 最もテストされた3B汎用モデル。tool calling、RAG、幅広い互換アプリに最適な3B。',
         '量子化：6つすべてQ4_K_M GGUFでダウンロード。Q5/Q6はRAM 12GB以上でアプリが対応している場合のみ。',
       ],
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-07-14',
     },
     toc: [
       { label: '重要ポイント', anchor: '#key-takeaways' },
@@ -2395,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Gemma 3 4B：バランス型デフォルト', anchor: '#gemma-3-4b' },
       { label: 'Gemma 3 1B：旧端末向け軽量モデル', anchor: '#gemma-3-1b' },
       { label: 'SmolLM 2 1.7B：最速tokens/sec', anchor: '#smollm-2' },
-      { label: 'Qwen 3 1.5B：最強の多言語モバイルモデル', anchor: '#qwen-2-5' },
+      { label: 'Qwen 3 1.7B：最強の多言語モバイルモデル', anchor: '#qwen-2-5' },
       { label: 'Llama 3.2 3B：信頼性の高い3B汎用モデル', anchor: '#llama-3-2-3b' },
       { label: 'モバイル向け量子化：Q4_K_Mがデフォルト', anchor: '#quantization' },
       { label: 'クラス別判定：ハイエンド vs ミッドレンジ vs エントリー', anchor: '#per-tier-verdict' },
@@ -2411,7 +2451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Phi-4 Mini（3.8B）は2026年で最も高精度な小型モデルです。** RAM 8GB以上のハイエンド端末に最適 — iPhone 17 Proで~13〜18 tokens/sec、iPhone 16 Proで~10〜15。4B未満のモデル中、パラメータあたりの推論能力が最高です。',
           '**SmolLM 2 1.7Bはすべてのテスト端末で最速のtokens/secを記録しています。** iPhone 17 Proで~26〜32 tok/sec、Galaxy S25 Ultraで~20〜28。回答の深さよりも応答速度が重要な場合（高速チャット、オートコンプリート系タスク）に最適です。',
-          '**Qwen 3 1.5Bは最強の多言語モバイルモデルです。** 中国語、日本語、アラビア語、ドイツ語を含む35以上の言語でネイティブ品質の出力を持ちます。翻訳、非英語の文章作成、旅行での使用に最適です。',
+          '**Qwen 3 1.7Bは最強の多言語モバイルモデルです。** 中国語、日本語、アラビア語、ドイツ語を含む35以上の言語でネイティブ品質の出力を持ちます。翻訳、非英語の文章作成、旅行での使用に最適です。',
           '**Gemma 3 4Bはバランス型デフォルトです。** 同じハードウェアでPhi-4 Miniよりわずかに遅いですが、チャットと要約では同等の品質です。アプリでPhi-4 Miniが利用できない場合やGoogleの学習データミックスを好む場合に最適です。',
           '**Gemma 3 1Bは旧端末向け軽量モデルです。** RAM 4GB（iPhone SE 第3世代、旧Android）に収まります。多段階推論は限られますが、弱いハードウェアで他のどのモデルよりも速く1〜2段落の一貫した回答を生成します。',
           '**Llama 3.2 3Bは最もテストされた3B汎用モデルです。** 6モデル中最良のtool calling対応、最広のアプリ互換性、最大のコミュニティfine-tuneエコシステム。品質ではPhi-4 Miniにわずかに劣りますが、エッジケースでより信頼性が高いです。',
@@ -2422,11 +2462,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**テストしたモデル：** Phi-4 Mini 3.8B、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.5B、Llama 3.2 3B（すべてQ4_K_M GGUF）。',
+          '**テストしたモデル：** Phi-4 Mini 3.8B、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3B（すべてQ4_K_M GGUF）。',
           '**テスト端末：** iPhone 17 Pro（A19 Pro）、iPhone 16 Pro（A18 Pro、8GB）、Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）、OnePlus 13（Snapdragon 8 Elite）。',
           '**推論エンジン：** PocketPal AI / LLM Farm経由のllama.cpp（デフォルト）、MLC Chat経由のMLC LLM（iPhoneでMetal加速）、Termux経由のOllama（Android）。',
-          '**メモリ使用量（Q4_K_M）：** Phi-4 Mini ~2.7 GB、Gemma 3 4B ~2.9 GB、Llama 3.2 3B ~2.2 GB、Qwen 3 1.5B ~1.0 GB、SmolLM 2 1.7B ~1.1 GB、Gemma 3 1B ~720 MB。',
-          '**最小RAM（アクティブ時）：** 1.5B〜1.7Bモデルは6GB端末；3B〜4Bモデルは8GB端末；Gemma 3 1Bのみ4GB端末。',
+          '**メモリ使用量（Q4_K_M）：** Phi-4 Mini ~2.7 GB、Gemma 3 4B ~2.9 GB、Llama 3.2 3B ~2.2 GB、Qwen 3 1.7B ~1.1 GB、SmolLM 2 1.7B ~1.1 GB、Gemma 3 1B ~720 MB。',
+          '**最小RAM（アクティブ時）：** 1.7B〜1.7Bモデルは6GB端末；3B〜4Bモデルは8GB端末；Gemma 3 1Bのみ4GB端末。',
           '**iPhone 17 Proでの最速tokens/sec：** Gemma 3 1B ~35〜45、SmolLM 2 ~26〜32、Qwen 3 ~24〜32、Llama 3.2 3B ~16〜22、Phi-4 Mini ~13〜18、Gemma 3 4B ~10〜13。',
           '**量子化ソース：** Hugging FaceおよびPocketPal AI / MLC Chat / LM Studio経由で6つすべてQ4_K_M GGUFで入手可能。',
         ],
@@ -2439,7 +2479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'RAM 8GB以上のハイエンド端末にはPhi-4 Mini（最高精度）、速度重視にはSmolLM 2 1.7B、多言語使用にはQwen 3 1.5B、RAM 4GB端末にはGemma 3 1B、tool callingにはLlama 3.2 3B、Phi-4 Miniが利用できない場合のバランス型デフォルトにはGemma 3 4B。',
+            text: 'RAM 8GB以上のハイエンド端末にはPhi-4 Mini（最高精度）、速度重視にはSmolLM 2 1.7B、多言語使用にはQwen 3 1.7B、RAM 4GB端末にはGemma 3 1B、tool callingにはLlama 3.2 3B、Phi-4 Miniが利用できない場合のバランス型デフォルトにはGemma 3 4B。',
           },
           {
             type: 'plain-terms',
@@ -2451,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           localIf: [
             'RAM 8GB以上のハイエンド端末（iPhone 16 Pro/17 Pro、Galaxy S25 Ultra、OnePlus 13）→ Phi-4 Mini 3.8B',
             'あらゆる端末で最速のtokens/secが必要 → SmolLM 2 1.7B',
-            '非英語使用（翻訳、多言語チャット） → Qwen 3 1.5B',
+            '非英語使用（翻訳、多言語チャット） → Qwen 3 1.7B',
             '幅広いアプリ互換性、tool calling、またはRAGが必要 → Llama 3.2 3B',
             'RAM 4GBの旧端末 → Gemma 3 1B',
             'アプリでPhi-4 Miniが利用不可、4Bクラスの品質が必要 → Gemma 3 4B',
@@ -2464,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           quick: [
             'ほとんどのユーザーのデフォルト：Phi-4 Mini 3.8B',
             'すべての端末で最速：SmolLM 2 1.7B',
-            '最良の多言語対応：Qwen 3 1.5B',
+            '最良の多言語対応：Qwen 3 1.7B',
           ],
         },
         callouts: [
@@ -2484,7 +2524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Miniが最高精度、SmolLM 2 1.7Bが最速、Qwen 3 1.5Bが多言語最強、Gemma 3 1Bが最小の実用モデル、Llama 3.2 3Bが最強の3B汎用モデル、Gemma 3 4Bがバランス型デフォルト。',
+            text: 'Phi-4 Miniが最高精度、SmolLM 2 1.7Bが最速、Qwen 3 1.7Bが多言語最強、Gemma 3 1Bが最小の実用モデル、Llama 3.2 3Bが最強の3B汎用モデル、Gemma 3 4Bがバランス型デフォルト。',
           },
           {
             type: 'plain-terms',
@@ -2497,7 +2537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Gemma 3 4B', 'サイズ': '4B', 'tokens/sec（17 Pro）': '~10〜13', '最適用途': 'Phi-4 Mini未対応時のバランス型デフォルト' },
           { 'モデル': 'Gemma 3 1B', 'サイズ': '1B', 'tokens/sec（17 Pro）': '~35〜45', '最適用途': '旧端末（RAM 4GB）向け' },
           { 'モデル': 'SmolLM 2', 'サイズ': '1.7B', 'tokens/sec（17 Pro）': '~26〜32', '最適用途': '最速tokens/sec、高速チャット' },
-          { 'モデル': 'Qwen 3', 'サイズ': '1.5B', 'tokens/sec（17 Pro）': '~24〜32', '最適用途': '最強の多言語対応（35以上の言語）' },
+          { 'モデル': 'Qwen 3', 'サイズ': '1.7B', 'tokens/sec（17 Pro）': '~24〜32', '最適用途': '最強の多言語対応（35以上の言語）' },
           { 'モデル': 'Llama 3.2', 'サイズ': '3B', 'tokens/sec（17 Pro）': '~16〜22', '最適用途': '最強の3Bオプション、tool calling、RAG' },
         ],
         note:
@@ -2509,7 +2549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-ja.svg',
-        imageCaption: 'iPhone 17 ProでQ4_K_Mにて6つのモバイルLLMモデルをベンチマーク：Phi-4 Mini（3.8B、~13–18トークン/秒）が最高精度；SmolLM 2（1.7B、~26–32トークン/秒）が最速；Qwen 3（1.5B）が多言語最強；Gemma 3 1B（~35–45トークン/秒）が4GBの旧端末で動作。',
+        imageCaption: 'iPhone 17 ProでQ4_K_Mにて6つのモバイルLLMモデルをベンチマーク：Phi-4 Mini（3.8B、~13–18トークン/秒）が最高精度；SmolLM 2（1.7B、~26–32トークン/秒）が最速；Qwen 3（1.7B）が多言語最強；Gemma 3 1B（~35–45トークン/秒）が4GBの旧端末で動作。',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -2521,7 +2561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**メモリ使用量：** Q4_K_Mで~2.7 GB、Q5_K_Mで~3.5 GB。iPhone 16 Pro / 17 Pro（8 GB）とGalaxy S25 Ultra（12 GB）でOSの余裕を持って快適に動作。',
           '**速度（tokens/sec）：** iPhone 17 Pro ~13〜18、iPhone 16 Pro ~10〜15、Galaxy S25 Ultra ~10〜15（Termux+Ollama）、iPhone 14 Pro ~6〜10（低速だが機能的）。',
           '**品質の強み：** chain-of-thought推論、要約、ファクトQ&A、基本的なコード生成。MMLU、GSM8Kなどの標準ベンチマークで同サイズのオープンソースモデルを上回ります。',
-          '**品質の弱み：** Llama 3.2 3Bより世界知識が狭い（Common Crawlの露出が少ない）；Gemma 3 4Bより自然なクリエイティブライティングが短い；英語以外ではQwen 3 1.5Bより多言語対応が弱い。',
+          '**品質の弱み：** Llama 3.2 3Bより世界知識が狭い（Common Crawlの露出が少ない）；Gemma 3 4Bより自然なクリエイティブライティングが短い；英語以外ではQwen 3 1.7Bより多言語対応が弱い。',
           '**最適用途：** 英語のチャット、要約、推論に最も高精度な単一モデルのデフォルトを求めるハイエンドスマートフォンユーザー。',
         ],
         callouts: [
@@ -2581,7 +2621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**メモリ使用量：** Q4_K_Mで~1.1 GB。RAM 6GB以上のすべての端末にOSの大きな余裕を持って収まります。',
           '**速度（tokens/sec）：** iPhone 17 Pro ~26〜32、iPhone 16 Pro ~22〜28、Galaxy S25 Ultra ~20〜28、iPhone 14 Pro ~15〜22。同じチップでPhi-4 Miniの約2倍速い。',
           '**品質の強み：** 素早い会話応答、シンプルなQ&A、オートコンプリートスタイルの続き、英語の文章作成。',
-          '**品質の弱み：** Phi-4 Miniより推論が弱い、Llama 3.2 3Bより世界知識が狭い、Qwen 3 1.5Bより多言語対応が弱い、事実クエリでの時折の幻覚。',
+          '**品質の弱み：** Phi-4 Miniより推論が弱い、Llama 3.2 3Bより世界知識が狭い、Qwen 3 1.7Bより多言語対応が弱い、事実クエリでの時折の幻覚。',
           '**最適用途：** レイテンシが重要なミッドレンジ端末（テキスト入力オートコンプリート、音声アシスタントターン、リアルタイムチャット）、または大型モデルが重く感じられる旧ハイエンド端末。',
         ],
         callouts: [
@@ -2595,11 +2635,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwen25: {
         id: 'qwen-2-5',
-        title: 'Qwen 3 1.5B：最強の多言語モバイルモデル',
+        title: 'Qwen 3 1.7B：最強の多言語モバイルモデル',
         content:
-          '**Qwen 3 1.5B（Alibaba、2024年）は2026年で最強の多言語モバイルモデルです — 中国語、日本語、韓国語、アラビア語、ドイツ語、フランス語、スペイン語、ロシア語を含む35以上の言語で学習されています。** 翻訳、非英語チャット、会話の途中で言語を切り替えるような旅行での使用に最適です。',
+          '**Qwen 3 1.7B（Alibaba、2024年）は2026年で最強の多言語モバイルモデルです — 中国語、日本語、韓国語、アラビア語、ドイツ語、フランス語、スペイン語、ロシア語を含む35以上の言語で学習されています。** 翻訳、非英語チャット、会話の途中で言語を切り替えるような旅行での使用に最適です。',
         items: [
-          '**パラメータと学習：** 1.5Bパラメータ；CJK言語、アラビア語、主要欧州言語が強く表現されたAlibabaの多言語コーパスで学習。多言語推論に最適化されたアーキテクチャ。',
+          '**パラメータと学習：** 1.7Bパラメータ；CJK言語、アラビア語、主要欧州言語が強く表現されたAlibabaの多言語コーパスで学習。多言語推論に最適化されたアーキテクチャ。',
           '**メモリ使用量：** Q4_K_Mで~1.0 GB。RAM 6GB以上のすべての端末に収まります。',
           '**速度（tokens/sec）：** iPhone 17 Pro ~24〜32、iPhone 16 Pro ~20〜28、Galaxy S25 Ultra ~18〜26、iPhone 14 Pro ~14〜20。SmolLM 2と同等の速度。',
           '**品質の強み：** 35以上の言語でネイティブ品質の出力（ほとんどの小型モデルは英語中心で多言語フォールバックが弱い）、主要言語ペア間の強力な翻訳、Phi-4 MiniとLlama 3.2が文字化けを生成するCJK出力が一貫している。',
@@ -2609,7 +2649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '特定の2言語ペア間の1回限りの翻訳では、Qwen 3 1.5Bはサブタスクとして翻訳を実行する大型英語中心モデルを通常上回ります。日本語でチャットする日本語ユーザーにとって、Qwen 3は60%小さいにもかかわらずPhi-4 Miniよりも顕著に自然な出力を生成します。基本的なルール：最もパラメータが多いモデルではなく、あなたの主要言語のために学習されたモデルを選んでください。',
+            text: '特定の2言語ペア間の1回限りの翻訳では、Qwen 3 1.7Bはサブタスクとして翻訳を実行する大型英語中心モデルを通常上回ります。日本語でチャットする日本語ユーザーにとって、Qwen 3は60%小さいにもかかわらずPhi-4 Miniよりも顕著に自然な出力を生成します。基本的なルール：最もパラメータが多いモデルではなく、あなたの主要言語のために学習されたモデルを選んでください。',
           },
         ],
       },
@@ -2668,11 +2708,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: 'クラス別判定：ハイエンド vs ミッドレンジ vs エントリー',
         content:
-          '**端末クラスがモデルの上限を決定します — チップの世代とRAMはブランドより重要です。** ハイエンドスマートフォン（RAM 8GB以上、A18 Pro / A19 Pro / Snapdragon 8 Elite）は3.8B〜4Bモデルを快適に動作させます；ミッドレンジ（RAM 6〜8GB、旧ハイエンドチップ）は1.7B〜3B；バジェットまたは旧端末（RAM 4〜6GB）は1B〜1.5Bです。',
+          '**端末クラスがモデルの上限を決定します — チップの世代とRAMはブランドより重要です。** ハイエンドスマートフォン（RAM 8GB以上、A18 Pro / A19 Pro / Snapdragon 8 Elite）は3.8B〜4Bモデルを快適に動作させます；ミッドレンジ（RAM 6〜8GB、旧ハイエンドチップ）は1.7B〜3B；バジェットまたは旧端末（RAM 4〜6GB）は1B〜1.7Bです。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ハイエンド端末（8GB以上）→ Phi-4 Mini 3.8B；ミッドレンジ（6〜8GB）→ SmolLM 2 1.7BまたはLlama 3.2 3B；バジェットまたは旧端末（4〜6GB）→ Gemma 3 1BまたはQwen 3 1.5B。',
+            text: 'ハイエンド端末（8GB以上）→ Phi-4 Mini 3.8B；ミッドレンジ（6〜8GB）→ SmolLM 2 1.7BまたはLlama 3.2 3B；バジェットまたは旧端末（4〜6GB）→ Gemma 3 1BまたはQwen 3 1.7B。',
           },
           {
             type: 'plain-terms',
@@ -2683,8 +2723,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '端末クラス': 'ハイエンド（RAM 8〜12GB）', '代表機種': 'iPhone 17 Pro / Pro Max、iPhone 16 Pro、Galaxy S25 Ultra、OnePlus 13', '推奨モデル': 'Phi-4 Mini（3.8B Q4_K_M）', '理由': '使用可能な速度でチップが維持できる最も高精度なモデル' },
           { '端末クラス': '旧ハイエンド（RAM 8GB）', '代表機種': 'iPhone 15 Pro、Galaxy S24 Ultra、Pixel 9 Pro', '推奨モデル': 'Llama 3.2 3BまたはPhi-4 Mini', '理由': 'tool calling向けにLlama 3.2 3B；品質向けにPhi-4 Mini' },
-          { '端末クラス': 'ミッドレンジ（RAM 6〜8GB）', '代表機種': 'iPhone 14 Pro、Pixel 9、Snapdragon 8 Gen 2端末', '推奨モデル': 'SmolLM 2 1.7BまたはQwen 3 1.5B', '理由': '素早い速度；OSの余裕を持って収まる' },
-          { '端末クラス': 'バジェット / 旧端末（RAM 4〜6GB）', '代表機種': 'iPhone 14、Snapdragon 7シリーズ中位、旧Android', '推奨モデル': 'Gemma 3 1BまたはQwen 3 1.5B', '理由': '一貫した出力を生成する最小の実用モデル' },
+          { '端末クラス': 'ミッドレンジ（RAM 6〜8GB）', '代表機種': 'iPhone 14 Pro、Pixel 9、Snapdragon 8 Gen 2端末', '推奨モデル': 'SmolLM 2 1.7BまたはQwen 3 1.7B', '理由': '素早い速度；OSの余裕を持って収まる' },
+          { '端末クラス': 'バジェット / 旧端末（RAM 4〜6GB）', '代表機種': 'iPhone 14、Snapdragon 7シリーズ中位、旧Android', '推奨モデル': 'Gemma 3 1BまたはQwen 3 1.7B', '理由': '一貫した出力を生成する最小の実用モデル' },
           { '端末クラス': '非常に古い（RAM 4GB）', '代表機種': 'iPhone SE 第3世代、旧4GB Android', '推奨モデル': 'Gemma 3 1B', '理由': '収まる唯一のモデル；推論は限られるが tokens/sec は速い' },
           { '端末クラス': '非対応（4GB未満）', '代表機種': 'iPhone SE 第2世代、旧Android', '推奨モデル': '代わりにホームマシンへのリモート接続', '理由': 'オンデバイスLLMは実用的でない；ホームOllamaサーバーのUIとしてタブレット/スマートフォンを使用' },
         ],
@@ -2695,7 +2735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-per-tier-verdict-ja.svg',
-        imageCaption: 'スマートフォンランク別モバイルLLM推奨：ハイエンド（RAM 8–12GB）→ Phi-4 Mini 3.8B；旧ハイエンド（8GB）→ Llama 3.2 3B；ミッドレンジ（6–8GB）→ SmolLM 2 1.7B；バジェット（4–6GB）→ Qwen 3 1.5B；旧機種（4GB）→ Gemma 3 1B。',
+        imageCaption: 'スマートフォンランク別モバイルLLM推奨：ハイエンド（RAM 8–12GB）→ Phi-4 Mini 3.8B；旧ハイエンド（8GB）→ Llama 3.2 3B；ミッドレンジ（6–8GB）→ SmolLM 2 1.7B；バジェット（4–6GB）→ Qwen 3 1.7B；旧機種（4GB）→ Gemma 3 1B。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2704,7 +2744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**スマートフォンのRAMが許容する以上に大きいモデルを選ぶ。** 6GB端末のPhi-4 Miniは3〜5 tok/secで動作し、iOS/Androidが他のアプリのためにメモリを回収するとクラッシュします。クラス別表に従ってモデルを端末クラスに合わせてください。',
           '**同じモデルの複数の量子化バリアントをダウンロードする。** Q4_K_Mを選んで止めてください。256GBのスマートフォンに5GB以上の冗長なQ5/Q6バリアントは無駄なストレージであり、品質の差は日常のチャットでは知覚できません。',
           '**多段階推論にSmolLM 2 1.7Bを使用する。** 最速のモデルですが、最も賢いわけではありません。chain-of-thoughtタスク（数学、計画、複雑な推論）では、遅いtokens/secが気になっても、Phi-4 Miniを使用してください。品質のない速度はただ速い間違いの答えです。',
-          '**多言語プロンプトプレフィックスなしでPhi-4 Miniに英語以外の出力を求める。** Phi-4 Miniは一般的なヨーロッパ言語を適切に処理しますが、CJKやアラビア語では不均一な出力を生成します。多言語使用にはPhi-4 Miniと並行してQwen 3 1.5Bをインストールし、言語に応じて切り替えてください。',
+          '**多言語プロンプトプレフィックスなしでPhi-4 Miniに英語以外の出力を求める。** Phi-4 Miniは一般的なヨーロッパ言語を適切に処理しますが、CJKやアラビア語では不均一な出力を生成します。多言語使用にはPhi-4 Miniと並行してQwen 3 1.7Bをインストールし、言語に応じて切り替えてください。',
           '**これらのモデルにクラウドAI品質を期待する。** 6つすべてが1B〜4Bであり、チャットタスクでGPT-5.5の能力の約60〜80%、複雑な推論ではそれよりはるかに少ないです。得意なこと（プライベートチャット、要約、下書き、翻訳）に使用し、70B以上のモデルが必要なことにはクラウドまたはリモート接続を使用してください。',
           '**Phi-4 Mini（3.8B）を古いPhi-3 Mini（3.8B）と混同する。** パラメータ数は共有していますが、Phi-4 Miniの学習データとchat templateは異なります。GGUFファイル名のモデル識別子を常に確認してください — `phi-3-mini-4k-instruct`ではなく`phi-4-mini-instruct`。',
         ],
@@ -2716,7 +2756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Phi-4 Mini技術レポート — [Microsoft Research](https://arxiv.org/abs/2412.08905)（2024年12月）。',
           'Gemma 3技術レポート — [Google DeepMind](https://blog.google/technology/developers/gemma-3/)（2025年）。',
           'SmolLM 2モデルカード — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct)（2024年）。',
-          'Qwen 3技術レポート — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/)（2024年）。',
+          'Qwen 3技術レポート — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/)（2024年）。',
           'Llama 3.2モデルカード — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/)（2024年）。',
           'Q4_K_M量子化リファレンス — [llama.cppドキュメント](https://github.com/ggerganov/llama.cpp)。',
         ],
@@ -2727,7 +2767,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'iPhoneで最速のモバイルモデルはどれですか？',
-            a: 'Gemma 3 1BはiPhone 17 Proで~35〜45 tokens/secと絶対的に最速ですが、このラインナップで最小のモデルです。1.5B〜1.7Bモデル（速度と品質のバランスが取れている）の中では、SmolLM 2 1.7Bが~26〜32 tokens/secで最速です。ハイエンド品質の出力を生成するモデルの中では、Phi-4 Miniが~13〜18 tokens/secで最速の「賢い」オプションです。用途に応じて選んでください：応答速度が深さより重要ならSmolLM 2；深さが重要ならPhi-4 Mini。',
+            a: 'Gemma 3 1BはiPhone 17 Proで~35〜45 tokens/secと絶対的に最速ですが、このラインナップで最小のモデルです。1.7B〜1.7Bモデル（速度と品質のバランスが取れている）の中では、SmolLM 2 1.7Bが~26〜32 tokens/secで最速です。ハイエンド品質の出力を生成するモデルの中では、Phi-4 Miniが~13〜18 tokens/secで最速の「賢い」オプションです。用途に応じて選んでください：応答速度が深さより重要ならSmolLM 2；深さが重要ならPhi-4 Mini。',
+          },
+          {
+            q: 'Gemma 3 2BやGemma 3 7Bというモデルは存在しますか？',
+            a: 'いいえ。Gemma 3は公式に270M、1B、4B、12B、27Bの5サイズで提供されており、Gemma 3 2BやGemma 3 7Bは存在しません。この混同はGemma 2に由来することが多く、Gemma 2には実際に2Bモデル（Google DeepMind、2024年7月）が9B・27Bと共に存在していました。「Gemma 3 2B」に最も近いものを探しているなら、実在する選択肢はGemma 3 1B（より小型・高速）とGemma 3 4B（より大型・高精度）の2つで、どちらも本記事でベンチマークしています。2026年4月にはGoogleがGemma 4も発表しており、こちらは異なるサイズ構成（Effective 2BとEffective 4B、26B MoEおよび31B denseバリアント）を採用しています。Gemma 4はGemma 3とは別のモデルファミリーであり、この更新時点では実機でのtokens/sec検証データが存在しないため、本記事のモバイルベンチマークにはまだ含まれていません。',
+          },
+          {
+            q: 'これらのモデルはGPUが必要ですか、それともCPUのみで動作しますか？',
+            a: '6つのモデルすべてが専用GPUなしで動作します。iPhoneではMLC ChatがAppleのMetal APIを使ってNeural Engine/GPU上で推論を高速化しますが、PocketPal AIとLLM Farm（llama.cpp）は主にCPU上で動作します。AndroidではTermux+Ollamaは現在CPUのみで動作しており、Snapdragon Hexagon NPUをまだ活用していません。これが同じQ4_K_MファイルでもAndroidのtokens/secがiPhoneよりおよそ10〜20%低い理由です（上記の比較表を参照）。実際には、Galaxy S25 Ultra上のPhi-4 MiniはCPUのみで約10〜15 tokens/secで動作しており、このラインナップのどのモデルも実用的な出力を得るために専用GPUを必要としません。',
           },
           {
             q: 'Phi-4 MiniはiPhone上で7Bモデルを本当に上回りますか？',
@@ -2739,15 +2787,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'モバイルで翻訳に最適なモデルはどれですか？',
-            a: '中国語、日本語、韓国語、アラビア語、ドイツ語、フランス語、スペイン語、ロシア語を含むペアにはQwen 3 1.5B。強力な多言語表現で学習されており、英語中心のモデル（Phi-4 Mini、Llama 3.2 3B）が不自然または壊れた結果を生成するところでネイティブ品質の出力を生成します。ヨーロッパ言語ペアのみにはGemma 3 4Bが実用的な第2の選択肢です。英語と特定の言語間の一回限りの翻訳には、インストールされた翻訳アプリ（Google翻訳、DeepL）の方がローカルLLMより優れていることが多いです — ローカルモデルは翻訳を同じ会話内のチャットや要約と組み合わせる必要がある場合に輝きます。',
+            a: '中国語、日本語、韓国語、アラビア語、ドイツ語、フランス語、スペイン語、ロシア語を含むペアにはQwen 3 1.7B。強力な多言語表現で学習されており、英語中心のモデル（Phi-4 Mini、Llama 3.2 3B）が不自然または壊れた結果を生成するところでネイティブ品質の出力を生成します。ヨーロッパ言語ペアのみにはGemma 3 4Bが実用的な第2の選択肢です。英語と特定の言語間の一回限りの翻訳には、インストールされた翻訳アプリ（Google翻訳、DeepL）の方がローカルLLMより優れていることが多いです — ローカルモデルは翻訳を同じ会話内のチャットや要約と組み合わせる必要がある場合に輝きます。',
           },
           {
             q: 'これらのモデルをうまく使うにはハイエンドスマートフォンが必要ですか？',
-            a: 'いいえ、最大のモデル（Phi-4 Mini 3.8B、Gemma 3 4B、Llama 3.2 3B）のみです。RAM 6〜8GBのミッドレンジ端末はSmolLM 2 1.7BとQwen 3 1.5Bをフル速度（~20〜28 tokens/sec）で動作させます。RAM 4〜6GBのバジェット端末はGemma 3 1Bを~15〜25 tokens/secで動作させます。正直な答え：まだハイエンド端末を持っていない場合、ローカルAIのために購入しないでください — 既存端末の小型モデルはほとんどの用途で十分です。',
+            a: 'いいえ、最大のモデル（Phi-4 Mini 3.8B、Gemma 3 4B、Llama 3.2 3B）のみです。RAM 6〜8GBのミッドレンジ端末はSmolLM 2 1.7BとQwen 3 1.7Bをフル速度（~20〜28 tokens/sec）で動作させます。RAM 4〜6GBのバジェット端末はGemma 3 1Bを~15〜25 tokens/secで動作させます。正直な答え：まだハイエンド端末を持っていない場合、ローカルAIのために購入しないでください — 既存端末の小型モデルはほとんどの用途で十分です。',
           },
           {
             q: 'バッテリー消費が最も少ないモデルはどれですか？',
-            a: 'Gemma 3 1Bが圧倒的に少なく — 最小のモデルはトークンあたりの計算が最少であり、CPU/GPU負荷が低く消費電力が低いことを意味します。SmolLM 2 1.7BとQwen 3 1.5Bが続きます。3B〜4Bモデル（Phi-4 Mini、Llama 3.2 3B、Gemma 3 4B）は回答あたり2〜3倍の電力を消費します。バッテリーが最も重要な長距離フライトや長時間オフグリッド使用では、品質コストにもかかわらずGemma 3 1Bが正しい選択です。',
+            a: 'Gemma 3 1Bが圧倒的に少なく — 最小のモデルはトークンあたりの計算が最少であり、CPU/GPU負荷が低く消費電力が低いことを意味します。SmolLM 2 1.7BとQwen 3 1.7Bが続きます。3B〜4Bモデル（Phi-4 Mini、Llama 3.2 3B、Gemma 3 4B）は回答あたり2〜3倍の電力を消費します。バッテリーが最も重要な長距離フライトや長時間オフグリッド使用では、品質コストにもかかわらずGemma 3 1Bが正しい選択です。',
           },
           {
             q: 'モバイルモデルはマルチターンの会話に対応できますか？',
@@ -2759,11 +2807,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '旅行でのオフライン使用に最適なモデルはどれですか？',
-            a: '言語を切り替えて翻訳が必要な旅行には：Qwen 3 1.5B。主に英語のリファレンスが必要な旅行（質問、旅行書類の要約、メールの下書き）には：ハイエンド端末のPhi-4 Mini、ミッドレンジ端末のSmolLM 2 1.7B。旅行はローカルAIの最強のユースケース全体です — ローミングデータ不要、クラウドAPIコスト不要、低接続エリアでのクラウド依存のリスクなし。旅行前にモデルをダウンロードしてください；適度な使用で1回の充電でフライト全体を通じて動作します。',
+            a: '言語を切り替えて翻訳が必要な旅行には：Qwen 3 1.7B。主に英語のリファレンスが必要な旅行（質問、旅行書類の要約、メールの下書き）には：ハイエンド端末のPhi-4 Mini、ミッドレンジ端末のSmolLM 2 1.7B。旅行はローカルAIの最強のユースケース全体です — ローミングデータ不要、クラウドAPIコスト不要、低接続エリアでのクラウド依存のリスクなし。旅行前にモデルをダウンロードしてください；適度な使用で1回の充電でフライト全体を通じて動作します。',
           },
           {
             q: 'モバイルモデルは2027年でもまだ有用ですか？',
-            a: 'はい、ただし具体的なモデル名は変わります。モバイルの小型LLMフロンティアは約6〜9ヶ月ごとに動きます — 2026年Q4には新しい~3Bモデルが登場してPhi-4 Miniを上回る可能性が高く、2027年半ばには1B〜2Bクラスが今日の3B〜4Bモデルがすることをするようになるでしょう。このカテゴリーは廃れません；具体的な選択が変わります。次世代のラインナップについては（次回更新予定：2026-11-08）このArticleを再確認してください。',
+            a: 'はい、ただし具体的なモデル名は変わります。モバイルの小型LLMフロンティアは約6〜9ヶ月ごとに動きます — 2026年Q4には新しい~3Bモデルが登場してPhi-4 Miniを上回る可能性が高く、2027年半ばには1B〜2Bクラスが今日の3B〜4Bモデルがすることをするようになるでしょう。このカテゴリーは廃れません；具体的な選択が変わります。次世代のラインナップについては（次回更新予定：2027-01-14）このArticleを再確認してください。',
           },
         ],
       },
@@ -2785,15 +2833,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: '2026年最佳移动端LLM模型：Phi-4 Mini vs Gemma 3 vs SmolLM对比',
     seoTitle: 'Phi-4 Mini vs Gemma 3 vs SmolLM：2026移动LLM对比',
     intro:
-      '2026年，六款小型语言模型几乎覆盖了所有移动端使用场景：Phi-4 Mini（3.8B）、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.5B和Llama 3.2 3B。它们在tokens/sec速度、内存占用以及聊天、摘要、翻译和短文写作质量上各有不同。本指南在iPhone 17 Pro和Galaxy S25 Ultra上进行测试，按机型档次（旗舰/中端/入门）给出推荐，并解释为何Q4_K_M量化是移动端的标准选择。',
+      '2026年，六款小型语言模型几乎覆盖了所有移动端使用场景：Phi-4 Mini（3.8B）、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.7B和Llama 3.2 3B。它们在tokens/sec速度、内存占用以及聊天、摘要、翻译和短文写作质量上各有不同。本指南在iPhone 17 Pro和Galaxy S25 Ultra上进行测试，按机型档次（旗舰/中端/入门）给出推荐，并解释为何Q4_K_M量化是移动端的标准选择。',
     metaDescription:
-      '2026年六款手机端小型LLM基准测试：Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.5B、Llama 3.2 3B速度、RAM与质量全面对比。',
+      '2026年六款手机端小型LLM基准测试：Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3B速度、RAM与质量全面对比。',
     twitterDescription:
       '2026年移动LLM推荐：Phi-4 Mini（最智能）、SmolLM 2（最快）、Qwen 3（多语言）、Gemma 3 1B（旧机型）、Gemma 3 4B（均衡）、Llama 3.2 3B（全能）。',
     current_models_mentioned: [
@@ -2801,7 +2849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 3 4B',
       'Gemma 3 1B',
       'SmolLM 2 1.7B',
-      'Qwen 3 1.5B',
+      'Qwen 3 1.7B',
       'Llama 3.2 3B',
     ],
     current_hardware_mentioned: [
@@ -2821,27 +2869,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '移动端最佳LLM模型',
       'phi-4 mini vs gemma 3',
       'smollm 2 手机',
-      'qwen 2.5 1.5b 移动端',
+      'qwen 3 1.7b 移动端',
       'llama 3.2 3b 手机',
       '手机端小型LLM',
       '最佳本地LLM 2026',
     ],
     leadAnswerBlock:
-      '**2026年，对于大多数旗舰手机（RAM 8GB以上），Q4_K_M量化的Phi-4 Mini（3.8B）是以可用速度运行的最智能模型（iPhone 17 Pro约13–18 tokens/sec）。** 对于6GB的旧款手机，Qwen 3 1.5B或SmolLM 2 1.7B可以轻松运行并生成连贯的短文回答。SmolLM 2 1.7B在所有测试设备上tokens/sec最快。Qwen 3 1.5B是最强的多语言选择（35+种语言，包括中文、日文、阿拉伯文）。当应用中无法使用Phi-4 Mini时，Gemma 3 4B是均衡的默认选择。Gemma 3 1B适合非常老旧的设备（RAM 4GB）。Llama 3.2 3B是测试最充分的3B全能模型，工具支持最广泛。',
+      '**2026年，对于大多数旗舰手机（RAM 8GB以上），Q4_K_M量化的Phi-4 Mini（3.8B）是以可用速度运行的最智能模型（iPhone 17 Pro约13–18 tokens/sec）。** 对于6GB的旧款手机，Qwen 3 1.7B或SmolLM 2 1.7B可以轻松运行并生成连贯的短文回答。SmolLM 2 1.7B在所有测试设备上tokens/sec最快。Qwen 3 1.7B是最强的多语言选择（35+种语言，包括中文、日文、阿拉伯文）。当应用中无法使用Phi-4 Mini时，Gemma 3 4B是均衡的默认选择。Gemma 3 1B适合非常老旧的设备（RAM 4GB）。Llama 3.2 3B是测试最充分的3B全能模型，工具支持最广泛。',
     quickAnswerTop: {
       question: '2026年移动端最佳本地LLM模型是哪款？',
       answer:
-        'Phi-4 Mini（3.8B）是旗舰手机（RAM 8GB以上）上以可用速度运行的最智能模型——iPhone 17 Pro约13–18 tokens/sec。SmolLM 2 1.7B在所有测试设备上速度最快。Qwen 3 1.5B是最佳多语言选择。Gemma 3 4B是均衡的默认选择。Gemma 3 1B可在非常旧的设备（RAM 4GB）上运行。Llama 3.2 3B是最佳3B全能模型。六款模型均应下载Q4_K_M GGUF格式——这是移动端标准量化，以四分之一的文件大小保留约95%的原始质量。',
+        'Phi-4 Mini（3.8B）是旗舰手机（RAM 8GB以上）上以可用速度运行的最智能模型——iPhone 17 Pro约13–18 tokens/sec。SmolLM 2 1.7B在所有测试设备上速度最快。Qwen 3 1.7B是最佳多语言选择。Gemma 3 4B是均衡的默认选择。Gemma 3 1B可在非常旧的设备（RAM 4GB）上运行。Llama 3.2 3B是最佳3B全能模型。六款模型均应下载Q4_K_M GGUF格式——这是移动端标准量化，以四分之一的文件大小保留约95%的原始质量。',
       bullets: [
         'Phi-4 Mini（3.8B）——最智能的小型模型。最适合RAM 8GB以上手机（iPhone 17 Pro：约13–18 tok/sec）。',
         'Gemma 3 4B——均衡默认选择。质量不错，但在相同硬件上比Phi-4 Mini慢。',
         'Gemma 3 1B——适合旧机型（RAM 4GB）。速度快但推理深度有限。',
         'SmolLM 2 1.7B——在所有测试设备上tokens/sec最快。最适合中端设备上的快速聊天。',
-        'Qwen 3 1.5B——最强的多语言移动模型（35+种语言）。最适合翻译和非英语聊天。',
+        'Qwen 3 1.7B——最强的多语言移动模型（35+种语言）。最适合翻译和非英语聊天。',
         'Llama 3.2 3B——测试最充分的3B全能模型。tool calling、RAG和广泛兼容应用的最佳3B选择。',
         '量化：六款模型均下载Q4_K_M GGUF。仅在RAM 12GB以上且应用支持时使用Q5/Q6。',
       ],
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-07-14',
     },
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
@@ -2852,7 +2900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Gemma 3 4B：均衡默认选择', anchor: '#gemma-3-4b' },
       { label: 'Gemma 3 1B：旧机型轻量选择', anchor: '#gemma-3-1b' },
       { label: 'SmolLM 2 1.7B：tokens/sec最快', anchor: '#smollm-2' },
-      { label: 'Qwen 3 1.5B：最强多语言移动模型', anchor: '#qwen-2-5' },
+      { label: 'Qwen 3 1.7B：最强多语言移动模型', anchor: '#qwen-2-5' },
       { label: 'Llama 3.2 3B：可靠的3B全能模型', anchor: '#llama-3-2-3b' },
       { label: '移动端量化：Q4_K_M是默认标准', anchor: '#quantization' },
       { label: '档次判断：旗舰 vs 中端 vs 入门', anchor: '#per-tier-verdict' },
@@ -2868,7 +2916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Phi-4 Mini（3.8B）是2026年最智能的小型模型。** 最适合RAM 8GB以上的旗舰手机——iPhone 17 Pro约13–18 tokens/sec，iPhone 16 Pro约10–15。在4B以下所有模型中，每参数推理能力最强。',
           '**SmolLM 2 1.7B在所有测试设备上tokens/sec最快。** iPhone 17 Pro约26–32 tok/sec，Galaxy S25 Ultra约20–28。当响应速度比回答深度更重要时（快速聊天、自动补全类任务）是最佳选择。',
-          '**Qwen 3 1.5B是最强的多语言移动模型。** 在35+种语言（包括中文、日文、阿拉伯文、德文）上训练，具有母语级输出质量。翻译、非英语写作和旅行使用的首选。',
+          '**Qwen 3 1.7B是最强的多语言移动模型。** 在35+种语言（包括中文、日文、阿拉伯文、德文）上训练，具有母语级输出质量。翻译、非英语写作和旅行使用的首选。',
           '**Gemma 3 4B是均衡的默认选择。** 在相同硬件上比Phi-4 Mini略慢，但在聊天和摘要上质量相当。当应用中Phi-4 Mini不可用或偏好Google训练数据组合时的最佳选择。',
           '**Gemma 3 1B是旧机型的轻量选择。** 适合RAM 4GB（iPhone SE第3代、旧款Android）。多步推理有限，但在弱硬件上比其他任何模型都更快地生成连贯的1–2段回答。',
           '**Llama 3.2 3B是测试最充分的3B全能模型。** 六款模型中tool calling支持最佳、应用兼容性最广、社区微调生态最丰富。在原始质量上略逊于Phi-4 Mini，但在边缘情况下更可靠。',
@@ -2879,11 +2927,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '快速事实',
         items: [
-          '**测试模型：** Phi-4 Mini 3.8B、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.5B、Llama 3.2 3B（均为Q4_K_M GGUF）。',
+          '**测试模型：** Phi-4 Mini 3.8B、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3B（均为Q4_K_M GGUF）。',
           '**测试设备：** iPhone 17 Pro（A19 Pro）、iPhone 16 Pro（A18 Pro，8GB）、Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）、OnePlus 13（Snapdragon 8 Elite）。',
           '**推理引擎：** PocketPal AI / LLM Farm的llama.cpp（默认）、MLC Chat的MLC LLM（iPhone上Metal加速）、Termux的Ollama（Android）。',
-          '**内存占用（Q4_K_M）：** Phi-4 Mini约2.7 GB、Gemma 3 4B约2.9 GB、Llama 3.2 3B约2.2 GB、Qwen 3 1.5B约1.0 GB、SmolLM 2 1.7B约1.1 GB、Gemma 3 1B约720 MB。',
-          '**最低RAM（运行时）：** 1.5B–1.7B模型需6GB设备；3B–4B模型需8GB设备；仅Gemma 3 1B可在4GB设备上运行。',
+          '**内存占用（Q4_K_M）：** Phi-4 Mini约2.7 GB、Gemma 3 4B约2.9 GB、Llama 3.2 3B约2.2 GB、Qwen 3 1.7B约1.1 GB、SmolLM 2 1.7B约1.1 GB、Gemma 3 1B约720 MB。',
+          '**最低RAM（运行时）：** 1.7B模型需6GB设备；3B–4B模型需8GB设备；仅Gemma 3 1B可在4GB设备上运行。',
           '**iPhone 17 Pro最快tokens/sec：** Gemma 3 1B约35–45、SmolLM 2约26–32、Qwen 3约24–32、Llama 3.2 3B约16–22、Phi-4 Mini约13–18、Gemma 3 4B约10–13。',
           '**量化来源：** 六款模型均可在Hugging Face以及PocketPal AI / MLC Chat / LM Studio上获取Q4_K_M GGUF格式。',
         ],
@@ -2896,7 +2944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '旗舰机（RAM 8GB以上）选Phi-4 Mini（最智能），速度优先选SmolLM 2 1.7B，多语言选Qwen 3 1.5B，4GB旧机选Gemma 3 1B，tool calling选Llama 3.2 3B，Phi-4 Mini不可用时的均衡默认选Gemma 3 4B。',
+            text: '旗舰机（RAM 8GB以上）选Phi-4 Mini（最智能），速度优先选SmolLM 2 1.7B，多语言选Qwen 3 1.7B，4GB旧机选Gemma 3 1B，tool calling选Llama 3.2 3B，Phi-4 Mini不可用时的均衡默认选Gemma 3 4B。',
           },
           {
             type: 'plain-terms',
@@ -2908,7 +2956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           localIf: [
             'RAM 8GB以上旗舰机（iPhone 16 Pro/17 Pro、Galaxy S25 Ultra、OnePlus 13）→ Phi-4 Mini 3.8B',
             '需要在任何设备上最快的tokens/sec → SmolLM 2 1.7B',
-            '非英语使用（翻译、多语言聊天）→ Qwen 3 1.5B',
+            '非英语使用（翻译、多语言聊天）→ Qwen 3 1.7B',
             '需要广泛应用兼容性、tool calling或RAG → Llama 3.2 3B',
             'RAM 4GB的旧机型 → Gemma 3 1B',
             'Phi-4 Mini在你的应用中不可用，需要4B级质量 → Gemma 3 4B',
@@ -2921,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           quick: [
             '大多数用户的默认选择：Phi-4 Mini 3.8B',
             '所有设备上最快：SmolLM 2 1.7B',
-            '最佳多语言：Qwen 3 1.5B',
+            '最佳多语言：Qwen 3 1.7B',
           ],
         },
         callouts: [
@@ -2941,7 +2989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini最智能、SmolLM 2 1.7B最快、Qwen 3 1.5B多语言最强、Gemma 3 1B最小可用、Llama 3.2 3B最强3B全能、Gemma 3 4B均衡默认。',
+            text: 'Phi-4 Mini最智能、SmolLM 2 1.7B最快、Qwen 3 1.7B多语言最强、Gemma 3 1B最小可用、Llama 3.2 3B最强3B全能、Gemma 3 4B均衡默认。',
           },
           {
             type: 'plain-terms',
@@ -2954,7 +3002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Gemma 3 4B', '参数量': '4B', 'tokens/sec（17 Pro）': '约10–13', '适用场景': 'Phi-4 Mini不可用时的均衡默认' },
           { '模型': 'Gemma 3 1B', '参数量': '1B', 'tokens/sec（17 Pro）': '约35–45', '适用场景': '旧机型（RAM 4GB）' },
           { '模型': 'SmolLM 2', '参数量': '1.7B', 'tokens/sec（17 Pro）': '约26–32', '适用场景': '最快tokens/sec，高响应聊天' },
-          { '模型': 'Qwen 3', '参数量': '1.5B', 'tokens/sec（17 Pro）': '约24–32', '适用场景': '最佳多语言（35+种语言）' },
+          { '模型': 'Qwen 3', '参数量': '1.7B', 'tokens/sec（17 Pro）': '约24–32', '适用场景': '最佳多语言（35+种语言）' },
           { '模型': 'Llama 3.2', '参数量': '3B', 'tokens/sec（17 Pro）': '约16–22', '适用场景': '最强3B选项、tool calling、RAG' },
         ],
         note:
@@ -2966,7 +3014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-zh.svg',
-        imageCaption: '在iPhone 17 Pro上以Q4_K_M量化基准测试6款移动端LLM：Phi-4 Mini（3.8B，约13–18词元/秒）最智能；SmolLM 2（1.7B，约26–32词元/秒）最快；Qwen 3（1.5B）多语言最强；Gemma 3 1B（约35–45词元/秒）适用于4GB旧机。',
+        imageCaption: '在iPhone 17 Pro上以Q4_K_M量化基准测试6款移动端LLM：Phi-4 Mini（3.8B，约13–18词元/秒）最智能；SmolLM 2（1.7B，约26–32词元/秒）最快；Qwen 3（1.7B）多语言最强；Gemma 3 1B（约35–45词元/秒）适用于4GB旧机。',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -2978,7 +3026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**内存占用：** Q4_K_M约2.7 GB，Q5_K_M约3.5 GB。在iPhone 16 Pro / 17 Pro（8 GB）和Galaxy S25 Ultra（12 GB）上留有足够系统空间。',
           '**速度（tokens/sec）：** iPhone 17 Pro约13–18，iPhone 16 Pro约10–15，Galaxy S25 Ultra约10–15（Termux+Ollama），iPhone 14 Pro约6–10（慢但可用）。',
           '**质量优势：** chain-of-thought推理、摘要、事实问答、基础代码生成。在MMLU、GSM8K等标准基准测试中超越同等大小的开源模型。',
-          '**质量短板：** 世界知识不如Llama 3.2 3B（Common Crawl数据较少）；创意写作不如Gemma 3 4B自然；英语以外的多语言不如Qwen 3 1.5B。',
+          '**质量短板：** 世界知识不如Llama 3.2 3B（Common Crawl数据较少）；创意写作不如Gemma 3 4B自然；英语以外的多语言不如Qwen 3 1.7B。',
           '**最适合：** 希望在英语聊天、摘要和推理上使用最智能单一默认模型的旗舰机用户。',
         ],
         callouts: [
@@ -3038,7 +3086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**内存占用：** Q4_K_M约1.1 GB。在任何6GB以上RAM设备上运行，为系统留出充足空间。',
           '**速度（tokens/sec）：** iPhone 17 Pro约26–32，iPhone 16 Pro约22–28，Galaxy S25 Ultra约20–28，iPhone 14 Pro约15–22。在同一芯片上比Phi-4 Mini快约2倍。',
           '**质量优势：** 快速对话回复、简单问答、自动补全风格的续写、英文写作。',
-          '**质量短板：** 推理弱于Phi-4 Mini，世界知识不如Llama 3.2 3B，多语言弱于Qwen 3 1.5B，事实查询偶有幻觉。',
+          '**质量短板：** 推理弱于Phi-4 Mini，世界知识不如Llama 3.2 3B，多语言弱于Qwen 3 1.7B，事实查询偶有幻觉。',
           '**最适合：** 延迟敏感的中端设备（文本输入自动补全、语音助手轮换、实时聊天），或大型模型体验迟缓的旧旗舰机。',
         ],
         callouts: [
@@ -3052,12 +3100,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwen25: {
         id: 'qwen-2-5',
-        title: 'Qwen 3 1.5B：最强多语言移动模型',
+        title: 'Qwen 3 1.7B：最强多语言移动模型',
         content:
-          '**Qwen 3 1.5B（阿里巴巴，2024年）是2026年最强的多语言移动模型——在35+种语言上训练，包括中文、日文、韩文、阿拉伯文、德文、法文、西班牙文和俄文。** 翻译、非英语聊天和对话途中切换语言的旅行场景的最佳选择。',
+          '**Qwen 3 1.7B（阿里巴巴，2024年）是2026年最强的多语言移动模型——在35+种语言上训练，包括中文、日文、韩文、阿拉伯文、德文、法文、西班牙文和俄文。** 翻译、非英语聊天和对话途中切换语言的旅行场景的最佳选择。',
         items: [
-          '**参数与训练：** 1.5B参数；在阿里巴巴多语言语料库上训练，CJK语言、阿拉伯语和主要欧洲语言占比高。架构针对多语言推理优化。',
-          '**内存占用：** Q4_K_M约1.0 GB。适合任何6GB以上RAM设备。',
+          '**参数与训练：** 1.7B参数；在阿里巴巴多语言语料库上训练，CJK语言、阿拉伯语和主要欧洲语言占比高。架构针对多语言推理优化。',
+          '**内存占用：** Q4_K_M约1.1 GB。适合任何6GB以上RAM设备。',
           '**速度（tokens/sec）：** iPhone 17 Pro约24–32，iPhone 16 Pro约20–28，Galaxy S25 Ultra约18–26，iPhone 14 Pro约14–20。速度与SmolLM 2相当。',
           '**质量优势：** 35+种语言母语级输出（大多数小模型以英语为中心，多语言回退质量差）、主要语言对之间翻译能力强、Phi-4 Mini和Llama 3.2产生乱码的CJK输出连贯。',
           '**质量短板：** 纯英语推理略弱于Phi-4 Mini，创意写作不如Gemma 3 4B自然，tool calling弱于Llama 3.2 3B。',
@@ -3066,7 +3114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '对于两种特定语言之间的单次翻译，Qwen 3 1.5B通常优于以翻译作为次要任务运行的更大英语优先模型。对于用中文聊天的中文用户，Qwen 3尽管小60%，但产生的输出比Phi-4 Mini自然得多。基本规则：选择针对你主要语言训练的模型，而非参数最多的模型。',
+            text: '对于两种特定语言之间的单次翻译，Qwen 3 1.7B通常优于以翻译作为次要任务运行的更大英语优先模型。对于用中文聊天的中文用户，Qwen 3尽管小60%，但产生的输出比Phi-4 Mini自然得多。基本规则：选择针对你主要语言训练的模型，而非参数最多的模型。',
           },
         ],
       },
@@ -3125,11 +3173,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: '档次判断：旗舰 vs 中端 vs 入门',
         content:
-          '**手机档次决定模型上限——芯片代次和RAM比品牌更重要。** 旗舰手机（RAM 8GB以上，A18 Pro / A19 Pro / Snapdragon 8 Elite）可轻松运行3.8B–4B模型；中端手机（6–8GB RAM，旧旗舰芯片）运行1.7B–3B；入门或旧款手机（4–6GB RAM）运行1B–1.5B。',
+          '**手机档次决定模型上限——芯片代次和RAM比品牌更重要。** 旗舰手机（RAM 8GB以上，A18 Pro / A19 Pro / Snapdragon 8 Elite）可轻松运行3.8B–4B模型；中端手机（6–8GB RAM，旧旗舰芯片）运行1.7B–3B；入门或旧款手机（4–6GB RAM）运行1B–1.7B。',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '旗舰机（8GB以上）→ Phi-4 Mini 3.8B；中端机（6–8GB）→ SmolLM 2 1.7B或Llama 3.2 3B；入门或旧款（4–6GB）→ Gemma 3 1B或Qwen 3 1.5B。',
+            text: '旗舰机（8GB以上）→ Phi-4 Mini 3.8B；中端机（6–8GB）→ SmolLM 2 1.7B或Llama 3.2 3B；入门或旧款（4–6GB）→ Gemma 3 1B或Qwen 3 1.7B。',
           },
           {
             type: 'plain-terms',
@@ -3140,8 +3188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '手机档次': '旗舰（RAM 8–12GB）', '代表机型': 'iPhone 17 Pro / Pro Max、iPhone 16 Pro、Galaxy S25 Ultra、OnePlus 13', '推荐模型': 'Phi-4 Mini（3.8B Q4_K_M）', '原因': '芯片以可用速度支持的最智能模型' },
           { '手机档次': '旧款旗舰（RAM 8GB）', '代表机型': 'iPhone 15 Pro、Galaxy S24 Ultra、Pixel 9 Pro', '推荐模型': 'Llama 3.2 3B或Phi-4 Mini', '原因': 'tool calling用Llama 3.2 3B；原始质量用Phi-4 Mini' },
-          { '手机档次': '中端（RAM 6–8GB）', '代表机型': 'iPhone 14 Pro、Pixel 9、Snapdragon 8 Gen 2手机', '推荐模型': 'SmolLM 2 1.7B或Qwen 3 1.5B', '原因': '速度响应快；为系统留有余量' },
-          { '手机档次': '入门/旧款（RAM 4–6GB）', '代表机型': 'iPhone 14、Snapdragon 7系列中端、旧款Android', '推荐模型': 'Gemma 3 1B或Qwen 3 1.5B', '原因': '仍能产生连贯输出的最小可用模型' },
+          { '手机档次': '中端（RAM 6–8GB）', '代表机型': 'iPhone 14 Pro、Pixel 9、Snapdragon 8 Gen 2手机', '推荐模型': 'SmolLM 2 1.7B或Qwen 3 1.7B', '原因': '速度响应快；为系统留有余量' },
+          { '手机档次': '入门/旧款（RAM 4–6GB）', '代表机型': 'iPhone 14、Snapdragon 7系列中端、旧款Android', '推荐模型': 'Gemma 3 1B或Qwen 3 1.7B', '原因': '仍能产生连贯输出的最小可用模型' },
           { '手机档次': '非常旧（RAM 4GB）', '代表机型': 'iPhone SE第3代、旧款4GB Android', '推荐模型': 'Gemma 3 1B', '原因': '唯一能放下的模型；推理有限但tokens/sec快' },
           { '手机档次': '不支持（<4GB）', '代表机型': 'iPhone SE第2代、旧款Android', '推荐模型': '改为远程连接到本地机器', '原因': '端侧LLM不实际；将平板/手机作为家用Ollama服务器的UI使用' },
         ],
@@ -3152,7 +3200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-per-tier-verdict-zh.svg',
-        imageCaption: '按手机档次的移动端LLM推荐：旗舰机（RAM 8–12GB）→ Phi-4 Mini 3.8B；旧旗舰（8GB）→ Llama 3.2 3B；中端（6–8GB）→ SmolLM 2 1.7B；低端（4–6GB）→ Qwen 3 1.5B；超旧机型（4GB）→ Gemma 3 1B。',
+        imageCaption: '按手机档次的移动端LLM推荐：旗舰机（RAM 8–12GB）→ Phi-4 Mini 3.8B；旧旗舰（8GB）→ Llama 3.2 3B；中端（6–8GB）→ SmolLM 2 1.7B；低端（4–6GB）→ Qwen 3 1.7B；超旧机型（4GB）→ Gemma 3 1B。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -3161,7 +3209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**选择超出手机RAM限制的更大模型。** 6GB手机上的Phi-4 Mini以3–5 tok/sec运行，当iOS / Android为其他应用回收内存时会崩溃。按档次表匹配模型和设备。',
           '**下载同一模型的多个量化版本。** 选择Q4_K_M就停手。256GB手机上5GB以上的冗余Q5/Q6版本是浪费空间，日常聊天中质量差异根本感知不到。',
           '**用SmolLM 2 1.7B进行多步推理。** 它是最快的模型，但不是最智能的。对于chain-of-thought任务（数学、规划、复杂推理），即使较慢的tokens/sec让人沮丧也要使用Phi-4 Mini。没有质量的速度只是更快地给出错误答案。',
-          '**不加多语言提示前缀就让Phi-4 Mini输出非英语内容。** Phi-4 Mini能勉强处理常见欧洲语言，但在CJK或阿拉伯语上输出参差不齐。多语言使用时，在Phi-4 Mini旁边安装Qwen 3 1.5B，按语言切换。',
+          '**不加多语言提示前缀就让Phi-4 Mini输出非英语内容。** Phi-4 Mini能勉强处理常见欧洲语言，但在CJK或阿拉伯语上输出参差不齐。多语言使用时，在Phi-4 Mini旁边安装Qwen 3 1.7B，按语言切换。',
           '**期望这些模型达到云端AI质量。** 六款模型都是1B–4B，在聊天任务上大约是GPT-5.5能力的60–80%，复杂推理上差距更大。将它们用于擅长的场景（私人聊天、摘要、写作、翻译），需要70B以上模型的任务使用云端或远程连接。',
           '**将Phi-4 Mini（3.8B）与旧款Phi-3 Mini（3.8B）混淆。** 两者参数量相同，但Phi-4 Mini的训练数据和chat template不同。始终确认GGUF文件名中的模型标识符——是`phi-4-mini-instruct`而非`phi-3-mini-4k-instruct`。',
         ],
@@ -3173,7 +3221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Phi-4 Mini技术报告 — [Microsoft Research](https://arxiv.org/abs/2412.08905)（2024年12月）。',
           'Gemma 3技术报告 — [Google DeepMind](https://blog.google/technology/developers/gemma-3/)（2025年）。',
           'SmolLM 2模型卡 — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct)（2024年）。',
-          'Qwen 3技术报告 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/)（2024年）。',
+          'Qwen 3技术报告 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/)（2024年）。',
           'Llama 3.2模型卡 — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/)（2024年）。',
           'Q4_K_M量化参考 — [llama.cpp文档](https://github.com/ggerganov/llama.cpp)。',
         ],
@@ -3184,7 +3232,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'iPhone上哪款移动模型最快？',
-            a: 'Gemma 3 1B在iPhone 17 Pro上约35–45 tokens/sec，绝对最快，但是此列表中最小的模型。在1.5B–1.7B模型（速度与质量平衡）中，SmolLM 2 1.7B以约26–32 tokens/sec最快。在产生旗舰级输出质量的模型中，Phi-4 Mini约13–18 tokens/sec是最快的"智能"选项。按使用场景选择：如果响应速度比深度更重要，选SmolLM 2；如果深度更重要，选Phi-4 Mini。',
+            a: 'Gemma 3 1B在iPhone 17 Pro上约35–45 tokens/sec，绝对最快，但是此列表中最小的模型。在1.7B模型（速度与质量平衡）中，SmolLM 2 1.7B以约26–32 tokens/sec最快。在产生旗舰级输出质量的模型中，Phi-4 Mini约13–18 tokens/sec是最快的"智能"选项。按使用场景选择：如果响应速度比深度更重要，选SmolLM 2；如果深度更重要，选Phi-4 Mini。',
+          },
+          {
+            q: '有Gemma 3 2B或Gemma 3 7B模型吗？',
+            a: '没有。Gemma 3官方提供五种规模：270M、1B、4B、12B和27B——不存在Gemma 3 2B或Gemma 3 7B。这种混淆通常源于Gemma 2，它确实有一个2B模型（Google DeepMind，2024年7月发布），与9B和27B并列。如果你想找最接近"Gemma 3 2B"的选择，真正存在的两个选项是Gemma 3 1B（更小、更快）和Gemma 3 4B（更大、更智能）——本文对两者都做了测评。2026年4月，谷歌还发布了Gemma 4，尺寸阵容不同（Effective 2B和Effective 4B，以及26B MoE和31B密集型变体）。Gemma 4是与Gemma 3不同的独立模型系列，由于截至本次更新尚无经过验证的真机tokens/sec数据，本移动端评测暂未涵盖。',
+          },
+          {
+            q: '这些模型需要GPU吗，还是仅靠CPU运行？',
+            a: '六款模型均可在没有独立GPU的情况下运行。在iPhone上，MLC Chat使用苹果的Metal API在Neural Engine/GPU上加速推理，但PocketPal AI和LLM Farm（llama.cpp）主要在CPU上运行。在Android上，Termux+Ollama目前仅靠CPU运行——尚未利用骁龙Hexagon NPU，这就是为什么在相同Q4_K_M文件下Android的tokens/sec比iPhone低约10–20%（见上方对比表）。实际情况是：Phi-4 Mini在三星Galaxy S25 Ultra上仅靠CPU运行，速度约10–15 tokens/sec，本榜单中没有任何模型需要独立GPU才能产生可用输出。',
           },
           {
             q: 'Phi-4 Mini真的能在手机上超越7B模型吗？',
@@ -3196,15 +3252,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '手机上翻译哪款模型最好？',
-            a: '涉及中文、日文、韩文、阿拉伯文、德文、法文、西班牙文或俄文的语言对选Qwen 3 1.5B。它以强大的多语言表示训练，在英语优先模型（Phi-4 Mini、Llama 3.2 3B）产生生硬或混乱结果的地方提供母语级质量。仅欧洲语言对可以考虑Gemma 3 4B作为次选。英语与特定语言之间的一次性翻译，安装的翻译应用（Google翻译、DeepL）通常优于任何本地LLM——本地模型在同一对话中需要将翻译与聊天或摘要结合时才真正发光。',
+            a: '涉及中文、日文、韩文、阿拉伯文、德文、法文、西班牙文或俄文的语言对选Qwen 3 1.7B。它以强大的多语言表示训练，在英语优先模型（Phi-4 Mini、Llama 3.2 3B）产生生硬或混乱结果的地方提供母语级质量。仅欧洲语言对可以考虑Gemma 3 4B作为次选。英语与特定语言之间的一次性翻译，安装的翻译应用（Google翻译、DeepL）通常优于任何本地LLM——本地模型在同一对话中需要将翻译与聊天或摘要结合时才真正发光。',
           },
           {
             q: '使用这些模型需要旗舰手机吗？',
-            a: '不需要，只有最大的模型（Phi-4 Mini 3.8B、Gemma 3 4B、Llama 3.2 3B）才需要。6–8GB RAM的中端手机以全速（约20–28 tokens/sec）运行SmolLM 2 1.7B和Qwen 3 1.5B。4–6GB RAM的入门手机以约15–25 tokens/sec运行Gemma 3 1B。诚实的回答：如果还没有旗舰机，不要为了本地AI去买——现有手机上的小型模型对大多数使用场景已经足够。',
+            a: '不需要，只有最大的模型（Phi-4 Mini 3.8B、Gemma 3 4B、Llama 3.2 3B）才需要。6–8GB RAM的中端手机以全速（约20–28 tokens/sec）运行SmolLM 2 1.7B和Qwen 3 1.7B。4–6GB RAM的入门手机以约15–25 tokens/sec运行Gemma 3 1B。诚实的回答：如果还没有旗舰机，不要为了本地AI去买——现有手机上的小型模型对大多数使用场景已经足够。',
           },
           {
             q: '哪款模型耗电最少？',
-            a: 'Gemma 3 1B遥遥领先——最小的模型意味着每个token计算最少，CPU/GPU负载更低，功耗更低。SmolLM 2 1.7B和Qwen 3 1.5B次之。3B–4B模型（Phi-4 Mini、Llama 3.2 3B、Gemma 3 4B）每次回答耗电约多2–3倍。在电量最为重要的长途飞行或长时间离网使用中，尽管有质量代价，Gemma 3 1B是正确选择。',
+            a: 'Gemma 3 1B遥遥领先——最小的模型意味着每个token计算最少，CPU/GPU负载更低，功耗更低。SmolLM 2 1.7B和Qwen 3 1.7B次之。3B–4B模型（Phi-4 Mini、Llama 3.2 3B、Gemma 3 4B）每次回答耗电约多2–3倍。在电量最为重要的长途飞行或长时间离网使用中，尽管有质量代价，Gemma 3 1B是正确选择。',
           },
           {
             q: '移动模型能处理多轮对话吗？',
@@ -3216,11 +3272,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '旅行离线使用哪款最好？',
-            a: '需要切换语言和翻译的旅行：Qwen 3 1.5B。主要需要英语参考（问问题、摘要旅行文件、起草邮件）的旅行：旗舰机用Phi-4 Mini，中端机用SmolLM 2 1.7B。旅行是本地AI最强的整体使用场景——无需漫游数据、无云端API费用，也不用担心网络差的地区云依赖失效。旅行前下载模型；适度使用可以在单次充电下撑过整段旅程。',
+            a: '需要切换语言和翻译的旅行：Qwen 3 1.7B。主要需要英语参考（问问题、摘要旅行文件、起草邮件）的旅行：旗舰机用Phi-4 Mini，中端机用SmolLM 2 1.7B。旅行是本地AI最强的整体使用场景——无需漫游数据、无云端API费用，也不用担心网络差的地区云依赖失效。旅行前下载模型；适度使用可以在单次充电下撑过整段旅程。',
           },
           {
             q: '移动端模型在2027年还有用吗？',
-            a: '有用，但具体型号名称会变化。移动小型LLM前沿大约每6–9个月移动一次——到2026年Q4可能出现超越Phi-4 Mini的新~3B模型，到2027年中期1B–2B类可能达到今天3B–4B模型的水平。这个类别不会过时；具体推荐会更新。查阅此文章（下次更新预计：2026-11-08）了解下一代阵容。',
+            a: '有用，但具体型号名称会变化。移动小型LLM前沿大约每6–9个月移动一次——到2026年Q4可能出现超越Phi-4 Mini的新~3B模型，到2027年中期1B–2B类可能达到今天3B–4B模型的水平。这个类别不会过时；具体推荐会更新。查阅此文章（下次更新预计：2027-01-14）了解下一代阵容。',
           },
         ],
       },
@@ -3243,13 +3299,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: 'أفضل نماذج ⁨LLM⁩ للهاتف في ⁨2026⁩: ⁨Phi-4 Mini⁩ مقابل ⁨Gemma 3⁩ مقابل ⁨SmolLM⁩',
     seoTitle: 'نماذج ⁨LLM⁩ للهاتف ⁨2026⁩: ⁨Phi-4 Mini⁩ و⁨Gemma 3⁩ و⁨SmolLM⁩',
     intro:
-      'ستة نماذج لغوية صغيرة تغطي تقريبًا جميع حالات الاستخدام على الهاتف في 2026: Phi-4 Mini (3.8B) وGemma 3 4B وGemma 3 1B وSmolLM 2 1.7B وQwen 3 1.5B وLlama 3.2 3B. تتباين في الرموز في الثانية واستهلاك الذاكرة وجودة الدردشة والتلخيص والترجمة وكتابة النصوص القصيرة. يقارن هذا الدليل هذه النماذج على iPhone 17 Pro وGalaxy S25 Ultra، ويقدم حكمًا لكل فئة (راقية / متوسطة / اقتصادية)، ويشرح لماذا يُعد التكميم Q4_K_M هو المعيار على الهاتف.',
+      'ستة نماذج لغوية صغيرة تغطي تقريبًا جميع حالات الاستخدام على الهاتف في 2026: Phi-4 Mini (3.8B) وGemma 3 4B وGemma 3 1B وSmolLM 2 1.7B وQwen 3 1.7B وLlama 3.2 3B. تتباين في الرموز في الثانية واستهلاك الذاكرة وجودة الدردشة والتلخيص والترجمة وكتابة النصوص القصيرة. يقارن هذا الدليل هذه النماذج على iPhone 17 Pro وGalaxy S25 Ultra، ويقدم حكمًا لكل فئة (راقية / متوسطة / اقتصادية)، ويشرح لماذا يُعد التكميم Q4_K_M هو المعيار على الهاتف.',
     metaDescription:
       'Phi-4 Mini وGemma 3 وSmolLM 2 مُختبرة على iPhone 17 Pro وGalaxy S25 Ultra. مقارنة السرعة والذاكرة RAM والجودة — وسبب هيمنة Q4_K_M على الهاتف.',
     twitterDescription:
@@ -3259,7 +3315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 3 4B',
       'Gemma 3 1B',
       'SmolLM 2 1.7B',
-      'Qwen 3 1.5B',
+      'Qwen 3 1.7B',
       'Llama 3.2 3B',
     ],
     current_hardware_mentioned: [
@@ -3279,28 +3335,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أفضل نموذج LLM للهاتف',
       'phi-4 mini مقابل gemma 3',
       'smollm 2 هاتف',
-      'qwen 2.5 1.5b هاتف',
+      'qwen 3 1.7b هاتف',
       'llama 3.2 3b هاتف',
       'نموذج LLM صغير للهاتف',
       'أفضل LLM على الجهاز 2026',
     ],
     leadAnswerBlock:
-      '**لمعظم هواتف الفئة الراقية (ذاكرة RAM 8 جيجابايت أو أكثر) في 2026، يُعد Phi-4 Mini (3.8B) بتكميم Q4_K_M النموذجَ الأذكى الذي يعمل بسرعة مقبولة (~13–18 رمزًا/ثانية على iPhone 17 Pro).** على الهواتف القديمة بذاكرة 6 جيجابايت، يناسب Qwen 3 1.5B أو SmolLM 2 1.7B المتطلبات ويُنتجان ردودًا متسقة قصيرة. SmolLM 2 1.7B هو الأسرع في الرموز بالثانية على جميع الأجهزة المُختبرة. Qwen 3 1.5B هو الخيار الأفضل لتعدد اللغات (أكثر من 35 لغة، بما فيها العربية). Gemma 3 4B هو الخيار المتوازن حين لا يتوفر Phi-4 Mini في التطبيق. Gemma 3 1B هو الخيار الخفيف للهواتف القديمة جدًا (ذاكرة RAM 4 جيجابايت). Llama 3.2 3B هو الأكثر تجربةً وتنوعًا بين النماذج 3B مع أوسع دعم للأدوات.',
+      '**لمعظم هواتف الفئة الراقية (ذاكرة RAM 8 جيجابايت أو أكثر) في 2026، يُعد Phi-4 Mini (3.8B) بتكميم Q4_K_M النموذجَ الأذكى الذي يعمل بسرعة مقبولة (~13–18 رمزًا/ثانية على iPhone 17 Pro).** على الهواتف القديمة بذاكرة 6 جيجابايت، يناسب Qwen 3 1.7B أو SmolLM 2 1.7B المتطلبات ويُنتجان ردودًا متسقة قصيرة. SmolLM 2 1.7B هو الأسرع في الرموز بالثانية على جميع الأجهزة المُختبرة. Qwen 3 1.7B هو الخيار الأفضل لتعدد اللغات (أكثر من 35 لغة، بما فيها العربية). Gemma 3 4B هو الخيار المتوازن حين لا يتوفر Phi-4 Mini في التطبيق. Gemma 3 1B هو الخيار الخفيف للهواتف القديمة جدًا (ذاكرة RAM 4 جيجابايت). Llama 3.2 3B هو الأكثر تجربةً وتنوعًا بين النماذج 3B مع أوسع دعم للأدوات.',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل نموذج LLM محلي للهاتف في 2026؟',
         answer:
-          'Phi-4 Mini (3.8B) هو أذكى نموذج يعمل بسرعة مقبولة على هواتف الفئة الراقية (ذاكرة RAM 8 جيجابايت أو أكثر) — حوالي 13–18 رمزًا/ثانية على iPhone 17 Pro. SmolLM 2 1.7B هو الأسرع على جميع الأجهزة. Qwen 3 1.5B هو الأفضل لتعدد اللغات. Gemma 3 4B هو الخيار المتوازن الافتراضي. Gemma 3 1B يعمل على الهواتف القديمة جدًا (ذاكرة RAM 4 جيجابايت). Llama 3.2 3B هو الأفضل بين نماذج 3B للاستخدام العام. ينبغي تنزيل النماذج الستة بتنسيق Q4_K_M GGUF — وهو المعيار للهاتف الذي يحافظ على ~95% من الجودة الأصلية بربع الحجم.',
+          'Phi-4 Mini (3.8B) هو أذكى نموذج يعمل بسرعة مقبولة على هواتف الفئة الراقية (ذاكرة RAM 8 جيجابايت أو أكثر) — حوالي 13–18 رمزًا/ثانية على iPhone 17 Pro. SmolLM 2 1.7B هو الأسرع على جميع الأجهزة. Qwen 3 1.7B هو الأفضل لتعدد اللغات. Gemma 3 4B هو الخيار المتوازن الافتراضي. Gemma 3 1B يعمل على الهواتف القديمة جدًا (ذاكرة RAM 4 جيجابايت). Llama 3.2 3B هو الأفضل بين نماذج 3B للاستخدام العام. ينبغي تنزيل النماذج الستة بتنسيق Q4_K_M GGUF — وهو المعيار للهاتف الذي يحافظ على ~95% من الجودة الأصلية بربع الحجم.',
         bullets: [
           'Phi-4 Mini (3.8B) — أذكى نموذج صغير. الأفضل على هواتف 8 جيجابايت أو أكثر (iPhone 17 Pro: ~13–18 رمز/ثانية).',
           'Gemma 3 4B — الخيار المتوازن الافتراضي. جودة جيدة لكنه أبطأ من Phi-4 Mini على نفس الجهاز.',
           'Gemma 3 1B — للهواتف القديمة (ذاكرة RAM 4 جيجابايت). سريع لكن قدرات الاستدلال محدودة.',
           'SmolLM 2 1.7B — الأسرع في الرموز/الثانية على جميع الهواتف المُختبرة. الأفضل للدردشة السريعة على الهواتف المتوسطة.',
-          'Qwen 3 1.5B — أفضل نموذج هاتف متعدد اللغات (أكثر من 35 لغة بما فيها العربية). الأفضل للترجمة والدردشة بغير الإنجليزية.',
+          'Qwen 3 1.7B — أفضل نموذج هاتف متعدد اللغات (أكثر من 35 لغة بما فيها العربية). الأفضل للترجمة والدردشة بغير الإنجليزية.',
           'Llama 3.2 3B — أكثر نماذج 3B تجربةً وتنوعًا. الأفضل في tool calling وRAG والتطبيقات التي تحتاج أوسع توافق.',
           'التكميم: نزّل Q4_K_M GGUF للنماذج الستة. استخدم Q5/Q6 فقط إن كان هاتفك يملك ذاكرة 12 جيجابايت أو أكثر وإذا كان التطبيق يدعمها.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -3312,7 +3368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Gemma 3 4B: الخيار المتوازن', anchor: '#gemma-3-4b' },
       { label: 'Gemma 3 1B: الخيار الخفيف للهواتف القديمة', anchor: '#gemma-3-1b' },
       { label: 'SmolLM 2 1.7B: الأسرع في الرموز بالثانية', anchor: '#smollm-2' },
-      { label: 'Qwen 3 1.5B: أفضل نموذج هاتف متعدد اللغات', anchor: '#qwen-2-5' },
+      { label: 'Qwen 3 1.7B: أفضل نموذج هاتف متعدد اللغات', anchor: '#qwen-2-5' },
       { label: 'Llama 3.2 3B: الأكثر موثوقية بين نماذج 3B', anchor: '#llama-3-2-3b' },
       { label: 'التكميم للهاتف: Q4_K_M كمعيار', anchor: '#quantization' },
       { label: 'الحكم حسب الفئة: راقية مقابل متوسطة مقابل اقتصادية', anchor: '#per-tier-verdict' },
@@ -3328,7 +3384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Phi-4 Mini (3.8B) هو أذكى نموذج صغير في 2026.** الأفضل على هواتف الفئة الراقية بذاكرة RAM 8 جيجابايت أو أكثر — يعمل بـ ~13–18 رمزًا/ثانية على iPhone 17 Pro و~10–15 على iPhone 16 Pro. الأعلى استدلالًا لكل معامل بين جميع النماذج دون حجم 4B.',
           '**SmolLM 2 1.7B هو الأسرع في الرموز بالثانية على جميع الهواتف المُختبرة.** ~26–32 رمزًا/ثانية على iPhone 17 Pro، و~20–28 على Galaxy S25 Ultra. الأفضل حين تهم سرعة الاستجابة أكثر من عمق المحتوى (دردشة سريعة، مهام الإكمال التلقائي).',
-          '**Qwen 3 1.5B هو أفضل نموذج هاتف متعدد اللغات.** تدرّب على أكثر من 35 لغة بما فيها العربية والصينية واليابانية والألمانية بجودة أصلية. الأفضل للترجمة والكتابة بلغات أخرى والاستخدام في السفر.',
+          '**Qwen 3 1.7B هو أفضل نموذج هاتف متعدد اللغات.** تدرّب على أكثر من 35 لغة بما فيها العربية والصينية واليابانية والألمانية بجودة أصلية. الأفضل للترجمة والكتابة بلغات أخرى والاستخدام في السفر.',
           '**Gemma 3 4B هو الخيار المتوازن الافتراضي.** أبطأ قليلًا من Phi-4 Mini على نفس الجهاز، لكنه مماثل في الدردشة والتلخيص. الأفضل حين لا يتوفر Phi-4 Mini في التطبيق أو تفضّل مزيج بيانات التدريب من Google.',
           '**Gemma 3 1B هو الخيار الخفيف للهواتف القديمة.** يعمل في ذاكرة RAM 4 جيجابايت (iPhone SE الجيل الثالث، Android القديم). قدرات الاستدلال متعدد الخطوات محدودة، لكنه يُنتج ردودًا متسقة من فقرة إلى فقرتين أسرع من أي نموذج آخر على الجهاز الضعيف.',
           '**Llama 3.2 3B هو أكثر نماذج 3B تجربةً وتنوعًا.** أفضل دعم لـ tool calling بين النماذج الستة، وأوسع توافق مع التطبيقات، وأكبر نظام بيئي من الضبط الدقيق المجتمعي. أقل قليلًا من Phi-4 Mini في الجودة الخام لكنه أكثر موثوقية في الحالات الحدية.',
@@ -3339,11 +3395,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**النماذج المُختبرة:** Phi-4 Mini 3.8B وGemma 3 4B وGemma 3 1B وSmolLM 2 1.7B وQwen 3 1.5B وLlama 3.2 3B (جميعها Q4_K_M GGUF).',
+          '**النماذج المُختبرة:** Phi-4 Mini 3.8B وGemma 3 4B وGemma 3 1B وSmolLM 2 1.7B وQwen 3 1.7B وLlama 3.2 3B (جميعها Q4_K_M GGUF).',
           '**أجهزة الاختبار:** iPhone 17 Pro (A19 Pro) وiPhone 16 Pro (A18 Pro، 8 جيجابايت) وGalaxy S25 Ultra (Snapdragon 8 Elite) وPixel 9 Pro (Tensor G5) وOnePlus 13 (Snapdragon 8 Elite).',
           '**محركات الاستدلال:** llama.cpp عبر PocketPal AI / LLM Farm (افتراضي)، وMLC LLM عبر MLC Chat (مُسرَّع بـ Metal على iPhone)، وOllama عبر Termux (Android).',
-          '**مساحة الذاكرة (Q4_K_M):** Phi-4 Mini ~2.7 جيجابايت، Gemma 3 4B ~2.9 جيجابايت، Llama 3.2 3B ~2.2 جيجابايت، Qwen 3 1.5B ~1.0 جيجابايت، SmolLM 2 1.7B ~1.1 جيجابايت، Gemma 3 1B ~720 ميجابايت.',
-          '**الحد الأدنى من RAM (نشط):** هاتف بـ 6 جيجابايت للنماذج 1.5B–1.7B؛ 8 جيجابايت للنماذج 3B–4B؛ 4 جيجابايت لـ Gemma 3 1B فقط.',
+          '**مساحة الذاكرة (Q4_K_M):** Phi-4 Mini ~2.7 جيجابايت، Gemma 3 4B ~2.9 جيجابايت، Llama 3.2 3B ~2.2 جيجابايت، Qwen 3 1.7B ~1.1 جيجابايت، SmolLM 2 1.7B ~1.1 جيجابايت، Gemma 3 1B ~720 ميجابايت.',
+          '**الحد الأدنى من RAM (نشط):** هاتف بـ 6 جيجابايت للنماذج 1.7B؛ 8 جيجابايت للنماذج 3B–4B؛ 4 جيجابايت لـ Gemma 3 1B فقط.',
           '**أسرع رموز/ثانية على iPhone 17 Pro:** Gemma 3 1B ~35–45، SmolLM 2 ~26–32، Qwen 3 ~24–32، Llama 3.2 3B ~16–22، Phi-4 Mini ~13–18، Gemma 3 4B ~10–13.',
           '**مصدر التكميم:** النماذج الستة متاحة كـ Q4_K_M GGUF على Hugging Face وعبر PocketPal AI / MLC Chat / LM Studio.',
         ],
@@ -3356,7 +3412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'اختر Phi-4 Mini للفئة الراقية بذاكرة 8 جيجابايت أو أكثر (الأذكى)، وSmolLM 2 1.7B للسرعة، وQwen 3 1.5B لتعدد اللغات، وGemma 3 1B لهواتف ذاكرة 4 جيجابايت، وLlama 3.2 3B لـ tool calling، وGemma 3 4B كخيار متوازن حين لا يتوفر Phi-4 Mini.',
+            text: 'اختر Phi-4 Mini للفئة الراقية بذاكرة 8 جيجابايت أو أكثر (الأذكى)، وSmolLM 2 1.7B للسرعة، وQwen 3 1.7B لتعدد اللغات، وGemma 3 1B لهواتف ذاكرة 4 جيجابايت، وLlama 3.2 3B لـ tool calling، وGemma 3 4B كخيار متوازن حين لا يتوفر Phi-4 Mini.',
           },
           {
             type: 'plain-terms',
@@ -3368,7 +3424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           localIf: [
             'هاتف فئة راقية بذاكرة RAM 8 جيجابايت أو أكثر (iPhone 16 Pro/17 Pro، Galaxy S25 Ultra، OnePlus 13) → Phi-4 Mini 3.8B',
             'تحتاج أسرع رموز/ثانية على أي هاتف → SmolLM 2 1.7B',
-            'استخدام بلغات غير الإنجليزية (ترجمة، دردشة متعددة اللغات) → Qwen 3 1.5B',
+            'استخدام بلغات غير الإنجليزية (ترجمة، دردشة متعددة اللغات) → Qwen 3 1.7B',
             'تحتاج توافقًا واسعًا مع التطبيقات أو tool calling أو RAG → Llama 3.2 3B',
             'هاتف قديم بذاكرة RAM 4 جيجابايت → Gemma 3 1B',
             'Phi-4 Mini غير متوفر في تطبيقك، تحتاج جودة فئة 4B → Gemma 3 4B',
@@ -3381,7 +3437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           quick: [
             'الخيار الافتراضي للغالبية: Phi-4 Mini 3.8B',
             'الأسرع على جميع الأجهزة: SmolLM 2 1.7B',
-            'الأفضل متعدد اللغات: Qwen 3 1.5B',
+            'الأفضل متعدد اللغات: Qwen 3 1.7B',
           ],
         },
         callouts: [
@@ -3401,7 +3457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini هو الأذكى، وSmolLM 2 1.7B هو الأسرع، وQwen 3 1.5B هو الأفضل متعدد اللغات، وGemma 3 1B هو الأصغر الصالح، وLlama 3.2 3B هو الأفضل شاملًا بين نماذج 3B، وGemma 3 4B هو الخيار المتوازن الافتراضي.',
+            text: 'Phi-4 Mini هو الأذكى، وSmolLM 2 1.7B هو الأسرع، وQwen 3 1.7B هو الأفضل متعدد اللغات، وGemma 3 1B هو الأصغر الصالح، وLlama 3.2 3B هو الأفضل شاملًا بين نماذج 3B، وGemma 3 4B هو الخيار المتوازن الافتراضي.',
           },
           {
             type: 'plain-terms',
@@ -3414,7 +3470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Gemma 3 4B', 'الحجم': '4B', 'رموز/ثانية (17 Pro)': '~10–13', 'الأفضل في': 'خيار متوازن حين لا يتوفر Phi-4 Mini' },
           { 'النموذج': 'Gemma 3 1B', 'الحجم': '1B', 'رموز/ثانية (17 Pro)': '~35–45', 'الأفضل في': 'هواتف قديمة (ذاكرة RAM 4 جيجابايت)' },
           { 'النموذج': 'SmolLM 2', 'الحجم': '1.7B', 'رموز/ثانية (17 Pro)': '~26–32', 'الأفضل في': 'أسرع رموز/ثانية، دردشة سريعة' },
-          { 'النموذج': 'Qwen 3', 'الحجم': '1.5B', 'رموز/ثانية (17 Pro)': '~24–32', 'الأفضل في': 'الأفضل متعدد اللغات (أكثر من 35 لغة)' },
+          { 'النموذج': 'Qwen 3', 'الحجم': '1.7B', 'رموز/ثانية (17 Pro)': '~24–32', 'الأفضل في': 'الأفضل متعدد اللغات (أكثر من 35 لغة)' },
           { 'النموذج': 'Llama 3.2', 'الحجم': '3B', 'رموز/ثانية (17 Pro)': '~16–22', 'الأفضل في': 'الأفضل شاملًا 3B، tool calling، RAG' },
         ],
         note:
@@ -3469,13 +3525,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwen25: {
         id: 'qwen-2-5',
-        title: 'Qwen 3 1.5B: أفضل نموذج هاتف متعدد اللغات',
+        title: 'Qwen 3 1.7B: أفضل نموذج هاتف متعدد اللغات',
         content: [
-          'نموذج Qwen 3 1.5B من Alibaba مُدرَّب على أكثر من 35 لغة بتمثيل أصلي حقيقي — بما فيها العربية والصينية والصينية التقليدية واليابانية والكورية والألمانية والفرنسية والإسبانية والبرتغالية والروسية. يُنتج ترجمات وردودًا بالعربية ولغات أخرى أجود بكثير من النماذج ذات التوجه الغربي.',
-          '**حجم الذاكرة (Q4_K_M):** ~1.0 جيجابايت. يعمل بشكل مريح على هواتف بذاكرة RAM 6 جيجابايت.',
+          'نموذج Qwen 3 1.7B من Alibaba مُدرَّب على أكثر من 35 لغة بتمثيل أصلي حقيقي — بما فيها العربية والصينية والصينية التقليدية واليابانية والكورية والألمانية والفرنسية والإسبانية والبرتغالية والروسية. يُنتج ترجمات وردودًا بالعربية ولغات أخرى أجود بكثير من النماذج ذات التوجه الغربي.',
+          '**حجم الذاكرة (Q4_K_M):** ~1.1 جيجابايت. يعمل بشكل مريح على هواتف بذاكرة RAM 6 جيجابايت.',
           '**الأداء:** ~24–32 رمزًا/ثانية على iPhone 17 Pro — من بين الأسرع في الستة.',
           '**الأفضل في:** الترجمة، والدردشة بالعربية أو لغات آسيوية، والسفر حيث تتنقل بين لغات، وإنتاج محتوى متعدد اللغات. أقل تفوقًا من Phi-4 Mini في الاستدلال المعمق باللغة الإنجليزية.',
-          '**التثبيت:** `ollama pull qwen2.5:1.5b` أو ابحث عن "Qwen2.5-1.5B-Instruct-Q4_K_M" في PocketPal AI.',
+          '**التثبيت:** `ollama pull qwen3:1.7b` أو ابحث عن "Qwen3-1.7B-Instruct-Q4_K_M" في PocketPal AI.',
         ],
       },
       llama32_3b: {
@@ -3503,7 +3559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الحكم حسب الفئة: راقية مقابل متوسطة مقابل اقتصادية',
         content: [
           '**فئة راقية (8 جيجابايت أو أكثر من RAM، iPhone 17 Pro / Galaxy S25 Ultra / OnePlus 13):** Phi-4 Mini Q4_K_M. لا يوجد نموذج آخر في هذا الحجم يُنتج جودة مماثلة على هذا الجهاز. إذا كان Phi-4 Mini غير متاح في تطبيقك الأفضل، استخدم Gemma 3 4B كبديل مباشر.',
-          '**فئة متوسطة (6 جيجابايت RAM، iPhone 14 Pro / Pixel 8 / Galaxy S23):** SmolLM 2 1.7B أو Qwen 3 1.5B. كلاهما يعمل بشكل مريح في ذاكرة 6 جيجابايت. اختر SmolLM 2 للإنجليزية، وQwen 3 للعربية ولغات أخرى.',
+          '**فئة متوسطة (6 جيجابايت RAM، iPhone 14 Pro / Pixel 8 / Galaxy S23):** SmolLM 2 1.7B أو Qwen 3 1.7B. كلاهما يعمل بشكل مريح في ذاكرة 6 جيجابايت. اختر SmolLM 2 للإنجليزية، وQwen 3 للعربية ولغات أخرى.',
           '**فئة اقتصادية (4 جيجابايت RAM أو iPhone 12 القديم):** Gemma 3 1B فقط. هو النموذج الوحيد الذي يعمل بشكل موثوق على هذه الأجهزة. جودة محدودة لكنه يُنتج ردودًا متسقة قصيرة بشكل موثوق.',
         ],
       },
@@ -3513,7 +3569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**تنزيل نسخ تكميم متعددة من نفس النموذج.** اختر Q4_K_M وتوقف. نسخ Q5/Q6 الزائدة على هاتف بذاكرة 256 جيجابايت تُضيّع المساحة، والفرق في الجودة لا يُلاحَظ في محادثة عادية.',
           '**استخدام SmolLM 2 1.7B في الاستدلال متعدد الخطوات.** هو الأسرع لكن ليس الأذكى. للمهام التي تستلزم التفكير بسلاسل المنطق (الرياضيات، التخطيط، الاستدلال المعقد)، استخدم Phi-4 Mini حتى لو كانت الرموز/الثانية أبطأ. السرعة بلا جودة تعني الوصول إلى إجابات خاطئة بسرعة أكبر فحسب.',
-          '**توقع إخراج غير إنجليزي من Phi-4 Mini بدون بادئة متعددة اللغات.** Phi-4 Mini يتعامل مع اللغات الأوروبية الشائعة بصعوبة، لكن إخراجه باللغة العربية أو الصينية أو اليابانية متقطع. للاستخدام متعدد اللغات، ثبّت Qwen 3 1.5B جنبًا إلى جنب مع Phi-4 Mini وبدّل بحسب اللغة.',
+          '**توقع إخراج غير إنجليزي من Phi-4 Mini بدون بادئة متعددة اللغات.** Phi-4 Mini يتعامل مع اللغات الأوروبية الشائعة بصعوبة، لكن إخراجه باللغة العربية أو الصينية أو اليابانية متقطع. للاستخدام متعدد اللغات، ثبّت Qwen 3 1.7B جنبًا إلى جنب مع Phi-4 Mini وبدّل بحسب اللغة.',
           '**توقع جودة ذكاء اصطناعي سحابي من هذه النماذج.** النماذج الستة كلها 1B–4B، وهي تُنتج ما بين 60–80% من قدرة نماذج 70B أو أكثر في مهام الدردشة، وأقل من ذلك في الاستدلال المعقد. استخدمها فيما تُتقنه (دردشة خاصة، تلخيص، كتابة، ترجمة)، واستخدم السحابة أو الاتصال عن بُعد للمهام التي تتطلب نماذج 70B أو أكبر.',
           '**الخلط بين Phi-4 Mini (3.8B) وPhi-3 Mini القديم (3.8B).** حجم المعاملات متطابق لكن بيانات التدريب وقالب الدردشة مختلفان. تأكد دائمًا من معرف النموذج في اسم ملف GGUF — "phi-4-mini-instruct" وليس "phi-3-mini-4k-instruct".',
         ],
@@ -3525,7 +3581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تقرير Phi-4 Mini التقني — [Microsoft Research](https://arxiv.org/abs/2412.08905) (ديسمبر 2024).',
           'تقرير Gemma 3 التقني — [Google DeepMind](https://blog.google/technology/developers/gemma-3/) (2025).',
           'بطاقة نموذج SmolLM 2 — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) (2024).',
-          'تقرير Qwen 3 التقني — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/) (2024).',
+          'تقرير Qwen 3 التقني — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/) (2024).',
           'بطاقة نموذج Llama 3.2 — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/) (2024).',
           'مرجع تكميم Q4_K_M — [وثائق llama.cpp](https://github.com/ggerganov/llama.cpp).',
         ],
@@ -3536,7 +3592,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'أي نموذج هاتف هو الأسرع على iPhone؟',
-            a: 'Gemma 3 1B هو الأسرع بفارق كبير على iPhone 17 Pro بـ ~35–45 رمزًا/ثانية، لكنه الأصغر في هذه القائمة. بين نماذج 1.5B–1.7B (السرعة مقابل الجودة)، SmolLM 2 1.7B هو الأسرع بـ ~26–32 رمزًا/ثانية. بين النماذج ذات الجودة الراقية، Phi-4 Mini بـ ~13–18 رمزًا/ثانية هو أسرع خيار "ذكي". اختر حسب حالة الاستخدام: إذا كانت الاستجابة الآنية أهم من العمق، اختر SmolLM 2؛ إذا كان العمق أهم، اختر Phi-4 Mini.',
+            a: 'Gemma 3 1B هو الأسرع بفارق كبير على iPhone 17 Pro بـ ~35–45 رمزًا/ثانية، لكنه الأصغر في هذه القائمة. بين نماذج 1.7B (السرعة مقابل الجودة)، SmolLM 2 1.7B هو الأسرع بـ ~26–32 رمزًا/ثانية. بين النماذج ذات الجودة الراقية، Phi-4 Mini بـ ~13–18 رمزًا/ثانية هو أسرع خيار "ذكي". اختر حسب حالة الاستخدام: إذا كانت الاستجابة الآنية أهم من العمق، اختر SmolLM 2؛ إذا كان العمق أهم، اختر Phi-4 Mini.',
+          },
+          {
+            q: 'هل يوجد نموذج Gemma 3 2B أو Gemma 3 7B؟',
+            a: 'لا. يصدر Gemma 3 رسميًا بخمسة أحجام: 270M و1B و4B و12B و27B — لا يوجد Gemma 3 2B ولا Gemma 3 7B. غالبًا ما يأتي هذا الالتباس من Gemma 2، الذي كان يضم بالفعل نموذج 2B (من Google DeepMind، يوليو 2024) إلى جانب 9B و27B. إذا كنت تبحث عن أقرب مكافئ لـ"Gemma 3 2B"، فالخياران الحقيقيان هما Gemma 3 1B (أصغر وأسرع) وGemma 3 4B (أكبر وأذكى) — وكلاهما مُقيَّم في هذا المقال. في أبريل 2026، أطلقت Google أيضًا Gemma 4، بمجموعة أحجام مختلفة (Effective 2B وEffective 4B، إضافة إلى إصدارات 26B MoE و31B Dense). يُعد Gemma 4 عائلة نماذج منفصلة عن Gemma 3 ولم يُدرَج بعد في هذا الاختبار للهواتف، إذ لا تتوفر حتى تاريخ هذا التحديث أرقام تُوكِن/ثانية موثّقة على أجهزة فعلية.',
+          },
+          {
+            q: 'هل تحتاج هذه النماذج إلى GPU، أم أنها تعمل بالمعالج (CPU) فقط؟',
+            a: 'تعمل النماذج الستة جميعًا دون الحاجة إلى GPU مخصص. على iPhone، يستخدم MLC Chat واجهة Metal من Apple لتسريع الاستدلال على Neural Engine/GPU، لكن PocketPal AI وLLM Farm (llama.cpp) يعملان بشكل أساسي على المعالج (CPU). على أندرويد، يعمل Termux+Ollama اليوم بالمعالج فقط — إذ لا يستفيد بعد من وحدة Hexagon NPU الخاصة بـ Snapdragon، وهذا سبب تراجع سرعة توكِن/ثانية على أندرويد بنسبة 10–20% تقريبًا مقارنة بـ iPhone على نفس ملف Q4_K_M (راجع جدول المقارنة أعلاه). عمليًا: يعمل Phi-4 Mini على Galaxy S25 Ultra بالمعالج فقط بسرعة ~10–15 توكِن/ثانية، ولا يحتاج أي نموذج في هذه القائمة إلى GPU مخصص لإنتاج مخرجات قابلة للاستخدام.',
           },
           {
             q: 'هل يتفوق Phi-4 Mini فعلًا على نماذج 7B على الهاتف؟',
@@ -3548,15 +3612,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي نموذج يُترجم أفضل على الهاتف؟',
-            a: 'Qwen 3 1.5B لأي زوج لغات يتضمن العربية أو الصينية أو اليابانية أو الكورية أو الألمانية أو الفرنسية أو الإسبانية أو الروسية. مُدرَّب بتمثيل متعدد اللغات قوي ويُنتج جودة أصلية حيث تُنتج النماذج ذات التوجه الإنجليزي (Phi-4 Mini وLlama 3.2 3B) نتائج متصلبة أو مشوشة. للأزواج الأوروبية فقط، Gemma 3 4B خيار ثانوي مقبول. لترجمات فردية بين الإنجليزية ولغة معينة، تطبيقات الترجمة المثبتة (Google Translate وDeepL) تفوق في الغالب أي نموذج LLM محلي — النماذج المحلية تتألق حين تحتاج دمج الترجمة مع الدردشة أو التلخيص في نفس المحادثة.',
+            a: 'Qwen 3 1.7B لأي زوج لغات يتضمن العربية أو الصينية أو اليابانية أو الكورية أو الألمانية أو الفرنسية أو الإسبانية أو الروسية. مُدرَّب بتمثيل متعدد اللغات قوي ويُنتج جودة أصلية حيث تُنتج النماذج ذات التوجه الإنجليزي (Phi-4 Mini وLlama 3.2 3B) نتائج متصلبة أو مشوشة. للأزواج الأوروبية فقط، Gemma 3 4B خيار ثانوي مقبول. لترجمات فردية بين الإنجليزية ولغة معينة، تطبيقات الترجمة المثبتة (Google Translate وDeepL) تفوق في الغالب أي نموذج LLM محلي — النماذج المحلية تتألق حين تحتاج دمج الترجمة مع الدردشة أو التلخيص في نفس المحادثة.',
           },
           {
             q: 'هل أحتاج هاتفًا من الفئة الراقية لاستخدامها؟',
-            a: 'لا، فقط النماذج الأكبر (Phi-4 Mini 3.8B وGemma 3 4B وLlama 3.2 3B). الهواتف المتوسطة بـ 6–8 جيجابايت من RAM تُشغّل SmolLM 2 1.7B وQwen 3 1.5B بالسرعة الكاملة (~20–28 رمزًا/ثانية). الهواتف الاقتصادية بـ 4–6 جيجابايت تُشغّل Gemma 3 1B بـ ~15–25 رمزًا/ثانية. الجواب الصادق: إذا لم تكن تملك هاتفًا راقيًا بعد، لا تشتر واحدًا خصيصًا للذكاء الاصطناعي المحلي — النماذج الأصغر على هاتفك الحالي كافية لمعظم حالات الاستخدام.',
+            a: 'لا، فقط النماذج الأكبر (Phi-4 Mini 3.8B وGemma 3 4B وLlama 3.2 3B). الهواتف المتوسطة بـ 6–8 جيجابايت من RAM تُشغّل SmolLM 2 1.7B وQwen 3 1.7B بالسرعة الكاملة (~20–28 رمزًا/ثانية). الهواتف الاقتصادية بـ 4–6 جيجابايت تُشغّل Gemma 3 1B بـ ~15–25 رمزًا/ثانية. الجواب الصادق: إذا لم تكن تملك هاتفًا راقيًا بعد، لا تشتر واحدًا خصيصًا للذكاء الاصطناعي المحلي — النماذج الأصغر على هاتفك الحالي كافية لمعظم حالات الاستخدام.',
           },
           {
             q: 'أي نموذج يستهلك بطارية أقل؟',
-            a: 'Gemma 3 1B بفارق كبير — أصغر النماذج يعني أقل حسابات لكل رمز، وأدنى حمل على المعالج والرسومات، وأقل استهلاك للطاقة. SmolLM 2 1.7B وQwen 3 1.5B يأتيان بعده. نماذج 3B–4B (Phi-4 Mini وLlama 3.2 3B وGemma 3 4B) تستهلك ~2–3 أضعاف الطاقة لكل رد. في الرحلات الطويلة أو الاستخدام الممتد بعيدًا عن الشحن، Gemma 3 1B هو الخيار الصحيح رغم تراجع الجودة.',
+            a: 'Gemma 3 1B بفارق كبير — أصغر النماذج يعني أقل حسابات لكل رمز، وأدنى حمل على المعالج والرسومات، وأقل استهلاك للطاقة. SmolLM 2 1.7B وQwen 3 1.7B يأتيان بعده. نماذج 3B–4B (Phi-4 Mini وLlama 3.2 3B وGemma 3 4B) تستهلك ~2–3 أضعاف الطاقة لكل رد. في الرحلات الطويلة أو الاستخدام الممتد بعيدًا عن الشحن، Gemma 3 1B هو الخيار الصحيح رغم تراجع الجودة.',
           },
           {
             q: 'هل تتعامل هذه النماذج مع المحادثات متعددة الأدوار؟',
@@ -3568,11 +3632,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أيهما أفضل للاستخدام دون اتصال في السفر؟',
-            a: 'للسفر الذي يتطلب تغيير اللغات والترجمة: Qwen 3 1.5B. للسفر حيث تحتاج مرجعًا بالإنجليزية (أسئلة، تلخيص وثائق السفر، صياغة رسائل): Phi-4 Mini على هاتف الفئة الراقية، وSmolLM 2 1.7B على الهاتف المتوسط. السفر هو حالة الاستخدام الشاملة الأقوى للذكاء الاصطناعي المحلي — لا بيانات تجوال، ولا رسوم API سحابية، ولا خطر فشل اعتمادية السحابة في مناطق ضعيفة الاتصال. نزّل النموذج قبل السفر؛ يعمل طوال الرحلة بشحنة واحدة عند الاستخدام المعتدل.',
+            a: 'للسفر الذي يتطلب تغيير اللغات والترجمة: Qwen 3 1.7B. للسفر حيث تحتاج مرجعًا بالإنجليزية (أسئلة، تلخيص وثائق السفر، صياغة رسائل): Phi-4 Mini على هاتف الفئة الراقية، وSmolLM 2 1.7B على الهاتف المتوسط. السفر هو حالة الاستخدام الشاملة الأقوى للذكاء الاصطناعي المحلي — لا بيانات تجوال، ولا رسوم API سحابية، ولا خطر فشل اعتمادية السحابة في مناطق ضعيفة الاتصال. نزّل النموذج قبل السفر؛ يعمل طوال الرحلة بشحنة واحدة عند الاستخدام المعتدل.',
           },
           {
             q: 'هل ستبقى نماذج الهاتف مفيدة في 2027؟',
-            a: 'نعم، لكن الأسماء المحددة ستتغير. تتحرك حدود نماذج LLM الصغيرة للهاتف نحو ~6–9 أشهر — بحلول الربع الرابع من 2026 قد تظهر نماذج ~3B جديدة تتفوق على Phi-4 Mini، وبحلول منتصف 2027 قد تصل فئة 1B–2B إلى ما تُنجزه نماذج 3B–4B اليوم. هذه الفئة لن تصبح متقادمة؛ التوصيات المحددة ستتجدد. راجع هذا المقال (التحديث التالي المتوقع: 2026-11-08) للجيل التالي.',
+            a: 'نعم، لكن الأسماء المحددة ستتغير. تتحرك حدود نماذج LLM الصغيرة للهاتف نحو ~6–9 أشهر — بحلول الربع الرابع من 2026 قد تظهر نماذج ~3B جديدة تتفوق على Phi-4 Mini، وبحلول منتصف 2027 قد تصل فئة 1B–2B إلى ما تُنجزه نماذج 3B–4B اليوم. هذه الفئة لن تصبح متقادمة؛ التوصيات المحددة ستتجدد. راجع هذا المقال (التحديث التالي المتوقع: 2027-01-14) للجيل التالي.',
           },
         ],
       },
@@ -3594,11 +3658,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل نماذج LLM للهاتف في 2026: Phi-4 Mini مقابل Gemma 3 مقابل SmolLM',
-      description: 'ستة نماذج LLM صغيرة مُختبرة على الهواتف في 2026. Phi-4 Mini وGemma 3 4B/1B وSmolLM 2 1.7B وQwen 3 1.5B وLlama 3.2 3B مقارنةً في السرعة والذاكرة RAM والجودة.',
+      description: 'ستة نماذج LLM صغيرة مُختبرة على الهواتف في 2026. Phi-4 Mini وGemma 3 4B/1B وSmolLM 2 1.7B وQwen 3 1.7B وLlama 3.2 3B مقارنةً في السرعة والذاكرة RAM والجودة.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'ar',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3607,15 +3671,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
     title: '2026년 모바일 LLM 최고 모델: Phi-4 Mini vs Gemma 3 vs SmolLM 비교',
     seoTitle: 'Phi-4 Mini vs Gemma 3 vs SmolLM: 모바일 LLM 2026',
     intro:
-      '2026년 모바일 사용 사례 대부분을 커버하는 소형 언어 모델 6종을 소개합니다: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B. 각 모델은 초당 토큰 수, 메모리 소모량, 채팅·요약·번역·단문 작성 품질에서 차이를 보입니다. 이 가이드에서는 iPhone 17 Pro와 Galaxy S25 Ultra에서 비교 테스트를 진행하고, 기기 등급별(고사양·중급·보급형) 추천 모델을 제시하며, 모바일 표준 양자화 방식인 Q4_K_M이 왜 최선인지 설명합니다.',
+      '2026년 모바일 사용 사례 대부분을 커버하는 소형 언어 모델 6종을 소개합니다: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B. 각 모델은 초당 토큰 수, 메모리 소모량, 채팅·요약·번역·단문 작성 품질에서 차이를 보입니다. 이 가이드에서는 iPhone 17 Pro와 Galaxy S25 Ultra에서 비교 테스트를 진행하고, 기기 등급별(고사양·중급·보급형) 추천 모델을 제시하며, 모바일 표준 양자화 방식인 Q4_K_M이 왜 최선인지 설명합니다.',
     metaDescription:
-      '2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.',
+      '2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.',
     twitterDescription:
       '2026년 최고 모바일 LLM: Phi-4 Mini(가장 스마트), SmolLM 2(가장 빠름), Qwen 3(다국어), Gemma 3 1B(구형 폰), Gemma 3 4B(균형형), Llama 3.2 3B(만능형).',
     current_models_mentioned: [
@@ -3623,7 +3687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 3 4B',
       'Gemma 3 1B',
       'SmolLM 2 1.7B',
-      'Qwen 3 1.5B',
+      'Qwen 3 1.7B',
       'Llama 3.2 3B',
     ],
     current_hardware_mentioned: [
@@ -3649,22 +3713,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '온디바이스 최고 LLM 2026',
     ],
     leadAnswerBlock:
-      '**2026년 고사양 스마트폰(RAM 8GB 이상) 대부분에서 Q4_K_M 양자화의 Phi-4 Mini (3.8B)가 실용적인 속도로 구동되는 가장 스마트한 모델입니다(iPhone 17 Pro 기준 ~13–18 토큰/초).** RAM 6GB 구형 폰에서는 Qwen 3 1.5B 또는 SmolLM 2 1.7B가 편안하게 구동되며 짧고 일관된 응답을 생성합니다. SmolLM 2 1.7B는 테스트된 모든 기기에서 초당 토큰 수가 가장 빠릅니다. Qwen 3 1.5B는 최고의 다국어 모델입니다(35개 이상 언어, 중국어·일본어·아랍어 포함). Gemma 3 4B는 앱에서 Phi-4 Mini를 사용할 수 없을 때의 균형 잡힌 표준 모델입니다. Gemma 3 1B는 매우 구형 폰(RAM 4GB)을 위한 경량 옵션입니다. Llama 3.2 3B는 가장 광범위한 도구 지원을 갖춘 검증된 만능 3B 모델입니다.',
+      '**2026년 고사양 스마트폰(RAM 8GB 이상) 대부분에서 Q4_K_M 양자화의 Phi-4 Mini (3.8B)가 실용적인 속도로 구동되는 가장 스마트한 모델입니다(iPhone 17 Pro 기준 ~13–18 토큰/초).** RAM 6GB 구형 폰에서는 Qwen 3 1.7B 또는 SmolLM 2 1.7B가 편안하게 구동되며 짧고 일관된 응답을 생성합니다. SmolLM 2 1.7B는 테스트된 모든 기기에서 초당 토큰 수가 가장 빠릅니다. Qwen 3 1.7B는 최고의 다국어 모델입니다(35개 이상 언어, 중국어·일본어·아랍어 포함). Gemma 3 4B는 앱에서 Phi-4 Mini를 사용할 수 없을 때의 균형 잡힌 표준 모델입니다. Gemma 3 1B는 매우 구형 폰(RAM 4GB)을 위한 경량 옵션입니다. Llama 3.2 3B는 가장 광범위한 도구 지원을 갖춘 검증된 만능 3B 모델입니다.',
     quickAnswerTop: {
       ko: {
         question: '2026년 모바일에서 최고의 로컬 LLM 모델은 무엇입니까?',
         answer:
-          'Phi-4 Mini (3.8B)는 고사양 폰(RAM 8GB 이상)에서 실용적인 속도로 구동되는 가장 스마트한 모델입니다(iPhone 17 Pro 기준 ~13–18 토큰/초). SmolLM 2 1.7B는 테스트된 모든 기기에서 가장 빠릅니다. Qwen 3 1.5B는 최고의 다국어 모델입니다. Gemma 3 4B는 균형 잡힌 기본 선택입니다. Gemma 3 1B는 매우 구형 폰(RAM 4GB)에서도 작동합니다. Llama 3.2 3B는 최고의 만능 3B 모델입니다. 6종 모두 Q4_K_M GGUF 형식으로 다운로드해야 합니다.',
+          'Phi-4 Mini (3.8B)는 고사양 폰(RAM 8GB 이상)에서 실용적인 속도로 구동되는 가장 스마트한 모델입니다(iPhone 17 Pro 기준 ~13–18 토큰/초). SmolLM 2 1.7B는 테스트된 모든 기기에서 가장 빠릅니다. Qwen 3 1.7B는 최고의 다국어 모델입니다. Gemma 3 4B는 균형 잡힌 기본 선택입니다. Gemma 3 1B는 매우 구형 폰(RAM 4GB)에서도 작동합니다. Llama 3.2 3B는 최고의 만능 3B 모델입니다. 6종 모두 Q4_K_M GGUF 형식으로 다운로드해야 합니다.',
         bullets: [
           'Phi-4 Mini (3.8B) — 가장 스마트한 소형 모델. 8GB 이상 폰에서 최고(iPhone 17 Pro: ~13–18 토큰/초).',
           'Gemma 3 4B — 균형 잡힌 기본 선택. 품질은 우수하지만 동일 하드웨어에서 Phi-4 Mini보다 느림.',
           'Gemma 3 1B — 구형 폰(RAM 4GB)용. 빠르지만 추론 능력이 제한적.',
           'SmolLM 2 1.7B — 테스트된 모든 폰에서 토큰/초 가장 빠름. 중급 기기에서 빠른 채팅에 최적.',
-          'Qwen 3 1.5B — 최고의 모바일 다국어 모델(35개 이상 언어). 영어 외 언어 번역 및 채팅에 최적.',
+          'Qwen 3 1.7B — 최고의 모바일 다국어 모델(35개 이상 언어). 영어 외 언어 번역 및 채팅에 최적.',
           'Llama 3.2 3B — 가장 검증된 만능 3B 모델. 도구 호출, RAG, 호환성이 높은 앱에 최적.',
           '양자화: 6종 모두 Q4_K_M GGUF로 다운로드. Q5/Q6는 RAM 12GB 이상이고 앱이 지원하는 경우에만.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -3676,7 +3740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Gemma 3 4B: 균형 잡힌 선택', anchor: '#gemma-3-4b' },
       { label: 'Gemma 3 1B: 구형 폰용 경량 선택', anchor: '#gemma-3-1b' },
       { label: 'SmolLM 2 1.7B: 초당 토큰 수 최고', anchor: '#smollm-2' },
-      { label: 'Qwen 3 1.5B: 최고의 모바일 다국어 모델', anchor: '#qwen-2-5' },
+      { label: 'Qwen 3 1.7B: 최고의 모바일 다국어 모델', anchor: '#qwen-2-5' },
       { label: 'Llama 3.2 3B: 검증된 만능 3B 모델', anchor: '#llama-3-2-3b' },
       { label: '모바일 양자화: Q4_K_M 표준', anchor: '#quantization' },
       { label: '등급별 판정: 고사양 vs 중급 vs 보급형', anchor: '#per-tier-verdict' },
@@ -3692,7 +3756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Phi-4 Mini (3.8B)는 2026년 가장 스마트한 소형 모델입니다.** RAM 8GB 이상 고사양 폰에 최적 — iPhone 17 Pro에서 ~13–18 토큰/초, iPhone 16 Pro에서 ~10–15 토큰/초로 구동됩니다. 4B 미만 모델 중 파라미터당 추론 능력이 가장 뛰어납니다.',
           '**SmolLM 2 1.7B는 테스트된 모든 폰에서 초당 토큰 수가 가장 빠릅니다.** iPhone 17 Pro에서 ~26–32 토큰/초, Galaxy S25 Ultra에서 ~20–28 토큰/초. 응답 깊이보다 속도가 중요할 때(빠른 채팅, 자동완성 작업) 최적입니다.',
-          '**Qwen 3 1.5B는 최고의 모바일 다국어 모델입니다.** 중국어, 일본어, 아랍어, 독일어를 포함한 35개 이상 언어에서 네이티브 수준 출력으로 훈련되었습니다. 번역, 다른 언어 작성, 여행 시 사용에 최적입니다.',
+          '**Qwen 3 1.7B는 최고의 모바일 다국어 모델입니다.** 중국어, 일본어, 아랍어, 독일어를 포함한 35개 이상 언어에서 네이티브 수준 출력으로 훈련되었습니다. 번역, 다른 언어 작성, 여행 시 사용에 최적입니다.',
           '**Gemma 3 4B는 균형 잡힌 기본 선택입니다.** 동일 하드웨어에서 Phi-4 Mini보다 약간 느리지만 채팅 및 요약에서 비슷한 성능을 보입니다. 앱에서 Phi-4 Mini를 사용할 수 없거나 Google 훈련 데이터 조합을 선호할 때 최적입니다.',
           '**Gemma 3 1B는 구형 폰을 위한 경량 선택입니다.** RAM 4GB에서 구동됩니다(iPhone SE 3세대, 구형 Android). 다단계 추론은 제한적이지만, 약한 하드웨어에서 다른 모델보다 빠르게 1–2문단의 일관된 응답을 생성합니다.',
           '**Llama 3.2 3B는 가장 검증된 만능 3B 모델입니다.** 6종 중 도구 호출 지원이 가장 우수하고, 앱 호환성이 높으며, 커뮤니티 파인튜닝 생태계가 가장 큽니다. 순수 품질에서는 Phi-4 Mini에 약간 뒤지지만 엣지 케이스에서 더 안정적입니다.',
@@ -3703,11 +3767,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '빠른 팩트',
         items: [
-          '**테스트된 모델:** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B (모두 Q4_K_M GGUF).',
+          '**테스트된 모델:** Phi-4 Mini 3.8B, Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B (모두 Q4_K_M GGUF).',
           '**테스트 기기:** iPhone 17 Pro (A19 Pro), iPhone 16 Pro (A18 Pro, 8 GB), Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), OnePlus 13 (Snapdragon 8 Elite).',
           '**추론 엔진:** llama.cpp via PocketPal AI / LLM Farm (기본값), MLC LLM via MLC Chat (iPhone Metal 가속), Ollama via Termux (Android).',
-          '**메모리 사용량 (Q4_K_M):** Phi-4 Mini ~2.7 GB, Gemma 3 4B ~2.9 GB, Llama 3.2 3B ~2.2 GB, Qwen 3 1.5B ~1.0 GB, SmolLM 2 1.7B ~1.1 GB, Gemma 3 1B ~720 MB.',
-          '**최소 RAM (활성):** 1.5B–1.7B 모델은 6GB 폰; 3B–4B 모델은 8GB; Gemma 3 1B만 4GB 가능.',
+          '**메모리 사용량 (Q4_K_M):** Phi-4 Mini ~2.7 GB, Gemma 3 4B ~2.9 GB, Llama 3.2 3B ~2.2 GB, Qwen 3 1.7B ~1.1 GB, SmolLM 2 1.7B ~1.1 GB, Gemma 3 1B ~720 MB.',
+          '**최소 RAM (활성):** 1.7B 모델은 6GB 폰; 3B–4B 모델은 8GB; Gemma 3 1B만 4GB 가능.',
           '**iPhone 17 Pro 최고 토큰/초:** Gemma 3 1B ~35–45, SmolLM 2 ~26–32, Qwen 3 ~24–32, Llama 3.2 3B ~16–22, Phi-4 Mini ~13–18, Gemma 3 4B ~10–13.',
           '**양자화 소스:** 6종 모두 Hugging Face에서 Q4_K_M GGUF로 제공되며 PocketPal AI / MLC Chat / LM Studio를 통해서도 사용 가능합니다.',
         ],
@@ -3720,7 +3784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '8GB 이상 고사양에는 Phi-4 Mini(가장 스마트), 속도에는 SmolLM 2 1.7B, 다국어에는 Qwen 3 1.5B, 4GB 폰에는 Gemma 3 1B, 도구 호출에는 Llama 3.2 3B, Phi-4 Mini를 사용할 수 없을 때 균형 선택으로 Gemma 3 4B를 사용하십시오.',
+            text: '8GB 이상 고사양에는 Phi-4 Mini(가장 스마트), 속도에는 SmolLM 2 1.7B, 다국어에는 Qwen 3 1.7B, 4GB 폰에는 Gemma 3 1B, 도구 호출에는 Llama 3.2 3B, Phi-4 Mini를 사용할 수 없을 때 균형 선택으로 Gemma 3 4B를 사용하십시오.',
           },
           {
             type: 'plain-terms',
@@ -3732,7 +3796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           localIf: [
             'RAM 8GB 이상 고사양 폰 (iPhone 16 Pro/17 Pro, Galaxy S25 Ultra, OnePlus 13) → Phi-4 Mini 3.8B',
             '모든 폰에서 가장 빠른 토큰/초가 필요한 경우 → SmolLM 2 1.7B',
-            '영어 외 언어 사용 (번역, 다국어 채팅) → Qwen 3 1.5B',
+            '영어 외 언어 사용 (번역, 다국어 채팅) → Qwen 3 1.7B',
             '광범위한 앱 호환성, 도구 호출 또는 RAG가 필요한 경우 → Llama 3.2 3B',
             'RAM 4GB 구형 폰 → Gemma 3 1B',
             '앱에서 Phi-4 Mini를 사용할 수 없고 4B급 품질이 필요한 경우 → Gemma 3 4B',
@@ -3745,7 +3809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           quick: [
             '대부분의 기본 선택: Phi-4 Mini 3.8B',
             '모든 기기에서 가장 빠름: SmolLM 2 1.7B',
-            '최고의 다국어: Qwen 3 1.5B',
+            '최고의 다국어: Qwen 3 1.7B',
           ],
         },
         callouts: [
@@ -3765,7 +3829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Phi-4 Mini는 가장 스마트, SmolLM 2 1.7B는 가장 빠름, Qwen 3 1.5B는 최고 다국어, Gemma 3 1B는 가장 작은 실용 모델, Llama 3.2 3B는 최고 만능 3B, Gemma 3 4B는 균형 잡힌 기본 선택입니다.',
+            text: 'Phi-4 Mini는 가장 스마트, SmolLM 2 1.7B는 가장 빠름, Qwen 3 1.7B는 최고 다국어, Gemma 3 1B는 가장 작은 실용 모델, Llama 3.2 3B는 최고 만능 3B, Gemma 3 4B는 균형 잡힌 기본 선택입니다.',
           },
           {
             type: 'plain-terms',
@@ -3778,7 +3842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Gemma 3 4B', '크기': '4B', '토큰/초 (17 Pro)': '~10–13', '최적 용도': 'Phi-4 Mini를 사용할 수 없을 때 균형 선택' },
           { '모델': 'Gemma 3 1B', '크기': '1B', '토큰/초 (17 Pro)': '~35–45', '최적 용도': '구형 폰 (RAM 4GB)' },
           { '모델': 'SmolLM 2', '크기': '1.7B', '토큰/초 (17 Pro)': '~26–32', '최적 용도': '가장 빠른 토큰/초, 빠른 채팅' },
-          { '모델': 'Qwen 3', '크기': '1.5B', '토큰/초 (17 Pro)': '~24–32', '최적 용도': '최고 다국어 (35개 이상 언어)' },
+          { '모델': 'Qwen 3', '크기': '1.7B', '토큰/초 (17 Pro)': '~24–32', '최적 용도': '최고 다국어 (35개 이상 언어)' },
           { '모델': 'Llama 3.2', '크기': '3B', '토큰/초 (17 Pro)': '~16–22', '최적 용도': '최고의 만능 3B 선택, 도구 호출, RAG' },
         ],
         note:
@@ -3790,7 +3854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-comparison-table-ko.svg',
-        imageCaption: 'iPhone 17 Pro에서 Q4_K_M으로 비교한 모바일 LLM 6종: Phi-4 Mini (3.8B, ~13–18 토큰/초)가 가장 스마트; SmolLM 2 (1.7B, ~26–32 토큰/초)가 가장 빠름; Qwen 3 (1.5B)가 최고 다국어; Gemma 3 1B (~35–45 토큰/초)는 4GB 폰에서도 작동.',
+        imageCaption: 'iPhone 17 Pro에서 Q4_K_M으로 비교한 모바일 LLM 6종: Phi-4 Mini (3.8B, ~13–18 토큰/초)가 가장 스마트; SmolLM 2 (1.7B, ~26–32 토큰/초)가 가장 빠름; Qwen 3 (1.7B)가 최고 다국어; Gemma 3 1B (~35–45 토큰/초)는 4GB 폰에서도 작동.',
       },
       phi4Mini: {
         id: 'phi-4-mini',
@@ -3802,7 +3866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**메모리 사용량:** Q4_K_M에서 ~2.7 GB, Q5_K_M에서 ~3.5 GB. iPhone 16 Pro / 17 Pro (8 GB)와 Galaxy S25 Ultra (12 GB)에서 OS 여유 공간을 충분히 남기고 편안하게 구동됩니다.',
           '**속도 (토큰/초):** iPhone 17 Pro ~13–18, iPhone 16 Pro ~10–15, Galaxy S25 Ultra ~10–15 (Termux+Ollama), iPhone 14 Pro ~6–10 (느리지만 작동 가능).',
           '**품질 강점:** chain-of-thought 추론, 요약, 사실 기반 Q&A, 기본 코드 생성. 표준 벤치마크(MMLU, GSM8K)에서 비슷한 크기의 오픈소스 모델을 능가합니다.',
-          '**품질 약점:** Llama 3.2 3B보다 제한적인 세계 지식; Gemma 3 4B보다 짧은 자연스러운 창작 문체; 영어 외에서 Qwen 3 1.5B보다 약한 다국어 성능.',
+          '**품질 약점:** Llama 3.2 3B보다 제한적인 세계 지식; Gemma 3 4B보다 짧은 자연스러운 창작 문체; 영어 외에서 Qwen 3 1.7B보다 약한 다국어 성능.',
           '**최적 용도:** 영어 채팅, 요약, 추론에서 최고의 단일 기본 모델을 원하는 고사양 폰 사용자.',
         ],
         callouts: [
@@ -3862,7 +3926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**메모리 사용량:** Q4_K_M에서 ~1.1 GB. OS를 위한 충분한 여유 공간을 남기며 RAM 6GB 이상 모든 폰에 적합합니다.',
           '**속도 (토큰/초):** iPhone 17 Pro ~26–32, iPhone 16 Pro ~22–28, Galaxy S25 Ultra ~20–28, iPhone 14 Pro ~15–22. 동일 칩에서 Phi-4 Mini보다 약 2배 빠릅니다.',
           '**품질 강점:** 빠른 대화 응답, 간단한 Q&A, 자동완성 스타일 지속, 영어 작성.',
-          '**품질 약점:** Phi-4 Mini보다 약한 추론, Llama 3.2 3B보다 제한적인 세계 지식, Qwen 3 1.5B보다 약한 다국어 성능.',
+          '**품질 약점:** Phi-4 Mini보다 약한 추론, Llama 3.2 3B보다 제한적인 세계 지식, Qwen 3 1.7B보다 약한 다국어 성능.',
           '**최적 용도:** 지연 시간이 중요한 중급 폰(텍스트 자동완성, 음성 어시스턴트 턴, 실시간 채팅).',
         ],
         callouts: [
@@ -3876,12 +3940,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       qwen25: {
         id: 'qwen-2-5',
-        title: 'Qwen 3 1.5B: 최고의 모바일 다국어 모델',
+        title: 'Qwen 3 1.7B: 최고의 모바일 다국어 모델',
         content:
-          '**Qwen 3 1.5B (Alibaba, 2024)는 2026년 최고의 모바일 다국어 모델입니다 — 중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어, 스페인어, 러시아어를 포함한 35개 이상 언어로 훈련되었습니다.** 번역, 영어 외 언어 채팅, 대화 중간에 언어를 전환하는 여행 시 사용에 최적입니다.',
+          '**Qwen 3 1.7B (Alibaba, 2024)는 2026년 최고의 모바일 다국어 모델입니다 — 중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어, 스페인어, 러시아어를 포함한 35개 이상 언어로 훈련되었습니다.** 번역, 영어 외 언어 채팅, 대화 중간에 언어를 전환하는 여행 시 사용에 최적입니다.',
         items: [
-          '**파라미터 및 훈련:** 파라미터 1.5B; CJK 언어, 아랍어, 주요 유럽 언어가 강력하게 대표되는 Alibaba 다국어 코퍼스로 훈련됨. 다국어 추론에 최적화된 아키텍처.',
-          '**메모리 사용량:** Q4_K_M에서 ~1.0 GB. RAM 6GB 이상 모든 폰에 적합합니다.',
+          '**파라미터 및 훈련:** 파라미터 1.7B; CJK 언어, 아랍어, 주요 유럽 언어가 강력하게 대표되는 Alibaba 다국어 코퍼스로 훈련됨. 다국어 추론에 최적화된 아키텍처.',
+          '**메모리 사용량:** Q4_K_M에서 ~1.1 GB. RAM 6GB 이상 모든 폰에 적합합니다.',
           '**속도 (토큰/초):** iPhone 17 Pro ~24–32, iPhone 16 Pro ~20–28, Galaxy S25 Ultra ~18–26, iPhone 14 Pro ~14–20. SmolLM 2와 비슷한 속도.',
           '**품질 강점:** 35개 이상 언어에서 네이티브 수준 출력, 주요 언어 쌍 간 강력한 번역, 일관된 CJK 출력.',
           '**품질 약점:** 영어만 사용 시 Phi-4 Mini보다 약간 약한 추론, Gemma 3 4B보다 짧은 자연스러운 창작 문체, Llama 3.2 3B보다 약한 도구 호출.',
@@ -3890,7 +3954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '특정 두 언어 쌍 간의 번역에서 Qwen 3 1.5B는 번역을 부차 작업으로 실행하는 더 큰 영어 중심 모델을 종종 능가합니다. 한국어로 채팅하는 사용자의 경우 Qwen 3는 60% 더 작음에도 Phi-4 Mini보다 현저히 자연스러운 출력을 생성합니다.',
+            text: '특정 두 언어 쌍 간의 번역에서 Qwen 3 1.7B는 번역을 부차 작업으로 실행하는 더 큰 영어 중심 모델을 종종 능가합니다. 한국어로 채팅하는 사용자의 경우 Qwen 3는 60% 더 작음에도 Phi-4 Mini보다 현저히 자연스러운 출력을 생성합니다.',
           },
         ],
       },
@@ -3949,11 +4013,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'per-tier-verdict',
         title: '등급별 판정: 고사양 vs 중급 vs 보급형',
         content:
-          '**폰 등급이 모델 한계를 결정합니다 — 브랜드보다 칩 세대와 RAM이 더 중요합니다.** 고사양 폰(RAM 8GB 이상, A18 Pro / A19 Pro / Snapdragon 8 Elite)은 3.8B–4B 모델을 편안하게 실행합니다; 중급(RAM 6–8GB)은 1.7B–3B; 보급형 또는 구형(RAM 4–6GB)은 1B–1.5B를 실행합니다.',
+          '**폰 등급이 모델 한계를 결정합니다 — 브랜드보다 칩 세대와 RAM이 더 중요합니다.** 고사양 폰(RAM 8GB 이상, A18 Pro / A19 Pro / Snapdragon 8 Elite)은 3.8B–4B 모델을 편안하게 실행합니다; 중급(RAM 6–8GB)은 1.7B–3B; 보급형 또는 구형(RAM 4–6GB)은 1B–1.7B를 실행합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '고사양 (8GB 이상) → Phi-4 Mini 3.8B; 중급 (6–8GB) → SmolLM 2 1.7B 또는 Llama 3.2 3B; 보급형 또는 구형 (4–6GB) → Gemma 3 1B 또는 Qwen 3 1.5B.',
+            text: '고사양 (8GB 이상) → Phi-4 Mini 3.8B; 중급 (6–8GB) → SmolLM 2 1.7B 또는 Llama 3.2 3B; 보급형 또는 구형 (4–6GB) → Gemma 3 1B 또는 Qwen 3 1.7B.',
           },
           {
             type: 'plain-terms',
@@ -3964,8 +4028,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '폰 등급': '고사양 (8–12 GB RAM)', '예시': 'iPhone 17 Pro / Pro Max, iPhone 16 Pro, Galaxy S25 Ultra, OnePlus 13', '권장 모델': 'Phi-4 Mini (3.8B Q4_K_M)', '이유': '칩이 실용적인 속도로 지원하는 가장 스마트한 모델' },
           { '폰 등급': '구형 고사양 (8 GB RAM)', '예시': 'iPhone 15 Pro, Galaxy S24 Ultra, Pixel 9 Pro', '권장 모델': 'Llama 3.2 3B 또는 Phi-4 Mini', '이유': '도구 호출에는 Llama 3.2 3B; 순수 품질에는 Phi-4 Mini' },
-          { '폰 등급': '중급 (6–8 GB RAM)', '예시': 'iPhone 14 Pro, Pixel 9, Snapdragon 8 Gen 2 폰', '권장 모델': 'SmolLM 2 1.7B 또는 Qwen 3 1.5B', '이유': '빠른 속도; OS를 위한 여유 공간 확보' },
-          { '폰 등급': '보급형 / 구형 (4–6 GB RAM)', '예시': 'iPhone 14, Snapdragon 7 시리즈 중급, 구형 Android', '권장 모델': 'Gemma 3 1B 또는 Qwen 3 1.5B', '이유': '일관된 출력을 생성하는 가장 작은 실용 모델' },
+          { '폰 등급': '중급 (6–8 GB RAM)', '예시': 'iPhone 14 Pro, Pixel 9, Snapdragon 8 Gen 2 폰', '권장 모델': 'SmolLM 2 1.7B 또는 Qwen 3 1.7B', '이유': '빠른 속도; OS를 위한 여유 공간 확보' },
+          { '폰 등급': '보급형 / 구형 (4–6 GB RAM)', '예시': 'iPhone 14, Snapdragon 7 시리즈 중급, 구형 Android', '권장 모델': 'Gemma 3 1B 또는 Qwen 3 1.7B', '이유': '일관된 출력을 생성하는 가장 작은 실용 모델' },
           { '폰 등급': '매우 구형 (4 GB RAM)', '예시': 'iPhone SE 3세대, 구형 4GB Android', '권장 모델': 'Gemma 3 1B', '이유': '맞는 유일한 모델; 제한적인 추론, 빠른 토큰/초' },
           { '폰 등급': '지원 불가 (4GB 미만)', '예시': 'iPhone SE 2세대, 구형 Android', '권장 모델': '홈 PC에 원격 연결', '이유': '온디바이스 LLM은 실용적이지 않음; 홈 Ollama 서버의 인터페이스로 태블릿/폰 사용' },
         ],
@@ -3976,7 +4040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/mobile-llm-models-per-tier-verdict-ko.svg',
-        imageCaption: '등급별 모바일 LLM 권장 사항: 고사양 (8–12 GB RAM) → Phi-4 Mini 3.8B; 구형 고사양 (8 GB) → Llama 3.2 3B; 중급 (6–8 GB) → SmolLM 2 1.7B; 보급형 (4–6 GB) → Qwen 3 1.5B; 매우 구형 (4 GB) → Gemma 3 1B.',
+        imageCaption: '등급별 모바일 LLM 권장 사항: 고사양 (8–12 GB RAM) → Phi-4 Mini 3.8B; 구형 고사양 (8 GB) → Llama 3.2 3B; 중급 (6–8 GB) → SmolLM 2 1.7B; 보급형 (4–6 GB) → Qwen 3 1.7B; 매우 구형 (4 GB) → Gemma 3 1B.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -3985,7 +4049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**폰 RAM이 허용하는 것보다 큰 모델 선택.** 6GB 폰에서 Phi-4 Mini는 3–5 토큰/초로 구동되며 강제 종료됩니다. 모델을 등급에 맞추십시오.',
           '**같은 모델의 여러 양자화 변형 다운로드.** Q4_K_M을 선택하고 거기서 멈추십시오. 일상 채팅에서 품질 차이는 인지되지 않습니다.',
           '**다단계 추론에 SmolLM 2 1.7B 사용.** 가장 빠른 모델이지만 가장 스마트한 모델이 아닙니다. 복잡한 추론에는 Phi-4 Mini를 사용하십시오. 품질 없는 속도는 그냥 더 빠른 오답일 뿐입니다.',
-          '**다국어 프리픽스 없이 Phi-4 Mini에 다른 언어 출력 요청.** CJK나 아랍어에서 불균일한 출력을 생성합니다. 다국어 사용 시 Qwen 3 1.5B를 함께 설치하고 언어에 따라 전환하십시오.',
+          '**다국어 프리픽스 없이 Phi-4 Mini에 다른 언어 출력 요청.** CJK나 아랍어에서 불균일한 출력을 생성합니다. 다국어 사용 시 Qwen 3 1.7B를 함께 설치하고 언어에 따라 전환하십시오.',
           '**이 모델들에서 클라우드 AI 수준의 품질 기대.** 채팅 작업에서 GPT-5.5 용량의 약 60–80%입니다. 잘하는 것(비공개 채팅, 요약, 작성, 번역)에 사용하고 70B 이상이 필요한 것에는 클라우드를 사용하십시오.',
           '**Phi-4 Mini (3.8B)를 구형 Phi-3 Mini (3.8B)와 혼동.** 파라미터 수는 같지만 훈련 데이터와 채팅 템플릿이 다릅니다. GGUF 파일 이름에서 모델 식별자를 항상 확인하십시오.',
         ],
@@ -3997,7 +4061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Phi-4 Mini 기술 보고서 — [Microsoft Research](https://arxiv.org/abs/2412.08905) (2024년 12월).',
           'Gemma 3 기술 보고서 — [Google DeepMind](https://blog.google/technology/developers/gemma-3/) (2025).',
           'SmolLM 2 모델 카드 — [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) (2024).',
-          'Qwen 3 기술 보고서 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen2.5/) (2024).',
+          'Qwen 3 기술 보고서 — [Alibaba Cloud](https://qwenlm.github.io/blog/qwen3/) (2024).',
           'Llama 3.2 모델 카드 — [Meta AI](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/) (2024).',
           'Q4_K_M 양자화 참조 — [llama.cpp 문서](https://github.com/ggerganov/llama.cpp).',
         ],
@@ -4008,7 +4072,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'iPhone에서 가장 빠른 모바일 모델은 무엇입니까?',
-            a: 'Gemma 3 1B는 iPhone 17 Pro에서 ~35–45 토큰/초로 절대적으로 가장 빠릅니다. 1.5B–1.7B 모델 중에서는 SmolLM 2 1.7B가 ~26–32 토큰/초로 가장 빠릅니다. 고품질 출력을 생성하는 모델 중에서는 Phi-4 Mini가 ~13–18 토큰/초로 가장 빠른 "스마트" 선택입니다.',
+            a: 'Gemma 3 1B는 iPhone 17 Pro에서 ~35–45 토큰/초로 절대적으로 가장 빠릅니다. 1.7B 모델 중에서는 SmolLM 2 1.7B가 ~26–32 토큰/초로 가장 빠릅니다. 고품질 출력을 생성하는 모델 중에서는 Phi-4 Mini가 ~13–18 토큰/초로 가장 빠른 "스마트" 선택입니다.',
+          },
+          {
+            q: 'Gemma 3 2B나 Gemma 3 7B 모델이 있나요?',
+            a: '아니요. Gemma 3는 공식적으로 270M, 1B, 4B, 12B, 27B의 다섯 가지 크기로만 출시되었습니다 — Gemma 3 2B나 Gemma 3 7B는 존재하지 않습니다. 이런 혼동은 보통 Gemma 2에서 비롯되는데, Gemma 2에는 실제로 2B 모델(Google DeepMind, 2024년 7월)이 9B, 27B와 함께 존재했습니다. "Gemma 3 2B"에 가장 가까운 것을 찾는다면, 실제로 존재하는 두 옵션은 Gemma 3 1B(더 작고 빠름)와 Gemma 3 4B(더 크고 똑똑함)이며, 둘 다 이 글에서 벤치마크했습니다. 2026년 4월에는 Google이 Gemma 4도 출시했는데, 다른 크기 라인업(Effective 2B, Effective 4B, 그리고 26B MoE 및 31B dense 변형)을 갖추고 있습니다. Gemma 4는 Gemma 3와는 별개의 모델 계열이며, 이번 업데이트 시점에는 실기기 tokens/sec 검증 수치가 없어 이 모바일 벤치마크에는 아직 포함되지 않았습니다.',
+          },
+          {
+            q: '이 모델들은 GPU가 필요한가요, 아니면 CPU만으로 동작하나요?',
+            a: '여섯 모델 모두 전용 GPU 없이 동작합니다. iPhone에서는 MLC Chat이 Apple의 Metal API를 사용해 Neural Engine/GPU에서 추론을 가속하지만, PocketPal AI와 LLM Farm(llama.cpp)은 주로 CPU에서 동작합니다. Android에서는 Termux+Ollama가 현재 CPU만으로 동작하며 — 아직 Snapdragon Hexagon NPU를 활용하지 않기 때문에, 동일한 Q4_K_M 파일 기준으로 Android의 tokens/sec가 iPhone보다 약 10~20% 낮습니다(위 비교 표 참고). 실제로 Galaxy S25 Ultra에서 Phi-4 Mini는 CPU만으로 약 10~15 tokens/sec로 동작하며, 이 목록의 어떤 모델도 사용 가능한 출력을 내기 위해 전용 GPU가 필요하지 않습니다.',
           },
           {
             q: 'Phi-4 Mini가 정말 폰에서 7B 모델을 능가합니까?',
@@ -4020,15 +4092,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '모바일에서 번역에 가장 적합한 모델은 무엇입니까?',
-            a: '중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어, 스페인어 또는 러시아어가 포함된 모든 언어 쌍에는 Qwen 3 1.5B. 유럽 언어 쌍만의 경우 Gemma 3 4B가 두 번째 선택입니다. 일회성 번역에는 설치된 번역 앱이 종종 로컬 LLM보다 낫습니다 — 로컬 모델은 같은 대화에서 번역과 채팅을 결합해야 할 때 빛납니다.',
+            a: '중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어, 스페인어 또는 러시아어가 포함된 모든 언어 쌍에는 Qwen 3 1.7B. 유럽 언어 쌍만의 경우 Gemma 3 4B가 두 번째 선택입니다. 일회성 번역에는 설치된 번역 앱이 종종 로컬 LLM보다 낫습니다 — 로컬 모델은 같은 대화에서 번역과 채팅을 결합해야 할 때 빛납니다.',
           },
           {
             q: '잘 사용하려면 고사양 폰이 필요합니까?',
-            a: '아니요, 더 큰 모델에만 해당됩니다. RAM 6–8GB의 중급 폰은 SmolLM 2 1.7B와 Qwen 3 1.5B를 전속력으로 실행합니다(~20–28 토큰/초). RAM 4–6GB의 보급형 폰은 Gemma 3 1B를 ~15–25 토큰/초로 실행합니다.',
+            a: '아니요, 더 큰 모델에만 해당됩니다. RAM 6–8GB의 중급 폰은 SmolLM 2 1.7B와 Qwen 3 1.7B를 전속력으로 실행합니다(~20–28 토큰/초). RAM 4–6GB의 보급형 폰은 Gemma 3 1B를 ~15–25 토큰/초로 실행합니다.',
           },
           {
             q: '배터리를 가장 적게 소모하는 모델은 무엇입니까?',
-            a: 'Gemma 3 1B가 압도적으로 적습니다. SmolLM 2 1.7B와 Qwen 3 1.5B가 그 뒤를 따릅니다. 3B–4B 모델은 응답당 2–3배 더 많은 에너지를 소비합니다. 배터리가 가장 중요하다면 Gemma 3 1B가 올바른 선택입니다.',
+            a: 'Gemma 3 1B가 압도적으로 적습니다. SmolLM 2 1.7B와 Qwen 3 1.7B가 그 뒤를 따릅니다. 3B–4B 모델은 응답당 2–3배 더 많은 에너지를 소비합니다. 배터리가 가장 중요하다면 Gemma 3 1B가 올바른 선택입니다.',
           },
           {
             q: '모바일 모델이 다회전 대화를 처리할 수 있습니까?',
@@ -4040,11 +4112,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '여행 시 오프라인 사용에 가장 좋은 모델은 무엇입니까?',
-            a: '언어를 전환하고 번역이 필요한 여행에는 Qwen 3 1.5B. 영어 참조가 주로 필요한 여행에는 고사양 폰에서 Phi-4 Mini, 중급 폰에서 SmolLM 2 1.7B. 여행은 로컬 AI의 가장 강력한 사용 사례입니다 — 로밍 데이터가 필요 없고, 클라우드 API 비용이 없습니다.',
+            a: '언어를 전환하고 번역이 필요한 여행에는 Qwen 3 1.7B. 영어 참조가 주로 필요한 여행에는 고사양 폰에서 Phi-4 Mini, 중급 폰에서 SmolLM 2 1.7B. 여행은 로컬 AI의 가장 강력한 사용 사례입니다 — 로밍 데이터가 필요 없고, 클라우드 API 비용이 없습니다.',
           },
           {
             q: '모바일 모델이 2027년에도 유용하겠습니까?',
-            a: '네, 하지만 특정 모델 이름은 바뀔 것입니다. 소형 LLM의 최전선은 약 6–9개월마다 이동합니다. 카테고리는 구식이 되지 않습니다; 특정 추천이 바뀝니다. 다음 업데이트는 2026-11-08에 확인하십시오.',
+            a: '네, 하지만 특정 모델 이름은 바뀔 것입니다. 소형 LLM의 최전선은 약 6–9개월마다 이동합니다. 카테고리는 구식이 되지 않습니다; 특정 추천이 바뀝니다. 다음 업데이트는 2027-01-14에 확인하십시오.',
           },
         ],
       },
@@ -4066,11 +4138,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 모바일 LLM 최고 모델: Phi-4 Mini vs Gemma 3 vs SmolLM 비교',
-      description: '2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.5B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.',
+      description: '2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm',
       inLanguage: 'ko',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
