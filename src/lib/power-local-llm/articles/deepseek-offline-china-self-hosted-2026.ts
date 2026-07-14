@@ -177,6 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — match your card to a distill plus the Ollama command',
           '[DeepSeek-R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — every distill by quant with VRAM and min-GPU',
           '[Best Local Reasoning Model 2026: DeepSeek-R1 Ranked](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — the full ranked reasoning guide',
+          '[Best Local LLM for Mainland-China-Compliant Deployments?](/prompt-bites/best-china-compliant-local-llm) — which model family to pick, not just how to run it offline.',
         ],
       },
       updateLog: {
@@ -364,6 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Bester DeepSeek-Distill für Ihre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — passen Sie Ihre Karte an einen Distill an, inklusive Ollama-Befehl',
           '[DeepSeek-R1-Distill VRAM-Spickzettel](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — jeder Distill nach Quant mit VRAM und Mindest-GPU',
           '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 im Ranking](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — der vollständige gerankte Reasoning-Leitfaden',
+          '[Bester lokaler LLM für Festland-China-konforme Bereitstellungen?](/de/prompt-bites/best-china-compliant-local-llm) — welche Modellfamilie Sie wählen sollten, nicht nur wie man sie offline betreibt.',
         ],
       },
       updateLog: {
@@ -551,6 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Meilleur distill DeepSeek pour votre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — associez votre carte à un distill avec la commande Ollama',
           '[Aide-mémoire VRAM des distills DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — chaque distill par quant avec VRAM et GPU minimal',
           '[Meilleur modèle de raisonnement local 2026 : DeepSeek-R1 classé](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — le guide complet de raisonnement classé',
+          '[Meilleur LLM local pour des déploiements conformes à la Chine continentale ?](/fr/prompt-bites/best-china-compliant-local-llm) — quelle famille de modèles choisir, pas seulement comment la faire tourner hors ligne.',
         ],
       },
       updateLog: {
@@ -738,6 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[あなたのGPUに最適なDeepSeek distill](/prompt-bites/best-deepseek-distill-for-your-gpu) — カードをdistillに合わせ、Ollamaコマンドも掲載',
           '[DeepSeek-R1 distill VRAMチートシート](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — quantごとの全distillとVRAM・最小GPU',
           '[最良のローカル推論モデル 2026：DeepSeek-R1ランキング](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 完全なランク付き推論ガイド',
+          '[中国本土向けコンプライアンス対応デプロイに最適なローカルLLMは？](/ja/prompt-bites/best-china-compliant-local-llm) — オフラインでの実行方法だけでなく、どのモデルファミリーを選ぶべきか。',
         ],
       },
       updateLog: {
@@ -925,6 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[适配你 GPU 的最佳 DeepSeek 蒸馏版](/prompt-bites/best-deepseek-distill-for-your-gpu) — 把你的显卡与蒸馏版匹配，附 Ollama 命令',
           '[DeepSeek-R1 蒸馏版 VRAM 速查表](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 按量化列出每个蒸馏版的 VRAM 与最低 GPU',
           '[2026 最佳本地推理模型：DeepSeek-R1 排名](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 完整的推理排名指南',
+          '[适合中国大陆合规部署的最佳本地LLM是什么？](/zh/prompt-bites/best-china-compliant-local-llm) — 应该选择哪个模型系列，而不仅仅是如何离线运行。',
         ],
       },
       updateLog: {
@@ -1112,6 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[El mejor distill de DeepSeek para tu GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — empareja tu tarjeta con un distill junto al comando de Ollama',
           '[Chuleta de VRAM de los distills DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — cada distill por cuantización con VRAM y GPU mínima',
           '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 clasificado](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — la guía completa de razonamiento clasificada',
+          '[¿Mejor LLM local para despliegues conformes con la China continental?](/es/prompt-bites/best-china-compliant-local-llm) — qué familia de modelos elegir, no solo cómo ejecutarla sin conexión.',
         ],
       },
       updateLog: {
@@ -1299,6 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Melhor distill do DeepSeek para sua GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — combine sua placa com um distill, junto com o comando do Ollama',
           '[Folha de consulta de VRAM dos distills DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — cada distill por quantização com VRAM e GPU mínima',
           '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 classificado](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — o guia completo de raciocínio classificado',
+          '[Melhor LLM local para implantações em conformidade com a China continental?](/pt/prompt-bites/best-china-compliant-local-llm) — qual família de modelos escolher, não apenas como executá-la offline.',
         ],
       },
       updateLog: {
@@ -1486,6 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل distill من DeepSeek لوحدة GPU لديك](/prompt-bites/best-deepseek-distill-for-your-gpu) — طابِق بطاقتك مع distill مع أمر Ollama',
           '[ورقة VRAM المرجعية لـ distill من DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — كل distill حسب التكميم مع VRAM وأدنى GPU',
           '[أفضل نموذج استدلال محلي 2026: تصنيف DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — دليل الاستدلال المصنّف الكامل',
+          '[أفضل LLM محلي للنشر المتوافق مع الصين القارية؟](/ar/prompt-bites/best-china-compliant-local-llm) — عائلة النماذج التي يجب اختيارها، وليس فقط كيفية تشغيلها دون اتصال.',
         ],
       },
       updateLog: {
@@ -1673,6 +1681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[당신의 GPU에 맞는 최적의 DeepSeek distill](/prompt-bites/best-deepseek-distill-for-your-gpu) — 카드를 distill에 맞추고 Ollama 명령까지',
           '[DeepSeek-R1 distill VRAM 치트시트](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 양자화별 각 distill의 VRAM과 최소 GPU',
           '[최고의 로컬 추론 모델 2026: DeepSeek-R1 순위](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 완전한 순위 추론 가이드',
+          '[중국 본토 규정 준수 배포를 위한 최고의 로컬 LLM은?](/ko/prompt-bites/best-china-compliant-local-llm) — 오프라인 실행 방법뿐 아니라 어떤 모델 계열을 선택해야 하는지.',
         ],
       },
       updateLog: {

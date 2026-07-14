@@ -412,6 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Running 70B Models on Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max) -- Native 70B at Q5 quality without VRAM limits: how unified memory changes quantization decisions.',
             '[Ollama on Mac: Apple Silicon Setup Guide 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Run quantized GGUF models on Mac with automatic Metal GPU acceleration.',
             '[Whisper on Apple Silicon 2026](/local-llms/apple-silicon-whisper-metal-benchmark) -- Metal and Core ML benchmarks for Whisper STT across quantization levels on M1–M5.',
+            '[GGUF vs GPTQ vs AWQ: Which Quantization Format Should You Use?](/prompt-bites/gguf-vs-gptq-vs-awq) -- how this guide\'s GGUF focus compares to the GPU-only GPTQ and AWQ formats used in production serving.',
           ],
         },
         nextSteps: {
@@ -1010,6 +1011,7 @@ schema: {
             '[Ejecutar modelos 70B en Apple Silicon M5 Max](/es/local-llms/running-70b-models-apple-silicon-m5-max) — 70B nativo en Q5 sin límites de VRAM: cómo la memoria unificada cambia las decisiones de cuantización.',
             '[Ollama en Mac: guía de configuración Apple Silicon 2026](/es/local-llms/ollama-on-mac-apple-silicon-setup-2026) — Ejecuta modelos GGUF cuantizados en Mac con aceleración GPU Metal automática.',
             '[Whisper en Apple Silicon 2026](/es/local-llms/apple-silicon-whisper-metal-benchmark) — Benchmarks Metal y Core ML para Whisper STT en niveles de cuantización en M1–M5.',
+            '[GGUF vs GPTQ vs AWQ: ¿qué formato de cuantización deberías usar?](/es/prompt-bites/gguf-vs-gptq-vs-awq) -- cómo se compara el enfoque en GGUF de esta guía con los formatos exclusivos para GPU GPTQ y AWQ usados en producción.',
           ],
         },
         nextSteps: {
@@ -1569,6 +1571,7 @@ schema: {
             '[تشغيل نماذج 70B على Apple Silicon M5 Max](/ar/local-llms/running-70b-models-apple-silicon-m5-max) — 70B أصلي بصيغة Q5 دون حدود VRAM: كيف تغيّر الذاكرة الموحدة قرارات التكميم.',
             '[Ollama على Mac: دليل إعداد Apple Silicon 2026](/ar/local-llms/ollama-on-mac-apple-silicon-setup-2026) — شغّل نماذج GGUF مكمَّمة على Mac بتسريع GPU من Metal تلقائياً.',
             '[Whisper على Apple Silicon 2026](/ar/local-llms/apple-silicon-whisper-metal-benchmark) — اختبارات Metal وCore ML لـ Whisper STT عند مستويات تكميم على M1–M5.',
+            '[GGUF مقابل GPTQ مقابل AWQ: ما صيغة التكميم التي يجب استخدامها؟](/ar/prompt-bites/gguf-vs-gptq-vs-awq) -- كيف تتم مقارنة تركيز هذا الدليل على GGUF بصيغتي GPTQ وAWQ المخصصتين لوحدات GPU فقط والمستخدمتين في الإنتاج.',
           ],
         },
         nextSteps: {
@@ -2133,6 +2136,7 @@ schema: {
             '[Calculadora de VRAM para LLMs locais](/pt/local-llms/vram-calculator-local-llm) — Calculadora interativa para VRAM exata com modelos Q4/Q5/Q8.',
             '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Requisitos de GPU, CPU e RAM para modelos quantizados em cada tamanho.',
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — Configuração passo a passo para executar modelos Q4_K_M com Ollama.',
+            '[GGUF vs GPTQ vs AWQ: qual formato de quantização você deve usar?](/pt/prompt-bites/gguf-vs-gptq-vs-awq) -- como o foco em GGUF deste guia se compara aos formatos exclusivos para GPU GPTQ e AWQ usados em produção.',
           ],
         },
         nextSteps: {
@@ -2499,6 +2503,7 @@ schema: {
             '[70B-Modelle auf Apple Silicon M5 Max](/de/local-llms/running-70b-models-apple-silicon-m5-max) -- Nativer 70B-Betrieb ohne VRAM-Grenzen: wie Unified Memory Quantisierungsentscheidungen ändert.',
             '[Ollama auf Mac: Apple Silicon Setup 2026](/de/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Quantisierte GGUF-Modelle auf Mac mit automatischer Metal GPU-Beschleunigung ausführen.',
             '[Whisper auf Apple Silicon 2026](/de/local-llms/apple-silicon-whisper-metal-benchmark) -- Metal- und Core ML-Benchmarks für Whisper STT-Quantisierung über M1–M5.',
+            '[GGUF vs. GPTQ vs. AWQ: Welches Quantisierungsformat sollten Sie verwenden?](/de/prompt-bites/gguf-vs-gptq-vs-awq) -- wie der GGUF-Fokus dieses Leitfadens im Vergleich zu den reinen GPU-Formaten GPTQ und AWQ abschneidet, die im Produktions-Serving verwendet werden.',
           ],
         },
         nextSteps: {
@@ -3066,6 +3071,7 @@ schema: {
             '[Modèles 70B sur Apple Silicon M5 Max](/fr/local-llms/running-70b-models-apple-silicon-m5-max) -- 70B natif sans limite VRAM : comment la mémoire unifiée change les décisions de quantification.',
             '[Ollama sur Mac : Guide Apple Silicon 2026](/fr/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Exécuter des modèles GGUF quantifiés sur Mac avec accélération Metal GPU automatique.',
             '[Whisper sur Apple Silicon 2026](/fr/local-llms/apple-silicon-whisper-metal-benchmark) -- Benchmarks Metal et Core ML pour la quantification Whisper STT sur M1–M5.',
+            '[GGUF vs GPTQ vs AWQ : quel format de quantisation utiliser ?](/fr/prompt-bites/gguf-vs-gptq-vs-awq) -- comment l\'orientation GGUF de ce guide se compare aux formats GPU uniquement GPTQ et AWQ utilisés en production.',
           ],
         },
         nextSteps: {
@@ -3615,6 +3621,7 @@ schema: {
             '[Apple Silicon M5 Maxで70Bモデルを実行](/ja/local-llms/running-70b-models-apple-silicon-m5-max) -- VRAMの制限なしにネイティブ70B：ユニファイドメモリが量子化決定をどう変えるか。',
             '[MacでOllama：Apple Siliconセットアップ2026](/ja/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- Metal GPU自動加速で量子化GGUFモデルをMacで実行。',
             '[Apple Silicon 2026でのWhisper](/ja/local-llms/apple-silicon-whisper-metal-benchmark) -- M1-M5でのWhisper STT量子化のMetalとCore MLベンチマーク。',
+            '[GGUF対GPTQ対AWQ：どの量子化形式を使うべきか？](/ja/prompt-bites/gguf-vs-gptq-vs-awq) -- 本ガイドが重視するGGUFが、本番サービングで使われるGPU専用形式のGPTQやAWQとどう違うか。',
           ],
         },
         nextSteps: {
@@ -4163,6 +4170,7 @@ schema: {
             '[在Apple Silicon M5 Max上运行70B模型](/zh/local-llms/running-70b-models-apple-silicon-m5-max)----无VRAM限制的原生70B：统一内存如何改变量化决策。',
             '[Mac上的Ollama：Apple Silicon设置2026](/zh/local-llms/ollama-on-mac-apple-silicon-setup-2026)----使用Metal GPU自动加速在Mac上运行量化GGUF模型。',
             '[Apple Silicon 2026上的Whisper](/zh/local-llms/apple-silicon-whisper-metal-benchmark)----M1-M5上Whisper STT量化的Metal和Core ML基准测试。',
+            '[GGUF对比GPTQ对比AWQ：应该使用哪种量化格式？](/zh/prompt-bites/gguf-vs-gptq-vs-awq) -- 本指南侧重的GGUF与生产环境中使用的纯GPU格式GPTQ和AWQ相比如何。',
           ],
         },
         nextSteps: {
@@ -4704,6 +4712,7 @@ schema: {
             '[Apple Silicon M5 Max에서 70B 모델 실행](/local-llms/running-70b-models-apple-silicon-m5-max) — VRAM 제한 없이 Q5 품질로 70B 네이티브 실행: 통합 메모리가 양자화 결정을 어떻게 바꾸는가.',
             '[Mac의 Ollama: Apple Silicon 설정 가이드 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) — 자동 Metal GPU 가속으로 Mac에서 양자화 GGUF 모델 실행.',
             '[Apple Silicon Whisper 2026](/local-llms/apple-silicon-whisper-metal-benchmark) — M1–M5에서 양자화 수준별 Whisper STT Metal 및 Core ML 벤치마크.',
+            '[GGUF 대 GPTQ 대 AWQ: 어떤 양자화 형식을 사용해야 하는가?](/ko/prompt-bites/gguf-vs-gptq-vs-awq) -- 이 가이드가 중점을 두는 GGUF가 프로덕션 서빙에 사용되는 GPU 전용 형식인 GPTQ 및 AWQ와 어떻게 비교되는지.',
           ],
         },
         nextSteps: {
