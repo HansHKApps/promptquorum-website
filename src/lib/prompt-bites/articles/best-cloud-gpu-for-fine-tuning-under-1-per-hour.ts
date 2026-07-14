@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**For fine-tuning Llama 3.3 8B or Qwen3 14B with QLoRA in 2026, a single A40 48GB on RunPod spot at $0.44/hr or an RTX 4090 24GB on Vast.ai at $0.32–0.48/hr both work well under $1/hour. Vast.ai RTX 3090 (24 GB) is now available at $0.13/hr for budget-constrained 7B runs. A full fine-tuning run costs $2–8 total.**',
     quickAnswerTop: {
@@ -164,6 +165,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**Für Fine-Tuning von Llama 3.3 8B oder Qwen3 14B mit QLoRA 2026 funktioniert ein einzelner A40 48GB auf RunPod Spot für 0,44 $/Stunde oder eine RTX 4090 24GB auf Vast.ai für 0,32–0,48 $/Stunde gut unter 1 $/Stunde. Ein vollständiger Fine-Tuning-Durchlauf kostet 2–8 $ gesamt.**',
     quickAnswerTop: {
@@ -289,6 +291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**Pour fine-tuner Llama 3.3 8B ou Qwen3 14B avec QLoRA en 2026, un A40 48 Go sur RunPod spot à 0,44 $/h ou une RTX 4090 24 Go sur Vast.ai à 0,32–0,48 $/h fonctionnent bien sous 1 $/heure. Un run complet de fine-tuning coûte 2–8 $ au total.**',
     quickAnswerTop: {
@@ -412,6 +415,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**2026年にQLoRAでLlama 3.3 8BまたはQwen3 14Bをファインチューニングするには、RunPodスポットのA40 48GB（0.44ドル/時）またはVast.aiのRTX 4090 24GB（0.32〜0.48ドル/時）が時間1ドル以下で有効。完全なファインチューニング実行の合計コストは2〜8ドル。**',
     quickAnswerTop: {
@@ -535,6 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**2026年使用QLoRA微调Llama 3.3 8B或Qwen3 14B，RunPod竞价实例上的A40 48GB（0.44美元/小时）或Vast.ai上的RTX 4090 24GB（0.32–0.48美元/小时）都能在1美元/小时以内完成。完整微调运行总成本2–8美元。**',
     quickAnswerTop: {
@@ -667,6 +672,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**Para fine-tuning de Llama 3.3 8B o Qwen3 14B con QLoRA en 2026, un A40 48GB en RunPod spot a $0.44/hora o una RTX 4090 24GB en Vast.ai a $0.32–0.48/hora funcionan bien por menos de $1/hora. Un run completo de fine-tuning cuesta $2–8 en total.**',
     quickAnswerTop: {
@@ -817,6 +823,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**Para fine-tuning de Llama 3.3 8B ou Qwen3 14B com QLoRA em 2026, um A40 48GB no RunPod spot a $0,44/hora ou uma RTX 4090 24GB no Vast.ai a $0,32–0,48/hora funcionam bem por menos de $1/hora. Uma execução completa de fine-tuning custa $2–8 no total.**',
     quickAnswerTop: {
@@ -967,6 +974,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/ar/local-llms/cloud-gpu-rental-comparison-2026',
     leadAnswerBlock: '**للضبط الدقيق لـ Llama 3.3 8B أو Qwen3 14B بـ QLoRA في 2026، يعمل كلٌّ من A40 48GB على RunPod بالعروض الفورية بـ0.44 دولار/ساعة أو RTX 4090 24GB على Vast.ai بـ0.32–0.48 دولار/ساعة بكفاءة عالية بأقل من دولار/ساعة. تكلف جلسة الضبط الدقيق الكاملة 2–8 دولارات إجمالاً.**',
     quickAnswerTop: {

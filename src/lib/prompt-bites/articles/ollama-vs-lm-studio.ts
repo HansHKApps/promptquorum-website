@@ -133,6 +133,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama vs. LM Studio 2026: Welches lokale LLM-Tool?',
     metaDescription: 'Ollama (Port 11434): Terminal und APIs. LM Studio (Port 1234): GUI-Oberfläche. Beide kostenlos, Modelle laufen lokal. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-31',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -210,6 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama vs LM Studio ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Ollama (port 11434) pour terminal et API. LM Studio (port 1234) pour interface graphique. Gratuits, modèles en local. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -287,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama vs LM Studio？ | Prompt Bites | PromptQuorum',
     metaDescription: 'ターミナルを使用してAPIで開発するならOllamaを選んでください。GUIを好む場合はLM Studioを使用してください。両方とも無料でローカルでモデルを実行します。PromptQuorumによる簡潔な回答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -364,6 +367,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama vs LM Studio？| Prompt Bites | PromptQuorum',
     metaDescription: '如果使用终端并通过 API 开发，选 Ollama。如果想要图形界面，使用 LM Studio。两者均免费且在本地运行模型。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -441,6 +445,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
     metaDescription: 'Se você usa terminal e desenvolve com APIs, escolha Ollama. Se prefere GUI e quer apenas conversar com modelos, use LM Studio. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
@@ -525,6 +530,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
     metaDescription: 'Si usas terminal y desarrollas con APIs, elige Ollama. Si prefieres GUI y quieres chatear con modelos, usa LM Studio. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
@@ -609,6 +615,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Ollama⁩ مقابل ⁨LM Studio 2026⁩: أيهما للمطور؟',
     metaDescription: 'استخدم ⁨Ollama⁩ للطرفية والبناء عبر ⁨APIs⁩، و⁨LM Studio⁩ لواجهة رسومية. كلاهما مجاني ويشغّل النماذج محليًا. إجابة سريعة من ⁨PromptQuorum⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
@@ -693,6 +700,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
     metaDescription: '터미널을 사용하고 API로 개발하신다면 Ollama를 선택하십시오. GUI를 선호하고 모델과 채팅하고 싶으시다면 LM Studio를 사용하십시오. 두 도구 모두 무료이며 모델을 로컬에서 실행합니다.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],

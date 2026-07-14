@@ -137,6 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste LLM-Apps für Android 2026: Schnelle Empfehlungen',
     metaDescription: 'KI offline auf Android 2026: MLC Chat ist die Top-Empfehlung für die meisten Geräte. Pocketpal für eigene Modelle, Termux + Ollama für Power-User. RAM-Guide inklusive.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -218,6 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Apps LLM Offline Android 2026 : Sélection Rapide',
     metaDescription: 'IA hors ligne sur Android 2026 : MLC Chat est le top pick pour la plupart des téléphones. Pocketpal et Termux + Ollama comparés. Guide RAM inclus.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -299,6 +301,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Androidローカル AI アプリ 2026年：おすすめ 3 選クイックガイド',
     metaDescription: 'Android 2026年のオフライン AI：MLC Chat がほとんどの端末に最適。Pocketpal と Termux + Ollama も比較。RAM ガイド付き。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -380,6 +383,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Android 本地 LLM 应用 2026：精选快速推荐',
     metaDescription: 'Android 2026 离线 AI：MLC Chat 为大多数手机首选，Pocketpal 适合自定义模型，Termux + Ollama 适合高级用户。含 RAM 指南。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -461,6 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejores Apps LLM Offline Android 2026: Picks Rápidos',
     metaDescription: 'IA sin conexión en Android 2026: MLC Chat es el top pick para la mayoría de móviles. Pocketpal y Termux + Ollama comparados. Guía de RAM incluida.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
@@ -540,6 +545,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhores Apps LLM Offline Android 2026: Escolhas Rápidas',
     metaDescription: 'IA offline no Android 2026: MLC Chat é o top pick para a maioria dos celulares. Pocketpal e Termux + Ollama comparados. Guia de RAM incluído.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
@@ -619,6 +625,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل تطبيقات ⁨AI⁩ بلا إنترنت على ⁨Android 2026⁩',
     metaDescription: 'ذكاء اصطناعي بلا إنترنت على ⁨Android 2026⁩: ⁨MLC Chat⁩ الأفضل لمعظم الهواتف. مقارنة مع ⁨Pocketpal⁩ و⁨Termux + Ollama⁩. دليل ⁨RAM⁩ مضمّن.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],
@@ -698,6 +705,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Android 오프라인 AI 앱 2026: 빠른 추천 3선',
     metaDescription: 'Android 2026 오프라인 AI: MLC Chat이 대부분의 기기에 최적. Pocketpal과 Termux + Ollama 비교. RAM 가이드 포함.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     current_models_mentioned: [],

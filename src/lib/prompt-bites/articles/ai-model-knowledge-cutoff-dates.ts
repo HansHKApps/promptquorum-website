@@ -322,6 +322,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'KI Wissens-Cutoff-Daten 2026 | PromptQuorum',
     metaDescription: 'Verifizierte Wissens-Cutoff-Daten für Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma und Phi. Welche Modelle live suchen — und welche eingefroren sind.',
     publishDate: '2026-06-12',
+    dateModified: '2026-06-21',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -353,6 +354,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Dates de Coupure IA 2026 | PromptQuorum',
     metaDescription: 'Dates de coupure vérifiées pour Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma et Phi. Quels modèles utilisent la recherche live — et lesquels sont figés dans le temps.',
     publishDate: '2026-06-12',
+    dateModified: '2026-06-21',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -384,6 +386,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AIモデル知識カットオフ日2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma、Phiの検証済み知識カットオフ日。どのモデルがライブ検索を使用し、どのモデルが凍結されているかを解説。',
     publishDate: '2026-06-12',
+    dateModified: '2026-06-21',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -415,6 +418,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AI模型知识截止日期2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma和Phi的已验证知识截止日期。哪些模型使用实时搜索，哪些模型知识被冻结。',
     publishDate: '2026-06-12',
+    dateModified: '2026-06-21',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -446,6 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AI 모델 지식 컷오프 날짜 2026 | PromptQuorum',
     metaDescription: 'Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma, Phi의 검증된 지식 컷오프 날짜. 어떤 모델이 실시간 웹 검색을 사용하고 어떤 모델이 과거 시점에 고정되어 있는지 확인하세요.',
     publishDate: '2026-06-12',
+    dateModified: '2026-06-21',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -477,6 +482,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Datas de corte de conhecimento de IA 2026 | PromptQuorum',
     metaDescription: 'Datas de corte verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma e Phi. Descubra quais modelos usam busca web ao vivo e quais estão congelados em um ponto no tempo.',
     publishDate: '2026-06-12',
+    dateModified: '2026-06-21',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -508,6 +514,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩',
     metaDescription: 'تواريخ انقطاع موثّقة لـ ⁨Claude⁩ و⁨ChatGPT⁩ و⁨Gemini⁩ و⁨Llama⁩ و⁨Qwen⁩. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.',
     publishDate: '2026-06-12',
+    dateModified: '2026-06-21',
     sections: {
       tldr: {
         id: 'key-takeaways',

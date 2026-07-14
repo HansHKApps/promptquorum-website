@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**The Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) is the best mini PC for an always-on Ollama server in 2026: runs 7B models at 12–18 tok/s CPU-only, draws 25–45 W under load, and fits inside a drawer.**',
     quickAnswerTop: {
@@ -170,6 +171,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) ist 2026 der beste Mini-PC für einen Always-On-Ollama-Server: 7B-Modelle mit 12–18 Tok/s nur per CPU, 25–45 W unter Last und passt in eine Schublade.**',
     quickAnswerTop: {
@@ -297,6 +299,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Le Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 Go de RAM, iGPU Radeon 780M) est le meilleur mini PC pour un serveur Ollama always-on en 2026 : modèles 7B à 12–18 tok/s en CPU seul, 25–45 W sous charge, tient dans un tiroir.**',
     quickAnswerTop: {
@@ -420,6 +423,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Minisforum UM890 Pro（AMD Ryzen 9 8945HS、32〜96GB RAM、Radeon 780M内蔵GPU）は2026年の常時稼働Ollamaサーバー向けミニPCとして最良の選択です：7BモデルをCPUのみで12〜18トークン/秒、負荷時25〜45W、引き出しに収まるサイズ。**',
     quickAnswerTop: {
@@ -543,6 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) es el mejor mini PC para servidor Ollama siempre encendido en 2026: ejecuta modelos 7B a 12–18 tok/s solo CPU, consume 25–45 W bajo carga, cabe en un cajón.**',
     quickAnswerTop: {
@@ -627,6 +632,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) é o melhor mini PC para um servidor Ollama sempre ligado em 2026: executa modelos 7B a 12–18 tok/s somente com CPU, consome 25–45 W sob carga, cabe numa gaveta.**',
     quickAnswerTop: {
@@ -711,6 +717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**铭凡UM890 Pro（AMD Ryzen 9 8945HS、32–96GB内存、Radeon 780M核显）是2026年常驻Ollama服务器最佳迷你PC：纯CPU运行7B模型12–18 tok/s，负载功耗25–45W，能放进抽屉。**',
     quickAnswerTop: {
@@ -843,6 +850,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS، 32–96 GB RAM، Radeon 780M iGPU) هو أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل في 2026: يشغّل نماذج 7B بـ12–18 رمز/ثانية عبر CPU فقط، ويستهلك 25–45 W تحت الحمل، ويكفي حجم درج صغير.**',
     quickAnswerTop: {
@@ -927,6 +935,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU)는 2026년 Ollama 상시 서버용 최고의 미니 PC입니다. CPU만으로 7B 모델을 12–18 tok/s 속도로 실행하며, 부하 시 소비 전력은 25–45 W에 불과하고 서랍 안에도 들어갑니다.**',
     quickAnswerTop: {

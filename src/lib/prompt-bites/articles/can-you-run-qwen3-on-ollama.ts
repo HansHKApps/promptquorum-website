@@ -100,6 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 3 mit Ollama 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ja — Ollama unterstützt alle Qwen 3-Größen von 0,6B bis 72B. Befehl: ollama run qwen3:8b. Das 8B-Modell benötigt ~6 GB VRAM. Stand Mai 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -179,6 +180,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 3 sur Ollama 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Oui — Ollama supporte toutes les tailles de Qwen 3, de 0.6B à 72B. Lancez : ollama run qwen3:8b. Le modèle 8B nécessite ~6 Go de VRAM. Vérifié mai 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -258,6 +260,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 3はOllamaで動く？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'はい — Ollama は Qwen 3 の 0.6B から 72B まで全サイズに対応しています。実行コマンド：ollama run qwen3:8b。8B モデルには ~6 GB VRAM が必要です。2026年5月確認済み。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -337,6 +340,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 3能在Ollama上运行吗？2026 | Prompt Bites | PromptQuorum',
     metaDescription: '可以——Ollama支持Qwen 3的全部规格，从0.6B到72B。运行命令：ollama run qwen3:8b。8B模型约需6 GB VRAM。2026年5月更新。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -416,6 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Executar Qwen 3 no Ollama 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Sim: Ollama suporta todos os tamanhos do Qwen 3, de 0,6B a 72B. Execute com: ollama run qwen3:8b. O modelo 8B precisa de ~6 GB de VRAM. Variante MoE disponível. Atualizado em maio de 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -495,6 +500,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ejecutar Qwen 3 en Ollama 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Sí: Ollama admite todos los tamaños de Qwen 3, de 0.6B a 72B. Ejecuta: ollama run qwen3:8b. El 8B necesita ~6 GB de VRAM. Variante MoE disponible. Mayo 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-31',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -574,6 +580,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'تشغيل ⁨Qwen 3⁩ على ⁨Ollama 2026⁩: من ⁨0.6B⁩ إلى ⁨72B⁩',
     metaDescription: 'نعم — ⁨Ollama⁩ يدعم جميع أحجام ⁨Qwen 3⁩ من ⁨0.6B⁩ إلى ⁨72B⁩. الحجم ⁨8B⁩ يحتاج ~⁨6 GB VRAM⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩. شغّله بأمر: ⁨ollama run qwen3⁩:⁨8b⁩. محدَّث مايو ⁨2026⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -653,6 +660,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama Qwen 3 실행 방법 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '예 — Ollama는 0.6B부터 72B까지 모든 Qwen 3 크기를 지원합니다. 실행 명령: ollama run qwen3:8b. 8B 모델은 Q4 양자화에서 VRAM 약 6 GB가 필요합니다. 2026년 5월 업데이트.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

@@ -153,6 +153,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste Ollama-Modelle für RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M für Chat, Qwen 3 Coder 14B Q4 für Code. Beide laufen mit 20–30 Tok/s. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     sections: {
@@ -220,6 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleurs modèles Ollama RTX 3060 12 Go 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 Go : Llama 3 8B Q5_K_M pour le chat, Qwen 3 Coder 14B Q4 pour le code. Les deux à 20–30 tok/s. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     sections: {
@@ -287,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RTX 3060 12 GB最良Ollamaモデル2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GBはLlama 3 8B Q5_K_Mでチャット、Qwen 3 Coder 14B Q4でコーディングを20–30トークン/秒で実行します。PromptQuorumの解説。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     sections: {
@@ -354,6 +357,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RTX 3060 12 GB最佳Ollama模型2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB：Llama 3 8B Q5_K_M用于聊天，Qwen 3 Coder 14B Q4用于编程，速度20–30 tok/s。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     sections: {
@@ -421,6 +425,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhores modelos Ollama RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M para chat (20 tok/s), Qwen 3 Coder 14B Q4 para código. Ambos cabem em 12 GB de VRAM. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     quickAnswerTop: {
@@ -500,6 +505,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejores modelos Ollama RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Llama 3 8B Q5_K_M para chat (20 tok/s), Qwen 3 Coder 14B Q4 para código. Ambos caben en 12 GB de VRAM. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     quickAnswerTop: {
@@ -579,6 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل نماذج ⁨Ollama⁩ لبطاقة ⁨RTX 3060 12 GB 2026⁩',
     metaDescription: '⁨RTX 3060 12 GB⁩ يُشغّل ⁨Llama 3 8B Q5⁩_⁨K⁩_⁨M⁩ بـ⁨25⁩ رمز/ثانية، و⁨Qwen 3 Coder 14B Q4⁩_⁨K⁩_⁨M⁩ بـ⁨10 GB VRAM⁩. كلاهما يعمل بالكامل على ⁨GPU⁩ بدون تفريغ.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     quickAnswerTop: {
@@ -658,6 +665,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RTX 3060 12 GB 최적 Ollama 모델 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: 채팅용 Llama 3 8B Q5_K_M (20 토큰/초), 코딩용 Qwen 3 Coder 14B Q4. 두 모델 모두 12 GB VRAM에 탑재 가능합니다. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-12-19',
     quickAnswerTop: {

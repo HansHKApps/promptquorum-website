@@ -139,6 +139,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste MoE-Modelle für lokales Coding 2026',
     metaDescription: 'Mixtral 8x22B：26 GB VRAM, 46,7B params. DeepSeek V2：16 GB VRAM, bestes Coding. MoE aktiviert nur aktive Parameter. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -222,6 +223,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleurs Modèles MoE pour Coding 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Mixtral 8x22B：26 Go VRAM, 46,7B params. DeepSeek V2：16 Go VRAM, coding top. MoE active uniquement paramètres actifs. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -305,6 +307,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'ローカルコーディング向けMoEモデル2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Mixtral 8x22B：26 GB VRAM、46.7B params。DeepSeek V2：16 GB VRAM、coding 最高。MoE はアクティブなパラメータのみ使用。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -388,6 +391,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '本地编程最佳 MoE 模型 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Mixtral 8x22B：26 GB VRAM、46.7B 参数。DeepSeek V2：16 GB VRAM、编程最佳。MoE 仅激活活跃参数。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -471,6 +475,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejores modelos MoE para coding 2026 | PromptQuorum',
     metaDescription: 'Mixtral 8x22B: 26 GB VRAM, 46,7B parámetros. DeepSeek V2: 16 GB VRAM, top en coding. MoE solo activa los parámetros necesarios. Respuesta rápida.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -554,6 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhores modelos MoE para programação 2026 | PromptQuorum',
     metaDescription: 'Mixtral 8x22B: 26 GB de VRAM, 46,7B parâmetros. DeepSeek V2: 16 GB de VRAM, top em programação. MoE ativa apenas parâmetros ativos. Resposta rápida.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -637,6 +643,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل نماذج ⁨MoE⁩ للبرمجة المحلية ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Mixtral 8x22B⁩ يحتاج ⁨26 GB VRAM⁩ لـ⁨46.7B⁩ معامل. ⁨DeepSeek V2⁩ يعمل بـ⁨16 GB VRAM⁩ ويتصدر معايير البرمجة. ⁨MoE⁩ تنشّط المعاملات النشطة فقط.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -720,6 +727,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '로컬 코딩 최적 MoE 모델 2026 | PromptQuorum',
     metaDescription: 'Mixtral 8x22B: 26 GB VRAM, 46.7B 파라미터. DeepSeek V2: 16 GB VRAM, 코딩 벤치마크 최고 성능. MoE는 활성 파라미터만 사용합니다. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {

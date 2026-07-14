@@ -145,6 +145,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**Die beste Open-Source-Alternative zu ChatGPT Plus 2026 ist Ollama + Open WebUI — kostenlos, lokal, unterstützt GPT-4-fähige Modelle wie Qwen3 72B und Llama 3.3 70B, kein 20-Euro-Abo.**',
     quickAnswerTop: {
       question: 'Was ist die beste kostenlose Alternative zu ChatGPT Plus?',
@@ -213,6 +214,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**La meilleure alternative open source à ChatGPT Plus en 2026 est Ollama + Open WebUI — gratuit, local, compatible avec des modèles de niveau GPT-4 comme Qwen3 72B, sans abonnement à 20 $/mois.**',
     quickAnswerTop: {
       question: 'Quelle est la meilleure alternative gratuite à ChatGPT Plus ?',
@@ -281,6 +283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**2026年のChatGPT Plusへの最良のオープンソース代替はOllama + Open WebUI——無料、ローカル動作、GPT-4クラスのQwen3 72BやLlama 3.3 70Bも実行可能、月額費用ゼロ。**',
     quickAnswerTop: {
       question: 'ChatGPT Plusの最良の無料代替は何ですか？',
@@ -349,6 +352,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**La mejor alternativa open source a ChatGPT Plus en 2026 es Ollama + Open WebUI — gratis, ejecuta modelos locales en cualquier hardware, compatible con modelos de clase GPT-4 como Qwen3 72B y Llama 3.3 70B, sin suscripción de $20/mes.**',
     quickAnswerTop: {
       question: '¿Cuál es la mejor alternativa gratuita a ChatGPT Plus?',
@@ -454,6 +458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**2026年最佳ChatGPT Plus开源替代是Ollama + Open WebUI——完全免费、本地运行、支持GPT-4级别模型如Qwen3 72B和Llama 3.3 70B，无需每月付费。**',
     quickAnswerTop: {
       question: 'ChatGPT Plus最好的免费替代是什么？',
@@ -526,6 +531,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**A melhor alternativa open source ao ChatGPT Plus em 2026 é o Ollama + Open WebUI — gratuito, executa modelos locais em qualquer hardware, compatível com modelos de classe GPT-4 como Qwen3 72B e Llama 3.3 70B, sem assinatura de $20/mês.**',
     quickAnswerTop: {
       question: 'Qual é a melhor alternativa gratuita ao ChatGPT Plus?',
@@ -631,6 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**أفضل بديل مفتوح المصدر لـChatGPT Plus في 2026 هو Ollama + Open WebUI — مجاني، يشغّل نماذج محلية على أي عتاد، متوافق مع نماذج من فئة GPT-4 كـQwen3 72B وLlama 3.3 70B، بدون اشتراك $20/شهر.**',
     quickAnswerTop: {
       question: 'ما هو أفضل بديل مجاني لـChatGPT Plus؟',
@@ -736,6 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     publishDate: '2026-05-26',
+    dateModified: '2026-06-21',
     leadAnswerBlock: '**2026년 ChatGPT Plus 최고의 오픈소스 대안은 Ollama + Open WebUI입니다. 무료이며 모든 하드웨어에서 로컬 모델을 실행하고 Qwen3 72B, Llama 3.3 70B 같은 GPT-4급 모델을 지원하며 월 $20 구독이 필요 없습니다.**',
     quickAnswerTop: {
       ko: {

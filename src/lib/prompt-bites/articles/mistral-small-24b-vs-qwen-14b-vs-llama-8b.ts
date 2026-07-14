@@ -133,6 +133,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mistral Small 24B vs. Qwen 14B vs. Llama 8B 2026',
     metaDescription: 'Llama 3.3 8B: 4,9 GB VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8 %. Mistral Small 24B: 14,4 GB, MMLU 81 %. Auswahl nach VRAM-Tier. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -211,6 +212,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B : 4,9 Go VRAM. Qwen 3 14B : 9,3 Go, MMLU 74,8 %. Mistral Small 24B : 14,4 Go, MMLU 81 %. Choisissez selon le tier VRAM. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -289,6 +291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B：4.9 GB VRAM。Qwen 3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。VRAMティアで選択。PromptQuorumによる簡潔な回答。',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -367,6 +370,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B：4.9 GB 显存。Qwen 3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。按显存层级选择。PromptQuorum 快速解答。',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -445,6 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026',
     metaDescription: 'Llama 3.3 8B: 4,9 GB de VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Escolha pelo nível de VRAM. Resposta rápida.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -523,6 +528,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026',
     metaDescription: 'Llama 3.3 8B: 4,9 GB VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Elige según tu nivel de VRAM. Respuesta rápida.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -601,6 +607,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Mistral Small 24B⁩ مقابل ⁨Qwen 14B⁩ مقابل ⁨Llama 8B 2026⁩',
     metaDescription: '⁨Llama 3.3 8B⁩: ⁨4.9 GB VRAM⁩ و⁨66.6% MMLU. Qwen 3 14B⁩: ⁨9.3 GB⁩ و⁨74.8% MMLU. Mistral Small 24B⁩: ⁨14.4 GB⁩ و⁨81% MMLU⁩. اختر النموذج بحسب حجم ⁨VRAM⁩ المتاح.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -679,6 +686,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | PromptQuorum',
     metaDescription: 'Llama 3.3 8B: 4.9 GB VRAM, MMLU 66.6%. Qwen 3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. VRAM 용량에 따라 최적 모델을 선택하십시오.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     targetKeywords: [

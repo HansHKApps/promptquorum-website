@@ -150,6 +150,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM für 7B-Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ein 7B-Modell bei Q4 benötigt 5–6 GB RAM oder VRAM. CPU ~5 Tok/s, GPU ~25 Tok/s. Faustregel: Parameter × 0,7 = GB bei Q4. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -222,6 +223,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM pour modèle 7B local 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modèle 7B en Q4 nécessite 5–6 Go de RAM ou VRAM. CPU : ~5 tok/s ; GPU : ~25 tok/s. Règle : params × 0,7 = Go en Q4. Réponse PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -294,6 +296,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '7BモデルのRAMとVRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4の7BモデルにはVRAM 5〜6 GBが必要です。目安：パラメータ数（十億単位）× 0.7 = Q4での必要GB数。PromptQuorumによる簡潔な回答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -366,6 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '7B模型所需RAM和VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4量化的7B模型需要5–6 GB内存或显存。CPU约5 tok/s，GPU约25 tok/s。规则：参数量×0.7=Q4所需GB数。PromptQuorum解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -438,6 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM para modelos 7B locales 2026 | PromptQuorum',
     metaDescription: 'Un modelo 7B en Q4 necesita 5–6 GB de RAM o VRAM. CPU da ~5 tok/s; GPU da ~25 tok/s con la misma memoria. Regla: params × 0,7 = GB en Q4. PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -522,6 +527,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM para modelos 7B locais 2026 | PromptQuorum',
     metaDescription: 'Um modelo 7B em Q4 precisa de 5–6 GB de RAM ou VRAM. CPU dá ~5 tok/s; GPU dá ~25 tok/s com a mesma memória. Regra: params × 0,7 = GB em Q4. PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -606,6 +612,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨RAM⁩ لنموذج ⁨7B⁩ المحلي ⁨2026⁩: القاعدة وأرقام ⁨VRAM⁩',
     metaDescription: 'نموذج ⁨7B⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩ يشغل ⁨5⁩–⁨6 GB RAM⁩ أو ⁨VRAM. GPU⁩ يُنتج ~⁨25⁩ توكن/ث و⁨CPU⁩ ~⁨5⁩ توكن/ث بالذاكرة نفسها. القاعدة: معاملات × ⁨0.7⁩ = ⁨GB⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -690,6 +697,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '7B 로컬 모델 RAM 요구사항 2026 | PromptQuorum',
     metaDescription: 'Q4 양자화 7B 모델은 5~6 GB RAM 또는 VRAM이 필요합니다. CPU는 ~5 tok/s, GPU는 동일한 메모리로 ~25 tok/s를 제공합니다. 공식: 파라미터 × 0.7 = Q4 기준 GB.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

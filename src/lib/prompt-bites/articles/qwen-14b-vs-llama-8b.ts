@@ -136,6 +136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 14B vs. Llama 8B für lokales Coding',
     metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, 74,8% MMLU. Bei 12 GB VRAM: Qwen gewinnt. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -213,6 +214,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 14B vs Llama 3 8B : Lequel ? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B : 6 Go VRAM, ~25 tok/s. Qwen 3 14B : 10 Go, 74,8% MMLU. À 12 Go : Qwen gagne en qualité. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -290,6 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 14B vs Llama 3 8B：どちらが優れているか？ | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B：6 GB VRAM、~25 tok/s。Qwen 3 14B：10 GB、MMLU 74.8%。12 GB VRAM なら Qwen が品質で優位。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -367,6 +370,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 14B 对比 Llama 3 8B：哪款更优？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B：6 GB VRAM、约 25 tok/s。Qwen 3 14B：10 GB、MMLU 74.8%。12 GB VRAM 时 Qwen 质量更优。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -444,6 +448,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 14B vs Llama 3 8B: Qual escolher? 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, MMLU 74,8%. Com 12 GB de VRAM, Qwen 14B vence em qualidade. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -524,6 +529,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 14B vs Llama 3 8B: ¿Cuál elegir? 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, MMLU 74.8%. Con 12 GB de VRAM, Qwen 14B gana en calidad. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -604,6 +610,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Qwen 14B⁩ مقابل ⁨Llama 3 8B⁩: أيهما أفضل؟ ⁨2026⁩',
     metaDescription: '⁨Llama 3 8B⁩: ⁨6 GB VRAM⁩ و~⁨25 tok/s⁩ على ⁨RTX 3060. Qwen 3 14B⁩: ⁨10 GB VRAM⁩، ⁨MMLU 74.8%⁩ مقابل ⁨66.6%⁩. عند ⁨12 GB VRAM⁩ يفوز ⁨Qwen 14B⁩ في الجودة.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -684,6 +691,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen 14B vs Llama 3 8B: 어느 것을 선택해야 합니까? 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, MMLU 74.8% 대 66.6%. 12 GB VRAM 환경에서는 Qwen 14B가 품질 면에서 우위입니다.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

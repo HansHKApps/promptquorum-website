@@ -140,6 +140,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste 14B-Modelle für lokales Coding 2026',
     metaDescription: 'Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73%. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -217,6 +218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleurs 14B Modèles pour Coding 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B : 78% HumanEval, 10 Go VRAM. DeepSeek Coder 14B : 75%. StarCoder2 15B : 73%. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -294,6 +296,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'コーディング向け最適14Bモデル 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B：78% HumanEval、10 GB VRAM。DeepSeek Coder 14B：75%。StarCoder2 15B：73%。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -371,6 +374,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen3-Coder 14B编程实测 2026：HumanEval 78%第一',
     metaDescription: 'Qwen3-Coder 14B以78% HumanEval得分领先，12 GB显存运行Q4_K_M量化版。DeepSeek Coder 14B以75%紧随，Python与SQL补全特别出色。StarCoder2 15B评分73%，响应速度最快。三款均支持Ollama本地部署，无需订阅费用。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -448,6 +452,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejores modelos 14B para coding 2026 | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% en 10 GB. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -525,6 +530,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhores modelos 14B para programação 2026 | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% com 10 GB. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -602,6 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل نماذج ⁨14B⁩ للبرمجة: ⁨Qwen 3 Coder⁩ يتصدر ⁨2026⁩',
     metaDescription: '⁨Qwen 3 Coder 14B⁩ يسجل ⁨78%⁩ على ⁨HumanEval⁩ بـ ⁨10 GB VRAM⁩ عند ⁨Q4⁩_⁨K⁩_⁨M. DeepSeek Coder 14B⁩ يصل إلى ⁨75%. StarCoder2 15B⁩ يحقق ⁨73%⁩ بنفس ⁨VRAM⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -679,6 +686,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '코딩용 최적 14B 모델 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B: HumanEval 78%, VRAM 10 GB. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73%. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {

@@ -148,6 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Lokales LLM für 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) ist die erste Wahl für 6 GB VRAM. Phi-4 Q4 und Mistral Small Q4_K_S sind solide Alternativen. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -218,6 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 Go VRAM : meilleur LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M (5,5 Go) est le premier choix pour 6 Go de VRAM. Phi-4 Q4 et Mistral Small Q4_K_S sont des alternatives. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -288,6 +290,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB VRAM向け最適ローカルLLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M（5.5 GB）が6 GB VRAMの最有力候補です。Phi-4 Q4_K_MとMistral Small Q4_K_Sも優れた代替選択肢です。PromptQuorumの解説。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -358,6 +361,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB显存最佳本地LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M（5.5 GB）是6 GB显存的首选。Phi-4 Q4_K_M和Mistral Small Q4_K_S是可靠的备选方案。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -428,6 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB VRAM: mejor LLM local 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) es la mejor opción para 6 GB de VRAM. Phi-4 Q4 y Mistral Small Q4_K_S son alternativas sólidas. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -510,6 +515,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB VRAM: melhor LLM local 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M (5,5 GB) é a melhor opção para 6 GB de VRAM. Phi-4 Q4 e Mistral Small Q4_K_S são alternativas sólidas. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -592,6 +598,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل ⁨LLM⁩ محلي لـ ⁨6 GB VRAM⁩ في ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Llama 3 8B Q4⁩_⁨K⁩_⁨M⁩ (⁨5.5 GB VRAM⁩) هو أفضل ⁨LLM⁩ محلي لـ⁨6 GB VRAM⁩ بسرعة ~⁨20⁩ رمز/ثانية. ⁨Phi-4 Q4⁩_⁨K⁩_⁨M⁩ و⁨Mistral Small Q4⁩_⁨K⁩_⁨S⁩ بدائل للـ⁨RTX 3050⁩ و⁨RTX 4050⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -674,6 +681,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB VRAM 최적 로컬 LLM 2026 | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M(5.5 GB)은 6 GB VRAM에서 최선의 선택입니다. Phi-4 Q4_K_M과 Mistral Small Q4_K_S가 우수한 대안입니다. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {

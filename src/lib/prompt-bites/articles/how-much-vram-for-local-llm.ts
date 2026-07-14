@@ -145,6 +145,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM-Stufen lokale LLMs 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB für Phi-4 Mini Q4. 6 GB für Llama 3 8B Q4_K_M. 12 GB für Qwen 14B. Formel: Parameter × 0,7 = GB bei Q4. VRAM-Stufenführer von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -212,6 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Paliers VRAM LLM local 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 Go pour Phi-4 Mini Q4. 6 Go pour Llama 3 8B Q4_K_M. 12 Go pour Qwen 14B. Formule : params × 0,7 = Go en Q4. Paliers VRAM par PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -279,6 +281,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'ローカルLLM VRAMティア 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GBでPhi-4 Miniが動作。6 GBでLlama 3 8B Q4が動作。12 GBでQwen 14B Q4が収まります。PromptQuorumによるVRAM選択ガイド。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -346,6 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'LLM显存速查 2026：4GB到24GB各档位运行哪款模型',
     metaDescription: '本地大模型各参数规模所需显存参考（2026）：4 GB运行Phi-4 Mini Q4；6 GB运行Llama 3 8B Q4_K_M；12 GB解锁Qwen 14B；24 GB承载Qwen 32B。通用公式：参数量（B）×0.7≈Q4量化所需显存（GB）。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -413,6 +417,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Requisitos de VRAM para LLMs locais 2026 | PromptQuorum',
     metaDescription: '4 GB para Phi-4 Mini Q4. 6 GB para Llama 3 8B Q4_K_M. 12 GB para Qwen 14B. Fórmula: params × 0,7 = GB em Q4. Guia de VRAM do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -492,6 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Requisitos de VRAM para LLMs locales 2026 | PromptQuorum',
     metaDescription: '4 GB para Phi-4 Mini Q4. 6 GB para Llama 3 8B Q4_K_M. 12 GB para Qwen 14B. Fórmula: params × 0,7 = GB en Q4. Guía de VRAM de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -571,6 +577,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨VRAM⁩ للنماذج المحلية ⁨2026⁩: من ⁨4 GB⁩ إلى ⁨70B⁩',
     metaDescription: '⁨4 GB⁩ تكفي لـ ⁨Phi-4 Mini Q4⁩؛ ⁨6 GB⁩ تُشغّل ⁨Llama 3 8B Q4⁩_⁨K⁩_⁨M⁩؛ ⁨12 GB⁩ تفتح ⁨Qwen 14B Q4⁩. القاعدة: معاملات × ⁨0.7⁩ = ⁨GB⁩ عند ⁨Q4⁩. من ⁨PromptQuorum⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -650,6 +657,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '로컬 LLM VRAM 요구사항 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB로 Phi-4 Mini Q4 실행. 6 GB로 Llama 3 8B Q4_K_M 처리. 12 GB로 Qwen 14B 실행. 공식: 파라미터 × 0.7 = Q4 기준 GB. PromptQuorum VRAM 티어 가이드.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     readTime: '4분 분량',

@@ -170,6 +170,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**ElevenLabs führt bei Cloud-TTS (beste Stimmqualität, ab 6 $/Monat bei monatlicher Abrechnung), während Kokoro-82M die beste kostenlose lokale Option ist — läuft auf der CPU, unterstützt 8 Sprachen und produziert nahezu professionelle Sprachausgabe.**',
     quickAnswerTop: {
       question: 'Welches KI Text-to-Speech ist am besten für Content Creator?',
@@ -236,6 +237,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**ElevenLabs domine le TTS cloud (meilleure qualité vocale, à partir de 6 $/mois en facturation mensuelle), tandis que Kokoro-82M est la meilleure option locale gratuite — fonctionne sur CPU, qualité quasi-professionnelle, sans coût par caractère, et supporte désormais 8 langues.**',
     quickAnswerTop: {
       question: 'Quel est le meilleur TTS IA pour les créateurs de contenu ?',
@@ -298,6 +300,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**クラウドTTSはElevenLabs（最高音質、月額6ドル〜の月払い）、無料ローカルTTSはKokoro-82M（CPU動作・8言語対応・ほぼプロ品質・文字数制限なし）がコンテンツクリエイターの最善策です。**',
     quickAnswerTop: {
       question: 'コンテンツクリエイターに最適なAI TTSはどれですか？',
@@ -360,6 +363,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**云端TTS首选ElevenLabs（最佳音质，按月付费6美元/月起），免费本地TTS首选Kokoro-82M——CPU即可运行，支持8种语言，接近专业音质，无字符收费。**',
     quickAnswerTop: {
       question: '内容创作者最好用的AI文字转语音是哪个？',
@@ -427,6 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**ElevenLabs lidera en TTS cloud (mejor calidad de voz, $6/mes en facturación mensual), mientras que Kokoro-82M es la mejor opción local gratuita — se ejecuta en CPU, soporta 8 idiomas, suena casi profesional y no tiene coste por carácter.**',
     quickAnswerTop: {
       question: '¿Cuál es la mejor IA de texto a voz para creadores de contenido?',
@@ -567,6 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**ElevenLabs lidera no TTS em nuvem (melhor qualidade de voz, plano inicial a $6/mês na cobrança mensal), enquanto Kokoro-82M é a melhor opção local gratuita — funciona em CPU, suporta 8 idiomas, soa quase profissional e não tem custo por caractere.**',
     quickAnswerTop: {
       question: 'Qual é a melhor IA de texto para voz para criadores de conteúdo?',
@@ -707,6 +713,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**ElevenLabs يتصدر أدوات تحويل النص إلى كلام السحابية (أفضل جودة صوت، خطة بداية بـ6 دولارات/شهر عند الدفع شهرياً)، في حين يُعدّ Kokoro-82M أفضل خيار محلي مجاني — يعمل على وحدة المعالجة المركزية، يدعم 8 لغات، بجودة شبه احترافية، وبدون أي تكلفة لكل حرف.**',
     quickAnswerTop: {
       question: 'ما أفضل أداة ذكاء اصطناعي لتحويل النص إلى كلام لمنشئي المحتوى؟',
@@ -847,6 +854,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     leadAnswerBlock: '**ElevenLabs는 클라우드 TTS 분야에서 선두를 달리고 있으며(최고의 음성 품질, 월정액 기준 월 $6 스타터 플랜), Kokoro-82M은 최고의 무료 로컬 옵션입니다 — CPU에서 실행되고 8개 언어를 지원하며 거의 전문가 수준의 음질을 제공하고 문자당 비용이 없습니다.**',
     quickAnswerTop: {
       ko: {

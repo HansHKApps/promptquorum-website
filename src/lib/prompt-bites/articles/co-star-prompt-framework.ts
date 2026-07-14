@@ -141,6 +141,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'CO-STAR: 6-Teil-Framework 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR-Framework mit sechs Komponenten: Context, Objective, Style, Tone, Audience, Response. Strukturiert Prompts für konsistente Ausgaben in 60–120 Wörtern.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -222,6 +223,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Framework CO-STAR 2026 expliqué | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR structure les prompts en six composants : Context, Objective, Style, Tone, Audience, Response. Produit des sorties LLM cohérentes en 60–120 mots.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -303,6 +305,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'CO-STAR：6部構成フレームワーク 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STARは6部構成のプロンプトフレームワーク。Context、Objective、Style、Tone、Audience、Responseで一貫した目的に合ったLLM出力を生成。60～120語で構造化。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -384,6 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Framework CO-STAR 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR é um framework de 6 partes: Context, Objective, Style, Tone, Audience, Response. Estrutura prompts para outputs consistentes em 60–120 palavras.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -465,6 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Framework CO-STAR 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR es un framework de 6 partes: Context, Objective, Style, Tone, Audience, Response. Estructura prompts para outputs consistentes en 60–120 palabras.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -546,6 +551,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'CO-STAR 提示框架：6部分结构 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR提示框架，六个部分：Context、Objective、Style、Tone、Audience、Response。结构化提示以实现一致、有针对性的LLM输出。60-120词编写。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -627,6 +633,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'إطار ⁨CO-STAR 2026⁩ | ⁨Prompt Bites⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨CO-STAR⁩ إطار أوامر من ⁨6⁩ أجزاء: ⁨Context⁩ و⁨Objective⁩ و⁨Style⁩ و⁨Tone⁩ و⁨Audience⁩ و⁨Response⁩. يُهيكل الأوامر لمخرجات متسقة في ⁨60⁩–⁨120⁩ كلمة.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -708,6 +715,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'CO-STAR 프레임워크 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR는 6개 구성 요소로 이루어진 프롬프트 프레임워크입니다: Context, Objective, Style, Tone, Audience, Response. 60~120 단어로 일관된 LLM 출력을 위한 프롬프트를 구조화합니다.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     readTime: '4분 분량',

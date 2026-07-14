@@ -152,6 +152,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM für 70B-Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ein 70B-Modell bei Q4_K_M benötigt ~40 GB VRAM. Dual RTX 3090, M5 Max 128 GB oder Cloud-GPU sind die Optionen. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -226,6 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM pour 70B : 3 options 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modèle 70B en Q4_K_M nécessite ~40 Go de VRAM. Options : dual RTX 3090 (48 Go), M5 Max 128 Go ou GPU cloud. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -300,6 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '70BモデルのVRAM：3つの方法 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_Mの70Bモデルには約40 GBのVRAMが必要です。デュアルRTX 3090（48 GB）、M5 Max 128 GB統合メモリ、またはクラウドGPUが選択肢です。PromptQuorumの解説。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -374,6 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '70B模型VRAM：3种方案 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M量化的70B模型需要约40 GB显存。选项：双RTX 3090（48 GB）、M5 Max 128 GB统一内存或云端GPU。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -448,6 +452,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM para 70B: 3 opções 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Um modelo 70B em Q4_K_M precisa de ~40 GB de VRAM. Opções: dois RTX 3090 (48 GB), M5 Max com 128 GB de memória unificada ou GPU na nuvem. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -534,6 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM para 70B: 3 opciones 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modelo 70B en Q4_K_M necesita ~40 GB de VRAM. Opciones: dual RTX 3090 (48 GB), M5 Max con 128 GB unificados o GPU cloud. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -620,6 +626,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨VRAM⁩ لنموذج ⁨70B⁩: ⁨3⁩ خيارات ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'نموذج ⁨70B⁩ بـ ⁨Q4⁩_⁨K⁩_⁨M⁩ يحتاج ~⁨40 GB VRAM⁩. الخيارات: ⁨RTX 3090⁩ مزدوجة (⁨48 GB⁩) أو ⁨M5 Max 128 GB⁩ ذاكرة موحدة أو ⁨GPU⁩ سحابية بـ $⁨0.50⁩/ساعة.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -706,6 +713,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '70B VRAM: 3가지 실행 옵션 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M 방식의 70B 모델은 약 40 GB의 VRAM이 필요합니다. 옵션: 듀얼 RTX 3090(48 GB), M5 Max 128 GB 통합 메모리, 또는 클라우드 GPU. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {

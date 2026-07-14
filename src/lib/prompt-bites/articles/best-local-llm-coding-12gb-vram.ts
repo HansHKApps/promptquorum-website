@@ -143,6 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Bestes Coding-LLM für 12 GB VRAM 2026',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M: bestes Coding-Modell für 12 GB bei ~10 GB, höchster HumanEval-Score. DeepSeek 14B Q4 Alternative. Beide auf RTX 3060/3080 Ti.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -227,6 +228,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur Coding LLM pour 12 Go 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M: meilleur LLM coding pour 12 Go (~10 Go), meilleur HumanEval. DeepSeek 14B Q4 alternative. RTX 3060/3080 Ti 12 Go.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -311,6 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '12 GB向けベストコーディング LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M：12 GB VRAM最高のコーディングLLM、約10 GB使用、HumanEval最高スコア。DeepSeek 14B Q4代替。RTX 3060/3080 Ti対応。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -395,6 +398,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '12 GB最佳编程LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M：12 GB VRAM最优编程LLM，约10 GB占用，HumanEval最高分。DeepSeek 14B Q4备选。RTX 3060/3080 Ti 12 GB适配。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -479,6 +483,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor LLM de programación para 12 GB 2026 | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M: mejor LLM de programación para 12 GB con ~10 GB y mayor HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -563,6 +568,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor LLM de programação para 12 GB 2026 | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M: melhor LLM de programação para 12 GB com ~10 GB e maior HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -647,6 +653,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل ⁨LLM⁩ برمجة لـ⁨12 GB VRAM 2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Qwen 3 Coder 14B Q4⁩_⁨K⁩_⁨M⁩ أفضل نموذج برمجة لـ⁨12 GB VRAM⁩ بـ~⁨10 GB⁩، أعلى ⁨HumanEval. DeepSeek 14B Q4⁩ بديل قوي. كلاهما على ⁨RTX 3060⁩ و⁨RTX 3080 Ti⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -731,6 +738,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '12 GB VRAM 코딩 최적 LLM 2026 | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B Q4_K_M: 12 GB VRAM 코딩 최고 모델, ~10 GB 사용, HumanEval 최고점. DeepSeek 14B Q4 대안. RTX 3060/3080 Ti 모두 지원.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

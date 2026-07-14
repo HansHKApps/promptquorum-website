@@ -104,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Hilft ein lokales LLM bei der DSGVO?',
     metaDescription: 'Ja — lokales Open-Weight-LLM beseitigt das DSGVO-Artikel-44-Drittlandtransfer-Problem vollständig. Beste Modelle für datensensible Organisationen 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -179,6 +180,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'LLM local pour la conformité RGPD 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Oui — un LLM open-weight local élimine entièrement le problème de transfert vers pays tiers de l\'Article 44 du RGPD. Meilleurs modèles pour orgs data-sensibles 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -254,6 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'ローカルLLMでGDPRコンプライアンス？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'はい——オープンウェイトLLMをローカル実行するとGDPR第44条の第三国転送問題が完全に排除されます。2026年のデータ機密組織向け最適モデル。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -329,6 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '本地LLM助力GDPR合规 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '可以——本地运行开源权重LLM完全消除GDPR第44条第三国数据传输问题。2026年数据敏感机构最佳模型推荐。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -404,6 +408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'LLM local ajuda com o RGPD? 2026 | PromptQuorum',
     metaDescription: 'Sim: executar um LLM de código aberto localmente elimina o problema de transferência do Artigo 44 do RGPD. Melhores modelos para organizações com dados sensíveis em 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -487,6 +492,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '¿LLM local ayuda con el RGPD? 2026 | PromptQuorum',
     metaDescription: 'Sí: ejecutar un LLM de código abierto en local elimina el problema de transferencia del Artículo 44 del RGPD. Mejores modelos para datos sensibles en 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -570,6 +576,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨LLM⁩ محلي لامتثال ⁨GDPR 2026⁩: إلغاء المادة ⁨44⁩',
     metaDescription: 'نعم — النموذج المحلي يُلغي نقل بيانات المادة ⁨44⁩ من ⁨GDPR. Qwen 3 14B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama⁩ يحتاج ⁨12 GB VRAM⁩ ويعالج نصوص ⁨HR⁩ والوثائق القانونية محليًا.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -653,6 +660,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '로컬 LLM GDPR 컴플라이언스 2026: 제44조 해결 | PromptQuorum',
     metaDescription: '네 — 오픈 웨이트 모델을 로컬에서 실행하면 GDPR 제44조 제3국 이전 문제가 완전히 해소됩니다. 2026년 민감 데이터 처리에 적합한 최적 모델을 소개합니다.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     targetKeywords: [

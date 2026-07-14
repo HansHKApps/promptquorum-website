@@ -137,6 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama-Modell zu MLX konvertieren 2026',
     metaDescription: 'Ollama-Modelle lassen sich nicht direkt in MLX konvertieren. Nutzen Sie Hugging-Face-Gewichte + mlx-lm convert. Viele Modelle gibt es bereits vorkonvertiert.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -218,6 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Convertir un modèle Ollama en MLX 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Vous ne pouvez pas convertir directement les modèles Ollama en MLX. Utilisez plutôt les poids Hugging Face + mlx-lm convert. La plupart des modèles populaires disposent déjà de versions MLX pré-converties sur Hugging Face.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -299,6 +301,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'OllamaモデルをMLXに変換 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'OllamaモデルをMLXに直接変換することはできません。代わりにHugging Faceの重みとmlx-lm convertを使用してください。Qwen 3をはじめ多くの人気モデルはHugging Faceにすでに事前変換済みMLXバージョンが存在します。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -380,6 +383,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '将 Ollama 模型转换为 MLX 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '您无法直接将 Ollama 模型转换为 MLX 格式。请改用 Hugging Face 权重 + mlx-lm convert。大多数流行模型在 Hugging Face 上已有预转换的 MLX 版本。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -461,6 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Converter modelos do Ollama para MLX 2026 | PromptQuorum',
     metaDescription: 'Você não pode converter modelos do Ollama para MLX diretamente. Use pesos do Hugging Face + mlx-lm convert. A maioria dos modelos populares já tem versão MLX pré-convertida.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: ['Llama 3', 'Qwen', 'Mistral'],
@@ -542,6 +547,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Convertir modelos de Ollama a MLX 2026 | PromptQuorum',
     metaDescription: 'No puedes convertir modelos de Ollama a MLX directamente. Usa pesos de Hugging Face + mlx-lm convert. La mayoría de modelos populares ya tienen versión MLX.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: ['Llama 3', 'Qwen', 'Mistral'],
@@ -623,6 +629,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'تحويل نماذج ⁨Ollama⁩ إلى ⁨MLX 2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'معظم نماذج ⁨Llama 3⁩ و⁨Qwen⁩ و⁨Mistral⁩ لها نسخ ⁨MLX⁩ جاهزة على ⁨Hugging Face⁩. لا يمكن تحويل نماذج ⁨Ollama⁩ مباشرةً؛ استخدم ⁨mlx-lm convert⁩.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: ['Llama 3', 'Qwen', 'Mistral'],
@@ -704,6 +711,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 모델 MLX 변환 2026 | PromptQuorum',
     metaDescription: 'Ollama 모델을 MLX로 직접 변환할 수 없습니다. Hugging Face 가중치와 mlx-lm convert를 사용하십시오. 대부분의 인기 모델은 이미 MLX 버전이 존재합니다.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: ['Llama 3', 'Qwen', 'Mistral'],

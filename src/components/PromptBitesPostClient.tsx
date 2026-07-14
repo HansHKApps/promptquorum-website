@@ -9,6 +9,7 @@ import { AffiliateLink } from '@/components/AffiliateLink'
 import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMSection } from '@/lib/local-llms/types'
 
@@ -429,9 +430,9 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
                 ))}
               </ul>
             )}
-            {quickAnswer.updatedDate && (
+            {((article as any).dateModified ?? (article as any).publishDate) && (
               <p className="text-xs text-text-secondary mt-4">
-                {UPDATED_LABEL[lang]} {quickAnswer.updatedDate}
+                {UPDATED_LABEL[lang]} {formatDisplayDate((article as any).dateModified ?? (article as any).publishDate, lang)}
               </p>
             )}
           </div>

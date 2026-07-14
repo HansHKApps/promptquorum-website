@@ -152,6 +152,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 4 GB VRAM Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB VRAM ist eng. Phi-4 Mini Q4 (3,2 GB), Gemma 2 2B (1,5 GB), SmolLM 1.7B (1,0 GB). Llama 3 8B passt nicht. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -226,6 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 4 Go VRAM modèles 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 Go de VRAM est serré. Phi-4 Mini Q4 (3,2 Go), Gemma 2 2B (1,5 Go), SmolLM 1.7B (1,0 Go). Llama 3 8B ne rentrera pas. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -300,6 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '4 GB VRAM最良Ollamaモデル 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB VRAMは制限がありますが使えます。Phi-4 Mini Q4（3.2 GB）、Gemma 2 2B（1.5 GB）、SmolLM 1.7B（1.0 GB）。Llama 3 8Bは収まりません。PromptQuorumの解説。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -374,6 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '4 GB显存最佳Ollama模型 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '4 GB显存很紧张。Phi-4 Mini Q4（3.2 GB）、Gemma 2 2B（1.5 GB）、SmolLM 1.7B（1.0 GB）。Llama 3 8B不适合。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -448,6 +452,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Modelos Ollama para 4 GB VRAM 2026 | PromptQuorum',
     metaDescription: '4 GB de VRAM es ajustado. Phi-4 Mini Q4 (3,2 GB), Gemma 2 2B (1,5 GB), SmolLM 1.7B (1,0 GB). Llama 3 8B no cabe. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -534,6 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Modelos Ollama para 4 GB VRAM 2026 | PromptQuorum',
     metaDescription: '4 GB de VRAM é justo. Phi-4 Mini Q4 (3,2 GB), Gemma 2 2B (1,5 GB), SmolLM 1.7B (1,0 GB). Llama 3 8B não cabe. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -620,6 +626,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Ollama⁩ بـ⁨4 GB VRAM⁩: أفضل النماذج ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨4 GB VRAM⁩ تتسع لـ⁨Phi-4 Mini Q4⁩ (⁨3.2 GB⁩) و⁨Gemma 2 2B⁩ (⁨1.5 GB⁩) و⁨SmolLM 1.7B⁩ (⁨1.0 GB⁩). أما ⁨Llama 3 8B⁩ فيحتاج ⁨5.5 GB⁩ ولا يتسع.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -706,6 +713,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 4GB VRAM 모델 2026 | PromptQuorum',
     metaDescription: '4GB VRAM은 좁지만 사용 가능합니다. Phi-4 Mini Q4 (3.2GB), Gemma 2 2B (1.5GB), SmolLM 1.7B (1.0GB). Llama 3 8B는 들어가지 않습니다. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {

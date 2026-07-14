@@ -136,6 +136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama MLX Apple Silicon 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Nein — Ollama verwendet llama.cpp + Metal, nicht MLX. Für native MLX-Inferenz auf Apple Silicon: mlx-lm oder LM Studio. LM Studio unterstützt beide Backends.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -216,6 +217,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama MLX Apple Silicon 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Non — Ollama utilise llama.cpp + Metal, pas MLX. Pour une inférence MLX native sur Apple Silicon : mlx-lm ou LM Studio. LM Studio supporte les deux backends.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -296,6 +298,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama MLX Apple Silicon サポート 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'いいえ — OllamaはMLXではなくllama.cpp + Metalを使用します。Apple Silicon上のネイティブMLX推論にはmlx-lmまたはLM Studioを使用してください。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -376,6 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama MLX Apple Silicon 支持 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '不支持 — Ollama 使用 llama.cpp + Metal，而非 MLX。Apple Silicon 原生 MLX 推理请使用 mlx-lm 或 LM Studio。LM Studio 同时支持两种后端。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -456,6 +460,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Suporte do Ollama a MLX no Apple Silicon 2026 | PromptQuorum',
     metaDescription: 'Não — O Ollama usa llama.cpp + Metal, não MLX. Para inferência MLX nativa no Apple Silicon, use mlx-lm ou LM Studio. LM Studio suporta ambos os backends.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -545,6 +550,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Soporte de Ollama MLX en Apple Silicon 2026 | PromptQuorum',
     metaDescription: 'No — Ollama usa llama.cpp + Metal, no MLX. Para inferencia MLX nativa en Apple Silicon, usa mlx-lm o LM Studio. LM Studio soporta ambos backends.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -628,6 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Ollama⁩ على ⁨Apple Silicon⁩: ⁨llama.cpp + Metal⁩ لا ⁨MLX⁩',
     metaDescription: '⁨Ollama⁩ يستخدم ⁨llama.cpp + Metal⁩ على ⁨Apple Silicon⁩، وليس ⁨MLX⁩. سرعة ⁨MLX⁩ تبلغ ضعفَي ⁨Metal⁩. للحصول على ⁨MLX⁩ الأصلي استخدم ⁨mlx-lm⁩ أو ⁨LM Studio⁩.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -710,6 +717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama MLX Apple Silicon 지원 여부 2026 | PromptQuorum',
     metaDescription: 'Ollama는 MLX 대신 llama.cpp + Metal을 사용합니다. Apple Silicon에서 네이티브 MLX 추론이 필요하다면 mlx-lm 또는 LM Studio를 사용하십시오. LM Studio는 두 백엔드를 모두 지원합니다.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],

@@ -126,6 +126,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAG mit 2 GB RAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2-Embeddings ermöglichen RAG auf 2 GB RAM mit ~1,3–1,5 GB Speicher. 7B+ Modelle benötigen 8 GB minimum. Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -196,6 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAG avec 2 Go de RAM 2026 ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 permettent RAG sur 2 Go de RAM (~1,3–1,5 Go total). Modèles 7B+ nécessitent 8 Go minimum. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -266,6 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2 GB RAM での RAG 実行 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 で 2 GB RAM 上の RAG が可能（~1.3–1.5 GB）。7B+ モデルは 8 GB 必須。PromptQuorum より。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -336,6 +339,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAG com 2 GB de RAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + embeddings MiniLM-L6-v2 permitem RAG com 2 GB de RAM (~1,3–1,5 GB no total). Modelos 7B+ precisam de 8 GB. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -406,6 +410,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAG con 2 GB de RAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 permiten RAG con 2 GB de RAM (~1,3–1,5 GB total). Los modelos 7B+ necesitan al menos 8 GB. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-31',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -476,6 +481,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2 GB 内存 RAG 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 让 2 GB RAM 可运行 RAG（~1.3–1.5 GB）。7B+ 模型需 8 GB。PromptQuorum 快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -546,6 +552,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'تشغيل ⁨RAG⁩ على ⁨2 GB RAM⁩ في ⁨2026⁩: دليل عملي',
     metaDescription: '⁨Llama 3.2 1B Q4⁩_⁨K⁩_⁨M⁩ (~⁨750 MB⁩) مع تضمينات ⁨MiniLM-L6-v2⁩ (~⁨80 MB⁩) يشغّل ⁨RAG⁩ على ⁨2 GB RAM⁩ بإجمالي ~⁨1.3-1.5 GB⁩. النماذج ⁨7B⁩+ تحتاج ⁨8 GB⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -616,6 +623,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2 GB RAM RAG 실행 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 임베딩으로 2 GB RAM에서 RAG를 실행할 수 있습니다(~1.3-1.5 GB). 7B+ 모델은 최소 8 GB가 필요합니다. PromptQuorum 빠른 답변.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

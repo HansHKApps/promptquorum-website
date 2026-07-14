@@ -141,6 +141,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Radeon 6800M für lokale LLMs? | Prompt Bites | PromptQuorum',
     metaDescription: 'Ja, Radeon 6800M (12 GB): ROCm Linux ~12 tok/s, Vulkan Windows ~14 tok/s. Mobile RDNA 2 ≠ Desktop RX 6800. Muss angeschlossen sein für beste Performance.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -226,6 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Radeon 6800M pour LLM local ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Oui, Radeon 6800M (12 Go): ROCm Linux ~12 tok/s, Vulkan Windows ~14 tok/s. RDNA 2 mobile ≠ RX 6800 bureau. Branché obligatoire.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -311,6 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Radeon 6800M でローカル LLM？| Prompt Bites | PromptQuorum',
     metaDescription: 'はい、Radeon 6800M（12 GB）：ROCm Linux 約12 tok/s、Vulkan Windows 約14 tok/s。モバイル RDNA 2 ≠ デスクトップRX 6800。常に接続必須。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -396,6 +399,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Radeon 6800M 能运行本地 LLM？| Prompt Bites | PromptQuorum',
     metaDescription: '可以，Radeon 6800M（12 GB）：ROCm Linux 约12 tok/s、Vulkan Windows 约14 tok/s。移动版 RDNA 2 ≠ 桌面版 RX 6800。必须接通。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -481,6 +485,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Radeon 6800M para LLM local? | Prompt Bites | PromptQuorum',
     metaDescription: 'Sim: a Radeon RX 6800M (12 GB VRAM) executa LLMs via ROCm no Linux ou llama.cpp em todas as plataformas. Llama 3 8B Q4 roda a ~12 tok/s. Suporte ROCm no Windows é limitado.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -566,6 +571,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '¿Radeon 6800M para LLM local? | Prompt Bites | PromptQuorum',
     metaDescription: 'Sí: la Radeon RX 6800M (12 GB) ejecuta LLMs vía ROCm en Linux o llama.cpp. Llama 3 8B Q4 corre a ~12 tok/s. El soporte ROCm en Windows es limitado.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -651,6 +657,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Radeon 6800M⁩ للـ ⁨LLM⁩ المحلي: ⁨ROCm⁩ و ⁨Vulkan⁩',
     metaDescription: '⁨Radeon RX 6800M⁩ (⁨12 GB VRAM⁩) تشغّل ⁨LLMs⁩ عبر ⁨ROCm⁩ على ⁨Linux⁩ بـ~⁨12 tok/s⁩ أو ⁨llama.cpp⁩ مع ⁨Vulkan. Llama 3 8B Q4⁩_⁨K⁩_⁨M⁩ يعمل. دعم ⁨Windows⁩ محدود.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -736,6 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Radeon 6800M 로컬 LLM? ROCm vs Vulkan | PromptQuorum',
     metaDescription: 'Radeon RX 6800M (12 GB VRAM)은 Linux에서 ROCm을 통해 ~12 tok/s로, Windows에서는 llama.cpp Vulkan으로 LLM을 실행할 수 있습니다. Llama 3 8B Q4_K_M 지원 확인됩니다.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     readTime: '5분 분량',

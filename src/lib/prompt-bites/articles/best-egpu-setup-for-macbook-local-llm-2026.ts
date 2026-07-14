@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**MacBooks with Apple Silicon (M2–M5) cannot use eGPUs via Thunderbolt for GPU compute through native macOS — Apple removed Thunderbolt eGPU support in macOS Ventura. However, as of April 2026, Tiny Corp\'s Apple-notarized TinyGPU driver adds NVIDIA/AMD eGPU compute support on Apple Silicon for AI workloads (not Metal, not display). For a fully supported path: use a Mac Mini M4 Pro (48 GB) or an AMD/Intel mini PC with OCuLink instead.**',
     quickAnswerTop: {
@@ -159,6 +160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**MacBooks mit Apple Silicon (M2–M5) können eGPUs 2026 nicht für GPU-Compute nutzen — Apple entfernte Thunderbolt-eGPU-Unterstützung in macOS Ventura. Die Alternative: Mac Mini M4 Pro (48 GB Unified Memory) oder AMD Mini-PC (UM890 Pro) mit OCuLink-eGPU.**',
     quickAnswerTop: {
@@ -274,6 +276,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**Les MacBooks Apple Silicon (M2–M5) ne peuvent pas utiliser d\'eGPU pour le calcul GPU en 2026 — Apple a supprimé le support eGPU Thunderbolt dans macOS Ventura. Alternative : Mac Mini M4 Pro (48 Go de mémoire unifiée) ou mini PC AMD (UM890 Pro) avec eGPU OCuLink.**',
     quickAnswerTop: {
@@ -388,6 +391,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**Apple Silicon搭載MacBook（M2〜M5）は2026年現在eGPUをGPUコンピュートに使用できません——AppleはmacOS VenturaでThunderbolt eGPUサポートを廃止しました。代替案：Mac Mini M4 Pro（48GB統合メモリ）またはOCuLink対応AMDミニPC（UM890 Pro）。**',
     quickAnswerTop: {
@@ -502,6 +506,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**搭载Apple Silicon（M2–M5）的MacBook在2026年无法将eGPU用于GPU计算——Apple在macOS Ventura中移除了Thunderbolt eGPU支持。替代方案：Mac Mini M4 Pro（48GB统一内存）或配OCuLink的AMD迷你PC（UM890 Pro）。**',
     quickAnswerTop: {
@@ -628,6 +633,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**Los MacBooks con Apple Silicon (M2–M5) no pueden usar eGPUs para cómputo GPU en 2026 — Apple eliminó el soporte de eGPU por Thunderbolt en macOS Ventura. La alternativa: Mac Mini M4 Pro (48 GB de memoria unificada) o mini PC AMD (UM890 Pro) con eGPU OCuLink.**',
     quickAnswerTop: {
@@ -762,6 +768,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**MacBooks com Apple Silicon (M2–M5) não podem usar eGPUs para computação GPU em 2026 — a Apple removeu o suporte a eGPU Thunderbolt no macOS Ventura. A alternativa: Mac Mini M4 Pro (48 GB de memória unificada) ou mini PC AMD (UM890 Pro) com eGPU OCuLink.**',
     quickAnswerTop: {
@@ -896,6 +903,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/ar/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**لا يمكن لأجهزة MacBook بمعالج Apple Silicon (M2–M5) استخدام eGPU لحوسبة معالج الرسومات في 2026 — فقد أزالت Apple دعم eGPU عبر Thunderbolt في macOS Ventura. البديل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر (UM890 Pro) مع eGPU عبر OCuLink.**',
     quickAnswerTop: {
@@ -1030,6 +1038,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
+    dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
     leadAnswerBlock: '**Apple Silicon MacBook(M2–M5)은 2026년에 GPU 컴퓨팅을 위한 eGPU를 사용할 수 없습니다 — Apple이 macOS Ventura에서 Thunderbolt eGPU 지원을 제거했습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink eGPU를 탑재한 AMD 미니 PC(UM890 Pro).**',
     quickAnswerTop: {

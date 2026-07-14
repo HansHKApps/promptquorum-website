@@ -103,6 +103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ist DeepSeek DSGVO-konform?',
     metaDescription: 'Ist DeepSeek DSGVO-konform? Die DeepSeek-API speichert Daten in China – ein DSGVO-Risiko. Lokal über Ollama betrieben bleibt DeepSeek DSGVO-konform.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -181,6 +182,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek sûr pour le RGPD 2026 ? | Prompt Bites | PromptQuorum',
     metaDescription: 'L\'API DeepSeek est le LLM le plus risqué pour le RGPD : juridiction chinoise, PIPL, pas de décision d\'adéquation UE. Les poids locaux DeepSeek sont moins risqués. Mai 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -259,6 +261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeekはGDPR安全？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'DeepSeek APIは主要LLM中でGDPRリスクが最高：中国管轄・PIPL・EU十分性認定なし。ローカルDeepSeek重みはリスクが低い。2026年5月更新。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -337,6 +340,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek符合GDPR安全标准吗？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'DeepSeek API是GDPR风险最高的LLM：中国数据访问法管辖，无欧盟充分性认定。本地DeepSeek权重风险较低。2026年5月更新。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -415,6 +419,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek é seguro para o RGPD? 2026 | PromptQuorum',
     metaDescription: 'A API do DeepSeek é o LLM de maior risco para o RGPD: jurisdição da lei de dados chinesa, sem decisão de adequação da UE. Pesos locais do DeepSeek têm menor risco. Maio de 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -497,6 +502,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '¿DeepSeek es seguro para el RGPD? 2026 | PromptQuorum',
     metaDescription: 'La API de DeepSeek es el LLM de mayor riesgo RGPD: jurisdicción china, ley PIPL y sin adecuación de la UE. Los pesos locales son de menor riesgo. Mayo 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -579,6 +585,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨DeepSeek GDPR 2026⁩: ⁨API⁩ الصيني أم أوزان محلية؟',
     metaDescription: '⁨DeepSeek API⁩ يحمل أعلى مخاطر ⁨GDPR⁩: خوادم صينية خاضعة لقانون ⁨PIPL⁩، ولا قرار كفاية أوروبي للصين. الأوزان المحلية تُلغي نقل البيانات تماماً.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {

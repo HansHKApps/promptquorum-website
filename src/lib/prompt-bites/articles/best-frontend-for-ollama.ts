@@ -134,6 +134,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Bestes Frontend für Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI ist das beste Ollama-Frontend. SillyTavern für Rollenspiele. Jan ergänzt die Modellverwaltung. Alle kostenlos und Open Source. Aktualisiert Mai 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -212,6 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur frontend pour Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI est le meilleur frontend Ollama. SillyTavern pour le jeu de rôle. Jan ajoute la gestion de modèles. Tous gratuits. Mis à jour mai 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -290,6 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollamaに最適なフロントエンドは？| Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUIはOllamaに最適なフロントエンドです。ロールプレイにはSillyTavern。Janはモデル管理を追加します。すべて無料でオープンソース。2026年5月更新。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -368,6 +371,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 最佳前端工具 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI 是最佳 Ollama 前端。SillyTavern 适合角色扮演。Jan 提供模型管理。全部免费且开源。2026年5月更新。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-19',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -446,6 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '¿Mejor frontend para Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI es el mejor frontend para Ollama. SillyTavern para roleplay y Jan para gestión de modelos. Los tres son gratuitos y open source. Mayo 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-31',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: [],
@@ -528,6 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor frontend para Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI é o melhor frontend para Ollama. SillyTavern para roleplay e Jan para gestão de modelos. Os três são gratuitos e open source. Maio 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: [],
@@ -610,6 +616,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل واجهة لـ ⁨Ollama⁩: ⁨Open WebUI⁩ أو ⁨SillyTavern 2026⁩',
     metaDescription: '⁨Open WebUI⁩ الأفضل لـ ⁨Ollama⁩: يعمل كحاوية ⁨Docker⁩ ويدعم ⁨RAG. SillyTavern⁩ للأدوار، ⁨Jan⁩ لإدارة النماذج. الثلاثة مجانية. مايو ⁨2026⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: [],
@@ -692,6 +699,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 최적 프론트엔드 비교: Open WebUI vs SillyTavern vs Jan 2026',
     metaDescription: 'Ollama 프론트엔드 추천: Open WebUI가 대부분의 사용자에게 최선입니다. SillyTavern은 롤플레이, Jan은 모델 관리에 적합합니다. 세 가지 모두 무료 오픈소스입니다. 2026년 5월.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: [],

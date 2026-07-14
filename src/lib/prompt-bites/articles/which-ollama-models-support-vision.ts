@@ -104,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama Vision-Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal und Qwen-VL unterstützen Vision in Ollama. Start: ollama run llava. Alle akzeptieren Bilder via Ollama API. Stand Mai 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -187,6 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama modèles vision 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal et Qwen-VL supportent la vision sur Ollama. Démarrez : ollama run llava. Images acceptées via l\'API Ollama. Vérifié mai 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -270,6 +272,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'OllamaのVision対応モデル2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'OllamaではLLaVA、Gemma 3マルチモーダル、Qwen-VLがVisionに対応しています。まずは ollama run llava から始めましょう。すべてOllama APIで画像を受け付けます。2026年5月確認済み。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -353,6 +356,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '哪些Ollama模型支持视觉2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA、Gemma 3多模态和Qwen-VL支持Ollama上的视觉功能。使用 ollama run llava 快速开始。所有模型均通过Ollama API接受图片。2026年5月更新。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -436,6 +440,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Modelos de visão do Ollama 2026 | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal e Qwen-VL suportam visão no Ollama. Comece com: ollama run llava. Todos aceitam imagens via a API do Ollama. Atualizado em 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -519,6 +524,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Modelos de visión de Ollama 2026 | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal y Qwen-VL soportan visión en Ollama. Empieza con: ollama run llava. Todos aceptan imágenes vía la API de Ollama. Actualizado 2026.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -602,6 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'نماذج ⁨Ollama⁩ للرؤية ⁨2026⁩: ⁨LLaVA⁩ و ⁨Qwen-VL⁩ و ⁨Gemma 3⁩',
     metaDescription: '⁨4⁩ نماذج رؤية جاهزة في ⁨Ollama⁩: ⁨LLaVA⁩ و ⁨Llama 3.2 Vision⁩ و ⁨Qwen-VL⁩ و ⁨Gemma 3⁩. كل نموذج يحتاج ⁨1⁩–⁨3 GB VRAM⁩ إضافية؛ ابدأ بـ ⁨ollama run llava⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -685,6 +692,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 비전 모델 2026: LLaVA, Qwen-VL, Gemma 3 | PromptQuorum',
     metaDescription: 'Ollama에서 프로덕션 준비된 비전 모델 4종: LLaVA, Llama 3.2 Vision, Qwen-VL, Gemma 3. 각 모델은 1~3 GB 추가 VRAM이 필요합니다. ollama run llava로 시작하십시오.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

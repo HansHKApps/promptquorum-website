@@ -102,6 +102,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ist Qwen DSGVO-konform? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ist Qwen DSGVO-konform? Die Alibaba-Cloud-API speichert Daten in China. Lokal über Ollama betrieben ist Qwen vollständig DSGVO-konform.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -183,6 +184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen conforme RGPD 2026 ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen en local est conforme au RGPD — pas de transfert, pas de problème Article 44. L\'API Qwen (Alibaba Cloud) exige des CCT comme tout prestataire hors UE. Mai 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -264,6 +266,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'QwenはGDPR準拠？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'ローカルQwenはGDPR準拠——データ転送なし、第44条問題なし。Qwen API（Alibaba Cloud）は他の非EU提供者と同様SCCが必要。2026年5月更新。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -345,6 +348,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen符合GDPR吗？2026 | Prompt Bites | PromptQuorum',
     metaDescription: '本地Qwen符合GDPR——无数据传输，无第44条问题。Qwen API（阿里云）与其他非欧盟提供商一样需要SCCs。2026年5月更新。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -426,6 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'O Qwen é compatível com o RGPD? 2026 | PromptQuorum',
     metaDescription: 'O Qwen executado localmente cumpre o RGPD: sem transferência de dados, sem problema do Artigo 44. A API do Qwen (Alibaba Cloud) requer CCT como qualquer fornecedor não europeu. 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -507,6 +512,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '¿Es Qwen compatible con el RGPD? 2026 | PromptQuorum',
     metaDescription: 'Qwen en local cumple el RGPD: sin transferencia de datos ni problema del Artículo 44. La API de Qwen (Alibaba Cloud) requiere CCT como toda no europea. 2026.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -588,6 +594,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Qwen⁩ و⁨GDPR 2026⁩: محلياً آمن تماماً، ⁨API⁩ يتطلب ⁨SCCs⁩',
     metaDescription: '⁨Qwen⁩ المُشغَّل محلياً لا ينقل أي بيانات فلا تنطبق المادة ⁨44⁩ من ⁨GDPR. API Qwen⁩ عبر ⁨Alibaba Cloud⁩ يتطلب ⁨SCCs⁩ وتقييم ⁨TIA⁩ لأي بيانات شخصية.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -669,6 +676,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Qwen GDPR 준수 여부 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '로컬에서 실행되는 Qwen은 GDPR을 준수합니다. 프롬프트 데이터가 외부로 전송되지 않아 제44조 문제가 없습니다. Alibaba Cloud API는 SCCs가 필요합니다.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     targetKeywords: [

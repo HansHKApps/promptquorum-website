@@ -138,6 +138,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'MLX vs. Ollama vs. llama.cpp: lokale Engines 2026',
     metaDescription: 'Auf Apple Silicon: MLX (~65 tok/s auf M5 Pro). Auf NVIDIA-GPUs: Ollama für Einfachheit oder llama.cpp für Kontrolle. Ollama nutzt llama.cpp. Schnelle Antwort.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -220,6 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Sur Apple Silicon : MLX (~65 tok/s sur M5 Pro). Sur GPU NVIDIA : Ollama pour la simplicité ou llama.cpp pour le contrôle. Ollama encapsule llama.cpp. Réponse rapide.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -302,6 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Apple Siliconには MLX（M5 Proで~65 tok/s）。NVIDIA GPUにはシンプルさならOllama、制御力ならllama.cpp。OllamaはllaMa.cppをラップ。簡潔な回答。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -384,6 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | PromptQuorum',
     metaDescription: 'No Apple Silicon use MLX (~65 tok/s no M5 Pro). Em NVIDIA, Ollama pela simplicidade ou llama.cpp pelo controle. Ollama encapsula llama.cpp. Resposta rápida.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -467,6 +471,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | PromptQuorum',
     metaDescription: 'En Apple Silicon usa MLX (~65 tok/s en M5 Pro). En NVIDIA, Ollama por simplicidad o llama.cpp por control. Ollama envuelve a llama.cpp. Respuesta rápida.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -550,6 +555,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'MLX vs Ollama vs llama.cpp 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '在 Apple Silicon 上用 MLX（M5 Pro ~65 tok/s）。在 NVIDIA GPU 上，追求简便选 Ollama，追求控制选 llama.cpp。Ollama 封装了 llama.cpp。快速解答。',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     quickAnswerTop: {
@@ -632,6 +638,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨MLX⁩ مقابل ⁨Ollama⁩ مقابل ⁨llama.cpp 2026⁩: دليل الاختيار',
     metaDescription: 'على ⁨Apple Silicon⁩ استخدم ⁨MLX⁩: يحقق ~⁨65⁩ توكن/ثانية على ⁨M5 Pro⁩ مقابل ~⁨35⁩ لـ ⁨Ollama⁩. على ⁨NVIDIA⁩ اختر ⁨Ollama⁩ للبساطة أو ⁨llama.cpp⁩ للتحكم الكامل.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],
@@ -715,6 +722,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'MLX vs Ollama vs llama.cpp 추론 엔진 비교 2026 | PromptQuorum',
     metaDescription: 'Apple Silicon에서는 MLX를 사용하십시오(M5 Pro에서 ~65 tok/s). NVIDIA GPU에서는 간편함을 위해 Ollama, 최대 제어를 위해 llama.cpp를 사용하십시오. Ollama는 llama.cpp를 내부적으로 사용합니다.',
     publishDate: '2026-05-22',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     current_models_mentioned: [],

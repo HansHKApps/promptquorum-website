@@ -143,6 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M erklärt: k-quant 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M = 4-Bit-K-Quant auf mittlerem Qualitätsniveau. Besser als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -208,6 +209,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M : format k-quant 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M = k-quant 4 bits à qualité moyenne. Meilleure que Q4_0, plus petite que Q8_0. À utiliser comme standard. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -273,6 +275,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M量化の完全解説 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0より優れ、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -338,6 +341,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M量化格式完整解析 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M是中等质量的K-Quant 4位量化格式。优于Q4_0，体积小于Q8_0。将其作为默认格式使用。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-29',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -403,6 +407,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Guia de quantização Q4_K_M 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M é quantização de 4 bits k-quant de qualidade média: melhor que Q4_0, menor que Q8_0. Use-a como padrão no Ollama. Guia rápido do PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -480,6 +485,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Guía de cuantización Q4_K_M 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M es cuantización de 4 bits k-quant de calidad media: mejor que Q4_0, más pequeña que Q8_0. Úsala por defecto en Ollama. Guía rápida de PromptQuorum.',
     publishDate: '2026-05-18',
+    dateModified: '2026-05-31',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -557,6 +563,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩: ضغط ⁨k-quant 4-bit 2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Q4⁩_⁨K⁩_⁨M⁩ يوفر جودة أعلى بـ ⁨5⁩–⁨8%⁩ من ⁨Q4⁩_⁨0⁩ بنفس حجم الملف. نموذج ⁨7B⁩ يحتاج ~⁨5.5 GB VRAM⁩. استخدمه افتراضيًا في ⁨Ollama⁩ بدلًا من ⁨Q4⁩_⁨0⁩ أو ⁨Q8⁩_⁨0⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -634,6 +641,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M 양자화 완전 가이드 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 품질이 높고 Q8_0보다 파일 크기가 작습니다. Ollama의 기본 설정으로 사용하십시오.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

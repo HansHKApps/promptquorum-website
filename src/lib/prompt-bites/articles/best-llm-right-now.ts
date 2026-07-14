@@ -138,6 +138,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Das beste lokale LLM jetzt: Llama 3.3 70B für die meisten, Qwen 3 Coder fürs Programmieren, Phi-4 für schwache Hardware. Nach Anwendungsfall und VRAM.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -216,6 +217,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Code : Claude Opus 4.8 (87,6% SWE-Bench). Chat général : GPT-5.5 Instant (52,5% moins d\'hallucinations). Local : Llama 4 Scout ou Qwen 3 14B. Mis à jour chaque mois.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -294,6 +296,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026年最良LLM | Prompt Bites | PromptQuorum',
     metaDescription: 'クラウド：Claude Opus 4.8（87.6% SWE-Bench）コーディング、GPT-5.5 Instant（幻覚52.5%削減）汎用チャット。ローカル：Llama 4 Scout か Qwen 3 14B。毎月更新。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -372,6 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Código: Claude Opus 4.8 (87.6% SWE-Bench). Chat: GPT-5.5 Instant (52.5% menos alucinaciones). Local: Llama 4 Scout o Qwen 3 14B. Actualizado mensualmente.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: ['Claude Opus 4.8', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 3 14B'],
@@ -461,6 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Código: Claude Opus 4.8 (87,6% SWE-Bench). Chat: GPT-5.5 Instant (52,5% menos alucinações). Local: Llama 4 Scout ou Qwen 3 14B. Atualizado mensalmente.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: ['Claude Opus 4.8', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 3 14B'],
@@ -550,6 +555,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026年最佳LLM | Prompt Bites | PromptQuorum',
     metaDescription: '编程：Claude Opus 4.8（87.6% SWE-Bench）；对话：GPT-5.5 Instant（幻觉减少 52.5%）；本地：Llama 4 Scout 或 Qwen 3 14B。每月更新。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     quickAnswerTop: {
@@ -628,6 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل ⁨LLM 2026⁩: ⁨Claude Opus 4.8⁩ و⁨GPT-5.5⁩ و⁨Llama 4⁩',
     metaDescription: '⁨Claude Opus 4.8⁩ يحقق ⁨87.6%⁩ على ⁨SWE-Bench. GPT-5.5 Instant⁩ يقلل الهلوسة ⁨52.5%⁩. محلياً: ⁨Llama 4 Scout⁩ لـ⁨24 GB VRAM⁩ أو ⁨Qwen 3 14B⁩ لـ⁨12 GB⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: ['Claude Opus 4.8', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 3 14B'],
@@ -717,6 +724,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026년 최고의 LLM | Prompt Bites | PromptQuorum',
     metaDescription: '코딩: Claude Opus 4.8 (SWE-Bench 87.6%). 일반 채팅: GPT-5.5 Instant (환각 52.5% 감소). 로컬: Llama 4 Scout 또는 Qwen 3 14B. 매월 업데이트.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-06-18',
     current_models_mentioned: ['Claude Opus 4.8', 'GPT-5.5 Instant', 'Gemini 2.5 Pro', 'Llama 4 Scout', 'Qwen 3 14B'],

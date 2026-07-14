@@ -135,6 +135,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste lokale LLMs: AMD 5700X + RTX 3070 Ti',
     metaDescription: 'Llama 3 8B Q4_K_M und Mistral Small Q5_K_M laufen mit 22–25 tok/s auf RTX 3070 Ti: beide nutzen ~6 GB VRAM. GPU, nicht CPU, ist das Upgrade-Ziel für LLMs.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -214,6 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AMD 5700X + RTX 3070 Ti : LLM | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M et Mistral Small Q5_K_M tournent à 22–25 tok/s sur RTX 3070 Ti : tous deux 6 Go VRAM. GPU, pas CPU, est la cible d\'upgrade pour LLMs.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -293,6 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AMD 5700X + 3070 Ti 向け最適 LLM | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M と Mistral Small Q5_K_M は RTX 3070 Ti で22–25 tok/s：両者とも6 GB VRAM。GPU が CPU でなくアップグレード対象。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -372,6 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AMD 5700X + RTX 3070 Ti 最佳 LLM | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M和Mistral Small Q5_K_M在RTX 3070 Ti上22–25 tok/s：均占用6 GB VRAM。GPU而非CPU是LLM升级目标。',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -451,6 +455,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AMD 5700X + RTX 3070 Ti: LLMs | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M y Mistral Small Q5_K_M funcionan a 22–25 tok/s en RTX 3070 Ti: ambos usan ~6 GB VRAM. La GPU, no la CPU, es el objetivo de mejora para LLMs.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -530,6 +535,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AMD 5700X + RTX 3070 Ti: LLMs | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M e Mistral Small Q5_K_M rodam a 22–25 tok/s na RTX 3070 Ti: ambos usam ~6 GB de VRAM. A GPU, não a CPU, é o alvo de atualização para LLMs.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -609,6 +615,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨LLMs⁩ على ⁨AMD 5700X + RTX 3070 Ti⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Llama 3 8B Q4⁩_⁨K⁩_⁨M⁩ و⁨Mistral Small Q5⁩_⁨K⁩_⁨M⁩ يعملان بـ⁨22⁩–⁨25⁩ رمز/ثانية على ⁨RTX 3070 Ti⁩ بـ~⁨6 GB VRAM⁩ لكل منهما. ⁨GPU⁩ هي هدف الترقية لا ⁨CPU⁩.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -688,6 +695,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AMD 5700X + RTX 3070 Ti 최적 LLM | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3 8B Q4_K_M과 Mistral Small Q5_K_M은 RTX 3070 Ti에서 22~25 tok/s로 실행됩니다. 두 모델 모두 VRAM 약 6 GB를 사용합니다. LLM 성능 향상의 핵심은 GPU입니다.',
     publishDate: '2026-05-18',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     targetKeywords: [

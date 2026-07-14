@@ -153,6 +153,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste Quantisierung für 6 GB VRAM 2026',
     metaDescription: 'Q4_K_M für 7B-Modelle: 4,9 GB, passt mit 1,1 GB Puffer für Kontext. Q5_K_M passt knapp. Q6_K und höher überschreiten 6 GB. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -243,6 +244,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleure quantisation 6 Go VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M pour les modèles 7B : 4,9 Go, tient dans 6 Go avec 1,1 Go pour le contexte. Q5_K_M tient juste. Q6_K et au-dessus dépassent 6 Go. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -333,6 +335,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB VRAM 最適量子化 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '7B モデルの Q4_K_M：4.9 GB、6 GB VRAM に収まり 1.1 GB のコンテキスト余裕あり。Q5_K_M はギリギリ。Q6_K 以上は 6 GB を超過。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -423,6 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB 显存最佳量化 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '7B 模型 Q4_K_M：4.9 GB，6 GB 显存可容纳并留 1.1 GB 用于上下文。Q5_K_M 勉强能放。Q6_K 及以上超出 6 GB。PromptQuorum 快速解答。',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -513,6 +517,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor quantização para 6 GB VRAM 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M para modelos 7B: 4,9 GB, cabe em 6 GB de VRAM com 1,1 GB para contexto. Q5_K_M cabe justo; Q6_K e superiores ultrapassam 6 GB. Resposta rápida.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -603,6 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor cuantización para 6 GB VRAM 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M para modelos 7B: 4,9 GB, cabe en 6 GB de VRAM con 1,1 GB para contexto. Q5_K_M cabe justo; Q6_K y superiores superan los 6 GB. Respuesta rápida.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -693,6 +699,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل تكميم لـ⁨6 GB VRAM⁩: ⁨Q4⁩_⁨K⁩_⁨M⁩ أم ⁨Q5⁩_⁨K⁩_⁨M⁩؟ ⁨2026⁩',
     metaDescription: '⁨Q4⁩_⁨K⁩_⁨M⁩ لنماذج ⁨7B/8B⁩ يستخدم ⁨4.7⁩–⁨4.9 GB⁩ ويترك ⁨1.1 GB⁩ لذاكرة ⁨KV. Q5⁩_⁨K⁩_⁨M⁩ يتسع بـ⁨5.7 GB⁩ فقط مع تقليل السياق إلى ⁨2k. Q6⁩_⁨K⁩ يتجاوز ⁨6 GB⁩.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     quickAnswerTop: {
@@ -783,6 +790,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6GB VRAM 최적 양자화 2026: Q4_K_M vs Q5_K_M | PromptQuorum',
     metaDescription: '7B/8B 모델의 Q4_K_M은 4.7~4.9GB를 사용하여 KV 캐시에 1.1GB를 남깁니다. Q5_K_M은 5.7GB로 컨텍스트를 2k로 제한해야 합니다. Q6_K 이상은 6GB를 초과합니다.',
     publishDate: '2026-05-23',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
     targetKeywords: [

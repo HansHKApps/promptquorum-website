@@ -136,6 +136,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Lokale LLMs für Japanisch 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (JA/ZH/EN), Phi-4 (10–12 GB): vier lokale LLMs für japanische Texte — alle über Ollama ausführbar.',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -216,6 +217,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'LLMs locaux japonais 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Rinna 3.6B (4 Go), ELYZA-7B (6 Go), Qwen3 7B (JA/ZH/EN), Phi-4 (10–12 Go) : quatre LLM locaux pour le japonais, tous compatibles Ollama en 2026.',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -296,6 +298,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '日本語対応ローカルLLMモデル比較2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Rinna 3.6Bは4 GB RAMで動作する最軽量の日本語ネイティブモデル。ELYZA-7Bは指示追従に最適。Qwen3 7BはJA/ZH/ENの多言語とコーディングをカバー。すべてOllama経由。2026年5月更新。',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -376,6 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '最佳日语本地LLM模型2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Rinna 3.6B最低4 GB内存即可运行，是最轻量的日语原生本地LLM。ELYZA-7B在指令跟随方面领先。Qwen3 7B覆盖JA/ZH/EN多语言和编码。均可通过Ollama运行。2026年5月更新。',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -457,6 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejores LLMs locales en japonés 2026 | PromptQuorum',
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (multilingüe JA/ZH/EN), Phi-4 (10–12 GB): cuatro LLMs locales para tareas en japonés, todos vía Ollama en 2026.',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
@@ -549,6 +554,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل ⁨LLMs⁩ محلية لليابانية ⁨2026⁩: ⁨Rinna⁩ و⁨ELYZA⁩ و⁨Qwen3⁩',
     metaDescription: '⁨Rinna 3.6B⁩ يعمل بـ⁨4 GB RAM⁩، و⁨ELYZA-7B⁩ بـ⁨6 GB⁩ للتعليمات، و⁨Qwen3 7B⁩ يغطي ⁨JA/ZH/EN⁩ — جميعها تعمل محلياً عبر ⁨Ollama⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩.',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
@@ -636,6 +642,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhores LLMs locais em japonês 2026 | PromptQuorum',
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (multilíngue JA/ZH/EN), Phi-4 (10–12 GB): quatro LLMs locais para tarefas em japonês, todos via Ollama em 2026.',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
@@ -738,6 +745,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '최고의 일본어 로컬 LLM 2026 | PromptQuorum',
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (다국어 JA/ZH/EN), Phi-4 (10–12 GB): 2026년 Ollama를 통해 실행하는 일본어 작업용 로컬 LLM 4종 비교.',
     publishDate: '2026-05-27',
+    dateModified: '2026-06-12',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
