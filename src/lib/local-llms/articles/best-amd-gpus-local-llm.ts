@@ -10,12 +10,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
-      title: 'Best AMD GPUs for Local LLMs',
-      seoTitle: 'Best AMD GPUs for Local LLMs 2026: Comparison Guide',
+      title: 'Best AMD GPU for Local LLMs',
+      seoTitle: 'Best AMD GPU for Local LLMs 2026: RX 7900 XTX vs RTX',
       intro: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15-20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.** As of April 2026, AMD ROCm (HIP) has matured, but compatibility layers add friction. NVIDIA CUDA is still the path of least resistance for local LLMs. Use AMD only if you find a great used deal or already own AMD hardware.',
-      metaDescription: 'AMD RX 7900 XTX matches RTX 4090 at 24 GB VRAM for $450–550 used — $500 cheaper. ROCm adds 5–10 h setup friction. When to pick AMD for local LLMs in 2026.',
+      metaDescription: 'AMD RX 7900 XTX matches RTX 4090 at 24 GB VRAM for $450–550 used — $500 cheaper. ROCm adds 5–10 h setup friction. The best AMD GPU for local LLMs in 2026.',
       publishDate: '2026-04-05',
-      dateModified: '2026-06-19',
+      dateModified: '2026-07-14',
       leadAnswerBlock: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15-20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.**',
       quickAnswerTop: {
         question: 'Are AMD GPUs good for running local LLMs?',
@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '→ ROCm (AMD driver stack) works with llama.cpp and vLLM; Ollama support inconsistent as of 2026',
           '→ NVIDIA CUDA is still the easier path; choose AMD only for cost savings or existing hardware',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-07-14',
       },
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '7 min',
@@ -35,11 +35,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Best AMD GPUs for Local LLMs 2026: RX 7900 XTX',
-        'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. April 2026.',
+        'headline': 'Best AMD GPU for Local LLMs 2026: RX 7900 XTX vs RTX',
+        'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. Updated July 2026.',
         'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-07-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -88,8 +88,18 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Is RX 6700 or 6750 good for 7B models?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. Only buy if <$250. Otherwise, stretch to 6800 XT.' }
+            'name': 'Is RX 6700, 6700 XT, or 6750 good for 7B models?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. RX 6700 XT (12GB, same VRAM) has ~15% faster clocks than the non-XT card but is still behind the 6800 XT. Only buy either if <$250. Otherwise, stretch to 6800 XT.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is the RX 6900 XT worth buying for local LLMs?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not really. The RX 6900 XT (16GB) is only marginally faster than the RX 6800 XT, is rarer used, and costs $350-400 vs. $300-350 for the 6800 XT. The price bump isn\'t worth it -- buy the 6800 XT instead.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is the AMD Radeon 680M good for running local LLMs?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'The Radeon 680M is integrated graphics built into Ryzen 6000/7000 mobile APUs -- it is not the same product as the discrete RX 6800M or RX 6800 XT. It has no dedicated VRAM and shares system RAM instead, so it is only viable for small quantized models (roughly 3B parameters or less at Q4) and will run noticeably slower than any discrete GPU on this page. For serious local LLM use, a discrete card like the RX 6800 XT is the better choice.' }
           },
           {
             '@type': 'Question',
@@ -243,7 +253,9 @@ schema: {
             { q: 'Can I use AMD GPUs with Ollama?', a: 'Technically yes. In our April 2026 testing (Ollama v0.3.x, ROCm 6.x), ROCm support was inconsistent — GPU detection failed on some configurations and CPU fallback was common. Check the current AMD compatibility list at github.com/ollama/ollama; for reliable AMD inference today, vLLM or llama.cpp are the safer paths.' },
             { q: 'What\'s the best AMD path for local LLMs in 2026?', a: 'Llama.cpp (HIP backend) + Text Generation WebUI. Both have solid AMD support. Avoid Ollama.' },
             { q: 'Do I need Ubuntu for AMD ROCm, or does Windows work?', a: 'Windows support exists (HIP on Windows), but in our April 2026 testing it was less stable than Ubuntu. Ubuntu is the recommended path.' },
-            { q: 'Is RX 6700 or 6750 good for 7B models?', a: 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. Only buy if <$250. Otherwise, stretch to 6800 XT.' },
+            { q: 'Is RX 6700, 6700 XT, or 6750 good for 7B models?', a: 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. RX 6700 XT (12GB, same VRAM) has ~15% faster clocks than the non-XT card but is still behind the 6800 XT. Only buy either if <$250. Otherwise, stretch to 6800 XT.' },
+            { q: 'Is the RX 6900 XT worth buying for local LLMs?', a: 'Not really. The RX 6900 XT (16GB) is only marginally faster than the RX 6800 XT, is rarer used, and costs $350-400 vs. $300-350 for the 6800 XT. The price bump isn\'t worth it -- buy the 6800 XT instead.' },
+            { q: 'Is the AMD Radeon 680M good for running local LLMs?', a: 'The Radeon 680M is integrated graphics built into Ryzen 6000/7000 mobile APUs -- it is not the same product as the discrete RX 6800M or RX 6800 XT. It has no dedicated VRAM and shares system RAM instead, so it is only viable for small quantized models (roughly 3B parameters or less at Q4) and will run noticeably slower than any discrete GPU on this page. For serious local LLM use, a discrete card like the RX 6800 XT is the better choice.' },
             { q: 'Can I mix AMD and NVIDIA GPUs in one system?', a: 'Theoretically yes, but management is a nightmare. Each GPU needs its own CUDA/HIP runtime. Not recommended.' },
             { q: 'How much VRAM does the AMD RX 7900 XTX have?', a: 'The AMD RX 7900 XTX has 24GB GDDR6 VRAM -- the same as RTX 4090. This makes it the most capable AMD card for running 70B models at Q4.' },
             { q: 'Is AMD ROCm stable enough for production LLM inference?', a: 'ROCm 6.x (2025) is significantly more stable than ROCm 5.x. For production use, llama.cpp HIP backend on Ubuntu 22.04+ is the most reliable stack. In our April 2026 testing (Ollama v0.3.x, ROCm 6.x), Ollama\'s ROCm support was inconsistent — GPU detection failed on some configurations. Check the current AMD compatibility list at github.com/ollama/ollama before committing.' },
@@ -292,7 +304,7 @@ schema: {
         'description': 'Compara AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuración de ROCm, rendimiento en vLLM, análisis de coste por TFLOP. Cuándo elegir AMD sobre CUDA. Abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-07-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -339,8 +351,18 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': '¿Es la RX 6700 o 6750 buena para modelos de 7B?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'La RX 6700 (12GB) funciona, pero es un 20% más lenta que la RX 6800 XT. Cómprala solo si cuesta menos de $250. Si no, apuesta por la 6800 XT.' }
+            'name': '¿Es la RX 6700, la 6700 XT o la 6750 buena para modelos de 7B?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'La RX 6700 (12GB) funciona, pero es un 20% más lenta que la RX 6800 XT. La RX 6700 XT (12GB, misma VRAM) tiene unos relojes ~15% más rápidos que la versión no-XT, pero sigue por detrás de la 6800 XT. Cómprala solo si cuesta menos de $250. Si no, apuesta por la 6800 XT.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Merece la pena la RX 6900 XT para LLMs locales?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No demasiado. La RX 6900 XT (16GB) es solo marginalmente más rápida que la RX 6800 XT, es más rara de segunda mano y cuesta $350-400 frente a $300-350 de la 6800 XT. El sobrecoste no compensa -- compra la 6800 XT en su lugar.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es buena la AMD Radeon 680M para ejecutar LLMs locales?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'La Radeon 680M es gráficos integrados dentro de las APU móviles Ryzen 6000/7000 -- no es el mismo producto que la RX 6800M o la RX 6800 XT, que son tarjetas discretas. No tiene VRAM dedicada, sino que comparte la RAM del sistema, por lo que solo es viable para modelos pequeños cuantizados (aproximadamente 3B de parámetros o menos en Q4) y será notablemente más lenta que cualquier GPU discreta de esta guía. Para un uso serio de LLMs locales, una tarjeta discreta como la RX 6800 XT es la mejor opción.' }
           },
           {
             '@type': 'Question',
@@ -456,7 +478,9 @@ schema: {
             { q: '¿Puedo usar GPUs AMD con Ollama?', a: 'Técnicamente sí. En nuestras pruebas de abril de 2026 (Ollama v0.3.x, ROCm 6.x), el soporte ROCm fue inconsistente — la detección de GPU falló en algunas configuraciones y el fallback a CPU fue frecuente. Compruebe la lista de compatibilidad AMD actualizada en github.com/ollama/ollama; para inferencia AMD fiable hoy, vLLM o llama.cpp son opciones más seguras.' },
             { q: '¿Cuál es el mejor camino AMD para LLMs locales en 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos tienen buen soporte para AMD. Evita Ollama.' },
             { q: '¿Necesito Ubuntu para AMD ROCm, o Windows funciona también?', a: 'El soporte en Windows existe (HIP on Windows), pero es más reciente y menos estable. Ubuntu es el camino recomendado.' },
-            { q: '¿Es la RX 6700 o 6750 buena para modelos de 7B?', a: 'La RX 6700 (12GB) funciona, pero es un 20% más lenta que la RX 6800 XT. Cómprala solo si cuesta menos de $250. Si no, apuesta por la 6800 XT.' },
+            { q: '¿Es la RX 6700, la 6700 XT o la 6750 buena para modelos de 7B?', a: 'La RX 6700 (12GB) funciona, pero es un 20% más lenta que la RX 6800 XT. La RX 6700 XT (12GB, misma VRAM) tiene unos relojes ~15% más rápidos que la versión no-XT, pero sigue por detrás de la 6800 XT. Cómprala solo si cuesta menos de $250. Si no, apuesta por la 6800 XT.' },
+            { q: '¿Merece la pena la RX 6900 XT para LLMs locales?', a: 'No demasiado. La RX 6900 XT (16GB) es solo marginalmente más rápida que la RX 6800 XT, es más rara de segunda mano y cuesta $350-400 frente a $300-350 de la 6800 XT. El sobrecoste no compensa -- compra la 6800 XT en su lugar.' },
+            { q: '¿Es buena la AMD Radeon 680M para ejecutar LLMs locales?', a: 'La Radeon 680M es gráficos integrados dentro de las APU móviles Ryzen 6000/7000 -- no es el mismo producto que la RX 6800M o la RX 6800 XT, que son tarjetas discretas. No tiene VRAM dedicada, sino que comparte la RAM del sistema, por lo que solo es viable para modelos pequeños cuantizados (aproximadamente 3B de parámetros o menos en Q4) y será notablemente más lenta que cualquier GPU discreta de esta guía. Para un uso serio de LLMs locales, una tarjeta discreta como la RX 6800 XT es la mejor opción.' },
             { q: '¿Puedo combinar GPUs AMD y NVIDIA en un mismo sistema?', a: 'Teóricamente sí, pero la gestión es una pesadilla. Cada GPU necesita su propio runtime CUDA/HIP. No se recomienda.' },
           ],
         },
@@ -517,7 +541,7 @@ schema: {
         'description': 'قارن AMD RX 7900 XTX و6800 XT مقابل NVIDIA RTX. إعداد ROCm، الأداء في vLLM، تحليل التكلفة لكل TFLOP. متى تختار AMD على CUDA. أبريل 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-07-14',
         'inLanguage': 'ar',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -566,8 +590,18 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'هل RX 6700 أو 6750 جيد لنماذج 7B؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. اشتره فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' }
+            'name': 'هل RX 6700 أو RX 6700 XT أو 6750 جيد لنماذج 7B؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. RX 6700 XT (12GB، نفس سعة VRAM) يمتلك سرعة معالجة أعلى بنحو 15% من نسخة non-XT، لكنه يبقى أبطأ من 6800 XT. اشترِ أيًّا منهما فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تستحق RX 6900 XT الشراء لنماذج LLM المحلية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس فعلًا. RX 6900 XT (16GB) أسرع بشكل هامشي فقط من RX 6800 XT، وأندر مستعملة، وتكلف 350-400 دولار مقابل 300-350 دولارًا لـ 6800 XT. فارق السعر لا يستحق العناء -- اشترِ 6800 XT بدلًا منها.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل AMD Radeon 680M جيد لتشغيل نماذج LLM المحلية؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Radeon 680M هو رسوميات مدمجة داخل معالجات Ryzen 6000/7000 المحمولة -- وهو ليس نفس منتج RX 6800M أو RX 6800 XT المنفصلين. لا يمتلك ذاكرة VRAM مخصصة، بل يشارك ذاكرة النظام (RAM) بدلًا من ذلك، لذا فهو مناسب فقط للنماذج الصغيرة المكمّمة (نحو 3B معامل أو أقل بصيغة Q4)، وسيعمل أبطأ بشكل ملحوظ من أي بطاقة رسوميات منفصلة في هذا الدليل. للاستخدام الجاد لنماذج LLM المحلية، بطاقة منفصلة مثل RX 6800 XT هي الخيار الأفضل.' }
           },
           {
             '@type': 'Question',
@@ -683,7 +717,9 @@ schema: {
             { q: 'هل يمكنني استخدام كروت رسوميات AMD مع Ollama؟', a: 'تقنيًا نعم. وفقاً لاختباراتنا في أبريل 2026 (Ollama v0.3.x، ROCm 6.x): كان دعم ROCm غير متسق في اختباراتنا — فشل اكتشاف GPU في بعض التكوينات والتراجع إلى المعالج كان متكرراً. راجع قائمة التوافق الحالية مع AMD على github.com/ollama/ollama قبل الالتزام؛ vLLM أو llama.cpp هما المسارات الأكثر أماناً للاستدلال على AMD اليوم.' },
             { q: 'ما أفضل مسار AMD لنماذج LLM المحلية في 2026؟', a: 'Llama.cpp (خلفية HIP) + Text Generation WebUI. كلاهما بدعم جيد لـ AMD. تجنّب Ollama.' },
             { q: 'هل أحتاج Ubuntu لـ AMD ROCm، أم يعمل Windows أيضًا؟', a: 'الدعم في Windows موجود (HIP on Windows)، لكنه أحدث وأقل استقرارًا. Ubuntu هو المسار الموصى به.' },
-            { q: 'هل RX 6700 أو 6750 جيد لنماذج 7B؟', a: 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. اشتره فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' },
+            { q: 'هل RX 6700 أو RX 6700 XT أو 6750 جيد لنماذج 7B؟', a: 'RX 6700 (12GB) يعمل، لكنه أبطأ بنسبة 20% من RX 6800 XT. RX 6700 XT (12GB، نفس سعة VRAM) يمتلك سرعة معالجة أعلى بنحو 15% من نسخة non-XT، لكنه يبقى أبطأ من 6800 XT. اشترِ أيًّا منهما فقط إن كلف أقل من 250 دولارًا. وإلا، راهن على 6800 XT.' },
+            { q: 'هل تستحق RX 6900 XT الشراء لنماذج LLM المحلية؟', a: 'ليس فعلًا. RX 6900 XT (16GB) أسرع بشكل هامشي فقط من RX 6800 XT، وأندر مستعملة، وتكلف 350-400 دولار مقابل 300-350 دولارًا لـ 6800 XT. فارق السعر لا يستحق العناء -- اشترِ 6800 XT بدلًا منها.' },
+            { q: 'هل AMD Radeon 680M جيد لتشغيل نماذج LLM المحلية؟', a: 'Radeon 680M هو رسوميات مدمجة داخل معالجات Ryzen 6000/7000 المحمولة -- وهو ليس نفس منتج RX 6800M أو RX 6800 XT المنفصلين. لا يمتلك ذاكرة VRAM مخصصة، بل يشارك ذاكرة النظام (RAM) بدلًا من ذلك، لذا فهو مناسب فقط للنماذج الصغيرة المكمّمة (نحو 3B معامل أو أقل بصيغة Q4)، وسيعمل أبطأ بشكل ملحوظ من أي بطاقة رسوميات منفصلة في هذا الدليل. للاستخدام الجاد لنماذج LLM المحلية، بطاقة منفصلة مثل RX 6800 XT هي الخيار الأفضل.' },
             { q: 'هل يمكنني الجمع بين كروت رسوميات AMD وNVIDIA في نظام واحد؟', a: 'نظريًا نعم، لكن الإدارة كابوس. يحتاج كل GPU بيئة CUDA/HIP خاصة به. غير موصى به.' },
           ],
         },
@@ -745,7 +781,7 @@ schema: {
         'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuração de ROCm, desempenho no vLLM, análise de custo por TFLOP. Quando escolher AMD em vez de CUDA. Abril 2026.',
         'url': 'https://www.promptquorum.com/pt/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-07-14',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -792,8 +828,18 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'A RX 6700 ou 6750 é boa para modelos de 7B?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A RX 6700 (12GB) funciona, mas é 20% mais lenta que a RX 6800 XT. Compre-a só se custar menos de US$ 250. Caso contrário, vá de 6800 XT.' }
+            'name': 'A RX 6700, a RX 6700 XT ou a 6750 é boa para modelos de 7B?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'A RX 6700 (12GB) funciona, mas é 20% mais lenta que a RX 6800 XT. A RX 6700 XT (12GB, mesma VRAM) tem clocks cerca de 15% mais rápidos que a versão sem XT, mas ainda fica atrás da 6800 XT. Compre qualquer uma delas só se custar menos de US$ 250. Caso contrário, vá de 6800 XT.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Vale a pena comprar a RX 6900 XT para LLMs locais?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Não muito. A RX 6900 XT (16GB) é apenas marginalmente mais rápida que a RX 6800 XT, é mais rara de segunda mão e custa US$ 350-400 contra US$ 300-350 da 6800 XT. O aumento de preço não compensa -- compre a 6800 XT em vez dela.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'A AMD Radeon 680M é boa para rodar LLMs locais?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'A Radeon 680M é uma placa de vídeo integrada dentro das APUs móveis Ryzen 6000/7000 -- não é o mesmo produto que a RX 6800M ou a RX 6800 XT, que são placas dedicadas. Ela não tem VRAM dedicada, e sim compartilha a RAM do sistema, então só é viável para modelos pequenos e quantizados (cerca de 3B de parâmetros ou menos em Q4) e vai rodar visivelmente mais devagar que qualquer GPU dedicada deste guia. Para uso sério de LLMs locais, uma placa dedicada como a RX 6800 XT é a melhor escolha.' }
           },
           {
             '@type': 'Question',
@@ -909,7 +955,9 @@ schema: {
             { q: 'Posso usar GPUs AMD com o Ollama?', a: 'Tecnicamente sim. Com base nos nossos testes de abril de 2026 (Ollama v0.3.x, ROCm 6.x), o suporte ROCm foi inconsistente — a deteção de GPU falhou em algumas configurações e o fallback para CPU foi frequente. Verifique a lista de compatibilidade AMD atual em github.com/ollama/ollama antes de decidir; para inferência AMD fiável hoje, vLLM ou llama.cpp são os caminhos mais seguros.' },
             { q: 'Qual é o melhor caminho AMD para LLMs locais em 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos têm bom suporte para AMD. Evite o Ollama.' },
             { q: 'Preciso de Ubuntu para o AMD ROCm, ou o Windows também funciona?', a: 'O suporte no Windows existe (HIP no Windows), mas é mais recente e menos estável. O Ubuntu é o caminho recomendado.' },
-            { q: 'A RX 6700 ou 6750 é boa para modelos de 7B?', a: 'A RX 6700 (12GB) funciona, mas é 20% mais lenta que a RX 6800 XT. Compre-a só se custar menos de US$ 250. Caso contrário, vá de 6800 XT.' },
+            { q: 'A RX 6700, a RX 6700 XT ou a 6750 é boa para modelos de 7B?', a: 'A RX 6700 (12GB) funciona, mas é 20% mais lenta que a RX 6800 XT. A RX 6700 XT (12GB, mesma VRAM) tem clocks cerca de 15% mais rápidos que a versão sem XT, mas ainda fica atrás da 6800 XT. Compre qualquer uma delas só se custar menos de US$ 250. Caso contrário, vá de 6800 XT.' },
+            { q: 'Vale a pena comprar a RX 6900 XT para LLMs locais?', a: 'Não muito. A RX 6900 XT (16GB) é apenas marginalmente mais rápida que a RX 6800 XT, é mais rara de segunda mão e custa US$ 350-400 contra US$ 300-350 da 6800 XT. O aumento de preço não compensa -- compre a 6800 XT em vez dela.' },
+            { q: 'A AMD Radeon 680M é boa para rodar LLMs locais?', a: 'A Radeon 680M é uma placa de vídeo integrada dentro das APUs móveis Ryzen 6000/7000 -- não é o mesmo produto que a RX 6800M ou a RX 6800 XT, que são placas dedicadas. Ela não tem VRAM dedicada, e sim compartilha a RAM do sistema, então só é viável para modelos pequenos e quantizados (cerca de 3B de parâmetros ou menos em Q4) e vai rodar visivelmente mais devagar que qualquer GPU dedicada deste guia. Para uso sério de LLMs locais, uma placa dedicada como a RX 6800 XT é a melhor escolha.' },
             { q: 'Posso combinar GPUs AMD e NVIDIA no mesmo sistema?', a: 'Teoricamente sim, mas o gerenciamento é um pesadelo. Cada GPU precisa do seu próprio runtime CUDA/HIP. Não é recomendado.' },
           ],
         },
@@ -1068,7 +1116,9 @@ schema: {
             { q: 'Kann ich AMD-GPUs mit Ollama verwenden?', a: 'Technisch ja. In unseren Tests (April 2026, Ollama v0.3.x, ROCm 6.x) war die ROCm-Unterstützung inkonsistent — GPU-Erkennung schlug bei einigen Konfigurationen fehl, CPU-Fallback war häufig. Prüfen Sie die aktuelle AMD-Kompatibilitätsliste auf github.com/ollama/ollama vor dem Einsatz; für zuverlässige AMD-Inferenz heute sind vLLM oder llama.cpp die sichereren Wege.' },
             { q: 'Was ist der beste AMD-Pfad für lokale LLMs 2026?', a: 'Llama.cpp (HIP-Backend) + Text Generation WebUI. Beide haben solide AMD-Unterstützung. Vermeiden Sie Ollama.' },
             { q: 'Brauche ich Ubuntu für AMD ROCm, oder funktioniert Windows?', a: 'Windows-Unterstützung existiert (HIP auf Windows), aber sie war in unseren Tests April 2026 weniger stabil als auf Ubuntu. Ubuntu ist der empfohlene Pfad.' },
-            { q: 'Ist RX 6700 oder 6750 gut für 7B-Modelle?', a: 'RX 6700 (12 GB) funktioniert, ist aber 20% langsamer als RX 6800 XT. Kaufen Sie nur, wenn <250 €. Andernfalls dehnen Sie auf 6800 XT aus.' },
+            { q: 'Ist RX 6700, RX 6700 XT oder 6750 gut für 7B-Modelle?', a: 'RX 6700 (12 GB) funktioniert, ist aber 20% langsamer als RX 6800 XT. RX 6700 XT (12 GB, gleicher VRAM) hat etwa 15% höhere Taktraten als die Nicht-XT-Version, bleibt aber hinter der 6800 XT zurück. Kaufen Sie beide nur, wenn <250 €. Andernfalls dehnen Sie auf 6800 XT aus.' },
+            { q: 'Lohnt sich die RX 6900 XT für lokale LLMs?', a: 'Nicht wirklich. Die RX 6900 XT (16 GB) ist nur marginal schneller als die RX 6800 XT, gebraucht seltener zu finden und kostet 350-400 € gegenüber 300-350 € für die 6800 XT. Der Preisaufschlag lohnt sich nicht — kaufen Sie stattdessen die 6800 XT.' },
+            { q: 'Ist die AMD Radeon 680M gut für lokale LLMs?', a: 'Die Radeon 680M ist eine integrierte Grafikeinheit in mobilen Ryzen-6000/7000-APUs — nicht dasselbe Produkt wie die dedizierte RX 6800M oder RX 6800 XT. Sie hat keinen eigenen VRAM, sondern teilt sich den Arbeitsspeicher des Systems, weshalb sie nur für kleine quantisierte Modelle (etwa 3B Parameter oder weniger bei Q4) geeignet ist und spürbar langsamer läuft als jede dedizierte GPU in diesem Ratgeber. Für ernsthafte lokale LLM-Nutzung ist eine dedizierte Karte wie die RX 6800 XT die bessere Wahl.' },
             { q: 'Kann ich AMD- und NVIDIA-GPUs in einem System mischen?', a: 'Theoretisch ja, aber das Management ist ein Albtraum. Jede GPU benötigt ihre eigene CUDA/HIP-Laufzeit. Nicht empfohlen.' },
             { q: 'Erfüllt AMD ROCm die DSGVO-Anforderungen für deutsche Unternehmen?', a: 'Ja. AMD ROCm verarbeitet alle Daten lokal auf Ihrer Hardware, ohne in die Cloud zu gehen. Dies erfüllt die DSGVO Article 28 (Verarbeiter-Anforderungen) und BSI-Grundschutz-Kataloge automatisch, da Daten nicht an Dritte übertragen werden.' },
             { q: 'Ist AMD ROCm für den deutschen Mittelstand geeignet?', a: 'Sehr geeignet. Der Mittelstand profitiert von der Kosteneinsparung (20-30% unter NVIDIA) und der vollständigen Datenkontrolle vor Ort. Die Einrichtungshürde (5-10 Stunden) ist einmalig. Nach dem Setup ist AMD eine solide Wahl für SMBs, die IT-Sicherheit und Kosteneffizienz schätzen.' },
@@ -1235,7 +1285,9 @@ schema: {
             { q: 'Puis-je utiliser GPU AMD avec Ollama?', a: 'Techniquement oui. Dans nos tests d\'avril 2026 (Ollama v0.3.x, ROCm 6.x), le support ROCm était inconsistant — la détection GPU a échoué sur certaines configurations et le repli CPU était fréquent. Vérifiez la liste de compatibilité AMD actuelle sur github.com/ollama/ollama ; vLLM ou llama.cpp sont les chemins plus fiables pour AMD aujourd\'hui.' },
             { q: 'Quel est le meilleur chemin AMD pour LLM locaux 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Tous deux ont support AMD solide. Évitez Ollama.' },
             { q: 'Ai-je besoin Ubuntu pour AMD ROCm, ou Windows fonctionne?', a: 'Le support Windows existe (HIP sur Windows), mais il était moins stable qu\'Ubuntu dans nos tests d\'avril 2026. Ubuntu est le chemin recommandé.' },
-            { q: 'RX 6700 ou 6750 bon pour modèles 7B?', a: 'RX 6700 (12 Go) fonctionne mais 20% plus lent que 6800 XT. Achetez seulement si <250 €. Sinon étendez à 6800 XT.' },
+            { q: 'RX 6700, RX 6700 XT ou 6750 bon pour modèles 7B?', a: 'RX 6700 (12 Go) fonctionne mais 20% plus lent que 6800 XT. RX 6700 XT (12 Go, même VRAM) a des fréquences ~15% plus rapides que la version non-XT, mais reste derrière la 6800 XT. Achetez l\'une ou l\'autre seulement si <250 €. Sinon étendez à 6800 XT.' },
+            { q: 'La RX 6900 XT vaut-elle le coup pour les LLM locaux?', a: 'Pas vraiment. La RX 6900 XT (16 Go) est seulement marginalement plus rapide que la RX 6800 XT, plus rare en occasion, et coûte 350-400 € contre 300-350 € pour la 6800 XT. Le surcoût ne vaut pas la peine -- achetez plutôt la 6800 XT.' },
+            { q: 'L\'AMD Radeon 680M est-elle bonne pour les LLM locaux?', a: 'La Radeon 680M est un graphique intégré dans les APU mobiles Ryzen 6000/7000 -- ce n\'est pas le même produit que la RX 6800M ou la RX 6800 XT, qui sont des cartes dédiées. Elle n\'a pas de VRAM dédiée et partage la RAM système à la place, donc elle n\'est viable que pour de petits modèles quantifiés (environ 3B de paramètres ou moins en Q4) et sera nettement plus lente que n\'importe quelle carte dédiée de ce guide. Pour un usage sérieux des LLM locaux, une carte dédiée comme la RX 6800 XT est le meilleur choix.' },
             { q: 'Puis-je mélanger GPU AMD et NVIDIA dans un système?', a: 'Théoriquement oui, mais gestion cauchemardesque. Chaque GPU besoin sa propre exécution CUDA/HIP. Non recommandé.' },
             { q: 'Combien de temps faut-il configurer AMD ROCm?', a: 'Prévoyez 5-10 heures pour débogage pilotes, compilation HIPCC et résolution compatibilité. C\'est un investissement unique. Après, AMD stable et productif.' },
             { q: 'AMD ROCm convient-il aux petites entreprises technologiques françaises?', a: 'Absolument. Les startups et PME tech bénéficient de 20-30% économies par rapport NVIDIA et contrôle données complet sur site. L\'effort configuration initial (5-10 h) vaut l\'investissement pour équipes valorisant indépendance technologique et économies.' },
@@ -1403,7 +1455,9 @@ schema: {
             { q: 'AMD GPU を Ollama で使用できるか？', a: '技術的には可能です。2026年4月のテスト（Ollama v0.3.x、ROCm 6.x）では、ROCmサポートは不安定でした——一部の構成でGPU検出が失敗し、CPUフォールバックが頻繁でした。導入前にgithub.com/ollama/ollamaで最新のAMD互換性リストを確認してください；信頼性の高いAMD推論には、vLLM または llama.cpp がより安全な選択肢です。' },
             { q: '2026 年のローカル LLM に最適な AMD パスは何か？', a: 'Llama.cpp（HIP バックエンド）+ Text Generation WebUI。両方とも AMD に堅実なサポートがあります。Ollama を避けてください。' },
             { q: 'AMD ROCm に Ubuntu が必要か、それとも Windows でも機能するか？', a: 'Windows サポートが存在（Windows 上の HIP）しますが、2026年4月テスト時点ではUbuntuより不安定でした。Ubuntu が推奨パスです。' },
-            { q: '7B モデル用に RX 6700 または 6750 は適切か？', a: 'RX 6700（12GB）は動作しますが、RX 6800 XT より 20% 遅い。¥25,000 以下の場合のみ購入してください。それ以外は 6800 XT に拡張してください。' },
+            { q: '7B モデル用に RX 6700、RX 6700 XT、または 6750 は適切か？', a: 'RX 6700（12GB）は動作しますが、RX 6800 XT より 20% 遅い。RX 6700 XT（12GB、VRAM は同じ）は非 XT 版よりクロックが約 15% 速いですが、6800 XT にはまだ及びません。どちらも ¥25,000 以下の場合のみ購入してください。それ以外は 6800 XT に拡張してください。' },
+            { q: 'ローカル LLM に RX 6900 XT を買う価値はあるか？', a: 'あまりありません。RX 6900 XT（16GB）は RX 6800 XT よりわずかに速いだけで、中古でも希少、価格は 6800 XT より高くなりがちです。価格差に見合う価値はありません -- 代わりに 6800 XT を購入してください。' },
+            { q: 'AMD Radeon 680M はローカル LLM の実行に適しているか？', a: 'Radeon 680M は Ryzen 6000/7000 モバイル APU に内蔵された統合グラフィックスであり、ディスクリート GPU の RX 6800M や RX 6800 XT とは別の製品です。専用 VRAM を持たずシステム RAM を共有するため、小型の量子化モデル（おおよそ 3B パラメータ以下、Q4）にしか適しておらず、このページのどのディスクリート GPU よりも明らかに低速です。本格的なローカル LLM 用途には、RX 6800 XT のようなディスクリート GPU の方が適しています。' },
             { q: '1 つのシステムで AMD と NVIDIA GPU を混合できるか？', a: '理論的には可能です。ただし管理は悪夢です。各 GPU に独自の CUDA/HIP ランタイムが必要です。非推奨。' },
             { q: 'AMD ROCm セットアップにはどのくらい時間がかかるか？', a: 'ドライバー・デバッグ、HIPCC コンパイル、カーネル互換性の解決に 5-10 時間を計画してください。一回限りです。その後、AMD は安定して生産的です。' },
             { q: '日本企業は AMD ROCm を採用すべきか？', a: 'はい。特に金融、医療、法律。データは完全にオンプレミスに留まり、METI AI ガバナンス 2024 ガイドラインに準拠します。セットアップの努力はそれだけの価値があります。' },
@@ -1576,7 +1630,9 @@ schema: {
             { q: '能用 Ollama 使用 AMD GPU 吗？', a: '技术上可以。在我们2026年4月的测试（Ollama v0.3.x，ROCm 6.x）中，ROCm支持不稳定——某些配置下GPU检测失败，CPU回退常见。在决定使用前，请查看github.com/ollama/ollama上的最新AMD兼容性列表；对于可靠的AMD推理，vLLM或llama.cpp是更安全的选择。' },
             { q: '2026 年本地 LLM 最优 AMD 路径？', a: 'Llama.cpp（HIP 后端）+ Text Generation WebUI。两者都对 AMD 有坚实支持。避免 Ollama。' },
             { q: 'AMD ROCm 需要 Ubuntu 还是 Windows 也可？', a: 'Windows 支持存在（Windows 上 HIP），但在我们2026年4月的测试中不如Ubuntu稳定。Ubuntu 是推荐路径。' },
-            { q: '7B 模型用 RX 6700 或 6750 合适吗？', a: 'RX 6700（12GB）可用但比 6800 XT 慢 20%。仅 $250 以下购买。否则扩展到 6800 XT。' },
+            { q: '7B 模型用 RX 6700、RX 6700 XT 或 6750 合适吗？', a: 'RX 6700（12GB）可用但比 6800 XT 慢 20%。RX 6700 XT（12GB，VRAM 相同）频率比非 XT 版快约 15%，但仍不及 6800 XT。两者均仅 $250 以下购买。否则扩展到 6800 XT。' },
+            { q: '本地 LLM 值得买 RX 6900 XT 吗？', a: '不太值得。RX 6900 XT（16GB）只比 RX 6800 XT 略快，二手更稀有，价格约 $350-400，高于 6800 XT 的 $300-350。差价不值——建议直接买 6800 XT。' },
+            { q: 'AMD Radeon 680M 适合运行本地 LLM 吗？', a: 'Radeon 680M 是 Ryzen 6000/7000 移动 APU 内置的集成显卡，和独立显卡 RX 6800M 或 RX 6800 XT 不是同一产品。它没有独立显存,而是与系统内存共享,因此只适合运行很小的量化模型(大约 3B 参数或更少,Q4 精度),速度也明显慢于本文提到的任何独立显卡。若要认真跑本地 LLM,像 RX 6800 XT 这样的独立显卡才是更好的选择。' },
             { q: '能在一个系统混合 AMD 和 NVIDIA GPU 吗？', a: '理论上可以。但管理是噩梦。每个 GPU 需自己 CUDA/HIP 运行时。不推荐。' },
             { q: 'AMD ROCm 设置需多长时间？', a: '驱动程序调试、HIPCC 编译、内核兼容性解决计划 5-10 小时。仅一次。之后 AMD 稳定有效。' },
             { q: '中国企业应采用 AMD ROCm 吗？', a: '是。特别金融、医疗、法律。数据完全驻留本地，符合《数据安全法》。设置努力值得投资。' },
@@ -1716,8 +1772,18 @@ schema: {
         },
         {
           '@type': 'Question',
-          'name': 'RX 6700 또는 6750은 7B 모델에 적합합니까?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.' }
+          'name': 'RX 6700, RX 6700 XT, 또는 6750은 7B 모델에 적합합니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. RX 6700 XT(12GB, 동일한 VRAM)는 non-XT 버전보다 클럭이 약 15% 빠르지만 여전히 6800 XT에는 못 미칩니다. 둘 다 $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '로컬 LLM에 RX 6900 XT를 구매할 가치가 있습니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '그다지 없습니다. RX 6900 XT(16GB)는 RX 6800 XT보다 약간 더 빠를 뿐이고, 중고 매물도 더 희귀하며, 가격은 6800 XT의 $300-350보다 높은 $350-400 수준입니다. 가격 차이만큼의 가치가 없습니다 -- 대신 6800 XT를 구매하십시오.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD Radeon 680M은 로컬 LLM을 실행하기에 적합합니까?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Radeon 680M은 Ryzen 6000/7000 모바일 APU에 내장된 통합 그래픽으로, 별도의 디스크리트 GPU인 RX 6800M이나 RX 6800 XT와는 다른 제품입니다. 전용 VRAM이 없고 대신 시스템 RAM을 공유하므로, 작은 양자화 모델(대략 3B 매개변수 이하, Q4 기준)에서만 실용적이며 이 페이지의 어떤 디스크리트 GPU보다도 눈에 띄게 느립니다. 본격적인 로컬 LLM 사용에는 RX 6800 XT 같은 디스크리트 GPU가 더 나은 선택입니다.' }
         },
         {
           '@type': 'Question',
@@ -1848,7 +1914,9 @@ schema: {
           { q: 'AMD GPU로 Ollama를 사용할 수 있습니까?', a: '기술적으로는 가능합니다. 2026년 4월 테스트(Ollama v0.3.x, ROCm 6.x)에서 ROCm 지원이 불안정했습니다 — 일부 구성에서 GPU 감지 실패, CPU 폴백이 잦았습니다. 사용 전 github.com/ollama/ollama에서 최신 AMD 호환성 목록을 확인하십시오; 안정적인 AMD 추론에는 vLLM 또는 llama.cpp가 더 안전한 경로입니다.' },
           { q: '2026년 로컬 LLM을 위한 최적의 AMD 경로는 무엇입니까?', a: 'Llama.cpp(HIP 백엔드) + Text Generation WebUI입니다. 두 도구 모두 AMD 지원이 견실합니다. Ollama는 피하십시오.' },
           { q: 'AMD ROCm에 Ubuntu가 필요합니까, 아니면 Windows에서도 작동합니까?', a: 'Windows 지원(HIP on Windows)도 있지만 더 최신이고 버그가 많습니다. Ubuntu가 권장 경로입니다.' },
-          { q: 'RX 6700 또는 6750은 7B 모델에 적합합니까?', a: 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.' },
+          { q: 'RX 6700, RX 6700 XT, 또는 6750은 7B 모델에 적합합니까?', a: 'RX 6700(12GB)은 작동하지만 RX 6800 XT보다 20% 느립니다. RX 6700 XT(12GB, 동일한 VRAM)는 non-XT 버전보다 클럭이 약 15% 빠르지만 여전히 6800 XT에는 못 미칩니다. 둘 다 $250 미만일 경우에만 구입하십시오. 그렇지 않으면 6800 XT를 선택하십시오.' },
+          { q: '로컬 LLM에 RX 6900 XT를 구매할 가치가 있습니까?', a: '그다지 없습니다. RX 6900 XT(16GB)는 RX 6800 XT보다 약간 더 빠를 뿐이고, 중고 매물도 더 희귀하며, 가격은 6800 XT의 $300-350보다 높은 $350-400 수준입니다. 가격 차이만큼의 가치가 없습니다 -- 대신 6800 XT를 구매하십시오.' },
+          { q: 'AMD Radeon 680M은 로컬 LLM을 실행하기에 적합합니까?', a: 'Radeon 680M은 Ryzen 6000/7000 모바일 APU에 내장된 통합 그래픽으로, 별도의 디스크리트 GPU인 RX 6800M이나 RX 6800 XT와는 다른 제품입니다. 전용 VRAM이 없고 대신 시스템 RAM을 공유하므로, 작은 양자화 모델(대략 3B 매개변수 이하, Q4 기준)에서만 실용적이며 이 페이지의 어떤 디스크리트 GPU보다도 눈에 띄게 느립니다. 본격적인 로컬 LLM 사용에는 RX 6800 XT 같은 디스크리트 GPU가 더 나은 선택입니다.' },
           { q: '하나의 시스템에서 AMD와 NVIDIA GPU를 혼용할 수 있습니까?', a: '이론적으로는 가능하지만 관리가 매우 복잡합니다. 각 GPU마다 별도의 CUDA/HIP 런타임이 필요합니다. 권장하지 않습니다.' },
         ],
       },
