@@ -222,7 +222,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
-        id: 'faq',
         faqs: [
           { q: 'Which approach should I try first?', a: 'Always start with prompt engineering. It is free, instant, and reversible. Only move to fine-tuning if prompt engineering fails on repeated attempts.' },
           { q: 'How do I get training data for fine-tuning?', a: 'Collect your own examples, use existing datasets, or hire annotators. Data quality matters more than quantity.' },
@@ -479,7 +478,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
-        id: 'faq',
         faqs: [
           { q: 'Welcher Ansatz sollte ich zuerst versuchen?', a: 'Beginnen Sie immer mit Prompt Engineering. Es ist kostenlos, sofort und reversibel. Wechseln Sie zu Fine-Tuning nur, wenn Prompt Engineering nach wiederholten Versuchen fehlschlägt.' },
           { q: 'Wie erhalte ich Trainingsdaten für Fine-Tuning?', a: 'Sammeln Sie Ihre eigenen Beispiele, verwenden Sie vorhandene Datensätze oder stellen Sie Annotatoren ein. Datenqualität ist wichtiger als Quantität.' },
@@ -736,7 +734,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
-        id: 'faq',
         faqs: [
           { q: '¿Qué enfoque debo probar primero?', a: 'Siempre empieza con prompt engineering. Es gratis, instantáneo y reversible. Solo pasa al fine-tuning si el prompt engineering falla en intentos repetidos.' },
           { q: '¿Cómo obtengo datos de entrenamiento para el fine-tuning?', a: 'Recopila tus propios ejemplos, usa datasets existentes o contrata anotadores. La calidad de los datos importa más que la cantidad.' },
@@ -989,7 +986,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
-        id: 'faq',
         faqs: [
           { q: 'Qual abordagem devo tentar primeiro?', a: 'Sempre comece com prompt engineering. É gratuito, instantâneo e reversível. Só passe para fine-tuning se o prompt engineering falhar em tentativas repetidas.' },
           { q: 'Como obtenho dados de treinamento para fine-tuning?', a: 'Colete seus próprios exemplos, use datasets existentes ou contrate anotadores. A qualidade dos dados importa mais do que a quantidade.' },
@@ -1246,7 +1242,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: 'Questions fréquentes',
-        id: 'faq',
         faqs: [
           { q: 'Par quelle approche dois-je commencer ?', a: 'Commencez toujours par le prompt engineering. C\'est gratuit, instantané et réversible. Ne passez au fine-tuning que si le prompt engineering échoue après plusieurs tentatives.' },
           { q: 'Comment obtenir des données pour le fine-tuning ?', a: 'Collectez vos propres exemples, utilisez des jeux de données existants ou engagez des annotateurs. La qualité prime sur la quantité.' },
@@ -1505,7 +1500,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
-        id: 'faq',
         faqs: [
           { q: 'どちらを最初に試すべきですか？', a: '常にプロンプトエンジニアリングから始めてください。無料で即座です。何度も失敗した場合のみファインチューニングしてください。' },
           { q: 'ファインチューニングのトレーニングデータをどう取得しますか？', a: '独自の例を収集、既存データセットを使用、またはアノテーターを雇用します。量より質が重要です。' },
@@ -1770,7 +1764,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: '常见问题',
-        id: 'faq',
         faqs: [
           { q: '什么时候应该选择Prompt工程而不是微调？', a: '优先选择Prompt工程。它免费、即时、可逆。仅在Prompt工程在10%以上的用例中持续失败时才转向微调。' },
           { q: '微调在2026年的实际成本是多少？', a: '单次微调运行成本$500-$5000+，包括计算、数据标注和工程时间。加上每个新模型版本$2000-$5000的持续维护成本。' },
@@ -2057,7 +2050,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: '자주 묻는 질문',
-        id: 'faq',
         faqs: [
           { q: '어떤 접근법을 먼저 시도해야 합니까?', a: '항상 prompt engineering으로 시작하십시오. 무료이고, 즉각적이며, 되돌릴 수 있습니다. Prompt engineering이 반복적인 시도에서 실패할 경우에만 fine-tuning으로 전환하십시오.' },
           { q: 'Fine-tuning을 위한 훈련 데이터는 어떻게 얻습니까?', a: '자신의 예시를 수집하거나, 기존 데이터셋을 사용하거나, 주석 작업자를 고용하십시오. 데이터 품질이 수량보다 중요합니다.' },
@@ -2314,7 +2306,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
-        id: 'faq',
         faqs: [
           { q: 'ما النهج الذي يجب أن أجرِّبه أولًا؟', a: 'ابدأ دائمًا بهندسة الأوامر. إنها مجانية وفورية وقابلة للعكس. انتقل للضبط الدقيق فقط إذا فشلت هندسة الأوامر في محاولات متكررة.' },
           { q: 'كيف أحصل على بيانات التدريب للضبط الدقيق؟', a: 'اجمع أمثلتك الخاصة، أو استخدم مجموعات بيانات موجودة، أو وظِّف محرِّرين. جودة البيانات أهم من كميتها.' },

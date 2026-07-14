@@ -438,7 +438,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Frequently Asked Questions',
-          id: 'faq',
           faqs: [
             {
               q: 'What does RTF stand for?',
@@ -889,7 +888,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
-          id: 'faq',
           faqs: [
             {
               q: 'Wofür steht RTF?',
@@ -1943,7 +1941,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Perguntas Frequentes',
-          id: 'faq',
           faqs: [
             {
               q: 'O que significa RTF?',
@@ -2363,7 +2360,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Questions Fréquemment Posées',
-          id: 'faq',
           faqs: [
             {
               q: 'Que signifie RTF ?',
@@ -2798,7 +2794,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'よくある質問',
-          id: 'faq',
           faqs: [
             {
               q: 'RTFは何の略ですか？',
@@ -3315,7 +3310,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: '常见问题',
-          id: 'faq',
           faqs: [
             {
               q: 'RTF代表什么？',
@@ -3802,7 +3796,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: '자주 묻는 질문',
-          id: 'faq',
           faqs: [
             {
               q: 'RTF는 무엇을 의미합니까?',

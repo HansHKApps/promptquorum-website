@@ -261,7 +261,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Frequently Asked Questions',
-          id: 'faq',
           faqs: [
             {
               q: 'How is the Single Step Prompt Method different from just giving an instruction?',
@@ -987,7 +986,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Preguntas frecuentes',
-          id: 'faq',
           faqs: [
             {
               q: '¿En qué se diferencia el Método de Prompt de Un Solo Paso de simplemente dar una instrucción?',
@@ -1379,7 +1377,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'الأسئلة الشائعة',
-          id: 'faq',
           faqs: [
             {
               q: 'كيف تختلف طريقة البرومبت في خطوة واحدة عن مجرد إعطاء تعليمة؟',
@@ -2716,7 +2713,6 @@ ja: {
         faqSection: {
           id: 'faq',
           title: '자주 묻는 질문',
-          id: 'faq',
           faqs: [
             {
               q: '단일 단계 프롬프트 방법론은 단순히 지시를 내리는 것과 어떻게 다릅니까?',

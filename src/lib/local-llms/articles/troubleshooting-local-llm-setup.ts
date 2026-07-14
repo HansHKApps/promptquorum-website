@@ -236,7 +236,6 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
-        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -538,7 +537,6 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
-        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -841,7 +839,6 @@ schema: {
           'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
-        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1027,7 +1024,6 @@ schema: {
       'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
     },
     'educationalLevel': 'Beginner',
-        'proficiencyLevel': 'Beginner',
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -1320,7 +1316,6 @@ schema: {
         'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
       },
         'educationalLevel': 'Beginner',
-        'proficiencyLevel': 'Beginner',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -1612,7 +1607,6 @@ schema: {
       'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
     },
     'educationalLevel': 'Beginner',
-        'proficiencyLevel': 'Beginner',
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -1960,7 +1954,6 @@ schema: {
       'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
     },
     'educationalLevel': 'Beginner',
-        'proficiencyLevel': 'Beginner',
   },
   howToSchema: {
     '@context': 'https://schema.org',

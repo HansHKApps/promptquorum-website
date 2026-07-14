@@ -242,7 +242,6 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
-        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -611,7 +610,6 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
-        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -993,7 +991,6 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
-        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1356,7 +1353,6 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
-        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1722,7 +1718,6 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
-        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2088,7 +2083,6 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
-        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2454,7 +2448,6 @@ schema: {
         },
         'proficiencyLevel': 'Advanced',
         'educationalLevel': 'Advanced',
-        'proficiencyLevel': 'Advanced',
       },
       itemListSchema: {
         '@context': 'https://schema.org',

@@ -23,6 +23,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         en: {
           question: 'What are the 5 non-negotiable security steps for a local LLM?',
           answer: 'The 5 non-negotiable security steps for a local LLM: (1) no internet access for the model process, (2) model files verified via SHA-256 before loading, (3) API endpoints bound to localhost only, (4) prompt logs stored encrypted or disabled entirely, (5) no third-party plugins without source review.',
+          bullets: [
+            'No internet access for the model process',
+            'Model files verified via SHA-256 before loading',
+            'API endpoints bound to localhost only',
+            'Prompt logs stored encrypted or disabled entirely',
+            'No third-party plugins without source review',
+          ],
           updatedDate: '2026-06-19',
         },
       },

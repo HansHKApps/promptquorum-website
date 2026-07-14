@@ -224,7 +224,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Frequently Asked Questions',
-          id: 'faq',
           faqs: [
             {
               q: 'What is negative prompting?',
@@ -685,7 +684,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     faqSection: {
       id: 'faq',
       title: 'Preguntas frecuentes',
-      id: 'faq',
       faqs: [
         {
           q: '¿Qué es el negative prompting?',
@@ -985,7 +983,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     faqSection: {
       id: 'faq',
       title: 'الأسئلة الشائعة',
-      id: 'faq',
       faqs: [
         {
           q: 'ما هو البرومبت السلبي؟',
@@ -1280,7 +1277,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     faqSection: {
       id: 'faq',
       title: 'Perguntas frequentes',
-      id: 'faq',
       faqs: [
         {
           q: 'O que é o negative prompting?',
@@ -2326,7 +2322,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     faqSection: {
       id: 'faq',
       title: '자주 묻는 질문',
-      id: 'faq',
       faqs: [
         {
           q: '네거티브 프롬프팅이란 무엇입니까?',

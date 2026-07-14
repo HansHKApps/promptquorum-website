@@ -294,7 +294,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Frequently Asked Questions',
-          id: 'faq',
           faqs: [
             {
               q: 'What does RISEN stand for?',
@@ -704,7 +703,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
-          id: 'faq',
           faqs: [
             {
               q: 'Wofür steht RISEN?',
@@ -1122,7 +1120,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Preguntas frecuentes',
-          id: 'faq',
           faqs: [
             {
               q: '¿Qué significa RISEN?',
@@ -1531,7 +1528,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'الأسئلة الشائعة',
-          id: 'faq',
           faqs: [
             {
               q: 'ما معنى RISEN؟',
@@ -1940,7 +1936,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes',
-          id: 'faq',
           faqs: [
             {
               q: 'O que significa RISEN?',
@@ -2355,7 +2350,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'Questions fréquemment posées',
-          id: 'faq',
           faqs: [
             {
               q: 'Que signifie RISEN?',
@@ -2775,7 +2769,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: 'よくある質問',
-          id: 'faq',
           faqs: [
             {
               q: 'RISENは何を意味していますか？',
@@ -3154,7 +3147,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: '常见问题',
-          id: 'faq',
           faqs: [
             {
               q: 'RISEN代表什么？',
@@ -3566,7 +3558,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqSection: {
           id: 'faq',
           title: '자주 묻는 질문',
-          id: 'faq',
           faqs: [
             {
               q: 'RISEN은 무엇의 약자입니까?',
