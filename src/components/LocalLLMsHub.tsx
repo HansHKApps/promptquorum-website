@@ -1387,32 +1387,164 @@ const HUB_BOTTOM_FAQ_TITLE: Record<string, string> = {
   pt: 'Perguntas frequentes sobre LLMs locais',
 }
 
-const HUB_FAQS_BOTTOM: { q: string; a: string }[] = [
-  {
-    q: 'What is a local LLM?',
-    a: 'A local LLM is a large language model that runs entirely on your own hardware — CPU, GPU, or Apple Silicon — without sending data to external servers. You download the model file (typically 2–40 GB) and run it using a tool like Ollama or LM Studio. As of May 2026, the most popular local LLM is Meta Llama 4 Scout 17B, which runs on machines with 10 GB VRAM at 10–80 tokens/sec.',
-  },
-  {
-    q: 'Is a local LLM better than ChatGPT?',
-    a: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude Opus 4.8) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 4 Scout, Qwen3 72B) match or exceed GPT-4o mini on most everyday tasks — at zero per-query cost.',
-  },
-  {
-    q: 'How much RAM do I need to run a local LLM?',
-    a: 'Minimum: 8 GB RAM to run a 7B model at Q4 quantization. Recommended: 16 GB for 13B models, 40+ GB for 70B models. Apple Silicon unified memory counts fully toward this — an M3 Mac with 18 GB can run a 13B model well. GPU VRAM is equivalent to RAM for GPU inference.',
-  },
-  {
-    q: 'How do I run a local LLM?',
-    a: 'Install Ollama (ollama.com), then run one command: `ollama run llama3.1:8b`. The model downloads automatically and you can start chatting in under 5 minutes. No API key, no account, no internet connection after the initial download.',
-  },
-  {
-    q: 'What is the best free local LLM in 2026?',
-    a: 'Meta Llama 4 Scout 17B for general use (Llama Community License, 10 GB VRAM). Qwen3-Coder 32B for coding (92.7% HumanEval, 20 GB VRAM). DeepSeek-R2 8B for reasoning (MIT licence, 5 GB VRAM). All are free, open-weight, and available via `ollama pull`.',
-  },
-  {
-    q: 'Are local LLMs private?',
-    a: 'Yes. When running with Ollama or LM Studio, your prompts, documents, and responses never leave your machine. No data is transmitted to any server. This makes local LLMs the recommended choice for GDPR-regulated workflows, legal and medical document processing, and any task involving confidential or personal information.',
-  },
-]
+const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
+  en: [
+    {
+      q: 'What is a local LLM?',
+      a: 'A local LLM is a large language model that runs entirely on your own hardware — CPU, GPU, or Apple Silicon — without sending data to external servers. You download the model file (typically 2–40 GB) and run it using a tool like Ollama or LM Studio. As of May 2026, the most popular local LLM is Meta Llama 4 Scout 17B, which runs on machines with 10 GB VRAM at 10–80 tokens/sec.',
+    },
+    {
+      q: 'Is a local LLM better than ChatGPT?',
+      a: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude Opus 4.8) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 4 Scout, Qwen3 72B) match or exceed GPT-4o mini on most everyday tasks — at zero per-query cost.',
+    },
+    {
+      q: 'How much RAM do I need to run a local LLM?',
+      a: 'Minimum: 8 GB RAM to run a 7B model at Q4 quantization. Recommended: 16 GB for 13B models, 40+ GB for 70B models. Apple Silicon unified memory counts fully toward this — an M3 Mac with 18 GB can run a 13B model well. GPU VRAM is equivalent to RAM for GPU inference.',
+    },
+    {
+      q: 'How do I run a local LLM?',
+      a: 'Install Ollama (ollama.com), then run one command: `ollama run llama3.1:8b`. The model downloads automatically and you can start chatting in under 5 minutes. No API key, no account, no internet connection after the initial download.',
+    },
+    {
+      q: 'What is the best free local LLM in 2026?',
+      a: 'Meta Llama 4 Scout 17B for general use (Llama Community License, 10 GB VRAM). Qwen3-Coder 32B for coding (92.7% HumanEval, 20 GB VRAM). DeepSeek-R2 8B for reasoning (MIT licence, 5 GB VRAM). All are free, open-weight, and available via `ollama pull`.',
+    },
+    {
+      q: 'Are local LLMs private?',
+      a: 'Yes. When running with Ollama or LM Studio, your prompts, documents, and responses never leave your machine. No data is transmitted to any server. This makes local LLMs the recommended choice for GDPR-regulated workflows, legal and medical document processing, and any task involving confidential or personal information.',
+    },
+  ],
+  de: [
+    {
+      q: 'Was ist ein lokales LLM?',
+      a: 'Ein lokales LLM ist ein großes Sprachmodell, das vollständig auf Ihrer eigenen Hardware läuft — CPU, GPU oder Apple Silicon —, ohne Daten an externe Server zu senden. Sie laden die Modelldatei (typischerweise 2–40 GB) herunter und führen sie mit einem Tool wie Ollama oder LM Studio aus. Stand Mai 2026 ist Meta Llama 4 Scout 17B das beliebteste lokale LLM; es läuft auf Geräten mit 10 GB VRAM mit 10–80 Tokens/Sek.',
+    },
+    {
+      q: 'Ist ein lokales LLM besser als ChatGPT?',
+      a: 'Bei Datenschutz und Kosten: ja. Bei der reinen Ausgabequalität: nein. Stand 2026 übertreffen führende Cloud-Modelle (GPT-4o, Claude Opus 4.8) alle lokal ausführbaren Modelle bei komplexem logischem Schließen. Lokale 70B-Modelle (Llama 4 Scout, Qwen3 72B) erreichen oder übertreffen jedoch GPT-4o mini bei den meisten Alltagsaufgaben — bei null Kosten pro Anfrage.',
+    },
+    {
+      q: 'Wie viel RAM benötige ich für ein lokales LLM?',
+      a: 'Minimum: 8 GB RAM für ein 7B-Modell in Q4-Quantisierung. Empfohlen: 16 GB für 13B-Modelle, 40+ GB für 70B-Modelle. Der Unified Memory von Apple Silicon zählt vollständig dazu — ein M3 Mac mit 18 GB kann ein 13B-Modell gut ausführen. Bei GPU-Inferenz entspricht der VRAM dem RAM.',
+    },
+    {
+      q: 'Wie führe ich ein lokales LLM aus?',
+      a: 'Installieren Sie Ollama (ollama.com) und führen Sie einen einzigen Befehl aus: `ollama run llama3.1:8b`. Das Modell wird automatisch heruntergeladen, und Sie können in weniger als 5 Minuten mit dem Chatten beginnen. Kein API-Schlüssel, kein Konto, keine Internetverbindung nach dem ersten Download erforderlich.',
+    },
+    {
+      q: 'Was ist das beste kostenlose lokale LLM 2026?',
+      a: 'Meta Llama 4 Scout 17B für allgemeine Zwecke (Llama Community License, 10 GB VRAM). Qwen3-Coder 32B für Coding (92,7 % HumanEval, 20 GB VRAM). DeepSeek-R2 8B für logisches Schließen (MIT-Lizenz, 5 GB VRAM). Alle sind kostenlos, offen (Open Weight) und über `ollama pull` verfügbar.',
+    },
+    {
+      q: 'Sind lokale LLMs privat?',
+      a: 'Ja. Bei der Ausführung mit Ollama oder LM Studio verlassen Ihre Prompts, Dokumente und Antworten niemals Ihr Gerät. Es werden keine Daten an einen Server übertragen. Das macht lokale LLMs zur empfohlenen Wahl für DSGVO-regulierte Workflows, die Verarbeitung juristischer und medizinischer Dokumente sowie jede Aufgabe mit vertraulichen oder personenbezogenen Daten.',
+    },
+  ],
+  fr: [
+    {
+      q: "Qu'est-ce qu'un LLM local ?",
+      a: "Un LLM local est un grand modèle de langage qui s'exécute entièrement sur votre propre matériel — CPU, GPU ou Apple Silicon — sans envoyer de données à des serveurs externes. Vous téléchargez le fichier du modèle (généralement 2 à 40 Go) et l'exécutez avec un outil comme Ollama ou LM Studio. En mai 2026, le LLM local le plus populaire est Meta Llama 4 Scout 17B, qui fonctionne sur des machines avec 10 Go de VRAM à 10–80 tokens/s.",
+    },
+    {
+      q: 'Un LLM local est-il meilleur que ChatGPT ?',
+      a: 'Pour la confidentialité et le coût, oui. Pour la qualité brute des réponses, non. En 2026, les modèles cloud de pointe (GPT-4o, Claude Opus 4.8) surpassent tous les modèles exécutables localement sur le raisonnement complexe. Les modèles locaux de 70B (Llama 4 Scout, Qwen3 72B) égalent ou dépassent toutefois GPT-4o mini sur la plupart des tâches courantes — pour un coût nul par requête.',
+    },
+    {
+      q: 'Combien de RAM faut-il pour exécuter un LLM local ?',
+      a: "Minimum : 8 Go de RAM pour un modèle 7B en quantification Q4. Recommandé : 16 Go pour les modèles 13B, 40 Go ou plus pour les modèles 70B. La mémoire unifiée d'Apple Silicon compte intégralement — un Mac M3 avec 18 Go exécute bien un modèle 13B. Le VRAM du GPU équivaut à la RAM pour l'inférence GPU.",
+    },
+    {
+      q: 'Comment exécuter un LLM local ?',
+      a: "Installez Ollama (ollama.com), puis exécutez une seule commande : `ollama run llama3.1:8b`. Le modèle se télécharge automatiquement et vous pouvez commencer à discuter en moins de 5 minutes. Aucune clé API, aucun compte, aucune connexion Internet requise après le téléchargement initial.",
+    },
+    {
+      q: 'Quel est le meilleur LLM local gratuit en 2026 ?',
+      a: 'Meta Llama 4 Scout 17B pour un usage général (Llama Community License, 10 Go de VRAM). Qwen3-Coder 32B pour le code (92,7 % HumanEval, 20 Go de VRAM). DeepSeek-R2 8B pour le raisonnement (licence MIT, 5 Go de VRAM). Tous sont gratuits, à poids ouverts, et disponibles via `ollama pull`.',
+    },
+    {
+      q: 'Les LLM locaux sont-ils privés ?',
+      a: "Oui. Avec Ollama ou LM Studio, vos prompts, documents et réponses ne quittent jamais votre machine. Aucune donnée n'est transmise à un serveur. Cela fait des LLM locaux le choix recommandé pour les flux de travail soumis au RGPD, le traitement de documents juridiques et médicaux, et toute tâche impliquant des informations confidentielles ou personnelles.",
+    },
+  ],
+  ja: [
+    {
+      q: 'ローカルLLMとは何ですか?',
+      a: 'ローカルLLMとは、CPU・GPU・Apple Siliconなど、お使いのハードウェア上で完全に動作する大規模言語モデルです。外部サーバーへデータを送信しません。モデルファイル(通常2〜40GB)をダウンロードし、OllamaやLM Studioなどのツールで実行します。2026年5月時点で最も人気のあるローカルLLMはMeta Llama 4 Scout 17Bで、10GB VRAMのマシンで10〜80トークン/秒で動作します。',
+    },
+    {
+      q: 'ローカルLLMはChatGPTより優れていますか?',
+      a: 'プライバシーとコストの面では優れています。出力品質そのものでは劣ります。2026年時点で、最先端のクラウドモデル(GPT-4o、Claude Opus 4.8)は複雑な推論においてローカルで実行可能な全モデルを上回ります。ただし、ローカルの70Bモデル(Llama 4 Scout、Qwen3 72B)は多くの日常タスクでGPT-4o miniと同等かそれ以上の性能を発揮し、クエリごとのコストはゼロです。',
+    },
+    {
+      q: 'ローカルLLMの実行にはどれくらいのRAMが必要ですか?',
+      a: '最低: 7BモデルをQ4量子化で実行するには8GB RAM。推奨: 13Bモデルには16GB、70Bモデルには40GB以上。Apple Siliconのユニファイドメモリはこれに完全にカウントされます — 18GBのM3 Macなら13Bモデルを問題なく実行できます。GPU推論の場合、GPU VRAMはRAMと同等です。',
+    },
+    {
+      q: 'ローカルLLMはどうやって実行しますか?',
+      a: 'Ollama(ollama.com)をインストールし、コマンドを1つ実行するだけです: `ollama run llama3.1:8b`。モデルは自動的にダウンロードされ、5分以内にチャットを開始できます。APIキー、アカウント登録は不要で、初回ダウンロード後はインターネット接続も不要です。',
+    },
+    {
+      q: '2026年で最も優れた無料のローカルLLMは何ですか?',
+      a: '汎用にはMeta Llama 4 Scout 17B(Llama Community License、10GB VRAM)。コーディングにはQwen3-Coder 32B(HumanEval 92.7%、20GB VRAM)。推論にはDeepSeek-R2 8B(MITライセンス、5GB VRAM)。いずれも無料でオープンウェイトであり、`ollama pull`から入手できます。',
+    },
+    {
+      q: 'ローカルLLMはプライバシーが保たれますか?',
+      a: 'はい。OllamaやLM Studioで実行する場合、プロンプト・文書・応答が端末の外に出ることは一切ありません。サーバーへのデータ送信も発生しません。そのため、ローカルLLMはGDPR規制下のワークフロー、法務・医療文書の処理、機密情報や個人情報を扱うあらゆるタスクに推奨される選択肢です。',
+    },
+  ],
+  zh: [
+    {
+      q: '什么是本地LLM?',
+      a: '本地LLM是完全在您自己的硬件上运行的大语言模型——CPU、GPU或Apple Silicon均可——不会将数据发送到外部服务器。您下载模型文件(通常2–40 GB),然后使用Ollama或LM Studio等工具运行。截至2026年5月,最受欢迎的本地LLM是Meta Llama 4 Scout 17B,可在10 GB VRAM的设备上以10–80 tokens/秒的速度运行。',
+    },
+    {
+      q: '本地LLM比ChatGPT更好吗?',
+      a: '在隐私和成本方面,是的。在原始输出质量方面,不是。截至2026年,前沿云端模型(GPT-4o、Claude Opus 4.8)在复杂推理任务上优于所有可本地运行的模型。不过,本地70B模型(Llama 4 Scout、Qwen3 72B)在大多数日常任务上可与GPT-4o mini持平甚至更优——且每次查询零成本。',
+    },
+    {
+      q: '运行本地LLM需要多少RAM?',
+      a: '最低要求:8 GB RAM可运行Q4量化的7B模型。推荐配置:13B模型需16 GB,70B模型需40 GB以上。Apple Silicon的统一内存可完全计入——配备18 GB内存的M3 Mac可流畅运行13B模型。对于GPU推理,GPU VRAM相当于RAM。',
+    },
+    {
+      q: '如何运行本地LLM?',
+      a: '安装Ollama(ollama.com),然后执行一条命令:`ollama run llama3.1:8b`。模型会自动下载,5分钟内即可开始对话。无需API密钥、无需注册账户,首次下载完成后也无需联网。',
+    },
+    {
+      q: '2026年最好的免费本地LLM是什么?',
+      a: '通用场景推荐Meta Llama 4 Scout 17B(Llama Community License,10 GB VRAM)。编程场景推荐Qwen3-Coder 32B(HumanEval 92.7%,20 GB VRAM)。推理场景推荐DeepSeek-R2 8B(MIT许可,5 GB VRAM)。均为免费、开放权重模型,可通过`ollama pull`获取。',
+    },
+    {
+      q: '本地LLM是否保护隐私?',
+      a: '是的。使用Ollama或LM Studio运行时,您的提示词、文档和回复永远不会离开您的设备,不会向任何服务器传输数据。因此,本地LLM是处理GDPR合规工作流、法律与医疗文档,以及任何涉及机密或个人信息任务的推荐选择。',
+    },
+  ],
+  es: [
+    {
+      q: '¿Qué es un LLM local?',
+      a: 'Un LLM local es un modelo de lenguaje grande que se ejecuta completamente en tu propio hardware — CPU, GPU o Apple Silicon — sin enviar datos a servidores externos. Descargas el archivo del modelo (normalmente entre 2 y 40 GB) y lo ejecutas con una herramienta como Ollama o LM Studio. Desde mayo de 2026, el LLM local más popular es Meta Llama 4 Scout 17B, que funciona en equipos con 10 GB de VRAM a 10–80 tokens/seg.',
+    },
+    {
+      q: '¿Es un LLM local mejor que ChatGPT?',
+      a: 'En privacidad y coste, sí. En calidad bruta de las respuestas, no. En 2026, los modelos en la nube de última generación (GPT-4o, Claude Opus 4.8) superan a todos los modelos ejecutables localmente en razonamiento complejo. Sin embargo, los modelos locales de 70B (Llama 4 Scout, Qwen3 72B) igualan o superan a GPT-4o mini en la mayoría de tareas cotidianas — con coste cero por consulta.',
+    },
+    {
+      q: '¿Cuánta RAM necesito para ejecutar un LLM local?',
+      a: 'Mínimo: 8 GB de RAM para un modelo 7B con cuantización Q4. Recomendado: 16 GB para modelos 13B, 40+ GB para modelos 70B. La memoria unificada de Apple Silicon cuenta por completo para esto — un Mac M3 con 18 GB ejecuta bien un modelo 13B. La VRAM de la GPU equivale a la RAM en inferencia por GPU.',
+    },
+    {
+      q: '¿Cómo ejecuto un LLM local?',
+      a: 'Instala Ollama (ollama.com) y ejecuta un solo comando: `ollama run llama3.1:8b`. El modelo se descarga automáticamente y puedes empezar a chatear en menos de 5 minutos. Sin clave API, sin cuenta, sin conexión a internet tras la descarga inicial.',
+    },
+    {
+      q: '¿Cuál es el mejor LLM local gratuito en 2026?',
+      a: 'Meta Llama 4 Scout 17B para uso general (Llama Community License, 10 GB de VRAM). Qwen3-Coder 32B para programación (92.7% en HumanEval, 20 GB de VRAM). DeepSeek-R2 8B para razonamiento (licencia MIT, 5 GB de VRAM). Todos son gratuitos, de pesos abiertos y están disponibles vía `ollama pull`.',
+    },
+    {
+      q: '¿Son privados los LLM locales?',
+      a: 'Sí. Al ejecutarlos con Ollama o LM Studio, tus prompts, documentos y respuestas nunca salen de tu equipo. No se transmiten datos a ningún servidor. Esto convierte a los LLM locales en la opción recomendada para flujos de trabajo sujetos al RGPD, el procesamiento de documentos legales y médicos, y cualquier tarea que implique información confidencial o personal.',
+    },
+  ],
+}
 
 function slugToTitle(slug: string): string {
   return slug
@@ -1893,7 +2025,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
             {HUB_BOTTOM_FAQ_TITLE[lang] ?? HUB_BOTTOM_FAQ_TITLE['en']}
           </h2>
           <div className="space-y-6">
-            {HUB_FAQS_BOTTOM.map((faq, i) => (
+            {(HUB_FAQS_BOTTOM[lang] ?? HUB_FAQS_BOTTOM['en']).map((faq, i) => (
               <div key={i} className="border-b border-primary/15 pb-4 last:border-0">
                 <h3 className="text-sm font-semibold text-text-primary mb-2">{faq.q}</h3>
                 <p className="text-sm text-text-secondary">{faq.a}</p>
