@@ -12,6 +12,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { balconySolarContent } from '@/lib/balcony-solar/content'
 import type { LLMSection } from '@/lib/local-llms/types'
 import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
@@ -794,7 +795,7 @@ function BalconySolarPostContent({ slug, lang }: Props) {
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {article.dateModified ?? article.publishDate ?? ''}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {formatDisplayDate(article.dateModified ?? article.publishDate, lang)}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>

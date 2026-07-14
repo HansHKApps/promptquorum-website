@@ -88,6 +88,7 @@ docs/
 - Styling: Tailwind CSS `className` prop only — no separate CSS files
 - Exports: Named exports (not default)
 - TypeScript: Strict mode — no `any`
+- User-facing dates ("Last updated", "Published"): always render via `formatDisplayDate(isoDate, lang)` from `src/lib/formatDisplayDate.ts` — never print a raw ISO date string (`article.dateModified`/`article.publishDate`) directly in JSX. Spelling out the month avoids ambiguous MM/DD-vs-DD/MM numeric formats for US/European readers. JSON-LD, OG `modifiedTime`, and sitemap `lastmod` are exempt — those must stay raw ISO 8601.
 
 ## Language / i18n
 

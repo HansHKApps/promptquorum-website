@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { peContent, type PESection } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, DOMAIN_TO_PATH, LEVEL_TO_PATHS, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
@@ -1218,17 +1219,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           </h1>
           <div className="flex items-center gap-4 text-sm text-text-secondary">
             <time dateTime={article.dateModified ?? article.publishDate}>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {(() => {
-                const d = article.dateModified ?? article.publishDate
-                if (!d) return ''
-                const localeMap: Partial<Record<Language, string>> = { en: 'en-US', de: 'de-DE', fr: 'fr-FR', ja: 'ja-JP', zh: 'zh-CN' }
-                try {
-                  const dateObj = new Date(d)
-                  return isNaN(dateObj.getTime()) ? '' : dateObj.toLocaleDateString(localeMap[lang], { month: 'long', year: 'numeric' })
-                } catch {
-                  return ''
-                }
-              })()}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {formatDisplayDate(article.dateModified ?? article.publishDate, lang)}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>

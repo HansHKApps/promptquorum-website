@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { llmContent, type LLMSection } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
@@ -693,24 +694,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {(() => {
-                const d = article.dateModified ?? article.publishDate
-                if (!d) return ''
-                const localeMap: Partial<Record<Language, string>> = {
-                  en: 'en-US',
-                  de: 'de-DE',
-                  fr: 'fr-FR',
-                  ja: 'ja-JP',
-                  zh: 'zh-CN'
-                }
-                try {
-                  const dateObj = new Date(d)
-                  if (isNaN(dateObj.getTime())) return ''
-                  return dateObj.toLocaleDateString(localeMap[lang], { month: 'long', year: 'numeric' })
-                } catch {
-                  return ''
-                }
-              })()}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {formatDisplayDate(article.dateModified ?? article.publishDate, lang)}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
