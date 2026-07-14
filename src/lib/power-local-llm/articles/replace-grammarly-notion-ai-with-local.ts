@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Replace Grammarly and Notion AI with a Local LLM (2026)',
@@ -335,6 +335,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I replace Notion AI\'s meeting notes summarisation locally?',
             a: 'Yes. Export meeting notes as a text or markdown file (or paste transcript text directly). Use the prompt: "Summarise these meeting notes into: (1) Key decisions made, (2) Action items with owners, (3) Open questions. Use bullet points for each section. Keep it under 300 words." Any model from Phi-4 Mini upward handles meeting summarisation reliably. For recurring meetings, create a saved prompt template in your local AI app.',
           },
+          {
+            q: 'What LLM does Grammarly use?',
+            a: 'Grammarly does not publish a single underlying model name. Its core grammar, spelling, and style checks run on proprietary in-house NLP and machine-learning models Grammarly has developed since before generative AI existed. For its generative-AI features (GrammarlyGO), Grammarly has stated it draws on a combination of its own fine-tuned models and third-party large language models, and its Enterprise plan lets administrators choose or restrict which model providers may process their organisation\'s text. Unlike Notion AI, which sends document content to a named third party (OpenAI), Grammarly does not commit to one fixed external LLM. That is exactly why the underlying model matters less than the data-handling model: regardless of which model sits behind a given feature, the text is processed on Grammarly\'s servers under its Terms of Service licence. A local LLM avoids that entirely — the text never leaves your machine.',
+          },
         ],
       },
       relatedReading: {
@@ -354,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Reemplaza Grammarly y Notion AI con un LLM local (2026)',
@@ -680,6 +684,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Puedo reemplazar localmente el resumen de notas de reuniones de Notion AI?',
             a: 'Sí. Exporta las notas de la reunión como un archivo de texto o markdown (o pega el texto de la transcripción directamente). Usa el prompt: "Resume estas notas de reunión en: (1) Decisiones clave tomadas, (2) Elementos de acción con responsables, (3) Preguntas abiertas. Usa viñetas para cada sección. Mantén el resumen en menos de 300 palabras." Cualquier modelo desde Phi-4 Mini hacia arriba maneja el resumen de reuniones de forma fiable. Para reuniones recurrentes, crea una plantilla de prompt guardada en tu app de IA local.',
           },
+          {
+            q: '¿Qué LLM usa Grammarly?',
+            a: 'Grammarly no publica el nombre de un único modelo subyacente. Sus correcciones básicas de gramática, ortografía y estilo se ejecutan sobre modelos propios de PNL y aprendizaje automático que Grammarly desarrolla desde antes de que existiera la IA generativa. Para sus funciones de IA generativa (GrammarlyGO), Grammarly ha declarado que combina sus propios modelos ajustados con modelos de lenguaje de terceros, y su plan Enterprise permite a los administradores elegir o restringir qué proveedores de modelos pueden procesar el texto de su organización. A diferencia de Notion AI, que envía el contenido de los documentos a un tercero identificado (OpenAI), Grammarly no se compromete con un único LLM externo fijo. Por eso el modelo subyacente importa menos que el modelo de gestión de datos: sea cual sea el modelo detrás de una función determinada, el texto se procesa en los servidores de Grammarly bajo su licencia de Términos de Servicio. Un LLM local evita esto por completo — el texto nunca sale de tu equipo.',
+          },
         ],
       },
       relatedReading: {
@@ -703,7 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/replace-grammarly-notion-ai-with-local',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -712,7 +720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Substitua o Grammarly e o Notion AI por um LLM local (2026)',
@@ -1038,6 +1046,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Posso substituir localmente o resumo de anotações de reuniões do Notion AI?',
             a: 'Sim. Exporte as anotações da reunião como um arquivo de texto ou markdown (ou cole o texto da transcrição diretamente). Use o prompt: "Resuma estas anotações de reunião em: (1) Decisões-chave tomadas, (2) Itens de ação com responsáveis, (3) Perguntas em aberto. Use marcadores para cada seção. Mantenha o resumo em menos de 300 palavras."',
           },
+          {
+            q: 'Qual LLM o Grammarly usa?',
+            a: 'O Grammarly não divulga o nome de um único modelo subjacente. Suas correções básicas de gramática, ortografia e estilo rodam em modelos próprios de PLN e aprendizado de máquina que a empresa desenvolve desde antes da IA generativa existir. Para seus recursos de IA generativa (GrammarlyGO), o Grammarly declarou que combina modelos próprios ajustados com modelos de linguagem de terceiros, e seu plano Enterprise permite que administradores escolham ou restrinjam quais provedores de modelo podem processar o texto da organização. Diferente do Notion AI, que envia o conteúdo dos documentos a um terceiro nomeado (OpenAI), o Grammarly não se compromete com um único LLM externo fixo. É exatamente por isso que o modelo subjacente importa menos que o modelo de tratamento de dados: seja qual for o modelo por trás de um recurso, o texto é processado nos servidores do Grammarly sob a licença dos Termos de Serviço. Um LLM local evita isso completamente — o texto nunca sai do seu equipamento.',
+          },
         ],
       },
       relatedReading: {
@@ -1061,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/replace-grammarly-notion-ai-with-local',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1070,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Grammarly und Notion AI durch ein lokales LLM ersetzen (2026)',
@@ -1397,6 +1409,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Ja. Exportieren Sie Meeting-Notizen als Text- oder Markdown-Datei (oder fügen Sie das Transkript direkt ein). Verwenden Sie den Prompt: "Fasse diese Meeting-Notizen zusammen in: (1) getroffene Entscheidungen, (2) Aufgaben mit Verantwortlichen, (3) offene Fragen. Stichpunkte je Abschnitt. Maximal 300 Wörter." Jedes Modell ab Phi-4 Mini bewältigt Meeting-Zusammenfassungen zuverlässig. Für wiederkehrende Meetings legen Sie eine gespeicherte Prompt-Vorlage in Ihrer lokalen KI-App an.',
           },
           {
+            q: 'Welches LLM verwendet Grammarly?',
+            a: 'Grammarly veröffentlicht nicht den Namen eines einzelnen zugrunde liegenden Modells. Die grundlegenden Grammatik-, Rechtschreib- und Stilprüfungen laufen auf firmeneigenen NLP- und Machine-Learning-Modellen, die Grammarly bereits vor dem Aufkommen generativer KI entwickelt hat. Für seine generativen KI-Funktionen (GrammarlyGO) gibt Grammarly an, eigene feinjustierte Modelle mit Sprachmodellen von Drittanbietern zu kombinieren; im Enterprise-Plan können Administratoren zudem festlegen oder einschränken, welche Modellanbieter den Text ihrer Organisation verarbeiten dürfen. Anders als Notion AI, das Dokumentinhalte an einen namentlich genannten Drittanbieter (OpenAI) sendet, legt sich Grammarly nicht auf ein einziges externes LLM fest. Genau deshalb ist das zugrunde liegende Modell weniger entscheidend als das Datenverarbeitungsmodell: Unabhängig davon, welches Modell hinter einer bestimmten Funktion steht, wird der Text auf Grammarlys Servern gemäß dessen Nutzungsbedingungen verarbeitet. Ein lokales LLM umgeht dies vollständig — der Text verlässt Ihren Rechner nie.',
+          },
+          {
             q: 'Muss ich bei der Verwendung eines lokalen LLM die DSGVO beachten?',
             a: 'Lokale LLMs verarbeiten personenbezogene Daten weiterhin im Sinne der DSGVO — der entscheidende Punkt ist jedoch, dass keine Übermittlung an einen Auftragsverarbeiter (Art. 28 DSGVO) stattfindet, weil die Daten den Rechner nicht verlassen. Damit entfällt die Pflicht zum AV-Vertrag mit einem Cloud-Anbieter und die Prüfung von Drittlandtransfers (Schrems II). Sie bleiben Verantwortlicher i.S.v. Art. 4 Nr. 7 DSGVO und müssen weiterhin Zwecke, Rechtsgrundlagen und Betroffenenrechte (Art. 13–22) abbilden. Empfohlen für DACH-Unternehmen: BSI-Grundschutz-Kataloge zur Endpunktabsicherung anwenden, Festplattenverschlüsselung aktivieren und in der Datenschutzerklärung dokumentieren, dass die KI-Verarbeitung lokal stattfindet.',
           },
@@ -1423,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Remplacer Grammarly et Notion AI par un LLM local (2026)',
@@ -1749,6 +1765,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Puis-je remplacer la synthèse de notes de réunion de Notion AI en local ?',
             a: 'Oui. Exportez les notes de réunion en fichier texte ou Markdown (ou collez la transcription). Utilisez le prompt : "Synthétise ces notes de réunion en : (1) décisions prises, (2) actions avec responsables, (3) questions ouvertes. Liste à puces par section. Maximum 300 mots." Tout modèle à partir de Phi-4 Mini gère les synthèses de réunion de manière fiable. Pour les réunions récurrentes, créez un modèle de prompt enregistré dans votre app IA locale.',
           },
+          {
+            q: 'Quel LLM Grammarly utilise-t-il ?',
+            a: 'Grammarly ne publie pas le nom d\'un modèle sous-jacent unique. Ses corrections de grammaire, d\'orthographe et de style de base s\'appuient sur des modèles de TAL et de machine learning propriétaires, développés par Grammarly avant même l\'essor de l\'IA générative. Pour ses fonctions d\'IA générative (GrammarlyGO), Grammarly indique combiner ses propres modèles affinés avec des grands modèles de langage tiers, et son offre Enterprise permet aux administrateurs de choisir ou de restreindre les fournisseurs de modèles autorisés à traiter le texte de leur organisation. Contrairement à Notion AI, qui envoie le contenu des documents à un tiers nommément désigné (OpenAI), Grammarly ne s\'engage pas sur un LLM externe fixe unique. C\'est précisément pour cela que le modèle sous-jacent importe moins que le modèle de traitement des données : quel que soit le modèle derrière une fonctionnalité donnée, le texte est traité sur les serveurs de Grammarly sous sa licence de conditions d\'utilisation. Un LLM local évite entièrement ce sujet — le texte ne quitte jamais votre machine.',
+          },
         ],
       },
       relatedReading: {
@@ -1768,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'GrammarlyとNotion AIをローカルLLMで置き換える（2026）',
@@ -2095,6 +2115,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Notion AIの会議メモ要約をローカルで置き換えられますか？',
             a: 'はい。会議メモをテキストまたはMarkdownファイルとして書き出す（または文字起こしを直接貼り付け）。プロンプト：「これらの会議メモを次の形式で要約：（1）決定事項、（2）担当者付きのアクションアイテム、（3）未解決の疑問。各セクションは箇条書き。300語以内」。Phi-4 Mini以上のモデルなら会議要約を安定して扱えます。定例会議があるなら、ローカルAIアプリに保存済みプロンプトテンプレートを作っておきましょう。',
           },
+          {
+            q: 'GrammarlyはどのLLMを使っていますか？',
+            a: 'Grammarlyは特定の単一モデル名を公表していません。基本的な文法・スペル・文体チェックは、生成AI以前から開発してきた自社独自のNLP・機械学習モデル上で動作しています。生成AI機能（GrammarlyGO）については、自社でファインチューニングしたモデルとサードパーティの大規模言語モデルを組み合わせていると公表しており、Enterpriseプランでは管理者がどのモデルプロバイダーに組織のテキスト処理を許可するか選択・制限できます。Notion AIが文書内容を名指しのサードパーティ（OpenAI）に送信するのとは異なり、Grammarlyは単一の外部LLMに固定していません。だからこそ、背後にあるモデル自体よりもデータ処理の仕組みの方が重要です——どのモデルが使われていても、テキストはGrammarlyの利用規約のライセンスのもとで同社のサーバー上で処理されます。ローカルLLMならこの問題自体が発生しません——テキストは端末から一切出ません。',
+          },
         ],
       },
       relatedReading: {
@@ -2114,7 +2138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: '用本地 LLM 替代 Grammarly 与 Notion AI（2026）',
@@ -2442,6 +2466,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '可以在本地替代 Notion AI 的会议纪要摘要吗？',
             a: '可以。把会议纪要导出为文本或 Markdown 文件（或直接粘贴文字稿）。提示词："请把这份会议纪要总结为：（1）做出的决策、（2）带责任人的行动项、（3）尚未明确的问题。每段用项目符号。控制在 300 字以内。" Phi-4 Mini 及以上的模型都能稳定胜任会议摘要。对例会，可在本地 AI 应用中保存提示词模板。',
           },
+          {
+            q: 'Grammarly 用的是哪个 LLM？',
+            a: 'Grammarly 并未公开某一个具体的底层模型名称。其基础的语法、拼写和文风检查运行在自研的 NLP 与机器学习模型上——这套技术在生成式 AI 出现之前就已经是 Grammarly 的核心能力。对于生成式 AI 功能（GrammarlyGO），Grammarly 表示会结合自研的微调模型与第三方大语言模型，其 Enterprise 方案还允许管理员选择或限制哪些模型提供方可以处理本组织的文本。与 Notion AI 明确把文档内容发往指定第三方（OpenAI）不同，Grammarly 并不固定使用某一个外部 LLM。这正说明了为什么底层模型本身并不是重点，真正重要的是数据处理方式：无论某项功能背后用的是哪个模型，文本都会在 Grammarly 的服务器上按其服务条款的授权进行处理。而本地 LLM 完全规避了这一点——文本永远不会离开您的设备。',
+          },
         ],
       },
       relatedReading: {
@@ -2462,7 +2490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'استبدل ⁨Grammarly⁩ و⁨Notion AI⁩ بنموذج ⁨LLM⁩ محلي (⁨2026⁩)',
@@ -2729,6 +2757,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يمكنني استبدال Notion AI في ملخصات الاجتماعات محليًا؟',
             a: 'نعم. صدّر محضر الاجتماع كملف نصي أو Markdown (أو الصق نص النسخة). الموجّه: "لخّص محضر الاجتماع هذا إلى: (1) القرارات المتخذة، (2) بنود العمل مع أصحابها، (3) الأسئلة التي لم تُحسم بعد. استخدم نقاطًا لكل قسم. أبقِه في 300 كلمة." Phi-4 Mini وما فوقه يؤديان هذه المهمة بموثوقية.',
           },
+          {
+            q: 'ما نموذج LLM الذي يستخدمه Grammarly؟',
+            a: 'لا تُعلن Grammarly عن اسم نموذج واحد محدد يقف خلف الخدمة. تعمل عمليات تصحيح القواعد والإملاء والأسلوب الأساسية على نماذج معالجة لغة طبيعية وتعلّم آلي خاصة بالشركة، طوّرتها Grammarly قبل ظهور الذكاء الاصطناعي التوليدي أصلًا. أما بالنسبة لميزات الذكاء الاصطناعي التوليدي (GrammarlyGO)، فقد ذكرت Grammarly أنها تجمع بين نماذجها المُخصَّصة ونماذج لغوية كبيرة من أطراف ثالثة، كما تتيح خطة Enterprise للمسؤولين اختيار أو تقييد مزوّدي النماذج المسموح لهم بمعالجة نصوص مؤسستهم. وخلافًا لـ Notion AI الذي يرسل محتوى المستندات إلى طرف ثالث محدد بالاسم (OpenAI)، لا تلتزم Grammarly بنموذج LLM خارجي واحد ثابت. ولهذا السبب بالتحديد يصبح النموذج الكامن خلف الخدمة أقل أهمية من طريقة التعامل مع البيانات: أيًا كان النموذج المستخدم في ميزة معينة، تتم معالجة النص على خوادم Grammarly بموجب ترخيص شروط الخدمة الخاصة بها. أما نموذج LLM المحلي فيتجنب هذا الأمر تمامًا — إذ لا يغادر النص جهازك إطلاقًا.',
+          },
         ],
       },
       relatedReading: {
@@ -2752,7 +2784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/replace-grammarly-notion-ai-with-local',
       inLanguage: 'ar',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2761,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Grammarly와 Notion AI를 로컬 LLM으로 대체하기 (2026)',
@@ -3087,6 +3119,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Notion AI의 회의 메모 요약을 로컬로 대체할 수 있습니까?',
             a: '예. 회의 메모를 텍스트 또는 마크다운 파일로 내보내거나(또는 전사 텍스트를 직접 붙여넣기) 다음 프롬프트를 사용하세요: "이 회의 메모를 (1) 핵심 결정 사항, (2) 담당자가 있는 실행 항목, (3) 미해결 질문으로 요약하세요. 각 섹션에 글머리 기호를 사용하세요. 요약을 300단어 이내로 유지하세요." Phi-4 Mini 이상의 모든 모델이 회의 요약을 안정적으로 처리합니다. 반복 회의의 경우 로컬 AI 앱에 저장된 프롬프트 템플릿을 만드세요.',
           },
+          {
+            q: 'Grammarly는 어떤 LLM을 사용합니까?',
+            a: 'Grammarly는 단일 기반 모델명을 공개하지 않습니다. 기본적인 문법·철자·문체 교정 기능은 생성형 AI가 등장하기 이전부터 Grammarly가 자체 개발해 온 독자적인 NLP 및 머신러닝 모델에서 작동합니다. 생성형 AI 기능(GrammarlyGO)의 경우, Grammarly는 자체적으로 파인튜닝한 모델과 제3자 대규모 언어 모델을 결합해 사용한다고 밝혔으며, Enterprise 플랜에서는 관리자가 조직의 텍스트를 처리할 모델 제공업체를 선택하거나 제한할 수 있습니다. 문서 내용을 특정 제3자(OpenAI)로 전송한다고 명시하는 Notion AI와 달리, Grammarly는 하나의 고정된 외부 LLM에 매여 있지 않습니다. 바로 이 때문에 기반 모델 자체보다 데이터 처리 방식이 더 중요합니다. 특정 기능 뒤에 어떤 모델이 있든, 텍스트는 Grammarly의 서비스 약관 라이선스에 따라 Grammarly 서버에서 처리됩니다. 로컬 LLM은 이 문제 자체를 원천적으로 피합니다 — 텍스트가 기기 밖으로 전혀 나가지 않습니다.',
+          },
         ],
       },
       relatedReading: {
@@ -3110,7 +3146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/replace-grammarly-notion-ai-with-local',
       inLanguage: 'ko',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
