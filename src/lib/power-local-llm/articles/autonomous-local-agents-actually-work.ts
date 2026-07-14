@@ -1,6 +1,6 @@
 // Power Local LLM — Local AI Agents in 2026: What Actually Works (And What Still Fails)
 // Slug: autonomous-local-agents-actually-work
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 languages (en/es/fr/ja/de/zh/pt/ar/ko) have full content blocks.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Local AI Agents in 2026: What Actually Works (And What Still Fails)',
-    seoTitle: 'Local AI Agents 2026: What Works, What Fails (Honest Test)',
+    seoTitle: 'Local AI Agents 2026: Multi-Agent Orchestration Tested',
     intro:
-      'Six local AI agent stacks, five real tasks, thirty days of evaluation. Two stacks land tasks reliably. Three fail in ways the demos do not show. One is effectively unusable. This is the honest report — what each agent setup actually does on a refactor, a research task, an email triage, a scrape-and-summarize, and a bug hunt, with the failures named specifically and the supervision cost quantified.',
+      'Six local AI agent stacks, five real tasks, thirty days of evaluation. Two stacks land tasks reliably. Three fail in ways the demos do not show. One is effectively unusable. This is the honest report — what each agent setup actually does on a refactor, a research task, an email triage, a scrape-and-summarize, and a bug hunt, with the failures named specifically and the supervision cost quantified. CrewAI and AutoGen/AG2, evaluated separately as the multi-agent orchestration frameworks readers ask about most, confirm the same pattern rather than break it.',
     metaDescription:
-      'Autonomous, multi-step local AI agents tested across 6 stacks and 5 real cross-app tasks. 2 work reliably, 3 fail in hidden ways, 1 is unusable.',
+      'Autonomous, multi-step local agents & multi-agent orchestration (CrewAI, AutoGen) tested on 5 real cross-app tasks. 2 work reliably, most fail.',
     twitterDescription:
       'Tested 6 autonomous, multi-step local AI agent stacks on 5 real cross-app tasks for 30 days. 2 worked, 3 failed in surprising ways, 1 was unusable. The honest verdict on which stacks ship work and which only ship demos.',
     current_models_mentioned: [
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm agent comparison',
     ],
     leadAnswerBlock:
-      '**In May 2026, two local agent stacks land real work without constant babysitting: Cline + Ollama and Continue.dev Agent mode. Both are scoped, well-maintained, and run a tool-calling model (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) inside a single editor with explicit approval gates. Three stacks fail in surprising ways — LangGraph + Ollama (orchestration is brittle on long horizons), OpenInterpreter (executes shell commands too eagerly to leave unattended), and MetaGPT local (multi-agent role-play loses the plot past two hand-offs). One stack was effectively unusable in our May 2026 evaluation: AutoGPT-local — dependencies conflicted with Python 3.11/Ollama 0.3.x, and the planning loop drifted into circular tool calls in every trial run. Check current project status before drawing permanent conclusions. The pattern is consistent: scoped, opinionated harnesses around one strong tool-calling model beat ambitious autonomous agents on every task we ran.**',
+      '**In May 2026, two local agent stacks land real work without constant babysitting: Cline + Ollama and Continue.dev Agent mode. Both are scoped, well-maintained, and run a tool-calling model (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) inside a single editor with explicit approval gates. Three stacks fail in surprising ways — LangGraph + Ollama (orchestration is brittle on long horizons), OpenInterpreter (executes shell commands too eagerly to leave unattended), and MetaGPT local (multi-agent role-play loses the plot past two hand-offs). One stack was effectively unusable in our May 2026 evaluation: AutoGPT-local — dependencies conflicted with Python 3.11/Ollama 0.3.x, and the planning loop drifted into circular tool calls in every trial run. Check current project status before drawing permanent conclusions. Multi-agent orchestration frameworks evaluated separately — CrewAI and AutoGen/AG2 — confirm rather than break this pattern: both work for scripted, typed-step pipelines and hit the same handoff-state drift as MetaGPT once asked to divide up open-ended work on their own. The pattern is consistent: scoped, opinionated harnesses around one strong tool-calling model beat ambitious autonomous agents on every task we ran.**',
     quickAnswerTop: {
       en: {
         question: 'Do autonomous local AI agents actually work in 2026?',
@@ -58,7 +58,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Two stacks ship real work: Cline + Ollama and Continue.dev Agent. Both are scoped to a single IDE, run one tool-calling model, and require human approval per step.',
           'Three stacks fail in non-obvious ways: LangGraph + Ollama (brittle on long horizons), OpenInterpreter (too eager to execute shell), MetaGPT local (multi-agent role-play breaks down).',
           'AutoGPT-local was effectively unusable in our May 2026 evaluation (Python 3.11, Ollama 0.3.x, 5 task runs) — stalled project, dependency conflicts, planning loop drifted into circular calls in every run. Verify current project status before drawing conclusions.',
-          'Tool-call reliability comes from the model, not the harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, and Llama 3.3 70B work in any of the reliable stacks. Models under 7B fail in all of them.',
+          'Tool-call reliability comes from the model, not the harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, and Llama 3.3 70B work in any of the reliable stacks. Models under 7B (e.g. Gemma 3 2B) fail in all of them.',
+          'CrewAI and AutoGen/AG2 (evaluated separately) show the identical pattern: scripted, typed-step pipelines work; autonomous multi-agent teamwork does not, for the same handoff-state reasons as MetaGPT.',
           'Supervision cost is the metric that matters. The "best" agent is the one whose approvals you actually read — not the one with the longest autonomous run.',
           'The 2027 outlook: longer-horizon planning will improve incrementally. Unsupervised autonomy on real tasks is not happening this year, regardless of what the demos show.',
         ],
@@ -75,6 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What Fails: LangGraph + Ollama', anchor: '#langgraph' },
       { label: 'What Fails: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'What Fails: MetaGPT Local', anchor: '#metagpt' },
+      { label: 'Multi-Agent Orchestration: CrewAI & AutoGen/AG2', anchor: '#multi-agent-orchestration' },
       { label: 'Unusable: AutoGPT-Local', anchor: '#autogpt' },
       { label: 'Why Agent Demos Look Better Than Reality', anchor: '#demos-vs-reality' },
       { label: 'Supervision Cost Is the Real Metric', anchor: '#supervision-cost' },
@@ -96,7 +98,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Two stacks land real work in May 2026:** Cline + Ollama (autonomous coding agent inside VS Code) and Continue.dev Agent mode. Both are scoped to one editor, one model, and one approval gate per step.',
           '**Three stacks fail in surprising ways:** LangGraph + Ollama orchestration is brittle past 4–5 step horizons, OpenInterpreter executes shell commands too eagerly to leave unattended, MetaGPT local multi-agent role-play breaks down past two hand-offs.',
           '**One stack is unusable as of May 2026 testing:** AutoGPT-local — dependencies did not resolve against Python 3.11/Ollama 0.3.x, the planning loop drifted into circular tool calls in all 5 evaluation runs, and no maintainer responded to open issues at time of testing. Check the GitHub repository for current activity before drawing permanent conclusions.',
-          '**Tool-call reliability is a property of the model, not the harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, and Llama 3.3 70B emit clean tool calls in every reliable stack. Models under 7B emit malformed calls regardless of which agent wraps them.',
+          '**CrewAI and AutoGen/AG2 confirm the pattern, they do not break it.** Evaluated separately from the six-stack cohort: CrewAI Flows and AutoGen/AG2\'s scripted conversation patterns work for deterministic pipelines (same as LangGraph); their autonomous "Crew"/multi-agent conversation modes hit the same handoff-state drift as MetaGPT.',
+          '**Tool-call reliability is a property of the model, not the harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, and Llama 3.3 70B emit clean tool calls in every reliable stack. Models under 7B (e.g. Gemma 3 2B) emit malformed calls regardless of which agent wraps them.',
           '**The "supervised assistant" model wins in 2026.** Agents that propose multi-step actions and stop for approval finish more tasks than agents that try to run unattended. This is a properties-of-2026-LLMs limit, not a UX preference.',
           '**Supervision cost is the metric that matters.** A 30-minute task that requires three approvals is shippable. A 2-hour task that requires twenty approvals is not — you are doing the work, the agent is just slowing it down.',
           '**Cost is real but small.** Local-only inference, no API spend, electricity is the only marginal cost. Token consumption per task is the constraint — agent loops burn 30K–80K tokens for a multi-step task, so 32K-context models hit the wall fast and 128K-context models are comfortable.',
@@ -109,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks tested:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (custom), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tasks tested:** topic research, multi-file refactor, email-draft triage, scrape-and-summarize, bug debugging.',
           '**Hardware:** Apple M5 Max 64 GB unified memory and 2× NVIDIA RTX 3090 24 GB box; both run Qwen3-Coder 30B Q4_K_M comfortably at 32K context.',
-          '**Models:** Qwen3-Coder 30B (primary), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (the four reliable tool-callers in May 2026).',
+          '**Models:** Qwen3-Coder 30B (primary), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (the four reliable tool-callers in May 2026). GLM-5.1/5.2, Kimi K2.6, and DeepSeek V4 have since emerged as newer-generation open-weight tool-callers; the verdicts above were measured against the May 2026 model set and have not been re-run against them.',
           '**Verdict shape:** 2 stacks reliable across all 5 tasks, 3 stacks reliable on 1–2 tasks each, 1 stack unusable.',
           '**Cross-app reach:** the two reliable stacks extend past the editor via MCP servers (filesystem, sqlite/database, browser) — turning a single-app coding agent into a local-first, multi-step agent that reads, decides, and acts across tools without leaving your machine.',
           '**Cost:** $0 in API fees. ~$0.10–$0.30 in electricity per multi-step task on a 350W desktop GPU rig (under $0.05 on a Mac).',
@@ -135,7 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'reality-table',
         title: 'Agent Reality Table: Six Stacks, Five Tasks, Honest Verdicts',
         content:
-          '**Two stacks finish work; three stumble in different ways; one is broken.** The verdict column is the one to read first.',
+          '**Two stacks finish work; three stumble in different ways; one is broken.** The verdict column is the one to read first. CrewAI and AutoGen/AG2 — the two multi-agent orchestration frameworks most readers ask about — were evaluated separately; see [Multi-Agent Orchestration: CrewAI & AutoGen/AG2](#multi-agent-orchestration) below.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -277,6 +280,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For prompting techniques that improve any single-agent loop\'s reliability, see [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting) — the same structured-reasoning pattern that helps a model think helps a single agent stay coherent.',
         ],
       },
+      multiAgentOrchestration: {
+        id: 'multi-agent-orchestration',
+        title: 'Multi-Agent Orchestration Beyond LangGraph: CrewAI and AutoGen/AG2',
+        content:
+          '**CrewAI and AutoGen/AG2 answer the "best local multi-agent orchestration framework" question the same way LangGraph and MetaGPT do: capable for scripted, deterministic pipelines, unreliable for autonomous multi-agent teamwork.** Evaluated separately from the original six-stack cohort, both frameworks confirm the same pattern rather than break it.',
+        items: [
+          '**CrewAI + Ollama:** the easiest of the multi-agent frameworks to point at a local model — Ollama and LiteLLM integrations are documented and mature. CrewAI\'s two-layer design matters: "Crews" (autonomous role-playing agents that negotiate their own next step) inherit the same handoff-state drift as MetaGPT; "Flows" (event-driven, developer-defined step sequences with agents as typed nodes) behave more like LangGraph and hold up because the developer — not the model — decides what happens next.',
+          '**CrewAI reliability:** production teams report agents completing roughly 80% of runs — a meaningful gap for anything unattended. The most common silent failure is a model-name mismatch between the CrewAI config and what Ollama actually has pulled; when the Ollama server is not running, the failure surfaces on the first tool call with no earlier warning.',
+          '**AutoGen/AG2 + Ollama:** native tool calling against Ollama has been supported since Ollama 0.3.1 (`pip install pyautogen[ollama]`), with an OpenAI-compatible endpoint path available on AG2 0.28+ and Ollama 0.5.7+. Setup is more reliable than CrewAI\'s in our informal testing — fewer moving parts, one client class (`api_type="ollama"`) — but the underlying multi-agent conversation pattern (agents debating a plan across turns) hits the same persona-drift ceiling as MetaGPT past a handful of turns.',
+          '**Where both frameworks actually deliver:** deterministic pipelines with a fixed number of typed steps and a test suite — a data-enrichment job that restarts cleanly from any step, a support-ticket router with three fixed tools. That is the same shape LangGraph wins at, for the same reason: the human decided the control flow, the model only fills in typed slots.',
+          '**Where both frameworks fail like MetaGPT:** "give the crew a goal and let the agents figure out the division of labour" tasks. Handoff state — what one agent learned, what it passed the next — is still the weak link, regardless of which framework wraps it.',
+          '**Verdict:** if "best local multi-agent orchestration framework" means a framework for a production pipeline with typed steps, CrewAI Flows or AutoGen/AG2 are reasonable choices alongside LangGraph — pick based on your team\'s Python conventions, not a scored bake-off, since all three converge on the same reliability ceiling once the workflow is scripted. If it means autonomous agents that divide up an open-ended task on their own, none of the three are there yet.',
+        ],
+      },
       autogpt: {
         id: 'autogpt',
         title: 'Unusable: AutoGPT-Local Is Effectively Abandoned',
@@ -350,6 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I want an agent that can drive a browser, query a database, and read files', 'Pick': 'Cline + Ollama with MCP servers wired in (filesystem, sqlite, puppeteer)' },
           { 'Your situation': 'I want a local "code interpreter" REPL — write code, run code, iterate', 'Pick': 'OpenInterpreter, but do not leave it unattended' },
           { 'Your situation': 'I have a production workflow with deterministic tools and need orchestration', 'Pick': 'LangGraph + Ollama, with a real test suite for the graph' },
+          { 'Your situation': 'I want a multi-agent orchestration framework (CrewAI, AutoGen/AG2) for a production pipeline with fixed steps', 'Pick': 'CrewAI Flows or AutoGen/AG2 with typed steps and a test suite — same reliability ceiling as LangGraph, pick based on your team\'s conventions' },
           { 'Your situation': 'I want autonomous unsupervised agents that ship work overnight', 'Pick': 'Wait. The 2026 stack does not deliver this. Use supervised stacks instead.' },
           { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both. AutoGPT is unmaintained; MetaGPT\'s multi-agent abstraction does not hold up.' },
         ],
@@ -372,7 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Common Mistakes Picking and Running Local Agents',
         items: [
           '**Mistake 1: optimising for autonomy.** "How long can it run unattended" is the wrong metric. "How few approvals to land the task" is the right one. Picking a stack on autonomy benchmarks gets you AutoGPT; picking on supervision-cost gets you Cline.',
-          '**Mistake 2: small models for tool-call work.** Anything below 7B (and most 7B–13B general-purpose models without tool-call fine-tuning) emits malformed tool calls. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, or Llama 3.3 70B and stop fighting the harness.',
+          '**Mistake 2: small models for tool-call work.** Anything below 7B (e.g. Gemma 3 2B) — and most 7B–13B general-purpose models without tool-call fine-tuning — emits malformed tool calls. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, or Llama 3.3 70B and stop fighting the harness.',
           '**Mistake 3: 32K context for multi-file work.** Cline streams full file contents into the conversation; an 8-file task can blow through 32K tokens before reasoning. Use a 128K-context model (DeepSeek Coder V3, Llama 3.3 70B) for non-trivial multi-file tasks.',
           '**Mistake 4: auto-approve everything.** The "approve all" toggle is the on-ramp to "the agent deleted my files". Auto-approve read tools only; require manual approval for writes and shell.',
           '**Mistake 5: production database writes from an agent.** Run a read-only role by default. A separate writable role lives only for the duration of tasks that explicitly need it. The cost of one bad write is unbounded.',
@@ -390,6 +408,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LangGraph Documentation](https://langchain-ai.github.io/langgraph/) — orchestration library, state-machine semantics, human-in-the-loop interrupts.',
           '[OpenInterpreter GitHub Repository](https://github.com/OpenInterpreter/open-interpreter) — code-execution agent, safety modes, local model integration.',
           '[MetaGPT GitHub Repository](https://github.com/geekan/MetaGPT) — multi-agent framework, role definitions, local provider configuration.',
+          '[CrewAI Documentation](https://docs.crewai.com/) — Crews vs Flows architecture, Ollama/LiteLLM local model integration.',
+          '[AG2 (AutoGen) Ollama Guide](https://docs.ag2.ai/latest/docs/user-guide/models/ollama/) — native tool calling, OpenAI-compatible endpoint configuration for local models.',
           '[Ollama Model Library](https://ollama.com/library) — available local models, tool-call support flags, quantization options.',
         ],
       },
@@ -424,6 +444,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Are local agents worse than cloud agents?',
             a: 'On absolute capability, yes — frontier cloud models still beat any local 30B-class model on the hardest tasks. On supervised everyday work, the gap is smaller than the demos suggest. Cline + Qwen3-Coder 30B finishes 13–15 of 15 multi-file refactors; the same task on Cline + Claude or GPT-5 finishes 14–15 of 15. The trade-off favours local for users with private data, no API budget, or strict offline requirements.',
+          },
+          {
+            q: 'Is CrewAI or AutoGen better than LangGraph for local multi-agent orchestration?',
+            a: 'None is decisively better — all three hit the same ceiling once you ask agents to divide up an open-ended task on their own. CrewAI Flows, AutoGen/AG2\'s scripted conversation patterns, and LangGraph\'s state graphs all work well for deterministic pipelines with a fixed number of typed steps and a test suite. All three show the same handoff-state drift as MetaGPT when used for autonomous, undefined-division-of-labour work. Pick based on your team\'s existing Python conventions and how much of the control flow you are willing to write yourself — not on which framework claims the most autonomy.',
           },
           {
             q: 'Can agents handle errors gracefully?',
@@ -462,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agentes de IA locales en 2026: lo que realmente funciona (y lo que sigue fallando)',
     seoTitle: 'Agentes de IA locales 2026: lo que funciona y lo que falla',
     intro:
-      'Seis stacks de agentes de IA locales, cinco tareas reales, treinta días de evaluación. Dos stacks completan las tareas de forma fiable. Tres fallan de maneras que los demos no muestran. Uno es prácticamente inutilizable. Este es el informe honesto: qué hace realmente cada configuración de agente en una refactorización, una tarea de investigación, un triaje de correo, un scrape-y-resumen y una búsqueda de bugs, con los fallos nombrados específicamente y el coste de supervisión cuantificado.',
+      'Seis stacks de agentes de IA locales, cinco tareas reales, treinta días de evaluación. Dos stacks completan las tareas de forma fiable. Tres fallan de maneras que los demos no muestran. Uno es prácticamente inutilizable. Este es el informe honesto: qué hace realmente cada configuración de agente en una refactorización, una tarea de investigación, un triaje de correo, un scrape-y-resumen y una búsqueda de bugs, con los fallos nombrados específicamente y el coste de supervisión cuantificado. CrewAI y AutoGen/AG2, evaluados por separado como los frameworks de orquestación multiagente que más preguntan los lectores, confirman el mismo patrón en lugar de romperlo.',
     metaDescription:
       'Agentes de IA locales autónomos y multipaso en 6 stacks, 5 tareas reales multiaplicación. 2 funcionan, 3 fallan de forma oculta, 1 es inutilizable.',
     twitterDescription:
@@ -495,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparativa de agentes llm locales',
     ],
     leadAnswerBlock:
-      '**En mayo de 2026, dos stacks de agentes locales completan trabajo real sin supervisión constante: Cline + Ollama y Continue.dev en modo Agent. Ambos son acotados, bien mantenidos y ejecutan un modelo con tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de un único editor con puertas de aprobación explícitas. Tres stacks fallan de formas sorprendentes: LangGraph + Ollama (la orquestación es frágil en horizontes largos), OpenInterpreter (ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido) y MetaGPT local (el juego de roles multiagente pierde el hilo tras dos traspasos). Un stack es prácticamente inutilizable: AutoGPT-local, el proyecto está estancado, las dependencias no coinciden con el Ollama moderno y el bucle de planificación deriva hacia llamadas circulares de herramientas en minutos. El patrón es consistente: los harnesses acotados y con criterio propio alrededor de un modelo fuerte con tool-calling superan a los agentes autónomos ambiciosos en cada tarea que ejecutamos.**',
+      '**En mayo de 2026, dos stacks de agentes locales completan trabajo real sin supervisión constante: Cline + Ollama y Continue.dev en modo Agent. Ambos son acotados, bien mantenidos y ejecutan un modelo con tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de un único editor con puertas de aprobación explícitas. Tres stacks fallan de formas sorprendentes: LangGraph + Ollama (la orquestación es frágil en horizontes largos), OpenInterpreter (ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido) y MetaGPT local (el juego de roles multiagente pierde el hilo tras dos traspasos). Un stack es prácticamente inutilizable: AutoGPT-local, el proyecto está estancado, las dependencias no coinciden con el Ollama moderno y el bucle de planificación deriva hacia llamadas circulares de herramientas en minutos. Los frameworks de orquestación multiagente evaluados por separado —CrewAI y AutoGen/AG2— confirman este patrón en lugar de romperlo: ambos funcionan para pipelines de pasos tipados y guionizados, y sufren la misma deriva de estado de traspaso que MetaGPT en cuanto se les pide dividir trabajo abierto por su cuenta. El patrón es consistente: los harnesses acotados y con criterio propio alrededor de un modelo fuerte con tool-calling superan a los agentes autónomos ambiciosos en cada tarea que ejecutamos.**',
     quickAnswerTop: {
       es: {
         question: '¿Los agentes de IA autónomos locales realmente funcionan en 2026?',
@@ -505,7 +529,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dos stacks entregan trabajo real: Cline + Ollama y Continue.dev Agent. Ambos están acotados a un único IDE, ejecutan un modelo con tool-calling y requieren aprobación humana por paso.',
           'Tres stacks fallan de formas no evidentes: LangGraph + Ollama (frágil en horizontes largos), OpenInterpreter (demasiado ansioso por ejecutar shell), MetaGPT local (el juego de roles multiagente se rompe).',
           'AutoGPT-local resultó prácticamente inutilizable en nuestra evaluación de mayo de 2026 (Python 3.11, Ollama 0.3.x, 5 ejecuciones de tareas) — conflictos de dependencias, el bucle de planificación derivó hacia llamadas circulares en cada ejecución. Verifique el estado actual del proyecto antes de sacar conclusiones.',
-          'La fiabilidad de las llamadas a herramientas proviene del modelo, no del harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B y Llama 3.3 70B funcionan en cualquiera de los stacks fiables. Los modelos por debajo de 7B fallan en todos.',
+          'La fiabilidad de las llamadas a herramientas proviene del modelo, no del harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B y Llama 3.3 70B funcionan en cualquiera de los stacks fiables. Los modelos por debajo de 7B (p. ej. Gemma 3 2B) fallan en todos.',
+          'CrewAI y AutoGen/AG2 (evaluados por separado) muestran el mismo patrón: los pipelines guionizados y de pasos tipados funcionan; el trabajo autónomo multiagente no, por las mismas razones de estado de traspaso que MetaGPT.',
           'El coste de supervisión es la métrica que importa. El "mejor" agente es aquel cuyas aprobaciones realmente lees, no el que tiene la ejecución autónoma más larga.',
           'Las perspectivas para 2027: la planificación a largo plazo mejorará de forma incremental. La autonomía sin supervisión en tareas reales no va a ocurrir este año, independientemente de lo que muestren los demos.',
         ],
@@ -522,6 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lo que falla: LangGraph + Ollama', anchor: '#langgraph' },
       { label: 'Lo que falla: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'Lo que falla: MetaGPT Local', anchor: '#metagpt' },
+      { label: 'Orquestación multiagente: CrewAI y AutoGen/AG2', anchor: '#multi-agent-orchestration' },
       { label: 'Inutilizable: AutoGPT-Local', anchor: '#autogpt' },
       { label: 'Por qué los demos de agentes parecen mejores que la realidad', anchor: '#demos-vs-reality' },
       { label: 'El coste de supervisión es la métrica real', anchor: '#supervision-cost' },
@@ -543,7 +569,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dos stacks entregan trabajo real en mayo de 2026:** Cline + Ollama (agente de codificación autónomo en VS Code) y Continue.dev en modo Agent. Ambos están acotados a un editor, un modelo y una puerta de aprobación por paso.',
           '**Tres stacks fallan de formas sorprendentes:** la orquestación de LangGraph + Ollama es frágil más allá de horizontes de 4–5 pasos, OpenInterpreter ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido, y el juego de roles multiagente de MetaGPT local se rompe tras dos traspasos.',
           '**Un stack resultó inutilizable en las pruebas de mayo de 2026:** AutoGPT-local — las dependencias no se resolvieron con Python 3.11/Ollama 0.3.x, el bucle de planificación derivó hacia llamadas circulares en las 5 ejecuciones de evaluación y ningún mantenedor respondió a los problemas abiertos en el momento de las pruebas. Consulte el repositorio de GitHub para ver la actividad actual antes de sacar conclusiones permanentes.',
-          '**La fiabilidad de las llamadas a herramientas es una propiedad del modelo, no del harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B y Llama 3.3 70B emiten llamadas a herramientas limpias en cada stack fiable. Los modelos por debajo de 7B emiten llamadas malformadas independientemente del agente que los envuelva.',
+          '**CrewAI y AutoGen/AG2 confirman el patrón, no lo rompen.** Evaluados por separado del conjunto de seis stacks: CrewAI Flows y los patrones guionizados de AutoGen/AG2 funcionan para pipelines deterministas (igual que LangGraph); sus modos autónomos de "Crew"/conversación multiagente sufren la misma deriva de estado de traspaso que MetaGPT.',
+          '**La fiabilidad de las llamadas a herramientas es una propiedad del modelo, no del harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B y Llama 3.3 70B emiten llamadas a herramientas limpias en cada stack fiable. Los modelos por debajo de 7B (p. ej. Gemma 3 2B) emiten llamadas malformadas independientemente del agente que los envuelva.',
           '**El modelo de "asistente supervisado" gana en 2026.** Los agentes que proponen acciones en múltiples pasos y se detienen para pedir aprobación completan más tareas que los agentes que intentan ejecutarse sin supervisión. Es un límite de las propiedades de los LLM de 2026, no una preferencia de UX.',
           '**El coste de supervisión es la métrica que importa.** Una tarea de 30 minutos que requiere tres aprobaciones es entregable. Una tarea de 2 horas que requiere veinte aprobaciones no lo es: tú estás haciendo el trabajo, el agente solo lo ralentiza.',
           '**El coste es real pero pequeño.** Inferencia solo local, sin gasto en API, la electricidad es el único coste marginal. El consumo de tokens por tarea es la restricción: los bucles de agentes consumen 30K–80K tokens en una tarea de varios pasos, por lo que los modelos con contexto de 32K llegan al límite rápido y los de 128K son cómodos.',
@@ -556,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks probados:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (personalizado), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tareas probadas:** investigación de temas, refactorización de múltiples archivos, triaje de borradores de correo, scrape-y-resumen, depuración de bugs.',
           '**Hardware:** Apple M5 Max 64 GB de memoria unificada y equipo con 2× NVIDIA RTX 3090 24 GB; ambos ejecutan Qwen3-Coder 30B Q4_K_M cómodamente con contexto de 32K.',
-          '**Modelos:** Qwen3-Coder 30B (principal), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (los cuatro tool-callers fiables en mayo de 2026).',
+          '**Modelos:** Qwen3-Coder 30B (principal), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (los cuatro tool-callers fiables en mayo de 2026). GLM-5.1/5.2, Kimi K2.6 y DeepSeek V4 han surgido desde entonces como tool-callers de pesos abiertos de nueva generación; los veredictos anteriores se midieron con el conjunto de modelos de mayo de 2026 y no se han vuelto a ejecutar con ellos.',
           '**Forma del veredicto:** 2 stacks fiables en las 5 tareas, 3 stacks fiables en 1–2 tareas cada uno, 1 stack inutilizable.',
           '**Alcance multiaplicación:** los dos stacks fiables van más allá del editor mediante servidores MCP (sistema de archivos, sqlite/base de datos, navegador) — convirtiendo un agente de codificación de una sola app en un agente local-first y multipaso que lee, decide y actúa entre herramientas sin salir de tu equipo.',
           '**Coste:** 0 € en tarifas de API. ~0,10–0,30 € en electricidad por tarea de varios pasos en un equipo de escritorio con GPU de 350W (menos de 0,05 € en un Mac).',
@@ -582,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'reality-table',
         title: 'Tabla de realidad de agentes: seis stacks, cinco tareas, veredictos honestos',
         content:
-          '**Dos stacks terminan el trabajo; tres tropiezan de formas distintas; uno está roto.** La columna de veredicto es la que hay que leer primero.',
+          '**Dos stacks terminan el trabajo; tres tropiezan de formas distintas; uno está roto.** La columna de veredicto es la que hay que leer primero. CrewAI y AutoGen/AG2 —los dos frameworks de orquestación multiagente que más preguntan los lectores— se evaluaron por separado; consulta [Orquestación multiagente: CrewAI y AutoGen/AG2](#multi-agent-orchestration) más abajo.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -724,6 +751,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para técnicas de prompting que mejoran la fiabilidad de cualquier bucle de agente único, consulta [chain-of-thought prompting](/es/prompt-engineering/chain-of-thought-prompting): el mismo patrón de razonamiento estructurado que ayuda a un modelo a pensar ayuda a un único agente a mantenerse coherente.',
         ],
       },
+      multiAgentOrchestration: {
+        id: 'multi-agent-orchestration',
+        title: 'Orquestación multiagente más allá de LangGraph: CrewAI y AutoGen/AG2',
+        content:
+          '**CrewAI y AutoGen/AG2 responden a la pregunta "mejor framework de orquestación multiagente local" igual que LangGraph y MetaGPT: capaces para pipelines guionizados y deterministas, poco fiables para el trabajo autónomo en equipo multiagente.** Evaluados por separado del conjunto original de seis stacks, ambos frameworks confirman el mismo patrón en lugar de romperlo.',
+        items: [
+          '**CrewAI + Ollama:** el más fácil de los frameworks multiagente para apuntar a un modelo local — las integraciones de Ollama y LiteLLM están documentadas y maduras. El diseño de dos capas de CrewAI importa: las "Crews" (agentes autónomos con juego de roles que negocian su propio siguiente paso) heredan la misma deriva de estado de traspaso que MetaGPT; los "Flows" (secuencias de pasos definidas por el desarrollador, orientadas a eventos, con agentes como nodos tipados) se comportan más como LangGraph y se sostienen porque es el desarrollador —no el modelo— quien decide qué ocurre después.',
+          '**Fiabilidad de CrewAI:** los equipos en producción reportan que los agentes completan aproximadamente el 80% de las ejecuciones — una brecha significativa para cualquier cosa sin supervisión. El fallo silencioso más común es un desajuste de nombre de modelo entre la configuración de CrewAI y lo que Ollama realmente tiene descargado; cuando el servidor de Ollama no está en marcha, el fallo aparece en la primera llamada a herramienta sin ningún aviso previo.',
+          '**AutoGen/AG2 + Ollama:** el tool-calling nativo contra Ollama se soporta desde Ollama 0.3.1 (`pip install pyautogen[ollama]`), con una vía de endpoint compatible con OpenAI disponible en AG2 0.28+ y Ollama 0.5.7+. La configuración es más fiable que la de CrewAI en nuestras pruebas informales — menos piezas móviles, una única clase de cliente (`api_type="ollama"`) — pero el patrón subyacente de conversación multiagente (agentes debatiendo un plan a lo largo de turnos) choca con el mismo techo de deriva de persona que MetaGPT tras unos pocos turnos.',
+          '**Dónde ambos frameworks realmente cumplen:** pipelines deterministas con un número fijo de pasos tipados y una suite de tests — un trabajo de enriquecimiento de datos que se reinicia limpiamente desde cualquier paso, un enrutador de tickets de soporte con tres herramientas fijas. Es la misma forma en la que gana LangGraph, por la misma razón: el humano decidió el flujo de control, el modelo solo rellena espacios tipados.',
+          '**Dónde ambos frameworks fallan como MetaGPT:** tareas del tipo "dale a la crew un objetivo y deja que los agentes decidan la división del trabajo". El estado de traspaso —lo que un agente aprendió, lo que le pasó al siguiente— sigue siendo el eslabón débil, sin importar qué framework lo envuelva.',
+          '**Veredicto:** si "mejor framework de orquestación multiagente local" significa un framework para un pipeline de producción con pasos tipados, CrewAI Flows o AutoGen/AG2 son elecciones razonables junto a LangGraph — elige según las convenciones de Python de tu equipo, no según un bake-off puntuado, ya que los tres convergen en el mismo techo de fiabilidad una vez que el flujo de trabajo está guionizado. Si significa agentes autónomos que dividen una tarea abierta por su cuenta, ninguno de los tres está ahí todavía.',
+        ],
+      },
       autogpt: {
         id: 'autogpt',
         title: 'Inutilizable: AutoGPT-Local está prácticamente abandonado',
@@ -797,6 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Quiero un agente que pueda controlar un navegador, consultar una base de datos y leer archivos', 'Elige': 'Cline + Ollama con servidores MCP conectados (sistema de archivos, sqlite, puppeteer)' },
           { 'Tu situación': 'Quiero un REPL local de "code interpreter": escribir código, ejecutar código, iterar', 'Elige': 'OpenInterpreter, pero no lo dejes desatendido' },
           { 'Tu situación': 'Tengo un flujo de trabajo de producción con herramientas deterministas y necesito orquestación', 'Elige': 'LangGraph + Ollama, con una suite de tests real para el grafo' },
+          { 'Tu situación': 'Quiero un framework de orquestación multiagente (CrewAI, AutoGen/AG2) para un pipeline de producción con pasos fijos', 'Elige': 'CrewAI Flows o AutoGen/AG2 con pasos tipados y una suite de tests — mismo techo de fiabilidad que LangGraph, elige según las convenciones de tu equipo' },
           { 'Tu situación': 'Quiero agentes autónomos sin supervisión que entreguen trabajo de noche', 'Elige': 'Espera. El stack de 2026 no ofrece esto. Usa stacks supervisados en su lugar.' },
           { 'Tu situación': 'Quiero evaluar AutoGPT o MetaGPT para trabajo real', 'Elige': 'Descarta ambos. AutoGPT no tiene mantenimiento; la abstracción multiagente de MetaGPT no se sostiene.' },
         ],
@@ -819,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Errores comunes al elegir y ejecutar agentes locales',
         items: [
           '**Error 1: optimizar para la autonomía.** "¿Cuánto tiempo puede ejecutarse sin supervisión?" es la métrica incorrecta. "¿Cuántas aprobaciones para completar la tarea?" es la correcta. Elegir un stack según benchmarks de autonomía te da AutoGPT; elegir según el coste de supervisión te da Cline.',
-          '**Error 2: modelos pequeños para trabajo de tool-calling.** Cualquier cosa por debajo de 7B (y la mayoría de los modelos de propósito general de 7B–13B sin fine-tuning de tool-calling) emite llamadas a herramientas malformadas. Usa Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B o Llama 3.3 70B y deja de pelear con el harness.',
+          '**Error 2: modelos pequeños para trabajo de tool-calling.** Cualquier cosa por debajo de 7B (p. ej. Gemma 3 2B) —y la mayoría de los modelos de propósito general de 7B–13B sin fine-tuning de tool-calling— emite llamadas a herramientas malformadas. Usa Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B o Llama 3.3 70B y deja de pelear con el harness.',
           '**Error 3: contexto de 32K para trabajo de múltiples archivos.** Cline transmite el contenido completo de los archivos a la conversación; una tarea de 8 archivos puede agotar los 32K tokens antes de razonar. Usa un modelo con contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para tareas de múltiples archivos no triviales.',
           '**Error 4: aprobar todo automáticamente.** El interruptor de "aprobar todo" es la rampa de entrada a "el agente borró mis archivos". Aprueba automáticamente solo las herramientas de lectura; exige aprobación manual para escrituras y shell.',
           '**Error 5: escrituras en bases de datos de producción desde un agente.** Ejecuta un rol de solo lectura por defecto. Un rol de escritura separado existe solo durante la duración de las tareas que lo requieran explícitamente. El coste de una escritura errónea es ilimitado.',
@@ -837,6 +879,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Documentación de LangGraph](https://langchain-ai.github.io/langgraph/) — librería de orquestación, semántica de máquinas de estado, interrupciones de humano en el bucle.',
           '[Repositorio de OpenInterpreter en GitHub](https://github.com/OpenInterpreter/open-interpreter) — agente de ejecución de código, modos de seguridad, integración de modelos locales.',
           '[Repositorio de MetaGPT en GitHub](https://github.com/geekan/MetaGPT) — framework multiagente, definiciones de roles, configuración de proveedor local.',
+          '[Documentación de CrewAI](https://docs.crewai.com/) — arquitectura Crews vs Flows, integración local con Ollama/LiteLLM.',
+          '[Guía de Ollama en AG2 (AutoGen)](https://docs.ag2.ai/latest/docs/user-guide/models/ollama/) — tool-calling nativo, configuración de endpoint compatible con OpenAI para modelos locales.',
           '[Biblioteca de modelos de Ollama](https://ollama.com/library) — modelos locales disponibles, indicadores de soporte de tool-calling, opciones de cuantización.',
         ],
       },
@@ -873,6 +917,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'En capacidad absoluta, sí: los modelos de frontera en la nube siguen superando a cualquier modelo local de clase 30B en las tareas más difíciles. En trabajo cotidiano supervisado, la brecha es menor de lo que sugieren los demos. Cline + Qwen3-Coder 30B completa 13–15 de 15 refactorizaciones de múltiples archivos; la misma tarea en Cline + Claude o GPT-5 completa 14–15 de 15. La compensación favorece al local para usuarios con datos privados, sin presupuesto de API o con requisitos estrictos de funcionamiento sin conexión.',
           },
           {
+            q: '¿Es CrewAI o AutoGen mejor que LangGraph para orquestación multiagente local?',
+            a: 'Ninguno es decisivamente mejor: los tres chocan con el mismo techo en cuanto pides a los agentes que dividan una tarea abierta por su cuenta. CrewAI Flows, los patrones de conversación guionizados de AutoGen/AG2 y los grafos de estado de LangGraph funcionan bien para pipelines deterministas con un número fijo de pasos tipados y una suite de tests. Los tres muestran la misma deriva de estado de traspaso que MetaGPT cuando se usan para trabajo autónomo con división de trabajo no definida. Elige según las convenciones de Python que ya usa tu equipo y cuánto flujo de control estás dispuesto a escribir tú mismo, no según qué framework promete más autonomía.',
+          },
+          {
             q: '¿Pueden los agentes manejar errores con elegancia?',
             a: 'De forma mixta. Cline y Continue.dev Agent se recuperan bien de los errores de herramientas: el harness muestra el error, el modelo propone un paso correctivo y el humano aprueba. LangGraph + Ollama se recupera solo tan bien como lo define tu grafo; un error de herramienta no gestionado entra en bucle. AutoGPT-local no se recupera en absoluto: deriva. El manejo de errores es una propiedad del harness tanto como del modelo.',
           },
@@ -903,11 +951,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Agentes de IA locales en 2026: lo que realmente funciona (y lo que sigue fallando)',
-      description: '6 stacks de agentes de IA locales probados en 5 tareas reales. 2 funcionan de forma fiable, 3 fallan de maneras que los demos ocultan, 1 es inutilizable. Cline, LangGraph, AutoGPT y MetaGPT evaluados.',
+      description: 'Agentes de IA locales y orquestación multiagente (Cline, CrewAI, AutoGen, LangGraph) probados en tareas reales. 2 funcionan de forma fiable, la mayoría falla de maneras que los demos ocultan.',
       url: 'https://www.promptquorum.com/es/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -922,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agents locaux en 2026 : Ce qui fonctionne réellement (et ce qui échoue)',
     seoTitle: 'Agents IA locaux 2026 : Ce qui marche, ce qui échoue',
     intro:
-      'Six stacks d\'agents IA locaux, cinq tâches réelles, trente jours d\'évaluation. Deux stacks accomplissent les tâches de manière fiable. Trois échouent d\'une manière que les démos ne montrent pas. Un est pratiquement inutilisable. C\'est le rapport honnête — ce que chaque configuration d\'agent fait réellement sur une refonte, une tâche de recherche, une triage d\'e-mails, un scrape-et-résumé, et une chasse aux bugs, avec les échecs nommés spécifiquement et le coût de supervision quantifié.',
+      'Six stacks d\'agents IA locaux, cinq tâches réelles, trente jours d\'évaluation. Deux stacks accomplissent les tâches de manière fiable. Trois échouent d\'une manière que les démos ne montrent pas. Un est pratiquement inutilisable. C\'est le rapport honnête — ce que chaque configuration d\'agent fait réellement sur une refonte, une tâche de recherche, une triage d\'e-mails, un scrape-et-résumé, et une chasse aux bugs, avec les échecs nommés spécifiquement et le coût de supervision quantifié. CrewAI et AutoGen/AG2, évalués séparément comme les frameworks d\'orchestration multi-agents les plus demandés par les lecteurs, confirment ce schéma plutôt que de le briser.',
     metaDescription:
       'Agents IA locaux autonomes et multi-étapes testés sur 6 stacks, 5 tâches réelles multi-apps. 2 fonctionnent, 3 échouent en surprise, 1 est inutilisable.',
     twitterDescription:
@@ -955,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparaison agents llm locaux',
     ],
     leadAnswerBlock:
-      '**En mai 2026, deux stacks d\'agents locaux accomplissent du travail réel sans surveillance constante : Cline + Ollama et Continue.dev Agent mode. Les deux sont limités, bien maintenus, et exécutent un modèle de tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) à l\'intérieur d\'un seul éditeur avec des portes d\'approbation explicites. Trois stacks échouent de façon surprenante — LangGraph + Ollama (l\'orchestration est fragile sur les longs horizons), OpenInterpreter (exécute les commandes shell trop facilement pour être laissé sans surveillance), et MetaGPT local (le jeu de rôles multi-agents perd le fil après deux échanges). Un stack est pratiquement inutilisable : AutoGPT-local — le projet a stagné, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes. Le schéma est cohérent : les harnesses limités et opinionnés autour d\'un modèle de tool-calling puissant battent les agents autonomes ambitieux sur chaque tâche que nous avons testée.**',
+      '**En mai 2026, deux stacks d\'agents locaux accomplissent du travail réel sans surveillance constante : Cline + Ollama et Continue.dev Agent mode. Les deux sont limités, bien maintenus, et exécutent un modèle de tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) à l\'intérieur d\'un seul éditeur avec des portes d\'approbation explicites. Trois stacks échouent de façon surprenante — LangGraph + Ollama (l\'orchestration est fragile sur les longs horizons), OpenInterpreter (exécute les commandes shell trop facilement pour être laissé sans surveillance), et MetaGPT local (le jeu de rôles multi-agents perd le fil après deux échanges). Un stack est pratiquement inutilisable : AutoGPT-local — le projet a stagné, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes. Les frameworks d\'orchestration multi-agents évalués séparément — CrewAI et AutoGen/AG2 — confirment ce schéma plutôt que de le briser : les deux fonctionnent pour des pipelines scriptés à étapes typées et subissent la même dérive d\'état de remise que MetaGPT dès qu\'on leur demande de diviser un travail ouvert par eux-mêmes. Le schéma est cohérent : les harnesses limités et opinionnés autour d\'un modèle de tool-calling puissant battent les agents autonomes ambitieux sur chaque tâche que nous avons testée.**',
     quickAnswerTop: {
       fr: {
         question: 'Les agents IA autonomes locaux fonctionnent-ils réellement en 2026 ?',
@@ -965,7 +1013,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Deux stacks livrent du travail réel : Cline + Ollama et Continue.dev Agent. Les deux sont limités à un seul IDE, exécutent un modèle de tool-calling, et nécessitent une approbation humaine par étape.',
           'Trois stacks échouent de façon non-évidente : LangGraph + Ollama (fragile sur les longs horizons), OpenInterpreter (trop pressé d\'exécuter le shell), MetaGPT local (le jeu de rôles multi-agents s\'effondre).',
           'AutoGPT-local est pratiquement inutilisable en mai 2026 — projet stagnant, dépendances cassées, la boucle de planification dévie en quelques minutes.',
-          'La fiabilité des appels d\'outils provient du modèle, pas du harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B fonctionnent dans n\'importe quel stack fiable. Les modèles sous 7B échouent dans tous.',
+          'La fiabilité des appels d\'outils provient du modèle, pas du harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B fonctionnent dans n\'importe quel stack fiable. Les modèles sous 7B (p. ex. Gemma 3 2B) échouent dans tous.',
+          'CrewAI et AutoGen/AG2 (évalués séparément) montrent le même schéma : les pipelines scriptés à étapes typées fonctionnent ; le travail autonome multi-agents non, pour les mêmes raisons d\'état de remise que MetaGPT.',
           'Le coût de supervision est la métrique qui compte. Le « meilleur » agent est celui dont vous lisez réellement les approbations — pas celui avec la plus longue exécution autonome.',
           'Les perspectives pour 2027 : la planification à long horizon s\'améliorera graduellement. L\'autonomie sans supervision sur les tâches réelles ne se produit pas cette année, indépendamment de ce que les démos montrent.',
         ],
@@ -982,6 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ce qui échoue : LangGraph + Ollama', anchor: '#langgraph' },
       { label: 'Ce qui échoue : OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'Ce qui échoue : MetaGPT Local', anchor: '#metagpt' },
+      { label: 'Orchestration multi-agents : CrewAI et AutoGen/AG2', anchor: '#multi-agent-orchestration' },
       { label: 'Inutilisable : AutoGPT-Local', anchor: '#autogpt' },
       { label: 'Pourquoi les démos des agents semblent meilleures que la réalité', anchor: '#demos-vs-reality' },
       { label: 'Le coût de supervision est la vraie métrique', anchor: '#supervision-cost' },
@@ -1003,7 +1053,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Deux stacks livrent du travail réel en mai 2026 :** Cline + Ollama (agent de codage autonome dans VS Code) et Continue.dev Agent mode. Les deux sont limités à un éditeur, un modèle, et une porte d\'approbation par étape.',
           '**Trois stacks échouent de façon surprenante :** LangGraph + Ollama, l\'orchestration est fragile au-delà de 4–5 étapes, OpenInterpreter exécute les commandes shell trop facilement pour être laissé sans surveillance, MetaGPT local, le jeu de rôles multi-agents s\'effondre après deux échanges.',
           '**Un stack est inutilisable :** AutoGPT-local est effectivement abandonné — les dépendances ne correspondent pas à Ollama moderne, la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes, et il n\'y a pas de mainteneur répondant aux problèmes.',
-          '**La fiabilité des appels d\'outils est une propriété du modèle, pas du harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B émettent des appels d\'outils propres dans chaque stack fiable. Les modèles sous 7B émettent des appels malformés indépendamment du harness qui les enveloppe.',
+          '**CrewAI et AutoGen/AG2 confirment le schéma, ils ne le brisent pas.** Évalués séparément du groupe de six stacks : CrewAI Flows et les schémas scriptés d\'AutoGen/AG2 fonctionnent pour les pipelines déterministes (comme LangGraph) ; leurs modes autonomes « Crew »/conversation multi-agents subissent la même dérive d\'état de remise que MetaGPT.',
+          '**La fiabilité des appels d\'outils est une propriété du modèle, pas du harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B émettent des appels d\'outils propres dans chaque stack fiable. Les modèles sous 7B (p. ex. Gemma 3 2B) émettent des appels malformés indépendamment du harness qui les enveloppe.',
           '**Le modèle « assistant supervisé » gagne en 2026.** Les agents qui proposent des actions multi-étapes et s\'arrêtent pour approbation terminent plus de tâches que les agents qui essaient de s\'exécuter sans surveillance. C\'est une limite des propriétés des LLM de 2026, pas une préférence UX.',
           '**Le coût de supervision est la métrique qui compte.** Une tâche de 30 minutes qui nécessite trois approbations est livrable. Une tâche de 2 heures qui nécessite vingt approbations ne l\'est pas — vous faites le travail, l\'agent le ralentit juste.',
           '**Le coût est réel mais petit.** L\'inférence locale uniquement, pas de dépenses API, l\'électricité est le seul coût marginal. La consommation de tokens par tâche est la contrainte — les boucles d\'agents consomment 30K–80K tokens pour une tâche multi-étapes, donc les modèles 32K-context heurtent le mur rapidement et les modèles 128K-context sont confortables.',
@@ -1016,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks testés :** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (personnalisé), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tâches testées :** recherche de sujets, refonte multi-fichiers, triage de brouillons d\'e-mails, scrape-et-résumé, débogage de bugs.',
           '**Matériel :** Apple M5 Max 64 GB mémoire unifiée et boîtier 2× NVIDIA RTX 3090 24 GB ; les deux exécutent Qwen3-Coder 30B Q4_K_M confortablement à 32K context.',
-          '**Modèles :** Qwen3-Coder 30B (primaire), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (les quatre outils de tool-calling fiables en mai 2026).',
+          '**Modèles :** Qwen3-Coder 30B (primaire), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (les quatre outils de tool-calling fiables en mai 2026). GLM-5.1/5.2, Kimi K2.6, et DeepSeek V4 ont depuis émergé comme outils de tool-calling à poids ouverts de nouvelle génération ; les verdicts ci-dessus ont été mesurés avec l\'ensemble de modèles de mai 2026 et n\'ont pas été retestés avec eux.',
           '**Forme du verdict :** 2 stacks fiables sur les 5 tâches, 3 stacks fiables sur 1–2 tâches chacun, 1 stack inutilisable.',
           '**Portée multi-apps :** les deux stacks fiables dépassent l\'éditeur via des serveurs MCP (système de fichiers, sqlite/base de données, navigateur) — transformant un agent de codage mono-app en un agent local-first et multi-étapes qui lit, décide et agit entre plusieurs outils sans quitter votre machine.',
           '**Coût :** 0 € en frais API. ~0,10–0,30 € en électricité par tâche multi-étapes sur un rig GPU de bureau 350W (moins de 0,05 € sur un Mac).',
@@ -1042,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'reality-table',
         title: 'Tableau de réalité des agents : Six stacks, cinq tâches, verdicts honnêtes',
         content:
-          '**Deux stacks terminent le travail ; trois trébuchent de différentes façons ; un est cassé.** La colonne verdict est celle à lire en premier.',
+          '**Deux stacks terminent le travail ; trois trébuchent de différentes façons ; un est cassé.** La colonne verdict est celle à lire en premier. CrewAI et AutoGen/AG2 — les deux frameworks d\'orchestration multi-agents les plus demandés par les lecteurs — ont été évalués séparément ; voir [Orchestration multi-agents : CrewAI et AutoGen/AG2](#multi-agent-orchestration) ci-dessous.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1184,6 +1235,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour les techniques de prompting qui améliorent la fiabilité de n\'importe quelle boucle d\'agent unique, voir [chain-of-thought prompting](/fr/prompt-engineering/chain-of-thought-prompting) — le même schéma de raisonnement structuré qui aide un modèle à penser aide un agent unique à rester cohérent.',
         ],
       },
+      multiAgentOrchestration: {
+        id: 'multi-agent-orchestration',
+        title: 'Orchestration multi-agents au-delà de LangGraph : CrewAI et AutoGen/AG2',
+        content:
+          '**CrewAI et AutoGen/AG2 répondent à la question « meilleur framework d\'orchestration multi-agents local » de la même façon que LangGraph et MetaGPT : capables pour des pipelines scriptés et déterministes, peu fiables pour le travail d\'équipe multi-agents autonome.** Évalués séparément du groupe original de six stacks, les deux frameworks confirment le même schéma plutôt que de le briser.',
+        items: [
+          '**CrewAI + Ollama :** le plus facile des frameworks multi-agents à pointer vers un modèle local — les intégrations Ollama et LiteLLM sont documentées et matures. La conception à deux couches de CrewAI compte : les « Crews » (agents autonomes en jeu de rôles qui négocient leur propre étape suivante) héritent de la même dérive d\'état de remise que MetaGPT ; les « Flows » (séquences d\'étapes définies par le développeur, pilotées par événements, avec des agents comme nœuds typés) se comportent plus comme LangGraph et tiennent la route parce que c\'est le développeur — pas le modèle — qui décide de ce qui se passe ensuite.',
+          '**Fiabilité de CrewAI :** les équipes en production rapportent des agents terminant environ 80% des exécutions — un écart significatif pour tout ce qui n\'est pas surveillé. L\'échec silencieux le plus courant est une divergence de nom de modèle entre la config CrewAI et ce qu\'Ollama a réellement téléchargé ; quand le serveur Ollama n\'est pas lancé, l\'échec apparaît au premier appel d\'outil sans avertissement préalable.',
+          '**AutoGen/AG2 + Ollama :** le tool-calling natif contre Ollama est supporté depuis Ollama 0.3.1 (`pip install pyautogen[ollama]`), avec une voie de endpoint compatible OpenAI disponible sur AG2 0.28+ et Ollama 0.5.7+. La configuration est plus fiable que celle de CrewAI dans nos tests informels — moins de pièces mobiles, une seule classe client (`api_type="ollama"`) — mais le schéma sous-jacent de conversation multi-agents (des agents débattant d\'un plan à travers les tours) heurte le même plafond de dérive de persona que MetaGPT après quelques tours.',
+          '**Où les deux frameworks livrent réellement :** des pipelines déterministes avec un nombre fixe d\'étapes typées et une suite de tests — un travail d\'enrichissement de données qui redémarre proprement depuis n\'importe quelle étape, un routeur de tickets de support avec trois outils fixes. C\'est la même forme où LangGraph gagne, pour la même raison : l\'humain a décidé du flux de contrôle, le modèle ne fait que remplir des slots typés.',
+          '**Où les deux frameworks échouent comme MetaGPT :** les tâches du type « donnez à la crew un objectif et laissez les agents décider de la division du travail ». L\'état de remise — ce qu\'un agent a appris, ce qu\'il a transmis au suivant — reste le maillon faible, peu importe le framework qui l\'enveloppe.',
+          '**Verdict :** si « meilleur framework d\'orchestration multi-agents local » signifie un framework pour un pipeline de production à étapes typées, CrewAI Flows ou AutoGen/AG2 sont des choix raisonnables aux côtés de LangGraph — choisissez selon les conventions Python de votre équipe, pas selon un bake-off noté, puisque les trois convergent vers le même plafond de fiabilité une fois le flux de travail scripté. Si cela signifie des agents autonomes qui divisent une tâche ouverte par eux-mêmes, aucun des trois n\'y est encore.',
+        ],
+      },
       autogpt: {
         id: 'autogpt',
         title: 'Inutilisable : AutoGPT-Local est effectivement abandonné',
@@ -1257,6 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': 'Je veux un agent qui peut piloter un navigateur, interroger une base de données, et lire les fichiers', 'Choisir': 'Cline + Ollama avec les serveurs MCP connectés (système de fichiers, sqlite, puppeteer)' },
           { 'Votre situation': 'Je veux un REPL local « code interpreter » — écrire du code, exécuter du code, itérer', 'Choisir': 'OpenInterpreter, mais ne le laissez pas sans surveillance' },
           { 'Votre situation': 'J\'ai un flux de travail de production avec des outils déterministes et j\'ai besoin d\'orchestration', 'Choisir': 'LangGraph + Ollama, avec une vraie suite de tests pour le graphe' },
+          { 'Votre situation': 'Je veux un framework d\'orchestration multi-agents (CrewAI, AutoGen/AG2) pour un pipeline de production à étapes fixes', 'Choisir': 'CrewAI Flows ou AutoGen/AG2 avec des étapes typées et une suite de tests — même plafond de fiabilité que LangGraph, choisissez selon les conventions de votre équipe' },
           { 'Votre situation': 'Je veux des agents autonomes sans surveillance qui livrent le travail pendant la nuit', 'Choisir': 'Attendre. Le stack 2026 ne livre pas ça. Utilisez plutôt des stacks supervisés.' },
           { 'Votre situation': 'Je veux évaluer AutoGPT ou MetaGPT pour du travail réel', 'Choisir': 'Sauter les deux. AutoGPT n\'est pas maintenu ; l\'abstraction multi-agents de MetaGPT ne se tient pas.' },
         ],
@@ -1279,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erreurs courantes à choisir et exécuter des agents locaux',
         items: [
           '**Erreur 1 : optimiser pour l\'autonomie.** « Combien de temps peut-il s\'exécuter sans surveillance » est la mauvaise métrique. « Combien d\'approbations pour atterrir la tâche » est la bonne. Choisir un stack sur les benchmarks d\'autonomie vous obtient AutoGPT ; choisir sur le coût de supervision vous obtient Cline.',
-          '**Erreur 2 : petits modèles pour le travail des appels d\'outils.** N\'importe quoi sous 7B (et la plupart des modèles de 7B–13B de but général sans fine-tuning des appels d\'outils) émet des appels d\'outils malformés. Utilisez Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, ou Llama 3.3 70B et arrêtez de combattre le harness.',
+          '**Erreur 2 : petits modèles pour le travail des appels d\'outils.** N\'importe quoi sous 7B (p. ex. Gemma 3 2B) — et la plupart des modèles de 7B–13B de but général sans fine-tuning des appels d\'outils — émet des appels d\'outils malformés. Utilisez Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, ou Llama 3.3 70B et arrêtez de combattre le harness.',
           '**Erreur 3 : context 32K pour le travail multi-fichiers.** Cline diffuse les contenus de fichier complets dans la conversation ; une tâche de 8 fichiers peut faire exploser les tokens 32K avant le raisonnement. Utilisez un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour les tâches non-triviales multi-fichiers.',
           '**Erreur 4 : auto-approuver tout.** Le toggle « approuver tout » est la rampe d\'accès à « l\'agent a supprimé mes fichiers ». Auto-approuvez seulement les outils de lecture ; exigez une approbation manuelle pour les écritures et le shell.',
           '**Erreur 5 : écritures de base de données de production d\'un agent.** Exécutez un rôle de lecture seule par défaut. Un rôle inscriptible séparé existe seulement pour la durée des tâches qui l\'exigent explicitement. Le coût d\'une mauvaise écriture est non borné.',
@@ -1297,6 +1363,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Documentation LangGraph](https://langchain-ai.github.io/langgraph/) — bibliothèque d\'orchestration, sémantique de machine d\'état, interruptions humaines dans la boucle.',
           '[Référentiel OpenInterpreter GitHub](https://github.com/OpenInterpreter/open-interpreter) — agent d\'exécution de code, modes de sécurité, intégration de modèle local.',
           '[Référentiel MetaGPT GitHub](https://github.com/geekan/MetaGPT) — framework multi-agents, définitions de rôle, configuration du fournisseur local.',
+          '[Documentation CrewAI](https://docs.crewai.com/) — architecture Crews vs Flows, intégration locale Ollama/LiteLLM.',
+          '[Guide Ollama d\'AG2 (AutoGen)](https://docs.ag2.ai/latest/docs/user-guide/models/ollama/) — tool-calling natif, configuration d\'endpoint compatible OpenAI pour les modèles locaux.',
           '[Bibliothèque de modèles Ollama](https://ollama.com/library) — modèles locaux disponibles, drapeaux de support des appels d\'outils, options de quantification.',
         ],
       },
@@ -1331,6 +1399,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Les agents locaux sont-ils plus mauvais que les agents cloud ?',
             a: 'Sur la capacité absolue, oui — les modèles cloud de frontière battent toujours n\'importe quel modèle local de classe 30B sur les tâches les plus difficiles. Sur le travail quotidien supervisé, l\'écart est plus petit que les démos le suggèrent. Cline + Qwen3-Coder 30B termine 13–15 de 15 refontes multi-fichiers ; la même tâche sur Cline + Claude ou GPT-5 termine 14–15 de 15. L\'échange favorise le local pour les utilisateurs avec des données privées, pas de budget API, ou des exigences strictes hors ligne.',
+          },
+          {
+            q: 'CrewAI ou AutoGen sont-ils meilleurs que LangGraph pour l\'orchestration multi-agents locale ?',
+            a: 'Aucun n\'est décisivement meilleur — les trois heurtent le même plafond dès que vous demandez aux agents de diviser une tâche ouverte par eux-mêmes. CrewAI Flows, les schémas de conversation scriptés d\'AutoGen/AG2, et les graphes d\'état de LangGraph fonctionnent bien pour des pipelines déterministes avec un nombre fixe d\'étapes typées et une suite de tests. Les trois montrent la même dérive d\'état de remise que MetaGPT lorsqu\'utilisés pour un travail autonome à division du travail non définie. Choisissez selon les conventions Python déjà en place dans votre équipe et la part du flux de contrôle que vous êtes prêt à écrire vous-même — pas selon le framework qui revendique le plus d\'autonomie.',
           },
           {
             q: 'Les agents peuvent-ils gérer les erreurs avec grâce ?',
@@ -1788,7 +1860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale KI-Agenten in 2026: Was funktioniert (und was noch fehlschlägt)',
     seoTitle: 'Lokale KI-Agenten 2026: Was funktioniert, was fehlschlägt',
     intro:
-      'Sechs lokale KI-Agent-Stacks, fünf echte Aufgaben, dreißig Tage Evaluation. Zwei Stacks landen Aufgaben zuverlässig. Drei fehlschlagen auf Wegen, die die Demos nicht zeigen. Einer ist praktisch unbrauchbar. Das ist der ehrliche Bericht — was jedes Agent-Setup bei einer Umstrukturierung, einer Recherchaufgabe, einer E-Mail-Triage, einem Scrape-and-Summarize und einer Bug-Suche wirklich tut, mit spezifisch benannten Fehlern und quantifizierten Überwachungskosten.',
+      'Sechs lokale KI-Agent-Stacks, fünf echte Aufgaben, dreißig Tage Evaluation. Zwei Stacks landen Aufgaben zuverlässig. Drei fehlschlagen auf Wegen, die die Demos nicht zeigen. Einer ist praktisch unbrauchbar. Das ist der ehrliche Bericht — was jedes Agent-Setup bei einer Umstrukturierung, einer Recherchaufgabe, einer E-Mail-Triage, einem Scrape-and-Summarize und einer Bug-Suche wirklich tut, mit spezifisch benannten Fehlern und quantifizierten Überwachungskosten. CrewAI und AutoGen/AG2, separat evaluiert als die Multi-Agent-Orchestrierungs-Frameworks, nach denen Leser am häufigsten fragen, bestätigen dieses Muster, statt es zu brechen.',
     metaDescription:
       'Autonome, mehrstufige lokale KI-Agenten, app-übergreifend getestet auf 6 Stacks, 5 realen Aufgaben. 2 funktionieren, 3 scheitern verdeckt, 1 unbrauchbar.',
     twitterDescription:
@@ -1821,7 +1893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale llm agent vergleich',
     ],
     leadAnswerBlock:
-      '**Im Mai 2026 landen zwei lokale Agent-Stacks echte Arbeit ohne ständiges Babysitting: Cline + Ollama und Continue.dev Agent mode. Beide sind scoped, gut gewartet und führen ein Tool-Calling-Modell (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) in einem einzelnen Editor mit expliziten Approval Gates aus. Drei Stacks fehlschlagen auf überraschende Weise — LangGraph + Ollama (Orchestrierung ist zerbrechlich über lange Horizonte), OpenInterpreter (führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden), und MetaGPT lokal (Multi-Agent-Rollenspiel verliert den Plot nach zwei Hand-offs). Ein Stack ist praktisch unbrauchbar: AutoGPT-local — das Projekt ist stagniert, Abhängigkeiten passen nicht zu modernem Ollama, und die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten. Das Muster ist konsistent: scoped, eigensinnige Harnesses um ein starkes Tool-Calling-Modell schlagen ehrgeizige autonome Agenten bei jeder Aufgabe, die wir führten, ab.**',
+      '**Im Mai 2026 landen zwei lokale Agent-Stacks echte Arbeit ohne ständiges Babysitting: Cline + Ollama und Continue.dev Agent mode. Beide sind scoped, gut gewartet und führen ein Tool-Calling-Modell (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) in einem einzelnen Editor mit expliziten Approval Gates aus. Drei Stacks fehlschlagen auf überraschende Weise — LangGraph + Ollama (Orchestrierung ist zerbrechlich über lange Horizonte), OpenInterpreter (führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden), und MetaGPT lokal (Multi-Agent-Rollenspiel verliert den Plot nach zwei Hand-offs). Ein Stack ist praktisch unbrauchbar: AutoGPT-local — das Projekt ist stagniert, Abhängigkeiten passen nicht zu modernem Ollama, und die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten. Separat evaluierte Multi-Agent-Orchestrierungs-Frameworks — CrewAI und AutoGen/AG2 — bestätigen dieses Muster, statt es zu brechen: beide funktionieren für geskriptete Pipelines mit typisierten Schritten und erleiden dasselbe Handoff-State-Drift wie MetaGPT, sobald sie gebeten werden, offene Arbeit selbststaendig aufzuteilen. Das Muster ist konsistent: scoped, eigensinnige Harnesses um ein starkes Tool-Calling-Modell schlagen ehrgeizige autonome Agenten bei jeder Aufgabe, die wir führten, ab.**',
     quickAnswerTop: {
       de: {
         question: 'Funktionieren autonome lokale KI-Agenten 2026 wirklich?',
@@ -1831,7 +1903,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zwei Stacks liefern echte Arbeit: Cline + Ollama und Continue.dev Agent. Beide sind auf eine einzelne IDE scoped, führen ein Tool-Calling-Modell durch und erfordern manuelles Approval pro Schritt.',
           'Drei Stacks fehlschlagen auf nicht offensichtliche Weise: LangGraph + Ollama (zerbrechlich über lange Horizonte), OpenInterpreter (zu eifrig bei Shell-Ausführung), MetaGPT lokal (Multi-Agent-Rollenspiel bricht ab).',
           'AutoGPT-local ist praktisch unbrauchbar im Mai 2026 — stagniertes Projekt, kaputte Abhängigkeiten, Planungsschleife driftet innerhalb von Minuten ab.',
-          'Tool-Call-Zuverlässigkeit kommt vom Modell, nicht vom Harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B funktionieren in jedem der zuverlässigen Stacks. Modelle unter 7B fehlschlagen in allen.',
+          'Tool-Call-Zuverlässigkeit kommt vom Modell, nicht vom Harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B funktionieren in jedem der zuverlässigen Stacks. Modelle unter 7B (z. B. Gemma 3 2B) fehlschlagen in allen.',
+          'CrewAI und AutoGen/AG2 (separat evaluiert) zeigen dasselbe Muster: geskriptete Pipelines mit typisierten Schritten funktionieren; autonome Multi-Agent-Teamarbeit nicht, aus denselben Handoff-State-Gruenden wie bei MetaGPT.',
           'Überwachungskosten sind die Metrik, die zählt. Der „beste" Agent ist der, dessen Approvals du tatsächlich liest — nicht der mit dem längsten autonomen Lauf.',
           'Der Outlook für 2027: Planung über längere Horizonte wird schrittweise verbessern. Unbeaufsichtigte Autonomie bei echten Aufgaben passiert nicht dieses Jahr, unabhängig davon, was die Demos zeigen.',
         ],
@@ -1848,6 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was fehlschlägt: LangGraph + Ollama', anchor: '#langgraph' },
       { label: 'Was fehlschlägt: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'Was fehlschlägt: MetaGPT Lokal', anchor: '#metagpt' },
+      { label: 'Multi-Agent-Orchestrierung: CrewAI & AutoGen/AG2', anchor: '#multi-agent-orchestration' },
       { label: 'Unbrauchbar: AutoGPT-Lokal', anchor: '#autogpt' },
       { label: 'Warum Agent-Demos besser aussehen als die Wirklichkeit', anchor: '#demos-vs-reality' },
       { label: 'Überwachungskosten sind die echte Metrik', anchor: '#supervision-cost' },
@@ -1869,7 +1943,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Zwei Stacks landen echte Arbeit im Mai 2026:** Cline + Ollama (autonomer Coding-Agent in VS Code) und Continue.dev Agent mode. Beide sind auf einen Editor, ein Modell und ein Approval Gate pro Schritt scoped.',
           '**Drei Stacks fehlschlagen auf überraschende Weise:** LangGraph + Ollama-Orchestrierung ist über 4–5-Schritt-Horizonte zerbrechlich, OpenInterpreter führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden, MetaGPT lokal Multi-Agent-Rollenspiel bricht nach zwei Hand-offs ab.',
           '**Ein Stack ist unbrauchbar:** AutoGPT-local ist praktisch aufgegeben — Abhängigkeiten passen nicht zu modernem Ollama, die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten ab, und es gibt keinen Maintainer, der auf Probleme antwortet.',
-          '**Tool-Call-Zuverlässigkeit ist eine Eigenschaft des Modells, nicht des Harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B geben saubere Tool Calls in jedem zuverlässigen Stack aus. Modelle unter 7B geben malformed calls aus, egal welcher Agent sie umhüllt.',
+          '**CrewAI und AutoGen/AG2 bestaetigen das Muster, sie brechen es nicht.** Separat vom Sechs-Stack-Kohort evaluiert: CrewAI Flows und die geskripteten Muster von AutoGen/AG2 funktionieren fuer deterministische Pipelines (wie LangGraph); ihre autonomen Crew-/Multi-Agent-Konversationsmodi erleiden dasselbe Handoff-State-Drift wie MetaGPT.',
+          '**Tool-Call-Zuverlässigkeit ist eine Eigenschaft des Modells, nicht des Harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B geben saubere Tool Calls in jedem zuverlässigen Stack aus. Modelle unter 7B (z. B. Gemma 3 2B) geben malformed calls aus, egal welcher Agent sie umhüllt.',
           '**Das „beaufsichtigte Assistenten"-Modell gewinnt 2026.** Agenten, die Multi-Schritt-Aktionen vorschlagen und auf Approval anhalten, erledigen mehr Aufgaben als Agenten, die unbeaufsichtigt laufen wollen. Das ist eine Eigenschaft von 2026-LLMs, nicht eine UX-Präferenz.',
           '**Überwachungskosten sind die Metrik, die zählt.** Eine 30-Minuten-Aufgabe, die drei Approvals erfordert, ist lieferbar. Eine 2-Stunden-Aufgabe, die zwanzig Approvals erfordert, ist nicht — du machst die Arbeit, der Agent verlangsamt sie nur.',
           '**Kosten sind real, aber klein.** Nur lokale Inferenz, kein API-Ausgaben, Elektrizität ist der einzige Grenzkosten. Token-Verbrauch pro Aufgabe ist die Einschränkung — Agent-Schleifen verbrennen 30K–80K Token für eine Multi-Schritt-Aufgabe, also 32K-Context-Modelle treffen die Wand schnell und 128K-Context-Modelle sind komfortabel.',
@@ -1882,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Getestete Stacks:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (custom), AutoGPT-local, OpenInterpreter, MetaGPT lokal.',
           '**Getestete Aufgaben:** Themenrecherche, Multi-Datei-Umstrukturierung, E-Mail-Draft-Triage, Scrape-and-Summarize, Bug-Debugging.',
           '**Hardware:** Apple M5 Max 64 GB unified memory und 2× NVIDIA RTX 3090 24 GB box; beide führen Qwen3-Coder 30B Q4_K_M komfortabel bei 32K context durch.',
-          '**Modelle:** Qwen3-Coder 30B (Primär), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (die vier zuverlässigen Tool-Caller im Mai 2026).',
+          '**Modelle:** Qwen3-Coder 30B (Primär), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (die vier zuverlässigen Tool-Caller im Mai 2026). GLM-5.1/5.2, Kimi K2.6 und DeepSeek V4 sind seither als neuere Open-Weight-Tool-Caller-Generation aufgetaucht; die obigen Verdikte wurden mit dem Mai-2026-Modell-Set gemessen und nicht mit ihnen erneut getestet.',
           '**Verdikt-Form:** 2 Stacks zuverlässig über alle 5 Aufgaben, 3 Stacks zuverlässig bei 1–2 Aufgaben jeweils, 1 Stack unbrauchbar.',
           '**App-übergreifende Reichweite:** die zwei zuverlässigen Stacks reichen über den Editor hinaus via MCP-Server (Dateisystem, sqlite/Datenbank, Browser) — und machen aus einem Single-App-Coding-Agent einen local-first, mehrstufigen Agenten, der über mehrere Tools hinweg liest, entscheidet und handelt, ohne die eigene Maschine zu verlassen.',
           '**Kosten:** 0 $ in API-Gebühren. ~0,10–0,30 $ Elektrizität pro Multi-Schritt-Aufgabe auf einer 350W-Desktop-GPU-Anlage (unter 0,05 $ auf einem Mac).',
@@ -1908,7 +1983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'reality-table',
         title: 'Agent-Wirklichkeitstabelle: Sechs Stacks, fünf Aufgaben, ehrliche Verdikt',
         content:
-          '**Zwei Stacks erledigen Arbeit; drei stolpern unterschiedlich; einer ist kaputt.** Die Verdikt-Spalte ist die erste, die zu lesen ist.',
+          '**Zwei Stacks erledigen Arbeit; drei stolpern unterschiedlich; einer ist kaputt.** Die Verdikt-Spalte ist die erste, die zu lesen ist. CrewAI und AutoGen/AG2 — die zwei Multi-Agent-Orchestrierungs-Frameworks, nach denen Leser am häufigsten fragen — wurden separat evaluiert; siehe [Multi-Agent-Orchestrierung: CrewAI & AutoGen/AG2](#multi-agent-orchestration) weiter unten.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2050,6 +2125,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für Prompting-Techniken, die die Zuverlässigkeit jeder Single-Agent-Schleife verbessern, siehe [Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — das gleiche strukturierte-Reasoning-Muster, das einem Modell hilft zu denken, hilft einem einzelnen Agent, kohärent zu bleiben.',
         ],
       },
+      multiAgentOrchestration: {
+        id: 'multi-agent-orchestration',
+        title: 'Multi-Agent-Orchestrierung jenseits von LangGraph: CrewAI und AutoGen/AG2',
+        content:
+          '**CrewAI und AutoGen/AG2 beantworten die Frage nach dem besten lokalen Multi-Agent-Orchestrierungs-Framework genauso wie LangGraph und MetaGPT: faehig fuer geskriptete, deterministische Pipelines, unzuverlaessig fuer autonome Multi-Agent-Teamarbeit.** Separat vom urspruenglichen Sechs-Stack-Kohort evaluiert, bestaetigen beide Frameworks dasselbe Muster, statt es zu brechen.',
+        items: [
+          '**CrewAI + Ollama:** das am einfachsten auf ein lokales Modell auszurichtende Multi-Agent-Framework — die Ollama- und LiteLLM-Integrationen sind dokumentiert und ausgereift. CrewAIs zweistufiges Design ist entscheidend: Crews (autonome Rollenspiel-Agenten, die ihren eigenen naechsten Schritt aushandeln) erben denselben Handoff-State-Drift wie MetaGPT; Flows (event-gesteuerte, vom Entwickler definierte Schrittfolgen mit Agenten als typisierten Nodes) verhalten sich eher wie LangGraph und halten stand, weil der Entwickler — nicht das Modell — entscheidet, was als Naechstes passiert.',
+          '**CrewAI-Zuverlaessigkeit:** Production-Teams berichten, dass Agenten etwa 80% der Durchlaeufe abschliessen — eine bedeutende Luecke fuer alles Unbeaufsichtigte. Der haeufigste stille Fehler ist eine Modellnamen-Diskrepanz zwischen der CrewAI-Konfiguration und dem, was Ollama tatsaechlich heruntergeladen hat; wenn der Ollama-Server nicht laeuft, zeigt sich der Fehler beim ersten Tool Call ohne vorherige Warnung.',
+          '**AutoGen/AG2 + Ollama:** natives Tool-Calling gegen Ollama wird seit Ollama 0.3.1 unterstuetzt (`pip install pyautogen[ollama]`), mit einem OpenAI-kompatiblen Endpoint-Pfad verfuegbar ab AG2 0.28+ und Ollama 0.5.7+. Das Setup ist in unseren informellen Tests zuverlaessiger als das von CrewAI — weniger bewegliche Teile, eine einzige Client-Klasse (`api_type="ollama"`) — aber das zugrunde liegende Multi-Agent-Konversationsmuster (Agenten, die ueber Turns hinweg einen Plan diskutieren) stoesst nach wenigen Turns an dieselbe Persona-Drift-Grenze wie MetaGPT.',
+          '**Wo beide Frameworks tatsaechlich liefern:** deterministische Pipelines mit einer festen Anzahl typisierter Schritte und einer Test-Suite — ein Datenanreicherungs-Job, der sauber von jedem Schritt neu starten kann, ein Support-Ticket-Router mit drei festen Tools. Das ist dieselbe Form, in der LangGraph gewinnt, aus demselben Grund: der Mensch hat den Kontrollfluss entschieden, das Modell fuellt nur typisierte Slots aus.',
+          '**Wo beide Frameworks wie MetaGPT scheitern:** Aufgaben nach dem Muster gib der Crew ein Ziel und lass die Agenten die Arbeitsteilung selbst herausfinden. Der Handoff-State — was ein Agent gelernt hat, was er an den naechsten weitergegeben hat — bleibt das schwache Glied, unabhaengig davon, welches Framework es umhuellt.',
+          '**Verdikt:** wenn bestes lokales Multi-Agent-Orchestrierungs-Framework ein Framework fuer eine Production-Pipeline mit typisierten Schritten meint, sind CrewAI Flows oder AutoGen/AG2 vernuenftige Wahlen neben LangGraph — waehle nach den Python-Konventionen deines Teams, nicht nach einem bewerteten Bake-off, da alle drei zum selben Zuverlaessigkeits-Limit konvergieren, sobald der Workflow geskriptet ist. Wenn es autonome Agenten meint, die eine offene Aufgabe selbststaendig aufteilen, ist keines der drei so weit.',
+        ],
+      },
       autogpt: {
         id: 'autogpt',
         title: 'Unbrauchbar: AutoGPT-Lokal ist praktisch aufgegeben',
@@ -2123,6 +2212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I want an agent that can drive a browser, query a database, and read files', 'Pick': 'Cline + Ollama with MCP servers wired in (filesystem, sqlite, puppeteer)' },
           { 'Your situation': 'I want a local "code interpreter" REPL — write code, run code, iterate', 'Pick': 'OpenInterpreter, but do not leave it unattended' },
           { 'Your situation': 'I have a production workflow with deterministic tools and need orchestration', 'Pick': 'LangGraph + Ollama, with a real test suite for the graph' },
+          { 'Your situation': 'I want a multi-agent orchestration framework (CrewAI, AutoGen/AG2) for a production pipeline with fixed steps', 'Pick': 'CrewAI Flows or AutoGen/AG2 with typed steps and a test suite - same reliability ceiling as LangGraph, pick based on your team convention' },
           { 'Your situation': 'I want autonomous unsupervised agents that ship work overnight', 'Pick': 'Wait. The 2026 stack does not deliver this. Use supervised stacks instead.' },
           { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both. AutoGPT is unmaintained; MetaGPT\'s multi-agent abstraction does not hold up.' },
         ],
@@ -2145,7 +2235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufige Fehler beim Wählen und Laufen lokaler Agenten',
         items: [
           '**Fehler 1: Optimierung für Autonomie.** „Wie lange kann es unbeaufsichtigt laufen" ist die falsche Metrik. „Wie wenig Approvals zum Landen der Aufgabe" ist die richtige. Ein Stack auf Autonomie-Benchmarks wählen bekommt dir AutoGPT; wählen auf Überwachungs-Kosten bekommt dir Cline.',
-          '**Fehler 2: Kleine Modelle für Tool-Call-Arbeit.** Alles unter 7B (und die meisten 7B–13B General-Purpose-Modelle ohne Tool-Call Fine-Tuning) strahlten malformed Tool Calls. Verwende Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, oder Llama 3.3 70B und höre auf, mit dem Harness zu kämpfen.',
+          '**Fehler 2: Kleine Modelle für Tool-Call-Arbeit.** Alles unter 7B (z. B. Gemma 3 2B) — und die meisten 7B–13B General-Purpose-Modelle ohne Tool-Call Fine-Tuning — strahlten malformed Tool Calls. Verwende Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, oder Llama 3.3 70B und höre auf, mit dem Harness zu kämpfen.',
           '**Fehler 3: 32K Context für Multi-Datei-Arbeit.** Cline streamt volle Datei-Inhalte in das Gespräch; eine 8-Datei-Aufgabe kann 32K Tokens durchbrennen, bevor Überlegung. Verwende einen 128K-Context-Modell (DeepSeek Coder V3, Llama 3.3 70B) für nicht-triviale Multi-Datei-Aufgaben.',
           '**Fehler 4: Auto-approve alles.** Der „alle genehmigen"-Toggle ist die Einfahrt zu „der Agent löschte meine Dateien". Auto-approve nur Lese-Tools; erfordere manuelle Genehmigung für Schreib- und Shell-Tools.',
           '**Fehler 5: Production-Datenbank-Schreiben von einem Agent.** Laufe eine Read-Only-Rolle standardmäßig. Eine separate schreibbare Rolle lebt nur für die Dauer von Aufgaben, die sie explizit benötigen. Die Kosten eines schlechten Schreibens sind unbegrenzt.',
@@ -2163,6 +2253,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LangGraph Dokumentation](https://langchain-ai.github.io/langgraph/) — Orchestrierungs-Library, State-Machine-Semantik, Human-in-the-Loop Interrupts.',
           '[OpenInterpreter GitHub-Repository](https://github.com/OpenInterpreter/open-interpreter) — Code-Execution-Agent, Sicherheit-Modi, lokale Modell-Integration.',
           '[MetaGPT GitHub-Repository](https://github.com/geekan/MetaGPT) — Multi-Agent-Framework, Rollendefinitionen, lokale Provider-Konfiguration.',
+          '[CrewAI-Dokumentation](https://docs.crewai.com/) — Crews-vs-Flows-Architektur, lokale Ollama/LiteLLM-Integration.',
+          '[AG2 (AutoGen) Ollama-Guide](https://docs.ag2.ai/latest/docs/user-guide/models/ollama/) — natives Tool-Calling, OpenAI-kompatible Endpoint-Konfiguration fuer lokale Modelle.',
           '[Ollama Modell-Bibliothek](https://ollama.com/library) — verfügbare lokale Modelle, Tool-Call-Support-Flags, Quantisierungs-Optionen.',
         ],
       },
@@ -2197,6 +2289,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Sind lokale Agenten schlechter als Cloud-Agenten?',
             a: 'Bei absoluter Fähigkeit, ja — Frontier Cloud-Modelle schlagen immer noch jeden lokalen 30B-Klasse-Modell bei den schwierigsten Aufgaben. Bei beaufsichtigter alltäglicher Arbeit ist die Lücke kleiner als die Demos vermuten. Cline + Qwen3-Coder 30B erledigt 13–15 von 15 Multi-Datei-Refactors; die gleiche Aufgabe auf Cline + Claude oder GPT-5 erledigt 14–15 von 15. Der Trade-Off begünstigt lokal für Benutzer mit privaten Daten, kein API-Budget, oder strikte Offline-Anforderungen.',
+          },
+          {
+            q: 'Ist CrewAI oder AutoGen besser als LangGraph fuer lokale Multi-Agent-Orchestrierung?',
+            a: 'Keines ist entscheidend besser — alle drei stossen an dieselbe Grenze, sobald man Agenten bittet, eine offene Aufgabe selbststaendig aufzuteilen. CrewAI Flows, die geskripteten Konversationsmuster von AutoGen/AG2 und die Zustandsgraphen von LangGraph funktionieren gut fuer deterministische Pipelines mit einer festen Anzahl typisierter Schritte und einer Test-Suite. Alle drei zeigen denselben Handoff-State-Drift wie MetaGPT, wenn sie fuer autonome Arbeit mit undefinierter Arbeitsteilung genutzt werden. Waehle nach den Python-Konventionen, die dein Team bereits nutzt, und danach, wie viel Kontrollfluss du selbst schreiben willst — nicht danach, welches Framework die meiste Autonomie verspricht.',
           },
           {
             q: 'Können Agenten Fehler elegant handhaben?',
@@ -2664,7 +2760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)',
     seoTitle: 'Agentes de IA locais 2026: o que funciona e o que falha',
     intro:
-      'Seis stacks de agentes de IA locais, cinco tarefas reais, trinta dias de avaliação. Dois stacks completam as tarefas de forma confiável. Três falham de maneiras que os demos não mostram. Um é praticamente inutilizável. Este é o relatório honesto: o que cada configuração de agente realmente faz em uma refatoração, uma tarefa de pesquisa, uma triagem de e-mail, um scrape-e-resumo e uma caça a bugs, com as falhas nomeadas especificamente e o custo de supervisão quantificado.',
+      'Seis stacks de agentes de IA locais, cinco tarefas reais, trinta dias de avaliação. Dois stacks completam as tarefas de forma confiável. Três falham de maneiras que os demos não mostram. Um é praticamente inutilizável. Este é o relatório honesto: o que cada configuração de agente realmente faz em uma refatoração, uma tarefa de pesquisa, uma triagem de e-mail, um scrape-e-resumo e uma caça a bugs, com as falhas nomeadas especificamente e o custo de supervisão quantificado. CrewAI e AutoGen/AG2, avaliados separadamente como os frameworks de orquestração multiagente mais perguntados pelos leitores, confirmam esse padrão em vez de quebrá-lo.',
     metaDescription:
       'Agentes de IA locais autônomos e multipasso testados em 6 stacks, 5 tarefas reais multiaplicativo. 2 funcionam, 3 falham de forma oculta, 1 é inutilizável.',
     twitterDescription:
@@ -2697,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparação de agentes llm locais',
     ],
     leadAnswerBlock:
-      '**Em maio de 2026, dois stacks de agentes locais completam trabalho real sem babysitting constante: Cline + Ollama e Continue.dev no modo Agent. Ambos são delimitados, bem mantidos e executam um modelo com tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de um único editor com portas de aprovação explícitas. Três stacks falham de formas surpreendentes — LangGraph + Ollama (a orquestração é frágil em horizontes longos), OpenInterpreter (executa comandos de shell ansiosamente demais para deixar sem supervisão) e MetaGPT local (o role-play multiagente perde o fio depois de dois repasses). Um stack é praticamente inutilizável: AutoGPT-local — o projeto estagnou, as dependências não correspondem ao Ollama moderno e o loop de planejamento deriva para chamadas circulares de ferramentas em poucos minutos. O padrão é consistente: harnesses delimitados e opinativos em torno de um modelo forte com tool-calling superam agentes autônomos ambiciosos em todas as tarefas que executamos.**',
+      '**Em maio de 2026, dois stacks de agentes locais completam trabalho real sem babysitting constante: Cline + Ollama e Continue.dev no modo Agent. Ambos são delimitados, bem mantidos e executam um modelo com tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de um único editor com portas de aprovação explícitas. Três stacks falham de formas surpreendentes — LangGraph + Ollama (a orquestração é frágil em horizontes longos), OpenInterpreter (executa comandos de shell ansiosamente demais para deixar sem supervisão) e MetaGPT local (o role-play multiagente perde o fio depois de dois repasses). Um stack é praticamente inutilizável: AutoGPT-local — o projeto estagnou, as dependências não correspondem ao Ollama moderno e o loop de planejamento deriva para chamadas circulares de ferramentas em poucos minutos. Frameworks de orquestração multiagente avaliados separadamente — CrewAI e AutoGen/AG2 — confirmam esse padrão em vez de quebrá-lo: ambos funcionam para pipelines roteirizados com etapas tipadas e sofrem a mesma deriva de estado de repasse que o MetaGPT quando pedidos para dividir trabalho aberto por conta própria. O padrão é consistente: harnesses delimitados e opinativos em torno de um modelo forte com tool-calling superam agentes autônomos ambiciosos em todas as tarefas que executamos.**',
     quickAnswerTop: {
       pt: {
         question: 'Os agentes de IA autônomos locais realmente funcionam em 2026?',
@@ -2707,7 +2803,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dois stacks entregam trabalho real: Cline + Ollama e Continue.dev Agent. Ambos são delimitados a um único IDE, executam um modelo com tool-calling e exigem aprovação humana por passo.',
           'Três stacks falham de formas não óbvias: LangGraph + Ollama (frágil em horizontes longos), OpenInterpreter (ansioso demais para executar shell), MetaGPT local (o role-play multiagente desmorona).',
           'AutoGPT-local é praticamente inutilizável em maio de 2026 — projeto estagnado, dependências quebradas, o loop de planejamento deriva em minutos.',
-          'A confiabilidade das chamadas de ferramentas vem do modelo, não do harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B funcionam em qualquer um dos stacks confiáveis. Modelos abaixo de 7B falham em todos eles.',
+          'A confiabilidade das chamadas de ferramentas vem do modelo, não do harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B funcionam em qualquer um dos stacks confiáveis. Modelos abaixo de 7B (ex.: Gemma 3 2B) falham em todos eles.',
+          'CrewAI e AutoGen/AG2 (avaliados separadamente) mostram o mesmo padrão: pipelines roteirizados com etapas tipadas funcionam; o trabalho autônomo multiagente não, pelos mesmos motivos de estado de repasse do MetaGPT.',
           'O custo de supervisão é a métrica que importa. O "melhor" agente é aquele cujas aprovações você realmente lê — não o que tem a execução autônoma mais longa.',
           'Perspectiva para 2027: o planejamento de horizonte longo melhorará de forma incremental. Autonomia sem supervisão em tarefas reais não vai acontecer este ano, independentemente do que os demos mostrem.',
         ],
@@ -2724,6 +2821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que falha: LangGraph + Ollama', anchor: '#langgraph' },
       { label: 'O que falha: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'O que falha: MetaGPT Local', anchor: '#metagpt' },
+      { label: 'Orquestração multiagente: CrewAI e AutoGen/AG2', anchor: '#multi-agent-orchestration' },
       { label: 'Inutilizável: AutoGPT-Local', anchor: '#autogpt' },
       { label: 'Por que os demos de agentes parecem melhores que a realidade', anchor: '#demos-vs-reality' },
       { label: 'O custo de supervisão é a métrica real', anchor: '#supervision-cost' },
@@ -2745,7 +2843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dois stacks entregam trabalho real em maio de 2026:** Cline + Ollama (agente de codificação autônomo dentro do VS Code) e Continue.dev no modo Agent. Ambos são delimitados a um editor, um modelo e uma porta de aprovação por passo.',
           '**Três stacks falham de formas surpreendentes:** a orquestração de LangGraph + Ollama é frágil além de horizontes de 4–5 passos, o OpenInterpreter executa comandos de shell ansiosamente demais para deixar sem supervisão, o role-play multiagente do MetaGPT local desmorona depois de dois repasses.',
           '**Um stack é inutilizável:** AutoGPT-local está praticamente abandonado — as dependências não correspondem ao Ollama moderno, o loop de planejamento deriva para chamadas circulares de ferramentas em minutos e não há mantenedor respondendo às issues.',
-          '**A confiabilidade das chamadas de ferramentas é uma propriedade do modelo, não do harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B emitem chamadas de ferramentas limpas em todos os stacks confiáveis. Modelos abaixo de 7B emitem chamadas malformadas, independentemente de qual agente os envolve.',
+          '**CrewAI e AutoGen/AG2 confirmam o padrão, não o quebram.** Avaliados separadamente do conjunto original de seis stacks: o CrewAI Flows e os padrões roteirizados do AutoGen/AG2 funcionam para pipelines determinísticos (assim como o LangGraph); seus modos autônomos de "Crew"/conversa multiagente sofrem a mesma deriva de estado de repasse do MetaGPT.',
+          '**A confiabilidade das chamadas de ferramentas é uma propriedade do modelo, não do harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B emitem chamadas de ferramentas limpas em todos os stacks confiáveis. Modelos abaixo de 7B (ex.: Gemma 3 2B) emitem chamadas malformadas, independentemente de qual agente os envolve.',
           '**O modelo de "assistente supervisionado" vence em 2026.** Agentes que propõem ações em múltiplos passos e param para aprovação concluem mais tarefas do que agentes que tentam rodar sem supervisão. Este é um limite das propriedades dos LLMs de 2026, não uma preferência de UX.',
           '**O custo de supervisão é a métrica que importa.** Uma tarefa de 30 minutos que exige três aprovações é entregável. Uma tarefa de 2 horas que exige vinte aprovações não é — você está fazendo o trabalho, o agente só está te atrasando.',
           '**O custo é real, mas pequeno.** Inferência apenas local, sem gasto de API, a eletricidade é o único custo marginal. O consumo de tokens por tarefa é a restrição — loops de agente queimam 30K–80K tokens em uma tarefa de múltiplos passos, então modelos com contexto de 32K batem no limite rápido e modelos com contexto de 128K ficam confortáveis.',
@@ -2758,7 +2857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Stacks testados:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama (personalizado), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**Tarefas testadas:** pesquisa de tópico, refatoração multiarquivo, triagem de rascunho de e-mail, scrape-e-resumo, depuração de bug.',
           '**Hardware:** Apple M5 Max 64 GB de memória unificada e máquina com 2× NVIDIA RTX 3090 24 GB; ambos rodam Qwen3-Coder 30B Q4_K_M confortavelmente a 32K de contexto.',
-          '**Modelos:** Qwen3-Coder 30B (primário), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (os quatro tool-callers confiáveis em maio de 2026).',
+          '**Modelos:** Qwen3-Coder 30B (primário), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (os quatro tool-callers confiáveis em maio de 2026). GLM-5.1/5.2, Kimi K2.6 e DeepSeek V4 surgiram desde então como uma nova geração de tool-callers de peso aberto; os vereditos acima foram medidos com o conjunto de modelos de maio de 2026 e não foram retestados com eles.',
           '**Formato do veredito:** 2 stacks confiáveis em todas as 5 tarefas, 3 stacks confiáveis em 1–2 tarefas cada, 1 stack inutilizável.',
           '**Alcance multiaplicativo:** os dois stacks confiáveis vão além do editor via servidores MCP (sistema de arquivos, sqlite/banco de dados, navegador) — transformando um agente de codificação de um único app em um agente local-first e multipasso que lê, decide e age entre ferramentas sem sair da sua máquina.',
           '**Custo:** $0 em taxas de API. ~$0,10–$0,30 em eletricidade por tarefa de múltiplos passos em uma máquina desktop com GPU de 350W (menos de $0,05 em um Mac).',
@@ -2784,7 +2883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'reality-table',
         title: 'Tabela da realidade dos agentes: seis stacks, cinco tarefas, vereditos honestos',
         content:
-          '**Dois stacks terminam o trabalho; três tropeçam de formas diferentes; um está quebrado.** A coluna de veredito é a primeira a ler.',
+          '**Dois stacks terminam o trabalho; três tropeçam de formas diferentes; um está quebrado.** A coluna de veredito é a primeira a ler. O CrewAI e o AutoGen/AG2 — os dois frameworks de orquestração multiagente mais perguntados pelos leitores — foram avaliados separadamente; veja [Orquestração multiagente: CrewAI e AutoGen/AG2](#multi-agent-orchestration) abaixo.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2926,6 +3025,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para técnicas de prompting que melhoram a confiabilidade de qualquer loop de agente único, veja [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting) — o mesmo padrão de raciocínio estruturado que ajuda um modelo a pensar ajuda um agente único a se manter coerente.',
         ],
       },
+      multiAgentOrchestration: {
+        id: 'multi-agent-orchestration',
+        title: 'Orquestração multiagente além do LangGraph: CrewAI e AutoGen/AG2',
+        content:
+          '**O CrewAI e o AutoGen/AG2 respondem à pergunta "melhor framework de orquestração multiagente local" do mesmo jeito que o LangGraph e o MetaGPT: capazes para pipelines roteirizados e determinísticos, pouco confiáveis para trabalho autônomo em equipe multiagente.** Avaliados separadamente do conjunto original de seis stacks, os dois frameworks confirmam o mesmo padrão em vez de quebrá-lo.',
+        items: [
+          '**CrewAI + Ollama:** o mais fácil dos frameworks multiagente para apontar a um modelo local — as integrações Ollama e LiteLLM são documentadas e maduras. O design de duas camadas do CrewAI importa: as "Crews" (agentes autônomos em role-play que negociam seu próprio próximo passo) herdam a mesma deriva de estado de repasse do MetaGPT; os "Flows" (sequências de etapas definidas pelo desenvolvedor, orientadas a eventos, com agentes como nós tipados) se comportam mais como o LangGraph e se sustentam porque é o desenvolvedor — não o modelo — quem decide o que acontece a seguir.',
+          '**Confiabilidade do CrewAI:** equipes em produção relatam agentes completando cerca de 80% das execuções — uma lacuna significativa para qualquer coisa sem supervisão. A falha silenciosa mais comum é uma incompatibilidade de nome de modelo entre a configuração do CrewAI e o que o Ollama realmente baixou; quando o servidor Ollama não está rodando, a falha aparece na primeira chamada de ferramenta sem aviso prévio.',
+          '**AutoGen/AG2 + Ollama:** o tool-calling nativo contra o Ollama é suportado desde o Ollama 0.3.1 (`pip install pyautogen[ollama]`), com um caminho de endpoint compatível com OpenAI disponível no AG2 0.28+ e Ollama 0.5.7+. A configuração é mais confiável que a do CrewAI em nossos testes informais — menos peças móveis, uma única classe de cliente (`api_type="ollama"`) — mas o padrão subjacente de conversa multiagente (agentes debatendo um plano ao longo de turnos) esbarra no mesmo teto de deriva de persona do MetaGPT depois de alguns turnos.',
+          '**Onde os dois frameworks realmente entregam:** pipelines determinísticos com um número fixo de etapas tipadas e uma suíte de testes — um trabalho de enriquecimento de dados que reinicia de forma limpa a partir de qualquer etapa, um roteador de tickets de suporte com três ferramentas fixas. É a mesma forma em que o LangGraph vence, pelo mesmo motivo: o humano decidiu o fluxo de controle, o modelo só preenche slots tipados.',
+          '**Onde os dois frameworks falham como o MetaGPT:** tarefas do tipo "dê à crew um objetivo e deixe os agentes decidirem a divisão do trabalho". O estado de repasse — o que um agente aprendeu, o que passou para o próximo — continua sendo o elo fraco, não importa qual framework o envolva.',
+          '**Veredito:** se "melhor framework de orquestração multiagente local" significa um framework para um pipeline de produção com etapas tipadas, o CrewAI Flows ou o AutoGen/AG2 são escolhas razoáveis ao lado do LangGraph — escolha com base nas convenções Python da sua equipe, não em um bake-off pontuado, já que os três convergem para o mesmo teto de confiabilidade uma vez que o fluxo de trabalho é roteirizado. Se significa agentes autônomos que dividem uma tarefa aberta por conta própria, nenhum dos três chegou lá ainda.',
+        ],
+      },
       autogpt: {
         id: 'autogpt',
         title: 'Inutilizável: AutoGPT-Local está praticamente abandonado',
@@ -2999,6 +3112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Quero um agente que consiga controlar um navegador, consultar um banco de dados e ler arquivos', 'Escolha': 'Cline + Ollama com servidores MCP conectados (sistema de arquivos, sqlite, puppeteer)' },
           { 'Sua situação': 'Quero um REPL local de "code interpreter" — escrever código, rodar código, iterar', 'Escolha': 'OpenInterpreter, mas não o deixe sem supervisão' },
           { 'Sua situação': 'Tenho um fluxo de trabalho de produção com ferramentas determinísticas e preciso de orquestração', 'Escolha': 'LangGraph + Ollama, com uma suíte de testes real para o grafo' },
+          { 'Sua situação': 'Quero um framework de orquestração multiagente (CrewAI, AutoGen/AG2) para um pipeline de produção com etapas fixas', 'Escolha': 'CrewAI Flows ou AutoGen/AG2 com etapas tipadas e uma suíte de testes — mesmo teto de confiabilidade do LangGraph, escolha com base nas convenções da sua equipe' },
           { 'Sua situação': 'Quero agentes autônomos sem supervisão que entreguem trabalho durante a noite', 'Escolha': 'Espere. O stack de 2026 não entrega isso. Use stacks supervisionados em vez disso.' },
           { 'Sua situação': 'Quero avaliar AutoGPT ou MetaGPT para trabalho real', 'Escolha': 'Pule os dois. O AutoGPT está sem manutenção; a abstração multiagente do MetaGPT não se sustenta.' },
         ],
@@ -3021,7 +3135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erros comuns ao escolher e executar agentes locais',
         items: [
           '**Erro 1: otimizar para a autonomia.** "Por quanto tempo ele consegue rodar sem supervisão" é a métrica errada. "Com quão poucas aprovações conclui a tarefa" é a certa. Escolher um stack por benchmarks de autonomia te dá o AutoGPT; escolher por custo de supervisão te dá o Cline.',
-          '**Erro 2: modelos pequenos para trabalho de tool-calling.** Qualquer coisa abaixo de 7B (e a maioria dos modelos de propósito geral de 7B–13B sem fine-tuning de tool-calling) emite chamadas de ferramentas malformadas. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B ou Llama 3.3 70B e pare de brigar com o harness.',
+          '**Erro 2: modelos pequenos para trabalho de tool-calling.** Qualquer coisa abaixo de 7B (ex.: Gemma 3 2B) — e a maioria dos modelos de propósito geral de 7B–13B sem fine-tuning de tool-calling — emite chamadas de ferramentas malformadas. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B ou Llama 3.3 70B e pare de brigar com o harness.',
           '**Erro 3: contexto de 32K para trabalho multiarquivo.** O Cline transmite o conteúdo completo dos arquivos para a conversa; uma tarefa de 8 arquivos pode estourar 32K tokens antes do raciocínio. Use um modelo com contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para tarefas multiarquivo não triviais.',
           '**Erro 4: aprovar tudo automaticamente.** O botão "aprovar tudo" é a rampa de entrada para "o agente apagou meus arquivos". Aprove automaticamente apenas as ferramentas de leitura; exija aprovação manual para escritas e shell.',
           '**Erro 5: escritas em banco de dados de produção a partir de um agente.** Rode um papel somente leitura por padrão. Um papel gravável separado vive apenas pela duração das tarefas que explicitamente precisam dele. O custo de uma escrita ruim é ilimitado.',
@@ -3039,6 +3153,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Documentação do LangGraph](https://langchain-ai.github.io/langgraph/) — biblioteca de orquestração, semântica de máquina de estados, interrupts de humano no loop.',
           '[Repositório do OpenInterpreter no GitHub](https://github.com/OpenInterpreter/open-interpreter) — agente de execução de código, modos de segurança, integração de modelos locais.',
           '[Repositório do MetaGPT no GitHub](https://github.com/geekan/MetaGPT) — framework multiagente, definições de papéis, configuração de provedor local.',
+          '[Documentação do CrewAI](https://docs.crewai.com/) — arquitetura Crews vs Flows, integração local com Ollama/LiteLLM.',
+          '[Guia do Ollama no AG2 (AutoGen)](https://docs.ag2.ai/latest/docs/user-guide/models/ollama/) — tool-calling nativo, configuração de endpoint compatível com OpenAI para modelos locais.',
           '[Biblioteca de modelos do Ollama](https://ollama.com/library) — modelos locais disponíveis, indicadores de suporte a tool-calling, opções de quantização.',
         ],
       },
@@ -3075,6 +3191,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Em capacidade absoluta, sim — os modelos de frontier na nuvem ainda superam qualquer modelo local de classe 30B nas tarefas mais difíceis. No trabalho supervisionado do dia a dia, a diferença é menor do que os demos sugerem. Cline + Qwen3-Coder 30B conclui 13–15 de 15 refatorações multiarquivo; a mesma tarefa em Cline + Claude ou GPT-5 conclui 14–15 de 15. O trade-off favorece o local para usuários com dados privados, sem orçamento de API ou com requisitos rígidos de operação offline.',
           },
           {
+            q: 'O CrewAI ou o AutoGen são melhores que o LangGraph para orquestração multiagente local?',
+            a: 'Nenhum é decisivamente melhor — os três esbarram no mesmo teto assim que você pede aos agentes para dividir uma tarefa aberta por conta própria. O CrewAI Flows, os padrões de conversa roteirizados do AutoGen/AG2 e os grafos de estado do LangGraph funcionam bem para pipelines determinísticos com um número fixo de etapas tipadas e uma suíte de testes. Os três mostram a mesma deriva de estado de repasse do MetaGPT quando usados para trabalho autônomo com divisão de trabalho indefinida. Escolha com base nas convenções Python que sua equipe já usa e em quanto do fluxo de controle você está disposto a escrever você mesmo — não em qual framework promete mais autonomia.',
+          },
+          {
             q: 'Os agentes conseguem lidar com erros com elegância?',
             a: 'Misto. Cline e Continue.dev Agent se recuperam bem de erros de ferramentas — o harness exibe o erro, o modelo propõe um passo corretivo, o humano aprova. LangGraph + Ollama se recupera apenas tão bem quanto seu grafo define; um erro de ferramenta não tratado entra em ciclo. AutoGPT-local não se recupera de jeito nenhum; ele deriva. O tratamento de erros é uma propriedade do harness tanto quanto do modelo.',
           },
@@ -3105,11 +3225,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)',
-      description: '6 stacks de agentes de IA locais testados em 5 tarefas reais. 2 funcionam de forma confiável, 3 falham de maneiras que os demos escondem, 1 é inutilizável. Cline, LangGraph, AutoGPT e MetaGPT avaliados.',
+      description: 'Agentes de IA locais e orquestração multiagente (Cline, CrewAI, AutoGen, LangGraph) testados em tarefas reais. 2 funcionam de forma confiável, a maioria falha de maneiras que os demos escondem.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3124,7 +3244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'وكلاء الذكاء الاصطناعي المحليون في ⁨2026⁩: ما يعمل فعلاً (وما يستمر في الفشل)',
     seoTitle: 'وكلاء ⁨AI⁩ محليون ⁨2026⁩: اختبار ⁨6⁩ أطر عمل بصدق',
     intro:
-      'ستة أطر عمل لوكلاء الذكاء الاصطناعي المحليين، وخمس مهام حقيقية، وثلاثون يوماً من التقييم. نجح اثنان في إتمام المهام بشكل موثوق. وأخفق ثلاثة بطرق لا تُظهرها العروض التجريبية. أما الأخير فكان عديم الفائدة عملياً. هذا هو التقرير الأمين: ما الذي تفعله كل إعدادة وكيل فعلياً في مهام إعادة الهيكلة والبحث وفرز البريد والجمع والتلخيص والبحث عن الأخطاء، مع تسمية الإخفاقات صراحةً وقياس تكلفة الإشراف كمياً.',
+      'ستة أطر عمل لوكلاء الذكاء الاصطناعي المحليين، وخمس مهام حقيقية، وثلاثون يوماً من التقييم. نجح اثنان في إتمام المهام بشكل موثوق. وأخفق ثلاثة بطرق لا تُظهرها العروض التجريبية. أما الأخير فكان عديم الفائدة عملياً. هذا هو التقرير الأمين: ما الذي تفعله كل إعدادة وكيل فعلياً في مهام إعادة الهيكلة والبحث وفرز البريد والجمع والتلخيص والبحث عن الأخطاء، مع تسمية الإخفاقات صراحةً وقياس تكلفة الإشراف كمياً. أُقيّم CrewAI وAutoGen/AG2 بشكل منفصل بوصفهما إطاري تنسيق الوكلاء المتعددين الأكثر تساؤلاً من القراء، وهما يؤكدان هذا النمط بدل أن يكسراه.',
     metaDescription:
       'وكلاء ⁨AI⁩ محليون مستقلون، متعددو الخطوات، عابرون للتطبيقات — اختُبروا في ⁨6⁩ أطر عمل و⁨5⁩ مهام حقيقية. نجح اثنان وأخفق ثلاثة بصمت وكان واحد عديم الفائدة.',
     twitterDescription:
@@ -3157,7 +3277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'مقارنة وكلاء نماذج اللغة المحلية',
     ],
     leadAnswerBlock:
-      '**في مايو 2026، يُتمّ اثنان من أطر عمل الوكلاء المحليين العمل الفعلي دون إشراف مستمر: Cline + Ollama وContinue.dev في وضع Agent. كلاهما محدود النطاق وجيد الصيانة ويُشغّل نموذجاً بقدرة استدعاء الأدوات (Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B) داخل محرر واحد مع بوابات موافقة صريحة. يفشل ثلاثة أطر عمل بطرق مفاجئة: LangGraph + Ollama (تنسيق هش على آفاق طويلة)، وOpenInterpreter (ينفّذ أوامر الصدفة بسرعة لا تصلح معها للعمل دون إشراف)، وMetaGPT المحلي (يضيع تمثيل الأدوار متعدد الوكلاء بعد عمليتَي نقل). إطار عمل واحد عديم الفائدة عملياً: AutoGPT المحلي — توقّف المشروع، والاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات دائرية للأدوات في دقائق. النمط ثابت: الأطر المحدودة والمُعِدّة مسبقاً حول نموذج قوي بقدرة استدعاء الأدوات تتفوق على الوكلاء المستقلين الطموحين في كل مهمة نفّذناها.**',
+      '**في مايو 2026، يُتمّ اثنان من أطر عمل الوكلاء المحليين العمل الفعلي دون إشراف مستمر: Cline + Ollama وContinue.dev في وضع Agent. كلاهما محدود النطاق وجيد الصيانة ويُشغّل نموذجاً بقدرة استدعاء الأدوات (Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B) داخل محرر واحد مع بوابات موافقة صريحة. يفشل ثلاثة أطر عمل بطرق مفاجئة: LangGraph + Ollama (تنسيق هش على آفاق طويلة)، وOpenInterpreter (ينفّذ أوامر الصدفة بسرعة لا تصلح معها للعمل دون إشراف)، وMetaGPT المحلي (يضيع تمثيل الأدوار متعدد الوكلاء بعد عمليتَي نقل). إطار عمل واحد عديم الفائدة عملياً: AutoGPT المحلي — توقّف المشروع، والاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات دائرية للأدوات في دقائق. وإطارا تنسيق الوكلاء المتعددين المُقيَّمان بشكل منفصل — CrewAI وAutoGen/AG2 — يؤكدان هذا النمط بدل أن يكسراه: كلاهما يعمل في خطوط الإنتاج المكتوبة سلفاً ذات الخطوات المحددة النوع، ويعانيان من انجراف حالة التسليم ذاته الذي يعانيه MetaGPT عندما يُطلب منهما تقسيم عمل مفتوح بمفردهما. النمط ثابت: الأطر المحدودة والمُعِدّة مسبقاً حول نموذج قوي بقدرة استدعاء الأدوات تتفوق على الوكلاء المستقلين الطموحين في كل مهمة نفّذناها.**',
     quickAnswerTop: {
       ar: {
         question: 'هل تعمل وكلاء الذكاء الاصطناعي المستقلون المحليون فعلاً في 2026؟',
@@ -3167,7 +3287,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'اثنان يُسلّمان عملاً حقيقياً: Cline + Ollama وContinue.dev Agent. كلاهما محدود النطاق لبيئة تطوير واحدة، ويُشغّل نموذجاً بقدرة استدعاء الأدوات، ويستلزم موافقة بشرية لكل خطوة.',
           'ثلاثة تفشل بطرق غير واضحة: LangGraph + Ollama (هش على آفاق طويلة)، وOpenInterpreter (متسرّع جداً في تنفيذ الصدفة)، وMetaGPT المحلي (تمثيل الأدوار متعدد الوكلاء ينهار).',
           'AutoGPT المحلي عديم الفائدة عملياً في مايو 2026 — مشروع متوقف، اعتماديات مكسورة، حلقة التخطيط تنجرف في دقائق.',
-          'موثوقية استدعاء الأدوات تأتي من النموذج لا من الإطار. Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تعمل في أي من الأطر الموثوقة. النماذج دون 7B تفشل في جميعها.',
+          'موثوقية استدعاء الأدوات تأتي من النموذج لا من الإطار. Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تعمل في أي من الأطر الموثوقة. النماذج دون 7B (مثل Gemma 3 2B) تفشل في جميعها.',
+          'CrewAI وAutoGen/AG2 (المُقيَّمان بشكل منفصل) يُظهران النمط ذاته: خطوط الإنتاج المكتوبة سلفاً ذات الخطوات المحددة النوع تعمل؛ أما عمل الفريق المستقل متعدد الوكلاء فلا، لأسباب انجراف حالة التسليم ذاتها التي يعانيها MetaGPT.',
           'تكلفة الإشراف هي المقياس المهم. "أفضل" وكيل هو ذاك الذي تقرأ موافقاته فعلاً، لا الذي لديه أطول تشغيل مستقل.',
           'التوقعات لـ2027: التخطيط طويل الأمد سيتحسن تدريجياً. الاستقلالية دون إشراف في المهام الحقيقية لن تحدث هذا العام بغض النظر عمّا تُظهره العروض.',
         ],
@@ -3184,6 +3305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ما يفشل: LangGraph + Ollama', anchor: '#langgraph' },
       { label: 'ما يفشل: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'ما يفشل: MetaGPT المحلي', anchor: '#metagpt' },
+      { label: 'تنسيق الوكلاء المتعددين: CrewAI وAutoGen/AG2', anchor: '#multi-agent-orchestration' },
       { label: 'عديم الفائدة: AutoGPT المحلي', anchor: '#autogpt' },
       { label: 'لماذا تبدو عروض الوكلاء أفضل من الواقع', anchor: '#demos-vs-reality' },
       { label: 'تكلفة الإشراف هي المقياس الحقيقي', anchor: '#supervision-cost' },
@@ -3205,7 +3327,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**اثنان يُسلّمان عملاً حقيقياً في مايو 2026:** Cline + Ollama (وكيل برمجة مستقل داخل VS Code) وContinue.dev في وضع Agent. كلاهما محدود النطاق لمحرر واحد ونموذج واحد وبوابة موافقة لكل خطوة.',
           '**ثلاثة يفشلون بطرق مفاجئة:** تنسيق LangGraph + Ollama هش ما وراء آفاق 4–5 خطوات، وOpenInterpreter ينفّذ أوامر الصدفة بسرعة تجعله خطراً دون إشراف، وتمثيل الأدوار متعدد الوكلاء في MetaGPT المحلي ينهار بعد عمليتَي نقل.',
           '**إطار عمل واحد عديم الفائدة:** AutoGPT المحلي مهجور عملياً — الاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات أدوات دائرية في دقائق، ولا يوجد مُعتمد يرد على المشكلات.',
-          '**موثوقية استدعاء الأدوات خاصية نموذجية لا إطارية.** Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تُصدر استدعاءات أدوات نظيفة في كل الأطر الموثوقة. النماذج دون 7B تُصدر استدعاءات مشوّهة بصرف النظر عن الوكيل الذي يلفّها.',
+          '**CrewAI وAutoGen/AG2 يؤكدان النمط ولا يكسرانه.** بتقييم منفصل عن مجموعة الأطر الستة: يعمل CrewAI Flows وأنماط AutoGen/AG2 المكتوبة سلفاً في خطوط الإنتاج الحتمية (كما LangGraph)؛ أما أنماطهما المستقلة من نوع "Crew"/محادثة متعددة الوكلاء فتعاني من انجراف حالة التسليم ذاته الذي يعانيه MetaGPT.',
+          '**موثوقية استدعاء الأدوات خاصية نموذجية لا إطارية.** Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تُصدر استدعاءات أدوات نظيفة في كل الأطر الموثوقة. النماذج دون 7B (مثل Gemma 3 2B) تُصدر استدعاءات مشوّهة بصرف النظر عن الوكيل الذي يلفّها.',
           '**نموذج "المساعد تحت الإشراف" يفوز في 2026.** الوكلاء الذين يقترحون إجراءات متعددة الخطوات ويتوقفون للموافقة يُكملون مهاماً أكثر ممن يحاولون العمل دون إشراف. هذا حد لخصائص نماذج اللغة في 2026، لا تفضيل واجهة.',
           '**تكلفة الإشراف هي المقياس المهم.** مهمة من 30 دقيقة تستلزم ثلاث موافقات قابلة للتسليم. مهمة من ساعتين تستلزم عشرين موافقة ليست كذلك — أنت من يؤدي العمل والوكيل يُبطّئك فحسب.',
           '**التكلفة حقيقية لكنها صغيرة.** استدلال محلي بالكامل دون إنفاق على الواجهة البرمجية، والكهرباء هي التكلفة الهامشية الوحيدة. استهلاك الرموز لكل مهمة هو القيد — حلقات الوكلاء تحرق 30K–80K رمز في مهمة متعددة الخطوات، فالنماذج ذات سياق 32K تصل للحد سريعاً بينما 128K مريحة.',
@@ -3218,7 +3341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأطر المختبرة:** Cline + Ollama، وContinue.dev Agent، وLangGraph + Ollama (مخصّص)، وAutoGPT المحلي، وOpenInterpreter، وMetaGPT المحلي.',
           '**المهام المختبرة:** بحث في موضوع، وإعادة هيكلة متعددة الملفات، وفرز مسودات البريد، وجمع وتلخيص، وتصحيح أخطاء.',
           '**الأجهزة:** Apple M5 Max 64 GB ذاكرة موحّدة وجهاز بـ2× NVIDIA RTX 3090 24 GB؛ كلاهما يُشغّل Qwen3-Coder 30B Q4_K_M بارتياح بسياق 32K.',
-          '**النماذج:** Qwen3-Coder 30B (الرئيسي)، وGLM-4.7 32B، وGemma 4 27B، وLlama 3.3 70B (الأدوات الاستدعائية الموثوقة الأربعة في مايو 2026).',
+          '**النماذج:** Qwen3-Coder 30B (الرئيسي)، وGLM-4.7 32B، وGemma 4 27B، وLlama 3.3 70B (الأدوات الاستدعائية الموثوقة الأربعة في مايو 2026). ظهرت منذئذٍ GLM-5.1/5.2 وKimi K2.6 وDeepSeek V4 كجيل جديد من نماذج استدعاء الأدوات مفتوحة الأوزان؛ قِيست الأحكام أعلاه وفق مجموعة نماذج مايو 2026 ولم تُختبر مجدداً معها.',
           '**شكل الحكم:** إطاران موثوقان في المهام الخمس، وثلاثة موثوقان في 1–2 مهمة لكل منهما، وإطار واحد عديم الفائدة.',
           '**النطاق العابر للتطبيقات:** يمتد الإطاران الموثوقان إلى ما وراء المحرر عبر خوادم ⁨MCP⁩ (نظام الملفات، وقاعدة بيانات ⁨sqlite⁩، والمتصفح) — ليتحوّل وكيل برمجة أحادي التطبيق إلى وكيل ⁨local-first⁩ متعدد الخطوات يقرأ ويقرر وينفّذ عبر أدوات متعددة دون مغادرة جهازك.',
           '**التكلفة:** 0 دولار في رسوم الواجهة البرمجية. ~0.10–0.30 دولار كهرباء لكل مهمة متعددة الخطوات على جهاز سطح مكتب بوحدة GPU بـ350W (أقل من 0.05 دولار على Mac).',
@@ -3244,7 +3367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'reality-table',
         title: 'جدول واقعية الوكلاء: ستة أطر، خمس مهام، أحكام صادقة',
         content:
-          '**إطاران ينجزان العمل؛ ثلاثة تعثر بطرق مختلفة؛ وواحد معطوب.** عمود الحكم هو ما يُقرأ أولاً.',
+          '**إطاران ينجزان العمل؛ ثلاثة تعثر بطرق مختلفة؛ وواحد معطوب.** عمود الحكم هو ما يُقرأ أولاً. أُقيّم CrewAI وAutoGen/AG2 — إطارا تنسيق الوكلاء المتعددين الأكثر تساؤلاً من القراء — بشكل منفصل؛ انظر [تنسيق الوكلاء المتعددين: CrewAI وAutoGen/AG2](#multi-agent-orchestration) أدناه.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3386,6 +3509,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لتقنيات الموجّهات التي تُحسّن موثوقية أي حلقة وكيل واحد، راجع [prompting التفكير المتسلسل](/ar/prompt-engineering/chain-of-thought-prompting) — نفس نمط التفكير المنظّم الذي يساعد النموذج على التفكير يساعد وكيلاً واحداً على التماسك.',
         ],
       },
+      multiAgentOrchestration: {
+        id: 'multi-agent-orchestration',
+        title: 'تنسيق الوكلاء المتعددين وراء LangGraph: CrewAI وAutoGen/AG2',
+        content:
+          '**يجيب CrewAI وAutoGen/AG2 عن سؤال "أفضل إطار تنسيق للوكلاء المتعددين محلياً" بنفس طريقة LangGraph وMetaGPT: قادران على خطوط الإنتاج المكتوبة سلفاً والحتمية، وغير موثوقين لعمل الفريق المستقل متعدد الوكلاء.** بتقييمهما بشكل منفصل عن مجموعة الأطر الستة الأصلية، يؤكد الإطاران النمط ذاته بدل أن يكسراه.',
+        items: [
+          '**CrewAI + Ollama:** أسهل أطر الوكلاء المتعددين توجيهاً نحو نموذج محلي — تكاملات Ollama وLiteLLM موثّقة وناضجة. تصميم CrewAI ذو الطبقتين مهم: "Crews" (وكلاء مستقلون يمثّلون أدواراً ويتفاوضون على خطوتهم التالية بأنفسهم) يرثون انجراف حالة التسليم ذاته الذي يعانيه MetaGPT؛ أما "Flows" (تسلسلات خطوات يحددها المطوّر وتُدار بالأحداث، بوكلاء كعُقد محددة النوع) فتتصرف أشبه بـLangGraph وتصمد لأن المطوّر — لا النموذج — هو من يقرر ما يحدث تالياً.',
+          '**موثوقية CrewAI:** تُبلغ فرق الإنتاج عن إتمام الوكلاء نحو 80% من عمليات التشغيل — فجوة كبيرة لأي شيء دون إشراف. أكثر الإخفاقات الصامتة شيوعاً هو عدم تطابق اسم النموذج بين إعدادات CrewAI وما حمّله Ollama فعلياً؛ وعندما لا يعمل خادم Ollama، يظهر الخلل عند أول استدعاء أداة دون أي تحذير سابق.',
+          '**AutoGen/AG2 + Ollama:** استدعاء الأدوات الأصلي مقابل Ollama مدعوم منذ Ollama 0.3.1 (`pip install pyautogen[ollama]`)، مع مسار نقطة نهاية متوافقة مع OpenAI متاح بدءاً من AG2 0.28+ وOllama 0.5.7+. الإعداد أكثر موثوقية من CrewAI في اختباراتنا غير الرسمية — أجزاء متحركة أقل، وفئة عميل واحدة (`api_type="ollama"`) — لكن نمط المحادثة متعددة الوكلاء الأساسي (وكلاء يتناقشون حول خطة عبر أدوار) يصطدم بسقف انجراف الشخصية ذاته الذي يصطدم به MetaGPT بعد بضعة أدوار.',
+          '**أين يُنجز الإطاران فعلياً:** خطوط إنتاج حتمية بعدد ثابت من الخطوات المحددة النوع وحزمة اختبارات — مهمة إثراء بيانات تُعاد تشغيلها بنظافة من أي خطوة، أو موجّه تذاكر دعم بثلاث أدوات ثابتة. إنه نفس الشكل الذي يفوز فيه LangGraph، لنفس السبب: الإنسان قرر تدفق التحكم، والنموذج يملأ فقط فتحات محددة النوع.',
+          '**أين يفشل الإطاران كما يفشل MetaGPT:** مهام من نوع "أعطِ الفريق هدفاً ودع الوكلاء يقررون تقسيم العمل بأنفسهم". حالة التسليم — ما تعلّمه وكيل وما نقله للتالي — تبقى الحلقة الأضعف، بصرف النظر عن الإطار الذي يلفّها.',
+          '**الحكم:** إذا كان "أفضل إطار تنسيق للوكلاء المتعددين محلياً" يعني إطاراً لخط إنتاج بخطوات محددة النوع، فإن CrewAI Flows أو AutoGen/AG2 خياران معقولان إلى جانب LangGraph — اختر بناءً على أعراف بايثون في فريقك، لا وفق منافسة مُقيَّمة، لأن الثلاثة تتقارب نحو سقف الموثوقية ذاته بمجرد أن يصبح سير العمل مكتوباً سلفاً. أما إذا كان يعني وكلاء مستقلين يقسّمون مهمة مفتوحة بأنفسهم، فلا أحد من الثلاثة وصل إلى ذلك بعد.',
+        ],
+      },
       autogpt: {
         id: 'autogpt',
         title: 'عديم الفائدة: AutoGPT المحلي مهجور عملياً',
@@ -3459,6 +3596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'وضعك': 'أريد وكيلاً يستطيع التحكم في متصفح والاستعلام من قاعدة بيانات وقراءة ملفات', 'الاختيار': 'Cline + Ollama مع خوادم MCP متصلة (نظام ملفات، sqlite، puppeteer)' },
           { 'وضعك': 'أريد REPL محلياً لـ"مترجم الكود" — كتابة كود وتشغيله والتكرار', 'الاختيار': 'OpenInterpreter، لكن لا تتركه دون إشراف' },
           { 'وضعك': 'لديّ سير عمل إنتاجي بأدوات حتمية وأحتاج تنسيقاً', 'الاختيار': 'LangGraph + Ollama، مع مجموعة اختبار حقيقية للرسم البياني' },
+          { 'وضعك': 'أريد إطار تنسيق للوكلاء المتعددين (CrewAI أو AutoGen/AG2) لخط إنتاج بخطوات ثابتة', 'الاختيار': 'CrewAI Flows أو AutoGen/AG2 بخطوات محددة النوع ومجموعة اختبار — نفس سقف الموثوقية لـLangGraph، اختر بناءً على أعراف فريقك' },
           { 'وضعك': 'أريد وكلاء مستقلين بلا إشراف يُسلّمون عملاً ليلاً', 'الاختيار': 'انتظر. إطار 2026 لا يوفّر هذا. استخدم أطراً خاضعة للإشراف بدلاً.' },
           { 'وضعك': 'أريد تقييم AutoGPT أو MetaGPT للعمل الحقيقي', 'الاختيار': 'تجاهل الاثنين. AutoGPT بلا صيانة؛ تجريد MetaGPT متعدد الوكلاء لا يصمد.' },
         ],
@@ -3481,7 +3619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأخطاء الشائعة في اختيار الوكلاء المحليين وتشغيلهم',
         items: [
           '**الخطأ الأول: تحسين الاستقلالية.** "كم يعمل دون إشراف؟" هو المقياس الخاطئ. "بكم موافقة يُكمل المهمة؟" هو الصحيح. اختيار إطار بناءً على معايير الاستقلالية يُعطيك AutoGPT؛ الاختيار بناءً على تكلفة الإشراف يُعطيك Cline.',
-          '**الخطأ الثاني: نماذج صغيرة لعمل استدعاء الأدوات.** أي شيء دون 7B (ومعظم نماذج الأغراض العامة من 7B–13B بلا ضبط دقيق لاستدعاء الأدوات) تُصدر استدعاءات مشوّهة. استخدم Qwen3-Coder 30B أو GLM-4.7 32B أو Gemma 4 27B أو Llama 3.3 70B وأوقف نزالك مع الإطار.',
+          '**الخطأ الثاني: نماذج صغيرة لعمل استدعاء الأدوات.** أي شيء دون 7B (مثل Gemma 3 2B) — ومعظم نماذج الأغراض العامة من 7B–13B بلا ضبط دقيق لاستدعاء الأدوات — تُصدر استدعاءات مشوّهة. استخدم Qwen3-Coder 30B أو GLM-4.7 32B أو Gemma 4 27B أو Llama 3.3 70B وأوقف نزالك مع الإطار.',
           '**الخطأ الثالث: سياق 32K للعمل متعدد الملفات.** Cline ينقل محتوى الملفات كاملاً للمحادثة؛ مهمة 8 ملفات قد تتجاوز 32K رمز قبل التفكير. استخدم نموذجاً بسياق 128K (DeepSeek Coder V3 أو Llama 3.3 70B) للمهام متعددة الملفات غير البسيطة.',
           '**الخطأ الرابع: الموافقة التلقائية على كل شيء.** زر "الموافقة على الكل" هو المنحدر الذي يقود إلى "الوكيل حذف ملفاتي". وافق تلقائياً على أدوات القراءة فحسب؛ استلزم موافقة يدوية للكتابة والصدفة.',
           '**الخطأ الخامس: الكتابة في قواعد بيانات الإنتاج من وكيل.** شغّل دوراً للقراءة فقط افتراضياً. دور كتابة منفصل موجود فقط لمدة المهام التي تستلزمه صراحةً. تكلفة كتابة خاطئة غير محدودة.',
@@ -3499,6 +3637,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[وثائق LangGraph](https://langchain-ai.github.io/langgraph/) — مكتبة التنسيق، ودلالات آلة الحالات، ومقاطعات البشر في الحلقة.',
           '[مستودع OpenInterpreter على GitHub](https://github.com/OpenInterpreter/open-interpreter) — وكيل تنفيذ الكود، وأوضاع الأمان، وتكامل النماذج المحلية.',
           '[مستودع MetaGPT على GitHub](https://github.com/geekan/MetaGPT) — إطار متعدد الوكلاء، وتعريفات الأدوار، وإعداد المزوّد المحلي.',
+          '[توثيق CrewAI](https://docs.crewai.com/) — بنية Crews مقابل Flows، والتكامل المحلي مع Ollama/LiteLLM.',
+          '[دليل Ollama في AG2 (AutoGen)](https://docs.ag2.ai/latest/docs/user-guide/models/ollama/) — استدعاء الأدوات الأصلي، وإعداد نقطة نهاية متوافقة مع OpenAI للنماذج المحلية.',
           '[مكتبة نماذج Ollama](https://ollama.com/library) — النماذج المحلية المتاحة، ومؤشرات دعم استدعاء الأدوات، وخيارات التكميم.',
         ],
       },
@@ -3535,6 +3675,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'في القدرة المطلقة، نعم — نماذج الحدود السحابية لا تزال تتفوق على أي نموذج محلي من فئة 30B في أصعب المهام. في العمل اليومي الخاضع للإشراف الفجوة أضيق مما تُشير العروض. Cline + Qwen3-Coder 30B يُكمل 13–15 من 15 إعادة هيكلة متعددة الملفات؛ المهمة ذاتها في Cline + Claude أو GPT-5 تُكمل 14–15 من 15. التوازن يُفضّل المحلي لمستخدمي البيانات الخاصة أو من ليس لديهم ميزانية واجهة برمجية أو من لديهم متطلبات صارمة للعمل بلا اتصال.',
           },
           {
+            q: 'هل CrewAI أو AutoGen أفضل من LangGraph لتنسيق الوكلاء المتعددين محلياً؟',
+            a: 'لا أحد منها أفضل بشكل حاسم — تصطدم الثلاثة بالسقف ذاته بمجرد أن تطلب من الوكلاء تقسيم مهمة مفتوحة بأنفسهم. يعمل CrewAI Flows، وأنماط المحادثة المكتوبة سلفاً في AutoGen/AG2، ورسوم الحالة في LangGraph جيداً لخطوط الإنتاج الحتمية بعدد ثابت من الخطوات المحددة النوع وحزمة اختبارات. تُظهر الثلاثة انجراف حالة التسليم ذاته الذي يعانيه MetaGPT عند استخدامها لعمل مستقل بتقسيم عمل غير محدد. اختر بناءً على أعراف بايثون التي يستخدمها فريقك بالفعل ومقدار تدفق التحكم الذي أنت مستعد لكتابته بنفسك — لا بناءً على أي إطار يَعِد بأكبر قدر من الاستقلالية.',
+          },
+          {
             q: 'هل تستطيع الوكلاء التعامل مع الأخطاء بأناقة؟',
             a: 'بشكل متباين. Cline وContinue.dev Agent يتعافيان جيداً من أخطاء الأدوات — يعرض الإطار الخطأ، ويقترح النموذج خطوة تصحيحية، ويوافق البشر. LangGraph + Ollama يتعافى بقدر ما يُعرّفه رسمك البياني؛ خطأ أداة غير معالج يدخل في حلقة. AutoGPT المحلي لا يتعافى إطلاقاً؛ ينجرف. التعامل مع الأخطاء خاصية إطار بقدر ما هي خاصية نموذج.',
           },
@@ -3565,11 +3709,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'وكلاء الذكاء الاصطناعي المحليون في 2026: ما يعمل فعلاً (وما يستمر في الفشل)',
-      description: '6 أطر عمل لوكلاء الذكاء الاصطناعي المحليين اختُبرت في 5 مهام حقيقية. نجح اثنان بموثوقية، وأخفق ثلاثة بطرق تُخفيها العروض، وكان واحد عديم الفائدة. Cline وLangGraph وAutoGPT وMetaGPT تحت التقييم.',
+      description: 'وكلاء ذكاء اصطناعي محليون وتنسيق وكلاء متعددين (Cline وCrewAI وAutoGen وLangGraph) اختُبروا في مهام حقيقية. نجح اثنان بموثوقية، وأخفقت الأغلبية بطرق تُخفيها العروض.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3584,7 +3728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026년 로컬 AI 에이전트: 실제로 작동하는 것과 여전히 실패하는 것',
     seoTitle: '2026년 로컬 AI 에이전트: 작동하는 것 vs. 실패하는 것',
     intro:
-      '6가지 로컬 AI 에이전트 스택, 5가지 실제 작업, 30일간의 평가를 진행하였습니다. 두 가지 스택은 작업을 안정적으로 완료합니다. 세 가지는 데모에서 드러나지 않는 방식으로 실패합니다. 하나는 사실상 사용 불가 수준입니다. 이것은 정직한 보고서입니다. 리팩터링, 리서치 작업, 이메일 트리아지, 스크레이프-요약, 버그 수색 등 각 에이전트 구성이 실제로 무엇을 하는지, 실패 사례를 구체적으로 명시하고 감독 비용을 정량화하였습니다.',
+      '6가지 로컬 AI 에이전트 스택, 5가지 실제 작업, 30일간의 평가를 진행하였습니다. 두 가지 스택은 작업을 안정적으로 완료합니다. 세 가지는 데모에서 드러나지 않는 방식으로 실패합니다. 하나는 사실상 사용 불가 수준입니다. 이것은 정직한 보고서입니다. 리팩터링, 리서치 작업, 이메일 트리아지, 스크레이프-요약, 버그 수색 등 각 에이전트 구성이 실제로 무엇을 하는지, 실패 사례를 구체적으로 명시하고 감독 비용을 정량화하였습니다. 독자들이 가장 많이 묻는 멀티에이전트 오케스트레이션 프레임워크인 CrewAI와 AutoGen/AG2를 별도로 평가했으며, 이들은 이 패턴을 깨뜨리는 것이 아니라 확인해줍니다.',
     metaDescription:
       '자율적이고 다단계이며 앱을 넘나드는 로컬 AI 에이전트 스택 6개를 실제 작업 5가지로 테스트하였습니다. 2개는 작동, 3개는 숨겨진 방식으로 실패, 1개는 사용 불가.',
     twitterDescription:
@@ -3617,7 +3761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 llm 에이전트 비교',
     ],
     leadAnswerBlock:
-      '**2026년 5월 기준, 두 가지 로컬 에이전트 스택이 지속적인 감독 없이 실제 작업을 완수합니다: Cline + Ollama와 Continue.dev Agent 모드입니다. 두 스택 모두 범위가 제한되어 있고, 잘 유지 관리되며, 하나의 에디터 내에서 명시적인 승인 게이트를 통해 tool-calling 모델(Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B)을 실행합니다. 세 가지 스택은 놀라운 방식으로 실패합니다. LangGraph + Ollama(오케스트레이션이 긴 계획 범위에서 취약함), OpenInterpreter(감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행함), MetaGPT local(두 번의 핸드오프 후 멀티에이전트 역할극이 방향을 잃음)입니다. 한 가지 스택은 사실상 사용 불가입니다: AutoGPT-local — 프로젝트가 정체되었고, 의존성이 최신 Ollama와 맞지 않으며, 계획 루프가 몇 분 내에 순환 tool 호출로 표류합니다. 패턴은 일관됩니다: 강력한 tool-calling 모델 주변에 범위가 제한된 주견 있는 하네스가 우리가 실행한 모든 작업에서 야심 찬 자율 에이전트를 능가합니다.**',
+      '**2026년 5월 기준, 두 가지 로컬 에이전트 스택이 지속적인 감독 없이 실제 작업을 완수합니다: Cline + Ollama와 Continue.dev Agent 모드입니다. 두 스택 모두 범위가 제한되어 있고, 잘 유지 관리되며, 하나의 에디터 내에서 명시적인 승인 게이트를 통해 tool-calling 모델(Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B)을 실행합니다. 세 가지 스택은 놀라운 방식으로 실패합니다. LangGraph + Ollama(오케스트레이션이 긴 계획 범위에서 취약함), OpenInterpreter(감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행함), MetaGPT local(두 번의 핸드오프 후 멀티에이전트 역할극이 방향을 잃음)입니다. 한 가지 스택은 사실상 사용 불가입니다: AutoGPT-local — 프로젝트가 정체되었고, 의존성이 최신 Ollama와 맞지 않으며, 계획 루프가 몇 분 내에 순환 tool 호출로 표류합니다. 별도로 평가한 멀티에이전트 오케스트레이션 프레임워크인 CrewAI와 AutoGen/AG2는 이 패턴을 깨뜨리는 것이 아니라 확인해줍니다. 둘 다 타입이 지정된 단계로 스크립트화된 파이프라인에서는 작동하지만, 개방형 작업의 분담을 스스로 결정하도록 요청받으면 MetaGPT와 동일한 핸드오프 상태 표류를 겪습니다. 패턴은 일관됩니다: 강력한 tool-calling 모델 주변에 범위가 제한된 주견 있는 하네스가 우리가 실행한 모든 작업에서 야심 찬 자율 에이전트를 능가합니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년에 로컬 자율 AI 에이전트가 실제로 작동합니까?',
@@ -3627,7 +3771,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '실제 작업을 완수하는 두 스택: Cline + Ollama와 Continue.dev Agent. 두 스택 모두 단일 IDE로 범위가 제한되고, tool-calling 모델을 실행하며, 단계마다 인간 승인이 필요합니다.',
           '세 가지 스택이 명확하지 않은 방식으로 실패합니다: LangGraph + Ollama(긴 계획 범위에서 취약), OpenInterpreter(셸 실행에 너무 적극적), MetaGPT local(멀티에이전트 역할극 붕괴).',
           'AutoGPT-local은 2026년 5월 기준 사실상 사용 불가입니다. 프로젝트가 정체되고, 의존성이 깨졌으며, 계획 루프가 몇 분 내에 표류합니다.',
-          'Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 어떤 스택에서든 작동합니다. 7B 이하 모델은 모든 스택에서 실패합니다.',
+          'Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 어떤 스택에서든 작동합니다. 7B 이하 모델(예: Gemma 3 2B)은 모든 스택에서 실패합니다.',
+          'CrewAI와 AutoGen/AG2(별도로 평가)는 동일한 패턴을 보입니다. 타입이 지정된 단계로 스크립트화된 파이프라인은 작동하지만, 자율적인 멀티에이전트 팀워크는 MetaGPT와 동일한 핸드오프 상태 이유로 작동하지 않습니다.',
           '감독 비용이 중요한 지표입니다. "최고의" 에이전트는 자율 실행 시간이 가장 긴 것이 아니라, 실제로 승인을 읽게 되는 것입니다.',
           '2027년 전망: 장기 계획이 점진적으로 개선될 것입니다. 실제 작업에서의 무감독 자율성은 데모가 무엇을 보여주든 올해는 실현되지 않을 것입니다.',
         ],
@@ -3644,6 +3789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '실패하는 것: LangGraph + Ollama', anchor: '#langgraph' },
       { label: '실패하는 것: OpenInterpreter', anchor: '#openinterpreter' },
       { label: '실패하는 것: MetaGPT Local', anchor: '#metagpt' },
+      { label: '멀티에이전트 오케스트레이션: CrewAI 및 AutoGen/AG2', anchor: '#multi-agent-orchestration' },
       { label: '사용 불가: AutoGPT-Local', anchor: '#autogpt' },
       { label: '에이전트 데모가 현실보다 나아 보이는 이유', anchor: '#demos-vs-reality' },
       { label: '감독 비용이 진정한 지표', anchor: '#supervision-cost' },
@@ -3665,7 +3811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2026년 5월 실제 작업을 완수하는 두 가지 스택:** Cline + Ollama(VS Code에서의 자율 코딩 에이전트)와 Continue.dev Agent 모드입니다. 두 스택 모두 하나의 에디터, 하나의 모델, 단계별 하나의 승인 게이트로 범위가 제한됩니다.',
           '**세 가지 스택이 놀라운 방식으로 실패합니다:** LangGraph + Ollama 오케스트레이션은 4–5단계를 초과하는 계획 범위에서 취약하고, OpenInterpreter는 감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행하며, MetaGPT local의 멀티에이전트 역할극은 두 번의 핸드오프 후 붕괴됩니다.',
           '**하나의 스택은 사용 불가입니다:** AutoGPT-local은 사실상 방치되어 있습니다. 의존성이 최신 Ollama와 맞지 않고, 계획 루프가 몇 분 내에 순환 tool 호출로 표류하며, 문제에 응답하는 유지 관리자가 없습니다.',
-          '**Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 모든 스택에서 깔끔한 tool 호출을 실행합니다. 7B 이하 모델은 이를 감싸는 에이전트에 관계없이 잘못 형성된 호출을 실행합니다.',
+          '**CrewAI와 AutoGen/AG2는 패턴을 확인해줄 뿐 깨뜨리지 않습니다.** 6개 스택 코호트와 별도로 평가한 결과: CrewAI Flows와 AutoGen/AG2의 스크립트화된 패턴은 (LangGraph와 마찬가지로) 결정론적 파이프라인에서 작동합니다. 이들의 자율적인 "Crew"/멀티에이전트 대화 모드는 MetaGPT와 동일한 핸드오프 상태 표류를 겪습니다.',
+          '**Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 모든 스택에서 깔끔한 tool 호출을 실행합니다. 7B 이하 모델(예: Gemma 3 2B)은 이를 감싸는 에이전트에 관계없이 잘못 형성된 호출을 실행합니다.',
           '**2026년에는 "감독받는 어시스턴트" 모델이 승리합니다.** 다단계 행동을 제안하고 승인을 위해 멈추는 에이전트가 감독 없이 실행하려는 에이전트보다 더 많은 작업을 완수합니다. 이것은 2026년 LLM 특성의 한계이지 UX 선호도가 아닙니다.',
           '**감독 비용이 중요한 지표입니다.** 세 번의 승인이 필요한 30분 작업은 납품 가능합니다. 스무 번의 승인이 필요한 2시간 작업은 그렇지 않습니다. 당신이 작업을 하고 있고 에이전트는 그저 속도를 늦추고 있는 것입니다.',
           '**비용은 실재하지만 작습니다.** 로컬 추론만, API 지출 없음, 전기가 유일한 한계 비용입니다. 작업당 토큰 소비가 제약입니다. 에이전트 루프는 다단계 작업에서 30K–80K 토큰을 소비하므로 32K context 모델은 빨리 한계에 부딪히고 128K context 모델이 편안합니다.',
@@ -3678,7 +3825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**테스트된 스택:** Cline + Ollama, Continue.dev Agent, LangGraph + Ollama(맞춤형), AutoGPT-local, OpenInterpreter, MetaGPT local.',
           '**테스트된 작업:** 주제 리서치, 다중 파일 리팩터링, 이메일 초안 트리아지, 스크레이프-요약, 버그 디버깅.',
           '**하드웨어:** Apple M5 Max 64 GB 통합 메모리와 2× NVIDIA RTX 3090 24 GB 데스크톱. 두 기기 모두 Qwen3-Coder 30B Q4_K_M을 32K context로 편안하게 실행합니다.',
-          '**모델:** Qwen3-Coder 30B(주), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B(2026년 5월 기준 신뢰할 수 있는 4가지 tool-caller).',
+          '**모델:** Qwen3-Coder 30B(주), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B(2026년 5월 기준 신뢰할 수 있는 4가지 tool-caller). 이후 GLM-5.1/5.2, Kimi K2.6, DeepSeek V4가 차세대 오픈웨이트 tool-caller로 등장했습니다. 위 평가는 2026년 5월 모델 세트로 측정되었으며 이들 모델로 재검증되지 않았습니다.',
           '**평가 형태:** 2개 스택이 5가지 작업 모두에서 신뢰할 수 있고, 3개 스택은 각 1–2가지 작업에서 신뢰할 수 있으며, 1개 스택은 사용 불가입니다.',
           '**앱 간 확장 범위:** 신뢰할 수 있는 2개 스택은 MCP 서버(파일시스템, sqlite/데이터베이스, 브라우저)를 통해 에디터를 넘어 확장되어, 단일 앱 코딩 에이전트를 여러 도구에 걸쳐 읽고 판단하고 실행하는 local-first 다단계 에이전트로 바꿔줍니다.',
           '**비용:** API 수수료 0원. 350W GPU 데스크톱에서 다단계 작업당 약 전기 비용 ~150–450원(Mac에서는 75원 미만).',
@@ -3704,7 +3851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'reality-table',
         title: '에이전트 현실 테이블: 6개 스택, 5가지 작업, 정직한 평가',
         content:
-          '**두 스택은 작업을 완수하고, 세 스택은 각자 다른 방식으로 실패하며, 하나는 망가져 있습니다.** 평가 열을 먼저 읽으십시오.',
+          '**두 스택은 작업을 완수하고, 세 스택은 각자 다른 방식으로 실패하며, 하나는 망가져 있습니다.** 평가 열을 먼저 읽으십시오. 독자들이 가장 많이 묻는 두 가지 멀티에이전트 오케스트레이션 프레임워크인 CrewAI와 AutoGen/AG2는 별도로 평가했습니다. 아래 [멀티에이전트 오케스트레이션: CrewAI 및 AutoGen/AG2](#multi-agent-orchestration)를 참고하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3846,6 +3993,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '단일 에이전트 루프의 신뢰성을 향상시키는 프롬프팅 기법은 [chain-of-thought prompting](/ko/prompt-engineering/chain-of-thought-prompting)을 참조하십시오. 모델이 생각하는 데 도움이 되는 구조화된 추론 패턴과 단일 에이전트가 일관성을 유지하는 데 도움이 되는 패턴이 동일합니다.',
         ],
       },
+      multiAgentOrchestration: {
+        id: 'multi-agent-orchestration',
+        title: 'LangGraph를 넘어선 멀티에이전트 오케스트레이션: CrewAI와 AutoGen/AG2',
+        content:
+          '**CrewAI와 AutoGen/AG2는 "최고의 로컬 멀티에이전트 오케스트레이션 프레임워크"라는 질문에 LangGraph 및 MetaGPT와 동일하게 답합니다: 스크립트화된 결정론적 파이프라인에는 유능하지만, 자율적인 멀티에이전트 팀워크에는 신뢰할 수 없습니다.** 원래의 6개 스택 코호트와 별도로 평가한 결과, 두 프레임워크 모두 패턴을 깨뜨리는 것이 아니라 확인해줍니다.',
+        items: [
+          '**CrewAI + Ollama:** 로컬 모델을 겨냥하기 가장 쉬운 멀티에이전트 프레임워크입니다. Ollama 및 LiteLLM 통합이 문서화되어 있고 성숙합니다. CrewAI의 2계층 설계가 중요합니다. "Crews"(스스로 다음 단계를 협상하는 자율 역할극 에이전트)는 MetaGPT와 동일한 핸드오프 상태 표류를 물려받습니다. "Flows"(개발자가 정의한 이벤트 기반 단계 시퀀스로, 에이전트를 타입이 지정된 노드로 사용)는 LangGraph처럼 동작하며, 모델이 아닌 개발자가 다음에 일어날 일을 결정하기 때문에 안정적입니다.',
+          '**CrewAI 신뢰성:** 프로덕션 팀은 에이전트가 실행의 약 80%를 완료한다고 보고합니다. 이는 감독 없는 작업에 있어 상당한 격차입니다. 가장 흔한 무음 실패는 CrewAI 설정과 실제로 Ollama가 다운로드한 모델 이름 사이의 불일치입니다. Ollama 서버가 실행되지 않을 때 실패는 사전 경고 없이 첫 번째 tool 호출에서 드러납니다.',
+          '**AutoGen/AG2 + Ollama:** Ollama에 대한 네이티브 tool-calling은 Ollama 0.3.1부터 지원됩니다(`pip install pyautogen[ollama]`). OpenAI 호환 엔드포인트 경로는 AG2 0.28+ 및 Ollama 0.5.7+에서 사용할 수 있습니다. 설정은 저희의 비공식 테스트에서 CrewAI보다 더 신뢰할 수 있었습니다. 움직이는 부품이 적고 클라이언트 클래스가 하나뿐입니다(`api_type="ollama"`). 하지만 근본적인 멀티에이전트 대화 패턴(여러 턴에 걸쳐 계획을 논의하는 에이전트)은 몇 턴 후 MetaGPT와 동일한 페르소나 표류 한계에 부딪힙니다.',
+          '**두 프레임워크가 실제로 성과를 내는 곳:** 고정된 수의 타입이 지정된 단계와 테스트 스위트를 갖춘 결정론적 파이프라인입니다. 어느 단계에서든 깔끔하게 재시작되는 데이터 보강 작업, 세 가지 고정 tool을 갖춘 지원 티켓 라우터 등이 그 예입니다. 이는 LangGraph가 승리하는 것과 동일한 형태이며, 이유도 같습니다. 인간이 제어 흐름을 결정했고, 모델은 타입이 지정된 슬롯을 채우기만 합니다.',
+          '**두 프레임워크가 MetaGPT처럼 실패하는 곳:** "크루에게 목표를 주고 에이전트들이 스스로 작업 분담을 결정하게 하라"는 식의 작업입니다. 핸드오프 상태, 즉 한 에이전트가 배운 것과 다음 에이전트에게 전달한 것은 어느 프레임워크가 감싸든 여전히 약한 고리입니다.',
+          '**결론:** "최고의 로컬 멀티에이전트 오케스트레이션 프레임워크"가 타입이 지정된 단계를 가진 프로덕션 파이프라인용 프레임워크를 의미한다면, CrewAI Flows나 AutoGen/AG2는 LangGraph와 함께 합리적인 선택입니다. 워크플로가 스크립트화되면 세 가지 모두 동일한 신뢰성 한계로 수렴하므로, 점수를 매기는 대결이 아니라 팀의 Python 관례에 따라 선택하십시오. 개방형 작업을 스스로 분담하는 자율 에이전트를 의미한다면, 세 가지 중 어느 것도 아직 거기에 도달하지 못했습니다.',
+        ],
+      },
       autogpt: {
         id: 'autogpt',
         title: '사용 불가: AutoGPT-Local은 사실상 방치 상태',
@@ -3919,6 +4080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': '브라우저를 제어하고, 데이터베이스를 쿼리하고, 파일을 읽을 수 있는 에이전트가 필요함', '선택': 'MCP 서버(파일 시스템, sqlite, puppeteer)가 연결된 Cline + Ollama' },
           { '상황': '"코드 인터프리터" 로컬 REPL이 필요함: 코드 작성, 코드 실행, 반복', '선택': 'OpenInterpreter, 단 감독 없이 방치하지 않기' },
           { '상황': '결정론적 도구가 있는 프로덕션 워크플로가 있고 오케스트레이션이 필요함', '선택': '그래프에 대한 실제 테스트 스위트와 함께 LangGraph + Ollama' },
+          { '상황': '고정된 단계를 가진 프로덕션 파이프라인을 위한 멀티에이전트 오케스트레이션 프레임워크(CrewAI, AutoGen/AG2)가 필요함', '선택': '타입이 지정된 단계와 테스트 스위트를 갖춘 CrewAI Flows 또는 AutoGen/AG2 — LangGraph와 동일한 신뢰성 한계이므로 팀의 관례에 따라 선택' },
           { '상황': '밤새 작업을 제공하는 무감독 자율 에이전트가 필요함', '선택': '기다리십시오. 2026년 스택은 이것을 제공하지 않습니다. 대신 감독받는 스택을 사용하십시오.' },
           { '상황': '실제 작업을 위해 AutoGPT나 MetaGPT를 평가하고 싶음', '선택': '두 가지 모두 건너뛰십시오. AutoGPT는 유지 관리되지 않으며, MetaGPT의 멀티에이전트 추상화는 지속되지 않습니다.' },
         ],
@@ -3941,7 +4103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '로컬 에이전트를 선택하고 실행할 때의 흔한 실수',
         items: [
           '**실수 1: 자율성 최적화.** "감독 없이 얼마나 오래 실행할 수 있나?"는 잘못된 지표입니다. "작업을 완수하기 위한 승인 횟수?"가 올바릅니다. 자율성 벤치마크로 스택을 선택하면 AutoGPT가 됩니다. 감독 비용으로 선택하면 Cline이 됩니다.',
-          '**실수 2: tool-calling 작업에 소형 모델 사용.** 7B 이하(그리고 tool-calling fine-tuning 없는 대부분의 7B–13B 범용 모델)는 잘못 형성된 tool 호출을 실행합니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B를 사용하고 하네스와 싸우는 것을 멈추십시오.',
+          '**실수 2: tool-calling 작업에 소형 모델 사용.** 7B 이하(예: Gemma 3 2B) 및 tool-calling fine-tuning 없는 대부분의 7B–13B 범용 모델은 잘못 형성된 tool 호출을 실행합니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B를 사용하고 하네스와 싸우는 것을 멈추십시오.',
           '**실수 3: 다중 파일 작업에 32K context 사용.** Cline이 전체 파일 내용을 대화로 스트리밍합니다. 8개 파일 작업이 추론 전에 32K 토큰을 소진할 수 있습니다. 사소하지 않은 다중 파일 작업에는 128K context 모델(DeepSeek Coder V3, Llama 3.3 70B)을 사용하십시오.',
           '**실수 4: 모든 것을 자동으로 승인.** "모두 승인" 스위치는 "에이전트가 내 파일을 삭제했다"로 이어지는 진입로입니다. 읽기 도구만 자동 승인하고, 쓰기와 셸에는 수동 승인을 요구하십시오.',
           '**실수 5: 에이전트에서 프로덕션 데이터베이스 쓰기.** 기본적으로 읽기 전용 역할을 실행하십시오. 별도의 쓰기 역할은 명시적으로 필요한 작업 기간 동안만 존재합니다. 잘못된 쓰기의 비용은 무제한입니다.',
@@ -3959,6 +4121,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LangGraph 문서](https://langchain-ai.github.io/langgraph/) — 오케스트레이션 라이브러리, 상태 머신 시맨틱, 인간-루프 중단.',
           '[OpenInterpreter GitHub 리포지터리](https://github.com/OpenInterpreter/open-interpreter) — 코드 실행 에이전트, 보안 모드, 로컬 모델 통합.',
           '[MetaGPT GitHub 리포지터리](https://github.com/geekan/MetaGPT) — 멀티에이전트 프레임워크, 역할 정의, 로컬 제공자 설정.',
+          '[CrewAI 문서](https://docs.crewai.com/) — Crews 대 Flows 아키텍처, 로컬 Ollama/LiteLLM 통합.',
+          '[AG2(AutoGen) Ollama 가이드](https://docs.ag2.ai/latest/docs/user-guide/models/ollama/) — 네이티브 tool-calling, 로컬 모델용 OpenAI 호환 엔드포인트 설정.',
           '[Ollama 모델 라이브러리](https://ollama.com/library) — 사용 가능한 로컬 모델, tool-calling 지원 표시, 양자화 옵션.',
         ],
       },
@@ -3995,6 +4159,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '절대적인 능력에서는 그렇습니다. 클라우드의 프론티어 모델이 가장 어려운 작업에서 30B 클래스 로컬 모델보다 계속 능가합니다. 일상적으로 감독받는 작업에서는 격차가 데모가 제시하는 것보다 작습니다. Cline + Qwen3-Coder 30B는 15번의 다중 파일 리팩터링 중 13–15번을 완수합니다. Cline + Claude 또는 GPT-5의 동일한 작업은 15번 중 14–15번을 완수합니다. 개인 데이터, API 예산 없음, 또는 엄격한 오프라인 요구 사항을 가진 사용자에게는 로컬이 더 유리합니다.',
           },
           {
+            q: 'CrewAI나 AutoGen이 로컬 멀티에이전트 오케스트레이션에서 LangGraph보다 낫습니까?',
+            a: '어느 것도 결정적으로 낫지 않습니다. 개방형 작업을 스스로 분담하도록 에이전트에게 요청하는 순간 세 가지 모두 동일한 한계에 부딪힙니다. CrewAI Flows, AutoGen/AG2의 스크립트화된 대화 패턴, LangGraph의 상태 그래프는 모두 고정된 수의 타입이 지정된 단계와 테스트 스위트를 갖춘 결정론적 파이프라인에서 잘 작동합니다. 정의되지 않은 작업 분담을 가진 자율 작업에 사용될 때는 세 가지 모두 MetaGPT와 동일한 핸드오프 상태 표류를 보입니다. 어느 프레임워크가 가장 많은 자율성을 주장하는지가 아니라, 팀이 이미 사용 중인 Python 관례와 제어 흐름을 직접 작성할 의향이 얼마나 있는지에 따라 선택하십시오.',
+          },
+          {
             q: '에이전트가 오류를 우아하게 처리할 수 있습니까?',
             a: '혼합적입니다. Cline과 Continue.dev Agent는 tool 오류에서 잘 회복합니다. 하네스가 오류를 표시하고, 모델이 수정 단계를 제안하며, 인간이 승인합니다. LangGraph + Ollama는 그래프가 정의한 만큼만 회복합니다. 처리되지 않은 tool 오류가 루프에 빠집니다. AutoGPT-local은 전혀 회복하지 못합니다. 표류합니다. 오류 처리는 모델만큼이나 하네스의 특성입니다.',
           },
@@ -4025,11 +4193,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 로컬 AI 에이전트: 실제로 작동하는 것과 여전히 실패하는 것',
-      description: '로컬 AI 에이전트 스택 6개를 실제 작업 5가지로 테스트하였습니다. 2개는 안정적으로 작동하고, 3개는 데모가 숨기는 방식으로 실패하며, 1개는 사용 불가입니다. Cline, LangGraph, AutoGPT, MetaGPT 평가.',
+      description: '로컬 AI 에이전트와 멀티에이전트 오케스트레이션(Cline, CrewAI, AutoGen, LangGraph)을 실제 작업으로 테스트하였습니다. 2개는 안정적으로 작동하고, 대부분은 데모가 숨기는 방식으로 실패합니다.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/autonomous-local-agents-actually-work',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
