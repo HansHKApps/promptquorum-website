@@ -2059,10 +2059,10 @@ schema: {
     },
     ja: {
       theme: 'ベストモデル',
-      title: 'Ollama 2026年6月アップデート：v0.30.8 + トップ10オープンソースモデル',
-      seoTitle: 'Ollama 2026年6月 v0.30.8 アップデート + トップ10モデルランキング',
-      intro: '2026年6月更新。現在のOllamaバージョンはv0.30.8（2026年6月12日リリース）で、llama.cpp経由でGGUFのハードウェア対応を拡大し、Apple Silicon MLXエンジンを強化しました。今月ライブラリに加わった最新モデルはMiniMax M3（6月1日、オープンウェイト、1Mトークンコンテキスト + ネイティブビジョン）、NVIDIA Nemotron 3 Ultra（6月4日）、DeepSeek V4 Proで、Kimi K2.6、Qwen 3.6、GLM-5.1、gpt-oss、Gemma 4に加わります。全体での最多ダウンロードは引き続きLlamaファミリー（Llama 4 Scout、Llama 3.x）、コンシューマーハードウェアでの総合最高はQwen 3.6 27B（77.2% SWE-bench）です。',
-      metaDescription: 'Ollama v0.30.8（2026年6月12日）：新機能、新モデル、トップ10 open sourceランキング — Qwen 3.6 27B、Kimi K2.6、gpt-oss:20b。ベンチマーク + pullコマンド。',
+      title: 'Ollama 2026年7月アップデート：v0.32.0 + トップ10オープンソースモデル',
+      seoTitle: 'Ollama 2026年7月 v0.32.0 アップデート + トップ10モデルランキング',
+      intro: '2026年7月更新。現在のOllamaバージョンはv0.32.0（2026年7月11日リリース）で、「Chat, Code & Work」エージェント体験を導入し、Codex AppはChatGPT Appに改称されました。今月ライブラリに加わった最新モデルはLaguna XS 2.1（Poolside、7月2日、33B総パラメータ/3B活性MoE、エージェント型長期タスク・コーディング向け、256Kコンテキスト）とKimi K2.7 Code（Moonshot AI、Kimi K2.6ベースのコーディング特化エージェントモデル）で、Kimi K2.6、Qwen 3.6、GLM-5.1、gpt-oss、Gemma 4に加わります。全体での最多ダウンロードは引き続きLlamaファミリー（Llama 4 Scout、Llama 3.x）、コンシューマーハードウェアでの総合最高はQwen 3.6 27B（77.2% SWE-bench）です。',
+      metaDescription: 'Ollama v0.32.0（2026年7月11日）：新機能、新モデル、トップ10 open sourceランキング — Qwen 3.6 27B、Laguna XS 2.1、gpt-oss:20b。ベンチマーク + pullコマンド。',
       publishDate: '2026-04-11',
       readTime: '9分で読める',
       educationalLevel: 'ビギナー',
@@ -2087,37 +2087,39 @@ schema: {
             '**推論最強**：DeepSeek-R1（Chain-of-Thought）とgpt-oss:20b（推論調整可能、~o3-miniレベル）。 (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
             '**コーディング最強**：Kimi K2.6（Frontier MoE）、Qwen 3.6 27B（最高密度）、Devstral Small 24B（最高エージェント）、qwen3-coder:30b（補完）。',
             '**小型・16GB最強**：gpt-oss:20b。**ビジョン/マルチモーダル最強**：Gemma 4（E4B以上）。**長コンテキスト（10M）/ 大規模マルチモーダル最強**：Llama 4 Scout（~55GB）。',
-            'Ollamaライブラリ6月2026：4,500+モデル。すべて`ollama pull <名前>`で利用可。',
+            '**うんちく系/検閲なし総合最強**：Dolphin 3.0（`ollama pull dolphin3`）。Cognitive Computationsが保守、Llama 3.1ベース、コンテンツフィルタリングなし。',
+            'Ollamaライブラリ7月2026：数百のモデル。すべて`ollama pull <名前>`で利用可。',
           ],
         },
         whatsNew: {
-          id: 'whats-new-ollama-june-2026',
-          title: 'Ollama最新アップデート — 2026年6月',
+          id: 'whats-new-ollama-july-2026',
+          title: 'Ollama最新アップデート — 2026年7月',
           content: [
-            '**現在のOllamaバージョン：v0.30.8**（2026年6月12日リリース）。これが最新の安定版で、ollama.com/downloadから入手できます。`curl https://ollama.ai/install.sh | sh`（macOS：`brew upgrade ollama`）でアップデートし、`ollama --version`で確認してください。',
-            '**v0.30シリーズでの変更点（2026年5月〜6月）：** Ollama v0.30はllama.cpp経由でGGUFモデルの互換性を拡大し、Apple Silicon以外へのハードウェア対応を広げました。さらにMLXエンジンが2026年6月11日にアップグレードされ、過去最速のApple Silicon推論を実現しました。より少ないメモリでより高品質な出力が得られます。v0.30.8までのポイントリリースでは、Gemma 4 QAT重み（6月5日）、Hermes Desktop（6月7日）、プロンプト/KVキャッシュ再利用の改善、Windowsの設定パス修正が追加されました。詳細：github.com/ollama/ollama/releases。',
-            '**今月追加された最新モデル（2026年6月）：**',
+            '**現在のOllamaバージョン：v0.32.0**（2026年7月11日リリース）。これが最新の安定版で、ollama.com/downloadから入手できます。`curl https://ollama.ai/install.sh | sh`（macOS：`brew upgrade ollama`）でアップデートし、`ollama --version`で確認してください。',
+            '**直近のポイントリリース（2026年6月〜7月）：** v0.30.11（6月25日）はClaude Code/opencodeの自動インストールとWindowsハイブリッドGPU修正を追加。v0.30.12（6月29日）はツール呼び出し検出の不具合を修正。v0.31.1（6月30日）はMLXバッチ行列積カーネルを刷新し、Apple SiliconでのGemma 4推論が約90%高速化。v0.31.2（7月6日）は旧世代NVIDIA GPU向けflash attentionと構造化出力の不具合修正を追加。v0.32.0（7月11日）は「Chat, Code & Work」エージェント体験を導入し、Codex AppはChatGPT Appに改称されました。詳細：github.com/ollama/ollama/releases。',
+            '**今月追加された最新モデル（2026年7月）：**',
           ],
           items: [
-            '**MiniMax M3**（MiniMax、2026年6月1日）— 最新のオープンウェイト旗艦モデル：フロンティアコーディング（SWE-Bench Pro 59.0）、1Mトークンのコンテキストウィンドウ、ネイティブの画像/動画入力を初めて兼ね備えたモデルです。Ollamaライブラリへ順次展開中 — `ollama pull minimax-m3`で利用可否を確認してください。',
-            '**NVIDIA Nemotron 3 Ultra**（NVIDIA、2026年6月4日）— 高スループットの推論と長時間稼働するエージェントワークフロー向けに構築。NVIDIA Open Model License。プル：`ollama pull nemotron3-ultra`',
+            '**Laguna XS 2.1**（Poolside、2026年7月2日）— エージェント型・長期タスクコーディング向けモデル：33B総パラメータ / 3B活性MoE、256Kトークンのコンテキストウィンドウ、SWE-bench Verified 70.9%、SWE-bench Multilingual 63.1%。OpenMDW-1.1ライセンス。プル：`ollama pull laguna-xs-2.1`、実行：`ollama run laguna-xs-2.1`',
+            '**Kimi K2.7 Code**（Moonshot AI、2026年6月頃）— Kimi K2.6をベースに構築されたコーディング特化のエージェントモデル。プル：`ollama pull kimi-k2.7-code`',
             '**DeepSeek V4 Pro**（DeepSeek、2026年4月23日）— アルゴリズミックコーディングの専門モデル、93.5% LiveCodeBench、MITライセンス。軽量ハードウェア向けの廉価版DeepSeek V4 Flashもあります。プル：`ollama pull deepseek-v4-pro`',
             '**Kimi K2.6**（Moonshot AI、2026年4月20日）— フロンティアコーディングモデル、SWE-Bench Pro 58.6、SWE-bench Verified 80.2%。MoEアーキテクチャ（32B活性/1T合計）。Modified MIT ライセンス。',
             '**Qwen 3.6 27B**（Alibaba、2026年4月16日）— コンシューマー向け総合最高、77.2% SWE-bench、Apache 2.0、Q4で24GBに収まる。Qwen3.6-35B-A3B（MoE、73.4 SWE-bench）も。',
             '**GLM-5.1**（Z.ai、2026年4月7日）— 744B / 40B活性MoE、MITライセンス、SWE-Bench Pro 58.4。構造化コード生成リーダー。',
             '**gpt-oss**（OpenAI、2026年）— オープンウェイトMoE：gpt-oss:20b（21B合計 / 3.6B活性、16GBで動作、~o3-miniレベル、推論調整可能）とgpt-oss:120b（80GB）。',
-            '**Gemma 4**（Google、2026年4月2日）— マルチモーダルサイズ E2B / E4B / E12B（26B MoE）/ E27B（31B密度）、すべてビジョンとツール呼び出し対応。QAT重みを2026年6月5日に追加。E4Bは~6GB VRAMで動作。',
+            '**Gemma 4**（Google、2026年4月2日）— マルチモーダルサイズ E2B / E4B / E12B（26B MoE）/ E27B（31B密度）、すべてビジョンとツール呼び出し対応。QAT重みを2026年6月5日に追加。v0.31.1のMLXバッチ行列積カーネル刷新でApple Silicon推論が約90%高速化。E4Bは~6GB VRAMで動作。',
+            '**Dolphin 3.0**（Cognitive Computations、継続保守）— 検閲なし・汎用チャットモデル、Llama 3.1ベース、コンテンツフィルタリングなし。プル：`ollama pull dolphin3`（旧`dolphin-mistral`は2024年の古いモデルのため非推奨）。',
           ],
-          codeBlock: '# Ollamaを最新版にアップデート（v0.30.8）\ncurl https://ollama.ai/install.sh | sh\n\n# またはMac：brew upgrade ollama\n\n# 現在のバージョンを確認\nollama --version  # 出力：ollama version 0.30.8\n\n# 2026年6月の最新モデルをプル\nollama pull minimax-m3\nollama pull deepseek-v4-pro\nollama pull kimi-k2.6',
+          codeBlock: '# Ollamaを最新版にアップデート（v0.32.0）\ncurl https://ollama.ai/install.sh | sh\n\n# またはMac：brew upgrade ollama\n\n# 現在のバージョンを確認\nollama --version  # 出力：ollama version 0.32.0\n\n# 2026年7月の最新モデルをプル\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull dolphin3',
           codeLanguage: 'bash',
         },
         mostPopular: {
           title: 'Ollama最人気モデル',
           content: [
-            '**Ollamaは完全公開ダウンロード統計を提供。** 2026年6月データより：',
+            '**Ollamaは完全公開ダウンロード統計を提供。** 2026年7月データより：',
             '**Llama 3.2 3B**は全体で最多ダウンロード。主にチュートリアルとして使用。コンシューマー向け品質では、Qwen 3.6 27B（77.2% SWE-bench、Q4で24GBに収まる）が現在の総合最良の選択。',
             '**Qwen3・Qwen 3.6**はOllama ライブラリで最速成長のモデルファミリー。Qwen3と新しいQwen 3.6密度バリアントがQwen3を急速に置き換え。DeepSeek-R1はリリース後に大きなスパイクを記録し、推論タスク向けに常に高ダウンロード状態。',
-            '**Meta Llama 4** 2026年4月リリースでScout（17B活性、109B合計、MoE）とMaverick（17B活性、400B合計）を展開。Ollama ライブラリで安定済み（`ollama pull llama4:scout`）。Llama 4はMoEアーキテクチャを採用し、トークンあたり17Bのみが活性だが、109B合計のためScoutはQ4で~55GB VRAMが必要（24GBは1.78ビットのみ、~20 tok/s）。Scoutの強みは10Mトークンのコンテキストとマルチモーダル入力であり、コンシューマーハードウェアへの適合性ではない。Ollama エコシステムは2026年4月に大幅拡張。Kimi K2.6（Moonshot AI、Modified MIT、32B活性/1T合計MoE）はSWE-Bench Pro 58.6を記録しGPT-5.5と同等。Qwen 3.6 27Bは77.2% SWE-benchでコンシューマー向け総合最高を達成（Q4で24GBに収まる）。OpenAIのオープンウェイトgpt-oss:20b（21B合計/3.6B活性MoE）は16GBで~o3-miniレベル、推論調整可能で動作。現在のリリースであるOllama v0.30.8（2026年6月12日）は、llama.cpp経由でGGUFのハードウェア対応を拡大し、Apple Silicon MLXエンジンを強化しています。Ollama ライブラリは現在4,500+モデルを参照しており、今月の最新追加はMiniMax M3、NVIDIA Nemotron 3 Ultra、DeepSeek V4 Proです。',
+            '**Meta Llama 4** 2026年4月リリースでScout（17B活性、109B合計、MoE）とMaverick（17B活性、400B合計）を展開。Ollama ライブラリで安定済み（`ollama pull llama4:scout`）。Llama 4はMoEアーキテクチャを採用し、トークンあたり17Bのみが活性だが、109B合計のためScoutはQ4で~55GB VRAMが必要（24GBは1.78ビットのみ、~20 tok/s）。Scoutの強みは10Mトークンのコンテキストとマルチモーダル入力であり、コンシューマーハードウェアへの適合性ではない。Ollama エコシステムは2026年4月に大幅拡張。Kimi K2.6（Moonshot AI、Modified MIT、32B活性/1T合計MoE）はSWE-Bench Pro 58.6を記録しGPT-5.5と同等。Qwen 3.6 27Bは77.2% SWE-benchでコンシューマー向け総合最高を達成（Q4で24GBに収まる）。OpenAIのオープンウェイトgpt-oss:20b（21B合計/3.6B活性MoE）は16GBで~o3-miniレベル、推論調整可能で動作。現在のリリースであるOllama v0.32.0（2026年7月11日）は「Chat, Code & Work」エージェント体験を導入しました。Ollama ライブラリは現在数百のモデルを参照しており、今月の最新追加はLaguna XS 2.1（Poolside、エージェント型コーディング）とKimi K2.7 Code（Moonshot AI）です。',
           ],
         },
         byCategory: {
@@ -2132,16 +2134,18 @@ schema: {
             '**コード（最高エージェント、24B）**：`ollama run devstral-small:24b` -- 最高エージェントコーディング（マルチファイル編集、デバッグ）。16GB RAM。Mistral AI製。',
             '**コード（最高密集、27B）**：`ollama run qwen3.6:27b` -- 77.2% SWE-bench。最高密集コーディングモデル。22GB VRAM。',
             '**コード（フロンティアMoE）**：`ollama run kimi-k2.6` -- SWE-Bench Pro 58.6（GPT-5.5と同等）、トップティア。MoE（32B活性/1T合計）。Modified MIT License。',
+            '**コード（エージェント型・長期タスク）**：`ollama run laguna-xs-2.1` -- SWE-bench Verified 70.9%、SWE-bench Multilingual 63.1%、256Kコンテキスト。33B総パラメータ/3B活性MoE。OpenMDW-1.1ライセンス。',
             '**エージェント・ツール呼び出し**：`ollama run gemma4:e4b` -- 2026年4月2日リリース。組み込みツール呼び出し+ビジョンサポート。ローカルエージェント、機能呼び出し、構造出力推奨。6GB RAM。',
             '**推論・数学**：`ollama run deepseek-r1:7b` -- Chain-of-Thoughtモデル、ローカル数学最高性能at 7B。',
             '**多言語**：`ollama run qwen3:7b` -- 29+言語対応、非英語対応最強、76% HumanEval。',
-            '**画像理解**：`ollama run gemma4:e4b` -- Vision + Tool Calling（2026年6月）。または `ollama run llama3.2-vision:11b`専用Vision。',
+            '**画像理解**：`ollama run gemma4:e4b` -- Vision + Tool Calling。v0.31.1のMLXカーネル刷新でApple Silicon推論が約90%高速化。または `ollama run llama3.2-vision:11b`専用Vision。',
+            '**うんちく系/検閲なし**：`ollama run dolphin3` -- Dolphin 3.0、Llama 3.1ベース、コンテンツフィルタリングなし。Cognitive Computations製。',
             '**高速・軽量**：`ollama run gemma2:2b` -- 最速CPU推論、1.7GB RAM。',
             '**高品質（16GB RAM）**：`ollama run mistral-small3.1` -- 70B品質に近い14GB RAM。',
             '**ホームオートメーション / ウェイクワードAI**：`ollama run phi4-mini` — Phi-4 Mini（3.8B、VRAM約3 GB）は専用GPUなしのミニPCでHome Assistantの音声コマンドを20〜25 tok/secで処理できます。[Home Assistant + Ollama 統合ガイド →](/smart-home/home-assistant-ollama-integration)をご覧ください。',
           ],
           image: '/images/ollama-model-by-use-case-ja.svg',
-          imageCaption: '用途別Ollamaモデル選択：2026年6月。チャット：llama4:scout、コーディング：qwen3.6:27b、推論：deepseek-r1:7b。',
+          imageCaption: '用途別Ollamaモデル選択：2026年7月。チャット：llama4:scout、コーディング：qwen3.6:27b、推論：deepseek-r1:7b。',
         },
         deepseekR1: {
           title: 'DeepSeek-R1：推論ブレークスルー',
@@ -2198,7 +2202,7 @@ schema: {
         },
         howToBrowse: {
           title: 'Ollama ライブラリの探索方法',
-          content: 'Ollamaモデルの操作には2つの方法があります。**インストール済みモデルの切り替え：** Ollama Macアプリのチャット入力欄下部にあるモデルドロップダウンボタン（例："gemma3:1b"と表示）をクリックして、ローカルにインストールされたモデルを切り替えます。**新しいモデルの検索・ダウンロード：** ollama.com/libraryで4500以上のモデルをカテゴリ別に検索し、以下のCLIコマンドでインストールします。',
+          content: 'Ollamaモデルの操作には2つの方法があります。**インストール済みモデルの切り替え：** Ollama Macアプリのチャット入力欄下部にあるモデルドロップダウンボタン（例："gemma3:1b"と表示）をクリックして、ローカルにインストールされたモデルを切り替えます。**新しいモデルの検索・ダウンロード：** ollama.com/libraryで数百のモデルをカテゴリ別に検索し、以下のCLIコマンドでインストールします。',
           codeBlock: `ollama list
 # インストール済みモデル表示
 
@@ -2215,7 +2219,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
 # CoTで推論タスク実行`,
           codeLanguage: 'bash',
           items: [
-            'ブラウザで https://ollama.ai/library を開く。4500+モデル検索可能。',
+            'ブラウザで https://ollama.ai/library を開く。数百のモデル検索可能。',
             'フィルタオプション：モデルサイズ、ライセンス、リリース日、ベンチマーク（MMLU、HumanEval、MATH）。',
             'モデル評価：ユーザーDL数、GitHub⭐（ベースモデル）、Ollama⭐。',
             'Ollama新モデル：毎週木曜日UTC 18:00更新。',
@@ -2291,6 +2295,18 @@ ollama run -m deepseek-r1:7b "2^10を解く"
               q: '日本企業向けOllama活用は？',
               a: 'はい。日本企業が利益：データ主権（クラウドロックイン回避）、IT標準準拠（IPA・MEI-TI Governance 2024）、標準HW スケーラビリティ、API料金排除。Qwen3 7Bは標準デスクGPUで実行。Llama 3.3 8Bはエンタープライズスタンダードツール・顧客自動化・文書処理向け検証済み。',
             },
+            {
+              q: 'Ollamaを開発している会社の正式名称は何ですか？',
+              a: '同社はOllama Inc.で、カリフォルニア州パロアルトを拠点とするシリーズB資金調達済みのスタートアップです。2023年にJeffrey MorganとMichael Chiangによって設立されました。',
+            },
+            {
+              q: 'ロシア語タスクに最適なOllamaモデルはどれですか？',
+              a: 'Qwen3/Qwen 3.6とMistral Small 3.1はどちらもロシア語をネイティブの多言語トレーニングデータに含みます。非英語ベンチマークではQwen3が高いスコアを示す一方、Mistral Small 3.1は非公式な会話的ロシア語の流暢さで評価されることが多いです。どちらもロシア発のモデルではありません。',
+            },
+            {
+              q: 'OllamaでどのDolphinモデルを使うべきですか？',
+              a: '`ollama pull dolphin3`（Dolphin 3.0）を使用してください。Cognitive Computationsが保守する現行版で、Llama 3.1をベースにコンテンツフィルタリングなしで構築されています。旧版の`dolphin-mistral`は2024年リリースで更新が止まっています。',
+            },
           ],
         },
         relatedReading: {
@@ -2308,7 +2324,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         sources: {
           title: 'ソース',
           items: [
-            '[Ollama モデルライブラリ](https://ollama.ai/library) -- 4500+モデル、ライブDL統計。',
+            '[Ollama モデルライブラリ](https://ollama.ai/library) -- 数百のモデル、ライブDL統計。',
             '[Ollama GitHub：DL人気モデル](https://github.com/ollama/ollama/issues/3149) -- 月別ユーザー・トレンド（公開）。',
             '[DeepSeek-R1 論文](https://arxiv.org/abs/2502.00287) -- "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"（2025年1月）。',
             '[Gemma 3 発表](https://blog.google/technology/googles-latest-gemma-models/) -- GoogleブログGemma 3マルチモーダル・128Kコンテキスト（2026年2月）。',
@@ -2318,11 +2334,11 @@ ollama run -m deepseek-r1:7b "2^10を解く"
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ollama 2026年6月更新：最新バージョンと新モデル',
-        'description': '現在のOllamaバージョンv0.30.8（2026年6月）と最新モデル：MiniMax M3、Kimi K2.6、Qwen 3.6、DeepSeek V4。検証済みベンチマーク、RAM、pullコマンド。',
+        'headline': 'Ollama 2026年7月更新：最新バージョンと新モデル',
+        'description': '現在のOllamaバージョンv0.32.0（2026年7月）と最新モデル：Laguna XS 2.1、Kimi K2.7 Code、Qwen 3.6、DeepSeek V4。検証済みベンチマーク、RAM、pullコマンド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-07-14',
         'author': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -2442,6 +2458,30 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'はい。日本企業が利益：データ主権（クラウドロックイン回避）、IT標準準拠（IPA・METI AI Governance 2024）、標準HW スケーラビリティ、API料金排除。Qwen3 7Bは標準デスクGPUで実行。Llama 3.3 8Bはエンタープライズスタンダードツール・顧客自動化・文書処理向け検証済み。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaを開発している会社の正式名称は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '同社はOllama Inc.で、カリフォルニア州パロアルトを拠点とするシリーズB資金調達済みのスタートアップです。2023年にJeffrey MorganとMichael Chiangによって設立されました。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'ロシア語タスクに最適なOllamaモデルはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3/Qwen 3.6とMistral Small 3.1はどちらもロシア語をネイティブの多言語トレーニングデータに含みます。非英語ベンチマークではQwen3が高いスコアを示す一方、Mistral Small 3.1は非公式な会話的ロシア語の流暢さで評価されることが多いです。どちらもロシア発のモデルではありません。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaでどのDolphinモデルを使うべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`ollama pull dolphin3`（Dolphin 3.0）を使用してください。Cognitive Computationsが保守する現行版で、Llama 3.1をベースにコンテンツフィルタリングなしで構築されています。旧版の`dolphin-mistral`は2024年リリースで更新が止まっています。',
             }
           },
         ]
