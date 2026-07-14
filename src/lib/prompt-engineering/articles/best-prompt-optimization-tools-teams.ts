@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Prompt Optimization Tools for Teams 2026: 6 Tools Compared',
     twitterDescription: 'Most teams need exactly 2 tools — one for eval, one for deployment. Buying all 5 wastes $1,000+/mo. Decision matrix by team type inside.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '10 min read',
     educationalLevel: 'Intermediate',
     audience: 'Engineering managers and prompt engineers building multi-person LLM workflows',
@@ -132,12 +132,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'PromptPerfect: UI-Based Optimization',
         content: [
           '**PromptPerfect is a SaaS prompt optimizer with a visual interface — teams paste a prompt, select a model, and receive optimized variants with quality scores, without writing code.** Designed for non-technical users (content, marketing, product teams) who need prompt improvements without learning DSPy or engineering tools.',
-          'Starter plan $9.99/month; Team plan ~$49.99/month (up to 5 users). Supports GPT-5.5, Claude, Gemini, Stable Diffusion. The UI outputs optimized prompts + plain-English explanations of changes. Best for teams where most members are non-engineering. The tradeoff: less control than DSPy; no CI/CD integration; limited to preset optimization strategies.',
+          'Starter plan $9.99/month; Team plan ~$49.99/month (up to 5 users). Supports GPT-5.6, Claude, Gemini, Stable Diffusion. The UI outputs optimized prompts + plain-English explanations of changes. Best for teams where most members are non-engineering. The tradeoff: less control than DSPy; no CI/CD integration; limited to preset optimization strategies.',
         ],
         items: [
           'No-code UI: paste prompt, select model, receive optimized variant',
           'Explanation of changes: plain-English rationale for each optimization',
-          'Multi-model support: GPT-5.5, Claude, Gemini, Stable Diffusion',
+          'Multi-model support: GPT-5.6, Claude, Gemini, Stable Diffusion',
         ],
       },
       vellum: {
@@ -183,7 +183,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: Multi-Model Dispatch for Comparison',
         content: [
-          '**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — the fastest way to compare how a prompt variant performs across GPT-5.5, Claude, Gemini, and local LLMs before committing to a model or a version.** Unlike the evaluation tools above (which test one model at a time), PromptQuorum answers "which model handles this prompt best?" in a single run.',
+          '**PromptQuorum dispatches one prompt to 25+ AI models simultaneously and returns side-by-side outputs — the fastest way to compare how a prompt variant performs across GPT-5.6, Claude, Gemini, and local LLMs before committing to a model or a version.** Unlike the evaluation tools above (which test one model at a time), PromptQuorum answers "which model handles this prompt best?" in a single run.',
           'Use PromptQuorum as the first step before routing to Braintrust for deeper evaluation or Vellum for production A/B testing. Free tier available — no engineering setup required. Supports 25+ models including local LLMs via Ollama and LM Studio. Built-in prompt frameworks with template support. Side-by-side response comparison with consensus scoring.',
           'Best for teams evaluating whether to optimize for a specific model provider, or teams that want to benchmark the same prompt across multiple LLM options simultaneously.',
         ],
@@ -310,7 +310,7 @@ tests:
           {
             mistake: 'Using a single model as judge',
             problem:
-              'Evaluating GPT-5.5 outputs with GPT-5.5 as the scoring model inflates scores by 10–20% (model-as-judge bias).',
+              'Evaluating GPT-5.6 outputs with GPT-5.6 as the scoring model inflates scores by 10–20% (model-as-judge bias).',
             fix: 'Use a different model for scoring, or use human evaluation for the ground truth.',
           },
           {
@@ -432,7 +432,7 @@ tests:
       url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'en',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -535,7 +535,7 @@ tests:
     twitterTitle: 'Prompt-Optimierungstools für Teams 2026: 6 Tools im Vergleich',
     twitterDescription: 'Die meisten Teams brauchen genau 2 Tools — eins für Eval, eins für Deployment. Alle 5 kaufen verschwendet 1.000+ $/Monat. Entscheidungsmatrix inklusive.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Engineering-Manager und Prompt-Ingenieure, die LLM-Workflows mit mehreren Personen erstellen',
@@ -651,7 +651,7 @@ tests:
         title: 'PromptPerfect: UI-basierte Optimierung',
         content: [
           '**PromptPerfect ist ein SaaS-Prompt-Optimizer mit visueller Schnittstelle — Teams fügen einen Prompt ein, wählen ein Modell aus und erhalten optimierte Varianten mit Qualitäts-Scores, ohne Code zu schreiben.**',
-          'Wichtige Spezifikationen: Starter-Plan 9,99 USD/Monat; Team-Plan ca. 49,99 USD/Monat (bis zu 5 Benutzer). Unterstützt GPT-5.5, Claude, Gemini, Stable Diffusion. Gibt optimierten Prompt + Erklärung der Änderungen aus. Am besten für Non-Engineering-Team-Mitglieder (Content, Marketing, Produkt). Nachteil: weniger Kontrolle als DSPy; keine CI/CD-Integration.',
+          'Wichtige Spezifikationen: Starter-Plan 9,99 USD/Monat; Team-Plan ca. 49,99 USD/Monat (bis zu 5 Benutzer). Unterstützt GPT-5.6, Claude, Gemini, Stable Diffusion. Gibt optimierten Prompt + Erklärung der Änderungen aus. Am besten für Non-Engineering-Team-Mitglieder (Content, Marketing, Produkt). Nachteil: weniger Kontrolle als DSPy; keine CI/CD-Integration.',
         ],
       },
       vellum: {
@@ -692,7 +692,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: Multi-Model-Vergleich für Teams',
         content: [
-          '**PromptQuorum ist eine Multi-Model-Vergleichsplattform, die dieselbe Prompt gleichzeitig über 25+ große Sprachmodelle leitet — Teams sehen, wie ihre Prompts auf unterschiedlichen Modellen (GPT-5.5, Claude, Gemini, Llama, etc.) abschneiden, bevor sie mit Optimierungen auf ein einzelnes Modell verpflichten.**',
+          '**PromptQuorum ist eine Multi-Model-Vergleichsplattform, die dieselbe Prompt gleichzeitig über 25+ große Sprachmodelle leitet — Teams sehen, wie ihre Prompts auf unterschiedlichen Modellen (GPT-5.6, Claude, Gemini, Llama, etc.) abschneiden, bevor sie mit Optimierungen auf ein einzelnes Modell verpflichten.**',
           'Wichtige Spezifikationen: Kostenlos mit Kredite für neue Benutzer; Credits-Modell für verbrauchte Tokens. Keine Versionskontrolle oder A/B-Testing integriert — dient als Vorprüfungs-Tool vor Optimierungen. Integriert sich mit anderen Tools: Braintrust für Bewertungen, Vellum für Bereitstellungen, Promptfoo für CI/CD.',
           'Beste Verwendung: als erster Schritt — führen Sie denselben Prompt über alle Ihre interessierenden Modelle aus, um zu sehen, auf welchen Modellen Sie am besten abschneiden. Dann optimieren Sie gezielt mit Braintrust oder Vellum.',
         ],
@@ -799,7 +799,7 @@ tests:
         items: [
           '**Behandeln Sie Optimierung nicht als einmalige Aufgabe:** Prompts verschlechtern sich, wenn Modelle aktualisiert werden. Planen Sie monatliche Neubewertungen anhand desselben Test-Datensatzes ein — Promptfoos YAML-Konfiguration macht dies reproduzierbar.',
           '**Kaufen Sie kein SaaS-Tool, bevor Sie einen Bewertungs-Datensatz erstellen:** Ohne 20–50 beschriftete Input/Output-Beispiele haben Sie keine Möglichkeit zu messen, ob ein neuer Prompt besser ist. Erstellen Sie zuerst den Datensatz.',
-          '**Verwenden Sie nicht ein einzelnes Modell als Schiedsrichter:** Das Bewerten von GPT-5.5-Ausgaben mit GPT-5.5 als Scoring-Modell pusht Scores um 10–20% (Modell-als-Schiedsrichter-Bias). Verwenden Sie ein anderes Modell oder menschliche Bewertung für den Scoring-Schritt.',
+          '**Verwenden Sie nicht ein einzelnes Modell als Schiedsrichter:** Das Bewerten von GPT-5.6-Ausgaben mit GPT-5.6 als Scoring-Modell pusht Scores um 10–20% (Modell-als-Schiedsrichter-Bias). Verwenden Sie ein anderes Modell oder menschliche Bewertung für den Scoring-Schritt.',
           '**Ignorieren Sie nicht die Token-Kosten beim Vergleich von Varianten:** Ein Prompt, der 5% besser abschneidet, aber 40% mehr Token verbraucht, kann sich nicht lohnen. Verfolgen Sie sowohl Qualität als auch Kosten pro Ausgabe mit Helicone oder Braintrusts Kostentracking.',
           '**Verabschieden Sie sich nicht von einem Tool, bevor Sie sich auf Qualitätsmetriken einigen:** Teams, die Vellum oder Braintrust kaufen, ohne die gemeinsame Definition von „guter Ausgabe" zu definieren, verbringen ihren ersten Monat mit Streitigkeiten über Scores, nicht mit Optimierungen. Definieren Sie 3–5 spezifische Qualitätskriterien, bevor Sie ein Tool aufbauen.',
         ],
@@ -879,7 +879,7 @@ tests:
       url: 'https://www.promptquorum.com/de/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'de',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -928,7 +928,7 @@ tests:
     twitterTitle: 'Herramientas de optimización de prompts para equipos 2026: 6 comparadas',
     twitterDescription: 'La mayoría de equipos necesita exactamente 2 herramientas — una para eval, otra para despliegue. Comprar las 5 desperdicia $1.000+/mes. Matriz de decisión por tipo de equipo incluida.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '10 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Engineering managers e ingenieros de prompts que construyen flujos de trabajo LLM con múltiples personas',
@@ -1043,12 +1043,12 @@ tests:
         title: 'PromptPerfect: optimización basada en UI',
         content: [
           '**PromptPerfect es un optimizador de prompts SaaS con interfaz visual — los equipos pegan un prompt, seleccionan un modelo y reciben variantes optimizadas con puntuaciones de calidad, sin escribir código.** Diseñado para usuarios no técnicos (equipos de contenido, marketing, producto) que necesitan mejoras de prompts sin aprender DSPy ni herramientas técnicas.',
-          'Plan Starter $9.99/mes; Plan Team ~$49.99/mes (hasta 5 usuarios). Soporta GPT-5.5, Claude, Gemini, Stable Diffusion. La UI devuelve prompts optimizados + explicaciones en lenguaje natural de los cambios. Ideal para equipos donde la mayoría de miembros no son ingenieros. La contrapartida: menos control que DSPy; sin integración CI/CD; limitado a estrategias de optimización predefinidas.',
+          'Plan Starter $9.99/mes; Plan Team ~$49.99/mes (hasta 5 usuarios). Soporta GPT-5.6, Claude, Gemini, Stable Diffusion. La UI devuelve prompts optimizados + explicaciones en lenguaje natural de los cambios. Ideal para equipos donde la mayoría de miembros no son ingenieros. La contrapartida: menos control que DSPy; sin integración CI/CD; limitado a estrategias de optimización predefinidas.',
         ],
         items: [
           'UI sin código: pega el prompt, selecciona el modelo, recibe la variante optimizada',
           'Explicación de cambios: justificación en lenguaje natural de cada optimización',
-          'Soporte multi-modelo: GPT-5.5, Claude, Gemini, Stable Diffusion',
+          'Soporte multi-modelo: GPT-5.6, Claude, Gemini, Stable Diffusion',
         ],
       },
       vellum: {
@@ -1094,7 +1094,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: despacho multi-modelo para comparación',
         content: [
-          '**PromptQuorum despacha un prompt a 25+ modelos de IA simultáneamente y devuelve outputs lado a lado — la forma más rápida de comparar cómo funciona una variante de prompt en GPT-5.5, Claude, Gemini y LLMs locales antes de comprometerte con un modelo o una versión.** A diferencia de las herramientas de evaluación anteriores (que testean un modelo a la vez), PromptQuorum responde a "¿qué modelo maneja mejor este prompt?" en una sola ejecución.',
+          '**PromptQuorum despacha un prompt a 25+ modelos de IA simultáneamente y devuelve outputs lado a lado — la forma más rápida de comparar cómo funciona una variante de prompt en GPT-5.6, Claude, Gemini y LLMs locales antes de comprometerte con un modelo o una versión.** A diferencia de las herramientas de evaluación anteriores (que testean un modelo a la vez), PromptQuorum responde a "¿qué modelo maneja mejor este prompt?" en una sola ejecución.',
           'Usa PromptQuorum como primer paso antes de enrutar a Braintrust para evaluación más profunda o a Vellum para A/B testing en producción. Tier gratuito disponible — no se requiere configuración técnica. Soporta 25+ modelos incluyendo LLMs locales vía Ollama y LM Studio. Frameworks de prompts integrados con soporte de plantillas. Comparación de respuestas lado a lado con scoring por consenso.',
           'Ideal para equipos que evalúan si optimizar para un proveedor de modelo específico, o equipos que quieren comparar el mismo prompt en múltiples opciones de LLM simultáneamente.',
         ],
@@ -1220,7 +1220,7 @@ tests:
           {
             mistake: 'Usar un único modelo como juez',
             problem:
-              'Evaluar outputs de GPT-5.5 con GPT-5.5 como modelo de scoring infla las puntuaciones un 10–20% (sesgo model-as-judge).',
+              'Evaluar outputs de GPT-5.6 con GPT-5.6 como modelo de scoring infla las puntuaciones un 10–20% (sesgo model-as-judge).',
             fix: 'Usa un modelo diferente para el scoring, o usa evaluación humana para el ground truth.',
           },
           {
@@ -1341,7 +1341,7 @@ tests:
       url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'es',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1519,12 +1519,12 @@ tests:
         title: 'PromptPerfect: otimização baseada em UI',
         content: [
           '**PromptPerfect é um otimizador de prompts SaaS com interface visual — as equipes colam um prompt, selecionam um modelo e recebem variantes otimizadas com pontuações de qualidade, sem escrever código.** Projetado para usuários não técnicos (equipes de conteúdo, marketing, produto) que precisam de melhorias de prompts sem aprender DSPy ou ferramentas técnicas.',
-          'Plano Starter $9,99/mês; Plano Team ~$49,99/mês (até 5 usuários). Suporta GPT-5.5, Claude, Gemini, Stable Diffusion. A UI retorna prompts otimizados + explicações em linguagem natural das mudanças. Ideal para equipes onde a maioria dos membros não são engenheiros. A contrapartida: menos controle que o DSPy; sem integração CI/CD; limitado a estratégias de otimização predefinidas.',
+          'Plano Starter $9,99/mês; Plano Team ~$49,99/mês (até 5 usuários). Suporta GPT-5.6, Claude, Gemini, Stable Diffusion. A UI retorna prompts otimizados + explicações em linguagem natural das mudanças. Ideal para equipes onde a maioria dos membros não são engenheiros. A contrapartida: menos controle que o DSPy; sem integração CI/CD; limitado a estratégias de otimização predefinidas.',
         ],
         items: [
           'UI sem código: cole o prompt, selecione o modelo, receba a variante otimizada',
           'Explicação de mudanças: justificativa em linguagem natural de cada otimização',
-          'Suporte multi-modelo: GPT-5.5, Claude, Gemini, Stable Diffusion',
+          'Suporte multi-modelo: GPT-5.6, Claude, Gemini, Stable Diffusion',
         ],
       },
       vellum: {
@@ -1570,7 +1570,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: despacho multi-modelo para comparação',
         content: [
-          '**PromptQuorum despacha um prompt para 25+ modelos de IA simultaneamente e retorna saídas lado a lado — a forma mais rápida de comparar como uma variante de prompt funciona no GPT-5.5, Claude, Gemini e LLMs locais antes de se comprometer com um modelo ou uma versão.** Ao contrário das ferramentas de avaliação anteriores (que testam um modelo por vez), PromptQuorum responde "qual modelo lida melhor com este prompt?" em uma única execução.',
+          '**PromptQuorum despacha um prompt para 25+ modelos de IA simultaneamente e retorna saídas lado a lado — a forma mais rápida de comparar como uma variante de prompt funciona no GPT-5.6, Claude, Gemini e LLMs locais antes de se comprometer com um modelo ou uma versão.** Ao contrário das ferramentas de avaliação anteriores (que testam um modelo por vez), PromptQuorum responde "qual modelo lida melhor com este prompt?" em uma única execução.',
           'Use PromptQuorum como primeiro passo antes de encaminhar ao Braintrust para avaliação mais profunda ou ao Vellum para A/B testing em produção. Tier gratuito disponível — sem necessidade de configuração técnica. Suporta 25+ modelos incluindo LLMs locais via Ollama e LM Studio. Frameworks de prompts integrados com suporte de modelos. Comparação de respostas lado a lado com scoring por consenso.',
           'Ideal para equipes que avaliam se otimizar para um fornecedor de modelo específico, ou equipes que querem comparar o mesmo prompt em múltiplas opções de LLM simultaneamente.',
         ],
@@ -1696,7 +1696,7 @@ tests:
           {
             mistake: 'Usar um único modelo como juiz',
             problem:
-              'Avaliar saídas do GPT-5.5 com o GPT-5.5 como modelo de scoring infla as pontuações em 10–20% (viés model-as-judge).',
+              'Avaliar saídas do GPT-5.6 com o GPT-5.6 como modelo de scoring infla as pontuações em 10–20% (viés model-as-judge).',
             fix: 'Use um modelo diferente para o scoring, ou use avaliação humana para o ground truth.',
           },
           {
@@ -1817,7 +1817,7 @@ tests:
       url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'pt-BR',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1883,7 +1883,7 @@ tests:
     twitterTitle: 'Outils d\'optimisation de prompts pour équipes 2026 : 6 outils comparés',
     twitterDescription: 'La plupart des équipes n\'ont besoin que de 2 outils — un pour l\'éval, un pour le déploiement. En acheter 5 gaspille 1 000+ $/mois.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '10 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Responsables d\'ingénierie et ingénieurs d\'invites construisant des workflows LLM multi-personnels',
@@ -1999,7 +1999,7 @@ tests:
         title: 'PromptPerfect : optimisation basée sur l\'interface utilisateur',
         content: [
           '**PromptPerfect optimiseur SaaS interface visuelle — équipes collent invite, sélectionnent modèle, reçoivent variantes optimisées avec scores qualité, sans coder.**',
-          'Spécifications clés : Plan starter 9,99 USD/mois; Plan équipe ~49,99 USD/mois (jusqu\'à 5 utilisateurs). Supporte GPT-5.5, Claude, Gemini, Stable Diffusion. Retourne invite optimisée + explication changements. Optimal non-ingénieurs (contenu, marketing, produit). Inconvénient : contrôle moins que DSPy; pas intégration CI/CD.',
+          'Spécifications clés : Plan starter 9,99 USD/mois; Plan équipe ~49,99 USD/mois (jusqu\'à 5 utilisateurs). Supporte GPT-5.6, Claude, Gemini, Stable Diffusion. Retourne invite optimisée + explication changements. Optimal non-ingénieurs (contenu, marketing, produit). Inconvénient : contrôle moins que DSPy; pas intégration CI/CD.',
         ],
       },
       vellum: {
@@ -2040,7 +2040,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum : comparaison multi-modèle pour les équipes',
         content: [
-          '**PromptQuorum plateforme comparaison multi-modèle routant même invite simultanément 25+ grands modèles langage — équipes voient performance invites modèles différents (GPT-5.5, Claude, Gemini, Llama, etc.) avant committing stratégies d\'optimisation modèle-unique.**',
+          '**PromptQuorum plateforme comparaison multi-modèle routant même invite simultanément 25+ grands modèles langage — équipes voient performance invites modèles différents (GPT-5.6, Claude, Gemini, Llama, etc.) avant committing stratégies d\'optimisation modèle-unique.**',
           'Spécifications clés : Gratuit crédits nouveaux utilisateurs; modèle credits pour tokens consommés. Pas versioning/test A/B intégré — sert outil pre-screening avant optimisations. S\'intègre outils autres : Braintrust évaluations, Vellum déploiements, Promptfoo CI/CD.',
           'Meilleur usage : première étape — exécutez même invite tous modèles intérêt voyant lesquels performent meilleur. Puis optimisez ciblé Braintrust/Vellum.',
         ],
@@ -2147,7 +2147,7 @@ tests:
         items: [
           '**Ne traitez pas optimisation comme tâche unique-fois :** invites dégradent mises-à-jour modèles. Planifiez réévaluations mensuelles ensemble test données identiques — configuration YAML Promptfoo reproduit ceci.',
           '**N\'achetez pas outil SaaS avant dataset évaluation :** sans 20–50 exemples labellisés input/output, impossible mesurer si invite-nouvelle meilleure. Créez dataset d\'abord.',
-          '**N\'utilisez pas modèle unique arbitre :** évaluer outputs GPT-5.5 avec GPT-5.5 scoring-modèle gonfle scores 10–20% (biais modèle-arbitre). Utilisez modèle différent ou évaluation humaine étape scoring.',
+          '**N\'utilisez pas modèle unique arbitre :** évaluer outputs GPT-5.6 avec GPT-5.6 scoring-modèle gonfle scores 10–20% (biais modèle-arbitre). Utilisez modèle différent ou évaluation humaine étape scoring.',
           '**N\'ignorez pas coûts tokens comparaison variantes :** invite 5% meilleure mais 40% plus tokens peut ne pas valoir déploiement. Suivez qualité ET coût par output Helicone/Braintrust cost-tracking.',
           '**Ne validez pas outil avant accord métriques qualité :** équipes achetant Vellum/Braintrust sans définition partagée "bon output" passent premier mois disputant scores, pas optimisant. Définissez 3–5 critères qualité spécifiques avant outil.',
         ],
@@ -2210,7 +2210,7 @@ tests:
       url: 'https://www.promptquorum.com/fr/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'fr',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -2259,7 +2259,7 @@ tests:
     twitterTitle: 'チーム向けプロンプト最適化ツール2026：6ツール比較',
     twitterDescription: 'ほとんどのチームに必要なのは2ツールだけ——評価用1つとデプロイ用1つ。5つ全部買うと月1,000ドル以上の無駄。判断マトリクスあり。',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '10分で読める',
     educationalLevel: 'Intermediate',
     audience: 'マルチパーソンLLMワークフロー構築するエンジニアリングマネージャーとプロンプトエンジニア',
@@ -2375,7 +2375,7 @@ tests:
         title: 'PromptPerfect: UI基盤最適化',
         content: [
           '**PromptPerfect SaaSプロンプト最適化ビジュアルインターフェース — チームプロンプト貼付、モデル選択、品質スコア付き最適化バリアント受信、コーディング無し。**',
-          'スペック: スターター9.99 USD/月; チームプラン ~49.99 USD/月(最大5ユーザー)。GPT-5.5、Claude、Gemini、Stable Diffusion対応。最適化プロンプト+変更説明返却。非エンジニア(コンテンツ、マーケティング、プロダクト)向け最適。欠点: DSPyより制御少ない; CI/CD統合無し。',
+          'スペック: スターター9.99 USD/月; チームプラン ~49.99 USD/月(最大5ユーザー)。GPT-5.6、Claude、Gemini、Stable Diffusion対応。最適化プロンプト+変更説明返却。非エンジニア(コンテンツ、マーケティング、プロダクト)向け最適。欠点: DSPyより制御少ない; CI/CD統合無し。',
         ],
       },
       vellum: {
@@ -2416,7 +2416,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: チーム向けマルチモデル比較',
         content: [
-          '**PromptQuorum マルチモデル比較基盤、同一プロンプト同時25+大規模言語モデル経由 — チーム異モデル(GPT-5.5、Claude、Gemini、Llama等)プロンプト性能表示、単一モデル最適化戦略確定前。**',
+          '**PromptQuorum マルチモデル比較基盤、同一プロンプト同時25+大規模言語モデル経由 — チーム異モデル(GPT-5.6、Claude、Gemini、Llama等)プロンプト性能表示、単一モデル最適化戦略確定前。**',
           'スペック: 無料新規ユーザークレジット; 消費トークン credit モデル。バージョン管理/A/Bテスト組込無し — 最適化前プレスクリーニングツール機能。他ツール統合: 評価Braintrust、デプロイVellum、CI/CDPromptfoo。',
           '最初のステップ — 関心あるすべてのモデル対同一プロンプト実行、最高性能モデル表示。その後Braintrust/Vellum対象最適化。',
         ],
@@ -2523,7 +2523,7 @@ tests:
         items: [
           '**最適化を1回限りタスク扱わぬ:** プロンプトモデル更新と共に劣化。同一テストデータセット対毎月再評価計画 — Promptfoo YAMLコンフィグ再現可能。',
           '**評価データセット前SaaSツール購入無し:** ラベル付き20〜50例入力/出力無しで新プロンプト優位性測定不可。最初にデータセット作成。',
-          '**単一モデルを審判に非ず:** GPT-5.5出力をGPT-5.5審判スコアリング10〜20%スコア膨張(モデル審判バイアス)。異モデルまたは人間評価スコアリング段階使用。',
+          '**単一モデルを審判に非ず:** GPT-5.6出力をGPT-5.6審判スコアリング10〜20%スコア膨張(モデル審判バイアス)。異モデルまたは人間評価スコアリング段階使用。',
           '**バリアント比較時トークンコスト無視無し:** 5%優位だが40%多トークン使用プロンプトデプロイ価値無し可能性。Helicone/Braintrust cost-tracking使用品質とコスト両方追跡。',
           '**ツール検証前品質メトリクス合意無し:** 品質定義共有無しVellum/Braintrust購入チーム最初月スコア争論、最適化無し。ツール化前3〜5具体品質基準定義。',
         ],
@@ -2586,7 +2586,7 @@ tests:
       url: 'https://www.promptquorum.com/ja/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ja',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -2635,7 +2635,7 @@ tests:
     twitterTitle: '2026团队提示词优化工具：6款工具对比',
     twitterDescription: '大多数团队只需要2个工具——一个评估，一个部署。买全5个每月浪费1000美元以上。内含决策矩阵。',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '阅读约10分钟',
     educationalLevel: 'Intermediate',
     audience: '构建多人LLM工作流的工程经理和提示工程师',
@@ -2750,12 +2750,12 @@ tests:
         title: 'PromptPerfect: 基于UI的优化',
         content: [
           '**PromptPerfect是SaaS提示优化器，带可视化界面 — 团队粘贴提示、选择模型、接收优化变体和质量评分，无需编写代码。** 为非技术用户(内容、营销、产品团队)设计，他们需要提示改进而无需学习DSPy或工程工具。',
-          '启动计划$9.99/月；团队计划~$49.99/月(最多5个用户)。支持GPT-5.5、Claude、Gemini、Stable Diffusion。UI输出优化提示+对更改的普通英文解释。最适合大多数成员非工程的团队。权衡：比DSPy控制更少；无CI/CD集成；限于预设优化策略。',
+          '启动计划$9.99/月；团队计划~$49.99/月(最多5个用户)。支持GPT-5.6、Claude、Gemini、Stable Diffusion。UI输出优化提示+对更改的普通英文解释。最适合大多数成员非工程的团队。权衡：比DSPy控制更少；无CI/CD集成；限于预设优化策略。',
         ],
         items: [
           '无代码UI：粘贴提示、选择模型、接收优化变体',
           '更改解释：每个优化的普通语言理由',
-          '多模型支持：GPT-5.5、Claude、Gemini、Stable Diffusion',
+          '多模型支持：GPT-5.6、Claude、Gemini、Stable Diffusion',
         ],
       },
       vellum: {
@@ -2937,7 +2937,7 @@ tests:
           {
             mistake: '使用单个模型作为评判者',
             problem:
-              '用GPT-5.5评估GPT-5.5输出会将评分夸大10–20%(模型作为评判者偏见)。',
+              '用GPT-5.6评估GPT-5.6输出会将评分夸大10–20%(模型作为评判者偏见)。',
             fix: '使用不同模型评分，或使用人工评估作为真实标准。',
           },
           {
@@ -3039,7 +3039,7 @@ tests:
       url: 'https://www.promptquorum.com/zh/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'zh',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3096,7 +3096,7 @@ tests:
     twitterTitle: 'أدوات تحسين التعليمات للفرق 2026: 6 أدوات مقارنة',
     twitterDescription: 'معظم الفرق تحتاج بالضبط أداتين — واحدة للتقييم وأخرى للنشر. شراء جميع الأدوات الخمس يُهدر ⁨1⁩,⁨000⁩$+/شهر. مصفوفة قرار حسب نوع الفريق بداخله.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '10 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مدراء الهندسة ومهندسو التعليمات الذين يبنون سير عمل LLM متعدد الأشخاص',
@@ -3211,12 +3211,12 @@ tests:
         title: 'PromptPerfect: التحسين القائم على واجهة المستخدم',
         content: [
           '**PromptPerfect محسّن تعليمات SaaS بواجهة مرئية — تلصق الفرق تعليمةً وتختار نموذجاً وتحصل على متغيرات مُحسَّنة بنقاط جودة، دون كتابة أي كود.** مصمم للمستخدمين غير التقنيين (فرق المحتوى والتسويق والمنتج) الذين يحتاجون تحسيناً للتعليمات دون تعلم DSPy أو الأدوات التقنية.',
-          'الخطة Starter بـ 9.99$/شهر؛ خطة Team بـ ~49.99$/شهر (حتى 5 مستخدمين). يدعم GPT-5.5 وClaude وGemini وStable Diffusion. تُعيد الواجهة تعليمات مُحسَّنة + تفسيرات بلغة طبيعية للتغييرات. مثالي للفرق التي معظم أعضائها ليسوا مهندسين. الجانب السلبي: تحكم أقل من DSPy؛ لا تكامل CI/CD؛ محدود باستراتيجيات تحسين محددة مسبقاً.',
+          'الخطة Starter بـ 9.99$/شهر؛ خطة Team بـ ~49.99$/شهر (حتى 5 مستخدمين). يدعم GPT-5.6 وClaude وGemini وStable Diffusion. تُعيد الواجهة تعليمات مُحسَّنة + تفسيرات بلغة طبيعية للتغييرات. مثالي للفرق التي معظم أعضائها ليسوا مهندسين. الجانب السلبي: تحكم أقل من DSPy؛ لا تكامل CI/CD؛ محدود باستراتيجيات تحسين محددة مسبقاً.',
         ],
         items: [
           'واجهة بدون كود: الصق التعليمة، اختر النموذج، احصل على المتغير المُحسَّن',
           'شرح التغييرات: مبرر بلغة طبيعية لكل تحسين',
-          'دعم متعدد النماذج: GPT-5.5 وClaude وGemini وStable Diffusion',
+          'دعم متعدد النماذج: GPT-5.6 وClaude وGemini وStable Diffusion',
         ],
       },
       vellum: {
@@ -3262,7 +3262,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: الإرسال متعدد النماذج للمقارنة',
         content: [
-          '**PromptQuorum يُرسل تعليمةً واحدة إلى 25+ نموذج ذكاء اصطناعي في آنٍ واحد ويُعيد المخرجات جنباً إلى جنب — أسرع طريقة لمقارنة أداء متغير التعليمة على GPT-5.5 وClaude وGemini وLLMs المحلية قبل الالتزام بنموذج أو إصدار محدد.** على عكس أدوات التقييم السابقة (التي تختبر نموذجاً واحداً في كل مرة)، يُجيب PromptQuorum على سؤال "أي نموذج يتعامل مع هذه التعليمة بشكل أفضل؟" في تشغيل واحد.',
+          '**PromptQuorum يُرسل تعليمةً واحدة إلى 25+ نموذج ذكاء اصطناعي في آنٍ واحد ويُعيد المخرجات جنباً إلى جنب — أسرع طريقة لمقارنة أداء متغير التعليمة على GPT-5.6 وClaude وGemini وLLMs المحلية قبل الالتزام بنموذج أو إصدار محدد.** على عكس أدوات التقييم السابقة (التي تختبر نموذجاً واحداً في كل مرة)، يُجيب PromptQuorum على سؤال "أي نموذج يتعامل مع هذه التعليمة بشكل أفضل؟" في تشغيل واحد.',
           'استخدم PromptQuorum كخطوة أولى قبل التوجه إلى Braintrust للتقييم الأعمق أو Vellum لاختبار A/B في الإنتاج. الطبقة المجانية متاحة — لا إعداد تقني مطلوب. يدعم 25+ نموذج بما فيها LLMs المحلية عبر Ollama وLM Studio. أُطر تعليمات مدمجة مع دعم القوالب. مقارنة الاستجابات جنباً إلى جنب مع التقييم بالإجماع.',
           'مثالي للفرق التي تُقيّم ما إذا كانت ستحسّن أداءها لمزود نموذج محدد، أو الفرق التي تريد مقارنة نفس التعليمة على خيارات LLM متعددة في آنٍ واحد.',
         ],
@@ -3388,7 +3388,7 @@ tests:
           {
             mistake: 'استخدام نموذج واحد كحَكَم',
             problem:
-              'تقييم مخرجات GPT-5.5 باستخدام GPT-5.5 كنموذج تقييم يُضخّم النقاط بنسبة 10–20% (تحيز model-as-judge).',
+              'تقييم مخرجات GPT-5.6 باستخدام GPT-5.6 كنموذج تقييم يُضخّم النقاط بنسبة 10–20% (تحيز model-as-judge).',
             fix: 'استخدم نموذجاً مختلفاً للتقييم، أو استخدم المراجعة البشرية للحقيقة الأساسية.',
           },
           {
@@ -3509,7 +3509,7 @@ tests:
       url: 'https://www.promptquorum.com/ar/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ar',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3573,7 +3573,7 @@ tests:
     twitterTitle: '팀을 위한 프롬프트 최적화 도구 2026: 6가지 비교',
     twitterDescription: '대부분의 팀에는 정확히 2가지 도구가 필요합니다 — 평가용 1개, 배포용 1개. 5가지 모두 구매하면 월 $1,000 이상을 낭비합니다. 팀 유형별 의사결정 매트릭스 포함.',
     publishDate: '2026-04-10',
-    dateModified: '2026-04-29',
+    dateModified: '2026-07-13',
     readTime: '10분 분량',
     educationalLevel: 'Intermediate',
     audience: '다수의 인원이 함께 LLM 워크플로를 구축하는 엔지니어링 매니저 및 프롬프트 엔지니어',
@@ -3688,12 +3688,12 @@ tests:
         title: 'PromptPerfect: UI 기반 최적화',
         content: [
           '**PromptPerfect는 시각적 인터페이스를 갖춘 SaaS 프롬프트 최적화 도구입니다 — 팀이 프롬프트를 붙여넣고 모델을 선택하면 코드 없이 품질 점수와 함께 최적화된 변형을 받습니다.** 코드 없이 프롬프트 개선이 필요한 비기술적 사용자(콘텐츠, 마케팅, 제품 팀)를 위해 설계되었습니다.',
-          'Starter 플랜 월 $9.99; Team 플랜 ~월 $49.99(최대 5명). GPT-5.5, Claude, Gemini, Stable Diffusion을 지원합니다. UI는 최적화된 프롬프트 + 변경 사항에 대한 자연어 설명을 반환합니다. 대부분의 구성원이 엔지니어가 아닌 팀에 이상적입니다. 단점: DSPy보다 제어 기능이 적음; CI/CD 통합 없음; 사전 정의된 최적화 전략으로 제한됨.',
+          'Starter 플랜 월 $9.99; Team 플랜 ~월 $49.99(최대 5명). GPT-5.6, Claude, Gemini, Stable Diffusion을 지원합니다. UI는 최적화된 프롬프트 + 변경 사항에 대한 자연어 설명을 반환합니다. 대부분의 구성원이 엔지니어가 아닌 팀에 이상적입니다. 단점: DSPy보다 제어 기능이 적음; CI/CD 통합 없음; 사전 정의된 최적화 전략으로 제한됨.',
         ],
         items: [
           '코드 없는 UI: 프롬프트를 붙여넣고 모델을 선택하면 최적화된 변형을 받습니다',
           '변경 설명: 각 최적화에 대한 자연어 근거',
-          '다중 모델 지원: GPT-5.5, Claude, Gemini, Stable Diffusion',
+          '다중 모델 지원: GPT-5.6, Claude, Gemini, Stable Diffusion',
         ],
       },
       vellum: {
@@ -3739,7 +3739,7 @@ tests:
         id: 'promptquorum',
         title: 'PromptQuorum: 비교를 위한 다중 모델 디스패치',
         content: [
-          '**PromptQuorum은 프롬프트를 25개 이상의 AI 모델에 동시에 전송하고 나란히 출력을 반환합니다 — 특정 모델이나 버전에 커밋하기 전에 GPT-5.5, Claude, Gemini, 로컬 LLM에서 프롬프트 변형이 어떻게 작동하는지 비교하는 가장 빠른 방법입니다.** 이전 평가 도구들과 달리(한 번에 하나의 모델을 테스트하는), PromptQuorum은 "이 프롬프트를 가장 잘 처리하는 모델은 무엇인가?"라는 질문에 단 한 번의 실행으로 답합니다.',
+          '**PromptQuorum은 프롬프트를 25개 이상의 AI 모델에 동시에 전송하고 나란히 출력을 반환합니다 — 특정 모델이나 버전에 커밋하기 전에 GPT-5.6, Claude, Gemini, 로컬 LLM에서 프롬프트 변형이 어떻게 작동하는지 비교하는 가장 빠른 방법입니다.** 이전 평가 도구들과 달리(한 번에 하나의 모델을 테스트하는), PromptQuorum은 "이 프롬프트를 가장 잘 처리하는 모델은 무엇인가?"라는 질문에 단 한 번의 실행으로 답합니다.',
           '심층 평가를 위해 Braintrust로, 프로덕션 A/B 테스트를 위해 Vellum으로 라우팅하기 전에 첫 번째 단계로 PromptQuorum을 사용하십시오. 무료 티어 제공 — 기술적 설정 불필요. Ollama 및 LM Studio를 통한 로컬 LLM을 포함한 25개 이상의 모델 지원. 템플릿 지원이 있는 내장 프롬프트 프레임워크. 합의 점수를 통한 나란히 응답 비교.',
           '특정 모델 공급업체를 위해 최적화할지 평가하는 팀이나 여러 LLM 옵션에서 동일한 프롬프트를 동시에 비교하려는 팀에 이상적입니다.',
         ],
@@ -3858,7 +3858,7 @@ tests:
           },
           {
             mistake: '단일 모델을 심판으로 사용하기',
-            problem: 'GPT-5.5 출력을 GPT-5.5를 점수 모델로 평가하면 점수가 10–20% 부풀려집니다(model-as-judge 편향).',
+            problem: 'GPT-5.6 출력을 GPT-5.6를 점수 모델로 평가하면 점수가 10–20% 부풀려집니다(model-as-judge 편향).',
             fix: '점수 평가에 다른 모델을 사용하거나 ground truth를 위해 인간 평가를 사용하십시오.',
           },
           {
@@ -3958,7 +3958,7 @@ tests:
       url: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ko',
       datePublished: '2026-04-10',
-      dateModified: '2026-04-29',
+      dateModified: '2026-07-13',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',

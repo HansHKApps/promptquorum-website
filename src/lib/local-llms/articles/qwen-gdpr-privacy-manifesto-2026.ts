@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Every prompt sent to a cloud AI is a data transfer. Every data transfer to a non-EU server requires a legal basis under GDPR Article 44. Local LLMs with open weights — Qwen 3.6 27B chief among them — eliminate this category of compliance risk entirely. This manifesto makes the case for open-weight local LLMs as the foundational AI layer for GDPR-governed organisations, and walks through each relevant GDPR article, the EU AI Act 2026 obligations, and the counter-arguments worth taking seriously.',
     metaDescription: 'Qwen 3 deployed locally eliminates GDPR Article 44 transfer issues. Data never leaves your server. EU data residency and DPA requirements explained.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11 min read',
     educationalLevel: 'Intermediate',
     audience: 'CISOs, DPOs, legal teams, and technical leads at EU-regulated organisations evaluating AI infrastructure',
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Open-weight models publish the trained model parameters — the numerical values that define the model\'s behaviour. This distinguishes them from open-source models (which also publish training code) and closed APIs (which publish neither). The [Qwen 3 family](https://huggingface.co/Qwen), [Llama 3.3](https://llama.meta.com/llama3/), and [Mistral models](https://huggingface.co/mistralai) are open-weight: anyone can download the parameters, run inference, fine-tune, and inspect the architecture.',
           'Auditability is the first benefit. A CISO can verify that Qwen 3.6 27B runs the exact weights published by [Alibaba Cloud (Tongyi Lab)](https://huggingface.co/Qwen), inspect the architecture, and run adversarial testing on the local deployment. None of this is possible with a cloud API.',
-          'Reproducibility is the second benefit. Open-weight models do not change between API calls. When a cloud provider updates their model (GPT-5.5 has had multiple silent updates, Claude Sonnet has gone through multiple versions), your fine-tuned prompts, test suites, and expected outputs may break without notice. A local open-weight deployment is frozen at the version you chose.',
+          'Reproducibility is the second benefit. Open-weight models do not change between API calls. When a cloud provider updates their model (GPT-5.6 has had multiple silent updates, Claude Sonnet has gone through multiple versions), your fine-tuned prompts, test suites, and expected outputs may break without notice. A local open-weight deployment is frozen at the version you chose.',
           'Commercial freedom is the third benefit. Apache 2.0 grants perpetual, irrevocable rights to use Qwen 3 for any purpose. Proprietary API terms can change. Anthropic, OpenAI, and Google have all modified their usage policies, pricing, and model availability within 12-month windows. Open-weight Apache 2.0 models cannot be unilaterally withdrawn.',
         ],
         callouts: [
@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'EU AI Act 2026',
         content: [
           'The [EU AI Act (Regulation 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) came into force in phases through 2025–2026. As of May 2026, obligations for general-purpose AI (GPAI) providers are active under [Article 53](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3639). The 10^25 FLOPs training compute threshold specifically identifies "systemic risk" GPAI models under [Article 55](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3734), which face additional oversight requirements. This distinction is critical: all GPAI providers must comply with Article 53, but only systemic risk models face the full Article 55 burden.',
-          'Article 53 applies to all GPAI providers, requiring: technical documentation, copyright compliance disclosure, training data summaries, and instruction tuning logs. Article 55 applies specifically to models above 10^25 FLOPs, adding adversarial testing, incident reporting to the [EU AI Office](https://digital-strategy.ec.europa.eu/), and cybersecurity assessments. Frontier cloud models (GPT-5.5, Claude Sonnet, Gemini) approach or exceed the systemic risk threshold. Open-weight models in the 7B–72B range remain below it.',
+          'Article 53 applies to all GPAI providers, requiring: technical documentation, copyright compliance disclosure, training data summaries, and instruction tuning logs. Article 55 applies specifically to models above 10^25 FLOPs, adding adversarial testing, incident reporting to the [EU AI Office](https://digital-strategy.ec.europa.eu/), and cybersecurity assessments. Frontier cloud models (GPT-5.6, Claude Sonnet, Gemini) approach or exceed the systemic risk threshold. Open-weight models in the 7B–72B range remain below it.',
           'Local deployment of open-weight models below the systemic risk threshold does not trigger GPAI provider obligations. Organisations deploying Qwen 3.6 27B locally are users, not providers, for EU AI Act purposes. They remain subject to the Act\'s user provisions (prohibited use cases, transparency to end users) but not the full GPAI provider compliance burden.',
           'Practically, this means: cloud API providers face growing EU compliance overhead in 2026–2027 due to Article 53 and 55 obligations. Local open-weight deployments below the systemic risk threshold offer a structurally simpler compliance path as long as prohibited-use provisions are observed.',
         ],
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — 2026 Comparison](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Why EU Companies Are Switching to Local Qwen](/blog/eu-companies-local-qwen-gdpr-shift)',
           '[How to Run Qwen 3 Locally — Ollama + LM Studio Guide](/local-llms/run-qwen-locally-guide-2026)',
           '[Enterprise Compliance with Local LLMs](/local-llms/enterprise-compliance-local-llms)',
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is DeepSeek R2 compliant with GDPR for EU personal data?', a: 'Using DeepSeek R2 for EU personal data is high-risk from a GDPR perspective. DeepSeek AI operates from China. The EU Commission has not issued a China adequacy decision. Without an adequacy decision, international transfers require SCCs or Binding Corporate Rules (BCRs). DeepSeek does not currently offer EU-standard SCCs. Consult your DPO before using DeepSeek R2 for any personal data.' },
           { q: 'Does the EU AI Act apply to local Qwen deployment?', a: 'As of May 2026, deploying Qwen 3.6 27B locally makes you a user, not a provider, under the EU AI Act. GPAI provider obligations (Article 53 documentation, adversarial testing for systemic risk models) apply to the model creator (Alibaba) and to organisations that build products on the model and make it available to others. Internal deployment for your own organisation\'s use is covered only by the user provisions (prohibited use cases, end-user transparency where applicable).' },
           { q: 'Is Qwen 3.6 27B truly Apache 2.0 licensed?', a: 'Yes. Qwen 3.6 27B is released under Apache 2.0, which permits commercial use, modification, and redistribution without royalties. Verify each model\'s current license on its Hugging Face model card before deploying in production.' },
-          { q: 'What is the EU AI Act\'s GPAI threshold?', a: 'The EU AI Act defines general-purpose AI models trained on more than 10^25 FLOPs compute as "systemic risk" GPAI models requiring additional oversight. Frontier models (GPT-5.5, Claude Sonnet 4.6, Gemini 3.5 Pro) cross this threshold. Open-weight models in the 7B–72B range, including Qwen 3.6 27B, are well below the threshold as of May 2026. The threshold applies to the training compute of the model itself — not to inference compute at your organisation.' },
+          { q: 'What is the EU AI Act\'s GPAI threshold?', a: 'The EU AI Act defines general-purpose AI models trained on more than 10^25 FLOPs compute as "systemic risk" GPAI models requiring additional oversight. Frontier models (GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro) cross this threshold. Open-weight models in the 7B–72B range, including Qwen 3.6 27B, are well below the threshold as of May 2026. The threshold applies to the training compute of the model itself — not to inference compute at your organisation.' },
         ],
       },
     },
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Cada prompt enviado a una IA en la nube es una transferencia de datos. Cada transferencia de datos a un servidor fuera de la UE requiere una base legal según el Artículo 44 del RGPD. Los LLMs locales con pesos abiertos — Qwen 3.6 27B a la cabeza — eliminan por completo esta categoría de riesgo de cumplimiento. Este manifiesto defiende los LLMs locales de pesos abiertos como la capa de IA fundacional para las organizaciones gobernadas por el RGPD, y recorre cada artículo relevante del RGPD, las obligaciones de la Ley de IA de la UE 2026 y los contraargumentos que merecen atención.',
     metaDescription: 'Qwen 3 desplegado en local elimina los problemas de transferencia del Artículo 44 del RGPD: los datos nunca salen de tu servidor. Residencia de datos en la UE.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'CISOs, DPOs, equipos legales y responsables técnicos de organizaciones reguladas en la UE que evalúan infraestructura de IA',
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Los modelos de pesos abiertos publican los parámetros del modelo entrenado — los valores numéricos que definen el comportamiento del modelo. Esto los distingue de los modelos de código abierto (que también publican el código de entrenamiento) y de las APIs cerradas (que no publican ninguno). La [familia Qwen 3](https://huggingface.co/Qwen), [Llama 3.3](https://llama.meta.com/llama3/) y los [modelos Mistral](https://huggingface.co/mistralai) son de pesos abiertos: cualquiera puede descargar los parámetros, ejecutar inferencia, ajustar finamente e inspeccionar la arquitectura.',
           'La auditabilidad es el primer beneficio. Un CISO puede verificar que Qwen 3.6 27B ejecuta los pesos exactos publicados por [Alibaba Cloud (Tongyi Lab)](https://huggingface.co/Qwen), inspeccionar la arquitectura y realizar pruebas adversariales en el despliegue local. Nada de esto es posible con una API en la nube.',
-          'La reproducibilidad es el segundo beneficio. Los modelos de pesos abiertos no cambian entre llamadas a la API. Cuando un proveedor de nube actualiza su modelo (GPT-5.5 ha tenido múltiples actualizaciones silenciosas, Claude Sonnet ha pasado por múltiples versiones), tus prompts ajustados, suites de pruebas y resultados esperados pueden romperse sin previo aviso. Un despliegue local de pesos abiertos está congelado en la versión que elegiste.',
+          'La reproducibilidad es el segundo beneficio. Los modelos de pesos abiertos no cambian entre llamadas a la API. Cuando un proveedor de nube actualiza su modelo (GPT-5.6 ha tenido múltiples actualizaciones silenciosas, Claude Sonnet ha pasado por múltiples versiones), tus prompts ajustados, suites de pruebas y resultados esperados pueden romperse sin previo aviso. Un despliegue local de pesos abiertos está congelado en la versión que elegiste.',
           'La libertad comercial es el tercer beneficio. Apache 2.0 otorga derechos perpetuos e irrevocables para usar Qwen 3 para cualquier propósito. Los términos de APIs propietarias pueden cambiar. Anthropic, OpenAI y Google han modificado sus políticas de uso, precios y disponibilidad de modelos en ventanas de 12 meses. Los modelos de pesos abiertos Apache 2.0 no pueden ser retirados unilateralmente.',
         ],
         callouts: [
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ley de IA de la UE 2026',
         content: [
           'La [Ley de IA de la UE (Reglamento 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) entró en vigor en fases entre 2025 y 2026. A mayo de 2026, las obligaciones para los proveedores de IA de propósito general (GPAI) están activas según el [Artículo 53](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3639). El umbral de 10^25 FLOPs de cómputo de entrenamiento identifica específicamente los modelos GPAI de "riesgo sistémico" según el [Artículo 55](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3734), que se enfrentan a requisitos de supervisión adicionales. Esta distinción es crítica: todos los proveedores GPAI deben cumplir el Artículo 53, pero solo los modelos de riesgo sistémico afrontan la carga completa del Artículo 55.',
-          'El Artículo 53 se aplica a todos los proveedores GPAI, exigiendo: documentación técnica, divulgación del cumplimiento de derechos de autor, resúmenes de datos de entrenamiento y registros de ajuste por instrucciones. El Artículo 55 se aplica específicamente a los modelos por encima de 10^25 FLOPs, añadiendo pruebas adversariales, notificación de incidentes a la [Oficina de IA de la UE](https://digital-strategy.ec.europa.eu/) y evaluaciones de ciberseguridad. Los modelos frontera en la nube (GPT-5.5, Claude Sonnet, Gemini) se acercan o superan el umbral de riesgo sistémico. Los modelos de pesos abiertos en el rango de 7B–72B permanecen por debajo.',
+          'El Artículo 53 se aplica a todos los proveedores GPAI, exigiendo: documentación técnica, divulgación del cumplimiento de derechos de autor, resúmenes de datos de entrenamiento y registros de ajuste por instrucciones. El Artículo 55 se aplica específicamente a los modelos por encima de 10^25 FLOPs, añadiendo pruebas adversariales, notificación de incidentes a la [Oficina de IA de la UE](https://digital-strategy.ec.europa.eu/) y evaluaciones de ciberseguridad. Los modelos frontera en la nube (GPT-5.6, Claude Sonnet, Gemini) se acercan o superan el umbral de riesgo sistémico. Los modelos de pesos abiertos en el rango de 7B–72B permanecen por debajo.',
           'El despliegue local de modelos de pesos abiertos por debajo del umbral de riesgo sistémico no activa las obligaciones del proveedor GPAI. Las organizaciones que despliegan Qwen 3.6 27B localmente son usuarias, no proveedoras, a efectos de la Ley de IA de la UE. Siguen sujetas a las disposiciones de usuario de la Ley (casos de uso prohibidos, transparencia hacia los usuarios finales) pero no a la carga completa del cumplimiento del proveedor GPAI.',
           'En la práctica, esto significa: los proveedores de APIs en la nube afrontan una carga de cumplimiento creciente en la UE en 2026–2027 debido a las obligaciones de los Artículos 53 y 55. Los despliegues locales de pesos abiertos por debajo del umbral de riesgo sistémico ofrecen un camino de cumplimiento estructuralmente más sencillo siempre que se observen las disposiciones sobre usos prohibidos.',
         ],
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparación 2026](/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — Comparación 2026](/es/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Por qué las empresas de la UE están cambiando a Qwen local](/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Cómo ejecutar Qwen 3 localmente — Guía de Ollama + LM Studio](/es/local-llms/run-qwen-locally-guide-2026)',
           '[Cumplimiento empresarial con LLMs locales](/es/local-llms/enterprise-compliance-local-llms)',
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es DeepSeek R2 conforme con el RGPD para datos personales de la UE?', a: 'Usar DeepSeek R2 para datos personales de la UE es de alto riesgo desde la perspectiva del RGPD. DeepSeek AI opera desde China. La Comisión Europea no ha emitido una decisión de adecuación para China. Sin una decisión de adecuación, las transferencias internacionales requieren SCCs o Normas Corporativas Vinculantes (BCRs). DeepSeek actualmente no ofrece SCCs al estándar de la UE. Consulta a tu DPO antes de usar DeepSeek R2 para cualquier dato personal.' },
           { q: '¿Se aplica la Ley de IA de la UE al despliegue local de Qwen?', a: 'A mayo de 2026, desplegar Qwen 3.6 27B localmente te convierte en usuario, no en proveedor, según la Ley de IA de la UE. Las obligaciones del proveedor GPAI (documentación del Artículo 53, pruebas adversariales para modelos de riesgo sistémico) se aplican al creador del modelo (Alibaba) y a las organizaciones que crean productos sobre el modelo y lo ponen a disposición de terceros. El despliegue interno para uso de tu propia organización está cubierto solo por las disposiciones de usuario (casos de uso prohibidos, transparencia hacia el usuario final donde corresponda).' },
           { q: '¿Está Qwen 3.6 27B realmente licenciado bajo Apache 2.0?', a: 'Sí. Qwen 3.6 27B se publica bajo Apache 2.0, que permite el uso comercial, la modificación y la redistribución sin regalías. Verifica la licencia actual de cada modelo en su ficha de modelo de Hugging Face antes de desplegar en producción.' },
-          { q: '¿Cuál es el umbral GPAI de la Ley de IA de la UE?', a: 'La Ley de IA de la UE define los modelos de IA de propósito general entrenados con más de 10^25 FLOPs de cómputo como modelos GPAI de "riesgo sistémico" que requieren supervisión adicional. Los modelos frontera (GPT-5.5, Claude Sonnet 4.6, Gemini 3.5 Pro) superan este umbral. Los modelos de pesos abiertos en el rango de 7B–72B, incluido Qwen 3.6 27B, están muy por debajo del umbral a mayo de 2026. El umbral se aplica al cómputo de entrenamiento del modelo en sí — no al cómputo de inferencia en tu organización.' },
+          { q: '¿Cuál es el umbral GPAI de la Ley de IA de la UE?', a: 'La Ley de IA de la UE define los modelos de IA de propósito general entrenados con más de 10^25 FLOPs de cómputo como modelos GPAI de "riesgo sistémico" que requieren supervisión adicional. Los modelos frontera (GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro) superan este umbral. Los modelos de pesos abiertos en el rango de 7B–72B, incluido Qwen 3.6 27B, están muy por debajo del umbral a mayo de 2026. El umbral se aplica al cómputo de entrenamiento del modelo en sí — no al cómputo de inferencia en tu organización.' },
         ],
       },
     },
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/local-llms/qwen-gdpr-privacy-manifesto-2026',
       inLanguage: 'es',
       datePublished: '2026-05-16',
-      dateModified: '2026-05-16',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'كل أمر يُرسَل إلى ذكاء اصطناعي سحابي هو نقل للبيانات. كل نقل بيانات إلى خادم خارج الاتحاد الأوروبي يتطلب أساسًا قانونيًا بموجب المادة 44 من GDPR. نماذج LLM المحلية ذات الأوزان المفتوحة — وعلى رأسها Qwen 3.6 27B — تلغي هذه الفئة من مخاطر الامتثال بالكامل. يدافع هذا البيان عن نماذج LLM المحلية ذات الأوزان المفتوحة كطبقة ذكاء اصطناعي أساسية للمؤسسات الخاضعة لـ GDPR، ويستعرض كل مادة ذات صلة من GDPR والتزامات قانون الذكاء الاصطناعي الأوروبي 2026 والحجج المضادة الجديرة بالاهتمام.',
     metaDescription: '⁨Qwen 3⁩ المنشور محليًا يلغي نقل البيانات بموجب المادة ⁨44⁩ من ⁨GDPR⁩ — بياناتك لا تغادر خادمك. ⁨Apache 2.0⁩، ⁨92.1% HumanEval⁩، ⁨16 GB VRAM⁩.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11 دقيقة قراءة',
     educationalLevel: 'Intermediate',
     audience: 'مسؤولو أمن المعلومات ومسؤولو حماية البيانات والفرق القانونية والقادة التقنيون في المؤسسات المنظَّمة في الاتحاد الأوروبي الذين يقيّمون بنية الذكاء الاصطناعي',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'تنشر النماذج ذات الأوزان المفتوحة معاملات النموذج المدرَّب — القيم العددية التي تحدد سلوك النموذج. هذا يميّزها عن النماذج مفتوحة المصدر (التي تنشر أيضًا كود التدريب) وعن واجهات API المغلقة (التي لا تنشر أيًا منهما). [عائلة Qwen 3](https://huggingface.co/Qwen) و[Llama 3.3](https://llama.meta.com/llama3/) و[نماذج Mistral](https://huggingface.co/mistralai) ذات أوزان مفتوحة: يمكن لأي شخص تنزيل المعاملات وتشغيل الاستدلال والضبط الدقيق وفحص البنية.',
           'قابلية التدقيق هي الفائدة الأولى. يمكن لمسؤول أمن المعلومات التحقق من أن Qwen 3.6 27B يشغّل الأوزان الدقيقة التي نشرها [Alibaba Cloud (Tongyi Lab)](https://huggingface.co/Qwen)، وفحص البنية، وإجراء اختبارات عدائية على النشر المحلي. لا شيء من هذا ممكن مع API سحابي.',
-          'قابلية الاستنساخ هي الفائدة الثانية. النماذج ذات الأوزان المفتوحة لا تتغير بين استدعاءات API. عندما يحدّث مزوّد سحابي نموذجه (شهد GPT-5.5 تحديثات صامتة متعددة، ومرّ Claude Sonnet بإصدارات متعددة)، قد تتعطل أوامرك المضبوطة ومجموعات اختباراتك ونتائجك المتوقعة دون إشعار مسبق. النشر المحلي ذو الأوزان المفتوحة مجمّد على الإصدار الذي اخترته.',
+          'قابلية الاستنساخ هي الفائدة الثانية. النماذج ذات الأوزان المفتوحة لا تتغير بين استدعاءات API. عندما يحدّث مزوّد سحابي نموذجه (شهد GPT-5.6 تحديثات صامتة متعددة، ومرّ Claude Sonnet بإصدارات متعددة)، قد تتعطل أوامرك المضبوطة ومجموعات اختباراتك ونتائجك المتوقعة دون إشعار مسبق. النشر المحلي ذو الأوزان المفتوحة مجمّد على الإصدار الذي اخترته.',
           'الحرية التجارية هي الفائدة الثالثة. يمنح Apache 2.0 حقوقًا دائمة وغير قابلة للإلغاء لاستخدام Qwen 3 لأي غرض. شروط واجهات API المملوكة قد تتغير. عدّلت Anthropic وOpenAI وGoogle سياسات الاستخدام والتسعير وتوافر النماذج خلال نوافذ 12 شهرًا. النماذج ذات الأوزان المفتوحة بترخيص Apache 2.0 لا يمكن سحبها من جانب واحد.',
         ],
         callouts: [
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قانون الذكاء الاصطناعي الأوروبي 2026',
         content: [
           'دخل [قانون الذكاء الاصطناعي الأوروبي (اللائحة 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) حيز التنفيذ على مراحل بين 2025 و2026. حتى مايو 2026، تكون التزامات مزوّدي الذكاء الاصطناعي للأغراض العامة (GPAI) فعّالة بموجب [المادة 53](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3639). يحدد عتبة 10^25 FLOP من حوسبة التدريب على وجه التحديد نماذج GPAI ذات "المخاطر المنهجية" بموجب [المادة 55](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3734)، التي تواجه متطلبات رقابة إضافية. هذا التمييز حاسم: يجب على جميع مزوّدي GPAI الامتثال للمادة 53، لكن نماذج المخاطر المنهجية وحدها تواجه العبء الكامل للمادة 55.',
-          'تنطبق المادة 53 على جميع مزوّدي GPAI، وتُلزم بـ: توثيق تقني، والإفصاح عن الامتثال لحقوق النشر، وملخصات بيانات التدريب، وسجلات الضبط بالتعليمات. تنطبق المادة 55 خصوصًا على النماذج التي تتجاوز 10^25 FLOP، وتضيف اختبارات عدائية، والإبلاغ عن الحوادث إلى [مكتب الذكاء الاصطناعي بالاتحاد الأوروبي](https://digital-strategy.ec.europa.eu/)، وتقييمات الأمن السيبراني. تقترب النماذج الحدودية السحابية (GPT-5.5، Claude Sonnet، Gemini) من عتبة المخاطر المنهجية أو تتجاوزها. تبقى النماذج ذات الأوزان المفتوحة في نطاق 7B–72B دونها.',
+          'تنطبق المادة 53 على جميع مزوّدي GPAI، وتُلزم بـ: توثيق تقني، والإفصاح عن الامتثال لحقوق النشر، وملخصات بيانات التدريب، وسجلات الضبط بالتعليمات. تنطبق المادة 55 خصوصًا على النماذج التي تتجاوز 10^25 FLOP، وتضيف اختبارات عدائية، والإبلاغ عن الحوادث إلى [مكتب الذكاء الاصطناعي بالاتحاد الأوروبي](https://digital-strategy.ec.europa.eu/)، وتقييمات الأمن السيبراني. تقترب النماذج الحدودية السحابية (GPT-5.6، Claude Sonnet، Gemini) من عتبة المخاطر المنهجية أو تتجاوزها. تبقى النماذج ذات الأوزان المفتوحة في نطاق 7B–72B دونها.',
           'لا يُفعّل النشر المحلي للنماذج ذات الأوزان المفتوحة دون عتبة المخاطر المنهجية التزامات مزوّد GPAI. المؤسسات التي تنشر Qwen 3.6 27B محليًا تُعد مستخدِمة، لا مزوّدة، لأغراض قانون الذكاء الاصطناعي الأوروبي. تظل خاضعة لأحكام المستخدم في القانون (حالات الاستخدام المحظورة، الشفافية تجاه المستخدمين النهائيين) لكن ليس للعبء الكامل لامتثال مزوّد GPAI.',
           'عمليًا، هذا يعني: يواجه مزوّدو واجهات API السحابية عبء امتثال متزايدًا في الاتحاد الأوروبي في 2026–2027 بسبب التزامات المادتين 53 و55. توفّر عمليات النشر المحلية ذات الأوزان المفتوحة دون عتبة المخاطر المنهجية مسار امتثال أبسط هيكليًا شريطة مراعاة أحكام الاستخدامات المحظورة.',
         ],
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[Qwen 3 مقابل Claude Sonnet 4.6 مقابل DeepSeek R2 — مقارنة 2026](/ar/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 مقابل Claude Sonnet 5 مقابل DeepSeek R2 — مقارنة 2026](/ar/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[لماذا تتحول شركات الاتحاد الأوروبي إلى Qwen المحلي](/blog/eu-companies-local-qwen-gdpr-shift)',
           '[كيفية تشغيل Qwen 3 محليًا — دليل Ollama + LM Studio](/ar/local-llms/run-qwen-locally-guide-2026)',
           '[الامتثال المؤسسي مع نماذج LLM المحلية](/ar/local-llms/enterprise-compliance-local-llms)',
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل DeepSeek R2 متوافق مع GDPR للبيانات الشخصية في الاتحاد الأوروبي؟', a: 'استخدام DeepSeek R2 للبيانات الشخصية في الاتحاد الأوروبي عالي المخاطر من منظور GDPR. تعمل DeepSeek AI من الصين. لم تُصدر المفوضية الأوروبية قرار كفاية بشأن الصين. دون قرار كفاية، تتطلب عمليات النقل الدولية SCCs أو قواعد ملزمة للشركات (BCRs). لا تقدّم DeepSeek حاليًا SCCs بمعيار الاتحاد الأوروبي. استشر مسؤول حماية البيانات لديك قبل استخدام DeepSeek R2 لأي بيانات شخصية.' },
           { q: 'هل ينطبق قانون الذكاء الاصطناعي الأوروبي على النشر المحلي لـ Qwen؟', a: 'حتى مايو 2026، نشر Qwen 3.6 27B محليًا يجعلك مستخدِمًا، لا مزوّدًا، بموجب قانون الذكاء الاصطناعي الأوروبي. تنطبق التزامات مزوّد GPAI (توثيق المادة 53، الاختبارات العدائية لنماذج المخاطر المنهجية) على مُنشئ النموذج (Alibaba) وعلى المؤسسات التي تبني منتجات فوق النموذج وتتيحها لأطراف ثالثة. النشر الداخلي لاستخدام مؤسستك مغطى بأحكام المستخدم فقط (حالات الاستخدام المحظورة، الشفافية تجاه المستخدم النهائي حيثما ينطبق).' },
           { q: 'هل Qwen 3.6 27B مرخّص فعلًا بموجب Apache 2.0؟', a: 'نعم. يُنشر Qwen 3.6 27B بموجب Apache 2.0، الذي يتيح الاستخدام التجاري والتعديل وإعادة التوزيع دون إتاوات. تحقق من الترخيص الحالي لكل نموذج في بطاقة نموذجه على Hugging Face قبل النشر في الإنتاج.' },
-          { q: 'ما عتبة GPAI في قانون الذكاء الاصطناعي الأوروبي؟', a: 'يُعرّف قانون الذكاء الاصطناعي الأوروبي نماذج الذكاء الاصطناعي للأغراض العامة المدرَّبة بأكثر من 10^25 FLOP من الحوسبة بأنها نماذج GPAI ذات "مخاطر منهجية" تتطلب رقابة إضافية. تتجاوز النماذج الحدودية (GPT-5.5، Claude Sonnet 4.6، Gemini 3.5 Pro) هذه العتبة. تبقى النماذج ذات الأوزان المفتوحة في نطاق 7B–72B، بما فيها Qwen 3.6 27B، دون العتبة بكثير حتى مايو 2026. تنطبق العتبة على حوسبة تدريب النموذج نفسه — لا على حوسبة الاستدلال في مؤسستك.' },
+          { q: 'ما عتبة GPAI في قانون الذكاء الاصطناعي الأوروبي؟', a: 'يُعرّف قانون الذكاء الاصطناعي الأوروبي نماذج الذكاء الاصطناعي للأغراض العامة المدرَّبة بأكثر من 10^25 FLOP من الحوسبة بأنها نماذج GPAI ذات "مخاطر منهجية" تتطلب رقابة إضافية. تتجاوز النماذج الحدودية (GPT-5.6، Claude Sonnet 5، Gemini 3.5 Pro) هذه العتبة. تبقى النماذج ذات الأوزان المفتوحة في نطاق 7B–72B، بما فيها Qwen 3.6 27B، دون العتبة بكثير حتى مايو 2026. تنطبق العتبة على حوسبة تدريب النموذج نفسه — لا على حوسبة الاستدلال في مؤسستك.' },
         ],
       },
     },
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/local-llms/qwen-gdpr-privacy-manifesto-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-16',
-      dateModified: '2026-05-16',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Jede Anfrage an eine Cloud-KI ist eine Datenuebertragung. Jede Datenuebertragung auf Nicht-EU-Server erfordert eine Rechtsgrundlage nach DSGVO Art. 44. Lokale LLMs mit Open Weights — Qwen 3.6 27B als bestes Beispiel — eliminieren diese Compliance-Risikokategorie vollstaendig.',
     metaDescription: 'Qwen DSGVO-Datenschutz-Manifest 2026: Warum lokales Qwen die datenschutzfreundlichste KI-Wahl ist. Keine Datenübertragung, volle Kontrolle.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11 min Lesezeit',
     sections: {
       tldr: {
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Chaque prompt envoyé à une IA cloud est un transfert de données. Chaque transfert vers un serveur non-UE nécessite une base légale selon le RGPD Article 44. Les LLM locaux à poids ouverts — Qwen 3.6 27B en tête — éliminent entièrement cette catégorie de risque de conformité.',
     metaDescription: 'Qwen 3.6 27B local : architecture RGPD-conforme pour l\'UE. Open-weight, zéro transfert transfrontalier, Article 44, Loi IA 2026. Manifeste complet.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11 min de lecture',
     sections: {
       tldr: {
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'クラウドAIへのプロンプトはすべてデータ転送です。EU域外サーバーへの各データ転送はGDPR第44条に基づく法的根拠が必要です。オープンウェイトのローカルLLM — とりわけQwen 3.6 27B — はこのコンプライアンスリスクカテゴリーを完全に排除します。',
     metaDescription: 'Qwen 3.6 27BのようなオープンウェイトモデルはGDPR準拠。ローカル展開は第44条転送を排除し、EU組織のデータ主権を保証します。2026年のAI法対応も含む。',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11分で読めます',
     sections: {
       tldr: {
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '发送到云AI的每个提示词都是数据传输。根据GDPR第44条，每次向非欧盟服务器传输数据都需要法律依据。具有开放权重的本地LLM — 尤其是Qwen 3.6 27B — 从根本上消除了这一合规风险类别。',
     metaDescription: 'Qwen 3.6 27B等开放权重模型设计上GDPR合规。本地部署消除第44条数据转移，为欧盟组织保障数据主权。含2026年AI法应对方案。',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11分钟阅读',
     sections: {
       tldr: {
@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Todo prompt enviado a uma IA na nuvem é uma transferência de dados. Toda transferência de dados para um servidor fora da UE exige uma base legal segundo o Artigo 44 do GDPR. Os LLMs locais com pesos abertos — Qwen 3.6 27B à frente — eliminam por completo essa categoria de risco de conformidade. Este manifesto defende os LLMs locais de pesos abertos como a camada fundamental de IA para organizações regidas pelo GDPR, e percorre cada artigo relevante do GDPR, as obrigações da Lei de IA da UE 2026 e os contra-argumentos que merecem atenção.',
     metaDescription: 'O Qwen 3 implantado localmente elimina os problemas de transferência do Artigo 44 do GDPR: os dados nunca saem do seu servidor. Residência de dados na UE.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'CISOs, DPOs, equipes jurídicas e líderes técnicos de organizações reguladas na UE que avaliam infraestrutura de IA',
@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Os modelos de pesos abertos publicam os parâmetros do modelo treinado — os valores numéricos que definem o comportamento do modelo. Isso os distingue dos modelos de código aberto (que também publicam o código de treinamento) e das APIs fechadas (que não publicam nenhum). A [família Qwen 3](https://huggingface.co/Qwen), o [Llama 3.3](https://llama.meta.com/llama3/) e os [modelos Mistral](https://huggingface.co/mistralai) são de pesos abertos: qualquer pessoa pode baixar os parâmetros, executar inferência, fazer ajuste fino e inspecionar a arquitetura.',
           'A auditabilidade é o primeiro benefício. Um CISO pode verificar que o Qwen 3.6 27B executa os pesos exatos publicados pela [Alibaba Cloud (Tongyi Lab)](https://huggingface.co/Qwen), inspecionar a arquitetura e realizar testes adversariais na implantação local. Nada disso é possível com uma API na nuvem.',
-          'A reprodutibilidade é o segundo benefício. Os modelos de pesos abertos não mudam entre chamadas de API. Quando um provedor de nuvem atualiza seu modelo (o GPT-5.5 teve várias atualizações silenciosas, o Claude Sonnet passou por várias versões), seus prompts ajustados, suítes de teste e resultados esperados podem quebrar sem aviso. Uma implantação local de pesos abertos fica congelada na versão que você escolheu.',
+          'A reprodutibilidade é o segundo benefício. Os modelos de pesos abertos não mudam entre chamadas de API. Quando um provedor de nuvem atualiza seu modelo (o GPT-5.6 teve várias atualizações silenciosas, o Claude Sonnet passou por várias versões), seus prompts ajustados, suítes de teste e resultados esperados podem quebrar sem aviso. Uma implantação local de pesos abertos fica congelada na versão que você escolheu.',
           'A liberdade comercial é o terceiro benefício. A Apache 2.0 concede direitos perpétuos e irrevogáveis de uso do Qwen 3 para qualquer finalidade. Os termos de APIs proprietárias podem mudar. Anthropic, OpenAI e Google já modificaram suas políticas de uso, preços e disponibilidade de modelos em janelas de 12 meses. Os modelos de pesos abertos Apache 2.0 não podem ser retirados unilateralmente.',
         ],
         callouts: [
@@ -938,7 +938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lei de IA da UE 2026',
         content: [
           'A [Lei de IA da UE (Regulamento 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) entrou em vigor em fases entre 2025 e 2026. Em maio de 2026, as obrigações para os provedores de IA de propósito geral (GPAI) estão ativas segundo o [Artigo 53](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3639). O limite de 10^25 FLOPs de computação de treinamento identifica especificamente os modelos GPAI de "risco sistêmico" segundo o [Artigo 55](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3734), que enfrentam requisitos de supervisão adicionais. Essa distinção é crítica: todos os provedores GPAI devem cumprir o Artigo 53, mas apenas os modelos de risco sistêmico enfrentam a carga completa do Artigo 55.',
-          'O Artigo 53 se aplica a todos os provedores GPAI, exigindo: documentação técnica, divulgação de conformidade com direitos autorais, resumos dos dados de treinamento e registros de ajuste por instruções. O Artigo 55 se aplica especificamente aos modelos acima de 10^25 FLOPs, acrescentando testes adversariais, notificação de incidentes ao [Escritório de IA da UE](https://digital-strategy.ec.europa.eu/) e avaliações de cibersegurança. Os modelos de fronteira na nuvem (GPT-5.5, Claude Sonnet, Gemini) se aproximam ou ultrapassam o limite de risco sistêmico. Os modelos de pesos abertos na faixa de 7B–72B permanecem abaixo dele.',
+          'O Artigo 53 se aplica a todos os provedores GPAI, exigindo: documentação técnica, divulgação de conformidade com direitos autorais, resumos dos dados de treinamento e registros de ajuste por instruções. O Artigo 55 se aplica especificamente aos modelos acima de 10^25 FLOPs, acrescentando testes adversariais, notificação de incidentes ao [Escritório de IA da UE](https://digital-strategy.ec.europa.eu/) e avaliações de cibersegurança. Os modelos de fronteira na nuvem (GPT-5.6, Claude Sonnet, Gemini) se aproximam ou ultrapassam o limite de risco sistêmico. Os modelos de pesos abertos na faixa de 7B–72B permanecem abaixo dele.',
           'A implantação local de modelos de pesos abertos abaixo do limite de risco sistêmico não aciona as obrigações do provedor GPAI. As organizações que implantam o Qwen 3.6 27B localmente são usuárias, não provedoras, para fins da Lei de IA da UE. Elas permanecem sujeitas às disposições de usuário da Lei (casos de uso proibidos, transparência para os usuários finais), mas não à carga completa de conformidade do provedor GPAI.',
           'Na prática, isso significa: os provedores de APIs na nuvem enfrentam uma carga de conformidade crescente na UE em 2026–2027 devido às obrigações dos Artigos 53 e 55. As implantações locais de pesos abertos abaixo do limite de risco sistêmico oferecem um caminho de conformidade estruturalmente mais simples, desde que as disposições sobre usos proibidos sejam observadas.',
         ],
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras Relacionadas',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — Comparação 2026](/pt/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — Comparação 2026](/pt/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[Por que as empresas da UE estão migrando para o Qwen local](/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Como executar o Qwen 3 localmente — Guia de Ollama + LM Studio](/pt/local-llms/run-qwen-locally-guide-2026)',
           '[Conformidade empresarial com LLMs locais](/pt/local-llms/enterprise-compliance-local-llms)',
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O DeepSeek R2 está em conformidade com o GDPR para dados pessoais da UE?', a: 'Usar o DeepSeek R2 para dados pessoais da UE é de alto risco sob a perspectiva do GDPR. A DeepSeek AI opera a partir da China. A Comissão Europeia não emitiu uma decisão de adequação para a China. Sem uma decisão de adequação, as transferências internacionais exigem SCCs ou Normas Corporativas Vinculantes (BCRs). A DeepSeek atualmente não oferece SCCs no padrão da UE. Consulte seu DPO antes de usar o DeepSeek R2 para quaisquer dados pessoais.' },
           { q: 'A Lei de IA da UE se aplica à implantação local do Qwen?', a: 'Em maio de 2026, implantar o Qwen 3.6 27B localmente faz de você um usuário, não um provedor, segundo a Lei de IA da UE. As obrigações do provedor GPAI (documentação do Artigo 53, testes adversariais para modelos de risco sistêmico) aplicam-se ao criador do modelo (Alibaba) e às organizações que constroem produtos sobre o modelo e o disponibilizam a terceiros. A implantação interna para uso da sua própria organização é coberta apenas pelas disposições de usuário (casos de uso proibidos, transparência para o usuário final quando aplicável).' },
           { q: 'O Qwen 3.6 27B é realmente licenciado sob Apache 2.0?', a: 'Sim. O Qwen 3.6 27B é publicado sob a Apache 2.0, que permite uso comercial, modificação e redistribuição sem royalties. Verifique a licença atual de cada modelo na ficha de modelo do Hugging Face antes de implantar em produção.' },
-          { q: 'Qual é o limite GPAI da Lei de IA da UE?', a: 'A Lei de IA da UE define os modelos de IA de propósito geral treinados com mais de 10^25 FLOPs de computação como modelos GPAI de "risco sistêmico" que exigem supervisão adicional. Os modelos de fronteira (GPT-5.5, Claude Sonnet 4.6, Gemini 3.5 Pro) ultrapassam esse limite. Os modelos de pesos abertos na faixa de 7B–72B, incluindo o Qwen 3.6 27B, estão bem abaixo do limite em maio de 2026. O limite se aplica à computação de treinamento do próprio modelo — não à computação de inferência na sua organização.' },
+          { q: 'Qual é o limite GPAI da Lei de IA da UE?', a: 'A Lei de IA da UE define os modelos de IA de propósito geral treinados com mais de 10^25 FLOPs de computação como modelos GPAI de "risco sistêmico" que exigem supervisão adicional. Os modelos de fronteira (GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro) ultrapassam esse limite. Os modelos de pesos abertos na faixa de 7B–72B, incluindo o Qwen 3.6 27B, estão bem abaixo do limite em maio de 2026. O limite se aplica à computação de treinamento do próprio modelo — não à computação de inferência na sua organização.' },
         ],
       },
     },
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/local-llms/qwen-gdpr-privacy-manifesto-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-16',
-      dateModified: '2026-05-16',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '클라우드 AI에 전송되는 모든 프롬프트는 데이터 이전입니다. EU 외부 서버로의 모든 데이터 이전은 GDPR 제44조에 따른 법적 근거를 필요로 합니다. 오픈 웨이트 로컬 LLM — 그 중에서도 Qwen 3.6 27B가 선두에 있습니다 — 은 이 카테고리의 컴플라이언스 리스크를 완전히 제거합니다. 이 선언문은 GDPR이 적용되는 조직을 위한 기반 AI 레이어로서 오픈 웨이트 로컬 LLM의 필요성을 역설하며, 관련 GDPR 조항, EU AI 법 2026 의무사항, 그리고 진지하게 검토할 가치가 있는 반론을 순서대로 설명합니다.',
     metaDescription: 'Qwen 3를 로컬에 배포하면 GDPR 제44조의 이전 문제가 제거됩니다. 데이터가 서버를 벗어나지 않습니다. EU 데이터 거주 요건 및 DPA 요건을 설명합니다.',
     publishDate: '2026-05-16',
-    dateModified: '2026-05-16',
+    dateModified: '2026-07-13',
     readTime: '11분 분량',
     educationalLevel: 'Intermediate',
     audience: 'AI 인프라를 검토 중인 EU 규제 대상 조직의 CISO, DPO, 법무팀, 기술 리더',
@@ -1082,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '오픈 웨이트 모델은 훈련된 모델 파라미터 — 모델의 동작을 정의하는 수치 값 — 를 공개합니다. 이는 훈련 코드도 공개하는 오픈소스 모델, 그리고 어느 것도 공개하지 않는 폐쇄형 API와 구별됩니다. [Qwen 3 패밀리](https://huggingface.co/Qwen), [Llama 3.3](https://llama.meta.com/llama3/), 그리고 [Mistral 모델](https://huggingface.co/mistralai)은 오픈 웨이트입니다: 누구나 파라미터를 다운로드하고, 추론을 실행하고, 파인튜닝하고, 아키텍처를 검사할 수 있습니다.',
           '감사 가능성이 첫 번째 이점입니다. CISO는 Qwen 3.6 27B가 [Alibaba Cloud(Tongyi Lab)](https://huggingface.co/Qwen)이 공개한 정확한 가중치로 실행되는지 확인하고, 아키텍처를 검사하며, 로컬 배포에 대한 적대적 테스트를 실행할 수 있습니다. 이 중 어느 것도 클라우드 API로는 불가능합니다.',
-          '재현성이 두 번째 이점입니다. 오픈 웨이트 모델은 API 호출 간에 변경되지 않습니다. 클라우드 공급자가 모델을 업데이트할 때(GPT-5.5는 여러 차례 묵시적으로 업데이트되었고, Claude Sonnet도 여러 버전을 거쳤습니다), 파인튜닝된 프롬프트, 테스트 스위트 및 예상 출력이 예고 없이 중단될 수 있습니다. 로컬 오픈 웨이트 배포는 선택한 버전에 고정됩니다.',
+          '재현성이 두 번째 이점입니다. 오픈 웨이트 모델은 API 호출 간에 변경되지 않습니다. 클라우드 공급자가 모델을 업데이트할 때(GPT-5.6는 여러 차례 묵시적으로 업데이트되었고, Claude Sonnet도 여러 버전을 거쳤습니다), 파인튜닝된 프롬프트, 테스트 스위트 및 예상 출력이 예고 없이 중단될 수 있습니다. 로컬 오픈 웨이트 배포는 선택한 버전에 고정됩니다.',
           '상업적 자유가 세 번째 이점입니다. Apache 2.0은 어떤 목적으로든 Qwen 3를 사용할 수 있는 영구적이고 취소 불가능한 권리를 부여합니다. 독점적 API 약관은 변경될 수 있습니다. Anthropic, OpenAI, Google은 모두 12개월 내에 사용 정책, 가격 및 모델 가용성을 수정한 바 있습니다. 오픈 웨이트 Apache 2.0 모델은 일방적으로 철회될 수 없습니다.',
         ],
         callouts: [
@@ -1124,7 +1124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'EU AI 법 2026',
         content: [
           '[EU AI 법(Regulation 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)은 2025–2026년에 단계적으로 시행되었습니다. 2026년 5월 기준, 일반 목적 AI(GPAI) 공급자에 대한 의무가 [제53조](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3639)에 따라 활성화되어 있습니다. 10^25 FLOP 훈련 컴퓨팅 임계값은 [제55조](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#d1e3734)에 따라 "시스템 리스크" GPAI 모델을 구체적으로 식별하며, 이에 대한 추가적인 감독 요건을 부과합니다. 이 구분이 중요합니다: 모든 GPAI 공급자는 제53조를 준수해야 하지만, 시스템 리스크 모델만이 제55조의 전체 부담에 직면합니다.',
-          '제53조는 모든 GPAI 공급자에게 적용되며 기술 문서, 저작권 컴플라이언스 공개, 훈련 데이터 요약 및 지시 튜닝 로그를 요구합니다. 제55조는 10^25 FLOP을 초과하는 모델에 구체적으로 적용되며, 적대적 테스트, [EU AI 사무소](https://digital-strategy.ec.europa.eu/)에 대한 인시던트 보고 및 사이버 보안 평가를 추가합니다. 프론티어 클라우드 모델(GPT-5.5, Claude Sonnet, Gemini)은 시스템 리스크 임계값에 근접하거나 초과합니다. 7B–72B 범위의 오픈 웨이트 모델은 그 이하입니다.',
+          '제53조는 모든 GPAI 공급자에게 적용되며 기술 문서, 저작권 컴플라이언스 공개, 훈련 데이터 요약 및 지시 튜닝 로그를 요구합니다. 제55조는 10^25 FLOP을 초과하는 모델에 구체적으로 적용되며, 적대적 테스트, [EU AI 사무소](https://digital-strategy.ec.europa.eu/)에 대한 인시던트 보고 및 사이버 보안 평가를 추가합니다. 프론티어 클라우드 모델(GPT-5.6, Claude Sonnet, Gemini)은 시스템 리스크 임계값에 근접하거나 초과합니다. 7B–72B 범위의 오픈 웨이트 모델은 그 이하입니다.',
           '시스템 리스크 임계값 미만의 오픈 웨이트 모델을 로컬에 배포하는 것은 GPAI 공급자 의무를 유발하지 않습니다. Qwen 3.6 27B를 로컬에 배포하는 조직은 EU AI 법 목적상 공급자가 아닌 사용자입니다. 이들은 법의 사용자 조항(금지된 사용 사례, 해당하는 경우 최종 사용자에 대한 투명성)에는 적용되지만, 완전한 GPAI 공급자 컴플라이언스 부담에는 해당하지 않습니다.',
           '실질적으로 이는 다음을 의미합니다: 클라우드 API 공급자는 제53조 및 제55조 의무로 인해 2026–2027년에 증가하는 EU 컴플라이언스 부담에 직면합니다. 시스템 리스크 임계값 미만의 로컬 오픈 웨이트 배포는 금지된 사용 조항이 준수되는 한 구조적으로 더 단순한 컴플라이언스 경로를 제공합니다.',
         ],
@@ -1146,7 +1146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[Qwen 3 vs Claude Sonnet 4.6 vs DeepSeek R2 — 2026년 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[EU 기업들이 로컬 Qwen으로 전환하는 이유](/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/local-llms/run-qwen-locally-guide-2026)',
           '[로컬 LLM을 활용한 엔터프라이즈 컴플라이언스](/local-llms/enterprise-compliance-local-llms)',
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'DeepSeek R2는 EU 개인 데이터에 대해 GDPR을 준수합니까?', a: 'EU 개인 데이터에 DeepSeek R2를 사용하는 것은 GDPR 관점에서 고위험입니다. DeepSeek AI는 중국에서 운영됩니다. EU 집행위원회는 중국에 대한 적정성 결정을 내리지 않았습니다. 적정성 결정 없이는 국제 이전에 SCC 또는 구속력 있는 기업 규칙(BCR)이 필요합니다. DeepSeek은 현재 EU 표준 SCC를 제공하지 않습니다. 개인 데이터에 DeepSeek R2를 사용하기 전에 DPO와 상담하십시오.' },
           { q: 'EU AI 법이 로컬 Qwen 배포에 적용됩니까?', a: '2026년 5월 기준, Qwen 3.6 27B를 로컬에 배포하면 EU AI 법에서 공급자가 아닌 사용자가 됩니다. GPAI 공급자 의무(제53조 문서화, 시스템 리스크 모델에 대한 적대적 테스트)는 모델 창작자(Alibaba)와 모델을 기반으로 제품을 구축하고 다른 사람에게 제공하는 조직에 적용됩니다. 자체 조직의 사용을 위한 내부 배포는 사용자 조항(금지된 사용 사례, 해당하는 경우 최종 사용자 투명성)에만 해당됩니다.' },
           { q: 'Qwen 3.6 27B는 정말 Apache 2.0 라이선스입니까?', a: '예. Qwen 3.6 27B는 Apache 2.0에 따라 배포되며, 이는 로열티 없이 상업적 사용, 수정 및 재배포를 허용합니다. 프로덕션에 배포하기 전에 Hugging Face 모델 카드에서 각 모델의 현재 라이선스를 확인하십시오.' },
-          { q: 'EU AI 법의 GPAI 임계값은 얼마입니까?', a: 'EU AI 법은 10^25 FLOP 이상의 컴퓨팅으로 훈련된 일반 목적 AI 모델을 추가 감독이 필요한 "시스템 리스크" GPAI 모델로 정의합니다. 프론티어 모델(GPT-5.5, Claude Sonnet 4.6, Gemini 3.5 Pro)은 이 임계값을 초과합니다. Qwen 3.6 27B를 포함한 7B–72B 범위의 오픈 웨이트 모델은 2026년 5월 기준 임계값을 훨씬 밑돕니다. 임계값은 모델 자체의 훈련 컴퓨팅에 적용됩니다 — 귀하의 조직에서의 추론 컴퓨팅이 아닙니다.' },
+          { q: 'EU AI 법의 GPAI 임계값은 얼마입니까?', a: 'EU AI 법은 10^25 FLOP 이상의 컴퓨팅으로 훈련된 일반 목적 AI 모델을 추가 감독이 필요한 "시스템 리스크" GPAI 모델로 정의합니다. 프론티어 모델(GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro)은 이 임계값을 초과합니다. Qwen 3.6 27B를 포함한 7B–72B 범위의 오픈 웨이트 모델은 2026년 5월 기준 임계값을 훨씬 밑돕니다. 임계값은 모델 자체의 훈련 컴퓨팅에 적용됩니다 — 귀하의 조직에서의 추론 컴퓨팅이 아닙니다.' },
         ],
       },
     },

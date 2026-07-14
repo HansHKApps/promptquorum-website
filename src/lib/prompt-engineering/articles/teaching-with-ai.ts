@@ -11,9 +11,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'annual',
       theme: 'Use Cases',
       title: 'Teaching With AI in 2026: Harvard Study Shows 2× Learning Gains — Tools, Prompts & EU AI Act Guide',
-      intro: '**To teach effectively with AI in 2026: use a structured five-component prompt (role, objective, student context, constraints, output format), choose a tool matched to the task (Khanmigo for tutoring, MagicSchool for lesson planning, Claude Sonnet 4.6 or GPT-5.5 for content generation), set temperature to 0.1–0.2 for factual content, and — for EU schools — implement Article 4 staff AI literacy training before deploying any high-risk system.** A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time. As of May 2026, 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
+      intro: '**To teach effectively with AI in 2026: use a structured five-component prompt (role, objective, student context, constraints, output format), choose a tool matched to the task (Khanmigo for tutoring, MagicSchool for lesson planning, Claude Sonnet 5 or GPT-5.6 for content generation), set temperature to 0.1–0.2 for factual content, and — for EU schools — implement Article 4 staff AI literacy training before deploying any high-risk system.** A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time. As of May 2026, 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-07-13',
       readTime: '8 min read',
       seoTitle: 'Teaching With AI in 2026: 2× Learning Gains Guide',
       metaDescription: 'Harvard study: AI tutoring doubles learning gains, 18% less time. Tools: Khanmigo, MagicSchool, Claude. Structured prompts save 5–13 hours/week. EU AI Act guidance included.',
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Teaching With AI in 2026: Harvard Study Shows 2× Learning Gains — Tools, Prompts & EU AI Act Guide',
         description: 'Harvard RCT: AI tutoring produced 2× the learning gains in 18% less time. Best tools for teachers (Khanmigo, MagicSchool), 5-part prompt framework, and EU AI Act school obligations.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-07-13',
         proficiencyLevel: 'Beginner',
         author: {
           '@type': 'Person',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Khanmigo' },
           { '@type': 'SoftwareApplication', name: 'MagicSchool' },
           { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
           { '@type': 'Organization', name: 'Harvard University' },
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What is the best AI tool for teachers in 2026?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'The answer depends on the task. Khanmigo (Khan Academy, powered by GPT-4) is the strongest for student tutoring via Socratic questioning at $44/year. MagicSchool leads for comprehensive teacher workflow tools (lesson plans, IEPs, parent communications). ChatGPT (GPT-5.5, OpenAI) provides the most flexible general-purpose content generation. For complex curriculum analysis, Claude Sonnet 4.6 (Anthropic) handles 1M tokens — approximately 800 standard pages — in a single session.',
+              text: 'The answer depends on the task. Khanmigo (Khan Academy, powered by GPT-4) is the strongest for student tutoring via Socratic questioning at $44/year. MagicSchool leads for comprehensive teacher workflow tools (lesson plans, IEPs, parent communications). ChatGPT (GPT-5.6, OpenAI) provides the most flexible general-purpose content generation. For complex curriculum analysis, Claude Sonnet 5 (Anthropic) handles 1M tokens — approximately 800 standard pages — in a single session.',
             },
           },
           {
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Can AI tools help with differentiated instruction?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes — this is one of AI\'s strongest educational use cases. LLMs can rewrite the same content at multiple reading levels (Flesch-Kincaid Grade 4, 8, and 12) in seconds. Prompt structure: "Rewrite this passage at a Grade [N] reading level. Preserve all factual content. Replace complex vocabulary with simpler equivalents. Keep the same paragraph structure." Claude Sonnet 4.6 produces the most consistent differentiation across reading levels.',
+              text: 'Yes — this is one of AI\'s strongest educational use cases. LLMs can rewrite the same content at multiple reading levels (Flesch-Kincaid Grade 4, 8, and 12) in seconds. Prompt structure: "Rewrite this passage at a Grade [N] reading level. Preserve all factual content. Replace complex vocabulary with simpler equivalents. Keep the same paragraph structure." Claude Sonnet 5 produces the most consistent differentiation across reading levels.',
             },
           },
           {
@@ -233,8 +233,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Khanmigo', 'description': 'Student tutoring via Socratic questioning. K-12, Khan Academy ecosystem. $44/year.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'MagicSchool', 'description': 'Lesson planning and classroom management. K-12 teachers. Free limited tier.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'ChatGPT / GPT-5.5', 'description': 'Flexible content creation and drafting. Any level, any subject. Free limited tier.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Claude Sonnet 4.6', 'description': 'Deep analysis, careful reasoning, writing quality, 1M context. Post-secondary and complex tasks. Free limited.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'ChatGPT / GPT-5.6', 'description': 'Flexible content creation and drafting. Any level, any subject. Free limited tier.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Claude Sonnet 5', 'description': 'Deep analysis, careful reasoning, writing quality, 1M context. Post-secondary and complex tasks. Free limited.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'NotebookLM', 'description': 'Source-grounded Q&A on uploaded materials. University and research contexts. Free.' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Gemini 3.1 Pro', 'description': 'Large document analysis, 1M context. District administrators. Free limited tier.' },
         ],
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'AI detection tools have 15–30% false positive rates — they are insufficient as standalone academic integrity enforcement tools',
             'EU AI Act classifies educational AI as high-risk; EU schools must implement AI literacy training for all staff (Article 4, effective 2025)',
             'Students using AI tools achieve 15–35% higher assessment scores across 21 empirical studies; r = 0.781 correlation between AI tool use and outcomes',
-            'As of May 2026, GPT-5.5, Claude Sonnet 4.6 (Anthropic), and Gemini 3.1 Pro all support 1M-token context windows (~800 pages per session) — context window size is no longer a key differentiator between frontier models',
+            'As of May 2026, GPT-5.6, Claude Sonnet 5 (Anthropic), and Gemini 3.1 Pro all support 1M-token context windows (~800 pages per session) — context window size is no longer a key differentiator between frontier models',
           ],
         },
         quickFacts: {
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'What AI Teaching Tools Actually Do',
           content: [
             '**As of May 2026, AI teaching tools perform four distinct functions: personalized tutoring, lesson plan generation, automated assessment feedback, and administrative task reduction — each requiring a different tool and a different prompt structure.**',
-            'Intelligent Tutoring Systems (ITS) — the technical category for tools like Khanmigo — adapt difficulty, provide immediate feedback, and guide students through Socratic questioning rather than supplying direct answers. General-purpose LLMs (Large Language Models) like GPT-5.5 (OpenAI) and Claude Sonnet 4.6 (Anthropic) handle lesson plan generation, rubric creation, and differentiated instruction materials. Administrative AI tools handle attendance summaries, parent communication drafts, and progress reports — the tasks teachers report as the most time-consuming.',
+            'Intelligent Tutoring Systems (ITS) — the technical category for tools like Khanmigo — adapt difficulty, provide immediate feedback, and guide students through Socratic questioning rather than supplying direct answers. General-purpose LLMs (Large Language Models) like GPT-5.6 (OpenAI) and Claude Sonnet 5 (Anthropic) handle lesson plan generation, rubric creation, and differentiated instruction materials. Administrative AI tools handle attendance summaries, parent communication drafts, and progress reports — the tasks teachers report as the most time-consuming.',
             'In one sentence: prompt engineering for education is not one tool — it is a stack, where each layer serves a specific role in the teaching workflow.',
           ],
           snippets: [
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Khanmigo (Khan Academy), MagicSchool, and ChatGPT (OpenAI) each serve distinct classroom functions — choosing the wrong tool for the task wastes both time and opportunity.**',
             'Khanmigo is Khan Academy\'s AI teaching assistant powered by GPT-4. It uses Socratic questioning to guide students toward answers rather than providing them directly — a critical design distinction for learning retention. It integrates directly into Khan Academy courses, making it the strongest option for schools already using that platform.',
-            'MagicSchool offers the broadest educator toolset — lesson planning, classroom management templates, IEP draft assistance, and parent communication tools. ChatGPT (GPT-5.5) provides the most flexible general-purpose assistance with the highest autonomy, but requires structured prompts from the teacher to produce classroom-ready outputs.',
+            'MagicSchool offers the broadest educator toolset — lesson planning, classroom management templates, IEP draft assistance, and parent communication tools. ChatGPT (GPT-5.6) provides the most flexible general-purpose assistance with the highest autonomy, but requires structured prompts from the teacher to produce classroom-ready outputs.',
           ],
           callouts: [
             { type: '💡', label: 'Pro Tip', text: 'No single tool does everything. Most teachers use 2–3 tools in combination: Khanmigo for student tutoring, MagicSchool for planning, and ChatGPT for quick content generation.' },
@@ -300,13 +300,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'Free Tier': 'Yes (limited)',
             },
             {
-              Tool: 'ChatGPT / GPT-5.5 (OpenAI)',
+              Tool: 'ChatGPT / GPT-5.6 (OpenAI)',
               'Best For': 'Flexible content creation; drafting',
               Context: 'Any level, any subject',
               'Free Tier': 'Yes (limited)',
             },
             {
-              Tool: 'Claude Sonnet 4.6 (Anthropic)',
+              Tool: 'Claude Sonnet 5 (Anthropic)',
               'Best For': 'Deep analysis, careful reasoning, writing quality',
               Context: 'Post-secondary; complex tasks',
               'Free Tier': 'Yes (limited)',
@@ -334,13 +334,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               'Use Case': 'Lesson plan creation',
-              'Recommended Tool': 'MagicSchool / GPT-5.5',
+              'Recommended Tool': 'MagicSchool / GPT-5.6',
               Temperature: '0.1–0.2',
               'Time Saved': '30–60 min/lesson',
             },
             {
               'Use Case': 'Differentiated reading levels',
-              'Recommended Tool': 'Claude Sonnet 4.6',
+              'Recommended Tool': 'Claude Sonnet 5',
               Temperature: '0.1–0.2',
               'Time Saved': '15 min/passage',
             },
@@ -352,13 +352,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Use Case': 'Rubric-aligned feedback',
-              'Recommended Tool': 'Claude Sonnet 4.6 (1M context)',
+              'Recommended Tool': 'Claude Sonnet 5 (1M context)',
               Temperature: '0.2',
               'Time Saved': 'Hours per class set',
             },
             {
               'Use Case': 'Parent communication drafts',
-              'Recommended Tool': 'ChatGPT / GPT-5.5',
+              'Recommended Tool': 'ChatGPT / GPT-5.6',
               Temperature: '0.3–0.5',
               'Time Saved': '5–10 min/message',
             },
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How Do You Prompt AI for Assessment Feedback?',
           content: [
             '**For formative assessment, include your rubric criteria directly in the prompt so the AI understands your grading standards and applies them consistently across all student submissions.**',
-            'Claude Sonnet 4.6\'s 1M-token [context window](/prompt-engineering/context-windows-explained-why-ai-forgets) handles full class sets of essays in a single session — approximately 800 standard pages — making batch feedback generation practical for teachers with large classes. GPT-5.5 handles ~800 pages per session (1M tokens), sufficient for any classroom workload.',
+            'Claude Sonnet 5\'s 1M-token [context window](/prompt-engineering/context-windows-explained-why-ai-forgets) handles full class sets of essays in a single session — approximately 800 standard pages — making batch feedback generation practical for teachers with large classes. GPT-5.6 handles ~800 pages per session (1M tokens), sufficient for any classroom workload.',
           ],
           blockquote: 'You are an experienced 7th-grade English teacher. Analyze this student argumentative essay using this rubric: clear thesis (4 pts), three supporting arguments with evidence (12 pts), acknowledgment of counterargument (4 pts), formal transitions (3 pts), conclusion that reinforces thesis (3 pts). For each criterion: state the score, quote the relevant sentence, and write one specific improvement suggestion. Total score out of 26.',
           callouts: [
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'What is the best AI tool for teachers in 2026?',
-              a: 'The answer depends on the task. Khanmigo (Khan Academy, powered by GPT-4) is the strongest for student tutoring via Socratic questioning at $44/year. MagicSchool leads for comprehensive teacher workflow tools (lesson plans, IEPs, parent communications). ChatGPT (GPT-5.5, OpenAI) provides the most flexible general-purpose content generation. For complex curriculum analysis, Claude Sonnet 4.6 (Anthropic) handles 1M tokens — approximately 800 standard pages — in a single session.',
+              a: 'The answer depends on the task. Khanmigo (Khan Academy, powered by GPT-4) is the strongest for student tutoring via Socratic questioning at $44/year. MagicSchool leads for comprehensive teacher workflow tools (lesson plans, IEPs, parent communications). ChatGPT (GPT-5.6, OpenAI) provides the most flexible general-purpose content generation. For complex curriculum analysis, Claude Sonnet 5 (Anthropic) handles 1M tokens — approximately 800 standard pages — in a single session.',
             },
             {
               q: 'How much time can AI save teachers per week?',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Can AI tools help with differentiated instruction?',
-              a: 'Yes — this is one of AI\'s strongest educational use cases. LLMs can rewrite the same content at multiple reading levels (Flesch-Kincaid Grade 4, 8, and 12) in seconds. Prompt structure: "Rewrite this passage at a Grade [N] reading level. Preserve all factual content. Replace complex vocabulary with simpler equivalents. Keep the same paragraph structure." Claude Sonnet 4.6 produces the most consistent differentiation across reading levels.',
+              a: 'Yes — this is one of AI\'s strongest educational use cases. LLMs can rewrite the same content at multiple reading levels (Flesch-Kincaid Grade 4, 8, and 12) in seconds. Prompt structure: "Rewrite this passage at a Grade [N] reading level. Preserve all factual content. Replace complex vocabulary with simpler equivalents. Keep the same paragraph structure." Claude Sonnet 5 produces the most consistent differentiation across reading levels.',
             },
             {
               q: 'How should schools handle AI literacy for staff under the EU AI Act?',
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: 'Sources & Further Reading',
           content: [
-            '**All statistics and findings in this article are sourced from peer-reviewed research, official government guidance, and publicly-documented institutional policies.** Last fact-checked: 2026-05-04 (against current Claude Sonnet 4.6, GPT-5.5, Gemini 3.1 Pro models; current Khanmigo pricing at Khan Academy; current EU AI Act Article 4 guidance effective 2025).',
+            '**All statistics and findings in this article are sourced from peer-reviewed research, official government guidance, and publicly-documented institutional policies.** Last fact-checked: 2026-05-04 (against current Claude Sonnet 5, GPT-5.6, Gemini 3.1 Pro models; current Khanmigo pricing at Khan Academy; current EU AI Act Article 4 guidance effective 2025).',
           ],
           items: [
             '[Kestin & Miller, 2024. "AI tutoring outperforms in-class active learning: an RCT"](https://www.nature.com/articles/s41598-025-97652-6) — randomized controlled trial with 194 students; effect size 0.73–1.3 SD',
@@ -589,9 +589,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'annual',
       theme: 'Use Cases',
       title: 'Mit KI unterrichten 2026: Harvard-Studie zeigt 2× Lernzuwachs — Tools, Prompts & EU AI Act Leitfaden',
-      intro: '**Um 2026 effektiv mit KI zu unterrichten: Verwenden Sie einen strukturierten fünfteiligen Prompt (Rolle, Ziel, Schülerkontext, Einschränkungen, Ausgabeformat), wählen Sie ein Tool, das zur Aufgabe passt (Khanmigo für Nachhilfe, MagicSchool für Unterrichtsplanung, Claude Sonnet 4.6 oder GPT-5.5 für Inhalterstellung), stellen Sie die Temperatur auf 0,1–0,2 für sachliche Inhalte ein, und — für Schulen in der EU — implementieren Sie vor der Bereitstellung eines hochriskanten Systems Schulungen zur KI-Kompetenz für Lehrkräfte gemäß Artikel 4.** Eine randomisierte kontrollierte Studie der Harvard-Universität aus dem Jahr 2024 stellte fest, dass KI-Nachhilfe Lernzuwächse erzeugte, die mehr als doppelt so hoch waren wie in aktiven Lernklassenzimmern — in 18 % weniger Lernzeit. Im Mai 2026 nutzten 85 % der US-amerikanischen Lehrkräfte und 86 % der Schüler KI während des Schuljahres — höher als in jeder anderen Branche. Die Herausforderung liegt nicht in der Akzeptanz, sondern in der Struktur: vage Prompts produzieren unbenutzbare Outputs, strukturierte Prompts sparen 5–13 Stunden pro Woche, und EU-Schulen haben nun rechtliche Verpflichtungen gemäß dem AI Act für jedes KI-Tool, das die Schülerbewertung beeinflusst.',
+      intro: '**Um 2026 effektiv mit KI zu unterrichten: Verwenden Sie einen strukturierten fünfteiligen Prompt (Rolle, Ziel, Schülerkontext, Einschränkungen, Ausgabeformat), wählen Sie ein Tool, das zur Aufgabe passt (Khanmigo für Nachhilfe, MagicSchool für Unterrichtsplanung, Claude Sonnet 5 oder GPT-5.6 für Inhalterstellung), stellen Sie die Temperatur auf 0,1–0,2 für sachliche Inhalte ein, und — für Schulen in der EU — implementieren Sie vor der Bereitstellung eines hochriskanten Systems Schulungen zur KI-Kompetenz für Lehrkräfte gemäß Artikel 4.** Eine randomisierte kontrollierte Studie der Harvard-Universität aus dem Jahr 2024 stellte fest, dass KI-Nachhilfe Lernzuwächse erzeugte, die mehr als doppelt so hoch waren wie in aktiven Lernklassenzimmern — in 18 % weniger Lernzeit. Im Mai 2026 nutzten 85 % der US-amerikanischen Lehrkräfte und 86 % der Schüler KI während des Schuljahres — höher als in jeder anderen Branche. Die Herausforderung liegt nicht in der Akzeptanz, sondern in der Struktur: vage Prompts produzieren unbenutzbare Outputs, strukturierte Prompts sparen 5–13 Stunden pro Woche, und EU-Schulen haben nun rechtliche Verpflichtungen gemäß dem AI Act für jedes KI-Tool, das die Schülerbewertung beeinflusst.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-07-13',
       readTime: '10 Min. Lesezeit',
       seoTitle: 'Mit KI unterrichten 2026: Lernzuwachs verdoppeln',
       metaDescription: 'Harvard-Studie: KI-Tutoring verdoppelt Lernerfolg, 18% weniger Zeit. Tools: Khanmigo, MagicSchool, Claude. Prompts sparen 5–13 Std/Woche. EU AI Act für Schulen.',
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Mit KI unterrichten 2026: Harvard-Studie zeigt 2× Lernzuwachs — Tools, Prompts & EU AI Act Leitfaden',
         description: 'Harvard-Studie: KI-Tutoring verdoppelte den Lernerfolg bei 18 % weniger Lernzeit. 85 % der Lehrkräfte nutzen KI — strukturierte Prompts sparen 5–13 Std./Woche. Best Tools für Lehrkräfte und EU AI Act Richtlinien.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-07-13',
         proficiencyLevel: 'Anfänger',
         author: {
           '@type': 'Person',
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Khanmigo' },
           { '@type': 'SoftwareApplication', name: 'MagicSchool' },
           { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
           { '@type': 'Organization', name: 'Harvard University' },
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Welches ist das beste KI-Tool für Lehrkräfte 2026?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Die Antwort hängt von der Aufgabe ab. Khanmigo (Khan Academy, betrieben durch GPT-4) ist am stärksten für Schülernachhilfe durch sokratisches Fragen zu 44 US-Dollar pro Jahr. MagicSchool führt bei umfassenden Lehrkräfte-Workflow-Tools (Unterrichtspläne, IEPs, Elternkommunikation). ChatGPT (GPT-5.5, OpenAI) bietet die flexibelste universelle Inhalterstellung. Für komplexe Lehrplananalysen behandelt Claude Sonnet 4.6 (Anthropic) 1.000.000 Token — ungefähr 800 Standardseiten — in einer einzigen Sitzung.',
+              text: 'Die Antwort hängt von der Aufgabe ab. Khanmigo (Khan Academy, betrieben durch GPT-4) ist am stärksten für Schülernachhilfe durch sokratisches Fragen zu 44 US-Dollar pro Jahr. MagicSchool führt bei umfassenden Lehrkräfte-Workflow-Tools (Unterrichtspläne, IEPs, Elternkommunikation). ChatGPT (GPT-5.6, OpenAI) bietet die flexibelste universelle Inhalterstellung. Für komplexe Lehrplananalysen behandelt Claude Sonnet 5 (Anthropic) 1.000.000 Token — ungefähr 800 Standardseiten — in einer einzigen Sitzung.',
             },
           },
           {
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Können KI-Tools bei differenziertem Unterricht helfen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ja — dies ist einer der stärksten Einsatzbereiche von KI im Bildungswesen. LLMs können denselben Inhalt in Sekunden auf mehreren Lesefähigkeitsstufen umschreiben (Flesch-Kincaid Klasse 4, 8 und 12). Prompt-Struktur: „Schreiben Sie diesen Abschnitt auf Klassenstufe [N] um. Bewahren Sie alle sachlichen Inhalte. Ersetzen Sie komplexes Vokabular durch einfachere Entsprechungen. Behalten Sie die gleiche Absatzstruktur bei.\" Claude Sonnet 4.6 produziert die konsistenteste Differenzierung über Lesefähigkeitsstufen hinweg.',
+              text: 'Ja — dies ist einer der stärksten Einsatzbereiche von KI im Bildungswesen. LLMs können denselben Inhalt in Sekunden auf mehreren Lesefähigkeitsstufen umschreiben (Flesch-Kincaid Klasse 4, 8 und 12). Prompt-Struktur: „Schreiben Sie diesen Abschnitt auf Klassenstufe [N] um. Bewahren Sie alle sachlichen Inhalte. Ersetzen Sie komplexes Vokabular durch einfachere Entsprechungen. Behalten Sie die gleiche Absatzstruktur bei.\" Claude Sonnet 5 produziert die konsistenteste Differenzierung über Lesefähigkeitsstufen hinweg.',
             },
           },
           {
@@ -830,8 +830,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Schülernachhilfe durch sokratische Fragestellung. K-12, Khan Academy Ökosystem. 44 US-Dollar pro Jahr.' },
           { '@type': 'ListItem', position: 2, name: 'MagicSchool', description: 'Unterrichtsplanung und Klassenverwaltung. K-12-Lehrkräfte. Kostenlose begrenzte Version.' },
-          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.5', description: 'Flexible Inhalterstellung und Entwurf. Jede Ebene, jedes Fach. Kostenlose begrenzte Version.' },
-          { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 4.6', description: 'Langform-Lehrplandesign, 1.000.000 Token Kontext. Hochschule und komplexe Aufgaben. Kostenlose begrenzte Version.' },
+          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.6', description: 'Flexible Inhalterstellung und Entwurf. Jede Ebene, jedes Fach. Kostenlose begrenzte Version.' },
+          { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 5', description: 'Langform-Lehrplandesign, 1.000.000 Token Kontext. Hochschule und komplexe Aufgaben. Kostenlose begrenzte Version.' },
           { '@type': 'ListItem', position: 5, name: 'NotebookLM', description: 'Quellengestützte Fragen und Antworten zu hochgeladenen Materialien. Universität und Forschung. Kostenlos.' },
           { '@type': 'ListItem', position: 6, name: 'Gemini 3.1 Pro', description: 'Große Dokumentenanalyse, 1 Million Token Kontext. Schulverwaltung. Kostenlose begrenzte Version.' },
         ],
@@ -847,7 +847,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'KI-Erkennungstools haben 15–30 % falsch-positive Raten — sie sind unzureichend als eigenständiges Tool zur Durchsetzung akademischer Integrität',
             'Der EU AI Act klassifiziert bildungs-KI als hochriskant; EU-Schulen müssen KI-Kompetenzkurs für alle Lehrkräfte durchführen (Artikel 4, gültig ab 2025)',
             'Schüler, die KI-Tools nutzen, erreichen in 21 empirischen Studien 15–35 % höhere Bewertungsergebnisse; r = 0,781 Korrelation zwischen KI-Tool-Nutzung und Ergebnissen',
-            'Im Mai 2026 unterstützen GPT-5.5, Claude Sonnet 4.6 (Anthropic) und Gemini 3.1 Pro alle 1 Million Token Kontextfenster (~800 Seiten pro Sitzung) — Kontextfenstergröße ist kein Schlüssel-Differenziator zwischen Frontier-Modellen',
+            'Im Mai 2026 unterstützen GPT-5.6, Claude Sonnet 5 (Anthropic) und Gemini 3.1 Pro alle 1 Million Token Kontextfenster (~800 Seiten pro Sitzung) — Kontextfenstergröße ist kein Schlüssel-Differenziator zwischen Frontier-Modellen',
           ],
         },
         quickFacts: {
@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Was KI-Lehrkräfte-Tools wirklich tun',
           content: [
             '**Im Mai 2026 führen KI-Lehrkräfte-Tools vier unterschiedliche Funktionen aus: personalisierte Nachhilfe, Unterrichtsplangenerierung, automatisiertes Bewertungsfeedback und Reduktion von Verwaltungsaufgaben — jedes erfordert ein anderes Tool und eine andere Prompt-Struktur.**',
-            'Intelligente Tutorialsysteme (ITS) — die technische Kategorie für Tools wie Khanmigo — passen Schwierigkeitsgrad an, bieten sofortiges Feedback und führen Schüler durch sokratische Fragestellung, anstatt direkte Antworten zu geben. Universelle LLMs (Large Language Models) wie GPT-5.5 (OpenAI) und Claude Sonnet 4.6 (Anthropic) bearbeiten Unterrichtsplangenerierung, Rubrik-Erstellung und differenzierte Unterrichtsmaterialien. Verwaltungs-KI-Tools bearbeiten Anwesenheitszusammenfassungen, Elternkommunikationsentwürfe und Fortschrittsberichte — die Aufgaben, die Lehrkräfte als am zeitintensivsten berichten.',
+            'Intelligente Tutorialsysteme (ITS) — die technische Kategorie für Tools wie Khanmigo — passen Schwierigkeitsgrad an, bieten sofortiges Feedback und führen Schüler durch sokratische Fragestellung, anstatt direkte Antworten zu geben. Universelle LLMs (Large Language Models) wie GPT-5.6 (OpenAI) und Claude Sonnet 5 (Anthropic) bearbeiten Unterrichtsplangenerierung, Rubrik-Erstellung und differenzierte Unterrichtsmaterialien. Verwaltungs-KI-Tools bearbeiten Anwesenheitszusammenfassungen, Elternkommunikationsentwürfe und Fortschrittsberichte — die Aufgaben, die Lehrkräfte als am zeitintensivsten berichten.',
             'In einem Satz: [KI im Unterricht](/de/prompt-engineering/what-is-prompt-engineering) ist nicht ein Tool — es ist ein Stack, wo jede Schicht eine bestimmte Rolle im Unterrichts-Workflow erfüllt.',
           ],
           snippets: [
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Khanmigo (Khan Academy), MagicSchool und ChatGPT (OpenAI) erfüllen jeweils unterschiedliche Klassenzimmerfunktionen — die Wahl des falschen Tools für die Aufgabe verschwendet Zeit und Chancen.**',
             'Khanmigo ist der KI-Lehrkräfte-Assistent der Khan Academy, betrieben durch GPT-4. Es nutzt sokratische Fragestellung, um Schüler zu Antworten zu führen, anstatt ihnen direkt Antworten zu geben — ein entscheidender Designunterschied für Lernbehaltung. Es integriert sich direkt in Khan Academy-Kurse, was es zur stärksten Option für Schulen macht, die diese Plattform bereits nutzen.',
-            'MagicSchool bietet das umfassendste Lehrkräfte-Toolset — Unterrichtsplanung, Klassenverwaltungsvorlagen, Unterstützung bei der Erstellung von IEPs und Elternkommunikations-Tools. ChatGPT (GPT-5.5) bietet die flexibelste universelle Unterstützung mit der höchsten Autonomie, erfordert aber strukturierte Prompts von der Lehrkraft, um classroom-ready Outputs zu produzieren.',
+            'MagicSchool bietet das umfassendste Lehrkräfte-Toolset — Unterrichtsplanung, Klassenverwaltungsvorlagen, Unterstützung bei der Erstellung von IEPs und Elternkommunikations-Tools. ChatGPT (GPT-5.6) bietet die flexibelste universelle Unterstützung mit der höchsten Autonomie, erfordert aber strukturierte Prompts von der Lehrkraft, um classroom-ready Outputs zu produzieren.',
           ],
           callouts: [
             { type: '💡', label: 'Profi-Tipp', text: 'Kein einzelnes Tool macht alles. Die meisten Lehrkräfte nutzen 2–3 Tools zusammen: Khanmigo für Schülernachhilfe, MagicSchool für Planung und ChatGPT für schnelle Inhalterstellung.' },
@@ -897,13 +897,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               'Kostenlose Version': 'Ja (begrenzt)',
             },
             {
-              Tool: 'ChatGPT / GPT-5.5 (OpenAI)',
+              Tool: 'ChatGPT / GPT-5.6 (OpenAI)',
               'Am besten für': 'Flexible Inhalterstellung; Entwurfserstellung',
               Kontext: 'Jede Ebene, jedes Fach',
               'Kostenlose Version': 'Ja (begrenzt)',
             },
             {
-              Tool: 'Claude Sonnet 4.6 (Anthropic)',
+              Tool: 'Claude Sonnet 5 (Anthropic)',
               'Am besten für': 'Langform-Lehrplandesign; Dokumentenanalyse',
               Kontext: 'Hochschule; komplexe Aufgaben',
               'Kostenlose Version': 'Ja (begrenzt)',
@@ -931,13 +931,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               Einsatzfall: 'Unterrichtsplan-Erstellung',
-              'Empfohlenes Tool': 'MagicSchool / GPT-5.5',
+              'Empfohlenes Tool': 'MagicSchool / GPT-5.6',
               Temperatur: '0,1–0,2',
               Zeitersparnis: '30–60 Min./Unterricht',
             },
             {
               Einsatzfall: 'Differenzierte Lesefähigkeitsstufen',
-              'Empfohlenes Tool': 'Claude Sonnet 4.6',
+              'Empfohlenes Tool': 'Claude Sonnet 5',
               Temperatur: '0,1–0,2',
               Zeitersparnis: '15 Min./Passage',
             },
@@ -949,13 +949,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               Einsatzfall: 'Rubrik-ausgerichtetes Feedback',
-              'Empfohlenes Tool': 'Claude Sonnet 4.6 (1.000.000 Token Kontext)',
+              'Empfohlenes Tool': 'Claude Sonnet 5 (1.000.000 Token Kontext)',
               Temperatur: '0,2',
               Zeitersparnis: 'Stunden pro Klassensatz',
             },
             {
               Einsatzfall: 'Elternkommunikations-Entwürfe',
-              'Empfohlenes Tool': 'ChatGPT / GPT-5.5',
+              'Empfohlenes Tool': 'ChatGPT / GPT-5.6',
               Temperatur: '0,3–0,5',
               Zeitersparnis: '5–10 Min./Nachricht',
             },
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie schreibe ich KI-Prompts für Bewertungsfeedback?',
           content: [
             '**Für Formativ-Bewertung: Inkludieren Sie Ihre Rubrik-Kriterien direkt im Prompt, damit die KI Ihre Benotungsstandards versteht und sie konsistent über alle Schülereinreichungen anwendet.**',
-            'Claude Sonnet 4.6s 1.000.000-Token [Kontextfenster](/de/prompt-engineering/context-windows-explained-why-ai-forgets) behandelt vollständige Klassensätze von Essays in einer einzelnen Sitzung — ungefähr 800 Standardseiten — was Batch-Feedback-Generierung für Lehrkräfte mit großen Klassen praktisch macht. GPT-5.5 behandelt ~800 Seiten pro Sitzung (1M Token), ausreichend für jede Klassengröße.',
+            'Claude Sonnet 5s 1.000.000-Token [Kontextfenster](/de/prompt-engineering/context-windows-explained-why-ai-forgets) behandelt vollständige Klassensätze von Essays in einer einzelnen Sitzung — ungefähr 800 Standardseiten — was Batch-Feedback-Generierung für Lehrkräfte mit großen Klassen praktisch macht. GPT-5.6 behandelt ~800 Seiten pro Sitzung (1M Token), ausreichend für jede Klassengröße.',
           ],
           blockquote: 'Du bist eine erfahrene Englisch-Lehrerin der siebten Klasse. Analysiere diesen Schüler-Überzeugungsessay unter Verwendung dieser Rubrik: klare These (4 Punkte), drei stützende Argumente mit Belegen (12 Punkte), Anerkennung des Gegenarguments (4 Punkte), formale Übergänge (3 Punkte), Schlussfolgerung, die These verstärkt (3 Punkte). Für jedes Kriterium: geben Sie die Bewertung an, zitieren Sie den relevanten Satz, und schreiben Sie einen spezifischen Verbesserungsvorschlag. Gesamtbewertung von 26 Punkten.',
           callouts: [
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Welches ist das beste KI-Tool für Lehrkräfte 2026?',
-              a: 'Die Antwort hängt von der Aufgabe ab. Khanmigo (Khan Academy, betrieben durch GPT-4) ist am stärksten für Schülernachhilfe durch sokratisches Fragen zu 44 US-Dollar pro Jahr. MagicSchool führt bei umfassenden Lehrkräfte-Workflow-Tools (Unterrichtspläne, IEPs, Elternkommunikation). ChatGPT (GPT-5.5, OpenAI) bietet die flexibelste universelle Inhalterstellung. Für komplexe Lehrplananalysen behandelt Claude Sonnet 4.6 (Anthropic) 1.000.000 Token — ungefähr 800 Standardseiten — in einer einzigen Sitzung.',
+              a: 'Die Antwort hängt von der Aufgabe ab. Khanmigo (Khan Academy, betrieben durch GPT-4) ist am stärksten für Schülernachhilfe durch sokratisches Fragen zu 44 US-Dollar pro Jahr. MagicSchool führt bei umfassenden Lehrkräfte-Workflow-Tools (Unterrichtspläne, IEPs, Elternkommunikation). ChatGPT (GPT-5.6, OpenAI) bietet die flexibelste universelle Inhalterstellung. Für komplexe Lehrplananalysen behandelt Claude Sonnet 5 (Anthropic) 1.000.000 Token — ungefähr 800 Standardseiten — in einer einzigen Sitzung.',
             },
             {
               q: 'Wie viel Zeit kann KI Lehrkräften pro Woche sparen?',
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Können KI-Tools bei differenziertem Unterricht helfen?',
-              a: 'Ja — dies ist einer der stärksten Einsatzbereiche von KI im Bildungswesen. LLMs können denselben Inhalt in Sekunden auf mehreren Lesefähigkeitsstufen umschreiben (Flesch-Kincaid Klasse 4, 8 und 12). Prompt-Struktur: „Schreiben Sie diesen Abschnitt auf Klassenstufe [N] um. Bewahren Sie alle sachlichen Inhalte. Ersetzen Sie komplexes Vokabular durch einfachere Entsprechungen. Behalten Sie die gleiche Absatzstruktur bei.\" Claude Sonnet 4.6 produziert die konsistenteste Differenzierung über Lesefähigkeitsstufen hinweg.',
+              a: 'Ja — dies ist einer der stärksten Einsatzbereiche von KI im Bildungswesen. LLMs können denselben Inhalt in Sekunden auf mehreren Lesefähigkeitsstufen umschreiben (Flesch-Kincaid Klasse 4, 8 und 12). Prompt-Struktur: „Schreiben Sie diesen Abschnitt auf Klassenstufe [N] um. Bewahren Sie alle sachlichen Inhalte. Ersetzen Sie komplexes Vokabular durch einfachere Entsprechungen. Behalten Sie die gleiche Absatzstruktur bei.\" Claude Sonnet 5 produziert die konsistenteste Differenzierung über Lesefähigkeitsstufen hinweg.',
             },
             {
               q: 'Wie sollten Schulen KI-Kompetenz für Lehrkräfte unter dem EU AI Act handhaben?',
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: 'Quellen und weitere Ressourcen',
           content: [
-            '**Alle Statistiken und Befunde in diesem Artikel sind von begutachteter Forschung, amtlicher Regierungsleitlinien und dokumentierten institutionellen Richtlinien beschafft.** Letzte Faktenchecks: 2026-04-28 (gegen aktuelle Claude Sonnet 4.6, GPT-5.5, Gemini 3.1 Pro Modelle; aktuelle Khanmigo-Preise bei Khan Academy; aktuelle EU AI Act Artikel 4-Leitlinien gültig ab 2025).',
+            '**Alle Statistiken und Befunde in diesem Artikel sind von begutachteter Forschung, amtlicher Regierungsleitlinien und dokumentierten institutionellen Richtlinien beschafft.** Letzte Faktenchecks: 2026-04-28 (gegen aktuelle Claude Sonnet 5, GPT-5.6, Gemini 3.1 Pro Modelle; aktuelle Khanmigo-Preise bei Khan Academy; aktuelle EU AI Act Artikel 4-Leitlinien gültig ab 2025).',
           ],
           items: [
             '[Kestin & Miller, 2024. \"KI-Nachhilfe übertrifft aktive Lernklassenzimmer — Harvard RCT\"](https://www.nature.com/articles/s41598-025-97652-6) — randomisierte kontrollierte Studie mit 194 Schülern; Effektstärke 0,73–1,3 SD',
@@ -1210,9 +1210,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2027-05-04',
       theme: 'Use Cases',
       title: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',
-      intro: '**Para enseñar eficazmente con IA en 2026: usa un prompt estructurado de cinco componentes (rol, objetivo, contexto del estudiante, restricciones, formato de salida), elige una herramienta adaptada a la tarea (Khanmigo para tutoría, MagicSchool para planificación de lecciones, Claude Sonnet 4.6 o GPT-5.5 para generación de contenido), establece la temperatura en 0,1–0,2 para contenido factual, y — para escuelas de la UE — implementa la formación en alfabetización en IA del personal según el Artículo 4 antes de desplegar cualquier sistema de alto riesgo.** Un ensayo controlado aleatorizado de Harvard de 2024 descubrió que la tutoría con IA produjo ganancias de aprendizaje más del doble de las de las aulas de aprendizaje activo — en un 18 % menos de tiempo de estudio. En mayo de 2026, el 85 % de los docentes estadounidenses y el 86 % de los estudiantes usaron IA durante el año escolar, más que cualquier otra industria. El desafío no es la adopción sino la estructura: los prompts vagos producen resultados inutilizables, los prompts estructurados ahorran 5–13 horas por semana, y las escuelas de la UE ahora tienen obligaciones legales bajo la Ley de IA para cualquier herramienta de IA que afecte la evaluación de los estudiantes.',
+      intro: '**Para enseñar eficazmente con IA en 2026: usa un prompt estructurado de cinco componentes (rol, objetivo, contexto del estudiante, restricciones, formato de salida), elige una herramienta adaptada a la tarea (Khanmigo para tutoría, MagicSchool para planificación de lecciones, Claude Sonnet 5 o GPT-5.6 para generación de contenido), establece la temperatura en 0,1–0,2 para contenido factual, y — para escuelas de la UE — implementa la formación en alfabetización en IA del personal según el Artículo 4 antes de desplegar cualquier sistema de alto riesgo.** Un ensayo controlado aleatorizado de Harvard de 2024 descubrió que la tutoría con IA produjo ganancias de aprendizaje más del doble de las de las aulas de aprendizaje activo — en un 18 % menos de tiempo de estudio. En mayo de 2026, el 85 % de los docentes estadounidenses y el 86 % de los estudiantes usaron IA durante el año escolar, más que cualquier otra industria. El desafío no es la adopción sino la estructura: los prompts vagos producen resultados inutilizables, los prompts estructurados ahorran 5–13 horas por semana, y las escuelas de la UE ahora tienen obligaciones legales bajo la Ley de IA para cualquier herramienta de IA que afecte la evaluación de los estudiantes.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-07-13',
       readTime: '8 min de lectura',
       seoTitle: 'Enseñar con IA en 2026: Guía 2× Más Aprendizaje',
       metaDescription: 'Estudio de Harvard: la tutoría con IA duplica el aprendizaje en un 18 % menos de tiempo. Herramientas: Khanmigo, MagicSchool y Claude. Con guía de la UE.',
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',
         description: 'ECA de Harvard: la tutoría con IA produjo 2× las ganancias de aprendizaje en un 18 % menos de tiempo. Las mejores herramientas para docentes (Khanmigo, MagicSchool), framework de prompts de 5 partes y obligaciones escolares de la Ley de IA de la UE.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-07-13',
         proficiencyLevel: 'Beginner',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -1330,8 +1330,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Tutoría estudiantil mediante cuestionamiento socrático. K-12, ecosistema Khan Academy. 44 USD al año.' },
           { '@type': 'ListItem', position: 2, name: 'MagicSchool', description: 'Planificación de lecciones y gestión del aula. Docentes de K-12. Versión gratuita limitada.' },
-          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.5', description: 'Creación de contenido flexible y borradores. Cualquier nivel, cualquier materia. Versión gratuita limitada.' },
-          { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 4.6', description: 'Diseño curricular de formato largo, contexto de 1.000.000 tokens. Universidad y tareas complejas. Versión gratuita limitada.' },
+          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.6', description: 'Creación de contenido flexible y borradores. Cualquier nivel, cualquier materia. Versión gratuita limitada.' },
+          { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 5', description: 'Diseño curricular de formato largo, contexto de 1.000.000 tokens. Universidad y tareas complejas. Versión gratuita limitada.' },
           { '@type': 'ListItem', position: 5, name: 'NotebookLM', description: 'Preguntas y respuestas basadas en fuentes sobre materiales cargados. Universidad e investigación. Gratuito.' },
           { '@type': 'ListItem', position: 6, name: 'Gemini 3.1 Pro', description: 'Análisis de documentos grandes, contexto de 1 millón de tokens. Administración escolar. Versión gratuita limitada.' },
         ],
@@ -1347,7 +1347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Las herramientas de detección de IA tienen tasas de falsos positivos del 15–30 % — son insuficientes como herramienta independiente para hacer cumplir la integridad académica',
             'La Ley de IA de la UE clasifica la IA educativa como de alto riesgo; las escuelas de la UE deben llevar a cabo formación en competencias de IA para todo el personal docente (Artículo 4, vigente desde 2025)',
             'Los estudiantes que usan herramientas de IA logran entre un 15 y un 35 % de puntuaciones más altas en evaluaciones en 21 estudios empíricos; r = 0,781 correlación entre el uso de herramientas de IA y los resultados',
-            'En mayo de 2026, GPT-5.5, Claude Sonnet 4.6 (Anthropic) y Gemini 3.1 Pro admiten todos ventanas de contexto de 1 millón de tokens (~800 páginas por sesión)',
+            'En mayo de 2026, GPT-5.6, Claude Sonnet 5 (Anthropic) y Gemini 3.1 Pro admiten todos ventanas de contexto de 1 millón de tokens (~800 páginas por sesión)',
           ],
         },
         quickFacts: {
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Qué hacen realmente las herramientas de enseñanza con IA',
           content: [
             '**En mayo de 2026, las herramientas de enseñanza con IA realizan cuatro funciones distintas: tutoría personalizada, generación de planes de lección, retroalimentación de evaluación automatizada y reducción de tareas administrativas — cada una requiere una herramienta y una estructura de prompt diferentes.**',
-            'Los Sistemas de Tutoría Inteligente (STI) — la categoría técnica para herramientas como Khanmigo — adaptan la dificultad, proporcionan retroalimentación inmediata y guían a los estudiantes mediante el cuestionamiento socrático en lugar de dar respuestas directas. Los LLMs universales como GPT-5.5 (OpenAI) y Claude Sonnet 4.6 (Anthropic) manejan la generación de planes de lección, la creación de rúbricas y los materiales de instrucción diferenciada. Las herramientas de IA administrativas manejan resúmenes de asistencia, borradores de comunicación con padres e informes de progreso.',
+            'Los Sistemas de Tutoría Inteligente (STI) — la categoría técnica para herramientas como Khanmigo — adaptan la dificultad, proporcionan retroalimentación inmediata y guían a los estudiantes mediante el cuestionamiento socrático en lugar de dar respuestas directas. Los LLMs universales como GPT-5.6 (OpenAI) y Claude Sonnet 5 (Anthropic) manejan la generación de planes de lección, la creación de rúbricas y los materiales de instrucción diferenciada. Las herramientas de IA administrativas manejan resúmenes de asistencia, borradores de comunicación con padres e informes de progreso.',
             'En una oración: la IA en el aula no es una herramienta — es un conjunto, donde cada capa cumple un rol específico en el flujo de trabajo de instrucción.',
           ],
           snippets: [
@@ -1386,8 +1386,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Herramienta': 'Khanmigo (Khan Academy)', 'Mejor para': 'Tutoría estudiantil; aprendizaje socrático', 'Contexto': 'K-12, ecosistema Khan Academy', 'Versión gratuita': '44 USD al año' },
             { 'Herramienta': 'MagicSchool', 'Mejor para': 'Planificación de lecciones; gestión del aula', 'Contexto': 'Docentes de K-12', 'Versión gratuita': 'Sí (limitado)' },
-            { 'Herramienta': 'ChatGPT / GPT-5.5 (OpenAI)', 'Mejor para': 'Creación de contenido flexible; borradores', 'Contexto': 'Cualquier nivel, cualquier materia', 'Versión gratuita': 'Sí (limitado)' },
-            { 'Herramienta': 'Claude Sonnet 4.6 (Anthropic)', 'Mejor para': 'Diseño curricular de formato largo; análisis de documentos', 'Contexto': 'Universidad; tareas complejas', 'Versión gratuita': 'Sí (limitado)' },
+            { 'Herramienta': 'ChatGPT / GPT-5.6 (OpenAI)', 'Mejor para': 'Creación de contenido flexible; borradores', 'Contexto': 'Cualquier nivel, cualquier materia', 'Versión gratuita': 'Sí (limitado)' },
+            { 'Herramienta': 'Claude Sonnet 5 (Anthropic)', 'Mejor para': 'Diseño curricular de formato largo; análisis de documentos', 'Contexto': 'Universidad; tareas complejas', 'Versión gratuita': 'Sí (limitado)' },
             { 'Herramienta': 'NotebookLM (Google DeepMind)', 'Mejor para': 'Preguntas y respuestas basadas en fuentes sobre materiales del aula cargados', 'Contexto': 'Universidad; contextos de investigación', 'Versión gratuita': 'Gratuito / nivel Plus' },
             { 'Herramienta': 'Gemini 3.1 Pro (Google DeepMind)', 'Mejor para': 'Análisis de documentos grandes; revisión de políticas', 'Contexto': 'Administradores de distritos escolares', 'Versión gratuita': 'Sí (limitado)' },
           ],
@@ -1399,11 +1399,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['Caso de uso', 'Herramienta recomendada', 'Temperatura', 'Ahorro de tiempo'],
           rows: [
-            { 'Caso de uso': 'Creación de planes de lección', 'Herramienta recomendada': 'MagicSchool / GPT-5.5', 'Temperatura': '0,1–0,2', 'Ahorro de tiempo': '30–60 min./lección' },
-            { 'Caso de uso': 'Niveles de lectura diferenciados', 'Herramienta recomendada': 'Claude Sonnet 4.6', 'Temperatura': '0,1–0,2', 'Ahorro de tiempo': '15 min./pasaje' },
+            { 'Caso de uso': 'Creación de planes de lección', 'Herramienta recomendada': 'MagicSchool / GPT-5.6', 'Temperatura': '0,1–0,2', 'Ahorro de tiempo': '30–60 min./lección' },
+            { 'Caso de uso': 'Niveles de lectura diferenciados', 'Herramienta recomendada': 'Claude Sonnet 5', 'Temperatura': '0,1–0,2', 'Ahorro de tiempo': '15 min./pasaje' },
             { 'Caso de uso': 'Tutoría estudiantil (socrática)', 'Herramienta recomendada': 'Khanmigo', 'Temperatura': 'n/a (preestablecido)', 'Ahorro de tiempo': 'Asíncrono' },
-            { 'Caso de uso': 'Retroalimentación alineada con rúbrica', 'Herramienta recomendada': 'Claude Sonnet 4.6 (contexto de 1.000.000 tokens)', 'Temperatura': '0,2', 'Ahorro de tiempo': 'Horas por conjunto de clase' },
-            { 'Caso de uso': 'Borradores de comunicación con padres', 'Herramienta recomendada': 'ChatGPT / GPT-5.5', 'Temperatura': '0,3–0,5', 'Ahorro de tiempo': '5–10 min./mensaje' },
+            { 'Caso de uso': 'Retroalimentación alineada con rúbrica', 'Herramienta recomendada': 'Claude Sonnet 5 (contexto de 1.000.000 tokens)', 'Temperatura': '0,2', 'Ahorro de tiempo': 'Horas por conjunto de clase' },
+            { 'Caso de uso': 'Borradores de comunicación con padres', 'Herramienta recomendada': 'ChatGPT / GPT-5.6', 'Temperatura': '0,3–0,5', 'Ahorro de tiempo': '5–10 min./mensaje' },
             { 'Caso de uso': 'Revisión de libros de texto/políticas', 'Herramienta recomendada': 'Gemini 3.1 Pro (contexto de 1 millón de tokens)', 'Temperatura': '0,1', 'Ahorro de tiempo': 'Horas por documento' },
           ],
         },
@@ -1451,7 +1451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '¿Cómo escribes prompts de IA para retroalimentación de evaluación?',
           content: [
             '**Para la evaluación formativa: incluye los criterios de tu rúbrica directamente en el prompt para que la IA comprenda tus estándares de calificación y los aplique de manera coherente en todas las entregas de los estudiantes.**',
-            'La ventana de contexto de 1.000.000 de tokens de Claude Sonnet 4.6 maneja conjuntos completos de clase de ensayos en una sola sesión — aproximadamente 800 páginas estándar — lo que hace práctico la generación de retroalimentación por lotes para los docentes con clases grandes.',
+            'La ventana de contexto de 1.000.000 de tokens de Claude Sonnet 5 maneja conjuntos completos de clase de ensayos en una sola sesión — aproximadamente 800 páginas estándar — lo que hace práctico la generación de retroalimentación por lotes para los docentes con clases grandes.',
           ],
           blockquote: 'Eres una profesora de inglés de séptimo grado con experiencia. Analiza este ensayo persuasivo de un estudiante usando esta rúbrica: tesis clara (4 puntos), tres argumentos de apoyo con evidencia (12 puntos), reconocimiento del contraargumento (4 puntos), transiciones formales (3 puntos), conclusión que refuerza la tesis (3 puntos). Para cada criterio: da la puntuación, cita la oración relevante y escribe una sugerencia específica de mejora. Puntuación total de 26 puntos.',
           callouts: [
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cuál es la mejor herramienta de IA para docentes en 2026?',
-              a: 'La respuesta depende de la tarea. Khanmigo (Khan Academy, impulsado por GPT-4) es el más potente para la tutoría estudiantil mediante el cuestionamiento socrático a 44 USD al año. MagicSchool lidera en herramientas completas de flujo de trabajo para docentes (planes de lección, PEIs, comunicación con padres). ChatGPT (GPT-5.5, OpenAI) ofrece la creación de contenido universal más flexible. Para el análisis de planes de estudio complejos, Claude Sonnet 4.6 (Anthropic) maneja 1.000.000 de tokens — aproximadamente 800 páginas estándar — en una sola sesión.',
+              a: 'La respuesta depende de la tarea. Khanmigo (Khan Academy, impulsado por GPT-4) es el más potente para la tutoría estudiantil mediante el cuestionamiento socrático a 44 USD al año. MagicSchool lidera en herramientas completas de flujo de trabajo para docentes (planes de lección, PEIs, comunicación con padres). ChatGPT (GPT-5.6, OpenAI) ofrece la creación de contenido universal más flexible. Para el análisis de planes de estudio complejos, Claude Sonnet 5 (Anthropic) maneja 1.000.000 de tokens — aproximadamente 800 páginas estándar — en una sola sesión.',
             },
             {
               q: '¿Cuánto tiempo puede ahorrarles la IA a los docentes por semana?',
@@ -1605,7 +1605,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Pueden las herramientas de IA ayudar con la instrucción diferenciada?',
-              a: 'Sí — este es uno de los usos más potentes de la IA en la educación. Los LLMs pueden reescribir el mismo contenido en múltiples niveles de lectura en segundos. Estructura del prompt: "Reescribe esta sección para el nivel de grado [N]. Conserva todo el contenido factual. Reemplaza el vocabulario complejo con equivalentes más simples. Mantén la misma estructura de párrafo." Claude Sonnet 4.6 produce la diferenciación más coherente en todos los niveles de lectura.',
+              a: 'Sí — este es uno de los usos más potentes de la IA en la educación. Los LLMs pueden reescribir el mismo contenido en múltiples niveles de lectura en segundos. Estructura del prompt: "Reescribe esta sección para el nivel de grado [N]. Conserva todo el contenido factual. Reemplaza el vocabulario complejo con equivalentes más simples. Mantén la misma estructura de párrafo." Claude Sonnet 5 produce la diferenciación más coherente en todos los niveles de lectura.',
             },
             {
               q: '¿Cómo deberían las escuelas manejar la competencia en IA para el personal docente bajo la Ley de IA de la UE?',
@@ -1645,9 +1645,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2027-05-04',
       theme: 'Use Cases',
       title: 'التدريس بالذكاء الاصطناعي في ⁨2026⁩: دراسة هارفارد تُثبت ضعف التعلم — الأدوات والبرومبتات ودليل قانون الذكاء الاصطناعي الأوروبي',
-      intro: '**للتدريس الفعّال بالذكاء الاصطناعي في 2026: استخدم برومبتاً منظماً من خمسة مكونات (الدور والهدف وسياق الطالب والقيود وصيغة المخرج)، واختر الأداة المناسبة للمهمة (Khanmigo للتدريس الفردي، MagicSchool للتخطيط للدروس، Claude Sonnet 4.6 أو GPT-5.5 لإنشاء المحتوى)، واضبط درجة الحرارة على 0.1–0.2 للمحتوى الحقائقي، وللمدارس في دول الاتحاد الأوروبي نفّذ تدريب كفاءة الذكاء الاصطناعي للموظفين وفق المادة 4 قبل نشر أي نظام عالي المخاطر.** كشفت تجربة عشوائية محكومة من جامعة هارفارد عام 2024 أن التدريس الفردي بالذكاء الاصطناعي أنتج مكاسب تعليمية تفوق ضعف تلك التي تحققت في فصول التعلم النشط — في وقت دراسة أقل بنسبة 18٪. في مايو 2026، استخدم 85٪ من المعلمين الأمريكيين و86٪ من الطلاب الذكاء الاصطناعي خلال العام الدراسي. التحدي ليس التبني بل البنية: البرومبتات الغامضة تُنتج نتائج غير صالحة، والبرومبتات المنظمة توفّر 5–13 ساعة أسبوعياً، وللمدارس الأوروبية الآن التزامات قانونية بموجب قانون الذكاء الاصطناعي.',
+      intro: '**للتدريس الفعّال بالذكاء الاصطناعي في 2026: استخدم برومبتاً منظماً من خمسة مكونات (الدور والهدف وسياق الطالب والقيود وصيغة المخرج)، واختر الأداة المناسبة للمهمة (Khanmigo للتدريس الفردي، MagicSchool للتخطيط للدروس، Claude Sonnet 5 أو GPT-5.6 لإنشاء المحتوى)، واضبط درجة الحرارة على 0.1–0.2 للمحتوى الحقائقي، وللمدارس في دول الاتحاد الأوروبي نفّذ تدريب كفاءة الذكاء الاصطناعي للموظفين وفق المادة 4 قبل نشر أي نظام عالي المخاطر.** كشفت تجربة عشوائية محكومة من جامعة هارفارد عام 2024 أن التدريس الفردي بالذكاء الاصطناعي أنتج مكاسب تعليمية تفوق ضعف تلك التي تحققت في فصول التعلم النشط — في وقت دراسة أقل بنسبة 18٪. في مايو 2026، استخدم 85٪ من المعلمين الأمريكيين و86٪ من الطلاب الذكاء الاصطناعي خلال العام الدراسي. التحدي ليس التبني بل البنية: البرومبتات الغامضة تُنتج نتائج غير صالحة، والبرومبتات المنظمة توفّر 5–13 ساعة أسبوعياً، وللمدارس الأوروبية الآن التزامات قانونية بموجب قانون الذكاء الاصطناعي.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-07-13',
       readTime: '٨ دقائق للقراءة',
       seoTitle: 'التدريس بالذكاء الاصطناعي ⁨2026⁩: ضعف نتائج التعلم',
       metaDescription: 'دراسة هارفارد (⁨194⁩ طالباً): الذكاء الاصطناعي يضاعف التعلم في وقت أقل بـ⁨18%⁩. أدوات ⁨Khanmigo⁩ و⁨MagicSchool⁩ مع إرشادات قانون ⁨EU⁩.',
@@ -1680,7 +1680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'التدريس بالذكاء الاصطناعي في 2026: دراسة هارفارد تُثبت ضعف التعلم — الأدوات والبرومبتات ودليل قانون الذكاء الاصطناعي الأوروبي',
         description: 'تجربة عشوائية محكومة من هارفارد: التدريس الفردي بالذكاء الاصطناعي أنتج ضعف مكاسب التعلم في وقت أقل بـ18٪. أفضل الأدوات للمعلمين (Khanmigo وMagicSchool) وإطار البرومبت المؤلف من 5 أجزاء والتزامات مدارس الاتحاد الأوروبي بقانون الذكاء الاصطناعي.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-07-13',
         proficiencyLevel: 'Beginner',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -1765,8 +1765,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'تدريس الطلاب فردياً عبر الاستجواب السقراطي. K-12، نظيرة بيئة Khan Academy. 44 دولار سنوياً.' },
           { '@type': 'ListItem', position: 2, name: 'MagicSchool', description: 'التخطيط للدروس وإدارة الفصل. معلمو K-12. نسخة مجانية محدودة.' },
-          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.5', description: 'إنشاء محتوى مرن ومسودات. أي مستوى، أي مادة. نسخة مجانية محدودة.' },
-          { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 4.6', description: 'تصميم مناهج طويلة، سياق مليون رمز. الجامعة والمهام المعقدة. نسخة مجانية محدودة.' },
+          { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.6', description: 'إنشاء محتوى مرن ومسودات. أي مستوى، أي مادة. نسخة مجانية محدودة.' },
+          { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 5', description: 'تصميم مناهج طويلة، سياق مليون رمز. الجامعة والمهام المعقدة. نسخة مجانية محدودة.' },
           { '@type': 'ListItem', position: 5, name: 'NotebookLM', description: 'أسئلة وأجوبة مستندة إلى المصادر على المواد المُحمَّلة. الجامعة والبحث. مجاني.' },
           { '@type': 'ListItem', position: 6, name: 'Gemini 3.1 Pro', description: 'تحليل المستندات الكبيرة، سياق مليون رمز. إدارة المدارس. نسخة مجانية محدودة.' },
         ],
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'أدوات كشف الذكاء الاصطناعي لها معدلات إيجابية كاذبة 15–30٪ — غير كافية كأداة مستقلة لتطبيق النزاهة الأكاديمية',
             'قانون الذكاء الاصطناعي الأوروبي يُصنّف الذكاء الاصطناعي التعليمي عالي المخاطر؛ يجب على مدارس الاتحاد الأوروبي إجراء تدريب كفاءة الذكاء الاصطناعي لجميع الموظفين التدريسيين (المادة 4، سارية من 2025)',
             'الطلاب الذين يستخدمون أدوات الذكاء الاصطناعي يحققون درجات أعلى بـ15–35٪ في التقييمات في 21 دراسة تجريبية؛ r = 0.781 الارتباط بين استخدام أدوات الذكاء الاصطناعي والنتائج',
-            'في مايو 2026، GPT-5.5 وClaude Sonnet 4.6 (Anthropic) وGemini 3.1 Pro يدعمون جميعاً نوافذ سياق مليون رمز (~800 صفحة قياسية لكل جلسة)',
+            'في مايو 2026، GPT-5.6 وClaude Sonnet 5 (Anthropic) وGemini 3.1 Pro يدعمون جميعاً نوافذ سياق مليون رمز (~800 صفحة قياسية لكل جلسة)',
           ],
         },
         quickFacts: {
@@ -1800,7 +1800,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'ما تفعله أدوات التدريس بالذكاء الاصطناعي فعلاً',
           content: [
             '**في مايو 2026، تؤدي أدوات التدريس بالذكاء الاصطناعي أربع وظائف متميزة: التدريس الفردي الشخصي وتوليد خطط الدروس والتغذية الراجعة الآلية للتقييم وتقليل المهام الإدارية — كل منها يتطلب أداةً وبنية برومبت مختلفتين.**',
-            'أنظمة التدريس الذكي (ITS) — الفئة التقنية لأدوات مثل Khanmigo — تُكيّف الصعوبة وتُقدّم تغذية راجعة فورية وتُرشد الطلاب عبر الاستجواب السقراطي بدلاً من إعطاء إجابات مباشرة. النماذج اللغوية العامة مثل GPT-5.5 (OpenAI) وClaude Sonnet 4.6 (Anthropic) تتعامل مع توليد خطط الدروس وإنشاء المعايير ومواد التعليم المُتمايز. الأدوات الإدارية للذكاء الاصطناعي تتعامل مع ملخصات الحضور ومسودات التواصل مع الأولياء وتقارير التقدم.',
+            'أنظمة التدريس الذكي (ITS) — الفئة التقنية لأدوات مثل Khanmigo — تُكيّف الصعوبة وتُقدّم تغذية راجعة فورية وتُرشد الطلاب عبر الاستجواب السقراطي بدلاً من إعطاء إجابات مباشرة. النماذج اللغوية العامة مثل GPT-5.6 (OpenAI) وClaude Sonnet 5 (Anthropic) تتعامل مع توليد خطط الدروس وإنشاء المعايير ومواد التعليم المُتمايز. الأدوات الإدارية للذكاء الاصطناعي تتعامل مع ملخصات الحضور ومسودات التواصل مع الأولياء وتقارير التقدم.',
             'في جملة واحدة: الذكاء الاصطناعي في الفصل الدراسي ليس أداةً — بل مجموعة أدوات، كل طبقة تؤدي دوراً محدداً في سير عمل التعليم.',
           ],
           snippets: [
@@ -1821,8 +1821,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'الأداة': 'Khanmigo (Khan Academy)', 'الأفضل لـ': 'تدريس الطلاب فردياً؛ التعلم السقراطي', 'السياق': 'K-12، نظيرة بيئة Khan Academy', 'نسخة مجانية': '44 دولار سنوياً' },
             { 'الأداة': 'MagicSchool', 'الأفضل لـ': 'التخطيط للدروس؛ إدارة الفصل', 'السياق': 'معلمو K-12', 'نسخة مجانية': 'نعم (محدود)' },
-            { 'الأداة': 'ChatGPT / GPT-5.5 (OpenAI)', 'الأفضل لـ': 'إنشاء محتوى مرن؛ مسودات', 'السياق': 'أي مستوى، أي مادة', 'نسخة مجانية': 'نعم (محدود)' },
-            { 'الأداة': 'Claude Sonnet 4.6 (Anthropic)', 'الأفضل لـ': 'تصميم مناهج طويلة؛ تحليل مستندات', 'السياق': 'الجامعة؛ المهام المعقدة', 'نسخة مجانية': 'نعم (محدود)' },
+            { 'الأداة': 'ChatGPT / GPT-5.6 (OpenAI)', 'الأفضل لـ': 'إنشاء محتوى مرن؛ مسودات', 'السياق': 'أي مستوى، أي مادة', 'نسخة مجانية': 'نعم (محدود)' },
+            { 'الأداة': 'Claude Sonnet 5 (Anthropic)', 'الأفضل لـ': 'تصميم مناهج طويلة؛ تحليل مستندات', 'السياق': 'الجامعة؛ المهام المعقدة', 'نسخة مجانية': 'نعم (محدود)' },
             { 'الأداة': 'NotebookLM (Google DeepMind)', 'الأفضل لـ': 'أسئلة وأجوبة مستندة إلى المصادر على مواد الفصل المُحمَّلة', 'السياق': 'الجامعة؛ سياقات البحث', 'نسخة مجانية': 'مجاني / مستوى Plus' },
             { 'الأداة': 'Gemini 3.1 Pro (Google DeepMind)', 'الأفضل لـ': 'تحليل المستندات الكبيرة؛ مراجعة السياسات', 'السياق': 'مديرو المقاطعات المدرسية', 'نسخة مجانية': 'نعم (محدود)' },
           ],
@@ -1834,11 +1834,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           columns: ['حالة الاستخدام', 'الأداة الموصى بها', 'درجة الحرارة', 'توفير الوقت'],
           rows: [
-            { 'حالة الاستخدام': 'إنشاء خطط الدروس', 'الأداة الموصى بها': 'MagicSchool / GPT-5.5', 'درجة الحرارة': '0.1–0.2', 'توفير الوقت': '30–60 دقيقة/درس' },
-            { 'حالة الاستخدام': 'مستويات القراءة المُتمايزة', 'الأداة الموصى بها': 'Claude Sonnet 4.6', 'درجة الحرارة': '0.1–0.2', 'توفير الوقت': '15 دقيقة/مقطع' },
+            { 'حالة الاستخدام': 'إنشاء خطط الدروس', 'الأداة الموصى بها': 'MagicSchool / GPT-5.6', 'درجة الحرارة': '0.1–0.2', 'توفير الوقت': '30–60 دقيقة/درس' },
+            { 'حالة الاستخدام': 'مستويات القراءة المُتمايزة', 'الأداة الموصى بها': 'Claude Sonnet 5', 'درجة الحرارة': '0.1–0.2', 'توفير الوقت': '15 دقيقة/مقطع' },
             { 'حالة الاستخدام': 'التدريس الفردي للطلاب (سقراطي)', 'الأداة الموصى بها': 'Khanmigo', 'درجة الحرارة': 'غير متاح (مُضبط مسبقاً)', 'توفير الوقت': 'غير متزامن' },
-            { 'حالة الاستخدام': 'تغذية راجعة مُحاذِية لمعايير التقييم', 'الأداة الموصى بها': 'Claude Sonnet 4.6 (سياق مليون رمز)', 'درجة الحرارة': '0.2', 'توفير الوقت': 'ساعات لكل مجموعة فصل' },
-            { 'حالة الاستخدام': 'مسودات التواصل مع الأولياء', 'الأداة الموصى بها': 'ChatGPT / GPT-5.5', 'درجة الحرارة': '0.3–0.5', 'توفير الوقت': '5–10 دقائق/رسالة' },
+            { 'حالة الاستخدام': 'تغذية راجعة مُحاذِية لمعايير التقييم', 'الأداة الموصى بها': 'Claude Sonnet 5 (سياق مليون رمز)', 'درجة الحرارة': '0.2', 'توفير الوقت': 'ساعات لكل مجموعة فصل' },
+            { 'حالة الاستخدام': 'مسودات التواصل مع الأولياء', 'الأداة الموصى بها': 'ChatGPT / GPT-5.6', 'درجة الحرارة': '0.3–0.5', 'توفير الوقت': '5–10 دقائق/رسالة' },
             { 'حالة الاستخدام': 'مراجعة الكتب المدرسية/السياسات', 'الأداة الموصى بها': 'Gemini 3.1 Pro (سياق مليون رمز)', 'درجة الحرارة': '0.1', 'توفير الوقت': 'ساعات لكل مستند' },
           ],
         },
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'كيف تكتب برومبتات ذكاء اصطناعي لتغذية راجعة التقييم؟',
           content: [
             '**للتقييم التكويني: أدرج معايير معيارك مباشرةً في البرومبت حتى يفهم الذكاء الاصطناعي معايير تقييمك ويطبّقها باتساق على جميع تسليمات الطلاب.**',
-            'نافذة سياق مليون رمز لـClaude Sonnet 4.6 تتعامل مع مجموعات كاملة من المقالات في جلسة واحدة — حوالي 800 صفحة قياسية — مما يجعل توليد التغذية الراجعة الدُفعية عملياً للمعلمين ذوي الفصول الكبيرة.',
+            'نافذة سياق مليون رمز لـClaude Sonnet 5 تتعامل مع مجموعات كاملة من المقالات في جلسة واحدة — حوالي 800 صفحة قياسية — مما يجعل توليد التغذية الراجعة الدُفعية عملياً للمعلمين ذوي الفصول الكبيرة.',
           ],
           blockquote: 'أنت معلمة لغة عربية من الصف السابع ذات خبرة. حلّل هذه المقالة الإقناعية لطالب باستخدام هذا المعيار: أطروحة واضحة (4 نقاط) وثلاث حجج داعمة بأدلة (12 نقطة) واعتراف بالحجة المضادة (4 نقاط) وانتقالات رسمية (3 نقاط) وخاتمة تُعزّز الأطروحة (3 نقاط). لكل معيار: أعطِ الدرجة واستشهد بالجملة ذات الصلة واكتب اقتراح تحسين محدداً. مجموع الدرجات 26 نقطة.',
           callouts: [
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'ما أفضل أداة ذكاء اصطناعي للمعلمين في 2026؟',
-              a: 'الإجابة تعتمد على المهمة. Khanmigo (Khan Academy، مدعوم بـGPT-4) الأقوى للتدريس الفردي للطلاب عبر الاستجواب السقراطي بـ44 دولار سنوياً. MagicSchool يتقدم في أدوات سير عمل المعلمين الشاملة (خطط الدروس والخطط التعليمية الفردية والتواصل مع الأولياء). ChatGPT (GPT-5.5، OpenAI) يُقدّم أكثر إنشاء المحتوى العالمي مرونة. لتحليل المناهج المعقدة، Claude Sonnet 4.6 (Anthropic) يتعامل مع مليون رمز — حوالي 800 صفحة قياسية — في جلسة واحدة.',
+              a: 'الإجابة تعتمد على المهمة. Khanmigo (Khan Academy، مدعوم بـGPT-4) الأقوى للتدريس الفردي للطلاب عبر الاستجواب السقراطي بـ44 دولار سنوياً. MagicSchool يتقدم في أدوات سير عمل المعلمين الشاملة (خطط الدروس والخطط التعليمية الفردية والتواصل مع الأولياء). ChatGPT (GPT-5.6، OpenAI) يُقدّم أكثر إنشاء المحتوى العالمي مرونة. لتحليل المناهج المعقدة، Claude Sonnet 5 (Anthropic) يتعامل مع مليون رمز — حوالي 800 صفحة قياسية — في جلسة واحدة.',
             },
             {
               q: 'كم ساعة يمكن للذكاء الاصطناعي توفيرها للمعلمين أسبوعياً؟',
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'هل يمكن لأدوات الذكاء الاصطناعي المساعدة في التعليم المُتمايز؟',
-              a: 'نعم — هذا من أكثر استخدامات الذكاء الاصطناعي قوةً في التعليم. النماذج اللغوية يمكنها إعادة كتابة نفس المحتوى في مستويات قراءة متعددة في ثوانٍ. بنية البرومبت: "أعد كتابة هذا المقطع للمستوى الدراسي [ن]. احتفظ بجميع المحتوى الحقائقي. استبدل المفردات المعقدة بمكافئات أبسط. حافظ على نفس بنية الفقرة." Claude Sonnet 4.6 يُنتج أكثر التمايز اتساقاً عبر مستويات القراءة.',
+              a: 'نعم — هذا من أكثر استخدامات الذكاء الاصطناعي قوةً في التعليم. النماذج اللغوية يمكنها إعادة كتابة نفس المحتوى في مستويات قراءة متعددة في ثوانٍ. بنية البرومبت: "أعد كتابة هذا المقطع للمستوى الدراسي [ن]. احتفظ بجميع المحتوى الحقائقي. استبدل المفردات المعقدة بمكافئات أبسط. حافظ على نفس بنية الفقرة." Claude Sonnet 5 يُنتج أكثر التمايز اتساقاً عبر مستويات القراءة.',
             },
             {
               q: 'كيف يجب على المدارس التعامل مع كفاءة الذكاء الاصطناعي للموظفين بموجب قانون الذكاء الاصطناعي الأوروبي؟',
@@ -2077,9 +2077,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       specific_year: 2026,
       theme: 'Use Cases',
       title: 'Ensinar com IA em 2026: Estudo Harvard Mostra 2× Mais Aprendizado — Ferramentas, Prompts e Guia da Lei de IA da UE',
-      intro: '**Para ensinar eficazmente com IA em 2026: use um prompt estruturado de cinco componentes (papel, objetivo, contexto do aluno, restrições, formato de saída), escolha uma ferramenta adaptada à tarefa (Khanmigo para tutoria, MagicSchool para planejamento de aulas, Claude Sonnet 4.6 ou GPT-5.5 para geração de conteúdo), defina temperatura em 0,1–0,2 para conteúdo factual.** Um ensaio clínico randomizado de Harvard de 2024 descobriu que a tutoria com IA produziu ganhos de aprendizado mais do que o dobro dos de salas de aula de aprendizado ativo — em 18% menos tempo de estudo.',
+      intro: '**Para ensinar eficazmente com IA em 2026: use um prompt estruturado de cinco componentes (papel, objetivo, contexto do aluno, restrições, formato de saída), escolha uma ferramenta adaptada à tarefa (Khanmigo para tutoria, MagicSchool para planejamento de aulas, Claude Sonnet 5 ou GPT-5.6 para geração de conteúdo), defina temperatura em 0,1–0,2 para conteúdo factual.** Um ensaio clínico randomizado de Harvard de 2024 descobriu que a tutoria com IA produziu ganhos de aprendizado mais do que o dobro dos de salas de aula de aprendizado ativo — em 18% menos tempo de estudo.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-07-13',
       readTime: '8 min de leitura',
       seoTitle: 'Ensinar com IA em 2026: Guia de 2× Mais Aprendizado',
       metaDescription: 'Estudo Harvard: tutoria com IA dobra aprendizado em 18% menos tempo. Ferramentas: Khanmigo, MagicSchool e Claude. Com guia de conformidade para escolas.',
@@ -2090,7 +2090,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Ensinar com IA em 2026: Estudo Harvard Mostra 2× Mais Aprendizado',
         description: 'Como ensinar eficazmente com IA em 2026. Ferramentas, prompts e conformidade legal para educadores.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-07-13',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/teaching-with-ai-tools-guide-2026',
         inLanguage: 'pt-BR',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2119,7 +2119,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Khanmigo:** Tutoria baseada em Sócrates para alunos do K–12. Se recusa a dar respostas diretas — guia o aluno ao longo do raciocínio.',
             '**MagicSchool:** 60+ ferramentas para professores: diferenciação, planejamento de aulas, comunicação com pais, IEPs.',
-            '**Claude Sonnet 4.6 / GPT-5.5:** Modelos de propósito geral. Mais flexíveis mas sem proteções incorporadas para uso estudantil.',
+            '**Claude Sonnet 5 / GPT-5.6:** Modelos de propósito geral. Mais flexíveis mas sem proteções incorporadas para uso estudantil.',
           ],
         },
         fiveComponentPrompt: {
@@ -2184,9 +2184,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
   freshness_tier: 'annual',
   theme: 'Use Cases',
   title: 'Enseigner avec l\'IA en 2026 : étude Harvard révèle un gain de 2× — outils, prompts et guide loi IA de l\'UE',
-  intro: '**Pour enseigner efficacement avec l\'IA en 2026 : utilisez un prompt structuré à cinq composants (rôle, objectif, contexte apprenant, contraintes, format de sortie), choisissez un outil adapté à la tâche (Khanmigo pour tutorat, MagicSchool pour planification, Claude Sonnet 4.6 ou GPT-5.5 pour création de contenu), réglez la température sur 0,1–0,2 pour contenu factuel, et — dans les écoles de l\'UE — mettez en place une formation en compétences IA pour tous les enseignants avant le déploiement de systèmes à haut risque selon l\'article 4.** Une étude randomisée contrôlée de Harvard en 2024 a montré que le tutorat par IA produit des gains d\'apprentissage plus que deux fois supérieurs aux salles de classe d\'apprentissage actif — en 18 % moins de temps. En mai 2026, 85 % des enseignants américains et 86 % des élèves utilisent l\'IA pendant l\'année scolaire — le taux d\'adoption le plus élevé de toute industrie. Le défi ne réside pas dans l\'adoption, mais dans la structure : des prompts vagues produisent des résultats inutilisables, les prompts structurés économisent 5–13 heures par semaine, et les écoles de l\'UE ont désormais des obligations légales selon la Loi IA pour tout outil IA affectant l\'évaluation des élèves.',
+  intro: '**Pour enseigner efficacement avec l\'IA en 2026 : utilisez un prompt structuré à cinq composants (rôle, objectif, contexte apprenant, contraintes, format de sortie), choisissez un outil adapté à la tâche (Khanmigo pour tutorat, MagicSchool pour planification, Claude Sonnet 5 ou GPT-5.6 pour création de contenu), réglez la température sur 0,1–0,2 pour contenu factuel, et — dans les écoles de l\'UE — mettez en place une formation en compétences IA pour tous les enseignants avant le déploiement de systèmes à haut risque selon l\'article 4.** Une étude randomisée contrôlée de Harvard en 2024 a montré que le tutorat par IA produit des gains d\'apprentissage plus que deux fois supérieurs aux salles de classe d\'apprentissage actif — en 18 % moins de temps. En mai 2026, 85 % des enseignants américains et 86 % des élèves utilisent l\'IA pendant l\'année scolaire — le taux d\'adoption le plus élevé de toute industrie. Le défi ne réside pas dans l\'adoption, mais dans la structure : des prompts vagues produisent des résultats inutilisables, les prompts structurés économisent 5–13 heures par semaine, et les écoles de l\'UE ont désormais des obligations légales selon la Loi IA pour tout outil IA affectant l\'évaluation des élèves.',
   publishDate: '2026-03-23',
-  dateModified: '2026-05-04',
+  dateModified: '2026-07-13',
   readTime: '8 min de lecture',
   seoTitle: 'Enseigner avec l\'IA en 2026: Doubler les résultats',
   metaDescription: 'Étude Harvard : tutorat IA double résultats, 18 % moins de temps. Outils : Khanmigo, MagicSchool, Claude. Prompts sauvent 5–13 h/semaine. Guide loi IA.',
@@ -2222,7 +2222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: 'Enseigner avec l\'IA en 2026 : étude Harvard révèle un gain de 2× — outils, prompts et guide loi IA de l\'UE',
     description: 'Étude Harvard : le tutorat IA double les résultats d\'apprentissage en 18 % moins de temps. Meilleurs outils pour enseignants et obligations loi IA de l\'UE.',
     datePublished: '2026-03-23',
-    dateModified: '2026-05-04',
+    dateModified: '2026-07-13',
     proficiencyLevel: 'Débutant',
     author: {
       '@type': 'Person',
@@ -2264,7 +2264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'SoftwareApplication', name: 'Khanmigo' },
       { '@type': 'SoftwareApplication', name: 'MagicSchool' },
       { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-      { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
+      { '@type': 'SoftwareApplication', name: 'Claude Sonnet 5' },
       { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
       { '@type': 'SoftwareApplication', name: 'NotebookLM' },
       { '@type': 'Organization', name: 'Harvard University' },
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Quel est le meilleur outil IA pour les enseignants en 2026 ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'La réponse dépend de la tâche. Khanmigo (Khan Academy, alimenté par GPT-4) excelle pour le tutorat des élèves par questionnement socratique à 44 $/année. MagicSchool domine pour les outils de flux de travail pédagogique complets (plans d\'études, PEI, communication parentale). ChatGPT (GPT-5.5, OpenAI) offre la création de contenu universelle la plus flexible. Pour l\'analyse pédagogique complexe, Claude Sonnet 4.6 (Anthropic) traite 200 000 tokens — environ 160 pages standard — en une seule session.',
+          text: 'La réponse dépend de la tâche. Khanmigo (Khan Academy, alimenté par GPT-4) excelle pour le tutorat des élèves par questionnement socratique à 44 $/année. MagicSchool domine pour les outils de flux de travail pédagogique complets (plans d\'études, PEI, communication parentale). ChatGPT (GPT-5.6, OpenAI) offre la création de contenu universelle la plus flexible. Pour l\'analyse pédagogique complexe, Claude Sonnet 5 (Anthropic) traite 200 000 tokens — environ 160 pages standard — en une seule session.',
         },
       },
       {
@@ -2330,7 +2330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'L\'IA peut-elle aider à la pédagogie différenciée ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Oui — c\'est l\'un des cas d\'usage les plus forts de l\'IA en éducation. Les LLM peuvent reformuler le même contenu en secondes à plusieurs niveaux de lecture (Flesch-Kincaid classe 4, 8 et 12). Structure du prompt : « Réécrivez ce passage au niveau de la classe [N]. Préservez tout le contenu factuel. Remplacez le vocabulaire complexe par des équivalents plus simples. Conservez la même structure de paragraphe. » Claude Sonnet 4.6 produit la différenciation la plus cohérente entre les niveaux de lecture.',
+          text: 'Oui — c\'est l\'un des cas d\'usage les plus forts de l\'IA en éducation. Les LLM peuvent reformuler le même contenu en secondes à plusieurs niveaux de lecture (Flesch-Kincaid classe 4, 8 et 12). Structure du prompt : « Réécrivez ce passage au niveau de la classe [N]. Préservez tout le contenu factuel. Remplacez le vocabulaire complexe par des équivalents plus simples. Conservez la même structure de paragraphe. » Claude Sonnet 5 produit la différenciation la plus cohérente entre les niveaux de lecture.',
         },
       },
       {
@@ -2409,8 +2409,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'Tutorat des élèves par questionnement socratique. K-12, écosystème Khan Academy. 44 $ par année.' },
       { '@type': 'ListItem', position: 2, name: 'MagicSchool', description: 'Planification pédagogique et gestion de classe. Enseignants K-12. Version gratuite limitée.' },
-      { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.5', description: 'Création de contenu flexible et rédaction. Tous les niveaux, toutes les matières. Version gratuite limitée.' },
-      { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 4.6', description: 'Conception de plans d\'études à long terme, 200 000 tokens de contexte. Enseignement supérieur et tâches complexes. Version gratuite limitée.' },
+      { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.6', description: 'Création de contenu flexible et rédaction. Tous les niveaux, toutes les matières. Version gratuite limitée.' },
+      { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 5', description: 'Conception de plans d\'études à long terme, 200 000 tokens de contexte. Enseignement supérieur et tâches complexes. Version gratuite limitée.' },
       { '@type': 'ListItem', position: 5, name: 'NotebookLM', description: 'Questions et réponses basées sur sources pour matériels téléchargés. Université et recherche. Gratuit.' },
       { '@type': 'ListItem', position: 6, name: 'Gemini 3.1 Pro', description: 'Analyse de documents volumineux, 1 million de tokens de contexte. Administration scolaire. Version gratuite limitée.' },
     ],
@@ -2426,7 +2426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Les outils de détection d\'IA ont des taux de faux positifs de 15–30 % — insuffisants comme outil autonome pour l\'intégrité académique',
         'La Loi IA de l\'UE classe l\'IA éducative comme haut risque ; les écoles de l\'UE doivent mettre en place une formation en compétences IA pour tous les enseignants (article 4, applicable à partir de 2025)',
         'Les élèves utilisant des outils IA obtiennent 15–35 % de résultats plus élevés dans 21 études empiriques ; corrélation r = 0,781 entre utilisation d\'outil IA et résultats',
-        'En mai 2026, GPT-5.5, Claude Sonnet 4.6 (Anthropic) et Gemini 3.1 Pro supportent tous des fenêtres de contexte de 1 million tokens (~800 pages par session) — la taille de la fenêtre de contexte n\'est plus un différenciateur clé entre modèles frontière',
+        'En mai 2026, GPT-5.6, Claude Sonnet 5 (Anthropic) et Gemini 3.1 Pro supportent tous des fenêtres de contexte de 1 million tokens (~800 pages par session) — la taille de la fenêtre de contexte n\'est plus un différenciateur clé entre modèles frontière',
       ],
     },
     quickFacts: {
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Ce que les outils pédagogiques IA font vraiment',
       content: [
         '**En avril 2026, les outils pédagogiques IA exécutent quatre fonctions distinctes : tutorat personnalisé, génération de plans d\'études, rétroaction d\'évaluation automatisée et réduction des tâches administratives — chacun nécessite un outil différent et une structure de prompt différente.**',
-        'Les systèmes tutoriels intelligents (STI) — la catégorie technique pour des outils comme Khanmigo — adaptent le niveau de difficulté, fournissent une rétroaction immédiate et guident les élèves par questionnement socratique plutôt que de donner des réponses directes. Les LLM universels (Large Language Models) comme GPT-5.5 (OpenAI) et Claude Sonnet 4.6 (Anthropic) gèrent la génération de plans d\'études, la création de rubriques et les matériels d\'enseignement différenciés. Les outils IA administratifs gèrent les résumés de présence, les brouillons de communication parentale et les rapports de progrès — les tâches que les enseignants signalent comme les plus exigeantes en temps.',
+        'Les systèmes tutoriels intelligents (STI) — la catégorie technique pour des outils comme Khanmigo — adaptent le niveau de difficulté, fournissent une rétroaction immédiate et guident les élèves par questionnement socratique plutôt que de donner des réponses directes. Les LLM universels (Large Language Models) comme GPT-5.6 (OpenAI) et Claude Sonnet 5 (Anthropic) gèrent la génération de plans d\'études, la création de rubriques et les matériels d\'enseignement différenciés. Les outils IA administratifs gèrent les résumés de présence, les brouillons de communication parentale et les rapports de progrès — les tâches que les enseignants signalent comme les plus exigeantes en temps.',
         'En une phrase : [l\'IA en enseignement](/fr/prompt-engineering/what-is-prompt-engineering) n\'est pas un seul outil — c\'est une pile où chaque couche joue un rôle spécifique dans le flux de travail pédagogique.',
       ],
       snippets: [
@@ -2455,7 +2455,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Quels outils IA les enseignants doivent-ils utiliser en 2026 ?',
       content: [
         '**Khanmigo (Khan Academy), MagicSchool et ChatGPT (OpenAI) remplissent chacun des fonctions de classe distinctes — choisir le mauvais outil pour la tâche gaspille temps et opportunités.**',
-        'Khanmigo est l\'assistant tuteur pédagogique IA de Khan Academy, alimenté par GPT-4. Il utilise le questionnement socratique pour guider les élèves vers les réponses plutôt que de leur donner directement — une différence de conception cruciale pour la rétention d\'apprentissage. Il s\'intègre directement dans les cours Khan Academy, ce qui en fait l\'option la plus solide pour les écoles utilisant déjà cette plate-forme. MagicSchool offre l\'ensemble d\'outils pédagogiques le plus complet — planification de cours, modèles de gestion de classe, support de création d\'IEP et outils de communication parentale. ChatGPT (GPT-5.5) offre le soutien universel le plus flexible avec la plus grande autonomie, mais nécessite des prompts structurés de l\'enseignant pour produire des résultats prêts pour la classe.',
+        'Khanmigo est l\'assistant tuteur pédagogique IA de Khan Academy, alimenté par GPT-4. Il utilise le questionnement socratique pour guider les élèves vers les réponses plutôt que de leur donner directement — une différence de conception cruciale pour la rétention d\'apprentissage. Il s\'intègre directement dans les cours Khan Academy, ce qui en fait l\'option la plus solide pour les écoles utilisant déjà cette plate-forme. MagicSchool offre l\'ensemble d\'outils pédagogiques le plus complet — planification de cours, modèles de gestion de classe, support de création d\'IEP et outils de communication parentale. ChatGPT (GPT-5.6) offre le soutien universel le plus flexible avec la plus grande autonomie, mais nécessite des prompts structurés de l\'enseignant pour produire des résultats prêts pour la classe.',
       ],
       callouts: [
         { type: '💡', label: 'Conseil pro', text: 'Aucun outil unique ne fait tout. La plupart des enseignants utilisent 2–3 outils ensemble : Khanmigo pour tutorat d\'élève, MagicSchool pour planification et ChatGPT pour création de contenu rapide.' },
@@ -2475,13 +2475,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Version gratuite': 'Oui (limité)',
         },
         {
-          'Outil': 'ChatGPT / GPT-5.5 (OpenAI)',
+          'Outil': 'ChatGPT / GPT-5.6 (OpenAI)',
           'Meilleur pour': 'Création de contenu flexible ; rédaction de brouillons',
           'Contexte': 'Tous les niveaux, toutes les matières',
           'Version gratuite': 'Oui (limité)',
         },
         {
-          'Outil': 'Claude Sonnet 4.6 (Anthropic)',
+          'Outil': 'Claude Sonnet 5 (Anthropic)',
           'Meilleur pour': 'Conception de plans d\'études à long terme ; analyse de documents',
           'Contexte': 'Enseignement supérieur ; tâches complexes',
           'Version gratuite': 'Oui (limité)',
@@ -2509,13 +2509,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       rows: [
         {
           'Cas d\'utilisation': 'Création de plan d\'études',
-          'Outil recommandé': 'MagicSchool / GPT-5.5',
+          'Outil recommandé': 'MagicSchool / GPT-5.6',
           'Température': '0,1–0,2',
           'Économie de temps': '30–60 min par cours',
         },
         {
           'Cas d\'utilisation': 'Niveaux de lecture différenciés',
-          'Outil recommandé': 'Claude Sonnet 4.6',
+          'Outil recommandé': 'Claude Sonnet 5',
           'Température': '0,1–0,2',
           'Économie de temps': '15 min par passage',
         },
@@ -2527,13 +2527,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           'Cas d\'utilisation': 'Rétroaction alignée sur rubrique',
-          'Outil recommandé': 'Claude Sonnet 4.6 (200 000 tokens contexte)',
+          'Outil recommandé': 'Claude Sonnet 5 (200 000 tokens contexte)',
           'Température': '0,2',
           'Économie de temps': 'Heures par série',
         },
         {
           'Cas d\'utilisation': 'Brouillons de communication parentale',
-          'Outil recommandé': 'ChatGPT / GPT-5.5',
+          'Outil recommandé': 'ChatGPT / GPT-5.6',
           'Température': '0,3–0,5',
           'Économie de temps': '5–10 min par message',
         },
@@ -2589,7 +2589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Comment rédiger des prompts IA pour les commentaires d\'évaluation ?',
       content: [
         '**Pour l\'évaluation formative : incluez vos critères de rubrique directement dans le prompt, afin que l\'IA comprenne vos normes de notation et les applique régulièrement à tous les travaux des élèves.**',
-        'La [fenêtre de contexte](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) de 200 000 tokens de Claude Sonnet 4.6 traite des séries complètes de courts essais en une seule session — environ 160 pages standard — rendant la génération de rétroaction en lot pratique pour les enseignants avec de grandes classes. GPT-5.5 traite ~100 pages par session, suffisant pour les tailles de classe typiques.',
+        'La [fenêtre de contexte](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) de 200 000 tokens de Claude Sonnet 5 traite des séries complètes de courts essais en une seule session — environ 160 pages standard — rendant la génération de rétroaction en lot pratique pour les enseignants avec de grandes classes. GPT-5.6 traite ~100 pages par session, suffisant pour les tailles de classe typiques.',
       ],
       blockquote: 'Tu es une enseignante expérimentée d\'anglais en septième année. Analyse cet essai persuasif d\'élève en utilisant cette rubrique : thèse claire (4 points), trois arguments avec preuves (12 points), reconnaissance du contre-argument (4 points), transitions formelles (3 points), conclusion renforçant la thèse (3 points). Pour chaque critère : donne la note, cite la phrase pertinente et écris une suggestion d\'amélioration spécifique. Score total sur 26 points.',
       callouts: [
@@ -2714,7 +2714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Quel est le meilleur outil IA pour les enseignants en 2026 ?',
-          a: 'La réponse dépend de la tâche. Khanmigo (Khan Academy, alimenté par GPT-4) excelle pour le tutorat des élèves par questionnement socratique à 44 $/année. MagicSchool domine pour les outils de flux de travail pédagogique complets (plans d\'études, PEI, communication parentale). ChatGPT (GPT-5.5, OpenAI) offre la création de contenu universelle la plus flexible. Pour l\'analyse pédagogique complexe, Claude Sonnet 4.6 (Anthropic) traite 200 000 tokens — environ 160 pages standard — en une seule session.',
+          a: 'La réponse dépend de la tâche. Khanmigo (Khan Academy, alimenté par GPT-4) excelle pour le tutorat des élèves par questionnement socratique à 44 $/année. MagicSchool domine pour les outils de flux de travail pédagogique complets (plans d\'études, PEI, communication parentale). ChatGPT (GPT-5.6, OpenAI) offre la création de contenu universelle la plus flexible. Pour l\'analyse pédagogique complexe, Claude Sonnet 5 (Anthropic) traite 200 000 tokens — environ 160 pages standard — en une seule session.',
         },
         {
           q: 'Combien de temps l\'IA peut-elle économiser aux enseignants chaque semaine ?',
@@ -2734,7 +2734,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'L\'IA peut-elle aider à la pédagogie différenciée ?',
-          a: 'Oui — c\'est l\'un des cas d\'usage les plus forts de l\'IA en éducation. Les LLM peuvent reformuler le même contenu en secondes à plusieurs niveaux de lecture (Flesch-Kincaid classe 4, 8 et 12). Structure du prompt : « Réécrivez ce passage au niveau de la classe [N]. Préservez tout le contenu factuel. Remplacez le vocabulaire complexe par des équivalents plus simples. Conservez la même structure de paragraphe. » Claude Sonnet 4.6 produit la différenciation la plus cohérente entre les niveaux de lecture.',
+          a: 'Oui — c\'est l\'un des cas d\'usage les plus forts de l\'IA en éducation. Les LLM peuvent reformuler le même contenu en secondes à plusieurs niveaux de lecture (Flesch-Kincaid classe 4, 8 et 12). Structure du prompt : « Réécrivez ce passage au niveau de la classe [N]. Préservez tout le contenu factuel. Remplacez le vocabulaire complexe par des équivalents plus simples. Conservez la même structure de paragraphe. » Claude Sonnet 5 produit la différenciation la plus cohérente entre les niveaux de lecture.',
         },
         {
           q: 'Comment les écoles doivent-elles gérer les compétences IA pour les enseignants selon la Loi IA de l\'UE ?',
@@ -2753,7 +2753,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sources: {
       title: 'Sources et ressources supplémentaires',
       content: [
-        '**Toutes les statistiques et conclusions dans cet article proviennent de recherche examinée par les pairs, de directives gouvernementales officielles et de politiques institutionnelles documentées.** Dernières vérifications factuelles : 2026-04-28 (contre les modèles Claude Sonnet 4.6, GPT-5.5, Gemini 3.1 Pro actuels ; tarifs Khanmigo actuels chez Khan Academy ; directives article 4 de la Loi IA de l\'UE actuelles applicables à partir de 2025).',
+        '**Toutes les statistiques et conclusions dans cet article proviennent de recherche examinée par les pairs, de directives gouvernementales officielles et de politiques institutionnelles documentées.** Dernières vérifications factuelles : 2026-04-28 (contre les modèles Claude Sonnet 5, GPT-5.6, Gemini 3.1 Pro actuels ; tarifs Khanmigo actuels chez Khan Academy ; directives article 4 de la Loi IA de l\'UE actuelles applicables à partir de 2025).',
       ],
       items: [
         '[Kestin & Miller, 2024. « Le tutorat IA surpasse l\'apprentissage actif en classe — Essai contrôlé randomisé Harvard »](https://www.nature.com/articles/s41598-025-97652-6) — étude randomisée contrôlée avec 194 élèves ; taille d\'effet 0,73–1,3 SD',
@@ -2767,9 +2767,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
   freshness_tier: 'annual',
   theme: 'Use Cases',
   title: 'AIで教える 2026：ハーバード研究が示す学習効果2倍—ツール・プロンプト・EU AI法ガイド',
-  intro: '**2026年に効果的にAIで教えるために：5つのコンポーネント構造プロンプト（役割、目標、学習者コンテキスト、制約、出力形式）を使用し、タスクに合ったツール（チューター向けKhanmigo、計画向けMagicSchool、コンテンツ作成向けClaude Sonnet 4.6またはGPT-5.5）を選択し、ファクト内容は温度0.1–0.2に設定し、EU圏内の学校の場合、高リスクシステム導入前にすべての教師にAIリテラシー研修を実施してください。** 2024年のハーバード大学ランダム化比較試験では、AIチューターは従来のアクティブラーニング教室より2倍以上の学習成果をもたらし、18%少ない学習時間で実現することが示されました。2026年5月時点で、米国の教師の85%と生徒の86%が学年中にAIを使用しており、これはあらゆる業界で最も高いAI採用率です。課題は採用ではなく構造にあります。曖昧なプロンプトは使用不可能な結果を生み出し、構造化されたプロンプトは週5~13時間を節約し、EU圏の学校は現在、生徒評価に影響するあらゆるAIツールについてAI法に基づく法的義務があります。',
+  intro: '**2026年に効果的にAIで教えるために：5つのコンポーネント構造プロンプト（役割、目標、学習者コンテキスト、制約、出力形式）を使用し、タスクに合ったツール（チューター向けKhanmigo、計画向けMagicSchool、コンテンツ作成向けClaude Sonnet 5またはGPT-5.6）を選択し、ファクト内容は温度0.1–0.2に設定し、EU圏内の学校の場合、高リスクシステム導入前にすべての教師にAIリテラシー研修を実施してください。** 2024年のハーバード大学ランダム化比較試験では、AIチューターは従来のアクティブラーニング教室より2倍以上の学習成果をもたらし、18%少ない学習時間で実現することが示されました。2026年5月時点で、米国の教師の85%と生徒の86%が学年中にAIを使用しており、これはあらゆる業界で最も高いAI採用率です。課題は採用ではなく構造にあります。曖昧なプロンプトは使用不可能な結果を生み出し、構造化されたプロンプトは週5~13時間を節約し、EU圏の学校は現在、生徒評価に影響するあらゆるAIツールについてAI法に基づく法的義務があります。',
   publishDate: '2026-03-23',
-  dateModified: '2026-05-04',
+  dateModified: '2026-07-13',
   readTime: '9分で読める',
   seoTitle: 'AIで教える 2026：教育者向けツール・プロンプト・学習成果ガイド',
   metaDescription: 'ハーバード大RCT：AI個別指導は学習効果を2倍以上に向上、学習時間は18%短縮。教員の85%がAIを活用。構造化プロンプトで週5〜13時間を節約。EU AI規制と検出ツールの課題も解説。',
@@ -2802,7 +2802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: 'AIで教える：教育者向けのツール、成果、プロンプト 2026',
     description: 'AIチューターシステムは従来の教室と比べて学習成果を2倍にします。教師がAIを計画、評価、生徒チューターに使用する方法と、2026年に米国教師の85%がAIを採用した理由を学びます。',
     datePublished: '2026-03-23',
-    dateModified: '2026-05-04',
+    dateModified: '2026-07-13',
     proficiencyLevel: '初級',
     author: {
       '@type': 'Organization',
@@ -2844,7 +2844,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'SoftwareApplication', name: 'Khanmigo' },
       { '@type': 'SoftwareApplication', name: 'MagicSchool' },
       { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-      { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
+      { '@type': 'SoftwareApplication', name: 'Claude Sonnet 5' },
       { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
       { '@type': 'SoftwareApplication', name: 'NotebookLM' },
       { '@type': 'Organization', name: 'ハーバード大学' },
@@ -2858,12 +2858,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'ja',
     mainEntity: [
       { '@type': 'Question', name: 'AIチューターは本当に学習成果を向上させるのか', acceptedAnswer: { '@type': 'Answer', text: 'はい、エビデンスは強固です。2024年ハーバード大学ランダム化比較試験では、物理学の学生194名にAIチューターが従来のアクティブラーニング教室より0.73～1.3の効果量を示し、60分ではなく49分で高い成果を達成しました（p < 10−8）。2025年の21研究の体系的レビューでは、AI支援の学生が従来の指導を15～35%上回ることが示されています。' } },
-      { '@type': 'Question', name: '2026年の教師にとって最高のAIツール', acceptedAnswer: { '@type': 'Answer', text: '答えはタスクに依存します。Khanmigo（Khan Academy、GPT-4を搭載）は年44ドルでソクラテス的質問による生徒チューターに最適です。MagicSchool は完全な教育ワークフロー（カリキュラム、IEP、親通信）が充実しています。ChatGPT（GPT-5.5、OpenAI）は最も柔軟な汎用コンテンツ作成を提供します。複雑な教育分析にはClaude Sonnet 4.6（Anthropic）が200,000トークン処理します（約160ページ）。' } },
+      { '@type': 'Question', name: '2026年の教師にとって最高のAIツール', acceptedAnswer: { '@type': 'Answer', text: '答えはタスクに依存します。Khanmigo（Khan Academy、GPT-4を搭載）は年44ドルでソクラテス的質問による生徒チューターに最適です。MagicSchool は完全な教育ワークフロー（カリキュラム、IEP、親通信）が充実しています。ChatGPT（GPT-5.6、OpenAI）は最も柔軟な汎用コンテンツ作成を提供します。複雑な教育分析にはClaude Sonnet 5（Anthropic）が200,000トークン処理します（約160ページ）。' } },
       { '@type': 'Question', name: '毎週AIで教師が時間を節約できるか', acceptedAnswer: { '@type': 'Answer', text: '具体的で文脈的なプロンプトは、一貫して使用すると週5～13時間節約します。最も一般的な時間節約用途：リサーチと内容収集（教師の44%）、カリキュラム計画作成（38%）、情報要約（38%）、教室資料作成（37%）。' } },
       { '@type': 'Question', name: '教育でのAIはEU法で法的に許可されているか', acceptedAnswer: { '@type': 'Answer', text: '学習評価または学習パスに影響するAIシステムはEU AI法（別紙III）で高リスクと分類されます。EU圏の学校は全教師にAIスキル研修を提供する必要があります（2025年から適用の第4条）、AIが影響する評価に対して人間の監督を維持し、すべてのAIシステムに監査ログを保持する必要があります。教育機関での感情認識AIは完全に禁止されています。' } },
       { '@type': 'Question', name: 'AI検出ソフトウェアは学業不正を確実に検出するか', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。現在のAI検出ツールは査読済み研究で15～30%の偽陽性率を持つため、最大30/100の合法的な生徒提出物が誤ってフラグを立てられる可能性があります。非ネイティブスピーカーと構造化された学術的文体で書く学生は不釣り合いに高くフラグが立てられます。2026年の大学は禁止ポリシーから開示・引用フレームワークへ移行し、AI検出を複数の指標の1つとして扱っています。' } },
       { '@type': 'Question', name: '教師は教育計画AIにどの温度設定を使うべきか', acceptedAnswer: { '@type': 'Answer', text: 'ファクト教育内容には温度0.1～0.2に設定します（カリキュラム、評価ガイドライン、アラインメント）。これは一貫性と低変動を生成します。創意的な活動アイデア作成では0.7～0.9を使用します。ほとんどのプラットフォームのデフォルト温度（0.7～1.0）は創意的タスク向けで、教育内容のファクトエラーを増加させます。' } },
-      { '@type': 'Question', name: 'AIは差別化教育を支援できるか', acceptedAnswer: { '@type': 'Answer', text: 'はい。これは教育AIの最強のユースケースです。LLMは同じコンテンツを複数の読解レベル（Flesch-Kincaid クラス4、8、12）に数秒で言い換えることができます。プロンプト構造：「このパッセージをクラス[N]レベルで言い直してください。すべてのファクト内容を保持してください。複雑な語彙をシンプルな同義語に置き換えてください。段落構造を保持してください。」Claude Sonnet 4.6が読解レベル間で最も一貫した差別化を生成します。' } },
+      { '@type': 'Question', name: 'AIは差別化教育を支援できるか', acceptedAnswer: { '@type': 'Answer', text: 'はい。これは教育AIの最強のユースケースです。LLMは同じコンテンツを複数の読解レベル（Flesch-Kincaid クラス4、8、12）に数秒で言い換えることができます。プロンプト構造：「このパッセージをクラス[N]レベルで言い直してください。すべてのファクト内容を保持してください。複雑な語彙をシンプルな同義語に置き換えてください。段落構造を保持してください。」Claude Sonnet 5が読解レベル間で最も一貫した差別化を生成します。' } },
       { '@type': 'Question', name: 'EU AI法によると学校は教師のAIスキルをどう管理すべきか', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法第4条は、AIシステムで働くすべての職員に十分なAIスキルを確保するようAI提供者（学校を含む）に要求しています（2025年から適用）。これは以下の研修を意味します：AIがどう決定を下すか、特定のツールのエラー率、人間の監督が必要なときと方法、AIが影響する決定を文書化する方法。学校は監査目的でこの研修を文書化する必要があります。' } },
       { '@type': 'Question', name: 'Khanmigoとは何か、学生向けChatGPTとどう異なるか', acceptedAnswer: { '@type': 'Answer', text: 'KhanmigoはKhan AcademyのAIチューターアシスタントでGPT-4を搭載しています。その決定的な特徴はソクラテス的質問です。答えを直接与えるのではなく、学生を答えに導きます。学生が「答えは何ですか？」と聞くと、Khanmigoは導く質問で応答します。この設計は学習保持を促進します。ChatGPTはデフォルトで直接的な答えを提供し、効率的ですが長期学習を生成する認知努力を減らします。学生向けチューターではKhanmigoの教育設計が優れています。' } },
       { '@type': 'Question', name: '学校のためのAI使用ポリシーを作成するには', acceptedAnswer: { '@type': 'Answer', text: '効果的なAI使用ポリシーは4つを定義します：（1）AIが許可されるタスク（ブレーンストーミング、練習問題、フィードバック草案）、（2）開示が必要なタスク（AI支援エッセイ、プレゼン）、（3）AIが禁止されるタスク（最終試験答、盗用）、（4）AI生成コンテンツの引用方法。ツール開発速度のため、ポリシーは6ヶ月ごとに見直す必要があります。EU圏の学校は、各ポリシー文書に第4条スキル要件とAnnex III高リスク義務も含める必要があります。' } },
@@ -2894,8 +2894,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Khanmigo', description: 'ソクラテス的質問による生徒チューター。K-12、Khan Academy エコシステム。年$44。' },
       { '@type': 'ListItem', position: 2, name: 'MagicSchool', description: '教育計画と教室管理。K-12教師向け。限定無料版。' },
-      { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.5', description: '柔軟なコンテンツ作成と草案。すべてのレベル、すべての対象。限定無料版。' },
-      { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 4.6', description: '長形式カリキュラム設計、200,000トークンコンテキスト。高等教育と複雑タスク。限定無料版。' },
+      { '@type': 'ListItem', position: 3, name: 'ChatGPT / GPT-5.6', description: '柔軟なコンテンツ作成と草案。すべてのレベル、すべての対象。限定無料版。' },
+      { '@type': 'ListItem', position: 4, name: 'Claude Sonnet 5', description: '長形式カリキュラム設計、200,000トークンコンテキスト。高等教育と複雑タスク。限定無料版。' },
       { '@type': 'ListItem', position: 5, name: 'NotebookLM', description: 'アップロード教室資料へのソースベースQ&A。大学と研究。無料。' },
       { '@type': 'ListItem', position: 6, name: 'Gemini 3.1 Pro', description: '大型文書分析、100万トークンコンテキスト。学区管理。限定無料版。' },
     ],
@@ -2911,7 +2911,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'AI検出ツールは15～30%の偽陽性率 - 学業不正に対する唯一のツールとして不十分',
         'EU AI法は教育AIを高リスクと分類；EU圏の学校はすべての教師にAIスキル研修を実施する必要があります（2025年から有効の第4条）',
         'AI使用する生徒は21の経験的研究全体で評価で15～35%高い成果を達成；AI使用と成果間のr = 0.781相関',
-        'Claude Sonnet 4.6（Anthropic）、GPT-5.5（OpenAI）、Gemini 3.1 Pro（Google DeepMind）はすべて1セッションで100万トークン（約800ページ）処理できます—2026年5月時点でコンテキストウィンドウはもはやフロンティアモデル間の主要な差別化要因ではありません',
+        'Claude Sonnet 5（Anthropic）、GPT-5.6（OpenAI）、Gemini 3.1 Pro（Google DeepMind）はすべて1セッションで100万トークン（約800ページ）処理できます—2026年5月時点でコンテキストウィンドウはもはやフロンティアモデル間の主要な差別化要因ではありません',
       ],
     },
     quickFacts: {
@@ -2929,7 +2929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '教育用AIツールが実際に行うこと',
       content: [
         '**2026年4月時点で、教育用AIツールは4つの異なる機能を実行します：パーソナライズチューター、カリキュラム生成、自動評価フィードバック、管理作業削減 - 各機能は異なるツールと異なるプロンプト構造を必要とします。**',
-        'インテリジェント先生システム（ITS）—Khanmigoのようなツール技術カテゴリー—は難易度を調整し、即座フィードバックを提供し、直接答えを与えるのではなくソクラテス的質問で生徒を導きます。汎用LLM（大言語モデル）、GPT-5.5（OpenAI）とClaude Sonnet 4.6（Anthropic）はカリキュラム生成、ルーブリック作成、差別化教材を処理します。管理AIツールは出席サマリ、親通信草案、進捗レポート—教師が最も時間消費と報告するタスク—を処理します。',
+        'インテリジェント先生システム（ITS）—Khanmigoのようなツール技術カテゴリー—は難易度を調整し、即座フィードバックを提供し、直接答えを与えるのではなくソクラテス的質問で生徒を導きます。汎用LLM（大言語モデル）、GPT-5.6（OpenAI）とClaude Sonnet 5（Anthropic）はカリキュラム生成、ルーブリック作成、差別化教材を処理します。管理AIツールは出席サマリ、親通信草案、進捗レポート—教師が最も時間消費と報告するタスク—を処理します。',
         '一文で：[教育におけるAI](/ja/prompt-engineering/what-is-prompt-engineering)は1つのツールではなく—各レイヤーが教育ワークフロー内で特定の役割を遂行するスタック。',
       ],
       snippets: [
@@ -2940,7 +2940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '2026年に教師が使うべきAIツール',
       content: [
         '**Khanmigo（Khan Academy）、MagicSchool、ChatGPT（OpenAI）は各異なる教室機能を遂行します—タスク向けの間違ったツール選択は時間と機会を浪費します。**',
-        'Khanmigo はKhan AcademyのAI先生アシスタント、GPT-4搭載。ソクラテス的質問を使って生徒を答えに導きます、直接答えを与えるのではなく—学習保持向けの重要な設計差。Khan Academy課に直接統合されるため、すでにこのプラットフォームを使う学校に最強のオプション。MagicSchool は最も完全な教師ツールセット—カリキュラム計画、クラス管理テンプレート、IEP作成支援、親通信ツール。ChatGPT（GPT-5.5）は最も柔軟な汎用サポートと最高の自律性を提供しますが、教室対応の結果を生むために教師の構造化プロンプトが必要。',
+        'Khanmigo はKhan AcademyのAI先生アシスタント、GPT-4搭載。ソクラテス的質問を使って生徒を答えに導きます、直接答えを与えるのではなく—学習保持向けの重要な設計差。Khan Academy課に直接統合されるため、すでにこのプラットフォームを使う学校に最強のオプション。MagicSchool は最も完全な教師ツールセット—カリキュラム計画、クラス管理テンプレート、IEP作成支援、親通信ツール。ChatGPT（GPT-5.6）は最も柔軟な汎用サポートと最高の自律性を提供しますが、教室対応の結果を生むために教師の構造化プロンプトが必要。',
       ],
       callouts: [
         { type: '💡', label: 'プロティップ', text: '1つのツールがすべてを行いません。ほとんどの教師は2～3ツールを一緒に使用します：生徒チューター向けKhanmigo、計画向けMagicSchool、迅速なコンテンツ作成向けChatGPT。' },
@@ -2949,8 +2949,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       rows: [
         { 'ツール': 'Khanmigo（Khan Academy）', '最適な用途': '生徒チューター；ソクラテス的学習', 'コンテキスト': 'K-12、Khan Academy エコシステム', '無料版': '年$44' },
         { 'ツール': 'MagicSchool', '最適な用途': '教育計画；教室管理', 'コンテキスト': 'K-12教師向け', '無料版': 'はい（限定）' },
-        { 'ツール': 'ChatGPT / GPT-5.5（OpenAI）', '最適な用途': '柔軟なコンテンツ作成；草案', 'コンテキスト': 'すべてのレベル、すべての対象', '無料版': 'はい（限定）' },
-        { 'ツール': 'Claude Sonnet 4.6（Anthropic）', '最適な用途': '長形式カリキュラム設計；文書分析', 'コンテキスト': '高等教育；複雑タスク', '無料版': 'はい（限定）' },
+        { 'ツール': 'ChatGPT / GPT-5.6（OpenAI）', '最適な用途': '柔軟なコンテンツ作成；草案', 'コンテキスト': 'すべてのレベル、すべての対象', '無料版': 'はい（限定）' },
+        { 'ツール': 'Claude Sonnet 5（Anthropic）', '最適な用途': '長形式カリキュラム設計；文書分析', 'コンテキスト': '高等教育；複雑タスク', '無料版': 'はい（限定）' },
         { 'ツール': 'NotebookLM（Google DeepMind）', '最適な用途': 'アップロード教室資料へのソースベースQ&A', 'コンテキスト': '大学；研究コンテキスト', '無料版': '無料 / Plus' },
         { 'ツール': 'Gemini 3.1 Pro（Google DeepMind）', '最適な用途': '大型文書分析；ポリシー査閲', 'コンテキスト': '学区管理者向け', '無料版': 'はい（限定）' },
       ],
@@ -2962,11 +2962,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       columns: ['ユースケース', '推奨ツール', '温度', '時間節約'],
       rows: [
-        { 'ユースケース': 'カリキュラム計画作成', '推奨ツール': 'MagicSchool / GPT-5.5', '温度': '0.1–0.2', '時間節約': '教科30~60分' },
-        { 'ユースケース': '差別化読解レベル', '推奨ツール': 'Claude Sonnet 4.6', '温度': '0.1–0.2', '時間節約': 'パッセージ当たり15分' },
+        { 'ユースケース': 'カリキュラム計画作成', '推奨ツール': 'MagicSchool / GPT-5.6', '温度': '0.1–0.2', '時間節約': '教科30~60分' },
+        { 'ユースケース': '差別化読解レベル', '推奨ツール': 'Claude Sonnet 5', '温度': '0.1–0.2', '時間節約': 'パッセージ当たり15分' },
         { 'ユースケース': '生徒チューター（ソクラテス的）', '推奨ツール': 'Khanmigo', '温度': 'n/a（プリセット）', '時間節約': '非同期' },
-        { 'ユースケース': 'ルーブリック整列フィードバック', '推奨ツール': 'Claude Sonnet 4.6（200,000トークンコンテキスト）', '温度': '0.2', '時間節約': 'シリーズ当たり時間' },
-        { 'ユースケース': '親通信草案', '推奨ツール': 'ChatGPT / GPT-5.5', '温度': '0.3–0.5', '時間節約': 'メッセージ当たり5~10分' },
+        { 'ユースケース': 'ルーブリック整列フィードバック', '推奨ツール': 'Claude Sonnet 5（200,000トークンコンテキスト）', '温度': '0.2', '時間節約': 'シリーズ当たり時間' },
+        { 'ユースケース': '親通信草案', '推奨ツール': 'ChatGPT / GPT-5.6', '温度': '0.3–0.5', '時間節約': 'メッセージ当たり5~10分' },
         { 'ユースケース': 'テキスト/ポリシー査閲', '推奨ツール': 'Gemini 3.1 Pro（100万トークンコンテキスト）', '温度': '0.1', '時間節約': 'ドキュメント当たり時間' },
       ],
     },
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '評価フィードバック向けAIプロンプトの書き方',
       content: [
         '**形成評価向け：ルーブリック基準をプロンプトに直接含めます、AIがあなたの採点基準を理解し、すべての生徒作業に一貫して適用できるように。**',
-        'Claude Sonnet 4.6の[コンテキストウィンドウ](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)（200,000トークン）は短いエッセイの完全シリーズを1セッションで処理します—約160標準ページ—大クラスを持つ教師向けにバッチフィードバック生成を実践的にしています。GPT-5.5は1セッション約100ページ処理し、典型的なクラスサイズに十分。',
+        'Claude Sonnet 5の[コンテキストウィンドウ](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)（200,000トークン）は短いエッセイの完全シリーズを1セッションで処理します—約160標準ページ—大クラスを持つ教師向けにバッチフィードバック生成を実践的にしています。GPT-5.6は1セッション約100ページ処理し、典型的なクラスサイズに十分。',
       ],
       blockquote: 'あなたは経験豊かな7年生英語教師です。このルーブリック使用しこの学生説得エッセイを分析：明確なテーゼ（4ポイント）、証拠3つの議論（12ポイント）、反論認識（4ポイント）、形式的移行（3ポイント）、テーゼを補強する結論（3ポイント）。各基準向けに：スコアを与え、関連文を引用、特定改善提案を書いてください。26ポイント満点。',
       callouts: [
@@ -3133,12 +3133,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       items: [],
       faqs: [
         { q: 'AIチューターは本当に学習成果を向上させるのか', a: 'はい、エビデンスは強固です。2024年ハーバード大学ランダム化比較試験では、物理学の学生194名にAIチューターが従来のアクティブラーニング教室より0.73～1.3の効果量を示し、60分ではなく49分で高い成果を達成しました（p < 10−8）。2025年の21研究の体系的レビューでは、AI支援の学生が従来の指導を15～35%上回ることが示されています。' },
-        { q: '2026年の教師にとって最高のAIツール', a: '答えはタスクに依存します。Khanmigo（Khan Academy、GPT-4を搭載）は年44ドルでソクラテス的質問による生徒チューターに最適です。MagicSchool は完全な教育ワークフロー（カリキュラム、IEP、親通信）が充実しています。ChatGPT（GPT-5.5、OpenAI）は最も柔軟な汎用コンテンツ作成を提供します。複雑な教育分析にはClaude Sonnet 4.6（Anthropic）が200,000トークン処理します（約160ページ）。' },
+        { q: '2026年の教師にとって最高のAIツール', a: '答えはタスクに依存します。Khanmigo（Khan Academy、GPT-4を搭載）は年44ドルでソクラテス的質問による生徒チューターに最適です。MagicSchool は完全な教育ワークフロー（カリキュラム、IEP、親通信）が充実しています。ChatGPT（GPT-5.6、OpenAI）は最も柔軟な汎用コンテンツ作成を提供します。複雑な教育分析にはClaude Sonnet 5（Anthropic）が200,000トークン処理します（約160ページ）。' },
         { q: '毎週AIで教師が時間を節約できるか', a: '具体的で文脈的なプロンプトは、一貫して使用すると週5～13時間節約します。最も一般的な時間節約用途：リサーチと内容収集（教師の44%）、カリキュラム計画作成（38%）、情報要約（38%）、教室資料作成（37%）。' },
         { q: '教育でのAIはEU法で法的に許可されているか', a: '学習評価または学習パスに影響するAIシステムはEU AI法（別紙III）で高リスクと分類されます。EU圏の学校は全教師にAIスキル研修を提供する必要があります（2025年から適用の第4条）、AIが影響する評価に対して人間の監督を維持し、すべてのAIシステムに監査ログを保持する必要があります。教育機関での感情認識AIは完全に禁止されています。' },
         { q: 'AI検出ソフトウェアは学業不正を確実に検出するか', a: 'いいえ。現在のAI検出ツールは査読済み研究で15～30%の偽陽性率を持つため、最大30/100の合法的な生徒提出物が誤ってフラグを立てられる可能性があります。非ネイティブスピーカーと構造化された学術的文体で書く学生は不釣り合いに高くフラグが立てられます。2026年の大学は禁止ポリシーから開示・引用フレームワークへ移行し、AI検出を複数の指標の1つとして扱っています。' },
         { q: '教師は教育計画AIにどの温度設定を使うべきか', a: 'ファクト教育内容には温度0.1～0.2に設定します（カリキュラム、評価ガイドライン、アラインメント）。これは一貫性と低変動を生成します。創意的な活動アイデア作成では0.7～0.9を使用します。ほとんどのプラットフォームのデフォルト温度（0.7～1.0）は創意的タスク向けで、教育内容のファクトエラーを増加させます。' },
-        { q: 'AIは差別化教育を支援できるか', a: 'はい。これは教育AIの最強のユースケースです。LLMは同じコンテンツを複数の読解レベル（Flesch-Kincaid クラス4、8、12）に数秒で言い換えることができます。プロンプト構造：「このパッセージをクラス[N]レベルで言い直してください。すべてのファクト内容を保持してください。複雑な語彙をシンプルな同義語に置き換えてください。段落構造を保持してください。」Claude Sonnet 4.6が読解レベル間で最も一貫した差別化を生成します。' },
+        { q: 'AIは差別化教育を支援できるか', a: 'はい。これは教育AIの最強のユースケースです。LLMは同じコンテンツを複数の読解レベル（Flesch-Kincaid クラス4、8、12）に数秒で言い換えることができます。プロンプト構造：「このパッセージをクラス[N]レベルで言い直してください。すべてのファクト内容を保持してください。複雑な語彙をシンプルな同義語に置き換えてください。段落構造を保持してください。」Claude Sonnet 5が読解レベル間で最も一貫した差別化を生成します。' },
         { q: 'EU AI法によると学校は教師のAIスキルをどう管理すべきか', a: 'EU AI法第4条は、AIシステムで働くすべての職員に十分なAIスキルを確保するようAI提供者（学校を含む）に要求しています（2025年から適用）。これは以下の研修を意味します：AIがどう決定を下すか、特定のツールのエラー率、人間の監督が必要なときと方法、AIが影響する決定を文書化する方法。学校は監査目的でこの研修を文書化する必要があります。' },
         { q: 'Khanmigoとは何か、学生向けChatGPTとどう異なるか', a: 'KhanmigoはKhan AcademyのAIチューターアシスタントでGPT-4を搭載しています。その決定的な特徴はソクラテス的質問です。答えを直接与えるのではなく、学生を答えに導きます。学生が「答えは何ですか？」と聞くと、Khanmigoは導く質問で応答します。この設計は学習保持を促進します。ChatGPTはデフォルトで直接的な答えを提供し、効率的ですが長期学習を生成する認知努力を減らします。学生向けチューターではKhanmigoの教育設計が優れています。' },
         { q: '学校のためのAI使用ポリシーを作成するには', a: '効果的なAI使用ポリシーは4つを定義します：（1）AIが許可されるタスク（ブレーンストーミング、練習問題、フィードバック草案）、（2）開示が必要なタスク（AI支援エッセイ、プレゼン）、（3）AIが禁止されるタスク（最終試験答、盗用）、（4）AI生成コンテンツの引用方法。ツール開発速度のため、ポリシーは6ヶ月ごとに見直す必要があります。EU圏の学校は、各ポリシー文書に第4条スキル要件とAnnex III高リスク義務も含める必要があります。' },
@@ -3147,7 +3147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sources: {
       title: 'ソースと参考資料',
       content: [
-        '**この記事内のすべての統計と結論は査読済み研究、政府ガイドラインとドキュメント制度ポリシーから取得されます。** 最終ファクトチェック：2026-04-28（現在Claude Sonnet 4.6、GPT-5.5、Gemini 3.1 Proモデル；Khan AcademyでのKhanmigo現在価格；2025年から有効のEU AI法第4条ガイドライン）。',
+        '**この記事内のすべての統計と結論は査読済み研究、政府ガイドラインとドキュメント制度ポリシーから取得されます。** 最終ファクトチェック：2026-04-28（現在Claude Sonnet 5、GPT-5.6、Gemini 3.1 Proモデル；Khan AcademyでのKhanmigo現在価格；2025年から有効のEU AI法第4条ガイドライン）。',
       ],
       items: [
         '[Kestin & Miller, 2024. 「AIチュータリングが対面アクティブラーニングを上回る — ハーバード大RCT」](https://www.nature.com/articles/s41598-025-97652-6) — 194生徒でのランダム化比較試験；効果量0.73～1.3 SD',
@@ -3161,9 +3161,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'annual',
       theme: '应用案例',
       title: '2026年用AI教学：哈佛研究证明学习效果提升2倍——工具、提示词与EU AI法合规指南',
-      intro: '**有效地在2026年用AI教学：采用结构化五步提示词（角色、目标、学生背景、约束条件、输出格式），选择与任务匹配的工具（Khanmigo用于辅导、MagicSchool用于课程规划、Claude Sonnet 4.6或GPT-5.5用于内容生成），将温度设置为0.1–0.2处理事实性内容，对于欧盟学校，在部署任何高风险系统前实施第4条员工AI素养培训。** 2024年哈佛大学随机对照试验发现AI辅导的学习增长是主动学习课堂的两倍以上——用时减少18%。截至2026年5月，85%的美国教师和86%的学生在学年中使用了AI，超过任何其他行业。挑战不在于采用，而在于结构：模糊提示词产生无法使用的输出，结构化提示词每周节省5–13小时，欧盟学校现在对任何涉及学生评估的AI工具承担AI法的法律义务。',
+      intro: '**有效地在2026年用AI教学：采用结构化五步提示词（角色、目标、学生背景、约束条件、输出格式），选择与任务匹配的工具（Khanmigo用于辅导、MagicSchool用于课程规划、Claude Sonnet 5或GPT-5.6用于内容生成），将温度设置为0.1–0.2处理事实性内容，对于欧盟学校，在部署任何高风险系统前实施第4条员工AI素养培训。** 2024年哈佛大学随机对照试验发现AI辅导的学习增长是主动学习课堂的两倍以上——用时减少18%。截至2026年5月，85%的美国教师和86%的学生在学年中使用了AI，超过任何其他行业。挑战不在于采用，而在于结构：模糊提示词产生无法使用的输出，结构化提示词每周节省5–13小时，欧盟学校现在对任何涉及学生评估的AI工具承担AI法的法律义务。',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-07-13',
       readTime: '阅读约8分钟',
       seoTitle: '2026年用AI教学：教育工作者工具、提示词与学习成效指南',
       metaDescription: '哈佛RCT研究：AI辅导使学习效果提升2倍以上，学习时间减少18%。85%的教师使用AI——结构化提示词每周节省5–13小时。EU AI法案合规与AI检测工具误判率解析。',
@@ -3195,7 +3195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '2026年用AI教学：哈佛研究证明学习效果提升2倍——工具、提示词与EU AI法合规指南',
         description: 'AI辅导系统将学习成效提升至传统课堂的两倍。了解教师如何将AI用于课程规划、评估、学生辅导，以及为什么85%的美国教师在2026年采用了AI。',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-07-13',
         proficiencyLevel: 'Beginner',
         author: {
           '@type': 'Organization',
@@ -3236,7 +3236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Khanmigo' },
           { '@type': 'SoftwareApplication', name: 'MagicSchool' },
           { '@type': 'SoftwareApplication', name: 'ChatGPT' },
-          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 4.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Sonnet 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
           { '@type': 'Organization', name: '哈佛大学' },
@@ -3262,7 +3262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '2026年教师最好的AI工具是什么？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '答案取决于任务。Khanmigo（Khan Academy，GPT-4驱动）最适合通过苏格拉底式提问进行学生辅导，每年$44。MagicSchool在全面教师工作流工具中领先（课程计划、IEP、家长沟通）。ChatGPT（GPT-5.5，OpenAI）提供最灵活的通用内容生成。对于复杂课程分析，Claude Sonnet 4.6（Anthropic）在单个会话中处理200,000个令牌——约160个标准页面。',
+              text: '答案取决于任务。Khanmigo（Khan Academy，GPT-4驱动）最适合通过苏格拉底式提问进行学生辅导，每年$44。MagicSchool在全面教师工作流工具中领先（课程计划、IEP、家长沟通）。ChatGPT（GPT-5.6，OpenAI）提供最灵活的通用内容生成。对于复杂课程分析，Claude Sonnet 5（Anthropic）在单个会话中处理200,000个令牌——约160个标准页面。',
             },
           },
           {
@@ -3302,7 +3302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI工具能帮助进行差异化教学吗？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '是的——这是AI最强的教育用例之一。LLM可以在数秒内将相同内容改写为多个阅读水平（Flesch-Kincaid等级4、8和12）。提示词结构：「将此段落改写为[N]年级阅读水平。保留所有事实内容。用更简单的同义词替换复杂词汇。保持相同的段落结构。」Claude Sonnet 4.6在各阅读水平间产生最一致的差异化。',
+              text: '是的——这是AI最强的教育用例之一。LLM可以在数秒内将相同内容改写为多个阅读水平（Flesch-Kincaid等级4、8和12）。提示词结构：「将此段落改写为[N]年级阅读水平。保留所有事实内容。用更简单的同义词替换复杂词汇。保持相同的段落结构。」Claude Sonnet 5在各阅读水平间产生最一致的差异化。',
             },
           },
           {
@@ -3392,13 +3392,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'ListItem',
             position: 3,
-            name: 'ChatGPT（GPT-5.5）',
+            name: 'ChatGPT（GPT-5.6）',
             description: '通用内容生成：课程计划、测验创建、论文反馈、研究摘要。按需或订阅$20/月。',
           },
           {
             '@type': 'ListItem',
             position: 4,
-            name: 'Claude Sonnet 4.6',
+            name: 'Claude Sonnet 5',
             description: '复杂分析、长文档处理（200k令牌）、详细反馈。按需计费；API/Pro订阅可用。',
           },
           {
@@ -3426,7 +3426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'AI检测工具的假阳性率为15-30%——不足以作为学术诚信的唯一工具',
             'EU AI法将教育AI分类为高风险；欧盟学校必须为所有教师实施AI素养培训（第4条，自2025年起生效）',
             'AI支持的学生在21项经验研究中的评估表现超过传统教学15-35%；AI使用与成果间r = 0.781相关',
-            '截至2026年5月，GPT-5.5、Claude Sonnet 4.6（Anthropic）和Gemini 3.1 Pro都支持100万令牌上下文窗口（约800页/会话）——上下文窗口大小不再是前沿模型间的主要差异',
+            '截至2026年5月，GPT-5.6、Claude Sonnet 5（Anthropic）和Gemini 3.1 Pro都支持100万令牌上下文窗口（约800页/会话）——上下文窗口大小不再是前沿模型间的主要差异',
           ],
         },
         quickFacts: {
@@ -3478,14 +3478,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
               '高风险功能': '是；生成评估内容',
             },
             {
-              '工具': 'ChatGPT（GPT-5.5）',
+              '工具': 'ChatGPT（GPT-5.6）',
               '定价': '$20/月或按需',
               '最佳用途': '内容生成、论文反馈、研究摘要',
               '学习曲线': '中——提示词质量决定输出',
               '高风险功能': '是；用于评估反馈',
             },
             {
-              '工具': 'Claude Sonnet 4.6',
+              '工具': 'Claude Sonnet 5',
               '定价': '$20/月 Pro或按需',
               '最佳用途': '长文档分析、复杂反馈、课程改编',
               '学习曲线': '中——处理200k令牌需要结构',
@@ -3648,12 +3648,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [],
           faqs: [
             { q: 'AI辅导是否真的能改善学习成效？', a: '是的——证据是确凿的。2024年哈佛大学随机对照试验涉及194名物理学本科生，发现AI辅导的效果量为0.73–1.3标准差，超过主动学习课堂，学生用49分钟而非60分钟达到更高分数（p < 10−8）。2025年21项研究的系统综述发现AI支持的学生在评估中比传统教学表现高15–35%。' },
-            { q: '2026年教师最好的AI工具是什么？', a: '答案取决于任务。Khanmigo（Khan Academy，GPT-4驱动）最适合通过苏格拉底式提问进行学生辅导，每年$44。MagicSchool在全面教师工作流工具中领先（课程计划、IEP、家长沟通）。ChatGPT（GPT-5.5，OpenAI）提供最灵活的通用内容生成。对于复杂课程分析，Claude Sonnet 4.6（Anthropic）在单个会话中处理200,000个令牌——约160个标准页面。' },
+            { q: '2026年教师最好的AI工具是什么？', a: '答案取决于任务。Khanmigo（Khan Academy，GPT-4驱动）最适合通过苏格拉底式提问进行学生辅导，每年$44。MagicSchool在全面教师工作流工具中领先（课程计划、IEP、家长沟通）。ChatGPT（GPT-5.6，OpenAI）提供最灵活的通用内容生成。对于复杂课程分析，Claude Sonnet 5（Anthropic）在单个会话中处理200,000个令牌——约160个标准页面。' },
             { q: 'AI每周能为教师节省多少时间？', a: '具体、上下文丰富的提示词在一致使用时每周为教师节省5–13小时的课程规划和行政任务。最常见的时间节省应用是：研究和内容收集（44%的教师）、课程计划创建（38%）、信息摘要（38%）和课堂材料生成（37%）。' },
             { q: '教育中的AI在欧盟法律下是否合法？', a: '影响教育评估或学习路径的AI系统在EU AI法（附件III）下被归类为高风险。欧盟学校必须实施员工AI素养培训（第4条，自2025年起生效），为AI影响的评估维持人类监督，并为任何影响学生成果的AI系统保持审计跟踪。教育环境中的情感识别AI被完全禁止。' },
             { q: 'AI检测软件是否能可靠地发现学业不诚实？', a: '否——当前的AI检测工具在同行评审研究中的假阳性率为15–30%，意味着每100份合法的学生提交作业中最多30份可能被错误标记。非英语使用者和采用结构化学术写作风格的学生被标记的比率不成比例地高。2026年的大学正在从禁止政策转向披露和引用框架，将AI检测视为众多指标中的一项，而非确定性证明。' },
             { q: '教师应该为AI课程规划使用什么温度设置？', a: '对于事实性教育内容——课程计划、评估标准、课程对齐——将温度设置为0.1–0.2。这产生一致、低变异输出。仅在生成创意活动想法时使用0.7–0.9，其中多样化选项是目标。大多数平台上的默认温度（0.7–1.0）为创意任务而设计，会增加教育内容的事实性错误。' },
-            { q: 'AI工具能帮助进行差异化教学吗？', a: '是的——这是AI最强的教育用例之一。LLM可以在数秒内将相同内容改写为多个阅读水平（Flesch-Kincaid等级4、8和12）。提示词结构：「将此段落改写为[N]年级阅读水平。保留所有事实内容。用更简单的同义词替换复杂词汇。保持相同的段落结构。」Claude Sonnet 4.6在各阅读水平间产生最一致的差异化。' },
+            { q: 'AI工具能帮助进行差异化教学吗？', a: '是的——这是AI最强的教育用例之一。LLM可以在数秒内将相同内容改写为多个阅读水平（Flesch-Kincaid等级4、8和12）。提示词结构：「将此段落改写为[N]年级阅读水平。保留所有事实内容。用更简单的同义词替换复杂词汇。保持相同的段落结构。」Claude Sonnet 5在各阅读水平间产生最一致的差异化。' },
             { q: '学校应如何根据EU AI法处理员工AI素养？', a: 'EU AI法第4条要求AI部署者（包括学校）确保所有与AI系统协作的员工具有充分的AI素养——自2025年起生效。这意味着培训涵盖：AI如何做出决定、特定工具的错误率、何时需要人类监督、如何记录AI影响的决策。学校应该为审计目的记录此培训。' },
             { q: 'Khanmigo是什么，它与学生用的ChatGPT有何不同？', a: 'Khanmigo是Khan Academy的AI教学助手，由GPT-4驱动。其定义特征是苏格拉底式提问——它引导学生走向答案，而不是直接提供答案。当学生问「答案是什么？」时，Khanmigo用引导问题回应。这种设计促进学习保留。ChatGPT在默认情况下提供直接答案，这很有效率，但减少了产生长期学习的认知努力。对于学生面向辅导，Khanmigo的教学设计更优；对于教师内容生成，ChatGPT的灵活性获胜。' },
             { q: '我如何为学校制定AI使用政策？', a: '有效的学校AI政策定义四个事项：（1）AI允许用于的任务（头脑风暴、练习题、草稿反馈），（2）需要披露的任务（AI辅助论文、演示），（3）AI禁止的任务（期末考试答案、剽窃），（4）AI生成内容如何被归属。考虑到工具开发的步伐，该政策应每6个月审查一次。欧盟学校还必须在任何政策文件中处理EU AI法第4条员工培训要求和附件III高风险系统义务。' },
@@ -3662,7 +3662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: '信息来源',
           content: [
-            '**此文章中的所有统计数据和结论均来自同行评审研究、政府指南和机构政策。** 最终事实检查：2026-04-28（当前模型：Claude Sonnet 4.6、GPT-5.5、Gemini 3.1 Pro；Khan Academy上Khanmigo的当前价格；EU AI法第4条指南自2025年起生效）。',
+            '**此文章中的所有统计数据和结论均来自同行评审研究、政府指南和机构政策。** 最终事实检查：2026-04-28（当前模型：Claude Sonnet 5、GPT-5.6、Gemini 3.1 Pro；Khan Academy上Khanmigo的当前价格；EU AI法第4条指南自2025年起生效）。',
           ],
           items: [
             '[Kestin & Miller, 2024. 《AI辅导优于课堂主动学习 — 哈佛随机对照试验》](https://www.nature.com/articles/s41598-025-97652-6) — 194名学生的随机对照试验；效果量0.73–1.3 SD',
@@ -3676,9 +3676,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'annual',
       theme: 'Use Cases',
       title: '2026년 AI를 활용한 교육: 하버드 연구, 학습 효과 2배 — 도구, 프롬프트 및 EU AI Act 가이드',
-      intro: '**2026년 AI를 효과적으로 활용하여 가르치려면: 구조화된 5가지 구성 요소 프롬프트(역할, 목표, 학생 맥락, 제약 조건, 출력 형식)를 사용하고, 과제에 맞는 도구를 선택하며(튜터링에는 Khanmigo, 수업 계획에는 MagicSchool, 콘텐츠 생성에는 Claude Sonnet 4.6 또는 GPT-5.5), 사실적 콘텐츠에는 temperature를 0.1–0.2로 설정하고, EU 학교의 경우 고위험 시스템을 배포하기 전에 Article 4 직원 AI 리터러시 교육을 실시해야 합니다.** 2024년 하버드 무작위 대조 시험에 따르면 AI 튜터링은 능동적 학습 교실보다 두 배 이상의 학습 효과를 산출했으며, 18% 적은 학습 시간이 소요되었습니다. 2026년 5월 기준으로 미국 교사의 85%와 학생의 86%가 학년도 중에 AI를 사용했으며, 이는 다른 어떤 산업보다 높은 수치입니다. 과제는 도입이 아니라 구조화입니다. 모호한 프롬프트는 사용할 수 없는 결과물을 생산하고, 구조화된 프롬프트는 주당 5–13시간을 절약하며, EU 학교는 이제 학생 평가에 관여하는 모든 AI 도구에 대해 AI Act에 따른 법적 의무를 지닙니다.',
+      intro: '**2026년 AI를 효과적으로 활용하여 가르치려면: 구조화된 5가지 구성 요소 프롬프트(역할, 목표, 학생 맥락, 제약 조건, 출력 형식)를 사용하고, 과제에 맞는 도구를 선택하며(튜터링에는 Khanmigo, 수업 계획에는 MagicSchool, 콘텐츠 생성에는 Claude Sonnet 5 또는 GPT-5.6), 사실적 콘텐츠에는 temperature를 0.1–0.2로 설정하고, EU 학교의 경우 고위험 시스템을 배포하기 전에 Article 4 직원 AI 리터러시 교육을 실시해야 합니다.** 2024년 하버드 무작위 대조 시험에 따르면 AI 튜터링은 능동적 학습 교실보다 두 배 이상의 학습 효과를 산출했으며, 18% 적은 학습 시간이 소요되었습니다. 2026년 5월 기준으로 미국 교사의 85%와 학생의 86%가 학년도 중에 AI를 사용했으며, 이는 다른 어떤 산업보다 높은 수치입니다. 과제는 도입이 아니라 구조화입니다. 모호한 프롬프트는 사용할 수 없는 결과물을 생산하고, 구조화된 프롬프트는 주당 5–13시간을 절약하며, EU 학교는 이제 학생 평가에 관여하는 모든 AI 도구에 대해 AI Act에 따른 법적 의무를 지닙니다.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-07-13',
       readTime: '8분 읽기',
       seoTitle: '2026년 AI를 활용한 교육: 학습 효과 2배 가이드',
       metaDescription: '하버드 연구: AI 튜터링은 학습 효과를 두 배로, 18% 시간 단축. 도구: Khanmigo, MagicSchool, Claude. 구조화된 프롬프트로 주당 5–13시간 절약. EU AI Act 지침 포함.',
@@ -3717,7 +3717,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'AI 탐지 도구는 15–30%의 위양성률을 보이므로 단독 학업 청렴도 집행 도구로는 불충분합니다',
             'EU AI Act는 교육 AI를 고위험으로 분류하며, EU 학교는 모든 직원에게 AI 리터러시 교육을 실시해야 합니다(Article 4, 2025년부터 시행)',
             '21개의 경험적 연구에서 AI 도구를 사용한 학생들이 15–35% 더 높은 평가 점수를 달성했으며, AI 도구 사용과 학습 성과 간의 상관관계는 r = 0.781입니다',
-            '2026년 5월 기준으로 GPT-5.5, Claude Sonnet 4.6(Anthropic), Gemini 3.1 Pro 모두 1M 토큰 컨텍스트 창(세션당 약 800페이지)을 지원하며, 컨텍스트 창 크기는 더 이상 최신 모델 간의 주요 차별화 요소가 아닙니다',
+            '2026년 5월 기준으로 GPT-5.6, Claude Sonnet 5(Anthropic), Gemini 3.1 Pro 모두 1M 토큰 컨텍스트 창(세션당 약 800페이지)을 지원하며, 컨텍스트 창 크기는 더 이상 최신 모델 간의 주요 차별화 요소가 아닙니다',
           ],
         },
         quickFacts: {
@@ -3735,7 +3735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'AI 교육 도구가 실제로 하는 일',
           content: [
             '**2026년 5월 기준으로 AI 교육 도구는 네 가지 고유한 기능을 수행합니다: 개인화된 튜터링, 수업 계획 생성, 자동화된 평가 피드백, 행정 업무 감소 — 각각 서로 다른 도구와 프롬프트 구조가 필요합니다.**',
-            'ITS(지능형 튜터링 시스템) — Khanmigo와 같은 도구의 기술적 범주 — 는 난이도를 조정하고, 즉각적인 피드백을 제공하며, 직접 답변을 제공하는 대신 소크라테스식 질문을 통해 학생들을 안내합니다. GPT-5.5(OpenAI) 및 Claude Sonnet 4.6(Anthropic)과 같은 범용 LLM(대형 언어 모델)은 수업 계획 생성, 루브릭 작성, 차별화된 교육 자료를 처리합니다. 행정 AI 도구는 출석 요약, 학부모 통신 초안, 진도 보고서를 처리합니다 — 교사들이 가장 시간이 많이 걸린다고 보고하는 작업들입니다.',
+            'ITS(지능형 튜터링 시스템) — Khanmigo와 같은 도구의 기술적 범주 — 는 난이도를 조정하고, 즉각적인 피드백을 제공하며, 직접 답변을 제공하는 대신 소크라테스식 질문을 통해 학생들을 안내합니다. GPT-5.6(OpenAI) 및 Claude Sonnet 5(Anthropic)과 같은 범용 LLM(대형 언어 모델)은 수업 계획 생성, 루브릭 작성, 차별화된 교육 자료를 처리합니다. 행정 AI 도구는 출석 요약, 학부모 통신 초안, 진도 보고서를 처리합니다 — 교사들이 가장 시간이 많이 걸린다고 보고하는 작업들입니다.',
             '한 문장으로: 교육을 위한 프롬프트 엔지니어링은 하나의 도구가 아닙니다 — 각 계층이 교육 워크플로우에서 특정 역할을 하는 스택입니다.',
           ],
           snippets: [
@@ -3747,7 +3747,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Khanmigo(Khan Academy), MagicSchool, ChatGPT(OpenAI)는 각각 서로 다른 교실 기능을 제공합니다 — 과제에 맞지 않는 도구를 선택하면 시간과 기회를 낭비합니다.**',
             'Khanmigo는 GPT-4로 구동되는 Khan Academy의 AI 교육 보조 도구입니다. 직접 답변을 제공하는 대신 소크라테스식 질문을 통해 학생들을 답으로 안내합니다 — 학습 유지에 중요한 설계 차별성입니다. Khan Academy 강좌에 직접 통합되어 이미 해당 플랫폼을 사용하는 학교에 가장 강력한 옵션입니다.',
-            'MagicSchool은 가장 광범위한 교육자 도구 세트를 제공합니다 — 수업 계획, 교실 관리 템플릿, IEP 초안 지원, 학부모 소통 도구. ChatGPT(GPT-5.5)는 가장 유연한 범용 지원을 제공하며 가장 높은 자율성을 갖추고 있지만, 교실에서 바로 사용할 수 있는 결과물을 생성하려면 교사의 구조화된 프롬프트가 필요합니다.',
+            'MagicSchool은 가장 광범위한 교육자 도구 세트를 제공합니다 — 수업 계획, 교실 관리 템플릿, IEP 초안 지원, 학부모 소통 도구. ChatGPT(GPT-5.6)는 가장 유연한 범용 지원을 제공하며 가장 높은 자율성을 갖추고 있지만, 교실에서 바로 사용할 수 있는 결과물을 생성하려면 교사의 구조화된 프롬프트가 필요합니다.',
           ],
           callouts: [
             { type: '💡', label: '프로 팁', text: '어떤 단일 도구도 모든 것을 할 수 없습니다. 대부분의 교사는 2–3가지 도구를 조합하여 사용합니다: 학생 튜터링에는 Khanmigo, 계획에는 MagicSchool, 빠른 콘텐츠 생성에는 ChatGPT.' },
@@ -3767,13 +3767,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
               '무료 티어': '예 (제한됨)',
             },
             {
-              '도구': 'ChatGPT / GPT-5.5 (OpenAI)',
+              '도구': 'ChatGPT / GPT-5.6 (OpenAI)',
               '최적 용도': '유연한 콘텐츠 생성; 초안 작성',
               '맥락': '모든 수준, 모든 과목',
               '무료 티어': '예 (제한됨)',
             },
             {
-              '도구': 'Claude Sonnet 4.6 (Anthropic)',
+              '도구': 'Claude Sonnet 5 (Anthropic)',
               '최적 용도': '심층 분석, 신중한 추론, 작문 품질',
               '맥락': '고등 교육 이상; 복잡한 과제',
               '무료 티어': '예 (제한됨)',
@@ -3801,13 +3801,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               '사용 사례': '수업 계획 작성',
-              '권장 도구': 'MagicSchool / GPT-5.5',
+              '권장 도구': 'MagicSchool / GPT-5.6',
               'Temperature': '0.1–0.2',
               '절약된 시간': '수업당 30–60분',
             },
             {
               '사용 사례': '차별화된 읽기 수준',
-              '권장 도구': 'Claude Sonnet 4.6',
+              '권장 도구': 'Claude Sonnet 5',
               'Temperature': '0.1–0.2',
               '절약된 시간': '지문당 15분',
             },
@@ -3819,13 +3819,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               '사용 사례': '루브릭 기반 피드백',
-              '권장 도구': 'Claude Sonnet 4.6 (1M 컨텍스트)',
+              '권장 도구': 'Claude Sonnet 5 (1M 컨텍스트)',
               'Temperature': '0.2',
               '절약된 시간': '학급 세트당 수 시간',
             },
             {
               '사용 사례': '학부모 소통 초안',
-              '권장 도구': 'ChatGPT / GPT-5.5',
+              '권장 도구': 'ChatGPT / GPT-5.6',
               'Temperature': '0.3–0.5',
               '절약된 시간': '메시지당 5–10분',
             },
@@ -3881,7 +3881,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '평가 피드백을 위한 AI 프롬프트 작성 방법',
           content: [
             '**형성 평가를 위해서는 루브릭 기준을 프롬프트에 직접 포함하여 AI가 귀하의 채점 기준을 이해하고 모든 학생 제출물에 일관되게 적용하도록 하십시오.**',
-            'Claude Sonnet 4.6의 1M 토큰 [컨텍스트 창](/prompt-engineering/context-windows-explained-why-ai-forgets)은 단일 세션에서 전체 학급의 에세이를 처리합니다 — 약 800 표준 페이지 — 대형 학급 교사에게 일괄 피드백 생성을 실용적으로 만듭니다. GPT-5.5는 세션당 약 800페이지(1M 토큰)를 처리하며, 어떤 교실 작업량에도 충분합니다.',
+            'Claude Sonnet 5의 1M 토큰 [컨텍스트 창](/prompt-engineering/context-windows-explained-why-ai-forgets)은 단일 세션에서 전체 학급의 에세이를 처리합니다 — 약 800 표준 페이지 — 대형 학급 교사에게 일괄 피드백 생성을 실용적으로 만듭니다. GPT-5.6는 세션당 약 800페이지(1M 토큰)를 처리하며, 어떤 교실 작업량에도 충분합니다.',
           ],
           blockquote: '당신은 경험 많은 7학년 영어 교사입니다. 이 루브릭을 사용하여 이 학생의 논증 에세이를 분석하세요: 명확한 논제(4점), 증거가 있는 세 가지 지지 논거(12점), 반론 인정(4점), 형식적 전환(3점), 논제를 강화하는 결론(3점). 각 기준에 대해: 점수를 명시하고, 관련 문장을 인용하며, 하나의 구체적인 개선 제안을 작성하세요. 26점 만점 총점.',
           callouts: [
@@ -4003,7 +4003,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '2026년 교사를 위한 최고의 AI 도구는 무엇인가?',
-              a: '답은 과제에 따라 다릅니다. Khanmigo(Khan Academy, GPT-4로 구동)는 연 $44에 소크라테스식 질문을 통한 학생 튜터링에 가장 강력합니다. MagicSchool은 포괄적인 교사 워크플로우 도구(수업 계획, IEP, 학부모 소통)에서 앞섭니다. ChatGPT(GPT-5.5, OpenAI)는 가장 유연한 범용 콘텐츠 생성을 제공합니다. 복잡한 교육과정 분석을 위해 Claude Sonnet 4.6(Anthropic)은 단일 세션에서 1M 토큰 — 약 800 표준 페이지 — 을 처리합니다.',
+              a: '답은 과제에 따라 다릅니다. Khanmigo(Khan Academy, GPT-4로 구동)는 연 $44에 소크라테스식 질문을 통한 학생 튜터링에 가장 강력합니다. MagicSchool은 포괄적인 교사 워크플로우 도구(수업 계획, IEP, 학부모 소통)에서 앞섭니다. ChatGPT(GPT-5.6, OpenAI)는 가장 유연한 범용 콘텐츠 생성을 제공합니다. 복잡한 교육과정 분석을 위해 Claude Sonnet 5(Anthropic)은 단일 세션에서 1M 토큰 — 약 800 표준 페이지 — 을 처리합니다.',
             },
             {
               q: 'AI는 교사의 주당 얼마나 많은 시간을 절약할 수 있는가?',
@@ -4023,7 +4023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI 도구가 차별화 교수법에 도움이 될 수 있는가?',
-              a: '네 — 이것은 AI의 가장 강력한 교육적 사용 사례 중 하나입니다. LLM은 동일한 콘텐츠를 여러 읽기 수준(Flesch-Kincaid Grade 4, 8, 12)으로 순식간에 다시 작성할 수 있습니다. 프롬프트 구조: "이 지문을 [N]학년 읽기 수준으로 다시 작성하세요. 모든 사실적 내용을 유지하세요. 복잡한 어휘를 더 간단한 것으로 교체하세요. 동일한 단락 구조를 유지하세요." Claude Sonnet 4.6은 읽기 수준 전반에 걸쳐 가장 일관된 차별화를 제공합니다.',
+              a: '네 — 이것은 AI의 가장 강력한 교육적 사용 사례 중 하나입니다. LLM은 동일한 콘텐츠를 여러 읽기 수준(Flesch-Kincaid Grade 4, 8, 12)으로 순식간에 다시 작성할 수 있습니다. 프롬프트 구조: "이 지문을 [N]학년 읽기 수준으로 다시 작성하세요. 모든 사실적 내용을 유지하세요. 복잡한 어휘를 더 간단한 것으로 교체하세요. 동일한 단락 구조를 유지하세요." Claude Sonnet 5은 읽기 수준 전반에 걸쳐 가장 일관된 차별화를 제공합니다.',
             },
             {
               q: 'EU AI Act에 따라 학교는 직원 AI 리터러시를 어떻게 처리해야 하는가?',
@@ -4042,7 +4042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: '출처 및 추가 자료',
           content: [
-            '**이 기사의 모든 통계와 결과물은 동료 검토 연구, 공식 정부 지침, 공개적으로 문서화된 기관 정책에서 출처를 가져왔습니다.** 마지막 사실 확인: 2026-05-04(현재 Claude Sonnet 4.6, GPT-5.5, Gemini 3.1 Pro 모델 기준; Khan Academy의 현재 Khanmigo 가격 기준; 2025년부터 시행되는 현재 EU AI Act Article 4 지침 기준).',
+            '**이 기사의 모든 통계와 결과물은 동료 검토 연구, 공식 정부 지침, 공개적으로 문서화된 기관 정책에서 출처를 가져왔습니다.** 마지막 사실 확인: 2026-05-04(현재 Claude Sonnet 5, GPT-5.6, Gemini 3.1 Pro 모델 기준; Khan Academy의 현재 Khanmigo 가격 기준; 2025년부터 시행되는 현재 EU AI Act Article 4 지침 기준).',
           ],
           items: [
             '[Kestin & Miller, 2024. "AI tutoring outperforms in-class active learning: an RCT"](https://www.nature.com/articles/s41598-025-97652-6) — 194명 학생을 대상으로 한 무작위 대조 시험; 효과 크기 0.73–1.3 SD',

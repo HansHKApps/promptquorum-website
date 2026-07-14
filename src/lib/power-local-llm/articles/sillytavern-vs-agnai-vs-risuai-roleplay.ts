@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three speak Tavern v2 character cards; cards from one work in the others.',
           'All three connect to Ollama, llama.cpp, LM Studio, vLLM, and any OpenAI-compatible endpoint.',
           'All three are open-source and run fully local; no telemetry by default in any of them.',
-          'Model recommendations: Llama 3.3 70B (best all-round), Hermes 3 (uncensored), Command R+ (dialogue), Qwen3 32B (24 GB-rig default).',
+          'Model recommendations: Llama 3.3 70B (best all-round), Hermes 3 (uncensored), Command A+ (dialogue), Qwen3 32B (24 GB-rig default).',
         ],
         updatedDate: '2026-05-07',
       },
@@ -254,11 +254,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Frontend choice does not constrain model choice.** All three speak the same backends — Ollama is the most common — and the model picks below apply equally to SillyTavern, Agnai, and RisuAI.',
         image: '/images/sillytavern-vs-agnai-vs-risuai-models-en.svg',
-        imageCaption: 'Recommended models (all 3 frontends): Llama 3.3 70B is the standard (best all-round, 42 GB VRAM, voice consistency). Qwen3 32B is the popular pick for 24 GB rigs (nearly 70B quality). Command R+ 104B for dialogue specialists (group scenes, 62 GB VRAM). Hermes 3 for uncensored 70B work. Avoid models <13B without creative fine-tunes.',
+        imageCaption: 'Recommended models (all 3 frontends): Llama 3.3 70B is the standard (best all-round, 42 GB VRAM, voice consistency). Qwen3 32B is the popular pick for 24 GB rigs (nearly 70B quality). Command A+ for dialogue specialists (group scenes, high VRAM). Hermes 3 for uncensored 70B work. Avoid models <13B without creative fine-tunes.',
         items: [
           '**Llama 3.3 70B** — the best all-round local pick for character work. Strongest voice consistency across long sessions, takes character direction well, handles dark themes when the system prompt frames the work as fiction. Wants ~42 GB VRAM at Q4_K_M.',
           '**Qwen3 32B** — the right 24 GB-rig pick. Nearly Llama 70B prose quality without the hardware bill. The default for most laptops and consumer desktops.',
-          '**Command R+ 104B** — the dialogue specialist. Most natural conversational voice differentiation across characters in a group scene. Wants ~62 GB VRAM at Q4_K_M.',
+          '**Command A+** — the dialogue specialist. Most natural conversational voice differentiation across characters in a group scene. Wants a large VRAM footprint at Q4_K_M.',
           '**Hermes 3 (Llama 3.3 base)** — the uncensored derivative. Same architecture as Llama 3.3 70B; the RLHF safety layer is removed; the model follows the prompt instead of refusing mature scenes. Two installs (instruct + Hermes) on the same Ollama is the common pattern.',
           '**Mistral Large** — the long-context pick. 128K context out of the box; useful when a roleplay session is long enough to push smaller-context models out of the window.',
           '**Avoid for serious roleplay work:** anything below 13B without a creative-writing fine-tune. Small general-purpose models lose voice consistency within 5–10 exchanges; the character "drifts" into the model\'s default voice.',
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which model should I use for roleplay?',
-            a: 'Llama 3.3 70B is the best all-round pick when hardware permits (~42 GB VRAM at Q4_K_M). On 24 GB rigs, Qwen3 32B is the lighter default. Command R+ 104B has the most natural dialogue voice in group scenes but wants ~62 GB. For mature scenes the instruct-tuned models refuse, install Hermes 3 (Llama 3.3 base) on the same Ollama and switch per scene. Models below 13B without creative-writing fine-tunes lose voice consistency within 5–10 exchanges and should be avoided for serious roleplay work.',
+            a: 'Llama 3.3 70B is the best all-round pick when hardware permits (~42 GB VRAM at Q4_K_M). On 24 GB rigs, Qwen3 32B is the lighter default. Command A+ has the most natural dialogue voice in group scenes but wants a large VRAM footprint. For mature scenes the instruct-tuned models refuse, install Hermes 3 (Llama 3.3 base) on the same Ollama and switch per scene. Models below 13B without creative-writing fine-tunes lose voice consistency within 5–10 exchanges and should be avoided for serious roleplay work.',
           },
           {
             q: 'Is SillyTavern only for adult roleplay?',
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Are group chats stable on local backends?',
-            a: 'Yes, with the right model. Group chat with 3+ characters wants a model with strong voice differentiation — Command R+ 104B is the best option, Llama 3.3 70B is the practical default. On smaller models (under 13B), characters drift toward the same voice within 5–10 exchanges. SillyTavern has the most mature group-chat implementation; Agnai and RisuAI handle 2–4 character scenes cleanly but offer less control over turn-taking dynamics.',
+            a: 'Yes, with the right model. Group chat with 3+ characters wants a model with strong voice differentiation — Command A+ is the best option, Llama 3.3 70B is the practical default. On smaller models (under 13B), characters drift toward the same voice within 5–10 exchanges. SillyTavern has the most mature group-chat implementation; Agnai and RisuAI handle 2–4 character scenes cleanly but offer less control over turn-taking dynamics.',
           },
         ],
       },
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI: Beste lokale Roleplay-Oberfläche (2026)',
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -463,7 +463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei unterstützen Tavern-v2-Character-Cards; Karten aus einer Oberfläche funktionieren in den anderen.',
           'Alle drei verbinden sich mit Ollama, llama.cpp, LM Studio, vLLM und jedem OpenAI-kompatiblen Endpunkt.',
           'Alle drei sind Open Source und laufen vollständig lokal; standardmäßig keine Telemetrie.',
-          'Modellempfehlungen: Llama 3.3 70B (bestes Allround), Hermes 3 (unzensiert), Command R+ (Dialog), Qwen3 32B (Standard für 24-GB-Rigs).',
+          'Modellempfehlungen: Llama 3.3 70B (bestes Allround), Hermes 3 (unzensiert), Command A+ (Dialog), Qwen3 32B (Standard für 24-GB-Rigs).',
         ],
         updatedDate: '2026-05-07',
       },
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Llama 3.3 70B** — die beste lokale Allround-Wahl für Charakterarbeit. Stärkste Stimmenkonsistenz über lange Sitzungen, folgt gut der Charakterführung, behandelt dunkle Themen, wenn der System-Prompt die Arbeit als Fiction rahmt. Benötigt ~42 GB VRAM bei Q4_K_M.',
           '**Qwen3 32B** — die richtige Wahl für 24-GB-Rigs. Nahezu Llama-70B-Prosaqualität ohne den Hardware-Aufwand. Der Standard für die meisten Laptops und Consumer-Desktops.',
-          '**Command R+ 104B** — der Dialog-Spezialist. Natürlichste Konversationsstimmen-Differenzierung zwischen Charakteren in einer Gruppenszene. Benötigt ~62 GB VRAM bei Q4_K_M.',
+          '**Command A+** — der Dialog-Spezialist. Natürlichste Konversationsstimmen-Differenzierung zwischen Charakteren in einer Gruppenszene. Benötigt einen großen VRAM-Bedarf bei Q4_K_M.',
           '**Hermes 3 (Llama 3.3 Base)** — das unzensierte Derivat. Gleiche Architektur wie Llama 3.3 70B; die RLHF-Sicherheitsschicht ist entfernt; das Modell folgt dem Prompt, anstatt reife Szenen abzulehnen. Zwei Installationen (Instruct + Hermes) auf demselben Ollama ist das übliche Muster.',
           '**Mistral Large** — die Langkontext-Wahl. 128K Kontext out-of-the-box; nützlich, wenn eine Roleplay-Sitzung lang genug ist, um kleinere Kontextmodelle aus dem Fenster zu drängen.',
           '**Für ernstes Roleplay nicht empfohlen:** alles unter 13B ohne kreatives Schreib-Fine-Tuning. Kleine Allzweck-Modelle verlieren innerhalb von 5–10 Austauschen die Stimmenkonsistenz; der Charakter „driftet" in die Standardstimme des Modells.',
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches Modell sollte ich für Roleplay verwenden?',
-            a: 'Llama 3.3 70B ist die beste Allround-Wahl, wenn die Hardware es erlaubt (~42 GB VRAM bei Q4_K_M). Auf 24-GB-Rigs ist Qwen3 32B der leichtere Standard. Command R+ 104B hat die natürlichste Dialogstimme in Gruppenszenen, benötigt aber ~62 GB. Für reife Szenen, die Instruct-Tuned-Modelle ablehnen, installieren Sie Hermes 3 (Llama 3.3 Base) auf demselben Ollama und wechseln Sie szenenweise. Modelle unter 13B ohne kreatives Schreib-Fine-Tuning verlieren innerhalb von 5–10 Austauschen die Stimmenkonsistenz und sollten für ernstes Roleplay vermieden werden.',
+            a: 'Llama 3.3 70B ist die beste Allround-Wahl, wenn die Hardware es erlaubt (~42 GB VRAM bei Q4_K_M). Auf 24-GB-Rigs ist Qwen3 32B der leichtere Standard. Command A+ hat die natürlichste Dialogstimme in Gruppenszenen, benötigt aber einen großen VRAM-Bedarf. Für reife Szenen, die Instruct-Tuned-Modelle ablehnen, installieren Sie Hermes 3 (Llama 3.3 Base) auf demselben Ollama und wechseln Sie szenenweise. Modelle unter 13B ohne kreatives Schreib-Fine-Tuning verlieren innerhalb von 5–10 Austauschen die Stimmenkonsistenz und sollten für ernstes Roleplay vermieden werden.',
           },
           {
             q: 'Ist SillyTavern nur für Erwachsenen-Roleplay?',
@@ -783,7 +783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sind Gruppen-Chats auf lokalen Backends stabil?',
-            a: 'Ja, mit dem richtigen Modell. Gruppen-Chat mit 3+ Charakteren möchte ein Modell mit starker Stimmendifferenzierung — Command R+ 104B ist die beste Option, Llama 3.3 70B ist der praktische Standard. Auf kleineren Modellen (unter 13B) driften Charaktere innerhalb von 5–10 Austauschen zur gleichen Stimme. SillyTavern hat die ausgereifteste Gruppen-Chat-Implementierung; Agnai und RisuAI behandeln 2–4-Charakter-Szenen sauber, bieten aber weniger Kontrolle über Turn-Taking-Dynamiken.',
+            a: 'Ja, mit dem richtigen Modell. Gruppen-Chat mit 3+ Charakteren möchte ein Modell mit starker Stimmendifferenzierung — Command A+ ist die beste Option, Llama 3.3 70B ist der praktische Standard. Auf kleineren Modellen (unter 13B) driften Charaktere innerhalb von 5–10 Austauschen zur gleichen Stimme. SillyTavern hat die ausgereifteste Gruppen-Chat-Implementierung; Agnai und RisuAI behandeln 2–4-Charakter-Szenen sauber, bieten aber weniger Kontrolle über Turn-Taking-Dynamiken.',
           },
           {
             q: 'Muss ich bei der Verwendung von SillyTavern, Agnai oder RisuAI die DSGVO beachten?',
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI: Mejor interfaz de roleplay local (2026)',
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Las tres hablan tarjetas de personaje Tavern v2; las tarjetas de una funcionan en las otras.',
           'Las tres se conectan a Ollama, llama.cpp, LM Studio, vLLM y cualquier endpoint compatible con OpenAI.',
           'Las tres son de código abierto y se ejecutan completamente en local; sin telemetría por defecto en ninguna.',
-          'Recomendaciones de modelos: Llama 3.3 70B (mejor todo-terreno), Hermes 3 (sin censura), Command R+ (diálogo), Qwen3 32B (opción predeterminada para rigs de 24 GB).',
+          'Recomendaciones de modelos: Llama 3.3 70B (mejor todo-terreno), Hermes 3 (sin censura), Command A+ (diálogo), Qwen3 32B (opción predeterminada para rigs de 24 GB).',
         ],
         updatedDate: '2026-05-07',
       },
@@ -1060,11 +1060,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La elección de interfaz no limita la elección de modelo.** Las tres hablan los mismos backends — Ollama es el más común — y las recomendaciones de modelos a continuación se aplican igualmente a SillyTavern, Agnai y RisuAI.',
         image: '/images/sillytavern-vs-agnai-vs-risuai-models-es.svg',
-        imageCaption: 'Modelos recomendados (las 3 interfaces): Llama 3.3 70B es el estándar (mejor todo-terreno, 42 GB VRAM, consistencia de voz). Qwen3 32B es la opción popular para rigs de 24 GB (calidad casi equivalente a 70B). Command R+ 104B para especialistas en diálogo (escenas grupales, 62 GB VRAM). Hermes 3 para trabajo de 70B sin censura. Evitar modelos <13B sin ajuste fino creativo.',
+        imageCaption: 'Modelos recomendados (las 3 interfaces): Llama 3.3 70B es el estándar (mejor todo-terreno, 42 GB VRAM, consistencia de voz). Qwen3 32B es la opción popular para rigs de 24 GB (calidad casi equivalente a 70B). Command A+ para especialistas en diálogo (escenas grupales, VRAM elevada). Hermes 3 para trabajo de 70B sin censura. Evitar modelos <13B sin ajuste fino creativo.',
         items: [
           '**Llama 3.3 70B** — la mejor opción local todo-terreno para trabajo con personajes. Mayor consistencia de voz en sesiones largas, sigue bien la dirección del personaje, maneja temas oscuros cuando el prompt del sistema enmarca el trabajo como ficción. Requiere ~42 GB VRAM en Q4_K_M.',
           '**Qwen3 32B** — la opción correcta para rigs de 24 GB. Calidad de prosa casi equivalente a Llama 70B sin el costo de hardware. La opción predeterminada para la mayoría de laptops y desktops de consumidor.',
-          '**Command R+ 104B** — el especialista en diálogo. Diferenciación de voz conversacional más natural entre personajes en una escena grupal. Requiere ~62 GB VRAM en Q4_K_M.',
+          '**Command A+** — el especialista en diálogo. Diferenciación de voz conversacional más natural entre personajes en una escena grupal. Requiere un uso de VRAM elevado en Q4_K_M.',
           '**Hermes 3 (base Llama 3.3)** — el derivado sin censura. Misma arquitectura que Llama 3.3 70B; la capa de seguridad RLHF está eliminada; el modelo sigue el prompt en lugar de rechazar escenas maduras. Dos instalaciones (instruct + Hermes) en el mismo Ollama es el patrón habitual.',
           '**Mistral Large** — la opción de contexto largo. 128K de contexto de fábrica; útil cuando una sesión de roleplay es lo suficientemente larga como para sacar a los modelos de contexto más pequeños de la ventana.',
           '**Evitar para trabajo de roleplay serio:** cualquier cosa por debajo de 13B sin un ajuste fino de escritura creativa. Los modelos pequeños de propósito general pierden la consistencia de voz en 5 a 10 intercambios; el personaje "deriva" hacia la voz predeterminada del modelo.',
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué modelo debo usar para el roleplay?',
-            a: 'Llama 3.3 70B es la mejor opción todo-terreno cuando el hardware lo permite (~42 GB VRAM en Q4_K_M). En rigs de 24 GB, Qwen3 32B es la opción predeterminada más ligera. Command R+ 104B tiene la voz de diálogo más natural en escenas grupales pero requiere ~62 GB. Para escenas maduras que los modelos ajustados por instrucciones rechazan, instala Hermes 3 (base Llama 3.3) en el mismo Ollama y cambia por escena. Los modelos por debajo de 13B sin ajuste fino de escritura creativa pierden la consistencia de voz en 5 a 10 intercambios y deben evitarse para trabajo de roleplay serio.',
+            a: 'Llama 3.3 70B es la mejor opción todo-terreno cuando el hardware lo permite (~42 GB VRAM en Q4_K_M). En rigs de 24 GB, Qwen3 32B es la opción predeterminada más ligera. Command A+ tiene la voz de diálogo más natural en escenas grupales pero requiere un uso de VRAM elevado. Para escenas maduras que los modelos ajustados por instrucciones rechazan, instala Hermes 3 (base Llama 3.3) en el mismo Ollama y cambia por escena. Los modelos por debajo de 13B sin ajuste fino de escritura creativa pierden la consistencia de voz en 5 a 10 intercambios y deben evitarse para trabajo de roleplay serio.',
           },
           {
             q: '¿SillyTavern es solo para roleplay adulto?',
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Son estables los chats grupales en backends locales?',
-            a: 'Sí, con el modelo correcto. El chat grupal con 3+ personajes necesita un modelo con fuerte diferenciación de voces — Command R+ 104B es la mejor opción, Llama 3.3 70B es el predeterminado práctico. En modelos más pequeños (menos de 13B), los personajes derivan hacia la misma voz en 5 a 10 intercambios. SillyTavern tiene la implementación de chat grupal más madura; Agnai y RisuAI manejan escenas de 2 a 4 personajes limpiamente pero ofrecen menos control sobre la dinámica de turnos.',
+            a: 'Sí, con el modelo correcto. El chat grupal con 3+ personajes necesita un modelo con fuerte diferenciación de voces — Command A+ es la mejor opción, Llama 3.3 70B es el predeterminado práctico. En modelos más pequeños (menos de 13B), los personajes derivan hacia la misma voz en 5 a 10 intercambios. SillyTavern tiene la implementación de chat grupal más madura; Agnai y RisuAI manejan escenas de 2 a 4 personajes limpiamente pero ofrecen menos control sobre la dinámica de turnos.',
           },
         ],
       },
@@ -1223,7 +1223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 인터페이스 (2026)',
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 가지 모두 Tavern v2 캐릭터 카드 지원; 하나의 카드가 다른 것들에서도 작동.',
           '세 가지 모두 Ollama, llama.cpp, LM Studio, vLLM, OpenAI 호환 엔드포인트에 연결.',
           '세 가지 모두 오픈소스이며 완전히 로컬로 실행; 기본적으로 어느 것도 텔레메트리 없음.',
-          '모델 추천: Llama 3.3 70B(최고 범용), Hermes 3(무검열), Command R+(대화), Qwen3 32B(24GB 리그 기본 선택).',
+          '모델 추천: Llama 3.3 70B(최고 범용), Hermes 3(무검열), Command A+(대화), Qwen3 32B(24GB 리그 기본 선택).',
         ],
         updatedDate: '2026-05-07',
       },
@@ -1477,11 +1477,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**인터페이스 선택이 모델 선택을 제한하지 않습니다.** 세 가지 모두 동일한 백엔드(Ollama가 가장 일반적)를 지원하며 아래 모델 추천은 SillyTavern, Agnai, RisuAI에 동등하게 적용됩니다.',
         image: '/images/sillytavern-vs-agnai-vs-risuai-models-es.svg',
-        imageCaption: '추천 모델(3가지 인터페이스 모두): Llama 3.3 70B가 표준(최고 범용, 42GB VRAM, 목소리 일관성). Qwen3 32B는 24GB 리그의 인기 선택(70B와 거의 동등한 품질). Command R+ 104B는 대화 전문가(그룹 장면, 62GB VRAM). Hermes 3는 70B 무검열 작업. 창의적 파인튜닝 없이 13B 이하 모델은 피하기.',
+        imageCaption: '추천 모델(3가지 인터페이스 모두): Llama 3.3 70B가 표준(최고 범용, 42GB VRAM, 목소리 일관성). Qwen3 32B는 24GB 리그의 인기 선택(70B와 거의 동등한 품질). Command A+는 대화 전문가(그룹 장면, 높은 VRAM 요구). Hermes 3는 70B 무검열 작업. 창의적 파인튜닝 없이 13B 이하 모델은 피하기.',
         items: [
           '**Llama 3.3 70B** — 캐릭터 작업에서 최고의 로컬 범용 옵션. 긴 세션에서 더 높은 목소리 일관성, 캐릭터 지시 따르기 잘 함, 픽션으로 프레임되면 어두운 테마 처리. Q4_K_M에서 ~42GB VRAM 필요.',
           '**Qwen3 32B** — 24GB 리그에 올바른 선택. 하드웨어 비용 없이 Llama 70B에 가까운 산문 품질. 대부분의 소비자 노트북·데스크톱의 기본 선택.',
-          '**Command R+ 104B** — 대화 전문가. 그룹 장면에서 캐릭터 간 더 자연스러운 대화 목소리 차별화. Q4_K_M에서 ~62GB VRAM 필요.',
+          '**Command A+** — 대화 전문가. 그룹 장면에서 캐릭터 간 더 자연스러운 대화 목소리 차별화. Q4_K_M에서 높은 VRAM 용량이 필요합니다.',
           '**Hermes 3(Llama 3.3 기반)** — 무검열 파생 모델. Llama 3.3 70B와 동일한 아키텍처; RLHF 안전 레이어 제거됨; 모델이 성숙한 장면을 거부하는 대신 프롬프트를 따릅니다. 동일한 Ollama에서 두 가지 설치(instruct + Hermes)가 일반적인 패턴.',
           '**Mistral Large** — 장문 컨텍스트 옵션. 기본 128K 컨텍스트; 롤플레이 세션이 더 작은 컨텍스트 모델을 컨텍스트 밖으로 밀어낼 만큼 길 때 유용.',
           '**심각한 롤플레이 작업에서 피해야 할 것:** 창의적 글쓰기 파인튜닝 없이 13B 이하 모든 것. 소형 범용 모델은 5~10번 교환 후 목소리 일관성을 잃습니다; 캐릭터가 모델의 기본 목소리로 "표류"합니다.',
@@ -1588,7 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '롤플레이에 어떤 모델을 사용해야 합니까?',
-            a: '하드웨어가 허용하면 Llama 3.3 70B가 최고의 범용 선택입니다(Q4_K_M에서 ~42GB VRAM). 24GB 리그에서는 Qwen3 32B가 더 가벼운 기본 선택입니다. Command R+ 104B는 그룹 장면에서 가장 자연스러운 대화 목소리를 가지지만 ~62GB가 필요합니다. 조정된 instruct 모델이 거부하는 성숙한 장면의 경우 동일한 Ollama에 Hermes 3(Llama 3.3 기반)를 설치하고 장면별로 전환하십시오. 창의적 글쓰기 파인튜닝 없이 13B 이하 모델은 5~10번 교환 후 목소리 일관성을 잃으며 심각한 롤플레이 작업에는 피해야 합니다.',
+            a: '하드웨어가 허용하면 Llama 3.3 70B가 최고의 범용 선택입니다(Q4_K_M에서 ~42GB VRAM). 24GB 리그에서는 Qwen3 32B가 더 가벼운 기본 선택입니다. Command A+는 그룹 장면에서 가장 자연스러운 대화 목소리를 가지지만 높은 VRAM 용량이 필요합니다. 조정된 instruct 모델이 거부하는 성숙한 장면의 경우 동일한 Ollama에 Hermes 3(Llama 3.3 기반)를 설치하고 장면별로 전환하십시오. 창의적 글쓰기 파인튜닝 없이 13B 이하 모델은 5~10번 교환 후 목소리 일관성을 잃으며 심각한 롤플레이 작업에는 피해야 합니다.',
           },
           {
             q: 'SillyTavern은 성인 롤플레이 전용입니까?',
@@ -1612,7 +1612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 백엔드에서 그룹 채팅이 안정적입니까?',
-            a: '네, 올바른 모델로는 가능합니다. 3명 이상의 캐릭터가 있는 그룹 채팅에는 강한 목소리 차별화를 가진 모델이 필요합니다 — Command R+ 104B가 최선이며, Llama 3.3 70B가 실용적인 기본 선택입니다. 더 작은 모델(13B 미만)에서는 캐릭터가 5~10번 교환 후 동일한 목소리로 표류합니다. SillyTavern은 가장 성숙한 그룹 채팅 구현을 갖추고 있고; Agnai·RisuAI는 2~4명의 캐릭터 장면을 깔끔하게 처리하지만 턴 역학에 대한 제어가 적습니다.',
+            a: '네, 올바른 모델로는 가능합니다. 3명 이상의 캐릭터가 있는 그룹 채팅에는 강한 목소리 차별화를 가진 모델이 필요합니다 — Command A+가 최선이며, Llama 3.3 70B가 실용적인 기본 선택입니다. 더 작은 모델(13B 미만)에서는 캐릭터가 5~10번 교환 후 동일한 목소리로 표류합니다. SillyTavern은 가장 성숙한 그룹 채팅 구현을 갖추고 있고; Agnai·RisuAI는 2~4명의 캐릭터 장면을 깔끔하게 처리하지만 턴 역학에 대한 제어가 적습니다.',
           },
         ],
       },
@@ -1640,7 +1640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI: Melhor interface de roleplay local (2026)',
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -1699,7 +1699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'As três falam cartões de personagens Tavern v2; cartões de uma funcionam nas outras.',
           'As três se conectam ao Ollama, llama.cpp, LM Studio, vLLM e qualquer endpoint compatível com OpenAI.',
           'As três são open source e rodam completamente localmente; sem telemetria por padrão em nenhuma.',
-          'Recomendações de modelos: Llama 3.3 70B (melhor geral), Hermes 3 (sem censura), Command R+ (diálogo), Qwen3 32B (opção padrão para rigs de 24 GB).',
+          'Recomendações de modelos: Llama 3.3 70B (melhor geral), Hermes 3 (sem censura), Command A+ (diálogo), Qwen3 32B (opção padrão para rigs de 24 GB).',
         ],
         updatedDate: '2026-05-07',
       },
@@ -1893,11 +1893,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A escolha de interface não limita a escolha de modelo.** As três falam os mesmos backends — Ollama é o mais comum — e as recomendações de modelos abaixo se aplicam igualmente ao SillyTavern, Agnai e RisuAI.',
         image: '/images/sillytavern-vs-agnai-vs-risuai-models-es.svg',
-        imageCaption: 'Modelos recomendados (as 3 interfaces): Llama 3.3 70B é o padrão (melhor geral, 42 GB VRAM, consistência de voz). Qwen3 32B é a opção popular para rigs de 24 GB (qualidade quase equivalente a 70B). Command R+ 104B para especialistas em diálogo (cenas em grupo, 62 GB VRAM). Hermes 3 para trabalho de 70B sem censura. Evitar modelos <13B sem ajuste fino criativo.',
+        imageCaption: 'Modelos recomendados (as 3 interfaces): Llama 3.3 70B é o padrão (melhor geral, 42 GB VRAM, consistência de voz). Qwen3 32B é a opção popular para rigs de 24 GB (qualidade quase equivalente a 70B). Command A+ para especialistas em diálogo (cenas em grupo, VRAM elevada). Hermes 3 para trabalho de 70B sem censura. Evitar modelos <13B sem ajuste fino criativo.',
         items: [
           '**Llama 3.3 70B** — a melhor opção local geral para trabalho com personagens. Maior consistência de voz em sessões longas, segue bem a direção do personagem. Requer ~42 GB VRAM em Q4_K_M.',
           '**Qwen3 32B** — a escolha certa para rigs de 24 GB. Qualidade de prosa quase equivalente ao Llama 70B sem o custo de hardware.',
-          '**Command R+ 104B** — o especialista em diálogo. Diferenciação de voz conversacional mais natural entre personagens em uma cena em grupo. Requer ~62 GB VRAM em Q4_K_M.',
+          '**Command A+** — o especialista em diálogo. Diferenciação de voz conversacional mais natural entre personagens em uma cena em grupo. Requer um uso elevado de VRAM em Q4_K_M.',
           '**Hermes 3 (base Llama 3.3)** — o derivado sem censura. Mesma arquitetura do Llama 3.3 70B; a camada de segurança RLHF está removida; o modelo segue o prompt em vez de rejeitar cenas maduras.',
           '**Mistral Large** — a opção de contexto longo. 128K de contexto nativo; útil quando uma sessão de roleplay é longa o suficiente para tirar modelos de contexto menor da janela.',
           '**Evitar para trabalho de roleplay sério:** qualquer coisa abaixo de 13B sem ajuste fino de escrita criativa.',
@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual modelo devo usar para roleplay?',
-            a: 'Llama 3.3 70B é a melhor opção geral quando o hardware permite (~42 GB VRAM em Q4_K_M). Em rigs de 24 GB, Qwen3 32B é a opção padrão mais leve. Command R+ 104B tem a voz de diálogo mais natural em cenas em grupo, mas requer ~62 GB. Para cenas maduras que os modelos ajustados por instruções recusam, instale Hermes 3 (base Llama 3.3) no mesmo Ollama e alterne por cena.',
+            a: 'Llama 3.3 70B é a melhor opção geral quando o hardware permite (~42 GB VRAM em Q4_K_M). Em rigs de 24 GB, Qwen3 32B é a opção padrão mais leve. Command A+ tem a voz de diálogo mais natural em cenas em grupo, mas requer um uso elevado de VRAM. Para cenas maduras que os modelos ajustados por instruções recusam, instale Hermes 3 (base Llama 3.3) no mesmo Ollama e alterne por cena.',
           },
           {
             q: 'SillyTavern é apenas para roleplay adulto?',
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Os chats em grupo são estáveis em backends locais?',
-            a: 'Sim, com o modelo certo. O chat em grupo com 3+ personagens precisa de um modelo com forte diferenciação de vozes — Command R+ 104B é a melhor opção, Llama 3.3 70B é o padrão prático. Em modelos menores (abaixo de 13B), os personagens derivam para a mesma voz em 5 a 10 trocas.',
+            a: 'Sim, com o modelo certo. O chat em grupo com 3+ personagens precisa de um modelo com forte diferenciação de vozes — Command A+ é a melhor opção, Llama 3.3 70B é o padrão prático. Em modelos menores (abaixo de 13B), os personagens derivam para a mesma voz em 5 a 10 trocas.',
           },
         ],
       },
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI : Meilleure interface roleplay locale (2026)',
@@ -2076,7 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -2112,7 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois supportent les cartes Tavern v2 ; une carte créée dans l\'une fonctionne dans les autres.',
           'Les trois se connectent à Ollama, llama.cpp, LM Studio, vLLM et tout endpoint compatible OpenAI.',
           'Les trois sont open source et fonctionnent entièrement en local ; aucune télémétrie par défaut.',
-          'Recommandations de modèles : Llama 3.3 70B (meilleur général), Hermes 3 (non censuré), Command R+ (dialogue), Qwen3 32B (défaut pour rigs 24 Go).',
+          'Recommandations de modèles : Llama 3.3 70B (meilleur général), Hermes 3 (non censuré), Command A+ (dialogue), Qwen3 32B (défaut pour rigs 24 Go).',
         ],
         updatedDate: '2026-05-07',
       },
@@ -2303,7 +2303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Llama 3.3 70B** — le meilleur choix local général pour le travail de personnages. Meilleure cohérence de voix sur de longues sessions, suit bien les directions de personnage, gère les thèmes sombres quand le prompt système cadre le travail comme de la fiction. Nécessite ~42 Go de VRAM en Q4_K_M.',
           '**Qwen3 32B** — le bon choix pour les rigs 24 Go. Qualité de prose proche de Llama 70B sans le coût matériel. La valeur par défaut pour la plupart des laptops et desktops grand public.',
-          '**Command R+ 104B** — le spécialiste du dialogue. Différenciation de voix conversationnelle la plus naturelle entre personnages dans une scène de groupe. Nécessite ~62 Go de VRAM en Q4_K_M.',
+          '**Command A+** — le spécialiste du dialogue. Différenciation de voix conversationnelle la plus naturelle entre personnages dans une scène de groupe. Nécessite une quantité importante de VRAM en Q4_K_M.',
           '**Hermes 3 (base Llama 3.3)** — le dérivé non censuré. Même architecture que Llama 3.3 70B ; la couche de sécurité RLHF est retirée ; le modèle suit le prompt au lieu de refuser les scènes matures. Deux installations (instruct + Hermes) sur le même Ollama est le pattern courant.',
           '**Mistral Large** — le choix grand contexte. 128K de contexte out-of-the-box ; utile quand une session de roleplay est assez longue pour pousser les modèles à contexte plus court hors de la fenêtre.',
           '**À éviter pour le roleplay sérieux :** tout ce qui est en dessous de 13B sans fine-tuning d\'écriture créative. Les petits modèles généralistes perdent la cohérence de voix en 5 à 10 échanges ; le personnage « dérive » vers la voix par défaut du modèle.',
@@ -2408,7 +2408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel modèle utiliser pour le roleplay ?',
-            a: 'Llama 3.3 70B est le meilleur choix général quand le matériel le permet (~42 Go de VRAM en Q4_K_M). Sur les rigs 24 Go, Qwen3 32B est la valeur par défaut plus légère. Command R+ 104B a la voix de dialogue la plus naturelle dans les scènes de groupe mais nécessite ~62 Go. Pour les scènes matures que les modèles instruct refusent, installez Hermes 3 (base Llama 3.3) sur le même Ollama et changez selon les scènes. Les modèles sous 13B sans fine-tuning d\'écriture créative perdent la cohérence de voix en 5 à 10 échanges et sont à éviter pour le roleplay sérieux.',
+            a: 'Llama 3.3 70B est le meilleur choix général quand le matériel le permet (~42 Go de VRAM en Q4_K_M). Sur les rigs 24 Go, Qwen3 32B est la valeur par défaut plus légère. Command A+ a la voix de dialogue la plus naturelle dans les scènes de groupe mais nécessite une quantité importante de VRAM. Pour les scènes matures que les modèles instruct refusent, installez Hermes 3 (base Llama 3.3) sur le même Ollama et changez selon les scènes. Les modèles sous 13B sans fine-tuning d\'écriture créative perdent la cohérence de voix en 5 à 10 échanges et sont à éviter pour le roleplay sérieux.',
           },
           {
             q: 'SillyTavern est-il réservé au roleplay adulte ?',
@@ -2432,7 +2432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Les chats de groupe sont-ils stables sur les backends locaux ?',
-            a: 'Oui, avec le bon modèle. Le chat de groupe avec 3+ personnages nécessite un modèle avec une forte différenciation de voix — Command R+ 104B est la meilleure option, Llama 3.3 70B est la valeur par défaut pratique. Sur les petits modèles (sous 13B), les personnages dérivent vers la même voix en 5 à 10 échanges. SillyTavern a l\'implémentation de chat de groupe la plus mature ; Agnai et RisuAI gèrent proprement les scènes de 2 à 4 personnages mais offrent moins de contrôle sur la dynamique de prise de parole.',
+            a: 'Oui, avec le bon modèle. Le chat de groupe avec 3+ personnages nécessite un modèle avec une forte différenciation de voix — Command A+ est la meilleure option, Llama 3.3 70B est la valeur par défaut pratique. Sur les petits modèles (sous 13B), les personnages dérivent vers la même voix en 5 à 10 échanges. SillyTavern a l\'implémentation de chat de groupe la plus mature ; Agnai et RisuAI gèrent proprement les scènes de 2 à 4 personnages mais offrent moins de contrôle sur la dynamique de prise de parole.',
           },
         ],
       },
@@ -2456,7 +2456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI：2026年ローカルLLMロールプレイUI比較',
@@ -2470,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -2506,7 +2506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三者ともTavern v2キャラクターカードに対応；一方のカードはそのまま他方で使用可能。',
           '三者ともOllama、llama.cpp、LM Studio、vLLM、OpenAI互換エンドポイントに接続可能。',
           '三者ともオープンソースで完全ローカル動作；デフォルトでテレメトリーなし。',
-          'モデル推奨：Llama 3.3 70B（最良のオールラウンド）、Hermes 3（無検閲）、Command R+（対話）、Qwen3 32B（24GBリグのデフォルト）。',
+          'モデル推奨：Llama 3.3 70B（最良のオールラウンド）、Hermes 3（無検閲）、Command A+（対話）、Qwen3 32B（24GBリグのデフォルト）。',
         ],
         updatedDate: '2026-05-07',
       },
@@ -2697,7 +2697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Llama 3.3 70B** — キャラクター作業においてローカルで最良のオールラウンド選択肢。長いセッションを通じて最も強い声の一貫性を持ち、キャラクターの方向付けに従い、システムプロンプトが作業をフィクションとして位置づければダークなテーマも扱えます。Q4_K_Mで約42GB VRAMが必要です。',
           '**Qwen3 32B** — 24GBリグへの適切な選択肢。ハードウェアコストなしにLlama 70B相当の散文品質。ほとんどのノートパソコンとコンシューマーデスクトップのデフォルト。',
-          '**Command R+ 104B** — 対話スペシャリスト。グループシーンのキャラクター間で最も自然な会話音声の差別化。Q4_K_Mで約62GB VRAMが必要です。',
+          '**Command A+** — 対話スペシャリスト。グループシーンのキャラクター間で最も自然な会話音声の差別化。Q4_K_Mで大容量のVRAMが必要です。',
           '**Hermes 3（Llama 3.3ベース）** — 無検閲の派生モデル。Llama 3.3 70Bと同じアーキテクチャ；RLHFセーフティレイヤーが除去されており、成熟したシーンを拒否するのではなくプロンプトに従います。同じOllama上に二つのインストール（インストラクト＋Hermes）を用意するパターンが一般的です。',
           '**Mistral Large** — 長コンテキスト選択肢。128Kコンテキストがデフォルトで利用可能；ロールプレイセッションが長くなり、より短いコンテキストモデルがウィンドウから押し出されるほどになる場合に有用です。',
           '**真剣なロールプレイ作業に避けるべきもの：** クリエイティブライティングのファインチューニングなしに13B未満のもの。小さな汎用モデルは5〜10回のやり取りで声の一貫性を失い、キャラクターがモデルのデフォルト音声に「ドリフト」します。',
@@ -2802,7 +2802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ロールプレイにはどのモデルを使うべきですか？',
-            a: 'ハードウェアが許す場合（Q4_K_Mで約42GB VRAM）はLlama 3.3 70Bが最良のオールラウンド選択肢です。24GBリグではQwen3 32Bがより軽量なデフォルトです。Command R+ 104Bはグループシーンで最も自然な対話音声を持ちますが約62GBが必要です。インストラクトチューニングモデルが拒否する成熟したシーンには同じOllama上にHermes 3（Llama 3.3ベース）をインストールしてシーンごとに切り替えてください。クリエイティブライティングのファインチューニングなしの13B未満のモデルは5〜10回のやり取りで声の一貫性を失い、真剣なロールプレイ作業には避けるべきです。',
+            a: 'ハードウェアが許す場合（Q4_K_Mで約42GB VRAM）はLlama 3.3 70Bが最良のオールラウンド選択肢です。24GBリグではQwen3 32Bがより軽量なデフォルトです。Command A+はグループシーンで最も自然な対話音声を持ちますが大容量のVRAMが必要です。インストラクトチューニングモデルが拒否する成熟したシーンには同じOllama上にHermes 3（Llama 3.3ベース）をインストールしてシーンごとに切り替えてください。クリエイティブライティングのファインチューニングなしの13B未満のモデルは5〜10回のやり取りで声の一貫性を失い、真剣なロールプレイ作業には避けるべきです。',
           },
           {
             q: 'SillyTavernは成人向けロールプレイ専用ですか？',
@@ -2826,7 +2826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'グループチャットはローカルバックエンドで安定していますか？',
-            a: 'はい、適切なモデルを使えば安定しています。3人以上のキャラクターとのグループチャットには強い声の差別化を持つモデルが必要です — Command R+ 104Bが最良の選択肢で、Llama 3.3 70Bが実用的なデフォルトです。小さなモデル（13B未満）ではキャラクターが5〜10回のやり取りで同じ声に収束します。SillyTavernが最も成熟したグループチャット実装を持っています；AgnaiとRisuAIは2〜4キャラクターシーンをきれいに処理しますが、ターンテイキングダイナミクスの制御は少ないです。',
+            a: 'はい、適切なモデルを使えば安定しています。3人以上のキャラクターとのグループチャットには強い声の差別化を持つモデルが必要です — Command A+が最良の選択肢で、Llama 3.3 70Bが実用的なデフォルトです。小さなモデル（13B未満）ではキャラクターが5〜10回のやり取りで同じ声に収束します。SillyTavernが最も成熟したグループチャット実装を持っています；AgnaiとRisuAIは2〜4キャラクターシーンをきれいに処理しますが、ターンテイキングダイナミクスの制御は少ないです。',
           },
         ],
       },
@@ -2865,7 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: 'SillyTavern vs Agnai vs RisuAI：2026年最佳本地角色扮演前端对比',
@@ -2879,7 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -2915,7 +2915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三者均支持Tavern v2角色卡片；在一个中创建的卡片可在其他中使用。',
           '三者均可连接Ollama、llama.cpp、LM Studio、vLLM和任何OpenAI兼容端点。',
           '三者均为开源，完全本地运行；默认无遥测数据。',
-          '模型推荐：Llama 3.3 70B（最佳全能）、Hermes 3（无审查）、Command R+（对话）、Qwen3 32B（24GB设备默认）。',
+          '模型推荐：Llama 3.3 70B（最佳全能）、Hermes 3（无审查）、Command A+（对话）、Qwen3 32B（24GB设备默认）。',
         ],
         updatedDate: '2026-05-07',
       },
@@ -3106,7 +3106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Llama 3.3 70B** — 角色工作最佳的本地全能选择。在长期会话中声音一致性最强，能很好地遵循角色方向，当系统提示将工作定位为小说时可处理黑暗主题。Q4_K_M约需42GB VRAM。',
           '**Qwen3 32B** — 24GB显卡设备的正确选择。接近Llama 70B的散文质量但无需昂贵硬件。大多数笔记本电脑和消费级台式机的默认选择。',
-          '**Command R+ 104B** — 对话专家。群组场景中角色间对话声音差异化最自然。Q4_K_M约需62GB VRAM。',
+          '**Command A+** — 对话专家。群组场景中角色间对话声音差异化最自然。Q4_K_M下VRAM需求较高。',
           '**Hermes 3（Llama 3.3基础版）** — 无审查派生版本。与Llama 3.3 70B相同架构；RLHF安全层已移除；模型遵循提示而非拒绝成熟场景。在同一Ollama上安装两个版本（指令版+Hermes）是常见模式。',
           '**Mistral Large** — 长上下文选择。开箱即用128K上下文；当角色扮演会话足够长以至于将较短上下文模型推出窗口时非常有用。',
           '**严肃角色扮演工作应避免：** 任何没有创意写作微调的13B以下模型。小型通用模型在5到10次交流内失去声音一致性；角色会"漂移"到模型的默认声音。',
@@ -3211,7 +3211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '角色扮演应该使用哪个模型？',
-            a: '硬件允许时（Q4_K_M约42GB VRAM），Llama 3.3 70B是最佳全能选择。24GB显卡设备上，Qwen3 32B是更轻量的默认选择。Command R+ 104B在群组场景中对话声音最自然，但需约62GB。对于指令调优模型拒绝的成熟场景，在同一Ollama上安装Hermes 3（Llama 3.3基础版）并按场景切换。没有创意写作微调的13B以下模型在5到10次交流内失去声音一致性，应避免用于严肃的角色扮演工作。',
+            a: '硬件允许时（Q4_K_M约42GB VRAM），Llama 3.3 70B是最佳全能选择。24GB显卡设备上，Qwen3 32B是更轻量的默认选择。Command A+在群组场景中对话声音最自然，但VRAM需求较高。对于指令调优模型拒绝的成熟场景，在同一Ollama上安装Hermes 3（Llama 3.3基础版）并按场景切换。没有创意写作微调的13B以下模型在5到10次交流内失去声音一致性，应避免用于严肃的角色扮演工作。',
           },
           {
             q: 'SillyTavern只适合成人角色扮演吗？',
@@ -3235,7 +3235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '在本地后端上群组聊天稳定吗？',
-            a: '是的，使用正确的模型时稳定。与3个以上角色的群组聊天需要具有强声音差异化的模型——Command R+ 104B是最佳选择，Llama 3.3 70B是实用的默认选择。在较小的模型（13B以下）上，角色在5到10次交流内向同一声音漂移。SillyTavern拥有最成熟的群组聊天实现；Agnai和RisuAI能干净地处理2到4角色场景，但对轮次动态的控制较少。',
+            a: '是的，使用正确的模型时稳定。与3个以上角色的群组聊天需要具有强声音差异化的模型——Command A+是最佳选择，Llama 3.3 70B是实用的默认选择。在较小的模型（13B以下）上，角色在5到10次交流内向同一声音漂移。SillyTavern拥有最成熟的群组聊天实现；Agnai和RisuAI能干净地处理2到4角色场景，但对轮次动态的控制较少。',
           },
         ],
       },
@@ -3275,7 +3275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-07-13',
     next_refresh_due: '2026-12-19',
     theme: 'Creative & Roleplay',
     title: '⁨SillyTavern⁩ مقابل ⁨Agnai⁩ مقابل ⁨RisuAI⁩: أفضل واجهة ⁨roleplay⁩ محلية (⁨2026⁩)',
@@ -3289,7 +3289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 32B',
-      'Command R+ 104B',
+      'Command A+',
       'Hermes 3 Llama 3.3',
       'Mistral Large',
     ],
@@ -3325,7 +3325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الثلاثة يتحدثون بطاقات الشخصية Tavern v2؛ البطاقات من أحدها تعمل في الآخرين.',
           'الثلاثة يتصلون بـ Ollama وllama.cpp وLM Studio وvLLM وأي نقطة نهاية متوافقة مع OpenAI.',
           'الثلاثة مفتوحو المصدر ويعملون محليًا بالكامل؛ لا تتبع افتراضيًا في أي منهم.',
-          'توصيات النماذج: Llama 3.3 70B (أفضل شاملًا)، Hermes 3 (بدون قيود)، Command R+ (حوار)، Qwen3 32B (افتراضي لأجهزة 24 جيجابايت).',
+          'توصيات النماذج: Llama 3.3 70B (أفضل شاملًا)، Hermes 3 (بدون قيود)، Command A+ (حوار)، Qwen3 32B (افتراضي لأجهزة 24 جيجابايت).',
         ],
         updatedDate: '2026-05-07',
       },
@@ -3436,7 +3436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['حالة الاستخدام', 'النموذج الموصى به', 'VRAM المطلوبة'],
         rows: [
           { 'حالة الاستخدام': 'أفضل شاملًا للـ roleplay', 'النموذج الموصى به': 'Llama 3.3 70B Q4_K_M', 'VRAM المطلوبة': '~42 جيجابايت' },
-          { 'حالة الاستخدام': 'جودة الحوار وتعدد الأصوات', 'النموذج الموصى به': 'Command R+ 104B', 'VRAM المطلوبة': '~62 جيجابايت' },
+          { 'حالة الاستخدام': 'جودة الحوار وتعدد الأصوات', 'النموذج الموصى به': 'Command A+', 'VRAM المطلوبة': 'مرتفعة' },
           { 'حالة الاستخدام': 'افتراضي لأجهزة 24 جيجابايت VRAM', 'النموذج الموصى به': 'Qwen3 32B Q4_K_M', 'VRAM المطلوبة': '~20 جيجابايت' },
           { 'حالة الاستخدام': 'محتوى بالغ (للكتّاب)', 'النموذج الموصى به': 'Hermes 3 Llama 3.3 70B', 'VRAM المطلوبة': '~42 جيجابايت' },
         ],
@@ -3500,7 +3500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي نموذج للـ roleplay؟',
-            a: 'Llama 3.3 70B هو أفضل خيار شامل عند توفر الجهاز (VRAM ~42 جيجابايت Q4_K_M). على أجهزة 24 جيجابايت، Qwen3 32B هو الافتراضي الأخف. Command R+ 104B الأفضل في تنويع الأصوات في المشاهد الجماعية لكن يحتاج ~62 جيجابايت. للمشاهد الناضجة التي يرفضها النموذج المنضبط بالتعليمات، ثبّت Hermes 3 (مبني على Llama 3.3) على نفس Ollama وبدّل بحسب المشهد.',
+            a: 'Llama 3.3 70B هو أفضل خيار شامل عند توفر الجهاز (VRAM ~42 جيجابايت Q4_K_M). على أجهزة 24 جيجابايت، Qwen3 32B هو الافتراضي الأخف. Command A+ الأفضل في تنويع الأصوات في المشاهد الجماعية لكن يحتاج ذاكرة VRAM مرتفعة. للمشاهد الناضجة التي يرفضها النموذج المنضبط بالتعليمات، ثبّت Hermes 3 (مبني على Llama 3.3) على نفس Ollama وبدّل بحسب المشهد.',
           },
           {
             q: 'هل SillyTavern فقط للـ roleplay البالغ؟',
@@ -3537,7 +3537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
