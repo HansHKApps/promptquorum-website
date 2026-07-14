@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Local AI Agents in 2026: What Actually Works (And What Still Fails)',
@@ -17,9 +17,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Six local AI agent stacks, five real tasks, thirty days of evaluation. Two stacks land tasks reliably. Three fail in ways the demos do not show. One is effectively unusable. This is the honest report — what each agent setup actually does on a refactor, a research task, an email triage, a scrape-and-summarize, and a bug hunt, with the failures named specifically and the supervision cost quantified.',
     metaDescription:
-      '6 local AI agent stacks tested on 5 real tasks. 2 work reliably, 3 fail in ways demos hide, 1 is unusable. Cline, LangGraph, AutoGPT, MetaGPT assessed.',
+      'Autonomous, multi-step local AI agents tested across 6 stacks and 5 real cross-app tasks. 2 work reliably, 3 fail in hidden ways, 1 is unusable.',
     twitterDescription:
-      'Tested 6 local agent stacks on 5 real tasks for 30 days. 2 worked, 3 failed in surprising ways, 1 was unusable. The honest verdict on which stacks ship work and which only ship demos.',
+      'Tested 6 autonomous, multi-step local AI agent stacks on 5 real cross-app tasks for 30 days. 2 worked, 3 failed in surprising ways, 1 was unusable. The honest verdict on which stacks ship work and which only ship demos.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Supervision cost is the metric that matters. The "best" agent is the one whose approvals you actually read — not the one with the longest autonomous run.',
           'The 2027 outlook: longer-horizon planning will improve incrementally. Unsupervised autonomy on real tasks is not happening this year, regardless of what the demos show.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -111,6 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** Apple M5 Max 64 GB unified memory and 2× NVIDIA RTX 3090 24 GB box; both run Qwen3-Coder 30B Q4_K_M comfortably at 32K context.',
           '**Models:** Qwen3-Coder 30B (primary), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (the four reliable tool-callers in May 2026).',
           '**Verdict shape:** 2 stacks reliable across all 5 tasks, 3 stacks reliable on 1–2 tasks each, 1 stack unusable.',
+          '**Cross-app reach:** the two reliable stacks extend past the editor via MCP servers (filesystem, sqlite/database, browser) — turning a single-app coding agent into a local-first, multi-step agent that reads, decides, and acts across tools without leaving your machine.',
           '**Cost:** $0 in API fees. ~$0.10–$0.30 in electricity per multi-step task on a 350W desktop GPU rig (under $0.05 on a Mac).',
           '**Supervision pattern that works:** auto-approve read tools, manual approve every write/shell tool, review the audit log after long sessions.',
         ],
@@ -455,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agentes de IA locales en 2026: lo que realmente funciona (y lo que sigue fallando)',
@@ -463,9 +464,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Seis stacks de agentes de IA locales, cinco tareas reales, treinta días de evaluación. Dos stacks completan las tareas de forma fiable. Tres fallan de maneras que los demos no muestran. Uno es prácticamente inutilizable. Este es el informe honesto: qué hace realmente cada configuración de agente en una refactorización, una tarea de investigación, un triaje de correo, un scrape-y-resumen y una búsqueda de bugs, con los fallos nombrados específicamente y el coste de supervisión cuantificado.',
     metaDescription:
-      '6 stacks de agentes de IA locales probados en 5 tareas reales: 2 funcionan, 3 fallan como los demos ocultan y 1 es inutilizable. Cline, LangGraph y AutoGPT.',
+      'Agentes de IA locales autónomos y multipaso en 6 stacks, 5 tareas reales multiaplicación. 2 funcionan, 3 fallan de forma oculta, 1 es inutilizable.',
     twitterDescription:
-      'Probé 6 stacks de agentes locales en 5 tareas reales durante 30 días. 2 funcionaron, 3 fallaron de formas inesperadas, 1 era inutilizable. El veredicto honesto sobre qué stacks entregan trabajo real y cuáles solo entregan demos.',
+      'Probé 6 stacks de agentes locales autónomos y multipaso en 5 tareas reales multiaplicación durante 30 días. 2 funcionaron, 3 fallaron de formas inesperadas, 1 era inutilizable. El veredicto honesto sobre qué stacks entregan trabajo real y cuáles solo entregan demos.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -508,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El coste de supervisión es la métrica que importa. El "mejor" agente es aquel cuyas aprobaciones realmente lees, no el que tiene la ejecución autónoma más larga.',
           'Las perspectivas para 2027: la planificación a largo plazo mejorará de forma incremental. La autonomía sin supervisión en tareas reales no va a ocurrir este año, independientemente de lo que muestren los demos.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -557,6 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** Apple M5 Max 64 GB de memoria unificada y equipo con 2× NVIDIA RTX 3090 24 GB; ambos ejecutan Qwen3-Coder 30B Q4_K_M cómodamente con contexto de 32K.',
           '**Modelos:** Qwen3-Coder 30B (principal), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (los cuatro tool-callers fiables en mayo de 2026).',
           '**Forma del veredicto:** 2 stacks fiables en las 5 tareas, 3 stacks fiables en 1–2 tareas cada uno, 1 stack inutilizable.',
+          '**Alcance multiaplicación:** los dos stacks fiables van más allá del editor mediante servidores MCP (sistema de archivos, sqlite/base de datos, navegador) — convirtiendo un agente de codificación de una sola app en un agente local-first y multipaso que lee, decide y actúa entre herramientas sin salir de tu equipo.',
           '**Coste:** 0 € en tarifas de API. ~0,10–0,30 € en electricidad por tarea de varios pasos en un equipo de escritorio con GPU de 350W (menos de 0,05 € en un Mac).',
           '**Patrón de supervisión que funciona:** aprobar automáticamente las herramientas de lectura, aprobar manualmente cada herramienta de escritura/shell, revisar el registro de auditoría tras sesiones largas.',
         ],
@@ -914,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agents locaux en 2026 : Ce qui fonctionne réellement (et ce qui échoue)',
@@ -922,9 +924,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Six stacks d\'agents IA locaux, cinq tâches réelles, trente jours d\'évaluation. Deux stacks accomplissent les tâches de manière fiable. Trois échouent d\'une manière que les démos ne montrent pas. Un est pratiquement inutilisable. C\'est le rapport honnête — ce que chaque configuration d\'agent fait réellement sur une refonte, une tâche de recherche, une triage d\'e-mails, un scrape-et-résumé, et une chasse aux bugs, avec les échecs nommés spécifiquement et le coût de supervision quantifié.',
     metaDescription:
-      '6 stacks d\'agents IA locaux testés sur 5 tâches réelles. 2 fonctionnent, 3 échouent de façon surprenante, 1 est inutilisable. Verdicts nommés.',
+      'Agents IA locaux autonomes et multi-étapes testés sur 6 stacks, 5 tâches réelles multi-apps. 2 fonctionnent, 3 échouent en surprise, 1 est inutilisable.',
     twitterDescription:
-      'Testé 6 stacks d\'agents locaux sur 5 tâches réelles pendant 30 jours. 2 ont fonctionné, 3 ont échoué de façon surprenante, 1 était inutilisable. Le verdict honnête sur les stacks qui livrent le travail et ceux qui ne livrent que des démos.',
+      'Testé 6 stacks d\'agents locaux autonomes et multi-étapes sur 5 tâches réelles multi-apps pendant 30 jours. 2 ont fonctionné, 3 ont échoué de façon surprenante, 1 était inutilisable. Le verdict honnête sur les stacks qui livrent le travail et ceux qui ne livrent que des démos.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -967,7 +969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le coût de supervision est la métrique qui compte. Le « meilleur » agent est celui dont vous lisez réellement les approbations — pas celui avec la plus longue exécution autonome.',
           'Les perspectives pour 2027 : la planification à long horizon s\'améliorera graduellement. L\'autonomie sans supervision sur les tâches réelles ne se produit pas cette année, indépendamment de ce que les démos montrent.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -1016,6 +1018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Matériel :** Apple M5 Max 64 GB mémoire unifiée et boîtier 2× NVIDIA RTX 3090 24 GB ; les deux exécutent Qwen3-Coder 30B Q4_K_M confortablement à 32K context.',
           '**Modèles :** Qwen3-Coder 30B (primaire), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (les quatre outils de tool-calling fiables en mai 2026).',
           '**Forme du verdict :** 2 stacks fiables sur les 5 tâches, 3 stacks fiables sur 1–2 tâches chacun, 1 stack inutilisable.',
+          '**Portée multi-apps :** les deux stacks fiables dépassent l\'éditeur via des serveurs MCP (système de fichiers, sqlite/base de données, navigateur) — transformant un agent de codage mono-app en un agent local-first et multi-étapes qui lit, décide et agit entre plusieurs outils sans quitter votre machine.',
           '**Coût :** 0 € en frais API. ~0,10–0,30 € en électricité par tâche multi-étapes sur un rig GPU de bureau 350W (moins de 0,05 € sur un Mac).',
           '**Schéma de supervision qui fonctionne :** approbation automatique des outils de lecture, approbation manuelle de chaque outil d\'écriture/shell, examen du journal d\'audit après les sessions longues.',
         ],
@@ -1360,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'ローカルAIエージェント2026年：実際に機能するもの（そして失敗するもの）',
@@ -1368,9 +1371,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルAIエージェント6スタック、実務タスク5種類、30日間の評価。2スタックがタスクを確実に達成します。3スタックはデモに見えない方法で失敗します。1つは実質的に使用不可能です。これが正直なレポートです。各エージェント設定がリファクタリング、研究タスク、メールトリアージ、スクレイプと要約、バグハント実施時に実際に何を行うか、具体的に名前が付けられた失敗と定量化された監視コストを含みます。',
     metaDescription:
-      'ローカルAIエージェント6スタック（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT）の正直なテスト。実務タスク5種類で実施。2つは確実に機能、3つは意外に失敗、1つは使用不可能。評決が名明確です。',
+      '自律的でマルチステップ、アプリ横断のローカルAIエージェント6スタックを実務タスク5種類でテスト。2つは確実に機能、3つは意外に失敗、1つは使用不可能。',
     twitterDescription:
-      '30日間、6つのローカルエージェントスタックを実務タスク5種類でテストしました。2つはうまくいき、3つは意外に失敗し、1つは使用不可能でした。どのスタックが実行可能な仕事を提供し、どのスタックがデモだけ提供するかについての正直な評決です。',
+      '30日間、自律的でマルチステップ、アプリ横断の6つのローカルエージェントスタックを実務タスク5種類でテストしました。2つはうまくいき、3つは意外に失敗し、1つは使用不可能でした。どのスタックが実行可能な仕事を提供し、どのスタックがデモだけ提供するかについての正直な評決です。',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -1418,6 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AutoGPT**: デモでは素晴らしく見えますが、複数エージェント間の調整で失敗します。マルチタスク環境では監視コストが高くなります。',
           '**OpenInterpreter**: セキュリティリスクが高いです。サンドボックス化なしでシステムコマンドを実行しすぎます。本番環境では使用不可です。',
           '**MetaGPT**: 構造化出力のためのライブラリですが、複雑なプロセス自動化には過度な設計です。Cline や Continue.dev の方が実用的です。',
+          '**アプリ横断の到達範囲**: 信頼できる2スタックはMCPサーバー(ファイルシステム、sqlite/データベース、ブラウザ)経由でエディタの外まで拡張し、単一アプリのコーディングエージェントを、複数のツールを横断して読み取り・判断・実行するlocal-firstでマルチステップなエージェントに変えます。',
         ],
       },
       howWeTested: {
@@ -1778,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Lokale KI-Agenten in 2026: Was funktioniert (und was noch fehlschlägt)',
@@ -1786,9 +1790,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Sechs lokale KI-Agent-Stacks, fünf echte Aufgaben, dreißig Tage Evaluation. Zwei Stacks landen Aufgaben zuverlässig. Drei fehlschlagen auf Wegen, die die Demos nicht zeigen. Einer ist praktisch unbrauchbar. Das ist der ehrliche Bericht — was jedes Agent-Setup bei einer Umstrukturierung, einer Recherchaufgabe, einer E-Mail-Triage, einem Scrape-and-Summarize und einer Bug-Suche wirklich tut, mit spezifisch benannten Fehlern und quantifizierten Überwachungskosten.',
     metaDescription:
-      'Ehrlicher Test von 6 lokalen KI-Agent-Stacks (Cline, Continue.dev, LangGraph, AutoGPT, OpenInterpreter, MetaGPT) auf 5 Aufgaben. 2 funktionieren, 1 unbrauchbar.',
+      'Autonome, mehrstufige lokale KI-Agenten, app-übergreifend getestet auf 6 Stacks, 5 realen Aufgaben. 2 funktionieren, 3 scheitern verdeckt, 1 unbrauchbar.',
     twitterDescription:
-      'Testete 6 lokale Agent-Stacks auf 5 echten Aufgaben über 30 Tage. 2 funktioniert, 3 fehlgeschlagen auf überraschende Weise, 1 war unbrauchbar. Das ehrliche Verdikt, welche Stacks Arbeit liefern und welche nur Demos liefern.',
+      'Testete 6 autonome, mehrstufige, app-übergreifende lokale Agent-Stacks auf 5 echten Aufgaben über 30 Tage. 2 funktioniert, 3 fehlgeschlagen auf überraschende Weise, 1 war unbrauchbar. Das ehrliche Verdikt, welche Stacks Arbeit liefern und welche nur Demos liefern.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -1831,7 +1835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Überwachungskosten sind die Metrik, die zählt. Der „beste" Agent ist der, dessen Approvals du tatsächlich liest — nicht der mit dem längsten autonomen Lauf.',
           'Der Outlook für 2027: Planung über längere Horizonte wird schrittweise verbessern. Unbeaufsichtigte Autonomie bei echten Aufgaben passiert nicht dieses Jahr, unabhängig davon, was die Demos zeigen.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -1880,6 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** Apple M5 Max 64 GB unified memory und 2× NVIDIA RTX 3090 24 GB box; beide führen Qwen3-Coder 30B Q4_K_M komfortabel bei 32K context durch.',
           '**Modelle:** Qwen3-Coder 30B (Primär), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (die vier zuverlässigen Tool-Caller im Mai 2026).',
           '**Verdikt-Form:** 2 Stacks zuverlässig über alle 5 Aufgaben, 3 Stacks zuverlässig bei 1–2 Aufgaben jeweils, 1 Stack unbrauchbar.',
+          '**App-übergreifende Reichweite:** die zwei zuverlässigen Stacks reichen über den Editor hinaus via MCP-Server (Dateisystem, sqlite/Datenbank, Browser) — und machen aus einem Single-App-Coding-Agent einen local-first, mehrstufigen Agenten, der über mehrere Tools hinweg liest, entscheidet und handelt, ohne die eigene Maschine zu verlassen.',
           '**Kosten:** 0 $ in API-Gebühren. ~0,10–0,30 $ Elektrizität pro Multi-Schritt-Aufgabe auf einer 350W-Desktop-GPU-Anlage (unter 0,05 $ auf einem Mac).',
           '**Überwachungsmuster, das funktioniert:** auto-approve Lese-Tools, manuell approve jeden Schreib-/Shell-Tool, überprüfe das Audit-Log nach langen Sitzungen.',
         ],
@@ -2224,7 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: '本地AI代理2026：实际可行的方案（以及失败的原因）',
@@ -2232,9 +2237,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '六个本地AI代理框架，五项真实任务，三十天评估。两个框架可靠完成任务。三个框架以演示中未显示的方式失败。一个框架完全无法使用。这是诚实的报告——每个代理设置在重构、研究任务、邮件分类、爬取和总结、漏洞修复中的实际表现，包括具体命名的失败原因和量化的监督成本。',
     metaDescription:
-      '6个本地AI代理框架的诚实测试（Cline、Continue.dev、LangGraph、AutoGPT、OpenInterpreter、MetaGPT），针对5项真实任务。2个可靠运行，3个意外失败，1个无法使用。包括企业部署指南。',
+      '自主、多步骤、跨应用的本地AI代理，6个框架实测5项真实任务。2个可靠运行，3个意外失败，1个无法使用。包括企业部署指南。',
     twitterDescription:
-      '30天内测试了6个本地代理框架在5项真实任务上的表现。2个有效，3个意外失败，1个无法使用。哪些框架提供可用的工作，哪些只是演示。',
+      '30天内测试了6个自主、多步骤、跨应用的本地代理框架在5项真实任务上的表现。2个有效，3个意外失败，1个无法使用。哪些框架提供可用的工作，哪些只是演示。',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -2290,6 +2295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**完全开源：** Ollama（MIT）、Cline（MIT）、Continue.dev（Apache）、所有模型都是开放权重。',
           '**关键限制：** 模型无法处理超过其上下文长度的文件（32K对于Qwen3-Coder）。无法访问实时网络数据。30分钟以上的运行变得不可预测。',
           '**企业准备：** 两个框架在受监督模式下可用于生产。其他五个只适合原型或研究。',
+          '**跨应用覆盖：** 两个可靠框架通过MCP服务器(文件系统、sqlite/数据库、浏览器)延伸到编辑器之外——把单一应用的编码代理变成一个local-first、多步骤的代理，能在不离开你的机器的情况下跨工具读取、决策并执行操作。',
         ],
       },
       howWeTested: {
@@ -2652,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)',
@@ -2660,9 +2666,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Seis stacks de agentes de IA locais, cinco tarefas reais, trinta dias de avaliação. Dois stacks completam as tarefas de forma confiável. Três falham de maneiras que os demos não mostram. Um é praticamente inutilizável. Este é o relatório honesto: o que cada configuração de agente realmente faz em uma refatoração, uma tarefa de pesquisa, uma triagem de e-mail, um scrape-e-resumo e uma caça a bugs, com as falhas nomeadas especificamente e o custo de supervisão quantificado.',
     metaDescription:
-      '6 stacks de agentes de IA locais testados em 5 tarefas reais. 2 funcionam de forma confiável, 3 falham de maneiras que os demos escondem, 1 é inutilizável. Cline, LangGraph, AutoGPT, MetaGPT avaliados.',
+      'Agentes de IA locais autônomos e multipasso testados em 6 stacks, 5 tarefas reais multiaplicativo. 2 funcionam, 3 falham de forma oculta, 1 é inutilizável.',
     twitterDescription:
-      'Testei 6 stacks de agentes locais em 5 tarefas reais por 30 dias. 2 funcionaram, 3 falharam de formas surpreendentes, 1 era inutilizável. O veredito honesto sobre quais stacks entregam trabalho real e quais só entregam demos.',
+      'Testei 6 stacks de agentes locais autônomos e multipasso em 5 tarefas reais multiaplicativo por 30 dias. 2 funcionaram, 3 falharam de formas surpreendentes, 1 era inutilizável. O veredito honesto sobre quais stacks entregam trabalho real e quais só entregam demos.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -2705,7 +2711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O custo de supervisão é a métrica que importa. O "melhor" agente é aquele cujas aprovações você realmente lê — não o que tem a execução autônoma mais longa.',
           'Perspectiva para 2027: o planejamento de horizonte longo melhorará de forma incremental. Autonomia sem supervisão em tarefas reais não vai acontecer este ano, independentemente do que os demos mostrem.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -2754,6 +2760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** Apple M5 Max 64 GB de memória unificada e máquina com 2× NVIDIA RTX 3090 24 GB; ambos rodam Qwen3-Coder 30B Q4_K_M confortavelmente a 32K de contexto.',
           '**Modelos:** Qwen3-Coder 30B (primário), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B (os quatro tool-callers confiáveis em maio de 2026).',
           '**Formato do veredito:** 2 stacks confiáveis em todas as 5 tarefas, 3 stacks confiáveis em 1–2 tarefas cada, 1 stack inutilizável.',
+          '**Alcance multiaplicativo:** os dois stacks confiáveis vão além do editor via servidores MCP (sistema de arquivos, sqlite/banco de dados, navegador) — transformando um agente de codificação de um único app em um agente local-first e multipasso que lê, decide e age entre ferramentas sem sair da sua máquina.',
           '**Custo:** $0 em taxas de API. ~$0,10–$0,30 em eletricidade por tarefa de múltiplos passos em uma máquina desktop com GPU de 350W (menos de $0,05 em um Mac).',
           '**Padrão de supervisão que funciona:** aprovar automaticamente ferramentas de leitura, aprovar manualmente toda ferramenta de escrita/shell, revisar o log de auditoria após sessões longas.',
         ],
@@ -3111,7 +3118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'وكلاء الذكاء الاصطناعي المحليون في ⁨2026⁩: ما يعمل فعلاً (وما يستمر في الفشل)',
@@ -3119,9 +3126,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ستة أطر عمل لوكلاء الذكاء الاصطناعي المحليين، وخمس مهام حقيقية، وثلاثون يوماً من التقييم. نجح اثنان في إتمام المهام بشكل موثوق. وأخفق ثلاثة بطرق لا تُظهرها العروض التجريبية. أما الأخير فكان عديم الفائدة عملياً. هذا هو التقرير الأمين: ما الذي تفعله كل إعدادة وكيل فعلياً في مهام إعادة الهيكلة والبحث وفرز البريد والجمع والتلخيص والبحث عن الأخطاء، مع تسمية الإخفاقات صراحةً وقياس تكلفة الإشراف كمياً.',
     metaDescription:
-      '6 أطر عمل لوكلاء AI اختُبرت في 5 مهام حقيقية: نجح اثنان بموثوقية وأخفق ثلاثة بطرق لا تُظهرها العروض. Cline وLangGraph وAutoGPT وMetaGPT.',
+      'وكلاء ⁨AI⁩ محليون مستقلون، متعددو الخطوات، عابرون للتطبيقات — اختُبروا في ⁨6⁩ أطر عمل و⁨5⁩ مهام حقيقية. نجح اثنان وأخفق ثلاثة بصمت وكان واحد عديم الفائدة.',
     twitterDescription:
-      'اختبرت 6 أطر عمل لوكلاء محليين في 5 مهام حقيقية على مدار 30 يوماً. نجح اثنان، وأخفق ثلاثة بطرق مفاجئة، وكان واحد عديم الفائدة. الحكم الصريح على أي الأطر تُسلّم عملاً حقيقياً وأيها تُقدّم عروضاً فحسب.',
+      'اختبرت ⁨6⁩ أطر عمل لوكلاء محليين مستقلين متعددي الخطوات وعابرين للتطبيقات في 5 مهام حقيقية على مدار 30 يوماً. نجح اثنان، وأخفق ثلاثة بطرق مفاجئة، وكان واحد عديم الفائدة. الحكم الصريح على أي الأطر تُسلّم عملاً حقيقياً وأيها تُقدّم عروضاً فحسب.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -3164,7 +3171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تكلفة الإشراف هي المقياس المهم. "أفضل" وكيل هو ذاك الذي تقرأ موافقاته فعلاً، لا الذي لديه أطول تشغيل مستقل.',
           'التوقعات لـ2027: التخطيط طويل الأمد سيتحسن تدريجياً. الاستقلالية دون إشراف في المهام الحقيقية لن تحدث هذا العام بغض النظر عمّا تُظهره العروض.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -3213,6 +3220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأجهزة:** Apple M5 Max 64 GB ذاكرة موحّدة وجهاز بـ2× NVIDIA RTX 3090 24 GB؛ كلاهما يُشغّل Qwen3-Coder 30B Q4_K_M بارتياح بسياق 32K.',
           '**النماذج:** Qwen3-Coder 30B (الرئيسي)، وGLM-4.7 32B، وGemma 4 27B، وLlama 3.3 70B (الأدوات الاستدعائية الموثوقة الأربعة في مايو 2026).',
           '**شكل الحكم:** إطاران موثوقان في المهام الخمس، وثلاثة موثوقان في 1–2 مهمة لكل منهما، وإطار واحد عديم الفائدة.',
+          '**النطاق العابر للتطبيقات:** يمتد الإطاران الموثوقان إلى ما وراء المحرر عبر خوادم ⁨MCP⁩ (نظام الملفات، وقاعدة بيانات ⁨sqlite⁩، والمتصفح) — ليتحوّل وكيل برمجة أحادي التطبيق إلى وكيل ⁨local-first⁩ متعدد الخطوات يقرأ ويقرر وينفّذ عبر أدوات متعددة دون مغادرة جهازك.',
           '**التكلفة:** 0 دولار في رسوم الواجهة البرمجية. ~0.10–0.30 دولار كهرباء لكل مهمة متعددة الخطوات على جهاز سطح مكتب بوحدة GPU بـ350W (أقل من 0.05 دولار على Mac).',
           '**نمط الإشراف الناجح:** الموافقة التلقائية على أدوات القراءة، والموافقة اليدوية على كل أداة كتابة/صدفة، ومراجعة سجل التدقيق بعد الجلسات الطويلة.',
         ],
@@ -3570,7 +3578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: '2026년 로컬 AI 에이전트: 실제로 작동하는 것과 여전히 실패하는 것',
@@ -3578,9 +3586,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '6가지 로컬 AI 에이전트 스택, 5가지 실제 작업, 30일간의 평가를 진행하였습니다. 두 가지 스택은 작업을 안정적으로 완료합니다. 세 가지는 데모에서 드러나지 않는 방식으로 실패합니다. 하나는 사실상 사용 불가 수준입니다. 이것은 정직한 보고서입니다. 리팩터링, 리서치 작업, 이메일 트리아지, 스크레이프-요약, 버그 수색 등 각 에이전트 구성이 실제로 무엇을 하는지, 실패 사례를 구체적으로 명시하고 감독 비용을 정량화하였습니다.',
     metaDescription:
-      '로컬 AI 에이전트 스택 6개를 실제 작업 5가지로 테스트하였습니다. 2개는 작동, 3개는 데모가 숨기는 방식으로 실패, 1개는 사용 불가. Cline, LangGraph, AutoGPT.',
+      '자율적이고 다단계이며 앱을 넘나드는 로컬 AI 에이전트 스택 6개를 실제 작업 5가지로 테스트하였습니다. 2개는 작동, 3개는 숨겨진 방식으로 실패, 1개는 사용 불가.',
     twitterDescription:
-      '30일간 5가지 실제 작업에서 6개의 로컬 에이전트 스택을 테스트하였습니다. 2개는 성공, 3개는 예상치 못한 방식으로 실패, 1개는 사용 불가. 실제 작업을 완수하는 스택과 데모만 보여주는 스택에 대한 정직한 평가입니다.',
+      '30일간 5가지 실제 작업에서 자율적이고 다단계이며 앱을 넘나드는 로컬 에이전트 스택 6개를 테스트하였습니다. 2개는 성공, 3개는 예상치 못한 방식으로 실패, 1개는 사용 불가. 실제 작업을 완수하는 스택과 데모만 보여주는 스택에 대한 정직한 평가입니다.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen3 32B',
@@ -3623,7 +3631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '감독 비용이 중요한 지표입니다. "최고의" 에이전트는 자율 실행 시간이 가장 긴 것이 아니라, 실제로 승인을 읽게 되는 것입니다.',
           '2027년 전망: 장기 계획이 점진적으로 개선될 것입니다. 실제 작업에서의 무감독 자율성은 데모가 무엇을 보여주든 올해는 실현되지 않을 것입니다.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -3672,6 +3680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**하드웨어:** Apple M5 Max 64 GB 통합 메모리와 2× NVIDIA RTX 3090 24 GB 데스크톱. 두 기기 모두 Qwen3-Coder 30B Q4_K_M을 32K context로 편안하게 실행합니다.',
           '**모델:** Qwen3-Coder 30B(주), GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B(2026년 5월 기준 신뢰할 수 있는 4가지 tool-caller).',
           '**평가 형태:** 2개 스택이 5가지 작업 모두에서 신뢰할 수 있고, 3개 스택은 각 1–2가지 작업에서 신뢰할 수 있으며, 1개 스택은 사용 불가입니다.',
+          '**앱 간 확장 범위:** 신뢰할 수 있는 2개 스택은 MCP 서버(파일시스템, sqlite/데이터베이스, 브라우저)를 통해 에디터를 넘어 확장되어, 단일 앱 코딩 에이전트를 여러 도구에 걸쳐 읽고 판단하고 실행하는 local-first 다단계 에이전트로 바꿔줍니다.',
           '**비용:** API 수수료 0원. 350W GPU 데스크톱에서 다단계 작업당 약 전기 비용 ~150–450원(Mac에서는 75원 미만).',
           '**효과적인 감독 패턴:** 읽기 도구는 자동 승인, 모든 쓰기/셸 도구는 수동 승인, 긴 세션 후 감사 로그 검토.',
         ],
