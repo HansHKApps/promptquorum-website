@@ -9,17 +9,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Easiest Local AI App for Windows, Mac, and Linux (2026)',
-    seoTitle: 'Easiest Local AI 2026: No Terminal, No Config, 3 Options',
+    seoTitle: 'LM Studio on Apple Silicon: Easiest Local AI App 2026',
     intro:
-      'LM Studio is the easiest local AI app in 2026 for Windows, Mac, and Linux — download, install, pull a model, and start chatting in under 10 minutes with no terminal use. This guide covers LM Studio, Jan, and GPT4All as the three no-code options, compares them by setup time and capability, and explains which one to start with depending on your hardware and goals.',
+      'LM Studio is the easiest local AI app in 2026 for Windows, Mac, and Linux — download, install, pull a model, and start chatting in under 10 minutes with no terminal use. It runs fastest on Apple Silicon (M1 through M5), with full Intel Mac and Linux support too. This guide covers LM Studio, Jan, and GPT4All as the three no-code options, compares them by setup time, supported models, and system requirements, and explains which one to start with depending on your hardware and goals.',
     metaDescription:
-      'LM Studio, Jan, GPT4All ranked by ease 2026: install time, model support, hardware needs, and first-run on Windows, Mac, Linux. No terminal required.',
+      'LM Studio on Apple Silicon, Intel Mac, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
     twitterDescription:
-      'Easiest local AI apps in 2026: LM Studio (fastest setup, best UI), Jan (open-source alternative), GPT4All (most beginner-friendly). Windows, Mac, and Linux compared.',
+      'LM Studio on Apple Silicon (M1–M5), Intel Mac, Windows, and Linux: supported models, system requirements, and setup time — ranked against Jan and GPT4All for 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three are free, open-source, and run with no cloud account or internet connection after download.',
           'LM Studio also exposes a local OpenAI-compatible API for developers who want to go further.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -315,6 +315,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'How do I update to a newer model version?',
             a: 'In LM Studio, open the Discover tab, search for the newer model version, download it, and switch to it in the Chat model selector. The old version is not automatically deleted — delete it manually from the Models tab if you need the disk space. In Jan, the Hub shows available updates for models you have downloaded. GPT4All shows new models in its curated model list.',
           },
+          {
+            q: 'Which models does LM Studio support on Apple Silicon Macs?',
+            a: 'LM Studio supports the full GGUF model library on Apple Silicon (M1 through M5), using Metal for GPU acceleration through the unified memory architecture. Recommended starting points: Phi-4 Mini (3.8B) or Llama 3.2 3B on 8 GB Macs, Qwen3 8B on 16 GB+ Macs, Qwen3 14B on 16–32 GB Macs, and Llama 3.3 70B on 32 GB+ Macs (M3 Max, M4 Max, or M5 Max). LM Studio detects available memory automatically and recommends a quantisation level — usually Q4_K_M — that fits your hardware.',
+          },
+          {
+            q: 'What are LM Studio\'s system requirements on Windows, Intel Mac, and Apple Silicon?',
+            a: 'The minimum across all platforms is 8 GB RAM for 3B–7B models. Apple Silicon (M1–M5) runs fastest, using unified memory and Metal acceleration with no separate GPU needed. Intel Mac runs on CPU inference only — there is no Metal GPU acceleration for LLM inference on Intel Macs — so expect roughly 5–10 tokens/sec for a 3B model. Windows needs 8 GB RAM minimum, with an NVIDIA GPU (8 GB+ VRAM) optional for CUDA acceleration on larger models. Linux has the same 8 GB RAM minimum via AppImage or .deb, with CUDA support available if an NVIDIA GPU is present.',
+          },
+          {
+            q: 'Does LM Studio run on Linux?',
+            a: 'Yes. LM Studio ships Linux builds as an AppImage and a .deb package with the same feature set as the Windows and macOS versions: model browser, chat interface, and a Local Server tab for OpenAI-compatible API access. CUDA acceleration works on Linux when an NVIDIA GPU is present; without one, LM Studio falls back to CPU inference, the same as on Windows.',
+          },
+          {
+            q: 'What are the best LM Studio alternatives in 2026?',
+            a: 'Jan is the closest alternative — the same ease of setup, fully open-source under AGPLv3, and Linux AppImage support. GPT4All is the simplest alternative for pure beginners, with a curated model list and a single-window chat interface. For developers who prefer a command-line tool, Ollama is the leading alternative, though it requires terminal use instead of a GUI. All four run the same GGUF model files and are free to use.',
+          },
         ],
       },
       relatedReading: {
@@ -334,12 +350,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Easiest Local AI 2026: No Terminal, No Config, 3 Options',
-      description: 'LM Studio, Jan, GPT4All ranked by ease 2026: install time, model support, hardware needs, and first-run on Windows, Mac, Linux. No terminal required.',
+      headline: 'LM Studio on Apple Silicon: Easiest Local AI App 2026',
+      description: 'LM Studio on Apple Silicon, Intel Mac, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
       url: 'https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'en',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -348,17 +364,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Die einfachste lokale AI-App für Windows, Mac und Linux (2026)',
-    seoTitle: 'Einfachste lokale KI-App 2026: Windows, Mac, Linux',
+    seoTitle: 'LM Studio auf Apple Silicon: Einfachste KI-App 2026',
     intro:
       'LM Studio ist die einfachste lokale AI-App 2026 für Windows, Mac und Linux — Herunterladen, Installieren, ein Modell laden und in unter 10 Minuten chatten, ohne Terminal. Dieser Leitfaden behandelt LM Studio, Jan und GPT4All als die drei No-Code-Optionen, vergleicht sie nach Installationszeit und Funktionalität und erklärt, welche je nach Hardware und Zielen gewählt werden sollte.',
     metaDescription:
-      'LM Studio, Jan, GPT4All nach Einrichtungsaufwand 2026: Installationszeit, Modellauswahl, Hardware-Bedarf auf Windows/Mac/Linux. Kein Terminal nötig.',
+      'LM Studio auf Apple Silicon, Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit. Ohne Terminal. Im Vergleich zu Jan und GPT4All, 2026.',
     twitterDescription:
-      'Einfachste lokale AI-Apps 2026: LM Studio (schnellstes Setup, beste Oberfläche), Jan (Open-Source-Alternative), GPT4All (anfängerfreundlichste). Windows, Mac und Linux verglichen.',
+      'LM Studio auf Apple Silicon (M1–M5), Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit — im Vergleich zu Jan und GPT4All für 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -400,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei sind kostenlos, Open-Source und laufen nach dem Download ohne Cloud-Konto oder Internetverbindung.',
           'LM Studio stellt auch eine lokale OpenAI-kompatible API bereit — für Entwickler, die weitergehen möchten.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -625,6 +641,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Ist LM Studio, Jan oder GPT4All für den deutschen Mittelstand geeignet?',
             a: 'Ja, besonders LM Studio und Jan. KMUs (10–1.000 Mitarbeiter) können diese Tools für interne Prozesse einsetzen: Zusammenfassung von Support-Tickets, Dokumentenverarbeitung, Code-Assistenz für kleine Entwickler-Teams. Installation lokal, keine Abhängigkeit von Cloud-Anbietern, kein Daten-Leak-Risiko. Jan ist beliebt in deutschsprachigen DevOps- und Open-Source-Gemeinschaften. LM Studio bietet die beste Benutzeroberfläche für kleine Teams ohne technischen Support. BSI-Grundschutz und DSGVO-Anforderungen sind einfacher zu erfüllen, wenn die Verarbeitung lokal bleibt. Budget: eine 8 GB oder 16 GB diskrete GPU kostet 200–600 € und verbessert die Geschwindigkeit 5–10x, ist aber nicht erforderlich für den Anfang.',
           },
+          {
+            q: 'Welche Modelle unterstützt LM Studio auf Apple-Silicon-Macs?',
+            a: 'LM Studio unterstützt die gesamte GGUF-Modellbibliothek auf Apple Silicon (M1 bis M5) und nutzt Metal für die GPU-Beschleunigung über die Unified-Memory-Architektur. Empfohlene Einstiegsmodelle: Phi-4 Mini (3,8B) oder Llama 3.2 3B auf Macs mit 8 GB, Qwen3 8B auf Macs mit 16 GB+, Qwen3 14B auf Macs mit 16–32 GB und Llama 3.3 70B auf Macs mit 32 GB+ (M3 Max, M4 Max oder M5 Max). LM Studio erkennt den verfügbaren Speicher automatisch und empfiehlt eine passende Quantisierungsstufe — meist Q4_K_M.',
+          },
+          {
+            q: 'Welche Systemanforderungen hat LM Studio unter Windows, auf Intel-Mac und auf Apple Silicon?',
+            a: 'Das Minimum liegt auf allen Plattformen bei 8 GB RAM für 3B–7B-Modelle. Apple Silicon (M1–M5) läuft am schnellsten dank Unified Memory und Metal-Beschleunigung, ohne separate GPU. Intel-Mac läuft ausschließlich über CPU-Inferenz — es gibt keine Metal-GPU-Beschleunigung für LLM-Inferenz auf Intel-Macs —, daher sind etwa 5–10 Token/Sekunde für ein 3B-Modell realistisch. Windows benötigt mindestens 8 GB RAM, eine NVIDIA-GPU (8 GB+ VRAM) ist optional für CUDA-Beschleunigung bei größeren Modellen. Linux hat dasselbe Minimum von 8 GB RAM über AppImage oder .deb, mit CUDA-Unterstützung, sofern eine NVIDIA-GPU vorhanden ist.',
+          },
+          {
+            q: 'Läuft LM Studio unter Linux?',
+            a: 'Ja. LM Studio bietet Linux-Builds als AppImage und als .deb-Paket mit demselben Funktionsumfang wie die Windows- und macOS-Versionen: Modell-Browser, Chat-Oberfläche und ein Local-Server-Tab für den Zugriff auf eine OpenAI-kompatible API. CUDA-Beschleunigung funktioniert unter Linux, sofern eine NVIDIA-GPU vorhanden ist; ohne GPU verwendet LM Studio CPU-Inferenz, genau wie unter Windows.',
+          },
+          {
+            q: 'Was sind die besten Alternativen zu LM Studio 2026?',
+            a: 'Jan ist die naheliegendste Alternative — gleiche Einrichtungsgeschwindigkeit, vollständig Open-Source unter AGPLv3 und Linux-AppImage-Unterstützung. GPT4All ist die einfachste Alternative für absolute Anfänger, mit kuratierter Modellliste und Einzelfenster-Chat-Oberfläche. Für Entwickler, die ein Befehlszeilentool bevorzugen, ist Ollama die führende Alternative, erfordert aber Terminal-Nutzung statt einer grafischen Oberfläche. Alle vier führen dieselben GGUF-Modelldateien aus und sind kostenlos.',
+          },
         ],
       },
       relatedReading: {
@@ -644,9 +676,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Die einfachste lokale AI-App für Windows, Mac und Linux (2026)',
+      headline: 'LM Studio auf Apple Silicon: Einfachste KI-App 2026',
       description:
-        'Umfassender Leitfaden für die drei einfachsten lokalen AI-Apps 2026: LM Studio, Jan und GPT4All. Vergleich, Einrichtung, Hardware-Anforderungen.',
+        'LM Studio auf Apple Silicon, Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit. Ohne Terminal. Im Vergleich zu Jan und GPT4All, 2026.',
       url: 'https://www.promptquorum.com/de/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'de',
       image: {
@@ -665,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
@@ -715,17 +747,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Application IA locale la plus facile pour Windows, Mac et Linux (2026)',
-    seoTitle: 'IA locale la plus simple 2026 : LM Studio, Jan, GPT4All',
+    seoTitle: 'LM Studio sur Apple Silicon : IA locale la plus facile 2026',
     intro:
       'LM Studio est l\'application IA locale la plus facile en 2026 pour Windows, Mac et Linux — téléchargez, installez, importez un modèle et commencez à discuter en moins de 10 minutes sans terminal. Ce guide couvre LM Studio, Jan et GPT4All comme trois options sans code, les compare par temps de configuration et capacité, et explique laquelle choisir selon votre matériel et objectifs.',
     metaDescription:
-      'LM Studio, Jan, GPT4All : facilité d\'installation comparée 2026. Classés par temps de config, compatibilité modèles et matériel sur Windows, Mac, Linux.',
+      'LM Studio sur Apple Silicon, Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
     twitterDescription:
-      'Applications IA locales 2026 : LM Studio (installation rapide, meilleure interface), Jan (alternative open-source), GPT4All (plus simple pour débuter). Windows, Mac et Linux comparés.',
+      'LM Studio sur Apple Silicon (M1–M5), Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation — face à Jan et GPT4All pour 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -767,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois sont gratuits, open-source, et marchent sans compte cloud ou connexion internet après téléchargement.',
           'LM Studio expose également une API locale compatible OpenAI pour développeurs qui veulent aller plus loin.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -1025,6 +1057,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Quelle est la différence entre CPU et GPU dans le contexte des applications locales ?',
             a: 'CPU = plus lent, gratuit. GPU = 5–10x plus rapide, coûteux. Pour matériel bas de gamme, CPU fonctionne bien. Pour matériel moyen-à-élevé, GPU améliore considérablement les temps de réponse. Toutes les trois supportent les deux.',
           },
+          {
+            q: 'Quels modèles LM Studio prend-il en charge sur les Mac Apple Silicon ?',
+            a: 'LM Studio prend en charge toute la bibliothèque de modèles GGUF sur Apple Silicon (M1 à M5), en utilisant Metal pour l\'accélération GPU via l\'architecture de mémoire unifiée. Modèles de départ recommandés : Phi-4 Mini (3,8B) ou Llama 3.2 3B sur les Mac avec 8 Go, Qwen3 8B sur les Mac avec 16 Go et plus, Qwen3 14B sur les Mac avec 16 à 32 Go, et Llama 3.3 70B sur les Mac avec 32 Go et plus (M3 Max, M4 Max ou M5 Max). LM Studio détecte automatiquement la mémoire disponible et recommande un niveau de quantification adapté — généralement Q4_K_M.',
+          },
+          {
+            q: 'Quelle est la configuration requise pour LM Studio sur Windows, Mac Intel et Apple Silicon ?',
+            a: 'Le minimum sur les trois plateformes est de 8 Go de RAM pour les modèles 3B à 7B. Apple Silicon (M1–M5) est le plus rapide, grâce à la mémoire unifiée et à l\'accélération Metal, sans GPU séparé nécessaire. Mac Intel fonctionne uniquement en inférence CPU — il n\'y a pas d\'accélération GPU Metal pour l\'inférence LLM sur Mac Intel —, comptez donc environ 5 à 10 tokens/seconde pour un modèle 3B. Windows nécessite au minimum 8 Go de RAM, avec une GPU NVIDIA (8 Go+ de VRAM) optionnelle pour l\'accélération CUDA sur les modèles plus grands. Linux a le même minimum de 8 Go de RAM via AppImage ou .deb, avec support CUDA si une GPU NVIDIA est présente.',
+          },
+          {
+            q: 'LM Studio fonctionne-t-il sous Linux ?',
+            a: 'Oui. LM Studio propose des versions Linux sous forme d\'AppImage et de paquet .deb, avec les mêmes fonctionnalités que les versions Windows et macOS : navigateur de modèles, interface de chat, et un onglet Local Server pour l\'accès à une API compatible OpenAI. L\'accélération CUDA fonctionne sous Linux si une GPU NVIDIA est présente ; sans GPU, LM Studio utilise l\'inférence CPU, comme sous Windows.',
+          },
+          {
+            q: 'Quelles sont les meilleures alternatives à LM Studio en 2026 ?',
+            a: 'Jan est l\'alternative la plus proche — même rapidité d\'installation, entièrement open-source sous licence AGPLv3, et support AppImage pour Linux. GPT4All est l\'alternative la plus simple pour les débutants purs, avec une liste de modèles sélectionnés et une interface de chat à fenêtre unique. Pour les développeurs qui préfèrent un outil en ligne de commande, Ollama est l\'alternative de référence, mais nécessite l\'utilisation du terminal plutôt qu\'une interface graphique. Les quatre utilisent les mêmes fichiers de modèles GGUF et sont gratuits.',
+          },
         ],
       },
       relatedReading: {
@@ -1044,9 +1092,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Application IA locale la plus facile pour Windows, Mac et Linux (2026)',
+      headline: 'LM Studio sur Apple Silicon : IA locale la plus facile 2026',
       description:
-        'Guide complet des trois applications IA locales les plus faciles en 2026 : LM Studio, Jan et GPT4All. Comparaison, configuration, recommandations matérielles.',
+        'LM Studio sur Apple Silicon, Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
       url: 'https://www.promptquorum.com/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'fr',
       image: {
@@ -1065,7 +1113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       educationalLevel: 'Beginner',
       'proficiencyLevel': 'Beginner',
       about: [
@@ -1111,17 +1159,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '最も簡単なローカルAIアプリ Windows、Mac、Linux (2026)',
-    seoTitle: '最も簡単なローカルAI 2026：LM Studio・Jan・GPT4Allを5分で導入する方法',
+    seoTitle: 'LM Studio × Apple Silicon：最も簡単なローカルAI 2026',
     intro:
       '2026年、LM Studioは最も簡単なローカルAIアプリです — Windows、Mac、Linuxで使えます。ダウンロード、インストール、モデルをロード、わずか10分以内でチャットを開始できます。このガイドは、LM Studio、Jan、GPT4Allの3つのターミナル不要なオプションをカバーし、セットアップ時間と機能で比較して、ハードウェアと目標に基づいてどれを選ぶべきかを説明します。',
     metaDescription:
-      '2026年最も簡単なローカルAIアプリ比較：LM Studio・Jan・GPT4All。各アプリの導入は5分以内。ターミナル不要、設定ファイル不要。Windows・Mac・Linux全対応。',
+      'LM StudioのApple Silicon、Intel Mac、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
     twitterDescription:
-      '2026年ローカルAIアプリ：LM Studio（高速セットアップ、最高UI）、Jan（オープンソース代替）、GPT4All（初心者向け）。Windows、Mac、Linux比較。',
+      'LM Studio on Apple Silicon（M1〜M5）、Intel Mac、Windows、Linux：サポートモデル、システム要件、セットアップ時間 — Jan・GPT4Allとの比較、2026年。',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -1163,7 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3つすべてフリー、オープンソース、ダウンロード後クラウドアカウントなしで実行。',
           'LM StudioはローカルOpenAI互換API提供 — さらに進みたい開発者向け。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -1421,6 +1469,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'ローカルAIアプリの文脈でCPU対GPUの違いは？',
             a: 'CPU = 遅い、フリー。GPU = 5–10倍高速、高コスト。低スペックハードウェア向けCPU動作良好。ミッドからハイエンドハードウェア向けGPUはレスポンス時間を大幅改善。3つすべてがサポート。',
           },
+          {
+            q: 'LM StudioはApple SiliconのMacでどのモデルをサポートしていますか？',
+            a: 'LM StudioはApple Silicon（M1〜M5）上でGGUFモデルライブラリ全体をサポートし、統合メモリアーキテクチャを通じてMetalによるGPUアクセラレーションを使用します。推奨される最初のモデル：8GBのMacではPhi-4 Mini（3.8B）またはLlama 3.2 3B、16GB以上のMacではQwen3 8B、16〜32GBのMacではQwen3 14B、32GB以上のMac（M3 Max、M4 Max、M5 Max）ではLlama 3.3 70B。LM Studioは利用可能なメモリを自動検出し、ハードウェアに適した量子化レベル（通常はQ4_K_M）を推奨します。',
+          },
+          {
+            q: 'Windows、Intel Mac、Apple SiliconでのLM Studioのシステム要件は？',
+            a: 'すべてのプラットフォームで最低要件は3B〜7BモデルでRAM 8GB。Apple Silicon（M1〜M5）は統合メモリとMetalアクセラレーションにより最速で動作し、専用GPUは不要。Intel MacはCPU推論のみで動作 — Intel MacにはLLM推論用のMetal GPUアクセラレーションが存在しないため、3Bモデルで毎秒約5〜10トークン程度が目安。Windowsは最低RAM 8GBが必要で、大きいモデルのCUDAアクセラレーションにはNVIDIA GPU（VRAM 8GB以上）が任意で使用可能。LinuxもAppImageまたは.deb経由で同じくRAM 8GBが最低要件で、NVIDIA GPUがあればCUDAサポートが利用可能。',
+          },
+          {
+            q: 'LM StudioはLinuxで動作しますか？',
+            a: 'はい。LM StudioはWindows版・macOS版と同じ機能セット（モデルブラウザ、チャットインターフェース、OpenAI互換API用のLocal Serverタブ）を持つLinux版をAppImageと.debパッケージとして提供しています。NVIDIA GPUがあればLinuxでもCUDAアクセラレーションが動作し、GPUがない場合はWindowsと同様にCPU推論にフォールバックします。',
+          },
+          {
+            q: '2026年のLM Studioの代替として最適なアプリは？',
+            a: 'Janが最も近い代替アプリです — 同等のセットアップの手軽さ、AGPLv3ライセンスの完全なオープンソース、Linux AppImageサポート。GPT4Allは純粋な初心者向けの最もシンプルな代替アプリで、厳選されたモデルリストと単一ウィンドウのチャットインターフェースを備えています。コマンドラインツールを好む開発者にはOllamaが主要な代替アプリですが、GUIではなくターミナル操作が必要です。この4つはすべて同じGGUFモデルファイルを実行でき、無料で利用できます。',
+          },
         ],
       },
       relatedReading: {
@@ -1440,9 +1504,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '最も簡単なローカルAIアプリ Windows、Mac、Linux (2026)',
+      headline: 'LM Studio × Apple Silicon：最も簡単なローカルAI 2026',
       description:
-        '2026年最も簡単なローカルAIアプリの完全ガイド：LM Studio、Jan、GPT4All。比較、セットアップ、ハードウェア推奨。',
+        'LM StudioのApple Silicon、Intel Mac、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
       url: 'https://www.promptquorum.com/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ja',
       image: {
@@ -1461,7 +1525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
@@ -1511,17 +1575,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
-    seoTitle: '2026年最简单本地AI：LM Studio、Jan、GPT4All安装全攻略 Windows/Mac/Linux',
+    seoTitle: 'LM Studio × Apple Silicon：2026年最简单本地AI应用',
     intro:
       '2026年，LM Studio是Windows、Mac、Linux上最简单的本地AI应用。下载、安装、加载模型，10分钟内开始聊天，无需终端。本指南涵盖LM Studio、Jan和GPT4All这三个无代码选项，按设置时间和功能比较它们，并根据你的硬件和目标解释选择哪一个。',
     metaDescription:
-      '2026年最简单的本地AI应用对比：LM Studio、Jan、GPT4All均可在5分钟内完成安装，无需终端或配置文件。Windows、Mac、Linux全平台支持，适合零基础用户。',
+      'LM Studio在Apple Silicon、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
     twitterDescription:
-      '2026年本地AI应用：LM Studio（快速设置、最佳UI）、Jan（开源替代品）、GPT4All（初学者友好）。Windows、Mac、Linux对比。',
+      'LM Studio在Apple Silicon（M1–M5）、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间 — 对比Jan和GPT4All，2026年版。',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -1563,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三者都免费、开源、下载后无云账户或互联网连接即可运行。',
           'LM Studio也提供本地OpenAI兼容API — 想进一步发展的开发者。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -1821,6 +1885,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '本地AI应用环境中CPU对GPU的区别是什么？',
             a: 'CPU = 慢、免费。GPU = 5–10倍快、昂贵。低端硬件CPU工作良好。中到高端硬件GPU大幅改善响应时间。三者都支持。',
           },
+          {
+            q: 'LM Studio在Apple Silicon Mac上支持哪些模型？',
+            a: 'LM Studio在Apple Silicon（M1到M5）上支持完整的GGUF模型库，通过统一内存架构使用Metal进行GPU加速。推荐的入门模型：8GB内存的Mac使用Phi-4 Mini（3.8B）或Llama 3.2 3B，16GB以上的Mac使用Qwen3 8B，16–32GB的Mac使用Qwen3 14B，32GB以上的Mac（M3 Max、M4 Max或M5 Max）使用Llama 3.3 70B。LM Studio会自动检测可用内存，并推荐适合硬件的量化级别（通常是Q4_K_M）。',
+          },
+          {
+            q: 'LM Studio在Windows、Intel Mac和Apple Silicon上的系统要求是什么？',
+            a: '三个平台的最低要求都是3B–7B模型需要8GB内存。Apple Silicon（M1–M5）运行最快，得益于统一内存和Metal加速，无需独立GPU。Intel Mac仅通过CPU推理运行 — Intel Mac没有用于LLM推理的Metal GPU加速 — 因此3B模型大约为每秒5–10个token。Windows最低需要8GB内存，NVIDIA GPU（8GB以上显存）为可选项，用于更大模型的CUDA加速。Linux通过AppImage或.deb安装，同样最低需要8GB内存，若有NVIDIA GPU则支持CUDA。',
+          },
+          {
+            q: 'LM Studio支持Linux吗？',
+            a: '支持。LM Studio提供AppImage和.deb格式的Linux版本，功能集与Windows和macOS版本相同：模型浏览器、聊天界面，以及用于访问OpenAI兼容API的Local Server标签页。若有NVIDIA GPU，Linux上的CUDA加速可正常工作；若没有GPU，LM Studio会回退到CPU推理，与Windows上一致。',
+          },
+          {
+            q: '2026年LM Studio的最佳替代品是什么？',
+            a: 'Jan是最接近的替代品 — 安装同样简便，采用AGPLv3许可证完全开源，并支持Linux AppImage。GPT4All是纯新手的最简单替代品，提供精选模型列表和单窗口聊天界面。对于偏好命令行工具的开发者，Ollama是主要替代品，但需要使用终端而非图形界面。这四款应用都运行相同的GGUF模型文件，且都是免费的。',
+          },
         ],
       },
       relatedReading: {
@@ -1840,9 +1920,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
+      headline: 'LM Studio × Apple Silicon：2026年最简单本地AI应用',
       description:
-        '2026年最简单的本地AI应用完整指南：LM Studio、Jan、GPT4All。对比、设置、硬件推荐。',
+        'LM Studio在Apple Silicon、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'zh',
       image: {
@@ -1861,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
@@ -1911,17 +1991,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'La aplicación de IA local más fácil para Windows, Mac y Linux (2026)',
-    seoTitle: 'IA local más fácil 2026: sin terminal, 3 opciones',
+    seoTitle: 'LM Studio en Apple Silicon: la IA local más fácil 2026',
     intro:
       'LM Studio es la aplicación de IA local más fácil en 2026 para Windows, Mac y Linux — descárgala, instálala, carga un modelo y empieza a chatear en menos de 10 minutos sin usar la terminal. Esta guía cubre LM Studio, Jan y GPT4All como las tres opciones sin código, las compara por tiempo de configuración y capacidad, y explica cuál elegir según tu hardware y objetivos.',
     metaDescription:
-      'LM Studio, Jan y GPT4All clasificados por facilidad en 2026: tiempo de instalación, compatibilidad, hardware y primera ejecución en Windows, Mac y Linux.',
+      'LM Studio en Apple Silicon, Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
     twitterDescription:
-      'Las aplicaciones de IA local más fáciles en 2026: LM Studio (configuración más rápida, mejor interfaz), Jan (alternativa de código abierto), GPT4All (más amigable para principiantes). Windows, Mac y Linux comparados.',
+      'LM Studio en Apple Silicon (M1–M5), Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración — comparado con Jan y GPT4All para 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -1963,7 +2043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Las tres son gratuitas, de código abierto y se ejecutan sin cuenta en la nube ni conexión a internet tras la descarga.',
           'LM Studio también expone una API local compatible con OpenAI para desarrolladores que quieran ir más lejos.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -2217,6 +2297,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Cómo actualizo a una versión más nueva del modelo?',
             a: 'En LM Studio, abre la pestaña Discover, busca la versión más nueva del modelo, descárgala y cambia a ella en el selector de modelos de Chat. La versión antigua no se elimina automáticamente — elimínala manualmente desde la pestaña Models si necesitas espacio en disco. En Jan, el Hub muestra las actualizaciones disponibles para los modelos que has descargado. GPT4All muestra los nuevos modelos en su lista de modelos seleccionados.',
           },
+          {
+            q: '¿Qué modelos admite LM Studio en Mac con Apple Silicon?',
+            a: 'LM Studio admite toda la biblioteca de modelos GGUF en Apple Silicon (de M1 a M5), usando Metal para la aceleración por GPU a través de la arquitectura de memoria unificada. Puntos de partida recomendados: Phi-4 Mini (3.8B) o Llama 3.2 3B en Mac con 8 GB, Qwen3 8B en Mac con 16 GB o más, Qwen3 14B en Mac con 16–32 GB, y Llama 3.3 70B en Mac con 32 GB o más (M3 Max, M4 Max o M5 Max). LM Studio detecta automáticamente la memoria disponible y recomienda un nivel de cuantización adecuado — normalmente Q4_K_M.',
+          },
+          {
+            q: '¿Cuáles son los requisitos del sistema de LM Studio en Windows, Mac Intel y Apple Silicon?',
+            a: 'El mínimo en las tres plataformas es 8 GB de RAM para modelos de 3B–7B. Apple Silicon (M1–M5) es el más rápido, gracias a la memoria unificada y la aceleración Metal, sin necesidad de GPU separada. Mac Intel funciona solo mediante inferencia por CPU — no existe aceleración GPU Metal para inferencia de LLM en Mac Intel —, así que espera entre 5 y 10 tokens/seg para un modelo de 3B. Windows necesita un mínimo de 8 GB de RAM, con una GPU NVIDIA (8 GB+ de VRAM) opcional para aceleración CUDA en modelos más grandes. Linux tiene el mismo mínimo de 8 GB de RAM vía AppImage o .deb, con soporte CUDA si hay una GPU NVIDIA presente.',
+          },
+          {
+            q: '¿LM Studio funciona en Linux?',
+            a: 'Sí. LM Studio ofrece compilaciones para Linux como AppImage y como paquete .deb, con el mismo conjunto de funciones que las versiones de Windows y macOS: navegador de modelos, interfaz de chat y una pestaña Local Server para acceso a una API compatible con OpenAI. La aceleración CUDA funciona en Linux cuando hay una GPU NVIDIA presente; sin GPU, LM Studio recurre a la inferencia por CPU, igual que en Windows.',
+          },
+          {
+            q: '¿Cuáles son las mejores alternativas a LM Studio en 2026?',
+            a: 'Jan es la alternativa más cercana — la misma facilidad de instalación, completamente de código abierto bajo AGPLv3, y soporte de AppImage para Linux. GPT4All es la alternativa más simple para principiantes puros, con una lista de modelos seleccionados y una interfaz de chat de una sola ventana. Para desarrolladores que prefieren una herramienta de línea de comandos, Ollama es la alternativa líder, aunque requiere el uso de terminal en lugar de una interfaz gráfica. Las cuatro ejecutan los mismos archivos de modelo GGUF y son gratuitas.',
+          },
         ],
       },
       relatedReading: {
@@ -2236,12 +2332,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'La aplicación de IA local más fácil para Windows, Mac y Linux (2026)',
-      description: 'LM Studio, Jan, GPT4All clasificados por facilidad en 2026: tiempo de instalación, compatibilidad de modelos, requisitos de hardware y primera ejecución en Windows, Mac, Linux. No se requiere terminal.',
+      headline: 'LM Studio en Apple Silicon: la IA local más fácil 2026',
+      description: 'LM Studio en Apple Silicon, Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'es',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2250,17 +2346,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'O aplicativo de IA local mais fácil para Windows, Mac e Linux (2026)',
-    seoTitle: 'IA local mais fácil 2026: sem terminal, 3 opções',
+    seoTitle: 'LM Studio no Apple Silicon: IA local mais fácil 2026',
     intro:
       'O LM Studio é o aplicativo de IA local mais fácil em 2026 para Windows, Mac e Linux — baixe, instale, carregue um modelo e comece a conversar em menos de 10 minutos sem usar o terminal. Este guia cobre LM Studio, Jan e GPT4All como as três opções sem código, compara-os por tempo de configuração e capacidade, e explica qual escolher conforme o seu hardware e objetivos.',
     metaDescription:
-      'LM Studio, Jan e GPT4All classificados por facilidade em 2026: tempo de instalação, compatibilidade, hardware e primeira execução no Windows, Mac e Linux.',
+      'LM Studio no Apple Silicon, Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
     twitterDescription:
-      'Os aplicativos de IA local mais fáceis em 2026: LM Studio (configuração mais rápida, melhor interface), Jan (alternativa de código aberto), GPT4All (mais amigável para iniciantes). Windows, Mac e Linux comparados.',
+      'LM Studio no Apple Silicon (M1–M5), Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração — comparado com Jan e GPT4All para 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -2302,7 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os três são gratuitos, de código aberto e rodam sem conta na nuvem nem conexão à internet após o download.',
           'O LM Studio também expõe uma API local compatível com OpenAI para desenvolvedores que queiram ir mais longe.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -2556,6 +2652,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Como atualizo para uma versão mais nova do modelo?',
             a: 'No LM Studio, abra a aba Discover, busque a versão mais nova do modelo, baixe-a e mude para ela no seletor de modelos do Chat. A versão antiga não é excluída automaticamente — exclua-a manualmente pela aba Models se precisar do espaço em disco. No Jan, o Hub mostra as atualizações disponíveis para os modelos que você baixou. O GPT4All mostra os novos modelos na sua lista de modelos selecionados.',
           },
+          {
+            q: 'Quais modelos o LM Studio suporta em Macs com Apple Silicon?',
+            a: 'O LM Studio suporta toda a biblioteca de modelos GGUF no Apple Silicon (de M1 a M5), usando o Metal para aceleração por GPU por meio da arquitetura de memória unificada. Pontos de partida recomendados: Phi-4 Mini (3,8B) ou Llama 3.2 3B em Macs com 8 GB, Qwen3 8B em Macs com 16 GB ou mais, Qwen3 14B em Macs com 16–32 GB, e Llama 3.3 70B em Macs com 32 GB ou mais (M3 Max, M4 Max ou M5 Max). O LM Studio detecta automaticamente a memória disponível e recomenda um nível de quantização adequado — geralmente Q4_K_M.',
+          },
+          {
+            q: 'Quais são os requisitos de sistema do LM Studio no Windows, no Mac Intel e no Apple Silicon?',
+            a: 'O mínimo em todas as plataformas é 8 GB de RAM para modelos de 3B–7B. O Apple Silicon (M1–M5) roda mais rápido, graças à memória unificada e à aceleração Metal, sem precisar de GPU separada. O Mac Intel funciona apenas por inferência via CPU — não há aceleração de GPU Metal para inferência de LLM em Macs Intel —, então espere cerca de 5 a 10 tokens/seg para um modelo de 3B. O Windows precisa de no mínimo 8 GB de RAM, com uma GPU NVIDIA (8 GB+ de VRAM) opcional para aceleração CUDA em modelos maiores. O Linux tem o mesmo mínimo de 8 GB de RAM via AppImage ou .deb, com suporte a CUDA se houver uma GPU NVIDIA presente.',
+          },
+          {
+            q: 'O LM Studio roda no Linux?',
+            a: 'Sim. O LM Studio oferece builds para Linux como AppImage e como pacote .deb, com o mesmo conjunto de recursos das versões Windows e macOS: navegador de modelos, interface de chat e uma aba Local Server para acesso a uma API compatível com OpenAI. A aceleração CUDA funciona no Linux quando há uma GPU NVIDIA presente; sem GPU, o LM Studio recorre à inferência via CPU, assim como no Windows.',
+          },
+          {
+            q: 'Quais são as melhores alternativas ao LM Studio em 2026?',
+            a: 'O Jan é a alternativa mais próxima — a mesma facilidade de instalação, totalmente de código aberto sob AGPLv3, e suporte a AppImage no Linux. O GPT4All é a alternativa mais simples para iniciantes puros, com uma lista de modelos selecionados e uma interface de chat de janela única. Para desenvolvedores que preferem uma ferramenta de linha de comando, o Ollama é a principal alternativa, embora exija o uso do terminal em vez de uma interface gráfica. Os quatro rodam os mesmos arquivos de modelo GGUF e são gratuitos.',
+          },
         ],
       },
       relatedReading: {
@@ -2575,12 +2687,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'O aplicativo de IA local mais fácil para Windows, Mac e Linux (2026)',
-      description: 'LM Studio, Jan, GPT4All classificados por facilidade em 2026: tempo de instalação, compatibilidade de modelos, requisitos de hardware e primeira execução no Windows, Mac, Linux. Nenhum terminal é necessário.',
+      headline: 'LM Studio no Apple Silicon: IA local mais fácil 2026',
+      description: 'LM Studio no Apple Silicon, Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2589,17 +2701,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'أسهل تطبيق ذكاء اصطناعي محلي لنظامي ⁨Windows⁩ و⁨Mac⁩ و⁨Linux⁩ (⁨2026⁩)',
-    seoTitle: 'أسهل تطبيق ذكاء اصطناعي محلي ⁨2026⁩: ⁨LM Studio⁩ أو ⁨Jan⁩؟',
+    seoTitle: 'LM Studio على Apple Silicon: أسهل ذكاء اصطناعي محلي ⁨2026⁩',
     intro:
       'يُعدّ تطبيق LM Studio أسهل تطبيق للذكاء الاصطناعي المحلي في 2026 لأنظمة Windows وMac وLinux — قم بتنزيله وتثبيته وتحميل نموذج والبدء بالدردشة في أقل من 10 دقائق دون الحاجة إلى أي طرفية. يغطي هذا الدليل تطبيقات LM Studio وJan وGPT4All بوصفها الخيارات الثلاثة التي لا تستلزم أي برمجة، ويقارنها من حيث وقت الإعداد والقدرات، ويوضح أيّها تختار بناءً على أجهزتك وأهدافك.',
     metaDescription:
-      'LM Studio جاهز في أقل من 10 دقائق بدون طرفية. مقارنة LM Studio وJan وGPT4All: وقت التثبيت ودعم النماذج ومتطلبات الأجهزة على Windows وMac وLinux.',
+      'LM Studio على Apple Silicon وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد. بلا طرفية. مقارنةً بـJan وGPT4All، 2026.',
     twitterDescription:
-      'أسهل تطبيقات الذكاء الاصطناعي المحلي في 2026: LM Studio (أسرع إعداد، أفضل واجهة)، Jan (بديل مفتوح المصدر)، GPT4All (الأكثر سهولةً للمبتدئين). Windows وMac وLinux مقارنةً.',
+      'LM Studio على Apple Silicon (M1–M5) وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد — مقارنةً بـJan وGPT4All لعام 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -2641,7 +2753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الثلاثة مجانية ومفتوحة المصدر وتعمل بدون حساب سحابي أو اتصال بالإنترنت بعد التنزيل.',
           'يعرض تطبيق LM Studio أيضاً واجهة برمجية محلية متوافقة مع OpenAI للمطورين الذين يريدون المضي أبعد.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -2895,6 +3007,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'كيف أُحدّث إلى إصدار أحدث من النموذج؟',
             a: 'في LM Studio، افتح تبويب Discover، وابحث عن الإصدار الأحدث من النموذج، ونزّله وانتقل إليه في محدد النماذج بتبويب Chat. لا يُحذف الإصدار القديم تلقائياً — احذفه يدوياً من تبويب Models إذا احتجت مساحة قرص. في Jan، يعرض Hub التحديثات المتاحة للنماذج التي نزّلتها. تعرض GPT4All النماذج الجديدة في قائمة النماذج المنتقاة.',
           },
+          {
+            q: 'ما النماذج التي يدعمها LM Studio على أجهزة Mac ذات معالج Apple Silicon؟',
+            a: 'يدعم LM Studio مكتبة نماذج GGUF كاملةً على معالجات Apple Silicon (من M1 إلى M5)، مستخدماً Metal لتسريع GPU عبر بنية الذاكرة الموحدة. نقاط البداية الموصى بها: Phi-4 Mini (بحجم 3.8B) أو Llama 3.2 3B على أجهزة Mac بذاكرة 8 جيجابايت، وQwen3 8B على الأجهزة بذاكرة 16 جيجابايت فأكثر، وQwen3 14B على الأجهزة بذاكرة 16–32 جيجابايت، وLlama 3.3 70B على الأجهزة بذاكرة 32 جيجابايت فأكثر (M3 Max أو M4 Max أو M5 Max). يكتشف LM Studio الذاكرة المتاحة تلقائياً ويوصي بمستوى تكميم مناسب — عادةً Q4_K_M.',
+          },
+          {
+            q: 'ما متطلبات النظام لتشغيل LM Studio على Windows وMac Intel وApple Silicon؟',
+            a: 'الحد الأدنى على جميع المنصات هو 8 جيجابايت RAM للنماذج من 3B إلى 7B. تعمل أجهزة Apple Silicon (M1–M5) بأسرع أداء بفضل الذاكرة الموحدة وتسريع Metal، دون حاجة إلى GPU منفصلة. يعمل Mac Intel فقط عبر الاستدلال بواسطة CPU — إذ لا يوجد تسريع GPU من نوع Metal للاستدلال بنماذج اللغة على أجهزة Mac Intel — لذا تتوقع نحو 5 إلى 10 رموز في الثانية لنموذج 3B. يحتاج Windows إلى 8 جيجابايت RAM كحد أدنى، مع إمكانية استخدام GPU من NVIDIA (بذاكرة VRAM 8 جيجابايت فأكثر) اختيارياً لتسريع CUDA على النماذج الأكبر. يتطلب Linux نفس الحد الأدنى وهو 8 جيجابايت RAM عبر AppImage أو .deb، مع دعم CUDA إذا كانت هناك GPU من NVIDIA.',
+          },
+          {
+            q: 'هل يعمل LM Studio على Linux؟',
+            a: 'نعم. يوفر LM Studio إصدارات لينكس بصيغة AppImage وحزمة .deb، بنفس مجموعة الميزات الموجودة في إصداري Windows وmacOS: متصفح النماذج، وواجهة الدردشة، وتبويب Local Server للوصول إلى واجهة برمجية متوافقة مع OpenAI. يعمل تسريع CUDA على Linux عند وجود GPU من NVIDIA؛ وبدون GPU، يعتمد LM Studio على الاستدلال بواسطة CPU، تماماً كما في Windows.',
+          },
+          {
+            q: 'ما أفضل بدائل LM Studio في عام 2026؟',
+            a: 'يُعد Jan أقرب بديل — بنفس سهولة الإعداد، ومفتوح المصدر بالكامل بموجب رخصة AGPLv3، ويدعم AppImage على Linux. أما GPT4All فهو البديل الأبسط للمبتدئين تماماً، بقائمة نماذج منتقاة وواجهة دردشة بنافذة واحدة. أما بالنسبة للمطورين الذين يفضلون أداة سطر الأوامر، فإن Ollama هو البديل الرائد، رغم أنه يتطلب استخدام الطرفية بدلاً من واجهة رسومية. تشغّل التطبيقات الأربعة جميعها نفس ملفات نماذج GGUF وهي مجانية.',
+          },
         ],
       },
       relatedReading: {
@@ -2914,12 +3042,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'أسهل تطبيق ذكاء اصطناعي محلي لنظامي Windows وMac وLinux (2026)',
-      description: 'LM Studio وJan وGPT4All مرتّبةً حسب السهولة في 2026: وقت التثبيت وتوافق النماذج ومتطلبات الأجهزة والتشغيل الأول على Windows وMac وLinux. لا طرفية مطلوبة.',
+      headline: 'LM Studio على Apple Silicon: أسهل ذكاء اصطناعي محلي 2026',
+      description: 'LM Studio على Apple Silicon وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد. بلا طرفية. مقارنةً بـJan وGPT4All، 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2928,17 +3056,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Windows, Mac, Linux에서 가장 쉬운 로컬 AI 앱 (2026)',
-    seoTitle: '가장 쉬운 로컬 AI 앱 2026: 터미널 없이 3가지 선택지',
+    seoTitle: 'LM Studio × Apple Silicon: 가장 쉬운 로컬 AI 2026',
     intro:
       'LM Studio는 2026년 Windows, Mac, Linux에서 가장 쉬운 로컬 AI 앱입니다 — 다운로드하고, 설치하고, 모델을 불러와 터미널 없이 10분 이내에 채팅을 시작할 수 있습니다. 이 가이드에서는 코드 없이 사용할 수 있는 세 가지 옵션인 LM Studio, Jan, GPT4All을 다루며, 설정 시간과 기능을 비교하고 하드웨어와 목표에 따라 어떤 것을 선택할지 설명합니다.',
     metaDescription:
-      'LM Studio, Jan, GPT4All을 2026년 사용 편의성으로 비교: 설치 시간, 호환성, 하드웨어, Windows·Mac·Linux에서의 첫 실행.',
+      'LM Studio의 Apple Silicon, Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간. 터미널 불필요. Jan, GPT4All과 비교, 2026년.',
     twitterDescription:
-      '2026년 가장 쉬운 로컬 AI 앱 비교: LM Studio (가장 빠른 설정, 최고의 인터페이스), Jan (오픈소스 대안), GPT4All (초보자 친화적). Windows, Mac, Linux 비교.',
+      'LM Studio의 Apple Silicon(M1–M5), Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간 — Jan, GPT4All과 비교한 2026년판.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Qwen3 8B',
@@ -2980,7 +3108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 가지 모두 무료, 오픈소스이며, 다운로드 후에는 클라우드 계정이나 인터넷 연결 없이 실행됩니다.',
           'LM Studio는 더 나아가고 싶은 개발자를 위해 OpenAI 호환 로컬 API도 제공합니다.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -3234,6 +3362,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '최신 버전의 모델로 업데이트하려면 어떻게 해야 하나요?',
             a: 'LM Studio에서는 Discover 탭을 열고, 최신 버전의 모델을 검색하고, 다운로드한 후 Chat의 모델 선택기에서 전환하십시오. 이전 버전은 자동으로 삭제되지 않습니다 — 디스크 공간이 필요하다면 Models 탭에서 수동으로 삭제하십시오. Jan에서는 Hub가 다운로드한 모델에 대한 가용 업데이트를 표시합니다. GPT4All은 선별된 모델 목록에 새 모델을 표시합니다.',
           },
+          {
+            q: 'LM Studio는 Apple Silicon Mac에서 어떤 모델을 지원하나요?',
+            a: 'LM Studio는 통합 메모리 아키텍처를 통한 Metal GPU 가속을 활용하여 Apple Silicon(M1~M5)에서 전체 GGUF 모델 라이브러리를 지원합니다. 권장 시작 모델: 8GB Mac에는 Phi-4 Mini(3.8B) 또는 Llama 3.2 3B, 16GB 이상 Mac에는 Qwen3 8B, 16~32GB Mac에는 Qwen3 14B, 32GB 이상 Mac(M3 Max, M4 Max, M5 Max)에는 Llama 3.3 70B. LM Studio는 사용 가능한 메모리를 자동으로 감지하고 하드웨어에 맞는 양자화 수준(보통 Q4_K_M)을 추천합니다.',
+          },
+          {
+            q: 'Windows, Intel Mac, Apple Silicon에서 LM Studio의 시스템 요구 사항은 무엇인가요?',
+            a: '모든 플랫폼에서 최소 요구 사항은 3B~7B 모델 기준 RAM 8GB입니다. Apple Silicon(M1~M5)은 통합 메모리와 Metal 가속 덕분에 별도 GPU 없이도 가장 빠르게 실행됩니다. Intel Mac은 CPU 추론으로만 작동합니다 — Intel Mac에는 LLM 추론용 Metal GPU 가속이 없으므로 3B 모델 기준 초당 약 5~10 토큰을 예상하십시오. Windows는 최소 RAM 8GB가 필요하며, 더 큰 모델의 CUDA 가속을 위해 NVIDIA GPU(VRAM 8GB 이상)를 선택적으로 사용할 수 있습니다. Linux도 AppImage 또는 .deb를 통해 동일한 최소 RAM 8GB가 필요하며, NVIDIA GPU가 있으면 CUDA를 지원합니다.',
+          },
+          {
+            q: 'LM Studio는 Linux에서 실행되나요?',
+            a: '예. LM Studio는 Windows 및 macOS 버전과 동일한 기능 세트 — 모델 브라우저, 채팅 인터페이스, OpenAI 호환 API 접근을 위한 Local Server 탭 — 를 갖춘 Linux 빌드를 AppImage와 .deb 패키지로 제공합니다. NVIDIA GPU가 있으면 Linux에서도 CUDA 가속이 작동하며, GPU가 없으면 Windows와 마찬가지로 CPU 추론으로 대체됩니다.',
+          },
+          {
+            q: '2026년 LM Studio의 가장 좋은 대안은 무엇인가요?',
+            a: 'Jan이 가장 가까운 대안입니다 — 동일한 설치 편의성, AGPLv3 하의 완전한 오픈소스, Linux AppImage 지원을 갖추고 있습니다. GPT4All은 순수 초보자를 위한 가장 단순한 대안으로, 선별된 모델 목록과 단일 창 채팅 인터페이스를 제공합니다. 명령줄 도구를 선호하는 개발자에게는 Ollama가 주요 대안이지만, GUI 대신 터미널 사용이 필요합니다. 네 가지 모두 동일한 GGUF 모델 파일을 실행하며 무료입니다.',
+          },
         ],
       },
       relatedReading: {
@@ -3253,12 +3397,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Windows, Mac, Linux에서 가장 쉬운 로컬 AI 앱 (2026)',
-      description: 'LM Studio, Jan, GPT4All을 2026년 사용 편의성으로 비교: 설치 시간, 모델 호환성, 하드웨어 요구 사항, Windows·Mac·Linux에서의 첫 실행. 터미널 불필요.',
+      headline: 'LM Studio × Apple Silicon: 가장 쉬운 로컬 AI 2026',
+      description: 'LM Studio의 Apple Silicon, Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간. 터미널 불필요. Jan, GPT4All과 비교, 2026년.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
