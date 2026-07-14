@@ -843,32 +843,33 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Coding Assistants',
     title: '2026年本地LLM最佳IDE插件推荐（VS Code & JetBrains）',
     seoTitle: '2026年本地LLM IDE插件推荐（VS Code & JetBrains）',
-    metaDescription: 'Continue、Cline、Aider、Tabby——2026年本地LLM支持最佳IDE插件横向评测。哪款与Ollama或LM Studio连接最流畅？代码补全延迟、上下文窗口与离线可用性全面对比，支持VS Code和JetBrains全系IDE。',
+    metaDescription: 'Cline、Continue、Aider、Cursor——2026年本地LLM支持最佳IDE插件横向评测，附LM Studio自有插件生态。哪款与Ollama或llama.cpp连接最流畅？',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Continue（VS Code + JetBrains）是2026年本地LLM最佳免费IDE插件：原生连接Ollama和所有OpenAI兼容API，支持对话+代码补全+上下文感知代码编辑，完全在本地硬件上运行。**',
+    leadAnswerBlock: '**Cline（VS Code + JetBrains）是2026年年中本地LLM最佳免费IDE插件：原生连接Ollama和所有OpenAI兼容API，支持智能体文件编辑+终端命令+MCP工具，完全在本地硬件上运行。注意：此前排名第1的Continue.dev已于2026年6月被Cursor收购——v2.0.0是其最终版本。**',
     quickAnswerTop: {
       question: '编程时使用本地AI模型最好的IDE插件是什么？',
-      answer: 'Continue（免费开源）是VS Code和JetBrains中Ollama和本地LLM的最佳IDE插件。仅需代码补全的话，Tabby是最轻量选择。智能体代码生成（文件编辑、Shell命令）Cline功能最强。',
+      answer: 'Cline（免费开源，BYOK）目前是Ollama和本地LLM的最佳IDE插件——继Continue.dev于2026年6月被Cursor收购、仓库定格在v2.0.0之后。Cline支持VS Code和JetBrains，具备智能体文件编辑和MCP工具能力。仅需代码补全的话，Tabby是最轻量选择。Aider在终端环境中表现最佳。',
       bullets: [
-        'Continue：综合最佳 — Ollama + OpenAI API，对话+补全，VS Code + JetBrains',
-        'Cline：最佳智能体IDE插件 — 读写文件、执行终端命令、使用MCP工具',
+        'Cline：综合最佳，持续维护中 — 读写文件、执行终端命令、使用MCP工具，VS Code + JetBrains（含PyCharm、PhpStorm、Rider），免费BYOK或ClinePass $9.99/月',
+        'Continue：仍可使用但已停止维护（2026年6月被Cursor收购，v2.0.0为最终版本）——可与Ollama继续配合运行，但不再有后续开发',
         'Tabby：最佳自托管代码补全 — 自有推理服务器，1–3B模型',
         'Aider：最佳终端工具 — git感知，多文件编辑，14B以上模型表现优秀',
         'Cursor：最佳商业选择 — 已支持本地模型，云优先设计',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-07-14',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Continue（开源）是默认选择：原生Ollama支持，VS Code + JetBrains',
-          'Cline智能体可读写文件并运行Shell命令——智能体任务功能最强',
-          'Tabby运行自有推理服务器（1–3B模型）——代码补全延迟最低',
-          'Aider是终端优先选项——git提交感知，多文件重写',
-          'Cursor支持本地模型，但最佳功能需要云端',
+          'Continue.dev于2026年6月被Cursor收购——v2.0.0为最终版本，仓库现为只读状态；仍可与Ollama配合运行，但已不再维护',
+          'Cline目前是维护最完善的免费BYOK替代方案：VS Code + JetBrains，智能体文件编辑，MCP工具，安装量超500万',
+          'Tabby运行自有推理服务器（1–3B模型）——为团队提供延迟最低的代码补全',
+          'Aider是终端优先选项——git提交感知，多文件重写，GitHub星标4.4万',
+          'Cursor（Pro版$20/月，积分制）已收购Supermaven和Continue.dev；SpaceX于2026年6月同意以600亿美元收购Cursor',
+          '所有工具均可与Ollama配合使用；仅Tabby需要自有后端服务器',
         ],
       },
       rankedList: {
@@ -876,34 +877,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Continue是2026年本地LLM最佳IDE插件，因为它原生支持Ollama，在VS Code和JetBrains中都能运行，无需云依赖即可提供对话、代码补全和代码编辑功能。',
+            text: 'Cline是2026年本地LLM最佳IDE插件，因为它原生支持Ollama，在VS Code和JetBrains中都能运行，并在无需云依赖的情况下提供智能体文件编辑和MCP工具——此前排名第1的Continue已于2026年6月被Cursor收购，不再积极开发。',
           },
           {
             type: 'plain-terms',
-            text: '本地LLM的IDE插件将你的代码编辑器（VS Code、IntelliJ）连接到在本机运行的模型（通过Ollama或LM Studio）。模型看到你的代码并响应——代码不离开你的电脑，无API费用，无使用限制。',
+            text: '本地LLM的IDE插件将你的代码编辑器（VS Code、IntelliJ）连接到在本机运行的模型（通过Ollama、LM Studio或llama.cpp）。模型看到你的代码并响应——代码不离开你的电脑，无API费用，无使用限制。',
           },
         ],
         rankedItems: [
           {
             rank: 1,
-            title: 'Continue — 综合最佳（免费开源）',
-            content: 'Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ、PyCharm、GoLand、WebStorm和Rider。推荐本地模型：Qwen3-Coder 14B（编程）、Llama 3.3 8B（对话）。注意（2026年6月）：Continue已被Cursor收购，v2.0.0为最终版本，GitHub仓库现为只读状态。插件仍可与Ollama正常运行，但原团队已停止开发。',
-            affiliateLinks: [
-              { label: '在VS Code Marketplace下载Continue（免费）', url: 'https://continue.dev' },
-            ],
-          },
-          {
-            rank: 2,
-            title: 'Cline — 智能体编程任务最佳',
-            content: 'Cline是本地LLM中功能最强的智能体编程插件。可以读写文件、运行终端命令、使用MCP服务器。配合Ollama + Qwen3-Coder 32B，Cline能从一个提示词实现完整功能。限制：可靠的多步骤智能体任务需要32B模型。支持VS Code和JetBrains（IntelliJ、PyCharm、WebStorm）。定价：免费（BYOK）或ClinePass $9.99/月；Teams $20/用户/月（前10个席位免费）。VS Code安装量超500万，开发者超800万。',
+            title: 'Cline — 综合最佳（免费、开源、持续维护）',
+            content: 'Cline（原名Claude Dev）是2026年本地LLM中维护最完善的智能体编程插件——在2026年6月Continue被Cursor收购后登顶第一。它可以读写文件、运行终端命令、浏览网页（通过浏览器工具）、使用MCP服务器。配合Ollama + Qwen3-Coder 32B，Cline能从一个提示词实现完整功能。限制：可靠的多步骤智能体任务需要32B模型（14B模型可处理简单任务）。定价：免费（BYOK——自带来自Anthropic、OpenAI或30多家提供商的API密钥）；ClinePass每月$9.99，提供无需API密钥的托管路由；Teams每用户每月$20（前10个席位免费）。支持VS Code和JetBrains（IntelliJ、PyCharm、PhpStorm、WebStorm、GoLand、Rider等）。兼容后端：Ollama、LM Studio、LiteLLM代理及30多家云服务商。开发者超800万人。',
             affiliateLinks: [
               { label: '在VS Code Marketplace下载Cline（免费）', url: 'https://github.com/cline/cline' },
             ],
           },
           {
+            rank: 2,
+            title: 'Continue — 仍可使用但已停止维护 [已于2026年6月被Cursor收购 — 最终版本v2.0.0]',
+            content: '在2026年6月被Cursor收购之前，Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ、PyCharm、GoLand、WebStorm和Rider。推荐本地模型：Qwen3-Coder 14B（编程）、Llama 3.3 8B（对话）。设置：安装扩展，将提供商设为Ollama，选择模型——2分钟内完成。注意（2026年6月）：Continue已被Cursor收购。v2.0.0为最终版本，GitHub仓库现为只读状态。插件仍可与Ollama及自带模型完全正常运行，但原团队已停止开发。社区分支仍然活跃。',
+            affiliateLinks: [
+              { label: '在VS Code Marketplace下载Continue（免费）', url: 'https://continue.dev' },
+            ],
+          },
+          {
             rank: 3,
             title: 'Tabby — 最佳自托管代码补全服务器',
-            content: 'Tabby是运行自有推理服务器的自托管编程助手。使用专门为填充中间（FIM）代码补全训练的小型模型（1–3B参数）——比通用7B模型快得多。支持VS Code、JetBrains、Vim/Neovim和Emacs的IDE扩展。',
+            content: 'Tabby是运行自有推理服务器（独立于Ollama）的自托管编程助手。使用专门为填充中间（FIM）代码补全训练的小型模型（1–3B参数）——比通用7B模型快得多。支持VS Code、JetBrains、Vim/Neovim和Emacs的IDE扩展。适合对象：希望在不依赖云端的情况下获得快速（<200ms）代码补全的团队。需要专用服务器或高性能桌面机器。',
             affiliateLinks: [
               { label: 'Tabby在GitHub上查看（开源自托管）', url: 'https://tabby.tabbyml.com' },
             ],
@@ -911,7 +912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'Aider — 最佳终端原生AI编程工具',
-            content: 'Aider是集成git的终端AI配对程序员。理解整个代码库结构，进行多文件编辑，自动提交更改。支持Ollama（--model ollama/qwen2.5-coder:14b）、LM Studio或任何OpenAI兼容API。免费开源。',
+            content: 'Aider是集成git的终端AI配对程序员。理解整个代码库结构，进行多文件编辑，自动提交更改。支持Ollama（--model ollama/qwen2.5-coder:14b）、LM Studio或任何OpenAI兼容API。推荐本地模型：Qwen3-Coder 32B（架构模式）+ Qwen3-Coder 7B（编辑模式）。Aider采用双模型方案：大模型负责规划变更，小模型负责实现。费用：免费开源。',
             affiliateLinks: [
               { label: 'Aider在GitHub上查看（开源）', url: 'https://aider.chat' },
             ],
@@ -919,11 +920,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Cursor — 支持本地模型的最佳商业选择',
-            content: 'Cursor是内置AI功能的VS Code分支。Cursor在"Custom API"设置中通过Ollama和LM Studio支持本地模型。但最强大的功能（带网络搜索的Agent模式）仍需要云端模型。定价：Hobby（免费）；Pro $20/月（含$20 AI积分用于前沿模型；Auto模式无限制免费）；Pro+ $60/月；Ultra $200/月。本地模型使用：Hobby层。注：Cursor收购了Supermaven（2024年）和Continue.dev（2026年6月）；SpaceX于2026年6月达成以600亿美元收购Cursor的协议（预计2026年Q3完成）。',
+            content: 'Cursor是内置AI功能的VS Code分支。截至2026年7月，Cursor在"Custom API"设置中通过Ollama和LM Studio支持本地模型。但Cursor最强大的功能（带网络搜索的Agent模式、完整代码库感知）仍需要云端模型。本地模型集成对聊天和简单补全可用，但在注重隐私的工作流中不如Cline。定价：Hobby（免费）；Pro $20/月（含$20/月AI积分用于前沿模型；Auto模式不消耗积分，无限制）；Pro+ $60/月；Ultra $200/月。本地模型使用在免费Hobby层即可获得。注：Cursor收购了Supermaven（2024年）和Continue.dev（2026年6月）；SpaceX于2026年6月同意以600亿美元收购Cursor本身（预计2026年第三季度完成）。这一整合让Cursor成为AI编程工具领域的主导力量——但也让开源替代方案的长期走向存在疑问。',
             affiliateLinks: [
               { label: 'Cursor Pro订阅', url: 'https://cursor.com' },
             ],
           },
+        ],
+      },
+      setupGuide: {
+        title: '快速设置：在VS Code中使用Cline + Ollama',
+        content: '用当前排名第1的插件开始本地LLM编程的最快方式：',
+        numberedItems: [
+          '安装Ollama：`curl -fsSL https://ollama.com/install.sh | sh`',
+          '拉取一个编程模型：`ollama pull qwen2.5-coder:14b`（智能体任务推荐`qwen3-coder:32b`）',
+          '在VS Code的扩展市场中安装Cline',
+          '打开Cline侧边栏，点击设置齿轮图标',
+          '将API提供商设为"Ollama"，基础URL设为`http://localhost:11434`，模型ID设为已拉取的模型',
+          '重启VS Code——Cline图标会出现在侧边栏',
+          '在Cline聊天面板中输入任务——它可以直接读写文件并运行终端命令',
+        ],
+      },
+      aiderSetupGuide: {
+        title: '快速设置：Aider + Ollama（终端）',
+        content: '适合终端原生、git感知的AI编程——Aider官方文档：aider.chat/docs/llms/ollama.html',
+        numberedItems: [
+          '安装Ollama并拉取模型：`ollama pull qwen2.5-coder:32b`',
+          '安装Aider：`python -m pip install aider-install && aider-install`',
+          '设置Ollama API基础地址：`export OLLAMA_API_BASE=http://127.0.0.1:11434`',
+          '运行Aider并指向本地模型：`aider --model ollama/qwen2.5-coder:32b`',
+          '若需双模型架构（architect/editor）设置，添加`--architect-model ollama/qwen2.5-coder:32b --editor-model ollama/qwen2.5-coder:7b`',
+          'Aider会自动将每次变更提交到git——用`git log`或`git diff HEAD~1`查看',
+        ],
+      },
+      modelRecommendations: {
+        title: '按插件与任务划分的最佳本地模型',
+        columns: ['插件', '最佳编程模型（本地）', '最佳对话模型（本地）', '最低显存'],
+        rows: [
+          { '插件': 'Cline', '最佳编程模型（本地）': 'Qwen3-Coder 32B Q4', '最佳对话模型（本地）': 'Qwen3 32B Q4', '最低显存': '24 GB' },
+          { '插件': 'Continue（旧版）', '最佳编程模型（本地）': 'Qwen3-Coder 14B Q8', '最佳对话模型（本地）': 'Llama 3.3 8B Q4', '最低显存': '16 GB' },
+          { '插件': 'Tabby', '最佳编程模型（本地）': 'StarCoder2-7B（内置）', '最佳对话模型（本地）': 'N/A（仅代码）', '最低显存': '8 GB' },
+          { '插件': 'Aider', '最佳编程模型（本地）': 'Qwen3-Coder 14B（编辑模式）', '最佳对话模型（本地）': 'Qwen3-Coder 32B（架构模式）', '最低显存': '16–24 GB' },
+          { '插件': 'Cursor', '最佳编程模型（本地）': 'DeepSeek-Coder-V2（通过Ollama）', '最佳对话模型（本地）': 'Qwen3 14B', '最低显存': '16 GB' },
+        ],
+      },
+      lmStudioPlugins: {
+        title: '最佳LM Studio插件（与IDE插件不是同一回事）',
+        content: '这与"哪款IDE扩展能连接LM Studio"（上文已介绍）是不同的问题。LM Studio自2024年底起就拥有自己的插件系统：插件在LM Studio内部运行——以沙盒化worker中的TypeScript或Python代码形式——可以拦截推理请求、添加提示处理器、接入工具调用后端，或增加新的UI面板。可从lmstudio.ai/plugins的精选市场安装；每个插件都会预先声明所需权限（网络访问、文件系统读取），你也可以之后在设置中撤销权限而无需卸载插件。截至2026年常见类别包括：网页搜索插件、RAG/文档检索预处理器、OCR预处理器、智能体工具集插件、Shell/文件访问工具，以及记忆插件。',
+        items: [
+          '**网页搜索插件**：让LM Studio中的本地模型将实时网页搜索结果拉入上下文——由于本地模型没有内置的互联网访问能力，这很有用。',
+          '**RAG/文档插件**：为本地文件夹中的PDF或文本文件建立索引，并按查询自动检索相关片段。',
+          '**智能体工具集插件**：直接在LM Studio自己的聊天界面中赋予模型Shell访问权限、文件读写能力或多步骤任务执行能力——与Cline为VS Code提供的能力属于同一类别，区别在于运行环境是LM Studio而非代码编辑器。',
+          '**记忆插件**：让上下文在多次聊天会话间保留，而不是每次都从零开始。',
         ],
       },
       faq: {
@@ -931,19 +978,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue能完全替代GitHub Copilot用于本地使用吗？',
-            a: '大多数场景下，可以。使用Qwen3-Coder 14B Q8的Continue在Python、TypeScript和Go方面提供与GitHub Copilot相当的代码补全质量。对于注重隐私的代码库，Continue + 本地Ollama是更好的选择。',
+            a: '截至2026年6月，Continue已被Cursor收购，v2.0.0为最终版本（仓库现为只读状态）。扩展仍可与Ollama和自带模型正常运行，但不再获得原团队的后续开发。推荐的维护中开源替代方案是Cline——提供同样的BYOK模式，支持VS Code和JetBrains，并新增了智能体文件编辑能力。GitHub Copilot Pro每月$10（含每月$15的AI积分）；Cline在使用自己的API密钥时免费。',
           },
           {
             q: '哪个插件最适合多文件重构？',
-            a: 'Cline（VS Code）或Aider（终端）。两者都能读取多个文件、理解依赖关系并在代码库间进行协调更改。Cline更适合可视化反馈，Aider更适合git感知提交。复杂重构建议使用30B以上模型（24GB显存）。',
+            a: 'Cline或Aider。两者都能读取多个文件、理解依赖关系并在代码库间进行协调更改。Cline在VS Code内提供更好的可视化反馈；Aider在终端中运行，更适合CI/CD集成和git感知提交。配合30B以上模型（24GB显存），Cline + Qwen3-Coder 32B可以可靠地处理复杂重构。',
+          },
+          {
+            q: 'Tabby在没有GPU的情况下能运行吗？',
+            a: '可以——Tabby可以在CPU上运行小型模型（1–3B）。但CPU上的补全延迟为500ms–2秒，相比流畅编程所需的<200ms目标会感觉明显迟滞。对于纯CPU机器，使用Cline + Ollama配合快速的1B或3B模型能获得更好的延迟控制。',
           },
           {
             q: '能否用LM Studio代替Ollama使用这些插件？',
-            a: '可以。LM Studio默认在1234端口暴露OpenAI兼容API。将插件提供商设为"openai"，基础URL设为`http://localhost:1234/v1`，使用LM Studio库中的任意模型名称。Continue、Cline和Aider都支持这种配置。',
+            a: '可以。LM Studio默认在1234端口暴露OpenAI兼容API。将插件提供商设为"openai"，基础URL设为`http://localhost:1234/v1`，使用LM Studio库中的任意模型名称。Cline、Continue和Aider都支持这种配置。请注意，这与上文"最佳LM Studio插件"一节所述的LM Studio自有插件系统不同——那部分内容是关于扩展LM Studio本身，而不是让外部IDE连接到它。',
           },
           {
-            q: 'Tabby和Continue在代码补全上有什么区别？',
-            a: 'Tabby使用专门为代码补全训练的小型FIM模型（StarCoder2等），延迟约100–200ms，体验更流畅。Continue使用你选择的Ollama模型（如Qwen3-Coder 7B），灵活性更高但延迟稍大（300–800ms）。如果补全速度是首要考虑，选Tabby；如果需要聊天+补全的综合体验，选Continue。',
+            q: '哪些JetBrains IDE支持本地LLM插件？',
+            a: 'Cline和Continue都提供覆盖整个JetBrains系列的插件：IntelliJ IDEA、PyCharm、PhpStorm、WebStorm、GoLand和Rider。从JetBrains Marketplace（而非VS Code Marketplace）安装，并使用与VS Code版本相同的Ollama/LM Studio提供商设置。Tabby也支持JetBrains，但仅限代码补全功能。',
           },
         ],
       },
@@ -966,12 +1017,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'Continue能完全替代GitHub Copilot用于本地使用吗？',
-          acceptedAnswer: { '@type': 'Answer', text: '大多数场景下可以。Continue + Qwen3-Coder 14B Q8的代码补全质量与Copilot相当。对于注重隐私的代码库，Continue + 本地Ollama是更好的选择。' },
+          acceptedAnswer: { '@type': 'Answer', text: '截至2026年6月，Continue已被Cursor收购，v2.0.0为最终版本。扩展仍可与Ollama正常运行，但Cline目前是推荐的维护中开源替代方案——BYOK免费使用，支持VS Code和JetBrains，并新增了智能体文件编辑能力。' },
         },
         {
           '@type': 'Question',
           name: '哪个插件最适合多文件重构？',
-          acceptedAnswer: { '@type': 'Answer', text: 'Cline（VS Code）或Aider（终端）。两者均可读取多文件并协调更改。建议配合30B以上模型使用，以实现可靠的复杂重构。' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Cline（VS Code + JetBrains）或Aider（终端）。两者均可读取多文件并协调更改。Cline更适合可视化反馈，Aider更适合git感知提交。建议配合30B以上模型使用，以实现可靠的复杂重构。' },
+        },
+        {
+          '@type': 'Question',
+          name: '哪些JetBrains IDE支持本地LLM插件？',
+          acceptedAnswer: { '@type': 'Answer', text: 'Cline和Continue都提供覆盖IntelliJ IDEA、PyCharm、PhpStorm、WebStorm、GoLand和Rider的插件。从JetBrains Marketplace安装，并使用与VS Code版本相同的Ollama/LM Studio提供商设置。' },
         },
       ],
     },
@@ -981,14 +1037,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: '2026年本地LLM最佳IDE插件排名',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Continue', description: '综合最佳 — Ollama原生，VS Code + JetBrains，免费' },
-        { '@type': 'ListItem', position: 2, name: 'Cline', description: '智能体最佳 — 读写文件，VS Code' },
-        { '@type': 'ListItem', position: 3, name: 'Tabby', description: '最佳自托管补全 — FIM模型1–3B' },
+        { '@type': 'ListItem', position: 1, name: 'Cline', description: '综合最佳 — 持续维护，智能体能力，VS Code + JetBrains，免费BYOK' },
+        { '@type': 'ListItem', position: 2, name: 'Continue', description: '仍可使用但自2026年6月被Cursor收购后已停止维护' },
+        { '@type': 'ListItem', position: 3, name: 'Tabby', description: '最佳自托管补全 — FIM模型1–3B，全编辑器支持' },
         { '@type': 'ListItem', position: 4, name: 'Aider', description: '终端最佳 — git感知，多文件，开源' },
         { '@type': 'ListItem', position: 5, name: 'Cursor', description: '商业最佳 — 本地模型支持，20美元/月Pro' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年本地LLM最佳IDE插件推荐（VS Code & JetBrains）', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/zh/power-local-llm/best-local-llm-ide-plugins-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年本地LLM最佳IDE插件推荐（VS Code & JetBrains）', datePublished: '2026-05-26', dateModified: '2026-07-14', url: 'https://www.promptquorum.com/zh/power-local-llm/best-local-llm-ide-plugins-2026', inLanguage: 'zh' },
   },
 
   es: {
