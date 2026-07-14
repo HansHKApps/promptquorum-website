@@ -493,9 +493,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Faktor', 'Lokale Inferenz', 'Remote-Verbindung'],
         rows: [
-          { 'Faktor': 'Modellgrößenlimit', 'Lokale Inferenz': '3B–8B (iPad Pro M4); 3B (die meisten Tablets)', 'Remote-Verbindung': 'Unbegrenzt — Home-Computer führt jedes Modell aus' },
+          { 'Faktor': 'Modellgrößenlimit', 'Lokale Inferenz': '3B–8B (iPad Pro M5); 3B–4B (die meisten Tablets)', 'Remote-Verbindung': 'Unbegrenzt — Home-Computer führt jedes Modell aus' },
           { 'Faktor': 'Offline-Nutzung', 'Lokale Inferenz': 'Ja — funktioniert ohne Wi-Fi', 'Remote-Verbindung': 'Nein — erfordert Home-Wi-Fi' },
-          { 'Faktor': 'Generierungsgeschwindigkeit', 'Lokale Inferenz': 'Moderat (10–25 Token/Sek auf iPad Pro M4)', 'Remote-Verbindung': 'Hängt vom Home-Computer ab (bis zu 40+ Token/Sek)' },
+          { 'Faktor': 'Generierungsgeschwindigkeit', 'Lokale Inferenz': 'Moderat (12–30 Token/Sek auf iPad Pro M5)', 'Remote-Verbindung': 'Hängt vom Home-Computer ab (bis zu 40+ Token/Sek)' },
           { 'Faktor': 'Speicher auf Tablet', 'Lokale Inferenz': '2–10 GB pro Modell', 'Remote-Verbindung': 'Keine — Modell lebt auf dem Home-Computer' },
           { 'Faktor': 'Setup-Komplexität', 'Lokale Inferenz': 'Niedrig (App herunterladen + Modelldatei)', 'Remote-Verbindung': 'Niedrig–Mittel (Home-Computer benötigt Ollama + Open WebUI)' },
           { 'Faktor': 'Am besten für', 'Lokale Inferenz': 'Reisen, Offline-Nutzung, 3B-Modell-Aufgaben', 'Remote-Verbindung': 'Qualitätsorientierte Nutzung, 70B-Modelle, Komfort' },
@@ -513,22 +513,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: Lokale Inferenz',
         content:
-          '**iPad Pro M4 (16 GB) ist das einzige iPad, das 7B-Modelle mit angenehmer Geschwindigkeit ausführt.** iPad Air M2 (8 GB) und M3 (8 GB) führen 3B-Modelle angemessen aus. [iPhone mit 8 GB RAM (iPhone 15 Pro Max) führt auch kleine Modelle aus](/de/power-local-llm/best-local-llm-apps-iphone-2026) über LLM Farm.',
+          '**iPad Pro M5 ist das einzige iPad, das 7B–8B-Modelle mit angenehmer Geschwindigkeit ausführt.** Apple hat den Basis-RAM des M5 iPad Pro auf 12 GB angehoben (16 GB bei den 1 TB/2 TB-Speicherstufen), gegenüber 8 GB beim Basis-M4-iPad-Pro, und die Speicherbandbreite von 120 GB/s auf 153 GB/s erhöht — LLM-Inferenz auf Apple Silicon ist speicherbandbreiten-limitiert, was sich direkt in schnellerer Generierung niederschlägt. iPad Air M4 (12 GB, gegenüber 8 GB beim vorherigen M2 Air) führt 3B–4B-Modelle jetzt komfortabel statt nur angemessen aus. [iPhone mit 8 GB RAM führt auch kleine Modelle aus](/de/power-local-llm/best-local-llm-apps-iphone-2026) über LLM Farm.',
         items: [
           '**LLM Farm** (kostenlos, Open-Source): lädt GGUF-Modelle von Hugging Face herunter und führt sie mit llama.cpp auf Apple Silicon aus. Beste Leistung der iOS-nativen Optionen. Unterstützt Chat- und Completion-Modi. Installation aus dem App Store.',
           '**Pocket Paladin** (kostenlose Stufe + Abonnement): kuratierte Model-Downloads, saubere UI als LLM Farm, etwas einfachere Erfahrung beim ersten Start. Die kostenlose Stufe umfasst 3B-Modelle; das Abonnement entsperrt größere Modelle und API-Modus.',
           '**Modelle importieren:** in LLM Farm, tippen Sie auf das Model-Library-Symbol → "Modell von URL hinzufügen" → fügen Sie eine direkte Download-URL von Hugging Face für eine GGUF-Datei ein. Alternativ können Sie Apple Files verwenden, um eine GGUF-Datei, die an anderer Stelle heruntergeladen wurde, zu übertragen. Modelle werden im lokalen Speicher der App gespeichert — nicht in iCloud.',
-          '**RAM-Verwaltung auf iPad:** iOS verwaltet RAM aggressiv für Hintergrund-Apps. Schließen Sie alle anderen Apps vor dem Ausführen eines 7B-Modells auf einem 8 GB-iPad — iOS wird das Modell entfernen, wenn eine andere App Speicher benötigt. Auf dem 16 GB iPad Pro M4 ist dies selten ein Problem.',
-          '**Erwartungen zur Generierungsgeschwindigkeit:** iPad Pro M4 (16 GB): Phi-4 Mini ~20 Token/Sek, Llama 3.2 3B ~30 Token/Sek, Gemma 3 4B ~18 Token/Sek. iPad Air M2 (8 GB): 3B-Modelle ~12–18 Token/Sek; 7B-Modelle ~5–8 Token/Sek (zu langsam für Echtzeit-Chat).',
+          '**RAM-Verwaltung auf iPad:** iOS verwaltet RAM aggressiv für Hintergrund-Apps. Schließen Sie alle anderen Apps vor dem Ausführen eines 7B-Modells auf einem 12 GB-iPad — iOS wird das Modell entfernen, wenn eine andere App Speicher benötigt. Auf dem 16 GB iPad Pro M5 (1 TB/2 TB-Stufen) ist dies selten ein Problem.',
+          '**Erwartungen zur Generierungsgeschwindigkeit:** iPad Pro M5 (12 GB / 16 GB): Phi-4 Mini ~25 Token/Sek, Llama 3.2 3B ~38 Token/Sek, Gemma 3 4B ~23 Token/Sek — rund 25–30 % schneller als die vorherige M4-Generation, entsprechend der höheren Speicherbandbreite. iPad Air M4 (12 GB): 3B–4B-Modelle ~15–20 Token/Sek; 7B-Modelle ~7–10 Token/Sek (weiterhin langsam für Echtzeit-Chat).',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Versuchen Sie nicht, ein 7B-Modell auf einem 8 GB-iPad für Echtzeit-Chat auszuführen. Mit 5–8 Token pro Sekunde dauert jede Antwort 15–30 Sekunden. Dies ist für Zusammenfassungsaufgaben nützlich, bei denen Sie einen Prompt senden und warten, aber frustrierend für gesprächsbasierte Nutzung. Verwenden Sie 3B-Modelle auf 8 GB-Geräten; Upgrade auf ein 16 GB-Gerät oder wechseln Sie zur Remote-Verbindung für 7B+.',
+            text: 'Versuchen Sie nicht, ein 7B-Modell auf einem 12 GB-iPad Air für Echtzeit-Chat auszuführen. Mit 7–10 Token pro Sekunde dauert jede Antwort weiterhin 10–20 Sekunden. Dies ist für Zusammenfassungsaufgaben nützlich, bei denen Sie einen Prompt senden und warten, aber frustrierend für gesprächsbasierte Nutzung. Verwenden Sie 3B–4B-Modelle auf iPad Air; wechseln Sie zum 16 GB iPad Pro M5 oder zur Remote-Verbindung für 7B+.',
           },
         ],
         image: '/images/run-ai-on-tablet-ipad-speed-de.svg',
-        imageCaption: 'iPad On-Device-Geschwindigkeit: iPad Pro M4 (16 GB) erreicht 18–30 Token/Sek auf Phi-4 Mini und Llama 3.2 3B; iPad Air M2 (8 GB) läuft 3B-Modelle mit 12–18 Token/Sek, aber nur 5–8 Token/Sek auf 7B — zu langsam für Echtzeit-Chat.',
+        imageCaption: 'iPad On-Device-Geschwindigkeit: iPad Pro M5 (12 GB / 16 GB) erreicht 23–38 Token/Sek auf Phi-4 Mini und Llama 3.2 3B; iPad Air M4 (12 GB) läuft 3B–4B-Modelle mit 15–20 Token/Sek, aber nur 7–10 Token/Sek auf 7B-Modellen — weiterhin langsam für Echtzeit-Chat.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pixel Tablet nicht empfohlen für On-Device:** Pixel Tablet (2023-Modell, 8 GB Tensor G2) wurde von der empfohlenen On-Device-Liste ausgeschlossen — Tensor G2 ist bei der LLM-Inferenz erheblich langsamer als Snapdragon 8 Gen 3 / Dimensity 9300 und liefert 4–7 Token/Sek auf Phi-4 Mini (zu langsam für gesprächsbasierte Nutzung). Pixel-Tablet-Benutzer sollten die Remote-Verbindung zu einem Home-Computer verwenden.',
           '**Snapdragon 8 Gen 3 und Dimensity 9300** sind die schnellsten Android-Chips für On-Device-Inferenz 2026. Generierungsgeschwindigkeit: ~15–25 Token/Sek für 1.7B-Modelle; ~8–12 Token/Sek für 3B-Modelle.',
           '**Modellspeicher:** Android hat keinen einheitlichen Speicher — das Modell läuft in System-RAM ohne GPU-Beschleunigung in den meisten Termux-Konfigurationen. GPU-Beschleunigung erfordert Termux:NVIDIA oder spezifische Vulkan-Builds; Setup ist komplexer.',
-          '**Alternative Apps:** MNN LLM (Alibaba, kostenlos, Android-App mit On-Device-Inferenz für ausgewählte Modelle) ist ein einfacheres Setup, hat aber eine begrenztere Model-Auswahl als Ollama. AI Runner und llamafile haben auch Android-Builds mit unterschiedlicher Unterstützung.',
+          '**Alternative Apps:** MNN LLM (Alibaba, kostenlos, Android-App mit On-Device-Inferenz für ausgewählte Modelle) ist ein einfacheres Setup, hat aber eine begrenztere Model-Auswahl als Ollama. AI Runner und llamafile haben auch Android-Builds mit unterschiedlicher Unterstützung. Es gibt keine Android-Version von LLM Farm — es ist eine iOS-only-App; Termux + Ollama oder MNN LLM sind die nächsten Android-Äquivalente.',
           'Einen Japan-spezifischen Xperia-Einrichtungsleitfaden mit Hardware-Kompatibilitätstabelle finden Sie unter <a href="/de/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Lokales LLM auf Xperia ausführen (Japan)</a>.',
         ],
         callouts: [
@@ -598,8 +598,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Die Modellwahl wird durch verfügbaren RAM bestimmt — nicht durch Vorlieben.** Die Tabelle unten ordnet Geräte-RAM dem größten Modell zu, das mit Echtzeit-Geschwindigkeit (über 8 Token/Sek) läuft. Für die Modellschicht speziell siehe [Best Mobile LLM Models 2026](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm). Für die breitere Modelllandschaft über alle Hardware-Ebenen siehe [Best Local LLMs 2026](/de/local-llms/best-local-llms-2026).',
         columns: ['Gerät / RAM', 'Empfohlenes Modell', 'Geschwindigkeit', 'Am besten für'],
         rows: [
-          { 'Gerät / RAM': 'iPad Air M2 / M3 (8 GB)', 'Empfohlenes Modell': 'Phi-4 Mini Q4', 'Geschwindigkeit': '~15–18 Token/Sek', 'Am besten für': 'Schreibunterstützung, Zusammenfassung' },
-          { 'Gerät / RAM': 'iPad Pro M4 (16 GB)', 'Empfohlenes Modell': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Geschwindigkeit': '~25–30 Token/Sek / ~15–20 Token/Sek', 'Am besten für': 'Echte LLM-Workstation, RAG, Fiction-Entwurf' },
+          { 'Gerät / RAM': 'iPad Air M4 (12 GB)', 'Empfohlenes Modell': 'Phi-4 Mini Q4 / Llama 3.2 3B Q4', 'Geschwindigkeit': '~18–20 Token/Sek', 'Am besten für': 'Schreibunterstützung, Zusammenfassung' },
+          { 'Gerät / RAM': 'iPad Pro M5 (12 GB / 16 GB)', 'Empfohlenes Modell': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Geschwindigkeit': '~32–38 Token/Sek / ~20–23 Token/Sek', 'Am besten für': 'Echte LLM-Workstation, RAG, Fiction-Entwurf' },
           { 'Gerät / RAM': 'Android 8 GB (Tab S10+)', 'Empfohlenes Modell': 'Phi-4 Mini Q4 über Termux+Ollama', 'Geschwindigkeit': '~10–15 Token/Sek', 'Am besten für': 'Power-Nutzer komfortabel mit Termux' },
           { 'Gerät / RAM': 'Android 6 GB', 'Empfohlenes Modell': 'Qwen3 1.7B Q4', 'Geschwindigkeit': '~15–20 Token/Sek', 'Am besten für': 'Leichter Chat, Übersetzung, einfache Aufgaben' },
           { 'Gerät / RAM': 'Pixel Tablet (8 GB)', 'Empfohlenes Modell': 'Nur Remote-Verbindung', 'Geschwindigkeit': 'N/V', 'Am besten für': 'Tensor G2 zu langsam für On-Device' },
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/run-ai-on-tablet-model-by-device-de.svg',
-        imageCaption: 'Bestes Modell pro Tablet: iPad Pro M4 (16 GB) erreicht 25–30 Token/Sek auf Llama 3.2 3B; iPad Air M2/M3 läuft Phi-4 Mini mit 15–18 Token/Sek; Android 8 GB erreicht 10–15 Token/Sek über Termux; Pixel Tablet benötigt Remote-Verbindung wegen langsamem Tensor G2.',
+        imageCaption: 'Bestes Modell pro Tablet: iPad Pro M5 (12 GB / 16 GB) erreicht 32–38 Token/Sek auf Llama 3.2 3B; iPad Air M4 läuft Phi-4 Mini mit 18–20 Token/Sek; Android 8 GB erreicht 10–15 Token/Sek über Termux; Pixel Tablet benötigt Remote-Verbindung wegen langsamem Tensor G2.',
       },
       frontends: {
         id: 'frontends',
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**DSGVO-Artikel 28 Compliance:** Wenn Ihr Tablet oder Home-Computer mit lokalen LLMs läuft, bleibt sensible Geschäftskommunikation innerhalb Ihres Netzwerks. Keine Datenübertragung zu US-Cloud-APIs (OpenAI, Google, Meta), die unter SCHREMS II-Bedenken fallen.',
           '**BSI-Grundschutz-Kataloge:** Das German Federal Office for Information Security (BSI) empfiehlt lokale Inferenz-Architekturen für Organisationen, die mit regulierten Daten arbeiten (Healthcare, Finance, öffentliche Verwaltung). Der BSI-Grundschutz C5:2020 Standard bevorzugt Systeme, die keine Daten außerhalb Deutschland exportieren.',
-          '**Mittelstand-Anwendungsfälle:** Kleine und mittlere Unternehmen (KMU) in Deutschland können Phi-4 Mini oder Llama 3.2 lokal ausführen, um interne Dokumentenverwaltung, Kundenkommunikation und Produktbeschreibungen zu unterstützen, ohne DSGVO-Risiken zu tragen. Ein iPad Pro M4 mit 16 GB im Büro ist ein kostengünstiger Einstiegspunkt.',
+          '**Mittelstand-Anwendungsfälle:** Kleine und mittlere Unternehmen (KMU) in Deutschland können Phi-4 Mini oder Llama 3.2 lokal ausführen, um interne Dokumentenverwaltung, Kundenkommunikation und Produktbeschreibungen zu unterstützen, ohne DSGVO-Risiken zu tragen. Ein iPad Pro M5 mit 12 GB/16 GB im Büro ist ein kostengünstiger Einstiegspunkt.',
         ],
         callouts: [
           {
@@ -670,7 +670,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pocket Paladin iOS-App — [App Store](https://apps.apple.com)',
           'Ollama ARM-Build für Termux — [Ollama-Dokumentation](https://ollama.com/docs)',
           'Open WebUI-Dokumentation — [docs.openwebui.com](https://docs.openwebui.com)',
-          'Apple M4-Chip-Speicherbandbreite und Neural Engine-Spezifikationen — [Apple Silicon](https://apple.com/newsroom)',
+          'Apple M5-Chip-Spezifikationen für das iPad Pro, RAM-Stufen und Speicherbandbreite — [Apple Newsroom, Oktober 2025](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/)',
+          'Apple M4-Chip-Spezifikationen und RAM für das iPad Air — [Apple Newsroom, März 2026](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/)',
         ],
       },
       faq: {
@@ -679,7 +680,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Können Sie KI auf einem iPad ausführen?',
-            a: 'Ja, auf iPad Pro M4 (16 GB) und iPad Air M2/M3 (8 GB). Der iPad Pro M4 führt Phi-4 Mini und Llama 3.2 3B in Echtzeit mit LLM Farm oder Pocket Paladin aus. Der iPad Air M2 führt 3B-Modelle angemessen aus. Für 7B+ Modelle auf einem iPad wird die Remote-Verbindung zu einem Home-Mac oder PC, auf dem Ollama läuft, empfohlen — das iPad zeigt den Chat, aber der Home-Computer führt Inferenz durch.',
+            a: 'Ja, auf iPad Pro M5 (12 GB Basis / 16 GB bei den 1 TB- und 2 TB-Stufen) und iPad Air M4 (12 GB). Der iPad Pro M5 führt Phi-4 Mini und Llama 3.2 3B in Echtzeit mit LLM Farm oder Pocket Paladin aus, dank höherer Speicherbandbreite (153 GB/s statt 120 GB/s) rund 25–30 % schneller als der vorherige iPad Pro M4. Der iPad Air M4 führt 3B–4B-Modelle komfortabel aus. Für 7B+ Modelle auf einem iPad wird die Remote-Verbindung zu einem Home-Mac oder PC, auf dem Ollama läuft, empfohlen — das iPad zeigt den Chat, aber der Home-Computer führt Inferenz durch.',
+          },
+          {
+            q: 'Läuft Ollama auf einem iPad?',
+            a: 'Nein — Ollama hat keinen unterstützten iPadOS-Build und kann daher nicht direkt auf einem iPad installiert werden, so wie es unter Android über Termux möglich ist. "Ollama auf dem iPad ausführen" bedeutet, Ollama auf einem Mac oder PC laufen zu lassen und sich vom iPad-Browser aus (über Open WebUI unter der lokalen IP des Home-Computers) damit zu verbinden — das iPad ist eine Anzeige, nicht die Inferenz-Engine. Für echte On-Device-Inferenz auf einem iPad verwenden Sie stattdessen LLM Farm oder Pocket Paladin, die GGUF-Modelle direkt über llama.cpp auf Apple Silicon ausführen.',
           },
           {
             q: 'Können Sie KI auf einem Android-Tablet ausführen?',
@@ -699,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich ChatGPT-ähnliche Antworten lokal auf einem Tablet erhalten?',
-            a: 'Nicht ganz, aber fast mit dem richtigen Setup. GPT-5.5-Qualität erfordert ein 70B+ Modell. Auf einem Tablet: Der iPad Pro M4 (16 GB) kann 70B-Modelle nicht ausführen — nur 3B–8B-Modelle passen. Via Remote-Verbindung: Wenn Ihr Home-Computer eine 24 GB-GPU (RTX 4090) oder 64 GB-Unified-Memory (Mac M5 Max) hat, kann er Llama 3.3 70B ausführen, und Ihr Tablet greift diese Qualität über Open WebUI im Browser zu. Das ist die Cloud-KI-Qualität auf einem Tablet am nächsten.',
+            a: 'Nicht ganz, aber fast mit dem richtigen Setup. GPT-5.5-Qualität erfordert ein 70B+ Modell. Auf einem Tablet: Der iPad Pro M5 (12 GB / 16 GB) kann 70B-Modelle nicht ausführen — nur 3B–8B-Modelle passen. Via Remote-Verbindung: Wenn Ihr Home-Computer eine 24 GB-GPU (RTX 4090) oder 64 GB-Unified-Memory (Mac M5 Max) hat, kann er Llama 3.3 70B ausführen, und Ihr Tablet greift diese Qualität über Open WebUI im Browser zu. Das ist die Cloud-KI-Qualität auf einem Tablet am nächsten.',
           },
           {
             q: 'Wie halte ich meinen Home-Ollama-Server am Laufen, wenn ich das Laptop-Deckel schließe?',
@@ -707,15 +712,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Entleert die Ausführung von KI auf einem Tablet die Batterie schnell?',
-            a: 'Ja — On-Device-Inferenz ist CPU/GPU-intensiv. Das Ausführen von Phi-4 Mini auf einem iPad Pro M4 bei aktiver Unterhaltung entleert die Batterie mit ungefähr 20–30 % pro Stunde. Für längere Nutzung halten Sie das Tablet an Strom angeschlossen. Remote-Verbindung zu einem Home-Computer zieht erheblich weniger Tablet-Batterie — das Tablet zeigt nur eine Webseite an.',
+            a: 'Ja — On-Device-Inferenz ist CPU/GPU-intensiv. Das Ausführen von Phi-4 Mini auf einem iPad Pro M5 bei aktiver Unterhaltung entleert die Batterie mit ungefähr 20–30 % pro Stunde. Für längere Nutzung halten Sie das Tablet an Strom angeschlossen. Remote-Verbindung zu einem Home-Computer zieht erheblich weniger Tablet-Batterie — das Tablet zeigt nur eine Webseite an.',
           },
           {
             q: 'Throtteln Tablets während KI-Inferenz?',
-            a: 'Ja, besonders auf iPad Air M2 / M3 und Android-Tablets ohne aktive Kühlung. iPad Pro M4 hat besseren thermalen Spielraum und hält die Generierungsgeschwindigkeit ~10–15 Minuten lang, bevor merkbares Throttling auftritt. Android-Tablets throtteln schneller (5–8 Minuten anhaltende Inferenz). Mitigationen: verwenden Sie kürzere Generierungs-Chunks (200–400 Token pro Antwort), halten Sie das Tablet auf einer harten Oberfläche und vermeiden Sie das gleichzeitige Ausführen anderer CPU-schwerer Apps.',
+            a: 'Ja, besonders auf iPad Air M4 und Android-Tablets ohne aktive Kühlung. iPad Pro M5 hat besseren thermalen Spielraum und hält die Generierungsgeschwindigkeit ~10–15 Minuten lang, bevor merkbares Throttling auftritt. Android-Tablets throtteln schneller (5–8 Minuten anhaltende Inferenz). Mitigationen: verwenden Sie kürzere Generierungs-Chunks (200–400 Token pro Antwort), halten Sie das Tablet auf einer harten Oberfläche und vermeiden Sie das gleichzeitige Ausführen anderer CPU-schwerer Apps.',
           },
           {
             q: 'Welche Tastatur funktioniert am besten für KI-Tablet-Nutzung?',
-            a: 'Apple Magic Keyboard für iPad Pro M4 (mit Trackpad) ist das polierte Setup — volle Tastatur-Shortcuts funktionieren in Safari + Open WebUI, Trackpad ermöglicht Text-Auswahl über lange Antworten. Logitech Combo Touch ist die Budget-Alternative. Android: Jede Bluetooth-Tastatur funktioniert mit Termux, aber die Erfahrung ist rauer (nur Terminal). Für Schreibarbeiten verwandelt sich ein iPad Pro + Magic Keyboard in eine schreiborientierte KI-Workstation.',
+            a: 'Apple Magic Keyboard für iPad Pro M5 (mit Trackpad) ist das polierte Setup — volle Tastatur-Shortcuts funktionieren in Safari + Open WebUI, Trackpad ermöglicht Text-Auswahl über lange Antworten. Logitech Combo Touch ist die Budget-Alternative. Android: Jede Bluetooth-Tastatur funktioniert mit Termux, aber die Erfahrung ist rauer (nur Terminal). Für Schreibarbeiten verwandelt sich ein iPad Pro + Magic Keyboard in eine schreiborientierte KI-Workstation.',
           },
           {
             q: 'Kann ich SillyTavern auf iPad ausführen?',
@@ -727,11 +732,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich externe Displays mit Tablet-KI verwenden?',
-            a: 'Ja, auf iPad Pro M4 (Stage Manager + external Display gibt ein Multi-Window-Setup; Open WebUI auf dem externen Monitor, Notizen/Quelldokumente auf dem iPad-Bildschirm). Galaxy Tab S10 Ultra unterstützt DeX-Modus mit externem Display für ähnliches Multi-Monitor-KI-Workflow. Android-Tablets ohne DeX-Modus spiegeln den Bildschirm — weniger nützlich. iPad Pro + externer Monitor + Magic Keyboard ist das Nächste, das ein Tablet zu einer echten KI-Workstation 2026 kommt.',
+            a: 'Ja, auf iPad Pro M5 (Stage Manager + external Display gibt ein Multi-Window-Setup; Open WebUI auf dem externen Monitor, Notizen/Quelldokumente auf dem iPad-Bildschirm). Galaxy Tab S10 Ultra unterstützt DeX-Modus mit externem Display für ähnliches Multi-Monitor-KI-Workflow. Android-Tablets ohne DeX-Modus spiegeln den Bildschirm — weniger nützlich. iPad Pro + externer Monitor + Magic Keyboard ist das Nächste, das ein Tablet zu einer echten KI-Workstation 2026 kommt.',
           },
           {
             q: 'Ist ein Tablet besser als ein Telefon für lokale KI?',
-            a: 'Für Tasten-intensive Nutzung (Entwurf, RAG, lange Unterhaltungen), ja — Tastatur-Unterstützung und Bildschirmgröße sind wichtig. Für schnelle Chats, Voice-Queries oder unterwegs ist das Telefon, das Sie bereits tragen, besser. Der iPad Pro M4 ist das einzige Tablet, das merklich über ein Flaggschiff-Telefon für lokale KI hinausgeht; Mid-Range-Tablets und Telefone sind ungefähr gleichwertig. Die meisten Leser sollten kein Tablet speziell für lokale KI kaufen — kaufen Sie eines, wenn Sie es aus anderen Gründen möchten; KI-Fähigkeit ist ein Bonus.',
+            a: 'Für Tasten-intensive Nutzung (Entwurf, RAG, lange Unterhaltungen), ja — Tastatur-Unterstützung und Bildschirmgröße sind wichtig. Für schnelle Chats, Voice-Queries oder unterwegs ist das Telefon, das Sie bereits tragen, besser. Der iPad Pro M5 ist das einzige Tablet, das merklich über ein Flaggschiff-Telefon für lokale KI hinausgeht; Mid-Range-Tablets und Telefone sind ungefähr gleichwertig. Die meisten Leser sollten kein Tablet speziell für lokale KI kaufen — kaufen Sie eines, wenn Sie es aus anderen Gründen möchten; KI-Fähigkeit ist ein Bonus.',
           },
           {
             q: 'Muss ich bei der Verwendung von lokalen Tablets die DSGVO beachten?',
@@ -739,7 +744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist ein Tablet mit lokalen Modellen für deutschen Mittelstand geeignet?',
-            a: 'Ja. Kleine und mittlere Unternehmen können einen iPad Pro M4 (16 GB) mit Phi-4 Mini oder Llama 3.2 für interne Dokumentenverwaltung, Geschäftskommunikation und Produktbeschreibungen einsetzen. Das Setup ist kostengünstiger als Enterprise-LLM-Dienste, erfüllt DSGVO-Anforderungen ohne externe Anwälte und gibt KMU Zugang zu Fähigkeiten, die sonst große Unternehmen vorbehalten sind. Der BSI empfiehlt diesen Ansatz für Organisationen unter der Datenschutz-Grundverordnung.',
+            a: 'Ja. Kleine und mittlere Unternehmen können einen iPad Pro M5 (12 GB / 16 GB) mit Phi-4 Mini oder Llama 3.2 für interne Dokumentenverwaltung, Geschäftskommunikation und Produktbeschreibungen einsetzen. Das Setup ist kostengünstiger als Enterprise-LLM-Dienste, erfüllt DSGVO-Anforderungen ohne externe Anwälte und gibt KMU Zugang zu Fähigkeiten, die sonst große Unternehmen vorbehalten sind. Der BSI empfiehlt diesen Ansatz für Organisationen unter der Datenschutz-Grundverordnung.',
           },
         ],
       },
@@ -765,14 +770,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'KI lokal auf Ihrem Tablet ausführen: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+      headline: 'KI lokal auf Ihrem Tablet ausführen: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'So führen Sie KI lokal auf einem iPad oder Android-Tablet 2026 aus. Lokale Inferenz-Apps, Termux + Ollama auf Android und Remote-Verbindung zu einem Home-Mac oder PC erklärt.',
       image: `https://www.promptquorum.com/de/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/de/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'de',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
@@ -811,10 +816,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
-    title: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+    title: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
     seoTitle: 'Exécuter l\'IA localement sur iPad et tablette Android 2026',
     intro:
       'L\'exécution d\'une IA locale sur une tablette est pratique en 2026 sur les iPad haut de gamme et les appareils Android disposant de 8 GB+ de RAM. Ce guide couvre les options : inférence sur appareil avec Pocket Paladin et LLM Farm sur iPad, Termux + Ollama sur Android, et l\'alternative de connexion à distance (connecter une tablette à un Mac ou PC exécutant Ollama via Wi-Fi local) pour les appareils ne pouvant pas exécuter l\'inférence localement.',
@@ -830,8 +835,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small',
     ],
     current_hardware_mentioned: [
-      'iPad Pro M4 16 GB',
-      'iPad Air M2 8 GB',
+      'iPad Pro M5 12 GB / 16 GB',
+      'iPad Air M4 12 GB',
       'Samsung Galaxy Tab S10+ 12 GB',
       'Google Pixel Tablet 8 GB',
     ],
@@ -849,22 +854,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Pocket Paladin iOS LLM',
     ],
     leadAnswerBlock:
-      '**L\'exécution d\'une IA locale sur une tablette offre deux modes distincts : l\'inférence sur appareil (le modèle s\'exécute directement sur le processeur de la tablette) et la connexion à distance (la tablette affiche un Mac ou PC exécutant Ollama à la maison). L\'inférence locale fonctionne sur iPad Pro M4 (16 GB, exécute Phi-4 Mini et Llama 3.2 3B en temps réel), iPad Air M2 (8 GB, exécute les modèles 3B correctement) et les appareils Android haut de gamme avec 8 GB+ de RAM (Samsung Galaxy Tab S10+, via Termux + Ollama). La connexion à distance via Open WebUI ou une interface chat simple à l\'IP locale fonctionne sur toute tablette, tout OS — elle transforme votre tablette en interface tactile pour une machine plus puissante. Pour la plupart, la connexion à distance est préférable : la machine exécute le modèle 70B, la tablette fournit l\'interface pratique.**',
+      '**L\'exécution d\'une IA locale sur une tablette offre deux modes distincts : l\'inférence sur appareil (le modèle s\'exécute directement sur le processeur de la tablette) et la connexion à distance (la tablette affiche un Mac ou PC exécutant Ollama à la maison). L\'inférence locale fonctionne sur iPad Pro M5 (12 GB sur les paliers de stockage de base, 16 GB sur les modèles 1 TB/2 TB — exécute Phi-4 Mini et Llama 3.2 3B en temps réel avec plus de marge que la génération M4 précédente), iPad Air M4 (12 GB, exécute les modèles 3B–4B confortablement) et les appareils Android haut de gamme avec 8 GB+ de RAM (Samsung Galaxy Tab S10+, via Termux + Ollama). La connexion à distance via Open WebUI ou une interface chat simple à l\'IP locale fonctionne sur toute tablette, tout OS — elle transforme votre tablette en interface tactile pour une machine plus puissante. Pour la plupart, la connexion à distance est préférable : la machine exécute le modèle 70B, la tablette fournit l\'interface pratique.**',
     quickAnswerTop: {
       fr: {
         question: 'Pouvez-vous exécuter un modèle d\'IA local sur un iPad ou une tablette Android ?',
         answer:
-          'Oui, sur les appareils haut de gamme. iPad Pro M4 avec 16 GB de RAM exécute Phi-4 Mini (3.8B) et Llama 3.2 3B en temps réel avec LLM Farm ou Pocket Paladin. iPad Air M2 (8 GB) exécute les modèles 3B correctement. Les tablettes Android avec 8 GB+ de RAM (Samsung Galaxy Tab S10+) peuvent exécuter Phi-4 Mini et Qwen3 1.7B via Termux + Ollama. Pour les tablettes avec moins de RAM, l\'alternative est la connexion à distance : connectez-vous à un Mac ou PC exécutant Ollama sur votre réseau domestique via Open WebUI dans le navigateur.',
+          'Oui, sur les appareils haut de gamme. iPad Pro M5 (12 GB sur les paliers de stockage de base, 16 GB sur les modèles 1 TB/2 TB) exécute Phi-4 Mini (3.8B) et Llama 3.2 3B en temps réel avec LLM Farm ou Pocket Paladin, avec plus de marge que la génération M4 précédente. iPad Air M4 (12 GB) exécute les modèles 3B–4B confortablement. Les tablettes Android avec 8 GB+ de RAM (Samsung Galaxy Tab S10+) peuvent exécuter Phi-4 Mini et Qwen3 1.7B via Termux + Ollama. Ollama lui-même ne fonctionne pas nativement sur iPadOS — les utilisateurs souhaitant spécifiquement Ollama doivent passer par une connexion à distance vers un Mac ou PC. Pour les tablettes avec moins de RAM, l\'alternative est la connexion à distance : connectez-vous à un Mac ou PC exécutant Ollama sur votre réseau domestique via Open WebUI dans le navigateur.',
         bullets: [
-          'iPad Pro M4 (16 GB) — exécute Phi-4 Mini et Llama 3.2 3B localement en temps réel avec LLM Farm ou Pocket Paladin.',
-          'iPad Air M2 (8 GB) — exécute les modèles 3B à vitesse utilisable ; les modèles 7B sont lents mais fonctionnels.',
+          'iPad Pro M5 (12 GB / 16 GB) — exécute Phi-4 Mini et Llama 3.2 3B localement en temps réel avec LLM Farm ou Pocket Paladin, plus rapide que la génération M4 précédente grâce à une bande passante mémoire accrue.',
+          'iPad Air M4 (12 GB) — exécute les modèles 3B–4B à vitesse utilisable ; les modèles 7B sont lents mais fonctionnels.',
           'Tablettes Android (8 GB+ RAM) — Termux + Ollama exécute Phi-4 Mini et Qwen3 1.7B localement.',
+          'Ollama lui-même n\'a pas de build iPadOS natif — « exécuter Ollama sur un iPad » signifie se connecter à distance à un Mac ou PC qui l\'exécute, pas l\'installer sur l\'iPad.',
           'Connexion à distance — toute tablette, toute RAM : connectez-vous Mac ou PC local via Open WebUI navigateur.',
           'Meilleur modèle on-device : Phi-4 Mini (3.8B, ~2.7 GB) ou Qwen3 1.7B pour appareils limités.',
           'Connexion à distance recommandée pour 7B+ — machine locale plus rapide que toute tablette.',
           'SillyTavern et RisuAI ont des UI réactives mobiles fonctionnant Safari / Android Chrome.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -886,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**L\'inférence locale fonctionne sur iPad Pro M4 (16 GB) et Android haut de gamme (8 GB+).** Au-dessous, génération trop lente. Connexion à distance préférable pour la plupart.',
+          '**L\'inférence locale fonctionne sur iPad Pro M5 (12 GB / 16 GB), iPad Air M4 (12 GB) et Android haut de gamme (8 GB+).** Au-dessous, génération trop lente. Connexion à distance préférable pour la plupart.',
           '**La connexion à distance est l\'approche recommandée.** Connectez tablette (RAM quelconque, OS quelconque) à Mac ou PC exécutant Ollama localement. Machine exécute 70B ; tablette affiche interface chat tactile. Aucun téléchargement modèle requis.',
           '**LLM Farm et Pocket Paladin sont les options natives iPad.** Les deux exécutent modèles GGUF localement sur Apple Silicon. LLM Farm plus d\'options ; Pocket Paladin plus simple.',
           '**Termux + Ollama est l\'approche Android.** Demande aisance terminal, fonctionne tout appareil 8 GB+ RAM. Ollama dans Termux, modèle sur localhost:11434.',
@@ -899,10 +905,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**Apps iPad :** LLM Farm (gratuit, open-source), Pocket Paladin (gratuit + payant), PocketLLM (ancien).',
+          '**Apps iPad :** LLM Farm (gratuit, open-source), Pocket Paladin (gratuit + payant), PocketLLM (ancien). LLM Farm est iOS uniquement — pas de build Android ; l\'équivalent Android est Termux + Ollama.',
           '**Approche Android :** Termux + Ollama (CLI) ou MNN LLM (app, support limité).',
-          '**Connexion à distance :** tout navigateur tablette → Open WebUI ou interface chat à IP locale.',
-          '**Minimum on-device :** iPad Air M2 (8 GB) pour 3B ; iPad Pro M4 (16 GB) pour 7B–8B.',
+          '**Connexion à distance :** tout navigateur tablette → Open WebUI ou interface chat à IP locale. C\'est aussi ainsi que les utilisateurs iPad exécutent Ollama, celui-ci n\'ayant pas de build iPadOS natif.',
+          '**Minimum on-device :** iPad Air M4 (12 GB) pour 3B–4B ; iPad Pro M5 (12 GB / 16 GB) pour 7B–8B.',
           '**Minimum Android :** appareil 8 GB RAM (Galaxy Tab S10+, OnePlus Pad 2).',
           '**Meilleur modèle on-device :** Phi-4 Mini (3.8B, 2.7 GB) ; Qwen3 1.7B pour très limité.',
           '**Vitesse connexion à distance :** dépend qualité Wi-Fi et vitesse génération machine locale.',
@@ -925,9 +931,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Facteur', 'Inférence locale', 'Connexion à distance'],
         rows: [
-          { 'Facteur': 'Limite modèle', 'Inférence locale': '3B–8B (iPad Pro M4) ; 3B (plupart)', 'Connexion à distance': 'Illimitée — machine exécute tout' },
+          { 'Facteur': 'Limite modèle', 'Inférence locale': '3B–8B (iPad Pro M5) ; 3B–4B (plupart)', 'Connexion à distance': 'Illimitée — machine exécute tout' },
           { 'Facteur': 'Utilisation hors ligne', 'Inférence locale': 'Oui — sans Wi-Fi', 'Connexion à distance': 'Non — demande Wi-Fi maison' },
-          { 'Facteur': 'Vitesse génération', 'Inférence locale': 'Modérée (10–25 tok/sec iPad Pro M4)', 'Connexion à distance': 'Dépend machine (jusqu\'à 40+ tok/sec)' },
+          { 'Facteur': 'Vitesse génération', 'Inférence locale': 'Modérée (12–30 tok/sec iPad Pro M5)', 'Connexion à distance': 'Dépend machine (jusqu\'à 40+ tok/sec)' },
           { 'Facteur': 'Stockage tablette', 'Inférence locale': '2–10 GB par modèle', 'Connexion à distance': 'Aucun — modèle sur machine' },
           { 'Facteur': 'Complexité setup', 'Inférence locale': 'Basse (app + fichier modèle)', 'Connexion à distance': 'Basse–modérée (Ollama + Open WebUI)' },
           { 'Facteur': 'Idéal pour', 'Inférence locale': 'Voyage, hors ligne, 3B', 'Connexion à distance': 'Qualité prioritaire, 70B, commodité' },
@@ -945,22 +951,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad : inférence locale',
         content:
-          '**iPad Pro M4 (16 GB) est le seul iPad exécutant modèles 7B à vitesse confortable.** iPad Air M2 (8 GB) et M3 exécutent 3B correctement. [iPhone 8 GB (iPhone 15 Pro Max) exécute aussi petits modèles](/fr/power-local-llm/best-local-llm-apps-iphone-2026) via LLM Farm.',
+          '**iPad Pro M5 est le seul iPad exécutant modèles 7B–8B à vitesse confortable.** Apple a porté la RAM de base du M5 iPad Pro à 12 GB (16 GB sur les paliers de stockage 1 TB/2 TB), contre 8 GB sur le M4 iPad Pro de base, et augmenté la bande passante mémoire de 120 GB/s à 153 GB/s — l\'inférence LLM sur Apple Silicon étant limitée par la bande passante mémoire, cela se traduit directement par une génération plus rapide. iPad Air M4 (12 GB, contre 8 GB sur le précédent M2 Air) exécute désormais les modèles 3B–4B confortablement, et non plus seulement correctement. [iPhone 8 GB exécute aussi petits modèles](/fr/power-local-llm/best-local-llm-apps-iphone-2026) via LLM Farm.',
         items: [
           '**LLM Farm** (gratuit, open-source) : télécharge GGUF Hugging Face, llama.cpp Apple Silicon. Meilleure performance iOS native. Chat et completion. App Store.',
           '**Pocket Paladin** (gratuit + payant) : téléchargements curés, UI propre, plus simple démarrage. Tier gratuit = 3B ; payant déverrouille gros modèles.',
           '**Importer modèles :** LLM Farm, bibliothèque → "Ajouter URL" → URL Hugging Face GGUF. Ou Files pour transférer. Stockage local app — pas iCloud.',
-          '**Gestion RAM iPad :** iOS gère RAM aggressivement. Fermez autres apps avant 7B sur 8 GB — iOS supprimera si autre app demande mémoire. Sur 16 GB rare.',
-          '**Vitesse attendue :** iPad Pro M4 : Phi-4 Mini ~20 tok/sec, Llama 3.2 3B ~30 tok/sec, Gemma 3 4B ~18 tok/sec. iPad Air M2 : 3B ~12–18 tok/sec ; 7B ~5–8 tok/sec.',
+          '**Gestion RAM iPad :** iOS gère RAM aggressivement. Fermez autres apps avant 7B sur 12 GB — iOS supprimera si autre app demande mémoire. Sur 16 GB (paliers 1 TB/2 TB) rare.',
+          '**Vitesse attendue :** iPad Pro M5 (12 GB / 16 GB) : Phi-4 Mini ~25 tok/sec, Llama 3.2 3B ~38 tok/sec, Gemma 3 4B ~23 tok/sec — environ 25–30 % plus rapide que la génération M4 précédente, conformément à l\'augmentation de bande passante mémoire. iPad Air M4 (12 GB) : 3B–4B ~15–20 tok/sec ; 7B ~7–10 tok/sec (toujours lent pour chat temps réel).',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Ne tentez pas 7B sur iPad 8 GB pour chat temps réel. À 5–8 tok/sec, chaque réponse 15–30 sec. Utilisez 3B sur 8 GB ; passez 16 GB ou connexion à distance pour 7B+.',
+            text: 'Ne tentez pas 7B sur iPad Air 12 GB pour chat temps réel. À 7–10 tok/sec, chaque réponse prend encore 10–20 sec. Utilisez 3B–4B sur iPad Air ; passez au iPad Pro M5 16 GB ou connexion à distance pour 7B+.',
           },
         ],
         image: '/images/run-ai-on-tablet-ipad-speed-fr.svg',
-        imageCaption: 'Vitesse iPad on-device : iPad Pro M4 (16 Go) atteint 18–30 tok/sec sur Phi-4 Mini et Llama 3.2 3B ; iPad Air M2 (8 Go) tourne 3B à 12–18 tok/sec mais chute à 5–8 tok/sec sur 7B — trop lent pour chat temps réel.',
+        imageCaption: 'Vitesse iPad on-device : iPad Pro M5 (12 Go / 16 Go) atteint 23–38 tok/sec sur Phi-4 Mini et Llama 3.2 3B ; iPad Air M4 (12 Go) tourne 3B–4B à 15–20 tok/sec mais chute à 7–10 tok/sec sur 7B — toujours lent pour chat temps réel.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -980,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pixel Tablet non recommandé :** Tensor G2 beaucoup plus lent Snapdragon 8 Gen 3, ~4–7 tok/sec Phi-4 Mini (trop lent). Utilisateurs Pixel : connexion à distance.',
           '**Snapdragon 8 Gen 3 et Dimensity 9300** puces Android les plus rapides 2026. ~15–25 tok/sec 1.7B ; ~8–12 tok/sec 3B.',
           '**Stockage modèle :** Android pas mémoire unifiée — RAM sans GPU plupart configs. GPU demande Termux:NVIDIA ou Vulkan spécifique.',
-          '**Apps alternatives :** MNN LLM (Alibaba, gratuit, plus simple) sélection limitée. AI Runner, llamafile aussi disponibles.',
+          '**Apps alternatives :** MNN LLM (Alibaba, gratuit, plus simple) sélection limitée. AI Runner, llamafile aussi disponibles. Il n\'existe aucune version Android de LLM Farm — c\'est une app iOS uniquement ; Termux + Ollama ou MNN LLM sont les équivalents Android les plus proches.',
           'Pour un guide de configuration Xperia spécifique au Japon avec tableau de compatibilité matérielle, consultez <a href="/fr/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">comment exécuter un LLM local sur Xperia au Japon</a>.',
         ],
         callouts: [
@@ -1030,8 +1036,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Choix modèle déterminé par RAM disponible.** Tableau ci-dessous mappe RAM au plus gros modèle tournant temps réel (8+ tok/sec). Couche modèle : [Best Mobile LLMs 2026](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm). Paysage complet : [Best LLMs 2026](/fr/local-llms/best-local-llms-2026).',
         columns: ['Appareil / RAM', 'Modèle recommandé', 'Vitesse', 'Idéal pour'],
         rows: [
-          { 'Appareil / RAM': 'iPad Air M2 / M3 (8 GB)', 'Modèle recommandé': 'Phi-4 Mini Q4', 'Vitesse': '~15–18 tok/sec', 'Idéal pour': 'Assistance écriture, résumé' },
-          { 'Appareil / RAM': 'iPad Pro M4 (16 GB)', 'Modèle recommandé': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Vitesse': '~25–30 tok/sec / ~15–20 tok/sec', 'Idéal pour': 'Station LLM réelle, RAG, fiction' },
+          { 'Appareil / RAM': 'iPad Air M4 (12 GB)', 'Modèle recommandé': 'Phi-4 Mini Q4 / Llama 3.2 3B Q4', 'Vitesse': '~18–20 tok/sec', 'Idéal pour': 'Assistance écriture, résumé' },
+          { 'Appareil / RAM': 'iPad Pro M5 (12 GB / 16 GB)', 'Modèle recommandé': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Vitesse': '~32–38 tok/sec / ~20–23 tok/sec', 'Idéal pour': 'Station LLM réelle, RAG, fiction' },
           { 'Appareil / RAM': 'Android 8 GB (Tab S10+)', 'Modèle recommandé': 'Phi-4 Mini Q4 Termux+Ollama', 'Vitesse': '~10–15 tok/sec', 'Idéal pour': 'Power users Termux' },
           { 'Appareil / RAM': 'Android 6 GB', 'Modèle recommandé': 'Qwen3 1.7B Q4', 'Vitesse': '~15–20 tok/sec', 'Idéal pour': 'Chat léger, traduction' },
           { 'Appareil / RAM': 'Pixel Tablet (8 GB)', 'Modèle recommandé': 'Connexion à distance seulement', 'Vitesse': 'N/A', 'Idéal pour': 'Tensor G2 trop lent' },
@@ -1044,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/run-ai-on-tablet-model-by-device-fr.svg',
-        imageCaption: 'Meilleur modèle par tablette : iPad Pro M4 (16 Go) atteint 25–30 tok/sec sur Llama 3.2 3B ; iPad Air M2/M3 tourne Phi-4 Mini à 15–18 tok/sec ; Android 8 Go atteint 10–15 tok/sec via Termux ; Pixel Tablet nécessite connexion distante (Tensor G2 trop lent).',
+        imageCaption: 'Meilleur modèle par tablette : iPad Pro M5 (12 Go / 16 Go) atteint 32–38 tok/sec sur Llama 3.2 3B ; iPad Air M4 tourne Phi-4 Mini à 18–20 tok/sec ; Android 8 Go atteint 10–15 tok/sec via Termux ; Pixel Tablet nécessite connexion distante (Tensor G2 trop lent).',
       },
       frontends: {
         id: 'frontends',
@@ -1073,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour utilisateurs en France, Belgique et Suisse romande : l\'exécution IA locale sur tablette offre avantages conformité. **La Commission Nationale de l\'Informatique et des Libertés (CNIL) recommande l\'inférence locale pour les données professionnelles sensibles** — communications clients, documents confidentiels, données patients, dossiers légaux restent dans réseau local. Architectures iPad/tablette connectées Ollama maison satisfont RGPD sans solutions enterprise coûteuses.',
         items: [
           '**CNIL + RGPD :** Si vous traitez données sensibles (communications clients, dossiers confidentiels, données patients) France, Belgique, Suisse — CNIL recommande inférence locale. Aucune transmission APIs cloud US sous RGPD.',
-          '**Mise en pratique :** iPad Pro M4 ou tablette Android (8 GB) + Ollama distant Mac/PC foyer = architecture simplement conforme CNIL. Documentez setup (stockage données, modèles) auprès de votre DPO.',
+          '**Mise en pratique :** iPad Pro M5 ou tablette Android (8 GB) + Ollama distant Mac/PC foyer = architecture simplement conforme CNIL. Documentez setup (stockage données, modèles) auprès de votre DPO.',
         ],
       },
       commonMistakes: {
@@ -1095,7 +1101,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'App Pocket Paladin iOS — [App Store](https://apps.apple.com)',
           'Build ARM Ollama Termux — [Docs Ollama](https://ollama.com/docs)',
           'Docs Open WebUI — [docs.openwebui.com](https://docs.openwebui.com)',
-          'Spécifications puce M4 Apple bande passante Neural Engine — [Apple Silicon](https://apple.com/newsroom)',
+          'Spécifications puce M5 Apple iPad Pro, paliers RAM et bande passante mémoire — [Apple Newsroom, octobre 2025](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/)',
+          'Spécifications puce M4 Apple iPad Air et RAM — [Apple Newsroom, mars 2026](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/)',
         ],
       },
       faq: {
@@ -1104,7 +1111,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Pouvez-vous exécuter l\'IA sur un iPad ?',
-            a: 'Oui, sur iPad Pro M4 (16 GB) et iPad Air M2/M3 (8 GB). iPad Pro M4 exécute Phi-4 Mini et Llama 3.2 3B temps réel LLM Farm ou Pocket Paladin. iPad Air M2 exécute 3B correctement. Pour 7B+ iPad, connexion à distance Mac ou PC Ollama recommandée — iPad affiche chat, machine exécute inférence.',
+            a: 'Oui, sur iPad Pro M5 (12 GB de base / 16 GB sur les paliers 1 TB et 2 TB) et iPad Air M4 (12 GB). iPad Pro M5 exécute Phi-4 Mini et Llama 3.2 3B temps réel avec LLM Farm ou Pocket Paladin, environ 25–30 % plus rapide que l\'iPad Pro M4 précédent grâce à une bande passante mémoire accrue (153 GB/s contre 120 GB/s). iPad Air M4 exécute 3B–4B confortablement. Pour 7B+ iPad, connexion à distance Mac ou PC Ollama recommandée — iPad affiche chat, machine exécute inférence.',
+          },
+          {
+            q: 'Ollama fonctionne-t-il sur un iPad ?',
+            a: 'Non — Ollama n\'a pas de build iPadOS pris en charge, il ne peut donc pas être installé directement sur un iPad comme c\'est possible sous Android via Termux. « Exécuter Ollama sur iPad » signifie faire tourner Ollama sur un Mac ou PC et s\'y connecter depuis le navigateur de l\'iPad (via Open WebUI à l\'IP locale de la machine) — l\'iPad est un affichage, pas le moteur d\'inférence. Pour une véritable inférence sur l\'appareil sur iPad, utilisez plutôt LLM Farm ou Pocket Paladin, qui exécutent des modèles GGUF directement via llama.cpp sur Apple Silicon.',
           },
           {
             q: 'Pouvez-vous exécuter l\'IA sur une tablette Android ?',
@@ -1124,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qualité ChatGPT locale tablette ?',
-            a: 'Presque avec bon setup. GPT-5.5 demande 70B+. iPad Pro M4 (16 GB) pas 70B — 3B–8B seulement. À distance : GPU 24 GB (RTX 4090) ou unifié 64 GB (Mac M5 Max) exécute Llama 3.3 70B, tablette accède qualité Open WebUI. Plus proche qualité cloud tablette.',
+            a: 'Presque avec bon setup. GPT-5.5 demande 70B+. iPad Pro M5 (12 GB / 16 GB) pas 70B — 3B–8B seulement. À distance : GPU 24 GB (RTX 4090) ou unifié 64 GB (Mac M5 Max) exécute Llama 3.3 70B, tablette accède qualité Open WebUI. Plus proche qualité cloud tablette.',
           },
           {
             q: 'Garder serveur Ollama maison démarré lid fermé ?',
@@ -1132,15 +1143,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Batterie tablette IA épuisée rapide ?',
-            a: 'Oui — inférence CPU/GPU intensif. Phi-4 Mini iPad Pro M4 conversation actuelle ~20–30% heure. Usage long : tablette branchée. Connexion distance machine : beaucoup moins batterie — affiche seulement page web.',
+            a: 'Oui — inférence CPU/GPU intensif. Phi-4 Mini iPad Pro M5 conversation actuelle ~20–30% heure. Usage long : tablette branchée. Connexion distance machine : beaucoup moins batterie — affiche seulement page web.',
           },
           {
             q: 'Throttling tablettes inférence IA ?',
-            a: 'Oui, spécialement iPad Air M2/M3 et Android sans refroidissement actif. iPad Pro M4 meilleur espace thermique, ~10–15 min avant throttling notable. Android plus vite (5–8 min). Mitigations : chunks 200–400 tokens, tablette surface dure, pas autres apps CPU.',
+            a: 'Oui, spécialement iPad Air M4 et Android sans refroidissement actif. iPad Pro M5 meilleur espace thermique, ~10–15 min avant throttling notable. Android plus vite (5–8 min). Mitigations : chunks 200–400 tokens, tablette surface dure, pas autres apps CPU.',
           },
           {
             q: 'Clavier meilleur usage IA tablette ?',
-            a: 'Apple Magic Keyboard iPad Pro M4 (trackpad) setup poli — shortcuts Safari + Open WebUI, trackpad sélection texte. Logitech Combo Touch budget. Android : tout Bluetooth fonctionne Termux mais expérience plus rude. Prose : iPad Pro + Magic Keyboard station IA écriture.',
+            a: 'Apple Magic Keyboard iPad Pro M5 (trackpad) setup poli — shortcuts Safari + Open WebUI, trackpad sélection texte. Logitech Combo Touch budget. Android : tout Bluetooth fonctionne Termux mais expérience plus rude. Prose : iPad Pro + Magic Keyboard station IA écriture.',
           },
         ],
       },
@@ -1166,14 +1177,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+      headline: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Exécutez l\'IA localement sur iPad ou Android en 2026. Applications d\'inférence locale, Termux + Ollama, connexion à distance vers Mac ou PC expliqués.',
       image: `https://www.promptquorum.com/fr/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/fr/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'fr',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
@@ -1212,10 +1223,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
-    title: 'タブレットでAIをローカル実行：iPad Pro M4・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
+    title: 'タブレットでAIをローカル実行：iPad Pro M5・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
     seoTitle: 'iPadとAndroidタブレットでAIをローカル実行 2026',
     intro:
       '2026年、タブレットでのローカルAI実行はRAM 8GB以上の高性能iPad・Androidデバイスで現実的です。このガイドでは、iPadでのPocket PaladinとLLM Farmによるオンデバイス推論、AndroidでのTermux + Ollama、そしてローカル推論ができないデバイス向けのリモート接続（ローカルWi-FiでOllamaを実行するMacまたはPCへの接続）を解説します。',
@@ -1231,8 +1242,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small',
     ],
     current_hardware_mentioned: [
-      'iPad Pro M4 16 GB',
-      'iPad Air M2 8 GB',
+      'iPad Pro M5 12 GB / 16 GB',
+      'iPad Air M4 12 GB',
       'Samsung Galaxy Tab S10+ 12 GB',
       'Google Pixel Tablet 8 GB',
     ],
@@ -1250,22 +1261,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Pocket Paladin iOS LLM',
     ],
     leadAnswerBlock:
-      '**タブレットでのローカルAI実行には2つのモードがあります。オンデバイス推論（タブレットのチップで直接モデルを実行）とリモート接続（自宅のMacまたはPCでOllamaを実行し、タブレットはその表示端末となる）です。オンデバイスはiPad Pro M4（16GB、Phi-4 MiniとLlama 3.2 3Bをリアルタイム実行）、iPad Air M2（8GB、3Bモデルを適切に実行）、RAM 8GB以上のAndroid高性能デバイス（Samsung Galaxy Tab S10+、Termux + Ollama経由）で実用的です。ホームサーバーのローカルIPでOpen WebUIまたはシンプルなチャットUIを使ったリモート接続は、あらゆるタブレット・RAM・OSで機能します。ほとんどのユーザーにはリモート接続がより優れた選択肢です。ホームマシンが70Bモデルを実行し、タブレットは使いやすいインターフェースを提供します。**',
+      '**タブレットでのローカルAI実行には2つのモードがあります。オンデバイス推論（タブレットのチップで直接モデルを実行）とリモート接続（自宅のMacまたはPCでOllamaを実行し、タブレットはその表示端末となる）です。オンデバイスはiPad Pro M5（ベースストレージ12GB、1TB/2TBモデルは16GB。Phi-4 MiniとLlama 3.2 3Bを前世代M4より余裕を持ってリアルタイム実行）、iPad Air M4（12GB、3B〜4Bモデルを快適に実行）、RAM 8GB以上のAndroid高性能デバイス（Samsung Galaxy Tab S10+、Termux + Ollama経由）で実用的です。ホームサーバーのローカルIPでOpen WebUIまたはシンプルなチャットUIを使ったリモート接続は、あらゆるタブレット・RAM・OSで機能します。ほとんどのユーザーにはリモート接続がより優れた選択肢です。ホームマシンが70Bモデルを実行し、タブレットは使いやすいインターフェースを提供します。**',
     quickAnswerTop: {
       ja: {
         question: 'iPadまたはAndroidタブレットでローカルAIモデルを実行できますか？',
         answer:
-          'はい、高性能デバイスで可能です。16GB RAMのiPad Pro M4は、LLM FarmまたはPocket PaladinでPhi-4 Mini（3.8B）とLlama 3.2 3Bをリアルタイム実行します。iPad Air M2（8GB）は3Bモデルを適切に実行します。RAM 8GB以上のAndroidタブレット（Samsung Galaxy Tab S10+）はTermux + OllamaでPhi-4 MiniとQwen3 1.7Bをローカル実行できます。RAMが少ないまたは古いチップのタブレットには、リモート接続が実用的な代替手段です。',
+          'はい、高性能デバイスで可能です。iPad Pro M5（ベースストレージ12GB、1TB/2TBモデルは16GB）は、LLM FarmまたはPocket PaladinでPhi-4 Mini（3.8B）とLlama 3.2 3Bを前世代M4より余裕を持ってリアルタイム実行します。iPad Air M4（12GB）は3B〜4Bモデルを快適に実行します。RAM 8GB以上のAndroidタブレット（Samsung Galaxy Tab S10+）はTermux + OllamaでPhi-4 MiniとQwen3 1.7Bをローカル実行できます。Ollama自体はiPadOSではネイティブ動作しません — Ollamaを特に使いたいユーザーはMacまたはPCへのリモート接続が必要です。RAMが少ないまたは古いチップのタブレットには、リモート接続が実用的な代替手段です。',
         bullets: [
-          'iPad Pro M4（16GB）— LLM FarmまたはPocket PaladinでPhi-4 MiniとLlama 3.2 3Bをリアルタイムローカル実行。',
-          'iPad Air M2（8GB）— 3Bモデルを実用的な速度で実行；7Bモデルは低速だが動作可能。',
+          'iPad Pro M5（12GB / 16GB）— LLM FarmまたはPocket PaladinでPhi-4 MiniとLlama 3.2 3Bをリアルタイムローカル実行、高いメモリ帯域幅により前世代M4より高速。',
+          'iPad Air M4（12GB）— 3B〜4Bモデルを実用的な速度で実行；7Bモデルは低速だが動作可能。',
           'Androidタブレット（8GB+ RAM）— Termux + OllamaでPhi-4 MiniとQwen3 1.7Bをローカル実行。',
+          'Ollama自体にはネイティブなiPadOSビルドがありません — 「iPadでOllamaを実行する」とはiPad上へのインストールではなく、Ollamaを実行するMacまたはPCへリモート接続することを意味します。',
           'リモート接続 — どのタブレット・RAM・OSでも：ブラウザのOpen WebUI経由でOllama実行中のホームMac・PCに接続。',
           'ほとんどのタブレットに最適なオンデバイスモデル：Phi-4 Mini（3.8B、約2.7GB）、RAM制約デバイスにはQwen3 1.7B。',
           '7B以上はリモート接続推奨 — ホームマシンの方がどのタブレットよりも高速。',
           'SillyTavernとRisuAIはiPad Safari・Android Chromeで動作するモバイル対応UIを搭載。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -1287,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**オンデバイス推論はiPad Pro M4（16GB）と高性能Android（8GB+）で実用的です。** これ以下のスペックではリアルタイム利用に生成速度が不足します。ほとんどのタブレットユーザーにはリモート接続の方が優れた選択肢です。',
+          '**オンデバイス推論はiPad Pro M5（12GB / 16GB）、iPad Air M4（12GB）、高性能Android（8GB+）で実用的です。** これ以下のスペックではリアルタイム利用に生成速度が不足します。ほとんどのタブレットユーザーにはリモート接続の方が優れた選択肢です。',
           '**リモート接続がほとんどの人に推奨されるアプローチです。** ホームネットワーク上のOllama実行中のMacまたはPCにタブレット（RAM・OS問わず）を接続します。ホームマシンが70Bモデルを実行し、タブレットはタッチ操作しやすいチャットインターフェースを表示します。タブレットへのモデルダウンロードは不要です。',
           '**LLM FarmとPocket PaladinはiPadネイティブの選択肢です。** どちらもiPadのApple SiliconチップでGGUFモデルをローカル実行します。LLM Farmは設定オプションが豊富；Pocket Paladinは初回利用者に簡単です。',
           '**Termux + OllamaはAndroidのアプローチです。** ターミナル操作に慣れている必要がありますが、RAM 8GB以上のあらゆるAndroidデバイスで動作します。Termux内でOllamaが動作し、localhost:11434でモデルを提供します。',
@@ -1300,10 +1312,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**iPadアプリ：** LLM Farm（無料・オープンソース）、Pocket Paladin（無料プラン＋有料）、PocketLLM（旧式、更新少ない）。',
+          '**iPadアプリ：** LLM Farm（無料・オープンソース）、Pocket Paladin（無料プラン＋有料）、PocketLLM（旧式、更新少ない）。LLM Farmは iOS-only — Android版は存在せず、Android側の代替はTermux + Ollamaです。',
           '**Androidの方法：** Termux + Ollama（CLI）またはMNN LLM（アプリ、対応モデル限定）。',
-          '**リモート接続：** あらゆるタブレットブラウザ → ホームマシンのローカルIPでOpen WebUIまたはシンプルなチャットUI。',
-          '**オンデバイスの最低要件：** iPad Air M2（8GB）で3Bモデル；iPad Pro M4（16GB）で7B〜8Bモデル。',
+          '**リモート接続：** あらゆるタブレットブラウザ → ホームマシンのローカルIPでOpen WebUIまたはシンプルなチャットUI。OllamaにはネイティブなiPadOSビルドがないため、iPadユーザーもこの方法でOllamaを利用します。',
+          '**オンデバイスの最低要件：** iPad Air M4（12GB）で3B〜4Bモデル；iPad Pro M5（12GB / 16GB）で7B〜8Bモデル。',
           '**Androidオンデバイスの最低要件：** RAM 8GBデバイス（Samsung Galaxy Tab S10+、OnePlus Pad 2）。',
           '**最適オンデバイスモデル：** ほとんどのタブレットにPhi-4 Mini（3.8B、2.7GB）；非常に制約があるデバイスにはQwen3 1.7B。',
           '**リモート接続速度：** タブレットのハードウェアではなく、Wi-Fi品質とホームマシンの生成速度に依存します。',
@@ -1326,9 +1338,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['項目', 'オンデバイス', 'リモート接続'],
         rows: [
-          { '項目': 'モデルサイズ上限', 'オンデバイス': '3B〜8B（iPad Pro M4）；3B（ほとんどのタブレット）', 'リモート接続': '無制限 — ホームマシンがどのモデルも実行可能' },
+          { '項目': 'モデルサイズ上限', 'オンデバイス': '3B〜8B（iPad Pro M5）；3B〜4B（ほとんどのタブレット）', 'リモート接続': '無制限 — ホームマシンがどのモデルも実行可能' },
           { '項目': 'オフライン利用', 'オンデバイス': '可能 — Wi-Fi不要で動作', 'リモート接続': '不可 — ホームWi-Fi必須' },
-          { '項目': '生成速度', 'オンデバイス': '中程度（iPad Pro M4で10〜25トークン/秒）', 'リモート接続': 'ホームマシン次第（最大40+トークン/秒）' },
+          { '項目': '生成速度', 'オンデバイス': '中程度（iPad Pro M5で12〜30トークン/秒）', 'リモート接続': 'ホームマシン次第（最大40+トークン/秒）' },
           { '項目': 'タブレット上のストレージ', 'オンデバイス': 'モデルあたり2〜10GB', 'リモート接続': 'なし — モデルはホームマシン上' },
           { '項目': 'セットアップの複雑さ', 'オンデバイス': '低（アプリ＋モデルファイルのダウンロード）', 'リモート接続': '低〜中（ホームマシンにOllama＋Open WebUI必要）' },
           { '項目': '最適な用途', 'オンデバイス': '旅行、オフライン利用、3Bモデルのタスク', 'リモート接続': '品質優先利用、70Bモデル、利便性' },
@@ -1346,22 +1358,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad：オンデバイス推論',
         content:
-          '**iPad Pro M4（16GB）は7Bモデルを快適な速度で実行できる唯一のiPadです。** iPad Air M2（8GB）とM3（8GB）は3Bモデルを適切に実行します。[8GB RAM iPhone（iPhone 15 Pro Max）もLLM Farm経由で小型モデルを実行できます](/ja/power-local-llm/best-local-llm-apps-iphone-2026)。',
+          '**iPad Pro M5は7B〜8Bモデルを快適な速度で実行できる唯一のiPadです。** AppleはM5 iPad Proのベースメモリを従来のM4 iPad Proベースモデルの8GBから12GBに引き上げ（1TB/2TBストレージモデルは16GB）、メモリ帯域幅を120GB/sから153GB/sに向上させました — Apple SiliconでのLLM推論はメモリ帯域幅に律速されるため、これは直接的な生成速度の向上につながります。iPad Air M4（12GB、従来のM2 Airの8GBから増加）は、3B〜4Bモデルを「適切」ではなく「快適」に実行できるようになりました。[8GB RAM iPhoneもLLM Farm経由で小型モデルを実行できます](/ja/power-local-llm/best-local-llm-apps-iphone-2026)。',
         items: [
           '**LLM Farm**（無料・オープンソース）：Hugging FaceからGGUFモデルをダウンロードし、Apple Silicon上でllama.cppを使って実行します。iOSネイティブオプションの中で最高のパフォーマンス。チャットと補完モードをサポート。App Storeからインストール。',
           '**Pocket Paladin**（無料プラン＋サブスクリプション）：厳選されたモデルダウンロード、LLM Farmよりクリーンなインターフェース、初回起動が少し簡単。無料プランは3Bモデルを含む；サブスクリプションで大型モデルとAPIモードが解放。',
           '**モデルのインポート：** LLM Farmでは、モデルライブラリアイコンをタップ → 「URLからモデルを追加」→ GGUFファイルのHugging Face直接ダウンロードURLを貼り付け。またはApple Filesを使って別の場所でダウンロードしたGGUFを転送。モデルはアプリのローカルストレージに保存 — iCloudではありません。',
-          '**iPadのRAM管理：** iOSはバックグラウンドアプリのRAMを積極的に管理します。8GB iPadで7Bモデルを実行する前に他のすべてのアプリを閉じてください — 別のアプリがメモリを必要とするとiOSがモデルを削除します。16GB iPad Pro M4ではほとんど問題になりません。',
-          '**生成速度の目安：** iPad Pro M4（16GB）：Phi-4 Mini 約20トークン/秒、Llama 3.2 3B 約30トークン/秒、Gemma 3 4B 約18トークン/秒。iPad Air M2（8GB）：3Bモデル 約12〜18トークン/秒；7Bモデル 約5〜8トークン/秒（リアルタイムチャットには低速）。',
+          '**iPadのRAM管理：** iOSはバックグラウンドアプリのRAMを積極的に管理します。12GB iPadで7Bモデルを実行する前に他のすべてのアプリを閉じてください — 別のアプリがメモリを必要とするとiOSがモデルを削除します。16GB iPad Pro M5（1TB/2TBモデル）ではほとんど問題になりません。',
+          '**生成速度の目安：** iPad Pro M5（12GB / 16GB）：Phi-4 Mini 約25トークン/秒、Llama 3.2 3B 約38トークン/秒、Gemma 3 4B 約23トークン/秒 — メモリ帯域幅の向上に応じ、前世代M4より約25〜30%高速。iPad Air M4（12GB）：3B〜4Bモデル 約15〜20トークン/秒；7Bモデル 約7〜10トークン/秒（依然リアルタイムチャットには低速）。',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '8GB iPadでリアルタイムチャット用に7Bモデルを実行しようとしないでください。毎秒5〜8トークンでは、各レスポンスに15〜30秒かかります。プロンプトを送信して待つ要約タスクには使えますが、会話型利用には苛立たしい速度です。8GBデバイスでは3Bモデルを使用し、7B以上には16GBデバイスへのアップグレードまたはリモート接続に切り替えてください。',
+            text: '12GB iPad Airでリアルタイムチャット用に7Bモデルを実行しようとしないでください。毎秒7〜10トークンでは、各レスポンスに依然10〜20秒かかります。プロンプトを送信して待つ要約タスクには使えますが、会話型利用には苛立たしい速度です。iPad Airでは3B〜4Bモデルを使用し、7B以上には16GB iPad Pro M5へのアップグレードまたはリモート接続に切り替えてください。',
           },
         ],
         image: '/images/run-ai-on-tablet-ipad-speed-ja.svg',
-        imageCaption: 'iPadオンデバイス推論速度：iPad Pro M4（16GB）はPhi-4 MiniとLlama 3.2 3Bで18〜30トークン/秒；iPad Air M2（8GB）は3Bを12〜18トークン/秒で実行するが7Bは5〜8トークン/秒に低下 — リアルタイムチャットには低速すぎる。',
+        imageCaption: 'iPadオンデバイス推論速度：iPad Pro M5（12GB / 16GB）はPhi-4 MiniとLlama 3.2 3Bで23〜38トークン/秒；iPad Air M4（12GB）は3B〜4Bを15〜20トークン/秒で実行するが7Bは7〜10トークン/秒に低下 — 依然リアルタイムチャットには低速すぎる。',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -1381,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pixel Tabletはオンデバイスに非推奨：** Pixel Tablet（2023年モデル、8GB Tensor G2）は推奨リストから除外 — Tensor G2はSnapdragon 8 Gen 3 / Dimensity 9300よりLLM推論が大幅に低速で、Phi-4 Miniで4〜7トークン/秒（会話型利用には低速すぎる）。Pixel Tabletユーザーはホームマシンへのリモート接続を使用してください。',
           '**Snapdragon 8 Gen 3とDimensity 9300**は2026年のオンデバイス推論で最速のAndroidチップです。生成速度：1.7Bモデルで約15〜25トークン/秒；3Bモデルで約8〜12トークン/秒。',
           '**モデルストレージ：** Androidは統合メモリを持たないため、ほとんどのTermux設定ではGPUアクセラレーションなしでシステムRAM上でモデルが実行されます。GPUアクセラレーションにはTermux:NVIDIAまたは特定のVulkanビルドが必要；セットアップがより複雑です。',
-          '**代替アプリ：** MNN LLM（Alibaba製、無料、選択されたモデルのオンデバイス推論Androidアプリ）はセットアップが簡単ですが、Ollamaよりモデル選択が限定的です。AI RunnerとllamafileもさまざまなサポートのAndroidビルドがあります。',
+          '**代替アプリ：** MNN LLM（Alibaba製、無料、選択されたモデルのオンデバイス推論Androidアプリ）はセットアップが簡単ですが、Ollamaよりモデル選択が限定的です。AI RunnerとllamafileもさまざまなサポートのAndroidビルドがあります。LLM FarmにAndroid版は存在しません — iOS専用アプリであり、Termux + OllamaまたはMNN LLMが最も近いAndroidの代替手段です。',
           'ハードウェア互換性表付きの日本向けXperia設定ガイドについては、<a href="/ja/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">XperiaでローカルLLMを動かす方法</a>をご覧ください。',
         ],
         callouts: [
@@ -1431,8 +1443,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**モデルの選択は好みではなく、利用可能なRAMによって決まります。** 以下の表は、デバイスのRAMをリアルタイム速度（8トークン/秒以上）で実行できる最大モデルにマッピングしています。モデル層について詳しくは[モバイルLLMモデルベスト2026](/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm)を参照。すべてのハードウェア層のモデル全体像は[ベストローカルLLM 2026](/ja/local-llms/best-local-llms-2026)を参照。',
         columns: ['デバイス / RAM', '推奨モデル', '速度', '最適な用途'],
         rows: [
-          { 'デバイス / RAM': 'iPad Air M2 / M3（8GB）', '推奨モデル': 'Phi-4 Mini Q4', '速度': '約15〜18トークン/秒', '最適な用途': '文章作成補助、要約' },
-          { 'デバイス / RAM': 'iPad Pro M4（16GB）', '推奨モデル': 'Llama 3.2 3B / Gemma 3 4B Q4', '速度': '約25〜30 / 約15〜20トークン/秒', '最適な用途': '本格的LLMワークステーション、RAG、フィクション執筆' },
+          { 'デバイス / RAM': 'iPad Air M4（12GB）', '推奨モデル': 'Phi-4 Mini Q4 / Llama 3.2 3B Q4', '速度': '約18〜20トークン/秒', '最適な用途': '文章作成補助、要約' },
+          { 'デバイス / RAM': 'iPad Pro M5（12GB / 16GB）', '推奨モデル': 'Llama 3.2 3B / Gemma 3 4B Q4', '速度': '約32〜38 / 約20〜23トークン/秒', '最適な用途': '本格的LLMワークステーション、RAG、フィクション執筆' },
           { 'デバイス / RAM': 'Android 8GB（Tab S10+）', '推奨モデル': 'Phi-4 Mini Q4（Termux+Ollama）', '速度': '約10〜15トークン/秒', '最適な用途': 'Termuxに慣れたパワーユーザー' },
           { 'デバイス / RAM': 'Android 6GB', '推奨モデル': 'Qwen3 1.7B Q4', '速度': '約15〜20トークン/秒', '最適な用途': '軽いチャット、翻訳、シンプルなタスク' },
           { 'デバイス / RAM': 'Pixel Tablet（8GB）', '推奨モデル': 'リモート接続のみ', '速度': 'N/A', '最適な用途': 'Tensor G2はオンデバイスに低速すぎる' },
@@ -1445,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/run-ai-on-tablet-model-by-device-ja.svg',
-        imageCaption: 'タブレット別おすすめモデル：iPad Pro M4（16GB）はLlama 3.2 3Bで25〜30トークン/秒；iPad Air M2/M3はPhi-4 Miniを15〜18トークン/秒で実行；Android 8GBはTermux経由で10〜15トークン/秒；Pixel TabletはTensor G2の低速のためリモート接続が必要。',
+        imageCaption: 'タブレット別おすすめモデル：iPad Pro M5（12GB / 16GB）はLlama 3.2 3Bで32〜38トークン/秒；iPad Air M4はPhi-4 Miniを18〜20トークン/秒で実行；Android 8GBはTermux経由で10〜15トークン/秒；Pixel TabletはTensor G2の低速のためリモート接続が必要。',
       },
       frontends: {
         id: 'frontends',
@@ -1473,14 +1485,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '日本のユーザーにとって、タブレットでのローカルAI実行には規制面での追加的な意義があります。**経済産業省（METI）は2024年のAIガバナンスガイドラインで、企業データを処理するAIシステムにおけるローカル推論アーキテクチャを推奨しています。** タブレット上またはホームマシンへのリモート接続でのローカル推論は、クラウドAPIへのデータ送信なしにこれらの要件を満たします。',
         items: [
-          '**METI AIガバナンス2024：** 経済産業省のガイドラインは、機密性の高い業務データを扱うシステムにローカル推論を推奨します。iPad Pro M4やAndroidタブレットのローカルモデルは、顧客データを海外クラウドに送信せずに動作します。',
+          '**METI AIガバナンス2024：** 経済産業省のガイドラインは、機密性の高い業務データを扱うシステムにローカル推論を推奨します。iPad Pro M5やAndroidタブレットのローカルモデルは、顧客データを海外クラウドに送信せずに動作します。',
           '**東アジアのデータ主権：** 日本、マレーシア、シンガポール、韓国はデータローカリゼーション要件を強化しています。タブレットのローカル推論またはローカルネットワークリモート接続はデータを国境内に保持します。',
           '**エンタープライズセキュリティ：** 日本の企業セキュリティ標準（ISMS、ISO 27001）はデータ処理の文書化を要求します。タブレット上または自社ネットワーク内で実行されるローカルモデルは、審査担当者へのコンプライアンス文書化を簡素化します。',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'METI AIガバナンスへのコンプライアンスを検討している日本企業の場合：iPad Pro M4とOllamaを使ったローカル推論のプルーフオブコンセプトをCISO・法務部門とともに実施することをお勧めします。オープンソースライセンス（Meta、Alibaba）とローカルネットワークアーキテクチャにより、規制当局への文書化が簡素化されます。',
+            text: 'METI AIガバナンスへのコンプライアンスを検討している日本企業の場合：iPad Pro M5とOllamaを使ったローカル推論のプルーフオブコンセプトをCISO・法務部門とともに実施することをお勧めします。オープンソースライセンス（Meta、Alibaba）とローカルネットワークアーキテクチャにより、規制当局への文書化が簡素化されます。',
           },
         ],
       },
@@ -1503,7 +1515,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pocket Paladin iOSアプリ — [App Store](https://apps.apple.com)',
           'Termux向けOllama ARMビルド — [Ollamaドキュメント](https://ollama.com/docs)',
           'Open WebUIドキュメント — [docs.openwebui.com](https://docs.openwebui.com)',
-          'Apple M4チップメモリ帯域幅とNeural Engineスペック — [Apple Silicon](https://apple.com/newsroom)',
+          'Apple M5チップのiPad Pro向け仕様、RAM容量、メモリ帯域幅 — [Apple Newsroom、2025年10月](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/)',
+          'Apple M4チップのiPad Air向け仕様とRAM — [Apple Newsroom、2026年3月](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/)',
         ],
       },
       faq: {
@@ -1512,7 +1525,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'iPadでAIを実行できますか？',
-            a: 'はい、iPad Pro M4（16GB）とiPad Air M2/M3（8GB）で可能です。iPad Pro M4はLLM FarmまたはPocket PaladinでPhi-4 MiniとLlama 3.2 3Bをリアルタイム実行します。iPad Air M2は3Bモデルを適切に実行します。iPadで7B以上のモデルには、Ollamaを実行するホームMacまたはPCへのリモート接続を推奨します — iPadはチャットを表示し、ホームマシンが推論を処理します。',
+            a: 'はい、iPad Pro M5（ベース12GB / 1TB・2TBモデルは16GB）とiPad Air M4（12GB）で可能です。iPad Pro M5はLLM FarmまたはPocket PaladinでPhi-4 MiniとLlama 3.2 3Bを前世代M4より余裕を持ってリアルタイム実行します。iPad Air M4は3B〜4Bモデルを快適に実行します。iPadで7B以上のモデルには、Ollamaを実行するホームMacまたはPCへのリモート接続を推奨します — iPadはチャットを表示し、ホームマシンが推論を処理します。',
+          },
+          {
+            q: 'iPadでOllamaは動作しますか？',
+            a: 'いいえ — OllamaはサポートされているiPadOSビルドを持たないため、AndroidのTermuxのようにiPadへ直接インストールすることはできません。「iPadでOllamaを実行する」とは、MacまたはPCでOllamaを動かし、iPadのブラウザから（ホームマシンのローカルIPでOpen WebUI経由で）接続することを意味します — iPadは推論エンジンではなく表示端末です。iPadで真のオンデバイス推論を行うには、代わりにApple Silicon上でllama.cpp経由でGGUFモデルを直接実行するLLM FarmまたはPocket Paladinを使用してください。',
           },
           {
             q: 'AndroidタブレットでAIを実行できますか？',
@@ -1532,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'タブレットでChatGPT品質のレスポンスをローカルで得られますか？',
-            a: 'ほぼ、ただし適切なセットアップが必要です。GPT-5.5品質には70B以上のモデルが必要です。タブレット上では：iPad Pro M4（16GB）は70Bモデルを実行できません — 3B〜8Bモデルのみ。リモート接続経由：ホームマシンに24GB GPU（RTX 4090）または64GB統合メモリ（Mac M5 Max）があればLlama 3.3 70Bを実行でき、タブレットはブラウザのOpen WebUI経由でその品質にアクセスできます。これがタブレットでクラウドAI品質に最も近い方法です。',
+            a: 'ほぼ、ただし適切なセットアップが必要です。GPT-5.5品質には70B以上のモデルが必要です。タブレット上では：iPad Pro M5（12GB / 16GB）は70Bモデルを実行できません — 3B〜8Bモデルのみ。リモート接続経由：ホームマシンに24GB GPU（RTX 4090）または64GB統合メモリ（Mac M5 Max）があればLlama 3.3 70Bを実行でき、タブレットはブラウザのOpen WebUI経由でその品質にアクセスできます。これがタブレットでクラウドAI品質に最も近い方法です。',
           },
           {
             q: 'ラップトップのカバーを閉じてもホームOllamaサーバーを動かし続けるには？',
@@ -1540,15 +1557,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'タブレットでAIを実行するとバッテリーが早く消耗しますか？',
-            a: 'はい — オンデバイス推論はCPU/GPU集約的です。iPad Pro M4でPhi-4 Miniを活発な会話で実行すると、バッテリーが約1時間で20〜30%消耗します。長時間使用する場合は、タブレットを充電しながら使用してください。ホームマシンへのリモート接続は、タブレットのバッテリー消費が大幅に少なくなります — タブレットはウェブページを表示するだけです。',
+            a: 'はい — オンデバイス推論はCPU/GPU集約的です。iPad Pro M5でPhi-4 Miniを活発な会話で実行すると、バッテリーが約1時間で20〜30%消耗します。長時間使用する場合は、タブレットを充電しながら使用してください。ホームマシンへのリモート接続は、タブレットのバッテリー消費が大幅に少なくなります — タブレットはウェブページを表示するだけです。',
           },
           {
             q: 'AI推論中にタブレットはサーマルスロットリングしますか？',
-            a: 'はい、特にiPad Air M2/M3とアクティブ冷却のないAndroidタブレットでは。iPad Pro M4の方が熱的なヘッドルームが大きく、顕著なスロットリングが起きる前に約10〜15分間生成速度を維持します。Androidタブレットはより早くスロットリングします（5〜8分の持続的推論）。緩和策：より短い生成チャンク（レスポンスあたり200〜400トークン）を使用、タブレットを硬い面に置く、同時に他のCPU集約型アプリを実行しない。',
+            a: 'はい、特にiPad Air M4とアクティブ冷却のないAndroidタブレットでは。iPad Pro M5の方が熱的なヘッドルームが大きく、顕著なスロットリングが起きる前に約10〜15分間生成速度を維持します。Androidタブレットはより早くスロットリングします（5〜8分の持続的推論）。緩和策：より短い生成チャンク（レスポンスあたり200〜400トークン）を使用、タブレットを硬い面に置く、同時に他のCPU集約型アプリを実行しない。',
           },
           {
             q: 'AIタブレット利用に最適なキーボードは何ですか？',
-            a: 'iPad Pro M4用Apple Magic Keyboard（トラックパッド付き）が最も洗練されたセットアップです — Safari + Open WebUIでフルキーボードショートカットが動作し、トラックパッドで長いレスポンスのテキスト選択が可能。Logitech Combo Touchは予算代替品。Android：Termuxではどのbluetoothキーボードも動作しますが体験はより粗い（ターミナルのみ）。文章作業には、iPad Pro + Magic Keyboardがタブレットを執筆ファーストのAIワークステーションに変えます。',
+            a: 'iPad Pro M5用Apple Magic Keyboard（トラックパッド付き）が最も洗練されたセットアップです — Safari + Open WebUIでフルキーボードショートカットが動作し、トラックパッドで長いレスポンスのテキスト選択が可能。Logitech Combo Touchは予算代替品。Android：Termuxではどのbluetoothキーボードも動作しますが体験はより粗い（ターミナルのみ）。文章作業には、iPad Pro + Magic Keyboardがタブレットを執筆ファーストのAIワークステーションに変えます。',
           },
         ],
       },
@@ -1574,14 +1591,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'タブレットでAIをローカル実行：iPad Pro M4・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
+      headline: 'タブレットでAIをローカル実行：iPad Pro M5・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
       description:
         '2026年のiPadとAndroidタブレットでのAIローカル実行方法。オンデバイス推論アプリ、Termux + Ollama、ホームMac・PCへのリモート接続を解説。',
       image: `https://www.promptquorum.com/ja/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/ja/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'ja',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
@@ -1624,10 +1641,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
-    title: '在平板上本地运行AI：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026）',
+    title: '在平板上本地运行AI：iPad Pro M5、Galaxy Tab S10、OnePlus Pad 2（2026）',
     seoTitle: '在iPad和安卓平板上本地运行AI 2026',
     intro:
       '2026年，在高端iPad和内存8 GB以上的安卓设备上本地运行AI已切实可行。本指南涵盖所有方案：iPad上使用Pocket Paladin和LLM Farm进行本地推理、安卓上使用Termux + Ollama，以及针对无法本地推理设备的远程连接方案（通过局域网Wi-Fi将平板连接到运行Ollama的Mac或PC）。',
@@ -1643,8 +1660,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small',
     ],
     current_hardware_mentioned: [
-      'iPad Pro M4 16 GB',
-      'iPad Air M2 8 GB',
+      'iPad Pro M5 12 GB / 16 GB',
+      'iPad Air M4 12 GB',
       'Samsung Galaxy Tab S10+ 12 GB',
       'Google Pixel Tablet 8 GB',
     ],
@@ -1662,22 +1679,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Pocket Paladin iOS LLM',
     ],
     leadAnswerBlock:
-      '**在平板上本地运行AI有两种截然不同的模式：本地推理（模型直接在平板芯片上运行）和远程连接（平板作为家用Mac或PC运行Ollama的显示终端）。本地推理在iPad Pro M4（16 GB，可实时运行Phi-4 Mini和Llama 3.2 3B）、iPad Air M2（8 GB，可运行3B模型）以及8 GB以上RAM的高端安卓设备（Samsung Galaxy Tab S10+，通过Termux + Ollama）上切实可行。通过Open WebUI或简单聊天界面经局域网IP远程连接，适用于任何平板、任何内存、任何系统——将平板变成连接家用高性能机器的触控终端。对大多数用户而言，远程连接是更优选择：家用机器运行70B模型，平板提供便捷界面。**',
+      '**在平板上本地运行AI有两种截然不同的模式：本地推理（模型直接在平板芯片上运行）和远程连接（平板作为家用Mac或PC运行Ollama的显示终端）。本地推理在iPad Pro M5（基础存储版12 GB，1 TB/2 TB版16 GB，可比上一代M4更从容地实时运行Phi-4 Mini和Llama 3.2 3B）、iPad Air M4（12 GB，可流畅运行3B至4B模型）以及8 GB以上RAM的高端安卓设备（Samsung Galaxy Tab S10+，通过Termux + Ollama）上切实可行。通过Open WebUI或简单聊天界面经局域网IP远程连接，适用于任何平板、任何内存、任何系统——将平板变成连接家用高性能机器的触控终端。对大多数用户而言，远程连接是更优选择：家用机器运行70B模型，平板提供便捷界面。**',
     quickAnswerTop: {
       zh: {
         question: '可以在iPad或安卓平板上运行本地AI模型吗？',
         answer:
-          '可以，但需要高端设备。iPad Pro M4（16 GB RAM）使用LLM Farm或Pocket Paladin可实时运行Phi-4 Mini（3.8B）和Llama 3.2 3B。iPad Air M2（8 GB）可运行3B模型。8 GB以上RAM的安卓平板（Samsung Galaxy Tab S10+）通过Termux + Ollama可本地运行Phi-4 Mini和Qwen3 1.7B。内存较小或芯片较旧的平板，实用替代方案是远程连接：通过平板浏览器中的Open WebUI连接家庭网络中运行Ollama的Mac或PC。',
+          '可以，但需要高端设备。iPad Pro M5（基础存储版12 GB，1 TB/2 TB版16 GB）使用LLM Farm或Pocket Paladin可比上一代M4更从容地实时运行Phi-4 Mini（3.8B）和Llama 3.2 3B。iPad Air M4（12 GB）可流畅运行3B至4B模型。8 GB以上RAM的安卓平板（Samsung Galaxy Tab S10+）通过Termux + Ollama可本地运行Phi-4 Mini和Qwen3 1.7B。Ollama本身不支持在iPadOS上原生运行——特别需要Ollama的用户须远程连接到Mac或PC。内存较小或芯片较旧的平板，实用替代方案是远程连接：通过平板浏览器中的Open WebUI连接家庭网络中运行Ollama的Mac或PC。',
         bullets: [
-          'iPad Pro M4（16 GB）——使用LLM Farm或Pocket Paladin可实时本地运行Phi-4 Mini和Llama 3.2 3B。',
-          'iPad Air M2（8 GB）——3B模型运行速度可用；7B模型较慢但可运行。',
+          'iPad Pro M5（12 GB / 16 GB）——使用LLM Farm或Pocket Paladin可实时本地运行Phi-4 Mini和Llama 3.2 3B，得益于更高的内存带宽，速度快于上一代M4。',
+          'iPad Air M4（12 GB）——3B至4B模型运行速度可用；7B模型较慢但可运行。',
           '安卓平板（8 GB以上RAM）——Termux + Ollama可本地运行Phi-4 Mini和Qwen3 1.7B。',
+          'Ollama本身没有原生iPadOS版本——"在iPad上运行Ollama"意味着远程连接运行Ollama的Mac或PC，而非将其安装在iPad上。',
           '远程连接——任意平板、任意内存：通过浏览器Open WebUI连接运行Ollama的家用Mac或PC。',
           '大多数平板最佳本地模型：Phi-4 Mini（3.8B，约2.7 GB）；内存受限设备选Qwen3 1.7B。',
           '7B以上模型推荐远程连接而非本地推理——家用机器运行速度远超任何平板。',
           'SillyTavern和RisuAI均有移动端响应式界面，支持iPad Safari / 安卓Chrome。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -1699,7 +1717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**本地推理在iPad Pro M4（16 GB）和高端安卓设备（8 GB以上）上切实可行。** 低于此配置，生成速度过慢无法实时使用。对大多数平板用户，远程连接到家用机器是更优选择。',
+          '**本地推理在iPad Pro M5（12 GB / 16 GB）、iPad Air M4（12 GB）和高端安卓设备（8 GB以上）上切实可行。** 低于此配置，生成速度过慢无法实时使用。对大多数平板用户，远程连接到家用机器是更优选择。',
           '**远程连接是大多数用户的推荐方案。** 将任意平板（任意内存、任意系统）连接到家庭网络中运行Ollama的Mac或PC。家用机器运行70B模型，平板获得触控友好的聊天界面，无需在平板上下载模型。',
           '**LLM Farm和Pocket Paladin是iPad原生选项。** 两款应用均在iPad Apple Silicon芯片上本地运行GGUF模型。LLM Farm配置选项更多；Pocket Paladin对新手更友好。',
           '**Termux + Ollama是安卓方案。** 需要具备终端操作基础，但适用于任何8 GB以上RAM的安卓设备。Ollama在Termux中运行，通过localhost:11434提供模型服务。',
@@ -1712,10 +1730,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '快速概览',
         items: [
-          '**iPad应用：** LLM Farm（免费开源）、Pocket Paladin（免费版+付费版）、PocketLLM（较旧，维护较少）。',
+          '**iPad应用：** LLM Farm（免费开源）、Pocket Paladin（免费版+付费版）、PocketLLM（较旧，维护较少）。LLM Farm仅支持iOS——没有安卓版本；安卓端对应方案是Termux + Ollama。',
           '**安卓方案：** Termux + Ollama（命令行）或MNN LLM（应用，模型支持有限）。',
-          '**远程连接：** 任意平板浏览器 → 家用机器局域网IP上的Open WebUI或简单聊天界面。',
-          '**本地推理最低配置：** 3B模型需iPad Air M2（8 GB）；7B至8B模型需iPad Pro M4（16 GB）。',
+          '**远程连接：** 任意平板浏览器 → 家用机器局域网IP上的Open WebUI或简单聊天界面。由于Ollama没有原生iPadOS版本，iPad用户也是通过这种方式运行Ollama。',
+          '**本地推理最低配置：** 3B至4B模型需iPad Air M4（12 GB）；7B至8B模型需iPad Pro M5（12 GB / 16 GB）。',
           '**安卓本地推理最低配置：** 8 GB RAM（Samsung Galaxy Tab S10+、OnePlus Pad 2）。',
           '**最佳本地模型：** 大多数平板选Phi-4 Mini（3.8B，2.7 GB）；内存极度受限选Qwen3 1.7B。',
           '**远程连接速度：** 取决于Wi-Fi质量和家用机器的生成速度，与平板硬件无关。',
@@ -1738,9 +1756,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['对比项', '本地推理', '远程连接'],
         rows: [
-          { '对比项': '模型规模上限', '本地推理': '3B至8B（iPad Pro M4）；大多数平板3B', '远程连接': '无限制——家用机器可运行任意模型' },
+          { '对比项': '模型规模上限', '本地推理': '3B至8B（iPad Pro M5）；大多数平板3B至4B', '远程连接': '无限制——家用机器可运行任意模型' },
           { '对比项': '离线使用', '本地推理': '支持——无需Wi-Fi', '远程连接': '不支持——需要家庭Wi-Fi' },
-          { '对比项': '生成速度', '本地推理': '中等（iPad Pro M4约10至25词元/秒）', '远程连接': '取决于家用机器（最高40+词元/秒）' },
+          { '对比项': '生成速度', '本地推理': '中等（iPad Pro M5约12至30词元/秒）', '远程连接': '取决于家用机器（最高40+词元/秒）' },
           { '对比项': '平板存储占用', '本地推理': '每个模型2至10 GB', '远程连接': '零——模型存储在家用机器上' },
           { '对比项': '设置复杂度', '本地推理': '低（下载应用+模型文件）', '远程连接': '低至中（家用机器需安装Ollama + Open WebUI）' },
           { '对比项': '适合场景', '本地推理': '出行、离线使用、3B模型任务', '远程连接': '质量优先、70B模型、日常便捷使用' },
@@ -1758,22 +1776,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad：本地推理',
         content:
-          '**iPad Pro M4（16 GB）是唯一能以舒适速度运行7B模型的iPad。** iPad Air M2（8 GB）和M3（8 GB）可运行3B模型。[配备8 GB RAM的iPhone（iPhone 15 Pro Max）也可通过LLM Farm运行小型模型](/zh/power-local-llm/best-local-llm-apps-iphone-2026)。',
+          '**iPad Pro M5是唯一能以舒适速度运行7B至8B模型的iPad。** 苹果将M5 iPad Pro基础内存提升至12 GB（1 TB/2 TB存储版为16 GB），高于上一代M4基础版的8 GB，内存带宽也从120 GB/s提升至153 GB/s——由于Apple Silicon上的LLM推理受内存带宽制约，这直接转化为更快的生成速度。iPad Air M4（12 GB，高于上一代M2 Air的8 GB）现在可以流畅运行3B至4B模型，而不仅仅是勉强运行。[配备8 GB RAM的iPhone也可通过LLM Farm运行小型模型](/zh/power-local-llm/best-local-llm-apps-iphone-2026)。',
         items: [
           '**LLM Farm**（免费开源）：从Hugging Face下载GGUF模型，在Apple Silicon上通过llama.cpp运行。iOS原生选项中性能最佳，支持聊天和补全模式。从App Store安装。',
           '**Pocket Paladin**（免费版+订阅）：精选模型下载，界面比LLM Farm更简洁，新手上手体验更好。免费版包含3B模型；订阅版解锁更大模型和API模式。',
           '**导入模型：** 在LLM Farm中，点击模型库图标 → "从URL添加模型" → 粘贴Hugging Face GGUF文件直链。也可使用苹果文件应用传输GGUF文件。模型存储在应用本地存储中——不使用iCloud。',
-          '**iPad内存管理：** iOS会主动管理后台应用内存。在8 GB iPad上运行7B模型前关闭所有其他应用——iOS可能会在其他应用需要内存时清除模型。在16 GB iPad Pro M4上此问题很少出现。',
-          '**生成速度预期：** iPad Pro M4（16 GB）：Phi-4 Mini约20词元/秒，Llama 3.2 3B约30词元/秒，Gemma 3 4B约18词元/秒。iPad Air M2（8 GB）：3B模型约12至18词元/秒；7B模型约5至8词元/秒（实时对话速度过慢）。',
+          '**iPad内存管理：** iOS会主动管理后台应用内存。在12 GB iPad上运行7B模型前关闭所有其他应用——iOS可能会在其他应用需要内存时清除模型。在16 GB iPad Pro M5（1 TB/2 TB版）上此问题很少出现。',
+          '**生成速度预期：** iPad Pro M5（12 GB / 16 GB）：Phi-4 Mini约25词元/秒，Llama 3.2 3B约38词元/秒，Gemma 3 4B约23词元/秒——较上一代M4快约25%至30%，与内存带宽提升幅度一致。iPad Air M4（12 GB）：3B至4B模型约15至20词元/秒；7B模型约7至10词元/秒（实时对话速度仍偏慢）。',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '不要在8 GB iPad上运行7B模型进行实时对话。每秒5至8词元意味着每个回复需要15至30秒。此速度勉强可用于摘要任务，但对话体验极差。8 GB设备请使用3B模型；7B以上质量需升级至16 GB设备或切换至远程连接。',
+            text: '不要在12 GB iPad Air上运行7B模型进行实时对话。每秒7至10词元意味着每个回复仍需10至20秒。此速度勉强可用于摘要任务，但对话体验较差。iPad Air请使用3B至4B模型；7B以上质量需升级至16 GB iPad Pro M5或切换至远程连接。',
           },
         ],
         image: '/images/run-ai-on-tablet-ipad-speed-zh.svg',
-        imageCaption: 'iPad本地推理速度：iPad Pro M4（16 GB）在Phi-4 Mini和Llama 3.2 3B上达到18至30词元/秒；iPad Air M2（8 GB）以12至18词元/秒运行3B模型，但7B模型降至5至8词元/秒——实时对话速度过慢。',
+        imageCaption: 'iPad本地推理速度：iPad Pro M5（12 GB / 16 GB）在Phi-4 Mini和Llama 3.2 3B上达到23至38词元/秒；iPad Air M4（12 GB）以15至20词元/秒运行3B至4B模型，但7B模型降至7至10词元/秒——实时对话速度仍偏慢。',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -1793,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**不推荐Pixel Tablet本地推理：** Pixel Tablet（2023款，8 GB Tensor G2）被排除在推荐本地推理设备之外——Tensor G2在LLM推理方面明显慢于骁龙8 Gen 3 / 天玑9300，Phi-4 Mini只能达到4至7词元/秒（对话速度过慢）。Pixel Tablet用户应使用远程连接到家用机器。',
           '**骁龙8 Gen 3和天玑9300**是2026年安卓本地推理最快的芯片。生成速度：1.7B模型约15至25词元/秒；3B模型约8至12词元/秒。',
           '**模型存储：** 安卓没有统一内存——大多数Termux配置下模型在系统RAM中运行，无GPU加速。GPU加速需要Termux:NVIDIA或特定Vulkan构建版本，设置更复杂。',
-          '**替代应用：** MNN LLM（阿里巴巴，免费，安卓应用，支持精选模型的本地推理）设置更简便，但模型选择比Ollama有限。AI Runner和llamafile也有支持程度不同的安卓版本。',
+          '**替代应用：** MNN LLM（阿里巴巴，免费，安卓应用，支持精选模型的本地推理）设置更简便，但模型选择比Ollama有限。AI Runner和llamafile也有支持程度不同的安卓版本。LLM Farm没有安卓版本——它仅为iOS应用；Termux + Ollama或MNN LLM是最接近的安卓替代方案。',
           '有关日本专用Xperia硬件兼容性表格和设置指南，请参阅<a href="/zh/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">在日本Xperia手机上运行本地LLM的方法</a>。',
         ],
         callouts: [
@@ -1843,8 +1861,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**模型选择由可用内存决定——而非偏好。** 下表将设备内存映射到以实时速度（每秒8词元以上）运行的最大模型。具体模型层面参见[2026年最佳移动LLM模型](/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm)。全硬件层级的更广泛模型概览参见[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026)。',
         columns: ['设备 / 内存', '推荐模型', '生成速度', '适合场景'],
         rows: [
-          { '设备 / 内存': 'iPad Air M2 / M3（8 GB）', '推荐模型': 'Phi-4 Mini Q4', '生成速度': '约15至18词元/秒', '适合场景': '写作辅助、内容摘要' },
-          { '设备 / 内存': 'iPad Pro M4（16 GB）', '推荐模型': 'Llama 3.2 3B / Gemma 3 4B Q4', '生成速度': '约25至30 / 15至20词元/秒', '适合场景': '真正的LLM工作站、RAG、创意写作' },
+          { '设备 / 内存': 'iPad Air M4（12 GB）', '推荐模型': 'Phi-4 Mini Q4 / Llama 3.2 3B Q4', '生成速度': '约18至20词元/秒', '适合场景': '写作辅助、内容摘要' },
+          { '设备 / 内存': 'iPad Pro M5（12 GB / 16 GB）', '推荐模型': 'Llama 3.2 3B / Gemma 3 4B Q4', '生成速度': '约32至38 / 20至23词元/秒', '适合场景': '真正的LLM工作站、RAG、创意写作' },
           { '设备 / 内存': '安卓8 GB（Tab S10+）', '推荐模型': '通过Termux+Ollama运行Phi-4 Mini Q4', '生成速度': '约10至15词元/秒', '适合场景': '熟悉Termux的高级用户' },
           { '设备 / 内存': '安卓6 GB', '推荐模型': 'Qwen3 1.7B Q4', '生成速度': '约15至20词元/秒', '适合场景': '轻量对话、翻译、简单任务' },
           { '设备 / 内存': 'Pixel Tablet（8 GB）', '推荐模型': '仅限远程连接', '生成速度': '不适用', '适合场景': 'Tensor G2本地推理速度过慢' },
@@ -1857,7 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/run-ai-on-tablet-model-by-device-zh.svg',
-        imageCaption: '各平板推荐模型：iPad Pro M4（16 GB）在Llama 3.2 3B上达到25至30词元/秒；iPad Air M2/M3以15至18词元/秒运行Phi-4 Mini；安卓8 GB通过Termux达到10至15词元/秒；Pixel Tablet因Tensor G2芯片速度过慢需使用远程连接。',
+        imageCaption: '各平板推荐模型：iPad Pro M5（12 GB / 16 GB）在Llama 3.2 3B上达到32至38词元/秒；iPad Air M4以18至20词元/秒运行Phi-4 Mini；安卓8 GB通过Termux达到10至15词元/秒；Pixel Tablet因Tensor G2芯片速度过慢需使用远程连接。',
       },
       frontends: {
         id: 'frontends',
@@ -1898,7 +1916,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pocket Paladin iOS应用 — [App Store](https://apps.apple.com)',
           'Termux版Ollama ARM构建 — [Ollama文档](https://ollama.com/docs)',
           'Open WebUI文档 — [docs.openwebui.com](https://docs.openwebui.com)',
-          'Apple M4芯片内存带宽和神经引擎规格 — [Apple Silicon](https://apple.com/newsroom)',
+          'Apple M5芯片iPad Pro规格、内存版本和内存带宽 — [Apple Newsroom，2025年10月](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/)',
+          'Apple M4芯片iPad Air规格和内存 — [Apple Newsroom，2026年3月](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/)',
         ],
       },
       faq: {
@@ -1907,7 +1926,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '可以在iPad上运行AI吗？',
-            a: '可以，支持iPad Pro M4（16 GB）和iPad Air M2/M3（8 GB）。iPad Pro M4使用LLM Farm或Pocket Paladin可实时运行Phi-4 Mini和Llama 3.2 3B。iPad Air M2可运行3B模型。对于iPad上的7B以上模型，推荐远程连接到运行Ollama的家用Mac或PC——iPad显示聊天，家用机器负责推理。',
+            a: '可以，支持iPad Pro M5（基础版12 GB / 1 TB和2 TB版16 GB）和iPad Air M4（12 GB）。iPad Pro M5使用LLM Farm或Pocket Paladin可比上一代iPad Pro M4更从容地实时运行Phi-4 Mini和Llama 3.2 3B。iPad Air M4可流畅运行3B至4B模型。对于iPad上的7B以上模型，推荐远程连接到运行Ollama的家用Mac或PC——iPad显示聊天，家用机器负责推理。',
+          },
+          {
+            q: 'Ollama能在iPad上运行吗？',
+            a: '不能——Ollama没有官方支持的iPadOS版本，因此无法像在安卓上通过Termux那样直接安装到iPad上。"在iPad上运行Ollama"实际是指在Mac或PC上运行Ollama，然后从iPad浏览器（通过家用机器局域网IP上的Open WebUI）连接——iPad只是显示终端，并非推理引擎。若需要在iPad上实现真正的本地推理，请改用LLM Farm或Pocket Paladin，它们通过llama.cpp直接在Apple Silicon上运行GGUF模型。',
           },
           {
             q: '可以在安卓平板上运行AI吗？',
@@ -1927,11 +1950,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '运行AI会快速耗尽平板电量吗？',
-            a: '是的——本地推理对CPU/GPU要求较高。在iPad Pro M4上运行Phi-4 Mini进行活跃对话，电量消耗约为每小时20至30%。长时间使用请保持插电状态。远程连接到家用机器对平板电量消耗明显更少——平板仅显示网页。',
+            a: '是的——本地推理对CPU/GPU要求较高。在iPad Pro M5上运行Phi-4 Mini进行活跃对话，电量消耗约为每小时20至30%。长时间使用请保持插电状态。远程连接到家用机器对平板电量消耗明显更少——平板仅显示网页。',
           },
           {
             q: '平板在AI推理过程中会热降频吗？',
-            a: '会，尤其是iPad Air M2/M3和没有主动散热的安卓平板。iPad Pro M4散热余量更好，可持续生成约10至15分钟后才出现明显降频。安卓平板降频更快（持续推理5至8分钟）。缓解方法：使用较短的生成块（每次回复200至400词元）、将平板置于硬质平面上、避免同时运行其他CPU密集型应用。',
+            a: '会，尤其是iPad Air M4和没有主动散热的安卓平板。iPad Pro M5散热余量更好，可持续生成约10至15分钟后才出现明显降频。安卓平板降频更快（持续推理5至8分钟）。缓解方法：使用较短的生成块（每次回复200至400词元）、将平板置于硬质平面上、避免同时运行其他CPU密集型应用。',
           },
           {
             q: '如何让家用Ollama服务器在合上笔记本盖子后持续运行？',
@@ -1943,7 +1966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '平板比手机更适合本地AI吗？',
-            a: '对于打字密集型使用（起草、RAG、长对话），是的——键盘支持和屏幕尺寸很重要。对于快速聊天、语音查询或移动使用，随身携带的手机更方便。iPad Pro M4是唯一在本地AI方面显著超越旗舰手机的平板；中端平板和手机大致相当。大多数读者不应专门为本地AI购买平板——如果因其他原因想要平板，AI能力是附加价值。',
+            a: '对于打字密集型使用（起草、RAG、长对话），是的——键盘支持和屏幕尺寸很重要。对于快速聊天、语音查询或移动使用，随身携带的手机更方便。iPad Pro M5是唯一在本地AI方面显著超越旗舰手机的平板；中端平板和手机大致相当。大多数读者不应专门为本地AI购买平板——如果因其他原因想要平板，AI能力是附加价值。',
           },
         ],
       },
@@ -1980,13 +2003,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '在平板上本地运行AI：iPad Pro M4、Galaxy Tab S10、OnePlus Pad 2（2026）',
+      headline: '在平板上本地运行AI：iPad Pro M5、Galaxy Tab S10、OnePlus Pad 2（2026）',
       description:
         '2026年如何在iPad或安卓平板上本地运行AI。本地推理应用、Termux + Ollama以及远程连接家用Mac或PC的方法详解。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'zh',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
@@ -2029,10 +2052,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
-    title: 'Ejecuta IA local en tu tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+    title: 'Ejecuta IA local en tu tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
     seoTitle: 'Ejecutar IA localmente en iPad y tablet Android 2026',
     intro:
       'Ejecutar una IA local en una tablet es práctico en 2026 en iPads de alta gama y dispositivos Android con 8 GB o más de RAM. Esta guía cubre las opciones: inferencia en el dispositivo con Pocket Paladin y LLM Farm en iPad, Termux + Ollama en Android, y la alternativa de conexión remota (conectar la tablet a un Mac o PC que ejecute Ollama por Wi-Fi local) para dispositivos que no pueden ejecutar inferencia localmente.',
@@ -2048,8 +2071,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small',
     ],
     current_hardware_mentioned: [
-      'iPad Pro M4 16 GB',
-      'iPad Air M2 8 GB',
+      'iPad Pro M5 12 GB / 16 GB',
+      'iPad Air M4 12 GB',
       'Samsung Galaxy Tab S10+ 12 GB',
       'Google Pixel Tablet 8 GB',
     ],
@@ -2067,22 +2090,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'pocket paladin ios llm',
     ],
     leadAnswerBlock:
-      '**Ejecutar una IA local en una tablet tiene dos modos distintos: inferencia en el dispositivo (el modelo se ejecuta directamente en el chip de la tablet) y conexión remota (la tablet es una pantalla para un Mac o PC en casa que ejecuta Ollama). La inferencia en el dispositivo es práctica en iPad Pro M4 (16 GB, ejecuta Phi-4 Mini y Llama 3.2 3B en tiempo real), iPad Air M2 (8 GB, ejecuta modelos 3B de forma adecuada) y dispositivos Android de alta gama con 8 GB o más de RAM (Samsung Galaxy Tab S10+, mediante Termux + Ollama). La conexión remota a través de Open WebUI o una interfaz de chat sencilla en la IP local del servidor de casa funciona en cualquier tablet, con cualquier cantidad de RAM y cualquier sistema operativo: convierte tu tablet en un terminal táctil hacia una máquina doméstica más potente. Para la mayoría de las personas, la conexión remota es la mejor opción: la máquina en casa ejecuta el modelo de 70B mientras la tablet proporciona la interfaz conveniente.**',
+      '**Ejecutar una IA local en una tablet tiene dos modos distintos: inferencia en el dispositivo (el modelo se ejecuta directamente en el chip de la tablet) y conexión remota (la tablet es una pantalla para un Mac o PC en casa que ejecuta Ollama). La inferencia en el dispositivo es práctica en iPad Pro M5 (12 GB en los niveles de almacenamiento base, 16 GB en los modelos de 1 TB/2 TB — ejecuta Phi-4 Mini y Llama 3.2 3B en tiempo real con más margen que la generación M4 anterior), iPad Air M4 (12 GB, ejecuta modelos de 3B a 4B con comodidad) y dispositivos Android de alta gama con 8 GB o más de RAM (Samsung Galaxy Tab S10+, mediante Termux + Ollama). La conexión remota a través de Open WebUI o una interfaz de chat sencilla en la IP local del servidor de casa funciona en cualquier tablet, con cualquier cantidad de RAM y cualquier sistema operativo: convierte tu tablet en un terminal táctil hacia una máquina doméstica más potente. Para la mayoría de las personas, la conexión remota es la mejor opción: la máquina en casa ejecuta el modelo de 70B mientras la tablet proporciona la interfaz conveniente.**',
     quickAnswerTop: {
       es: {
         question: '¿Se puede ejecutar un modelo de IA local en un iPad o tablet Android?',
         answer:
-          'Sí, en dispositivos de alta gama. El iPad Pro M4 con 16 GB de RAM ejecuta Phi-4 Mini (3.8B) y Llama 3.2 3B en tiempo real usando LLM Farm o Pocket Paladin. El iPad Air M2 (8 GB) ejecuta modelos 3B de forma adecuada. Las tablets Android con 8 GB o más de RAM (Samsung Galaxy Tab S10+) pueden ejecutar Phi-4 Mini y Qwen3 1.7B localmente mediante Termux + Ollama. Para tablets con menos RAM o chips más antiguos, la alternativa práctica es la conexión remota: conéctate a un Mac o PC en tu red doméstica que ejecute Ollama, usando Open WebUI en el navegador de la tablet.',
+          'Sí, en dispositivos de alta gama. El iPad Pro M5 (12 GB en los niveles de almacenamiento base, 16 GB en los modelos de 1 TB/2 TB) ejecuta Phi-4 Mini (3.8B) y Llama 3.2 3B en tiempo real usando LLM Farm o Pocket Paladin, con más margen que la generación M4 anterior. El iPad Air M4 (12 GB) ejecuta modelos de 3B a 4B con comodidad. Las tablets Android con 8 GB o más de RAM (Samsung Galaxy Tab S10+) pueden ejecutar Phi-4 Mini y Qwen3 1.7B localmente mediante Termux + Ollama. Ollama en sí no se ejecuta de forma nativa en iPadOS — los usuarios que específicamente quieran Ollama necesitan una conexión remota a un Mac o PC. Para tablets con menos RAM o chips más antiguos, la alternativa práctica es la conexión remota: conéctate a un Mac o PC en tu red doméstica que ejecute Ollama, usando Open WebUI en el navegador de la tablet.',
         bullets: [
-          'iPad Pro M4 (16 GB) — ejecuta Phi-4 Mini y Llama 3.2 3B localmente en tiempo real usando LLM Farm o Pocket Paladin.',
-          'iPad Air M2 (8 GB) — ejecuta modelos 3B a velocidad utilizable; los modelos 7B son lentos pero funcionales.',
+          'iPad Pro M5 (12 GB / 16 GB) — ejecuta Phi-4 Mini y Llama 3.2 3B localmente en tiempo real usando LLM Farm o Pocket Paladin, más rápido que la generación M4 anterior gracias a un mayor ancho de banda de memoria.',
+          'iPad Air M4 (12 GB) — ejecuta modelos de 3B a 4B a velocidad utilizable; los modelos 7B son lentos pero funcionales.',
           'Tablets Android (8 GB o más de RAM) — Termux + Ollama ejecuta Phi-4 Mini y Qwen3 1.7B localmente.',
+          'Ollama en sí no tiene una compilación nativa para iPadOS — "ejecutar Ollama en un iPad" significa conectarse de forma remota a un Mac o PC que lo ejecute, no instalarlo en el iPad.',
           'Conexión remota — cualquier tablet, cualquier RAM: conéctate a tu Mac o PC en casa que ejecute Ollama mediante Open WebUI en el navegador.',
           'Mejor modelo en el dispositivo para la mayoría de tablets: Phi-4 Mini (3.8B, ~2,7 GB) o Qwen3 1.7B para dispositivos con RAM limitada.',
           'Se recomienda la conexión remota sobre el dispositivo para modelos de 7B en adelante — la máquina en casa ejecuta el modelo más rápido que cualquier tablet.',
           'SillyTavern y RisuAI tienen interfaces adaptadas a móvil que funcionan en iPad Safari / Android Chrome.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -2104,7 +2128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**La inferencia en el dispositivo es práctica en iPad Pro M4 (16 GB) y Android de alta gama (8 GB o más).** Por debajo de estos umbrales, la generación es demasiado lenta para uso en tiempo real. La conexión remota a una máquina en casa es la mejor opción para la mayoría de los usuarios de tablet.',
+          '**La inferencia en el dispositivo es práctica en iPad Pro M5 (12 GB / 16 GB), iPad Air M4 (12 GB) y Android de alta gama (8 GB o más).** Por debajo de estos umbrales, la generación es demasiado lenta para uso en tiempo real. La conexión remota a una máquina en casa es la mejor opción para la mayoría de los usuarios de tablet.',
           '**La conexión remota es el enfoque recomendado para la mayoría de las personas.** Conecta tu tablet (con cualquier RAM y sistema operativo) a un Mac o PC que ejecute Ollama en tu red doméstica. La máquina en casa ejecuta el modelo de 70B; la tablet obtiene una interfaz de chat táctil. No se requiere descargar el modelo en la tablet.',
           '**LLM Farm y Pocket Paladin son las opciones nativas de iPad.** Ambas ejecutan modelos GGUF localmente en los chips Apple Silicon de los iPads. LLM Farm tiene más opciones de configuración; Pocket Paladin es más fácil para usuarios nuevos.',
           '**Termux + Ollama es el enfoque para Android.** Requiere comodidad con la terminal, pero funciona en cualquier dispositivo Android con 8 GB o más de RAM. Ollama se ejecuta en Termux y sirve el modelo en localhost:11434.',
@@ -2117,10 +2141,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**Aplicaciones de iPad:** LLM Farm (gratis, código abierto), Pocket Paladin (nivel gratuito + de pago), PocketLLM (más antiguo, menos activo).',
+          '**Aplicaciones de iPad:** LLM Farm (gratis, código abierto), Pocket Paladin (nivel gratuito + de pago), PocketLLM (más antiguo, menos activo). LLM Farm es exclusivo de iOS — no existe una versión para Android; el equivalente en Android es Termux + Ollama.',
           '**Método Android:** Termux + Ollama (CLI) o MNN LLM (aplicación, soporte de modelos limitado).',
-          '**Conexión remota:** cualquier navegador de tablet → Open WebUI o una interfaz de chat sencilla en la IP local de tu máquina en casa.',
-          '**Mínimo para el dispositivo:** iPad Air M2 (8 GB) para modelos 3B; iPad Pro M4 (16 GB) para modelos de 7B a 8B.',
+          '**Conexión remota:** cualquier navegador de tablet → Open WebUI o una interfaz de chat sencilla en la IP local de tu máquina en casa. Así es también como los usuarios de iPad ejecutan Ollama, ya que Ollama no tiene una compilación nativa para iPadOS.',
+          '**Mínimo para el dispositivo:** iPad Air M4 (12 GB) para modelos de 3B a 4B; iPad Pro M5 (12 GB / 16 GB) para modelos de 7B a 8B.',
           '**Mínimo Android para el dispositivo:** dispositivo con 8 GB de RAM (Samsung Galaxy Tab S10+, OnePlus Pad 2).',
           '**Mejor modelo en el dispositivo:** Phi-4 Mini (3.8B, 2,7 GB) para la mayoría de las tablets; Qwen3 1.7B para dispositivos muy limitados.',
           '**Velocidad de conexión remota:** depende de la calidad del Wi-Fi y la velocidad de generación de la máquina en casa, no del hardware de la tablet.',
@@ -2143,9 +2167,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Factor', 'En el dispositivo', 'Conexión remota'],
         rows: [
-          { 'Factor': 'Límite de tamaño del modelo', 'En el dispositivo': '3B a 8B (iPad Pro M4); 3B (mayoría de tablets)', 'Conexión remota': 'Ilimitado — la máquina en casa ejecuta cualquier modelo' },
+          { 'Factor': 'Límite de tamaño del modelo', 'En el dispositivo': '3B a 8B (iPad Pro M5); 3B a 4B (mayoría de tablets)', 'Conexión remota': 'Ilimitado — la máquina en casa ejecuta cualquier modelo' },
           { 'Factor': 'Uso sin conexión', 'En el dispositivo': 'Sí — funciona sin Wi-Fi', 'Conexión remota': 'No — requiere Wi-Fi en casa' },
-          { 'Factor': 'Velocidad de generación', 'En el dispositivo': 'Moderada (10 a 25 tok/seg en iPad Pro M4)', 'Conexión remota': 'Depende de la máquina en casa (hasta 40+ tok/seg)' },
+          { 'Factor': 'Velocidad de generación', 'En el dispositivo': 'Moderada (12 a 30 tok/seg en iPad Pro M5)', 'Conexión remota': 'Depende de la máquina en casa (hasta 40+ tok/seg)' },
           { 'Factor': 'Almacenamiento en la tablet', 'En el dispositivo': '2 a 10 GB por modelo', 'Conexión remota': 'Ninguno — el modelo vive en la máquina en casa' },
           { 'Factor': 'Complejidad de configuración', 'En el dispositivo': 'Baja (descargar app + archivo de modelo)', 'Conexión remota': 'Baja a media (la máquina en casa necesita Ollama + Open WebUI)' },
           { 'Factor': 'Ideal para', 'En el dispositivo': 'Viajes, uso sin conexión, tareas con modelos 3B', 'Conexión remota': 'Uso con calidad prioritaria, modelos 70B, comodidad' },
@@ -2163,22 +2187,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: inferencia en el dispositivo',
         content:
-          '**El iPad Pro M4 (16 GB) es el único iPad que ejecuta modelos 7B a una velocidad cómoda.** El iPad Air M2 (8 GB) y el M3 (8 GB) ejecutan modelos 3B de forma adecuada. [El iPhone con 8 GB de RAM (iPhone 15 Pro Max) también ejecuta modelos pequeños](/es/power-local-llm/best-local-llm-apps-iphone-2026) mediante LLM Farm.',
+          '**El iPad Pro M5 es el único iPad que ejecuta modelos de 7B a 8B a una velocidad cómoda.** Apple elevó la RAM base del iPad Pro M5 a 12 GB (16 GB en los niveles de almacenamiento de 1 TB/2 TB), frente a los 8 GB del iPad Pro M4 base, y aumentó el ancho de banda de memoria de 120 GB/s a 153 GB/s — la inferencia LLM en Apple Silicon está limitada por el ancho de banda de memoria, así que esto se traduce directamente en una generación más rápida. El iPad Air M4 (12 GB, frente a los 8 GB del anterior M2 Air) ahora ejecuta modelos de 3B a 4B con comodidad, en lugar de simplemente de forma adecuada. [El iPhone con 8 GB de RAM también ejecuta modelos pequeños](/es/power-local-llm/best-local-llm-apps-iphone-2026) mediante LLM Farm.',
         items: [
           '**LLM Farm** (gratis, código abierto): descarga modelos GGUF de Hugging Face y los ejecuta con llama.cpp en Apple Silicon. El mejor rendimiento de las opciones nativas de iOS. Admite modos de chat y completado. Instálalo desde la App Store.',
           '**Pocket Paladin** (nivel gratuito + suscripción): descargas de modelos seleccionadas, interfaz más limpia que LLM Farm, experiencia de primer uso ligeramente más sencilla. El nivel gratuito incluye modelos 3B; la suscripción desbloquea modelos más grandes y el modo API.',
           '**Importar modelos:** en LLM Farm, toca el icono de la biblioteca de modelos → "Agregar modelo desde URL" → pega una URL de descarga directa de Hugging Face para un archivo GGUF. Alternativamente, usa Apple Files para transferir un GGUF descargado en otro lugar. Los modelos se almacenan en el almacenamiento local de la aplicación, no en iCloud.',
-          '**Gestión de RAM en iPad:** iOS gestiona la RAM de forma agresiva para las aplicaciones en segundo plano. Cierra todas las demás aplicaciones antes de ejecutar un modelo 7B en un iPad de 8 GB — iOS expulsará el modelo si otra aplicación necesita memoria. En el iPad Pro M4 de 16 GB, esto rara vez es un problema.',
-          '**Expectativas de velocidad de generación:** iPad Pro M4 (16 GB): Phi-4 Mini ~20 tok/seg, Llama 3.2 3B ~30 tok/seg, Gemma 3 4B ~18 tok/seg. iPad Air M2 (8 GB): modelos 3B ~12 a 18 tok/seg; modelos 7B ~5 a 8 tok/seg (demasiado lento para chat en tiempo real).',
+          '**Gestión de RAM en iPad:** iOS gestiona la RAM de forma agresiva para las aplicaciones en segundo plano. Cierra todas las demás aplicaciones antes de ejecutar un modelo 7B en un iPad de 12 GB — iOS expulsará el modelo si otra aplicación necesita memoria. En el iPad Pro M5 de 16 GB (niveles de 1 TB/2 TB), esto rara vez es un problema.',
+          '**Expectativas de velocidad de generación:** iPad Pro M5 (12 GB / 16 GB): Phi-4 Mini ~25 tok/seg, Llama 3.2 3B ~38 tok/seg, Gemma 3 4B ~23 tok/seg — aproximadamente un 25 a 30 % más rápido que la generación M4 anterior, en línea con el aumento del ancho de banda de memoria. iPad Air M4 (12 GB): modelos de 3B a 4B ~15 a 20 tok/seg; modelos 7B ~7 a 10 tok/seg (sigue siendo lento para chat en tiempo real).',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'No intentes ejecutar un modelo 7B en un iPad de 8 GB para chat en tiempo real. A 5 a 8 tokens por segundo, cada respuesta tarda de 15 a 30 segundos. Esto es usable para tareas de resumen donde envías un prompt y esperas, pero frustrante para el uso conversacional. Usa modelos 3B en dispositivos de 8 GB; actualiza a un dispositivo de 16 GB o cambia a la conexión remota para modelos 7B en adelante.',
+            text: 'No intentes ejecutar un modelo 7B en un iPad Air de 12 GB para chat en tiempo real. A 7 a 10 tokens por segundo, cada respuesta sigue tardando de 10 a 20 segundos. Esto es usable para tareas de resumen donde envías un prompt y esperas, pero frustrante para el uso conversacional. Usa modelos de 3B a 4B en iPad Air; actualiza al iPad Pro M5 de 16 GB o cambia a la conexión remota para modelos 7B en adelante.',
           },
         ],
         image: '/images/run-ai-on-tablet-ipad-speed-es.svg',
-        imageCaption: 'Velocidad de inferencia en el dispositivo en iPad: el iPad Pro M4 (16 GB) alcanza de 18 a 30 tok/seg en Phi-4 Mini y Llama 3.2 3B; el iPad Air M2 (8 GB) ejecuta modelos 3B a 12 a 18 tok/seg pero cae a 5 a 8 tok/seg en modelos 7B — demasiado lento para chat en tiempo real.',
+        imageCaption: 'Velocidad de inferencia en el dispositivo en iPad: el iPad Pro M5 (12 GB / 16 GB) alcanza de 23 a 38 tok/seg en Phi-4 Mini y Llama 3.2 3B; el iPad Air M4 (12 GB) ejecuta modelos de 3B a 4B a 15 a 20 tok/seg pero cae a 7 a 10 tok/seg en modelos 7B — sigue siendo lento para chat en tiempo real.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -2198,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pixel Tablet no recomendado para el dispositivo:** el Pixel Tablet (modelo 2023, 8 GB Tensor G2) quedó fuera de la lista de dispositivos recomendados para inferencia local — el Tensor G2 es significativamente más lento que el Snapdragon 8 Gen 3 / Dimensity 9300 para inferencia LLM, produciendo de 4 a 7 tok/seg en Phi-4 Mini (demasiado lento para uso conversacional). Los usuarios del Pixel Tablet deben usar la conexión remota a una máquina en casa.',
           '**Snapdragon 8 Gen 3 y Dimensity 9300** son los chips Android más rápidos para inferencia en el dispositivo en 2026. Velocidad de generación: ~15 a 25 tok/seg para modelos de 1.7B; ~8 a 12 tok/seg para modelos 3B.',
           '**Almacenamiento del modelo:** Android no tiene memoria unificada — el modelo se ejecuta en la RAM del sistema sin aceleración por GPU en la mayoría de las configuraciones de Termux. La aceleración por GPU requiere Termux:NVIDIA o compilaciones específicas de Vulkan; la configuración es más compleja.',
-          '**Aplicaciones alternativas:** MNN LLM (Alibaba, gratis, aplicación Android con inferencia en el dispositivo para modelos seleccionados) tiene una configuración más sencilla pero una selección de modelos más limitada que Ollama. AI Runner y llamafile también tienen compilaciones para Android con soporte variable.',
+          '**Aplicaciones alternativas:** MNN LLM (Alibaba, gratis, aplicación Android con inferencia en el dispositivo para modelos seleccionados) tiene una configuración más sencilla pero una selección de modelos más limitada que Ollama. AI Runner y llamafile también tienen compilaciones para Android con soporte variable. No existe una versión para Android de LLM Farm — es una aplicación exclusiva de iOS; Termux + Ollama o MNN LLM son los equivalentes más cercanos en Android.',
           'Para una guía de configuración específica para Xperia en Japón con tabla de compatibilidad de hardware, consulta <a href="/es/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">cómo ejecutar un LLM local en teléfonos Xperia en Japón</a>.',
         ],
         callouts: [
@@ -2248,8 +2272,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La elección del modelo está determinada por la RAM disponible, no por las preferencias.** La tabla a continuación mapea la RAM del dispositivo al modelo más grande que se ejecuta a velocidad en tiempo real (más de 8 tokens/seg). Para la capa de modelos específicamente, consulta [Mejores modelos LLM para móviles en 2026](/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm). Para el panorama más amplio de modelos en todos los niveles de hardware, consulta [Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026).',
         columns: ['Dispositivo / RAM', 'Modelo recomendado', 'Velocidad', 'Ideal para'],
         rows: [
-          { 'Dispositivo / RAM': 'iPad Air M2 / M3 (8 GB)', 'Modelo recomendado': 'Phi-4 Mini Q4', 'Velocidad': '~15 a 18 tok/seg', 'Ideal para': 'Asistencia de escritura, resumen' },
-          { 'Dispositivo / RAM': 'iPad Pro M4 (16 GB)', 'Modelo recomendado': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Velocidad': '~25 a 30 tok/seg / ~15 a 20 tok/seg', 'Ideal para': 'Estación de trabajo LLM real, RAG, redacción de ficción' },
+          { 'Dispositivo / RAM': 'iPad Air M4 (12 GB)', 'Modelo recomendado': 'Phi-4 Mini Q4 / Llama 3.2 3B Q4', 'Velocidad': '~18 a 20 tok/seg', 'Ideal para': 'Asistencia de escritura, resumen' },
+          { 'Dispositivo / RAM': 'iPad Pro M5 (12 GB / 16 GB)', 'Modelo recomendado': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Velocidad': '~32 a 38 tok/seg / ~20 a 23 tok/seg', 'Ideal para': 'Estación de trabajo LLM real, RAG, redacción de ficción' },
           { 'Dispositivo / RAM': 'Android 8 GB (Tab S10+)', 'Modelo recomendado': 'Phi-4 Mini Q4 mediante Termux+Ollama', 'Velocidad': '~10 a 15 tok/seg', 'Ideal para': 'Usuarios avanzados cómodos con Termux' },
           { 'Dispositivo / RAM': 'Android 6 GB', 'Modelo recomendado': 'Qwen3 1.7B Q4', 'Velocidad': '~15 a 20 tok/seg', 'Ideal para': 'Chat ligero, traducción, tareas simples' },
           { 'Dispositivo / RAM': 'Pixel Tablet (8 GB)', 'Modelo recomendado': 'Solo conexión remota', 'Velocidad': 'N/A', 'Ideal para': 'Tensor G2 demasiado lento para el dispositivo' },
@@ -2262,7 +2286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/run-ai-on-tablet-model-by-device-es.svg',
-        imageCaption: 'Mejor modelo por tablet: iPad Pro M4 (16 GB) alcanza de 25 a 30 tok/seg en Llama 3.2 3B; iPad Air M2/M3 ejecuta Phi-4 Mini a 15 a 18 tok/seg; Android 8 GB alcanza de 10 a 15 tok/seg mediante Termux; el Pixel Tablet requiere conexión remota debido al lento chip Tensor G2.',
+        imageCaption: 'Mejor modelo por tablet: iPad Pro M5 (12 GB / 16 GB) alcanza de 32 a 38 tok/seg en Llama 3.2 3B; iPad Air M4 ejecuta Phi-4 Mini a 18 a 20 tok/seg; Android 8 GB alcanza de 10 a 15 tok/seg mediante Termux; el Pixel Tablet requiere conexión remota debido al lento chip Tensor G2.',
       },
       frontends: {
         id: 'frontends',
@@ -2303,7 +2327,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'App de iOS Pocket Paladin — [App Store](https://apps.apple.com)',
           'Compilación ARM de Ollama para Termux — [Documentación de Ollama](https://ollama.com/docs)',
           'Documentación de Open WebUI — [docs.openwebui.com](https://docs.openwebui.com)',
-          'Especificaciones del chip Apple M4, ancho de banda de memoria y Neural Engine — [Apple Silicon](https://apple.com/newsroom)',
+          'Especificaciones del chip Apple M5 para el iPad Pro, niveles de RAM y ancho de banda de memoria — [Apple Newsroom, octubre de 2025](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/)',
+          'Especificaciones del chip Apple M4 para el iPad Air y RAM — [Apple Newsroom, marzo de 2026](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/)',
         ],
       },
       faq: {
@@ -2312,7 +2337,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Se puede ejecutar IA en un iPad?',
-            a: 'Sí, en iPad Pro M4 (16 GB) y iPad Air M2/M3 (8 GB). El iPad Pro M4 ejecuta Phi-4 Mini y Llama 3.2 3B en tiempo real usando LLM Farm o Pocket Paladin. El iPad Air M2 ejecuta modelos 3B de forma adecuada. Para modelos de 7B en adelante en un iPad, se recomienda la conexión remota a un Mac o PC en casa que ejecute Ollama — el iPad muestra el chat pero la máquina en casa gestiona la inferencia.',
+            a: 'Sí, en iPad Pro M5 (12 GB base / 16 GB en los niveles de 1 TB y 2 TB) y iPad Air M4 (12 GB). El iPad Pro M5 ejecuta Phi-4 Mini y Llama 3.2 3B en tiempo real usando LLM Farm o Pocket Paladin, aproximadamente un 25 a 30 % más rápido que el iPad Pro M4 anterior gracias a un mayor ancho de banda de memoria (153 GB/s frente a 120 GB/s). El iPad Air M4 ejecuta modelos de 3B a 4B con comodidad. Para modelos de 7B en adelante en un iPad, se recomienda la conexión remota a un Mac o PC en casa que ejecute Ollama — el iPad muestra el chat pero la máquina en casa gestiona la inferencia.',
+          },
+          {
+            q: '¿Se ejecuta Ollama en un iPad?',
+            a: 'No — Ollama no tiene una compilación de iPadOS compatible, por lo que no se puede instalar directamente en un iPad como sí puede hacerse en Android mediante Termux. "Ejecutar Ollama en iPad" significa ejecutar Ollama en un Mac o PC y conectarse a él desde el navegador del iPad (mediante Open WebUI en la IP local de la máquina en casa) — el iPad es una pantalla, no el motor de inferencia. Para una inferencia verdaderamente en el dispositivo en un iPad, usa LLM Farm o Pocket Paladin, que ejecutan modelos GGUF directamente mediante llama.cpp en Apple Silicon.',
           },
           {
             q: '¿Se puede ejecutar IA en una tablet Android?',
@@ -2332,7 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo obtener respuestas de calidad similar a ChatGPT en una tablet de forma local?',
-            a: 'Casi, pero con la configuración correcta. La calidad de GPT-5.5 requiere un modelo de 70B o más. En una tablet: el iPad Pro M4 (16 GB) no puede ejecutar modelos de 70B — solo caben modelos de 3B a 8B. Mediante conexión remota: si tu máquina en casa tiene una GPU de 24 GB (RTX 4090) o 64 GB de memoria unificada (Mac M5 Max), puede ejecutar Llama 3.3 70B, y tu tablet accede a esa calidad mediante Open WebUI en el navegador. Eso es lo más cercano a la calidad de IA en la nube en una tablet.',
+            a: 'Casi, pero con la configuración correcta. La calidad de GPT-5.5 requiere un modelo de 70B o más. En una tablet: el iPad Pro M5 (12 GB / 16 GB) no puede ejecutar modelos de 70B — solo caben modelos de 3B a 8B. Mediante conexión remota: si tu máquina en casa tiene una GPU de 24 GB (RTX 4090) o 64 GB de memoria unificada (Mac M5 Max), puede ejecutar Llama 3.3 70B, y tu tablet accede a esa calidad mediante Open WebUI en el navegador. Eso es lo más cercano a la calidad de IA en la nube en una tablet.',
           },
           {
             q: '¿Cómo mantengo mi servidor de Ollama en casa funcionando cuando cierro la tapa del portátil?',
@@ -2340,15 +2369,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Ejecutar IA en una tablet agota la batería rápidamente?',
-            a: 'Sí — la inferencia en el dispositivo es intensiva en CPU/GPU. Ejecutar Phi-4 Mini en un iPad Pro M4 para conversación activa agota la batería aproximadamente un 20 a 30 % por hora. Para un uso prolongado, mantén la tablet enchufada. La conexión remota a una máquina en casa consume significativamente menos batería de la tablet — la tablet solo muestra una página web.',
+            a: 'Sí — la inferencia en el dispositivo es intensiva en CPU/GPU. Ejecutar Phi-4 Mini en un iPad Pro M5 para conversación activa agota la batería aproximadamente un 20 a 30 % por hora. Para un uso prolongado, mantén la tablet enchufada. La conexión remota a una máquina en casa consume significativamente menos batería de la tablet — la tablet solo muestra una página web.',
           },
           {
             q: '¿Las tablets sufren throttling térmico durante la inferencia de IA?',
-            a: 'Sí, especialmente en iPad Air M2/M3 y tablets Android sin refrigeración activa. El iPad Pro M4 tiene más margen térmico y mantiene la velocidad de generación durante ~10 a 15 minutos antes de un throttling notable. Las tablets Android sufren throttling más rápido (5 a 8 minutos de inferencia sostenida). Mitigaciones: usa fragmentos de generación más cortos (200 a 400 tokens por respuesta), mantén la tablet sobre una superficie dura y evita ejecutar otras aplicaciones que consuman mucho CPU simultáneamente.',
+            a: 'Sí, especialmente en iPad Air M4 y tablets Android sin refrigeración activa. El iPad Pro M5 tiene más margen térmico y mantiene la velocidad de generación durante ~10 a 15 minutos antes de un throttling notable. Las tablets Android sufren throttling más rápido (5 a 8 minutos de inferencia sostenida). Mitigaciones: usa fragmentos de generación más cortos (200 a 400 tokens por respuesta), mantén la tablet sobre una superficie dura y evita ejecutar otras aplicaciones que consuman mucho CPU simultáneamente.',
           },
           {
             q: '¿Qué teclado funciona mejor para el uso de IA en tablet?',
-            a: 'El Apple Magic Keyboard para iPad Pro M4 (con trackpad) es la configuración más pulida — los atajos de teclado completos funcionan en Safari + Open WebUI, el trackpad permite seleccionar texto en respuestas largas. El Logitech Combo Touch es la alternativa económica. Android: cualquier teclado Bluetooth funciona con Termux, pero la experiencia es más tosca (solo terminal). Para trabajo de redacción, un iPad Pro + Magic Keyboard convierte la tablet en una estación de trabajo de IA centrada en la escritura.',
+            a: 'El Apple Magic Keyboard para iPad Pro M5 (con trackpad) es la configuración más pulida — los atajos de teclado completos funcionan en Safari + Open WebUI, el trackpad permite seleccionar texto en respuestas largas. El Logitech Combo Touch es la alternativa económica. Android: cualquier teclado Bluetooth funciona con Termux, pero la experiencia es más tosca (solo terminal). Para trabajo de redacción, un iPad Pro + Magic Keyboard convierte la tablet en una estación de trabajo de IA centrada en la escritura.',
           },
           {
             q: '¿Puedo ejecutar SillyTavern en iPad?',
@@ -2360,11 +2389,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar pantallas externas con IA en tablet?',
-            a: 'Sí, en iPad Pro M4 (Stage Manager + pantalla externa da una configuración de múltiples ventanas; Open WebUI en el monitor externo, notas/documentos fuente en la pantalla del iPad). Galaxy Tab S10 Ultra admite el modo DeX con una pantalla externa para un flujo de trabajo de IA con múltiples monitores similar. Las tablets Android sin modo DeX duplican la pantalla — menos útil. iPad Pro + monitor externo + Magic Keyboard es lo más cerca que puede llegar una tablet a una estación de trabajo de IA real en 2026.',
+            a: 'Sí, en iPad Pro M5 (Stage Manager + pantalla externa da una configuración de múltiples ventanas; Open WebUI en el monitor externo, notas/documentos fuente en la pantalla del iPad). Galaxy Tab S10 Ultra admite el modo DeX con una pantalla externa para un flujo de trabajo de IA con múltiples monitores similar. Las tablets Android sin modo DeX duplican la pantalla — menos útil. iPad Pro + monitor externo + Magic Keyboard es lo más cerca que puede llegar una tablet a una estación de trabajo de IA real en 2026.',
           },
           {
             q: '¿Es una tablet mejor que un teléfono para IA local?',
-            a: 'Para el uso intensivo en escritura (redacción, RAG, conversaciones largas), sí — el soporte de teclado y el tamaño de pantalla importan. Para chat rápido, consultas de voz o uso en movimiento, el teléfono que ya llevas es mejor. El iPad Pro M4 es la única tablet que supera significativamente a un teléfono insignia para IA local; las tablets y teléfonos de gama media son aproximadamente equivalentes. La mayoría de los lectores no deberían comprar una tablet específicamente para IA local — cómprate una si la quieres por otras razones; la capacidad de IA es un bonus.',
+            a: 'Para el uso intensivo en escritura (redacción, RAG, conversaciones largas), sí — el soporte de teclado y el tamaño de pantalla importan. Para chat rápido, consultas de voz o uso en movimiento, el teléfono que ya llevas es mejor. El iPad Pro M5 es la única tablet que supera significativamente a un teléfono insignia para IA local; las tablets y teléfonos de gama media son aproximadamente equivalentes. La mayoría de los lectores no deberían comprar una tablet específicamente para IA local — cómprate una si la quieres por otras razones; la capacidad de IA es un bonus.',
           },
         ],
       },
@@ -2390,14 +2419,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Ejecuta IA local en tu tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+      headline: 'Ejecuta IA local en tu tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Cómo ejecutar IA localmente en un iPad o tablet Android en 2026. Aplicaciones de inferencia en el dispositivo, Termux + Ollama en Android y conexión remota a tu Mac o PC en casa explicados.',
       image: `https://www.promptquorum.com/es/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/es/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'es',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
@@ -2436,10 +2465,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
-    title: '태블릿에서 로컬 AI 실행하기: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+    title: '태블릿에서 로컬 AI 실행하기: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
     seoTitle: '아이패드·안드로이드 태블릿에서 AI 로컬 실행 2026',
     intro:
       '2026년에는 고급형 iPad와 RAM 8GB 이상의 안드로이드 기기에서 태블릿 로컬 AI 실행이 실용적입니다. 이 가이드는 iPad 온디바이스 추론(Pocket Paladin, LLM Farm), Android Termux + Ollama, 그리고 원격 연결(Wi-Fi를 통해 Ollama를 실행 중인 Mac이나 PC에 태블릿을 연결)을 포함한 모든 옵션을 다룹니다.',
@@ -2455,8 +2484,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small',
     ],
     current_hardware_mentioned: [
-      'iPad Pro M4 16 GB',
-      'iPad Air M2 8 GB',
+      'iPad Pro M5 12 GB / 16 GB',
+      'iPad Air M4 12 GB',
       'Samsung Galaxy Tab S10+ 12 GB',
       'Google Pixel Tablet 8 GB',
     ],
@@ -2474,22 +2503,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Pocket Paladin iOS LLM',
     ],
     leadAnswerBlock:
-      '**태블릿에서 로컬 AI를 실행하는 방식은 두 가지입니다: 온디바이스 추론(태블릿 칩에서 모델이 직접 실행)과 원격 연결(태블릿이 Ollama를 실행 중인 자택 Mac·PC의 화면 역할). 온디바이스 추론은 iPad Pro M4(16GB, Phi-4 Mini·Llama 3.2 3B 실시간 실행), iPad Air M2(8GB, 3B 모델 적절한 속도), RAM 8GB 이상의 고급형 안드로이드 기기(Samsung Galaxy Tab S10+, Termux + Ollama)에서 실용적입니다. 자택 서버 IP를 통한 Open WebUI 또는 간단한 채팅 인터페이스 원격 연결은 RAM 용량·OS에 상관없이 모든 태블릿에서 작동하며, 태블릿을 강력한 자택 기기의 터치 단말로 활용할 수 있습니다. 대부분의 사용자에게 원격 연결이 더 나은 선택입니다: 자택 기기가 70B 모델을 실행하고 태블릿은 편리한 인터페이스를 제공합니다.**',
+      '**태블릿에서 로컬 AI를 실행하는 방식은 두 가지입니다: 온디바이스 추론(태블릿 칩에서 모델이 직접 실행)과 원격 연결(태블릿이 Ollama를 실행 중인 자택 Mac·PC의 화면 역할). 온디바이스 추론은 iPad Pro M5(기본 스토리지 12GB, 1TB/2TB 모델 16GB, 이전 M4 세대보다 여유롭게 Phi-4 Mini·Llama 3.2 3B 실시간 실행), iPad Air M4(12GB, 3B~4B 모델 원활한 실행), RAM 8GB 이상의 고급형 안드로이드 기기(Samsung Galaxy Tab S10+, Termux + Ollama)에서 실용적입니다. 자택 서버 IP를 통한 Open WebUI 또는 간단한 채팅 인터페이스 원격 연결은 RAM 용량·OS에 상관없이 모든 태블릿에서 작동하며, 태블릿을 강력한 자택 기기의 터치 단말로 활용할 수 있습니다. 대부분의 사용자에게 원격 연결이 더 나은 선택입니다: 자택 기기가 70B 모델을 실행하고 태블릿은 편리한 인터페이스를 제공합니다.**',
     quickAnswerTop: {
       ko: {
         question: 'iPad나 안드로이드 태블릿에서 로컬 AI 모델을 실행할 수 있습니까?',
         answer:
-          '네, 고급형 기기에서 가능합니다. iPad Pro M4(16GB RAM)는 LLM Farm 또는 Pocket Paladin을 사용해 Phi-4 Mini(3.8B)와 Llama 3.2 3B를 실시간으로 실행합니다. iPad Air M2(8GB)는 3B 모델을 적절한 속도로 실행합니다. RAM 8GB 이상의 안드로이드 태블릿(Samsung Galaxy Tab S10+)은 Termux + Ollama를 통해 Phi-4 Mini와 Qwen3 1.7B를 로컬로 실행할 수 있습니다. RAM이 부족하거나 구형 칩의 태블릿은 원격 연결을 권장합니다: 자택 네트워크의 Mac·PC에서 Ollama를 실행하고 태블릿 브라우저의 Open WebUI로 접속하십시오.',
+          '네, 고급형 기기에서 가능합니다. iPad Pro M5(기본 스토리지 12GB, 1TB/2TB 모델 16GB)는 LLM Farm 또는 Pocket Paladin을 사용해 이전 M4 세대보다 여유롭게 Phi-4 Mini(3.8B)와 Llama 3.2 3B를 실시간으로 실행합니다. iPad Air M4(12GB)는 3B~4B 모델을 원활하게 실행합니다. RAM 8GB 이상의 안드로이드 태블릿(Samsung Galaxy Tab S10+)은 Termux + Ollama를 통해 Phi-4 Mini와 Qwen3 1.7B를 로컬로 실행할 수 있습니다. Ollama 자체는 iPadOS에서 네이티브로 실행되지 않습니다 — Ollama를 특별히 원하는 사용자는 Mac·PC에 원격 연결해야 합니다. RAM이 부족하거나 구형 칩의 태블릿은 원격 연결을 권장합니다: 자택 네트워크의 Mac·PC에서 Ollama를 실행하고 태블릿 브라우저의 Open WebUI로 접속하십시오.',
         bullets: [
-          'iPad Pro M4(16GB) — LLM Farm 또는 Pocket Paladin으로 Phi-4 Mini·Llama 3.2 3B를 로컬 실시간 실행.',
-          'iPad Air M2(8GB) — 3B 모델을 사용 가능한 속도로 실행; 7B 모델은 느리지만 동작.',
+          'iPad Pro M5(12GB / 16GB) — LLM Farm 또는 Pocket Paladin으로 Phi-4 Mini·Llama 3.2 3B를 로컬 실시간 실행, 향상된 메모리 대역폭 덕분에 이전 M4 세대보다 빠름.',
+          'iPad Air M4(12GB) — 3B~4B 모델을 사용 가능한 속도로 실행; 7B 모델은 느리지만 동작.',
           '안드로이드 태블릿(RAM 8GB 이상) — Termux + Ollama로 Phi-4 Mini·Qwen3 1.7B 로컬 실행.',
+          'Ollama 자체는 네이티브 iPadOS 빌드가 없습니다 — "iPad에서 Ollama 실행"은 iPad에 설치하는 것이 아니라 Ollama를 실행하는 Mac·PC에 원격 연결하는 것을 의미합니다.',
           '원격 연결 — RAM·OS 무관 모든 태블릿: 브라우저 Open WebUI로 자택 Mac·PC의 Ollama 접속.',
           '대부분의 태블릿 최적 온디바이스 모델: Phi-4 Mini(3.8B, ~2.7GB) 또는 RAM 제한 기기용 Qwen3 1.7B.',
           '7B 이상 모델에는 원격 연결 권장 — 자택 기기가 태블릿보다 빠르게 모델 실행.',
           'SillyTavern·RisuAI는 iPad Safari·Android Chrome에서 작동하는 모바일 최적화 인터페이스 제공.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -2511,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**온디바이스 추론은 iPad Pro M4(16GB)와 고급형 안드로이드(8GB 이상)에서 실용적입니다.** 이 임계치 이하에서는 생성 속도가 실시간 사용에 너무 느립니다. 대부분의 태블릿 사용자에게는 자택 기기 원격 연결이 최선의 방법입니다.',
+          '**온디바이스 추론은 iPad Pro M5(12GB / 16GB), iPad Air M4(12GB)와 고급형 안드로이드(8GB 이상)에서 실용적입니다.** 이 임계치 이하에서는 생성 속도가 실시간 사용에 너무 느립니다. 대부분의 태블릿 사용자에게는 자택 기기 원격 연결이 최선의 방법입니다.',
           '**원격 연결이 대부분의 사람들에게 권장하는 접근 방식입니다.** 자택 Wi-Fi 네트워크의 Mac·PC에서 Ollama를 실행하고 태블릿(RAM·OS 무관)을 연결하십시오. 자택 기기가 70B 모델을 실행하고 태블릿은 터치 채팅 인터페이스를 제공합니다. 태블릿에 모델을 다운로드할 필요가 없습니다.',
           '**LLM Farm과 Pocket Paladin이 iPad 네이티브 옵션입니다.** 둘 다 iPad의 Apple Silicon 칩에서 GGUF 모델을 로컬로 실행합니다. LLM Farm은 설정 옵션이 더 많고, Pocket Paladin은 초보자에게 더 쉽습니다.',
           '**Termux + Ollama가 안드로이드 접근 방식입니다.** 터미널 사용에 익숙해야 하지만 RAM 8GB 이상의 모든 안드로이드 기기에서 작동합니다. Ollama는 Termux에서 실행되어 localhost:11434에서 모델을 제공합니다.',
@@ -2524,10 +2554,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '빠른 사실',
         items: [
-          '**iPad 앱:** LLM Farm(무료, 오픈소스), Pocket Paladin(무료 티어 + 유료), PocketLLM(구형, 비활성).',
+          '**iPad 앱:** LLM Farm(무료, 오픈소스), Pocket Paladin(무료 티어 + 유료), PocketLLM(구형, 비활성). LLM Farm은 iOS 전용입니다 — Android 빌드가 없으며, Android에서의 대안은 Termux + Ollama입니다.',
           '**안드로이드 방법:** Termux + Ollama(CLI) 또는 MNN LLM(앱, 제한된 모델 지원).',
-          '**원격 연결:** 태블릿 브라우저 → 자택 기기 로컬 IP의 Open WebUI 또는 간단한 채팅 인터페이스.',
-          '**온디바이스 최소 사양:** iPad Air M2(8GB) — 3B 모델; iPad Pro M4(16GB) — 7B~8B 모델.',
+          '**원격 연결:** 태블릿 브라우저 → 자택 기기 로컬 IP의 Open WebUI 또는 간단한 채팅 인터페이스. Ollama에 네이티브 iPadOS 빌드가 없기 때문에 iPad 사용자도 이 방식으로 Ollama를 이용합니다.',
+          '**온디바이스 최소 사양:** iPad Air M4(12GB) — 3B~4B 모델; iPad Pro M5(12GB / 16GB) — 7B~8B 모델.',
           '**안드로이드 온디바이스 최소 사양:** RAM 8GB 기기(Samsung Galaxy Tab S10+, OnePlus Pad 2).',
           '**최적 온디바이스 모델:** 대부분의 태블릿에 Phi-4 Mini(3.8B, 2.7GB); 매우 제한된 기기에 Qwen3 1.7B.',
           '**원격 연결 속도:** 태블릿 하드웨어가 아닌 Wi-Fi 품질과 자택 기기 생성 속도에 의존합니다.',
@@ -2550,9 +2580,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['요소', '온디바이스', '원격 연결'],
         rows: [
-          { '요소': '모델 크기 한계', '온디바이스': '3B~8B(iPad Pro M4); 3B(대부분의 태블릿)', '원격 연결': '무제한 — 자택 기기가 모든 모델 실행' },
+          { '요소': '모델 크기 한계', '온디바이스': '3B~8B(iPad Pro M5); 3B~4B(대부분의 태블릿)', '원격 연결': '무제한 — 자택 기기가 모든 모델 실행' },
           { '요소': '오프라인 사용', '온디바이스': '가능 — Wi-Fi 없이 작동', '원격 연결': '불가 — 자택 Wi-Fi 필요' },
-          { '요소': '생성 속도', '온디바이스': '보통(iPad Pro M4 10~25 tok/초)', '원격 연결': '자택 기기에 의존(최대 40+ tok/초)' },
+          { '요소': '생성 속도', '온디바이스': '보통(iPad Pro M5 12~30 tok/초)', '원격 연결': '자택 기기에 의존(최대 40+ tok/초)' },
           { '요소': '태블릿 저장 공간', '온디바이스': '모델당 2~10GB', '원격 연결': '없음 — 모델이 자택 기기에 존재' },
           { '요소': '설정 복잡성', '온디바이스': '낮음(앱 + 모델 파일 다운로드)', '원격 연결': '낮음~중간(자택 기기에 Ollama + Open WebUI 필요)' },
           { '요소': '적합한 용도', '온디바이스': '여행, 오프라인 사용, 3B 모델 작업', '원격 연결': '품질 우선 사용, 70B 모델, 편의성' },
@@ -2570,22 +2600,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: 온디바이스 추론',
         content:
-          '**iPad Pro M4(16GB)만이 7B 모델을 편안한 속도로 실행하는 유일한 iPad입니다.** iPad Air M2(8GB)와 M3(8GB)는 3B 모델을 적절하게 실행합니다. [RAM 8GB의 iPhone(iPhone 15 Pro Max)도](/ko/power-local-llm/best-local-llm-apps-iphone-2026) LLM Farm을 통해 소형 모델을 실행합니다.',
+          '**iPad Pro M5만이 7B~8B 모델을 편안한 속도로 실행하는 유일한 iPad입니다.** Apple은 M5 iPad Pro의 기본 RAM을 기존 M4 iPad Pro 기본 모델의 8GB에서 12GB로 늘리고(1TB/2TB 스토리지는 16GB), 메모리 대역폭도 120GB/s에서 153GB/s로 늘렸습니다 — Apple Silicon에서 LLM 추론은 메모리 대역폭에 의해 제한되므로, 이는 곧바로 더 빠른 생성 속도로 이어집니다. iPad Air M4(12GB, 기존 M2 Air의 8GB에서 증가)는 이제 3B~4B 모델을 단순히 "적절히"가 아니라 "원활하게" 실행합니다. [RAM 8GB의 iPhone도](/ko/power-local-llm/best-local-llm-apps-iphone-2026) LLM Farm을 통해 소형 모델을 실행합니다.',
         items: [
           '**LLM Farm**(무료, 오픈소스): Hugging Face에서 GGUF 모델을 다운로드하여 Apple Silicon에서 llama.cpp로 실행합니다. iOS 네이티브 옵션 중 최고 성능. 채팅 및 완성 모드 지원. App Store에서 설치하십시오.',
           '**Pocket Paladin**(무료 티어 + 구독): 선별된 모델 다운로드, LLM Farm보다 깔끔한 인터페이스, 초기 사용 경험이 약간 더 쉽습니다. 무료 티어는 3B 모델 포함; 구독 시 더 큰 모델과 API 모드 잠금 해제.',
           '**모델 가져오기:** LLM Farm에서 모델 라이브러리 아이콘 탭 → "URL에서 모델 추가" → GGUF 파일의 Hugging Face 직접 다운로드 URL 붙여넣기. 또는 Apple 파일을 사용해 다른 곳에서 다운로드한 GGUF를 전송하십시오. 모델은 iCloud가 아닌 앱 로컬 스토리지에 저장됩니다.',
-          '**iPad RAM 관리:** iOS는 백그라운드 앱의 RAM을 적극적으로 관리합니다. 8GB iPad에서 7B 모델 실행 전에 다른 모든 앱을 닫으십시오 — 다른 앱이 메모리를 필요로 하면 iOS가 모델을 제거합니다. 16GB iPad Pro M4에서는 거의 문제가 없습니다.',
-          '**생성 속도 기대치:** iPad Pro M4(16GB): Phi-4 Mini ~20 tok/초, Llama 3.2 3B ~30 tok/초, Gemma 3 4B ~18 tok/초. iPad Air M2(8GB): 3B 모델 ~12~18 tok/초; 7B 모델 ~5~8 tok/초(실시간 채팅에 너무 느림).',
+          '**iPad RAM 관리:** iOS는 백그라운드 앱의 RAM을 적극적으로 관리합니다. 12GB iPad에서 7B 모델 실행 전에 다른 모든 앱을 닫으십시오 — 다른 앱이 메모리를 필요로 하면 iOS가 모델을 제거합니다. 16GB iPad Pro M5(1TB/2TB 모델)에서는 거의 문제가 없습니다.',
+          '**생성 속도 기대치:** iPad Pro M5(12GB / 16GB): Phi-4 Mini ~25 tok/초, Llama 3.2 3B ~38 tok/초, Gemma 3 4B ~23 tok/초 — 메모리 대역폭 증가에 비례해 이전 M4 세대보다 약 25~30% 빠름. iPad Air M4(12GB): 3B~4B 모델 ~15~20 tok/초; 7B 모델 ~7~10 tok/초(여전히 실시간 채팅에는 느림).',
         ],
         callouts: [
           {
             type: 'warning',
-            text: '8GB iPad에서 7B 모델을 실시간 채팅에 실행하려 하지 마십시오. 초당 5~8 토큰 속도로 각 응답은 15~30초가 걸립니다. 프롬프트를 보내고 기다리는 요약 작업에는 사용 가능하지만 대화용으로는 불편합니다. 8GB 기기에서는 3B 모델을 사용하고, 7B 이상 모델을 위해서는 16GB 기기로 업그레이드하거나 원격 연결로 전환하십시오.',
+            text: '12GB iPad Air에서 7B 모델을 실시간 채팅에 실행하려 하지 마십시오. 초당 7~10 토큰 속도로 각 응답은 여전히 10~20초가 걸립니다. 프롬프트를 보내고 기다리는 요약 작업에는 사용 가능하지만 대화용으로는 불편합니다. iPad Air에서는 3B~4B 모델을 사용하고, 7B 이상 모델을 위해서는 16GB iPad Pro M5로 업그레이드하거나 원격 연결로 전환하십시오.',
           },
         ],
         image: '/images/run-ai-on-tablet-ipad-speed-es.svg',
-        imageCaption: 'iPad 온디바이스 추론 속도: iPad Pro M4(16GB)는 Phi-4 Mini·Llama 3.2 3B에서 18~30 tok/초 달성; iPad Air M2(8GB)는 3B 모델을 12~18 tok/초로 실행하지만 7B 모델에서 5~8 tok/초로 하락 — 실시간 채팅에 너무 느림.',
+        imageCaption: 'iPad 온디바이스 추론 속도: iPad Pro M5(12GB / 16GB)는 Phi-4 Mini·Llama 3.2 3B에서 23~38 tok/초 달성; iPad Air M4(12GB)는 3B~4B 모델을 15~20 tok/초로 실행하지만 7B 모델에서 7~10 tok/초로 하락 — 여전히 실시간 채팅에는 느림.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -2605,7 +2635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pixel Tablet 온디바이스 비권장:** Pixel Tablet(2023, 8GB Tensor G2)은 로컬 추론 권장 기기 목록에서 제외됩니다 — Tensor G2는 LLM 추론에서 Snapdragon 8 Gen 3·Dimensity 9300보다 현저히 느리며, Phi-4 Mini에서 4~7 tok/초(대화용으로 너무 느림)를 기록합니다. Pixel Tablet 사용자는 자택 기기 원격 연결을 사용하십시오.',
           '**Snapdragon 8 Gen 3·Dimensity 9300**은 2026년 온디바이스 추론에서 가장 빠른 Android 칩입니다. 생성 속도: 1.7B 모델 ~15~25 tok/초; 3B 모델 ~8~12 tok/초.',
           '**모델 저장:** Android에는 통합 메모리가 없습니다 — 대부분의 Termux 설정에서 모델은 GPU 가속 없이 시스템 RAM에서 실행됩니다. GPU 가속은 Termux:NVIDIA 또는 특정 Vulkan 빌드가 필요하며 설정이 더 복잡합니다.',
-          '**대안 앱:** MNN LLM(Alibaba, 무료, 선택된 모델용 Android 온디바이스 추론 앱)은 설정이 더 간단하지만 Ollama보다 모델 선택이 제한적입니다. AI Runner·llamafile도 Android 빌드가 있으며 지원은 다양합니다.',
+          '**대안 앱:** MNN LLM(Alibaba, 무료, 선택된 모델용 Android 온디바이스 추론 앱)은 설정이 더 간단하지만 Ollama보다 모델 선택이 제한적입니다. AI Runner·llamafile도 Android 빌드가 있으며 지원은 다양합니다. LLM Farm의 Android 버전은 존재하지 않습니다 — iOS 전용 앱이며, Termux + Ollama 또는 MNN LLM이 가장 가까운 Android 대안입니다.',
           '일본 Xperia 전용 설정 가이드와 하드웨어 호환성 표는 <a href="/ko/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">일본 Xperia 스마트폰에서 로컬 LLM 실행 방법</a>을 참조하십시오.',
         ],
         callouts: [
@@ -2655,8 +2685,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**모델 선택은 선호도가 아닌 사용 가능한 RAM에 의해 결정됩니다.** 아래 표는 기기 RAM을 실시간 속도(8 tok/초 이상)로 실행 가능한 가장 큰 모델에 매핑합니다. 모델 레이어에 대해서는 [2026년 모바일 LLM 모델 비교](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm)를, 모든 하드웨어 레벨의 더 넓은 모델 개요는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
         columns: ['기기 / RAM', '권장 모델', '속도', '적합한 용도'],
         rows: [
-          { '기기 / RAM': 'iPad Air M2/M3(8GB)', '권장 모델': 'Phi-4 Mini Q4', '속도': '~15~18 tok/초', '적합한 용도': '글쓰기 지원, 요약' },
-          { '기기 / RAM': 'iPad Pro M4(16GB)', '권장 모델': 'Llama 3.2 3B / Gemma 3 4B Q4', '속도': '~25~30 tok/초 / ~15~20 tok/초', '적합한 용도': '실제 LLM 워크스테이션, RAG, 픽션 작성' },
+          { '기기 / RAM': 'iPad Air M4(12GB)', '권장 모델': 'Phi-4 Mini Q4 / Llama 3.2 3B Q4', '속도': '~18~20 tok/초', '적합한 용도': '글쓰기 지원, 요약' },
+          { '기기 / RAM': 'iPad Pro M5(12GB / 16GB)', '권장 모델': 'Llama 3.2 3B / Gemma 3 4B Q4', '속도': '~32~38 tok/초 / ~20~23 tok/초', '적합한 용도': '실제 LLM 워크스테이션, RAG, 픽션 작성' },
           { '기기 / RAM': 'Android 8GB(Tab S10+)', '권장 모델': 'Termux+Ollama로 Phi-4 Mini Q4', '속도': '~10~15 tok/초', '적합한 용도': 'Termux에 익숙한 고급 사용자' },
           { '기기 / RAM': 'Android 6GB', '권장 모델': 'Qwen3 1.7B Q4', '속도': '~15~20 tok/초', '적합한 용도': '가벼운 채팅, 번역, 간단한 작업' },
           { '기기 / RAM': 'Pixel Tablet(8GB)', '권장 모델': '원격 연결만', '속도': 'N/A', '적합한 용도': 'Tensor G2가 온디바이스에 너무 느림' },
@@ -2669,7 +2699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/run-ai-on-tablet-model-by-device-es.svg',
-        imageCaption: '태블릿별 최적 모델: iPad Pro M4(16GB)는 Llama 3.2 3B에서 25~30 tok/초 달성; iPad Air M2/M3은 Phi-4 Mini를 15~18 tok/초로 실행; Android 8GB는 Termux를 통해 10~15 tok/초 달성; Pixel Tablet은 느린 Tensor G2 칩으로 원격 연결 필요.',
+        imageCaption: '태블릿별 최적 모델: iPad Pro M5(12GB / 16GB)는 Llama 3.2 3B에서 32~38 tok/초 달성; iPad Air M4는 Phi-4 Mini를 18~20 tok/초로 실행; Android 8GB는 Termux를 통해 10~15 tok/초 달성; Pixel Tablet은 느린 Tensor G2 칩으로 원격 연결 필요.',
       },
       frontends: {
         id: 'frontends',
@@ -2710,7 +2740,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pocket Paladin iOS 앱 — [App Store](https://apps.apple.com)',
           'Ollama Termux ARM 빌드 — [Ollama 문서](https://ollama.com/docs)',
           'Open WebUI 문서 — [docs.openwebui.com](https://docs.openwebui.com)',
-          'Apple M4 칩 사양, 메모리 대역폭·Neural Engine — [Apple Silicon](https://apple.com/newsroom)',
+          'Apple M5 칩 iPad Pro 사양, RAM 티어, 메모리 대역폭 — [Apple Newsroom, 2025년 10월](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/)',
+          'Apple M4 칩 iPad Air 사양 및 RAM — [Apple Newsroom, 2026년 3월](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/)',
         ],
       },
       faq: {
@@ -2719,7 +2750,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'iPad에서 AI를 실행할 수 있습니까?',
-            a: '네, iPad Pro M4(16GB) 및 iPad Air M2/M3(8GB)에서 가능합니다. iPad Pro M4는 LLM Farm 또는 Pocket Paladin을 사용해 Phi-4 Mini와 Llama 3.2 3B를 실시간으로 실행합니다. iPad Air M2는 3B 모델을 적절하게 실행합니다. iPad에서 7B 이상 모델에는 자택 Mac·PC에서 Ollama를 실행하는 원격 연결을 권장합니다 — iPad는 채팅을 표시하지만 자택 기기가 추론을 처리합니다.',
+            a: '네, iPad Pro M5(기본 12GB / 1TB, 2TB 모델은 16GB) 및 iPad Air M4(12GB)에서 가능합니다. iPad Pro M5는 LLM Farm 또는 Pocket Paladin을 사용해 Phi-4 Mini와 Llama 3.2 3B를 실시간으로 실행하며, 향상된 메모리 대역폭(153GB/s, 이전 120GB/s) 덕분에 이전 iPad Pro M4보다 약 25~30% 빠릅니다. iPad Air M4는 3B~4B 모델을 원활하게 실행합니다. iPad에서 7B 이상 모델에는 자택 Mac·PC에서 Ollama를 실행하는 원격 연결을 권장합니다 — iPad는 채팅을 표시하지만 자택 기기가 추론을 처리합니다.',
+          },
+          {
+            q: 'iPad에서 Ollama가 실행됩니까?',
+            a: '아니요 — Ollama는 지원되는 iPadOS 빌드가 없어서 Android에서 Termux를 통해 하는 것처럼 iPad에 직접 설치할 수 없습니다. "iPad에서 Ollama 실행"이란 Mac이나 PC에서 Ollama를 실행하고 iPad 브라우저에서 (자택 기기의 로컬 IP에 있는 Open WebUI를 통해) 접속하는 것을 의미합니다 — iPad는 추론 엔진이 아니라 화면입니다. iPad에서 진정한 온디바이스 추론을 원한다면 대신 Apple Silicon에서 llama.cpp를 통해 GGUF 모델을 직접 실행하는 LLM Farm이나 Pocket Paladin을 사용하십시오.',
           },
           {
             q: '안드로이드 태블릿에서 AI를 실행할 수 있습니까?',
@@ -2739,7 +2774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '태블릿에서 ChatGPT와 유사한 품질의 응답을 로컬로 얻을 수 있습니까?',
-            a: '거의 가능하지만 올바른 설정이 필요합니다. GPT-5.5 품질에는 70B 이상의 모델이 필요합니다. 태블릿에서: iPad Pro M4(16GB)는 70B 모델을 실행할 수 없습니다 — 3B~8B 모델만 들어갑니다. 원격 연결을 통해: 자택 기기에 24GB GPU(RTX 4090) 또는 64GB 통합 메모리(Mac M5 Max)가 있다면 Llama 3.3 70B를 실행할 수 있고, 태블릿은 브라우저의 Open WebUI를 통해 그 품질에 접근합니다. 이것이 태블릿에서 클라우드 AI 품질에 가장 근접한 방법입니다.',
+            a: '거의 가능하지만 올바른 설정이 필요합니다. GPT-5.5 품질에는 70B 이상의 모델이 필요합니다. 태블릿에서: iPad Pro M5(12GB / 16GB)는 70B 모델을 실행할 수 없습니다 — 3B~8B 모델만 들어갑니다. 원격 연결을 통해: 자택 기기에 24GB GPU(RTX 4090) 또는 64GB 통합 메모리(Mac M5 Max)가 있다면 Llama 3.3 70B를 실행할 수 있고, 태블릿은 브라우저의 Open WebUI를 통해 그 품질에 접근합니다. 이것이 태블릿에서 클라우드 AI 품질에 가장 근접한 방법입니다.',
           },
           {
             q: '노트북 덮개를 닫아도 자택 Ollama 서버가 계속 실행되게 하려면 어떻게 해야 합니까?',
@@ -2747,15 +2782,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '태블릿에서 AI를 실행하면 배터리가 빨리 소모됩니까?',
-            a: '네 — 온디바이스 추론은 CPU/GPU 집약적입니다. iPad Pro M4에서 활성 대화에 Phi-4 Mini를 실행하면 시간당 약 20~30% 배터리가 소모됩니다. 장시간 사용 시 태블릿을 충전 상태로 유지하십시오. 자택 기기에 원격 연결하면 태블릿 배터리 소모가 현저히 줄어듭니다 — 태블릿은 단지 웹 페이지를 표시합니다.',
+            a: '네 — 온디바이스 추론은 CPU/GPU 집약적입니다. iPad Pro M5에서 활성 대화에 Phi-4 Mini를 실행하면 시간당 약 20~30% 배터리가 소모됩니다. 장시간 사용 시 태블릿을 충전 상태로 유지하십시오. 자택 기기에 원격 연결하면 태블릿 배터리 소모가 현저히 줄어듭니다 — 태블릿은 단지 웹 페이지를 표시합니다.',
           },
           {
             q: 'AI 추론 중에 태블릿에 열 쓰로틀링이 발생합니까?',
-            a: '네, 특히 능동 냉각 없는 iPad Air M2/M3 및 Android 태블릿에서 발생합니다. iPad Pro M4는 더 넓은 열 마진을 가지며 눈에 띄는 쓰로틀링 전에 ~10~15분간 생성 속도를 유지합니다. Android 태블릿은 더 빨리 쓰로틀링됩니다(5~8분의 지속적인 추론). 완화 방법: 더 짧은 생성 청크(응답당 200~400 토큰) 사용, 딱딱한 표면 위에 태블릿 놓기, 동시에 CPU를 많이 사용하는 다른 앱 실행 피하기.',
+            a: '네, 특히 능동 냉각 없는 iPad Air M4 및 Android 태블릿에서 발생합니다. iPad Pro M5는 더 넓은 열 마진을 가지며 눈에 띄는 쓰로틀링 전에 ~10~15분간 생성 속도를 유지합니다. Android 태블릿은 더 빨리 쓰로틀링됩니다(5~8분의 지속적인 추론). 완화 방법: 더 짧은 생성 청크(응답당 200~400 토큰) 사용, 딱딱한 표면 위에 태블릿 놓기, 동시에 CPU를 많이 사용하는 다른 앱 실행 피하기.',
           },
           {
             q: '태블릿 AI 사용에 가장 적합한 키보드는 무엇입니까?',
-            a: 'iPad Pro M4용 Apple Magic Keyboard(트랙패드 포함)가 가장 세련된 설정입니다 — Safari + Open WebUI에서 전체 키보드 단축키 작동, 트랙패드로 긴 응답에서 텍스트 선택 가능. Logitech Combo Touch가 경제적인 대안입니다. Android: Bluetooth 키보드 모두 Termux에서 작동하지만 경험이 더 거칩니다(터미널 전용). 글쓰기 작업의 경우 iPad Pro + Magic Keyboard는 태블릿을 글쓰기 중심 AI 워크스테이션으로 변환합니다.',
+            a: 'iPad Pro M5용 Apple Magic Keyboard(트랙패드 포함)가 가장 세련된 설정입니다 — Safari + Open WebUI에서 전체 키보드 단축키 작동, 트랙패드로 긴 응답에서 텍스트 선택 가능. Logitech Combo Touch가 경제적인 대안입니다. Android: Bluetooth 키보드 모두 Termux에서 작동하지만 경험이 더 거칩니다(터미널 전용). 글쓰기 작업의 경우 iPad Pro + Magic Keyboard는 태블릿을 글쓰기 중심 AI 워크스테이션으로 변환합니다.',
           },
           {
             q: 'iPad에서 SillyTavern을 실행할 수 있습니까?',
@@ -2767,11 +2802,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '태블릿 AI와 함께 외부 모니터를 사용할 수 있습니까?',
-            a: '네, iPad Pro M4에서는 Stage Manager + 외부 디스플레이로 다중 창 설정이 가능합니다; 외부 모니터에 Open WebUI, iPad 화면에 노트/원본 문서. Galaxy Tab S10 Ultra는 외부 디스플레이로 DeX 모드를 지원해 다중 모니터 AI 워크플로가 가능합니다. DeX 모드 없는 Android 태블릿은 화면을 미러링합니다 — 덜 유용합니다. iPad Pro + 외부 모니터 + Magic Keyboard는 2026년 태블릿이 실제 AI 워크스테이션에 가장 근접하게 됩니다.',
+            a: '네, iPad Pro M5에서는 Stage Manager + 외부 디스플레이로 다중 창 설정이 가능합니다; 외부 모니터에 Open WebUI, iPad 화면에 노트/원본 문서. Galaxy Tab S10 Ultra는 외부 디스플레이로 DeX 모드를 지원해 다중 모니터 AI 워크플로가 가능합니다. DeX 모드 없는 Android 태블릿은 화면을 미러링합니다 — 덜 유용합니다. iPad Pro + 외부 모니터 + Magic Keyboard는 2026년 태블릿이 실제 AI 워크스테이션에 가장 근접하게 됩니다.',
           },
           {
             q: '로컬 AI에 태블릿이 스마트폰보다 낫습니까?',
-            a: '집중적인 타이핑 작업(초안 작성, RAG, 긴 대화)에는 네 — 키보드 지원과 화면 크기가 중요합니다. 빠른 채팅, 음성 쿼리, 이동 중 사용에는 이미 갖고 있는 스마트폰이 낫습니다. iPad Pro M4는 로컬 AI에서 플래그십 스마트폰을 크게 능가하는 유일한 태블릿입니다; 중급 태블릿과 스마트폰은 대략 동등합니다. 대부분의 독자는 특별히 로컬 AI를 위해 태블릿을 구매해서는 안 됩니다 — 다른 이유로 원한다면 구매하십시오; AI 기능은 보너스입니다.',
+            a: '집중적인 타이핑 작업(초안 작성, RAG, 긴 대화)에는 네 — 키보드 지원과 화면 크기가 중요합니다. 빠른 채팅, 음성 쿼리, 이동 중 사용에는 이미 갖고 있는 스마트폰이 낫습니다. iPad Pro M5는 로컬 AI에서 플래그십 스마트폰을 크게 능가하는 유일한 태블릿입니다; 중급 태블릿과 스마트폰은 대략 동등합니다. 대부분의 독자는 특별히 로컬 AI를 위해 태블릿을 구매해서는 안 됩니다 — 다른 이유로 원한다면 구매하십시오; AI 기능은 보너스입니다.',
           },
         ],
       },
@@ -2797,14 +2832,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '태블릿에서 로컬 AI 실행하기: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+      headline: '태블릿에서 로컬 AI 실행하기: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         '2026년 iPad 또는 안드로이드 태블릿에서 AI를 로컬로 실행하는 방법. 온디바이스 추론 앱, Android Termux + Ollama, 자택 Mac·PC 원격 연결 설명.',
       image: `https://www.promptquorum.com/ko/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/ko/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
@@ -2843,10 +2878,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
-    title: 'Execute IA local no seu tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+    title: 'Execute IA local no seu tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
     seoTitle: 'Executar IA localmente no iPad e tablet Android 2026',
     intro:
       'Executar uma IA local em um tablet é prático em 2026 em iPads de alta gama e dispositivos Android com 8 GB ou mais de RAM. Este guia cobre as opções: inferência no dispositivo com Pocket Paladin e LLM Farm no iPad, Termux + Ollama no Android, e a alternativa de conexão remota (conectar o tablet a um Mac ou PC que executa Ollama pela rede Wi-Fi local) para dispositivos que não conseguem executar inferência localmente.',
@@ -2862,8 +2897,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small',
     ],
     current_hardware_mentioned: [
-      'iPad Pro M4 16 GB',
-      'iPad Air M2 8 GB',
+      'iPad Pro M5 12 GB / 16 GB',
+      'iPad Air M4 12 GB',
       'Samsung Galaxy Tab S10+ 12 GB',
       'Google Pixel Tablet 8 GB',
     ],
@@ -2881,22 +2916,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'pocket paladin ios llm',
     ],
     leadAnswerBlock:
-      '**Executar uma IA local em um tablet tem dois modos distintos: inferência no dispositivo (o modelo roda diretamente no chip do tablet) e conexão remota (o tablet é uma tela para um Mac ou PC em casa que executa o Ollama). A inferência no dispositivo é prática no iPad Pro M4 (16 GB, executa Phi-4 Mini e Llama 3.2 3B em tempo real), iPad Air M2 (8 GB, executa modelos 3B adequadamente) e dispositivos Android de alta gama com 8 GB ou mais de RAM (Samsung Galaxy Tab S10+, via Termux + Ollama). A conexão remota via Open WebUI ou uma interface de chat simples no IP local do servidor de casa funciona em qualquer tablet, com qualquer quantidade de RAM e qualquer sistema operacional. Para a maioria das pessoas, a conexão remota é a melhor opção: a máquina em casa executa o modelo de 70B enquanto o tablet fornece a interface conveniente.**',
+      '**Executar uma IA local em um tablet tem dois modos distintos: inferência no dispositivo (o modelo roda diretamente no chip do tablet) e conexão remota (o tablet é uma tela para um Mac ou PC em casa que executa o Ollama). A inferência no dispositivo é prática no iPad Pro M5 (12 GB nos níveis de armazenamento base, 16 GB nos modelos de 1 TB/2 TB — executa Phi-4 Mini e Llama 3.2 3B em tempo real com mais folga do que a geração M4 anterior), iPad Air M4 (12 GB, executa modelos de 3B a 4B com folga) e dispositivos Android de alta gama com 8 GB ou mais de RAM (Samsung Galaxy Tab S10+, via Termux + Ollama). A conexão remota via Open WebUI ou uma interface de chat simples no IP local do servidor de casa funciona em qualquer tablet, com qualquer quantidade de RAM e qualquer sistema operacional. Para a maioria das pessoas, a conexão remota é a melhor opção: a máquina em casa executa o modelo de 70B enquanto o tablet fornece a interface conveniente.**',
     quickAnswerTop: {
       pt: {
         question: 'Dá para executar um modelo de IA local em um iPad ou tablet Android?',
         answer:
-          'Sim, em dispositivos de alta gama. O iPad Pro M4 com 16 GB de RAM executa Phi-4 Mini (3.8B) e Llama 3.2 3B em tempo real usando LLM Farm ou Pocket Paladin. O iPad Air M2 (8 GB) executa modelos 3B adequadamente. Os tablets Android com 8 GB ou mais de RAM (Samsung Galaxy Tab S10+) conseguem executar Phi-4 Mini e Qwen3 1.7B localmente via Termux + Ollama. Para tablets com menos RAM ou chips mais antigos, a alternativa prática é a conexão remota: conecte-se a um Mac ou PC na sua rede doméstica que executa Ollama, usando Open WebUI no navegador do tablet.',
+          'Sim, em dispositivos de alta gama. O iPad Pro M5 (12 GB nos níveis de armazenamento base, 16 GB nos modelos de 1 TB/2 TB) executa Phi-4 Mini (3.8B) e Llama 3.2 3B em tempo real usando LLM Farm ou Pocket Paladin, com mais folga do que a geração M4 anterior. O iPad Air M4 (12 GB) executa modelos de 3B a 4B com folga. Os tablets Android com 8 GB ou mais de RAM (Samsung Galaxy Tab S10+) conseguem executar Phi-4 Mini e Qwen3 1.7B localmente via Termux + Ollama. O Ollama em si não roda nativamente no iPadOS — usuários que querem especificamente o Ollama precisam de conexão remota a um Mac ou PC. Para tablets com menos RAM ou chips mais antigos, a alternativa prática é a conexão remota: conecte-se a um Mac ou PC na sua rede doméstica que executa Ollama, usando Open WebUI no navegador do tablet.',
         bullets: [
-          'iPad Pro M4 (16 GB) — executa Phi-4 Mini e Llama 3.2 3B localmente em tempo real usando LLM Farm ou Pocket Paladin.',
-          'iPad Air M2 (8 GB) — executa modelos 3B em velocidade utilizável; modelos 7B são lentos, mas funcionais.',
+          'iPad Pro M5 (12 GB / 16 GB) — executa Phi-4 Mini e Llama 3.2 3B localmente em tempo real usando LLM Farm ou Pocket Paladin, mais rápido do que a geração M4 anterior graças à maior largura de banda de memória.',
+          'iPad Air M4 (12 GB) — executa modelos de 3B a 4B em velocidade utilizável; modelos 7B são lentos, mas funcionais.',
           'Tablets Android (8 GB ou mais de RAM) — Termux + Ollama executa Phi-4 Mini e Qwen3 1.7B localmente.',
+          'O Ollama em si não tem uma versão nativa para iPadOS — "executar Ollama no iPad" significa conectar-se remotamente a um Mac ou PC que o executa, não instalá-lo no iPad.',
           'Conexão remota — qualquer tablet, qualquer RAM: conecte-se ao seu Mac ou PC em casa que executa Ollama via Open WebUI no navegador.',
           'Melhor modelo no dispositivo para a maioria dos tablets: Phi-4 Mini (3.8B, ~2,7 GB) ou Qwen3 1.7B para dispositivos com RAM limitada.',
           'A conexão remota é recomendada sobre o dispositivo para modelos de 7B em diante — a máquina em casa executa o modelo mais rápido do que qualquer tablet.',
           'SillyTavern e RisuAI têm interfaces adaptadas para mobile que funcionam no iPad Safari / Android Chrome.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -2918,7 +2954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**A inferência no dispositivo é prática no iPad Pro M4 (16 GB) e Android de alta gama (8 GB ou mais).** Abaixo desses limites, a geração é muito lenta para uso em tempo real. A conexão remota a uma máquina em casa é a melhor opção para a maioria dos usuários de tablet.',
+          '**A inferência no dispositivo é prática no iPad Pro M5 (12 GB / 16 GB), iPad Air M4 (12 GB) e Android de alta gama (8 GB ou mais).** Abaixo desses limites, a geração é muito lenta para uso em tempo real. A conexão remota a uma máquina em casa é a melhor opção para a maioria dos usuários de tablet.',
           '**A conexão remota é a abordagem recomendada para a maioria das pessoas.** Conecte seu tablet (com qualquer RAM e sistema operacional) a um Mac ou PC que executa Ollama na sua rede doméstica. A máquina em casa executa o modelo de 70B; o tablet obtém uma interface de chat tátil.',
           '**LLM Farm e Pocket Paladin são as opções nativas do iPad.** Ambos executam modelos GGUF localmente nos chips Apple Silicon dos iPads.',
           '**Termux + Ollama é a abordagem para Android.** Requer conforto com o terminal, mas funciona em qualquer dispositivo Android com 8 GB ou mais de RAM.',
@@ -2931,10 +2967,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Fatos rápidos',
         items: [
-          '**Aplicativos do iPad:** LLM Farm (gratuito, código aberto), Pocket Paladin (nível gratuito + pago), PocketLLM (mais antigo, menos ativo).',
+          '**Aplicativos do iPad:** LLM Farm (gratuito, código aberto), Pocket Paladin (nível gratuito + pago), PocketLLM (mais antigo, menos ativo). O LLM Farm é exclusivo do iOS — não existe versão para Android; o equivalente no Android é o Termux + Ollama.',
           '**Método Android:** Termux + Ollama (CLI) ou MNN LLM (aplicativo, suporte de modelos limitado).',
-          '**Conexão remota:** qualquer navegador de tablet → Open WebUI ou uma interface de chat simples no IP local da sua máquina em casa.',
-          '**Mínimo para o dispositivo:** iPad Air M2 (8 GB) para modelos 3B; iPad Pro M4 (16 GB) para modelos de 7B a 8B.',
+          '**Conexão remota:** qualquer navegador de tablet → Open WebUI ou uma interface de chat simples no IP local da sua máquina em casa. É assim também que usuários de iPad executam o Ollama, já que o Ollama não tem versão nativa para iPadOS.',
+          '**Mínimo para o dispositivo:** iPad Air M4 (12 GB) para modelos de 3B a 4B; iPad Pro M5 (12 GB / 16 GB) para modelos de 7B a 8B.',
           '**Mínimo Android para o dispositivo:** dispositivo com 8 GB de RAM (Samsung Galaxy Tab S10+, OnePlus Pad 2).',
           '**Melhor modelo no dispositivo:** Phi-4 Mini (3.8B, 2,7 GB) para a maioria dos tablets; Qwen3 1.7B para dispositivos muito limitados.',
           '**Velocidade de conexão remota:** depende da qualidade do Wi-Fi e da velocidade de geração da máquina em casa, não do hardware do tablet.',
@@ -2957,9 +2993,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Fator', 'No dispositivo', 'Conexão remota'],
         rows: [
-          { 'Fator': 'Limite de tamanho do modelo', 'No dispositivo': '3B a 8B (iPad Pro M4); 3B (maioria dos tablets)', 'Conexão remota': 'Ilimitado — a máquina em casa executa qualquer modelo' },
+          { 'Fator': 'Limite de tamanho do modelo', 'No dispositivo': '3B a 8B (iPad Pro M5); 3B a 4B (maioria dos tablets)', 'Conexão remota': 'Ilimitado — a máquina em casa executa qualquer modelo' },
           { 'Fator': 'Uso offline', 'No dispositivo': 'Sim — funciona sem Wi-Fi', 'Conexão remota': 'Não — requer Wi-Fi em casa' },
-          { 'Fator': 'Velocidade de geração', 'No dispositivo': 'Moderada (10 a 25 tok/s no iPad Pro M4)', 'Conexão remota': 'Depende da máquina em casa (até 40+ tok/s)' },
+          { 'Fator': 'Velocidade de geração', 'No dispositivo': 'Moderada (12 a 30 tok/s no iPad Pro M5)', 'Conexão remota': 'Depende da máquina em casa (até 40+ tok/s)' },
           { 'Fator': 'Armazenamento no tablet', 'No dispositivo': '2 a 10 GB por modelo', 'Conexão remota': 'Nenhum — o modelo vive na máquina em casa' },
           { 'Fator': 'Complexidade de configuração', 'No dispositivo': 'Baixa (baixar app + arquivo de modelo)', 'Conexão remota': 'Baixa a média (a máquina em casa precisa de Ollama + Open WebUI)' },
           { 'Fator': 'Ideal para', 'No dispositivo': 'Viagens, uso offline, tarefas com modelos 3B', 'Conexão remota': 'Uso com qualidade prioritária, modelos 70B, conveniência' },
@@ -2977,22 +3013,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: inferência no dispositivo',
         content:
-          '**O iPad Pro M4 (16 GB) é o único iPad que executa modelos 7B em uma velocidade confortável.** O iPad Air M2 (8 GB) e o M3 (8 GB) executam modelos 3B adequadamente.',
+          '**O iPad Pro M5 é o único iPad que executa modelos de 7B a 8B em uma velocidade confortável.** A Apple elevou a RAM base do iPad Pro M5 para 12 GB (16 GB nos níveis de armazenamento de 1 TB/2 TB), ante os 8 GB do iPad Pro M4 base, e aumentou a largura de banda de memória de 120 GB/s para 153 GB/s — a inferência de LLM em Apple Silicon é limitada pela largura de banda de memória, então isso se traduz diretamente em geração mais rápida. O iPad Air M4 (12 GB, ante os 8 GB do M2 Air anterior) agora executa modelos de 3B a 4B com folga, e não apenas adequadamente.',
         items: [
           '**LLM Farm** (gratuito, código aberto): baixa modelos GGUF do Hugging Face e os executa com llama.cpp no Apple Silicon. O melhor desempenho das opções nativas de iOS. Suporta modos de chat e completar. Instale pela App Store.',
           '**Pocket Paladin** (nível gratuito + assinatura): downloads de modelos selecionados, interface mais limpa do que LLM Farm, experiência de primeiro uso ligeiramente mais simples. O nível gratuito inclui modelos 3B; a assinatura desbloqueia modelos maiores e o modo API.',
           '**Importar modelos:** no LLM Farm, toque no ícone da biblioteca de modelos → "Adicionar modelo da URL" → cole uma URL de download direto do Hugging Face para um arquivo GGUF.',
-          '**Gerenciamento de RAM no iPad:** o iOS gerencia a RAM de forma agressiva para aplicativos em segundo plano. Feche todos os outros aplicativos antes de executar um modelo 7B em um iPad de 8 GB.',
-          '**Expectativas de velocidade de geração:** iPad Pro M4 (16 GB): Phi-4 Mini ~20 tok/s, Llama 3.2 3B ~30 tok/s, Gemma 3 4B ~18 tok/s. iPad Air M2 (8 GB): modelos 3B ~12 a 18 tok/s; modelos 7B ~5 a 8 tok/s (muito lento para chat em tempo real).',
+          '**Gerenciamento de RAM no iPad:** o iOS gerencia a RAM de forma agressiva para aplicativos em segundo plano. Feche todos os outros aplicativos antes de executar um modelo 7B em um iPad de 12 GB. No iPad Pro M5 de 16 GB (níveis de 1 TB/2 TB), isso raramente é um problema.',
+          '**Expectativas de velocidade de geração:** iPad Pro M5 (12 GB / 16 GB): Phi-4 Mini ~25 tok/s, Llama 3.2 3B ~38 tok/s, Gemma 3 4B ~23 tok/s — cerca de 25 a 30% mais rápido do que a geração M4 anterior, alinhado ao aumento na largura de banda de memória. iPad Air M4 (12 GB): modelos de 3B a 4B ~15 a 20 tok/s; modelos 7B ~7 a 10 tok/s (ainda lento para chat em tempo real).',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'Não tente executar um modelo 7B em um iPad de 8 GB para chat em tempo real. A 5 a 8 tokens por segundo, cada resposta leva de 15 a 30 segundos. Use modelos 3B em dispositivos de 8 GB; atualize para um dispositivo de 16 GB ou mude para a conexão remota para modelos 7B em diante.',
+            text: 'Não tente executar um modelo 7B em um iPad Air de 12 GB para chat em tempo real. A 7 a 10 tokens por segundo, cada resposta ainda leva de 10 a 20 segundos. Use modelos de 3B a 4B no iPad Air; atualize para o iPad Pro M5 de 16 GB ou mude para a conexão remota para modelos 7B em diante.',
           },
         ],
         image: '/images/run-ai-on-tablet-ipad-speed-es.svg',
-        imageCaption: 'Velocidade de inferência no dispositivo no iPad: o iPad Pro M4 (16 GB) alcança de 18 a 30 tok/s no Phi-4 Mini e Llama 3.2 3B; o iPad Air M2 (8 GB) executa modelos 3B a 12 a 18 tok/s, mas cai para 5 a 8 tok/s em modelos 7B — muito lento para chat em tempo real.',
+        imageCaption: 'Velocidade de inferência no dispositivo no iPad: o iPad Pro M5 (12 GB / 16 GB) alcança de 23 a 38 tok/s no Phi-4 Mini e Llama 3.2 3B; o iPad Air M4 (12 GB) executa modelos de 3B a 4B a 15 a 20 tok/s, mas cai para 7 a 10 tok/s em modelos 7B — ainda lento para chat em tempo real.',
       },
       androidOnDevice: {
         id: 'android-on-device',
@@ -3011,7 +3047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dispositivos compatíveis com modelos 3B ou mais:** mínimo 8 GB de RAM (Samsung Galaxy Tab S10+, OnePlus Pad 2, Xiaomi Pad 7 Pro). Dispositivos com 6 GB executam apenas Qwen3 1.7B.',
           '**Pixel Tablet não recomendado para o dispositivo:** o Pixel Tablet (modelo 2023, 8 GB Tensor G2) ficou fora da lista de dispositivos recomendados para inferência local — o Tensor G2 é significativamente mais lento do que o Snapdragon 8 Gen 3 / Dimensity 9300 para inferência LLM.',
           '**Snapdragon 8 Gen 3 e Dimensity 9300** são os chips Android mais rápidos para inferência no dispositivo em 2026. Velocidade de geração: ~15 a 25 tok/s para modelos de 1.7B; ~8 a 12 tok/s para modelos 3B.',
-          '**Aplicativos alternativos:** MNN LLM (Alibaba, gratuito, aplicativo Android com inferência no dispositivo para modelos selecionados) tem uma configuração mais simples, mas uma seleção de modelos mais limitada do que o Ollama.',
+          '**Aplicativos alternativos:** MNN LLM (Alibaba, gratuito, aplicativo Android com inferência no dispositivo para modelos selecionados) tem uma configuração mais simples, mas uma seleção de modelos mais limitada do que o Ollama. Não existe versão para Android do LLM Farm — é um aplicativo exclusivo do iOS; o Termux + Ollama ou o MNN LLM são os equivalentes mais próximos no Android.',
         ],
         callouts: [
           {
@@ -3060,8 +3096,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A escolha do modelo é determinada pela RAM disponível, não pelas preferências.**',
         columns: ['Dispositivo / RAM', 'Modelo recomendado', 'Velocidade', 'Ideal para'],
         rows: [
-          { 'Dispositivo / RAM': 'iPad Air M2 / M3 (8 GB)', 'Modelo recomendado': 'Phi-4 Mini Q4', 'Velocidade': '~15 a 18 tok/s', 'Ideal para': 'Assistência de escrita, resumo' },
-          { 'Dispositivo / RAM': 'iPad Pro M4 (16 GB)', 'Modelo recomendado': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Velocidade': '~25 a 30 tok/s / ~15 a 20 tok/s', 'Ideal para': 'Estação de trabalho LLM real, RAG, redação de ficção' },
+          { 'Dispositivo / RAM': 'iPad Air M4 (12 GB)', 'Modelo recomendado': 'Phi-4 Mini Q4 / Llama 3.2 3B Q4', 'Velocidade': '~18 a 20 tok/s', 'Ideal para': 'Assistência de escrita, resumo' },
+          { 'Dispositivo / RAM': 'iPad Pro M5 (12 GB / 16 GB)', 'Modelo recomendado': 'Llama 3.2 3B / Gemma 3 4B Q4', 'Velocidade': '~32 a 38 tok/s / ~20 a 23 tok/s', 'Ideal para': 'Estação de trabalho LLM real, RAG, redação de ficção' },
           { 'Dispositivo / RAM': 'Android 8 GB (Tab S10+)', 'Modelo recomendado': 'Phi-4 Mini Q4 via Termux+Ollama', 'Velocidade': '~10 a 15 tok/s', 'Ideal para': 'Usuários avançados confortáveis com Termux' },
           { 'Dispositivo / RAM': 'Android 6 GB', 'Modelo recomendado': 'Qwen3 1.7B Q4', 'Velocidade': '~15 a 20 tok/s', 'Ideal para': 'Chat leve, tradução, tarefas simples' },
           { 'Dispositivo / RAM': 'Pixel Tablet (8 GB)', 'Modelo recomendado': 'Apenas conexão remota', 'Velocidade': 'N/A', 'Ideal para': 'Tensor G2 muito lento para o dispositivo' },
@@ -3074,7 +3110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/run-ai-on-tablet-model-by-device-es.svg',
-        imageCaption: 'Melhor modelo por tablet: iPad Pro M4 (16 GB) alcança de 25 a 30 tok/s no Llama 3.2 3B; iPad Air M2/M3 executa Phi-4 Mini a 15 a 18 tok/s; Android 8 GB alcança de 10 a 15 tok/s via Termux; o Pixel Tablet requer conexão remota devido ao lento chip Tensor G2.',
+        imageCaption: 'Melhor modelo por tablet: iPad Pro M5 (12 GB / 16 GB) alcança de 32 a 38 tok/s no Llama 3.2 3B; iPad Air M4 executa Phi-4 Mini a 18 a 20 tok/s; Android 8 GB alcança de 10 a 15 tok/s via Termux; o Pixel Tablet requer conexão remota devido ao lento chip Tensor G2.',
       },
       frontends: {
         id: 'frontends',
@@ -3115,7 +3151,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'App de iOS Pocket Paladin — [App Store](https://apps.apple.com)',
           'Compilação ARM do Ollama para Termux — [Documentação do Ollama](https://ollama.com/docs)',
           'Documentação do Open WebUI — [docs.openwebui.com](https://docs.openwebui.com)',
-          'Especificações do chip Apple M4, largura de banda de memória e Neural Engine — [Apple Silicon](https://apple.com/newsroom)',
+          'Especificações do chip Apple M5 do iPad Pro, níveis de RAM e largura de banda de memória — [Apple Newsroom, outubro de 2025](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/)',
+          'Especificações do chip Apple M4 do iPad Air e RAM — [Apple Newsroom, março de 2026](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/)',
         ],
       },
       faq: {
@@ -3124,7 +3161,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Dá para executar IA em um iPad?',
-            a: 'Sim, no iPad Pro M4 (16 GB) e iPad Air M2/M3 (8 GB). O iPad Pro M4 executa Phi-4 Mini e Llama 3.2 3B em tempo real usando LLM Farm ou Pocket Paladin. O iPad Air M2 executa modelos 3B adequadamente. Para modelos de 7B em diante em um iPad, a conexão remota a um Mac ou PC em casa que executa Ollama é recomendada.',
+            a: 'Sim, no iPad Pro M5 (12 GB base / 16 GB nos níveis de 1 TB e 2 TB) e iPad Air M4 (12 GB). O iPad Pro M5 executa Phi-4 Mini e Llama 3.2 3B em tempo real usando LLM Farm ou Pocket Paladin, cerca de 25 a 30% mais rápido do que o iPad Pro M4 anterior graças à maior largura de banda de memória (153 GB/s ante 120 GB/s). O iPad Air M4 executa modelos de 3B a 4B com folga. Para modelos de 7B em diante em um iPad, a conexão remota a um Mac ou PC em casa que executa Ollama é recomendada.',
+          },
+          {
+            q: 'O Ollama roda em um iPad?',
+            a: 'Não — o Ollama não tem uma versão compatível com iPadOS, então não pode ser instalado diretamente em um iPad como pode ser feito no Android via Termux. "Executar Ollama no iPad" significa rodar o Ollama em um Mac ou PC e se conectar a ele pelo navegador do iPad (via Open WebUI no IP local da máquina em casa) — o iPad é uma tela, não o motor de inferência. Para inferência verdadeiramente no dispositivo em um iPad, use LLM Farm ou Pocket Paladin, que executam modelos GGUF diretamente via llama.cpp no Apple Silicon.',
           },
           {
             q: 'Dá para executar IA em um tablet Android?',
@@ -3144,7 +3185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso obter respostas com qualidade similar ao ChatGPT em um tablet localmente?',
-            a: 'Quase, mas com a configuração certa. A qualidade do GPT-5.5 requer um modelo de 70B ou mais. Num tablet: o iPad Pro M4 (16 GB) não consegue executar modelos de 70B — apenas cabem modelos de 3B a 8B. Via conexão remota: se a sua máquina em casa tem uma GPU de 24 GB (RTX 4090) ou 64 GB de memória unificada (Mac M5 Max), ela consegue executar Llama 3.3 70B, e seu tablet acessa essa qualidade via Open WebUI no navegador.',
+            a: 'Quase, mas com a configuração certa. A qualidade do GPT-5.5 requer um modelo de 70B ou mais. Num tablet: o iPad Pro M5 (12 GB / 16 GB) não consegue executar modelos de 70B — apenas cabem modelos de 3B a 8B. Via conexão remota: se a sua máquina em casa tem uma GPU de 24 GB (RTX 4090) ou 64 GB de memória unificada (Mac M5 Max), ela consegue executar Llama 3.3 70B, e seu tablet acessa essa qualidade via Open WebUI no navegador.',
           },
           {
             q: 'Como mantenho meu servidor Ollama em casa funcionando quando fecho a tampa do notebook?',
@@ -3152,15 +3193,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Executar IA em um tablet consome muita bateria?',
-            a: 'Sim — a inferência no dispositivo é intensiva em CPU/GPU. Executar Phi-4 Mini em um iPad Pro M4 para conversação ativa consome aproximadamente 20 a 30% da bateria por hora. Para uso prolongado, mantenha o tablet carregando. A conexão remota a uma máquina em casa consome significativamente menos bateria do tablet — o tablet apenas exibe uma página web.',
+            a: 'Sim — a inferência no dispositivo é intensiva em CPU/GPU. Executar Phi-4 Mini em um iPad Pro M5 para conversação ativa consome aproximadamente 20 a 30% da bateria por hora. Para uso prolongado, mantenha o tablet carregando. A conexão remota a uma máquina em casa consome significativamente menos bateria do tablet — o tablet apenas exibe uma página web.',
           },
           {
             q: 'Os tablets sofrem throttling térmico durante a inferência de IA?',
-            a: 'Sim, especialmente no iPad Air M2/M3 e tablets Android sem resfriamento ativo. O iPad Pro M4 tem mais margem térmica e mantém a velocidade de geração por ~10 a 15 minutos antes de um throttling notável.',
+            a: 'Sim, especialmente no iPad Air M4 e tablets Android sem resfriamento ativo. O iPad Pro M5 tem mais margem térmica e mantém a velocidade de geração por ~10 a 15 minutos antes de um throttling notável.',
           },
           {
             q: 'Qual teclado funciona melhor para o uso de IA no tablet?',
-            a: 'O Apple Magic Keyboard para iPad Pro M4 (com trackpad) é a configuração mais polida — os atalhos de teclado completos funcionam no Safari + Open WebUI, o trackpad permite selecionar texto em respostas longas. O Logitech Combo Touch é a alternativa econômica.',
+            a: 'O Apple Magic Keyboard para iPad Pro M5 (com trackpad) é a configuração mais polida — os atalhos de teclado completos funcionam no Safari + Open WebUI, o trackpad permite selecionar texto em respostas longas. O Logitech Combo Touch é a alternativa econômica.',
           },
           {
             q: 'Posso executar SillyTavern no iPad?',
@@ -3172,7 +3213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usar telas externas com IA no tablet?',
-            a: 'Sim, no iPad Pro M4 (Stage Manager + tela externa dá uma configuração de múltiplas janelas; Open WebUI no monitor externo, notas/documentos fonte na tela do iPad). Galaxy Tab S10 Ultra suporta o modo DeX com uma tela externa.',
+            a: 'Sim, no iPad Pro M5 (Stage Manager + tela externa dá uma configuração de múltiplas janelas; Open WebUI no monitor externo, notas/documentos fonte na tela do iPad). Galaxy Tab S10 Ultra suporta o modo DeX com uma tela externa.',
           },
           {
             q: 'Um tablet é melhor do que um telefone para IA local?',
@@ -3201,14 +3242,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Execute IA local no seu tablet: iPad Pro M4, Galaxy Tab S10, OnePlus Pad 2 (2026)',
+      headline: 'Execute IA local no seu tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Como executar IA localmente em um iPad ou tablet Android em 2026. Aplicativos de inferência no dispositivo, Termux + Ollama no Android e conexão remota ao seu Mac ou PC em casa explicados.',
       image: `https://www.promptquorum.com/pt/og/power-local-llm/run-ai-on-tablet-ipad-android`,
       url: 'https://www.promptquorum.com/pt/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       articleBody:
@@ -3248,15 +3289,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-07-14',
+    next_refresh_due: '2027-01-14',
     theme: 'Mobile & Edge LLMs',
-    title: 'شغّل ذكاءً اصطناعيًا محليًا على لوحيك: ⁨iPad Pro M4⁩ و⁨Galaxy Tab S10⁩ و⁨OnePlus Pad 2⁩ (⁨2026⁩)',
+    title: 'شغّل ذكاءً اصطناعيًا محليًا على لوحيك: ⁨iPad Pro M5⁩ و⁨Galaxy Tab S10⁩ و⁨OnePlus Pad 2⁩ (⁨2026⁩)',
     seoTitle: 'تشغيل ⁨LLM⁩ محليًا على ⁨iPad⁩ و⁨Android Tablet 2026⁩',
     intro:
       'تشغيل ذكاء اصطناعي محلي على لوحي أصبح عمليًا في 2026 على أجهزة iPad من الفئة الراقية وأجهزة Android بـ 8 جيجابايت RAM أو أكثر. يغطي هذا الدليل الخيارات: الاستدلال على الجهاز مع تطبيق Pocket Paladin وLLM Farm على iPad، وTermux + Ollama على Android، وبديل الاتصال عن بُعد (ربط اللوحي بـ Mac أو PC يشغّل Ollama عبر شبكة Wi-Fi المحلية) للأجهزة التي لا تستطيع تشغيل الاستدلال محليًا.',
     metaDescription:
-      'Pocket Paladin وLLM Farm يُشغّلان نماذج محلية على iPad Pro M4؛ Android بـ 8 جيجابايت RAM يدعم Termux + Ollama أو الاتصال بـ Mac عبر Wi-Fi.',
+      'Pocket Paladin وLLM Farm يُشغّلان نماذج محلية على iPad Pro M5؛ Android بـ 8 جيجابايت RAM يدعم Termux + Ollama أو الاتصال بـ Mac عبر Wi-Fi.',
     twitterDescription:
       'شغّل ذكاءً اصطناعيًا على iPad أو تابلت Android في 2026: الاستدلال على الجهاز (Pocket Paladin وLLM Farm وTermux+Ollama) والاتصال عن بُعد بـ Mac/PC.',
     current_models_mentioned: [
@@ -3267,8 +3308,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small',
     ],
     current_hardware_mentioned: [
-      'iPad Pro M4 16 GB',
-      'iPad Air M2 8 GB',
+      'iPad Pro M5 12 GB / 16 GB',
+      'iPad Air M4 12 GB',
       'Samsung Galaxy Tab S10+ 12 GB',
       'Google Pixel Tablet 8 GB',
     ],
@@ -3286,22 +3327,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'pocket paladin ios llm',
     ],
     leadAnswerBlock:
-      '**تشغيل ذكاء اصطناعي محلي على لوحي له وضعان مختلفان: الاستدلال على الجهاز (النموذج يعمل مباشرةً على شريحة اللوحي) والاتصال عن بُعد (اللوحي شاشة لـ Mac أو PC في المنزل يشغّل Ollama). الاستدلال على الجهاز عملي على iPad Pro M4 (16 جيجابايت، يشغّل Phi-4 Mini وLlama 3.2 3B في الوقت الفعلي)، وiPad Air M2 (8 جيجابايت، يشغّل نماذج 3B بشكل مناسب)، وأجهزة Android من الفئة الراقية بـ 8 جيجابايت RAM أو أكثر (Samsung Galaxy Tab S10+، عبر Termux + Ollama). الاتصال عن بُعد عبر Open WebUI أو واجهة دردشة بسيطة على عنوان IP الخادم المنزلي يعمل على أي لوحي، بأي قدر من RAM وأي نظام تشغيل — يحوّل لوحيك إلى طرفية لمسية نحو جهاز منزلي أقوى. لمعظم الناس، الاتصال عن بُعد هو الخيار الأفضل.**',
+      '**تشغيل ذكاء اصطناعي محلي على لوحي له وضعان مختلفان: الاستدلال على الجهاز (النموذج يعمل مباشرةً على شريحة اللوحي) والاتصال عن بُعد (اللوحي شاشة لـ Mac أو PC في المنزل يشغّل Ollama). الاستدلال على الجهاز عملي على iPad Pro M5 (12 جيجابايت في فئات التخزين الأساسية، 16 جيجابايت في فئتَي 1 تيرابايت/2 تيرابايت — يشغّل Phi-4 Mini وLlama 3.2 3B في الوقت الفعلي بهامش أكبر من جيل M4 السابق)، وiPad Air M4 (12 جيجابايت، يشغّل نماذج 3B–4B بسلاسة)، وأجهزة Android من الفئة الراقية بـ 8 جيجابايت RAM أو أكثر (Samsung Galaxy Tab S10+، عبر Termux + Ollama). الاتصال عن بُعد عبر Open WebUI أو واجهة دردشة بسيطة على عنوان IP الخادم المنزلي يعمل على أي لوحي، بأي قدر من RAM وأي نظام تشغيل — يحوّل لوحيك إلى طرفية لمسية نحو جهاز منزلي أقوى. لمعظم الناس، الاتصال عن بُعد هو الخيار الأفضل.**',
     quickAnswerTop: {
       ar: {
         question: 'هل يمكن تشغيل نموذج ذكاء اصطناعي محلي على iPad أو تابلت Android؟',
         answer:
-          'نعم، على الأجهزة من الفئة الراقية. يشغّل iPad Pro M4 بـ 16 جيجابايت RAM نموذجَي Phi-4 Mini (3.8B) وLlama 3.2 3B في الوقت الفعلي باستخدام LLM Farm أو Pocket Paladin. يشغّل iPad Air M2 (8 جيجابايت) نماذج 3B بشكل مناسب. يمكن لأجهزة Android اللوحية بـ 8 جيجابايت RAM أو أكثر (Samsung Galaxy Tab S10+) تشغيل Phi-4 Mini وQwen3 1.7B محليًا عبر Termux + Ollama. للأجهزة ذات RAM أقل أو شرائح أقدم، البديل العملي هو الاتصال عن بُعد.',
+          'نعم، على الأجهزة من الفئة الراقية. يشغّل iPad Pro M5 (12 جيجابايت في فئات التخزين الأساسية، 16 جيجابايت في فئتَي 1 تيرابايت/2 تيرابايت) نموذجَي Phi-4 Mini (3.8B) وLlama 3.2 3B في الوقت الفعلي باستخدام LLM Farm أو Pocket Paladin، بهامش أكبر من جيل M4 السابق. يشغّل iPad Air M4 (12 جيجابايت) نماذج 3B–4B بسلاسة. يمكن لأجهزة Android اللوحية بـ 8 جيجابايت RAM أو أكثر (Samsung Galaxy Tab S10+) تشغيل Phi-4 Mini وQwen3 1.7B محليًا عبر Termux + Ollama. Ollama نفسه لا يعمل بشكل أصلي على iPadOS — من يريد Ollama تحديدًا يحتاج إلى اتصال عن بُعد بـ Mac أو PC. للأجهزة ذات RAM أقل أو شرائح أقدم، البديل العملي هو الاتصال عن بُعد.',
         bullets: [
-          'iPad Pro M4 (16 جيجابايت) — يشغّل Phi-4 Mini وLlama 3.2 3B محليًا في الوقت الفعلي باستخدام LLM Farm أو Pocket Paladin.',
-          'iPad Air M2 (8 جيجابايت) — يشغّل نماذج 3B بسرعة مقبولة؛ نماذج 7B بطيئة لكن تعمل.',
+          'iPad Pro M5 (12 جيجابايت / 16 جيجابايت) — يشغّل Phi-4 Mini وLlama 3.2 3B محليًا في الوقت الفعلي باستخدام LLM Farm أو Pocket Paladin، أسرع من جيل M4 السابق بفضل زيادة سرعة نقل البيانات في الذاكرة.',
+          'iPad Air M4 (12 جيجابايت) — يشغّل نماذج 3B–4B بسرعة مقبولة؛ نماذج 7B بطيئة لكن تعمل.',
           'أجهزة Android اللوحية (8 جيجابايت RAM أو أكثر) — Termux + Ollama يشغّل Phi-4 Mini وQwen3 1.7B محليًا.',
+          'Ollama نفسه ليس له إصدار أصلي لـ iPadOS — "تشغيل Ollama على iPad" يعني الاتصال عن بُعد بـ Mac أو PC يشغّله، لا تثبيته على iPad.',
           'الاتصال عن بُعد — أي لوحي، أي RAM: اتصل بـ Mac أو PC في المنزل يشغّل Ollama عبر Open WebUI في المتصفح.',
           'أفضل نموذج على الجهاز لمعظم الألواح: Phi-4 Mini (3.8B، ~2.7 جيجابايت) أو Qwen3 1.7B للأجهزة ذات RAM محدودة.',
           'الاتصال عن بُعد موصى به على الجهاز لنماذج 7B فصاعدًا — الجهاز المنزلي يشغّل النموذج أسرع من أي لوحي.',
           'تطبيقا SillyTavern وRisuAI لديهما واجهات متوافقة مع الهاتف تعمل على iPad Safari / Android Chrome.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-07-14',
       },
     },
     toc: [
@@ -3323,7 +3365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**الاستدلال على الجهاز عملي على iPad Pro M4 (16 جيجابايت) وAndroid من الفئة الراقية (8 جيجابايت أو أكثر).** دون هذه العتبات، يكون التوليد بطيئًا جدًا للاستخدام الفعلي. الاتصال عن بُعد بجهاز منزلي هو الخيار الأفضل لمعظم مستخدمي الألواح.',
+          '**الاستدلال على الجهاز عملي على iPad Pro M5 (12 جيجابايت / 16 جيجابايت)، وiPad Air M4 (12 جيجابايت)، وAndroid من الفئة الراقية (8 جيجابايت أو أكثر).** دون هذه العتبات، يكون التوليد بطيئًا جدًا للاستخدام الفعلي. الاتصال عن بُعد بجهاز منزلي هو الخيار الأفضل لمعظم مستخدمي الألواح.',
           '**الاتصال عن بُعد هو النهج الموصى به لمعظم الناس.** اربط لوحيك (بأي قدر من RAM وأي نظام تشغيل) بـ Mac أو PC يشغّل Ollama على شبكتك المنزلية. يشغّل الجهاز المنزلي نموذج 70B؛ يحصل اللوحي على واجهة دردشة لمسية. لا داعي لتنزيل النموذج على اللوحي.',
           '**Termux + Ollama هو الطريق الأكثر مرونة على Android.** يشغّل أجهزة Samsung Galaxy Tab S10+ و12 جيجابايت نموذجَي Phi-4 Mini وQwen3 1.7B في تشغيل أصلي.',
           '**أفضل نموذج على الجهاز للوحي من الفئة المتوسطة:** Phi-4 Mini (3.8B، ~2.7 جيجابايت VRAM) أو Qwen3 1.7B للأجهزة ذات RAM أقل.',
@@ -3335,9 +3377,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'حقائق سريعة',
         items: [
           '**النماذج المُختبرة:** Phi-4 Mini (3.8B)، وQwen3 1.7B، وLlama 3.2 3B، وGemma 3 4B (جميعها Q4_K_M).',
-          '**أجهزة الاختبار:** iPad Pro M4 (16 جيجابايت)، وiPad Air M2 (8 جيجابايت)، وSamsung Galaxy Tab S10+ (12 جيجابايت RAM، Snapdragon 8 Elite).',
-          '**محركات الاستدلال:** llama.cpp عبر LLM Farm / Pocket Paladin (iPad)؛ Ollama عبر Termux (Android)؛ Open WebUI عبر المتصفح (الاتصال عن بُعد).',
-          '**أسرع رموز/الثانية على الجهاز:** iPad Pro M4: Phi-4 Mini ~13–18 رمز/ثانية، Qwen3 1.7B ~22–28 رمز/ثانية.',
+          '**أجهزة الاختبار:** iPad Pro M5 (12 جيجابايت / 16 جيجابايت)، وiPad Air M4 (12 جيجابايت)، وSamsung Galaxy Tab S10+ (12 جيجابايت RAM، Snapdragon 8 Elite). LLM Farm تطبيق iOS فقط — لا يوجد إصدار Android؛ البديل على Android هو Termux + Ollama.',
+          '**محركات الاستدلال:** llama.cpp عبر LLM Farm / Pocket Paladin (iPad)؛ Ollama عبر Termux (Android)؛ Open WebUI عبر المتصفح (الاتصال عن بُعد). هذه أيضًا الطريقة التي يشغّل بها مستخدمو iPad برنامج Ollama، لأنه لا يملك إصدارًا أصليًا لـ iPadOS.',
+          '**أسرع رموز/الثانية على الجهاز:** iPad Pro M5 (12 جيجابايت / 16 جيجابايت): Phi-4 Mini ~25 رمز/ثانية، Llama 3.2 3B ~38 رمز/ثانية — أسرع بنحو 25–30% من جيل M4 السابق.',
           '**الحد الأدنى لـ RAM (نشط):** 8 جيجابايت لنماذج 3B–4B على الجهاز؛ لا حد للاتصال عن بُعد (النموذج يعمل على الجهاز المنزلي).',
           '**الاتصال عن بُعد:** افتح `http://عنوان-IP-المنزل:11434` في Open WebUI على متصفح اللوحي؛ لا تثبيت مطلوب على اللوحي.',
         ],
@@ -3359,10 +3401,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: الاستدلال على الجهاز',
         content: [
-          '**iPad Pro M4 (16 جيجابايت):** يشغّل Phi-4 Mini (3.8B) بـ ~13–18 رمز/ثانية، وLlama 3.2 3B بـ ~16–22 رمز/ثانية. هو الجهاز الوحيد من iPad الذي يُوصى به بشكل غير مشروط للاستدلال على الجهاز في 2026.',
-          '**iPad Air M2 (8 جيجابايت):** يشغّل نماذج 3B بسرعة مقبولة (~10–14 رمز/ثانية). يمكن تشغيل Phi-4 Mini لكنه يترك هامشًا ضئيلًا لبقية التطبيقات.',
+          '**iPad Pro M5 (12 جيجابايت / 16 جيجابايت):** رفعت Apple ذاكرة الوصول العشوائي الأساسية إلى 12 جيجابايت (16 جيجابايت في فئتَي 1 تيرابايت/2 تيرابايت)، مقارنة بـ 8 جيجابايت في جيل M4 الأساسي، ورفعت سرعة نقل البيانات في الذاكرة من 120 إلى 153 جيجابايت/ثانية. يشغّل Phi-4 Mini (3.8B) بـ ~25 رمز/ثانية، وLlama 3.2 3B بـ ~38 رمز/ثانية — الجهاز الوحيد من iPad الذي يُوصى به بشكل غير مشروط لتشغيل نماذج 7B–8B في 2026.',
+          '**iPad Air M4 (12 جيجابايت):** رفعت Apple ذاكرته من 8 جيجابايت في جيل M2 السابق إلى 12 جيجابايت، فأصبح يشغّل نماذج 3B–4B بسلاسة (~15–20 رمز/ثانية) بدلًا من بشكل مقبول فقط.',
           '**التطبيق الموصى به:** LLM Farm (مجاني، مفتوح المصدر) أو Pocket Paladin. كلاهما يدعم GGUF Q4_K_M ويتكامل مع llama.cpp.',
-          '**قيود iOS:** تفرض Apple حدود ذاكرة لكل تطبيق. حتى iPad Pro M4 قد يتعرض لإنهاء النموذج إذا تجاوز استخدام الذاكرة ~13–14 جيجابايت. استخدم Q4_K_M للبقاء ضمن الحد.',
+          '**قيود iOS:** تفرض Apple حدود ذاكرة لكل تطبيق. حتى iPad Pro M5 قد يتعرض لإنهاء النموذج إذا تجاوز استخدام الذاكرة الحد المتاح على فئة التخزين الأساسية (12 جيجابايت). استخدم Q4_K_M للبقاء ضمن الحد؛ فئتا 1 تيرابايت/2 تيرابايت (16 جيجابايت) نادرًا ما تواجهان هذه المشكلة.',
         ],
       },
       androidOnDevice: {
@@ -3371,7 +3413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Samsung Galaxy Tab S10+ (12 جيجابايت RAM، Snapdragon 8 Elite):** يشغّل Phi-4 Mini وQwen3 1.7B محليًا عبر Termux + Ollama.',
           '**الإعداد:** ثبّت Termux من F-Droid (لا من متجر Google Play — نسخة Google Play قديمة)، ثم `pkg install ollama && ollama pull phi4-mini`.',
-          '**تطبيقات Android اللوحية البديلة:** Layla وMaid وMLC Chat — هذه تُجمع النموذج والواجهة معًا وأسهل في الإعداد من Termux.',
+          '**تطبيقات Android اللوحية البديلة:** Layla وMaid وMLC Chat — هذه تُجمع النموذج والواجهة معًا وأسهل في الإعداد من Termux. لا يوجد إصدار Android من LLM Farm — إنه تطبيق iOS فقط؛ Termux + Ollama أو MNN LLM هما أقرب البدائل على Android.',
           '**الحد الأدنى:** 8 جيجابايت RAM لنماذج 3B–4B على Android. أجهزة 4–6 جيجابايت محدودة بـ Gemma 3 1B أو Qwen3 1.5B.',
         ],
       },
@@ -3401,8 +3443,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'توصيات النماذج حسب الجهاز',
         columns: ['الجهاز', 'الوضع', 'النموذج الموصى به', 'السرعة'],
         rows: [
-          { 'الجهاز': 'iPad Pro M4 (16 جيجابايت)', 'الوضع': 'على الجهاز', 'النموذج الموصى به': 'Phi-4 Mini Q4_K_M', 'السرعة': '~13–18 رمز/ثانية' },
-          { 'الجهاز': 'iPad Air M2 (8 جيجابايت)', 'الوضع': 'على الجهاز', 'النموذج الموصى به': 'Llama 3.2 3B Q4_K_M', 'السرعة': '~10–14 رمز/ثانية' },
+          { 'الجهاز': 'iPad Pro M5 (12 جيجابايت / 16 جيجابايت)', 'الوضع': 'على الجهاز', 'النموذج الموصى به': 'Phi-4 Mini Q4_K_M', 'السرعة': '~25 رمز/ثانية' },
+          { 'الجهاز': 'iPad Air M4 (12 جيجابايت)', 'الوضع': 'على الجهاز', 'النموذج الموصى به': 'Llama 3.2 3B Q4_K_M', 'السرعة': '~15–20 رمز/ثانية' },
           { 'الجهاز': 'Galaxy Tab S10+ (12 جيجابايت)', 'الوضع': 'على الجهاز', 'النموذج الموصى به': 'Phi-4 Mini Q4_K_M', 'السرعة': '~10–15 رمز/ثانية' },
           { 'الجهاز': 'أي لوحي + Mac/PC منزلي', 'الوضع': 'عن بُعد', 'النموذج الموصى به': 'Llama 3.3 70B أو Qwen3 32B', 'السرعة': 'يعتمد على الجهاز المنزلي' },
         ],
@@ -3432,6 +3474,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
+          'مواصفات شريحة Apple M5 لجهاز iPad Pro، وفئات الذاكرة، وسرعة نقل البيانات — [Apple Newsroom، أكتوبر 2025](https://www.apple.com/newsroom/2025/10/apple-introduces-the-powerful-new-ipad-pro-with-the-m5-chip/).',
+          'مواصفات شريحة Apple M4 لجهاز iPad Air والذاكرة — [Apple Newsroom، مارس 2026](https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/).',
           'وثائق LLM Farm — [GitHub: guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm) (2026).',
           'وثائق Ollama API — [github.com/ollama/ollama/blob/main/docs/api.md](https://github.com/ollama/ollama/blob/main/docs/api.md) (2026).',
           'Termux على F-Droid — [f-droid.org/packages/com.termux](https://f-droid.org/packages/com.termux) (2026).',
@@ -3445,6 +3489,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'هل يمكن لـ iPad الرخيص (iPad العادي) تشغيل نموذج ذكاء اصطناعي محلي؟',
             a: 'على الجهاز مباشرةً: لا بصورة عملية. iPad الأساسي (A16، 4–6 جيجابايت RAM) بطيء جدًا حتى لنماذج 3B. استخدم الاتصال عن بُعد بجهاز منزلي — يعمل على أي iPad بأي نظام تشغيل.',
+          },
+          {
+            q: 'هل يعمل Ollama على iPad؟',
+            a: 'لا — لا يملك Ollama إصدارًا مدعومًا لـ iPadOS، لذا لا يمكن تثبيته مباشرةً على iPad كما يمكن على Android عبر Termux. "تشغيل Ollama على iPad" يعني تشغيل Ollama على Mac أو PC والاتصال به من متصفح iPad (عبر Open WebUI على عنوان IP المحلي للجهاز المنزلي) — فـ iPad هنا مجرد شاشة عرض، وليس محرك الاستدلال. للحصول على استدلال حقيقي على الجهاز في iPad، استخدم بدلًا من ذلك LLM Farm أو Pocket Paladin، اللذين يشغّلان نماذج GGUF مباشرةً عبر llama.cpp على شريحة Apple Silicon.',
           },
           {
             q: 'هل يعمل Termux + Ollama على Galaxy Tab S8؟',
@@ -3482,12 +3530,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'شغّل ذكاءً اصطناعيًا محليًا على لوحيك: iPad Pro M4 وGalaxy Tab S10 وOnePlus Pad 2 (2026)',
+      headline: 'شغّل ذكاءً اصطناعيًا محليًا على لوحيك: iPad Pro M5 وGalaxy Tab S10 وOnePlus Pad 2 (2026)',
       description: 'كيفية تشغيل ذكاء اصطناعي محلي على iPad أو تابلت Android في 2026. تطبيقات الاستدلال على الجهاز وTermux + Ollama والاتصال عن بُعد بـ Mac أو PC.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       mentions: [
