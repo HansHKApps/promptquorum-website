@@ -1107,27 +1107,28 @@ schema: {
     pt: {
       freshness_tier: 'monthly',
       theme: 'Best Models',
-      title: 'Ollama Atualização Junho 2026: v0.30.8 + Top 10 Modelos Open Source',
-      seoTitle: 'Ollama Junho 2026 Atualização: v0.30.8 + Top 10 Modelos Classificados',
-      intro: 'Atualizado em junho de 2026. A versão atual do Ollama é a v0.30.8 (lançada em 12 de junho de 2026), que amplia o suporte de hardware GGUF por meio do llama.cpp e atualiza o mecanismo MLX para Apple Silicon. Os modelos mais novos na biblioteca este mês são o MiniMax M3 (1 de junho, peso aberto, contexto de 1M de tokens + visão nativa), o NVIDIA Nemotron 3 Ultra (4 de junho) e o DeepSeek V4 Pro, somando-se a Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss e Gemma 4. O mais baixado em geral continua sendo a família Llama (Llama 4 Scout, Llama 3.x); o melhor geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench).',
-      metaDescription: 'Ollama v0.30.8 (12 junho 2026): novidades, novos modelos, top 10 open source classificados — Qwen 3.6 27B, Kimi K2.6, gpt-oss:20b. Benchmarks + comandos pull.',
+      title: 'Ollama Atualização Julho 2026: v0.32.0 + Top 10 Modelos Open Source',
+      seoTitle: 'Ollama Julho 2026 Atualização: v0.32.0 + Top 10 Modelos Classificados',
+      intro: 'Atualizado em julho de 2026. A versão atual do Ollama é a v0.32.0 (lançada em 11 de julho de 2026), que amplia o suporte de hardware GGUF por meio do llama.cpp e atualiza o mecanismo MLX para Apple Silicon. Os modelos mais novos na biblioteca este mês são o Laguna XS 2.1 (Poolside, 2 de julho, MoE de 33B total / 3B ativo, programação agentiva de longo horizonte, contexto de 256K, SWE-bench Verified 70,9%, licença OpenMDW-1.1) e o Kimi K2.7 Code (Moonshot AI, ~junho de 2026, modelo agentivo focado em programação construído sobre o Kimi K2.6), somando-se a Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss e Gemma 4. O mais baixado em geral continua sendo a família Llama (Llama 4 Scout, Llama 3.x); o melhor geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench).',
+      metaDescription: 'Ollama v0.32.0 (11 julho 2026): novidades, novos modelos, top 10 open source classificados — Qwen 3.6 27B, Kimi K2.6, gpt-oss:20b. Benchmarks + comandos pull.',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**A versão atual do Ollama é a v0.30.8 (12 de junho de 2026). Os modelos mais novos adicionados este mês são o MiniMax M3 (peso aberto, contexto de 1M de tokens + visão nativa), o NVIDIA Nemotron 3 Ultra e o DeepSeek V4 Pro. O melhor geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench, cabe em 24 GB com Q4). Outras opções destacadas: Kimi K2.6 (programação frontier), gpt-oss:20b (melhor pequeno / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (raciocínio), Gemma 4 (visão/tool calling) e Llama 4 Scout (contexto longo 10M / multimodal). O mais baixado em geral continua sendo a família Llama.**',
+      leadAnswerBlock: '**A versão atual do Ollama é a v0.32.0 (11 de julho de 2026). Os modelos mais novos adicionados este mês são o Laguna XS 2.1 (Poolside, MoE de 33B total/3B ativo, programação agentiva, contexto de 256K) e o Kimi K2.7 Code (Moonshot AI, agentivo para programação). O melhor geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench, cabe em 24 GB com Q4). Outras opções destacadas: Kimi K2.6 (programação frontier), gpt-oss:20b (melhor pequeno / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (raciocínio), Dolphin 3.0 (melhor sem censura / uso geral), Gemma 4 (visão/tool calling) e Llama 4 Scout (contexto longo 10M / multimodal). O mais baixado em geral continua sendo a família Llama.**',
       quickAnswerTop: {
         pt: {
-          question: 'Qual é a versão mais recente do Ollama e os melhores modelos em junho de 2026?', // VERIFY
-          answer: 'A versão mais recente do Ollama é a v0.30.8 (12 de junho de 2026). Os modelos mais novos adicionados este mês são o MiniMax M3, o NVIDIA Nemotron 3 Ultra e o DeepSeek V4 Pro. Os principais modelos de código aberto do Ollama em junho de 2026 são Qwen 3.6 27B (melhor geral em hardware de consumo, 24 GB Q4), Kimi K2.6 (melhor programação, MoE frontier), gpt-oss:20b (melhor pequeno / 16 GB, raciocínio ajustável), qwen3:30b (equilibrado), Llama 4 Scout (melhor contexto longo 10M / multimodal) e DeepSeek-R1 (melhor raciocínio). Instale qualquer um com: ollama pull <nome-do-modelo>', // VERIFY
+          question: 'Qual é a versão mais recente do Ollama e os melhores modelos em julho de 2026?', // VERIFY
+          answer: 'A versão mais recente do Ollama é a v0.32.0 (11 de julho de 2026). Os modelos mais novos adicionados este mês são o Laguna XS 2.1 (Poolside) e o Kimi K2.7 Code (Moonshot AI). Os principais modelos de código aberto do Ollama em julho de 2026 são Qwen 3.6 27B (melhor geral em hardware de consumo, 24 GB Q4), Kimi K2.6 (melhor programação, MoE frontier), gpt-oss:20b (melhor pequeno / 16 GB, raciocínio ajustável), qwen3:30b (equilibrado), Dolphin 3.0 (melhor sem censura / uso geral), Llama 4 Scout (melhor contexto longo 10M / multimodal) e DeepSeek-R1 (melhor raciocínio). Instale qualquer um com: ollama pull <nome-do-modelo>', // VERIFY
           bullets: [
-            '→Versão mais recente: Ollama v0.30.8 (12 de junho de 2026) — suporte de hardware GGUF mais amplo, mecanismo MLX para Apple Silicon atualizado', // VERIFY
-            '→Novidades deste mês: MiniMax M3 (contexto de 1M + visão), NVIDIA Nemotron 3 Ultra, DeepSeek V4 Pro', // VERIFY
+            '→Versão mais recente: Ollama v0.32.0 (11 de julho de 2026) — suporte de hardware GGUF mais amplo, mecanismo MLX para Apple Silicon atualizado', // VERIFY
+            '→Novidades deste mês: Laguna XS 2.1 (programação agentiva, contexto de 256K), Kimi K2.7 Code (agentivo para programação)', // VERIFY
             '→Qwen 3.6 27B — melhor geral em hardware de consumo, 77,2% SWE-bench, cabe em 24 GB com Q4', // VERIFY
             '→Kimi K2.6 — programação frontier (SWE-Bench Pro 58.6), MoE (32B ativo/1T total), Modified MIT', // VERIFY
             '→gpt-oss:20b — melhor modelo pequeno, roda em 16 GB, nível ~o3-mini, raciocínio ajustável', // VERIFY
             '→qwen3:30b — modelo equilibrado para tudo; qwen3-coder:30b para autocompletar código', // VERIFY
+            '→Dolphin 3.0 — melhor modelo sem censura / uso geral, `ollama pull dolphin3`, mantido pela Cognitive Computations sobre Llama 3.1, sem filtragem de conteúdo', // VERIFY
             '→Llama 4 Scout — contexto longo (10M tokens) + multimodal, ~55 GB com Q4', // VERIFY
             '→DeepSeek-R1 — melhor raciocínio/matemática; gpt-oss:20b para raciocínio ajustável (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)', // VERIFY
           ],
-          updatedDate: '2026-06-21',
+          updatedDate: '2026-07-14',
         },
       },
       readTime: '14 min de leitura',
@@ -1135,7 +1136,7 @@ schema: {
       primaryTerm: 'melhores modelos Ollama 2026',
       toc: [
         { label: 'Principais conclusões', anchor: '#key-takeaways' },
-        { label: 'Top 10 modelos Ollama em junho 2026', anchor: '#top-10' },
+        { label: 'Top 10 modelos Ollama em julho 2026', anchor: '#top-10' },
         { label: 'Melhores modelos por caso de uso', anchor: '#by-use-case' },
         { label: 'Comparação de benchmarks', anchor: '#benchmarks' },
         { label: 'Guia de início rápido', anchor: '#quick-start' },
@@ -1152,6 +1153,7 @@ schema: {
             '**Melhor contexto longo + multimodal**: Llama 4 Scout — 10M tokens de contexto, ~55 GB com Q4.',
             '**Melhor raciocínio/matemática**: DeepSeek-R1 ou gpt-oss:20b para raciocínio ajustável.',
             '**Melhor eficiência de RAM**: Mistral Small 3.1 24B — 14 GB, 79% MMLU.',
+            '**Melhor sem censura / uso geral**: Dolphin 3.0 — `ollama pull dolphin3`, mantido pela Cognitive Computations sobre a base Llama 3.1, sem filtragem de conteúdo (não confundir com o `dolphin-mistral` de 2024, que está desatualizado).',
             '**Automação residencial / IA de palavra de ativação**: `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 GB VRAM) processa comandos de voz do Home Assistant a 20–25 tok/seg em um mini PC sem GPU dedicada. Veja [guia de integração Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
           ],
         },
@@ -1168,17 +1170,20 @@ schema: {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'Qual é o melhor modelo Ollama em junho de 2026?', a: 'Qwen 3.6 27B é o melhor em geral em hardware de consumo (77,2% SWE-bench, cabe em 24 GB com Q4). Para programação frontier: Kimi K2.6. Para modelo pequeno/16 GB: gpt-oss:20b. Para contexto longo: Llama 4 Scout.' },
+            { q: 'Qual é o melhor modelo Ollama em julho de 2026?', a: 'Qwen 3.6 27B é o melhor em geral em hardware de consumo (77,2% SWE-bench, cabe em 24 GB com Q4). Para programação frontier: Kimi K2.6. Para modelo pequeno/16 GB: gpt-oss:20b. Para contexto longo: Llama 4 Scout.' },
             { q: 'Qual modelo Ollama é melhor para programação?', a: 'Qwen 3.6 27B para o melhor desempenho denso (77,2% SWE-bench). Kimi K2.6 para programação frontier (SWE-Bench Pro 58,6%). Devstral Small 24B para fluxos de trabalho agentivos em múltiplos arquivos. Codestral 22B para autocompletar em IDE (FIM).' },
             { q: 'Os modelos de código aberto no Ollama são realmente gratuitos para uso comercial?', a: 'A maioria sim, mas não todos. Llama 3.x (Meta Llama Community Licence) restringe o uso comercial acima de 700M de usuários ativos mensais. Mistral Small, Qwen3 e Gemma 3 usam Apache 2.0 (totalmente compatível com uso comercial). Verifique sempre a licença antes da implantação empresarial.' },
             { q: 'Quais são os melhores novos modelos do Ollama em 2026?', a: 'Lançamentos principais em 2026: Qwen 3.6 27B (melhor geral em 24 GB, 77,2% SWE-bench), Kimi K2.6 (programação frontier, MoE), gpt-oss:20b (melhor pequeno/16 GB), Gemma 4 E4B (visão + tool calling) e Llama 4 Scout (contexto 10M, multimodal). Comandos: ollama run qwen3.6:27b, ollama run gpt-oss:20b, ollama run gemma4:e4b, ollama run llama4:scout.' },
+            { q: 'Qual modelo Dolphin devo usar com o Ollama?', a: 'Use Dolphin 3.0 (`ollama pull dolphin3`), não o `dolphin-mistral` desatualizado de 2024. Dolphin 3.0 é mantido pela Cognitive Computations, construído sobre a base Llama 3.1, e não aplica filtragem de conteúdo — é o melhor modelo sem censura / uso geral disponível no Ollama.' },
+            { q: 'Qual é o nome oficial da empresa por trás do Ollama?', a: 'A empresa é a Ollama Inc., uma startup com financiamento Series B sediada em Palo Alto, Califórnia, fundada em 2023 por Jeffrey Morgan e Michael Chiang.' },
+            { q: 'Quais modelos do Ollama funcionam melhor para tarefas em russo?', a: 'Qwen3/Qwen 3.6 e Mistral Small 3.1 incluem russo em seu treinamento multilíngue nativo. Qwen3 pontua mais alto em benchmarks não ingleses; Mistral Small 3.1 tem fluência conversacional em russo informalmente mais forte. Nenhum dos dois é de origem russa.' },
           ],
         },
       },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Atualização do Ollama junho de 2026: versão mais recente e novos modelos',
+        headline: 'Atualização do Ollama julho de 2026: versão mais recente e novos modelos',
         description: 'Compare os 10 melhores LLMs de código aberto para Ollama em 2026: benchmarks, requisitos de RAM e configuração.',
         url: 'https://www.promptquorum.com/pt/local-llms/top-open-source-models-ollama',
         inLanguage: 'pt-BR',
