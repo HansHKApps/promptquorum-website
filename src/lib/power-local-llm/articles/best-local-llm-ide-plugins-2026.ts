@@ -646,28 +646,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Continue（VS Code + JetBrains）は2026年のローカルLLM向け最良の無料IDEプラグインです：Ollamaとすべての OpenAI互換APIにネイティブ接続、チャット+オートコンプリート+コンテキスト対応コード編集、完全に自分のハードウェアで動作。**',
+    leadAnswerBlock: '**Cline（VS Code + JetBrains）は2026年半ば時点でローカルLLM向け最良の無料IDEプラグインです：Ollamaとすべての OpenAI互換APIにネイティブ接続、エージェント的ファイル編集+ターミナルコマンド+MCPツールに対応し、完全に自分のハードウェアで動作。注記：Continue.dev（従来の1位）は2026年6月にCursorに買収されました——v2.0.0が最終リリースです。**',
     quickAnswerTop: {
       question: 'コーディング中にローカルAIモデルを使うのに最良のIDEプラグインは何ですか？',
-      answer: 'Continue（無料・オープンソース）がVS CodeとJetBrainsのOllama・ローカルLLM向け最良IDEプラグインです。オートコンプリートのみならTabbyが最も軽量。エージェント的コーディング（ファイル編集、シェルコマンド）ならClineが最高機能。',
+      answer: 'Cline（無料・オープンソース・BYOK）が現在OllamaとローカルLLM向け最良のIDEプラグインです——Continue.devが2026年6月にCursorに買収され、リポジトリがv2.0.0で凍結されたためです。ClineはVS CodeとJetBrainsで動作し、エージェント的ファイル編集とMCPツールに対応します。オートコンプリートのみならTabbyが最も軽量。Aiderはターミナルで最も力を発揮します。',
       bullets: [
-        'Continue：総合最良 — Ollama + OpenAI API、チャット+オートコンプリート、VS Code + JetBrains',
-        'Cline：エージェント的IDE最良 — ファイル読み書き、ターミナルコマンド実行、MCPツール使用',
+        'Cline：総合最良、活発にメンテナンス中 — ファイル読み書き、ターミナルコマンド実行、MCPツール使用、VS Code + JetBrains（PyCharm、PhpStorm、Rider含む）、無料BYOKまたはClinePass月額$9.99',
+        'Continue：まだ動作するがメンテナンス終了（2026年6月にCursorが買収、v2.0.0が最終版）——Ollamaとの連携は引き続き機能するが今後の開発はない',
         'Tabby：自己ホスト型オートコンプリート最良 — 独自推論サーバー、1〜3Bモデル',
         'Aider：ターミナルネイティブ最良 — git対応、マルチファイル編集、14B以上で優秀',
         'Cursor：最良商用オプション — ローカルモデルサポート追加済み、クラウドファースト設計',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-07-14',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Continue（オープンソース）がデフォルト選択：Ollamaネイティブサポート、VS Code + JetBrains',
-          'Clineエージェントはファイル読み書きとシェルコマンド実行——エージェント的タスクに最高機能',
-          'Tabbyは独自推論サーバー（1〜3Bモデル）で動作——最低レイテンシのオートコンプリート',
-          'Aiderはターミナルファーストオプション——git対応、マルチファイル書き換え',
-          'Cursorはローカルモデルをサポートするが最良機能はクラウドが必要',
+          'Continue.devが2026年6月にCursorに買収 — v2.0.0が最終リリースでリポジトリは読み取り専用に。Ollamaとの連携は引き続き機能するがメンテナンスは終了',
+          'Clineが現在最もメンテナンスの行き届いた無料BYOKの選択肢：VS Code + JetBrains、エージェント的ファイル編集、MCPツール、500万インストール以上',
+          'Tabbyは独自推論サーバー（1〜3Bモデル）で動作——チーム向けに最低レイテンシのオートコンプリート',
+          'Aiderはターミナルファーストオプション——git commit対応、マルチファイル書き換え、GitHubスター4.4万',
+          'Cursor（月額$20 Pro、クレジット制）はSupermavenとContinue.devの両方を買収；SpaceXは2026年6月にCursorを600億ドルで買収することに合意',
+          'すべてのツールがOllamaで動作。独自バックエンドサーバーが必要なのはTabbyのみ',
         ],
       },
       rankedList: {
@@ -675,28 +676,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ContinueはOllamaをネイティブサポートし、VS CodeとJetBrainsの両方で動作し、クラウド依存なしでチャット・オートコンプリート・コード編集を提供する2026年最良のIDEプラグインです。',
+            text: 'Clineは2026年のローカルLLM向け最良のIDEプラグインです。Ollamaをネイティブサポートし、VS CodeとJetBrainsの両方で動作し、クラウド依存なしでエージェント的ファイル編集とMCPツールを提供します——従来の1位だったContinueは2026年6月にCursorに買収され、現在は積極的な開発が行われていません。',
           },
           {
             type: 'plain-terms',
-            text: 'ローカルLLM用IDEプラグインはコードエディタ（VS Code、IntelliJ）を自分のマシンで動くモデル（Ollama、LM Studio経由）に接続します。モデルはコードを見て応答——コードは一切コンピュータ外に出ない、API料金なし、使用制限なし。',
+            text: 'ローカルLLM用IDEプラグインはコードエディタ（VS Code、IntelliJ）を自分のマシンで動くモデル（Ollama、LM Studio、llama.cpp経由）に接続します。モデルはコードを見て応答——コードは一切コンピュータ外に出ない、API料金なし、使用制限なし。',
           },
         ],
         rankedItems: [
           {
             rank: 1,
-            title: 'Continue — 総合最良（無料・オープンソース）',
-            content: 'ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントです。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ、PyCharm、GoLand、WebStorm、Riderで動作。推奨ローカルモデル：Qwen3-Coder 14B（コーディング）、Llama 3.3 8B（チャット）。注記（2026年6月）：ContinueはCursorに買収されました。v2.0.0が最終リリースで、GitHubリポジトリは読み取り専用。Ollamaとの連携は引き続き機能しますが、オリジナルチームによる開発は終了しています。',
+            title: 'Cline — 総合ベスト（無料・オープンソース・活発にメンテナンス）',
+            content: 'Cline（旧Claude Dev）は2026年のローカルLLM向け最もメンテナンスの行き届いたエージェント的コーディングプラグインです——2026年6月にContinueがCursorに買収された後、首位の座を獲得しました。ファイルの読み書き、ターミナルコマンド実行、Webブラウジング（ブラウザツール経由）、MCPサーバーの利用が可能。Ollama + Qwen3-Coder 32Bとの組み合わせで、プロンプトから完全な機能実装が可能。制限：信頼性の高いマルチステップエージェントタスクには32Bモデルが必要（14Bモデルは単純なタスクに対応）。料金：無料（BYOK — Anthropic、OpenAI、または30以上のプロバイダーから自分のAPIキーを持ち込む）；ClinePassが月額$9.99でAPIキー不要のマネージドルーティング；Teamsが月額$20/ユーザー（最初の10シートは無料）。VS CodeとJetBrains（IntelliJ、PyCharm、PhpStorm、WebStorm、GoLand、Riderなど）。対応バックエンド：Ollama、LM Studio、LiteLLMプロキシ、30以上のクラウドプロバイダー。開発者800万人以上。',
             affiliateLinks: [
-              { label: 'Continue をVS Code Marketplaceでダウンロード（無料）', url: 'https://continue.dev' },
+              { label: 'Cline をVS Code Marketplaceでダウンロード（無料）', url: 'https://github.com/cline/cline' },
             ],
           },
           {
             rank: 2,
-            title: 'Cline — エージェント的コーディングに最良',
-            content: 'ClineはローカルLLM向け最高機能のエージェント的コーディングプラグインです。ファイルの読み書き、ターミナルコマンド実行、MCPサーバー使用が可能。Ollama + Qwen3-Coder 32Bとの組み合わせで、プロンプトから完全な機能実装が可能。制限：信頼性の高いマルチステップエージェントタスクには32Bモデルが必要。VS CodeとJetBrains（IntelliJ、PyCharm、WebStorm）の両方で利用可能。料金：無料（BYOK）またはClinePassが月額$9.99；Teamsが月額$20/ユーザー（最初の10シートは無料）。VS Codeインストール数500万以上。',
+            title: 'Continue — まだ動作するがメンテナンス終了[2026年6月にCursorが買収 — 最終バージョンv2.0.0]',
+            content: '2026年6月にCursorに買収される前、ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントでした。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化、カスタムスラッシュコマンド。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ、PyCharm、GoLand、WebStorm、Riderで動作。推奨ローカルモデル：Qwen3-Coder 14B（コーディング）、Llama 3.3 8B（チャット）。セットアップ：拡張機能をインストールし、プロバイダーをOllamaに設定、モデルを選択——2分で完了。注記（2026年6月）：ContinueはCursorに買収されました。v2.0.0が最終リリースで、GitHubリポジトリは読み取り専用。Ollama・BYO-LLMとの連携は引き続き完全に機能しますが、オリジナルチームによる開発は終了しています。コミュニティフォークは活発です。',
             affiliateLinks: [
-              { label: 'Cline をVS Code Marketplaceでダウンロード（無料）', url: 'https://github.com/cline/cline' },
+              { label: 'Continue をVS Code Marketplaceでダウンロード（無料）', url: 'https://continue.dev' },
             ],
           },
           {
@@ -718,11 +719,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Cursor — ローカルモデルサポート付き最良商用オプション',
-            content: 'CursorはAI機能内蔵のVS Codeフォークです。Cursorは「Custom API」設定でOllamaとLM Studio経由のローカルモデルをサポート。ただし最高機能（Webサーチ付きエージェントモード）はクラウドモデルが必要。料金：Hobby（無料）；Pro月額$20（フロンティアモデル用$20のAIクレジット含む；Autoモードはクレジット消費なし無制限）；Pro+月額$60；Ultra月額$200。ローカルモデル利用：Hobbyティア。注記：CursorはSupermaven（2024年）とContinue.dev（2026年6月）を買収。SpaceXが2026年6月にCursorを600億ドルで買収合意（2026年Q3完了予定）。',
+            content: 'CursorはAI機能内蔵のVS Codeフォークです。2026年7月時点で、Cursorは「Custom API」設定でOllamaとLM Studio経由のローカルモデルをサポート。ただしCursorの最も強力な機能（Webサーチ付きエージェントモード、フルコードベース認識）はクラウドモデルが必要。ローカルモデル連携はチャットと単純な補完には機能しますが、プライバシー重視のワークフローではClineに劣ります。料金：Hobby（無料）；Pro月額$20（フロンティアモデル用$20のAIクレジット含む；Autoモードはクレジット消費なし無制限）；Pro+月額$60；Ultra月額$200。ローカルモデル利用は無料のHobbyティアで可能。注記：CursorはSupermaven（2024年）とContinue.dev（2026年6月）を買収。SpaceXが2026年6月にCursor自体を600億ドルで買収することに合意（完了は2026年第3四半期予定）。この統合により、CursorはAIコーディングツール市場で支配的な地位を占めていますが、オープンソースの代替手段の長期的な行方には疑問も残ります。',
             affiliateLinks: [
               { label: 'Cursor Proサブスクリプション', url: 'https://cursor.com' },
             ],
           },
+        ],
+      },
+      setupGuide: {
+        title: 'クイックセットアップ：VS CodeでCline + Ollama',
+        content: '現在の1位プラグインでローカルLLMコーディングを始める最速の方法：',
+        numberedItems: [
+          'Ollamaをインストール：`curl -fsSL https://ollama.com/install.sh | sh`',
+          'コーディングモデルをプル：`ollama pull qwen2.5-coder:14b`（エージェント的タスクには`qwen3-coder:32b`）',
+          'VS Codeの拡張機能マーケットプレイスからClineをインストール',
+          'Clineサイドバーを開き、設定の歯車アイコンをクリック',
+          'APIプロバイダーを「Ollama」に設定、ベースURLを`http://localhost:11434`に、モデルIDをプルしたモデルに設定',
+          'VS Codeを再起動——サイドバーにClineアイコンが表示される',
+          'Clineチャットパネルにタスクを入力——ファイルの読み書きとターミナルコマンドの実行を直接行える',
+        ],
+      },
+      aiderSetupGuide: {
+        title: 'クイックセットアップ：Aider + Ollama（ターミナル）',
+        content: 'ターミナルネイティブでgit対応のAIコーディング向け——Aider公式ドキュメント：aider.chat/docs/llms/ollama.html',
+        numberedItems: [
+          'Ollamaをインストールし、モデルをプル：`ollama pull qwen2.5-coder:32b`',
+          'Aiderをインストール：`python -m pip install aider-install && aider-install`',
+          'Ollama APIベースを設定：`export OLLAMA_API_BASE=http://127.0.0.1:11434`',
+          'ローカルモデルを指定してAiderを実行：`aider --model ollama/qwen2.5-coder:32b`',
+          '2モデル構成（architect/editor）にする場合は`--architect-model ollama/qwen2.5-coder:32b --editor-model ollama/qwen2.5-coder:7b`を追加',
+          'Aiderは各変更を自動的にgitへコミット——`git log`または`git diff HEAD~1`で確認可能',
+        ],
+      },
+      modelRecommendations: {
+        title: 'プラグインとタスク別の最良ローカルモデル',
+        columns: ['プラグイン', '最良コーディングモデル（ローカル）', '最良チャットモデル（ローカル）', '最小VRAM'],
+        rows: [
+          { 'プラグイン': 'Cline', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 32B Q4', '最良チャットモデル（ローカル）': 'Qwen3 32B Q4', '最小VRAM': '24 GB' },
+          { 'プラグイン': 'Continue（レガシー）', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 14B Q8', '最良チャットモデル（ローカル）': 'Llama 3.3 8B Q4', '最小VRAM': '16 GB' },
+          { 'プラグイン': 'Tabby', '最良コーディングモデル（ローカル）': 'StarCoder2-7B（内蔵）', '最良チャットモデル（ローカル）': 'N/A（コードのみ）', '最小VRAM': '8 GB' },
+          { 'プラグイン': 'Aider', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 14B（エディター）', '最良チャットモデル（ローカル）': 'Qwen3-Coder 32B（アーキテクト）', '最小VRAM': '16–24 GB' },
+          { 'プラグイン': 'Cursor', '最良コーディングモデル（ローカル）': 'DeepSeek-Coder-V2（Ollama経由）', '最良チャットモデル（ローカル）': 'Qwen3 14B', '最小VRAM': '16 GB' },
+        ],
+      },
+      lmStudioPlugins: {
+        title: '最良のLM Studioプラグイン（IDEプラグインとは別物）',
+        content: 'これは「どのIDE拡張機能がLM Studioに接続するか」（上記で解説）とは別の問いです。LM Studioは2024年後半から独自のプラグインシステムを持っています：プラグインはLM Studio自体の内部で——サンドボックス化されたワーカー内のTypeScriptまたはPythonコードとして——動作し、推論リクエストをインターセプトしたり、プロンプトプロセッサーを追加したり、ツール呼び出しバックエンドを接続したり、新しいUIパネルを追加したりできます。lmstudio.ai/pluginsの厳選されたマーケットプレイスからインストールでき、各プラグインは必要な権限（ネットワークアクセス、ファイルシステム読み取り）を事前に宣言します。これらの権限はアンインストールせずに後から設定で取り消すことも可能です。2026年時点での主なカテゴリ：Web検索プラグイン、RAG/文書検索プリプロセッサ、OCRプリプロセッサ、エージェント的ツールセットプラグイン、シェル/ファイルアクセスツール、メモリプラグイン。',
+        items: [
+          '**Web検索プラグイン**：LM Studio内のローカルモデルが最新のWeb検索結果をコンテキストに取り込めるようにする——ローカルモデルには組み込みのインターネットアクセスがないため有用。',
+          '**RAG/文書プラグイン**：PDFやテキストファイルのローカルフォルダをインデックス化し、クエリごとに関連する箇所を自動的に取得する。',
+          '**エージェント的ツールセットプラグイン**：LM Studio自体のチャットUI内で、モデルにシェルアクセス、ファイルの読み書き、マルチステップタスクの実行を直接与える——ClineがVS Code向けに提供するのと同じカテゴリの機能だが、エディターではなくLM Studio内で動作する点が異なる。',
+          '**メモリプラグイン**：毎回新規に開始するのではなく、チャットセッションをまたいでコンテキストを保持する。',
         ],
       },
       faq: {
@@ -730,15 +777,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'ContinueはローカルでGitHub Copilotの完全な代替になれますか？',
-            a: 'ほとんどのユースケースでは、はい。Qwen3-Coder 14B Q8を使用したContinueは、Python、TypeScript、GoでGitHub Copilotに匹敵するオートコンプリート品質を提供します。プライバシーが重要なコードベースでは、Continue + ローカルOllamaがより良い選択です。',
+            a: '2026年6月時点でContinueはCursorに買収され、v2.0.0が最終リリースです（リポジトリは読み取り専用）。拡張機能はOllamaやBYO-LLMと引き続き動作しますが、オリジナルチームによる開発はありません。メンテナンスされているオープンソースの代替として推奨されるのはClineです——同じBYOKモデルを提供し、VS CodeとJetBrainsで動作し、エージェント的ファイル編集が加わっています。GitHub Copilot Proは月額$10（月額$15分のAIクレジット付き）、Clineは自分のAPIキーがあれば無料です。',
           },
           {
             q: 'マルチファイルリファクタリングに最適なプラグインはどれですか？',
-            a: 'ClineまたはAiderです。両方とも複数ファイルを読み込み、依存関係を理解し、コードベース全体で協調した変更を行えます。Clineはビジュアルフィードバックに優れ、Aiderはgit対応コミットに優れています。複雑なリファクタリングには30B以上（24GB VRAM）のモデルが推奨されます。',
+            a: 'ClineまたはAiderです。両方とも複数ファイルを読み込み、依存関係を理解し、コードベース全体で協調した変更を行えます。Clineはビジュアルフィードバックに優れ（VS Code内）、Aiderはgit対応コミットに優れています（ターミナル、CI/CD連携）。30B以上（24GB VRAM）のモデルなら、Cline + Qwen3-Coder 32Bが複雑なリファクタリングを確実に処理できます。',
           },
           {
             q: 'OllamaではなくLM Studioでこれらのプラグインを使えますか？',
-            a: 'はい。LM StudioはデフォルトでポートNo 1234にOpenAI互換APIを公開します。プラグインのプロバイダーを「openai」に設定し、ベースURLを`http://localhost:1234/v1`にしてください。Continue、Cline、Aiderはすべてこの設定をサポートしています。',
+            a: 'はい。LM StudioはデフォルトでポートNo 1234にOpenAI互換APIを公開します。プラグインのプロバイダーを「openai」に設定し、ベースURLを`http://localhost:1234/v1`にしてください。Cline、Continue、Aiderはすべてこの設定をサポートしています。これは上記の「最良のLM Studioプラグイン」セクションで説明したLM Studio自体のプラグインシステムとは別物である点に注意してください——あちらは外部IDEをLM Studioに接続するものではなく、LM Studio自体を拡張するためのものです。',
+          },
+          {
+            q: 'どのJetBrains IDEがローカルLLMプラグインをサポートしていますか？',
+            a: 'ClineとContinueはどちらもJetBrainsファミリー全体をカバーするプラグインを提供しています：IntelliJ IDEA、PyCharm、PhpStorm、WebStorm、GoLand、Rider。JetBrains Marketplace（VS Code Marketplaceではない）からインストールし、VS Code版と同じOllama/LM Studioプロバイダー設定を使用します。Tabbyもオートコンプリート専用でJetBrainsをサポートしています。',
           },
         ],
       },
@@ -761,7 +812,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'ContinueはローカルでGitHub Copilotの完全な代替になれますか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'ほとんどのユースケースでは、はい。Continue + Qwen3-Coder 14B Q8はCopilotと同等の品質を提供。プライバシー重視のコードベースでは、Continue + ローカルOllamaがより良い選択です。' },
+          acceptedAnswer: { '@type': 'Answer', text: '2026年6月時点でContinueはCursorに買収され、v2.0.0が最終リリースです。拡張機能はOllamaと引き続き動作しますが、Clineが現在推奨されるメンテナンス済みのオープンソース代替です——BYOKで無料、VS CodeとJetBrainsで動作し、エージェント的ファイル編集が加わっています。' },
+        },
+        {
+          '@type': 'Question',
+          name: 'どのJetBrains IDEがローカルLLMプラグインをサポートしていますか？',
+          acceptedAnswer: { '@type': 'Answer', text: 'ClineとContinueはどちらもIntelliJ IDEA、PyCharm、PhpStorm、WebStorm、GoLand、Riderをカバーするプラグインを提供しています。JetBrains Marketplaceからインストールし、VS Code版と同じOllama/LM Studioプロバイダー設定を使用します。' },
         },
       ],
     },
@@ -771,14 +827,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: 'ローカルLLM向けIDEプラグインおすすめ2026年版',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Continue', description: '総合最良 — Ollamaネイティブ、VS Code + JetBrains、無料' },
-        { '@type': 'ListItem', position: 2, name: 'Cline', description: 'エージェント最良 — ファイル読み書き、VS Code' },
-        { '@type': 'ListItem', position: 3, name: 'Tabby', description: '自己ホスト型オートコンプリート最良 — 1〜3B FIMモデル' },
+        { '@type': 'ListItem', position: 1, name: 'Cline', description: '総合最良 — 活発にメンテナンス、エージェント的、VS Code + JetBrains、無料BYOK' },
+        { '@type': 'ListItem', position: 2, name: 'Continue', description: 'まだ動作するが2026年6月のCursor買収以降メンテナンス終了' },
+        { '@type': 'ListItem', position: 3, name: 'Tabby', description: '自己ホスト型オートコンプリート最良 — 1〜3B FIMモデル、全エディター対応' },
         { '@type': 'ListItem', position: 4, name: 'Aider', description: 'ターミナル最良 — git対応、マルチファイル、オープンソース' },
         { '@type': 'ListItem', position: 5, name: 'Cursor', description: '商用最良 — ローカルモデルサポート、月額20ドルPro' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ローカルLLM向けIDEプラグインおすすめ2026年版（VS Code・JetBrains）', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ja/power-local-llm/best-local-llm-ide-plugins-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'ローカルLLM向けIDEプラグインおすすめ2026年版（VS Code・JetBrains）', datePublished: '2026-05-26', dateModified: '2026-07-14', url: 'https://www.promptquorum.com/ja/power-local-llm/best-local-llm-ide-plugins-2026', inLanguage: 'ja' },
   },
 
   zh: {
