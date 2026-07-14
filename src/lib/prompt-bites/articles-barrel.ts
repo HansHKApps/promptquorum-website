@@ -75,6 +75,27 @@ import { article as runLocalLlmOnXperiaJapan } from './articles/run-local-llm-on
 import { article as bestMiniPcLocalLlmJapan } from './articles/best-mini-pc-local-llm-japan'
 import { article as bestGpuLocalLlmJapanPrice } from './articles/best-gpu-local-llm-japan-price'
 
+// 2026-07 batch — SCAFFOLD ONLY (see docs/PROMPT_BITES_20_ARTICLES_NEW.md)
+import { article as bestGpuUnder1000LocalLlm } from './articles/best-gpu-under-1000-local-llm'
+import { article as rtx4060VsRtx306012gb } from './articles/rtx-4060-vs-rtx-3060-12gb'
+import { article as bestIntelArcGpuLocalLlm } from './articles/best-intel-arc-gpu-local-llm'
+import { article as bestRtx4090Setup70bModels } from './articles/best-rtx-4090-setup-70b-models'
+import { article as bestNpuCopilotPcLocalLlm } from './articles/best-npu-copilot-pc-local-llm'
+import { article as bestLocalLlmMacbookAirNoEgpu } from './articles/best-local-llm-macbook-air-no-egpu'
+import { article as bestLocalLlm32gbUnifiedMemoryMac } from './articles/best-local-llm-32gb-unified-memory-mac'
+import { article as bestWindowsLaptopLocalLlmUnder1500 } from './articles/best-windows-laptop-local-llm-under-1500'
+import { article as fineTuning7bModelLocallyHardware } from './articles/fine-tuning-7b-model-locally-hardware'
+import { article as m4MaxVsM4ProLocalLlm } from './articles/m4-max-vs-m4-pro-local-llm'
+import { article as bestLocalLlmUnder8bRealtimeChat } from './articles/best-local-llm-under-8b-realtime-chat'
+import { article as ggufVsGptqVsAwq } from './articles/gguf-vs-gptq-vs-awq'
+import { article as ollamaVsVllmVsTgi } from './articles/ollama-vs-vllm-vs-tgi'
+import { article as bestEmbeddingModelLocalRag } from './articles/best-embedding-model-local-rag'
+import { article as bestLocalLlmDocumentSummarization } from './articles/best-local-llm-document-summarization'
+import { article as localLlmRaspberryPi5 } from './articles/local-llm-raspberry-pi-5'
+import { article as bestKoreanLanguageModelsLocal } from './articles/best-korean-language-models-local'
+import { article as bestChinaCompliantLocalLlm } from './articles/best-china-compliant-local-llm'
+import { article as bestLocalLlmLegalMedicalPrivacy } from './articles/best-local-llm-legal-medical-privacy'
+
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
   whatIsQ4KMQuantization,
@@ -149,4 +170,24 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   // DeepSeek Series 2026-06-19
   deepseekR1DistillVramCheatsheet,
   bestDeepseekDistillForYourGpu,
+  // 2026-07 batch — SCAFFOLD ONLY
+  bestGpuUnder1000LocalLlm,
+  rtx4060VsRtx306012gb,
+  bestIntelArcGpuLocalLlm,
+  bestRtx4090Setup70bModels,
+  bestNpuCopilotPcLocalLlm,
+  bestLocalLlmMacbookAirNoEgpu,
+  bestLocalLlm32gbUnifiedMemoryMac,
+  bestWindowsLaptopLocalLlmUnder1500,
+  fineTuning7bModelLocallyHardware,
+  m4MaxVsM4ProLocalLlm,
+  bestLocalLlmUnder8bRealtimeChat,
+  ggufVsGptqVsAwq,
+  ollamaVsVllmVsTgi,
+  bestEmbeddingModelLocalRag,
+  bestLocalLlmDocumentSummarization,
+  localLlmRaspberryPi5,
+  bestKoreanLanguageModelsLocal,
+  bestChinaCompliantLocalLlm,
+  bestLocalLlmLegalMedicalPrivacy,
 }

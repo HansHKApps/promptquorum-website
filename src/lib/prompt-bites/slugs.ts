@@ -96,4 +96,40 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   // DeepSeek Series 2026-06-19
   'deepseek-r1-distill-vram-cheatsheet':      'deepseekR1DistillVramCheatsheet',
   'best-deepseek-distill-for-your-gpu':       'bestDeepseekDistillForYourGpu',
+
+  // 2026-07 batch — SCAFFOLD ONLY (noindex, see docs/PROMPT_BITES_20_ARTICLES_NEW.md)
+  // Cluster E-extension — Hardware-Specific
+  'best-gpu-under-1000-local-llm':             'bestGpuUnder1000LocalLlm',
+  'rtx-4060-vs-rtx-3060-12gb':                 'rtx4060VsRtx306012gb',
+  'best-intel-arc-gpu-local-llm':              'bestIntelArcGpuLocalLlm',
+  'best-rtx-4090-setup-70b-models':            'bestRtx4090Setup70bModels',
+  'best-npu-copilot-pc-local-llm':             'bestNpuCopilotPcLocalLlm',
+  'best-local-llm-macbook-air-no-egpu':        'bestLocalLlmMacbookAirNoEgpu',
+  'best-local-llm-32gb-unified-memory-mac':    'bestLocalLlm32gbUnifiedMemoryMac',
+  'best-windows-laptop-local-llm-under-1500':  'bestWindowsLaptopLocalLlmUnder1500',
+  'fine-tuning-7b-model-locally-hardware':     'fineTuning7bModelLocallyHardware',
+
+  // Cluster D-extension — Model Comparisons
+  'm4-max-vs-m4-pro-local-llm':                'm4MaxVsM4ProLocalLlm',
+  'best-local-llm-under-8b-realtime-chat':     'bestLocalLlmUnder8bRealtimeChat',
+
+  // Cluster A-extension — Quantization & VRAM
+  'gguf-vs-gptq-vs-awq':                       'ggufVsGptqVsAwq',
+
+  // Cluster C-extension — Tool Comparisons
+  'ollama-vs-vllm-vs-tgi':                     'ollamaVsVllmVsTgi',
+
+  // Cluster F-extension — Quick Answers
+  'best-embedding-model-local-rag':            'bestEmbeddingModelLocalRag',
+  'best-local-llm-document-summarization':     'bestLocalLlmDocumentSummarization',
+  'local-llm-raspberry-pi-5':                  'localLlmRaspberryPi5',
+
+  // Korea Sprint (mirrors Japan Sprint pattern)
+  'best-korean-language-models-local':         'bestKoreanLanguageModelsLocal',
+
+  // China Sprint-extension
+  'best-china-compliant-local-llm':            'bestChinaCompliantLocalLlm',
+
+  // Cluster H-extension — Privacy & Compliance
+  'best-local-llm-legal-medical-privacy':      'bestLocalLlmLegalMedicalPrivacy',
 }
