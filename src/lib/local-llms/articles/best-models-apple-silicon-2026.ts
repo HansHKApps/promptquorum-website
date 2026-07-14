@@ -6,13 +6,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2026,
     theme: 'Hardware & Performance',
-    title: 'Best LLM Models for Apple Silicon 2026: Recommendations for 16GB, 36GB, 64GB, 128GB',
-    seoTitle: 'Best Models for Apple Silicon 2026: 16GB–128GB',
+    title: 'Best Ollama Models for Apple Silicon 2026: Recommendations for 16GB, 36GB, 64GB, 128GB',
+    seoTitle: 'Best Ollama Models for Apple Silicon 2026: 16GB–128GB',
     intro: 'Best local LLM model recommendations for every Apple Silicon Mac. Specific model picks for 16GB (Phi-4), 36GB (Llama 3.3 8B), 64GB (Qwen2 34B), 128GB (Llama 3.3 70B) with tok/s numbers on M5 Pro/Max.',
-    metaDescription: 'Best LLM models for Apple Silicon: Phi-4 (16GB), Llama 8B (36GB), Qwen 34B (64GB), Llama 70B (128GB). Tok/s speeds, quantization, when to upgrade.',
-    twitterDescription: 'Best LLMs for your Mac: 16GB→Phi-4, 36GB→Llama 8B, 64GB→Qwen 34B, 128GB→Llama 70B. Tested on M5 2026.',
+    metaDescription: 'Best Ollama models for Apple Silicon: Phi-4 (16GB), Llama 8B (36GB), Qwen 34B (64GB), Llama 70B (128GB). Tok/s speeds, quantization, when to upgrade.',
+    twitterDescription: 'Best Ollama models for your Mac: 16GB→Phi-4, 36GB→Llama 8B, 64GB→Qwen 34B, 128GB→Llama 70B. Tested on M5 2026.',
     publishDate: '2026-05-15',
-    dateModified: '2026-06-14',
+    dateModified: '2026-07-14',
     current_models_mentioned: ['Phi-4', 'Llama 3.3 8B', 'Qwen3 14B', 'Qwen3 34B', 'Mistral 8x7B', 'Llama 3.3 70B'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max'],
     audience: 'Mac users wanting model recommendations per their Mac configuration.',
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       byTier: {
         id: 'by-tier',
         title: 'Best Model Recommendations by Mac Memory',
-        content: 'Last verified: 2026-05-15. Model recommendations may shift as new models release. We update this page quarterly.',
+        content: 'Last verified: 2026-07-14. Model recommendations may shift as new models release. We update this page quarterly.',
         columns: ['Memory', 'Primary Pick', 'Quantization', 'Size', 'M5 Pro tok/s', 'M5 Max tok/s', 'Alternative'],
         rows: [
           { 'Memory': '16 GB', 'Primary Pick': 'Phi-4', 'Quantization': 'Q4_K_M', 'Size': '2.5 GB', 'M5 Pro tok/s': '60–70', 'M5 Max tok/s': '110–130', 'Alternative': 'Llama 3.3 8B Q4 (tight)' },
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'avoid',
         title: 'Models to Avoid in 2026 (and Why)',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3 (any size) no longer recommended** — superseded by Llama 3.1 and Llama 3.2; standard leaderboards show notably weaker results compared to newer releases. Still appears in older tutorials — do not follow them. Replace with: Llama 3.3 8B.' },
+          { type: 'warning', text: '**Llama 2 (any size) no longer recommended** — superseded by Llama 3.3; standard leaderboards show notably weaker results compared to newer releases. Still appears in older tutorials — do not follow them. Replace with: Llama 3.3 8B.' },
           { type: 'warning', text: '**Avoid Vicuna, Alpaca, WizardLM** — 2023-era community fine-tunes. Modern base models (Llama 3.3, Qwen3) already match or exceed their performance. Replace with: Qwen3 14B or Llama 3.3 8B.' },
           { type: 'warning', text: '**Avoid Falcon 180B** — Does not fit on consumer Apple Silicon. [Llama 3.3 70B](/local-llms/running-70b-models-apple-silicon-m5-max) (smaller) outperforms it. Replace with: Llama 3.3 70B Q5.' },
           { type: 'warning', text: '**Avoid FP16 quantization on consumer hardware** — Llama 3.3 70B FP16 = 140 GB, does not fit on any Mac. Quality gain over Q5 is less than 1%. Replace with: [Q4_K_M or Q5_K_M](/local-llms/llm-quantization-explained).' },
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Format': 'MLX 8-bit', 'Used by': 'MLX framework', 'Size vs original': '~50% of FP16' },
           { 'Format': 'FP16 (original)', 'Used by': 'All frameworks', 'Size vs original': '100%' },
         ],
-        note: 'Sizes in this article are GGUF Q4_K_M unless specified. MLX 4-bit equivalents are similar size. For exact bytes, check the model card on HuggingFace.',
+        note: 'Sizes in this article are GGUF Q4_K_M unless specified. MLX 4-bit equivalents are similar size. For exact bytes, check the model card on HuggingFace. llama.cpp runs GGUF directly on the Metal backend and is what Ollama uses under the hood — MLX is Apple\'s own framework and tends to be faster for MLX-native builds on the same chip. LM Studio supports both GGUF and MLX and lets you switch backends per model from its UI.',
       },
       downloadGuide: {
         id: 'download-guide',
@@ -140,24 +140,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 ollama pull phi4
 
 # 36 GB Mac (pick one)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # 64 GB Mac
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # 128 GB Mac
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # Specialty models
 ollama pull deepseek-coder-v2:16b   # coding
 ollama pull llama3.2-vision:11b     # vision
 ollama pull aya-expanse:32b         # translation`,
         codeLanguage: 'bash',
-        note: 'Each model is several GB. Total disk space for multiple models can hit 50–100 GB. Check usage with `du -sh ~/.ollama/`.',
+        note: 'Each model is several GB. Total disk space for multiple models can hit 50–100 GB. Check usage with `du -sh ~/.ollama/`. LM Studio users can pull the same GGUF or MLX weights directly from its in-app model browser instead of the CLI.',
       },
       relatedArticles: {
         id: 'related-articles',
@@ -184,6 +184,9 @@ ollama pull aya-expanse:32b         # translation`,
           { q: 'Can I run Llama 3.3 405B on a Mac?', a: 'No. Llama 3.3 405B requires 200+ GB even at Q4 quantization — no consumer Mac has enough unified memory. Wait for M5 Ultra (expected mid-2026, 256 GB) — it will be the first consumer hardware capable of running 405B at Q3–Q4.' },
           { q: 'Is Qwen better than Llama for local use?', a: 'For most tasks, Qwen3 slightly beats Llama 3.3 at the same parameter count on benchmarks (1–3 points on MMLU). Llama has wider community support and more fine-tunes available. Most users will not notice the difference — pick based on availability and fine-tune ecosystem.' },
           { q: 'What is the smallest model that is actually useful?', a: 'Phi-4 at 3.8B parameters. It scores 84.8 on MMLU — matching some 8B models from 2024. For chat and Q&A it is surprisingly capable. For coding or complex reasoning, jump to Llama 3.3 8B or [Qwen3 14B](/local-llms/qwen-vs-llama-vs-mistral).' },
+          { q: 'Does vLLM run on Apple Silicon?', a: 'vLLM\'s Metal support is limited compared to its CUDA path — throughput and batching optimizations that make vLLM attractive on Nvidia GPUs largely do not apply on Mac. For Apple Silicon, Ollama (llama.cpp/Metal) or LM Studio (GGUF/MLX) give better single-user tok/s and easier setup. Consider vLLM only if you are serving many concurrent requests from a Linux/Nvidia box alongside your Mac.' },
+          { q: 'What can a MacBook Air M5 run?', a: 'The MacBook Air M5 ships with a fanless design and typically 16–32 GB of unified memory, so treat it as a 16 GB or 36 GB tier Mac from the table above: Phi-4 comfortably, Llama 3.3 8B Q8 if you have 24 GB+. Sustained long generations may throttle slightly without a fan — expect the lower end of the M5 Pro tok/s ranges in this article.' },
+          { q: 'What is the best setup for a MacBook Pro M5 Max with 128GB RAM?', a: 'Llama 3.3 70B Q5 (49 GB) for daily use, with headroom to keep a second model — Qwen3 14B Q5 or DeepSeek Coder V2 16B — loaded simultaneously via `OLLAMA_MAX_LOADED_MODELS=2`. Expect ~14–18 tok/s on 70B Q5. If you want maximum quality and can tolerate ~9–12 tok/s, Llama 3.3 70B Q8 (74 GB) also fits.' },
         ],
       },
     },
@@ -293,7 +296,7 @@ ollama pull aya-expanse:32b         # translation`,
         id: 'avoid',
         title: 'Modelos que debes evitar en 2026 (y por qué)',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3 (cualquier tamaño) ya no se recomienda** — reemplazado por Llama 3.1 y Llama 3.2; los leaderboards estándar muestran resultados notablemente más débiles en comparación con las versiones recientes. Sigue apareciendo en tutoriales antiguos — no los sigas. Reemplaza con: Llama 3.3 8B.' },
+          { type: 'warning', text: '**Llama 2 (cualquier tamaño) ya no se recomienda** — reemplazado por Llama 3.3; los leaderboards estándar muestran resultados notablemente más débiles en comparación con las versiones recientes. Sigue apareciendo en tutoriales antiguos — no los sigas. Reemplaza con: Llama 3.3 8B.' },
           { type: 'warning', text: '**Evita Vicuna, Alpaca, WizardLM** — Fine-tunes comunitarios de 2023. Los modelos base modernos (Llama 3.3, Qwen3) igualan o superan su rendimiento. Reemplaza con: Qwen3 14B o Llama 3.3 8B.' },
           { type: 'warning', text: '**Evita Falcon 180B** — No cabe en Apple Silicon de consumo. [Llama 3.3 70B](/es/local-llms/running-70b-models-apple-silicon-m5-max) (más pequeño) lo supera. Reemplaza con: Llama 3.3 70B Q5.' },
           { type: 'warning', text: '**Evita la cuantización FP16 en hardware de consumo** — Llama 3.3 70B FP16 = 140 GB, no cabe en ningún Mac. La ganancia de calidad frente a Q5 es menor al 1%. Reemplaza con: [Q4_K_M o Q5_K_M](/es/local-llms/llm-quantization-explained).' },
@@ -322,17 +325,17 @@ ollama pull aya-expanse:32b         # translation`,
 ollama pull phi4
 
 # Mac 36 GB (elige uno)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # Mac 64 GB
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # Mac 128 GB
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # Modelos especializados
 ollama pull deepseek-coder-v2:16b   # programación
@@ -482,7 +485,7 @@ ollama pull aya-expanse:32b         # traducción`,
         id: 'avoid',
         title: 'نماذج يجب تجنّبها في 2026 (ولماذا)',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3 (أي حجم) لم يعد موصى به** — تم استبداله بـ Llama 3.1 و Llama 3.2؛ تُظهر لوحات الصدارة القياسية نتائج أضعف بشكل ملحوظ مقارنةً بالإصدارات الأحدث. لا يزال يظهر في الدروس القديمة — لا تتبعها. استبدله بـ: Llama 3.3 8B.' },
+          { type: 'warning', text: '**Llama 2 (أي حجم) لم يعد موصى به** — تم استبداله بـ Llama 3.3؛ تُظهر لوحات الصدارة القياسية نتائج أضعف بشكل ملحوظ مقارنةً بالإصدارات الأحدث. لا يزال يظهر في الدروس القديمة — لا تتبعها. استبدله بـ: Llama 3.3 8B.' },
           { type: 'warning', text: '**تجنّب Vicuna وAlpaca وWizardLM** — ضبط دقيق مجتمعي من 2023. تضاهي النماذج الأساسية الحديثة (Llama 3.3، Qwen3) أداءها أو تتفوق عليه. استبدلها بـ: Qwen3 14B أو Llama 3.3 8B.' },
           { type: 'warning', text: '**تجنّب Falcon 180B** — لا يتناسب مع Apple Silicon الاستهلاكي. يتفوق عليه [Llama 3.3 70B](/ar/local-llms/running-70b-models-apple-silicon-m5-max) (الأصغر). استبدله بـ: Llama 3.3 70B Q5.' },
           { type: 'warning', text: '**تجنّب تكميم FP16 على العتاد الاستهلاكي** — Llama 3.3 70B FP16 = 140 GB، لا يتناسب مع أي جهاز Mac. مكسب الجودة مقابل Q5 أقل من 1%. استبدله بـ: [Q4_K_M أو Q5_K_M](/ar/local-llms/llm-quantization-explained).' },
@@ -511,17 +514,17 @@ ollama pull aya-expanse:32b         # traducción`,
 ollama pull phi4
 
 # Mac 36 GB (elige uno)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # Mac 64 GB
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # Mac 128 GB
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # Modelos especializados
 ollama pull deepseek-coder-v2:16b   # programación
@@ -684,7 +687,7 @@ ollama pull aya-expanse:32b         # traducción`,
         id: 'avoid',
         title: 'Modelos que você deve evitar em 2026 (e por quê)',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3 (qualquer tamanho) já não é recomendado** — substituído por Llama 3.1 e Llama 3.2; os leaderboards padrão mostram resultados notavelmente mais fracos em comparação com as versões mais recentes. Ainda aparece em tutoriais antigos — não os siga. Substitua por: Llama 3.3 8B.' },
+          { type: 'warning', text: '**Llama 2 (qualquer tamanho) já não é recomendado** — substituído por Llama 3.3; os leaderboards padrão mostram resultados notavelmente mais fracos em comparação com as versões mais recentes. Ainda aparece em tutoriais antigos — não os siga. Substitua por: Llama 3.3 8B.' },
           { type: 'warning', text: '**Evite Vicuna, Alpaca, WizardLM** — Fine-tunes da comunidade de 2023. Os modelos base modernos (Llama 3.3, Qwen3) igualam ou superam o desempenho deles. Substitua por: Qwen3 14B ou Llama 3.3 8B.' },
           { type: 'warning', text: '**Evite Falcon 180B** — Não cabe em Apple Silicon de consumo. O [Llama 3.3 70B](/pt/local-llms/running-70b-models-apple-silicon-m5-max) (menor) o supera. Substitua por: Llama 3.3 70B Q5.' },
           { type: 'warning', text: '**Evite a quantização FP16 em hardware de consumo** — Llama 3.3 70B FP16 = 140 GB, não cabe em nenhum Mac. O ganho de qualidade frente ao Q5 é menor que 1%. Substitua por: [Q4_K_M ou Q5_K_M](/pt/local-llms/llm-quantization-explained).' },
@@ -713,17 +716,17 @@ ollama pull aya-expanse:32b         # traducción`,
 ollama pull phi4
 
 # Mac 36 GB (escolha um)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # Mac 64 GB
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # Mac 128 GB
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # Modelos especializados
 ollama pull deepseek-coder-v2:16b   # programação
@@ -884,7 +887,7 @@ ollama pull aya-expanse:32b         # tradução`,
         id: 'avoid',
         title: 'Zu vermeidende Modelle in 2026 (und warum)',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3 (jede Größe) nicht mehr empfohlen** — von Llama 3.1 und Llama 3.2 abgelöst; Standard-Leaderboards zeigen deutlich schwächere Ergebnisse gegenüber neueren Releases. Taucht noch in älteren Tutorials auf — diesen nicht folgen. Ersetzen durch: Llama 3.3 8B.' },
+          { type: 'warning', text: '**Llama 2 (jede Größe) nicht mehr empfohlen** — von Llama 3.3 abgelöst; Standard-Leaderboards zeigen deutlich schwächere Ergebnisse gegenüber neueren Releases. Taucht noch in älteren Tutorials auf — diesen nicht folgen. Ersetzen durch: Llama 3.3 8B.' },
           { type: 'warning', text: '**Vicuna, Alpaca, WizardLM vermeiden** — Community-Feinabstimmungen aus 2023. Moderne Basismodelle (Llama 3.3, Qwen3) entsprechen oder übertreffen ihre Leistung. Ersetzen durch: Qwen3 14B oder Llama 3.3 8B.' },
           { type: 'warning', text: '**Falcon 180B vermeiden** — Passt nicht auf Consumer-Apple-Silicon. [Llama 3.3 70B](/de/local-llms/running-70b-models-apple-silicon-m5-max) (kleiner) übertrifft es. Ersetzen durch: Llama 3.3 70B Q5.' },
           { type: 'warning', text: '**FP16-Quantisierung auf Consumer-Hardware vermeiden** — Llama 3.3 70B FP16 = 140 GB, passt auf keinen Mac. Qualitätsgewinn gegenüber Q5 ist unter 1%. Ersetzen durch: [Q4_K_M oder Q5_K_M](/de/local-llms/llm-quantization-explained).' },
@@ -913,17 +916,17 @@ ollama pull aya-expanse:32b         # tradução`,
 ollama pull phi4
 
 # 36 GB Mac (eines wählen)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # 64 GB Mac
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # 128 GB Mac
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # Spezialmodelle
 ollama pull deepseek-coder-v2:16b   # Programmierung
@@ -1073,7 +1076,7 @@ ollama pull aya-expanse:32b         # Übersetzung`,
         id: 'avoid',
         title: 'Modèles à éviter en 2026 (et pourquoi)',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3 (toute taille) n\'est plus recommandé** — remplacé par Llama 3.1 et Llama 3.2 ; les leaderboards standards montrent des résultats nettement plus faibles par rapport aux versions récentes. Apparaît encore dans d\'anciens tutoriels — ne pas les suivre. Remplacer par : Llama 3.3 8B.' },
+          { type: 'warning', text: '**Llama 2 (toute taille) n\'est plus recommandé** — remplacé par Llama 3.3 ; les leaderboards standards montrent des résultats nettement plus faibles par rapport aux versions récentes. Apparaît encore dans d\'anciens tutoriels — ne pas les suivre. Remplacer par : Llama 3.3 8B.' },
           { type: 'warning', text: '**Éviter Vicuna, Alpaca, WizardLM** — Ajustements communautaires de 2023. Les modèles de base modernes (Llama 3.3, Qwen3) égalent ou surpassent leurs performances. Remplacer par : Qwen3 14B ou Llama 3.3 8B.' },
           { type: 'warning', text: '**Éviter Falcon 180B** — Ne tient pas sur Apple Silicon grand public. [Llama 3.3 70B](/fr/local-llms/running-70b-models-apple-silicon-m5-max) (plus petit) le surpasse. Remplacer par : Llama 3.3 70B Q5.' },
           { type: 'warning', text: '**Éviter la quantification FP16 sur matériel grand public** — Llama 3.3 70B FP16 = 140 Go, ne tient sur aucun Mac. Le gain de qualité par rapport à Q5 est inférieur à 1%. Remplacer par : [Q4_K_M ou Q5_K_M](/fr/local-llms/llm-quantization-explained).' },
@@ -1102,17 +1105,17 @@ ollama pull aya-expanse:32b         # Übersetzung`,
 ollama pull phi4
 
 # Mac 36 Go (choisir un)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # Mac 64 Go
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # Mac 128 Go
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # Modèles spécialisés
 ollama pull deepseek-coder-v2:16b   # programmation
@@ -1260,7 +1263,7 @@ ollama pull aya-expanse:32b         # traduction`,
         id: 'avoid',
         title: '2026年に避けるべきモデル（その理由）',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3（全サイズ）は推奨されなくなりました** — Llama 3.1およびLlama 3.2に置き換えられており、標準的なリーダーボードでは新しいリリースと比較して著しく弱い結果を示しています。古いチュートリアルにまだ登場する — 従わないこと。代替：Llama 3.3 8B。' },
+          { type: 'warning', text: '**Llama 2（全サイズ）は推奨されなくなりました** — Llama 3.3に置き換えられており、標準的なリーダーボードでは新しいリリースと比較して著しく弱い結果を示しています。古いチュートリアルにまだ登場する — 従わないこと。代替：Llama 3.3 8B。' },
           { type: 'warning', text: '**Vicuna、Alpaca、WizardLMは避ける** — 2023年のコミュニティファインチューン。現代のベースモデル（Llama 3.3、Qwen3）が同等以上のパフォーマンス。代替：Qwen3 14BまたはLlama 3.3 8B。' },
           { type: 'warning', text: '**Falcon 180Bは避ける** — コンシューマーApple Siliconには収まらない。[Llama 3.3 70B](/ja/local-llms/running-70b-models-apple-silicon-m5-max)（より小型）が上回る。代替：Llama 3.3 70B Q5。' },
           { type: 'warning', text: '**コンシューマーハードウェアでのFP16量子化は避ける** — Llama 3.3 70B FP16 = 140GB、どのMacにも収まらない。Q5に対する品質向上は1%未満。代替：[Q4_K_MまたはQ5_K_M](/ja/local-llms/llm-quantization-explained)。' },
@@ -1289,17 +1292,17 @@ ollama pull aya-expanse:32b         # traduction`,
 ollama pull phi4
 
 # 36 GB Mac (いずれか選択)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # 64 GB Mac
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # 128 GB Mac
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # 専門モデル
 ollama pull deepseek-coder-v2:16b   # コーディング
@@ -1447,7 +1450,7 @@ ollama pull aya-expanse:32b         # 翻訳`,
         id: 'avoid',
         title: '2026年应避免的模型（及原因）',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3（任何尺寸）不再推荐** — 已被Llama 3.1和Llama 3.2取代；标准排行榜显示与新版本相比结果明显较弱。仍出现在旧教程中——不要遵循它们。替代：Llama 3.3 8B。' },
+          { type: 'warning', text: '**Llama 2（任何尺寸）不再推荐** — 已被Llama 3.3取代；标准排行榜显示与新版本相比结果明显较弱。仍出现在旧教程中——不要遵循它们。替代：Llama 3.3 8B。' },
           { type: 'warning', text: '**避免Vicuna、Alpaca、WizardLM** — 2023年的社区微调版本。现代基础模型（Llama 3.3、Qwen3）已达到或超过其性能。替代：Qwen3 14B或Llama 3.3 8B。' },
           { type: 'warning', text: '**避免Falcon 180B** — 不适合消费级Apple Silicon。[Llama 3.3 70B](/zh/local-llms/running-70b-models-apple-silicon-m5-max)（更小）超越它。替代：Llama 3.3 70B Q5。' },
           { type: 'warning', text: '**避免消费硬件上的FP16量化** — Llama 3.3 70B FP16 = 140 GB，任何Mac都装不下。相比Q5的质量提升不足1%。替代：[Q4_K_M或Q5_K_M](/zh/local-llms/llm-quantization-explained)。' },
@@ -1476,17 +1479,17 @@ ollama pull aya-expanse:32b         # 翻訳`,
 ollama pull phi4
 
 # 36 GB Mac (选一个)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # 64 GB Mac
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # 128 GB Mac
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # 专用模型
 ollama pull deepseek-coder-v2:16b   # 编程
@@ -1640,7 +1643,7 @@ ollama pull aya-expanse:32b         # 翻译`,
         id: 'avoid',
         title: '2026년 피해야 할 모델 및 이유',
         callouts: [
-          { type: 'warning', text: '**Llama 3.3 (모든 크기) 사용 금지** — 2023년 출시, Llama 3 및 3.1로 대체됨. 동일 파라미터 수 대비 품질이 30~50% 낮음. 구형 튜토리얼에 여전히 등장하므로 따르지 마십시오. 대체 모델: Llama 3.3 8B.' },
+          { type: 'warning', text: '**Llama 2 (모든 크기) 사용 금지** — Llama 3.3로 대체됨. 동일 파라미터 수 대비 품질이 30~50% 낮음. 구형 튜토리얼에 여전히 등장하므로 따르지 마십시오. 대체 모델: Llama 3.3 8B.' },
           { type: 'warning', text: '**Vicuna, Alpaca, WizardLM 사용 금지** — 2023년대 커뮤니티 파인튜닝 모델. 현재 베이스 모델(Llama 3.3, Qwen3)이 이미 동등하거나 우수한 성능을 발휘합니다. 대체 모델: Qwen3 14B 또는 Llama 3.3 8B.' },
           { type: 'warning', text: '**Falcon 180B 사용 금지** — 소비자용 Apple Silicon에서 실행 불가. [Llama 3.3 70B](/local-llms/running-70b-models-apple-silicon-m5-max)(더 작음)가 성능이 더 뛰어납니다. 대체 모델: Llama 3.3 70B Q5.' },
           { type: 'warning', text: '**소비자 하드웨어에서 FP16 양자화 사용 금지** — Llama 3.3 70B FP16 = 140 GB로 어떤 Mac에도 탑재 불가. Q5 대비 품질 향상은 1% 미만. 대체: [Q4_K_M 또는 Q5_K_M](/local-llms/llm-quantization-explained).' },
@@ -1669,17 +1672,17 @@ ollama pull aya-expanse:32b         # 翻译`,
 ollama pull phi4
 
 # 36 GB Mac (하나 선택)
-ollama pull llama3.1:8b
-ollama pull qwen2.5:14b
-ollama pull mistral:7b
+ollama pull llama3.3:8b
+ollama pull qwen3:14b
+ollama pull mistral-small
 
 # 64 GB Mac
-ollama pull qwen2.5:34b
-ollama pull mixtral:8x7b
+ollama pull qwen3:34b
+ollama pull mixtral:8x22b
 
 # 128 GB Mac
-ollama pull llama3.1:70b
-ollama pull qwen2.5:72b
+ollama pull llama3.3:70b
+ollama pull qwen3:72b
 
 # 특화 모델
 ollama pull deepseek-coder-v2:16b   # 코딩
