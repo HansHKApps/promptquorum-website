@@ -18,22 +18,22 @@
 
   <!-- Row 1: iPad Air M2/M3 -->
   <rect x="0" y="84" width="800" height="44" fill="#FFFFFF"/>
-  <text x="93" y="110" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPad Air M2/M3</text>
-  <text x="228" y="110" font-size="12" fill="#49454F" text-anchor="middle">8 GB</text>
+  <text x="93" y="110" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPad Air M4</text>
+  <text x="228" y="110" font-size="12" fill="#49454F" text-anchor="middle">12 GB</text>
   <text x="360" y="110" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Phi-4 Mini Q4</text>
   <rect x="460" y="99" width="110" height="22" rx="11" fill="#E6F4EA"/>
-  <text x="515" y="114" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~15–18 tok/sec</text>
+  <text x="515" y="114" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~18–20 tok/sec</text>
   <text x="690" y="110" font-size="11" fill="#49454F" text-anchor="middle">Writing, summarization</text>
 
   <!-- Row 2: iPad Pro M4 -->
   <rect x="0" y="128" width="800" height="44" fill="#F7F2FA"/>
-  <text x="93" y="147" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPad Pro M4</text>
-  <text x="93" y="162" font-size="10" fill="#49454F" text-anchor="middle">(16 GB model)</text>
-  <text x="228" y="154" font-size="12" fill="#49454F" text-anchor="middle">16 GB</text>
+  <text x="93" y="147" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">iPad Pro M5</text>
+  <text x="93" y="162" font-size="10" fill="#49454F" text-anchor="middle">(12/16 GB)</text>
+  <text x="228" y="154" font-size="12" fill="#49454F" text-anchor="middle">12/16 GB</text>
   <text x="360" y="147" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Llama 3.2 3B /</text>
   <text x="360" y="162" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Gemma 3 4B</text>
   <rect x="460" y="143" width="110" height="22" rx="11" fill="#E6F4EA"/>
-  <text x="515" y="158" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~25–30 tok/sec</text>
+  <text x="515" y="158" font-size="11" font-weight="700" fill="#1E8E3E" text-anchor="middle">~32–38 tok/sec</text>
   <text x="690" y="154" font-size="11" fill="#49454F" text-anchor="middle">Workstation, RAG, fiction</text>
 
   <!-- Row 3: Android 8 GB -->

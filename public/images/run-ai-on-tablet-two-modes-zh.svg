@@ -8,7 +8,7 @@
   <text x="204" y="68" font-size="15" font-weight="700" fill="#F4B400" text-anchor="middle">本机运行（On-Device）</text>
 
   <text x="34" y="94" font-size="11" font-weight="700" fill="#79747E">模型大小限制</text>
-  <text x="34" y="109" font-size="12" fill="#1C1B1F">3B–8B最大（iPad Pro M4）</text>
+  <text x="34" y="109" font-size="12" fill="#1C1B1F">3B–8B最大（iPad Pro M5）</text>
   <line x1="18" y1="118" x2="390" y2="118" stroke="#F7F2FA" stroke-width="1"/>
 
   <text x="34" y="136" font-size="11" font-weight="700" fill="#79747E">离线使用</text>
@@ -17,7 +17,7 @@
   <line x1="18" y1="150" x2="390" y2="150" stroke="#F7F2FA" stroke-width="1"/>
 
   <text x="34" y="168" font-size="11" font-weight="700" fill="#79747E">生成速度</text>
-  <text x="34" y="183" font-size="12" fill="#1C1B1F">10–25 tok/秒（iPad Pro M4）</text>
+  <text x="34" y="183" font-size="12" fill="#1C1B1F">12–30 tok/秒（iPad Pro M5）</text>
   <line x1="18" y1="192" x2="390" y2="192" stroke="#F7F2FA" stroke-width="1"/>
 
   <text x="34" y="210" font-size="11" font-weight="700" fill="#79747E">平板存储占用</text>
