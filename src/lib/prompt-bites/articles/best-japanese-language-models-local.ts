@@ -841,6 +841,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[CPU 전용 최고의 Ollama 모델](/ko/prompt-bites/best-ollama-models-cpu-only)',
           '[Ollama에서 Qwen3 실행 가능 여부](/ko/prompt-bites/can-you-run-qwen3-on-ollama)',
           '[코딩용 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)',
+          '[어떤 로컬 LLM 모델이 한국어를 가장 잘 지원하나요?](/ko/prompt-bites/best-korean-language-models-local)',
         ],
       },
     },
