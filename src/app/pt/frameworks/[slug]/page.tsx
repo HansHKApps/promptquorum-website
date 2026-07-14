@@ -64,7 +64,7 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
               'headline': `${fw.name} Prompt Framework — Fields, Examples & When To Use It`,
               'description': fw.tagline,
               'url': `https://www.promptquorum.com/pt/frameworks/${fw.slug}`,
-              'inLanguage': 'ja',
+              'inLanguage': 'pt-BR',
               'author': {
                 '@type': 'Person',
                 'name': 'Hans Kuepper',
@@ -91,7 +91,7 @@ export default async function EsFrameworkPage({ params }: { params: Promise<{ sl
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
-                { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://www.promptquorum.com/es' },
+                { '@type': 'ListItem', 'position': 1, 'name': 'Início', 'item': 'https://www.promptquorum.com/pt' },
                 { '@type': 'ListItem', 'position': 2, 'name': 'Frameworks', 'item': 'https://www.promptquorum.com/pt/frameworks' },
                 { '@type': 'ListItem', 'position': 3, 'name': fw.name, 'item': `https://www.promptquorum.com/pt/frameworks/${fw.slug}` },
               ],
