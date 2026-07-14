@@ -9,17 +9,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)',
-    seoTitle: 'Logseq + Joplin Local LLM: Smart Notes No Cloud 2026',
+    seoTitle: 'Logseq + Ollama Local LLM: RAG, Sync & Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) and [Joplin](https://joplinapp.org) are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against [Ollama](https://ollama.com) for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends note content to OpenAI; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on AI plugin maturity, sync-without-cloud paths, mobile compatibility, and the migration path from Notion, with concrete configuration steps for Ollama.',
+      '[Logseq](https://logseq.com) and [Joplin](https://joplinapp.org) are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against [Ollama](https://ollama.com) for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval — the closer of the two to a true local RAG knowledge base. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends note content to OpenAI; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on Ollama plugin setup, RAG/embedding support, sync-without-cloud paths (including iOS/cloud sync options), mobile compatibility, how each stacks up against Obsidian, and the migration path from Notion.',
     metaDescription:
-      'Logseq + logseq-copilot vs Joplin + Jarvis on Ollama: private alternative to Notion AI. Cloud-free sync, GDPR posture, mobile plugin gap. 2026.',
+      'Logseq + Ollama local LLM guide: logseq-copilot plugin, RAG limits vs Joplin + Jarvis, cloud-free sync, and how each compares to Obsidian. 2026.',
     twitterDescription:
-      'Open-source notes + local AI without cloud: Logseq with logseq-copilot, Joplin with Jarvis, both on Ollama. Mobile plugin gap explained. Notion migration path. GDPR-friendly by default.',
+      'Open-source notes + local AI without cloud: Logseq (Ollama, no RAG) vs Joplin + Jarvis (RAG-backed knowledge base). Sync, mobile gap, Notion migration. 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -43,11 +43,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin local ai',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq ollama integration',
+      'logseq local knowledge base',
       'open source notes ai privacy',
       'notion ai alternative gdpr',
     ],
     leadAnswerBlock:
-      '**For most readers in 2026, Logseq + logseq-copilot or Joplin + Jarvis paired with Ollama is the right private alternative to Notion AI.** Pick Logseq if you live in a daily-journal + outliner workflow; pick Joplin if you want plain Markdown notes with end-to-end encrypted sync. Both connect to Ollama at `http://localhost:11434/v1`, both support chat-with-current-note out of the box, and both are open-source under permissive licences (Logseq AGPL 3.0, Joplin AGPL 3.0 — same family). Neither sends note content to a cloud unless you explicitly configure a cloud provider in the plugin. The hard limit in 2026: neither tool supports plugins on iOS or Android, so AI features are desktop-only — mobile becomes a manual capture surface that you process with AI back at the desktop. For migration from Notion AI, Logseq has the cleaner import path via Notion\'s native Markdown export; Joplin\'s Notion import is functional but loses block-level structure.',
+      '**For most readers in 2026, Logseq + logseq-copilot or Joplin + Jarvis paired with Ollama is the right private alternative to Notion AI.** Pick Logseq if you live in a daily-journal + outliner workflow; pick Joplin if you want plain Markdown notes with end-to-end encrypted sync. Both connect to Ollama at `http://localhost:11434/v1`, both support chat-with-current-note out of the box, and both are open-source under permissive licences (Logseq AGPL 3.0, Joplin AGPL 3.0 — same family). If you need a searchable local knowledge base with retrieval-augmented generation (RAG) across your whole notebook, pick Joplin + Jarvis — Logseq has no vault-wide embedding index in 2026, so it is not a RAG-based knowledge base out of the box. Neither sends note content to a cloud unless you explicitly configure a cloud provider in the plugin. The hard limit in 2026: neither tool supports plugins on iOS or Android, so AI features are desktop-only — mobile becomes a manual capture surface that you process with AI back at the desktop. For migration from Notion AI, Logseq has the cleaner import path via Notion\'s native Markdown export; Joplin\'s Notion import is functional but loses block-level structure.',
     quickAnswerTop: {
       en: {
         question: 'What is the best Logseq or Joplin plugin combo for a private local LLM in 2026?',
@@ -190,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Slash commands:** type `/copilot` in any block to start a chat. Output appears as nested blocks under the prompt — outliner-native, so responses become first-class outline content.',
           '**Selection-based prompts:** select blocks → run a custom prompt template ("Summarise these into three bullets") → result appended below the selection.',
           '**Daily-journal integration:** point a template at the daily journal page → end-of-day summarisation, weekly review questions, or backlink expansion become single-keystroke actions.',
-          '**What it does NOT do (2026):** there is no graph-wide embedding index. Logseq backlinks remain explicit; semantic discovery across pages is not yet supported by any open-source Logseq plugin.',
+          '**Is Logseq a RAG-based local knowledge base? No — not out of the box.** There is no graph-wide embedding index in 2026. Logseq backlinks remain explicit; semantic (RAG-style) discovery across pages is not yet supported by any open-source Logseq plugin. For a local knowledge base with retrieval-augmented generation, use Joplin + Jarvis instead.',
         ],
         callouts: [
           {
@@ -410,6 +412,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Is open-source local AI integration safer than Notion AI?',
             a: 'Yes by default architecture. Notion AI sends note content to OpenAI by design — that is structural, not a configuration choice. Logseq + logseq-copilot + Ollama and Joplin + Jarvis + Ollama send nothing to a third party unless you explicitly configure a cloud LLM provider. For GDPR-covered EU data, healthcare, legal, and journalism contexts, this distinction is meaningful: local stacks have no processor, no international transfer, no subprocessor risk. The auditability is also simpler — a one-time packet capture proves zero outbound traffic during AI use.',
           },
+          {
+            q: 'Does Logseq support RAG or work as a local knowledge base?',
+            a: 'Not out of the box in 2026. Logseq has no vault-wide embedding index, so logseq-copilot cannot do retrieval-augmented generation (RAG) — semantic search across your whole graph. Its AI relies on explicit backlinks and the active page or selected blocks passed as context, not embeddings. If you need a searchable local knowledge base with RAG, use Joplin + Jarvis, which embeds every note with nomic-embed-text or mxbai-embed-large and retrieves the relevant chunks for chat. Logseq stays the stronger pick for outliner-native AI (chat blocks, daily-journal summarisation) — just not for cross-graph semantic Q&A.',
+          },
         ],
       },
       relatedReading: {
@@ -429,17 +435,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq y Joplin con LLMs locales: notas inteligentes sin sincronización en la nube (2026)',
-    seoTitle: 'Logseq + Joplin con LLM local: notas sin nube 2026',
+    seoTitle: 'Logseq + Ollama: LLM local, RAG y Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) y [Joplin](https://joplinapp.org) son las dos aplicaciones de notas open source que en 2026 se integran limpiamente con un LLM local y nunca necesitan una conexión a la nube. Logseq ejecuta el plugin logseq-copilot contra [Ollama](https://ollama.com) para chat nativo del outliner e IA en el diario diario; Joplin ejecuta el plugin Jarvis contra Ollama para chat consciente de notas, resúmenes y búsqueda respaldada por embeddings. Ambas son más compatibles con el RGPD que Notion AI por arquitectura predeterminada: Notion envía el contenido de las notas a OpenAI; Logseq y Joplin no envían nada a menos que tú lo configures así. El inconveniente en 2026 es el móvil: ni Logseq ni Joplin admiten plugins en iOS o Android, por lo que las funciones de IA solo se ejecutan en el escritorio. Esta guía clasifica ambas herramientas según la madurez de los plugins de IA, las rutas de sincronización sin nube, la compatibilidad móvil y el camino de migración desde Notion, con pasos de configuración concretos para Ollama.',
+      '[Logseq](https://logseq.com) y [Joplin](https://joplinapp.org) son las dos aplicaciones de notas open source que en 2026 se integran limpiamente con un LLM local y nunca necesitan una conexión a la nube. Logseq ejecuta el plugin logseq-copilot contra [Ollama](https://ollama.com) para chat nativo del outliner e IA en el diario diario; Joplin ejecuta el plugin Jarvis contra Ollama para chat consciente de notas, resúmenes y búsqueda respaldada por embeddings — la opción más cercana a una verdadera base de conocimiento local con RAG. Ambas son más compatibles con el RGPD que Notion AI por arquitectura predeterminada: Notion envía el contenido de las notas a OpenAI; Logseq y Joplin no envían nada a menos que tú lo configures así. El inconveniente en 2026 es el móvil: ni Logseq ni Joplin admiten plugins en iOS o Android, por lo que las funciones de IA solo se ejecutan en el escritorio. Esta guía clasifica ambas herramientas según la configuración con Ollama, el soporte de RAG/embeddings, las rutas de sincronización sin nube (incluyendo iOS), la compatibilidad móvil, la comparación con Obsidian y el camino de migración desde Notion.',
     metaDescription:
-      'Logseq + logseq-copilot vs Joplin + Jarvis en Ollama: alternativa privada a Notion AI. Sync sin nube, postura RGPD, brecha de plugins móviles. 2026.',
+      'Logseq + Ollama en LLM local: plugin logseq-copilot, límites de RAG frente a Joplin + Jarvis, sync sin nube y comparación con Obsidian. 2026.',
     twitterDescription:
-      'Notas open source + IA local sin nube: Logseq con logseq-copilot, Joplin con Jarvis, ambos en Ollama. Brecha de plugins móviles explicada. Ruta de migración desde Notion. Compatible con RGPD por defecto.',
+      'Notas open source + IA local sin nube: Logseq (Ollama, sin RAG) vs Joplin + Jarvis (base de conocimiento con RAG). Sync, brecha móvil y migración desde Notion. 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -463,11 +469,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin ia local',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq integración ollama',
+      'logseq base de conocimiento local',
       'notas open source ia privacidad',
       'alternativa notion ai rgpd',
     ],
     leadAnswerBlock:
-      '**Para la mayoría de los lectores en 2026, Logseq + logseq-copilot o Joplin + Jarvis combinados con Ollama es la alternativa privada correcta a Notion AI.** Elige Logseq si tu flujo de trabajo es diario diario + outliner; elige Joplin si quieres notas Markdown puras con sincronización cifrada de extremo a extremo. Ambos se conectan a Ollama en `http://localhost:11434/v1`, ambos admiten chat con la nota actual de forma predeterminada, y ambos son open source bajo licencias permisivas (Logseq AGPL 3.0, Joplin AGPL 3.0 — misma familia). Ninguno envía contenido de notas a la nube a menos que configures explícitamente un proveedor en la nube en el plugin. El límite estricto en 2026: ninguna herramienta admite plugins en iOS o Android — las funciones de IA son exclusivamente de escritorio; el móvil se convierte en una superficie de captura manual que procesas con IA de vuelta en el escritorio. Para la migración desde Notion AI, Logseq tiene la ruta de importación más limpia a través del exportador nativo de Markdown de Notion; la importación de Notion en Joplin es funcional pero pierde la estructura a nivel de bloque.',
+      '**Para la mayoría de los lectores en 2026, Logseq + logseq-copilot o Joplin + Jarvis combinados con Ollama es la alternativa privada correcta a Notion AI.** Elige Logseq si tu flujo de trabajo es diario diario + outliner; elige Joplin si quieres notas Markdown puras con sincronización cifrada de extremo a extremo. Ambos se conectan a Ollama en `http://localhost:11434/v1`, ambos admiten chat con la nota actual de forma predeterminada, y ambos son open source bajo licencias permisivas (Logseq AGPL 3.0, Joplin AGPL 3.0 — misma familia). Si necesitas una base de conocimiento local con búsqueda RAG (generación aumentada por recuperación) en todo tu cuaderno, elige Joplin + Jarvis: Logseq no tiene un índice de embeddings a nivel de vault en 2026, por lo que no es una base de conocimiento con RAG de fábrica. Ninguno envía contenido de notas a la nube a menos que configures explícitamente un proveedor en la nube en el plugin. El límite estricto en 2026: ninguna herramienta admite plugins en iOS o Android — las funciones de IA son exclusivamente de escritorio; el móvil se convierte en una superficie de captura manual que procesas con IA de vuelta en el escritorio. Para la migración desde Notion AI, Logseq tiene la ruta de importación más limpia a través del exportador nativo de Markdown de Notion; la importación de Notion en Joplin es funcional pero pierde la estructura a nivel de bloque.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la mejor combinación de plugins de Logseq o Joplin para un LLM local privado en 2026?',
@@ -610,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Comandos slash:** escribe `/copilot` en cualquier bloque para iniciar un chat. La salida aparece como bloques anidados bajo el prompt — nativo del outliner, por lo que las respuestas se convierten en contenido de esquema de primera clase.',
           '**Prompts basados en selección:** selecciona bloques → ejecuta una plantilla de prompt personalizada ("Resume estos en tres puntos") → el resultado se añade debajo de la selección.',
           '**Integración con el diario diario:** apunta una plantilla a la página del diario diario → el resumen de fin de día, las preguntas de revisión semanal o la expansión de backlinks se convierten en acciones con una sola tecla.',
-          '**Lo que NO hace (2026):** no existe un índice de embeddings para todo el grafo. Los backlinks de Logseq siguen siendo explícitos; el descubrimiento semántico entre páginas aún no está soportado por ningún plugin open source de Logseq.',
+          '**¿Es Logseq una base de conocimiento local basada en RAG? No, no de fábrica.** No existe un índice de embeddings para todo el grafo en 2026. Los backlinks de Logseq siguen siendo explícitos; el descubrimiento semántico (estilo RAG) entre páginas aún no está soportado por ningún plugin open source de Logseq. Para una base de conocimiento local con RAG, usa Joplin + Jarvis.',
         ],
         callouts: [
           {
@@ -830,6 +838,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Es la integración de IA local open source más segura que Notion AI?',
             a: 'Sí por arquitectura predeterminada. Notion AI envía el contenido de las notas a OpenAI por diseño — eso es estructural, no una elección de configuración. Logseq + logseq-copilot + Ollama y Joplin + Jarvis + Ollama no envían nada a un tercero a menos que configures explícitamente un proveedor de LLM en la nube. Para datos de la UE cubiertos por el RGPD, sanidad, derecho y periodismo, esta distinción es significativa: las pilas locales no tienen encargado del tratamiento, no hay transferencia internacional, no hay riesgo de subprocesadores. La auditabilidad también es más sencilla — una captura de paquetes única demuestra cero tráfico saliente durante el uso de IA.',
           },
+          {
+            q: '¿Logseq admite RAG o funciona como base de conocimiento local?',
+            a: 'No de fábrica en 2026. Logseq no tiene un índice de embeddings para todo el vault, por lo que logseq-copilot no puede hacer generación aumentada por recuperación (RAG) — búsqueda semántica en todo tu grafo. Su IA se basa en backlinks explícitos y en la página activa o los bloques seleccionados como contexto, no en embeddings. Si necesitas una base de conocimiento local con RAG, usa Joplin + Jarvis, que embebe cada nota con nomic-embed-text o mxbai-embed-large y recupera los fragmentos relevantes para el chat. Logseq sigue siendo la mejor opción para IA nativa del outliner (bloques de chat, resumen del diario) — solo que no para preguntas semánticas sobre todo el grafo.',
+          },
         ],
       },
       relatedReading: {
@@ -849,11 +861,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Logseq y Joplin con LLMs locales: notas inteligentes sin sincronización en la nube (2026)',
-      description: 'Logseq + logseq-copilot vs Joplin + Jarvis en Ollama: alternativa privada a Notion AI. Sync sin nube, postura RGPD, brecha de plugins móviles. 2026.',
+      description: 'Logseq + Ollama en LLM local: plugin logseq-copilot, límites de RAG frente a Joplin + Jarvis, sync sin nube y comparación con Obsidian. 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -863,17 +875,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq e Joplin com LLMs locais: notas inteligentes sem sincronização na nuvem (2026)',
-    seoTitle: 'Logseq + Joplin com LLM local: notas sem nuvem 2026',
+    seoTitle: 'Logseq + Ollama: LLM local, RAG e Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) e [Joplin](https://joplinapp.org) são os dois aplicativos de notas de código aberto que em 2026 se integram de forma limpa com um LLM local e nunca precisam de uma ida e volta à nuvem. O Logseq roda o plugin logseq-copilot contra o [Ollama](https://ollama.com) para chat nativo do outliner e IA no diário diário; o Joplin roda o plugin Jarvis contra o Ollama para chat consciente das notas, resumos e recuperação respaldada por embeddings. Ambos são mais compatíveis com o GDPR que o Notion AI por arquitetura padrão — o Notion envia o conteúdo das notas para a OpenAI; o Logseq e o Joplin não enviam nada a menos que você configure assim. O obstáculo em 2026 é o celular: nem o Logseq nem o Joplin suportam plugins no iOS ou Android, então os recursos de IA rodam apenas no desktop. Este guia classifica ambas as ferramentas pela maturidade dos plugins de IA, pelas rotas de sincronização sem nuvem, pela compatibilidade móvel e pelo caminho de migração a partir do Notion, com etapas de configuração concretas para o Ollama.',
+      '[Logseq](https://logseq.com) e [Joplin](https://joplinapp.org) são os dois aplicativos de notas de código aberto que em 2026 se integram de forma limpa com um LLM local e nunca precisam de uma ida e volta à nuvem. O Logseq roda o plugin logseq-copilot contra o [Ollama](https://ollama.com) para chat nativo do outliner e IA no diário diário; o Joplin roda o plugin Jarvis contra o Ollama para chat consciente das notas, resumos e recuperação respaldada por embeddings — a opção mais próxima de uma verdadeira base de conhecimento local com RAG. Ambos são mais compatíveis com o GDPR que o Notion AI por arquitetura padrão — o Notion envia o conteúdo das notas para a OpenAI; o Logseq e o Joplin não enviam nada a menos que você configure assim. O obstáculo em 2026 é o celular: nem o Logseq nem o Joplin suportam plugins no iOS ou Android, então os recursos de IA rodam apenas no desktop. Este guia classifica ambas as ferramentas pela configuração com o Ollama, pelo suporte a RAG/embeddings, pelas rotas de sincronização sem nuvem (incluindo iOS), pela compatibilidade móvel, pela comparação com o Obsidian e pelo caminho de migração a partir do Notion.',
     metaDescription:
-      'Logseq + logseq-copilot vs Joplin + Jarvis no Ollama: alternativa privada ao Notion AI. Sync sem nuvem, postura GDPR, lacuna de plugins móveis. 2026.',
+      'Logseq + Ollama em LLM local: plugin logseq-copilot, limites de RAG vs. Joplin + Jarvis, sync sem nuvem e comparação com o Obsidian. 2026.',
     twitterDescription:
-      'Notas de código aberto + IA local sem nuvem: Logseq com logseq-copilot, Joplin com Jarvis, ambos no Ollama. Lacuna de plugins móveis explicada. Caminho de migração a partir do Notion. Compatível com GDPR por padrão.',
+      'Notas de código aberto + IA local sem nuvem: Logseq (Ollama, sem RAG) vs Joplin + Jarvis (base de conhecimento com RAG). Sync, lacuna mobile e migração do Notion. 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -897,11 +909,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin ia local',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq integração ollama',
+      'logseq base de conhecimento local',
       'notas código aberto ia privacidade',
       'alternativa notion ai gdpr',
     ],
     leadAnswerBlock:
-      '**Para a maioria dos leitores em 2026, Logseq + logseq-copilot ou Joplin + Jarvis combinados com o Ollama é a alternativa privada certa ao Notion AI.** Escolha o Logseq se seu fluxo de trabalho é diário diário + outliner; escolha o Joplin se você quer notas Markdown puras com sincronização criptografada de ponta a ponta. Ambos se conectam ao Ollama em `http://localhost:11434/v1`, ambos suportam chat com a nota atual de imediato, e ambos são de código aberto sob licenças permissivas (Logseq AGPL 3.0, Joplin AGPL 3.0 — mesma família). Nenhum envia conteúdo de notas para a nuvem a menos que você configure explicitamente um provedor de nuvem no plugin. O limite rígido em 2026: nenhuma ferramenta suporta plugins no iOS ou Android — os recursos de IA são exclusivos do desktop; o celular se torna uma superfície de captura manual que você processa com IA de volta no desktop. Para a migração a partir do Notion AI, o Logseq tem o caminho de importação mais limpo via o exportador nativo de Markdown do Notion; a importação do Notion no Joplin é funcional, mas perde a estrutura no nível de bloco.',
+      '**Para a maioria dos leitores em 2026, Logseq + logseq-copilot ou Joplin + Jarvis combinados com o Ollama é a alternativa privada certa ao Notion AI.** Escolha o Logseq se seu fluxo de trabalho é diário diário + outliner; escolha o Joplin se você quer notas Markdown puras com sincronização criptografada de ponta a ponta. Ambos se conectam ao Ollama em `http://localhost:11434/v1`, ambos suportam chat com a nota atual de imediato, e ambos são de código aberto sob licenças permissivas (Logseq AGPL 3.0, Joplin AGPL 3.0 — mesma família). Se você precisa de uma base de conhecimento local com busca RAG (geração aumentada por recuperação) em todo o caderno, escolha Joplin + Jarvis: o Logseq não tem um índice de embeddings de todo o vault em 2026, então não é uma base de conhecimento com RAG de fábrica. Nenhum envia conteúdo de notas para a nuvem a menos que você configure explicitamente um provedor de nuvem no plugin. O limite rígido em 2026: nenhuma ferramenta suporta plugins no iOS ou Android — os recursos de IA são exclusivos do desktop; o celular se torna uma superfície de captura manual que você processa com IA de volta no desktop. Para a migração a partir do Notion AI, o Logseq tem o caminho de importação mais limpo via o exportador nativo de Markdown do Notion; a importação do Notion no Joplin é funcional, mas perde a estrutura no nível de bloco.',
     quickAnswerTop: {
       pt: {
         question: 'Qual é a melhor combinação de plugins do Logseq ou Joplin para um LLM local privado em 2026?',
@@ -1044,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Comandos de barra:** digite `/copilot` em qualquer bloco para iniciar um chat. A saída aparece como blocos aninhados sob o prompt — nativa do outliner, então as respostas se tornam conteúdo de esboço de primeira classe.',
           '**Prompts baseados em seleção:** selecione blocos → execute um modelo de prompt personalizado ("Resuma estes em três marcadores") → o resultado é anexado abaixo da seleção.',
           '**Integração com o diário diário:** aponte um modelo para a página do diário diário → o resumo de fim de dia, as perguntas de revisão semanal ou a expansão de backlinks se tornam ações de uma única tecla.',
-          '**O que NÃO faz (2026):** não existe um índice de embeddings para todo o grafo. Os backlinks do Logseq permanecem explícitos; a descoberta semântica entre páginas ainda não é suportada por nenhum plugin de código aberto do Logseq.',
+          '**O Logseq é uma base de conhecimento local baseada em RAG? Não, não de fábrica.** Não existe um índice de embeddings para todo o grafo em 2026. Os backlinks do Logseq permanecem explícitos; a descoberta semântica (estilo RAG) entre páginas ainda não é suportada por nenhum plugin de código aberto do Logseq. Para uma base de conhecimento local com RAG, use o Joplin + Jarvis.',
         ],
         callouts: [
           {
@@ -1264,6 +1278,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'A integração de IA local de código aberto é mais segura que o Notion AI?',
             a: 'Sim por arquitetura padrão. O Notion AI envia o conteúdo das notas para a OpenAI por design — isso é estrutural, não uma escolha de configuração. O Logseq + logseq-copilot + Ollama e o Joplin + Jarvis + Ollama não enviam nada a um terceiro a menos que você configure explicitamente um provedor de LLM na nuvem. Para dados da UE cobertos pelo GDPR, saúde, jurídico e jornalismo, essa distinção é significativa: as pilhas locais não têm operador, não há transferência internacional, não há risco de subprocessadores. A auditabilidade também é mais simples — uma captura de pacotes única prova zero tráfego de saída durante o uso de IA.',
           },
+          {
+            q: 'O Logseq suporta RAG ou funciona como base de conhecimento local?',
+            a: 'Não de fábrica em 2026. O Logseq não tem um índice de embeddings para todo o vault, então o logseq-copilot não consegue fazer geração aumentada por recuperação (RAG) — busca semântica em todo o grafo. Sua IA depende de backlinks explícitos e da página ativa ou dos blocos selecionados como contexto, não de embeddings. Se você precisa de uma base de conhecimento local com RAG, use o Joplin + Jarvis, que faz embedding de cada nota com nomic-embed-text ou mxbai-embed-large e recupera os trechos relevantes para o chat. O Logseq continua sendo a melhor escolha para IA nativa do outliner (blocos de chat, resumo do diário) — só não para perguntas semânticas em todo o grafo.',
+          },
         ],
       },
       relatedReading: {
@@ -1283,11 +1301,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Logseq e Joplin com LLMs locais: notas inteligentes sem sincronização na nuvem (2026)',
-      description: 'Logseq + logseq-copilot vs Joplin + Jarvis no Ollama: alternativa privada ao Notion AI. Sync sem nuvem, postura GDPR, lacuna de plugins móveis. 2026.',
+      description: 'Logseq + Ollama em LLM local: plugin logseq-copilot, limites de RAG vs. Joplin + Jarvis, sync sem nuvem e comparação com o Obsidian. 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1296,17 +1314,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq und Joplin mit lokalen LLMs: Intelligente Notizen ohne Cloud-Synchronisierung (2026)',
-    seoTitle: 'Logseq + Joplin mit lokalem LLM: Notizen ohne Cloud 2026',
+    seoTitle: 'Logseq + Ollama: Lokales LLM, RAG & Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) und [Joplin](https://joplinapp.org) sind die beiden Open-Source-Notiz-Apps, die sich 2026 sauber mit einem lokalen LLM kombinieren lassen und niemals eine Cloud-Verbindung benötigen. Logseq nutzt das logseq-copilot-Plugin gegen [Ollama](https://ollama.com) für Outliner-natives Chatten und KI im Tagesjournal; Joplin nutzt das Jarvis-Plugin gegen Ollama für notizbewussten Chat, Zusammenfassungen und Embedding-gestützte Suche. Beide sind durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI — Notion sendet Notizinhalte an OpenAI; Logseq und Joplin senden nichts, sofern Sie es nicht entsprechend konfigurieren. Der Haken in 2026 ist mobil: Weder Logseq noch Joplin unterstützen Plugins unter iOS oder Android, KI-Funktionen laufen also ausschließlich am Desktop. Dieser Leitfaden bewertet beide Tools nach Reife der KI-Plugins, Synchronisierungspfaden ohne Cloud, mobiler Kompatibilität und Migrationspfad von Notion — mit konkreten Konfigurationsschritten für Ollama.',
+      '[Logseq](https://logseq.com) und [Joplin](https://joplinapp.org) sind die beiden Open-Source-Notiz-Apps, die sich 2026 sauber mit einem lokalen LLM kombinieren lassen und niemals eine Cloud-Verbindung benötigen. Logseq nutzt das logseq-copilot-Plugin gegen [Ollama](https://ollama.com) für Outliner-natives Chatten und KI im Tagesjournal; Joplin nutzt das Jarvis-Plugin gegen Ollama für notizbewussten Chat, Zusammenfassungen und Embedding-gestützte Suche — die Option, die einer echten lokalen RAG-Wissensdatenbank am nächsten kommt. Beide sind durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI — Notion sendet Notizinhalte an OpenAI; Logseq und Joplin senden nichts, sofern Sie es nicht entsprechend konfigurieren. Der Haken in 2026 ist mobil: Weder Logseq noch Joplin unterstützen Plugins unter iOS oder Android, KI-Funktionen laufen also ausschließlich am Desktop. Dieser Leitfaden bewertet beide Tools nach Ollama-Konfiguration, RAG-/Embedding-Unterstützung, Synchronisierungspfaden ohne Cloud (inklusive iOS), mobiler Kompatibilität, dem Vergleich mit Obsidian und dem Migrationspfad von Notion.',
     metaDescription:
-      'Logseq + logseq-copilot vs. Joplin + Jarvis mit Ollama: private Alternative zu Notion AI. Cloud-freie Sync, DSGVO-konform, Mobile-Lücke. 2026.',
+      'Logseq + Ollama als lokales LLM: logseq-copilot-Plugin, RAG-Grenzen vs. Joplin + Jarvis, cloudfreie Synchronisierung und Vergleich mit Obsidian. 2026.',
     twitterDescription:
-      'Open-Source-Notizen + lokale KI ohne Cloud: Logseq mit logseq-copilot, Joplin mit Jarvis, beide auf Ollama. Mobile Plugin-Lücke erklärt. Notion-Migrationspfad. DSGVO-freundlich von Haus aus.',
+      'Open-Source-Notizen + lokale KI ohne Cloud: Logseq (Ollama, ohne RAG) vs. Joplin + Jarvis (RAG-gestützte Wissensdatenbank). Sync, Mobile-Lücke, Notion-Migration. 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -1330,11 +1348,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin lokale ki',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq ollama integration',
+      'logseq lokale wissensdatenbank',
       'open source notizen ki datenschutz',
       'notion ai alternative dsgvo',
     ],
     leadAnswerBlock:
-      '**Für die meisten Leser ist 2026 Logseq + logseq-copilot oder Joplin + Jarvis kombiniert mit Ollama die richtige private Alternative zu Notion AI.** Wählen Sie Logseq, wenn Sie in einem Tagesjournal- + Outliner-Workflow leben; wählen Sie Joplin, wenn Sie reine Markdown-Notizen mit Ende-zu-Ende-verschlüsselter Synchronisierung möchten. Beide verbinden sich mit Ollama unter `http://localhost:11434/v1`, beide unterstützen ab Werk Chat mit der aktuellen Notiz, und beide sind Open Source unter permissiven Lizenzen (Logseq AGPL 3.0, Joplin AGPL 3.0 — selbe Familie). Keines sendet Notizinhalte an eine Cloud, sofern Sie nicht ausdrücklich einen Cloud-Anbieter im Plugin konfigurieren. Die harte Grenze in 2026: Keines der Tools unterstützt Plugins unter iOS oder Android — KI-Funktionen sind ausschließlich am Desktop verfügbar; Mobile wird zu einer manuellen Erfassungsfläche, die Sie zurück am Desktop mit KI verarbeiten. Für die Migration von Notion AI hat Logseq den saubereren Importpfad über Notions nativen Markdown-Export; Joplins Notion-Import funktioniert, verliert aber die Block-Struktur.',
+      '**Für die meisten Leser ist 2026 Logseq + logseq-copilot oder Joplin + Jarvis kombiniert mit Ollama die richtige private Alternative zu Notion AI.** Wählen Sie Logseq, wenn Sie in einem Tagesjournal- + Outliner-Workflow leben; wählen Sie Joplin, wenn Sie reine Markdown-Notizen mit Ende-zu-Ende-verschlüsselter Synchronisierung möchten. Beide verbinden sich mit Ollama unter `http://localhost:11434/v1`, beide unterstützen ab Werk Chat mit der aktuellen Notiz, und beide sind Open Source unter permissiven Lizenzen (Logseq AGPL 3.0, Joplin AGPL 3.0 — selbe Familie). Wer eine durchsuchbare lokale Wissensdatenbank mit RAG (Retrieval-Augmented Generation) über das gesamte Notizbuch benötigt, sollte Joplin + Jarvis wählen — Logseq hat 2026 keinen vault-weiten Embedding-Index und ist daher von Haus aus keine RAG-Wissensdatenbank. Keines sendet Notizinhalte an eine Cloud, sofern Sie nicht ausdrücklich einen Cloud-Anbieter im Plugin konfigurieren. Die harte Grenze in 2026: Keines der Tools unterstützt Plugins unter iOS oder Android — KI-Funktionen sind ausschließlich am Desktop verfügbar; Mobile wird zu einer manuellen Erfassungsfläche, die Sie zurück am Desktop mit KI verarbeiten. Für die Migration von Notion AI hat Logseq den saubereren Importpfad über Notions nativen Markdown-Export; Joplins Notion-Import funktioniert, verliert aber die Block-Struktur.',
     quickAnswerTop: {
       de: {
         question: 'Welche Logseq- oder Joplin-Plugin-Kombination eignet sich 2026 am besten für ein privates lokales LLM?',
@@ -1477,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Slash-Befehle:** Tippen Sie `/copilot` in einen beliebigen Block, um einen Chat zu starten. Die Ausgabe erscheint als verschachtelte Blöcke unter dem Prompt — Outliner-nativ, sodass Antworten zu erstklassigen Outline-Inhalten werden.',
           '**Auswahlbasierte Prompts:** Blöcke auswählen → eine benutzerdefinierte Prompt-Vorlage ausführen („Fasse diese in drei Stichpunkte zusammen") → Ergebnis wird unter der Auswahl angehängt.',
           '**Tagesjournal-Integration:** Eine Vorlage auf die Tagesjournal-Seite richten → Tagesabschluss-Zusammenfassung, Wochenrückblick-Fragen oder Backlink-Erweiterung werden zu Aktionen mit einem Tastendruck.',
-          '**Was es 2026 NICHT leistet:** Es gibt keinen graphweiten Embedding-Index. Logseq-Backlinks bleiben explizit; semantische Entdeckung über Seiten hinweg wird derzeit von keinem Open-Source-Logseq-Plugin unterstützt.',
+          '**Ist Logseq eine RAG-basierte lokale Wissensdatenbank? Nein — nicht von Haus aus.** Es gibt 2026 keinen graphweiten Embedding-Index. Logseq-Backlinks bleiben explizit; semantische (RAG-artige) Entdeckung über Seiten hinweg wird derzeit von keinem Open-Source-Logseq-Plugin unterstützt. Für eine lokale RAG-Wissensdatenbank nutzen Sie stattdessen Joplin + Jarvis.',
         ],
         callouts: [
           {
@@ -1698,6 +1718,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Ja, durch die Standardarchitektur. Notion AI sendet Notizinhalte per Design an OpenAI — das ist strukturell, keine Konfigurationsentscheidung. Logseq + logseq-copilot + Ollama und Joplin + Jarvis + Ollama senden nichts an Dritte, sofern Sie nicht ausdrücklich einen Cloud-LLM-Anbieter konfigurieren. Für DSGVO-pflichtige EU-Daten, Gesundheitswesen, Recht und Journalismus ist diese Unterscheidung relevant: Lokale Stacks haben keinen Auftragsverarbeiter, keine internationale Übermittlung, kein Unterauftragsverarbeiter-Risiko. Die Auditierbarkeit ist ebenfalls einfacher — eine einmalige Paketmitschnitt-Aufnahme beweist null ausgehenden Verkehr während der KI-Nutzung.',
           },
           {
+            q: 'Unterstützt Logseq RAG oder funktioniert es als lokale Wissensdatenbank?',
+            a: 'Nicht von Haus aus in 2026. Logseq hat keinen vault-weiten Embedding-Index, sodass logseq-copilot keine Retrieval-Augmented Generation (RAG) — semantische Suche über den gesamten Graph — leisten kann. Die KI stützt sich auf explizite Backlinks und die aktive Seite oder ausgewählte Blöcke als Kontext, nicht auf Embeddings. Wer eine durchsuchbare lokale Wissensdatenbank mit RAG benötigt, nutzt Joplin + Jarvis, das jede Notiz mit nomic-embed-text oder mxbai-embed-large einbettet und die relevanten Abschnitte für den Chat abruft. Logseq bleibt die stärkere Wahl für Outliner-native KI (Chat-Blöcke, Tagesjournal-Zusammenfassung) — nur nicht für graphweite semantische Q&A.',
+          },
+          {
             q: 'Muss ich bei der Verwendung von Logseq + logseq-copilot oder Joplin + Jarvis die DSGVO beachten?',
             a: 'Ja, aber die Compliance-Last wird durch die lokale Architektur deutlich reduziert. Da Notizinhalte den Rechner des Verantwortlichen niemals verlassen, entfallen DSGVO-Artikel 28 (Auftragsverarbeitungsverträge) und Artikel 44 (internationale Übermittlungen) für die KI-Schicht — es gibt schlicht keinen Auftragsverarbeiter und keine Übermittlung in ein Drittland. Im Vergleich zu Notion AI, das einen AVV mit Notion plus Standardvertragsklauseln für die OpenAI-Übermittlung erfordert, vereinfacht sich das DSGVO-Verzeichnis von Verarbeitungstätigkeiten erheblich. Für die DACH-Region erfüllen lokale Stacks den BSI-Grundschutz-Kataloge-Baustein „eigene IT" einfacher als Cloud-KI-Outsourcing-Bausteine. Halten Sie weiterhin Datenschutz-Folgenabschätzungen (Artikel 35) für sensible Notizinhalte vor, wo erforderlich.',
           },
@@ -1724,17 +1748,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq et Joplin avec LLM locaux : notes intelligentes sans synchronisation cloud (2026)',
-    seoTitle: 'Logseq + Joplin avec LLM local : notes sans cloud 2026',
+    seoTitle: 'Logseq + Ollama : LLM local, RAG et Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) et [Joplin](https://joplinapp.org) sont les deux applications de prise de notes open source qui se combinent proprement avec un LLM local en 2026 sans jamais nécessiter d\'aller-retour cloud. Logseq exécute le plugin logseq-copilot contre [Ollama](https://ollama.com) pour un chat natif outliner et de l\'IA dans le journal quotidien ; Joplin exécute le plugin Jarvis contre Ollama pour un chat conscient des notes, des résumés et une recherche basée sur les embeddings. Les deux sont plus respectueux du RGPD que Notion AI par architecture par défaut — Notion envoie le contenu des notes à OpenAI ; Logseq et Joplin n\'envoient rien sauf si vous le configurez ainsi. Le hic en 2026 est mobile : ni Logseq ni Joplin ne prennent en charge les plugins sur iOS ou Android, donc les fonctionnalités IA s\'exécutent uniquement sur ordinateur de bureau. Ce guide classe les deux outils selon la maturité des plugins IA, les chemins de synchronisation sans cloud, la compatibilité mobile et le chemin de migration depuis Notion, avec des étapes de configuration concrètes pour Ollama.',
+      '[Logseq](https://logseq.com) et [Joplin](https://joplinapp.org) sont les deux applications de prise de notes open source qui se combinent proprement avec un LLM local en 2026 sans jamais nécessiter d\'aller-retour cloud. Logseq exécute le plugin logseq-copilot contre [Ollama](https://ollama.com) pour un chat natif outliner et de l\'IA dans le journal quotidien ; Joplin exécute le plugin Jarvis contre Ollama pour un chat conscient des notes, des résumés et une recherche basée sur les embeddings — l\'option la plus proche d\'une véritable base de connaissances locale avec RAG. Les deux sont plus respectueux du RGPD que Notion AI par architecture par défaut — Notion envoie le contenu des notes à OpenAI ; Logseq et Joplin n\'envoient rien sauf si vous le configurez ainsi. Le hic en 2026 est mobile : ni Logseq ni Joplin ne prennent en charge les plugins sur iOS ou Android, donc les fonctionnalités IA s\'exécutent uniquement sur ordinateur de bureau. Ce guide classe les deux outils selon la configuration avec Ollama, la prise en charge du RAG/des embeddings, les chemins de synchronisation sans cloud (y compris iOS), la compatibilité mobile, la comparaison avec Obsidian et le chemin de migration depuis Notion.',
     metaDescription:
-      'Logseq + logseq-copilot vs Joplin + Jarvis sur Ollama : alternative privée et RGPD à Notion AI. Sync sans cloud, lacune mobile expliquée. 2026.',
+      'Logseq + Ollama en LLM local : plugin logseq-copilot, limites RAG face à Joplin + Jarvis, synchronisation sans cloud et comparaison avec Obsidian. 2026.',
     twitterDescription:
-      'Notes open source + IA locale sans cloud : Logseq avec logseq-copilot, Joplin avec Jarvis, tous deux sur Ollama. Lacune mobile expliquée. Migration depuis Notion. RGPD-friendly par défaut.',
+      'Notes open source + IA locale sans cloud : Logseq (Ollama, sans RAG) vs Joplin + Jarvis (base de connaissances RAG). Synchronisation, lacune mobile, migration Notion. 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -1758,11 +1782,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin ia locale',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq intégration ollama',
+      'logseq base de connaissances locale',
       'notes open source ia confidentialité',
       'alternative notion ai rgpd',
     ],
     leadAnswerBlock:
-      '**Pour la plupart des lecteurs en 2026, Logseq + logseq-copilot ou Joplin + Jarvis associés à Ollama est la bonne alternative privée à Notion AI.** Choisissez Logseq si vous vivez dans un workflow journal quotidien + outliner ; choisissez Joplin si vous voulez des notes Markdown pures avec une synchronisation chiffrée de bout en bout. Les deux se connectent à Ollama sur `http://localhost:11434/v1`, les deux prennent en charge le chat-avec-note-courante en standard, et les deux sont open source sous des licences permissives (Logseq AGPL 3.0, Joplin AGPL 3.0 — même famille). Aucun n\'envoie de contenu de note vers le cloud sauf si vous configurez explicitement un fournisseur cloud dans le plugin. La limite stricte en 2026 : ni l\'un ni l\'autre ne prend en charge les plugins sur iOS ou Android — les fonctionnalités IA sont exclusivement sur ordinateur de bureau ; le mobile devient une surface de capture manuelle que vous traitez avec l\'IA de retour sur ordinateur. Pour la migration depuis Notion AI, Logseq a le chemin d\'import le plus propre via l\'export Markdown natif de Notion ; l\'import Notion de Joplin est fonctionnel mais perd la structure au niveau des blocs.',
+      '**Pour la plupart des lecteurs en 2026, Logseq + logseq-copilot ou Joplin + Jarvis associés à Ollama est la bonne alternative privée à Notion AI.** Choisissez Logseq si vous vivez dans un workflow journal quotidien + outliner ; choisissez Joplin si vous voulez des notes Markdown pures avec une synchronisation chiffrée de bout en bout. Les deux se connectent à Ollama sur `http://localhost:11434/v1`, les deux prennent en charge le chat-avec-note-courante en standard, et les deux sont open source sous des licences permissives (Logseq AGPL 3.0, Joplin AGPL 3.0 — même famille). Si vous avez besoin d\'une base de connaissances locale avec RAG (génération augmentée par récupération) sur tout votre carnet, choisissez Joplin + Jarvis : Logseq n\'a pas d\'index d\'embeddings à l\'échelle du vault en 2026, ce n\'est donc pas une base de connaissances RAG par défaut. Aucun n\'envoie de contenu de note vers le cloud sauf si vous configurez explicitement un fournisseur cloud dans le plugin. La limite stricte en 2026 : ni l\'un ni l\'autre ne prend en charge les plugins sur iOS ou Android — les fonctionnalités IA sont exclusivement sur ordinateur de bureau ; le mobile devient une surface de capture manuelle que vous traitez avec l\'IA de retour sur ordinateur. Pour la migration depuis Notion AI, Logseq a le chemin d\'import le plus propre via l\'export Markdown natif de Notion ; l\'import Notion de Joplin est fonctionnel mais perd la structure au niveau des blocs.',
     quickAnswerTop: {
       fr: {
         question: 'Quelle combinaison de plugins Logseq ou Joplin convient le mieux à un LLM local privé en 2026 ?',
@@ -1905,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Commandes slash :** tapez `/copilot` dans n\'importe quel bloc pour démarrer un chat. La sortie apparaît comme blocs imbriqués sous le prompt — natif outliner, donc les réponses deviennent du contenu de plan de première classe.',
           '**Prompts basés sur la sélection :** sélectionner des blocs → exécuter un modèle de prompt personnalisé (« Résume ces points en trois puces ») → résultat ajouté sous la sélection.',
           '**Intégration journal quotidien :** pointer un modèle vers la page de journal quotidien → résumé de fin de journée, questions de revue hebdomadaire ou expansion des backlinks deviennent des actions à une touche.',
-          '**Ce qu\'il NE fait PAS (2026) :** il n\'y a pas d\'index d\'embeddings à l\'échelle du graphe. Les backlinks Logseq restent explicites ; la découverte sémantique entre pages n\'est pas encore prise en charge par aucun plugin Logseq open source.',
+          '**Logseq est-il une base de connaissances locale basée sur le RAG ? Non, pas par défaut.** Il n\'y a pas d\'index d\'embeddings à l\'échelle du graphe en 2026. Les backlinks Logseq restent explicites ; la découverte sémantique (façon RAG) entre pages n\'est pas encore prise en charge par aucun plugin Logseq open source. Pour une base de connaissances locale avec RAG, utilisez plutôt Joplin + Jarvis.',
         ],
         callouts: [
           {
@@ -2125,6 +2151,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'L\'intégration IA locale open source est-elle plus sûre que Notion AI ?',
             a: 'Oui par architecture par défaut. Notion AI envoie le contenu des notes à OpenAI par conception — c\'est structurel, pas un choix de configuration. Logseq + logseq-copilot + Ollama et Joplin + Jarvis + Ollama n\'envoient rien à un tiers sauf si vous configurez explicitement un fournisseur LLM cloud. Pour les données UE couvertes par le RGPD, la santé, le droit et le journalisme, cette distinction est significative : les piles locales n\'ont pas de sous-traitant, pas de transfert international, pas de risque sous-traitant. L\'auditabilité est aussi plus simple — une capture de paquets unique prouve aucun trafic sortant pendant l\'usage IA.',
           },
+          {
+            q: 'Logseq prend-il en charge le RAG ou fonctionne-t-il comme base de connaissances locale ?',
+            a: 'Pas par défaut en 2026. Logseq n\'a pas d\'index d\'embeddings à l\'échelle du vault, donc logseq-copilot ne peut pas faire de génération augmentée par récupération (RAG) — recherche sémantique sur tout le graphe. Son IA s\'appuie sur des backlinks explicites et la page active ou les blocs sélectionnés comme contexte, pas sur des embeddings. Si vous avez besoin d\'une base de connaissances locale avec RAG, utilisez Joplin + Jarvis, qui vectorise chaque note avec nomic-embed-text ou mxbai-embed-large et récupère les extraits pertinents pour le chat. Logseq reste le meilleur choix pour l\'IA native outliner (blocs de chat, résumé du journal quotidien) — mais pas pour les questions-réponses sémantiques sur tout le graphe.',
+          },
         ],
       },
       relatedReading: {
@@ -2144,17 +2174,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq と Joplin でローカル LLM：クラウド同期なしのスマートノート（2026）',
-    seoTitle: 'Logseq + Joplin ローカルLLM：クラウドなしノート 2026',
+    seoTitle: 'Logseq + Ollamaローカル LLM：RAGとJoplin比較 2026',
     intro:
-      '[Logseq](https://logseq.com) と [Joplin](https://joplinapp.org) は、2026年にローカル LLM とクリーンに統合でき、クラウド往復が不要な2つのオープンソースのノートアプリです。Logseq は logseq-copilot プラグインを [Ollama](https://ollama.com) に対して実行し、アウトライナーネイティブなチャットと日々のジャーナル AI を提供します。Joplin は Jarvis プラグインを Ollama に対して実行し、ノート対応チャット、要約、埋め込みベースの検索を提供します。両者ともデフォルトアーキテクチャの観点から Notion AI より日本の APPI（個人情報保護法）への適合性が高い構成です — Notion はノート内容を OpenAI に送信しますが、Logseq と Joplin は設定しない限り何も送信しません。2026年の落とし穴はモバイル：Logseq も Joplin も iOS や Android でプラグインをサポートしていないため、AI 機能はデスクトップでのみ動作します。本ガイドでは両ツールを AI プラグインの成熟度、クラウドなし同期、モバイル互換性、Notion からの移行パスで評価し、Ollama 用の具体的な設定手順を示します。',
+      '[Logseq](https://logseq.com) と [Joplin](https://joplinapp.org) は、2026年にローカル LLM とクリーンに統合でき、クラウド往復が不要な2つのオープンソースのノートアプリです。Logseq は logseq-copilot プラグインを [Ollama](https://ollama.com) に対して実行し、アウトライナーネイティブなチャットと日々のジャーナル AI を提供します。Joplin は Jarvis プラグインを Ollama に対して実行し、ノート対応チャット、要約、埋め込みベースの検索を提供します — 真のローカル RAG ナレッジベースに最も近い選択肢です。両者ともデフォルトアーキテクチャの観点から Notion AI より日本の APPI（個人情報保護法）への適合性が高い構成です — Notion はノート内容を OpenAI に送信しますが、Logseq と Joplin は設定しない限り何も送信しません。2026年の落とし穴はモバイル：Logseq も Joplin も iOS や Android でプラグインをサポートしていないため、AI 機能はデスクトップでのみ動作します。本ガイドでは両ツールを Ollama 設定、RAG/埋め込み対応、クラウドなし同期（iOS 含む）、モバイル互換性、Obsidian との比較、Notion からの移行パスで評価します。',
     metaDescription:
-      'Logseq + logseq-copilot vs Joplin + Jarvis（Ollama 上）：プライベートな Notion AI 代替。クラウド不要同期、APPI適合、モバイル制約。2026年版。',
+      'Logseq + Ollamaでローカル LLM：logseq-copilotとRAGの限界、Joplin + Jarvis比較、クラウド不要同期。Obsidianとの比較も。2026年版。',
     twitterDescription:
-      'オープンソースノート + クラウドなしローカル AI：Logseq + logseq-copilot、Joplin + Jarvis（Ollama 上）。モバイルプラグイン制約を解説。Notion 移行パス。APPI フレンドリー。',
+      'オープンソースノート＋クラウドなしローカルAI：Logseq（Ollama、RAGなし）vs Joplin + Jarvis（RAG対応ナレッジベース）。同期、モバイル制約、Notion移行。2026年。',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -2178,11 +2208,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin ローカル ai',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq ollama 連携',
+      'logseq ローカル ナレッジベース',
       'オープンソース ノート ai プライバシー',
       'notion ai 代替 appi',
     ],
     leadAnswerBlock:
-      '**2026年、ほとんどの読者にとって Logseq + logseq-copilot または Joplin + Jarvis を Ollama と組み合わせるのが、Notion AI の正しいプライベート代替です。** デイリージャーナル + アウトライナーワークフローで生活している場合は Logseq を選択してください。エンドツーエンド暗号化同期付きのプレーンな Markdown ノートが欲しい場合は Joplin を選択してください。両者とも `http://localhost:11434/v1` で Ollama に接続し、両者とも現在のノートとのチャットを標準でサポートし、両者とも寛容なライセンス下のオープンソース（Logseq AGPL 3.0、Joplin AGPL 3.0 — 同じ系統）です。プラグイン内で明示的にクラウドプロバイダを設定しない限り、どちらもノート内容をクラウドに送信しません。2026年の厳しい制限：iOS や Android でプラグインをサポートしているツールはありません — AI 機能はデスクトップ専用です。モバイルは、デスクトップに戻ってから AI で処理するための手動キャプチャ面になります。Notion AI からの移行については、Logseq が Notion ネイティブの Markdown エクスポート経由でよりクリーンなインポートパスを持っています。Joplin の Notion インポートは機能しますが、ブロックレベルの構造を失います。',
+      '**2026年、ほとんどの読者にとって Logseq + logseq-copilot または Joplin + Jarvis を Ollama と組み合わせるのが、Notion AI の正しいプライベート代替です。** デイリージャーナル + アウトライナーワークフローで生活している場合は Logseq を選択してください。エンドツーエンド暗号化同期付きのプレーンな Markdown ノートが欲しい場合は Joplin を選択してください。両者とも `http://localhost:11434/v1` で Ollama に接続し、両者とも現在のノートとのチャットを標準でサポートし、両者とも寛容なライセンス下のオープンソース（Logseq AGPL 3.0、Joplin AGPL 3.0 — 同じ系統）です。ノート全体を対象に RAG（検索拡張生成）で検索可能なローカルナレッジベースが必要な場合は Joplin + Jarvis を選んでください — Logseq には2026年時点でvault全体の埋め込みインデックスがなく、標準では RAG ナレッジベースではありません。プラグイン内で明示的にクラウドプロバイダを設定しない限り、どちらもノート内容をクラウドに送信しません。2026年の厳しい制限：iOS や Android でプラグインをサポートしているツールはありません — AI 機能はデスクトップ専用です。モバイルは、デスクトップに戻ってから AI で処理するための手動キャプチャ面になります。Notion AI からの移行については、Logseq が Notion ネイティブの Markdown エクスポート経由でよりクリーンなインポートパスを持っています。Joplin の Notion インポートは機能しますが、ブロックレベルの構造を失います。',
     quickAnswerTop: {
       ja: {
         question: '2026年、プライベートなローカル LLM に最適な Logseq または Joplin プラグインの組み合わせは何ですか？',
@@ -2325,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**スラッシュコマンド：** 任意のブロックで `/copilot` を入力してチャットを開始。出力はプロンプトの下にネストされたブロックとして表示 — アウトライナーネイティブなので、応答が第一級のアウトラインコンテンツになります。',
           '**選択ベースのプロンプト：** ブロックを選択 → カスタムプロンプトテンプレートを実行（「これを3つの箇条書きに要約して」）→ 結果は選択の下に追加されます。',
           '**デイリージャーナル統合：** テンプレートをデイリージャーナルページに向ける → 終日要約、週次レビュー質問、バックリンク展開がワンキーストロークアクションになります。',
-          '**2026年時点で動作しないこと：** グラフ全体の埋め込みインデックスはありません。Logseq のバックリンクは明示的なまま。ページ間のセマンティック発見は、現時点でどのオープンソース Logseq プラグインでもサポートされていません。',
+          '**Logseq は RAG ベースのローカルナレッジベースか？ いいえ、標準では違います。** 2026年時点でグラフ全体の埋め込みインデックスはありません。Logseq のバックリンクは明示的なまま。ページ間のセマンティック（RAG的な）発見は、現時点でどのオープンソース Logseq プラグインでもサポートされていません。RAG 対応のローカルナレッジベースが必要な場合は Joplin + Jarvis を使用してください。',
         ],
         callouts: [
           {
@@ -2547,6 +2579,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'オープンソースのローカル AI 統合は Notion AI より安全ですか？',
             a: 'デフォルトアーキテクチャの観点で「はい」です。Notion AI は設計上ノート内容を OpenAI に送信します — これは構造的、設定の選択ではありません。Logseq + logseq-copilot + Ollama と Joplin + Jarvis + Ollama は、明示的にクラウド LLM プロバイダを設定しない限り、第三者に何も送信しません。APPI 対象データ、医療、法務、ジャーナリズム文脈では、この区別が重要です：ローカルスタックには委託先がなく、国際移転がなく、副処理者リスクがありません。監査性もシンプル — 一度のパケットキャプチャで AI 使用中のアウトバウンド通信ゼロを証明できます。',
           },
+          {
+            q: 'Logseq は RAG に対応していますか？ローカルナレッジベースとして機能しますか？',
+            a: '2026年時点で標準では非対応です。Logseq には vault 全体の埋め込みインデックスがないため、logseq-copilot はグラフ全体を対象とした検索拡張生成（RAG）を行えません。そのAIは埋め込みではなく、明示的なバックリンクとアクティブページまたは選択ブロックのコンテキストに依存しています。RAG対応の検索可能なローカルナレッジベースが必要な場合は、各ノートを nomic-embed-text または mxbai-embed-large で埋め込み、関連チャンクをチャットに取り込む Joplin + Jarvis を使用してください。Logseq はアウトライナーネイティブな AI（チャットブロック、デイリージャーナル要約）では引き続き強みがありますが、グラフ全体のセマンティックQ&Aには向きません。',
+          },
         ],
       },
       relatedReading: {
@@ -2566,17 +2602,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq 与 Joplin 配合本地 LLM：无云同步的智能笔记（2026）',
-    seoTitle: 'Logseq + Joplin 本地 LLM：无云同步笔记 2026',
+    seoTitle: 'Logseq + Ollama 本地LLM：RAG与Joplin对比 2026',
     intro:
-      '[Logseq](https://logseq.com) 和 [Joplin](https://joplinapp.org) 是 2026 年两款可与本地 LLM 完美集成、无需任何云端往返的开源笔记应用。Logseq 通过 logseq-copilot 插件对接 [Ollama](https://ollama.com)，提供大纲器原生的聊天和每日日志 AI；Joplin 通过 Jarvis 插件对接 Ollama，提供笔记感知聊天、摘要和基于嵌入的检索。两者的默认架构都比 Notion AI 更符合数据安全法和跨境合规要求——Notion 会将笔记内容发送至 OpenAI；Logseq 和 Joplin 除非您主动配置，否则不发送任何数据。2026 年的硬限制是移动端：Logseq 和 Joplin 都不支持 iOS 或 Android 插件，因此 AI 功能仅在桌面端运行。本指南从 AI 插件成熟度、无云同步路径、移动兼容性以及从 Notion 的迁移路径对两款工具进行评分，并提供 Ollama 的具体配置步骤。',
+      '[Logseq](https://logseq.com) 和 [Joplin](https://joplinapp.org) 是 2026 年两款可与本地 LLM 完美集成、无需任何云端往返的开源笔记应用。Logseq 通过 logseq-copilot 插件对接 [Ollama](https://ollama.com)，提供大纲器原生的聊天和每日日志 AI；Joplin 通过 Jarvis 插件对接 Ollama，提供笔记感知聊天、摘要和基于嵌入的检索——这是最接近真正本地 RAG 知识库的方案。两者的默认架构都比 Notion AI 更符合数据安全法和跨境合规要求——Notion 会将笔记内容发送至 OpenAI；Logseq 和 Joplin 除非您主动配置，否则不发送任何数据。2026 年的硬限制是移动端：Logseq 和 Joplin 都不支持 iOS 或 Android 插件，因此 AI 功能仅在桌面端运行。本指南从 Ollama 配置、RAG/嵌入支持、无云同步路径（含 iOS）、移动兼容性、与 Obsidian 的对比以及从 Notion 的迁移路径对两款工具进行评分。',
     metaDescription:
-      'Logseq + logseq-copilot vs Joplin + Jarvis（基于 Ollama）：私密 Notion AI 替代方案。无云同步、数据本地化合规、移动端插件限制说明。2026 年。',
+      'Logseq + Ollama 本地LLM指南：logseq-copilot 插件、RAG 局限对比 Joplin + Jarvis、无云同步及与 Obsidian 的对比。2026 年。',
     twitterDescription:
-      '开源笔记 + 本地 AI 无需云端：Logseq + logseq-copilot，Joplin + Jarvis，均基于 Ollama。解析移动端插件限制。Notion 迁移路径。默认符合数据安全法。',
+      '开源笔记 + 无云本地 AI：Logseq（Ollama，无 RAG）对比 Joplin + Jarvis（RAG 知识库）。同步方式、移动端限制、Notion 迁移路径。2026 年。',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -2600,11 +2636,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin 本地 ai',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq ollama 集成',
+      'logseq 本地知识库',
       '开源笔记 ai 隐私',
       'notion ai 替代 数据安全法',
     ],
     leadAnswerBlock:
-      '**2026 年，对于大多数读者，Logseq + logseq-copilot 或 Joplin + Jarvis 配合 Ollama 是合适的私密 Notion AI 替代方案。** 如果您的工作流以每日日志 + 大纲器为主，选择 Logseq；如果您需要带端到端加密同步的纯 Markdown 笔记，选择 Joplin。两者都通过 `http://localhost:11434/v1` 连接 Ollama，都开箱支持与当前笔记的对话，且都在宽松许可下开源（Logseq AGPL 3.0，Joplin AGPL 3.0——同一系列）。除非您在插件中明确配置云端提供商，否则均不会将笔记内容发送至云端。2026 年的硬限制：iOS 或 Android 上都无插件支持——AI 功能仅在桌面端可用；移动端成为手动捕获面，您将在桌面端用 AI 处理。从 Notion AI 迁移时，Logseq 通过 Notion 原生 Markdown 导出提供更干净的导入路径；Joplin 的 Notion 导入可用但会丢失块级结构。',
+      '**2026 年，对于大多数读者，Logseq + logseq-copilot 或 Joplin + Jarvis 配合 Ollama 是合适的私密 Notion AI 替代方案。** 如果您的工作流以每日日志 + 大纲器为主，选择 Logseq；如果您需要带端到端加密同步的纯 Markdown 笔记，选择 Joplin。两者都通过 `http://localhost:11434/v1` 连接 Ollama，都开箱支持与当前笔记的对话，且都在宽松许可下开源（Logseq AGPL 3.0，Joplin AGPL 3.0——同一系列）。如果您需要在整个笔记本范围内进行 RAG（检索增强生成）驱动的可搜索本地知识库，请选择 Joplin + Jarvis——Logseq 在 2026 年没有全库级嵌入索引，因此默认并非基于 RAG 的知识库。除非您在插件中明确配置云端提供商，否则均不会将笔记内容发送至云端。2026 年的硬限制：iOS 或 Android 上都无插件支持——AI 功能仅在桌面端可用；移动端成为手动捕获面，您将在桌面端用 AI 处理。从 Notion AI 迁移时，Logseq 通过 Notion 原生 Markdown 导出提供更干净的导入路径；Joplin 的 Notion 导入可用但会丢失块级结构。',
     quickAnswerTop: {
       zh: {
         question: '2026 年用于私密本地 LLM 的最佳 Logseq 或 Joplin 插件组合是什么？',
@@ -2747,7 +2785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**斜杠命令：** 在任何块中输入 `/copilot` 启动对话。输出以嵌套块形式出现在提示词下方——大纲器原生，因此回复成为一等大纲内容。',
           '**基于选择的提示词：** 选中块 → 运行自定义提示词模板（"将这些总结为三个要点"）→ 结果附加到所选内容下方。',
           '**每日日志集成：** 将模板指向每日日志页面 → 日终摘要、周回顾问题或反向链接扩展成为单击操作。',
-          '**2026 年不具备的功能：** 没有图谱级嵌入索引。Logseq 反向链接保持显式；跨页面的语义发现尚不被任何开源 Logseq 插件支持。',
+          '**Logseq 是基于 RAG 的本地知识库吗？不是——默认并非如此。** 2026 年没有图谱级嵌入索引。Logseq 反向链接保持显式；跨页面的语义（RAG 式）发现尚不被任何开源 Logseq 插件支持。若需要支持 RAG 的本地知识库，请改用 Joplin + Jarvis。',
         ],
         callouts: [
           {
@@ -2968,6 +3006,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '开源本地 AI 集成比 Notion AI 更安全吗？',
             a: '默认架构上是。Notion AI 按设计将笔记内容发送至 OpenAI——这是结构性的，而非配置选择。Logseq + logseq-copilot + Ollama 与 Joplin + Jarvis + Ollama 除非您明确配置云端 LLM 提供商，否则不向第三方发送任何数据。对于受数据安全法约束的中国数据、医疗、法律和新闻场景，这一区别有意义：本地堆栈无处理方、无跨境传输、无子处理方风险。可审计性也更简单——一次抓包证明 AI 使用期间零出站流量。',
           },
+          {
+            q: 'Logseq 支持 RAG 或可作为本地知识库使用吗？',
+            a: '2026 年默认不支持。Logseq 没有全库级嵌入索引，因此 logseq-copilot 无法实现检索增强生成（RAG)——即跨整个图谱的语义搜索。其 AI 依赖显式反向链接以及作为上下文传入的当前页面或所选块，而非嵌入。如果您需要支持 RAG 的可搜索本地知识库，请使用 Joplin + Jarvis——它会用 nomic-embed-text 或 mxbai-embed-large 对每条笔记做嵌入，并检索相关片段用于对话。Logseq 在大纲器原生 AI（聊天块、每日日志摘要）方面仍是更优选择——只是不适合跨图谱的语义问答。',
+          },
         ],
       },
       relatedReading: {
@@ -2987,17 +3029,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: '⁨Logseq⁩ و⁨Joplin⁩ مع نماذج اللغة المحلية: ملاحظات ذكية بدون مزامنة سحابية (⁨2026⁩)',
-    seoTitle: '⁨Logseq⁩ و⁨Joplin⁩ مع ⁨LLM⁩ محلي: بديل خاص لـ ⁨Notion AI⁩',
+    seoTitle: '⁨Logseq⁩ مع ⁨Ollama⁩: ⁨LLM⁩ محلي و⁨RAG⁩ مقابل ⁨Joplin⁩ (⁨2026⁩)',
     intro:
-      '[Logseq](https://logseq.com) و[Joplin](https://joplinapp.org) هما تطبيقا الملاحظات مفتوحا المصدر في 2026 اللذان يتكاملان بسلاسة مع نماذج اللغة المحلية دون الحاجة إلى الاتصال بالسحابة. يُشغّل Logseq ملحق logseq-copilot مع [Ollama](https://ollama.com) للمحادثة الأصيلة في أداة التخطيط الهرمي والذكاء الاصطناعي لليوميات؛ بينما يُشغّل Joplin ملحق Jarvis مع Ollama للدردشة المدركة للملاحظات والملخصات والاسترجاع المدعوم بالتضمينات. كلا التطبيقين أكثر امتثالاً للائحة حماية البيانات العامة GDPR من Notion AI بحكم هندستهما الافتراضية — إذ يُرسل Notion محتوى الملاحظات إلى OpenAI، بينما لا يُرسل Logseq ولا Joplin أي شيء ما لم تُهيئهما على ذلك. القيد الرئيسي في 2026 هو الجوّال: لا يدعم أيٌّ منهما الملحقات على iOS أو Android، وبذلك تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط. يقيّم هذا الدليل كلا الأداتين من حيث نضج ملحقات الذكاء الاصطناعي ومسارات المزامنة بدون سحابة وتوافق الجوّال ومسار الانتقال من Notion، مع خطوات تهيئة ملموسة لـ Ollama.',
+      '[Logseq](https://logseq.com) و[Joplin](https://joplinapp.org) هما تطبيقا الملاحظات مفتوحا المصدر في 2026 اللذان يتكاملان بسلاسة مع نماذج اللغة المحلية دون الحاجة إلى الاتصال بالسحابة. يُشغّل Logseq ملحق logseq-copilot مع [Ollama](https://ollama.com) للمحادثة الأصيلة في أداة التخطيط الهرمي والذكاء الاصطناعي لليوميات؛ بينما يُشغّل Joplin ملحق Jarvis مع Ollama للدردشة المدركة للملاحظات والملخصات والاسترجاع المدعوم بالتضمينات — وهو الخيار الأقرب إلى قاعدة معرفة محلية حقيقية قائمة على RAG. كلا التطبيقين أكثر امتثالاً للائحة حماية البيانات العامة GDPR من Notion AI بحكم هندستهما الافتراضية — إذ يُرسل Notion محتوى الملاحظات إلى OpenAI، بينما لا يُرسل Logseq ولا Joplin أي شيء ما لم تُهيئهما على ذلك. القيد الرئيسي في 2026 هو الجوّال: لا يدعم أيٌّ منهما الملحقات على iOS أو Android، وبذلك تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط. يقيّم هذا الدليل كلا الأداتين من حيث إعداد Ollama، ودعم RAG/التضمينات، ومسارات المزامنة بدون سحابة (بما في ذلك iOS)، وتوافق الجوّال، والمقارنة مع Obsidian، ومسار الانتقال من Notion.',
     metaDescription:
-      'Logseq مع logseq-copilot وJoplin مع Jarvis على Ollama بدلاً من Notion AI. مزامنة بلا سحابة وامتثال GDPR وفجوة ملحقات iOS وAndroid.',
+      '⁨Logseq⁩ مع ⁨Ollama⁩ كنموذج لغوي محلي: ملحق ⁨logseq-copilot⁩، وحدود ⁨RAG⁩ مقارنة بـ ⁨Joplin⁩ + ⁨Jarvis⁩، ومزامنة بلا سحابة، ومقارنة بـ ⁨Obsidian⁩. 2026.',
     twitterDescription:
-      'ملاحظات مفتوحة المصدر + ذكاء اصطناعي محلي بدون سحابة: Logseq مع logseq-copilot، Joplin مع Jarvis، كلاهما على Ollama. شرح فجوة ملحقات الجوّال. مسار الانتقال من Notion. صديق للخصوصية افتراضياً.',
+      'ملاحظات مفتوحة المصدر + ذكاء اصطناعي محلي بدون سحابة: ⁨Logseq⁩ (⁨Ollama⁩، بدون ⁨RAG⁩) مقابل ⁨Joplin⁩ + ⁨Jarvis⁩ (قاعدة معرفة مدعومة بـ ⁨RAG⁩). المزامنة، فجوة الجوّال، الانتقال من ⁨Notion⁩. 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -3021,11 +3063,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'joplin local ai',
       'logseq copilot ollama',
       'joplin jarvis plugin',
+      'logseq ollama integration',
+      'logseq local knowledge base',
       'open source notes ai privacy',
       'notion ai alternative gdpr',
     ],
     leadAnswerBlock:
-      '**بالنسبة لمعظم القراء في 2026، يُعدّ Logseq + logseq-copilot أو Joplin + Jarvis مقترناً بـ Ollama هو البديل الخاص الصحيح لـ Notion AI.** اختر Logseq إن كنت تعيش في سير عمل اليوميات اليومية وأداة التخطيط الهرمي؛ واختر Joplin إن أردت ملاحظات Markdown عادية مع مزامنة مشفرة من طرف إلى طرف. يتصلان معاً بـ Ollama على `http://localhost:11434/v1`، وكلاهما يدعم الدردشة مع الملاحظة الحالية خارج الصندوق، وكلاهما مفتوح المصدر بموجب تراخيص متساهلة (Logseq AGPL 3.0، Joplin AGPL 3.0). لا يُرسل أيٌّ منهما محتوى الملاحظات إلى السحابة ما لم تُهيّئ موفر سحابياً في الملحق صراحةً. الحد الصعب في 2026: لا تدعم أيٌّ من الأداتين الملحقات على iOS أو Android، لذا تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط — يتحول الجوّال إلى سطح التقاط يدوي تعالجه بالذكاء الاصطناعي على سطح المكتب لاحقاً. للانتقال من Notion AI، يمتلك Logseq مسار الاستيراد الأنظف عبر تصدير Markdown الأصيل من Notion؛ استيراد Joplin من Notion يعمل لكنه يفقد البنية على مستوى الكتل.',
+      '**بالنسبة لمعظم القراء في 2026، يُعدّ Logseq + logseq-copilot أو Joplin + Jarvis مقترناً بـ Ollama هو البديل الخاص الصحيح لـ Notion AI.** اختر Logseq إن كنت تعيش في سير عمل اليوميات اليومية وأداة التخطيط الهرمي؛ واختر Joplin إن أردت ملاحظات Markdown عادية مع مزامنة مشفرة من طرف إلى طرف. يتصلان معاً بـ Ollama على `http://localhost:11434/v1`، وكلاهما يدعم الدردشة مع الملاحظة الحالية خارج الصندوق، وكلاهما مفتوح المصدر بموجب تراخيص متساهلة (Logseq AGPL 3.0، Joplin AGPL 3.0). إذا كنت بحاجة إلى قاعدة معرفة محلية قابلة للبحث تعتمد على RAG (التوليد المعزز بالاسترجاع) عبر دفتر الملاحظات بأكمله، فاختر Joplin + Jarvis — لا يمتلك Logseq فهرس تضمينات على مستوى الخزنة بأكملها في 2026، لذا فهو ليس قاعدة معرفة قائمة على RAG افتراضياً. لا يُرسل أيٌّ منهما محتوى الملاحظات إلى السحابة ما لم تُهيّئ موفر سحابياً في الملحق صراحةً. الحد الصعب في 2026: لا تدعم أيٌّ من الأداتين الملحقات على iOS أو Android، لذا تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط — يتحول الجوّال إلى سطح التقاط يدوي تعالجه بالذكاء الاصطناعي على سطح المكتب لاحقاً. للانتقال من Notion AI، يمتلك Logseq مسار الاستيراد الأنظف عبر تصدير Markdown الأصيل من Notion؛ استيراد Joplin من Notion يعمل لكنه يفقد البنية على مستوى الكتل.',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل مزيج من ملحقات Logseq أو Joplin للذكاء الاصطناعي المحلي الخاص في 2026؟',
@@ -3168,7 +3212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أوامر slash:** اكتب `/copilot` في أي كتلة لبدء المحادثة. تظهر المخرجات ككتل متداخلة تحت الموجّه — أصيل لأداة التخطيط الهرمي، وبذلك تصبح الاستجابات محتوى خطة من الدرجة الأولى.',
           '**الموجّهات المستندة إلى التحديد:** حدد الكتل ← شغّل قالب موجّه مخصص ("لخّص هذه في ثلاث نقاط") ← تُضاف النتيجة أسفل التحديد.',
           '**التكامل مع اليومية:** أشِر بقالب إلى صفحة اليومية ← يصبح ملخص نهاية اليوم وأسئلة المراجعة الأسبوعية أو توسيع الروابط الخلفية إجراءات بضغطة مفتاح واحدة.',
-          '**ما لا يفعله (2026):** لا يوجد فهرس تضمين لكامل الرسم البياني. تبقى الروابط الخلفية في Logseq صريحة؛ الاكتشاف الدلالي بين الصفحات لا يزال غير مدعوم بأي ملحق Logseq مفتوح المصدر.',
+          '**هل Logseq قاعدة معرفة محلية قائمة على RAG؟ لا — ليس افتراضياً.** لا يوجد فهرس تضمين لكامل الرسم البياني في 2026. تبقى الروابط الخلفية في Logseq صريحة؛ الاكتشاف الدلالي (على طريقة RAG) بين الصفحات لا يزال غير مدعوم بأي ملحق Logseq مفتوح المصدر. لقاعدة معرفة محلية تعتمد على RAG، استخدم Joplin + Jarvis بدلاً من ذلك.',
         ],
         callouts: [
           {
@@ -3388,6 +3432,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل تكامل الذكاء الاصطناعي المحلي مفتوح المصدر أكثر أماناً من Notion AI؟',
             a: 'نعم بحكم الهندسة الافتراضية. يُرسل Notion AI محتوى الملاحظات إلى OpenAI بحكم التصميم — هذا هيكلي، وليس خيار إعداد. Logseq + logseq-copilot + Ollama وJoplin + Jarvis + Ollama لا يُرسلان أي شيء إلى طرف ثالث ما لم تُهيّئ صراحةً موفر LLM سحابي. بالنسبة لبيانات الاتحاد الأوروبي الخاضعة للائحة GDPR والرعاية الصحية والقانون والصحافة، هذا الفارق ذو معنى: المكدسات المحلية بلا معالج بيانات، وبلا نقل دولي، وبلا مخاطر معالجين فرعيين. قابلية التدقيق أيضاً أبسط — التقاط حزم واحد يُثبت صفر حركة مرور صادرة أثناء استخدام الذكاء الاصطناعي.',
           },
+          {
+            q: 'هل يدعم Logseq تقنية RAG أو يعمل كقاعدة معرفة محلية؟',
+            a: 'ليس افتراضياً في 2026. لا يمتلك Logseq فهرس تضمينات على مستوى الخزنة بأكملها، لذا لا يستطيع logseq-copilot تنفيذ التوليد المعزز بالاسترجاع (RAG) — أي البحث الدلالي عبر الرسم البياني بأكمله. يعتمد الذكاء الاصطناعي فيه على الروابط الخلفية الصريحة والصفحة النشطة أو الكتل المحددة كسياق، وليس على التضمينات. إذا كنت بحاجة إلى قاعدة معرفة محلية قابلة للبحث تعتمد على RAG، استخدم Joplin + Jarvis، الذي يُضمّن كل ملاحظة باستخدام nomic-embed-text أو mxbai-embed-large ويسترجع المقاطع ذات الصلة للمحادثة. يظل Logseq الخيار الأقوى للذكاء الاصطناعي الأصيل لأداة التخطيط الهرمي (كتل الدردشة، ملخص اليومية) — لكن ليس للأسئلة والأجوبة الدلالية عبر كامل الرسم البياني.',
+          },
         ],
       },
       relatedReading: {
@@ -3407,11 +3455,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Logseq وJoplin مع نماذج اللغة المحلية: ملاحظات ذكية بدون مزامنة سحابية (2026)',
-      description: 'Logseq + logseq-copilot مقابل Joplin + Jarvis على Ollama: بديل خاص لـ Notion AI. مزامنة بدون سحابة، وضعية GDPR، فجوة ملحقات الجوّال. 2026.',
+      description: '⁨Logseq⁩ مع ⁨Ollama⁩ كنموذج لغوي محلي: ملحق ⁨logseq-copilot⁩، وحدود ⁨RAG⁩ مقارنة بـ ⁨Joplin⁩ + ⁨Jarvis⁩، ومزامنة بلا سحابة، ومقارنة بـ ⁨Obsidian⁩. 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'ar',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3420,17 +3468,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Logseq와 Joplin으로 로컬 LLM 활용하기: 클라우드 동기화 없는 스마트 노트 (2026)',
-    seoTitle: 'Logseq + Joplin 로컬 LLM: 클라우드 없는 스마트 노트 2026',
+    seoTitle: 'Logseq + Ollama 로컬 LLM: RAG와 Joplin 비교 2026',
     intro:
-      '[Logseq](https://logseq.com)와 [Joplin](https://joplinapp.org)은 2026년 현재 로컬 LLM과 깔끔하게 연동되며 클라우드 왕복을 전혀 필요로 하지 않는 두 가지 오픈소스 노트 앱입니다. Logseq는 logseq-copilot 플러그인을 [Ollama](https://ollama.com)에 연결하여 아웃라이너 네이티브 채팅과 일일 저널 AI를 제공하고, Joplin은 Jarvis 플러그인을 Ollama에 연결하여 노트 인식 채팅, 요약, 임베딩 기반 검색을 지원합니다. 두 도구 모두 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 친화적입니다. Notion은 노트 내용을 OpenAI에 전송하지만, Logseq와 Joplin은 별도로 설정하지 않는 한 아무것도 전송하지 않습니다. 2026년의 주요 제약은 모바일입니다. Logseq와 Joplin 모두 iOS 또는 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱에서만 실행됩니다. 이 가이드는 AI 플러그인 성숙도, 클라우드 없는 동기화 경로, 모바일 호환성, Notion에서의 마이그레이션 경로를 기준으로 두 도구를 비교하며, Ollama를 위한 구체적인 설정 단계를 제공합니다.',
+      '[Logseq](https://logseq.com)와 [Joplin](https://joplinapp.org)은 2026년 현재 로컬 LLM과 깔끔하게 연동되며 클라우드 왕복을 전혀 필요로 하지 않는 두 가지 오픈소스 노트 앱입니다. Logseq는 logseq-copilot 플러그인을 [Ollama](https://ollama.com)에 연결하여 아웃라이너 네이티브 채팅과 일일 저널 AI를 제공하고, Joplin은 Jarvis 플러그인을 Ollama에 연결하여 노트 인식 채팅, 요약, 임베딩 기반 검색을 지원합니다 — 진정한 로컬 RAG 지식 베이스에 가장 가까운 조합입니다. 두 도구 모두 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 친화적입니다. Notion은 노트 내용을 OpenAI에 전송하지만, Logseq와 Joplin은 별도로 설정하지 않는 한 아무것도 전송하지 않습니다. 2026년의 주요 제약은 모바일입니다. Logseq와 Joplin 모두 iOS 또는 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱에서만 실행됩니다. 이 가이드는 Ollama 설정, RAG/임베딩 지원, 클라우드 없는 동기화 경로(iOS 포함), 모바일 호환성, Obsidian과의 비교, Notion에서의 마이그레이션 경로를 기준으로 두 도구를 비교합니다.',
     metaDescription:
-      'Logseq + logseq-copilot vs Joplin + Jarvis on Ollama: Notion AI의 프라이빗 대안. 클라우드 없는 동기화, GDPR 자세, 모바일 플러그인 격차. 2026.',
+      'Logseq + Ollama 로컬 LLM 가이드: logseq-copilot 플러그인, RAG 한계 대비 Joplin + Jarvis, 클라우드 없는 동기화, Obsidian과의 비교를 다룹니다. 2026년.',
     twitterDescription:
-      '오픈소스 노트 + 클라우드 없는 로컬 AI: logseq-copilot이 적용된 Logseq, Jarvis가 적용된 Joplin, 모두 Ollama 기반. 모바일 플러그인 격차 설명. Notion 마이그레이션 경로. 기본적으로 GDPR 준수.',
+      '오픈소스 노트 + 클라우드 없는 로컬 AI: Logseq(Ollama, RAG 미지원) vs Joplin + Jarvis(RAG 기반 지식 베이스). 동기화, 모바일 격차, Notion 마이그레이션을 다룹니다. 2026.',
     current_models_mentioned: [
       'Llama 3.2 3B',
       'Phi-4 Mini',
@@ -3454,11 +3502,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'logseq 로컬 llm 설정',
       'joplin 로컬 ai 플러그인',
       'logseq copilot ollama 연동',
+      'logseq 로컬 지식 베이스',
       '오픈소스 노트 ai 프라이버시',
       'notion ai 대안 gdpr',
     ],
     leadAnswerBlock:
-      '**2026년 대부분의 독자에게 Ollama와 조합한 Logseq + logseq-copilot 또는 Joplin + Jarvis가 Notion AI의 올바른 프라이빗 대안입니다.** 일일 저널 + 아웃라이너 워크플로우에서 생활하신다면 Logseq를, 종단 간 암호화 동기화를 갖춘 순수 Markdown 노트를 원하신다면 Joplin을 선택하십시오. 두 앱 모두 `http://localhost:11434/v1`에서 Ollama에 연결하고, 기본적으로 현재 노트와의 채팅을 지원하며, 허용적인 라이선스(Logseq AGPL 3.0, Joplin AGPL 3.0 — 동일 계열) 하에 오픈소스입니다. 플러그인에서 클라우드 공급자를 명시적으로 설정하지 않는 한 어느 쪽도 노트 내용을 클라우드에 전송하지 않습니다. 2026년의 엄격한 한계: 두 도구 모두 iOS나 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱 전용입니다. 모바일은 수동 캡처 화면이 되고, AI 처리는 데스크톱에서 이루어집니다. Notion AI에서의 마이그레이션의 경우, Logseq는 Notion의 네이티브 Markdown 내보내기를 통한 가져오기 경로가 더 깔끔하고, Joplin의 Notion 가져오기는 기능하지만 블록 수준 구조를 잃습니다.',
+      '**2026년 대부분의 독자에게 Ollama와 조합한 Logseq + logseq-copilot 또는 Joplin + Jarvis가 Notion AI의 올바른 프라이빗 대안입니다.** 일일 저널 + 아웃라이너 워크플로우에서 생활하신다면 Logseq를, 종단 간 암호화 동기화를 갖춘 순수 Markdown 노트를 원하신다면 Joplin을 선택하십시오. 두 앱 모두 `http://localhost:11434/v1`에서 Ollama에 연결하고, 기본적으로 현재 노트와의 채팅을 지원하며, 허용적인 라이선스(Logseq AGPL 3.0, Joplin AGPL 3.0 — 동일 계열) 하에 오픈소스입니다. 노트북 전체를 대상으로 검색 가능한 RAG(검색 증강 생성) 기반 로컬 지식 베이스가 필요하다면 Joplin + Jarvis를 선택하십시오 — Logseq는 2026년 기준 저장소 전체 임베딩 인덱스가 없어 기본적으로는 RAG 기반 지식 베이스가 아닙니다. 플러그인에서 클라우드 공급자를 명시적으로 설정하지 않는 한 어느 쪽도 노트 내용을 클라우드에 전송하지 않습니다. 2026년의 엄격한 한계: 두 도구 모두 iOS나 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱 전용입니다. 모바일은 수동 캡처 화면이 되고, AI 처리는 데스크톱에서 이루어집니다. Notion AI에서의 마이그레이션의 경우, Logseq는 Notion의 네이티브 Markdown 내보내기를 통한 가져오기 경로가 더 깔끔하고, Joplin의 Notion 가져오기는 기능하지만 블록 수준 구조를 잃습니다.',
     quickAnswerTop: {
       ko: {
         question: '2026년 프라이빗 로컬 LLM을 위한 Logseq 또는 Joplin의 최적 플러그인 조합은 무엇입니까?',
@@ -3601,7 +3650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**슬래시 명령어:** 임의의 블록에서 `/copilot`을 입력하여 채팅을 시작합니다. 출력이 프롬프트 아래 중첩된 블록으로 나타납니다 — 아웃라이너 네이티브이므로 응답이 일급 아웃라인 콘텐츠가 됩니다.',
           '**선택 기반 프롬프트:** 블록을 선택 → 사용자 지정 프롬프트 템플릿 실행("이것을 세 가지 요점으로 요약하시오") → 결과가 선택 항목 아래에 추가됩니다.',
           '**일일 저널 통합:** 일일 저널 페이지를 가리키는 템플릿 → 일과 마무리 요약, 주간 리뷰 질문, 또는 백링크 확장이 원터치 액션이 됩니다.',
-          '**2026년 미지원 기능:** 그래프 전체 임베딩 인덱스 없음. Logseq 백링크는 여전히 명시적이며, 페이지 간 시맨틱 검색은 2026년 어떤 오픈소스 Logseq 플러그인으로도 지원되지 않습니다.',
+          '**Logseq는 RAG 기반 로컬 지식 베이스입니까? 아니요, 기본적으로는 아닙니다.** 2026년 기준 그래프 전체 임베딩 인덱스가 없습니다. Logseq 백링크는 여전히 명시적이며, 페이지 간 시맨틱(RAG 방식) 검색은 2026년 어떤 오픈소스 Logseq 플러그인으로도 지원되지 않습니다. RAG를 지원하는 로컬 지식 베이스가 필요하다면 대신 Joplin + Jarvis를 사용하십시오.',
         ],
         callouts: [
           {
@@ -3821,6 +3870,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '로컬 AI 통합이 Notion AI보다 더 안전합니까?',
             a: '기본 아키텍처 측면에서 그렇습니다. Notion AI는 설계상 노트 내용을 OpenAI에 전송합니다 — 이것은 구조적이며 설정 선택이 아닙니다. Logseq + logseq-copilot + Ollama와 Joplin + Jarvis + Ollama는 클라우드 LLM 공급자를 명시적으로 설정하지 않는 한 제3자에게 아무것도 전송하지 않습니다. GDPR 적용 EU 데이터, 의료, 법률, 저널리즘의 경우 이 차이가 중요합니다. 로컬 스택은 처리자가 없고, 국제 이전이 없으며, 하위 처리자 위험이 없습니다. 감사 가능성도 더 간단합니다 — 한 번의 패킷 캡처가 AI 사용 중 발신 트래픽이 없음을 증명합니다.',
           },
+          {
+            q: 'Logseq는 RAG를 지원하거나 로컬 지식 베이스로 작동합니까?',
+            a: '2026년 기준 기본적으로는 지원하지 않습니다. Logseq에는 저장소 전체 임베딩 인덱스가 없으므로 logseq-copilot은 검색 증강 생성(RAG) — 그래프 전체에 걸친 시맨틱 검색 — 을 수행할 수 없습니다. 이 AI는 임베딩이 아니라 명시적 백링크와 컨텍스트로 전달되는 활성 페이지 또는 선택한 블록에 의존합니다. RAG를 지원하는 검색 가능한 로컬 지식 베이스가 필요하다면, nomic-embed-text 또는 mxbai-embed-large로 모든 노트를 임베딩하고 채팅에 관련 청크를 검색해오는 Joplin + Jarvis를 사용하십시오. Logseq는 아웃라이너 네이티브 AI(채팅 블록, 일일 저널 요약)에서는 여전히 더 강력한 선택이지만, 그래프 전체의 시맨틱 Q&A에는 적합하지 않습니다.',
+          },
         ],
       },
       relatedReading: {
@@ -3840,11 +3893,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Logseq와 Joplin으로 로컬 LLM 활용하기: 클라우드 동기화 없는 스마트 노트 (2026)',
-      description: 'Logseq + logseq-copilot vs Joplin + Jarvis on Ollama: Notion AI의 프라이빗 대안. 클라우드 없는 동기화, GDPR 자세, 모바일 플러그인 격차. 2026.',
+      description: 'Logseq + Ollama 로컬 LLM 가이드: logseq-copilot 플러그인, RAG 한계 대비 Joplin + Jarvis, 클라우드 없는 동기화, Obsidian과의 비교를 다룹니다. 2026년.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'ko',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-07-14',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
