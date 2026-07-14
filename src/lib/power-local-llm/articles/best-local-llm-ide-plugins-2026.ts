@@ -1057,29 +1057,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Continue (VS Code + JetBrains) es el mejor plugin IDE gratuito para LLMs locales en 2026: conexión nativa a Ollama y cualquier API compatible con OpenAI, chat + autocompletado + edición de código contextual, ejecutándose completamente en tu hardware sin enviar datos a la nube.**',
+    leadAnswerBlock: '**Cline (VS Code + JetBrains) es el mejor plugin IDE gratuito para LLMs locales a mediados de 2026: conexión nativa a Ollama y cualquier API compatible con OpenAI, edición agéntica de archivos + comandos de terminal + herramientas MCP, ejecutándose completamente en tu hardware. Nota: Continue.dev (antes clasificado en el puesto #1) fue adquirido por Cursor en junio de 2026 — la versión 2.0.0 es su última publicación.**',
     quickAnswerTop: {
       question: '¿Cuál es el mejor plugin IDE para ejecutar modelos de IA locales mientras programas?',
-      answer: 'Continue (gratuito, open-source) es el mejor plugin IDE para Ollama y LLMs locales en VS Code y JetBrains. Para autocompletado únicamente, Tabby es la opción más ligera. Para codificación agéntica (edición de archivos, comandos shell), Cline es el más potente. Aider funciona mejor en la terminal.',
+      answer: 'Cline (gratuito, open-source con BYOK) es ahora el mejor plugin IDE para Ollama y LLMs locales — desde que Continue.dev fue adquirido por Cursor en junio de 2026 y su repositorio quedó congelado en la versión 2.0.0. Cline funciona en VS Code y JetBrains, y soporta edición agéntica de archivos y herramientas MCP. Para autocompletado únicamente, Tabby es la opción más ligera. Aider funciona mejor en la terminal.',
       bullets: [
-        'Continue: el mejor en general — Ollama + API OpenAI, chat + autocompletado, VS Code + JetBrains',
-        'Cline: el mejor plugin agéntico — lee y escribe archivos, ejecuta comandos de terminal, usa herramientas MCP',
+        'Cline: el mejor en general, con mantenimiento activo — lee y escribe archivos, ejecuta comandos de terminal, usa herramientas MCP, VS Code + JetBrains (incl. PyCharm, PhpStorm, Rider), gratuito BYOK o ClinePass a $9,99/mes',
+        'Continue: todavía funcional pero sin mantenimiento (adquirido por Cursor en junio de 2026, v2.0.0 versión final) — sigue funcionando con Ollama, sin más desarrollo',
         'Tabby: el mejor autocompletado self-hosted — servidor de inferencia propio, modelos de 1–3B',
         'Aider: el mejor nativo de terminal — consciente de git, ediciones multi-archivo, excelente con modelos 14B+',
         'Cursor: la mejor opción comercial — soporte de modelos locales añadido, diseño cloud-first',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-07-14',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Continue (open-source) es la elección predeterminada: soporte nativo de Ollama, VS Code + JetBrains',
-          'Los agentes de Cline leen y escriben archivos y ejecutan comandos shell — el más potente para tareas agénticas',
-          'Tabby ejecuta su propio servidor de inferencia (modelos 1–3B) — la menor latencia de autocompletado',
-          'Aider es la opción terminal-first — consciente de commits git, reescrituras multi-archivo',
-          'Cursor soporta modelos locales, pero sus mejores funciones requieren la nube',
-          'Los cuatro funcionan con Ollama; solo Tabby requiere su propio servidor backend',
+          'Continue.dev fue adquirido por Cursor (junio de 2026) — v2.0.0 es la última versión, el repositorio ahora es de solo lectura; sigue funcionando con Ollama pero ya no tiene mantenimiento',
+          'Cline es ahora la mejor alternativa gratuita BYOK con mantenimiento activo: VS Code + JetBrains, edición agéntica de archivos, herramientas MCP, más de 5M de instalaciones',
+          'Tabby ejecuta su propio servidor de inferencia (modelos 1–3B) — la menor latencia de autocompletado para equipos',
+          'Aider es la opción terminal-first — consciente de commits git, reescrituras multi-archivo, más de 44K estrellas en GitHub',
+          'Cursor ($20/mes Pro, basado en créditos) adquirió tanto Supermaven como Continue.dev; SpaceX acordó adquirir Cursor por $60.000 millones en junio de 2026',
+          'Todas las herramientas funcionan con Ollama; solo Tabby requiere su propio servidor backend',
         ],
       },
       rankedList: {
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Continue es el mejor plugin IDE para LLMs locales en 2026 porque soporta Ollama de forma nativa, funciona tanto en VS Code como en JetBrains, y ofrece chat, autocompletado y edición de código sin ninguna dependencia de la nube.',
+            text: 'Cline es el mejor plugin IDE para LLMs locales en 2026 porque soporta Ollama de forma nativa, funciona tanto en VS Code como en JetBrains, y añade edición agéntica de archivos y herramientas MCP sin ninguna dependencia de la nube — Continue, la anterior opción #1, fue adquirido por Cursor en junio de 2026 y ya no tiene desarrollo activo.',
           },
           {
             type: 'plain-terms',
@@ -1097,18 +1097,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'Continue — El mejor en general (gratuito, open-source)',
-            content: 'Continue es el asistente de codificación de IA open-source líder para LLMs locales. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas MCP, indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ, PyCharm, GoLand, WebStorm y Rider. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.3 8B (chat). Nota (junio 2026): Continue fue adquirido por Cursor. La versión 2.0.0 es la última publicación; el repositorio de GitHub ahora es de solo lectura. La extensión sigue funcionando con Ollama, pero el equipo original no la desarrollará más.',
+            title: 'Cline — Mejor opción global (gratuito, código abierto, mantenimiento activo)',
+            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica con mejor mantenimiento para LLMs locales en 2026 — tomó el primer puesto después de que Continue fuera adquirido por Cursor en junio de 2026. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen3-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Precio: gratuito (BYOK — trae tu propia clave API de Anthropic, OpenAI, o más de 30 proveedores); ClinePass a $9,99/mes para enrutamiento gestionado sin necesidad de clave API; Teams a $20/usuario/mes (primeros 10 puestos gratuitos). Disponible en VS Code y JetBrains (IntelliJ, PyCharm, PhpStorm, WebStorm, GoLand, Rider y más). Backends compatibles: Ollama, LM Studio, proxy LiteLLM y más de 30 proveedores cloud. Más de 8M de desarrolladores.',
             affiliateLinks: [
-              { label: 'Continue en VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
+              { label: 'Cline en VS Code Marketplace (gratuito)', url: 'https://github.com/cline/cline' },
             ],
           },
           {
             rank: 2,
-            title: 'Cline — El mejor para tareas de codificación agéntica',
-            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica más potente para LLMs locales. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen3-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Disponible en VS Code y JetBrains (IntelliJ, PyCharm, WebStorm). Precio: gratuito (BYOK) o ClinePass a $9,99/mes; Teams a $20/usuario/mes (primeros 10 puestos gratuitos). Backends compatibles: Ollama, LM Studio, proxy LiteLLM.',
+            title: 'Continue — Todavía funcional, sin mantenimiento [Adquirido por Cursor, junio de 2026 — versión final v2.0.0]',
+            content: 'Continue fue el asistente de codificación de IA open-source líder para LLMs locales antes de su adquisición por Cursor en junio de 2026. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas del protocolo de contexto de modelo (MCP), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ, PyCharm, GoLand, WebStorm y Rider. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.3 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos. Nota (junio de 2026): Continue fue adquirido por Cursor. La versión 2.0.0 es la última publicación; el repositorio de GitHub ahora es de solo lectura. La extensión sigue instalándose y funcionando completamente con Ollama y BYO-LLM — pero sin más desarrollo por parte del equipo original. Hay forks de la comunidad activos.',
             affiliateLinks: [
-              { label: 'Cline en VS Code Marketplace (gratuito)', url: 'https://github.com/cline/cline' },
+              { label: 'Continue en VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
             ],
           },
           {
@@ -1138,27 +1138,49 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       setupGuide: {
-        title: 'Configuración rápida: Continue + Ollama en VS Code',
-        content: 'La forma más rápida de empezar a programar con LLM local:',
+        title: 'Configuración rápida: Cline + Ollama en VS Code',
+        content: 'La forma más rápida de empezar a programar con LLM local con la actual elección #1:',
         numberedItems: [
           'Instala Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
-          'Descarga un modelo de codificación: `ollama pull qwen2.5-coder:14b`',
-          'En VS Code, instala Continue desde el marketplace de extensiones',
-          'Abre la configuración de Continue (Cmd+Shift+P → "Continue: Open Config")',
-          'Añade el proveedor Ollama: define `provider: "ollama"`, `model: "qwen2.5-coder:14b"`',
-          'Reinicia VS Code — la pestaña de Continue aparece en la barra lateral',
-          'Presiona Cmd+L para abrir el chat, o empieza a escribir y presiona Tab para el autocompletado',
+          'Descarga un modelo de codificación: `ollama pull qwen2.5-coder:14b` (o `qwen3-coder:32b` para tareas agénticas)',
+          'En VS Code, instala Cline desde el marketplace de extensiones',
+          'Abre la barra lateral de Cline y haz clic en el icono de configuración (engranaje)',
+          'Define el proveedor API como "Ollama", la URL base como `http://localhost:11434`, y el ID del modelo como el modelo que descargaste',
+          'Reinicia VS Code — el icono de Cline aparece en la barra lateral',
+          'Escribe una tarea en el panel de chat de Cline — puede leer/escribir archivos y ejecutar comandos de terminal directamente',
+        ],
+      },
+      aiderSetupGuide: {
+        title: 'Configuración rápida: Aider + Ollama (terminal)',
+        content: 'Para codificación de IA nativa de terminal y consciente de git — documentación oficial de Aider: aider.chat/docs/llms/ollama.html',
+        numberedItems: [
+          'Instala Ollama y descarga un modelo: `ollama pull qwen2.5-coder:32b`',
+          'Instala Aider: `python -m pip install aider-install && aider-install`',
+          'Define la URL base de la API de Ollama: `export OLLAMA_API_BASE=http://127.0.0.1:11434`',
+          'Ejecuta Aider apuntando a tu modelo local: `aider --model ollama/qwen2.5-coder:32b`',
+          'Para la configuración de dos modelos arquitecto/editor, añade `--architect-model ollama/qwen2.5-coder:32b --editor-model ollama/qwen2.5-coder:7b`',
+          'Aider hace commit automáticamente de cada cambio en git — revísalos con `git log` o `git diff HEAD~1`',
         ],
       },
       modelRecommendations: {
         title: 'Mejores modelos locales por plugin y tarea',
         columns: ['Plugin', 'Mejor modelo de codificación (local)', 'Mejor modelo de chat (local)', 'VRAM mínima'],
         rows: [
-          { 'Plugin': 'Continue', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B Q8', 'Mejor modelo de chat (local)': 'Llama 3.3 8B Q4', 'VRAM mínima': '16 GB' },
           { 'Plugin': 'Cline', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 32B Q4', 'Mejor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
+          { 'Plugin': 'Continue (heredado)', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B Q8', 'Mejor modelo de chat (local)': 'Llama 3.3 8B Q4', 'VRAM mínima': '16 GB' },
           { 'Plugin': 'Tabby', 'Mejor modelo de codificación (local)': 'StarCoder2-7B (integrado)', 'Mejor modelo de chat (local)': 'N/A (solo código)', 'VRAM mínima': '8 GB' },
           { 'Plugin': 'Aider', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B (editor)', 'Mejor modelo de chat (local)': 'Qwen3-Coder 32B (arquitecto)', 'VRAM mínima': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Mejor modelo de codificación (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Mejor modelo de chat (local)': 'Qwen3 14B', 'VRAM mínima': '16 GB' },
+        ],
+      },
+      lmStudioPlugins: {
+        title: 'Mejores plugins de LM Studio (no es lo mismo que los plugins IDE)',
+        content: 'Esta es una pregunta distinta de "qué extensión IDE se conecta a LM Studio" (cubierto arriba). LM Studio tiene su propio sistema de plugins desde finales de 2024: los plugins se ejecutan dentro de LM Studio mismo — como código TypeScript o Python en un worker en sandbox — y pueden interceptar solicitudes de inferencia, añadir procesadores de prompts, conectar backends de llamada a herramientas, o añadir nuevos paneles de interfaz. Se instalan desde el marketplace curado en lmstudio.ai/plugins; cada plugin declara los permisos requeridos (acceso a red, lectura del sistema de archivos) de antemano, y puedes revocarlos después desde Ajustes sin desinstalar. Categorías comunes en 2026: plugins de búsqueda web, preprocesadores RAG/recuperación de documentos, preprocesadores OCR, plugins de conjunto de herramientas agénticas, herramientas de acceso a shell/archivos, y plugins de memoria.',
+        items: [
+          '**Plugins de búsqueda web**: permiten que un modelo local en LM Studio incorpore resultados web en vivo a su contexto — útil ya que los modelos locales no tienen acceso integrado a internet.',
+          '**Plugins RAG / de documentos**: indexan una carpeta local de PDFs o archivos de texto y recuperan fragmentos relevantes automáticamente por consulta.',
+          '**Plugins de conjunto de herramientas agénticas**: dan al modelo acceso a shell, lectura/escritura de archivos, o ejecución de tareas de múltiples pasos directamente dentro de la interfaz de chat de LM Studio — la misma categoría de capacidad que Cline ofrece para VS Code, pero ejecutándose dentro de LM Studio en lugar de un editor.',
+          '**Plugins de memoria**: mantienen el contexto entre sesiones de chat en lugar de empezar de cero cada vez.',
         ],
       },
       faq: {
@@ -1166,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Puede Continue reemplazar completamente a GitHub Copilot para uso local?',
-            a: 'Para la mayoría de los casos de uso, sí. Continue con Qwen3-Coder 14B Q8 ofrece una calidad de autocompletado comparable a GitHub Copilot para Python, TypeScript y Go. Copilot aún tiene ventaja con APIs muy nuevas y uso de librerías oscuras donde su ventaja de datos de entrenamiento se nota. Para codebases donde la privacidad es crítica, Continue + Ollama local es la mejor opción.',
+            a: 'Desde junio de 2026, Continue fue adquirido por Cursor y la versión 2.0.0 es su última publicación (el repositorio es de solo lectura). La extensión sigue funcionando con Ollama y BYO-LLM, pero no recibe más desarrollo del equipo original. Como alternativa open-source con mantenimiento activo, Cline es el reemplazo recomendado — ofrece el mismo modelo BYOK, funciona en VS Code y JetBrains, y añade edición agéntica de archivos. GitHub Copilot Pro cuesta $10/mes con $15/mes en créditos de IA; Cline es gratuito con tu propia clave API.',
           },
           {
             q: '¿Qué plugin funciona mejor para refactorización multi-archivo?',
@@ -1174,11 +1196,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Tabby funciona sin GPU?',
-            a: 'Sí — Tabby puede ejecutarse en CPU con modelos pequeños (1–3B). Sin embargo, la latencia de autocompletado en CPU es de 500ms–2s, lo que se siente lento comparado con el objetivo de <200ms para una codificación fluida. Para máquinas solo con CPU, Continue + Ollama con un modelo rápido de 1B o 3B ofrece mejor control de latencia.',
+            a: 'Sí — Tabby puede ejecutarse en CPU con modelos pequeños (1–3B). Sin embargo, la latencia de autocompletado en CPU es de 500ms–2s, lo que se siente lento comparado con el objetivo de <200ms para una codificación fluida. Para máquinas solo con CPU, Cline + Ollama con un modelo rápido de 1B o 3B ofrece mejor control de latencia.',
           },
           {
             q: '¿Puedo usar estos plugins con LM Studio en lugar de Ollama?',
-            a: 'Sí. LM Studio expone una API compatible con OpenAI en el puerto 1234 por defecto. Define el proveedor de tu plugin como "openai" con la URL base `http://localhost:1234/v1` y usa cualquier nombre de modelo de tu biblioteca de LM Studio. Continue, Cline y Aider soportan todos esta configuración.',
+            a: 'Sí. LM Studio expone una API compatible con OpenAI en el puerto 1234 por defecto. Define el proveedor de tu plugin como "openai" con la URL base `http://localhost:1234/v1` y usa cualquier nombre de modelo de tu biblioteca de LM Studio. Cline, Continue y Aider soportan todos esta configuración. Ten en cuenta que esto es distinto del propio sistema de plugins de LM Studio (ver la sección de Plugins de LM Studio arriba) — ese sistema sirve para extender LM Studio mismo, no para conectar un IDE externo a él.',
+          },
+          {
+            q: '¿Qué IDEs de JetBrains soportan plugins de LLM local?',
+            a: 'Cline y Continue ofrecen plugins de JetBrains que funcionan en toda la familia JetBrains: IntelliJ IDEA, PyCharm, PhpStorm, WebStorm, GoLand y Rider. Instálalos desde el JetBrains Marketplace (no el VS Code Marketplace) y configura los mismos ajustes de proveedor Ollama/LM Studio que en la versión de VS Code. Tabby también tiene soporte para JetBrains solo para autocompletado.',
           },
         ],
       },
@@ -1203,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Puede Continue reemplazar completamente a GitHub Copilot para uso local?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Para la mayoría de los casos de uso, sí. Continue con Qwen3-Coder 14B Q8 ofrece una calidad de autocompletado comparable para Python, TypeScript y Go. Para codebases donde la privacidad es crítica, Continue + Ollama local es la mejor opción.',
+            text: 'Desde junio de 2026, Continue fue adquirido por Cursor y v2.0.0 es su última publicación. La extensión sigue funcionando con Ollama, pero Cline es ahora la alternativa open-source recomendada con mantenimiento activo — gratuita con BYOK, funciona en VS Code y JetBrains, y añade edición agéntica de archivos.',
           },
         },
         {
@@ -1214,6 +1240,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Cline (VS Code) o Aider (terminal). Ambos leen múltiples archivos y realizan ediciones coordinadas. Cline es mejor para retroalimentación visual; Aider para commits conscientes de git. Usa modelos de 32B para refactorizaciones complejas fiables.',
           },
         },
+        {
+          '@type': 'Question',
+          name: '¿Qué IDEs de JetBrains soportan plugins de LLM local?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Cline y Continue ofrecen plugins de JetBrains que cubren IntelliJ IDEA, PyCharm, PhpStorm, WebStorm, GoLand y Rider. Instálalos desde el JetBrains Marketplace y usa los mismos ajustes de proveedor Ollama/LM Studio que en la versión de VS Code.',
+          },
+        },
       ],
     },
     itemListSchema: {
@@ -1222,8 +1256,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: 'Mejores plugins IDE para LLMs locales 2026',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Continue', description: 'El mejor en general — Ollama nativo, VS Code + JetBrains, gratuito' },
-        { '@type': 'ListItem', position: 2, name: 'Cline', description: 'El mejor agéntico — lee y escribe archivos, ejecuta comandos, VS Code' },
+        { '@type': 'ListItem', position: 1, name: 'Cline', description: 'El mejor en general — mantenimiento activo, agéntico, VS Code + JetBrains, gratuito BYOK' },
+        { '@type': 'ListItem', position: 2, name: 'Continue', description: 'Todavía funcional pero sin mantenimiento desde la adquisición por Cursor, junio de 2026' },
         { '@type': 'ListItem', position: 3, name: 'Tabby', description: 'El mejor autocompletado self-hosted — modelos FIM 1–3B, todos los editores' },
         { '@type': 'ListItem', position: 4, name: 'Aider', description: 'El mejor nativo de terminal — consciente de git, ediciones multi-archivo, open-source' },
         { '@type': 'ListItem', position: 5, name: 'Cursor', description: 'La mejor opción comercial — soporte de modelos locales, $20/mes Pro' },
@@ -1234,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejores plugins IDE para LLMs locales en 2026 (VS Code y JetBrains)',
       description: 'Comparativa clasificada de Continue, Cline, Tabby, Aider y Cursor para uso de LLM local en VS Code y JetBrains. Incluye guía de configuración, recomendaciones de modelos y comparación de rendimiento.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-07-14',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-ide-plugins-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
