@@ -1196,7 +1196,7 @@ schema: {
       gammaDescription: 'A apresentação abaixo cobre: top 10 modelos Ollama por número de downloads, comparação de desempenho (60-74% HumanEval), melhores modelos por caso de uso (chat, programação, raciocínio, visão), raciocínio chain-of-thought do DeepSeek-R1 e comandos exatos de download. Baixe o PDF como seu cartão de referência para seleção de modelos Ollama.',
     },
     de: {
-      theme: 'Beste Modelle',
+      theme: 'Best Models',
       title: 'Ollama Update Juli 2026: v0.32.0 + Top 10 Open-Source-Modelle',
       seoTitle: 'Ollama Juli 2026 Update: v0.32.0 + Top 10 Modelle (Rangliste)',
       intro: 'Aktualisiert im Juli 2026. Die aktuelle Ollama-Version ist v0.32.0 (veröffentlicht am 11. Juli 2026), die eine interaktive "Chat, Code & Work"-Agenten-Erfahrung einführt. Die neuesten Modelle in der Bibliothek seit Juni sind Laguna XS 2.1 (Poolside, agentisches Coding) und Kimi K2.7 Code (Moonshot AI), die sich zu Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss und Gemma 4 gesellen. Am häufigsten heruntergeladen bleibt insgesamt die Llama-Familie (Llama 4 Scout, Llama 3.x); das beste Modell für Consumer-Hardware ist weiterhin Qwen 3.6 27B (77,2% SWE-bench).',
@@ -1632,7 +1632,7 @@ schema: {
       gammaDescription: 'Die Präsentation behandelt: Top 10 Ollama-Modelle nach Download-Häufigkeit, Leistungsvergleich (60-74% HumanEval), beste Modelle nach Anwendungsfall (Chat, Codierung, Reasoning, Vision), DeepSeek-R1 Chain-of-Thought-Reasoning und exakte Pull-Befehle. Laden Sie die PDF als Ihre Ollama-Modellauswahl-Referenzkarte herunter.',
     },
     fr: {
-      theme: 'Meilleurs modèles',
+      theme: 'Best Models',
       title: 'Ollama Mise à Jour Juillet 2026 : v0.32.0 + Top 10 Modèles Open Source',
       seoTitle: 'Ollama Juillet 2026 Mise à Jour : v0.32.0 + Top 10 Modèles (Classés)',
       intro: 'Mise à jour juillet 2026. La version actuelle d\'Ollama est la v0.32.0 (publiée le 11 juillet 2026), qui introduit une expérience d\'agent interactive « Chat, Code & Work ». Les modèles les plus récents de la bibliothèque sont Laguna XS 2.1 (Poolside, 2 juillet, codage agentique) et Kimi K2.7 Code (Moonshot AI, juin 2026), rejoignant Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss et Gemma 4. Le plus téléchargé reste la famille Llama (Llama 4 Scout, Llama 3.x) ; le meilleur global sur materiel grand public est Qwen 3.6 27B (77,2% SWE-bench).',
@@ -2058,7 +2058,7 @@ schema: {
       gammaDescription: 'La présentation ci-dessous couvre : top 10 modèles Ollama par nombre de téléchargements, comparaison de performance (60-74% HumanEval), meilleurs modèles par cas d\'utilisation (chat, codage, raisonnement, vision), DeepSeek-R1 chain-of-thought reasoning et commandes pull exactes. Téléchargez le PDF comme votre carte de référence de sélection de modèles Ollama.',
     },
     ja: {
-      theme: 'ベストモデル',
+      theme: 'Best Models',
       title: 'Ollama 2026年7月アップデート：v0.32.0 + トップ10オープンソースモデル',
       seoTitle: 'Ollama 2026年7月 v0.32.0 アップデート + トップ10モデルランキング',
       intro: '2026年7月更新。現在のOllamaバージョンはv0.32.0（2026年7月11日リリース）で、「Chat, Code & Work」エージェント体験を導入し、Codex AppはChatGPT Appに改称されました。今月ライブラリに加わった最新モデルはLaguna XS 2.1（Poolside、7月2日、33B総パラメータ/3B活性MoE、エージェント型長期タスク・コーディング向け、256Kコンテキスト）とKimi K2.7 Code（Moonshot AI、Kimi K2.6ベースのコーディング特化エージェントモデル）で、Kimi K2.6、Qwen 3.6、GLM-5.1、gpt-oss、Gemma 4に加わります。全体での最多ダウンロードは引き続きLlamaファミリー（Llama 4 Scout、Llama 3.x）、コンシューマーハードウェアでの総合最高はQwen 3.6 27B（77.2% SWE-bench）です。',
@@ -2490,7 +2490,7 @@ schema: {
       gammaDescription: '下記のスライドデッキは以下をカバーしています：ダウンロード数別の Top 10 Ollama モデル、パフォーマンス比較（60-74% HumanEval）、ユースケース別の最高モデル（チャット、コーディング、推論、ビジョン）、DeepSeek-R1 chain-of-thought 推論、および正確なプルコマンド。Ollama モデル選択リファレンスカードとして PDF をダウンロードしてください。',
     },
     zh: {
-      theme: '最佳模型',
+      theme: 'Best Models',
       title: 'Ollama 2026年7月更新：v0.32.0 + Top 10开源模型',
       seoTitle: 'Ollama 2026年7月 v0.32.0 更新 + Top 10模型排名',
       intro: '2026年7月更新。当前Ollama版本为v0.32.0（2026年7月11日发布），新增交互式"Chat, Code & Work"代理体验。自6月以来库中新增的最新模型为Laguna XS 2.1（Poolside，专注智能体编程）和Kimi K2.7 Code（Moonshot AI），与Kimi K2.6、Qwen 3.6、GLM-5.1、gpt-oss和Gemma 4并列。总下载量最高仍为Llama系列（Llama 4 Scout、Llama 3.x）；消费级硬件综合最佳仍为Qwen 3.6 27B（77.2% SWE-bench）。',
