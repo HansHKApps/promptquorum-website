@@ -85,6 +85,27 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // DeepSeek Series 2026-06-19
   'deepseek-r1-distill-vram-cheatsheet',
   'best-deepseek-distill-for-your-gpu',
+
+  // 2026-07 batch — published (was SCAFFOLD ONLY)
+  'best-gpu-under-1000-local-llm',
+  'rtx-4060-vs-rtx-3060-12gb',
+  'best-intel-arc-gpu-local-llm',
+  'best-rtx-4090-setup-70b-models',
+  'best-npu-copilot-pc-local-llm',
+  'best-local-llm-macbook-air-no-egpu',
+  'best-local-llm-32gb-unified-memory-mac',
+  'best-windows-laptop-local-llm-under-1500',
+  'fine-tuning-7b-model-locally-hardware',
+  'm4-max-vs-m4-pro-local-llm',
+  'best-local-llm-under-8b-realtime-chat',
+  'gguf-vs-gptq-vs-awq',
+  'ollama-vs-vllm-vs-tgi',
+  'best-embedding-model-local-rag',
+  'best-local-llm-document-summarization',
+  'local-llm-raspberry-pi-5',
+  'best-korean-language-models-local',
+  'best-china-compliant-local-llm',
+  'best-local-llm-legal-medical-privacy',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

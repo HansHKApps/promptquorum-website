@@ -52,6 +52,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'vram-for-70b-model',
       'best-local-llm-6gb-vram',
       'best-quantization-6gb-vram',
+      'gguf-vs-gptq-vs-awq',
     ],
   },
   {
@@ -131,6 +132,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'mlx-vs-ollama-vs-llamacpp',
       'convert-ollama-model-to-mlx',
       'ollama-mlx-apple-silicon',
+      'ollama-vs-vllm-vs-tgi',
     ],
   },
   {
@@ -168,6 +170,10 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-mini-pc-for-local-llm',
       'best-moe-models-local-coding',
       'mistral-small-24b-vs-qwen-14b-vs-llama-8b',
+      'm4-max-vs-m4-pro-local-llm',
+      'best-local-llm-under-8b-realtime-chat',
+      'best-korean-language-models-local',
+      'best-china-compliant-local-llm',
     ],
   },
   {
@@ -211,6 +217,15 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'cloud-gpu-cost-per-hour',
       'best-egpu-ollama-macbook',
       'strix-halo-ollama-vulkan',
+      'best-gpu-under-1000-local-llm',
+      'rtx-4060-vs-rtx-3060-12gb',
+      'best-intel-arc-gpu-local-llm',
+      'best-rtx-4090-setup-70b-models',
+      'best-npu-copilot-pc-local-llm',
+      'best-local-llm-macbook-air-no-egpu',
+      'best-local-llm-32gb-unified-memory-mac',
+      'best-windows-laptop-local-llm-under-1500',
+      'fine-tuning-7b-model-locally-hardware',
     ],
   },
   {
@@ -246,6 +261,9 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'can-you-run-rag-on-2gb-ram',
       'best-local-llm-16gb-ram-laptop',
       'best-budget-ai-laptop-under-1000',
+      'best-embedding-model-local-rag',
+      'best-local-llm-document-summarization',
+      'local-llm-raspberry-pi-5',
     ],
   },
   {
@@ -316,6 +334,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'is-deepseek-gdpr-safe',
       'can-local-llm-help-gdpr',
       'best-vpn-downloading-ai-models',
+      'best-local-llm-legal-medical-privacy',
     ],
   },
 ]
