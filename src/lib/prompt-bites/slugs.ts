@@ -132,4 +132,16 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
 
   // Cluster H-extension — Privacy & Compliance
   'best-local-llm-legal-medical-privacy':      'bestLocalLlmLegalMedicalPrivacy',
+
+  // 2026-07 batch, Round 2 — SCAFFOLD ONLY (noindex; not in published.ts or categories.ts)
+  'best-local-llm-benchmarking-tool':          'bestLocalLlmBenchmarkingTool',
+  'best-local-llm-for-sql-data-analysis':      'bestLocalLlmForSqlDataAnalysis',
+  'best-local-llm-for-translation':            'bestLocalLlmForTranslation',
+  'speculative-decoding-explained':            'speculativeDecodingExplained',
+  'lora-vs-full-fine-tuning':                  'loraVsFullFineTuning',
+  'best-local-llm-license-comparison':         'bestLocalLlmLicenseComparison',
+  'best-structured-json-output-local-llm':     'bestStructuredJsonOutputLocalLlm',
+  'best-model-merging-tool-mergekit':          'bestModelMergingToolMergekit',
+  'wsl2-vs-native-windows-ollama':              'wsl2VsNativeWindowsOllama',
+  'best-gpu-local-llm-uae-price':              'bestGpuLocalLlmUaePrice',
 }

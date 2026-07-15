@@ -22,6 +22,11 @@
  * and inline markdown links to other year-bearing article slugs trip it too.
  * See validate-freshness-tier.mjs's stripToProseOnly() for the same reasoning
  * applied to that sibling validator.
+ *
+ * 2026-07-15: added isLicenseIdentifier() — open-source LICENSE identifiers
+ * (Apache 2.0, GPL 3.0, MPL 2.0, etc.) pair a static name with a version
+ * number that never goes stale, unlike a model/software version. See that
+ * function's own comment for the narrow-window rationale.
  */
 
 import fs from 'fs';
@@ -117,6 +122,36 @@ function isScoringThreshold(line, matchIndex, matchLength) {
   return SCORING_THRESHOLD_CONTEXT.test(line.slice(windowStart, windowEnd))
 }
 
+// Open-source/open-weight LICENSE identifiers (Apache 2.0, GPL 3.0, MPL 2.0,
+// etc.) pair a static, canonical name with a version number that does not go
+// stale the way a model or software release does — Apache License 2.0 has
+// been the same document since 2004 and isn't a freshness claim. Extracted
+// directly from the real 2026-07 false-positive case
+// (best-local-llm-license-comparison.ts, all 9 language blocks, 89 hits on
+// "Apache 2.0"). Narrow like SCORING_THRESHOLD_CONTEXT above: the license
+// name must appear immediately before the number (how these names are
+// always written — "Apache 2.0", never "2.0 Apache"), in a tight ±25-char
+// window, so it can't suppress an unrelated version number (e.g. "Gemini
+// 2.5") that merely shares a sentence with a license name mentioned earlier.
+const LICENSE_NAME_CONTEXT = new RegExp(
+  [
+    'Apache', 'Apache License', 'Apache-',
+    'GPL', 'GPLv', 'LGPL', 'AGPL',
+    'MPL', 'Mozilla Public License',
+    'EPL', 'EUPL',
+    'CC BY', 'CC-BY', 'Creative Commons',
+    'GNU General Public License',
+    'GNU Lesser General Public License',
+    'GNU Affero General Public License',
+  ].map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'),
+  'i'
+)
+
+function isLicenseIdentifier(line, matchIndex) {
+  const windowStart = Math.max(0, matchIndex - 25)
+  return LICENSE_NAME_CONTEXT.test(line.slice(windowStart, matchIndex))
+}
+
 function validateEvergreen(filePath, content) {
   const violations = [];
   const lines = content.split('\n');
@@ -168,6 +203,7 @@ function validateEvergreen(filePath, content) {
         // number later in the same line, and vice versa.
         for (const m of scanLine.matchAll(pattern)) {
           if (isScoringThreshold(scanLine, m.index, m[0].length)) continue
+          if (isLicenseIdentifier(scanLine, m.index)) continue
           violations.push({
             file: filePath,
             line: lineNum,

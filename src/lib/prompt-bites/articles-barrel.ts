@@ -96,6 +96,18 @@ import { article as bestKoreanLanguageModelsLocal } from './articles/best-korean
 import { article as bestChinaCompliantLocalLlm } from './articles/best-china-compliant-local-llm'
 import { article as bestLocalLlmLegalMedicalPrivacy } from './articles/best-local-llm-legal-medical-privacy'
 
+// 2026-07 batch, Round 2 — SCAFFOLD ONLY
+import { article as bestLocalLlmBenchmarkingTool } from './articles/best-local-llm-benchmarking-tool'
+import { article as bestLocalLlmForSqlDataAnalysis } from './articles/best-local-llm-for-sql-data-analysis'
+import { article as bestLocalLlmForTranslation } from './articles/best-local-llm-for-translation'
+import { article as speculativeDecodingExplained } from './articles/speculative-decoding-explained'
+import { article as loraVsFullFineTuning } from './articles/lora-vs-full-fine-tuning'
+import { article as bestLocalLlmLicenseComparison } from './articles/best-local-llm-license-comparison'
+import { article as bestStructuredJsonOutputLocalLlm } from './articles/best-structured-json-output-local-llm'
+import { article as bestModelMergingToolMergekit } from './articles/best-model-merging-tool-mergekit'
+import { article as wsl2VsNativeWindowsOllama } from './articles/wsl2-vs-native-windows-ollama'
+import { article as bestGpuLocalLlmUaePrice } from './articles/best-gpu-local-llm-uae-price'
+
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
   whatIsQ4KMQuantization,
@@ -190,4 +202,16 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestKoreanLanguageModelsLocal,
   bestChinaCompliantLocalLlm,
   bestLocalLlmLegalMedicalPrivacy,
+
+  // 2026-07 batch, Round 2 — SCAFFOLD ONLY
+  bestLocalLlmBenchmarkingTool,
+  bestLocalLlmForSqlDataAnalysis,
+  bestLocalLlmForTranslation,
+  speculativeDecodingExplained,
+  loraVsFullFineTuning,
+  bestLocalLlmLicenseComparison,
+  bestStructuredJsonOutputLocalLlm,
+  bestModelMergingToolMergekit,
+  wsl2VsNativeWindowsOllama,
+  bestGpuLocalLlmUaePrice,
 }
