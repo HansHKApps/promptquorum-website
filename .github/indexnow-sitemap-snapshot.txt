@@ -277,12 +277,15 @@ https://www.promptquorum.com/prompt-bites/best-local-llm-apps-android
 https://www.promptquorum.com/prompt-bites/best-local-llm-apps-japan-android
 https://www.promptquorum.com/prompt-bites/best-local-llm-benchmarking-tool
 https://www.promptquorum.com/prompt-bites/best-local-llm-coding-12gb-vram
+https://www.promptquorum.com/prompt-bites/best-local-llm-customer-support-chatbot
 https://www.promptquorum.com/prompt-bites/best-local-llm-document-summarization
 https://www.promptquorum.com/prompt-bites/best-local-llm-for-sql-data-analysis
 https://www.promptquorum.com/prompt-bites/best-local-llm-for-translation
 https://www.promptquorum.com/prompt-bites/best-local-llm-legal-medical-privacy
 https://www.promptquorum.com/prompt-bites/best-local-llm-license-comparison
 https://www.promptquorum.com/prompt-bites/best-local-llm-macbook-air-no-egpu
+https://www.promptquorum.com/prompt-bites/best-local-llm-obsidian-integration
+https://www.promptquorum.com/prompt-bites/best-local-llm-reasoning-ui
 https://www.promptquorum.com/prompt-bites/best-local-llm-under-8b-realtime-chat
 https://www.promptquorum.com/prompt-bites/best-mini-pc-for-local-llm
 https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on
@@ -296,6 +299,7 @@ https://www.promptquorum.com/prompt-bites/best-ollama-models-cpu-only
 https://www.promptquorum.com/prompt-bites/best-ollama-models-right-now
 https://www.promptquorum.com/prompt-bites/best-ollama-models-rtx-3060-12gb
 https://www.promptquorum.com/prompt-bites/best-open-source-alternatives-to-chatgpt-plus
+https://www.promptquorum.com/prompt-bites/best-pii-redaction-tool-local-llm
 https://www.promptquorum.com/prompt-bites/best-quantization-6gb-vram
 https://www.promptquorum.com/prompt-bites/best-qwen-model-for-coding
 https://www.promptquorum.com/prompt-bites/best-rtx-4090-setup-70b-models
@@ -323,6 +327,7 @@ https://www.promptquorum.com/prompt-bites/hybrid-local-cloud-llm-strategy
 https://www.promptquorum.com/prompt-bites/is-deepseek-gdpr-safe
 https://www.promptquorum.com/prompt-bites/is-qwen-gdpr-compliant
 https://www.promptquorum.com/prompt-bites/jan-vs-lm-studio
+https://www.promptquorum.com/prompt-bites/llama-cpp-gguf-conversion-guide
 https://www.promptquorum.com/prompt-bites/local-llm-raspberry-pi-5
 https://www.promptquorum.com/prompt-bites/lora-vs-full-fine-tuning
 https://www.promptquorum.com/prompt-bites/m4-max-vs-m4-pro-local-llm
@@ -334,6 +339,7 @@ https://www.promptquorum.com/prompt-bites/ollama-latest-version
 https://www.promptquorum.com/prompt-bites/ollama-mlx-apple-silicon
 https://www.promptquorum.com/prompt-bites/ollama-vs-lm-studio
 https://www.promptquorum.com/prompt-bites/ollama-vs-vllm-vs-tgi
+https://www.promptquorum.com/prompt-bites/prompt-caching-for-local-llm-explained
 https://www.promptquorum.com/prompt-bites/q4-k-m-vs-q8-0
 https://www.promptquorum.com/prompt-bites/qwen-14b-vs-llama-8b
 https://www.promptquorum.com/prompt-bites/qwen-coder-vs-deepseek-coder
@@ -341,6 +347,7 @@ https://www.promptquorum.com/prompt-bites/radeon-6800m-local-llm
 https://www.promptquorum.com/prompt-bites/rtx-4060-vs-rtx-3060-12gb
 https://www.promptquorum.com/prompt-bites/run-local-llm-on-xperia-japan
 https://www.promptquorum.com/prompt-bites/runpod-vs-vastai-pricing
+https://www.promptquorum.com/prompt-bites/sglang-vs-vllm-local-serving
 https://www.promptquorum.com/prompt-bites/sillytavern-chinese-roleplay-setup
 https://www.promptquorum.com/prompt-bites/speculative-decoding-explained
 https://www.promptquorum.com/prompt-bites/strix-halo-ollama-vulkan
