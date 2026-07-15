@@ -325,6 +325,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-05-15',
       },
+      es: {
+        question: '¿Debo comprar un Mac o una GPU NVIDIA para LLMs locales?',
+        answer: 'Compra Mac (M5 Max 128GB) si ejecutas modelos 70B o necesitas stacks multi-modelo. Compra NVIDIA (RTX 4090) si quieres máxima velocidad en modelos 8B–24B y aceptas $394/año en electricidad. El punto de cruce: ~24GB de tamaño de modelo.',
+        bullets: [
+          'M5 Max 128GB: único hardware consumer que ejecuta 70B Q4 (42GB) sin dual-GPU',
+          'RTX 4090: 120–140 tok/s en modelos 8B vs M5 Max 100–120 tok/s — 20% más rápido en modelos pequeños',
+          'Consumo: Mac Mini M5 Pro a $35/año vs RTX 4090 a $394/año (operación 24/7)',
+          'TCO a 3 años: Mac Mini M5 Pro $1.304 vs RTX 4090 desktop $3.682',
+          'Fine-tuning: el ecosistema NVIDIA CUDA domina — usa NVIDIA para entrenamiento, Mac para inferencia',
+        ],
+        updatedDate: '2026-05-15',
+      },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
@@ -616,16 +628,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock: '**نقطة التقاطع: نحو 24 GB من حجم النموذج. RTX 4090 (1,008 GB/s) أسرع في نماذج 8B–24B. وM5 Max (128 GB من الذاكرة الموحدة) هو الخيار الاستهلاكي الوحيد لنماذج 70B دون تعقيد كرتي رسوميات. إجمالي تكلفة الملكية لـ 3 سنوات: Mac Mini M5 Pro 1,304 دولار مقابل RTX 4090 مكتبي 3,682 دولار. الاستهلاك: Mac Mini 35 دولارًا سنويًا مقابل RTX 4090 394 دولارًا سنويًا في التشغيل على مدار الساعة. قد تتفاوت الأسعار حسب بلدك.**',
     ctaText: 'تختار بين Mac وNVIDIA للذكاء الاصطناعي المحلي؟ قارن مُخرجك المحلي لـ Llama أو Mistral (المُشغَّل على أي من المنصتين) مع GPT-4 وClaude وGemini و22 نموذجًا آخر عبر PromptQuorum — تحقق من أن استثمارك في العتاد يقدّم نتائج بجودة سحابية لمهامك المحددة قبل أن تلتزم بـ 1,200–4,000 دولار على العتاد.',
     quickAnswerTop: {
-      question: 'هل أشتري Mac أم GPU من NVIDIA لنماذج LLM المحلية؟',
-      answer: 'اشترِ Mac (M5 Max 128GB) إن كنت تشغّل نماذج 70B أو تحتاج حزمًا متعددة النماذج. اشترِ NVIDIA (RTX 4090) إن أردت أقصى سرعة على نماذج 8B–24B وكنت تقبل 394 دولارًا سنويًا كهرباء. نقطة التقاطع: نحو 24GB من حجم النموذج.',
-      bullets: [
-        'M5 Max 128GB: عتاد المستهلك الوحيد الذي يشغّل 70B Q4 (42GB) دون كرتي رسوميات',
-        'RTX 4090: 120–140 tok/s على نماذج 8B مقابل M5 Max 100–120 tok/s — أسرع بنسبة 20% على النماذج الصغيرة',
-        'الطاقة: Mac Mini M5 Pro بـ 35 دولارًا سنويًا مقابل RTX 4090 بـ 394 دولارًا سنويًا (تشغيل على مدار الساعة)',
-        'إجمالي تكلفة الملكية لـ 3 سنوات: Mac Mini M5 Pro 1,304 دولار مقابل RTX 4090 مكتبي 3,682 دولار',
-        'الضبط الدقيق: تهيمن منظومة NVIDIA CUDA — استخدم NVIDIA للتدريب وMac للاستدلال',
-      ],
-      updatedDate: '2026-05-15',
+      ar: {
+        question: 'هل أشتري Mac أم GPU من NVIDIA لنماذج LLM المحلية؟',
+        answer: 'اشترِ Mac (M5 Max 128GB) إن كنت تشغّل نماذج 70B أو تحتاج حزمًا متعددة النماذج. اشترِ NVIDIA (RTX 4090) إن أردت أقصى سرعة على نماذج 8B–24B وكنت تقبل 394 دولارًا سنويًا كهرباء. نقطة التقاطع: نحو 24GB من حجم النموذج.',
+        bullets: [
+          'M5 Max 128GB: عتاد المستهلك الوحيد الذي يشغّل 70B Q4 (42GB) دون كرتي رسوميات',
+          'RTX 4090: 120–140 tok/s على نماذج 8B مقابل M5 Max 100–120 tok/s — أسرع بنسبة 20% على النماذج الصغيرة',
+          'الطاقة: Mac Mini M5 Pro بـ 35 دولارًا سنويًا مقابل RTX 4090 بـ 394 دولارًا سنويًا (تشغيل على مدار الساعة)',
+          'إجمالي تكلفة الملكية لـ 3 سنوات: Mac Mini M5 Pro 1,304 دولار مقابل RTX 4090 مكتبي 3,682 دولار',
+          'الضبط الدقيق: تهيمن منظومة NVIDIA CUDA — استخدم NVIDIA للتدريب وMac للاستدلال',
+        ],
+        updatedDate: '2026-05-15',
+      },
     },
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },

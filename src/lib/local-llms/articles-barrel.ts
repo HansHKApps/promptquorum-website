@@ -70,6 +70,7 @@ import { article as a_best_arabic_local_llms_2026 } from "./articles/best-arabic
 import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
+import { article as a_apple_silicon_vs_nvidia_gpu_local_llm } from "./articles/apple-silicon-vs-nvidia-gpu-local-llm";
 import { article as a_double_local_llm_speed } from "./articles/double-local-llm-speed";
 import { article as a_best_gpus_for_local_llms } from "./articles/best-gpus-for-local-llms";
 import { article as a_run_70b_models_24gb_vram } from "./articles/run-70b-models-24gb-vram";
@@ -181,6 +182,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "local-llm-hardware-guide-2026": a_local_llm_hardware_guide_2026,
   "vram-calculator-local-llm": a_vram_calculator_local_llm,
   "gpu-vs-cpu-vs-apple-silicon": a_gpu_vs_cpu_vs_apple_silicon,
+  "apple-silicon-vs-nvidia-gpu-local-llm": a_apple_silicon_vs_nvidia_gpu_local_llm,
   "double-local-llm-speed": a_double_local_llm_speed,
   "best-gpus-for-local-llms": a_best_gpus_for_local_llms,
   "run-70b-models-24gb-vram": a_run_70b_models_24gb_vram,
