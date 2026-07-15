@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-07-15T07:43:53.991Z",
+  "scope": "EN articles: local-llms, prompt-engineering, power-local-llm (blog excluded — see docs)",
+  "unweighted": {
+    "n": 271,
+    "meanDays": 37.1,
+    "medianDays": 25,
+    "buckets": [
+      {
+        "label": "0-5",
+        "count": 76,
+        "pct": 28
+      },
+      {
+        "label": "6-15",
+        "count": 25,
+        "pct": 9.2
+      },
+      {
+        "label": "16-30",
+        "count": 58,
+        "pct": 21.4
+      },
+      {
+        "label": "31-60",
+        "count": 24,
+        "pct": 8.9
+      },
+      {
+        "label": "61-120",
+        "count": 87,
+        "pct": 32.1
+      },
+      {
+        "label": "121+",
+        "count": 1,
+        "pct": 0.4
+      }
+    ]
+  },
+  "warnings": [
+    "local-llms/local-llm-pc-build-1000: no content file (Coming Soon placeholder) — skipped",
+    "local-llms/local-llm-pc-build-2000: no content file (Coming Soon placeholder) — skipped"
+  ]
+}

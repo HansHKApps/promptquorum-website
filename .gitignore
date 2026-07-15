@@ -29,3 +29,6 @@ geo-audit-report.csv
 
 # Claude Code working directory (agent worktrees, session state)
 .claude/
+
+# Freshness tool: manual GSC paste, contains real traffic data — never commit
+freshness-data/input.txt
