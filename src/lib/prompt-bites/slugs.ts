@@ -144,4 +144,9 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-model-merging-tool-mergekit':          'bestModelMergingToolMergekit',
   'wsl2-vs-native-windows-ollama':              'wsl2VsNativeWindowsOllama',
   'best-gpu-local-llm-uae-price':              'bestGpuLocalLlmUaePrice',
+
+  // 2026-07 batch, Round 2 — gap-fill (revisited collided-away topics)
+  'best-local-vision-model-ocr':                'bestLocalVisionModelOcr',
+  'ollama-modelfile-customization-guide':       'ollamaModelfileCustomizationGuide',
+  'hybrid-local-cloud-llm-strategy':            'hybridLocalCloudLlmStrategy',
 }

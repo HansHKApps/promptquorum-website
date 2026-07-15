@@ -118,6 +118,11 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-model-merging-tool-mergekit',
   'wsl2-vs-native-windows-ollama',
   'best-gpu-local-llm-uae-price',
+
+  // 2026-07 batch, Round 2 — gap-fill (revisited collided-away topics)
+  'best-local-vision-model-ocr',
+  'ollama-modelfile-customization-guide',
+  'hybrid-local-cloud-llm-strategy',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

@@ -92,6 +92,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'which-ollama-models-support-vision',
       'ollama-128k-context-models',
       'wsl2-vs-native-windows-ollama',
+      'ollama-modelfile-customization-guide',
     ],
   },
   {
@@ -180,6 +181,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-for-sql-data-analysis',
       'best-local-llm-for-translation',
       'best-structured-json-output-local-llm',
+      'best-local-vision-model-ocr',
     ],
   },
   {
@@ -224,6 +226,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-egpu-ollama-macbook',
       'strix-halo-ollama-vulkan',
       'best-gpu-local-llm-uae-price',
+      'hybrid-local-cloud-llm-strategy',
       'best-gpu-under-1000-local-llm',
       'rtx-4060-vs-rtx-3060-12gb',
       'best-intel-arc-gpu-local-llm',

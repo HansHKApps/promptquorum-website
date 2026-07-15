@@ -107,6 +107,9 @@ import { article as bestStructuredJsonOutputLocalLlm } from './articles/best-str
 import { article as bestModelMergingToolMergekit } from './articles/best-model-merging-tool-mergekit'
 import { article as wsl2VsNativeWindowsOllama } from './articles/wsl2-vs-native-windows-ollama'
 import { article as bestGpuLocalLlmUaePrice } from './articles/best-gpu-local-llm-uae-price'
+import { article as bestLocalVisionModelOcr } from './articles/best-local-vision-model-ocr'
+import { article as ollamaModelfileCustomizationGuide } from './articles/ollama-modelfile-customization-guide'
+import { article as hybridLocalCloudLlmStrategy } from './articles/hybrid-local-cloud-llm-strategy'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -214,4 +217,9 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestModelMergingToolMergekit,
   wsl2VsNativeWindowsOllama,
   bestGpuLocalLlmUaePrice,
+
+  // 2026-07 batch, Round 2 — gap-fill (revisited collided-away topics)
+  bestLocalVisionModelOcr,
+  ollamaModelfileCustomizationGuide,
+  hybridLocalCloudLlmStrategy,
 }

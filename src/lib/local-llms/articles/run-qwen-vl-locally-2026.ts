@@ -328,7 +328,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — how the Qwen text models compare to the alternatives.',
           '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — VRAM and GPU requirements for local inference.',
           '[Browse All Local LLM Guides](/local-llms)',
-        ],
+        '[Best Local Vision Model for OCR?](/prompt-bites/best-local-vision-model-ocr) -- comparing OCR-capable vision models more broadly, not just this one.',
+          ],
       },
       faq: {
         id: 'faq',
@@ -671,7 +672,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '[Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) — cómo se comparan los modelos de texto Qwen con las alternativas.',
           '[Guía de hardware para LLM locales 2026](/es/local-llms/local-llm-hardware-guide-2026) — requisitos de VRAM y GPU para inferencia local.',
           '[Ver todas las guías de LLM locales](/es/local-llms)',
-        ],
+        '[¿Cuál es el mejor modelo de visión local para OCR?](/es/prompt-bites/best-local-vision-model-ocr) -- comparación más amplia de modelos de visión aptos para OCR, no solo este.',
+          ],
       },
       faq: {
         id: 'faq',
@@ -1027,7 +1029,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '[Qwen مقابل Llama مقابل Mistral](/ar/local-llms/qwen-vs-llama-vs-mistral) — كيف تقارن نماذج Qwen النصية بالبدائل.',
           '[دليل أجهزة نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — متطلبات VRAM وبطاقة الرسوم للاستدلال المحلي.',
           '[عرض جميع أدلة نماذج LLM المحلية](/ar/local-llms)',
-        ],
+        '[ما هو أفضل نموذج رؤية محلي للتعرف الضوئي على الحروف (OCR)؟](/ar/prompt-bites/best-local-vision-model-ocr) -- مقارنة أوسع لنماذج الرؤية المناسبة للتعرف الضوئي على الحروف، وليس فقط هذا النموذج.',
+          ],
       },
       faq: {
         id: 'faq',
@@ -1121,6 +1124,13 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           { q: 'Quantas imagens o Qwen2-VL pode processar de uma vez?', a: 'Até 8 imagens por solicitação — a maior capacidade de múltiplas imagens entre os modelos de visão locais. Ideal para comparar versões de documentos, detectar diferenças ou resumir um vídeo curto amostrado a um quadro por segundo.' },
           { q: 'Qwen2-VL ou Llama 3.2 Vision — qual devo escolher?', a: 'Escolha o Qwen2-VL para documentos em chinês, japonês ou coreano, digitalizações de alta resolução ou fontes pequenas — e porque o modelo de 7B cabe em 6 GB de VRAM vs 8 GB do Llama 3.2 Vision 11B. Escolha o Llama 3.2 Vision 11B para perguntas gerais sobre fotos apenas em inglês.' },
           { q: 'Por que os caracteres na minha saída de OCR são ilegíveis?', a: 'Quase sempre é uma digitalização de baixa resolução. O Qwen2-VL lê nativamente até 4096×4096, então redigitalizar o documento a 150–300 DPI geralmente resolve caracteres ilegíveis ou ausentes.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Qual o melhor modelo de visão local para OCR?](/pt/prompt-bites/best-local-vision-model-ocr) -- comparação mais ampla de modelos de visão aptos para OCR, não apenas este.',
         ],
       },
     },
@@ -1462,7 +1472,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '[Qwen vs. Llama vs. Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) — wie die Qwen-Textmodelle im Vergleich zu den Alternativen abschneiden.',
           '[Hardware-Leitfaden für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) — VRAM- und GPU-Anforderungen für lokale Inferenz.',
           '[Alle Anleitungen zu lokalen LLMs durchsuchen](/de/local-llms)',
-        ],
+        '[Bestes lokales Vision-Modell für OCR?](/de/prompt-bites/best-local-vision-model-ocr) -- Vergleich OCR-fähiger Vision-Modelle im Allgemeinen, nicht nur dieses eine.',
+          ],
       },
       faq: {
         id: 'faq',
@@ -1807,7 +1818,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           "[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) — comment les modèles de texte Qwen se comparent aux alternatives.",
           "[Guide du matériel pour LLM locaux 2026](/fr/local-llms/local-llm-hardware-guide-2026) — besoins en VRAM et en GPU pour l'inférence locale.",
           "[Parcourir tous les guides sur les LLM locaux](/fr/local-llms)",
-        ],
+        '[Quel est le meilleur modèle de vision local pour l\'OCR ?](/fr/prompt-bites/best-local-vision-model-ocr) -- comparaison plus large des modèles de vision adaptés à l\'OCR, au-delà de celui-ci.',
+          ],
       },
       faq: {
         id: 'faq',
@@ -2150,7 +2162,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '[Qwen対Llama対Mistral](/ja/local-llms/qwen-vs-llama-vs-mistral) — Qwenのテキストモデルが代替モデルとどう比較されるか。',
           '[ローカルLLMハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) — ローカル推論のためのVRAMとGPUの要件。',
           '[すべてのローカルLLMガイドを見る](/ja/local-llms)',
-        ],
+        '[OCRに最適なローカルビジョンモデルは?](/ja/prompt-bites/best-local-vision-model-ocr) -- この1つのモデルだけでなく、OCR対応のビジョンモデルをより広く比較。',
+          ],
       },
       faq: {
         id: 'faq',
@@ -2493,7 +2506,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '[Qwen 对比 Llama 对比 Mistral](/zh/local-llms/qwen-vs-llama-vs-mistral) — Qwen 文本模型与替代方案的对比。',
           '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) — 本地推理的 VRAM 和 GPU 要求。',
           '[浏览所有本地 LLM 指南](/zh/local-llms)',
-        ],
+        '[OCR最佳本地视觉模型选择](/zh/prompt-bites/best-local-vision-model-ocr) — 更广泛地比较适合OCR的视觉模型，而不仅限于这一款。',
+          ],
       },
       faq: {
         id: 'faq',
@@ -2835,7 +2849,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — Qwen 텍스트 모델과 대안 모델 비교.',
           '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — 로컬 추론을 위한 VRAM 및 GPU 요구 사항.',
           '[모든 로컬 LLM 가이드 보기](/local-llms)',
-        ],
+        '[OCR에 가장 적합한 로컬 비전 모델은 무엇입니까?](/ko/prompt-bites/best-local-vision-model-ocr) -- 이 모델 하나만이 아니라 OCR에 적합한 비전 모델을 더 폭넓게 비교.',
+          ],
       },
       faq: {
         id: 'faq',
