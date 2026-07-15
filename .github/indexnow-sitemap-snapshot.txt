@@ -319,6 +319,7 @@ https://www.promptquorum.com/prompt-bites/fine-tuning-7b-model-locally-hardware
 https://www.promptquorum.com/prompt-bites/gguf-vs-gptq-vs-awq
 https://www.promptquorum.com/prompt-bites/how-much-ram-for-7b-model
 https://www.promptquorum.com/prompt-bites/how-much-vram-for-local-llm
+https://www.promptquorum.com/prompt-bites/hybrid-local-cloud-llm-strategy
 https://www.promptquorum.com/prompt-bites/is-deepseek-gdpr-safe
 https://www.promptquorum.com/prompt-bites/is-qwen-gdpr-compliant
 https://www.promptquorum.com/prompt-bites/jan-vs-lm-studio
