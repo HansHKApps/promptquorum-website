@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Buyers in the UAE and wider Gulf region shopping for a GPU to run local LLMs',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>The RTX 3060 12GB is the best-value GPU for local LLMs in the UAE, with new units running approximately AED 1,100-1,400 (used approximately AED 700-950) as of July 2026.</strong> Gulf retail pricing generally runs above US MSRP due to import costs and a smaller local retail market, so compare real AED listings from UAE retailers rather than converting US prices at the exchange rate.',
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Käufer in den VAE und der weiteren Golfregion, die eine GPU für lokale LLMs suchen',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Die RTX 3060 12GB ist die beste Preis-Leistungs-GPU für lokale LLMs in den VAE: Neugeräte kosten Stand Juli 2026 ca. 260–330 € (gebraucht ca. 165–225 €), umgerechnet aus AED 1.100–1.400 (gebraucht AED 700–950).</strong> Golf-Einzelhandelspreise liegen aufgrund von Importkosten und eines kleineren lokalen Marktes generell über der US-UVP — vergleichen Sie daher reale AED-Angebote von VAE-Händlern, statt US-Preise zum Wechselkurs umzurechnen.',
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Acheteurs aux Émirats arabes unis et dans l\'ensemble de la région du Golfe à la recherche d\'un GPU pour des LLM locaux',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Le RTX 3060 12 Go est le GPU au meilleur rapport qualité-prix pour les LLM locaux aux EAU : les unités neuves coûtent environ 260–330 € (env. 165–225 € d\'occasion) en juillet 2026, soit l\'équivalent d\'AED 1 100–1 400 (AED 700–950 d\'occasion).</strong> Les prix de détail du Golfe dépassent généralement le MSRP américain en raison des coûts d\'importation et d\'un marché local plus restreint — comparez donc les annonces réelles en AED des revendeurs émiratis plutôt que de convertir les prix américains au taux de change.',
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'ローカルLLMを実行するためのGPUを探しているUAEおよび湾岸地域全体の購入者',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>RTX 3060 12GBは、UAEにおけるローカルLLM向けコスパ最強GPUです。2026年7月時点で新品は約¥45,000〜57,000（中古は約¥29,000〜39,000）、AED換算では新品AED 1,100〜1,400（中古AED 700〜950）に相当します。</strong> 湾岸地域の小売価格は、輸入コストと小規模な現地小売市場のため、米国希望小売価格を上回るのが一般的です。米国価格を為替レートで換算するのではなく、UAEの販売店による実際のAED価格を比較してください。',
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '在阿联酋及整个海湾地区寻找本地 LLM 显卡的买家',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>RTX 3060 12GB是阿联酋本地LLM性价比最高的显卡:截至2026年7月,新品约$300–380(二手约$190–260),约合AED 1,100–1,400(二手AED 700–950)。</strong> 由于进口成本和较小的本地零售市场,海湾地区零售价通常高于美国建议零售价——因此应比较阿联酋零售商的真实AED报价,而不是按汇率换算的美元价格。',
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Compradores en los EAU y la región del Golfo en general que buscan una GPU para LLMs locales',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>La RTX 3060 12 GB es la GPU con mejor relación calidad-precio para LLMs locales en los EAU: las unidades nuevas cuestan aproximadamente 260–330 € (usadas aprox. 165–225 €) en julio de 2026, equivalente a AED 1.100–1.400 (usadas AED 700–950).</strong> Los precios minoristas del Golfo suelen superar el MSRP de EE. UU. debido a los costes de importación y un mercado local más reducido, así que compara anuncios reales en AED de vendedores de los EAU en lugar de convertir precios de EE. UU. al tipo de cambio.',
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Compradores nos EAU e na região do Golfo em geral que buscam uma GPU para LLMs locais',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>A RTX 3060 12GB é a GPU com melhor custo-benefício para LLMs locais nos EAU: unidades novas custam aproximadamente R$1.700–2.150 (usadas aprox. R$1.100–1.500) em julho de 2026, equivalente a AED 1.100–1.400 (usadas AED 700–950).</strong> Os preços de varejo no Golfo geralmente ficam acima do MSRP dos EUA devido a custos de importação e um mercado local menor — compare anúncios reais em AED de revendedores dos EAU em vez de converter preços dos EUA pela taxa de câmbio. (Preços em reais são aproximados; a importação para o Brasil ainda soma frete e impostos.)',
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'المشترون في الإمارات ومنطقة الخليج الأوسع الباحثون عن معالج رسومات لتشغيل النماذج اللغوية الكبيرة محلياً',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>يُعد RTX 3060 12GB أفضل معالج رسومات من حيث القيمة للنماذج اللغوية الكبيرة المحلية في الإمارات، إذ تبلغ تكلفة الوحدات الجديدة نحو 1,100–1,400 درهم إماراتي (المستعملة نحو 700–950 درهماً) اعتباراً من يوليو 2026.</strong> تتجاوز أسعار التجزئة الخليجية عموماً سعر البيع المقترح الأمريكي بسبب تكاليف الاستيراد وصغر السوق المحلية، لذا قارن العروض الحقيقية بالدرهم الإماراتي من تجار التجزئة في الإمارات بدلاً من تحويل الأسعار الأمريكية بسعر الصرف.',
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'UAE 및 걸프 지역 전역에서 로컬 LLM 실행용 GPU를 찾는 구매자',
     affiliateDisclosure: true,
     parentArticle: '/local-llms/best-budget-gpus-local-llm',
-    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price'],
+    siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>RTX 3060 12GB는 UAE 로컬 LLM용 최고 가성비 GPU로, 2026년 7월 기준 신품이 약 $300–380(중고 약 $190–260)이며 이는 AED 1,100–1,400(중고 AED 700–950)에 해당합니다.</strong> 걸프 지역 소매가는 수입 비용과 작은 현지 소매 시장으로 인해 일반적으로 미국 권장 소비자가보다 높습니다 — 따라서 환율로 환산한 미국 가격이 아니라 UAE 소매업체의 실제 AED 가격을 비교하십시오.',

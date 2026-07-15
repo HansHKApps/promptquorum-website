@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers deciding how to adapt a local model to their own data',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>LoRA trains a small number of added low-rank weight matrices while keeping the original model frozen, which needs far less VRAM than full fine-tuning, where every parameter in the model is updated.</strong> Full fine-tuning can reach slightly higher quality on large, well-curated datasets, but LoRA is the practical default for most local setups.',
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die entscheiden müssen, wie sie ein lokales Modell an ihre eigenen Daten anpassen',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>LoRA trainiert eine kleine Anzahl zusätzlicher Low-Rank-Gewichtsmatrizen, während das ursprüngliche Modell eingefroren bleibt, was deutlich weniger VRAM benötigt als vollständiges Fine-Tuning, bei dem jeder Parameter des Modells aktualisiert wird.</strong> Vollständiges Fine-Tuning kann bei großen, sorgfältig kuratierten Datensätzen eine etwas höhere Qualität erreichen, aber LoRA ist für die meisten lokalen Setups die praktische Standardwahl.',
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Développeurs cherchant à déterminer comment adapter un modèle local à leurs propres données',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       "<strong>LoRA entraîne un petit nombre de matrices de poids de faible rang ajoutées tout en gardant le modèle d'origine gelé, ce qui nécessite beaucoup moins de VRAM que le fine-tuning complet, où chaque paramètre du modèle est mis à jour.</strong> Le fine-tuning complet peut atteindre une qualité légèrement supérieure sur de grands jeux de données bien curés, mais LoRA reste le choix par défaut le plus pratique pour la plupart des configurations locales.",
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'ローカルモデルを自分のデータに適応させる方法を検討している開発者',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>LoRAは元のモデルを凍結したまま、少数の追加された低ランク重み行列だけを学習するため、モデルのすべてのパラメータを更新する完全なFine-Tuningよりも必要なVRAMがはるかに少なくて済みます。</strong>大規模で丁寧にキュレーションされたデータセットでは完全なFine-Tuningがわずかに高い品質に達することもありますが、ほとんどのローカル環境ではLoRAが実用的な既定の選択肢です。',
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '需要决定如何用自有数据适配本地模型的开发者',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>LoRA 在保持原模型冻结的同时训练少量新增的低秩权重矩阵,所需 VRAM 远低于更新模型每个参数的全量微调。</strong>在大规模、精心整理的数据集上,全量微调可以达到略高的质量,但对大多数本地环境来说,LoRA 是更实用的默认选择。',
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que deciden cómo adaptar un modelo local a sus propios datos',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>LoRA entrena un pequeño número de matrices de pesos de bajo rango añadidas mientras mantiene el modelo original congelado, lo que requiere mucha menos VRAM que el fine-tuning completo, donde se actualiza cada parámetro del modelo.</strong> El fine-tuning completo puede alcanzar una calidad ligeramente superior en conjuntos de datos grandes y bien curados, pero LoRA es la opción práctica por defecto para la mayoría de configuraciones locales.',
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores decidindo como adaptar um modelo local aos próprios dados',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>O LoRA treina um pequeno número de matrizes de pesos de baixo posto adicionadas, mantendo o modelo original congelado, o que exige muito menos VRAM do que o fine-tuning completo, em que cada parâmetro do modelo é atualizado.</strong> O fine-tuning completo pode atingir uma qualidade ligeiramente superior em conjuntos de dados grandes e bem selecionados, mas o LoRA é a escolha padrão mais prática para a maioria das configurações locais.',
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يقررون كيفية تكييف نموذج محلي مع بياناتهم الخاصة',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>يدرّب LoRA عددًا صغيرًا من مصفوفات الأوزان المضافة منخفضة الرتبة مع إبقاء النموذج الأصلي مجمدًا، وهو ما يحتاج إلى ذاكرة VRAM أقل بكثير من الضبط الدقيق الكامل الذي يُحدَّث فيه كل معامل في النموذج.</strong> يمكن للضبط الدقيق الكامل أن يحقق جودة أعلى قليلًا على مجموعات بيانات كبيرة ومنسقة جيدًا، لكن LoRA يظل الخيار الافتراضي العملي لمعظم الإعدادات المحلية.',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '로컬 모델을 자체 데이터에 맞게 조정하는 방법을 결정하려는 개발자',
-    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit'],
+    siblingBites: ['fine-tuning-7b-model-locally-hardware', 'best-model-merging-tool-mergekit', 'best-local-llm-license-comparison'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>LoRA는 원본 모델을 고정한 상태에서 소수의 추가된 저랭크 가중치 행렬만 학습하므로, 모델의 모든 파라미터를 업데이트하는 전체 파인튜닝보다 필요한 VRAM이 훨씬 적습니다.</strong> 대규모로 잘 정제된 데이터셋에서는 전체 파인튜닝이 약간 더 높은 품질에 도달할 수 있지만, 대부분의 로컬 환경에서는 LoRA가 실용적인 기본 선택지입니다.',

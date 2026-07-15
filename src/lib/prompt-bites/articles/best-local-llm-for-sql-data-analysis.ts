@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Analysts and developers who want a local model for writing SQL queries and interpreting tabular data',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>A local LLM suited to SQL and data analysis needs strong code-generation training and a large enough context window to hold a full schema alongside the question.</strong> Coding-tuned models generally outperform general-purpose chat models on SQL correctness.',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Analysten und Entwickler, die ein lokales Modell zum Schreiben von SQL-Abfragen und zur Interpretation tabellarischer Daten suchen',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Ein lokales LLM, das für SQL und Datenanalyse geeignet ist, braucht ein starkes Code-Generierungs-Training und ein ausreichend großes Kontextfenster, um ein vollständiges Schema neben der Frage zu halten.</strong> Coding-optimierte Modelle übertreffen general-purpose Chat-Modelle in der Regel bei der SQL-Korrektheit.',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Analystes et développeurs qui souhaitent un modèle local pour écrire des requêtes SQL et interpréter des données tabulaires',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Un LLM local adapté au SQL et à l\'analyse de données nécessite un entraînement solide à la génération de code et une fenêtre de contexte suffisamment grande pour contenir un schéma complet en plus de la question.</strong> Les modèles spécialisés en code surpassent généralement les modèles de chat généralistes sur la justesse SQL.',
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'SQLクエリの作成と表形式データの解釈にローカルモデルを使いたいアナリストや開発者',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>SQLとデータ分析に適したローカルLLMには、強力なコード生成トレーニングと、質問と一緒に完全なスキーマを保持できる十分に大きなコンテキストウィンドウが必要です。</strong>コーディング特化モデルは一般的にSQLの正確性で汎用チャットモデルを上回ります。',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '希望使用本地模型编写SQL查询并解读表格数据的分析师和开发者',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>适合SQL和数据分析的本地LLM需要强大的代码生成训练，以及足够大的上下文窗口来容纳完整的表结构和问题。</strong>代码专精模型的SQL正确率通常高于通用聊天模型。',
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Analistas y desarrolladores que quieren un modelo local para escribir consultas SQL e interpretar datos tabulares',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Un LLM local adecuado para SQL y análisis de datos necesita un entrenamiento sólido en generación de código y una ventana de contexto lo bastante grande para contener un esquema completo junto con la pregunta.</strong> Los modelos especializados en código suelen superar a los modelos de chat de propósito general en la corrección del SQL.',
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Analistas e desenvolvedores que querem um modelo local para escrever consultas SQL e interpretar dados tabulares',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Um LLM local adequado para SQL e análise de dados precisa de um treinamento sólido em geração de código e uma janela de contexto grande o suficiente para conter um schema completo junto com a pergunta.</strong> Modelos ajustados para código geralmente superam modelos de chat de propósito geral na corretude do SQL.',
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'المحللون والمطورون الذين يريدون نموذجًا محليًا لكتابة استعلامات SQL وتفسير البيانات الجدولية',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>يحتاج نموذج LLM محلي مناسب لـ SQL وتحليل البيانات إلى تدريب قوي على توليد الأكواد ونافذة سياق (context window) كبيرة بما يكفي لاستيعاب المخطط (schema) الكامل إلى جانب السؤال.</strong> عادةً ما تتفوق النماذج المتخصصة في الأكواد على نماذج المحادثة العامة في دقة SQL.',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'SQL 쿼리 작성과 표 형식 데이터 해석을 위해 로컬 모델을 사용하려는 분석가와 개발자',
-    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation'],
+    siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>SQL 및 데이터 분석에 적합한 로컬 LLM은 강력한 코드 생성 학습과, 질문과 함께 전체 스키마를 담을 수 있을 만큼 충분히 큰 컨텍스트 윈도우가 필요합니다.</strong> 코딩에 특화된 모델은 일반적으로 SQL 정확도 면에서 범용 채팅 모델을 능가합니다.',

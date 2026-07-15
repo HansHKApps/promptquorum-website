@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers and businesses checking whether an open-weight model\'s license permits commercial use',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Permissive licenses like Apache 2.0 and MIT place no meaningful restriction on commercial use, while several open-weight model vendors ship custom licenses with usage caps, redistribution limits, or output-restriction clauses.</strong> Always read the specific model\'s license file rather than assuming "open-weight" means unrestricted.',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und Unternehmen, die prüfen möchten, ob die Lizenz eines Open-Weight-Modells eine kommerzielle Nutzung erlaubt',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Freizügige Lizenzen wie Apache 2.0 und MIT schränken die kommerzielle Nutzung praktisch nicht ein, während mehrere Anbieter von Open-Weight-Modellen individuelle Lizenzen mit Nutzungsobergrenzen, Weitergabebeschränkungen oder Klauseln zur Einschränkung von Ausgaben verwenden.</strong> Lesen Sie immer die Lizenzdatei des jeweiligen Modells, statt anzunehmen, dass „Open-Weight" uneingeschränkte Nutzung bedeutet.',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: "Développeurs et entreprises vérifiant si la licence d'un modèle Open-Weight autorise un usage commercial",
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       "<strong>Les licences permissives comme Apache 2.0 et MIT n'imposent aucune restriction significative à l'usage commercial, tandis que plusieurs éditeurs de modèles Open-Weight utilisent des licences personnalisées avec plafonds d'utilisation, limites de redistribution ou clauses restreignant les sorties.</strong> Lisez toujours le fichier de licence du modèle concerné plutôt que de supposer qu'« Open-Weight » signifie sans restriction.",
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Open-Weightモデルのライセンスが商用利用を許可しているかを確認したい開発者や企業',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Apache 2.0やMITのような寛容なライセンスは商用利用に実質的な制限を課しませんが、一部のOpen-Weightモデルベンダーは利用上限、再配布制限、出力制限条項を含む独自のカスタムライセンスを採用しています。</strong>「Open-Weight」だからといって無制限に使えると思い込まず、必ずそのモデル固有のライセンスファイルを確認してください。',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '需要确认某个开放权重模型的许可证是否允许商用的开发者和企业',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Apache 2.0 和 MIT 等宽松许可证对商用几乎没有实质性限制,而部分开放权重模型厂商采用带使用上限、再分发限制或输出限制条款的自定义许可证。</strong>请始终查看具体模型的许可证文件,而不要假设"开放权重"就等于无限制使用。',
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores y empresas que quieren confirmar si la licencia de un modelo Open-Weight permite el uso comercial',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Las licencias permisivas como Apache 2.0 y MIT no imponen restricciones significativas al uso comercial, mientras que varios proveedores de modelos Open-Weight usan licencias personalizadas con límites de uso, restricciones de redistribución o cláusulas que limitan las salidas.</strong> Lee siempre el archivo de licencia del modelo específico en lugar de asumir que "Open-Weight" significa sin restricciones.',
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e empresas que querem verificar se a licença de um modelo Open-Weight permite uso comercial',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Licenças permissivas como Apache 2.0 e MIT não impõem restrição relevante ao uso comercial, enquanto vários fornecedores de modelos Open-Weight usam licenças personalizadas com limites de uso, restrições de redistribuição ou cláusulas que restringem as saídas.</strong> Sempre leia o arquivo de licença do modelo específico em vez de presumir que "Open-Weight" significa sem restrições.',
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'المطورون والشركات الذين يتحققون مما إذا كان ترخيص نموذج Open-Weight يسمح بالاستخدام التجاري',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>لا تفرض التراخيص المتساهلة مثل Apache 2.0 وMIT أي قيود جوهرية على الاستخدام التجاري، بينما يقدّم عدد من موردي نماذج Open-Weight تراخيص مخصصة تتضمن حدودًا للاستخدام أو قيودًا على إعادة التوزيع أو بنودًا تقيّد المخرجات.</strong> اقرأ دائمًا ملف الترخيص الخاص بالنموذج المحدد بدلًا من افتراض أن "Open-Weight" تعني عدم وجود أي قيود.',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Open-Weight 모델의 라이선스가 상업적 이용을 허용하는지 확인하려는 개발자와 기업',
-    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy'],
+    siblingBites: ['best-china-compliant-local-llm', 'best-local-llm-legal-medical-privacy', 'lora-vs-full-fine-tuning'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Apache 2.0, MIT와 같은 허용적 라이선스는 상업적 이용에 실질적인 제한을 두지 않지만, 일부 Open-Weight 모델 벤더는 사용 상한, 재배포 제한, 출력 제한 조항이 포함된 맞춤형 라이선스를 제공합니다.</strong> "Open-Weight"라고 해서 무제한 이용이 가능하다고 가정하지 말고, 항상 해당 모델의 라이선스 파일을 확인해야 합니다.',

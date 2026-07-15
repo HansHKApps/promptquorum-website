@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Windows users deciding whether to run Ollama natively or inside WSL2',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Native Windows Ollama is simpler to set up and has direct GPU access with no passthrough layer, so it is the right default for most users.</strong> WSL2 is worth the extra setup mainly when you need a Linux-only tool alongside Ollama in the same environment.',
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Windows-Nutzer, die entscheiden müssen, ob sie Ollama nativ oder innerhalb von WSL2 ausführen sollen',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Natives Windows-Ollama ist einfacher einzurichten und hat direkten GPU-Zugriff ohne Passthrough-Schicht, weshalb es für die meisten Nutzer die richtige Standardwahl ist.</strong> WSL2 lohnt den zusätzlichen Einrichtungsaufwand vor allem dann, wenn Sie in derselben Umgebung ein reines Linux-Tool neben Ollama benötigen.',
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs Windows qui hésitent entre exécuter Ollama nativement ou dans WSL2',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Ollama natif sous Windows est plus simple à installer et accède directement au GPU sans couche de passthrough, ce qui en fait le choix par défaut pour la plupart des utilisateurs.</strong> WSL2 vaut l\'effort d\'installation supplémentaire surtout lorsque vous avez besoin d\'un outil exclusivement Linux aux côtés d\'Ollama dans le même environnement.',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'OllamaをネイティブWindowsで実行するかWSL2内で実行するか迷っているWindowsユーザー',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>ネイティブWindows版Ollamaはセットアップが簡単で、パススルー層を介さずにGPUへ直接アクセスできるため、ほとんどのユーザーにとって適切な既定の選択肢です。</strong> WSL2は、同じ環境でOllamaと並行してLinux専用ツールが必要な場合に、追加の設定コストを払う価値があります。',
@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '正在纠结是在原生 Windows 还是在 WSL2 中运行 Ollama 的 Windows 用户',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>原生 Windows 版 Ollama 安装更简单,无需直通层即可直接访问 GPU,因此对大多数用户来说是合适的默认选择。</strong> 当你需要在同一环境中搭配 Ollama 使用仅支持 Linux 的工具时,WSL2 额外的配置成本才值得投入。',
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de Windows que deciden si ejecutar Ollama de forma nativa o dentro de WSL2',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Ollama nativo en Windows es más sencillo de configurar y accede directamente a la GPU sin ninguna capa de passthrough, por lo que es la opción predeterminada adecuada para la mayoría de los usuarios.</strong> WSL2 vale la configuración adicional principalmente cuando necesitas una herramienta exclusiva de Linux junto a Ollama en el mismo entorno.',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Usuários do Windows que estão decidindo se executam o Ollama nativamente ou dentro do WSL2',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>O Ollama nativo no Windows é mais simples de configurar e acessa a GPU diretamente, sem nenhuma camada de passthrough, o que o torna a opção padrão certa para a maioria dos usuários.</strong> O WSL2 vale a configuração extra principalmente quando você precisa de uma ferramenta exclusiva do Linux junto com o Ollama no mesmo ambiente.',
@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو Windows الذين يقررون ما إذا كانوا سيشغّلون Ollama بشكل أصلي أم داخل WSL2',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>يُعد Ollama الأصلي على Windows أسهل في الإعداد ويصل مباشرةً إلى معالج الرسومات بدون أي طبقة تمرير (passthrough)، ما يجعله الخيار الافتراضي المناسب لمعظم المستخدمين.</strong> يستحق WSL2 عناء الإعداد الإضافي بشكل أساسي عندما تحتاج إلى أداة تعمل فقط على Linux إلى جانب Ollama في البيئة نفسها.',
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Ollama를 네이티브로 실행할지 WSL2 안에서 실행할지 고민하는 Windows 사용자',
-    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>네이티브 Windows용 Ollama는 설정이 더 간단하고 패스스루 계층 없이 GPU에 직접 접근하므로 대부분의 사용자에게 적합한 기본 선택입니다.</strong> WSL2는 동일한 환경에서 Ollama와 함께 Linux 전용 도구가 필요한 경우에 추가 설정 비용을 들일 가치가 있습니다.',
