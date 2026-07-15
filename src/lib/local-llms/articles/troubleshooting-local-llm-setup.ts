@@ -10,13 +10,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
-      title: 'Fix Local LLM Errors in 2026: 10 Common Problems in Ollama, LM Studio, and vLLM',
+      title: 'Fix Local LLM Errors in 2026: 11 Common Problems in Ollama, LM Studio, and vLLM',
       seoTitle: 'Fix Local LLM Errors: OOM, GPU Detection, Port 11434',
-      intro: 'The most common errors in local LLMs are out-of-memory crashes, GPU not detected, extremely slow CPU inference, connection refused from the API, and garbled output. As of April 2026, there are solutions for all 10 errors -- most require only one or two terminal commands. This guide covers Ollama (port 11434), LM Studio (port 1234), and vLLM with exact commands for each error.',
-      metaDescription: '10 common local LLM errors fixed: OOM kills, GPU not detected, port 11434 refused, slow CPU fallback. Fix commands for Ollama + LM Studio. April 2026.',
-      twitterDescription: '10 local LLM errors fixed: OOM, GPU not detected, port 11434 refused, CPU fallback. Fix commands for Ollama + LM Studio. April 2026.',
+      intro: 'The most common errors in local LLMs are out-of-memory crashes, GPU not detected, extremely slow CPU inference, connection refused from the API, and garbled output. As of July 2026, there are solutions for all 11 errors -- most require only one or two terminal commands. This guide covers Ollama (port 11434), LM Studio (port 1234), and vLLM with exact commands for each error.',
+      metaDescription: '11 common local LLM errors fixed: OOM kills, GPU not detected, port 11434 refused, slow CPU fallback, unknown remote host. Fix commands for Ollama + LM Studio.',
+      twitterDescription: '11 local LLM errors fixed: OOM, GPU not detected, port 11434 refused, CPU fallback, unexpected remote host. Fix commands for Ollama + LM Studio.',
       leadAnswerBlock: '**The most common errors in local LLMs are out-of-memory crashes, GPU not detected, extremely slow CPU inference, connection refused from the API, and garbled output.**',
-      dateModified: '2026-04-16',
+      dateModified: '2026-07-15',
       publishDate: '2026-04-04',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '9 min read',
@@ -34,6 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Error 8: Garbled or Repetitive Output', anchor: '#error-8-garbled-output' },
         { label: 'Error 9: Port Already in Use', anchor: '#error-9-port-already-in-use' },
         { label: 'Error 10: Model Stops Mid-Response', anchor: '#error-10-model-stops-mid-response' },
+        { label: 'Error 11: Unexpected Remote Host', anchor: '#error-11-unexpected-remote-host' },
       ],
 sections: {
         tldr: {
@@ -138,6 +139,16 @@ sections: {
           codeBlock: '# Manually clear LM Studio model cache (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
           codeLanguage: 'bash',
         },
+        error6format: {
+          id: 'error-6c-incompatible-format',
+          title: 'Error 6c: "No Compatible Options Available for This Format"',
+          content: '**This error means the downloaded model file is not a format your installed backend can run -- not a corrupted download.** It appears when a `.safetensors` or MLX-only file is loaded into a llama.cpp-based backend, or when a GGUF file needs a newer runtime than the one installed.',
+          items: [
+            '**Check the file format**: Ollama and the standard LM Studio backend run GGUF files. MLX builds only run on Apple Silicon with the MLX backend selected in LM Studio settings.',
+            '**Re-download the correct format**: on the model page, choose a GGUF quantization (e.g., Q4_K_M) instead of a `.safetensors` repo.',
+            '**Update LM Studio**: newer GGUF quantization schemes sometimes require a runtime update. Check Settings → Runtime for available updates before re-downloading the model.',
+          ],
+        },
         error7: {
           id: 'error-7-cuda-errors',
           title: 'Error 7: CUDA / ROCm Initialization Errors',
@@ -173,6 +184,17 @@ sections: {
             '**Increase num_predict**: This parameter sets the maximum tokens to generate. Default is often 128. Increase it: In Ollama, add `PARAMETER num_predict 2048` to the Modelfile.',
             '**Check context window**: If your conversation is very long, the model may hit its context limit. Start a new session or use a model with a larger context window (Llama 3.2 3B supports 128K).',
             '**Check stop tokens**: Some Modelfiles include stop sequences that terminate generation early. Check the system prompt and template for unexpected stop patterns.',
+          ],
+        },
+        error11: {
+          id: 'error-11-unexpected-remote-host',
+          title: 'Error 11: "Failed to Load LLM Client" -- Unexpected Remote Host',
+          content: '**A "failed to load LLM client: [hostname]:443" error means the application is trying to reach an external server over HTTPS -- not your local Ollama or LM Studio installation.** Ollama and LM Studio never contact a remote server for inference by default; if a client throws this error against an unfamiliar domain, that app is a third-party wrapper or fork with a hardcoded remote endpoint, and that endpoint is currently unreachable.',
+          items: [
+            '**Identify which app is throwing the error**: this message does not come from Ollama or LM Studio directly. Check the app\'s settings, README, or source code for a hardcoded API endpoint or license-check server.',
+            '**Check your network first**: if the app is genuinely meant to call a cloud service, verify your firewall, VPN, or antivirus is not blocking outbound HTTPS on port 443 to that host.',
+            '**Switch to a purely local client if you want offline inference**: use Ollama (`localhost:11434`) or LM Studio (`localhost:1234`) directly -- neither makes outbound calls to any server for local models.',
+            '**Do not enter API keys or credentials into an unfamiliar client** until you have confirmed what the remote endpoint is and why the app needs it. Uninstall the app if you cannot verify its origin.',
           ],
         },
         relatedReading: {
@@ -216,11 +238,11 @@ sections: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Fix Local LLM Errors in 2026: 10 Common Problems in Ollama, LM Studio, and vLLM',
-        'description': 'Fix out-of-memory crashes, GPU not detected, connection refused, and garbled output in Ollama and LM Studio. Exact commands: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
+        'headline': 'Fix Local LLM Errors in 2026: 11 Common Problems in Ollama, LM Studio, and vLLM',
+        'description': 'Fix out-of-memory crashes, GPU not detected, connection refused, garbled output, and unexpected remote-host errors in Ollama and LM Studio. Exact commands: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
         'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-16',
+        'dateModified': '2026-07-15',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -276,7 +298,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'What are the most common local LLM deployment errors?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'The 10 most common local LLM errors are: (1) OOM/out of memory, (2) GPU not detected, (3) port 11434 refused, (4) slow CPU fallback, (5) model not found, (6) partial download corrupt, (7) generation stops early, (8) CUDA version mismatch, (9) context length exceeded, (10) incorrect model tag. Each has a specific fix command in Ollama and LM Studio.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'The 11 most common local LLM errors are: (1) OOM/out of memory, (2) GPU not detected, (3) port 11434 refused, (4) slow CPU fallback, (5) model not found, (6) partial download corrupt, (7) generation stops early, (8) CUDA version mismatch, (9) context length exceeded, (10) incorrect model tag, (11) client trying to reach an unexpected remote host. Each has a specific fix command in Ollama and LM Studio.' }
           },
           {
             '@type': 'Question',
@@ -306,18 +328,18 @@ schema: {
         ]
       },
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-      gammaDescription: 'The following presentation covers: the 10 most common local LLM setup errors (out-of-memory, GPU not detected, slow inference, connection refused, garbled output), RAM requirements for 3B–14B models at Q4_K_M and Q8_0 quantization, a 5-step debug process, and Ollama commands for each fix. Download the PDF as a local LLM troubleshooting reference card.',
+      gammaDescription: 'The following presentation covers: the 10 most common local LLM setup errors (out-of-memory, GPU not detected, slow inference, connection refused, garbled output), RAM requirements for 3B–14B models at Q4_K_M and Q8_0 quantization, a 5-step debug process, and Ollama commands for each fix. The 11th error (unexpected remote host) is covered in the article text below. Download the PDF as a local LLM troubleshooting reference card.',
     },
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
-      title: 'Corregir errores de LLM local en 2026: 10 problemas frecuentes en Ollama, LM Studio y vLLM',
+      title: 'Corregir errores de LLM local en 2026: 11 problemas frecuentes en Ollama, LM Studio y vLLM',
       seoTitle: 'Errores de LLM local: OOM, GPU no detectada y puerto 11434',
-      intro: 'Los errores más comunes en los LLM locales son los cuelgues por falta de memoria, la GPU no detectada, la inferencia en CPU extremadamente lenta, la conexión rechazada por la API y la salida corrupta. A partir de abril de 2026, existen soluciones para los 10 errores — la mayoría requieren solo uno o dos comandos de terminal. Esta guía cubre Ollama (puerto 11434), LM Studio (puerto 1234) y vLLM con comandos exactos para cada error.',
-      metaDescription: '10 errores comunes de LLM local resueltos: cuelgues OOM, GPU no detectada, puerto 11434 rechazado y CPU lenta. Comandos para Ollama y LM Studio. 2026.',
-      twitterDescription: '10 errores de LLM local resueltos: OOM, GPU no detectada, puerto 11434 rechazado, CPU lenta. Comandos para Ollama + LM Studio. Abril 2026.',
+      intro: 'Los errores más comunes en los LLM locales son los cuelgues por falta de memoria, la GPU no detectada, la inferencia en CPU extremadamente lenta, la conexión rechazada por la API y la salida corrupta. A partir de julio de 2026, existen soluciones para los 11 errores — la mayoría requieren solo uno o dos comandos de terminal. Esta guía cubre Ollama (puerto 11434), LM Studio (puerto 1234) y vLLM con comandos exactos para cada error.',
+      metaDescription: '11 errores comunes de LLM local resueltos: cuelgues OOM, GPU no detectada, puerto 11434 rechazado, CPU lenta y host remoto inesperado. Comandos para Ollama y LM Studio.',
+      twitterDescription: '11 errores de LLM local resueltos: OOM, GPU no detectada, puerto 11434 rechazado, CPU lenta, host remoto inesperado. Comandos para Ollama + LM Studio.',
       leadAnswerBlock: '**Los errores más comunes en los LLM locales son los cuelgues por falta de memoria, la GPU no detectada, la inferencia en CPU extremadamente lenta, la conexión rechazada por la API y la salida corrupta.**',
-      dateModified: '2026-04-16',
+      dateModified: '2026-07-15',
       publishDate: '2026-04-04',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '9 min de lectura',
@@ -335,6 +357,7 @@ schema: {
         { label: 'Error 8: Salida corrupta o repetitiva', anchor: '#error-8-garbled-output' },
         { label: 'Error 9: Puerto en uso', anchor: '#error-9-port-already-in-use' },
         { label: 'Error 10: El modelo se detiene a mitad de la respuesta', anchor: '#error-10-model-stops-mid-response' },
+        { label: 'Error 11: Host remoto inesperado', anchor: '#error-11-unexpected-remote-host' },
       ],
       sections: {
         tldr: {
@@ -439,6 +462,16 @@ schema: {
           codeBlock: '# Limpiar manualmente la caché de modelos de LM Studio (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
           codeLanguage: 'bash',
         },
+        error6format: {
+          id: 'error-6c-incompatible-format',
+          title: 'Error 6c: "No hay opciones compatibles disponibles para este formato"',
+          content: '**Este error significa que el archivo de modelo descargado no es un formato que tu backend instalado pueda ejecutar — no es una descarga corrupta.** Aparece cuando se carga un archivo `.safetensors` o exclusivo de MLX en un backend basado en llama.cpp, o cuando un archivo GGUF necesita un runtime más nuevo que el instalado.',
+          items: [
+            '**Verifica el formato del archivo**: Ollama y el backend estándar de LM Studio ejecutan archivos GGUF. Las compilaciones MLX solo funcionan en Apple Silicon con el backend MLX seleccionado en la configuración de LM Studio.',
+            '**Vuelve a descargar el formato correcto**: en la página del modelo, elige una cuantización GGUF (por ejemplo, Q4_K_M) en lugar de un repositorio `.safetensors`.',
+            '**Actualiza LM Studio**: los nuevos esquemas de cuantización GGUF a veces requieren una actualización del runtime. Revisa Configuración → Runtime para ver actualizaciones disponibles antes de volver a descargar el modelo.',
+          ],
+        },
         error7: {
           id: 'error-7-cuda-errors',
           title: 'Error 7: Errores de inicialización de CUDA / ROCm',
@@ -474,6 +507,17 @@ schema: {
             '**Aumenta num_predict**: este parámetro establece el máximo de tokens a generar. El valor predeterminado suele ser 128. Auméntalo: en Ollama, agrega `PARAMETER num_predict 2048` al Modelfile.',
             '**Verifica la ventana de contexto**: si tu conversación es muy larga, el modelo puede haber alcanzado su límite de contexto. Inicia una nueva sesión o usa un modelo con una ventana de contexto más grande (Llama 3.2 3B soporta 128K).',
             '**Verifica los tokens de parada**: algunos Modelfiles incluyen secuencias de parada que terminan la generación anticipadamente. Revisa el prompt del sistema y la plantilla para patrones de parada inesperados.',
+          ],
+        },
+        error11: {
+          id: 'error-11-unexpected-remote-host',
+          title: 'Error 11: "Error al cargar el cliente LLM" — Host remoto inesperado',
+          content: '**Un error "failed to load LLM client: [host]:443" significa que la aplicación intenta contactar un servidor externo por HTTPS — no tu instalación local de Ollama o LM Studio.** Ollama y LM Studio nunca contactan un servidor remoto para la inferencia por defecto; si un cliente muestra este error contra un dominio desconocido, esa app es un wrapper o fork de terceros con un endpoint remoto codificado, y ese endpoint no está disponible en este momento.',
+          items: [
+            '**Identifica qué app genera el error**: este mensaje no proviene de Ollama ni de LM Studio directamente. Revisa la configuración, el README o el código fuente de la app en busca de un endpoint de API o un servidor de verificación de licencia codificado.',
+            '**Verifica primero tu red**: si la app realmente necesita llamar a un servicio en la nube, confirma que tu firewall, VPN o antivirus no esté bloqueando el tráfico HTTPS saliente por el puerto 443 hacia ese host.',
+            '**Cambia a un cliente puramente local si quieres inferencia sin conexión**: usa Ollama (`localhost:11434`) o LM Studio (`localhost:1234`) directamente — ninguno hace llamadas salientes a ningún servidor para modelos locales.',
+            '**No introduzcas claves de API ni credenciales en un cliente desconocido** hasta confirmar qué es el endpoint remoto y por qué la app lo necesita. Desinstala la app si no puedes verificar su origen.',
           ],
         },
         relatedReading: {
@@ -517,11 +561,11 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Corregir errores de LLM local en 2026: 10 problemas frecuentes en Ollama, LM Studio y vLLM',
-        'description': 'Soluciona cuelgues por falta de memoria, GPU no detectada, conexión rechazada y salida corrupta en Ollama y LM Studio. Comandos exactos: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
+        'headline': 'Corregir errores de LLM local en 2026: 11 problemas frecuentes en Ollama, LM Studio y vLLM',
+        'description': 'Soluciona cuelgues por falta de memoria, GPU no detectada, conexión rechazada, salida corrupta y host remoto inesperado en Ollama y LM Studio. Comandos exactos: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
         'url': 'https://www.promptquorum.com/es/local-llms/troubleshooting-local-llm-setup',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-16',
+        'dateModified': '2026-07-15',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -577,7 +621,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '¿Cuáles son los errores más comunes en el despliegue de LLM local?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Los 10 errores más comunes de LLM local son: (1) OOM/sin memoria, (2) GPU no detectada, (3) puerto 11434 rechazado, (4) CPU lenta como alternativa, (5) modelo no encontrado, (6) descarga parcial corrupta, (7) generación se detiene pronto, (8) incompatibilidad de versión CUDA, (9) longitud de contexto superada, (10) etiqueta de modelo incorrecta. Cada uno tiene un comando de corrección específico en Ollama y LM Studio.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Los 11 errores más comunes de LLM local son: (1) OOM/sin memoria, (2) GPU no detectada, (3) puerto 11434 rechazado, (4) CPU lenta como alternativa, (5) modelo no encontrado, (6) descarga parcial corrupta, (7) generación se detiene pronto, (8) incompatibilidad de versión CUDA, (9) longitud de contexto superada, (10) etiqueta de modelo incorrecta, (11) el cliente intenta contactar un host remoto inesperado. Cada uno tiene un comando de corrección específico en Ollama y LM Studio.' }
           },
           {
             '@type': 'Question',
@@ -607,18 +651,18 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-      gammaDescription: 'La siguiente presentación cubre: los 10 errores más comunes en la configuración de LLM local (sin memoria, GPU no detectada, inferencia lenta, conexión rechazada, salida corrupta), los requisitos de RAM para modelos 3B–14B con cuantización Q4_K_M y Q8_0, un proceso de depuración en 5 pasos y los comandos de Ollama para cada corrección. Descarga el PDF como tarjeta de referencia para la resolución de problemas de LLM local.',
+      gammaDescription: 'La siguiente presentación cubre: los 10 errores más comunes en la configuración de LLM local (sin memoria, GPU no detectada, inferencia lenta, conexión rechazada, salida corrupta), los requisitos de RAM para modelos 3B–14B con cuantización Q4_K_M y Q8_0, un proceso de depuración en 5 pasos y los comandos de Ollama para cada corrección. El error 11 (host remoto inesperado) se cubre en el texto del artículo. Descarga el PDF como tarjeta de referencia para la resolución de problemas de LLM local.',
     },
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
-      title: 'إصلاح أخطاء ⁨LLM⁩ المحلي في ⁨2026⁩: ⁨10⁩ مشكلات شائعة في ⁨Ollama⁩ و⁨LM Studio⁩ و⁨vLLM⁩',
+      title: 'إصلاح أخطاء ⁨LLM⁩ المحلي في ⁨2026⁩: ⁨11⁩ مشكلة شائعة في ⁨Ollama⁩ و⁨LM Studio⁩ و⁨vLLM⁩',
       seoTitle: 'إصلاح أخطاء ⁨LLM⁩ المحلي: ⁨OOM⁩ و⁨GPU⁩ والمنفذ ⁨11434⁩',
-      intro: 'أكثر الأخطاء شيوعًا في نماذج LLM المحلية هي التعليق بسبب نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء للغاية على CPU، ورفض الاتصال من API، والمخرجات التالفة. اعتبارًا من أبريل 2026، توجد حلول لكل الأخطاء العشرة -- معظمها يتطلب أمرًا أو أمرين فقط في الطرفية. يغطي هذا الدليل Ollama (المنفذ 11434)، وLM Studio (المنفذ 1234)، وvLLM بأوامر دقيقة لكل خطأ.',
-      metaDescription: '⁨10⁩ أخطاء شائعة في ⁨LLM⁩ المحلي: تعليق ⁨OOM⁩ يُحل بـ ⁨Q4⁩_⁨K⁩_⁨M⁩، ⁨GPU⁩ غير محتجزة، رفض منفذ ⁨11434⁩. أوامر دقيقة لـ ⁨Ollama⁩ و⁨LM Studio. 2026⁩.',
-      twitterDescription: '⁨10⁩ أخطاء لـ ⁨LLM⁩ المحلي محلولة: ⁨OOM⁩، وعدم اكتشاف ⁨GPU⁩، ورفض المنفذ ⁨11434⁩، وبطء ⁨CPU⁩. أوامر لـ ⁨Ollama + LM Studio⁩. أبريل ⁨2026⁩.',
+      intro: 'أكثر الأخطاء شيوعًا في نماذج LLM المحلية هي التعليق بسبب نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء للغاية على CPU، ورفض الاتصال من API، والمخرجات التالفة. اعتبارًا من يوليو 2026، توجد حلول لكل الأخطاء الإحدى عشرة -- معظمها يتطلب أمرًا أو أمرين فقط في الطرفية. يغطي هذا الدليل Ollama (المنفذ 11434)، وLM Studio (المنفذ 1234)، وvLLM بأوامر دقيقة لكل خطأ.',
+      metaDescription: '⁨11⁩ خطأ شائعًا في ⁨LLM⁩ المحلي: تعليق ⁨OOM⁩ يُحل بـ ⁨Q4⁩_⁨K⁩_⁨M⁩، ⁨GPU⁩ غير محتجزة، رفض منفذ ⁨11434⁩، ومضيف بعيد غير متوقع. أوامر دقيقة لـ ⁨Ollama⁩ و⁨LM Studio⁩.',
+      twitterDescription: '⁨11⁩ خطأ لـ ⁨LLM⁩ المحلي محلول: ⁨OOM⁩، وعدم اكتشاف ⁨GPU⁩، ورفض المنفذ ⁨11434⁩، وبطء ⁨CPU⁩، ومضيف بعيد غير متوقع. أوامر لـ ⁨Ollama + LM Studio⁩.',
       leadAnswerBlock: '**أكثر الأخطاء شيوعًا في نماذج LLM المحلية هي التعليق بسبب نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء للغاية على CPU، ورفض الاتصال من API، والمخرجات التالفة.**',
-      dateModified: '2026-04-16',
+      dateModified: '2026-07-15',
       publishDate: '2026-04-04',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
       readTime: '9 دقائق قراءة',
@@ -636,6 +680,7 @@ schema: {
         { label: 'الخطأ 8: مخرجات تالفة أو متكررة', anchor: '#error-8-garbled-output' },
         { label: 'الخطأ 9: المنفذ قيد الاستخدام', anchor: '#error-9-port-already-in-use' },
         { label: 'الخطأ 10: يتوقف النموذج في منتصف الاستجابة', anchor: '#error-10-model-stops-mid-response' },
+        { label: 'الخطأ 11: مضيف بعيد غير متوقع', anchor: '#error-11-unexpected-remote-host' },
       ],
       sections: {
         tldr: {
@@ -740,6 +785,16 @@ schema: {
           codeBlock: '# Limpiar manualmente la caché de modelos de LM Studio (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
           codeLanguage: 'bash',
         },
+        error6format: {
+          id: 'error-6c-incompatible-format',
+          title: 'الخطأ 6c: "لا توجد خيارات متوافقة متاحة لهذا التنسيق"',
+          content: '**يعني هذا الخطأ أن ملف النموذج الذي نزّلته ليس تنسيقًا يستطيع الواجهة الخلفية المثبّتة تشغيله -- وليس تنزيلًا تالفًا.** يظهر عند تحميل ملف `.safetensors` أو ملف حصري لـ MLX في واجهة خلفية قائمة على llama.cpp، أو عندما يحتاج ملف GGUF إلى بيئة تشغيل أحدث من المثبّتة.',
+          items: [
+            '**تحقق من تنسيق الملف**: يشغّل Ollama والواجهة الخلفية القياسية لـ LM Studio ملفات GGUF. تعمل إصدارات MLX فقط على Apple Silicon مع تفعيل واجهة MLX الخلفية في إعدادات LM Studio.',
+            '**أعد تنزيل التنسيق الصحيح**: في صفحة النموذج، اختر تكميم GGUF (مثل Q4_K_M) بدلًا من مستودع `.safetensors`.',
+            '**حدّث LM Studio**: تتطلب مخططات تكميم GGUF الأحدث أحيانًا تحديث بيئة التشغيل. راجع الإعدادات ← Runtime لمعرفة التحديثات المتاحة قبل إعادة تنزيل النموذج.',
+          ],
+        },
         error7: {
           id: 'error-7-cuda-errors',
           title: 'الخطأ 7: أخطاء تهيئة CUDA / ROCm',
@@ -775,6 +830,17 @@ schema: {
             '**زِد num_predict**: يحدد هذا المعامل أقصى عدد token للتوليد. القيمة الافتراضية غالبًا 128. زِدها: في Ollama، أضف `PARAMETER num_predict 2048` إلى الـ Modelfile.',
             '**تحقق من نافذة السياق**: إذا كانت محادثتك طويلة جدًا، فقد يكون النموذج قد بلغ حد سياقه. ابدأ جلسة جديدة أو استخدم نموذجًا بنافذة سياق أكبر (يدعم Llama 3.2 3B سياق 128K).',
             '**تحقق من token التوقف**: تتضمن بعض ملفات Modelfile تسلسلات توقف تنهي التوليد مبكرًا. راجع موجّه النظام والقالب بحثًا عن أنماط توقف غير متوقعة.',
+          ],
+        },
+        error11: {
+          id: 'error-11-unexpected-remote-host',
+          title: 'الخطأ 11: "فشل تحميل عميل LLM" -- مضيف بعيد غير متوقع',
+          content: '**خطأ "failed to load LLM client: [host]:443" يعني أن التطبيق يحاول الوصول إلى خادم خارجي عبر HTTPS -- وليس تثبيت Ollama أو LM Studio المحلي لديك.** لا يتصل Ollama وLM Studio بخادم بعيد للاستدلال افتراضيًا؛ فإذا أظهر عميل هذا الخطأ تجاه نطاق غير مألوف، فإن ذلك التطبيق عبارة عن حزمة أو نسخة معدّلة من طرف ثالث تحتوي نقطة نهاية بعيدة مضمّنة في الكود، وتلك النقطة غير متاحة حاليًا.',
+          items: [
+            '**حدّد التطبيق الذي يُصدر الخطأ**: هذه الرسالة لا تأتي من Ollama أو LM Studio مباشرة. راجع إعدادات التطبيق أو ملف README أو الكود المصدري بحثًا عن نقطة نهاية API أو خادم تحقق ترخيص مضمّن في الكود.',
+            '**تحقق من شبكتك أولًا**: إذا كان التطبيق يحتاج فعلًا للاتصال بخدمة سحابية، تأكد من أن جدار الحماية أو VPN أو برنامج مكافحة الفيروسات لا يحجب اتصال HTTPS الصادر عبر المنفذ 443 إلى ذلك المضيف.',
+            '**بدّل إلى عميل محلي بالكامل إذا أردت استدلالًا دون اتصال**: استخدم Ollama (`localhost:11434`) أو LM Studio (`localhost:1234`) مباشرة -- لا يجري أي منهما اتصالات صادرة إلى أي خادم للنماذج المحلية.',
+            '**لا تُدخل مفاتيح API أو بيانات اعتماد في عميل غير مألوف** حتى تتأكد من هوية نقطة النهاية البعيدة وسبب حاجة التطبيق إليها. أزل التطبيق إذا لم تستطع التحقق من مصدره.',
           ],
         },
         relatedReading: {
@@ -818,11 +884,11 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'إصلاح أخطاء LLM المحلي في 2026: 10 مشكلات شائعة في Ollama وLM Studio وvLLM',
-        'description': 'صحّح التعليق بسبب نقص الذاكرة، وعدم اكتشاف GPU، ورفض الاتصال، والمخرجات التالفة في Ollama وLM Studio. أوامر دقيقة: OLLAMA_GPU_LAYERS، وollama rm، وnvidia-smi.',
+        'headline': 'إصلاح أخطاء LLM المحلي في 2026: 11 مشكلة شائعة في Ollama وLM Studio وvLLM',
+        'description': 'صحّح التعليق بسبب نقص الذاكرة، وعدم اكتشاف GPU، ورفض الاتصال، والمخرجات التالفة، والمضيف البعيد غير المتوقع في Ollama وLM Studio. أوامر دقيقة: OLLAMA_GPU_LAYERS، وollama rm، وnvidia-smi.',
         'url': 'https://www.promptquorum.com/ar/local-llms/troubleshooting-local-llm-setup',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-16',
+        'dateModified': '2026-07-15',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
@@ -880,7 +946,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'ما هي أكثر الأخطاء شيوعًا في نشر LLM المحلي؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'أكثر 10 أخطاء شيوعًا لـ LLM المحلي هي: (1) OOM/نفاد الذاكرة، (2) عدم اكتشاف GPU، (3) رفض المنفذ 11434، (4) CPU بطيئة كبديل، (5) النموذج غير موجود، (6) تنزيل جزئي تالف، (7) توقف التوليد مبكرًا، (8) عدم توافق إصدار CUDA، (9) تجاوز طول السياق، (10) وسم نموذج خاطئ. لكلٍّ منها أمر تصحيح محدد في Ollama وLM Studio.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'أكثر 11 خطأ شيوعًا لـ LLM المحلي هي: (1) OOM/نفاد الذاكرة، (2) عدم اكتشاف GPU، (3) رفض المنفذ 11434، (4) CPU بطيئة كبديل، (5) النموذج غير موجود، (6) تنزيل جزئي تالف، (7) توقف التوليد مبكرًا، (8) عدم توافق إصدار CUDA، (9) تجاوز طول السياق، (10) وسم نموذج خاطئ، (11) محاولة العميل الوصول إلى مضيف بعيد غير متوقع. لكلٍّ منها أمر تصحيح محدد في Ollama وLM Studio.' }
           },
           {
             '@type': 'Question',
@@ -910,78 +976,342 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-      gammaDescription: 'يغطي العرض التقديمي التالي: أكثر 10 أخطاء شيوعًا في إعداد LLM المحلي (نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء، ورفض الاتصال، والمخرجات التالفة)، ومتطلبات RAM لنماذج 3B–14B بتكميم Q4_K_M وQ8_0، وعملية تصحيح في 5 خطوات، وأوامر Ollama لكل تصحيح. نزّل ملف PDF كبطاقة مرجعية لاستكشاف أخطاء LLM المحلي وإصلاحها.',
+      gammaDescription: 'يغطي العرض التقديمي التالي: أكثر 10 أخطاء شيوعًا في إعداد LLM المحلي (نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء، ورفض الاتصال، والمخرجات التالفة)، ومتطلبات RAM لنماذج 3B–14B بتكميم Q4_K_M وQ8_0، وعملية تصحيح في 5 خطوات، وأوامر Ollama لكل تصحيح. الخطأ 11 (مضيف بعيد غير متوقع) مذكور في نص المقالة. نزّل ملف PDF كبطاقة مرجعية لاستكشاف أخطاء LLM المحلي وإصلاحها.',
     },
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
-      title: 'Corrigir erros de LLM local em 2026: 10 problemas frequentes no Ollama, LM Studio e vLLM',
+      title: 'Corrigir erros de LLM local em 2026: 11 problemas frequentes no Ollama, LM Studio e vLLM',
       seoTitle: 'Erros de LLM local: OOM, GPU não detectada e porta 11434',
-      intro: 'Os erros mais comuns em LLMs locais são travamentos por falta de memória, GPU não detectada, inferência em CPU extremamente lenta, conexão recusada pela API e saída corrompida. A partir de abril de 2026, existem soluções para os 10 erros — a maioria requer apenas um ou dois comandos de terminal. Este guia cobre Ollama (porta 11434), LM Studio (porta 1234) e vLLM com comandos exatos para cada erro.',
-      metaDescription: '10 erros comuns de LLM local resolvidos: travamentos OOM, GPU não detectada, porta 11434 recusada e CPU lenta. Comandos para Ollama e LM Studio. 2026.',
+      intro: 'Os erros mais comuns em LLMs locais são travamentos por falta de memória, GPU não detectada, inferência em CPU extremamente lenta, conexão recusada pela API e saída corrompida. A partir de julho de 2026, existem soluções para os 11 erros — a maioria requer apenas um ou dois comandos de terminal. Este guia cobre Ollama (porta 11434), LM Studio (porta 1234) e vLLM com comandos exatos para cada erro.',
+      metaDescription: '11 erros comuns de LLM local resolvidos: travamentos OOM, GPU não detectada, porta 11434 recusada, CPU lenta e host remoto inesperado. Comandos para Ollama e LM Studio.',
+      twitterDescription: '11 erros de LLM local resolvidos: OOM, GPU não detectada, porta 11434 recusada, CPU lenta, host remoto inesperado. Comandos para Ollama + LM Studio.',
       leadAnswerBlock: '**Os erros mais comuns em LLMs locais são travamentos por falta de memória, GPU não detectada, inferência em CPU extremamente lenta, conexão recusada pela API e saída corrompida.**',
+      dateModified: '2026-07-15',
       publishDate: '2026-04-04',
       audience: 'Iniciantes executando seu primeiro LLM local em hardware de consumo',
       readTime: '9 min de leitura',
       educationalLevel: 'Beginner',
       primaryTerm: 'solução de problemas de LLM local',
       toc: [
-        { label: 'Principais conclusões', anchor: '#key-takeaways' },
-        { label: 'Travamentos OOM (falta de memória)', anchor: '#oom-crashes' },
-        { label: 'GPU não detectada', anchor: '#gpu-not-detected' },
-        { label: 'Inferência extremamente lenta', anchor: '#slow-inference' },
-        { label: 'Conexão recusada na API', anchor: '#connection-refused' },
-        { label: 'Saída corrompida ou sem sentido', anchor: '#corrupted-output' },
-        { label: 'Perguntas frequentes', anchor: '#faq' },
+        { label: 'Resumo', anchor: '#key-takeaways' },
+        { label: 'Erro 1: Falta de memória', anchor: '#error-1-out-of-memory' },
+        { label: 'Erro 2: GPU não detectada', anchor: '#error-2-gpu-not-detected' },
+        { label: 'Erro 3: Inferência muito lenta', anchor: '#error-3-very-slow-inference' },
+        { label: 'Erro 4: Conexão recusada', anchor: '#error-4-connection-refused' },
+        { label: 'Erro 5: Modelo não encontrado', anchor: '#error-5-model-not-found' },
+        { label: 'Erro 6: Arquivo de modelo corrompido', anchor: '#error-6-corrupted-model-file' },
+        { label: 'Erro 7: Erros de CUDA / ROCm', anchor: '#error-7-cuda-errors' },
+        { label: 'Erro 8: Saída corrompida ou repetitiva', anchor: '#error-8-garbled-output' },
+        { label: 'Erro 9: Porta já em uso', anchor: '#error-9-port-already-in-use' },
+        { label: 'Erro 10: O modelo para no meio da resposta', anchor: '#error-10-model-stops-mid-response' },
+        { label: 'Erro 11: Host remoto inesperado', anchor: '#error-11-unexpected-remote-host' },
       ],
       sections: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '**OOM (falta de memória)**: use quantização Q4_K_M ou um modelo menor. Verifique a RAM com `free -h` antes de baixar modelos.',
-            '**GPU não detectada**: instale drivers NVIDIA 525+, CUDA 11.3+, ou ROCm 5.7+ para AMD. Defina `OLLAMA_GPU_LAYERS=999`.',
-            '**Inferência lenta**: confirme atividade da GPU com `ollama ps`. Se apenas CPU, reduza o tamanho do modelo.',
-            '**Porta 11434 recusada**: o Ollama não está em execução. Execute `ollama serve` em um terminal separado.',
-            '**Saída corrompida**: o modelo errado foi baixado ou o arquivo GGUF está corrompido. Exclua e rebaixe.',
+            'Falta de memória: mude para uma quantização menor (Q4_K_M → Q3_K_S) ou um modelo menor.',
+            'GPU não detectada na NVIDIA: atualize o driver para 525+ no Linux, 452+ no Windows. Execute `nvidia-smi` para confirmar.',
+            'Inferência extremamente lenta: você está rodando apenas na CPU. Ative o offload de GPU no Ollama com a variável de ambiente `OLLAMA_GPU_LAYERS`.',
+            'Conexão recusada: o Ollama não está em execução. Inicie-o com `ollama serve` ou reinicie o serviço.',
+            'Saída corrompida: template de prompt errado. Use a variante Instruct do modelo, não a variante base.',
+          ],
+          image: '/images/troubleshooting-error-symptoms-quick-ref-pt.svg',
+          imageCaption: 'Os 10 erros mais comuns de LLM local com sintomas e correções — referência rápida para configurações de Ollama, LM Studio e vLLM (julho de 2026).',
+        },
+        error1: {
+          id: 'error-1-out-of-memory',
+          title: 'Erro 1: "Falta de memória" / Travamento por falta de memória',
+          content: '**Erros de falta de memória significam que o modelo precisa de mais RAM do que a disponível -- não é uma falha de hardware.** Este é o erro mais comum para usuários iniciantes. Veja [Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) para entender como a quantização reduz os requisitos de RAM.',
+          items: [
+            '**Verifique a RAM disponível**: execute `free -h` no macOS/Linux, ou abra o Gerenciador de Tarefas → Desempenho → Memória no Windows.',
+            '**Mude para uma quantização menor**: substitua `Q8_0` ou `Q5_K_M` por `Q4_K_M`. Para o Ollama: `ollama run llama3.2-instruct-q4_K_M`.',
+            '**Feche aplicativos em segundo plano antes de carregar o modelo** -- navegadores e outros apps consomem RAM, reduzindo o que fica disponível para o modelo.',
+            '**Mude para um modelo menor**: se o 8B falhar com 8 GB de RAM, tente o `llama3.2:3b` (precisa de apenas ~2,5 GB).',
+          ],
+          image: '/images/troubleshooting-ram-by-model-size-pt.svg',
+          imageCaption: 'Requisitos de RAM de LLM local por tamanho de modelo: llama3.2 1B–3B cabe em 8 GB, modelos 7B–8B precisam de 16 GB, modelos 70B precisam de 64 GB com quantização Q4_K_M.',
+        },
+        error1Code: {
+          title: 'Verificar a RAM disponível no Linux / macOS',
+          codeBlock: '# Linux\nfree -h\n\n# macOS\nvm_stat | grep "Pages free"\n\n# Mais legível no macOS\ntop -l 1 | grep "PhysMem"',
+          codeLanguage: 'bash',
+        },
+        error2: {
+          id: 'error-2-gpu-not-detected',
+          title: 'Erro 2: GPU não está sendo usada (rodando apenas na CPU)',
+          content: [
+            '**GPU não usada significa que o LLM roda de 5 a 10 vezes mais devagar que o esperado -- verifique a instalação do driver antes de qualquer outra coisa.** Confirme que sua GPU está visível para o sistema:',
+          ],
+          codeBlock: '# NVIDIA — deve mostrar o nome da GPU e a versão do driver\nnvidia-smi\n\n# AMD no Linux\nrocm-smi\n\n# macOS — verificar se o Metal está disponível\nsystem_profiler SPDisplaysDataType | grep "Metal"',
+          codeLanguage: 'bash',
+          image: '/images/troubleshooting-gpu-detection-pt.svg',
+          imageCaption: 'Somente CPU vs. GPU ativa: o Ollama na CPU gera 2–8 tok/s; o modo GPU gera 30–120 tok/s. Verifique com ollama ps ou nvidia-smi.',
+        },
+        error2Fixes: {
+          title: 'Como ativar a GPU no Ollama?',
+          items: [
+            '**NVIDIA no Linux**: instale o driver NVIDIA 525+ e o CUDA Toolkit 11.3+. O Ollama detecta o CUDA automaticamente ao reiniciar.',
+            '**NVIDIA no Windows**: verifique se a versão do driver é 452.39 ou superior. O Ollama instala o suporte a CUDA automaticamente pelo instalador do Windows.',
+            '**AMD no Linux**: instale o ROCm 5.7+. Se a detecção falhar, defina `HSA_OVERRIDE_GFX_VERSION=11.0.0` para placas da série RX 6000.',
+            '**Apple Silicon**: o Ollama usa Metal por padrão -- não precisa de configuração. Confirme com `ollama ps` depois de carregar um modelo; as camadas de GPU aparecem na saída.',
           ],
         },
-        faqSection: {
-          id: 'faq',
-          title: 'Perguntas frequentes',
-          faqs: [
-            { q: 'Por que meu LLM local está travando com erro OOM?', a: 'O modelo não cabe na VRAM disponível. Solução: use quantização Q4_K_M (reduce VRAM em ~55% vs FP16) ou mude para um modelo menor. Verifique a VRAM disponível com `nvidia-smi` antes de baixar.' },
-            { q: 'Por que o Ollama não detecta minha GPU NVIDIA?', a: 'Drivers desatualizados são a causa mais comum. Instale drivers NVIDIA 525+ e CUDA 11.3+. No Linux, execute `nvidia-smi` para verificar. Se a GPU aparecer no nvidia-smi mas não no Ollama, tente definir `OLLAMA_GPU_LAYERS=999` como variável de ambiente.' },
-            { q: 'Como sei se meu LLM está rodando na GPU ou na CPU?', a: 'Execute `ollama ps` enquanto um modelo está carregado — a saída mostra quais camadas estão na GPU vs CPU. Alternativamente, monitore a utilização da GPU com `nvidia-smi -l 1`. Se a utilização da GPU ficar em 0%, o Ollama está rodando apenas em CPU.' },
-            { q: 'Por que a geração do LLM para antes do tempo?', a: 'Paradas antecipadas geralmente são causadas por tokens de parada no Modelfile. Verifique o prompt do sistema e o template para sequências de parada inesperadas. Também verifique o parâmetro `num_predict` — se configurado muito baixo, o Ollama truncará a saída nesse número de tokens.' },
+        error3: {
+          id: 'error-3-very-slow-inference',
+          title: 'Erro 3: Inferência extremamente lenta (menos de 5 tokens por segundo)',
+          content: '**Menos de 5 tokens por segundo significa que o modelo está rodando só na CPU ou que o modelo é grande demais para a VRAM disponível.** Um modelo 7B na GPU gera 30–80 tok/s; o mesmo modelo na CPU gera 3–10 tok/s.',
+          items: [
+            '**Confirme se a GPU está ativa**: execute `ollama ps` enquanto um modelo estiver carregado. A saída mostra quantas camadas estão na GPU vs. CPU.',
+            '**Reduza o tamanho do modelo**: um modelo 13B na CPU gera 3–6 tok/s. Mudar para 7B dobra a velocidade; mudar para 3B a quadruplica.',
+            '**Aumente as camadas de GPU no Ollama**: defina `OLLAMA_GPU_LAYERS=999` para mover todas as camadas para a GPU (o Ollama limita ao que cabe na VRAM).',
+            '**Use uma quantização mais rápida**: Q4_K_M é a quantização mais rápida que mantém qualidade aceitável. Q8_0 tem qualidade maior, mas é ~30% mais lenta.',
+          ],
+        },
+        error3Code: {
+          title: 'Definir camadas de GPU no Ollama',
+          codeBlock: '# Definir a variável de ambiente antes de iniciar o Ollama\nexport OLLAMA_GPU_LAYERS=999\nollama serve\n\n# Ou em um Modelfile\nFROM llama3.1:8b\nPARAMETER num_gpu 999',
+          codeLanguage: 'bash',
+        },
+        error4: {
+          id: 'error-4-connection-refused',
+          title: 'Erro 4: "Conexão recusada" ao chamar a API',
+          content: '**Conexão recusada significa que o Ollama não está em execução -- a API em `localhost:11434` só responde quando o serviço está ativo.** Inicie-o antes de fazer chamadas de API.',
+          codeBlock: '# Iniciar o Ollama manualmente\nollama serve\n\n# No Linux -- reiniciar o serviço systemd\nsystemctl restart ollama\n\n# Verificar se está em execução\ncurl http://localhost:11434\n# Esperado: "Ollama is running"',
+          codeLanguage: 'bash',
+        },
+        error5: {
+          id: 'error-5-model-not-found',
+          title: 'Erro 5: Erro "Modelo não encontrado"',
+          content: [
+            '**"Modelo não encontrado" significa que o nome do modelo no seu comando não corresponde a nenhum modelo baixado.** Os nomes de modelos no Ollama diferenciam maiúsculas de minúsculas e incluem tags de versão.',
+          ],
+          codeBlock: '# Listar todos os modelos baixados\nollama list\n\n# Baixar um modelo se estiver faltando\nollama pull llama3.2\n\n# Verifique o nome exato do modelo -- as tags importam\n# "llama3.2" e "llama3.2:3b" são entradas diferentes',
+          codeLanguage: 'bash',
+        },
+        error6: {
+          id: 'error-6-corrupted-model-file',
+          title: 'Erro 6: Arquivo de modelo corrompido',
+          content: '**Arquivos de modelo corrompidos são causados por downloads interrompidos -- exclua e baixe novamente para corrigir.** O Ollama nem sempre detecta downloads parciais automaticamente.',
+          codeBlock: '# Remover o modelo corrompido\nollama rm llama3.2\n\n# Baixar novamente\nollama pull llama3.2\n\n# Para o LM Studio: exclua os arquivos de modelo manualmente\n# Local padrão: ~/.cache/lm-studio/models/',
+          codeLanguage: 'bash',
+        },
+        error6lmstudio: {
+          id: 'error-6b-lm-studio-model-resolution',
+          title: 'Erro 6b: "Falha ao resolver o modelo" no LM Studio',
+          content: '**"Failed to resolve model lmstudio-community/..." significa que o LM Studio não consegue encontrar o modelo no seu registro.** Isso geralmente acontece quando um modelo é baixado do `lmstudio-community` no Hugging Face, mas a referência do registro mudou. O LM Studio está usando uma entrada de registro em cache que não corresponde mais aos arquivos de modelo disponíveis.',
+          items: [
+            '**Abra o LM Studio → aba My Models → clique no menu de três pontos do modelo com falha → selecione "Delete model"** (mantém o arquivo, remove o registro)',
+            '**Procure o mesmo modelo no navegador de modelos e baixe novamente** -- o LM Studio vai registrá-lo de novo',
+            '**Alternativa: feche o LM Studio, navegue até `~/.cache/lm-studio/models/`, exclua a pasta do modelo específico e baixe novamente**',
+          ],
+          codeBlock: '# Limpar manualmente o cache de modelos do LM Studio (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
+          codeLanguage: 'bash',
+        },
+        error6format: {
+          id: 'error-6c-incompatible-format',
+          title: 'Erro 6c: "No Compatible Options Available for This Format"',
+          content: '**Este erro significa que o arquivo de modelo baixado não está em um formato que o seu backend instalado consegue executar -- não é um download corrompido.** Ele aparece quando um arquivo `.safetensors` ou exclusivo de MLX é carregado em um backend baseado em llama.cpp, ou quando um arquivo GGUF precisa de um runtime mais novo do que o instalado.',
+          items: [
+            '**Verifique o formato do arquivo**: o Ollama e o backend padrão do LM Studio executam arquivos GGUF. As builds MLX só funcionam em Apple Silicon com o backend MLX selecionado nas configurações do LM Studio.',
+            '**Baixe novamente no formato correto**: na página do modelo, escolha uma quantização GGUF (por exemplo, Q4_K_M) em vez de um repositório `.safetensors`.',
+            '**Atualize o LM Studio**: esquemas de quantização GGUF mais novos às vezes exigem uma atualização do runtime. Verifique Configurações → Runtime para ver atualizações disponíveis antes de baixar o modelo de novo.',
+          ],
+        },
+        error7: {
+          id: 'error-7-cuda-errors',
+          title: 'Erro 7: Erros de inicialização de CUDA / ROCm',
+          content: '**Erros de CUDA e ROCm indicam incompatibilidade de versão entre driver e biblioteca -- atualize o driver para a versão mínima exigida.**',
+          items: [
+            '**"CUDA driver version insufficient"**: atualize o driver da NVIDIA. O mínimo para o llama.cpp é CUDA 11.3 / driver 450.80.',
+            '**"No kernel image available for execution"**: a arquitetura da sua GPU não é suportada. A série GTX 900 (Maxwell) e anteriores não são suportadas pelas builds recentes do CUDA.',
+            '**AMD ROCm "HSA_STATUS_ERROR_INVALID_ISA"**: defina `HSA_OVERRIDE_GFX_VERSION=10.3.0` (para RX 6000) ou `11.0.0` (para RX 7000) antes de iniciar o Ollama.',
+            '**Verifique a versão do CUDA**: execute `nvcc --version` ou `nvidia-smi | grep CUDA`.',
+          ],
+        },
+        error8: {
+          id: 'error-8-garbled-output',
+          title: 'Erro 8: Saída corrompida, repetitiva ou sem sentido',
+          content: [
+            '**Saída corrompida quase sempre significa que você está usando um modelo base em vez de uma variante instruct/chat.** Modelos base geram completações de texto bruto, não respostas a perguntas.',
+            'Modelos base (por exemplo, `llama3.1:8b`) não são ajustados para conversação e, quando recebem uma pergunta, geram completações brutas que parecem sem sentido. Sempre use a variante instruct: `llama3.1:8b-instruct`. Veja [Como instalar o LM Studio](/pt/local-llms/how-to-install-lm-studio) para um método baseado em interface gráfica para trocar de variante do modelo.',
+            'No Ollama, a tag padrão da maioria dos modelos já aponta para a variante instruct. Se você baixou manualmente do Hugging Face, confirme se o nome do arquivo inclui "Instruct" ou "chat".',
+          ],
+        },
+        error9: {
+          id: 'error-9-port-already-in-use',
+          title: 'Erro 9: "Endereço já em uso" -- Conflito de porta',
+          content: '**"Address already in use" significa que outro processo está ocupando a porta 11434 (Ollama) ou 1234 (LM Studio).** Encontre e encerre o processo em conflito.',
+          codeBlock: '# Encontrar o que está usando a porta 11434 (Ollama)\nlsof -i :11434\n\n# Encerrar pelo PID\nkill -9 <PID>\n\n# Ou mudar a porta do Ollama\nexport OLLAMA_HOST=0.0.0.0:11435\nollama serve',
+          codeLanguage: 'bash',
+        },
+        error10: {
+          id: 'error-10-model-stops-mid-response',
+          title: 'Erro 10: O modelo para de gerar no meio da resposta',
+          content: '**Parar no meio da resposta é causado por atingir o limite de tamanho de contexto ou por `num_predict` configurado muito baixo.** O `num_predict` padrão em muitas configurações é 128 tokens -- suficiente para apenas 1–2 frases.',
+          items: [
+            '**Aumente o num_predict**: esse parâmetro define o número máximo de tokens a gerar. O padrão costuma ser 128. Aumente-o: no Ollama, adicione `PARAMETER num_predict 2048` ao Modelfile.',
+            '**Verifique a janela de contexto**: se sua conversa for muito longa, o modelo pode ter atingido o limite de contexto. Comece uma nova sessão ou use um modelo com uma janela de contexto maior (o Llama 3.2 3B suporta 128K).',
+            '**Verifique os tokens de parada**: alguns Modelfiles incluem sequências de parada que encerram a geração antecipadamente. Verifique o prompt do sistema e o template em busca de padrões de parada inesperados.',
+          ],
+        },
+        error11: {
+          id: 'error-11-unexpected-remote-host',
+          title: 'Erro 11: "Falha ao carregar o cliente LLM" -- Host remoto inesperado',
+          content: '**Um erro "failed to load LLM client: [host]:443" significa que o aplicativo está tentando acessar um servidor externo via HTTPS -- não a sua instalação local do Ollama ou LM Studio.** O Ollama e o LM Studio nunca contatam um servidor remoto para inferência por padrão; se um cliente mostrar esse erro para um domínio desconhecido, esse aplicativo é um wrapper ou fork de terceiros com um endpoint remoto fixo no código, e esse endpoint está inacessível no momento.',
+          items: [
+            '**Identifique qual aplicativo está gerando o erro**: essa mensagem não vem diretamente do Ollama nem do LM Studio. Verifique as configurações, o README ou o código-fonte do aplicativo em busca de um endpoint de API fixo no código.',
+            '**Verifique primeiro a sua rede**: se o aplicativo realmente precisa chamar um serviço na nuvem, confirme que o firewall, a VPN ou o antivírus não estão bloqueando o tráfego HTTPS de saída na porta 443 para esse host.',
+            '**Mude para um cliente totalmente local se quiser inferência offline**: use o Ollama (`localhost:11434`) ou o LM Studio (`localhost:1234`) diretamente -- nenhum dos dois faz chamadas de saída para nenhum servidor no caso de modelos locais.',
+            '**Não digite chaves de API nem credenciais em um cliente desconhecido** até confirmar o que é o endpoint remoto e por que o aplicativo precisa dele. Desinstale o aplicativo se não conseguir verificar a origem dele.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) -- Por que Q4_K_M é o padrão e como a quantização afeta a RAM',
+            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- Requisitos de hardware para rodar modelos de 7B a 70B',
+            '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- Guia de instalação e configuração',
+            '[Ollama vs. LM Studio](/pt/local-llms/ollama-vs-lm-studio) -- Comparação das duas ferramentas de LLM local mais populares',
+            '[Como rodar LLMs locais em um notebook](/pt/local-llms/local-llm-on-laptop) -- Otimização térmica e de bateria específica para notebooks',
+            '[Melhores modelos de LLM local para iniciantes](/pt/local-llms/best-beginner-local-llm-models) -- Recomendações de modelos para 8 GB de RAM',
+            '[Melhores LLMs locais para programação 2026](/pt/local-llms/best-local-llms-for-coding) — Comparativo Qwen3-Coder vs. DeepSeek',
+          ],
+        },
+        moreTroubleshooting: {
+          title: 'Onde encontrar mais ajuda',
+          content: 'Para problemas específicos de hardware em notebooks (throttling térmico, consumo de bateria), veja [Como rodar LLMs locais em um notebook](/pt/local-llms/local-llm-on-laptop). Para dúvidas de configuração de segurança e privacidade, veja a [Lista de verificação de segurança e privacidade de LLM local](/pt/local-llms/local-llm-security-privacy-checklist). A página de issues do Ollama no GitHub (github.com/ollama/ollama/issues) e o subreddit r/LocalLLaMA são os recursos de comunidade mais ativos para bugs específicos de modelos.',
+        },
+        commonMistakes: {
+          title: 'Erros comuns na solução de problemas de LLM local',
+          items: [
+            '**Confundir erros OOM com falha de hardware** -- o erro significa que a RAM é pequena demais para o modelo, não que o hardware está quebrado. Correção: use quantização Q4_K_M ou um modelo menor.',
+            '**Não verificar a carga do sistema** -- a velocidade de inferência cai bastante quando outros aplicativos consomem CPU/GPU. Feche o navegador, o player de vídeo e processos em segundo plano antes de fazer benchmarks.',
+            '**Ignorar incompatibilidade de versão do driver** -- o CUDA da NVIDIA exige versões específicas de driver por versão do CUDA. Verifique a saída do `nvidia-smi`; a versão do driver precisa ser ≥450.80 para o CUDA 11.x.',
+            '**Usar o nome errado do modelo no Ollama** -- `llama3.2` e `llama3.2:3b` são tags diferentes no Ollama. Execute `ollama list` para ver os nomes exatos dos modelos baixados.',
+            '**Não reiniciar o Ollama depois de atualizar o driver** -- o Ollama detecta a GPU na inicialização. Depois de atualizar os drivers da NVIDIA ou ROCm, reinicie o Ollama completamente (`ollama serve`) para detectar a GPU novamente.',
+          ],
+          image: '/images/troubleshooting-debug-steps-pt.svg',
+          imageCaption: 'Processo de depuração de LLM local em 5 passos: verificar RAM → verificar GPU → verificar servidor → verificar modelo → verificar qualidade da saída. Pare no primeiro passo que falhar.',
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            'NVIDIA. (2024). "CUDA Toolkit Release Notes." https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/ — Requisitos oficiais de versão de driver CUDA por versão.',
+            'Ollama. (2026). "Ollama Troubleshooting." https://github.com/ollama/ollama/blob/main/docs/troubleshooting.md — Documentação oficial do Ollama para erros comuns.',
+            'AMD. (2024). "ROCm Installation Guide." https://rocm.docs.amd.com/projects/install-on-linux/en/latest/ — Instalação oficial do AMD ROCm e suporte de GPU para Linux.',
           ],
         },
       },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Corrigir erros de LLM local em 2026: 10 problemas frequentes no Ollama, LM Studio e vLLM',
-        description: '10 erros comuns de LLM local resolvidos: travamentos OOM, GPU não detectada, porta 11434 recusada e CPU lenta.',
-        url: 'https://www.promptquorum.com/pt/local-llms/troubleshooting-local-llm-setup',
-        inLanguage: 'pt-BR',
-        datePublished: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        proficiencyLevel: 'Beginner',
-        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+        'headline': 'Corrigir erros de LLM local em 2026: 11 problemas frequentes no Ollama, LM Studio e vLLM',
+        'description': 'Corrija travamentos por falta de memória, GPU não detectada, conexão recusada, saída corrompida e host remoto inesperado no Ollama e LM Studio. Comandos exatos: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
+        'url': 'https://www.promptquorum.com/pt/local-llms/troubleshooting-local-llm-setup',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-07-15',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'inLanguage': 'pt-BR',
+        'about': [
+          { '@type': 'Thing', 'name': 'solução de problemas do Ollama' },
+          { '@type': 'Thing', 'name': 'erros do LM Studio' },
+          { '@type': 'Thing', 'name': 'falta de memória em LLM local' },
+          { '@type': 'Thing', 'name': 'OLLAMA_GPU_LAYERS' },
+          { '@type': 'Thing', 'name': 'GPU não detectada em LLM local' },
+        ],
+        'proficiencyLevel': 'Beginner',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Depurar erros de configuração de LLM local',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Corrigir erros de falta de memória', 'text': 'Mude para uma quantização menor (Q4_K_M) ou um modelo menor. Verifique a RAM com free -h.' },
+          { '@type': 'HowToStep', 'name': 'Ativar a detecção de GPU', 'text': 'Atualize os drivers (NVIDIA 525+), defina OLLAMA_GPU_LAYERS=999, verifique com nvidia-smi.' },
+          { '@type': 'HowToStep', 'name': 'Acelerar inferência lenta', 'text': 'Confirme a atividade da GPU com ollama ps, reduza o tamanho do modelo ou use quantização Q4_K_M.' },
+          { '@type': 'HowToStep', 'name': 'Corrigir conexão recusada', 'text': 'Inicie o Ollama com ollama serve ou reinicie o serviço systemd. Verifique com curl localhost:11434.' },
+          { '@type': 'HowToStep', 'name': 'Resolver modelo não encontrado', 'text': 'Liste os modelos com ollama list, baixe os que faltam com ollama pull, verifique nomes/tags exatos.' },
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'pt-BR',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'O que causa erros OOM em LLMs locais?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Erros OOM (falta de memória) ocorrem quando o tamanho do modelo excede a RAM ou VRAM disponível. Correção: mude para um modelo menor (`ollama run llama3.2:3b` precisa de ~2,5 GB) ou use um nível de quantização mais baixo. Execute `free -h` (Linux/macOS) para verificar a RAM disponível antes de baixar modelos acima de 7B.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Por que minha GPU não é detectada pelo Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'NVIDIA: instale o driver 525+ e o CUDA Toolkit 11.3+, depois reinicie o Ollama. AMD no Linux: instale o ROCm 5.7+. Verifique a detecção com `nvidia-smi` (NVIDIA) ou `rocm-smi` (AMD). Apple Silicon: o Ollama usa Metal por padrão — não precisa de configuração. Defina OLLAMA_GPU_LAYERS=999 para forçar o offload completo de GPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Por que a porta 11434 é recusada quando executo o Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'A porta 11434 é recusada quando o servidor Ollama não está em execução. Inicie-o com `ollama serve`, depois verifique com `curl http://localhost:11434` — a resposta esperada é "Ollama is running". No Linux, reinicie o serviço systemd: `systemctl restart ollama`.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Por que meu LLM local está rodando na CPU em vez da GPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'O Ollama recorre à CPU se a GPU não for detectada ou se a VRAM for insuficiente. Defina a variável de ambiente `OLLAMA_GPU_LAYERS=999` antes de iniciar o Ollama para forçar o offload máximo de GPU. Verifique primeiro a visibilidade da GPU com `nvidia-smi`. Se a VRAM for insuficiente para o modelo completo, o Ollama divide as camadas automaticamente entre GPU e CPU.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais são os erros mais comuns na implantação de LLM local?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Os 11 erros mais comuns de LLM local são: (1) OOM/falta de memória, (2) GPU não detectada, (3) porta 11434 recusada, (4) fallback lento para CPU, (5) modelo não encontrado, (6) download parcial corrompido, (7) geração para antecipadamente, (8) incompatibilidade de versão do CUDA, (9) tamanho de contexto excedido, (10) tag de modelo incorreta, (11) cliente tentando acessar um host remoto inesperado. Cada um tem um comando de correção específico no Ollama e no LM Studio.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como corrijo um download de modelo do Ollama corrompido?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Exclua o modelo em cache e baixe novamente: `ollama rm <nome-do-modelo>` e depois `ollama pull <nome-do-modelo>`. Downloads corrompidos acontecem quando um pull é interrompido. O Ollama nem sempre detecta downloads parciais automaticamente.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como verifico se o Ollama está usando minha GPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Execute `ollama ps` enquanto um modelo está carregado — a saída mostra quais camadas estão na GPU vs. CPU. Alternativamente, monitore a utilização da GPU com `nvidia-smi -l 1` (atualiza a cada segundo). Se a utilização da GPU ficar em 0%, o Ollama está rodando apenas na CPU — verifique a instalação do driver e a compatibilidade com CUDA.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Por que minha geração de LLM para antecipadamente?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Paradas antecipadas geralmente são causadas por tokens de parada no Modelfile. Verifique o prompt do sistema e o template em busca de sequências de parada inesperadas. Também verifique o parâmetro `num_predict` — se estiver configurado baixo demais, o Ollama vai truncar a saída nesse número de tokens. O padrão é -1 (ilimitado).' }
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Fundamentos de solução de problemas de LLM local',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Erros OOM', 'description': 'Corrija travamentos por falta de memória mudando para quantização Q4_K_M ou modelos menores. Verifique a RAM com free -h antes de baixar modelos.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Detecção de GPU', 'description': 'Ative a GPU instalando drivers NVIDIA 525+, CUDA 11.3+, ou ROCm 5.7+ para AMD. Defina OLLAMA_GPU_LAYERS=999 para offload completo de GPU.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Inferência lenta', 'description': 'Confirme a atividade da GPU com ollama ps. Se estiver só na CPU, reduza o tamanho do modelo ou use quantização Q4_K_M.' },
+        ]
       },
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-      gammaDescription: 'A apresentação abaixo cobre: os 10 erros mais comuns na configuração de LLM local (sem memória, GPU não detectada, inferência lenta, conexão recusada, saída corrompida), os requisitos de RAM para modelos 3B–14B com quantização Q4_K_M e Q8_0, um processo de depuração em 5 etapas e os comandos do Ollama para cada correção. Baixe o PDF como cartão de referência para solução de problemas de LLM local.',
+      gammaDescription: 'A apresentação abaixo cobre: os 10 erros mais comuns na configuração de LLM local (sem memória, GPU não detectada, inferência lenta, conexão recusada, saída corrompida), os requisitos de RAM para modelos 3B–14B com quantização Q4_K_M e Q8_0, um processo de depuração em 5 etapas e os comandos do Ollama para cada correção. O erro 11 (host remoto inesperado) é abordado no texto do artigo. Baixe o PDF como cartão de referência para solução de problemas de LLM local.',
     },
     de: {
   theme: 'Getting Started',
-  title: 'Lokale LLM-Fehler 2026 beheben: 10 häufige Probleme in Ollama, LM Studio und vLLM',
+  title: 'Lokale LLM-Fehler 2026 beheben: 11 häufige Probleme in Ollama, LM Studio und vLLM',
   seoTitle: 'Lokale LLM-Fehler beheben: OOM, GPU, Port 11434 2026',
-  intro: 'Die häufigsten Fehler bei lokalen LLMs sind Out-of-Memory-Abstürze, GPU wird nicht erkannt, extrem langsame CPU-Inferenz, Connection Refused vom API und fehlerhafte Ausgabe. Stand April 2026 gibt es Lösungen für alle 10 Fehler — die meisten erfordern nur ein bis zwei Terminal-Befehle. Dieser Leitfaden behandelt Ollama (Port 11434), LM Studio (Port 1234) und vLLM mit exakten Befehlen für jeden Fehler.',
-  metaDescription: '10 häufige lokale LLM-Fehler behoben: OOM, GPU nicht erkannt, Port 11434 abgelehnt, langsamer CPU-Fallback. Fix-Befehle für Ollama + LM Studio. April 2026.',
-  twitterDescription: '10 LLM-Fehler behoben: OOM, GPU nicht erkannt, Port 11434 abgelehnt, CPU-Fallback. Ollama + LM Studio. April 2026.',
+  intro: 'Die häufigsten Fehler bei lokalen LLMs sind Out-of-Memory-Abstürze, GPU wird nicht erkannt, extrem langsame CPU-Inferenz, Connection Refused vom API und fehlerhafte Ausgabe. Stand Juli 2026 gibt es Lösungen für alle 11 Fehler — die meisten erfordern nur ein bis zwei Terminal-Befehle. Dieser Leitfaden behandelt Ollama (Port 11434), LM Studio (Port 1234) und vLLM mit exakten Befehlen für jeden Fehler.',
+  metaDescription: '11 häufige lokale LLM-Fehler behoben: OOM, GPU nicht erkannt, Port 11434 abgelehnt, langsamer CPU-Fallback, unerwarteter Remote-Host. Fix-Befehle für Ollama + LM Studio.',
+  twitterDescription: '11 LLM-Fehler behoben: OOM, GPU nicht erkannt, Port 11434 abgelehnt, CPU-Fallback, unerwarteter Remote-Host. Ollama + LM Studio.',
   publishDate: '2026-04-04',
-  dateModified: '2026-04-16',
+  dateModified: '2026-07-15',
   leadAnswerBlock: '**Die häufigsten Fehler bei lokalen LLMs sind Out-of-Memory-Abstürze, GPU wird nicht erkannt, extrem langsame CPU-Inferenz, Connection Refused vom API und fehlerhafte Ausgabe.**',
   audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
   readTime: '9 Min. Lesezeit',
@@ -999,15 +1329,16 @@ schema: {
     { label: 'Fehler 8: Fehlerhafte oder repetitive Ausgabe', anchor: '#error-8-garbled-output' },
     { label: 'Fehler 9: Port wird bereits verwendet', anchor: '#error-9-port-already-in-use' },
     { label: 'Fehler 10: Modell stoppt mitten im Response', anchor: '#error-10-model-stops-mid-response' },
+    { label: 'Fehler 11: Unerwarteter Remote-Host', anchor: '#error-11-unexpected-remote-host' },
   ],
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    'headline': 'Lokale LLM-Fehler 2026 beheben: 10 häufige Probleme in Ollama, LM Studio und vLLM',
-    'description': 'Beheben Sie Out-of-Memory-Abstürze, GPU nicht erkannt, Connection Refused und fehlerhafte Ausgabe in Ollama und LM Studio. Exakte Befehle: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
+    'headline': 'Lokale LLM-Fehler 2026 beheben: 11 häufige Probleme in Ollama, LM Studio und vLLM',
+    'description': 'Beheben Sie Out-of-Memory-Abstürze, GPU nicht erkannt, Connection Refused, fehlerhafte Ausgabe und unerwartete Remote-Host-Fehler in Ollama und LM Studio. Exakte Befehle: OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
     'url': 'https://www.promptquorum.com/de/local-llms/troubleshooting-local-llm-setup',
     'datePublished': '2026-04-04',
-    'dateModified': '2026-04-16',
+    'dateModified': '2026-07-15',
     'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'audience': { '@type': 'Audience', 'audienceType': 'Entwickler und Benutzer, die lokale LLMs zum ersten Mal einrichten' },
@@ -1064,7 +1395,7 @@ schema: {
       {
         '@type': 'Question',
         'name': 'Was sind die häufigsten Fehler bei lokaler LLM-Bereitstellung?',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'Die 10 häufigsten lokalen LLM-Fehler sind: (1) OOM/Speicher voll, (2) GPU nicht erkannt, (3) Port 11434 abgelehnt, (4) langsames CPU-Fallback, (5) Modell nicht gefunden, (6) partieller Download beschädigt, (7) Generierung stoppt vorzeitig, (8) CUDA-Versionsfehler, (9) Kontextlänge überschritten, (10) falsches Modell-Tag. Jeder Fehler hat einen spezifischen Fix-Befehl in Ollama und LM Studio.' }
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Die 11 häufigsten lokalen LLM-Fehler sind: (1) OOM/Speicher voll, (2) GPU nicht erkannt, (3) Port 11434 abgelehnt, (4) langsames CPU-Fallback, (5) Modell nicht gefunden, (6) partieller Download beschädigt, (7) Generierung stoppt vorzeitig, (8) CUDA-Versionsfehler, (9) Kontextlänge überschritten, (10) falsches Modell-Tag, (11) Client versucht, einen unerwarteten Remote-Host zu erreichen. Jeder Fehler hat einen spezifischen Fix-Befehl in Ollama und LM Studio.' }
       },
       {
         '@type': 'Question',
@@ -1186,6 +1517,16 @@ schema: {
       codeBlock: '# LM Studio-Modell-Cache manuell löschen (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
       codeLanguage: 'bash',
     },
+    error6format: {
+      id: 'error-6c-incompatible-format',
+      title: 'Fehler 6c: "No Compatible Options Available for This Format"',
+      content: '**Dieser Fehler bedeutet, dass die heruntergeladene Modelldatei kein Format ist, das Ihr installiertes Backend ausführen kann — kein beschädigter Download.** Er tritt auf, wenn eine `.safetensors`- oder reine MLX-Datei in ein llama.cpp-basiertes Backend geladen wird, oder wenn eine GGUF-Datei eine neuere Runtime benötigt als die installierte.',
+      items: [
+        '**Dateiformat überprüfen**: Ollama und das Standard-LM-Studio-Backend führen GGUF-Dateien aus. MLX-Builds laufen nur auf Apple Silicon mit aktiviertem MLX-Backend in den LM-Studio-Einstellungen.',
+        '**Korrektes Format erneut herunterladen**: wählen Sie auf der Modellseite eine GGUF-Quantisierung (z. B. Q4_K_M) statt eines `.safetensors`-Repositorys.',
+        '**LM Studio aktualisieren**: neuere GGUF-Quantisierungsschemata erfordern manchmal ein Runtime-Update. Prüfen Sie Einstellungen → Runtime auf verfügbare Updates, bevor Sie das Modell erneut herunterladen.',
+      ],
+    },
     error7: {
       id: 'error-7-cuda-errors',
       title: 'Fehler 7: CUDA oder ROCm-Fehler',
@@ -1226,6 +1567,17 @@ schema: {
         '**RAM-Druck überprüfen**: wenn Sie Swap nutzen (Festplatte statt RAM), stoppt die Inferenz. Überprüfen Sie mit `free -h` während das Modell lädt.',
       ],
     },
+    error11: {
+      id: 'error-11-unexpected-remote-host',
+      title: 'Fehler 11: "Failed to Load LLM Client" — Unerwarteter Remote-Host',
+      content: '**Ein Fehler "failed to load LLM client: [host]:443" bedeutet, dass die Anwendung versucht, über HTTPS einen externen Server zu erreichen — nicht Ihre lokale Ollama- oder LM-Studio-Installation.** Ollama und LM Studio kontaktieren standardmäßig nie einen Remote-Server für die Inferenz; wenn ein Client diesen Fehler bei einer unbekannten Domain meldet, handelt es sich bei der App um einen Wrapper oder Fork eines Drittanbieters mit fest codiertem Remote-Endpunkt, der derzeit nicht erreichbar ist.',
+      items: [
+        '**Identifizieren Sie, welche App den Fehler auslöst**: diese Meldung stammt nicht direkt von Ollama oder LM Studio. Prüfen Sie die Einstellungen, README oder den Quellcode der App auf einen fest codierten API-Endpunkt oder Lizenzprüfserver.',
+        '**Prüfen Sie zuerst Ihr Netzwerk**: falls die App tatsächlich einen Cloud-Dienst aufrufen soll, stellen Sie sicher, dass Firewall, VPN oder Antivirus ausgehendes HTTPS auf Port 443 zu diesem Host nicht blockiert.',
+        '**Wechseln Sie zu einem rein lokalen Client, wenn Sie Offline-Inferenz möchten**: nutzen Sie Ollama (`localhost:11434`) oder LM Studio (`localhost:1234`) direkt — keiner von beiden macht ausgehende Aufrufe an einen Server für lokale Modelle.',
+        '**Geben Sie keine API-Schlüssel oder Zugangsdaten in einen unbekannten Client ein**, bevor Sie bestätigt haben, was der Remote-Endpunkt ist und warum die App ihn benötigt. Deinstallieren Sie die App, wenn Sie ihren Ursprung nicht überprüfen können.',
+      ],
+    },
     relatedReading: {
       title: 'Weiterführende Lektüre',
       items: [
@@ -1263,17 +1615,17 @@ schema: {
     },
   },
   gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-  gammaDescription: 'Die folgende Präsentation behandelt: die 10 häufigsten Fehler beim Einrichten lokaler LLMs (Out-of-Memory, GPU nicht erkannt, langsame Inferenz, Connection Refused, fehlerhafte Ausgabe), RAM-Anforderungen für 3B–14B-Modelle bei Q4_K_M- und Q8_0-Quantisierung, einen 5-Schritte-Debugprozess und Ollama-Befehle für jeden Fix. Als PDF herunterladen als Referenzkarte für die Fehlerbehebung bei lokalen LLMs.',
+  gammaDescription: 'Die folgende Präsentation behandelt: die 10 häufigsten Fehler beim Einrichten lokaler LLMs (Out-of-Memory, GPU nicht erkannt, langsame Inferenz, Connection Refused, fehlerhafte Ausgabe), RAM-Anforderungen für 3B–14B-Modelle bei Q4_K_M- und Q8_0-Quantisierung, einen 5-Schritte-Debugprozess und Ollama-Befehle für jeden Fix. Fehler 11 (unerwarteter Remote-Host) wird im Artikeltext behandelt. Als PDF herunterladen als Referenzkarte für die Fehlerbehebung bei lokalen LLMs.',
 },
     fr: {
     theme: 'Getting Started',
-    title: 'Corriger les erreurs locales LLM 2026 : 10 problèmes courants dans Ollama, LM Studio et vLLM',
+    title: 'Corriger les erreurs locales LLM 2026 : 11 problèmes courants dans Ollama, LM Studio et vLLM',
     seoTitle: 'Corriger les erreurs LLM local : OOM, GPU, port 2026',
-    intro: 'Les erreurs les plus courantes dans les LLM locaux sont les plantages manque de mémoire, GPU non détecté, inférence CPU extrêmement lente, connexion refusée par l\'API et sortie brouillée. En avril 2026, il y a des solutions pour les 10 erreurs - la plupart nécessitent seulement une ou deux commandes de terminal. Ce guide couvre Ollama (port 11434), LM Studio (port 1234) et vLLM avec des commandes exactes pour chaque erreur.',
-    metaDescription: '10 erreurs LLM local corrigées : OOM, GPU non détecté, port 11434 refusé, repli CPU lent. Commandes de correction Ollama + LM Studio. Avril 2026.',
-    twitterDescription: '10 erreurs LLM local corrigées : OOM, GPU non détecté, port 11434. Commandes Ollama + LM Studio. Avril 2026.',
+    intro: 'Les erreurs les plus courantes dans les LLM locaux sont les plantages manque de mémoire, GPU non détecté, inférence CPU extrêmement lente, connexion refusée par l\'API et sortie brouillée. En juillet 2026, il y a des solutions pour les 11 erreurs - la plupart nécessitent seulement une ou deux commandes de terminal. Ce guide couvre Ollama (port 11434), LM Studio (port 1234) et vLLM avec des commandes exactes pour chaque erreur.',
+    metaDescription: '11 erreurs LLM local corrigées : OOM, GPU non détecté, port 11434 refusé, repli CPU lent, hôte distant inattendu. Commandes de correction Ollama + LM Studio.',
+    twitterDescription: '11 erreurs LLM local corrigées : OOM, GPU non détecté, port 11434, hôte distant inattendu. Commandes Ollama + LM Studio.',
     leadAnswerBlock: '**Les erreurs les plus courantes dans les LLM locaux sont les plantages manque de mémoire, GPU non détecté, inférence CPU extrêmement lente, connexion refusée par l\'API et sortie brouillée.**',
-    dateModified: '2026-04-16',
+    dateModified: '2026-07-15',
     publishDate: '2026-04-04',
     audience: 'Les débutants exécutent leur premier LLM local sur du matériel grand public',
     readTime: 'Lire 9 min',
@@ -1291,15 +1643,16 @@ schema: {
       { label: 'Erreur 8 : Sortie brouillée ou répétitive', anchor: '#error-8-garbled-output' },
       { label: 'Erreur 9 : Port déjà utilisé', anchor: '#error-9-port-already-in-use' },
       { label: 'Erreur 10 : Le modèle s\'arrête au milieu de la réponse', anchor: '#error-10-model-stops-mid-response' },
+      { label: 'Erreur 11 : Hôte distant inattendu', anchor: '#error-11-unexpected-remote-host' },
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Corriger les erreurs locales LLM 2026 : 10 problèmes courants dans Ollama, LM Studio et vLLM',
-      'description': 'Correction des plantages dus au manque de mémoire, du GPU non détecté, de la connexion refusée et de la sortie brouillée dans Ollama et LM Studio. Commandes exactes : OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
+      'headline': 'Corriger les erreurs locales LLM 2026 : 11 problèmes courants dans Ollama, LM Studio et vLLM',
+      'description': 'Correction des plantages dus au manque de mémoire, du GPU non détecté, de la connexion refusée, de la sortie brouillée et d\'un hôte distant inattendu dans Ollama et LM Studio. Commandes exactes : OLLAMA_GPU_LAYERS, ollama rm, nvidia-smi.',
       'url': 'https://www.promptquorum.com/fr/local-llms/troubleshooting-local-llm-setup',
       'datePublished': '2026-04-04',
-      'dateModified': '2026-04-16',
+      'dateModified': '2026-07-15',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'audience': { '@type': 'Audience', 'audienceType': 'Les développeurs et utilisateurs mettant en place des LLM locaux pour la première fois' },
@@ -1356,7 +1709,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Quelles sont les erreurs les plus courantes dans le déploiement local de LLM ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Les 10 erreurs les plus courantes des LLM locaux sont : (1) OOM/manque de mémoire, (2) GPU non détecté, (3) port 11434 refusé, (4) repli CPU lent, (5) modèle non trouvé, (6) téléchargement partiel corrompu, (7) génération s\'arrête tôt, (8) désadaptation de version CUDA, (9) longueur de contexte dépassée, (10) balise de modèle incorrecte. Chaque erreur a une commande de correction spécifique dans Ollama et LM Studio.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Les 11 erreurs les plus courantes des LLM locaux sont : (1) OOM/manque de mémoire, (2) GPU non détecté, (3) port 11434 refusé, (4) repli CPU lent, (5) modèle non trouvé, (6) téléchargement partiel corrompu, (7) génération s\'arrête tôt, (8) désadaptation de version CUDA, (9) longueur de contexte dépassée, (10) balise de modèle incorrecte, (11) le client tente de contacter un hôte distant inattendu. Chaque erreur a une commande de correction spécifique dans Ollama et LM Studio.' }
           },
           {
             '@type': 'Question',
@@ -1478,6 +1831,16 @@ schema: {
           codeBlock: '# Effacer manuellement le cache du modèle LM Studio (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
           codeLanguage: 'bash',
         },
+        error6format: {
+          id: 'error-6c-incompatible-format',
+          title: 'Erreur 6c : « No Compatible Options Available for This Format »',
+          content: '**Cette erreur signifie que le fichier de modèle téléchargé n\'est pas dans un format que votre backend installé peut exécuter — pas un téléchargement corrompu.** Elle apparaît lorsqu\'un fichier `.safetensors` ou exclusif à MLX est chargé dans un backend basé sur llama.cpp, ou lorsqu\'un fichier GGUF nécessite un runtime plus récent que celui installé.',
+          items: [
+            '**Vérifiez le format du fichier** : Ollama et le backend standard de LM Studio exécutent des fichiers GGUF. Les builds MLX ne fonctionnent que sur Apple Silicon avec le backend MLX sélectionné dans les paramètres de LM Studio.',
+            '**Retéléchargez le bon format** : sur la page du modèle, choisissez une quantification GGUF (par exemple Q4_K_M) plutôt qu\'un dépôt `.safetensors`.',
+            '**Mettez à jour LM Studio** : les nouveaux schémas de quantification GGUF nécessitent parfois une mise à jour du runtime. Vérifiez Paramètres → Runtime pour les mises à jour disponibles avant de retélécharger le modèle.',
+          ],
+        },
         error7: {
           id: 'error-7-cuda-errors',
           title: 'Erreur 7 : Erreurs d\'initialisation CUDA / ROCm',
@@ -1513,6 +1876,17 @@ schema: {
             '**Augmenter num_predict** : Ce paramètre définit les jetons maximum à générer. La valeur par défaut est souvent 128. Augmentez-la : Dans Ollama, ajoutez `PARAMETER num_predict 2048` au Modelfile.',
             '**Vérifier la fenêtre de contexte** : Si votre conversation est très longue, le modèle peut atteindre sa limite de contexte. Commencez une nouvelle session ou utilisez un modèle avec une fenêtre de contexte plus grande (Llama 3.2 3B supporte 128K).',
             '**Vérifier les jetons d\'arrêt** : Certains Modelfiles incluent des séquences d\'arrêt qui terminent la génération plus tôt. Vérifiez le invite système et le modèle pour des modèles d\'arrêt inattendus.',
+          ],
+        },
+        error11: {
+          id: 'error-11-unexpected-remote-host',
+          title: 'Erreur 11 : « Failed to Load LLM Client » — Hôte distant inattendu',
+          content: '**Une erreur « failed to load LLM client: [hôte]:443 » signifie que l\'application tente de contacter un serveur externe via HTTPS — pas votre installation locale d\'Ollama ou LM Studio.** Ollama et LM Studio ne contactent jamais un serveur distant pour l\'inférence par défaut ; si un client affiche cette erreur envers un domaine inconnu, cette application est un wrapper ou un fork tiers avec un point de terminaison distant codé en dur, actuellement inaccessible.',
+          items: [
+            '**Identifiez quelle application génère l\'erreur** : ce message ne provient pas directement d\'Ollama ou de LM Studio. Vérifiez les paramètres, le README ou le code source de l\'application pour un point de terminaison API codé en dur.',
+            '**Vérifiez d\'abord votre réseau** : si l\'application doit réellement contacter un service cloud, assurez-vous que votre pare-feu, VPN ou antivirus ne bloque pas le trafic HTTPS sortant sur le port 443 vers cet hôte.',
+            '**Passez à un client purement local si vous voulez une inférence hors ligne** : utilisez Ollama (`localhost:11434`) ou LM Studio (`localhost:1234`) directement — aucun des deux ne fait d\'appels sortants vers un serveur pour les modèles locaux.',
+            '**Ne saisissez pas de clés API ni d\'identifiants dans un client inconnu** avant d\'avoir confirmé ce qu\'est le point de terminaison distant et pourquoi l\'application en a besoin. Désinstallez l\'application si vous ne pouvez pas vérifier son origine.',
           ],
         },
         relatedReading: {
@@ -1554,17 +1928,17 @@ schema: {
         },
       },
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-      gammaDescription: 'La présentation suivante couvre : les 10 erreurs les plus courantes dans la configuration des LLM locaux (manque de mémoire, GPU non détecté, inférence lente, connexion refusée, sortie brouillée), les exigences RAM pour les modèles 3B–14B en quantification Q4_K_M et Q8_0, un processus de débogage en 5 étapes et les commandes Ollama pour chaque correction. Télécharger le PDF comme carte de référence pour le dépannage des LLM locaux.',
+      gammaDescription: 'La présentation suivante couvre : les 10 erreurs les plus courantes dans la configuration des LLM locaux (manque de mémoire, GPU non détecté, inférence lente, connexion refusée, sortie brouillée), les exigences RAM pour les modèles 3B–14B en quantification Q4_K_M et Q8_0, un processus de débogage en 5 étapes et les commandes Ollama pour chaque correction. L\'erreur 11 (hôte distant inattendu) est couverte dans le texte de l\'article. Télécharger le PDF comme carte de référence pour le dépannage des LLM locaux.',
     },
     ja: {
   theme: 'Getting Started',
   title: 'ローカルLLMエラーを2026年に修正する：Ollama、LM Studio、vLLMの10個の一般的な問題',
   seoTitle: 'ローカルLLMエラー修正：OOM・GPU未検出・ポート11434対処法2026',
-  intro: 'ローカルLLMで最も一般的なエラーは、メモリ不足のクラッシュ、GPUが検出されない、CPU推論が非常に遅い、APIからの接続拒否、出力が破損しているです。2026年4月現在、すべての10のエラーに対する修正が存在します。ほとんどの場合、1、2個のターミナルコマンドのみが必要です。このガイドは、Ollama（ポート11434）、LM Studio（ポート1234）、vLLMをカバーし、各エラーのための正確なコマンドを提供します。',
-  metaDescription: 'OOMエラー、GPU未検出、ポート11434拒否など10の頻出ローカルLLMエラーをOllama・LM Studioで修正するコマンド一覧。2026年4月更新。',
-  twitterDescription: 'OOM・GPU未検出・ポート11434など10エラーをOllamaで修正。2026年4月。',
+  intro: 'ローカルLLMで最も一般的なエラーは、メモリ不足のクラッシュ、GPUが検出されない、CPU推論が非常に遅い、APIからの接続拒否、出力が破損しているです。2026年7月現在、すべての11のエラーに対する修正が存在します。ほとんどの場合、1、2個のターミナルコマンドのみが必要です。このガイドは、Ollama（ポート11434）、LM Studio（ポート1234）、vLLMをカバーし、各エラーのための正確なコマンドを提供します。',
+  metaDescription: 'OOMエラー、GPU未検出、ポート11434拒否、予期しないリモートホストなど11の頻出ローカルLLMエラーをOllama・LM Studioで修正するコマンド一覧。',
+  twitterDescription: 'OOM・GPU未検出・ポート11434・予期しないリモートホストなど11エラーをOllamaで修正。',
   publishDate: '2026-04-04',
-  dateModified: '2026-04-16',
+  dateModified: '2026-07-15',
   leadAnswerBlock: '**ローカルLLMで最も一般的なエラーは、メモリ不足のクラッシュ、GPUが検出されない、CPU推論が非常に遅い、APIからの接続拒否、出力が破損しているです。**',
   audience: 'コンシューマーハードウェアで初めてローカルLLMを実行する初心者',
   readTime: '9分で読める',
@@ -1582,15 +1956,16 @@ schema: {
     { label: 'エラー8：出力が破損しているか反復的', anchor: '#error-8-garbled-output' },
     { label: 'エラー9：ポートが既に使用中', anchor: '#error-9-port-already-in-use' },
     { label: 'エラー10：モデルが途中で応答を停止', anchor: '#error-10-model-stops-mid-response' },
+    { label: 'エラー11：予期しないリモートホスト', anchor: '#error-11-unexpected-remote-host' },
   ],
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    'headline': 'ローカルLLMエラーを2026年に修正する：Ollama、LM Studio、vLLMの10個の一般的な問題',
-    'description': 'ローカルLLMのメモリ不足のクラッシュ、GPU検出エラー、接続拒否、出力破損を修正します。各エラーの正確なコマンド — OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
+    'headline': 'ローカルLLMエラーを2026年に修正する：Ollama、LM Studio、vLLMの11個の一般的な問題',
+    'description': 'ローカルLLMのメモリ不足のクラッシュ、GPU検出エラー、接続拒否、出力破損、予期しないリモートホストエラーを修正します。各エラーの正確なコマンド — OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
     'url': 'https://www.promptquorum.com/ja/local-llms/troubleshooting-local-llm-setup',
     'datePublished': '2026-04-04',
-    'dateModified': '2026-04-16',
+    'dateModified': '2026-07-15',
     'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'audience': { '@type': 'Audience', 'audienceType': '初めてローカルLLMをセットアップする開発者とユーザー' },
@@ -1647,7 +2022,7 @@ schema: {
       {
         '@type': 'Question',
         'name': 'ローカルLLMデプロイの最も一般的なエラーは何ですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': '10個の最も一般的なローカルLLMエラーは：（1）OOM/メモリ不足、（2）GPU未検出、（3）ポート11434拒否、（4）遅いCPUフォールバック、（5）モデル未検出、（6）部分ダウンロード破損、（7）生成が早期に停止、（8）CUDAバージョン不一致、（9）コンテキスト長超過、（10）不正なモデルタグ。各エラーはOllamaとLM Studioに固有の修正コマンドがあります。' }
+        'acceptedAnswer': { '@type': 'Answer', 'text': '11個の最も一般的なローカルLLMエラーは：（1）OOM/メモリ不足、（2）GPU未検出、（3）ポート11434拒否、（4）遅いCPUフォールバック、（5）モデル未検出、（6）部分ダウンロード破損、（7）生成が早期に停止、（8）CUDAバージョン不一致、（9）コンテキスト長超過、（10）不正なモデルタグ、（11）クライアントが予期しないリモートホストに接続しようとする。各エラーはOllamaとLM Studioに固有の修正コマンドがあります。' }
       },
       {
         '@type': 'Question',
@@ -1769,6 +2144,16 @@ schema: {
       codeBlock: '# LM Studioモデルキャッシュを手動でクリアします（macOS/Linux）\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
       codeLanguage: 'bash',
     },
+    error6format: {
+      id: 'error-6c-incompatible-format',
+      title: 'エラー6c：「No Compatible Options Available for This Format」',
+      content: '**このエラーは、ダウンロードしたモデルファイルがインストール済みのバックエンドで実行できない形式であることを意味します。破損したダウンロードではありません。**`.safetensors`形式やMLX専用ファイルをllama.cppベースのバックエンドに読み込んだ場合、またはGGUFファイルがインストール済みより新しいランタイムを必要とする場合に発生します。',
+      items: [
+        '**ファイル形式を確認します**：OllamaとLM Studioの標準バックエンドはGGUFファイルを実行します。MLXビルドはApple SiliconでMLXバックエンドを選択した場合のみ動作します。',
+        '**正しい形式を再ダウンロードします**：モデルページで`.safetensors`リポジトリではなくGGUF量子化（例：Q4_K_M）を選択します。',
+        '**LM Studioをアップデートします**：新しいGGUF量子化スキームはランタイムのアップデートが必要な場合があります。モデルを再ダウンロードする前に設定 → Runtimeで利用可能なアップデートを確認してください。',
+      ],
+    },
     error7: {
       id: 'error-7-cuda-errors',
       title: 'エラー7：CUDAまたはROCm初期化エラー',
@@ -1804,6 +2189,17 @@ schema: {
         '**num_predictを増やします**：このパラメーターは生成する最大トークン数を設定します。デフォルトは128の場合が多いです。増やします：Ollamaでは、Modelfileに「PARAMETER num_predict 2048」を追加します。',
         '**コンテキストウィンドウをチェックします**：会話が非常に長い場合、モデルはコンテキスト制限に達している可能性があります。新しいセッションを開始するか、より大きなコンテキストウィンドウを持つモデルを使用します（Llama 3.2 3Bは128Kをサポート）。',
         '**停止トークンをチェックします**：一部のModelfileには生成を早期に終了する停止シーケンスが含まれています。システムプロンプトとテンプレートで予期しない停止パターンを確認してください。',
+      ],
+    },
+    error11: {
+      id: 'error-11-unexpected-remote-host',
+      title: 'エラー11：「LLMクライアントの読み込みに失敗しました」— 予期しないリモートホスト',
+      content: '**「failed to load LLM client: [ホスト]:443」というエラーは、アプリケーションがHTTPS経由で外部サーバーに接続しようとしていることを意味します。ローカルのOllamaやLM Studioのインストールではありません。**OllamaとLM Studioは、デフォルトで推論のためにリモートサーバーに接続することはありません。見慣れないドメインに対してこのエラーが表示される場合、そのアプリはハードコードされたリモートエンドポイントを持つサードパーティ製のラッパーまたはフォークであり、そのエンドポイントが現在到達不能であることを意味します。',
+      items: [
+        '**どのアプリがエラーを出しているか特定します**：このメッセージはOllamaやLM Studio自体からは発生しません。アプリの設定、README、またはソースコードでハードコードされたAPIエンドポイントを確認します。',
+        '**まずネットワークを確認します**：アプリが本当にクラウドサービスに接続する必要がある場合、ファイアウォール、VPN、アンチウイルスがそのホストへのポート443のアウトバウンドHTTPS通信をブロックしていないか確認します。',
+        '**オフライン推論を望む場合は完全にローカルなクライアントに切り替えます**：Ollama（`localhost:11434`）またはLM Studio（`localhost:1234`）を直接使用します。どちらもローカルモデルのために外部サーバーへ接続することはありません。',
+        '**見慣れないクライアントにAPIキーや認証情報を入力しないでください**。リモートエンドポイントが何であり、アプリがなぜそれを必要とするかを確認するまでは。出所を確認できない場合はアプリをアンインストールしてください。',
       ],
     },
     regionalContext: {
@@ -1872,6 +2268,10 @@ schema: {
           q: 'ローカルLLMが途中で応答を停止するのはなぜですか？',
           a: 'コンテキストウィンドウの制限に達しました。モデルがmax_tokensに達しました。Ollamaでnum_ctxを増やします（例えば、OLLAMA_NUM_CTX=4096）。またはLM Studioでより高いmax_tokensを設定します。RAMの負荷も確認します。スワップ使用は推論を途中で停止させます。',
         },
+        {
+          q: '「failed to load LLM client」で見慣れないホストが表示されるのはなぜですか？',
+          a: 'そのアプリがハードコードされたリモートエンドポイントを持つサードパーティ製のラッパーであり、OllamaやLM Studio自体ではないことを意味します。ネットワークがそのホストへのHTTPS通信をブロックしていないか確認するか、完全にローカルなOllama（localhost:11434）またはLM Studio（localhost:1234）に切り替えてください。出所を確認できないアプリには認証情報を入力しないでください。',
+        },
       ],
     },
     moreTroubleshooting: {
@@ -1901,17 +2301,17 @@ schema: {
     },
   },
   gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-  gammaDescription: '以下のプレゼンテーションでは、ローカルLLMセットアップの最も一般的な10のエラー（メモリ不足、GPU未検出、推論遅延、接続拒否、出力破損）、Q4_K_MとQ8_0量子化での3B〜14Bモデルのメモリ要件、5ステップのデバッグプロセス、各修正のOllamaコマンドを解説します。ローカルLLMトラブルシューティングリファレンスカードとしてPDFをダウンロード。',
+  gammaDescription: '以下のプレゼンテーションでは、ローカルLLMセットアップの最も一般的な10のエラー（メモリ不足、GPU未検出、推論遅延、接続拒否、出力破損）、Q4_K_MとQ8_0量子化での3B〜14Bモデルのメモリ要件、5ステップのデバッグプロセス、各修正のOllamaコマンドを解説します。エラー11（予期しないリモートホスト）は記事本文で解説しています。ローカルLLMトラブルシューティングリファレンスカードとしてPDFをダウンロード。',
 },
     zh: {
       theme: '入门指南',
-  title: '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 10 个常见问题',
+  title: '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 11 个常见问题',
   seoTitle: '本地LLM报错修复：OOM、GPU未检测、端口11434故障解决指南2026',
-  intro: '本地 LLM 最常见的错误包括内存不足崩溃、GPU 无法检测、CPU 推理速度极慢、API 连接被拒绝和输出乱码。截至 2026 年 4 月，所有 10 个错误都有解决方案——大多数只需要一两个终端命令。本指南涵盖 Ollama（端口 11434）、LM Studio（端口 1234）和 vLLM，包含每个错误的确切命令。',
-  metaDescription: '10个常见本地LLM报错修复方案：OOM内存溢出、GPU未检测、端口11434被拒、CPU降速。Ollama与LM Studio修复命令大全。2026年4月。',
-  twitterDescription: '10个本地LLM报错修复：OOM、GPU未检测、端口11434。Ollama命令大全。2026年4月。',
+  intro: '本地 LLM 最常见的错误包括内存不足崩溃、GPU 无法检测、CPU 推理速度极慢、API 连接被拒绝和输出乱码。截至 2026 年 7 月，所有 11 个错误都有解决方案——大多数只需要一两个终端命令。本指南涵盖 Ollama（端口 11434）、LM Studio（端口 1234）和 vLLM，包含每个错误的确切命令。',
+  metaDescription: '11个常见本地LLM报错修复方案：OOM内存溢出、GPU未检测、端口11434被拒、CPU降速、意外远程主机。Ollama与LM Studio修复命令大全。',
+  twitterDescription: '11个本地LLM报错修复：OOM、GPU未检测、端口11434、意外远程主机。Ollama命令大全。',
   publishDate: '2026-04-04',
-  dateModified: '2026-04-16',
+  dateModified: '2026-07-15',
   leadAnswerBlock: '**本地 LLM 最常见的错误包括内存不足崩溃、GPU 无法检测、CPU 推理速度极慢、API 连接被拒绝和输出乱码。**',
   audience: '首次在消费级硬件上运行本地 LLM 的初学者',
   readTime: '阅读约9分钟',
@@ -1929,15 +2329,16 @@ schema: {
     { label: '错误 8：输出乱码或重复', anchor: '#error-8-garbled-output' },
     { label: '错误 9：端口已占用', anchor: '#error-9-port-already-in-use' },
     { label: '错误 10：模型在中间停止响应', anchor: '#error-10-model-stops-mid-response' },
+    { label: '错误 11：意外的远程主机', anchor: '#error-11-unexpected-remote-host' },
   ],
   schema: {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    'headline': '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 10 个常见问题',
-    'description': '修复本地 LLM 的内存不足崩溃、GPU 无法检测、连接被拒绝和输出乱码问题。Ollama 和 LM Studio 的确切命令：OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
+    'headline': '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 11 个常见问题',
+    'description': '修复本地 LLM 的内存不足崩溃、GPU 无法检测、连接被拒绝、输出乱码和意外远程主机问题。Ollama 和 LM Studio 的确切命令：OLLAMA_GPU_LAYERS、ollama rm、nvidia-smi。',
     'url': 'https://www.promptquorum.com/zh/local-llms/troubleshooting-local-llm-setup',
     'datePublished': '2026-04-04',
-    'dateModified': '2026-04-16',
+    'dateModified': '2026-07-15',
     'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
     'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     'audience': { '@type': 'Audience', 'audienceType': '首次设置本地 LLM 的开发者和用户' },
@@ -1994,7 +2395,7 @@ schema: {
       {
         '@type': 'Question',
         'name': '本地 LLM 部署的最常见错误是什么？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': '10 个最常见的本地 LLM 错误是：(1) OOM/内存不足，(2) GPU 未检测，(3) 端口 11434 被拒，(4) CPU 缓慢回退，(5) 模型未找到，(6) 部分下载损坏，(7) 生成早期停止，(8) CUDA 版本不匹配，(9) 上下文长度超出，(10) 错误的模型标签。每个错误在 Ollama 和 LM Studio 中都有特定的修复命令。' }
+        'acceptedAnswer': { '@type': 'Answer', 'text': '11 个最常见的本地 LLM 错误是：(1) OOM/内存不足，(2) GPU 未检测，(3) 端口 11434 被拒，(4) CPU 缓慢回退，(5) 模型未找到，(6) 部分下载损坏，(7) 生成早期停止，(8) CUDA 版本不匹配，(9) 上下文长度超出，(10) 错误的模型标签，(11) 客户端尝试连接意外的远程主机。每个错误在 Ollama 和 LM Studio 中都有特定的修复命令。' }
       },
       {
         '@type': 'Question',
@@ -2116,6 +2517,16 @@ schema: {
       codeBlock: '# 手动清除 LM Studio 模型缓存（macOS/Linux）\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
       codeLanguage: 'bash',
     },
+    error6format: {
+      id: 'error-6c-incompatible-format',
+      title: '错误 6c："No Compatible Options Available for This Format"',
+      content: '**此错误意味着下载的模型文件不是已安装后端可以运行的格式——不是下载损坏。** 当将 `.safetensors` 或仅限 MLX 的文件加载到基于 llama.cpp 的后端时，或当 GGUF 文件需要比已安装版本更新的运行时时，会出现此错误。',
+      items: [
+        '**检查文件格式**：Ollama 和 LM Studio 的标准后端运行 GGUF 文件。MLX 构建仅在 Apple Silicon 上启用 MLX 后端时运行。',
+        '**重新下载正确的格式**：在模型页面上选择 GGUF 量化（例如 Q4_K_M），而不是 `.safetensors` 仓库。',
+        '**更新 LM Studio**：较新的 GGUF 量化方案有时需要运行时更新。重新下载模型前，检查设置 → Runtime 中是否有可用更新。',
+      ],
+    },
     error7: {
       id: 'error-7-cuda-errors',
       title: '错误 7：CUDA / ROCm 初始化错误',
@@ -2151,6 +2562,17 @@ schema: {
         '**增加 num_predict**：此参数设置要生成的最大 token 数。默认值通常是 128。增加它：在 Ollama 中，将 `PARAMETER num_predict 2048` 添加到 Modelfile。',
         '**检查上下文窗口**：如果您的对话很长，模型可能达到了其上下文限制。开始新会话或使用具有更大上下文窗口的模型（Llama 3.2 3B 支持 128K）。',
         '**检查停止 token**：某些 Modelfile 包括提前终止生成的停止序列。查看系统提示和模板以查找意外的停止模式。',
+      ],
+    },
+    error11: {
+      id: 'error-11-unexpected-remote-host',
+      title: '错误 11："Failed to Load LLM Client" —— 意外的远程主机',
+      content: '**"failed to load LLM client: [主机]:443" 错误意味着应用正试图通过 HTTPS 连接外部服务器——而不是您本地的 Ollama 或 LM Studio 安装。** Ollama 和 LM Studio 默认从不为推理联系远程服务器；如果客户端针对一个陌生域名报出此错误，说明该应用是带有硬编码远程端点的第三方封装或分支，且该端点当前不可达。',
+      items: [
+        '**确认是哪个应用报错**：此消息不是直接来自 Ollama 或 LM Studio。检查该应用的设置、README 或源代码中是否有硬编码的 API 端点。',
+        '**先检查网络**：如果该应用确实需要连接云服务，请确认防火墙、VPN 或杀毒软件没有阻止到该主机端口 443 的出站 HTTPS 流量。',
+        '**如果需要离线推理，改用纯本地客户端**：直接使用 Ollama（`localhost:11434`）或 LM Studio（`localhost:1234`）——两者对本地模型都不会向任何服务器发起出站请求。',
+        '**在确认远程端点是什么、应用为何需要它之前，不要向陌生客户端输入 API 密钥或凭据**。如果无法验证来源，请卸载该应用。',
       ],
     },
     regionalContext: {
@@ -2201,18 +2623,18 @@ schema: {
     },
   },
   gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
-  gammaDescription: '以下的演示文稿涵盖：本地 LLM 设置中最常见的 10 个错误（内存不足、GPU 未检测到、推理缓慢、连接被拒绝、输出乱码），Q4_K_M 和 Q8_0 量化下 3B–14B 模型的内存要求，5 步调试流程以及每个修复的 Ollama 命令。下载 PDF 作为本地 LLM 故障排除参考卡。',
+  gammaDescription: '以下的演示文稿涵盖：本地 LLM 设置中最常见的 10 个错误（内存不足、GPU 未检测到、推理缓慢、连接被拒绝、输出乱码），Q4_K_M 和 Q8_0 量化下 3B–14B 模型的内存要求，5 步调试流程以及每个修复的 Ollama 命令。错误 11（意外的远程主机）在正文中说明。下载 PDF 作为本地 LLM 故障排除参考卡。',
 },
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
-      title: '2026년 로컬 LLM 오류 해결: Ollama, LM Studio, vLLM의 10가지 주요 문제',
+      title: '2026년 로컬 LLM 오류 해결: Ollama, LM Studio, vLLM의 11가지 주요 문제',
       seoTitle: '로컬 LLM 오류 수정: OOM, GPU 감지, 포트 11434',
-      intro: '로컬 LLM에서 가장 자주 발생하는 오류는 메모리 부족 충돌, GPU 미감지, 극도로 느린 CPU 추론, API 연결 거부, 그리고 비정상 출력입니다. 2026년 4월 기준, 이 10가지 오류 모두에 대한 해결책이 있으며, 대부분 터미널 명령 한두 개만으로 해결됩니다. 이 가이드는 Ollama(포트 11434), LM Studio(포트 1234), vLLM을 대상으로 각 오류에 대한 정확한 명령을 제공합니다.',
-      metaDescription: '10가지 로컬 LLM 오류 해결: OOM 충돌, GPU 미감지, 포트 11434 거부, 느린 CPU 폴백. Ollama + LM Studio 수정 명령. 2026년 4월.',
-      twitterDescription: '10가지 로컬 LLM 오류 해결: OOM, GPU 미감지, 포트 11434 거부, CPU 폴백. Ollama + LM Studio 수정 명령. 2026년 4월.',
+      intro: '로컬 LLM에서 가장 자주 발생하는 오류는 메모리 부족 충돌, GPU 미감지, 극도로 느린 CPU 추론, API 연결 거부, 그리고 비정상 출력입니다. 2026년 7월 기준, 이 11가지 오류 모두에 대한 해결책이 있으며, 대부분 터미널 명령 한두 개만으로 해결됩니다. 이 가이드는 Ollama(포트 11434), LM Studio(포트 1234), vLLM을 대상으로 각 오류에 대한 정확한 명령을 제공합니다.',
+      metaDescription: '11가지 로컬 LLM 오류 해결: OOM 충돌, GPU 미감지, 포트 11434 거부, 느린 CPU 폴백, 예상치 못한 원격 호스트. Ollama + LM Studio 수정 명령.',
+      twitterDescription: '11가지 로컬 LLM 오류 해결: OOM, GPU 미감지, 포트 11434 거부, CPU 폴백, 예상치 못한 원격 호스트. Ollama + LM Studio 수정 명령.',
       leadAnswerBlock: '로컬 LLM에서 가장 자주 발생하는 오류는 메모리 부족 충돌, GPU 미감지, 극도로 느린 CPU 추론, API 연결 거부, 그리고 비정상 출력입니다.',
-      dateModified: '2026-04-16',
+      dateModified: '2026-07-15',
       publishDate: '2026-04-04',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '9분 읽기',
@@ -2230,6 +2652,7 @@ schema: {
         { label: '오류 8: 비정상 또는 반복 출력', anchor: '#error-8-garbled-output' },
         { label: '오류 9: 포트 이미 사용 중', anchor: '#error-9-port-already-in-use' },
         { label: '오류 10: 응답 도중 모델 중단', anchor: '#error-10-model-stops-mid-response' },
+        { label: '오류 11: 예상치 못한 원격 호스트', anchor: '#error-11-unexpected-remote-host' },
       ],
       sections: {
         tldr: {
@@ -2334,6 +2757,16 @@ schema: {
           codeBlock: '# LM Studio 모델 캐시 수동 삭제 (macOS/Linux)\nrm -rf ~/.cache/lm-studio/models/lmstudio-community/<model-name>',
           codeLanguage: 'bash',
         },
+        error6format: {
+          id: 'error-6c-incompatible-format',
+          title: '오류 6c: "No Compatible Options Available for This Format"',
+          content: '**이 오류는 다운로드한 모델 파일이 설치된 백엔드에서 실행할 수 없는 형식임을 의미합니다 — 손상된 다운로드가 아닙니다.** `.safetensors` 파일이나 MLX 전용 파일을 llama.cpp 기반 백엔드에 로드하거나, GGUF 파일이 설치된 것보다 더 새로운 런타임을 필요로 할 때 발생합니다.',
+          items: [
+            '**파일 형식 확인**: Ollama와 LM Studio의 표준 백엔드는 GGUF 파일을 실행합니다. MLX 빌드는 LM Studio 설정에서 MLX 백엔드를 선택한 Apple Silicon에서만 작동합니다.',
+            '**올바른 형식으로 다시 다운로드**: 모델 페이지에서 `.safetensors` 저장소 대신 GGUF 양자화(예: Q4_K_M)를 선택하십시오.',
+            '**LM Studio 업데이트**: 최신 GGUF 양자화 방식은 런타임 업데이트가 필요한 경우가 있습니다. 모델을 다시 다운로드하기 전에 설정 → Runtime에서 사용 가능한 업데이트를 확인하십시오.',
+          ],
+        },
         error7: {
           id: 'error-7-cuda-errors',
           title: '오류 7: CUDA / ROCm 초기화 오류',
@@ -2369,6 +2802,17 @@ schema: {
             '**num_predict 늘리기**: 이 매개변수는 생성할 최대 토큰 수를 설정합니다. 기본값은 종종 128입니다. 늘리는 방법: Ollama에서 Modelfile에 `PARAMETER num_predict 2048`을 추가하십시오.',
             '**컨텍스트 창 확인**: 대화가 매우 길면 모델이 컨텍스트 한계에 도달할 수 있습니다. 새 세션을 시작하거나 더 큰 컨텍스트 창을 가진 모델을 사용하십시오 (Llama 3.2 3B는 128K를 지원합니다).',
             '**중지 토큰 확인**: 일부 Modelfile에는 생성을 일찍 종료하는 중지 시퀀스가 포함되어 있습니다. 예상치 못한 중지 패턴을 위해 시스템 프롬프트와 템플릿을 확인하십시오.',
+          ],
+        },
+        error11: {
+          id: 'error-11-unexpected-remote-host',
+          title: '오류 11: "LLM 클라이언트 로드 실패" — 예상치 못한 원격 호스트',
+          content: '**"failed to load LLM client: [호스트]:443" 오류는 애플리케이션이 HTTPS를 통해 외부 서버에 연결을 시도하고 있음을 의미합니다 — 로컬 Ollama나 LM Studio 설치가 아닙니다.** Ollama와 LM Studio는 기본적으로 추론을 위해 원격 서버에 연결하지 않습니다. 낯선 도메인에 대해 이 오류가 표시된다면, 해당 앱은 하드코딩된 원격 엔드포인트를 가진 서드파티 래퍼 또는 포크이며, 그 엔드포인트가 현재 연결할 수 없는 상태입니다.',
+          items: [
+            '**오류를 발생시키는 앱을 확인하십시오**: 이 메시지는 Ollama나 LM Studio 자체에서 직접 나오지 않습니다. 앱의 설정, README, 또는 소스 코드에서 하드코딩된 API 엔드포인트를 확인하십시오.',
+            '**먼저 네트워크를 확인하십시오**: 앱이 실제로 클라우드 서비스에 연결해야 하는 경우, 방화벽, VPN, 또는 백신 프로그램이 해당 호스트로의 443 포트 아웃바운드 HTTPS 트래픽을 차단하고 있지 않은지 확인하십시오.',
+            '**오프라인 추론을 원한다면 완전히 로컬인 클라이언트로 전환하십시오**: Ollama(`localhost:11434`) 또는 LM Studio(`localhost:1234`)를 직접 사용하십시오 — 둘 다 로컬 모델에 대해 어떤 서버로도 아웃바운드 호출을 하지 않습니다.',
+            '**낯선 클라이언트에 API 키나 인증 정보를 입력하지 마십시오**. 원격 엔드포인트가 무엇이고 앱이 왜 이를 필요로 하는지 확인할 때까지는요. 출처를 확인할 수 없다면 앱을 삭제하십시오.',
           ],
         },
         relatedReading: {
