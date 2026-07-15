@@ -261,6 +261,7 @@ https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-
 https://www.promptquorum.com/prompt-bites/best-embedding-model-local-rag
 https://www.promptquorum.com/prompt-bites/best-frontend-for-ollama
 https://www.promptquorum.com/prompt-bites/best-gpu-local-llm-japan-price
+https://www.promptquorum.com/prompt-bites/best-gpu-local-llm-uae-price
 https://www.promptquorum.com/prompt-bites/best-gpu-under-1000-local-llm
 https://www.promptquorum.com/prompt-bites/best-gpu-under-300-local-llm
 https://www.promptquorum.com/prompt-bites/best-gpu-under-600-local-llm
@@ -273,14 +274,19 @@ https://www.promptquorum.com/prompt-bites/best-local-llm-32gb-unified-memory-mac
 https://www.promptquorum.com/prompt-bites/best-local-llm-6gb-vram
 https://www.promptquorum.com/prompt-bites/best-local-llm-apps-android
 https://www.promptquorum.com/prompt-bites/best-local-llm-apps-japan-android
+https://www.promptquorum.com/prompt-bites/best-local-llm-benchmarking-tool
 https://www.promptquorum.com/prompt-bites/best-local-llm-coding-12gb-vram
 https://www.promptquorum.com/prompt-bites/best-local-llm-document-summarization
+https://www.promptquorum.com/prompt-bites/best-local-llm-for-sql-data-analysis
+https://www.promptquorum.com/prompt-bites/best-local-llm-for-translation
 https://www.promptquorum.com/prompt-bites/best-local-llm-legal-medical-privacy
+https://www.promptquorum.com/prompt-bites/best-local-llm-license-comparison
 https://www.promptquorum.com/prompt-bites/best-local-llm-macbook-air-no-egpu
 https://www.promptquorum.com/prompt-bites/best-local-llm-under-8b-realtime-chat
 https://www.promptquorum.com/prompt-bites/best-mini-pc-for-local-llm
 https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on
 https://www.promptquorum.com/prompt-bites/best-mini-pc-local-llm-japan
+https://www.promptquorum.com/prompt-bites/best-model-merging-tool-mergekit
 https://www.promptquorum.com/prompt-bites/best-models-amd-5700x-3070ti
 https://www.promptquorum.com/prompt-bites/best-moe-models-local-coding
 https://www.promptquorum.com/prompt-bites/best-npu-copilot-pc-local-llm
@@ -293,6 +299,7 @@ https://www.promptquorum.com/prompt-bites/best-quantization-6gb-vram
 https://www.promptquorum.com/prompt-bites/best-qwen-model-for-coding
 https://www.promptquorum.com/prompt-bites/best-rtx-4090-setup-70b-models
 https://www.promptquorum.com/prompt-bites/best-ssd-fast-model-loading
+https://www.promptquorum.com/prompt-bites/best-structured-json-output-local-llm
 https://www.promptquorum.com/prompt-bites/best-vpn-downloading-ai-models
 https://www.promptquorum.com/prompt-bites/best-vpn-for-ai-development-china-2026
 https://www.promptquorum.com/prompt-bites/best-windows-laptop-local-llm-under-1500
@@ -315,6 +322,7 @@ https://www.promptquorum.com/prompt-bites/is-deepseek-gdpr-safe
 https://www.promptquorum.com/prompt-bites/is-qwen-gdpr-compliant
 https://www.promptquorum.com/prompt-bites/jan-vs-lm-studio
 https://www.promptquorum.com/prompt-bites/local-llm-raspberry-pi-5
+https://www.promptquorum.com/prompt-bites/lora-vs-full-fine-tuning
 https://www.promptquorum.com/prompt-bites/m4-max-vs-m4-pro-local-llm
 https://www.promptquorum.com/prompt-bites/mac-mini-m4-local-llm
 https://www.promptquorum.com/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b
@@ -332,10 +340,12 @@ https://www.promptquorum.com/prompt-bites/rtx-4060-vs-rtx-3060-12gb
 https://www.promptquorum.com/prompt-bites/run-local-llm-on-xperia-japan
 https://www.promptquorum.com/prompt-bites/runpod-vs-vastai-pricing
 https://www.promptquorum.com/prompt-bites/sillytavern-chinese-roleplay-setup
+https://www.promptquorum.com/prompt-bites/speculative-decoding-explained
 https://www.promptquorum.com/prompt-bites/strix-halo-ollama-vulkan
 https://www.promptquorum.com/prompt-bites/vram-for-70b-model
 https://www.promptquorum.com/prompt-bites/what-is-q4-k-m-quantization
 https://www.promptquorum.com/prompt-bites/which-ollama-models-support-vision
+https://www.promptquorum.com/prompt-bites/wsl2-vs-native-windows-ollama
 https://www.promptquorum.com/prompt-engineering
 https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs
 https://www.promptquorum.com/prompt-engineering/ai-code-review
