@@ -9,7 +9,6 @@ import { truncateTitle } from '@/lib/utils'
 import { PowerLocalLLMPostClient } from '@/components/PowerLocalLLMPostClient'
 import { powerLLMContent } from './content'
 import { POWER_LLM_SLUG_TO_KEY } from './slugs'
-import { POWER_LLM_CATEGORIES } from './categories'
 import { powerLLMAlternates, powerLLMHubPath, powerLLMArticlePath } from './metadata-helpers'
 import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
@@ -369,26 +368,26 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 
 export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
   const titleByLang: Partial<Record<Lang, string>> = {
-    en: 'Power Local LLM: Run AI Apps Privately on Your Own Hardware (2026)',
-    de: 'Power Local LLM: KI-Apps privat auf eigener Hardware ausführen (2026)',
-    fr: 'Power Local LLM: Exécuter des applications IA privées sur votre matériel (2026)',
-    ja: 'Power Local LLM: AI アプリを自分のハードウェアでプライベート実行 (2026)',
-    zh: 'Power Local LLM：在自己的硬件上私密运行 AI 应用（2026）',
-    es: 'Power Local LLM: Ejecuta Apps de IA Privadas en Tu Propio Hardware (2026)',
-    pt: 'Power Local LLM: Rode Apps de IA Privados no Seu Próprio Hardware (2026)',
-    ar: 'Power Local LLM: تشغيل تطبيقات الذكاء الاصطناعي بشكل خاص على أجهزتك (2026)',
-    ko: 'Power Local LLM: 내 하드웨어에서 AI 앱을 비공개로 실행하기 (2026)',
+    en: 'Local LLM Software Hub: Guides by Use Case — Coding, RAG, Agents (2026)',
+    de: 'Lokale LLM-Software-Hub: Guides nach Anwendungsfall — Coding, RAG, Agenten (2026)',
+    fr: "Hub Logiciels LLM Locaux : Guides par Cas d'Usage — Code, RAG, Agents (2026)",
+    ja: 'ローカルLLMソフトウェアハブ：用途別ガイド — コーディング・RAG・エージェント (2026)',
+    zh: '本地 LLM 软件中心：按用例分类的指南 — 编码、RAG、代理（2026）',
+    es: 'Hub de Software LLM Local: Guías por Caso de Uso — Código, RAG, Agentes (2026)',
+    pt: 'Hub de Software LLM Local: Guias por Caso de Uso — Código, RAG, Agentes (2026)',
+    ar: 'مركز برمجيات LLM المحلية: أدلة حسب حالة الاستخدام — البرمجة وRAG والوكلاء (2026)',
+    ko: '로컬 LLM 소프트웨어 허브: 용도별 가이드 — 코딩·RAG·에이전트 (2026)',
   }
   const descByLang: Partial<Record<Lang, string>> = {
-    en: 'Stop paying for SaaS AI tools. Run coding assistants, RAG systems, agents, and creative apps fully offline with local LLMs. 35 guides, tested workflows, 2026 stack.',
-    de: 'Hör auf, für SaaS-KI-Tools zu zahlen. Führe Coding-Assistenten, RAG-Systeme, Agenten und kreative Apps vollständig offline mit lokalen LLMs aus.',
-    fr: 'Arrêtez de payer pour des outils IA SaaS. Exécutez des assistants de code, RAG, agents et applications créatives hors ligne avec des LLMs locaux.',
-    ja: 'SaaS AI ツールへの支払いを止めましょう。コーディングアシスタント、RAG、エージェント、創作アプリをローカル LLM で完全オフラインで実行。',
-    zh: '停止为 SaaS AI 工具付费。使用本地 LLM 完全离线运行编码助手、RAG 系统、代理和创意应用。',
-    es: 'Deja de pagar por herramientas IA SaaS. Ejecuta asistentes de código, sistemas RAG, agentes y aplicaciones creativas completamente offline con LLMs locales. 35 guías, flujos de trabajo probados, stack 2026.',
-    pt: 'Pare de pagar por ferramentas de IA SaaS. Rode assistentes de código, sistemas RAG, agentes e apps criativos totalmente offline com LLMs locais. 35 guias, fluxos de trabalho testados, stack 2026.',
-    ar: 'توقف عن الدفع لأدوات الذكاء الاصطناعي SaaS. شغّل مساعدي البرمجة وأنظمة RAG والوكلاء والتطبيقات الإبداعية بالكامل دون اتصال مع نماذج LLM المحلية.',
-    ko: 'SaaS AI 도구 비용을 절약하세요. 로컬 LLM으로 코딩 어시스턴트, RAG 시스템, 에이전트, 크리에이티브 앱을 완전 오프라인으로 실행. 35개 가이드, 검증된 워크플로, 2026 스택.',
+    en: 'The local LLM software hub: guides and comparisons by use case — coding, RAG, agents, mobile, creative writing — plus the complete 88-tool directory. Tested workflows, 2026 stack.',
+    de: 'Der Hub für lokale LLM-Software: Guides und Vergleiche nach Anwendungsfall — Coding, RAG, Agenten, Mobile, kreatives Schreiben — plus das vollständige Verzeichnis mit 88 Tools. Getestete Workflows, 2026er Stack.',
+    fr: "Le hub des logiciels LLM locaux : guides et comparatifs par cas d'usage — code, RAG, agents, mobile, écriture créative — plus l'annuaire complet de 88 outils. Workflows testés, stack 2026.",
+    ja: 'ローカルLLMソフトウェアハブ：コーディング、RAG、エージェント、モバイル、創作など用途別ガイドと比較、さらに88ツールを網羅した完全ディレクトリ。検証済みワークフロー、2026年版スタック。',
+    zh: '本地 LLM 软件中心：按用例分类的指南与对比——编码、RAG、代理、移动端、创意写作——以及完整的 88 款工具目录。经过测试的工作流程，2026 年技术栈。',
+    es: 'El hub de software LLM local: guías y comparativas por caso de uso — código, RAG, agentes, móvil, escritura creativa — más el directorio completo de 88 herramientas. Flujos de trabajo probados, stack 2026.',
+    pt: 'O hub de software LLM local: guias e comparativos por caso de uso — código, RAG, agentes, mobile, escrita criativa — mais o diretório completo com 88 ferramentas. Fluxos de trabalho testados, stack 2026.',
+    ar: 'مركز برمجيات LLM المحلية: أدلة ومقارنات حسب حالة الاستخدام — البرمجة وRAG والوكلاء والهاتف المحمول والكتابة الإبداعية — بالإضافة إلى الدليل الكامل المكوّن من 88 أداة. سير عمل مُختبَر، ومكدس 2026.',
+    ko: '로컬 LLM 소프트웨어 허브: 코딩, RAG, 에이전트, 모바일, 창작 등 용도별 가이드와 비교, 그리고 88개 도구를 아우르는 전체 디렉터리까지. 검증된 워크플로, 2026 스택.',
   }
 
   const isPublished = isPowerLLMHubPublished(lang)
@@ -1191,7 +1190,7 @@ type HubHeroL10n = { h1: string; intro: string; introBold: string; keyTakeaways:
 
 const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko', HubHeroL10n> = {
   en: {
-    h1: 'Power Local LLM — Build a Private AI Stack That Replaces Your SaaS Bills',
+    h1: 'Local LLM Software — Guides & Comparisons by Use Case',
     intro: 'Local LLMs are no longer just chatbots. In 2026 they run inside your code editor, query your private documents, automate workflows, and replace tools you currently pay monthly for.',
     introBold: 'If you can run Ollama or LM Studio, you can replace 5-10 SaaS subscriptions before the end of this month.',
     keyTakeaways: [
@@ -1203,7 +1202,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   de: {
-    h1: 'Power Local LLM — Bauen Sie einen privaten KI-Stack, der Ihre SaaS-Abonnements ersetzt',
+    h1: 'Lokale LLM-Software — Guides und Vergleiche nach Anwendungsfall',
     intro: 'Lokale LLMs sind längst mehr als Chatbots. 2026 laufen sie in Ihrem Code-Editor, durchsuchen private Dokumente, automatisieren Workflows und ersetzen Tools, für die Sie monatlich zahlen.',
     introBold: 'Wer Ollama oder LM Studio betreiben kann, ersetzt in diesem Monat fünf bis zehn SaaS-Abonnements.',
     keyTakeaways: [
@@ -1215,7 +1214,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   fr: {
-    h1: 'Power Local LLM — Créez une Stack IA Privée Qui Remplace Vos Abonnements SaaS',
+    h1: "Logiciels LLM Locaux — Guides et Comparatifs par Cas d'Usage",
     intro: 'Les LLMs locaux ne sont plus de simples chatbots. En 2026, ils tournent dans votre éditeur de code, interrogent vos documents privés, automatisent les workflows et remplacent les outils que vous payez mensuellement.',
     introBold: 'Si vous pouvez exécuter Ollama ou LM Studio, vous remplacez 5 à 10 abonnements SaaS d\'ici la fin du mois.',
     keyTakeaways: [
@@ -1227,7 +1226,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   ja: {
-    h1: 'Power Local LLM — SaaS料金を削減するプライベートAIスタックを構築',
+    h1: 'ローカルLLMソフトウェア — 用途別ガイドと比較',
     intro: 'ローカルLLMはもはやチャットボットに限った話ではありません。2026年は、コードエディタ内で実行され、プライベートドキュメントをクエリし、ワークフローを自動化し、月単位で支払っているツールを置き換えています。',
     introBold: 'OllamaまたはLM Studioを実行できれば、月末までに5～10のSaaSサブスクリプションを削減できます。',
     keyTakeaways: [
@@ -1239,7 +1238,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   zh: {
-    h1: 'Power Local LLM — 构建私有AI堆栈，替代您的SaaS订阅费用',
+    h1: '本地 LLM 软件 — 按用例分类的指南与对比',
     intro: '本地LLM已不仅仅是聊天机器人。2026年它们在您的代码编辑器内运行、查询您的私有文档、自动化工作流程，并替代您当前按月支付的工具。',
     introBold: '如果您可以运行Ollama或LM Studio，可以在本月底前替代5～10个SaaS订阅。',
     keyTakeaways: [
@@ -1251,7 +1250,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   es: {
-    h1: 'Power Local LLM — Construye un Stack de IA Privada que Reemplace Tus Facturas SaaS',
+    h1: 'Software LLM Local — Guías y Comparativas por Caso de Uso',
     intro: 'Los LLMs locales ya no son solo chatbots. En 2026 se ejecutan dentro de tu editor de código, consultan tus documentos privados, automatizan flujos de trabajo y reemplazan herramientas por las que actualmente pagas mensualmente.',
     introBold: 'Si puedes ejecutar Ollama o LM Studio, reemplazas 5 a 10 suscripciones SaaS antes de fin de mes.',
     keyTakeaways: [
@@ -1263,7 +1262,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   pt: {
-    h1: 'Power Local LLM — Construa um Stack de IA Privado que Substitui Suas Contas de SaaS',
+    h1: 'Software LLM Local — Guias e Comparativos por Caso de Uso',
     intro: 'LLMs locais já não são apenas chatbots. Em 2026 eles rodam dentro do seu editor de código, consultam seus documentos privados, automatizam fluxos de trabalho e substituem ferramentas que você paga mensalmente hoje.',
     introBold: 'Se você consegue rodar o Ollama ou o LM Studio, você substitui 5 a 10 assinaturas de SaaS antes do fim do mês.',
     keyTakeaways: [
@@ -1275,7 +1274,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   ar: {
-    h1: 'Power Local LLM — أنشئ مكدس ذكاء اصطناعي خاص يُغني عن اشتراكات SaaS',
+    h1: 'برمجيات LLM المحلية — أدلة ومقارنات حسب حالة الاستخدام',
     intro: 'لم تعد نماذج اللغة المحلية مجرد روبوتات دردشة. في 2026 تعمل داخل محرر الكود الخاص بك، وتستعلم عن مستنداتك الخاصة، وتؤتمت سير العمل، وتحل محل الأدوات التي تدفع ثمنها شهرياً.',
     introBold: 'إذا كنت قادراً على تشغيل Ollama أو LM Studio، يمكنك استبدال 5 إلى 10 اشتراكات SaaS قبل نهاية هذا الشهر.',
     keyTakeaways: [
@@ -1287,7 +1286,7 @@ const HUB_HERO_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     ],
   },
   ko: {
-    h1: 'Power Local LLM — SaaS 비용을 대체하는 프라이빗 AI 스택 구축',
+    h1: '로컬 LLM 소프트웨어 — 용도별 가이드와 비교',
     intro: '로컬 LLM은 더 이상 단순한 챗봇이 아닙니다. 2026년에는 코드 에디터 안에서 실행되고, 개인 문서를 쿼리하며, 워크플로를 자동화하고, 월정액을 지불하던 도구들을 대체합니다.',
     introBold: 'Ollama 또는 LM Studio를 실행할 수 있다면, 이번 달 말까지 5~10개의 SaaS 구독을 절약할 수 있습니다.',
     keyTakeaways: [
@@ -1304,6 +1303,9 @@ type HubLabelsL10n = {
   faqHeading: string
   keyTakeawaysLabel: string
   lastUpdatedLabel: string
+  directoryHeading: string
+  directoryBody: string
+  directoryCta: string
   relatedReadingHeading: string
   relatedReadingLinks: Array<{ href: string; label: string }>
 }
@@ -1313,6 +1315,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: 'Frequently Asked Questions',
     keyTakeawaysLabel: 'Key Takeaways',
     lastUpdatedLabel: 'Last updated:',
+    directoryHeading: 'Browse the Full Software Directory',
+    directoryBody: 'Every tool mentioned across these guides — plus dozens more — is catalogued with description, licence, and link in one place.',
+    directoryCta: 'Open the 88-tool directory →',
     relatedReadingHeading: 'Related Reading',
     relatedReadingLinks: [
       { href: '/local-llms/local-llm-hardware-guide-2026', label: 'Local LLM Hardware Guide 2026' },
@@ -1325,6 +1330,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: 'Häufig gestellte Fragen',
     keyTakeawaysLabel: 'Wichtigste Erkenntnisse',
     lastUpdatedLabel: 'Zuletzt aktualisiert:',
+    directoryHeading: 'Das vollständige Software-Verzeichnis durchsuchen',
+    directoryBody: 'Jedes in diesen Guides erwähnte Tool — plus Dutzende weitere — ist an einem Ort mit Beschreibung, Lizenz und Link katalogisiert.',
+    directoryCta: 'Zum Verzeichnis mit 88 Tools →',
     relatedReadingHeading: 'Weiterführende Literatur',
     relatedReadingLinks: [
       { href: '/de/local-llms/local-llm-hardware-guide-2026', label: 'Lokale LLM-Hardware-Guide 2026' },
@@ -1337,6 +1345,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: 'Questions Fréquemment Posées',
     keyTakeawaysLabel: 'Points Clés',
     lastUpdatedLabel: 'Dernière mise à jour :',
+    directoryHeading: 'Parcourir l\'Annuaire Complet des Logiciels',
+    directoryBody: 'Chaque outil mentionné dans ces guides — et des dizaines d\'autres — est répertorié au même endroit avec description, licence et lien.',
+    directoryCta: 'Voir l\'annuaire de 88 outils →',
     relatedReadingHeading: 'Lectures Complémentaires',
     relatedReadingLinks: [
       { href: '/fr/local-llms/local-llm-hardware-guide-2026', label: 'Guide Matériel LLM Local 2026' },
@@ -1349,6 +1360,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: 'よくある質問',
     keyTakeawaysLabel: '重要ポイント',
     lastUpdatedLabel: '最終更新:',
+    directoryHeading: '完全なソフトウェアディレクトリを見る',
+    directoryBody: 'これらのガイドで紹介されているすべてのツール — さらに数十件 — を、説明・ライセンス・リンク付きで一箇所にまとめています。',
+    directoryCta: '88ツールのディレクトリを開く →',
     relatedReadingHeading: '関連リソース',
     relatedReadingLinks: [
       { href: '/ja/local-llms/local-llm-hardware-guide-2026', label: 'ローカルLLMハードウェアガイド2026' },
@@ -1361,6 +1375,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: '常见问题',
     keyTakeawaysLabel: '关键要点',
     lastUpdatedLabel: '最后更新:',
+    directoryHeading: '浏览完整软件目录',
+    directoryBody: '这些指南中提到的每一款工具——以及数十款其他工具——都在同一处附有描述、许可证和链接。',
+    directoryCta: '打开 88 款工具目录 →',
     relatedReadingHeading: '相关阅读',
     relatedReadingLinks: [
       { href: '/zh/local-llms/local-llm-hardware-guide-2026', label: '本地LLM硬件指南2026' },
@@ -1373,6 +1390,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: 'Preguntas Frecuentes',
     keyTakeawaysLabel: 'Puntos Clave',
     lastUpdatedLabel: 'Última actualización:',
+    directoryHeading: 'Explora el Directorio Completo de Software',
+    directoryBody: 'Cada herramienta mencionada en estas guías — y docenas más — está catalogada en un solo lugar con descripción, licencia y enlace.',
+    directoryCta: 'Abrir el directorio de 88 herramientas →',
     relatedReadingHeading: 'Lecturas Relacionadas',
     relatedReadingLinks: [
       { href: '/es/local-llms/local-llm-hardware-guide-2026', label: 'Guía de Hardware para LLM Local 2026' },
@@ -1385,6 +1405,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: 'Perguntas Frequentes',
     keyTakeawaysLabel: 'Pontos-Chave',
     lastUpdatedLabel: 'Última atualização:',
+    directoryHeading: 'Explore o Diretório Completo de Software',
+    directoryBody: 'Cada ferramenta mencionada nestes guias — e dezenas de outras — está catalogada em um só lugar com descrição, licença e link.',
+    directoryCta: 'Abrir o diretório de 88 ferramentas →',
     relatedReadingHeading: 'Leituras Relacionadas',
     relatedReadingLinks: [
       { href: '/pt/local-llms/local-llm-hardware-guide-2026', label: 'Guia de Hardware para LLM Local 2026' },
@@ -1397,6 +1420,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: 'الأسئلة الشائعة',
     keyTakeawaysLabel: 'النقاط الرئيسية',
     lastUpdatedLabel: 'آخر تحديث:',
+    directoryHeading: 'تصفح دليل البرمجيات الكامل',
+    directoryBody: 'كل أداة وردت في هذه الأدلة — وعشرات أخرى — مُصنّفة في مكان واحد مع الوصف والترخيص والرابط.',
+    directoryCta: 'افتح دليل الـ 88 أداة ←',
     relatedReadingHeading: 'قراءات ذات صلة',
     relatedReadingLinks: [
       { href: '/ar/local-llms/local-llm-hardware-guide-2026', label: 'دليل أجهزة LLM المحلي 2026' },
@@ -1409,6 +1435,9 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     faqHeading: '자주 묻는 질문',
     keyTakeawaysLabel: '핵심 요점',
     lastUpdatedLabel: '최종 업데이트:',
+    directoryHeading: '전체 소프트웨어 디렉터리 보기',
+    directoryBody: '이 가이드들에서 언급된 모든 도구와 그 외 수십 개의 도구를 설명, 라이선스, 링크와 함께 한곳에 정리했습니다.',
+    directoryCta: '88개 도구 디렉터리 열기 →',
     relatedReadingHeading: '관련 자료',
     relatedReadingLinks: [
       { href: '/ko/local-llms/local-llm-hardware-guide-2026', label: '로컬 LLM 하드웨어 가이드 2026' },
@@ -1431,6 +1460,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: 'Can local LLMs replace my coding assistant?', a: 'Yes. Continue.dev + Ollama + Qwen3-Coder reaches 90-95% of GitHub Copilot quality on everyday TypeScript and Python work, with full code privacy. Hardware requirements are RTX 3060 12 GB or M3 Pro+ Mac.' },
     { q: 'Do local LLMs work offline completely?', a: 'Yes — once the model is downloaded, all inference is local. Useful for travel, restricted networks, secure environments, and anywhere internet is unreliable.' },
     { q: 'Which local LLM stack is best for businesses in the EU?', a: 'For GDPR/EU AI Act compliance: Ollama or vLLM running on dedicated hardware, paired with Jan (UI), Continue.dev (coding), and AnythingLLM (RAG). All open source, all auditable, all on-prem. Mistral Large is a strong EU-hosted alternative for hybrid setups.' },
+    { q: 'Is there a directory of local LLM software?', a: 'Yes — the Local LLM Software Directory catalogues 88 tools across nine categories (runtimes, desktop apps, RAG, coding, agents, mobile, and more) with description, licence, and link for each.' },
+    { q: 'SillyTavern vs Open WebUI: which should I use?', a: 'They solve different problems. SillyTavern is a roleplay and character-chat frontend built for persona management and long-form fiction. Open WebUI is a general-purpose chat and RAG frontend built for document Q&A and everyday assistant use. Pick SillyTavern for creative writing and character work; pick Open WebUI for research, RAG, and daily chat.' },
+    { q: 'Obsidian vs Ollama: what is the difference?', a: 'They are not competitors — Obsidian is a note-taking app, and Ollama is a local model runtime. Used together, Ollama runs the model locally while an Obsidian plugin sends your notes to it for summarization, Q&A, or writing assistance.' },
   ],
   de: [
     { q: 'Was ist ein lokales LLM und worin unterscheidet es sich von ChatGPT?', a: 'Ein lokales LLM läuft vollständig auf Ihrer eigenen Hardware — Smartphone, Laptop, Desktop oder Server — ohne Prompts an einen Cloud-Dienst zu senden. ChatGPT läuft auf OpenAI-Servern und überträgt Ihre Eingaben dorthin. Lokale LLMs sind privat, funktionieren offline und verursachen keine Kosten pro Token; ChatGPT ist bei seltenen Themen schneller und erfordert keine Einrichtung.' },
@@ -1445,6 +1477,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: 'Welcher lokale LLM-Stack eignet sich am besten für Unternehmen in der EU?', a: 'Für DSGVO- und EU-KI-Gesetz-Konformität: Ollama oder vLLM auf dedizierter Hardware, kombiniert mit Jan (UI), Continue.dev (Coding) und AnythingLLM (RAG). Alles Open Source, alles auditierbar, alles On-Premises. Mistral Large ist eine starke EU-gehostete Alternative für hybride Setups.' },
     { q: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?', a: 'Ja, grundsätzlich. Da lokale LLMs alle Daten ausschließlich auf Ihrer eigenen Hardware verarbeiten, erfüllen Sie automatisch die Anforderungen der DSGVO-Artikel 5 (Datensparsamkeit) und Artikel 25 (Datenschutz durch Technikgestaltung). Im Gegensatz zu Cloud-LLMs müssen Sie keinen Auftragsverarbeitungsvertrag (AVV) gemäß Artikel 28 mit einem US-amerikanischen Anbieter abschließen. Für Unternehmen empfehlen sich Open-Source-Runtimes (Ollama, vLLM) in Kombination mit den BSI-Grundschutz-Katalogen, um interne IT-Sicherheitsanforderungen vollständig zu erfüllen. Ein Datenschutz-Audit ist dennoch ratsam, wenn personenbezogene Daten verarbeitet werden.' },
     { q: 'Sind lokale LLMs für den deutschen Mittelstand geeignet?', a: 'Ja, besonders für mittelständische Unternehmen mit strengen Datenschutz- oder Compliance-Anforderungen. Lokale LLMs bieten Datensouveränität ohne laufende SaaS-Kosten, was die Amortisation in 8–18 Monaten ermöglicht. Empfohlener Stack für den Mittelstand: Ollama als Runtime, Jan oder Open WebUI als Benutzeroberfläche, AnythingLLM für Dokument-RAG und Continue.dev für die Softwareentwicklung. Für unternehmenskritische Anwendungen empfiehlt das BSI (Bundesamt für Sicherheit in der Informationstechnik) den Einsatz von On-Premises-Modellen in Übereinstimmung mit dem BSI-Grundschutz-Kompendium.' },
+    { q: 'Gibt es ein Verzeichnis für lokale LLM-Software?', a: 'Ja — das Local LLM Software Directory katalogisiert 88 Tools in neun Kategorien (Runtimes, Desktop-Apps, RAG, Coding, Agenten, Mobile und mehr) mit Beschreibung, Lizenz und Link für jedes.' },
+    { q: 'SillyTavern vs. Open WebUI: Was sollten Sie verwenden?', a: 'Beide lösen unterschiedliche Probleme. SillyTavern ist ein Roleplay- und Charakter-Chat-Frontend für Persona-Verwaltung und Langform-Fiktion. Open WebUI ist ein allgemeines Chat- und RAG-Frontend für Dokumenten-Q&A und den täglichen Assistenten-Einsatz. Wählen Sie SillyTavern für kreatives Schreiben und Charakterarbeit; wählen Sie Open WebUI für Recherche, RAG und tägliches Chatten.' },
+    { q: 'Obsidian vs. Ollama: Was ist der Unterschied?', a: 'Die beiden sind keine Konkurrenten — Obsidian ist eine Notiz-App, Ollama eine lokale Modell-Runtime. Zusammen verwendet, führt Ollama das Modell lokal aus, während ein Obsidian-Plugin Ihre Notizen zur Zusammenfassung, Beantwortung oder Schreibunterstützung dorthin sendet.' },
   ],
   fr: [
     { q: 'Qu\'est-ce qu\'un LLM local et en quoi est-ce différent de ChatGPT ?', a: 'Un LLM local s\'exécute entièrement sur votre matériel — téléphone, laptop, ordinateur de bureau ou serveur — sans envoyer vos prompts à aucun service cloud. ChatGPT s\'exécute sur les serveurs OpenAI et y envoie vos prompts. Les LLMs locaux sont privés, fonctionnent hors ligne et n\'ont aucun coût par token ; ChatGPT est plus rapide sur les sujets rares et ne nécessite aucune configuration.' },
@@ -1457,6 +1492,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: 'Les LLMs locaux peuvent-ils remplacer mon assistant de codage ?', a: 'Oui. Continue.dev + Ollama + Qwen3-Coder atteint 90 à 95 % de la qualité de GitHub Copilot sur le travail TypeScript et Python quotidien, avec une confidentialité totale du code. La configuration requise est RTX 3060 12 Go ou M3 Pro+ Mac.' },
     { q: 'Les LLMs locaux fonctionnent-ils complètement hors ligne ?', a: 'Oui — une fois le modèle téléchargé, toute l\'inférence est locale. Utile pour les voyages, les réseaux restreints, les environnements sécurisés et partout où Internet n\'est pas fiable.' },
     { q: 'Quelle stack LLM local est la meilleure pour les entreprises de l\'UE ?', a: 'Pour la conformité RGPD/Loi sur l\'IA de l\'UE : Ollama ou vLLM s\'exécutant sur du matériel dédié, associés à Jan (UI), Continue.dev (codage) et AnythingLLM (RAG). Tout open source, tout auditable, tout sur site. Mistral Large est une alternative hébergée en UE solide pour les configurations hybrides.' },
+    { q: 'Existe-t-il un annuaire des logiciels LLM locaux ?', a: 'Oui — l\'Annuaire des Logiciels LLM Locaux répertorie 88 outils dans neuf catégories (runtimes, applications de bureau, RAG, codage, agents, mobile, et plus) avec description, licence et lien pour chacun.' },
+    { q: 'SillyTavern vs Open WebUI : lequel choisir ?', a: 'Ils résolvent des problèmes différents. SillyTavern est un frontend de roleplay et de chat de personnages conçu pour la gestion de personas et la fiction longue. Open WebUI est un frontend de chat et RAG généraliste conçu pour les questions-réponses sur documents et l\'usage quotidien d\'assistant. Choisissez SillyTavern pour l\'écriture créative et le travail de personnage ; choisissez Open WebUI pour la recherche, le RAG et le chat quotidien.' },
+    { q: 'Obsidian vs Ollama : quelle est la différence ?', a: 'Ce ne sont pas des concurrents — Obsidian est une application de prise de notes, et Ollama un runtime de modèle local. Utilisés ensemble, Ollama exécute le modèle localement pendant qu\'un plugin Obsidian lui envoie vos notes pour résumé, questions-réponses ou aide à l\'écriture.' },
   ],
   ja: [
     { q: 'ローカルLLMとは何か、ChatGPTとどう違うのか？', a: 'ローカルLLMはあなた自身のハードウェア（スマートフォン、ノートパソコン、デスクトップ、またはサーバー）で完全に実行され、プロンプトをクラウドサービスに送信しません。ChatGPTはOpenAIのサーバーで実行され、プロンプトをそこに送信します。ローカルLLMはプライベート、オフラインで動作、トークンごとのコスト無し。ChatGPTは稀なトピックでは高速で、セットアップは不要です。' },
@@ -1469,6 +1507,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: 'ローカルLLMはコーディングアシスタントを置き換えられるか？', a: 'はい。Continue.dev + Ollama + Qwen3-Coderは日常のTypeScriptおよびPython作業でGitHub Copilot品質の90～95％に達し、完全なコードプライバシーです。必要なハードウェア：RTX 3060 12 GBまたはM3 Pro+ Mac。' },
     { q: 'ローカルLLMは完全にオフラインで動作するか？', a: 'はい。モデルがダウンロードされると、すべての推論はローカルです。旅行、制限されたネットワーク、セキュアな環境、インターネットが不安定な場所に有用です。' },
     { q: 'EUの企業に最適なローカルLLMスタックは？', a: 'GDPR/EU AI Act準拠：Ollama またはvLLMを専用ハードウェアで実行し、Jan（UI）、Continue.dev（コーディング）、AnythingLLM（RAG）と組み合わせ。すべてオープンソース、すべて監査可能、すべてオンプレミス。Mistral Largeはハイブリッドセットアップの強力なEUホストオプションです。' },
+    { q: 'ローカルLLMソフトウェアのディレクトリはありますか？', a: 'はい — ローカルLLMソフトウェアディレクトリは、ランタイム、デスクトップアプリ、RAG、コーディング、エージェント、モバイルなど9カテゴリにわたる88のツールを、それぞれの説明・ライセンス・リンク付きでカタログ化しています。' },
+    { q: 'SillyTavern と Open WebUI、どちらを使うべきですか？', a: '両者は異なる課題を解決します。SillyTavernはペルソナ管理と長編フィクション向けのロールプレイ・キャラクターチャットフロントエンドです。Open WebUIはドキュメントQ&Aと日常的なアシスタント用途向けの汎用チャット・RAGフロントエンドです。創作やキャラクター作業にはSillyTavernを、リサーチ・RAG・日常チャットにはOpen WebUIを選んでください。' },
+    { q: 'Obsidian と Ollama の違いは何ですか？', a: 'この2つは競合関係ではありません — Obsidianはノートアプリ、Ollamaはローカルモデルランタイムです。組み合わせて使う場合、Ollamaがモデルをローカルで実行し、Obsidianのプラグインがノートを送信して要約・質問応答・執筆支援を行います。' },
   ],
   zh: [
     { q: '什么是本地LLM，它与ChatGPT有什么不同？', a: '本地LLM完全在您自己的硬件（手机、笔记本电脑、台式电脑或服务器）上运行，不会将提示发送给任何云服务。ChatGPT在OpenAI服务器上运行并将您的提示发送给它们。本地LLM是私有的、离线工作的、无按令牌费用的；ChatGPT在罕见主题上更快，无需设置。' },
@@ -1481,6 +1522,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: '本地LLM能否替代我的编码助手？', a: '可以。Continue.dev + Ollama + Qwen3-Coder在日常TypeScript和Python工作中达到GitHub Copilot质量的90～95％，具有完整的代码隐私。硬件要求为RTX 3060 12 GB或M3 Pro+ Mac。' },
     { q: '本地LLM能完全离线工作吗？', a: '可以。下载模型后，所有推理都在本地进行。适用于旅行、受限网络、安全环境以及任何互联网不可靠的地方。' },
     { q: '欧盟企业的最佳本地LLM堆栈是什么？', a: '满足GDPR/欧盟AI法案合规性：在专用硬件上运行Ollama或vLLM，结合Jan（UI）、Continue.dev（编码）和AnythingLLM（RAG）。全部开源、全部可审计、全部本地部署。Mistral Large是混合设置的强有力的欧盟托管替代方案。' },
+    { q: '有本地LLM软件的目录吗？', a: '有 — 本地LLM软件目录收录了9个类别中的88款工具(运行时、桌面应用、RAG、编码、代理、移动端等),每款都附有描述、许可证和链接。' },
+    { q: 'SillyTavern 与 Open WebUI:应该选哪个？', a: '两者解决的是不同的问题。SillyTavern 是为角色管理和长篇小说创作设计的角色扮演聊天前端。Open WebUI 是为文档问答和日常助手使用设计的通用聊天与RAG前端。创意写作和角色扮演选择 SillyTavern;研究、RAG和日常聊天选择 Open WebUI。' },
+    { q: 'Obsidian 与 Ollama 有什么区别？', a: '两者不是竞品——Obsidian 是笔记应用,Ollama 是本地模型运行时。搭配使用时,Ollama 在本地运行模型,而 Obsidian 插件将笔记发送给它进行摘要、问答或写作辅助。' },
   ],
   es: [
     { q: '¿Qué es un LLM local y cómo difiere de ChatGPT?', a: 'Un LLM local se ejecuta completamente en tu propio hardware — teléfono, laptop, desktop o servidor — sin enviar prompts a ningún servicio en la nube. ChatGPT se ejecuta en servidores de OpenAI y envía tus prompts allí. Los LLMs locales son privados, funcionan offline y no tienen costo por token; ChatGPT es más rápido en temas raros y no requiere configuración.' },
@@ -1493,6 +1537,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: '¿Pueden los LLMs locales reemplazar mi asistente de código?', a: 'Sí. Continue.dev + Ollama + Qwen3-Coder alcanza 90-95% de la calidad de GitHub Copilot en trabajo diario de TypeScript y Python, con privacidad completa de código. Los requisitos de hardware son RTX 3060 12 GB o Mac M3 Pro+.' },
     { q: '¿Los LLMs locales funcionan completamente offline?', a: 'Sí — una vez que el modelo se descarga, toda la inferencia es local. Útil para viajes, redes restringidas, entornos seguros y en cualquier lugar donde el internet sea confiable.' },
     { q: '¿Cuál es el mejor stack de LLM local para empresas en la UE?', a: 'Para cumplimiento GDPR/Ley de IA de la UE: Ollama o vLLM ejecutándose en hardware dedicado, emparejado con Jan (UI), Continue.dev (codificación) y AnythingLLM (RAG). Todo open source, todo auditable, todo on-prem. Mistral Large es una alternativa fuerte alojada en la UE para configuraciones híbridas.' },
+    { q: '¿Existe un directorio de software LLM local?', a: 'Sí — el Directorio de Software LLM Local cataloga 88 herramientas en nueve categorías (runtimes, aplicaciones de escritorio, RAG, código, agentes, móvil y más) con descripción, licencia y enlace para cada una.' },
+    { q: 'SillyTavern vs Open WebUI: ¿cuál debería usar?', a: 'Resuelven problemas diferentes. SillyTavern es un frontend de roleplay y chat de personajes diseñado para gestión de personas y ficción extensa. Open WebUI es un frontend de chat y RAG de propósito general diseñado para preguntas sobre documentos y uso diario como asistente. Elige SillyTavern para escritura creativa y trabajo de personajes; elige Open WebUI para investigación, RAG y chat diario.' },
+    { q: 'Obsidian vs Ollama: ¿cuál es la diferencia?', a: 'No son competidores — Obsidian es una aplicación de notas y Ollama es un runtime de modelo local. Usados juntos, Ollama ejecuta el modelo localmente mientras un plugin de Obsidian le envía tus notas para resumen, preguntas y respuestas, o asistencia de escritura.' },
   ],
   pt: [
     { q: 'O que é um LLM local e como ele difere do ChatGPT?', a: 'Um LLM local roda inteiramente no seu próprio hardware — celular, notebook, computador ou servidor — sem enviar prompts para nenhum serviço na nuvem. O ChatGPT roda nos servidores da OpenAI e envia seus prompts para lá. LLMs locais são privados, funcionam offline e não têm custo por token; o ChatGPT é mais rápido em temas raros e não exige configuração.' },
@@ -1505,6 +1552,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: 'LLMs locais podem substituir meu assistente de código?', a: 'Sim. Continue.dev + Ollama + Qwen3-Coder alcança 90-95% da qualidade do GitHub Copilot no trabalho diário de TypeScript e Python, com privacidade total do código. Os requisitos de hardware são RTX 3060 12 GB ou Mac M3 Pro+.' },
     { q: 'LLMs locais funcionam totalmente offline?', a: 'Sim — uma vez que o modelo é baixado, toda a inferência é local. Útil para viagens, redes restritas, ambientes seguros e qualquer lugar onde a internet seja instável.' },
     { q: 'Qual é o melhor stack de LLM local para empresas na UE?', a: 'Para conformidade com GDPR/Lei de IA da UE: Ollama ou vLLM rodando em hardware dedicado, combinado com Jan (UI), Continue.dev (codificação) e AnythingLLM (RAG). Tudo open source, tudo auditável, tudo on-prem. O Mistral Large é uma forte alternativa hospedada na UE para configurações híbridas.' },
+    { q: 'Existe um diretório de software LLM local?', a: 'Sim — o Diretório de Software LLM Local cataloga 88 ferramentas em nove categorias (runtimes, apps de desktop, RAG, código, agentes, mobile e mais) com descrição, licença e link para cada uma.' },
+    { q: 'SillyTavern vs Open WebUI: qual devo usar?', a: 'Eles resolvem problemas diferentes. O SillyTavern é um frontend de roleplay e chat de personagens feito para gestão de personas e ficção longa. O Open WebUI é um frontend de chat e RAG de propósito geral feito para perguntas sobre documentos e uso diário como assistente. Escolha o SillyTavern para escrita criativa e trabalho de personagens; escolha o Open WebUI para pesquisa, RAG e chat diário.' },
+    { q: 'Obsidian vs Ollama: qual é a diferença?', a: 'Eles não são concorrentes — o Obsidian é um app de notas, e o Ollama é um runtime de modelo local. Usados juntos, o Ollama roda o modelo localmente enquanto um plugin do Obsidian envia suas notas para resumo, perguntas e respostas ou ajuda na escrita.' },
   ],
   ar: [
     { q: 'ما هو LLM المحلي وكيف يختلف عن ChatGPT؟', a: 'يعمل نموذج LLM المحلي بالكامل على أجهزتك الخاصة — هاتف أو حاسوب محمول أو سطح مكتب أو خادم — دون إرسال طلباتك إلى أي خدمة سحابية. يعمل ChatGPT على خوادم OpenAI ويرسل طلباتك إليها. نماذج LLM المحلية خاصة وتعمل دون اتصال بالإنترنت وبدون تكلفة لكل رمز؛ ChatGPT أسرع في الموضوعات النادرة ولا يتطلب أي إعداد.' },
@@ -1517,6 +1567,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: 'هل يمكن لنماذج LLM المحلية أن تحل محل مساعد البرمجة لديّ؟', a: 'نعم. Continue.dev + Ollama + Qwen3-Coder يصل إلى 90-95٪ من جودة GitHub Copilot في العمل اليومي بـ TypeScript وPython مع الحفاظ على خصوصية الكود بالكامل. متطلبات الأجهزة: RTX 3060 12 GB أو Mac M3 Pro+.' },
     { q: 'هل تعمل نماذج LLM المحلية دون اتصال بالكامل؟', a: 'نعم — بمجرد تنزيل النموذج، يتم كل الاستدلال محلياً. مفيد للسفر والشبكات المقيّدة والبيئات الآمنة وأي مكان يكون فيه الإنترنت غير موثوق.' },
     { q: 'ما أفضل مكدس LLM محلي للشركات في الاتحاد الأوروبي؟', a: 'للامتثال لـ GDPR/قانون الذكاء الاصطناعي الأوروبي: Ollama أو vLLM على أجهزة مخصصة، مقترناً بـ Jan (واجهة المستخدم) وContinue.dev (البرمجة) وAnythingLLM (RAG). كل شيء مفتوح المصدر وقابل للتدقيق ومحلي بالكامل. Mistral Large بديل قوي مستضاف في الاتحاد الأوروبي للإعدادات الهجينة.' },
+    { q: 'هل يوجد دليل لبرمجيات LLM المحلية؟', a: 'نعم — يُصنّف دليل برمجيات LLM المحلية 88 أداة ضمن تسع فئات (بيئات التشغيل، تطبيقات سطح المكتب، RAG، البرمجة، الوكلاء، الهاتف المحمول وغيرها) مع وصف وترخيص ورابط لكل أداة.' },
+    { q: 'SillyTavern مقابل Open WebUI: أيهما يجب أن تستخدم؟', a: 'كل منهما يحل مشكلة مختلفة. SillyTavern واجهة لعب الأدوار والدردشة الشخصياتية، مصممة لإدارة الشخصيات والكتابة الطويلة. Open WebUI واجهة دردشة وRAG عامة، مصممة للإجابة عن أسئلة المستندات والاستخدام اليومي كمساعد. اختر SillyTavern للكتابة الإبداعية وعمل الشخصيات؛ واختر Open WebUI للبحث وRAG والدردشة اليومية.' },
+    { q: 'Obsidian مقابل Ollama: ما الفرق؟', a: 'إنهما ليسا منافسين — Obsidian تطبيق لتدوين الملاحظات، وOllama بيئة تشغيل نماذج محلية. عند استخدامهما معاً، يشغّل Ollama النموذج محلياً بينما يرسل إضافة في Obsidian ملاحظاتك إليه للتلخيص أو الإجابة عن الأسئلة أو المساعدة في الكتابة.' },
   ],
   ko: [
     { q: '로컬 LLM이란 무엇이고 ChatGPT와 어떻게 다른가요?', a: '로컬 LLM은 어떤 클라우드 서비스에도 프롬프트를 보내지 않고 자신의 기기(스마트폰, 노트북, 데스크톱, 서버)에서 완전히 실행됩니다. ChatGPT는 OpenAI 서버에서 실행되며 프롬프트를 그곳으로 전송합니다. 로컬 LLM은 프라이빗하고 오프라인에서 작동하며 토큰당 비용이 없습니다. ChatGPT는 드문 주제에서 더 빠르고 별도 설정이 필요 없습니다.' },
@@ -1529,6 +1582,9 @@ const HUB_FAQS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar
     { q: '로컬 LLM이 코딩 어시스턴트를 대체할 수 있나요?', a: '네. Continue.dev + Ollama + Qwen3-Coder는 일상적인 TypeScript 및 Python 작업에서 GitHub Copilot 품질의 90~95%에 도달하며 코드 프라이버시를 완전히 보장합니다. 하드웨어 요구사항은 RTX 3060 12GB 또는 M3 Pro+ Mac입니다.' },
     { q: '로컬 LLM이 완전히 오프라인으로 작동하나요?', a: '네 — 모델을 다운로드하면 모든 추론이 로컬에서 이루어집니다. 여행, 제한된 네트워크, 보안 환경, 인터넷이 불안정한 모든 곳에서 유용합니다.' },
     { q: 'EU 기업에 가장 적합한 로컬 LLM 스택은 무엇인가요?', a: 'GDPR/EU AI 법 준수를 위해: 전용 하드웨어에서 Ollama 또는 vLLM을 실행하고 Jan(UI), Continue.dev(코딩), AnythingLLM(RAG)과 결합하세요. 모두 오픈소스, 모두 감사 가능, 모두 온프레미스입니다. Mistral Large는 하이브리드 설정을 위한 강력한 EU 호스팅 대안입니다.' },
+    { q: '로컬 LLM 소프트웨어 디렉터리가 있나요?', a: '네 — 로컬 LLM 소프트웨어 디렉터리는 런타임, 데스크톱 앱, RAG, 코딩, 에이전트, 모바일 등 9개 카테고리에 걸쳐 88개 도구를 각각의 설명, 라이선스, 링크와 함께 정리해 두었습니다.' },
+    { q: 'SillyTavern과 Open WebUI, 어느 것을 사용해야 하나요?', a: '둘은 서로 다른 문제를 해결합니다. SillyTavern은 페르소나 관리와 장편 픽션을 위한 롤플레이·캐릭터 채팅 프론트엔드입니다. Open WebUI는 문서 질의응답과 일상적인 어시스턴트 용도를 위한 범용 채팅·RAG 프론트엔드입니다. 창작과 캐릭터 작업에는 SillyTavern을, 리서치·RAG·일상 채팅에는 Open WebUI를 선택하세요.' },
+    { q: 'Obsidian과 Ollama의 차이는 무엇인가요?', a: '둘은 경쟁 관계가 아닙니다 — Obsidian은 노트 앱이고, Ollama는 로컬 모델 런타임입니다. 함께 사용할 경우 Ollama가 모델을 로컬에서 실행하고, Obsidian 플러그인이 노트를 보내 요약, 질의응답, 글쓰기 지원을 받습니다.' },
   ],
 }
 
@@ -1612,10 +1668,38 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
     ],
   }
 
+  // CollectionPage/ItemList — tells crawlers this hub indexes a curated set of software guides,
+  // one entry per published article across every theme (de-duplicated; theme order preserved).
+  const seenSlugs = new Set<string>()
+  const publishedSlugs = HUB_THEMES.flatMap((theme) => theme.slugs).filter((slug) => {
+    if (seenSlugs.has(slug) || !isPowerLLMArticlePublished(slug, lang)) return false
+    seenSlugs.add(slug)
+    return true
+  })
+  const hubCollectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: hero.h1,
+    description: hero.intro,
+    inLanguage: lang === 'pt' ? 'pt-BR' : lang,
+    url: `${BASE}${powerLLMHubPath(lang)}`,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: publishedSlugs.length,
+      itemListElement: publishedSlugs.map((slug, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${BASE}${powerLLMArticlePath(lang, slug)}`,
+        name: powerLLMContent[slug]?.[lang]?.title ?? powerLLMContent[slug]?.['en']?.title ?? slugToTitle(slug),
+      })),
+    },
+  }
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubFaqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubBreadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubCollectionSchema) }} />
 
       <div className="min-h-screen bg-surface pt-24 pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -1643,6 +1727,21 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
                 ))}
               </ul>
             </div>
+          </div>
+
+          {/* Directory callout — funnels traffic to the dedicated 88-tool directory article
+              instead of duplicating its table here (would compete with it for the same queries). */}
+          <div className="mb-16 -mt-8 border border-primary/20 bg-primary/5 rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+            <div>
+              <h2 className="text-lg font-bold text-text-primary mb-1">{labels.directoryHeading}</h2>
+              <p className="text-sm text-text-secondary max-w-xl">{labels.directoryBody}</p>
+            </div>
+            <Link
+              href={powerLLMArticlePath(lang, 'local-llm-software-directory-2026')}
+              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
+            >
+              {labels.directoryCta}
+            </Link>
           </div>
 
           {/* Recently Published — auto-surfaced articles with publishDate within 15 days */}

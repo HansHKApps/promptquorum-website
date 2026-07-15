@@ -106,6 +106,18 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-korean-language-models-local',
   'best-china-compliant-local-llm',
   'best-local-llm-legal-medical-privacy',
+
+  // 2026-07 round-2 batch — published
+  'best-local-llm-benchmarking-tool',
+  'best-local-llm-for-sql-data-analysis',
+  'best-local-llm-for-translation',
+  'speculative-decoding-explained',
+  'lora-vs-full-fine-tuning',
+  'best-local-llm-license-comparison',
+  'best-structured-json-output-local-llm',
+  'best-model-merging-tool-mergekit',
+  'wsl2-vs-native-windows-ollama',
+  'best-gpu-local-llm-uae-price',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

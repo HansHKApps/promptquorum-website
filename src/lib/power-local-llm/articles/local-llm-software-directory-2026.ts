@@ -1,4 +1,4 @@
-// Power Local LLM — The Complete Local LLM Software Directory: 70+ Tools to Run AI on Your Own Hardware (2026)
+// Power Local LLM — The Complete Local LLM Software Directory: 88 Tools to Run AI on Your Own Hardware (2026)
 // Slug: local-llm-software-directory-2026
 // EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
 
@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'The Complete Local LLM Software Directory: 70+ Tools to Run AI on Your Own Hardware (2026)',
+    title: 'The Complete Local LLM Software Directory: 88 Tools to Run AI on Your Own Hardware (2026)',
     seoTitle: 'Local LLM Tools 2026: 88 Apps Updated (Ollama to RAG)',
     affiliateDisclosure: true,
     intro:
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'Das vollständige lokale LLM Software-Verzeichnis: 70+ Tools für KI auf eigener Hardware (2026)',
+    title: 'Das vollständige lokale LLM Software-Verzeichnis: 88 Tools für KI auf eigener Hardware (2026)',
     seoTitle: 'Lokale LLM-Tools 2026: 88 Apps aktualisiert (Ollama bis RAG)',
     affiliateDisclosure: true,
     intro:
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'Le répertoire complet des logiciels LLM locaux : 70+ outils pour faire tourner l\'IA sur votre propre matériel (2026)',
+    title: 'Le répertoire complet des logiciels LLM locaux : 88 outils pour faire tourner l\'IA sur votre propre matériel (2026)',
     seoTitle: 'Outils LLM locaux 2026 : 88 apps mises à jour (Ollama au RAG)',
     affiliateDisclosure: true,
     intro:
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす70以上のツール（2026年版）',
+    title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす88のツール（2026年版）',
     seoTitle: 'ローカルLLMツール2026：88アプリ更新（Ollama〜RAG）',
     affiliateDisclosure: true,
     intro:
@@ -1677,7 +1677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: '本地LLM软件完整目录：70+款工具，在自有硬件上运行AI（2026）',
+    title: '本地LLM软件完整目录：88款工具，在自有硬件上运行AI（2026）',
     seoTitle: '本地LLM工具2026：88款应用更新（Ollama到RAG）',
     affiliateDisclosure: true,
     intro:
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'El directorio completo de software LLM local: 70+ herramientas para ejecutar IA en tu propio hardware (2026)',
+    title: 'El directorio completo de software LLM local: 88 herramientas para ejecutar IA en tu propio hardware (2026)',
     seoTitle: 'Herramientas LLM local 2026: 88 apps actualizadas (Ollama a RAG)',
     affiliateDisclosure: true,
     intro:
@@ -2501,7 +2501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'El directorio completo de software LLM local: 70+ herramientas para ejecutar IA en tu propio hardware (2026)',
+      headline: 'El directorio completo de software LLM local: 88 herramientas para ejecutar IA en tu propio hardware (2026)',
       description: 'Directorio actualizado de 2026 con 88 herramientas para ejecutar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, más móvil, RAG, voz y frameworks de agentes. Licencias, enlaces y últimas versiones. Actualizado en julio de 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'es',
@@ -2519,7 +2519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
+    title: 'O diretório completo de software LLM local: 88 ferramentas para executar IA no seu próprio hardware (2026)',
     seoTitle: 'Ferramentas LLM local 2026: 88 apps atualizados (Ollama a RAG)',
     affiliateDisclosure: true,
     intro:
@@ -2929,7 +2929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'O diretório completo de software LLM local: 70+ ferramentas para executar IA no seu próprio hardware (2026)',
+      headline: 'O diretório completo de software LLM local: 88 ferramentas para executar IA no seu próprio hardware (2026)',
       description: 'Diretório atualizado de 2026 com 88 ferramentas para executar LLMs localmente: Ollama, LM Studio, GPT4All, Jan.ai, mais mobile, RAG, voz e frameworks de agentes. Licenças, links e versões mais recentes. Atualizado em julho de 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'pt-BR',
@@ -2946,7 +2946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: ⁨70⁩+ أداة لتشغيل الذكاء الاصطناعي على أجهزتك (⁨2026⁩)',
+    title: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: 88 أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
     seoTitle: 'أدوات ⁨LLM⁩ محلية ⁨2026⁩: ⁨88⁩ تطبيقاً محدَّثاً (⁨Ollama⁩ إلى ⁨RAG⁩)',
     affiliateDisclosure: true,
     intro:
@@ -3356,7 +3356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: 70+ أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
+      headline: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: 88 أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
       description: 'دليل محدَّث لعام 2026 يضم 88 أداة لتشغيل النماذج اللغوية محلياً: Ollama وLM Studio وGPT4All وJan.ai إضافة للمحمول وRAG والصوت وأطر العملاء. التراخيص والروابط وأحدث الإصدارات. محدَّث في يوليو 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ar',
@@ -3374,7 +3374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     slug: 'local-llm-software-directory-2026',
-    title: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 70개 이상의 도구 (2026)',
+    title: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 88개 도구 (2026)',
     seoTitle: '로컬 LLM 도구 2026: 88개 앱 업데이트 (Ollama~RAG)',
     affiliateDisclosure: true,
     intro:
@@ -3788,7 +3788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 70개 이상의 도구 (2026)',
+      headline: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 88개 도구 (2026)',
       description: '로컬 LLM 실행 도구 88개를 정리한 2026년 업데이트판 디렉토리: Ollama, LM Studio, GPT4All, Jan.ai, 모바일, RAG, 음성, 에이전트 프레임워크. 라이선스, 링크, 최신 버전 포함. 2026년 7월 업데이트.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ko',

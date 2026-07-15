@@ -221,6 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best 7B Models for Consumer Hardware](/local-llms/best-7b-models-consumer-hardware) -- best 7B models for consumer hardware',
             '[Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice](/local-llms/best-local-llms-business-writing) -- best local LLMs for business writing',
           '[Local LLM Model Updates 2026](/local-llms/local-llm-model-updates-2026) -- full timeline of every major open-weight release this year and Ollama availability.',
+          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) -- 88 tools across runtimes, desktop apps, RAG, coding, and agents, each with description, licence, and link.',
           ],
         },
         faqSection: {

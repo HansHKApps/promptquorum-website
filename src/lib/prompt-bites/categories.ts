@@ -91,6 +91,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'can-you-run-qwen3-on-ollama',
       'which-ollama-models-support-vision',
       'ollama-128k-context-models',
+      'wsl2-vs-native-windows-ollama',
     ],
   },
   {
@@ -133,6 +134,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'convert-ollama-model-to-mlx',
       'ollama-mlx-apple-silicon',
       'ollama-vs-vllm-vs-tgi',
+      'best-local-llm-benchmarking-tool',
+      'best-model-merging-tool-mergekit',
     ],
   },
   {
@@ -174,6 +177,9 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-under-8b-realtime-chat',
       'best-korean-language-models-local',
       'best-china-compliant-local-llm',
+      'best-local-llm-for-sql-data-analysis',
+      'best-local-llm-for-translation',
+      'best-structured-json-output-local-llm',
     ],
   },
   {
@@ -217,6 +223,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'cloud-gpu-cost-per-hour',
       'best-egpu-ollama-macbook',
       'strix-halo-ollama-vulkan',
+      'best-gpu-local-llm-uae-price',
       'best-gpu-under-1000-local-llm',
       'rtx-4060-vs-rtx-3060-12gb',
       'best-intel-arc-gpu-local-llm',
@@ -264,6 +271,9 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-embedding-model-local-rag',
       'best-local-llm-document-summarization',
       'local-llm-raspberry-pi-5',
+      'speculative-decoding-explained',
+      'lora-vs-full-fine-tuning',
+      'best-local-llm-license-comparison',
     ],
   },
   {
