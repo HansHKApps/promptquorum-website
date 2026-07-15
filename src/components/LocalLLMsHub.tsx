@@ -594,6 +594,71 @@ const HUB_PE_SIDEBAR_LINKS: Record<string, { label: string; href: string }[]> = 
   ],
 }
 
+const HUB_PB_SIDEBAR_TITLE: Record<string, string> = {
+  en: 'Quick Answers, No Reading Required',
+  de: 'Schnelle Antworten, ohne viel zu lesen',
+  fr: 'Réponses rapides, sans lecture superflue',
+  ja: '読み込み不要のクイック回答',
+  zh: '无需长篇阅读的快速解答',
+  es: 'Respuestas rápidas, sin tanta lectura',
+  pt: 'Respostas rápidas, sem leitura longa',
+  ko: '길게 읽지 않아도 되는 빠른 답변',
+}
+
+const HUB_PB_SIDEBAR_BODY: Record<string, string> = {
+  en: 'Got a specific question — how much VRAM, which quantization, Ollama vs LM Studio? Prompt Bites answers 100+ of these in under a minute each.',
+  de: 'Haben Sie eine konkrete Frage — wie viel VRAM, welche Quantisierung, Ollama vs. LM Studio? Prompt Bites beantwortet über 100 solcher Fragen in jeweils unter einer Minute.',
+  fr: 'Une question précise — combien de VRAM, quelle quantisation, Ollama ou LM Studio ? Prompt Bites répond à plus de 100 de ces questions en moins d\'une minute chacune.',
+  ja: 'VRAMはどれくらい必要か、どの量子化を選ぶべきか、OllamaとLM Studioのどちらが良いかなど、具体的な疑問はありませんか？Prompt Bitesでは100以上のこうした質問に1分以内で回答しています。',
+  zh: '有具体问题吗——需要多少VRAM、选哪种量化方式、Ollama还是LM Studio？Prompt Bites用不到一分钟就能回答100多个这类问题。',
+  es: '¿Tienes una pregunta concreta — cuánta VRAM necesitas, qué cuantización elegir, Ollama o LM Studio? Prompt Bites responde más de 100 de estas preguntas en menos de un minuto cada una.',
+  pt: 'Tem uma pergunta específica — quanta VRAM precisa, qual quantização escolher, Ollama ou LM Studio? O Prompt Bites responde mais de 100 dessas perguntas em menos de um minuto cada.',
+  ko: 'VRAM이 얼마나 필요한지, 어떤 양자화를 선택해야 하는지, Ollama와 LM Studio 중 무엇이 나은지 등 구체적인 질문이 있으신가요? Prompt Bites는 이런 질문 100개 이상에 각각 1분 이내로 답합니다.',
+}
+
+const HUB_PB_SIDEBAR_LINKS: Record<string, { label: string; href: string }[]> = {
+  en: [
+    { label: 'Browse Prompt Bites', href: 'https://www.promptquorum.com/prompt-bites' },
+    { label: 'How Much VRAM Do You Need?', href: 'https://www.promptquorum.com/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama vs LM Studio', href: 'https://www.promptquorum.com/prompt-bites/ollama-vs-lm-studio' },
+  ],
+  de: [
+    { label: 'Prompt Bites durchsuchen', href: 'https://www.promptquorum.com/de/prompt-bites' },
+    { label: 'Wie viel VRAM brauchen Sie?', href: 'https://www.promptquorum.com/de/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama vs. LM Studio', href: 'https://www.promptquorum.com/de/prompt-bites/ollama-vs-lm-studio' },
+  ],
+  fr: [
+    { label: 'Parcourir Prompt Bites', href: 'https://www.promptquorum.com/fr/prompt-bites' },
+    { label: 'De combien de VRAM avez-vous besoin ?', href: 'https://www.promptquorum.com/fr/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama vs LM Studio', href: 'https://www.promptquorum.com/fr/prompt-bites/ollama-vs-lm-studio' },
+  ],
+  ja: [
+    { label: 'Prompt Bitesを見る', href: 'https://www.promptquorum.com/ja/prompt-bites' },
+    { label: '必要なVRAM容量は？', href: 'https://www.promptquorum.com/ja/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama vs LM Studio', href: 'https://www.promptquorum.com/ja/prompt-bites/ollama-vs-lm-studio' },
+  ],
+  zh: [
+    { label: '浏览 Prompt Bites', href: 'https://www.promptquorum.com/zh/prompt-bites' },
+    { label: '你需要多少VRAM？', href: 'https://www.promptquorum.com/zh/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama 对比 LM Studio', href: 'https://www.promptquorum.com/zh/prompt-bites/ollama-vs-lm-studio' },
+  ],
+  es: [
+    { label: 'Explorar Prompt Bites', href: 'https://www.promptquorum.com/es/prompt-bites' },
+    { label: '¿Cuánta VRAM necesitas?', href: 'https://www.promptquorum.com/es/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama vs LM Studio', href: 'https://www.promptquorum.com/es/prompt-bites/ollama-vs-lm-studio' },
+  ],
+  pt: [
+    { label: 'Ver Prompt Bites', href: 'https://www.promptquorum.com/pt/prompt-bites' },
+    { label: 'Quanta VRAM você precisa?', href: 'https://www.promptquorum.com/pt/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama vs LM Studio', href: 'https://www.promptquorum.com/pt/prompt-bites/ollama-vs-lm-studio' },
+  ],
+  ko: [
+    { label: 'Prompt Bites 둘러보기', href: 'https://www.promptquorum.com/ko/prompt-bites' },
+    { label: '필요한 VRAM 용량은?', href: 'https://www.promptquorum.com/ko/prompt-bites/how-much-vram-for-local-llm' },
+    { label: 'Ollama vs LM Studio', href: 'https://www.promptquorum.com/ko/prompt-bites/ollama-vs-lm-studio' },
+  ],
+}
+
 const HUB_GETTING_STARTED_LINK: Record<string, string> = {
   en: 'Start with Getting Started',
   de: 'Mit „Erste Schritte" beginnen',
@@ -1747,6 +1812,25 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
               {(HUB_PE_SIDEBAR_LINKS[lang] ?? HUB_PE_SIDEBAR_LINKS['en']).map((link, i) => (
                 <div key={i}>
                   <Link href={link.href} className="text-blue-300 hover:text-blue-200 text-sm font-medium transition-colors">
+                    → {link.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* PB Sidebar */}
+          <div className="mb-10 bg-purple-950/40 border border-purple-900/50 rounded-xl p-6">
+            <h3 className="text-lg font-bold text-purple-50 mb-2">
+              {HUB_PB_SIDEBAR_TITLE[lang] ?? HUB_PB_SIDEBAR_TITLE['en']}
+            </h3>
+            <p className="text-sm text-purple-100 mb-4">
+              {HUB_PB_SIDEBAR_BODY[lang] ?? HUB_PB_SIDEBAR_BODY['en']}
+            </p>
+            <div className="space-y-2">
+              {(HUB_PB_SIDEBAR_LINKS[lang] ?? HUB_PB_SIDEBAR_LINKS['en']).map((link, i) => (
+                <div key={i}>
+                  <Link href={link.href} className="text-purple-300 hover:text-purple-200 text-sm font-medium transition-colors">
                     → {link.label}
                   </Link>
                 </div>

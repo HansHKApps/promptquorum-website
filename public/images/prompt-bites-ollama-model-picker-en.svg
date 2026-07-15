@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .bg { fill: #FFFFFF; }
@@ -16,7 +16,7 @@
   <rect class="bg" width="800" height="400"/>
 
   <!-- Title -->
-  <text x="400" y="30" class="title" text-anchor="middle">Ollama Top Models by Tier — May 2026</text>
+  <text x="400" y="30" class="title" text-anchor="middle">Ollama Top Models by Tier — July 2026</text>
 
   <!-- SMALL TIER (2-4GB) -->
   <rect x="20" y="45" width="240" height="22" class="category" rx="3"/>
@@ -51,7 +51,7 @@
   <text x="315" y="113" class="badge-text" text-anchor="middle">6 GB</text>
   <text x="290" y="126" class="card-text">General purpose workhorse</text>
   <text x="290" y="138" class="card-text">Code + language understanding</text>
-  <text x="290" y="150" class="card-text" style="fill: #1C1B1F;">ollama run llama2</text>
+  <text x="290" y="150" class="card-text" style="fill: #1C1B1F;">ollama run llama3</text>
 
   <!-- Mistral 7B -->
   <rect x="280" y="160" width="240" height="75" class="card-bg" rx="4"/>
@@ -73,7 +73,7 @@
   <text x="580" y="113" class="badge-text" text-anchor="middle">Q4: 43GB</text>
   <text x="550" y="126" class="card-text">Expert reasoning & analysis</text>
   <text x="550" y="138" class="card-text">Complex problem solving</text>
-  <text x="550" y="150" class="card-text" style="fill: #1C1B1F;">ollama run llama2:70b</text>
+  <text x="550" y="150" class="card-text" style="fill: #1C1B1F;">ollama run llama3:70b</text>
 
   <!-- Qwen 72B -->
   <rect x="540" y="160" width="240" height="75" class="card-bg" rx="4"/>

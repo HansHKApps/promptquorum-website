@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .bg { fill: #FFFFFF; }
@@ -19,7 +19,7 @@
 
   <!-- Hero Section -->
   <text x="400" y="40" class="title" text-anchor="middle">Hub Prompt Bites</text>
-  <text x="400" y="60" class="subtitle" text-anchor="middle">30 guides rapides pour utilisateurs LLM locaux</text>
+  <text x="400" y="60" class="subtitle" text-anchor="middle">100+ guides rapides pour utilisateurs LLM locaux</text>
 
   <!-- Icon circles for main topics -->
   <circle class="icon-circle" cx="100" cy="110" r="28"/>
@@ -44,21 +44,21 @@
   <!-- Row 1 -->
   <rect x="30" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="45" y="180" class="topic-title">Allocation VRAM</text>
-  <text x="45" y="198" class="topic-count">8 articles sur mémoire</text>
+  <text x="45" y="198" class="topic-count">15+ articles sur mémoire</text>
   <text x="45" y="213" class="text-secondary">Combien de VRAM pour différentes</text>
   <text x="45" y="228" class="text-secondary">tailles de modèle? Niveaux VRAM,</text>
   <text x="45" y="243" class="text-secondary">budget vs entreprise, RAM vs VRAM</text>
 
   <rect x="290" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="305" y="180" class="topic-title">Quantification</text>
-  <text x="305" y="198" class="topic-count">6 articles sur compression</text>
+  <text x="305" y="198" class="topic-count">10+ articles sur compression</text>
   <text x="305" y="213" class="text-secondary">Q3_K_M, Q4_K_M, Q5_K_M, Q8_0</text>
   <text x="305" y="228" class="text-secondary">Compromis qualité/taille,</text>
   <text x="305" y="243" class="text-secondary">principes quantification</text>
 
   <rect x="550" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="565" y="180" class="topic-title">Modèles Ollama</text>
-  <text x="565" y="198" class="topic-count">6 articles sélection modèles</text>
+  <text x="565" y="198" class="topic-count">15+ articles sélection modèles</text>
   <text x="565" y="213" class="text-secondary">Top modèles Ollama par niveau,</text>
   <text x="565" y="228" class="text-secondary">meilleurs LLMs open-source,</text>
   <text x="565" y="243" class="text-secondary">recommandations modèles 2026</text>
@@ -66,21 +66,21 @@
   <!-- Row 2 -->
   <rect x="30" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="45" y="290" class="topic-title">Comparaisons outils</text>
-  <text x="45" y="308" class="topic-count">5 articles sur logiciels</text>
+  <text x="45" y="308" class="topic-count">15+ articles sur logiciels</text>
   <text x="45" y="323" class="text-secondary">Ollama vs LM Studio vs Jan,</text>
   <text x="45" y="338" class="text-secondary">comparaison LLM locaux, quel</text>
   <text x="45" y="353" class="text-secondary">outil pour votre cas d'usage</text>
 
   <rect x="290" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="305" y="290" class="topic-title">Comparaisons modèles</text>
-  <text x="305" y="308" class="topic-count">4 articles matchups modèles</text>
+  <text x="305" y="308" class="topic-count">10+ articles matchups modèles</text>
   <text x="305" y="323" class="text-secondary">Qwen vs Llama vs Mistral,</text>
   <text x="305" y="338" class="text-secondary">Qwen Coder vs DeepSeek, modèles</text>
   <text x="305" y="353" class="text-secondary">génération code 2026</text>
 
   <rect x="550" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="565" y="290" class="topic-title">Matériel &amp; Config</text>
-  <text x="565" y="308" class="topic-count">5 articles infrastructure</text>
+  <text x="565" y="308" class="topic-count">20+ articles infrastructure</text>
   <text x="565" y="323" class="text-secondary">Meilleurs GPU budget, RTX vs A100,</text>
   <text x="565" y="338" class="text-secondary">inférence CPU, setup Docker,</text>
   <text x="565" y="353" class="text-secondary">configurations multi-GPU</text>

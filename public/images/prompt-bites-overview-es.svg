@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .bg { fill: #FFFFFF; }
@@ -15,7 +15,7 @@
   </defs>
   <rect class="bg" width="800" height="400"/>
   <text x="400" y="40" class="title" text-anchor="middle">Hub Prompt Bites</text>
-  <text x="400" y="60" class="subtitle" text-anchor="middle">30 Guías de Respuesta Corta para Usuarios LLM Local</text>
+  <text x="400" y="60" class="subtitle" text-anchor="middle">100+ Guías de Respuesta Corta para Usuarios LLM Local</text>
   <circle class="icon-circle" cx="100" cy="110" r="28"/>
   <text x="100" y="115" class="icon-text" text-anchor="middle">VRAM</text>
   <circle class="icon-circle" cx="220" cy="110" r="28"/>
@@ -30,37 +30,37 @@
   <text x="700" y="115" class="icon-text" text-anchor="middle">CONFIG</text>
   <rect x="30" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="45" y="180" class="topic-title">Asignación VRAM</text>
-  <text x="45" y="198" class="topic-count">8 artículos sobre memoria</text>
+  <text x="45" y="198" class="topic-count">15+ artículos sobre memoria</text>
   <text x="45" y="213" class="text-secondary">¿Cuánta VRAM para diferentes</text>
   <text x="45" y="228" class="text-secondary">tamaños? Tiers VRAM, presupuesto</text>
   <text x="45" y="243" class="text-secondary">vs empresa, RAM vs VRAM</text>
   <rect x="290" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="305" y="180" class="topic-title">Cuantización</text>
-  <text x="305" y="198" class="topic-count">6 artículos sobre compresión</text>
+  <text x="305" y="198" class="topic-count">10+ artículos sobre compresión</text>
   <text x="305" y="213" class="text-secondary">Q3_K_M, Q4_K_M, Q5_K_M, Q8_0</text>
   <text x="305" y="228" class="text-secondary">Calidad vs tamaño, tradeoffs,</text>
   <text x="305" y="243" class="text-secondary">fundamentos &amp; formatos</text>
   <rect x="550" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="565" y="180" class="topic-title">Modelos Ollama</text>
-  <text x="565" y="198" class="topic-count">6 artículos selección modelos</text>
+  <text x="565" y="198" class="topic-count">15+ artículos selección modelos</text>
   <text x="565" y="213" class="text-secondary">Top Ollama por tier,</text>
   <text x="565" y="228" class="text-secondary">mejores LLMs open-source,</text>
   <text x="565" y="243" class="text-secondary">recomendaciones 2026</text>
   <rect x="30" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="45" y="290" class="topic-title">Comparación Herramientas</text>
-  <text x="45" y="308" class="topic-count">5 artículos sobre software</text>
+  <text x="45" y="308" class="topic-count">15+ artículos sobre software</text>
   <text x="45" y="323" class="text-secondary">Ollama vs LM Studio vs Jan,</text>
   <text x="45" y="338" class="text-secondary">comparación LLM local, qué</text>
   <text x="45" y="353" class="text-secondary">herramienta para tu caso</text>
   <rect x="290" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="305" y="290" class="topic-title">Comparación Modelos</text>
-  <text x="305" y="308" class="topic-count">4 artículos compatibilidad</text>
+  <text x="305" y="308" class="topic-count">10+ artículos compatibilidad</text>
   <text x="305" y="323" class="text-secondary">Qwen vs Llama vs Mistral,</text>
   <text x="305" y="338" class="text-secondary">Qwen Coder vs DeepSeek,</text>
   <text x="305" y="353" class="text-secondary">modelos código 2026</text>
   <rect x="550" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="565" y="290" class="topic-title">Hardware &amp; Config</text>
-  <text x="565" y="308" class="topic-count">5 artículos infraestructura</text>
+  <text x="565" y="308" class="topic-count">20+ artículos infraestructura</text>
   <text x="565" y="323" class="text-secondary">Mejores GPUs presupuesto,</text>
   <text x="565" y="338" class="text-secondary">RTX vs A100, inferencia CPU,</text>
   <text x="565" y="353" class="text-secondary">Docker, multi-GPU</text>

@@ -54,6 +54,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-quantization-6gb-vram',
       'gguf-vs-gptq-vs-awq',
       'llama-cpp-gguf-conversion-guide',
+      'deepseek-r1-distill-vram-cheatsheet',
+      'best-deepseek-distill-for-your-gpu',
     ],
   },
   {
@@ -140,6 +142,8 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'sglang-vs-vllm-local-serving',
       'best-local-llm-obsidian-integration',
       'best-local-llm-reasoning-ui',
+      'best-ai-text-to-speech-for-content-creators',
+      'best-local-llm-apps-japan-android',
     ],
   },
   {
@@ -185,6 +189,12 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-for-translation',
       'best-structured-json-output-local-llm',
       'best-local-llm-customer-support-chatbot',
+      'best-japanese-language-models-local',
+      'best-qwen-model-for-coding',
+      'chinese-prompting-vs-english-prompting',
+      'deepseek-v3-local-hardware-requirements',
+      'sillytavern-chinese-roleplay-setup',
+      'best-open-source-alternatives-to-chatgpt-plus',
     ],
   },
   {
@@ -239,6 +249,13 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-32gb-unified-memory-mac',
       'best-windows-laptop-local-llm-under-1500',
       'fine-tuning-7b-model-locally-hardware',
+      'best-cloud-gpu-for-fine-tuning-under-1-per-hour',
+      'best-egpu-setup-for-macbook-local-llm-2026',
+      'best-gpu-local-llm-japan-price',
+      'best-mini-pc-for-ollama-server-always-on',
+      'best-mini-pc-local-llm-japan',
+      'cheapest-way-to-run-70b-model-locally',
+      'run-local-llm-on-xperia-japan',
     ],
   },
   {
@@ -353,6 +370,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-vpn-downloading-ai-models',
       'best-local-llm-legal-medical-privacy',
       'best-pii-redaction-tool-local-llm',
+      'best-vpn-for-ai-development-china-2026',
     ],
   },
 ]

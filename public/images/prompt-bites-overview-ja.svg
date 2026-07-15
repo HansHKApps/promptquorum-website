@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
       .bg { fill: #FFFFFF; }
@@ -19,7 +19,7 @@
 
   <!-- Hero Section -->
   <text x="400" y="40" class="title" text-anchor="middle">Prompt Bites ハブ</text>
-  <text x="400" y="60" class="subtitle" text-anchor="middle">ローカルLLMユーザー向け30の短答ガイド</text>
+  <text x="400" y="60" class="subtitle" text-anchor="middle">ローカルLLMユーザー向け100以上の短答ガイド</text>
 
   <!-- Icon circles for main topics -->
   <circle class="icon-circle" cx="100" cy="110" r="28"/>
@@ -44,21 +44,21 @@
   <!-- Row 1 -->
   <rect x="30" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="45" y="180" class="topic-title">VRAM配置</text>
-  <text x="45" y="198" class="topic-count">8つのメモリサイジング記事</text>
+  <text x="45" y="198" class="topic-count">15以上のメモリサイジング記事</text>
   <text x="45" y="213" class="text-secondary">異なるモデルサイズに必要な</text>
   <text x="45" y="228" class="text-secondary">VRAM? VRAMティア、バジェット</text>
   <text x="45" y="243" class="text-secondary">vs エンタープライズ、RAM vs VRAM</text>
 
   <rect x="290" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="305" y="180" class="topic-title">量化</text>
-  <text x="305" y="198" class="topic-count">6つの圧縮記事</text>
+  <text x="305" y="198" class="topic-count">10以上の圧縮記事</text>
   <text x="305" y="213" class="text-secondary">Q3_K_M、Q4_K_M、Q5_K_M、Q8_0</text>
   <text x="305" y="228" class="text-secondary">品質対サイズトレードオフ、</text>
   <text x="305" y="243" class="text-secondary">量化の基礎・フォーマット</text>
 
   <rect x="550" y="160" width="220" height="90" class="topic-box" rx="6"/>
   <text x="565" y="180" class="topic-title">Ollamaモデル</text>
-  <text x="565" y="198" class="topic-count">6つのモデル選択記事</text>
+  <text x="565" y="198" class="topic-count">15以上のモデル選択記事</text>
   <text x="565" y="213" class="text-secondary">ティア別トップOllamaモデル、</text>
   <text x="565" y="228" class="text-secondary">最高のオープンソースLLM、</text>
   <text x="565" y="243" class="text-secondary">2026年モデル推奨</text>
@@ -66,21 +66,21 @@
   <!-- Row 2 -->
   <rect x="30" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="45" y="290" class="topic-title">ツール比較</text>
-  <text x="45" y="308" class="topic-count">5つのソフトウェア記事</text>
+  <text x="45" y="308" class="topic-count">15以上のソフトウェア記事</text>
   <text x="45" y="323" class="text-secondary">Ollama vs LM Studio vs Jan、</text>
   <text x="45" y="338" class="text-secondary">ローカルLLM比較、あなたの</text>
   <text x="45" y="353" class="text-secondary">ユースケースに最適なツール</text>
 
   <rect x="290" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="305" y="290" class="topic-title">モデル比較</text>
-  <text x="305" y="308" class="topic-count">4つのモデルマッチアップ記事</text>
+  <text x="305" y="308" class="topic-count">10以上のモデルマッチアップ記事</text>
   <text x="305" y="323" class="text-secondary">Qwen vs Llama vs Mistral、</text>
   <text x="305" y="338" class="text-secondary">Qwen Coder vs DeepSeek、コード</text>
   <text x="305" y="353" class="text-secondary">生成モデル2026</text>
 
   <rect x="550" y="270" width="220" height="90" class="topic-box" rx="6"/>
   <text x="565" y="290" class="topic-title">ハード &amp; セット</text>
-  <text x="565" y="308" class="topic-count">5つのインフラ記事</text>
+  <text x="565" y="308" class="topic-count">20以上のインフラ記事</text>
   <text x="565" y="323" class="text-secondary">最高のバジェットGPU、RTX vs A100、</text>
   <text x="565" y="338" class="text-secondary">CPU推論、Dockerセットアップ、</text>
   <text x="565" y="353" class="text-secondary">マルチGPU構成</text>
