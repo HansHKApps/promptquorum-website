@@ -17,6 +17,14 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
 
+const day = new Date().getDate()
+const isAutoRun = process.env.FRESHNESS_AUTO === '1'
+const forced = process.argv.includes('--force')
+if (isAutoRun && !forced && day !== 1 && day !== 15) {
+  console.log(`Freshness auto-run skipped (day ${day}, not 1st/15th). Run manually with --force if needed.`)
+  process.exit(0)
+}
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const OUT_DIR = path.join(ROOT, 'freshness-data')
@@ -273,6 +281,11 @@ function weightedMedian(items, getAge, getWeight) {
 // Step 2: GSC paste ingestion
 // ---------------------------------------------------------------------------
 
+// Accepts two pasted shapes, both line-pair (URL line, then a data line):
+//   full "Pages" export:  clicks \t impressions \t CTR \t position
+//   impressions-only view: just the impressions number (with thousands commas)
+// Only impressions is used anywhere in the weighting math, so a narrower paste
+// still produces a complete weighted report — clicks/CTR/position are optional extras.
 function parseGscInput(text) {
   const lines = text.split('\n').map((l) => l.trim()).filter((l) => l.length > 0)
   const rows = []
@@ -281,8 +294,24 @@ function parseGscInput(text) {
   for (let i = 0; i < lines.length - 1; i++) {
     if (!/^https?:\/\//.test(lines[i])) continue
     const dataLine = lines[i + 1]
-    const parts = dataLine.split('\t').map((p) => p.trim())
-    if (parts.length < 4) continue // not a real data row, keep scanning
+    const parts = dataLine.split('\t').map((p) => p.trim()).filter((p) => p.length > 0)
+    if (parts.length === 0) continue
+
+    const firstNum = parseInt(parts[0].replace(/,/g, ''), 10)
+    if (Number.isNaN(firstNum)) continue // not a real data row, keep scanning
+
+    let clicks = null
+    let impressions
+    let ctr = null
+    let position = null
+    if (parts.length >= 4) {
+      clicks = firstNum
+      impressions = parseInt(parts[1].replace(/,/g, ''), 10) || 0
+      ctr = parts[2]
+      position = parseFloat(parts[3]) || 0
+    } else {
+      impressions = firstNum
+    }
     i++ // consume the data line
 
     const urlLine = lines[i - 1]
@@ -297,11 +326,6 @@ function parseGscInput(text) {
       discardedQueryString++
       continue
     }
-
-    const clicks = parseInt(parts[0].replace(/,/g, ''), 10) || 0
-    const impressions = parseInt(parts[1].replace(/,/g, ''), 10) || 0
-    const ctr = parts[2]
-    const position = parseFloat(parts[3]) || 0
 
     const isNonEn = NON_EN_LOCALE_RE.test(url.pathname)
     rows.push({

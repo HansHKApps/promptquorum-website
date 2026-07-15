@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T07:43:53.991Z",
+  "generatedAt": "2026-07-15T08:12:49.000Z",
   "scope": "EN articles: local-llms, prompt-engineering, power-local-llm (blog excluded — see docs)",
   "unweighted": {
     "n": 271,
@@ -41,5 +41,51 @@
   "warnings": [
     "local-llms/local-llm-pc-build-1000: no content file (Coming Soon placeholder) — skipped",
     "local-llms/local-llm-pc-build-2000: no content file (Coming Soon placeholder) — skipped"
-  ]
+  ],
+  "weighted": {
+    "n": 102,
+    "meanDays": 15.1,
+    "medianDays": 11,
+    "buckets": [
+      {
+        "label": "0-5",
+        "impressions": 919962,
+        "pct": 47.3
+      },
+      {
+        "label": "6-15",
+        "impressions": 163669,
+        "pct": 8.4
+      },
+      {
+        "label": "16-30",
+        "impressions": 743558,
+        "pct": 38.2
+      },
+      {
+        "label": "31-60",
+        "impressions": 54756,
+        "pct": 2.8
+      },
+      {
+        "label": "61-120",
+        "impressions": 64794,
+        "pct": 3.3
+      },
+      {
+        "label": "121+",
+        "impressions": 0,
+        "pct": 0
+      }
+    ],
+    "unmatchedGscRows": 41,
+    "unmatchedArticles": 169
+  },
+  "byproducts": {
+    "enShareOfImpressions": 92,
+    "discardedQueryStringRows": 1,
+    "nonEnRows": 356,
+    "nonEnImpressions": 191885
+  },
+  "priorityRefreshList": []
 }
