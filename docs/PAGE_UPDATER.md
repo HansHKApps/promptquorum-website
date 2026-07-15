@@ -269,6 +269,21 @@ After the English (EN) page is finalized, propagate changes to all active non-En
 - Update `dateModified` in all language versions
 - Regional context sections (EU/GDPR, France/CNIL, Japan/METI, China Data Security Law, Brazil/LGPD, Gulf/PDPL) may need language-specific updates — apply only where the article is fundamentally about compliance or data governance
 
+### Step 5.5: Structural Parity Across Languages (MANDATORY — fix, don't just flag)
+
+If, at any point during the refresh, a language block is found to be missing sections, tables, FAQ entries, or other structural content that the EN (or another fuller) block has, **this is not a note for a follow-up pass — it must be fixed in the same update.** Do not report a structural gap as "found, not fixed" and move on.
+
+**Rule:** When a page update reveals that DE/ES/FR/JA/ZH/PT/AR/KO blocks are missing sections (e.g. `benchmarkTable`, `methodology`, `vramGuide`, `decisionMatrix`, `softwareCompat`, `powerAndCooling`) or have fewer FAQ entries than the most complete language block, bring every active language up to parity as part of that same page update:
+
+1. Treat the fullest existing block (usually EN) as the structural source of truth for that page.
+2. For each active language missing a section, author it via the **geo-translation** guide (do not machine-translate verbatim — localize per the guide's per-language rules, e.g. pt-BR vocabulary, RTL handling for ar).
+3. Bring FAQ counts up to match — if EN has 7 FAQs and DE has 4, add the missing 3 FAQ entries to DE (translated/localized, not stubbed).
+4. Re-run Step 4 (Consistency Check) and the Verification Command against every language block, not just EN, once parity is restored.
+5. Only skip a language if it is explicitly reserved/unauthored per the current active-language list in this file and `CLAUDE.md` — do not fabricate content for a language that has no content at all yet; that is a separate "author this language" task, not a parity fix.
+6. Report the fix in the Step 6 report (see `Structural parity` line below) — do not report it as a deferred finding.
+
+**Why:** A structural gap between languages is the same failure class as a shallow content update (Anti-Pattern #1) — it leaves some language versions contradicting or underserving readers relative to others, and non-EN pages rank independently, so an incomplete DE/FR/JA/ZH page underperforms silently. "Found but not fixed" defeats the purpose of running the page updater at all.
+
 ### Step 6: Report What Was Updated
 
 After completing the update, output a section-by-section report:
@@ -287,6 +302,7 @@ After completing the update, output a section-by-section report:
 - Section "Common Mistakes": NO CHANGE — still accurate
 - TOC anchors: FIXED — 2 mismatched IDs corrected
 - Frontmatter: UPDATED — dateModified, current_models_mentioned, next_refresh_due
+- Structural parity: FIXED — [DE, FR, JA, ZH] were missing [benchmarkTable, methodology, vramGuide]; sections authored and FAQs brought to 7/7
 - Languages pending: DE, ES, FR, JA, ZH
 ```
 
@@ -316,7 +332,11 @@ This report serves as the audit trail for the update and prevents the "I think I
 **Wrong:** Update all sections but forget to change `dateModified`, `current_models_mentioned`, `next_refresh_due`.
 **Why it fails:** Freshness audit scripts will not detect the update. Page will be flagged for refresh again. Wasted work.
 
-### 6. Ignore Title/Meta When Content Changes
+### 6. Flag a Structural Gap Instead of Fixing It
+**Wrong:** Noting "DE/FR/JA/ZH are missing benchmarkTable/methodology/vramGuide and have fewer FAQs than EN — worth a follow-up pass" and leaving the update there.
+**Why it fails:** A flagged-but-unfixed gap is a shallow update in disguise (see Anti-Pattern #1) — the non-EN pages still ship incomplete and keep underperforming until someone remembers to run a separate pass. See Step 5.5: fix structural parity in the same update, don't defer it.
+
+### 7. Ignore Title/Meta When Content Changes
 **Wrong:** Being told "don't update the title, it'll confuse Google" when the page content has fundamentally shifted.
 **When to override:** If the title references a benchmark, model family, or framing that the page itself now says is outdated (e.g., title says "Ranked by HumanEval" but body says "SWE-bench replaces HumanEval"), the title MUST change. Google penalizes title-content mismatch more than title changes.
 
