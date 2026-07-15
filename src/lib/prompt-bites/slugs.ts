@@ -145,8 +145,9 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'wsl2-vs-native-windows-ollama':              'wsl2VsNativeWindowsOllama',
   'best-gpu-local-llm-uae-price':              'bestGpuLocalLlmUaePrice',
 
-  // 2026-07 batch, Round 2 — gap-fill (revisited collided-away topics)
-  'best-local-vision-model-ocr':                'bestLocalVisionModelOcr',
-  'ollama-modelfile-customization-guide':       'ollamaModelfileCustomizationGuide',
+  // 2026-07 batch, Round 2 — gap-fill (revisited collided-away topics; only
+  // this one survived the post-hoc content-comparison audit — see commit
+  // history for why best-local-vision-model-ocr and
+  // ollama-modelfile-customization-guide were reverted as duplicates)
   'hybrid-local-cloud-llm-strategy':            'hybridLocalCloudLlmStrategy',
 }

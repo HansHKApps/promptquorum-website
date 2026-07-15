@@ -119,9 +119,7 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'wsl2-vs-native-windows-ollama',
   'best-gpu-local-llm-uae-price',
 
-  // 2026-07 batch, Round 2 — gap-fill (revisited collided-away topics)
-  'best-local-vision-model-ocr',
-  'ollama-modelfile-customization-guide',
+  // 2026-07 batch, Round 2 — gap-fill (survivor of content-comparison audit)
   'hybrid-local-cloud-llm-strategy',
 ])
 

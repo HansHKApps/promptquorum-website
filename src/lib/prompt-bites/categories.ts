@@ -92,7 +92,6 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'which-ollama-models-support-vision',
       'ollama-128k-context-models',
       'wsl2-vs-native-windows-ollama',
-      'ollama-modelfile-customization-guide',
     ],
   },
   {
@@ -181,7 +180,6 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-for-sql-data-analysis',
       'best-local-llm-for-translation',
       'best-structured-json-output-local-llm',
-      'best-local-vision-model-ocr',
     ],
   },
   {

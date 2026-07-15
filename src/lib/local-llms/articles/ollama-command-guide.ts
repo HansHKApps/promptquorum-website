@@ -170,7 +170,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- Use Ollama API from code.',
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) -- Chat UIs for Ollama.',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparison with LM Studio.',
-          '[How Do You Customize an Ollama Modelfile?](/prompt-bites/ollama-modelfile-customization-guide) -- going deeper on Modelfile customization specifically, beyond the general command reference.',
           ],
         },
         sources: {
@@ -411,7 +410,6 @@ schema: {
             '[Ollama vs LM Studio](/pt/local-llms/ollama-vs-lm-studio) — Quando usar CLI vs GUI',
             '[RAG Local 2026](/pt/local-llms/local-rag-2026) — Usar Ollama como backend para pipeline RAG',
             '[MLX vs Ollama vs llama.cpp no Mac](/pt/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) — Comparação de frameworks no Apple Silicon',
-          '[Como personalizar um Modelfile do Ollama?](/pt/prompt-bites/ollama-modelfile-customization-guide) -- aprofunda especificamente a personalização do Modelfile, além da referência geral de comandos.',
           ],
         },
         sources: {
@@ -619,7 +617,6 @@ schema: {
             '[Ollama vs. LM Studio vs. Jan: Vergleich](/de/local-llms/ollama-vs-lm-studio) -- Wählen Sie das richtige Werkzeug.',
             'Local LLM finetunen mit Ollama -- Anpassung für Ihren Anwendungsfall.',
             '[Ollama API-Referenz](/de/local-llms/ollama-command-guide) -- Programmgesteuerte Verwendung.',
-          '[Wie passen Sie eine Ollama Modelfile an?](/de/prompt-bites/ollama-modelfile-customization-guide) -- vertiefende Anleitung speziell zur Modelfile-Anpassung, über die allgemeine Befehlsreferenz hinaus.',
           ],
         },
         sources: {
@@ -845,7 +842,6 @@ schema: {
             '[Ollama vs LM Studio vs Jan: Comparaison](/fr/local-llms/ollama-vs-lm-studio) -- Choisissez le bon outil.',
             'Fine-tuner une LLM locale avec Ollama -- Adaptez à votre cas d\'usage.',
             '[Référence API Ollama](/fr/local-llms/ollama-command-guide) -- Utilisation programmatique.',
-          '[Comment personnaliser un Modelfile Ollama ?](/fr/prompt-bites/ollama-modelfile-customization-guide) -- approfondissement de la personnalisation du Modelfile, au-delà de la référence générale des commandes.',
           ],
         },
         sources: {
@@ -1069,7 +1065,6 @@ schema: {
             '[Ollama vs LM Studio vs Jan: 比較](/ja/local-llms/ollama-vs-lm-studio) -- 正しいツールを選択。',
             'Ollama でローカル LLM をファインチューン -- ユースケース向け調整。',
             '[Ollama API リファレンス](/ja/local-llms/ollama-command-guide) -- プログラマティック使用。',
-          '[Ollama Modelfileをカスタマイズする方法](/ja/prompt-bites/ollama-modelfile-customization-guide) -- 一般的なコマンドリファレンスを超えて、Modelfileのカスタマイズを深掘り。',
           ],
         },
         sources: {
@@ -1286,7 +1281,6 @@ schema: {
             '[API local LLM compatible con OpenAI](/es/local-llms/local-llm-openai-compatible-api) -- Usa la API de Ollama desde código.',
             '[Mejores interfaces para LLMs locales](/es/local-llms/best-local-llm-frontends) -- Interfaces de chat para Ollama.',
             '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) -- Comparativa con LM Studio.',
-          '[¿Cómo personalizar un Modelfile de Ollama?](/es/prompt-bites/ollama-modelfile-customization-guide) -- profundiza específicamente en la personalización del Modelfile, más allá de la referencia general de comandos.',
           ],
         },
         sources: {
@@ -1535,7 +1529,6 @@ schema: {
             '[API محلي لـ LLM متوافق مع OpenAI](/ar/local-llms/local-llm-openai-compatible-api) -- استخدم API الخاص بـ Ollama من الشيفرة.',
             '[أفضل واجهات نماذج LLM المحلية](/ar/local-llms/best-local-llm-frontends) -- واجهات محادثة لـ Ollama.',
             '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- مقارنة مع LM Studio.',
-          '[كيف تُخصّص ملف Modelfile في Ollama؟](/ar/prompt-bites/ollama-modelfile-customization-guide) -- تعمّق أكبر في تخصيص Modelfile تحديدًا، بما يتجاوز مرجع الأوامر العام.',
           ],
         },
         sources: {
@@ -1783,7 +1776,6 @@ schema: {
             '本地 LLM 完整指南 — 从硬件选择到部署的全面概述',
             '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) — 命令行与图形界面对比',
             '[LLM 量化详解](/zh/local-llms/llm-quantization-explained) — GGUF、Q4_K_M 和精度权衡',
-          '[如何自定义 Ollama Modelfile？](/zh/prompt-bites/ollama-modelfile-customization-guide) — 在通用命令参考之外，深入讲解 Modelfile 自定义。',
           ],
         },
         sources: {
@@ -1999,7 +1991,6 @@ schema: {
             '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- 코드에서 Ollama API 사용하기.',
             '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- Ollama용 채팅 UI.',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- LM Studio와의 비교.',
-          '[Ollama Modelfile을 커스터마이징하는 방법](/ko/prompt-bites/ollama-modelfile-customization-guide) -- 일반 명령어 참조를 넘어 Modelfile 커스터마이징을 더 깊이 다룸.',
           ],
         },
         sources: {
