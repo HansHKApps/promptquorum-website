@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     last_full_refresh: '2026-07-14',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
@@ -188,6 +188,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Default-beating pick for most local RAG',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Running these through Ollama? `ollama pull` covers 4 of the 6 models here plus the Chinese/CJK picks: nomic-embed-text-v2 (`ollama pull nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`ollama pull mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`ollama pull snowflake-arctic-embed2`), BAAI/bge-m3 (`ollama pull bge-m3`), and Qwen3-Embedding-4B/-8B (`ollama pull qwen3-embedding:4b` or `:8b`). bge-large-en-v1.5, gte-large, and jina-embeddings-v3 are not in Ollama\'s official library — run those through Sentence Transformers, Hugging Face `transformers`, or a Text Embeddings Inference server instead.',
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -334,6 +340,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'nomic-embed-text-v2 actually beats jina-embeddings-v3 on cross-lingual queries because its mixture-of-experts architecture activates language-specific experts for non-English content. For corpora with substantial Japanese or Chinese content, nomic-embed-text-v2 is worth a direct comparison — it is also the cheapest to run on CPU, which doubles its appeal for multilingual workloads on laptops.',
+          },
+          {
+            type: 'note',
+            text: 'This 25-query set only covers English, German, French, Japanese, and Chinese, but the same two models (nomic-embed-text-v2, BAAI/bge-m3) advertise 100+ language training coverage, including Vietnamese, Russian, and Greek. Latin- and Cyrillic-script languages like Vietnamese and Russian, and Greek-script content, tokenize closer to German/French than to Japanese/Chinese in these models, so expect retrieval quality nearer the "EN query → DE/FR doc" row above rather than the CJK row — treat that as a directional estimate, not a measured number, until tested on your own corpus.',
           },
         ],
       },
@@ -493,6 +503,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can embeddings be reused if I switch RAG platforms?',
             a: 'Source documents move freely between platforms. Embeddings move only if the new platform supports the same vector format and the same embedding model. AnythingLLM (LanceDB), PrivateGPT (Qdrant or Chroma), and Open WebUI (ChromaDB) all use different vector stores; even when the embedder is identical, the metadata schemas differ. In practice, every platform switch is also a re-indexing pass. Plan accordingly: pick the embedder for retrieval quality, pick the platform for everything else.',
           },
+          {
+            q: 'Can I run these embedding models with Ollama?',
+            a: 'Yes, for most of them. `ollama pull` covers nomic-embed-text-v2 (`nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`snowflake-arctic-embed2`), BAAI/bge-m3 (`bge-m3`), and Qwen3-Embedding-4B/-8B (`qwen3-embedding:4b` / `:8b`) directly from Ollama\'s official library. bge-large-en-v1.5, gte-large, and jina-embeddings-v3 are not published there — run those with Sentence Transformers, Hugging Face `transformers`, or a Text Embeddings Inference server, then point your RAG platform at that endpoint instead of Ollama\'s.',
+          },
         ],
       },
       relatedReading: {
@@ -514,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
     title: 'Mejores modelos de embedding local para RAG en 2026 (probados con documentos reales)',
@@ -692,6 +706,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mejor para': 'Elección que supera al predeterminado para la mayoría de RAG local',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '¿Vas a ejecutar estos modelos con Ollama? `ollama pull` cubre 4 de los 6 modelos aquí más las opciones para chino/CJK: nomic-embed-text-v2 (`ollama pull nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`ollama pull mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`ollama pull snowflake-arctic-embed2`), BAAI/bge-m3 (`ollama pull bge-m3`) y Qwen3-Embedding-4B/-8B (`ollama pull qwen3-embedding:4b` o `:8b`). bge-large-en-v1.5, gte-large y jina-embeddings-v3 no están en la biblioteca oficial de Ollama — ejecútalos con Sentence Transformers, `transformers` de Hugging Face o un servidor Text Embeddings Inference.',
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -838,6 +858,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'nomic-embed-text-v2 supera a jina-embeddings-v3 en consultas multilingüe porque su arquitectura de mezcla de expertos activa expertos específicos de idioma para contenido no inglés. Para corpus con contenido sustancial en japonés o chino, nomic-embed-text-v2 vale la pena comparar directamente — también es el más barato de ejecutar en CPU, lo que duplica su atractivo para cargas de trabajo multilingüe en laptops.',
+          },
+          {
+            type: 'note',
+            text: 'Este conjunto de 25 consultas solo cubre inglés, alemán, francés, japonés y chino, pero los mismos dos modelos (nomic-embed-text-v2, BAAI/bge-m3) anuncian cobertura de entrenamiento en más de 100 idiomas, incluyendo vietnamita, ruso y griego. Los idiomas de escritura latina y cirílica como el vietnamita y el ruso, y el contenido en escritura griega, se tokenizan de forma más parecida al alemán/francés que al japonés/chino en estos modelos, así que espera una calidad de recuperación más cercana a la fila "Consulta EN → Docs DE/FR" de arriba que a la fila CJK — trátalo como una estimación orientativa, no como un dato medido, hasta probarlo con tu propio corpus.',
           },
         ],
       },
@@ -997,6 +1021,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Se pueden reutilizar los embeddings si cambio de plataforma RAG?',
             a: 'Los documentos fuente se mueven libremente entre plataformas. Los embeddings solo se mueven si la nueva plataforma soporta el mismo formato de vector y el mismo modelo de embedding. AnythingLLM (LanceDB), PrivateGPT (Qdrant o Chroma) y Open WebUI (ChromaDB) usan todos diferentes almacenes de vectores; incluso cuando el embedder es idéntico, los esquemas de metadatos difieren. En la práctica, cada cambio de plataforma también es un pase de reindexación. Planifica en consecuencia: elige el embedder por calidad de recuperación, elige la plataforma por todo lo demás.',
           },
+          {
+            q: '¿Puedo ejecutar estos modelos de embedding con Ollama?',
+            a: 'Sí, la mayoría de ellos. `ollama pull` cubre nomic-embed-text-v2 (`nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`snowflake-arctic-embed2`), BAAI/bge-m3 (`bge-m3`) y Qwen3-Embedding-4B/-8B (`qwen3-embedding:4b` / `:8b`) directamente desde la biblioteca oficial de Ollama. bge-large-en-v1.5, gte-large y jina-embeddings-v3 no están publicados ahí — ejecútalos con Sentence Transformers, `transformers` de Hugging Face o un servidor Text Embeddings Inference, y luego apunta tu plataforma RAG a ese endpoint en lugar del de Ollama.',
+          },
         ],
       },
       relatedReading: {
@@ -1031,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
     title: 'Melhores modelos de embedding local para RAG em 2026 (testados com documentos reais)',
@@ -1209,6 +1237,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Melhor para': 'Escolha que supera o padrão para a maioria dos RAG locais',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Vai rodar esses modelos com Ollama? O `ollama pull` cobre 4 dos 6 modelos aqui, mais as opções para chinês/CJK: nomic-embed-text-v2 (`ollama pull nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`ollama pull mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`ollama pull snowflake-arctic-embed2`), BAAI/bge-m3 (`ollama pull bge-m3`) e Qwen3-Embedding-4B/-8B (`ollama pull qwen3-embedding:4b` ou `:8b`). bge-large-en-v1.5, gte-large e jina-embeddings-v3 não estão na biblioteca oficial do Ollama — rode-os com Sentence Transformers, `transformers` da Hugging Face ou um servidor Text Embeddings Inference.',
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -1355,6 +1389,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'O nomic-embed-text-v2 supera o jina-embeddings-v3 em consultas multilíngues porque a sua arquitetura de mistura de especialistas ativa especialistas específicos de idioma para conteúdo não inglês. Para corpus com conteúdo substancial em japonês ou chinês, vale a pena comparar diretamente o nomic-embed-text-v2 — também é o mais barato de executar em CPU, o que dobra o seu apelo para cargas de trabalho multilíngues em notebooks.',
+          },
+          {
+            type: 'note',
+            text: 'Esse conjunto de 25 consultas cobre apenas inglês, alemão, francês, japonês e chinês, mas os mesmos dois modelos (nomic-embed-text-v2, BAAI/bge-m3) anunciam cobertura de treinamento em mais de 100 idiomas, incluindo vietnamita, russo e grego. Idiomas de escrita latina e cirílica como vietnamita e russo, e conteúdo em escrita grega, tokenizam de forma mais próxima ao alemão/francês do que ao japonês/chinês nesses modelos, então espere uma qualidade de recuperação mais próxima da linha "Consulta EN → Docs DE/FR" acima do que da linha CJK — trate isso como uma estimativa direcional, não um número medido, até testar no seu próprio corpus.',
           },
         ],
       },
@@ -1514,6 +1552,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Os embeddings podem ser reutilizados se eu trocar de plataforma RAG?',
             a: 'Os documentos de origem se movem livremente entre plataformas. Os embeddings só se movem se a nova plataforma suportar o mesmo formato de vetor e o mesmo modelo de embedding. AnythingLLM (LanceDB), PrivateGPT (Qdrant ou Chroma) e Open WebUI (ChromaDB) usam todos diferentes armazenamentos de vetores; mesmo quando o embedder é idêntico, os esquemas de metadados diferem. Na prática, cada troca de plataforma também é um passo de reindexação. Planeje de acordo: escolha o embedder pela qualidade de recuperação, escolha a plataforma por todo o resto.',
           },
+          {
+            q: 'Posso rodar esses modelos de embedding com o Ollama?',
+            a: 'Sim, a maioria deles. O `ollama pull` cobre nomic-embed-text-v2 (`nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`snowflake-arctic-embed2`), BAAI/bge-m3 (`bge-m3`) e Qwen3-Embedding-4B/-8B (`qwen3-embedding:4b` / `:8b`) diretamente da biblioteca oficial do Ollama. bge-large-en-v1.5, gte-large e jina-embeddings-v3 não estão publicados lá — rode-os com Sentence Transformers, `transformers` da Hugging Face ou um servidor Text Embeddings Inference, e depois aponte a sua plataforma RAG para esse endpoint em vez do Ollama.',
+          },
         ],
       },
       relatedReading: {
@@ -1548,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
     title: 'Beste lokale Embedding-Modelle für RAG 2026 (Getestet auf echten Dokumenten)',
@@ -1724,6 +1766,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': 'Standardüberschreitende Wahl für die meiste lokale RAG',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Sie führen diese Modelle über Ollama aus? `ollama pull` deckt 4 der 6 Modelle hier plus die Chinesisch/CJK-Empfehlungen ab: nomic-embed-text-v2 (`ollama pull nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`ollama pull mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`ollama pull snowflake-arctic-embed2`), BAAI/bge-m3 (`ollama pull bge-m3`) und Qwen3-Embedding-4B/-8B (`ollama pull qwen3-embedding:4b` oder `:8b`). bge-large-en-v1.5, gte-large und jina-embeddings-v3 sind nicht in Ollamas offizieller Bibliothek — führen Sie diese stattdessen über Sentence Transformers, Hugging Face `transformers` oder einen Text Embeddings Inference-Server aus.',
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -1864,6 +1912,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'nomic-embed-text-v2 schlägt tatsächlich jina-embeddings-v3 bei mehrsprachigen Abfragen, weil seine Mixture-of-Experts-Architektur sprachspezifische Experten für nicht-englische Inhalte aktiviert. Für Korpora mit erheblichem Japanisch- oder Chinesisch-Inhalt ist nomic-embed-text-v2 eine direkte Vergleichswert — es ist auch die billigste, auf CPU zu laufen, was seinen Reiz für mehrsprachige Arbeitslasten auf Laptops verdoppelt.',
+          },
+          {
+            type: 'note',
+            text: 'Dieser Satz von 25 Abfragen deckt nur Englisch, Deutsch, Französisch, Japanisch und Chinesisch ab, aber dieselben beiden Modelle (nomic-embed-text-v2, BAAI/bge-m3) werben mit einer Trainingsabdeckung von über 100 Sprachen, darunter Vietnamesisch, Russisch und Griechisch. Sprachen mit lateinischer und kyrillischer Schrift wie Vietnamesisch und Russisch sowie griechische Schrift tokenisieren in diesen Modellen näher an Deutsch/Französisch als an Japanisch/Chinesisch — erwarten Sie daher eine Abrufqualität, die eher der Zeile „EN-Abfrage → DE/FR-Dokument" oben entspricht als der CJK-Zeile. Betrachten Sie das als Richtwert, nicht als gemessenen Wert, bis Sie es an Ihrem eigenen Corpus getestet haben.',
           },
         ],
       },
@@ -2021,6 +2073,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Können Einbettungen wiederverwendet werden, wenn ich RAG-Plattformen wechsle?',
             a: 'Quell-Dokumente werden frei zwischen Plattformen verschoben. Einbettungen werden nur verschoben, wenn die neue Plattform das gleiche Vektor-Format und das gleiche Embedding-Modell unterstützt. AnythingLLM (LanceDB), PrivateGPT (Qdrant oder Chroma) und Open WebUI (ChromaDB) verwenden alle unterschiedliche Vektor-Stores; selbst wenn der Embedder identisch ist, unterscheiden sich die Metadaten-Schemas. In der Praxis ist jeder Plattform-Wechsel auch ein Neuindexierungs-Durchlauf. Planen Sie entsprechend: Wählen Sie den Embedder für die Abruf-Qualität, wählen Sie die Plattform für alles andere.',
           },
+          {
+            q: 'Kann ich diese Embedding-Modelle mit Ollama ausführen?',
+            a: 'Ja, für die meisten davon. `ollama pull` deckt nomic-embed-text-v2 (`nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`snowflake-arctic-embed2`), BAAI/bge-m3 (`bge-m3`) und Qwen3-Embedding-4B/-8B (`qwen3-embedding:4b` / `:8b`) direkt aus Ollamas offizieller Bibliothek ab. bge-large-en-v1.5, gte-large und jina-embeddings-v3 sind dort nicht veröffentlicht — führen Sie diese stattdessen mit Sentence Transformers, Hugging Face `transformers` oder einem Text Embeddings Inference-Server aus und richten Sie Ihre RAG-Plattform dann auf diesen Endpunkt statt auf Ollama.',
+          },
         ],
       },
       relatedReading: {
@@ -2042,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
     title: "Meilleurs modèles d'embedding local pour RAG en 2026 (Testés sur documents réels)",
@@ -2211,6 +2267,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Meilleur pour': 'Choix par défaut RAG local',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: "Via Ollama ? `ollama pull` couvre 4 des 6 modèles ci-dessus plus les sélections chinois/CJK : nomic-embed-text-v2 (`ollama pull nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`ollama pull mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`ollama pull snowflake-arctic-embed2`), BAAI/bge-m3 (`ollama pull bge-m3`) et Qwen3-Embedding-4B/-8B (`ollama pull qwen3-embedding:4b` ou `:8b`). bge-large-en-v1.5, gte-large et jina-embeddings-v3 ne sont pas dans la bibliothèque officielle Ollama — utilisez plutôt Sentence Transformers, `transformers` de Hugging Face, ou un serveur Text Embeddings Inference.",
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -2344,6 +2406,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: "nomic-embed-text-v2 dépasse jina sur requêtes multilingues : architecture MoE active experts langue-spécifique. Corpora japonais/chinois substantiel : nomic-embed-text-v2 vaut comparaison — aussi moins cher CPU, idéal workloads multilingues laptops.",
+          },
+          {
+            type: 'note',
+            text: "Ce jeu de 25 requêtes couvre seulement EN, DE, FR, JA, ZH, mais les deux mêmes modèles (nomic-embed-text-v2, BAAI/bge-m3) annoncent une couverture d'entraînement de 100+ langues, dont vietnamien, russe et grec. Écritures latine et cyrillique (vietnamien, russe) et grecque tokenisent, chez ces modèles, plus près de l'allemand/français que du japonais/chinois — attendez-vous donc à une qualité proche de la ligne « Requête EN → Docs DE/FR » ci-dessus plutôt que de la ligne CJK. Estimation directionnelle, pas un chiffre mesuré, tant que non testé sur votre propre corpus.",
           },
         ],
       },
@@ -2498,6 +2564,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Embeddings réutilisables si switch RAG platform ?',
             a: "Documents sources bougent libre entre. Embeddings bougent seul si nouveau platform supporte même format vecteur + même embedder. AnythingLLM (LanceDB), PrivateGPT (Qdrant ou Chroma), Open WebUI (ChromaDB) tous différent stores ; même embedder identical, metadata schemas differ. Pratique : chaque platform switch est aussi ré-indexing pass. Plan : pick embedder retrieval quality, pick platform tout-le-reste.",
           },
+          {
+            q: 'Puis-je exécuter ces modèles d\'embedding avec Ollama ?',
+            a: "Oui, pour la plupart. `ollama pull` couvre nomic-embed-text-v2 (`nomic-embed-text-v2-moe`), mxbai-embed-large-v1 (`mxbai-embed-large`), snowflake-arctic-embed-l-v2.0 (`snowflake-arctic-embed2`), BAAI/bge-m3 (`bge-m3`) et Qwen3-Embedding-4B/-8B (`qwen3-embedding:4b` / `:8b`) directement depuis la bibliothèque officielle Ollama. bge-large-en-v1.5, gte-large et jina-embeddings-v3 n'y sont pas publiés — utilisez plutôt Sentence Transformers, `transformers` de Hugging Face, ou un serveur Text Embeddings Inference, puis pointez votre plateforme RAG vers cet endpoint au lieu d'Ollama.",
+          },
         ],
       },
       relatedReading: {
@@ -2519,7 +2589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
     title: 'ローカルRAGの最高埋め込みモデル2026（実文書でテスト済み）',
@@ -2695,6 +2765,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適用途': 'ほとんどのローカルRAGのデフォルト超過選択',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ollamaでこれらを実行しますか？`ollama pull`はここにある6モデルのうち4つと、中国語/CJK向けのモデルをカバーしています：nomic-embed-text-v2（`ollama pull nomic-embed-text-v2-moe`）、mxbai-embed-large-v1（`ollama pull mxbai-embed-large`）、snowflake-arctic-embed-l-v2.0（`ollama pull snowflake-arctic-embed2`）、BAAI/bge-m3（`ollama pull bge-m3`）、Qwen3-Embedding-4B/-8B（`ollama pull qwen3-embedding:4b`または`:8b`）。bge-large-en-v1.5、gte-large、jina-embeddings-v3はOllamaの公式ライブラリには含まれていません——代わりにSentence Transformers、Hugging Faceの`transformers`、またはText Embeddings Inferenceサーバーで実行してください。',
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -2835,6 +2911,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'nomic-embed-text-v2は実際に多言語クエリでjina-embeddings-v3を打ちます。その混合専門家アーキテクチャは非英語コンテンツに対して言語固有の専門家を活性化するためです。実質的な日本語または中国語コンテンツを持つコーパスの場合、nomic-embed-text-v2は直接比較する価値があります—CPUで実行するのも最安で、ノートパソコンで多言語ワークロードの場合は魅力を倍にします。',
+          },
+          {
+            type: 'note',
+            text: 'この25クエリのセットは英語、ドイツ語、フランス語、日本語、中国語のみをカバーしていますが、同じ2つのモデル（nomic-embed-text-v2、BAAI/bge-m3）は100以上の言語での訓練カバレッジを謳っており、ベトナム語、ロシア語、ギリシャ語も含まれます。ベトナム語やロシア語のようなラテン文字・キリル文字言語、およびギリシャ文字コンテンツは、これらのモデルでは日本語/中国語よりもドイツ語/フランス語に近いトークン化のされ方をします。そのため、取得品質はCJKの行よりも上記の「英語クエリ→DE/FRドキュメント」の行に近いと見込まれますが、これは実測値ではなく方向性の目安として扱い、自分のコーパスでテストするまでは確定的な数値と見なさないでください。',
           },
         ],
       },
@@ -2992,6 +3072,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'RAGプラットフォームを切り替える場合、埋め込みを再利用できますか？',
             a: 'ソースドキュメントはプラットフォーム全体で自由に移動します。埋め込みは新しいプラットフォームが同じベクトルフォーマットと同じ埋め込みモデルをサポートする場合にのみ移動します。AnythingLLM（LanceDB）、PrivateGPT（Qdrant または Chroma）、および Open WebUI（ChromaDB）はすべて異なるベクトルストアを使用します；エンベッダーが同じであっても、メタデータスキーマは異なります。実際には、すべてのプラットフォームスイッチも再インデックス化実行です。計画に応じて：取得品質のためにエンベッダーを選択し、他のすべてのためにプラットフォームを選択します。',
           },
+          {
+            q: 'これらの埋め込みモデルをOllamaで実行できますか？',
+            a: 'はい、ほとんどのモデルで可能です。`ollama pull`はnomic-embed-text-v2（`nomic-embed-text-v2-moe`）、mxbai-embed-large-v1（`mxbai-embed-large`）、snowflake-arctic-embed-l-v2.0（`snowflake-arctic-embed2`）、BAAI/bge-m3（`bge-m3`）、Qwen3-Embedding-4B/-8B（`qwen3-embedding:4b`／`:8b`）をOllamaの公式ライブラリから直接カバーしています。bge-large-en-v1.5、gte-large、jina-embeddings-v3はそこには公開されていません——代わりにSentence Transformers、Hugging Faceの`transformers`、またはText Embeddings Inferenceサーバーで実行し、そのエンドポイントにRAGプラットフォームを向けてください（Ollamaの代わりに）。',
+          },
         ],
       },
       relatedReading: {
@@ -3013,7 +3097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: "semi_annual",
     publishDate: "2026-05-07",
-    dateModified: "2026-07-14",
+    dateModified: "2026-07-15",
     next_refresh_due: "2027-01-14",
     theme: "RAG & Document Chat",
     title: "2026年本地RAG最佳嵌入模型（真实文档测试）",
@@ -3189,6 +3273,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             "最适合": "大多数本地RAG的超越默认选择",
           },
         ],
+        callouts: [
+          {
+            type: "tip",
+            text: "通过Ollama运行这些模型？`ollama pull`覆盖了这里6个模型中的4个，外加中文/CJK专用模型：nomic-embed-text-v2（`ollama pull nomic-embed-text-v2-moe`）、mxbai-embed-large-v1（`ollama pull mxbai-embed-large`）、snowflake-arctic-embed-l-v2.0（`ollama pull snowflake-arctic-embed2`）、BAAI/bge-m3（`ollama pull bge-m3`），以及Qwen3-Embedding-4B/-8B（`ollama pull qwen3-embedding:4b`或`:8b`）。bge-large-en-v1.5、gte-large和jina-embeddings-v3不在Ollama官方库中——请改用Sentence Transformers、Hugging Face的`transformers`或Text Embeddings Inference服务器来运行它们。",
+          },
+        ],
       },
       whichModel: {
         id: "which-model",
@@ -3329,6 +3419,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: "note",
             text: "nomic-embed-text-v2实际上在多语言查询上击败了jina-embeddings-v3，因为其混合专家架构为非英文内容激活语言特定的专家。对于具有实质性日文或中文内容的语料库，nomic-embed-text-v2值得直接比较——它在CPU上运行也是最便宜的，这使其在笔记本电脑上的多语言工作负载的吸引力翻倍。",
+          },
+          {
+            type: "note",
+            text: "这个25个查询的集合只覆盖了英文、德文、法文、日文和中文，但同样的两个模型（nomic-embed-text-v2、BAAI/bge-m3）宣称拥有100多种语言的训练覆盖，包括越南语、俄语和希腊语。在这些模型中，越南语、俄语等拉丁字母和西里尔字母语言，以及希腊字母内容，分词方式更接近德文/法文而非日文/中文，因此预期检索质量更接近上方的“英文查询→DE/FR文档”行，而非CJK行——在您自己的语料库上测试之前，请将其视为方向性估计，而非实测数据。",
           },
         ],
       },
@@ -3486,6 +3580,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: "如果我切换RAG平台，可以重用嵌入吗？",
             a: "源文档在平台之间自由移动。嵌入仅在新平台支持相同向量格式和相同嵌入模型时移动。AnythingLLM（LanceDB）、PrivateGPT（Qdrant或Chroma）和Open WebUI（ChromaDB）都使用不同的向量存储；即使嵌入器相同，元数据schema也不同。实际上，每个平台切换也是重新索引运行。计划相应：为检索质量选择嵌入器，为其他所有选择平台。",
           },
+          {
+            q: "我可以用Ollama运行这些嵌入模型吗？",
+            a: "可以，大多数都可以。`ollama pull`直接从Ollama官方库覆盖了nomic-embed-text-v2（`nomic-embed-text-v2-moe`）、mxbai-embed-large-v1（`mxbai-embed-large`）、snowflake-arctic-embed-l-v2.0（`snowflake-arctic-embed2`）、BAAI/bge-m3（`bge-m3`）以及Qwen3-Embedding-4B/-8B（`qwen3-embedding:4b`／`:8b`）。bge-large-en-v1.5、gte-large和jina-embeddings-v3并未在那里发布——请改用Sentence Transformers、Hugging Face的`transformers`或Text Embeddings Inference服务器运行它们，然后将您的RAG平台指向该端点，而不是Ollama。",
+          },
         ],
       },
       relatedReading: {
@@ -3507,7 +3605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
     title: 'أفضل نماذج التضمين المحلية لـ ⁨RAG⁩ في ⁨2026⁩ (اختبار بوثائق حقيقية)',
@@ -3677,6 +3775,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الأنسب لـ': 'العقود الطويلة (نافذة 8K رمز)',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'هل ستُشغّل هذه النماذج عبر ⁨Ollama⁩؟ يغطي أمر ⁨`ollama pull`⁩ 4 من النماذج الستة هنا بالإضافة إلى اختيارات الصينية/CJK: ⁨nomic-embed-text-v2⁩ (⁨`ollama pull nomic-embed-text-v2-moe`⁩)، و⁨mxbai-embed-large-v1⁩ (⁨`ollama pull mxbai-embed-large`⁩)، و⁨snowflake-arctic-embed-l-v2.0⁩ (⁨`ollama pull snowflake-arctic-embed2`⁩)، و⁨BAAI/bge-m3⁩ (⁨`ollama pull bge-m3`⁩)، و⁨Qwen3-Embedding-4B/-8B⁩ (⁨`ollama pull qwen3-embedding:4b`⁩ أو ⁨`:8b`⁩). أما ⁨bge-large-en-v1.5⁩ و⁨gte-large⁩ و⁨jina-embeddings-v3⁩ فغير متوفرة في مكتبة ⁨Ollama⁩ الرسمية — شغّلها بدلاً من ذلك عبر ⁨Sentence Transformers⁩ أو مكتبة ⁨Hugging Face⁩ ⁨transformers⁩ أو خادم ⁨Text Embeddings Inference⁩.',
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -3810,6 +3914,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'للوثائق العربية أو المختلطة اللغة، jina-embeddings-v3 وnomic-embed-text-v2 هما الخياران الواضحان — بتر أقل من 3 نقاط مئوية على الاستعلامات غير الإنجليزية. تجنب bge-large-en-v1.5 لأي مجموعة تتضمن محتوى غير إنجليزي.',
+          },
+          {
+            type: 'note',
+            text: 'تغطي مجموعة الاستعلامات هذه فقط العربية والإسبانية واليابانية والألمانية والفرنسية، لكن النموذجين نفسيهما (⁨nomic-embed-text-v2⁩، ⁨BAAI/bge-m3⁩) يُعلنان عن تغطية تدريبية تفوق 100 لغة، بما فيها الفيتنامية والروسية واليونانية. اللغات ذات الأبجدية اللاتينية والسيريلية مثل الفيتنامية والروسية، وكذلك المحتوى اليوناني، تُقسَّم إلى وحدات (tokens) في هذين النموذجين بطريقة أقرب إلى الألمانية/الفرنسية منها إلى اليابانية/الصينية، لذا يُتوقَّع أن تكون جودة الاسترجاع أقرب إلى عمود "الاستعلامات غير الإنجليزية" أعلاه لا إلى أداء CJK — اعتبر هذا تقديراً اتجاهياً لا رقماً مقيساً، إلى أن تختبره على مجموعتك الخاصة.',
           },
         ],
       },
@@ -3965,6 +4073,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'إذا بدّلت منصة RAG، هل يمكنني إعادة استخدام التضمينات؟',
             a: 'الوثائق المصدر تنتقل بين المنصات بحرية. التضمينات تنتقل فقط إذا دعمت المنصة الجديدة نفس صيغة المتجه ونفس نموذج التضمين. AnythingLLM (LanceDB) وPrivateGPT (Qdrant أو Chroma) وOpen WebUI (ChromaDB) جميعها تستخدم مخازن متجهات مختلفة؛ حتى لو كان المُضمِّن نفسه، مخطط البيانات الوصفية مختلف. عملياً، كل تبديل منصة هو أيضاً تشغيل إعادة فهرسة. خطط وفقاً لذلك: اختر المُضمِّن لجودة الاسترجاع، واختر المنصة لكل شيء آخر.',
           },
+          {
+            q: 'هل يمكنني تشغيل نماذج التضمين هذه باستخدام ⁨Ollama⁩؟',
+            a: 'نعم، لمعظمها. يغطي أمر ⁨`ollama pull`⁩ كلاً من ⁨nomic-embed-text-v2⁩ (⁨`nomic-embed-text-v2-moe`⁩)، و⁨mxbai-embed-large-v1⁩ (⁨`mxbai-embed-large`⁩)، و⁨snowflake-arctic-embed-l-v2.0⁩ (⁨`snowflake-arctic-embed2`⁩)، و⁨BAAI/bge-m3⁩ (⁨`bge-m3`⁩)، و⁨Qwen3-Embedding-4B/-8B⁩ (⁨`qwen3-embedding:4b`⁩ / ⁨`:8b`⁩) مباشرةً من مكتبة ⁨Ollama⁩ الرسمية. أما ⁨bge-large-en-v1.5⁩ و⁨gte-large⁩ و⁨jina-embeddings-v3⁩ فغير منشورة هناك — شغّلها باستخدام ⁨Sentence Transformers⁩ أو مكتبة ⁨Hugging Face⁩ ⁨transformers⁩ أو خادم ⁨Text Embeddings Inference⁩، ثم وجّه منصة RAG لديك إلى تلك النقطة النهائية بدلاً من ⁨Ollama⁩.',
+          },
         ],
       },
       relatedReading: {
@@ -3999,7 +4111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
     title: '2026년 로컬 RAG를 위한 최고의 임베딩 모델 (실제 문서로 테스트)',
@@ -4177,6 +4289,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '최적 용도': '대부분의 로컬 RAG에서 기본값을 능가하는 선택',
           },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ollama로 이 모델들을 실행하시나요? `ollama pull`은 여기 6개 모델 중 4개와 중국어/CJK 추천 모델까지 지원합니다: nomic-embed-text-v2(`ollama pull nomic-embed-text-v2-moe`), mxbai-embed-large-v1(`ollama pull mxbai-embed-large`), snowflake-arctic-embed-l-v2.0(`ollama pull snowflake-arctic-embed2`), BAAI/bge-m3(`ollama pull bge-m3`), 그리고 Qwen3-Embedding-4B/-8B(`ollama pull qwen3-embedding:4b` 또는 `:8b`). bge-large-en-v1.5, gte-large, jina-embeddings-v3는 Ollama 공식 라이브러리에 없습니다 — 대신 Sentence Transformers, Hugging Face `transformers`, 또는 Text Embeddings Inference 서버로 실행하십시오.',
+          },
+        ],
       },
       whichModel: {
         id: 'which-model',
@@ -4323,6 +4441,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'note',
             text: 'nomic-embed-text-v2가 다국어 쿼리에서 jina-embeddings-v3를 능가하는 이유는 Mixture-of-Experts 아키텍처가 비영어 콘텐츠에 대해 언어별 전문가를 활성화하기 때문입니다. 일본어나 중국어 콘텐츠가 상당한 코퍼스의 경우 nomic-embed-text-v2를 직접 비교해볼 가치가 있습니다 — CPU에서 실행 비용도 가장 저렴하여 다국어 노트북 워크로드에 이중으로 매력적입니다.',
+          },
+          {
+            type: 'note',
+            text: '이 25개 쿼리 세트는 영어, 독일어, 프랑스어, 일본어, 중국어만 다루지만, 동일한 두 모델(nomic-embed-text-v2, BAAI/bge-m3)은 베트남어, 러시아어, 그리스어를 포함해 100개 이상 언어에 대한 학습 커버리지를 표방합니다. 베트남어나 러시아어 같은 라틴 문자 및 키릴 문자 언어, 그리고 그리스 문자 콘텐츠는 이 모델들에서 일본어/중국어보다 독일어/프랑스어에 더 가깝게 토큰화되므로, 검색 품질은 CJK 행보다는 위의 "영어 쿼리 → 독어/불어 문서" 행에 더 가까울 것으로 예상됩니다 — 자신의 코퍼스에서 직접 테스트하기 전까지는 이를 실측치가 아닌 방향성 추정치로 간주하십시오.',
           },
         ],
       },
@@ -4481,6 +4603,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'RAG 플랫폼을 변경하면 임베딩을 재사용할 수 있습니까?',
             a: '소스 문서는 플랫폼 간에 자유롭게 이동합니다. 임베딩은 새 플랫폼이 동일한 벡터 형식과 동일한 임베딩 모델을 지원하는 경우에만 이동합니다. AnythingLLM(LanceDB), PrivateGPT(Qdrant 또는 Chroma), Open WebUI(ChromaDB)는 모두 다른 벡터 스토어를 사용합니다. 임베더가 동일하더라도 메타데이터 스키마가 다릅니다. 실제로 모든 플랫폼 변경은 재인덱싱 패스이기도 합니다. 그에 맞게 계획하십시오. 검색 품질로 임베더를 선택하고, 나머지 모든 것으로 플랫폼을 선택하십시오.',
+          },
+          {
+            q: '이 임베딩 모델들을 Ollama로 실행할 수 있습니까?',
+            a: '네, 대부분 가능합니다. `ollama pull`은 nomic-embed-text-v2(`nomic-embed-text-v2-moe`), mxbai-embed-large-v1(`mxbai-embed-large`), snowflake-arctic-embed-l-v2.0(`snowflake-arctic-embed2`), BAAI/bge-m3(`bge-m3`), Qwen3-Embedding-4B/-8B(`qwen3-embedding:4b` / `:8b`)를 Ollama 공식 라이브러리에서 직접 지원합니다. bge-large-en-v1.5, gte-large, jina-embeddings-v3는 그곳에 게시되어 있지 않습니다 — 대신 Sentence Transformers, Hugging Face `transformers`, 또는 Text Embeddings Inference 서버로 실행한 다음, RAG 플랫폼을 Ollama가 아닌 해당 엔드포인트로 연결하십시오.',
           },
         ],
       },
