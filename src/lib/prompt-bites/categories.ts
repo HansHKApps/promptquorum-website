@@ -53,6 +53,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-6gb-vram',
       'best-quantization-6gb-vram',
       'gguf-vs-gptq-vs-awq',
+      'llama-cpp-gguf-conversion-guide',
     ],
   },
   {
@@ -136,6 +137,9 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'ollama-vs-vllm-vs-tgi',
       'best-local-llm-benchmarking-tool',
       'best-model-merging-tool-mergekit',
+      'sglang-vs-vllm-local-serving',
+      'best-local-llm-obsidian-integration',
+      'best-local-llm-reasoning-ui',
     ],
   },
   {
@@ -180,6 +184,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'best-local-llm-for-sql-data-analysis',
       'best-local-llm-for-translation',
       'best-structured-json-output-local-llm',
+      'best-local-llm-customer-support-chatbot',
     ],
   },
   {
@@ -275,6 +280,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'speculative-decoding-explained',
       'lora-vs-full-fine-tuning',
       'best-local-llm-license-comparison',
+      'prompt-caching-for-local-llm-explained',
     ],
   },
   {
@@ -346,6 +352,7 @@ export const PROMPT_BITES_CATEGORIES: PromptBiteCategory[] = [
       'can-local-llm-help-gdpr',
       'best-vpn-downloading-ai-models',
       'best-local-llm-legal-medical-privacy',
+      'best-pii-redaction-tool-local-llm',
     ],
   },
 ]

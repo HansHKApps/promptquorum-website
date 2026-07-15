@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers who need reliable machine-readable output from a local model for downstream parsing',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Reliable structured JSON output from a local LLM comes mainly from grammar-constrained decoding at the inference layer, not from prompting technique alone.</strong> Grammar-based tools force the model\'s token choices to stay valid against a schema at every generation step.',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die für nachgelagertes Parsing zuverlässige maschinenlesbare Ausgaben von einem lokalen Modell benötigen',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Zuverlässige strukturierte JSON-Ausgabe von einem lokalen LLM stammt hauptsächlich von grammatikbeschränktem Dekodieren auf der Inferenzebene, nicht allein von Prompting-Technik.</strong> Grammatikbasierte Tools zwingen die Token-Auswahl des Modells bei jedem Generierungsschritt dazu, gültig gegenüber einem Schema zu bleiben.',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: "Développeurs ayant besoin d'une sortie machine-readable fiable d'un modèle local pour un parsing en aval",
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       "<strong>Une sortie JSON structurée fiable d'un LLM local provient principalement du décodage contraint par grammaire au niveau de l'inférence, et non du seul prompting.</strong> Les outils basés sur la grammaire forcent les choix de tokens du modèle à rester valides par rapport à un schéma à chaque étape de génération.",
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '後段の処理でパースするために、ローカルモデルから信頼できる機械可読な出力が必要な開発者',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>ローカルLLMから信頼性の高い構造化JSON出力を得るには、主に推論レイヤーでの文法制約付きデコーディングが必要であり、プロンプトの工夫だけでは不十分です。</strong>文法ベースのツールは、生成の各ステップでモデルのトークン選択がスキーマに対して常に有効であるよう強制します。',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '需要从本地模型获得可靠机器可读输出以供下游解析的开发者',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>本地LLM可靠的结构化JSON输出主要来自推理层的语法约束解码，而不仅仅依靠提示词技巧。</strong>基于语法的工具会在每一步生成中强制模型的词元选择始终符合模式（schema）的有效性要求。',
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que necesitan una salida legible por máquina fiable de un modelo local para su posterior análisis',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>La salida JSON estructurada fiable de un LLM local proviene principalmente de la decodificación restringida por gramática en la capa de inferencia, no solo de la técnica de prompting.</strong> Las herramientas basadas en gramática obligan a que las elecciones de tokens del modelo se mantengan válidas frente a un esquema en cada paso de generación.',
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que precisam de saída legível por máquina confiável de um modelo local para análise posterior',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Uma saída JSON estruturada confiável de um LLM local vem principalmente da decodificação restrita por gramática na camada de inferência, não apenas da técnica de prompting.</strong> Ferramentas baseadas em gramática forçam as escolhas de tokens do modelo a permanecerem válidas em relação a um schema em cada etapa de geração.',
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يحتاجون إلى إخراج موثوق قابل للقراءة الآلية من نموذج محلي لأغراض التحليل اللاحق',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>يأتي إخراج JSON المنظم الموثوق من نموذج لغوي محلي بشكل أساسي من فك التشفير المقيّد بالقواعد النحوية على مستوى الاستدلال، وليس من تقنية الطلب (prompting) وحدها.</strong> تفرض الأدوات القائمة على القواعد النحوية أن تظل اختيارات الرموز (tokens) لدى النموذج صالحة مقابل مخطط (schema) في كل خطوة من خطوات التوليد.',
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '후속 파싱을 위해 로컬 모델에서 신뢰할 수 있는 기계 판독 가능한 출력이 필요한 개발자',
-    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis'],
+    siblingBites: ['gguf-vs-gptq-vs-awq', 'best-local-llm-for-sql-data-analysis', 'best-local-llm-customer-support-chatbot'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>로컬 LLM에서 신뢰할 수 있는 구조화된 JSON 출력을 얻으려면 프롬프트 기법만으로는 부족하며, 주로 추론 계층에서의 문법 제약 디코딩이 필요합니다.</strong> 문법 기반 도구는 생성의 매 단계에서 모델의 토큰 선택이 스키마에 대해 항상 유효하도록 강제합니다.',

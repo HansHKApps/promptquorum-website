@@ -150,4 +150,13 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   // history for why best-local-vision-model-ocr and
   // ollama-modelfile-customization-guide were reverted as duplicates)
   'hybrid-local-cloud-llm-strategy':            'hybridLocalCloudLlmStrategy',
+
+  // 2026-07 batch, Round 3
+  'sglang-vs-vllm-local-serving':                'sglangVsVllmLocalServing',
+  'llama-cpp-gguf-conversion-guide':             'llamaCppGgufConversionGuide',
+  'prompt-caching-for-local-llm-explained':      'promptCachingForLocalLlmExplained',
+  'best-pii-redaction-tool-local-llm':           'bestPiiRedactionToolLocalLlm',
+  'best-local-llm-obsidian-integration':         'bestLocalLlmObsidianIntegration',
+  'best-local-llm-reasoning-ui':                 'bestLocalLlmReasoningUi',
+  'best-local-llm-customer-support-chatbot':     'bestLocalLlmCustomerSupportChatbot',
 }

@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Developers who want to measure and compare local LLM inference speed across hardware or quantization levels',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>llama-bench, the benchmarking utility bundled with llama.cpp, is the best tool for measuring local LLM tokens-per-second</strong> — it reports prompt-processing speed and generation speed as separate numbers under a fixed context length and quantization level, so results are directly comparable across hardware. Ollama\'s built-in `--verbose` flag is a faster, less rigorous alternative for a quick sanity check.',
@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die die Inferenzgeschwindigkeit lokaler LLMs über verschiedene Hardware oder Quantisierungsstufen hinweg messen und vergleichen möchten',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>llama-bench, das mit llama.cpp gelieferte Benchmarking-Werkzeug, ist das beste Tool, um Tokens pro Sekunde bei lokalen LLMs zu messen</strong> — es meldet Prompt-Verarbeitungsgeschwindigkeit und Generierungsgeschwindigkeit als getrennte Werte bei fester Kontextlänge und Quantisierungsstufe, sodass Ergebnisse über verschiedene Hardware hinweg direkt vergleichbar sind. Die `--verbose`-Option von Ollama ist eine schnellere, weniger strenge Alternative für einen kurzen Plausibilitätscheck.',
@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: "Développeurs souhaitant mesurer et comparer la vitesse d'inférence de LLM locaux selon le matériel ou le niveau de quantification",
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       "<strong>llama-bench, l'utilitaire de benchmark fourni avec llama.cpp, est le meilleur outil pour mesurer les tokens par seconde d'un LLM local</strong> — il indique la vitesse de traitement du prompt et la vitesse de génération sous forme de deux chiffres distincts, à longueur de contexte et niveau de quantification fixes, ce qui rend les résultats directement comparables entre configurations matérielles. L'option `--verbose` d'Ollama constitue une alternative plus rapide mais moins rigoureuse pour une vérification rapide.",
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'ハードウェアや量子化レベルの違いによるローカルLLMの推論速度を測定・比較したい開発者',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>llama.cppに同梱されるベンチマークユーティリティllama-benchは、ローカルLLMのトークン毎秒を測定する最良のツールです。</strong>固定したコンテキスト長と量子化レベルの下で、プロンプト処理速度と生成速度を別々の数値として報告するため、異なるハードウェア間で結果を直接比較できます。Ollamaの`--verbose`フラグは、簡易的な動作確認に使える、より高速だが厳密さに欠ける代替手段です。',
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: '希望在不同硬件或量化级别下测量并比较本地LLM推理速度的开发者',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>llama-bench是随llama.cpp附带的基准测试工具,是衡量本地LLM每秒token数的最佳工具</strong>——它在固定上下文长度和量化级别下,将提示词处理速度和生成速度报告为两个独立的数值,使结果在不同硬件之间可以直接比较。Ollama的`--verbose`标志是一个更快但不够严谨的替代方案,适合快速检查。',
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que quieren medir y comparar la velocidad de inferencia de LLM locales entre distintos hardwares o niveles de cuantización',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>llama-bench, la utilidad de benchmarking incluida con llama.cpp, es la mejor herramienta para medir tokens por segundo en un LLM local</strong> — reporta la velocidad de procesamiento del prompt y la velocidad de generación como cifras separadas bajo una longitud de contexto y un nivel de cuantización fijos, de modo que los resultados son directamente comparables entre hardwares. La opción `--verbose` de Ollama es una alternativa más rápida pero menos rigurosa para una comprobación rápida.',
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que querem medir e comparar a velocidade de inferência de LLMs locais entre diferentes hardwares ou níveis de quantização',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>O llama-bench, utilitário de benchmark incluído com o llama.cpp, é a melhor ferramenta para medir tokens por segundo em um LLM local</strong> — ele reporta a velocidade de processamento do prompt e a velocidade de geração como números separados sob um comprimento de contexto e nível de quantização fixos, tornando os resultados diretamente comparáveis entre hardwares. A flag `--verbose` do Ollama é uma alternativa mais rápida e menos rigorosa para uma verificação rápida.',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يريدون قياس ومقارنة سرعة الاستدلال (inference) لنماذج LLM المحلية عبر أجهزة أو مستويات quantization مختلفة',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>أداة llama-bench، أداة قياس الأداء المرفقة مع llama.cpp، هي أفضل أداة لقياس عدد tokens في الثانية في نموذج LLM محلي</strong> — فهي تُبلغ عن سرعة معالجة الـ prompt وسرعة التوليد كرقمين منفصلين ضمن طول سياق ومستوى quantization ثابتين، مما يجعل النتائج قابلة للمقارنة المباشرة بين الأجهزة المختلفة. خيار `--verbose` في Ollama بديل أسرع وأقل صرامة لإجراء فحص سريع.',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: '하드웨어 또는 양자화 수준에 따른 로컬 LLM 추론 속도를 측정하고 비교하려는 개발자',
     affiliateDisclosure: true,
-    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained'],
+    siblingBites: ['how-much-vram-for-local-llm', 'best-quantization-6gb-vram', 'gguf-vs-gptq-vs-awq', 'best-gpu-local-llm-uae-price', 'speculative-decoding-explained', 'sglang-vs-vllm-local-serving'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>llama.cpp에 포함된 벤치마킹 유틸리티인 llama-bench는 로컬 LLM의 초당 토큰 수를 측정하는 가장 좋은 도구입니다.</strong> 고정된 컨텍스트 길이와 양자화 수준에서 프롬프트 처리 속도와 생성 속도를 별도의 수치로 보고하므로, 서로 다른 하드웨어 간 결과를 직접 비교할 수 있습니다. Ollama의 `--verbose` 플래그는 간단한 확인용으로 사용할 수 있는, 더 빠르지만 엄격함이 떨어지는 대안입니다.',

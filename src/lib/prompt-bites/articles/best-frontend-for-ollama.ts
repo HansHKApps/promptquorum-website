@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Developers adding a chat UI to their Ollama setup',
     parentArticle: '/local-llms/best-local-llm-frontends',
-    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio'],
+    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio', 'best-local-llm-obsidian-integration'],
     is_living_page: true,
     quickAnswerTop: {
       en: {
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermedio',
     audience: 'Desarrolladores agregando una interfaz de chat a su configuración de Ollama',
     parentArticle: '/local-llms/best-local-llm-frontends',
-    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio'],
+    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio', 'best-local-llm-obsidian-integration'],
     is_living_page: true,
     quickAnswerTop: {
       es: {
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores adicionando uma interface de chat à sua configuração de Ollama',
     parentArticle: '/local-llms/best-local-llm-frontends',
-    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio'],
+    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio', 'best-local-llm-obsidian-integration'],
     is_living_page: true,
     quickAnswerTop: {
       pt: {
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'متوسط',
     audience: 'المطورون الذين يضيفون واجهة دردشة إلى إعداد Ollama الخاص بهم',
     parentArticle: '/local-llms/best-local-llm-frontends',
-    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio'],
+    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio', 'best-local-llm-obsidian-integration'],
     is_living_page: true,
     quickAnswerTop: {
       ar: {
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: '중급',
     audience: 'Ollama 환경에 채팅 UI를 추가하려는 개발자',
     parentArticle: '/local-llms/best-local-llm-frontends',
-    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio'],
+    siblingBites: ['ollama-vs-lm-studio', 'jan-vs-lm-studio', 'best-local-llm-obsidian-integration'],
     is_living_page: true,
     targetKeywords: [
       'Ollama 프론트엔드 추천',

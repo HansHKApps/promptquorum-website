@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing a quantization format for local or served LLM inference',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUF is the best default quantization format for local use</strong> — it runs on both CPU and GPU through llama.cpp and Ollama, with no separate CUDA-only requirement. GPTQ and AWQ are GPU-only formats built for production serving frameworks like vLLM and TGI, where AWQ generally holds quality better than GPTQ at the same bit width.',
     toc: [
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يختارون تنسيق تكميم لاستدلال LLM محلي أو مُقدَّم',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUF هو أفضل تنسيق تكميم افتراضي للاستخدام المحلي</strong> — يعمل على كل من CPU وGPU عبر llama.cpp وOllama، دون متطلب منفصل يقتصر على CUDA. GPTQ وAWQ تنسيقان مخصصان لـ GPU فقط مبنيان لأطر التقديم الإنتاجي مثل vLLM وTGI، حيث تحافظ AWQ عمومًا على الجودة بشكل أفضل من GPTQ عند نفس عمق البت.',
     toc: [
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die ein Quantisierungsformat für lokale oder servierte LLM-Inferenz wählen',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUF ist das beste Standard-Quantisierungsformat für lokale Nutzung</strong> — es läuft sowohl auf CPU als auch GPU über llama.cpp und Ollama, ohne separate CUDA-only-Anforderung. GPTQ und AWQ sind reine GPU-Formate für Produktions-Serving-Frameworks wie vLLM und TGI, wobei AWQ die Qualität bei gleicher Bitbreite im Allgemeinen besser hält als GPTQ.',
     toc: [
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que eligen un formato de cuantización para inferencia local o servida de LLM',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUF es el mejor formato de cuantización por defecto para uso local</strong> — corre tanto en CPU como en GPU a través de llama.cpp y Ollama, sin un requisito separado exclusivo de CUDA. GPTQ y AWQ son formatos solo para GPU pensados para frameworks de servicio en producción como vLLM y TGI, donde AWQ generalmente mantiene mejor la calidad que GPTQ al mismo ancho de bits.',
     toc: [
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui choisissent un format de quantification pour de l\'inférence LLM locale ou servie',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUF est le meilleur format de quantification par défaut pour un usage local</strong> — il fonctionne à la fois sur CPU et GPU via llama.cpp et Ollama, sans exigence CUDA exclusive. GPTQ et AWQ sont des formats GPU uniquement conçus pour des frameworks de déploiement en production comme vLLM et TGI, où AWQ conserve généralement une meilleure qualité que GPTQ à largeur de bits égale.',
     toc: [
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'ローカルまたはサービング用LLM推論の量子化フォーマットを選ぶ開発者',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUFはローカル用途に最適なデフォルトの量子化フォーマットです</strong> — llama.cppとOllama経由でCPUとGPU両方で動作し、別途CUDA専用の要件はありません。GPTQとAWQは、vLLMやTGIのような本番サービングフレームワーク向けのGPU専用フォーマットで、AWQは一般に同じビット幅ではGPTQより品質を保ちます。',
     toc: [
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '로컬 또는 서빙되는 LLM 추론을 위한 양자화 형식을 선택하는 개발자',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUF는 로컬 사용을 위한 최적의 기본 양자화 형식입니다</strong> — 별도의 CUDA 전용 요건 없이 llama.cpp와 Ollama를 통해 CPU와 GPU 모두에서 실행됩니다. GPTQ와 AWQ는 vLLM이나 TGI 같은 프로덕션 서빙 프레임워크를 위한 GPU 전용 형식이며, 이 중 AWQ가 동일한 비트 폭에서 일반적으로 GPTQ보다 품질을 더 잘 유지합니다.',
     toc: [
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores escolhendo um formato de quantização para inferência local ou servida de LLM',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>O GGUF é o melhor formato padrão de quantização para uso local</strong> — ele roda em CPU e GPU através do llama.cpp e do Ollama, sem um requisito separado somente para CUDA. GPTQ e AWQ são formatos somente GPU voltados para frameworks de servir em produção como o vLLM e o TGI, onde o AWQ geralmente mantém a qualidade melhor que o GPTQ na mesma largura de bits.',
     toc: [
@@ -783,7 +783,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '为本地或托管 LLM 推理选择量化格式的开发者',
-    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi'],
+    siblingBites: ['what-is-q4-k-m-quantization', 'ollama-vs-vllm-vs-tgi', 'llama-cpp-gguf-conversion-guide'],
     is_living_page: false,
     leadAnswerBlock: '<strong>GGUF 是本地使用的最佳默认量化格式</strong>——它通过 llama.cpp 和 Ollama 在 CPU 和 GPU 上都能运行，没有单独的纯 CUDA 要求。GPTQ 和 AWQ 是为 vLLM、TGI 等生产服务框架打造的纯 GPU 格式，其中 AWQ 在相同位宽下通常比 GPTQ 更好地保持质量。',
     toc: [

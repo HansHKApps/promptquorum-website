@@ -121,6 +121,15 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // 2026-07 batch, Round 2 — gap-fill (survivor of content-comparison audit)
   'hybrid-local-cloud-llm-strategy',
+
+  // 2026-07 batch, Round 3
+  'sglang-vs-vllm-local-serving',
+  'llama-cpp-gguf-conversion-guide',
+  'prompt-caching-for-local-llm-explained',
+  'best-pii-redaction-tool-local-llm',
+  'best-local-llm-obsidian-integration',
+  'best-local-llm-reasoning-ui',
+  'best-local-llm-customer-support-chatbot',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true

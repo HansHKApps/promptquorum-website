@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing between Ollama and LM Studio',
     parentArticle: '/local-llms/ollama-vs-lm-studio',
-    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama', 'best-local-llm-reasoning-ui'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores escolhendo entre Ollama e LM Studio',
     parentArticle: '/local-llms/ollama-vs-lm-studio',
-    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama', 'best-local-llm-reasoning-ui'],
     is_living_page: false,
     quickAnswerTop: {
       pt: {
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermedio',
     audience: 'Desarrolladores eligiendo entre Ollama y LM Studio',
     parentArticle: '/local-llms/ollama-vs-lm-studio',
-    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama', 'best-local-llm-reasoning-ui'],
     is_living_page: false,
     quickAnswerTop: {
       es: {
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يختارون بين Ollama و LM Studio',
     parentArticle: '/local-llms/ollama-vs-lm-studio',
-    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama', 'best-local-llm-reasoning-ui'],
     is_living_page: false,
     quickAnswerTop: {
       ar: {
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: '중급',
     audience: 'Ollama와 LM Studio 중에서 선택하는 개발자',
     parentArticle: '/local-llms/ollama-vs-lm-studio',
-    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama'],
+    siblingBites: ['jan-vs-lm-studio', 'best-frontend-for-ollama', 'best-local-llm-reasoning-ui'],
     is_living_page: false,
     quickAnswerTop: {
       ko: {

@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers curious how local inference speed can be improved without new hardware',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Speculative decoding speeds up inference by using a small, fast draft model to propose several tokens at once, which a larger target model then verifies in a single parallel pass instead of generating each token sequentially.</strong> When the draft model guesses correctly, generation is effectively faster with no quality loss.',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die wissen möchten, wie sich lokale Inferenzgeschwindigkeit ohne neue Hardware verbessern lässt',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>Spekulatives Dekodieren beschleunigt die Inferenz, indem ein kleines, schnelles Draft-Modell mehrere Tokens auf einmal vorschlägt, die ein größeres Zielmodell dann in einem einzigen parallelen Durchgang prüft, statt jedes Token sequenziell zu erzeugen.</strong> Wenn das Draft-Modell richtig rät, läuft die Generierung effektiv schneller ab, ohne Qualitätsverlust.',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: "Développeurs curieux de savoir comment accélérer l'inférence locale sans nouveau matériel",
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       "<strong>Le décodage spéculatif accélère l'inférence en utilisant un petit modèle de brouillon rapide pour proposer plusieurs tokens à la fois, qu'un modèle cible plus grand vérifie ensuite en une seule passe parallèle au lieu de générer chaque token séquentiellement.</strong> Lorsque le modèle de brouillon devine correctement, la génération est effectivement plus rapide, sans perte de qualité.",
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '新しいハードウェアなしでローカル推論を高速化する方法を知りたい開発者',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>投機的デコーディングは、小さく高速なドラフトモデルが複数のトークンをまとめて提案し、より大きなターゲットモデルがそれらを1回の並列パスで検証することで推論を高速化します。トークンを1つずつ逐次生成する場合と比べて高速です。</strong>ドラフトモデルの予測が正しければ、生成は実質的に速くなり、品質は変わりません。',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '想在不添置新硬件的情况下提升本地推理速度的开发者',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>推测解码通过让一个小而快的草稿模型一次性提出多个候选词元，再由更大的目标模型在一次并行计算中统一验证，而不是逐个词元顺序生成，从而加速推理。</strong>当草稿模型猜测正确时，生成速度会明显提升，且输出质量不受影响。',
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores con curiosidad por cómo mejorar la velocidad de inferencia local sin nuevo hardware',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>La decodificación especulativa acelera la inferencia usando un modelo borrador pequeño y rápido para proponer varios tokens a la vez, que un modelo objetivo más grande verifica luego en un único paso paralelo en lugar de generar cada token de forma secuencial.</strong> Cuando el modelo borrador acierta, la generación es efectivamente más rápida sin pérdida de calidad.',
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores com curiosidade sobre como melhorar a velocidade de inferência local sem novo hardware',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>A decodificação especulativa acelera a inferência usando um modelo rascunho pequeno e rápido para propor vários tokens de uma vez, que um modelo alvo maior verifica em uma única passagem paralela em vez de gerar cada token sequencialmente.</strong> Quando o modelo rascunho acerta, a geração fica efetivamente mais rápida, sem perda de qualidade.',
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'المطورون المهتمون بمعرفة كيفية تحسين سرعة الاستدلال المحلي دون عتاد جديد',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>يسرّع فك التشفير التخميني عملية الاستدلال باستخدام نموذج مسودة (draft model) صغير وسريع يقترح عدة رموز (tokens) دفعة واحدة، ثم يتحقق منها نموذج هدف (target model) أكبر في تمريرة واحدة متوازية بدلًا من توليد كل رمز على حدة بالتسلسل.</strong> عندما يخمّن نموذج المسودة بشكل صحيح، يصبح التوليد أسرع فعليًا دون أي فقدان في الجودة.',
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: '새 하드웨어 없이 로컬 추론 속도를 높이는 방법이 궁금한 개발자',
-    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool'],
+    siblingBites: ['how-much-vram-for-local-llm', 'gguf-vs-gptq-vs-awq', 'q4-k-m-vs-q8-0', 'best-local-llm-benchmarking-tool', 'prompt-caching-for-local-llm-explained'],
     is_living_page: false,
     leadAnswerBlock:
       '<strong>추측 디코딩은 작고 빠른 드래프트 모델이 여러 토큰을 한 번에 제안하고, 더 큰 타깃 모델이 이를 순차적으로 하나씩 생성하는 대신 하나의 병렬 패스에서 검증하도록 하여 추론 속도를 높입니다.</strong> 드래프트 모델의 예측이 맞으면 품질 손실 없이 생성 속도가 실질적으로 빨라집니다.',

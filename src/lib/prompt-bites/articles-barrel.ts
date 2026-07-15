@@ -108,6 +108,13 @@ import { article as bestModelMergingToolMergekit } from './articles/best-model-m
 import { article as wsl2VsNativeWindowsOllama } from './articles/wsl2-vs-native-windows-ollama'
 import { article as bestGpuLocalLlmUaePrice } from './articles/best-gpu-local-llm-uae-price'
 import { article as hybridLocalCloudLlmStrategy } from './articles/hybrid-local-cloud-llm-strategy'
+import { article as sglangVsVllmLocalServing } from './articles/sglang-vs-vllm-local-serving'
+import { article as llamaCppGgufConversionGuide } from './articles/llama-cpp-gguf-conversion-guide'
+import { article as promptCachingForLocalLlmExplained } from './articles/prompt-caching-for-local-llm-explained'
+import { article as bestPiiRedactionToolLocalLlm } from './articles/best-pii-redaction-tool-local-llm'
+import { article as bestLocalLlmObsidianIntegration } from './articles/best-local-llm-obsidian-integration'
+import { article as bestLocalLlmReasoningUi } from './articles/best-local-llm-reasoning-ui'
+import { article as bestLocalLlmCustomerSupportChatbot } from './articles/best-local-llm-customer-support-chatbot'
 
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
@@ -218,4 +225,13 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
 
   // 2026-07 batch, Round 2 — gap-fill (survivor of content-comparison audit)
   hybridLocalCloudLlmStrategy,
+
+  // 2026-07 batch, Round 3
+  sglangVsVllmLocalServing,
+  llamaCppGgufConversionGuide,
+  promptCachingForLocalLlmExplained,
+  bestPiiRedactionToolLocalLlm,
+  bestLocalLlmObsidianIntegration,
+  bestLocalLlmReasoningUi,
+  bestLocalLlmCustomerSupportChatbot,
 }

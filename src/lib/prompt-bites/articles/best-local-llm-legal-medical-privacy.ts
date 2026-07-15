@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Legal and healthcare professionals evaluating a local LLM setup for sensitive documents',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>An RTX 4090 24 GB workstation or a Mac Studio with 32 GB+ unified memory, running a model like Qwen3 14B fully offline via Ollama, keeps privileged legal documents and PHI (protected health information) off any third-party cloud API.</strong> Running locally is necessary but not sufficient for compliance — it must be paired with disk encryption, access controls, and audit logging appropriate to your specific legal or regulatory obligations.',
     toc: [
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'المتخصصون القانونيون والصحيون الذين يقيّمون إعداد LLM محلي للمستندات الحساسة',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>محطة عمل RTX 4090 24 GB أو Mac Studio بذاكرة موحدة 32 GB+، تشغّل نموذجًا مثل Qwen3 14B دون اتصال بالكامل عبر Ollama، تُبقي المستندات القانونية المميّزة ومعلومات الصحة المحمية (PHI) بعيدًا عن أي واجهة سحابية من طرف ثالث.</strong> التشغيل محليًا ضروري لكنه غير كافٍ للامتثال — يجب اقترانه بتشفير القرص وضوابط الوصول وتسجيل التدقيق المناسب لالتزاماتك القانونية أو التنظيمية المحددة. في دول الخليج، يضيف الاعتبار السيادي للبيانات طبقة إضافية — راجع أطر حماية البيانات المحلية ذات الصلة، مثل نظام حماية البيانات الشخصية (PDPL) في السعودية أو قانون حماية البيانات في الإمارات، قبل الاعتماد على أي إعداد.',
     toc: [
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Juristen und Angehörige der Gesundheitsberufe, die ein lokales LLM-Setup für sensible Dokumente evaluieren',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>Eine RTX-4090-24-GB-Workstation oder ein Mac Studio mit 32 GB+ Unified Memory, auf dem ein Modell wie Qwen3 14B vollständig offline über Ollama läuft, hält privilegierte juristische Dokumente und Gesundheitsdaten von jeder Drittanbieter-Cloud-API fern.</strong> Der lokale Betrieb ist notwendig, aber nicht hinreichend für Compliance — er muss mit Festplattenverschlüsselung, Zugriffskontrollen und Audit-Logging kombiniert werden, die Ihren spezifischen rechtlichen oder regulatorischen Pflichten entsprechen, in Deutschland etwa den Anforderungen aus Art. 25 DSGVO (Datenschutz durch Technikgestaltung) und dem BSI-Grundschutz.',
     toc: [
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Profesionales legales y de salud que evalúan una configuración de LLM local para documentos sensibles',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>Una estación de trabajo RTX 4090 24 GB o un Mac Studio con 32 GB+ de memoria unificada, ejecutando un modelo como Qwen3 14B totalmente sin conexión vía Ollama, mantiene los documentos legales privilegiados y la PHI (información de salud protegida) fuera de cualquier API en la nube de terceros.</strong> Ejecutar localmente es necesario pero no suficiente para el cumplimiento normativo — debe combinarse con cifrado de disco, controles de acceso y registro de auditoría apropiados para tus obligaciones legales o regulatorias específicas, ya sea el RGPD y la supervisión de la AEPD en la Unión Europea, o marcos latinoamericanos como la LFPDPPP de México o la Ley 25.326 de Argentina.',
     toc: [
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Professionnels du droit et de la santé évaluant une configuration de LLM local pour des documents sensibles',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>Une station de travail RTX 4090 24 Go ou un Mac Studio avec 32 Go ou plus de mémoire unifiée, exécutant un modèle comme Qwen3 14B entièrement hors ligne via Ollama, garde les documents juridiques privilégiés et les PHI (informations de santé protégées) hors de toute API cloud tierce.</strong> L\'exécution locale est nécessaire mais non suffisante pour la conformité — elle doit être associée à un chiffrement du disque, des contrôles d\'accès et une journalisation d\'audit adaptés à vos obligations légales ou réglementaires spécifiques.',
     toc: [
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '機密文書のためのローカルLLMセットアップを評価する法務・医療専門家',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>RTX 4090 24GBワークステーションか、32GB以上の統合メモリを持つMac Studioで、Qwen3 14Bのようなモデルをollama経由で完全オフラインに実行することで、秘匿特権のある法務文書やPHI(保護対象保健情報)を一切のサードパーティ製クラウドAPIから遠ざけられます。</strong>ローカルでの実行はコンプライアンスにとって必要条件ですが十分条件ではありません — 具体的な法的・規制上の義務に見合ったディスク暗号化、アクセス制御、監査ログと組み合わせる必要があります。',
     toc: [
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '민감한 문서를 위한 로컬 LLM 설정을 평가하는 법률 및 의료 전문가',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>32GB 이상 통합 메모리를 갖춘 RTX 4090 24GB 워크스테이션이나 Mac Studio에서 Qwen3 14B 같은 모델을 Ollama를 통해 완전히 오프라인으로 구동하면, 특권이 있는 법률 문서와 PHI(보호되는 건강 정보)가 어떤 서드파티 클라우드 API에도 노출되지 않습니다.</strong> 로컬 실행은 필요하지만 그 자체로 충분한 규정 준수 조건은 아닙니다 — 구체적인 법률 또는 규제 의무에 맞는 디스크 암호화, 접근 통제, 감사 로깅과 함께 사용해야 합니다.',
     toc: [
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Profissionais de direito e saúde avaliando uma configuração de LLM local para documentos sensíveis',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>Uma workstation RTX 4090 24 GB ou um Mac Studio com 32 GB+ de memória unificada, rodando um modelo como o Qwen3 14B totalmente offline via Ollama, mantém documentos jurídicos privilegiados e PHI (informações de saúde protegidas) fora de qualquer API de nuvem de terceiros.</strong> Rodar localmente é necessário, mas não suficiente para conformidade — precisa ser combinado com criptografia de disco, controles de acesso e registro de auditoria apropriados às suas obrigações legais ou regulatórias específicas.',
     toc: [
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '为敏感文档评估本地 LLM 配置的法律和医疗专业人士',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-nas-storage-local-ai-models-2026',
-    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant'],
+    siblingBites: ['can-local-llm-help-gdpr', 'is-qwen-gdpr-compliant', 'best-pii-redaction-tool-local-llm'],
     is_living_page: false,
     leadAnswerBlock: '<strong>RTX 4090 24 GB 工作站或配备 32 GB 以上统一内存的 Mac Studio，通过 Ollama 完全离线运行 Qwen3 14B 等模型，可使受保护的法律文档和 PHI（受保护健康信息）不接触任何第三方云端 API。</strong>本地运行是合规的必要条件而非充分条件——还必须搭配符合你具体法律或监管义务的磁盘加密、访问控制和审计日志。',
     toc: [
