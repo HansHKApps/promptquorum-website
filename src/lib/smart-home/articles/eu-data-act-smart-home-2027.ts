@@ -10,10 +10,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: '2027 Protocols & Regulation',
     title: 'The EU Data Act and Your Smart Home (2027)',
     seoTitle: 'EU Data Act: Smart Home Guide (2027)',
+    // Verified 2026-07-16 against the European Commission's own Data Act pages
+    // (digital-strategy.ec.europa.eu/en/policies/data-act and .../en/factpages/data-act-explained).
+    // Legal basis: the data-access-and-portability obligation this article describes is Chapter II
+    // of Regulation (EU) 2023/2854 (Articles 3-5 — obligation to make data available by design and
+    // default, user access right, right to share with third parties), NOT Article 33 (which covers
+    // interoperability requirements for data spaces and data-sharing services — a different, narrower
+    // provision unrelated to the individual device-owner right described here).
     intro:
-      'The EU Data Act creates data-access and portability rights for users of connected devices, separate from GDPR\'s personal-data-processing rules — it addresses whether you can get your device\'s generated data out and share it with a different service, not how your personal data is processed. [VERIFY: the current enforcement timeline and its confirmed applicability to smart home hardware categories] before citing specific dates. This article explains the distinction from GDPR and what to watch for as an EU smart home owner.',
+      'The EU Data Act (Regulation (EU) 2023/2854) creates data-access and portability rights for users of connected devices under Chapter II, separate from GDPR\'s personal-data-processing rules — it addresses whether you can get your device\'s generated data out and share it with a different service, not how your personal data is processed. Its main obligations have applied since September 12, 2025, and it explicitly covers consumer smart-home devices as "connected products." This article explains the distinction from GDPR and what to watch for as an EU smart home owner.',
     metaDescription:
-      "The EU Data Act's implications for smart home devices in the EU: data portability rights, distinct from GDPR. [VERIFY current enforcement timeline before publishing.]",
+      "The EU Data Act's implications for smart home devices in the EU: data portability rights (in force since Sept 12, 2025), distinct from GDPR.",
     twitterDescription:
       "The EU Data Act and smart home devices: data portability rights, and how this differs from GDPR's personal-data rules.",
     readTime: '6 min read',
@@ -28,16 +35,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'connected device data rights eu',
     ],
     leadAnswerBlock:
-      "**The EU Data Act gives users of connected devices rights to access the data their device generates and to have it shared with third parties of their choosing — a data-portability and access right, distinct from GDPR's rules on how personal data is processed.** [VERIFY: current enforcement timeline and scope for smart home device categories specifically] before relying on a specific compliance date.",
+      "**The EU Data Act (Chapter II, Articles 3-5) gives users of connected devices rights to access the data their device generates and to have it shared with third parties of their choosing — a data-portability and access right, distinct from GDPR's rules on how personal data is processed.** Its main obligations have applied since September 12, 2025, and smart-home devices are explicitly in scope.",
     quickAnswerTop: {
       en: {
         question: 'What does the EU Data Act mean for my smart home devices?',
         answer:
-          "The EU Data Act is meant to give you access to the data your connected devices generate and let you direct it to a different service provider — for example, sharing your smart thermostat's usage data with a competing energy-management app instead of only the manufacturer's own service. This is separate from GDPR, which governs how personal data is processed rather than data portability between services. [VERIFY: the confirmed current enforcement timeline and exactly which smart home device categories are covered] before treating a specific date or scope as settled.",
+          "The EU Data Act has given you the right, since September 12, 2025, to access the data your connected devices generate and direct it to a different service provider — for example, sharing your smart thermostat's usage data with a competing energy-management app instead of only the manufacturer's own service. This is separate from GDPR, which governs how personal data is processed rather than data portability between services. Smart-home devices are explicitly named as in-scope \"connected products\" under the regulation.",
         bullets: [
           "Data Act = data access/portability rights for connected-device data",
           'GDPR = separate regulation governing personal-data processing — the two address different questions',
-          '[VERIFY: current enforcement timeline and device-category scope] rather than assuming a fixed date',
+          'In force since September 12, 2025; smart-home devices are explicitly in scope',
           'Relevant mainly if you want to move data between services (e.g., energy monitoring) rather than stay with one manufacturer\'s app',
         ],
         updatedDate: '2026-07',
@@ -62,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'The EU Data Act addresses data access/portability for connected devices — a different question from GDPR\'s personal-data-processing rules',
           "It's aimed at letting you direct your device's generated data to a third-party service, not just the manufacturer's own app",
-          '[VERIFY: current enforcement timeline and confirmed scope for smart home device categories] — regulatory implementation dates and coverage details should be checked against the official current timeline, not assumed from this article',
+          'Main obligations have applied since September 12, 2025; smart-home devices are explicitly named as in-scope "connected products" alongside connected cars and health monitors',
           "This article is a general orientation, not legal advice — for a specific compliance question, consult the EU's official Data Act resources or a qualified advisor",
           "See the GDPR-focused smart home guide already on this site for personal-data-processing questions",
         ],
@@ -86,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'If you already run a local-first setup (Home Assistant, local storage, no cloud dependency), you may see less direct benefit since your data already stays local rather than needing a portability right to extract it from a manufacturer.',
           'The more relevant case is hybrid devices that still report some data to a manufacturer cloud service even in a mostly-local setup — portability rights are about that data specifically.',
-          '[VERIFY: any confirmed enforcement actions or manufacturer compliance changes] relevant to smart home hardware specifically, rather than assuming broad industry-wide changes have already occurred.',
+          'The obligation has been legally in force since September 12, 2025, but this article does not track manufacturer-by-manufacturer compliance — check a specific device\'s current documentation rather than assuming broad industry-wide changes have already rolled out just because the deadline has passed.',
         ],
       },
       whatToCheck: {
@@ -95,8 +102,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**This article is a general orientation to the Data Act's relevance to smart homes — for a specific compliance question or legal determination, check the EU's official current guidance rather than relying on this summary alone.**",
         items: [
-          '[VERIFY: the official current EU Data Act enforcement timeline] directly from EU institutional sources before treating any specific date in this space as settled.',
-          '[VERIFY: which specific smart home device categories are confirmed in scope] — connected-device regulation scope can be narrower or broader than a general summary suggests.',
+          'Main obligations have applied since September 12, 2025 (per the European Commission\'s own Data Act pages) — this is already in force, not a future deadline. One related sub-deadline is still pending: full removal of cloud/data-processing-service switching charges by January 12, 2027.',
+          'Smart-home devices are explicitly named as an in-scope "connected product" category by the European Commission\'s own guidance, alongside connected cars, health monitoring devices, and industrial equipment — check a specific device\'s own documentation for how its manufacturer has implemented the obligation, since the Commission\'s guidance confirms scope, not per-device compliance.',
           "If you're a manufacturer or run a business handling smart home data, this article is not a substitute for qualified legal advice specific to your situation.",
         ],
       },
@@ -105,8 +112,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is the EU Data Act the same as GDPR?', a: 'No — GDPR governs personal-data processing; the Data Act governs data access and portability for connected devices. They are separate regulations addressing different questions.' },
-          { q: 'Does the Data Act apply outside the EU?', a: 'It is EU regulation, so its direct legal requirements target companies operating in or serving the EU market — [VERIFY: current scope details] rather than assuming global applicability.' },
-          { q: 'Does this mean I can force my smart thermostat manufacturer to share my data with a competitor?', a: 'That is the general intent of data-portability regulation in this space, but [VERIFY: exact current mechanics and enforcement status] before assuming this right is fully operative for a specific device category today.' },
+          { q: 'Does the Data Act apply outside the EU?', a: 'It is EU regulation, so its direct legal requirements target companies operating in or serving the EU market, not a global mandate. If you buy or use a connected device within the EU market, the obligation applies regardless of where the manufacturer is headquartered.' },
+          { q: 'Does this mean I can force my smart thermostat manufacturer to share my data with a competitor?', a: 'Yes, in principle — since September 12, 2025, EU data holders must let users share device-generated data with a third party of their choosing (either directly or by asking the manufacturer to send it), with an exception for Digital Markets Act "gatekeeper" companies as recipients. Whether a specific manufacturer has actually implemented this smoothly for a specific device is a separate question from whether the legal right exists — check that device\'s current documentation.' },
           { q: 'Does a local-first smart home need to worry about the Data Act?', a: 'Less directly — if your setup already keeps data local via Home Assistant rather than a manufacturer cloud service, portability rights matter less since there\'s no cloud silo to extract data from in the first place.' },
           { q: 'Where can I find the official current text of the Data Act?', a: 'Check the European Union\'s official legislative publications directly — this article is a general orientation, not a legal reference.' },
           { q: 'Does this affect the private-smart-home-GDPR guide already on this site?', a: 'No — that guide covers GDPR compliance (personal data processing) specifically. This article covers a separate, newer regulation about data portability.' },
