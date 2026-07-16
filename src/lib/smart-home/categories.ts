@@ -63,12 +63,17 @@ export const SMART_HOME_CATEGORIES: SmartHomeCategory[] = [
     id: 'decision-comparison',
     slug: 'decision-comparison',
     titleEn: 'Decision & Comparison',
-    descriptionEn: 'Buyer-intent comparison pages: Home Assistant vs Alexa vs Google, best mini PCs for HA + local AI, local vs cloud voice, and zero-subscription builds.',
+    descriptionEn: 'Buyer-intent comparison pages: Home Assistant vs Alexa vs Google, best mini PCs for HA + local AI, local vs cloud voice, and zero-subscription builds — plus single-product mini-PC reviews.',
     articleSlugs: [
       'home-assistant-vs-alexa-vs-google',
       'best-mini-pc-home-assistant-local-ai',
       'local-vs-cloud-voice-assistant',
       'smart-home-without-subscriptions',
+      'geekom-a9-max-local-ai-review',
+      'beelink-ser8-local-ai-review',
+      'beelink-eq14-local-ai-review',
+      'gmktec-g3-plus-local-ai-review',
+      'minisforum-um890-pro-local-ai-review',
     ],
   },
   {
