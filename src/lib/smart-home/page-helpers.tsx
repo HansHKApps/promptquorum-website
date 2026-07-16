@@ -22,6 +22,7 @@ import { SMART_HOME_SLUG_TO_KEY } from './slugs'
 import { SMART_HOME_CATEGORIES } from './categories'
 import { smartHomeAlternates, smartHomeHubPath, smartHomeArticlePath } from './metadata-helpers'
 import { isSmartHomeArticlePublished, isSmartHomeHubPublished } from './published'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -502,10 +503,32 @@ const CATEGORY_COPY: Partial<Record<Lang, Record<string, { badge: string; descri
   },
 }
 
+const HUB_REVIEWED_LABEL: Partial<Record<Lang, string>> = {
+  en: 'Content last reviewed:',
+  de: 'Inhalt zuletzt geprüft:',
+  fr: 'Contenu vérifié pour la dernière fois:',
+  ja: 'コンテンツの最終確認日:',
+  zh: '内容最后审核于:',
+  es: 'Contenido revisado por última vez:',
+  pt: 'Conteúdo revisado pela última vez em:',
+  ar: 'آخر مراجعة للمحتوى:',
+  ko: '콘텐츠 최종 검토일:',
+}
+
+// Most recent dateModified across all 25 smart-home articles (EN block, always present).
+// Used as the hub's "content last reviewed" date — the hub itself has no article body to date.
+function latestSmartHomeDateModified(): string | undefined {
+  const dates = Object.values(smartHomeContent)
+    .map((article) => (article?.en as any)?.dateModified ?? article?.en?.publishDate)
+    .filter((d): d is string => !!d)
+  return dates.sort().at(-1)
+}
+
 function renderHub(lang: Lang) {
   const copy = HUB_COPY[lang] ?? HUB_COPY['en']!
   const hubTitle = copy.title
   const hubIntro = copy.intro
+  const reviewedDate = latestSmartHomeDateModified()
 
   return (
     <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
@@ -514,7 +537,19 @@ function renderHub(lang: Lang) {
           Smart Home
         </span>
         <h1 className="text-3xl sm:text-5xl font-bold text-text-primary mb-5">{hubTitle}</h1>
-        <p className="text-text-secondary leading-relaxed max-w-3xl mb-14">{hubIntro}</p>
+        <p className={`text-text-secondary leading-relaxed max-w-3xl ${reviewedDate ? 'mb-6' : 'mb-14'}`}>{hubIntro}</p>
+        {reviewedDate && (
+          <time
+            dateTime={reviewedDate}
+            className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold mb-14"
+          >
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            {HUB_REVIEWED_LABEL[lang] ?? HUB_REVIEWED_LABEL['en']} {formatDisplayDate(reviewedDate, lang as any)}
+          </time>
+        )}
 
         <div className="space-y-14">
           {HUB_THEMES.map((theme) => (
