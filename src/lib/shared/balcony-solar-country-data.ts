@@ -124,8 +124,9 @@ export const US_STATES: USStateEntry[] = [
     status: 'Signed',
     bill: 'HB 395 / SB 250',
     signedDate: '2026-04-22',
-    effectiveDate: '2027-01',
-    powerLimitW: null,
+    effectiveDate: '2026-07-01',
+    powerLimitW: 1200,
+    powerLimitNote: 'Localities cannot ban within the state cap.',
     sourceUrls: ['https://www.pv-tech.org/maine-passes-balcony-solar-law-virginia-and-colorado-to-follow/'],
   },
   {
@@ -168,26 +169,27 @@ export const US_STATES: USStateEntry[] = [
   },
   {
     state: 'New Hampshire',
-    status: 'Passed legislature, awaiting governor signature',
-    bill: 'Not yet confirmed — re-verify bill number at write-time',
-    signedDate: null,
-    effectiveDate: null,
-    powerLimitW: null,
+    status: 'Signed',
+    bill: 'SB 540',
+    signedDate: '2026-05-28',
+    effectiveDate: '2026-07-27',
+    powerLimitW: 1200,
     sourceUrls: ['https://www.brightsaver.org/legislation-tracker'],
   },
   {
     state: 'Vermont',
-    status: 'Passed legislature, awaiting governor signature',
-    bill: 'Not yet confirmed — re-verify bill number at write-time',
-    signedDate: null,
-    effectiveDate: null,
-    powerLimitW: null,
+    status: 'Signed',
+    bill: 'S.202 / H.598',
+    signedDate: '2026',
+    effectiveDate: '2026-07-01',
+    powerLimitW: 1200,
+    powerLimitNote: 'UL 3700 (or equivalent) certification explicitly required by statute; net metering explicitly excluded.',
     sourceUrls: ['https://www.brightsaver.org/legislation-tracker'],
   },
 ];
 
 export const US_STATE_COUNT_NOTE =
-  'State count moves monthly — re-verify at write-time (BSOL-12 next_refresh_due is +60 days, not the default 6-month semi_annual interval, for this reason). As of 2026-07-02: 6 states signed, 3 more passed legislature and awaiting governor signature. CO/MD/CT dates were cross-verified only via secondary trackers (pluginsolarhub.org, pv-tech.org), not primary legislative text — confirm against official state legislative records before publishing exact signing dates.';
+  'State count moves monthly — re-verify at write-time (BSOL-12 next_refresh_due is +60 days, not the default 6-month semi_annual interval, for this reason). As of 2026-07-16 (corrected — see docs/BALCONY_SOLAR_Q1_2027_REFRESH_TODO.md): 8 states signed (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), 1 more (New York) passed legislature and awaiting governor signature. Two of the 8 signed states are not yet in effect: Colorado (Jan 1 2027) and Connecticut (Oct 1 2026). CO/MD/CT/NH dates were cross-verified only via secondary trackers (pluginsolarhub.org, pv-tech.org), not primary legislative text — confirm against official state legislative records before publishing exact signing dates.';
 
 // ─── PER-COUNTRY / PER-REGION DATA ─────────────────────────────────────────────
 

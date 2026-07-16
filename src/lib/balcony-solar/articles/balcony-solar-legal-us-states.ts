@@ -28,32 +28,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-09-01',
-    last_full_refresh: '2026-07-02',
+    last_full_refresh: '2026-07-16',
     theme: 'Balcony Solar Legislation',
     title: 'Is Balcony Solar Legal in My State? US State-by-State Guide',
     seoTitle: 'Balcony Solar Legal by State: US Guide (2026)',
     intro: `As of write-time, ${signedStates.length} US states have signed balcony solar legislation into law, and ${pendingStates.length} more have passed their state legislature and are awaiting a governor's signature. There is no federal framework — legality is determined entirely state by state, and most states haven't addressed balcony solar specifically at all yet.`,
     metaDescription: `Is balcony solar legal in your US state? ${signedStates.length} states have signed legislation as of write-time, with more pending — verified state-by-state status, updated July 2026.`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'US buyers checking whether balcony solar is legal in their specific state',
     primaryTerm: 'balcony solar legal states',
     targetKeywords: ['is balcony solar legal in my state', 'balcony solar state laws', 'plug in solar legal states', 'balcony solar legislation 2026'],
-    leadAnswerBlock: `**As of write-time (2026-07-02), ${signedStates.length} US states have signed balcony solar legislation into law — Utah, Maine, Virginia, Maryland, Colorado, and Connecticut — with ${pendingStates.length} more (New York, New Hampshire, Vermont) having passed their state legislature and awaiting a governor's signature.** There is no federal balcony solar law; if your state isn't on either list, current status is simply undetermined rather than either explicitly legal or illegal — check with your local utility before assuming either way.`,
+    leadAnswerBlock: `**As of write-time (2026-07-16), ${signedStates.length} US states have signed balcony solar legislation into law — Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, and Connecticut — with ${pendingStates.length} more (New York) having passed its state legislature and awaiting a governor's signature. Two of the 8 signed states are not yet in effect: Colorado takes effect January 1, 2027 and Connecticut takes effect October 1, 2026.** There is no federal balcony solar law; if your state isn't on either list, current status is simply undetermined rather than either explicitly legal or illegal — check with your local utility before assuming either way.`,
     quickAnswerTop: {
       en: {
         question: 'Which US states have legalized balcony solar?',
-        answer: `Six states have signed balcony solar legislation as of write-time: Utah (first, HB 340), Maine, Virginia, Maryland, Colorado (highest wattage cap at 1,920W), and Connecticut. Three more — New York, New Hampshire, and Vermont — have passed their state legislature and are awaiting a governor's signature. No federal framework exists; most other states haven't addressed balcony solar specifically yet.`,
+        answer: `Eight states have signed balcony solar legislation as of write-time: Utah (first, HB 340), Maine, Virginia, Maryland, Colorado (highest wattage cap at 1,920W), New Hampshire, Vermont, and Connecticut. One more — New York — has passed its state legislature and is awaiting a governor's signature. No federal framework exists; most other states haven't addressed balcony solar specifically yet.`,
         bullets: [
-          'Signed: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), Connecticut (HB 5340)',
+          'Signed: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), New Hampshire (SB 540), Vermont (S.202/H.598), Connecticut (HB 5340)',
           'Colorado has the highest confirmed wattage cap of any state at 1,920W',
-          'Pending governor signature: New York (SUNNY Act), New Hampshire, Vermont',
+          'Pending governor signature: New York (SUNNY Act)',
           'No federal balcony solar framework exists — every state\'s status is independent',
           'This count moves monthly — this page refreshes every 60 days specifically because of that pace',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -73,8 +73,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `${signedStates.length} states have signed balcony solar legislation as of write-time (2026-07-02): Utah, Maine, Virginia, Maryland, Colorado, and Connecticut.`,
-          `${pendingStates.length} more states — New York, New Hampshire, Vermont — have passed their legislature and await a governor's signature; they are NOT yet law.`,
+          `${signedStates.length} states have signed balcony solar legislation as of write-time (2026-07-16): Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, and Connecticut. Colorado (Jan 1, 2027) and Connecticut (Oct 1, 2026) are signed but not yet in effect.`,
+          `${pendingStates.length} more state — New York — has passed its legislature and awaits a governor's signature; it is NOT yet law.`,
           'Colorado has the highest confirmed state wattage cap at 1,920W.',
           'No federal balcony solar framework exists — each state\'s status is fully independent, and most states haven\'t addressed the topic at all yet.',
           'CO/MD/CT signing dates were cross-verified only via secondary trackers, not primary legislative text — confirm against official state records before relying on an exact date.',
@@ -123,14 +123,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: 'Virginia',
         content: [
-          '**Virginia signed HB 395/SB 250 on April 22, 2026, with an effective date of January 2027** — meaning the law is signed but not yet in force as of write-time.',
+          '**Virginia signed HB 395/SB 250 on April 22, 2026, with an effective date of July 1, 2026** — the law is signed and already in effect as of write-time; localities cannot ban balcony solar within the state\'s 1,200W cap.',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: 'States to Watch',
         content: [
-          '**New York\'s SUNNY Act, along with bills in New Hampshire and Vermont, have passed their respective state legislatures and await a governor\'s signature — these are pending, not yet law, and could still change before signing.**',
+          '**New York\'s SUNNY Act has passed the state legislature and awaits a governor\'s signature — it is pending, not yet law, and could still change before signing.** New Hampshire and Vermont, previously in this pending category, are now confirmed signed — see the state table above.',
         ],
       },
       checkYourUtility: {
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Which US states have legalized balcony solar?', a: 'Six states have signed legislation as of write-time: Utah, Maine, Virginia, Maryland, Colorado, and Connecticut. Three more — New York, New Hampshire, Vermont — have passed their legislature and await a governor\'s signature.' },
+          { q: 'Which US states have legalized balcony solar?', a: 'Eight states have signed legislation as of write-time: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, and Connecticut. One more — New York — has passed its legislature and awaits a governor\'s signature. Two of the 8 signed states (Colorado, Connecticut) are not yet in effect.' },
           { q: 'Is balcony solar illegal in states not on this list?', a: 'Not necessarily illegal — most unlisted states simply haven\'t addressed balcony solar specifically. Status is undetermined rather than clearly legal or illegal; check with your local utility.' },
           { q: 'Which state has the highest wattage limit?', a: 'Colorado, at 1,920W — the highest confirmed cap of any US state balcony solar law found.' },
           { q: 'Is there a federal balcony solar law?', a: 'No. There is no federal legalization framework — only UL 3700, a federal-level safety certification standard, which is separate from state legalization and does not itself make balcony solar legal anywhere.' },
@@ -181,25 +181,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `Zum Redaktionsschluss haben ${signedStates.length} US-Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet, und ${pendingStates.length} weitere haben das Staatsgesetz verabschiedet und warten auf die Unterschrift des Gouverneurs. Es gibt keinen bundesweiten Rahmen — die Legalität wird vollständig auf Bundesstaatenebene bestimmt, und die meisten Bundesstaaten haben Balkonkraftwerke bisher noch nicht spezifisch geregelt.`,
     metaDescription: `Ist Balkonkraftwerk in Ihrem US-Bundesstaat legal? ${signedStates.length} Bundesstaaten haben zum Redaktionsschluss Gesetze unterzeichnet, weitere stehen aus — verifizierter Status nach Bundesstaaten, aktualisiert Juli 2026.`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'US-Käufer, die prüfen möchten, ob Balkonkraftwerke in ihrem Bundesstaat legal sind',
     primaryTerm: 'Balkonkraftwerk legal Bundesstaaten',
     targetKeywords: ['Balkonkraftwerk legal in meinem Bundesstaat', 'Balkonkraftwerk Gesetze US-Bundesstaaten', 'Steckersolar legale Bundesstaaten', 'Balkonkraftwerk Gesetzgebung 2026'],
-    leadAnswerBlock: `**Zum Redaktionsschluss (2026-07-02) haben ${signedStates.length} US-Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet — Utah, Maine, Virginia, Maryland, Colorado und Connecticut — mit ${pendingStates.length} weiteren (New York, New Hampshire, Vermont), die das Staatsgesetz bereits verabschiedet haben und auf die Unterschrift des Gouverneurs warten.** Es gibt kein bundesweites Balkonkraftwerk-Gesetz; wenn Ihr Bundesstaat auf keiner der beiden Listen steht, ist der aktuelle Status schlicht ungeklärt und weder ausdrücklich legal noch illegal — erkundigen Sie sich bei Ihrem lokalen Netzbetreiber, bevor Sie eine Annahme treffen.`,
+    leadAnswerBlock: `**Zum Redaktionsschluss (2026-07-16) haben ${signedStates.length} US-Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet — Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont und Connecticut — mit ${pendingStates.length} weiterem (New York), der das Staatsgesetz bereits verabschiedet hat und auf die Unterschrift des Gouverneurs wartet. Zwei der 8 unterzeichneten Bundesstaaten sind noch nicht in Kraft: Colorado tritt am 1. Januar 2027 in Kraft, Connecticut am 1. Oktober 2026.** Es gibt kein bundesweites Balkonkraftwerk-Gesetz; wenn Ihr Bundesstaat auf keiner der beiden Listen steht, ist der aktuelle Status schlicht ungeklärt und weder ausdrücklich legal noch illegal — erkundigen Sie sich bei Ihrem lokalen Netzbetreiber, bevor Sie eine Annahme treffen.`,
     quickAnswerTop: {
       de: {
         question: 'Welche US-Bundesstaaten haben Balkonkraftwerke legalisiert?',
-        answer: `Zum Redaktionsschluss haben sechs Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet: Utah (als erster, HB 340), Maine, Virginia, Maryland, Colorado (höchste Wattgrenze mit 1.920 W) und Connecticut. Drei weitere — New York, New Hampshire und Vermont — haben ihre jeweiligen Staatsparlamente passiert und warten auf die Unterschrift des Gouverneurs. Es gibt keinen bundesweiten Rahmen; die meisten anderen Bundesstaaten haben Balkonkraftwerke bisher noch nicht spezifisch geregelt.`,
+        answer: `Zum Redaktionsschluss haben acht Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet: Utah (als erster, HB 340), Maine, Virginia, Maryland, Colorado (höchste Wattgrenze mit 1.920 W), New Hampshire, Vermont und Connecticut. Ein weiterer — New York — hat sein Staatsparlament passiert und wartet auf die Unterschrift des Gouverneurs. Es gibt keinen bundesweiten Rahmen; die meisten anderen Bundesstaaten haben Balkonkraftwerke bisher noch nicht spezifisch geregelt.`,
         bullets: [
-          'Unterzeichnet: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), Connecticut (HB 5340)',
+          'Unterzeichnet: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), New Hampshire (SB 540), Vermont (S.202/H.598), Connecticut (HB 5340)',
           'Colorado hat die höchste bestätigte Wattgrenze aller Bundesstaaten mit 1.920 W',
-          'Warten auf Unterschrift des Gouverneurs: New York (SUNNY Act), New Hampshire, Vermont',
+          'Wartet auf Unterschrift des Gouverneurs: New York (SUNNY Act)',
           'Es gibt keinen bundesweiten Balkonkraftwerk-Rahmen — der Status jedes Bundesstaats ist unabhängig',
           'Diese Zahl verändert sich monatlich — deshalb wird diese Seite alle 60 Tage aktualisiert',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -219,8 +219,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `${signedStates.length} Bundesstaaten haben zum Redaktionsschluss (2026-07-02) Gesetze zu Balkonkraftwerken unterzeichnet: Utah, Maine, Virginia, Maryland, Colorado und Connecticut.`,
-          `${pendingStates.length} weitere Bundesstaaten — New York, New Hampshire, Vermont — haben das Staatsparlament passiert und warten auf die Unterschrift des Gouverneurs; sie sind noch KEIN Gesetz.`,
+          `${signedStates.length} Bundesstaaten haben zum Redaktionsschluss (2026-07-16) Gesetze zu Balkonkraftwerken unterzeichnet: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont und Connecticut. Colorado (1. Januar 2027) und Connecticut (1. Oktober 2026) sind unterzeichnet, aber noch nicht in Kraft.`,
+          `${pendingStates.length} weiterer Bundesstaat — New York — hat das Staatsparlament passiert und wartet auf die Unterschrift des Gouverneurs; er ist noch KEIN Gesetz.`,
           'Colorado hat die höchste bestätigte staatliche Wattgrenze mit 1.920 W.',
           'Es gibt keinen bundesweiten Balkonkraftwerk-Rahmen — der Status jedes Bundesstaats ist vollständig unabhängig, und die meisten Bundesstaaten haben das Thema noch gar nicht aufgegriffen.',
           'Die Unterzeichnungsdaten für CO/MD/CT wurden nur über sekundäre Tracker und nicht anhand primärer Gesetzestexte verifiziert — vor Verwendung genauer Daten bitte mit offiziellen Bundesstaatenregistern bestätigen.',
@@ -269,14 +269,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: 'Virginia',
         content: [
-          '**Virginia hat HB 395/SB 250 am 22. April 2026 unterzeichnet, mit einem Inkrafttreten im Januar 2027** — das Gesetz ist unterzeichnet, aber zum Redaktionsschluss noch nicht in Kraft.',
+          '**Virginia hat HB 395/SB 250 am 22. April 2026 unterzeichnet, in Kraft seit 1. Juli 2026** — das Gesetz ist unterzeichnet und zum Redaktionsschluss bereits in Kraft; Kommunen dürfen Balkonkraftwerke innerhalb der 1.200-W-Obergrenze des Bundesstaats nicht verbieten.',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: 'Beobachtungswerte Bundesstaaten',
         content: [
-          '**New Yorks SUNNY Act sowie Gesetze in New Hampshire und Vermont haben ihre jeweiligen Staatsparlamente passiert und warten auf die Unterschrift des Gouverneurs — sie stehen noch aus, sind noch kein Gesetz und könnten sich vor der Unterzeichnung noch ändern.**',
+          '**New Yorks SUNNY Act hat das Staatsparlament passiert und wartet auf die Unterschrift des Gouverneurs — es steht noch aus, ist noch kein Gesetz und könnte sich vor der Unterzeichnung noch ändern.** New Hampshire und Vermont, zuvor in dieser Kategorie geführt, gelten inzwischen als unterzeichnet — siehe die Bundesstaaten-Tabelle oben.',
         ],
       },
       checkYourUtility: {
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufige Fragen',
         faqs: [
-          { q: 'Welche US-Bundesstaaten haben Balkonkraftwerke legalisiert?', a: 'Zum Redaktionsschluss haben sechs Bundesstaaten Gesetze unterzeichnet: Utah, Maine, Virginia, Maryland, Colorado und Connecticut. Drei weitere — New York, New Hampshire und Vermont — haben ihr Staatsparlament passiert und warten auf die Unterschrift des Gouverneurs.' },
+          { q: 'Welche US-Bundesstaaten haben Balkonkraftwerke legalisiert?', a: 'Zum Redaktionsschluss haben acht Bundesstaaten Gesetze unterzeichnet: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont und Connecticut. Ein weiterer — New York — hat sein Staatsparlament passiert und wartet auf die Unterschrift des Gouverneurs. Zwei der 8 unterzeichneten Bundesstaaten (Colorado, Connecticut) sind noch nicht in Kraft.' },
           { q: 'Sind Balkonkraftwerke in nicht gelisteten Bundesstaaten illegal?', a: 'Nicht notwendigerweise illegal — die meisten nicht gelisteten Bundesstaaten haben Balkonkraftwerke einfach noch nicht spezifisch geregelt. Der Status ist ungeklärt, nicht eindeutig legal oder illegal; erkundigen Sie sich beim lokalen Netzbetreiber.' },
           { q: 'Welcher Bundesstaat hat die höchste Wattgrenze?', a: 'Colorado mit 1.920 W — die höchste bestätigte Grenze aller gefundenen US-Bundesstaatengesetze für Balkonkraftwerke.' },
           { q: 'Gibt es ein bundesweites Balkonkraftwerk-Gesetz?', a: 'Nein. Es gibt keinen bundesweiten Legalisierungsrahmen — nur UL 3700, einen bundesweiten Sicherheitszertifizierungsstandard, der von der staatlichen Legalisierung getrennt ist und Balkonkraftwerke selbst nirgendwo legal macht.' },
@@ -328,25 +328,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `Hasta la fecha de esta publicación, ${signedStates.length} estados de EE. UU. han convertido en ley la legislación sobre balcony solar, y ${pendingStates.length} más han sido aprobados por su legislatura estatal y esperan la firma del gobernador. No existe un marco federal: la legalidad se determina estado por estado, y la mayoría de los estados todavía no ha abordado específicamente el balcony solar.`,
     metaDescription: `¿Es legal el balcony solar en tu estado de EE. UU.? ${signedStates.length} estados han firmado legislación hasta la fecha de esta publicación, con más pendientes — estado verificado por estado, actualizado en julio de 2026.`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores en EE. UU. que quieren saber si el balcony solar es legal en su estado específico',
     primaryTerm: 'balcony solar legal states',
     targetKeywords: ['es legal el balcony solar en mi estado', 'leyes estatales de balcony solar en ee. uu.', 'estados donde es legal el solar enchufable', 'legislación de balcony solar 2026'],
-    leadAnswerBlock: `**Hasta la fecha de esta publicación (2026-07-02), ${signedStates.length} estados de EE. UU. han convertido en ley la legislación sobre balcony solar — Utah, Maine, Virginia, Maryland, Colorado y Connecticut — con ${pendingStates.length} más (Nueva York, New Hampshire y Vermont) ya aprobados por su legislatura estatal y a la espera de la firma del gobernador.** No existe una ley federal de balcony solar; si tu estado no aparece en ninguna de las dos listas, su estado actual es simplemente indeterminado, no claramente legal ni ilegal — consulta con tu compañía eléctrica local antes de asumir cualquiera de las dos opciones.`,
+    leadAnswerBlock: `**Hasta la fecha de esta publicación (2026-07-16), ${signedStates.length} estados de EE. UU. han convertido en ley la legislación sobre balcony solar — Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont y Connecticut — con ${pendingStates.length} más (Nueva York) ya aprobado por su legislatura estatal y a la espera de la firma del gobernador. Dos de los 8 estados firmantes aún no están en vigor: Colorado entra en vigor el 1 de enero de 2027 y Connecticut el 1 de octubre de 2026.** No existe una ley federal de balcony solar; si tu estado no aparece en ninguna de las dos listas, su estado actual es simplemente indeterminado, no claramente legal ni ilegal — consulta con tu compañía eléctrica local antes de asumir cualquiera de las dos opciones.`,
     quickAnswerTop: {
       es: {
         question: '¿Qué estados de EE. UU. han legalizado el balcony solar?',
-        answer: `Seis estados han firmado legislación sobre balcony solar hasta la fecha de esta publicación: Utah (el primero, HB 340), Maine, Virginia, Maryland, Colorado (el límite de potencia más alto, 1920 W) y Connecticut. Tres más — Nueva York, New Hampshire y Vermont — ya fueron aprobados por su legislatura estatal y esperan la firma del gobernador. No existe un marco federal; la mayoría de los demás estados todavía no ha abordado específicamente el balcony solar.`,
+        answer: `Ocho estados han firmado legislación sobre balcony solar hasta la fecha de esta publicación: Utah (el primero, HB 340), Maine, Virginia, Maryland, Colorado (el límite de potencia más alto, 1920 W), New Hampshire, Vermont y Connecticut. Uno más — Nueva York — ya fue aprobado por su legislatura estatal y espera la firma del gobernador. No existe un marco federal; la mayoría de los demás estados todavía no ha abordado específicamente el balcony solar.`,
         bullets: [
-          'Firmados: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), Connecticut (HB 5340)',
+          'Firmados: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), New Hampshire (SB 540), Vermont (S.202/H.598), Connecticut (HB 5340)',
           'Colorado tiene el límite de potencia confirmado más alto de cualquier estado, con 1920 W',
-          'Pendientes de firma del gobernador: Nueva York (SUNNY Act), New Hampshire, Vermont',
+          'Pendiente de firma del gobernador: Nueva York (SUNNY Act)',
           'No existe un marco federal de balcony solar — el estado de cada uno es independiente',
           'Este conteo cambia mensualmente — por eso esta página se actualiza cada 60 días',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -366,8 +366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `${signedStates.length} estados han firmado legislación sobre balcony solar hasta la fecha de esta publicación (2026-07-02): Utah, Maine, Virginia, Maryland, Colorado y Connecticut.`,
-          `${pendingStates.length} estados más — Nueva York, New Hampshire y Vermont — han sido aprobados por su legislatura y esperan la firma del gobernador; TODAVÍA no son ley.`,
+          `${signedStates.length} estados han firmado legislación sobre balcony solar hasta la fecha de esta publicación (2026-07-16): Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont y Connecticut. Colorado (1 de enero de 2027) y Connecticut (1 de octubre de 2026) están firmados pero aún no en vigor.`,
+          `${pendingStates.length} estado más — Nueva York — ha sido aprobado por su legislatura y espera la firma del gobernador; TODAVÍA no es ley.`,
           'Colorado tiene el límite de potencia estatal confirmado más alto, con 1920 W.',
           'No existe un marco federal de balcony solar — el estado de cada uno es totalmente independiente, y la mayoría de los estados todavía no ha abordado el tema.',
           'Las fechas de firma de CO/MD/CT solo se verificaron mediante rastreadores secundarios, no con el texto legislativo primario — confírmalas con los registros oficiales del estado antes de basarte en una fecha exacta.',
@@ -416,14 +416,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: 'Virginia',
         content: [
-          '**Virginia firmó la HB 395/SB 250 el 22 de abril de 2026, con fecha de vigencia en enero de 2027** — lo que significa que la ley está firmada pero aún no está en vigor hasta la fecha de esta publicación.',
+          '**Virginia firmó la HB 395/SB 250 el 22 de abril de 2026, con vigencia desde el 1 de julio de 2026** — la ley está firmada y ya en vigor hasta la fecha de esta publicación; los gobiernos locales no pueden prohibir el balcony solar dentro del límite estatal de 1200 W.',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: 'Estados a seguir',
         content: [
-          '**La SUNNY Act de Nueva York, junto con proyectos de ley en New Hampshire y Vermont, ya fueron aprobados por sus respectivas legislaturas estatales y esperan la firma del gobernador — están pendientes, todavía no son ley, y podrían cambiar antes de firmarse.**',
+          '**La SUNNY Act de Nueva York ya fue aprobada por la legislatura estatal y espera la firma del gobernador — está pendiente, todavía no es ley, y podría cambiar antes de firmarse.** New Hampshire y Vermont, antes en esta categoría, ahora están confirmados como firmados — consulta la tabla de estados más arriba.',
         ],
       },
       checkYourUtility: {
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué estados de EE. UU. han legalizado el balcony solar?', a: 'Seis estados han firmado legislación hasta la fecha de esta publicación: Utah, Maine, Virginia, Maryland, Colorado y Connecticut. Tres más — Nueva York, New Hampshire y Vermont — ya fueron aprobados por su legislatura y esperan la firma del gobernador.' },
+          { q: '¿Qué estados de EE. UU. han legalizado el balcony solar?', a: 'Ocho estados han firmado legislación hasta la fecha de esta publicación: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont y Connecticut. Uno más — Nueva York — ya fue aprobado por su legislatura y espera la firma del gobernador. Dos de los 8 estados firmantes (Colorado, Connecticut) aún no están en vigor.' },
           { q: '¿Es ilegal el balcony solar en los estados que no están en esta lista?', a: 'No necesariamente ilegal — la mayoría de los estados no listados simplemente no ha abordado el balcony solar de forma específica. Su estado es indeterminado, no claramente legal ni ilegal; consulta con tu compañía eléctrica local.' },
           { q: '¿Qué estado tiene el límite de potencia más alto?', a: 'Colorado, con 1920 W — el límite confirmado más alto de cualquier ley estatal de balcony solar en EE. UU. encontrada.' },
           { q: '¿Existe una ley federal de balcony solar?', a: 'No. No existe un marco de legalización federal — solo UL 3700, un estándar federal de certificación de seguridad, que es independiente de la legalización estatal y por sí mismo no hace legal el balcony solar en ningún lugar.' },
@@ -475,25 +475,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `Até o momento desta publicação, ${signedStates.length} estados dos EUA sancionaram legislação sobre energia solar de varanda, e mais ${pendingStates.length} já foram aprovados pela assembleia legislativa estadual e aguardam a assinatura do governador. Não existe uma estrutura federal — a legalidade é determinada inteiramente estado a estado, e a maioria dos estados ainda não tratou especificamente da energia solar de varanda.`,
     metaDescription: `A energia solar de varanda é legal no seu estado dos EUA? ${signedStates.length} estados sancionaram legislação até o momento desta publicação, com mais pendentes — status verificado estado a estado, atualizado em julho de 2026.`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Compradores nos EUA que querem saber se a energia solar de varanda é legal no seu estado específico',
     primaryTerm: 'balcony solar legal states',
     targetKeywords: ['energia solar de varanda é legal no meu estado', 'leis estaduais de energia solar de varanda nos eua', 'estados onde o solar plug-and-play é legal', 'legislação de energia solar de varanda 2026'],
-    leadAnswerBlock: `**Até o momento desta publicação (2026-07-02), ${signedStates.length} estados dos EUA sancionaram legislação sobre energia solar de varanda — Utah, Maine, Virginia, Maryland, Colorado e Connecticut — com mais ${pendingStates.length} (Nova York, New Hampshire e Vermont) já aprovados pela assembleia legislativa estadual e aguardando a assinatura do governador.** Não existe uma lei federal de energia solar de varanda; se o seu estado não estiver em nenhuma das duas listas, o status atual é simplesmente indeterminado, e não claramente legal ou ilegal — verifique com a sua concessionária de energia local antes de presumir qualquer uma das opções.`,
+    leadAnswerBlock: `**Até o momento desta publicação (2026-07-16), ${signedStates.length} estados dos EUA sancionaram legislação sobre energia solar de varanda — Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont e Connecticut — com mais ${pendingStates.length} (Nova York) já aprovado pela assembleia legislativa estadual e aguardando a assinatura do governador. Dois dos 8 estados sancionadores ainda não estão em vigor: Colorado entra em vigor em 1º de janeiro de 2027 e Connecticut em 1º de outubro de 2026.** Não existe uma lei federal de energia solar de varanda; se o seu estado não estiver em nenhuma das duas listas, o status atual é simplesmente indeterminado, e não claramente legal ou ilegal — verifique com a sua concessionária de energia local antes de presumir qualquer uma das opções.`,
     quickAnswerTop: {
       pt: {
         question: 'Quais estados dos EUA legalizaram a energia solar de varanda?',
-        answer: `Seis estados sancionaram legislação sobre energia solar de varanda até o momento desta publicação: Utah (o primeiro, HB 340), Maine, Virginia, Maryland, Colorado (o maior limite de potência, 1920 W) e Connecticut. Mais três — Nova York, New Hampshire e Vermont — já foram aprovados pela assembleia legislativa estadual e aguardam a assinatura do governador. Não existe uma estrutura federal; a maioria dos outros estados ainda não tratou especificamente da energia solar de varanda.`,
+        answer: `Oito estados sancionaram legislação sobre energia solar de varanda até o momento desta publicação: Utah (o primeiro, HB 340), Maine, Virginia, Maryland, Colorado (o maior limite de potência, 1920 W), New Hampshire, Vermont e Connecticut. Mais um — Nova York — já foi aprovado pela assembleia legislativa estadual e aguarda a assinatura do governador. Não existe uma estrutura federal; a maioria dos outros estados ainda não tratou especificamente da energia solar de varanda.`,
         bullets: [
-          'Sancionados: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), Connecticut (HB 5340)',
+          'Sancionados: Utah (HB 340), Maine (LD 1730), Virginia (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), New Hampshire (SB 540), Vermont (S.202/H.598), Connecticut (HB 5340)',
           'Colorado tem o maior limite de potência confirmado entre todos os estados, com 1920 W',
-          'Aguardando assinatura do governador: Nova York (SUNNY Act), New Hampshire, Vermont',
+          'Aguardando assinatura do governador: Nova York (SUNNY Act)',
           'Não existe uma estrutura federal de energia solar de varanda — o status de cada estado é independente',
           'Essa contagem muda mensalmente — por isso esta página é atualizada a cada 60 dias',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -513,8 +513,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `${signedStates.length} estados sancionaram legislação sobre energia solar de varanda até o momento desta publicação (2026-07-02): Utah, Maine, Virginia, Maryland, Colorado e Connecticut.`,
-          `Mais ${pendingStates.length} estados — Nova York, New Hampshire e Vermont — foram aprovados pela assembleia legislativa e aguardam a assinatura do governador; AINDA NÃO são lei.`,
+          `${signedStates.length} estados sancionaram legislação sobre energia solar de varanda até o momento desta publicação (2026-07-16): Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont e Connecticut. Colorado (1º de janeiro de 2027) e Connecticut (1º de outubro de 2026) estão sancionados, mas ainda não em vigor.`,
+          `Mais ${pendingStates.length} estado — Nova York — foi aprovado pela assembleia legislativa e aguarda a assinatura do governador; AINDA NÃO é lei.`,
           'Colorado tem o maior limite de potência estadual confirmado, com 1920 W.',
           'Não existe uma estrutura federal de energia solar de varanda — o status de cada estado é totalmente independente, e a maioria dos estados ainda não tratou do assunto.',
           'As datas de sanção de CO/MD/CT foram verificadas apenas por meio de rastreadores secundários, não pelo texto legislativo primário — confirme com os registros oficiais do estado antes de confiar em uma data exata.',
@@ -563,14 +563,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: 'Virginia',
         content: [
-          '**Virginia sancionou a HB 395/SB 250 em 22 de abril de 2026, com vigência prevista para janeiro de 2027** — o que significa que a lei está sancionada, mas ainda não está em vigor até o momento desta publicação.',
+          '**Virginia sancionou a HB 395/SB 250 em 22 de abril de 2026, em vigor desde 1º de julho de 2026** — a lei está sancionada e já em vigor até o momento desta publicação; os governos locais não podem proibir a energia solar de varanda dentro do limite estadual de 1200 W.',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: 'Estados para acompanhar',
         content: [
-          '**A SUNNY Act de Nova York, junto com projetos de lei em New Hampshire e Vermont, já foram aprovados por suas respectivas assembleias legislativas estaduais e aguardam a assinatura do governador — eles estão pendentes, ainda não são lei, e podem mudar antes da sanção.**',
+          '**A SUNNY Act de Nova York já foi aprovada pela assembleia legislativa estadual e aguarda a assinatura do governador — está pendente, ainda não é lei, e pode mudar antes da sanção.** New Hampshire e Vermont, antes nesta categoria, agora estão confirmados como sancionados — veja a tabela de estados acima.',
         ],
       },
       checkYourUtility: {
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Quais estados dos EUA legalizaram a energia solar de varanda?', a: 'Seis estados sancionaram legislação até o momento desta publicação: Utah, Maine, Virginia, Maryland, Colorado e Connecticut. Mais três — Nova York, New Hampshire e Vermont — já foram aprovados pela assembleia legislativa e aguardam a assinatura do governador.' },
+          { q: 'Quais estados dos EUA legalizaram a energia solar de varanda?', a: 'Oito estados sancionaram legislação até o momento desta publicação: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont e Connecticut. Mais um — Nova York — já foi aprovado pela assembleia legislativa e aguarda a assinatura do governador. Dois dos 8 estados sancionadores (Colorado, Connecticut) ainda não estão em vigor.' },
           { q: 'A energia solar de varanda é ilegal em estados que não estão nesta lista?', a: 'Não necessariamente ilegal — a maioria dos estados não listados simplesmente ainda não tratou da energia solar de varanda especificamente. O status é indeterminado, e não claramente legal ou ilegal; verifique com sua concessionária local.' },
           { q: 'Qual estado tem o maior limite de potência?', a: 'Colorado, com 1920 W — o maior limite confirmado entre as leis estaduais de energia solar de varanda dos EUA encontradas.' },
           { q: 'Existe uma lei federal de energia solar de varanda?', a: 'Não. Não existe uma estrutura de legalização federal — apenas a UL 3700, um padrão federal de certificação de segurança, que é independente da legalização estadual e não torna, por si só, a energia solar de varanda legal em lugar nenhum.' },
@@ -622,25 +622,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `حتى وقت كتابة هذا التقرير، وقّعت ${signedStates.length} ولايات أمريكية على تشريعات الطاقة الشمسية للشرفات لتصبح قانونًا، وأقرّت ${pendingStates.length} ولايات أخرى مشروعات القانون في مجالسها التشريعية وهي بانتظار توقيع الحاكم. لا يوجد إطار عمل فيدرالي — تُحدَّد القانونية بالكامل على مستوى كل ولاية على حدة، ومعظم الولايات لم تتناول موضوع الطاقة الشمسية للشرفات تحديدًا بعد.`,
     metaDescription: `هل الطاقة الشمسية للشرفات قانونية في ولايتك الأمريكية؟ وقّعت ${signedStates.length} ولايات على تشريعات حتى وقت كتابة هذا التقرير، مع وجود المزيد قيد الانتظار — حالة موثّقة لكل ولاية، محدّثة في يوليو 2026.`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المشترون في الولايات المتحدة الذين يريدون معرفة ما إذا كانت الطاقة الشمسية للشرفات قانونية في ولايتهم تحديدًا',
     primaryTerm: 'balcony solar legal states',
     targetKeywords: ['هل الطاقة الشمسية للشرفة قانونية في ولايتي', 'قوانين الطاقة الشمسية للشرفات في الولايات الأمريكية', 'الولايات التي تسمح بالطاقة الشمسية القابلة للتوصيل', 'تشريعات الطاقة الشمسية للشرفات 2026'],
-    leadAnswerBlock: `**حتى وقت كتابة هذا التقرير (2026-07-02)، وقّعت ${signedStates.length} ولايات أمريكية على تشريعات الطاقة الشمسية للشرفات لتصبح قانونًا — يوتا وماين وفيرجينيا وماريلاند وكولورادو وكونيتيكت — بينما أقرّت ${pendingStates.length} ولايات أخرى (نيويورك ونيوهامبشير وفيرمونت) مشروعات القانون في مجالسها التشريعية وهي بانتظار توقيع الحاكم.** لا يوجد قانون فيدرالي للطاقة الشمسية للشرفات؛ فإذا لم تكن ولايتك ضمن أي من القائمتين، فإن وضعها الحالي غير محدد ببساطة، وليس قانونيًا أو غير قانوني بشكل واضح — تحقق من شركة الكهرباء المحلية لديك قبل افتراض أي من الاحتمالين.`,
+    leadAnswerBlock: `**حتى وقت كتابة هذا التقرير (2026-07-16)، وقّعت ${signedStates.length} ولايات أمريكية على تشريعات الطاقة الشمسية للشرفات لتصبح قانونًا — يوتا وماين وفيرجينيا وماريلاند وكولورادو ونيوهامبشير وفيرمونت وكونيتيكت — بينما أقرّت ${pendingStates.length} ولاية أخرى (نيويورك) مشروع القانون في مجلسها التشريعي وهي بانتظار توقيع الحاكم. ولايتان من الولايات الثماني الموقِّعة لم تدخلا حيز التنفيذ بعد: كولورادو تدخل حيز التنفيذ في 1 يناير 2027، وكونيتيكت في 1 أكتوبر 2026.** لا يوجد قانون فيدرالي للطاقة الشمسية للشرفات؛ فإذا لم تكن ولايتك ضمن أي من القائمتين، فإن وضعها الحالي غير محدد ببساطة، وليس قانونيًا أو غير قانوني بشكل واضح — تحقق من شركة الكهرباء المحلية لديك قبل افتراض أي من الاحتمالين.`,
     quickAnswerTop: {
       ar: {
         question: 'ما هي الولايات الأمريكية التي أقرّت قانونية الطاقة الشمسية للشرفات؟',
-        answer: `وقّعت ست ولايات على تشريعات الطاقة الشمسية للشرفات حتى وقت كتابة هذا التقرير: يوتا (الأولى، HB 340)، وماين، وفيرجينيا، وماريلاند، وكولورادو (أعلى سقف للقدرة الكهربائية عند 1920 واط)، وكونيتيكت. وأقرّت ثلاث ولايات أخرى — نيويورك ونيوهامبشير وفيرمونت — مشروعات القانون في مجالسها التشريعية وهي بانتظار توقيع الحاكم. لا يوجد إطار عمل فيدرالي؛ ومعظم الولايات الأخرى لم تتناول موضوع الطاقة الشمسية للشرفات تحديدًا بعد.`,
+        answer: `وقّعت ثماني ولايات على تشريعات الطاقة الشمسية للشرفات حتى وقت كتابة هذا التقرير: يوتا (الأولى، HB 340)، وماين، وفيرجينيا، وماريلاند، وكولورادو (أعلى سقف للقدرة الكهربائية عند 1920 واط)، ونيوهامبشير، وفيرمونت، وكونيتيكت. وأقرّت ولاية واحدة أخرى — نيويورك — مشروع القانون في مجلسها التشريعي وهي بانتظار توقيع الحاكم. لا يوجد إطار عمل فيدرالي؛ ومعظم الولايات الأخرى لم تتناول موضوع الطاقة الشمسية للشرفات تحديدًا بعد.`,
         bullets: [
-          'الولايات الموقِّعة: يوتا (HB 340)، ماين (LD 1730)، فيرجينيا (HB 395/SB 250)، ماريلاند (HB 1532)، كولورادو (HB 26-1007)، كونيتيكت (HB 5340)',
+          'الولايات الموقِّعة: يوتا (HB 340)، ماين (LD 1730)، فيرجينيا (HB 395/SB 250)، ماريلاند (HB 1532)، كولورادو (HB 26-1007)، نيوهامبشير (SB 540)، فيرمونت (S.202/H.598)، كونيتيكت (HB 5340)',
           'كولورادو لديها أعلى سقف مؤكَّد للقدرة الكهربائية بين جميع الولايات عند 1920 واط',
-          'بانتظار توقيع الحاكم: نيويورك (SUNNY Act)، نيوهامبشير، فيرمونت',
+          'بانتظار توقيع الحاكم: نيويورك (SUNNY Act)',
           'لا يوجد إطار عمل فيدرالي للطاقة الشمسية للشرفات — وضع كل ولاية مستقل تمامًا',
           'يتغيّر هذا العدد شهريًا — ولهذا السبب تُحدَّث هذه الصفحة كل 60 يومًا',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -660,8 +660,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `وقّعت ${signedStates.length} ولايات على تشريعات الطاقة الشمسية للشرفات حتى وقت كتابة هذا التقرير (2026-07-02): يوتا وماين وفيرجينيا وماريلاند وكولورادو وكونيتيكت.`,
-          `أقرّت ${pendingStates.length} ولايات أخرى — نيويورك ونيوهامبشير وفيرمونت — مشروعات القانون في مجالسها التشريعية وهي بانتظار توقيع الحاكم؛ وهي ليست قانونًا بعد.`,
+          `وقّعت ${signedStates.length} ولايات على تشريعات الطاقة الشمسية للشرفات حتى وقت كتابة هذا التقرير (2026-07-16): يوتا وماين وفيرجينيا وماريلاند وكولورادو ونيوهامبشير وفيرمونت وكونيتيكت. كولورادو (1 يناير 2027) وكونيتيكت (1 أكتوبر 2026) موقَّعتان لكن لم تدخلا حيز التنفيذ بعد.`,
+          `أقرّت ${pendingStates.length} ولاية أخرى — نيويورك — مشروع القانون في مجلسها التشريعي وهي بانتظار توقيع الحاكم؛ وهي ليست قانونًا بعد.`,
           'كولورادو لديها أعلى سقف مؤكَّد للقدرة الكهربائية على مستوى الولايات عند 1920 واط.',
           'لا يوجد إطار عمل فيدرالي للطاقة الشمسية للشرفات — وضع كل ولاية مستقل تمامًا، ومعظم الولايات لم تتناول الموضوع على الإطلاق بعد.',
           'تم التحقق من تواريخ التوقيع في كولورادو وماريلاند وكونيتيكت فقط عبر متتبّعات ثانوية، وليس النص التشريعي الأساسي — تأكد منها عبر السجلات الرسمية للولاية قبل الاعتماد على تاريخ محدد.',
@@ -710,14 +710,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: 'فيرجينيا',
         content: [
-          '**وقّعت فيرجينيا على HB 395/SB 250 في 22 أبريل 2026، على أن يدخل حيز التنفيذ في يناير 2027** — ما يعني أن القانون موقّع لكنه لم يدخل حيز التنفيذ بعد حتى وقت كتابة هذا التقرير.',
+          '**وقّعت فيرجينيا على HB 395/SB 250 في 22 أبريل 2026، ودخل حيز التنفيذ في 1 يوليو 2026** — القانون موقّع ودخل حيز التنفيذ بالفعل حتى وقت كتابة هذا التقرير؛ ولا يمكن للحكومات المحلية حظر الطاقة الشمسية للشرفات ضمن سقف الولاية البالغ 1200 واط.',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: 'ولايات يجب متابعتها',
         content: [
-          '**أقرّ قانون SUNNY الخاص بنيويورك، إلى جانب مشروعات قوانين في نيوهامبشير وفيرمونت، مجالسها التشريعية المعنية وهي بانتظار توقيع الحاكم — وهذه القوانين لا تزال قيد الانتظار، وليست قانونًا بعد، وقد تتغيّر قبل التوقيع.**',
+          '**أقرّ قانون SUNNY الخاص بنيويورك مجلسها التشريعي وهو بانتظار توقيع الحاكم — لا يزال قيد الانتظار، وليس قانونًا بعد، وقد يتغيّر قبل التوقيع.** أما نيوهامبشير وفيرمونت، اللتان كانتا مدرجتين سابقًا في هذه الفئة، فأصبحتا الآن مؤكَّدتين كولايتين موقِّعتين — انظر جدول الولايات أعلاه.',
         ],
       },
       checkYourUtility: {
@@ -734,7 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هي الولايات الأمريكية التي أقرّت قانونية الطاقة الشمسية للشرفات؟', a: 'وقّعت ست ولايات على تشريعات حتى وقت كتابة هذا التقرير: يوتا وماين وفيرجينيا وماريلاند وكولورادو وكونيتيكت. وأقرّت ثلاث ولايات أخرى — نيويورك ونيوهامبشير وفيرمونت — مشروعات القانون في مجالسها التشريعية وهي بانتظار توقيع الحاكم.' },
+          { q: 'ما هي الولايات الأمريكية التي أقرّت قانونية الطاقة الشمسية للشرفات؟', a: 'وقّعت ثماني ولايات على تشريعات حتى وقت كتابة هذا التقرير: يوتا وماين وفيرجينيا وماريلاند وكولورادو ونيوهامبشير وفيرمونت وكونيتيكت. وأقرّت ولاية واحدة أخرى — نيويورك — مشروع القانون في مجلسها التشريعي وهي بانتظار توقيع الحاكم. ولايتان من الولايات الثماني الموقِّعة (كولورادو وكونيتيكت) لم تدخلا حيز التنفيذ بعد.' },
           { q: 'هل الطاقة الشمسية للشرفات غير قانونية في الولايات غير المدرجة في هذه القائمة؟', a: 'ليست غير قانونية بالضرورة — فمعظم الولايات غير المدرجة ببساطة لم تتناول موضوع الطاقة الشمسية للشرفات تحديدًا بعد. الوضع غير محدد وليس قانونيًا أو غير قانوني بشكل واضح؛ تحقق من شركة الكهرباء المحلية لديك.' },
           { q: 'ما هي الولاية التي لديها أعلى سقف للقدرة الكهربائية؟', a: 'كولورادو، عند 1920 واط — وهو أعلى سقف مؤكَّد بين جميع قوانين الولايات الأمريكية للطاقة الشمسية للشرفات التي تم العثور عليها.' },
           { q: 'هل يوجد قانون فيدرالي للطاقة الشمسية للشرفات؟', a: 'لا. لا يوجد إطار عمل فيدرالي للتقنين — فقط معيار UL 3700، وهو معيار اعتماد فيدرالي للسلامة، وهو منفصل عن التقنين على مستوى الولاية ولا يجعل بحد ذاته الطاقة الشمسية للشرفات قانونية في أي مكان.' },
@@ -769,25 +769,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `執筆時点で、米国では${signedStates.length}州がバルコニーソーラーに関する法律に署名し、さらに${pendingStates.length}州が州議会を通過して知事の署名待ちとなっている。連邦レベルの枠組みは存在せず、合法性は完全に州ごとに決まる。ほとんどの州はまだバルコニーソーラーについて 具体的に取り上げていない。`,
     metaDescription: `あなたの州でバルコニーソーラーは合法? 執筆時点で${signedStates.length}州が法律に署名済み、さらに審議中の州もある — 州別の最新状況、2026年7月更新。`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '約9分',
     educationalLevel: 'Intermediate',
     audience: '自分の州でバルコニーソーラーが合法かどうかを確認したい米国の購入検討者',
     primaryTerm: 'balcony solar legal states',
     targetKeywords: ['バルコニーソーラー 自分の州 合法', '米国 バルコニーソーラー 州法', 'プラグイン ソーラー 合法な州', 'バルコニーソーラー 法律 2026'],
-    leadAnswerBlock: `**執筆時点(2026-07-02)で、米国の${signedStates.length}州がバルコニーソーラーに関する法律に署名済みだ — ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、コネチカット州 — さらに${pendingStates.length}州(ニューヨーク州、ニューハンプシャー州、バーモント州)が州議会を通過し、知事の署名待ちとなっている。** バルコニーソーラーに関する連邦法は存在しない。あなたの州がどちらのリストにも載っていない場合、現状は「明確に合法」でも「違法」でもなく、単に未確定というだけだ — どちらとも決めつける前に、地元の電力会社に確認してほしい。`,
+    leadAnswerBlock: `**執筆時点(2026-07-16)で、米国の${signedStates.length}州がバルコニーソーラーに関する法律に署名済みだ — ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、ニューハンプシャー州、バーモント州、コネチカット州 — さらに${pendingStates.length}州(ニューヨーク州)が州議会を通過し、知事の署名待ちとなっている。署名済み8州のうち2州はまだ発効していない:コロラド州は2027年1月1日、コネチカット州は2026年10月1日に発効する。** バルコニーソーラーに関する連邦法は存在しない。あなたの州がどちらのリストにも載っていない場合、現状は「明確に合法」でも「違法」でもなく、単に未確定というだけだ — どちらとも決めつける前に、地元の電力会社に確認してほしい。`,
     quickAnswerTop: {
       ja: {
         question: '米国でバルコニーソーラーを合法化した州はどこ?',
-        answer: `執筆時点で6州がバルコニーソーラーに関する法律に署名済みだ:ユタ州(最初、HB 340)、メイン州、バージニア州、メリーランド州、コロラド州(最高出力上限1,920W)、コネチカット州。さらに3州 — ニューヨーク州、ニューハンプシャー州、バーモント州 — が州議会を通過し、知事の署名を待っている。連邦レベルの枠組みは存在せず、他のほとんどの州はまだバルコニーソーラーを 具体的に取り上げていない。`,
+        answer: `執筆時点で8州がバルコニーソーラーに関する法律に署名済みだ:ユタ州(最初、HB 340)、メイン州、バージニア州、メリーランド州、コロラド州(最高出力上限1,920W)、ニューハンプシャー州、バーモント州、コネチカット州。さらに1州 — ニューヨーク州 — が州議会を通過し、知事の署名を待っている。連邦レベルの枠組みは存在せず、他のほとんどの州はまだバルコニーソーラーを 具体的に取り上げていない。`,
         bullets: [
-          '署名済み: ユタ州(HB 340)、メイン州(LD 1730)、バージニア州(HB 395/SB 250)、メリーランド州(HB 1532)、コロラド州(HB 26-1007)、コネチカット州(HB 5340)',
+          '署名済み: ユタ州(HB 340)、メイン州(LD 1730)、バージニア州(HB 395/SB 250)、メリーランド州(HB 1532)、コロラド州(HB 26-1007)、ニューハンプシャー州(SB 540)、バーモント州(S.202/H.598)、コネチカット州(HB 5340)',
           'コロラド州は全州の中で最も高い確認済み出力上限(1,920W)を持つ',
-          '知事の署名待ち: ニューヨーク州(SUNNY Act)、ニューハンプシャー州、バーモント州',
+          '知事の署名待ち: ニューヨーク州(SUNNY Act)',
           '連邦レベルのバルコニーソーラー枠組みは存在しない — 各州の状況はそれぞれ独立している',
           'この件数は毎月変動する — だからこのページは60日ごとに更新される',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -807,8 +807,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `執筆時点(2026-07-02)で${signedStates.length}州がバルコニーソーラーに関する法律に署名済み: ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、コネチカット州。`,
-          `さらに${pendingStates.length}州 — ニューヨーク州、ニューハンプシャー州、バーモント州 — が州議会を通過し知事の署名を待っている。まだ法律ではない。`,
+          `執筆時点(2026-07-16)で${signedStates.length}州がバルコニーソーラーに関する法律に署名済み: ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、ニューハンプシャー州、バーモント州、コネチカット州。コロラド州(2027年1月1日)とコネチカット州(2026年10月1日)は署名済みだがまだ発効していない。`,
+          `さらに${pendingStates.length}州 — ニューヨーク州 — が州議会を通過し知事の署名を待っている。まだ法律ではない。`,
           'コロラド州は確認済みの中で最も高い州出力上限、1,920Wを持つ。',
           '連邦レベルのバルコニーソーラー枠組みは存在しない — 各州の状況は完全に独立しており、ほとんどの州はまだこの話題を取り上げていない。',
           'コロラド州・メリーランド州・コネチカット州の署名日は二次情報源のトラッカーでのみ相互確認されており、一次の法律文書では確認されていない — 正確な日付に依存する前に州の公式記録で確認すること。',
@@ -857,14 +857,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: 'バージニア州',
         content: [
-          '**バージニア州は2026年4月22日にHB 395/SB 250に署名し、発効日は2027年1月だ** — つまり法律は署名済みだが、執筆時点ではまだ発効していない。',
+          '**バージニア州は2026年4月22日にHB 395/SB 250に署名し、2026年7月1日に発効した** — 法律は署名済みで、執筆時点ですでに発効している。自治体は州の出力上限1,200W以内でバルコニーソーラーを禁止できない。',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: '注目すべき州',
         content: [
-          '**ニューヨーク州のSUNNY Actに加え、ニューハンプシャー州とバーモント州の法案は、それぞれの州議会を通過し知事の署名を待っている — これらは審議中であり、まだ法律ではなく、署名前に内容が変わる可能性もある。**',
+          '**ニューヨーク州のSUNNY Actは州議会を通過し知事の署名を待っている — 審議中であり、まだ法律ではなく、署名前に内容が変わる可能性もある。** 以前この区分に含まれていたニューハンプシャー州とバーモント州は、現在は署名済みと確認されている(上記の州別一覧表を参照)。',
         ],
       },
       checkYourUtility: {
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: '米国でバルコニーソーラーを合法化した州はどこ?', a: '執筆時点で6州が法律に署名済み: ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、コネチカット州。さらに3州 — ニューヨーク州、ニューハンプシャー州、バーモント州 — が州議会を通過し知事の署名を待っている。' },
+          { q: '米国でバルコニーソーラーを合法化した州はどこ?', a: '執筆時点で8州が法律に署名済み: ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、ニューハンプシャー州、バーモント州、コネチカット州。さらに1州 — ニューヨーク州 — が州議会を通過し知事の署名を待っている。署名済み8州のうち2州(コロラド州、コネチカット州)はまだ発効していない。' },
           { q: 'このリストにない州ではバルコニーソーラーは違法?', a: '必ずしも違法ではない — 未掲載のほとんどの州は単にバルコニーソーラーを 具体的に取り上げていないだけだ。状況は明確に合法でも違法でもなく未確定であり、地元の電力会社に確認してほしい。' },
           { q: 'どの州の出力上限が最も高い?', a: 'コロラド州で1,920W — 確認できた米国のバルコニーソーラー州法の中で最も高い上限だ。' },
           { q: 'バルコニーソーラーに関する連邦法はある?', a: 'ない。連邦レベルの合法化の枠組みは存在せず、あるのはUL 3700という連邦レベルの安全認証基準だけだ。これは州レベルの合法化とは別物であり、それ自体がどこかでバルコニーソーラーを合法にするわけではない。' },
@@ -916,25 +916,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `截至发稿时,美国已有${signedStates.length}个州签署了阳台光伏相关立法使其成为正式法律,另有${pendingStates.length}个州的法案已通过州议会,正等待州长签署。目前不存在联邦层面的统一框架——合法性完全由各州自行决定,大多数州尚未专门就阳台光伏立法。`,
     metaDescription: `阳台光伏在你所在的美国州合法吗?截至发稿时已有${signedStates.length}个州签署立法,更多州正在审议中——各州最新状态,2026年7月更新。`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '约9分钟',
     educationalLevel: 'Intermediate',
     audience: '想确认阳台光伏在自己所在州是否合法的美国买家',
     primaryTerm: '阳台光伏',
     targetKeywords: ['阳台光伏 我的州 合法吗', '美国 阳台光伏 州法', '插电式太阳能 合法的州', '阳台光伏 法规 2026'],
-    leadAnswerBlock: `**截至发稿时(2026-07-02),美国已有${signedStates.length}个州签署阳台光伏立法使其成为正式法律——犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州和康涅狄格州——另有${pendingStates.length}个州(纽约州、新罕布什尔州、佛蒙特州)的法案已通过州议会,正等待州长签署。** 目前没有联邦层面的阳台光伏法律;如果你所在的州不在以上两份名单中,其现状只是尚未明确,并非明确合法或违法——在做任何假设之前,先向当地电力公司核实。`,
+    leadAnswerBlock: `**截至发稿时(2026-07-16),美国已有${signedStates.length}个州签署阳台光伏立法使其成为正式法律——犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州和康涅狄格州——另有${pendingStates.length}个州(纽约州)的法案已通过州议会,正等待州长签署。已签署的8个州中有两个尚未生效:科罗拉多州将于2027年1月1日生效,康涅狄格州将于2026年10月1日生效。** 目前没有联邦层面的阳台光伏法律;如果你所在的州不在以上两份名单中,其现状只是尚未明确,并非明确合法或违法——在做任何假设之前,先向当地电力公司核实。`,
     quickAnswerTop: {
       zh: {
         question: '美国哪些州已将阳台光伏合法化?',
-        answer: `截至发稿时,已有六个州签署阳台光伏立法:犹他州(最早,HB 340)、缅因州、弗吉尼亚州、马里兰州、科罗拉多州(功率上限最高,1920W)以及康涅狄格州。另外三个州——纽约州、新罕布什尔州和佛蒙特州——的法案已通过州议会,正等待州长签署。目前不存在联邦层面的框架;其他大多数州尚未专门就阳台光伏立法。`,
+        answer: `截至发稿时,已有八个州签署阳台光伏立法:犹他州(最早,HB 340)、缅因州、弗吉尼亚州、马里兰州、科罗拉多州(功率上限最高,1920W)、新罕布什尔州、佛蒙特州以及康涅狄格州。另有一个州——纽约州——的法案已通过州议会,正等待州长签署。目前不存在联邦层面的框架;其他大多数州尚未专门就阳台光伏立法。`,
         bullets: [
-          '已签署:犹他州(HB 340)、缅因州(LD 1730)、弗吉尼亚州(HB 395/SB 250)、马里兰州(HB 1532)、科罗拉多州(HB 26-1007)、康涅狄格州(HB 5340)',
+          '已签署:犹他州(HB 340)、缅因州(LD 1730)、弗吉尼亚州(HB 395/SB 250)、马里兰州(HB 1532)、科罗拉多州(HB 26-1007)、新罕布什尔州(SB 540)、佛蒙特州(S.202/H.598)、康涅狄格州(HB 5340)',
           '科罗拉多州拥有各州中已确认的最高功率上限,达1920W',
-          '等待州长签署:纽约州(SUNNY Act)、新罕布什尔州、佛蒙特州',
+          '等待州长签署:纽约州(SUNNY Act)',
           '不存在联邦层面的阳台光伏框架——每个州的状态各自独立',
           '这一数字每月都在变化——这也是本页每60天更新一次的原因',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -954,8 +954,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `截至发稿时(2026-07-02),已有${signedStates.length}个州签署阳台光伏立法:犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、康涅狄格州。`,
-          `另有${pendingStates.length}个州——纽约州、新罕布什尔州、佛蒙特州——法案已通过州议会,正等待州长签署;目前尚未正式成为法律。`,
+          `截至发稿时(2026-07-16),已有${signedStates.length}个州签署阳台光伏立法:犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州、康涅狄格州。科罗拉多州(2027年1月1日)和康涅狄格州(2026年10月1日)已签署但尚未生效。`,
+          `另有${pendingStates.length}个州——纽约州——法案已通过州议会,正等待州长签署;目前尚未正式成为法律。`,
           '科罗拉多州拥有已确认的最高州级功率上限,达1920W。',
           '不存在联邦层面的阳台光伏框架——每个州的状态完全独立,大多数州尚未涉及这一话题。',
           '科罗拉多州、马里兰州、康涅狄格州的签署日期仅通过二手追踪信息源交叉核实,未查阅一手立法文本——在依赖具体日期前,请以州官方记录为准进行核实。',
@@ -1004,14 +1004,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: '弗吉尼亚州',
         content: [
-          '**弗吉尼亚州于2026年4月22日签署HB 395/SB 250,生效日期为2027年1月**——也就是说,该法律已经签署,但截至发稿时尚未正式生效。',
+          '**弗吉尼亚州于2026年4月22日签署HB 395/SB 250,自2026年7月1日起生效**——截至发稿时该法律已签署并已正式生效;地方政府不得在州级1200W上限范围内禁止阳台光伏。',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: '值得关注的州',
         content: [
-          '**纽约州的SUNNY Act,以及新罕布什尔州和佛蒙特州的相关法案,均已通过各自的州议会,正等待州长签署——这些法案仍处于审议阶段,尚未成为正式法律,在签署前仍有可能发生变化。**',
+          '**纽约州的SUNNY Act已通过州议会,正等待州长签署——该法案仍处于审议阶段,尚未成为正式法律,在签署前仍有可能发生变化。** 此前列入本类别的新罕布什尔州和佛蒙特州,现已确认完成签署——详见上方的各州状态一览表。',
         ],
       },
       checkYourUtility: {
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '美国哪些州已将阳台光伏合法化?', a: '截至发稿时,已有六个州签署立法:犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、康涅狄格州。另有三个州——纽约州、新罕布什尔州、佛蒙特州——法案已通过州议会,正等待州长签署。' },
+          { q: '美国哪些州已将阳台光伏合法化?', a: '截至发稿时,已有八个州签署立法:犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州、康涅狄格州。另有一个州——纽约州——法案已通过州议会,正等待州长签署。已签署的8个州中有两个(科罗拉多州、康涅狄格州)尚未生效。' },
           { q: '未列入名单的州,阳台光伏是否违法?', a: '不一定违法——大多数未列入名单的州只是尚未专门就阳台光伏立法。这些州的状态属于尚未明确,而非明确合法或违法;建议向当地电力公司核实。' },
           { q: '哪个州的功率上限最高?', a: '科罗拉多州,上限为1920W——是目前已发现的美国各州阳台光伏法律中已确认的最高上限。' },
           { q: '是否存在联邦层面的阳台光伏法律?', a: '没有。目前不存在联邦层面的合法化框架——只有UL 3700这一联邦级安全认证标准,它与州级合法化是两回事,本身并不能使阳台光伏在任何地方自动合法。' },
@@ -1063,25 +1063,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `Au moment de la rédaction, ${signedStates.length} États américains ont promulgué une législation sur le solaire de balcon, et ${pendingStates.length} de plus ont été adoptés par leur assemblée législative d'État et attendent la signature du gouverneur. Il n'existe aucun cadre fédéral — la légalité est déterminée entièrement État par État, et la plupart des États n'ont pas encore traité spécifiquement du solaire de balcon.`,
     metaDescription: `Le solaire de balcon est-il légal dans votre État américain ? ${signedStates.length} États ont promulgué une législation au moment de la rédaction, avec d'autres en attente — statut vérifié État par État, mis à jour en juillet 2026.`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Acheteurs américains cherchant à savoir si le solaire de balcon est légal dans leur État spécifique',
     primaryTerm: 'balcony solar legal states',
     targetKeywords: ['le solaire de balcon est-il légal dans mon état', 'lois des états américains sur le solaire de balcon', 'états où le solaire branchable est légal', 'législation sur le solaire de balcon 2026'],
-    leadAnswerBlock: `**Au moment de la rédaction (2026-07-02), ${signedStates.length} États américains ont promulgué une législation sur le solaire de balcon — l'Utah, le Maine, la Virginie, le Maryland, le Colorado et le Connecticut — et ${pendingStates.length} de plus (New York, le New Hampshire et le Vermont) ont été adoptés par leur assemblée législative d'État et attendent la signature du gouverneur.** Il n'existe aucune loi fédérale sur le solaire de balcon ; si votre État ne figure sur aucune des deux listes, son statut actuel est simplement indéterminé plutôt que clairement légal ou illégal — vérifiez auprès de votre fournisseur d'électricité local avant de présumer l'un ou l'autre.`,
+    leadAnswerBlock: `**Au moment de la rédaction (2026-07-16), ${signedStates.length} États américains ont promulgué une législation sur le solaire de balcon — l'Utah, le Maine, la Virginie, le Maryland, le Colorado, le New Hampshire, le Vermont et le Connecticut — et ${pendingStates.length} de plus (New York) a été adopté par son assemblée législative d'État et attend la signature du gouverneur. Deux des 8 États signataires ne sont pas encore en vigueur : le Colorado entre en vigueur le 1er janvier 2027 et le Connecticut le 1er octobre 2026.** Il n'existe aucune loi fédérale sur le solaire de balcon ; si votre État ne figure sur aucune des deux listes, son statut actuel est simplement indéterminé plutôt que clairement légal ou illégal — vérifiez auprès de votre fournisseur d'électricité local avant de présumer l'un ou l'autre.`,
     quickAnswerTop: {
       fr: {
         question: 'Quels États américains ont légalisé le solaire de balcon ?',
-        answer: `Six États ont promulgué une législation sur le solaire de balcon au moment de la rédaction : l'Utah (le premier, HB 340), le Maine, la Virginie, le Maryland, le Colorado (le plafond de puissance le plus élevé, à 1 920 W) et le Connecticut. Trois de plus — New York, le New Hampshire et le Vermont — ont été adoptés par leur assemblée législative d'État et attendent la signature du gouverneur. Il n'existe aucun cadre fédéral ; la plupart des autres États n'ont pas encore traité spécifiquement du solaire de balcon.`,
+        answer: `Huit États ont promulgué une législation sur le solaire de balcon au moment de la rédaction : l'Utah (le premier, HB 340), le Maine, la Virginie, le Maryland, le Colorado (le plafond de puissance le plus élevé, à 1 920 W), le New Hampshire, le Vermont et le Connecticut. Un de plus — New York — a été adopté par son assemblée législative d'État et attend la signature du gouverneur. Il n'existe aucun cadre fédéral ; la plupart des autres États n'ont pas encore traité spécifiquement du solaire de balcon.`,
         bullets: [
-          'Promulgués : Utah (HB 340), Maine (LD 1730), Virginie (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), Connecticut (HB 5340)',
+          'Promulgués : Utah (HB 340), Maine (LD 1730), Virginie (HB 395/SB 250), Maryland (HB 1532), Colorado (HB 26-1007), New Hampshire (SB 540), Vermont (S.202/H.598), Connecticut (HB 5340)',
           'Le Colorado détient le plafond de puissance confirmé le plus élevé de tous les États, à 1 920 W',
-          'En attente de la signature du gouverneur : New York (SUNNY Act), New Hampshire, Vermont',
+          'En attente de la signature du gouverneur : New York (SUNNY Act)',
           'Il n\'existe aucun cadre fédéral pour le solaire de balcon — le statut de chaque État est indépendant',
           'Ce décompte évolue chaque mois — c\'est pourquoi cette page est mise à jour tous les 60 jours',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -1101,8 +1101,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `${signedStates.length} États ont promulgué une législation sur le solaire de balcon au moment de la rédaction (2026-07-02) : Utah, Maine, Virginie, Maryland, Colorado et Connecticut.`,
-          `${pendingStates.length} États de plus — New York, New Hampshire, Vermont — ont été adoptés par leur assemblée législative et attendent la signature du gouverneur ; ils ne sont PAS encore en vigueur.`,
+          `${signedStates.length} États ont promulgué une législation sur le solaire de balcon au moment de la rédaction (2026-07-16) : Utah, Maine, Virginie, Maryland, Colorado, New Hampshire, Vermont et Connecticut. Le Colorado (1er janvier 2027) et le Connecticut (1er octobre 2026) sont signés mais pas encore en vigueur.`,
+          `${pendingStates.length} État de plus — New York — a été adopté par son assemblée législative et attend la signature du gouverneur ; il n'est PAS encore en vigueur.`,
           'Le Colorado détient le plafond de puissance d\'État confirmé le plus élevé, à 1 920 W.',
           'Il n\'existe aucun cadre fédéral pour le solaire de balcon — le statut de chaque État est totalement indépendant, et la plupart des États n\'ont pas encore abordé le sujet.',
           'Les dates de promulgation du CO/MD/CT n\'ont été vérifiées que via des sources secondaires, pas le texte législatif primaire — confirmez auprès des registres officiels de l\'État avant de vous fier à une date exacte.',
@@ -1151,14 +1151,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: 'Virginie',
         content: [
-          '**La Virginie a promulgué la HB 395/SB 250 le 22 avril 2026, avec une date d\'entrée en vigueur en janvier 2027** — ce qui signifie que la loi est signée mais pas encore en vigueur au moment de la rédaction.',
+          '**La Virginie a promulgué la HB 395/SB 250 le 22 avril 2026, entrée en vigueur le 1er juillet 2026** — la loi est signée et déjà en vigueur au moment de la rédaction ; les municipalités ne peuvent pas interdire le solaire de balcon dans la limite du plafond de l\'État de 1 200 W.',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: 'États à surveiller',
         content: [
-          '**Le SUNNY Act de New York, ainsi que des projets de loi au New Hampshire et au Vermont, ont été adoptés par leurs assemblées législatives respectives et attendent la signature du gouverneur — ils sont en attente, pas encore en vigueur, et pourraient encore évoluer avant leur promulgation.**',
+          '**Le SUNNY Act de New York a été adopté par l\'assemblée législative de l\'État et attend la signature du gouverneur — il est en attente, pas encore en vigueur, et pourrait encore évoluer avant sa promulgation.** Le New Hampshire et le Vermont, auparavant dans cette catégorie, sont désormais confirmés comme signés — voir le tableau des États ci-dessus.',
         ],
       },
       checkYourUtility: {
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quels États américains ont légalisé le solaire de balcon ?', a: 'Six États ont promulgué une législation au moment de la rédaction : Utah, Maine, Virginie, Maryland, Colorado et Connecticut. Trois de plus — New York, New Hampshire et Vermont — ont été adoptés par leur assemblée législative et attendent la signature du gouverneur.' },
+          { q: 'Quels États américains ont légalisé le solaire de balcon ?', a: 'Huit États ont promulgué une législation au moment de la rédaction : Utah, Maine, Virginie, Maryland, Colorado, New Hampshire, Vermont et Connecticut. Un de plus — New York — a été adopté par son assemblée législative et attend la signature du gouverneur. Deux des 8 États signataires (Colorado, Connecticut) ne sont pas encore en vigueur.' },
           { q: 'Le solaire de balcon est-il illégal dans les États non répertoriés ici ?', a: 'Pas nécessairement illégal — la plupart des États non répertoriés n\'ont simplement pas encore traité spécifiquement du solaire de balcon. Leur statut est indéterminé plutôt que clairement légal ou illégal ; vérifiez auprès de votre fournisseur d\'électricité local.' },
           { q: 'Quel État a le plafond de puissance le plus élevé ?', a: 'Le Colorado, à 1 920 W — le plafond confirmé le plus élevé de toutes les lois d\'État américaines sur le solaire de balcon trouvées.' },
           { q: 'Existe-t-il une loi fédérale sur le solaire de balcon ?', a: 'Non. Il n\'existe aucun cadre de légalisation fédéral — seulement l\'UL 3700, une norme fédérale de certification de sécurité, distincte de la légalisation au niveau des États et qui ne rend elle-même le solaire de balcon légal nulle part.' },
@@ -1210,25 +1210,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: `이 글 작성 시점 기준, 미국에서는 ${signedStates.length}개 주가 발코니 태양광 관련 법안에 서명하여 법으로 확정했으며, ${pendingStates.length}개 주가 추가로 주 의회를 통과해 주지사의 서명을 기다리고 있다. 연방 차원의 법적 프레임워크는 존재하지 않으며, 합법 여부는 전적으로 주 단위로 결정된다. 대부분의 주는 아직 발코니 태양광을 구체적으로 다루지 않았다.`,
     metaDescription: `내가 사는 미국 주에서 발코니 태양광이 합법인가요? 이 글 작성 시점 기준 ${signedStates.length}개 주가 법안에 서명했으며, 더 많은 주가 심의 중입니다 — 주별 최신 현황, 2026년 7월 업데이트.`,
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-07-16',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: '자신이 거주하는 주에서 발코니 태양광이 합법인지 확인하려는 미국 구매자',
     primaryTerm: 'balcony solar legal states',
     targetKeywords: ['내 주에서 발코니 태양광 합법인가', '미국 발코니 태양광 주법', '플러그인 태양광 합법 주', '발코니 태양광 법률 2026'],
-    leadAnswerBlock: `**이 글 작성 시점(2026-07-02) 기준, 미국의 ${signedStates.length}개 주가 발코니 태양광 관련 법안에 서명하여 법으로 확정했다 — 유타주, 메인주, 버지니아주, 메릴랜드주, 콜로라도주, 코네티컷주 — 그리고 ${pendingStates.length}개 주(뉴욕주, 뉴햄프셔주, 버몬트주)가 추가로 주 의회를 통과해 주지사의 서명을 기다리고 있다.** 발코니 태양광에 관한 연방법은 존재하지 않는다. 자신의 주가 두 명단 어디에도 없다면, 현재 상태는 명확히 합법도 불법도 아닌 단순히 미확정 상태다 — 어느 쪽이든 단정하기 전에 지역 전력회사에 먼저 확인해야 한다.`,
+    leadAnswerBlock: `**이 글 작성 시점(2026-07-16) 기준, 미국의 ${signedStates.length}개 주가 발코니 태양광 관련 법안에 서명하여 법으로 확정했다 — 유타주, 메인주, 버지니아주, 메릴랜드주, 콜로라도주, 뉴햄프셔주, 버몬트주, 코네티컷주 — 그리고 ${pendingStates.length}개 주(뉴욕주)가 추가로 주 의회를 통과해 주지사의 서명을 기다리고 있다. 서명 완료된 8개 주 중 2개 주는 아직 시행되지 않았다: 콜로라도주는 2027년 1월 1일, 코네티컷주는 2026년 10월 1일부터 시행된다.** 발코니 태양광에 관한 연방법은 존재하지 않는다. 자신의 주가 두 명단 어디에도 없다면, 현재 상태는 명확히 합법도 불법도 아닌 단순히 미확정 상태다 — 어느 쪽이든 단정하기 전에 지역 전력회사에 먼저 확인해야 한다.`,
     quickAnswerTop: {
       ko: {
         question: '미국에서 발코니 태양광을 합법화한 주는 어디인가요?',
-        answer: `이 글 작성 시점 기준 6개 주가 발코니 태양광 법안에 서명했다: 유타주(최초, HB 340), 메인주, 버지니아주, 메릴랜드주, 콜로라도주(최고 출력 상한 1,920W), 코네티컷주. 추가로 3개 주 — 뉴욕주, 뉴햄프셔주, 버몬트주 — 가 주 의회를 통과해 주지사의 서명을 기다리고 있다. 연방 차원의 프레임워크는 존재하지 않으며, 다른 대부분의 주는 아직 발코니 태양광을 구체적으로 다루지 않았다.`,
+        answer: `이 글 작성 시점 기준 8개 주가 발코니 태양광 법안에 서명했다: 유타주(최초, HB 340), 메인주, 버지니아주, 메릴랜드주, 콜로라도주(최고 출력 상한 1,920W), 뉴햄프셔주, 버몬트주, 코네티컷주. 추가로 1개 주 — 뉴욕주 — 가 주 의회를 통과해 주지사의 서명을 기다리고 있다. 연방 차원의 프레임워크는 존재하지 않으며, 다른 대부분의 주는 아직 발코니 태양광을 구체적으로 다루지 않았다.`,
         bullets: [
-          '서명 완료: 유타주(HB 340), 메인주(LD 1730), 버지니아주(HB 395/SB 250), 메릴랜드주(HB 1532), 콜로라도주(HB 26-1007), 코네티컷주(HB 5340)',
+          '서명 완료: 유타주(HB 340), 메인주(LD 1730), 버지니아주(HB 395/SB 250), 메릴랜드주(HB 1532), 콜로라도주(HB 26-1007), 뉴햄프셔주(SB 540), 버몬트주(S.202/H.598), 코네티컷주(HB 5340)',
           '콜로라도주는 전체 주 가운데 확인된 최고 출력 상한(1,920W)을 보유',
-          '주지사 서명 대기 중: 뉴욕주(SUNNY Act), 뉴햄프셔주, 버몬트주',
+          '주지사 서명 대기 중: 뉴욕주(SUNNY Act)',
           '연방 차원의 발코니 태양광 프레임워크는 존재하지 않음 — 각 주의 상태는 서로 독립적',
           '이 건수는 매달 변동함 — 그래서 이 페이지는 60일마다 업데이트됨',
         ],
-        updatedDate: '2026-07-02',
+        updatedDate: '2026-07-16',
       },
     },
     toc: [
@@ -1248,8 +1248,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          `이 글 작성 시점(2026-07-02) 기준 ${signedStates.length}개 주가 발코니 태양광 법안에 서명했다: 유타주, 메인주, 버지니아주, 메릴랜드주, 콜로라도주, 코네티컷주.`,
-          `추가로 ${pendingStates.length}개 주 — 뉴욕주, 뉴햄프셔주, 버몬트주 — 가 주 의회를 통과해 주지사의 서명을 기다리고 있으며, 아직 법으로 확정되지 않았다.`,
+          `이 글 작성 시점(2026-07-16) 기준 ${signedStates.length}개 주가 발코니 태양광 법안에 서명했다: 유타주, 메인주, 버지니아주, 메릴랜드주, 콜로라도주, 뉴햄프셔주, 버몬트주, 코네티컷주. 콜로라도주(2027년 1월 1일)와 코네티컷주(2026년 10월 1일)는 서명은 완료됐지만 아직 시행되지 않았다.`,
+          `추가로 ${pendingStates.length}개 주 — 뉴욕주 — 가 주 의회를 통과해 주지사의 서명을 기다리고 있으며, 아직 법으로 확정되지 않았다.`,
           '콜로라도주는 확인된 주 가운데 가장 높은 출력 상한인 1,920W를 보유하고 있다.',
           '연방 차원의 발코니 태양광 프레임워크는 존재하지 않으며, 각 주의 상태는 완전히 독립적이고, 대부분의 주는 아직 이 주제를 다루지 않았다.',
           'CO/MD/CT의 서명일은 2차 추적 자료를 통해서만 상호 검증되었으며 1차 입법 문서로는 확인되지 않았다 — 정확한 날짜에 의존하기 전 주 공식 기록으로 확인해야 한다.',
@@ -1298,14 +1298,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'virginia',
         title: '버지니아주',
         content: [
-          '**버지니아주는 2026년 4월 22일 HB 395/SB 250에 서명했으며, 시행일은 2027년 1월이다** — 즉, 법안은 서명되었지만 이 글 작성 시점까지는 아직 발효되지 않았다는 뜻이다.',
+          '**버지니아주는 2026년 4월 22일 HB 395/SB 250에 서명했으며, 2026년 7월 1일부터 시행되었다** — 이 글 작성 시점 기준 법안은 서명되었고 이미 시행 중이다. 지자체는 주의 1,200W 상한 내에서 발코니 태양광을 금지할 수 없다.',
         ],
       },
       statesToWatch: {
         id: 'states-to-watch',
         title: '주목할 주',
         content: [
-          '**뉴욕주의 SUNNY Act와 함께 뉴햄프셔주, 버몬트주의 법안들도 각각의 주 의회를 통과해 주지사의 서명을 기다리고 있다 — 이들은 아직 심의 중이며 법으로 확정되지 않았고, 서명 전까지 내용이 바뀔 수도 있다.**',
+          '**뉴욕주의 SUNNY Act는 주 의회를 통과해 주지사의 서명을 기다리고 있다 — 아직 심의 중이며 법으로 확정되지 않았고, 서명 전까지 내용이 바뀔 수도 있다.** 이전에 이 범주에 있던 뉴햄프셔주와 버몬트주는 이제 서명이 확인되었다 — 위의 주별 현황표를 참고하라.',
         ],
       },
       checkYourUtility: {
@@ -1322,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '미국에서 발코니 태양광을 합법화한 주는 어디인가요?', a: '이 글 작성 시점 기준 6개 주가 법안에 서명했다: 유타주, 메인주, 버지니아주, 메릴랜드주, 콜로라도주, 코네티컷주. 추가로 3개 주 — 뉴욕주, 뉴햄프셔주, 버몬트주 — 가 주 의회를 통과해 주지사의 서명을 기다리고 있다.' },
+          { q: '미국에서 발코니 태양광을 합법화한 주는 어디인가요?', a: '이 글 작성 시점 기준 8개 주가 법안에 서명했다: 유타주, 메인주, 버지니아주, 메릴랜드주, 콜로라도주, 뉴햄프셔주, 버몬트주, 코네티컷주. 추가로 1개 주 — 뉴욕주 — 가 주 의회를 통과해 주지사의 서명을 기다리고 있다. 서명 완료된 8개 주 중 2개 주(콜로라도주, 코네티컷주)는 아직 시행되지 않았다.' },
           { q: '이 명단에 없는 주에서는 발코니 태양광이 불법인가요?', a: '반드시 불법인 것은 아니다 — 명단에 없는 대부분의 주는 단순히 아직 발코니 태양광을 구체적으로 다루지 않았을 뿐이다. 상태는 명확히 합법도 불법도 아닌 미확정이며, 지역 전력회사에 확인해야 한다.' },
           { q: '어느 주의 출력 상한이 가장 높나요?', a: '콜로라도주로, 1,920W다 — 확인된 미국 발코니 태양광 주법 중 가장 높은 상한이다.' },
           { q: '발코니 태양광에 관한 연방법이 있나요?', a: '없다. 연방 차원의 합법화 프레임워크는 존재하지 않으며, 연방 차원의 안전 인증 표준인 UL 3700만 있을 뿐이다. 이는 주 차원의 합법화와는 별개이며, 그 자체로 발코니 태양광을 어느 곳에서든 합법으로 만들지는 않는다.' },
