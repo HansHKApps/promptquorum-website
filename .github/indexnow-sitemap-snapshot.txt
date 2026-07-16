@@ -27,6 +27,7 @@ https://www.promptquorum.com/balcony-solar/what-is-balcony-solar
 https://www.promptquorum.com/blog
 https://www.promptquorum.com/blog/ai-consensus-scoring
 https://www.promptquorum.com/blog/ai-model-comparison
+https://www.promptquorum.com/blog/balcony-solar-us-legalization-race-2026
 https://www.promptquorum.com/blog/enterprise-data-privacy
 https://www.promptquorum.com/blog/eu-companies-local-qwen-gdpr-shift
 https://www.promptquorum.com/blog/frontier-models-prompt-library
