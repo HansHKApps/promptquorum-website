@@ -324,6 +324,14 @@ https://www.promptquorum.com/prompt-bites/gguf-vs-gptq-vs-awq
 https://www.promptquorum.com/prompt-bites/how-much-ram-for-7b-model
 https://www.promptquorum.com/prompt-bites/how-much-vram-for-local-llm
 https://www.promptquorum.com/prompt-bites/hybrid-local-cloud-llm-strategy
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-colorado
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-connecticut
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-maine
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-maryland
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-new-hampshire
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-utah
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-vermont
+https://www.promptquorum.com/prompt-bites/is-balcony-solar-legal-virginia
 https://www.promptquorum.com/prompt-bites/is-deepseek-gdpr-safe
 https://www.promptquorum.com/prompt-bites/is-qwen-gdpr-compliant
 https://www.promptquorum.com/prompt-bites/jan-vs-lm-studio
