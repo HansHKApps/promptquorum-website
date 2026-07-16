@@ -58,8 +58,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: "Matter's spec revision adds new device types — most notably energy management — while remaining backward-compatible with existing 1.x devices." },
-      { type: 'plain-terms', content: 'Matter is regularly updated with new capabilities, similar to how an operating system gets version updates. This revision mainly adds support for describing energy hardware like solar inverters and heat pumps as native Matter devices. Devices you already own that use an older Matter version keep working exactly as before.' },
+      { type: 'one-sentence', content: 'Matter 1.6 (released June 17, 2026) adds NFC-based commissioning, Joint Fabric multi-ecosystem device sharing, and Thermostat Suggestions, while remaining backward-compatible with existing 1.x devices — energy-management device types arrived earlier, in Matter 1.3-1.5, not in 1.6.' },
+      { type: 'plain-terms', content: 'Matter is regularly updated with new capabilities, similar to how an operating system gets version updates. This update mainly adds a new way to set up devices using NFC, a way for multiple smart home systems to share control of the same device, and a standard way for a thermostat to receive (and choose whether to accept) suggested temperature changes. Devices you already own that use an older Matter version keep working exactly as before.' },
     ],
     sections: {
       tldr: {
@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'If you\'re asking "what is Matter and how does it compare to Zigbee/Z-Wave," start with the general protocol primer.',
           'If you\'re asking "how do I commission a Matter device locally without a cloud bridge," see the local-control guide.',
-          'If you\'re asking "what changed in the spec recently, and does my hardware need an update," this article is the one — and it points to the energy-integration guide for the biggest practical change.',
+          'If you\'re asking "what changed in the spec recently, and does my hardware need an update," this article is the one — and it points to the energy-integration guide if you\'re looking for the earlier (1.3-1.5) energy-management work specifically, since that isn\'t part of 1.6.',
         ],
       },
       faqSection: {
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Matter, Thread, Zigbee, Z-Wave: Protocols Explained](/smart-home/smart-home-protocols-explained) — the general primer',
           '[Matter & Local Control: An Internet-Independent Smart Home](/smart-home/matter-local-control-guide) — commissioning and avoiding cloud bridges',
-          '[Matter Integration for Solar Inverters and Heat Pumps](/smart-home/matter-solar-inverter-heat-pump-integration) — the biggest practical change from this revision',
+          '[Matter Integration for Solar Inverters and Heat Pumps](/smart-home/matter-solar-inverter-heat-pump-integration) — the energy-management device types, added earlier in Matter 1.3-1.5, not in 1.6',
           '[Thread 1.4 and Wi-Fi 7 Routers for Smart Homes](/smart-home/thread-14-wifi-7-routers-guide) — the networking layer',
         ],
       },
