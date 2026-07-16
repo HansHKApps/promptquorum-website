@@ -47,6 +47,11 @@ import { article as a_beelink_ser8_local_ai_review } from './articles/beelink-se
 import { article as a_beelink_eq14_local_ai_review } from './articles/beelink-eq14-local-ai-review'
 import { article as a_gmktec_g3_plus_local_ai_review } from './articles/gmktec-g3-plus-local-ai-review'
 import { article as a_minisforum_um890_pro_local_ai_review } from './articles/minisforum-um890-pro-local-ai-review'
+// Category 5 — Energy & Solar Integration (SH-26–29)
+import { article as a_local_smart_home_energy_management_2027 } from './articles/local-smart-home-energy-management-2027'
+import { article as a_matter_solar_inverter_heat_pump_integration } from './articles/matter-solar-inverter-heat-pump-integration'
+import { article as a_home_assistant_energy_dashboard_guide } from './articles/home-assistant-energy-dashboard-guide'
+import { article as a_home_as_energy_microgrid_2027 } from './articles/home-as-energy-microgrid-2027'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // Category 1 — Smart Home Foundations
@@ -83,4 +88,9 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'beelink-eq14-local-ai-review':         a_beelink_eq14_local_ai_review,
   'gmktec-g3-plus-local-ai-review':       a_gmktec_g3_plus_local_ai_review,
   'minisforum-um890-pro-local-ai-review': a_minisforum_um890_pro_local_ai_review,
+  // Category 5 — Energy & Solar Integration
+  'local-smart-home-energy-management-2027':     a_local_smart_home_energy_management_2027,
+  'matter-solar-inverter-heat-pump-integration':  a_matter_solar_inverter_heat_pump_integration,
+  'home-assistant-energy-dashboard-guide':        a_home_assistant_energy_dashboard_guide,
+  'home-as-energy-microgrid-2027':                a_home_as_energy_microgrid_2027,
 }
