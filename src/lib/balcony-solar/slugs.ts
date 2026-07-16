@@ -43,4 +43,7 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
 
   // TIER 1 extension — Protocol-level integration guide (per-brand Modbus/MQTT/API matrix)
   'connect-balcony-solar-home-assistant-local':   'connect-balcony-solar-home-assistant-local',   // BSOL-23
+
+  // TIER 3 extension — Legislation moat: narrative companion to BSOL-12
+  'how-balcony-solar-became-legal-in-the-us':     'how-balcony-solar-became-legal-in-the-us',      // BSOL-24
 }

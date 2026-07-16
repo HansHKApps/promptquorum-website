@@ -128,6 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         links: [
           { url: '/balcony-solar/is-balcony-solar-legal-country-guide', title: 'Is Balcony Solar Legal? Country-by-Country Guide', description: 'Full legal status tracker across every major market' },
+          { url: '/balcony-solar/how-balcony-solar-became-legal-in-the-us', title: 'How Balcony Solar Became Legal in the US', description: 'The Utah-to-New-York story of why US legalization took so long' },
         ],
       },
       costs: {

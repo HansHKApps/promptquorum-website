@@ -47,6 +47,7 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
     articleSlugs: [
       'is-balcony-solar-legal-country-guide',
       'balcony-solar-legal-us-states',
+      'how-balcony-solar-became-legal-in-the-us',
       'balkonkraftwerk-germany-rules',
       'balcony-solar-spain-latam',
       'balcony-solar-portugal-brazil',

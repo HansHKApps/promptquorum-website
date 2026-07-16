@@ -131,6 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'States to Watch',
         content: [
           '**New York\'s SUNNY Act has passed the state legislature and awaits a governor\'s signature — it is pending, not yet law, and could still change before signing.** New Hampshire and Vermont, previously in this pending category, are now confirmed signed — see the state table above.',
+          'For the full story of how this wave of legislation started — including why Utah moved first and why California, Florida, and Texas are still stuck — see [how balcony solar became legal state by state](/balcony-solar/how-balcony-solar-became-legal-in-the-us).',
         ],
       },
       checkYourUtility: {

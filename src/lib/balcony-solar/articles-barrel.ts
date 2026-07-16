@@ -50,6 +50,9 @@ import { article as a_local_platforms_balcony_solar_home_assistant_alternatives 
 // TIER 1 extension — Protocol-level integration guide (BSOL-23)
 import { article as a_connect_balcony_solar_home_assistant_local } from './articles/connect-balcony-solar-home-assistant-local'
 
+// TIER 3 extension — Legislation moat narrative companion to BSOL-12 (BSOL-24)
+import { article as a_how_balcony_solar_became_legal_in_the_us } from './articles/how-balcony-solar-became-legal-in-the-us'
+
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
   'what-is-balcony-solar':                    a_what_is_balcony_solar,
@@ -87,4 +90,7 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
 
   // TIER 1 extension — Protocol-level integration guide (BSOL-23)
   'connect-balcony-solar-home-assistant-local':   a_connect_balcony_solar_home_assistant_local,
+
+  // TIER 3 extension — Legislation moat narrative companion to BSOL-12 (BSOL-24)
+  'how-balcony-solar-became-legal-in-the-us':     a_how_balcony_solar_became_legal_in_the_us,
 }
