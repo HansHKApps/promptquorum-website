@@ -71,4 +71,32 @@ export const SMART_HOME_CATEGORIES: SmartHomeCategory[] = [
       'smart-home-without-subscriptions',
     ],
   },
+  {
+    id: 'energy-solar-integration',
+    slug: 'energy-solar-integration',
+    titleEn: 'Energy & Solar Integration',
+    descriptionEn: 'Connecting solar, batteries, and heat pumps into a local-first smart home: Matter device integration, Home Assistant energy dashboards, and microgrid setups.',
+    articleSlugs: [],
+  },
+  {
+    id: 'protocols-regulation-2027',
+    slug: 'protocols-regulation-2027',
+    titleEn: '2027 Protocols & Regulation',
+    descriptionEn: 'What changed in 2027: Matter 2.0, Thread 1.4 and Wi-Fi 7 networking, the EU Data Act, and the IKEA Matter ecosystem.',
+    articleSlugs: [],
+  },
+  {
+    id: 'advanced-local-ai',
+    slug: 'advanced-local-ai',
+    titleEn: 'Advanced Local AI',
+    descriptionEn: 'Beyond the basics: small language models for device control, camera-free presence sensing, reducing automation hallucinations, sensor fusion, and digital twins.',
+    articleSlugs: [],
+  },
+  {
+    id: 'affiliate-buyers-guides',
+    slug: 'affiliate-buyers-guides',
+    titleEn: "Buyer's Guides",
+    descriptionEn: 'Product roundups for local-first smart home hardware: cameras, locks, thermostats, Zigbee/Thread dongles, hubs, edge-AI boards, and energy-monitoring plugs.',
+    articleSlugs: [],
+  },
 ]

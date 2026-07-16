@@ -398,6 +398,10 @@ const HUB_THEMES: Array<{ id: string; badge: string; description: string; colorB
       'local-first':        { colorBadge: 'bg-emerald-50 text-emerald-700 border-emerald-200', colorDot: 'bg-emerald-400' },
       'local-ai':           { colorBadge: 'bg-violet-50 text-violet-700 border-violet-200',   colorDot: 'bg-violet-400' },
       'decision-comparison': { colorBadge: 'bg-amber-50 text-amber-700 border-amber-200',     colorDot: 'bg-amber-400' },
+      'energy-solar-integration':   { colorBadge: 'bg-sky-50 text-sky-700 border-sky-200',    colorDot: 'bg-sky-400' },
+      'protocols-regulation-2027':  { colorBadge: 'bg-rose-50 text-rose-700 border-rose-200', colorDot: 'bg-rose-400' },
+      'advanced-local-ai':          { colorBadge: 'bg-teal-50 text-teal-700 border-teal-200', colorDot: 'bg-teal-400' },
+      'affiliate-buyers-guides':    { colorBadge: 'bg-indigo-50 text-indigo-700 border-indigo-200', colorDot: 'bg-indigo-400' },
     }
     return {
       id: cat.id,
