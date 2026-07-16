@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework } from '@/lib/frameworksData'
+import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework, getFrameworkLocalized } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
@@ -14,7 +14,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const fw = getFramework(slug)
+  const fw = getFrameworkLocalized(slug, 'en')
   if (!fw) return {}
 
   const selectedLang = 'en'
@@ -51,7 +51,7 @@ const COMPLEXITY_COLOR: Record<string, string> = {
 
 export default async function FrameworkPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const fw = getFramework(slug)
+  const fw = getFrameworkLocalized(slug, 'en')
   if (!fw) notFound()
 
   const related = FRAMEWORKS.filter(f => fw.related.includes(f.slug))
@@ -78,8 +78,9 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
                 'name': 'PromptQuorum',
                 'url': 'https://www.promptquorum.com',
               },
-              'datePublished': '2026-03-16',
-              'dateModified': '2026-03-16',
+              'datePublished': fw.publishDate ?? '2026-03-16',
+              'dateModified': fw.dateModified ?? '2026-03-16',
+              'inLanguage': 'en',
             },
             {
               '@context': 'https://schema.org',
