@@ -9,10 +9,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     affiliateDisclosure: true,
+    // Verified 2026-07-16 against official sources: home-assistant.io/connect/zbt-2 (Connect ZBT-2,
+    // $49, Silicon Labs MG24 + ESP32-S3 USB bridge — replaces the now-discontinued Connect ZBT-1/
+    // SkyConnect), sonoff.tech/itead.cc (Zigbee 3.0 USB Dongle Plus, ~$27 — confirms the ZBDongle-P
+    // variant uses a TI CC2652P chipset and the ZBDongle-E variant uses a Silicon Labs EFR32MG21,
+    // a real, current example of the exact "same product name, different chipset" risk this article
+    // already warned about), and phoscon.de/smarthomescene.com (ConBee II superseded by ConBee III,
+    // ~€39.95, adds Thread support).
     title: 'Best Zigbee and Thread USB Dongles (2027)',
     seoTitle: 'Best Zigbee + Thread Dongles (2027)',
     intro:
-      'A USB Zigbee coordinator or Thread border router dongle is what turns a mini PC or Raspberry Pi running Home Assistant into a full smart home hub capable of pairing Zigbee and Thread devices directly. [VERIFY: current specific dongle models, chipsets, and pricing] before recommending a product — this category has a history of silent chipset revisions under the same product name.',
+      "A USB Zigbee coordinator or Thread border router dongle is what turns a mini PC or Raspberry Pi running Home Assistant into a full smart home hub capable of pairing Zigbee and Thread devices directly. Home Assistant's own Connect ZBT-2 ($49), Sonoff's Zigbee 3.0 USB Dongle Plus (~$27, in two chipset variants under one product name), and Dresden Elektronik's ConBee III (~€40) are confirmed current options (checked 2026-07-16) — and the ZBT-2 itself replaces a now-discontinued predecessor, a real example of why this category needs checking before buying, not just a warning.",
     metaDescription:
       'Best Zigbee and Thread USB dongles for Home Assistant in 2027: what chipset differences mean and how to pair a dongle with a mini PC or Pi hub.',
     twitterDescription:
@@ -29,16 +36,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'thread dongle raspberry pi',
     ],
     leadAnswerBlock:
-      '**A USB Zigbee coordinator dongle adds Zigbee device pairing to a Home Assistant hub that doesn\'t have it built in, and a Thread border router dongle does the same for Thread devices — the chipset inside the dongle, not just the brand name, determines range and reliability.** [VERIFY: current specific dongle models, their chipsets, and pricing] before buying, since this category has seen silent chipset changes under the same product name.',
+      "**A USB Zigbee coordinator dongle adds Zigbee device pairing to a Home Assistant hub that doesn't have it built in, and a Thread border router dongle does the same for Thread devices — the chipset inside the dongle, not just the brand name, determines range and reliability.** Confirmed current options (checked 2026-07-16): Home Assistant's own Connect ZBT-2 ($49, Zigbee or Thread), Sonoff's Zigbee 3.0 USB Dongle Plus (~$27), and Dresden Elektronik's ConBee III (~€40).",
     quickAnswerTop: {
       en: {
         question: 'What USB dongle do I need for Zigbee or Thread devices with Home Assistant?',
         answer:
-          'A Zigbee coordinator dongle (commonly paired with the Zigbee2MQTT or ZHA integration) lets Home Assistant pair and control Zigbee devices directly; a Thread border router dongle does the equivalent for Thread devices, though many Thread border routers are built into existing smart speakers/hubs rather than needing a dedicated dongle. [VERIFY: current specific product recommendations, their chipsets, and prices] — check the chipset (not just the product name) since some manufacturers have changed the internal chipset of the same product line without renaming it.',
+          "A Zigbee coordinator dongle (commonly paired with the Zigbee2MQTT or ZHA integration) lets Home Assistant pair and control Zigbee devices directly; a Thread border router dongle does the equivalent for Thread devices, though many Thread border routers are built into existing smart speakers/hubs rather than needing a dedicated dongle. Confirmed current options (checked 2026-07-16): Home Assistant's own Connect ZBT-2 ($49, Silicon Labs MG24 chipset, supports Zigbee or Thread — not simultaneously — and replaces the now-discontinued Connect ZBT-1/SkyConnect); Sonoff's Zigbee 3.0 USB Dongle Plus (~$27), which ships in two chipset variants under the same product name — ZBDongle-P (TI CC2652P) and ZBDongle-E (Silicon Labs EFR32MG21) — a live example of why checking the chipset, not just the product name, matters; and Dresden Elektronik's ConBee III (~€40), the current successor to the older ConBee II.",
         bullets: [
           'Zigbee coordinator dongle: needed if your hub has no built-in Zigbee radio',
           'Thread border router: often already built into an existing smart speaker/hub — check before buying a dedicated dongle',
-          '[VERIFY: chipset, not just product name] — this category has seen silent internal revisions',
+          "Confirmed current picks: HA Connect ZBT-2 ($49), Sonoff Zigbee 3.0 USB Dongle Plus (~$27, check ZBDongle-P vs -E chipset), ConBee III (~€40)",
           'A USB extension cable improves range/reliability by moving the dongle away from a mini PC\'s own radio interference',
         ],
         updatedDate: '2026-07',
@@ -63,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "Zigbee coordinator dongle: needed if your Home Assistant hub has no built-in Zigbee radio",
           'Thread border router: check if you already have one built into an existing smart speaker/hub before buying a dedicated dongle',
-          '[VERIFY: chipset details for current product recommendations] — this category has seen silent chipset revisions under the same product name',
+          "Confirmed current picks (checked 2026-07-16): HA Connect ZBT-2 ($49), Sonoff Zigbee 3.0 USB Dongle Plus (~$27, two chipset variants — ZBDongle-P vs -E), ConBee III (~€40)",
           'A USB extension cable moving the dongle away from the hub\'s own electronics often improves reliability',
         ],
       },
@@ -73,9 +80,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A Zigbee coordinator dongle plugs into your Home Assistant hub via USB and pairs with the Zigbee2MQTT or ZHA integration — the specific radio chipset inside determines range and reliability more than the outer product branding.**',
         items: [
-          '[VERIFY: current recommended chipsets and specific product models] — Zigbee coordinator hardware has a track record of manufacturers revising the internal chipset of a product line without changing its name, which can affect compatibility and performance.',
-          'Check current Zigbee2MQTT or Home Assistant ZHA documentation for confirmed-compatible chipsets before buying, rather than relying on generic marketplace listings.',
+          "Sonoff's Zigbee 3.0 USB Dongle Plus (~$27) is a real, current example of exactly this risk: it ships in two chipset variants under the same product name — ZBDongle-P (TI CC2652P chipset) and ZBDongle-E (Silicon Labs EFR32MG21 chipset) — per Sonoff's own product pages. Check which variant you're buying, not just the product name.",
+          "Dresden Elektronik's ConBee III (~€40) is the current successor to the older, now-superseded ConBee II — it ships with Zigbee 3.0 firmware by default, with an alternative OpenThread Border Router firmware available for Thread use (not simultaneous with Zigbee on the same dongle), per Dresden Elektronik's own product page.",
           'A USB extension cable (a few dollars) moving the dongle 1-2 meters away from a mini PC\'s own USB 3.0 ports and Wi-Fi radio commonly improves Zigbee range and reliability, since USB 3.0 can interfere with the 2.4GHz Zigbee band.',
+        ],
+        affiliateLinks: [
+          { label: 'Sonoff Zigbee 3.0 USB Dongle Plus (ZBDongle-P)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-p', productName: 'Sonoff ZBDongle-P', productCategory: 'Zigbee coordinator' },
+          { label: 'Sonoff Zigbee 3.0 USB Dongle Plus (ZBDongle-E)', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'Sonoff ZBDongle-E', productCategory: 'Zigbee coordinator' },
+          { label: 'Dresden Elektronik ConBee III', url: 'https://phoscon.de/en/conbee3', productName: 'ConBee III', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       threadDongles: {
@@ -86,7 +98,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Many households already have a Thread border router without realizing it, built into an existing smart speaker or hub from a major ecosystem — see the Thread/Wi-Fi routers guide for how to check.',
           'A dedicated Thread border router dongle for a Home Assistant hub is useful if you want Thread coverage independent of another ecosystem\'s hardware, or additional border routers to extend mesh coverage.',
-          '[VERIFY: current specific Thread border router dongle products and their Home Assistant compatibility] before purchasing.',
+          "Home Assistant's own Connect ZBT-2 ($49, confirmed on home-assistant.io) supports Thread as well as Zigbee — though not both at once on the same dongle — and is the official first-party option, replacing the discontinued Connect ZBT-1/SkyConnect.",
+        ],
+        affiliateLinks: [
+          { label: 'Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator' },
         ],
       },
       setupTips: {
