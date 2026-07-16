@@ -100,6 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'State-by-State Table',
         content: [
           `**This state count moves monthly, faster than most facts tracked in this guide — that's why this page refreshes every 60 days instead of the standard 6-month cycle.** Signing dates for Colorado, Maryland, and Connecticut were cross-verified via secondary trackers, not primary legislative text — confirm exact dates against official state records before relying on them for anything time-sensitive.`,
+          '**For the full rules, savings estimates, and product options for a specific state, see the dedicated guide:** [Utah](/prompt-bites/is-balcony-solar-legal-utah) · [Maine](/prompt-bites/is-balcony-solar-legal-maine) · [Virginia](/prompt-bites/is-balcony-solar-legal-virginia) · [Maryland](/prompt-bites/is-balcony-solar-legal-maryland) · [Colorado](/prompt-bites/is-balcony-solar-legal-colorado) · [New Hampshire](/prompt-bites/is-balcony-solar-legal-new-hampshire) · [Vermont](/prompt-bites/is-balcony-solar-legal-vermont) · [Connecticut](/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -247,6 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Bundesstaaten-Tabelle',
         content: [
           `**Diese Bundesstaatenzahl verändert sich monatlich, schneller als die meisten in diesem Leitfaden verfolgten Fakten — deshalb wird diese Seite alle 60 Tage statt im Standard-Halbjahresrhythmus aktualisiert.** Die Unterzeichnungsdaten für Colorado, Maryland und Connecticut wurden über sekundäre Tracker und nicht anhand primärer Gesetzestexte verifiziert — bitte genaue Daten mit offiziellen Bundesstaatenregistern bestätigen, bevor Sie sich bei zeitkritischen Dingen darauf verlassen.`,
+          '**Die vollständigen Regeln, Einsparschätzungen und Produktoptionen für einen bestimmten Bundesstaat finden Sie im jeweiligen Leitfaden:** [Utah](/de/prompt-bites/is-balcony-solar-legal-utah) · [Maine](/de/prompt-bites/is-balcony-solar-legal-maine) · [Virginia](/de/prompt-bites/is-balcony-solar-legal-virginia) · [Maryland](/de/prompt-bites/is-balcony-solar-legal-maryland) · [Colorado](/de/prompt-bites/is-balcony-solar-legal-colorado) · [New Hampshire](/de/prompt-bites/is-balcony-solar-legal-new-hampshire) · [Vermont](/de/prompt-bites/is-balcony-solar-legal-vermont) · [Connecticut](/de/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -394,6 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tabla estado por estado',
         content: [
           `**Este conteo de estados cambia mensualmente, más rápido que la mayoría de los datos que sigue esta guía — por eso esta página se actualiza cada 60 días en lugar del ciclo estándar de 6 meses.** Las fechas de firma de Colorado, Maryland y Connecticut se verificaron mediante rastreadores secundarios, no con el texto legislativo primario — confirma las fechas exactas con los registros oficiales del estado antes de basarte en ellas para algo sensible al tiempo.`,
+          '**Las reglas completas, estimaciones de ahorro y opciones de productos para un estado específico están en la guía dedicada:** [Utah](/es/prompt-bites/is-balcony-solar-legal-utah) · [Maine](/es/prompt-bites/is-balcony-solar-legal-maine) · [Virginia](/es/prompt-bites/is-balcony-solar-legal-virginia) · [Maryland](/es/prompt-bites/is-balcony-solar-legal-maryland) · [Colorado](/es/prompt-bites/is-balcony-solar-legal-colorado) · [New Hampshire](/es/prompt-bites/is-balcony-solar-legal-new-hampshire) · [Vermont](/es/prompt-bites/is-balcony-solar-legal-vermont) · [Connecticut](/es/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -541,6 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tabela estado a estado',
         content: [
           `**Essa contagem de estados muda mensalmente, mais rápido do que a maioria dos dados acompanhados neste guia — por isso esta página é atualizada a cada 60 dias em vez do ciclo padrão de 6 meses.** As datas de sanção de Colorado, Maryland e Connecticut foram verificadas por meio de rastreadores secundários, não do texto legislativo primário — confirme as datas exatas com os registros oficiais do estado antes de confiar nelas para algo sensível ao tempo.`,
+          '**As regras completas, estimativas de economia e opções de produtos para um estado específico estão no guia dedicado:** [Utah](/pt/prompt-bites/is-balcony-solar-legal-utah) · [Maine](/pt/prompt-bites/is-balcony-solar-legal-maine) · [Virgínia](/pt/prompt-bites/is-balcony-solar-legal-virginia) · [Maryland](/pt/prompt-bites/is-balcony-solar-legal-maryland) · [Colorado](/pt/prompt-bites/is-balcony-solar-legal-colorado) · [New Hampshire](/pt/prompt-bites/is-balcony-solar-legal-new-hampshire) · [Vermont](/pt/prompt-bites/is-balcony-solar-legal-vermont) · [Connecticut](/pt/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -688,6 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'جدول الولايات',
         content: [
           `**يتغيّر عدد الولايات هذا شهريًا، أسرع من معظم الحقائق التي يتتبعها هذا الدليل — ولهذا السبب تُحدَّث هذه الصفحة كل 60 يومًا بدلًا من دورة الستة أشهر المعتادة.** تم التحقق من تواريخ التوقيع في كولورادو وماريلاند وكونيتيكت عبر متتبّعات ثانوية، وليس النص التشريعي الأساسي — تأكد من التواريخ الدقيقة عبر السجلات الرسمية للولاية قبل الاعتماد عليها في أي أمر حسّاس زمنيًا.`,
+          '**القواعد الكاملة وتقديرات التوفير وخيارات المنتجات لكل ولاية على حدة متاحة في الدليل المخصص لها:** [يوتا](/ar/prompt-bites/is-balcony-solar-legal-utah) · [مين](/ar/prompt-bites/is-balcony-solar-legal-maine) · [فيرجينيا](/ar/prompt-bites/is-balcony-solar-legal-virginia) · [ماريلاند](/ar/prompt-bites/is-balcony-solar-legal-maryland) · [كولورادو](/ar/prompt-bites/is-balcony-solar-legal-colorado) · [نيو هامبشاير](/ar/prompt-bites/is-balcony-solar-legal-new-hampshire) · [فيرمونت](/ar/prompt-bites/is-balcony-solar-legal-vermont) · [كونيتيكت](/ar/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -835,6 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '州別一覧表',
         content: [
           `**この州の件数は毎月変動し、このガイドで追跡している他のほとんどの事実より速いペースだ — だからこのページは標準の6か月周期ではなく60日ごとに更新される。** コロラド州、メリーランド州、コネチカット州の署名日は二次情報源のトラッカーで相互確認されたものであり、一次の法律文書ではない — 時間に敏感な用途に依拠する前に、州の公式記録で正確な日付を確認すること。`,
+          '**特定の州の詳細なルール、節約額の見積もり、製品の選択肢については、専用ガイドを参照してほしい:** [ユタ州](/ja/prompt-bites/is-balcony-solar-legal-utah) · [メイン州](/ja/prompt-bites/is-balcony-solar-legal-maine) · [バージニア州](/ja/prompt-bites/is-balcony-solar-legal-virginia) · [メリーランド州](/ja/prompt-bites/is-balcony-solar-legal-maryland) · [コロラド州](/ja/prompt-bites/is-balcony-solar-legal-colorado) · [ニューハンプシャー州](/ja/prompt-bites/is-balcony-solar-legal-new-hampshire) · [バーモント州](/ja/prompt-bites/is-balcony-solar-legal-vermont) · [コネチカット州](/ja/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -982,6 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '各州状态一览表',
         content: [
           `**这份州数量统计每月都会变化,速度快于本指南追踪的大多数其他事实——这也是本页每60天更新一次、而非标准6个月周期的原因。** 科罗拉多州、马里兰州、康涅狄格州的签署日期是通过二手追踪信息源交叉核实的,并非一手立法文本——对时效性要求高的用途,请以州官方记录核实准确日期。`,
+          '**特定州的完整规则、预估节省金额和产品选项,请参阅专门指南:** [犹他州](/zh/prompt-bites/is-balcony-solar-legal-utah) · [缅因州](/zh/prompt-bites/is-balcony-solar-legal-maine) · [弗吉尼亚州](/zh/prompt-bites/is-balcony-solar-legal-virginia) · [马里兰州](/zh/prompt-bites/is-balcony-solar-legal-maryland) · [科罗拉多州](/zh/prompt-bites/is-balcony-solar-legal-colorado) · [新罕布什尔州](/zh/prompt-bites/is-balcony-solar-legal-new-hampshire) · [佛蒙特州](/zh/prompt-bites/is-balcony-solar-legal-vermont) · [康涅狄格州](/zh/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -1129,6 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tableau État par État',
         content: [
           `**Ce décompte d\'États évolue chaque mois, plus vite que la plupart des faits suivis dans ce guide — c\'est pourquoi cette page est mise à jour tous les 60 jours plutôt que selon le cycle standard de 6 mois.** Les dates de promulgation du Colorado, du Maryland et du Connecticut ont été vérifiées via des sources secondaires, pas le texte législatif primaire — confirmez les dates exactes auprès des registres officiels de l\'État avant de vous y fier pour quoi que ce soit de sensible au facteur temps.`,
+          '**Les règles complètes, les estimations d\'économies et les options de produits pour un État spécifique se trouvent dans le guide dédié :** [Utah](/fr/prompt-bites/is-balcony-solar-legal-utah) · [Maine](/fr/prompt-bites/is-balcony-solar-legal-maine) · [Virginie](/fr/prompt-bites/is-balcony-solar-legal-virginia) · [Maryland](/fr/prompt-bites/is-balcony-solar-legal-maryland) · [Colorado](/fr/prompt-bites/is-balcony-solar-legal-colorado) · [New Hampshire](/fr/prompt-bites/is-balcony-solar-legal-new-hampshire) · [Vermont](/fr/prompt-bites/is-balcony-solar-legal-vermont) · [Connecticut](/fr/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],
@@ -1276,6 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '주별 현황표',
         content: [
           `**이 주 건수는 매달 변동하며, 이 가이드가 추적하는 대부분의 사실보다 빠르게 변한다 — 그래서 이 페이지는 표준 6개월 주기 대신 60일마다 업데이트된다.** 콜로라도주, 메릴랜드주, 코네티컷주의 서명일은 2차 추적 자료를 통해 상호 검증된 것이며 1차 입법 문서는 아니다 — 시간에 민감한 용도로 신뢰하기 전에 주 공식 기록으로 정확한 날짜를 확인해야 한다.`,
+          '**특정 주의 전체 규정, 절감액 추정치, 제품 옵션은 전용 가이드에서 확인할 수 있다:** [유타주](/ko/prompt-bites/is-balcony-solar-legal-utah) · [메인주](/ko/prompt-bites/is-balcony-solar-legal-maine) · [버지니아주](/ko/prompt-bites/is-balcony-solar-legal-virginia) · [메릴랜드주](/ko/prompt-bites/is-balcony-solar-legal-maryland) · [콜로라도주](/ko/prompt-bites/is-balcony-solar-legal-colorado) · [뉴햄프셔주](/ko/prompt-bites/is-balcony-solar-legal-new-hampshire) · [버몬트주](/ko/prompt-bites/is-balcony-solar-legal-vermont) · [코네티컷주](/ko/prompt-bites/is-balcony-solar-legal-connecticut)',
         ],
         rows: stateRows,
         columns: ['state', 'status', 'bill', 'signed', 'effective'],

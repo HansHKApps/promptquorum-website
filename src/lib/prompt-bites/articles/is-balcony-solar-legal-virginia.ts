@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Does HB 395/SB 250 Require in Virginia?',
         content: [
-          '**Virginia\'s law follows the standard template used by most enacted states: devices up to 1,200W connecting via a standard outlet are exempt from full utility interconnection requirements, with net metering excluded.** The distinguishing provision is local preemption — Virginia\'s law explicitly bars cities and counties from enacting their own restrictions or bans on balcony solar within the state\'s 1,200W cap, closing a gap that exists in states without that language.',
+          '<strong>Virginia\'s law follows the standard template used by most enacted states: devices up to 1,200W connecting via a standard outlet are exempt from full utility interconnection requirements, with net metering excluded.</strong> The distinguishing provision is local preemption — Virginia\'s law explicitly bars cities and counties from enacting their own restrictions or bans on balcony solar within the state\'s 1,200W cap, closing a gap that exists in states without that language.',
           'That local preemption does not extend to HOAs or private leases — a city cannot ban the devices, but an HOA covenant or a landlord\'s lease terms could still restrict where or whether you install one.',
         ],
         columns: ['Field', 'Virginia HB 395/SB 250'],
@@ -70,8 +70,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Are Certified Kits Actually Available Yet?',
         content: [
-          '**Like every other enacted state, Virginia\'s law references UL 3700 as the safety standard, but no complete plug-in solar system has confirmed full certification as of write-time.** The standard was published December 2025 with testing opening January 2026 — a gap that applies nationally, not specifically to Virginia. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah.',
+          '<strong>Like every other enacted state, Virginia\'s law references UL 3700 as the safety standard, but no complete plug-in solar system has confirmed full certification as of write-time.</strong> The standard was published December 2025 with testing opening January 2026 — a gap that applies nationally, not specifically to Virginia. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah.',
           'Virginia wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Virginia-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Virginia estimate, until state-specific data is confirmed.',
+          '<strong>Ready to compare actual hardware?</strong> See the <a href="/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">current US home-battery picks for balcony solar</a> or the <a href="/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow vs. Anker vs. Zendure ecosystem comparison</a> — plain product links, not a claim that any specific kit is certified or available in Virginia today.',
         ],
       },
       faq: {
@@ -147,7 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was schreibt HB 395/SB 250 in Virginia vor?',
         content: [
-          '**Virginias Gesetz folgt der Standardvorlage, die in den meisten Bundesstaaten mit entsprechender Gesetzgebung verwendet wird: Geräte bis 1.200 W, die über eine Standardsteckdose angeschlossen werden, sind von den vollständigen Netzanschlussanforderungen der Versorgungsunternehmen befreit, wobei Net Metering ausgeschlossen bleibt.** Die Besonderheit ist die kommunale Vorrangregelung – Virginias Gesetz untersagt Städten und Landkreisen ausdrücklich, eigene Einschränkungen oder Verbote für Balkonsolar innerhalb der landesweiten 1.200-W-Obergrenze zu erlassen, und schließt damit eine Lücke, die in Bundesstaaten ohne diese Regelung besteht.',
+          '<strong>Virginias Gesetz folgt der Standardvorlage, die in den meisten Bundesstaaten mit entsprechender Gesetzgebung verwendet wird: Geräte bis 1.200 W, die über eine Standardsteckdose angeschlossen werden, sind von den vollständigen Netzanschlussanforderungen der Versorgungsunternehmen befreit, wobei Net Metering ausgeschlossen bleibt.</strong> Die Besonderheit ist die kommunale Vorrangregelung – Virginias Gesetz untersagt Städten und Landkreisen ausdrücklich, eigene Einschränkungen oder Verbote für Balkonsolar innerhalb der landesweiten 1.200-W-Obergrenze zu erlassen, und schließt damit eine Lücke, die in Bundesstaaten ohne diese Regelung besteht.',
           'Diese kommunale Vorrangregelung erstreckt sich nicht auf Eigentümergemeinschaften (HOAs) oder private Mietverträge – eine Stadt darf die Geräte nicht verbieten, aber eine HOA-Satzung oder die Mietbedingungen eines Vermieters können weiterhin einschränken, wo oder ob Sie eines installieren dürfen.',
         ],
         columns: ['Feld', 'Virginia HB 395/SB 250'],
@@ -162,8 +163,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Sind zertifizierte Kits bereits tatsächlich erhältlich?',
         content: [
-          '**Wie in jedem anderen Bundesstaat mit entsprechender Gesetzgebung verweist auch Virginias Gesetz auf UL 3700 als Sicherheitsstandard, doch zum Zeitpunkt der Erstellung ist noch kein vollständiges Plug-in-Solarsystem mit bestätigter voller Zertifizierung erhältlich.** Der Standard wurde im Dezember 2025 veröffentlicht, Tests begannen im Januar 2026 – eine Lücke, die landesweit gilt und nicht spezifisch für Virginia ist. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird derzeit aber speziell in Utah zum Verkauf angeboten.',
+          '<strong>Wie in jedem anderen Bundesstaat mit entsprechender Gesetzgebung verweist auch Virginias Gesetz auf UL 3700 als Sicherheitsstandard, doch zum Zeitpunkt der Erstellung ist noch kein vollständiges Plug-in-Solarsystem mit bestätigter voller Zertifizierung erhältlich.</strong> Der Standard wurde im Dezember 2025 veröffentlicht, Tests begannen im Januar 2026 – eine Lücke, die landesweit gilt und nicht spezifisch für Virginia ist. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird derzeit aber speziell in Utah zum Verkauf angeboten.',
           'Virginia war nicht in der bundesstaatenweiten Einsparungstabelle der Quelldatenbank enthalten, die für diese Serie verwendet wurde, daher liegt hier keine Virginia-spezifische Zahl vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – betrachten Sie dies als landesweite Spanne, nicht als Virginia-spezifische Schätzung, bis staatenspezifische Daten bestätigt sind.',
+          '<strong>Bereit, konkrete Hardware zu vergleichen?</strong> Sehen Sie sich die <a href="/de/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">aktuellen US-Heimbatterie-Empfehlungen für Balkonsolar</a> oder den <a href="/de/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">Ökosystem-Vergleich EcoFlow vs. Anker vs. Zendure</a> an – reine Produktlinks, keine Aussage darüber, dass ein bestimmtes Kit in Virginia zertifiziert oder heute verfügbar ist.',
         ],
       },
       faq: {
@@ -239,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que prévoit HB 395/SB 250 en Virginie ?',
         content: [
-          '**La loi de Virginie suit le modèle standard utilisé par la plupart des États ayant légiféré : les appareils jusqu\'à 1 200 W se connectant via une prise standard sont exemptés des exigences complètes de raccordement au réseau, le net metering étant exclu.** La disposition distinctive est la préemption locale — la loi de Virginie interdit explicitement aux villes et comtés d\'adopter leurs propres restrictions ou interdictions du solaire de balcon dans la limite de 1 200 W de l\'État, comblant une lacune qui existe dans les États sans cette disposition.',
+          '<strong>La loi de Virginie suit le modèle standard utilisé par la plupart des États ayant légiféré : les appareils jusqu\'à 1 200 W se connectant via une prise standard sont exemptés des exigences complètes de raccordement au réseau, le net metering étant exclu.</strong> La disposition distinctive est la préemption locale — la loi de Virginie interdit explicitement aux villes et comtés d\'adopter leurs propres restrictions ou interdictions du solaire de balcon dans la limite de 1 200 W de l\'État, comblant une lacune qui existe dans les États sans cette disposition.',
           'Cette préemption locale ne s\'étend pas aux copropriétés (HOA) ni aux baux privés — une ville ne peut pas interdire les appareils, mais un règlement de copropriété ou les conditions d\'un bail peuvent toujours restreindre où ou si vous en installez un.',
         ],
         columns: ['Champ', 'Virginie HB 395/SB 250'],
@@ -254,8 +256,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Des kits certifiés sont-ils réellement disponibles ?',
         content: [
-          '**Comme tous les autres États ayant légiféré, la loi de Virginie fait référence à UL 3700 comme norme de sécurité, mais aucun système solaire branchable complet n\'a confirmé sa certification intégrale au moment de la rédaction.** La norme a été publiée en décembre 2025, les tests ayant débuté en janvier 2026 — un délai qui s\'applique au niveau national, pas spécifiquement à la Virginie. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement en vente spécifiquement dans l\'Utah.',
+          '<strong>Comme tous les autres États ayant légiféré, la loi de Virginie fait référence à UL 3700 comme norme de sécurité, mais aucun système solaire branchable complet n\'a confirmé sa certification intégrale au moment de la rédaction.</strong> La norme a été publiée en décembre 2025, les tests ayant débuté en janvier 2026 — un délai qui s\'applique au niveau national, pas spécifiquement à la Virginie. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement en vente spécifiquement dans l\'Utah.',
           'La Virginie ne figurait pas dans le tableau des économies par État de la source utilisée pour cette série ; un chiffre spécifique à la Virginie n\'est donc pas disponible ici. Dans les États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs d\'électricité locaux — considérez cela comme une fourchette nationale, pas une estimation propre à la Virginie, tant que des données spécifiques à l\'État ne sont pas confirmées.',
+          '<strong>Prêt à comparer du matériel concret ?</strong> Consultez la <a href="/fr/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">sélection actuelle de batteries domestiques US pour le solaire de balcon</a> ou la <a href="/fr/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparaison de l\'écosystème EcoFlow vs. Anker vs. Zendure</a> — de simples liens produits, pas une affirmation qu\'un kit précis est certifié ou disponible en Virginie aujourd\'hui.',
         ],
       },
       faq: {
@@ -331,7 +334,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'バージニア州のHB 395/SB 250は何を定めていますか？',
         content: [
-          '**バージニア州の法律は、法制化した州の大半で採用されている標準的な枠組みに従っています。標準コンセントで接続する1,200Wまでの機器は、電力会社への完全な連系要件が免除され、ネットメータリングは対象外です。** 特徴的な規定は地方優先条項です。バージニア州の法律は、市や郡が州の1,200W上限内で独自の制限や禁止を制定することを明確に禁じており、この規定がない州に存在するギャップを埋めています。',
+          '<strong>バージニア州の法律は、法制化した州の大半で採用されている標準的な枠組みに従っています。標準コンセントで接続する1,200Wまでの機器は、電力会社への完全な連系要件が免除され、ネットメータリングは対象外です。</strong> 特徴的な規定は地方優先条項です。バージニア州の法律は、市や郡が州の1,200W上限内で独自の制限や禁止を制定することを明確に禁じており、この規定がない州に存在するギャップを埋めています。',
           'この地方優先条項はHOA（住宅所有者協会）や個人の賃貸契約には及びません — 市は機器を禁止できませんが、HOAの規約や大家の賃貸条件によって、設置場所や設置自体が制限される可能性は残ります。',
         ],
         columns: ['項目', 'バージニア州 HB 395/SB 250'],
@@ -346,8 +349,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '認証済みキットは実際にもう入手できますか？',
         content: [
-          '**他の法制化州と同様、バージニア州の法律も安全基準としてUL 3700を参照していますが、執筆時点で完全な認証を取得したプラグイン式ソーラーシステムはまだ確認されていません。** この規格は2025年12月に公表され、2026年1月にテストが開始されました — これはバージニア州に限らず全米的なギャップです。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現時点ではユタ州限定で販売されています。',
+          '<strong>他の法制化州と同様、バージニア州の法律も安全基準としてUL 3700を参照していますが、執筆時点で完全な認証を取得したプラグイン式ソーラーシステムはまだ確認されていません。</strong> この規格は2025年12月に公表され、2026年1月にテストが開始されました — これはバージニア州に限らず全米的なギャップです。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現時点ではユタ州限定で販売されています。',
           'バージニア州はこのシリーズで使用した情報源の州別節約額表に含まれていなかったため、バージニア州固有の金額はここでは提示できません。追跡対象の州全体では、800Wキットで地域の電気料金に応じて年間約150～350ドルの節約が見られます — 州固有のデータが確認されるまでは、これを全米的な範囲として扱ってください。バージニア州の推定値ではありません。',
+          '<strong>実際の製品を比較する準備はできましたか？</strong> <a href="/ja/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">ベランダソーラー向け米国ホームバッテリーの現行おすすめ</a>や<a href="/ja/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow・Anker・Zendureのエコシステム比較</a>をご覧ください — これらは単なる製品リンクであり、特定のキットがバージニア州で認証済みまたは現在購入可能であることを示すものではありません。',
         ],
       },
       faq: {
@@ -423,7 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '弗吉尼亚州HB 395/SB 250法案有哪些要求？',
         content: [
-          '**弗吉尼亚州的法律遵循大多数已立法州采用的标准框架：通过标准插座连接、功率不超过1,200瓦的设备可豁免完整的电网并网要求，且不适用净计量电价。** 该法案的独特之处在于地方优先权条款——弗吉尼亚州法律明确禁止市和县在该州1,200瓦上限内自行制定限制或禁令，弥补了未设此类条款的州所存在的漏洞。',
+          '<strong>弗吉尼亚州的法律遵循大多数已立法州采用的标准框架：通过标准插座连接、功率不超过1,200瓦的设备可豁免完整的电网并网要求，且不适用净计量电价。</strong> 该法案的独特之处在于地方优先权条款——弗吉尼亚州法律明确禁止市和县在该州1,200瓦上限内自行制定限制或禁令，弥补了未设此类条款的州所存在的漏洞。',
           '该地方优先权条款并不适用于业主协会（HOA）或私人租约——城市不能禁止此类设备，但HOA规约或房东的租约条款仍可能限制您安装的地点或是否可以安装。',
         ],
         columns: ['项目', '弗吉尼亚州 HB 395/SB 250'],
@@ -438,8 +442,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '认证套件目前是否真的已经上市？',
         content: [
-          '**与其他所有已立法州一样，弗吉尼亚州法律将UL 3700列为安全标准，但截至撰写本文时，尚无完整的插入式太阳能系统确认已获得完整认证。** 该标准于2025年12月发布，测试于2026年1月启动——这是全国范围的空白期，并非弗吉尼亚州特有。EcoFlow的STREAM Ultra是目前最接近上市的产品，但目前仅在犹他州特定销售。',
+          '<strong>与其他所有已立法州一样，弗吉尼亚州法律将UL 3700列为安全标准，但截至撰写本文时，尚无完整的插入式太阳能系统确认已获得完整认证。</strong> 该标准于2025年12月发布，测试于2026年1月启动——这是全国范围的空白期，并非弗吉尼亚州特有。EcoFlow的STREAM Ultra是目前最接近上市的产品，但目前仅在犹他州特定销售。',
           '本系列所使用的数据来源中的各州节省金额表并未涵盖弗吉尼亚州，因此这里无法提供弗吉尼亚州特定的数字。在已追踪的各州中，一套800瓦套件根据当地电价每年可节省约150至350美元——在弗吉尼亚州特定数据得到确认之前，请将其视为全国范围的估算，而非弗吉尼亚州的专属数字。',
+          '<strong>准备好比较实际硬件了吗？</strong> 请查看<a href="/zh/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">当前美国阳台太阳能家庭电池推荐</a>或<a href="/zh/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow对比Anker对比Zendure生态系统对比</a>——这些只是产品链接，并不代表任何特定套件已在弗吉尼亚州获得认证或目前有售。',
         ],
       },
       faq: {
@@ -515,7 +520,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exige la ley HB 395/SB 250 en Virginia?',
         content: [
-          '**La ley de Virginia sigue el modelo estándar utilizado por la mayoría de los estados que han legislado: los dispositivos de hasta 1.200 W que se conectan mediante un enchufe estándar quedan exentos de los requisitos completos de interconexión con la empresa eléctrica, y el net metering queda excluido.** La disposición distintiva es la preferencia estatal sobre lo local: la ley de Virginia prohíbe explícitamente que ciudades y condados establezcan sus propias restricciones o prohibiciones sobre la energía solar de balcón dentro del límite estatal de 1.200 W, cerrando un vacío que existe en los estados sin esa disposición.',
+          '<strong>La ley de Virginia sigue el modelo estándar utilizado por la mayoría de los estados que han legislado: los dispositivos de hasta 1.200 W que se conectan mediante un enchufe estándar quedan exentos de los requisitos completos de interconexión con la empresa eléctrica, y el net metering queda excluido.</strong> La disposición distintiva es la preferencia estatal sobre lo local: la ley de Virginia prohíbe explícitamente que ciudades y condados establezcan sus propias restricciones o prohibiciones sobre la energía solar de balcón dentro del límite estatal de 1.200 W, cerrando un vacío que existe en los estados sin esa disposición.',
           'Esa preferencia estatal no se extiende a las asociaciones de propietarios (HOA) ni a los contratos de alquiler privados — una ciudad no puede prohibir los dispositivos, pero un reglamento de la HOA o las condiciones del contrato de un arrendador aún podrían restringir dónde, o si, puedes instalar uno.',
         ],
         columns: ['Campo', 'Virginia HB 395/SB 250'],
@@ -530,8 +535,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '¿Ya hay kits certificados realmente disponibles?',
         content: [
-          '**Al igual que en el resto de los estados que han legislado, la ley de Virginia hace referencia a UL 3700 como estándar de seguridad, pero al momento de escribir esto ningún sistema solar enchufable completo ha confirmado su certificación total.** El estándar se publicó en diciembre de 2025 y las pruebas comenzaron en enero de 2026 — un vacío que se aplica a nivel nacional, no específicamente a Virginia. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah.',
+          '<strong>Al igual que en el resto de los estados que han legislado, la ley de Virginia hace referencia a UL 3700 como estándar de seguridad, pero al momento de escribir esto ningún sistema solar enchufable completo ha confirmado su certificación total.</strong> El estándar se publicó en diciembre de 2025 y las pruebas comenzaron en enero de 2026 — un vacío que se aplica a nivel nacional, no específicamente a Virginia. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah.',
           'Virginia no estaba incluida en la tabla de ahorros por estado de la fuente utilizada para esta serie, así que aquí no hay disponible una cifra específica de Virginia. En los estados que sí se rastrearon, un kit de 800 W ahorra aproximadamente entre 150 y 350 dólares al año según las tarifas eléctricas locales — considera esto un rango nacional, no una estimación de Virginia, hasta que se confirmen datos específicos del estado.',
+          '<strong>¿Listo para comparar hardware real?</strong> Consulta la <a href="/es/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">selección actual de baterías domésticas de EE. UU. para energía solar de balcón</a> o la <a href="/es/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparación del ecosistema EcoFlow vs. Anker vs. Zendure</a> — simples enlaces a productos, no una afirmación de que un kit específico esté certificado o disponible en Virginia en este momento.',
         ],
       },
       faq: {
@@ -607,7 +613,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a lei HB 395/SB 250 exige na Virgínia?',
         content: [
-          '**A lei da Virgínia segue o modelo padrão adotado pela maioria dos estados que já legislaram: dispositivos de até 1.200 W conectados por meio de uma tomada padrão ficam isentos das exigências completas de interconexão com a concessionária, com o net metering excluído.** A disposição que a distingue é a preempção local — a lei da Virgínia proíbe explicitamente que cidades e condados criem suas próprias restrições ou proibições à energia solar de varanda dentro do limite estadual de 1.200 W, fechando uma lacuna que existe em estados sem essa previsão.',
+          '<strong>A lei da Virgínia segue o modelo padrão adotado pela maioria dos estados que já legislaram: dispositivos de até 1.200 W conectados por meio de uma tomada padrão ficam isentos das exigências completas de interconexão com a concessionária, com o net metering excluído.</strong> A disposição que a distingue é a preempção local — a lei da Virgínia proíbe explicitamente que cidades e condados criem suas próprias restrições ou proibições à energia solar de varanda dentro do limite estadual de 1.200 W, fechando uma lacuna que existe em estados sem essa previsão.',
           'Essa preempção local não se estende a associações de moradores (HOAs) nem a contratos de aluguel privados — uma cidade não pode proibir os dispositivos, mas as regras de uma HOA ou as condições de um contrato de locação ainda podem restringir onde, ou se, você pode instalar um.',
         ],
         columns: ['Campo', 'Virgínia HB 395/SB 250'],
@@ -622,8 +628,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Já existem kits certificados realmente disponíveis?',
         content: [
-          '**Assim como em todos os outros estados que já legislaram, a lei da Virgínia faz referência à norma UL 3700 como padrão de segurança, mas até o momento nenhum sistema solar plug-in completo confirmou certificação integral.** O padrão foi publicado em dezembro de 2025, com os testes começando em janeiro de 2026 — uma lacuna que se aplica em nível nacional, não especificamente à Virgínia. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah.',
+          '<strong>Assim como em todos os outros estados que já legislaram, a lei da Virgínia faz referência à norma UL 3700 como padrão de segurança, mas até o momento nenhum sistema solar plug-in completo confirmou certificação integral.</strong> O padrão foi publicado em dezembro de 2025, com os testes começando em janeiro de 2026 — uma lacuna que se aplica em nível nacional, não especificamente à Virgínia. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah.',
           'A Virgínia não constava na tabela de economia por estado da fonte usada nesta série, então um valor específico da Virgínia não está disponível aqui. Nos estados que foram rastreados, um kit de 800 W economiza entre US$ 150 e US$ 350 por ano, dependendo das tarifas de energia locais — trate isso como uma faixa nacional, não como uma estimativa específica da Virgínia, até que dados específicos do estado sejam confirmados.',
+          '<strong>Pronto para comparar hardware de verdade?</strong> Veja as <a href="/pt/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">opções atuais de baterias residenciais dos EUA para energia solar de varanda</a> ou a <a href="/pt/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparação do ecossistema EcoFlow vs. Anker vs. Zendure</a> — apenas links de produtos, não uma afirmação de que algum kit específico é certificado ou está disponível na Virgínia hoje.',
         ],
       },
       faq: {
@@ -699,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا يتطلب قانون HB 395/SB 250 في فيرجينيا؟',
         content: [
-          '**يتبع قانون فيرجينيا النموذج القياسي المعتمد في معظم الولايات التي سنّت تشريعات مماثلة: الأجهزة التي لا تتجاوز 1,200 واط والمتصلة عبر مقبس كهربائي عادي معفاة من متطلبات الربط الكامل بشبكة المرافق، مع استبعاد نظام Net Metering.** الحكم المميز هو الأسبقية المحلية — يمنع قانون فيرجينيا صراحةً المدن والمقاطعات من سن قيودها أو حظرها الخاص على الطاقة الشمسية للشرفات ضمن حد الولاية البالغ 1,200 واط، ما يسد ثغرة موجودة في الولايات التي لا تتضمن هذا النص.',
+          '<strong>يتبع قانون فيرجينيا النموذج القياسي المعتمد في معظم الولايات التي سنّت تشريعات مماثلة: الأجهزة التي لا تتجاوز 1,200 واط والمتصلة عبر مقبس كهربائي عادي معفاة من متطلبات الربط الكامل بشبكة المرافق، مع استبعاد نظام Net Metering.</strong> الحكم المميز هو الأسبقية المحلية — يمنع قانون فيرجينيا صراحةً المدن والمقاطعات من سن قيودها أو حظرها الخاص على الطاقة الشمسية للشرفات ضمن حد الولاية البالغ 1,200 واط، ما يسد ثغرة موجودة في الولايات التي لا تتضمن هذا النص.',
           'لا تمتد هذه الأسبقية المحلية لتشمل جمعيات الملاك (HOA) أو عقود الإيجار الخاصة — لا يمكن للمدينة حظر هذه الأجهزة، لكن لائحة جمعية الملاك أو شروط عقد الإيجار قد لا تزال تقيّد مكان أو إمكانية تركيبك للجهاز.',
         ],
         columns: ['الحقل', 'فيرجينيا HB 395/SB 250'],
@@ -714,8 +721,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'هل تتوفر فعليًا أطقم معتمدة حتى الآن؟',
         content: [
-          '**كما هو الحال في جميع الولايات الأخرى التي سنّت تشريعات مماثلة، يشير قانون فيرجينيا إلى UL 3700 كمعيار سلامة، لكن حتى وقت كتابة هذا المقال لم يؤكد أي نظام شمسي كامل يعمل بالتوصيل المباشر حصوله على الشهادة الكاملة.** نُشر المعيار في ديسمبر 2025 وبدأت الاختبارات في يناير 2026 — وهي فجوة قائمة على المستوى الوطني، وليست خاصة بفيرجينيا. يُعد منتج STREAM Ultra من EcoFlow الأقرب إلى السوق، لكنه معروض للبيع حاليًا بشكل خاص في ولاية يوتا.',
+          '<strong>كما هو الحال في جميع الولايات الأخرى التي سنّت تشريعات مماثلة، يشير قانون فيرجينيا إلى UL 3700 كمعيار سلامة، لكن حتى وقت كتابة هذا المقال لم يؤكد أي نظام شمسي كامل يعمل بالتوصيل المباشر حصوله على الشهادة الكاملة.</strong> نُشر المعيار في ديسمبر 2025 وبدأت الاختبارات في يناير 2026 — وهي فجوة قائمة على المستوى الوطني، وليست خاصة بفيرجينيا. يُعد منتج STREAM Ultra من EcoFlow الأقرب إلى السوق، لكنه معروض للبيع حاليًا بشكل خاص في ولاية يوتا.',
           'لم تكن فيرجينيا ضمن جدول التوفير حسب الولاية في المصدر المستخدم لهذه السلسلة، لذا لا يتوفر رقم خاص بفيرجينيا هنا. في الولايات التي تم تتبعها، يوفر طقم بقدرة 800 واط ما يقارب 150 إلى 350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — اعتبر هذا نطاقًا وطنيًا وليس تقديرًا خاصًا بفيرجينيا، إلى حين تأكيد بيانات خاصة بالولاية.',
+          '<strong>هل أنت مستعد لمقارنة الأجهزة الفعلية؟</strong> اطّلع على <a href="/ar/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">أفضل بطاريات المنازل الأمريكية للطاقة الشمسية للشرفات لعام 2026</a> أو <a href="/ar/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">مقارنة نظام EcoFlow مقابل Anker مقابل Zendure</a> — وهي مجرد روابط منتجات، وليست ادعاءً بأن طقمًا معينًا معتمد أو متاح في فيرجينيا اليوم.',
         ],
       },
       faq: {
@@ -791,7 +799,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '버지니아주 HB 395/SB 250은 무엇을 요구합니까?',
         content: [
-          '**버지니아주 법률은 관련 법을 제정한 대다수 주에서 채택한 표준 모델을 따릅니다. 표준 콘센트로 연결되는 1,200W 이하의 기기는 전력회사와의 완전한 계통연계 요건이 면제되며, 넷 미터링은 제외됩니다.** 특징적인 조항은 지방 우선 배제 규정입니다 — 버지니아주 법률은 시와 카운티가 주 전체 1,200W 상한선 내에서 자체적인 제한이나 금지 조치를 제정하는 것을 명시적으로 금지하여, 이러한 조항이 없는 주에 존재하는 공백을 메웁니다.',
+          '<strong>버지니아주 법률은 관련 법을 제정한 대다수 주에서 채택한 표준 모델을 따릅니다. 표준 콘센트로 연결되는 1,200W 이하의 기기는 전력회사와의 완전한 계통연계 요건이 면제되며, 넷 미터링은 제외됩니다.</strong> 특징적인 조항은 지방 우선 배제 규정입니다 — 버지니아주 법률은 시와 카운티가 주 전체 1,200W 상한선 내에서 자체적인 제한이나 금지 조치를 제정하는 것을 명시적으로 금지하여, 이러한 조항이 없는 주에 존재하는 공백을 메웁니다.',
           '이 지방 우선 배제 규정은 주택소유자협회(HOA)나 개인 임대 계약에는 적용되지 않습니다 — 시는 기기를 금지할 수 없지만, HOA 규약이나 임대인의 임대 조건은 설치 위치나 설치 가능 여부를 여전히 제한할 수 있습니다.',
         ],
         columns: ['항목', '버지니아주 HB 395/SB 250'],
@@ -806,8 +814,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '인증된 키트가 실제로 지금 판매되고 있습니까?',
         content: [
-          '**다른 모든 법 제정 주와 마찬가지로 버지니아주 법률도 UL 3700을 안전 기준으로 참조하고 있지만, 이 글을 작성하는 시점까지 완전 인증을 받은 완제품 플러그인 태양광 시스템은 확인되지 않았습니다.** 해당 표준은 2025년 12월에 발표되었으며 시험은 2026년 1월에 시작되었습니다 — 이는 버지니아주에 국한된 것이 아니라 전국적인 공백입니다. EcoFlow의 STREAM Ultra가 시장 출시에 가장 근접한 제품이지만, 현재는 유타주에서만 판매되고 있습니다.',
+          '<strong>다른 모든 법 제정 주와 마찬가지로 버지니아주 법률도 UL 3700을 안전 기준으로 참조하고 있지만, 이 글을 작성하는 시점까지 완전 인증을 받은 완제품 플러그인 태양광 시스템은 확인되지 않았습니다.</strong> 해당 표준은 2025년 12월에 발표되었으며 시험은 2026년 1월에 시작되었습니다 — 이는 버지니아주에 국한된 것이 아니라 전국적인 공백입니다. EcoFlow의 STREAM Ultra가 시장 출시에 가장 근접한 제품이지만, 현재는 유타주에서만 판매되고 있습니다.',
           '버지니아주는 이 시리즈에 사용된 자료 출처의 주별 절감액 표에 포함되지 않아, 버지니아주 고유의 수치는 여기서 제공할 수 없습니다. 추적된 주들을 기준으로 보면, 800W 키트는 지역 전기 요금에 따라 연간 약 150~350달러를 절감합니다 — 주별 데이터가 확인되기 전까지는 이를 버지니아주 추정치가 아닌 전국 평균 범위로 간주하시기 바랍니다.',
+          '<strong>실제 하드웨어를 비교할 준비가 되셨습니까?</strong> <a href="/ko/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">발코니 태양광용 미국 홈 배터리 현재 추천 목록</a> 또는 <a href="/ko/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow vs. Anker vs. Zendure 생태계 비교</a>를 참고하시기 바랍니다 — 이는 단순 제품 링크일 뿐, 특정 키트가 버지니아주에서 인증되었거나 현재 판매 중이라는 주장이 아닙니다.',
         ],
       },
       faq: {

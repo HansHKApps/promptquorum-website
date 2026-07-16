@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Will SB 540 Require in New Hampshire?',
         content: [
-          '**New Hampshire SB 540 follows the standard 1,200W cap used by most enacted states, and makes New Hampshire the first Northeast state to pass dedicated balcony solar legislation.** It was signed May 28, 2026 and takes effect July 27, 2026 — check today\'s date against that effective date before assuming the law already applies to you. Once in effect, it will follow the standard exemption template: no utility interconnection agreement or fee, with net metering excluded for exported power.',
+          '<strong>New Hampshire SB 540 follows the standard 1,200W cap used by most enacted states, and makes New Hampshire the first Northeast state to pass dedicated balcony solar legislation.</strong> It was signed May 28, 2026 and takes effect July 27, 2026 — check today\'s date against that effective date before assuming the law already applies to you. Once in effect, it will follow the standard exemption template: no utility interconnection agreement or fee, with net metering excluded for exported power.',
           'No HOA or landlord preemption language for New Hampshire was confirmed in this pass — check your lease or HOA covenant separately once the law is in effect.',
         ],
         columns: ['Field', 'New Hampshire SB 540'],
@@ -77,8 +77,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Is the Economics Story Strong in New Hampshire?',
         content: [
-          '**New Hampshire has the highest average residential electricity rate of the 8 enacted states, at 28.1¢/kWh — more than double Utah\'s 11.6¢/kWh.** That means once compliant hardware is available, the return on an 800W kit should be meaningfully better than in lower-rate states, though a New Hampshire-specific dollar figure wasn\'t in the source tracker\'s state-by-state savings table used for this series. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local rates — New Hampshire\'s high rate likely puts it toward the top of that range, but treat this as a national range, not a confirmed New Hampshire estimate.',
+          '<strong>New Hampshire has the highest average residential electricity rate of the 8 enacted states, at 28.1¢/kWh — more than double Utah\'s 11.6¢/kWh.</strong> That means once compliant hardware is available, the return on an 800W kit should be meaningfully better than in lower-rate states, though a New Hampshire-specific dollar figure wasn\'t in the source tracker\'s state-by-state savings table used for this series. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local rates — New Hampshire\'s high rate likely puts it toward the top of that range, but treat this as a national range, not a confirmed New Hampshire estimate.',
           'Certification is the other gate: no complete plug-in solar system has confirmed full UL 3700 certification as of write-time, a nationwide gap that applies regardless of New Hampshire\'s effective date. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah.',
+          '<strong>Once the law takes effect and certified hardware exists, you\'ll want real options to compare.</strong> See the <a href="/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">current US home-battery picks for balcony solar</a> or the <a href="/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow vs. Anker vs. Zendure ecosystem comparison</a> for context now — but neither page claims any kit is certified or ready for New Hampshire\'s not-yet-active law today.',
         ],
       },
       faq: {
@@ -154,7 +155,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was wird SB 540 in New Hampshire vorschreiben?',
         content: [
-          '**New Hampshires SB 540 folgt der üblichen 1.200-W-Obergrenze, die in den meisten Bundesstaaten mit verabschiedetem Gesetz gilt, und macht New Hampshire zum ersten Bundesstaat im Nordosten mit einem eigenen Balkonsolar-Gesetz.** Es wurde am 28. Mai 2026 unterzeichnet und tritt am 27. Juli 2026 in Kraft – vergleichen Sie das heutige Datum mit diesem Stichtag, bevor Sie annehmen, dass das Gesetz bereits für Sie gilt. Sobald es in Kraft ist, folgt es der üblichen Ausnahmeregelung: keine Netzanschlussvereinbarung oder -gebühr der Energieversorger, wobei Net Metering für eingespeisten Strom ausgeschlossen bleibt.',
+          '<strong>New Hampshires SB 540 folgt der üblichen 1.200-W-Obergrenze, die in den meisten Bundesstaaten mit verabschiedetem Gesetz gilt, und macht New Hampshire zum ersten Bundesstaat im Nordosten mit einem eigenen Balkonsolar-Gesetz.</strong> Es wurde am 28. Mai 2026 unterzeichnet und tritt am 27. Juli 2026 in Kraft – vergleichen Sie das heutige Datum mit diesem Stichtag, bevor Sie annehmen, dass das Gesetz bereits für Sie gilt. Sobald es in Kraft ist, folgt es der üblichen Ausnahmeregelung: keine Netzanschlussvereinbarung oder -gebühr der Energieversorger, wobei Net Metering für eingespeisten Strom ausgeschlossen bleibt.',
           'Für New Hampshire wurde in dieser Prüfung keine Regelung zur Verhinderung von HOA- oder Vermieterverboten bestätigt – prüfen Sie Ihren Mietvertrag oder Ihre HOA-Satzung separat, sobald das Gesetz in Kraft ist.',
         ],
         columns: ['Feld', 'New Hampshire SB 540'],
@@ -168,8 +169,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Ist die Wirtschaftlichkeit in New Hampshire überzeugend?',
         content: [
-          '**New Hampshire hat mit 28,1 Cent/kWh den höchsten durchschnittlichen Strompreis für Privathaushalte der 8 Bundesstaaten mit verabschiedetem Gesetz – mehr als doppelt so hoch wie Utahs 11,6 Cent/kWh.** Das bedeutet: Sobald konforme Hardware verfügbar ist, sollte sich ein 800-W-Kit deutlich schneller amortisieren als in Bundesstaaten mit niedrigeren Preisen, auch wenn für New Hampshire keine spezifische Dollarangabe in der für diese Serie verwendeten bundesstaatlichen Ersparnistabelle der Quelle vorlag. Über die erfassten Bundesstaaten hinweg spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – der hohe Strompreis in New Hampshire dürfte es eher an das obere Ende dieser Spanne bringen, aber betrachten Sie dies als landesweite Spanne, nicht als bestätigte Schätzung für New Hampshire.',
+          '<strong>New Hampshire hat mit 28,1 Cent/kWh den höchsten durchschnittlichen Strompreis für Privathaushalte der 8 Bundesstaaten mit verabschiedetem Gesetz – mehr als doppelt so hoch wie Utahs 11,6 Cent/kWh.</strong> Das bedeutet: Sobald konforme Hardware verfügbar ist, sollte sich ein 800-W-Kit deutlich schneller amortisieren als in Bundesstaaten mit niedrigeren Preisen, auch wenn für New Hampshire keine spezifische Dollarangabe in der für diese Serie verwendeten bundesstaatlichen Ersparnistabelle der Quelle vorlag. Über die erfassten Bundesstaaten hinweg spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – der hohe Strompreis in New Hampshire dürfte es eher an das obere Ende dieser Spanne bringen, aber betrachten Sie dies als landesweite Spanne, nicht als bestätigte Schätzung für New Hampshire.',
           'Die Zertifizierung ist der andere limitierende Faktor: Zum Redaktionsschluss hat kein vollständiges steckerfertiges Solarsystem eine vollständige UL-3700-Zertifizierung bestätigt – eine landesweite Lücke, die unabhängig vom Inkrafttreten in New Hampshire besteht. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird derzeit aber speziell in Utah zum Verkauf angeboten.',
+          '<strong>Sobald das Gesetz in Kraft tritt und zertifizierte Hardware existiert, brauchen Sie echte Optionen zum Vergleich.</strong> Sehen Sie sich schon jetzt die <a href="/de/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">aktuellen US-Heimbatterie-Empfehlungen für Balkonsolar</a> oder den <a href="/de/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">Vergleich EcoFlow vs. Anker vs. Zendure</a> zur Orientierung an – aber keine der beiden Seiten behauptet, dass ein Kit bereits zertifiziert oder bereit für New Hampshires noch nicht in Kraft getretenes Gesetz ist.',
         ],
       },
       faq: {
@@ -245,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que va exiger la SB 540 au New Hampshire ?',
         content: [
-          '**La SB 540 du New Hampshire suit le plafond standard de 1 200 W utilisé par la plupart des États ayant adopté une loi, et fait du New Hampshire le premier État du Nord-Est à voter une législation dédiée au solaire de balcon.** Signée le 28 mai 2026, elle entre en vigueur le 27 juillet 2026 — comparez la date du jour à cette échéance avant de supposer que la loi s\'applique déjà. Une fois en vigueur, elle suivra le modèle d\'exemption standard : aucun contrat de raccordement ni frais auprès du fournisseur d\'électricité, le net metering étant exclu pour l\'électricité exportée.',
+          '<strong>La SB 540 du New Hampshire suit le plafond standard de 1 200 W utilisé par la plupart des États ayant adopté une loi, et fait du New Hampshire le premier État du Nord-Est à voter une législation dédiée au solaire de balcon.</strong> Signée le 28 mai 2026, elle entre en vigueur le 27 juillet 2026 — comparez la date du jour à cette échéance avant de supposer que la loi s\'applique déjà. Une fois en vigueur, elle suivra le modèle d\'exemption standard : aucun contrat de raccordement ni frais auprès du fournisseur d\'électricité, le net metering étant exclu pour l\'électricité exportée.',
           'Aucune disposition empêchant les syndics de copropriété ou les propriétaires bailleurs d\'interdire le solaire de balcon n\'a été confirmée pour le New Hampshire dans cette analyse — vérifiez séparément votre bail ou règlement de copropriété une fois la loi en vigueur.',
         ],
         columns: ['Champ', 'New Hampshire SB 540'],
@@ -259,8 +261,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Le bilan économique est-il favorable au New Hampshire ?',
         content: [
-          '**Le New Hampshire a le tarif d\'électricité résidentiel moyen le plus élevé des 8 États ayant adopté une loi, à 28,1 ¢/kWh — plus du double des 11,6 ¢/kWh de l\'Utah.** Une fois le matériel conforme disponible, le retour sur investissement d\'un kit de 800 W devrait donc être nettement meilleur que dans les États à tarifs plus bas, même si aucun chiffre spécifique au New Hampshire ne figurait dans le tableau d\'économies par État de la source utilisée pour cette série. Sur l\'ensemble des États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs locaux — le tarif élevé du New Hampshire le placerait probablement vers le haut de cette fourchette, mais il s\'agit d\'une fourchette nationale, pas d\'une estimation confirmée pour le New Hampshire.',
+          '<strong>Le New Hampshire a le tarif d\'électricité résidentiel moyen le plus élevé des 8 États ayant adopté une loi, à 28,1 ¢/kWh — plus du double des 11,6 ¢/kWh de l\'Utah.</strong> Une fois le matériel conforme disponible, le retour sur investissement d\'un kit de 800 W devrait donc être nettement meilleur que dans les États à tarifs plus bas, même si aucun chiffre spécifique au New Hampshire ne figurait dans le tableau d\'économies par État de la source utilisée pour cette série. Sur l\'ensemble des États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs locaux — le tarif élevé du New Hampshire le placerait probablement vers le haut de cette fourchette, mais il s\'agit d\'une fourchette nationale, pas d\'une estimation confirmée pour le New Hampshire.',
           'La certification reste l\'autre point de blocage : à la date de rédaction, aucun système solaire enfichable complet n\'a confirmé de certification UL 3700 intégrale, un manque valable à l\'échelle nationale, indépendamment de la date d\'entrée en vigueur au New Hampshire. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l\'Utah.',
+          '<strong>Une fois la loi en vigueur et du matériel certifié disponible, vous voudrez comparer de vraies options.</strong> Consultez dès maintenant, à titre de contexte, notre sélection des <a href="/fr/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">meilleures batteries domestiques US pour le solaire de balcon</a> ou notre <a href="/fr/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparatif EcoFlow vs. Anker vs. Zendure</a> — mais aucune de ces pages n\'affirme qu\'un kit est certifié ou prêt pour la loi du New Hampshire, qui n\'est pas encore en vigueur à ce jour.',
         ],
       },
       faq: {
@@ -336,7 +339,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ニューハンプシャー州のSB 540が求める内容は？',
         content: [
-          '**ニューハンプシャー州のSB 540は、多くの法制化州で採用されている標準の1,200W上限に従っており、ニューハンプシャー州はベランダソーラー専用法を可決した最初の東北部の州となります。** 2026年5月28日に署名され、2026年7月27日に施行されます。この法律がすでに自分に適用されると思い込む前に、今日の日付とこの施行日を比較してください。施行後は標準的な適用除外の枠組みに従い、電力会社との系統連系契約や料金は不要で、輸出された電力に対するネットメータリングは対象外となります。',
+          '<strong>ニューハンプシャー州のSB 540は、多くの法制化州で採用されている標準の1,200W上限に従っており、ニューハンプシャー州はベランダソーラー専用法を可決した最初の東北部の州となります。</strong> 2026年5月28日に署名され、2026年7月27日に施行されます。この法律がすでに自分に適用されると思い込む前に、今日の日付とこの施行日を比較してください。施行後は標準的な適用除外の枠組みに従い、電力会社との系統連系契約や料金は不要で、輸出された電力に対するネットメータリングは対象外となります。',
           'ニューハンプシャー州について、HOA（住宅所有者組合）または家主による設置禁止を防ぐ規定は今回の調査では確認されていません。法律が施行された後、賃貸契約またはHOA規約を別途ご確認ください。',
         ],
         columns: ['項目', 'ニューハンプシャー州 SB 540'],
@@ -350,8 +353,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'ニューハンプシャー州の経済性は魅力的ですか？',
         content: [
-          '**ニューハンプシャー州は28.1¢/kWhと、法制化済みの8州の中で最も高い住宅用平均電気料金を記録しており、これはユタ州の11.6¢/kWhの2倍以上です。** つまり、適合機器が入手可能になれば、800Wキットの投資回収は、電気料金の低い州よりも大幅に有利になるはずです。ただし、このシリーズで使用したソースの州別節約額データには、ニューハンプシャー州固有のドル金額は含まれていませんでした。追跡対象の州全体では、800Wキットは地域の料金に応じて年間約150～350ドルの節約になります。ニューハンプシャー州の高い料金を踏まえるとこの範囲の上限に近づく可能性がありますが、これは全国的な範囲であり、ニューハンプシャー州固有の確定推計ではないことにご注意ください。',
+          '<strong>ニューハンプシャー州は28.1¢/kWhと、法制化済みの8州の中で最も高い住宅用平均電気料金を記録しており、これはユタ州の11.6¢/kWhの2倍以上です。</strong> つまり、適合機器が入手可能になれば、800Wキットの投資回収は、電気料金の低い州よりも大幅に有利になるはずです。ただし、このシリーズで使用したソースの州別節約額データには、ニューハンプシャー州固有のドル金額は含まれていませんでした。追跡対象の州全体では、800Wキットは地域の料金に応じて年間約150～350ドルの節約になります。ニューハンプシャー州の高い料金を踏まえるとこの範囲の上限に近づく可能性がありますが、これは全国的な範囲であり、ニューハンプシャー州固有の確定推計ではないことにご注意ください。',
           '認証も別のハードルです。執筆時点で、UL 3700の完全認証を確認済みのプラグイン式ソーラーシステムは存在せず、これはニューハンプシャー州の施行日にかかわらず全国的なギャップです。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はユタ州限定で販売されています。',
+          '<strong>法律が施行され、認証済みの機器が登場したら、比較できる実際の選択肢が必要になります。</strong> 参考として、現時点での<a href="/ja/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">ベランダソーラー向け米国製ホームバッテリーのおすすめ</a>や<a href="/ja/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow対Anker対Zendureのエコシステム比較</a>をご覧ください。ただし、どちらのページも、キットが認証済みである、またはニューハンプシャー州のまだ施行されていない法律に対応済みであるとは述べていません。',
         ],
       },
       faq: {
@@ -427,7 +431,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '新罕布什尔州SB 540将有哪些要求？',
         content: [
-          '**新罕布什尔州SB 540采用大多数已立法州通用的1,200瓦功率上限，使新罕布什尔州成为东北部第一个通过专门阳台太阳能立法的州。** 该法案于2026年5月28日签署，2026年7月27日生效——在假设法律已适用之前，请先将当前日期与生效日期对比。生效后，将遵循标准豁免模式：无需与电力公司签订并网协议或支付费用，但输出电力不适用净计量。',
+          '<strong>新罕布什尔州SB 540采用大多数已立法州通用的1,200瓦功率上限，使新罕布什尔州成为东北部第一个通过专门阳台太阳能立法的州。</strong> 该法案于2026年5月28日签署，2026年7月27日生效——在假设法律已适用之前，请先将当前日期与生效日期对比。生效后，将遵循标准豁免模式：无需与电力公司签订并网协议或支付费用，但输出电力不适用净计量。',
           '本次梳理未确认新罕布什尔州有阻止业主协会（HOA）或房东禁止阳台太阳能的相关条款——法律生效后请另行核实您的租约或HOA规约。',
         ],
         columns: ['项目', '新罕布什尔州SB 540'],
@@ -441,8 +445,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '新罕布什尔州的经济性如何？',
         content: [
-          '**新罕布什尔州平均住宅电价为28.1美分/千瓦时，是已立法8个州中最高的——超过犹他州11.6美分/千瓦时的两倍。** 这意味着一旦合规硬件上市，800瓦套件的投资回报应明显优于电价较低的州，不过本系列使用的各州节省数据来源表中并未包含新罕布什尔州的具体数字。在已统计的各州中，800瓦套件按当地电价估算每年可节省约150至350美元——新罕布什尔州电价较高，很可能处于该区间的上限，但这仍是全国范围的估算，并非针对新罕布什尔州确认的具体数字。',
+          '<strong>新罕布什尔州平均住宅电价为28.1美分/千瓦时，是已立法8个州中最高的——超过犹他州11.6美分/千瓦时的两倍。</strong> 这意味着一旦合规硬件上市，800瓦套件的投资回报应明显优于电价较低的州，不过本系列使用的各州节省数据来源表中并未包含新罕布什尔州的具体数字。在已统计的各州中，800瓦套件按当地电价估算每年可节省约150至350美元——新罕布什尔州电价较高，很可能处于该区间的上限，但这仍是全国范围的估算，并非针对新罕布什尔州确认的具体数字。',
           '认证是另一道门槛：截至撰写时，尚无完整的即插式太阳能系统确认通过UL 3700全项认证，这是一个与新罕布什尔州生效日期无关的全国性缺口。EcoFlow STREAM Ultra是最接近上市的产品，但目前仅在犹他州专门销售。',
+          '<strong>一旦法律生效并出现认证硬件，您会需要真正可比较的选择。</strong> 目前可先参考<a href="/zh/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">当前美国阳台太阳能家庭电池推荐</a>或<a href="/zh/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow对比Anker对比Zendure生态系统比较</a>——但这两个页面均未声称任何套件已获认证或已为新罕布什尔州尚未生效的法律做好准备。',
         ],
       },
       faq: {
@@ -518,7 +523,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exigirá la SB 540 en New Hampshire?',
         content: [
-          '**La SB 540 de New Hampshire sigue el límite estándar de 1,200 W que usan la mayoría de los estados con ley aprobada, y convierte a New Hampshire en el primer estado del noreste en aprobar legislación dedicada a la energía solar de balcón.** Se firmó el 28 de mayo de 2026 y entra en vigor el 27 de julio de 2026; compara la fecha de hoy con esa fecha de entrada en vigor antes de asumir que la ley ya te aplica. Una vez en vigor, seguirá el modelo estándar de exención: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, y sin net metering para la energía exportada.',
+          '<strong>La SB 540 de New Hampshire sigue el límite estándar de 1,200 W que usan la mayoría de los estados con ley aprobada, y convierte a New Hampshire en el primer estado del noreste en aprobar legislación dedicada a la energía solar de balcón.</strong> Se firmó el 28 de mayo de 2026 y entra en vigor el 27 de julio de 2026; compara la fecha de hoy con esa fecha de entrada en vigor antes de asumir que la ley ya te aplica. Una vez en vigor, seguirá el modelo estándar de exención: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, y sin net metering para la energía exportada.',
           'En esta revisión no se confirmó ninguna disposición que impida a las HOA o a los propietarios prohibir la energía solar de balcón en New Hampshire: revisa tu contrato de arrendamiento o el reglamento de tu HOA por separado una vez que la ley esté en vigor.',
         ],
         columns: ['Campo', 'New Hampshire SB 540'],
@@ -532,8 +537,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '¿Es sólida la historia económica en New Hampshire?',
         content: [
-          '**New Hampshire tiene la tarifa eléctrica residencial promedio más alta de los 8 estados con ley aprobada, a 28.1 ¢/kWh, más del doble que los 11.6 ¢/kWh de Utah.** Eso significa que, una vez que haya hardware compatible disponible, el retorno de un kit de 800 W debería ser considerablemente mejor que en estados con tarifas más bajas, aunque no había una cifra específica para New Hampshire en la tabla de ahorros por estado de la fuente usada en esta serie. En los estados que sí se registraron, un kit de 800 W ahorra aproximadamente entre $150 y $350 al año según las tarifas locales; la tarifa alta de New Hampshire probablemente lo ubique hacia el extremo superior de ese rango, pero trátalo como un rango nacional, no como una estimación confirmada para New Hampshire.',
+          '<strong>New Hampshire tiene la tarifa eléctrica residencial promedio más alta de los 8 estados con ley aprobada, a 28.1 ¢/kWh, más del doble que los 11.6 ¢/kWh de Utah.</strong> Eso significa que, una vez que haya hardware compatible disponible, el retorno de un kit de 800 W debería ser considerablemente mejor que en estados con tarifas más bajas, aunque no había una cifra específica para New Hampshire en la tabla de ahorros por estado de la fuente usada en esta serie. En los estados que sí se registraron, un kit de 800 W ahorra aproximadamente entre $150 y $350 al año según las tarifas locales; la tarifa alta de New Hampshire probablemente lo ubique hacia el extremo superior de ese rango, pero trátalo como un rango nacional, no como una estimación confirmada para New Hampshire.',
           'La certificación es el otro obstáculo: al momento de escribir esto, ningún sistema solar enchufable completo ha confirmado certificación UL 3700 completa, una brecha a nivel nacional que aplica sin importar la fecha de entrada en vigor en New Hampshire. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah.',
+          '<strong>Una vez que la ley entre en vigor y exista hardware certificado, querrás opciones reales para comparar.</strong> Consulta ahora, como contexto, las <a href="/es/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">selecciones actuales de baterías domésticas en EE. UU. para energía solar de balcón</a> o la <a href="/es/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparación de ecosistemas EcoFlow vs. Anker vs. Zendure</a>, pero ninguna de las dos páginas afirma que algún kit esté certificado o listo para la ley de New Hampshire, que aún no está en vigor.',
         ],
       },
       faq: {
@@ -609,7 +615,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a SB 540 vai exigir em New Hampshire?',
         content: [
-          '**A SB 540 de New Hampshire segue o limite padrão de 1.200 W usado pela maioria dos estados com lei aprovada, e torna New Hampshire o primeiro estado do Nordeste dos EUA a aprovar legislação dedicada à energia solar de varanda.** Foi sancionada em 28 de maio de 2026 e entra em vigor em 27 de julho de 2026 — compare a data de hoje com essa data de vigência antes de presumir que a lei já se aplica a você. Uma vez em vigor, ela seguirá o modelo padrão de isenção: sem acordo de interconexão ou taxa da concessionária de energia, com net metering excluído para energia exportada.',
+          '<strong>A SB 540 de New Hampshire segue o limite padrão de 1.200 W usado pela maioria dos estados com lei aprovada, e torna New Hampshire o primeiro estado do Nordeste dos EUA a aprovar legislação dedicada à energia solar de varanda.</strong> Foi sancionada em 28 de maio de 2026 e entra em vigor em 27 de julho de 2026 — compare a data de hoje com essa data de vigência antes de presumir que a lei já se aplica a você. Uma vez em vigor, ela seguirá o modelo padrão de isenção: sem acordo de interconexão ou taxa da concessionária de energia, com net metering excluído para energia exportada.',
           'Nenhuma disposição que impeça associações de moradores (HOA) ou proprietários de proibir a energia solar de varanda foi confirmada para New Hampshire nesta análise — verifique seu contrato de aluguel ou regulamento da HOA separadamente assim que a lei entrar em vigor.',
         ],
         columns: ['Campo', 'New Hampshire SB 540'],
@@ -623,8 +629,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'A economia em New Hampshire é vantajosa?',
         content: [
-          '**New Hampshire tem a tarifa residencial média de eletricidade mais alta entre os 8 estados com lei aprovada, a 28,1 ¢/kWh — mais que o dobro dos 11,6 ¢/kWh de Utah.** Isso significa que, assim que houver hardware compatível disponível, o retorno de um kit de 800 W deve ser bem melhor do que em estados com tarifas mais baixas, embora um valor específico para New Hampshire não constasse na tabela de economia por estado da fonte usada nesta série. Nos estados que foram rastreados, um kit de 800 W economiza aproximadamente US$ 150 a US$ 350 por ano, dependendo das tarifas locais — a tarifa alta de New Hampshire provavelmente o coloca perto do topo dessa faixa, mas trate isso como uma faixa nacional, não como uma estimativa confirmada para New Hampshire.',
+          '<strong>New Hampshire tem a tarifa residencial média de eletricidade mais alta entre os 8 estados com lei aprovada, a 28,1 ¢/kWh — mais que o dobro dos 11,6 ¢/kWh de Utah.</strong> Isso significa que, assim que houver hardware compatível disponível, o retorno de um kit de 800 W deve ser bem melhor do que em estados com tarifas mais baixas, embora um valor específico para New Hampshire não constasse na tabela de economia por estado da fonte usada nesta série. Nos estados que foram rastreados, um kit de 800 W economiza aproximadamente US$ 150 a US$ 350 por ano, dependendo das tarifas locais — a tarifa alta de New Hampshire provavelmente o coloca perto do topo dessa faixa, mas trate isso como uma faixa nacional, não como uma estimativa confirmada para New Hampshire.',
           'A certificação é o outro obstáculo: no momento em que este texto foi escrito, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total, uma lacuna nacional que se aplica independentemente da data de vigência em New Hampshire. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah.',
+          '<strong>Assim que a lei entrar em vigor e existir hardware certificado, você vai querer opções reais para comparar.</strong> Veja agora, como referência, as <a href="/pt/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">indicações atuais de baterias residenciais dos EUA para energia solar de varanda</a> ou a <a href="/pt/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparação do ecossistema EcoFlow vs. Anker vs. Zendure</a> — mas nenhuma das duas páginas afirma que algum kit esteja certificado ou pronto para a lei de New Hampshire, que ainda não está em vigor.',
         ],
       },
       faq: {
@@ -700,7 +707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا سيتطلب قانون SB 540 في نيو هامبشاير؟',
         content: [
-          '**يتبع قانون SB 540 في نيو هامبشاير الحد الأقصى القياسي البالغ 1,200 واط المعتمد في معظم الولايات التي سنّت القانون، ويجعل نيو هامبشاير أول ولاية في الشمال الشرقي تُقر تشريعًا مخصصًا للطاقة الشمسية للشرفات.** تم التوقيع عليه في 28 مايو 2026 ويدخل حيز التنفيذ في 27 يوليو 2026 — قارن تاريخ اليوم بتاريخ السريان هذا قبل افتراض أن القانون ينطبق عليك بالفعل. بمجرد سريانه، سيتبع نموذج الإعفاء القياسي: لا حاجة إلى اتفاقية ربط بالشبكة أو رسوم مع شركة الكهرباء، مع استبعاد نظام صافي القياس (net metering) للطاقة المُصدَّرة.',
+          '<strong>يتبع قانون SB 540 في نيو هامبشاير الحد الأقصى القياسي البالغ 1,200 واط المعتمد في معظم الولايات التي سنّت القانون، ويجعل نيو هامبشاير أول ولاية في الشمال الشرقي تُقر تشريعًا مخصصًا للطاقة الشمسية للشرفات.</strong> تم التوقيع عليه في 28 مايو 2026 ويدخل حيز التنفيذ في 27 يوليو 2026 — قارن تاريخ اليوم بتاريخ السريان هذا قبل افتراض أن القانون ينطبق عليك بالفعل. بمجرد سريانه، سيتبع نموذج الإعفاء القياسي: لا حاجة إلى اتفاقية ربط بالشبكة أو رسوم مع شركة الكهرباء، مع استبعاد نظام صافي القياس (net metering) للطاقة المُصدَّرة.',
           'لم يتم تأكيد أي نص يمنع جمعيات الملاك (HOA) أو الملاك من حظر الطاقة الشمسية للشرفات في نيو هامبشاير ضمن هذه المراجعة — تحقق من عقد الإيجار أو لائحة جمعية الملاك بشكل منفصل بمجرد سريان القانون.',
         ],
         columns: ['الحقل', 'New Hampshire SB 540'],
@@ -714,8 +721,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'هل القصة الاقتصادية قوية في نيو هامبشاير؟',
         content: [
-          '**تمتلك نيو هامبشاير أعلى متوسط سعر كهرباء سكني بين الولايات الثماني التي سنّت القانون، عند 28.1 سنت/kWh — أي أكثر من ضعف سعر يوتا البالغ 11.6 سنت/kWh.** هذا يعني أنه بمجرد توفر أجهزة متوافقة، من المفترض أن يكون العائد على مجموعة بقدرة 800 واط أفضل بكثير مقارنة بالولايات ذات الأسعار الأقل، رغم أن رقمًا محددًا بالدولار خاصًا بنيو هامبشاير لم يكن موجودًا في جدول التوفير حسب الولاية الخاص بالمصدر المستخدم في هذه السلسلة. عبر الولايات التي تم تتبعها، توفر مجموعة بقدرة 800 واط ما يقارب 150 إلى 350 دولارًا سنويًا حسب الأسعار المحلية — من المرجح أن يضع السعر المرتفع في نيو هامبشاير هذا الرقم في الجزء الأعلى من هذا النطاق، لكن يجب اعتبار هذا نطاقًا وطنيًا وليس تقديرًا مؤكدًا خاصًا بنيو هامبشاير.',
+          '<strong>تمتلك نيو هامبشاير أعلى متوسط سعر كهرباء سكني بين الولايات الثماني التي سنّت القانون، عند 28.1 سنت/kWh — أي أكثر من ضعف سعر يوتا البالغ 11.6 سنت/kWh.</strong> هذا يعني أنه بمجرد توفر أجهزة متوافقة، من المفترض أن يكون العائد على مجموعة بقدرة 800 واط أفضل بكثير مقارنة بالولايات ذات الأسعار الأقل، رغم أن رقمًا محددًا بالدولار خاصًا بنيو هامبشاير لم يكن موجودًا في جدول التوفير حسب الولاية الخاص بالمصدر المستخدم في هذه السلسلة. عبر الولايات التي تم تتبعها، توفر مجموعة بقدرة 800 واط ما يقارب 150 إلى 350 دولارًا سنويًا حسب الأسعار المحلية — من المرجح أن يضع السعر المرتفع في نيو هامبشاير هذا الرقم في الجزء الأعلى من هذا النطاق، لكن يجب اعتبار هذا نطاقًا وطنيًا وليس تقديرًا مؤكدًا خاصًا بنيو هامبشاير.',
           'تُعد الشهادة العائق الآخر: حتى وقت كتابة هذا المحتوى، لم يؤكد أي نظام طاقة شمسية كامل قابل للتوصيل حصوله على شهادة UL 3700 الكاملة، وهي فجوة على المستوى الوطني تنطبق بغض النظر عن تاريخ سريان القانون في نيو هامبشاير. يُعد منتج STREAM Ultra من EcoFlow الأقرب إلى السوق، لكنه معروض للبيع حاليًا في يوتا تحديدًا.',
+          '<strong>بمجرد أن يدخل القانون حيز التنفيذ ويظهر عتاد معتمد، ستحتاج إلى خيارات حقيقية للمقارنة.</strong> اطّلع الآن، على سبيل السياق فقط، على <a href="/ar/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">أفضل اختيارات بطاريات المنازل الأمريكية للطاقة الشمسية للشرفات</a> أو <a href="/ar/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">مقارنة أنظمة EcoFlow مقابل Anker مقابل Zendure</a> — لكن أيًا من الصفحتين لا يدّعي أن أي مجموعة معتمدة أو جاهزة لقانون نيو هامبشاير الذي لم يدخل حيز التنفيذ بعد.',
         ],
       },
       faq: {
@@ -791,7 +799,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '뉴햄프셔주 SB 540 법안은 무엇을 요구합니까?',
         content: [
-          '**뉴햄프셔주 SB 540 법안은 대부분의 법제화 주에서 사용되는 표준 1,200W 상한선을 따르며, 뉴햄프셔주는 발코니 태양광 전용 법안을 통과시킨 최초의 동북부 주가 됩니다.** 이 법안은 2026년 5월 28일에 서명되었으며 2026년 7월 27일부터 시행됩니다. 법이 이미 자신에게 적용된다고 가정하기 전에 오늘 날짜와 시행일을 비교해 보십시오. 시행되면 표준 면제 조항을 따르게 됩니다. 즉, 전력회사와의 계통연계 계약이나 수수료가 필요 없으며, 송전된 전력에 대한 net metering은 제외됩니다.',
+          '<strong>뉴햄프셔주 SB 540 법안은 대부분의 법제화 주에서 사용되는 표준 1,200W 상한선을 따르며, 뉴햄프셔주는 발코니 태양광 전용 법안을 통과시킨 최초의 동북부 주가 됩니다.</strong> 이 법안은 2026년 5월 28일에 서명되었으며 2026년 7월 27일부터 시행됩니다. 법이 이미 자신에게 적용된다고 가정하기 전에 오늘 날짜와 시행일을 비교해 보십시오. 시행되면 표준 면제 조항을 따르게 됩니다. 즉, 전력회사와의 계통연계 계약이나 수수료가 필요 없으며, 송전된 전력에 대한 net metering은 제외됩니다.',
           '이번 조사에서는 뉴햄프셔주와 관련해 HOA(주택소유자협회)나 임대인의 금지를 막는 규정이 확인되지 않았습니다. 법이 시행된 이후 임대 계약서 또는 HOA 규약을 별도로 확인하십시오.',
         ],
         columns: ['항목', '뉴햄프셔주 SB 540'],
@@ -805,8 +813,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '뉴햄프셔주의 경제성은 매력적입니까?',
         content: [
-          '**뉴햄프셔주는 kWh당 28.1센트로 법제화된 8개 주 중 평균 주거용 전기 요금이 가장 높으며, 이는 유타주의 11.6센트보다 두 배 이상 높은 수준입니다.** 즉, 적합한 장비가 출시되면 800W 키트의 투자 회수는 요금이 낮은 주보다 훨씬 유리할 것으로 예상됩니다. 다만 이 시리즈에서 사용한 출처의 주별 절감액 표에는 뉴햄프셔주에 특화된 구체적인 금액이 포함되어 있지 않았습니다. 추적된 주 전체를 기준으로 보면, 800W 키트는 지역 요금에 따라 연간 약 150~350달러를 절감합니다. 뉴햄프셔주의 높은 요금을 고려하면 이 범위의 상단에 가까울 가능성이 크지만, 이는 전국 범위의 추정치일 뿐 뉴햄프셔주에 특화된 확정 수치가 아니라는 점에 유의하십시오.',
+          '<strong>뉴햄프셔주는 kWh당 28.1센트로 법제화된 8개 주 중 평균 주거용 전기 요금이 가장 높으며, 이는 유타주의 11.6센트보다 두 배 이상 높은 수준입니다.</strong> 즉, 적합한 장비가 출시되면 800W 키트의 투자 회수는 요금이 낮은 주보다 훨씬 유리할 것으로 예상됩니다. 다만 이 시리즈에서 사용한 출처의 주별 절감액 표에는 뉴햄프셔주에 특화된 구체적인 금액이 포함되어 있지 않았습니다. 추적된 주 전체를 기준으로 보면, 800W 키트는 지역 요금에 따라 연간 약 150~350달러를 절감합니다. 뉴햄프셔주의 높은 요금을 고려하면 이 범위의 상단에 가까울 가능성이 크지만, 이는 전국 범위의 추정치일 뿐 뉴햄프셔주에 특화된 확정 수치가 아니라는 점에 유의하십시오.',
           '인증은 또 다른 관문입니다. 작성 시점 기준으로, UL 3700 전체 인증을 확인받은 완제품 플러그인 태양광 시스템은 아직 없으며, 이는 뉴햄프셔주의 시행일과 무관하게 전국적으로 공통된 공백입니다. EcoFlow의 STREAM Ultra가 시장 출시에 가장 근접한 제품이지만, 현재는 유타주에서만 판매되고 있습니다.',
+          '<strong>법이 시행되고 인증된 장비가 등장하면, 비교할 실제 선택지가 필요할 것입니다.</strong> 지금은 참고용으로 <a href="/ko/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">현재 미국 발코니 태양광용 홈 배터리 추천</a> 또는 <a href="/ko/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow 대 Anker 대 Zendure 생태계 비교</a>를 확인해 보십시오. 다만 두 페이지 모두 어떤 키트가 인증되었거나 아직 시행되지 않은 뉴햄프셔주 법에 대비되어 있다고 주장하지 않습니다.',
         ],
       },
       faq: {

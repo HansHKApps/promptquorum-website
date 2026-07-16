@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Does S.202/H.598 Require in Vermont?',
         content: [
-          '**Vermont\'s law caps devices at 1,200W, matching the majority template, but is more explicit than most of the 8 enacted states in naming UL 3700 or an equivalent nationally recognized certification directly in the statutory text.** Net metering is explicitly excluded — excess power exported to the grid earns no compensation under the law.',
+          '<strong>Vermont\'s law caps devices at 1,200W, matching the majority template, but is more explicit than most of the 8 enacted states in naming UL 3700 or an equivalent nationally recognized certification directly in the statutory text.</strong> Net metering is explicitly excluded — excess power exported to the grid earns no compensation under the law.',
           'No HOA or landlord preemption language for Vermont was confirmed in this pass — check your lease or HOA covenant separately, since the state law addresses utility interconnection and certification, not HOA authority.',
         ],
         columns: ['Field', 'Vermont S.202/H.598'],
@@ -70,8 +70,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Does Vermont\'s Explicit UL 3700 Requirement Change Anything?',
         content: [
-          '**Vermont naming UL 3700 explicitly in its statute doesn\'t change the underlying problem: no complete plug-in solar system has confirmed full UL 3700 certification as of write-time, the same gap facing every other enacted state.** The standard was published December 2025 with testing opening January 2026 — testing takes months, and Vermont\'s explicit statutory language doesn\'t speed that process up. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Vermont.',
+          '<strong>Vermont naming UL 3700 explicitly in its statute doesn\'t change the underlying problem: no complete plug-in solar system has confirmed full UL 3700 certification as of write-time, the same gap facing every other enacted state.</strong> The standard was published December 2025 with testing opening January 2026 — testing takes months, and Vermont\'s explicit statutory language doesn\'t speed that process up. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Vermont.',
           'Vermont wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Vermont-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Vermont estimate.',
+          '<strong>Ready to compare actual hardware?</strong> See the <a href="/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">current US home-battery picks for balcony solar</a> or the <a href="/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow vs. Anker vs. Zendure ecosystem comparison</a> — plain product links, not a claim that any specific kit is certified or available in Vermont today.',
         ],
       },
       faq: {
@@ -147,7 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was schreibt S.202/H.598 in Vermont vor?',
         content: [
-          '**Vermonts Gesetz begrenzt Geräte auf 1.200 W, entsprechend der Mehrheitsvorlage, nennt jedoch UL 3700 oder eine gleichwertige, national anerkannte Zertifizierung expliziter im Gesetzestext als die meisten der 8 verabschiedenden Bundesstaaten.** Net Metering ist ausdrücklich ausgeschlossen – überschüssiger, ins Netz eingespeister Strom wird nach dem Gesetz nicht vergütet.',
+          '<strong>Vermonts Gesetz begrenzt Geräte auf 1.200 W, entsprechend der Mehrheitsvorlage, nennt jedoch UL 3700 oder eine gleichwertige, national anerkannte Zertifizierung expliziter im Gesetzestext als die meisten der 8 verabschiedenden Bundesstaaten.</strong> Net Metering ist ausdrücklich ausgeschlossen – überschüssiger, ins Netz eingespeister Strom wird nach dem Gesetz nicht vergütet.',
           'Für Vermont wurde in dieser Prüfung keine HOA- oder Vermieter-Vorrangregelung bestätigt – prüfen Sie Ihren Mietvertrag oder Ihre HOA-Satzung separat, da das Landesgesetz die Netzanbindung und Zertifizierung regelt, nicht die HOA-Befugnisse.',
         ],
         columns: ['Feld', 'Vermont S.202/H.598'],
@@ -162,8 +163,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Ändert Vermonts explizite UL-3700-Vorgabe etwas?',
         content: [
-          '**Dass Vermont UL 3700 im Gesetzestext ausdrücklich nennt, ändert nichts am zugrunde liegenden Problem: Bislang ist kein komplettes Plug-in-Solarsystem bestätigt vollständig UL-3700-zertifiziert – dieselbe Lücke besteht in jedem anderen verabschiedenden Bundesstaat.** Der Standard wurde im Dezember 2025 veröffentlicht, Tests begannen im Januar 2026 – solche Tests dauern Monate, und Vermonts explizite Gesetzesformulierung beschleunigt diesen Prozess nicht. EcoFlows STREAM Ultra ist das Produkt, das dem Markt am nächsten ist, wird derzeit aber speziell in Utah zum Verkauf angeboten, nicht in Vermont.',
+          '<strong>Dass Vermont UL 3700 im Gesetzestext ausdrücklich nennt, ändert nichts am zugrunde liegenden Problem: Bislang ist kein komplettes Plug-in-Solarsystem bestätigt vollständig UL-3700-zertifiziert – dieselbe Lücke besteht in jedem anderen verabschiedenden Bundesstaat.</strong> Der Standard wurde im Dezember 2025 veröffentlicht, Tests begannen im Januar 2026 – solche Tests dauern Monate, und Vermonts explizite Gesetzesformulierung beschleunigt diesen Prozess nicht. EcoFlows STREAM Ultra ist das Produkt, das dem Markt am nächsten ist, wird derzeit aber speziell in Utah zum Verkauf angeboten, nicht in Vermont.',
           'Vermont war nicht in der Bundesstaaten-Einsparungstabelle der für diese Serie genutzten Quelle enthalten, daher liegt hier keine Vermont-spezifische Zahl vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – das ist als landesweite Spanne zu verstehen, nicht als Schätzung für Vermont.',
+          '<strong>Möchten Sie konkrete Hardware vergleichen?</strong> Sehen Sie sich die <a href="/de/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">aktuellen US-Heimbatterie-Empfehlungen für Balkonsolar</a> oder den <a href="/de/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">Ökosystemvergleich EcoFlow vs. Anker vs. Zendure</a> an – reine Produktlinks, kein Nachweis, dass ein bestimmtes Kit in Vermont zertifiziert oder erhältlich ist.',
         ],
       },
       faq: {
@@ -239,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que prévoit la loi S.202/H.598 dans le Vermont ?',
         content: [
-          "**La loi du Vermont plafonne les appareils à 1 200 W, conformément au modèle majoritaire, mais elle est plus explicite que la plupart des 8 États l'ayant adoptée en nommant directement UL 3700 ou une certification équivalente reconnue nationalement dans le texte légal.** La revente au réseau est explicitement exclue — l'excédent d'électricité exporté vers le réseau n'est pas rémunéré selon la loi.",
+          "<strong>La loi du Vermont plafonne les appareils à 1 200 W, conformément au modèle majoritaire, mais elle est plus explicite que la plupart des 8 États l'ayant adoptée en nommant directement UL 3700 ou une certification équivalente reconnue nationalement dans le texte légal.</strong> La revente au réseau est explicitement exclue — l'excédent d'électricité exporté vers le réseau n'est pas rémunéré selon la loi.",
           "Aucune disposition de préemption des HOA ou des propriétaires n'a été confirmée pour le Vermont lors de cette analyse — vérifiez séparément votre bail ou le règlement de copropriété, car la loi de l'État traite de l'interconnexion au réseau et de la certification, pas de l'autorité des HOA.",
         ],
         columns: ['Champ', 'Vermont S.202/H.598'],
@@ -254,8 +256,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: "L'exigence explicite UL 3700 du Vermont change-t-elle quelque chose ?",
         content: [
-          "**Le fait que le Vermont nomme explicitement UL 3700 dans sa loi ne change rien au problème de fond : aucun système solaire à brancher complet n'a confirmé une certification UL 3700 intégrale à ce jour, un manque partagé par tous les autres États l'ayant adoptée.** La norme a été publiée en décembre 2025, les tests ont débuté en janvier 2026 — ces tests prennent des mois, et le libellé explicite de la loi du Vermont n'accélère pas ce processus. Le STREAM Ultra d'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l'Utah, pas dans le Vermont.",
+          "<strong>Le fait que le Vermont nomme explicitement UL 3700 dans sa loi ne change rien au problème de fond : aucun système solaire à brancher complet n'a confirmé une certification UL 3700 intégrale à ce jour, un manque partagé par tous les autres États l'ayant adoptée.</strong> La norme a été publiée en décembre 2025, les tests ont débuté en janvier 2026 — ces tests prennent des mois, et le libellé explicite de la loi du Vermont n'accélère pas ce processus. Le STREAM Ultra d'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l'Utah, pas dans le Vermont.",
           "Le Vermont ne figurait pas dans le tableau d'économies État par État de la source utilisée pour cette série, donc aucun chiffre spécifique au Vermont n'est disponible ici. Dans les États suivis, un kit de 800 W permet d'économiser environ 150 à 350 dollars par an selon les tarifs locaux d'électricité — à considérer comme une fourchette nationale, pas une estimation pour le Vermont.",
+          "<strong>Prêt à comparer du matériel concret ?</strong> Consultez les <a href='/fr/balcony-solar/best-balcony-solar-home-battery-us-2026' class='text-primary hover:underline'>meilleurs choix de batteries domestiques américaines pour le solaire de balcon</a> ou la <a href='/fr/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar' class='text-primary hover:underline'>comparaison des écosystèmes EcoFlow, Anker et Zendure</a> — de simples liens produits, sans prétendre qu'un kit précis est certifié ou disponible dans le Vermont aujourd'hui.",
         ],
       },
       faq: {
@@ -331,7 +334,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'バーモント州のS.202/H.598は何を義務付けているか？',
         content: [
-          '**バーモント州の法律は、多数派のテンプレートに合わせて機器を1,200Wに制限していますが、8つの制定州の多くよりも明示的に、法文中で直接UL 3700または同等の全米認定認証を指定しています。** ネットメータリングは明示的に除外されており、系統へ送電された余剰電力に対する補償はこの法律では発生しません。',
+          '<strong>バーモント州の法律は、多数派のテンプレートに合わせて機器を1,200Wに制限していますが、8つの制定州の多くよりも明示的に、法文中で直接UL 3700または同等の全米認定認証を指定しています。</strong> ネットメータリングは明示的に除外されており、系統へ送電された余剰電力に対する補償はこの法律では発生しません。',
           '今回の調査では、バーモント州のHOA（管理組合）や賃貸人による優先規定は確認されていません――州法は系統連系と認証を対象としており、HOAの権限を扱うものではないため、リースやHOA規約は別途確認してください。',
         ],
         columns: ['項目', 'バーモント州 S.202/H.598'],
@@ -346,8 +349,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'バーモント州の明示的なUL 3700要件は何かを変えるのか？',
         content: [
-          '**バーモント州が法文でUL 3700を明示的に指定していても、根本的な問題は変わりません――現時点で完全なUL 3700認証を取得したと確認されたプラグイン型太陽光システムは存在せず、これは他のすべての制定州が直面している同じギャップです。** この規格は2025年12月に公表され、2026年1月に試験が開始されましたが、試験には数か月を要し、バーモント州の明示的な条文がこのプロセスを早めることはありません。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はユタ州限定で販売されており、バーモント州では販売されていません。',
+          '<strong>バーモント州が法文でUL 3700を明示的に指定していても、根本的な問題は変わりません――現時点で完全なUL 3700認証を取得したと確認されたプラグイン型太陽光システムは存在せず、これは他のすべての制定州が直面している同じギャップです。</strong> この規格は2025年12月に公表され、2026年1月に試験が開始されましたが、試験には数か月を要し、バーモント州の明示的な条文がこのプロセスを早めることはありません。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はユタ州限定で販売されており、バーモント州では販売されていません。',
           'バーモント州は、このシリーズで使用された情報源の州別節約額データには含まれていなかったため、バーモント州固有の金額はここでは示せません。データがある州全体で見ると、800Wキットは地域の電気料金により年間おおよそ150〜350ドルの節約となります――これはバーモント州の推定値ではなく、全米レンジとして扱ってください。',
+          '<strong>実際のハードウェアを比較しませんか？</strong><a href="/ja/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">バルコニーソーラー向け米国製ホームバッテリーの最新おすすめ</a>や<a href="/ja/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow・Anker・Zendureのエコシステム比較</a>をご覧ください――これらは単なる製品リンクであり、特定のキットがバーモント州で認証済み・購入可能であることを示すものではありません。',
         ],
       },
       faq: {
@@ -423,7 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '佛蒙特州S.202/H.598法案有哪些要求？',
         content: [
-          '**佛蒙特州的法律将设备功率上限设为1,200W，与大多数州的通用模板一致，但相比8个已立法州中的大多数，佛蒙特州在法条正文中更明确地直接列出了UL 3700或同等的全国认可认证。** 净计量被明确排除——根据该法律，输出到电网的多余电力不获得补偿。',
+          '<strong>佛蒙特州的法律将设备功率上限设为1,200W，与大多数州的通用模板一致，但相比8个已立法州中的大多数，佛蒙特州在法条正文中更明确地直接列出了UL 3700或同等的全国认可认证。</strong> 净计量被明确排除——根据该法律，输出到电网的多余电力不获得补偿。',
           '在本次核查中，未确认佛蒙特州存在业主协会（HOA）或房东优先条款——请单独查看你的租约或HOA公约，因为州法针对的是电网互联和认证问题，而非HOA权限。',
         ],
         columns: ['项目', '佛蒙特州 S.202/H.598'],
@@ -438,8 +442,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '佛蒙特州明确的UL 3700要求改变了什么吗？',
         content: [
-          '**佛蒙特州在法条中明确列出UL 3700，并未改变根本问题：截至目前，没有任何一款完整的插入式太阳能系统被确认已获得完整的UL 3700认证，这与其他所有已立法州面临的差距相同。** 该标准于2025年12月发布，测试于2026年1月开始——测试需要数月时间，佛蒙特州明确的法律措辞并不会加快这一进程。EcoFlow的STREAM Ultra是最接近上市的产品，但目前专门在犹他州销售，而非佛蒙特州。',
+          '<strong>佛蒙特州在法条中明确列出UL 3700，并未改变根本问题：截至目前，没有任何一款完整的插入式太阳能系统被确认已获得完整的UL 3700认证，这与其他所有已立法州面临的差距相同。</strong> 该标准于2025年12月发布，测试于2026年1月开始——测试需要数月时间，佛蒙特州明确的法律措辞并不会加快这一进程。EcoFlow的STREAM Ultra是最接近上市的产品，但目前专门在犹他州销售，而非佛蒙特州。',
           '佛蒙特州未被纳入本系列所使用来源的各州节省金额数据表，因此这里没有针对佛蒙特州的具体数字。在有数据的州中，一套800W套件根据当地电价每年大约可节省150至350美元——请将其视为全国范围的估算，而非针对佛蒙特州的估算。',
+          '<strong>想比较实际硬件吗？</strong>参见<a href="/zh/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">当前美国阳台太阳能家庭电池推荐</a>或<a href="/zh/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow对比Anker对比Zendure生态系统对比</a>——这些只是产品链接，并不表示某款套件已在佛蒙特州获得认证或可购买。',
         ],
       },
       faq: {
@@ -515,7 +520,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exige S.202/H.598 en Vermont?',
         content: [
-          '**La ley de Vermont limita los dispositivos a 1,200W, en línea con la plantilla mayoritaria, pero es más explícita que la mayoría de los 8 estados que han aprobado leyes similares al nombrar directamente UL 3700 o una certificación equivalente reconocida a nivel nacional en el propio texto legal.** El net metering está explícitamente excluido: la energía excedente exportada a la red no recibe compensación bajo esta ley.',
+          '<strong>La ley de Vermont limita los dispositivos a 1,200W, en línea con la plantilla mayoritaria, pero es más explícita que la mayoría de los 8 estados que han aprobado leyes similares al nombrar directamente UL 3700 o una certificación equivalente reconocida a nivel nacional en el propio texto legal.</strong> El net metering está explícitamente excluido: la energía excedente exportada a la red no recibe compensación bajo esta ley.',
           'No se confirmó ninguna disposición de anulación de HOA o de arrendadores para Vermont en esta revisión — verifica tu contrato de alquiler o el reglamento de tu HOA por separado, ya que la ley estatal aborda la interconexión con la red eléctrica y la certificación, no la autoridad de las HOA.',
         ],
         columns: ['Campo', 'Vermont S.202/H.598'],
@@ -530,8 +535,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '¿El requisito explícito de UL 3700 en Vermont cambia algo?',
         content: [
-          '**Que Vermont nombre explícitamente UL 3700 en su ley no cambia el problema de fondo: ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa hasta la fecha, la misma brecha que enfrenta cada uno de los demás estados que han aprobado leyes similares.** El estándar se publicó en diciembre de 2025 y las pruebas comenzaron en enero de 2026 — las pruebas toman meses, y el lenguaje legal explícito de Vermont no acelera ese proceso. El STREAM Ultra de EcoFlow es el producto más cercano a estar disponible, pero actualmente se vende específicamente en Utah, no en Vermont.',
+          '<strong>Que Vermont nombre explícitamente UL 3700 en su ley no cambia el problema de fondo: ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa hasta la fecha, la misma brecha que enfrenta cada uno de los demás estados que han aprobado leyes similares.</strong> El estándar se publicó en diciembre de 2025 y las pruebas comenzaron en enero de 2026 — las pruebas toman meses, y el lenguaje legal explícito de Vermont no acelera ese proceso. El STREAM Ultra de EcoFlow es el producto más cercano a estar disponible, pero actualmente se vende específicamente en Utah, no en Vermont.',
           'Vermont no estaba incluido en la tabla de ahorros estado por estado de la fuente usada para esta serie, por lo que no hay una cifra específica de Vermont disponible aquí. En los estados que sí se rastrearon, un kit de 800W ahorra aproximadamente entre $150 y $350 al año según las tarifas eléctricas locales — trátalo como un rango nacional, no como una estimación para Vermont.',
+          '<strong>¿Listo para comparar hardware real?</strong> Consulta las <a href="/es/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">opciones actuales de baterías domésticas en EE. UU. para solar de balcón</a> o la <a href="/es/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparación de ecosistemas EcoFlow vs. Anker vs. Zendure</a> — enlaces de producto simples, no una afirmación de que algún kit en concreto esté certificado o disponible en Vermont hoy.',
         ],
       },
       faq: {
@@ -607,7 +613,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a lei S.202/H.598 exige em Vermont?',
         content: [
-          '**A lei de Vermont limita os dispositivos a 1.200W, seguindo o modelo adotado pela maioria, mas é mais explícita do que a maioria dos 8 estados que aprovaram leis semelhantes ao citar diretamente a UL 3700 ou uma certificação equivalente reconhecida nacionalmente no próprio texto legal.** O net metering é explicitamente excluído — o excedente de energia exportado para a rede não recebe compensação segundo a lei.',
+          '<strong>A lei de Vermont limita os dispositivos a 1.200W, seguindo o modelo adotado pela maioria, mas é mais explícita do que a maioria dos 8 estados que aprovaram leis semelhantes ao citar diretamente a UL 3700 ou uma certificação equivalente reconhecida nacionalmente no próprio texto legal.</strong> O net metering é explicitamente excluído — o excedente de energia exportado para a rede não recebe compensação segundo a lei.',
           'Nenhuma disposição de preempção de HOA (associação de moradores) ou de locadores foi confirmada para Vermont nesta análise — verifique seu contrato de aluguel ou o regulamento da HOA separadamente, já que a lei estadual trata da interconexão com a rede elétrica e da certificação, não da autoridade da HOA.',
         ],
         columns: ['Campo', 'Vermont S.202/H.598'],
@@ -622,8 +628,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'A exigência explícita de UL 3700 de Vermont muda alguma coisa?',
         content: [
-          '**O fato de Vermont citar explicitamente a UL 3700 em sua lei não muda o problema de fundo: nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento, a mesma lacuna enfrentada por todos os outros estados que aprovaram leis semelhantes.** O padrão foi publicado em dezembro de 2025, com testes iniciados em janeiro de 2026 — os testes levam meses, e a redação legal explícita de Vermont não acelera esse processo. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente é vendido especificamente em Utah, não em Vermont.',
+          '<strong>O fato de Vermont citar explicitamente a UL 3700 em sua lei não muda o problema de fundo: nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento, a mesma lacuna enfrentada por todos os outros estados que aprovaram leis semelhantes.</strong> O padrão foi publicado em dezembro de 2025, com testes iniciados em janeiro de 2026 — os testes levam meses, e a redação legal explícita de Vermont não acelera esse processo. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente é vendido especificamente em Utah, não em Vermont.',
           'Vermont não estava na tabela de economia estado por estado da fonte usada nesta série, então não há um valor específico para Vermont disponível aqui. Nos estados que foram rastreados, um kit de 800W economiza aproximadamente $150–$350 por ano, dependendo das tarifas locais de energia — trate isso como uma faixa nacional, não como uma estimativa para Vermont.',
+          '<strong>Pronto para comparar hardware de verdade?</strong> Veja as <a href="/pt/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">melhores opções atuais de baterias residenciais dos EUA para solar de varanda</a> ou a <a href="/pt/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparação de ecossistemas EcoFlow vs. Anker vs. Zendure</a> — links diretos de produtos, sem afirmar que algum kit específico é certificado ou está disponível em Vermont hoje.',
         ],
       },
       faq: {
@@ -699,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا يشترط قانون S.202/H.598 في فيرمونت؟',
         content: [
-          '**يحدد قانون فيرمونت سقف الأجهزة عند 1,200 واط، بما يتماشى مع النموذج المعتمد في معظم الولايات، لكنه أكثر وضوحًا من معظم الولايات الثماني التي سنّت قوانين مماثلة في ذكر UL 3700 أو شهادة معادلة معترف بها وطنيًا مباشرةً في نص القانون.** قياس الصافي مستبعد صراحةً — لا يحصل أصحاب الأجهزة على أي تعويض مقابل الطاقة الفائضة المصدَّرة إلى الشبكة بموجب هذا القانون.',
+          '<strong>يحدد قانون فيرمونت سقف الأجهزة عند 1,200 واط، بما يتماشى مع النموذج المعتمد في معظم الولايات، لكنه أكثر وضوحًا من معظم الولايات الثماني التي سنّت قوانين مماثلة في ذكر UL 3700 أو شهادة معادلة معترف بها وطنيًا مباشرةً في نص القانون.</strong> قياس الصافي مستبعد صراحةً — لا يحصل أصحاب الأجهزة على أي تعويض مقابل الطاقة الفائضة المصدَّرة إلى الشبكة بموجب هذا القانون.',
           'لم يتم تأكيد أي نص يمنع جمعيات الملاك (HOA) أو الملاك من فرض قيود في فيرمونت ضمن هذا الاستعراض — يُرجى مراجعة عقد الإيجار أو لائحة جمعية الملاك بشكل منفصل، لأن قانون الولاية يتناول الربط بالشبكة والشهادة، وليس صلاحيات جمعيات الملاك.',
         ],
         columns: ['البند', 'فيرمونت S.202/H.598'],
@@ -714,8 +721,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'هل يغيّر شرط UL 3700 الصريح في فيرمونت أي شيء؟',
         content: [
-          '**ذكر فيرمونت الصريح لشهادة UL 3700 في نص القانون لا يغيّر المشكلة الجوهرية: لا يوجد حتى وقت كتابة هذا المقال نظام طاقة شمسية قابل للتوصيل المباشر حاصل على شهادة UL 3700 كاملة مؤكَّدة، وهي نفس الفجوة التي تواجهها بقية الولايات التي سنّت قوانين مماثلة.** نُشر المعيار في ديسمبر 2025 وبدأت الاختبارات في يناير 2026 — تستغرق هذه الاختبارات شهورًا، ولا تُسرّع صياغة فيرمونت القانونية الصريحة هذه العملية. يُعد جهاز STREAM Ultra من EcoFlow أقرب منتج إلى دخول السوق، لكنه يُباع حاليًا في ولاية يوتا تحديدًا، وليس في فيرمونت.',
+          '<strong>ذكر فيرمونت الصريح لشهادة UL 3700 في نص القانون لا يغيّر المشكلة الجوهرية: لا يوجد حتى وقت كتابة هذا المقال نظام طاقة شمسية قابل للتوصيل المباشر حاصل على شهادة UL 3700 كاملة مؤكَّدة، وهي نفس الفجوة التي تواجهها بقية الولايات التي سنّت قوانين مماثلة.</strong> نُشر المعيار في ديسمبر 2025 وبدأت الاختبارات في يناير 2026 — تستغرق هذه الاختبارات شهورًا، ولا تُسرّع صياغة فيرمونت القانونية الصريحة هذه العملية. يُعد جهاز STREAM Ultra من EcoFlow أقرب منتج إلى دخول السوق، لكنه يُباع حاليًا في ولاية يوتا تحديدًا، وليس في فيرمونت.',
           'لم تكن فيرمونت ضمن جدول التوفير حسب الولاية الخاص بالمصدر المستخدم في هذه السلسلة، لذا لا يتوفر هنا رقم محدد لفيرمونت. في الولايات التي تم تتبعها، توفّر مجموعة 1,200 واط بقدرة 800 واط ما يقارب 150 إلى 350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — يُرجى اعتبار هذا نطاقًا وطنيًا عامًا وليس تقديرًا خاصًا بفيرمونت.',
+          '<strong>هل أنت مستعد لمقارنة الأجهزة الفعلية؟</strong> اطّلع على <a href="/ar/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">أفضل خيارات بطاريات المنازل الأمريكية للطاقة الشمسية للشرفات لعام 2026</a> أو <a href="/ar/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">مقارنة أنظمة EcoFlow وAnker وZendure</a> — وهي مجرد روابط منتجات، وليست ادعاءً بأن جهازًا معينًا معتمد أو متوفر في فيرمونت حاليًا.',
         ],
       },
       faq: {
@@ -791,7 +799,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '버몬트주 S.202/H.598은 무엇을 요구합니까?',
         content: [
-          '**버몬트주 법률은 대다수 주가 따르는 표준 모델과 동일하게 기기 용량을 1,200W로 제한하지만, 법안을 제정한 8개 주 대부분보다 더 명시적으로 UL 3700 또는 이에 상응하는 전국적으로 인정된 인증을 법률 조문에 직접 명시하고 있습니다.** 넷미터링은 명시적으로 제외됩니다 — 이 법에 따르면 전력망으로 송출된 잉여 전력에 대한 보상은 없습니다.',
+          '<strong>버몬트주 법률은 대다수 주가 따르는 표준 모델과 동일하게 기기 용량을 1,200W로 제한하지만, 법안을 제정한 8개 주 대부분보다 더 명시적으로 UL 3700 또는 이에 상응하는 전국적으로 인정된 인증을 법률 조문에 직접 명시하고 있습니다.</strong> 넷미터링은 명시적으로 제외됩니다 — 이 법에 따르면 전력망으로 송출된 잉여 전력에 대한 보상은 없습니다.',
           '이번 검토에서는 버몬트주에 대해 HOA(주택소유자협회) 또는 임대인의 우선 규정이 확인되지 않았습니다 — 주 법률은 전력망 연계와 인증을 다루며 HOA의 권한을 다루지 않으므로, 임대 계약서나 HOA 규약을 별도로 확인하십시오.',
         ],
         columns: ['항목', '버몬트주 S.202/H.598'],
@@ -806,8 +814,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '버몬트주의 명시적인 UL 3700 요건이 무언가를 바꿉니까?',
         content: [
-          '**버몬트주가 법률 조문에 UL 3700을 명시적으로 명시했다고 해서 근본적인 문제가 바뀌지는 않습니다. 현재까지 완전한 UL 3700 인증을 확인받은 완제품형 플러그인 태양광 시스템은 없으며, 이는 법안을 제정한 다른 모든 주가 직면한 것과 동일한 공백입니다.** 해당 표준은 2025년 12월에 공표되었고 시험은 2026년 1월에 시작되었습니다 — 시험에는 수개월이 소요되며, 버몬트주의 명시적인 법률 문구가 이 과정을 앞당기지는 않습니다. EcoFlow의 STREAM Ultra가 시장에 가장 근접한 제품이지만, 현재는 버몬트주가 아닌 유타주에서 한정적으로 판매되고 있습니다.',
+          '<strong>버몬트주가 법률 조문에 UL 3700을 명시적으로 명시했다고 해서 근본적인 문제가 바뀌지는 않습니다. 현재까지 완전한 UL 3700 인증을 확인받은 완제품형 플러그인 태양광 시스템은 없으며, 이는 법안을 제정한 다른 모든 주가 직면한 것과 동일한 공백입니다.</strong> 해당 표준은 2025년 12월에 공표되었고 시험은 2026년 1월에 시작되었습니다 — 시험에는 수개월이 소요되며, 버몬트주의 명시적인 법률 문구가 이 과정을 앞당기지는 않습니다. EcoFlow의 STREAM Ultra가 시장에 가장 근접한 제품이지만, 현재는 버몬트주가 아닌 유타주에서 한정적으로 판매되고 있습니다.',
           '버몬트주는 이 시리즈에 사용된 출처의 주별 절감액 표에 포함되어 있지 않았기 때문에, 버몬트주에 특화된 수치는 여기서 제공되지 않습니다. 자료가 있는 주들을 기준으로, 800W 키트는 지역 전기 요금에 따라 연간 약 150~350달러를 절감합니다 — 이는 버몬트주에 대한 추정치가 아니라 전국 범위로 이해해야 합니다.',
+          '<strong>실제 하드웨어를 비교해 보시겠습니까?</strong> <a href="/ko/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">발코니 태양광용 미국 홈 배터리 최신 추천 제품</a> 또는 <a href="/ko/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow, Anker, Zendure 생태계 비교</a>를 참고하십시오 — 이는 단순 제품 링크일 뿐이며, 특정 키트가 버몬트주에서 인증되었거나 구매 가능하다는 의미는 아닙니다.',
         ],
       },
       faq: {

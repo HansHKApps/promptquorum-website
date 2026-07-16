@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Will HB 5340 Require in Connecticut?',
         content: [
-          '**Connecticut HB 5340 folds balcony solar provisions into a broader omnibus solar bill, rather than passing standalone legislation the way most of the other 7 enacted states did.** It sets a 1,200W cap matching the majority template, but the law does not take effect until October 1, 2026 — it is not usable yet as of write-time. Once in effect, expect the standard exemption structure: no utility interconnection agreement or fee, with net metering excluded.',
+          '<strong>Connecticut HB 5340 folds balcony solar provisions into a broader omnibus solar bill, rather than passing standalone legislation the way most of the other 7 enacted states did.</strong> It sets a 1,200W cap matching the majority template, but the law does not take effect until October 1, 2026 — it is not usable yet as of write-time. Once in effect, expect the standard exemption structure: no utility interconnection agreement or fee, with net metering excluded.',
           'No HOA or landlord preemption language for Connecticut was confirmed in this pass — check your lease or HOA covenant separately once the law is in effect.',
         ],
         columns: ['Field', 'Connecticut HB 5340'],
@@ -70,8 +70,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Should I Buy Hardware Now for Connecticut?',
         content: [
-          '**Not yet — the law isn\'t in effect until October 1, 2026, and separately, no complete plug-in solar system has confirmed full UL 3700 certification as of write-time.** Both gates need to clear: the legal effective date and product certification. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Connecticut.',
+          '<strong>Not yet — the law isn\'t in effect until October 1, 2026, and separately, no complete plug-in solar system has confirmed full UL 3700 certification as of write-time.</strong> Both gates need to clear: the legal effective date and product certification. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Connecticut.',
           'Connecticut wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Connecticut-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Connecticut estimate.',
+          '<strong>Once the law takes effect and certified hardware exists, you\'ll want real options to compare.</strong> See the <a href="/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">current US home-battery picks for balcony solar</a> or the <a href="/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow vs. Anker vs. Zendure ecosystem comparison</a> for context now — but neither page claims any kit is certified or ready for Connecticut\'s not-yet-active law today.',
         ],
       },
       faq: {
@@ -147,7 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was wird HB 5340 in Connecticut vorschreiben?',
         content: [
-          '**Connecticuts HB 5340 integriert Balkonsolar-Bestimmungen in ein umfassenderes Solar-Sammelgesetz, anstatt wie in den meisten der anderen 7 Bundesstaaten mit Gesetz eine eigenständige Gesetzgebung zu verabschieden.** Es legt eine Obergrenze von 1.200 W fest, die der Mehrheitsvorlage entspricht, doch das Gesetz tritt erst am 1. Oktober 2026 in Kraft — zum Zeitpunkt der Veröffentlichung ist es noch nicht anwendbar. Sobald es in Kraft ist, ist die übliche Ausnahmestruktur zu erwarten: keine Netzanschlussvereinbarung oder -gebühr des Versorgungsunternehmens, ohne Net Metering.',
+          '<strong>Connecticuts HB 5340 integriert Balkonsolar-Bestimmungen in ein umfassenderes Solar-Sammelgesetz, anstatt wie in den meisten der anderen 7 Bundesstaaten mit Gesetz eine eigenständige Gesetzgebung zu verabschieden.</strong> Es legt eine Obergrenze von 1.200 W fest, die der Mehrheitsvorlage entspricht, doch das Gesetz tritt erst am 1. Oktober 2026 in Kraft — zum Zeitpunkt der Veröffentlichung ist es noch nicht anwendbar. Sobald es in Kraft ist, ist die übliche Ausnahmestruktur zu erwarten: keine Netzanschlussvereinbarung oder -gebühr des Versorgungsunternehmens, ohne Net Metering.',
           'Für Connecticut wurde in dieser Prüfung keine Sprachregelung zur Vorrangstellung gegenüber HOA- oder Vermieterverboten bestätigt — prüfen Sie Ihren Mietvertrag oder Ihre HOA-Satzung separat, sobald das Gesetz in Kraft ist.',
         ],
         columns: ['Feld', 'Connecticut HB 5340'],
@@ -162,8 +163,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Sollte ich jetzt Hardware für Connecticut kaufen?',
         content: [
-          '**Noch nicht — das Gesetz tritt erst am 1. Oktober 2026 in Kraft, und unabhängig davon hat zum Zeitpunkt der Veröffentlichung noch kein vollständiges steckerfertiges Solarsystem eine vollständige UL-3700-Zertifizierung bestätigt.** Beide Hürden müssen genommen werden: das gesetzliche Inkrafttreten und die Produktzertifizierung. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird aber derzeit speziell in Utah zum Verkauf angeboten, nicht in Connecticut.',
+          '<strong>Noch nicht — das Gesetz tritt erst am 1. Oktober 2026 in Kraft, und unabhängig davon hat zum Zeitpunkt der Veröffentlichung noch kein vollständiges steckerfertiges Solarsystem eine vollständige UL-3700-Zertifizierung bestätigt.</strong> Beide Hürden müssen genommen werden: das gesetzliche Inkrafttreten und die Produktzertifizierung. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird aber derzeit speziell in Utah zum Verkauf angeboten, nicht in Connecticut.',
           'Connecticut war nicht in der bundesstaatlichen Einsparungstabelle des Quellen-Trackers enthalten, die für diese Serie verwendet wurde, sodass hier keine Connecticut-spezifische Dollarangabe verfügbar ist. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr — betrachten Sie dies als landesweite Spanne, nicht als Connecticut-Schätzung.',
+          '<strong>Sobald das Gesetz in Kraft tritt und zertifizierte Hardware existiert, werden Sie echte Optionen zum Vergleich wollen.</strong> Sehen Sie sich schon jetzt zur Orientierung die <a href="/de/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">aktuellen US-Heimbatterie-Empfehlungen für Balkonsolar</a> oder den <a href="/de/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">Vergleich EcoFlow vs. Anker vs. Zendure</a> an — aber keine der beiden Seiten behauptet, dass ein Kit zertifiziert oder bereit für Connecticuts noch nicht in Kraft getretenes Gesetz ist.',
         ],
       },
       faq: {
@@ -239,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que va exiger la loi HB 5340 dans le Connecticut ?',
         content: [
-          '**La loi HB 5340 du Connecticut intègre les dispositions sur le solaire de balcon dans une loi solaire omnibus plus large, plutôt que d\'adopter une législation autonome comme la plupart des 7 autres États ayant légiféré.** Elle fixe un plafond de 1 200 W conforme au modèle majoritaire, mais la loi n\'entre pas en vigueur avant le 1er octobre 2026 — elle n\'est pas encore applicable à la date de rédaction. Une fois en vigueur, la structure d\'exemption standard est attendue : aucun contrat d\'interconnexion ni de frais auprès du fournisseur d\'électricité, sans compensation nette (net metering).',
+          '<strong>La loi HB 5340 du Connecticut intègre les dispositions sur le solaire de balcon dans une loi solaire omnibus plus large, plutôt que d\'adopter une législation autonome comme la plupart des 7 autres États ayant légiféré.</strong> Elle fixe un plafond de 1 200 W conforme au modèle majoritaire, mais la loi n\'entre pas en vigueur avant le 1er octobre 2026 — elle n\'est pas encore applicable à la date de rédaction. Une fois en vigueur, la structure d\'exemption standard est attendue : aucun contrat d\'interconnexion ni de frais auprès du fournisseur d\'électricité, sans compensation nette (net metering).',
           'Aucune disposition de préemption vis-à-vis des copropriétés ou des propriétaires n\'a été confirmée pour le Connecticut lors de cette analyse — vérifiez votre bail ou le règlement de copropriété séparément une fois la loi en vigueur.',
         ],
         columns: ['Champ', 'Connecticut HB 5340'],
@@ -254,8 +256,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Dois-je acheter du matériel dès maintenant pour le Connecticut ?',
         content: [
-          '**Pas encore — la loi n\'entre pas en vigueur avant le 1er octobre 2026 et, séparément, aucun système solaire enfichable complet n\'a confirmé de certification UL 3700 intégrale à la date de rédaction.** Les deux conditions doivent être remplies : la date d\'entrée en vigueur légale et la certification du produit. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l\'Utah, pas dans le Connecticut.',
+          '<strong>Pas encore — la loi n\'entre pas en vigueur avant le 1er octobre 2026 et, séparément, aucun système solaire enfichable complet n\'a confirmé de certification UL 3700 intégrale à la date de rédaction.</strong> Les deux conditions doivent être remplies : la date d\'entrée en vigueur légale et la certification du produit. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l\'Utah, pas dans le Connecticut.',
           'Le Connecticut ne figurait pas dans le tableau d\'économies par État de la source utilisée pour cette série ; un chiffre spécifique au Connecticut n\'est donc pas disponible ici. Dans les États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs locaux de l\'électricité — considérez cela comme une fourchette nationale, pas une estimation pour le Connecticut.',
+          '<strong>Une fois la loi en vigueur et du matériel certifié disponible, vous voudrez comparer de vraies options.</strong> Consultez dès maintenant, à titre de repère, les <a href="/fr/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">meilleurs choix de batteries domestiques US pour le solaire de balcon</a> ou la <a href="/fr/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparaison EcoFlow vs. Anker vs. Zendure</a> — mais aucune de ces deux pages n\'affirme qu\'un kit soit certifié ou prêt pour la loi du Connecticut, qui n\'est pas encore en vigueur aujourd\'hui.',
         ],
       },
       faq: {
@@ -331,7 +334,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'コネチカット州のHB 5340は何を求めていますか？',
         content: [
-          '**コネチカット州のHB 5340は、他の7つの制定州の多くが行ったような単独立法ではなく、バルコニーソーラー規定をより広範な包括的ソーラー法案に組み込んでいます。** 多数派テンプレートと同じ1,200Wの上限を設けていますが、法律は2026年10月1日まで発効せず、執筆時点ではまだ利用できません。発効後は、標準的な適用除外構造（電力会社との系統連系契約や手数料は不要で、ネットメータリングは対象外）が想定されます。',
+          '<strong>コネチカット州のHB 5340は、他の7つの制定州の多くが行ったような単独立法ではなく、バルコニーソーラー規定をより広範な包括的ソーラー法案に組み込んでいます。</strong> 多数派テンプレートと同じ1,200Wの上限を設けていますが、法律は2026年10月1日まで発効せず、執筆時点ではまだ利用できません。発効後は、標準的な適用除外構造（電力会社との系統連系契約や手数料は不要で、ネットメータリングは対象外）が想定されます。',
           '今回の調査ではコネチカット州のHOAまたは家主による優先規定は確認されていません — 法律が発効した後、賃貸契約またはHOA規約を別途確認してください。',
         ],
         columns: ['項目', 'コネチカット州 HB 5340'],
@@ -346,8 +349,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'コネチカット州向けに今ハードウェアを購入すべきですか？',
         content: [
-          '**まだです — 法律は2026年10月1日まで発効せず、それとは別に、執筆時点で完全なUL 3700認証を取得したプラグイン式ソーラーシステムはまだ確認されていません。** 法的発効日と製品認証という2つの条件の両方をクリアする必要があります。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はコネチカット州ではなく、特にユタ州で販売されています。',
+          '<strong>まだです — 法律は2026年10月1日まで発効せず、それとは別に、執筆時点で完全なUL 3700認証を取得したプラグイン式ソーラーシステムはまだ確認されていません。</strong> 法的発効日と製品認証という2つの条件の両方をクリアする必要があります。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はコネチカット州ではなく、特にユタ州で販売されています。',
           'コネチカット州は、このシリーズで使用したソースの州別節約額トラッカーには含まれていなかったため、コネチカット州固有の金額はここでは提供できません。トラッキング対象の州全体では、800Wキットは地域の電気料金によって年間およそ150〜350ドルの節約になります — これはコネチカット州の推定値ではなく、全国的な範囲として扱ってください。',
+          '<strong>法律が発効し、認証済みハードウェアが登場したら、比較できる実際の選択肢が必要になります。</strong> 参考として、<a href="/ja/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">バルコニーソーラー向け米国製ホームバッテリーの現行おすすめ</a>や<a href="/ja/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow対Anker対Zendureのエコシステム比較</a>を今のうちにご覧ください — ただし、どちらのページも、コネチカット州のまだ発効していない法律に対応した認証済みキットがあるとは主張していません。',
         ],
       },
       faq: {
@@ -423,7 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB 5340将对康涅狄格州提出哪些要求？',
         content: [
-          '**康涅狄格州HB 5340将阳台太阳能条款并入更广泛的综合太阳能法案，而不是像其他7个已立法州中的大多数那样单独立法。** 该法案设定了与多数模板一致的1,200W上限，但要到2026年10月1日才生效——截至撰写时尚不可用。生效后，预计将采用标准的豁免结构：无需与电力公司签订并网协议或支付费用，且不适用净计量。',
+          '<strong>康涅狄格州HB 5340将阳台太阳能条款并入更广泛的综合太阳能法案，而不是像其他7个已立法州中的大多数那样单独立法。</strong> 该法案设定了与多数模板一致的1,200W上限，但要到2026年10月1日才生效——截至撰写时尚不可用。生效后，预计将采用标准的豁免结构：无需与电力公司签订并网协议或支付费用，且不适用净计量。',
           '本次核查未确认康涅狄格州存在针对HOA或房东的优先适用条款——法律生效后，请单独核实你的租约或HOA规约。',
         ],
         columns: ['项目', '康涅狄格州 HB 5340'],
@@ -438,8 +442,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '现在应该为康涅狄格州购买硬件吗？',
         content: [
-          '**还不行——该法律要到2026年10月1日才生效，另外，截至撰写时，尚无完整的插入式太阳能系统确认获得完整的UL 3700认证。** 两个条件都必须满足：法律生效日期和产品认证。EcoFlow的STREAM Ultra是最接近上市的产品，但目前专门在犹他州销售，而非康涅狄格州。',
+          '<strong>还不行——该法律要到2026年10月1日才生效，另外，截至撰写时，尚无完整的插入式太阳能系统确认获得完整的UL 3700认证。</strong> 两个条件都必须满足：法律生效日期和产品认证。EcoFlow的STREAM Ultra是最接近上市的产品，但目前专门在犹他州销售，而非康涅狄格州。',
           '康涅狄格州未被纳入本系列使用的信息来源的各州节省数据表，因此这里无法提供康涅狄格州的具体数字。在已跟踪的各州中，一套800W套件根据当地电价每年大约可节省150至350美元——请将其视为全国范围，而非康涅狄格州的估算值。',
+          '<strong>一旦法律生效且出现经认证的硬件，你会需要真正可比较的选项。</strong> 现在可先参考<a href="/zh/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">美国阳台太阳能家庭电池当前推荐</a>或<a href="/zh/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow对比Anker对比Zendure生态系统比较</a>——但这两个页面均未声称任何套件已获得认证，或已为康涅狄格州目前尚未生效的法律做好准备。',
         ],
       },
       faq: {
@@ -515,7 +520,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exigirá la HB 5340 en Connecticut?',
         content: [
-          '**La HB 5340 de Connecticut incorpora las disposiciones de energía solar de balcón dentro de una ley solar general más amplia, en lugar de aprobar una legislación independiente como hicieron la mayoría de los otros 7 estados que han legislado.** Establece un límite de 1,200W acorde con la plantilla mayoritaria, pero la ley no entra en vigor hasta el 1 de octubre de 2026 — todavía no es aplicable al momento de escribir esto. Una vez vigente, se espera la estructura de exención estándar: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, sin medición neta (net metering).',
+          '<strong>La HB 5340 de Connecticut incorpora las disposiciones de energía solar de balcón dentro de una ley solar general más amplia, en lugar de aprobar una legislación independiente como hicieron la mayoría de los otros 7 estados que han legislado.</strong> Establece un límite de 1,200W acorde con la plantilla mayoritaria, pero la ley no entra en vigor hasta el 1 de octubre de 2026 — todavía no es aplicable al momento de escribir esto. Una vez vigente, se espera la estructura de exención estándar: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, sin medición neta (net metering).',
           'En esta revisión no se confirmó ningún lenguaje de prevalencia sobre HOA o arrendadores para Connecticut — revisa tu contrato de alquiler o el reglamento de tu HOA por separado una vez que la ley esté vigente.',
         ],
         columns: ['Campo', 'Connecticut HB 5340'],
@@ -530,8 +535,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '¿Debo comprar hardware ahora para Connecticut?',
         content: [
-          '**Todavía no — la ley no entra en vigor hasta el 1 de octubre de 2026 y, por separado, ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa al momento de escribir esto.** Ambas condiciones deben cumplirse: la fecha de vigencia legal y la certificación del producto. El STREAM Ultra de EcoFlow es el producto más cercano a estar disponible, pero actualmente se vende específicamente en Utah, no en Connecticut.',
+          '<strong>Todavía no — la ley no entra en vigor hasta el 1 de octubre de 2026 y, por separado, ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa al momento de escribir esto.</strong> Ambas condiciones deben cumplirse: la fecha de vigencia legal y la certificación del producto. El STREAM Ultra de EcoFlow es el producto más cercano a estar disponible, pero actualmente se vende específicamente en Utah, no en Connecticut.',
           'Connecticut no estaba incluido en la tabla de ahorros por estado de la fuente usada para esta serie, por lo que aquí no hay una cifra específica para Connecticut. En los estados que sí se rastrearon, un kit de 800W ahorra aproximadamente entre $150 y $350 al año según las tarifas eléctricas locales — considera esto un rango nacional, no una estimación para Connecticut.',
+          '<strong>Una vez que la ley entre en vigor y exista hardware certificado, querrás opciones reales para comparar.</strong> Consulta ahora, como referencia, las <a href="/es/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">selecciones actuales de baterías domésticas de EE. UU. para energía solar de balcón</a> o la <a href="/es/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparación de ecosistemas EcoFlow vs. Anker vs. Zendure</a> — pero ninguna de las dos páginas afirma que algún kit esté certificado o listo para la ley de Connecticut, que aún no está vigente hoy.',
         ],
       },
       faq: {
@@ -607,7 +613,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a HB 5340 vai exigir em Connecticut?',
         content: [
-          '**A HB 5340 de Connecticut incorpora as disposições sobre energia solar de varanda a uma lei solar abrangente mais ampla, em vez de aprovar uma legislação independente como fizeram a maioria dos outros 7 estados que legislaram.** Ela define um limite de 1.200W alinhado ao modelo majoritário, mas a lei só entra em vigor em 1º de outubro de 2026 — ainda não é aplicável no momento da publicação. Uma vez em vigor, espera-se a estrutura de isenção padrão: sem acordo de interconexão ou taxa com a concessionária, sem net metering.',
+          '<strong>A HB 5340 de Connecticut incorpora as disposições sobre energia solar de varanda a uma lei solar abrangente mais ampla, em vez de aprovar uma legislação independente como fizeram a maioria dos outros 7 estados que legislaram.</strong> Ela define um limite de 1.200W alinhado ao modelo majoritário, mas a lei só entra em vigor em 1º de outubro de 2026 — ainda não é aplicável no momento da publicação. Uma vez em vigor, espera-se a estrutura de isenção padrão: sem acordo de interconexão ou taxa com a concessionária, sem net metering.',
           'Nenhuma linguagem de prevalência sobre HOA (associação de moradores) ou locadores foi confirmada para Connecticut nesta análise — verifique seu contrato de aluguel ou o regulamento da HOA separadamente assim que a lei entrar em vigor.',
         ],
         columns: ['Campo', 'Connecticut HB 5340'],
@@ -622,8 +628,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Devo comprar equipamento agora para Connecticut?',
         content: [
-          '**Ainda não — a lei só entra em vigor em 1º de outubro de 2026 e, separadamente, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento da publicação.** As duas condições precisam ser cumpridas: a data de vigência legal e a certificação do produto. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah, não em Connecticut.',
+          '<strong>Ainda não — a lei só entra em vigor em 1º de outubro de 2026 e, separadamente, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento da publicação.</strong> As duas condições precisam ser cumpridas: a data de vigência legal e a certificação do produto. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah, não em Connecticut.',
           'Connecticut não estava na tabela de economia por estado da fonte usada nesta série, então uma cifra específica para Connecticut não está disponível aqui. Nos estados que foram rastreados, um kit de 800W economiza aproximadamente US$ 150–350 por ano, dependendo das tarifas locais de eletricidade — trate isso como uma faixa nacional, não como uma estimativa para Connecticut.',
+          '<strong>Quando a lei entrar em vigor e existir hardware certificado, você vai querer opções reais para comparar.</strong> Confira agora, como referência, as <a href="/pt/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">escolhas atuais de baterias domésticas dos EUA para energia solar de varanda</a> ou a <a href="/pt/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparação de ecossistemas EcoFlow vs. Anker vs. Zendure</a> — mas nenhuma das páginas afirma que algum kit esteja certificado ou pronto para a lei de Connecticut, que ainda não está em vigor hoje.',
         ],
       },
       faq: {
@@ -699,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا سيتطلب HB 5340 في كونيتيكت؟',
         content: [
-          '**يدمج HB 5340 الخاص بكونيتيكت أحكام الطاقة الشمسية للشرفات ضمن مشروع قانون شامل أوسع للطاقة الشمسية، بدلاً من إقرار تشريع مستقل كما فعلت معظم الولايات السبع الأخرى التي سنّت تشريعات.** يحدد القانون حدًا أقصى قدره 1,200 واط يطابق النموذج الأغلبي، لكنه لا يدخل حيز التنفيذ حتى 1 أكتوبر 2026 — وهو غير قابل للتطبيق بعد حتى وقت كتابة هذا المحتوى. وبمجرد دخوله حيز التنفيذ، يُتوقع هيكل الإعفاء القياسي: دون الحاجة إلى اتفاقية ربط بالشبكة أو رسوم من شركة الكهرباء، مع استبعاد نظام Net Metering.',
+          '<strong>يدمج HB 5340 الخاص بكونيتيكت أحكام الطاقة الشمسية للشرفات ضمن مشروع قانون شامل أوسع للطاقة الشمسية، بدلاً من إقرار تشريع مستقل كما فعلت معظم الولايات السبع الأخرى التي سنّت تشريعات.</strong> يحدد القانون حدًا أقصى قدره 1,200 واط يطابق النموذج الأغلبي، لكنه لا يدخل حيز التنفيذ حتى 1 أكتوبر 2026 — وهو غير قابل للتطبيق بعد حتى وقت كتابة هذا المحتوى. وبمجرد دخوله حيز التنفيذ، يُتوقع هيكل الإعفاء القياسي: دون الحاجة إلى اتفاقية ربط بالشبكة أو رسوم من شركة الكهرباء، مع استبعاد نظام Net Metering.',
           'لم يتم تأكيد أي نص يتعلق بأسبقية أحكام HB 5340 على حظر جمعيات الملاك (HOA) أو الملاك الفرديين في كونيتيكت خلال هذه المراجعة — تحقق من عقد الإيجار أو لائحة جمعية الملاك بشكل منفصل بمجرد دخول القانون حيز التنفيذ.',
         ],
         columns: ['الحقل', 'كونيتيكت HB 5340'],
@@ -714,8 +721,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'هل يجب أن أشتري الأجهزة الآن لكونيتيكت؟',
         content: [
-          '**ليس بعد — لا يدخل القانون حيز التنفيذ حتى 1 أكتوبر 2026، وبشكل منفصل، لم يؤكد أي نظام طاقة شمسية كامل قابل للتوصيل المباشر حصوله على شهادة UL 3700 الكاملة حتى وقت كتابة هذا المحتوى.** يجب تجاوز عائقين: تاريخ السريان القانوني واعتماد المنتج. يُعد جهاز STREAM Ultra من EcoFlow أقرب منتج إلى السوق، لكنه معروض حاليًا للبيع تحديدًا في ولاية يوتا، وليس في كونيتيكت.',
+          '<strong>ليس بعد — لا يدخل القانون حيز التنفيذ حتى 1 أكتوبر 2026، وبشكل منفصل، لم يؤكد أي نظام طاقة شمسية كامل قابل للتوصيل المباشر حصوله على شهادة UL 3700 الكاملة حتى وقت كتابة هذا المحتوى.</strong> يجب تجاوز عائقين: تاريخ السريان القانوني واعتماد المنتج. يُعد جهاز STREAM Ultra من EcoFlow أقرب منتج إلى السوق، لكنه معروض حاليًا للبيع تحديدًا في ولاية يوتا، وليس في كونيتيكت.',
           'لم تكن كونيتيكت مدرجة في جدول التوفير حسب الولاية الخاص بالمصدر المستخدم في هذه السلسلة، لذا لا يتوفر هنا رقم محدد لكونيتيكت. عبر الولايات التي تم تتبعها، توفر مجموعة بقدرة 800 واط ما يقارب 150–350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — اعتبر هذا نطاقًا وطنيًا، وليس تقديرًا خاصًا بكونيتيكت.',
+          '<strong>بمجرد أن يدخل القانون حيز التنفيذ وتتوفر أجهزة معتمدة، ستحتاج إلى خيارات حقيقية للمقارنة.</strong> اطّلع الآن، على سبيل المرجع، على <a href="/ar/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">أفضل اختيارات بطاريات المنزل الأمريكية للطاقة الشمسية للشرفات</a> أو <a href="/ar/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">مقارنة نظام EcoFlow مقابل Anker مقابل Zendure</a> — لكن أيًا من الصفحتين لا يدّعي أن أي جهاز معتمد أو جاهز لقانون كونيتيكت الذي لم يدخل حيز التنفيذ بعد اليوم.',
         ],
       },
       faq: {
@@ -791,7 +799,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '코네티컷주 HB 5340은 무엇을 요구합니까?',
         content: [
-          '**코네티컷주 HB 5340은 다른 7개 제정 주 대부분이 그랬던 것처럼 독립 입법을 통과시키는 대신, 발코니 태양광 규정을 더 포괄적인 태양광 법안에 포함시켰습니다.** 다수 템플릿과 동일한 1,200W 상한선을 설정하지만, 이 법은 2026년 10월 1일까지 시행되지 않으며 작성 시점 기준으로는 아직 적용할 수 없습니다. 시행되면 표준 면제 구조가 적용될 것으로 예상됩니다. 즉, 전력회사와의 계통 연계 계약이나 수수료가 필요 없으며, 넷 미터링(net metering)은 제외됩니다.',
+          '<strong>코네티컷주 HB 5340은 다른 7개 제정 주 대부분이 그랬던 것처럼 독립 입법을 통과시키는 대신, 발코니 태양광 규정을 더 포괄적인 태양광 법안에 포함시켰습니다.</strong> 다수 템플릿과 동일한 1,200W 상한선을 설정하지만, 이 법은 2026년 10월 1일까지 시행되지 않으며 작성 시점 기준으로는 아직 적용할 수 없습니다. 시행되면 표준 면제 구조가 적용될 것으로 예상됩니다. 즉, 전력회사와의 계통 연계 계약이나 수수료가 필요 없으며, 넷 미터링(net metering)은 제외됩니다.',
           '이번 조사에서는 코네티컷주에 대한 HOA 또는 임대인 우선 적용 조항이 확인되지 않았습니다 — 법이 시행되면 임대 계약서 또는 HOA 규약을 별도로 확인하십시오.',
         ],
         columns: ['항목', '코네티컷주 HB 5340'],
@@ -806,8 +814,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '코네티컷주를 위해 지금 하드웨어를 구매해야 합니까?',
         content: [
-          '**아직입니다 — 이 법은 2026년 10월 1일까지 시행되지 않으며, 별도로 작성 시점 기준 완전한 UL 3700 인증을 받은 완제품 플러그인 태양광 시스템은 아직 없습니다.** 법적 시행일과 제품 인증이라는 두 가지 조건이 모두 충족되어야 합니다. EcoFlow의 STREAM Ultra는 시장에 가장 근접한 제품이지만, 현재 코네티컷주가 아닌 유타주에서 특별히 판매되고 있습니다.',
+          '<strong>아직입니다 — 이 법은 2026년 10월 1일까지 시행되지 않으며, 별도로 작성 시점 기준 완전한 UL 3700 인증을 받은 완제품 플러그인 태양광 시스템은 아직 없습니다.</strong> 법적 시행일과 제품 인증이라는 두 가지 조건이 모두 충족되어야 합니다. EcoFlow의 STREAM Ultra는 시장에 가장 근접한 제품이지만, 현재 코네티컷주가 아닌 유타주에서 특별히 판매되고 있습니다.',
           '코네티컷주는 이 시리즈에 사용된 출처의 주별 절감액 표에 포함되어 있지 않아, 코네티컷주 고유의 금액은 여기에서 제공할 수 없습니다. 추적된 주들 전반에서 800W 키트는 현지 전기 요금에 따라 연간 약 150~350달러를 절감합니다 — 이는 코네티컷주에 대한 추정치가 아니라 전국적인 범위로 보시기 바랍니다.',
+          '<strong>법이 시행되고 인증된 하드웨어가 등장하면 비교할 실제 옵션이 필요할 것입니다.</strong> 지금은 참고용으로 <a href="/ko/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">발코니 태양광용 미국 홈 배터리 현재 추천 제품</a> 또는 <a href="/ko/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow 대 Anker 대 Zendure 생태계 비교</a>를 확인해 보십시오 — 다만 두 페이지 모두 코네티컷주의 아직 시행되지 않은 법률에 대해 어떤 키트가 인증되었거나 준비되었다고 주장하지 않습니다.',
         ],
       },
       faq: {

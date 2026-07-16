@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Will HB26-1007 Require in Colorado?',
         content: [
-          '**Colorado HB26-1007 sets a 1,920W cap — the highest of any enacted US balcony solar law — but the law does not take effect until January 1, 2027, so it is not usable yet as of write-time.** Once in effect, it will follow the standard exemption template (no utility interconnection agreement or fee, net metering excluded) with one major addition: explicit language prohibiting HOAs and landlords from banning balcony solar outright.',
+          '<strong>Colorado HB26-1007 sets a 1,920W cap — the highest of any enacted US balcony solar law — but the law does not take effect until January 1, 2027, so it is not usable yet as of write-time.</strong> Once in effect, it will follow the standard exemption template (no utility interconnection agreement or fee, net metering excluded) with one major addition: explicit language prohibiting HOAs and landlords from banning balcony solar outright.',
           'That HOA/landlord provision makes Colorado\'s law the strongest consumer protection among the 8 enacted states — every other state in this series either has no such language or hasn\'t been independently confirmed to include it.',
         ],
         columns: ['Field', 'Colorado HB26-1007'],
@@ -70,8 +70,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Should I Buy Hardware Now for Colorado?',
         content: [
-          '**Not yet — the law isn\'t in effect until January 1, 2027, and separately, no complete plug-in solar system has confirmed full UL 3700 certification as of write-time.** Both gates need to clear before a purchase makes sense: the legal effective date, and product certification. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Colorado.',
+          '<strong>Not yet — the law isn\'t in effect until January 1, 2027, and separately, no complete plug-in solar system has confirmed full UL 3700 certification as of write-time.</strong> Both gates need to clear before a purchase makes sense: the legal effective date, and product certification. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Colorado.',
           'Colorado wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Colorado-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Colorado estimate, and note Colorado\'s 1,920W cap means a full-size system there could exceed what an 800W-kit estimate reflects.',
+          '<strong>Once the law takes effect and certified hardware exists, you\'ll want real options to compare.</strong> See the <a href="/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">current US home-battery picks for balcony solar</a> or the <a href="/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow vs. Anker vs. Zendure ecosystem comparison</a> for context now — but neither page claims any kit is certified or ready for Colorado\'s not-yet-active law today.',
         ],
       },
       faq: {
@@ -147,7 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was schreibt HB26-1007 in Colorado vor?',
         content: [
-          '**Colorados HB26-1007 legt eine Leistungsgrenze von 1.920 W fest – die höchste aller bekannten US-Gesetze zu Balkonsolar –, tritt jedoch erst am 1. Januar 2027 in Kraft und ist zum jetzigen Zeitpunkt noch nicht nutzbar.** Sobald es in Kraft tritt, folgt es dem üblichen Ausnahmemodell (keine Netzanschlussvereinbarung oder -gebühr, kein Net Metering) mit einer wichtigen Ergänzung: einer ausdrücklichen Regelung, die HOAs und Vermietern verbietet, Balkonsolar pauschal zu untersagen.',
+          '<strong>Colorados HB26-1007 legt eine Leistungsgrenze von 1.920 W fest – die höchste aller bekannten US-Gesetze zu Balkonsolar –, tritt jedoch erst am 1. Januar 2027 in Kraft und ist zum jetzigen Zeitpunkt noch nicht nutzbar.</strong> Sobald es in Kraft tritt, folgt es dem üblichen Ausnahmemodell (keine Netzanschlussvereinbarung oder -gebühr, kein Net Metering) mit einer wichtigen Ergänzung: einer ausdrücklichen Regelung, die HOAs und Vermietern verbietet, Balkonsolar pauschal zu untersagen.',
           'Diese HOA-/Vermieter-Regelung macht Colorados Gesetz zum stärksten Verbraucherschutz unter den 8 Bundesstaaten mit entsprechender Regelung – jeder andere Bundesstaat in dieser Reihe hat entweder keine solche Regelung oder sie wurde nicht unabhängig bestätigt.',
         ],
         columns: ['Feld', 'Colorado HB26-1007'],
@@ -162,8 +163,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Sollte ich jetzt schon Hardware für Colorado kaufen?',
         content: [
-          '**Noch nicht – das Gesetz tritt erst am 1. Januar 2027 in Kraft, und unabhängig davon hat zum jetzigen Zeitpunkt noch kein vollständiges steckerfertiges Solarsystem die volle UL-3700-Zertifizierung bestätigt.** Beide Hürden müssen genommen werden, bevor ein Kauf sinnvoll ist: das gesetzliche Inkrafttreten und die Produktzertifizierung. Das EcoFlow STREAM Ultra ist das marktnächste Produkt, wird derzeit aber ausdrücklich in Utah verkauft, nicht in Colorado.',
+          '<strong>Noch nicht – das Gesetz tritt erst am 1. Januar 2027 in Kraft, und unabhängig davon hat zum jetzigen Zeitpunkt noch kein vollständiges steckerfertiges Solarsystem die volle UL-3700-Zertifizierung bestätigt.</strong> Beide Hürden müssen genommen werden, bevor ein Kauf sinnvoll ist: das gesetzliche Inkrafttreten und die Produktzertifizierung. Das EcoFlow STREAM Ultra ist das marktnächste Produkt, wird derzeit aber ausdrücklich in Utah verkauft, nicht in Colorado.',
           'Colorado war nicht in der bundesstaatlichen Einspartabelle der Quelle enthalten, die dieser Artikelreihe zugrunde liegt, daher liegt hier kein colorado-spezifischer Betrag vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 USD pro Jahr – das ist als nationaler Bereich zu verstehen, nicht als Colorado-Schätzung. Zu beachten: Colorados 1.920-W-Grenze bedeutet, dass ein Vollsystem dort über das hinausgehen könnte, was eine 800-W-Kit-Schätzung widerspiegelt.',
+          '<strong>Sobald das Gesetz in Kraft tritt und zertifizierte Hardware existiert, werden Sie echte Optionen zum Vergleich brauchen.</strong> Sehen Sie sich schon jetzt zur Orientierung die <a href="/de/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">aktuellen US-Heimbatterie-Empfehlungen für Balkonsolar</a> oder den <a href="/de/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">Vergleich EcoFlow vs. Anker vs. Zendure</a> an – aber keine der beiden Seiten behauptet, dass ein Kit bereits zertifiziert oder für Colorados noch nicht in Kraft getretenes Gesetz einsatzbereit ist.',
         ],
       },
       faq: {
@@ -239,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que prévoit la loi HB26-1007 au Colorado ?',
         content: [
-          "**La loi HB26-1007 du Colorado fixe un plafond de 1 920 W — le plus élevé parmi les lois d'État américaines recensées — mais elle n'entre en vigueur que le 1er janvier 2027 et n'est donc pas encore applicable à ce jour.** Une fois en vigueur, elle suivra le modèle d'exemption standard (pas d'accord d'interconnexion ni de frais avec le fournisseur, net metering exclu), avec un ajout majeur : l'interdiction explicite pour les copropriétés et propriétaires bailleurs de refuser purement et simplement le solaire de balcon.",
+          "<strong>La loi HB26-1007 du Colorado fixe un plafond de 1 920 W — le plus élevé parmi les lois d'État américaines recensées — mais elle n'entre en vigueur que le 1er janvier 2027 et n'est donc pas encore applicable à ce jour.</strong> Une fois en vigueur, elle suivra le modèle d'exemption standard (pas d'accord d'interconnexion ni de frais avec le fournisseur, net metering exclu), avec un ajout majeur : l'interdiction explicite pour les copropriétés et propriétaires bailleurs de refuser purement et simplement le solaire de balcon.",
           "Cette disposition fait de la loi du Colorado la protection consommateur la plus forte parmi les 8 États ayant légiféré — aucun autre État de cette série ne dispose d'une telle disposition confirmée de façon indépendante.",
         ],
         columns: ['Champ', 'Colorado HB26-1007'],
@@ -254,8 +256,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Faut-il acheter du matériel dès maintenant pour le Colorado ?',
         content: [
-          "**Pas encore — la loi n'entre en vigueur que le 1er janvier 2027, et par ailleurs, aucun système solaire plug-in complet n'a confirmé la certification UL 3700 intégrale à ce jour.** Deux conditions doivent être remplies avant qu'un achat soit pertinent : la date d'entrée en vigueur légale et la certification du produit. Le STREAM Ultra d'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l'Utah, pas au Colorado.",
+          "<strong>Pas encore — la loi n'entre en vigueur que le 1er janvier 2027, et par ailleurs, aucun système solaire plug-in complet n'a confirmé la certification UL 3700 intégrale à ce jour.</strong> Deux conditions doivent être remplies avant qu'un achat soit pertinent : la date d'entrée en vigueur légale et la certification du produit. Le STREAM Ultra d'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l'Utah, pas au Colorado.",
           "Le Colorado ne figurait pas dans le tableau d'économies par État de la source utilisée pour cette série, aucun chiffre spécifique au Colorado n'est donc disponible ici. Dans les États recensés, un kit de 800 W permet d'économiser environ 150 à 350 $ par an selon le tarif local de l'électricité — à considérer comme une fourchette nationale, pas une estimation pour le Colorado. Notez que le plafond de 1 920 W du Colorado signifie qu'un système pleine taille pourrait y dépasser ce que reflète une estimation basée sur un kit de 800 W.",
+          "<strong>Une fois la loi en vigueur et du matériel certifié disponible, vous voudrez de véritables options à comparer.</strong> Consultez dès maintenant, à titre indicatif, le <a href='/fr/balcony-solar/best-balcony-solar-home-battery-us-2026' class='text-primary hover:underline'>comparatif des meilleures batteries domestiques américaines pour le solaire de balcon</a> ou la <a href='/fr/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar' class='text-primary hover:underline'>comparaison de l'écosystème EcoFlow vs. Anker vs. Zendure</a> — mais aucune de ces pages n'affirme qu'un kit est certifié ou prêt pour la loi du Colorado, qui n'est pas encore en vigueur.",
         ],
       },
       faq: {
@@ -331,7 +334,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB26-1007はコロラド州で何を定めますか?',
         content: [
-          '**コロラド州のHB26-1007は1,920Wの上限を設定しており、制定済みの米国ベランダ太陽光法の中で最も高い数値ですが、2027年1月1日まで発効しないため、執筆時点ではまだ使用できません。** 発効後は、標準的な適用除外テンプレート（電力会社との連系契約や手数料は不要、ネットメータリングは対象外）に従いますが、大きな追加点が1つあります。HOAや家主がベランダ太陽光を全面的に禁止することを明示的に禁じる条項です。',
+          '<strong>コロラド州のHB26-1007は1,920Wの上限を設定しており、制定済みの米国ベランダ太陽光法の中で最も高い数値ですが、2027年1月1日まで発効しないため、執筆時点ではまだ使用できません。</strong> 発効後は、標準的な適用除外テンプレート（電力会社との連系契約や手数料は不要、ネットメータリングは対象外）に従いますが、大きな追加点が1つあります。HOAや家主がベランダ太陽光を全面的に禁止することを明示的に禁じる条項です。',
           'このHOA・家主条項により、コロラド州の法律は制定済み8州の中で最も強力な消費者保護となります。このシリーズの他の州には同様の条項がないか、含まれていることが独自に確認されていません。',
         ],
         columns: ['項目', 'Colorado HB26-1007'],
@@ -346,8 +349,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'コロラド州向けに今すぐ機材を購入すべきですか?',
         content: [
-          '**まだです。法律は2027年1月1日まで発効せず、それとは別に、執筆時点で完全なUL 3700認証を確認済みのプラグイン式太陽光システムも存在しません。** 購入が妥当になるには、法律の発効日と製品認証という2つの条件がどちらもクリアされる必要があります。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在は特にUtah州向けに販売されており、コロラド州向けではありません。',
+          '<strong>まだです。法律は2027年1月1日まで発効せず、それとは別に、執筆時点で完全なUL 3700認証を確認済みのプラグイン式太陽光システムも存在しません。</strong> 購入が妥当になるには、法律の発効日と製品認証という2つの条件がどちらもクリアされる必要があります。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在は特にUtah州向けに販売されており、コロラド州向けではありません。',
           'コロラド州は、このシリーズで使用した情報源の州別節約額データに含まれていなかったため、コロラド州固有の金額はここでは提供できません。データが記録された州全体では、800Wキットで地域の電気料金に応じて年間約150〜350ドルの節約が見られます。これは全国的な範囲として捉えてください。コロラド州の推定値ではありません。また、コロラド州の1,920Wという上限を考えると、同州でのフルサイズシステムは800Wキットの試算を上回る可能性がある点にご注意ください。',
+          '<strong>法律が発効し、認証済みの機材が登場したら、比較できる実際の選択肢が必要になります。</strong> 参考として、<a href="/ja/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">米国のベランダ太陽光向け家庭用バッテリーの現在のおすすめ</a>や<a href="/ja/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow・Anker・Zendureのエコシステム比較</a>をご覧ください。ただし、どちらのページも、コロラド州でまだ発効していない法律に対応した認証済み・使用可能なキットがあるとは主張していません。',
         ],
       },
       faq: {
@@ -423,7 +427,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB26-1007在科罗拉多州具体规定了什么?',
         content: [
-          '**科罗拉多州HB26-1007设定了1,920W的功率上限——已立法的美国阳台太阳能法中最高——但该法案要到2027年1月1日才生效，截至撰写时尚不可用。** 一旦生效，它将遵循标准豁免模板（无需与电力公司签订并网协议或支付费用，不适用净计量），并新增一项重要内容：明确禁止HOA和房东全面禁止阳台太阳能。',
+          '<strong>科罗拉多州HB26-1007设定了1,920W的功率上限——已立法的美国阳台太阳能法中最高——但该法案要到2027年1月1日才生效，截至撰写时尚不可用。</strong> 一旦生效，它将遵循标准豁免模板（无需与电力公司签订并网协议或支付费用，不适用净计量），并新增一项重要内容：明确禁止HOA和房东全面禁止阳台太阳能。',
           '这项HOA/房东条款使科罗拉多州的法律成为8个已立法州中消费者保护力度最强的——该系列中其他每个州要么没有此类条款，要么尚未独立确认包含此类条款。',
         ],
         columns: ['项目', 'Colorado HB26-1007'],
@@ -438,8 +442,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '现在应该为科罗拉多州购买设备吗?',
         content: [
-          '**还不行——该法律要到2027年1月1日才生效，另外，截至撰写时也没有任何完整的插电式太阳能系统确认获得完整的UL 3700认证。** 购买之前需要跨越两道门槛：法律生效日期和产品认证。EcoFlow STREAM Ultra是最接近上市的产品，但目前专门在Utah州销售，而非科罗拉多州。',
+          '<strong>还不行——该法律要到2027年1月1日才生效，另外，截至撰写时也没有任何完整的插电式太阳能系统确认获得完整的UL 3700认证。</strong> 购买之前需要跨越两道门槛：法律生效日期和产品认证。EcoFlow STREAM Ultra是最接近上市的产品，但目前专门在Utah州销售，而非科罗拉多州。',
           '科罗拉多州未被纳入本系列所用信息源的各州节省数据表，因此这里无法提供科罗拉多州的具体金额。在已跟踪的各州中，一个800W套件根据当地电价每年大约可节省150–350美元——请将其视为全国范围的估算，而非科罗拉多州的估算，并注意科罗拉多州1,920W的上限意味着当地的全尺寸系统可能超出800W套件估算所反映的范围。',
+          '<strong>一旦法律生效并出现获得认证的硬件，您将需要真正可比较的选项。</strong> 现在可以先参考<a href="/zh/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">当前美国阳台太阳能家庭电池推荐</a>或<a href="/zh/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow对比Anker对比Zendure生态系统比较</a>以作了解——但这两篇文章均未声称任何套件已获得认证，或已可用于科罗拉多州目前尚未生效的法律。',
         ],
       },
       faq: {
@@ -515,7 +520,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exigirá la HB26-1007 en Colorado?',
         content: [
-          '**La HB26-1007 de Colorado establece un límite de 1,920 W — el más alto de cualquier ley de solar de balcón aprobada en EE. UU. — pero la ley no entra en vigor hasta el 1 de enero de 2027, así que todavía no es utilizable al momento de escribir esto.** Una vez vigente, seguirá la plantilla de exención estándar (sin acuerdo de interconexión con la eléctrica ni tarifas, sin net metering) con una adición importante: un lenguaje explícito que prohíbe a las HOA y arrendadores prohibir por completo la energía solar de balcón.',
+          '<strong>La HB26-1007 de Colorado establece un límite de 1,920 W — el más alto de cualquier ley de solar de balcón aprobada en EE. UU. — pero la ley no entra en vigor hasta el 1 de enero de 2027, así que todavía no es utilizable al momento de escribir esto.</strong> Una vez vigente, seguirá la plantilla de exención estándar (sin acuerdo de interconexión con la eléctrica ni tarifas, sin net metering) con una adición importante: un lenguaje explícito que prohíbe a las HOA y arrendadores prohibir por completo la energía solar de balcón.',
           'Esa disposición sobre HOA/arrendadores convierte a la ley de Colorado en la protección al consumidor más fuerte entre los 8 estados con ley aprobada — todos los demás estados de esta serie carecen de esa disposición o no se ha confirmado de forma independiente que la incluyan.',
         ],
         columns: ['Campo', 'Colorado HB26-1007'],
@@ -530,8 +535,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '¿Debería comprar equipo ahora para Colorado?',
         content: [
-          '**Todavía no — la ley no entra en vigor hasta el 1 de enero de 2027 y, por separado, ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa al momento de escribir esto.** Ambos requisitos deben cumplirse antes de que una compra tenga sentido: la fecha de entrada en vigor legal y la certificación del producto. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah, no en Colorado.',
+          '<strong>Todavía no — la ley no entra en vigor hasta el 1 de enero de 2027 y, por separado, ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa al momento de escribir esto.</strong> Ambos requisitos deben cumplirse antes de que una compra tenga sentido: la fecha de entrada en vigor legal y la certificación del producto. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah, no en Colorado.',
           'Colorado no estaba en la tabla de ahorros por estado de la fuente usada para esta serie, así que aquí no hay una cifra específica para Colorado. En los estados que sí se rastrearon, un kit de 800 W ahorra aproximadamente entre $150 y $350 por año según las tarifas eléctricas locales — trátalo como un rango nacional, no una estimación para Colorado, y ten en cuenta que el límite de 1,920 W de Colorado significa que un sistema de tamaño completo ahí podría superar lo que refleja una estimación basada en un kit de 800 W.',
+          '<strong>Una vez que la ley entre en vigor y exista hardware certificado, querrás opciones reales para comparar.</strong> Consulta ahora, a modo de referencia, las <a href="/es/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">selecciones actuales de baterías domésticas en EE. UU. para solar de balcón</a> o la <a href="/es/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparación del ecosistema EcoFlow vs. Anker vs. Zendure</a> — pero ninguna de las dos páginas afirma que algún kit esté certificado o listo para la ley de Colorado, que aún no está vigente.',
         ],
       },
       faq: {
@@ -607,7 +613,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a HB26-1007 vai exigir no Colorado?',
         content: [
-          '**A HB26-1007 do Colorado estabelece um limite de 1.920 W — o mais alto entre as leis de solar de varanda aprovadas nos EUA —, mas a lei só entra em vigor em 1º de janeiro de 2027, portanto ainda não é utilizável no momento desta publicação.** Quando entrar em vigor, seguirá o modelo padrão de isenção (sem acordo de interconexão ou taxa com a concessionária, net metering excluído) com uma adição importante: linguagem explícita proibindo HOAs e locadores de banir totalmente a energia solar de varanda.',
+          '<strong>A HB26-1007 do Colorado estabelece um limite de 1.920 W — o mais alto entre as leis de solar de varanda aprovadas nos EUA —, mas a lei só entra em vigor em 1º de janeiro de 2027, portanto ainda não é utilizável no momento desta publicação.</strong> Quando entrar em vigor, seguirá o modelo padrão de isenção (sem acordo de interconexão ou taxa com a concessionária, net metering excluído) com uma adição importante: linguagem explícita proibindo HOAs e locadores de banir totalmente a energia solar de varanda.',
           'Essa disposição sobre HOA/locador torna a lei do Colorado a proteção ao consumidor mais forte entre os 8 estados com lei aprovada — todos os outros estados desta série não têm essa disposição ou ela ainda não foi confirmada de forma independente.',
         ],
         columns: ['Campo', 'Colorado HB26-1007'],
@@ -622,8 +628,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Devo comprar equipamento agora para o Colorado?',
         content: [
-          '**Ainda não — a lei só entra em vigor em 1º de janeiro de 2027 e, separadamente, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento desta publicação.** As duas barreiras precisam ser superadas antes que a compra faça sentido: a data de vigência legal e a certificação do produto. O STREAM Ultra da EcoFlow é o produto mais próximo do mercado, mas atualmente é vendido especificamente em Utah, não no Colorado.',
+          '<strong>Ainda não — a lei só entra em vigor em 1º de janeiro de 2027 e, separadamente, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento desta publicação.</strong> As duas barreiras precisam ser superadas antes que a compra faça sentido: a data de vigência legal e a certificação do produto. O STREAM Ultra da EcoFlow é o produto mais próximo do mercado, mas atualmente é vendido especificamente em Utah, não no Colorado.',
           'O Colorado não estava na tabela de economia por estado da fonte usada nesta série, então não há um valor específico para o Colorado aqui. Nos estados rastreados, um kit de 800 W economiza cerca de US$ 150 a US$ 350 por ano dependendo das tarifas locais de energia — trate isso como uma faixa nacional, não uma estimativa para o Colorado, e observe que o limite de 1.920 W do Colorado significa que um sistema de tamanho completo ali pode ultrapassar o que uma estimativa de kit de 800 W reflete.',
+          '<strong>Assim que a lei entrar em vigor e existir hardware certificado, você vai querer opções reais para comparar.</strong> Consulte agora, como referência, as <a href="/pt/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">indicações atuais de baterias residenciais dos EUA para solar de varanda</a> ou a <a href="/pt/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">comparação do ecossistema EcoFlow vs. Anker vs. Zendure</a> — mas nenhuma das duas páginas afirma que algum kit esteja certificado ou pronto para a lei do Colorado, que ainda não está em vigor.',
         ],
       },
       faq: {
@@ -699,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا سيتطلب قانون HB26-1007 في كولورادو؟',
         content: [
-          '**يحدد قانون HB26-1007 في كولورادو حدًا للطاقة قدره 1,920W — الأعلى بين قوانين الطاقة الشمسية للشرفات الأمريكية التي أصدرت تشريعات — لكن القانون لا يدخل حيز التنفيذ حتى 1 يناير 2027، لذا فهو غير قابل للاستخدام بعد حتى وقت كتابة هذا المقال.** بمجرد دخوله حيز التنفيذ، سيتبع النموذج المعتاد للإعفاء (دون الحاجة إلى اتفاقية ربط بالشبكة أو رسوم مع شركة الكهرباء، مع استبعاد قياس الصافي net metering)، مع إضافة رئيسية واحدة: نص صريح يمنع جمعيات الملاك والمُلّاك من حظر الطاقة الشمسية للشرفات كليًا.',
+          '<strong>يحدد قانون HB26-1007 في كولورادو حدًا للطاقة قدره 1,920W — الأعلى بين قوانين الطاقة الشمسية للشرفات الأمريكية التي أصدرت تشريعات — لكن القانون لا يدخل حيز التنفيذ حتى 1 يناير 2027، لذا فهو غير قابل للاستخدام بعد حتى وقت كتابة هذا المقال.</strong> بمجرد دخوله حيز التنفيذ، سيتبع النموذج المعتاد للإعفاء (دون الحاجة إلى اتفاقية ربط بالشبكة أو رسوم مع شركة الكهرباء، مع استبعاد قياس الصافي net metering)، مع إضافة رئيسية واحدة: نص صريح يمنع جمعيات الملاك والمُلّاك من حظر الطاقة الشمسية للشرفات كليًا.',
           'يجعل هذا النص الخاص بجمعيات الملاك/المُلّاك قانون كولورادو أقوى حماية للمستهلك بين الولايات الثماني التي أصدرت تشريعات — فكل ولاية أخرى في هذه السلسلة إما لا تحتوي على نص مماثل أو لم يتم التأكد بشكل مستقل من احتوائها عليه.',
         ],
         columns: ['الحقل', 'Colorado HB26-1007'],
@@ -714,8 +721,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'هل يجب أن أشتري المعدات الآن من أجل كولورادو؟',
         content: [
-          '**ليس بعد — لا يدخل القانون حيز التنفيذ حتى 1 يناير 2027، وبشكل منفصل، لم يؤكد أي نظام طاقة شمسية قابل للتوصيل المباشر حصوله على شهادة UL 3700 الكاملة حتى وقت كتابة هذا المقال.** يجب اجتياز عائقين قبل أن يصبح الشراء منطقيًا: تاريخ سريان القانون، وشهادة المنتج. منتج EcoFlow STREAM Ultra هو الأقرب إلى السوق، لكنه يُباع حاليًا تحديدًا في ولاية يوتا، وليس في كولورادو.',
+          '<strong>ليس بعد — لا يدخل القانون حيز التنفيذ حتى 1 يناير 2027، وبشكل منفصل، لم يؤكد أي نظام طاقة شمسية قابل للتوصيل المباشر حصوله على شهادة UL 3700 الكاملة حتى وقت كتابة هذا المقال.</strong> يجب اجتياز عائقين قبل أن يصبح الشراء منطقيًا: تاريخ سريان القانون، وشهادة المنتج. منتج EcoFlow STREAM Ultra هو الأقرب إلى السوق، لكنه يُباع حاليًا تحديدًا في ولاية يوتا، وليس في كولورادو.',
           'لم تكن كولورادو ضمن جدول التوفير حسب الولاية في المصدر المستخدم لهذه السلسلة، لذا لا يتوفر هنا رقم خاص بكولورادو. عبر الولايات التي تم رصدها، توفر حزمة 800W ما يقارب 150 إلى 350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — يجب اعتبار هذا نطاقًا وطنيًا وليس تقديرًا خاصًا بكولورادو، مع ملاحظة أن حد كولورادو البالغ 1,920W يعني أن نظامًا كامل الحجم هناك قد يتجاوز ما يعكسه تقدير حزمة 800W.',
+          '<strong>بمجرد دخول القانون حيز التنفيذ وتوفر معدات معتمدة، ستحتاجون إلى خيارات حقيقية للمقارنة.</strong> يمكنكم الاطلاع الآن، للاستئناس فقط، على <a href="/ar/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">أفضل بطاريات المنازل الأمريكية الحالية للطاقة الشمسية للشرفات</a> أو <a href="/ar/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">مقارنة منظومات EcoFlow مقابل Anker مقابل Zendure</a> — لكن أيًا من الصفحتين لا يدّعي أن أي عدة معتمدة أو جاهزة لقانون كولورادو الذي لم يدخل حيز التنفيذ بعد.',
         ],
       },
       faq: {
@@ -791,7 +799,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB26-1007은 콜로라도주에서 무엇을 요구합니까?',
         content: [
-          '**콜로라도주 HB26-1007은 1,920W 상한을 설정했으며, 이는 법제화된 미국 발코니 태양광법 중 가장 높은 수준이지만, 이 법은 2027년 1월 1일까지 발효되지 않으므로 작성 시점 기준 아직 사용할 수 없습니다.** 발효되면 표준 면제 템플릿(전력회사와의 계통연계 계약이나 수수료 불필요, 넷미터링 제외)을 따르되, 한 가지 중요한 조항이 추가됩니다. 바로 HOA와 임대인이 발코니 태양광을 전면 금지하는 것을 명시적으로 금지하는 조항입니다.',
+          '<strong>콜로라도주 HB26-1007은 1,920W 상한을 설정했으며, 이는 법제화된 미국 발코니 태양광법 중 가장 높은 수준이지만, 이 법은 2027년 1월 1일까지 발효되지 않으므로 작성 시점 기준 아직 사용할 수 없습니다.</strong> 발효되면 표준 면제 템플릿(전력회사와의 계통연계 계약이나 수수료 불필요, 넷미터링 제외)을 따르되, 한 가지 중요한 조항이 추가됩니다. 바로 HOA와 임대인이 발코니 태양광을 전면 금지하는 것을 명시적으로 금지하는 조항입니다.',
           '이 HOA/임대인 조항으로 인해 콜로라도주의 법은 법제화된 8개 주 중 소비자 보호가 가장 강력한 법이 됩니다. 이 시리즈의 다른 모든 주는 이러한 조항이 없거나, 포함 여부가 독립적으로 확인되지 않았습니다.',
         ],
         columns: ['항목', 'Colorado HB26-1007'],
@@ -806,8 +814,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '지금 콜로라도주를 위해 장비를 구매해야 합니까?',
         content: [
-          '**아직입니다 — 이 법은 2027년 1월 1일까지 발효되지 않으며, 이와 별개로 작성 시점 기준 완전한 UL 3700 인증을 확인한 완제품 플러그인 태양광 시스템도 아직 없습니다.** 구매가 의미 있으려면 법적 발효일과 제품 인증이라는 두 가지 조건이 모두 충족되어야 합니다. EcoFlow STREAM Ultra가 시장에 가장 가까운 제품이지만, 현재는 콜로라도주가 아닌 Utah주에서 특별히 판매되고 있습니다.',
+          '<strong>아직입니다 — 이 법은 2027년 1월 1일까지 발효되지 않으며, 이와 별개로 작성 시점 기준 완전한 UL 3700 인증을 확인한 완제품 플러그인 태양광 시스템도 아직 없습니다.</strong> 구매가 의미 있으려면 법적 발효일과 제품 인증이라는 두 가지 조건이 모두 충족되어야 합니다. EcoFlow STREAM Ultra가 시장에 가장 가까운 제품이지만, 현재는 콜로라도주가 아닌 Utah주에서 특별히 판매되고 있습니다.',
           '콜로라도주는 이 시리즈에 사용된 출처의 주별 절감액 표에 포함되지 않았으므로, 콜로라도주에 특화된 금액은 여기서 제공할 수 없습니다. 데이터가 추적된 주들을 기준으로, 800W 키트는 지역 전기 요금에 따라 연간 약 150~350달러를 절약합니다 — 이는 콜로라도주에 대한 추정치가 아니라 전국 범위로 간주해야 하며, 콜로라도주의 1,920W 상한을 고려하면 해당 지역의 풀사이즈 시스템은 800W 키트 추정치를 초과할 수 있다는 점에 유의해야 합니다.',
+          '<strong>법이 발효되고 인증된 하드웨어가 등장하면, 비교할 실질적인 선택지가 필요할 것입니다.</strong> 지금은 참고용으로 <a href="/ko/balcony-solar/best-balcony-solar-home-battery-us-2026" class="text-primary hover:underline">현재 미국 발코니 태양광용 가정용 배터리 추천</a> 또는 <a href="/ko/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar" class="text-primary hover:underline">EcoFlow 대 Anker 대 Zendure 생태계 비교</a>를 확인하시기 바랍니다. 다만 두 페이지 모두 콜로라도주에서 아직 발효되지 않은 법에 대해 어떤 키트가 인증되었거나 사용 준비가 되었다고 주장하지 않습니다.',
         ],
       },
       faq: {
