@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Matter for Solar Inverters and Heat Pumps: What\'s Coming (2027)',
     seoTitle: 'Matter for Solar Inverters + Heat Pumps: Not Yet (2027)',
     intro:
-      'Matter\'s specification has defined device types for energy-management hardware — solar inverters, battery storage, EV chargers, and heat pumps — since Matter 1.4+ (per the Connectivity Standards Alliance\'s own roadmap announcement), but as of write-time no shipping, Matter-certified inverter, battery, or heat pump product from any manufacturer has been confirmed. This is an early-mover explainer: what the spec defines today, and what to watch for before it's a real buying option, not a guide to hardware you can use right now. It also explains how this differs from the monitoring-and-dashboard integrations already covered for balcony solar, which do work today.',
+      'Matter\'s specification has defined device types for energy-management hardware — solar inverters, battery storage, EV chargers, and heat pumps — since Matter 1.4+ (per the Connectivity Standards Alliance\'s own roadmap announcement), but as of write-time no shipping, Matter-certified inverter, battery, or heat pump product from any manufacturer has been confirmed. This is an early-mover explainer: what the spec defines today, and what to watch for before it becomes a real buying option, not a guide to hardware you can use right now. It also explains how this differs from the monitoring-and-dashboard integrations already covered for balcony solar, which do work today.',
     metaDescription:
       'Matter defines device types for solar inverters and heat pumps (Matter 1.4+), but no shipping certified products exist yet as of July 2026 — what\'s coming, not what works today.',
     twitterDescription:
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A Matter heat pump device type, once implemented by a shipping product, would expose mode, target temperature, and running state, letting Home Assistant automate it alongside solar generation — for example, running the heat pump harder during high-solar hours — but no confirmed shipping product implements this as of write-time.**',
         items: [
           'This would follow the same pattern as a Matter thermostat, extended to a heat pump\'s specific operating modes, once a manufacturer ships it.',
-          'Pairing this with the local energy monitoring described in the overview article would eventually let an automation prefer heat-pump operation when local generation is high, rather than a fixed time-of-day schedule — a "what's coming" scenario, not a current one.',
+          'Pairing this with the local energy monitoring described in the overview article would eventually let an automation prefer heat-pump operation when local generation is high, rather than a fixed time-of-day schedule — a "still coming" scenario, not a current one.',
           'As with inverters, this is an emerging category on the spec side with no confirmed shipping manufacturer support as of write-time — check heat pump manufacturers\' own current announcements rather than assuming support because the device type exists in Matter.',
         ],
       },
