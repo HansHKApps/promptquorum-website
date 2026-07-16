@@ -52,6 +52,11 @@ import { article as a_local_smart_home_energy_management_2027 } from './articles
 import { article as a_matter_solar_inverter_heat_pump_integration } from './articles/matter-solar-inverter-heat-pump-integration'
 import { article as a_home_assistant_energy_dashboard_guide } from './articles/home-assistant-energy-dashboard-guide'
 import { article as a_home_as_energy_microgrid_2027 } from './articles/home-as-energy-microgrid-2027'
+// Category 6 — 2027 Protocols & Regulation (SH-30–33)
+import { article as a_matter_2_0_explained } from './articles/matter-2-0-explained'
+import { article as a_thread_14_wifi_7_routers_guide } from './articles/thread-14-wifi-7-routers-guide'
+import { article as a_eu_data_act_smart_home_2027 } from './articles/eu-data-act-smart-home-2027'
+import { article as a_ikea_matter_ecosystem_guide_2027 } from './articles/ikea-matter-ecosystem-guide-2027'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // Category 1 — Smart Home Foundations
@@ -93,4 +98,9 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'matter-solar-inverter-heat-pump-integration':  a_matter_solar_inverter_heat_pump_integration,
   'home-assistant-energy-dashboard-guide':        a_home_assistant_energy_dashboard_guide,
   'home-as-energy-microgrid-2027':                a_home_as_energy_microgrid_2027,
+  // Category 6 — 2027 Protocols & Regulation
+  'matter-2-0-explained':                a_matter_2_0_explained,
+  'thread-14-wifi-7-routers-guide':      a_thread_14_wifi_7_routers_guide,
+  'eu-data-act-smart-home-2027':         a_eu_data_act_smart_home_2027,
+  'ikea-matter-ecosystem-guide-2027':    a_ikea_matter_ecosystem_guide_2027,
 }
