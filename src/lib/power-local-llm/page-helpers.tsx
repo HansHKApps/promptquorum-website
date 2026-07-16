@@ -1641,8 +1641,16 @@ function PowerArticleCard({ slug, dot, lang }: { slug: string; dot: string; lang
   )
 }
 
+// Most recent dateModified across all published power-local-llm articles (EN block).
+function latestPowerLLMDateModified(): string {
+  const dates = Object.values(powerLLMContent)
+    .map((article) => (article?.en as any)?.dateModified ?? article?.en?.publishDate)
+    .filter((d): d is string => !!d)
+  return dates.sort().at(-1) ?? '2026-05-07'
+}
+
 function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko') {
-  const lastUpdated = '2026-05-07'
+  const lastUpdated = latestPowerLLMDateModified()
   const hero = HUB_HERO_L10N[lang]
   const faqs = HUB_FAQS_L10N[lang]
   const labels = HUB_LABELS_L10N[lang]

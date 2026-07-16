@@ -6,6 +6,7 @@ import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
 import { blogContent } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
+import { getDateISO } from '@/lib/blog/getDateISO'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
@@ -13,19 +14,6 @@ import { FrameworkWheel } from '@/components/FrameworkWheel'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
 import Image from 'next/image'
-
-// Helper to convert "Published Month DD, YYYY" to ISO date format "YYYY-MM-DD"
-function getDateISO(dateStr: string): string {
-  const match = dateStr.match(/(\w+)\s+(\d{1,2}),?\s+(\d{4})/)
-  if (!match) return new Date().toISOString().split('T')[0]
-  const monthMap: Record<string, string> = {
-    January: '01', February: '02', March: '03', April: '04', May: '05', June: '06',
-    July: '07', August: '08', September: '09', October: '10', November: '11', December: '12'
-  }
-  const [, month, day, year] = match
-  const monthNum = monthMap[month] || '01'
-  return `${year}-${monthNum}-${day.padStart(2, '0')}`
-}
 
 interface BlogPostClientProps {
   post: BlogPost

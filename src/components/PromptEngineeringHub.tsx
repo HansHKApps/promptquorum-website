@@ -10,8 +10,10 @@ import { useHubSignals } from './hub/useHubSignals'
 import { getArticleHighlight, type ArticleHighlight } from './hub/hub-utils'
 import { LevelBar } from './hub/LevelBar'
 import { HubArticleCard } from './hub/HubArticleCard'
+import { HubReviewedBadge } from './hub/HubReviewedBadge'
 import { GuideStarWidget, type RecommendedArticle } from './hub/GuideStarWidget'
 import { LazySection } from './hub/LazySection'
+import { latestDateModified } from '@/lib/hub-reviewed-date'
 
 function navHref(path: string, lang: string) {
   if (lang === 'en') return path
@@ -981,9 +983,10 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
             </div>
           </div>
 
-          <p className="text-lg text-text-secondary leading-relaxed max-w-3xl hub-hero-desc">
+          <p className="text-lg text-text-secondary leading-relaxed max-w-3xl hub-hero-desc mb-4">
             {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
+          <HubReviewedBadge date={latestDateModified(Object.values(datesMap ?? {}))} lang={lang} className="mb-5" />
 
           {/* TL;DR */}
           <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-4 my-5 max-w-2xl">

@@ -8,6 +8,8 @@ import { PROMPT_BITES_CATEGORIES } from '@/lib/prompt-bites/categories'
 import { PROMPT_BITES_PUBLISHED_SLUGS } from '@/lib/prompt-bites/published'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
+import { HubReviewedBadge } from '@/components/hub/HubReviewedBadge'
+import { latestDateModified } from '@/lib/hub-reviewed-date'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
@@ -397,9 +399,14 @@ export function PromptBitesHubClient({ lang }: Props) {
           <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             {HUB_HEADLINE[lang]}
           </h1>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+          <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-4">
             {HUB_SUBTITLE[lang]}
           </p>
+          <HubReviewedBadge
+            date={latestDateModified(Object.values(promptBitesContent).map((a) => a?.en))}
+            lang={lang}
+            className="mb-0"
+          />
         </header>
 
         {/* Cross-language links */}

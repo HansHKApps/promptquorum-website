@@ -8,6 +8,8 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { LazySection } from './hub/LazySection'
+import { HubReviewedBadge } from './hub/HubReviewedBadge'
+import { latestDateModified } from '@/lib/hub-reviewed-date'
 import type { LLMHubData } from '@/lib/local-llms/hub-data'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
@@ -1753,13 +1755,13 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
         {/* Hero */}
         <div className="py-16 border-b border-primary/20 mb-16">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Local LLMs</p>
-          <p className="text-xs text-text-secondary mb-4">Updated <time dateTime="2026-06-19">June 2026</time></p>
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             {HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
           </h1>
-          <p className="article-intro text-lg text-text-secondary max-w-2xl leading-relaxed mb-10">
+          <p className="article-intro text-lg text-text-secondary max-w-2xl leading-relaxed mb-4">
             {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
+          <HubReviewedBadge date={latestDateModified(Object.values(datesMap))} lang={lang} className="mb-10" />
 
           {/* Key Takeaways */}
           <div className="key-takeaways mb-10 bg-primary/3 border border-primary/15 rounded-xl p-5">
