@@ -383,6 +383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Temperature and Top-P: Control AI Creativity](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — the prompt-engineering side of sampling parameters; deeper than the summary in this guide.',
           '[Negative Prompting](/prompt-engineering/negative-prompting) — specifying what NOT to do in a prompt; a force-multiplier for system prompts on creative work.',
           '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — the authoritative model landscape guide; useful when you want to explore beyond the six creative-writing picks above.',
+          '[Best Local LLMs for Creative Writing in 2026](/local-llms/best-local-llms-for-creative-writing) — a broader model roundup for fiction, poetry, and long-form writing, complementing the hands-on testing here.',
         ],
       },
     },

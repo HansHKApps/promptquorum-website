@@ -294,6 +294,7 @@ schema: {
             '[Local LLM Fine-Tuning Guide](/local-llms/fine-tuning-local-llms-lora) -- How to fine-tune models on your writing style',
             '[Ollama vs LM Studio Comparison](/local-llms/ollama-vs-lm-studio) -- Which tool is best for creative workflows',
             '[Temperature and Sampling Parameters Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity) -- Master creative output control',
+            '[Best Local LLMs for Creative Writing 2026: Tested Picks](/power-local-llm/best-local-llm-creative-writing-2026) -- Hands-on testing across six models on 50+ creative prompts',
           ],
         },
       },

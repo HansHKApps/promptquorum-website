@@ -5,13 +5,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
     title: 'Best Ollama Models for CPU Only?',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     seoTitle: 'Best Ollama Models Without GPU 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4 is the best CPU-only Ollama model: 4 GB RAM, ~5 tok/s. Llama 3 8B Q4 needs 8 GB RAM. Gemma 2B is fastest at ~6 tok/s. No GPU required.',
+    metaDescription: 'Phi-4 Mini Q4 is the best CPU-only Ollama model: 4 GB RAM, ~5 tok/s. Llama 3.2 3B Q4 needs 2 GB RAM. Gemma 2B is fastest at ~6 tok/s. No GPU required.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
-    current_models_mentioned: ['Phi-4 Mini', 'Llama 3 8B', 'Gemma 2B'],
+    next_refresh_due: '2027-01-16',
+    current_models_mentioned: ['Phi-4 Mini', 'Llama 3.2 3B', 'Gemma 2B'],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers running Ollama without a dedicated GPU',
@@ -21,19 +21,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best Ollama models for CPU only?',
-        answer: 'Without a GPU, Phi-4 Mini at Q4 is the best balance of quality and speed on CPU, delivering reasoning quality close to Llama 3 8B while needing only 4 GB RAM. Llama 3 8B Q4 works with 8+ GB RAM. Gemma 2B is the fastest CPU option.',
+        answer: 'Without a GPU, Phi-4 Mini at Q4 is the best balance of quality and speed on CPU, delivering reasoning quality close to Llama 3.2 3B while needing only 4 GB RAM. Llama 3.2 3B Q4 works with 2+ GB RAM. Gemma 2B is the fastest CPU option.',
         bullets: [
           'Phi-4 Mini Q4: best quality/speed on CPU, needs 4 GB RAM',
-          'Llama 3 8B Q4: best quality, needs 8 GB RAM (slower)',
+          'Llama 3.2 3B Q4: best quality, needs 2 GB RAM (balanced)',
           'Gemma 2B: fastest CPU inference, 2 GB RAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
-      de: { question: 'Die besten Ollama-Modelle nur für die CPU?', answer: 'Ohne GPU bietet Phi-4 Mini bei Q4 die beste Balance aus Qualität und Geschwindigkeit, mit Reasoning-Qualität nah bei Llama 3 8B bei nur 4 GB RAM. Llama 3 8B Q4 läuft mit 8+ GB RAM. Gemma 2B ist die schnellste CPU-Option.', bullets: ['Phi-4 Mini Q4: bestes Qualitäts-/Geschwindigkeitsverhältnis auf der CPU, benötigt 4 GB RAM', 'Llama 3 8B Q4: beste Qualität, benötigt 8 GB RAM (langsamer)', 'Gemma 2B: schnellste CPU-Inferenz, 2 GB RAM'], updatedDate: '2026-05' },
-      fr: { question: 'Meilleurs modèles Ollama en mode CPU uniquement ?', answer: 'Sans GPU, Phi-4 Mini en Q4 offre le meilleur équilibre qualité/vitesse sur CPU, avec qualité de raisonnement proche de Llama 3 8B en seulement 4 Go de RAM. Llama 3 8B Q4 fonctionne avec 8+ Go de RAM. Gemma 2B est l\'option CPU la plus rapide.', bullets: ['Phi-4 Mini Q4 : meilleur rapport qualité/vitesse sur CPU, nécessite 4 Go de RAM', 'Llama 3 8B Q4 : meilleure qualité, nécessite 8 Go de RAM (plus lent)', 'Gemma 2B : inférence CPU la plus rapide, 2 Go de RAM'], updatedDate: '2026-05' },
-      ja: { question: 'CPUのみで動くOllamaモデルは？', answer: 'GPU非搭載環境では、Phi-4 Mini Q4はCPUでの品質と速度の最良バランスで、わずか4 GB RAMでLlama 3 8B近いReasoning品質を提供します。Llama 3 8B Q4は8 GB以上のRAMで動作します。Gemma 2BはCPU推論が最速です。', bullets: ['Phi-4 Mini Q4：CPUでの品質/速度バランス最良、4 GB RAM必要', 'Llama 3 8B Q4：最高品質、8 GB RAM必要（低速）', 'Gemma 2B：CPU推論が最速、2 GB RAM'], updatedDate: '2026-05' },
-      zh: { question: '纯CPU运行最佳的Ollama模型是什么？', answer: '无GPU时，Phi-4 Mini Q4是CPU上质量与速度的最佳平衡，仅需4 GB内存即可提供接近Llama 3 8B的推理品质。Llama 3 8B Q4需要8 GB以上内存。Gemma 2B是CPU推理速度最快的选择。', bullets: ['Phi-4 Mini Q4：CPU上质量/速度最佳，需要4 GB内存', 'Llama 3 8B Q4：最高质量，需要8 GB内存（较慢）', 'Gemma 2B：CPU推理最快，2 GB内存'], updatedDate: '2026-05' },
-      es: { question: '¿Los mejores modelos de Ollama solo para CPU?', answer: 'Sin GPU, Phi-4 Mini en Q4 es el mejor equilibrio entre calidad y velocidad en CPU, ofreciendo una calidad de razonamiento cercana a Llama 3 8B con solo 4 GB de RAM. Llama 3 8B Q4 funciona con 8 GB de RAM o más. Gemma 2B es la opción CPU más rápida.', bullets: ['Phi-4 Mini Q4: mejor relación calidad/velocidad en CPU, requiere 4 GB de RAM', 'Llama 3 8B Q4: mejor calidad, requiere 8 GB de RAM (más lento)', 'Gemma 2B: inferencia CPU más rápida, 2 GB de RAM'], updatedDate: '2026-05' },
+      de: { question: 'Die besten Ollama-Modelle nur für die CPU?', answer: 'Ohne GPU bietet Phi-4 Mini bei Q4 die beste Balance aus Qualität und Geschwindigkeit, mit Reasoning-Qualität nah bei Llama 3.2 3B bei nur 4 GB RAM. Llama 3.2 3B Q4 läuft mit 2+ GB RAM. Gemma 2B ist die schnellste CPU-Option.', bullets: ['Phi-4 Mini Q4: bestes Qualitäts-/Geschwindigkeitsverhältnis auf der CPU, benötigt 4 GB RAM', 'Llama 3.2 3B Q4: beste Qualität, benötigt 2 GB RAM (ausgewogen)', 'Gemma 2B: schnellste CPU-Inferenz, 2 GB RAM'], updatedDate: '2026-07' },
+      fr: { question: 'Meilleurs modèles Ollama en mode CPU uniquement ?', answer: 'Sans GPU, Phi-4 Mini en Q4 offre le meilleur équilibre qualité/vitesse sur CPU, avec qualité de raisonnement proche de Llama 3.2 3B en seulement 4 Go de RAM. Llama 3.2 3B Q4 fonctionne avec 2+ Go de RAM. Gemma 2B est l\'option CPU la plus rapide.', bullets: ['Phi-4 Mini Q4 : meilleur rapport qualité/vitesse sur CPU, nécessite 4 Go de RAM', 'Llama 3.2 3B Q4 : meilleure qualité, nécessite 2 Go de RAM (équilibré)', 'Gemma 2B : inférence CPU la plus rapide, 2 Go de RAM'], updatedDate: '2026-07' },
+      ja: { question: 'CPUのみで動くOllamaモデルは？', answer: 'GPU非搭載環境では、Phi-4 Mini Q4はCPUでの品質と速度の最良バランスで、わずか4 GB RAMでLlama 3.2 3B近いReasoning品質を提供します。Llama 3.2 3B Q4は2 GB以上のRAMで動作します。Gemma 2BはCPU推論が最速です。', bullets: ['Phi-4 Mini Q4：CPUでの品質/速度バランス最良、4 GB RAM必要', 'Llama 3.2 3B Q4：最高品質、2 GB RAM必要（バランス型）', 'Gemma 2B：CPU推論が最速、2 GB RAM'], updatedDate: '2026-07' },
+      zh: { question: '纯CPU运行最佳的Ollama模型是什么？', answer: '无GPU时，Phi-4 Mini Q4是CPU上质量与速度的最佳平衡，仅需4 GB内存即可提供接近Llama 3.2 3B的推理品质。Llama 3.2 3B Q4需要2 GB以上内存。Gemma 2B是CPU推理速度最快的选择。', bullets: ['Phi-4 Mini Q4：CPU上质量/速度最佳，需要4 GB内存', 'Llama 3.2 3B Q4：最高质量，需要2 GB内存（均衡）', 'Gemma 2B：CPU推理最快，2 GB内存'], updatedDate: '2026-07' },
+      es: { question: '¿Los mejores modelos de Ollama solo para CPU?', answer: 'Sin GPU, Phi-4 Mini en Q4 es el mejor equilibrio entre calidad y velocidad en CPU, ofreciendo una calidad de razonamiento cercana a Llama 3.2 3B con solo 4 GB de RAM. Llama 3.2 3B Q4 funciona con 2 GB de RAM o más. Gemma 2B es la opción CPU más rápida.', bullets: ['Phi-4 Mini Q4: mejor relación calidad/velocidad en CPU, requiere 4 GB de RAM', 'Llama 3.2 3B Q4: mejor calidad, requiere 2 GB de RAM (equilibrado)', 'Gemma 2B: inferencia CPU más rápida, 2 GB de RAM'], updatedDate: '2026-07' },
     },
     sections: {
       tldr: {
@@ -57,14 +57,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Top 3 Models for CPU-Only Use',
         content: [
-          'The right CPU-only model depends on whether you prioritize quality or speed. <strong>Phi-4 Mini Q4 is the best balance — it delivers reasoning quality close to Llama 3 8B while needing only 4 GB RAM and running noticeably faster.</strong>',
+          'The right CPU-only model depends on whether you prioritize quality or speed. <strong>Phi-4 Mini Q4 is the best balance — it delivers reasoning quality close to Llama 3.2 3B while needing only 4 GB RAM and running noticeably faster.</strong>',
           'Gemma 2B is the only viable option when RAM is limited to 2 GB. It reaches ~6 tok/s on CPU but produces noticeably lower quality answers on multi-step reasoning tasks compared to Phi-4 Mini.',
           'For the full breakdown of CPU-only configurations including RAM requirements and OS-level optimizations, see the <a href="/local-llms/best-cpu-only-llm" class="text-primary hover:underline">best CPU-only LLM guide</a>.',
         ],
         columns: ['Model', 'RAM Required', 'CPU Speed'],
         rows: [
           { 'Model': 'Phi-4 Mini Q4', 'RAM Required': '4 GB', 'CPU Speed': '~4–5 tok/s' },
-          { 'Model': 'Llama 3 8B Q4', 'RAM Required': '8 GB', 'CPU Speed': '~3 tok/s' },
+          { 'Model': 'Llama 3.2 3B Q4', 'RAM Required': '2 GB', 'CPU Speed': '~10 tok/s' },
           { 'Model': 'Gemma 2B', 'RAM Required': '2 GB', 'CPU Speed': '~6 tok/s' },
         ],
       },
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'How much RAM do I need for CPU-only Ollama?',
-            a: 'Minimum 2 GB for Gemma 2B. 4 GB for Phi-4 Mini Q4. 8 GB for Llama 3 8B Q4. Add 1–2 GB on top of the model size for the OS and Ollama runtime overhead.',
+            a: 'Minimum 2 GB for Gemma 2B. 4 GB for Phi-4 Mini Q4. 2 GB for Llama 3.2 3B Q4. Add 1–2 GB on top of the model size for the OS and Ollama runtime overhead.',
           },
           {
             q: 'Why is CPU inference so much slower than GPU?',
@@ -103,21 +103,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Die besten Ollama-Modelle nur für die CPU?',
     seoTitle: 'Beste Ollama-Modelle ohne GPU 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4 ist das beste CPU-only Ollama-Modell: 4 GB RAM, ~5 tok/s. Llama 3 8B Q4 mit 8 GB RAM. Gemma 2B ~6 tok/s auf CPU. Alle ohne GPU. Mai 2026.',
+    metaDescription: 'Phi-4 Mini Q4 ist das beste CPU-only Ollama-Modell: 4 GB RAM, ~5 tok/s. Llama 3.2 3B Q4 mit 2 GB RAM. Gemma 2B ~6 tok/s auf CPU. Alle ohne GPU. Mai 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       de: {
         question: 'Die besten Ollama-Modelle nur für die CPU?',
-        answer: 'Ohne GPU bietet Phi-4 Mini bei Q4 die beste Balance aus Qualität und Geschwindigkeit auf der CPU. Llama 3 8B Q4 funktioniert mit 8+ GB RAM. Gemma 2B ist die schnellste CPU-Option.',
+        answer: 'Ohne GPU bietet Phi-4 Mini bei Q4 die beste Balance aus Qualität und Geschwindigkeit auf der CPU. Llama 3.2 3B Q4 funktioniert mit 2+ GB RAM. Gemma 2B ist die schnellste CPU-Option.',
         bullets: [
           'Phi-4 Mini Q4: bestes Qualitäts-/Geschwindigkeitsverhältnis auf der CPU, benötigt 4 GB RAM',
-          'Llama 3 8B Q4: beste Qualität, benötigt 8 GB RAM (langsamer)',
+          'Llama 3.2 3B Q4: beste Qualität, benötigt 2 GB RAM (ausgewogen)',
           'Gemma 2B: schnellste CPU-Inferenz, 2 GB RAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -142,14 +142,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Top 3 Modelle für den reinen CPU-Betrieb',
         content: [
-          'Das richtige CPU-only-Modell hängt davon ab, ob Sie Qualität oder Geschwindigkeit priorisieren. <strong>Phi-4 Mini Q4 bietet die beste Balance — es liefert Reasoning-Qualität nahe an Llama 3 8B, benötigt aber nur 4 GB RAM und läuft spürbar schneller.</strong>',
+          'Das richtige CPU-only-Modell hängt davon ab, ob Sie Qualität oder Geschwindigkeit priorisieren. <strong>Phi-4 Mini Q4 bietet die beste Balance — es liefert Reasoning-Qualität nahe an Llama 3.2 3B, benötigt aber nur 4 GB RAM und läuft spürbar schneller.</strong>',
           'Gemma 2B ist die einzige praktikable Option, wenn der RAM auf 2 GB begrenzt ist. Es erreicht ~6 tok/s auf der CPU, liefert bei mehrstufigen Reasoning-Aufgaben jedoch spürbar schlechtere Antworten als Phi-4 Mini.',
           'Eine vollständige Übersicht der CPU-only-Konfigurationen einschließlich RAM-Anforderungen und OS-Level-Optimierungen finden Sie im <a href="/de/local-llms/best-cpu-only-llm" class="text-primary hover:underline">Leitfaden für die besten CPU-only-LLMs</a>.',
         ],
         columns: ['Modell', 'Benötigter RAM', 'CPU-Geschwindigkeit'],
         rows: [
           { 'Modell': 'Phi-4 Mini Q4', 'Benötigter RAM': '4 GB', 'CPU-Geschwindigkeit': '~4–5 tok/s' },
-          { 'Modell': 'Llama 3 8B Q4', 'Benötigter RAM': '8 GB', 'CPU-Geschwindigkeit': '~3 tok/s' },
+          { 'Modell': 'Llama 3.2 3B Q4', 'Benötigter RAM': '2 GB', 'CPU-Geschwindigkeit': '~10 tok/s' },
           { 'Modell': 'Gemma 2B', 'Benötigter RAM': '2 GB', 'CPU-Geschwindigkeit': '~6 tok/s' },
         ],
       },
@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Wie viel RAM benötige ich für CPU-only Ollama?',
-            a: 'Mindestens 2 GB für Gemma 2B. 4 GB für Phi-4 Mini Q4. 8 GB für Llama 3 8B Q4. Rechnen Sie 1–2 GB zusätzlich zum Modell-Größe für den Overhead von Betriebssystem und Ollama-Laufzeitumgebung.',
+            a: 'Mindestens 2 GB für Gemma 2B. 4 GB für Phi-4 Mini Q4. 2 GB für Llama 3.2 3B Q4. Rechnen Sie 1–2 GB zusätzlich zum Modell-Größe für den Overhead von Betriebssystem und Ollama-Laufzeitumgebung.',
           },
           {
             q: 'Warum ist CPU-Inferenz so viel langsamer als GPU?',
@@ -188,21 +188,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Meilleurs modèles Ollama en mode CPU uniquement ?',
     seoTitle: 'Meilleurs modèles Ollama sans GPU 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4 : meilleur Ollama CPU-only, 4 Go RAM, ~5 tok/s. Llama 3 8B Q4 : 8 Go RAM. Gemma 2B le plus rapide sur CPU (~6 tok/s). Vérifié mai 2026.',
+    metaDescription: 'Phi-4 Mini Q4 : meilleur Ollama CPU-only, 4 Go RAM, ~5 tok/s. Llama 3.2 3B Q4 : 8 Go RAM. Gemma 2B le plus rapide sur CPU (~6 tok/s). Vérifié mai 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       fr: {
         question: 'Meilleurs modèles Ollama en mode CPU uniquement ?',
-        answer: 'Sans GPU, Phi-4 Mini en Q4 offre le meilleur équilibre qualité/vitesse sur CPU. Llama 3 8B Q4 fonctionne avec 8+ Go de RAM. Gemma 2B est l\'option CPU la plus rapide.',
+        answer: 'Sans GPU, Phi-4 Mini en Q4 offre le meilleur équilibre qualité/vitesse sur CPU. Llama 3.2 3B Q4 fonctionne avec 2+ Go de RAM. Gemma 2B est l\'option CPU la plus rapide.',
         bullets: [
           'Phi-4 Mini Q4 : meilleur rapport qualité/vitesse sur CPU, nécessite 4 Go de RAM',
-          'Llama 3 8B Q4 : meilleure qualité, nécessite 8 Go de RAM (plus lent)',
+          'Llama 3.2 3B Q4 : meilleure qualité, nécessite 2 Go de RAM (équilibré)',
           'Gemma 2B : inférence CPU la plus rapide, 2 Go de RAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -227,14 +227,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Top 3 des modèles pour une utilisation CPU-only',
         content: [
-          'Le bon modèle CPU-only dépend de votre priorité : qualité ou vitesse. <strong>Phi-4 Mini Q4 offre le meilleur équilibre — il délivre une qualité de raisonnement proche de Llama 3 8B tout en ne nécessitant que 4 Go de RAM et en fonctionnant nettement plus vite.</strong>',
+          'Le bon modèle CPU-only dépend de votre priorité : qualité ou vitesse. <strong>Phi-4 Mini Q4 offre le meilleur équilibre — il délivre une qualité de raisonnement proche de Llama 3.2 3B tout en ne nécessitant que 4 Go de RAM et en fonctionnant nettement plus vite.</strong>',
           'Gemma 2B est la seule option viable lorsque la RAM est limitée à 2 Go. Il atteint ~6 tok/s sur CPU, mais produit des réponses de qualité nettement inférieure sur les tâches de raisonnement multi-étapes par rapport à Phi-4 Mini.',
           'Pour la comparaison complète des configurations CPU-only incluant les exigences RAM et les optimisations système, consultez le <a href="/fr/local-llms/best-cpu-only-llm" class="text-primary hover:underline">guide des meilleurs LLMs CPU-only</a>.',
         ],
         columns: ['Modèle', 'RAM requise', 'Vitesse CPU'],
         rows: [
           { 'Modèle': 'Phi-4 Mini Q4', 'RAM requise': '4 GB', 'Vitesse CPU': '~4–5 tok/s' },
-          { 'Modèle': 'Llama 3 8B Q4', 'RAM requise': '8 GB', 'Vitesse CPU': '~3 tok/s' },
+          { 'Modèle': 'Llama 3.2 3B Q4', 'RAM requise': '2 GB', 'Vitesse CPU': '~10 tok/s' },
           { 'Modèle': 'Gemma 2B', 'RAM requise': '2 GB', 'Vitesse CPU': '~6 tok/s' },
         ],
       },
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'De combien de RAM ai-je besoin pour Ollama en mode CPU-only ?',
-            a: 'Minimum 2 Go pour Gemma 2B. 4 Go pour Phi-4 Mini Q4. 8 Go pour Llama 3 8B Q4. Ajoutez 1 à 2 Go en plus de la taille du modèle pour la mémoire utilisée par le système d\'exploitation et Ollama.',
+            a: 'Minimum 2 Go pour Gemma 2B. 4 Go pour Phi-4 Mini Q4. 8 Go pour Llama 3.2 3B Q4. Ajoutez 1 à 2 Go en plus de la taille du modèle pour la mémoire utilisée par le système d\'exploitation et Ollama.',
           },
           {
             q: 'Pourquoi l\'inférence CPU est-elle si lente comparée au GPU ?',
@@ -273,21 +273,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'CPU専用で使えるOllamaの最適モデルは？',
     seoTitle: 'GPU不要Ollamaモデル2026：CPU専用ベスト3選 | PromptQuorum',
-    metaDescription: 'GPUなしの場合、Phi-4 Mini Q4がCPU専用の最適Ollamaモデルです。Llama 3 8B Q4は8GB以上のRAMで動作します。Gemma 2Bが最速。2026年5月確認済み。',
+    metaDescription: 'GPUなしの場合、Phi-4 Mini Q4がCPU専用の最適Ollamaモデルです。Llama 3.2 3B Q4は2GB以上のRAMで動作します。Gemma 2Bが最速。2026年5月確認済み。',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       ja: {
         question: 'CPU専用で使えるOllamaの最適モデルは？',
-        answer: 'GPUなしの場合、Phi-4 Mini（Q4量子化）がCPU上で品質と速度の最良バランスを提供します。Llama 3 8B Q4は8GB以上のRAMで動作します。Gemma 2Bは最速のCPUオプションです。',
+        answer: 'GPUなしの場合、Phi-4 Mini（Q4量子化）がCPU上で品質と速度の最良バランスを提供します。Llama 3.2 3B Q4は2GB以上のRAMで動作します。Gemma 2Bは最速のCPUオプションです。',
         bullets: [
           'Phi-4 Mini Q4：CPU上で最良の品質/速度バランス、4 GB RAMが必要',
-          'Llama 3 8B Q4：最高品質、8 GB RAMが必要（低速）',
+          'Llama 3.2 3B Q4：最高品質、2 GB RAMが必要（バランス型）',
           'Gemma 2B：最速のCPU推論、2 GB RAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -312,14 +312,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'CPU専用向けトップ3モデル',
         content: [
-          '最適なCPU専用モデルは品質と速度のどちらを優先するかによります。<strong>Phi-4 Mini Q4が最良のバランスです — Llama 3 8Bに近い推論品質を提供しながら、必要なRAMはわずか4 GBで、明らかに高速に動作します。</strong>',
+          '最適なCPU専用モデルは品質と速度のどちらを優先するかによります。<strong>Phi-4 Mini Q4が最良のバランスです — Llama 3.2 3Bに近い推論品質を提供しながら、必要なRAMはわずか4 GBで、明らかに高速に動作します。</strong>',
           'Gemma 2BはRAMが2 GBに制限されている場合の唯一の実用的選択肢です。CPU上で~6 tok/sに達しますが、多段階推論タスクではPhi-4 Miniと比較して品質が明らかに低下します。',
           'RAMの要件やOSレベルの最適化を含むCPU専用設定の完全な比較については、<a href="/ja/local-llms/best-cpu-only-llm" class="text-primary hover:underline">CPU専用LLMガイド</a>をご覧ください。',
         ],
         columns: ['モデル', '必要RAM', 'CPU速度'],
         rows: [
           { 'モデル': 'Phi-4 Mini Q4', '必要RAM': '4 GB', 'CPU速度': '~4–5 tok/s' },
-          { 'モデル': 'Llama 3 8B Q4', '必要RAM': '8 GB', 'CPU速度': '~3 tok/s' },
+          { 'モデル': 'Llama 3.2 3B Q4', '必要RAM': '2 GB', 'CPU速度': '~10 tok/s' },
           { 'モデル': 'Gemma 2B', '必要RAM': '2 GB', 'CPU速度': '~6 tok/s' },
         ],
       },
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'CPU専用のOllamaにはどのくらいのRAMが必要ですか？',
-            a: 'Gemma 2Bには最低2 GB。Phi-4 Mini Q4には4 GB。Llama 3 8B Q4には8 GB。OSとOllamaランタイムのオーバーヘッド分として、モデルサイズに加えて1〜2 GB余分に確保してください。',
+            a: 'Gemma 2Bには最低2 GB。Phi-4 Mini Q4には4 GB。Llama 3.2 3B Q4には2 GB。OSとOllamaランタイムのオーバーヘッド分として、モデルサイズに加えて1〜2 GB余分に確保してください。',
           },
           {
             q: 'なぜCPU推論はGPUよりずっと遅いのですか？',
@@ -358,21 +358,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: '仅用 CPU 运行 Ollama 的最佳模型？',
     seoTitle: '无GPU纯CPU运行Ollama 2026：最佳三款模型 | PromptQuorum',
-    metaDescription: '无GPU：Phi-4 Mini Q4是最佳纯CPU Ollama模型。Llama 3 8B Q4需要8GB以上内存。Gemma 2B速度最快。2026年5月更新。',
+    metaDescription: '无GPU：Phi-4 Mini Q4是最佳纯CPU Ollama模型。Llama 3.2 3B Q4需要2GB以上内存。Gemma 2B速度最快。2026年5月更新。',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       zh: {
         question: '仅用 CPU 运行 Ollama 的最佳模型？',
-        answer: '没有 GPU 时，Phi-4 Mini Q4 在 CPU 上提供最佳的质量与速度平衡。Llama 3 8B Q4 需要 8GB 以上内存。Gemma 2B 是最快的 CPU 选项。',
+        answer: '没有 GPU 时，Phi-4 Mini Q4 在 CPU 上提供最佳的质量与速度平衡。Llama 3.2 3B Q4 需要 2GB 以上内存。Gemma 2B 是最快的 CPU 选项。',
         bullets: [
           'Phi-4 Mini Q4：CPU 上最佳质量/速度比，需要 4 GB 内存',
-          'Llama 3 8B Q4：质量最高，需要 8 GB 内存（较慢）',
+          'Llama 3.2 3B Q4：质量最高，需要 2 GB 内存（均衡）',
           'Gemma 2B：CPU 推理最快，2 GB 内存',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -397,14 +397,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '纯 CPU 使用的三大推荐模型',
         content: [
-          '最合适的纯 CPU 模型取决于您优先考虑质量还是速度。<strong>Phi-4 Mini Q4 提供最佳平衡——它提供接近 Llama 3 8B 的推理质量，仅需 4 GB 内存，运行速度明显更快。</strong>',
+          '最合适的纯 CPU 模型取决于您优先考虑质量还是速度。<strong>Phi-4 Mini Q4 提供最佳平衡——它提供接近 Llama 3.2 3B 的推理质量，仅需 4 GB 内存，运行速度明显更快。</strong>',
           '当内存限制为 2 GB 时，Gemma 2B 是唯一可行的选择。它在 CPU 上可达 ~6 tok/s，但在多步推理任务上的答案质量明显低于 Phi-4 Mini。',
           '有关纯 CPU 配置的完整对比（包括内存需求和系统级优化），请参阅<a href="/zh/local-llms/best-cpu-only-llm" class="text-primary hover:underline">最佳纯 CPU LLM 指南</a>。',
         ],
         columns: ['模型', '所需内存', 'CPU 速度'],
         rows: [
           { '模型': 'Phi-4 Mini Q4', '所需内存': '4 GB', 'CPU 速度': '~4–5 tok/s' },
-          { '模型': 'Llama 3 8B Q4', '所需内存': '8 GB', 'CPU 速度': '~3 tok/s' },
+          { '模型': 'Llama 3.2 3B Q4', '所需内存': '2 GB', 'CPU 速度': '~10 tok/s' },
           { '模型': 'Gemma 2B', '所需内存': '2 GB', 'CPU 速度': '~6 tok/s' },
         ],
       },
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '纯 CPU 运行 Ollama 需要多少内存？',
-            a: 'Gemma 2B 至少需要 2 GB。Phi-4 Mini Q4 需要 4 GB。Llama 3 8B Q4 需要 8 GB。在模型大小基础上再预留 1–2 GB，用于操作系统和 Ollama 运行时开销。',
+            a: 'Gemma 2B 至少需要 2 GB。Phi-4 Mini Q4 需要 4 GB。Llama 3.2 3B Q4 需要 2 GB。在模型大小基础上再预留 1–2 GB，用于操作系统和 Ollama 运行时开销。',
           },
           {
             q: '为什么 CPU 推理比 GPU 慢得多？',
@@ -443,21 +443,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: '¿Los mejores modelos de Ollama solo para CPU?',
     seoTitle: 'Mejores modelos de Ollama sin GPU 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4 es el mejor modelo de Ollama solo para CPU: 4 GB de RAM, ~5 tok/s. Llama 3 8B Q4 pide 8 GB. Gemma 2B es el más rápido en CPU (~6 tok/s). Sin GPU.',
+    metaDescription: 'Phi-4 Mini Q4 es el mejor modelo de Ollama solo para CPU: 4 GB de RAM, ~5 tok/s. Llama 3.2 3B Q4 pide 2 GB. Gemma 2B es el más rápido en CPU (~6 tok/s). Sin GPU.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       es: {
         question: '¿Los mejores modelos de Ollama solo para CPU?',
-        answer: 'Sin GPU, Phi-4 Mini en Q4 ofrece el mejor equilibrio entre calidad y velocidad en CPU. Llama 3 8B Q4 funciona con 8 GB de RAM o más. Gemma 2B es la opción CPU más rápida.',
+        answer: 'Sin GPU, Phi-4 Mini en Q4 ofrece el mejor equilibrio entre calidad y velocidad en CPU. Llama 3.2 3B Q4 funciona con 2 GB de RAM o más. Gemma 2B es la opción CPU más rápida.',
         bullets: [
           'Phi-4 Mini Q4: mejor relación calidad/velocidad en CPU, requiere 4 GB de RAM',
-          'Llama 3 8B Q4: mejor calidad, requiere 8 GB de RAM (más lento)',
+          'Llama 3.2 3B Q4: mejor calidad, requiere 2 GB de RAM (equilibrado)',
           'Gemma 2B: inferencia CPU más rápida, 2 GB de RAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -482,14 +482,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Los 3 mejores modelos para uso solo con CPU',
         content: [
-          'El modelo correcto solo para CPU depende de si priorizas calidad o velocidad. <strong>Phi-4 Mini Q4 ofrece el mejor equilibrio — proporciona una calidad de razonamiento cercana a Llama 3 8B necesitando solo 4 GB de RAM y funcionando notablemente más rápido.</strong>',
+          'El modelo correcto solo para CPU depende de si priorizas calidad o velocidad. <strong>Phi-4 Mini Q4 ofrece el mejor equilibrio — proporciona una calidad de razonamiento cercana a Llama 3.2 3B necesitando solo 4 GB de RAM y funcionando notablemente más rápido.</strong>',
           'Gemma 2B es la única opción viable cuando la RAM está limitada a 2 GB. Alcanza ~6 tok/s en CPU pero produce respuestas de calidad notablemente inferior en tareas de razonamiento de múltiples pasos comparado con Phi-4 Mini.',
           'Para la comparativa completa de configuraciones solo con CPU incluyendo requisitos de RAM y optimizaciones a nivel del sistema operativo, consulta la <a href="/es/local-llms/best-cpu-only-llm" class="text-primary hover:underline">guía de los mejores LLM solo para CPU</a>.',
         ],
         columns: ['Modelo', 'RAM requerida', 'Velocidad en CPU'],
         rows: [
           { 'Modelo': 'Phi-4 Mini Q4', 'RAM requerida': '4 GB', 'Velocidad en CPU': '~4–5 tok/s' },
-          { 'Modelo': 'Llama 3 8B Q4', 'RAM requerida': '8 GB', 'Velocidad en CPU': '~3 tok/s' },
+          { 'Modelo': 'Llama 3.2 3B Q4', 'RAM requerida': '2 GB', 'Velocidad en CPU': '~10 tok/s' },
           { 'Modelo': 'Gemma 2B', 'RAM requerida': '2 GB', 'Velocidad en CPU': '~6 tok/s' },
         ],
       },
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Cuánta RAM necesito para Ollama solo con CPU?',
-            a: 'Mínimo 2 GB para Gemma 2B. 4 GB para Phi-4 Mini Q4. 8 GB para Llama 3 8B Q4. Añade entre 1 y 2 GB adicionales sobre el tamaño del modelo para la carga del sistema operativo y el tiempo de ejecución de Ollama.',
+            a: 'Mínimo 2 GB para Gemma 2B. 4 GB para Phi-4 Mini Q4. 2 GB para Llama 3.2 3B Q4. Añade entre 1 y 2 GB adicionales sobre el tamaño del modelo para la carga del sistema operativo y el tiempo de ejecución de Ollama.',
           },
           {
             q: '¿Por qué la inferencia en CPU es tan lenta en comparación con la GPU?',
@@ -528,21 +528,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'Melhores modelos Ollama somente para CPU?',
     seoTitle: 'Melhores modelos Ollama sem GPU 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4 é o melhor modelo Ollama somente para CPU: 4 GB de RAM, ~5 tok/s. Llama 3 8B Q4 pede 8 GB. Gemma 2B é o mais rápido na CPU (~6 tok/s). Sem GPU.',
+    metaDescription: 'Phi-4 Mini Q4 é o melhor modelo Ollama somente para CPU: 4 GB de RAM, ~5 tok/s. Llama 3.2 3B Q4 pede 2 GB. Gemma 2B é o mais rápido na CPU (~6 tok/s). Sem GPU.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       pt: {
         question: 'Melhores modelos Ollama somente para CPU?',
-        answer: 'Sem GPU, o Phi-4 Mini em Q4 oferece o melhor equilíbrio entre qualidade e velocidade na CPU. O Llama 3 8B Q4 funciona com 8 GB de RAM ou mais. O Gemma 2B é a opção mais rápida na CPU.',
+        answer: 'Sem GPU, o Phi-4 Mini em Q4 oferece o melhor equilíbrio entre qualidade e velocidade na CPU. O Llama 3.2 3B Q4 funciona com 2 GB de RAM ou mais. O Gemma 2B é a opção mais rápida na CPU.',
         bullets: [
           'Phi-4 Mini Q4: melhor relação qualidade/velocidade na CPU, requer 4 GB de RAM',
-          'Llama 3 8B Q4: melhor qualidade, requer 8 GB de RAM (mais lento)',
+          'Llama 3.2 3B Q4: melhor qualidade, requer 2 GB de RAM (equilibrado)',
           'Gemma 2B: inferência CPU mais rápida, 2 GB de RAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -567,14 +567,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Os 3 melhores modelos para uso somente com CPU',
         content: [
-          'O modelo correto somente para CPU depende de se você prioriza qualidade ou velocidade. <strong>Phi-4 Mini Q4 oferece o melhor equilíbrio — entrega qualidade de raciocínio próxima ao Llama 3 8B precisando de apenas 4 GB de RAM e rodando notavelmente mais rápido.</strong>',
+          'O modelo correto somente para CPU depende de se você prioriza qualidade ou velocidade. <strong>Phi-4 Mini Q4 oferece o melhor equilíbrio — entrega qualidade de raciocínio próxima ao Llama 3.2 3B precisando de apenas 4 GB de RAM e rodando notavelmente mais rápido.</strong>',
           'Gemma 2B é a única opção viável quando a RAM está limitada a 2 GB. Alcança ~6 tok/s na CPU, mas produz respostas de qualidade notavelmente inferior em tarefas de raciocínio de várias etapas em comparação com o Phi-4 Mini.',
           'Para a comparação completa de configurações somente com CPU, incluindo requisitos de RAM e otimizações no nível do sistema operacional, consulte o <a href="/pt/local-llms/best-cpu-only-llm" class="text-primary hover:underline">guia dos melhores LLMs somente para CPU</a>.',
         ],
         columns: ['Modelo', 'RAM necessária', 'Velocidade na CPU'],
         rows: [
           { 'Modelo': 'Phi-4 Mini Q4', 'RAM necessária': '4 GB', 'Velocidade na CPU': '~4–5 tok/s' },
-          { 'Modelo': 'Llama 3 8B Q4', 'RAM necessária': '8 GB', 'Velocidade na CPU': '~3 tok/s' },
+          { 'Modelo': 'Llama 3.2 3B Q4', 'RAM necessária': '2 GB', 'Velocidade na CPU': '~10 tok/s' },
           { 'Modelo': 'Gemma 2B', 'RAM necessária': '2 GB', 'Velocidade na CPU': '~6 tok/s' },
         ],
       },
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Quanta RAM preciso para o Ollama somente com CPU?',
-            a: 'Mínimo de 2 GB para Gemma 2B. 4 GB para Phi-4 Mini Q4. 8 GB para Llama 3 8B Q4. Adicione 1–2 GB acima do tamanho do modelo para a sobrecarga do sistema operacional e do runtime do Ollama.',
+            a: 'Mínimo de 2 GB para Gemma 2B. 4 GB para Phi-4 Mini Q4. 2 GB para Llama 3.2 3B Q4. Adicione 1–2 GB acima do tamanho do modelo para a sobrecarga do sistema operacional e do runtime do Ollama.',
           },
           {
             q: 'Por que a inferência na CPU é tão mais lenta do que na GPU?',
@@ -613,21 +613,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'أفضل نماذج ⁨Ollama⁩ للـ⁨CPU⁩ فقط؟',
     seoTitle: 'أفضل نماذج ⁨Ollama⁩ بدون ⁨GPU 2026⁩ | ⁨PromptQuorum⁩',
-    metaDescription: '⁨Phi-4 Mini Q4⁩ أفضل نموذج ⁨Ollama⁩ لـ⁨CPU⁩ فقط: ⁨4 GB RAM⁩، ~⁨5⁩ رمز/ثانية. ⁨Llama 3 8B Q4⁩ يحتاج ⁨8 GB RAM. Gemma 2B⁩ الأسرع على ⁨CPU⁩ بـ~⁨6⁩ رمز/ثانية.',
+    metaDescription: '⁨Phi-4 Mini Q4⁩ أفضل نموذج ⁨Ollama⁩ لـ⁨CPU⁩ فقط: ⁨4 GB RAM⁩، ~⁨5⁩ رمز/ثانية. ⁨Llama 3.2 3B Q4⁩ يحتاج ⁨2 GB RAM. Gemma 2B⁩ الأسرع على ⁨CPU⁩ بـ~⁨6⁩ رمز/ثانية.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       ar: {
         question: 'أفضل نماذج Ollama للـCPU فقط؟',
-        answer: 'بدون GPU، Phi-4 Mini في Q4 يقدم أفضل توازن بين الجودة والسرعة على CPU. Llama 3 8B Q4 يعمل بـ8 GB RAM أو أكثر. Gemma 2B هو الخيار الأسرع على CPU.',
+        answer: 'بدون GPU، Phi-4 Mini في Q4 يقدم أفضل توازن بين الجودة والسرعة على CPU. Llama 3.2 3B Q4 يعمل بـ2 GB RAM أو أكثر. Gemma 2B هو الخيار الأسرع على CPU.',
         bullets: [
           'Phi-4 Mini Q4: أفضل نسبة جودة/سرعة على CPU، يحتاج 4 GB RAM',
-          'Llama 3 8B Q4: أفضل جودة، يحتاج 8 GB RAM (أبطأ)',
+          'Llama 3.2 3B Q4: أفضل جودة، يحتاج 2 GB RAM (متوازن)',
           'Gemma 2B: الاستدلال الأسرع على CPU، 2 GB RAM',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -652,14 +652,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'أفضل 3 نماذج للاستخدام بـCPU فقط',
         content: [
-          'النموذج الصحيح لـCPU فقط يعتمد على ما إذا كنت تعطي الأولوية للجودة أم السرعة. <strong>Phi-4 Mini Q4 يقدم أفضل توازن — يوفر جودة استدلال قريبة من Llama 3 8B مع الحاجة لـ4 GB RAM فقط ويعمل بشكل أسرع ملحوظاً.</strong>',
+          'النموذج الصحيح لـCPU فقط يعتمد على ما إذا كنت تعطي الأولوية للجودة أم السرعة. <strong>Phi-4 Mini Q4 يقدم أفضل توازن — يوفر جودة استدلال قريبة من Llama 3.2 3B مع الحاجة لـ4 GB RAM فقط ويعمل بشكل أسرع ملحوظاً.</strong>',
           'Gemma 2B هو الخيار الوحيد القابل للتطبيق عندما تكون RAM محدودة بـ2 GB. يصل إلى ~6 رمز/ثانية على CPU لكنه ينتج إجابات ذات جودة أدنى ملحوظاً في مهام الاستدلال متعددة الخطوات مقارنةً بـPhi-4 Mini.',
           'للمقارنة الشاملة لإعدادات CPU فقط بما في ذلك متطلبات RAM والتحسينات على مستوى نظام التشغيل، راجع <a href="/ar/local-llms/best-cpu-only-llm" class="text-primary hover:underline">دليل أفضل نماذج اللغة الكبيرة للـCPU فقط</a>.',
         ],
         columns: ['النموذج', 'RAM المطلوبة', 'السرعة على CPU'],
         rows: [
           { 'النموذج': 'Phi-4 Mini Q4', 'RAM المطلوبة': '4 GB', 'السرعة على CPU': '~4–5 رمز/ثانية' },
-          { 'النموذج': 'Llama 3 8B Q4', 'RAM المطلوبة': '8 GB', 'السرعة على CPU': '~3 رمز/ثانية' },
+          { 'النموذج': 'Llama 3.2 3B Q4', 'RAM المطلوبة': '2 GB', 'السرعة على CPU': '~10 رمز/ثانية' },
           { 'النموذج': 'Gemma 2B', 'RAM المطلوبة': '2 GB', 'السرعة على CPU': '~6 رمز/ثانية' },
         ],
       },
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'كم من RAM أحتاج لـOllama بـCPU فقط؟',
-            a: 'الحد الأدنى 2 GB لـGemma 2B. 4 GB لـPhi-4 Mini Q4. 8 GB لـLlama 3 8B Q4. أضف 1–2 GB فوق حجم النموذج لتكلفة نظام التشغيل وبيئة تشغيل Ollama.',
+            a: 'الحد الأدنى 2 GB لـGemma 2B. 4 GB لـPhi-4 Mini Q4. 2 GB لـLlama 3.2 3B Q4. أضف 1–2 GB فوق حجم النموذج لتكلفة نظام التشغيل وبيئة تشغيل Ollama.',
           },
           {
             q: 'لماذا الاستدلال على CPU أبطأ بكثير من GPU؟',
@@ -698,21 +698,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'CPU 전용 최고의 Ollama 모델은 무엇입니까?',
     seoTitle: 'GPU 없이 사용하는 최고의 Ollama 모델 2026 | PromptQuorum',
-    metaDescription: 'Phi-4 Mini Q4는 CPU 전용 최고의 Ollama 모델입니다: RAM 4 GB, ~5 tok/s. Llama 3 8B Q4는 8 GB RAM이 필요합니다. Gemma 2B는 CPU에서 가장 빠릅니다(~6 tok/s). GPU 불필요.',
+    metaDescription: 'Phi-4 Mini Q4는 CPU 전용 최고의 Ollama 모델입니다: RAM 4 GB, ~5 tok/s. Llama 3.2 3B Q4는 2 GB RAM이 필요합니다. Gemma 2B는 CPU에서 가장 빠릅니다(~6 tok/s). GPU 불필요.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2027-01-16',
     quickAnswerTop: {
       ko: {
         question: 'CPU 전용 최고의 Ollama 모델은 무엇입니까?',
-        answer: 'GPU가 없는 환경에서 Phi-4 Mini Q4는 CPU에서 품질과 속도의 최적 균형을 제공합니다. Llama 3 8B Q4는 8 GB 이상의 RAM에서 동작합니다. Gemma 2B는 CPU에서 가장 빠른 옵션입니다.',
+        answer: 'GPU가 없는 환경에서 Phi-4 Mini Q4는 CPU에서 품질과 속도의 최적 균형을 제공합니다. Llama 3.2 3B Q4는 2 GB 이상의 RAM에서 동작합니다. Gemma 2B는 CPU에서 가장 빠른 옵션입니다.',
         bullets: [
           'Phi-4 Mini Q4: CPU에서 품질/속도 균형 최고, RAM 4 GB 필요',
-          'Llama 3 8B Q4: 최고 품질, RAM 8 GB 필요(더 느림)',
+          'Llama 3.2 3B Q4: 최고 품질, RAM 2 GB 필요(균형)',
           'Gemma 2B: CPU 추론 속도 최고, RAM 2 GB',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-07',
       },
     },
     sections: {
@@ -741,14 +741,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'CPU 전용 사용을 위한 상위 3개 모델',
         content: [
-          '올바른 CPU 전용 모델은 품질과 속도 중 무엇을 우선시하는지에 따라 달라집니다. <strong>Phi-4 Mini Q4가 최적의 균형을 제공합니다 — RAM 4 GB만으로 Llama 3 8B에 근접한 추론 품질을 제공하면서 눈에 띄게 더 빠르게 동작합니다.</strong>',
+          '올바른 CPU 전용 모델은 품질과 속도 중 무엇을 우선시하는지에 따라 달라집니다. <strong>Phi-4 Mini Q4가 최적의 균형을 제공합니다 — RAM 4 GB만으로 Llama 3.2 3B에 근접한 추론 품질을 제공하면서 눈에 띄게 더 빠르게 동작합니다.</strong>',
           'Gemma 2B는 RAM이 2 GB로 제한될 때 유일하게 실용적인 선택입니다. CPU에서 ~6 tok/s에 도달하지만 다단계 추론 작업에서 Phi-4 Mini와 비교하면 눈에 띄게 낮은 품질의 답변을 생성합니다.',
           'RAM 요구 사항 및 OS 수준 최적화를 포함한 CPU 전용 구성의 전체 비교는 <a href="/ko/local-llms/best-cpu-only-llm" class="text-primary hover:underline">CPU 전용 최고의 LLM 가이드</a>를 참조하십시오.',
         ],
         columns: ['모델', '필요 RAM', 'CPU 속도'],
         rows: [
           { '모델': 'Phi-4 Mini Q4', '필요 RAM': '4 GB', 'CPU 속도': '~4–5 tok/s' },
-          { '모델': 'Llama 3 8B Q4', '필요 RAM': '8 GB', 'CPU 속도': '~3 tok/s' },
+          { '모델': 'Llama 3.2 3B Q4', '필요 RAM': '2 GB', 'CPU 속도': '~10 tok/s' },
           { '모델': 'Gemma 2B', '필요 RAM': '2 GB', 'CPU 속도': '~6 tok/s' },
         ],
       },
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'CPU 전용 Ollama 사용 시 RAM이 얼마나 필요합니까?',
-            a: 'Gemma 2B의 경우 최소 2 GB, Phi-4 Mini Q4는 4 GB, Llama 3 8B Q4는 8 GB가 필요합니다. OS 및 Ollama 런타임 오버헤드를 위해 모델 크기에 1~2 GB를 추가하십시오.',
+            a: 'Gemma 2B의 경우 최소 2 GB, Phi-4 Mini Q4는 4 GB, Llama 3.2 3B Q4는 2 GB가 필요합니다. OS 및 Ollama 런타임 오버헤드를 위해 모델 크기에 1~2 GB를 추가하십시오.',
           },
           {
             q: 'CPU 추론이 GPU보다 훨씬 느린 이유는 무엇입니까?',
