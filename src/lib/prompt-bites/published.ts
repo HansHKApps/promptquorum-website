@@ -130,12 +130,44 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-local-llm-obsidian-integration',
   'best-local-llm-reasoning-ui',
   'best-local-llm-customer-support-chatbot',
+
+  // Balcony Solar State Regulation — Round 1 (EN-only, see EN_ONLY_SLUGS below)
+  'is-balcony-solar-legal-utah',
+  'is-balcony-solar-legal-maine',
+  'is-balcony-solar-legal-virginia',
+  'is-balcony-solar-legal-maryland',
+  'is-balcony-solar-legal-colorado',
+  'is-balcony-solar-legal-new-hampshire',
+  'is-balcony-solar-legal-vermont',
+  'is-balcony-solar-legal-connecticut',
 ])
 
 export const PROMPT_BITES_HUB_PUBLISHED = true
 
-export function isPromptBitePublished(slug: string, _lang: string): boolean {
-  return PROMPT_BITES_PUBLISHED_SLUGS.has(slug)
+// Slugs that deliberately ship EN content only (see is-balcony-solar-legal-utah.ts
+// header for rationale). Every non-EN locale route still statically builds for
+// these slugs via getArticleStaticParams() and silently falls back to the EN
+// article body — so without this check they'd render as robots:index,follow on
+// e.g. /de/prompt-bites/is-balcony-solar-legal-utah despite having no German
+// content, which is exactly the fallback-content-gets-indexed bug
+// check-locale-coverage.mjs exists to catch elsewhere. Keep in sync with the
+// EN-only article files; do not add languages here without also adding the
+// matching content blocks.
+const EN_ONLY_SLUGS: ReadonlySet<string> = new Set([
+  'is-balcony-solar-legal-utah',
+  'is-balcony-solar-legal-maine',
+  'is-balcony-solar-legal-virginia',
+  'is-balcony-solar-legal-maryland',
+  'is-balcony-solar-legal-colorado',
+  'is-balcony-solar-legal-new-hampshire',
+  'is-balcony-solar-legal-vermont',
+  'is-balcony-solar-legal-connecticut',
+])
+
+export function isPromptBitePublished(slug: string, lang: string): boolean {
+  if (!PROMPT_BITES_PUBLISHED_SLUGS.has(slug)) return false
+  if (EN_ONLY_SLUGS.has(slug) && lang !== 'en') return false
+  return true
 }
 
 export function isPromptBitesHubPublished(_lang: string): boolean {

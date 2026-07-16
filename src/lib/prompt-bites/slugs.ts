@@ -159,4 +159,15 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-local-llm-obsidian-integration':         'bestLocalLlmObsidianIntegration',
   'best-local-llm-reasoning-ui':                 'bestLocalLlmReasoningUi',
   'best-local-llm-customer-support-chatbot':     'bestLocalLlmCustomerSupportChatbot',
+
+  // Balcony Solar State Regulation — Round 1 (EN-only exception, see
+  // is-balcony-solar-legal-utah.ts header). Not yet in PROMPT_BITES_PUBLISHED_SLUGS.
+  'is-balcony-solar-legal-utah':          'isBalconySolarLegalUtah',
+  'is-balcony-solar-legal-maine':         'isBalconySolarLegalMaine',
+  'is-balcony-solar-legal-virginia':      'isBalconySolarLegalVirginia',
+  'is-balcony-solar-legal-maryland':      'isBalconySolarLegalMaryland',
+  'is-balcony-solar-legal-colorado':      'isBalconySolarLegalColorado',
+  'is-balcony-solar-legal-new-hampshire': 'isBalconySolarLegalNewHampshire',
+  'is-balcony-solar-legal-vermont':       'isBalconySolarLegalVermont',
+  'is-balcony-solar-legal-connecticut':   'isBalconySolarLegalConnecticut',
 }

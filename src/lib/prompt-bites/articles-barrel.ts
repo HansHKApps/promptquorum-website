@@ -116,6 +116,16 @@ import { article as bestLocalLlmObsidianIntegration } from './articles/best-loca
 import { article as bestLocalLlmReasoningUi } from './articles/best-local-llm-reasoning-ui'
 import { article as bestLocalLlmCustomerSupportChatbot } from './articles/best-local-llm-customer-support-chatbot'
 
+// Balcony Solar State Regulation — Round 1 (EN-only exception)
+import { article as isBalconySolarLegalUtah } from './articles/is-balcony-solar-legal-utah'
+import { article as isBalconySolarLegalMaine } from './articles/is-balcony-solar-legal-maine'
+import { article as isBalconySolarLegalVirginia } from './articles/is-balcony-solar-legal-virginia'
+import { article as isBalconySolarLegalMaryland } from './articles/is-balcony-solar-legal-maryland'
+import { article as isBalconySolarLegalColorado } from './articles/is-balcony-solar-legal-colorado'
+import { article as isBalconySolarLegalNewHampshire } from './articles/is-balcony-solar-legal-new-hampshire'
+import { article as isBalconySolarLegalVermont } from './articles/is-balcony-solar-legal-vermont'
+import { article as isBalconySolarLegalConnecticut } from './articles/is-balcony-solar-legal-connecticut'
+
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
   whatIsQ4KMQuantization,
@@ -234,4 +244,14 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   bestLocalLlmObsidianIntegration,
   bestLocalLlmReasoningUi,
   bestLocalLlmCustomerSupportChatbot,
+
+  // Balcony Solar State Regulation — Round 1 (EN-only exception)
+  isBalconySolarLegalUtah,
+  isBalconySolarLegalMaine,
+  isBalconySolarLegalVirginia,
+  isBalconySolarLegalMaryland,
+  isBalconySolarLegalColorado,
+  isBalconySolarLegalNewHampshire,
+  isBalconySolarLegalVermont,
+  isBalconySolarLegalConnecticut,
 }
