@@ -9,10 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     affiliateDisclosure: true,
+    // Verified 2026-07-16 against official sources: home-assistant.io/green (Home Assistant Green,
+    // $199 — Nabu Casa raised the price twice from a $99 2023 launch, citing RAM component costs),
+    // hubitat.com (Elevation C-8 Pro, $179.95, Zigbee 3.0/Z-Wave 800 LR/Matter 1.5 controller/BLE),
+    // homey.app (Homey Pro, $449 as of a June 1 2026 price increase from $399, Wi-Fi/BLE/Matter
+    // v1.3/Thread border router/Zigbee 3.0/Z-Wave 700/433MHz/IR — the broadest protocol coverage of
+    // the three).
     title: 'Best Smart Home Hubs for Local Control (2027)',
     seoTitle: 'Best Smart Home Hubs (2027)',
     intro:
-      'This guide compares off-the-shelf hub appliances (Home Assistant Green-class devices, Hubitat, Homey) for buyers who want ready-to-run hardware rather than assembling a mini-PC or Raspberry Pi build themselves. [VERIFY: current specific hub SKUs, their availability, and pricing] before citing a model — hub product lines change, and at least one prior hub in this space (Home Assistant Yellow) has already been discontinued. This is distinct from the ecosystem comparison (Alexa vs Google vs Apple vs Home Assistant) and the broader DIY hardware guide already on this site.',
+      'This guide compares off-the-shelf hub appliances (Home Assistant Green, Hubitat Elevation C-8 Pro, Homey Pro) for buyers who want ready-to-run hardware rather than assembling a mini-PC or Raspberry Pi build themselves. All three are confirmed current products with current prices (checked 2026-07-16) — and two of the three have already had a price increase in 2026, on top of Home Assistant Yellow\'s prior discontinuation, underscoring how fast this category moves. This is distinct from the ecosystem comparison (Alexa vs Google vs Apple vs Home Assistant) and the broader DIY hardware guide already on this site.',
     metaDescription:
       "Best smart home hubs for local control in 2027: off-the-shelf hub appliances compared, for buyers who want ready-to-run hardware over a DIY mini-PC build.",
     twitterDescription:
@@ -29,17 +35,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'smart home hub appliance',
     ],
     leadAnswerBlock:
-      "**This guide compares dedicated hub appliances — Home Assistant Green-class devices, Hubitat, and Homey — for buyers who want ready-to-run hardware, not a DIY mini-PC or Raspberry Pi build.** [VERIFY: current specific SKUs, availability, and prices] before citing a model, since this product category has already seen at least one discontinuation (Home Assistant Yellow) and lineups change. If you want the DIY path instead, see the best hardware for a local smart home guide.",
+      "**This guide compares dedicated hub appliances — Home Assistant Green ($199), Hubitat Elevation C-8 Pro ($179.95), and Homey Pro ($449) — for buyers who want ready-to-run hardware, not a DIY mini-PC or Raspberry Pi build.** All three prices confirmed directly from the manufacturers on 2026-07-16; this category moves fast, with Home Assistant Yellow already discontinued and two of these three hubs raising prices earlier in 2026. If you want the DIY path instead, see the best hardware for a local smart home guide.",
     quickAnswerTop: {
       en: {
         question: 'What is the best off-the-shelf smart home hub?',
         answer:
-          "For a ready-to-run appliance rather than a DIY build, Home Assistant Green-class devices, Hubitat, and Homey are the main dedicated hub options — each with different trade-offs in local-vs-cloud dependency, protocol support, and app ecosystem. [VERIFY: current specific model availability, pricing, and feature sets] before recommending one — this category changes, and Home Assistant Yellow was already discontinued in early 2026 per this cluster's hardware guide.",
+          "For a ready-to-run appliance rather than a DIY build, Home Assistant Green ($199), Hubitat Elevation C-8 Pro ($179.95), and Homey Pro ($449) are the three current dedicated hub options — each with different trade-offs. Home Assistant Green runs the actual Home Assistant software you'd otherwise self-host; Nabu Casa raised its price twice in 2026 (from a $99 2023 launch) citing RAM component costs. Hubitat's C-8 Pro runs its own local-processing-focused platform with Zigbee 3.0, Z-Wave 800 Long Range, and Matter 1.5 controller support. Homey Pro has the broadest built-in radio support of the three (Wi-Fi, Bluetooth, Matter, Thread border router, Zigbee, Z-Wave, 433MHz, infrared) but also runs its own separate platform, and its price rose from $399 to $449 on June 1, 2026.",
         bullets: [
-          'Home Assistant Green-class: plug-and-play access to the full Home Assistant ecosystem',
-          'Hubitat: local-processing focus with its own automation engine, distinct from Home Assistant',
-          'Homey: broader out-of-box protocol support in one device, distinct app ecosystem',
-          '[VERIFY: current SKUs, prices, and confirmed feature sets] — this category has already seen a discontinuation',
+          'Home Assistant Green ($199): plug-and-play access to the full Home Assistant ecosystem',
+          'Hubitat Elevation C-8 Pro ($179.95): local-processing focus, Zigbee 3.0/Z-Wave 800 LR/Matter 1.5, own automation engine',
+          'Homey Pro ($449): broadest out-of-box protocol support (adds Thread border router, 433MHz, IR), own app ecosystem',
+          'All three prices confirmed 2026-07-16 — this category has already seen a discontinuation (HA Yellow) and two 2026 price increases',
         ],
         updatedDate: '2026-07',
       },
@@ -61,8 +67,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         items: [
-          "This guide covers off-the-shelf hub appliances (Home Assistant Green-class, Hubitat, Homey) — for a DIY mini-PC/Pi build instead, see the best hardware for a local smart home guide",
-          '[VERIFY: current specific SKUs, prices, and confirmed feature sets] — this category has already seen a discontinuation (Home Assistant Yellow)',
+          "This guide covers off-the-shelf hub appliances — Home Assistant Green ($199), Hubitat Elevation C-8 Pro ($179.95), Homey Pro ($449) — for a DIY mini-PC/Pi build instead, see the best hardware for a local smart home guide",
+          'All 3 prices confirmed directly from manufacturers 2026-07-16 — this category has already seen a discontinuation (Home Assistant Yellow) and 2 price increases in 2026 alone',
           'Different from the ecosystem comparison guide, which compares software platforms (Alexa, Google, Apple, Home Assistant), not hub hardware',
           'Priorities to compare: local-processing depth, protocol support (Zigbee/Z-Wave/Thread/Matter), and whether the app ecosystem locks you in',
         ],
@@ -84,9 +90,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The main differences between hub appliances are which software platform they run (Home Assistant vs a proprietary platform), built-in protocol radios, and how much local processing versus cloud dependency each requires.**',
         items: [
-          'Home Assistant Green-class devices run the actual Home Assistant software — the same platform covered throughout this cluster — in a plug-and-play appliance form factor.',
-          "Hubitat runs its own separate automation platform with a stated local-processing focus, distinct from Home Assistant's ecosystem and community integrations.",
-          "Homey runs its own platform too, historically differentiated by broad built-in protocol support in one device. [VERIFY: current protocol support and pricing for all three] before comparing specifics.",
+          "Home Assistant Green ($199, confirmed on home-assistant.io) runs the actual Home Assistant software — the same platform covered throughout this cluster — in a plug-and-play appliance form factor. Nabu Casa has raised its price twice in 2026 from an original $99 at 2023 launch, citing rising RAM component costs.",
+          "Hubitat's Elevation C-8 Pro ($179.95, confirmed on hubitat.com) runs its own separate automation platform with a stated local-processing focus, supporting Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 (as a controller), and Bluetooth — distinct from Home Assistant's ecosystem and community integrations.",
+          "Homey Pro ($449, confirmed on homey.app — raised from $399 on June 1, 2026) runs its own platform too, with the broadest built-in protocol support of the three: Wi-Fi, Bluetooth, Matter v1.3, Thread border router, Zigbee 3.0, Z-Wave 700, 433MHz, and infrared, on a 1.5GHz quad-core processor with 4GB RAM.",
+        ],
+        affiliateLinks: [
+          { label: 'Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub' },
+          { label: 'Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub' },
+          { label: 'Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
         ],
       },
       differsFromEcosystem: {
@@ -106,9 +117,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Is a hub appliance better than a DIY mini-PC build?', a: 'Neither is universally better — an appliance is simpler to set up; a DIY build offers more flexibility for additional workloads like a local LLM or Frigate camera detection. Choose based on whether you want simplicity or headroom.' },
           { q: 'Do Hubitat and Homey run Home Assistant software?', a: 'No — they run their own separate automation platforms, distinct from Home Assistant. This is an important distinction from a Home Assistant Green-class device, which runs the actual Home Assistant software.' },
-          { q: 'Is Home Assistant Yellow still available?', a: "No — Home Assistant Yellow was discontinued in early 2026, per this cluster's hardware guide. [VERIFY: current available Home Assistant hardware options] before buying." },
+          { q: 'Is Home Assistant Yellow still available?', a: "No — Home Assistant Yellow was discontinued in early 2026. Home Assistant Green ($199, confirmed on home-assistant.io) is the current official appliance option." },
           { q: 'Can I add local AI or camera detection to a hub appliance?', a: "Generally, dedicated hub appliances are sized for hub duties, not additional heavy workloads — see the best hardware for a local smart home guide if you want a single box that also runs a local LLM or Frigate." },
-          { q: 'Which hub has the best built-in protocol support?', a: '[VERIFY: current specific protocol support for each] — this varies by model and changes with hardware revisions, so check current specifications rather than a fixed comparison.' },
+          { q: 'Which hub has the best built-in protocol support?', a: "Homey Pro ($449) has the broadest confirmed radio support of the three — Wi-Fi, Bluetooth, Matter v1.3, Thread border router, Zigbee 3.0, Z-Wave 700, 433MHz, and infrared. Hubitat's C-8 Pro ($179.95) covers Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 (controller), and Bluetooth. Home Assistant Green ($199) relies on USB dongles (see the Zigbee/Thread dongles guide) for radio support rather than building it all in." },
+          { q: 'Have these hub prices changed recently?', a: 'Yes — both Home Assistant Green (twice in 2026, from an original $99 at 2023 launch) and Homey Pro (from $399 to $449 on June 1, 2026) have raised prices this year, both manufacturers citing rising component costs.' },
         ],
       },
       relatedReading: {
