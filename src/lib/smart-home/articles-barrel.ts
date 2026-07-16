@@ -63,6 +63,14 @@ import { article as a_radar_presence_sensing_no_camera } from './articles/radar-
 import { article as a_reducing_llm_hallucinations_home_automation } from './articles/reducing-llm-hallucinations-home-automation'
 import { article as a_sensor_fusion_smart_home_2027 } from './articles/sensor-fusion-smart-home-2027'
 import { article as a_home_digital_twin_explained } from './articles/home-digital-twin-explained'
+// Category 8 — Buyer's Guides (SH-39–45)
+import { article as a_best_local_security_cameras_2027 } from './articles/best-local-security-cameras-2027'
+import { article as a_best_smart_locks_local_control_2027 } from './articles/best-smart-locks-local-control-2027'
+import { article as a_best_smart_thermostats_local_ai_2027 } from './articles/best-smart-thermostats-local-ai-2027'
+import { article as a_best_zigbee_thread_dongles_2027 } from './articles/best-zigbee-thread-dongles-2027'
+import { article as a_best_smart_home_hubs_2027 } from './articles/best-smart-home-hubs-2027'
+import { article as a_nvidia_jetson_orin_nano_smart_home_review } from './articles/nvidia-jetson-orin-nano-smart-home-review'
+import { article as a_best_energy_monitoring_smart_plugs_2027 } from './articles/best-energy-monitoring-smart-plugs-2027'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // Category 1 — Smart Home Foundations
@@ -115,4 +123,12 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'reducing-llm-hallucinations-home-automation':  a_reducing_llm_hallucinations_home_automation,
   'sensor-fusion-smart-home-2027':                a_sensor_fusion_smart_home_2027,
   'home-digital-twin-explained':                  a_home_digital_twin_explained,
+  // Category 8 — Buyer's Guides
+  'best-local-security-cameras-2027':             a_best_local_security_cameras_2027,
+  'best-smart-locks-local-control-2027':          a_best_smart_locks_local_control_2027,
+  'best-smart-thermostats-local-ai-2027':         a_best_smart_thermostats_local_ai_2027,
+  'best-zigbee-thread-dongles-2027':              a_best_zigbee_thread_dongles_2027,
+  'best-smart-home-hubs-2027':                    a_best_smart_home_hubs_2027,
+  'nvidia-jetson-orin-nano-smart-home-review':    a_nvidia_jetson_orin_nano_smart_home_review,
+  'best-energy-monitoring-smart-plugs-2027':      a_best_energy_monitoring_smart_plugs_2027,
 }
