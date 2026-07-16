@@ -24,3 +24,14 @@ export function formatDisplayDate(isoDate: string | undefined, lang: Language): 
   if (isNaN(dateObj.getTime())) return ''
   return dateObj.toLocaleDateString(LOCALE_MAP[lang] ?? LOCALE_MAP.en, { month: 'long', day: 'numeric', year: 'numeric' })
 }
+
+/**
+ * Same locale handling as formatDisplayDate, but month/year only —
+ * for surfaces (like cluster hubs) that show a coarser "last updated" granularity.
+ */
+export function formatDisplayMonthYear(isoDate: string | undefined, lang: Language): string {
+  if (!isoDate) return ''
+  const dateObj = new Date(isoDate)
+  if (isNaN(dateObj.getTime())) return ''
+  return dateObj.toLocaleDateString(LOCALE_MAP[lang] ?? LOCALE_MAP.en, { month: 'long', year: 'numeric' })
+}

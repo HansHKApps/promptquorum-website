@@ -92,14 +92,12 @@ docs/
 
 ## Language / i18n
 
-The site supports 9 languages:
-- **Active:** `en`, `de`, `fr`, `ja`, `zh`, `es` (Spanish — full /es/ routing live)
-- **Path-prefix routing live, content rolling out:** `pt` (Brazilian Portuguese — hreflang `pt-BR`), `ar` (Arabic — RTL), `ko` (Korean — LTR)
+The site supports 9 languages, all on **path-prefix URL routing** (`/de/...`, `/fr/...`, `/ja/...`, `/zh/...`, `/es/...`, `/pt/...`, `/ar/...`, `/ko/...`) per `PATH_PREFIX_LANGS` in `src/lib/i18n/constants.ts`. English stays unprefixed at the site root (`/blog` not `/en/blog`). The legacy `?lang=XX` query-param scheme has been fully migrated away from (commits `d29c661b5`, `248c877f8`) — do not reintroduce query-param-only language handling in new code.
 
-- Language is set via `?lang=XX` query param (e.g., `/?lang=fr`)
-- `useLang()` hook reads `window.location.search`
-- All nav links must include `?lang=XX` via the `navHref(path, lang)` helper in `HeaderClient.tsx`
+- `pt` emits hreflang/schema `inLanguage` as `pt-BR` (Brazilian Portuguese) via `toOutputLocale()`; `ar` is RTL (`getLangDir()` in `src/lib/i18n/constants.ts`)
+- All nav links must resolve to the correct path-prefixed href via the shared nav helper in `HeaderClient.tsx`
 - Translations live in `src/locales/[lang].ts`
+- **Known gap (tracked, not yet fixed):** `src/app/layout.tsx` still hardcodes `<html lang="en" dir="ltr">` server-side for every locale; a client-side `HtmlLangUpdater.tsx` patches it post-hydration only. Raw HTML served to crawlers is wrong for all 8 non-EN locales until the `[locale]` segment refactor lands.
 
 ### Critical: Server-to-Client Language Handoff
 
