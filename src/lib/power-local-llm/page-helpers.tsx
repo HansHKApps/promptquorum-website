@@ -13,6 +13,7 @@ import { powerLLMAlternates, powerLLMHubPath, powerLLMArticlePath } from './meta
 import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
+import { formatDisplayMonthYear } from '@/lib/formatDisplayDate'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
@@ -1654,7 +1655,6 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
   const hero = HUB_HERO_L10N[lang]
   const faqs = HUB_FAQS_L10N[lang]
   const labels = HUB_LABELS_L10N[lang]
-  const dateLocale = lang === 'de' ? 'de-DE' : lang === 'fr' ? 'fr-FR' : lang === 'ja' ? 'ja-JP' : lang === 'zh' ? 'zh-CN' : lang === 'es' ? 'es-ES' : lang === 'pt' ? 'pt-BR' : lang === 'ar' ? 'ar-SA' : lang === 'ko' ? 'ko-KR' : 'en-US'
 
   const hubFaqSchema = {
     '@context': 'https://schema.org',
@@ -1715,7 +1715,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
           {/* Hero */}
           <div className="py-16 border-b border-primary/20 mb-16">
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Power Local LLM</p>
-            <p className="text-xs text-text-secondary mb-4">{labels.lastUpdatedLabel} <time dateTime={lastUpdated}>{new Date(lastUpdated).toLocaleDateString(dateLocale, { month: 'long', year: 'numeric' })}</time></p>
+            <p className="text-xs text-text-secondary mb-4">{labels.lastUpdatedLabel} <time dateTime={lastUpdated}>{formatDisplayMonthYear(lastUpdated, lang)}</time></p>
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
               {hero.h1}
             </h1>
