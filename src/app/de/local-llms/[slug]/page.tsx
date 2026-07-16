@@ -132,9 +132,10 @@ export default async function DeLocalLLMsArticlePage({ params }: PageProps) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: 'de',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'Lokale LLMs', item: 'https://www.promptquorum.com/local-llms' },
+      { '@type': 'ListItem', position: 2, name: 'Lokale LLMs', item: 'https://www.promptquorum.com/de/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }

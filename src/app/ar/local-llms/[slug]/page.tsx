@@ -108,7 +108,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
+export default async function ArLocalLLMsArticlePage({ params }: PageProps) {
   const { slug } = await params
   const key = LLM_SLUG_TO_KEY[slug]
 
@@ -132,9 +132,10 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: 'ar',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'LLMs Locales', item: 'https://www.promptquorum.com/pt/local-llms' },
+      { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://www.promptquorum.com' },
+      { '@type': 'ListItem', position: 2, name: 'LLMs المحلية', item: 'https://www.promptquorum.com/ar/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }

@@ -134,9 +134,10 @@ export default async function ZhLocalLLMsArticlePage({ params }: PageProps) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: 'zh',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: '首页', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: '本地LLM', item: 'https://www.promptquorum.com/local-llms' },
+      { '@type': 'ListItem', position: 2, name: '本地LLM', item: 'https://www.promptquorum.com/zh/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrlCN },
     ],
   }

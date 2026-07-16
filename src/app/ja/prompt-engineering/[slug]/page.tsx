@@ -5,6 +5,7 @@ import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -71,6 +72,7 @@ export default async function JaPromptEngineeringArticlePage({ params }: PagePro
 
   return (
     <>
+      <PEArticleJsonLd slug={slug} articleKey={key} lang="ja" />
       <PromptEngineeringPostClient
         slug={slug}
         initialLang="ja"
