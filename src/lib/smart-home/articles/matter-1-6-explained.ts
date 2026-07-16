@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Do I need to update my existing Matter devices?', a: 'No — existing 1.x-certified devices continue working without any update. New capabilities like NFC setup or Joint Fabric only matter if you\'re buying new hardware or a new controller that implements them.' },
           { q: 'What is the biggest practical change in Matter 1.6?', a: 'Joint Fabric — it lets multiple user-authorized controllers co-administer a single shared Matter network, so a device can be genuinely shared across ecosystems instead of belonging to whichever hub commissioned it first. NFC setup and Thermostat Suggestions are the other two headline additions. Energy-management device types (inverters, batteries, heat pumps) are not new in this release — see the Matter inverter/heat-pump integration guide for that earlier work.' },
-          { q: 'Does this affect Thread?', a: 'Thread is the networking layer Matter often runs over; Matter 1.6 is a change to the Matter application layer, not to Thread itself. See the Thread 1.4 and Wi-Fi 7 routers guide for networking-layer changes.' },
+          { q: 'Does this affect Thread?', a: 'Thread is the networking layer Matter often runs over; Matter 1.6 is a change to the Matter application layer, not to Thread itself. See the Thread and Wi-Fi 7 routers guide for networking-layer changes.' },
           { q: 'Is my hub software compatible with Matter 1.6?', a: 'Hub software needs its own update to support a new spec release — it isn\'t automatic. Home Assistant (verified 2026-07-16 against home-assistant.io\'s own blog) fully supports Matter 1.5.1 as of write-time, with Matter 1.6 support in active beta rather than fully released — check your specific hub\'s current release notes rather than assuming day-one support for the newest spec release.' },
           { q: 'How is this different from the general Matter/Thread/Zigbee explainer on this site?', a: 'That article explains the protocols conceptually and compares them. This article covers what specifically changed in Matter 1.6 — a narrower, update-focused scope.' },
           { q: 'Where can I check the current official spec version?', a: 'The Connectivity Standards Alliance (csa-iot.org) publishes and announces the current Matter specification directly — check there rather than relying on secondary sources or marketing materials for the exact version number.' },
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Matter, Thread, Zigbee, Z-Wave: Protocols Explained](/smart-home/smart-home-protocols-explained) — the general primer',
           '[Matter & Local Control: An Internet-Independent Smart Home](/smart-home/matter-local-control-guide) — commissioning and avoiding cloud bridges',
           '[Matter Integration for Solar Inverters and Heat Pumps](/smart-home/matter-solar-inverter-heat-pump-integration) — the energy-management device types, added earlier in Matter 1.3-1.5, not in 1.6',
-          '[Thread 1.4 and Wi-Fi 7 Routers for Smart Homes](/smart-home/thread-14-wifi-7-routers-guide) — the networking layer',
+          '[Thread and Wi-Fi 7 Routers for Smart Homes](/smart-home/thread-14-wifi-7-routers-guide) — the networking layer',
         ],
       },
     },
