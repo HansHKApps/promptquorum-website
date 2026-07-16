@@ -14,6 +14,7 @@ export const SLUG_TO_POST_ID = {
   'geopolitics-and-ai': 'geopolitics-and-ai',
   'eu-companies-local-qwen-gdpr-shift': 'euCompaniesLocalQwenGdpr',
   'promptquorum-desktop-app-beta': 'desktopAppBeta',
+  'balcony-solar-us-legalization-race-2026': 'balconySolarLegalizationRace',
 } as const
 
 export type BlogSlug = keyof typeof SLUG_TO_POST_ID

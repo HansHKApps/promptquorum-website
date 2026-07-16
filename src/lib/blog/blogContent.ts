@@ -25174,5 +25174,2148 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       },
     },
   },
+  balconySolarLegalizationRace: {
+    en: {
+      category: 'Energy Policy',
+      title: 'Inside America’s Balcony Solar Legalization Race: Utah, California, Florida, Texas, and New York Compared (2026)',
+      seoTitle: 'US Balcony Solar Laws 2026: 5 States Compared',
+      intro: 'Eight US states have signed balcony solar legislation into law and a ninth is one signature away, but Florida and Texas have no plug-in solar bill at all. Here is how five states — Utah, California, Florida, Texas, and New York — got to five completely different legal outcomes on the same technology.',
+      publishDate: 'Published July 16, 2026',
+      readTime: '13 min read',
+      metaDescription: 'Balcony solar is legal in 8 US states and pending in a 9th, but not in Florida or Texas. Compare Utah, California, Florida, Texas, and New York’s 2026 laws.',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Quick Answer',
+          items: [
+            'Eight US states have signed balcony solar legislation as of July 2026: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, and Connecticut. New York passed both legislative chambers 59-1 in May 2026 and is awaiting the governor’s signature, which would make it the 9th.',
+            'Utah’s HB 340 (signed March 2025) was first, exempting devices up to 1,200W from utility interconnection rules — but the safety standard the law depends on, UL 3700, was not published until December 2025.',
+            'California’s SB 868 passed the full Senate 35-1 and an Assembly committee 18-0, but must clear Assembly Appropriations by August 31, 2026 or it dies for the session.',
+            'Florida and Texas have no plug-in solar bill at all. Florida’s own solar-rights statute explicitly excludes patio railings in condos and apartments; Texas has no state framework, so legality depends on which utility and retail electric provider a resident has.',
+            'No plug-in solar system had received full UL 3700 certification as of mid-2026, even though Utah’s law has been in effect since May 2025 — the legal framework is currently ahead of the certified hardware.',
+            'Every enacted state law excludes balcony solar from net metering by design — a deliberate tradeoff that removes the main reason utilities might otherwise object.',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: 'What Balcony Solar Actually Is',
+          content: [
+            '**Balcony solar (also called plug-in solar, or "Balkonkraftwerk" in its German origin market) is a small photovoltaic system, typically 400–1,920 watts, that connects directly to a standard household outlet.** It lets renters and apartment dwellers generate electricity without rooftop access, utility interconnection paperwork, or a five-figure installation.',
+            'The category is already proven at scale: Germany has roughly 1.3 million registered systems (plus an estimated 3 million unregistered) and about 2.5 GW of installed capacity as of mid-2026. The US is following the same pattern Germany did — just a decade later, and state by state rather than nationally. For a full walkthrough of how the hardware works, see [What Is Balcony Solar?](/balcony-solar/what-is-balcony-solar)',
+          ],
+        },
+        whyItWasIllegal: {
+          title: 'Why US Balcony Solar Was Effectively Illegal Through 2024',
+          content: [
+            '**A plug-in solar device pushes power upstream through a standard outlet, into a home’s wiring — the opposite of what that outlet was built for.** US utility interconnection rules were written for 5–25 kW rooftop systems, requiring agreements, fees, and inspections that could double the cost of a $500 balcony kit. Through 2024, no state distinguished a 400W balcony panel from a full rooftop installation, which made the category impractical everywhere.',
+            'Germany’s track record directly catalyzed the US legislative wave. Utah Representative Raymond Ward read a New York Times article about German Balkonkraftwerk systems and introduced the bill that became HB 340, citing Germany’s safety record explicitly: "The electricity is the same over there as it is here. All the same rules of physics work and have proved to be safe."',
+          ],
+        },
+        theTemplate: {
+          title: 'Every State Bill Follows the Same Template',
+          content: [
+            '**Every enacted and pending state bill is modeled on Utah’s HB 340 and follows a near-identical structure:** define the device as an appliance rather than a power plant, exempt it from utility interconnection below a wattage cap, require UL 3700 (or equivalent) safety certification, mandate anti-islanding shutdown during grid outages, and explicitly exclude the device from net metering.',
+            'That last point is a deliberate political tradeoff. By giving up compensation for excess power exported to the grid, bill sponsors remove the one thing utilities could otherwise object to — being forced to pay for microgeneration or redesign tariffs. It is the single biggest reason these bills have passed with near-unanimous, cross-party votes in states as different as Utah and New York.',
+          ],
+        },
+        stateComparison: {
+          title: 'Five States, Five Outcomes',
+          content: 'The same technology has produced enacted law, a bill on the governor’s desk, a bill stuck in committee, and two states with no bill at all.',
+          rows: [
+            { State: 'Utah', Status: 'Enacted (May 2025)', 'Wattage Cap': '1,200W', 'Key Barrier': 'UL 3700 certified products not yet available' },
+            { State: 'California', Status: 'Bill pending (SB 868)', 'Wattage Cap': '1,200W if passed', 'Key Barrier': 'Assembly vote needed by Aug 31, 2026' },
+            { State: 'Florida', Status: 'No bill', 'Wattage Cap': 'N/A', 'Key Barrier': 'Statute excludes condo/apartment patio railings' },
+            { State: 'Texas', Status: 'No bill', 'Wattage Cap': 'N/A', 'Key Barrier': 'Legality varies by utility and retail electric provider' },
+            { State: 'New York', Status: 'Passed Legislature 59-1; awaiting signature', 'Wattage Cap': '1,200W if signed', 'Key Barrier': 'Governor Hochul’s signature' },
+          ],
+          columns: ['State', 'Status', 'Wattage Cap', 'Key Barrier'],
+        },
+        utah: {
+          title: 'Utah: The Pioneer That Passed a Law Before the Safety Standard Existed',
+          content: [
+            '**Utah HB 340, the Solar Power Amendments, passed both chambers of the legislature unanimously and was signed by Governor Spencer Cox in March 2025, taking effect May 7, 2025.** It creates a category of "small portable solar generation devices" capped at 1,200W, exempts them from utility interconnection agreements, fees, and approval requirements, and requires no notification to the utility at all.',
+            'Sponsor Representative Raymond Ward framed the bill entirely around consumer choice and cost savings rather than climate policy — "It’s great for anyone who wants a little solar power but does not want to pay $30,000 for a roof install" — a framing that proved replicable in ideologically different states.',
+            '**The catch: HB 340 named UL Solutions in the legislation and required a safety standard that did not yet exist.** UL published UL 3700, the certification the law depends on, in December 2025 — eight months after the law took effect. As of mid-2026, no complete plug-in solar system has earned full UL 3700 certification, so products marketed for Utah’s market still cannot be legally plugged in under the letter of the law.',
+          ],
+        },
+        california: {
+          title: 'California: 44% Renters, 31¢/kWh Rates, and a Bill Racing a Deadline',
+          content: [
+            '**Balcony solar remains illegal to connect in California as of July 2026** — the state’s interconnection rules make no distinction between a 300W balcony panel and a 25kW rooftop system, so connecting one without a utility agreement violates CPUC rules today.',
+            'State Senator Scott Wiener’s SB 868, the Plug Into the Sun Act, would fix this by defining portable solar devices (400–1,200W) as appliances, not power plants. Its trajectory so far: unanimous advance through Senate Energy, Utilities and Communications; passed Senate Appropriations 7-0; passed the full Senate 35-1; passed Assembly Utilities and Energy 18-0. **The bill now sits in Assembly Appropriations, where a CPUC cost estimate of $200,000–$500,000 in annual administrative costs triggered the suspense file and pushed the hearing to August.** The Assembly must pass it before the end of August 2026 for it to advance this session; if signed, it takes effect January 1, 2027.',
+            'The stakes are the highest of any state: roughly 44% of California households rent, statewide average electricity rates are around 31.4¢/kWh, and NEM 3.0 cut rooftop solar export compensation by roughly 75% — which paradoxically strengthens the case for balcony solar’s self-consumption model, since it never relied on export credits in the first place.',
+          ],
+        },
+        florida: {
+          title: 'Florida: A Strong Solar-Rights Law With a Carve-Out That Blocks the Exact Use Case',
+          content: [
+            '**Florida has no balcony solar bill, enacted or introduced, as of July 2026** — despite having one of the country’s strongest solar-access statutes on the books.',
+            'Florida Statute 163.04 bars HOAs and deed restrictions from blocking solar installations on homes. But 163.04(4) contains an explicit exception: **"This section shall not apply to patio railings in condominiums, cooperatives, or apartments."** That clause — inserted as a late concession to utility and multifamily-building lobbying — blocks the precise use case balcony solar is built for. A detached homeowner has strong solar rights; a condo or apartment resident mounting a panel on a railing has none under this statute.',
+            'The market case is otherwise strong — a dense renter/condo population in South Florida, climate-driven AC loads that align with solar generation timing, and Governor DeSantis’s June 2025 signature on HB 683 streamlining rooftop solar permitting — which shows the legislature is willing to cut solar red tape when it wants to. Eliminating the patio-railing exception in §163.04 is the single most actionable legislative target for Florida advocates.',
+          ],
+        },
+        texas: {
+          title: 'Texas: No Ban, No Exemption — Just "It Depends on Your Utility"',
+          content: [
+            '**Texas has no plug-in solar bill, enacted or pending, as of mid-2026.** Unlike Florida’s explicit statutory carve-out, Texas’s situation is regulatory ambiguity: standard interconnection rules written for 5kW+ rooftop systems technically apply to any grid-tied device, but whether a given utility enforces that against a 1,200W plug-in panel varies case by case.',
+            'ERCOT’s deregulated grid — covering about 90% of the state — means residential customers choose a retail electric provider (REP) from a competitive market, and that REP’s tariff governs what can be plugged in. Layer on municipal utilities outside ERCOT retail competition (Austin Energy, CPS Energy) and roughly 70 independent rural electric cooperatives, and a blanket answer to "is balcony solar legal in Texas?" does not exist — it depends on the specific utility and REP.',
+            'The state’s 2025 legislative session passed three solar-related laws (SB 1202 permitting streamlining, SB 1697 consumer guides, SB 1036 residential solar retailer rules), plus HB 431 extending HOA solar protections to solar roof tiles — but none address plug-in devices specifically. SB 1036’s requirement that sales agreements include utility interconnection approval language could, if anything, complicate the picture for commercially sold plug-in systems.',
+          ],
+        },
+        newYork: {
+          title: 'New York: The Highest-Stakes Market, One Signature Away',
+          content: [
+            '**New York’s SUNNY Act (A.9111C/S.8512C) passed the full legislature on May 28–29, 2026, with the Senate voting 59-1 to concur with Assembly amendments — and now awaits Governor Kathy Hochul’s signature.** If signed, it takes effect 90 days later and New York becomes the 9th enacted state.',
+            'The bill creates a "portable solar generation device" category under the Public Service Law, requiring nationally-recognized-lab certification and anti-islanding protection, and exempting devices from NYSERDA interconnection and net metering rules — modeled explicitly on Utah’s HB 340.',
+            'The market case here is the strongest of any tracked state: New York’s statewide average residential rate is roughly 27–30¢/kWh (Con Edison customers in New York City frequently exceed 30¢/kWh), and New York City has one of the lowest homeownership rates in the country at roughly 32% — meaning most residents rent apartments with no path to rooftop solar at all. An 800W balcony system at New York rates is estimated to save roughly $203–$236 a year, among the highest figures of any tracked state.',
+          ],
+        },
+        ulCertification: {
+          title: 'The UL 3700 Bottleneck: Laws Exist, Certified Products Don’t Yet',
+          content: [
+            '**Every enacted state law conditions legal use on UL 3700 or equivalent certification — and as of mid-2026, no complete plug-in solar system has earned it.** UL Solutions published the UL 3700 Outline of Investigation in December 2025; certification testing opened in January 2026. UL’s VP of Engineering, Kenneth Boyce, said in April 2026 that certified products were expected "in months, maybe even weeks," but as of write-time none had completed the process.',
+            'UL 3700 tests for three hazards: overcurrent conditions that could overwhelm a circuit breaker, GFCI incompatibility that could silently defeat ground-fault protection, and touch safety on the plug’s exposed prongs when disconnected. It also requires anti-islanding — automatic shutdown within milliseconds of a grid outage, to protect utility line workers.',
+            'Manufacturers including EcoFlow are in active certification conversations; EcoFlow’s STREAM Ultra was listed for sale in Utah by mid-2026 pending full certification. Some technically sophisticated buyers have assembled systems from individually UL-listed components, but an assembled-from-parts system is not the same as an integrated, certified system — its legal status under laws like HB 340 is uncertain. See the current picks in [Best Balcony Solar Home Batteries for the US](/balcony-solar/best-balcony-solar-home-battery-us-2026) and [EcoFlow vs. Anker vs. Zendure](/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar).',
+          ],
+        },
+        advocacy: {
+          title: 'Who Is Driving This: Bright Saver and Representative Ward',
+          content: [
+            'Nonprofit Bright Saver, founded January 2025 with $500,000 in initial grants, has become the primary US lobbying and education force for the category, providing model legislation and organizing resources to lawmakers state by state — explicitly modeled on the EU’s adoption playbook.',
+            'Utah’s Representative Ward has personally consulted with lawmakers in Hawaii, Washington, Minnesota, Colorado, and other states since his bill passed — which is the direct mechanism behind the near-identical bill language showing up across ideologically diverse legislatures.',
+          ],
+        },
+        whatsNext: {
+          title: 'What to Watch Through Early 2027',
+          content: 'The pace of this category is unusually fast for state energy legislation — track these dates if you are deciding whether to buy now or wait.',
+          items: [
+            'August 31, 2026 — California’s SB 868 must pass the Assembly before session end or it stalls until 2027.',
+            '~September 2026 — New York’s SUNNY Act takes effect 90 days after signing, if Governor Hochul signs it.',
+            'October 1, 2026 — Connecticut’s HB 5340 provisions take effect.',
+            'January 1, 2027 — Colorado’s HB26-1007 takes effect with the highest confirmed US wattage cap (1,920W) and an explicit ban on HOA/landlord restrictions.',
+            'Q3–Q4 2026 — UL’s own VP of Engineering has forecast the first UL 3700-certified products reaching retail in this window, though no firm date is confirmed.',
+            '2027 sessions — New Jersey, Pennsylvania, Oregon, Washington, and roughly a dozen other stalled states are expected to refile.',
+          ],
+        },
+        checkYourState: {
+          title: 'Check Your Own State’s Status Before Buying',
+          content: 'This article covers the five states with the most distinct legal outcomes. For the full 50-state status, current wattage caps, and confirmed signing/effective dates, see the [state-by-state legal tracker](/balcony-solar/balcony-solar-legal-us-states), which refreshes every 60 days given how fast this list moves, and the [global country-by-country guide](/balcony-solar/is-balcony-solar-legal-country-guide) if you are outside the US.',
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Is balcony solar legal in the United States?',
+              a: 'It depends entirely on the state — there is no federal balcony solar law. Eight states have signed legislation as of July 2026 (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), one more (New York) has passed its legislature and awaits a governor’s signature, and most other states have not addressed it specifically at all.',
+            },
+            {
+              q: 'Is balcony solar legal in California?',
+              a: 'Not yet as of July 2026. Current CPUC interconnection rules treat any grid-tied device the same regardless of size, so connecting one without a utility agreement is not legal today. SB 868 would fix this but must pass the Assembly by August 31, 2026.',
+            },
+            {
+              q: 'Is balcony solar legal in Florida?',
+              a: 'Florida has no plug-in solar bill. Its otherwise strong solar-rights statute (F.S. 163.04) explicitly excludes patio railings in condominiums and apartments, which blocks the primary use case for balcony solar in multifamily housing.',
+            },
+            {
+              q: 'Is balcony solar legal in Texas?',
+              a: 'There is no state law either permitting or banning it. Legality in practice depends on the specific utility and retail electric provider (REP) a resident has, since standard interconnection rules written for large rooftop systems technically apply to any grid-tied device.',
+            },
+            {
+              q: 'What is UL 3700 and why does it matter for legality?',
+              a: 'UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Every enacted state law requires it (or an equivalent), but as of mid-2026 no complete balcony solar system has completed certification — so legally compliant hardware is not yet fully available even in states where the law is in effect.',
+            },
+            {
+              q: 'Why don’t these laws let me sell excess power back to the grid?',
+              a: 'Every enacted and pending bill deliberately excludes balcony solar from net metering. Giving up export compensation removes the main reason a utility might object to the law, which is why these bills have passed with near-unanimous votes across very different state legislatures.',
+            },
+            {
+              q: 'Can my landlord or HOA ban a balcony solar panel?',
+              a: 'It depends on the state. Colorado’s law explicitly bars landlords and HOAs from banning compliant devices. Most other enacted states rely on general solar-access rights that were not written with balcony panels in mind, so HOA restrictions may still apply — check your specific state’s law before assuming protection.',
+            },
+            {
+              q: 'When will more states pass balcony solar laws?',
+              a: 'Thirty or more states and Washington, D.C. have introduced or are advancing bills. California’s deadline is August 2026; several other states (New Jersey, Massachusetts, Pennsylvania, Ohio, Michigan) are active but not yet scheduled. States where bills stalled or failed in 2025–2026 are expected to refile in 2027 sessions.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Is balcony solar legal in the United States?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'It depends entirely on the state — there is no federal balcony solar law. Eight states have signed legislation as of July 2026 (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), one more (New York) has passed its legislature and awaits a governor’s signature, and most other states have not addressed it specifically at all.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is balcony solar legal in California?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Not yet as of July 2026. Current CPUC interconnection rules treat any grid-tied device the same regardless of size, so connecting one without a utility agreement is not legal today. SB 868 would fix this but must pass the Assembly by August 31, 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is balcony solar legal in Florida?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Florida has no plug-in solar bill. Its otherwise strong solar-rights statute (F.S. 163.04) explicitly excludes patio railings in condominiums and apartments, which blocks the primary use case for balcony solar in multifamily housing.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is balcony solar legal in Texas?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'There is no state law either permitting or banning it. Legality in practice depends on the specific utility and retail electric provider (REP) a resident has, since standard interconnection rules written for large rooftop systems technically apply to any grid-tied device.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is UL 3700 and why does it matter for legality?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'UL 3700 is the US safety certification standard for plug-in solar systems, published by UL Solutions in December 2025. Every enacted state law requires it (or an equivalent), but as of mid-2026 no complete balcony solar system has completed certification — so legally compliant hardware is not yet fully available even in states where the law is in effect.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why don’t these laws let me sell excess power back to the grid?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Every enacted and pending bill deliberately excludes balcony solar from net metering. Giving up export compensation removes the main reason a utility might object to the law, which is why these bills have passed with near-unanimous votes across very different state legislatures.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can my landlord or HOA ban a balcony solar panel?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'It depends on the state. Colorado’s law explicitly bars landlords and HOAs from banning compliant devices. Most other enacted states rely on general solar-access rights that were not written with balcony panels in mind, so HOA restrictions may still apply — check your specific state’s law before assuming protection.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When will more states pass balcony solar laws?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Thirty or more states and Washington, D.C. have introduced or are advancing bills. California’s deadline is August 2026; several other states (New Jersey, Massachusetts, Pennsylvania, Ohio, Michigan) are active but not yet scheduled. States where bills stalled or failed in 2025–2026 are expected to refile in 2027 sessions.',
+            },
+          },
+        ],
+      },
+    },
+    ar: {
+      category: 'سياسة الطاقة',
+      title: 'داخل سباق تقنين الطاقة الشمسية للشرفات في أمريكا: مقارنة بين Utah وCalifornia وFlorida وTexas وNew York (2026)',
+      seoTitle: 'قوانين الطاقة الشمسية للشرفات في أمريكا 2026: مقارنة 5 ولايات',
+      intro: 'وقّعت ثماني ولايات أمريكية على تشريعات تُقنّن الطاقة الشمسية للشرفات، وولاية تاسعة على بُعد توقيع واحد فقط، في حين لا يوجد لدى Florida وTexas أي مشروع قانون للطاقة الشمسية القابلة للتوصيل بالمقبس على الإطلاق. إليك كيف وصلت خمس ولايات — Utah وCalifornia وFlorida وTexas وNew York — إلى خمس نتائج قانونية مختلفة تمامًا بشأن التقنية ذاتها.',
+      publishDate: 'نُشر في 16 يوليو 2026',
+      readTime: '13 دقيقة للقراءة',
+      metaDescription: 'الطاقة الشمسية للشرفات قانونية في 8 ولايات أمريكية وقيد الإقرار في ولاية تاسعة، لكنها ليست كذلك في Florida أو Texas. قارن بين قوانين Utah وCalifornia وFlorida وTexas وNew York لعام 2026.',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'النقاط الرئيسية',
+          items: [
+            'وقّعت ثماني ولايات أمريكية على تشريعات الطاقة الشمسية للشرفات حتى يوليو 2026: Utah وMaine وVirginia وMaryland وColorado وNew Hampshire وVermont وConnecticut. وأقرّت New York مشروع القانون في كلا المجلسين التشريعيين بنتيجة 59-1 في مايو 2026، وهو الآن بانتظار توقيع الحاكمة، ما قد يجعلها الولاية التاسعة.',
+            'كان قانون HB 340 في Utah (وُقّع في مارس 2025) هو الأول، إذ يُعفي الأجهزة التي لا تتجاوز 1,200 واط من قواعد الربط مع شركة الكهرباء — لكن معيار السلامة الذي يعتمد عليه القانون، وهو UL 3700، لم يُنشر إلا في ديسمبر 2025.',
+            'أقرّ مجلس الشيوخ الكامل في California مشروع القانون SB 868 بنتيجة 35-1، وأقرّته لجنة في مجلس النواب بنتيجة 18-0، لكن يجب أن يمرّ عبر لجنة الاعتمادات في مجلس النواب بحلول 31 أغسطس 2026 وإلا يسقط لهذه الدورة التشريعية.',
+            'لا يوجد لدى Florida وTexas أي مشروع قانون للطاقة الشمسية القابلة للتوصيل بالمقبس على الإطلاق. فقانون الحق في الطاقة الشمسية الخاص بولاية Florida يستثني صراحةً درابزين الشرفات في الشقق التعاونية والعمارات السكنية؛ أما Texas فلا يوجد لديها إطار قانوني على مستوى الولاية، لذا تعتمد الشرعية على شركة الكهرباء ومزوّد التجزئة الذي يتعامل معه المقيم.',
+            'لم يحصل أي نظام طاقة شمسية قابل للتوصيل بالمقبس على شهادة UL 3700 الكاملة حتى منتصف 2026، رغم أن قانون Utah ساري المفعول منذ مايو 2025 — أي أن الإطار القانوني حاليًا يسبق الأجهزة المعتمدة.',
+            'يستثني كل قانون ولاية سارٍ الطاقة الشمسية للشرفات من نظام قياس الصافي (net metering) بشكل متعمّد — وهي مقايضة مقصودة تُزيل السبب الرئيسي الذي قد تعترض به شركات الكهرباء.',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: 'ما هي الطاقة الشمسية للشرفات فعليًا',
+          content: [
+            '**الطاقة الشمسية للشرفات (تُعرف أيضًا بالطاقة الشمسية القابلة للتوصيل بالمقبس، أو "Balkonkraftwerk" في سوقها الألماني الأصلي) هي نظام كهروضوئي صغير، عادةً ما بين 400 و1,920 واط، يتصل مباشرةً بمقبس كهربائي منزلي عادي.** وهو يتيح للمستأجرين وسكان الشقق توليد الكهرباء دون الحاجة إلى الوصول إلى السطح، أو أوراق الربط مع شركة الكهرباء، أو تكلفة تركيب بخمسة أرقام.',
+            'هذه الفئة مُثبتة بالفعل على نطاق واسع: تمتلك ألمانيا نحو 1.3 مليون نظام مسجّل (بالإضافة إلى ما يُقدَّر بـ3 ملايين نظام غير مسجّل) وحوالي 2.5 غيغاواط من السعة المُركَّبة حتى منتصف 2026. تسير الولايات المتحدة على النمط ذاته الذي سلكته ألمانيا — لكن بعد عقد من الزمن، وولاية تلو الأخرى بدلًا من على المستوى الوطني. للاطلاع على شرح كامل لآلية عمل الأجهزة، راجع [ما هي الطاقة الشمسية للشرفات؟](/ar/balcony-solar/what-is-balcony-solar)',
+          ],
+        },
+        whyItWasIllegal: {
+          title: 'لماذا كانت الطاقة الشمسية للشرفات في أمريكا غير قانونية فعليًا حتى 2024',
+          content: [
+            '**يدفع جهاز الطاقة الشمسية القابل للتوصيل بالمقبس الطاقة نحو الأعلى عبر مقبس عادي إلى داخل أسلاك المنزل — وهو عكس ما صُمم له ذلك المقبس تمامًا.** كُتبت قواعد الربط الكهربائي الأمريكية لأنظمة أسطح تتراوح بين 5 و25 كيلوواط، وتتطلب اتفاقيات ورسومًا وعمليات تفتيش قد تُضاعف تكلفة طقم شرفة بقيمة 500 دولار. وحتى عام 2024، لم تميّز أي ولاية بين لوحة شرفة بقدرة 400 واط وتركيب سطحي كامل، ما جعل هذه الفئة غير عملية في كل مكان.',
+            'حفّز سجل ألمانيا مباشرةً الموجة التشريعية الأمريكية. فقد قرأ النائب Raymond Ward من Utah مقالًا في صحيفة New York Times عن أنظمة Balkonkraftwerk الألمانية، وقدّم مشروع القانون الذي أصبح HB 340، مستشهدًا صراحةً بسجل ألمانيا في السلامة: "الكهرباء هناك هي ذاتها هنا. كل قوانين الفيزياء نفسها تعمل وقد أثبتت أنها آمنة."',
+          ],
+        },
+        theTemplate: {
+          title: 'كل مشروع قانون في كل ولاية يتبع النموذج ذاته',
+          content: [
+            '**كل مشروع قانون سارٍ أو قيد الإقرار في أي ولاية مصمَّم على غرار HB 340 في Utah، ويتبع بنية شبه متطابقة:** تعريف الجهاز كأداة منزلية وليس كمحطة طاقة، إعفاؤه من الربط مع شركة الكهرباء تحت حد أقصى للطاقة، اشتراط شهادة سلامة UL 3700 (أو ما يعادلها)، إلزامه بإيقاف تلقائي لمنع تغذية الشبكة أثناء الانقطاعات، واستثناؤه صراحةً من نظام قياس الصافي.',
+            'هذه النقطة الأخيرة مقايضة سياسية متعمّدة. فبالتنازل عن التعويض عن الطاقة الفائضة المصدَّرة إلى الشبكة، يُزيل رعاة مشاريع القوانين الأمر الوحيد الذي قد تعترض عليه شركات الكهرباء — وهو إجبارها على الدفع مقابل التوليد الصغير أو إعادة تصميم التعرفات. وهذا هو السبب الأكبر وراء تمرير هذه المشاريع بأصوات شبه إجماعية وعابرة للأحزاب في ولايات مختلفة تمامًا مثل Utah وNew York.',
+          ],
+        },
+        stateComparison: {
+          title: 'خمس ولايات، خمس نتائج',
+          content: 'أنتجت التقنية ذاتها قانونًا ساريًا، ومشروع قانون على مكتب الحاكم، ومشروع قانون عالقًا في لجنة، وولايتين بلا أي مشروع قانون على الإطلاق.',
+          rows: [
+            { 'الولاية': 'Utah', 'الحالة': 'سارٍ (مايو 2025)', 'الحد الأقصى للطاقة (واط)': '1,200 واط', 'العائق الرئيسي': 'لا توجد بعد منتجات معتمدة بموجب UL 3700' },
+            { 'الولاية': 'California', 'الحالة': 'مشروع قانون قيد الإقرار (SB 868)', 'الحد الأقصى للطاقة (واط)': '1,200 واط في حال الإقرار', 'العائق الرئيسي': 'يلزم تصويت مجلس النواب بحلول 31 أغسطس 2026' },
+            { 'الولاية': 'Florida', 'الحالة': 'لا يوجد مشروع قانون', 'الحد الأقصى للطاقة (واط)': 'لا ينطبق', 'العائق الرئيسي': 'القانون يستثني درابزين شرفات الشقق التعاونية والعمارات' },
+            { 'الولاية': 'Texas', 'الحالة': 'لا يوجد مشروع قانون', 'الحد الأقصى للطاقة (واط)': 'لا ينطبق', 'العائق الرئيسي': 'الشرعية تختلف حسب شركة الكهرباء ومزوّد التجزئة' },
+            { 'الولاية': 'New York', 'الحالة': 'أُقرّ في المجلس التشريعي بنتيجة 59-1؛ بانتظار التوقيع', 'الحد الأقصى للطاقة (واط)': '1,200 واط في حال التوقيع', 'العائق الرئيسي': 'توقيع الحاكمة Hochul' },
+          ],
+          columns: ['الولاية', 'الحالة', 'الحد الأقصى للطاقة (واط)', 'العائق الرئيسي'],
+        },
+        utah: {
+          title: 'Utah: الرائدة التي أقرّت قانونًا قبل وجود معيار السلامة',
+          content: [
+            '**أقرّ مشروع HB 340 في Utah، المعروف بتعديلات الطاقة الشمسية، غرفتي المجلس التشريعي بالإجماع، ووقّعه الحاكم Spencer Cox في مارس 2025، ليدخل حيز التنفيذ في 7 مايو 2025.** وهو يُنشئ فئة "أجهزة توليد شمسي محمولة صغيرة" بحد أقصى 1,200 واط، ويُعفيها من اتفاقيات الربط مع شركة الكهرباء ورسومها ومتطلبات الموافقة، ولا يشترط أي إخطار لشركة الكهرباء إطلاقًا.',
+            'صاغ النائب الراعي Raymond Ward مشروع القانون بالكامل حول خيار المستهلك وتوفير التكاليف بدلًا من سياسة المناخ — "إنه رائع لأي شخص يريد قدرًا بسيطًا من الطاقة الشمسية دون أن يدفع 30,000 دولار لتركيب على السطح" — وهي صياغة أثبتت أنها قابلة للتكرار في ولايات مختلفة أيديولوجيًا.',
+            '**والمفارقة: سمّى HB 340 شركة UL Solutions في نص التشريع واشترط معيار سلامة لم يكن موجودًا بعد.** نشرت UL معيار UL 3700، وهو الشهادة التي يعتمد عليها القانون، في ديسمبر 2025 — أي بعد ثمانية أشهر من دخول القانون حيز التنفيذ. وحتى منتصف 2026، لم يحصل أي نظام طاقة شمسية قابل للتوصيل بالمقبس بشكل كامل على شهادة UL 3700 الكاملة، لذا فإن المنتجات المُسوَّقة لسوق Utah لا يمكن توصيلها قانونًا بموجب نص القانون حتى الآن.',
+          ],
+        },
+        california: {
+          title: 'California: 44% مستأجرون، تعرفة 31 سنتًا لكل كيلوواط/ساعة، ومشروع قانون يسابق موعدًا نهائيًا',
+          content: [
+            '**لا يزال توصيل الطاقة الشمسية للشرفات غير قانوني في California حتى يوليو 2026** — إذ لا تميّز قواعد الربط في الولاية بين لوحة شرفة بقدرة 300 واط وتركيب سطحي بقدرة 25 كيلوواط، لذا فإن توصيل واحدة دون اتفاقية مع شركة الكهرباء يخالف قواعد CPUC اليوم.',
+            'يهدف مشروع القانون SB 868 المقدَّم من عضو مجلس الشيوخ Scott Wiener، والمعروف باسم Plug Into the Sun Act، إلى معالجة ذلك عبر تعريف أجهزة الطاقة الشمسية المحمولة (400-1,200 واط) كأدوات منزلية لا كمحطات طاقة. ومسار المشروع حتى الآن: تقدُّم بالإجماع عبر لجنة الطاقة والمرافق والاتصالات في مجلس الشيوخ؛ إقرار في لجنة الاعتمادات بمجلس الشيوخ بنتيجة 7-0؛ إقرار في مجلس الشيوخ الكامل بنتيجة 35-1؛ إقرار في لجنة المرافق والطاقة بمجلس النواب بنتيجة 18-0. **يقبع مشروع القانون الآن في لجنة الاعتمادات بمجلس النواب، حيث دفع تقدير تكلفة من CPUC يتراوح بين 200,000 و500,000 دولار كتكاليف إدارية سنوية إلى إدراجه في قائمة التعليق (suspense file) وتأجيل جلسة الاستماع إلى أغسطس.** ويجب أن يُقرّه مجلس النواب قبل نهاية أغسطس 2026 كي يتقدّم في هذه الدورة؛ وفي حال التوقيع، يدخل حيز التنفيذ في 1 يناير 2027.',
+            'المخاطر هنا هي الأعلى بين أي ولاية: يستأجر نحو 44% من أسر California، ويبلغ متوسط تعرفة الكهرباء على مستوى الولاية نحو 31.4 سنتًا لكل كيلوواط/ساعة، وقد خفّض NEM 3.0 تعويض تصدير الطاقة الشمسية من الأسطح بنحو 75% — ما يُعزز، بشكل متناقض، حجة نموذج الاستهلاك الذاتي للطاقة الشمسية للشرفات، إذ لم يعتمد أصلًا على أرصدة التصدير.',
+          ],
+        },
+        florida: {
+          title: 'Florida: قانون قوي للحق في الطاقة الشمسية باستثناء يمنع الحالة الاستخدامية بعينها',
+          content: [
+            '**لا يوجد لدى Florida أي مشروع قانون للطاقة الشمسية للشرفات، سواء سارٍ أو مقدَّم، حتى يوليو 2026** — رغم امتلاكها واحدًا من أقوى قوانين الحق في الطاقة الشمسية في البلاد.',
+            'يمنع القانون رقم 163.04 من قوانين Florida جمعيات الملاك (HOA) والقيود العقارية من عرقلة تركيبات الطاقة الشمسية في المنازل. لكن البند 163.04(4) يتضمن استثناءً صريحًا: **"لا ينطبق هذا القسم على درابزين الشرفات في الشقق التعاونية أو الجمعيات السكنية أو العمارات."** ذلك البند — الذي أُدرج كتنازل متأخر لضغط شركات الكهرباء والمباني متعددة الوحدات — يمنع الحالة الاستخدامية بالتحديد التي صُممت الطاقة الشمسية للشرفات من أجلها. فمالك منزل منفصل يتمتع بحقوق قوية في الطاقة الشمسية، بينما ساكن شقة تعاونية أو عمارة يركّب لوحة على الدرابزين لا يتمتع بأي حق بموجب هذا القانون.',
+            'ومع ذلك، فالحالة السوقية قوية من نواحٍ أخرى — كثافة سكانية من المستأجرين وسكان الشقق التعاونية في جنوب Florida، وأحمال تكييف هواء مدفوعة بالمناخ تتوافق مع توقيت توليد الطاقة الشمسية، وتوقيع الحاكم DeSantis في يونيو 2025 على HB 683 الذي يُبسّط تصاريح الطاقة الشمسية على الأسطح — ما يُظهر أن المجلس التشريعي مستعد لتقليص البيروقراطية المتعلقة بالطاقة الشمسية عندما يريد ذلك. ويُعد إلغاء استثناء درابزين الشرفات في القسم 163.04 الهدف التشريعي الأكثر قابلية للتحقيق بالنسبة لمناصري Florida.',
+          ],
+        },
+        texas: {
+          title: 'Texas: لا حظر ولا إعفاء — فقط "يعتمد الأمر على شركة الكهرباء لديك"',
+          content: [
+            '**لا يوجد لدى Texas أي مشروع قانون للطاقة الشمسية القابلة للتوصيل بالمقبس، سواء سارٍ أو قيد الإقرار، حتى منتصف 2026.** وبخلاف الاستثناء القانوني الصريح في Florida، فإن وضع Texas هو غموض تنظيمي: تنطبق قواعد الربط المعيارية، المكتوبة لأنظمة أسطح بقدرة 5 كيلوواط فأكثر، تقنيًا على أي جهاز متصل بالشبكة، لكن ما إذا كانت شركة كهرباء معينة تُطبّق ذلك على لوحة قابلة للتوصيل بقدرة 1,200 واط يختلف من حالة إلى أخرى.',
+            'تعني شبكة ERCOT غير المنظَّمة — التي تغطي نحو 90% من الولاية — أن العملاء السكنيين يختارون مزوّد تجزئة كهربائي (REP) من سوق تنافسية، وأن تعرفة ذلك المزوّد هي التي تحدد ما يمكن توصيله. وبإضافة شركات الكهرباء البلدية خارج نطاق منافسة تجزئة ERCOT (مثل Austin Energy وCPS Energy) ونحو 70 تعاونية كهرباء ريفية مستقلة، فإن إجابة شاملة على سؤال "هل الطاقة الشمسية للشرفات قانونية في Texas؟" غير موجودة — فالأمر يعتمد على شركة الكهرباء ومزوّد التجزئة تحديدًا.',
+            'أقرّت الدورة التشريعية لعام 2025 في الولاية ثلاثة قوانين متعلقة بالطاقة الشمسية (SB 1202 لتبسيط التصاريح، وSB 1697 لأدلة المستهلك، وSB 1036 لقواعد بائعي الطاقة الشمسية السكنية بالتجزئة)، بالإضافة إلى HB 431 الذي يوسّع حماية جمعيات الملاك للطاقة الشمسية لتشمل بلاط الأسطح الشمسي — لكن لا شيء منها يتناول الأجهزة القابلة للتوصيل تحديدًا. وقد يُعقّد اشتراط SB 1036 بتضمين اتفاقيات البيع لغة موافقة الربط مع شركة الكهرباء المسألة، إن كان له أي أثر، بالنسبة للأنظمة القابلة للتوصيل المُباعة تجاريًا.',
+          ],
+        },
+        newYork: {
+          title: 'New York: السوق الأعلى مخاطرة، على بُعد توقيع واحد',
+          content: [
+            '**أقرّ قانون SUNNY Act في New York (A.9111C/S.8512C) في المجلس التشريعي بالكامل يومي 28-29 مايو 2026، بتصويت مجلس الشيوخ بنتيجة 59-1 للموافقة على تعديلات مجلس النواب — وهو الآن بانتظار توقيع الحاكمة Kathy Hochul.** وفي حال التوقيع، يدخل حيز التنفيذ بعد 90 يومًا، وتصبح New York الولاية التاسعة التي تُقرّ القانون.',
+            'ينشئ مشروع القانون فئة "جهاز توليد شمسي محمول" بموجب قانون الخدمات العامة، ويشترط شهادة من مختبر معترف به وطنيًا وحماية ضد استمرار التغذية أثناء الانقطاع، ويُعفي الأجهزة من قواعد NYSERDA للربط وقياس الصافي — على غرار HB 340 في Utah صراحةً.',
+            'الحالة السوقية هنا هي الأقوى بين أي ولاية مشمولة بالمتابعة: يبلغ متوسط التعرفة السكنية على مستوى ولاية New York نحو 27-30 سنتًا لكل كيلوواط/ساعة (وغالبًا ما يتجاوز عملاء Con Edison في مدينة New York 30 سنتًا)، وتمتلك مدينة New York واحدة من أدنى نسب تملك المساكن في البلاد بنحو 32% — ما يعني أن معظم السكان يستأجرون شققًا دون أي إمكانية للوصول إلى طاقة شمسية على الأسطح إطلاقًا. ويُقدَّر أن نظامًا للشرفة بقدرة 800 واط، بتعرفة New York، يوفّر ما بين 203 و236 دولارًا سنويًا تقريبًا، وهي من بين أعلى الأرقام بين أي ولاية مشمولة بالمتابعة.',
+          ],
+        },
+        ulCertification: {
+          title: 'عنق زجاجة UL 3700: القوانين موجودة، والمنتجات المعتمدة ليست بعد',
+          content: [
+            '**يشترط كل قانون ولاية سارٍ الاستخدام القانوني على شهادة UL 3700 أو ما يعادلها — وحتى منتصف 2026، لم يحصل عليها أي نظام طاقة شمسية قابل للتوصيل بالمقبس بشكل كامل.** نشرت UL Solutions مخطط تحقيق UL 3700 في ديسمبر 2025؛ وبدأت اختبارات الاعتماد في يناير 2026. وقال نائب رئيس الهندسة في UL، Kenneth Boyce، في أبريل 2026 إن المنتجات المعتمدة متوقَّعة "خلال أشهر، ربما حتى أسابيع"، لكن حتى وقت كتابة هذا المقال لم يُكمل أي منتج العملية.',
+            'يختبر UL 3700 ثلاثة مخاطر: حالات التيار الزائد التي قد تُرهق قاطع الدائرة، وعدم التوافق مع قاطع تسرّب التأريض (GFCI) الذي قد يُبطل بصمت الحماية من الأعطال الأرضية، وسلامة اللمس عند سنون القابس المكشوفة عند فصله. كما يشترط الحماية من استمرار التغذية — إيقاف تلقائي خلال أجزاء من الثانية عند انقطاع الشبكة، لحماية عمال خطوط الكهرباء.',
+            'تجري شركات مصنِّعة من بينها EcoFlow محادثات نشطة للاعتماد؛ وقد أُدرج نظام EcoFlow STREAM Ultra للبيع في Utah بحلول منتصف 2026 بانتظار الاعتماد الكامل. وقد جمّع بعض المشترين المتمرسين تقنيًا أنظمة من مكوّنات معتمدة فرديًا من UL، لكن نظامًا مُجمَّعًا من قطع منفصلة ليس مماثلًا لنظام متكامل معتمد — ووضعه القانوني بموجب قوانين مثل HB 340 غير مؤكَّد. راجع الاختيارات الحالية في [أفضل بطاريات منزلية للطاقة الشمسية للشرفات في أمريكا](/ar/balcony-solar/best-balcony-solar-home-battery-us-2026) و[EcoFlow مقابل Anker مقابل Zendure](/ar/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar).',
+          ],
+        },
+        advocacy: {
+          title: 'من يقود هذا الجهد: Bright Saver والنائب Ward',
+          content: [
+            'أصبحت منظمة Bright Saver غير الربحية، التي تأسست في يناير 2025 بمنح أولية بلغت 500,000 دولار، القوة الأمريكية الرئيسية للضغط والتثقيف بشأن هذه الفئة، إذ توفّر تشريعًا نموذجيًا وموارد تنظيمية للمشرّعين ولاية تلو الأخرى — على غرار دليل التبني في الاتحاد الأوروبي صراحةً.',
+            'استشار النائب Ward من Utah شخصيًا مشرّعين في Hawaii وWashington وMinnesota وColorado وولايات أخرى منذ إقرار مشروع قانونه — وهي الآلية المباشرة وراء ظهور صياغة مشاريع قوانين شبه متطابقة في مجالس تشريعية متنوعة أيديولوجيًا.',
+          ],
+        },
+        whatsNext: {
+          title: 'ما يجب مراقبته حتى أوائل 2027',
+          content: 'وتيرة هذه الفئة سريعة بشكل غير معتاد بالنسبة لتشريعات الطاقة على مستوى الولايات — تابع هذه التواريخ إذا كنت تقرر ما إذا كنت ستشتري الآن أو تنتظر.',
+          items: [
+            '31 أغسطس 2026 — يجب أن يُقرّ مشروع القانون SB 868 في California في مجلس النواب قبل نهاية الدورة وإلا يتوقف حتى 2027.',
+            '~سبتمبر 2026 — يدخل قانون SUNNY Act في New York حيز التنفيذ بعد 90 يومًا من التوقيع، إذا وقّعته الحاكمة Hochul.',
+            '1 أكتوبر 2026 — تدخل أحكام HB 5340 في Connecticut حيز التنفيذ.',
+            '1 يناير 2027 — يدخل قانون HB26-1007 في Colorado حيز التنفيذ بأعلى حد أقصى للطاقة مؤكَّد في أمريكا (1,920 واط) وحظر صريح على قيود جمعيات الملاك والملاك العقاريين.',
+            'الربع الثالث والرابع من 2026 — توقّع نائب رئيس الهندسة في UL وصول أولى المنتجات المعتمدة بموجب UL 3700 إلى السوق خلال هذه الفترة، رغم عدم تأكيد موعد نهائي.',
+            'دورات 2027 — من المتوقع أن تُعيد New Jersey وPennsylvania وOregon وWashington ونحو عشر ولايات أخرى متعثرة تقديم مشاريعها.',
+          ],
+        },
+        checkYourState: {
+          title: 'تحقق من وضع ولايتك قبل الشراء',
+          content: 'يغطي هذا المقال الولايات الخمس ذات النتائج القانونية الأكثر تمايزًا. للاطلاع على وضع الولايات الخمسين كاملةً، والحدود القصوى الحالية للطاقة، وتواريخ التوقيع/التنفيذ المؤكَّدة، راجع [متتبع الوضع القانوني لكل ولاية](/ar/balcony-solar/balcony-solar-legal-us-states)، الذي يُحدَّث كل 60 يومًا نظرًا لسرعة تغيّر هذه القائمة، و[الدليل العالمي حسب الدولة](/ar/balcony-solar/is-balcony-solar-legal-country-guide) إذا كنت خارج الولايات المتحدة.',
+        },
+        faqSection: {
+          title: 'الأسئلة الشائعة',
+          faqs: [
+            {
+              q: 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟',
+              a: 'يعتمد الأمر كليًا على الولاية — إذ لا يوجد قانون فيدرالي للطاقة الشمسية للشرفات. وقّعت ثماني ولايات على تشريعات حتى يوليو 2026 (Utah وMaine وVirginia وMaryland وColorado وNew Hampshire وVermont وConnecticut)، وأقرّت ولاية إضافية (New York) القانون في مجلسها التشريعي وتنتظر توقيع الحاكمة، بينما لم تتناوله معظم الولايات الأخرى تحديدًا على الإطلاق.',
+            },
+            {
+              q: 'هل الطاقة الشمسية للشرفات قانونية في California؟',
+              a: 'ليست بعد حتى يوليو 2026. تُعامل قواعد الربط الحالية لدى CPUC أي جهاز متصل بالشبكة بالطريقة ذاتها بغض النظر عن حجمه، لذا فإن توصيل واحد دون اتفاقية مع شركة الكهرباء ليس قانونيًا اليوم. من شأن مشروع القانون SB 868 معالجة ذلك، لكن يجب أن يُقرّه مجلس النواب بحلول 31 أغسطس 2026.',
+            },
+            {
+              q: 'هل الطاقة الشمسية للشرفات قانونية في Florida؟',
+              a: 'لا يوجد لدى Florida مشروع قانون للطاقة الشمسية القابلة للتوصيل بالمقبس. فقانونها القوي في الحق بالطاقة الشمسية (F.S. 163.04) يستثني صراحةً درابزين الشرفات في الشقق التعاونية والعمارات، ما يمنع الحالة الاستخدامية الرئيسية للطاقة الشمسية للشرفات في المساكن متعددة الوحدات.',
+            },
+            {
+              q: 'هل الطاقة الشمسية للشرفات قانونية في Texas؟',
+              a: 'لا يوجد قانون في الولاية يسمح بها أو يحظرها. تعتمد الشرعية عمليًا على شركة الكهرباء ومزوّد التجزئة الكهربائي (REP) الذي يتعامل معه المقيم تحديدًا، إذ تنطبق قواعد الربط المعيارية المكتوبة لأنظمة الأسطح الكبيرة تقنيًا على أي جهاز متصل بالشبكة.',
+            },
+            {
+              q: 'ما هو معيار UL 3700 ولماذا يهم للشرعية؟',
+              a: 'UL 3700 هو معيار الاعتماد الأمريكي للسلامة الخاص بأنظمة الطاقة الشمسية القابلة للتوصيل بالمقبس، نشرته شركة UL Solutions في ديسمبر 2025. يشترطه كل قانون ولاية سارٍ (أو ما يعادله)، لكن حتى منتصف 2026 لم يُكمل أي نظام كامل للطاقة الشمسية للشرفات عملية الاعتماد — لذا فإن الأجهزة المتوافقة قانونيًا ليست متاحة بشكل كامل بعد حتى في الولايات التي يسري فيها القانون.',
+            },
+            {
+              q: 'لماذا لا تسمح لي هذه القوانين ببيع الطاقة الفائضة إلى الشبكة؟',
+              a: 'يستثني كل مشروع قانون سارٍ أو قيد الإقرار الطاقة الشمسية للشرفات من نظام قياس الصافي عمدًا. والتنازل عن تعويض التصدير يُزيل السبب الرئيسي الذي قد تعترض به شركة الكهرباء على القانون، وهذا هو سبب تمرير هذه المشاريع بأصوات شبه إجماعية عبر مجالس تشريعية مختلفة جدًا.',
+            },
+            {
+              q: 'هل يمكن لمالك العقار أو جمعية الملاك حظر لوحة طاقة شمسية للشرفة؟',
+              a: 'يعتمد ذلك على الولاية. يمنع قانون Colorado صراحةً الملاك العقاريين وجمعيات الملاك من حظر الأجهزة المتوافقة. وتعتمد معظم الولايات الأخرى التي أقرّت القانون على حقوق عامة للوصول إلى الطاقة الشمسية لم تُكتب مع مراعاة لوحات الشرفات، لذا قد لا تزال قيود جمعيات الملاك سارية — تحقق من قانون ولايتك تحديدًا قبل افتراض وجود حماية.',
+            },
+            {
+              q: 'متى ستُقرّ ولايات أخرى قوانين للطاقة الشمسية للشرفات؟',
+              a: 'قدَّمت ثلاثون ولاية أو أكثر بالإضافة إلى واشنطن العاصمة مشاريع قوانين أو تُواصل تقديمها. الموعد النهائي لـCalifornia هو أغسطس 2026؛ وولايات أخرى عدة (New Jersey وMassachusetts وPennsylvania وOhio وMichigan) نشطة لكنها غير مجدولة بعد. ومن المتوقع أن تُعيد الولايات التي تعثرت أو فشلت مشاريعها في 2025-2026 تقديمها في دورات 2027.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'يعتمد الأمر كليًا على الولاية — إذ لا يوجد قانون فيدرالي للطاقة الشمسية للشرفات. وقّعت ثماني ولايات على تشريعات حتى يوليو 2026 (Utah وMaine وVirginia وMaryland وColorado وNew Hampshire وVermont وConnecticut)، وأقرّت ولاية إضافية (New York) القانون في مجلسها التشريعي وتنتظر توقيع الحاكمة، بينما لم تتناوله معظم الولايات الأخرى تحديدًا على الإطلاق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل الطاقة الشمسية للشرفات قانونية في California؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ليست بعد حتى يوليو 2026. تُعامل قواعد الربط الحالية لدى CPUC أي جهاز متصل بالشبكة بالطريقة ذاتها بغض النظر عن حجمه، لذا فإن توصيل واحد دون اتفاقية مع شركة الكهرباء ليس قانونيًا اليوم. من شأن مشروع القانون SB 868 معالجة ذلك، لكن يجب أن يُقرّه مجلس النواب بحلول 31 أغسطس 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل الطاقة الشمسية للشرفات قانونية في Florida؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'لا يوجد لدى Florida مشروع قانون للطاقة الشمسية القابلة للتوصيل بالمقبس. فقانونها القوي في الحق بالطاقة الشمسية (F.S. 163.04) يستثني صراحةً درابزين الشرفات في الشقق التعاونية والعمارات، ما يمنع الحالة الاستخدامية الرئيسية للطاقة الشمسية للشرفات في المساكن متعددة الوحدات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل الطاقة الشمسية للشرفات قانونية في Texas؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'لا يوجد قانون في الولاية يسمح بها أو يحظرها. تعتمد الشرعية عمليًا على شركة الكهرباء ومزوّد التجزئة الكهربائي (REP) الذي يتعامل معه المقيم تحديدًا، إذ تنطبق قواعد الربط المعيارية المكتوبة لأنظمة الأسطح الكبيرة تقنيًا على أي جهاز متصل بالشبكة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'ما هو معيار UL 3700 ولماذا يهم للشرعية؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'UL 3700 هو معيار الاعتماد الأمريكي للسلامة الخاص بأنظمة الطاقة الشمسية القابلة للتوصيل بالمقبس، نشرته شركة UL Solutions في ديسمبر 2025. يشترطه كل قانون ولاية سارٍ (أو ما يعادله)، لكن حتى منتصف 2026 لم يُكمل أي نظام كامل للطاقة الشمسية للشرفات عملية الاعتماد — لذا فإن الأجهزة المتوافقة قانونيًا ليست متاحة بشكل كامل بعد حتى في الولايات التي يسري فيها القانون.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'لماذا لا تسمح لي هذه القوانين ببيع الطاقة الفائضة إلى الشبكة؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'يستثني كل مشروع قانون سارٍ أو قيد الإقرار الطاقة الشمسية للشرفات من نظام قياس الصافي عمدًا. والتنازل عن تعويض التصدير يُزيل السبب الرئيسي الذي قد تعترض به شركة الكهرباء على القانون، وهذا هو سبب تمرير هذه المشاريع بأصوات شبه إجماعية عبر مجالس تشريعية مختلفة جدًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يمكن لمالك العقار أو جمعية الملاك حظر لوحة طاقة شمسية للشرفة؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'يعتمد ذلك على الولاية. يمنع قانون Colorado صراحةً الملاك العقاريين وجمعيات الملاك من حظر الأجهزة المتوافقة. وتعتمد معظم الولايات الأخرى التي أقرّت القانون على حقوق عامة للوصول إلى الطاقة الشمسية لم تُكتب مع مراعاة لوحات الشرفات، لذا قد لا تزال قيود جمعيات الملاك سارية — تحقق من قانون ولايتك تحديدًا قبل افتراض وجود حماية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'متى ستُقرّ ولايات أخرى قوانين للطاقة الشمسية للشرفات؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'قدَّمت ثلاثون ولاية أو أكثر بالإضافة إلى واشنطن العاصمة مشاريع قوانين أو تُواصل تقديمها. الموعد النهائي لـCalifornia هو أغسطس 2026؛ وولايات أخرى عدة (New Jersey وMassachusetts وPennsylvania وOhio وMichigan) نشطة لكنها غير مجدولة بعد. ومن المتوقع أن تُعيد الولايات التي تعثرت أو فشلت مشاريعها في 2025-2026 تقديمها في دورات 2027.',
+            },
+          },
+        ],
+      },
+    },
+    de: {
+      category: 'Energiepolitik',
+      title: 'Der Wettlauf um die Legalisierung von Balkonsolar in den USA: Utah, Kalifornien, Florida, Texas und New York im Vergleich (2026)',
+      seoTitle: 'US-Balkonsolar-Gesetze 2026: 5 Bundesstaaten im Vergleich',
+      intro: 'Acht US-Bundesstaaten haben Gesetze zur Legalisierung von Balkonsolar unterzeichnet, und ein neunter ist nur noch eine Unterschrift entfernt — doch Florida und Texas haben überhaupt kein Gesetz für Steckersolargeräte. So sind fünf Bundesstaaten — Utah, Kalifornien, Florida, Texas und New York — bei derselben Technologie zu fünf völlig unterschiedlichen rechtlichen Ergebnissen gekommen.',
+      publishDate: 'Veröffentlicht am 16. Juli 2026',
+      readTime: '13 Min. Lesezeit',
+      metaDescription: 'Balkonsolar ist in 8 US-Bundesstaaten legal und in einem neunten in der Warteschleife, aber nicht in Florida oder Texas. Vergleichen Sie die Gesetze 2026 von Utah, Kalifornien, Florida, Texas und New York.',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Kurzantwort',
+          items: [
+            'Acht US-Bundesstaaten haben mit Stand Juli 2026 Gesetze zu Balkonsolar unterzeichnet: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont und Connecticut. New York hat im Mai 2026 beide gesetzgebenden Kammern mit 59:1 Stimmen passiert und wartet auf die Unterschrift der Gouverneurin — damit würde der Bundesstaat zur Nummer 9.',
+            'Utahs HB 340 (unterzeichnet im März 2025) war das erste Gesetz dieser Art und befreit Geräte bis 1.200 W von den Vorschriften zur Netzanbindung durch Versorgungsunternehmen — doch der Sicherheitsstandard, auf dem das Gesetz beruht, UL 3700, wurde erst im Dezember 2025 veröffentlicht.',
+            'Kaliforniens SB 868 wurde mit 35:1 Stimmen vom vollen Senat und mit 18:0 Stimmen von einem Ausschuss der Assembly verabschiedet, muss aber bis zum 31. August 2026 den Assembly-Haushaltsausschuss (Appropriations) passieren, sonst ist der Gesetzentwurf für diese Sitzungsperiode gescheitert.',
+            'Florida und Texas haben überhaupt kein Gesetz für Steckersolargeräte. Floridas eigenes Gesetz zu Solarrechten schließt Balkonbrüstungen in Eigentumswohnungen und Mietwohnungen ausdrücklich aus; Texas hat keinen bundesstaatlichen Rahmen, sodass die Legalität davon abhängt, welches Versorgungsunternehmen und welchen Stromanbieter ein Bewohner hat.',
+            'Mit Stand Mitte 2026 hat kein Steckersolarsystem die vollständige UL-3700-Zertifizierung erhalten, obwohl Utahs Gesetz bereits seit Mai 2025 in Kraft ist — der rechtliche Rahmen ist der zertifizierten Hardware derzeit voraus.',
+            'Jedes verabschiedete Landesgesetz schließt Balkonsolar bewusst von der Netzeinspeisungsvergütung (Net Metering) aus — ein gezielter Kompromiss, der den Hauptgrund beseitigt, aus dem Versorgungsunternehmen andernfalls Einwände erheben könnten.',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: 'Was Balkonsolar tatsächlich ist',
+          content: [
+            '**Balkonsolar (auch Steckersolar oder im deutschen Ursprungsmarkt „Balkonkraftwerk" genannt) ist ein kleines Photovoltaiksystem, typischerweise mit 400–1.920 Watt, das direkt an eine haushaltsübliche Steckdose angeschlossen wird.** Es ermöglicht Mieterinnen, Mietern und Wohnungsbewohnern, Strom zu erzeugen — ohne Dachzugang, Papierkram für die Netzanbindung beim Versorgungsunternehmen oder eine Installation im fünfstelligen Bereich.',
+            'Die Kategorie hat sich bereits in großem Maßstab bewährt: Deutschland hat rund 1,3 Millionen registrierte Anlagen (plus geschätzt 3 Millionen unregistrierte) und mit Stand Mitte 2026 etwa 2,5 GW installierte Leistung. Die USA folgen demselben Muster wie Deutschland — nur ein Jahrzehnt später und Bundesstaat für Bundesstaat statt landesweit. Eine vollständige Erklärung der Funktionsweise der Hardware finden Sie unter [Was ist Balkonsolar?](/de/balcony-solar/what-is-balcony-solar)',
+          ],
+        },
+        whyItWasIllegal: {
+          title: 'Warum Balkonsolar in den USA bis 2024 faktisch illegal war',
+          content: [
+            '**Ein Steckersolargerät speist Strom rückwärts durch eine haushaltsübliche Steckdose in die Elektroinstallation eines Hauses — genau das Gegenteil dessen, wofür diese Steckdose gebaut wurde.** Die US-Vorschriften zur Netzanbindung wurden für 5–25-kW-Dachanlagen geschrieben und verlangen Verträge, Gebühren und Inspektionen, die die Kosten eines 500-Dollar-Balkonkits verdoppeln können. Bis 2024 unterschied kein Bundesstaat zwischen einem 400-Watt-Balkonpanel und einer vollständigen Dachanlage, was die Kategorie überall unpraktikabel machte.',
+            'Deutschlands Erfolgsbilanz war der direkte Auslöser für die US-Gesetzgebungswelle. Der Abgeordnete Raymond Ward aus Utah las einen Artikel der New York Times über deutsche Balkonkraftwerke und brachte den Gesetzentwurf ein, aus dem später HB 340 wurde — dabei berief er sich ausdrücklich auf Deutschlands Sicherheitsbilanz: „Der Strom dort drüben ist derselbe wie hier. Es gelten dieselben physikalischen Gesetze, und sie haben sich als sicher erwiesen."',
+          ],
+        },
+        theTemplate: {
+          title: 'Jeder Gesetzentwurf eines Bundesstaats folgt derselben Vorlage',
+          content: [
+            '**Jeder verabschiedete und anstehende Gesetzentwurf eines Bundesstaats orientiert sich an Utahs HB 340 und folgt einer nahezu identischen Struktur:** Das Gerät wird als Haushaltsgerät statt als Kraftwerk definiert, unterhalb einer Wattgrenze von der Netzanbindungspflicht befreit, eine Sicherheitszertifizierung nach UL 3700 (oder gleichwertig) verlangt, eine automatische Abschaltung (Anti-Islanding) bei Stromausfällen vorgeschrieben und das Gerät ausdrücklich von der Netzeinspeisungsvergütung ausgeschlossen.',
+            'Dieser letzte Punkt ist ein bewusster politischer Kompromiss. Indem sie auf eine Vergütung für überschüssigen, ins Netz eingespeisten Strom verzichten, nehmen die Initiatoren der Gesetzentwürfe den Versorgungsunternehmen das einzige Argument, das diese sonst vorbringen könnten — nämlich gezwungen zu sein, für Mikroerzeugung zu zahlen oder Tarife neu zu gestalten. Das ist der wichtigste Grund, warum diese Gesetzentwürfe mit nahezu einstimmigen, parteiübergreifenden Mehrheiten in so unterschiedlichen Bundesstaaten wie Utah und New York verabschiedet wurden.',
+          ],
+        },
+        stateComparison: {
+          title: 'Fünf Bundesstaaten, fünf Ergebnisse',
+          content: 'Dieselbe Technologie hat zu einem verabschiedeten Gesetz, einem Gesetzentwurf auf dem Schreibtisch der Gouverneurin, einem im Ausschuss feststeckenden Gesetzentwurf und zwei Bundesstaaten ganz ohne Gesetzentwurf geführt.',
+          rows: [
+            { Bundesstaat: 'Utah', Status: 'Verabschiedet (Mai 2025)', Wattgrenze: '1.200 W', 'Größtes Hindernis': 'UL-3700-zertifizierte Produkte noch nicht verfügbar' },
+            { Bundesstaat: 'Kalifornien', Status: 'Gesetzentwurf anhängig (SB 868)', Wattgrenze: '1.200 W, falls verabschiedet', 'Größtes Hindernis': 'Assembly-Abstimmung bis 31. August 2026 nötig' },
+            { Bundesstaat: 'Florida', Status: 'Kein Gesetzentwurf', Wattgrenze: 'Entfällt', 'Größtes Hindernis': 'Gesetz schließt Balkonbrüstungen von Eigentumswohnungen/Mietwohnungen aus' },
+            { Bundesstaat: 'Texas', Status: 'Kein Gesetzentwurf', Wattgrenze: 'Entfällt', 'Größtes Hindernis': 'Legalität variiert je nach Versorgungsunternehmen und Stromanbieter' },
+            { Bundesstaat: 'New York', Status: 'Parlament mit 59:1 verabschiedet; Unterschrift ausstehend', Wattgrenze: '1.200 W, falls unterzeichnet', 'Größtes Hindernis': 'Unterschrift von Gouverneurin Hochul' },
+          ],
+          columns: ['Bundesstaat', 'Status', 'Wattgrenze', 'Größtes Hindernis'],
+        },
+        utah: {
+          title: 'Utah: Der Pionier, der ein Gesetz verabschiedete, bevor der Sicherheitsstandard existierte',
+          content: [
+            '**Utahs HB 340, die Solar Power Amendments, wurde in beiden Kammern des Parlaments einstimmig verabschiedet und im März 2025 von Gouverneur Spencer Cox unterzeichnet; es trat am 7. Mai 2025 in Kraft.** Es schafft eine Kategorie „kleiner tragbarer Solarstromerzeugungsgeräte", die auf 1.200 W begrenzt ist, befreit diese von Vereinbarungen, Gebühren und Genehmigungspflichten zur Netzanbindung und verlangt überhaupt keine Meldung an das Versorgungsunternehmen.',
+            'Der Initiator des Gesetzentwurfs, Abgeordneter Raymond Ward, rahmte den Entwurf durchgehend als Frage der Konsumentenwahl und Kostenersparnis, nicht als Klimapolitik — „Es ist großartig für alle, die ein bisschen Solarstrom wollen, aber nicht 30.000 Dollar für eine Dachinstallation zahlen möchten" — eine Rahmung, die sich als übertragbar auf ideologisch andere Bundesstaaten erwies.',
+            '**Der Haken: HB 340 nannte UL Solutions namentlich im Gesetzestext und verlangte einen Sicherheitsstandard, der noch gar nicht existierte.** UL veröffentlichte UL 3700, die Zertifizierung, auf der das Gesetz beruht, im Dezember 2025 — acht Monate nachdem das Gesetz in Kraft getreten war. Mit Stand Mitte 2026 hat noch kein vollständiges Steckersolarsystem die vollständige UL-3700-Zertifizierung erhalten, sodass für Utahs Markt beworbene Produkte dem Wortlaut des Gesetzes nach immer noch nicht legal eingesteckt werden dürfen.',
+          ],
+        },
+        california: {
+          title: 'Kalifornien: 44 % Mieteranteil, 31 ¢/kWh Stromtarife und ein Gesetzentwurf im Wettlauf mit der Frist',
+          content: [
+            '**Der Anschluss von Balkonsolar bleibt in Kalifornien mit Stand Juli 2026 illegal** — die Netzanbindungsvorschriften des Bundesstaats unterscheiden nicht zwischen einem 300-Watt-Balkonpanel und einer 25-kW-Dachanlage, sodass der Anschluss ohne Vereinbarung mit dem Versorgungsunternehmen heute gegen die Vorschriften der CPUC verstößt.',
+            'Der Gesetzentwurf SB 868 von Senator Scott Wiener, der Plug Into the Sun Act, würde dies beheben, indem er tragbare Solargeräte (400–1.200 W) als Haushaltsgeräte statt als Kraftwerke definiert. Sein bisheriger Werdegang: einstimmiger Durchgang durch den Senatsausschuss für Energie, Versorgungsunternehmen und Kommunikation; Verabschiedung im Senats-Haushaltsausschuss mit 7:0; Verabschiedung im vollen Senat mit 35:1; Verabschiedung im Assembly-Ausschuss für Versorgungsunternehmen und Energie mit 18:0. **Der Gesetzentwurf liegt nun im Assembly-Haushaltsausschuss, wo eine CPUC-Kostenschätzung von 200.000–500.000 US-Dollar an jährlichen Verwaltungskosten die Aufnahme in die „Suspense File" auslöste und die Anhörung auf August verschob.** Die Assembly muss den Entwurf vor Ende August 2026 verabschieden, damit er in dieser Sitzungsperiode weiterkommt; bei Unterzeichnung tritt er am 1. Januar 2027 in Kraft.',
+            'Der Einsatz ist hier höher als in jedem anderen Bundesstaat: Rund 44 % der kalifornischen Haushalte sind Mieterhaushalte, die durchschnittlichen Strompreise im Bundesstaat liegen bei etwa 31,4 ¢/kWh, und NEM 3.0 hat die Vergütung für ins Netz eingespeisten Dachsolarstrom um rund 75 % gekürzt — was paradoxerweise das Argument für das Eigenverbrauchsmodell von Balkonsolar stärkt, da dieses ohnehin nie auf Einspeisevergütungen angewiesen war.',
+          ],
+        },
+        florida: {
+          title: 'Florida: Ein starkes Solarrechte-Gesetz mit einer Ausnahme, die genau diesen Anwendungsfall blockiert',
+          content: [
+            '**Florida hat mit Stand Juli 2026 keinen Gesetzentwurf zu Balkonsolar, weder verabschiedet noch eingebracht** — obwohl der Bundesstaat eines der landesweit stärksten Gesetze zum Zugang zu Solarenergie hat.',
+            'Floridas Gesetz 163.04 verbietet Hausbesitzervereinigungen (HOAs) und Grunddienstbarkeiten, Solaranlagen an Wohnhäusern zu blockieren. Doch Abschnitt 163.04(4) enthält eine ausdrückliche Ausnahme: **„Dieser Abschnitt gilt nicht für Balkonbrüstungen in Eigentumswohnungen, Genossenschaften oder Mietwohnungen."** Diese Klausel — eingefügt als späteres Zugeständnis an die Lobbyarbeit von Versorgungsunternehmen und der Mehrfamilienhausbranche — blockiert genau den Anwendungsfall, für den Balkonsolar entwickelt wurde. Ein Eigenheimbesitzer hat starke Solarrechte; ein Bewohner einer Eigentumswohnung oder Mietwohnung, der ein Panel an einer Brüstung montiert, hat nach diesem Gesetz keine.',
+            'Der Markt spricht ansonsten stark dafür — eine dichte Mieter-/Eigentumswohnungs-Bevölkerung in Südflorida, klimabedingte Klimaanlagenlasten, die zeitlich mit der Solarstromerzeugung zusammenfallen, und Gouverneur DeSantis’ Unterschrift unter HB 683 im Juni 2025, das die Genehmigungsverfahren für Dachsolaranlagen vereinfacht — was zeigt, dass das Parlament bereit ist, Solarbürokratie abzubauen, wenn es das will. Die Streichung der Balkonbrüstungs-Ausnahme in §163.04 ist das mit Abstand aussichtsreichste gesetzgeberische Ziel für Befürworter in Florida.',
+          ],
+        },
+        texas: {
+          title: 'Texas: Kein Verbot, keine Ausnahme — einfach „Es kommt auf Ihr Versorgungsunternehmen an"',
+          content: [
+            '**Texas hat mit Stand Mitte 2026 keinen Gesetzentwurf zu Steckersolar, weder verabschiedet noch anhängig.** Anders als Floridas ausdrückliche gesetzliche Ausnahme ist Texas’ Situation eine regulatorische Grauzone: Die für Dachanlagen ab 5 kW geschriebenen Standard-Netzanbindungsvorschriften gelten technisch für jedes netzgekoppelte Gerät, aber ob ein bestimmtes Versorgungsunternehmen dies bei einem 1.200-Watt-Steckerpanel durchsetzt, variiert von Fall zu Fall.',
+            'ERCOTs dereguliertes Stromnetz — das rund 90 % des Bundesstaats abdeckt — bedeutet, dass Privatkunden aus einem Wettbewerbsmarkt einen Stromanbieter (Retail Electric Provider, REP) wählen, und dessen Tarif regelt, was angeschlossen werden darf. Rechnet man kommunale Versorgungsunternehmen außerhalb des ERCOT-Einzelhandelswettbewerbs (Austin Energy, CPS Energy) und rund 70 unabhängige ländliche Stromgenossenschaften hinzu, gibt es keine pauschale Antwort auf die Frage „Ist Balkonsolar in Texas legal?" — sie hängt vom jeweiligen Versorgungsunternehmen und REP ab.',
+            'In der texanischen Gesetzgebungssitzung 2025 wurden drei solarbezogene Gesetze verabschiedet (SB 1202 zur Vereinfachung von Genehmigungsverfahren, SB 1697 zu Verbraucherleitfäden, SB 1036 zu Vorschriften für Solar-Einzelhändler) sowie HB 431, das den HOA-Solarschutz auf Solardachziegel ausweitet — aber keines davon adressiert Steckergeräte speziell. Die Anforderung von SB 1036, dass Verkaufsverträge eine Formulierung zur Genehmigung der Netzanbindung enthalten müssen, könnte die Lage für kommerziell verkaufte Stecker-Solarsysteme eher noch komplizierter machen.',
+          ],
+        },
+        newYork: {
+          title: 'New York: Der Markt mit dem höchsten Einsatz, nur eine Unterschrift entfernt',
+          content: [
+            '**New Yorks SUNNY Act (A.9111C/S.8512C) wurde am 28.–29. Mai 2026 vom gesamten Parlament verabschiedet, wobei der Senat mit 59:1 Stimmen den Änderungen der Assembly zustimmte — und wartet nun auf die Unterschrift von Gouverneurin Kathy Hochul.** Bei Unterzeichnung tritt es 90 Tage später in Kraft, und New York würde zum 9. Bundesstaat mit verabschiedetem Gesetz.',
+            'Der Gesetzentwurf schafft im Rahmen des Public Service Law eine Kategorie „tragbares Solarstromerzeugungsgerät", die eine Zertifizierung durch ein national anerkanntes Prüflabor sowie einen Anti-Islanding-Schutz verlangt und Geräte von den NYSERDA-Vorschriften zur Netzanbindung und von der Netzeinspeisungsvergütung befreit — ausdrücklich nach dem Vorbild von Utahs HB 340.',
+            'Das Marktargument ist hier stärker als in jedem anderen erfassten Bundesstaat: New Yorks landesweiter durchschnittlicher Wohnstrompreis liegt bei etwa 27–30 ¢/kWh (Con-Edison-Kunden in New York City liegen häufig über 30 ¢/kWh), und New York City hat mit rund 32 % eine der niedrigsten Eigenheimquoten des Landes — das heißt, die meisten Bewohner mieten Wohnungen ohne jeden Zugang zu Dachsolar. Für ein 800-Watt-Balkonsystem zu New Yorker Tarifen werden Einsparungen von schätzungsweise 203–236 US-Dollar pro Jahr veranschlagt, einer der höchsten Werte aller erfassten Bundesstaaten.',
+          ],
+        },
+        ulCertification: {
+          title: 'Der UL-3700-Engpass: Gesetze existieren, zertifizierte Produkte noch nicht',
+          content: [
+            '**Jedes verabschiedete Landesgesetz macht die legale Nutzung von einer Zertifizierung nach UL 3700 oder gleichwertig abhängig — und mit Stand Mitte 2026 hat noch kein vollständiges Steckersolarsystem diese erhalten.** UL Solutions veröffentlichte den UL-3700-Untersuchungsentwurf (Outline of Investigation) im Dezember 2025; die Zertifizierungstests begannen im Januar 2026. Kenneth Boyce, VP of Engineering bei UL, sagte im April 2026, zertifizierte Produkte würden „in Monaten, vielleicht sogar Wochen" erwartet, aber zum Zeitpunkt der Erstellung dieses Artikels hatte noch keines das Verfahren abgeschlossen.',
+            'UL 3700 testet auf drei Gefahren: Überstrombedingungen, die einen Leitungsschutzschalter überlasten könnten, FI-Schutzschalter-Inkompatibilität, die den Fehlerstromschutz stillschweigend außer Kraft setzen könnte, sowie Berührungssicherheit an den freiliegenden Steckerstiften im abgesteckten Zustand. Zudem verlangt der Standard Anti-Islanding — eine automatische Abschaltung innerhalb von Millisekunden nach einem Stromausfall, um Monteure der Versorgungsunternehmen zu schützen.',
+            'Hersteller, darunter EcoFlow, befinden sich in aktiven Zertifizierungsgesprächen; EcoFlows STREAM Ultra wurde bereits Mitte 2026 in Utah zum Verkauf angeboten, vorbehaltlich der vollständigen Zertifizierung. Einige technisch versierte Käufer haben Systeme aus einzeln UL-gelisteten Komponenten zusammengebaut, doch ein aus Einzelteilen zusammengesetztes System ist nicht dasselbe wie ein integriertes, zertifiziertes System — sein rechtlicher Status unter Gesetzen wie HB 340 ist unklar. Aktuelle Empfehlungen finden Sie unter [Die besten Balkonsolar-Heimbatterien für die USA](/de/balcony-solar/best-balcony-solar-home-battery-us-2026) und [EcoFlow vs. Anker vs. Zendure](/de/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar).',
+          ],
+        },
+        advocacy: {
+          title: 'Wer diese Entwicklung vorantreibt: Bright Saver und Abgeordneter Ward',
+          content: [
+            'Die im Januar 2025 mit 500.000 US-Dollar an Anfangsfördermitteln gegründete Non-Profit-Organisation Bright Saver ist zur wichtigsten US-Lobby- und Aufklärungskraft für die Kategorie geworden. Sie stellt Gesetzgebern Bundesstaat für Bundesstaat Musterentwürfe und Organisationsressourcen zur Verfügung — ausdrücklich nach dem Vorbild der Einführungsstrategie der EU.',
+            'Utahs Abgeordneter Ward hat sich seit der Verabschiedung seines Gesetzentwurfs persönlich mit Gesetzgebern in Hawaii, Washington, Minnesota, Colorado und anderen Bundesstaaten beraten — das ist der direkte Mechanismus hinter der nahezu identischen Formulierung von Gesetzentwürfen, die in ideologisch unterschiedlichen Parlamenten auftaucht.',
+          ],
+        },
+        whatsNext: {
+          title: 'Was bis Anfang 2027 zu beobachten ist',
+          content: 'Das Tempo dieser Kategorie ist für bundesstaatliche Energiegesetzgebung ungewöhnlich hoch — verfolgen Sie diese Termine, wenn Sie überlegen, ob Sie jetzt kaufen oder abwarten sollten.',
+          items: [
+            '31. August 2026 — Kaliforniens SB 868 muss die Assembly vor Ende der Sitzungsperiode passieren, sonst stockt der Entwurf bis 2027.',
+            '~September 2026 — New Yorks SUNNY Act tritt 90 Tage nach der Unterzeichnung in Kraft, sofern Gouverneurin Hochul unterschreibt.',
+            '1. Oktober 2026 — Die Bestimmungen von Connecticuts HB 5340 treten in Kraft.',
+            '1. Januar 2027 — Colorados HB26-1007 tritt in Kraft, mit der höchsten bestätigten US-Wattgrenze (1.920 W) und einem ausdrücklichen Verbot von HOA-/Vermieter-Einschränkungen.',
+            'Q3–Q4 2026 — Der VP of Engineering von UL selbst hat vorausgesagt, dass die ersten UL-3700-zertifizierten Produkte in diesem Zeitraum in den Handel kommen, wenngleich kein festes Datum bestätigt ist.',
+            'Sitzungsperioden 2027 — New Jersey, Pennsylvania, Oregon, Washington und rund ein Dutzend weitere Bundesstaaten mit stockenden Verfahren werden voraussichtlich neue Entwürfe einbringen.',
+          ],
+        },
+        checkYourState: {
+          title: 'Prüfen Sie den Status Ihres eigenen Bundesstaats vor dem Kauf',
+          content: 'Dieser Artikel behandelt die fünf Bundesstaaten mit den unterschiedlichsten rechtlichen Ergebnissen. Den vollständigen Status für alle 50 Bundesstaaten, aktuelle Wattgrenzen sowie bestätigte Unterzeichnungs- und Inkrafttretensdaten finden Sie im [bundesstaatlichen Rechts-Tracker](/de/balcony-solar/balcony-solar-legal-us-states), der angesichts der schnellen Entwicklung alle 60 Tage aktualisiert wird, sowie im [globalen Länderleitfaden](/de/balcony-solar/is-balcony-solar-legal-country-guide), wenn Sie außerhalb der USA leben.',
+        },
+        faqSection: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Ist Balkonsolar in den USA legal?',
+              a: 'Das hängt vollständig vom Bundesstaat ab — es gibt kein bundesweites Gesetz zu Balkonsolar. Acht Bundesstaaten haben mit Stand Juli 2026 Gesetze unterzeichnet (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), ein weiterer (New York) hat sein Parlament passiert und wartet auf die Unterschrift der Gouverneurin, und die meisten anderen Bundesstaaten haben das Thema noch gar nicht spezifisch geregelt.',
+            },
+            {
+              q: 'Ist Balkonsolar in Kalifornien legal?',
+              a: 'Mit Stand Juli 2026 noch nicht. Die aktuellen CPUC-Netzanbindungsvorschriften behandeln jedes netzgekoppelte Gerät unabhängig von seiner Größe gleich, sodass der Anschluss ohne Vereinbarung mit dem Versorgungsunternehmen heute nicht legal ist. SB 868 würde das beheben, muss aber bis zum 31. August 2026 die Assembly passieren.',
+            },
+            {
+              q: 'Ist Balkonsolar in Florida legal?',
+              a: 'Florida hat keinen Gesetzentwurf zu Steckersolar. Sein ansonsten starkes Solarrechte-Gesetz (F.S. 163.04) schließt Balkonbrüstungen in Eigentumswohnungen und Mietwohnungen ausdrücklich aus, was den primären Anwendungsfall für Balkonsolar in Mehrfamilienhäusern blockiert.',
+            },
+            {
+              q: 'Ist Balkonsolar in Texas legal?',
+              a: 'Es gibt kein Landesgesetz, das es erlaubt oder verbietet. In der Praxis hängt die Legalität vom jeweiligen Versorgungsunternehmen und Stromanbieter (REP) eines Bewohners ab, da die für große Dachanlagen geschriebenen Standard-Netzanbindungsvorschriften technisch für jedes netzgekoppelte Gerät gelten.',
+            },
+            {
+              q: 'Was ist UL 3700, und warum ist es für die Legalität wichtig?',
+              a: 'UL 3700 ist der US-Sicherheitszertifizierungsstandard für Steckersolarsysteme, veröffentlicht von UL Solutions im Dezember 2025. Jedes verabschiedete Landesgesetz verlangt diesen Standard oder ein Äquivalent, aber mit Stand Mitte 2026 hat noch kein vollständiges Balkonsolarsystem die Zertifizierung abgeschlossen — legal konforme Hardware ist also selbst in Bundesstaaten, in denen das Gesetz bereits in Kraft ist, noch nicht vollständig verfügbar.',
+            },
+            {
+              q: 'Warum darf ich mit diesen Gesetzen keinen überschüssigen Strom ins Netz zurückverkaufen?',
+              a: 'Jeder verabschiedete und anstehende Gesetzentwurf schließt Balkonsolar bewusst von der Netzeinspeisungsvergütung aus. Der Verzicht auf eine Vergütung für eingespeisten Strom beseitigt den Hauptgrund, aus dem ein Versorgungsunternehmen gegen das Gesetz Einwände erheben könnte — deshalb wurden diese Gesetzentwürfe in sehr unterschiedlichen Parlamenten mit nahezu einstimmigen Mehrheiten verabschiedet.',
+            },
+            {
+              q: 'Kann mein Vermieter oder meine HOA ein Balkonsolarpanel verbieten?',
+              a: 'Das hängt vom Bundesstaat ab. Colorados Gesetz untersagt Vermietern und HOAs ausdrücklich, konforme Geräte zu verbieten. Die meisten anderen Bundesstaaten mit verabschiedetem Gesetz stützen sich auf allgemeine Solarzugangsrechte, die nicht mit Blick auf Balkonpanels formuliert wurden, sodass HOA-Einschränkungen weiterhin gelten können — prüfen Sie das Gesetz Ihres konkreten Bundesstaats, bevor Sie von einem Schutz ausgehen.',
+            },
+            {
+              q: 'Wann werden weitere Bundesstaaten Balkonsolar-Gesetze verabschieden?',
+              a: 'Dreißig oder mehr Bundesstaaten sowie Washington, D.C. haben Gesetzentwürfe eingebracht oder befinden sich auf dem Weg dorthin. Kaliforniens Frist ist August 2026; mehrere andere Bundesstaaten (New Jersey, Massachusetts, Pennsylvania, Ohio, Michigan) sind aktiv, aber noch nicht terminiert. Bundesstaaten, in denen Gesetzentwürfe 2025–2026 ins Stocken gerieten oder scheiterten, werden voraussichtlich in den Sitzungsperioden 2027 neu einbringen.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Ist Balkonsolar in den USA legal?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Das hängt vollständig vom Bundesstaat ab — es gibt kein bundesweites Gesetz zu Balkonsolar. Acht Bundesstaaten haben mit Stand Juli 2026 Gesetze unterzeichnet (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), ein weiterer (New York) hat sein Parlament passiert und wartet auf die Unterschrift der Gouverneurin, und die meisten anderen Bundesstaaten haben das Thema noch gar nicht spezifisch geregelt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist Balkonsolar in Kalifornien legal?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Mit Stand Juli 2026 noch nicht. Die aktuellen CPUC-Netzanbindungsvorschriften behandeln jedes netzgekoppelte Gerät unabhängig von seiner Größe gleich, sodass der Anschluss ohne Vereinbarung mit dem Versorgungsunternehmen heute nicht legal ist. SB 868 würde das beheben, muss aber bis zum 31. August 2026 die Assembly passieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist Balkonsolar in Florida legal?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Florida hat keinen Gesetzentwurf zu Steckersolar. Sein ansonsten starkes Solarrechte-Gesetz (F.S. 163.04) schließt Balkonbrüstungen in Eigentumswohnungen und Mietwohnungen ausdrücklich aus, was den primären Anwendungsfall für Balkonsolar in Mehrfamilienhäusern blockiert.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist Balkonsolar in Texas legal?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Es gibt kein Landesgesetz, das es erlaubt oder verbietet. In der Praxis hängt die Legalität vom jeweiligen Versorgungsunternehmen und Stromanbieter (REP) eines Bewohners ab, da die für große Dachanlagen geschriebenen Standard-Netzanbindungsvorschriften technisch für jedes netzgekoppelte Gerät gelten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist UL 3700, und warum ist es für die Legalität wichtig?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'UL 3700 ist der US-Sicherheitszertifizierungsstandard für Steckersolarsysteme, veröffentlicht von UL Solutions im Dezember 2025. Jedes verabschiedete Landesgesetz verlangt diesen Standard oder ein Äquivalent, aber mit Stand Mitte 2026 hat noch kein vollständiges Balkonsolarsystem die Zertifizierung abgeschlossen — legal konforme Hardware ist also selbst in Bundesstaaten, in denen das Gesetz bereits in Kraft ist, noch nicht vollständig verfügbar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Warum darf ich mit diesen Gesetzen keinen überschüssigen Strom ins Netz zurückverkaufen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Jeder verabschiedete und anstehende Gesetzentwurf schließt Balkonsolar bewusst von der Netzeinspeisungsvergütung aus. Der Verzicht auf eine Vergütung für eingespeisten Strom beseitigt den Hauptgrund, aus dem ein Versorgungsunternehmen gegen das Gesetz Einwände erheben könnte — deshalb wurden diese Gesetzentwürfe in sehr unterschiedlichen Parlamenten mit nahezu einstimmigen Mehrheiten verabschiedet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Kann mein Vermieter oder meine HOA ein Balkonsolarpanel verbieten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Das hängt vom Bundesstaat ab. Colorados Gesetz untersagt Vermietern und HOAs ausdrücklich, konforme Geräte zu verbieten. Die meisten anderen Bundesstaaten mit verabschiedetem Gesetz stützen sich auf allgemeine Solarzugangsrechte, die nicht mit Blick auf Balkonpanels formuliert wurden, sodass HOA-Einschränkungen weiterhin gelten können — prüfen Sie das Gesetz Ihres konkreten Bundesstaats, bevor Sie von einem Schutz ausgehen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Wann werden weitere Bundesstaaten Balkonsolar-Gesetze verabschieden?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Dreißig oder mehr Bundesstaaten sowie Washington, D.C. haben Gesetzentwürfe eingebracht oder befinden sich auf dem Weg dorthin. Kaliforniens Frist ist August 2026; mehrere andere Bundesstaaten (New Jersey, Massachusetts, Pennsylvania, Ohio, Michigan) sind aktiv, aber noch nicht terminiert. Bundesstaaten, in denen Gesetzentwürfe 2025–2026 ins Stocken gerieten oder scheiterten, werden voraussichtlich in den Sitzungsperioden 2027 neu einbringen.',
+            },
+          },
+        ],
+      },
+    },
+    es: {
+      category: 'Política Energética',
+      title: 'La carrera por legalizar la energía solar de balcón en Estados Unidos: Utah, California, Florida, Texas y Nueva York comparados (2026)',
+      seoTitle: 'Leyes de solar de balcón en EE. UU. 2026: 5 estados comparados',
+      intro: 'Ocho estados de EE. UU. han convertido en ley la legislación sobre energía solar de balcón y un noveno está a una firma de distancia, pero Florida y Texas no tienen ningún proyecto de ley sobre solar enchufable. Así es como cinco estados — Utah, California, Florida, Texas y Nueva York — llegaron a cinco resultados legales completamente distintos con la misma tecnología.',
+      publishDate: 'Publicado el 16 de julio de 2026',
+      readTime: '13 min de lectura',
+      metaDescription: 'La solar de balcón es legal en 8 estados de EE. UU. y está pendiente en un noveno, pero no en Florida ni en Texas. Compara las leyes de 2026 de Utah, California, Florida, Texas y Nueva York.',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Respuesta rápida',
+          items: [
+            'Ocho estados de EE. UU. habían firmado legislación sobre solar de balcón hasta julio de 2026: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont y Connecticut. Nueva York aprobó ambas cámaras legislativas 59-1 en mayo de 2026 y espera la firma del gobernador, lo que la convertiría en el noveno estado.',
+            'La HB 340 de Utah (firmada en marzo de 2025) fue la primera, y exime de las normas de interconexión eléctrica a los dispositivos de hasta 1.200 W — pero el estándar de seguridad del que depende la ley, UL 3700, no se publicó hasta diciembre de 2025.',
+            'La SB 868 de California pasó el pleno del Senado 35-1 y una comisión de la Asamblea 18-0, pero debe superar la Comisión de Asignaciones de la Asamblea antes del 31 de agosto de 2026 o muere para esta sesión.',
+            'Florida y Texas no tienen ningún proyecto de ley sobre solar enchufable. El propio estatuto de derechos solares de Florida excluye explícitamente las barandillas de patio en condominios y apartamentos; Texas no tiene un marco estatal, así que la legalidad depende de qué empresa eléctrica y proveedor minorista de electricidad tenga cada residente.',
+            'Ningún sistema solar enchufable había recibido la certificación completa UL 3700 hasta mediados de 2026, aunque la ley de Utah está vigente desde mayo de 2025 — el marco legal va actualmente por delante del hardware certificado.',
+            'Toda ley estatal promulgada excluye por diseño la solar de balcón de la medición neta (net metering) — una decisión deliberada que elimina el principal motivo por el que las empresas eléctricas podrían oponerse.',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: 'Qué es realmente la energía solar de balcón',
+          content: [
+            '**La solar de balcón (también llamada solar enchufable, o "Balkonkraftwerk" en su mercado de origen alemán) es un pequeño sistema fotovoltaico, típicamente de 400 a 1.920 vatios, que se conecta directamente a un enchufe doméstico estándar.** Permite a inquilinos y residentes de apartamentos generar electricidad sin acceso al tejado, papeleo de interconexión con la empresa eléctrica ni una instalación de cinco cifras.',
+            'La categoría ya está probada a gran escala: Alemania tiene aproximadamente 1,3 millones de sistemas registrados (más unos 3 millones sin registrar estimados) y unos 2,5 GW de capacidad instalada a mediados de 2026. Estados Unidos está siguiendo el mismo patrón que Alemania — solo que una década después, y estado por estado en lugar de a nivel nacional. Para una explicación completa de cómo funciona el hardware, consulta [¿Qué es la solar de balcón?](/es/balcony-solar/what-is-balcony-solar)',
+          ],
+        },
+        whyItWasIllegal: {
+          title: 'Por qué la solar de balcón era, en la práctica, ilegal en EE. UU. hasta 2024',
+          content: [
+            '**Un dispositivo solar enchufable empuja energía en sentido contrario a través de un enchufe estándar, hacia el cableado de una vivienda — justo lo opuesto para lo que se diseñó ese enchufe.** Las normas de interconexión eléctrica de EE. UU. se redactaron para sistemas de tejado de 5–25 kW, y exigían acuerdos, tarifas e inspecciones que podían duplicar el coste de un kit de balcón de 500 dólares. Hasta 2024, ningún estado distinguía un panel de balcón de 400 W de una instalación completa en tejado, lo que hacía la categoría inviable en todas partes.',
+            'El historial de Alemania catalizó directamente la ola legislativa estadounidense. El representante de Utah Raymond Ward leyó un artículo del New York Times sobre los sistemas Balkonkraftwerk alemanes y presentó el proyecto de ley que se convirtió en la HB 340, citando explícitamente el historial de seguridad de Alemania: "La electricidad es la misma allí que aquí. Todas las mismas leyes de la física funcionan y han demostrado ser seguras."',
+          ],
+        },
+        theTemplate: {
+          title: 'Todos los proyectos de ley estatales siguen la misma plantilla',
+          content: [
+            '**Todo proyecto de ley estatal promulgado o pendiente está modelado sobre la HB 340 de Utah y sigue una estructura casi idéntica:** define el dispositivo como un electrodoméstico en lugar de una planta de energía, lo exime de la interconexión con la empresa eléctrica por debajo de un límite de vatios, exige la certificación de seguridad UL 3700 (o equivalente), obliga a un apagado antiisla durante cortes de red y excluye explícitamente el dispositivo de la medición neta.',
+            'Ese último punto es una decisión política deliberada. Al renunciar a la compensación por el exceso de energía exportado a la red, los promotores del proyecto eliminan lo único a lo que las empresas eléctricas podrían oponerse — verse obligadas a pagar por microgeneración o rediseñar tarifas. Es la razón individual más importante por la que estos proyectos han sido aprobados con votos casi unánimes y bipartidistas en estados tan distintos como Utah y Nueva York.',
+          ],
+        },
+        stateComparison: {
+          title: 'Cinco estados, cinco resultados',
+          content: 'La misma tecnología ha producido una ley promulgada, un proyecto sobre la mesa del gobernador, un proyecto atascado en comisión y dos estados sin ningún proyecto de ley.',
+          rows: [
+            { Estado: 'Utah', 'Situación legal': 'Promulgada (mayo de 2025)', 'Límite de vatios': '1.200 W', 'Barrera clave': 'Aún no hay productos certificados con UL 3700' },
+            { Estado: 'California', 'Situación legal': 'Proyecto pendiente (SB 868)', 'Límite de vatios': '1.200 W si se aprueba', 'Barrera clave': 'Se necesita voto de la Asamblea antes del 31 de agosto de 2026' },
+            { Estado: 'Florida', 'Situación legal': 'Sin proyecto de ley', 'Límite de vatios': 'N/D', 'Barrera clave': 'El estatuto excluye barandillas de patio en condominios/apartamentos' },
+            { Estado: 'Texas', 'Situación legal': 'Sin proyecto de ley', 'Límite de vatios': 'N/D', 'Barrera clave': 'La legalidad varía según la empresa eléctrica y el proveedor minorista' },
+            { Estado: 'Nueva York', 'Situación legal': 'Aprobada por la Legislatura 59-1; pendiente de firma', 'Límite de vatios': '1.200 W si se firma', 'Barrera clave': 'La firma de la gobernadora Hochul' },
+          ],
+          columns: ['Estado', 'Situación legal', 'Límite de vatios', 'Barrera clave'],
+        },
+        utah: {
+          title: 'Utah: el pionero que aprobó una ley antes de que existiera el estándar de seguridad',
+          content: [
+            '**La HB 340 de Utah, las Enmiendas de Energía Solar, pasó ambas cámaras de la legislatura por unanimidad y fue firmada por el gobernador Spencer Cox en marzo de 2025, entrando en vigor el 7 de mayo de 2025.** Crea una categoría de "pequeños dispositivos portátiles de generación solar" limitada a 1.200 W, los exime de acuerdos, tarifas y requisitos de aprobación de interconexión con la empresa eléctrica, y no exige ninguna notificación a la empresa eléctrica.',
+            'El patrocinador, el representante Raymond Ward, enmarcó el proyecto por completo en torno a la elección del consumidor y el ahorro de costes, más que en la política climática — "Es genial para cualquiera que quiera un poco de energía solar pero no quiera pagar 30.000 dólares por una instalación en el tejado" — un enfoque que resultó replicable en estados ideológicamente distintos.',
+            '**La trampa: la HB 340 nombraba a UL Solutions en la legislación y exigía un estándar de seguridad que aún no existía.** UL publicó la UL 3700, la certificación de la que depende la ley, en diciembre de 2025 — ocho meses después de que la ley entrara en vigor. Hasta mediados de 2026, ningún sistema solar enchufable completo había obtenido la certificación UL 3700 completa, así que los productos comercializados para el mercado de Utah aún no se pueden enchufar legalmente según la letra de la ley.',
+          ],
+        },
+        california: {
+          title: 'California: 44 % de inquilinos, tarifas de 31 ¢/kWh y un proyecto de ley que corre contra un plazo',
+          content: [
+            '**La solar de balcón sigue siendo ilegal de conectar en California a fecha de julio de 2026** — las normas de interconexión del estado no distinguen entre un panel de balcón de 300 W y un sistema de tejado de 25 kW, así que conectar uno sin un acuerdo con la empresa eléctrica viola hoy las normas de la CPUC.',
+            'La SB 868 del senador estatal Scott Wiener, la Plug Into the Sun Act, solucionaría esto al definir los dispositivos solares portátiles (400–1.200 W) como electrodomésticos, no como plantas de energía. Su trayectoria hasta ahora: avance unánime en la comisión de Energía, Servicios Públicos y Comunicaciones del Senado; aprobada por Asignaciones del Senado 7-0; aprobada por el pleno del Senado 35-1; aprobada por la comisión de Servicios Públicos y Energía de la Asamblea 18-0. **El proyecto se encuentra ahora en Asignaciones de la Asamblea, donde una estimación de costes de la CPUC de entre 200.000 y 500.000 dólares en costes administrativos anuales activó el archivo de suspensión y aplazó la audiencia a agosto.** La Asamblea debe aprobarlo antes de que termine agosto de 2026 para que avance en esta sesión; si se firma, entra en vigor el 1 de enero de 2027.',
+            'Lo que está en juego aquí es lo más alto de cualquier estado: aproximadamente el 44 % de los hogares californianos alquila, las tarifas eléctricas medias estatales rondan los 31,4 ¢/kWh, y la NEM 3.0 recortó la compensación por exportación de solar de tejado en aproximadamente un 75 % — lo que, paradójicamente, refuerza el argumento a favor del modelo de autoconsumo de la solar de balcón, ya que nunca dependió de los créditos por exportación.',
+          ],
+        },
+        florida: {
+          title: 'Florida: una sólida ley de derechos solares con una excepción que bloquea exactamente ese caso de uso',
+          content: [
+            '**Florida no tiene ningún proyecto de ley sobre solar de balcón, ni promulgado ni presentado, a fecha de julio de 2026** — pese a tener uno de los estatutos de acceso solar más sólidos del país.',
+            'El Estatuto de Florida 163.04 prohíbe a las asociaciones de propietarios (HOA) y a las restricciones de escritura bloquear instalaciones solares en viviendas. Pero el 163.04(4) contiene una excepción explícita: **"Esta sección no se aplicará a las barandillas de patio en condominios, cooperativas o apartamentos."** Esa cláusula — insertada como una concesión tardía al lobby de las empresas eléctricas y de edificios multifamiliares — bloquea precisamente el caso de uso para el que se construye la solar de balcón. Un propietario de vivienda unifamiliar tiene sólidos derechos solares; un residente de condominio o apartamento que monta un panel en una barandilla no tiene ninguno bajo este estatuto.',
+            'El caso de mercado es sólido por lo demás — una densa población de inquilinos y residentes de condominios en el sur de Florida, cargas de aire acondicionado impulsadas por el clima que coinciden con los horarios de generación solar, y la firma del gobernador DeSantis en junio de 2025 de la HB 683, que agiliza los permisos de solar de tejado — lo que demuestra que la legislatura está dispuesta a recortar trámites burocráticos solares cuando quiere. Eliminar la excepción de las barandillas de patio en el §163.04 es el objetivo legislativo individual más accionable para los defensores en Florida.',
+          ],
+        },
+        texas: {
+          title: 'Texas: sin prohibición, sin exención — solo "depende de tu empresa eléctrica"',
+          content: [
+            '**Texas no tiene ningún proyecto de ley sobre solar enchufable, ni promulgado ni pendiente, a mediados de 2026.** A diferencia de la excepción estatutaria explícita de Florida, la situación de Texas es de ambigüedad regulatoria: las normas de interconexión estándar, redactadas para sistemas de tejado de 5 kW o más, técnicamente se aplican a cualquier dispositivo conectado a la red, pero si una empresa eléctrica en concreto lo hace cumplir frente a un panel enchufable de 1.200 W varía caso por caso.',
+            'La red desregulada de ERCOT — que cubre aproximadamente el 90 % del estado — significa que los clientes residenciales eligen un proveedor minorista de electricidad (REP) en un mercado competitivo, y la tarifa de ese REP rige qué se puede enchufar. Súmale las empresas eléctricas municipales fuera de la competencia minorista de ERCOT (Austin Energy, CPS Energy) y aproximadamente 70 cooperativas eléctricas rurales independientes, y una respuesta general a "¿es legal la solar de balcón en Texas?" simplemente no existe — depende de la empresa eléctrica y el REP específicos.',
+            'La sesión legislativa de 2025 del estado aprobó tres leyes relacionadas con la solar (SB 1202, que agiliza los permisos; SB 1697, guías para el consumidor; SB 1036, normas para minoristas de solar residencial), además de la HB 431, que extiende las protecciones solares de las HOA a las tejas solares — pero ninguna aborda específicamente los dispositivos enchufables. El requisito de la SB 1036 de que los acuerdos de venta incluyan un lenguaje sobre la aprobación de interconexión con la empresa eléctrica podría, si acaso, complicar el panorama para los sistemas enchufables comercializados.',
+          ],
+        },
+        newYork: {
+          title: 'Nueva York: el mercado con más en juego, a una firma de distancia',
+          content: [
+            '**La SUNNY Act de Nueva York (A.9111C/S.8512C) fue aprobada por toda la legislatura el 28 y 29 de mayo de 2026, con el Senado votando 59-1 para concurrir con las enmiendas de la Asamblea — y ahora espera la firma de la gobernadora Kathy Hochul.** Si se firma, entra en vigor 90 días después y Nueva York se convertirá en el noveno estado promulgado.',
+            'El proyecto crea una categoría de "dispositivo portátil de generación solar" bajo la Ley de Servicio Público, que exige certificación por un laboratorio reconocido a nivel nacional y protección antiisla, y exime a los dispositivos de las normas de interconexión y medición neta de la NYSERDA — modelado explícitamente sobre la HB 340 de Utah.',
+            'El caso de mercado aquí es el más fuerte de cualquier estado analizado: la tarifa residencial media estatal de Nueva York ronda los 27–30 ¢/kWh (los clientes de Con Edison en la ciudad de Nueva York suelen superar los 30 ¢/kWh), y la ciudad de Nueva York tiene una de las tasas de propiedad de vivienda más bajas del país, en torno al 32 % — lo que significa que la mayoría de los residentes alquilan apartamentos sin ninguna vía hacia la solar de tejado. Se estima que un sistema de balcón de 800 W a las tarifas de Nueva York ahorra aproximadamente entre 203 y 236 dólares al año, una de las cifras más altas de cualquier estado analizado.',
+          ],
+        },
+        ulCertification: {
+          title: 'El cuello de botella de la UL 3700: las leyes existen, los productos certificados aún no',
+          content: [
+            '**Toda ley estatal promulgada condiciona el uso legal a la certificación UL 3700 o equivalente — y a mediados de 2026, ningún sistema solar enchufable completo la había obtenido.** UL Solutions publicó el Esbozo de Investigación de la UL 3700 en diciembre de 2025; las pruebas de certificación se abrieron en enero de 2026. El vicepresidente de Ingeniería de UL, Kenneth Boyce, dijo en abril de 2026 que se esperaban productos certificados "en meses, quizá incluso semanas", pero al momento de escribir ninguno había completado el proceso.',
+            'La UL 3700 evalúa tres riesgos: condiciones de sobrecorriente que podrían sobrecargar un disyuntor, incompatibilidad con GFCI que podría anular silenciosamente la protección contra fallos a tierra, y seguridad al tacto en las clavijas expuestas del enchufe cuando está desconectado. También exige protección antiisla — apagado automático en milisegundos ante un corte de red, para proteger a los trabajadores de línea de la empresa eléctrica.',
+            'Fabricantes como EcoFlow están en conversaciones activas de certificación; el STREAM Ultra de EcoFlow se puso a la venta en Utah a mediados de 2026 pendiente de la certificación completa. Algunos compradores técnicamente sofisticados han ensamblado sistemas a partir de componentes individualmente listados por UL, pero un sistema ensamblado a partir de piezas no es lo mismo que un sistema integrado y certificado — su estatus legal bajo leyes como la HB 340 es incierto. Consulta las opciones actuales en [Las mejores baterías domésticas de solar de balcón para EE. UU.](/es/balcony-solar/best-balcony-solar-home-battery-us-2026) y [EcoFlow frente a Anker frente a Zendure](/es/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar).',
+          ],
+        },
+        advocacy: {
+          title: 'Quién impulsa esto: Bright Saver y el representante Ward',
+          content: [
+            'La organización sin fines de lucro Bright Saver, fundada en enero de 2025 con 500.000 dólares en subvenciones iniciales, se ha convertido en la principal fuerza de cabildeo y educación en EE. UU. para esta categoría, proporcionando legislación modelo y organizando recursos para legisladores estado por estado — modelada explícitamente sobre el manual de adopción de la UE.',
+            'El representante Ward de Utah ha asesorado personalmente a legisladores en Hawái, Washington, Minnesota, Colorado y otros estados desde que se aprobó su proyecto de ley — lo cual es el mecanismo directo detrás de la aparición de un lenguaje casi idéntico en los proyectos de ley de legislaturas ideológicamente diversas.',
+          ],
+        },
+        whatsNext: {
+          title: 'Qué vigilar hasta principios de 2027',
+          content: 'El ritmo de esta categoría es inusualmente rápido para la legislación energética estatal — sigue estas fechas si estás decidiendo si comprar ahora o esperar.',
+          items: [
+            '31 de agosto de 2026 — la SB 868 de California debe pasar la Asamblea antes de que termine la sesión o quedará estancada hasta 2027.',
+            '~septiembre de 2026 — la SUNNY Act de Nueva York entra en vigor 90 días después de firmarse, si la gobernadora Hochul la firma.',
+            '1 de octubre de 2026 — entran en vigor las disposiciones de la HB 5340 de Connecticut.',
+            '1 de enero de 2027 — la HB26-1007 de Colorado entra en vigor con el mayor límite de vatios confirmado en EE. UU. (1.920 W) y una prohibición explícita de restricciones de HOA/arrendadores.',
+            'Tercer–cuarto trimestre de 2026 — el propio vicepresidente de Ingeniería de UL ha previsto que los primeros productos certificados con UL 3700 lleguen al mercado minorista en esta ventana, aunque no hay fecha firme confirmada.',
+            'Sesiones de 2027 — se espera que Nueva Jersey, Pensilvania, Oregón, Washington y aproximadamente una decena de estados más estancados vuelvan a presentar sus proyectos.',
+          ],
+        },
+        checkYourState: {
+          title: 'Comprueba el estado de tu propio estado antes de comprar',
+          content: 'Este artículo cubre los cinco estados con los resultados legales más diferenciados. Para el estado completo de los 50 estados, los límites de vatios vigentes y las fechas de firma/entrada en vigor confirmadas, consulta el [rastreador legal estado por estado](/es/balcony-solar/balcony-solar-legal-us-states), que se actualiza cada 60 días dado lo rápido que cambia esta lista, y la [guía global país por país](/es/balcony-solar/is-balcony-solar-legal-country-guide) si estás fuera de EE. UU.',
+        },
+        faqSection: {
+          title: 'Preguntas frecuentes',
+          faqs: [
+            {
+              q: '¿Es legal la solar de balcón en Estados Unidos?',
+              a: 'Depende por completo del estado — no existe una ley federal sobre solar de balcón. Ocho estados habían firmado legislación a fecha de julio de 2026 (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), uno más (Nueva York) ha sido aprobado por su legislatura y espera la firma del gobernador, y la mayoría de los demás estados no lo han abordado específicamente en absoluto.',
+            },
+            {
+              q: '¿Es legal la solar de balcón en California?',
+              a: 'Todavía no, a fecha de julio de 2026. Las normas de interconexión vigentes de la CPUC tratan igual a cualquier dispositivo conectado a la red sin importar su tamaño, así que conectar uno sin un acuerdo con la empresa eléctrica no es legal hoy. La SB 868 solucionaría esto, pero debe pasar la Asamblea antes del 31 de agosto de 2026.',
+            },
+            {
+              q: '¿Es legal la solar de balcón en Florida?',
+              a: 'Florida no tiene ningún proyecto de ley sobre solar enchufable. Su estatuto de derechos solares, por lo demás sólido (F.S. 163.04), excluye explícitamente las barandillas de patio en condominios y apartamentos, lo que bloquea el caso de uso principal de la solar de balcón en viviendas multifamiliares.',
+            },
+            {
+              q: '¿Es legal la solar de balcón en Texas?',
+              a: 'No existe ninguna ley estatal que la permita ni que la prohíba. La legalidad en la práctica depende de la empresa eléctrica y el proveedor minorista de electricidad (REP) específicos que tenga cada residente, ya que las normas de interconexión estándar, redactadas para grandes sistemas de tejado, técnicamente se aplican a cualquier dispositivo conectado a la red.',
+            },
+            {
+              q: '¿Qué es la UL 3700 y por qué importa para la legalidad?',
+              a: 'La UL 3700 es el estándar de certificación de seguridad de EE. UU. para sistemas solares enchufables, publicado por UL Solutions en diciembre de 2025. Toda ley estatal promulgada la exige (o una equivalente), pero a mediados de 2026 ningún sistema completo de solar de balcón había completado la certificación — así que el hardware legalmente conforme aún no está totalmente disponible, incluso en los estados donde la ley ya está vigente.',
+            },
+            {
+              q: '¿Por qué estas leyes no me permiten vender el exceso de energía a la red?',
+              a: 'Todo proyecto de ley promulgado y pendiente excluye deliberadamente la solar de balcón de la medición neta. Renunciar a la compensación por exportación elimina el principal motivo por el que una empresa eléctrica podría oponerse a la ley, razón por la cual estos proyectos han sido aprobados con votos casi unánimes en legislaturas estatales muy diferentes.',
+            },
+            {
+              q: '¿Puede mi arrendador o mi HOA prohibir un panel solar de balcón?',
+              a: 'Depende del estado. La ley de Colorado prohíbe explícitamente a arrendadores y HOA prohibir dispositivos conformes. La mayoría de los demás estados con leyes promulgadas se apoyan en derechos generales de acceso solar que no se redactaron pensando en paneles de balcón, así que las restricciones de las HOA aún podrían aplicarse — comprueba la ley específica de tu estado antes de dar por hecha la protección.',
+            },
+            {
+              q: '¿Cuándo aprobarán más estados leyes de solar de balcón?',
+              a: 'Treinta o más estados y Washington, D.C. han presentado o están tramitando proyectos de ley. El plazo de California es agosto de 2026; varios otros estados (Nueva Jersey, Massachusetts, Pensilvania, Ohio, Míchigan) están activos pero aún no tienen fecha programada. Se espera que los estados donde los proyectos se estancaron o fracasaron en 2025–2026 los vuelvan a presentar en las sesiones de 2027.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Es legal la solar de balcón en Estados Unidos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Depende por completo del estado — no existe una ley federal sobre solar de balcón. Ocho estados habían firmado legislación a fecha de julio de 2026 (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), uno más (Nueva York) ha sido aprobado por su legislatura y espera la firma del gobernador, y la mayoría de los demás estados no lo han abordado específicamente en absoluto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es legal la solar de balcón en California?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Todavía no, a fecha de julio de 2026. Las normas de interconexión vigentes de la CPUC tratan igual a cualquier dispositivo conectado a la red sin importar su tamaño, así que conectar uno sin un acuerdo con la empresa eléctrica no es legal hoy. La SB 868 solucionaría esto, pero debe pasar la Asamblea antes del 31 de agosto de 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es legal la solar de balcón en Florida?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Florida no tiene ningún proyecto de ley sobre solar enchufable. Su estatuto de derechos solares, por lo demás sólido (F.S. 163.04), excluye explícitamente las barandillas de patio en condominios y apartamentos, lo que bloquea el caso de uso principal de la solar de balcón en viviendas multifamiliares.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es legal la solar de balcón en Texas?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No existe ninguna ley estatal que la permita ni que la prohíba. La legalidad en la práctica depende de la empresa eléctrica y el proveedor minorista de electricidad (REP) específicos que tenga cada residente, ya que las normas de interconexión estándar, redactadas para grandes sistemas de tejado, técnicamente se aplican a cualquier dispositivo conectado a la red.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué es la UL 3700 y por qué importa para la legalidad?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La UL 3700 es el estándar de certificación de seguridad de EE. UU. para sistemas solares enchufables, publicado por UL Solutions en diciembre de 2025. Toda ley estatal promulgada la exige (o una equivalente), pero a mediados de 2026 ningún sistema completo de solar de balcón había completado la certificación — así que el hardware legalmente conforme aún no está totalmente disponible, incluso en los estados donde la ley ya está vigente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Por qué estas leyes no me permiten vender el exceso de energía a la red?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Todo proyecto de ley promulgado y pendiente excluye deliberadamente la solar de balcón de la medición neta. Renunciar a la compensación por exportación elimina el principal motivo por el que una empresa eléctrica podría oponerse a la ley, razón por la cual estos proyectos han sido aprobados con votos casi unánimes en legislaturas estatales muy diferentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puede mi arrendador o mi HOA prohibir un panel solar de balcón?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Depende del estado. La ley de Colorado prohíbe explícitamente a arrendadores y HOA prohibir dispositivos conformes. La mayoría de los demás estados con leyes promulgadas se apoyan en derechos generales de acceso solar que no se redactaron pensando en paneles de balcón, así que las restricciones de las HOA aún podrían aplicarse — comprueba la ley específica de tu estado antes de dar por hecha la protección.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuándo aprobarán más estados leyes de solar de balcón?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Treinta o más estados y Washington, D.C. han presentado o están tramitando proyectos de ley. El plazo de California es agosto de 2026; varios otros estados (Nueva Jersey, Massachusetts, Pensilvania, Ohio, Míchigan) están activos pero aún no tienen fecha programada. Se espera que los estados donde los proyectos se estancaron o fracasaron en 2025–2026 los vuelvan a presentar en las sesiones de 2027.',
+            },
+          },
+        ],
+      },
+    },
+    fr: {
+      category: 'Politique énergétique',
+      title: 'La course à la légalisation du solaire de balcon aux États-Unis : Utah, Californie, Floride, Texas et New York comparés (2026)',
+      seoTitle: 'Lois solaires de balcon aux États-Unis 2026 : 5 États comparés',
+      intro: 'Huit États américains ont promulgué une loi sur le solaire de balcon et un neuvième n\'attend plus qu\'une signature, mais la Floride et le Texas n\'ont aucun projet de loi sur le solaire enfichable. Voici comment cinq États — Utah, Californie, Floride, Texas et New York — ont abouti à cinq issues juridiques totalement différentes pour la même technologie.',
+      publishDate: 'Publié le 16 juillet 2026',
+      readTime: '13 min de lecture',
+      metaDescription: 'Le solaire de balcon est légal dans 8 États américains et en attente dans un 9e, mais pas en Floride ni au Texas. Comparez les lois 2026 de l\'Utah, de la Californie, de la Floride, du Texas et de New York.',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Réponse rapide',
+          items: [
+            'Huit États américains ont promulgué une loi sur le solaire de balcon en date de juillet 2026 : Utah, Maine, Virginie, Maryland, Colorado, New Hampshire, Vermont et Connecticut. New York a fait adopter le texte par les deux chambres 59 voix contre 1 en mai 2026 et attend la signature du gouverneur, ce qui en ferait le 9e État.',
+            'Le HB 340 de l\'Utah (signé en mars 2025) a été le premier, exemptant les appareils jusqu\'à 1 200 W des règles d\'interconnexion au réseau — mais la norme de sécurité dont dépend la loi, UL 3700, n\'a été publiée qu\'en décembre 2025.',
+            'Le SB 868 californien a été adopté par le Sénat au complet (35 voix contre 1) et par une commission de l\'Assemblée (18-0), mais doit franchir la commission des crédits de l\'Assemblée avant le 31 août 2026, sous peine de mourir pour la session.',
+            'La Floride et le Texas n\'ont aucun projet de loi sur le solaire enfichable. La propre loi de la Floride sur le droit au solaire exclut explicitement les balustrades de balcon dans les copropriétés et appartements ; le Texas n\'a aucun cadre étatique, la légalité dépendant du fournisseur d\'électricité et du distributeur du résident.',
+            'Aucun système solaire enfichable n\'avait obtenu la certification UL 3700 complète mi-2026, alors que la loi de l\'Utah est en vigueur depuis mai 2025 — le cadre légal devance actuellement le matériel certifié.',
+            'Chaque loi étatique promulguée exclut par conception le solaire de balcon du net metering — un compromis délibéré qui supprime la principale raison pour laquelle les fournisseurs d\'électricité pourraient s\'y opposer.',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: 'Qu\'est-ce que le solaire de balcon, concrètement',
+          content: [
+            '**Le solaire de balcon (aussi appelé solaire enfichable, ou « Balkonkraftwerk » dans son marché d\'origine allemand) est un petit système photovoltaïque, typiquement de 400 à 1 920 watts, qui se branche directement sur une prise domestique standard.** Il permet aux locataires et aux habitants d\'appartements de produire de l\'électricité sans accès à un toit, sans démarches d\'interconnexion auprès du fournisseur, et sans installation à cinq chiffres.',
+            'La catégorie a déjà fait ses preuves à grande échelle : l\'Allemagne compte environ 1,3 million de systèmes enregistrés (plus environ 3 millions non enregistrés) et environ 2,5 GW de capacité installée mi-2026. Les États-Unis suivent la même trajectoire que l\'Allemagne — avec une décennie de retard, et État par État plutôt qu\'au niveau national. Pour un tour d\'horizon complet du fonctionnement du matériel, voir [Qu\'est-ce que le solaire de balcon ?](/fr/balcony-solar/what-is-balcony-solar)',
+          ],
+        },
+        whyItWasIllegal: {
+          title: 'Pourquoi le solaire de balcon était de fait illégal aux États-Unis jusqu\'en 2024',
+          content: [
+            '**Un appareil solaire enfichable pousse l\'électricité en amont via une prise standard, jusque dans le câblage du logement — l\'inverse de ce pour quoi cette prise a été conçue.** Les règles américaines d\'interconnexion ont été écrites pour des installations de toit de 5 à 25 kW, exigeant des accords, des frais et des inspections qui pouvaient doubler le coût d\'un kit de balcon à 500 $. Jusqu\'en 2024, aucun État ne distinguait un panneau de balcon de 400 W d\'une installation de toit complète, ce qui rendait la catégorie impraticable partout.',
+            'Le bilan allemand a directement déclenché la vague législative américaine. Le représentant de l\'Utah Raymond Ward a lu un article du New York Times sur les systèmes Balkonkraftwerk allemands et a présenté le projet devenu HB 340, citant explicitement le bilan de sécurité allemand : « L\'électricité est la même là-bas qu\'ici. Les mêmes lois de la physique s\'appliquent et se sont révélées sûres. »',
+          ],
+        },
+        theTemplate: {
+          title: 'Chaque loi étatique suit le même modèle',
+          content: [
+            '**Chaque projet de loi promulgué ou en cours suit une structure quasi identique, calquée sur le HB 340 de l\'Utah :** définir l\'appareil comme un équipement domestique plutôt qu\'une centrale électrique, l\'exempter d\'interconnexion en dessous d\'un plafond de puissance, exiger la certification de sécurité UL 3700 (ou équivalente), imposer un arrêt anti-îlotage lors des coupures de réseau, et exclure explicitement l\'appareil du net metering.',
+            'Ce dernier point est un compromis politique délibéré. En renonçant à toute compensation pour l\'électricité excédentaire injectée sur le réseau, les auteurs des textes suppriment le seul argument que les fournisseurs pourraient opposer — devoir payer pour la microproduction ou revoir leurs tarifs. C\'est la raison principale pour laquelle ces lois ont été adoptées à des majorités quasi unanimes et transpartisanes dans des États aussi différents que l\'Utah et New York.',
+          ],
+        },
+        stateComparison: {
+          title: 'Cinq États, cinq résultats',
+          content: 'La même technologie a produit une loi promulguée, un texte sur le bureau du gouverneur, un texte bloqué en commission, et deux États sans aucun projet de loi.',
+          rows: [
+            { État: 'Utah', Statut: 'Promulguée (mai 2025)', 'Plafond de puissance': '1 200 W', 'Principal obstacle': 'Produits certifiés UL 3700 pas encore disponibles' },
+            { État: 'Californie', Statut: 'Projet en attente (SB 868)', 'Plafond de puissance': '1 200 W si adopté', 'Principal obstacle': 'Vote de l\'Assemblée requis avant le 31 août 2026' },
+            { État: 'Floride', Statut: 'Aucun projet', 'Plafond de puissance': 'N/A', 'Principal obstacle': 'La loi exclut les balustrades de copropriété/appartement' },
+            { État: 'Texas', Statut: 'Aucun projet', 'Plafond de puissance': 'N/A', 'Principal obstacle': 'La légalité varie selon le fournisseur et le distributeur' },
+            { État: 'New York', Statut: 'Adopté par le Parlement 59-1 ; en attente de signature', 'Plafond de puissance': '1 200 W si signé', 'Principal obstacle': 'Signature de la gouverneure Hochul' },
+          ],
+          columns: ['État', 'Statut', 'Plafond de puissance', 'Principal obstacle'],
+        },
+        utah: {
+          title: 'Utah : le pionnier qui a fait passer une loi avant même l\'existence de la norme de sécurité',
+          content: [
+            '**Le HB 340 de l\'Utah, les Solar Power Amendments, a été adopté à l\'unanimité par les deux chambres et signé par le gouverneur Spencer Cox en mars 2025, entrant en vigueur le 7 mai 2025.** Il crée une catégorie de « petits dispositifs portables de production solaire » plafonnés à 1 200 W, les exempte des accords d\'interconnexion, des frais et des exigences d\'approbation, et ne requiert aucune notification au fournisseur.',
+            'Le parrain du texte, le représentant Raymond Ward, a présenté le projet entièrement sous l\'angle du choix du consommateur et des économies, plutôt que de la politique climatique — « C\'est formidable pour quiconque veut un peu de solaire sans vouloir payer 30 000 $ pour une installation sur toit » — un cadrage qui s\'est avéré reproductible dans des États idéologiquement différents.',
+            '**Le hic : le HB 340 nommait UL Solutions dans le texte de loi et exigeait une norme de sécurité qui n\'existait pas encore.** UL a publié UL 3700, la certification dont dépend la loi, en décembre 2025 — huit mois après l\'entrée en vigueur de la loi. Mi-2026, aucun système solaire enfichable complet n\'avait obtenu la certification UL 3700 intégrale, si bien que les produits commercialisés pour le marché de l\'Utah ne peuvent toujours pas être légalement branchés au regard de la lettre de la loi.',
+          ],
+        },
+        california: {
+          title: 'Californie : 44 % de locataires, un tarif de 31 ¢/kWh, et un texte qui court contre une échéance',
+          content: [
+            '**Le solaire de balcon reste illégal à connecter en Californie en juillet 2026** — les règles d\'interconnexion de l\'État ne distinguent pas un panneau de balcon de 300 W d\'une installation de toit de 25 kW, si bien qu\'en connecter un sans accord avec le fournisseur enfreint aujourd\'hui les règles de la CPUC.',
+            'Le SB 868 du sénateur d\'État Scott Wiener, le Plug Into the Sun Act, corrigerait cela en définissant les dispositifs solaires portables (400-1 200 W) comme des appareils domestiques, non des centrales électriques. Sa trajectoire jusqu\'ici : adoption à l\'unanimité par la commission de l\'Énergie, des Services publics et des Communications du Sénat ; adoption 7-0 par la commission des crédits du Sénat ; adoption par le Sénat au complet 35-1 ; adoption 18-0 par la commission des Services publics et de l\'Énergie de l\'Assemblée. **Le texte se trouve désormais devant la commission des crédits de l\'Assemblée, où une estimation de la CPUC de 200 000 à 500 000 $ de coûts administratifs annuels a déclenché son inscription sur la liste de suspension et repoussé l\'audience à août.** L\'Assemblée doit l\'adopter avant fin août 2026 pour qu\'il avance cette session ; s\'il est signé, il entre en vigueur le 1er janvier 2027.',
+            'Les enjeux sont les plus élevés de tous les États suivis : environ 44 % des foyers californiens sont locataires, le tarif moyen d\'électricité dans l\'État avoisine 31,4 ¢/kWh, et NEM 3.0 a réduit la compensation pour l\'export du solaire de toit d\'environ 75 % — ce qui, paradoxalement, renforce l\'argument en faveur du modèle d\'autoconsommation du solaire de balcon, puisque celui-ci n\'a jamais reposé sur les crédits d\'export.',
+          ],
+        },
+        florida: {
+          title: 'Floride : une loi solide sur le droit au solaire, avec une exception qui bloque précisément ce cas d\'usage',
+          content: [
+            '**La Floride n\'a aucun projet de loi sur le solaire de balcon, ni promulgué ni déposé, en juillet 2026** — malgré l\'une des lois d\'accès au solaire les plus solides du pays.',
+            'Le Florida Statute 163.04 interdit aux copropriétés (HOA) et aux restrictions de titre de propriété de bloquer les installations solaires sur les logements. Mais le 163.04(4) contient une exception explicite : **« Cette section ne s\'applique pas aux balustrades de balcon dans les copropriétés, coopératives ou appartements. »** Cette clause — insérée en concession tardive au lobbying des fournisseurs et des immeubles collectifs — bloque exactement le cas d\'usage pour lequel le solaire de balcon a été conçu. Un propriétaire de maison individuelle dispose de solides droits solaires ; un résident de copropriété ou d\'appartement montant un panneau sur une balustrade n\'en a aucun au regard de cette loi.',
+            'Le potentiel de marché est par ailleurs solide — une forte densité de locataires et de copropriétaires dans le Sud de la Floride, des charges de climatisation liées au climat qui coïncident avec les horaires de production solaire, et la signature en juin 2025 par le gouverneur DeSantis du HB 683 simplifiant les permis solaires de toit — ce qui montre que le législateur est disposé à réduire les lourdeurs administratives quand il le souhaite. Supprimer l\'exception des balustrades au §163.04 est la cible législative la plus concrète pour les défenseurs du solaire en Floride.',
+          ],
+        },
+        texas: {
+          title: 'Texas : ni interdiction, ni exemption — juste « ça dépend de votre fournisseur »',
+          content: [
+            '**Le Texas n\'a aucun projet de loi sur le solaire enfichable, ni promulgué ni en cours, mi-2026.** Contrairement à l\'exception statutaire explicite de la Floride, la situation texane relève de l\'ambiguïté réglementaire : les règles standard d\'interconnexion écrites pour des installations de toit de 5 kW et plus s\'appliquent techniquement à tout appareil connecté au réseau, mais l\'application effective par un fournisseur donné à un panneau enfichable de 1 200 W varie au cas par cas.',
+            'Le réseau dérégulé d\'ERCOT — couvrant environ 90 % de l\'État — signifie que les clients résidentiels choisissent un distributeur d\'électricité au détail (REP) sur un marché concurrentiel, et c\'est le tarif de ce REP qui régit ce qui peut être branché. Ajoutez à cela les régies municipales hors de la concurrence de détail d\'ERCOT (Austin Energy, CPS Energy) et une soixantaine de coopératives électriques rurales indépendantes, et une réponse générale à « le solaire de balcon est-il légal au Texas ? » n\'existe pas — cela dépend du fournisseur et du REP précis.',
+            'La session législative 2025 de l\'État a fait adopter trois lois liées au solaire (SB 1202 sur la simplification des permis, SB 1697 sur les guides du consommateur, SB 1036 sur les règles des revendeurs solaires résidentiels), ainsi que le HB 431 étendant les protections HOA en matière solaire aux tuiles solaires de toit — mais aucune ne traite spécifiquement des appareils enfichables. L\'exigence du SB 1036 selon laquelle les contrats de vente doivent inclure une mention d\'approbation d\'interconnexion pourrait, si quoi que ce soit, compliquer la situation des systèmes enfichables vendus dans le commerce.',
+          ],
+        },
+        newYork: {
+          title: 'New York : le marché le plus stratégique, à une signature près',
+          content: [
+            '**Le SUNNY Act de New York (A.9111C/S.8512C) a été adopté par le Parlement au complet les 28 et 29 mai 2026, le Sénat votant 59 voix contre 1 pour entériner les amendements de l\'Assemblée — et attend désormais la signature de la gouverneure Kathy Hochul.** S\'il est signé, il entrera en vigueur 90 jours plus tard et New York deviendra le 9e État à l\'avoir promulgué.',
+            'Le texte crée une catégorie de « dispositif portable de production solaire » relevant du Public Service Law, exigeant une certification par un laboratoire reconnu au niveau national et une protection anti-îlotage, et exemptant les appareils des règles d\'interconnexion et de net metering de la NYSERDA — calqué explicitement sur le HB 340 de l\'Utah.',
+            'Le potentiel de marché y est le plus fort de tous les États suivis : le tarif résidentiel moyen de New York avoisine 27-30 ¢/kWh (les clients de Con Edison à New York City dépassent fréquemment 30 ¢/kWh), et New York City affiche l\'un des taux de propriété les plus bas du pays, environ 32 % — ce qui signifie que la plupart des résidents louent des appartements sans aucune voie d\'accès au solaire de toit. Un système de balcon de 800 W aux tarifs new-yorkais permettrait d\'économiser environ 203 à 236 $ par an, parmi les chiffres les plus élevés de tous les États suivis.',
+          ],
+        },
+        ulCertification: {
+          title: 'Le goulot d\'étranglement UL 3700 : les lois existent, pas encore les produits certifiés',
+          content: [
+            '**Chaque loi étatique promulguée conditionne l\'usage légal à la certification UL 3700 ou équivalente — et mi-2026, aucun système solaire enfichable complet ne l\'avait obtenue.** UL Solutions a publié l\'Outline of Investigation UL 3700 en décembre 2025 ; les essais de certification ont débuté en janvier 2026. Kenneth Boyce, vice-président ingénierie d\'UL, a déclaré en avril 2026 que des produits certifiés étaient attendus « dans quelques mois, voire quelques semaines », mais au moment de la rédaction aucun n\'avait terminé le processus.',
+            'UL 3700 teste trois risques : les conditions de surintensité pouvant dépasser un disjoncteur, l\'incompatibilité GFCI pouvant neutraliser silencieusement la protection contre les défauts de terre, et la sécurité au toucher des broches exposées de la prise une fois débranchée. La norme exige également l\'anti-îlotage — un arrêt automatique en quelques millisecondes lors d\'une coupure de réseau, pour protéger les techniciens des lignes électriques.',
+            'Des fabricants dont EcoFlow mènent des discussions actives de certification ; le STREAM Ultra d\'EcoFlow était en vente dans l\'Utah mi-2026, en attente de certification complète. Certains acheteurs techniquement avertis ont assemblé des systèmes à partir de composants individuellement homologués UL, mais un système assemblé à partir de pièces détachées n\'équivaut pas à un système intégré et certifié — son statut légal au regard de lois comme le HB 340 reste incertain. Voir les sélections actuelles dans [Meilleures batteries domestiques solaires de balcon pour les États-Unis](/fr/balcony-solar/best-balcony-solar-home-battery-us-2026) et [EcoFlow vs. Anker vs. Zendure](/fr/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar).',
+          ],
+        },
+        advocacy: {
+          title: 'Qui porte ce mouvement : Bright Saver et le représentant Ward',
+          content: [
+            'L\'association à but non lucratif Bright Saver, fondée en janvier 2025 avec 500 000 $ de subventions initiales, est devenue la principale force américaine de lobbying et d\'éducation pour cette catégorie, fournissant une législation type et organisant des ressources pour les législateurs État par État — calquée explicitement sur la stratégie d\'adoption de l\'UE.',
+            'Le représentant Ward de l\'Utah a personnellement conseillé des législateurs à Hawaï, dans l\'État de Washington, au Minnesota, au Colorado et dans d\'autres États depuis l\'adoption de son texte — mécanisme direct expliquant les formulations quasi identiques que l\'on retrouve dans des législatures idéologiquement diverses.',
+          ],
+        },
+        whatsNext: {
+          title: 'À surveiller jusqu\'au début 2027',
+          content: 'Le rythme de cette catégorie est exceptionnellement rapide pour une législation énergétique étatique — suivez ces échéances si vous hésitez à acheter maintenant ou à attendre.',
+          items: [
+            '31 août 2026 — le SB 868 californien doit être adopté par l\'Assemblée avant la fin de la session, sous peine de rester bloqué jusqu\'en 2027.',
+            '~Septembre 2026 — le SUNNY Act de New York entre en vigueur 90 jours après sa signature, si la gouverneure Hochul le signe.',
+            '1er octobre 2026 — les dispositions du HB 5340 du Connecticut entrent en vigueur.',
+            '1er janvier 2027 — le HB26-1007 du Colorado entre en vigueur avec le plafond de puissance confirmé le plus élevé des États-Unis (1 920 W) et une interdiction explicite des restrictions HOA/propriétaire.',
+            'T3-T4 2026 — le vice-président ingénierie d\'UL lui-même a prévu que les premiers produits certifiés UL 3700 arriveraient en magasin dans cette fenêtre, sans date ferme confirmée.',
+            'Sessions 2027 — le New Jersey, la Pennsylvanie, l\'Oregon, l\'État de Washington et une douzaine d\'autres États bloqués devraient redéposer leurs textes.',
+          ],
+        },
+        checkYourState: {
+          title: 'Vérifiez le statut de votre propre État avant d\'acheter',
+          content: 'Cet article couvre les cinq États aux issues juridiques les plus contrastées. Pour le statut complet des 50 États, les plafonds de puissance actuels et les dates de signature/entrée en vigueur confirmées, voir le [suivi légal État par État](/fr/balcony-solar/balcony-solar-legal-us-states), actualisé tous les 60 jours vu la rapidité d\'évolution de cette liste, et le [guide mondial pays par pays](/fr/balcony-solar/is-balcony-solar-legal-country-guide) si vous êtes hors des États-Unis.',
+        },
+        faqSection: {
+          title: 'Questions fréquemment posées',
+          faqs: [
+            {
+              q: 'Le solaire de balcon est-il légal aux États-Unis ?',
+              a: 'Cela dépend entièrement de l\'État — il n\'existe aucune loi fédérale sur le solaire de balcon. Huit États ont promulgué une loi en date de juillet 2026 (Utah, Maine, Virginie, Maryland, Colorado, New Hampshire, Vermont, Connecticut), un de plus (New York) a fait adopter le texte par son Parlement et attend la signature du gouverneur, et la plupart des autres États n\'ont pas encore légiféré spécifiquement sur la question.',
+            },
+            {
+              q: 'Le solaire de balcon est-il légal en Californie ?',
+              a: 'Pas encore en juillet 2026. Les règles actuelles d\'interconnexion de la CPUC traitent tout appareil connecté au réseau de la même manière quelle que soit sa taille, donc en connecter un sans accord avec le fournisseur n\'est pas légal aujourd\'hui. Le SB 868 corrigerait cela, mais doit être adopté par l\'Assemblée avant le 31 août 2026.',
+            },
+            {
+              q: 'Le solaire de balcon est-il légal en Floride ?',
+              a: 'La Floride n\'a aucun projet de loi sur le solaire enfichable. Sa loi sur le droit au solaire, par ailleurs solide (F.S. 163.04), exclut explicitement les balustrades de balcon dans les copropriétés et les appartements, ce qui bloque le principal cas d\'usage du solaire de balcon en habitat collectif.',
+            },
+            {
+              q: 'Le solaire de balcon est-il légal au Texas ?',
+              a: 'Il n\'existe aucune loi étatique l\'autorisant ou l\'interdisant. En pratique, la légalité dépend du fournisseur et du distributeur d\'électricité au détail (REP) du résident, puisque les règles standard d\'interconnexion écrites pour les grandes installations de toit s\'appliquent techniquement à tout appareil connecté au réseau.',
+            },
+            {
+              q: 'Qu\'est-ce qu\'UL 3700 et pourquoi est-ce important pour la légalité ?',
+              a: 'UL 3700 est la norme américaine de certification de sécurité pour les systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Chaque loi étatique promulguée l\'exige (ou une norme équivalente), mais mi-2026 aucun système solaire de balcon complet n\'avait terminé la certification — le matériel légalement conforme n\'est donc pas encore pleinement disponible, même dans les États où la loi est en vigueur.',
+            },
+            {
+              q: 'Pourquoi ces lois ne me permettent-elles pas de revendre l\'excédent d\'électricité au réseau ?',
+              a: 'Chaque projet de loi promulgué ou en cours exclut délibérément le solaire de balcon du net metering. Renoncer à la compensation pour l\'export supprime la principale raison pour laquelle un fournisseur pourrait s\'opposer à la loi, ce qui explique pourquoi ces textes ont été adoptés à des majorités quasi unanimes dans des législatures étatiques très différentes.',
+            },
+            {
+              q: 'Mon propriétaire ou ma copropriété peut-il/elle interdire un panneau solaire de balcon ?',
+              a: 'Cela dépend de l\'État. La loi du Colorado interdit explicitement aux propriétaires et aux copropriétés d\'interdire les appareils conformes. La plupart des autres États ayant promulgué une loi s\'appuient sur des droits d\'accès au solaire généraux qui n\'ont pas été écrits en pensant aux panneaux de balcon, si bien que des restrictions de copropriété peuvent encore s\'appliquer — vérifiez la loi de votre État avant de présumer une protection.',
+            },
+            {
+              q: 'Quand d\'autres États adopteront-ils des lois sur le solaire de balcon ?',
+              a: 'Trente États ou plus, ainsi que Washington, D.C., ont déposé ou font avancer des projets de loi. L\'échéance de la Californie est août 2026 ; plusieurs autres États (New Jersey, Massachusetts, Pennsylvanie, Ohio, Michigan) sont actifs mais pas encore programmés. Les États où les textes ont été bloqués ou ont échoué en 2025-2026 devraient les redéposer lors des sessions 2027.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Le solaire de balcon est-il légal aux États-Unis ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Cela dépend entièrement de l\'État — il n\'existe aucune loi fédérale sur le solaire de balcon. Huit États ont promulgué une loi en date de juillet 2026 (Utah, Maine, Virginie, Maryland, Colorado, New Hampshire, Vermont, Connecticut), un de plus (New York) a fait adopter le texte par son Parlement et attend la signature du gouverneur, et la plupart des autres États n\'ont pas encore légiféré spécifiquement sur la question.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Le solaire de balcon est-il légal en Californie ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Pas encore en juillet 2026. Les règles actuelles d\'interconnexion de la CPUC traitent tout appareil connecté au réseau de la même manière quelle que soit sa taille, donc en connecter un sans accord avec le fournisseur n\'est pas légal aujourd\'hui. Le SB 868 corrigerait cela, mais doit être adopté par l\'Assemblée avant le 31 août 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Le solaire de balcon est-il légal en Floride ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La Floride n\'a aucun projet de loi sur le solaire enfichable. Sa loi sur le droit au solaire, par ailleurs solide (F.S. 163.04), exclut explicitement les balustrades de balcon dans les copropriétés et les appartements, ce qui bloque le principal cas d\'usage du solaire de balcon en habitat collectif.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Le solaire de balcon est-il légal au Texas ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Il n\'existe aucune loi étatique l\'autorisant ou l\'interdisant. En pratique, la légalité dépend du fournisseur et du distributeur d\'électricité au détail (REP) du résident, puisque les règles standard d\'interconnexion écrites pour les grandes installations de toit s\'appliquent techniquement à tout appareil connecté au réseau.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qu\'est-ce qu\'UL 3700 et pourquoi est-ce important pour la légalité ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'UL 3700 est la norme américaine de certification de sécurité pour les systèmes solaires enfichables, publiée par UL Solutions en décembre 2025. Chaque loi étatique promulguée l\'exige (ou une norme équivalente), mais mi-2026 aucun système solaire de balcon complet n\'avait terminé la certification — le matériel légalement conforme n\'est donc pas encore pleinement disponible, même dans les États où la loi est en vigueur.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Pourquoi ces lois ne me permettent-elles pas de revendre l\'excédent d\'électricité au réseau ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Chaque projet de loi promulgué ou en cours exclut délibérément le solaire de balcon du net metering. Renoncer à la compensation pour l\'export supprime la principale raison pour laquelle un fournisseur pourrait s\'opposer à la loi, ce qui explique pourquoi ces textes ont été adoptés à des majorités quasi unanimes dans des législatures étatiques très différentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Mon propriétaire ou ma copropriété peut-il/elle interdire un panneau solaire de balcon ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Cela dépend de l\'État. La loi du Colorado interdit explicitement aux propriétaires et aux copropriétés d\'interdire les appareils conformes. La plupart des autres États ayant promulgué une loi s\'appuient sur des droits d\'accès au solaire généraux qui n\'ont pas été écrits en pensant aux panneaux de balcon, si bien que des restrictions de copropriété peuvent encore s\'appliquer — vérifiez la loi de votre État avant de présumer une protection.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quand d\'autres États adopteront-ils des lois sur le solaire de balcon ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Trente États ou plus, ainsi que Washington, D.C., ont déposé ou font avancer des projets de loi. L\'échéance de la Californie est août 2026 ; plusieurs autres États (New Jersey, Massachusetts, Pennsylvanie, Ohio, Michigan) sont actifs mais pas encore programmés. Les États où les textes ont été bloqués ou ont échoué en 2025-2026 devraient les redéposer lors des sessions 2027.',
+            },
+          },
+        ],
+      },
+    },
+    ja: {
+      category: 'エネルギー政策',
+      title: '米国のベランダ太陽光「合法化レース」最新事情：ユタ州・カリフォルニア州・フロリダ州・テキサス州・ニューヨーク州を比較(2026年)',
+      seoTitle: '米国のベランダ太陽光法2026年：5州を比較',
+      intro: '米国では8つの州がベランダ太陽光(プラグイン太陽光)関連法案に署名済みで、9番目の州も署名待ちの段階です。一方フロリダ州とテキサス州にはプラグイン太陽光法案が一切ありません。ユタ州・カリフォルニア州・フロリダ州・テキサス州・ニューヨーク州という5つの州が、同じ技術に対してまったく異なる5つの結末にたどり着いた経緯を解説します。',
+      publishDate: '2026年7月16日公開',
+      readTime: '13分で読める',
+      metaDescription: 'ベランダ太陽光は米国8州で合法、9番目の州でも成立目前です。しかしフロリダ州とテキサス州は対象外です。ユタ州・カリフォルニア州・フロリダ州・テキサス州・ニューヨーク州の2026年法制度を比較します。',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '重要ポイント',
+          items: [
+            '2026年7月時点で、米国8州がベランダ太陽光関連法案に署名済みです。ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、ニューハンプシャー州、バーモント州、コネチカット州です。ニューヨーク州は2026年5月に上下両院を59対1で通過し、知事の署名待ちで、成立すれば9番目の州になります。',
+            'ユタ州のHB 340(2025年3月署名)が最初の法案でした。1,200Wまでの機器を電力会社との系統連系規定から除外しています。ただし、この法律が前提とする安全規格UL 3700は2025年12月まで公開されていませんでした。',
+            'カリフォルニア州のSB 868は上院本会議を35対1、下院委員会を18対0で通過しました。しかし2026年8月31日までに下院歳出委員会を通過しなければ、今会期での成立は見送られます。',
+            'フロリダ州とテキサス州には、プラグイン太陽光関連の法案が一切ありません。フロリダ州独自の「太陽光権利法」は、コンドミニアムやアパートのパティオ手すりを明示的に対象外としています。テキサス州には州レベルの枠組みがなく、合法かどうかは居住者が契約する電力会社と小売電力事業者次第です。',
+            '2026年半ば時点で、UL 3700の完全認証を取得したプラグイン太陽光システムは1件もありません。ユタ州の法律は2025年5月から施行済みですが、法制度が認証済みハードウェアより先行している状態です。',
+            '成立した州法はいずれも、ベランダ太陽光を意図的にネットメータリング(余剰電力の売電)の対象外としています。これは電力会社側が反対する主な理由を取り除くための、意図的な妥協点です。',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: 'ベランダ太陽光とは何か',
+          content: [
+            '**ベランダ太陽光(プラグイン太陽光、発祥国ドイツでは「Balkonkraftwerk」とも呼ばれます)は、一般的に400〜1,920ワットの小型太陽光発電システムで、家庭用の標準コンセントに直接接続します。** 屋根へのアクセスや電力会社との系統連系手続き、5桁ドルに及ぶ設置費用がなくても、賃貸住宅やアパートの住人が発電できる仕組みです。',
+            'このカテゴリーはすでに大規模な実績があります。ドイツには2026年半ば時点で約130万件の登録システム(未登録は推計300万件)があり、設置容量は約2.5GWに達します。米国もドイツと同じパターンをたどっていますが、約10年遅れで、しかも全国一律ではなく州ごとに進んでいます。ハードウェアの仕組みを詳しく知りたい方は、[ベランダ太陽光とは何か](/ja/balcony-solar/what-is-balcony-solar)をご覧ください。',
+          ],
+        },
+        whyItWasIllegal: {
+          title: '2024年まで米国でベランダ太陽光が事実上違法だった理由',
+          content: [
+            '**プラグイン太陽光機器は、標準コンセントを通じて電力を家庭の配線側へ逆に押し戻します。これはコンセント本来の用途とは正反対です。** 米国の系統連系規定は5〜25kWの屋根設置システム向けに作られており、契約・手数料・検査が必要で、500ドルのベランダキットのコストを2倍にしかねません。2024年まで、どの州も400Wのベランダパネルと屋根一面の設置システムを区別していませんでした。そのため、このカテゴリーはどこでも実用性を欠いていました。',
+            'ドイツの実績が米国の立法の波を直接後押ししました。ユタ州のレイモンド・ワード州議会議員はドイツのBalkonkraftwerkを扱ったニューヨーク・タイムズ紙の記事を読み、HB 340となる法案を提出しました。その際、ドイツの安全実績を明確に引き合いに出しています。「あちらの電気もこちらと同じです。同じ物理法則が働いていて、安全性も証明されています」。',
+          ],
+        },
+        theTemplate: {
+          title: 'すべての州法案が同じテンプレートに従っている',
+          content: [
+            '**成立済み・審議中を問わず、すべての州法案はユタ州HB 340をモデルにしており、ほぼ同一の構造をたどっています。** 機器を「発電所」ではなく「家電製品」として定義し、一定ワット数以下は系統連系の対象外とし、UL 3700(またはこれに相当する規格)の安全認証を義務付け、停電時のアンチアイランディング(自動遮断)を義務付け、そしてネットメータリングの対象から明示的に除外する、という内容です。',
+            '最後の点は意図的な政治的妥協です。系統へ輸出した余剰電力への対価を放棄することで、法案提出者は電力会社が反対しうる唯一の材料を取り除いています。マイクロ発電への支払いや料金体系の再設計を強いられることがなくなるためです。これこそが、ユタ州とニューヨーク州のような性質の異なる州で、これらの法案がほぼ全会一致・超党派で可決されている最大の理由です。',
+          ],
+        },
+        stateComparison: {
+          title: '5つの州、5つの結末',
+          content: '同じ技術から、成立済みの法律、知事の署名待ちの法案、委員会で滞留中の法案、そして法案自体が存在しない2つの州という結果が生まれています。',
+          rows: [
+            { '州': 'ユタ州', 'ステータス': '成立済み(2025年5月)', 'ワット数上限': '1,200W', '主な障壁': 'UL 3700認証製品がまだ存在しない' },
+            { '州': 'カリフォルニア州', 'ステータス': '法案審議中(SB 868)', 'ワット数上限': '成立すれば1,200W', '主な障壁': '2026年8月31日までに下院採決が必要' },
+            { '州': 'フロリダ州', 'ステータス': '法案なし', 'ワット数上限': '該当なし', '主な障壁': '州法がコンドミニアム/アパートのパティオ手すりを除外' },
+            { '州': 'テキサス州', 'ステータス': '法案なし', 'ワット数上限': '該当なし', '主な障壁': '合法性は電力会社と小売電力事業者次第' },
+            { '州': 'ニューヨーク州', 'ステータス': '議会通過(59対1)、署名待ち', 'ワット数上限': '署名されれば1,200W', '主な障壁': 'ホークル知事の署名' },
+          ],
+          columns: ['州', 'ステータス', 'ワット数上限', '主な障壁'],
+        },
+        utah: {
+          title: 'ユタ州：安全規格が存在する前に法律を成立させた先駆者',
+          content: [
+            '**ユタ州のHB 340(通称ソーラー・パワー修正法)は州議会の両院を全会一致で通過し、2025年3月にスペンサー・コックス知事が署名、2025年5月7日に施行されました。** この法律は「小型ポータブル太陽光発電機器」というカテゴリーを1,200Wまでとして新設し、電力会社との系統連系契約・手数料・承認手続きの対象から除外し、電力会社への通知すら一切不要としています。',
+            '法案提出者のレイモンド・ワード州議会議員は、この法案を気候政策としてではなく、消費者の選択とコスト削減という観点で全面的に打ち出しました。「屋根設置に3万ドルも払いたくないけれど、少しでも太陽光を使いたい人には最適だ」という言葉が、イデオロギーの異なる他州でも再現可能な枠組みとして機能しました。',
+            '**問題点は、HB 340が法文の中でUL Solutionsを名指しし、まだ存在しなかった安全規格を要求していたことです。** UL社がこの法律の前提となるUL 3700を公開したのは2025年12月、つまり法律施行の8か月後でした。2026年半ば時点で、完全なUL 3700認証を取得したプラグイン太陽光システムは1件もありません。そのためユタ州市場向けに販売されている製品も、法律の文言上はまだ合法的にコンセントへ接続できない状態です。',
+          ],
+        },
+        california: {
+          title: 'カリフォルニア州：賃貸率44%、電気料金31¢/kWh、そして期限との戦いを続ける法案',
+          content: [
+            '**2026年7月時点で、カリフォルニア州ではベランダ太陽光の接続は依然として違法です。** 州の系統連系規定は300Wのベランダパネルと25kWの屋根設置システムを区別しておらず、電力会社との契約なしに接続すれば、現行のCPUC規定に違反します。',
+            'スコット・ウィーナー州上院議員のSB 868(通称「太陽の下へ法」)は、400〜1,200Wのポータブル太陽光機器を「発電所」ではなく「家電製品」として定義することでこの問題を解消しようとしています。ここまでの経過は、上院エネルギー・公益事業・通信委員会を全会一致で通過、上院歳出委員会を7対0で通過、上院本会議を35対1で通過、下院公益事業・エネルギー委員会を18対0で通過、というものです。**現在は下院歳出委員会に留まっており、CPUCが試算した年間20万〜50万ドルの行政コストが「サスペンスファイル」入りの引き金となり、審議は8月にずれ込みました。** 下院が2026年8月末までに可決しなければ今会期での前進はなく、署名されれば2027年1月1日に施行されます。',
+            'カリフォルニア州は、他のどの州よりも高い利害を抱えています。州内の世帯の約44%が賃貸住宅に住み、州全体の平均電気料金は約31.4¢/kWh、さらにNEM 3.0によって屋根設置太陽光の売電補償が約75%削減されました。これは逆説的にベランダ太陽光の「自家消費モデル」の優位性を強めています。もともと売電クレジットに依存していなかったためです。',
+          ],
+        },
+        florida: {
+          title: 'フロリダ州：強力な太陽光権利法に、まさにこの用途を封じる例外規定',
+          content: [
+            '**フロリダ州には、2026年7月時点でベランダ太陽光関連の法案が成立済み・審議中を問わず一切ありません。** 全米でも屈指の強力な太陽光アクセス法を持つ州であるにもかかわらずです。',
+            'フロリダ州法163.04は、住宅所有者組合(HOA)や譲渡制限による太陽光設備の妨害を禁じています。しかし163.04(4)には明示的な例外があります。**「本条項は、コンドミニアム、協同組合、アパートのパティオ手すりには適用されない」**という一文です。この条項は電力会社と集合住宅業界のロビー活動により後から挿入された譲歩であり、ベランダ太陽光がまさに想定する用途そのものを封じています。戸建て住宅所有者には強力な太陽光権利がある一方、コンドミニアムやアパートの住人が手すりにパネルを設置する権利は、この法律の下では一切保障されていません。',
+            'それ以外の市場条件は良好です。南フロリダには賃貸・コンドミニア人口が密集し、エアコン需要は太陽光発電のタイミングと一致し、デサンティス知事は2025年6月にHB 683へ署名して屋根設置太陽光の許可手続きを簡素化しました。これは州議会が必要とあれば太陽光関連の規制緩和に前向きであることを示しています。§163.04のパティオ手すり例外を撤廃することこそ、フロリダ州の推進派にとって最も実行可能な立法目標です。',
+          ],
+        },
+        texas: {
+          title: 'テキサス州：禁止もなく、例外規定もなく――「電力会社次第」',
+          content: [
+            '**テキサス州には2026年半ば時点で、成立済み・審議中を問わずプラグイン太陽光法案が一切ありません。** フロリダ州の明示的な法定除外とは異なり、テキサス州の状況は規制上のあいまいさです。5kW以上の屋根設置システム向けに書かれた標準系統連系規定は、技術的にはあらゆる系統連系機器に適用されますが、1,200Wのプラグインパネルに対して個々の電力会社がこれを実際に適用するかどうかはケースバイケースです。',
+            '州の約90%をカバーするERCOTの規制緩和済み電力網では、住宅利用者が競争市場の中から小売電力事業者(REP)を選びます。そしてそのREPの料金約款が、何を接続できるかを左右します。さらにERCOT小売競争の対象外の公営電力事業者(オースティン・エナジー、CPSエナジー)と、約70の独立系農村電力協同組合が加わるため、「テキサス州でベランダ太陽光は合法か」という一律の答えは存在しません。特定の電力会社とREP次第です。',
+            '州は2025年の立法会期で太陽光関連の法律を3本可決しています。SB 1202(許可手続きの簡素化)、SB 1697(消費者向けガイド)、SB 1036(住宅用太陽光販売業者の規則)です。加えてHB 431はHOAの太陽光保護を太陽光屋根タイルにも拡大しました。しかしいずれもプラグイン機器を具体的に扱っていません。SB 1036が販売契約に電力会社の系統連系承認に関する文言を含めるよう求めている点は、商業販売されるプラグインシステムにとってむしろ状況を複雑にしかねません。',
+          ],
+        },
+        newYork: {
+          title: 'ニューヨーク州：最も利害の大きい市場、あと署名一つ',
+          content: [
+            '**ニューヨーク州のSUNNY法(A.9111C/S.8512C)は2026年5月28〜29日に州議会を通過し、上院は下院の修正案に59対1で同意しました。現在はキャシー・ホークル知事の署名を待っている段階です。** 署名されれば90日後に施行され、ニューヨーク州は成立州として9番目になります。',
+            'この法案は公益事業法の下に「ポータブル太陽光発電機器」というカテゴリーを新設し、全国的に認知された試験機関による認証とアンチアイランディング保護を義務付け、NYSERDAの系統連系規定とネットメータリング規定の対象から除外します。これはユタ州HB 340を明確にモデルとしています。',
+            'この市場の条件は、追跡対象の州の中で最も強力です。ニューヨーク州全体の平均家庭用電気料金は約27〜30¢/kWh(ニューヨーク市のコンエジソン顧客は30¢/kWhを頻繁に超えます)で、ニューヨーク市の持ち家率は全米最低水準の約32%です。つまり大半の住人は賃貸アパート住まいで、屋根設置太陽光への道が一切ありません。ニューヨーク州の料金で800Wのベランダシステムを使った場合、年間の節約額は推計約203〜236ドルで、追跡対象の州の中でも最高水準です。',
+          ],
+        },
+        ulCertification: {
+          title: 'UL 3700という壁：法律はあるが、認証済み製品はまだない',
+          content: [
+            '**成立済みの州法はすべて、UL 3700またはこれに相当する認証の取得を合法使用の条件としています。しかし2026年半ば時点で、この認証を取得した完全なプラグイン太陽光システムは1件もありません。** UL Solutionsは2025年12月にUL 3700の調査概要(Outline of Investigation)を公開し、認証試験は2026年1月に開始されました。ULのケネス・ボイスエンジニアリング担当副社長は2026年4月時点で、認証済み製品は「数か月、あるいは数週間以内」に登場すると述べていましたが、本稿執筆時点でこのプロセスを完了した製品はまだありません。',
+            'UL 3700は3つの危険性を試験します。回路遮断器の許容量を超える恐れのある過電流、地絡保護を静かに無効化しかねないGFCI(漏電遮断器)非互換性、そして切断時にプラグの露出したピンに触れた際の安全性です。加えてアンチアイランディング機能も要求されます。停電発生後、ミリ秒単位で自動遮断し、電力会社の作業員を保護する仕組みです。',
+            'EcoFlowを含む複数のメーカーが認証取得に向けて協議を進めています。EcoFlowのSTREAM Ultraは2026年半ば時点で、完全認証の取得を待ちながらユタ州で販売リストに掲載されていました。技術に詳しい一部の購入者は、個別にUL認証を受けた部品を組み合わせてシステムを自作していますが、部品を組み立てたシステムは一体型の認証済みシステムとは同一ではなく、HB 340のような法律の下での法的地位は不明確です。現在のおすすめ製品については[米国向けベランダ太陽光ホームバッテリーのベスト製品](/ja/balcony-solar/best-balcony-solar-home-battery-us-2026)と[EcoFlow対Anker対Zendure比較](/ja/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)をご覧ください。',
+          ],
+        },
+        advocacy: {
+          title: 'このムーブメントを牽引しているのは誰か：Bright SaverとワードStay議員',
+          content: [
+            '非営利団体Bright Saverは2025年1月、当初50万ドルの助成金を得て設立されました。このカテゴリーの推進と啓発を担う米国内の中心的組織となり、州ごとにモデル法案や組織化リソースを議員に提供しています。これはEUの普及戦略を明確に手本としたものです。',
+            'ユタ州のワード州議会議員は、自身の法案成立以降、ハワイ州、ワシントン州、ミネソタ州、コロラド州など複数の州議員と個人的に協議を続けています。これが、イデオロギーの異なる複数の州議会でほぼ同一の法案文言が登場している直接的な仕組みです。',
+          ],
+        },
+        whatsNext: {
+          title: '2027年初頭までに注目すべきポイント',
+          content: 'このカテゴリーの動きは、州のエネルギー立法としては異例なほど速いスピードで進んでいます。今すぐ購入するか待つか判断する上で、以下の日程を追ってください。',
+          items: [
+            '2026年8月31日 — カリフォルニア州SB 868が下院を通過しなければ、会期終了とともに2027年まで停滞します。',
+            '2026年9月頃 — ホークル知事が署名すれば、ニューヨーク州のSUNNY法は署名から90日後に施行されます。',
+            '2026年10月1日 — コネチカット州HB 5340の規定が施行されます。',
+            '2027年1月1日 — コロラド州HB26-1007が施行され、米国で確認されている最高のワット数上限(1,920W)と、HOA・大家による規制の明示的な禁止を伴います。',
+            '2026年第3〜第4四半期 — UL自身のエンジニアリング担当副社長は、この期間内に最初のUL 3700認証済み製品が小売店に登場すると予測していますが、確定日程はまだありません。',
+            '2027年の会期 — ニュージャージー州、ペンシルベニア州、オレゴン州、ワシントン州など、停滞している約十数州が法案の再提出を予定しています。',
+          ],
+        },
+        checkYourState: {
+          title: '購入前に、お住まいの州の状況を必ず確認してください',
+          content: 'この記事では、法的な結末が最も異なる5つの州を扱っています。全米50州の最新状況、現行のワット数上限、確定した署名・施行日については、動きの速さに合わせて60日ごとに更新される[州別法律トラッカー](/ja/balcony-solar/balcony-solar-legal-us-states)をご覧ください。米国外にお住まいの方は、[国別ガイド(グローバル版)](/ja/balcony-solar/is-balcony-solar-legal-country-guide)もあわせてご覧ください。',
+        },
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: '米国でベランダ太陽光は合法ですか?',
+              a: '完全に州次第です。連邦レベルの法律はありません。2026年7月時点で8州(ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、ニューハンプシャー州、バーモント州、コネチカット州)が法案に署名済みで、さらに1州(ニューヨーク州)は議会を通過し知事の署名待ちです。それ以外の大半の州は、この問題を具体的に扱っていません。',
+            },
+            {
+              q: 'カリフォルニア州でベランダ太陽光は合法ですか?',
+              a: '2026年7月時点ではまだ合法ではありません。現行のCPUC系統連系規定は、規模にかかわらずあらゆる系統連系機器を同様に扱うため、電力会社との契約なしに接続することは現時点で合法ではありません。SB 868が成立すればこれを解消しますが、2026年8月31日までに下院を通過する必要があります。',
+            },
+            {
+              q: 'フロリダ州でベランダ太陽光は合法ですか?',
+              a: 'フロリダ州にはプラグイン太陽光法案がありません。もともと強力な太陽光権利法(フロリダ州法163.04)がありますが、コンドミニアムやアパートのパティオ手すりを明示的に除外しており、集合住宅におけるベランダ太陽光の主要な用途を封じています。',
+            },
+            {
+              q: 'テキサス州でベランダ太陽光は合法ですか?',
+              a: 'これを許可または禁止する州法は存在しません。実際の合法性は、居住者が契約する電力会社と小売電力事業者(REP)次第です。大規模な屋根設置システム向けに書かれた標準系統連系規定が、技術的にはあらゆる系統連系機器に適用されるためです。',
+            },
+            {
+              q: 'UL 3700とは何ですか。なぜ合法性にとって重要なのですか?',
+              a: 'UL 3700は、UL Solutionsが2025年12月に公開した、プラグイン太陽光システム向けの米国安全認証規格です。成立済みの州法はすべてこれ(またはこれに相当する規格)を要求していますが、2026年半ば時点で、この認証を完了した完全なベランダ太陽光システムは1件もありません。そのため、法律が施行されている州であっても、法的に適合したハードウェアはまだ十分に流通していません。',
+            },
+            {
+              q: 'なぜこれらの法律では余剰電力を電力会社に売電できないのですか?',
+              a: '成立済み・審議中を問わずすべての法案が、ベランダ太陽光を意図的にネットメータリングの対象外としています。系統への輸出に対する対価を放棄することで、電力会社が法律に反対しうる主な理由を取り除いています。これこそが、まったく異なる州議会でこれらの法案がほぼ全会一致で可決されている理由です。',
+            },
+            {
+              q: '大家やHOAはベランダ太陽光パネルを禁止できますか?',
+              a: '州によって異なります。コロラド州の法律は、大家やHOAが適合機器を禁止することを明示的に禁じています。他の多くの成立州は、ベランダパネルを想定して書かれたものではない一般的な太陽光アクセス権に依拠しているため、HOAによる制限が依然として適用される可能性があります。保護されると思い込む前に、お住まいの州の法律を必ず確認してください。',
+            },
+            {
+              q: 'いつ他の州もベランダ太陽光法を成立させますか?',
+              a: '30以上の州とワシントンD.C.が法案を提出済み、または審議を進めています。カリフォルニア州の期限は2026年8月です。他にもニュージャージー州、マサチューセッツ州、ペンシルベニア州、オハイオ州、ミシガン州などが動いていますが、まだ審議日程は確定していません。2025〜2026年に停滞・不成立となった州は、2027年の会期での再提出が見込まれています。',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '米国でベランダ太陽光は合法ですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '完全に州次第です。連邦レベルの法律はありません。2026年7月時点で8州(ユタ州、メイン州、バージニア州、メリーランド州、コロラド州、ニューハンプシャー州、バーモント州、コネチカット州)が法案に署名済みで、さらに1州(ニューヨーク州)は議会を通過し知事の署名待ちです。それ以外の大半の州は、この問題を具体的に扱っていません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'カリフォルニア州でベランダ太陽光は合法ですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '2026年7月時点ではまだ合法ではありません。現行のCPUC系統連系規定は、規模にかかわらずあらゆる系統連系機器を同様に扱うため、電力会社との契約なしに接続することは現時点で合法ではありません。SB 868が成立すればこれを解消しますが、2026年8月31日までに下院を通過する必要があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'フロリダ州でベランダ太陽光は合法ですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'フロリダ州にはプラグイン太陽光法案がありません。もともと強力な太陽光権利法(フロリダ州法163.04)がありますが、コンドミニアムやアパートのパティオ手すりを明示的に除外しており、集合住宅におけるベランダ太陽光の主要な用途を封じています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'テキサス州でベランダ太陽光は合法ですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'これを許可または禁止する州法は存在しません。実際の合法性は、居住者が契約する電力会社と小売電力事業者(REP)次第です。大規模な屋根設置システム向けに書かれた標準系統連系規定が、技術的にはあらゆる系統連系機器に適用されるためです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'UL 3700とは何ですか。なぜ合法性にとって重要なのですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'UL 3700は、UL Solutionsが2025年12月に公開した、プラグイン太陽光システム向けの米国安全認証規格です。成立済みの州法はすべてこれ(またはこれに相当する規格)を要求していますが、2026年半ば時点で、この認証を完了した完全なベランダ太陽光システムは1件もありません。そのため、法律が施行されている州であっても、法的に適合したハードウェアはまだ十分に流通していません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'なぜこれらの法律では余剰電力を電力会社に売電できないのですか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '成立済み・審議中を問わずすべての法案が、ベランダ太陽光を意図的にネットメータリングの対象外としています。系統への輸出に対する対価を放棄することで、電力会社が法律に反対しうる主な理由を取り除いています。これこそが、まったく異なる州議会でこれらの法案がほぼ全会一致で可決されている理由です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '大家やHOAはベランダ太陽光パネルを禁止できますか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '州によって異なります。コロラド州の法律は、大家やHOAが適合機器を禁止することを明示的に禁じています。他の多くの成立州は、ベランダパネルを想定して書かれたものではない一般的な太陽光アクセス権に依拠しているため、HOAによる制限が依然として適用される可能性があります。保護されると思い込む前に、お住まいの州の法律を必ず確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'いつ他の州もベランダ太陽光法を成立させますか?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '30以上の州とワシントンD.C.が法案を提出済み、または審議を進めています。カリフォルニア州の期限は2026年8月です。他にもニュージャージー州、マサチューセッツ州、ペンシルベニア州、オハイオ州、ミシガン州などが動いていますが、まだ審議日程は確定していません。2025〜2026年に停滞・不成立となった州は、2027年の会期での再提出が見込まれています。',
+            },
+          },
+        ],
+      },
+    },
+    ko: {
+      category: '에너지 정책',
+      title: '미국 발코니 태양광 합법화 경쟁의 내막: Utah, California, Florida, Texas, New York 비교 (2026)',
+      seoTitle: '2026 미국 발코니 태양광법: 5개 주 비교',
+      intro: '미국 8개 주가 발코니 태양광 관련 법안에 서명해 발효시켰고, 9번째 주는 서명 한 번을 남겨두고 있습니다. 반면 Florida와 Texas에는 플러그인 태양광 관련 법안이 전혀 존재하지 않습니다. 이 글에서는 Utah, California, Florida, Texas, New York 다섯 개 주가 동일한 기술을 두고 어떻게 완전히 다른 다섯 가지 법적 결과에 도달했는지 살펴봅니다.',
+      publishDate: '게시 2026년 7월 16일',
+      readTime: '13분 읽기',
+      metaDescription: '발코니 태양광은 미국 8개 주에서 합법이며 9번째 주에서는 심의 중입니다. 단, Florida와 Texas는 예외입니다. Utah, California, Florida, Texas, New York의 2026년 법률을 비교합니다.',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '핵심 내용',
+          items: [
+            '2026년 7월 기준 미국 8개 주가 발코니 태양광 법안에 서명했습니다: Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut입니다. New York은 2026년 5월 상하 양원에서 59대 1로 통과되어 주지사의 서명만 남겨두고 있으며, 서명되면 9번째 주가 됩니다.',
+            'Utah의 HB 340(2025년 3월 서명)이 최초의 법안으로, 1,200W 이하 기기를 전력회사 계통연계 규정에서 면제했습니다. 하지만 이 법이 의존하는 안전 표준인 UL 3700은 2025년 12월에야 발표되었습니다.',
+            'California의 SB 868은 상원 전체 표결에서 35대 1로, 하원 위원회에서는 18대 0으로 통과되었습니다. 그러나 2026년 8월 31일까지 하원 세출위원회를 통과하지 못하면 이번 회기에서 폐기됩니다.',
+            'Florida와 Texas에는 플러그인 태양광 관련 법안이 전혀 없습니다. Florida의 태양광 권리법은 콘도미니엄과 아파트의 발코니 난간을 명시적으로 제외하고 있으며, Texas는 주 차원의 규정 자체가 없어 합법 여부가 거주자가 이용하는 전력회사와 소매 전력 공급업체에 따라 달라집니다.',
+            '2026년 중반 기준으로 완전한 UL 3700 인증을 받은 플러그인 태양광 시스템은 아직 없습니다. Utah의 법은 2025년 5월부터 시행 중이지만, 법적 틀이 인증된 하드웨어보다 앞서 나가고 있는 상황입니다.',
+            '발효된 모든 주 법률은 발코니 태양광을 순간계량제(net metering)에서 의도적으로 제외하고 있습니다. 이는 전력회사가 반대할 주된 이유를 없애기 위한 의도적인 타협입니다.',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: '발코니 태양광이란 정확히 무엇인가',
+          content: [
+            '**발코니 태양광(플러그인 태양광이라고도 하며, 발상지인 독일 시장에서는 "Balkonkraftwerk"라고 불립니다)은 일반적으로 400~1,920와트 규모의 소형 태양광 발전 시스템으로, 표준 가정용 콘센트에 직접 연결합니다.** 이를 통해 세입자와 아파트 거주자는 옥상 접근권이나 전력회사 계통연계 서류 작업, 수만 달러 규모의 설치 비용 없이도 전기를 생산할 수 있습니다.',
+            '이 분야는 이미 대규모로 검증되었습니다. Germany에는 약 130만 대의 등록 시스템(미등록 시스템까지 포함하면 약 300만 대로 추정)이 있으며, 2026년 중반 기준 설치 용량은 약 2.5GW에 달합니다. 미국은 Germany와 동일한 패턴을 따라가고 있습니다. 다만 약 10년 늦게, 그리고 전국 단위가 아닌 주 단위로 진행되고 있다는 점이 다릅니다. 하드웨어 작동 방식에 대한 전체 설명은 [발코니 태양광이란 무엇인가?](/ko/balcony-solar/what-is-balcony-solar)를 참고하십시오.',
+          ],
+        },
+        whyItWasIllegal: {
+          title: '미국 발코니 태양광이 2024년까지 사실상 불법이었던 이유',
+          content: [
+            '**플러그인 태양광 기기는 표준 콘센트를 통해 전력을 역방향으로, 즉 가정 배선 쪽으로 밀어 넣습니다. 이는 그 콘센트가 원래 설계된 방향과 정반대입니다.** 미국의 전력회사 계통연계 규정은 5~25kW 규모의 옥상 시스템을 기준으로 작성되어 있어, 계약과 수수료, 점검이 요구되며 이로 인해 500달러짜리 발코니 키트의 비용이 두 배로 늘어날 수 있습니다. 2024년까지 어떤 주도 400W 발코니 패널과 완전한 옥상 설치를 구분하지 않았고, 이 때문에 이 분야는 어디서나 사실상 실용성이 없었습니다.',
+            'Germany의 실적은 미국 입법 물결을 직접적으로 촉발했습니다. Utah 주의회 의원 Raymond Ward는 독일의 Balkonkraftwerk 시스템을 다룬 New York Times 기사를 읽고 훗날 HB 340이 된 법안을 발의했으며, Germany의 안전 기록을 명시적으로 인용했습니다. "저쪽의 전기나 이쪽의 전기나 다르지 않습니다. 동일한 물리 법칙이 작동하며, 이는 안전하다는 것이 이미 입증되었습니다."라고 말했습니다.',
+          ],
+        },
+        theTemplate: {
+          title: '모든 주 법안은 동일한 틀을 따른다',
+          content: [
+            '**발효되었거나 심의 중인 모든 주 법안은 Utah의 HB 340을 모델로 하여 거의 동일한 구조를 따릅니다.** 기기를 발전소가 아닌 가전제품으로 정의하고, 특정 와트수 이하에서는 전력회사 계통연계 의무를 면제하며, UL 3700(또는 동등 기준) 안전 인증을 요구하고, 정전 시 자동 차단(anti-islanding)을 의무화하며, 순간계량제 대상에서 명시적으로 제외합니다.',
+            '마지막 항목은 의도적인 정치적 타협입니다. 그리드로 역송되는 잉여 전력에 대한 보상을 포기함으로써, 법안 발의자들은 전력회사가 반대할 수 있는 유일한 지점, 즉 소규모 발전에 대한 대가를 지불하거나 요금제를 재설계해야 하는 부담을 제거합니다. 이것이 Utah와 New York처럼 성향이 전혀 다른 주에서도 이 법안들이 초당적으로 거의 만장일치에 가깝게 통과된 가장 큰 이유입니다.',
+          ],
+        },
+        stateComparison: {
+          title: '다섯 개 주, 다섯 가지 결과',
+          content: '동일한 기술이 발효된 법률, 주지사의 서명을 기다리는 법안, 위원회에 계류된 법안, 그리고 법안 자체가 아예 없는 두 개 주라는 서로 다른 결과를 낳았습니다.',
+          rows: [
+            { '주': 'Utah', '상태': '발효 (2025년 5월)', '와트수 상한': '1,200W', '주요 장벽': 'UL 3700 인증 제품 아직 없음' },
+            { '주': 'California', '상태': '법안 심의 중 (SB 868)', '와트수 상한': '통과 시 1,200W', '주요 장벽': '2026년 8월 31일까지 하원 표결 필요' },
+            { '주': 'Florida', '상태': '법안 없음', '와트수 상한': 'N/A', '주요 장벽': '법령이 콘도/아파트 발코니 난간을 제외' },
+            { '주': 'Texas', '상태': '법안 없음', '와트수 상한': 'N/A', '주요 장벽': '전력회사 및 소매 전력 공급업체에 따라 합법 여부 상이' },
+            { '주': 'New York', '상태': '주의회 통과 59대 1; 서명 대기 중', '와트수 상한': '서명 시 1,200W', '주요 장벽': 'Hochul 주지사의 서명' },
+          ],
+          columns: ['주', '상태', '와트수 상한', '주요 장벽'],
+        },
+        utah: {
+          title: 'Utah: 안전 표준이 존재하기도 전에 법을 통과시킨 선구자',
+          content: [
+            '**Utah의 Solar Power Amendments, 즉 HB 340은 주의회 양원을 만장일치로 통과했고 Spencer Cox 주지사가 2025년 3월 서명해 2025년 5월 7일 발효되었습니다.** 이 법은 1,200W를 상한으로 하는 "소형 휴대용 태양광 발전 기기" 범주를 신설하고, 전력회사 계통연계 계약과 수수료, 승인 요건을 면제하며, 전력회사에 대한 사전 통보 자체를 전혀 요구하지 않습니다.',
+            '법안 발의자인 Raymond Ward 의원은 이 법안을 기후 정책이 아니라 전적으로 소비자 선택권과 비용 절감의 관점에서 설명했습니다. "약간의 태양광 발전을 원하지만 옥상 설치에 3만 달러를 쓰고 싶지 않은 사람에게 아주 좋은 선택입니다."라는 그의 표현은 이념적으로 다른 여러 주에서도 그대로 통했습니다.',
+            '**문제는 HB 340이 법률 안에 UL Solutions를 명시하면서 아직 존재하지 않는 안전 표준을 요구했다는 점입니다.** UL은 이 법이 의존하는 인증인 UL 3700을 2025년 12월, 즉 법 시행 8개월 후에야 발표했습니다. 2026년 중반 기준 완전한 UL 3700 인증을 받은 완제품 플러그인 태양광 시스템은 없으며, 따라서 Utah 시장을 겨냥해 판매되는 제품들도 법 조문상으로는 여전히 합법적으로 꽂아 사용할 수 없는 상태입니다.',
+          ],
+        },
+        california: {
+          title: 'California: 임차인 44%, kWh당 31센트 요금, 그리고 마감 시한과 경쟁하는 법안',
+          content: [
+            '**2026년 7월 기준 California에서는 발코니 태양광을 연결하는 것이 여전히 불법입니다.** 주의 계통연계 규정은 300W 발코니 패널과 25kW 옥상 시스템을 구분하지 않기 때문에, 전력회사와의 계약 없이 연결하면 현재로서는 CPUC 규정 위반이 됩니다.',
+            'Scott Wiener 주상원의원이 발의한 SB 868, 일명 Plug Into the Sun Act는 휴대용 태양광 기기(400~1,200W)를 발전소가 아닌 가전제품으로 정의해 이 문제를 해결하고자 합니다. 지금까지의 진행 상황은 다음과 같습니다: 상원 에너지·공익사업·통신위원회 만장일치 통과, 상원 세출위원회 7대 0 통과, 상원 전체 표결 35대 1 통과, 하원 공익사업·에너지위원회 18대 0 통과입니다. **현재 이 법안은 하원 세출위원회에 계류 중이며, CPUC가 연간 행정 비용을 20만~50만 달러로 추산하면서 서스펜스 파일(suspense file)에 회부되어 청문회가 8월로 미뤄졌습니다.** 이번 회기에서 계속 심의되려면 하원이 2026년 8월 말 전에 이를 통과시켜야 하며, 서명되면 2027년 1월 1일 발효됩니다.',
+            '이해관계는 어느 주보다도 큽니다. California 가구의 약 44%가 임차 가구이고, 주 평균 전기 요금은 kWh당 약 31.4센트이며, NEM 3.0은 옥상 태양광의 역송 보상을 약 75% 삭감했습니다. 이는 역설적으로 발코니 태양광의 자가소비 모델에 유리하게 작용하는데, 애초에 이 모델은 역송 크레딧에 의존한 적이 없기 때문입니다.',
+          ],
+        },
+        florida: {
+          title: 'Florida: 강력한 태양광 권리법에 정확히 이 용도를 막는 예외 조항',
+          content: [
+            '**2026년 7월 기준 Florida에는 발효되었거나 발의된 발코니 태양광 법안이 전혀 없습니다.** 미국에서 가장 강력한 태양광 접근권 법령 중 하나를 이미 보유하고 있음에도 그렇습니다.',
+            'Florida 법령 163.04는 HOA와 부동산 등기상의 제한 조항이 주택의 태양광 설치를 막지 못하도록 규정합니다. 하지만 163.04(4)에는 명시적인 예외 조항이 있습니다. **"본 조항은 콘도미니엄, 협동조합, 아파트의 발코니 난간에는 적용되지 않는다."** 전력회사와 공동주택 업계의 로비에 대한 막판 타협으로 삽입된 이 조항은 발코니 태양광이 애초에 겨냥한 바로 그 용도를 막습니다. 단독주택 소유자는 강력한 태양광 권리를 갖지만, 난간에 패널을 설치하려는 콘도나 아파트 거주자는 이 법령상 아무런 권리도 갖지 못합니다.',
+            '그 외의 시장 여건은 오히려 탄탄합니다. South Florida에는 임차인과 콘도 거주자가 밀집해 있고, 기후로 인한 에어컨 사용량은 태양광 발전 시점과 잘 맞아떨어지며, DeSantis 주지사는 2025년 6월 옥상 태양광 인허가 절차를 간소화하는 HB 683에 서명했습니다. 이는 주의회가 원할 때는 태양광 관련 규제를 기꺼이 줄인다는 것을 보여줍니다. §163.04의 발코니 난간 예외 조항을 없애는 것이 Florida 옹호자들에게는 가장 실현 가능성이 높은 단일 입법 목표입니다.',
+          ],
+        },
+        texas: {
+          title: 'Texas: 금지도, 예외도 없이 그저 "전력회사에 따라 다르다"',
+          content: [
+            '**2026년 중반 기준 Texas에는 발효되었거나 심의 중인 플러그인 태양광 법안이 전혀 없습니다.** Florida의 명시적인 법령상 예외 조항과 달리, Texas의 상황은 규제상의 모호함입니다. 5kW 이상 옥상 시스템을 위해 작성된 표준 계통연계 규정이 기술적으로는 그리드에 연결되는 모든 기기에 적용되지만, 특정 전력회사가 1,200W 플러그인 패널에 이를 실제로 적용하는지는 사안마다 다릅니다.',
+            '주 면적의 약 90%를 포괄하는 ERCOT의 규제 완화된 전력망 아래에서, 주거용 고객은 경쟁 시장에서 소매 전력 공급업체(REP)를 직접 선택하며, 무엇을 꽂아 쓸 수 있는지는 해당 REP의 요금 약관이 좌우합니다. 여기에 ERCOT 소매 경쟁에 속하지 않는 시영 전력회사(Austin Energy, CPS Energy)와 약 70개의 독립적인 농촌 전력협동조합까지 더해지면, "Texas에서 발코니 태양광이 합법인가?"라는 질문에 대한 일률적인 답은 존재하지 않습니다. 답은 구체적인 전력회사와 REP에 달려 있습니다.',
+            'Texas 주의회는 2025년 회기에서 태양광 관련 법률 세 건(인허가 절차를 간소화한 SB 1202, 소비자 안내서를 다룬 SB 1697, 주거용 태양광 판매업체 규정인 SB 1036)과, HOA의 태양광 보호 규정을 태양광 지붕 타일까지 확대한 HB 431을 통과시켰습니다. 다만 어느 것도 플러그인 기기를 구체적으로 다루지는 않습니다. SB 1036이 판매 계약서에 전력회사 계통연계 승인 관련 문구를 포함하도록 요구하는 조항은, 오히려 상업적으로 판매되는 플러그인 시스템에 상황을 더 복잡하게 만들 수도 있습니다.',
+          ],
+        },
+        newYork: {
+          title: 'New York: 서명 하나만 남은, 가장 중대한 시장',
+          content: [
+            '**New York의 SUNNY Act(A.9111C/S.8512C)는 2026년 5월 28~29일 주의회 전체를 통과했으며, 상원은 하원 수정안에 대해 59대 1로 동의 표결을 했습니다. 이제 Kathy Hochul 주지사의 서명만 남아 있습니다.** 서명되면 90일 후 발효되며, New York은 9번째로 법을 발효시킨 주가 됩니다.',
+            '이 법안은 Public Service Law 아래 "휴대용 태양광 발전 기기" 범주를 신설하여 전미 공인시험기관의 인증과 자동 차단(anti-islanding) 보호 기능을 요구하고, NYSERDA의 계통연계 및 순간계량제 규정에서 해당 기기를 면제합니다. 이는 명시적으로 Utah의 HB 340을 모델로 삼았습니다.',
+            '이곳의 시장 여건은 이 글에서 다룬 어느 주보다도 강력합니다. New York 주 전체 평균 주거용 전기 요금은 kWh당 약 27~30센트이며(New York City의 Con Edison 고객은 흔히 30센트를 넘습니다), New York City의 자가주택 보유율은 약 32%로 미국에서 가장 낮은 축에 속합니다. 즉 대다수 거주자가 아파트에 임차로 거주하며 옥상 태양광으로 갈 방법이 전혀 없다는 뜻입니다. New York의 요금 기준으로 800W 발코니 시스템은 연간 약 203~236달러를 절감할 것으로 추정되며, 이는 이 글에서 다룬 주들 가운데 가장 높은 수치에 속합니다.',
+          ],
+        },
+        ulCertification: {
+          title: 'UL 3700 병목 현상: 법은 있지만 인증 제품은 아직 없다',
+          content: [
+            '**발효된 모든 주 법률은 UL 3700 또는 동등 인증을 합법적 사용의 조건으로 명시하고 있으며, 2026년 중반 기준 이를 취득한 완제품 플러그인 태양광 시스템은 아직 없습니다.** UL Solutions는 2025년 12월 UL 3700 조사개요(Outline of Investigation)를 발표했고, 인증 시험은 2026년 1월에 시작되었습니다. UL의 엔지니어링 부사장 Kenneth Boyce는 2026년 4월 인증 제품이 "몇 달 안에, 어쩌면 몇 주 안에" 나올 것으로 예상한다고 밝혔지만, 이 글을 작성하는 시점까지 이 과정을 완료한 제품은 없었습니다.',
+            'UL 3700은 세 가지 위험을 시험합니다. 차단기 용량을 초과할 수 있는 과전류 상태, 접지 결함 보호를 무력화할 수 있는 GFCI 비호환성, 그리고 분리 시 노출된 플러그 단자의 접촉 안전성입니다. 또한 전력선 작업자를 보호하기 위해, 정전 발생 후 수 밀리초 이내에 자동으로 차단되는 자동 차단(anti-islanding) 기능도 요구합니다.',
+            'EcoFlow를 비롯한 제조사들이 활발히 인증 협의를 진행 중이며, EcoFlow의 STREAM Ultra는 완전 인증을 기다리는 상태로 2026년 중반까지 Utah에서 판매 목록에 올라 있었습니다. 기술에 능숙한 일부 구매자는 개별적으로 UL 인증을 받은 부품들을 조합해 시스템을 직접 구성하기도 했지만, 부품을 조합한 시스템은 통합된 인증 시스템과 동일하지 않으며 HB 340과 같은 법률상의 법적 지위는 불확실합니다. 현재 추천 제품은 [미국을 위한 최고의 발코니 태양광 홈 배터리](/ko/balcony-solar/best-balcony-solar-home-battery-us-2026)와 [EcoFlow vs. Anker vs. Zendure](/ko/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)를 참고하십시오.',
+          ],
+        },
+        advocacy: {
+          title: '누가 이 흐름을 이끄는가: Bright Saver와 Ward 의원',
+          content: [
+            '2025년 1월 초기 보조금 50만 달러로 설립된 비영리단체 Bright Saver는 이 분야를 위한 미국 내 주된 로비 및 교육 조직으로 자리 잡았으며, 각 주의 입법자들에게 모델 법안과 조직화 자료를 제공하고 있습니다. 이는 EU의 도입 전략을 명시적으로 모델로 삼은 것입니다.',
+            'Utah의 Ward 의원은 자신의 법안이 통과된 이후 Hawaii, Washington, Minnesota, Colorado 등 여러 주의 입법자들과 직접 협의해 왔습니다. 이것이 이념적으로 다양한 주의회에서 거의 동일한 법안 문구가 등장하는 직접적인 메커니즘입니다.',
+          ],
+        },
+        whatsNext: {
+          title: '2027년 초까지 주목해야 할 일정',
+          content: '이 분야의 진행 속도는 주(州) 에너지 관련 입법치고는 이례적으로 빠릅니다. 지금 구매할지 기다릴지 결정하려면 다음 일정들을 주시하십시오.',
+          items: [
+            '2026년 8월 31일 — California의 SB 868은 회기 종료 전에 하원을 통과하지 못하면 2027년까지 지연됩니다.',
+            '2026년 9월경 — Hochul 주지사가 서명할 경우, New York의 SUNNY Act는 서명 90일 후 발효됩니다.',
+            '2026년 10월 1일 — Connecticut의 HB 5340 조항이 발효됩니다.',
+            '2027년 1월 1일 — Colorado의 HB26-1007이 발효되며, 미국에서 확인된 것 중 가장 높은 와트수 상한(1,920W)과 HOA·임대인 제한에 대한 명시적 금지 조항을 담고 있습니다.',
+            '2026년 3~4분기 — UL의 엔지니어링 부사장은 이 기간 안에 UL 3700 인증을 받은 첫 제품이 소매 시장에 나올 것으로 전망했지만, 확정된 날짜는 아직 없습니다.',
+            '2027년 회기 — New Jersey, Pennsylvania, Oregon, Washington을 비롯해 정체된 약 12개 주가 법안을 재발의할 것으로 예상됩니다.',
+          ],
+        },
+        checkYourState: {
+          title: '구매 전 자신의 주 상태를 확인하십시오',
+          content: '이 글은 법적 결과가 가장 뚜렷하게 갈리는 다섯 개 주를 다룹니다. 50개 주 전체 현황, 현재 와트수 상한, 확정된 서명·발효 날짜는 [주별 법률 추적기](/ko/balcony-solar/balcony-solar-legal-us-states)를 참고하십시오. 이 목록은 변화 속도가 빠른 만큼 60일마다 갱신됩니다. 미국 외 지역에 있다면 [국가별 글로벌 가이드](/ko/balcony-solar/is-balcony-solar-legal-country-guide)를 참고하십시오.',
+        },
+        faqSection: {
+          title: '자주 묻는 질문',
+          faqs: [
+            {
+              q: '미국에서 발코니 태양광은 합법입니까?',
+              a: '전적으로 주에 따라 다릅니다. 연방 차원의 발코니 태양광법은 존재하지 않습니다. 2026년 7월 기준 8개 주(Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut)가 법안에 서명했고, 한 개 주(New York)는 주의회를 통과해 주지사의 서명을 기다리고 있으며, 그 외 대부분의 주는 아직 이를 구체적으로 다루지 않고 있습니다.',
+            },
+            {
+              q: 'California에서 발코니 태양광은 합법입니까?',
+              a: '2026년 7월 기준으로는 아직 아닙니다. 현재 CPUC의 계통연계 규정은 규모와 관계없이 그리드에 연결되는 모든 기기를 동일하게 취급하므로, 전력회사와의 계약 없이 연결하는 것은 현재로서는 합법이 아닙니다. SB 868이 이를 해결할 수 있지만 2026년 8월 31일까지 하원을 통과해야 합니다.',
+            },
+            {
+              q: 'Florida에서 발코니 태양광은 합법입니까?',
+              a: 'Florida에는 플러그인 태양광 법안이 없습니다. 그 외에는 강력한 태양광 권리 법령(F.S. 163.04)을 갖추고 있지만, 이 법령은 콘도미니엄과 아파트의 발코니 난간을 명시적으로 제외하고 있어 공동주택에서 발코니 태양광의 주된 용도를 막고 있습니다.',
+            },
+            {
+              q: 'Texas에서 발코니 태양광은 합법입니까?',
+              a: '이를 허용하거나 금지하는 주 법률은 존재하지 않습니다. 대형 옥상 시스템을 위해 작성된 표준 계통연계 규정이 기술적으로는 그리드에 연결되는 모든 기기에 적용되기 때문에, 실질적인 합법 여부는 거주자가 이용하는 구체적인 전력회사와 소매 전력 공급업체(REP)에 따라 달라집니다.',
+            },
+            {
+              q: 'UL 3700이란 무엇이며 왜 합법성에 중요합니까?',
+              a: 'UL 3700은 UL Solutions가 2025년 12월 발표한, 플러그인 태양광 시스템을 위한 미국 안전 인증 표준입니다. 발효된 모든 주 법률이 이 인증(또는 동등 기준)을 요구하지만, 2026년 중반 기준 인증을 완료한 완제품 발코니 태양광 시스템은 없습니다. 따라서 법이 시행 중인 주에서도 법적으로 완전히 부합하는 하드웨어는 아직 완전히 구할 수 없는 상태입니다.',
+            },
+            {
+              q: '이 법들은 왜 잉여 전력을 그리드에 판매하도록 허용하지 않습니까?',
+              a: '발효되었거나 심의 중인 모든 법안은 발코니 태양광을 순간계량제에서 의도적으로 제외합니다. 역송 보상을 포기함으로써 전력회사가 이 법에 반대할 주된 이유가 사라지며, 이것이 성향이 매우 다른 여러 주의회에서도 이 법안들이 거의 만장일치로 통과된 이유입니다.',
+            },
+            {
+              q: '임대인이나 HOA가 발코니 태양광 패널을 금지할 수 있습니까?',
+              a: '주에 따라 다릅니다. Colorado의 법은 임대인과 HOA가 법령을 준수하는 기기를 금지하는 것을 명시적으로 금지합니다. 그 외 대부분의 발효 주는 발코니 패널을 염두에 두고 작성되지 않은 일반적인 태양광 접근권에 의존하고 있어, HOA의 제한이 여전히 적용될 수 있습니다. 보호받을 수 있다고 단정하기 전에 해당 주의 구체적인 법률을 확인하십시오.',
+            },
+            {
+              q: '더 많은 주가 언제 발코니 태양광법을 통과시킬까요?',
+              a: '30개 이상의 주와 Washington, D.C.가 법안을 발의했거나 심의를 진행 중입니다. California의 마감 시한은 2026년 8월이며, 그 외 여러 주(New Jersey, Massachusetts, Pennsylvania, Ohio, Michigan)도 활발히 논의 중이지만 아직 일정이 정해지지 않았습니다. 2025~2026년에 법안이 정체되거나 무산된 주들은 2027년 회기에 재발의할 것으로 예상됩니다.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '미국에서 발코니 태양광은 합법입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '전적으로 주에 따라 다릅니다. 연방 차원의 발코니 태양광법은 존재하지 않습니다. 2026년 7월 기준 8개 주(Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut)가 법안에 서명했고, 한 개 주(New York)는 주의회를 통과해 주지사의 서명을 기다리고 있으며, 그 외 대부분의 주는 아직 이를 구체적으로 다루지 않고 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'California에서 발코니 태양광은 합법입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '2026년 7월 기준으로는 아직 아닙니다. 현재 CPUC의 계통연계 규정은 규모와 관계없이 그리드에 연결되는 모든 기기를 동일하게 취급하므로, 전력회사와의 계약 없이 연결하는 것은 현재로서는 합법이 아닙니다. SB 868이 이를 해결할 수 있지만 2026년 8월 31일까지 하원을 통과해야 합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Florida에서 발코니 태양광은 합법입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Florida에는 플러그인 태양광 법안이 없습니다. 그 외에는 강력한 태양광 권리 법령(F.S. 163.04)을 갖추고 있지만, 이 법령은 콘도미니엄과 아파트의 발코니 난간을 명시적으로 제외하고 있어 공동주택에서 발코니 태양광의 주된 용도를 막고 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Texas에서 발코니 태양광은 합법입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '이를 허용하거나 금지하는 주 법률은 존재하지 않습니다. 대형 옥상 시스템을 위해 작성된 표준 계통연계 규정이 기술적으로는 그리드에 연결되는 모든 기기에 적용되기 때문에, 실질적인 합법 여부는 거주자가 이용하는 구체적인 전력회사와 소매 전력 공급업체(REP)에 따라 달라집니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'UL 3700이란 무엇이며 왜 합법성에 중요합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'UL 3700은 UL Solutions가 2025년 12월 발표한, 플러그인 태양광 시스템을 위한 미국 안전 인증 표준입니다. 발효된 모든 주 법률이 이 인증(또는 동등 기준)을 요구하지만, 2026년 중반 기준 인증을 완료한 완제품 발코니 태양광 시스템은 없습니다. 따라서 법이 시행 중인 주에서도 법적으로 완전히 부합하는 하드웨어는 아직 완전히 구할 수 없는 상태입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '이 법들은 왜 잉여 전력을 그리드에 판매하도록 허용하지 않습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '발효되었거나 심의 중인 모든 법안은 발코니 태양광을 순간계량제에서 의도적으로 제외합니다. 역송 보상을 포기함으로써 전력회사가 이 법에 반대할 주된 이유가 사라지며, 이것이 성향이 매우 다른 여러 주의회에서도 이 법안들이 거의 만장일치로 통과된 이유입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '임대인이나 HOA가 발코니 태양광 패널을 금지할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '주에 따라 다릅니다. Colorado의 법은 임대인과 HOA가 법령을 준수하는 기기를 금지하는 것을 명시적으로 금지합니다. 그 외 대부분의 발효 주는 발코니 패널을 염두에 두고 작성되지 않은 일반적인 태양광 접근권에 의존하고 있어, HOA의 제한이 여전히 적용될 수 있습니다. 보호받을 수 있다고 단정하기 전에 해당 주의 구체적인 법률을 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '더 많은 주가 언제 발코니 태양광법을 통과시킬까요?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '30개 이상의 주와 Washington, D.C.가 법안을 발의했거나 심의를 진행 중입니다. California의 마감 시한은 2026년 8월이며, 그 외 여러 주(New Jersey, Massachusetts, Pennsylvania, Ohio, Michigan)도 활발히 논의 중이지만 아직 일정이 정해지지 않았습니다. 2025~2026년에 법안이 정체되거나 무산된 주들은 2027년 회기에 재발의할 것으로 예상됩니다.',
+            },
+          },
+        ],
+      },
+    },
+    pt: {
+      category: 'Política Energética',
+      title: 'Por Dentro da Corrida pela Legalização da Energia Solar de Varanda nos EUA: Utah, Califórnia, Flórida, Texas e Nova York Comparados (2026)',
+      seoTitle: 'Leis de Energia Solar de Varanda nos EUA 2026: 5 Estados Comparados',
+      intro: 'Oito estados americanos sancionaram leis de legalização da energia solar de varanda e um nono está a apenas uma assinatura de distância, mas a Flórida e o Texas não têm nenhum projeto de lei sobre energia solar plug-in. Veja como cinco estados — Utah, Califórnia, Flórida, Texas e Nova York — chegaram a cinco resultados legais completamente diferentes para a mesma tecnologia.',
+      publishDate: 'Publicado em 16 de julho de 2026',
+      readTime: '13 min de leitura',
+      metaDescription: 'A energia solar de varanda é legal em 8 estados dos EUA e está pendente em um 9º, mas não na Flórida ou no Texas. Compare as leis de 2026 de Utah, Califórnia, Flórida, Texas e Nova York.',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Resposta Rápida',
+          items: [
+            'Oito estados americanos sancionaram legislação sobre energia solar de varanda até julho de 2026: Utah, Maine, Virgínia, Maryland, Colorado, New Hampshire, Vermont e Connecticut. Nova York aprovou nas duas câmaras legislativas por 59 a 1 em maio de 2026 e aguarda a assinatura do governador, o que a tornaria o 9º estado.',
+            'A HB 340 de Utah (sancionada em março de 2025) foi a primeira, isentando dispositivos de até 1.200W das regras de interconexão com a concessionária — mas o padrão de segurança do qual a lei depende, a UL 3700, só foi publicado em dezembro de 2025.',
+            'A SB 868 da Califórnia foi aprovada pelo Senado pleno por 35 a 1 e por uma comissão da Assembleia por 18 a 0, mas precisa ser aprovada pela Comissão de Orçamento da Assembleia até 31 de agosto de 2026 ou perde validade para a sessão.',
+            'A Flórida e o Texas não têm nenhum projeto de lei sobre energia solar plug-in. O próprio estatuto de direitos solares da Flórida exclui explicitamente grades de varanda em condomínios e apartamentos; o Texas não tem uma estrutura estadual, então a legalidade depende de qual concessionária e fornecedor de energia elétrica no varejo o morador possui.',
+            'Nenhum sistema solar plug-in havia recebido a certificação UL 3700 completa até meados de 2026, mesmo com a lei de Utah em vigor desde maio de 2025 — a estrutura legal está atualmente à frente do hardware certificado.',
+            'Toda lei estadual sancionada exclui a energia solar de varanda do net metering por design — uma escolha deliberada que remove o principal motivo pelo qual as concessionárias poderiam se opor.',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: 'O Que É a Energia Solar de Varanda, Na Prática',
+          content: [
+            '**A energia solar de varanda (também chamada de solar plug-in, ou "Balkonkraftwerk" em seu mercado de origem alemão) é um pequeno sistema fotovoltaico, tipicamente de 400 a 1.920 watts, que se conecta diretamente a uma tomada doméstica padrão.** Ele permite que locatários e moradores de apartamentos gerem eletricidade sem acesso ao telhado, burocracia de interconexão com a concessionária ou uma instalação que custa cinco dígitos.',
+            'A categoria já é comprovada em grande escala: a Alemanha tem cerca de 1,3 milhão de sistemas registrados (mais uma estimativa de 3 milhões não registrados) e cerca de 2,5 GW de capacidade instalada em meados de 2026. Os EUA estão seguindo o mesmo padrão que a Alemanha seguiu — apenas uma década depois, e estado por estado em vez de nacionalmente. Para um guia completo de como o hardware funciona, veja [O Que É Energia Solar de Varanda?](/pt/balcony-solar/what-is-balcony-solar)',
+          ],
+        },
+        whyItWasIllegal: {
+          title: 'Por Que a Energia Solar de Varanda nos EUA Era Efetivamente Ilegal Até 2024',
+          content: [
+            '**Um dispositivo solar plug-in empurra energia rio acima através de uma tomada padrão, para dentro da fiação de uma casa — o oposto do que essa tomada foi construída para fazer.** As regras de interconexão das concessionárias americanas foram escritas para sistemas de telhado de 5–25 kW, exigindo acordos, taxas e inspeções que poderiam dobrar o custo de um kit de varanda de US$ 500. Até 2024, nenhum estado diferenciava um painel de varanda de 400W de uma instalação completa em telhado, o que tornava a categoria inviável em todos os lugares.',
+            'O histórico da Alemanha catalisou diretamente a onda legislativa americana. O deputado estadual de Utah Raymond Ward leu um artigo do New York Times sobre sistemas alemães de Balkonkraftwerk e apresentou o projeto que se tornou a HB 340, citando explicitamente o histórico de segurança da Alemanha: "A eletricidade lá é a mesma daqui. Todas as mesmas leis da física funcionam e já se mostraram seguras."',
+          ],
+        },
+        theTemplate: {
+          title: 'Todo Projeto de Lei Estadual Segue o Mesmo Modelo',
+          content: [
+            '**Todo projeto de lei estadual sancionado ou pendente é modelado com base na HB 340 de Utah e segue uma estrutura quase idêntica:** define o dispositivo como um aparelho em vez de uma usina de energia, isenta-o das regras de interconexão com a concessionária abaixo de um limite de potência, exige certificação de segurança UL 3700 (ou equivalente), determina o desligamento anti-ilhamento durante quedas de energia na rede e exclui explicitamente o dispositivo do net metering.',
+            'Esse último ponto é uma escolha política deliberada. Ao abrir mão da compensação pelo excedente de energia exportado para a rede, os autores dos projetos removem a única coisa à qual as concessionárias poderiam se opor — serem obrigadas a pagar pela microgeração ou redesenhar tarifas. Esse é o principal motivo pelo qual esses projetos foram aprovados com votos quase unânimes e bipartidários em estados tão diferentes quanto Utah e Nova York.',
+          ],
+        },
+        stateComparison: {
+          title: 'Cinco Estados, Cinco Resultados',
+          content: 'A mesma tecnologia produziu uma lei sancionada, um projeto na mesa do governador, um projeto travado em comissão e dois estados sem nenhum projeto de lei.',
+          rows: [
+            { Estado: 'Utah', Status: 'Sancionada (maio de 2025)', 'Limite de Potência': '1.200W', 'Principal Barreira': 'Produtos certificados pela UL 3700 ainda não disponíveis' },
+            { Estado: 'Califórnia', Status: 'Projeto pendente (SB 868)', 'Limite de Potência': '1.200W se aprovado', 'Principal Barreira': 'Votação na Assembleia necessária até 31 de agosto de 2026' },
+            { Estado: 'Flórida', Status: 'Sem projeto de lei', 'Limite de Potência': 'N/A', 'Principal Barreira': 'Estatuto exclui grades de varanda de condomínios/apartamentos' },
+            { Estado: 'Texas', Status: 'Sem projeto de lei', 'Limite de Potência': 'N/A', 'Principal Barreira': 'Legalidade varia conforme a concessionária e o fornecedor de energia no varejo' },
+            { Estado: 'Nova York', Status: 'Aprovada na Legislatura por 59-1; aguardando assinatura', 'Limite de Potência': '1.200W se sancionado', 'Principal Barreira': 'Assinatura da governadora Hochul' },
+          ],
+          columns: ['Estado', 'Status', 'Limite de Potência', 'Principal Barreira'],
+        },
+        utah: {
+          title: 'Utah: O Pioneiro Que Aprovou uma Lei Antes de o Padrão de Segurança Existir',
+          content: [
+            '**A HB 340 de Utah, as Emendas de Energia Solar, foi aprovada por unanimidade nas duas câmaras da legislatura e sancionada pelo governador Spencer Cox em março de 2025, entrando em vigor em 7 de maio de 2025.** Ela cria uma categoria de "pequenos dispositivos portáteis de geração solar" limitados a 1.200W, isenta-os de acordos de interconexão com a concessionária, taxas e exigências de aprovação, e não exige nenhuma notificação à concessionária.',
+            'O relator, deputado Raymond Ward, enquadrou o projeto inteiramente em torno da escolha do consumidor e da economia de custos, em vez de política climática — "É ótimo para qualquer um que queira um pouco de energia solar, mas não queira pagar US$ 30.000 por uma instalação no telhado" — um enquadramento que se mostrou replicável em estados ideologicamente diferentes.',
+            '**O detalhe: a HB 340 nomeou a UL Solutions na legislação e exigiu um padrão de segurança que ainda não existia.** A UL publicou a UL 3700, a certificação da qual a lei depende, em dezembro de 2025 — oito meses após a lei entrar em vigor. Até meados de 2026, nenhum sistema solar plug-in completo havia conquistado a certificação UL 3700 total, então os produtos comercializados para o mercado de Utah ainda não podem ser legalmente conectados à luz da letra da lei.',
+          ],
+        },
+        california: {
+          title: 'Califórnia: 44% de Locatários, Tarifas de 31¢/kWh e um Projeto Correndo Contra o Prazo',
+          content: [
+            '**A energia solar de varanda continua ilegal de se conectar na Califórnia em julho de 2026** — as regras de interconexão do estado não fazem distinção entre um painel de varanda de 300W e um sistema de telhado de 25kW, então conectar um sem um acordo com a concessionária viola as regras da CPUC hoje.',
+            'A SB 868 do senador estadual Scott Wiener, o Plug Into the Sun Act, corrigiria isso ao definir dispositivos solares portáteis (400–1.200W) como aparelhos, não usinas de energia. Sua trajetória até agora: avanço unânime pela Comissão de Energia, Serviços Públicos e Comunicações do Senado; aprovado pela Comissão de Orçamento do Senado por 7-0; aprovado pelo Senado pleno por 35-1; aprovado pela Comissão de Serviços Públicos e Energia da Assembleia por 18-0. **O projeto agora está na Comissão de Orçamento da Assembleia, onde uma estimativa de custo da CPUC de US$ 200.000–500.000 em custos administrativos anuais acionou o arquivo de suspensão e adiou a audiência para agosto.** A Assembleia precisa aprová-lo antes do fim de agosto de 2026 para que avance nesta sessão; se sancionado, entra em vigor em 1º de janeiro de 2027.',
+            'O que está em jogo aqui é o maior de qualquer estado: cerca de 44% dos domicílios da Califórnia são de locatários, as tarifas médias de eletricidade no estado giram em torno de 31,4¢/kWh, e a NEM 3.0 cortou a compensação pela exportação de energia solar de telhado em cerca de 75% — o que, paradoxalmente, fortalece o argumento a favor do modelo de autoconsumo da energia solar de varanda, já que ele nunca dependeu de créditos de exportação, para começo de conversa.',
+          ],
+        },
+        florida: {
+          title: 'Flórida: Uma Lei Forte de Direitos Solares Com uma Exceção Que Bloqueia Exatamente Esse Uso',
+          content: [
+            '**A Flórida não tem nenhum projeto de lei sobre energia solar de varanda, sancionado ou apresentado, até julho de 2026** — apesar de ter um dos estatutos de acesso solar mais fortes do país.',
+            'O Estatuto da Flórida 163.04 proíbe associações de moradores (HOAs) e restrições de escritura de bloquear instalações solares em residências. Mas o 163.04(4) contém uma exceção explícita: **"Esta seção não se aplica a grades de varanda em condomínios, cooperativas ou apartamentos."** Essa cláusula — inserida como uma concessão tardia ao lobby das concessionárias e de edifícios multifamiliares — bloqueia exatamente o caso de uso para o qual a energia solar de varanda foi criada. Um proprietário de casa isolada tem fortes direitos solares; um morador de condomínio ou apartamento que instala um painel em uma grade não tem nenhum, segundo esse estatuto.',
+            'O argumento de mercado é forte de outras formas — uma densa população de locatários/moradores de condomínio no sul da Flórida, cargas de ar-condicionado impulsionadas pelo clima que se alinham com o horário de geração solar, e a assinatura do governador DeSantis em junho de 2025 da HB 683, que simplificou o licenciamento de energia solar em telhados — o que mostra que a legislatura está disposta a cortar burocracia solar quando quer. Eliminar a exceção das grades de varanda no §163.04 é o alvo legislativo mais acionável para os defensores da Flórida.',
+          ],
+        },
+        texas: {
+          title: 'Texas: Sem Proibição, Sem Isenção — Apenas "Depende da Sua Concessionária"',
+          content: [
+            '**O Texas não tem nenhum projeto de lei sobre energia solar plug-in, sancionado ou pendente, até meados de 2026.** Diferentemente da exceção estatutária explícita da Flórida, a situação do Texas é de ambiguidade regulatória: as regras padrão de interconexão escritas para sistemas de telhado de 5kW+ tecnicamente se aplicam a qualquer dispositivo conectado à rede, mas se uma determinada concessionária aplica isso a um painel plug-in de 1.200W varia caso a caso.',
+            'A rede desregulamentada da ERCOT — cobrindo cerca de 90% do estado — significa que os clientes residenciais escolhem um fornecedor de energia elétrica no varejo (REP) em um mercado competitivo, e a tarifa desse REP determina o que pode ser conectado. Somando-se a isso as concessionárias municipais fora da competição de varejo da ERCOT (Austin Energy, CPS Energy) e cerca de 70 cooperativas elétricas rurais independentes, uma resposta genérica para "a energia solar de varanda é legal no Texas?" simplesmente não existe — depende da concessionária e do REP específicos.',
+            'A sessão legislativa de 2025 do estado aprovou três leis relacionadas a energia solar (SB 1202 simplificando o licenciamento, SB 1697 sobre guias para o consumidor, SB 1036 sobre regras para varejistas de energia solar residencial), além da HB 431, que estendeu as proteções solares de HOA para telhas solares de telhado — mas nenhuma trata especificamente de dispositivos plug-in. A exigência da SB 1036 de que os contratos de venda incluam linguagem de aprovação de interconexão com a concessionária pode, na verdade, complicar ainda mais o cenário para sistemas plug-in vendidos comercialmente.',
+          ],
+        },
+        newYork: {
+          title: 'Nova York: O Mercado de Maior Peso, a Uma Assinatura de Distância',
+          content: [
+            '**O SUNNY Act de Nova York (A.9111C/S.8512C) foi aprovado por toda a legislatura em 28–29 de maio de 2026, com o Senado votando 59 a 1 para concordar com as emendas da Assembleia — e agora aguarda a assinatura da governadora Kathy Hochul.** Se sancionado, entra em vigor 90 dias depois e Nova York se torna o 9º estado a sancionar a lei.',
+            'O projeto cria uma categoria de "dispositivo portátil de geração solar" segundo a Lei de Serviços Públicos, exigindo certificação por laboratório reconhecido nacionalmente e proteção anti-ilhamento, e isentando os dispositivos das regras de interconexão e net metering da NYSERDA — modelado explicitamente na HB 340 de Utah.',
+            'O argumento de mercado aqui é o mais forte de qualquer estado acompanhado: a tarifa residencial média estadual de Nova York gira em torno de 27–30¢/kWh (clientes da Con Edison na cidade de Nova York frequentemente ultrapassam 30¢/kWh), e a cidade de Nova York tem uma das menores taxas de propriedade imobiliária do país, cerca de 32% — o que significa que a maioria dos moradores aluga apartamentos sem nenhum caminho para energia solar em telhado. Estima-se que um sistema de varanda de 800W nas tarifas de Nova York economize cerca de US$ 203–236 por ano, entre os valores mais altos de qualquer estado acompanhado.',
+          ],
+        },
+        ulCertification: {
+          title: 'O Gargalo da UL 3700: As Leis Existem, os Produtos Certificados Ainda Não',
+          content: [
+            '**Toda lei estadual sancionada condiciona o uso legal à certificação UL 3700 ou equivalente — e, até meados de 2026, nenhum sistema solar plug-in completo a conquistou.** A UL Solutions publicou o Esboço de Investigação da UL 3700 em dezembro de 2025; os testes de certificação começaram em janeiro de 2026. O vice-presidente de Engenharia da UL, Kenneth Boyce, disse em abril de 2026 que produtos certificados eram esperados "em meses, talvez até semanas", mas até o momento da redação nenhum havia concluído o processo.',
+            'A UL 3700 testa três riscos: condições de sobrecorrente que poderiam sobrecarregar um disjuntor, incompatibilidade com GFCI que poderia silenciosamente anular a proteção contra falha de aterramento, e segurança ao toque nos pinos expostos do plugue quando desconectado. Também exige anti-ilhamento — desligamento automático em milissegundos após uma queda na rede, para proteger os trabalhadores de linha da concessionária.',
+            'Fabricantes como a EcoFlow estão em conversas ativas de certificação; o STREAM Ultra da EcoFlow foi listado para venda em Utah até meados de 2026, aguardando certificação completa. Alguns compradores tecnicamente sofisticados montaram sistemas a partir de componentes individualmente listados pela UL, mas um sistema montado a partir de peças não é o mesmo que um sistema integrado e certificado — seu status legal sob leis como a HB 340 é incerto. Veja as escolhas atuais em [Melhores Baterias Domésticas Solares de Varanda para os EUA](/pt/balcony-solar/best-balcony-solar-home-battery-us-2026) e [EcoFlow vs. Anker vs. Zendure](/pt/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar).',
+          ],
+        },
+        advocacy: {
+          title: 'Quem Está Impulsionando Isso: Bright Saver e o Deputado Ward',
+          content: [
+            'A organização sem fins lucrativos Bright Saver, fundada em janeiro de 2025 com US$ 500.000 em subsídios iniciais, se tornou a principal força americana de lobby e educação para a categoria, fornecendo legislação-modelo e organizando recursos para legisladores estado por estado — explicitamente modelada no manual de adoção da UE.',
+            'O deputado Ward, de Utah, consultou pessoalmente legisladores do Havaí, Washington, Minnesota, Colorado e outros estados desde que seu projeto foi aprovado — o que é o mecanismo direto por trás da linguagem quase idêntica dos projetos de lei que aparecem em legislaturas ideologicamente diversas.',
+          ],
+        },
+        whatsNext: {
+          title: 'O Que Observar Até o Início de 2027',
+          content: 'O ritmo dessa categoria é incomumente rápido para legislação energética estadual — acompanhe essas datas se você está decidindo se compra agora ou espera.',
+          items: [
+            '31 de agosto de 2026 — a SB 868 da Califórnia precisa ser aprovada pela Assembleia antes do fim da sessão ou fica parada até 2027.',
+            '~Setembro de 2026 — o SUNNY Act de Nova York entra em vigor 90 dias após a sanção, se a governadora Hochul assinar.',
+            '1º de outubro de 2026 — as disposições da HB 5340 de Connecticut entram em vigor.',
+            '1º de janeiro de 2027 — a HB26-1007 do Colorado entra em vigor com o maior limite de potência confirmado nos EUA (1.920W) e uma proibição explícita de restrições de HOA/proprietário.',
+            'Q3–Q4 2026 — o próprio vice-presidente de Engenharia da UL previu que os primeiros produtos certificados pela UL 3700 chegarão ao varejo nesse período, embora nenhuma data firme esteja confirmada.',
+            'Sessões de 2027 — Nova Jersey, Pensilvânia, Oregon, Washington e cerca de uma dúzia de outros estados travados devem reapresentar seus projetos.',
+          ],
+        },
+        checkYourState: {
+          title: 'Verifique o Status do Seu Próprio Estado Antes de Comprar',
+          content: 'Este artigo cobre os cinco estados com os resultados legais mais distintos. Para o status completo dos 50 estados, limites de potência atuais e datas confirmadas de sanção/vigência, veja o [rastreador legal estado por estado](/pt/balcony-solar/balcony-solar-legal-us-states), que é atualizado a cada 60 dias, dado o ritmo com que essa lista muda, e o [guia global país por país](/pt/balcony-solar/is-balcony-solar-legal-country-guide) se você estiver fora dos EUA.',
+        },
+        faqSection: {
+          title: 'Perguntas frequentes',
+          faqs: [
+            {
+              q: 'A energia solar de varanda é legal nos Estados Unidos?',
+              a: 'Depende inteiramente do estado — não existe uma lei federal sobre energia solar de varanda. Oito estados sancionaram legislação até julho de 2026 (Utah, Maine, Virgínia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), mais um (Nova York) foi aprovado pela legislatura e aguarda a assinatura do governador, e a maioria dos outros estados não tratou especificamente do assunto.',
+            },
+            {
+              q: 'A energia solar de varanda é legal na Califórnia?',
+              a: 'Ainda não, até julho de 2026. As regras atuais de interconexão da CPUC tratam qualquer dispositivo conectado à rede da mesma forma, independentemente do tamanho, então conectar um sem um acordo com a concessionária não é legal hoje. A SB 868 corrigiria isso, mas precisa ser aprovada pela Assembleia até 31 de agosto de 2026.',
+            },
+            {
+              q: 'A energia solar de varanda é legal na Flórida?',
+              a: 'A Flórida não tem nenhum projeto de lei sobre energia solar plug-in. Seu estatuto de direitos solares, que de resto é forte (F.S. 163.04), exclui explicitamente grades de varanda em condomínios e apartamentos, o que bloqueia o principal caso de uso da energia solar de varanda em moradias multifamiliares.',
+            },
+            {
+              q: 'A energia solar de varanda é legal no Texas?',
+              a: 'Não existe lei estadual permitindo ou proibindo. A legalidade na prática depende da concessionária e do fornecedor de energia elétrica no varejo (REP) específicos que o morador possui, já que as regras padrão de interconexão escritas para grandes sistemas de telhado tecnicamente se aplicam a qualquer dispositivo conectado à rede.',
+            },
+            {
+              q: 'O que é a UL 3700 e por que ela importa para a legalidade?',
+              a: 'A UL 3700 é o padrão de certificação de segurança dos EUA para sistemas solares plug-in, publicado pela UL Solutions em dezembro de 2025. Toda lei estadual sancionada a exige (ou um equivalente), mas até meados de 2026 nenhum sistema solar de varanda completo concluiu a certificação — então o hardware legalmente compatível ainda não está totalmente disponível, mesmo em estados onde a lei já está em vigor.',
+            },
+            {
+              q: 'Por que essas leis não me deixam vender o excedente de energia de volta para a rede?',
+              a: 'Todo projeto sancionado ou pendente exclui deliberadamente a energia solar de varanda do net metering. Abrir mão da compensação por exportação remove o principal motivo pelo qual uma concessionária poderia se opor à lei, e é por isso que esses projetos foram aprovados com votos quase unânimes em legislaturas estaduais muito diferentes entre si.',
+            },
+            {
+              q: 'Meu proprietário ou associação de moradores (HOA) pode proibir um painel solar de varanda?',
+              a: 'Depende do estado. A lei do Colorado proíbe explicitamente proprietários e HOAs de banir dispositivos compatíveis. A maioria dos outros estados que sancionaram leis se baseia em direitos gerais de acesso solar que não foram escritos pensando em painéis de varanda, então restrições de HOA ainda podem se aplicar — verifique a lei específica do seu estado antes de presumir proteção.',
+            },
+            {
+              q: 'Quando mais estados vão aprovar leis sobre energia solar de varanda?',
+              a: 'Trinta ou mais estados e o Distrito de Columbia apresentaram ou estão avançando com projetos de lei. O prazo da Califórnia é agosto de 2026; vários outros estados (Nova Jersey, Massachusetts, Pensilvânia, Ohio, Michigan) estão ativos, mas ainda sem data marcada. Espera-se que estados onde os projetos travaram ou falharam em 2025–2026 os reapresentem nas sessões de 2027.',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'A energia solar de varanda é legal nos Estados Unidos?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Depende inteiramente do estado — não existe uma lei federal sobre energia solar de varanda. Oito estados sancionaram legislação até julho de 2026 (Utah, Maine, Virgínia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), mais um (Nova York) foi aprovado pela legislatura e aguarda a assinatura do governador, e a maioria dos outros estados não tratou especificamente do assunto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A energia solar de varanda é legal na Califórnia?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ainda não, até julho de 2026. As regras atuais de interconexão da CPUC tratam qualquer dispositivo conectado à rede da mesma forma, independentemente do tamanho, então conectar um sem um acordo com a concessionária não é legal hoje. A SB 868 corrigiria isso, mas precisa ser aprovada pela Assembleia até 31 de agosto de 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A energia solar de varanda é legal na Flórida?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A Flórida não tem nenhum projeto de lei sobre energia solar plug-in. Seu estatuto de direitos solares, que de resto é forte (F.S. 163.04), exclui explicitamente grades de varanda em condomínios e apartamentos, o que bloqueia o principal caso de uso da energia solar de varanda em moradias multifamiliares.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A energia solar de varanda é legal no Texas?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Não existe lei estadual permitindo ou proibindo. A legalidade na prática depende da concessionária e do fornecedor de energia elétrica no varejo (REP) específicos que o morador possui, já que as regras padrão de interconexão escritas para grandes sistemas de telhado tecnicamente se aplicam a qualquer dispositivo conectado à rede.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O que é a UL 3700 e por que ela importa para a legalidade?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A UL 3700 é o padrão de certificação de segurança dos EUA para sistemas solares plug-in, publicado pela UL Solutions em dezembro de 2025. Toda lei estadual sancionada a exige (ou um equivalente), mas até meados de 2026 nenhum sistema solar de varanda completo concluiu a certificação — então o hardware legalmente compatível ainda não está totalmente disponível, mesmo em estados onde a lei já está em vigor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Por que essas leis não me deixam vender o excedente de energia de volta para a rede?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Todo projeto sancionado ou pendente exclui deliberadamente a energia solar de varanda do net metering. Abrir mão da compensação por exportação remove o principal motivo pelo qual uma concessionária poderia se opor à lei, e é por isso que esses projetos foram aprovados com votos quase unânimes em legislaturas estaduais muito diferentes entre si.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Meu proprietário ou associação de moradores (HOA) pode proibir um painel solar de varanda?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Depende do estado. A lei do Colorado proíbe explicitamente proprietários e HOAs de banir dispositivos compatíveis. A maioria dos outros estados que sancionaram leis se baseia em direitos gerais de acesso solar que não foram escritos pensando em painéis de varanda, então restrições de HOA ainda podem se aplicar — verifique a lei específica do seu estado antes de presumir proteção.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quando mais estados vão aprovar leis sobre energia solar de varanda?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Trinta ou mais estados e o Distrito de Columbia apresentaram ou estão avançando com projetos de lei. O prazo da Califórnia é agosto de 2026; vários outros estados (Nova Jersey, Massachusetts, Pensilvânia, Ohio, Michigan) estão ativos, mas ainda sem data marcada. Espera-se que estados onde os projetos travaram ou falharam em 2025–2026 os reapresentem nas sessões de 2027.',
+            },
+          },
+        ],
+      },
+    },
+    zh: {
+      category: '能源政策',
+      title: '美国阳台光伏合法化竞速全解析:犹他州、加利福尼亚州、佛罗里达州、得克萨斯州与纽约州对比(2026)',
+      seoTitle: '2026年美国阳台光伏法规:5州对比',
+      intro: '美国已有8个州签署阳台光伏立法生效,第9个州只差州长一签,但佛罗里达州和得克萨斯州完全没有插电式光伏法案。以下是犹他州、加利福尼亚州、佛罗里达州、得克萨斯州和纽约州这五个州,针对同一项技术得出的五种完全不同的法律结果。',
+      publishDate: '发布于2026年7月16日',
+      readTime: '阅读约13分钟',
+      metaDescription: '阳台光伏在美国8个州合法,第9个州待批,但在佛罗里达州和得克萨斯州仍不合法。对比犹他州、加利福尼亚州、佛罗里达州、得克萨斯州和纽约州2026年的法规。',
+      educationalLevel: 'Intermediate',
+      freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-16',
+      last_full_refresh: '2026-07-16',
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '核心要点',
+          items: [
+            '截至2026年7月,美国已有8个州签署阳台光伏立法:犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州和康涅狄格州。纽约州已于2026年5月以59比1的表决通过两院,正等待州长签署,一旦签署将成为第9个州。',
+            '犹他州的HB 340法案(2025年3月签署)是最早的一项,将功率不超过1200瓦的设备豁免于电力公司并网规定——但该法律所依赖的安全标准UL 3700直到2025年12月才正式发布。',
+            '加利福尼亚州的SB 868法案已在参议院以35比1全票通过,并在众议院委员会以18比0通过,但必须在2026年8月31日前通过众议院拨款委员会审议,否则本届会期作废。',
+            '佛罗里达州和得克萨斯州完全没有插电式光伏法案。佛罗里达州自身的太阳能权益法规明确将公寓和出租房的阳台栏杆排除在外;得克萨斯州没有州级框架,合法性取决于居民所在的电力公司和零售电力供应商。',
+            '截至2026年年中,没有任何插电式光伏系统获得完整的UL 3700认证,尽管犹他州的法律自2025年5月起就已生效——法律框架目前走在了已认证硬件的前面。',
+            '每一部已生效的州法律都在设计上将阳台光伏排除在净计量之外——这是一项刻意的权衡,消除了电力公司原本可能反对的主要理由。',
+          ],
+        },
+        whatIsBalconySolar: {
+          title: '阳台光伏到底是什么',
+          content: [
+            '**阳台光伏(也称插电式光伏,在其德国原产市场被称为"Balkonkraftwerk")是一种小型光伏系统,功率通常在400瓦至1920瓦之间,可直接接入标准家用插座。**它让租房者和公寓住户无需屋顶access权限、电力公司并网手续或五位数的安装费用即可发电。',
+            '这一品类已在大规模应用中得到验证:截至2026年年中,德国已注册系统约130万套(另有约300万套未注册),装机容量约2.5吉瓦。美国正在重复德国走过的路径——只是晚了十年,而且是逐州推进而非全国统一。关于硬件工作原理的完整介绍,参见[什么是阳台光伏?](/zh/balcony-solar/what-is-balcony-solar)',
+          ],
+        },
+        whyItWasIllegal: {
+          title: '为何美国阳台光伏在2024年之前实际上属于违法',
+          content: [
+            '**插电式光伏设备通过标准插座将电力向上游推入住宅电路——这与该插座的设计初衷正好相反。**美国的电力公司并网规定是针对5至25千瓦的屋顶系统制定的,要求签订协议、缴纳费用并接受检验,这些成本足以让一套500美元的阳台套件成本翻倍。截至2024年,没有任何一个州将400瓦的阳台面板与整套屋顶安装区分开来,这使得该品类在任何地方都难以实际推行。',
+            '德国的实践记录直接催化了美国的立法浪潮。犹他州众议员雷蒙德·沃德读到《纽约时报》一篇关于德国Balkonkraftwerk系统的报道后,提出了后来成为HB 340法案的提案,并明确援引德国的安全记录:"那边的电和这边的电是一样的。同样的物理定律在那里同样适用,而且已被证明是安全的。"',
+          ],
+        },
+        theTemplate: {
+          title: '各州法案均遵循同一模板',
+          content: [
+            '**每一部已通过和待通过的州法案都以犹他州HB 340为蓝本,遵循近乎相同的结构:**将该设备定义为家电而非发电厂,在某一功率上限以下豁免电力公司并网要求,要求通过UL 3700(或同等标准)安全认证,规定电网停电时须具备防孤岛自动关断功能,并明确将该设备排除在净计量之外。',
+            '最后一点是一项刻意的政治权衡。放弃对输出到电网的多余电力的补偿,使法案发起人消除了电力公司唯一可能反对的理由——被迫为微型发电付费或重新设计电价结构。这正是这些法案能在犹他州和纽约州这类立场迥异的州都以近乎全票、跨党派方式通过的最主要原因。',
+          ],
+        },
+        stateComparison: {
+          title: '五个州,五种结果',
+          content: '同一项技术在不同州产生了已生效法律、待州长签署的法案、卡在委员会的法案,以及两个州完全没有法案的四种局面。',
+          rows: [
+            { '州': '犹他州', '现状': '已生效(2025年5月)', '功率上限': '1200瓦', '主要障碍': 'UL 3700认证产品尚未上市' },
+            { '州': '加利福尼亚州', '现状': '法案待批(SB 868)', '功率上限': '通过后为1200瓦', '主要障碍': '需在2026年8月31日前完成众议院表决' },
+            { '州': '佛罗里达州', '现状': '无法案', '功率上限': '不适用', '主要障碍': '法规明确排除公寓/出租房阳台栏杆' },
+            { '州': '得克萨斯州', '现状': '无法案', '功率上限': '不适用', '主要障碍': '合法性因电力公司和零售电力供应商而异' },
+            { '州': '纽约州', '现状': '已以59比1通过州议会;待签署', '功率上限': '签署后为1200瓦', '主要障碍': '霍楚尔州长的签字' },
+          ],
+          columns: ['州', '现状', '功率上限', '主要障碍'],
+        },
+        utah: {
+          title: '犹他州:安全标准出台前就已立法的先行者',
+          content: [
+            '**犹他州HB 340法案,即《太阳能修正案》,在州议会两院均获全票通过,并由州长斯宾塞·考克斯于2025年3月签署,于2025年5月7日正式生效。**该法案设立了"小型便携式太阳能发电设备"这一类别,功率上限为1200瓦,豁免其电力公司并网协议、费用和审批要求,且完全无需向电力公司报备。',
+            '法案发起人、众议员雷蒙德·沃德将该法案完全定位为消费者选择权和成本节约议题,而非气候政策——"对于那些想要一点太阳能但又不想为屋顶安装花3万美元的人来说,这项法案再好不过"——这一定位方式后来被证明可复制到其他意识形态迥异的州。',
+            '**问题在于:HB 340法案在立法条文中指名UL Solutions,并要求达到一项当时尚不存在的安全标准。**UL直到2025年12月才发布该法律所依赖的认证标准UL 3700——距该法律生效已过去八个月。截至2026年年中,尚无任何完整的插电式光伏系统获得完整的UL 3700认证,因此面向犹他州市场销售的产品,依据法律条文严格来说仍不能合法插入使用。',
+          ],
+        },
+        california: {
+          title: '加利福尼亚州:44%租房比例、31美分/度电价,以及一场与截止日期的赛跑',
+          content: [
+            '**截至2026年7月,阳台光伏在加利福尼亚州仍属违法接入行为**——该州的并网规定并未区分300瓦的阳台面板和25千瓦的屋顶系统,因此在没有电力公司协议的情况下接入设备,在当前依然违反加州公共事业委员会(CPUC)规定。',
+            '州参议员斯科特·维纳提出的SB 868法案,即《插入阳光法案》,将把功率在400至1200瓦之间的便携式光伏设备定义为家电而非发电厂,从而解决这一问题。其推进进程如下:在参议院能源、公用事业与通信委员会全票通过;在参议院拨款委员会以7比0通过;在参议院全院以35比1通过;在众议院公用事业与能源委员会以18比0通过。**该法案目前正卡在众议院拨款委员会,CPUC给出的年度行政成本估算为20万至50万美元,这一估算触发了"待议清单"程序,并将听证会推迟至8月。**众议院必须在2026年8月底前通过该法案,否则本届会期无法继续推进;若签署生效,将于2027年1月1日起施行。',
+            '各州之中,加利福尼亚州的利害关系最大:该州约44%的家庭为租房居住,全州平均电价约为每度电31.4美分,而NEM 3.0政策已将屋顶光伏的余电补偿削减了约75%——这一变化反而强化了阳台光伏"自发自用"模式的合理性,因为该模式一开始就不依赖余电补偿。',
+          ],
+        },
+        florida: {
+          title: '佛罗里达州:一部强有力的太阳能权益法,却有一项恰好卡住此用途的例外条款',
+          content: [
+            '**截至2026年7月,佛罗里达州没有任何阳台光伏法案,无论是已生效还是已提出的**——尽管该州拥有全美最强有力的太阳能准入法规之一。',
+            '佛罗里达州法规163.04禁止业主协会和契约限制条款阻挠住宅安装太阳能设备。但163.04(4)款包含一项明确例外:**"本条款不适用于共管公寓、合作公寓或出租公寓的阳台栏杆。"**这一条款——作为对电力公司和多户住宅业界游说的迟来让步而被加入——恰好卡住了阳台光伏所服务的确切使用场景。独栋住宅业主拥有较强的太阳能权益,而在阳台栏杆上安装面板的公寓或出租房住户,依据该法规则完全没有此类权益。',
+            '从市场潜力看,佛罗里达州的条件其实很好——南佛罗里达租房者/公寓住户密度高,气候驱动的空调用电负荷与光伏发电时段高度吻合,而州长德桑蒂斯也于2025年6月签署了简化屋顶光伏审批流程的HB 683法案——这表明该州议会在有意愿时是愿意削减太阳能相关繁文缛节的。取消163.04条款中的阳台栏杆例外条款,是佛罗里达州倡导者目前最具可操作性的立法目标。',
+          ],
+        },
+        texas: {
+          title: '得克萨斯州:既无禁令也无豁免——一切"取决于你的电力公司"',
+          content: [
+            '**截至2026年年中,得克萨斯州没有任何插电式光伏法案,无论是已生效还是待批的。**与佛罗里达州明确的法规排除条款不同,得克萨斯州的情况属于监管模糊地带:针对5千瓦以上屋顶系统制定的标准并网规定,从技术上讲适用于任何并网设备,但某家电力公司是否会将其适用于一块1200瓦的插电式面板,则因具体情况而异。',
+            '得克萨斯州电力可靠性委员会(ERCOT)管理的放松管制电网覆盖该州约90%的地区,这意味着居民从竞争性市场中自行选择零售电力供应商(REP),而该供应商的电价条款决定了什么设备可以接入。再加上ERCOT零售竞争范围之外的市政电力公司(如奥斯汀能源公司、CPS能源公司)以及约70家独立的农村电力合作社,"阳台光伏在得克萨斯州是否合法"这个问题根本没有统一答案——它取决于具体的电力公司和零售电力供应商。',
+            '该州2025年立法会期通过了三项与太阳能相关的法律(SB 1202简化审批流程、SB 1697消费者指南、SB 1036住宅太阳能零售商规定),外加HB 431法案将业主协会太阳能保护范围扩大到太阳能瓦片——但均未专门涉及插电式设备。SB 1036要求销售协议中包含电力公司并网批准相关条款,这项要求若有影响的话,反而可能使商业销售的插电式系统的处境更加复杂。',
+          ],
+        },
+        newYork: {
+          title: '纽约州:利害关系最大的市场,只差一签',
+          content: [
+            '**纽约州的SUNNY法案(A.9111C/S.8512C)已于2026年5月28日至29日通过州议会两院,参议院以59比1的表决同意众议院的修正案——目前正等待州长凯茜·霍楚尔签署。**一旦签署,将在90天后生效,纽约州将成为第9个已生效该法律的州。',
+            '该法案在《公共服务法》下设立了"便携式太阳能发电设备"这一类别,要求获得国家认可实验室的认证并具备防孤岛保护功能,同时将此类设备豁免于纽约州能源研究与开发局(NYSERDA)的并网和净计量规定——其条文明确以犹他州HB 340法案为蓝本。',
+            '在所有已追踪的州中,纽约州的市场潜力最强:该州住宅电价全州平均约为每度电27至30美分(纽约市爱迪生联合电力公司的用户经常超过每度电30美分),而纽约市的自有住房率是全美最低之一,约为32%——这意味着大多数居民都是租房居住,根本没有安装屋顶光伏的途径。据估算,一套800瓦的阳台光伏系统按纽约州电价计算,每年可节省约203至236美元,是所有已追踪州中最高的数字之一。',
+          ],
+        },
+        ulCertification: {
+          title: 'UL 3700认证瓶颈:法律已经存在,认证产品尚未跟上',
+          content: [
+            '**每一部已生效的州法律都将合法使用的前提设定为获得UL 3700或同等认证——而截至2026年年中,尚无任何完整的插电式光伏系统获得该认证。**UL Solutions于2025年12月发布了UL 3700调查大纲,认证测试于2026年1月正式开放。UL公司工程副总裁肯尼斯·博伊斯在2026年4月表示,预计认证产品将在"几个月内,甚至可能几周内"面世,但截至本文撰写时,尚无产品完成整个认证流程。',
+            'UL 3700针对三类风险进行测试:可能压垮断路器的过电流状况、可能悄悄失效接地故障保护的GFCI不兼容问题,以及插头断开连接时外露插脚的触碰安全性。此外,该标准还要求具备防孤岛功能——在电网停电后的几毫秒内自动关断,以保护电力公司的线路维修人员。',
+            '包括EcoFlow在内的多家制造商正积极参与认证相关沟通;截至2026年年中,EcoFlow的STREAM Ultra产品已在犹他州上市销售,认证仍在完成之中。一些技术娴熟的买家已使用单独通过UL认证的组件自行组装系统,但由零部件自行组装而成的系统,与经过整体认证的一体化系统并不相同——其在HB 340这类法律下的法律地位仍不明确。关于当前的产品推荐,参见[美国阳台光伏家用电池最佳选择](/zh/balcony-solar/best-balcony-solar-home-battery-us-2026)和[EcoFlow对比Anker对比Zendure](/zh/balcony-solar/ecoflow-vs-anker-vs-zendure-balcony-solar)。',
+          ],
+        },
+        advocacy: {
+          title: '幕后推动力量:Bright Saver与众议员沃德',
+          content: [
+            '非营利组织Bright Saver成立于2025年1月,初始获得50万美元资助,已成为美国推动这一品类立法和普及教育的主要力量,为各州立法者提供示范法案文本和组织资源支持——其做法明确借鉴了欧盟的推广经验。',
+            '犹他州众议员沃德自其法案通过以来,已亲自与夏威夷、华盛顿、明尼苏达、科罗拉多等多个州的立法者进行了沟通交流——这正是各意识形态迥异的州议会中出现近乎相同法案条文的直接原因。',
+          ],
+        },
+        whatsNext: {
+          title: '2027年初之前需要关注的动态',
+          content: '就州级能源立法而言,这一品类的推进速度异常之快——如果你正在考虑现在购买还是再等等,不妨追踪以下这些时间节点。',
+          items: [
+            '2026年8月31日——加利福尼亚州的SB 868法案必须在本届会期结束前通过众议院,否则将停滞到2027年。',
+            '约2026年9月——纽约州的SUNNY法案将在霍楚尔州长签署后90天生效(如获签署)。',
+            '2026年10月1日——康涅狄格州HB 5340法案的相关条款正式生效。',
+            '2027年1月1日——科罗拉多州HB26-1007法案正式生效,该法案设定了目前已确认的全美最高功率上限(1920瓦),并明确禁止业主协会/房东施加限制。',
+            '2026年第三、四季度——UL公司工程副总裁本人预测,首批通过UL 3700认证的产品将在这一时间窗口进入零售市场,但目前尚无确切日期。',
+            '2027年各州会期——新泽西州、宾夕法尼亚州、俄勒冈州、华盛顿州以及另外约十几个法案停滞的州预计将重新提交法案。',
+          ],
+        },
+        checkYourState: {
+          title: '购买前请先核实你所在州的现状',
+          content: '本文重点介绍了法律结果差异最大的五个州。若需查看全美50州的完整现状、当前功率上限以及已确认的签署/生效日期,参见[各州法律状态追踪器](/zh/balcony-solar/balcony-solar-legal-us-states)(鉴于该清单变化极快,每60天更新一次);若你身处美国以外,可参见[全球各国指南](/zh/balcony-solar/is-balcony-solar-legal-country-guide)。',
+        },
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: '阳台光伏在美国合法吗?',
+              a: '这完全取决于所在的州——目前没有联邦层面的阳台光伏法律。截至2026年7月,已有8个州签署立法生效(犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州、康涅狄格州),另有一个州(纽约州)已通过州议会,正等待州长签署,而大多数其他州尚未专门就此立法。',
+            },
+            {
+              q: '阳台光伏在加利福尼亚州合法吗?',
+              a: '截至2026年7月,尚未合法。当前的CPUC并网规定对任何并网设备一视同仁,不区分大小,因此在没有电力公司协议的情况下接入设备目前并不合法。SB 868法案本可解决这一问题,但必须在2026年8月31日前通过众议院。',
+            },
+            {
+              q: '阳台光伏在佛罗里达州合法吗?',
+              a: '佛罗里达州没有插电式光伏法案。该州原本强有力的太阳能权益法规(F.S. 163.04)明确将共管公寓和出租公寓的阳台栏杆排除在外,这一条款卡住了阳台光伏在多户住宅中的主要使用场景。',
+            },
+            {
+              q: '阳台光伏在得克萨斯州合法吗?',
+              a: '没有任何一部州法律明确允许或禁止这一行为。实际合法性取决于居民所在的具体电力公司和零售电力供应商(REP),因为针对大型屋顶系统制定的标准并网规定,从技术上讲适用于任何并网设备。',
+            },
+            {
+              q: 'UL 3700是什么,为何它对合法性如此重要?',
+              a: 'UL 3700是美国针对插电式光伏系统的安全认证标准,由UL Solutions于2025年12月发布。每一部已生效的州法律都要求达到该标准(或同等标准),但截至2026年年中,尚无任何完整的阳台光伏系统完成认证——这意味着即便在法律已生效的州,合规硬件目前也尚未完全上市。',
+            },
+            {
+              q: '为什么这些法律不允许我把多余的电卖回电网?',
+              a: '每一部已生效和待批的法案都刻意将阳台光伏排除在净计量之外。放弃余电补偿,消除了电力公司原本可能反对该法律的主要理由,这也是这些法案能在立场迥异的各州议会中以近乎全票通过的原因。',
+            },
+            {
+              q: '我的房东或业主协会能禁止安装阳台光伏面板吗?',
+              a: '这取决于所在的州。科罗拉多州的法律明确禁止房东和业主协会禁止安装合规设备。大多数其他已立法的州依赖的是并非专门为阳台面板而设的一般性太阳能准入权益,因此业主协会的限制条款仍可能适用——在假定自己受到保护之前,请先核实所在州的具体法律。',
+            },
+            {
+              q: '还会有更多州通过阳台光伏立法吗?',
+              a: '已有30多个州和华盛顿特区提出或正在推进相关法案。加利福尼亚州的截止日期是2026年8月;另有几个州(新泽西州、马萨诸塞州、宾夕法尼亚州、俄亥俄州、密歇根州)正在推进但尚未排期。2025至2026年间法案停滞或未通过的州,预计将在2027年会期重新提交。',
+            },
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '阳台光伏在美国合法吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '这完全取决于所在的州——目前没有联邦层面的阳台光伏法律。截至2026年7月,已有8个州签署立法生效(犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州、康涅狄格州),另有一个州(纽约州)已通过州议会,正等待州长签署,而大多数其他州尚未专门就此立法。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '阳台光伏在加利福尼亚州合法吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '截至2026年7月,尚未合法。当前的CPUC并网规定对任何并网设备一视同仁,不区分大小,因此在没有电力公司协议的情况下接入设备目前并不合法。SB 868法案本可解决这一问题,但必须在2026年8月31日前通过众议院。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '阳台光伏在佛罗里达州合法吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '佛罗里达州没有插电式光伏法案。该州原本强有力的太阳能权益法规(F.S. 163.04)明确将共管公寓和出租公寓的阳台栏杆排除在外,这一条款卡住了阳台光伏在多户住宅中的主要使用场景。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '阳台光伏在得克萨斯州合法吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '没有任何一部州法律明确允许或禁止这一行为。实际合法性取决于居民所在的具体电力公司和零售电力供应商(REP),因为针对大型屋顶系统制定的标准并网规定,从技术上讲适用于任何并网设备。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'UL 3700是什么,为何它对合法性如此重要?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'UL 3700是美国针对插电式光伏系统的安全认证标准,由UL Solutions于2025年12月发布。每一部已生效的州法律都要求达到该标准(或同等标准),但截至2026年年中,尚无任何完整的阳台光伏系统完成认证——这意味着即便在法律已生效的州,合规硬件目前也尚未完全上市。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '为什么这些法律不允许我把多余的电卖回电网?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '每一部已生效和待批的法案都刻意将阳台光伏排除在净计量之外。放弃余电补偿,消除了电力公司原本可能反对该法律的主要理由,这也是这些法案能在立场迥异的各州议会中以近乎全票通过的原因。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '我的房东或业主协会能禁止安装阳台光伏面板吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '这取决于所在的州。科罗拉多州的法律明确禁止房东和业主协会禁止安装合规设备。大多数其他已立法的州依赖的是并非专门为阳台面板而设的一般性太阳能准入权益,因此业主协会的限制条款仍可能适用——在假定自己受到保护之前,请先核实所在州的具体法律。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '还会有更多州通过阳台光伏立法吗?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '已有30多个州和华盛顿特区提出或正在推进相关法案。加利福尼亚州的截止日期是2026年8月;另有几个州(新泽西州、马萨诸塞州、宾夕法尼亚州、俄亥俄州、密歇根州)正在推进但尚未排期。2025至2026年间法案停滞或未通过的州,预计将在2027年会期重新提交。',
+            },
+          },
+        ],
+      },
+    },
+  },
 }
-
