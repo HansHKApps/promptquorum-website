@@ -284,6 +284,8 @@ export const translations = {
     guidesPromptEngDesc: "Techniques to optimize prompts for better answers",
     guidesQuantization: "LLM Quantization",
     guidesQuantizationDesc: "Compress models to run on consumer GPUs",
+    guidesSmartHome: "Smart Home",
+    guidesSmartHomeDesc: "Run Home Assistant and local voice on your own hardware",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Built with care for AI power users.",
@@ -573,6 +575,8 @@ export const translations = {
     guidesPromptEngDesc: "Techniken zur Optimierung von Prompts für bessere Antworten",
     guidesQuantization: "LLM-Quantisierung",
     guidesQuantizationDesc: "Komprimieren Sie Modelle zur Ausführung auf Consumer-GPUs",
+    guidesSmartHome: "Smart Home",
+    guidesSmartHomeDesc: "Home Assistant und lokale Sprachsteuerung auf eigener Hardware",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Mit Sorgfalt entwickelt fuer KI-Power-User.",
@@ -862,6 +866,8 @@ export const translations = {
     guidesPromptEngDesc: "Techniques pour optimiser les prompts et obtenir de meilleures réponses",
     guidesQuantization: "Quantification LLM",
     guidesQuantizationDesc: "Compressez les modèles pour les exécuter sur des GPU grand public",
+    guidesSmartHome: "Maison connectée",
+    guidesSmartHomeDesc: "Home Assistant et voix locale sur votre propre matériel",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Developpe avec soin pour les experts IA.",
@@ -1151,6 +1157,8 @@ export const translations = {
     guidesPromptEngDesc: "より良い回答を得るためのプロンプト最適化テクニック",
     guidesQuantization: "LLM量子化",
     guidesQuantizationDesc: "コンシューマーGPU上で実行するモデルを圧縮する",
+    guidesSmartHome: "スマートホーム",
+    guidesSmartHomeDesc: "自分のハードウェアでHome Assistantとローカル音声を動かす",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. AIパワーユーザー向けに丁寧に開発。",
@@ -1440,6 +1448,8 @@ export const translations = {
     guidesPromptEngDesc: "优化提示词以获得更好答案的技术",
     guidesQuantization: "LLM量化",
     guidesQuantizationDesc: "压缩模型以在消费级GPU上运行",
+    guidesSmartHome: "智能家居",
+    guidesSmartHomeDesc: "在自己的硬件上运行Home Assistant和本地语音",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. 为AI高级用户精心打造。",
@@ -1729,6 +1739,8 @@ export const translations = {
     guidesPromptEngDesc: "Técnicas para optimizar prompts y obtener mejores respuestas",
     guidesQuantization: "Cuantización de LLM",
     guidesQuantizationDesc: "Comprime modelos para ejecutarlos en GPUs de consumo",
+    guidesSmartHome: "Hogar inteligente",
+    guidesSmartHomeDesc: "Ejecuta Home Assistant y voz local en tu propio hardware",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Creado con cuidado para usuarios avanzados de IA.",
@@ -2018,6 +2030,8 @@ export const translations = {
     guidesPromptEngDesc: "Técnicas para otimizar prompts e obter melhores respostas",
     guidesQuantization: "Quantização de LLM",
     guidesQuantizationDesc: "Compacte modelos para executar em GPUs de consumo",
+    guidesSmartHome: "Casa inteligente",
+    guidesSmartHomeDesc: "Rode o Home Assistant e voz local no seu próprio hardware",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Criado com cuidado para usuários avançados de IA.",
@@ -2307,6 +2321,8 @@ export const translations = {
     guidesPromptEngDesc: "تقنيات لتحسين البرامج النصية والحصول على إجابات أفضل",
     guidesQuantization: "ضغط LLM",
     guidesQuantizationDesc: "اضغط النماذج لتشغيلها على بطاقات GPU للمستهلكين",
+    guidesSmartHome: "المنزل الذكي",
+    guidesSmartHomeDesc: "شغّل Home Assistant والصوت المحلي على أجهزتك الخاصة",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. صُنع باعتناء لمستخدمي الذكاء الاصطناعي المتقدمين.",
@@ -2596,6 +2612,8 @@ export const translations = {
     guidesPromptEngDesc: "더 나은 답변을 위해 프롬프트를 최적화하는 기법",
     guidesQuantization: "LLM 양자화",
     guidesQuantizationDesc: "소비자용 GPU에서 실행하기 위해 모델을 압축합니다",
+    guidesSmartHome: "스마트홈",
+    guidesSmartHomeDesc: "자신의 하드웨어에서 Home Assistant와 로컬 음성을 구동",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. AI 고급 사용자를 위해 정성껏 제작되었습니다.",

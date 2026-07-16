@@ -1,10 +1,11 @@
 // Maps URL slugs to article keys for the Smart Home cluster.
-// All 25 slugs from the build plan are registered here; only those with content in
+// All 30 slugs from the build plan are registered here; only those with content in
 // articles-barrel.ts will render real content — the rest fall through to the
 // "Coming Soon" template at the article page level.
 //
-// Sitemap picks up published slugs automatically via published.ts; the whole cluster
-// is sitemap-excluded until launch (see EXCLUDED_PATH_PREFIXES in sitemap.xml/route.ts).
+// Sitemap picks up published slugs automatically via published.ts; published paths are
+// whitelisted back in past the general cluster exclusion (see EXCLUDED_PATH_PREFIXES in
+// sitemap.xml/route.ts).
 
 export const SMART_HOME_SLUG_TO_KEY: Record<string, string> = {
   // Category 1 — Smart Home Foundations (general traffic doors)

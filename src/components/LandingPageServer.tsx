@@ -601,7 +601,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Local LLMs Card */}
             <a href={lang === 'en' ? '/local-llms' : `/${lang}/local-llms`} className="block group rounded-xl border border-gray-200 p-6 hover:border-primary hover:shadow-lg transition-all">
               <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
@@ -644,6 +644,21 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
               </h3>
               <p className="mt-2 text-text-secondary">
                 {translations[lang as keyof typeof translations]?.guidesQuantizationDesc || 'Compress models to run on consumer GPUs'}
+              </p>
+            </a>
+
+            {/* Smart Home Card */}
+            <a href={lang === 'en' ? '/smart-home' : `/${lang}/smart-home`} className="block group rounded-xl border border-gray-200 p-6 hover:border-primary hover:shadow-lg transition-all">
+              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-amber-100 group-hover:bg-amber-200 transition-colors mb-4">
+                <svg className="w-6 h-6 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 3l9 8h-2.5v9h-5v-6h-3v6h-5v-9H3l9-8z"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary group-hover:text-primary transition-colors">
+                {translations[lang as keyof typeof translations]?.guidesSmartHome || 'Smart Home'}
+              </h3>
+              <p className="mt-2 text-text-secondary">
+                {translations[lang as keyof typeof translations]?.guidesSmartHomeDesc || 'Run Home Assistant and local voice on your own hardware'}
               </p>
             </a>
           </div>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local-First Smart Home Overview | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on building a local-first smart home. Covers Home Assistant, Matter and Thread, local voice, Ollama-driven AI automations, and hardware picks. Multi-language deck." />
+    <meta property="og:title" content="Local-First Smart Home Overview — PromptQuorum" />
+    <meta property="og:description" content="Run your smart home on your own hardware, not the cloud. 11-slide interactive deck in 9 languages." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/smart-home" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: start;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: start;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+          .slide { padding: 20px 16px; }
+          .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+          .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+          .slide p { font-size: 14px; margin-bottom: 10px; }
+          .slide ul { font-size: 1em; margin: 10px 0; }
+          .slide ul li { margin-bottom: 8px; }
+          .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+          .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
+          .header { padding: 10px 12px; }
+          .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+          .header-links { gap: 8px; font-size: 11px; }
+          .subtitle { font-size: 14px; }
+          .logo { height: 24px; margin-bottom: 12px; }
+          .controls { padding: 10px 12px; }
+          .controls button { padding: 6px 12px; font-size: 12px; }
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "promptquorum.com/smart-home — " attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 11";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local-First Smart Home Overview</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/smart-home">← Back to Smart Home Guide</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">11</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const BACK_LINKS = {
+      en: 'https://www.promptquorum.com/smart-home',
+      de: 'https://www.promptquorum.com/de/smart-home',
+      fr: 'https://www.promptquorum.com/fr/smart-home',
+      ja: 'https://www.promptquorum.com/ja/smart-home',
+      zh: 'https://www.promptquorum.com/zh/smart-home',
+      es: 'https://www.promptquorum.com/es/smart-home',
+      pt: 'https://www.promptquorum.com/pt/smart-home',
+      ar: 'https://www.promptquorum.com/ar/smart-home',
+      ko: 'https://www.promptquorum.com/ko/smart-home',
+    };
+
+    const CONTENT = {
+      en: {
+        title: 'Local-First Smart Home: Run It on a Local LLM, Not the Cloud',
+        slides: [
+          {type: 'title', h1: 'Local-First Smart Home: Run It on a Local LLM, Not the Cloud', subtitle: 'A local-first smart home runs Home Assistant, Matter and Thread devices, local voice, and an Ollama-driven LLM entirely on your own hardware — no cloud dependence, full privacy.', link: 'https://www.promptquorum.com/smart-home'},
+          {type: 'list', h2: 'Why Local-First Beats Cloud', items: ['<strong>Privacy.</strong> Voice recordings and camera feeds never leave your network.', '<strong>No subscriptions.</strong> One-time hardware cost, no monthly fees.', '<strong>Works offline.</strong> Automations keep running during an internet outage.', '<strong>You own it.</strong> No vendor can discontinue the app or disable your devices.']},
+          {type: 'list', h2: 'The Core Stack', items: ['<strong>Home Assistant</strong> — the local automation hub that ties every device together.', '<strong>Matter and Thread</strong> — device-level protocols for local control without a cloud round-trip.', '<strong>Ollama</strong> — runs the local LLM that reasons about sensor data and triggers actions.', '<strong>Wyoming</strong> — the protocol that connects local voice satellites to Home Assistant.']},
+          {type: 'list', h2: 'Local Voice, No Cloud Round-Trip', items: ['<strong>Whisper</strong> converts speech to text entirely on local hardware.', '<strong>Piper</strong> converts text back to speech, also fully offline.', 'The <strong>Wyoming</strong> protocol streams audio between a voice satellite and the Home Assistant server.', 'Trade-off: local speech recognition needs more compute than a cloud API, but nothing said in the house ever leaves it.']},
+          {type: 'table', h2: 'Mini PC Hardware Tiers', columns: ['Tier', 'RAM', 'What It Handles'], rows: [{'Tier': 'Entry', 'RAM': '8 GB', 'What It Handles': 'Home Assistant plus rule-based automations'}, {'Tier': 'Mid', 'RAM': '16 GB', 'What It Handles': 'Home Assistant plus a small local LLM for simple AI automations'}, {'Tier': 'High', 'RAM': '32 GB+ with GPU', 'What It Handles': 'Home Assistant, local LLM, local voice, and an AI security camera at the same time'}]},
+          {type: 'list', h2: 'How an AI Automation Actually Runs', items: ['A sensor — door, motion, temperature — fires an event in Home Assistant.', 'The Ollama integration sends that event plus relevant context to the local LLM.', 'The LLM decides which action fits the situation, instead of a fixed if-this-then-that rule.', 'Home Assistant executes the action — lights, thermostat, locks — entirely inside the local network.']},
+          {type: 'list', h2: 'Privacy and GDPR', items: ['No personal data — voice, camera footage — leaves the property, since inference runs locally.', 'This satisfies most GDPR Article 28 data-residency requirements by default.', 'You remain the data controller — a local setup does not remove your documentation obligations.']},
+          {type: 'table', h2: 'Home Assistant vs Alexa vs Google', columns: ['Factor', 'Home Assistant (Local)', 'Alexa / Google (Cloud)'], rows: [{'Factor': 'Data location', 'Home Assistant (Local)': 'Stays on your network', 'Alexa / Google (Cloud)': 'Sent to the vendor server'}, {'Factor': 'Subscription', 'Home Assistant (Local)': 'None', 'Alexa / Google (Cloud)': 'Some features require a paid tier'}, {'Factor': 'Offline operation', 'Home Assistant (Local)': 'Automations keep running', 'Alexa / Google (Cloud)': 'Most voice and AI features stop working'}, {'Factor': 'Customization', 'Home Assistant (Local)': 'Fully open, thousands of integrations', 'Alexa / Google (Cloud)': 'Limited to vendor supported devices'}]},
+          {type: 'faq', h2: 'Frequently Asked Questions', faqs: [{q: 'What is a local-first smart home?', a: 'It runs automation logic, voice processing, and device control entirely on hardware you own, instead of a cloud server.'}, {q: 'Do I need to code to set one up?', a: 'No. The Home Assistant setup wizard handles most configuration through a web interface.'}, {q: 'What hardware do I need?', a: 'A mini PC with 8 GB RAM covers Home Assistant. Add a local LLM at 16 GB or more.'}, {q: 'Is it GDPR-compliant by default?', a: 'Keeping data local satisfies most GDPR Article 28 requirements, since personal data never leaves the property.'}]},
+          {type: 'list', h2: 'Key Takeaways', items: ['Local-first means Home Assistant plus Matter and Thread plus local voice plus a local LLM, all on your own hardware.', 'The core benefits are privacy, no subscriptions, offline reliability, and full ownership.', 'A 16 GB mini PC is enough for basic AI automations; 32 GB or more with a GPU handles voice, LLM, and AI cameras together.', 'GDPR compliance is easier by default, but you remain the data controller.']},
+          {type: 'cta', h2: 'Explore the Full Guide', body: '25 in-depth guides cover foundations, local-first setup, local AI and LLMs, and buyer comparisons for a fully private smart home.', href: 'https://www.promptquorum.com/smart-home', cta: 'View All 25 Guides'},
+        ]
+      },
+      de: {
+        title: 'Lokales Smart Home: Betrieben mit einem lokalen LLM, nicht der Cloud',
+        slides: [
+          {type: 'title', h1: 'Lokales Smart Home: Betrieben mit einem lokalen LLM, nicht der Cloud', subtitle: 'Ein lokales Smart Home betreibt Home Assistant, Matter- und Thread-Geräte, lokale Sprachsteuerung und ein Ollama-gesteuertes LLM vollständig auf der eigenen Hardware — keine Cloud-Abhängigkeit, volle Privatsphäre.', link: 'https://www.promptquorum.com/de/smart-home'},
+          {type: 'list', h2: 'Warum lokal der Cloud überlegen ist', items: ['<strong>Privatsphäre.</strong> Sprachaufnahmen und Kamerabilder verlassen nie Ihr Netzwerk.', '<strong>Keine Abos.</strong> Einmalige Hardwarekosten, keine monatlichen Gebühren.', '<strong>Funktioniert offline.</strong> Automatisierungen laufen auch bei Internetausfall weiter.', '<strong>Es gehört Ihnen.</strong> Kein Hersteller kann die App einstellen oder Ihre Geräte deaktivieren.']},
+          {type: 'list', h2: 'Der Kern-Stack', items: ['<strong>Home Assistant</strong> — die lokale Automatisierungszentrale, die alle Geräte verbindet.', '<strong>Matter und Thread</strong> — Protokolle auf Geräteebene für lokale Steuerung ohne Cloud-Umweg.', '<strong>Ollama</strong> — betreibt das lokale LLM, das Sensordaten auswertet und Aktionen auslöst.', '<strong>Wyoming</strong> — das Protokoll, das lokale Sprach-Satelliten mit Home Assistant verbindet.']},
+          {type: 'list', h2: 'Lokale Sprachsteuerung ohne Cloud-Umweg', items: ['<strong>Whisper</strong> wandelt Sprache vollständig lokal in Text um.', '<strong>Piper</strong> wandelt Text ebenfalls vollständig offline zurück in Sprache um.', 'Das <strong>Wyoming</strong>-Protokoll überträgt Audio zwischen einem Sprach-Satelliten und dem Home-Assistant-Server.', 'Kompromiss: Lokale Spracherkennung braucht mehr Rechenleistung als eine Cloud-API — dafür verlässt nichts Gesagtes das Haus.']},
+          {type: 'table', h2: 'Mini-PC-Hardware-Stufen', columns: ['Stufe', 'RAM', 'Leistet'], rows: [{'Stufe': 'Einstieg', 'RAM': '8 GB', 'Leistet': 'Home Assistant plus regelbasierte Automatisierungen'}, {'Stufe': 'Mittel', 'RAM': '16 GB', 'Leistet': 'Home Assistant plus ein kleines lokales LLM für einfache KI-Automatisierungen'}, {'Stufe': 'Hoch', 'RAM': '32 GB+ mit GPU', 'Leistet': 'Home Assistant, lokales LLM, lokale Sprachsteuerung und eine KI-Sicherheitskamera gleichzeitig'}]},
+          {type: 'list', h2: 'Wie eine KI-Automatisierung tatsächlich abläuft', items: ['Ein Sensor — Tür, Bewegung, Temperatur — löst ein Ereignis in Home Assistant aus.', 'Die Ollama-Integration sendet dieses Ereignis samt relevantem Kontext an das lokale LLM.', 'Das LLM entscheidet, welche Aktion zur Situation passt, statt einer starren Wenn-Dann-Regel.', 'Home Assistant führt die Aktion aus — Licht, Thermostat, Schlösser — vollständig innerhalb des lokalen Netzwerks.']},
+          {type: 'list', h2: 'Privatsphäre und DSGVO', items: ['Keine personenbezogenen Daten — Sprache, Kamerabilder — verlassen das Grundstück, da die Verarbeitung lokal läuft.', 'Das erfüllt standardmäßig die meisten Datenresidenz-Anforderungen nach Art. 28 DSGVO.', 'Sie bleiben Verantwortlicher — ein lokales Setup hebt Ihre Dokumentationspflichten nicht auf.']},
+          {type: 'table', h2: 'Home Assistant vs. Alexa vs. Google', columns: ['Faktor', 'Home Assistant (lokal)', 'Alexa / Google (Cloud)'], rows: [{'Faktor': 'Datenstandort', 'Home Assistant (lokal)': 'Bleibt in Ihrem Netzwerk', 'Alexa / Google (Cloud)': 'Wird an einen Herstellerserver gesendet'}, {'Faktor': 'Abo', 'Home Assistant (lokal)': 'Keines', 'Alexa / Google (Cloud)': 'Manche Funktionen nur mit Bezahltarif'}, {'Faktor': 'Offline-Betrieb', 'Home Assistant (lokal)': 'Automatisierungen laufen weiter', 'Alexa / Google (Cloud)': 'Die meisten Sprach- und KI-Funktionen fallen aus'}, {'Faktor': 'Anpassbarkeit', 'Home Assistant (lokal)': 'Vollständig offen, tausende Integrationen', 'Alexa / Google (Cloud)': 'Beschränkt auf unterstützte Herstellergeräte'}]},
+          {type: 'faq', h2: 'Häufig gestellte Fragen', faqs: [{q: 'Was ist ein lokales Smart Home?', a: 'Es führt Automatisierungslogik, Sprachverarbeitung und Gerätesteuerung vollständig auf eigener Hardware aus, statt über einen Cloud-Server.'}, {q: 'Muss ich zum Einrichten programmieren können?', a: 'Nein. Der Home-Assistant-Einrichtungsassistent übernimmt die meiste Konfiguration über eine Weboberfläche.'}, {q: 'Welche Hardware brauche ich?', a: 'Ein Mini-PC mit 8 GB RAM reicht für Home Assistant. Für ein lokales LLM sind 16 GB oder mehr nötig.'}, {q: 'Ist es standardmäßig DSGVO-konform?', a: 'Daten lokal zu halten erfüllt die meisten Anforderungen nach Art. 28 DSGVO, da personenbezogene Daten das Grundstück nie verlassen.'}]},
+          {type: 'list', h2: 'Die wichtigsten Punkte', items: ['Lokal bedeutet Home Assistant plus Matter und Thread plus lokale Sprachsteuerung plus ein lokales LLM, alles auf eigener Hardware.', 'Die Kernvorteile sind Privatsphäre, keine Abos, Offline-Zuverlässigkeit und volles Eigentum.', 'Ein Mini-PC mit 16 GB reicht für einfache KI-Automatisierungen; 32 GB oder mehr mit GPU decken Sprache, LLM und KI-Kameras gemeinsam ab.', 'DSGVO-Konformität fällt standardmäßig leichter, Sie bleiben aber weiterhin Verantwortlicher.']},
+          {type: 'cta', h2: 'Den vollständigen Leitfaden entdecken', body: '25 ausführliche Guides behandeln Grundlagen, den lokalen Einstieg, lokale KI und LLMs sowie Kaufvergleiche für ein vollständig privates Smart Home.', href: 'https://www.promptquorum.com/de/smart-home', cta: 'Alle 25 Guides ansehen'},
+        ]
+      },
+      fr: {
+        title: 'Maison connectée locale : pilotée par un LLM local, pas le cloud',
+        slides: [
+          {type: 'title', h1: 'Maison connectée locale : pilotée par un LLM local, pas le cloud', subtitle: 'Une maison connectée locale fait tourner Home Assistant, les appareils Matter et Thread, la voix locale et un LLM piloté par Ollama entièrement sur votre propre matériel — sans dépendance au cloud, confidentialité totale.', link: 'https://www.promptquorum.com/fr/smart-home'},
+          {type: 'list', h2: 'Pourquoi le local surpasse le cloud', items: ['<strong>Confidentialité.</strong> Les enregistrements vocaux et les images de caméra ne quittent jamais votre réseau.', '<strong>Sans abonnement.</strong> Coût matériel unique, aucun frais mensuel.', '<strong>Fonctionne hors ligne.</strong> Les automatisations continuent pendant une panne Internet.', '<strong>Vous en êtes propriétaire.</strong> Aucun fournisseur ne peut arrêter l\'application ou désactiver vos appareils.']},
+          {type: 'list', h2: 'La pile technique de base', items: ['<strong>Home Assistant</strong> — le hub d\'automatisation local qui relie tous les appareils.', '<strong>Matter et Thread</strong> — protocoles au niveau des appareils pour un contrôle local sans passer par le cloud.', '<strong>Ollama</strong> — fait tourner le LLM local qui analyse les données des capteurs et déclenche des actions.', '<strong>Wyoming</strong> — le protocole qui relie les satellites vocaux locaux à Home Assistant.']},
+          {type: 'list', h2: 'Voix locale, sans aller-retour vers le cloud', items: ['<strong>Whisper</strong> convertit la voix en texte entièrement en local.', '<strong>Piper</strong> reconvertit le texte en voix, également hors ligne.', 'Le protocole <strong>Wyoming</strong> transmet l\'audio entre un satellite vocal et le serveur Home Assistant.', 'Compromis : la reconnaissance vocale locale demande plus de calcul qu\'une API cloud, mais rien de ce qui se dit chez vous n\'en sort.']},
+          {type: 'table', h2: 'Niveaux de mini PC', columns: ['Niveau', 'RAM', 'Ce qu\'il gère'], rows: [{'Niveau': 'Débutant', 'RAM': '8 Go', 'Ce qu\'il gère': 'Home Assistant et des automatisations à base de règles'}, {'Niveau': 'Intermédiaire', 'RAM': '16 Go', 'Ce qu\'il gère': 'Home Assistant plus un petit LLM local pour des automatisations IA simples'}, {'Niveau': 'Avancé', 'RAM': '32 Go+ avec GPU', 'Ce qu\'il gère': 'Home Assistant, LLM local, voix locale et une caméra de sécurité IA en même temps'}]},
+          {type: 'list', h2: 'Comment fonctionne réellement une automatisation IA', items: ['Un capteur — porte, mouvement, température — déclenche un événement dans Home Assistant.', 'L\'intégration Ollama envoie cet événement et le contexte pertinent au LLM local.', 'Le LLM décide de l\'action adaptée à la situation, plutôt qu\'une règle fixe si-ceci-alors-cela.', 'Home Assistant exécute l\'action — lumières, thermostat, serrures — entièrement au sein du réseau local.']},
+          {type: 'list', h2: 'Confidentialité et RGPD', items: ['Aucune donnée personnelle — voix, images de caméra — ne quitte le domicile, car le traitement se fait en local.', 'Cela répond par défaut à la plupart des exigences de résidence des données de l\'article 28 du RGPD.', 'Vous restez responsable du traitement — une installation locale ne supprime pas vos obligations de documentation.']},
+          {type: 'table', h2: 'Home Assistant vs Alexa vs Google', columns: ['Facteur', 'Home Assistant (local)', 'Alexa / Google (cloud)'], rows: [{'Facteur': 'Emplacement des données', 'Home Assistant (local)': 'Reste sur votre réseau', 'Alexa / Google (cloud)': 'Envoyé au serveur du fournisseur'}, {'Facteur': 'Abonnement', 'Home Assistant (local)': 'Aucun', 'Alexa / Google (cloud)': 'Certaines fonctions réservées à une offre payante'}, {'Facteur': 'Fonctionnement hors ligne', 'Home Assistant (local)': 'Les automatisations continuent', 'Alexa / Google (cloud)': 'La plupart des fonctions vocales et IA s\'arrêtent'}, {'Facteur': 'Personnalisation', 'Home Assistant (local)': 'Totalement ouvert, des milliers d\'intégrations', 'Alexa / Google (cloud)': 'Limité aux appareils pris en charge par le fournisseur'}]},
+          {type: 'faq', h2: 'Questions fréquentes', faqs: [{q: 'Qu\'est-ce qu\'une maison connectée locale ?', a: 'Elle exécute la logique d\'automatisation, le traitement vocal et le contrôle des appareils entièrement sur du matériel que vous possédez, au lieu d\'un serveur cloud.'}, {q: 'Faut-il savoir coder pour la configurer ?', a: 'Non. L\'assistant de configuration de Home Assistant gère la majeure partie via une interface web.'}, {q: 'Quel matériel me faut-il ?', a: 'Un mini PC avec 8 Go de RAM suffit pour Home Assistant. Ajoutez un LLM local à partir de 16 Go.'}, {q: 'Est-ce conforme au RGPD par défaut ?', a: 'Garder les données en local répond à la plupart des exigences de l\'article 28 du RGPD, puisque les données personnelles ne quittent jamais le domicile.'}]},
+          {type: 'list', h2: 'Points clés à retenir', items: ['Le local signifie Home Assistant plus Matter et Thread plus la voix locale plus un LLM local, le tout sur votre propre matériel.', 'Les bénéfices principaux sont la confidentialité, l\'absence d\'abonnement, la fiabilité hors ligne et la pleine propriété.', 'Un mini PC de 16 Go suffit pour des automatisations IA simples ; 32 Go ou plus avec GPU gèrent voix, LLM et caméras IA ensemble.', 'La conformité RGPD est plus simple par défaut, mais vous restez responsable du traitement.']},
+          {type: 'cta', h2: 'Découvrez le guide complet', body: '25 guides approfondis couvrent les fondamentaux, la mise en place locale, l\'IA et les LLM locaux, ainsi que des comparatifs d\'achat pour une maison connectée entièrement privée.', href: 'https://www.promptquorum.com/fr/smart-home', cta: 'Voir les 25 guides'},
+        ]
+      },
+      ja: {
+        title: 'ローカルファーストのスマートホーム：クラウドではなくローカルLLMで動かす',
+        slides: [
+          {type: 'title', h1: 'ローカルファーストのスマートホーム：クラウドではなくローカルLLMで動かす', subtitle: 'ローカルファーストのスマートホームは、Home Assistant、MatterとThread対応デバイス、ローカル音声、そしてOllamaで動くLLMのすべてを、自分のハードウェア上で完結させます。クラウド依存なし、完全なプライバシー。', link: 'https://www.promptquorum.com/ja/smart-home'},
+          {type: 'list', h2: 'ローカルがクラウドに勝る理由', items: ['<strong>プライバシー。</strong>音声録音やカメラ映像はネットワークの外に出ません。', '<strong>サブスクリプション不要。</strong>ハードウェア費用は一度だけ、月額料金なし。', '<strong>オフラインでも動作。</strong>インターネット障害時も自動化は継続します。', '<strong>所有権はあなたに。</strong>メーカーがアプリを終了したりデバイスを無効化したりできません。']},
+          {type: 'list', h2: '中核となるスタック', items: ['<strong>Home Assistant</strong> — すべてのデバイスをつなぐローカルの自動化ハブ。', '<strong>MatterとThread</strong> — クラウドを経由しないローカル制御のためのデバイスレベルのプロトコル。', '<strong>Ollama</strong> — センサーデータを解釈しアクションを実行するローカルLLMを動かします。', '<strong>Wyoming</strong> — ローカル音声サテライトとHome Assistantを接続するプロトコル。']},
+          {type: 'list', h2: 'クラウドを経由しないローカル音声', items: ['<strong>Whisper</strong>は音声をローカルで完全にテキストへ変換します。', '<strong>Piper</strong>はテキストを完全オフラインで音声に戻します。', '<strong>Wyoming</strong>プロトコルが音声サテライトとHome Assistantサーバー間で音声をストリーミングします。', 'トレードオフ：ローカル音声認識はクラウドAPIより多くの計算資源を必要としますが、家の中で話した内容が外に出ることはありません。']},
+          {type: 'table', h2: 'ミニPCのハードウェア階層', columns: ['階層', 'RAM', '対応内容'], rows: [{'階層': '入門', 'RAM': '8GB', '対応内容': 'Home Assistantとルールベースの自動化'}, {'階層': '中級', 'RAM': '16GB', '対応内容': 'Home Assistantに加え、簡単なAI自動化向けの小型ローカルLLM'}, {'階層': '上級', 'RAM': '32GB以上＋GPU', '対応内容': 'Home Assistant、ローカルLLM、ローカル音声、AI防犯カメラを同時に運用'}]},
+          {type: 'list', h2: 'AI自動化が実際にどう動くか', items: ['ドア・動き・温度などのセンサーがHome Assistant内でイベントを発火します。', 'Ollama統合がそのイベントと関連コンテキストをローカルLLMへ送信します。', '固定的なif-thenルールではなく、LLMが状況に合ったアクションを判断します。', 'Home Assistantが照明・サーモスタット・鍵などのアクションを、すべてローカルネットワーク内で実行します。']},
+          {type: 'list', h2: 'プライバシーとGDPR', items: ['処理がローカルで行われるため、音声やカメラ映像などの個人データは敷地の外に出ません。', 'これにより、GDPR第28条のデータレジデンシー要件の大部分を標準で満たします。', 'それでもあなたはデータ管理者であり、ローカル構成であっても文書化の義務はなくなりません。']},
+          {type: 'table', h2: 'Home Assistant vs Alexa vs Google', columns: ['項目', 'Home Assistant（ローカル）', 'Alexa / Google（クラウド）'], rows: [{'項目': 'データの保存場所', 'Home Assistant（ローカル）': '自分のネットワーク内に留まる', 'Alexa / Google（クラウド）': 'メーカーのサーバーへ送信される'}, {'項目': 'サブスクリプション', 'Home Assistant（ローカル）': 'なし', 'Alexa / Google（クラウド）': '一部機能は有料プラン限定'}, {'項目': 'オフライン動作', 'Home Assistant（ローカル）': '自動化は継続する', 'Alexa / Google（クラウド）': 'ほとんどの音声・AI機能が停止する'}, {'項目': 'カスタマイズ性', 'Home Assistant（ローカル）': '完全にオープンで数千の連携が可能', 'Alexa / Google（クラウド）': 'メーカー対応デバイスに限定'}]},
+          {type: 'faq', h2: 'よくある質問', faqs: [{q: 'ローカルファーストのスマートホームとは何ですか?', a: 'クラウドサーバーではなく、自分が所有するハードウェア上で自動化ロジック・音声処理・デバイス制御をすべて実行します。'}, {q: '設定にプログラミングは必要ですか?', a: 'いいえ。Home Assistantのセットアップウィザードがウェブ画面上でほとんどの設定を行います。'}, {q: 'どのようなハードウェアが必要ですか?', a: '8GBのRAMを搭載したミニPCでHome Assistantをカバーできます。ローカルLLMには16GB以上を追加してください。'}, {q: '標準でGDPRに準拠しますか?', a: '個人データが敷地外に出ないため、データをローカルに保つことでGDPR第28条の大半の要件を満たします。'}]},
+          {type: 'list', h2: '重要なポイント', items: ['ローカルファーストとは、Home Assistant、MatterとThread、ローカル音声、ローカルLLMのすべてを自分のハードウェアで動かすことです。', '主な利点はプライバシー、サブスクリプション不要、オフラインでの信頼性、そして完全な所有権です。', '16GBのミニPCで基本的なAI自動化に十分で、32GB以上とGPUがあれば音声・LLM・AIカメラをまとめて運用できます。', 'GDPR準拠は標準で容易になりますが、データ管理者としての責任は変わりません。']},
+          {type: 'cta', h2: '完全ガイドを見る', body: '25本の詳細ガイドで、基礎知識、ローカルファーストの構築方法、ローカルAIとLLM、そして完全にプライベートなスマートホームのための購入比較を解説しています。', href: 'https://www.promptquorum.com/ja/smart-home', cta: '全25本のガイドを見る'},
+        ]
+      },
+      zh: {
+        title: '本地优先智能家居：用本地大模型驱动，而非依赖云端',
+        slides: [
+          {type: 'title', h1: '本地优先智能家居：用本地大模型驱动，而非依赖云端', subtitle: '本地优先智能家居将Home Assistant、Matter与Thread设备、本地语音，以及由Ollama驱动的大模型完全运行在您自己的硬件上——无云端依赖，完全私密。', link: 'https://www.promptquorum.com/zh/smart-home'},
+          {type: 'list', h2: '为什么本地优先胜过云端', items: ['<strong>隐私。</strong>语音录音和摄像头画面绝不会离开您的网络。', '<strong>无需订阅。</strong>一次性硬件投入，无月费。', '<strong>离线可用。</strong>断网时自动化仍可继续运行。', '<strong>完全归你所有。</strong>没有厂商能够停用应用或禁用您的设备。']},
+          {type: 'list', h2: '核心技术栈', items: ['<strong>Home Assistant</strong> — 连接所有设备的本地自动化中枢。', '<strong>Matter与Thread</strong> — 无需绕道云端即可实现本地控制的设备层协议。', '<strong>Ollama</strong> — 运行分析传感器数据并触发动作的本地大模型。', '<strong>Wyoming</strong> — 连接本地语音卫星设备与Home Assistant的协议。']},
+          {type: 'list', h2: '本地语音，无需往返云端', items: ['<strong>Whisper</strong> 完全在本地将语音转换为文本。', '<strong>Piper</strong> 同样完全离线地将文本转换回语音。', '<strong>Wyoming</strong> 协议在语音卫星设备与Home Assistant服务器之间传输音频。', '权衡：本地语音识别比云端API需要更多算力，但屋内说的一切都不会外传。']},
+          {type: 'table', h2: '迷你主机硬件分级', columns: ['级别', '内存', '可承担任务'], rows: [{'级别': '入门', '内存': '8GB', '可承担任务': '运行Home Assistant和基于规则的自动化'}, {'级别': '中端', '内存': '16GB', '可承担任务': '在Home Assistant基础上运行小型本地大模型，处理简单的AI自动化'}, {'级别': '高端', '内存': '32GB以上并配独立显卡', '可承担任务': '同时运行Home Assistant、本地大模型、本地语音和AI安防摄像头'}]},
+          {type: 'list', h2: 'AI自动化的实际运行方式', items: ['门、移动或温度等传感器在Home Assistant中触发事件。', 'Ollama集成将该事件及相关上下文发送给本地大模型。', '大模型判断适合当前情境的动作，而非依赖固定的"如果-那么"规则。', 'Home Assistant执行该动作——灯光、恒温器、门锁——全部在本地网络内完成。']},
+          {type: 'list', h2: '隐私与GDPR', items: ['由于推理在本地完成，语音、摄像头画面等个人数据不会离开住所。', '这默认满足了GDPR第28条大部分的数据驻留要求。', '您仍然是数据控制者——本地方案并不能免除您的记录义务。']},
+          {type: 'table', h2: 'Home Assistant vs Alexa vs Google', columns: ['因素', 'Home Assistant（本地）', 'Alexa / Google（云端）'], rows: [{'因素': '数据存放位置', 'Home Assistant（本地）': '保留在您的网络中', 'Alexa / Google（云端）': '发送至厂商服务器'}, {'因素': '订阅费用', 'Home Assistant（本地）': '无', 'Alexa / Google（云端）': '部分功能需付费方案'}, {'因素': '离线运行', 'Home Assistant（本地）': '自动化持续运行', 'Alexa / Google（云端）': '大多数语音和AI功能停止工作'}, {'因素': '可定制性', 'Home Assistant（本地）': '完全开放，数千种集成', 'Alexa / Google（云端）': '仅限厂商支持的设备'}]},
+          {type: 'faq', h2: '常见问题', faqs: [{q: '什么是本地优先智能家居?', a: '它将自动化逻辑、语音处理和设备控制完全运行在您自己拥有的硬件上，而非云服务器。'}, {q: '搭建它需要会编程吗?', a: '不需要。Home Assistant的设置向导通过网页界面完成大部分配置。'}, {q: '我需要什么硬件?', a: '8GB内存的迷你主机即可运行Home Assistant。若要运行本地大模型，建议16GB以上。'}, {q: '它默认符合GDPR吗?', a: '由于个人数据从不离开住所，将数据保留在本地即可满足GDPR第28条的大部分要求。'}]},
+          {type: 'list', h2: '核心要点', items: ['本地优先意味着Home Assistant、Matter与Thread、本地语音和本地大模型全部运行在您自己的硬件上。', '核心优势是隐私、无需订阅、离线可靠性和完全所有权。', '16GB的迷你主机足以支持基础AI自动化；32GB以上配独立显卡可同时运行语音、大模型和AI摄像头。', 'GDPR合规默认更容易实现，但您仍是数据控制者。']},
+          {type: 'cta', h2: '探索完整指南', body: '25篇深度指南涵盖基础知识、本地优先搭建方法、本地AI与大模型，以及面向完全私密智能家居的购买对比。', href: 'https://www.promptquorum.com/zh/smart-home', cta: '查看全部25篇指南'},
+        ]
+      },
+      es: {
+        title: 'Hogar inteligente local: impulsado por un LLM local, no por la nube',
+        slides: [
+          {type: 'title', h1: 'Hogar inteligente local: impulsado por un LLM local, no por la nube', subtitle: 'Un hogar inteligente local ejecuta Home Assistant, dispositivos Matter y Thread, voz local y un LLM impulsado por Ollama por completo en tu propio hardware, sin dependencia de la nube y con privacidad total.', link: 'https://www.promptquorum.com/es/smart-home'},
+          {type: 'list', h2: 'Por qué lo local supera a la nube', items: ['<strong>Privacidad.</strong> Las grabaciones de voz y las imágenes de cámaras nunca salen de tu red.', '<strong>Sin suscripciones.</strong> Coste de hardware único, sin cuotas mensuales.', '<strong>Funciona sin conexión.</strong> Las automatizaciones siguen funcionando durante un corte de internet.', '<strong>Es tuyo.</strong> Ningún fabricante puede descontinuar la app o desactivar tus dispositivos.']},
+          {type: 'list', h2: 'La pila principal', items: ['<strong>Home Assistant</strong>: el centro de automatización local que conecta todos los dispositivos.', '<strong>Matter y Thread</strong>: protocolos a nivel de dispositivo para control local sin pasar por la nube.', '<strong>Ollama</strong>: ejecuta el LLM local que analiza los datos de los sensores y activa acciones.', '<strong>Wyoming</strong>: el protocolo que conecta los satélites de voz locales con Home Assistant.']},
+          {type: 'list', h2: 'Voz local, sin ida y vuelta a la nube', items: ['<strong>Whisper</strong> convierte la voz en texto totalmente en local.', '<strong>Piper</strong> convierte el texto de vuelta en voz, también sin conexión.', 'El protocolo <strong>Wyoming</strong> transmite audio entre un satélite de voz y el servidor de Home Assistant.', 'Contrapartida: el reconocimiento de voz local exige más cómputo que una API en la nube, pero nada de lo que se dice en casa sale de ella.']},
+          {type: 'table', h2: 'Niveles de hardware para mini PC', columns: ['Nivel', 'RAM', 'Qué gestiona'], rows: [{'Nivel': 'Básico', 'RAM': '8 GB', 'Qué gestiona': 'Home Assistant y automatizaciones basadas en reglas'}, {'Nivel': 'Medio', 'RAM': '16 GB', 'Qué gestiona': 'Home Assistant más un LLM local pequeño para automatizaciones de IA simples'}, {'Nivel': 'Avanzado', 'RAM': '32 GB o más con GPU', 'Qué gestiona': 'Home Assistant, LLM local, voz local y una cámara de seguridad con IA al mismo tiempo'}]},
+          {type: 'list', h2: 'Cómo funciona realmente una automatización con IA', items: ['Un sensor (puerta, movimiento, temperatura) dispara un evento en Home Assistant.', 'La integración de Ollama envía ese evento junto con el contexto relevante al LLM local.', 'El LLM decide qué acción se ajusta a la situación, en lugar de una regla fija de si-esto-entonces-aquello.', 'Home Assistant ejecuta la acción (luces, termostato, cerraduras) por completo dentro de la red local.']},
+          {type: 'list', h2: 'Privacidad y RGPD', items: ['Ningún dato personal (voz, imágenes de cámaras) sale de la vivienda, ya que la inferencia se ejecuta en local.', 'Esto satisface por defecto la mayoría de los requisitos de residencia de datos del artículo 28 del RGPD.', 'Sigues siendo el responsable del tratamiento: una configuración local no elimina tus obligaciones de documentación.']},
+          {type: 'table', h2: 'Home Assistant vs Alexa vs Google', columns: ['Factor', 'Home Assistant (local)', 'Alexa / Google (nube)'], rows: [{'Factor': 'Ubicación de los datos', 'Home Assistant (local)': 'Permanece en tu red', 'Alexa / Google (nube)': 'Se envía al servidor del fabricante'}, {'Factor': 'Suscripción', 'Home Assistant (local)': 'Ninguna', 'Alexa / Google (nube)': 'Algunas funciones requieren un plan de pago'}, {'Factor': 'Funcionamiento sin conexión', 'Home Assistant (local)': 'Las automatizaciones siguen activas', 'Alexa / Google (nube)': 'La mayoría de las funciones de voz e IA dejan de funcionar'}, {'Factor': 'Personalización', 'Home Assistant (local)': 'Totalmente abierto, miles de integraciones', 'Alexa / Google (nube)': 'Limitado a los dispositivos compatibles del fabricante'}]},
+          {type: 'faq', h2: 'Preguntas frecuentes', faqs: [{q: '¿Qué es un hogar inteligente local?', a: 'Ejecuta la lógica de automatización, el procesamiento de voz y el control de dispositivos por completo en hardware que posees, en lugar de un servidor en la nube.'}, {q: '¿Necesito saber programar para configurarlo?', a: 'No. El asistente de configuración de Home Assistant gestiona la mayor parte desde una interfaz web.'}, {q: '¿Qué hardware necesito?', a: 'Un mini PC con 8 GB de RAM cubre Home Assistant. Añade un LLM local a partir de 16 GB.'}, {q: '¿Cumple con el RGPD por defecto?', a: 'Mantener los datos en local satisface la mayoría de los requisitos del artículo 28 del RGPD, ya que los datos personales nunca salen de la vivienda.'}]},
+          {type: 'list', h2: 'Puntos clave', items: ['Local significa Home Assistant más Matter y Thread más voz local más un LLM local, todo en tu propio hardware.', 'Los beneficios principales son privacidad, sin suscripciones, fiabilidad sin conexión y propiedad total.', 'Un mini PC de 16 GB basta para automatizaciones de IA simples; 32 GB o más con GPU gestionan voz, LLM y cámaras de IA a la vez.', 'El cumplimiento del RGPD es más sencillo por defecto, pero sigues siendo el responsable del tratamiento.']},
+          {type: 'cta', h2: 'Explora la guía completa', body: '25 guías detalladas cubren los fundamentos, la configuración local, la IA y los LLM locales, y comparativas de compra para un hogar inteligente totalmente privado.', href: 'https://www.promptquorum.com/es/smart-home', cta: 'Ver las 25 guías'},
+        ]
+      },
+      pt: {
+        title: 'Casa inteligente local: rodando em um LLM local, não na nuvem',
+        slides: [
+          {type: 'title', h1: 'Casa inteligente local: rodando em um LLM local, não na nuvem', subtitle: 'Uma casa inteligente local roda o Home Assistant, dispositivos Matter e Thread, voz local e um LLM com Ollama inteiramente no seu próprio hardware, sem dependência de nuvem e com privacidade total.', link: 'https://www.promptquorum.com/pt/smart-home'},
+          {type: 'list', h2: 'Por que o local supera a nuvem', items: ['<strong>Privacidade.</strong> Gravações de voz e imagens de câmeras nunca saem da sua rede.', '<strong>Sem assinaturas.</strong> Custo único de hardware, sem mensalidades.', '<strong>Funciona offline.</strong> As automações continuam funcionando durante uma queda de internet.', '<strong>Você é o dono.</strong> Nenhum fabricante pode descontinuar o app ou desativar seus dispositivos.']},
+          {type: 'list', h2: 'A pilha principal', items: ['<strong>Home Assistant</strong>: o hub de automação local que conecta todos os dispositivos.', '<strong>Matter e Thread</strong>: protocolos no nível do dispositivo para controle local sem passar pela nuvem.', '<strong>Ollama</strong>: roda o LLM local que analisa os dados dos sensores e dispara ações.', '<strong>Wyoming</strong>: o protocolo que conecta satélites de voz locais ao Home Assistant.']},
+          {type: 'list', h2: 'Voz local, sem ida e volta pela nuvem', items: ['<strong>Whisper</strong> converte voz em texto inteiramente local.', '<strong>Piper</strong> converte texto de volta em voz, também totalmente offline.', 'O protocolo <strong>Wyoming</strong> transmite áudio entre um satélite de voz e o servidor do Home Assistant.', 'Contrapartida: o reconhecimento de voz local exige mais poder de processamento que uma API na nuvem, mas nada do que se fala em casa sai dela.']},
+          {type: 'table', h2: 'Níveis de hardware para mini PC', columns: ['Nível', 'RAM', 'O que roda'], rows: [{'Nível': 'Básico', 'RAM': '8 GB', 'O que roda': 'Home Assistant e automações baseadas em regras'}, {'Nível': 'Médio', 'RAM': '16 GB', 'O que roda': 'Home Assistant mais um LLM local pequeno para automações de IA simples'}, {'Nível': 'Avançado', 'RAM': '32 GB ou mais com GPU', 'O que roda': 'Home Assistant, LLM local, voz local e uma câmera de segurança com IA ao mesmo tempo'}]},
+          {type: 'list', h2: 'Como uma automação com IA realmente funciona', items: ['Um sensor (porta, movimento, temperatura) dispara um evento no Home Assistant.', 'A integração com Ollama envia esse evento junto com o contexto relevante para o LLM local.', 'O LLM decide qual ação se encaixa na situação, em vez de uma regra fixa de se-isto-então-aquilo.', 'O Home Assistant executa a ação (luzes, termostato, fechaduras) inteiramente dentro da rede local.']},
+          {type: 'list', h2: 'Privacidade e LGPD', items: ['Nenhum dado pessoal (voz, imagens de câmeras) sai da residência, já que a inferência roda localmente.', 'Isso atende, por padrão, à maior parte dos requisitos de residência de dados da LGPD.', 'Você continua sendo o controlador dos dados: uma configuração local não elimina suas obrigações de documentação.']},
+          {type: 'table', h2: 'Home Assistant vs Alexa vs Google', columns: ['Fator', 'Home Assistant (local)', 'Alexa / Google (nuvem)'], rows: [{'Fator': 'Localização dos dados', 'Home Assistant (local)': 'Permanece na sua rede', 'Alexa / Google (nuvem)': 'Enviado ao servidor do fabricante'}, {'Fator': 'Assinatura', 'Home Assistant (local)': 'Nenhuma', 'Alexa / Google (nuvem)': 'Alguns recursos exigem plano pago'}, {'Fator': 'Funcionamento offline', 'Home Assistant (local)': 'As automações continuam ativas', 'Alexa / Google (nuvem)': 'A maioria dos recursos de voz e IA para de funcionar'}, {'Fator': 'Personalização', 'Home Assistant (local)': 'Totalmente aberto, milhares de integrações', 'Alexa / Google (nuvem)': 'Limitado aos dispositivos suportados pelo fabricante'}]},
+          {type: 'faq', h2: 'Perguntas frequentes', faqs: [{q: 'O que é uma casa inteligente local?', a: 'Ela executa a lógica de automação, o processamento de voz e o controle de dispositivos inteiramente em hardware que você possui, em vez de um servidor na nuvem.'}, {q: 'Preciso saber programar para configurar?', a: 'Não. O assistente de configuração do Home Assistant cuida da maior parte pela interface web.'}, {q: 'Que hardware eu preciso?', a: 'Um mini PC com 8 GB de RAM cobre o Home Assistant. Adicione um LLM local a partir de 16 GB.'}, {q: 'É compatível com a LGPD por padrão?', a: 'Manter os dados locais atende à maior parte dos requisitos da LGPD, já que os dados pessoais nunca saem da residência.'}]},
+          {type: 'list', h2: 'Principais conclusões', items: ['Local significa Home Assistant mais Matter e Thread mais voz local mais um LLM local, tudo no seu próprio hardware.', 'Os principais benefícios são privacidade, ausência de assinaturas, confiabilidade offline e propriedade total.', 'Um mini PC de 16 GB já basta para automações de IA simples; 32 GB ou mais com GPU rodam voz, LLM e câmeras de IA ao mesmo tempo.', 'A conformidade com a LGPD fica mais fácil por padrão, mas você continua sendo o controlador dos dados.']},
+          {type: 'cta', h2: 'Explore o guia completo', body: '25 guias detalhados cobrem fundamentos, configuração local, IA e LLMs locais, e comparativos de compra para uma casa inteligente totalmente privada.', href: 'https://www.promptquorum.com/pt/smart-home', cta: 'Ver todos os 25 guias'},
+        ]
+      },
+      ar: {
+        title: 'المنزل الذكي المحلي: يعمل بنموذج لغوي محلي، لا بالسحابة',
+        slides: [
+          {type: 'title', h1: 'المنزل الذكي المحلي: يعمل بنموذج لغوي محلي، لا بالسحابة', subtitle: 'المنزل الذكي المحلي يُشغّل Home Assistant وأجهزة Matter وThread والصوت المحلي ونموذجاً لغوياً مدعوماً بـ Ollama بالكامل على أجهزتك الخاصة — بلا اعتماد على السحابة، وبخصوصية كاملة.', link: 'https://www.promptquorum.com/ar/smart-home'},
+          {type: 'list', h2: 'لماذا يتفوق النظام المحلي على السحابة', items: ['<strong>الخصوصية.</strong> التسجيلات الصوتية ولقطات الكاميرا لا تغادر شبكتك أبداً.', '<strong>بلا اشتراكات.</strong> تكلفة أجهزة لمرة واحدة، وبلا رسوم شهرية.', '<strong>يعمل دون اتصال.</strong> تستمر الأتمتة في العمل أثناء انقطاع الإنترنت.', '<strong>أنت المالك.</strong> لا يمكن لأي شركة مصنّعة إيقاف التطبيق أو تعطيل أجهزتك.']},
+          {type: 'list', h2: 'المنظومة الأساسية', items: ['<strong>Home Assistant</strong> — مركز الأتمتة المحلي الذي يربط جميع الأجهزة.', '<strong>Matter وThread</strong> — بروتوكولات على مستوى الجهاز للتحكم المحلي دون المرور بالسحابة.', '<strong>Ollama</strong> — يشغّل النموذج اللغوي المحلي الذي يحلل بيانات الحساسات ويطلق الإجراءات.', '<strong>Wyoming</strong> — البروتوكول الذي يربط أقمار الصوت المحلية بـ Home Assistant.']},
+          {type: 'list', h2: 'صوت محلي، بلا رحلة ذهاب وإياب إلى السحابة', items: ['<strong>Whisper</strong> يحوّل الصوت إلى نص بالكامل محلياً.', '<strong>Piper</strong> يحوّل النص مرة أخرى إلى صوت، بلا اتصال أيضاً.', 'بروتوكول <strong>Wyoming</strong> ينقل الصوت بين قمر الصوت وخادم Home Assistant.', 'المقايضة: التعرف على الصوت محلياً يحتاج معالجة أكبر من واجهة سحابية، لكن ما يُقال داخل المنزل لا يغادره أبداً.']},
+          {type: 'table', h2: 'مستويات أجهزة الحواسيب المصغّرة', columns: ['المستوى', 'الذاكرة', 'ما يمكنه تشغيله'], rows: [{'المستوى': 'مبتدئ', 'الذاكرة': '8 جيجابايت', 'ما يمكنه تشغيله': 'Home Assistant والأتمتة القائمة على القواعد'}, {'المستوى': 'متوسط', 'الذاكرة': '16 جيجابايت', 'ما يمكنه تشغيله': 'Home Assistant مع نموذج لغوي محلي صغير للأتمتة البسيطة بالذكاء الاصطناعي'}, {'المستوى': 'متقدم', 'الذاكرة': '32 جيجابايت أو أكثر مع بطاقة رسومات', 'ما يمكنه تشغيله': 'Home Assistant والنموذج اللغوي المحلي والصوت المحلي وكاميرا أمان بالذكاء الاصطناعي في آن واحد'}]},
+          {type: 'list', h2: 'كيف تعمل أتمتة الذكاء الاصطناعي فعلياً', items: ['يُطلق حساس — باب أو حركة أو حرارة — حدثاً داخل Home Assistant.', 'يرسل تكامل Ollama ذلك الحدث مع السياق ذي الصلة إلى النموذج اللغوي المحلي.', 'يقرر النموذج الإجراء المناسب للموقف، بدلاً من قاعدة ثابتة من نوع إن-حدث-كذا-فافعل-كذا.', 'يُنفّذ Home Assistant الإجراء — الإضاءة أو منظم الحرارة أو الأقفال — بالكامل داخل الشبكة المحلية.']},
+          {type: 'list', h2: 'الخصوصية واللوائح الأوروبية لحماية البيانات', items: ['لا تغادر أي بيانات شخصية — صوت أو لقطات كاميرا — نطاق المنزل، لأن المعالجة تتم محلياً.', 'هذا يلبي افتراضياً معظم متطلبات إقامة البيانات وفق المادة 28.', 'تبقى أنت المسؤول عن معالجة البيانات — الإعداد المحلي لا يُلغي التزاماتك بالتوثيق.']},
+          {type: 'table', h2: 'Home Assistant مقابل Alexa مقابل Google', columns: ['العامل', 'Home Assistant (محلي)', 'Alexa / Google (سحابي)'], rows: [{'العامل': 'موقع البيانات', 'Home Assistant (محلي)': 'يبقى داخل شبكتك', 'Alexa / Google (سحابي)': 'يُرسل إلى خادم الشركة المصنّعة'}, {'العامل': 'الاشتراك', 'Home Assistant (محلي)': 'لا يوجد', 'Alexa / Google (سحابي)': 'بعض الميزات تتطلب باقة مدفوعة'}, {'العامل': 'العمل دون اتصال', 'Home Assistant (محلي)': 'تستمر الأتمتة بالعمل', 'Alexa / Google (سحابي)': 'تتوقف معظم ميزات الصوت والذكاء الاصطناعي'}, {'العامل': 'التخصيص', 'Home Assistant (محلي)': 'مفتوح بالكامل مع آلاف عمليات التكامل', 'Alexa / Google (سحابي)': 'مقتصر على الأجهزة المدعومة من الشركة المصنّعة'}]},
+          {type: 'faq', h2: 'الأسئلة الشائعة', faqs: [{q: 'ما هو المنزل الذكي المحلي؟', a: 'يُشغّل منطق الأتمتة ومعالجة الصوت والتحكم بالأجهزة بالكامل على أجهزة تملكها أنت، بدلاً من خادم سحابي.'}, {q: 'هل أحتاج إلى البرمجة لإعداده؟', a: 'لا. يتولى معالج الإعداد في Home Assistant معظم التهيئة عبر واجهة ويب.'}, {q: 'ما الأجهزة التي أحتاجها؟', a: 'حاسوب مصغر بذاكرة 8 جيجابايت يكفي لـ Home Assistant. أضف نموذجاً لغوياً محلياً بذاكرة 16 جيجابايت أو أكثر.'}, {q: 'هل يتوافق تلقائياً مع اللوائح الأوروبية لحماية البيانات؟', a: 'الاحتفاظ بالبيانات محلياً يلبي معظم متطلبات المادة 28، إذ لا تغادر البيانات الشخصية نطاق المنزل أبداً.'}]},
+          {type: 'list', h2: 'أهم النقاط', items: ['المحلي يعني Home Assistant مع Matter وThread والصوت المحلي ونموذج لغوي محلي، كل ذلك على أجهزتك الخاصة.', 'أهم الفوائد هي الخصوصية وعدم وجود اشتراكات وموثوقية العمل دون اتصال والملكية الكاملة.', 'حاسوب مصغر بذاكرة 16 جيجابايت يكفي للأتمتة البسيطة بالذكاء الاصطناعي؛ أما 32 جيجابايت أو أكثر مع بطاقة رسومات فتُشغّل الصوت والنموذج اللغوي وكاميرات الذكاء الاصطناعي معاً.', 'يصبح الامتثال للوائح حماية البيانات أسهل افتراضياً، لكنك تبقى المسؤول عن معالجة البيانات.']},
+          {type: 'cta', h2: 'استكشف الدليل الكامل', body: '25 دليلاً متعمقاً يغطي الأساسيات والإعداد المحلي والذكاء الاصطناعي المحلي والنماذج اللغوية ومقارنات الشراء لمنزل ذكي خاص بالكامل.', href: 'https://www.promptquorum.com/ar/smart-home', cta: 'عرض جميع الأدلة الـ25'},
+        ]
+      },
+      ko: {
+        title: '로컬 퍼스트 스마트홈: 클라우드가 아닌 로컬 LLM으로 구동',
+        slides: [
+          {type: 'title', h1: '로컬 퍼스트 스마트홈: 클라우드가 아닌 로컬 LLM으로 구동', subtitle: '로컬 퍼스트 스마트홈은 Home Assistant, Matter 및 Thread 기기, 로컬 음성, 그리고 Ollama 기반 LLM을 모두 자신의 하드웨어에서 완전히 실행합니다. 클라우드 의존 없음, 완전한 개인 정보 보호.', link: 'https://www.promptquorum.com/ko/smart-home'},
+          {type: 'list', h2: '로컬이 클라우드보다 나은 이유', items: ['<strong>개인정보 보호.</strong> 음성 녹음과 카메라 영상이 네트워크 밖으로 나가지 않습니다.', '<strong>구독료 없음.</strong> 하드웨어 비용은 한 번만, 월 이용료는 없습니다.', '<strong>오프라인에서도 작동.</strong> 인터넷 장애 중에도 자동화가 계속 실행됩니다.', '<strong>완전한 소유권.</strong> 어떤 제조사도 앱을 종료하거나 기기를 비활성화할 수 없습니다.']},
+          {type: 'list', h2: '핵심 스택', items: ['<strong>Home Assistant</strong> — 모든 기기를 연결하는 로컬 자동화 허브.', '<strong>Matter 및 Thread</strong> — 클라우드를 거치지 않는 로컬 제어를 위한 기기 수준 프로토콜.', '<strong>Ollama</strong> — 센서 데이터를 분석하고 동작을 실행하는 로컬 LLM을 구동합니다.', '<strong>Wyoming</strong> — 로컬 음성 새틀라이트를 Home Assistant와 연결하는 프로토콜.']},
+          {type: 'list', h2: '클라우드 왕복 없는 로컬 음성', items: ['<strong>Whisper</strong>는 음성을 완전히 로컬에서 텍스트로 변환합니다.', '<strong>Piper</strong>는 텍스트를 다시 음성으로, 역시 완전히 오프라인으로 변환합니다.', '<strong>Wyoming</strong> 프로토콜이 음성 새틀라이트와 Home Assistant 서버 간에 오디오를 전송합니다.', '트레이드오프: 로컬 음성 인식은 클라우드 API보다 더 많은 연산이 필요하지만, 집 안에서 말한 내용은 밖으로 나가지 않습니다.']},
+          {type: 'table', h2: '미니 PC 하드웨어 등급', columns: ['등급', 'RAM', '처리 가능 범위'], rows: [{'등급': '입문형', 'RAM': '8GB', '처리 가능 범위': 'Home Assistant와 규칙 기반 자동화'}, {'등급': '중급형', 'RAM': '16GB', '처리 가능 범위': 'Home Assistant에 간단한 AI 자동화를 위한 소형 로컬 LLM 추가'}, {'등급': '고급형', 'RAM': '32GB 이상 + GPU', '처리 가능 범위': 'Home Assistant, 로컬 LLM, 로컬 음성, AI 보안 카메라를 동시에 운용'}]},
+          {type: 'list', h2: 'AI 자동화가 실제로 작동하는 방식', items: ['문, 움직임, 온도 등 센서가 Home Assistant에서 이벤트를 발생시킵니다.', 'Ollama 통합이 해당 이벤트와 관련 컨텍스트를 로컬 LLM으로 전송합니다.', '고정된 if-then 규칙 대신, LLM이 상황에 맞는 동작을 결정합니다.', 'Home Assistant가 조명, 온도조절기, 잠금장치 등의 동작을 로컬 네트워크 안에서 전부 실행합니다.']},
+          {type: 'list', h2: '개인정보 보호와 GDPR', items: ['추론이 로컬에서 실행되므로 음성, 카메라 영상 등 개인정보가 주거지 밖으로 나가지 않습니다.', '이는 기본적으로 GDPR 제28조의 데이터 보관 요건 대부분을 충족합니다.', '사용자는 여전히 데이터 처리자이며, 로컬 구성이라 해도 문서화 의무는 사라지지 않습니다.']},
+          {type: 'table', h2: 'Home Assistant vs Alexa vs Google', columns: ['요소', 'Home Assistant (로컬)', 'Alexa / Google (클라우드)'], rows: [{'요소': '데이터 위치', 'Home Assistant (로컬)': '사용자의 네트워크 안에 유지', 'Alexa / Google (클라우드)': '제조사 서버로 전송'}, {'요소': '구독', 'Home Assistant (로컬)': '없음', 'Alexa / Google (클라우드)': '일부 기능은 유료 요금제 필요'}, {'요소': '오프라인 작동', 'Home Assistant (로컬)': '자동화가 계속 실행됨', 'Alexa / Google (클라우드)': '대부분의 음성 및 AI 기능이 중단됨'}, {'요소': '맞춤 설정', 'Home Assistant (로컬)': '완전히 개방되어 수천 개의 연동 지원', 'Alexa / Google (클라우드)': '제조사가 지원하는 기기로 제한됨'}]},
+          {type: 'faq', h2: '자주 묻는 질문', faqs: [{q: '로컬 퍼스트 스마트홈이란 무엇입니까?', a: '클라우드 서버가 아니라 사용자가 소유한 하드웨어에서 자동화 로직, 음성 처리, 기기 제어를 전적으로 실행합니다.'}, {q: '설정하려면 코딩이 필요합니까?', a: '아닙니다. Home Assistant 설정 마법사가 웹 인터페이스를 통해 대부분의 구성을 처리합니다.'}, {q: '어떤 하드웨어가 필요합니까?', a: 'RAM 8GB의 미니 PC면 Home Assistant를 충분히 운용할 수 있습니다. 로컬 LLM을 추가하려면 16GB 이상이 필요합니다.'}, {q: '기본적으로 GDPR을 준수합니까?', a: '개인정보가 주거지 밖으로 나가지 않으므로, 데이터를 로컬에 유지하는 것만으로 GDPR 제28조 요건 대부분을 충족합니다.'}]},
+          {type: 'list', h2: '핵심 요약', items: ['로컬 퍼스트란 Home Assistant, Matter 및 Thread, 로컬 음성, 로컬 LLM을 모두 자신의 하드웨어에서 실행하는 것을 의미합니다.', '핵심 이점은 개인정보 보호, 구독료 없음, 오프라인 안정성, 완전한 소유권입니다.', '16GB 미니 PC면 기본적인 AI 자동화에 충분하며, 32GB 이상과 GPU가 있으면 음성, LLM, AI 카메라를 함께 운용할 수 있습니다.', 'GDPR 준수는 기본적으로 더 쉬워지지만, 사용자는 여전히 데이터 처리자입니다.']},
+          {type: 'cta', h2: '전체 가이드 살펴보기', body: '25개의 심층 가이드에서 기초 지식, 로컬 퍼스트 구축, 로컬 AI 및 LLM, 완전히 프라이빗한 스마트홈을 위한 구매 비교를 다룹니다.', href: 'https://www.promptquorum.com/ko/smart-home', cta: '전체 25개 가이드 보기'},
+        ]
+      },
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      switch (slide.type) {
+        case 'title':
+          html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}">${slide.link.replace('https://www.', '')}</a></p>`;
+          break;
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ul>';
+          break;
+        case 'table':
+          html = `<h2>${slide.h2}</h2><table><thead><tr>`;
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr></thead><tbody>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            html += '</tr>';
+          });
+          html += '</tbody></table>';
+          break;
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2><ol style="font-size: 1.05em; margin-top: 16px; text-align: start; max-width: 640px;">`;
+          slide.items.forEach(item => { html += `<li style="margin-bottom: 10px;">${item}</li>`; });
+          html += '</ol>';
+          break;
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 18px; text-align: start; max-width: 680px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+          });
+          break;
+        case 'cta':
+          html = `<h2>${slide.h2}</h2><p style="max-width: 600px; margin: 20px auto;">${slide.body}</p><a href="${slide.href}" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: 700;">${slide.cta}</a>`;
+          break;
+      }
+      return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('header-title').textContent = content.title;
+    document.getElementById('back-link').href = BACK_LINKS[lang] || BACK_LINKS.en;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => { container.innerHTML += renderSlide(slide); });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', () => { window.print(); });
+    }
+
+    showSlide(0);
+    </script>
+</body>
+</html>

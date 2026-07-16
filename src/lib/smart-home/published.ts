@@ -1,12 +1,13 @@
 // Smart Home — public-launch allowlist.
 // Slugs in this set are publicly indexable (robots: index,follow) and included
-// in sitemap.xml across all 7 locales (en + de/fr/ja/zh/es/pt). All other slugs
-// in the cluster remain noindex + sitemap-excluded until they pass audit and are
-// added here.
+// in sitemap.xml across all 9 locales (en + de/fr/ja/zh/es/pt/ar/ko). All other
+// slugs in the cluster remain noindex + sitemap-excluded until they pass audit
+// and are added here.
 //
-// LAUNCHED 2026-06-05 (Phase 3): all 25 cluster articles are live, translated into
-// all 7 locales. Slugs are listed explicitly (not derived) so the postbuild
-// noindex contract test can statically parse them, matching power-local-llm.
+// LAUNCHED 2026-06-05 (Phase 3): all 30 cluster articles (25 hub-listed guides +
+// 5 mini-PC review spokes) are live, translated into all 9 locales. Slugs are
+// listed explicitly (not derived) so the postbuild noindex contract test can
+// statically parse them, matching power-local-llm.
 // (Pending separate pre-launch task: real product picks for the SH-05/SH-11/SH-23
 // buyer's guides; not blocking launch.)
 

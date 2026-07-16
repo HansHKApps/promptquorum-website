@@ -35,7 +35,7 @@ const NOINDEX_PAGES = new Set([
 const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
   '/prompt-bites',
-  '/smart-home', // Smart Home cluster: noindex + sitemap-excluded until launch (Phase 3 flip)
+  '/smart-home', // Smart Home cluster: gated by SMART_HOME_PUBLISHED_SLUGS/SMART_HOME_HUB_PUBLISHED; published paths are whitelisted back in below
   '/balcony-solar', // Balcony Solar cluster: gated by BALCONY_SOLAR_PUBLISHED_SLUGS; bypass below
 ]
 

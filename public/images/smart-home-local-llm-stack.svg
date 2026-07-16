@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" fill="none"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect x="0" y="0" width="960" height="480" rx="24" fill="#FAFAF9"/>
+
+  <!-- Boundary: the local network / house -->
+  <rect x="24" y="24" width="912" height="432" rx="20" fill="none" stroke="#D6D3D1" stroke-width="2" stroke-dasharray="6 8"/>
+
+  <!-- Connections (drawn first, under nodes) -->
+  <g stroke="#C4B5FD" stroke-width="3" fill="none">
+    <path d="M480 240 L 220 140"/>
+    <path d="M480 240 L 220 340"/>
+    <path d="M480 240 L 740 140"/>
+    <path d="M480 240 L 740 340"/>
+    <path d="M480 240 L 480 130"/>
+  </g>
+
+  <!-- Center node: Home Assistant hub -->
+  <g>
+    <circle cx="480" cy="240" r="64" fill="#6750A4"/>
+    <circle cx="480" cy="240" r="64" fill="none" stroke="#4F3A8C" stroke-width="2"/>
+    <!-- house glyph -->
+    <path d="M480 205 L 512 232 V 272 H 452 V 232 Z" fill="#FFFFFF"/>
+    <rect x="470" y="248" width="20" height="24" fill="#6750A4"/>
+  </g>
+
+  <!-- Top node: Local LLM (Ollama) -->
+  <g>
+    <rect x="430" y="60" width="100" height="70" rx="16" fill="#7D5260"/>
+    <circle cx="460" cy="95" r="7" fill="#FFF"/>
+    <circle cx="500" cy="95" r="7" fill="#FFF"/>
+    <path d="M452 112 Q480 128 508 112" stroke="#FFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Left-top node: Matter/Thread devices -->
+  <g>
+    <rect x="140" y="96" width="100" height="88" rx="16" fill="#10B981"/>
+    <circle cx="190" cy="120" r="10" fill="#FFF"/>
+    <rect x="160" y="140" width="60" height="10" rx="5" fill="#FFF"/>
+    <rect x="160" y="158" width="40" height="10" rx="5" fill="#FFF"/>
+  </g>
+
+  <!-- Left-bottom node: local voice (mic) -->
+  <g>
+    <rect x="140" y="296" width="100" height="88" rx="16" fill="#F59E0B"/>
+    <rect x="176" y="316" width="28" height="40" rx="14" fill="#FFF"/>
+    <path d="M170 350 a20 20 0 0 0 40 0" stroke="#FFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <line x1="190" y1="370" x2="190" y2="384" stroke="#FFF" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right-top node: sensors -->
+  <g>
+    <rect x="700" y="96" width="100" height="88" rx="16" fill="#64748B"/>
+    <circle cx="750" cy="130" r="18" fill="none" stroke="#FFF" stroke-width="5"/>
+    <circle cx="750" cy="130" r="5" fill="#FFF"/>
+    <rect x="726" y="158" width="48" height="10" rx="5" fill="#FFF"/>
+  </g>
+
+  <!-- Right-bottom node: AI camera -->
+  <g>
+    <rect x="700" y="296" width="100" height="88" rx="16" fill="#0EA5E9"/>
+    <rect x="722" y="322" width="56" height="38" rx="8" fill="#FFF"/>
+    <circle cx="750" cy="341" r="12" fill="#0EA5E9"/>
+    <rect x="742" y="312" width="16" height="10" rx="3" fill="#FFF"/>
+  </g>
+
+  <!-- Cloud, crossed out, drifting off to the side -->
+  <g opacity="0.55">
+    <path d="M792 420 q-14-22 10-30 q4-20 26-16 q10-14 26-4 q22 2 18 22 q16 6 8 22 q-4 10-18 8 h-46 q-18 0-24-2z" fill="#E7E5E4"/>
+    <line x1="778" y1="398" x2="866" y2="446" stroke="#B91C1C" stroke-width="4" stroke-linecap="round"/>
+  </g>
+<text x="952" y="475" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

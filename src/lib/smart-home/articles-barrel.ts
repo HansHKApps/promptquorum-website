@@ -2,8 +2,7 @@
 // Slugs registered in slugs.ts but absent from this map fall through to the
 // "Coming Soon" template at the article page level.
 //
-// SCAFFOLD STATE (Phase 1): no articles authored yet — the map is empty and every
-// slug renders Coming Soon. As articles land in Phase 2, add:
+// All 30 articles are authored (all 9 languages each). To add a new one:
 //   1. src/lib/smart-home/articles/{slug}.ts
 //   2. an `import { article as a_{slug} } from './articles/{slug}'` line
 //   3. a `'{slug}': a_{slug},` entry to smartHomeContent
