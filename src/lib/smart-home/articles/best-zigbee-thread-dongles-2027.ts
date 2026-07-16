@@ -15,7 +15,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // variant uses a TI CC2652P chipset and the ZBDongle-E variant uses a Silicon Labs EFR32MG21,
     // a real, current example of the exact "same product name, different chipset" risk this article
     // already warned about), and phoscon.de/smarthomescene.com (ConBee II superseded by ConBee III,
-    // ~€39.95, adds Thread support).
+    // ~€39.95 — ships with Zigbee 3.0 firmware by default, with an alternative OpenThread Border
+    // Router firmware available for Thread use, not simultaneous Zigbee+Thread on one dongle).
     title: 'Best Zigbee and Thread USB Dongles (2027)',
     seoTitle: 'Best Zigbee + Thread Dongles (2027)',
     intro:
