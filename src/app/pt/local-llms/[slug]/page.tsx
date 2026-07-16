@@ -132,6 +132,7 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: 'pt',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://www.promptquorum.com' },
       { '@type': 'ListItem', position: 2, name: 'LLMs locais', item: 'https://www.promptquorum.com/pt/local-llms' },

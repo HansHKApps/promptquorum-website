@@ -16,6 +16,7 @@ import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
 import { smartHomeContent } from '@/lib/smart-home/content'
 import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
 import { balconySolarContent } from '@/lib/balcony-solar/content'
+import { getBlogPostIsoDate } from '@/lib/blog/parsePublishDate'
 
 export const dynamic = 'force-static'
 
@@ -42,6 +43,14 @@ const EXCLUDED_PATH_PREFIXES = [
 function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
   const en = contentMap[key]?.['en']
   return !!en && Object.keys(en.sections ?? {}).length > 0
+}
+
+// Real per-article lastmod, sourced the same way each cluster's own render route
+// sources its JSON-LD dateModified — not a single hardcoded date applied to every
+// URL in a cluster regardless of actual edit history.
+function articleLastmod(contentMap: Record<string, any>, key: string, fallback: string): string {
+  const en = contentMap[key]?.['en']
+  return en?.dateModified ?? en?.lastFactChecked ?? en?.publishDate ?? fallback
 }
 
 function escapeXml(str: string): string {
@@ -186,7 +195,7 @@ const PE_PAGES: Page[] = [
       path: `/prompt-engineering/${slug}`,
       priority: 0.8,
       changefreq: 'monthly' as const,
-      lastmod: '2026-05-26',
+      lastmod: articleLastmod(peContent, PE_SLUG_TO_KEY[slug], '2026-05-26'),
     })),
 ]
 
@@ -196,7 +205,7 @@ const BLOG_PAGES: Page[] = [
     path: `/blog/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: '2026-03-16',
+    lastmod: getBlogPostIsoDate(SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]),
   })),
 ]
 
@@ -221,7 +230,7 @@ const LOCAL_LLM_PAGES: Page[] = [
       path: `/local-llms/${slug}`,
       priority: 0.8,
       changefreq: 'monthly' as const,
-      lastmod: '2026-05-26',
+      lastmod: articleLastmod(llmContent, LLM_SLUG_TO_KEY[slug], '2026-05-26'),
     })),
 ]
 
@@ -233,7 +242,7 @@ const POWER_LOCAL_LLM_PAGES: Page[] = [
     path: `/power-local-llm/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: '2026-05-26',
+    lastmod: articleLastmod(powerLLMContent, POWER_LLM_SLUG_TO_KEY[slug], '2026-05-26'),
   })),
 ]
 
@@ -245,7 +254,7 @@ const PROMPT_BITES_PAGES: Page[] = [
     path: `/prompt-bites/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: '2026-05-26',
+    lastmod: articleLastmod(promptBitesContent, PROMPT_BITES_SLUG_TO_KEY[slug], '2026-05-26'),
   })),
 ]
 
@@ -257,7 +266,7 @@ const SMART_HOME_PAGES: Page[] = [
     path: `/smart-home/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: '2026-06-05',
+    lastmod: articleLastmod(smartHomeContent, SMART_HOME_SLUG_TO_KEY[slug], '2026-06-05'),
   })),
 ]
 
@@ -269,7 +278,7 @@ const BALCONY_SOLAR_PAGES: Page[] = [
     path: `/balcony-solar/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: '2026-07-02',
+    lastmod: articleLastmod(balconySolarContent, BALCONY_SOLAR_SLUG_TO_KEY[slug], '2026-07-02'),
   })),
 ]
 

@@ -5,9 +5,10 @@ import { BlogIndexClient } from '@/components/BlogIndexClient'
 import { blogContent, type Language } from '@/lib/blog/blogContent'
 import { SLUG_TO_POST_ID, type BlogSlug } from '@/lib/blogSlugs'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
 import { translations } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
+import { getBlogPostIsoDate } from '@/lib/blog/parsePublishDate'
 
 export function getArticleStaticParams() {
   return Object.keys(SLUG_TO_POST_ID).map((slug) => ({
@@ -40,7 +41,7 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
       description: metaDesc,
       url: canonicalUrl,
       type: 'article',
-      publishedTime: post.publishDate,
+      publishedTime: getBlogPostIsoDate(postId),
       images: [{ url: ogImageUrl, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
@@ -94,110 +95,25 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
 
   const post = (blogContent[postId][lang] || blogContent[postId]['en'])!
 
-  // JSON-LD: Article schema
-  const publishDate = post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' ')
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.intro,
-    datePublished: publishDate,
-    dateModified: publishDate,
-    url: `https://www.promptquorum.com/blog/${slug}`,
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      url: 'https://www.promptquorum.com/author/hans-kuepper',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'PromptQuorum',
-      url: 'https://www.promptquorum.com',
-    },
-  }
+  // JSON-LD dates: derived from the EN block's publishDate (the one reliable
+  // machine-readable source — see parsePublishDate.ts), never the localized
+  // display string, which produced garbled non-ISO dates on every non-EN locale.
+  const isoDate = getBlogPostIsoDate(postId)
 
-  // JSON-LD: BlogPosting schema
+  // Collapse into a single BlogPosting node (was 3 separate, conflicting Article/
+  // BlogPosting/ScholarlyArticle nodes for one URL, with inconsistent author types).
+  // ResearchArticle is used instead for the two posts with real citations/methodology.
   const blogPostingSchema = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.intro,
-    datePublished: post.publishDate.replace('Published ', '').split(' ')[0],
-    author: {
-      '@type': 'Organization',
-      name: 'PromptQuorum',
-      url: 'https://www.promptquorum.com',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'PromptQuorum',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/logo.svg',
-      },
-    },
-  }
-
-  // JSON-LD: BreadcrumbList schema
-  const labels = BLOG_BREADCRUMB_LABELS[lang]
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    inLanguage: lang,
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: labels.home,
-        item: 'https://www.promptquorum.com',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: labels.blog,
-        item: 'https://www.promptquorum.com/blog',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: post.title,
-        item: `https://www.promptquorum.com/blog/${slug}`,
-      },
-    ],
-  }
-
-  // Collect section images for ImageObject JSON-LD attribution
-  const toAbsImageUrl = (path: string) =>
-    path.startsWith('http') ? path :
-    path.startsWith('/') ? `https://www.promptquorum.com${path}` :
-    `https://www.promptquorum.com/images/${path}`
-
-  const sectionImageObjects = post.sections
-    ? Object.values(post.sections)
-        .filter((s: any) => !!(s as any).image)
-        .map((s: any) => ({
-          '@type': 'ImageObject' as const,
-          url: toAbsImageUrl(s.image),
-          ...(s.imageCaption && { name: (s.imageCaption as string).substring(0, 125), description: s.imageCaption }),
-          creator: { '@type': 'Person', name: 'Hans Kuepper' },
-          copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          license: 'https://www.promptquorum.com/image-license',
-          acquireLicensePage: 'https://www.promptquorum.com/image-license',
-          creditText: 'PromptQuorum',
-          copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
-        }))
-    : []
-
-  // JSON-LD: ScholarlyArticle/ResearchArticle schema (for AI systems)
-  const scholarlyArticleSchema = {
-    '@context': 'https://schema.org',
-    '@type': (postId === 'promptImpact' || postId === 'promptToolsMarket2026') ? 'ResearchArticle' : 'ScholarlyArticle',
+    '@type': (postId === 'promptImpact' || postId === 'promptToolsMarket2026') ? 'ResearchArticle' : 'BlogPosting',
     headline: post.title,
     description: post.intro,
     articleBody: post.sections ? Object.values(post.sections).map((section: any) => section.content).join(' ') : '',
     image: 'https://www.promptquorum.com/logo.svg',
-    datePublished: post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' '),
-    dateModified: post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' '),
+    url: `https://www.promptquorum.com/blog/${slug}`,
+    inLanguage: toOutputLocale(lang),
+    datePublished: isoDate,
+    dateModified: isoDate,
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
@@ -255,6 +171,56 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
     }),
   }
 
+  // JSON-LD: BreadcrumbList schema
+  const labels = BLOG_BREADCRUMB_LABELS[lang]
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    inLanguage: toOutputLocale(lang),
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: labels.home,
+        item: 'https://www.promptquorum.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: labels.blog,
+        item: 'https://www.promptquorum.com/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://www.promptquorum.com/blog/${slug}`,
+      },
+    ],
+  }
+
+  // Collect section images for ImageObject JSON-LD attribution
+  const toAbsImageUrl = (path: string) =>
+    path.startsWith('http') ? path :
+    path.startsWith('/') ? `https://www.promptquorum.com${path}` :
+    `https://www.promptquorum.com/images/${path}`
+
+  const sectionImageObjects = post.sections
+    ? Object.values(post.sections)
+        .filter((s: any) => !!(s as any).image)
+        .map((s: any) => ({
+          '@type': 'ImageObject' as const,
+          url: toAbsImageUrl(s.image),
+          ...(s.imageCaption && { name: (s.imageCaption as string).substring(0, 125), description: s.imageCaption }),
+          creator: { '@type': 'Person', name: 'Hans Kuepper' },
+          copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          license: 'https://www.promptquorum.com/image-license',
+          acquireLicensePage: 'https://www.promptquorum.com/image-license',
+          creditText: 'PromptQuorum',
+          copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
+        }))
+    : []
+
   // JSON-LD: ImageObject + ItemList for FrameworkWheel (if heroComponent is FrameworkWheel)
   let frameworkWheelSchemas: Record<string, unknown>[] = []
   if (post.heroComponent === 'FrameworkWheel') {
@@ -288,10 +254,6 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
       {frameworkWheelSchemas.map((schema, i) => (
         <script
           key={`framework-schema-${i}`}
@@ -306,10 +268,6 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleSchema) }}
       />
       {post.faqSchema && (
         <script

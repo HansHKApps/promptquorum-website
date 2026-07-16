@@ -134,9 +134,10 @@ export default async function JaLocalLLMsArticlePage({ params }: PageProps) {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    inLanguage: 'ja',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'ローカルLLM', item: 'https://www.promptquorum.com/local-llms' },
+      { '@type': 'ListItem', position: 2, name: 'ローカルLLM', item: 'https://www.promptquorum.com/ja/local-llms' },
       { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }
