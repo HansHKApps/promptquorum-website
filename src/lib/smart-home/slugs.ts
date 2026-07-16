@@ -55,7 +55,7 @@ export const SMART_HOME_SLUG_TO_KEY: Record<string, string> = {
   'home-as-energy-microgrid-2027':                 'home-as-energy-microgrid-2027',
 
   // Category 6 — 2027 Protocols & Regulation (SH-30–33) — SPEC LOCKED, not yet authored
-  'matter-2-0-explained':                          'matter-2-0-explained',
+  'matter-1-6-explained':                          'matter-1-6-explained',
   'thread-14-wifi-7-routers-guide':                'thread-14-wifi-7-routers-guide',
   'eu-data-act-smart-home-2027':                   'eu-data-act-smart-home-2027',
   'ikea-matter-ecosystem-guide-2027':              'ikea-matter-ecosystem-guide-2027',

@@ -10,10 +10,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: '2027 Protocols & Regulation',
     title: 'Thread and Wi-Fi 7 Routers for Smart Homes (2027)',
     seoTitle: 'Thread + Wi-Fi 7 Routers for Smart Homes (2027)',
+    // Thread version confirmed 2026-07-16 directly against threadgroup.org: Thread 1.4.0 (Sept 2024)
+    // is current, sole Border Router certification path since Jan 1, 2026. Wi-Fi 7 (802.11be) remains
+    // the current mainstream standard; Wi-Fi 8 (802.11bn) isn't ratified yet (targeted 2028), though
+    // early draft-spec products began shipping in 2026. Specific router chipset/model/price picks
+    // remain genuinely unverified — that's a product-sourcing task, not a spec fact-check, and no
+    // model names are asserted below without a real current source.
     intro:
-      'A smart home\'s networking layer needs two things: a Thread border router for low-power mesh devices (sensors, locks, some lighting), and enough Wi-Fi bandwidth/low latency for cameras and voice. [VERIFY: current Thread spec version and which router chipsets/models actually ship both Thread border router support and Wi-Fi 7] before recommending specific hardware. This guide explains what to look for rather than naming unverified current models.',
+      'A smart home\'s networking layer needs two things: a Thread border router for low-power mesh devices (sensors, locks, some lighting), and enough Wi-Fi bandwidth/low latency for cameras and voice. Thread 1.4.0 and Wi-Fi 7 (802.11be) are both current, real specifications — but which specific router chipsets and models actually ship both, and at what price, is not covered here; that needs a dedicated hardware-sourcing pass rather than a spec-version check. This guide explains what to look for rather than naming unverified current models.',
     metaDescription:
-      "Thread border routers and Wi-Fi networking for smart homes in 2027: what actually matters for camera/voice bandwidth and Thread mesh coverage. [VERIFY current router specs before publishing.]",
+      "Thread border routers and Wi-Fi 7 networking for smart homes in 2027: what actually matters for camera/voice bandwidth and Thread mesh coverage.",
     twitterDescription:
       'What smart home networking actually needs: a Thread border router for mesh devices, and enough Wi-Fi bandwidth for cameras and voice — not every marketing feature matters.',
     readTime: '7 min read',
@@ -28,16 +34,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'home assistant thread border router',
     ],
     leadAnswerBlock:
-      '**A smart home router setup needs a Thread border router (often built into a smart speaker, hub, or dedicated device) for low-power mesh devices, plus enough Wi-Fi bandwidth and low latency for camera streams and voice — not every marketing-driven Wi-Fi feature translates into a real smart home benefit.** [VERIFY: which current router models genuinely combine both] before recommending a specific SKU.',
+      '**A smart home router setup needs a Thread border router (often built into a smart speaker, hub, or dedicated device) for low-power mesh devices, plus enough Wi-Fi 7 bandwidth and low latency for camera streams and voice — not every marketing-driven Wi-Fi feature translates into a real smart home benefit.** Which specific current router models genuinely combine both well is a hardware-sourcing question this article doesn\'t answer — no SKU is recommended here without real current verification.',
     quickAnswerTop: {
       en: {
         question: 'Do I need a Wi-Fi 7 router and a Thread border router for my smart home?',
         answer:
-          'You need a Thread border router if you have Thread-based devices (many modern locks, sensors, and some lighting use Thread) — this is often built into an existing smart speaker or hub rather than a separate purchase. For Wi-Fi, prioritize enough bandwidth and low latency for your camera count and voice setup over generic newer-standard marketing claims. [VERIFY: which current router models ship both features and whether the specific bandwidth improvements matter for a typical smart home\'s camera/voice load] before buying based on spec-sheet numbers alone.',
+          'You need a Thread border router if you have Thread-based devices (many modern locks, sensors, and some lighting use Thread) — this is often built into an existing smart speaker or hub rather than a separate purchase. For Wi-Fi, prioritize enough bandwidth and low latency for your camera count and voice setup over generic newer-standard marketing claims. Which current router models actually ship both well, and whether Wi-Fi 7\'s bandwidth improvements matter for your specific camera/voice load, needs checking against current independent reviews rather than spec-sheet numbers alone — not covered by this article.',
         bullets: [
           'Thread border router: often built into an existing smart speaker/hub, not always a separate purchase',
           'Wi-Fi priority: bandwidth and latency for your actual camera/voice load, not generic newer-standard marketing',
-          '[VERIFY: current router models\' actual Thread + Wi-Fi feature combination] before recommending a specific SKU',
+          'Specific router models combining Thread border router support with Wi-Fi 7 well: a hardware-sourcing question, not covered here',
           'More radios/bands help with device density, but check real-world reviews, not just spec sheets',
         ],
         updatedDate: '2026-07',
@@ -62,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A Thread border router bridges Thread-based devices (locks, sensors, some lighting) to your network — check if you already have one built into a smart speaker or hub before buying a dedicated device',
           'Prioritize Wi-Fi bandwidth and latency for your actual camera count and voice usage, not generic newer-Wi-Fi-standard marketing claims',
-          '[VERIFY: which current router models combine Thread border router support with the newest Wi-Fi standard] before recommending a specific product',
+          'Thread 1.4.0 and Wi-Fi 7 are both current, real specifications — but specific router models that combine both well are a hardware-sourcing question this article doesn\'t answer',
           'More simultaneous device connections and better 2.4GHz coverage often matter more for smart home device density than raw top-line Wi-Fi speed',
           'See the general protocol primer for what Thread itself is, separate from router hardware',
         ],
@@ -75,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Many existing smart speakers and hubs from major ecosystems already include a Thread border router — check your existing hardware before assuming you need a new purchase.',
           'Multiple Thread border routers on the same network cooperate to extend mesh coverage — having more than one (e.g., in different rooms) generally improves reliability, not just redundancy.',
-          '[VERIFY: current specifications for Thread] — networking specs update periodically, and this article should not be read as confirming a specific current version number.',
+          'Thread 1.4.0 (released September 2024) is the current specification as of write-time — verified 2026-07-16 against threadgroup.org\'s own specification page — and became the sole certification path for new Thread Border Routers after January 1, 2026.',
         ],
       },
       wifiNeeds: {
@@ -86,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Local camera detection (see the local AI security camera guide) sends video to your Frigate box over your local network — this is the load that actually benefits from more real-world Wi-Fi bandwidth, especially with several cameras.',
           'Voice assistant responsiveness depends more on your local hub\'s processing (see the local voice assistant guide) than on raw Wi-Fi throughput, though a congested network adds latency to everything.',
-          '[VERIFY: real-world bandwidth/latency improvements of the current-generation Wi-Fi standard] for a typical smart-home camera/voice load — marketing throughput numbers rarely reflect real-world smart-home usage patterns.',
+          'Wi-Fi 7 (802.11be)\'s headline throughput and multi-link features are real, but how much a typical smart-home camera/voice workload actually benefits versus a well-configured Wi-Fi 6/6E setup hasn\'t been independently measured for this article — treat marketing throughput numbers as a ceiling, not a guaranteed real-world gain.',
         ],
       },
       marketingNoise: {
@@ -97,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Most individual smart home sensors and battery-powered devices use 2.4GHz Wi-Fi or a separate protocol (Zigbee, Thread) entirely — a router\'s top-line 6GHz or newest-standard speed rarely affects them directly.',
           'Check a router\'s stated simultaneous-connected-device limit if you have a large number of smart plugs, sensors, and other IoT devices — this practical limit matters more than theoretical throughput for most smart homes.',
-          '[VERIFY: specific router model recommendations and prices] against current independent reviews rather than manufacturer marketing copy before publishing a buying recommendation.',
+          'This article intentionally names no specific router models or prices — that requires checking current independent reviews rather than manufacturer marketing copy, and is scoped as a separate hardware-sourcing pass, not a spec-fact-check.',
         ],
       },
       faqSection: {
@@ -118,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Matter, Thread, Zigbee, Z-Wave: Protocols Explained](/smart-home/smart-home-protocols-explained) — what Thread is, compared to other protocols',
-          '[Matter 2.0 Explained: What\'s New](/smart-home/matter-2-0-explained) — the application-layer spec, separate from networking hardware',
+          '[Matter 1.6 Explained: What\'s New](/smart-home/matter-1-6-explained) — the application-layer spec, separate from networking hardware',
           '[Local AI Security Cameras with Frigate](/smart-home/local-ai-security-camera) — the bandwidth-heaviest local workload',
           '[Best Zigbee and Thread USB Dongles](/smart-home/best-zigbee-thread-dongles-2027) — dedicated radio hardware for a mini-PC/Pi hub',
         ],

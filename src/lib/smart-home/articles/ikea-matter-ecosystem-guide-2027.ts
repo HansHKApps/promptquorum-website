@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           "[Best Smart Home Hubs for Local Control](/smart-home/best-smart-home-hubs-2027) — dedicated hub appliances compared",
-          '[Matter 2.0 Explained: What\'s New](/smart-home/matter-2-0-explained) — the spec IKEA\'s devices implement',
+          '[Matter 1.6 Explained: What\'s New](/smart-home/matter-1-6-explained) — the spec IKEA\'s devices implement',
           '[Smart Home for Beginners: Where to Start](/smart-home/smart-home-for-beginners-where-to-start) — the broader beginner path',
           '[Best Smart Home Devices 2026: A Buyer\'s Guide](/smart-home/best-smart-home-devices-2026) — device picks by category',
         ],
