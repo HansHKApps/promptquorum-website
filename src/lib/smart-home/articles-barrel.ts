@@ -57,6 +57,12 @@ import { article as a_matter_2_0_explained } from './articles/matter-2-0-explain
 import { article as a_thread_14_wifi_7_routers_guide } from './articles/thread-14-wifi-7-routers-guide'
 import { article as a_eu_data_act_smart_home_2027 } from './articles/eu-data-act-smart-home-2027'
 import { article as a_ikea_matter_ecosystem_guide_2027 } from './articles/ikea-matter-ecosystem-guide-2027'
+// Category 7 — Advanced Local AI (SH-34–38)
+import { article as a_local_small_language_models_smart_home } from './articles/local-small-language-models-smart-home'
+import { article as a_radar_presence_sensing_no_camera } from './articles/radar-presence-sensing-no-camera'
+import { article as a_reducing_llm_hallucinations_home_automation } from './articles/reducing-llm-hallucinations-home-automation'
+import { article as a_sensor_fusion_smart_home_2027 } from './articles/sensor-fusion-smart-home-2027'
+import { article as a_home_digital_twin_explained } from './articles/home-digital-twin-explained'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // Category 1 — Smart Home Foundations
@@ -103,4 +109,10 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'thread-14-wifi-7-routers-guide':      a_thread_14_wifi_7_routers_guide,
   'eu-data-act-smart-home-2027':         a_eu_data_act_smart_home_2027,
   'ikea-matter-ecosystem-guide-2027':    a_ikea_matter_ecosystem_guide_2027,
+  // Category 7 — Advanced Local AI
+  'local-small-language-models-smart-home':      a_local_small_language_models_smart_home,
+  'radar-presence-sensing-no-camera':            a_radar_presence_sensing_no_camera,
+  'reducing-llm-hallucinations-home-automation':  a_reducing_llm_hallucinations_home_automation,
+  'sensor-fusion-smart-home-2027':                a_sensor_fusion_smart_home_2027,
+  'home-digital-twin-explained':                  a_home_digital_twin_explained,
 }
