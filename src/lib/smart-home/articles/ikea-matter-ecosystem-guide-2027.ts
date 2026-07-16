@@ -10,10 +10,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: '2027 Protocols & Regulation',
     title: "IKEA's Matter Ecosystem: Complete Guide (2027)",
     seoTitle: 'IKEA Matter Ecosystem Guide (2027)',
+    // Verified 2026-07-16 against IKEA's own US product listing (ikea.com/us/en/cat/smart-home-products-36812/)
+    // and Home Assistant's own product page (home-assistant.io/green/) for the price comparison.
     intro:
-      "IKEA sells a Matter-compatible smart home lineup — a hub, sensors, and lighting — positioned as a lower-cost entry point to local-first smart home control compared to dedicated hub appliances. [VERIFY: IKEA's current Matter-compatible product lineup and pricing] before citing specific SKUs or prices, since this lineup changes with IKEA's regular product cycles. This guide explains what the ecosystem is for and how it compares to other hub options already covered on this site.",
+      "IKEA sells a Matter-compatible smart home lineup — the DIRIGERA hub ($119.99), plus sensors and lighting — positioned as a lower-cost entry point to local-first smart home control compared to dedicated hub appliances. This guide explains what the ecosystem is for and how it compares to other hub options already covered on this site.",
     metaDescription:
-      "IKEA's Matter smart home lineup in 2027: hub, sensors, and lighting as a budget entry point to local control. [VERIFY current product lineup/pricing before publishing.]",
+      "IKEA's Matter smart home lineup in 2027: the DIRIGERA hub, sensors, and lighting as a budget entry point to local control.",
     twitterDescription:
       "IKEA's Matter-compatible smart home products as a budget entry point to local control, compared to Home Assistant Green and other hub options.",
     readTime: '6 min read',
@@ -28,17 +30,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      "**IKEA's Matter-compatible smart home lineup — a hub plus sensors and lighting — is positioned as a lower-cost, off-the-shelf entry point to local device control, an alternative to dedicated hub appliances like Home Assistant Green for buyers who want retail-available hardware.** [VERIFY: IKEA's current specific product lineup and prices] before citing exact SKUs, since retail lineups change.",
+      "**IKEA's Matter-compatible smart home lineup — the DIRIGERA hub ($119.99) plus sensors and lighting — is positioned as a lower-cost, off-the-shelf entry point to local device control, an alternative to dedicated hub appliances like Home Assistant Green ($199) for buyers who want retail-available hardware.**",
     quickAnswerTop: {
       en: {
         question: 'Is IKEA a good starting point for a Matter smart home?',
         answer:
-          "IKEA's smart home hub and Matter-compatible devices are commonly cited as a lower-cost, widely available entry point compared to dedicated hub appliances — useful if you want retail-store hardware and basic lighting/sensor automation without researching individual component compatibility. [VERIFY: IKEA's current hub model, its specific Matter support level, and current product/pricing] before treating any specific claim as current, since retail lineups change with IKEA's regular product cycles.",
+          "Yes, via the DIRIGERA hub ($119.99) — a lower-cost, widely available entry point compared to dedicated hub appliances, useful if you want retail-store hardware and basic lighting/sensor automation without researching individual component compatibility. DIRIGERA became a full Matter controller and Thread Border Router through a 2025 firmware update, so it can also onboard some third-party Matter devices, not just IKEA's own.",
         bullets: [
           "IKEA's positioning: budget, retail-available entry point to Matter/local control",
           'Best fit: buyers wanting basic lighting/sensor automation without researching individual components',
-          '[VERIFY: current hub model and Matter support level] before citing specifics',
-          "Compare against Home Assistant Green and other hubs (see the hub buyer's guide) for a fuller-featured alternative",
+          'DIRIGERA hub: $119.99, Matter controller + Thread Border Router (2025 firmware update)',
+          "Compare against Home Assistant Green ($199, see the hub buyer's guide) for a fuller-featured alternative",
         ],
         updatedDate: '2026-07',
       },
@@ -61,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           "IKEA's smart home lineup is positioned as a budget, widely available entry point to Matter-based local control",
-          '[VERIFY: current hub model and specific Matter support/certification status] before citing product specifics',
+          'DIRIGERA (model E2315) hub is Matter-certified and a Thread Border Router, priced at $119.99 as of write-time',
           "Best fit for buyers wanting basic lighting/sensor automation without researching individual component compatibility",
           "Compare against Home Assistant Green and other dedicated hubs (see the hub buyer's guide) for more advanced automation needs",
         ],
@@ -74,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "The hub acts as the local controller and, in many configurations, a Matter bridge for the ecosystem's own devices and some third-party Matter devices.",
           'Lighting and sensors are the core of the lineup — this is not a full-featured hub for complex multi-brand automation the way Home Assistant is.',
-          "[VERIFY: the current hub's specific Matter certification and which third-party devices it supports] rather than assuming universal Matter interoperability.",
+          "DIRIGERA is certified for Ethernet and Thread connectivity in the Border Router (FTD) role, and gained Matter-controller functionality via a 2025 firmware update, letting it onboard third-party Matter devices through the IKEA Home Smart app rather than only its own product line.",
         ],
       },
       whoItFits: {
@@ -96,17 +98,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant Green offers broader device-type support and deeper automation logic, at a different price point and without the retail-store convenience.',
           "IKEA's devices being Matter-certified means they aren't locked into the ecosystem's own hub — this reduces the switching cost if you later move to a more capable hub.",
-          "[VERIFY: current pricing comparison] between IKEA's hub/device lineup and Home Assistant Green or other budget hub options before citing specific numbers.",
+          "IKEA's DIRIGERA hub ($119.99) is about $80 cheaper than Home Assistant Green ($199) as of write-time — HA Green's price rose twice in 2026 (from an original $99 at 2023 launch) citing higher component costs, while IKEA's hub has stayed at retail pricing.",
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: "Is IKEA's smart home hub Matter-certified?", a: "[VERIFY: current certification status of the specific hub model] — check IKEA's current product documentation rather than assuming based on general Matter industry adoption." },
-          { q: 'Can I use IKEA Matter devices with Home Assistant instead of the IKEA hub?', a: "Generally yes — Matter-certified devices aren't locked to one hub, so IKEA's Matter devices can typically be re-paired to Home Assistant or another Matter controller, though [VERIFY: any device-specific limitations] first." },
+          { q: "Is IKEA's smart home hub Matter-certified?", a: "Yes — DIRIGERA (model E2315) is certified for Ethernet and Thread connectivity in the Border Router role, and became a full Matter controller via a 2025 firmware update." },
+          { q: 'Can I use IKEA Matter devices with Home Assistant instead of the IKEA hub?', a: "Generally yes — Matter-certified devices aren't locked to one hub, so IKEA's Matter devices can typically be re-paired to Home Assistant or another Matter controller, though check the specific device's documentation for any limitations first." },
           { q: 'Is IKEA a good long-term smart home platform?', a: 'It works well as a low-cost entry point for lighting and basic sensors. For more advanced automation, many buyers migrate their Matter devices to a more capable hub like Home Assistant later.' },
-          { q: 'Does IKEA support cameras or energy monitoring?', a: "[VERIFY: the current product lineup] — IKEA's smart home range has historically focused on lighting and sensors rather than cameras or energy hardware; check current offerings before assuming coverage." },
+          { q: 'Does IKEA support cameras or energy monitoring?', a: "No, as of write-time. IKEA's current US smart home lineup covers lighting, motion/contact/temperature/water-leak/air-quality sensors, remotes, and smart plugs — no cameras or dedicated energy-monitoring hardware." },
           { q: "How does this compare to the general hub buyer's guide on this site?", a: "The hub buyer's guide compares dedicated hub appliances (Home Assistant Green, Hubitat, Homey). This article focuses specifically on IKEA's retail ecosystem as a budget alternative." },
         ],
       },
