@@ -9,10 +9,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     affiliateDisclosure: true,
+    // Verified 2026-07-16 against official sources: aqara.com/Amazon (Aqara Smart Plug, ~$25-35,
+    // Zigbee, ZHA/Zigbee2MQTT local, confirmed energy monitoring), getzooz.com (Zooz ZEN15, $39.95,
+    // Z-Wave 800 series, W/A/V/kWh reporting), shelly-api-docs.shelly.cloud (every Shelly device
+    // ships a documented local HTTP/CoAP/MQTT API by design — a real architectural fact, not
+    // marketing). One item stays an open flag rather than a guess: the Shelly Plus Plug US is
+    // confirmed DISCONTINUED, replaced by the Shelly Plug US Gen4, but its current exact price
+    // could not be confirmed from available sources — flagged in the article rather than invented.
+    // Also cites a real, sourced cautionary example: Sonoff's S31 (Wi-Fi) has energy monitoring but
+    // its S31 Lite ZB (Zigbee) sibling does not, per Sonoff's own product pages — a live instance of
+    // this article's own "check the specific model, not just the family name" warning.
     title: 'Best Energy-Monitoring Smart Plugs (2027)',
     seoTitle: 'Best Energy-Monitoring Smart Plugs (2027)',
     intro:
-      'The best energy-monitoring smart plugs report wattage/kWh directly into Home Assistant\'s Energy dashboard over a local integration, rather than gating usage data behind a manufacturer\'s cloud app. [VERIFY: current specific plug models, confirmed local-reporting capability, and pricing] before buying — some plugs report energy data only through the vendor app even when locally controllable for on/off.',
+      "The best energy-monitoring smart plugs report wattage/kWh directly into Home Assistant's Energy dashboard over a local integration, rather than gating usage data behind a manufacturer's cloud app. Aqara's Zigbee Smart Plug and Zooz's ZEN15 (Z-Wave) both confirm genuine local energy reporting (checked 2026-07-16); Shelly's plugs ship a documented local API by design, though the Shelly Plus Plug US specifically is discontinued and replaced by the Gen4. Sonoff's own lineup shows why checking the specific model matters: its Wi-Fi S31 has energy monitoring, but its Zigbee sibling (S31 Lite ZB) does not.",
     metaDescription:
       'Best energy-monitoring smart plugs for Home Assistant in 2027: plugs that report local energy data, not just local on/off control. What to verify before buying.',
     twitterDescription:
@@ -29,17 +39,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'smart plug energy dashboard',
     ],
     leadAnswerBlock:
-      "**The best energy-monitoring smart plugs for a local-first setup report wattage/kWh directly into Home Assistant via a local integration (Zigbee, Z-Wave, or a locally-polled Wi-Fi integration), not just local on/off switching with energy data gated behind the manufacturer's cloud app.** [VERIFY: current specific models, confirmed local-reporting capability, and pricing] before buying — check this specifically, since local on/off control and local energy reporting are not always the same feature.",
+      "**The best energy-monitoring smart plugs for a local-first setup report wattage/kWh directly into Home Assistant via a local integration (Zigbee, Z-Wave, or a locally-polled Wi-Fi integration), not just local on/off switching with energy data gated behind the manufacturer's cloud app.** Confirmed current options (checked 2026-07-16): Aqara's Smart Plug (Zigbee, ~$25-35) and Zooz's ZEN15 (Z-Wave, $39.95). Shelly's plugs ship a documented local API by design, but check the specific model — the Shelly Plus Plug US is discontinued (replaced by the Gen4), and its current price couldn't be confirmed here.",
     quickAnswerTop: {
       en: {
         question: 'Which smart plugs report energy usage locally to Home Assistant?',
         answer:
-          "Look specifically for plugs where the energy-monitoring data (not just on/off control) is confirmed to work through a local integration — Zigbee and Z-Wave plugs generally handle this well, while some Wi-Fi plugs report on/off state locally but still route detailed wattage data through the manufacturer's cloud API. [VERIFY: current specific models and their confirmed local energy-reporting capability] before buying, since this distinction isn't always obvious from marketing copy.",
+          "Look specifically for plugs where the energy-monitoring data (not just on/off control) is confirmed to work through a local integration — Zigbee and Z-Wave plugs generally handle this well, while some Wi-Fi plugs report on/off state locally but still route detailed wattage data through the manufacturer's cloud API. Confirmed current options (checked 2026-07-16): Aqara's Smart Plug (Zigbee, ~$25-35 on Amazon, works via ZHA or Zigbee2MQTT with full local energy sensors) and Zooz's ZEN15 (Z-Wave 800 series, $39.95 on getzooz.com, reports wattage/amperage/voltage/kWh). Shelly's entire lineup documents a local HTTP/CoAP/MQTT API by design, but check the specific model: the Shelly Plus Plug US is confirmed discontinued, replaced by the Shelly Plug US Gen4, whose current exact price wasn't confirmable here — check us.shelly.com directly. Sonoff's own lineup shows why the specific model matters: its Wi-Fi S31 has energy monitoring, but the Zigbee S31 Lite ZB does not, per Sonoff's own product pages.",
         bullets: [
           'Check specifically: local energy-data reporting, not just local on/off control — these can differ',
-          'Zigbee/Z-Wave plugs generally handle local energy reporting well',
-          'Some Wi-Fi plugs: local on/off works, but detailed wattage data still routes through the cloud',
-          '[VERIFY: current specific models and pricing] before purchasing',
+          'Confirmed current picks: Aqara Smart Plug (Zigbee, ~$25-35), Zooz ZEN15 (Z-Wave, $39.95)',
+          'Shelly: documented local API by design, but the Plus Plug US is discontinued (→ Gen4) — price not confirmable here, check us.shelly.com',
+          'Watch for: Sonoff\'s Wi-Fi S31 has energy monitoring; its Zigbee sibling S31 Lite ZB does not — same family, different capability',
         ],
         updatedDate: '2026-07',
       },
@@ -62,8 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Check specifically for local energy-data reporting, not just local on/off control — these are sometimes separate features on the same plug',
           'Zigbee and Z-Wave plugs generally handle local energy reporting reliably',
-          'Some Wi-Fi plugs report on/off state locally but still route detailed wattage data through the manufacturer\'s cloud',
-          '[VERIFY: current specific models, confirmed capability, and pricing] before buying',
+          'Confirmed current picks (checked 2026-07-16): Aqara Smart Plug (Zigbee, ~$25-35), Zooz ZEN15 (Z-Wave, $39.95) — Shelly Plus Plug US is discontinued, replaced by Gen4',
           "See the Energy dashboard setup guide for how these plugs feed into Home Assistant once chosen",
         ],
       },
@@ -75,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'This distinction matters specifically for feeding the Energy dashboard (see that setup guide) — a plug that only controls locally but reports energy via cloud won\'t give you fully local monitoring for that device.',
           'Check Home Assistant\'s own integration documentation for the specific plug model, which typically states explicitly whether energy attributes are available locally or require the cloud integration.',
-          '[VERIFY: current firmware behavior] — plug manufacturers occasionally change which data is available locally via firmware updates, so check current, not launch-era, documentation.',
+          "Sonoff's own lineup is a real, current example of this exact split: the Wi-Fi S31 has built-in energy monitoring, but the Zigbee S31 Lite ZB does not, per Sonoff's own product pages — the same brand, a different capability by model, not just by protocol.",
         ],
       },
       whatToCheck: {
@@ -85,8 +94,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Confirm local energy-reporting specifically (not just on/off), check the protocol (Zigbee/Z-Wave are generally more reliable for this than Wi-Fi), and verify current Home Assistant integration support for the exact model.**',
         items: [
           'Search Home Assistant\'s integration documentation for the exact plug model and confirm energy/power sensor entities are listed as locally available, not cloud-only.',
-          'Zigbee and Z-Wave energy-monitoring plugs generally have a more consistent track record of fully local reporting than Wi-Fi plugs, though [VERIFY: current specific model behavior] rather than assuming this holds for every product.',
-          '[VERIFY: current pricing and specific model recommendations] — this is a frequently refreshed product category with many similar-looking options of varying actual local-reporting quality.',
+          "Zigbee and Z-Wave energy-monitoring plugs generally have a more consistent track record of fully local reporting than Wi-Fi plugs. Aqara's Smart Plug (~$25-35, confirmed on Aqara/Amazon) exposes full energy sensors locally via ZHA or Zigbee2MQTT; Zooz's ZEN15 (Z-Wave 800 series, $39.95, confirmed on getzooz.com) reports wattage, amperage, voltage, and kWh.",
+          "Shelly's plugs document a local HTTP/CoAP/MQTT API across the whole lineup by design (per Shelly's own API documentation), but check availability of the specific current model — the Shelly Plus Plug US is discontinued, replaced by the Shelly Plug US Gen4; its current exact price wasn't confirmable from available sources, so check us.shelly.com directly before buying.",
+        ],
+        affiliateLinks: [
+          { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       faqSection: {
@@ -98,6 +112,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How do these plugs connect to the Energy dashboard?', a: 'Once confirmed to report locally, add the plug\'s energy sensor entity under "Individual Devices" in the Energy dashboard setup — see that guide for the full walkthrough.' },
           { q: 'Can I mix protocols (some Zigbee, some Wi-Fi plugs)?', a: 'Yes — Home Assistant can combine sensor entities from different protocols into the same Energy dashboard view without issue, as long as each individually reports locally.' },
           { q: 'Do I need one plug per appliance, or can I monitor a whole circuit?', a: 'Smart plugs monitor individual appliances plugged into them; for whole-circuit or whole-home monitoring, a CT clamp on the breaker panel (see the local energy management overview) is the appropriate tool instead.' },
+          { q: 'Does every plug in a product line have the same features?', a: "No — Sonoff's Wi-Fi S31 has built-in energy monitoring, but its Zigbee sibling, the S31 Lite ZB, does not, per Sonoff's own product pages. Check the specific model page, not just the brand or family name." },
+          { q: 'Is the Shelly Plus Plug US still available?', a: "No — it's discontinued and replaced by the Shelly Plug US Gen4. Shelly's whole lineup documents a local HTTP/CoAP/MQTT API by design, but confirm current model availability and price at us.shelly.com before buying." },
         ],
       },
       relatedReading: {
