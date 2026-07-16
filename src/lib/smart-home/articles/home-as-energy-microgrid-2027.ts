@@ -8,6 +8,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    // Verified 2026-07-16: battery capacity figures below are cited directly from manufacturer
+    // datasheets (Tesla's Energy Library, Enphase's own spec sheet) as anchor examples of what
+    // capacity ranges exist today — capacity (kWh) is a stable spec, unlike price. No price or
+    // "hours of backup" figure is asserted, following the same standard the balcony-solar
+    // cluster's own battery guide already applies (its own tableNote explicitly omits prices as
+    // Section-301-tariff-sensitive and tells readers to verify at time of purchase). This article
+    // stays informational — no affiliateLinks — per sourcing-pass scope.
     title: 'Turning Your Home Into an Energy Microgrid (2027)',
     seoTitle: 'Home Energy Microgrid Setup (2027)',
     intro:
@@ -33,11 +40,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Can I turn my home into an energy microgrid?',
         answer:
-          'In the consumer-hardware sense, yes — solar panels, a home battery, and a compatible inverter with automatic transfer switching can keep chosen circuits (refrigerator, some lighting, internet) running during a grid outage. This is fundamentally different from a true utility-scale microgrid, which involves islanding multiple buildings from the grid with coordinated generation — home hardware provides backup power for your own circuits, not grid independence in that broader sense. [VERIFY: your specific battery capacity and inverter\'s transfer-switch specifications] before assuming whole-home coverage during an outage.',
+          'In the consumer-hardware sense, yes — solar panels, a home battery, and a compatible inverter with automatic transfer switching can keep chosen circuits (refrigerator, some lighting, internet) running during a grid outage. This is fundamentally different from a true utility-scale microgrid, which involves islanding multiple buildings from the grid with coordinated generation — home hardware provides backup power for your own circuits, not grid independence in that broader sense. Current home battery products span a wide capacity range — Enphase\'s IQ Battery 5P is rated at 5.0 kWh usable, and Tesla\'s Powerwall 3 at 13.5 kWh usable (scalable higher with expansion packs) — so match your essential-circuit load against a specific product\'s datasheet, not a generic assumption, before sizing a system.',
         bullets: [
           'Consumer "microgrid" = solar + battery + automatic transfer switching for backup power',
           'This is essential-circuit backup, not true utility-scale grid islanding',
-          'Battery capacity determines which circuits and for how long — [VERIFY: current battery capacity/pricing] before sizing a system',
+          'Battery capacity varies widely by product — e.g., Enphase IQ Battery 5P: 5.0 kWh usable; Tesla Powerwall 3: 13.5 kWh usable, scalable higher — check a specific product\'s datasheet against your essential-circuit load',
           'Home Assistant can automate which circuits get priority when running on battery',
           'Scope the project to your actual outage-backup needs, not a whole-home-independence assumption',
         ],
@@ -63,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '"Home microgrid" here means solar + battery + automatic transfer switching for outage backup — not utility-scale grid islanding',
-          'Battery capacity and inverter transfer-switch specs determine which circuits you can back up and for how long — [VERIFY: current capacity/pricing before sizing]',
+          'Battery capacity varies significantly by product — e.g., Enphase IQ Battery 5P (5.0 kWh usable) vs. Tesla Powerwall 3 (13.5 kWh usable, expandable) — check a specific datasheet, not a generic figure, against your essential-circuit load',
           'Essential circuits (refrigerator, some lighting, networking/router) are the realistic backup scope for most home battery sizes',
           'Home Assistant can automate load-shedding priority when running on battery, extending backup duration',
           'This is the most speculative of the Energy & Solar articles — scope claims conservatively and avoid implying whole-home independence is typical',
@@ -87,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Battery capacity, not solar panel count, is usually the limiting factor for how long and how much you can back up during an outage — size around your actual essential-load wattage, not your whole home\'s peak draw.**',
         items: [
           'List your essential circuits (refrigerator, some lighting, networking equipment, and medical equipment if applicable) and their approximate combined wattage — this is your backup target, not your whole home\'s panel capacity.',
-          '[VERIFY: current home battery capacity and pricing] — battery costs and available capacities change significantly; check current options from the balcony solar cluster\'s battery guides or a licensed installer rather than assuming a specific number.',
+          'Battery capacity spans a wide range by product: Enphase\'s IQ Battery 5P is rated at 5.0 kWh usable (per Enphase\'s own datasheet), while Tesla\'s Powerwall 3 is rated at 13.5 kWh usable and scales to 94.5 kWh with additional expansion packs (per Tesla\'s Energy Library datasheet) — this illustrates the range, not a recommendation of one over the other. Pricing is deliberately not quoted here: the balcony-solar cluster\'s own battery buyer\'s guide omits prices for the same reason (tariff-sensitive, changes significantly) and directs readers to check current manufacturer or retailer pages at time of purchase — the same standard applies here.',
           'An inverter with automatic transfer-switch capability is required to isolate backup circuits from the grid safely during an outage — this is different from a grid-tied-only inverter, which shuts off during an outage for safety and provides no backup power at all.',
         ],
       },
@@ -108,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A home battery backup setup does not make your home independent of the grid long-term, does not coordinate with neighbors\' systems, and typically cannot power whole-home heating/cooling loads for extended outages.**',
         items: [
-          'Most home battery systems are sized for hours to roughly a day of essential-circuit backup, not indefinite off-grid operation — [VERIFY: current typical capacity ranges] rather than assuming multi-day whole-home coverage.',
+          "Most home battery systems are sized for hours to roughly a day of essential-circuit backup, not indefinite off-grid operation — actual runtime depends entirely on your specific battery's capacity (which spans a wide range across products, from roughly 5 kWh usable in a single unit up to 13.5 kWh and beyond with expansion packs, per manufacturer datasheets) against your actual essential-circuit wattage, not a generic multi-day whole-home assumption.",
           'This setup does not connect to or coordinate with a neighbor\'s system — each home\'s backup is independent, unlike a true utility microgrid.',
           'High-draw loads like central air conditioning or electric heating are usually excluded from the backed-up circuit list unless the battery and inverter are specifically sized for them — check your installer\'s sizing recommendation rather than assuming.',
         ],
@@ -118,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Is a home microgrid the same as being off-grid?', a: 'No. A home battery backup setup still connects to the grid normally and only isolates during an outage or on-demand — it\'s backup power, not permanent off-grid operation.' },
-          { q: 'How long can a home battery back up my house?', a: 'This depends entirely on battery capacity versus your essential-circuit load — [VERIFY: current battery capacity options] and consult an installer\'s sizing calculation rather than assuming a fixed duration.' },
+          { q: 'How long can a home battery back up my house?', a: 'This depends entirely on battery capacity versus your essential-circuit load, and capacity varies widely by product — Enphase\'s IQ Battery 5P is rated at 5.0 kWh usable, Tesla\'s Powerwall 3 at 13.5 kWh usable (scalable higher with expansion packs), per each manufacturer\'s own datasheet. Consult an installer\'s sizing calculation for your specific circuits rather than assuming a fixed duration.' },
           { q: 'Do I need solar panels for battery backup to work?', a: 'No — a battery can be charged from the grid and used purely for outage backup without solar, though pairing with solar lets the battery recharge during a multi-day outage if there\'s daylight.' },
           { q: 'Can Home Assistant control which circuits stay on during an outage?', a: 'Home Assistant can automate which smart-plug-controlled loads shed first once your inverter/battery integration reports "on battery" status, but which circuits are physically wired to the backup panel is an electrical decision made during installation, not something software changes after the fact.' },
           { q: 'Is this legal to install myself?', a: 'Backup power systems that tie into your home\'s electrical panel typically require a licensed electrician and, in many regions, utility notification or permitting — this is not a DIY smart-plug-level project.' },
