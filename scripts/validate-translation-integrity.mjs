@@ -56,6 +56,10 @@ const CLUSTERS = [
       'Local-First Smart Home',
       'Local AI & LLMs in the Smart Home',
       'Decision & Comparison',
+      'Energy & Solar Integration',
+      '2027 Protocols & Regulation',
+      'Advanced Local AI',
+      "Buyer's Guides",
     ]),
   },
 ];
