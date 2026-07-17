@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in Virginia',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -69,6 +70,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Are Certified Kits Actually Available Yet?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>Like every other enacted state, Virginia\'s law references UL 3700 as the safety standard, but no complete plug-in solar system has confirmed full certification as of write-time.</strong> The standard was published December 2025 with testing opening January 2026 — a gap that applies nationally, not specifically to Virginia. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah.',
           'Virginia wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Virginia-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Virginia estimate, until state-specific data is confirmed.',
@@ -111,6 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hausbesitzer, die prüfen möchten, ob Balkonsolar in Virginia legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -162,6 +173,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Sind zertifizierte Kits bereits tatsächlich erhältlich?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>Wie in jedem anderen Bundesstaat mit entsprechender Gesetzgebung verweist auch Virginias Gesetz auf UL 3700 als Sicherheitsstandard, doch zum Zeitpunkt der Erstellung ist noch kein vollständiges Plug-in-Solarsystem mit bestätigter voller Zertifizierung erhältlich.</strong> Der Standard wurde im Dezember 2025 veröffentlicht, Tests begannen im Januar 2026 – eine Lücke, die landesweit gilt und nicht spezifisch für Virginia ist. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird derzeit aber speziell in Utah zum Verkauf angeboten.',
           'Virginia war nicht in der bundesstaatenweiten Einsparungstabelle der Quelldatenbank enthalten, die für diese Serie verwendet wurde, daher liegt hier keine Virginia-spezifische Zahl vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – betrachten Sie dies als landesweite Spanne, nicht als Virginia-spezifische Schätzung, bis staatenspezifische Daten bestätigt sind.',
@@ -204,6 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locataires et propriétaires américains vérifiant si le solaire de balcon est légal en Virginie',
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -255,6 +276,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Des kits certifiés sont-ils réellement disponibles ?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           '<strong>Comme tous les autres États ayant légiféré, la loi de Virginie fait référence à UL 3700 comme norme de sécurité, mais aucun système solaire branchable complet n\'a confirmé sa certification intégrale au moment de la rédaction.</strong> La norme a été publiée en décembre 2025, les tests ayant débuté en janvier 2026 — un délai qui s\'applique au niveau national, pas spécifiquement à la Virginie. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement en vente spécifiquement dans l\'Utah.',
           'La Virginie ne figurait pas dans le tableau des économies par État de la source utilisée pour cette série ; un chiffre spécifique à la Virginie n\'est donc pas disponible ici. Dans les États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs d\'électricité locaux — considérez cela comme une fourchette nationale, pas une estimation propre à la Virginie, tant que des données spécifiques à l\'État ne sont pas confirmées.',
@@ -297,6 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'バージニア州でベランダソーラーが合法かどうかを確認する米国の賃借人・持ち家所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -348,6 +379,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '認証済みキットは実際にもう入手できますか？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>他の法制化州と同様、バージニア州の法律も安全基準としてUL 3700を参照していますが、執筆時点で完全な認証を取得したプラグイン式ソーラーシステムはまだ確認されていません。</strong> この規格は2025年12月に公表され、2026年1月にテストが開始されました — これはバージニア州に限らず全米的なギャップです。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現時点ではユタ州限定で販売されています。',
           'バージニア州はこのシリーズで使用した情報源の州別節約額表に含まれていなかったため、バージニア州固有の金額はここでは提示できません。追跡対象の州全体では、800Wキットで地域の電気料金に応じて年間約150～350ドルの節約が見られます — 州固有のデータが確認されるまでは、これを全米的な範囲として扱ってください。バージニア州の推定値ではありません。',
@@ -390,6 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '正在核实弗吉尼亚州阳台太阳能是否合法的美国租客和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -441,6 +482,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '认证套件目前是否真的已经上市？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>与其他所有已立法州一样，弗吉尼亚州法律将UL 3700列为安全标准，但截至撰写本文时，尚无完整的插入式太阳能系统确认已获得完整认证。</strong> 该标准于2025年12月发布，测试于2026年1月启动——这是全国范围的空白期，并非弗吉尼亚州特有。EcoFlow的STREAM Ultra是目前最接近上市的产品，但目前仅在犹他州特定销售。',
           '本系列所使用的数据来源中的各州节省金额表并未涵盖弗吉尼亚州，因此这里无法提供弗吉尼亚州特定的数字。在已追踪的各州中，一套800瓦套件根据当地电价每年可节省约150至350美元——在弗吉尼亚州特定数据得到确认之前，请将其视为全国范围的估算，而非弗吉尼亚州的专属数字。',
@@ -483,6 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que verifican si la energía solar de balcón es legal en Virginia',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -534,6 +585,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿Ya hay kits certificados realmente disponibles?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>Al igual que en el resto de los estados que han legislado, la ley de Virginia hace referencia a UL 3700 como estándar de seguridad, pero al momento de escribir esto ningún sistema solar enchufable completo ha confirmado su certificación total.</strong> El estándar se publicó en diciembre de 2025 y las pruebas comenzaron en enero de 2026 — un vacío que se aplica a nivel nacional, no específicamente a Virginia. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah.',
           'Virginia no estaba incluida en la tabla de ahorros por estado de la fuente utilizada para esta serie, así que aquí no hay disponible una cifra específica de Virginia. En los estados que sí se rastrearon, un kit de 800 W ahorra aproximadamente entre 150 y 350 dólares al año según las tarifas eléctricas locales — considera esto un rango nacional, no una estimación de Virginia, hasta que se confirmen datos específicos del estado.',
@@ -576,6 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA que estão verificando se a energia solar de varanda é legal na Virgínia',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -627,6 +688,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Já existem kits certificados realmente disponíveis?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>Assim como em todos os outros estados que já legislaram, a lei da Virgínia faz referência à norma UL 3700 como padrão de segurança, mas até o momento nenhum sistema solar plug-in completo confirmou certificação integral.</strong> O padrão foi publicado em dezembro de 2025, com os testes começando em janeiro de 2026 — uma lacuna que se aplica em nível nacional, não especificamente à Virgínia. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah.',
           'A Virgínia não constava na tabela de economia por estado da fonte usada nesta série, então um valor específico da Virgínia não está disponível aqui. Nos estados que foram rastreados, um kit de 800 W economiza entre US$ 150 e US$ 350 por ano, dependendo das tarifas de energia locais — trate isso como uma faixa nacional, não como uma estimativa específica da Virgínia, até que dados específicos do estado sejam confirmados.',
@@ -669,6 +739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'مستأجرون وملاك منازل في الولايات المتحدة يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في فيرجينيا',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -720,6 +791,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل تتوفر فعليًا أطقم معتمدة حتى الآن؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>كما هو الحال في جميع الولايات الأخرى التي سنّت تشريعات مماثلة، يشير قانون فيرجينيا إلى UL 3700 كمعيار سلامة، لكن حتى وقت كتابة هذا المقال لم يؤكد أي نظام شمسي كامل يعمل بالتوصيل المباشر حصوله على الشهادة الكاملة.</strong> نُشر المعيار في ديسمبر 2025 وبدأت الاختبارات في يناير 2026 — وهي فجوة قائمة على المستوى الوطني، وليست خاصة بفيرجينيا. يُعد منتج STREAM Ultra من EcoFlow الأقرب إلى السوق، لكنه معروض للبيع حاليًا بشكل خاص في ولاية يوتا.',
           'لم تكن فيرجينيا ضمن جدول التوفير حسب الولاية في المصدر المستخدم لهذه السلسلة، لذا لا يتوفر رقم خاص بفيرجينيا هنا. في الولايات التي تم تتبعها، يوفر طقم بقدرة 800 واط ما يقارب 150 إلى 350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — اعتبر هذا نطاقًا وطنيًا وليس تقديرًا خاصًا بفيرجينيا، إلى حين تأكيد بيانات خاصة بالولاية.',
@@ -762,6 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '버지니아주에서 발코니 태양광이 합법인지 확인하는 미국 임차인 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -813,6 +894,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '인증된 키트가 실제로 지금 판매되고 있습니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           '<strong>다른 모든 법 제정 주와 마찬가지로 버지니아주 법률도 UL 3700을 안전 기준으로 참조하고 있지만, 이 글을 작성하는 시점까지 완전 인증을 받은 완제품 플러그인 태양광 시스템은 확인되지 않았습니다.</strong> 해당 표준은 2025년 12월에 발표되었으며 시험은 2026년 1월에 시작되었습니다 — 이는 버지니아주에 국한된 것이 아니라 전국적인 공백입니다. EcoFlow의 STREAM Ultra가 시장 출시에 가장 근접한 제품이지만, 현재는 유타주에서만 판매되고 있습니다.',
           '버지니아주는 이 시리즈에 사용된 자료 출처의 주별 절감액 표에 포함되지 않아, 버지니아주 고유의 수치는 여기서 제공할 수 없습니다. 추적된 주들을 기준으로 보면, 800W 키트는 지역 전기 요금에 따라 연간 약 150~350달러를 절감합니다 — 주별 데이터가 확인되기 전까지는 이를 버지니아주 추정치가 아닌 전국 평균 범위로 간주하시기 바랍니다.',

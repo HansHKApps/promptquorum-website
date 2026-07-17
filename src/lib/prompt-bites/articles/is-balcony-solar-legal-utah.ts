@@ -22,6 +22,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in Utah',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -73,6 +74,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Are Certified Kits Actually Available Yet?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>Utah\'s law required UL 3700 certification, but that standard didn\'t exist when HB 340 passed — UL Solutions only published it in December 2025, eight months after the law took effect, and certification testing opened January 2026.</strong> As of write-time, no complete plug-in solar system has confirmed full UL 3700 certification. EcoFlow\'s STREAM Ultra (1.92 kWh, 1,200W, $1,279 list, 10-year LFP warranty) is listed for sale in Utah specifically, but full legal use still depends on completing that certification — don\'t assume a product marketed as "UL 3700 compliant" has finished the process; verify the specific claim.',
           'Average residential electricity in Utah runs about 11.6¢/kWh — among the lowest of the states covered in this series — putting estimated savings from an 800W kit around $175/year. That\'s a real but modest return; Utah\'s significance is being first, not having the strongest economics.',
@@ -115,6 +125,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Eigenheimbesitzer, die prüfen, ob Balkonsolar in Utah legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -166,6 +177,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Sind zertifizierte Sets tatsächlich schon erhältlich?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>Utahs Gesetz verlangt eine UL-3700-Zertifizierung, doch dieser Standard existierte noch gar nicht, als HB 340 verabschiedet wurde – UL Solutions veröffentlichte ihn erst im Dezember 2025, acht Monate nachdem das Gesetz in Kraft getreten war, und die Zertifizierungstests starteten im Januar 2026.</strong> Stand Redaktionsschluss hat kein vollständiges steckerfertiges Solarsystem eine vollständige UL-3700-Zertifizierung bestätigt. EcoFlows STREAM Ultra (1,92 kWh, 1.200 W, Listenpreis 1.279 $, 10 Jahre LFP-Garantie) wird speziell für Utah zum Verkauf angeboten, doch die vollständig rechtskonforme Nutzung hängt weiterhin vom Abschluss dieser Zertifizierung ab – gehen Sie nicht davon aus, dass ein als „UL-3700-konform" beworbenes Produkt den Prozess bereits abgeschlossen hat; prüfen Sie die konkrete Angabe.',
           'Der durchschnittliche Strompreis für Privathaushalte in Utah liegt bei etwa 11,6 Cent/kWh – einer der niedrigsten unter den in dieser Serie behandelten Bundesstaaten. Das ergibt geschätzte Einsparungen von rund 175 $/Jahr bei einem 800-W-Set. Das ist real, aber bescheiden – Utahs Bedeutung liegt darin, Vorreiter zu sein, nicht in der stärksten Wirtschaftlichkeit.',
@@ -208,6 +228,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: "Locataires et propriétaires américains qui vérifient si le solaire de balcon est légal dans l'Utah",
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -259,6 +280,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Des kits certifiés sont-ils réellement disponibles ?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           "<strong>La loi de l'Utah exige la certification UL 3700, mais cette norme n'existait pas encore à l'adoption de HB 340 — UL Solutions ne l'a publiée qu'en décembre 2025, huit mois après l'entrée en vigueur de la loi, et les essais de certification n'ont débuté qu'en janvier 2026.</strong> À l'heure de la rédaction, aucun système solaire branchable complet n'a confirmé une certification UL 3700 intégrale. Le STREAM Ultra d'EcoFlow (1,92 kWh, 1 200 W, prix catalogue de 1 279 $, garantie LFP de 10 ans) est proposé à la vente spécifiquement dans l'Utah, mais son usage pleinement légal reste conditionné à l'achèvement de cette certification — ne présumez pas qu'un produit commercialisé comme « conforme UL 3700 » a terminé le processus ; vérifiez l'allégation précise.",
           "Le tarif résidentiel moyen de l'électricité dans l'Utah est d'environ 11,6 ¢/kWh — parmi les plus bas des États couverts par cette série —, ce qui situe les économies estimées d'un kit de 800 W autour de 175 $/an. C'est un gain réel mais modeste ; l'importance de l'Utah tient à sa position de pionnier, pas à la solidité de son modèle économique.",
@@ -301,6 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'ユタ州でバルコニーソーラーが合法かどうかを確認している米国の賃貸居住者・持ち家所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -352,6 +383,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '認証済みキットは実際に販売されているのか？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>ユタ州の法律はUL 3700認証を要件としていますが、HB 340が可決された時点ではこの規格自体が存在していませんでした — UL Solutionsが規格を公表したのは法施行から8か月後の2025年12月で、認証試験の開始は2026年1月からでした。</strong> 執筆時点で、プラグイン式ソーラーシステムでUL 3700の完全認証を取得したと確認されている製品はありません。EcoFlowのSTREAM Ultra（1.92kWh、1,200W、定価$1,279、LFPバッテリー10年保証）はユタ州向けに販売されていますが、完全に合法な利用は認証の完了に左右されます — 「UL 3700準拠」として販売されている製品でも認証プロセスが完了しているとは限らないため、具体的な表示内容を必ず確認してください。',
           'ユタ州の住宅用電気料金は平均で約11.6セント/kWhと、本シリーズで扱う州の中でも最も低い部類に入ります。800Wキットによる推定節約額は年間約$175です。これは実際の効果ではあるものの控えめであり、ユタ州の意義は経済性の高さではなく「最初に法制化した州」であることにあります。',
@@ -394,6 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '正在核实阳台太阳能在犹他州是否合法的美国租户和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -445,6 +486,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '认证套件真的已经上市了吗？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>犹他州法律要求UL 3700认证，但HB 340通过时该标准尚不存在——UL Solutions直到2025年12月才发布该标准，比法律生效晚了八个月，认证测试则到2026年1月才启动。</strong> 截至撰写本文时，尚无任何完整的插电式太阳能系统确认已完成完整的UL 3700认证。EcoFlow的STREAM Ultra（1.92千瓦时、1,200瓦、标价1,279美元、10年LFP电池质保）专门面向犹他州市场销售，但完全合法的使用仍取决于该认证的完成情况——不要假定标注"符合UL 3700"的产品已完成认证流程，请核实具体标注内容。',
           '犹他州住宅电价平均约为每千瓦时11.6美分——在本系列涵盖的各州中属于最低之列，一套800瓦套件预计每年可节省约175美元。这是实实在在但并不算丰厚的回报；犹他州的意义在于率先立法，而不在于经济性最强。',
@@ -487,6 +537,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que quieren saber si la energía solar de balcón es legal en Utah',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -538,6 +589,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿Ya existen realmente kits certificados disponibles?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>La ley de Utah exige la certificación UL 3700, pero ese estándar no existía cuando se aprobó la HB 340 — UL Solutions lo publicó recién en diciembre de 2025, ocho meses después de que la ley entrara en vigor, y las pruebas de certificación comenzaron en enero de 2026.</strong> Al momento de escribir esto, ningún sistema solar enchufable completo ha confirmado tener la certificación UL 3700 total. El STREAM Ultra de EcoFlow (1.92 kWh, 1200 W, precio de lista de $1279, garantía de 10 años en batería LFP) se vende específicamente para el mercado de Utah, pero su uso plenamente legal sigue dependiendo de que se complete esa certificación — no asumas que un producto anunciado como «compatible con UL 3700» ya terminó el proceso; verifica la afirmación específica.',
           'La tarifa eléctrica residencial promedio en Utah ronda los 11.6 ¢/kWh — una de las más bajas entre los estados cubiertos en esta serie —, lo que sitúa el ahorro estimado de un kit de 800 W en alrededor de $175 al año. Es un retorno real pero modesto; la relevancia de Utah está en ser el primero, no en tener la mejor economía.',
@@ -580,6 +640,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA que querem saber se a energia solar de varanda é legal em Utah',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -631,6 +692,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Kits certificados já estão realmente disponíveis?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>A lei de Utah exige certificação UL 3700, mas esse padrão ainda não existia quando a HB 340 foi aprovada — a UL Solutions só publicou o padrão em dezembro de 2025, oito meses depois de a lei entrar em vigor, e os testes de certificação começaram em janeiro de 2026.</strong> No momento da redação deste texto, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total. O STREAM Ultra da EcoFlow (1,92 kWh, 1.200 W, preço de tabela de $ 1.279, garantia de 10 anos na bateria LFP) é vendido especificamente para o mercado de Utah, mas o uso totalmente legal ainda depende da conclusão dessa certificação — não presuma que um produto anunciado como "compatível com UL 3700" já concluiu o processo; verifique a alegação específica.',
           'A tarifa residencial média de eletricidade em Utah gira em torno de 11,6 ¢/kWh — uma das mais baixas entre os estados cobertos nesta série —, o que coloca a economia estimada de um kit de 800 W em cerca de $ 175 por ano. É um retorno real, mas modesto; a relevância de Utah está em ser pioneiro, não em ter a economia mais forte.',
@@ -673,6 +743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون والملاك في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في يوتا',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -724,6 +795,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل تتوفر فعليًا مجموعات معتمدة حتى الآن؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>يشترط قانون يوتا الحصول على شهادة UL 3700، إلا أن هذا المعيار لم يكن موجودًا أصلًا عند إقرار HB 340 — إذ لم تنشره شركة UL Solutions إلا في ديسمبر 2025، أي بعد ثمانية أشهر من دخول القانون حيز التنفيذ، ولم تبدأ اختبارات الاعتماد إلا في يناير 2026.</strong> حتى وقت كتابة هذا المقال، لم يؤكد أي نظام شمسي كامل قابل للتوصيل المباشر حصوله على شهادة UL 3700 كاملة. يُطرح جهاز EcoFlow STREAM Ultra (1.92 كيلوواط ساعة، 1,200 واط، سعر قائمة 1,279 دولارًا، وضمان بطارية LFP لمدة 10 سنوات) للبيع خصيصًا في يوتا، لكن الاستخدام القانوني الكامل لا يزال مرهونًا باستكمال هذا الاعتماد — لا تفترض أن منتجًا يُسوَّق على أنه «متوافق مع UL 3700» قد أنهى العملية فعليًا؛ تحقق من الادعاء المحدد.',
           'يبلغ متوسط تعرفة الكهرباء السكنية في يوتا نحو 11.6 سنتًا لكل كيلوواط ساعة — من بين الأدنى بين الولايات المشمولة في هذه السلسلة — ما يجعل التوفير المقدَّر من مجموعة 800 واط نحو 175 دولارًا سنويًا. هذا عائد حقيقي لكنه متواضع؛ فأهمية يوتا تكمن في كونها الرائدة، لا في امتلاكها أقوى جدوى اقتصادية.',
@@ -766,6 +846,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '유타주에서 발코니 태양광이 합법인지 확인하는 미국 세입자 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-maine',
@@ -817,6 +898,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '인증된 키트는 실제로 판매되고 있습니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           "<strong>유타주 법률은 UL 3700 인증을 요구하지만, HB 340이 통과될 당시에는 이 규격 자체가 존재하지 않았습니다. UL Solutions는 법 시행 8개월 후인 2025년 12월에야 해당 규격을 발표했으며, 인증 시험은 2026년 1월에 시작되었습니다.</strong> 본 문서 작성 시점 기준으로 완전한 플러그인 태양광 시스템 중 UL 3700 완전 인증을 받은 것으로 확인된 제품은 없습니다. EcoFlow의 STREAM Ultra(1.92kWh, 1,200W, 정가 $1,279, LFP 배터리 10년 보증)는 유타주 시장을 대상으로 판매되고 있지만, 완전한 합법적 사용 여부는 해당 인증의 완료에 달려 있습니다 — 'UL 3700 준수'로 광고되는 제품이라 하더라도 인증 절차가 완료되었다고 단정하지 말고, 구체적인 표시 내용을 반드시 확인해야 합니다.",
           '유타주의 평균 주거용 전기 요금은 kWh당 약 11.6센트로, 이번 시리즈에서 다루는 주 가운데 가장 낮은 축에 속합니다. 이에 따라 800W 키트로 예상되는 절감액은 연간 약 $175입니다. 이는 실질적이지만 크지 않은 수익이며, 유타주의 의의는 경제성이 아니라 \'최초\'라는 데 있습니다.',

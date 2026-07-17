@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in Vermont',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -69,6 +70,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Does Vermont\'s Explicit UL 3700 Requirement Change Anything?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>Vermont naming UL 3700 explicitly in its statute doesn\'t change the underlying problem: no complete plug-in solar system has confirmed full UL 3700 certification as of write-time, the same gap facing every other enacted state.</strong> The standard was published December 2025 with testing opening January 2026 — testing takes months, and Vermont\'s explicit statutory language doesn\'t speed that process up. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Vermont.',
           'Vermont wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Vermont-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Vermont estimate.',
@@ -111,6 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hauseigentümer, die prüfen, ob Balkonsolar in Vermont legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -162,6 +173,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Ändert Vermonts explizite UL-3700-Vorgabe etwas?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>Dass Vermont UL 3700 im Gesetzestext ausdrücklich nennt, ändert nichts am zugrunde liegenden Problem: Bislang ist kein komplettes Plug-in-Solarsystem bestätigt vollständig UL-3700-zertifiziert – dieselbe Lücke besteht in jedem anderen verabschiedenden Bundesstaat.</strong> Der Standard wurde im Dezember 2025 veröffentlicht, Tests begannen im Januar 2026 – solche Tests dauern Monate, und Vermonts explizite Gesetzesformulierung beschleunigt diesen Prozess nicht. EcoFlows STREAM Ultra ist das Produkt, das dem Markt am nächsten ist, wird derzeit aber speziell in Utah zum Verkauf angeboten, nicht in Vermont.',
           'Vermont war nicht in der Bundesstaaten-Einsparungstabelle der für diese Serie genutzten Quelle enthalten, daher liegt hier keine Vermont-spezifische Zahl vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – das ist als landesweite Spanne zu verstehen, nicht als Schätzung für Vermont.',
@@ -204,6 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locataires et propriétaires américains qui vérifient si le solaire de balcon est légal dans le Vermont',
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -255,6 +276,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: "L'exigence explicite UL 3700 du Vermont change-t-elle quelque chose ?",
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           "<strong>Le fait que le Vermont nomme explicitement UL 3700 dans sa loi ne change rien au problème de fond : aucun système solaire à brancher complet n'a confirmé une certification UL 3700 intégrale à ce jour, un manque partagé par tous les autres États l'ayant adoptée.</strong> La norme a été publiée en décembre 2025, les tests ont débuté en janvier 2026 — ces tests prennent des mois, et le libellé explicite de la loi du Vermont n'accélère pas ce processus. Le STREAM Ultra d'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l'Utah, pas dans le Vermont.",
           "Le Vermont ne figurait pas dans le tableau d'économies État par État de la source utilisée pour cette série, donc aucun chiffre spécifique au Vermont n'est disponible ici. Dans les États suivis, un kit de 800 W permet d'économiser environ 150 à 350 dollars par an selon les tarifs locaux d'électricité — à considérer comme une fourchette nationale, pas une estimation pour le Vermont.",
@@ -297,6 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'バーモント州でバルコニーソーラーが合法かどうかを確認する米国の賃借人・持ち家所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -348,6 +379,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'バーモント州の明示的なUL 3700要件は何かを変えるのか？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>バーモント州が法文でUL 3700を明示的に指定していても、根本的な問題は変わりません――現時点で完全なUL 3700認証を取得したと確認されたプラグイン型太陽光システムは存在せず、これは他のすべての制定州が直面している同じギャップです。</strong> この規格は2025年12月に公表され、2026年1月に試験が開始されましたが、試験には数か月を要し、バーモント州の明示的な条文がこのプロセスを早めることはありません。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はユタ州限定で販売されており、バーモント州では販売されていません。',
           'バーモント州は、このシリーズで使用された情報源の州別節約額データには含まれていなかったため、バーモント州固有の金額はここでは示せません。データがある州全体で見ると、800Wキットは地域の電気料金により年間おおよそ150〜350ドルの節約となります――これはバーモント州の推定値ではなく、全米レンジとして扱ってください。',
@@ -390,6 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '想确认阳台太阳能在佛蒙特州是否合法的美国租户和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -441,6 +482,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '佛蒙特州明确的UL 3700要求改变了什么吗？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>佛蒙特州在法条中明确列出UL 3700，并未改变根本问题：截至目前，没有任何一款完整的插入式太阳能系统被确认已获得完整的UL 3700认证，这与其他所有已立法州面临的差距相同。</strong> 该标准于2025年12月发布，测试于2026年1月开始——测试需要数月时间，佛蒙特州明确的法律措辞并不会加快这一进程。EcoFlow的STREAM Ultra是最接近上市的产品，但目前专门在犹他州销售，而非佛蒙特州。',
           '佛蒙特州未被纳入本系列所使用来源的各州节省金额数据表，因此这里没有针对佛蒙特州的具体数字。在有数据的州中，一套800W套件根据当地电价每年大约可节省150至350美元——请将其视为全国范围的估算，而非针对佛蒙特州的估算。',
@@ -483,6 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que verifican si la energía solar de balcón es legal en Vermont',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -534,6 +585,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿El requisito explícito de UL 3700 en Vermont cambia algo?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>Que Vermont nombre explícitamente UL 3700 en su ley no cambia el problema de fondo: ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa hasta la fecha, la misma brecha que enfrenta cada uno de los demás estados que han aprobado leyes similares.</strong> El estándar se publicó en diciembre de 2025 y las pruebas comenzaron en enero de 2026 — las pruebas toman meses, y el lenguaje legal explícito de Vermont no acelera ese proceso. El STREAM Ultra de EcoFlow es el producto más cercano a estar disponible, pero actualmente se vende específicamente en Utah, no en Vermont.',
           'Vermont no estaba incluido en la tabla de ahorros estado por estado de la fuente usada para esta serie, por lo que no hay una cifra específica de Vermont disponible aquí. En los estados que sí se rastrearon, un kit de 800W ahorra aproximadamente entre $150 y $350 al año según las tarifas eléctricas locales — trátalo como un rango nacional, no como una estimación para Vermont.',
@@ -576,6 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos e proprietários nos EUA que querem saber se a energia solar de varanda é legal em Vermont',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -627,6 +688,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'A exigência explícita de UL 3700 de Vermont muda alguma coisa?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>O fato de Vermont citar explicitamente a UL 3700 em sua lei não muda o problema de fundo: nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento, a mesma lacuna enfrentada por todos os outros estados que aprovaram leis semelhantes.</strong> O padrão foi publicado em dezembro de 2025, com testes iniciados em janeiro de 2026 — os testes levam meses, e a redação legal explícita de Vermont não acelera esse processo. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente é vendido especificamente em Utah, não em Vermont.',
           'Vermont não estava na tabela de economia estado por estado da fonte usada nesta série, então não há um valor específico para Vermont disponível aqui. Nos estados que foram rastreados, um kit de 800W economiza aproximadamente $150–$350 por ano, dependendo das tarifas locais de energia — trate isso como uma faixa nacional, não como uma estimativa para Vermont.',
@@ -669,6 +739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون وأصحاب المنازل في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في فيرمونت',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -720,6 +791,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل يغيّر شرط UL 3700 الصريح في فيرمونت أي شيء؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>ذكر فيرمونت الصريح لشهادة UL 3700 في نص القانون لا يغيّر المشكلة الجوهرية: لا يوجد حتى وقت كتابة هذا المقال نظام طاقة شمسية قابل للتوصيل المباشر حاصل على شهادة UL 3700 كاملة مؤكَّدة، وهي نفس الفجوة التي تواجهها بقية الولايات التي سنّت قوانين مماثلة.</strong> نُشر المعيار في ديسمبر 2025 وبدأت الاختبارات في يناير 2026 — تستغرق هذه الاختبارات شهورًا، ولا تُسرّع صياغة فيرمونت القانونية الصريحة هذه العملية. يُعد جهاز STREAM Ultra من EcoFlow أقرب منتج إلى دخول السوق، لكنه يُباع حاليًا في ولاية يوتا تحديدًا، وليس في فيرمونت.',
           'لم تكن فيرمونت ضمن جدول التوفير حسب الولاية الخاص بالمصدر المستخدم في هذه السلسلة، لذا لا يتوفر هنا رقم محدد لفيرمونت. في الولايات التي تم تتبعها، توفّر مجموعة 1,200 واط بقدرة 800 واط ما يقارب 150 إلى 350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — يُرجى اعتبار هذا نطاقًا وطنيًا عامًا وليس تقديرًا خاصًا بفيرمونت.',
@@ -762,6 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '버몬트주에서 발코니 태양광이 합법인지 확인하는 미국 세입자 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -813,6 +894,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '버몬트주의 명시적인 UL 3700 요건이 무언가를 바꿉니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           '<strong>버몬트주가 법률 조문에 UL 3700을 명시적으로 명시했다고 해서 근본적인 문제가 바뀌지는 않습니다. 현재까지 완전한 UL 3700 인증을 확인받은 완제품형 플러그인 태양광 시스템은 없으며, 이는 법안을 제정한 다른 모든 주가 직면한 것과 동일한 공백입니다.</strong> 해당 표준은 2025년 12월에 공표되었고 시험은 2026년 1월에 시작되었습니다 — 시험에는 수개월이 소요되며, 버몬트주의 명시적인 법률 문구가 이 과정을 앞당기지는 않습니다. EcoFlow의 STREAM Ultra가 시장에 가장 근접한 제품이지만, 현재는 버몬트주가 아닌 유타주에서 한정적으로 판매되고 있습니다.',
           '버몬트주는 이 시리즈에 사용된 출처의 주별 절감액 표에 포함되어 있지 않았기 때문에, 버몬트주에 특화된 수치는 여기서 제공되지 않습니다. 자료가 있는 주들을 기준으로, 800W 키트는 지역 전기 요금에 따라 연간 약 150~350달러를 절감합니다 — 이는 버몬트주에 대한 추정치가 아니라 전국 범위로 이해해야 합니다.',

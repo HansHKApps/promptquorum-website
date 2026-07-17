@@ -26,6 +26,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in New Hampshire',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -76,6 +77,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Is the Economics Story Strong in New Hampshire?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>New Hampshire has the highest average residential electricity rate of the 8 enacted states, at 28.1¢/kWh — more than double Utah\'s 11.6¢/kWh.</strong> That means once compliant hardware is available, the return on an 800W kit should be meaningfully better than in lower-rate states, though a New Hampshire-specific dollar figure wasn\'t in the source tracker\'s state-by-state savings table used for this series. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local rates — New Hampshire\'s high rate likely puts it toward the top of that range, but treat this as a national range, not a confirmed New Hampshire estimate.',
           'Certification is the other gate: no complete plug-in solar system has confirmed full UL 3700 certification as of write-time, a nationwide gap that applies regardless of New Hampshire\'s effective date. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah.',
@@ -118,6 +128,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hausbesitzer, die prüfen, ob Balkonsolar in New Hampshire legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -168,6 +179,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Ist die Wirtschaftlichkeit in New Hampshire überzeugend?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>New Hampshire hat mit 28,1 Cent/kWh den höchsten durchschnittlichen Strompreis für Privathaushalte der 8 Bundesstaaten mit verabschiedetem Gesetz – mehr als doppelt so hoch wie Utahs 11,6 Cent/kWh.</strong> Das bedeutet: Sobald konforme Hardware verfügbar ist, sollte sich ein 800-W-Kit deutlich schneller amortisieren als in Bundesstaaten mit niedrigeren Preisen, auch wenn für New Hampshire keine spezifische Dollarangabe in der für diese Serie verwendeten bundesstaatlichen Ersparnistabelle der Quelle vorlag. Über die erfassten Bundesstaaten hinweg spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – der hohe Strompreis in New Hampshire dürfte es eher an das obere Ende dieser Spanne bringen, aber betrachten Sie dies als landesweite Spanne, nicht als bestätigte Schätzung für New Hampshire.',
           'Die Zertifizierung ist der andere limitierende Faktor: Zum Redaktionsschluss hat kein vollständiges steckerfertiges Solarsystem eine vollständige UL-3700-Zertifizierung bestätigt – eine landesweite Lücke, die unabhängig vom Inkrafttreten in New Hampshire besteht. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird derzeit aber speziell in Utah zum Verkauf angeboten.',
@@ -210,6 +230,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locataires et propriétaires américains vérifiant si le solaire de balcon est légal au New Hampshire',
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -260,6 +281,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Le bilan économique est-il favorable au New Hampshire ?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           '<strong>Le New Hampshire a le tarif d\'électricité résidentiel moyen le plus élevé des 8 États ayant adopté une loi, à 28,1 ¢/kWh — plus du double des 11,6 ¢/kWh de l\'Utah.</strong> Une fois le matériel conforme disponible, le retour sur investissement d\'un kit de 800 W devrait donc être nettement meilleur que dans les États à tarifs plus bas, même si aucun chiffre spécifique au New Hampshire ne figurait dans le tableau d\'économies par État de la source utilisée pour cette série. Sur l\'ensemble des États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs locaux — le tarif élevé du New Hampshire le placerait probablement vers le haut de cette fourchette, mais il s\'agit d\'une fourchette nationale, pas d\'une estimation confirmée pour le New Hampshire.',
           'La certification reste l\'autre point de blocage : à la date de rédaction, aucun système solaire enfichable complet n\'a confirmé de certification UL 3700 intégrale, un manque valable à l\'échelle nationale, indépendamment de la date d\'entrée en vigueur au New Hampshire. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l\'Utah.',
@@ -302,6 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'ニューハンプシャー州でベランダソーラーが合法かどうかを確認する米国の賃借人および住宅所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -352,6 +383,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'ニューハンプシャー州の経済性は魅力的ですか？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>ニューハンプシャー州は28.1¢/kWhと、法制化済みの8州の中で最も高い住宅用平均電気料金を記録しており、これはユタ州の11.6¢/kWhの2倍以上です。</strong> つまり、適合機器が入手可能になれば、800Wキットの投資回収は、電気料金の低い州よりも大幅に有利になるはずです。ただし、このシリーズで使用したソースの州別節約額データには、ニューハンプシャー州固有のドル金額は含まれていませんでした。追跡対象の州全体では、800Wキットは地域の料金に応じて年間約150～350ドルの節約になります。ニューハンプシャー州の高い料金を踏まえるとこの範囲の上限に近づく可能性がありますが、これは全国的な範囲であり、ニューハンプシャー州固有の確定推計ではないことにご注意ください。',
           '認証も別のハードルです。執筆時点で、UL 3700の完全認証を確認済みのプラグイン式ソーラーシステムは存在せず、これはニューハンプシャー州の施行日にかかわらず全国的なギャップです。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はユタ州限定で販売されています。',
@@ -394,6 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '想确认新罕布什尔州阳台太阳能是否合法的美国租户和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -444,6 +485,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '新罕布什尔州的经济性如何？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>新罕布什尔州平均住宅电价为28.1美分/千瓦时，是已立法8个州中最高的——超过犹他州11.6美分/千瓦时的两倍。</strong> 这意味着一旦合规硬件上市，800瓦套件的投资回报应明显优于电价较低的州，不过本系列使用的各州节省数据来源表中并未包含新罕布什尔州的具体数字。在已统计的各州中，800瓦套件按当地电价估算每年可节省约150至350美元——新罕布什尔州电价较高，很可能处于该区间的上限，但这仍是全国范围的估算，并非针对新罕布什尔州确认的具体数字。',
           '认证是另一道门槛：截至撰写时，尚无完整的即插式太阳能系统确认通过UL 3700全项认证，这是一个与新罕布什尔州生效日期无关的全国性缺口。EcoFlow STREAM Ultra是最接近上市的产品，但目前仅在犹他州专门销售。',
@@ -486,6 +536,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que quieren saber si la energía solar de balcón es legal en New Hampshire',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -536,6 +587,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿Es sólida la historia económica en New Hampshire?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>New Hampshire tiene la tarifa eléctrica residencial promedio más alta de los 8 estados con ley aprobada, a 28.1 ¢/kWh, más del doble que los 11.6 ¢/kWh de Utah.</strong> Eso significa que, una vez que haya hardware compatible disponible, el retorno de un kit de 800 W debería ser considerablemente mejor que en estados con tarifas más bajas, aunque no había una cifra específica para New Hampshire en la tabla de ahorros por estado de la fuente usada en esta serie. En los estados que sí se registraron, un kit de 800 W ahorra aproximadamente entre $150 y $350 al año según las tarifas locales; la tarifa alta de New Hampshire probablemente lo ubique hacia el extremo superior de ese rango, pero trátalo como un rango nacional, no como una estimación confirmada para New Hampshire.',
           'La certificación es el otro obstáculo: al momento de escribir esto, ningún sistema solar enchufable completo ha confirmado certificación UL 3700 completa, una brecha a nivel nacional que aplica sin importar la fecha de entrada en vigor en New Hampshire. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah.',
@@ -578,6 +638,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA que querem saber se a energia solar de varanda é legal em New Hampshire',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -628,6 +689,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'A economia em New Hampshire é vantajosa?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>New Hampshire tem a tarifa residencial média de eletricidade mais alta entre os 8 estados com lei aprovada, a 28,1 ¢/kWh — mais que o dobro dos 11,6 ¢/kWh de Utah.</strong> Isso significa que, assim que houver hardware compatível disponível, o retorno de um kit de 800 W deve ser bem melhor do que em estados com tarifas mais baixas, embora um valor específico para New Hampshire não constasse na tabela de economia por estado da fonte usada nesta série. Nos estados que foram rastreados, um kit de 800 W economiza aproximadamente US$ 150 a US$ 350 por ano, dependendo das tarifas locais — a tarifa alta de New Hampshire provavelmente o coloca perto do topo dessa faixa, mas trate isso como uma faixa nacional, não como uma estimativa confirmada para New Hampshire.',
           'A certificação é o outro obstáculo: no momento em que este texto foi escrito, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total, uma lacuna nacional que se aplica independentemente da data de vigência em New Hampshire. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah.',
@@ -670,6 +740,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون وأصحاب المنازل في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في نيو هامبشاير',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -720,6 +791,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل القصة الاقتصادية قوية في نيو هامبشاير؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>تمتلك نيو هامبشاير أعلى متوسط سعر كهرباء سكني بين الولايات الثماني التي سنّت القانون، عند 28.1 سنت/kWh — أي أكثر من ضعف سعر يوتا البالغ 11.6 سنت/kWh.</strong> هذا يعني أنه بمجرد توفر أجهزة متوافقة، من المفترض أن يكون العائد على مجموعة بقدرة 800 واط أفضل بكثير مقارنة بالولايات ذات الأسعار الأقل، رغم أن رقمًا محددًا بالدولار خاصًا بنيو هامبشاير لم يكن موجودًا في جدول التوفير حسب الولاية الخاص بالمصدر المستخدم في هذه السلسلة. عبر الولايات التي تم تتبعها، توفر مجموعة بقدرة 800 واط ما يقارب 150 إلى 350 دولارًا سنويًا حسب الأسعار المحلية — من المرجح أن يضع السعر المرتفع في نيو هامبشاير هذا الرقم في الجزء الأعلى من هذا النطاق، لكن يجب اعتبار هذا نطاقًا وطنيًا وليس تقديرًا مؤكدًا خاصًا بنيو هامبشاير.',
           'تُعد الشهادة العائق الآخر: حتى وقت كتابة هذا المحتوى، لم يؤكد أي نظام طاقة شمسية كامل قابل للتوصيل حصوله على شهادة UL 3700 الكاملة، وهي فجوة على المستوى الوطني تنطبق بغض النظر عن تاريخ سريان القانون في نيو هامبشاير. يُعد منتج STREAM Ultra من EcoFlow الأقرب إلى السوق، لكنه معروض للبيع حاليًا في يوتا تحديدًا.',
@@ -762,6 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '뉴햄프셔주에서 발코니 태양광이 합법인지 확인하는 미국 세입자 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -812,6 +893,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '뉴햄프셔주의 경제성은 매력적입니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           '<strong>뉴햄프셔주는 kWh당 28.1센트로 법제화된 8개 주 중 평균 주거용 전기 요금이 가장 높으며, 이는 유타주의 11.6센트보다 두 배 이상 높은 수준입니다.</strong> 즉, 적합한 장비가 출시되면 800W 키트의 투자 회수는 요금이 낮은 주보다 훨씬 유리할 것으로 예상됩니다. 다만 이 시리즈에서 사용한 출처의 주별 절감액 표에는 뉴햄프셔주에 특화된 구체적인 금액이 포함되어 있지 않았습니다. 추적된 주 전체를 기준으로 보면, 800W 키트는 지역 요금에 따라 연간 약 150~350달러를 절감합니다. 뉴햄프셔주의 높은 요금을 고려하면 이 범위의 상단에 가까울 가능성이 크지만, 이는 전국 범위의 추정치일 뿐 뉴햄프셔주에 특화된 확정 수치가 아니라는 점에 유의하십시오.',
           '인증은 또 다른 관문입니다. 작성 시점 기준으로, UL 3700 전체 인증을 확인받은 완제품 플러그인 태양광 시스템은 아직 없으며, 이는 뉴햄프셔주의 시행일과 무관하게 전국적으로 공통된 공백입니다. EcoFlow의 STREAM Ultra가 시장 출시에 가장 근접한 제품이지만, 현재는 유타주에서만 판매되고 있습니다.',

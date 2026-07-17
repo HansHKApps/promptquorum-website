@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in Connecticut',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -69,6 +70,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Should I Buy Hardware Now for Connecticut?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>Not yet — the law isn\'t in effect until October 1, 2026, and separately, no complete plug-in solar system has confirmed full UL 3700 certification as of write-time.</strong> Both gates need to clear: the legal effective date and product certification. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Connecticut.',
           'Connecticut wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Connecticut-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Connecticut estimate.',
@@ -111,6 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hauseigentümer, die prüfen, ob Balkonsolar in Connecticut legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -162,6 +173,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Sollte ich jetzt Hardware für Connecticut kaufen?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>Noch nicht — das Gesetz tritt erst am 1. Oktober 2026 in Kraft, und unabhängig davon hat zum Zeitpunkt der Veröffentlichung noch kein vollständiges steckerfertiges Solarsystem eine vollständige UL-3700-Zertifizierung bestätigt.</strong> Beide Hürden müssen genommen werden: das gesetzliche Inkrafttreten und die Produktzertifizierung. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird aber derzeit speziell in Utah zum Verkauf angeboten, nicht in Connecticut.',
           'Connecticut war nicht in der bundesstaatlichen Einsparungstabelle des Quellen-Trackers enthalten, die für diese Serie verwendet wurde, sodass hier keine Connecticut-spezifische Dollarangabe verfügbar ist. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr — betrachten Sie dies als landesweite Spanne, nicht als Connecticut-Schätzung.',
@@ -204,6 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locataires et propriétaires américains qui vérifient si le solaire de balcon est légal dans le Connecticut',
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -255,6 +276,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Dois-je acheter du matériel dès maintenant pour le Connecticut ?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           '<strong>Pas encore — la loi n\'entre pas en vigueur avant le 1er octobre 2026 et, séparément, aucun système solaire enfichable complet n\'a confirmé de certification UL 3700 intégrale à la date de rédaction.</strong> Les deux conditions doivent être remplies : la date d\'entrée en vigueur légale et la certification du produit. Le STREAM Ultra d\'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l\'Utah, pas dans le Connecticut.',
           'Le Connecticut ne figurait pas dans le tableau d\'économies par État de la source utilisée pour cette série ; un chiffre spécifique au Connecticut n\'est donc pas disponible ici. Dans les États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs locaux de l\'électricité — considérez cela comme une fourchette nationale, pas une estimation pour le Connecticut.',
@@ -297,6 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'コネチカット州でバルコニーソーラーが合法かどうかを確認している米国の賃借人および住宅所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -348,6 +379,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'コネチカット州向けに今ハードウェアを購入すべきですか？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>まだです — 法律は2026年10月1日まで発効せず、それとは別に、執筆時点で完全なUL 3700認証を取得したプラグイン式ソーラーシステムはまだ確認されていません。</strong> 法的発効日と製品認証という2つの条件の両方をクリアする必要があります。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在はコネチカット州ではなく、特にユタ州で販売されています。',
           'コネチカット州は、このシリーズで使用したソースの州別節約額トラッカーには含まれていなかったため、コネチカット州固有の金額はここでは提供できません。トラッキング対象の州全体では、800Wキットは地域の電気料金によって年間およそ150〜350ドルの節約になります — これはコネチカット州の推定値ではなく、全国的な範囲として扱ってください。',
@@ -390,6 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '正在核实阳台太阳能在康涅狄格州是否合法的美国租户和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -441,6 +482,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '现在应该为康涅狄格州购买硬件吗？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>还不行——该法律要到2026年10月1日才生效，另外，截至撰写时，尚无完整的插入式太阳能系统确认获得完整的UL 3700认证。</strong> 两个条件都必须满足：法律生效日期和产品认证。EcoFlow的STREAM Ultra是最接近上市的产品，但目前专门在犹他州销售，而非康涅狄格州。',
           '康涅狄格州未被纳入本系列使用的信息来源的各州节省数据表，因此这里无法提供康涅狄格州的具体数字。在已跟踪的各州中，一套800W套件根据当地电价每年大约可节省150至350美元——请将其视为全国范围，而非康涅狄格州的估算值。',
@@ -483,6 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que quieren saber si la energía solar de balcón es legal en Connecticut',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -534,6 +585,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿Debo comprar hardware ahora para Connecticut?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>Todavía no — la ley no entra en vigor hasta el 1 de octubre de 2026 y, por separado, ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa al momento de escribir esto.</strong> Ambas condiciones deben cumplirse: la fecha de vigencia legal y la certificación del producto. El STREAM Ultra de EcoFlow es el producto más cercano a estar disponible, pero actualmente se vende específicamente en Utah, no en Connecticut.',
           'Connecticut no estaba incluido en la tabla de ahorros por estado de la fuente usada para esta serie, por lo que aquí no hay una cifra específica para Connecticut. En los estados que sí se rastrearon, un kit de 800W ahorra aproximadamente entre $150 y $350 al año según las tarifas eléctricas locales — considera esto un rango nacional, no una estimación para Connecticut.',
@@ -576,6 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA que querem saber se a energia solar de varanda é legal em Connecticut',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -627,6 +688,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Devo comprar equipamento agora para Connecticut?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>Ainda não — a lei só entra em vigor em 1º de outubro de 2026 e, separadamente, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento da publicação.</strong> As duas condições precisam ser cumpridas: a data de vigência legal e a certificação do produto. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah, não em Connecticut.',
           'Connecticut não estava na tabela de economia por estado da fonte usada nesta série, então uma cifra específica para Connecticut não está disponível aqui. Nos estados que foram rastreados, um kit de 800W economiza aproximadamente US$ 150–350 por ano, dependendo das tarifas locais de eletricidade — trate isso como uma faixa nacional, não como uma estimativa para Connecticut.',
@@ -669,6 +739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون وأصحاب المنازل في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في كونيتيكت',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -720,6 +791,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل يجب أن أشتري الأجهزة الآن لكونيتيكت؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>ليس بعد — لا يدخل القانون حيز التنفيذ حتى 1 أكتوبر 2026، وبشكل منفصل، لم يؤكد أي نظام طاقة شمسية كامل قابل للتوصيل المباشر حصوله على شهادة UL 3700 الكاملة حتى وقت كتابة هذا المحتوى.</strong> يجب تجاوز عائقين: تاريخ السريان القانوني واعتماد المنتج. يُعد جهاز STREAM Ultra من EcoFlow أقرب منتج إلى السوق، لكنه معروض حاليًا للبيع تحديدًا في ولاية يوتا، وليس في كونيتيكت.',
           'لم تكن كونيتيكت مدرجة في جدول التوفير حسب الولاية الخاص بالمصدر المستخدم في هذه السلسلة، لذا لا يتوفر هنا رقم محدد لكونيتيكت. عبر الولايات التي تم تتبعها، توفر مجموعة بقدرة 800 واط ما يقارب 150–350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — اعتبر هذا نطاقًا وطنيًا، وليس تقديرًا خاصًا بكونيتيكت.',
@@ -762,6 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '코네티컷주에서 발코니 태양광이 합법인지 확인하는 미국 임차인 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -813,6 +894,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '코네티컷주를 위해 지금 하드웨어를 구매해야 합니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           '<strong>아직입니다 — 이 법은 2026년 10월 1일까지 시행되지 않으며, 별도로 작성 시점 기준 완전한 UL 3700 인증을 받은 완제품 플러그인 태양광 시스템은 아직 없습니다.</strong> 법적 시행일과 제품 인증이라는 두 가지 조건이 모두 충족되어야 합니다. EcoFlow의 STREAM Ultra는 시장에 가장 근접한 제품이지만, 현재 코네티컷주가 아닌 유타주에서 특별히 판매되고 있습니다.',
           '코네티컷주는 이 시리즈에 사용된 출처의 주별 절감액 표에 포함되어 있지 않아, 코네티컷주 고유의 금액은 여기에서 제공할 수 없습니다. 추적된 주들 전반에서 800W 키트는 현지 전기 요금에 따라 연간 약 150~350달러를 절감합니다 — 이는 코네티컷주에 대한 추정치가 아니라 전국적인 범위로 보시기 바랍니다.',

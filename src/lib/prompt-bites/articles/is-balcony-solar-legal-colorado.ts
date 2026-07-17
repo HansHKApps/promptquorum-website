@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in Colorado',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -69,6 +70,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Should I Buy Hardware Now for Colorado?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>Not yet — the law isn\'t in effect until January 1, 2027, and separately, no complete plug-in solar system has confirmed full UL 3700 certification as of write-time.</strong> Both gates need to clear before a purchase makes sense: the legal effective date, and product certification. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Colorado.',
           'Colorado wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Colorado-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Colorado estimate, and note Colorado\'s 1,920W cap means a full-size system there could exceed what an 800W-kit estimate reflects.',
@@ -111,6 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hausbesitzer, die prüfen, ob Balkonsolar in Colorado legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -162,6 +173,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Sollte ich jetzt schon Hardware für Colorado kaufen?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>Noch nicht – das Gesetz tritt erst am 1. Januar 2027 in Kraft, und unabhängig davon hat zum jetzigen Zeitpunkt noch kein vollständiges steckerfertiges Solarsystem die volle UL-3700-Zertifizierung bestätigt.</strong> Beide Hürden müssen genommen werden, bevor ein Kauf sinnvoll ist: das gesetzliche Inkrafttreten und die Produktzertifizierung. Das EcoFlow STREAM Ultra ist das marktnächste Produkt, wird derzeit aber ausdrücklich in Utah verkauft, nicht in Colorado.',
           'Colorado war nicht in der bundesstaatlichen Einspartabelle der Quelle enthalten, die dieser Artikelreihe zugrunde liegt, daher liegt hier kein colorado-spezifischer Betrag vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 USD pro Jahr – das ist als nationaler Bereich zu verstehen, nicht als Colorado-Schätzung. Zu beachten: Colorados 1.920-W-Grenze bedeutet, dass ein Vollsystem dort über das hinausgehen könnte, was eine 800-W-Kit-Schätzung widerspiegelt.',
@@ -204,6 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: "Locataires et propriétaires américains qui vérifient si le solaire de balcon est légal au Colorado",
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -255,6 +276,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Faut-il acheter du matériel dès maintenant pour le Colorado ?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           "<strong>Pas encore — la loi n'entre en vigueur que le 1er janvier 2027, et par ailleurs, aucun système solaire plug-in complet n'a confirmé la certification UL 3700 intégrale à ce jour.</strong> Deux conditions doivent être remplies avant qu'un achat soit pertinent : la date d'entrée en vigueur légale et la certification du produit. Le STREAM Ultra d'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l'Utah, pas au Colorado.",
           "Le Colorado ne figurait pas dans le tableau d'économies par État de la source utilisée pour cette série, aucun chiffre spécifique au Colorado n'est donc disponible ici. Dans les États recensés, un kit de 800 W permet d'économiser environ 150 à 350 $ par an selon le tarif local de l'électricité — à considérer comme une fourchette nationale, pas une estimation pour le Colorado. Notez que le plafond de 1 920 W du Colorado signifie qu'un système pleine taille pourrait y dépasser ce que reflète une estimation basée sur un kit de 800 W.",
@@ -297,6 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'コロラド州でベランダ太陽光発電が合法かどうかを確認する米国の賃借人・住宅所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -348,6 +379,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'コロラド州向けに今すぐ機材を購入すべきですか?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>まだです。法律は2027年1月1日まで発効せず、それとは別に、執筆時点で完全なUL 3700認証を確認済みのプラグイン式太陽光システムも存在しません。</strong> 購入が妥当になるには、法律の発効日と製品認証という2つの条件がどちらもクリアされる必要があります。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在は特にUtah州向けに販売されており、コロラド州向けではありません。',
           'コロラド州は、このシリーズで使用した情報源の州別節約額データに含まれていなかったため、コロラド州固有の金額はここでは提供できません。データが記録された州全体では、800Wキットで地域の電気料金に応じて年間約150〜350ドルの節約が見られます。これは全国的な範囲として捉えてください。コロラド州の推定値ではありません。また、コロラド州の1,920Wという上限を考えると、同州でのフルサイズシステムは800Wキットの試算を上回る可能性がある点にご注意ください。',
@@ -390,6 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '正在核实科罗拉多州阳台太阳能是否合法的美国租户和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -441,6 +482,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '现在应该为科罗拉多州购买设备吗?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>还不行——该法律要到2027年1月1日才生效，另外，截至撰写时也没有任何完整的插电式太阳能系统确认获得完整的UL 3700认证。</strong> 购买之前需要跨越两道门槛：法律生效日期和产品认证。EcoFlow STREAM Ultra是最接近上市的产品，但目前专门在Utah州销售，而非科罗拉多州。',
           '科罗拉多州未被纳入本系列所用信息源的各州节省数据表，因此这里无法提供科罗拉多州的具体金额。在已跟踪的各州中，一个800W套件根据当地电价每年大约可节省150–350美元——请将其视为全国范围的估算，而非科罗拉多州的估算，并注意科罗拉多州1,920W的上限意味着当地的全尺寸系统可能超出800W套件估算所反映的范围。',
@@ -483,6 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que verifican si la energía solar de balcón es legal en Colorado',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -534,6 +585,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿Debería comprar equipo ahora para Colorado?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>Todavía no — la ley no entra en vigor hasta el 1 de enero de 2027 y, por separado, ningún sistema solar enchufable completo ha confirmado la certificación UL 3700 completa al momento de escribir esto.</strong> Ambos requisitos deben cumplirse antes de que una compra tenga sentido: la fecha de entrada en vigor legal y la certificación del producto. El STREAM Ultra de EcoFlow es el producto más cercano al mercado, pero actualmente se vende específicamente en Utah, no en Colorado.',
           'Colorado no estaba en la tabla de ahorros por estado de la fuente usada para esta serie, así que aquí no hay una cifra específica para Colorado. En los estados que sí se rastrearon, un kit de 800 W ahorra aproximadamente entre $150 y $350 por año según las tarifas eléctricas locales — trátalo como un rango nacional, no una estimación para Colorado, y ten en cuenta que el límite de 1,920 W de Colorado significa que un sistema de tamaño completo ahí podría superar lo que refleja una estimación basada en un kit de 800 W.',
@@ -576,6 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA verificando se a energia solar de varanda é legal no Colorado',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -627,6 +688,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Devo comprar equipamento agora para o Colorado?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>Ainda não — a lei só entra em vigor em 1º de janeiro de 2027 e, separadamente, nenhum sistema solar plug-in completo confirmou certificação UL 3700 total até o momento desta publicação.</strong> As duas barreiras precisam ser superadas antes que a compra faça sentido: a data de vigência legal e a certificação do produto. O STREAM Ultra da EcoFlow é o produto mais próximo do mercado, mas atualmente é vendido especificamente em Utah, não no Colorado.',
           'O Colorado não estava na tabela de economia por estado da fonte usada nesta série, então não há um valor específico para o Colorado aqui. Nos estados rastreados, um kit de 800 W economiza cerca de US$ 150 a US$ 350 por ano dependendo das tarifas locais de energia — trate isso como uma faixa nacional, não uma estimativa para o Colorado, e observe que o limite de 1.920 W do Colorado significa que um sistema de tamanho completo ali pode ultrapassar o que uma estimativa de kit de 800 W reflete.',
@@ -669,6 +739,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون وأصحاب المنازل في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في كولورادو',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -720,6 +791,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل يجب أن أشتري المعدات الآن من أجل كولورادو؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>ليس بعد — لا يدخل القانون حيز التنفيذ حتى 1 يناير 2027، وبشكل منفصل، لم يؤكد أي نظام طاقة شمسية قابل للتوصيل المباشر حصوله على شهادة UL 3700 الكاملة حتى وقت كتابة هذا المقال.</strong> يجب اجتياز عائقين قبل أن يصبح الشراء منطقيًا: تاريخ سريان القانون، وشهادة المنتج. منتج EcoFlow STREAM Ultra هو الأقرب إلى السوق، لكنه يُباع حاليًا تحديدًا في ولاية يوتا، وليس في كولورادو.',
           'لم تكن كولورادو ضمن جدول التوفير حسب الولاية في المصدر المستخدم لهذه السلسلة، لذا لا يتوفر هنا رقم خاص بكولورادو. عبر الولايات التي تم رصدها، توفر حزمة 800W ما يقارب 150 إلى 350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — يجب اعتبار هذا نطاقًا وطنيًا وليس تقديرًا خاصًا بكولورادو، مع ملاحظة أن حد كولورادو البالغ 1,920W يعني أن نظامًا كامل الحجم هناك قد يتجاوز ما يعكسه تقدير حزمة 800W.',
@@ -762,6 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '콜로라도주에서 발코니 태양광 발전이 합법인지 확인하는 미국 임차인 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -813,6 +894,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '지금 콜로라도주를 위해 장비를 구매해야 합니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           '<strong>아직입니다 — 이 법은 2027년 1월 1일까지 발효되지 않으며, 이와 별개로 작성 시점 기준 완전한 UL 3700 인증을 확인한 완제품 플러그인 태양광 시스템도 아직 없습니다.</strong> 구매가 의미 있으려면 법적 발효일과 제품 인증이라는 두 가지 조건이 모두 충족되어야 합니다. EcoFlow STREAM Ultra가 시장에 가장 가까운 제품이지만, 현재는 콜로라도주가 아닌 Utah주에서 특별히 판매되고 있습니다.',
           '콜로라도주는 이 시리즈에 사용된 출처의 주별 절감액 표에 포함되지 않았으므로, 콜로라도주에 특화된 금액은 여기서 제공할 수 없습니다. 데이터가 추적된 주들을 기준으로, 800W 키트는 지역 전기 요금에 따라 연간 약 150~350달러를 절약합니다 — 이는 콜로라도주에 대한 추정치가 아니라 전국 범위로 간주해야 하며, 콜로라도주의 1,920W 상한을 고려하면 해당 지역의 풀사이즈 시스템은 800W 키트 추정치를 초과할 수 있다는 점에 유의해야 합니다.',

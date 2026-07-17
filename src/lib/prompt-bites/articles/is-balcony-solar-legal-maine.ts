@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in Maine',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -68,6 +69,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Are Certified Kits Actually Available Yet?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>UL 3700, the safety certification standard referenced by every enacted state\'s law including Maine\'s, has not yet been fully achieved by any complete plug-in solar system as of write-time.</strong> The standard was published December 2025 and certification testing opened January 2026 — testing takes months, so the gap between "legal to install" and "certified product available" is a pattern across all 8 states, not a Maine-specific issue. EcoFlow\'s STREAM Ultra is the closest to market but is currently listed for sale specifically in Utah, not nationally.',
           'Maine wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Maine-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — treat that as a national range, not a Maine estimate, until state-specific data is confirmed.',
@@ -110,6 +120,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hauseigentümer, die prüfen, ob Balkonsolar in Maine legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -160,6 +171,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Sind zertifizierte Kits bereits tatsächlich erhältlich?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>UL 3700, der Sicherheitszertifizierungsstandard, auf den sich das Gesetz jedes Bundesstaats mit Regelung – einschließlich Maine – bezieht, wurde zum Zeitpunkt der Erstellung dieses Artikels noch von keinem vollständigen Plug-in-Solarsystem vollständig erreicht.</strong> Der Standard wurde im Dezember 2025 veröffentlicht, und die Zertifizierungsprüfungen begannen im Januar 2026 – solche Prüfungen dauern Monate, sodass die Lücke zwischen „Installation legal" und „zertifiziertes Produkt verfügbar" ein Muster in allen 8 Bundesstaaten ist, kein Maine-spezifisches Problem. Das EcoFlow STREAM Ultra ist dem Markt am nächsten, wird derzeit aber ausschließlich in Utah zum Verkauf angeboten, nicht landesweit.',
           'Maine war nicht in der bundesstaatsweisen Einsparungstabelle des für diese Serie verwendeten Quellen-Trackers enthalten, daher liegt hier keine Maine-spezifische Dollarzahl vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr – das ist als landesweite Spanne zu verstehen, nicht als Schätzung für Maine, bis bundesstaatsspezifische Daten bestätigt sind.',
@@ -202,6 +222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locataires et propriétaires américains vérifiant si le solaire de balcon est légal dans le Maine',
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -252,6 +273,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Des kits certifiés sont-ils réellement disponibles ?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           '<strong>UL 3700, la norme de certification de sécurité citée par la loi de chaque État ayant légiféré, y compris celle du Maine, n\'a encore été pleinement obtenue par aucun système solaire plug-in complet à l\'heure actuelle.</strong> La norme a été publiée en décembre 2025 et les tests de certification ont débuté en janvier 2026 — ces tests prennent des mois, donc l\'écart entre « installation légale » et « produit certifié disponible » est une tendance commune aux 8 États, pas un problème propre au Maine. Le STREAM Ultra d\'EcoFlow est le plus proche du marché, mais il n\'est actuellement en vente que dans l\'Utah, pas à l\'échelle nationale.',
           'Le Maine ne figurait pas dans le tableau d\'économies par État de la source utilisée pour cette série ; aucun chiffre en dollars propre au Maine n\'est donc disponible ici. Dans les États suivis, un kit de 800 W permet d\'économiser environ 150 à 350 $ par an selon les tarifs locaux de l\'électricité — à considérer comme une fourchette nationale, pas une estimation pour le Maine, tant que des données spécifiques à l\'État ne sont pas confirmées.',
@@ -294,6 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'メイン州でバルコニーソーラーが合法かどうかを確認する米国の賃貸居住者・住宅所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -344,6 +375,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '認証済みキットは実際に入手できますか?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>メイン州を含む、法制化されたすべての州の法律が参照する安全認証規格UL 3700は、本記事執筆時点で、完全なプラグイン型ソーラーシステムでの完全取得はまだ確認されていません。</strong> この規格は2025年12月に公開され、認証テストは2026年1月に開始されました。テストには数か月かかるため、「設置は合法」と「認証済み製品が入手可能」の間のギャップは、メイン州固有の問題ではなく、8州すべてに共通するパターンです。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在は全国展開ではなく、ユタ州限定で販売されています。',
           'メイン州は、このシリーズで使用したソースデータの州別節約テーブルに含まれていなかったため、メイン州固有のドル金額はここでは提供できません。データが追跡された州全体では、800Wキットで地域の電気料金に応じて年間およそ150〜350ドルの節約が見込めます。これは州データが確認されるまでは、メイン州の推定値ではなく全国レンジとして扱ってください。',
@@ -386,6 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '正在核实阳台太阳能在缅因州是否合法的美国租户和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -436,6 +477,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '认证套件目前是否真的能买到?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>UL 3700是包括缅因州在内所有已立法州法律都参照的安全认证标准,截至撰稿时,尚未有完整的插接式太阳能系统完全获得该认证。</strong>该标准于2025年12月发布,认证测试于2026年1月启动——测试需要数月时间,因此"合法安装"与"认证产品上市"之间存在差距,这是所有8个州的共同现象,并非缅因州特有的问题。EcoFlow STREAM Ultra是最接近上市的产品,但目前仅在犹他州有售,尚未面向全国销售。',
           '缅因州未包含在本系列所用数据来源的各州节省对照表中,因此这里无法提供缅因州专属的美元数字。在已追踪数据的各州中,一套800W套件根据当地电价每年大约可节省150至350美元——在缅因州专属数据得到确认之前,请将其视为全国范围,而非缅因州的估算值。',
@@ -478,6 +528,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que quieren saber si la energía solar de balcón es legal en Maine',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -528,6 +579,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿Ya hay kits certificados realmente disponibles?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>UL 3700, el estándar de certificación de seguridad que menciona la ley de todos los estados con ley aprobada, incluida la de Maine, todavía no lo ha alcanzado por completo ningún sistema solar plug-in completo al momento de escribir esto.</strong> El estándar se publicó en diciembre de 2025 y las pruebas de certificación comenzaron en enero de 2026; esas pruebas tardan meses, así que la brecha entre "instalación legal" y "producto certificado disponible" es un patrón en los 8 estados, no un problema exclusivo de Maine. El STREAM Ultra de EcoFlow es el que está más cerca de salir al mercado, pero por ahora se vende específicamente en Utah, no a nivel nacional.',
           'Maine no estaba en la tabla de ahorros por estado de la fuente usada para esta serie, así que aquí no hay una cifra en dólares específica de Maine. En los estados que sí se rastrearon, un kit de 800W ahorra aproximadamente entre $150 y $350 al año según las tarifas eléctricas locales; trata eso como un rango nacional, no como una estimación para Maine, hasta que se confirmen datos específicos del estado.',
@@ -570,6 +630,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA que querem saber se a energia solar de varanda é legal no Maine',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -620,6 +681,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Já existem kits certificados realmente disponíveis?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>A UL 3700, o padrão de certificação de segurança referenciado pela lei de todos os estados com lei aprovada, incluindo o Maine, ainda não foi totalmente alcançada por nenhum sistema solar plug-in completo até o momento desta publicação.</strong> O padrão foi publicado em dezembro de 2025 e os testes de certificação começaram em janeiro de 2026 — esses testes levam meses, então a lacuna entre "instalação legal" e "produto certificado disponível" é um padrão nos 8 estados, não um problema específico do Maine. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah, não em nível nacional.',
           'O Maine não estava na tabela de economia por estado da fonte usada para esta série, então não há um valor em dólares específico do Maine disponível aqui. Nos estados que foram rastreados, um kit de 800W economiza cerca de US$ 150 a US$ 350 por ano, dependendo das tarifas locais de energia — trate isso como uma faixa nacional, não uma estimativa para o Maine, até que dados específicos do estado sejam confirmados.',
@@ -662,6 +732,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون وأصحاب المنازل في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في ولاية مين',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -712,6 +783,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل تتوفر الأطقم المعتمدة فعليًا حتى الآن؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>لم يحقق أي نظام شمسي كامل قابل للتوصيل المباشر حتى وقت كتابة هذا المقال الشهادة الكاملة لمعيار UL 3700، وهو معيار السلامة الذي تشير إليه قوانين جميع الولايات التي سنّت تشريعات، بما فيها ولاية مين.</strong> نُشر المعيار في ديسمبر 2025، وبدأت اختبارات الاعتماد في يناير 2026 — وتستغرق هذه الاختبارات شهورًا، لذا فإن الفجوة بين "التركيب القانوني" و"توفر منتج معتمد" هي نمط مشترك بين الولايات الثماني جميعها، وليست مشكلة خاصة بولاية مين. يُعد جهاز STREAM Ultra من EcoFlow الأقرب إلى الوصول إلى السوق، لكنه معروض للبيع حاليًا في ولاية يوتا تحديدًا، وليس على المستوى الوطني.',
           'لم تكن ولاية مين ضمن جدول التوفير حسب الولاية في المصدر المستخدم لهذه السلسلة، لذا لا يتوفر هنا رقم بالدولار خاص بولاية مين. وفي الولايات التي تم تتبعها، يوفّر طقم بقدرة 800W ما يقارب 150 إلى 350 دولارًا سنويًا حسب أسعار الكهرباء المحلية — يجب اعتبار ذلك نطاقًا وطنيًا، وليس تقديرًا خاصًا بولاية مين، إلى حين تأكيد بيانات خاصة بالولاية.',
@@ -754,6 +834,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '메인주에서 발코니 태양광이 합법인지 확인하는 미국 세입자 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -804,6 +885,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '인증된 키트가 실제로 시중에 나와 있습니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           '<strong>메인주를 포함해 법제화된 모든 주의 법률이 참조하는 안전 인증 표준인 UL 3700은, 이 글을 작성하는 현재까지 완전한 플러그인 태양광 시스템 중 어느 것도 완전히 취득하지 못했습니다.</strong> 이 표준은 2025년 12월에 발표되었으며 인증 테스트는 2026년 1월에 시작되었습니다. 테스트에는 수개월이 소요되므로 "설치는 합법" 상태와 "인증 제품 구매 가능" 상태 사이의 간극은 메인주만의 문제가 아니라 8개 주 전체에서 나타나는 패턴입니다. EcoFlow의 STREAM Ultra가 시장 출시에 가장 근접했지만, 현재는 전국이 아닌 유타주에서만 한정적으로 판매되고 있습니다.',
           '메인주는 이 시리즈에 사용된 자료 출처의 주별 절감액 표에 포함되어 있지 않았기 때문에 메인주 고유의 달러 수치는 여기에서 제공할 수 없습니다. 데이터가 추적된 주들에서는 지역 전기 요금에 따라 800W 키트로 연간 약 150~350달러를 절감할 수 있었습니다. 주별 데이터가 확인되기 전까지는 이를 메인주 추정치가 아닌 전국 범위로 간주하시기 바랍니다.',

@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in Maryland',
+    affiliateDisclosure: true,
     parentArticle: '/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -68,6 +69,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Are Certified Kits Actually Available Yet?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Check EcoFlow STREAM Ultra price on Amazon',
+          },
+        ],
         content: [
           '<strong>Maryland\'s law, like every other enacted state\'s, references UL 3700 as the safety benchmark, but no complete plug-in solar system has confirmed full certification as of write-time.</strong> The standard was published December 2025 with testing opening January 2026 — a gap that applies nationally. EcoFlow\'s STREAM Ultra is the closest product to market but is currently listed for sale specifically in Utah, not Maryland.',
           'Maryland wasn\'t in the source tracker\'s state-by-state savings table used for this series, so a Maryland-specific dollar figure isn\'t available here. Across the states that were tracked, an 800W kit saves roughly $150–$350 per year depending on local electricity rates — Maryland\'s DC-adjacent electricity rates likely put it toward the higher end of that range, but treat this as a national range, not a confirmed Maryland estimate.',
@@ -110,6 +120,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hausbesitzer, die prüfen, ob Balkonsolar in Maryland legal ist',
+    affiliateDisclosure: true,
     parentArticle: '/de/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -160,6 +171,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Sind zertifizierte Kits bereits tatsächlich verfügbar?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'EcoFlow STREAM Ultra Preis bei Amazon prüfen',
+          },
+        ],
         content: [
           '<strong>Marylands Gesetz verweist, wie das jedes anderen Bundesstaats mit entsprechendem Gesetz, auf UL 3700 als Sicherheitsstandard, doch zum Zeitpunkt der Erstellung hat kein vollständiges Plug-in-Solarsystem eine vollständige Zertifizierung bestätigt.</strong> Der Standard wurde im Dezember 2025 veröffentlicht, Tests begannen im Januar 2026 — eine Lücke, die landesweit gilt. EcoFlows STREAM Ultra ist das marktnächste Produkt, wird aktuell aber speziell in Utah zum Verkauf angeboten, nicht in Maryland.',
           'Maryland war nicht in der Staat-für-Staat-Einsparungstabelle der Quelle enthalten, die für diese Serie verwendet wurde, daher liegt hier keine Maryland-spezifische Dollarzahl vor. In den erfassten Bundesstaaten spart ein 800-W-Kit je nach lokalem Strompreis etwa 150–350 US-Dollar pro Jahr — Marylands Strompreise nahe Washington, D.C. liegen wahrscheinlich eher am oberen Ende dieser Spanne, aber betrachten Sie dies als landesweite Spanne, nicht als bestätigte Maryland-Schätzung.',
@@ -202,6 +222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: "Locataires et propriétaires américains qui vérifient si le solaire de balcon est légal dans le Maryland",
+    affiliateDisclosure: true,
     parentArticle: '/fr/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -252,6 +273,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Des kits certifiés sont-ils réellement disponibles ?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: "Vérifier le prix de l'EcoFlow STREAM Ultra sur Amazon",
+          },
+        ],
         content: [
           "<strong>La loi du Maryland, comme celle de chaque autre État, cite UL 3700 comme référence de sécurité, mais aucun système solaire enfichable complet n'a confirmé une certification complète à ce jour.</strong> La norme a été publiée en décembre 2025, avec des tests débutant en janvier 2026 — un délai qui s'applique à l'échelle nationale. Le STREAM Ultra d'EcoFlow est le produit le plus proche du marché, mais il est actuellement vendu spécifiquement dans l'Utah, pas dans le Maryland.",
           "Le Maryland ne figurait pas dans le tableau des économies État par État utilisé pour cette série, donc aucun chiffre spécifique au Maryland n'est disponible ici. Dans les États suivis, un kit de 800 W permet d'économiser environ 150 à 350 $ par an selon les tarifs électriques locaux — les tarifs du Maryland, proches de ceux de DC, situeraient probablement l'État vers le haut de cette fourchette, mais considérez ceci comme une fourchette nationale, pas une estimation confirmée pour le Maryland.",
@@ -294,6 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'メリーランド州でバルコニーソーラーが合法かどうかを確認する米国の賃貸居住者と持ち家所有者',
+    affiliateDisclosure: true,
     parentArticle: '/ja/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -344,6 +375,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '認証済みキットは実際にもう入手できますか？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'AmazonでEcoFlow STREAM Ultraの価格を確認',
+          },
+        ],
         content: [
           '<strong>メリーランド州の法律も、他の制定州と同様にUL 3700を安全基準として参照していますが、本稿執筆時点で完全なプラグイン型ソーラーシステムのフル認証取得が確認されたものはありません。</strong> この規格は2025年12月に公開され、試験は2026年1月に開始されました——このギャップは全米共通です。EcoFlowのSTREAM Ultraが市場に最も近い製品ですが、現在の販売対象は特にユタ州であり、メリーランド州ではありません。',
           'メリーランド州は本シリーズで使用した情報源の州別節約額テーブルに含まれていなかったため、メリーランド州固有の金額はここでは提示できません。追跡対象州全体では、800Wキットは地域の電気料金により年間およそ150～350ドルの節約となります——メリーランド州はワシントンDCに近い電気料金であるため、この範囲の上限寄りになる可能性が高いですが、これは確認されたメリーランド州の推定値ではなく、全米的な範囲として扱ってください。',
@@ -386,6 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '正在核实马里兰州阳台太阳能是否合法的美国租户和房主',
+    affiliateDisclosure: true,
     parentArticle: '/zh/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -436,6 +477,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '认证套件现在真的能买到吗？',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: '在 Amazon 查看 EcoFlow STREAM Ultra 价格',
+          },
+        ],
         content: [
           '<strong>马里兰州的法律与其他所有已立法州一样，将UL 3700列为安全基准，但截至撰写本文时，尚无完整的插电式太阳能系统确认获得完整认证。</strong> 该标准于2025年12月发布，测试于2026年1月启动——这一空档在全美范围内普遍存在。EcoFlow的STREAM Ultra是目前最接近上市的产品，但目前仅在犹他州而非马里兰州销售。',
           '本系列使用的数据来源中，各州节省数据表未包含马里兰州，因此本文无法提供马里兰州特定的具体金额。在已追踪的各州中，一套800W套件根据当地电价，每年大约可节省150至350美元——马里兰州毗邻DC地区的电价水平，可能使其更接近区间上限，但请将其视为全国性区间，而非已确认的马里兰州估算值。',
@@ -478,6 +528,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que quieren saber si la energía solar de balcón es legal en Maryland',
+    affiliateDisclosure: true,
     parentArticle: '/es/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -528,6 +579,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '¿Ya hay kits certificados disponibles en realidad?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Consulta el precio del EcoFlow STREAM Ultra en Amazon',
+          },
+        ],
         content: [
           '<strong>La ley de Maryland, igual que la de cada estado con ley aprobada, hace referencia a UL 3700 como el estándar de seguridad, pero al momento de escribir esto ningún sistema solar enchufable completo confirma tener la certificación total.</strong> El estándar se publicó en diciembre de 2025 y las pruebas comenzaron en enero de 2026 — un desfase que se aplica a nivel nacional. El STREAM Ultra de EcoFlow es el producto más cercano a llegar al mercado, pero actualmente se vende específicamente en Utah, no en Maryland.',
           'Maryland no estaba en la tabla de ahorros por estado de la fuente usada para esta serie, así que aquí no hay una cifra específica para Maryland. En los estados que sí se rastrearon, un kit de 800 W ahorra entre $150 y $350 al año aproximadamente, según las tarifas eléctricas locales — es probable que las tarifas de Maryland, cercanas a las de DC, lo ubiquen hacia el extremo superior de ese rango, pero trátalo como un rango nacional, no como una estimación confirmada para Maryland.',
@@ -570,6 +630,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA que querem saber se a energia solar de varanda é legal em Maryland',
+    affiliateDisclosure: true,
     parentArticle: '/pt/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -620,6 +681,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'Já existem kits certificados disponíveis de verdade?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Confira o preço do EcoFlow STREAM Ultra na Amazon',
+          },
+        ],
         content: [
           '<strong>A lei de Maryland, assim como a de todos os outros estados com lei em vigor, faz referência à UL 3700 como o padrão de segurança, mas nenhum sistema solar plug-in completo confirmou certificação total até o momento desta publicação.</strong> O padrão foi publicado em dezembro de 2025, com os testes começando em janeiro de 2026 — uma lacuna que se aplica em todo o país. O STREAM Ultra da EcoFlow é o produto mais próximo de chegar ao mercado, mas atualmente está à venda especificamente em Utah, não em Maryland.',
           'Maryland não estava na tabela de economia por estado da fonte usada nesta série, então um valor específico para Maryland não está disponível aqui. Nos estados que foram rastreados, um kit de 800 W economiza aproximadamente entre US$ 150 e US$ 350 por ano, dependendo das tarifas de energia locais — as tarifas de Maryland, próximas às da região de DC, provavelmente colocam o estado mais perto do limite superior dessa faixa, mas trate isso como uma faixa nacional, não como uma estimativa confirmada para Maryland.',
@@ -662,6 +732,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون وأصحاب المنازل في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في ماريلاند',
+    affiliateDisclosure: true,
     parentArticle: '/ar/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -712,6 +783,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: 'هل تتوفر أطقم معتمدة فعليًا حتى الآن؟',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'تحقق من سعر EcoFlow STREAM Ultra على أمازون',
+          },
+        ],
         content: [
           '<strong>يشير قانون ماريلاند، مثل جميع الولايات المسنّة الأخرى، إلى معيار UL 3700 كمرجع للسلامة، لكن حتى وقت كتابة هذا المقال لم يتأكد حصول أي نظام طاقة شمسية قابل للتوصيل المباشر (plug-in) بشكل كامل على الشهادة الكاملة.</strong> نُشر المعيار في ديسمبر 2025 وبدأت الاختبارات في يناير 2026 — وهذه فجوة تنطبق على المستوى الوطني. يُعد منتج STREAM Ultra من EcoFlow الأقرب إلى الوصول للسوق، لكنه يُباع حاليًا تحديدًا في ولاية يوتا، وليس في ماريلاند.',
           'لم تكن ماريلاند ضمن جدول التوفير حسب الولاية الذي استُخدم كمصدر لهذه السلسلة، لذا لا يتوفر رقم محدد لماريلاند هنا. وفي الولايات التي تم تتبعها، يوفّر طقم بقدرة 800 واط ما بين 150 و350 دولارًا أمريكيًا تقريبًا سنويًا حسب تعرفة الكهرباء المحلية — ومن المرجح أن تعرفة الكهرباء في ماريلاند، القريبة من تعرفة منطقة العاصمة واشنطن، تضعها في الطرف الأعلى من هذا النطاق، لكن يجب التعامل مع هذا كنطاق وطني عام وليس كتقدير مؤكَّد لماريلاند.',
@@ -754,6 +834,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '메릴랜드주에서 발코니 태양광이 합법인지 확인하는 미국 세입자 및 주택 소유자',
+    affiliateDisclosure: true,
     parentArticle: '/ko/balcony-solar/balcony-solar-legal-us-states',
     siblingBites: [
       'is-balcony-solar-legal-utah',
@@ -804,6 +885,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body2: {
         title: '인증된 키트가 실제로 지금 판매되고 있습니까?',
+        affiliateLinks: [
+          {
+            url: 'https://www.amazon.com/s?k=EcoFlow%20STREAM%20Ultra',
+            productName: 'EcoFlow STREAM Ultra',
+            productCategory: 'balcony-solar-battery',
+            priceRange: '1200-1350',
+            label: 'Amazon에서 EcoFlow STREAM Ultra 가격 확인하기',
+          },
+        ],
         content: [
           '<strong>메릴랜드주 법률도 다른 모든 시행 주와 마찬가지로 UL 3700을 안전 기준으로 참조하고 있지만, 이 글을 작성하는 시점까지 완전한 플러그인형 태양광 시스템 중 완전한 인증을 받은 제품은 확인되지 않았습니다.</strong> 이 표준은 2025년 12월에 발표되었으며 시험은 2026년 1월에 시작되었습니다 — 이러한 공백은 전국적으로 동일하게 적용됩니다. EcoFlow의 STREAM Ultra가 시장 출시에 가장 근접한 제품이지만, 현재는 메릴랜드주가 아닌 유타주에서 구체적으로 판매되고 있습니다.',
           '메릴랜드주는 이 시리즈에 사용된 자료 출처의 주별 절감액 표에 포함되어 있지 않았기 때문에, 메릴랜드주 고유의 구체적인 금액은 제공할 수 없습니다. 자료가 추적된 주들을 기준으로 볼 때, 800W 키트는 지역 전기요금에 따라 연간 약 150~350달러를 절감합니다 — 메릴랜드주는 워싱턴 D.C.와 인접한 전기요금 수준을 고려할 때 이 범위의 상단에 가까울 가능성이 높지만, 이는 확인된 메릴랜드주 추정치가 아니라 전국적인 범위로 취급해야 합니다.',
