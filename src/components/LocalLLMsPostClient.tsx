@@ -17,6 +17,7 @@ import { ImageLightbox } from '@/components/ImageLightbox'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
 import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
+import { AffiliateLink } from '@/components/AffiliateLink'
 import { CopyButton } from '@/components/CopyButton'
 import { NextStepBlock } from '@/components/NextStepBlock'
 import { StickyNextStepBar } from '@/components/StickyNextStepBar'
@@ -33,6 +34,18 @@ const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> =
   fr: { keyTakeaways: 'Points clés', tableOfContents: 'Sommaire' },
   ja: { keyTakeaways: '重要なポイント', tableOfContents: '目次' },
   zh: { keyTakeaways: '关键要点', tableOfContents: '目录' },
+}
+
+const PROS_CONS_LABELS: Partial<Record<Language, { pros: string; cons: string }>> = {
+  en: { pros: 'Pros', cons: 'Cons' },
+  de: { pros: 'Vorteile', cons: 'Nachteile' },
+  fr: { pros: 'Avantages', cons: 'Inconvénients' },
+  ja: { pros: '長所', cons: '短所' },
+  zh: { pros: '优点', cons: '缺点' },
+  es: { pros: 'Ventajas', cons: 'Desventajas' },
+  pt: { pros: 'Vantagens', cons: 'Desvantagens' },
+  ar: { pros: 'الإيجابيات', cons: 'السلبيات' },
+  ko: { pros: '장점', cons: '단점' },
 }
 
 // Post UI translations
@@ -629,6 +642,99 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
         </div>
       )}
 
+      {/* Affiliate product links */}
+      {section.affiliateLinks && section.affiliateLinks.length > 0 && (
+        <div className="flex flex-wrap gap-2.5 my-5">
+          {section.affiliateLinks.map((link, i) => (
+            <AffiliateLink
+              key={i}
+              url={link.url}
+              productName={link.productName}
+              productCategory={link.productCategory}
+              priceRange={link.priceRange}
+              lang={lang}
+              label={link.label}
+              variant="button"
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Ranked buying-guide items */}
+      {section.rankedItems && section.rankedItems.length > 0 && (
+        <div className="space-y-6 my-6">
+          {section.rankedItems.map((item, i) => {
+            const heading = item.title ?? item.name ?? ''
+            const body = item.content ?? item.verdict ?? ''
+            const prosConsLabels = PROS_CONS_LABELS[lang] ?? PROS_CONS_LABELS.en!
+            return (
+              <div key={i} className="border border-primary/15 rounded-xl p-5">
+                <div className="flex items-start gap-3 mb-2">
+                  <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white ${colors.dot}`}>
+                    {item.rank}
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-text-primary text-lg">{renderLinks(heading)}</h3>
+                    {item.tagline && (
+                      <p className="text-sm text-text-secondary italic">{renderLinks(item.tagline)}</p>
+                    )}
+                  </div>
+                </div>
+                {body && (
+                  <p className="text-text-secondary leading-relaxed text-sm mb-3">{renderLinks(body)}</p>
+                )}
+                {(item.pros?.length || item.cons?.length) && (
+                  <div className="grid sm:grid-cols-2 gap-4 mb-3">
+                    {item.pros && item.pros.length > 0 && (
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-wide text-green-600 mb-1.5">{prosConsLabels.pros}</p>
+                        <ul className="space-y-1">
+                          {item.pros.map((p, j) => (
+                            <li key={j} className="text-sm text-text-secondary flex gap-2">
+                              <span className="text-green-500 flex-shrink-0">+</span>
+                              <span>{renderLinks(p)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {item.cons && item.cons.length > 0 && (
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-wide text-orange-600 mb-1.5">{prosConsLabels.cons}</p>
+                        <ul className="space-y-1">
+                          {item.cons.map((c, j) => (
+                            <li key={j} className="text-sm text-text-secondary flex gap-2">
+                              <span className="text-orange-500 flex-shrink-0">–</span>
+                              <span>{renderLinks(c)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                )}
+                {item.affiliateLinks && item.affiliateLinks.length > 0 && (
+                  <div className="flex flex-wrap gap-2.5">
+                    {item.affiliateLinks.map((link, j) => (
+                      <AffiliateLink
+                        key={j}
+                        url={link.url}
+                        productName={link.productName ?? link.label ?? (heading || 'Product')}
+                        productCategory={link.productCategory ?? 'product'}
+                        priceRange={link.priceRange}
+                        lang={lang}
+                        label={link.label}
+                        variant="button"
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          })}
+        </div>
+      )}
+
       {/* FAQ */}
       {section.faqs && (
         <div className="space-y-6 mt-4">
@@ -711,6 +817,24 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           <p className="affiliate-disclosure text-xs text-text-secondary bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 mb-6">
             {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
           </p>
+        )}
+
+        {/* Article-level affiliate links (not attached to any single section) */}
+        {article.affiliateLinks && article.affiliateLinks.length > 0 && (
+          <div className="flex flex-wrap gap-2.5 mb-6">
+            {article.affiliateLinks.map((link, i) => (
+              <AffiliateLink
+                key={i}
+                url={link.url}
+                productName={link.productName}
+                productCategory={link.productCategory}
+                priceRange={link.priceRange}
+                lang={lang}
+                label={link.label}
+                variant="button"
+              />
+            ))}
+          </div>
         )}
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
