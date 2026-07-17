@@ -47,12 +47,24 @@ const CLUSTERS = [
     // Mirrors isSmartHomeHubPublished() — all langs published since launch 2026-06-05.
     hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']),
   },
+  {
+    name: 'prompt-bites',
+    basePath: '/prompt-bites',
+    slugsFile: 'src/lib/prompt-bites/slugs.ts',
+    publishedFile: 'src/lib/prompt-bites/published.ts',
+    // Mirrors isPromptBitesHubPublished() — PROMPT_BITES_HUB_PUBLISHED is a
+    // flat true/false, not per-lang, so all langs are published.
+    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']),
+  },
 ]
 
 function readSlugs(slugsFile) {
   const src = readFileSync(slugsFile, 'utf8')
   // Lines like:   'slug-name': 'key-name',  (whitespace after colon is optional)
-  const re = /^\s+'([a-z0-9-]+)':\s*'[a-z0-9-]+',?\s*$/gm
+  // Value side allows camelCase too — prompt-bites/slugs.ts maps kebab-case
+  // slugs to camelCase article keys (e.g. 'howMuchVramForLocalLlm'), unlike
+  // power-local-llm/smart-home which map slug to itself in kebab-case.
+  const re = /^\s+'([a-z0-9-]+)':\s*'[A-Za-z0-9-]+',?\s*$/gm
   const slugs = []
   let m
   while ((m = re.exec(src)) !== null) slugs.push(m[1])
