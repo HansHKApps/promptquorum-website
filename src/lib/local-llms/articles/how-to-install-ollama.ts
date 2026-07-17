@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
       dateModified: '2026-06-21',
       seoTitle: 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
-      intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library -- no Python environment, no configuration files, and no GPU required to get started. As of April 2026, Ollama supports 200+ models including Meta Llama 3.3, Qwen3, and Mistral.',
+      intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library -- no Python environment, no configuration files, and no GPU required to get started. Ollama maintains a curated model library at ollama.com/library, including Meta Llama 3.3, Qwen3, and Mistral.',
       metaDescription: 'Install Ollama in 2 minutes on any OS: download, run `ollama run llama3.2`, start chatting. Complete setup guide with troubleshooting for Beginners 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library -- no Python environment, no configuration files, and no GPU required to get started.**',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Windows: download the installer from ollama.com/download. Ollama runs as a background service in the system tray.',
             'Linux: one curl command installs everything -- `curl -fsSL https://ollama.com/install.sh | sh`.',
             'Minimum requirements: 4 GB RAM for a 3B model, 8 GB RAM for a 7B model. No GPU needed to start.',
-            'Ollama exposes an OpenAI-compatible REST API at `http://localhost:11434` -- any OpenAI SDK app can use it without code changes.',
+            'Ollama exposes an OpenAI-compatible API at `http://localhost:11434/v1` -- point an existing OpenAI SDK app at that `base_url` with any non-empty `api_key` and it works unchanged. The native Ollama REST API is separate, at `http://localhost:11434/api/...`.',
             '👉 **Before installing, confirm local is right for your use case** — see [Local LLM vs Cloud API](/local-llms/local-llm-limitations) for when cloud outperforms local inference.',
           ],
         },
@@ -58,7 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Is Ollama and Why Use It?',
           content: [
             '**Ollama is an open-source inference engine that runs large language models locally.** It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
-            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen3, and 100+ other models. A model is downloaded once and cached on disk -- subsequent runs start in under 5 seconds.',
+            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen3, and other models. A model is downloaded once and cached on disk -- subsequent runs skip the download and load straight from disk, though Ollama unloads an idle model from memory after its keep-alive window (5 minutes by default), so a cold reload still takes as long as loading the model fresh.',
             'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
           ],
         },
@@ -161,7 +161,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Ollama is running but my GPU is not being used',
-              a: 'On Windows, verify your NVIDIA driver is version 452.39 or higher. On Linux, confirm the NVIDIA container toolkit is installed (`nvidia-smi` should return GPU info). Ollama offloads layers to GPU automatically when VRAM is available -- run `ollama ps` after starting a model to see GPU utilization.',
+              a: 'For a native install (not Docker), you need the NVIDIA driver and CUDA runtime -- check with `nvidia-smi`, which should print your GPU and driver version. Ollama offloads layers to GPU automatically when VRAM is available; run `ollama ps` and check the PROCESSOR column reads 100% GPU. Only if you\'re running Ollama inside a Docker container do you additionally need the NVIDIA Container Toolkit on the host, plus `--gpus=all` on the container.',
+            },
+            {
+              q: 'My prompt or document gets cut off partway through',
+              a: 'Ollama\'s context window defaults to 4096 tokens on most consumer GPUs (it scales up automatically to 32K or 256K on higher-VRAM cards). Anything longer than the active window is silently truncated. Raise it per session with `/set parameter num_ctx 8192` in `ollama run`, per API call with `"options": {"num_ctx": 8192}`, or for every model with the `OLLAMA_CONTEXT_LENGTH` environment variable before starting the server. A larger context window uses more memory, so watch VRAM if you raise it a lot.',
             },
             {
               q: 'Where are Ollama model files stored?',
@@ -177,9 +181,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Sources',
           items: [
-            '**Ollama Official Website** -- Installation downloads and official documentation',
-            '**Ollama GitHub Repository** -- Source code, issues, and community discussions',
-            '**Ollama Model Library** -- Curated collection of available models with download links',
+            '**[Ollama Official Website](https://ollama.com/download)** -- Installation downloads and official documentation',
+            '**[Ollama GitHub Repository](https://github.com/ollama/ollama)** -- Source code, issues, and official docs (including [context length](https://github.com/ollama/ollama/blob/main/docs/context-length.mdx) and [GPU support](https://github.com/ollama/ollama/blob/main/docs/gpu.mdx))',
+            '**[Ollama Model Library](https://ollama.com/library)** -- Curated collection of available models with download links',
           ],
         },
         commonMistakes: {
