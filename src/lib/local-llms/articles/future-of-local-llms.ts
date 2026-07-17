@@ -867,7 +867,7 @@ schema: {
             'Os modelos de 1–3B com fine-tuning rivalizam com os 7B genéricos para tarefas específicas de domínio em 2026.',
             'Smartphones (iPhone A18, Snapdragon X Elite) executam Llama 3.2 3B a 15–30 tok/s em 2026.',
             'Os modelos de raciocínio melhoram a precisão em 15–30% em matemática e codificação.',
-            '50% das grandes empresas planeja inferência local para cargas de trabalho sensíveis até o final de 2026.',
+            'Indústrias reguladas lideram a adoção da inferência local para cargas de trabalho sensíveis, com adoção empresarial crescente ao longo de 2026.',
             'As ferramentas de fine-tuning (Unsloth, MLX-Finetune) tornam o LoRA acessível em hardware de consumo, com tempos de treinamento em queda — veja [Fine-tuning sem código: o quão perto estamos?](/pt/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) para a análise completa.',
           ],
         },
@@ -2125,7 +2125,7 @@ schema: {
             { '트렌드': '2. 온디바이스 AI', '변화 내용': 'iPhone A18, Snapdragon X가 1–3B 실행', '일정': '2026년 진행 중', '영향': '스마트폰에서 무지연, 완전한 프라이버시' },
             { '트렌드': '3. 추론 모델', '변화 내용': '연쇄 사고가 정확도를 15–30% 향상', '일정': '2026년 이후', '영향': '수학, 논리, 다단계 작업 향상' },
             { '트렌드': '4. 파인튜닝 도구', '변화 내용': 'GUI 기반 노코드 파인튜닝 도착', '일정': '2026년 말–2027년', '영향': '개발자가 커맨드라인 불필요' },
-            { '트렌드': '5. 기업 도입', '변화 내용': '대형 기업의 50%가 온프레미스 도입', '일정': '2027년까지', '영향': '금융, 의료, 법률 분야가 선도' },
+            { '트렌드': '5. 기업 도입', '변화 내용': '하이브리드 아키텍처와 데이터 상주 규정이 온프레미스 도입을 촉진', '일정': '2027년까지', '영향': '금융, 의료, 법률 분야가 선도' },
           ],
         },
         smallerModels: {
