@@ -126,6 +126,18 @@ import { article as isBalconySolarLegalNewHampshire } from './articles/is-balcon
 import { article as isBalconySolarLegalVermont } from './articles/is-balcony-solar-legal-vermont'
 import { article as isBalconySolarLegalConnecticut } from './articles/is-balcony-solar-legal-connecticut'
 
+// Local AI Trends 2027 — 10-part series
+import { article as localAiTrend2027CloudSubsidyCollapse } from './articles/local-ai-trend-2027-cloud-subsidy-collapse'
+import { article as localAiTrend2027AiPcNpuNormalization } from './articles/local-ai-trend-2027-ai-pc-npu-normalization'
+import { article as localAiTrend2027SmallLanguageModels } from './articles/local-ai-trend-2027-small-language-models'
+import { article as localAiTrend2027PrivateRag } from './articles/local-ai-trend-2027-private-rag'
+import { article as localAiTrend2027FrontierDesktopAi } from './articles/local-ai-trend-2027-frontier-desktop-ai'
+import { article as localAiTrend2027HybridLocalCloudRouting } from './articles/local-ai-trend-2027-hybrid-local-cloud-routing'
+import { article as localAiTrend2027AiNasHomeServer } from './articles/local-ai-trend-2027-ai-nas-home-server'
+import { article as localAiTrend2027LocalAgenticAi } from './articles/local-ai-trend-2027-local-agentic-ai'
+import { article as localAiTrend2027DataSovereigntyCompliance } from './articles/local-ai-trend-2027-data-sovereignty-compliance'
+import { article as localAiTrend2027NoCodeFineTuning } from './articles/local-ai-trend-2027-no-code-fine-tuning'
+
 export const promptBitesContent: Record<string, Partial<Record<Language, PromptBiteArticle>>> = {
   howMuchVramForLocalLlm,
   whatIsQ4KMQuantization,
@@ -254,4 +266,16 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   isBalconySolarLegalNewHampshire,
   isBalconySolarLegalVermont,
   isBalconySolarLegalConnecticut,
+
+  // Local AI Trends 2027 — 10-part series
+  localAiTrend2027CloudSubsidyCollapse,
+  localAiTrend2027AiPcNpuNormalization,
+  localAiTrend2027SmallLanguageModels,
+  localAiTrend2027PrivateRag,
+  localAiTrend2027FrontierDesktopAi,
+  localAiTrend2027HybridLocalCloudRouting,
+  localAiTrend2027AiNasHomeServer,
+  localAiTrend2027LocalAgenticAi,
+  localAiTrend2027DataSovereigntyCompliance,
+  localAiTrend2027NoCodeFineTuning,
 }

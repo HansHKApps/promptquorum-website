@@ -151,6 +151,13 @@ function stripToProseOnly(block) {
   // same reasoning: the linked article's slug isn't a claim made by this one.
   prose = prose.replace(/\]\(\/[^)]*\)/g, '](/)')
 
+  // Strip siblingBites/parentArticle values — these are cross-reference slugs
+  // or paths to OTHER articles (which may legitimately have a year in their
+  // own slug, e.g. 'local-ai-trend-2027-...'), not a freshness claim made by
+  // this article's own prose.
+  prose = prose.replace(/siblingBites:\s*\[[^\]]*\]/g, 'siblingBites: []')
+  prose = prose.replace(/parentArticle:\s*['"][^'"]*['"]/g, "parentArticle: ''")
+
   return prose
 }
 
