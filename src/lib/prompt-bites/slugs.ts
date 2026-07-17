@@ -170,4 +170,16 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'is-balcony-solar-legal-new-hampshire': 'isBalconySolarLegalNewHampshire',
   'is-balcony-solar-legal-vermont':       'isBalconySolarLegalVermont',
   'is-balcony-solar-legal-connecticut':   'isBalconySolarLegalConnecticut',
+
+  // Local AI Trends 2027 — 10-part series (not yet in PROMPT_BITES_PUBLISHED_SLUGS)
+  'local-ai-trend-2027-cloud-subsidy-collapse':      'localAiTrend2027CloudSubsidyCollapse',
+  'local-ai-trend-2027-ai-pc-npu-normalization':     'localAiTrend2027AiPcNpuNormalization',
+  'local-ai-trend-2027-small-language-models':       'localAiTrend2027SmallLanguageModels',
+  'local-ai-trend-2027-private-rag':                 'localAiTrend2027PrivateRag',
+  'local-ai-trend-2027-frontier-desktop-ai':          'localAiTrend2027FrontierDesktopAi',
+  'local-ai-trend-2027-hybrid-local-cloud-routing':  'localAiTrend2027HybridLocalCloudRouting',
+  'local-ai-trend-2027-ai-nas-home-server':           'localAiTrend2027AiNasHomeServer',
+  'local-ai-trend-2027-local-agentic-ai':             'localAiTrend2027LocalAgenticAi',
+  'local-ai-trend-2027-data-sovereignty-compliance':  'localAiTrend2027DataSovereigntyCompliance',
+  'local-ai-trend-2027-no-code-fine-tuning':          'localAiTrend2027NoCodeFineTuning',
 }

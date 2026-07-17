@@ -76,6 +76,13 @@ function isInExceptionContext(line, keyword) {
 // reader-facing prose, and every article (evergreen or not) must have them.
 const METADATA_DATE_LINE = /\b(publishDate|dateModified|datePublished|next_refresh_due|last_full_refresh|lastFactChecked|next_seo_review_due|last_seo_review|updatedDate|specific_year|archive_after)\s*:/;
 
+// A siblingBites/parentArticle line lists cross-reference slugs to OTHER
+// articles, which may legitimately contain a year in their own slug (e.g.
+// 'local-ai-trend-2027-...') — not a freshness claim made by THIS article's
+// own prose. Mirrors the same exclusion already applied in
+// validate-freshness-tier.mjs's stripToProseOnly().
+const SIBLING_REFERENCE_LINE = /^\s*(siblingBites\s*:\s*\[|parentArticle\s*:\s*['"])/;
+
 // A line whose only year-shaped content is a link target (structured
 // `url:`/`href:` field, or an inline markdown `](/path-2026)`) isn't making a
 // freshness claim in THIS article's own prose — it's just pointing at another
@@ -184,9 +191,10 @@ function validateEvergreen(filePath, content) {
       continue;
     }
 
-    // Skip metadata date-field lines and link-only lines — see the 2026-07-02
-    // header note for why these aren't reader-facing freshness claims.
-    if (METADATA_DATE_LINE.test(line) || isPureLinkLine(line)) {
+    // Skip metadata date-field lines, link-only lines, and siblingBites/
+    // parentArticle cross-reference lines — see the 2026-07-02 header note
+    // for why these aren't reader-facing freshness claims.
+    if (METADATA_DATE_LINE.test(line) || isPureLinkLine(line) || SIBLING_REFERENCE_LINE.test(line)) {
       continue;
     }
 

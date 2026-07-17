@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'By late 2026: 1–3B models rival 7B quality, on-device inference works on iPhones (A18) and Snapdragon X Elite phones, reasoning models improve step-by-step accuracy by 15–30%, and 50% of large enterprises plan on-premises inference for sensitive workloads. This guide covers the 5 key trends reshaping local AI in 2026–2027 with timelines, benchmarks, and adoption predictions.',
       metaDescription: '1–3B models rival 7B quality in 2026. Smartphones run local LLMs at 15–30 tok/sec. Reasoning models improve accuracy 15–30%. 50% of enterprises will adopt on-premises inference by 2027.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**By late 2026: 1–3B models rival 7B quality, on-device inference works on iPhones (A18) and Snapdragon X Elite phones, reasoning models improve step-by-step accuracy by 15–30%, and 50% of large enterprises plan on-premises inference for sensitive workloads.**',
       audience: 'Developers and enterprise architects evaluating local LLM adoption timelines',
       readTime: '10 min read',
@@ -51,20 +51,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'The 5 Local LLM Trends at a Glance',
           columns: ['Trend', 'What Is Changing', 'Timeline', 'Impact'],
           rows: [
-            { 'Trend': '1. Smaller Models', 'What Is Changing': '1–3B models now match 7B (2023) quality', 'Timeline': '2026 active', 'Impact': 'Practical inference on 4 GB RAM' },
+            { 'Trend': '1. Smaller Models', 'What Is Changing': 'Quality per parameter keeps improving; gap with older large models narrowing', 'Timeline': '2026 active', 'Impact': 'Practical inference on 4 GB RAM' },
             { 'Trend': '2. On-Device AI', 'What Is Changing': 'iPhones A18, Snapdragon X run 1–3B', 'Timeline': '2026 active', 'Impact': 'Zero latency, full privacy on phones' },
             { 'Trend': '3. Reasoning Models', 'What Is Changing': 'Chain-of-thought improves accuracy 15–30%', 'Timeline': '2026+', 'Impact': 'Better math, logic, multi-step tasks' },
-            { 'Trend': '4. Fine-Tuning Tools', 'What Is Changing': 'GUI-based no-code fine-tuning arriving', 'Timeline': 'Late 2026–2027', 'Impact': 'Developers skip command-line' },
-            { 'Trend': '5. Enterprise Adoption', 'What Is Changing': '50% of large enterprises adopt on-prem', 'Timeline': 'By 2027', 'Impact': 'Banking, healthcare, legal leading' },
+            { 'Trend': '4. Fine-Tuning Tools', 'What Is Changing': 'GUI-based no-code fine-tuning arriving; training times trending down', 'Timeline': 'Late 2026–2027', 'Impact': 'Developers skip command-line' },
+            { 'Trend': '5. Enterprise Adoption', 'What Is Changing': 'Hybrid local/cloud architecture and data-residency rules drive on-prem adoption', 'Timeline': 'By 2027', 'Impact': 'Banking, healthcare, legal leading' },
           ],
         },
         smallerModels: {
           id: 'smaller-models',
           title: 'Are 1–3B Models Reaching 7B Quality in 2026?',
           content: [
-            '**Yes — model quality per parameter is rising fast.** Phi-4 Mini 3.8B scores 68% MMLU; Llama 3.2 3B scores 58% — both rival Llama 3.3 7B (55% MMLU) from 2023.',
-            'Drivers: better attention mechanisms, synthetic training data, parameter sharing, and LoRA-style compression.',
-            'Implication: 1–3B models are now practical for summarization, Q&A, and code completion on 4 GB RAM hardware.',
+            '**Directionally, yes.** Analysts and open-model benchmarks suggest small-model quality per parameter keeps improving year over year, narrowing the gap with older, larger models. Drivers: better attention mechanisms, synthetic training data, parameter sharing, and LoRA-style compression.',
+            'Implication: 1–3B models are increasingly practical for summarization, Q&A, and code completion on 4 GB RAM hardware.',
+            'For the deployment-pattern angle — which use cases actually benefit from a smaller model versus when parameter count still matters — see [Are Small Language Models the Right Choice for Your Use Case?](/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
         },
         onDevice: {
@@ -80,9 +80,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'finetuning-tools',
           title: 'How Are Fine-Tuning Tools Getting Easier?',
           content: [
-            '**Expect GUI-based, no-code fine-tuning platforms by late 2026.** Unsloth and Axolotl currently require command-line skills; next-generation tools will offer drag-and-drop dataset upload and one-click LoRA training.',
-            'Multi-GPU training is becoming trivial: auto-sharding and distributed training out-of-the-box are roadmap features for major frameworks.',
-            'Current state (April 2026): fine-tuning a 7B model on 1,000 examples takes ~30 minutes on an RTX 4090 with Unsloth. Expected to drop to under 10 minutes by 2027.',
+            '**GUI-based, no-code fine-tuning platforms are arriving.** Unsloth and Axolotl currently require command-line skills; next-generation tools are adding drag-and-drop dataset upload and one-click LoRA training. Multi-GPU training is also becoming simpler, with auto-sharding and distributed training on major frameworks\' roadmaps.',
+            'Training time is expected to keep dropping as these tools mature, though exact figures vary by hardware and dataset size.',
+            'For the full no-code fine-tuning workflow — including which tasks are ready for non-engineers today — see [No-Code Fine-Tuning: How Close Are We?](/prompt-bites/local-ai-trend-2027-no-code-fine-tuning).',
           ],
         },
         reasoning: {
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**2026 (current): Large enterprises in banking, healthcare, and defense running local LLMs for sensitive document processing.**',
             '2027: Mid-market companies (500–5,000 employees) adopting on-premises inference as hardware costs drop and managed solutions emerge.',
             '2028: SMBs gain access to affordable on-premises AI — cheaper than cloud API subscriptions at scale.',
-            'Long-term standard: hybrid architecture (local for routine workloads, cloud for peak capacity and frontier models).',
+            'Long-term standard: many analysts expect a hybrid architecture to become common — local for routine workloads, cloud for peak capacity and frontier models. For a deeper look at how routing between local and cloud models is likely to work in practice, see [Hybrid Local-Cloud Routing: What Changes in 2027?](/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing).',
           ],
         },
         challenges: {
@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Real-time latency:** Local inference is not suitable for <500ms real-time pipelines. An RTX 4090 generates ~150 tok/sec on 7B — good for chat, not sub-500ms APIs.',
             '**Infrastructure costs:** On-premises requires capital: $600–$2,000 GPU + cooling + maintenance. "Local is free" is a misconception — API costs shift, not disappear.',
             '**Talent shortage:** Few engineers know how to productionize vLLM, manage model updates, or optimize batch throughput. Will improve by 2027.',
-            '**Regulatory uncertainty:** Data residency laws (GDPR, HIPAA, China DSL) are evolving. The future of local AI partially depends on how these laws are enforced.',
+            '**Regulatory uncertainty:** Data residency laws (GDPR, HIPAA, China DSL) are evolving, and enforcement approach still varies by jurisdiction. This uncertainty is a growing driver of enterprise local-AI adoption — for the compliance angle in depth, see [Data Sovereignty and Compliance: The 2027 Outlook](/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
           ],
         },
         commonMistakes: {
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'What is the biggest local LLM trend in 2026?',
-              a: 'Smaller models achieving higher quality per parameter. Phi-4 Mini 3.8B and Llama 3.2 3B (2026) match Llama 3.3 7B (2023) on benchmarks. Architectural improvements — better attention, synthetic training data, parameter sharing — are driving quality up without increasing model size.',
+              a: 'Smaller models achieving higher quality per parameter, year over year. Architectural improvements — better attention, synthetic training data, parameter sharing — are driving quality up without increasing model size. See [Are Small Language Models the Right Choice for Your Use Case?](/prompt-bites/local-ai-trend-2027-small-language-models) for the deployment-pattern breakdown.',
             },
             {
               q: 'Can smartphones run local LLMs in 2026?',
@@ -143,11 +143,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'When will fine-tuning local LLMs become easy?',
-              a: 'Late 2026 to 2027. Unsloth and Axolotl currently require command-line skills. No-code GUI fine-tuning platforms are actively in development. Today, fine-tuning a 7B model on 1,000 examples takes ~30 minutes on an RTX 4090 with Unsloth — a practical baseline for developers.',
+              a: 'Late 2026 to 2027. Unsloth and Axolotl currently require command-line skills; no-code GUI fine-tuning platforms are actively in development, and training times are trending down as tooling matures. See [No-Code Fine-Tuning: How Close Are We?](/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) for the full workflow analysis.',
             },
             {
               q: 'How many enterprises will run local LLMs by 2027?',
-              a: 'Estimates suggest 50% of large enterprises (1,000+ employees) will run at least some inference on-premises by 2027, primarily in banking, healthcare, and legal sectors. In 2026, regulated industries are the early adopters. By 2028, mid-market and SMBs enter the market as hardware costs fall.',
+              a: 'Regulated industries (banking, healthcare, legal) are the earliest on-premises adopters, driven partly by data-residency requirements, and mid-market and SMB adoption is expected to follow as hardware costs fall. For the compliance drivers behind this shift, see [Data Sovereignty and Compliance: The 2027 Outlook](/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
             },
             {
               q: 'What is the quality gap between local and cloud LLMs in 2026?',
@@ -197,7 +197,7 @@ schema: {
         description: '1–3B models rival 7B quality in 2026. Smartphones run local LLMs at 15–30 tok/sec. Reasoning models improve accuracy 15–30%. 50% of enterprises will adopt on-premises inference by 2027.',
         url: 'https://www.promptquorum.com/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-20',
+        dateModified: '2026-07-16',
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -226,7 +226,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'What is the biggest local LLM trend in 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Smaller models achieving higher quality per parameter. Phi-4 Mini 3.8B and Llama 3.2 3B (2026) match Llama 3.3 7B (2023) on benchmarks via better attention, synthetic training, and parameter sharing.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Smaller models achieving higher quality per parameter, year over year, driven by better attention mechanisms, synthetic training data, and parameter sharing.' },
           },
           {
             '@type': 'Question',
@@ -241,12 +241,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'When will fine-tuning local LLMs become easy?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Late 2026 to 2027. GUI-based no-code fine-tuning platforms are in active development. Today (April 2026), Unsloth and Axolotl require command-line skills. Fine-tuning a 7B model on 1,000 examples takes ~30 minutes on RTX 4090 — expected to drop to 10 minutes by 2027.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Late 2026 to 2027. GUI-based no-code fine-tuning platforms are in active development. Unsloth and Axolotl currently require command-line skills, and training times are trending down as tooling matures.' },
           },
           {
             '@type': 'Question',
             name: 'How many enterprises will run local LLMs by 2027?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Estimates suggest 50% of large enterprises (1,000+ employees) will run at least some inference on-premises by 2027, primarily in banking, healthcare, and legal sectors. In 2026, regulated industries are early adopters. By 2028, mid-market and SMBs enter the market.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Regulated industries (banking, healthcare, legal) are the earliest on-premises adopters, driven partly by data-residency requirements. Mid-market and SMB adoption is expected to follow as hardware costs fall.' },
           },
           {
             '@type': 'Question',
@@ -271,11 +271,11 @@ schema: {
         name: 'Top Local LLM Trends in 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Smaller models reaching 7B quality', description: '1–3B models (Phi-4 Mini 3.8B, Llama 3.2 3B) now match Llama 3.3 7B benchmarks. Practical for summarization and Q&A on 4 GB RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Smaller models reaching 7B quality', description: 'Small-model quality per parameter keeps improving year over year. Practical for summarization and Q&A on 4 GB RAM.' },
           { '@type': 'ListItem', position: 2, name: 'On-device AI on smartphones', description: 'iPhones A18, Snapdragon X Elite run 1–3B models at 15–30 tok/sec. Full privacy, no internet, compliant with GDPR Article 5.' },
           { '@type': 'ListItem', position: 3, name: 'Reasoning models improving accuracy', description: 'Chain-of-thought models (DeepSeek-R1, OpenAI o1) improve math/logic/multi-step accuracy by 15–30%. Trade-off: 3–5x more tokens per response.' },
-          { '@type': 'ListItem', position: 4, name: 'No-code fine-tuning tools launching', description: 'GUI-based fine-tuning platforms (Unsloth, Axolotl successors) expected late 2026–2027. Currently command-line only. 7B fine-tune: 30 min expected to drop to 10 min by 2027.' },
-          { '@type': 'ListItem', position: 5, name: 'Enterprise on-premises adoption', description: '50% of large enterprises plan on-prem inference by 2027. Banking, healthcare, legal adopt first. Mid-market and SMB follow in 2028.' },
+          { '@type': 'ListItem', position: 4, name: 'No-code fine-tuning tools launching', description: 'GUI-based fine-tuning platforms (Unsloth, Axolotl successors) expected late 2026–2027. Currently command-line only; training times trending down as tooling matures.' },
+          { '@type': 'ListItem', position: 5, name: 'Enterprise on-premises adoption', description: 'Regulated industries — banking, healthcare, legal — adopt on-prem inference first, driven partly by data-residency rules. Mid-market and SMB follow as hardware costs fall.' },
         ],
       },
     },
@@ -287,7 +287,7 @@ schema: {
       intro: 'Para finales de 2026: los modelos de 1–3B rivalizan con la calidad de los 7B, la inferencia en dispositivo funciona en iPhones (A18) y teléfonos Snapdragon X Elite, los modelos de razonamiento mejoran la precisión paso a paso en un 15–30%, y el 50% de las grandes empresas planea inferencia local para cargas de trabajo sensibles. Esta guía cubre las 5 tendencias clave que están redefiniendo la IA local en 2026–2027 con cronogramas, benchmarks y predicciones de adopción.',
       metaDescription: 'Los modelos 1–3B rivalizan con la calidad 7B en 2026 y los smartphones ejecutan LLMs a 15–30 tok/s. El razonamiento mejora la precisión un 15–30%.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**Para finales de 2026: los modelos de 1–3B rivalizan con la calidad de los 7B, la inferencia en dispositivo funciona en iPhones (A18) y teléfonos Snapdragon X Elite, los modelos de razonamiento mejoran la precisión en un 15–30%, y el 50% de las grandes empresas planea inferencia local para cargas de trabajo sensibles.**',
       audience: 'Desarrolladores y arquitectos empresariales que evalúan los cronogramas de adopción de LLMs locales',
       readTime: '10 min de lectura',
@@ -323,20 +323,20 @@ schema: {
           title: 'Las 5 tendencias de LLM local de un vistazo',
           columns: ['Tendencia', 'Qué está cambiando', 'Cronograma', 'Impacto'],
           rows: [
-            { 'Tendencia': '1. Modelos más pequeños', 'Qué está cambiando': 'Los modelos 1–3B igualan ahora la calidad 7B (2023)', 'Cronograma': '2026 activo', 'Impacto': 'Inferencia práctica en 4 GB de RAM' },
+            { 'Tendencia': '1. Modelos más pequeños', 'Qué está cambiando': 'La calidad por parámetro sigue mejorando; se reduce la brecha con modelos grandes más antiguos', 'Cronograma': '2026 activo', 'Impacto': 'Inferencia práctica en 4 GB de RAM' },
             { 'Tendencia': '2. IA en dispositivo', 'Qué está cambiando': 'iPhone A18 y Snapdragon X ejecutan 1–3B', 'Cronograma': '2026 activo', 'Impacto': 'Latencia cero, privacidad total en teléfonos' },
             { 'Tendencia': '3. Modelos de razonamiento', 'Qué está cambiando': 'El chain-of-thought mejora la precisión un 15–30%', 'Cronograma': '2026+', 'Impacto': 'Mejor matemática, lógica y tareas multietapa' },
-            { 'Tendencia': '4. Herramientas de fine-tuning', 'Qué está cambiando': 'Llega el fine-tuning sin código con interfaz GUI', 'Cronograma': 'Finales 2026–2027', 'Impacto': 'Los desarrolladores omiten la línea de comandos' },
-            { 'Tendencia': '5. Adopción empresarial', 'Qué está cambiando': 'El 50% de las grandes empresas adopta inferencia local', 'Cronograma': 'Para 2027', 'Impacto': 'Banca, salud y sector legal son pioneros' },
+            { 'Tendencia': '4. Herramientas de fine-tuning', 'Qué está cambiando': 'Llega el fine-tuning sin código con interfaz GUI; los tiempos de entrenamiento tienden a bajar', 'Cronograma': 'Finales 2026–2027', 'Impacto': 'Los desarrolladores omiten la línea de comandos' },
+            { 'Tendencia': '5. Adopción empresarial', 'Qué está cambiando': 'La arquitectura híbrida local/nube y las normas de residencia de datos impulsan la adopción local', 'Cronograma': 'Para 2027', 'Impacto': 'Banca, salud y sector legal son pioneros' },
           ],
         },
         smallerModels: {
           id: 'smaller-models',
           title: '¿Los modelos 1–3B alcanzan calidad 7B en 2026?',
           content: [
-            '**Sí — la calidad del modelo por parámetro está aumentando rápidamente.** Phi-4 Mini 3.8B obtiene 68% en MMLU; Llama 3.2 3B obtiene 58% — ambos rivalizan con Llama 3.3 7B (55% MMLU) de 2023.',
-            'Factores impulsores: mejores mecanismos de atención, datos de entrenamiento sintéticos, compartición de parámetros y compresión estilo LoRA.',
-            'Implicación: los modelos 1–3B son ahora prácticos para resumen, preguntas y respuestas, y completado de código en hardware con 4 GB de RAM.',
+            '**Direccionalmente, sí.** Analistas y benchmarks de modelos abiertos sugieren que la calidad por parámetro de los modelos pequeños sigue mejorando año tras año, reduciendo la brecha con modelos grandes más antiguos. Factores impulsores: mejores mecanismos de atención, datos de entrenamiento sintéticos, compartición de parámetros y compresión estilo LoRA.',
+            'Implicación: los modelos 1–3B son cada vez más prácticos para resumen, preguntas y respuestas, y completado de código en hardware con 4 GB de RAM.',
+            'Para el ángulo de los patrones de despliegue — qué casos de uso realmente se benefician de un modelo más pequeño frente a cuándo el número de parámetros sigue importando — consulta [¿Son los modelos de lenguaje pequeños la opción correcta para tu caso de uso?](/es/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
         },
         onDevice: {
@@ -352,9 +352,9 @@ schema: {
           id: 'finetuning-tools',
           title: '¿Cómo se están simplificando las herramientas de fine-tuning?',
           content: [
-            '**Se esperan plataformas de fine-tuning sin código basadas en GUI para finales de 2026.** Unsloth y Axolotl actualmente requieren habilidades en línea de comandos; las herramientas de nueva generación ofrecerán carga de datasets por arrastrar y soltar y entrenamiento LoRA con un solo clic.',
-            'El entrenamiento multi-GPU se vuelve trivial: el auto-sharding y el entrenamiento distribuido listo para usar son características en el roadmap de los principales frameworks.',
-            'Estado actual (abril de 2026): hacer fine-tuning de un modelo 7B con 1.000 ejemplos tarda ~30 minutos en una RTX 4090 con Unsloth. Se espera que baje a menos de 10 minutos para 2027.',
+            '**Llegan plataformas de fine-tuning sin código basadas en GUI.** Unsloth y Axolotl actualmente requieren habilidades en línea de comandos; las herramientas de nueva generación están añadiendo carga de datasets por arrastrar y soltar y entrenamiento LoRA con un solo clic. El entrenamiento multi-GPU también se está simplificando, con auto-sharding y entrenamiento distribuido en el roadmap de los principales frameworks.',
+            'Se espera que el tiempo de entrenamiento siga bajando a medida que estas herramientas maduran, aunque las cifras exactas varían según el hardware y el tamaño del dataset.',
+            'Para el flujo de trabajo completo de fine-tuning sin código — incluyendo qué tareas ya están al alcance de perfiles no técnicos — consulta [Fine-Tuning sin código: ¿qué tan cerca estamos?](/es/prompt-bites/local-ai-trend-2027-no-code-fine-tuning).',
           ],
         },
         reasoning: {
@@ -373,7 +373,7 @@ schema: {
             '**2026 (presente): Las grandes empresas de banca, salud y defensa ya ejecutan LLMs locales para el procesamiento de documentos sensibles.**',
             '2027: Las empresas medianas (500–5.000 empleados) adoptan inferencia local a medida que bajan los costos de hardware y surgen soluciones gestionadas.',
             '2028: Las pymes acceden a IA local asequible — más barata que las suscripciones a API en la nube a escala.',
-            'Estándar a largo plazo: arquitectura híbrida (local para cargas de trabajo rutinarias, nube para capacidad pico y modelos de frontera).',
+            'Estándar a largo plazo: muchos analistas esperan que se generalice una arquitectura híbrida — local para cargas de trabajo rutinarias, nube para capacidad pico y modelos de frontera. Para un análisis más profundo de cómo funcionará en la práctica el enrutamiento entre modelos locales y en la nube, consulta [Enrutamiento híbrido local-nube: ¿qué cambia en 2027?](/es/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing).',
           ],
         },
         challenges: {
@@ -384,7 +384,7 @@ schema: {
             '**Latencia en tiempo real:** La inferencia local no es adecuada para pipelines en tiempo real de <500ms. Una RTX 4090 genera ~150 tok/seg en 7B — bueno para chat, no para APIs sub-500ms.',
             '**Costos de infraestructura:** Lo local requiere capital: GPU 600–2.000 € + refrigeración + mantenimiento. "Lo local es gratis" es un error — los costos de API se desplazan, no desaparecen.',
             '**Escasez de talento:** Pocos ingenieros saben cómo llevar vLLM a producción, gestionar actualizaciones de modelos u optimizar el throughput por lotes. Mejorará para 2027.',
-            '**Incertidumbre regulatoria:** Las leyes de residencia de datos (GDPR, HIPAA, DSL de China, LFPDPPP de México, Ley 25.326 de Argentina, Ley 1581 de Colombia) están en evolución. El futuro de la IA local depende en parte de cómo se aplican estas normas.',
+            '**Incertidumbre regulatoria:** Las leyes de residencia de datos (GDPR, HIPAA, DSL de China, LFPDPPP de México, Ley 25.326 de Argentina, Ley 1581 de Colombia) están en evolución, y el enfoque de aplicación aún varía según la jurisdicción. Esta incertidumbre es un motor creciente de la adopción empresarial de IA local — para el ángulo de cumplimiento en profundidad, consulta [Soberanía de datos y cumplimiento: perspectivas para 2027](/es/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
           ],
         },
         commonMistakes: {
@@ -403,7 +403,7 @@ schema: {
           faqs: [
             {
               q: '¿Cuál es la mayor tendencia de LLM local en 2026?',
-              a: 'Los modelos más pequeños logran mayor calidad por parámetro. Phi-4 Mini 3.8B y Llama 3.2 3B (2026) igualan a Llama 3.3 7B (2023) en benchmarks. Las mejoras arquitectónicas — mejor atención, datos de entrenamiento sintéticos, compartición de parámetros — impulsan la calidad sin aumentar el tamaño del modelo.',
+              a: 'Los modelos más pequeños logran mayor calidad por parámetro, año tras año. Las mejoras arquitectónicas — mejor atención, datos de entrenamiento sintéticos, compartición de parámetros — impulsan la calidad sin aumentar el tamaño del modelo. Consulta [¿Son los modelos de lenguaje pequeños la opción correcta para tu caso de uso?](/es/prompt-bites/local-ai-trend-2027-small-language-models) para el desglose de patrones de despliegue.',
             },
             {
               q: '¿Los smartphones pueden ejecutar LLMs locales en 2026?',
@@ -415,11 +415,11 @@ schema: {
             },
             {
               q: '¿Cuándo será fácil hacer fine-tuning de LLMs locales?',
-              a: 'De finales de 2026 a 2027. Unsloth y Axolotl requieren actualmente habilidades en línea de comandos. Las plataformas de fine-tuning sin código con GUI están en desarrollo activo. Hoy, hacer fine-tuning de un modelo 7B con 1.000 ejemplos tarda ~30 minutos en una RTX 4090 con Unsloth — una base práctica para desarrolladores.',
+              a: 'De finales de 2026 a 2027. Unsloth y Axolotl requieren actualmente habilidades en línea de comandos; las plataformas de fine-tuning sin código con GUI están en desarrollo activo, y los tiempos de entrenamiento tienden a bajar a medida que maduran las herramientas. Consulta [Fine-Tuning sin código: ¿qué tan cerca estamos?](/es/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) para el análisis completo del flujo de trabajo.',
             },
             {
               q: '¿Cuántas empresas ejecutarán LLMs locales para 2027?',
-              a: 'Las estimaciones sugieren que el 50% de las grandes empresas (1.000+ empleados) ejecutará al menos alguna inferencia local para 2027, principalmente en los sectores de banca, salud y legal. En 2026, las industrias reguladas son los primeros adoptantes. Para 2028, las empresas medianas y las pymes entran al mercado a medida que bajan los costos de hardware.',
+              a: 'Las industrias reguladas (banca, salud, legal) son las primeras adoptantes de la inferencia local, impulsadas en parte por los requisitos de residencia de datos, y se espera que la adopción de empresas medianas y pymes le siga a medida que bajan los costos de hardware. Para los motores de cumplimiento detrás de este cambio, consulta [Soberanía de datos y cumplimiento: perspectivas para 2027](/es/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
             },
             {
               q: '¿Cuál es la brecha de calidad entre los LLMs locales y los de la nube en 2026?',
@@ -469,7 +469,7 @@ schema: {
         description: 'Los modelos de 1–3B rivalizan con la calidad 7B en 2026. Los smartphones ejecutan LLMs locales a 15–30 tok/seg. Los modelos de razonamiento mejoran la precisión un 15–30%. El 50% de las empresas adoptará inferencia local para 2027.',
         url: 'https://www.promptquorum.com/es/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-20',
+        dateModified: '2026-07-16',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -498,7 +498,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cuál es la mayor tendencia de LLM local en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Los modelos más pequeños logran mayor calidad por parámetro. Phi-4 Mini 3.8B y Llama 3.2 3B (2026) igualan a Llama 3.3 7B (2023) en benchmarks. Las mejoras arquitectónicas — mejor atención, datos sintéticos, compartición de parámetros — impulsan la calidad sin aumentar el tamaño del modelo.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Los modelos más pequeños logran mayor calidad por parámetro, año tras año, impulsados por mejor atención, datos de entrenamiento sintéticos y compartición de parámetros.' },
           },
           {
             '@type': 'Question',
@@ -513,12 +513,12 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cuándo será fácil hacer fine-tuning de LLMs locales?',
-            acceptedAnswer: { '@type': 'Answer', text: 'De finales de 2026 a 2027. Las plataformas de fine-tuning sin código con GUI están en desarrollo activo. Hoy (abril 2026), Unsloth y Axolotl requieren línea de comandos. Hacer fine-tuning de un modelo 7B con 1.000 ejemplos tarda ~30 minutos en RTX 4090 — se espera que baje a 10 minutos para 2027.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'De finales de 2026 a 2027. Las plataformas de fine-tuning sin código con GUI están en desarrollo activo. Unsloth y Axolotl requieren actualmente línea de comandos, y los tiempos de entrenamiento tienden a bajar a medida que maduran las herramientas.' },
           },
           {
             '@type': 'Question',
             name: '¿Cuántas empresas ejecutarán LLMs locales para 2027?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Las estimaciones sugieren que el 50% de las grandes empresas (1.000+ empleados) ejecutará al menos alguna inferencia local para 2027, principalmente en banca, salud y sector legal. En 2026, las industrias reguladas son los primeros adoptantes. Para 2028, las empresas medianas y pymes entran al mercado.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Las industrias reguladas (banca, salud, legal) son las primeras adoptantes de la inferencia local, impulsadas en parte por los requisitos de residencia de datos. Se espera que la adopción de empresas medianas y pymes le siga a medida que bajan los costos de hardware.' },
           },
           {
             '@type': 'Question',
@@ -549,11 +549,11 @@ schema: {
         name: 'Principales tendencias de LLM local 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Modelos más pequeños alcanzando calidad 7B', description: 'Los modelos 1–3B (Phi-4 Mini 3.8B, Llama 3.2 3B) igualan ahora los benchmarks de Llama 3.3 7B. Práctico para resumen y preguntas y respuestas en 4 GB de RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Modelos más pequeños alcanzando calidad 7B', description: 'La calidad por parámetro de los modelos pequeños sigue mejorando año tras año. Práctico para resumen y preguntas y respuestas en 4 GB de RAM.' },
           { '@type': 'ListItem', position: 2, name: 'IA en dispositivo en smartphones', description: 'iPhone A18 y Snapdragon X Elite ejecutan modelos 1–3B a 15–30 tok/seg. Privacidad total, sin internet, cumple el Artículo 5 del GDPR.' },
           { '@type': 'ListItem', position: 3, name: 'Modelos de razonamiento mejoran la precisión', description: 'Los modelos de chain-of-thought (DeepSeek-R1, OpenAI o1) mejoran la precisión en matemáticas/lógica/multietapa un 15–30%. Compromiso: 3–5x más tokens por respuesta.' },
-          { '@type': 'ListItem', position: 4, name: 'Herramientas de fine-tuning sin código se lanzan', description: 'Plataformas de fine-tuning con GUI (Unsloth, sucesores de Axolotl) esperadas para finales de 2026–2027. Actualmente solo línea de comandos. Fine-tune 7B: 30 min se espera que baje a 10 min para 2027.' },
-          { '@type': 'ListItem', position: 5, name: 'Adopción empresarial local', description: 'El 50% de las grandes empresas planea inferencia local para 2027. Banca, salud y sector legal adoptan primero. Empresas medianas y pymes siguen en 2028.' },
+          { '@type': 'ListItem', position: 4, name: 'Herramientas de fine-tuning sin código se lanzan', description: 'Plataformas de fine-tuning con GUI (Unsloth, sucesores de Axolotl) esperadas para finales de 2026–2027. Actualmente solo línea de comandos; los tiempos de entrenamiento tienden a bajar a medida que maduran las herramientas.' },
+          { '@type': 'ListItem', position: 5, name: 'Adopción empresarial local', description: 'Las industrias reguladas — banca, salud, legal — adoptan primero la inferencia local, impulsadas en parte por las normas de residencia de datos. Empresas medianas y pymes siguen a medida que bajan los costos de hardware.' },
         ],
       },
     },
@@ -565,7 +565,7 @@ schema: {
       intro: 'بحلول نهاية 2026: تنافس النماذج بحجم 1–3B جودة نماذج 7B، ويعمل الاستدلال على الجهاز على هواتف iPhone (A18) وهواتف Snapdragon X Elite، وتحسّن نماذج الاستدلال الدقة خطوة بخطوة بنسبة 15–30%، وتخطط 50% من الشركات الكبرى للاستدلال المحلي للأحمال الحساسة. يغطي هذا الدليل الاتجاهات الخمسة الرئيسية التي تعيد تشكيل الذكاء الاصطناعي المحلي في 2026–2027 مع الجداول الزمنية والمعايير وتنبؤات التبني.',
       metaDescription: 'نماذج ⁨1⁩–⁨3B⁩ تعادل جودة ⁨7B⁩ في ⁨2026⁩؛ الهواتف تشغّل ⁨LLMs⁩ بـ ⁨15⁩–⁨30⁩ رمز/ثانية؛ الاستدلال يحسّن الدقة ⁨15⁩–⁨30%. 50%⁩ من المؤسسات ستنشر محلياً بحلول ⁨2027⁩.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**بحلول نهاية 2026: تنافس النماذج بحجم 1–3B جودة نماذج 7B، ويعمل الاستدلال على الجهاز على هواتف iPhone (A18) وهواتف Snapdragon X Elite، وتحسّن نماذج الاستدلال الدقة بنسبة 15–30%، وتخطط 50% من الشركات الكبرى للاستدلال المحلي للأحمال الحساسة.**',
       audience: 'المطورون ومهندسو المؤسسات الذين يقيّمون الجداول الزمنية لتبني نماذج LLM المحلية',
       readTime: '10 دقائق للقراءة',
@@ -601,20 +601,20 @@ schema: {
           title: 'اتجاهات LLM المحلية الخمسة في لمحة',
           columns: ['الاتجاه', 'ما الذي يتغير', 'الجدول الزمني', 'الأثر'],
           rows: [
-            { 'الاتجاه': '1. نماذج أصغر', 'ما الذي يتغير': 'النماذج 1–3B تضاهي الآن جودة 7B (2023)', 'الجدول الزمني': '2026 نشط', 'الأثر': 'استدلال عملي على 4 GB من RAM' },
+            { 'الاتجاه': '1. نماذج أصغر', 'ما الذي يتغير': 'الجودة لكل معامل تستمر في التحسن؛ الفجوة مع النماذج الكبيرة الأقدم تتقلص', 'الجدول الزمني': '2026 نشط', 'الأثر': 'استدلال عملي على 4 GB من RAM' },
             { 'الاتجاه': '2. ذكاء اصطناعي على الجهاز', 'ما الذي يتغير': 'iPhone A18 و Snapdragon X يشغّلان 1–3B', 'الجدول الزمني': '2026 نشط', 'الأثر': 'زمن استجابة صفري وخصوصية كاملة على الهواتف' },
             { 'الاتجاه': '3. نماذج الاستدلال', 'ما الذي يتغير': 'يحسّن الـ chain-of-thought الدقة بنسبة 15–30%', 'الجدول الزمني': '2026+', 'الأثر': 'رياضيات ومنطق ومهام متعددة الخطوات أفضل' },
-            { 'الاتجاه': '4. أدوات fine-tuning', 'ما الذي يتغير': 'وصول fine-tuning بدون برمجة بواجهة GUI', 'الجدول الزمني': 'أواخر 2026–2027', 'الأثر': 'يتجاوز المطورون سطر الأوامر' },
-            { 'الاتجاه': '5. تبني المؤسسات', 'ما الذي يتغير': '50% من الشركات الكبرى تتبنى الاستدلال المحلي', 'الجدول الزمني': 'بحلول 2027', 'الأثر': 'القطاع المصرفي والصحي والقانوني روّاد' },
+            { 'الاتجاه': '4. أدوات fine-tuning', 'ما الذي يتغير': 'وصول fine-tuning بدون برمجة بواجهة GUI؛ زمن التدريب يتجه للانخفاض', 'الجدول الزمني': 'أواخر 2026–2027', 'الأثر': 'يتجاوز المطورون سطر الأوامر' },
+            { 'الاتجاه': '5. تبني المؤسسات', 'ما الذي يتغير': 'البنية الهجينة المحلية/السحابية وقوانين إقامة البيانات تدفع التبني المحلي', 'الجدول الزمني': 'بحلول 2027', 'الأثر': 'القطاع المصرفي والصحي والقانوني روّاد' },
           ],
         },
         smallerModels: {
           id: 'smaller-models',
           title: 'هل تبلغ النماذج 1–3B جودة 7B في 2026؟',
           content: [
-            '**نعم — جودة النموذج لكل معامل في ازدياد سريع.** يحقق Phi-4 Mini 3.8B نسبة 68% في MMLU؛ ويحقق Llama 3.2 3B نسبة 58% — وكلاهما ينافس Llama 3.3 7B (55% MMLU) لعام 2023.',
-            'العوامل المحركة: آليات انتباه أفضل وبيانات تدريب اصطناعية ومشاركة المعاملات وضغط بأسلوب LoRA.',
-            'الأثر: أصبحت النماذج 1–3B الآن عملية للتلخيص والأسئلة والأجوبة وإكمال الكود على أجهزة بسعة 4 GB من RAM.',
+            '**من حيث الاتجاه، نعم.** يشير المحللون ومعايير النماذج المفتوحة إلى أن جودة النماذج الصغيرة لكل معامل تستمر في التحسن عاماً بعد عام، ما يقلّص الفجوة مع النماذج الأكبر الأقدم. العوامل المحركة: آليات انتباه أفضل وبيانات تدريب اصطناعية ومشاركة المعاملات وضغط بأسلوب LoRA.',
+            'الأثر: أصبحت النماذج 1–3B عملية بشكل متزايد للتلخيص والأسئلة والأجوبة وإكمال الكود على أجهزة بسعة 4 GB من RAM.',
+            'لمعرفة زاوية أنماط النشر — أي حالات الاستخدام تستفيد فعلاً من نموذج أصغر مقابل الحالات التي لا يزال فيها عدد المعاملات مهماً — راجع [هل النماذج اللغوية الصغيرة هي الخيار الصحيح لحالة استخدامك؟](/ar/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
         },
         onDevice: {
@@ -630,9 +630,9 @@ schema: {
           id: 'finetuning-tools',
           title: 'كيف يجري تبسيط أدوات الـ fine-tuning؟',
           content: [
-            '**يُتوقع وصول منصات fine-tuning بدون برمجة قائمة على GUI بحلول أواخر 2026.** يتطلب Unsloth و Axolotl حاليًا مهارات سطر الأوامر؛ وستوفر أدوات الجيل الجديد تحميل مجموعات البيانات بالسحب والإفلات وتدريب LoRA بنقرة واحدة.',
-            'يصبح التدريب متعدد الـ GPU بسيطًا: التقسيم التلقائي والتدريب الموزّع الجاهز للاستخدام ميزات مدرجة في خارطة طريق أطر العمل الرئيسية.',
-            'الحالة الراهنة (أبريل 2026): يستغرق fine-tuning نموذج 7B بـ 1000 مثال نحو 30 دقيقة على RTX 4090 مع Unsloth. ويُتوقع أن ينخفض إلى أقل من 10 دقائق بحلول 2027.',
+            '**منصات fine-tuning بدون برمجة قائمة على GUI في طريقها للوصول.** يتطلب Unsloth و Axolotl حاليًا مهارات سطر الأوامر؛ وتضيف أدوات الجيل الجديد تحميل مجموعات البيانات بالسحب والإفلات وتدريب LoRA بنقرة واحدة. كما يصبح التدريب متعدد الـ GPU أبسط، مع التقسيم التلقائي والتدريب الموزّع ضمن خارطة طريق أطر العمل الرئيسية.',
+            'يُتوقع أن يستمر زمن التدريب في الانخفاض مع نضج هذه الأدوات، وإن كانت الأرقام الدقيقة تختلف حسب الأجهزة وحجم مجموعة البيانات.',
+            'لمعرفة سير عمل fine-tuning بدون برمجة كاملاً — بما في ذلك المهام الجاهزة اليوم لغير المهندسين — راجع [Fine-Tuning بدون برمجة: إلى أي مدى اقتربنا؟](/ar/prompt-bites/local-ai-trend-2027-no-code-fine-tuning).',
           ],
         },
         reasoning: {
@@ -651,7 +651,7 @@ schema: {
             '**2026 (الحاضر): تشغّل الشركات الكبرى في القطاع المصرفي والصحي والدفاعي بالفعل نماذج LLM محلية لمعالجة المستندات الحساسة.**',
             '2027: تتبنى الشركات المتوسطة (500–5000 موظف) الاستدلال المحلي مع انخفاض تكاليف الأجهزة وظهور حلول مُدارة.',
             '2028: تحصل الشركات الصغيرة والمتوسطة على ذكاء اصطناعي محلي ميسور التكلفة — أرخص من اشتراكات API السحابية على نطاق واسع.',
-            'المعيار طويل الأمد: بنية هجينة (محلية للأحمال الروتينية وسحابية للسعة القصوى ونماذج الحدود).',
+            'المعيار طويل الأمد: يتوقع كثير من المحللين أن تصبح البنية الهجينة شائعة — محلية للأحمال الروتينية وسحابية للسعة القصوى ونماذج الحدود. للاطلاع على تحليل أعمق حول كيفية عمل التوجيه بين النماذج المحلية والسحابية عملياً، راجع [التوجيه الهجين المحلي-السحابي: ماذا يتغير في 2027؟](/ar/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing).',
           ],
         },
         challenges: {
@@ -662,7 +662,7 @@ schema: {
             '**زمن الاستجابة الفوري:** الاستدلال المحلي غير مناسب لمسارات العمل الفورية بأقل من 500ms. تولّد RTX 4090 نحو 150 tok/sec على 7B — جيدة للمحادثة وليست لـ APIs أقل من 500ms.',
             '**تكاليف البنية التحتية:** يتطلب الحل المحلي رأس مال: GPU بـ 600–2000 € + تبريد + صيانة. "المحلي مجاني" خطأ — تتحول تكاليف API ولا تختفي.',
             '**نقص المواهب:** قلة من المهندسين يعرفون كيفية نقل vLLM إلى الإنتاج أو إدارة تحديثات النماذج أو تحسين الإنتاجية على دفعات. سيتحسن ذلك بحلول 2027.',
-            '**عدم اليقين التنظيمي:** قوانين إقامة البيانات (GDPR, HIPAA, قانون DSL في الصين، PDPL السعودي، قانون حماية البيانات الإماراتي) في تطور. يعتمد مستقبل الذكاء الاصطناعي المحلي جزئيًا على كيفية تطبيق هذه القواعد.',
+            '**عدم اليقين التنظيمي:** قوانين إقامة البيانات (GDPR, HIPAA, قانون DSL في الصين، PDPL السعودي، قانون حماية البيانات الإماراتي) في تطور، ولا يزال نهج التطبيق يختلف من ولاية قضائية لأخرى. هذا الغموض دافع متزايد لتبني الذكاء الاصطناعي المحلي في المؤسسات — لمزيد من التفصيل حول جانب الامتثال، راجع [السيادة على البيانات والامتثال: توقعات 2027](/ar/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
           ],
         },
         commonMistakes: {
@@ -681,7 +681,7 @@ schema: {
           faqs: [
             {
               q: 'ما هو أكبر اتجاه لنماذج LLM المحلية في 2026؟',
-              a: 'تحقق النماذج الأصغر جودة أعلى لكل معامل. يضاهي Phi-4 Mini 3.8B و Llama 3.2 3B (2026) نموذج Llama 3.3 7B (2023) في المعايير. التحسينات المعمارية — انتباه أفضل وبيانات تدريب اصطناعية ومشاركة معاملات — تدفع الجودة دون زيادة حجم النموذج.',
+              a: 'تحقق النماذج الأصغر جودة أعلى لكل معامل، عاماً بعد عام. التحسينات المعمارية — انتباه أفضل وبيانات تدريب اصطناعية ومشاركة معاملات — تدفع الجودة دون زيادة حجم النموذج. راجع [هل النماذج اللغوية الصغيرة هي الخيار الصحيح لحالة استخدامك؟](/ar/prompt-bites/local-ai-trend-2027-small-language-models) لتفصيل أنماط النشر.',
             },
             {
               q: 'هل تستطيع الهواتف الذكية تشغيل نماذج LLM محلية في 2026؟',
@@ -693,11 +693,11 @@ schema: {
             },
             {
               q: 'متى سيصبح fine-tuning نماذج LLM المحلية سهلاً؟',
-              a: 'من أواخر 2026 إلى 2027. يتطلب Unsloth و Axolotl حاليًا مهارات سطر الأوامر. منصات fine-tuning بدون برمجة بواجهة GUI قيد التطوير النشط. اليوم، يستغرق fine-tuning نموذج 7B بـ 1000 مثال نحو 30 دقيقة على RTX 4090 مع Unsloth — أساس عملي للمطورين.',
+              a: 'من أواخر 2026 إلى 2027. يتطلب Unsloth و Axolotl حاليًا مهارات سطر الأوامر؛ ومنصات fine-tuning بدون برمجة بواجهة GUI قيد التطوير النشط، ويتجه زمن التدريب للانخفاض مع نضج الأدوات. راجع [Fine-Tuning بدون برمجة: إلى أي مدى اقتربنا؟](/ar/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) للتحليل الكامل لسير العمل.',
             },
             {
               q: 'كم عدد الشركات التي ستشغّل نماذج LLM محلية بحلول 2027؟',
-              a: 'تشير التقديرات إلى أن 50% من الشركات الكبرى (1000+ موظف) ستشغّل بعض الاستدلال المحلي على الأقل بحلول 2027، خاصة في قطاعات المصارف والصحة والقانون. في 2026، تكون الصناعات المنظمة من أوائل المتبنين. وبحلول 2028 تدخل الشركات المتوسطة والصغيرة إلى السوق مع انخفاض تكاليف الأجهزة.',
+              a: 'الصناعات المنظمة (المصارف، الصحة، القانون) هي أول من يتبنى الاستدلال المحلي، مدفوعة جزئياً بمتطلبات إقامة البيانات، ويُتوقع أن يلحق بها تبني الشركات المتوسطة والصغيرة مع انخفاض تكاليف الأجهزة. لمعرفة دوافع الامتثال وراء هذا التحول، راجع [السيادة على البيانات والامتثال: توقعات 2027](/ar/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
             },
             {
               q: 'ما فجوة الجودة بين نماذج LLM المحلية والسحابية في 2026؟',
@@ -747,7 +747,7 @@ schema: {
         description: 'تنافس النماذج 1–3B جودة 7B في 2026. تشغّل الهواتف الذكية نماذج LLM محلية بسرعة 15–30 tok/sec. تحسّن نماذج الاستدلال الدقة بنسبة 15–30%. ستتبنى 50% من الشركات الاستدلال المحلي بحلول 2027.',
         url: 'https://www.promptquorum.com/ar/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-20',
+        dateModified: '2026-07-16',
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -776,7 +776,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'ما هو أكبر اتجاه لنماذج LLM المحلية في 2026؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'تحقق النماذج الأصغر جودة أعلى لكل معامل. يضاهي Phi-4 Mini 3.8B و Llama 3.2 3B (2026) نموذج Llama 3.3 7B (2023) في المعايير. التحسينات المعمارية — انتباه أفضل وبيانات اصطناعية ومشاركة معاملات — تدفع الجودة دون زيادة حجم النموذج.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'تحقق النماذج الأصغر جودة أعلى لكل معامل، عاماً بعد عام، مدفوعة بانتباه أفضل وبيانات تدريب اصطناعية ومشاركة معاملات.' },
           },
           {
             '@type': 'Question',
@@ -791,12 +791,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'متى سيصبح fine-tuning نماذج LLM المحلية سهلاً؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'من أواخر 2026 إلى 2027. منصات fine-tuning بدون برمجة بواجهة GUI قيد التطوير النشط. اليوم (أبريل 2026)، يتطلب Unsloth و Axolotl سطر الأوامر. يستغرق fine-tuning نموذج 7B بـ 1000 مثال نحو 30 دقيقة على RTX 4090 — ويُتوقع أن ينخفض إلى 10 دقائق بحلول 2027.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'من أواخر 2026 إلى 2027. منصات fine-tuning بدون برمجة بواجهة GUI قيد التطوير النشط. يتطلب Unsloth و Axolotl حاليًا سطر الأوامر، ويتجه زمن التدريب للانخفاض مع نضج الأدوات.' },
           },
           {
             '@type': 'Question',
             name: 'كم عدد الشركات التي ستشغّل نماذج LLM محلية بحلول 2027؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'تشير التقديرات إلى أن 50% من الشركات الكبرى (1000+ موظف) ستشغّل بعض الاستدلال المحلي على الأقل بحلول 2027، خاصة في المصارف والصحة والقطاع القانوني. في 2026، تكون الصناعات المنظمة من أوائل المتبنين. وبحلول 2028 تدخل الشركات المتوسطة والصغيرة إلى السوق.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'الصناعات المنظمة (المصارف، الصحة، القانون) هي أول من يتبنى الاستدلال المحلي، مدفوعة جزئياً بمتطلبات إقامة البيانات. يُتوقع أن يلحق بها تبني الشركات المتوسطة والصغيرة مع انخفاض تكاليف الأجهزة.' },
           },
           {
             '@type': 'Question',
@@ -827,11 +827,11 @@ schema: {
         name: 'أبرز اتجاهات LLM المحلية 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'نماذج أصغر تبلغ جودة 7B', description: 'النماذج 1–3B (Phi-4 Mini 3.8B, Llama 3.2 3B) تضاهي الآن معايير Llama 3.3 7B. عملية للتلخيص والأسئلة والأجوبة على 4 GB من RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'نماذج أصغر تبلغ جودة 7B', description: 'جودة النماذج الصغيرة لكل معامل تستمر في التحسن عاماً بعد عام. عملية للتلخيص والأسئلة والأجوبة على 4 GB من RAM.' },
           { '@type': 'ListItem', position: 2, name: 'ذكاء اصطناعي على الجهاز في الهواتف الذكية', description: 'iPhone A18 و Snapdragon X Elite يشغّلان النماذج 1–3B بسرعة 15–30 tok/sec. خصوصية كاملة دون إنترنت، يمتثل للمادة 5 من GDPR.' },
           { '@type': 'ListItem', position: 3, name: 'نماذج الاستدلال تحسّن الدقة', description: 'نماذج chain-of-thought (DeepSeek-R1, OpenAI o1) تحسّن الدقة في الرياضيات/المنطق/متعدد الخطوات بنسبة 15–30%. المقايضة: 3–5x أكثر من الـ tokens لكل إجابة.' },
-          { '@type': 'ListItem', position: 4, name: 'إطلاق أدوات fine-tuning بدون برمجة', description: 'منصات fine-tuning بواجهة GUI (Unsloth وخلفاء Axolotl) متوقعة بحلول أواخر 2026–2027. حاليًا سطر الأوامر فقط. fine-tune 7B: 30 دقيقة يُتوقع أن تنخفض إلى 10 دقائق بحلول 2027.' },
-          { '@type': 'ListItem', position: 5, name: 'تبني المؤسسات المحلي', description: 'تخطط 50% من الشركات الكبرى للاستدلال المحلي بحلول 2027. القطاع المصرفي والصحي والقانوني يتبنى أولاً. الشركات المتوسطة والصغيرة تتبع في 2028.' },
+          { '@type': 'ListItem', position: 4, name: 'إطلاق أدوات fine-tuning بدون برمجة', description: 'منصات fine-tuning بواجهة GUI (Unsloth وخلفاء Axolotl) متوقعة بحلول أواخر 2026–2027. حاليًا سطر الأوامر فقط؛ زمن التدريب يتجه للانخفاض مع نضج الأدوات.' },
+          { '@type': 'ListItem', position: 5, name: 'تبني المؤسسات المحلي', description: 'الصناعات المنظمة — المصارف والصحة والقانون — تتبنى الاستدلال المحلي أولاً، مدفوعة جزئياً بقوانين إقامة البيانات. الشركات المتوسطة والصغيرة تتبع مع انخفاض تكاليف الأجهزة.' },
         ],
       },
     },
@@ -843,6 +843,7 @@ schema: {
       intro: 'Para o final de 2026: os modelos de 1–3B rivalizam com a qualidade dos 7B, a inferência em dispositivo funciona em iPhones (A18) e telefones Snapdragon X Elite, os modelos de raciocínio melhoram a precisão passo a passo em 15–30%, e 50% das grandes empresas planeja inferência local para cargas de trabalho sensíveis. Este guia cobre as 5 tendências principais que estão redefinindo a IA local em 2026–2027 com cronogramas, benchmarks e previsões de adoção.',
       metaDescription: 'Os modelos 1–3B rivalizam com a qualidade 7B em 2026 e smartphones executam LLMs a 15–30 tok/s. O raciocínio melhora a precisão em 15–30%.',
       publishDate: '2026-04-04',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**Para o final de 2026: os modelos de 1–3B rivalizam com a qualidade dos 7B, a inferência em dispositivo funciona em iPhones (A18) e telefones Snapdragon X Elite, os modelos de raciocínio melhoram a precisão em 15–30%, e 50% das grandes empresas planeja inferência local para cargas de trabalho sensíveis.**',
       audience: 'Desenvolvedores e arquitetos empresariais avaliando cronogramas de adoção de LLMs locais',
       readTime: '10 min de leitura',
@@ -867,18 +868,18 @@ schema: {
             'Smartphones (iPhone A18, Snapdragon X Elite) executam Llama 3.2 3B a 15–30 tok/s em 2026.',
             'Os modelos de raciocínio melhoram a precisão em 15–30% em matemática e codificação.',
             '50% das grandes empresas planeja inferência local para cargas de trabalho sensíveis até o final de 2026.',
-            'As ferramentas de fine-tuning (Unsloth, MLX-Finetune) tornam o LoRA acessível em hardware de consumo.',
+            'As ferramentas de fine-tuning (Unsloth, MLX-Finetune) tornam o LoRA acessível em hardware de consumo, com tempos de treinamento em queda — veja [Fine-tuning sem código: o quão perto estamos?](/pt/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) para a análise completa.',
           ],
         },
         trendsSummary: {
           id: 'trends-summary',
           title: 'As 5 tendências principais de LLM local para 2026–2027',
           rows: [
-            { 'Tendência': 'Modelos menores melhores', 'Cronograma': 'Já disponível (2026)', 'Impacto': 'Modelos 1–3B viáveis para domínios específicos' },
+            { 'Tendência': 'Modelos menores melhores', 'Cronograma': 'Já disponível (2026)', 'Impacto': 'Qualidade por parâmetro melhora ano a ano em domínios específicos' },
             { 'Tendência': 'Inferência em dispositivo', 'Cronograma': 'Já disponível (2026)', 'Impacto': 'Smartphones executam 1B–3B localmente' },
             { 'Tendência': 'Modelos de raciocínio', 'Cronograma': 'Já disponível (2026)', 'Impacto': '+15–30% de precisão em raciocínio passo a passo' },
-            { 'Tendência': 'Adoção empresarial', 'Cronograma': 'Aceleração em 2026–2027', 'Impacto': '50% das grandes empresas planeja inferência local' },
-            { 'Tendência': 'Ferramentas de fine-tuning', 'Cronograma': 'Já disponível (2026)', 'Impacto': 'LoRA em 8 GB VRAM, 1–2 horas com Unsloth' },
+            { 'Tendência': 'Adoção empresarial', 'Cronograma': 'Aceleração em 2026–2027', 'Impacto': 'Conformidade regulatória impulsiona a inferência local' },
+            { 'Tendência': 'Ferramentas de fine-tuning', 'Cronograma': 'Já disponível (2026)', 'Impacto': 'LoRA em 8 GB VRAM; tempos de treinamento em queda' },
           ],
           columns: ['Tendência', 'Cronograma', 'Impacto'],
         },
@@ -889,7 +890,7 @@ schema: {
           items: [
             'Phi-4 Mini (3.8B) supera modelos de 7B em benchmarks de raciocínio matemático.',
             'Gemma 3 2B com fine-tuning em domínio legal supera Llama 3.3 7B genérico em Q&A jurídica.',
-            'A chave é o fine-tuning específico do domínio — modelos menores genéricos ainda ficam atrás dos 7B.',
+            'A chave é o fine-tuning específico do domínio — modelos menores genéricos ainda ficam atrás dos 7B. Para o panorama completo de quando um modelo menor realmente compensa, veja [Modelos de linguagem pequenos são a escolha certa para o seu caso de uso?](/pt/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
         },
         onDevice: {
@@ -905,19 +906,19 @@ schema: {
         enterpriseAdoption: {
           id: 'enterprise-adoption',
           title: 'Previsões de adoção empresarial de LLM local',
-          content: '**Previsão: 50% das grandes empresas planeja implantação de inferência local para dados sensíveis até o final de 2026.**',
+          content: '**Previsão: as indústrias reguladas lideram a adoção da inferência local para dados sensíveis, impulsionadas em parte por exigências de residência de dados.**',
           items: [
-            'Drivers: conformidade com LGPD/GDPR, redução de custos de API, privacidade de dados.',
+            'Drivers: conformidade com LGPD/GDPR, redução de custos de API, privacidade de dados. Para o aprofundamento regulatório, veja [Soberania de dados e conformidade: o panorama para 2027](/pt/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
             'Casos de uso empresarial nº 1: RAG corporativo (Q&A de documentos internos).',
             'Hardware preferido para empresas: Mac mini M4 Pro, Framework Desktop, servidores NVIDIA L40S.',
-            'Para empresas brasileiras: LGPD + custos de câmbio tornam o local especialmente atraente vs. APIs em USD.',
+            'Para empresas brasileiras: LGPD + custos de câmbio tornam o local especialmente atraente vs. APIs em USD. Muitas equipes adotam uma arquitetura híbrida (local para cargas rotineiras, nuvem para picos) — veja [Roteamento híbrido local-nuvem: o que muda em 2027?](/pt/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing).',
           ],
         },
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes sobre o futuro dos LLMs locais',
           faqs: [
-            { q: 'Os modelos de 1–3B realmente rivalizam com os 7B em 2026?', a: 'Para tarefas específicas de domínio, sim. Modelos de 1–3B com fine-tuning (Phi-4 Mini, Gemma 3 2B) superam modelos de 7B genéricos em tarefas especializadas. Para uso geral, os 7B ainda são superiores.' },
+            { q: 'Os modelos de 1–3B realmente rivalizam com os 7B em 2026?', a: 'Para tarefas específicas de domínio, sim. Modelos de 1–3B com fine-tuning (Phi-4 Mini, Gemma 3 2B) superam modelos de 7B genéricos em tarefas especializadas. Para uso geral, os 7B ainda são superiores. Veja [Modelos de linguagem pequenos são a escolha certa para o seu caso de uso?](/pt/prompt-bites/local-ai-trend-2027-small-language-models) para o detalhamento por padrão de uso.' },
             { q: 'Quando os smartphones executarão LLMs localmente de forma confiável?', a: 'Já estão em 2026: iPhone 16 Pro (A18 Pro) roda Llama 3.2 1B/3B localmente via Core ML. Snapdragon X Elite roda Llama 3.2 8B a 15–30 tok/s. Para modelos 7B+, ainda é necessário hardware dedicado.' },
             { q: 'O Brasil tem infraestrutura de hardware para LLMs locais?', a: 'Sim — qualquer hardware listado neste guia (Mac mini, RTX 5060 Ti, Framework Desktop) está disponível no Brasil via importação ou distribuidores locais. Os custos em BRL são maiores, mas o ROI se acelera com o câmbio USD/BRL desfavorável para APIs externas.' },
           ],
@@ -954,7 +955,7 @@ schema: {
       intro: 'Bis Ende 2026: 1–3B-Modelle konkurrieren mit 7B-Qualität, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und 50% großer Unternehmen planen lokale Inferenz für sensible Workloads. Dieser Leitfaden behandelt die 5 Schlüsseltrends, die lokale KI 2026–2027 mit Zeitplänen, Benchmarks und Adoptionsprognosen umgestalten.',
       metaDescription: 'Die Zukunft lokaler LLMs: 1–3B-Modelle erreichen 2026 7B-Qualität, Smartphones laufen mit 15–30 Token/Sek. 50 % der Unternehmen bis 2027.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**Bis Ende 2026: 1–3B-Modelle konkurrieren mit 7B-Qualität, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und 50% großer Unternehmen planen lokale Inferenz für sensible Workloads.**',
       audience: 'Entwickler und Enterprise-Architekten, die Zeitpläne für lokale LLM-Adoption evaluieren',
       readTime: '10 Min. Lesezeit',
@@ -990,20 +991,20 @@ schema: {
           title: 'Die 5 lokalen LLM-Trends auf einen Blick',
           columns: ['Trend', 'Was ändert sich', 'Zeitplan', 'Auswirkung'],
           rows: [
-            { 'Trend': '1. Kleinere Modelle', 'Was ändert sich': '1–3B-Modelle entsprechen jetzt 7B (2023) Qualität', 'Zeitplan': '2026 aktiv', 'Auswirkung': 'Praktische Inferenz auf 4 GB RAM' },
+            { 'Trend': '1. Kleinere Modelle', 'Was ändert sich': 'Qualität pro Parameter steigt weiter; Lücke zu älteren großen Modellen schrumpft', 'Zeitplan': '2026 aktiv', 'Auswirkung': 'Praktische Inferenz auf 4 GB RAM' },
             { 'Trend': '2. On-Device KI', 'Was ändert sich': 'iPhones A18, Snapdragon X führen 1–3B durch', 'Zeitplan': '2026 aktiv', 'Auswirkung': 'Zero Latenz, volle Privatsphäre auf Phones' },
             { 'Trend': '3. Reasoning-Modelle', 'Was ändert sich': 'Chain-of-Thought verbessert Genauigkeit 15–30%', 'Zeitplan': '2026+', 'Auswirkung': 'Bessere Mathematik, Logik, Multi-Schritt-Aufgaben' },
-            { 'Trend': '4. Fine-Tuning-Tools', 'Was ändert sich': 'GUI-basiertes No-Code-Fine-Tuning ankommend', 'Zeitplan': 'Ende 2026–2027', 'Auswirkung': 'Entwickler überspringen Kommandozeile' },
-            { 'Trend': '5. Enterprise-Adoption', 'Was ändert sich': '50% großer Unternehmen adoptieren On-Prem', 'Zeitplan': 'Bis 2027', 'Auswirkung': 'Banking, Healthcare, Legal anführend' },
+            { 'Trend': '4. Fine-Tuning-Tools', 'Was ändert sich': 'GUI-basiertes No-Code-Fine-Tuning ankommend; Trainingszeiten sinken tendenziell', 'Zeitplan': 'Ende 2026–2027', 'Auswirkung': 'Entwickler überspringen Kommandozeile' },
+            { 'Trend': '5. Enterprise-Adoption', 'Was ändert sich': 'Hybride Local/Cloud-Architektur und Datenresidenz-Vorgaben treiben On-Prem-Adoption', 'Zeitplan': 'Bis 2027', 'Auswirkung': 'Banking, Healthcare, Legal anführend' },
           ],
         },
         smallerModels: {
           id: 'smaller-models',
           title: 'Erreichen 1–3B-Modelle 7B-Qualität 2026?',
           content: [
-            '**Ja — Modellqualität pro Parameter steigt schnell.** Phi-4 Mini 3.8B erzielt 68% MMLU; Llama 3.2 3B erzielt 58% — beide konkurrieren mit Llama 3.3 7B (55% MMLU) von 2023.',
-            'Treiber: bessere Aufmerksamkeitsmechanismen, synthetische Trainingsdaten, Parameterfreigabe und LoRA-ähnliche Kompression.',
-            'Implikation: 1–3B-Modelle sind jetzt praktisch für Zusammenfassung, Q&A und Code-Vervollständigung auf 4 GB RAM Hardware.',
+            '**Tendenziell ja.** Analysten und Open-Model-Benchmarks deuten darauf hin, dass die Modellqualität pro Parameter bei kleinen Modellen Jahr für Jahr steigt und sich die Lücke zu älteren, größeren Modellen verringert. Treiber: bessere Aufmerksamkeitsmechanismen, synthetische Trainingsdaten, Parameterfreigabe und LoRA-ähnliche Kompression.',
+            'Implikation: 1–3B-Modelle werden zunehmend praktisch für Zusammenfassung, Q&A und Code-Vervollständigung auf 4 GB RAM Hardware.',
+            'Zum Deployment-Aspekt — welche Anwendungsfälle wirklich von einem kleineren Modell profitieren und wann die Parameterzahl weiterhin zählt — siehe [Sind kleine Sprachmodelle die richtige Wahl für Ihren Anwendungsfall?](/de/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
         },
         onDevice: {
@@ -1019,9 +1020,9 @@ schema: {
           id: 'finetuning-tools',
           title: 'Wie werden Fine-Tuning-Tools einfacher?',
           content: [
-            '**Erwarten Sie GUI-basierte, No-Code Fine-Tuning-Plattformen bis Ende 2026.** Unsloth und Axolotl benötigen derzeit Kommandozeilen-Kenntnisse; nächstgenerationelle Tools bieten Drag-and-Drop-Dataset-Upload und One-Click LoRA-Training.',
-            'Multi-GPU-Training wird trivial: Auto-Sharding und verteiltes Training einsatzbereit sind Roadmap-Features für große Frameworks.',
-            'Aktueller Stand (April 2026): Fine-Tuning eines 7B-Modells auf 1.000 Beispielen dauert ~30 Minuten auf RTX 4090 mit Unsloth. Erwartet wird Reduktion auf unter 10 Minuten bis 2027.',
+            '**GUI-basierte, No-Code Fine-Tuning-Plattformen kommen.** Unsloth und Axolotl benötigen derzeit Kommandozeilen-Kenntnisse; nächstgenerationelle Tools ergänzen Drag-and-Drop-Dataset-Upload und One-Click LoRA-Training. Auch Multi-GPU-Training wird einfacher — Auto-Sharding und verteiltes Training stehen auf der Roadmap großer Frameworks.',
+            'Die Trainingszeit dürfte weiter sinken, während diese Tools reifen, wobei genaue Werte je nach Hardware und Datensatzgröße variieren.',
+            'Zum vollständigen No-Code-Fine-Tuning-Workflow — inklusive welcher Aufgaben schon heute für Nicht-Entwickler machbar sind — siehe [No-Code Fine-Tuning: Wie nah sind wir dran?](/de/prompt-bites/local-ai-trend-2027-no-code-fine-tuning).',
           ],
         },
         reasoning: {
@@ -1040,7 +1041,7 @@ schema: {
             '**2026 (aktuell): Große Unternehmen im Banking, Healthcare und Verteidigung führen lokale LLMs für sensible Dokumentenverarbeitung durch.**',
             '2027: Mid-Market-Unternehmen (500–5.000 Mitarbeiter) adoptieren On-Premises-Inferenz, während Hardware-Kosten fallen und verwaltete Lösungen entstehen.',
             '2028: SMBs erhalten Zugang zu erschwinglicher On-Premises-KI — billiger als Cloud-API-Abos im großen Maßstab.',
-            'Langzeitstandard: hybrid-Architektur (lokal für Routine-Workloads, Cloud für Spitzenkapazität und Frontier-Modelle).',
+            'Langzeitstandard: Viele Analysten erwarten, dass sich eine hybride Architektur durchsetzt — lokal für Routine-Workloads, Cloud für Spitzenkapazität und Frontier-Modelle. Eine tiefere Analyse, wie das Routing zwischen lokalen und Cloud-Modellen in der Praxis aussehen dürfte, finden Sie unter [Hybrides Local-Cloud-Routing: Was ändert sich 2027?](/de/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing).',
           ],
         },
         challenges: {
@@ -1051,7 +1052,7 @@ schema: {
             '**Real-Time-Latenz:** Lokale Inferenz ist nicht geeignet für <500ms Real-Time-Pipelines. RTX 4090 erzeugt ~150 Token/Sek. auf 7B — gut für Chat, nicht für Sub-500ms APIs.',
             '**Infrastrukturkosten:** On-Premises benötigt Kapital: 600–2.200 € GPU + Kühlung + Wartung. "Lokal ist kostenlos" ist ein Irrtum — API-Kosten verschieben sich, nicht verschwinden.',
             '**Talentmangel:** Wenige Ingenieure wissen, wie man vLLM produktiviert, Model-Updates verwaltet oder Batch-Durchsatz optimiert. Wird bis 2027 besser.',
-            '**Regulatorische Unsicherheit:** Datenschutzgesetze (GDPR, HIPAA, China DSL) entwickeln sich. Die Zukunft der lokalen KI hängt teilweise davon ab, wie diese Gesetze durchgesetzt werden.',
+            '**Regulatorische Unsicherheit:** Datenschutzgesetze (GDPR, HIPAA, China DSL) entwickeln sich weiter, und die Durchsetzung variiert weiterhin je nach Jurisdiktion. Diese Unsicherheit ist ein wachsender Treiber der Enterprise-Adoption lokaler KI — zur vertieften Compliance-Perspektive siehe [Data Sovereignty and Compliance: The 2027 Outlook](/de/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
           ],
         },
         commonMistakes: {
@@ -1070,7 +1071,7 @@ schema: {
           faqs: [
             {
               q: 'Was ist der größte lokale LLM-Trend 2026?',
-              a: 'Kleinere Modelle erzielen höhere Qualität pro Parameter. Phi-4 Mini 3.8B und Llama 3.2 3B (2026) entsprechen Llama 3.3 7B (2023) in Benchmarks. Architekturverbesserungen — bessere Aufmerksamkeit, synthetische Trainingsdaten, Parameterfreigabe — steigern Qualität ohne Modellgröße zu erhöhen.',
+              a: 'Kleinere Modelle erzielen Jahr für Jahr höhere Qualität pro Parameter. Architekturverbesserungen — bessere Aufmerksamkeit, synthetische Trainingsdaten, Parameterfreigabe — steigern Qualität ohne Modellgröße zu erhöhen. Siehe [Sind kleine Sprachmodelle die richtige Wahl für Ihren Anwendungsfall?](/de/prompt-bites/local-ai-trend-2027-small-language-models) für die Deployment-Analyse.',
             },
             {
               q: 'Können Smartphones 2026 lokale LLMs durchführen?',
@@ -1082,11 +1083,11 @@ schema: {
             },
             {
               q: 'Wann wird Fine-Tuning von lokalen LLMs einfach?',
-              a: 'Ende 2026 bis 2027. Unsloth und Axolotl erfordern derzeit Kommandozeilen-Kenntnisse. No-Code GUI Fine-Tuning-Plattformen sind aktiv in Entwicklung. Heute dauert Fine-Tuning eines 7B-Modells auf 1.000 Beispielen ~30 Minuten auf RTX 4090 mit Unsloth — eine praktische Baseline für Entwickler.',
+              a: 'Ende 2026 bis 2027. Unsloth und Axolotl erfordern derzeit Kommandozeilen-Kenntnisse; No-Code GUI Fine-Tuning-Plattformen sind aktiv in Entwicklung, und die Trainingszeiten dürften mit reifender Toolchain weiter sinken. Siehe [No-Code Fine-Tuning: Wie nah sind wir dran?](/de/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) für die vollständige Workflow-Analyse.',
             },
             {
               q: 'Wie viele Unternehmen führen lokale LLMs bis 2027 durch?',
-              a: 'Schätzungen legen nahe, dass 50% großer Unternehmen (1.000+ Mitarbeiter) bis 2027 zumindest etwas Inferenz On-Prem durchführen, hauptsächlich in Banking-, Healthcare- und Legal-Sektoren. 2026 sind regulierte Branchen die Early Adopter. Bis 2028 treten Mid-Market und SMBs ein, da Hardware-Kosten fallen.',
+              a: 'Regulierte Branchen (Banking, Healthcare, Recht) sind die frühesten On-Prem-Adopter, teilweise getrieben durch Datenresidenz-Anforderungen, gefolgt von Mid-Market und SMBs, sobald Hardware-Kosten weiter fallen. Zu den Compliance-Treibern siehe [Data Sovereignty and Compliance: The 2027 Outlook](/de/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
             },
             {
               q: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs 2026?',
@@ -1144,7 +1145,7 @@ schema: {
         description: '1–3B-Modelle erreichen 7B-Qualität 2026. Smartphones führen lokale LLMs mit 15–30 Token/Sek. aus. Reasoning-Modelle verbessern Genauigkeit um 15–30%. 50% der Unternehmen adoptieren On-Premises-Inferenz bis 2027.',
         url: 'https://www.promptquorum.com/de/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-20',
+        dateModified: '2026-07-16',
         inLanguage: 'de',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1173,7 +1174,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Was ist der größte lokale LLM-Trend 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Kleinere Modelle erzielen höhere Qualität pro Parameter. Phi-4 Mini 3.8B und Llama 3.2 3B (2026) entsprechen Llama 3.3 7B (2023) in Benchmarks. Architekturverbesserungen sind die Treiber, nicht Größe.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Kleinere Modelle erzielen Jahr für Jahr höhere Qualität pro Parameter. Architekturverbesserungen sind die Treiber, nicht Größe.' },
           },
           {
             '@type': 'Question',
@@ -1188,12 +1189,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'Wann wird Fine-Tuning von lokalen LLMs einfach?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ende 2026 bis 2027. No-Code GUI-Plattformen in Entwicklung. Heute: 30 Minuten auf RTX 4090. Erwartet: 10 Minuten bis 2027.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ende 2026 bis 2027. No-Code GUI-Plattformen in Entwicklung. Unsloth und Axolotl erfordern derzeit Kommandozeile; Trainingszeiten dürften mit reifender Toolchain weiter sinken.' },
           },
           {
             '@type': 'Question',
             name: 'Wie viele Unternehmen führen bis 2027 lokale LLMs durch?',
-            acceptedAnswer: { '@type': 'Answer', text: '50% großer Unternehmen (1.000+ Mitarbeiter) bis 2027, hauptsächlich Banking, Healthcare, Recht. 2026: Early Adopter in regulierten Branchen. 2028: Mid-Market und SMBs.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Regulierte Branchen (Banking, Healthcare, Recht) sind die frühesten On-Prem-Adopter, teilweise getrieben durch Datenresidenz-Anforderungen. Mid-Market und SMBs folgen, sobald Hardware-Kosten fallen.' },
           },
           {
             '@type': 'Question',
@@ -1234,11 +1235,11 @@ schema: {
         name: 'Top lokale LLM-Trends 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Kleinere Modelle erreichen 7B-Qualität', description: '1–3B-Modelle (Phi-4 Mini 3.8B, Llama 3.2 3B) entsprechen jetzt Llama 3.3 7B-Benchmarks. Praktisch für Zusammenfassung und Q&A auf 4 GB RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Kleinere Modelle erreichen 7B-Qualität', description: 'Qualität pro Parameter bei kleinen Modellen steigt Jahr für Jahr. Praktisch für Zusammenfassung und Q&A auf 4 GB RAM.' },
           { '@type': 'ListItem', position: 2, name: 'On-Device-KI auf Smartphones', description: 'iPhones A18, Snapdragon X Elite führen 1–3B mit 15–30 Token/Sek. durch. Volle Privatsphäre, kein Internet, GDPR Artikel 5 kompatibel.' },
           { '@type': 'ListItem', position: 3, name: 'Reasoning-Modelle verbessern Genauigkeit', description: 'Chain-of-Thought-Modelle (DeepSeek-R1, OpenAI o1) verbessern Mathematik/Logik/Multi-Schritt um 15–30%. Kompromiss: 3–5× mehr Tokens pro Antwort.' },
-          { '@type': 'ListItem', position: 4, name: 'No-Code Fine-Tuning-Tools starten', description: 'GUI-basierte Fine-Tuning-Plattformen (Unsloth, Axolotl-Nachfolger) erwartet Ende 2026–2027. Derzeit Kommandozeile nur. 7B Fine-Tune: 30 Min. erwartet 10 Min. bis 2027.' },
-          { '@type': 'ListItem', position: 5, name: 'Enterprise On-Premises-Adoption', description: '50% großer Unternehmen planen On-Prem-Inferenz bis 2027. Banking, Healthcare, Legal erste. Mid-Market und SMB folgen 2028.' },
+          { '@type': 'ListItem', position: 4, name: 'No-Code Fine-Tuning-Tools starten', description: 'GUI-basierte Fine-Tuning-Plattformen (Unsloth, Axolotl-Nachfolger) erwartet Ende 2026–2027. Derzeit nur Kommandozeile; Trainingszeiten sinken tendenziell mit reifender Toolchain.' },
+          { '@type': 'ListItem', position: 5, name: 'Enterprise On-Premises-Adoption', description: 'Regulierte Branchen — Banking, Healthcare, Recht — adoptieren On-Prem-Inferenz zuerst, teils getrieben durch Datenresidenz-Vorgaben. Mid-Market und SMB folgen, sobald Hardware-Kosten fallen.' },
         ],
       },
     },
@@ -1250,7 +1251,7 @@ schema: {
       intro: 'D\'ici fin 2026 : les modèles 1–3B rivalisent avec la qualité 7B, l\'inférence sur appareil fonctionne sur les iPhones (A18) et les téléphones Snapdragon X Elite, les modèles de raisonnement améliorent la précision de 15–30%, et 50% des grandes entreprises planifient l\'inférence locale pour les charges de travail sensibles. Ce guide couvre les 5 tendances clés qui remodelent l\'IA locale en 2026–2027 avec les calendriers, les benchmarks et les prédictions d\'adoption.',
       metaDescription: 'Les modèles 1–3B rivalisent avec la qualité 7B en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. Les modèles de raisonnement améliorent la précision de 15–30%. 50% des entreprises adopteront l\'inférence sur site d\'ici 2027.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**D\'ici fin 2026 : les modèles 1–3B rivalisent avec la qualité 7B, l\'inférence sur appareil fonctionne sur les iPhones (A18) et les téléphones Snapdragon X Elite, les modèles de raisonnement améliorent la précision de 15–30%, et 50% des grandes entreprises planifient l\'inférence locale pour les charges de travail sensibles.**',
       audience: 'Développeurs et architectes d\'entreprise évaluant les calendriers d\'adoption des LLM locaux',
       readTime: '10 min de lecture',
@@ -1286,20 +1287,20 @@ schema: {
           title: 'Les 5 tendances LLM local d\'un coup d\'oeil',
           columns: ['Tendance', 'Ce qui change', 'Calendrier', 'Impact'],
           rows: [
-            { 'Tendance': '1. Modèles plus petits', 'Ce qui change': 'Les modèles 1–3B correspondent maintenant à la qualité 7B (2023)', 'Calendrier': '2026 actif', 'Impact': 'Inférence pratique sur 4 GB de RAM' },
+            { 'Tendance': '1. Modèles plus petits', 'Ce qui change': 'La qualité par paramètre continue de progresser ; l\'écart avec les grands modèles plus anciens se réduit', 'Calendrier': '2026 actif', 'Impact': 'Inférence pratique sur 4 GB de RAM' },
             { 'Tendance': '2. IA sur appareil', 'Ce qui change': 'Les iPhones A18 et Snapdragon X exécutent 1–3B', 'Calendrier': '2026 actif', 'Impact': 'Latence zéro, confidentialité totale sur téléphones' },
             { 'Tendance': '3. Modèles de raisonnement', 'Ce qui change': 'La pensée en chaîne améliore la précision de 15–30%', 'Calendrier': '2026+', 'Impact': 'Meilleures maths, logique, tâches multi-étapes' },
-            { 'Tendance': '4. Outils de fine-tuning', 'Ce qui change': 'Arrivée du fine-tuning sans code basé sur GUI', 'Calendrier': 'Fin 2026–2027', 'Impact': 'Les développeurs ignorent la ligne de commande' },
-            { 'Tendance': '5. Adoption entreprise', 'Ce qui change': '50% des grandes entreprises adoptent sur site', 'Calendrier': 'D\'ici 2027', 'Impact': 'Banque, santé, droit en tête' },
+            { 'Tendance': '4. Outils de fine-tuning', 'Ce qui change': 'Arrivée du fine-tuning sans code basé sur GUI ; les temps d\'entraînement tendent à baisser', 'Calendrier': 'Fin 2026–2027', 'Impact': 'Les développeurs ignorent la ligne de commande' },
+            { 'Tendance': '5. Adoption entreprise', 'Ce qui change': 'L\'architecture hybride locale/cloud et les règles de résidence des données stimulent l\'adoption locale', 'Calendrier': 'D\'ici 2027', 'Impact': 'Banque, santé, droit en tête' },
           ],
         },
         smallerModels: {
           id: 'smaller-models',
           title: 'Les modèles 1–3B atteignent-ils la qualité 7B en 2026?',
           content: [
-            '**Oui — la qualité du modèle par paramètre augmente rapidement.** Phi-4 Mini 3.8B obtient 68% au MMLU; Llama 3.2 3B obtient 58% — tous deux rivalisent avec Llama 3.3 7B (55% MMLU) de 2023.',
-            'Facteurs : meilleurs mécanismes d\'attention, données d\'entraînement synthétiques, partage de paramètres et compression de style LoRA.',
-            'Implication : Les modèles 1–3B sont désormais pratiques pour la synthèse, Q&A et la complétion de code sur du matériel 4 GB.',
+            '**Sur le plan directionnel, oui.** Les analystes et les benchmarks de modèles ouverts suggèrent que la qualité par paramètre des petits modèles continue de s\'améliorer année après année, réduisant l\'écart avec les modèles plus grands et plus anciens. Facteurs : meilleurs mécanismes d\'attention, données d\'entraînement synthétiques, partage de paramètres et compression de style LoRA.',
+            'Implication : Les modèles 1–3B deviennent de plus en plus pratiques pour la synthèse, Q&A et la complétion de code sur du matériel 4 GB.',
+            'Pour l\'angle des schémas de déploiement — quels cas d\'usage bénéficient réellement d\'un modèle plus petit et quand le nombre de paramètres compte encore — voir [Les petits modèles de langage sont-ils le bon choix pour votre cas d\'usage ?](/fr/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
         },
         onDevice: {
@@ -1315,9 +1316,9 @@ schema: {
           id: 'finetuning-tools',
           title: 'Comment les outils de fine-tuning deviennent-ils plus faciles?',
           content: [
-            '**Attendez-vous à des plateformes de fine-tuning sans code basées sur GUI fin 2026.** Unsloth et Axolotl nécessitent actuellement des compétences en ligne de commande; les outils de nouvelle génération offriront le téléchargement de données par glisser-déposer et l\'entraînement LoRA en un clic.',
-            'L\'entraînement multi-GPU devient trivial : le partitioning automatique et l\'entraînement distribué prêts à l\'emploi sont des fonctionnalités de la feuille de route pour les cadres majeurs.',
-            'État actuel (avril 2026) : fine-tuner un modèle 7B sur 1000 exemples prend ~30 minutes sur un RTX 4090 avec Unsloth. Attendu de tomber à moins de 10 minutes d\'ici 2027.',
+            '**Des plateformes de fine-tuning sans code basées sur GUI arrivent.** Unsloth et Axolotl nécessitent actuellement des compétences en ligne de commande ; les outils de nouvelle génération ajoutent le téléchargement de données par glisser-déposer et l\'entraînement LoRA en un clic. L\'entraînement multi-GPU se simplifie aussi, avec le partitionnement automatique et l\'entraînement distribué sur la feuille de route des cadres majeurs.',
+            'Le temps d\'entraînement devrait continuer de baisser à mesure que ces outils mûrissent, même si les chiffres exacts varient selon le matériel et la taille du dataset.',
+            'Pour l\'analyse complète du flux de travail de fine-tuning sans code — y compris les tâches déjà accessibles aux non-développeurs — voir [Fine-Tuning sans code : à quel point sommes-nous proches ?](/fr/prompt-bites/local-ai-trend-2027-no-code-fine-tuning).',
           ],
         },
         reasoning: {
@@ -1336,7 +1337,7 @@ schema: {
             '**2026 (actuel) : Les grandes entreprises du secteur bancaire, sanitaire et de la défense exécutent les LLM locaux pour le traitement des documents sensibles.**',
             '2027 : Les entreprises de taille intermédiaire (500–5000 employés) adoptent l\'inférence sur site à mesure que les coûts matériels baissent et que les solutions gérées émergent.',
             '2028 : Les PME accèdent à l\'IA sur site abordable — moins cher que les abonnements aux API cloud à grande échelle.',
-            'Standard à long terme : architecture hybride (local pour les charges de travail routinières, cloud pour la capacité pic et les modèles de pointe).',
+            'Standard à long terme : de nombreux analystes s\'attendent à ce qu\'une architecture hybride devienne courante — locale pour les charges de travail routinières, cloud pour la capacité pic et les modèles de pointe. Pour une analyse plus approfondie de la façon dont le routage entre modèles locaux et cloud devrait fonctionner en pratique, voir [Routage hybride local-cloud : qu\'est-ce qui change en 2027 ?](/fr/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing).',
           ],
         },
         challenges: {
@@ -1347,7 +1348,7 @@ schema: {
             '**Latence en temps réel :** L\'inférence locale ne convient pas aux pipelines en temps réel <500ms. Un RTX 4090 génère ~150 tok/s sur 7B — bon pour le chat, pas pour les API sub-500ms.',
             '**Coûts d\'infrastructure :** Sur site nécessite du capital : GPU 600–2 200 € + refroidissement + maintenance. "Local est gratuit" est une fausse idée — les coûts API changent, ne disparaissent pas.',
             '**Pénurie de talents :** Peu d\'ingénieurs savent productioniser vLLM, gérer les mises à jour de modèles ou optimiser le débit par lots. S\'améliorera d\'ici 2027.',
-            '**Incertitude réglementaire :** Les lois sur la résidence des données (RGPD, HIPAA, Droit à l\'oubli) évoluent. L\'avenir de l\'IA locale dépend en partie de l\'application de ces lois.',
+            '**Incertitude réglementaire :** Les lois sur la résidence des données (RGPD, HIPAA, Droit à l\'oubli) évoluent, et leur application varie encore selon les juridictions. Cette incertitude est un moteur croissant de l\'adoption de l\'IA locale en entreprise — pour l\'angle conformité en détail, voir [Souveraineté des données et conformité : les perspectives 2027](/fr/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
           ],
         },
         commonMistakes: {
@@ -1366,7 +1367,7 @@ schema: {
           faqs: [
             {
               q: 'Quelle est la plus grande tendance des LLM locaux en 2026?',
-              a: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre. Phi-4 Mini 3.8B et Llama 3.2 3B (2026) correspondent à Llama 3.3 7B (2023) sur les benchmarks. Les améliorations architecturales — meilleure attention, données d\'entraînement synthétiques, partage de paramètres — augmentent la qualité sans augmenter la taille du modèle.',
+              a: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre, année après année. Les améliorations architecturales — meilleure attention, données d\'entraînement synthétiques, partage de paramètres — augmentent la qualité sans augmenter la taille du modèle. Voir [Les petits modèles de langage sont-ils le bon choix pour votre cas d\'usage ?](/fr/prompt-bites/local-ai-trend-2027-small-language-models) pour l\'analyse par schéma de déploiement.',
             },
             {
               q: 'Les smartphones peuvent-ils exécuter des LLM locaux en 2026?',
@@ -1378,11 +1379,11 @@ schema: {
             },
             {
               q: 'Quand le fine-tuning des LLM locaux deviendra-t-il facile?',
-              a: 'Fin 2026 à 2027. Unsloth et Axolotl nécessitent actuellement des compétences en ligne de commande. Les plateformes de fine-tuning sans code GUI sont activement en développement. Aujourd\'hui, fine-tuner un modèle 7B sur 1000 exemples prend ~30 minutes sur un RTX 4090 avec Unsloth — une base pratique pour les développeurs.',
+              a: 'Fin 2026 à 2027. Unsloth et Axolotl nécessitent actuellement des compétences en ligne de commande ; les plateformes de fine-tuning sans code GUI sont activement en développement, et les temps d\'entraînement devraient continuer de baisser à mesure que les outils mûrissent. Voir [Fine-Tuning sans code : à quel point sommes-nous proches ?](/fr/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) pour l\'analyse complète du flux de travail.',
             },
             {
               q: 'Combien d\'entreprises exécuteront des LLM locaux d\'ici 2027?',
-              a: 'Les estimations suggèrent que 50% des grandes entreprises (1000+ employés) exécuteront au moins une inférence sur site d\'ici 2027, principalement dans les secteurs bancaire, sanitaire et juridique. En 2026, les industries réglementées sont les premiers adoptants. D\'ici 2028, les entreprises de taille intermédiaire et les PME entrent sur le marché à mesure que les coûts matériels baissent.',
+              a: 'Les industries réglementées (banque, santé, juridique) sont les premières à adopter l\'inférence sur site, en partie sous l\'effet des exigences de résidence des données, et l\'adoption par les entreprises de taille intermédiaire et les PME devrait suivre à mesure que les coûts matériels baissent. Pour les moteurs de conformité derrière ce changement, voir [Souveraineté des données et conformité : les perspectives 2027](/fr/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
             },
             {
               q: 'Quel est l\'écart de qualité entre les LLM locaux et les LLM cloud en 2026?',
@@ -1432,7 +1433,7 @@ schema: {
         description: 'Les modèles 1–3B rivalisent avec la qualité 7B en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. Les modèles de raisonnement améliorent la précision de 15–30%. 50% des entreprises adopteront l\'inférence sur site d\'ici 2027.',
         url: 'https://www.promptquorum.com/fr/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-20',
+        dateModified: '2026-07-16',
         inLanguage: 'fr',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1461,7 +1462,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quelle est la plus grande tendance des LLM locaux en 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre. Phi-4 Mini 3.8B et Llama 3.2 3B (2026) correspondent à Llama 3.3 7B (2023) sur les benchmarks via une meilleure attention, un entraînement synthétique et un partage de paramètres.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles plus petits atteignent une qualité plus élevée par paramètre, année après année, portée par une meilleure attention, un entraînement synthétique et un partage de paramètres.' },
           },
           {
             '@type': 'Question',
@@ -1476,12 +1477,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quand le fine-tuning des LLM locaux deviendra-t-il facile?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Fin 2026 à 2027. Les plateformes de fine-tuning sans code GUI sont en développement actif. Aujourd\'hui (avril 2026), Unsloth et Axolotl nécessitent des compétences en ligne de commande. Fine-tuner un modèle 7B sur 1000 exemples prend ~30 minutes sur RTX 4090 — attendu de tomber à 10 minutes d\'ici 2027.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Fin 2026 à 2027. Les plateformes de fine-tuning sans code GUI sont en développement actif. Unsloth et Axolotl nécessitent actuellement des compétences en ligne de commande, et les temps d\'entraînement devraient continuer de baisser à mesure que les outils mûrissent.' },
           },
           {
             '@type': 'Question',
             name: 'Combien d\'entreprises exécuteront des LLM locaux d\'ici 2027?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les estimations suggèrent que 50% des grandes entreprises (1000+ employés) exécuteront au moins une inférence sur site d\'ici 2027, principalement dans les secteurs bancaire, sanitaire et juridique. En 2026, les industries réglementées sont les premiers adoptants. D\'ici 2028, les entreprises de taille intermédiaire et les PME entrent sur le marché.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les industries réglementées (banque, santé, juridique) sont les premières à adopter l\'inférence sur site, en partie sous l\'effet des exigences de résidence des données. L\'adoption par les entreprises de taille intermédiaire et les PME devrait suivre à mesure que les coûts matériels baissent.' },
           },
           {
             '@type': 'Question',
@@ -1512,11 +1513,11 @@ schema: {
         name: 'Top tendances LLM local 2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Modèles plus petits atteignant la qualité 7B', description: 'Les modèles 1–3B (Phi-4 Mini 3.8B, Llama 3.2 3B) correspondent maintenant aux benchmarks Llama 3.3 7B. Pratique pour la synthèse et Q&A sur 4 GB de RAM.' },
+          { '@type': 'ListItem', position: 1, name: 'Modèles plus petits atteignant la qualité 7B', description: 'La qualité par paramètre des petits modèles continue de progresser année après année. Pratique pour la synthèse et Q&A sur 4 GB de RAM.' },
           { '@type': 'ListItem', position: 2, name: 'IA sur appareil sur smartphones', description: 'Les iPhones A18 et Snapdragon X Elite exécutent les modèles 1–3B à 15–30 tok/s. Confidentialité totale, pas d\'internet, conforme à l\'article 5 du RGPD.' },
           { '@type': 'ListItem', position: 3, name: 'Modèles de raisonnement améliorant la précision', description: 'Les modèles de pensée en chaîne (DeepSeek-R1, OpenAI o1) améliorent la précision des maths/logique/multi-étapes de 15–30%. Compromis : 3–5x plus de tokens par réponse.' },
-          { '@type': 'ListItem', position: 4, name: 'Outils de fine-tuning sans code lancés', description: 'Les plateformes de fine-tuning basées sur GUI (Unsloth, successeurs Axolotl) attendues fin 2026–2027. Actuellement en ligne de commande uniquement. Fine-tune 7B : 30 min attendus de tomber à 10 min d\'ici 2027.' },
-          { '@type': 'ListItem', position: 5, name: 'Adoption sur site d\'entreprise', description: '50% des grandes entreprises planifient l\'inférence sur site d\'ici 2027. Banque, santé, droit adoptent en premier. Mid-market et PME suivent en 2028.' },
+          { '@type': 'ListItem', position: 4, name: 'Outils de fine-tuning sans code lancés', description: 'Les plateformes de fine-tuning basées sur GUI (Unsloth, successeurs Axolotl) attendues fin 2026–2027. Actuellement en ligne de commande uniquement ; les temps d\'entraînement tendent à baisser à mesure que les outils mûrissent.' },
+          { '@type': 'ListItem', position: 5, name: 'Adoption sur site d\'entreprise', description: 'Les industries réglementées — banque, santé, droit — adoptent l\'inférence sur site en premier, en partie sous l\'effet des règles de résidence des données. Mid-market et PME suivent à mesure que les coûts matériels baissent.' },
         ],
       },
     },
@@ -1528,7 +1529,7 @@ schema: {
       intro: '2026年末までに：1–3Bモデルが7B品質に匹敵、iPhone（A18）とSnapdragon X Eliteで端末推論が実用的、推論モデルが精度15–30%向上、大企業の50%がセンシティブ業務でオンプレミス推論を計画。このガイドは2026–2027年にローカルAIを変える5つのトレンドをタイムライン、ベンチマーク、導入予測とともに解説します。',
       metaDescription: '1–3Bモデルが2026年に7Bの品質に匹敵。スマートフォンは15–30トークン/秒でローカルLLMを実行。推論モデルが精度を15–30%向上。2027年までに企業の50%がオンプレミス推論を採用。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**2026年末までに：1–3Bモデルが7B品質に匹敵、iPhone（A18）とSnapdragon X Eliteで端末推論が実用的、推論モデルが精度15–30%向上、大企業の50%がセンシティブ業務でオンプレミス推論を計画します。**',
       audience: 'ローカルLLM導入タイムラインを評価する開発者およびエンタープライズアーキテクト',
       readTime: '10分で読める',
@@ -1564,20 +1565,20 @@ schema: {
           title: '5つのローカルLLMトレンド概要',
           columns: ['トレンド', '変化', 'タイムライン', '影響'],
           rows: [
-            { 'トレンド': '1. 小型モデル', '変化': '1–3Bが7B（2023）品質に対応', 'タイムライン': '2026年進行中', '影響': '4GB RAMで実用推論' },
+            { 'トレンド': '1. 小型モデル', '変化': 'パラメータ当たり品質が継続的に向上、旧世代の大型モデルとの差が縮小中', 'タイムライン': '2026年進行中', '影響': '4GB RAMで実用推論' },
             { 'トレンド': '2. 端末AI', '変化': 'iPhone A18、Snapdragon Xが1–3B実行', 'タイムライン': '2026年進行中', '影響': '遅延ゼロ、スマホで完全プライバシー' },
             { 'トレンド': '3. 推論モデル', '変化': 'チェーンオブソートで精度15–30%向上', 'タイムライン': '2026年以降', '影響': '数学・ロジック・複数ステップタスク向上' },
-            { 'トレンド': '4. ファインチューニングツール', '変化': 'GUI型ノーコード到来', 'タイムライン': '2026年末–2027年', '影響': 'コマンドライン不要' },
-            { 'トレンド': '5. エンタープライズ採用', '変化': '大企業50%がオンプレミス採用', 'タイムライン': '2027年までに', '影響': '金融・医療・法務が先行' },
+            { 'トレンド': '4. ファインチューニングツール', '変化': 'GUI型ノーコード到来、学習時間は短縮傾向', 'タイムライン': '2026年末–2027年', '影響': 'コマンドライン不要' },
+            { 'トレンド': '5. エンタープライズ採用', '変化': 'ハイブリッド構成とデータ所在地規制がオンプレミス採用を後押し', 'タイムライン': '2027年までに', '影響': '金融・医療・法務が先行' },
           ],
         },
         smallerModels: {
           id: 'smaller-models',
           title: '1–3Bモデルが7B品質到達？',
           content: [
-            '**はい、モデル品質/パラメータ上昇速い。** Phi-4 Mini 3.8B：68% MMLU、Llama 3.2 3B：58% ← 2023年Llama 3.3 7B（55% MMLU）に対抗。',
-            '駆動力：注意機構改善、合成学習データ、パラメータ共有、LoRA型圧縮。',
-            '意味：1–3Bモデルは4GB RAM硬体で要約・Q&A・コード補完に実用的。',
+            '**方向性としては、はい。** アナリストやオープンモデルのベンチマークによれば、小型モデルのパラメータ当たり品質は年々向上しており、旧世代の大型モデルとの差は縮小傾向にある。駆動力：注意機構改善、合成学習データ、パラメータ共有、LoRA型圧縮。',
+            '意味：1–3Bモデルは4GB RAM硬体で要約・Q&A・コード補完への実用性を増している。',
+            '「どのユースケースが実際に小型モデルの恩恵を受けるか、逆にパラメータ数がなお重要なケースはどこか」という展開パターンの詳細は[小型言語モデルはあなたのユースケースに適した選択か？](/ja/prompt-bites/local-ai-trend-2027-small-language-models)を参照。',
           ],
         },
         onDevice: {
@@ -1593,9 +1594,9 @@ schema: {
           id: 'finetuning-tools',
           title: 'ファインチューニングツール改善どう？',
           content: [
-            '**2026年末までにGUIベースノーコードファインチューニング予定。** Unsloth・Axolotl現在はコマンドライン必須。次世代はドラッグドロップデータセット + ワンクリックLoRA学習。',
-            '複数GPU学習は自明に：自動シャード・分散学習は主要フレームワークの開発中機能。',
-            '現在（2026年4月）：RTX 4090上Unslothで7B型1000例ファインチューニング約30分。2027年までに10分以下目標。',
+            '**GUIベースのノーコードファインチューニングツールが登場しつつある。** Unsloth・Axolotlは現在コマンドライン必須。次世代ツールはドラッグドロップデータセットアップロード + ワンクリックLoRA学習を追加中。複数GPU学習も簡素化が進み、自動シャーディングと分散学習は主要フレームワークのロードマップに載っている。',
+            'ツールの成熟に伴い学習時間は今後も短縮される見込みだが、具体的な数値はハードウェアとデータセットサイズにより異なる。',
+            'ノーコードファインチューニングの完全なワークフロー分析 — 非エンジニアが今日すでに扱えるタスクを含む — は[ノーコードファインチューニング：どこまで近づいたか？](/ja/prompt-bites/local-ai-trend-2027-no-code-fine-tuning)を参照。',
           ],
         },
         reasoning: {
@@ -1614,7 +1615,7 @@ schema: {
             '**2026（現在）：銀行・医療・防衛大企業がセンシティブ文書処理でローカルLLM実行。**',
             '2027年：中堅企業（500–5000従業員）が硬体コスト低下・マネージド解決提供増加でオンプレミス推論採用。',
             '2028年：SMBが安価なオンプレミスAI ← クラウドAPI購読より廉価でアクセス可能。',
-            '長期標準：ハイブリッド構成（日常業務はローカル、ピーク・最先端モデルはクラウド）。',
+            '長期標準：多くのアナリストは、日常業務はローカル、ピーク時容量と最先端モデルはクラウドというハイブリッド構成が標準になると予測している。ローカルとクラウドのモデル間ルーティングが実際にどう機能するかの詳細は[ハイブリッド・ローカル/クラウドルーティング：2027年に何が変わるか？](/ja/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing)を参照。',
           ],
         },
         challenges: {
@@ -1625,7 +1626,7 @@ schema: {
             '**実時間遅延：** ローカル推論は<500ms実時間パイプライン不適。RTX 4090は7B型で毎秒150トークン生成 ← チャット向き、500ms以下API不適。',
             '**インフラ費用：** オンプレミスには資本投下要：GPU 600–2 200 € +冷却 +保守。「ローカルは無料」は誤解 ← APIコスト移転、消滅しない。',
             '**人材不足：** vLLM生産化・モデル更新管理・バッチスループット最適化知るエンジニア少。2027年改善予定。',
-            '**規制不確実性：** データ所在地法（GDPR・HIPAA・中国DSL）進化中。ローカルAI未来はこれら法執行状況次第。',
+            '**規制不確実性：** データ所在地法（GDPR・HIPAA・中国DSL）は進化を続けており、法執行のあり方も地域によって異なる。この不確実性はエンタープライズのローカルAI採用を後押しする要因になりつつある。コンプライアンス面の詳細は[データ主権とコンプライアンス：2027年の展望](/ja/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance)を参照。',
           ],
         },
         commonMistakes: {
@@ -1644,7 +1645,7 @@ schema: {
           faqs: [
             {
               q: '2026年ローカルLLM最大トレンド？',
-              a: '小型モデルがパラメータ当たり高品質達成。Phi-4 Mini 3.8B・Llama 3.2 3B（2026）がベンチマークでLlama 3.3 7B（2023）に対応。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。',
+              a: '小型モデルが年々パラメータ当たり高品質を達成。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。展開パターンの詳細は[小型言語モデルはあなたのユースケースに適した選択か？](/ja/prompt-bites/local-ai-trend-2027-small-language-models)を参照。',
             },
             {
               q: '2026年スマートフォンはローカルLLM実行可能？',
@@ -1656,11 +1657,11 @@ schema: {
             },
             {
               q: 'ローカルLLMファインチューニング簡単いつ？',
-              a: '2026年末–2027年。Unsloth・Axolotlは現在コマンドライン必須。ノーコードGUIファインチューニングプラットフォーム開発中。現在（2026年4月）RTX 4090上Unslothで7B型1000例ファインチューニング約30分 ← 開発者基準実用。',
+              a: '2026年末–2027年。Unsloth・Axolotlは現在コマンドライン必須。ノーコードGUIファインチューニングプラットフォーム開発中で、ツール成熟に伴い学習時間は短縮傾向。詳細なワークフロー分析は[ノーコードファインチューニング：どこまで近づいたか？](/ja/prompt-bites/local-ai-trend-2027-no-code-fine-tuning)を参照。',
             },
             {
               q: '2027年までにローカルLLM実行企業何%？',
-              a: '推定50%大企業（1000従業員以上）が2027年までにオンプレミス推論最低限実行。主に銀行・医療・法務。2026年は規制産業が初期採用者。2028年までに中堅企業・SMBは市場参入。',
+              a: '規制産業（銀行・医療・法務）がデータ所在地要件にも後押しされ最も早くオンプレミス推論を採用しており、中堅企業・SMBはハードウェアコスト低下に伴い追随すると見られる。この動きの背景にあるコンプライアンス要因は[データ主権とコンプライアンス：2027年の展望](/ja/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance)を参照。',
             },
             {
               q: '2026年ローカル vs クラウドLLM品質ギャップ？',
@@ -1710,7 +1711,7 @@ schema: {
         description: '1–3Bモデルが2026年に7Bの品質に匹敵。スマートフォンは15–30トークン/秒でローカルLLMを実行。推論モデルが精度を15–30%向上。2027年までに企業の50%がオンプレミス推論を採用。',
         url: 'https://www.promptquorum.com/ja/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-20',
+        dateModified: '2026-07-16',
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1739,7 +1740,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年ローカルLLM最大トレンド？',
-            acceptedAnswer: { '@type': 'Answer', text: '小型モデルがパラメータ当たり高品質達成。Phi-4 Mini 3.8B・Llama 3.2 3B（2026）がベンチマークでLlama 3.3 7B（2023）に対応。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。' },
+            acceptedAnswer: { '@type': 'Answer', text: '小型モデルが年々パラメータ当たり高品質を達成。構造改善—注意機構・合成学習・パラメータ共有—がモデルサイズ増加なしで品質向上。' },
           },
           {
             '@type': 'Question',
@@ -1754,12 +1755,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'ローカルLLMファインチューニング簡単いつ？',
-            acceptedAnswer: { '@type': 'Answer', text: '2026年末–2027年。Unsloth・Axolotlは現在コマンドライン必須。ノーコードGUIファインチューニング開発中。現在RTX 4090上Unslothで7B型1000例ファインチューニング約30分 ← 開発者基準実用。' },
+            acceptedAnswer: { '@type': 'Answer', text: '2026年末–2027年。Unsloth・Axolotlは現在コマンドライン必須。ノーコードGUIファインチューニング開発中で、ツール成熟に伴い学習時間は短縮傾向。' },
           },
           {
             '@type': 'Question',
             name: '2027年までにローカルLLM実行企業何%？',
-            acceptedAnswer: { '@type': 'Answer', text: '推定50%大企業（1000従業員以上）が2027年までにオンプレミス推論最低限実行。主に銀行・医療・法務。2026年は規制産業が初期採用者。2028年までに中堅企業・SMB市場参入。' },
+            acceptedAnswer: { '@type': 'Answer', text: '規制産業（銀行・医療・法務）がデータ所在地要件にも後押しされ最も早くオンプレミス推論を採用しており、中堅企業・SMBはハードウェアコスト低下に伴い追随すると見られる。' },
           },
           {
             '@type': 'Question',
@@ -1790,11 +1791,11 @@ schema: {
         name: 'トップローカルLLMトレンド2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '7B品質到達の小型モデル', description: '1–3B型（Phi-4 Mini 3.8B、Llama 3.2 3B）が今Llama 3.3 7Bベンチマークに対応。4GB RAM硬体で要約・Q&A実用。' },
+          { '@type': 'ListItem', position: 1, name: '7B品質到達の小型モデル', description: '小型モデルのパラメータ当たり品質は年々向上している。4GB RAM硬体で要約・Q&A実用。' },
           { '@type': 'ListItem', position: 2, name: 'スマートフォン端末AI', description: 'iPhone A18、Snapdragon X Elite が1–3B型を15–30トークン/秒実行。完全プライバシー、インターネット不要、GDPR第5条対応。' },
           { '@type': 'ListItem', position: 3, name: '推論モデル精度向上', description: 'チェーンオブソート型（DeepSeek-R1、OpenAI o1）が数学/ロジック/複数ステップ精度15–30%向上。トレード：応答当たりトークン3–5倍。' },
-          { '@type': 'ListItem', position: 4, name: 'ノーコードファインチューニング発表', description: 'GUI型ファインチューニングプラットフォーム（Unsloth・Axolotl後継）2026年末–2027年予定。現在コマンドラインのみ。7B型：30分 → 2027年までに10分目標。' },
-          { '@type': 'ListItem', position: 5, name: 'エンタープライズオンサイト採用', description: '大企業50%が2027年までにオンプレミス推論計画。金融・医療・法務が先行。中堅企業・SMBは2028年参入。' },
+          { '@type': 'ListItem', position: 4, name: 'ノーコードファインチューニング発表', description: 'GUI型ファインチューニングプラットフォーム（Unsloth・Axolotl後継）2026年末–2027年予定。現在コマンドラインのみだが、学習時間は短縮傾向。' },
+          { '@type': 'ListItem', position: 5, name: 'エンタープライズオンサイト採用', description: '規制産業（金融・医療・法務）がデータ所在地規制にも後押しされ最も早くオンプレミス推論を採用。中堅企業・SMBはハードウェアコスト低下に伴い追随。' },
         ],
       },
     },
@@ -1806,7 +1807,7 @@ schema: {
       intro: '到2026年底：1–3B模型达到7B品质，iPhone（A18）和Snapdragon X Elite上的端设备推理实用，推理模型将精度提高15–30%，大企业50%计划敏感工作负载的本地推理。本指南涵盖2026–2027年重塑本地AI的5大趋势，包括时间表、基准和采用预测。',
       metaDescription: '1–3B模型在2026年达到7B品质。智能手机以15–30令牌/秒运行本地LLM。推理模型将精度提高15–30%。到2027年，50%的企业将采用本地推理。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**到2026年底：1–3B模型达到7B品质，iPhone（A18）和Snapdragon X Elite上的端设备推理实用，推理模型将精度提高15–30%，大企业50%计划敏感工作负载的本地推理。**',
       audience: '评估本地LLM采用时间表的开发者和企业架构师',
       readTime: '阅读约10分钟',
@@ -1842,20 +1843,20 @@ schema: {
           title: '5大本地LLM趋势速览',
           columns: ['趋势', '变化', '时间表', '影响'],
           rows: [
-            { '趋势': '1. 小型模型', '变化': '1–3B现在匹配7B（2023）品质', '时间表': '2026年进行中', '影响': '4GB RAM上的实用推理' },
+            { '趋势': '1. 小型模型', '变化': '每参数品质持续提升；与老一代大模型的差距在缩小', '时间表': '2026年进行中', '影响': '4GB RAM上的实用推理' },
             { '趋势': '2. 端设备AI', '变化': 'iPhone A18、Snapdragon X运行1–3B', '时间表': '2026年进行中', '影响': '零延迟，手机完全隐私' },
             { '趋势': '3. 推理模型', '变化': '逐步思考将精度提高15–30%', '时间表': '2026年及以后', '影响': '数学、逻辑、多步任务改进' },
-            { '趋势': '4. 微调工具', '变化': 'GUI型无代码微调到来', '时间表': '2026年末–2027年', '影响': '开发者跳过命令行' },
-            { '趋势': '5. 企业采用', '变化': '50%的大企业采用本地推理', '时间表': '2027年前', '影响': '银行、医疗、法律领先' },
+            { '趋势': '4. 微调工具', '变化': 'GUI型无代码微调到来；训练时间呈下降趋势', '时间表': '2026年末–2027年', '影响': '开发者跳过命令行' },
+            { '趋势': '5. 企业采用', '变化': '混合本地/云架构与数据驻留规则推动本地采用', '时间表': '2027年前', '影响': '银行、医疗、法律领先' },
           ],
         },
         smallerModels: {
           id: 'smaller-models',
           title: '1–3B模型能达到7B品质吗？',
           content: [
-            '**能—模型品质/参数上升迅速。** Phi-4 Mini 3.8B得68% MMLU；Llama 3.2 3B得58%—都匹敌2023年Llama 3.3 7B（55% MMLU）。',
-            '驱动力：更好的注意机制、合成训练数据、参数共享、LoRA型压缩。',
-            '意义：1–3B模型在4GB RAM硬件上对摘要、问答、代码完成实用。',
+            '**从方向上看，是的。** 分析师和开放模型基准显示，小型模型每参数品质逐年提升，与更老的大型模型之间的差距正在缩小。驱动力：更好的注意机制、合成训练数据、参数共享、LoRA型压缩。',
+            '意义：1–3B模型在4GB RAM硬件上对摘要、问答、代码完成越来越实用。',
+            '关于部署模式的深入分析——哪些用例真正受益于更小的模型，以及何时参数量仍然重要——见[小型语言模型是否适合你的用例？](/zh/prompt-bites/local-ai-trend-2027-small-language-models)。',
           ],
         },
         onDevice: {
@@ -1871,9 +1872,9 @@ schema: {
           id: 'finetuning-tools',
           title: '微调工具如何改进？',
           content: [
-            '**2026年末前可期待GUI型无代码微调平台。** Unsloth和Axolotl目前需命令行技能；下代工具将提供拖放数据集上传和一键LoRA训练。',
-            '多GPU训练变得平凡：自动分片和分布式训练开箱即用是主要框架路线图特性。',
-            '当前状态（2026年4月）：在RTX 4090上用Unsloth微调7B模型1000例耗时约30分钟。预期到2027年降至10分钟以下。',
+            '**GUI型无代码微调平台正在到来。** Unsloth和Axolotl目前需命令行技能；下代工具正在增加拖放数据集上传和一键LoRA训练。多GPU训练也变得更简单，自动分片和分布式训练已列入主要框架的路线图。',
+            '随着这些工具成熟，训练时间预计将继续缩短，但具体数值因硬件和数据集规模而异。',
+            '关于无代码微调完整工作流程的分析——包括哪些任务今天已可供非工程师使用——见[无代码微调：我们距离目标还有多远？](/zh/prompt-bites/local-ai-trend-2027-no-code-fine-tuning)。',
           ],
         },
         reasoning: {
@@ -1892,7 +1893,7 @@ schema: {
             '**2026年（现在）：银行、医疗和防务的大企业对敏感文档处理运行本地LLM。**',
             '2027年：中型企业（500–5000员工）因硬件成本下降和托管解决方案涌现而采用本地推理。',
             '2028年：中小企业获得廉价本地AI—比大规模云API订阅更便宜。',
-            '长期标准：混合架构（日常业务本地，峰值能力和前沿模型云端）。',
+            '长期标准：许多分析师预计混合架构将成为常态——日常业务本地，峰值能力和前沿模型云端。关于本地与云端模型路由在实践中如何运作的深入分析，见[混合本地-云路由：2027年会有哪些变化？](/zh/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing)。',
           ],
         },
         challenges: {
@@ -1903,7 +1904,7 @@ schema: {
             '**实时延迟：** 本地推理不适合<500ms实时管道。RTX 4090在7B上生成约150令牌/秒—适合聊天，不适于500ms以下API。',
             '**基础设施成本：** 本地需资本投入：GPU 600–2 200 € +冷却 +维护。"本地免费"是误解—API成本转移，不消失。',
             '**人才缺口：** 懂vLLM生产化、管理模型更新或优化批吞吐的工程师少。2027年预期改进。',
-            '**监管不确定性：** 数据驻留法（GDPR、HIPAA、中国数据安全法）进化中。本地AI的未来部分取决于这些法律的执行。',
+            '**监管不确定性：** 数据驻留法（GDPR、HIPAA、中国数据安全法）仍在演变，各司法辖区的执法方式也不尽相同。这种不确定性正日益成为企业采用本地AI的推动因素——关于合规角度的深入分析，见[数据主权与合规：2027年展望](/zh/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance)。',
           ],
         },
         commonMistakes: {
@@ -1922,7 +1923,7 @@ schema: {
           faqs: [
             {
               q: '2026年本地LLM最大趋势？',
-              a: '小型模型达到更高每参数品质。Phi-4 Mini 3.8B和Llama 3.2 3B（2026）在基准上匹配Llama 3.3 7B（2023）。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。',
+              a: '小型模型逐年达到更高每参数品质。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。参见[小型语言模型是否适合你的用例？](/zh/prompt-bites/local-ai-trend-2027-small-language-models)了解部署模式细分。',
             },
             {
               q: '2026年智能手机能运行本地LLM吗？',
@@ -1934,11 +1935,11 @@ schema: {
             },
             {
               q: '本地LLM微调何时变简单？',
-              a: '2026年末至2027年。Unsloth和Axolotl目前需命令行技能。无代码GUI微调平台开发中。当前（2026年4月）RTX 4090上用Unsloth微调7B模型1000例约30分钟—对开发者可实用。',
+              a: '2026年末至2027年。Unsloth和Axolotl目前需命令行技能；无代码GUI微调平台正在积极开发中，随着工具成熟，训练时间预计将继续缩短。参见[无代码微调：我们距离目标还有多远？](/zh/prompt-bites/local-ai-trend-2027-no-code-fine-tuning)了解完整工作流程分析。',
             },
             {
               q: '2027年前多少企业运行本地LLM？',
-              a: '估计50%的大企业（1000员工以上）到2027年前将至少运行某些本地推理，主要在银行、医疗和法律部门。2026年受规管行业为早期采纳者。2028年前中型和小企业进入市场。',
+              a: '受监管行业（银行、医疗、法律）是本地推理最早的采用者，部分受数据驻留要求驱动；随着硬件成本下降，预计中型和小企业的采用将随后跟进。关于这一转变背后的合规驱动因素，参见[数据主权与合规：2027年展望](/zh/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance)。',
             },
             {
               q: '2026年本地与云LLM品质差距？',
@@ -1988,7 +1989,7 @@ schema: {
         description: '1–3B模型在2026年达到7B品质。智能手机以15–30令牌/秒运行本地LLM。推理模型将精度提高15–30%。到2027年，50%的企业将采用本地推理。',
         url: 'https://www.promptquorum.com/zh/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-20',
+        dateModified: '2026-07-16',
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2017,7 +2018,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2026年本地LLM最大趋势？',
-            acceptedAnswer: { '@type': 'Answer', text: '小型模型达到更高每参数品质。Phi-4 Mini 3.8B和Llama 3.2 3B（2026）在基准上匹配Llama 3.3 7B（2023）。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。' },
+            acceptedAnswer: { '@type': 'Answer', text: '小型模型逐年达到更高每参数品质。架构改进—更好注意、合成训练、参数共享—不增加模型大小即可提升品质。' },
           },
           {
             '@type': 'Question',
@@ -2032,12 +2033,12 @@ schema: {
           {
             '@type': 'Question',
             name: '本地LLM微调何时变简单？',
-            acceptedAnswer: { '@type': 'Answer', text: '2026年末至2027年。无代码GUI微调平台开发中。当前RTX 4090上用Unsloth微调7B模型1000例约30分钟—对开发者可实用。' },
+            acceptedAnswer: { '@type': 'Answer', text: '2026年末至2027年。无代码GUI微调平台开发中。Unsloth和Axolotl目前仍需命令行技能，随着工具成熟，训练时间预计将继续缩短。' },
           },
           {
             '@type': 'Question',
             name: '2027年前多少企业运行本地LLM？',
-            acceptedAnswer: { '@type': 'Answer', text: '估计50%的大企业（1000员工以上）到2027年前将至少运行某些本地推理，主要在银行、医疗和法律部门。2028年前中型和小企业进入市场。' },
+            acceptedAnswer: { '@type': 'Answer', text: '受监管行业（银行、医疗、法律）是本地推理最早的采用者，部分受数据驻留要求驱动。随着硬件成本下降，中型和小企业预计将随后进入市场。' },
           },
           {
             '@type': 'Question',
@@ -2068,11 +2069,11 @@ schema: {
         name: '顶级本地LLM趋势2026–2027',
         numberOfItems: 5,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: '到达7B品质的小型模型', description: '1–3B型（Phi-4 Mini 3.8B、Llama 3.2 3B）现匹配Llama 3.3 7B基准。4GB RAM硬件上对摘要和问答实用。' },
+          { '@type': 'ListItem', position: 1, name: '到达7B品质的小型模型', description: '小型模型的每参数品质逐年提升。4GB RAM硬件上对摘要和问答实用。' },
           { '@type': 'ListItem', position: 2, name: '智能手机端设备AI', description: 'iPhone A18、Snapdragon X Elite以15–30令牌/秒运行1–3B型。完全隐私、无网络、符合GDPR第5条。' },
           { '@type': 'ListItem', position: 3, name: '推理模型精度提升', description: '逐步思考型（DeepSeek-R1、OpenAI o1）将数学/逻辑/多步精度提高15–30%。折衷：每个应答3–5倍令牌。' },
-          { '@type': 'ListItem', position: 4, name: '无代码微调工具推出', description: 'GUI型微调平台（Unsloth、Axolotl后继）2026年末–2027年预期。当前仅命令行。7B型：30分钟 → 2027年前10分钟目标。' },
-          { '@type': 'ListItem', position: 5, name: '企业本地采用', description: '大企业50%至2027年计划本地推理。金融、医疗、法律先行。中型和小企业于2028年参与。' },
+          { '@type': 'ListItem', position: 4, name: '无代码微调工具推出', description: 'GUI型微调平台（Unsloth、Axolotl后继）2026年末–2027年预期。当前仅命令行；随着工具成熟，训练时间呈下降趋势。' },
+          { '@type': 'ListItem', position: 5, name: '企业本地采用', description: '受监管行业——金融、医疗、法律——率先采用本地推理，部分受数据驻留规则驱动。中型和小企业随硬件成本下降跟进。' },
         ],
       },
     },
@@ -2084,7 +2085,7 @@ schema: {
       intro: '2026년 말까지: 1–3B 모델이 7B 품질에 필적하고, 온디바이스 추론이 iPhone(A18) 및 Snapdragon X Elite 스마트폰에서 실용적으로 작동하며, 추론 모델이 단계별 정확도를 15–30% 향상시키고, 대형 기업의 50%가 민감한 업무를 위한 온프레미스 추론을 계획하고 있습니다. 이 가이드는 타임라인, 벤치마크, 도입 예측과 함께 2026–2027년 로컬 AI를 재편하는 5가지 핵심 트렌드를 다룹니다.',
       metaDescription: '1–3B 모델이 2026년에 7B 품질에 필적합니다. 스마트폰이 15–30 tok/sec으로 로컬 LLM을 실행합니다. 추론 모델이 정확도를 15–30% 향상시킵니다. 기업의 50%가 2027년까지 온프레미스 추론을 도입할 것입니다.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-20',
+      dateModified: '2026-07-16',
       leadAnswerBlock: '**2026년 말까지: 1–3B 모델이 7B 품질에 필적하고, 온디바이스 추론이 iPhone(A18) 및 Snapdragon X Elite 스마트폰에서 실용적으로 작동하며, 추론 모델이 단계별 정확도를 15–30% 향상시키고, 대형 기업의 50%가 민감한 업무를 위한 온프레미스 추론을 계획하고 있습니다.**',
       audience: '로컬 LLM 도입 일정을 평가하는 개발자 및 기업 아키텍트',
       readTime: '10분 읽기',
