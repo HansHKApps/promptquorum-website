@@ -47,4 +47,32 @@ export const SMART_HOME_SLUG_TO_KEY: Record<string, string> = {
   'beelink-eq14-local-ai-review':                  'beelink-eq14-local-ai-review',
   'gmktec-g3-plus-local-ai-review':                'gmktec-g3-plus-local-ai-review',
   'minisforum-um890-pro-local-ai-review':          'minisforum-um890-pro-local-ai-review',
+
+  // Category 5 — Energy & Solar Integration (SH-26–29) — SPEC LOCKED, not yet authored
+  'local-smart-home-energy-management-2027':       'local-smart-home-energy-management-2027',
+  'matter-solar-inverter-heat-pump-integration':   'matter-solar-inverter-heat-pump-integration',
+  'home-assistant-energy-dashboard-guide':         'home-assistant-energy-dashboard-guide',
+  'home-as-energy-microgrid-2027':                 'home-as-energy-microgrid-2027',
+
+  // Category 6 — 2027 Protocols & Regulation (SH-30–33) — SPEC LOCKED, not yet authored
+  'matter-1-6-explained':                          'matter-1-6-explained',
+  'thread-14-wifi-7-routers-guide':                'thread-14-wifi-7-routers-guide',
+  'eu-data-act-smart-home-2027':                   'eu-data-act-smart-home-2027',
+  'ikea-matter-ecosystem-guide-2027':              'ikea-matter-ecosystem-guide-2027',
+
+  // Category 7 — Advanced Local AI (SH-34–38) — SPEC LOCKED, not yet authored
+  'local-small-language-models-smart-home':        'local-small-language-models-smart-home',
+  'radar-presence-sensing-no-camera':              'radar-presence-sensing-no-camera',
+  'reducing-llm-hallucinations-home-automation':   'reducing-llm-hallucinations-home-automation',
+  'sensor-fusion-smart-home-2027':                 'sensor-fusion-smart-home-2027',
+  'home-digital-twin-explained':                   'home-digital-twin-explained',
+
+  // Category 8 — Buyer's Guides (SH-39–45) — SPEC LOCKED, not yet authored
+  'best-local-security-cameras-2027':              'best-local-security-cameras-2027',
+  'best-smart-locks-local-control-2027':           'best-smart-locks-local-control-2027',
+  'best-smart-thermostats-local-ai-2027':          'best-smart-thermostats-local-ai-2027',
+  'best-zigbee-thread-dongles-2027':               'best-zigbee-thread-dongles-2027',
+  'best-smart-home-hubs-2027':                     'best-smart-home-hubs-2027',
+  'nvidia-jetson-orin-nano-smart-home-review':     'nvidia-jetson-orin-nano-smart-home-review',
+  'best-energy-monitoring-smart-plugs-2027':       'best-energy-monitoring-smart-plugs-2027',
 }

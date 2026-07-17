@@ -131,6 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Best Mini PCs for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — the local server hardware that runs this Home Assistant integration',
+          '[Home Assistant Energy Dashboard: Complete Setup Guide](/smart-home/home-assistant-energy-dashboard-guide) — cross-cluster: build a full Energy dashboard from this system\'s local sensor data',
         ],
       },
     },
@@ -280,6 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Links',
         items: [
           '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die lokale Server-Hardware für diese Home Assistant-Integration',
+          '[Home Assistant Energie-Dashboard: Komplette Einrichtungsanleitung](/de/smart-home/home-assistant-energy-dashboard-guide) — clusterübergreifend: aus diesen lokalen Sensordaten ein vollständiges Energie-Dashboard aufbauen',
         ],
       },
     },
@@ -430,6 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — el hardware servidor local que ejecuta esta integración de Home Assistant',
+          '[Panel de Energía de Home Assistant: guía completa de configuración](/es/smart-home/home-assistant-energy-dashboard-guide) — entre clústers: crea un panel de Energía completo con estos datos locales del sistema',
         ],
       },
     },
@@ -580,6 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o hardware servidor local que executa esta integração do Home Assistant',
+          '[Painel de Energia do Home Assistant: guia completo de configuração](/pt/smart-home/home-assistant-energy-dashboard-guide) — entre clusters: construa um painel de Energia completo com estes dados locais do sistema',
         ],
       },
     },
@@ -730,6 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[أفضل Mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — أجهزة الخادم المحلي التي تشغّل تكامل Home Assistant',
+          '[لوحة Energy في Home Assistant: دليل الإعداد الكامل](/ar/smart-home/home-assistant-energy-dashboard-guide) — عبر المجموعات: أنشئ لوحة Energy كاملة باستخدام بيانات هذا النظام المحلية',
         ],
       },
     },
@@ -876,6 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Home Assistant + ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — この Home Assistant 統合を動かすローカルサーバーハードウェア',
+          '[Home Assistant Energyダッシュボード：完全設定ガイド](/ja/smart-home/home-assistant-energy-dashboard-guide) — クラスター横断：このシステムのローカルセンサーデータで完全なEnergyダッシュボードを構築',
         ],
       },
     },
@@ -1022,6 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 运行此 Home Assistant 集成的本地服务器硬件',
+          '[Home Assistant能源仪表盘：完整设置指南](/zh/smart-home/home-assistant-energy-dashboard-guide) — 跨专题：利用本系统的本地传感器数据搭建完整的能源仪表盘',
         ],
       },
     },
@@ -1168,6 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — le serveur local qui fait tourner cette intégration Home Assistant',
+          '[Tableau de bord Énergie de Home Assistant : guide complet de configuration](/fr/smart-home/home-assistant-energy-dashboard-guide) — inter-cluster : construisez un tableau de bord Énergie complet à partir de ces données locales',
         ],
       },
     },
@@ -1318,6 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 이 Home Assistant 통합을 실행하는 로컬 서버 하드웨어',
+          '[Home Assistant Energy 대시보드: 완전 설정 가이드](/ko/smart-home/home-assistant-energy-dashboard-guide) — 클러스터 간: 이 시스템의 로컬 센서 데이터로 완전한 Energy 대시보드 구성',
         ],
       },
     },

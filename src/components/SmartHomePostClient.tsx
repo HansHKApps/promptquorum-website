@@ -172,6 +172,10 @@ const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   'Local-First Smart Home':            { dot: 'bg-emerald-400', badge: 'bg-emerald-50 text-emerald-700 border border-emerald-200' },
   'Local AI & LLMs in the Smart Home': { dot: 'bg-violet-400',  badge: 'bg-violet-50 text-violet-700 border border-violet-200' },
   'Decision & Comparison':             { dot: 'bg-amber-400',   badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
+  'Energy & Solar Integration':        { dot: 'bg-sky-400',     badge: 'bg-sky-50 text-sky-700 border border-sky-200' },
+  '2027 Protocols & Regulation':       { dot: 'bg-rose-400',    badge: 'bg-rose-50 text-rose-700 border border-rose-200' },
+  'Advanced Local AI':                 { dot: 'bg-teal-400',    badge: 'bg-teal-50 text-teal-700 border border-teal-200' },
+  "Buyer's Guides":                    { dot: 'bg-indigo-400',  badge: 'bg-indigo-50 text-indigo-700 border border-indigo-200' },
 }
 
 // Runtime safety net: rendered when an article slips through the prebuild

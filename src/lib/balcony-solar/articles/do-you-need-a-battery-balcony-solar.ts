@@ -109,6 +109,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Best Hardware for a Local Smart Home](/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS vs server: battery as part of your local home infrastructure',
+          '[Turning Your Home Into an Energy Microgrid](/smart-home/home-as-energy-microgrid-2027) — cross-cluster: how a balcony solar battery fits into whole-home backup and circuit-priority planning',
+          '[Local Smart Home Energy Management](/smart-home/local-smart-home-energy-management-2027) — cross-cluster: load-shifting automations that use this battery\'s stored energy',
         ],
       },
     },
@@ -232,6 +234,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS vs servidor: batería como parte de tu infraestructura doméstica local',
+          '[Convertir tu hogar en una microrred de energía](/es/smart-home/home-as-energy-microgrid-2027) — entre clústers: cómo una batería solar de balcón encaja en la planificación de respaldo y prioridad de circuitos de toda la casa',
+          '[Gestión local de energía en el hogar inteligente](/es/smart-home/local-smart-home-energy-management-2027) — entre clústers: automatizaciones de desplazamiento de carga que usan la energía almacenada de esta batería',
         ],
       },
     },
@@ -356,6 +360,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS vs servidor: bateria como parte da sua infraestrutura local',
+          '[Transformando sua casa em uma microrrede de energia](/pt/smart-home/home-as-energy-microgrid-2027) — entre clusters: como uma bateria solar de varanda se encaixa no planejamento de backup e prioridade de circuitos de toda a casa',
+          '[Gestão local de energia na casa inteligente](/pt/smart-home/local-smart-home-energy-management-2027) — entre clusters: automações de deslocamento de carga que usam a energia armazenada desta bateria',
         ],
       },
     },
@@ -480,6 +486,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — Pi مقابل mini PC مقابل NAS مقابل خادم: البطارية كجزء من بنيتك المنزلية المحلية',
+          '[تحويل منزلك إلى شبكة طاقة صغيرة](/ar/smart-home/home-as-energy-microgrid-2027) — عبر المجموعات: كيف تندمج بطارية الطاقة الشمسية للشرفة في تخطيط النسخ الاحتياطي وأولوية الدوائر لكامل المنزل',
+          '[إدارة الطاقة المحلية في المنزل الذكي](/ar/smart-home/local-smart-home-energy-management-2027) — عبر المجموعات: أتمتة تحويل الحمل التي تستخدم الطاقة المخزنة في هذه البطارية',
         ],
       },
     },
@@ -604,6 +612,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — Pi 対 ミニPC 対 NAS 対 サーバー：バッテリーはローカルホームインフラの一部',
+          '[家をエネルギーマイクログリッドに変える](/ja/smart-home/home-as-energy-microgrid-2027) — クラスター横断：ベランダ太陽光バッテリーが家全体のバックアップと回路優先順位計画にどう組み込まれるか',
+          '[ローカルなスマートホームのエネルギー管理](/ja/smart-home/local-smart-home-energy-management-2027) — クラスター横断：このバッテリーの蓄電を利用した負荷シフト自動化',
         ],
       },
     },
@@ -728,6 +738,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — Pi 对迷你PC 对 NAS 对服务器：电池作为本地家庭基础设施的一部分',
+          '[把你家变成能源微电网](/zh/smart-home/home-as-energy-microgrid-2027) — 跨专题：阳台光伏电池如何融入全屋备用电源和电路优先级规划',
+          '[本地智能家居能源管理](/zh/smart-home/local-smart-home-energy-management-2027) — 跨专题：利用这块电池储存电量的负荷转移自动化',
         ],
       },
     },
@@ -852,6 +864,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures connexes',
         items: [
           '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — Pi vs mini-PC vs NAS vs serveur : batterie dans votre infrastructure locale',
+          '[Transformer votre maison en microgrid énergétique](/fr/smart-home/home-as-energy-microgrid-2027) — inter-cluster : comment une batterie solaire de balcon s\'intègre dans la planification de sauvegarde et de priorité des circuits de toute la maison',
+          '[Gestion locale de l\'énergie dans la maison connectée](/fr/smart-home/local-smart-home-energy-management-2027) — inter-cluster : automatisations de décalage de charge utilisant l\'énergie stockée de cette batterie',
         ],
       },
     },
@@ -976,6 +990,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 자료',
         items: [
           '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — Pi 대 미니 PC 대 NAS 대 서버: 로컬 홈 인프라의 일부인 배터리',
+          '[집을 에너지 마이크로그리드로 만들기](/ko/smart-home/home-as-energy-microgrid-2027) — 클러스터 간: 발코니 태양광 배터리가 전체 집 백업 및 회로 우선순위 계획에 어떻게 들어맞는지',
+          '[로컬 스마트홈 에너지 관리](/ko/smart-home/local-smart-home-energy-management-2027) — 클러스터 간: 이 배터리의 저장된 에너지를 활용하는 부하 이동 자동화',
         ],
       },
     },
@@ -1100,6 +1116,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — Pi vs Mini-PC vs NAS vs Server: Batterie als Teil Ihrer lokalen Heiminfrastruktur',
+          '[Ihr Zuhause zum Energie-Microgrid machen](/de/smart-home/home-as-energy-microgrid-2027) — clusterübergreifend: wie eine Balkonsolar-Batterie in die Notstromplanung und Stromkreispriorisierung des ganzen Hauses passt',
+          '[Lokales Energiemanagement im Smart Home](/de/smart-home/local-smart-home-energy-management-2027) — clusterübergreifend: Lastverschiebungs-Automatisierungen, die die gespeicherte Energie dieser Batterie nutzen',
         ],
       },
     },

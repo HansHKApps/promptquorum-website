@@ -255,6 +255,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://ankersolix.com', title: 'Anker SOLIX US storefront', description: 'F2000, F3800 specs; confirms Solarbank is not in US catalog' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Turning Your Home Into an Energy Microgrid (2027)](/smart-home/home-as-energy-microgrid-2027) — cross-cluster: sizing a backup system and prioritizing circuits once you have a home battery like these',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -652,6 +659,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://ankersolix.com', title: 'Anker SOLIX US-Shop', description: 'Spezifikationen zu F2000, F3800; bestätigt, dass die Solarbank nicht im US-Katalog ist' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Lektüre',
+        items: [
+          '[Ihr Zuhause zum Energie-Microgrid machen (2027)](/de/smart-home/home-as-energy-microgrid-2027) — clusterübergreifend: ein Sicherungssystem dimensionieren und Stromkreise priorisieren, sobald Sie eine Hausbatterie wie diese haben',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -1047,6 +1061,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com', title: 'Boutique américaine Bluetti', description: 'Specs des AC300, B300, AC200MAX — vérifiez les chiffres actuels' },
           { url: 'https://www.jackery.com', title: 'Boutique américaine Jackery', description: 'Specs de la série Explorer — vérifiez la chimie et la sortie actuelles par modèle' },
           { url: 'https://ankersolix.com', title: 'Boutique américaine Anker SOLIX', description: 'Specs des F2000, F3800 ; confirme que la Solarbank ne figure pas au catalogue américain' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Transformer votre maison en microgrid énergétique (2027)](/fr/smart-home/home-as-energy-microgrid-2027) — inter-cluster : dimensionner un système de sauvegarde et prioriser les circuits une fois équipé d\'une batterie domestique comme celles-ci',
         ],
       },
       faqSection: {
@@ -1449,6 +1470,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://ankersolix.com', title: 'Anker SOLIX 米国ストア', description: 'F2000、F3800 のスペック。Solarbank が米国カタログにないことを確認' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[家をエネルギーマイクログリッドに変える（2027年）](/ja/smart-home/home-as-energy-microgrid-2027) — クラスター横断：このようなホームバッテリーを導入したら、バックアップシステムの規模決定と回路優先順位づけをどう行うか',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
@@ -1847,6 +1875,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com', title: 'Bluetti 美国门店', description: 'AC300、B300、AC200MAX 规格——请核实当前数字' },
           { url: 'https://www.jackery.com', title: 'Jackery 美国门店', description: 'Explorer 系列规格——请按型号核实当前电芯化学与输出' },
           { url: 'https://ankersolix.com', title: 'Anker SOLIX 美国门店', description: 'F2000、F3800 规格；确认 Solarbank 不在美国目录中' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[把你家变成能源微电网（2027年）](/zh/smart-home/home-as-energy-microgrid-2027) — 跨专题：拥有这类家用电池后，如何确定备用系统规模并设置电路优先级',
         ],
       },
       faqSection: {
@@ -2249,6 +2284,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://ankersolix.com', title: 'Tienda de Anker SOLIX en EE. UU.', description: 'Especificaciones del F2000, F3800; confirma que el Solarbank no está en el catálogo de EE. UU.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Convertir tu hogar en una microrred de energía (2027)](/es/smart-home/home-as-energy-microgrid-2027) — entre clústers: cómo dimensionar un sistema de respaldo y priorizar circuitos una vez que tienes una batería doméstica como estas',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -2647,6 +2689,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com', title: 'Loja da Bluetti nos EUA', description: 'Especificações do AC300, B300, AC200MAX — verifique os valores atuais' },
           { url: 'https://www.jackery.com', title: 'Loja da Jackery nos EUA', description: 'Especificações da série Explorer — verifique a química e a saída atuais de cada modelo' },
           { url: 'https://ankersolix.com', title: 'Loja da Anker SOLIX nos EUA', description: 'Especificações do F2000 e F3800; confirma que o Solarbank não está no catálogo dos EUA' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura Relacionada',
+        items: [
+          '[Transformando sua casa em uma microrrede de energia (2027)](/pt/smart-home/home-as-energy-microgrid-2027) — entre clusters: como dimensionar um sistema de backup e priorizar circuitos depois de ter uma bateria doméstica como estas',
         ],
       },
       faqSection: {
@@ -3049,6 +3098,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://ankersolix.com', title: 'المتجر الأمريكي لـ Anker SOLIX', description: 'مواصفات F2000 وF3800؛ يؤكد أن Solarbank ليس ضمن الكتالوج الأمريكي' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[تحويل منزلك إلى شبكة طاقة صغيرة (2027)](/ar/smart-home/home-as-energy-microgrid-2027) — عبر المجموعات: كيفية تحديد حجم نظام النسخ الاحتياطي وترتيب أولوية الدوائر بعد امتلاك بطارية منزلية كهذه',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -3444,6 +3500,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://www.bluettipower.com', title: 'Bluetti 미국 스토어', description: 'AC300, B300, AC200MAX 사양 — 현재 수치 확인' },
           { url: 'https://www.jackery.com', title: 'Jackery 미국 스토어', description: 'Explorer 시리즈 사양 — 모델별 현재 화학 방식과 출력 확인' },
           { url: 'https://ankersolix.com', title: 'Anker SOLIX 미국 스토어', description: 'F2000, F3800 사양; Solarbank가 미국 카탈로그에 없음을 확인' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 읽을거리',
+        items: [
+          '[집을 에너지 마이크로그리드로 만들기 (2027년)](/ko/smart-home/home-as-energy-microgrid-2027) — 클러스터 간: 이런 가정용 배터리를 갖춘 후 백업 시스템 규모를 정하고 회로 우선순위를 정하는 방법',
         ],
       },
       faqSection: {

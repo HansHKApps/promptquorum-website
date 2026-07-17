@@ -47,6 +47,30 @@ import { article as a_beelink_ser8_local_ai_review } from './articles/beelink-se
 import { article as a_beelink_eq14_local_ai_review } from './articles/beelink-eq14-local-ai-review'
 import { article as a_gmktec_g3_plus_local_ai_review } from './articles/gmktec-g3-plus-local-ai-review'
 import { article as a_minisforum_um890_pro_local_ai_review } from './articles/minisforum-um890-pro-local-ai-review'
+// Category 5 — Energy & Solar Integration (SH-26–29)
+import { article as a_local_smart_home_energy_management_2027 } from './articles/local-smart-home-energy-management-2027'
+import { article as a_matter_solar_inverter_heat_pump_integration } from './articles/matter-solar-inverter-heat-pump-integration'
+import { article as a_home_assistant_energy_dashboard_guide } from './articles/home-assistant-energy-dashboard-guide'
+import { article as a_home_as_energy_microgrid_2027 } from './articles/home-as-energy-microgrid-2027'
+// Category 6 — 2027 Protocols & Regulation (SH-30–33)
+import { article as a_matter_1_6_explained } from './articles/matter-1-6-explained'
+import { article as a_thread_14_wifi_7_routers_guide } from './articles/thread-14-wifi-7-routers-guide'
+import { article as a_eu_data_act_smart_home_2027 } from './articles/eu-data-act-smart-home-2027'
+import { article as a_ikea_matter_ecosystem_guide_2027 } from './articles/ikea-matter-ecosystem-guide-2027'
+// Category 7 — Advanced Local AI (SH-34–38)
+import { article as a_local_small_language_models_smart_home } from './articles/local-small-language-models-smart-home'
+import { article as a_radar_presence_sensing_no_camera } from './articles/radar-presence-sensing-no-camera'
+import { article as a_reducing_llm_hallucinations_home_automation } from './articles/reducing-llm-hallucinations-home-automation'
+import { article as a_sensor_fusion_smart_home_2027 } from './articles/sensor-fusion-smart-home-2027'
+import { article as a_home_digital_twin_explained } from './articles/home-digital-twin-explained'
+// Category 8 — Buyer's Guides (SH-39–45)
+import { article as a_best_local_security_cameras_2027 } from './articles/best-local-security-cameras-2027'
+import { article as a_best_smart_locks_local_control_2027 } from './articles/best-smart-locks-local-control-2027'
+import { article as a_best_smart_thermostats_local_ai_2027 } from './articles/best-smart-thermostats-local-ai-2027'
+import { article as a_best_zigbee_thread_dongles_2027 } from './articles/best-zigbee-thread-dongles-2027'
+import { article as a_best_smart_home_hubs_2027 } from './articles/best-smart-home-hubs-2027'
+import { article as a_nvidia_jetson_orin_nano_smart_home_review } from './articles/nvidia-jetson-orin-nano-smart-home-review'
+import { article as a_best_energy_monitoring_smart_plugs_2027 } from './articles/best-energy-monitoring-smart-plugs-2027'
 
 export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // Category 1 — Smart Home Foundations
@@ -83,4 +107,28 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'beelink-eq14-local-ai-review':         a_beelink_eq14_local_ai_review,
   'gmktec-g3-plus-local-ai-review':       a_gmktec_g3_plus_local_ai_review,
   'minisforum-um890-pro-local-ai-review': a_minisforum_um890_pro_local_ai_review,
+  // Category 5 — Energy & Solar Integration
+  'local-smart-home-energy-management-2027':     a_local_smart_home_energy_management_2027,
+  'matter-solar-inverter-heat-pump-integration':  a_matter_solar_inverter_heat_pump_integration,
+  'home-assistant-energy-dashboard-guide':        a_home_assistant_energy_dashboard_guide,
+  'home-as-energy-microgrid-2027':                a_home_as_energy_microgrid_2027,
+  // Category 6 — 2027 Protocols & Regulation
+  'matter-1-6-explained':                a_matter_1_6_explained,
+  'thread-14-wifi-7-routers-guide':      a_thread_14_wifi_7_routers_guide,
+  'eu-data-act-smart-home-2027':         a_eu_data_act_smart_home_2027,
+  'ikea-matter-ecosystem-guide-2027':    a_ikea_matter_ecosystem_guide_2027,
+  // Category 7 — Advanced Local AI
+  'local-small-language-models-smart-home':      a_local_small_language_models_smart_home,
+  'radar-presence-sensing-no-camera':            a_radar_presence_sensing_no_camera,
+  'reducing-llm-hallucinations-home-automation':  a_reducing_llm_hallucinations_home_automation,
+  'sensor-fusion-smart-home-2027':                a_sensor_fusion_smart_home_2027,
+  'home-digital-twin-explained':                  a_home_digital_twin_explained,
+  // Category 8 — Buyer's Guides
+  'best-local-security-cameras-2027':             a_best_local_security_cameras_2027,
+  'best-smart-locks-local-control-2027':          a_best_smart_locks_local_control_2027,
+  'best-smart-thermostats-local-ai-2027':         a_best_smart_thermostats_local_ai_2027,
+  'best-zigbee-thread-dongles-2027':              a_best_zigbee_thread_dongles_2027,
+  'best-smart-home-hubs-2027':                    a_best_smart_home_hubs_2027,
+  'nvidia-jetson-orin-nano-smart-home-review':    a_nvidia_jetson_orin_nano_smart_home_review,
+  'best-energy-monitoring-smart-plugs-2027':      a_best_energy_monitoring_smart_plugs_2027,
 }
