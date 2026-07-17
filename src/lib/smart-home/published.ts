@@ -10,6 +10,10 @@
 // statically parse them, matching power-local-llm.
 // (Pending separate pre-launch task: real product picks for the SH-05/SH-11/SH-23
 // buyer's guides; not blocking launch.)
+//
+// LAUNCHED 2026-07-17 (SH-26-45 expansion): 20 more articles across 4 new
+// categories (Energy & Solar Integration, 2027 Protocols & Regulation,
+// Advanced Local AI, Buyer's Guides) are live, translated into all 9 locales.
 
 export const SMART_HOME_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Category 1 — Smart Home Foundations
@@ -47,6 +51,30 @@ export const SMART_HOME_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'beelink-eq14-local-ai-review',
   'gmktec-g3-plus-local-ai-review',
   'minisforum-um890-pro-local-ai-review',
+  // Category 5 — Energy & Solar Integration
+  'local-smart-home-energy-management-2027',
+  'matter-solar-inverter-heat-pump-integration',
+  'home-assistant-energy-dashboard-guide',
+  'home-as-energy-microgrid-2027',
+  // Category 6 — 2027 Protocols & Regulation
+  'matter-1-6-explained',
+  'thread-14-wifi-7-routers-guide',
+  'eu-data-act-smart-home-2027',
+  'ikea-matter-ecosystem-guide-2027',
+  // Category 7 — Advanced Local AI
+  'local-small-language-models-smart-home',
+  'radar-presence-sensing-no-camera',
+  'reducing-llm-hallucinations-home-automation',
+  'sensor-fusion-smart-home-2027',
+  'home-digital-twin-explained',
+  // Category 8 — Buyer's Guides
+  'best-local-security-cameras-2027',
+  'best-smart-locks-local-control-2027',
+  'best-smart-thermostats-local-ai-2027',
+  'best-zigbee-thread-dongles-2027',
+  'best-smart-home-hubs-2027',
+  'nvidia-jetson-orin-nano-smart-home-review',
+  'best-energy-monitoring-smart-plugs-2027',
 ])
 
 export const SMART_HOME_HUB_PUBLISHED = true
