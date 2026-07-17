@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '2026년 최고의 로컬 LLM IDE 플러그인 5선',
     metaDescription: '2026년 로컬 LLM 코딩 어시스턴트: Continue, Cline, Aider, Cursor(오프라인 모드), GitHub Copilot 대안을 Ollama와 함께 직접 비교합니다.',
     educationalLevel: 'Intermediate',
-    affiliateDisclosure: false,
+    affiliateDisclosure: true,
     publishDate: '2026-05-26',
     leadAnswerBlock: '**Cline(VS Code + JetBrains)은 2026년 중반 기준 로컬 LLM을 위한 최고의 무료 IDE 플러그인입니다. Ollama 및 모든 OpenAI 호환 API에 네이티브로 연동되며, 에이전트 기반 파일 편집, 터미널 명령 실행, MCP 도구를 지원하고 완전히 사용자 하드웨어에서 실행됩니다. 참고: 기존 1위였던 Continue.dev는 2026년 6월 Cursor에 인수되었으며 v2.0.0이 마지막 릴리스입니다.**',
     quickAnswerTop: {
