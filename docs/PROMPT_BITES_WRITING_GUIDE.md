@@ -717,6 +717,14 @@ Base Rule 39 applies unchanged. Use descriptive anchor text matching target H1:
 ✅ "See our quick answer on [Q4_K_M vs Q8_0 quantization](/prompt-bites/q4-k-m-vs-q8-0-which-is-better)"
 ❌ "Click here" / "Read more" / "Learn more"
 
+### PB-LINK-05: Verify Product-Destination Links Before Reporting Complete
+
+Any article with a stated product-destination purpose — a "where to buy" section, an affiliate CTA, a pillar/buying-guide link — must have that link verified present in the actual article file via grep, for every language block, before being reported as complete.
+
+A completion report claiming a link exists is not sufficient. The link must be confirmed in the file content itself, not assumed from the writing brief, the outline, or an agent's self-report.
+
+This applies retroactively to any future audit: if a report says a conversion link "is" present, verify it — don't take the report at its word.
+
 ---
 
 ## PB-FRESHNESS: Freshness Tier (Overrides Freshness Classification)
@@ -915,7 +923,12 @@ PRE-PUBLISH CANNIBALIZATION AUDIT
 
 - [ ] quickAnswerTop.question matches a real GSC query or PAA question
 
-PASS: All 7 boxes checked → proceed to publish (noindex during build phase)
+- [ ] If this article has a stated product-destination purpose (where-to-buy
+      section, affiliate CTA, pillar/buying-guide link), that link is
+      confirmed present via grep in the article file — for every language
+      block — not just claimed in a completion report (PB-LINK-05)
+
+PASS: All 8 boxes checked → proceed to publish (noindex during build phase)
 FAIL: Any box unchecked → fix before creating the page
 ```
 
@@ -1040,7 +1053,7 @@ LINKING INTEGRITY
 - [ ] No orphan Prompt Bites (every article reachable from hub)
 
 CANNIBALIZATION AUDIT (run PB-CANNIBAL for each article)
-- [ ] All 30 articles pass the 7-point cannibalization checklist
+- [ ] All 30 articles pass the 8-point cannibalization checklist
 
 MOBILE UX
 - [ ] All 30 articles score ≥ 90 on PageSpeed Insights (mobile)
