@@ -1,0 +1,44 @@
+name: PR Checks
+
+# Runs the same build path Vercel uses (npm run build -> build-with-fix.js)
+# plus the validator suite, on every pull request against main. Reports
+# status on the PR — does NOT gate merges. Required-status-checks / branch
+# protection is a separate, deliberate decision, not enabled by this workflow.
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (via build-with-fix.js, same path as Vercel)
+        run: npm run build
+
+      - name: Validate translation integrity
+        run: node scripts/validate-translation-integrity.mjs
+
+      - name: Validate freshness tiers
+        run: node scripts/validate-freshness-tier.mjs
+
+      - name: Validate no internal-note leakage
+        run: node scripts/validate-no-internal-note-leakage.mjs
+
+      - name: Check locale coverage
+        run: node scripts/check-locale-coverage.mjs
+
+      - name: Test cluster noindex contract
+        run: node scripts/test-cluster-noindex.mjs
