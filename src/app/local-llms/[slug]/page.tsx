@@ -9,6 +9,7 @@ import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
 import { getLocalLLMGeoEntities, type Language } from '@/lib/geo-schema'
+import { buildImageObject } from '@/lib/imageObjectSchema'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -265,24 +266,9 @@ export default async function LocalLLMsArticlePage({ params }: PageProps) {
   }
 
   // Collect section images for ImageObject JSON-LD attribution
-  const toAbsImageUrl = (path: string) =>
-    path.startsWith('http') ? path :
-    path.startsWith('/') ? `https://www.promptquorum.com${path}` :
-    `https://www.promptquorum.com/images/${path}`
-
   const sectionImageObjects = Object.values(article.sections ?? {})
     .filter(s => !!s.image)
-    .map(s => ({
-      '@type': 'ImageObject' as const,
-      url: toAbsImageUrl(s.image!),
-      ...(s.imageCaption && { name: s.imageCaption.substring(0, 125), description: s.imageCaption }),
-      creator: { '@type': 'Person', name: 'Hans Kuepper' },
-      copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      license: 'https://www.promptquorum.com/image-license',
-      acquireLicensePage: 'https://www.promptquorum.com/image-license',
-      creditText: 'PromptQuorum',
-      copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
-    }))
+    .map(s => buildImageObject(s.image!, { caption: s.imageCaption }))
 
   if (!(articleSchema as any).image) {
     const heroUrl = (article as any).heroImage
