@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Dutch Senate approved ending 1:1 net metering (saldering), effective January 1, 2027',
           'Current scheme: exports and imports are netted 1:1 — only the difference is billed',
-          'From 2027: exports compensated at a lower, market-linked rate — exact mechanism still being finalized by regulator ACM, no specific rate confirmed yet',
+          'From 2027: exports compensated at a lower, market-linked rate — exact mechanism still being finalized by regulator ACM, no specific rate confirmed yet. Multiple independent sources informally converge on a roughly €0.04–0.10/kWh range (vs. current retail rates of roughly €0.28–0.35/kWh), but this is an expected estimate, not an ACM-confirmed figure',
           'The change increases the value of self-consumption relative to exporting, reinforcing the case for battery storage covered elsewhere in this cluster',
           'The Netherlands has an estimated ~26 GW of installed solar capacity as context for the scale of this shift',
         ],
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'The Current Scheme, and What Changes',
         content: [
           '**Under the Netherlands\' current saldering scheme, exported and imported electricity are netted 1:1 — a household exporting 3,000 kWh and importing 4,000 kWh over a billing period pays only for the 1,000 kWh net difference.** This is one of the most generous net metering arrangements in Europe, effectively letting solar owners use the grid as a free battery.',
-          '**From January 1, 2027, that changes: exported electricity will instead be compensated at a lower, market-linked rate rather than netted 1:1 against consumption.** The exact compensation mechanism is still being finalized by Dutch energy regulator ACM — no specific rate has been published, and this page will not state one until ACM confirms it. The direction is unambiguous even though the exact number is not: self-consumption becomes significantly more valuable than it was under saldering.',
+          '**From January 1, 2027, that changes: exported electricity will instead be compensated at a lower, market-linked rate rather than netted 1:1 against consumption.** The exact compensation mechanism is still being finalized by Dutch energy regulator ACM — no specific rate has been published, and this page will not state one until ACM confirms it. Multiple independent sources informally converge on a roughly €0.04–0.10/kWh expected range (against current retail electricity rates of roughly €0.28–0.35/kWh), but treat this strictly as an unofficial estimate, not a confirmed figure, until ACM publishes. The direction is unambiguous even though the exact number is not: self-consumption becomes significantly more valuable than it was under saldering.',
         ],
       },
       batteryConnection: {
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'When does net metering end in the Netherlands?', a: 'The Dutch Senate approved ending 1:1 net metering (saldering) effective January 1, 2027. Until then, the current 1:1 netting scheme remains in effect.' },
           { q: 'How does the current Dutch net metering scheme work?', a: 'Exported and imported electricity are netted 1:1 over a billing period — for example, a household exporting 3,000 kWh and importing 4,000 kWh pays only for the 1,000 kWh net difference.' },
-          { q: 'What replaces net metering after January 1, 2027?', a: 'Exported electricity will be compensated at a lower, market-linked rate instead of being netted 1:1 against consumption. Dutch regulator ACM has not yet finalized the exact compensation mechanism, so no specific rate can be confirmed at this time.' },
+          { q: 'What replaces net metering after January 1, 2027?', a: 'Exported electricity will be compensated at a lower, market-linked rate instead of being netted 1:1 against consumption. Dutch regulator ACM has not yet finalized the exact compensation mechanism, so no specific rate can be confirmed at this time. Multiple independent sources informally converge on a roughly €0.04–0.10/kWh expected range (against current retail rates of roughly €0.28–0.35/kWh), but treat this as an unofficial estimate, not an ACM-confirmed figure.' },
           { q: 'Does this rollback apply outside the Netherlands?', a: 'No — this is specific to the Netherlands\' saldering scheme. It is not a general EU-wide net-metering explainer; a broader piece on net metering and grid export across multiple countries has been scoped separately for this cluster but is not covered on this page.' },
           { q: 'Should I get a battery because of this change?', a: 'The economics move in that direction — once exports are compensated below the current 1:1 rate, storing surplus power for self-consumption becomes relatively more valuable. See the dedicated battery storage guide for the general decision framework.' },
         ],
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'وافق مجلس الشيوخ الهولندي على إنهاء نظام صافي القياس 1:1 (saldering)، اعتبارًا من 1 يناير 2027',
           'النظام الحالي: يُقاصّ التصدير والاستيراد بنسبة 1:1 — يُحتسب الفرق فقط',
-          'اعتبارًا من 2027: ستُعوَّض الصادرات بسعر أقل مرتبط بالسوق — لا تزال الآلية الدقيقة قيد وضع اللمسات الأخيرة من قِبل الهيئة التنظيمية ACM، ولم يُؤكَّد أي سعر محدد بعد',
+          'اعتبارًا من 2027: ستُعوَّض الصادرات بسعر أقل مرتبط بالسوق — لا تزال الآلية الدقيقة قيد وضع اللمسات الأخيرة من قِبل الهيئة التنظيمية ACM، ولم يُؤكَّد أي سعر محدد بعد. تتقارب عدة مصادر مستقلة بشكل غير رسمي حول نطاق متوقع يبلغ تقريبًا 0.04–0.10 يورو/كيلوواط ساعة (مقابل أسعار التجزئة الحالية التي تبلغ تقريبًا 0.28–0.35 يورو/كيلوواط ساعة)، لكنه تقدير متوقع غير رسمي وليس رقمًا مؤكَّدًا من ACM',
           'يزيد هذا التغيير من قيمة الاستهلاك الذاتي مقارنة بالتصدير، مما يعزز الحجة لصالح تخزين البطارية الذي يتم تناوله في أماكن أخرى من هذه المجموعة من المحتوى',
           'تمتلك هولندا قدرة شمسية مركّبة تُقدَّر بنحو 26 جيجاواط كسياق لحجم هذا التحول',
         ],
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'النظام الحالي وما الذي سيتغير',
         content: [
           '**بموجب نظام saldering الحالي في هولندا، تُقاصّ الكهرباء المصدَّرة والمستوردة بنسبة 1:1 — يدفع المنزل الذي يصدّر 3,000 kWh ويستورد 4,000 kWh خلال فترة الفوترة فقط مقابل الفرق الصافي البالغ 1,000 kWh.** هذا أحد أكثر ترتيبات صافي القياس سخاءً في أوروبا، ويتيح فعليًا لأصحاب الأنظمة الشمسية استخدام الشبكة كبطارية مجانية.',
-          '**اعتبارًا من 1 يناير 2027، يتغير ذلك: سيتم تعويض الكهرباء المصدَّرة بدلاً من ذلك بسعر أقل مرتبط بالسوق، بدلاً من مقاصتها بنسبة 1:1 مقابل الاستهلاك.** لا تزال الآلية الدقيقة للتعويض قيد وضع اللمسات الأخيرة من قِبل الهيئة التنظيمية للطاقة في هولندا ACM — لم يُنشر أي سعر محدد، ولن تذكر هذه الصفحة أي سعر إلى أن تؤكده ACM. الاتجاه واضح لا لبس فيه حتى لو لم يكن الرقم الدقيق كذلك: يصبح الاستهلاك الذاتي أكثر قيمة بشكل ملحوظ مما كان عليه في ظل saldering.',
+          '**اعتبارًا من 1 يناير 2027، يتغير ذلك: سيتم تعويض الكهرباء المصدَّرة بدلاً من ذلك بسعر أقل مرتبط بالسوق، بدلاً من مقاصتها بنسبة 1:1 مقابل الاستهلاك.** لا تزال الآلية الدقيقة للتعويض قيد وضع اللمسات الأخيرة من قِبل الهيئة التنظيمية للطاقة في هولندا ACM — لم يُنشر أي سعر محدد، ولن تذكر هذه الصفحة أي سعر إلى أن تؤكده ACM. تتقارب عدة مصادر مستقلة بشكل غير رسمي حول نطاق متوقع يبلغ تقريبًا 0.04–0.10 يورو/كيلوواط ساعة (مقابل أسعار التجزئة الحالية التي تبلغ تقريبًا 0.28–0.35 يورو/كيلوواط ساعة)، لكن يجب التعامل مع هذا الرقم بصرامة باعتباره تقديرًا غير رسمي وليس رقمًا مؤكَّدًا، إلى أن تنشر ACM بياناتها الرسمية. الاتجاه واضح لا لبس فيه حتى لو لم يكن الرقم الدقيق كذلك: يصبح الاستهلاك الذاتي أكثر قيمة بشكل ملحوظ مما كان عليه في ظل saldering.',
         ],
       },
       batteryConnection: {
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'متى ينتهي صافي القياس في هولندا؟', a: 'وافق مجلس الشيوخ الهولندي على إنهاء نظام صافي القياس 1:1 (saldering) اعتبارًا من 1 يناير 2027. وحتى ذلك الحين، يظل نظام المقاصة 1:1 الحالي ساريًا.' },
           { q: 'كيف يعمل نظام صافي القياس الهولندي الحالي؟', a: 'تُقاصّ الكهرباء المصدَّرة والمستوردة بنسبة 1:1 خلال فترة الفوترة — على سبيل المثال، يدفع المنزل الذي يصدّر 3,000 kWh ويستورد 4,000 kWh فقط مقابل الفرق الصافي البالغ 1,000 kWh.' },
-          { q: 'ما الذي يحل محل صافي القياس بعد 1 يناير 2027؟', a: 'سيتم تعويض الكهرباء المصدَّرة بسعر أقل مرتبط بالسوق بدلاً من مقاصتها بنسبة 1:1 مقابل الاستهلاك. لم تُنهِ الهيئة التنظيمية الهولندية ACM بعد الآلية الدقيقة للتعويض، لذا لا يمكن تأكيد أي سعر محدد في الوقت الحالي.' },
+          { q: 'ما الذي يحل محل صافي القياس بعد 1 يناير 2027؟', a: 'سيتم تعويض الكهرباء المصدَّرة بسعر أقل مرتبط بالسوق بدلاً من مقاصتها بنسبة 1:1 مقابل الاستهلاك. لم تُنهِ الهيئة التنظيمية الهولندية ACM بعد الآلية الدقيقة للتعويض، لذا لا يمكن تأكيد أي سعر محدد في الوقت الحالي. تتقارب عدة مصادر مستقلة بشكل غير رسمي حول نطاق متوقع يبلغ تقريبًا 0.04–0.10 يورو/كيلوواط ساعة (مقابل أسعار التجزئة الحالية التي تبلغ تقريبًا 0.28–0.35 يورو/كيلوواط ساعة)، لكن يجب اعتبار ذلك تقديرًا غير رسمي وليس رقمًا مؤكَّدًا من ACM.' },
           { q: 'هل ينطبق هذا التراجع خارج هولندا؟', a: 'لا — هذا خاص بنظام saldering في هولندا. وهو ليس دليلاً عامًا حول صافي القياس على مستوى الاتحاد الأوروبي؛ فقد تم التخطيط بشكل منفصل لمحتوى أوسع حول صافي القياس وتصدير الطاقة إلى الشبكة عبر عدة دول لهذه المجموعة من المحتوى، لكنه لا يُتناول في هذه الصفحة.' },
           { q: 'هل يجب أن أحصل على بطارية بسبب هذا التغيير؟', a: 'تتحرك الاقتصاديات في هذا الاتجاه — فبمجرد تعويض الصادرات بسعر أقل من السعر الحالي 1:1، يصبح تخزين الطاقة الفائضة للاستهلاك الذاتي أكثر قيمة نسبيًا. راجع دليل تخزين البطارية المخصص للاطلاع على إطار القرار العام.' },
         ],
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Der niederländische Senat hat die Abschaffung des 1:1-Net-Metering (Saldering) zum 1. Januar 2027 beschlossen',
           'Aktuelle Regelung: Einspeisung und Bezug werden 1:1 verrechnet — nur die Differenz wird berechnet',
-          'Ab 2027: Einspeisung wird zu einem niedrigeren, marktgekoppelten Satz vergütet — der genaue Mechanismus wird noch von der Regulierungsbehörde ACM finalisiert, ein konkreter Satz steht noch nicht fest',
+          'Ab 2027: Einspeisung wird zu einem niedrigeren, marktgekoppelten Satz vergütet — der genaue Mechanismus wird noch von der Regulierungsbehörde ACM finalisiert, ein konkreter Satz steht noch nicht fest. Mehrere unabhängige Quellen deuten inoffiziell übereinstimmend auf eine erwartete Spanne von etwa 0,04–0,10 €/kWh hin (gegenüber aktuellen Strompreisen von etwa 0,28–0,35 €/kWh), aber das ist eine informelle Erwartung und keine von der ACM bestätigte Zahl',
           'Die Änderung erhöht den Wert des Eigenverbrauchs gegenüber der Einspeisung und stärkt damit das Argument für Batteriespeicher, der an anderer Stelle in diesem Themencluster behandelt wird',
           'Die Niederlande verfügen über eine installierte Solarkapazität von schätzungsweise ca. 26 GW als Einordnung für das Ausmaß dieses Wandels',
         ],
@@ -233,7 +233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Die aktuelle Regelung und was sich ändert',
         content: [
           '**Unter der aktuellen niederländischen Saldering-Regelung werden eingespeister und bezogener Strom 1:1 verrechnet — ein Haushalt, der über einen Abrechnungszeitraum 3.000 kWh einspeist und 4.000 kWh bezieht, zahlt nur für die Nettodifferenz von 1.000 kWh.** Das ist eine der großzügigsten Net-Metering-Regelungen Europas und erlaubt es Solarbesitzern faktisch, das Stromnetz als kostenlosen Speicher zu nutzen.',
-          '**Ab dem 1. Januar 2027 ändert sich das: Eingespeister Strom wird dann zu einem niedrigeren, marktgekoppelten Satz vergütet, statt 1:1 mit dem Verbrauch verrechnet zu werden.** Der genaue Vergütungsmechanismus wird derzeit noch von der niederländischen Energieregulierungsbehörde ACM finalisiert — es wurde noch kein konkreter Satz veröffentlicht, und diese Seite wird keinen nennen, bis die ACM ihn bestätigt hat. Die Richtung ist eindeutig, auch wenn die genaue Zahl es nicht ist: Eigenverbrauch wird deutlich wertvoller, als er es unter Saldering war.',
+          '**Ab dem 1. Januar 2027 ändert sich das: Eingespeister Strom wird dann zu einem niedrigeren, marktgekoppelten Satz vergütet, statt 1:1 mit dem Verbrauch verrechnet zu werden.** Der genaue Vergütungsmechanismus wird derzeit noch von der niederländischen Energieregulierungsbehörde ACM finalisiert — es wurde noch kein konkreter Satz veröffentlicht, und diese Seite wird keinen nennen, bis die ACM ihn bestätigt hat. Mehrere unabhängige Quellen deuten inoffiziell übereinstimmend auf eine erwartete Spanne von etwa 0,04–0,10 €/kWh hin (gegenüber aktuellen Strompreisen von etwa 0,28–0,35 €/kWh) — das ist jedoch strikt als informelle Schätzung zu verstehen, nicht als bestätigte Zahl, solange die ACM nichts veröffentlicht hat. Die Richtung ist eindeutig, auch wenn die genaue Zahl es nicht ist: Eigenverbrauch wird deutlich wertvoller, als er es unter Saldering war.',
         ],
       },
       batteryConnection: {
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Wann endet das Net Metering in den Niederlanden?', a: 'Der niederländische Senat hat die Abschaffung des 1:1-Net-Metering (Saldering) zum 1. Januar 2027 beschlossen. Bis dahin bleibt die aktuelle 1:1-Verrechnungsregelung in Kraft.' },
           { q: 'Wie funktioniert die aktuelle niederländische Net-Metering-Regelung?', a: 'Eingespeister und bezogener Strom werden über einen Abrechnungszeitraum 1:1 verrechnet — ein Haushalt, der beispielsweise 3.000 kWh einspeist und 4.000 kWh bezieht, zahlt nur für die Nettodifferenz von 1.000 kWh.' },
-          { q: 'Was ersetzt das Net Metering nach dem 1. Januar 2027?', a: 'Eingespeister Strom wird stattdessen zu einem niedrigeren, marktgekoppelten Satz vergütet, statt 1:1 mit dem Verbrauch verrechnet zu werden. Die niederländische Regulierungsbehörde ACM hat den genauen Vergütungsmechanismus noch nicht finalisiert, sodass derzeit kein konkreter Satz bestätigt werden kann.' },
+          { q: 'Was ersetzt das Net Metering nach dem 1. Januar 2027?', a: 'Eingespeister Strom wird stattdessen zu einem niedrigeren, marktgekoppelten Satz vergütet, statt 1:1 mit dem Verbrauch verrechnet zu werden. Die niederländische Regulierungsbehörde ACM hat den genauen Vergütungsmechanismus noch nicht finalisiert, sodass derzeit kein konkreter Satz bestätigt werden kann. Mehrere unabhängige Quellen deuten inoffiziell übereinstimmend auf eine erwartete Spanne von etwa 0,04–0,10 €/kWh hin (gegenüber aktuellen Strompreisen von etwa 0,28–0,35 €/kWh), aber das ist als informelle Schätzung zu behandeln, nicht als von der ACM bestätigte Zahl.' },
           { q: 'Gilt dieser Rückbau auch außerhalb der Niederlande?', a: 'Nein — das betrifft ausschließlich die niederländische Saldering-Regelung. Es handelt sich nicht um einen allgemeinen EU-weiten Net-Metering-Ratgeber; ein umfassenderer Beitrag zu Net Metering und Netzeinspeisung in mehreren Ländern ist für dieses Themencluster separat vorgesehen, wird aber auf dieser Seite nicht behandelt.' },
           { q: 'Sollte ich mir wegen dieser Änderung einen Batteriespeicher zulegen?', a: 'Die Wirtschaftlichkeit entwickelt sich in diese Richtung — sobald Einspeisungen unterhalb des aktuellen 1:1-Satzes vergütet werden, wird die Speicherung von Überschussstrom für den Eigenverbrauch relativ wertvoller. Den allgemeinen Entscheidungsrahmen finden Sie im eigenen Ratgeber zu Batteriespeichern.' },
         ],
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'El Senado neerlandés aprobó poner fin al net metering 1:1 (saldering), a partir del 1 de enero de 2027',
           'Esquema actual: las exportaciones y las importaciones se compensan 1:1 — solo se factura la diferencia',
-          'A partir de 2027: las exportaciones se compensarán a una tarifa más baja, vinculada al mercado — el mecanismo exacto sigue en proceso de finalización por parte del regulador ACM, aún sin tarifa específica confirmada',
+          'A partir de 2027: las exportaciones se compensarán a una tarifa más baja, vinculada al mercado — el mecanismo exacto sigue en proceso de finalización por parte del regulador ACM, aún sin tarifa específica confirmada. Varias fuentes independientes coinciden informalmente en un rango esperado de aproximadamente 0,04–0,10 €/kWh (frente a las tarifas eléctricas minoristas actuales de aproximadamente 0,28–0,35 €/kWh), pero se trata de una estimación esperada, no de una cifra confirmada por la ACM',
           'El cambio aumenta el valor del autoconsumo frente a la exportación, reforzando el argumento a favor del almacenamiento en batería tratado en otras partes de este grupo de contenidos',
           'Los Países Bajos cuentan con una capacidad solar instalada estimada de ~26 GW, como referencia de la magnitud de este cambio',
         ],
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'El esquema actual y qué cambia',
         content: [
           '**Bajo el esquema actual de saldering de los Países Bajos, la electricidad exportada e importada se compensa 1:1 — un hogar que exporta 3.000 kWh e importa 4.000 kWh durante un período de facturación paga solo por la diferencia neta de 1.000 kWh.** Este es uno de los esquemas de net metering más generosos de Europa, y permite en la práctica a los propietarios de sistemas solares usar la red como una batería gratuita.',
-          '**A partir del 1 de enero de 2027, eso cambia: la electricidad exportada se compensará en su lugar a una tarifa más baja, vinculada al mercado, en lugar de compensarse 1:1 frente al consumo.** El mecanismo exacto de compensación todavía lo está finalizando el regulador energético neerlandés ACM — no se ha publicado ninguna tarifa específica, y esta página no indicará una hasta que la ACM la confirme. La dirección es inequívoca aunque la cifra exacta no lo sea: el autoconsumo se vuelve significativamente más valioso de lo que era bajo el saldering.',
+          '**A partir del 1 de enero de 2027, eso cambia: la electricidad exportada se compensará en su lugar a una tarifa más baja, vinculada al mercado, en lugar de compensarse 1:1 frente al consumo.** El mecanismo exacto de compensación todavía lo está finalizando el regulador energético neerlandés ACM — no se ha publicado ninguna tarifa específica, y esta página no indicará una hasta que la ACM la confirme. Varias fuentes independientes coinciden informalmente en un rango esperado de aproximadamente 0,04–0,10 €/kWh (frente a las tarifas eléctricas minoristas actuales de aproximadamente 0,28–0,35 €/kWh), pero esto debe tratarse estrictamente como una estimación no oficial, no como una cifra confirmada, hasta que la ACM la publique. La dirección es inequívoca aunque la cifra exacta no lo sea: el autoconsumo se vuelve significativamente más valioso de lo que era bajo el saldering.',
         ],
       },
       batteryConnection: {
@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '¿Cuándo termina el net metering en los Países Bajos?', a: 'El Senado neerlandés aprobó poner fin al net metering 1:1 (saldering) a partir del 1 de enero de 2027. Hasta entonces, el esquema actual de compensación 1:1 sigue vigente.' },
           { q: '¿Cómo funciona el esquema actual de net metering neerlandés?', a: 'La electricidad exportada e importada se compensa 1:1 durante un período de facturación; por ejemplo, un hogar que exporta 3.000 kWh e importa 4.000 kWh paga solo por la diferencia neta de 1.000 kWh.' },
-          { q: '¿Qué sustituye al net metering después del 1 de enero de 2027?', a: 'La electricidad exportada se compensará a una tarifa más baja, vinculada al mercado, en lugar de compensarse 1:1 frente al consumo. El regulador neerlandés ACM aún no ha finalizado el mecanismo exacto de compensación, por lo que actualmente no se puede confirmar ninguna tarifa específica.' },
+          { q: '¿Qué sustituye al net metering después del 1 de enero de 2027?', a: 'La electricidad exportada se compensará a una tarifa más baja, vinculada al mercado, en lugar de compensarse 1:1 frente al consumo. El regulador neerlandés ACM aún no ha finalizado el mecanismo exacto de compensación, por lo que actualmente no se puede confirmar ninguna tarifa específica. Varias fuentes independientes coinciden informalmente en un rango esperado de aproximadamente 0,04–0,10 €/kWh (frente a las tarifas minoristas actuales de aproximadamente 0,28–0,35 €/kWh), pero esto debe tratarse como una estimación no oficial, no como una cifra confirmada por la ACM.' },
           { q: '¿Este recorte se aplica fuera de los Países Bajos?', a: 'No: es específico del esquema de saldering de los Países Bajos. No se trata de una guía general de net metering a nivel de la UE; una pieza más amplia sobre net metering y exportación a la red en varios países se ha previsto por separado para este grupo de contenidos, pero no se trata en esta página.' },
           { q: '¿Debería instalar una batería debido a este cambio?', a: 'La economía se mueve en esa dirección: una vez que las exportaciones se compensan por debajo de la tarifa 1:1 actual, almacenar el excedente de energía para el autoconsumo se vuelve relativamente más valioso. Consulta la guía dedicada al almacenamiento en batería para el marco de decisión general.' },
         ],
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Le Sénat néerlandais a approuvé la suppression du net metering 1:1 (saldering), à compter du 1er janvier 2027',
           'Régime actuel : exportations et importations compensées 1:1 — seule la différence est facturée',
-          'À partir de 2027 : les exportations seront compensées à un tarif plus bas, indexé sur le marché — le mécanisme exact est encore en cours de finalisation par le régulateur ACM, aucun tarif spécifique confirmé pour l\'instant',
+          'À partir de 2027 : les exportations seront compensées à un tarif plus bas, indexé sur le marché — le mécanisme exact est encore en cours de finalisation par le régulateur ACM, aucun tarif spécifique confirmé pour l\'instant. Plusieurs sources indépendantes convergent de manière informelle vers une fourchette attendue d\'environ 0,04–0,10 €/kWh (contre des tarifs de détail actuels d\'environ 0,28–0,35 €/kWh), mais il s\'agit d\'une estimation attendue, pas d\'un chiffre confirmé par l\'ACM',
           'Ce changement augmente la valeur de l\'autoconsommation par rapport à l\'exportation, renforçant l\'argument en faveur du stockage par batterie traité ailleurs dans ce cluster de contenus',
           'Les Pays-Bas disposent d\'une capacité solaire installée estimée à ~26 GW, pour donner une idée de l\'ampleur de ce changement',
         ],
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Le régime actuel et ce qui change',
         content: [
           '**Sous le régime actuel de saldering des Pays-Bas, l\'électricité exportée et importée est compensée 1:1 — un foyer qui exporte 3 000 kWh et importe 4 000 kWh sur une période de facturation ne paie que pour la différence nette de 1 000 kWh.** C\'est l\'un des dispositifs de net metering les plus généreux d\'Europe, permettant en pratique aux propriétaires de systèmes solaires d\'utiliser le réseau comme une batterie gratuite.',
-          '**À compter du 1er janvier 2027, cela change : l\'électricité exportée sera à la place compensée à un tarif plus bas, indexé sur le marché, plutôt que compensée 1:1 par rapport à la consommation.** Le mécanisme de compensation exact est encore en cours de finalisation par le régulateur énergétique néerlandais ACM — aucun tarif spécifique n\'a été publié, et cette page n\'en indiquera aucun tant que l\'ACM ne l\'aura pas confirmé. La direction est sans ambiguïté même si le chiffre exact ne l\'est pas : l\'autoconsommation devient nettement plus intéressante qu\'elle ne l\'était sous le saldering.',
+          '**À compter du 1er janvier 2027, cela change : l\'électricité exportée sera à la place compensée à un tarif plus bas, indexé sur le marché, plutôt que compensée 1:1 par rapport à la consommation.** Le mécanisme de compensation exact est encore en cours de finalisation par le régulateur énergétique néerlandais ACM — aucun tarif spécifique n\'a été publié, et cette page n\'en indiquera aucun tant que l\'ACM ne l\'aura pas confirmé. Plusieurs sources indépendantes convergent de manière informelle vers une fourchette attendue d\'environ 0,04–0,10 €/kWh (contre des tarifs de détail actuels d\'environ 0,28–0,35 €/kWh), mais cela doit être considéré strictement comme une estimation non officielle, pas comme un chiffre confirmé, tant que l\'ACM ne l\'aura pas publié. La direction est sans ambiguïté même si le chiffre exact ne l\'est pas : l\'autoconsommation devient nettement plus intéressante qu\'elle ne l\'était sous le saldering.',
         ],
       },
       batteryConnection: {
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Quand le net metering prend-il fin aux Pays-Bas ?', a: 'Le Sénat néerlandais a approuvé la suppression du net metering 1:1 (saldering) à compter du 1er janvier 2027. D\'ici là, le régime actuel de compensation 1:1 reste en vigueur.' },
           { q: 'Comment fonctionne le régime actuel de net metering néerlandais ?', a: 'L\'électricité exportée et importée est compensée 1:1 sur une période de facturation — par exemple, un foyer qui exporte 3 000 kWh et importe 4 000 kWh ne paie que pour la différence nette de 1 000 kWh.' },
-          { q: 'Qu\'est-ce qui remplace le net metering après le 1er janvier 2027 ?', a: 'L\'électricité exportée sera compensée à un tarif plus bas, indexé sur le marché, plutôt que compensée 1:1 par rapport à la consommation. Le régulateur néerlandais ACM n\'a pas encore finalisé le mécanisme exact de compensation, donc aucun tarif spécifique ne peut être confirmé pour l\'instant.' },
+          { q: 'Qu\'est-ce qui remplace le net metering après le 1er janvier 2027 ?', a: 'L\'électricité exportée sera compensée à un tarif plus bas, indexé sur le marché, plutôt que compensée 1:1 par rapport à la consommation. Le régulateur néerlandais ACM n\'a pas encore finalisé le mécanisme exact de compensation, donc aucun tarif spécifique ne peut être confirmé pour l\'instant. Plusieurs sources indépendantes convergent de manière informelle vers une fourchette attendue d\'environ 0,04–0,10 €/kWh (contre des tarifs de détail actuels d\'environ 0,28–0,35 €/kWh), mais cela doit être traité comme une estimation non officielle, pas comme un chiffre confirmé par l\'ACM.' },
           { q: 'Ce recul s\'applique-t-il en dehors des Pays-Bas ?', a: 'Non — cela concerne spécifiquement le régime de saldering néerlandais. Ce n\'est pas un guide général sur le net metering à l\'échelle de l\'UE ; un contenu plus large sur le net metering et l\'exportation vers le réseau dans plusieurs pays a été envisagé séparément pour ce cluster de contenus, mais n\'est pas couvert sur cette page.' },
           { q: 'Devrais-je acquérir une batterie à cause de ce changement ?', a: 'L\'économie évolue dans cette direction — une fois les exportations compensées en dessous du tarif 1:1 actuel, stocker le surplus d\'électricité pour l\'autoconsommation devient relativement plus intéressant. Consultez le guide dédié au stockage par batterie pour le cadre de décision général.' },
         ],
@@ -457,7 +457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'オランダ上院は、2027年1月1日付けで1:1ネットメータリング（サルデリング）の終了を承認',
           '現行制度：輸出と輸入の電力は1:1で相殺され、差分のみが請求される',
-          '2027年以降：輸出電力はより低い市場連動型の料率で補償される — 正確な仕組みは規制当局ACMがまだ最終決定中で、具体的な料率はまだ確認されていない',
+          '2027年以降：輸出電力はより低い市場連動型の料率で補償される — 正確な仕組みは規制当局ACMがまだ最終決定中で、具体的な料率はまだ確認されていない。複数の独立した情報源が非公式に一致して示す見通しでは、おおむね0.04〜0.10ユーロ/kWhの範囲（現行の小売電気料金のおおむね0.28〜0.35ユーロ/kWhに対して）とされているが、これはあくまで非公式な予想であり、ACMが確認した数値ではない',
           'この変更により、輸出よりも自家消費の価値が高まり、このクラスターの他の記事で扱う蓄電池導入の根拠を強めている',
           'この変化の規模の目安として、オランダの太陽光発電の設置容量は推定約26GW',
         ],
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '現行制度と変更点',
         content: [
           '**オランダの現行サルデリング制度では、輸出と輸入の電力が1:1で相殺されます — 請求期間中に3,000kWhを輸出し4,000kWhを輸入する世帯は、その差分である1,000kWh分のみを支払います。** これはヨーロッパで最も手厚いネットメータリング制度の一つであり、太陽光所有者が実質的に電力網を無料の蓄電池として利用できるようにしています。',
-          '**2027年1月1日からはこれが変わります：輸出された電力は消費量に対して1:1で相殺されるのではなく、より低い市場連動型の料率で補償されるようになります。** 正確な補償方式はオランダのエネルギー規制当局ACMがまだ最終決定しておらず — 具体的な料率はまだ公表されておらず、ACMが確認するまでこのページでも料率を示しません。正確な数字は未定ですが、方向性は明確です：自家消費はサルデリング下にあったときよりも大幅に価値が高まります。',
+          '**2027年1月1日からはこれが変わります：輸出された電力は消費量に対して1:1で相殺されるのではなく、より低い市場連動型の料率で補償されるようになります。** 正確な補償方式はオランダのエネルギー規制当局ACMがまだ最終決定しておらず — 具体的な料率はまだ公表されておらず、ACMが確認するまでこのページでも料率を示しません。複数の独立した情報源が非公式に一致して示す見通しでは、おおむね0.04〜0.10ユーロ/kWhの範囲（現行の小売電気料金のおおむね0.28〜0.35ユーロ/kWhに対して）とされていますが、これはACMが正式に公表するまでは、あくまで非公式な予想として扱うべきであり、確定した数値ではありません。正確な数字は未定ですが、方向性は明確です：自家消費はサルデリング下にあったときよりも大幅に価値が高まります。',
         ],
       },
       batteryConnection: {
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'オランダでネットメータリングはいつ終了しますか？', a: 'オランダ上院は、2027年1月1日付けで1:1ネットメータリング（サルデリング）の終了を承認しました。それまでは、現行の1:1相殺制度が引き続き適用されます。' },
           { q: 'オランダの現行ネットメータリング制度はどのように機能しますか？', a: '請求期間中、輸出と輸入の電力は1:1で相殺されます — 例えば、3,000kWhを輸出し4,000kWhを輸入する世帯は、差分である1,000kWh分のみを支払います。' },
-          { q: '2027年1月1日以降、ネットメータリングに代わる制度は何ですか？', a: '輸出された電力は消費量に対して1:1で相殺されるのではなく、より低い市場連動型の料率で補償されます。オランダの規制当局ACMは正確な補償方式をまだ最終決定しておらず、現時点で具体的な料率を確認することはできません。' },
+          { q: '2027年1月1日以降、ネットメータリングに代わる制度は何ですか？', a: '輸出された電力は消費量に対して1:1で相殺されるのではなく、より低い市場連動型の料率で補償されます。オランダの規制当局ACMは正確な補償方式をまだ最終決定しておらず、現時点で具体的な料率を確認することはできません。複数の独立した情報源が非公式に一致して示す見通しでは、おおむね0.04〜0.10ユーロ/kWhの範囲（現行の小売料金のおおむね0.28〜0.35ユーロ/kWhに対して）とされていますが、これは非公式な予想として扱うべきであり、ACMが確認した数値ではありません。' },
           { q: 'この制度縮小はオランダ以外にも適用されますか？', a: 'いいえ — これはオランダのサルデリング制度に固有のものです。EU全体に適用される一般的なネットメータリング解説記事ではありません。複数国にまたがるネットメータリングと系統輸出に関するより広範な記事はこのクラスターのために別途構想されていますが、このページでは扱っていません。' },
           { q: 'この変更のために蓄電池を導入すべきですか？', a: '経済性はその方向に動いています — 輸出が現行の1:1料率を下回る水準で補償されるようになると、自家消費のために余剰電力を蓄えることが相対的に価値を増します。一般的な判断基準については、専用の蓄電池ガイドをご覧ください。' },
         ],
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '네덜란드 상원은 2027년 1월 1일부로 1:1 넷미터링(살더링) 폐지를 승인',
           '현행 제도: 송전량과 수전량이 1:1로 상계되며, 차이분에 대해서만 청구',
-          '2027년부터: 송전량은 더 낮은 시장 연동 요율로 보상 — 정확한 방식은 규제기관 ACM이 아직 최종 확정 중이며, 구체적인 요율은 아직 확인되지 않음',
+          '2027년부터: 송전량은 더 낮은 시장 연동 요율로 보상 — 정확한 방식은 규제기관 ACM이 아직 최종 확정 중이며, 구체적인 요율은 아직 확인되지 않음. 여러 독립적인 소식통이 비공식적으로 대략 0.04~0.10유로/kWh 범위(현행 소매 전기요금 대략 0.28~0.35유로/kWh 대비)로 예상치가 수렴하고 있지만, 이는 어디까지나 예상치이며 ACM이 확인한 수치가 아님',
           '이 변화로 송전보다 자가소비의 가치가 높아지며, 이 클러스터의 다른 곳에서 다루는 배터리 저장장치 도입 논리를 강화함',
           '이 변화의 규모를 가늠하기 위한 참고로, 네덜란드의 설치된 태양광 용량은 약 26GW로 추정됨',
         ],
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '현재 제도와 변경 사항',
         content: [
           '**네덜란드의 현행 살더링 제도에서는 송전 및 수전 전력이 1:1로 상계됩니다 — 청구 기간 동안 3,000kWh를 송전하고 4,000kWh를 수전하는 가구는 순차이인 1,000kWh에 대해서만 요금을 지불합니다.** 이는 유럽에서 가장 관대한 넷미터링 제도 중 하나로, 태양광 소유자가 사실상 전력망을 무료 배터리처럼 사용할 수 있게 합니다.',
-          '**2027년 1월 1일부터는 이것이 바뀝니다: 송전된 전력은 소비량에 대해 1:1로 상계되는 대신 더 낮은 시장 연동 요율로 보상됩니다.** 정확한 보상 방식은 네덜란드 에너지 규제기관 ACM이 아직 최종 확정하지 않았습니다 — 구체적인 요율은 아직 공개되지 않았으며, ACM이 확정하기 전까지는 이 페이지에서도 요율을 명시하지 않습니다. 정확한 수치는 아직 정해지지 않았지만 방향성은 명확합니다: 자가소비는 살더링 하에서보다 훨씬 더 가치 있게 됩니다.',
+          '**2027년 1월 1일부터는 이것이 바뀝니다: 송전된 전력은 소비량에 대해 1:1로 상계되는 대신 더 낮은 시장 연동 요율로 보상됩니다.** 정확한 보상 방식은 네덜란드 에너지 규제기관 ACM이 아직 최종 확정하지 않았습니다 — 구체적인 요율은 아직 공개되지 않았으며, ACM이 확정하기 전까지는 이 페이지에서도 요율을 명시하지 않습니다. 여러 독립적인 소식통이 비공식적으로 대략 0.04~0.10유로/kWh 범위(현행 소매 전기요금 대략 0.28~0.35유로/kWh 대비)로 예상치가 수렴하고 있지만, ACM이 공식 발표하기 전까지는 어디까지나 비공식 추정치로만 다루어야 하며 확정된 수치가 아닙니다. 정확한 수치는 아직 정해지지 않았지만 방향성은 명확합니다: 자가소비는 살더링 하에서보다 훨씬 더 가치 있게 됩니다.',
         ],
       },
       batteryConnection: {
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '네덜란드에서 넷미터링은 언제 종료되나요?', a: '네덜란드 상원은 2027년 1월 1일부로 1:1 넷미터링(살더링)을 폐지하는 안을 승인했습니다. 그때까지는 현행 1:1 상계 제도가 계속 유지됩니다.' },
           { q: '네덜란드의 현행 넷미터링 제도는 어떻게 작동하나요?', a: '청구 기간 동안 송전 및 수전 전력이 1:1로 상계됩니다 — 예를 들어, 3,000kWh를 송전하고 4,000kWh를 수전하는 가구는 순차이인 1,000kWh에 대해서만 요금을 지불합니다.' },
-          { q: '2027년 1월 1일 이후 넷미터링을 대체하는 제도는 무엇인가요?', a: '송전된 전력은 소비량에 대해 1:1로 상계되는 대신 더 낮은 시장 연동 요율로 보상됩니다. 네덜란드 규제기관 ACM이 정확한 보상 방식을 아직 최종 확정하지 않아, 현재로서는 구체적인 요율을 확인할 수 없습니다.' },
+          { q: '2027년 1월 1일 이후 넷미터링을 대체하는 제도는 무엇인가요?', a: '송전된 전력은 소비량에 대해 1:1로 상계되는 대신 더 낮은 시장 연동 요율로 보상됩니다. 네덜란드 규제기관 ACM이 정확한 보상 방식을 아직 최종 확정하지 않아, 현재로서는 구체적인 요율을 확인할 수 없습니다. 여러 독립적인 소식통이 비공식적으로 대략 0.04~0.10유로/kWh 범위(현행 소매 요금 대략 0.28~0.35유로/kWh 대비)로 예상치가 수렴하고 있지만, 이는 비공식 추정치로 다루어야 하며 ACM이 확인한 수치가 아닙니다.' },
           { q: '이 제도 축소는 네덜란드 외 지역에도 적용되나요?', a: '아니요 — 이는 네덜란드의 살더링 제도에 국한된 것입니다. EU 전역에 적용되는 일반적인 넷미터링 해설 기사가 아닙니다. 여러 국가에 걸친 넷미터링과 계통 송전에 관한 더 넓은 범위의 콘텐츠가 이 클러스터를 위해 별도로 구상되었지만, 이 페이지에서는 다루지 않습니다.' },
           { q: '이 변화 때문에 배터리를 구입해야 하나요?', a: '경제성은 그러한 방향으로 움직이고 있습니다 — 송전량이 현행 1:1 요율보다 낮게 보상되기 시작하면, 자가소비를 위해 잉여 전력을 저장하는 것이 상대적으로 더 가치 있게 됩니다. 일반적인 판단 기준은 전용 배터리 저장장치 가이드를 참고하세요.' },
         ],
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'O Senado neerlandês aprovou o fim do net metering 1:1 (saldering), a partir de 1º de janeiro de 2027',
           'Esquema atual: exportações e importações são compensadas 1:1 — apenas a diferença é cobrada',
-          'A partir de 2027: as exportações serão compensadas a uma tarifa mais baixa, vinculada ao mercado — o mecanismo exato ainda está sendo finalizado pelo regulador ACM, sem tarifa específica confirmada até o momento',
+          'A partir de 2027: as exportações serão compensadas a uma tarifa mais baixa, vinculada ao mercado — o mecanismo exato ainda está sendo finalizado pelo regulador ACM, sem tarifa específica confirmada até o momento. Várias fontes independentes convergem informalmente para uma faixa esperada de aproximadamente €0,04–0,10/kWh (contra as tarifas de eletricidade no varejo atuais de aproximadamente €0,28–0,35/kWh), mas trata-se de uma estimativa esperada, não de um valor confirmado pela ACM',
           'A mudança aumenta o valor do autoconsumo em relação à exportação, reforçando o argumento a favor do armazenamento em bateria abordado em outras partes deste cluster de conteúdo',
           'Os Países Baixos têm uma capacidade solar instalada estimada de ~26 GW, como referência da escala dessa mudança',
         ],
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O esquema atual e o que muda',
         content: [
           '**No esquema atual de saldering dos Países Baixos, a eletricidade exportada e importada é compensada 1:1 — uma residência que exporta 3.000 kWh e importa 4.000 kWh ao longo de um período de faturamento paga apenas pela diferença líquida de 1.000 kWh.** Este é um dos esquemas de net metering mais generosos da Europa, permitindo, na prática, que os proprietários de sistemas solares usem a rede como uma bateria gratuita.',
-          '**A partir de 1º de janeiro de 2027, isso muda: a eletricidade exportada passará a ser compensada a uma tarifa mais baixa, vinculada ao mercado, em vez de ser compensada 1:1 em relação ao consumo.** O mecanismo exato de compensação ainda está sendo finalizado pelo regulador de energia neerlandês ACM — nenhuma tarifa específica foi publicada, e esta página não indicará nenhuma até que a ACM a confirme. A direção é inequívoca, mesmo que o número exato não seja: o autoconsumo se torna significativamente mais valioso do que era sob o saldering.',
+          '**A partir de 1º de janeiro de 2027, isso muda: a eletricidade exportada passará a ser compensada a uma tarifa mais baixa, vinculada ao mercado, em vez de ser compensada 1:1 em relação ao consumo.** O mecanismo exato de compensação ainda está sendo finalizado pelo regulador de energia neerlandês ACM — nenhuma tarifa específica foi publicada, e esta página não indicará nenhuma até que a ACM a confirme. Várias fontes independentes convergem informalmente para uma faixa esperada de aproximadamente €0,04–0,10/kWh (contra as tarifas de eletricidade no varejo atuais de aproximadamente €0,28–0,35/kWh), mas isso deve ser tratado estritamente como uma estimativa não oficial, não como um valor confirmado, até que a ACM o publique. A direção é inequívoca, mesmo que o número exato não seja: o autoconsumo se torna significativamente mais valioso do que era sob o saldering.',
         ],
       },
       batteryConnection: {
@@ -675,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Quando o net metering termina nos Países Baixos?', a: 'O Senado neerlandês aprovou o fim do net metering 1:1 (saldering) a partir de 1º de janeiro de 2027. Até lá, o esquema atual de compensação 1:1 permanece em vigor.' },
           { q: 'Como funciona o esquema atual de net metering neerlandês?', a: 'A eletricidade exportada e importada é compensada 1:1 ao longo de um período de faturamento — por exemplo, uma residência que exporta 3.000 kWh e importa 4.000 kWh paga apenas pela diferença líquida de 1.000 kWh.' },
-          { q: 'O que substitui o net metering após 1º de janeiro de 2027?', a: 'A eletricidade exportada será compensada a uma tarifa mais baixa, vinculada ao mercado, em vez de ser compensada 1:1 em relação ao consumo. O regulador neerlandês ACM ainda não finalizou o mecanismo exato de compensação, portanto nenhuma tarifa específica pode ser confirmada no momento.' },
+          { q: 'O que substitui o net metering após 1º de janeiro de 2027?', a: 'A eletricidade exportada será compensada a uma tarifa mais baixa, vinculada ao mercado, em vez de ser compensada 1:1 em relação ao consumo. O regulador neerlandês ACM ainda não finalizou o mecanismo exato de compensação, portanto nenhuma tarifa específica pode ser confirmada no momento. Várias fontes independentes convergem informalmente para uma faixa esperada de aproximadamente €0,04–0,10/kWh (contra as tarifas de varejo atuais de aproximadamente €0,28–0,35/kWh), mas isso deve ser tratado como uma estimativa não oficial, não como um valor confirmado pela ACM.' },
           { q: 'Esse recuo se aplica fora dos Países Baixos?', a: 'Não — isso é específico do esquema de saldering dos Países Baixos. Não é um guia geral de net metering para toda a UE; um conteúdo mais amplo sobre net metering e exportação de energia para a rede em vários países foi planejado separadamente para este cluster de conteúdo, mas não é abordado nesta página.' },
           { q: 'Devo instalar uma bateria por causa dessa mudança?', a: 'A economia está se movendo nessa direção — uma vez que as exportações sejam compensadas abaixo da tarifa 1:1 atual, armazenar o excedente de energia para autoconsumo se torna relativamente mais valioso. Consulte o guia dedicado de armazenamento em bateria para o framework geral de decisão.' },
         ],
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '荷兰参议院已批准自2027年1月1日起终止1:1净计量（saldering）制度',
           '现行制度：外送和输入电力按1:1相互抵扣——仅对差额部分计费',
-          '2027年起：外送电力将按更低的、与市场挂钩的费率进行补偿——具体机制仍在由监管机构ACM最终确定中，目前尚无确认的具体费率',
+          '2027年起：外送电力将按更低的、与市场挂钩的费率进行补偿——具体机制仍在由监管机构ACM最终确定中，目前尚无确认的具体费率。多个独立信息来源非正式地趋向于大约每千瓦时0.04–0.10欧元的预期区间（相较于目前约每千瓦时0.28–0.35欧元的零售电价），但这只是预期估计，并非ACM确认的数字',
           '此次变化提高了自用消费相对于外送的价值，进一步支持了本内容集群中其他文章所涉及的电池储能方案',
           '作为这一变化规模的参考，荷兰已安装的太阳能装机容量估计约为26吉瓦（GW）',
         ],
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '现行制度及其变化',
         content: [
           '**在荷兰现行的saldering制度下，外送和输入的电力按1:1相互抵扣——一户在一个计费周期内外送3,000千瓦时、输入4,000千瓦时的家庭，只需为其中1,000千瓦时的净差额付费。** 这是欧洲最优厚的净计量安排之一，实际上让太阳能业主可以把电网当作免费的电池来使用。',
-          '**从2027年1月1日起，这一切将发生变化：外送电力将不再按1:1与消费量相抵扣，而是改为按更低的、与市场挂钩的费率进行补偿。** 具体的补偿机制目前仍在由荷兰能源监管机构ACM最终确定中——尚未公布任何具体费率，在ACM确认之前，本页面也不会给出任何具体数字。虽然确切数字尚未确定，但方向是明确的：自用消费的价值将显著高于saldering制度下的水平。',
+          '**从2027年1月1日起，这一切将发生变化：外送电力将不再按1:1与消费量相抵扣，而是改为按更低的、与市场挂钩的费率进行补偿。** 具体的补偿机制目前仍在由荷兰能源监管机构ACM最终确定中——尚未公布任何具体费率，在ACM确认之前，本页面也不会给出任何具体数字。多个独立信息来源非正式地趋向于大约每千瓦时0.04–0.10欧元的预期区间（相较于目前约每千瓦时0.28–0.35欧元的零售电价），但在ACM正式公布之前，这必须严格视为非官方预期估计，而非已确认的数字。虽然确切数字尚未确定，但方向是明确的：自用消费的价值将显著高于saldering制度下的水平。',
         ],
       },
       batteryConnection: {
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '荷兰的净计量政策何时终止？', a: '荷兰参议院已批准自2027年1月1日起终止1:1净计量（saldering）制度。在此之前，现行的1:1抵扣制度仍然有效。' },
           { q: '荷兰现行的净计量制度是如何运作的？', a: '在一个计费周期内，外送和输入的电力按1:1相互抵扣——例如，一户外送3,000千瓦时、输入4,000千瓦时的家庭，只需为其中1,000千瓦时的净差额付费。' },
-          { q: '2027年1月1日之后，什么将取代净计量制度？', a: '外送电力将不再按1:1与消费量相抵扣，而是改为按更低的、与市场挂钩的费率进行补偿。荷兰监管机构ACM尚未最终确定具体的补偿机制，因此目前无法确认任何具体费率。' },
+          { q: '2027年1月1日之后，什么将取代净计量制度？', a: '外送电力将不再按1:1与消费量相抵扣，而是改为按更低的、与市场挂钩的费率进行补偿。荷兰监管机构ACM尚未最终确定具体的补偿机制，因此目前无法确认任何具体费率。多个独立信息来源非正式地趋向于大约每千瓦时0.04–0.10欧元的预期区间（相较于目前约每千瓦时0.28–0.35欧元的零售电价），但这应被视为非官方预期估计，而非ACM确认的数字。' },
           { q: '这一政策收紧是否适用于荷兰以外的地区？', a: '不适用——这是荷兰saldering制度特有的变化，并非欧盟范围内的一般性净计量解释文章。一篇涵盖多个国家净计量和电网输出的更广泛文章已为本内容集群单独规划，但本页面不涉及该内容。' },
           { q: '我应该因为这项变化而购买电池吗？', a: '经济因素正朝这个方向发展——一旦外送电力的补偿低于目前的1:1费率，将多余电力储存起来供自用消费，相对价值就会提高。有关一般性决策框架，请参阅专门的电池储能指南。' },
         ],
