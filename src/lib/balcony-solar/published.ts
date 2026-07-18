@@ -10,10 +10,10 @@
 // feat/balcony-solar-2027-trends Phase 7).
 import { BALCONY_SOLAR_SLUG_TO_KEY } from './slugs'
 
-// 2027 Trends expansion (BSOL-25..29) — held back from publish until explicit
+// 2027 Trends expansion (BSOL-26..29) — held back from publish until explicit
 // go-ahead. Remove entries from this set to flip a slug live.
+// BSOL-25 (us-balcony-solar-legalization-2027) dropped, not held back — see slugs.ts.
 const PENDING_SLUGS: ReadonlySet<string> = new Set([
-  'us-balcony-solar-legalization-2027',
   'balcony-solar-battery-storage-standard-2027',
   'eu-800w-balcony-solar-standard-2027',
   'balcony-solar-housing-associations-b2b-2027',

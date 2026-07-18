@@ -70,9 +70,8 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
     id: 'trends-2027',
     slug: 'trends-2027',
     titleEn: '2027 Trends',
-    descriptionEn: 'What changes in 2027: US state legalization, EU battery/wattage standards, B2B housing-association adoption, and the end of net metering in the Netherlands.',
+    descriptionEn: 'What changes in 2027: EU battery/wattage standards, B2B housing-association adoption, and the end of net metering in the Netherlands.',
     articleSlugs: [
-      'us-balcony-solar-legalization-2027',
       'balcony-solar-battery-storage-standard-2027',
       'eu-800w-balcony-solar-standard-2027',
       'balcony-solar-housing-associations-b2b-2027',

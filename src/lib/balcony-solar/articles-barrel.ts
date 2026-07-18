@@ -53,8 +53,8 @@ import { article as a_connect_balcony_solar_home_assistant_local } from './artic
 // TIER 3 extension — Legislation moat narrative companion to BSOL-12 (BSOL-24)
 import { article as a_how_balcony_solar_became_legal_in_the_us } from './articles/how-balcony-solar-became-legal-in-the-us'
 
-// TIER 5 — 2027 Trends expansion (BSOL-25..29) — EN scaffolded, noindex (see published.ts)
-import { article as a_us_balcony_solar_legalization_2027 } from './articles/us-balcony-solar-legalization-2027'
+// TIER 5 — 2027 Trends expansion (BSOL-26..29) — EN scaffolded, noindex (see published.ts)
+// BSOL-25 (us-balcony-solar-legalization-2027) dropped — see slugs.ts
 import { article as a_balcony_solar_battery_storage_standard_2027 } from './articles/balcony-solar-battery-storage-standard-2027'
 import { article as a_eu_800w_balcony_solar_standard_2027 } from './articles/eu-800w-balcony-solar-standard-2027'
 import { article as a_balcony_solar_housing_associations_b2b_2027 } from './articles/balcony-solar-housing-associations-b2b-2027'
@@ -102,7 +102,7 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
   'how-balcony-solar-became-legal-in-the-us':     a_how_balcony_solar_became_legal_in_the_us,
 
   // TIER 5 — 2027 Trends expansion (EN scaffolded, noindex — see published.ts)
-  'us-balcony-solar-legalization-2027':              a_us_balcony_solar_legalization_2027,
+  // BSOL-25 (us-balcony-solar-legalization-2027) dropped — see slugs.ts
   'balcony-solar-battery-storage-standard-2027':     a_balcony_solar_battery_storage_standard_2027,
   'eu-800w-balcony-solar-standard-2027':              a_eu_800w_balcony_solar_standard_2027,
   'balcony-solar-housing-associations-b2b-2027':      a_balcony_solar_housing_associations_b2b_2027,
