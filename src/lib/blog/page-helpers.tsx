@@ -9,6 +9,7 @@ import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
 import { translations } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
 import { getBlogPostIsoDate } from '@/lib/blog/parsePublishDate'
+import { buildImageObject } from '@/lib/imageObjectSchema'
 
 export function getArticleStaticParams() {
   return Object.keys(SLUG_TO_POST_ID).map((slug) => ({
@@ -200,25 +201,10 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
   }
 
   // Collect section images for ImageObject JSON-LD attribution
-  const toAbsImageUrl = (path: string) =>
-    path.startsWith('http') ? path :
-    path.startsWith('/') ? `https://www.promptquorum.com${path}` :
-    `https://www.promptquorum.com/images/${path}`
-
   const sectionImageObjects = post.sections
     ? Object.values(post.sections)
         .filter((s: any) => !!(s as any).image)
-        .map((s: any) => ({
-          '@type': 'ImageObject' as const,
-          url: toAbsImageUrl(s.image),
-          ...(s.imageCaption && { name: (s.imageCaption as string).substring(0, 125), description: s.imageCaption }),
-          creator: { '@type': 'Person', name: 'Hans Kuepper' },
-          copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-          license: 'https://www.promptquorum.com/image-license',
-          acquireLicensePage: 'https://www.promptquorum.com/image-license',
-          creditText: 'PromptQuorum',
-          copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
-        }))
+        .map((s: any) => buildImageObject(s.image, { caption: s.imageCaption }))
     : []
 
   // JSON-LD: ImageObject + ItemList for FrameworkWheel (if heroComponent is FrameworkWheel)

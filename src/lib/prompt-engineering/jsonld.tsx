@@ -2,6 +2,7 @@ import { peContent, type PEArticle } from '@/lib/prompt-engineering/content'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { getPEGeoEntities, type Language } from '@/lib/geo-schema'
+import { buildImageObject } from '@/lib/imageObjectSchema'
 
 // Validate and fix itemListSchema to ensure all ListItems have a 'name' property
 function ensureItemListSchemaValid(schema: any): any {
@@ -117,24 +118,9 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
     articleSchema.about = [...(Array.isArray(articleSchema.about) ? articleSchema.about : []), ...geoAbout]
   }
 
-  const toAbsImageUrl = (path: string) =>
-    path.startsWith('http') ? path :
-    path.startsWith('/') ? `https://www.promptquorum.com${path}` :
-    `https://www.promptquorum.com/images/${path}`
-
   const sectionImageObjects = Object.values(article.sections)
     .filter((s): s is typeof s & { image: string } => !!(s as any).image)
-    .map(s => ({
-      '@type': 'ImageObject' as const,
-      url: toAbsImageUrl((s as any).image),
-      ...((s as any).imageCaption && { name: ((s as any).imageCaption as string).substring(0, 125), description: (s as any).imageCaption }),
-      creator: { '@type': 'Person', name: 'Hans Kuepper' },
-      copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      license: 'https://www.promptquorum.com/image-license',
-      acquireLicensePage: 'https://www.promptquorum.com/image-license',
-      creditText: 'PromptQuorum',
-      copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
-    }))
+    .map(s => buildImageObject((s as any).image, { caption: (s as any).imageCaption }))
 
   if (sectionImageObjects.length > 0 && !articleSchema.image) {
     articleSchema.image = sectionImageObjects[0].url
