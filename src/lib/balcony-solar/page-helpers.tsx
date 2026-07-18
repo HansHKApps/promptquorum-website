@@ -22,10 +22,14 @@ import { BALCONY_SOLAR_SLUG_TO_KEY } from './slugs'
 import { BALCONY_SOLAR_CATEGORIES } from './categories'
 import { balconySolarAlternates, balconySolarHubPath, balconySolarArticlePath } from './metadata-helpers'
 import { isBalconySolarArticlePublished, isBalconySolarHubPublished } from './published'
+import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
 const BASE = 'https://www.promptquorum.com'
 
 type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
+
+const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
+const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
 
 const HOME_LABEL: Partial<Record<Lang, string>> = {
   en: 'Home',
@@ -517,22 +521,36 @@ function renderHub(lang: Lang) {
                 {CATEGORY_COPY[lang]?.[theme.id]?.description ?? theme.description}
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
-                {theme.slugs.map((slug) => (
-                  <Link
-                    key={slug}
-                    href={balconySolarArticlePath(lang, slug)}
-                    className="group flex items-start gap-3 border border-primary/15 bg-card rounded-xl px-5 py-4 hover:border-primary/40 transition-colors"
-                  >
-                    <span className={`mt-1.5 h-2 w-2 rounded-full shrink-0 ${theme.colorDot}`} />
-                    <span className="text-sm font-medium text-text-primary group-hover:text-primary transition-colors">
-                      {(() => {
-                        const key = BALCONY_SOLAR_SLUG_TO_KEY[slug]
-                        const articleData = key ? balconySolarContent[key] : undefined
-                        return articleData?.[lang]?.title ?? articleData?.['en']?.title ?? slugToTitle(slug)
-                      })()}
-                    </span>
-                  </Link>
-                ))}
+                {theme.slugs.map((slug) => {
+                  const key = BALCONY_SOLAR_SLUG_TO_KEY[slug]
+                  const articleData = key ? balconySolarContent[key] : undefined
+                  const enArticle = articleData?.['en']
+                  const showNew = isNewArticle(enArticle?.publishDate)
+                  const showUpdated = !showNew && isUpdatedArticle(enArticle?.publishDate, enArticle?.dateModified)
+                  return (
+                    <div key={slug} className={`relative rounded-xl ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : showUpdated ? 'ring-2 ring-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.25)]' : ''}`}>
+                      {showNew && (
+                        <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
+                          {NEW_LABEL[lang] ?? NEW_LABEL['en']}
+                        </span>
+                      )}
+                      {showUpdated && (
+                        <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-amber-500 border-2 border-amber-300 shadow-md rounded px-2.5 py-0.5 z-10">
+                          {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']}
+                        </span>
+                      )}
+                      <Link
+                        href={balconySolarArticlePath(lang, slug)}
+                        className={`group flex items-start gap-3 bg-card rounded-xl px-5 py-4 transition-colors ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/15 hover:border-primary/40'}`}
+                      >
+                        <span className={`mt-1.5 h-2 w-2 rounded-full shrink-0 ${theme.colorDot}`} />
+                        <span className="text-sm font-medium text-text-primary group-hover:text-primary transition-colors">
+                          {articleData?.[lang]?.title ?? enArticle?.title ?? slugToTitle(slug)}
+                        </span>
+                      </Link>
+                    </div>
+                  )
+                })}
               </div>
             </section>
           ))}
