@@ -565,5 +565,64 @@
       "verified_date": "2026-07-13",
       "notes": "command-r-plus-08-2024. Cohere's own docs state Command A supersedes Command R+ for enterprise deployment. Site mentions 'Command R+ 104B' (4x) — added to source-lab coverage this cycle per the spec's 'adjust list if a lab is added/dropped from site content' rule."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "id": "ollama-docs-context-length",
+      "name": "Ollama official docs — Context length",
+      "url": "https://github.com/ollama/ollama/blob/main/docs/context-length.mdx",
+      "tier": "vendor"
+    },
+    {
+      "id": "ollama-docs-faq",
+      "name": "Ollama official docs — FAQ",
+      "url": "https://github.com/ollama/ollama/blob/main/docs/faq.mdx",
+      "tier": "vendor"
+    },
+    {
+      "id": "ollama-docs-gpu",
+      "name": "Ollama official docs — Hardware support (GPU)",
+      "url": "https://github.com/ollama/ollama/blob/main/docs/gpu.mdx",
+      "tier": "vendor"
+    },
+    {
+      "id": "ollama-docs-docker",
+      "name": "Ollama official docs — Docker",
+      "url": "https://github.com/ollama/ollama/blob/main/docs/docker.mdx",
+      "tier": "vendor"
+    }
+  ],
+  "ecosystem_notes": [
+    {
+      "id": "ollama-context-default",
+      "text": "Ollama's default context window is 4096 tokens, auto-scaled by available VRAM (4k under 24GB, 32k at 24-48GB, 256k at 48GB+). The widely-copied \"2048\" figure circulating across AI-written guides is a pre-2026 default and is stale.",
+      "source_id": "ollama-docs-context-length",
+      "retrieved_at": "2026-07-17",
+      "editorial_implication": "Fast-moving technical DEFAULTS rot exactly like model names — context defaults, driver versions, CLI flags, keep_alive behaviour. Same error class as stale model names; no validator covers it yet (only model NAME staleness is build-gated so far)."
+    },
+    {
+      "id": "ollama-nvidia-container-toolkit-scope",
+      "text": "The NVIDIA Container Toolkit is required only for running Ollama inside Docker with GPU passthrough. A native (non-Docker) install needs only the NVIDIA driver + CUDA runtime; nvidia-smi verifies the driver, not the toolkit.",
+      "source_id": "ollama-docs-docker",
+      "retrieved_at": "2026-07-17",
+      "editorial_implication": "Same error class as above — a vendor-tooling scope fact, not a model name, but equally prone to silent copying-forward once wrong."
+    }
+  ],
+  "recommendations": {
+    "tier_beginner_4gb": {
+      "status": "NEEDS_RETRIEVAL",
+      "sources": [],
+      "note": "Policy requires >=2 vendor/primary sources before this can move to RESOLVED. Populate in the Branch 4 registry-refresh cycle. An empty tier blocks any page from rendering a claim here — do not guess to unblock it."
+    },
+    "tier_beginner_8gb": {
+      "status": "NEEDS_RETRIEVAL",
+      "sources": [],
+      "note": "Same policy as tier_beginner_4gb."
+    }
+  },
+  "best_overall_open_weight": {
+    "status": "CONTESTED",
+    "positions": [],
+    "note": "As of the 2026-07 cycle, current-gen open-weight rankings disagree across sources (candidates seen in the wild: GLM-5.2, MiniMax M3, Qwen 3 235B). Record each source's position here with source_id + retrieved_at rather than picking a winner. An article that resolves this to a single answer without >=2 independent sources in agreement is asserting a consensus that does not exist — this is the exact failure mode that produced the 'Llama 4 Scout (best overall)' error."
+  }
 }

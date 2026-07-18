@@ -1,0 +1,10 @@
+{
+  "entries": [
+    {
+      "date": "2026-07-18",
+      "action": "baseline-write",
+      "summary": "Branch 1: froze 3570 pre-existing model-name violations across 195 files / 9 locales into .model-names-baseline.json; added ollama-context-default + ollama-nvidia-container-toolkit-scope ecosystem_notes",
+      "branch": "fix/model-name-validator"
+    }
+  ]
+}

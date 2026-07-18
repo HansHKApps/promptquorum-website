@@ -1,5 +1,14 @@
 # Model Registry Refresh
 
+> **Canonical version:** `skills/model-registry-refresh/SKILL.md` (added 2026-07,
+> `fix/model-name-validator` branch). It carries everything below plus the v2
+> registry schema (`sources`, `ecosystem_notes`, `recommendations`,
+> `best_overall_open_weight`) and the build-gated validator steps
+> (`validate-model-names.mjs`, `validate-registry-freshness.mjs`,
+> `record-review.mjs`). This file is kept for historical incident context
+> (referenced by `docs/CONTENT_FOLLOWUPS.md` and script header comments) —
+> follow the skill file for any new refresh cycle, not this one.
+
 **Recommended model to run this skill: Claude Sonnet 5 (`claude-sonnet-5`).**
 Escalate a specific cycle to Opus 4.8 only if a review catches factual errors in
 the registry — do not switch by default; this runs monthly and cost compounds.
