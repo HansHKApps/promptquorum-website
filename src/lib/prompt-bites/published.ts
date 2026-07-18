@@ -86,6 +86,9 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'deepseek-r1-distill-vram-cheatsheet',
   'best-deepseek-distill-for-your-gpu',
 
+  // 2026-06-12 batch — was missing from allowlist
+  'ai-model-knowledge-cutoff-dates',
+
   // 2026-07 batch — published (was SCAFFOLD ONLY)
   'best-gpu-under-1000-local-llm',
   'rtx-4060-vs-rtx-3060-12gb',
