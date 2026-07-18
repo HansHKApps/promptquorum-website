@@ -46,4 +46,11 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
 
   // TIER 3 extension — Legislation moat: narrative companion to BSOL-12
   'how-balcony-solar-became-legal-in-the-us':     'how-balcony-solar-became-legal-in-the-us',      // BSOL-24
+
+  // TIER 5 — 2027 Trends expansion (noindex until Phase 7 authorization — see published.ts)
+  'us-balcony-solar-legalization-2027':           'us-balcony-solar-legalization-2027',            // BSOL-25
+  'balcony-solar-battery-storage-standard-2027':  'balcony-solar-battery-storage-standard-2027',   // BSOL-26
+  'eu-800w-balcony-solar-standard-2027':          'eu-800w-balcony-solar-standard-2027',           // BSOL-27
+  'balcony-solar-housing-associations-b2b-2027':  'balcony-solar-housing-associations-b2b-2027',   // BSOL-28
+  'net-metering-rollback-balcony-solar-2027':     'net-metering-rollback-balcony-solar-2027',      // BSOL-29
 }
