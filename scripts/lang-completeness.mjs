@@ -24,6 +24,7 @@ const CLUSTERS = [
   'prompt-engineering',
   'power-local-llm',
   'prompt-bites',
+  'balcony-solar',
 ];
 
 const ACTIVE_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es'];

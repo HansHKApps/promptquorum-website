@@ -31,6 +31,7 @@ const CLUSTER_DIRS = [
   'src/lib/power-local-llm/articles',
   'src/lib/prompt-bites/articles',
   'src/lib/smart-home/articles',
+  'src/lib/balcony-solar/articles',
 ]
 
 // All path-prefix-routed languages. `es` is the canonical mirror source for the
