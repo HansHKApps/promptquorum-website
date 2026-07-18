@@ -142,9 +142,15 @@ import { article as a_deepseek_local_china_data_privacy_2026 } from "./articles/
 import { article as a_local_llm_lgpd_compliance_brazil_2026 } from "./articles/local-llm-lgpd-compliance-brazil-2026";
 import { article as a_best_local_llms_portuguese_language_2026 } from "./articles/best-local-llms-portuguese-language-2026";
 
+// Hardware Setups — PC build guides 2026-07-18
+import { article as a_local_llm_pc_build_1000 } from "./articles/local-llm-pc-build-1000";
+import { article as a_local_llm_pc_build_2000 } from "./articles/local-llm-pc-build-2000";
+
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   "local-llm-lgpd-compliance-brazil-2026": a_local_llm_lgpd_compliance_brazil_2026,
   "best-local-llms-portuguese-language-2026": a_best_local_llms_portuguese_language_2026,
+  "local-llm-pc-build-1000": a_local_llm_pc_build_1000,
+  "local-llm-pc-build-2000": a_local_llm_pc_build_2000,
   "what-are-local-llms": a_what_are_local_llms,
   "how-to-install-ollama": a_how_to_install_ollama,
   "how-to-install-lm-studio": a_how_to_install_lm_studio,
