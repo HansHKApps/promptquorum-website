@@ -8,7 +8,6 @@ Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
 Disallow: /download
-Disallow: /image-license
 
 # AI crawlers — same access as Googlebot (full site access)
 User-Agent: GPTBot
@@ -39,7 +38,6 @@ Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
 Disallow: /download
-Disallow: /image-license
 
 # Bingbot — explicit rules for clarity
 User-Agent: Bingbot
@@ -48,7 +46,6 @@ Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
 Disallow: /download
-Disallow: /image-license
 
 # Sitemaps
 Sitemap: https://www.promptquorum.com/sitemap.xml

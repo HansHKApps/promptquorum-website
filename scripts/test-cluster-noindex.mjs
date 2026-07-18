@@ -56,6 +56,24 @@ const CLUSTERS = [
     // flat true/false, not per-lang, so all langs are published.
     hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']),
   },
+  {
+    name: 'balcony-solar',
+    basePath: '/balcony-solar',
+    slugsFile: 'src/lib/balcony-solar/slugs.ts',
+    publishedFile: 'src/lib/balcony-solar/published.ts',
+    // balcony-solar/published.ts is structured the OPPOSITE way from the other
+    // clusters above: instead of a literal Set of published slugs, it lists a
+    // PENDING_SLUGS Set (held-back/noindex) and computes the published set as
+    // "every slug minus PENDING_SLUGS". readPublishedSlugs()'s regex still
+    // correctly extracts that quoted-slug-literal block (it's the only one in
+    // the file) — invertPending below reinterprets it as the held-back set
+    // and derives the real published set by exclusion, matching the actual
+    // isBalconySolarArticlePublished() runtime logic.
+    invertPending: true,
+    // Mirrors isBalconySolarHubPublished() — BALCONY_SOLAR_HUB_PUBLISHED is a
+    // flat true/false, not per-lang, so all langs are published.
+    hubPublishedLangs: new Set(['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']),
+  },
 ]
 
 function readSlugs(slugsFile) {
@@ -64,7 +82,8 @@ function readSlugs(slugsFile) {
   // Value side allows camelCase too — prompt-bites/slugs.ts maps kebab-case
   // slugs to camelCase article keys (e.g. 'howMuchVramForLocalLlm'), unlike
   // power-local-llm/smart-home which map slug to itself in kebab-case.
-  const re = /^\s+'([a-z0-9-]+)':\s*'[A-Za-z0-9-]+',?\s*$/gm
+  // Trailing `// BSOL-01`-style comments (balcony-solar/slugs.ts) are tolerated.
+  const re = /^\s+'([a-z0-9-]+)':\s*'[A-Za-z0-9-]+',?(?:\s*\/\/.*)?\s*$/gm
   const slugs = []
   let m
   while ((m = re.exec(src)) !== null) slugs.push(m[1])
@@ -179,6 +198,10 @@ async function main() {
   for (const cluster of CLUSTERS) {
     cluster.slugs = readSlugs(cluster.slugsFile)
     cluster.publishedSlugs = readPublishedSlugs(cluster.publishedFile)
+    if (cluster.invertPending) {
+      const heldBack = cluster.publishedSlugs
+      cluster.publishedSlugs = new Set(cluster.slugs.filter((s) => !heldBack.has(s)))
+    }
     console.log(`▶ Loaded ${cluster.slugs.length} slugs for ${cluster.name} from ${cluster.slugsFile}`)
   }
 
