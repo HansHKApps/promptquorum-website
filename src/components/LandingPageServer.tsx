@@ -8,6 +8,7 @@ import { BlogSectionClient } from './BlogSectionClient'
 import { Suspense } from 'react'
 import { useLang } from '@/hooks/useLang'
 import { translations } from '@/translations'
+import { WAITLIST_INVITE_COPY } from '@/lib/waitlistInviteCopy'
 
 // Icons
 const Shield = () => (
@@ -33,7 +34,7 @@ const Layers = () => (
 
 const T = {
   en: {
-    badge: 'Waitlist Now Open',
+    badge: 'Public Beta Live',
     h1a: 'One Prompt. 25+ AI Responses.',
     h1b: 'Get Consensus',
     heroDesc: 'Write and optimize your prompt once — get responses from ChatGPT, Claude, Gemini, and 25+ AI models side-by-side. Detect hallucinations, score consensus, and find the best answer across all models.',
@@ -54,9 +55,9 @@ const T = {
     pipelineH2: 'How Does the PromptQuorum 4-Stage Pipeline Work?',
     pipelineDesc: 'Optimize, compare, analyze, and improve your prompts automatically',
     faqH2: 'Frequently Asked Questions',
-    waitlistH2: 'Join the PromptQuorum Waitlist',
+    waitlistH2: WAITLIST_INVITE_COPY.en.title,
     publishedDate: 'Updated April 5, 2026',
-    waitlistDesc: 'PromptQuorum is live April 2026. Join the waitlist for early access and lifetime premium features. Your API keys stay in your browser—zero registration, zero tracking.',
+    waitlistDesc: WAITLIST_INVITE_COPY.en.desc,
     whyH2: 'Why PromptQuorum?',
     whyItems: [
       'Dispatch one prompt to 25+ models simultaneously — no tab switching',
@@ -78,7 +79,7 @@ const T = {
     worldwide: '🌍 Available worldwide',
   },
   de: {
-    badge: 'Warteliste jetzt offen',
+    badge: 'Öffentliche Beta live',
     h1a: 'Ein Prompt. 25+ KI-Antworten.',
     h1b: 'Konsens finden',
     heroDesc: 'Schreiben und optimieren Sie Ihren Prompt einmal — erhalten Sie Antworten von ChatGPT, Claude, Gemini und 25+ KI-Modellen nebeneinander. Halluzinationen erkennen, Konsens bewerten und die beste Antwort aller Modelle finden.',
@@ -99,9 +100,9 @@ const T = {
     pipelineH2: 'Wie funktioniert die 4-Stufen-Pipeline von PromptQuorum?',
     pipelineDesc: 'Prompts automatisch optimieren, vergleichen, analysieren und verbessern',
     faqH2: 'Häufig gestellte Fragen',
-    waitlistH2: 'Der PromptQuorum-Warteliste beitreten',
+    waitlistH2: WAITLIST_INVITE_COPY.de.title,
     publishedDate: 'Aktualisiert 5. April 2026',
-    waitlistDesc: 'PromptQuorum ist live im April 2026. Treten Sie der Warteliste bei, um Early Access und lebenslange Premium-Funktionen zu erhalten. Ihre API-Schlüssel bleiben in Ihrem Browser — null Registrierung, null Tracking.',
+    waitlistDesc: WAITLIST_INVITE_COPY.de.desc,
     whyH2: 'Warum PromptQuorum?',
     whyItems: [
       'Senden Sie einen Prompt gleichzeitig an 25+ Modelle — kein Tab-Wechsel',
@@ -123,7 +124,7 @@ const T = {
     worldwide: '🌍 Weltweit verfügbar',
   },
   fr: {
-    badge: 'Liste d\'attente ouverte',
+    badge: 'Bêta publique en ligne',
     h1a: 'Un Prompt. 25+ Réponses IA.',
     h1b: 'Trouvez le Consensus',
     heroDesc: 'Rédigez et optimisez votre prompt une seule fois — recevez des réponses de ChatGPT, Claude, Gemini et 25+ modèles IA côte à côte. Détectez les hallucinations, évaluez le consensus et trouvez la meilleure réponse parmi tous les modèles.',
@@ -144,9 +145,9 @@ const T = {
     pipelineH2: 'Comment fonctionne le pipeline en 4 étapes de PromptQuorum ?',
     pipelineDesc: 'Optimisez, comparez, analysez et améliorez vos prompts automatiquement',
     faqH2: 'Questions fréquemment posées',
-    waitlistH2: 'Rejoindre la liste d\'attente PromptQuorum',
+    waitlistH2: WAITLIST_INVITE_COPY.fr.title,
     publishedDate: 'Mis à jour 5 avril 2026',
-    waitlistDesc: 'PromptQuorum est en direct avril 2026. Rejoignez la liste d\'attente pour un accès précoce et les fonctionnalités premium à vie. Vos clés API restent dans votre navigateur — zéro inscription, zéro suivi.',
+    waitlistDesc: WAITLIST_INVITE_COPY.fr.desc,
     whyH2: 'Pourquoi PromptQuorum ?',
     whyItems: [
       'Envoyez un prompt à 25+ modèles simultanément — pas de changement d\'onglet',
@@ -168,7 +169,7 @@ const T = {
     worldwide: '🌍 Disponible dans le monde entier',
   },
   ja: {
-    badge: 'ウェイトリスト受付中',
+    badge: 'パブリックベータ公開中',
     h1a: '1つのプロンプト。25以上のAI回答。',
     h1b: 'コンセンサスを得る',
     heroDesc: 'プロンプトを作成・最適化して一度送信するだけで、ChatGPT・Claude・Geminiをはじめ25以上のAIモデルから並べて回答を取得。ハルシネーションを検出し、コンセンサスを評価し、全モデル中の最良回答を見つけましょう。',
@@ -189,9 +190,9 @@ const T = {
     pipelineH2: 'PromptQuorumの4段階パイプラインはどのように機能しますか？',
     pipelineDesc: 'プロンプトの最適化・比較・分析・改善を自動で実行',
     faqH2: 'よくある質問',
-    waitlistH2: 'PromptQuorumウェイトリストに参加',
+    waitlistH2: WAITLIST_INVITE_COPY.ja.title,
     publishedDate: '更新日 2026年4月5日',
-    waitlistDesc: 'PromptQuorumは2026年4月にライブです。ウェイトリストに参加して、早期アクセスと生涯プレミアム機能を取得してください。APIキーはブラウザに保存されたまま—登録なし、トラッキングなし。',
+    waitlistDesc: WAITLIST_INVITE_COPY.ja.desc,
     whyH2: 'PromptQuorumを選ぶ理由',
     whyItems: [
       '1つのプロンプトを25+個のモデルに同時に送信 — タブ切り替えなし',
@@ -213,7 +214,7 @@ const T = {
     worldwide: '🌍 世界中で利用可能',
   },
   zh: {
-    badge: '候补名单现已开放',
+    badge: '公开测试版已上线',
     h1a: '一个提示词，25+ AI 回答。',
     h1b: '获得共识',
     heroDesc: '编写并优化您的提示词，一次发送——即可并排获得 ChatGPT、Claude、Gemini 及 25+ 个 AI 模型的回答。检测幻觉，评估共识，找出所有模型中的最佳答案。',
@@ -234,9 +235,9 @@ const T = {
     pipelineH2: 'PromptQuorum 的 4 阶段流水线是如何运作的？',
     pipelineDesc: '自动优化、比较、分析并改进您的提示词',
     faqH2: '常见问题',
-    waitlistH2: '加入 PromptQuorum 候补名单',
+    waitlistH2: WAITLIST_INVITE_COPY.zh.title,
     publishedDate: '更新于2026年4月5日',
-    waitlistDesc: 'PromptQuorum在2026年4月上线。加入等待列表获得早期访问和终身高级功能。您的API密钥保留在您的浏览器中—零注册、零跟踪。',
+    waitlistDesc: WAITLIST_INVITE_COPY.zh.desc,
     whyH2: '为什么选择PromptQuorum？',
     whyItems: [
       '同时向25+个模型发送一个提示词 — 无需切换标签',
@@ -258,7 +259,7 @@ const T = {
     worldwide: '🌍 全球可用',
   },
   es: {
-    badge: 'Lista de espera abierta',
+    badge: 'Beta pública activa',
     h1a: 'Un prompt. 25+ respuestas de IA.',
     h1b: 'Obtén el consenso',
     heroDesc: 'Escribe y optimiza tu prompt una sola vez — obtén respuestas de ChatGPT, Claude, Gemini y 25+ modelos de IA en paralelo. Detecta alucinaciones, puntúa el consenso y encuentra la mejor respuesta entre todos los modelos.',
@@ -279,9 +280,9 @@ const T = {
     pipelineH2: '¿Cómo funciona el pipeline de 4 etapas de PromptQuorum?',
     pipelineDesc: 'Optimiza, compara, analiza y mejora tus prompts automáticamente',
     faqH2: 'Preguntas frecuentes',
-    waitlistH2: 'Únete a la lista de espera de PromptQuorum',
+    waitlistH2: WAITLIST_INVITE_COPY.es.title,
     publishedDate: 'Actualizado 5 de abril de 2026',
-    waitlistDesc: 'PromptQuorum se lanza en abril de 2026. Únete a la lista de espera para acceso anticipado y funciones premium de por vida. Tus claves de API se quedan en tu navegador — cero registro, cero rastreo.',
+    waitlistDesc: WAITLIST_INVITE_COPY.es.desc,
     whyH2: '¿Por qué PromptQuorum?',
     whyItems: [
       'Envía un prompt a 25+ modelos simultáneamente — sin cambiar pestañas',
@@ -303,7 +304,7 @@ const T = {
     worldwide: '🌍 Disponible en todo el mundo',
   },
   pt: {
-    badge: 'Lista de espera aberta',
+    badge: 'Beta pública disponível',
     h1a: 'Um prompt. 25+ respostas de IA.',
     h1b: 'Obtenha o consenso',
     heroDesc: 'Escreva e otimize seu prompt uma única vez — receba respostas do ChatGPT, Claude, Gemini e 25+ modelos de IA lado a lado. Detecte alucinações, pontue o consenso e encontre a melhor resposta entre todos os modelos.',
@@ -324,9 +325,9 @@ const T = {
     pipelineH2: 'Como funciona o pipeline de 4 etapas do PromptQuorum?',
     pipelineDesc: 'Otimize, compare, analise e melhore seus prompts automaticamente',
     faqH2: 'Perguntas frequentes',
-    waitlistH2: 'Entre na lista de espera do PromptQuorum',
+    waitlistH2: WAITLIST_INVITE_COPY.pt.title,
     publishedDate: 'Atualizado em 5 de abril de 2026',
-    waitlistDesc: 'O PromptQuorum entra no ar em abril de 2026. Entre na lista de espera para ter acesso antecipado e recursos premium vitalícios. Suas chaves de API ficam no seu navegador — zero cadastro, zero rastreamento.',
+    waitlistDesc: WAITLIST_INVITE_COPY.pt.desc,
     whyH2: 'Por que o PromptQuorum?',
     whyItems: [
       'Envie um prompt para 25+ modelos simultaneamente — sem trocar de aba',
@@ -348,7 +349,7 @@ const T = {
     worldwide: '🌍 Disponível no mundo todo',
   },
   ar: {
-    badge: 'قائمة الانتظار مفتوحة الآن',
+    badge: 'النسخة التجريبية العامة متاحة الآن',
     h1a: 'موجّه واحد. أكثر من 25 إجابة من الذكاء الاصطناعي.',
     h1b: 'احصل على الإجماع',
     heroDesc: 'اكتب موجّهك وحسّنه مرة واحدة — واحصل على إجابات من ChatGPT وClaude وGemini وأكثر من 25 نموذجًا للذكاء الاصطناعي جنبًا إلى جنب. اكتشف الهلوسات، وقيّم الإجماع، واعثر على أفضل إجابة عبر جميع النماذج.',
@@ -369,9 +370,9 @@ const T = {
     pipelineH2: 'كيف يعمل خط المعالجة المكوّن من 4 مراحل في PromptQuorum؟',
     pipelineDesc: 'حسّن موجّهاتك وقارنها وحلّلها وطوّرها تلقائيًا',
     faqH2: 'الأسئلة الشائعة',
-    waitlistH2: 'انضم إلى قائمة انتظار PromptQuorum',
+    waitlistH2: WAITLIST_INVITE_COPY.ar.title,
     publishedDate: 'آخر تحديث في 5 أبريل 2026',
-    waitlistDesc: 'ينطلق PromptQuorum في أبريل 2026. انضم إلى قائمة الانتظار للوصول المبكر والميزات المتميزة مدى الحياة. تبقى مفاتيح API في متصفحك — بلا تسجيل، بلا تتبّع.',
+    waitlistDesc: WAITLIST_INVITE_COPY.ar.desc,
     whyH2: 'لماذا PromptQuorum؟',
     whyItems: [
       'أرسل موجّهًا واحدًا إلى أكثر من 25 نموذجًا في آنٍ واحد — دون التنقل بين علامات التبويب',
@@ -393,7 +394,7 @@ const T = {
     worldwide: '🌍 متوفر عالميًا',
   },
   ko: {
-    badge: '대기자 명단 접수 중',
+    badge: '퍼블릭 베타 진행 중',
     h1a: '하나의 프롬프트. 25개 이상의 AI 응답.',
     h1b: '합의 도출',
     heroDesc: '프롬프트를 한 번 작성하고 최적화하세요 — ChatGPT, Claude, Gemini 및 25개 이상의 AI 모델에서 응답을 나란히 받아보세요. 환각을 감지하고, 합의를 점수화하며, 모든 모델에서 최상의 답변을 찾으세요.',
@@ -414,9 +415,9 @@ const T = {
     pipelineH2: 'PromptQuorum의 4단계 파이프라인은 어떻게 작동하나요?',
     pipelineDesc: '프롬프트를 자동으로 최적화, 비교, 분석 및 개선하세요',
     faqH2: '자주 묻는 질문',
-    waitlistH2: 'PromptQuorum 대기자 명단에 참여하세요',
+    waitlistH2: WAITLIST_INVITE_COPY.ko.title,
     publishedDate: '2026년 4월 5일 업데이트',
-    waitlistDesc: 'PromptQuorum은 2026년 4월에 출시됩니다. 조기 접근 및 평생 프리미엄 기능을 위해 대기자 명단에 등록하세요. API 키는 브라우저에 저장 — 등록 없음, 추적 없음.',
+    waitlistDesc: WAITLIST_INVITE_COPY.ko.desc,
     whyH2: '왜 PromptQuorum인가요?',
     whyItems: [
       '동시에 25개 이상의 모델에 하나의 프롬프트를 전송 — 탭 전환 없음',
@@ -678,7 +679,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
           </p>
           <div className="mt-10">
             <Suspense fallback={<div className="max-w-md mx-auto h-12 bg-gray-200 rounded" />}>
-              <LandingPageClient isWaitlistForm={true} lang={lang} />
+              <LandingPageClient lang={lang} />
             </Suspense>
           </div>
         </div>
