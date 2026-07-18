@@ -66,4 +66,16 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
       'balcony-solar-not-producing-power-fixes',
     ],
   },
+  {
+    id: 'trends-2027',
+    slug: 'trends-2027',
+    titleEn: '2027 Trends',
+    descriptionEn: 'What changes in 2027: EU battery/wattage standards, B2B housing-association adoption, and the end of net metering in the Netherlands.',
+    articleSlugs: [
+      'balcony-solar-battery-storage-standard-2027',
+      'eu-800w-balcony-solar-standard-2027',
+      'balcony-solar-housing-associations-b2b-2027',
+      'net-metering-rollback-balcony-solar-2027',
+    ],
+  },
 ]

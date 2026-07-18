@@ -122,6 +122,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Are there subsidies for Balkonkraftwerk in Germany?', a: 'Some states and municipalities offer subsidies, but availability and amount vary significantly by region — check your specific state or city\'s current program rather than assuming a nationwide subsidy applies.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[The 800W Balcony Solar Standard: EU Harmonization Explained (2027)](/balcony-solar/eu-800w-balcony-solar-standard-2027) — the EU-wide 800W harmonization story (Greece, the EPBD) this Germany-specific guide references rather than repeats',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -249,6 +256,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Los sistemas de balcón con batería están cubiertos por el régimen simplificado?', a: 'No — los sistemas de balcón con almacenamiento quedan explícitamente excluidos y siguen requiriendo registro completo ante la operadora de red y un electricista autorizado, a diferencia de las unidades enchufables estándar.' },
           { q: '¿Pueden los inquilinos instalar un Balkonkraftwerk sin aprobación del propietario?', a: 'En reformas recientes, Alemania ha avanzado hacia tratar la energía solar de balcón como un derecho privilegiado del inquilino, pero pueden seguir aplicándose procesos de aprobación específicos del edificio y condiciones (sobre todo para instalaciones exteriores visibles) — confírmalo con tu propietario o comunidad.' },
           { q: '¿Existen subvenciones para el Balkonkraftwerk en Alemania?', a: 'Algunos estados y municipios ofrecen subvenciones, pero la disponibilidad y el importe varían mucho según la región — consulta el programa vigente de tu estado o ciudad en lugar de asumir que existe una subvención a nivel nacional.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[El estándar de 800 W para energía solar de balcón: la armonización de la UE explicada (2027)](/es/balcony-solar/eu-800w-balcony-solar-standard-2027) — la historia de la armonización de 800 W en toda la UE (Grecia, la EPBD) a la que remite esta guía específica de Alemania, sin repetirla',
         ],
       },
     },
@@ -381,6 +395,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Existem subsídios para o Balkonkraftwerk na Alemanha?', a: 'Alguns estados e municípios oferecem subsídios, mas a disponibilidade e o valor variam bastante por região — consulte o programa atual do seu estado ou cidade em vez de presumir que existe um subsídio nacional.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[O padrão de 800 W para energia solar de varanda: a harmonização da UE explicada (2027)](/pt/balcony-solar/eu-800w-balcony-solar-standard-2027) — a história da harmonização de 800 W em toda a UE (Grécia, a EPBD) que este guia específico da Alemanha referencia em vez de repetir',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -509,6 +530,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل تشمل أنظمة الشرفة المزوّدة ببطارية النظام المبسّط؟', a: 'لا — تُستبعد أنظمة الشرفة المزوّدة بتخزين صراحةً، ولا تزال تتطلب تسجيلاً كاملاً لدى مشغل الشبكة وكهربائيًا مرخّصًا، على عكس الوحدات القياسية القابلة للتوصيل.' },
           { q: 'هل يمكن للمستأجرين تركيب Balkonkraftwerk دون موافقة المالك؟', a: 'اتجهت ألمانيا في الإصلاحات الأخيرة نحو معاملة الطاقة الشمسية للشرفة كحق مُميَّز للمستأجر، لكن قد تظل عمليات الموافقة الخاصة بالمبنى وشروطه سارية (خصوصًا للتركيبات الخارجية الظاهرة) — تحقق من ذلك مع المالك أو اتحاد الملاك الخاص بك.' },
           { q: 'هل توجد إعانات لـ Balkonkraftwerk في ألمانيا؟', a: 'تقدّم بعض الولايات والبلديات إعانات، لكن التوافر والمبلغ يختلفان بشكل كبير حسب المنطقة — تحقق من البرنامج الحالي لولايتك أو مدينتك بدلاً من افتراض وجود إعانة على مستوى البلاد.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[معيار 800 واط للطاقة الشمسية على الشرفات: شرح التوحيد الأوروبي (2027)](/ar/balcony-solar/eu-800w-balcony-solar-standard-2027) — قصة التوحيد الأوروبي لمعيار 800 واط (اليونان، توجيه EPBD) التي يشير إليها هذا الدليل الخاص بألمانيا دون تكرارها',
         ],
       },
     },
@@ -641,6 +669,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ドイツにはBalkonkraftwerk向けの補助金がありますか？', a: '一部の州や自治体が補助金を提供していますが、利用可能性と金額は地域によって大きく異なります — 全国一律の補助金が適用されると想定せず、お住まいの州や市の現行プログラムを確認してください。' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[800W バルコニー太陽光基準：EU調和の解説（2027年）](/ja/balcony-solar/eu-800w-balcony-solar-standard-2027) — このドイツ特化ガイドが繰り返さず参照している、EU全体での800W統一化の経緯（ギリシャ、EPBD）',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -769,6 +804,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '配备电池的阳台系统是否适用简化制度？', a: '不适用——配备储能设备的阳台系统被明确排除，与标准插拔式设备不同，仍需要完整的配电运营商注册以及持证电工。' },
           { q: '租户可以不经房东批准安装Balkonkraftwerk吗？', a: '在近期改革中，德国已开始朝着将阳台光伏视为租户享有优待权利的方向发展，但针对建筑物的具体审批流程和条件（尤其是明显的外墙安装）仍可能适用——请与你的房东或业主协会确认。' },
           { q: '德国有针对Balkonkraftwerk的补贴吗？', a: '部分州和市政当局提供补贴，但可获得性和金额因地区而异——请查询你所在州或城市当前的具体计划，而不要假设全国统一适用补贴。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[800瓦阳台太阳能标准：欧盟统一进程解析（2027年）](/zh/balcony-solar/eu-800w-balcony-solar-standard-2027) ——本篇德国专题指南所引用而非重复展开的欧盟范围800瓦统一进程（希腊、EPBD指令）',
         ],
       },
     },
@@ -901,6 +943,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Y a-t-il des subventions pour le Balkonkraftwerk en Allemagne ?', a: 'Certains Länder et municipalités proposent des subventions, mais la disponibilité et le montant varient considérablement selon la région — vérifiez le programme actuel de votre Land ou ville spécifique plutôt que de présumer qu\'une subvention nationale s\'applique.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures connexes',
+        items: [
+          '[La norme des 800 W pour le solaire de balcon : l\'harmonisation européenne expliquée (2027)](/fr/balcony-solar/eu-800w-balcony-solar-standard-2027) — l\'histoire de l\'harmonisation à 800 W à l\'échelle de l\'UE (Grèce, DPEB) que ce guide propre à l\'Allemagne évoque sans la reprendre en détail',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1031,6 +1080,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '독일에는 Balkonkraftwerk에 대한 보조금이 있나요?', a: '일부 주와 지자체가 보조금을 제공하지만, 이용 가능 여부와 금액은 지역에 따라 크게 다릅니다 — 전국적인 보조금이 적용된다고 가정하지 말고, 귀하가 속한 주나 도시의 현행 프로그램을 확인하십시오.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 자료',
+        items: [
+          '[800W 발코니 태양광 표준: EU 조화 정책 설명 (2027년)](/ko/balcony-solar/eu-800w-balcony-solar-standard-2027) — 이 독일 특화 가이드가 반복하지 않고 참조하는 EU 전역의 800W 표준 통일 과정(그리스, EPBD)',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1159,6 +1215,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Gelten für Balkonspeicher (mit Batterie) die vereinfachten Regeln?', a: 'Nein — Balkonspeicher sind ausdrücklich ausgeschlossen und erfordern weiterhin eine vollständige Netzanschluss-Anmeldung beim Netzbetreiber sowie eine Elektrofachkraft — anders als Standard-Steckgeräte.' },
           { q: 'Können Mieter ein Balkonkraftwerk ohne Zustimmung des Vermieters installieren?', a: 'Deutschland hat in jüngsten Reformen den Trend gesetzt, Balkonkraftwerke als privilegiertes Mieterrecht zu behandeln. Gebäudespezifische Genehmigungsverfahren und Bedingungen (insbesondere bei sichtbarer Außenmontage) können jedoch weiterhin gelten — klären Sie dies mit Ihrem Vermieter oder der WEG.' },
           { q: 'Gibt es Förderprogramme für Balkonkraftwerke in Deutschland?', a: 'Einige Bundesländer und Kommunen bieten Förderungen an, aber Verfügbarkeit und Höhe variieren stark nach Region — prüfen Sie das aktuelle Programm Ihres Bundeslandes oder Ihrer Stadt, anstatt von einer bundesweiten Förderung auszugehen.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Der 800-Watt-Balkonkraftwerk-Standard: EU-Harmonisierung erklärt (2027)](/de/balcony-solar/eu-800w-balcony-solar-standard-2027) — die EU-weite Harmonisierung auf 800 Watt (Griechenland, EPBD), auf die dieser Deutschland-Ratgeber verweist, ohne sie hier erneut auszuführen',
         ],
       },
     },
