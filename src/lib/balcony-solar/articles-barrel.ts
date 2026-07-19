@@ -67,6 +67,28 @@ import { article as a_balcony_solar_brazil_status_2027 } from './articles/balcon
 import { article as a_where_balcony_solar_doesnt_exist_yet_2027 } from './articles/where-balcony-solar-doesnt-exist-yet-2027'
 import { article as a_balcony_solar_greece_status_2027 } from './articles/balcony-solar-greece-status-2027'
 
+// TIER 6 — Company profiles + market pillars (BSOL-35..50) — Phase 1 scaffold
+// (2026-07-19), structure/frontmatter only, no body content. EN-only, noindex
+// (see PENDING_SLUGS in published.ts) until content, translation, and
+// internal-linking phases land.
+import { article as a_balcony_solar_industry_overview } from './articles/balcony-solar-industry-overview'
+import { article as a_balcony_solar_global_market_overview } from './articles/balcony-solar-global-market-overview'
+import { article as a_anker_solix_balcony_solar } from './articles/anker-solix-balcony-solar'
+import { article as a_ecoflow_balcony_solar } from './articles/ecoflow-balcony-solar'
+import { article as a_zendure_balcony_solar } from './articles/zendure-balcony-solar'
+import { article as a_growatt_balcony_solar } from './articles/growatt-balcony-solar'
+import { article as a_hoymiles_microinverter_balcony_solar } from './articles/hoymiles-microinverter-balcony-solar'
+import { article as a_deye_microinverter_balcony_solar } from './articles/deye-microinverter-balcony-solar'
+import { article as a_apsystems_microinverter_balcony_solar } from './articles/apsystems-microinverter-balcony-solar'
+import { article as a_goodwe_balcony_solar } from './articles/goodwe-balcony-solar'
+import { article as a_enphase_microinverter_balcony_solar } from './articles/enphase-microinverter-balcony-solar'
+import { article as a_yuma_balcony_solar } from './articles/yuma-balcony-solar'
+import { article as a_priwatt_balcony_solar } from './articles/priwatt-balcony-solar'
+import { article as a_kleines_kraftwerk_balcony_solar } from './articles/kleines-kraftwerk-balcony-solar'
+import { article as a_balkonstrom_balcony_solar } from './articles/balkonstrom-balcony-solar'
+import { article as a_green_solar_pluginenergy_balcony_solar } from './articles/green-solar-pluginenergy-balcony-solar'
+import { article as a_meyer_burger_solarwatt_heckert_balcony_solar } from './articles/meyer-burger-solarwatt-heckert-balcony-solar'
+
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
   'what-is-balcony-solar':                    a_what_is_balcony_solar,
@@ -121,4 +143,23 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
   'balcony-solar-brazil-status-2027':                 a_balcony_solar_brazil_status_2027,
   'where-balcony-solar-doesnt-exist-yet-2027':        a_where_balcony_solar_doesnt_exist_yet_2027,
   'balcony-solar-greece-status-2027':                 a_balcony_solar_greece_status_2027,
+
+  // TIER 6 — Company profiles + market pillars (Phase 1 scaffold, noindex — see published.ts)
+  'balcony-solar-industry-overview':                  a_balcony_solar_industry_overview,
+  'balcony-solar-global-market-overview':             a_balcony_solar_global_market_overview,
+  'anker-solix-balcony-solar':                        a_anker_solix_balcony_solar,
+  'ecoflow-balcony-solar':                             a_ecoflow_balcony_solar,
+  'zendure-balcony-solar':                             a_zendure_balcony_solar,
+  'growatt-balcony-solar':                             a_growatt_balcony_solar,
+  'hoymiles-microinverter-balcony-solar':              a_hoymiles_microinverter_balcony_solar,
+  'deye-microinverter-balcony-solar':                  a_deye_microinverter_balcony_solar,
+  'apsystems-microinverter-balcony-solar':             a_apsystems_microinverter_balcony_solar,
+  'goodwe-balcony-solar':                              a_goodwe_balcony_solar,
+  'enphase-microinverter-balcony-solar':               a_enphase_microinverter_balcony_solar,
+  'yuma-balcony-solar':                                a_yuma_balcony_solar,
+  'priwatt-balcony-solar':                             a_priwatt_balcony_solar,
+  'kleines-kraftwerk-balcony-solar':                   a_kleines_kraftwerk_balcony_solar,
+  'balkonstrom-balcony-solar':                         a_balkonstrom_balcony_solar,
+  'green-solar-pluginenergy-balcony-solar':            a_green_solar_pluginenergy_balcony_solar,
+  'meyer-burger-solarwatt-heckert-balcony-solar':      a_meyer_burger_solarwatt_heckert_balcony_solar,
 }

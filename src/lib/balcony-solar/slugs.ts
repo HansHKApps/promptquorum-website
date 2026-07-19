@@ -61,4 +61,23 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
   'balcony-solar-brazil-status-2027':             'balcony-solar-brazil-status-2027',               // BSOL-32
   'where-balcony-solar-doesnt-exist-yet-2027':    'where-balcony-solar-doesnt-exist-yet-2027',       // BSOL-33
   'balcony-solar-greece-status-2027':             'balcony-solar-greece-status-2027',               // BSOL-34
+
+  // TIER 6 — Company profiles + market pillars (noindex until authorized — see published.ts)
+  'balcony-solar-industry-overview':              'balcony-solar-industry-overview',                // BSOL-35
+  'balcony-solar-global-market-overview':         'balcony-solar-global-market-overview',            // BSOL-36
+  'anker-solix-balcony-solar':                    'anker-solix-balcony-solar',                       // BSOL-37
+  'ecoflow-balcony-solar':                        'ecoflow-balcony-solar',                            // BSOL-38
+  'zendure-balcony-solar':                        'zendure-balcony-solar',                            // BSOL-39
+  'growatt-balcony-solar':                        'growatt-balcony-solar',                            // BSOL-40
+  'hoymiles-microinverter-balcony-solar':         'hoymiles-microinverter-balcony-solar',             // BSOL-41
+  'deye-microinverter-balcony-solar':             'deye-microinverter-balcony-solar',                 // BSOL-42
+  'apsystems-microinverter-balcony-solar':        'apsystems-microinverter-balcony-solar',            // BSOL-43
+  'goodwe-balcony-solar':                         'goodwe-balcony-solar',                             // BSOL-44
+  'enphase-microinverter-balcony-solar':          'enphase-microinverter-balcony-solar',              // BSOL-45
+  'yuma-balcony-solar':                           'yuma-balcony-solar',                               // BSOL-46
+  'priwatt-balcony-solar':                        'priwatt-balcony-solar',                            // BSOL-47
+  'kleines-kraftwerk-balcony-solar':              'kleines-kraftwerk-balcony-solar',                  // BSOL-48
+  'balkonstrom-balcony-solar':                    'balkonstrom-balcony-solar',                        // BSOL-49
+  'green-solar-pluginenergy-balcony-solar':       'green-solar-pluginenergy-balcony-solar',           // BSOL-50
+  'meyer-burger-solarwatt-heckert-balcony-solar': 'meyer-burger-solarwatt-heckert-balcony-solar',     // BSOL-51
 }
