@@ -60,6 +60,12 @@ import { article as a_eu_800w_balcony_solar_standard_2027 } from './articles/eu-
 import { article as a_balcony_solar_housing_associations_b2b_2027 } from './articles/balcony-solar-housing-associations-b2b-2027'
 import { article as a_net_metering_rollback_balcony_solar_2027 } from './articles/net-metering-rollback-balcony-solar-2027'
 
+// TIER 5 — Country expansion (BSOL-30..33) — EN scaffolded, noindex (see published.ts)
+import { article as a_balcony_solar_japan_status_2027 } from './articles/balcony-solar-japan-status-2027'
+import { article as a_balcony_solar_china_2027 } from './articles/balcony-solar-china-2027'
+import { article as a_balcony_solar_brazil_status_2027 } from './articles/balcony-solar-brazil-status-2027'
+import { article as a_where_balcony_solar_doesnt_exist_yet_2027 } from './articles/where-balcony-solar-doesnt-exist-yet-2027'
+
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
   'what-is-balcony-solar':                    a_what_is_balcony_solar,
@@ -107,4 +113,10 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
   'eu-800w-balcony-solar-standard-2027':              a_eu_800w_balcony_solar_standard_2027,
   'balcony-solar-housing-associations-b2b-2027':      a_balcony_solar_housing_associations_b2b_2027,
   'net-metering-rollback-balcony-solar-2027':         a_net_metering_rollback_balcony_solar_2027,
+
+  // TIER 5 — Country expansion (EN scaffolded, noindex — see published.ts)
+  'balcony-solar-japan-status-2027':                  a_balcony_solar_japan_status_2027,
+  'balcony-solar-china-2027':                         a_balcony_solar_china_2027,
+  'balcony-solar-brazil-status-2027':                 a_balcony_solar_brazil_status_2027,
+  'where-balcony-solar-doesnt-exist-yet-2027':        a_where_balcony_solar_doesnt_exist_yet_2027,
 }
