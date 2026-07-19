@@ -62,6 +62,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Full Parts List',
         content: 'Prices are street prices as of July 2026 and will vary by region and retailer.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Estimated system power draw vs. PSU capacity: the $1,000 single-GPU build draws ~285W from a 650W PSU (56% headroom); the $2,000 dual-GPU build draws ~475W from an 850W PSU (44% headroom).',
         columns: ['Component', 'Pick', 'Price', 'Why'],
         rows: [
           { 'Component': 'GPU', 'Pick': 'RTX 5060 Ti 16GB', 'Price': '$430', 'Why': '16GB VRAM is the build\'s core purpose — fits 14B comfortably, 32B at Q4' },
@@ -77,6 +79,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: 'Why the RTX 5060 Ti 16GB Over Cheaper GPUs',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM required by model size at Q4 quantization: 7B needs ~5GB, 14B ~9GB, and 32B ~15GB — all fitting the $1,000 build\'s 16GB card. 70B needs ~40GB, which requires the $2,000 build\'s 32GB combined dual-GPU VRAM.',
         content: [
           '**The 8GB and 12GB variants of similarly priced GPUs are false savings for local LLM work.** An RTX 5060 Ti comes in 8GB and 16GB versions at a roughly $100 price difference — the 16GB card is the only one worth buying for LLM inference, because the 8GB version cannot comfortably fit anything past a 7B model at Q4 with any usable context length.',
           'VRAM headroom also matters for context length: a 7B model itself needs about 4-4.5GB at Q4, but a 16K-token context adds another 1-2GB of KV cache. On an 8GB card that leaves almost nothing; on the 16GB card there is room for both the model and a long context window.',
@@ -91,6 +95,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Expected Performance by Model Size',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/sec by model size, Q4 quantization: both builds match at 7B (~60 tok/s) and 14B (~31 tok/s), but the $2,000 dual-GPU build pulls ahead at 32B via tensor-split (~34 vs ~13 tok/s) and is the only one that runs 70B at all (~15 tok/s).',
         content: 'All figures are Q4_K_M quantization, measured with llama.cpp/Ollama on the RTX 5060 Ti 16GB. Actual speed varies by prompt length, quantization method, and inference engine.',
         columns: ['Model Size', 'VRAM Used (Q4)', 'Tokens/sec', 'Fits Comfortably?'],
         rows: [
@@ -276,6 +282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Lista de Componentes Completa',
         content: 'Los precios son precios de mercado a julio de 2026 y varían según región y tienda.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Consumo estimado del sistema frente a la capacidad de la fuente: el build de $1,000 con una sola GPU consume ~285W de una fuente de 650W (56% de margen); el build de $2,000 con doble GPU consume ~475W de una fuente de 850W (44% de margen).',
         columns: ['Componente', 'Elección', 'Precio', 'Por qué'],
         rows: [
           { 'Componente': 'GPU', 'Elección': 'RTX 5060 Ti 16GB', 'Precio': '$430', 'Por qué': '16GB de VRAM es el propósito central del build — cabe 14B con comodidad, 32B en Q4' },
@@ -291,6 +299,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: 'Por Qué la RTX 5060 Ti 16GB Frente a GPUs Más Baratas',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM necesaria según el tamaño del modelo en cuantización Q4: 7B necesita ~5GB, 14B ~9GB y 32B ~15GB — todo cabe en la tarjeta de 16GB del build de $1,000. 70B necesita ~40GB, lo que exige los 32GB de VRAM combinada de doble GPU del build de $2,000.',
         content: [
           '**Las variantes de 8GB y 12GB de GPUs con precio similar son un falso ahorro para trabajo con LLMs locales.** La RTX 5060 Ti viene en versiones de 8GB y 16GB con una diferencia de precio de unos $100 — la tarjeta de 16GB es la única que vale la pena comprar para inferencia de LLMs, porque la versión de 8GB no puede alojar con comodidad nada más allá de un modelo de 7B en Q4 con un largo de contexto usable.',
           'El margen de VRAM también importa para el largo de contexto: un modelo de 7B por sí solo necesita unos 4-4.5GB en Q4, pero un contexto de 16K tokens añade otro 1-2GB de caché KV. En una tarjeta de 8GB eso deja casi nada; en la de 16GB hay espacio tanto para el modelo como para una ventana de contexto larga.',
@@ -305,6 +315,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Rendimiento Esperado por Tamaño de Modelo',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/seg según el tamaño del modelo, cuantización Q4: ambos builds igualan en 7B (~60 tok/s) y 14B (~31 tok/s), pero el build de $2,000 con doble GPU se adelanta en 32B mediante tensor-split (~34 frente a ~13 tok/s) y es el único que ejecuta 70B (~15 tok/s).',
         content: 'Todas las cifras son con cuantización Q4_K_M, medidas con llama.cpp/Ollama en la RTX 5060 Ti 16GB. La velocidad real varía según el largo del prompt, el método de cuantización y el motor de inferencia.',
         columns: ['Tamaño del Modelo', 'VRAM Usada (Q4)', 'Tokens/s', '¿Cabe Bien?'],
         rows: [
@@ -490,6 +502,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: '전체 부품 목록',
         content: '가격은 2026년 7월 기준 시중 가격이며 지역과 판매처에 따라 달라질 수 있습니다.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: '시스템 예상 전력 소비량과 파워서플라이 용량을 비교한 것입니다: 1,000달러 단일 GPU 빌드는 650W 파워서플라이에서 약 285W를 소비하며(여유 56%), 2,000달러 듀얼 GPU 빌드는 850W 파워서플라이에서 약 475W를 소비합니다(여유 44%).',
         columns: ['부품', '선택', '가격', '이유'],
         rows: [
           { '부품': 'GPU', '선택': 'RTX 5060 Ti 16GB', '가격': '$430', '이유': '16GB VRAM이 이 빌드의 핵심 목적입니다 — 14B를 편안하게, 32B는 Q4로 지원합니다' },
@@ -505,6 +519,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: '저렴한 GPU 대신 RTX 5060 Ti 16GB를 선택하는 이유',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'Q4 양자화 기준 모델 크기별 필요 VRAM입니다: 7B는 약 5GB, 14B는 약 9GB, 32B는 약 15GB가 필요하며, 모두 1,000달러 빌드의 16GB 카드에 들어갑니다. 70B는 약 40GB가 필요하여 2,000달러 빌드의 듀얼 GPU 합산 32GB VRAM이 있어야 합니다.',
         content: [
           '**비슷한 가격대 GPU의 8GB, 12GB 버전은 로컬 LLM 작업에서 가짜 절약입니다.** RTX 5060 Ti는 8GB와 16GB 버전이 있으며 가격 차이는 약 $100입니다 — LLM 추론용으로 구매할 가치가 있는 것은 16GB 카드뿐입니다. 8GB 버전은 쓸 만한 컨텍스트 길이를 확보한 채로는 7B 모델을 넘어서는 어떤 것도 편안하게 수용할 수 없기 때문입니다.',
           'VRAM 여유 공간은 컨텍스트 길이에도 중요합니다. 7B 모델 자체는 Q4에서 약 4~4.5GB가 필요하지만, 16K 토큰 컨텍스트는 KV 캐시로 1~2GB를 추가로 차지합니다. 8GB 카드에서는 거의 여유가 남지 않지만, 16GB 카드에서는 모델과 긴 컨텍스트 윈도우 둘 다를 위한 공간이 있습니다.',
@@ -519,6 +535,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: '모델 크기별 예상 성능',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Q4 양자화 기준 모델 크기별 초당 토큰 수입니다: 두 빌드 모두 7B(약 60 tok/s)와 14B(약 31 tok/s)에서는 동일하지만, 2,000달러 듀얼 GPU 빌드는 tensor-split을 통해 32B에서 앞서며(약 34 대 약 13 tok/s), 70B를 실행할 수 있는 것은 2,000달러 빌드뿐입니다(약 15 tok/s).',
         content: '모든 수치는 RTX 5060 Ti 16GB에서 llama.cpp/Ollama로 측정한 Q4_K_M 양자화 기준입니다. 실제 속도는 프롬프트 길이, 양자화 방식, 추론 엔진에 따라 달라집니다.',
         columns: ['모델 크기', 'VRAM 사용량(Q4)', '초당 토큰', '편안하게 실행 가능?'],
         rows: [
@@ -704,6 +722,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'قائمة القطع الكاملة',
         content: 'الأسعار هي أسعار السوق كما في يوليو 2026 وتختلف حسب المنطقة والمتجر.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'مقارنة استهلاك الطاقة التقديري للنظام بسعة مزود الطاقة: يستهلك بناء الـ1,000 دولار بكرت GPU واحد نحو 285W من مزود طاقة 650W (هامش 56%)؛ ويستهلك بناء الـ2,000 دولار بكرتي GPU نحو 475W من مزود طاقة 850W (هامش 44%).',
         columns: ['المكوّن', 'الاختيار', 'السعر', 'السبب'],
         rows: [
           { 'المكوّن': 'GPU', 'الاختيار': 'RTX 5060 Ti 16GB', 'السعر': '$430', 'السبب': 'ذاكرة VRAM بسعة 16GB هي الغرض الأساسي من هذا التجميع — تستوعب 14B بارتياح، و32B عند Q4 ضيق' },
@@ -719,6 +739,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: 'لماذا RTX 5060 Ti 16GB على بطاقات أرخص',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM المطلوبة حسب حجم النموذج عند التكميم Q4: يحتاج 7B إلى ~5GB، و14B إلى ~9GB، و32B إلى ~15GB — وكلها تتسع ضمن بطاقة 16GB الخاصة ببناء الـ1,000 دولار. يحتاج 70B إلى ~40GB، وهو ما يتطلب إجمالي 32GB من VRAM لبطاقتي GPU في بناء الـ2,000 دولار.',
         content: [
           '**إصدارا 8GB و12GB من بطاقات GPU المماثلة في السعر هما وفورات وهمية لعمل LLM المحلي.** تأتي RTX 5060 Ti بإصدارين 8GB و16GB بفارق سعر نحو 100 دولار — بطاقة 16GB هي الوحيدة التي تستحق الشراء لاستدلال LLM، لأن إصدار 8GB لا يستوعب بارتياح أي شيء يتجاوز نموذج 7B عند Q4 مع أي طول سياق قابل للاستخدام.',
           'يهم هامش VRAM أيضاً لطول السياق: يحتاج نموذج 7B بحد ذاته نحو 4-4.5GB عند Q4، لكن سياقاً بطول 16K رمز يضيف 1-2GB أخرى من ذاكرة KV المؤقتة. على بطاقة 8GB لا يتبقى شيء تقريباً؛ على بطاقة 16GB هناك مساحة لكل من النموذج ونافذة سياق طويلة.',
@@ -733,6 +755,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'الأداء المتوقع حسب حجم النموذج',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'عدد الرموز في الثانية (tok/s) حسب حجم النموذج عند التكميم Q4: يتساوى البناءان عند 7B (~60 tok/s) و14B (~31 tok/s)، لكن بناء الـ2,000 دولار بكرتي GPU يتفوق عند 32B عبر tensor-split (~34 مقابل ~13 tok/s)، وهو الوحيد القادر على تشغيل 70B (~15 tok/s).',
         content: 'جميع الأرقام لتكميم Q4_K_M، وقيست باستخدام llama.cpp/Ollama على RTX 5060 Ti 16GB. تختلف السرعة الفعلية حسب طول المُدخل (prompt) وطريقة التكميم ومحرك الاستدلال.',
         columns: ['حجم النموذج', 'VRAM المستخدمة (Q4)', 'رموز/ثانية', 'يتناسب بارتياح؟'],
         rows: [
@@ -918,6 +942,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: '完整配件清单',
         content: '价格为截至2026年7月的市场价，因地区和零售商而异。',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: '系统预估功耗与电源容量对比:1,000美元单GPU方案从650W电源中消耗约285W(56%余量);2,000美元双GPU方案从850W电源中消耗约475W(44%余量)。',
         columns: ['配件', '选择', '价格', '原因'],
         rows: [
           { '配件': 'GPU', '选择': 'RTX 5060 Ti 16GB', '价格': '$430', '原因': '16GB显存是本构建的核心目的——可轻松容纳14B，Q4下可容纳32B' },
@@ -933,6 +959,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: '为什么选择RTX 5060 Ti 16GB而非更便宜的GPU',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'Q4量化下不同模型规模所需的VRAM:7B需要约5GB,14B约9GB,32B约15GB——均可容纳于1,000美元方案的16GB显卡中。70B需要约40GB,这需要2,000美元方案双GPU合计32GB的VRAM才能满足。',
         content: [
           '**对本地LLM任务而言，同价位GPU的8GB和12GB版本只是虚假的省钱方式。** RTX 5060 Ti有8GB和16GB两个版本，价差约$100——对LLM推理而言，只有16GB版本值得购买，因为8GB版本在Q4下无法舒适地运行超过7B的模型，且几乎没有可用的上下文长度。',
           '显存余量对上下文长度同样重要：一个7B模型本身在Q4下需要约4-4.5GB，而16K token的上下文会额外增加1-2GB的KV缓存。在8GB显卡上几乎没有余量；而在16GB显卡上，模型和长上下文窗口都能容纳。',
@@ -947,6 +975,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: '各模型规模的预期性能',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: '按模型规模划分的Q4量化推理速度(tok/s):两种方案在7B(约60 tok/s)和14B(约31 tok/s)上表现相当,但2,000美元双GPU方案通过tensor-split在32B上明显领先(约34对约13 tok/s),且只有该方案能运行70B模型(约15 tok/s)。',
         content: '所有数据均为Q4_K_M量化，在RTX 5060 Ti 16GB上使用llama.cpp/Ollama测得。实际速度会因提示词长度、量化方法和推理引擎而异。',
         columns: ['模型规模', 'Q4显存占用', '每秒Token数', '是否舒适运行？'],
         rows: [
@@ -1132,6 +1162,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: '完全パーツリスト',
         content: '価格は2026年7月時点の実勢価格です。地域や販売店により変動します。',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'システムの推定消費電力と電源容量の比較です:1,000ドルのシングルGPUビルドは650W電源から約285Wを消費します(余裕56%)。2,000ドルのデュアルGPUビルドは850W電源から約475Wを消費します(余裕44%)。',
         columns: ['パーツ', '選択', '価格', '理由'],
         rows: [
           { 'パーツ': 'GPU', '選択': 'RTX 5060 Ti 16GB', '価格': '$430', '理由': '16GB VRAMがこのビルドの核心 — 14Bを快適に、32BをQ4で収める' },
@@ -1147,6 +1179,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: '安価なGPUではなくRTX 5060 Ti 16GBを選ぶ理由',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'Q4量子化におけるモデルサイズ別VRAM必要量:7Bは約5GB、14Bは約9GB、32Bは約15GBが必要です — いずれも1,000ドルビルドの16GBカードに収まります。70Bは約40GBが必要で、2,000ドルビルドのデュアルGPU合計32GB VRAMが必須です。',
         content: [
           '**同価格帯GPUの8GB・12GBバリアントは、ローカルLLM用途では見せかけの節約です。** RTX 5060 Tiには8GBと16GBの2モデルがあり、価格差は約$100 — LLM推論用に購入する価値があるのは16GBモデルだけです。8GB版は実用的なコンテキスト長を伴う7Bモデルより先には快適に収まりません。',
           'VRAMの余裕はコンテキスト長にも影響します。7Bモデル自体はQ4で約4〜4.5GBを必要としますが、16Kトークンのコンテキストはさらに1〜2GBのKVキャッシュを追加します。8GBカードではほとんど余裕が残りませんが、16GBカードならモデルと長いコンテキストウィンドウの両方に余裕があります。',
@@ -1161,6 +1195,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'モデルサイズ別の期待パフォーマンス',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Q4量子化におけるモデルサイズ別のトークン/秒です:7B(約60 tok/s)と14B(約31 tok/s)では両ビルドが同等ですが、32BではTensor-Splitを使う2,000ドルのデュアルGPUビルドが優位です(約34 tok/s対約13 tok/s)。70Bを実行できるのも2,000ドルビルドのみです(約15 tok/s)。',
         content: 'すべての数値はQ4_K_M量子化で、RTX 5060 Ti 16GB上でllama.cpp/Ollamaを用いて計測されています。実際の速度はプロンプト長、量子化方式、推論エンジンにより変動します。',
         columns: ['モデルサイズ', 'VRAM使用量（Q4）', 'トークン/秒', '快適に収まるか？'],
         rows: [
@@ -1346,6 +1382,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Vollständige Teileliste',
         content: 'Die Preise sind Straßenpreise auf dem deutschen Markt (Stand Juli 2026, u. a. geizhals.de) und variieren je nach Händler.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Geschätzte Systemleistungsaufnahme im Vergleich zur Netzteilkapazität: Der 1.000-$-Build mit einer GPU zieht ca. 285W aus einem 650W-Netzteil (56% Reserve); der 2.000-$-Build mit zwei GPUs zieht ca. 475W aus einem 850W-Netzteil (44% Reserve).',
         columns: ['Komponente', 'Wahl', 'Preis', 'Warum'],
         rows: [
           { 'Komponente': 'GPU', 'Wahl': 'RTX 5060 Ti 16GB', 'Preis': '499 €', 'Warum': '16 GB VRAM ist der Kernzweck des Builds — passt 14B komfortabel, 32B bei knappem Q4' },
@@ -1361,6 +1399,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: 'Warum die RTX 5060 Ti 16GB gegenüber günstigeren GPUs',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM-Bedarf nach Modellgröße bei Q4-Quantisierung: 7B benötigt ca. 5GB, 14B ca. 9GB und 32B ca. 15GB — alles passt auf die 16GB-Karte des 1.000-$-Builds. 70B benötigt ca. 40GB, was die kombinierten 32GB VRAM der Dual-GPU des 2.000-$-Builds erfordert.',
         content: [
           '**Die 8-GB- und 12-GB-Varianten ähnlich teurer GPUs sind bei lokaler LLM-Arbeit eine trügerische Ersparnis.** Die RTX 5060 Ti gibt es in einer 8-GB- und einer 16-GB-Version mit einem Preisunterschied von rund 130 € — nur die 16-GB-Karte lohnt sich für LLM-Inferenz, denn die 8-GB-Version passt kaum über ein 7B-Modell bei Q4 mit nutzbarer Kontextlänge hinaus.',
           'VRAM-Spielraum ist auch für die Kontextlänge relevant: Ein 7B-Modell selbst benötigt bei Q4 etwa 4–4,5 GB, aber ein 16K-Token-Kontext fügt weitere 1–2 GB KV-Cache hinzu. Auf einer 8-GB-Karte bleibt dafür fast nichts übrig; auf der 16-GB-Karte ist Platz für Modell und langen Kontext zugleich.',
@@ -1375,6 +1415,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Erwartete Leistung nach Modellgröße',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/Sek. nach Modellgröße, Q4-Quantisierung: Beide Builds liegen bei 7B (ca. 60 Tok/s) und 14B (ca. 31 Tok/s) gleichauf, doch der 2.000-$-Dual-GPU-Build zieht bei 32B per Tensor-Split davon (ca. 34 gegenüber ca. 13 Tok/s) und ist der einzige, der 70B überhaupt ausführt (ca. 15 Tok/s).',
         content: 'Alle Werte sind Q4_K_M-Quantisierung, gemessen mit llama.cpp/Ollama auf der RTX 5060 Ti 16GB. Die tatsächliche Geschwindigkeit variiert je nach Prompt-Länge, Quantisierungsmethode und Inference-Engine.',
         columns: ['Modellgröße', 'VRAM-Nutzung (Q4)', 'Tokens/Sek.', 'Passt komfortabel?'],
         rows: [
@@ -1560,6 +1602,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Liste de pièces complète',
         content: 'Les prix sont des prix courants de juillet 2026 et varient selon la région et le revendeur.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Consommation système estimée face à la capacité de l\'alimentation : le build à 1 000 $ à une seule GPU consomme env. 285W sur une alimentation 650W (56% de marge) ; le build à 2 000 $ à double GPU consomme env. 475W sur une alimentation 850W (44% de marge).',
         columns: ['Composant', 'Choix', 'Prix', 'Pourquoi'],
         rows: [
           { 'Composant': 'GPU', 'Choix': 'RTX 5060 Ti 16 Go', 'Prix': '$430', 'Pourquoi': '16 Go de VRAM est l\'objectif principal de cette configuration — loge le 14B confortablement, le 32B en Q4 serré' },
@@ -1575,6 +1619,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: 'Pourquoi la RTX 5060 Ti 16 Go plutôt que des GPU moins chers',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM nécessaire selon la taille du modèle en quantification Q4 : 7B nécessite env. 5GB, 14B env. 9GB et 32B env. 15GB — tout tient sur la carte 16GB du build à 1 000 $. 70B nécessite env. 40GB, ce qui exige les 32GB de VRAM combinée de la double GPU du build à 2 000 $.',
         content: [
           '**Les variantes 8 Go et 12 Go de GPU à prix similaires sont de fausses économies pour le travail LLM local.** La RTX 5060 Ti existe en versions 8 Go et 16 Go avec une différence de prix d\'environ $100 — la carte 16 Go est la seule qui vaille la peine d\'être achetée pour l\'inférence LLM, car la version 8 Go ne peut pas loger confortablement plus qu\'un modèle 7B en Q4 avec une longueur de contexte utilisable.',
           'La marge de VRAM compte aussi pour la longueur de contexte : un modèle 7B a lui-même besoin d\'environ 4-4.5 Go en Q4, mais un contexte de 16K tokens ajoute encore 1-2 Go de cache KV. Sur une carte 8 Go, il ne reste presque rien ; sur la carte 16 Go, il y a de la place pour le modèle et une longue fenêtre de contexte.',
@@ -1589,6 +1635,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Performances attendues par taille de modèle',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/s selon la taille du modèle, quantification Q4 : les deux builds sont à égalité en 7B (env. 60 tok/s) et 14B (env. 31 tok/s), mais le build à 2 000 $ à double GPU prend l\'avantage en 32B via le tensor-split (env. 34 contre env. 13 tok/s) et est le seul à exécuter le 70B (env. 15 tok/s).',
         content: 'Tous les chiffres sont en quantification Q4_K_M, mesurés avec llama.cpp/Ollama sur la RTX 5060 Ti 16 Go. La vitesse réelle varie selon la longueur du prompt, la méthode de quantification et le moteur d\'inférence.',
         columns: ['Taille du modèle', 'VRAM utilisée (Q4)', 'Tokens/s', 'Loge confortablement ?'],
         rows: [
@@ -1774,6 +1822,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Lista Completa de Peças',
         content: 'Os preços são preços de mercado em julho de 2026 e variam por região e revendedor.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Consumo estimado do sistema em comparação com a capacidade da fonte: o build de $1.000 com uma única GPU consome ~285W de uma fonte de 650W (56% de folga); o build de $2.000 com duas GPUs consome ~475W de uma fonte de 850W (44% de folga).',
         columns: ['Componente', 'Escolha', 'Preço', 'Por Quê'],
         rows: [
           { 'Componente': 'GPU', 'Escolha': 'RTX 5060 Ti 16GB', 'Preço': '$430', 'Por Quê': '16GB de VRAM é o propósito central do build — cabe 14B com folga, 32B em Q4' },
@@ -1789,6 +1839,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-this-gpu': {
         id: 'why-this-gpu',
         title: 'Por Que a RTX 5060 Ti 16GB Em Vez de GPUs Mais Baratas',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM necessária por tamanho de modelo na quantização Q4: 7B precisa de ~5GB, 14B ~9GB e 32B ~15GB — tudo cabe na placa de 16GB do build de $1.000. O 70B precisa de ~40GB, o que exige os 32GB de VRAM combinada das duas GPUs do build de $2.000.',
         content: [
           '**As variantes de 8GB e 12GB de GPUs com preço similar são uma falsa economia para trabalho de LLM local.** A RTX 5060 Ti vem em versões de 8GB e 16GB com uma diferença de preço de aproximadamente $100 — a placa de 16GB é a única que vale a pena comprar para inferência de LLM, porque a versão de 8GB não consegue caber confortavelmente nada além de um modelo 7B em Q4 com qualquer comprimento de contexto utilizável.',
           'A margem de VRAM também importa para o comprimento do contexto: um modelo 7B sozinho precisa de cerca de 4-4.5GB em Q4, mas um contexto de 16K tokens adiciona mais 1-2GB de cache KV. Em uma placa de 8GB isso deixa quase nada; na placa de 16GB há espaço tanto para o modelo quanto para uma janela de contexto longa.',
@@ -1803,6 +1855,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Desempenho Esperado por Tamanho de Modelo',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/s por tamanho de modelo, quantização Q4: os dois builds empatam em 7B (~60 tok/s) e 14B (~31 tok/s), mas o build de $2.000 com duas GPUs se destaca no 32B via tensor-split (~34 contra ~13 tok/s) e é o único que roda o 70B (~15 tok/s).',
         content: 'Todos os números são de quantização Q4_K_M, medidos com llama.cpp/Ollama na RTX 5060 Ti 16GB. A velocidade real varia de acordo com o comprimento do prompt, o método de quantização e o motor de inferência.',
         columns: ['Tamanho do Modelo', 'VRAM Usada (Q4)', 'Tokens/seg', 'Cabe Confortavelmente?'],
         rows: [

@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">Power Draw vs. PSU Capacity</text>
+
+  <!-- $1,000 build row -->
+  <text x="60" y="110" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#6750A4">$1,000 build</text>
+  <text x="60" y="130" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">1x RTX 5060 Ti 16GB (180W) + Ryzen 5 7600 + system</text>
+
+  <!-- PSU track -->
+  <rect x="60" y="145" width="680" height="46" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2" rx="8"/>
+  <!-- Estimated draw fill: ~285W of 650W = 43.8% -->
+  <rect x="60" y="145" width="298" height="46" fill="#6750A4" rx="8"/>
+  <text x="70" y="173" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">~285W system draw</text>
+  <text x="730" y="173" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="end">650W PSU</text>
+  <text x="400" y="210" font-family="system-ui, sans-serif" font-size="12" fill="#34A853" text-anchor="middle" font-weight="600">~365W headroom (56%) for transient spikes</text>
+
+  <!-- $2,000 build row -->
+  <text x="60" y="270" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#7D5260">$2,000 build</text>
+  <text x="60" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">2x RTX 5060 Ti 16GB (360W combined) + Ryzen 7 9700X + system</text>
+
+  <!-- PSU track -->
+  <rect x="60" y="305" width="680" height="46" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2" rx="8"/>
+  <!-- Estimated draw fill: ~475W of 850W = 55.9% -->
+  <rect x="60" y="305" width="380" height="46" fill="#7D5260" rx="8"/>
+  <text x="70" y="333" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">~475W system draw</text>
+  <text x="730" y="333" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="end">850W PSU</text>
+  <text x="400" y="370" font-family="system-ui, sans-serif" font-size="12" fill="#34A853" text-anchor="middle" font-weight="600">~375W headroom (44%) for transient spikes</text>
+
+  <text x="400" y="410" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Figures are estimated sustained draw, not peak. Both builds keep 40%+ headroom above rated system draw.</text>
+<text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

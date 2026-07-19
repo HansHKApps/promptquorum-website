@@ -49,6 +49,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: 'Why Two GPUs Instead of One Bigger GPU',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM required by model size at Q4 quantization: 7B needs ~5GB, 14B ~9GB, and 32B ~15GB — all fitting the $1,000 build\'s 16GB card. 70B needs ~40GB, which requires the $2,000 build\'s 32GB combined dual-GPU VRAM.',
         content: [
           '**At $2,000, a single-GPU build tops out around a used RTX 3090 24GB or an RTX 5070 Ti 16GB — neither reaches 70B-class model capacity.** llama.cpp and vLLM both support tensor-split inference, which divides a model\'s layers across multiple GPUs connected to the same motherboard, treating their combined VRAM as one pool. Two RTX 5060 Ti 16GB cards give 32GB combined VRAM for less money than a single 24GB card, and comfortably exceeds what a 70B model needs at Q4 (~40GB total system+VRAM budget, with the model itself needing about 38-40GB across both cards at Q4).',
           'This only works because both cards are the same model — mismatched VRAM or compute between cards forces the split to bottleneck on the weaker card, and mismatched driver requirements between GPU generations can cause outright instability.',
@@ -62,6 +64,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Full Parts List',
         content: 'Prices are street prices as of July 2026 and will vary by region and retailer.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Estimated system power draw vs. PSU capacity: the $1,000 single-GPU build draws ~285W from a 650W PSU (56% headroom); the $2,000 dual-GPU build draws ~475W from an 850W PSU (44% headroom).',
         columns: ['Component', 'Pick', 'Price', 'Why'],
         rows: [
           { 'Component': 'GPU (x2)', 'Pick': '2x RTX 5060 Ti 16GB', 'Price': '$860', 'Why': '32GB combined VRAM via tensor-split — the core purpose of this build' },
@@ -90,6 +94,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Expected Performance by Model Size',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/sec by model size, Q4 quantization: both builds match at 7B (~60 tok/s) and 14B (~31 tok/s), but the $2,000 dual-GPU build pulls ahead at 32B via tensor-split (~34 vs ~13 tok/s) and is the only one that runs 70B at all (~15 tok/s).',
         content: 'All figures are Q4_K_M quantization measured with llama.cpp tensor-split across two RTX 5060 Ti 16GB cards. Single-GPU figures use one card only.',
         columns: ['Model Size', 'Setup', 'VRAM Used (Q4)', 'Tokens/sec'],
         rows: [
@@ -265,6 +271,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: 'Por Qué Dos GPUs en Lugar de Una Más Grande',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM necesaria según el tamaño del modelo en cuantización Q4: 7B necesita ~5GB, 14B ~9GB y 32B ~15GB — todo cabe en la tarjeta de 16GB del build de $1,000. 70B necesita ~40GB, lo que exige los 32GB de VRAM combinada de doble GPU del build de $2,000.',
         content: [
           '**Con $2,000, un build de una sola GPU llega como máximo a una RTX 3090 24GB usada o una RTX 5070 Ti 16GB — ninguna alcanza la capacidad de modelos de clase 70B.** Tanto llama.cpp como vLLM soportan inferencia con tensor-split, que divide las capas de un modelo entre múltiples GPUs conectadas a la misma placa base, tratando su VRAM combinada como un solo grupo. Dos tarjetas RTX 5060 Ti 16GB dan 32GB de VRAM combinada por menos dinero que una sola tarjeta de 24GB, y superan con comodidad lo que necesita un modelo de 70B en Q4 (~40GB de presupuesto total entre sistema y VRAM, con el modelo mismo necesitando unos 38-40GB entre ambas tarjetas en Q4).',
           'Esto solo funciona porque ambas tarjetas son el mismo modelo — VRAM o cómputo desiguales entre tarjetas obligan a que la división quede limitada por la tarjeta más débil, y requisitos de driver desiguales entre generaciones de GPU pueden causar inestabilidad total.',
@@ -278,6 +286,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Lista de Componentes Completa',
         content: 'Los precios son precios de mercado a julio de 2026 y varían según región y tienda.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Consumo estimado del sistema frente a la capacidad de la fuente: el build de $1,000 con una sola GPU consume ~285W de una fuente de 650W (56% de margen); el build de $2,000 con doble GPU consume ~475W de una fuente de 850W (44% de margen).',
         columns: ['Componente', 'Elección', 'Precio', 'Por qué'],
         rows: [
           { 'Componente': 'GPU (x2)', 'Elección': '2x RTX 5060 Ti 16GB', 'Precio': '$860', 'Por qué': '32GB de VRAM combinada vía tensor-split — el propósito central de este build' },
@@ -306,6 +316,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Rendimiento Esperado por Tamaño de Modelo',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/seg según el tamaño del modelo, cuantización Q4: ambos builds igualan en 7B (~60 tok/s) y 14B (~31 tok/s), pero el build de $2,000 con doble GPU se adelanta en 32B mediante tensor-split (~34 frente a ~13 tok/s) y es el único que ejecuta 70B (~15 tok/s).',
         content: 'Todas las cifras son con cuantización Q4_K_M medidas con tensor-split de llama.cpp entre dos tarjetas RTX 5060 Ti 16GB. Las cifras de una sola GPU usan solo una tarjeta.',
         columns: ['Tamaño del Modelo', 'Configuración', 'VRAM Usada (Q4)', 'Tokens/s'],
         rows: [
@@ -481,6 +493,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: '왜 더 큰 GPU 하나 대신 GPU 두 개인가',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'Q4 양자화 기준 모델 크기별 필요 VRAM입니다: 7B는 약 5GB, 14B는 약 9GB, 32B는 약 15GB가 필요하며, 모두 1,000달러 빌드의 16GB 카드에 들어갑니다. 70B는 약 40GB가 필요하여 2,000달러 빌드의 듀얼 GPU 합산 32GB VRAM이 있어야 합니다.',
         content: [
           '**$2,000에서 단일 GPU 빌드는 중고 RTX 3090 24GB나 RTX 5070 Ti 16GB 정도가 한계이며, 어느 쪽도 70B급 모델 용량에 도달하지 못합니다.** llama.cpp와 vLLM 모두 텐서 분할 추론을 지원하며, 이는 같은 메인보드에 연결된 여러 GPU에 모델의 레이어를 나눠 합산 VRAM을 하나의 풀처럼 다룹니다. RTX 5060 Ti 16GB 카드 두 개는 단일 24GB 카드보다 저렴한 가격에 합산 32GB VRAM을 제공하며, 70B 모델이 Q4에서 필요로 하는 용량(전체 시스템+VRAM 예산 약 40GB, 모델 자체는 두 카드에 걸쳐 Q4 기준 약 38~40GB 필요)을 편안하게 충족합니다.',
           '이는 두 카드가 동일한 모델이기 때문에 가능한 것입니다 — VRAM이나 연산 성능이 불일치하면 분할이 더 약한 카드에 병목을 일으키며, GPU 세대 간 드라이버 요구사항 불일치는 명백한 불안정성을 초래할 수 있습니다.',
@@ -494,6 +508,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: '전체 부품 목록',
         content: '가격은 2026년 7월 기준 시중 가격이며 지역과 판매처에 따라 달라질 수 있습니다.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: '시스템 예상 전력 소비량과 파워서플라이 용량을 비교한 것입니다: 1,000달러 단일 GPU 빌드는 650W 파워서플라이에서 약 285W를 소비하며(여유 56%), 2,000달러 듀얼 GPU 빌드는 850W 파워서플라이에서 약 475W를 소비합니다(여유 44%).',
         columns: ['부품', '선택', '가격', '이유'],
         rows: [
           { '부품': 'GPU(x2)', '선택': '2x RTX 5060 Ti 16GB', '가격': '$860', '이유': '텐서 분할을 통한 합산 32GB VRAM — 이 빌드의 핵심 목적' },
@@ -522,6 +538,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: '모델 크기별 예상 성능',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Q4 양자화 기준 모델 크기별 초당 토큰 수입니다: 두 빌드 모두 7B(약 60 tok/s)와 14B(약 31 tok/s)에서는 동일하지만, 2,000달러 듀얼 GPU 빌드는 tensor-split을 통해 32B에서 앞서며(약 34 대 약 13 tok/s), 70B를 실행할 수 있는 것은 2,000달러 빌드뿐입니다(약 15 tok/s).',
         content: '모든 수치는 RTX 5060 Ti 16GB 카드 두 개에서 llama.cpp 텐서 분할로 측정한 Q4_K_M 양자화 기준입니다. 단일 GPU 수치는 카드 하나만 사용한 것입니다.',
         columns: ['모델 크기', '구성', 'VRAM 사용량(Q4)', '초당 토큰'],
         rows: [
@@ -697,6 +715,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: 'لماذا بطاقتا GPU بدلاً من بطاقة واحدة أكبر',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM المطلوبة حسب حجم النموذج عند التكميم Q4: يحتاج 7B إلى ~5GB، و14B إلى ~9GB، و32B إلى ~15GB — وكلها تتسع ضمن بطاقة 16GB الخاصة ببناء الـ1,000 دولار. يحتاج 70B إلى ~40GB، وهو ما يتطلب إجمالي 32GB من VRAM لبطاقتي GPU في بناء الـ2,000 دولار.',
         content: [
           '**عند ميزانية 2,000 دولار، يبلغ تجميع GPU واحدة أقصاه عند RTX 3090 24GB مستعملة أو RTX 5070 Ti 16GB — ولا تصل أي منهما إلى سعة نماذج من فئة 70B.** يدعم كل من llama.cpp وvLLM استدلال تقسيم tensor، الذي يوزّع طبقات النموذج عبر عدة بطاقات GPU متصلة باللوحة الأم نفسها، معاملاً VRAM المجتمعة كتجمّع واحد. توفّر بطاقتا RTX 5060 Ti 16GB ذاكرة VRAM مجتمعة سعة 32GB بمال أقل من بطاقة واحدة بذاكرة 24GB، وتتجاوز بارتياح ما يحتاجه نموذج 70B عند Q4 (نحو 40GB ميزانية VRAM+نظام إجمالية، إذ يحتاج النموذج بحد ذاته نحو 38-40GB موزَّعة على البطاقتين عند Q4).',
           'يعمل هذا فقط لأن كلتا البطاقتين من الطراز نفسه — تؤدي VRAM أو الحوسبة غير المتطابقة بين البطاقتين إلى تحديد التقسيم بسرعة البطاقة الأضعف، وقد تسبب متطلبات التعريفات غير المتطابقة بين أجيال GPU عدم استقرار مباشراً.',
@@ -710,6 +730,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'قائمة القطع الكاملة',
         content: 'الأسعار هي أسعار السوق كما في يوليو 2026 وتختلف حسب المنطقة والمتجر.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'مقارنة استهلاك الطاقة التقديري للنظام بسعة مزود الطاقة: يستهلك بناء الـ1,000 دولار بكرت GPU واحد نحو 285W من مزود طاقة 650W (هامش 56%)؛ ويستهلك بناء الـ2,000 دولار بكرتي GPU نحو 475W من مزود طاقة 850W (هامش 44%).',
         columns: ['المكوّن', 'الاختيار', 'السعر', 'السبب'],
         rows: [
           { 'المكوّن': 'GPU (×2)', 'الاختيار': 'بطاقتا RTX 5060 Ti 16GB', 'السعر': '$860', 'السبب': 'ذاكرة VRAM مجتمعة سعة 32GB عبر تقسيم tensor — الغرض الأساسي من هذا التجميع' },
@@ -738,6 +760,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'الأداء المتوقع حسب حجم النموذج',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'عدد الرموز في الثانية (tok/s) حسب حجم النموذج عند التكميم Q4: يتساوى البناءان عند 7B (~60 tok/s) و14B (~31 tok/s)، لكن بناء الـ2,000 دولار بكرتي GPU يتفوق عند 32B عبر tensor-split (~34 مقابل ~13 tok/s)، وهو الوحيد القادر على تشغيل 70B (~15 tok/s).',
         content: 'جميع الأرقام لتكميم Q4_K_M وقيست باستخدام تقسيم tensor في llama.cpp عبر بطاقتي RTX 5060 Ti 16GB. تستخدم أرقام GPU الواحدة بطاقة واحدة فقط.',
         columns: ['حجم النموذج', 'الإعداد', 'VRAM المستخدمة (Q4)', 'رموز/ثانية'],
         rows: [
@@ -913,6 +937,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: 'なぜ大きなGPU1枚ではなくGPU2枚を選ぶのか',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'Q4量子化におけるモデルサイズ別VRAM必要量:7Bは約5GB、14Bは約9GB、32Bは約15GBが必要です — いずれも1,000ドルビルドの16GBカードに収まります。70Bは約40GBが必要で、2,000ドルビルドのデュアルGPU合計32GB VRAMが必須です。',
         content: [
           '**$2,000では、単一GPUビルドは中古RTX 3090 24GBかRTX 5070 Ti 16GB止まりで、どちらも70Bクラスのモデル容量には届きません。** llama.cppとvLLMはどちらもテンソル分割推論をサポートしており、同じマザーボードに接続された複数GPUにモデルのレイヤーを分割し、合計VRAMを1つのプールとして扱います。RTX 5060 Ti 16GBを2枚使うと、単体24GBカードより安く合計32GBのVRAMが得られ、70Bモデルが必要とする容量（Q4で両カード合計約38〜40GB）を快適に上回ります。',
           'これが機能するのは両カードが同一モデルである場合に限られます — VRAMや計算性能が異なるカードの組み合わせは分割が弱い方のカードに律速され、GPU世代間でドライバ要件が異なると不安定さを引き起こすことがあります。',
@@ -926,6 +952,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: '完全パーツリスト',
         content: '価格は2026年7月時点の実勢価格です。地域や販売店により変動します。',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'システムの推定消費電力と電源容量の比較です:1,000ドルのシングルGPUビルドは650W電源から約285Wを消費します(余裕56%)。2,000ドルのデュアルGPUビルドは850W電源から約475Wを消費します(余裕44%)。',
         columns: ['パーツ', '選択', '価格', '理由'],
         rows: [
           { 'パーツ': 'GPU（2枚）', '選択': 'RTX 5060 Ti 16GB ×2', '価格': '$860', '理由': 'テンソル分割による合計32GB VRAM — このビルドの核心' },
@@ -954,6 +982,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'モデルサイズ別の期待パフォーマンス',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Q4量子化におけるモデルサイズ別のトークン/秒です:7B(約60 tok/s)と14B(約31 tok/s)では両ビルドが同等ですが、32BではTensor-Splitを使う2,000ドルのデュアルGPUビルドが優位です(約34 tok/s対約13 tok/s)。70Bを実行できるのも2,000ドルビルドのみです(約15 tok/s)。',
         content: 'すべての数値はQ4_K_M量子化で、RTX 5060 Ti 16GB2枚にわたるllama.cppのテンソル分割で計測されています。シングルGPUの数値は1枚のみを使用しています。',
         columns: ['モデルサイズ', 'セットアップ', 'VRAM使用量（Q4）', 'トークン/秒'],
         rows: [
@@ -1129,6 +1159,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: 'Warum zwei GPUs statt einer größeren GPU',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM-Bedarf nach Modellgröße bei Q4-Quantisierung: 7B benötigt ca. 5GB, 14B ca. 9GB und 32B ca. 15GB — alles passt auf die 16GB-Karte des 1.000-$-Builds. 70B benötigt ca. 40GB, was die kombinierten 32GB VRAM der Dual-GPU des 2.000-$-Builds erfordert.',
         content: [
           '**Bei ca. 2.000 € erreicht ein Single-GPU-Build maximal eine gebrauchte RTX 3090 24GB oder eine RTX 5070 Ti 16GB — keine davon erreicht die Kapazität der 70B-Klasse.** llama.cpp und vLLM unterstützen beide Tensor-Split-Inferenz, die die Layer eines Modells auf mehrere GPUs am selben Mainboard verteilt und deren kombinierten VRAM als einen Pool behandelt. Zwei RTX 5060 Ti 16GB liefern 32 GB kombinierten VRAM für weniger Geld als eine einzelne 24-GB-Karte und übertreffen komfortabel, was ein 70B-Modell bei Q4 benötigt (ca. 40 GB Gesamt-VRAM-Budget über beide Karten bei Q4).',
           'Das funktioniert nur, weil beide Karten baugleich sind — unterschiedlicher VRAM oder unterschiedliche Rechenleistung zwischen den Karten zwingt den Split, sich an der schwächeren Karte zu orientieren, und unterschiedliche Treiberanforderungen zwischen GPU-Generationen können zu offener Instabilität führen.',
@@ -1142,6 +1174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Vollständige Teileliste',
         content: 'Die Preise sind Straßenpreise auf dem deutschen Markt (Stand Juli 2026, u. a. geizhals.de) und variieren je nach Händler.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Geschätzte Systemleistungsaufnahme im Vergleich zur Netzteilkapazität: Der 1.000-$-Build mit einer GPU zieht ca. 285W aus einem 650W-Netzteil (56% Reserve); der 2.000-$-Build mit zwei GPUs zieht ca. 475W aus einem 850W-Netzteil (44% Reserve).',
         columns: ['Komponente', 'Wahl', 'Preis', 'Warum'],
         rows: [
           { 'Komponente': 'GPU (×2)', 'Wahl': '2× RTX 5060 Ti 16GB', 'Preis': '958 €', 'Warum': '32 GB kombinierter VRAM via Tensor-Split — der Kernzweck dieses Builds' },
@@ -1170,6 +1204,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Erwartete Leistung nach Modellgröße',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/Sek. nach Modellgröße, Q4-Quantisierung: Beide Builds liegen bei 7B (ca. 60 Tok/s) und 14B (ca. 31 Tok/s) gleichauf, doch der 2.000-$-Dual-GPU-Build zieht bei 32B per Tensor-Split davon (ca. 34 gegenüber ca. 13 Tok/s) und ist der einzige, der 70B überhaupt ausführt (ca. 15 Tok/s).',
         content: 'Alle Werte sind Q4_K_M-Quantisierung, gemessen mit llama.cpp-Tensor-Split über zwei RTX 5060 Ti 16GB. Single-GPU-Werte nutzen nur eine Karte.',
         columns: ['Modellgröße', 'Setup', 'VRAM-Nutzung (Q4)', 'Tokens/Sek.'],
         rows: [
@@ -1345,6 +1381,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: 'Pourquoi deux GPU plutôt qu\'un GPU plus gros',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM nécessaire selon la taille du modèle en quantification Q4 : 7B nécessite env. 5GB, 14B env. 9GB et 32B env. 15GB — tout tient sur la carte 16GB du build à 1 000 $. 70B nécessite env. 40GB, ce qui exige les 32GB de VRAM combinée de la double GPU du build à 2 000 $.',
         content: [
           '**À $2,000, une configuration mono-GPU plafonne autour d\'une RTX 3090 24 Go d\'occasion ou d\'une RTX 5070 Ti 16 Go — aucune n\'atteint la capacité de classe 70B.** llama.cpp et vLLM supportent tous deux l\'inférence tensor-split, qui répartit les couches d\'un modèle sur plusieurs GPU connectés à la même carte mère, traitant leur VRAM combinée comme un seul pool. Deux cartes RTX 5060 Ti 16 Go offrent 32 Go de VRAM combinée pour moins cher qu\'une seule carte 24 Go, et dépassent confortablement ce dont un modèle 70B a besoin en Q4 (~40 Go de budget système+VRAM au total, le modèle lui-même nécessitant environ 38-40 Go réparti sur les deux cartes en Q4).',
           'Cela ne fonctionne que parce que les deux cartes sont du même modèle — une VRAM ou un calcul dépareillés entre les cartes force la répartition à se limiter à la carte la plus faible, et des exigences de pilotes dépareillées entre générations de GPU peuvent causer une instabilité pure et simple.',
@@ -1358,6 +1396,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Liste de pièces complète',
         content: 'Les prix sont des prix courants de juillet 2026 et varient selon la région et le revendeur.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Consommation système estimée face à la capacité de l\'alimentation : le build à 1 000 $ à une seule GPU consomme env. 285W sur une alimentation 650W (56% de marge) ; le build à 2 000 $ à double GPU consomme env. 475W sur une alimentation 850W (44% de marge).',
         columns: ['Composant', 'Choix', 'Prix', 'Pourquoi'],
         rows: [
           { 'Composant': 'GPU (x2)', 'Choix': '2x RTX 5060 Ti 16 Go', 'Prix': '$860', 'Pourquoi': '32 Go de VRAM combinée via tensor-split — l\'objectif central de cette configuration' },
@@ -1386,6 +1426,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Performances attendues par taille de modèle',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/s selon la taille du modèle, quantification Q4 : les deux builds sont à égalité en 7B (env. 60 tok/s) et 14B (env. 31 tok/s), mais le build à 2 000 $ à double GPU prend l\'avantage en 32B via le tensor-split (env. 34 contre env. 13 tok/s) et est le seul à exécuter le 70B (env. 15 tok/s).',
         content: 'Tous les chiffres sont en quantification Q4_K_M mesurés avec llama.cpp en tensor-split sur deux cartes RTX 5060 Ti 16 Go. Les chiffres mono-GPU utilisent une seule carte.',
         columns: ['Taille du modèle', 'Configuration', 'VRAM utilisée (Q4)', 'Tokens/s'],
         rows: [
@@ -1561,6 +1603,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: '为什么选择两张GPU而非一张更大的GPU',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'Q4量化下不同模型规模所需的VRAM:7B需要约5GB,14B约9GB,32B约15GB——均可容纳于1,000美元方案的16GB显卡中。70B需要约40GB,这需要2,000美元方案双GPU合计32GB的VRAM才能满足。',
         content: [
           '**在$2,000预算下，单GPU构建的上限约为二手RTX 3090 24GB或RTX 5070 Ti 16GB——两者都达不到70B级模型的容量要求。** llama.cpp和vLLM都支持tensor-split推理，可将模型的各层拆分到同一主板上的多张GPU，将其显存合并为一个池。两张RTX 5060 Ti 16GB显卡以低于单张24GB显卡的价格，提供合计32GB显存，并舒适地超过70B模型在Q4下的需求（系统+显存总预算约40GB，模型本身在两张卡上合计约需38-40GB显存）。',
           '这之所以可行，是因为两张卡是相同型号——若卡之间显存或算力不匹配，拆分会受限于较弱的那张卡，而不同代际显卡之间不匹配的驱动要求还可能直接导致系统不稳定。',
@@ -1574,6 +1618,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: '完整配件清单',
         content: '价格为截至2026年7月的市场价，因地区和零售商而异。',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: '系统预估功耗与电源容量对比:1,000美元单GPU方案从650W电源中消耗约285W(56%余量);2,000美元双GPU方案从850W电源中消耗约475W(44%余量)。',
         columns: ['配件', '选择', '价格', '原因'],
         rows: [
           { '配件': 'GPU（x2）', '选择': '2x RTX 5060 Ti 16GB', '价格': '$860', '原因': '通过tensor-split合计32GB显存——本构建的核心目的' },
@@ -1602,6 +1648,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: '各模型规模的预期性能',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: '按模型规模划分的Q4量化推理速度(tok/s):两种方案在7B(约60 tok/s)和14B(约31 tok/s)上表现相当,但2,000美元双GPU方案通过tensor-split在32B上明显领先(约34对约13 tok/s),且只有该方案能运行70B模型(约15 tok/s)。',
         content: '所有数据均为Q4_K_M量化，在两张RTX 5060 Ti 16GB显卡上使用llama.cpp tensor-split测得。单GPU数据仅使用一张显卡。',
         columns: ['模型规模', '配置', 'Q4显存占用', '每秒Token数'],
         rows: [
@@ -1777,6 +1825,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'why-dual-gpu': {
         id: 'why-dual-gpu',
         title: 'Por Que Duas GPUs Em Vez de Uma GPU Maior',
+        image: '/images/pc-build-vram-by-model.svg',
+        imageCaption: 'VRAM necessária por tamanho de modelo na quantização Q4: 7B precisa de ~5GB, 14B ~9GB e 32B ~15GB — tudo cabe na placa de 16GB do build de $1.000. O 70B precisa de ~40GB, o que exige os 32GB de VRAM combinada das duas GPUs do build de $2.000.',
         content: [
           '**Com $2.000, um build de GPU única chega no máximo a uma RTX 3090 24GB usada ou uma RTX 5070 Ti 16GB — nenhuma das duas alcança a capacidade de classe 70B.** Tanto o llama.cpp quanto o vLLM suportam inferência tensor-split, que divide as camadas de um modelo entre múltiplas GPUs conectadas à mesma placa-mãe, tratando a VRAM combinada como um único pool. Duas placas RTX 5060 Ti 16GB dão 32GB de VRAM combinada por menos dinheiro do que uma única placa de 24GB, e excede confortavelmente o que um modelo 70B precisa em Q4 (~40GB de orçamento total de sistema+VRAM, com o modelo em si precisando de cerca de 38-40GB entre as duas placas em Q4).',
           'Isso só funciona porque as duas placas são do mesmo modelo — VRAM ou poder de computação incompatíveis entre as placas força o split a ficar limitado pela placa mais fraca, e requisitos de driver incompatíveis entre gerações de GPU podem causar instabilidade completa.',
@@ -1790,6 +1840,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'parts-list',
         title: 'Lista Completa de Peças',
         content: 'Os preços são preços de mercado em julho de 2026 e variam por região e revendedor.',
+        image: '/images/pc-build-psu-headroom.svg',
+        imageCaption: 'Consumo estimado do sistema em comparação com a capacidade da fonte: o build de $1.000 com uma única GPU consome ~285W de uma fonte de 650W (56% de folga); o build de $2.000 com duas GPUs consome ~475W de uma fonte de 850W (44% de folga).',
         columns: ['Componente', 'Escolha', 'Preço', 'Por Quê'],
         rows: [
           { 'Componente': 'GPU (x2)', 'Escolha': '2x RTX 5060 Ti 16GB', 'Preço': '$860', 'Por Quê': '32GB de VRAM combinada via tensor-split — o propósito central deste build' },
@@ -1818,6 +1870,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       performance: {
         id: 'performance',
         title: 'Desempenho Esperado por Tamanho de Modelo',
+        image: '/images/pc-build-performance-comparison.svg',
+        imageCaption: 'Tokens/s por tamanho de modelo, quantização Q4: os dois builds empatam em 7B (~60 tok/s) e 14B (~31 tok/s), mas o build de $2.000 com duas GPUs se destaca no 32B via tensor-split (~34 contra ~13 tok/s) e é o único que roda o 70B (~15 tok/s).',
         content: 'Todos os números são de quantização Q4_K_M medidos com tensor-split do llama.cpp entre duas placas RTX 5060 Ti 16GB. Os números de GPU única usam apenas uma placa.',
         columns: ['Tamanho do Modelo', 'Configuração', 'VRAM Usada (Q4)', 'Tokens/seg'],
         rows: [
