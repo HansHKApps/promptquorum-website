@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Whisper Runtime: Each Tool Wins on Its Platform</text>
+
+  <!-- Left panel: Apple Silicon / whisper.cpp -->
+  <rect x="28" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" rx="0" fill="#6750A4"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">Apple Silicon — whisper.cpp</text>
+
+  <text x="48" y="112" font-size="12" font-weight="700" fill="#79747E">large-v3, M5 Pro, Metal</text>
+  <text x="48" y="140" font-family="'SF Mono', Monaco, monospace" font-size="22" font-weight="700" fill="#6750A4">~10&#215; real-time</text>
+  <line x1="48" y1="155" x2="348" y2="155" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="182" font-size="12" font-weight="700" fill="#79747E">faster-whisper on same Mac (CPU only)</text>
+  <text x="48" y="206" font-family="'SF Mono', Monaco, monospace" font-size="16" font-weight="700" fill="#79747E">~3&#215; real-time</text>
+
+  <text x="48" y="250" font-size="12" fill="#49454F">No Python dependency required —</text>
+  <text x="48" y="268" font-size="12" fill="#49454F">Core ML export uses the Apple</text>
+  <text x="48" y="286" font-size="12" fill="#49454F">Neural Engine directly.</text>
+
+  <!-- Right panel: NVIDIA GPU / faster-whisper -->
+  <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" rx="0" fill="#7D5260"/>
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#7D5260" text-anchor="middle">NVIDIA GPU — faster-whisper</text>
+
+  <text x="452" y="112" font-size="12" font-weight="700" fill="#79747E">large-v3, RTX 4070, int8</text>
+  <text x="452" y="140" font-family="'SF Mono', Monaco, monospace" font-size="22" font-weight="700" fill="#7D5260">~12&#215; real-time</text>
+  <line x1="452" y1="155" x2="752" y2="155" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="182" font-size="12" font-weight="700" fill="#79747E">whisper.cpp on same GPU (CUDA)</text>
+  <text x="452" y="206" font-family="'SF Mono', Monaco, monospace" font-size="16" font-weight="700" fill="#79747E">~8&#215; real-time</text>
+
+  <text x="452" y="250" font-size="12" fill="#49454F">Uses only ~2.5 GB VRAM via int8</text>
+  <text x="452" y="268" font-size="12" fill="#49454F">quantization — about 40% less than</text>
+  <text x="452" y="286" font-size="12" fill="#49454F">whisper.cpp's ~3 GB on the same GPU.</text>
+
+  <text x="400" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">Both runtimes transcribe with identical 2.5% WER — the difference is entirely inference speed, not accuracy.</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

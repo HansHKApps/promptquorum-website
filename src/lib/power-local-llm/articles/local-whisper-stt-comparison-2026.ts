@@ -138,6 +138,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Whisper Model Sizes — Foundation for Both Tools',
         content:
           'Both whisper.cpp and faster-whisper use the same Whisper model weights, converted to their respective formats (GGML for whisper.cpp, CTranslate2 for faster-whisper). Choose your model size based on your VRAM/RAM budget and accuracy requirements.',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-en.svg',
+          imageCaption: 'Whisper model sizes tiny to large-v3: WER drops from 7.6% to 2.5% while speed drops from 32x to 1x real-time.',
         columns: ['Model', 'Parameters', 'VRAM / RAM', 'English WER', 'Speed Factor (vs real-time on RTX 4070)'],
         rows: [
           {
@@ -318,6 +320,8 @@ curl -L -o ggml-base.bin \\
         title: 'Head-to-Head Benchmark Table',
         content:
           'All benchmarks use the large-v3 model unless noted. Speed is measured in multiples of real-time (e.g., 10× means 60 minutes of audio transcribed in 6 minutes). VRAM figures for GPU runs; RAM figures for CPU runs.',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-en.svg',
+          imageCaption: 'whisper.cpp hits 10x real-time on Apple M5 Pro via Metal; faster-whisper hits 12x on RTX 4070 via CUDA int8.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -748,6 +752,8 @@ curl -L -o ggml-base.bin \\
         title: 'Whisper-Modellgrößen – Grundlage beider Tools',
         content:
           'Sowohl whisper.cpp als auch faster-whisper verwenden dieselben Whisper-Modellgewichte, konvertiert in das jeweilige Format (GGML für whisper.cpp, CTranslate2 für faster-whisper). Wählen Sie die Modellgröße anhand Ihres VRAM/RAM-Budgets und Ihrer Genauigkeitsanforderungen.',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-de.svg',
+          imageCaption: 'Whisper-Modellgrößen von tiny bis large-v3: WER sinkt von 7,6% auf 2,5%, während die Geschwindigkeit von 32x auf 1x fällt.',
         columns: ['Modell', 'Parameter', 'VRAM / RAM', 'Englisch WER', 'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)'],
         rows: [
           {
@@ -928,6 +934,8 @@ curl -L -o ggml-base.bin \\
         title: 'Direktvergleich: Benchmark-Tabelle',
         content:
           'Alle Benchmarks verwenden das large-v3-Modell, sofern nicht anders angegeben. Die Geschwindigkeit wird in Vielfachen der Echtzeit gemessen (z. B. 10× bedeutet: 60 Minuten Audio werden in 6 Minuten transkribiert). VRAM-Angaben für GPU-Läufe; RAM-Angaben für CPU-Läufe.',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-de.svg',
+          imageCaption: 'whisper.cpp erreicht 10x Echtzeit auf Apple M5 Pro via Metal; faster-whisper erreicht 12x auf RTX 4070 via CUDA int8.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1366,6 +1374,8 @@ curl -L -o ggml-base.bin \\
         title: 'Tailles des modèles Whisper',
         content:
           'whisper.cpp et faster-whisper utilisent les mêmes poids de modèle Whisper, convertis dans leur format respectif (GGML pour whisper.cpp, CTranslate2 pour faster-whisper). Choisissez la taille de modèle en fonction de votre budget VRAM/RAM et de vos exigences de précision.',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-fr.svg',
+          imageCaption: 'Tailles de modèles Whisper de tiny à large-v3 : le WER passe de 7,6% à 2,5% tandis que la vitesse chute de 32x à 1x.',
         columns: ['Modèle', 'Paramètres', 'VRAM / RAM', 'WER anglais', 'Facteur de vitesse (vs temps réel, RTX 4070)'],
         rows: [
           {
@@ -1546,6 +1556,8 @@ curl -L -o ggml-base.bin \\
         title: 'Comparaison directe : tableau de benchmarks',
         content:
           'Tous les benchmarks utilisent le modèle large-v3 sauf indication contraire. La vitesse est mesurée en multiples du temps réel (ex. 10× signifie : 60 minutes d\'audio transcrites en 6 minutes). Valeurs VRAM pour les runs GPU ; valeurs RAM pour les runs CPU.',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-fr.svg',
+          imageCaption: 'whisper.cpp atteint 10x le temps réel sur Apple M5 Pro via Metal ; faster-whisper atteint 12x sur RTX 4070 via CUDA int8.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1976,6 +1988,8 @@ curl -L -o ggml-base.bin \\
         title: 'Whisperモデルサイズ — 両ツールの基盤',
         content:
           'whisper.cppとfaster-whisperはどちらも同じWhisperモデルウェイトを使用し、それぞれのフォーマット（whisper.cppはGGML、faster-whisperはCTranslate2）に変換されています。VRAMとRAMの予算と精度要件に基づいてモデルサイズを選択してください。',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-ja.svg',
+          imageCaption: 'tinyからlarge-v3までのWhisperモデル:WERは7.6%から2.5%に低下し、速度は32倍から1倍に低下します。',
         columns: ['モデル', 'パラメータ数', 'VRAM / RAM', '英語WER', '速度係数（RTX 4070実時間比）'],
         rows: [
           {
@@ -2156,6 +2170,8 @@ curl -L -o ggml-base.bin \\
         title: '直接比較：ベンチマークテーブル',
         content:
           'すべてのベンチマークは特記ない限りlarge-v3モデルを使用。速度はリアルタイムの倍率で計測（例：10×は60分の音声が6分で文字起こしできることを意味する）。GPU実行のVRAM数値；CPU実行のRAM数値。',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-ja.svg',
+          imageCaption: 'whisper.cppはApple M5 ProでMetal経由10倍のリアルタイム、faster-whisperはRTX 4070でCUDA int8経由12倍を達成。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2586,6 +2602,8 @@ curl -L -o ggml-base.bin \\
         title: 'Whisper模型规格 — 两款工具的基础',
         content:
           'whisper.cpp和faster-whisper均使用相同的Whisper模型权重，分别转换为各自的格式（whisper.cpp使用GGML，faster-whisper使用CTranslate2）。根据您的VRAM/RAM预算和精度要求选择模型规格。',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-zh.svg',
+          imageCaption: '从tiny到large-v3的Whisper模型规模:WER从7.6%降至2.5%,速度从32倍降至1倍实时速度。',
         columns: ['模型', '参数量', 'VRAM / RAM', '英语WER', '速度系数（相对RTX 4070实时）'],
         rows: [
           {
@@ -2766,6 +2784,8 @@ curl -L -o ggml-base.bin \\
         title: '正面对比：基准测试表格',
         content:
           '所有基准测试除非另有说明均使用large-v3模型。速度以实时倍数衡量（例如10×表示60分钟音频在6分钟内转录完成）。GPU运行使用VRAM数据；CPU运行使用RAM数据。',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-zh.svg',
+          imageCaption: 'whisper.cpp通过Metal在Apple M5 Pro上达到10倍实时速度;faster-whisper通过CUDA int8在RTX 4070上达到12倍。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3196,6 +3216,8 @@ curl -L -o ggml-base.bin \\
         title: 'Tamaños del modelo Whisper — base de ambas herramientas',
         content:
           'Tanto whisper.cpp como faster-whisper usan los mismos pesos del modelo Whisper, convertidos a sus formatos respectivos (GGML para whisper.cpp, CTranslate2 para faster-whisper). Elige el tamaño del modelo según tu presupuesto de VRAM/RAM y tus requisitos de precisión.',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-es.svg',
+          imageCaption: 'Tamaños de modelo Whisper de tiny a large-v3: el WER baja de 7.6% a 2.5% mientras la velocidad baja de 32x a 1x.',
         columns: ['Modelo', 'Parámetros', 'VRAM / RAM', 'WER inglés', 'Factor de velocidad (vs tiempo real en RTX 4070)'],
         rows: [
           {
@@ -3376,6 +3398,8 @@ curl -L -o ggml-base.bin \\
         title: 'Comparativa directa: tabla de benchmarks',
         content:
           'Todos los benchmarks usan el modelo large-v3 salvo que se indique lo contrario. La velocidad se mide en múltiplos del tiempo real (p. ej., 10× significa 60 minutos de audio transcritos en 6 minutos). Cifras de VRAM para ejecuciones en GPU; cifras de RAM para ejecuciones en CPU.',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-es.svg',
+          imageCaption: 'whisper.cpp alcanza 10x tiempo real en Apple M5 Pro vía Metal; faster-whisper llega a 12x en RTX 4070 vía CUDA int8.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3819,6 +3843,8 @@ curl -L -o ggml-base.bin \\
         title: 'Tamanhos do modelo Whisper — base de ambas as ferramentas',
         content:
           'Tanto whisper.cpp quanto faster-whisper usam os mesmos pesos do modelo Whisper, convertidos para seus respectivos formatos (GGML para whisper.cpp, CTranslate2 para faster-whisper). Escolha o tamanho do modelo conforme seu orçamento de VRAM/RAM e seus requisitos de precisão.',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-pt.svg',
+          imageCaption: 'Tamanhos de modelo Whisper de tiny a large-v3: o WER cai de 7,6% para 2,5% enquanto a velocidade cai de 32x para 1x.',
         columns: ['Modelo', 'Parâmetros', 'VRAM / RAM', 'WER inglês', 'Fator de velocidade (vs tempo real em RTX 4070)'],
         rows: [
           {
@@ -3999,6 +4025,8 @@ curl -L -o ggml-base.bin \\
         title: 'Comparação direta: tabela de benchmarks',
         content:
           'Todos os benchmarks usam o modelo large-v3 salvo indicação em contrário. A velocidade é medida em múltiplos do tempo real (p. ex., 10× significa 60 minutos de áudio transcritos em 6 minutos). Valores de VRAM para execuções em GPU; valores de RAM para execuções em CPU.',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-pt.svg',
+          imageCaption: 'whisper.cpp atinge 10x tempo real no Apple M5 Pro via Metal; faster-whisper atinge 12x na RTX 4070 via CUDA int8.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4442,6 +4470,8 @@ curl -L -o ggml-base.bin \\
         title: 'أحجام نموذج Whisper — الأساس لكلتا الأداتين',
         content:
           'تستخدم كلٌّ من whisper.cpp وfaster-whisper أوزان نموذج Whisper ذاتها، المحوَّلة إلى تنسيقاتها المعنية (GGML لـwhisper.cpp، وCTranslate2 لـfaster-whisper). اختر حجم النموذج بناءً على ميزانية VRAM/RAM ومتطلبات الدقة لديك.',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-ar.svg',
+          imageCaption: 'أحجام نماذج Whisper من tiny إلى large-v3: ينخفض WER من 7.6% إلى 2.5% بينما تنخفض السرعة من 32 ضعفًا إلى ضعف واحد.',
         columns: ['النموذج', 'المعاملات', 'VRAM / RAM', 'WER إنجليزي', 'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)'],
         rows: [
           {
@@ -4622,6 +4652,8 @@ curl -L -o ggml-base.bin \\
         title: 'مقارنة مباشرة: جدول معايير الأداء',
         content:
           'جميع المعايير تستخدم نموذج large-v3 ما لم يُذكر خلاف ذلك. السرعة تُقاس بمضاعفات الزمن الفعلي (مثلًا، 10× تعني نسخ 60 دقيقة صوت في 6 دقائق). أرقام VRAM لتشغيل GPU؛ أرقام RAM لتشغيل CPU.',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-ar.svg',
+          imageCaption: 'يحقق whisper.cpp سرعة 10 أضعاف الوقت الفعلي على Apple M5 Pro عبر Metal؛ ويحقق faster-whisper 12 ضعفًا على RTX 4070 عبر CUDA int8.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -5061,6 +5093,8 @@ curl -L -o ggml-base.bin \\
         title: 'Whisper 모델 크기 — 두 도구의 공통 기반',
         content:
           'whisper.cpp와 faster-whisper 모두 동일한 Whisper 모델 가중치를 사용하며, 각자의 형식으로 변환됩니다(whisper.cpp는 GGML, faster-whisper는 CTranslate2). VRAM/RAM 예산과 정확도 요구 사항에 따라 모델 크기를 선택하십시오.',
+          image: '/images/local-whisper-stt-comparison-2026-model-sizes-ko.svg',
+          imageCaption: 'tiny부터 large-v3까지의 Whisper 모델 크기: WER은 7.6%에서 2.5%로, 속도는 32배에서 1배로 떨어집니다.',
         columns: ['모델', '파라미터', 'VRAM / RAM', '영어 WER', '속도 배율 (RTX 4070 실시간 대비)'],
         rows: [
           {
@@ -5186,6 +5220,8 @@ for segment in segments:
         title: '직접 비교: 벤치마크 표',
         content:
           '모든 벤치마크는 달리 명시되지 않는 한 large-v3 모델을 사용합니다. 속도는 실시간 배율로 측정됩니다(예: 10×는 60분 오디오를 6분에 전사함을 의미). VRAM 수치는 GPU 실행 기준이며, RAM 수치는 CPU 실행 기준입니다.',
+          image: '/images/local-whisper-stt-comparison-2026-platform-winner-ko.svg',
+          imageCaption: 'whisper.cpp는 Apple M5 Pro에서 Metal로 10배 실시간을, faster-whisper는 RTX 4070에서 CUDA int8로 12배를 달성합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',

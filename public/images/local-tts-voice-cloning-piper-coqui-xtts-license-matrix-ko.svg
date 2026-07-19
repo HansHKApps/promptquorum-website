@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">로컬 TTS 라이선스: 상업적 사용 한눈에 보기</text>
+
+  <rect x="28" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">상업적 사용 가능</text>
+
+  <text x="48" y="108" font-size="13" font-weight="600" fill="#1C1B1F">Piper</text>
+  <text x="348" y="108" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853" text-anchor="end">MIT</text>
+  <line x1="48" y1="116" x2="348" y2="116" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="140" font-size="13" font-weight="600" fill="#1C1B1F">Bark</text>
+  <text x="348" y="140" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853" text-anchor="end">MIT</text>
+  <line x1="48" y1="148" x2="348" y2="148" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="172" font-size="13" font-weight="600" fill="#1C1B1F">StyleTTS 2</text>
+  <text x="348" y="172" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853" text-anchor="end">MIT</text>
+  <line x1="48" y1="180" x2="348" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="204" font-size="13" font-weight="600" fill="#1C1B1F">Kokoro</text>
+  <text x="348" y="204" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853" text-anchor="end">Apache 2.0</text>
+  <line x1="48" y1="212" x2="348" y2="212" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="236" font-size="13" font-weight="600" fill="#1C1B1F">Tortoise</text>
+  <text x="348" y="236" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853" text-anchor="end">Apache 2.0</text>
+  <line x1="48" y1="244" x2="348" y2="244" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="268" font-size="13" font-weight="600" fill="#1C1B1F">Coqui TTS</text>
+  <text x="348" y="268" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#F4B400" text-anchor="end">MPL 2.0*</text>
+  <text x="48" y="290" font-size="10.5" fill="#79747E">*툴킷 소스 변경 사항을 공개하면 상업적 사용 가능</text>
+
+  <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">비상업적 전용</text>
+
+  <text x="452" y="118" font-size="14" font-weight="700" fill="#1C1B1F">XTTS v2</text>
+  <text x="752" y="118" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#EA4335" text-anchor="end">CPML</text>
+  <text x="452" y="140" font-size="11.5" fill="#49454F">최고의 클로닝 품질이지만, Coqui Inc.가</text>
+  <text x="452" y="156" font-size="11.5" fill="#49454F">2024년 1월 문을 닫은 이후 판매처가 없습니다.</text>
+  <line x1="452" y1="172" x2="752" y2="172" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="200" font-size="14" font-weight="700" fill="#1C1B1F">F5-TTS</text>
+  <text x="752" y="200" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#EA4335" text-anchor="end">CC-BY-NC-4.0</text>
+  <text x="452" y="222" font-size="11.5" fill="#49454F">더 빠른 제로샷 클로닝(참조 오디오 약 3초),</text>
+  <text x="452" y="238" font-size="11.5" fill="#49454F">동일한 제한 사항.</text>
+
+  <text x="452" y="290" font-size="11" fill="#79747E">두 모델 모두 프로덕션 사용 전</text>
+  <text x="452" y="306" font-size="11" fill="#79747E">별도의 상업용 계약이 필요합니다.</text>
+
+  <text x="400" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">사실에 기반한 참고 자료이며 법률 자문이 아닙니다 — 상업적 배포 전 각 라이선스를 직접 확인하십시오.</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

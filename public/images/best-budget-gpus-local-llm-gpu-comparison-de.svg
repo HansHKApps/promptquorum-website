@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="1000" height="420" fill="#FFFFFF"/>
+  <text x="500" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Budget-GPUs für lokale LLMs — 2026</text>
+
+  <text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">GPU</text>
+  <text x="270" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">VRAM</text>
+  <text x="340" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Preis (gebraucht)</text>
+  <text x="450" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">7B-Geschw.</text>
+  <text x="560" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Max. Modell</text>
+  <text x="655" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Fazit</text>
+  <line x1="18" y1="74" x2="982" y2="74" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <rect x="18" y="90" width="964" height="52" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="112" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">RTX 3060 12GB &#9733;</text>
+  <text x="270" y="112" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#1C1B1F">12 GB</text>
+  <text x="340" y="112" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#1C1B1F">$200–250</text>
+  <text x="450" y="112" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#1C1B1F">15–20 tok/s</text>
+  <text x="560" y="112" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#1C1B1F">13B (Q4)</text>
+  <text x="655" y="106" font-size="11" font-weight="700" fill="#34A853">Beste Budget-</text>
+  <text x="655" y="122" font-size="11" font-weight="700" fill="#34A853">Gesamtwahl</text>
+
+  <text x="40" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">RTX 4060 Ti 8GB</text>
+  <text x="270" y="170" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">8 GB</text>
+  <text x="340" y="170" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">$250–300</text>
+  <text x="450" y="170" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">20–25 tok/s</text>
+  <text x="560" y="170" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">7B (Q5 max)</text>
+  <text x="655" y="164" font-size="11" fill="#49454F">Schneller, aber</text>
+  <text x="655" y="180" font-size="11" fill="#49454F">weniger VRAM</text>
+  <line x1="18" y1="192" x2="982" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="222" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">RTX A4000</text>
+  <text x="270" y="222" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">16 GB</text>
+  <text x="340" y="222" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">$180–230</text>
+  <text x="450" y="222" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">12–15 tok/s</text>
+  <text x="560" y="222" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">13B (Q5)</text>
+  <text x="655" y="216" font-size="11" fill="#49454F">Bestes VRAM</text>
+  <text x="655" y="232" font-size="11" fill="#49454F">pro Dollar</text>
+  <line x1="18" y1="244" x2="982" y2="244" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="274" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">RTX 4070 Super</text>
+  <text x="270" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">12 GB</text>
+  <text x="340" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">$400–450</text>
+  <text x="450" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">25–30 tok/s</text>
+  <text x="560" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">13B (Q5)</text>
+  <text x="655" y="268" font-size="11" fill="#49454F">Schneller, aber</text>
+  <text x="655" y="284" font-size="11" fill="#49454F">2&#215; der Preis</text>
+  <line x1="18" y1="296" x2="982" y2="296" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="326" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">RX 6700 XT</text>
+  <text x="270" y="326" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">12 GB</text>
+  <text x="340" y="326" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">$150–200</text>
+  <text x="450" y="326" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">10–14 tok/s</text>
+  <text x="560" y="326" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">13B (Q4)</text>
+  <text x="655" y="320" font-size="11" fill="#49454F">Günstigste, AMD-</text>
+  <text x="655" y="336" font-size="11" fill="#49454F">Reibungspunkte</text>
+
+  <text x="500" y="380" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Die RTX 3060 12GB gewinnt beim Preis-Leistungs-Verhältnis: 12GB VRAM für 200–250 $ betreibt jedes 7B-Modell und die meisten 13B-Modelle.</text>
+<text x="992" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

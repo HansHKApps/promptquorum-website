@@ -161,7 +161,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Head-to-Head Comparison Table',
         content:
           'All local TTS engines compared across the metrics that matter most for production deployment.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-en.svg',
+          imageCaption: 'Local TTS VRAM needs range from Piper\'s CPU-only footprint to 4-8 GB for Bark and Tortoise voice engines.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'Piper is fastest on CPU; XTTS v2 gives the best voice cloning quality; F5-TTS provides zero-shot cloning with a newer architecture; Bark is the only engine producing laughter and music; StyleTTS 2 has the best English narration naturalness.',
@@ -440,7 +442,9 @@ tts.tts_to_file(
         title: 'Licenses & Commercial Use — Can I Use This TTS Engine Commercially?',
         content:
           'License is the single most important factor for production use, and it splits these engines cleanly into two groups. Permissively licensed engines (MIT, Apache 2.0) are free to ship in a commercial product. Restricted engines (CPML, CC-BY-NC-4.0) are non-commercial — using them in a paid product, SaaS, ad-supported content, or client work requires a separate agreement. The table below gives the exact license and a direct "can I use this commercially?" answer for each engine.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-en.svg',
+          imageCaption: 'Piper, Bark, and StyleTTS 2 are MIT-licensed for commercial use; XTTS v2 (CPML) and F5-TTS (CC-BY-NC) are not.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'For local TTS in a commercial product, Piper, Bark, and StyleTTS 2 (MIT), Kokoro and Tortoise (Apache 2.0), and the Coqui TTS toolkit on a VITS/Tacotron2 backend (MPL 2.0) are all allowed; XTTS v2 (CPML) and F5-TTS (CC-BY-NC-4.0) are non-commercial.',
@@ -765,7 +769,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'comparison-table',
         title: 'Direkter Vergleich',
         content: 'Alle lokalen TTS-Engines im Vergleich anhand der wichtigsten Metriken für den Produktionseinsatz.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-de.svg',
+          imageCaption: 'Der VRAM-Bedarf für lokales TTS reicht von Pipers reinem CPU-Betrieb bis zu 4-8 GB bei den Engines Bark und Tortoise.',
+snippetBlocks: [
           { type: 'one-sentence', text: 'Piper ist am schnellsten auf der CPU; XTTS v2 bietet die beste Voice-Cloning-Qualität; F5-TTS ermöglicht Zero-Shot-Cloning mit einer neueren Architektur; Bark ist die einzige Engine, die Lachen und Musik erzeugt; StyleTTS 2 hat die beste englische Narrations-Natürlichkeit.' },
           { type: 'plain-terms', text: 'Für die meisten Offline-TTS-Anforderungen: Piper für Geschwindigkeit und Einfachheit, Coqui für Voice-Cloning mit einer freizügigen Lizenz, XTTS v2 für beste Cloning-Qualität mit GPU, F5-TTS für eine neuere Architektur mit schnellerem Zero-Shot-Cloning.' },
         ],
@@ -904,7 +910,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'licenses',
         title: 'Lizenzen & kommerzielle Nutzung — Darf ich diese TTS-Engine kommerziell nutzen?',
         content: 'Die Lizenz ist der wichtigste Einzelfaktor für den Produktionseinsatz, und sie teilt diese Engines klar in zwei Gruppen. Freizügig lizenzierte Engines (MIT, Apache 2.0) dürfen frei in einem kommerziellen Produkt ausgeliefert werden. Eingeschränkte Engines (CPML, CC-BY-NC-4.0) sind nicht-kommerziell — ihre Nutzung in einem kostenpflichtigen Produkt, SaaS, werbefinanzierten Inhalten oder Auftragsarbeit erfordert eine separate Vereinbarung. Die Tabelle unten nennt die exakte Lizenz und eine direkte Antwort auf „Darf ich das kommerziell nutzen?" für jede Engine.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-de.svg',
+          imageCaption: 'Piper, Bark und StyleTTS 2 sind MIT-lizenziert für kommerzielle Nutzung; XTTS v2 (CPML) und F5-TTS (CC-BY-NC) nicht.',
+snippetBlocks: [
           { type: 'one-sentence', text: 'Für lokales TTS in einem kommerziellen Produkt sind Piper, Bark und StyleTTS 2 (MIT), Kokoro und Tortoise (Apache 2.0) sowie das Coqui-TTS-Toolkit auf einem VITS-/Tacotron2-Backend (MPL 2.0) alle erlaubt; XTTS v2 (CPML) und F5-TTS (CC-BY-NC-4.0) sind nicht-kommerziell.' },
           { type: 'plain-terms', text: 'Die beiden beliebtesten Voice-Cloning-Modelle — XTTS v2 und F5-TTS — dürfen ohne separate Lizenz nicht kommerziell genutzt werden. Für kommerzielles Voice-Cloning sind Tortoise (Apache 2.0) oder das Coqui-Toolkit auf einem VITS-Backend (MPL 2.0) die sicheren Optionen.' },
         ],
@@ -1142,7 +1150,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'comparison-table',
         title: 'Tableau de comparaison',
         content: 'Tous les moteurs TTS locaux comparés selon les métriques les plus importantes pour le déploiement en production.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-fr.svg',
+          imageCaption: 'La VRAM des moteurs TTS locaux va de l\'usage CPU seul de Piper à 4-8 Go pour les moteurs Bark et Tortoise.',
+snippetBlocks: [
           { type: 'one-sentence', text: 'Piper est le plus rapide sur CPU ; XTTS v2 offre la meilleure qualité de clonage vocal ; F5-TTS fournit un clonage zéro-shot avec une architecture plus récente ; Bark est le seul moteur produisant des rires et de la musique ; StyleTTS 2 a la meilleure naturalité de narration anglaise.' },
           { type: 'plain-terms', text: 'Pour la plupart des besoins TTS hors ligne : Piper pour la vitesse et la simplicité, Coqui pour le clonage vocal avec une licence permissive, XTTS v2 pour la meilleure qualité de clonage avec GPU, F5-TTS pour une architecture plus récente avec un clonage zéro-shot plus rapide.' },
         ],
@@ -1281,7 +1291,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'licenses',
         title: 'Licences et usage commercial — puis-je utiliser ce moteur TTS commercialement ?',
         content: 'La licence est le facteur le plus important pour l\'usage en production, et elle répartit nettement ces moteurs en deux groupes. Les moteurs sous licence permissive (MIT, Apache 2.0) sont libres d\'être intégrés dans un produit commercial. Les moteurs restreints (CPML, CC-BY-NC-4.0) sont non commerciaux — les utiliser dans un produit payant, un SaaS, du contenu financé par la publicité ou du travail client nécessite un accord séparé. Le tableau ci-dessous donne la licence exacte et une réponse directe « puis-je l\'utiliser commercialement ? » pour chaque moteur.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-fr.svg',
+          imageCaption: 'Piper, Bark et StyleTTS 2 sont sous licence MIT pour un usage commercial ; XTTS v2 (CPML) et F5-TTS (CC-BY-NC) non.',
+snippetBlocks: [
           { type: 'one-sentence', text: 'Pour un TTS local dans un produit commercial, Piper, Bark et StyleTTS 2 (MIT), Kokoro et Tortoise (Apache 2.0), et le toolkit Coqui TTS sur un backend VITS/Tacotron2 (MPL 2.0) sont tous autorisés ; XTTS v2 (CPML) et F5-TTS (CC-BY-NC-4.0) sont non commerciaux.' },
           { type: 'plain-terms', text: 'Les deux modèles de clonage vocal les plus populaires — XTTS v2 et F5-TTS — ne peuvent pas être utilisés commercialement sans licence séparée. Pour le clonage vocal commercial, Tortoise (Apache 2.0) ou le toolkit Coqui sur un backend VITS (MPL 2.0) sont les choix sûrs.' },
         ],
@@ -1504,7 +1516,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'comparison-table',
         title: '比較表',
         content: 'プロダクションデプロイに最も重要なメトリクスで比較したすべてのローカルTTSエンジン。',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ja.svg',
+          imageCaption: 'ローカルTTSのVRAM要件は、PiperのCPUのみの構成からBarkとTortoiseの4〜8GBまで幅があります。',
+snippetBlocks: [
           { type: 'one-sentence', text: 'PiperはCPU最速；XTTS v2は最高のボイスクローニング品質；F5-TTSは新しいアーキテクチャでゼロショットクローニングを提供；Barkは笑い声と音楽を生成できる唯一のエンジン；StyleTTS 2は英語ナレーションの自然さが最高。' },
           { type: 'plain-terms', text: 'ほとんどのオフラインTTSニーズに：速度とシンプルさならPiper、寛容なライセンスでボイスクローニングならCoqui、GPUで最高のクローニング品質ならXTTS v2、新しいアーキテクチャで高速なゼロショットクローニングならF5-TTS。' },
         ],
@@ -1643,7 +1657,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'licenses',
         title: 'ライセンスと商用利用 — このTTSエンジンを商用利用できるか？',
         content: 'ライセンスは本番利用において最も重要な要素であり、これらのエンジンを明確に2つのグループに分けます。寛容なライセンス（MIT、Apache 2.0）のエンジンは商用製品に自由に組み込めます。制限付きのエンジン（CPML、CC-BY-NC-4.0）は非商用であり、有料製品、SaaS、広告付きコンテンツ、クライアント業務で使うには別途の契約が必要です。下の表は各エンジンの正確なライセンスと「商用利用できるか？」への直接的な回答を示します。',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ja.svg',
+          imageCaption: 'Piper、Bark、StyleTTS 2は商用利用可能なMITライセンス;XTTS v2(CPML)とF5-TTS(CC-BY-NC)は非商用のみです。',
+snippetBlocks: [
           { type: 'one-sentence', text: '商用製品でのローカルTTSには、Piper、Bark、StyleTTS 2（MIT）、KokoroとTortoise（Apache 2.0）、およびVITS/Tacotron2バックエンドのCoqui TTSツールキット（MPL 2.0）がいずれも許可されます；XTTS v2（CPML）とF5-TTS（CC-BY-NC-4.0）は非商用です。' },
           { type: 'plain-terms', text: '最も人気のある2つのボイスクローニングモデル — XTTS v2とF5-TTS — は別途のライセンスなしに商用利用できません。商用のボイスクローニングには、Tortoise（Apache 2.0）またはVITSバックエンドのCoquiツールキット（MPL 2.0）が安全な選択です。' },
         ],
@@ -1881,7 +1897,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'comparison-table',
         title: '对比表',
         content: '所有本地TTS引擎按照生产部署最重要的指标进行比较。',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-zh.svg',
+          imageCaption: '本地TTS的显存需求从Piper的纯CPU方案到Bark和Tortoise引擎所需的4-8GB不等。',
+snippetBlocks: [
           { type: 'one-sentence', text: 'Piper在CPU上最快；XTTS v2提供最佳声音克隆质量；F5-TTS通过更新的架构提供零样本克隆；Bark是唯一能产生笑声和音乐的引擎；StyleTTS 2具有最佳的英语朗读自然度。' },
           { type: 'plain-terms', text: '对于大多数离线TTS需求：速度和简洁性选Piper，宽松许可证的声音克隆选Coqui，有GPU的最佳克隆质量选XTTS v2，更快零样本克隆的新架构选F5-TTS。' },
         ],
@@ -2021,7 +2039,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'licenses',
         title: '许可证与商业使用 — 我能商用这款TTS引擎吗？',
         content: '许可证是生产使用中最重要的单一因素，它把这些引擎清晰地分成两类。宽松许可证的引擎（MIT、Apache 2.0）可以自由地装入商业产品发布。受限引擎（CPML、CC-BY-NC-4.0）为非商用 — 将其用于付费产品、SaaS、广告支持内容或客户工作需要单独的协议。下表给出每款引擎的确切许可证及直接的「我能商用吗？」答案。',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-zh.svg',
+          imageCaption: 'Piper、Bark和StyleTTS 2采用MIT许可,可商用;XTTS v2(CPML)和F5-TTS(CC-BY-NC)则不可商用。',
+snippetBlocks: [
           { type: 'one-sentence', text: '在商业产品中使用本地TTS：Piper、Bark、StyleTTS 2（MIT）、Kokoro和Tortoise（Apache 2.0），以及基于VITS/Tacotron2后端的Coqui TTS工具包（MPL 2.0）均被允许；XTTS v2（CPML）和F5-TTS（CC-BY-NC-4.0）为非商用。' },
           { type: 'plain-terms', text: '两款最受欢迎的声音克隆模型 — XTTS v2和F5-TTS — 未经单独许可证不能商用。商业声音克隆请选择Tortoise（Apache 2.0）或基于VITS后端的Coqui工具包（MPL 2.0）。' },
         ],
@@ -2338,7 +2358,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Tabla de comparación',
         content:
           'Todos los motores TTS locales comparados en las métricas más importantes para despliegue en producción.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-es.svg',
+          imageCaption: 'La VRAM de TTS local va desde el uso solo-CPU de Piper hasta 4-8 GB para los motores Bark y Tortoise.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'Piper es el más rápido en CPU; XTTS v2 ofrece la mejor calidad de clonación de voz; F5-TTS proporciona clonación zero-shot con una arquitectura más nueva; Bark es el único motor que produce risas y música; StyleTTS 2 tiene la mejor naturalidad de narración en inglés.',
@@ -2616,7 +2638,9 @@ tts.tts_to_file(
         title: 'Licencias y uso comercial — ¿Puedo usar este motor TTS comercialmente?',
         content:
           'La licencia es el factor más importante para el uso en producción, y divide estos motores limpiamente en dos grupos. Los motores con licencia permisiva (MIT, Apache 2.0) son libres de distribuir en un producto comercial. Los motores restringidos (CPML, CC-BY-NC-4.0) son no comerciales — usarlos en un producto de pago, SaaS, contenido con publicidad o trabajo para clientes requiere un acuerdo separado. La tabla siguiente da la licencia exacta y una respuesta directa a "¿puedo usar esto comercialmente?" para cada motor.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-es.svg',
+          imageCaption: 'Piper, Bark y StyleTTS 2 tienen licencia MIT para uso comercial; XTTS v2 (CPML) y F5-TTS (CC-BY-NC) no la tienen.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'Para TTS local en un producto comercial, Piper, Bark y StyleTTS 2 (MIT), Kokoro y Tortoise (Apache 2.0), y el kit de herramientas Coqui TTS sobre un backend VITS/Tacotron2 (MPL 2.0) están todos permitidos; XTTS v2 (CPML) y F5-TTS (CC-BY-NC-4.0) son no comerciales.',
@@ -2984,7 +3008,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'comparison-table',
         title: '비교 표',
         content: '프로덕션 배포를 위한 가장 중요한 지표에서 비교한 모든 로컬 TTS 엔진.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ko.svg',
+          imageCaption: '로컬 TTS의 VRAM 요구량은 Piper의 CPU 전용 구성부터 Bark와 Tortoise 엔진의 4-8GB까지 다양합니다.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'Piper는 CPU에서 가장 빠르고, XTTS v2는 최고의 음성 복제 품질을 제공하며, F5-TTS는 더 새로운 아키텍처로 zero-shot 복제를 제공하고, Bark는 웃음과 음악을 생성하는 유일한 엔진이며, StyleTTS 2는 영어 내레이션에서 최고의 자연스러움을 갖습니다.',
@@ -3124,7 +3150,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         id: 'licenses',
         title: '라이선스 및 상업적 사용 — 이 TTS 엔진을 상업적으로 사용할 수 있습니까?',
         content: '라이선스는 프로덕션 사용에서 가장 중요한 단일 요소이며, 이 엔진들을 명확하게 두 그룹으로 나눕니다. 허용적 라이선스 엔진(MIT, Apache 2.0)은 상업용 제품에 무료로 출시할 수 있습니다. 제한된 엔진(CPML, CC-BY-NC-4.0)은 비상업용입니다 — 유료 제품, SaaS, 광고 지원 콘텐츠 또는 클라이언트 작업에 사용하려면 별도 계약이 필요합니다. 아래 표는 각 엔진의 정확한 라이선스와 "상업적으로 사용할 수 있는가?"에 대한 직접적인 답변을 제공합니다.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ko.svg',
+          imageCaption: 'Piper, Bark, StyleTTS 2는 상업적 사용이 가능한 MIT 라이선스이며, XTTS v2(CPML)와 F5-TTS(CC-BY-NC)는 그렇지 않습니다.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: '상업용 제품의 로컬 TTS의 경우 Piper, Bark, StyleTTS 2(MIT), Kokoro와 Tortoise(Apache 2.0), 그리고 VITS/Tacotron2 백엔드의 Coqui TTS 툴킷(MPL 2.0)이 모두 허용됩니다. XTTS v2(CPML)와 F5-TTS(CC-BY-NC-4.0)는 비상업용입니다.',
@@ -3486,7 +3514,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'Tabela de comparação',
         content:
           'Todos os motores TTS locais comparados nas métricas mais importantes para implantação em produção.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-pt.svg',
+          imageCaption: 'As necessidades de VRAM de TTS local vão do uso somente CPU do Piper a 4-8 GB para os engines Bark e Tortoise.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'Piper é o mais rápido em CPU; XTTS v2 oferece a melhor qualidade de clonagem de voz; F5-TTS fornece clonagem zero-shot com arquitetura mais nova; Bark é o único motor que produz risadas e música; StyleTTS 2 tem a melhor naturalidade de narração em inglês.',
@@ -3763,7 +3793,9 @@ tts.tts_to_file(
         title: 'Licenças e uso comercial — Posso usar este motor TTS comercialmente?',
         content:
           'A licença é o fator mais importante para uso em produção, e ela divide estes motores claramente em dois grupos. Motores com licença permissiva (MIT, Apache 2.0) são livres para incluir em um produto comercial. Motores restritos (CPML, CC-BY-NC-4.0) são não comerciais — usá-los em um produto pago, SaaS, conteúdo monetizado por anúncios ou trabalho para clientes requer um acordo separado. A tabela abaixo dá a licença exata e uma resposta direta de "posso usar isto comercialmente?" para cada motor.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-pt.svg',
+          imageCaption: 'Piper, Bark e StyleTTS 2 têm licença MIT para uso comercial; XTTS v2 (CPML) e F5-TTS (CC-BY-NC) não têm.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'Para TTS local em um produto comercial, Piper, Bark e StyleTTS 2 (MIT), Kokoro e Tortoise (Apache 2.0) e o kit Coqui TTS sobre um backend VITS/Tacotron2 (MPL 2.0) são todos permitidos; XTTS v2 (CPML) e F5-TTS (CC-BY-NC-4.0) são não comerciais.',
@@ -4169,7 +4201,9 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
         title: 'جدول المقارنة',
         content:
           'جميع محركات TTS المحلية مقارنة بأهم المقاييس للنشر في الإنتاج.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ar.svg',
+          imageCaption: 'تتراوح متطلبات VRAM لمحركات TTS المحلية من اعتماد Piper الكامل على المعالج إلى 4-8 GB لمحركي Bark وTortoise.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'Piper الأسرع على CPU؛ XTTS v2 يوفر أفضل جودة استنساخ صوت؛ F5-TTS يوفر استنساخ zero-shot بمعمارية أحدث؛ Bark المحرك الوحيد الذي ينتج الضحك والموسيقى؛ StyleTTS 2 يمتلك أفضل طبيعية في السرد الإنجليزي.',
@@ -4445,7 +4479,9 @@ tts.tts_to_file(
         title: 'التراخيص والاستخدام التجاري — هل يمكنني استخدام محرك TTS هذا تجاريًا؟',
         content:
           'الترخيص هو العامل الأهم منفردًا للاستخدام في الإنتاج، وهو يقسّم هذه المحركات بوضوح إلى مجموعتين. المحركات ذات التراخيص المتساهلة (MIT، Apache 2.0) حرة الشحن في منتج تجاري. أما المحركات المقيّدة (CPML، CC-BY-NC-4.0) فهي غير تجارية — استخدامها في منتج مدفوع أو SaaS أو محتوى مدعوم بالإعلانات أو عمل للعملاء يتطلب اتفاقية منفصلة. يقدم الجدول أدناه الترخيص الدقيق وإجابة مباشرة عن "هل يمكنني استخدامه تجاريًا؟" لكل محرك.',
-        snippetBlocks: [
+                  image: '/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ar.svg',
+          imageCaption: 'Piper وBark وStyleTTS 2 مرخصة بموجب MIT للاستخدام التجاري؛ أما XTTS v2 (CPML) وF5-TTS (CC-BY-NC) فليسا كذلك.',
+snippetBlocks: [
           {
             type: 'one-sentence',
             text: 'لاستخدام TTS محلي في منتج تجاري، يُسمح بـPiper وBark وStyleTTS 2 (MIT) وKokoro وTortoise (Apache 2.0) ومجموعة أدوات Coqui TTS على backend VITS/Tacotron2 (MPL 2.0)؛ أما XTTS v2 (CPML) وF5-TTS (CC-BY-NC-4.0) فهما غير تجاريين.',
