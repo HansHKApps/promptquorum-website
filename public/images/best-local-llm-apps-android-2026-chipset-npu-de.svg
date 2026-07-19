@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1000 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="1000" height="350" fill="#FFFFFF"/>
+  <text x="500" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">NPU-Zugriff entscheidet über den Geschwindigkeitsunterschied</text>
+
+  <rect x="28" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Snapdragon 8 Elite</text>
+  <text x="198" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Galaxy S25 Ultra, OnePlus 13</text>
+
+  <text x="48" y="135" font-size="12" font-weight="700" fill="#79747E">Hexagon NPU für Apps freigegeben</text>
+  <text x="48" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#34A853">~22 tok/sec</text>
+  <text x="48" y="182" font-size="11.5" fill="#49454F">MLC Chat, Phi-4 Mini, NPU-Pfad</text>
+  <line x1="48" y1="196" x2="348" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="222" font-size="12" fill="#49454F">Erreicht beim kleineren Modell Qwen3</text>
+  <text x="48" y="240" font-size="12" fill="#49454F">1.7B sogar ~40 Tok/Sek. — 3–4-mal</text>
+  <text x="48" y="258" font-size="12" fill="#49454F">schneller als reine CPU-Apps auf</text>
+  <text x="48" y="276" font-size="12" fill="#49454F">demselben Telefon.</text>
+
+  <rect x="632" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="632" y="52" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="802" y="80" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Google Tensor G5</text>
+  <text x="802" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Pixel 9 Pro</text>
+
+  <text x="652" y="135" font-size="12" font-weight="700" fill="#79747E">NPU nicht für Drittanbieter-Apps freigegeben</text>
+  <text x="652" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#EA4335">10–18 tok/sec</text>
+  <text x="652" y="182" font-size="11.5" fill="#49454F">Alle 6 Apps, Phi-4 Mini, nur CPU</text>
+  <line x1="652" y1="196" x2="952" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="652" y="222" font-size="12" fill="#49454F">Jede getestete App weicht auf dem</text>
+  <text x="652" y="240" font-size="12" fill="#49454F">Tensor G5 auf CPU-Inferenz aus —</text>
+  <text x="652" y="258" font-size="12" fill="#49454F">keine App nutzt derzeit Googles</text>
+  <text x="652" y="276" font-size="12" fill="#49454F">On-Device-NPU für Drittanbieter.</text>
+
+  <text x="500" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">Gleiches Phi-4-Mini-Modell, gleiche Quantisierung — die NPU-Freigabe des Chips erklärt den Unterschied.</text>
+<text x="992" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">الوصول إلى NPU يحدد فجوة السرعة</text>
+
+  <rect x="28" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Snapdragon 8 Elite</text>
+  <text x="198" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Galaxy S25 Ultra, OnePlus 13</text>
+
+  <text x="48" y="135" font-size="12" font-weight="700" fill="#79747E">Hexagon NPU مكشوف للتطبيقات</text>
+  <text x="48" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#34A853">~22 tok/sec</text>
+  <text x="48" y="182" font-size="11.5" fill="#49454F">MLC Chat، Phi-4 Mini، مسار NPU</text>
+  <line x1="48" y1="196" x2="348" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="222" font-size="12" fill="#49454F">يصل أيضًا إلى نحو 40 tok/sec على</text>
+  <text x="48" y="240" font-size="12" fill="#49454F">نموذج Qwen3 1.7B الأصغر — أسرع بمقدار</text>
+  <text x="48" y="258" font-size="12" fill="#49454F">3 إلى 4 مرات من التطبيقات التي</text>
+  <text x="48" y="276" font-size="12" fill="#49454F">تعتمد على المعالج فقط في نفس الهاتف.</text>
+
+  <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Google Tensor G5</text>
+  <text x="602" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Pixel 9 Pro</text>
+
+  <text x="452" y="135" font-size="12" font-weight="700" fill="#79747E">NPU غير مكشوف لتطبيقات الطرف الثالث</text>
+  <text x="452" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#EA4335">10–18 tok/sec</text>
+  <text x="452" y="182" font-size="11.5" fill="#49454F">جميع التطبيقات الستة، Phi-4 Mini، معالج فقط</text>
+  <line x1="452" y1="196" x2="752" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="222" font-size="12" fill="#49454F">كل تطبيق تم اختباره يعود إلى</text>
+  <text x="452" y="240" font-size="12" fill="#49454F">الاستدلال بالمعالج على Tensor G5 —</text>
+  <text x="452" y="258" font-size="12" fill="#49454F">لا يوجد حاليًا أي تطبيق يفتح</text>
+  <text x="452" y="276" font-size="12" fill="#49454F">وحدة NPU من Google لطرف ثالث.</text>
+
+  <text x="400" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">نفس نموذج Phi-4 Mini، نفس التكميم — التفاوت في كشف NPU للشريحة هو ما يفسر الفرق.</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -82,7 +82,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**The RTX 3060 12GB is the best budget GPU for local LLMs in 2026.** 12GB VRAM fits every 7B model at Q4/Q5 quantization, and most 13B models at Q4. For detailed guidance on VRAM requirements across model sizes, see the [VRAM requirements guide →](/local-llms/how-much-vram-local-llm). Here are the exact models and speeds you can expect:',
           ],
           columns: ['Model', 'Size', 'Quantization', 'VRAM Used', 'Speed', 'Best For'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-model-speeds-en.svg',
+          imageCaption: 'RTX 3060 12GB runs Qwen3 14B at 9-12 tok/sec and Qwen3 8B at 16-20 tok/sec, all at Q4_K_M quantization.',
+rows: [
             { 'Model': 'Qwen3 14B', 'Size': '14B (dense)', 'Quantization': 'Q4_K_M', 'VRAM Used': '~9 GB', 'Speed': '9–12 tok/sec', 'Best For': 'Best overall quality that fits' },
             { 'Model': 'Qwen3 8B', 'Size': '8B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~7 GB', 'Speed': '16–20 tok/sec', 'Best For': 'Coding, all-round' },
             { 'Model': 'Gemma 4 E12B', 'Size': '26B MoE', 'Quantization': 'Q4_K_M', 'VRAM Used': '~9 GB', 'Speed': '11–14 tok/sec', 'Best For': 'Vision, multimodal' },
@@ -111,7 +113,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'which-budget-gpus',
           title: 'How Does RTX 3060 Compare to Other Budget GPUs?',
           columns: ['GPU', 'VRAM', 'Price (Used)', '7B Speed', 'Max Model', 'Verdict'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-gpu-comparison-en.svg',
+          imageCaption: 'RTX 3060 12GB ($200-250 used) beats RTX 4060 Ti, RTX A4000, RTX 4070 Super, and RX 6700 XT on VRAM-per-dollar.',
+rows: [
             { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', 'Price (Used)': '$200–250', '7B Speed': '15–20 tok/sec', 'Max Model': '13B (Q4)', 'Verdict': 'Best overall budget' },
             { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', 'Price (Used)': '$250–300', '7B Speed': '20–25 tok/sec', 'Max Model': '7B (Q5 max)', 'Verdict': 'Faster but less VRAM' },
             { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Price (Used)': '$180–230', '7B Speed': '12–15 tok/sec', 'Max Model': '13B (Q5)', 'Verdict': 'Best VRAM per dollar' },
@@ -432,7 +436,9 @@ schema: {
             '**La RTX 3060 12GB es la mejor GPU económica para LLMs locales en 2026.** 12GB de VRAM cabe con todos los modelos 7B en cuantización Q4/Q5, y la mayoría de los 13B en Q4. Para orientación detallada sobre los requisitos de VRAM según el tamaño del modelo, consulta la [guía de requisitos de VRAM →](/es/local-llms/how-much-vram-local-llm). Aquí están los modelos exactos y las velocidades que puedes esperar:',
           ],
           columns: ['Modelo', 'Tamaño', 'Cuantización', 'VRAM usada', 'Velocidad', 'Ideal para'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-model-speeds-es.svg',
+          imageCaption: 'La RTX 3060 12GB ejecuta Qwen3 14B a 9-12 tok/seg y Qwen3 8B a 16-20 tok/seg, todo en cuantización Q4_K_M.',
+rows: [
             { 'Modelo': 'Qwen3 14B', 'Tamaño': '14B (denso)', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~9 GB', 'Velocidad': '9–12 tok/seg', 'Ideal para': 'Mejor calidad general que cabe' },
             { 'Modelo': 'Qwen3 8B', 'Tamaño': '8B', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~7 GB', 'Velocidad': '16–20 tok/seg', 'Ideal para': 'Código, uso general' },
             { 'Modelo': 'Gemma 4 E12B', 'Tamaño': '26B MoE', 'Cuantización': 'Q4_K_M', 'VRAM usada': '~9 GB', 'Velocidad': '11–14 tok/seg', 'Ideal para': 'Visión, multimodal' },
@@ -461,7 +467,9 @@ schema: {
           id: 'which-budget-gpus',
           title: 'RTX 3060 vs otras GPUs económicas',
           columns: ['GPU', 'VRAM', 'Precio (usada)', 'Velocidad 7B', 'Modelo máx.', 'Veredicto'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-gpu-comparison-es.svg',
+          imageCaption: 'La RTX 3060 12GB ($200-250 usada) supera a la RTX 4060 Ti, RTX A4000, RTX 4070 Super y RX 6700 XT en VRAM por dólar.',
+rows: [
             { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', 'Precio (usada)': '$200–250', 'Velocidad 7B': '15–20 tok/seg', 'Modelo máx.': '13B (Q4)', 'Veredicto': 'Mejor relación calidad-precio' },
             { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', 'Precio (usada)': '$250–300', 'Velocidad 7B': '20–25 tok/seg', 'Modelo máx.': '7B (Q5 máx)', 'Veredicto': 'Más rápida pero menos VRAM' },
             { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Precio (usada)': '$180–230', 'Velocidad 7B': '12–15 tok/seg', 'Modelo máx.': '13B (Q5)', 'Veredicto': 'Mejor VRAM por dólar' },
@@ -763,7 +771,9 @@ schema: {
             '**RTX 3060 12GB هي أفضل GPU اقتصادية لنماذج LLM المحلية في 2026.** تتسع 12GB من VRAM لجميع نماذج 7B بتكميم Q4/Q5، ومعظم نماذج 13B بصيغة Q4. للحصول على إرشاد تفصيلي حول متطلبات VRAM حسب حجم النموذج، راجع [دليل متطلبات VRAM →](/ar/local-llms/how-much-vram-local-llm). إليك النماذج بالضبط والسرعات التي يمكنك توقعها:',
           ],
           columns: ['النموذج', 'الحجم', 'التكميم', 'VRAM المستخدمة', 'السرعة', 'مثالي لـ'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-model-speeds-ar.svg',
+          imageCaption: 'تشغّل RTX 3060 12GB نموذج Qwen3 14B بسرعة 9-12 tok/sec وQwen3 8B بسرعة 16-20 tok/sec، ضمن تكميم Q4_K_M.',
+rows: [
             { 'النموذج': 'Qwen3 14B', 'الحجم': '14B (كثيف)', 'التكميم': 'Q4_K_M', 'VRAM المستخدمة': '~9 GB', 'السرعة': '9–12 tok/ث', 'مثالي لـ': 'أفضل جودة عامة تتسع' },
             { 'النموذج': 'Qwen3 8B', 'الحجم': '8B', 'التكميم': 'Q4_K_M', 'VRAM المستخدمة': '~7 GB', 'السرعة': '16–20 tok/ث', 'مثالي لـ': 'البرمجة، الاستخدام العام' },
             { 'النموذج': 'Gemma 4 E12B', 'الحجم': '26B MoE', 'التكميم': 'Q4_K_M', 'VRAM المستخدمة': '~9 GB', 'السرعة': '11–14 tok/ث', 'مثالي لـ': 'الرؤية، متعدد الوسائط' },
@@ -792,7 +802,9 @@ schema: {
           id: 'which-budget-gpus',
           title: 'RTX 3060 مقابل بطاقات GPU اقتصادية أخرى',
           columns: ['GPU', 'VRAM', 'السعر (مستعملة)', 'سرعة 7B', 'النموذج الأقصى', 'الحكم'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-gpu-comparison-ar.svg',
+          imageCaption: 'تتفوق RTX 3060 12GB (200-250 دولارًا مستعملة) على RTX 4060 Ti وRTX A4000 وRTX 4070 Super وRX 6700 XT من حيث VRAM لكل دولار.',
+rows: [
             { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', 'السعر (مستعملة)': '200–250 دولار', 'سرعة 7B': '15–20 tok/ث', 'النموذج الأقصى': '13B (Q4)', 'الحكم': 'أفضل نسبة جودة إلى سعر' },
             { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', 'السعر (مستعملة)': '250–300 دولار', 'سرعة 7B': '20–25 tok/ث', 'النموذج الأقصى': '7B (Q5 أقصى)', 'الحكم': 'أسرع لكن VRAM أقل' },
             { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'السعر (مستعملة)': '180–230 دولار', 'سرعة 7B': '12–15 tok/ث', 'النموذج الأقصى': '13B (Q5)', 'الحكم': 'أفضل VRAM لكل دولار' },
@@ -1090,7 +1102,9 @@ schema: {
             '**A RTX 3060 12 GB é a melhor GPU econômica para LLMs locais em 2026.** 12 GB de VRAM cabem todos os modelos 7B em quantização Q4/Q5, e a maioria dos 13B em Q4.',
           ],
           columns: ['Modelo', 'Tamanho', 'Quantização', 'VRAM usada', 'Velocidade', 'Ideal para'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-model-speeds-pt.svg',
+          imageCaption: 'A RTX 3060 12GB roda o Qwen3 14B a 9-12 tok/seg e o Qwen3 8B a 16-20 tok/seg, tudo em quantização Q4_K_M.',
+rows: [
             { 'Modelo': 'Qwen3 14B', 'Tamanho': '14B (denso)', 'Quantização': 'Q4_K_M', 'VRAM usada': '~9 GB', 'Velocidade': '9-12 tok/s', 'Ideal para': 'Melhor qualidade geral que cabe' },
             { 'Modelo': 'Qwen3 8B', 'Tamanho': '8B', 'Quantização': 'Q4_K_M', 'VRAM usada': '~7 GB', 'Velocidade': '16-20 tok/s', 'Ideal para': 'Código, uso geral' },
             { 'Modelo': 'Mistral Small v0.3', 'Tamanho': '7B', 'Quantização': 'Q4_K_M', 'VRAM usada': '~7 GB', 'Velocidade': '18 tok/s', 'Ideal para': 'Seguimento de instruções' },
@@ -1115,7 +1129,9 @@ schema: {
           id: 'which-budget-gpus',
           title: 'RTX 3060 vs outras GPUs econômicas',
           columns: ['GPU', 'VRAM', 'Preço (usada)', 'Velocidade 7B', 'Modelo máx.', 'Veredicto'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-gpu-comparison-pt.svg',
+          imageCaption: 'A RTX 3060 12GB ($200-250 usada) supera a RTX 4060 Ti, RTX A4000, RTX 4070 Super e RX 6700 XT em VRAM por dólar.',
+rows: [
             { 'GPU': 'RTX 3060 12 GB ★', 'VRAM': '12 GB', 'Preço (usada)': 'US$ 200-250', 'Velocidade 7B': '15-20 tok/s', 'Modelo máx.': '13B (Q4)', 'Veredicto': 'Melhor custo-benefício' },
             { 'GPU': 'RTX 3060 6 GB', 'VRAM': '6 GB', 'Preço (usada)': 'US$ 150-180', 'Velocidade 7B': 'Offloading lento', 'Modelo máx.': '3B (Q4)', 'Veredicto': 'Muito limitada para LLMs' },
             { 'GPU': 'RTX 3090 24 GB', 'VRAM': '24 GB', 'Preço (usada)': 'US$ 450-500', 'Velocidade 7B': '35-50 tok/s', 'Modelo máx.': '34B (Q4)', 'Veredicto': 'Melhor valor para 24 GB' },
@@ -1194,7 +1210,9 @@ schema: {
           '**Bestes Reasoning-Modell auf 12 GB:** DeepSeek-R1 7B mit 10–12 Tok/Sek. Chain-of-Thought.',
           '**Überspringen, wenn:** Sie 70B-Modelle, Llama 4 Scout (benötigt ca. 55 GB) oder 13B bei Q8 wollen — dann brauchen Sie 24 GB+ (RTX 4090).',
         ] },
-        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'Was läuft auf der RTX 3060 12GB?', content: [ '**Die RTX 3060 12GB ist 2026 die beste Budget-GPU für lokale LLMs.** 12 GB VRAM fassen jedes 7B-Modell bei Q4/Q5-Quantisierung und die meisten 13B-Modelle bei Q4. Eine detaillierte Anleitung zu VRAM-Anforderungen über alle Modellgrößen hinweg finden Sie im [VRAM-Anforderungs-Leitfaden →](/de/local-llms/how-much-vram-local-llm). Hier die genauen Modelle und Geschwindigkeiten, die Sie erwarten können:' ], columns: ['Modell', 'Größe', 'Quantisierung', 'VRAM-Verbrauch', 'Geschwindigkeit', 'Am besten für'], rows: [
+        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'Was läuft auf der RTX 3060 12GB?', content: [ '**Die RTX 3060 12GB ist 2026 die beste Budget-GPU für lokale LLMs.** 12 GB VRAM fassen jedes 7B-Modell bei Q4/Q5-Quantisierung und die meisten 13B-Modelle bei Q4. Eine detaillierte Anleitung zu VRAM-Anforderungen über alle Modellgrößen hinweg finden Sie im [VRAM-Anforderungs-Leitfaden →](/de/local-llms/how-much-vram-local-llm). Hier die genauen Modelle und Geschwindigkeiten, die Sie erwarten können:' ], columns: ['Modell', 'Größe', 'Quantisierung', 'VRAM-Verbrauch', 'Geschwindigkeit', 'Am besten für'],           image: '/images/best-budget-gpus-local-llm-model-speeds-de.svg',
+          imageCaption: 'Die RTX 3060 12GB betreibt Qwen3 14B mit 9-12 Tok/Sek. und Qwen3 8B mit 16-20 Tok/Sek., jeweils bei Q4_K_M-Quantisierung.',
+rows: [
           { 'Modell': 'Qwen3 14B', 'Größe': '14B (dicht)', 'Quantisierung': 'Q4_K_M', 'VRAM-Verbrauch': '~9 GB', 'Geschwindigkeit': '9–12 Tok/Sek', 'Am besten für': 'Beste Gesamtqualität, die passt' },
           { 'Modell': 'Qwen3 8B', 'Größe': '8B', 'Quantisierung': 'Q4_K_M', 'VRAM-Verbrauch': '~7 GB', 'Geschwindigkeit': '16–20 Tok/Sek', 'Am besten für': 'Coding, Allrounder' },
           { 'Modell': 'Gemma 4 E12B', 'Größe': '26B MoE', 'Quantisierung': 'Q4_K_M', 'VRAM-Verbrauch': '~9 GB', 'Geschwindigkeit': '11–14 Tok/Sek', 'Am besten für': 'Vision, multimodal' },
@@ -1210,7 +1228,9 @@ schema: {
           '**7B mit Offloading:** Möglich, aber langsam. Llama 7B mit CPU-Offload = ca. 5–8 Tok/Sek. Nur für nicht-interaktive Batch-Arbeit brauchbar.',
           '**Empfehlung:** Wenn Sie eine 6-GB-Karte haben, steigen Sie auf eine gebrauchte 12-GB-Karte um (200–250 €), bevor Sie Zeit in Workarounds investieren. Die Verbesserung bei Geschwindigkeit und Modellqualität ist es wert.',
         ] },
-        'which-budget-gpus': { id: 'which-budget-gpus', title: 'RTX 3060 vs. andere Budget-GPUs', columns: ['GPU', 'VRAM', 'Preis (gebraucht)', '7B-Geschwindigkeit', 'Max. Modell', 'Fazit'], rows: [
+        'which-budget-gpus': { id: 'which-budget-gpus', title: 'RTX 3060 vs. andere Budget-GPUs', columns: ['GPU', 'VRAM', 'Preis (gebraucht)', '7B-Geschwindigkeit', 'Max. Modell', 'Fazit'],           image: '/images/best-budget-gpus-local-llm-gpu-comparison-de.svg',
+          imageCaption: 'Die RTX 3060 12GB (200-250 $ gebraucht) schlägt RTX 4060 Ti, RTX A4000, RTX 4070 Super und RX 6700 XT beim VRAM-Preis-Verhältnis.',
+rows: [
           { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', 'Preis (gebraucht)': '200–250 €', '7B-Geschwindigkeit': '15–20 Tok/Sek', 'Max. Modell': '13B (Q4)', 'Fazit': 'Insgesamt bestes Budget' },
           { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', 'Preis (gebraucht)': '250–300 €', '7B-Geschwindigkeit': '20–25 Tok/Sek', 'Max. Modell': '7B (max. Q5)', 'Fazit': 'Schneller, aber weniger VRAM' },
           { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Preis (gebraucht)': 'ca. 280–330 €', '7B-Geschwindigkeit': '12–15 Tok/Sek', 'Max. Modell': '13B (Q5)', 'Fazit': 'Bestes VRAM pro Euro' },
@@ -1352,7 +1372,9 @@ schema: {
           '**Meilleur modèle de raisonnement sur 12GB :** DeepSeek-R1 7B à 10–12 tok/sec. Chaîne de pensée.',
           '**À éviter si :** vous visez des modèles 70B, Llama 4 Scout (~55 GB) ou du 13B en Q8 — il vous faut 24GB+ (RTX 4090).',
         ] },
-        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'Que peut faire tourner la RTX 3060 12GB ?', content: ['**La RTX 3060 12GB est le meilleur GPU économique pour les LLM locaux en 2026.** Ses 12GB de VRAM accueillent tous les modèles 7B en quantification Q4/Q5, et la plupart des 13B en Q4. Pour un guide détaillé des besoins en VRAM selon la taille des modèles, voir le [guide des besoins en VRAM →](/fr/local-llms/how-much-vram-local-llm). Voici les modèles et vitesses précis auxquels vous attendre :'], columns: ['Modèle', 'Taille', 'Quantification', 'VRAM utilisée', 'Vitesse', 'Idéal pour'], rows: [
+        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'Que peut faire tourner la RTX 3060 12GB ?', content: ['**La RTX 3060 12GB est le meilleur GPU économique pour les LLM locaux en 2026.** Ses 12GB de VRAM accueillent tous les modèles 7B en quantification Q4/Q5, et la plupart des 13B en Q4. Pour un guide détaillé des besoins en VRAM selon la taille des modèles, voir le [guide des besoins en VRAM →](/fr/local-llms/how-much-vram-local-llm). Voici les modèles et vitesses précis auxquels vous attendre :'], columns: ['Modèle', 'Taille', 'Quantification', 'VRAM utilisée', 'Vitesse', 'Idéal pour'],           image: '/images/best-budget-gpus-local-llm-model-speeds-fr.svg',
+          imageCaption: 'La RTX 3060 12GB fait tourner Qwen3 14B à 9-12 tok/sec et Qwen3 8B à 16-20 tok/sec, en quantification Q4_K_M.',
+rows: [
           { 'Modèle': 'Qwen3 14B', 'Taille': '14B (dense)', 'Quantification': 'Q4_K_M', 'VRAM utilisée': '~9 GB', 'Vitesse': '9–12 tok/sec', 'Idéal pour': 'Meilleure qualité globale qui tient' },
           { 'Modèle': 'Qwen3 8B', 'Taille': '8B', 'Quantification': 'Q4_K_M', 'VRAM utilisée': '~7 GB', 'Vitesse': '16–20 tok/sec', 'Idéal pour': 'Code, polyvalence' },
           { 'Modèle': 'Gemma 4 E12B', 'Taille': '26B MoE', 'Quantification': 'Q4_K_M', 'VRAM utilisée': '~9 GB', 'Vitesse': '11–14 tok/sec', 'Idéal pour': 'Vision, multimodal' },
@@ -1368,7 +1390,9 @@ schema: {
           '**7B avec déchargement :** possible mais lent. Llama 7B avec déchargement CPU = ~5–8 tok/sec. Utilisable uniquement pour du traitement par lots non interactif.',
           '**Recommandation :** si vous avez une carte 6GB, passez à une 12GB d\'occasion (200–250 €) avant d\'investir du temps dans des contournements. Le gain en vitesse et en qualité de modèle en vaut la peine.',
         ] },
-        'which-budget-gpus': { id: 'which-budget-gpus', title: 'RTX 3060 vs autres GPU économiques', columns: ['GPU', 'VRAM', 'Prix (occasion)', 'Vitesse 7B', 'Modèle max', 'Verdict'], rows: [
+        'which-budget-gpus': { id: 'which-budget-gpus', title: 'RTX 3060 vs autres GPU économiques', columns: ['GPU', 'VRAM', 'Prix (occasion)', 'Vitesse 7B', 'Modèle max', 'Verdict'],           image: '/images/best-budget-gpus-local-llm-gpu-comparison-fr.svg',
+          imageCaption: 'La RTX 3060 12GB (200-250 $ d\'occasion) devance la RTX 4060 Ti, la RTX A4000, la RTX 4070 Super et la RX 6700 XT en VRAM par dollar.',
+rows: [
           { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', 'Prix (occasion)': '200–250 €', 'Vitesse 7B': '15–20 tok/sec', 'Modèle max': '13B (Q4)', 'Verdict': 'Meilleur choix économique global' },
           { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', 'Prix (occasion)': '250–300 €', 'Vitesse 7B': '20–25 tok/sec', 'Modèle max': '7B (Q5 max)', 'Verdict': 'Plus rapide mais moins de VRAM' },
           { 'GPU': 'RTX A4000', 'VRAM': '16 GB', 'Prix (occasion)': '170–220 €', 'Vitesse 7B': '12–15 tok/sec', 'Modèle max': '13B (Q5)', 'Verdict': 'Meilleur rapport VRAM/€' },
@@ -1500,9 +1524,13 @@ schema: {
       sections: {
         tldr: { id: 'key-takeaways',
  isTldr: true, items: ['**RTX 3060 12GB**（中古$200–250）：すべての7B-8BモデルをQ4/Q5で、ほとんどの稠密13B-14BをQ4で実行。最良のバジェット選択。', '**RTX 3060 6GB**：3Bモデルのみ（Phi-4 Mini、Llama 3.2 3B）。7Bには不足。', '**12GBでの最良総合モデル：** Qwen3 14B、~9GB VRAM、9–12トークン/秒。快適に収まる最良の稠密品質。', '**12GBでの最良コーディングモデル：** Qwen3 8B、16–20トークン/秒。', '**12GBでの最良推論モデル：** DeepSeek-R1 7B、10–12トークン/秒。', '**対象外：** 70Bモデル、Llama 4 Scout（~55GB必要）、13B Q8が必要な場合は24GB以上（RTX 4090）が必要。'] },
-        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'RTX 3060 12GBで何が動く？', content: ['**RTX 3060 12GBは2026年のローカルLLM用最良バジェットGPUです。** 12GB VRAMはQ4/Q5のすべての7Bモデルと、Q4のほとんどの13Bモデルに対応。モデルサイズ別のVRAM要件について詳しくは、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。期待できる正確なモデルと速度は次の通りです：'], columns: ['モデル', 'サイズ', '量子化', 'VRAM使用', '速度', '最適用途'], rows: [{ 'モデル': 'Qwen3 14B', 'サイズ': '14B（稠密）', '量子化': 'Q4_K_M', 'VRAM使用': '~9 GB', '速度': '9–12トークン/秒', '最適用途': '収まる範囲で最良総合品質' }, { 'モデル': 'Qwen3 8B', 'サイズ': '8B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '16–20トークン/秒', '最適用途': 'コーディング、万能' }, { 'モデル': 'Gemma 4 E12B', 'サイズ': '26B MoE', '量子化': 'Q4_K_M', 'VRAM使用': '~9 GB', '速度': '11–14トークン/秒', '最適用途': 'ビジョン、マルチモーダル' }, { 'モデル': 'Mistral Small v0.3', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '18トークン/秒', '最適用途': '指示従行' }, { 'モデル': 'DeepSeek-R1 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '10–12トークン/秒', '最適用途': '推論、数学' }, { 'モデル': 'Gemma 4 E4B', 'サイズ': 'E4B（マルチモーダル）', '量子化': 'Q4_K_M', 'VRAM使用': '~5 GB', '速度': '18–22トークン/秒', '最適用途': '軽量ビジョン、高速チャット' }, { 'モデル': 'Llama 3.2 13B', 'サイズ': '13B', '量子化': 'Q4_K_M', 'VRAM使用': '~11 GB', '速度': '8–10トークン/秒', '最適用途': '高品質チャット（Q4のみ）' }], note: 'Qwen3 14B（稠密）はQ4_K_MでRTX 3060 12GBに快適に収まる最高品質のモデルで、~9 GBを使用します。`ollama pull qwen3:14b`。注：Llama 4 Scout（17Bアクティブ/109B合計のMoE、10Mトークンコンテキスト、マルチモーダル）はQ4で~55GB必要で、通常12GBには収まりません — 大容量VRAM環境向けの長コンテキスト/大規模マルチモーダル用途であり、バジェットGPUの推奨ではありません。gpt-oss:20b（21B合計/3.6BアクティブMoE）は16GB必要なため、12GBカードでは僅かに手が届きません。すべての速度はOllama、RTX 3060 12GB、16GBシステムRAM、Ryzen 7 7700Xで計測。Q4_K_M量子化。速度は±15%変動。' },
+        'rtx-3060-12gb': { id: 'rtx-3060-12gb', title: 'RTX 3060 12GBで何が動く？', content: ['**RTX 3060 12GBは2026年のローカルLLM用最良バジェットGPUです。** 12GB VRAMはQ4/Q5のすべての7Bモデルと、Q4のほとんどの13Bモデルに対応。モデルサイズ別のVRAM要件について詳しくは、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。期待できる正確なモデルと速度は次の通りです：'], columns: ['モデル', 'サイズ', '量子化', 'VRAM使用', '速度', '最適用途'],           image: '/images/best-budget-gpus-local-llm-model-speeds-ja.svg',
+          imageCaption: 'RTX 3060 12GBはQwen3 14Bを9〜12 tok/秒、Qwen3 8Bを16〜20 tok/秒で実行します(いずれもQ4_K_M量子化)。',
+rows: [{ 'モデル': 'Qwen3 14B', 'サイズ': '14B（稠密）', '量子化': 'Q4_K_M', 'VRAM使用': '~9 GB', '速度': '9–12トークン/秒', '最適用途': '収まる範囲で最良総合品質' }, { 'モデル': 'Qwen3 8B', 'サイズ': '8B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '16–20トークン/秒', '最適用途': 'コーディング、万能' }, { 'モデル': 'Gemma 4 E12B', 'サイズ': '26B MoE', '量子化': 'Q4_K_M', 'VRAM使用': '~9 GB', '速度': '11–14トークン/秒', '最適用途': 'ビジョン、マルチモーダル' }, { 'モデル': 'Mistral Small v0.3', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '18トークン/秒', '最適用途': '指示従行' }, { 'モデル': 'DeepSeek-R1 7B', 'サイズ': '7B', '量子化': 'Q4_K_M', 'VRAM使用': '~7 GB', '速度': '10–12トークン/秒', '最適用途': '推論、数学' }, { 'モデル': 'Gemma 4 E4B', 'サイズ': 'E4B（マルチモーダル）', '量子化': 'Q4_K_M', 'VRAM使用': '~5 GB', '速度': '18–22トークン/秒', '最適用途': '軽量ビジョン、高速チャット' }, { 'モデル': 'Llama 3.2 13B', 'サイズ': '13B', '量子化': 'Q4_K_M', 'VRAM使用': '~11 GB', '速度': '8–10トークン/秒', '最適用途': '高品質チャット（Q4のみ）' }], note: 'Qwen3 14B（稠密）はQ4_K_MでRTX 3060 12GBに快適に収まる最高品質のモデルで、~9 GBを使用します。`ollama pull qwen3:14b`。注：Llama 4 Scout（17Bアクティブ/109B合計のMoE、10Mトークンコンテキスト、マルチモーダル）はQ4で~55GB必要で、通常12GBには収まりません — 大容量VRAM環境向けの長コンテキスト/大規模マルチモーダル用途であり、バジェットGPUの推奨ではありません。gpt-oss:20b（21B合計/3.6BアクティブMoE）は16GB必要なため、12GBカードでは僅かに手が届きません。すべての速度はOllama、RTX 3060 12GB、16GBシステムRAM、Ryzen 7 7700Xで計測。Q4_K_M量子化。速度は±15%変動。' },
         'rtx-3060-6gb': { id: 'rtx-3060-6gb', title: 'RTX 3060 6GBで何が動く？', content: ['**6GB版は大幅に制限されています。** 3Bモデルのみ快適に動作。7BモデルのQ4は~7GB必要で、容量不足です。'], items: ['**Phi-4 Mini 3.8B（Q4）：** ~3GB VRAM、20–25トークン/秒。このサイズでの最良推論。', '**Llama 3.2 3B（Q4）：** ~2.5GB VRAM、25–35トークン/秒。最速オプション。', '**Gemma 2 2B（Q4）：** ~1.7GB VRAM、35–45トークン/秒。最軽量モデル。', '**7Bオフローディング：** 可能だが遅い。Llama 7BのCPUオフロード = ~5–8トークン/秒。', '**推奨：** 6GBカードをお持ちなら、12GB中古（$200–250）にアップグレードを。'] },
-        'which-budget-gpus': { title: 'RTX 3060 vs 他のバジェットGPU', columns: ['GPU', 'VRAM', '価格（中古）', '7B速度', '最大モデル', '評価'], rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥30,000–38,000', '7B速度': '15–20トークン/秒', '最大モデル': '13B（Q4）', '評価': '最良バジェット' }, { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '価格（中古）': '¥38,000–45,000', '7B速度': '20–25トークン/秒', '最大モデル': '7B（Q5最大）', '評価': '高速だがVRAM少' }, { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '価格（中古）': '¥27,000–35,000', '7B速度': '12–15トークン/秒', '最大モデル': '13B（Q5）', '評価': 'VRAM/円最良' }, { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', '価格（中古）': '¥60,000–68,000', '7B速度': '25–30トークン/秒', '最大モデル': '13B（Q5）', '評価': '高速だが2倍の価格' }, { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', '価格（中古）': '¥23,000–30,000', '7B速度': '10–14トークン/秒', '最大モデル': '13B（Q4）', '評価': '最安、AMDの手間' }], note: 'RTX 3060 12GBが価格性能比で勝利：¥30,000–38,000の12GB VRAMですべての7Bとほとんどの13Bを実行。' },
+        'which-budget-gpus': { title: 'RTX 3060 vs 他のバジェットGPU', columns: ['GPU', 'VRAM', '価格（中古）', '7B速度', '最大モデル', '評価'],           image: '/images/best-budget-gpus-local-llm-gpu-comparison-ja.svg',
+          imageCaption: 'RTX 3060 12GB(中古200〜250ドル)は、ドルあたりVRAMでRTX 4060 Ti、RTX A4000、RTX 4070 Super、RX 6700 XTを上回ります。',
+rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥30,000–38,000', '7B速度': '15–20トークン/秒', '最大モデル': '13B（Q4）', '評価': '最良バジェット' }, { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '価格（中古）': '¥38,000–45,000', '7B速度': '20–25トークン/秒', '最大モデル': '7B（Q5最大）', '評価': '高速だがVRAM少' }, { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '価格（中古）': '¥27,000–35,000', '7B速度': '12–15トークン/秒', '最大モデル': '13B（Q5）', '評価': 'VRAM/円最良' }, { 'GPU': 'RTX 4070 Super', 'VRAM': '12 GB', '価格（中古）': '¥60,000–68,000', '7B速度': '25–30トークン/秒', '最大モデル': '13B（Q5）', '評価': '高速だが2倍の価格' }, { 'GPU': 'RX 6700 XT', 'VRAM': '12 GB', '価格（中古）': '¥23,000–30,000', '7B速度': '10–14トークン/秒', '最大モデル': '13B（Q4）', '評価': '最安、AMDの手間' }], note: 'RTX 3060 12GBが価格性能比で勝利：¥30,000–38,000の12GB VRAMですべての7Bとほとんどの13Bを実行。' },
         'vram-7b': { title: '7Bモデルに必要なVRAMは？', content: ['Q4（4ビット）で量子化された7Bモデルは**6～8GB VRAM**を必要とし、Q5（5ビット）は**8～10GB**、Q8（8ビット）は**14～16GB**を必要とします。', '実際には：**8GBは最低限**で、Q4で7Bモデルでの快適な推論とバッチ処理用のスペースがあります。', '6GBカード（RTX 2060）は技術的に機能しますがアグレッシブな最適化が必要で、より高いバッチに余裕がありません。', 'GPUコストは経済性の一面であり、トークンコストはもう一面です。ローカル推論はAPIのトークン課金を排除しますが、プロンプト長は依然としてレイテンシとスループットに影響します。トークン、価格体系、最適化戦略を含むコスト全体像については、[トークン、コスト、制限：AIプロンプティングの経済学](https://www.promptquorum.com/ja/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)をご覧ください。'] },
         'best-by-use-case': { id: 'best-by-use-case', title: 'RTX 3060でのユースケース別最適モデル', content: ['**パラメータ数ではなく、実際のニーズに基づいてモデルを選択してください：**', 'バジェットハードウェアは小さなモデルを実行しますが、巧みなプロンプティングが品質差を縮めます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/ja/prompt-engineering)では、Chain-of-Thoughtや構造化出力など、小さなモデルの実力を引き出すテクニックを解説しています。RTX 3060 12 GB の VRAM に収まる具体的なワークロードのひとつが、プルリクエストの自動レビューです。まさに同じハードウェア上で Qwen3 8B を PR にぶつける GitHub Actions のパターンは、[CI/CD でのローカル LLM コードレビュー](/ja/power-local-llm/local-llm-code-review-ci-cd)で解説しています。'], items: ['**チャット / Q&A：** `ollama run qwen3:14b` — 稠密14B、~9GB VRAM、12GBで最良品質。軽量オプションは `ollama run qwen3:8b`（~7GB）。', '**コーディング：** `ollama run qwen3:8b` — 万能で強力なコーディング。~7GB VRAM。16–20トークン/秒。', '**推論 / 数学：** `ollama run deepseek-r1:7b` — Chain-of-Thought。10–12トークン/秒。', '**ライティング / クリエイティブ：** `ollama run mistral:7b` — 最良の指示従行。18トークン/秒。', '**ビジョン / 画像：** `ollama run gemma4:e12b` — マルチモーダル。11–14トークン/秒。~9GB VRAM。軽量な選択肢は `ollama run gemma4:e4b`（~5GB）。', '**プライバシー / オフライン：** 上記すべて。100%ローカル。データは外部送信されません。', '**ホームオートメーション / 常時稼働AI：** `ollama run phi4-mini` — Phi-4 Mini（3.8B、~3 GB VRAM）は専用GPUなしのミニPCでHome Assistantの音声クエリを処理します。[ローカルスマートホームAIの最適ハードウェア →](/smart-home/best-hardware-for-local-smart-home)をご覧ください。'] },
         'used-vs-new': { title: '中古 vs 新品：どこで買う？', items: ['**中古（50～100ドル安い）**：eBay、Facebook Marketplace、Craigslist、地元のコンピュータ修理店。死んだカードまたは不良VRAMのリスクが高い。確約する前に常にテストしてください。', '**新品（280～400ドル）**：Newegg、Amazon、Best Buy、Microcenter。保証付き。驚きなし。価格安定。リスク回避買い手に最適。', '**マイニングカード（暗号、超安い）**：極端なリスク。VRAM劣化は一般的。その場で完全にベンチテストできる場合のみ購入してください。'] },
@@ -1582,7 +1610,9 @@ schema: {
             '**RTX 3060 12GB是2026年本地LLM最佳预算GPU。** 12GB VRAM适配所有7B模型的Q4/Q5和大多数13B模型的Q4。关于不同模型大小的VRAM要求详情，见[VRAM需求指南 →](/zh/local-llms/how-much-vram-local-llm)。以下是您可以期待的确切模型和速度：',
           ],
           columns: ['模型', '大小', '量化', 'VRAM占用', '速度', '最适合'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-model-speeds-zh.svg',
+          imageCaption: 'RTX 3060 12GB以Q4_K_M量化运行Qwen3 14B可达9-12 tok/秒,运行Qwen3 8B可达16-20 tok/秒。',
+rows: [
             { '模型': 'Qwen3 14B', '大小': '14B（密集）', '量化': 'Q4_K_M', 'VRAM占用': '~9 GB', '速度': '9–12令牌/秒', '最适合': '能装入的最佳综合品质' },
             { '模型': 'Qwen3 8B', '大小': '8B', '量化': 'Q4_K_M', 'VRAM占用': '~7 GB', '速度': '16–20令牌/秒', '最适合': '编程、全能' },
             { '模型': 'Gemma 4 E12B', '大小': '26B MoE', '量化': 'Q4_K_M', 'VRAM占用': '~9 GB', '速度': '11–14令牌/秒', '最适合': '视觉、多模态' },
@@ -1610,7 +1640,9 @@ schema: {
         'which-budget-gpus': {
           title: 'RTX 3060 vs 其他预算GPU',
           columns: ['GPU', 'VRAM', '价格（二手）', '7B速度', '最大模型', '评价'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-gpu-comparison-zh.svg',
+          imageCaption: 'RTX 3060 12GB(二手200-250美元)在每美元显存上优于RTX 4060 Ti、RTX A4000、RTX 4070 Super和RX 6700 XT。',
+rows: [
             { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '价格（二手）': '¥1,400–1,800', '7B速度': '15–20令牌/秒', '最大模型': '13B（Q4）', '评价': '最佳预算选择' },
             { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '价格（二手）': '¥1,800–2,200', '7B速度': '20–25令牌/秒', '最大模型': '7B（Q5最大）', '评价': '更快但VRAM少' },
             { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '价格（二手）': '¥1,300–1,600', '7B速度': '12–15令牌/秒', '最大模型': '13B（Q5）', '评价': '最佳VRAM/元' },
@@ -1808,7 +1840,9 @@ schema: {
             '**RTX 3060 12GB는 2026년 로컬 LLM용 최고의 예산형 GPU입니다.** 12GB VRAM은 Q4/Q5 양자화로 모든 7B 모델과 대부분의 13B 모델을 Q4로 실행할 수 있습니다. 모델 크기별 VRAM 요구 사항에 대한 자세한 안내는 [VRAM 요구 사항 가이드 →](/local-llms/how-much-vram-local-llm)를 참조하십시오. 실행 가능한 정확한 모델과 예상 속도는 다음과 같습니다:',
           ],
           columns: ['모델', '크기', '양자화', 'VRAM 사용량', '속도', '최적 용도'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-model-speeds-ko.svg',
+          imageCaption: 'RTX 3060 12GB는 Q4_K_M 양자화 기준으로 Qwen3 14B를 9-12 tok/sec, Qwen3 8B를 16-20 tok/sec로 구동합니다.',
+rows: [
             { '모델': 'Qwen3 14B', '크기': '14B (밀집형)', '양자화': 'Q4_K_M', 'VRAM 사용량': '~9 GB', '속도': '초당 9–12토큰', '최적 용도': '실행 가능한 최고 품질' },
             { '모델': 'Qwen3 8B', '크기': '8B', '양자화': 'Q4_K_M', 'VRAM 사용량': '~7 GB', '속도': '초당 16–20토큰', '최적 용도': '코딩, 범용' },
             { '모델': 'Gemma 4 E12B', '크기': '26B MoE', '양자화': 'Q4_K_M', 'VRAM 사용량': '~9 GB', '속도': '초당 11–14토큰', '최적 용도': '비전, 멀티모달' },
@@ -1837,7 +1871,9 @@ schema: {
           id: 'which-budget-gpus',
           title: 'RTX 3060 대 다른 예산형 GPU 비교',
           columns: ['GPU', 'VRAM', '가격 (중고)', '7B 속도', '최대 모델', '평가'],
-          rows: [
+                    image: '/images/best-budget-gpus-local-llm-gpu-comparison-ko.svg',
+          imageCaption: 'RTX 3060 12GB(중고 $200-250)는 달러당 VRAM에서 RTX 4060 Ti, RTX A4000, RTX 4070 Super, RX 6700 XT를 앞섭니다.',
+rows: [
             { 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '가격 (중고)': '$200–250', '7B 속도': '초당 15–20토큰', '최대 모델': '13B (Q4)', '평가': '전체 최고 예산형' },
             { 'GPU': 'RTX 4060 Ti 8GB', 'VRAM': '8 GB', '가격 (중고)': '$250–300', '7B 속도': '초당 20–25토큰', '최대 모델': '7B (Q5 최대)', '평가': '더 빠르지만 VRAM 부족' },
             { 'GPU': 'RTX A4000', 'VRAM': '16 GB', '가격 (중고)': '$180–230', '7B 속도': '초당 12–15토큰', '최대 모델': '13B (Q5)', '평가': '달러당 최고 VRAM' },

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">RTX 3060 12GB : vitesse par modèle (Q4_K_M)</text>
+  <line x1="260" y1="365" x2="740" y2="365" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="250" y="94" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Gemma 4 E4B</text>
+  <rect x="260" y="75" width="480" height="24" fill="#6750A4" rx="4"/>
+  <text x="730" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">18–22 tok/s · ~5 GB</text>
+
+  <text x="250" y="136" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3 8B</text>
+  <rect x="260" y="117" width="432" height="24" fill="#34A853" rx="4"/>
+  <text x="682" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">16–20 tok/s · ~7 GB</text>
+
+  <text x="250" y="178" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Mistral Small v0.3</text>
+  <rect x="260" y="159" width="432" height="24" fill="#34A853" rx="4"/>
+  <text x="682" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">18 tok/s · ~7 GB</text>
+
+  <text x="250" y="220" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Gemma 4 E12B</text>
+  <rect x="260" y="201" width="300" height="24" fill="#F4B400" rx="4"/>
+  <text x="580" y="218" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">11–14 tok/s · ~9 GB</text>
+
+  <text x="250" y="262" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">DeepSeek-R1 7B</text>
+  <rect x="260" y="243" width="264" height="24" fill="#F4B400" rx="4"/>
+  <text x="540" y="260" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">10–12 tok/s · ~7 GB</text>
+
+  <text x="250" y="304" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3 14B</text>
+  <rect x="260" y="285" width="252" height="24" fill="#7D5260" rx="4"/>
+  <text x="530" y="302" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">9–12 tok/s · ~9 GB</text>
+
+  <text x="250" y="346" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Llama 3.2 13B</text>
+  <rect x="260" y="327" width="216" height="24" fill="#7D5260" rx="4"/>
+  <text x="494" y="344" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">8–10 tok/s · ~11 GB</text>
+
+  <text x="400" y="390" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Qwen3 14B est le modèle de meilleure qualité qui tient encore confortablement dans ~9 Go des 12 Go de VRAM de la carte.</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -554,6 +554,96 @@
     "width": 800,
     "height": 358
   },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
   "/images/best-embedding-models-local-rag-2026-decision-tree-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -840,6 +930,96 @@
     "height": 400
   },
   "/images/best-local-coding-models-2026-which-pick-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-chipset-npu-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-llm-apps-android-2026-speed-comparison-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
@@ -4564,6 +4744,96 @@
     "width": 800,
     "height": 420
   },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
   "/images/local-vs-cloud-agents-capabilities-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4723,6 +4993,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-model-sizes-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/local-whisper-stt-comparison-2026-platform-winner-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
   },
   "/images/long-context-models-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",

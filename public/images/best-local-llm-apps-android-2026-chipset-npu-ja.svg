@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">NPUアクセスが速度差を決める</text>
+
+  <rect x="28" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Snapdragon 8 Elite</text>
+  <text x="198" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Galaxy S25 Ultra, OnePlus 13</text>
+
+  <text x="48" y="135" font-size="12" font-weight="700" fill="#79747E">HexagonNPUがアプリに公開されている</text>
+  <text x="48" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#34A853">~22 tok/sec</text>
+  <text x="48" y="182" font-size="11.5" fill="#49454F">MLC Chat、Phi-4 Mini、NPU経路</text>
+  <line x1="48" y1="196" x2="348" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="222" font-size="12" fill="#49454F">より小さいQwen3 1.7Bモデルでは</text>
+  <text x="48" y="240" font-size="12" fill="#49454F">約40 tok/secに達し、同じ端末の</text>
+  <text x="48" y="258" font-size="12" fill="#49454F">CPUのみのアプリより3〜4倍</text>
+  <text x="48" y="276" font-size="12" fill="#49454F">高速です。</text>
+
+  <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="602" y="80" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Google Tensor G5</text>
+  <text x="602" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Pixel 9 Pro</text>
+
+  <text x="452" y="135" font-size="12" font-weight="700" fill="#79747E">サードパーティアプリにNPUが非公開</text>
+  <text x="452" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#EA4335">10–18 tok/sec</text>
+  <text x="452" y="182" font-size="11.5" fill="#49454F">全6アプリ、Phi-4 Mini、CPUのみ</text>
+  <line x1="452" y1="196" x2="752" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="222" font-size="12" fill="#49454F">テストした全アプリがTensor G5上で</text>
+  <text x="452" y="240" font-size="12" fill="#49454F">CPU推論にフォールバックします —</text>
+  <text x="452" y="258" font-size="12" fill="#49454F">現時点でGoogleのオンデバイスNPUを</text>
+  <text x="452" y="276" font-size="12" fill="#49454F">サードパーティに開放するアプリはありません。</text>
+
+  <text x="400" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">同じPhi-4 Miniモデル、同じ量子化 — 違いはチップのNPU公開の有無です。</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
