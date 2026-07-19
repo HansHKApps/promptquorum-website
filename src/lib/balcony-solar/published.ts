@@ -19,7 +19,31 @@ import { BALCONY_SOLAR_SLUG_TO_KEY } from './slugs'
 // Country expansion (BSOL-30..34) — published 2026-07-19 (Phase 7, explicit
 // authorization). Previously held back pending review, translation (all 9
 // languages), and internal linking; all five cleared and are now live.
-const PENDING_SLUGS: ReadonlySet<string> = new Set([])
+//
+// Company profiles + market pillars (BSOL-35..51) — Phase 1 scaffold only
+// (2026-07-19): structure/frontmatter registered in slugs.ts so routes exist
+// and are statically generated, but held back here pending body content,
+// translation, and internal linking (see the differentiation/cross-link
+// requirements noted inline in each article file).
+const PENDING_SLUGS: ReadonlySet<string> = new Set([
+  'balcony-solar-industry-overview',
+  'balcony-solar-global-market-overview',
+  'anker-solix-balcony-solar',
+  'ecoflow-balcony-solar',
+  'zendure-balcony-solar',
+  'growatt-balcony-solar',
+  'hoymiles-microinverter-balcony-solar',
+  'deye-microinverter-balcony-solar',
+  'apsystems-microinverter-balcony-solar',
+  'goodwe-balcony-solar',
+  'enphase-microinverter-balcony-solar',
+  'yuma-balcony-solar',
+  'priwatt-balcony-solar',
+  'kleines-kraftwerk-balcony-solar',
+  'balkonstrom-balcony-solar',
+  'green-solar-pluginenergy-balcony-solar',
+  'meyer-burger-solarwatt-heckert-balcony-solar',
+])
 
 export const BALCONY_SOLAR_PUBLISHED_SLUGS: ReadonlySet<string> = new Set(
   Object.keys(BALCONY_SOLAR_SLUG_TO_KEY).filter(slug => !PENDING_SLUGS.has(slug))
