@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/de/api/og/ai-powered-research',
+          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=de',
           width: 1200,
           height: 675,
         },
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/es/api/og/ai-powered-research',
+          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=es',
           width: 1200,
           height: 675,
         },
@@ -2171,7 +2171,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/pt/api/og/ai-powered-research',
+          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=pt',
           width: 1200,
           height: 675,
         },
@@ -2700,7 +2700,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/fr/api/og/ai-powered-research',
+          url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=fr',
           width: 1200,
           height: 675,
         },
@@ -3735,7 +3735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       image: {
         '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/ko/api/og/ai-powered-research',
+        url: 'https://www.promptquorum.com/api/og/ai-powered-research?lang=ko',
         width: 1200,
         height: 675,
       },
