@@ -401,6 +401,7 @@ const HUB_THEMES: Array<{ id: string; badge: string; description: string; colorB
       'decision-howto': { colorBadge: 'bg-emerald-50 text-emerald-700 border-emerald-200', colorDot: 'bg-emerald-400' },
       'legislation':    { colorBadge: 'bg-violet-50 text-violet-700 border-violet-200',   colorDot: 'bg-violet-400' },
       'long-tail':      { colorBadge: 'bg-amber-50 text-amber-700 border-amber-200',     colorDot: 'bg-amber-400' },
+      'trends-2027':    { colorBadge: 'bg-sky-50 text-sky-700 border-sky-200',           colorDot: 'bg-sky-400' },
     }
     return {
       id: cat.id,
@@ -411,38 +412,114 @@ const HUB_THEMES: Array<{ id: string; badge: string; description: string; colorB
     }
   })
 
-const HUB_COPY: Partial<Record<Lang, { title: string; intro: string }>> = {
+interface HubBenefit { label: string; detail: string }
+
+interface HubCopy {
+  title: string
+  intro: string
+  intro2: string
+  benefits: HubBenefit[]
+}
+
+const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
   en: {
     title: 'Balcony Solar: Kits, Rules, and No-Cloud Setups',
-    intro: 'Plug-in balcony solar (Balkonkraftwerk) lets you generate your own power from a railing, wall, or garden panel — no rooftop installer required. These 20 guides cover the stack: the best kits, batteries, and micro-inverters, legality by country, installation and registration, and running the whole setup on Home Assistant instead of a vendor cloud.',
+    intro: 'Plug-in balcony solar (Balkonkraftwerk) lets you generate your own power from a railing, wall, or garden panel — no rooftop installer required. These 33 guides cover the stack: the best kits, batteries, and micro-inverters, legality by country, installation and registration, and running the whole setup on Home Assistant instead of a vendor cloud.',
+    intro2: 'Most balcony solar brands push you toward their own app and cloud dashboard — Hoymiles, Deye, APsystems, EcoFlow, Anker, and Zendure all default to routing your production data through a vendor server. A local setup reads that same data directly from the inverter or battery and keeps it on hardware you own, so monitoring keeps working even if the manufacturer\'s app disappears.',
+    benefits: [
+      { label: 'No Installer Needed', detail: 'Plug into an outlet or the inverter\'s own connector — no electrician, no roof work, and no permit at all in most notification-only markets.' },
+      { label: 'Fast Payback', detail: 'A basic 600–800W kit typically costs a few hundred euros or dollars and can pay for itself within a few years, depending on local electricity prices.' },
+      { label: 'No Vendor Cloud', detail: 'Home Assistant reads most major inverters and batteries directly over Modbus, MQTT, or a local API — production data stays on your own network.' },
+      { label: 'Increasingly Legal', detail: 'France, Austria, Belgium, the Netherlands, Germany, and Portugal all allow notification-only registration; eight US states have signed dedicated laws since 2025.' },
+    ],
   },
   de: {
     title: 'Balcony Solar: Sets, Regeln und Setups ohne Cloud',
-    intro: 'Ein Steckersolargerät (Balkonkraftwerk) erzeugt eigenen Strom vom Balkongeländer, der Wand oder dem Garten — ganz ohne Dachinstallateur. Diese 20 Guides decken den gesamten Stack ab: die besten Sets, Speicher und Mikrowechselrichter, die Rechtslage je Land, Installation und Anmeldung sowie den Betrieb über Home Assistant statt einer Hersteller-Cloud.',
+    intro: 'Ein Steckersolargerät (Balkonkraftwerk) erzeugt eigenen Strom vom Balkongeländer, der Wand oder dem Garten — ganz ohne Dachinstallateur. Diese 33 Guides decken den gesamten Stack ab: die besten Sets, Speicher und Mikrowechselrichter, die Rechtslage je Land, Installation und Anmeldung sowie den Betrieb über Home Assistant statt einer Hersteller-Cloud.',
+    intro2: 'Die meisten Hersteller von Balkonkraftwerken drängen zur eigenen App und Cloud-Anbindung — Hoymiles, Deye, APsystems, EcoFlow, Anker und Zendure leiten Erzeugungsdaten standardmäßig über einen Hersteller-Server. Ein lokales Setup liest dieselben Daten direkt vom Wechselrichter oder Speicher aus und behält sie auf eigener Hardware — die Überwachung funktioniert also auch dann noch, wenn die Hersteller-App verschwindet.',
+    benefits: [
+      { label: 'Kein Installateur nötig', detail: 'Einfach in eine Steckdose oder den Anschluss des Wechselrichters stecken — kein Elektriker, keine Dacharbeiten, in den meisten meldepflichtigen Märkten keine Genehmigung.' },
+      { label: 'Schnelle Amortisation', detail: 'Ein einfaches 600–800-Watt-Set kostet meist ein paar Hundert Euro und kann sich je nach lokalem Strompreis innerhalb weniger Jahre amortisieren.' },
+      { label: 'Keine Hersteller-Cloud', detail: 'Home Assistant liest die meisten gängigen Wechselrichter und Speicher direkt über Modbus, MQTT oder eine lokale API aus — die Erzeugungsdaten bleiben im eigenen Netzwerk.' },
+      { label: 'Zunehmend legal', detail: 'Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal erlauben alle eine reine Meldepflicht; acht US-Bundesstaaten haben seit 2025 eigene Gesetze verabschiedet.' },
+    ],
   },
   fr: {
     title: 'Balcony Solar : kits, réglementation et installations sans cloud',
-    intro: 'Un kit solaire de balcon (Balkonkraftwerk) permet de produire sa propre électricité depuis une rambarde, un mur ou un jardin, sans installateur de toiture. Ces 20 guides couvrent toute la pile : les meilleurs kits, batteries et micro-onduleurs, la légalité par pays, l\'installation et l\'enregistrement, et le pilotage via Home Assistant plutôt qu\'un cloud propriétaire.',
+    intro: 'Un kit solaire de balcon (Balkonkraftwerk) permet de produire sa propre électricité depuis une rambarde, un mur ou un jardin, sans installateur de toiture. Ces 33 guides couvrent toute la pile : les meilleurs kits, batteries et micro-onduleurs, la légalité par pays, l\'installation et l\'enregistrement, et le pilotage via Home Assistant plutôt qu\'un cloud propriétaire.',
+    intro2: 'La plupart des marques de solaire de balcon poussent vers leur propre application et tableau de bord cloud — Hoymiles, Deye, APsystems, EcoFlow, Anker et Zendure font par défaut transiter les données de production par un serveur du fabricant. Une installation locale lit ces mêmes données directement depuis l\'onduleur ou la batterie et les garde sur du matériel que vous possédez, afin que le suivi continue de fonctionner même si l\'application du fabricant disparaît.',
+    benefits: [
+      { label: 'Aucun installateur requis', detail: 'Branchez-le sur une prise ou le connecteur propre de l\'onduleur — pas d\'électricien, pas de travaux de toiture, et aucun permis dans la plupart des marchés à simple notification.' },
+      { label: 'Rentabilité rapide', detail: 'Un kit de base de 600 à 800 W coûte généralement quelques centaines d\'euros et peut s\'amortir en quelques années selon le prix local de l\'électricité.' },
+      { label: 'Sans cloud propriétaire', detail: 'Home Assistant lit directement la plupart des onduleurs et batteries via Modbus, MQTT ou une API locale — les données de production restent sur votre propre réseau.' },
+      { label: 'De plus en plus légal', detail: 'La France, l\'Autriche, la Belgique, les Pays-Bas, l\'Allemagne et le Portugal autorisent tous un enregistrement par simple notification ; huit États américains ont adopté des lois dédiées depuis 2025.' },
+    ],
   },
   ja: {
     title: 'Balcony Solar：キット、ルール、クラウド不要のセットアップ',
-    intro: 'プラグイン式バルコニーソーラー（Balkonkraftwerk）は、手すりや壁、庭のパネルから自家発電できる仕組みで、屋根への設置業者は不要です。この20本のガイドで、ベストなキット・バッテリー・マイクロインバーター、国ごとの合法性、設置と登録、そしてベンダーのクラウドではなくHome Assistantで運用する方法までをカバーします。',
+    intro: 'プラグイン式バルコニーソーラー（Balkonkraftwerk）は、手すりや壁、庭のパネルから自家発電できる仕組みで、屋根への設置業者は不要です。この33本のガイドで、ベストなキット・バッテリー・マイクロインバーター、国ごとの合法性、設置と登録、そしてベンダーのクラウドではなくHome Assistantで運用する方法までをカバーします。',
+    intro2: 'バルコニーソーラーの多くのブランドは自社アプリとクラウドダッシュボードへの依存を前提としています——Hoymiles、Deye、APsystems、EcoFlow、Anker、Zendureはいずれも発電データをメーカーのサーバー経由で送る仕様がデフォルトです。ローカル構成なら同じデータをインバーターやバッテリーから直接読み取り、自分が所有するハードウェア上に保持できるため、メーカーのアプリが提供終了になってもモニタリングは動き続けます。',
+    benefits: [
+      { label: '設置業者不要', detail: 'コンセントやインバーター自体のコネクタに差し込むだけ——電気工事士も屋根工事も、届出制の市場のほとんどでは許可も不要です。' },
+      { label: '早い投資回収', detail: '基本的な600〜800Wのキットは数百ユーロ・ドル程度で、地域の電気料金次第では数年で元が取れます。' },
+      { label: 'ベンダークラウド不要', detail: 'Home Assistantは主要なインバーターやバッテリーの多くをModbus・MQTT・ローカルAPI経由で直接読み取れるため、発電データは自分のネットワーク内に留まります。' },
+      { label: '合法化が進行中', detail: 'フランス・オーストリア・ベルギー・オランダ・ドイツ・ポルトガルはいずれも届出のみで登録可能。米国では2025年以降8州が専用法を制定しています。' },
+    ],
   },
   zh: {
     title: 'Balcony Solar：套件、法规与无云端方案',
-    intro: '插入式阳台光伏（Balkonkraftwerk）让您可以在栏杆、墙面或庭院面板上自行发电，无需屋顶安装工。这20篇指南覆盖完整技术栈：最佳套件、电池与微型逆变器，各国合法性，安装与注册，以及使用Home Assistant而非厂商云端来运行整套系统。',
+    intro: '插入式阳台光伏（Balkonkraftwerk）让您可以在栏杆、墙面或庭院面板上自行发电，无需屋顶安装工。这33篇指南覆盖完整技术栈：最佳套件、电池与微型逆变器，各国合法性，安装与注册，以及使用Home Assistant而非厂商云端来运行整套系统。',
+    intro2: '大多数阳台光伏品牌都会引导用户使用自家App和云端仪表盘——Hoymiles、Deye、APsystems、EcoFlow、Anker和Zendure默认都会把发电数据经由厂商服务器传输。本地化方案则直接从逆变器或电池读取相同数据，并保存在您自己拥有的硬件上，即使厂商App下线，监控仍能持续运行。',
+    benefits: [
+      { label: '无需安装工', detail: '直接插入插座或逆变器自带的接口即可——无需电工、无需屋顶施工，在大多数仅需备案的市场也无需许可。' },
+      { label: '回本快', detail: '一套基础的600–800W套件通常只需几百欧元/美元，视当地电价而定，往往几年内即可回本。' },
+      { label: '无厂商云端', detail: 'Home Assistant可通过Modbus、MQTT或本地API直接读取大多数主流逆变器和电池——发电数据留在您自己的网络内。' },
+      { label: '合法性持续提升', detail: '法国、奥地利、比利时、荷兰、德国和葡萄牙均允许仅备案登记；美国自2025年以来已有8个州通过专门立法。' },
+    ],
   },
   es: {
     title: 'Balcony Solar: kits, normativa y montajes sin nube',
-    intro: 'Un kit solar de balcón (Balkonkraftwerk) permite generar tu propia electricidad desde una barandilla, una pared o un panel de jardín, sin instalador de tejado. Estas 20 guías cubren toda la pila: los mejores kits, baterías y microinversores, la legalidad por país, la instalación y el registro, y cómo controlarlo todo con Home Assistant en lugar de la nube del fabricante.',
+    intro: 'Un kit solar de balcón (Balkonkraftwerk) permite generar tu propia electricidad desde una barandilla, una pared o un panel de jardín, sin instalador de tejado. Estas 33 guías cubren toda la pila: los mejores kits, baterías y microinversores, la legalidad por país, la instalación y el registro, y cómo controlarlo todo con Home Assistant en lugar de la nube del fabricante.',
+    intro2: 'La mayoría de las marcas de energía solar de balcón te empujan hacia su propia app y panel en la nube — Hoymiles, Deye, APsystems, EcoFlow, Anker y Zendure enrutan por defecto tus datos de producción a través de un servidor del fabricante. Una configuración local lee esos mismos datos directamente desde el inversor o la batería y los mantiene en hardware que tú controlas, de modo que la monitorización sigue funcionando incluso si la app del fabricante desaparece.',
+    benefits: [
+      { label: 'Sin instalador', detail: 'Conéctalo a un enchufe o al propio conector del inversor — sin electricista, sin obras en el tejado, y sin permiso en la mayoría de mercados de simple notificación.' },
+      { label: 'Amortización rápida', detail: 'Un kit básico de 600–800 W suele costar unos pocos cientos de euros o dólares y puede amortizarse en pocos años según el precio local de la electricidad.' },
+      { label: 'Sin nube del fabricante', detail: 'Home Assistant lee la mayoría de inversores y baterías principales directamente vía Modbus, MQTT o una API local — los datos de producción se quedan en tu propia red.' },
+      { label: 'Cada vez más legal', detail: 'Francia, Austria, Bélgica, los Países Bajos, Alemania y Portugal permiten un registro de simple notificación; ocho estados de EE. UU. han aprobado leyes dedicadas desde 2025.' },
+    ],
   },
   pt: {
     title: 'Balcony Solar: kits, regras e configurações sem nuvem',
-    intro: 'Um kit solar de varanda (Balkonkraftwerk) permite gerar sua própria energia a partir de uma grade, parede ou painel de jardim, sem instalador de telhado. Estes 20 guias cobrem toda a pilha: os melhores kits, baterias e microinversores, a legalidade por país, instalação e registro, e como controlar tudo com o Home Assistant em vez da nuvem do fabricante.',
+    intro: 'Um kit solar de varanda (Balkonkraftwerk) permite gerar sua própria energia a partir de uma grade, parede ou painel de jardim, sem instalador de telhado. Estes 33 guias cobrem toda a pilha: os melhores kits, baterias e microinversores, a legalidade por país, instalação e registro, e como controlar tudo com o Home Assistant em vez da nuvem do fabricante.',
+    intro2: 'A maioria das marcas de energia solar de varanda empurra você para o próprio aplicativo e painel na nuvem — Hoymiles, Deye, APsystems, EcoFlow, Anker e Zendure roteiam por padrão seus dados de produção por um servidor do fabricante. Uma configuração local lê esses mesmos dados diretamente do inversor ou da bateria e os mantém em hardware que você controla, para que o monitoramento continue funcionando mesmo se o aplicativo do fabricante deixar de existir.',
+    benefits: [
+      { label: 'Sem instalador', detail: 'Basta conectar em uma tomada ou no próprio conector do inversor — sem eletricista, sem obra no telhado, e sem necessidade de licença na maioria dos mercados que exigem apenas notificação.' },
+      { label: 'Retorno rápido', detail: 'Um kit básico de 600–800 W geralmente custa algumas centenas de dólares ou euros e pode se pagar em poucos anos, dependendo do preço local da eletricidade.' },
+      { label: 'Sem nuvem do fabricante', detail: 'O Home Assistant lê a maioria dos principais inversores e baterias diretamente via Modbus, MQTT ou uma API local — os dados de produção ficam na sua própria rede.' },
+      { label: 'Cada vez mais legal', detail: 'França, Áustria, Bélgica, Países Baixos, Alemanha e Portugal permitem registro apenas por notificação; oito estados dos EUA sancionaram leis próprias desde 2025.' },
+    ],
   },
   ar: {
     title: 'Balcony Solar: الأطقم والقواعد والإعدادات بلا سحابة',
-    intro: 'يتيح لك طقم الطاقة الشمسية للشرفة (Balkonkraftwerk) توليد الكهرباء الخاصة بك من درابزين أو جدار أو لوحة حديقة، دون الحاجة لفني تركيب أسطح. تغطي هذه الأدلة العشرون المنظومة الكاملة: أفضل الأطقم والبطاريات والمحولات الدقيقة، والوضع القانوني حسب الدولة، والتركيب والتسجيل، وتشغيل كل ذلك عبر Home Assistant بدلاً من سحابة الشركة المصنعة.',
+    intro: 'يتيح لك طقم الطاقة الشمسية للشرفة (Balkonkraftwerk) توليد الكهرباء الخاصة بك من درابزين أو جدار أو لوحة حديقة، دون الحاجة لفني تركيب أسطح. تغطي هذه الأدلة الـ33 المنظومة الكاملة: أفضل الأطقم والبطاريات والمحولات الدقيقة، والوضع القانوني حسب الدولة، والتركيب والتسجيل، وتشغيل كل ذلك عبر Home Assistant بدلاً من سحابة الشركة المصنعة.',
+    intro2: 'تدفعك معظم علامات الطاقة الشمسية للشرفة نحو تطبيقها ولوحة التحكم السحابية الخاصة بها — فشركات Hoymiles وDeye وAPsystems وEcoFlow وAnker وZendure تُوجّه جميعها بيانات الإنتاج افتراضيًا عبر خادم الشركة المصنعة. أما الإعداد المحلي فيقرأ نفس البيانات مباشرة من العاكس أو البطارية ويحتفظ بها على أجهزة تملكها أنت، بحيث تستمر المراقبة في العمل حتى لو اختفى تطبيق الشركة المصنعة.',
+    benefits: [
+      { label: 'لا حاجة لفني تركيب', detail: 'وصّله بمقبس كهربائي أو موصل العاكس نفسه — دون كهربائي، ودون أعمال في السطح، ودون أي تصريح في معظم الأسواق التي تكتفي بالإخطار.' },
+      { label: 'عائد سريع', detail: 'يكلف الطقم الأساسي بقدرة 600–800 واط عادةً بضع مئات من اليورو أو الدولار، ويمكن أن يسترد تكلفته خلال سنوات قليلة حسب أسعار الكهرباء المحلية.' },
+      { label: 'دون سحابة الشركة المصنعة', detail: 'يقرأ Home Assistant معظم العواكس والبطاريات الرئيسية مباشرة عبر Modbus أو MQTT أو واجهة برمجية محلية — تبقى بيانات الإنتاج داخل شبكتك الخاصة.' },
+      { label: 'قانونية بشكل متزايد', detail: 'تسمح فرنسا والنمسا وبلجيكا وهولندا وألمانيا والبرتغال جميعها بالتسجيل بالإخطار فقط؛ وقد أقرت ثماني ولايات أمريكية قوانين مخصصة منذ عام 2025.' },
+    ],
+  },
+  ko: {
+    title: 'Balcony Solar: 키트, 규정, 클라우드 없는 구성',
+    intro: '플러그인 발코니 태양광(Balkonkraftwerk)은 난간, 벽, 정원 패널에서 직접 전기를 생산할 수 있게 해줍니다 — 지붕 설치업자가 필요 없습니다. 이 33개 가이드는 전체 스택을 다룹니다: 최고의 키트, 배터리, 마이크로인버터, 국가별 합법성, 설치와 등록, 그리고 제조사 클라우드 대신 Home Assistant로 전체 시스템을 운영하는 방법까지.',
+    intro2: '대부분의 발코니 태양광 브랜드는 자사 앱과 클라우드 대시보드 사용을 유도합니다 — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure 모두 기본적으로 발전 데이터를 제조사 서버를 통해 전송합니다. 로컬 구성은 동일한 데이터를 인버터나 배터리에서 직접 읽어 사용자가 소유한 하드웨어에 보관하므로, 제조사 앱이 사라지더라도 모니터링은 계속 작동합니다.',
+    benefits: [
+      { label: '설치업자 불필요', detail: '콘센트나 인버터 자체 커넥터에 꽂기만 하면 됩니다 — 전기기사도, 지붕 공사도 필요 없고, 대부분의 신고제 시장에서는 허가도 필요 없습니다.' },
+      { label: '빠른 투자 회수', detail: '기본 600–800W 키트는 보통 몇백 유로/달러 수준이며, 현지 전기 요금에 따라 몇 년 안에 투자금을 회수할 수 있습니다.' },
+      { label: '제조사 클라우드 불필요', detail: 'Home Assistant는 Modbus, MQTT 또는 로컬 API를 통해 대부분의 주요 인버터와 배터리를 직접 읽을 수 있어 발전 데이터가 자체 네트워크 안에 머무릅니다.' },
+      { label: '점점 합법화', detail: '프랑스, 오스트리아, 벨기에, 네덜란드, 독일, 포르투갈 모두 신고만으로 등록이 가능하며, 미국은 2025년 이후 8개 주가 전용 법률을 제정했습니다.' },
+    ],
   },
 }
 
@@ -452,48 +529,63 @@ const CATEGORY_COPY: Partial<Record<Lang, Record<string, { badge: string; descri
     'decision-howto': { badge: 'Decision & How-To',              description: 'Mid-funnel guides: balcony vs rooftop, installation, registration, sizing and payback, and mounting.' },
     'legislation':    { badge: 'Legislation Moat',                description: 'Per-country legal status: the global tracker plus dedicated pages for the US, Germany, Spain/LatAm, Portugal/Brazil, and the Gulf/MENA region.' },
     'long-tail':      { badge: 'Long-Tail & Conversion Support', description: 'Brand comparisons, battery need, payback worth-it framing, and troubleshooting.' },
+    'trends-2027':    { badge: '2027 Trends', description: 'What changes in 2027: EU battery/wattage standards, B2B housing-association adoption, the end of net metering in the Netherlands, and country-by-country status reports for Japan, China, Brazil, Greece, and the Gulf/MENA gap.' },
   },
   de: {
     'hub-money':      { badge: 'Hub & Kern-Kaufseiten',          description: 'Der Ankerartikel und die wichtigsten kaufrelevanten Guides: was ein Balkonkraftwerk ist, die besten Sets, Speicher und Mikrowechselrichter, und der Betrieb ohne Cloud.' },
     'decision-howto': { badge: 'Entscheidung & Anleitung',        description: 'Guides für die mittlere Phase: Balkon vs. Dach, Installation, Anmeldung, Dimensionierung und Amortisation, Montage.' },
     'legislation':    { badge: 'Rechtslage nach Land',             description: 'Rechtlicher Status je Land: der globale Tracker sowie eigene Seiten für die USA, Deutschland, Spanien/LatAm, Portugal/Brasilien und die Golfregion/MENA.' },
     'long-tail':      { badge: 'Long-Tail & Kaufunterstützung',   description: 'Markenvergleiche, Speicherbedarf, Amortisations-Einordnung und Fehlerbehebung.' },
+    'trends-2027':    { badge: 'Trends 2027', description: 'Was sich 2027 ändert: EU-Speicher-/Leistungsstandards, B2B-Adoption durch Wohnungsgenossenschaften, das Ende des Net-Metering in den Niederlanden sowie länderspezifische Statusberichte für Japan, China, Brasilien, Griechenland und die Golfregion/MENA-Lücke.' },
   },
   fr: {
     'hub-money':      { badge: 'Hub et pages d\'achat principales', description: 'La page pivot et les guides principaux à intention d\'achat : qu\'est-ce que le solaire de balcon, les meilleurs kits, batteries et micro-onduleurs, et le pilotage sans cloud.' },
     'decision-howto': { badge: 'Décision et guides pratiques',       description: 'Guides de milieu de tunnel : balcon vs toiture, installation, enregistrement, dimensionnement et rentabilité, fixation.' },
     'legislation':    { badge: 'Réglementation par pays',            description: 'Statut légal par pays : le tracker mondial ainsi que des pages dédiées aux États-Unis, à l\'Allemagne, à l\'Espagne/LatAm, au Portugal/Brésil et au Golfe/MENA.' },
     'long-tail':      { badge: 'Longue traîne et conversion',        description: 'Comparatifs de marques, besoin de batterie, rentabilité, et dépannage.' },
+    'trends-2027':    { badge: 'Tendances 2027', description: 'Ce qui change en 2027 : normes UE batterie/puissance, adoption B2B par les copropriétés/bailleurs, la fin du net metering aux Pays-Bas, et des rapports de statut pays par pays pour le Japon, la Chine, le Brésil, la Grèce et le vide du Golfe/MENA.' },
   },
   ja: {
     'hub-money':      { badge: 'ハブと主要マネーページ',              description: 'クラスターの起点と主要な購入意図ガイド：バルコニーソーラーとは何か、最良のキット・バッテリー・マイクロインバーター、そしてクラウドなしでの運用。' },
     'decision-howto': { badge: '意思決定とハウツー',                   description: '中間層のガイド：バルコニーvs屋根、設置、登録、サイジングと投資回収、取り付け。' },
     'legislation':    { badge: '国別法規制',                          description: '国ごとの法的状況：グローバルトラッカーに加え、米国、ドイツ、スペイン/ラテンアメリカ、ポルトガル/ブラジル、湾岸/MENA地域の専用ページ。' },
     'long-tail':      { badge: 'ロングテールとコンバージョン支援',        description: 'ブランド比較、バッテリーの必要性、投資回収の妥当性、トラブルシューティング。' },
+    'trends-2027':    { badge: '2027年のトレンド', description: '2027年に変わること：EUのバッテリー・出力標準、住宅組合によるB2B導入、オランダでのネットメータリング終了、そして日本・中国・ブラジル・ギリシャおよび湾岸/MENAのギャップに関する国別ステータスレポート。' },
   },
   zh: {
     'hub-money':      { badge: '枢纽与核心变现页',                    description: '集群锚点与主要购买意向指南：什么是阳台光伏、最佳套件/电池/微型逆变器，以及如何在无云端条件下运行。' },
     'decision-howto': { badge: '决策与操作指南',                       description: '中期漏斗指南：阳台vs屋顶、安装、注册、选型与回本周期、安装方式。' },
     'legislation':    { badge: '各国法规护城河',                       description: '各国法律状态：全球追踪页，以及美国、德国、西班牙/拉美、葡萄牙/巴西、海湾/中东北非地区的专属页面。' },
     'long-tail':      { badge: '长尾与转化支持',                       description: '品牌对比、电池必要性、回本值不值的分析，以及故障排查。' },
+    'trends-2027':    { badge: '2027年趋势', description: '2027年将发生的变化：欧盟电池/功率标准、住房协会的B2B采纳、荷兰净计量制度的终结，以及日本、中国、巴西、希腊和海湾/中东北非空白市场的国别状态报告。' },
   },
   es: {
     'hub-money':      { badge: 'Hub y páginas de compra principales', description: 'La página ancla del clúster y las guías principales de intención de compra: qué es el solar de balcón, los mejores kits, baterías y microinversores, y su funcionamiento sin nube.' },
     'decision-howto': { badge: 'Decisión y guías prácticas',           description: 'Guías de mitad de embudo: balcón vs tejado, instalación, registro, dimensionamiento y amortización, montaje.' },
     'legislation':    { badge: 'Legislación por país',                 description: 'Estado legal por país: el rastreador global además de páginas dedicadas a EE. UU., Alemania, España/LatAm, Portugal/Brasil y el Golfo/MENA.' },
     'long-tail':      { badge: 'Cola larga y apoyo a la conversión',   description: 'Comparativas de marcas, necesidad de batería, si compensa la inversión, y solución de problemas.' },
+    'trends-2027':    { badge: 'Tendencias 2027', description: 'Lo que cambia en 2027: estándares de batería/potencia en la UE, adopción B2B por asociaciones de vivienda, el fin del net metering en los Países Bajos, e informes de estado por país para Japón, China, Brasil, Grecia y el vacío del Golfo/MENA.' },
   },
   pt: {
     'hub-money':      { badge: 'Hub e páginas principais de compra', description: 'A página âncora do cluster e os principais guias de intenção de compra: o que é o solar de varanda, os melhores kits, baterias e microinversores, e o funcionamento sem nuvem.' },
     'decision-howto': { badge: 'Decisão e guias práticos',            description: 'Guias de meio de funil: varanda vs telhado, instalação, registo, dimensionamento e retorno, montagem.' },
     'legislation':    { badge: 'Legislação por país',                  description: 'Estado legal por país: o rastreador global além de páginas dedicadas aos EUA, Alemanha, Espanha/LatAm, Portugal/Brasil e Golfo/MENA.' },
     'long-tail':      { badge: 'Cauda longa e apoio à conversão',      description: 'Comparações de marcas, necessidade de bateria, se vale a pena o retorno, e resolução de problemas.' },
+    'trends-2027':    { badge: 'Tendências 2027', description: 'O que muda em 2027: padrões de bateria/potência da UE, adoção B2B por associações habitacionais, o fim do net metering na Holanda, e relatórios de status por país para Japão, China, Brasil, Grécia e a lacuna do Golfo/MENA.' },
   },
   ar: {
     'hub-money':      { badge: 'المركز وصفحات الشراء الأساسية',       description: 'الصفحة المحورية للمجموعة والأدلة الرئيسية لنية الشراء: ما هي الطاقة الشمسية للشرفة، وأفضل الأطقم والبطاريات والمحولات الدقيقة، وتشغيلها دون سحابة.' },
     'decision-howto': { badge: 'القرار والإرشادات العملية',            description: 'أدلة منتصف القمع: الشرفة مقابل السطح، التركيب، التسجيل، تحديد الحجم والعائد، التثبيت.' },
     'legislation':    { badge: 'الوضع القانوني حسب الدولة',            description: 'الوضع القانوني حسب الدولة: المتتبع العالمي بالإضافة إلى صفحات مخصصة للولايات المتحدة وألمانيا وإسبانيا/أمريكا اللاتينية والبرتغال/البرازيل والخليج/منطقة الشرق الأوسط وشمال أفريقيا.' },
     'long-tail':      { badge: 'الذيل الطويل ودعم التحويل',            description: 'مقارنات العلامات التجارية، الحاجة إلى بطارية، جدوى العائد، واستكشاف الأخطاء وإصلاحها.' },
+    'trends-2027':    { badge: 'اتجاهات 2027', description: 'ما سيتغير في 2027: معايير البطارية/الطاقة في الاتحاد الأوروبي، تبني B2B من قبل جمعيات الإسكان، نهاية نظام صافي القياس في هولندا، وتقارير الحالة حسب الدولة لليابان والصين والبرازيل واليونان وفجوة الخليج/الشرق الأوسط وشمال أفريقيا.' },
+  },
+  ko: {
+    'hub-money':      { badge: '허브 및 핵심 수익 페이지', description: '클러스터의 앵커이자 주요 구매 의도 가이드: 발코니 태양광이란 무엇인지, 최고의 키트·배터리·마이크로인버터, 그리고 클라우드 없이 운영하는 방법.' },
+    'decision-howto': { badge: '결정 및 방법 가이드', description: '중간 퍼널 가이드: 발코니 vs 지붕, 설치, 등록, 사이징과 투자 회수, 마운팅.' },
+    'legislation':    { badge: '국가별 법규', description: '국가별 법적 상태: 글로벌 트래커와 미국·독일·스페인/라틴아메리카·포르투갈/브라질·걸프/MENA 지역 전용 페이지.' },
+    'long-tail':      { badge: '롱테일 및 전환 지원', description: '브랜드 비교, 배터리 필요성, 투자 회수 타당성, 문제 해결.' },
+    'trends-2027':    { badge: '2027년 트렌드', description: '2027년에 바뀌는 것: EU 배터리/출력 표준, 주택 조합의 B2B 도입, 네덜란드의 넷미터링 종료, 그리고 일본·중국·브라질·그리스 및 걸프/MENA 공백에 대한 국가별 현황 보고서.' },
   },
 }
 
