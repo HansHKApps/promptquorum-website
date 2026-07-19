@@ -107,6 +107,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How confident is the sourcing for Portugal vs. Brazil in this article?', a: 'Portugal\'s figures are sourced directly from primary statutory text (the Decreto-Lei itself) — high confidence. Brazil\'s "no dedicated framework" finding is also well-sourced, including a direct press confirmation, but pricing and enforcement-in-practice details for Brazil carry lower confidence.' },
         ],
       },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Balcony Solar in Brazil: Status Report 2027](/balcony-solar/balcony-solar-brazil-status-2027) — a deeper Brazil-only dossier: the RN 482/2012 → Lei 14.300/2022 → REN 1.059/2023 regulatory lineage and how Brazil\'s large general distributed-generation market contrasts with the still-unaddressed plug-in-balcony category',
+          '[Is Balcony Solar Legal? A Country-by-Country Guide](/balcony-solar/is-balcony-solar-legal-country-guide) — global legal tracker',
+        ],
+      },
     },
     schema: {
       '@context': 'https://schema.org',

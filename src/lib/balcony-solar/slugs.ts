@@ -54,4 +54,11 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
   'eu-800w-balcony-solar-standard-2027':          'eu-800w-balcony-solar-standard-2027',           // BSOL-27
   'balcony-solar-housing-associations-b2b-2027':  'balcony-solar-housing-associations-b2b-2027',   // BSOL-28
   'net-metering-rollback-balcony-solar-2027':     'net-metering-rollback-balcony-solar-2027',      // BSOL-29
+
+  // TIER 5 — Country expansion (noindex until authorized — see published.ts)
+  'balcony-solar-japan-status-2027':              'balcony-solar-japan-status-2027',               // BSOL-30
+  'balcony-solar-china-2027':                     'balcony-solar-china-2027',                       // BSOL-31
+  'balcony-solar-brazil-status-2027':             'balcony-solar-brazil-status-2027',               // BSOL-32
+  'where-balcony-solar-doesnt-exist-yet-2027':    'where-balcony-solar-doesnt-exist-yet-2027',       // BSOL-33
+  'balcony-solar-greece-status-2027':             'balcony-solar-greece-status-2027',               // BSOL-34
 }

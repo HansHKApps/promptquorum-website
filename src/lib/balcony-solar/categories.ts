@@ -76,6 +76,11 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
       'eu-800w-balcony-solar-standard-2027',
       'balcony-solar-housing-associations-b2b-2027',
       'net-metering-rollback-balcony-solar-2027',
+      'balcony-solar-japan-status-2027',
+      'balcony-solar-china-2027',
+      'balcony-solar-brazil-status-2027',
+      'where-balcony-solar-doesnt-exist-yet-2027',
+      'balcony-solar-greece-status-2027',
     ],
   },
 ]
