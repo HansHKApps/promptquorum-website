@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/de/api/og/teaching-with-ai',
+          url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=de',
           width: 1200,
           height: 675,
         },
@@ -2255,7 +2255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     image: {
       '@type': 'ImageObject',
-      url: 'https://www.promptquorum.com/fr/api/og/teaching-with-ai',
+      url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=fr',
       width: 1200,
       height: 675,
     },
@@ -2835,7 +2835,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     image: {
       '@type': 'ImageObject',
-      url: 'https://www.promptquorum.com/ja/api/og/teaching-with-ai',
+      url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=ja',
       width: 1200,
       height: 675,
     },

@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/es/api/og/extract-and-summarise',
+          url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=es',
           width: 1200,
           height: 675,
         },
@@ -1709,7 +1709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/ar/api/og/extract-and-summarise',
+          url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=ar',
           width: 1200,
           height: 675,
         },
@@ -2231,7 +2231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         image: {
           '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/pt/api/og/extract-and-summarise',
+          url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=pt',
           width: 1200,
           height: 675,
         },
@@ -4333,7 +4333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       image: {
         '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/ko/api/og/extract-and-summarise',
+        url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=ko',
         width: 1200,
         height: 675,
       },
