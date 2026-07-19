@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: AuthorPageProps): Promise<Met
       siteName: 'PromptQuorum',
       title: 'Hans Kuepper — Founder of PromptQuorum',
       description: 'Hans Kuepper is the founder and developer of PromptQuorum, a privacy-first, multi-model AI dispatch and consensus tool.',
-      images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum — One Prompt. Every Model. One Verdict.' }],
+      images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 675, alt: 'PromptQuorum — One Prompt. Every Model. One Verdict.' }],
     },
     twitter: {
       card: 'summary_large_image',

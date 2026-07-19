@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/de/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'de',
-      image: 'https://www.promptquorum.com/de/api/og/best-local-llm-apps-android-2026',
+      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=de',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1752,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/fr/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'fr',
-      image: 'https://www.promptquorum.com/fr/api/og/best-local-llm-apps-android-2026',
+      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=fr',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2350,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ja/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ja',
-      image: 'https://www.promptquorum.com/ja/api/og/best-local-llm-apps-android-2026',
+      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=ja',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2957,7 +2957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'es',
-      image: 'https://www.promptquorum.com/es/api/og/best-local-llm-apps-android-2026',
+      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=es',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3536,7 +3536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'pt-BR',
-      image: 'https://www.promptquorum.com/pt/api/og/best-local-llm-apps-android-2026',
+      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=pt',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -4115,7 +4115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ar',
-      image: 'https://www.promptquorum.com/ar/api/og/best-local-llm-apps-android-2026',
+      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=ar',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -4698,7 +4698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ko',
-      image: 'https://www.promptquorum.com/ko/api/og/best-local-llm-apps-android-2026',
+      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=ko',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',

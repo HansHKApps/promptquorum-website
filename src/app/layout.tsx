@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     images: [{
       url: 'https://www.promptquorum.com/og-image.png',
       width: 1200,
-      height: 630,
+      height: 675,
       alt: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
     }],
   },
@@ -208,7 +208,7 @@ export default function RootLayout({
                     "@type": "ImageObject",
                     "url": "https://www.promptquorum.com/og-image.png",
                     "width": 1200,
-                    "height": 630
+                    "height": 675
                   },
                   "featureList": [
                     "Simultaneous dispatch to 25+ AI models (GPT-4o, Claude, Gemini, Grok, Mistral, Llama, DeepSeek, and more)",
