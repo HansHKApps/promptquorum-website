@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/temperature-and-top-p-control-ai-creativity', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/temperature-and-top-p-control-ai-creativity', width: 1200, height: 675 },
         keywords: ['temperature', 'top-p', 'nucleus sampling', 'AI randomness', 'LLM settings', 'creativity', 'GPT-5.5', 'Claude', 'Gemini', 'prompt tuning'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },

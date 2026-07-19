@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['prompt version control', 'prompt versioning workflow', 'git workflow for prompts', 'prompt change management', 'how to version control AI prompts'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -401,7 +401,7 @@ jobs:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['Prompt-Versionskontrolle', 'Prompt-Versioning', 'Git-Workflow für Prompts', 'Prompt-Änderungsmanagement', 'KI-Prompts versionieren'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -726,7 +726,7 @@ jobs:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/es/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['control de versiones de prompts', 'versionado de prompts', 'flujo de trabajo Git para prompts', 'gestión de cambios de prompts', 'cómo versionar prompts de IA'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -1074,7 +1074,7 @@ jobs:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/ar/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ar/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ar/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['التحكم في إصدارات الموجّهات', 'إصدار الموجّهات', 'سير عمل Git للموجّهات', 'إدارة تغييرات الموجّهات', 'كيفية إصدار موجّهات الذكاء الاصطناعي'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -1422,7 +1422,7 @@ jobs:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['controle de versão de prompts', 'versionamento de prompts', 'fluxo de trabalho Git para prompts', 'gerenciamento de alterações de prompts', 'como versionar prompts de IA'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -1713,7 +1713,7 @@ jobs:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['gestion de versions des prompts', 'versioning de prompts', 'workflow git pour prompts', 'gestion des changements de prompts', 'versionner les prompts IA'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -2034,7 +2034,7 @@ jobs:
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['プロンプトバージョン管理', 'プロンプト管理ワークフロー', 'Gitプロンプト管理', 'プロンプト変更管理', 'AIプロンプトのバージョン管理方法'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -2394,7 +2394,7 @@ jobs:
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['Prompt 版本控制', 'Prompt 版本管理工作流', 'Git Prompt 管理', 'Prompt 变更管理', 'AI Prompt 版本控制方法'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },
@@ -2754,7 +2754,7 @@ jobs:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/ko/prompt-engineering/prompt-version-control-workflows',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ko/api/og/prompt-version-control-workflows', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ko/api/og/prompt-version-control-workflows', width: 1200, height: 675 },
       keywords: ['프롬프트 버전 관리', '프롬프트 버전 관리', 'Git 프롬프트 워크플로', '프롬프트 변경 관리', 'AI 프롬프트 버전 관리 방법'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'git' },

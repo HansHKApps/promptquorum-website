@@ -160,7 +160,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
             ? `${BASE}${(article as any).heroImage}`
             : `${BASE}/api/og/${slug}?lang=${lang}`,
           width: 1200,
-          height: 630,
+          height: 675,
           alt: article?.title ?? fallbackTitle,
         },
       ],
@@ -247,7 +247,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       '@type': 'ImageObject',
       url: `${BASE}${(article as any).heroImage}`,
       width: 1200,
-      height: 630,
+      height: 675,
     }
   }
 

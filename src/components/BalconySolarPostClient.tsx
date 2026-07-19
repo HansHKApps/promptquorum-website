@@ -908,7 +908,7 @@ function BalconySolarPostContent({ slug, lang }: Props) {
               src={(article as any).heroImage}
               alt={article.title || 'Article hero image'}
               width={1200}
-              height={630}
+              height={675}
               priority
               className="w-full"
             />

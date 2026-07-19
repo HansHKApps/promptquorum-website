@@ -43,7 +43,7 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
       url: canonicalUrl,
       type: 'article',
       publishedTime: getBlogPostIsoDate(postId),
-      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: ogImageUrl, width: 1200, height: 675, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',

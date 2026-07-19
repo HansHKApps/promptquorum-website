@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/seo-meets-ai',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['GEO', 'SEO', 'generative engine optimization', 'AI search', 'ChatGPT search', 'Perplexity', 'Google AI Overviews', 'JSON-LD schema', 'AI citations'],
         mentions: [
@@ -3162,7 +3162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/seo-meets-ai',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['GEO', 'SEO', '생성형 엔진 최적화', 'AI 검색', 'ChatGPT 검색', 'Perplexity', 'Google AI Overviews', 'JSON-LD 스키마', 'AI 인용'],
         mentions: [
