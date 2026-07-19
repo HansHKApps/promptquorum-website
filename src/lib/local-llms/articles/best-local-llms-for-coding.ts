@@ -280,6 +280,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'No' },
           ],
           columns: ['Model', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-en.svg',
+          imageCaption: 'Benchmark scores by model (June 2026): Qwen3-Coder 32B leads at 87% HumanEval, DeepSeek V4 Flash scores 78/100 on independent real-world tests, Qwen 3.6 27B hits 77.2% SWE-bench, Qwen3 8B reaches ~76% HumanEval, and Kimi K2.6 scores 58.6 on the harder SWE-Bench Pro.',
           callouts: [
             { type: 'note', text: 'HumanEval measures single-function Python generation. SWE-bench measures real-world multi-file code changes. \'Real-world\' scores are from independent multi-task coding benchmarks. Both metrics are relevant; SWE-bench better predicts production coding performance.' },
           ],
@@ -807,6 +809,8 @@ schema: {
             { 'Modelo': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'No' },
           ],
           columns: ['Modelo', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-es.svg',
+          imageCaption: 'Puntuaciones por modelo (junio de 2026): Qwen3-Coder 32B lidera con 87% en HumanEval, DeepSeek V4 Flash obtiene 78/100 en pruebas independientes en entornos reales, Qwen 3.6 27B alcanza 77.2% en SWE-bench, Qwen3 8B llega a ~76% en HumanEval, y Kimi K2.6 obtiene 58.6 en el más exigente SWE-Bench Pro.',
           callouts: [
             { type: 'note', text: 'HumanEval mide la generación de funciones Python individuales. SWE-bench mide cambios de código multi-archivo en el mundo real. Las puntuaciones \'reales\' provienen de benchmarks de codificación multi-tarea independientes. Ambas métricas son relevantes; SWE-bench predice mejor el rendimiento de programación en producción.' },
           ],
@@ -1285,6 +1289,8 @@ schema: {
             { 'النموذج': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'لا' },
           ],
           columns: ['النموذج', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-ar.svg',
+          imageCaption: 'درجات كل نموذج (يونيو 2026): يتصدر Qwen3-Coder 32B بنسبة 87% في HumanEval، ويحقق DeepSeek V4 Flash 78/100 في اختبارات واقعية مستقلة، ويصل Qwen 3.6 27B إلى 77.2% في SWE-bench، ويبلغ Qwen3 8B نحو 76% في HumanEval، بينما يحقق Kimi K2.6 درجة 58.6 في اختبار SWE-Bench Pro الأصعب.',
           callouts: [
             { type: 'note', text: 'يقيس HumanEval توليد دوال Python الفردية. يقيس SWE-bench تغييرات الكود متعددة الملفات في العالم الحقيقي. تأتي النتائج \'الحقيقية\' من اختبارات برمجة متعددة المهام مستقلة. كلا المقياسين مهم؛ يتنبأ SWE-bench بشكل أفضل بأداء البرمجة في الإنتاج.' },
           ],
@@ -3450,6 +3456,8 @@ schema: {
             { 'Model': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': '미지원' },
           ],
           columns: ['Model', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-ko.svg',
+          imageCaption: '코딩 벤치마크 점수(2026년 6월): Qwen3-Coder 32B가 HumanEval 87%로 선두이며, DeepSeek V4 Flash는 독립 실측 테스트에서 78/100을 기록했습니다. Qwen 3.6 27B는 SWE-bench 77.2%를 달성했고, Qwen3 8B는 HumanEval 약 76%, Kimi K2.6은 더 어려운 SWE-Bench Pro에서 58.6점을 기록했습니다.',
           callouts: [
             { type: 'note', text: 'HumanEval은 단일 함수 Python 생성을 측정합니다. SWE-bench는 실제 멀티파일 코드 변경을 측정합니다. \'실제 환경\' 점수는 독립적인 멀티태스크 코딩 벤치마크에서 나온 것입니다. 두 지표 모두 유의미하며, SWE-bench가 실제 코딩 성능을 더 잘 예측합니다.' },
           ],

@@ -844,6 +844,31 @@
     "width": 800,
     "height": 400
   },
+  "/images/best-local-llms-for-coding-benchmark-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/best-local-llms-for-coding-benchmark-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/best-local-llms-for-coding-benchmark-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/best-local-llms-for-coding-benchmark-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/best-local-llms-for-coding-benchmark-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/best-local-llms-for-coding-fim-usecases-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -6058,6 +6083,21 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/pc-build-performance-comparison.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/pc-build-psu-headroom.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/pc-build-vram-by-model.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
   },
   "/images/private-local-ai-for-business-common-mistakes-en.svg": {
     "encodingFormat": "image/svg+xml",
