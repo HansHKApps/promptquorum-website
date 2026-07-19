@@ -1,4 +1,6 @@
 import { ImageResponse } from 'next/og'
+import fs from 'fs'
+import path from 'path'
 import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { llmContent } from '@/lib/local-llms/content'
@@ -60,12 +62,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
           justifyContent: 'space-between',
           background: 'linear-gradient(135deg, #6750A4 0%, #7D5260 100%)',
           padding: '60px',
-          fontFamily: 'Plus Jakarta Sans, system-ui, sans-serif',
+          fontFamily: selectedLang === 'ar' ? 'Beiruti' : 'Plus Jakarta Sans, system-ui, sans-serif',
+          direction: selectedLang === 'ar' ? 'rtl' : 'ltr',
           color: '#FFFFFF',
         }}
       >
         {/* Top branding */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: selectedLang === 'ar' ? 'row-reverse' : 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ fontSize: '20px', fontWeight: '700', letterSpacing: '0.1em' }}>
             PROMPTQUORUM
           </div>
@@ -90,6 +93,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
               lineHeight: '1.2',
               maxWidth: '100%',
               wordWrap: 'break-word',
+              textAlign: selectedLang === 'ar' ? 'right' : 'left',
             }}
           >
             {title}
@@ -107,6 +111,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
               WebkitLineClamp: 2,
               WebkitBoxOrient: 'vertical',
               overflow: 'hidden',
+              textAlign: selectedLang === 'ar' ? 'right' : 'left',
             }}
           >
             {intro}
@@ -117,6 +122,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
         <div
           style={{
             display: 'flex',
+            flexDirection: selectedLang === 'ar' ? 'row-reverse' : 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
             fontSize: '12px',
@@ -132,6 +138,20 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
     {
       width: 1200,
       height: 675,
+      fonts: selectedLang === 'ar' ? [
+        {
+          name: 'Beiruti',
+          data: fs.readFileSync(path.join(process.cwd(), 'public/fonts/Beiruti-Regular.ttf')),
+          weight: 400,
+          style: 'normal',
+        },
+        {
+          name: 'Beiruti',
+          data: fs.readFileSync(path.join(process.cwd(), 'public/fonts/Beiruti-Bold.ttf')),
+          weight: 700,
+          style: 'normal',
+        },
+      ] : undefined,
       headers: {
         'Content-Type': 'image/png',
         'Cache-Control': 'public, max-age=86400, immutable',

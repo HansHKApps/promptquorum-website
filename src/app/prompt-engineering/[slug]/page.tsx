@@ -127,9 +127,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const finalDesc = isGlossary
     ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.'
     : metaDesc
-  const finalOgImage = isGlossary
-    ? 'https://www.promptquorum.com/og-glossary-mindmap-2026.png'
-    : ogImageUrl
+  // og-glossary-mindmap-2026.png (a custom mindmap infographic) was never produced —
+  // fall back to the standard per-article generator route until one is created.
+  const finalOgImage = ogImageUrl
   const finalTitle = isGlossary
     ? 'Prompt Engineering Glossary: 100 Terms Defined for 2026'
     : pageTitle

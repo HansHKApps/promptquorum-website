@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'KI lokal auf Ihrem Tablet ausführen: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'So führen Sie KI lokal auf einem iPad oder Android-Tablet 2026 aus. Lokale Inferenz-Apps, Termux + Ollama auf Android und Remote-Verbindung zu einem Home-Mac oder PC erklärt.',
-      image: `https://www.promptquorum.com/de/og/power-local-llm/run-ai-on-tablet-ipad-android`,
+      image: `https://www.promptquorum.com/api/og/run-ai-on-tablet-ipad-android?lang=de`,
       url: 'https://www.promptquorum.com/de/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'de',
       datePublished: '2026-05-07',
@@ -1180,7 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Exécuter l\'IA localement sur votre tablette : iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Exécutez l\'IA localement sur iPad ou Android en 2026. Applications d\'inférence locale, Termux + Ollama, connexion à distance vers Mac ou PC expliqués.',
-      image: `https://www.promptquorum.com/fr/og/power-local-llm/run-ai-on-tablet-ipad-android`,
+      image: `https://www.promptquorum.com/api/og/run-ai-on-tablet-ipad-android?lang=fr`,
       url: 'https://www.promptquorum.com/fr/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'fr',
       datePublished: '2026-05-07',
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'タブレットでAIをローカル実行：iPad Pro M5・Galaxy Tab S10・OnePlus Pad 2（2026年版）',
       description:
         '2026年のiPadとAndroidタブレットでのAIローカル実行方法。オンデバイス推論アプリ、Termux + Ollama、ホームMac・PCへのリモート接続を解説。',
-      image: `https://www.promptquorum.com/ja/og/power-local-llm/run-ai-on-tablet-ipad-android`,
+      image: `https://www.promptquorum.com/api/og/run-ai-on-tablet-ipad-android?lang=ja`,
       url: 'https://www.promptquorum.com/ja/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'ja',
       datePublished: '2026-05-07',
@@ -2422,7 +2422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Ejecuta IA local en tu tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Cómo ejecutar IA localmente en un iPad o tablet Android en 2026. Aplicaciones de inferencia en el dispositivo, Termux + Ollama en Android y conexión remota a tu Mac o PC en casa explicados.',
-      image: `https://www.promptquorum.com/es/og/power-local-llm/run-ai-on-tablet-ipad-android`,
+      image: `https://www.promptquorum.com/api/og/run-ai-on-tablet-ipad-android?lang=es`,
       url: 'https://www.promptquorum.com/es/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'es',
       datePublished: '2026-05-07',
@@ -2835,7 +2835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '태블릿에서 로컬 AI 실행하기: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         '2026년 iPad 또는 안드로이드 태블릿에서 AI를 로컬로 실행하는 방법. 온디바이스 추론 앱, Android Termux + Ollama, 자택 Mac·PC 원격 연결 설명.',
-      image: `https://www.promptquorum.com/ko/og/power-local-llm/run-ai-on-tablet-ipad-android`,
+      image: `https://www.promptquorum.com/api/og/run-ai-on-tablet-ipad-android?lang=ko`,
       url: 'https://www.promptquorum.com/ko/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
@@ -3245,7 +3245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Execute IA local no seu tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)',
       description:
         'Como executar IA localmente em um iPad ou tablet Android em 2026. Aplicativos de inferência no dispositivo, Termux + Ollama no Android e conexão remota ao seu Mac ou PC em casa explicados.',
-      image: `https://www.promptquorum.com/pt/og/power-local-llm/run-ai-on-tablet-ipad-android`,
+      image: `https://www.promptquorum.com/api/og/run-ai-on-tablet-ipad-android?lang=pt`,
       url: 'https://www.promptquorum.com/pt/power-local-llm/run-ai-on-tablet-ipad-android',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',

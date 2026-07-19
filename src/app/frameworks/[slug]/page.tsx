@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: 'PromptQuorum',
       title: `${fw.name} Prompt Framework — Complete Guide`,
       description: `${fw.tagline}`,
-      images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: `${fw.name} Prompt Framework` }],
+      images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 675, alt: `${fw.name} Prompt Framework` }],
     },
     twitter: {
       card: 'summary_large_image',
