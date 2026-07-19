@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balcony Solar Overview | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on balcony solar (Balkonkraftwerk). Covers the core stack, the EU's 800W standard, legal status by region, battery decisions, and cloud-free monitoring with Home Assistant. Multi-language deck." />
+    <meta property="og:title" content="Balcony Solar Overview — PromptQuorum" />
+    <meta property="og:description" content="Generate your own power without a rooftop installer. 11-slide interactive deck in 9 languages." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/balcony-solar" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: start;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: start;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+          .slide { padding: 20px 16px; }
+          .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
+          .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
+          .slide p { font-size: 14px; margin-bottom: 10px; }
+          .slide ul { font-size: 1em; margin: 10px 0; }
+          .slide ul li { margin-bottom: 8px; }
+          .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
+          .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
+          .header { padding: 10px 12px; }
+          .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+          .header-links { gap: 8px; font-size: 11px; }
+          .subtitle { font-size: 14px; }
+          .logo { height: 24px; margin-bottom: 12px; }
+          .controls { padding: 10px 12px; }
+          .controls button { padding: 6px 12px; font-size: 12px; }
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "promptquorum.com/balcony-solar — " attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 11";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Balcony Solar Overview</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/balcony-solar">← Back to Balcony Solar Guide</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">11</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const BACK_LINKS = {
+  "en": "https://www.promptquorum.com/balcony-solar",
+  "de": "https://www.promptquorum.com/de/balcony-solar",
+  "fr": "https://www.promptquorum.com/fr/balcony-solar",
+  "ja": "https://www.promptquorum.com/ja/balcony-solar",
+  "zh": "https://www.promptquorum.com/zh/balcony-solar",
+  "es": "https://www.promptquorum.com/es/balcony-solar",
+  "pt": "https://www.promptquorum.com/pt/balcony-solar",
+  "ar": "https://www.promptquorum.com/ar/balcony-solar",
+  "ko": "https://www.promptquorum.com/ko/balcony-solar"
+};
+
+    const CONTENT = {
+  en: {
+    "title": "Balcony Solar: Generate Your Own Power Without a Rooftop Installer",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "Balcony Solar: Generate Your Own Power Without a Rooftop Installer",
+        "subtitle": "Balcony solar (Balkonkraftwerk) is a plug-in system — a panel, a micro-inverter, and an outlet — that lets you produce electricity for self-consumption without a roof installation, an electrician, or a permit in most notification-only markets.",
+        "link": "https://www.promptquorum.com/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "Why Balcony Solar",
+        "items": [
+          "<strong>No installer needed.</strong> Plug into an outlet or the inverter's own connector — no electrician, no roof work.",
+          "<strong>Fast payback.</strong> A basic 600–800W kit typically costs a few hundred euros or dollars.",
+          "<strong>No vendor cloud required.</strong> Home Assistant reads most inverters and batteries directly.",
+          "<strong>Increasingly legal.</strong> Six EU countries and eight US states now have dedicated frameworks."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "The Core Stack",
+        "items": [
+          "<strong>Panel</strong> — one or two modules, typically 400–800W combined, mounted on a railing, wall, or ground stand.",
+          "<strong>Micro-inverter</strong> — converts DC panel output to grid-compatible AC, usually capped at 600–800W.",
+          "<strong>Battery (optional)</strong> — stores surplus production for evening use instead of losing it to the grid.",
+          "<strong>Home Assistant</strong> — reads the inverter or battery locally via Modbus, MQTT, or a local API for cloud-free monitoring."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "The 800W Standard Across the EU",
+        "columns": [
+          "Country",
+          "Mechanism",
+          "Registration"
+        ],
+        "rows": [
+          {
+            "Country": "France, Austria, Belgium, Netherlands",
+            "Mechanism": "800W cap, export permitted",
+            "Registration": "Notification only"
+          },
+          {
+            "Country": "Germany",
+            "Mechanism": "800W cap (DIN VDE V 0126-95), export permitted",
+            "Registration": "Notification via Marktstammdatenregister"
+          },
+          {
+            "Country": "Portugal",
+            "Mechanism": "700W exemption, no export",
+            "Registration": "None below 700W"
+          },
+          {
+            "Country": "Greece (draft)",
+            "Mechanism": "800W cap, zero feed-in — no export at all",
+            "Registration": "Via new DEDDIE/HEDNO platform"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Batteries: Do You Need One?",
+        "items": [
+          "A battery only pays off if you actually shift production to hours when you'd otherwise buy grid power.",
+          "In export-permitted markets (France, Austria, Belgium, Netherlands, Germany), a battery is optional — surplus can be exported instead.",
+          "In zero-feed-in markets (Greece's draft framework), a battery is the only way to use power that can't be exported.",
+          "Battery-equipped balcony systems fall outside Germany's simplified regime and still need full grid-operator registration."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Monitoring Without the Cloud",
+        "items": [
+          "Most brands — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure — default to routing production data through their own app and cloud server.",
+          "Home Assistant can read most of these inverters and batteries locally via Modbus, MQTT, or a local API instead.",
+          "Local monitoring means production data stays on your own network — even if the manufacturer's app disappears."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "Legal Status Snapshot",
+        "columns": [
+          "Region",
+          "Status"
+        ],
+        "rows": [
+          {
+            "Region": "EU (FR/AT/BE/NL/DE/PT)",
+            "Status": "Codified, notification-only or exempt below a wattage threshold"
+          },
+          {
+            "Region": "US",
+            "Status": "8 states with dedicated laws since 2025; no federal framework"
+          },
+          {
+            "Region": "Brazil, Japan",
+            "Status": "No plug-in-specific framework yet — falls under general or no rules"
+          },
+          {
+            "Region": "UAE, Saudi Arabia",
+            "Status": "Nascent — UAE requires utility NOC any size; Saudi ECRA sets a 1kW floor"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "Choosing a Kit: What Actually Matters",
+        "items": [
+          "Inverter wattage cap must match your country's legal limit — not just the panel's rated output.",
+          "Check local monitoring support (Modbus, MQTT, or local API) before buying if avoiding a vendor cloud matters to you.",
+          "Mounting type (railing, wall, ground, flat roof) determines which accessories you actually need.",
+          "Battery compatibility varies by brand — confirm before assuming you can add one later.",
+          "Confirm your specific market's registration process before installing, even for small kits."
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "Frequently Asked Questions",
+        "faqs": [
+          {
+            "q": "What is balcony solar (Balkonkraftwerk)?",
+            "a": "A plug-in solar system — usually one or two panels feeding a small micro-inverter — that connects directly to a household outlet or dedicated connector, generating power for self-consumption without a rooftop installation or an electrician in most markets."
+          },
+          {
+            "q": "Do I need a permit to install balcony solar?",
+            "a": "It depends on the country. France, Austria, Belgium, the Netherlands, Germany, and Portugal use simple notification-only registration; several other markets have no dedicated framework yet."
+          },
+          {
+            "q": "Can I monitor my system without the manufacturer's cloud app?",
+            "a": "Yes, for most major brands — inverters and batteries can be read locally via Modbus, MQTT, or a local API and pulled into Home Assistant."
+          },
+          {
+            "q": "Is balcony solar legal where I live?",
+            "a": "Check the country-by-country guide in this cluster — legal status ranges from fully codified to notification-only to nascent or unaddressed to state-by-state."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Key Takeaways",
+        "items": [
+          "Balcony solar is a plug-in panel + micro-inverter system for self-consumption — no roof work, no electrician in most markets.",
+          "Legal frameworks are converging around an 800W cap, but the mechanism differs — some permit export, Greece's draft does not.",
+          "A battery is optional where export is permitted, but essential where it isn't.",
+          "Most major brands can be monitored locally via Home Assistant instead of a vendor cloud app."
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "Explore the Full Guide",
+        "body": "33 in-depth guides cover kit and battery buying guides, country-by-country legality, installation and registration, and cloud-free monitoring setups.",
+        "href": "https://www.promptquorum.com/balcony-solar",
+        "cta": "View All 33 Guides"
+      }
+    ]
+  },
+  de: {
+    "title": "Balkonkraftwerk: Eigenen Strom erzeugen — ganz ohne Dachinstallateur",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "Balkonkraftwerk: Eigenen Strom erzeugen — ganz ohne Dachinstallateur",
+        "subtitle": "Ein Balkonkraftwerk ist ein steckerfertiges System — ein Modul, ein Mikrowechselrichter und eine Steckdose —, mit dem Sie Strom für den Eigenverbrauch erzeugen, ohne Dachinstallation, Elektriker oder Genehmigung in den meisten meldepflichtigen Märkten.",
+        "link": "https://www.promptquorum.com/de/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "Warum ein Balkonkraftwerk",
+        "items": [
+          "<strong>Kein Installateur nötig.</strong> Einfach in eine Steckdose oder den Anschluss des Wechselrichters stecken — kein Elektriker, keine Dacharbeiten.",
+          "<strong>Schnelle Amortisation.</strong> Ein einfaches 600–800-Watt-Set kostet meist nur ein paar Hundert Euro.",
+          "<strong>Keine Hersteller-Cloud nötig.</strong> Home Assistant liest die meisten Wechselrichter und Speicher direkt aus.",
+          "<strong>Zunehmend legal.</strong> Sechs EU-Länder und acht US-Bundesstaaten haben inzwischen eigene Regelungen."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Der Kern-Stack",
+        "items": [
+          "<strong>Modul</strong> — ein oder zwei Panele, zusammen meist 400–800 Watt, montiert am Geländer, an der Wand oder auf einem Bodenständer.",
+          "<strong>Mikrowechselrichter</strong> — wandelt den Gleichstrom des Moduls in netzkonformen Wechselstrom um, meist auf 600–800 Watt begrenzt.",
+          "<strong>Speicher (optional)</strong> — speichert überschüssige Erzeugung für den Abend, statt sie ans Netz zu verlieren.",
+          "<strong>Home Assistant</strong> — liest Wechselrichter oder Speicher lokal über Modbus, MQTT oder eine lokale API für cloudfreie Überwachung aus."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "Der 800-Watt-Standard in der EU",
+        "columns": [
+          "Land",
+          "Mechanismus",
+          "Anmeldung"
+        ],
+        "rows": [
+          {
+            "Land": "Frankreich, Österreich, Belgien, Niederlande",
+            "Mechanismus": "800-Watt-Grenze, Einspeisung erlaubt",
+            "Anmeldung": "Nur Meldung"
+          },
+          {
+            "Land": "Deutschland",
+            "Mechanismus": "800-Watt-Grenze (DIN VDE V 0126-95), Einspeisung erlaubt",
+            "Anmeldung": "Meldung im Marktstammdatenregister"
+          },
+          {
+            "Land": "Portugal",
+            "Mechanismus": "700-Watt-Ausnahme, keine Einspeisung",
+            "Anmeldung": "Keine unter 700 Watt"
+          },
+          {
+            "Land": "Griechenland (Entwurf)",
+            "Mechanismus": "800-Watt-Grenze, Zero-Feed-in — keinerlei Einspeisung",
+            "Anmeldung": "Über neue DEDDIE/HEDNO-Plattform"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Speicher: Brauchen Sie einen?",
+        "items": [
+          "Ein Speicher lohnt sich nur, wenn Sie Erzeugung tatsächlich in Stunden verschieben, in denen Sie sonst Netzstrom kaufen würden.",
+          "In Märkten mit erlaubter Einspeisung (Frankreich, Österreich, Belgien, Niederlande, Deutschland) ist ein Speicher optional — Überschuss kann stattdessen eingespeist werden.",
+          "In Zero-Feed-in-Märkten (Griechenlands Entwurf) ist ein Speicher die einzige Möglichkeit, nicht einspeisbaren Strom zu nutzen.",
+          "Balkonkraftwerke mit Speicher fallen in Deutschland aus dem vereinfachten Regime heraus und benötigen weiterhin die volle Netzbetreiber-Anmeldung."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Überwachung ohne Cloud",
+        "items": [
+          "Die meisten Marken — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure — leiten Erzeugungsdaten standardmäßig über die eigene App und Cloud.",
+          "Home Assistant kann die meisten dieser Wechselrichter und Speicher stattdessen lokal über Modbus, MQTT oder eine lokale API auslesen.",
+          "Lokale Überwachung bedeutet: Die Erzeugungsdaten bleiben im eigenen Netzwerk — auch wenn die Hersteller-App verschwindet."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "Rechtslage im Überblick",
+        "columns": [
+          "Region",
+          "Status"
+        ],
+        "rows": [
+          {
+            "Region": "EU (FR/AT/BE/NL/DE/PT)",
+            "Status": "Kodifiziert, nur Meldepflicht oder Ausnahme unterhalb einer Leistungsgrenze"
+          },
+          {
+            "Region": "USA",
+            "Status": "8 Bundesstaaten mit eigenen Gesetzen seit 2025; kein Bundesrahmen"
+          },
+          {
+            "Region": "Brasilien, Japan",
+            "Status": "Noch kein steckerspezifischer Rahmen — allgemeine oder keine Regeln"
+          },
+          {
+            "Region": "VAE, Saudi-Arabien",
+            "Status": "Im Anfangsstadium — VAE verlangt Netzbetreiber-NOC unabhängig von der Größe; Saudi-Arabiens ECRA setzt eine 1-kW-Untergrenze"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "Set-Auswahl: Worauf es wirklich ankommt",
+        "items": [
+          "Die Wechselrichter-Leistungsgrenze muss zum gesetzlichen Limit Ihres Landes passen — nicht nur zur Nennleistung des Moduls.",
+          "Prüfen Sie vor dem Kauf die lokale Überwachungsunterstützung (Modbus, MQTT oder lokale API), wenn Ihnen die Vermeidung einer Hersteller-Cloud wichtig ist.",
+          "Die Montageart (Geländer, Wand, Boden, Flachdach) bestimmt, welches Zubehör Sie tatsächlich brauchen.",
+          "Die Speicherkompatibilität variiert je nach Marke — prüfen Sie das, statt anzunehmen, Sie könnten später einen nachrüsten.",
+          "Prüfen Sie den Anmeldeprozess Ihres konkreten Marktes vor der Installation, auch bei kleinen Sets."
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "Häufig gestellte Fragen",
+        "faqs": [
+          {
+            "q": "Was ist ein Balkonkraftwerk?",
+            "a": "Ein steckerfertiges Solargerät — meist ein oder zwei Module mit einem kleinen Mikrowechselrichter —, das direkt an eine Haushaltssteckdose oder einen eigenen Anschluss angeschlossen wird und in den meisten Märkten ohne Dachinstallation oder Elektriker Strom für den Eigenverbrauch erzeugt."
+          },
+          {
+            "q": "Brauche ich eine Genehmigung für ein Balkonkraftwerk?",
+            "a": "Das hängt vom Land ab. Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal verlangen nur eine einfache Meldung; mehrere andere Märkte haben noch keinen eigenen Rahmen."
+          },
+          {
+            "q": "Kann ich mein System ohne die Hersteller-Cloud überwachen?",
+            "a": "Ja, bei den meisten großen Marken — Wechselrichter und Speicher lassen sich lokal über Modbus, MQTT oder eine lokale API auslesen und in Home Assistant einbinden."
+          },
+          {
+            "q": "Ist ein Balkonkraftwerk an meinem Wohnort legal?",
+            "a": "Siehe den Länder-Guide in diesem Cluster — der rechtliche Status reicht von vollständig kodifiziert über reine Meldepflicht bis zu unklar oder ungeregelt und bundesstaatenweise geregelt."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Die wichtigsten Punkte",
+        "items": [
+          "Ein Balkonkraftwerk ist ein steckerfertiges Modul-plus-Mikrowechselrichter-System für den Eigenverbrauch — in den meisten Märkten ohne Dacharbeiten oder Elektriker.",
+          "Die rechtlichen Rahmenbedingungen nähern sich einer 800-Watt-Grenze an, aber der Mechanismus unterscheidet sich — manche erlauben Einspeisung, Griechenlands Entwurf nicht.",
+          "Ein Speicher ist optional, wo Einspeisung erlaubt ist, aber unverzichtbar, wo nicht.",
+          "Die meisten großen Marken lassen sich lokal über Home Assistant statt über eine Hersteller-Cloud-App überwachen."
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "Den vollständigen Leitfaden entdecken",
+        "body": "33 ausführliche Guides behandeln Kauf- und Speicherratgeber, Rechtslage nach Land, Installation und Anmeldung sowie cloudfreie Überwachungs-Setups.",
+        "href": "https://www.promptquorum.com/de/balcony-solar",
+        "cta": "Alle 33 Guides ansehen"
+      }
+    ]
+  },
+  fr: {
+    "title": "Solaire de balcon : produisez votre propre électricité sans installateur de toiture",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "Solaire de balcon : produisez votre propre électricité sans installateur de toiture",
+        "subtitle": "Le solaire de balcon (Balkonkraftwerk) est un système prêt à brancher — un panneau, un micro-onduleur et une prise — qui permet de produire de l'électricité pour l'autoconsommation sans installation sur toiture, sans électricien, ni permis dans la plupart des marchés à simple notification.",
+        "link": "https://www.promptquorum.com/fr/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "Pourquoi le solaire de balcon",
+        "items": [
+          "<strong>Aucun installateur requis.</strong> Branchez-le sur une prise ou le connecteur de l'onduleur — pas d'électricien, pas de travaux de toiture.",
+          "<strong>Rentabilité rapide.</strong> Un kit de base de 600 à 800 W coûte généralement quelques centaines d'euros.",
+          "<strong>Sans cloud propriétaire.</strong> Home Assistant lit directement la plupart des onduleurs et batteries.",
+          "<strong>De plus en plus légal.</strong> Six pays de l'UE et huit États américains disposent désormais de cadres dédiés."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "La pile technique de base",
+        "items": [
+          "<strong>Panneau</strong> — un ou deux modules, généralement 400 à 800 W au total, montés sur une rambarde, un mur ou un support au sol.",
+          "<strong>Micro-onduleur</strong> — convertit le courant continu du panneau en courant alternatif compatible réseau, généralement plafonné à 600–800 W.",
+          "<strong>Batterie (optionnelle)</strong> — stocke le surplus de production pour le soir au lieu de le perdre sur le réseau.",
+          "<strong>Home Assistant</strong> — lit l'onduleur ou la batterie en local via Modbus, MQTT ou une API locale pour un suivi sans cloud."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "Le standard 800 W dans l'UE",
+        "columns": [
+          "Pays",
+          "Mécanisme",
+          "Enregistrement"
+        ],
+        "rows": [
+          {
+            "Pays": "France, Autriche, Belgique, Pays-Bas",
+            "Mécanisme": "Plafond de 800 W, injection autorisée",
+            "Enregistrement": "Simple notification"
+          },
+          {
+            "Pays": "Allemagne",
+            "Mécanisme": "Plafond de 800 W (DIN VDE V 0126-95), injection autorisée",
+            "Enregistrement": "Notification via le Marktstammdatenregister"
+          },
+          {
+            "Pays": "Portugal",
+            "Mécanisme": "Exemption à 700 W, sans injection",
+            "Enregistrement": "Aucun en dessous de 700 W"
+          },
+          {
+            "Pays": "Grèce (projet)",
+            "Mécanisme": "Plafond de 800 W, zéro injection — aucune injection possible",
+            "Enregistrement": "Via la nouvelle plateforme DEDDIE/HEDNO"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Batteries : en avez-vous besoin ?",
+        "items": [
+          "Une batterie n'est rentable que si vous décalez réellement la production vers des heures où vous achèteriez sinon de l'électricité du réseau.",
+          "Dans les marchés à injection autorisée (France, Autriche, Belgique, Pays-Bas, Allemagne), la batterie est optionnelle — le surplus peut être injecté à la place.",
+          "Dans les marchés à zéro injection (le projet grec), une batterie est le seul moyen d'utiliser une électricité qui ne peut pas être injectée.",
+          "Les systèmes de balcon équipés de batterie sortent du régime simplifié allemand et nécessitent toujours l'enregistrement complet auprès du gestionnaire de réseau."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Suivi sans passer par le cloud",
+        "items": [
+          "La plupart des marques — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure — font par défaut transiter les données de production par leur propre application et serveur cloud.",
+          "Home Assistant peut lire la plupart de ces onduleurs et batteries localement via Modbus, MQTT ou une API locale à la place.",
+          "Le suivi local signifie que les données de production restent sur votre propre réseau — même si l'application du fabricant disparaît."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "Aperçu du statut légal",
+        "columns": [
+          "Région",
+          "Statut"
+        ],
+        "rows": [
+          {
+            "Région": "UE (FR/AT/BE/NL/DE/PT)",
+            "Statut": "Codifié, simple notification ou exemption sous un certain seuil"
+          },
+          {
+            "Région": "États-Unis",
+            "Statut": "8 États avec des lois dédiées depuis 2025 ; aucun cadre fédéral"
+          },
+          {
+            "Région": "Brésil, Japon",
+            "Statut": "Pas encore de cadre spécifique au branchement direct — règles générales ou absence de règles"
+          },
+          {
+            "Région": "Émirats arabes unis, Arabie saoudite",
+            "Statut": "Naissant — les Émirats exigent un NOC de l'opérateur quelle que soit la taille ; l'ECRA saoudienne fixe un seuil de 1 kW"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "Choisir un kit : ce qui compte vraiment",
+        "items": [
+          "Le plafond de puissance de l'onduleur doit correspondre à la limite légale de votre pays — pas seulement à la puissance nominale du panneau.",
+          "Vérifiez la prise en charge du suivi local (Modbus, MQTT ou API locale) avant l'achat si éviter un cloud propriétaire vous importe.",
+          "Le type de fixation (rambarde, mur, sol, toit plat) détermine les accessoires réellement nécessaires.",
+          "La compatibilité avec une batterie varie selon la marque — vérifiez-la plutôt que de supposer pouvoir en ajouter une plus tard.",
+          "Confirmez le processus d'enregistrement de votre marché spécifique avant d'installer, même pour de petits kits."
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "Questions fréquentes",
+        "faqs": [
+          {
+            "q": "Qu'est-ce que le solaire de balcon (Balkonkraftwerk) ?",
+            "a": "Un système solaire enfichable — généralement un ou deux panneaux alimentant un petit micro-onduleur — qui se branche directement sur une prise domestique ou un connecteur dédié, produisant de l'électricité pour l'autoconsommation sans installation sur toiture ni électricien dans la plupart des marchés."
+          },
+          {
+            "q": "Ai-je besoin d'un permis pour installer du solaire de balcon ?",
+            "a": "Cela dépend du pays. La France, l'Autriche, la Belgique, les Pays-Bas, l'Allemagne et le Portugal utilisent une simple notification ; plusieurs autres marchés n'ont pas encore de cadre dédié."
+          },
+          {
+            "q": "Puis-je surveiller mon système sans l'application cloud du fabricant ?",
+            "a": "Oui, pour la plupart des grandes marques — les onduleurs et batteries peuvent être lus localement via Modbus, MQTT ou une API locale et intégrés à Home Assistant."
+          },
+          {
+            "q": "Le solaire de balcon est-il légal là où je vis ?",
+            "a": "Consultez le guide pays par pays de ce cluster — le statut légal va du cadre pleinement codifié à la simple notification, en passant par des marchés naissants ou non réglementés, jusqu'à une réglementation État par État."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Points clés à retenir",
+        "items": [
+          "Le solaire de balcon est un système prêt à brancher panneau + micro-onduleur pour l'autoconsommation — sans travaux de toiture ni électricien dans la plupart des marchés.",
+          "Les cadres légaux convergent autour d'un plafond de 800 W, mais le mécanisme diffère — certains autorisent l'injection, le projet grec non.",
+          "Une batterie est optionnelle là où l'injection est autorisée, mais essentielle là où elle ne l'est pas.",
+          "La plupart des grandes marques peuvent être surveillées localement via Home Assistant plutôt que via une application cloud propriétaire."
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "Découvrez le guide complet",
+        "body": "33 guides approfondis couvrent les comparatifs d'achat de kits et de batteries, la légalité pays par pays, l'installation et l'enregistrement, et les configurations de suivi sans cloud.",
+        "href": "https://www.promptquorum.com/fr/balcony-solar",
+        "cta": "Voir les 33 guides"
+      }
+    ]
+  },
+  ja: {
+    "title": "バルコニーソーラー：屋根の設置業者なしで自家発電",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "バルコニーソーラー：屋根の設置業者なしで自家発電",
+        "subtitle": "バルコニーソーラー（Balkonkraftwerk）は、パネル・マイクロインバーター・コンセントで構成されるプラグイン式システムです。屋根工事も電気工事士も、届出制が主流の市場では許可も不要で、自家消費用の電力を作れます。",
+        "link": "https://www.promptquorum.com/ja/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "バルコニーソーラーを選ぶ理由",
+        "items": [
+          "<strong>設置業者不要。</strong>コンセントやインバーター自体のコネクタに差し込むだけ——電気工事士も屋根工事も不要です。",
+          "<strong>早い投資回収。</strong>基本的な600〜800Wのキットは数百ユーロ・ドル程度です。",
+          "<strong>ベンダークラウド不要。</strong>Home Assistantは主要なインバーターやバッテリーの多くを直接読み取れます。",
+          "<strong>合法化が進行中。</strong>EU6カ国と米国8州がすでに専用の枠組みを整備しています。"
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "コアスタック",
+        "items": [
+          "<strong>パネル</strong> — 1〜2枚のモジュールで合計400〜800W程度、手すり・壁・地面スタンドに設置。",
+          "<strong>マイクロインバーター</strong> — パネルの直流出力を系統対応の交流に変換、通常600〜800Wに制限。",
+          "<strong>バッテリー（任意）</strong> — 余剰電力を系統に流す代わりに夜間用に蓄える。",
+          "<strong>Home Assistant</strong> — Modbus・MQTT・ローカルAPI経由でインバーターやバッテリーをローカルに読み取り、クラウド不要のモニタリングを実現。"
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "EUで広がる800W標準",
+        "columns": [
+          "国",
+          "仕組み",
+          "登録"
+        ],
+        "rows": [
+          {
+            "国": "フランス・オーストリア・ベルギー・オランダ",
+            "仕組み": "800W上限、系統への逆潮流可",
+            "登録": "届出のみ"
+          },
+          {
+            "国": "ドイツ",
+            "仕組み": "800W上限（DIN VDE V 0126-95）、逆潮流可",
+            "登録": "Marktstammdatenregisterへの届出"
+          },
+          {
+            "国": "ポルトガル",
+            "仕組み": "700W免除、逆潮流不可",
+            "登録": "700W未満は登録不要"
+          },
+          {
+            "国": "ギリシャ（草案）",
+            "仕組み": "800W上限、ゼロフィードイン——逆潮流は一切不可",
+            "登録": "新DEDDIE/HEDNOプラットフォーム経由"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "バッテリーは必要か？",
+        "items": [
+          "バッテリーは、本来なら系統電力を購入する時間帯に発電を実質的にシフトできる場合にのみ元が取れます。",
+          "逆潮流が認められている市場（フランス・オーストリア・ベルギー・オランダ・ドイツ）では、バッテリーは任意——余剰は代わりに逆潮流できます。",
+          "ゼロフィードイン市場（ギリシャの草案）では、逆潮流できない電力を活用する唯一の方法がバッテリーです。",
+          "ドイツではバッテリー付きバルコニーシステムは簡易制度の対象外となり、系統事業者への正式な登録が引き続き必要です。"
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "クラウドを使わないモニタリング",
+        "items": [
+          "Hoymiles・Deye・APsystems・EcoFlow・Anker・Zendureなど、ほとんどのブランドは発電データを自社アプリとクラウドサーバー経由で送る仕様がデフォルトです。",
+          "Home Assistantなら、これらのインバーターやバッテリーの多くをModbus・MQTT・ローカルAPI経由でローカルに読み取れます。",
+          "ローカルモニタリングなら、発電データは自分のネットワーク内に留まります——メーカーのアプリが提供終了になっても影響を受けません。"
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "法的状況のスナップショット",
+        "columns": [
+          "地域",
+          "状況"
+        ],
+        "rows": [
+          {
+            "地域": "EU（仏・墺・白・蘭・独・葡）",
+            "状況": "成文化済み、届出のみまたは一定出力未満は免除"
+          },
+          {
+            "地域": "米国",
+            "状況": "2025年以降8州が専用法を制定。連邦レベルの枠組みはなし"
+          },
+          {
+            "地域": "ブラジル・日本",
+            "状況": "プラグイン専用の枠組みはまだなし——一般規定または無規定"
+          },
+          {
+            "地域": "UAE・サウジアラビア",
+            "状況": "黎明期——UAEは規模を問わず電力会社のNOCが必要、サウジのECRAは1kWの下限を設定"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "キット選びで本当に重要なこと",
+        "items": [
+          "インバーターの出力上限は、パネルの定格出力だけでなく自国の法的上限に合わせる必要があります。",
+          "ベンダークラウドを避けたいなら、購入前にローカルモニタリング対応（Modbus・MQTT・ローカルAPI）を確認しましょう。",
+          "取り付け方式（手すり・壁・地面・陸屋根）によって、実際に必要な部材が決まります。",
+          "バッテリーの互換性はブランドによって異なります——後から追加できると決めつけず事前に確認を。",
+          "小型キットであっても、設置前に自国市場の登録手続きを確認しましょう。"
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "よくある質問",
+        "faqs": [
+          {
+            "q": "バルコニーソーラー（Balkonkraftwerk）とは何ですか？",
+            "a": "通常1〜2枚のパネルと小型マイクロインバーターで構成され、家庭用コンセントや専用コネクタに直接接続できるプラグイン式の太陽光発電システムです。ほとんどの市場で屋根工事や電気工事士なしに自家消費用の電力を発電できます。"
+          },
+          {
+            "q": "バルコニーソーラーの設置に許可は必要ですか？",
+            "a": "国によって異なります。フランス・オーストリア・ベルギー・オランダ・ドイツ・ポルトガルは簡易な届出のみで済みます。専用の枠組みがまだない市場も複数あります。"
+          },
+          {
+            "q": "メーカーのクラウドアプリを使わずにシステムを監視できますか？",
+            "a": "はい、主要ブランドのほとんどで可能です——インバーターやバッテリーはModbus・MQTT・ローカルAPI経由でローカルに読み取り、Home Assistantに取り込めます。"
+          },
+          {
+            "q": "自分の住んでいる場所でバルコニーソーラーは合法ですか？",
+            "a": "このクラスター内の国別ガイドをご確認ください——法的状況は完全に成文化されたものから届出制のみ、未整備・未対応、州ごとに異なるものまで多岐にわたります。"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "重要ポイント",
+        "items": [
+          "バルコニーソーラーは自家消費用のプラグイン式パネル＋マイクロインバーターシステムで、ほとんどの市場で屋根工事や電気工事士は不要です。",
+          "法制度は800W上限に向けて収束しつつありますが、仕組みは国によって異なります——逆潮流を認める国もあれば、ギリシャの草案のように認めない国もあります。",
+          "逆潮流が認められている場所ではバッテリーは任意ですが、認められていない場所では不可欠です。",
+          "ほとんどの主要ブランドは、ベンダーのクラウドアプリではなくHome Assistantでローカルに監視できます。"
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "完全ガイドを見る",
+        "body": "33本の詳細ガイドで、キットとバッテリーの購入比較、国別の合法性、設置と登録、クラウド不要のモニタリング構成までを解説しています。",
+        "href": "https://www.promptquorum.com/ja/balcony-solar",
+        "cta": "全33本のガイドを見る"
+      }
+    ]
+  },
+  zh: {
+    "title": "阳台光伏：无需屋顶安装工，自行发电",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "阳台光伏：无需屋顶安装工，自行发电",
+        "subtitle": "阳台光伏（Balkonkraftwerk）是一种即插即用系统——一块面板、一个微型逆变器和一个插座——让您在无需屋顶安装、无需电工、且在大多数仅需备案的市场也无需许可的情况下，为自家用电发电。",
+        "link": "https://www.promptquorum.com/zh/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "为什么选择阳台光伏",
+        "items": [
+          "<strong>无需安装工。</strong>直接插入插座或逆变器自带的接口——无需电工，无需屋顶施工。",
+          "<strong>回本快。</strong>一套基础的600–800W套件通常只需几百欧元/美元。",
+          "<strong>无需厂商云端。</strong>Home Assistant可直接读取大多数逆变器和电池。",
+          "<strong>合法性持续提升。</strong>欧盟六国和美国八个州已出台专门框架。"
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "核心技术栈",
+        "items": [
+          "<strong>面板</strong> — 一到两块面板，合计通常为400–800W，安装在栏杆、墙面或地面支架上。",
+          "<strong>微型逆变器</strong> — 将面板的直流输出转换为符合电网标准的交流电，通常限制在600–800W。",
+          "<strong>电池（可选）</strong> — 储存多余发电量供晚间使用，而非白白输送给电网。",
+          "<strong>Home Assistant</strong> — 通过Modbus、MQTT或本地API本地读取逆变器或电池数据，实现无云端监控。"
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "欧盟趋同的800W标准",
+        "columns": [
+          "国家",
+          "机制",
+          "登记"
+        ],
+        "rows": [
+          {
+            "国家": "法国、奥地利、比利时、荷兰",
+            "机制": "800W上限，允许并网",
+            "登记": "仅需备案"
+          },
+          {
+            "国家": "德国",
+            "机制": "800W上限（DIN VDE V 0126-95），允许并网",
+            "登记": "通过Marktstammdatenregister备案"
+          },
+          {
+            "国家": "葡萄牙",
+            "机制": "700W豁免，不并网",
+            "登记": "700W以下无需登记"
+          },
+          {
+            "国家": "希腊（草案）",
+            "机制": "800W上限，零馈网——完全不允许并网",
+            "登记": "通过新的DEDDIE/HEDNO平台"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "电池：您需要吗？",
+        "items": [
+          "只有当您能真正把发电量转移到本来需要购买电网电力的时段，电池才划算。",
+          "在允许并网的市场（法国、奥地利、比利时、荷兰、德国），电池是可选的——多余电量可以直接并网。",
+          "在零馈网市场（希腊的草案框架）中，电池是利用无法并网电力的唯一方式。",
+          "在德国，配备电池的阳台系统不适用简化制度，仍需完整的电网运营商登记。"
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "无需云端的监控",
+        "items": [
+          "Hoymiles、Deye、APsystems、EcoFlow、Anker、Zendure等大多数品牌默认会将发电数据经由自家App和云端服务器传输。",
+          "Home Assistant可以通过Modbus、MQTT或本地API本地读取其中大多数逆变器和电池。",
+          "本地监控意味着发电数据留在您自己的网络内——即使厂商App下线也不受影响。"
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "法律状态一览",
+        "columns": [
+          "地区",
+          "状态"
+        ],
+        "rows": [
+          {
+            "地区": "欧盟（法/奥/比/荷/德/葡）",
+            "状态": "已成文，仅需备案或低于某功率阈值可豁免"
+          },
+          {
+            "地区": "美国",
+            "状态": "2025年以来已有8个州出台专门法律；无联邦框架"
+          },
+          {
+            "地区": "巴西、日本",
+            "状态": "尚无专门的插入式框架——适用一般规定或无规定"
+          },
+          {
+            "地区": "阿联酋、沙特阿拉伯",
+            "状态": "尚属新兴阶段——阿联酋不论规模均需电力公司NOC；沙特ECRA设有1kW下限"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "选购套件真正该关注什么",
+        "items": [
+          "逆变器功率上限须符合所在国的法定限制——而不仅仅是面板的额定功率。",
+          "如果您在意避开厂商云端，购买前请确认本地监控支持（Modbus、MQTT或本地API）。",
+          "安装方式（栏杆、墙面、地面、平屋顶）决定了您实际需要哪些配件。",
+          "电池兼容性因品牌而异——请提前确认，不要假设日后可以加装。",
+          "即使是小型套件，安装前也请确认所在市场的具体登记流程。"
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "常见问题",
+        "faqs": [
+          {
+            "q": "什么是阳台光伏（Balkonkraftwerk）？",
+            "a": "一种插入式太阳能系统——通常由一到两块面板配一个小型微型逆变器组成——可直接接入家用插座或专用接口，在大多数市场无需屋顶安装或电工即可为自家用电发电。"
+          },
+          {
+            "q": "安装阳台光伏需要许可吗？",
+            "a": "这取决于所在国家。法国、奥地利、比利时、荷兰、德国和葡萄牙仅需简单备案；其他一些市场尚无专门框架。"
+          },
+          {
+            "q": "我能否在不使用厂商云端App的情况下监控系统？",
+            "a": "可以，大多数主流品牌都支持——逆变器与电池均可通过Modbus、MQTT或本地API本地读取，并接入Home Assistant。"
+          },
+          {
+            "q": "阳台光伏在我所在地是否合法？",
+            "a": "请查阅本专题内的各国指南——法律状态从完全成文到仅需备案，再到尚属新兴或无明确规定，以及按州各异，情况各不相同。"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "核心要点",
+        "items": [
+          "阳台光伏是一种用于自家消费的即插即用面板+微型逆变器系统——在大多数市场无需屋顶施工或电工。",
+          "各国法律框架正趋同于800W上限，但机制有所不同——有些允许并网，希腊的草案则不允许。",
+          "在允许并网的地方电池是可选的，但在不允许的地方则是必需的。",
+          "大多数主流品牌都可以通过Home Assistant本地监控，而无需使用厂商的云端App。"
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "探索完整指南",
+        "body": "33篇深度指南涵盖套件与电池购买对比、各国合法性、安装与注册，以及无云端监控方案。",
+        "href": "https://www.promptquorum.com/zh/balcony-solar",
+        "cta": "查看全部33篇指南"
+      }
+    ]
+  },
+  es: {
+    "title": "Energía solar de balcón: genera tu propia electricidad sin instalador de tejado",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "Energía solar de balcón: genera tu propia electricidad sin instalador de tejado",
+        "subtitle": "La energía solar de balcón (Balkonkraftwerk) es un sistema listo para enchufar — un panel, un microinversor y un enchufe — que te permite producir electricidad para autoconsumo sin instalación en tejado, sin electricista ni permiso en la mayoría de mercados de simple notificación.",
+        "link": "https://www.promptquorum.com/es/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "Por qué la energía solar de balcón",
+        "items": [
+          "<strong>Sin instalador.</strong> Conéctalo a un enchufe o al propio conector del inversor — sin electricista, sin obras en el tejado.",
+          "<strong>Amortización rápida.</strong> Un kit básico de 600–800 W suele costar unos pocos cientos de euros o dólares.",
+          "<strong>Sin nube del fabricante.</strong> Home Assistant lee directamente la mayoría de inversores y baterías.",
+          "<strong>Cada vez más legal.</strong> Seis países de la UE y ocho estados de EE. UU. ya cuentan con marcos dedicados."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "La pila básica",
+        "items": [
+          "<strong>Panel</strong> — uno o dos módulos, normalmente 400–800 W en total, montados en una barandilla, pared o soporte de suelo.",
+          "<strong>Microinversor</strong> — convierte la salida de CC del panel en CA compatible con la red, normalmente limitada a 600–800 W.",
+          "<strong>Batería (opcional)</strong> — almacena el excedente de producción para usarlo por la noche en lugar de perderlo en la red.",
+          "<strong>Home Assistant</strong> — lee el inversor o la batería localmente vía Modbus, MQTT o una API local para una monitorización sin nube."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "El estándar de 800 W en la UE",
+        "columns": [
+          "País",
+          "Mecanismo",
+          "Registro"
+        ],
+        "rows": [
+          {
+            "País": "Francia, Austria, Bélgica, Países Bajos",
+            "Mecanismo": "Límite de 800 W, inyección permitida",
+            "Registro": "Solo notificación"
+          },
+          {
+            "País": "Alemania",
+            "Mecanismo": "Límite de 800 W (DIN VDE V 0126-95), inyección permitida",
+            "Registro": "Notificación vía Marktstammdatenregister"
+          },
+          {
+            "País": "Portugal",
+            "Mecanismo": "Exención de 700 W, sin inyección",
+            "Registro": "Ninguno por debajo de 700 W"
+          },
+          {
+            "País": "Grecia (borrador)",
+            "Mecanismo": "Límite de 800 W, cero inyección — ninguna inyección permitida",
+            "Registro": "Vía la nueva plataforma DEDDIE/HEDNO"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Baterías: ¿las necesitas?",
+        "items": [
+          "Una batería solo se amortiza si realmente desplazas la producción a horas en las que de otro modo comprarías electricidad de la red.",
+          "En mercados con inyección permitida (Francia, Austria, Bélgica, Países Bajos, Alemania), la batería es opcional — el excedente puede inyectarse en su lugar.",
+          "En mercados de cero inyección (el borrador griego), una batería es la única forma de aprovechar la electricidad que no se puede inyectar.",
+          "Los sistemas de balcón con batería quedan fuera del régimen simplificado alemán y siguen necesitando el registro completo ante el operador de red."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Monitorización sin la nube",
+        "items": [
+          "La mayoría de las marcas — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure — enrutan por defecto los datos de producción a través de su propia app y servidor en la nube.",
+          "Home Assistant puede leer la mayoría de estos inversores y baterías localmente vía Modbus, MQTT o una API local en su lugar.",
+          "La monitorización local significa que los datos de producción se quedan en tu propia red — incluso si la app del fabricante desaparece."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "Panorama del estado legal",
+        "columns": [
+          "Región",
+          "Estado"
+        ],
+        "rows": [
+          {
+            "Región": "UE (FR/AT/BE/NL/DE/PT)",
+            "Estado": "Codificado, solo notificación o exención por debajo de un umbral de potencia"
+          },
+          {
+            "Región": "EE. UU.",
+            "Estado": "8 estados con leyes dedicadas desde 2025; sin marco federal"
+          },
+          {
+            "Región": "Brasil, Japón",
+            "Estado": "Sin marco específico para enchufables todavía — se aplican reglas generales o ninguna"
+          },
+          {
+            "Región": "Emiratos Árabes Unidos, Arabia Saudita",
+            "Estado": "Incipiente — los EAU exigen un NOC de la empresa de servicios sin importar el tamaño; la ECRA saudí fija un umbral de 1 kW"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "Elegir un kit: lo que realmente importa",
+        "items": [
+          "El límite de potencia del inversor debe ajustarse al límite legal de tu país — no solo a la potencia nominal del panel.",
+          "Comprueba el soporte de monitorización local (Modbus, MQTT o API local) antes de comprar si te importa evitar la nube del fabricante.",
+          "El tipo de montaje (barandilla, pared, suelo, tejado plano) determina qué accesorios necesitas realmente.",
+          "La compatibilidad con baterías varía según la marca — confírmalo antes de asumir que podrás añadir una más adelante.",
+          "Confirma el proceso de registro de tu mercado específico antes de instalar, incluso para kits pequeños."
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "Preguntas frecuentes",
+        "faqs": [
+          {
+            "q": "¿Qué es la energía solar de balcón (Balkonkraftwerk)?",
+            "a": "Un sistema solar enchufable — normalmente uno o dos paneles alimentando un pequeño microinversor — que se conecta directamente a un enchufe doméstico o a un conector dedicado, generando electricidad para autoconsumo sin instalación en tejado ni electricista en la mayoría de mercados."
+          },
+          {
+            "q": "¿Necesito un permiso para instalar energía solar de balcón?",
+            "a": "Depende del país. Francia, Austria, Bélgica, los Países Bajos, Alemania y Portugal usan solo un registro por notificación; varios otros mercados aún no tienen un marco dedicado."
+          },
+          {
+            "q": "¿Puedo monitorizar mi sistema sin la app en la nube del fabricante?",
+            "a": "Sí, para la mayoría de las marcas principales — los inversores y baterías pueden leerse localmente vía Modbus, MQTT o una API local e integrarse en Home Assistant."
+          },
+          {
+            "q": "¿Es legal la energía solar de balcón donde vivo?",
+            "a": "Consulta la guía país por país de este clúster — el estado legal va desde plenamente codificado hasta simple notificación, pasando por mercados incipientes o sin regular, hasta regulación estado por estado."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Puntos clave",
+        "items": [
+          "La energía solar de balcón es un sistema enchufable de panel + microinversor para autoconsumo — sin obras en el tejado ni electricista en la mayoría de mercados.",
+          "Los marcos legales convergen hacia un límite de 800 W, pero el mecanismo difiere — algunos permiten la inyección, el borrador griego no.",
+          "Una batería es opcional donde la inyección está permitida, pero esencial donde no lo está.",
+          "La mayoría de las marcas principales pueden monitorizarse localmente vía Home Assistant en lugar de una app en la nube del fabricante."
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "Explora la guía completa",
+        "body": "33 guías detalladas cubren comparativas de compra de kits y baterías, legalidad país por país, instalación y registro, y configuraciones de monitorización sin nube.",
+        "href": "https://www.promptquorum.com/es/balcony-solar",
+        "cta": "Ver las 33 guías"
+      }
+    ]
+  },
+  pt: {
+    "title": "Energia solar de varanda: gere sua própria energia sem instalador de telhado",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "Energia solar de varanda: gere sua própria energia sem instalador de telhado",
+        "subtitle": "A energia solar de varanda (Balkonkraftwerk) é um sistema plug-and-play — um painel, um microinversor e uma tomada — que permite produzir eletricidade para autoconsumo sem instalação no telhado, sem eletricista, nem licença na maioria dos mercados que exigem apenas notificação.",
+        "link": "https://www.promptquorum.com/pt/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "Por que energia solar de varanda",
+        "items": [
+          "<strong>Sem instalador.</strong> Basta conectar em uma tomada ou no próprio conector do inversor — sem eletricista, sem obra no telhado.",
+          "<strong>Retorno rápido.</strong> Um kit básico de 600–800 W geralmente custa algumas centenas de dólares ou euros.",
+          "<strong>Sem nuvem do fabricante.</strong> O Home Assistant lê diretamente a maioria dos inversores e baterias.",
+          "<strong>Cada vez mais legal.</strong> Seis países da UE e oito estados dos EUA já têm marcos próprios."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "A pilha central",
+        "items": [
+          "<strong>Painel</strong> — um ou dois módulos, geralmente 400–800 W no total, montados em uma grade, parede ou suporte de solo.",
+          "<strong>Microinversor</strong> — converte a saída CC do painel em CA compatível com a rede, geralmente limitado a 600–800 W.",
+          "<strong>Bateria (opcional)</strong> — armazena o excedente de produção para uso à noite em vez de perdê-lo para a rede.",
+          "<strong>Home Assistant</strong> — lê o inversor ou a bateria localmente via Modbus, MQTT ou uma API local para monitoramento sem nuvem."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "O padrão de 800 W na UE",
+        "columns": [
+          "País",
+          "Mecanismo",
+          "Registro"
+        ],
+        "rows": [
+          {
+            "País": "França, Áustria, Bélgica, Países Baixos",
+            "Mecanismo": "Limite de 800 W, injeção permitida",
+            "Registro": "Apenas notificação"
+          },
+          {
+            "País": "Alemanha",
+            "Mecanismo": "Limite de 800 W (DIN VDE V 0126-95), injeção permitida",
+            "Registro": "Notificação via Marktstammdatenregister"
+          },
+          {
+            "País": "Portugal",
+            "Mecanismo": "Isenção de 700 W, sem injeção",
+            "Registro": "Nenhum abaixo de 700 W"
+          },
+          {
+            "País": "Grécia (rascunho)",
+            "Mecanismo": "Limite de 800 W, zero injeção — nenhuma injeção permitida",
+            "Registro": "Via nova plataforma DEDDIE/HEDNO"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Baterias: você precisa de uma?",
+        "items": [
+          "Uma bateria só se paga se você realmente deslocar a produção para horários em que compraria energia da rede.",
+          "Em mercados com injeção permitida (França, Áustria, Bélgica, Países Baixos, Alemanha), a bateria é opcional — o excedente pode ser injetado em vez disso.",
+          "Em mercados de zero injeção (o rascunho grego), uma bateria é a única forma de aproveitar energia que não pode ser injetada.",
+          "Sistemas de varanda com bateria ficam fora do regime simplificado alemão e ainda precisam do registro completo junto ao operador de rede."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Monitoramento sem a nuvem",
+        "items": [
+          "A maioria das marcas — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure — roteia por padrão os dados de produção pelo próprio aplicativo e servidor na nuvem.",
+          "O Home Assistant pode ler a maioria desses inversores e baterias localmente via Modbus, MQTT ou uma API local, em vez disso.",
+          "Monitoramento local significa que os dados de produção ficam na sua própria rede — mesmo que o aplicativo do fabricante deixe de existir."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "Panorama do status legal",
+        "columns": [
+          "Região",
+          "Status"
+        ],
+        "rows": [
+          {
+            "Região": "UE (FR/AT/BE/NL/DE/PT)",
+            "Status": "Codificado, apenas notificação ou isento abaixo de um limite de potência"
+          },
+          {
+            "Região": "EUA",
+            "Status": "8 estados com leis próprias desde 2025; sem marco federal"
+          },
+          {
+            "Região": "Brasil, Japão",
+            "Status": "Ainda sem marco específico para plug-and-play — regras gerais ou nenhuma regra"
+          },
+          {
+            "Região": "Emirados Árabes Unidos, Arábia Saudita",
+            "Status": "Incipiente — os EAU exigem NOC da concessionária independente do tamanho; a ECRA saudita define um piso de 1 kW"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "Escolhendo um kit: o que realmente importa",
+        "items": [
+          "O limite de potência do inversor deve corresponder ao limite legal do seu país — não apenas à potência nominal do painel.",
+          "Verifique o suporte a monitoramento local (Modbus, MQTT ou API local) antes de comprar, se evitar a nuvem do fabricante for importante para você.",
+          "O tipo de fixação (grade, parede, solo, telhado plano) determina quais acessórios você realmente precisa.",
+          "A compatibilidade com baterias varia por marca — confirme antes de supor que poderá adicionar uma depois.",
+          "Confirme o processo de registro do seu mercado específico antes de instalar, mesmo para kits pequenos."
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "Perguntas frequentes",
+        "faqs": [
+          {
+            "q": "O que é energia solar de varanda (Balkonkraftwerk)?",
+            "a": "Um sistema solar plug-and-play — geralmente um ou dois painéis alimentando um pequeno microinversor — que se conecta diretamente a uma tomada residencial ou a um conector dedicado, gerando energia para autoconsumo sem instalação no telhado nem eletricista na maioria dos mercados."
+          },
+          {
+            "q": "Preciso de licença para instalar energia solar de varanda?",
+            "a": "Depende do país. França, Áustria, Bélgica, Países Baixos, Alemanha e Portugal usam apenas registro por notificação; vários outros mercados ainda não têm um marco dedicado."
+          },
+          {
+            "q": "Posso monitorar meu sistema sem o aplicativo na nuvem do fabricante?",
+            "a": "Sim, para a maioria das grandes marcas — inversores e baterias podem ser lidos localmente via Modbus, MQTT ou uma API local e integrados ao Home Assistant."
+          },
+          {
+            "q": "A energia solar de varanda é legal onde eu moro?",
+            "a": "Consulte o guia país por país deste cluster — o status legal varia de totalmente codificado a apenas notificação, passando por mercados incipientes ou sem regulamentação, até regulamentação estado a estado."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "Principais conclusões",
+        "items": [
+          "Energia solar de varanda é um sistema plug-and-play de painel + microinversor para autoconsumo — sem obra no telhado nem eletricista na maioria dos mercados.",
+          "Os marcos legais estão convergindo para um limite de 800 W, mas o mecanismo difere — alguns permitem injeção, o rascunho grego não.",
+          "Uma bateria é opcional onde a injeção é permitida, mas essencial onde não é.",
+          "A maioria das grandes marcas pode ser monitorada localmente via Home Assistant, em vez de um aplicativo na nuvem do fabricante."
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "Explore o guia completo",
+        "body": "33 guias detalhados cobrem comparativos de compra de kits e baterias, legalidade país por país, instalação e registro, e configurações de monitoramento sem nuvem.",
+        "href": "https://www.promptquorum.com/pt/balcony-solar",
+        "cta": "Ver todos os 33 guias"
+      }
+    ]
+  },
+  ar: {
+    "title": "الطاقة الشمسية للشرفة: أنتج كهرباءك الخاصة دون فني تركيب أسطح",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "الطاقة الشمسية للشرفة: أنتج كهرباءك الخاصة دون فني تركيب أسطح",
+        "subtitle": "الطاقة الشمسية للشرفة (Balkonkraftwerk) هي نظام جاهز للتوصيل — لوح شمسي وعاكس دقيق ومقبس كهربائي — يتيح لك إنتاج الكهرباء للاستهلاك الذاتي دون تركيب على السطح أو فني كهربائي أو تصريح في معظم الأسواق التي تكتفي بالإخطار.",
+        "link": "https://www.promptquorum.com/ar/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "لماذا الطاقة الشمسية للشرفة",
+        "items": [
+          "<strong>لا حاجة لفني تركيب.</strong> وصّله بمقبس كهربائي أو موصل العاكس نفسه — دون كهربائي ودون أعمال في السطح.",
+          "<strong>عائد سريع.</strong> يكلف الطقم الأساسي بقدرة 600–800 واط عادةً بضع مئات من اليورو أو الدولار.",
+          "<strong>دون سحابة الشركة المصنعة.</strong> يقرأ Home Assistant معظم العواكس والبطاريات مباشرة.",
+          "<strong>قانونية بشكل متزايد.</strong> ست دول أوروبية وثماني ولايات أمريكية لديها الآن أطر مخصصة."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "المنظومة الأساسية",
+        "items": [
+          "<strong>اللوح الشمسي</strong> — لوح أو لوحان، بقدرة إجمالية عادةً 400–800 واط، يُركّبان على درابزين أو جدار أو حامل أرضي.",
+          "<strong>العاكس الدقيق</strong> — يحوّل تيار اللوح المستمر إلى تيار متردد متوافق مع الشبكة، عادةً بحد أقصى 600–800 واط.",
+          "<strong>البطارية (اختيارية)</strong> — تخزّن الإنتاج الفائض للاستخدام المسائي بدلاً من فقدانه في الشبكة.",
+          "<strong>Home Assistant</strong> — يقرأ العاكس أو البطارية محليًا عبر Modbus أو MQTT أو واجهة برمجية محلية لمراقبة دون سحابة."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "معيار 800 واط المتقارب في الاتحاد الأوروبي",
+        "columns": [
+          "الدولة",
+          "الآلية",
+          "التسجيل"
+        ],
+        "rows": [
+          {
+            "الدولة": "فرنسا والنمسا وبلجيكا وهولندا",
+            "الآلية": "حد 800 واط، مع السماح بالتغذية العكسية",
+            "التسجيل": "إخطار فقط"
+          },
+          {
+            "الدولة": "ألمانيا",
+            "الآلية": "حد 800 واط (DIN VDE V 0126-95)، مع السماح بالتغذية العكسية",
+            "التسجيل": "إخطار عبر Marktstammdatenregister"
+          },
+          {
+            "الدولة": "البرتغال",
+            "الآلية": "إعفاء عند 700 واط، دون تغذية عكسية",
+            "التسجيل": "لا تسجيل دون 700 واط"
+          },
+          {
+            "الدولة": "اليونان (مسودة)",
+            "الآلية": "حد 800 واط، بلا تغذية عكسية على الإطلاق",
+            "التسجيل": "عبر منصة DEDDIE/HEDNO الجديدة"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "البطاريات: هل تحتاج إليها؟",
+        "items": [
+          "لا تُجدي البطارية نفعًا اقتصاديًا إلا إذا نقلت فعليًا استهلاكك إلى ساعات كنت ستشتري فيها كهرباء من الشبكة.",
+          "في الأسواق التي تسمح بالتغذية العكسية (فرنسا والنمسا وبلجيكا وهولندا وألمانيا)، البطارية اختيارية — يمكن تغذية الفائض إلى الشبكة بدلاً منها.",
+          "في أسواق عدم التغذية العكسية (مسودة اليونان)، البطارية هي الطريقة الوحيدة للاستفادة من الكهرباء التي لا يمكن تغذيتها للشبكة.",
+          "تخرج أنظمة الشرفة المزودة ببطارية عن النظام المبسط في ألمانيا وتظل بحاجة إلى التسجيل الكامل لدى مشغل الشبكة."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "المراقبة دون سحابة",
+        "items": [
+          "تُوجّه معظم العلامات التجارية — Hoymiles وDeye وAPsystems وEcoFlow وAnker وZendure — بيانات الإنتاج افتراضيًا عبر تطبيقها وخادمها السحابي الخاص.",
+          "يمكن لـ Home Assistant قراءة معظم هذه العواكس والبطاريات محليًا عبر Modbus أو MQTT أو واجهة برمجية محلية بدلاً من ذلك.",
+          "المراقبة المحلية تعني أن بيانات الإنتاج تبقى داخل شبكتك الخاصة — حتى لو اختفى تطبيق الشركة المصنعة."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "لمحة عن الوضع القانوني",
+        "columns": [
+          "المنطقة",
+          "الوضع"
+        ],
+        "rows": [
+          {
+            "المنطقة": "الاتحاد الأوروبي (فرنسا/النمسا/بلجيكا/هولندا/ألمانيا/البرتغال)",
+            "الوضع": "مقنن، إخطار فقط أو إعفاء دون حد معين من الطاقة"
+          },
+          {
+            "المنطقة": "الولايات المتحدة",
+            "الوضع": "8 ولايات لديها قوانين مخصصة منذ 2025؛ لا يوجد إطار فيدرالي"
+          },
+          {
+            "المنطقة": "البرازيل واليابان",
+            "الوضع": "لا يوجد بعد إطار مخصص للتوصيل المباشر — تُطبَّق قواعد عامة أو لا قواعد على الإطلاق"
+          },
+          {
+            "المنطقة": "الإمارات والسعودية",
+            "الوضع": "ناشئ — الإمارات تتطلب موافقة عدم ممانعة من المرفق أيًا كان الحجم؛ الهيئة السعودية للتنظيم (ECRA) تحدد عتبة 1 كيلوواط"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "اختيار الطقم: ما يهم فعلًا",
+        "items": [
+          "يجب أن يتوافق حد قدرة العاكس مع الحد القانوني في بلدك — وليس فقط مع القدرة الاسمية للوح.",
+          "تحقق من دعم المراقبة المحلية (Modbus أو MQTT أو واجهة محلية) قبل الشراء إذا كان تجنب سحابة الشركة المصنعة يهمك.",
+          "يحدد نوع التركيب (درابزين، جدار، أرضي، سطح مسطح) الملحقات التي تحتاجها فعليًا.",
+          "تختلف توافقية البطارية حسب العلامة التجارية — تحقق من ذلك بدلاً من افتراض إمكانية إضافتها لاحقًا.",
+          "تحقق من إجراءات التسجيل الخاصة بسوقك قبل التركيب، حتى للأطقم الصغيرة."
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "الأسئلة الشائعة",
+        "faqs": [
+          {
+            "q": "ما هي الطاقة الشمسية للشرفة (Balkonkraftwerk)؟",
+            "a": "نظام شمسي قابل للتوصيل المباشر — عادةً لوح أو لوحان يغذيان عاكسًا دقيقًا صغيرًا — يتصل مباشرة بمقبس كهربائي منزلي أو موصل مخصص، وينتج كهرباء للاستهلاك الذاتي دون الحاجة لتركيب على السطح أو فني كهربائي في معظم الأسواق."
+          },
+          {
+            "q": "هل أحتاج إلى تصريح لتركيب طاقة شمسية للشرفة؟",
+            "a": "يعتمد ذلك على الدولة. تستخدم فرنسا والنمسا وبلجيكا وهولندا وألمانيا والبرتغال تسجيلاً بالإخطار فقط؛ بينما لا تزال أسواق أخرى بلا إطار مخصص."
+          },
+          {
+            "q": "هل يمكنني مراقبة نظامي دون تطبيق السحابة الخاص بالشركة المصنعة؟",
+            "a": "نعم، بالنسبة لمعظم العلامات التجارية الكبرى — يمكن قراءة العواكس والبطاريات محليًا عبر Modbus أو MQTT أو واجهة برمجية محلية ودمجها في Home Assistant."
+          },
+          {
+            "q": "هل الطاقة الشمسية للشرفة قانونية في مكان إقامتي؟",
+            "a": "راجع الدليل الخاص بكل دولة في هذه المجموعة — يتراوح الوضع القانوني بين مقنن بالكامل وقائم على الإخطار فقط، وناشئ أو غير محدد، ومنظم على مستوى كل ولاية."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "أهم النقاط",
+        "items": [
+          "الطاقة الشمسية للشرفة هي نظام قابل للتوصيل المباشر يجمع بين لوح شمسي وعاكس دقيق للاستهلاك الذاتي — دون أعمال في السطح أو فني كهربائي في معظم الأسواق.",
+          "تتقارب الأطر القانونية حول حد 800 واط، لكن الآلية تختلف — بعضها يسمح بالتغذية العكسية، ومسودة اليونان لا تسمح بها.",
+          "البطارية اختيارية حيث يُسمح بالتغذية العكسية، لكنها ضرورية حيث لا يُسمح بها.",
+          "يمكن مراقبة معظم العلامات التجارية الكبرى محليًا عبر Home Assistant بدلاً من تطبيق سحابي تابع للشركة المصنعة."
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "استكشف الدليل الكامل",
+        "body": "يغطي 33 دليلاً متعمقًا مقارنات شراء الأطقم والبطاريات، والوضع القانوني حسب الدولة، والتركيب والتسجيل، وإعدادات المراقبة دون سحابة.",
+        "href": "https://www.promptquorum.com/ar/balcony-solar",
+        "cta": "عرض جميع الأدلة الـ33"
+      }
+    ]
+  },
+  ko: {
+    "title": "발코니 태양광: 지붕 설치업자 없이 직접 전기를 생산하세요",
+    "slides": [
+      {
+        "type": "title",
+        "h1": "발코니 태양광: 지붕 설치업자 없이 직접 전기를 생산하세요",
+        "subtitle": "발코니 태양광(Balkonkraftwerk)은 패널, 마이크로인버터, 콘센트로 구성된 플러그 앤 플레이 시스템으로, 대부분의 신고제 시장에서 지붕 공사, 전기기사, 허가 없이도 자가소비용 전력을 생산할 수 있습니다.",
+        "link": "https://www.promptquorum.com/ko/balcony-solar"
+      },
+      {
+        "type": "list",
+        "h2": "발코니 태양광을 선택하는 이유",
+        "items": [
+          "<strong>설치업자 불필요.</strong> 콘센트나 인버터 자체 커넥터에 꽂기만 하면 됩니다 — 전기기사도, 지붕 공사도 필요 없습니다.",
+          "<strong>빠른 투자 회수.</strong> 기본 600–800W 키트는 보통 몇백 유로/달러 수준입니다.",
+          "<strong>제조사 클라우드 불필요.</strong> Home Assistant는 대부분의 인버터와 배터리를 직접 읽을 수 있습니다.",
+          "<strong>점점 합법화.</strong> EU 6개국과 미국 8개 주가 이미 전용 규정을 갖추고 있습니다."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "핵심 스택",
+        "items": [
+          "<strong>패널</strong> — 한두 개의 모듈, 합계 보통 400–800W, 난간·벽·지면 스탠드에 설치.",
+          "<strong>마이크로인버터</strong> — 패널의 직류 출력을 계통 호환 교류로 변환, 보통 600–800W로 제한.",
+          "<strong>배터리(선택)</strong> — 잉여 발전량을 계통으로 흘려보내는 대신 저녁 사용을 위해 저장.",
+          "<strong>Home Assistant</strong> — Modbus, MQTT 또는 로컬 API를 통해 인버터나 배터리를 로컬에서 읽어 클라우드 없는 모니터링을 구현."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "EU에서 수렴 중인 800W 표준",
+        "columns": [
+          "국가",
+          "방식",
+          "등록"
+        ],
+        "rows": [
+          {
+            "국가": "프랑스, 오스트리아, 벨기에, 네덜란드",
+            "방식": "800W 상한, 계통 역송 허용",
+            "등록": "신고만"
+          },
+          {
+            "국가": "독일",
+            "방식": "800W 상한(DIN VDE V 0126-95), 계통 역송 허용",
+            "등록": "Marktstammdatenregister 신고"
+          },
+          {
+            "국가": "포르투갈",
+            "방식": "700W 면제, 역송 불가",
+            "등록": "700W 미만은 등록 불필요"
+          },
+          {
+            "국가": "그리스(초안)",
+            "방식": "800W 상한, 제로 피드인 — 역송 전면 불가",
+            "등록": "신규 DEDDIE/HEDNO 플랫폼을 통해"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "배터리, 꼭 필요할까?",
+        "items": [
+          "배터리는 실제로 계통 전력을 구매했을 시간대로 발전량을 이전할 수 있을 때만 투자 가치가 있습니다.",
+          "역송이 허용되는 시장(프랑스, 오스트리아, 벨기에, 네덜란드, 독일)에서는 배터리가 선택 사항입니다 — 잉여분을 대신 역송할 수 있습니다.",
+          "제로 피드인 시장(그리스의 초안 프레임워크)에서는 역송할 수 없는 전력을 활용하는 유일한 방법이 배터리입니다.",
+          "독일에서는 배터리가 장착된 발코니 시스템이 간소화 제도의 적용을 받지 못하며, 여전히 계통 운영자의 정식 등록이 필요합니다."
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "클라우드 없는 모니터링",
+        "items": [
+          "Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure 등 대부분의 브랜드는 기본적으로 발전 데이터를 자사 앱과 클라우드 서버를 통해 전송합니다.",
+          "Home Assistant는 이러한 인버터와 배터리 대부분을 Modbus, MQTT 또는 로컬 API를 통해 대신 로컬에서 읽을 수 있습니다.",
+          "로컬 모니터링은 발전 데이터가 자체 네트워크 안에 머무른다는 의미입니다 — 제조사 앱이 사라지더라도 영향받지 않습니다."
+        ]
+      },
+      {
+        "type": "table",
+        "h2": "법적 현황 스냅샷",
+        "columns": [
+          "지역",
+          "현황"
+        ],
+        "rows": [
+          {
+            "지역": "EU(프랑스/오스트리아/벨기에/네덜란드/독일/포르투갈)",
+            "현황": "성문화됨, 신고제이거나 특정 출력 미만은 면제"
+          },
+          {
+            "지역": "미국",
+            "현황": "2025년 이후 8개 주가 전용 법률 제정; 연방 차원 규정 없음"
+          },
+          {
+            "지역": "브라질, 일본",
+            "현황": "플러그인 전용 규정 아직 없음 — 일반 규정 적용 또는 규정 없음"
+          },
+          {
+            "지역": "UAE, 사우디아라비아",
+            "현황": "초기 단계 — UAE는 규모와 관계없이 전력회사 NOC 필요; 사우디 ECRA는 1kW 하한 설정"
+          }
+        ]
+      },
+      {
+        "type": "numbered",
+        "h2": "키트 선택 시 실제로 중요한 것",
+        "items": [
+          "인버터 출력 상한은 패널의 정격 출력뿐 아니라 해당 국가의 법적 한도에도 맞아야 합니다.",
+          "제조사 클라우드를 피하는 것이 중요하다면 구매 전에 로컬 모니터링 지원 여부(Modbus, MQTT, 로컬 API)를 확인하세요.",
+          "설치 방식(난간, 벽, 지면, 평지붕)에 따라 실제로 필요한 부속품이 결정됩니다.",
+          "배터리 호환성은 브랜드마다 다릅니다 — 나중에 추가할 수 있다고 가정하지 말고 미리 확인하세요.",
+          "소형 키트라도 설치 전 해당 시장의 등록 절차를 확인하세요."
+        ]
+      },
+      {
+        "type": "faq",
+        "h2": "자주 묻는 질문",
+        "faqs": [
+          {
+            "q": "발코니 태양광(Balkonkraftwerk)이란 무엇인가요?",
+            "a": "보통 한두 개의 패널과 소형 마이크로인버터로 구성되어 가정용 콘센트나 전용 커넥터에 직접 연결하는 플러그인 태양광 시스템으로, 대부분의 시장에서 지붕 공사나 전기기사 없이 자가소비용 전력을 생산합니다."
+          },
+          {
+            "q": "발코니 태양광 설치에 허가가 필요한가요?",
+            "a": "국가마다 다릅니다. 프랑스, 오스트리아, 벨기에, 네덜란드, 독일, 포르투갈은 신고 등록만 요구합니다. 일부 다른 시장은 아직 전용 규정이 없습니다."
+          },
+          {
+            "q": "제조사의 클라우드 앱 없이 시스템을 모니터링할 수 있나요?",
+            "a": "네, 대부분의 주요 브랜드에서 가능합니다 — 인버터와 배터리는 Modbus, MQTT 또는 로컬 API를 통해 로컬에서 읽어 Home Assistant에 연동할 수 있습니다."
+          },
+          {
+            "q": "제가 사는 곳에서 발코니 태양광은 합법인가요?",
+            "a": "이 클러스터의 국가별 가이드를 확인하세요 — 법적 상태는 완전히 성문화된 경우부터 신고제만 있는 경우, 아직 초기 단계이거나 규정이 없는 경우, 주(州)별로 다른 경우까지 다양합니다."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "h2": "핵심 요약",
+        "items": [
+          "발코니 태양광은 자가소비를 위한 플러그인 패널+마이크로인버터 시스템입니다 — 대부분의 시장에서 지붕 공사나 전기기사가 필요 없습니다.",
+          "법적 프레임워크는 800W 상한으로 수렴하고 있지만 방식은 다릅니다 — 일부는 역송을 허용하고, 그리스의 초안은 허용하지 않습니다.",
+          "역송이 허용되는 곳에서는 배터리가 선택 사항이지만, 허용되지 않는 곳에서는 필수입니다.",
+          "대부분의 주요 브랜드는 제조사 클라우드 앱 대신 Home Assistant로 로컬에서 모니터링할 수 있습니다."
+        ]
+      },
+      {
+        "type": "cta",
+        "h2": "전체 가이드 살펴보기",
+        "body": "33개의 심층 가이드에서 키트 및 배터리 구매 비교, 국가별 합법성, 설치와 등록, 클라우드 없는 모니터링 구성을 다룹니다.",
+        "href": "https://www.promptquorum.com/ko/balcony-solar",
+        "cta": "전체 33개 가이드 보기"
+      }
+    ]
+  }
+};
+
+    function renderSlide(slide) {
+      let html = '';
+      switch (slide.type) {
+        case 'title':
+          html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}">${slide.link.replace('https://www.', '')}</a></p>`;
+          break;
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ul>';
+          break;
+        case 'table':
+          html = `<h2>${slide.h2}</h2><table><thead><tr>`;
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr></thead><tbody>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            html += '</tr>';
+          });
+          html += '</tbody></table>';
+          break;
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2><ol style="font-size: 1.05em; margin-top: 16px; text-align: start; max-width: 640px;">`;
+          slide.items.forEach(item => { html += `<li style="margin-bottom: 10px;">${item}</li>`; });
+          html += '</ol>';
+          break;
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 18px; text-align: start; max-width: 680px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+          });
+          break;
+        case 'cta':
+          html = `<h2>${slide.h2}</h2><p style="max-width: 600px; margin: 20px auto;">${slide.body}</p><a href="${slide.href}" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: 700;">${slide.cta}</a>`;
+          break;
+      }
+      return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('header-title').textContent = content.title;
+    document.getElementById('back-link').href = BACK_LINKS[lang] || BACK_LINKS.en;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => { container.innerHTML += renderSlide(slide); });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', () => { window.print(); });
+    }
+
+    showSlide(0);
+    </script>
+</body>
+</html>
