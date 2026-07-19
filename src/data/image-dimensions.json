@@ -1029,6 +1029,11 @@
     "width": 800,
     "height": 450
   },
+  "/images/best-local-llms-for-coding-benchmark-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/best-local-llms-for-coding-benchmark-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1039,7 +1044,27 @@
     "width": 800,
     "height": 450
   },
+  "/images/best-local-llms-for-coding-benchmark-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/best-local-llms-for-coding-benchmark-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/best-local-llms-for-coding-benchmark-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/best-local-llms-for-coding-benchmark-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/best-local-llms-for-coding-benchmark-comparison-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
@@ -1074,27 +1099,7 @@
     "width": 800,
     "height": 420
   },
-  "/images/best-local-llms-for-coding-humaneval-comparison-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
   "/images/best-local-llms-for-coding-humaneval-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-local-llms-for-coding-humaneval-comparison-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-local-llms-for-coding-humaneval-comparison-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
-  },
-  "/images/best-local-llms-for-coding-humaneval-comparison-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 380
