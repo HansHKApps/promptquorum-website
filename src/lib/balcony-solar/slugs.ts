@@ -60,4 +60,5 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
   'balcony-solar-china-2027':                     'balcony-solar-china-2027',                       // BSOL-31
   'balcony-solar-brazil-status-2027':             'balcony-solar-brazil-status-2027',               // BSOL-32
   'where-balcony-solar-doesnt-exist-yet-2027':    'where-balcony-solar-doesnt-exist-yet-2027',       // BSOL-33
+  'balcony-solar-greece-status-2027':             'balcony-solar-greece-status-2027',               // BSOL-34
 }

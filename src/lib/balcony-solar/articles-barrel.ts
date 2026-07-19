@@ -65,6 +65,7 @@ import { article as a_balcony_solar_japan_status_2027 } from './articles/balcony
 import { article as a_balcony_solar_china_2027 } from './articles/balcony-solar-china-2027'
 import { article as a_balcony_solar_brazil_status_2027 } from './articles/balcony-solar-brazil-status-2027'
 import { article as a_where_balcony_solar_doesnt_exist_yet_2027 } from './articles/where-balcony-solar-doesnt-exist-yet-2027'
+import { article as a_balcony_solar_greece_status_2027 } from './articles/balcony-solar-greece-status-2027'
 
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
@@ -119,4 +120,5 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
   'balcony-solar-china-2027':                         a_balcony_solar_china_2027,
   'balcony-solar-brazil-status-2027':                 a_balcony_solar_brazil_status_2027,
   'where-balcony-solar-doesnt-exist-yet-2027':        a_where_balcony_solar_doesnt_exist_yet_2027,
+  'balcony-solar-greece-status-2027':                 a_balcony_solar_greece_status_2027,
 }

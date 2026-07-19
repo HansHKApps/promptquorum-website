@@ -24,6 +24,7 @@ const PENDING_SLUGS: ReadonlySet<string> = new Set([
   'balcony-solar-china-2027',
   'balcony-solar-brazil-status-2027',
   'where-balcony-solar-doesnt-exist-yet-2027',
+  'balcony-solar-greece-status-2027',
 ])
 
 export const BALCONY_SOLAR_PUBLISHED_SLUGS: ReadonlySet<string> = new Set(
