@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 675 },
         keywords: ['AI code review', 'code review tools', 'CodeRabbit', 'Greptile', 'static analysis', 'SAST', 'GitHub Copilot', 'prompt engineering', 'security testing'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'CodeRabbit' },
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 675 },
         keywords: ['revisión de código con IA', 'herramientas de revisión de código', 'CodeRabbit', 'Greptile', 'análisis estático', 'SAST', 'GitHub Copilot', 'prompt engineering', 'pruebas de seguridad'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'CodeRabbit' },
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 675 },
         keywords: ['مراجعة الكود بالذكاء الاصطناعي', 'أدوات مراجعة الكود', 'CodeRabbit', 'Greptile', 'التحليل الثابت', 'SAST', 'GitHub Copilot', 'هندسة التعليمات', 'اختبار الأمان'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'CodeRabbit' },
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 675 },
         keywords: ['revisão de código com IA', 'ferramentas de revisão de código', 'CodeRabbit', 'Greptile', 'análise estática', 'SAST', 'GitHub Copilot', 'prompt engineering', 'testes de segurança'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'CodeRabbit' },
@@ -2789,7 +2789,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       proficiencyLevel: 'Intermediate',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 675 },
       keywords: ['AI 코드 리뷰', 'AI 코드 검토 도구', 'CodeRabbit', 'Greptile', '정적 분석', 'SAST', 'GitHub Copilot', '프롬프트 엔지니어링', '보안 테스트'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'CodeRabbit' },

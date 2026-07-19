@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/es/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/ar/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'متوسط',
         about: [
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/pt/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -2745,7 +2745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -3270,7 +3270,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -3797,7 +3797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         proficiencyLevel: 'Intermediate',
         about: [
@@ -4335,7 +4335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/ko/api/og/extract-and-summarise',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       proficiencyLevel: 'Intermediate',
       about: [

@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
-      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: article.title }],
+      images: [{ url: ogImageUrl, width: 1200, height: 675, alt: article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? article.publishDate,
     },

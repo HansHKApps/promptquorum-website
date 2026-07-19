@@ -31,7 +31,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
       <div
         style={{
           width: '1200px',
-          height: '630px',
+          height: '675px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
@@ -108,7 +108,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
     ),
     {
       width: 1200,
-      height: 630,
+      height: 675,
       headers: {
         'Content-Type': 'image/png',
         'Cache-Control': 'public, max-age=86400, immutable',

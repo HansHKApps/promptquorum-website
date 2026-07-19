@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/og/power-local-llm/easiest-local-ai-app-windows-mac-linux.jpg',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       author: {
         '@type': 'Person',
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/og/power-local-llm/easiest-local-ai-app-windows-mac-linux.jpg',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       author: {
         '@type': 'Person',
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/og/power-local-llm/easiest-local-ai-app-windows-mac-linux.jpg',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       author: {
         '@type': 'Organization',
@@ -1929,7 +1929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/og/power-local-llm/easiest-local-ai-app-windows-mac-linux.jpg',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       author: {
         '@type': 'Organization',

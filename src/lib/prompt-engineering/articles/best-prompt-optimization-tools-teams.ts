@@ -462,7 +462,7 @@ tests:
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/api/og/best-prompt-optimization-tools-for-teams',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -897,7 +897,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 675 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -1371,7 +1371,7 @@ tests:
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/es/api/og/best-prompt-optimization-tools-for-teams',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -1847,7 +1847,7 @@ tests:
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/pt/api/og/best-prompt-optimization-tools-for-teams',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -2228,7 +2228,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 675 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -2604,7 +2604,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 675 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -3065,7 +3065,7 @@ tests:
         { '@type': 'SoftwareApplication', name: 'Helicone' },
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
       ],
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/best-prompt-optimization-tools-for-teams', width: 1200, height: 675 },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     itemListSchema: {
@@ -3538,7 +3538,7 @@ tests:
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/ar/api/og/best-prompt-optimization-tools-for-teams',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -3988,7 +3988,7 @@ tests:
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/ko/api/og/best-prompt-optimization-tools-for-teams',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       speakable: {
         '@type': 'SpeakableSpecification',

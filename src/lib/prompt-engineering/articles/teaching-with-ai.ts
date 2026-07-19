@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/teaching-with-ai',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['AI tutoring', 'AI in education', 'Khanmigo', 'lesson planning', 'ChatGPT for teachers', 'Claude education', 'prompt engineering teaching'],
         mentions: [
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/de/api/og/teaching-with-ai',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['KI-Nachhilfe', 'KI im Bildungswesen', 'Khanmigo', 'Unterrichtsplanung', 'ChatGPT für Lehrkräfte', 'Claude Bildung', 'Prompt-Engineering Unterricht'],
         mentions: [
@@ -2257,7 +2257,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ImageObject',
       url: 'https://www.promptquorum.com/fr/api/og/teaching-with-ai',
       width: 1200,
-      height: 630,
+      height: 675,
     },
     keywords: ['IA tutoring', 'IA en éducation', 'Khanmigo', 'planification pédagogique', 'ChatGPT enseignants', 'Claude éducation', 'engineering des prompts enseignement'],
     mentions: [
@@ -2837,7 +2837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'ImageObject',
       url: 'https://www.promptquorum.com/ja/api/og/teaching-with-ai',
       width: 1200,
-      height: 630,
+      height: 675,
     },
     keywords: ['AIチューター', '教育とAI', 'Khanmigo', '教育計画', 'ChatGPT教師', 'Claude教育', 'プロンプト工学教育'],
     mentions: [
@@ -3229,7 +3229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/teaching-with-ai',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['AI辅导', '教育中的AI', 'Khanmigo', '课程规划', '教师ChatGPT', 'Claude教育', '提示词工程教学'],
         mentions: [

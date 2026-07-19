@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['AI research tools', 'AI hallucination', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'multi-model verification', 'prompt engineering', 'PromptQuorum'],
         mentions: [
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/de/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['KI-Forschungstools', 'KI-Halluzination', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'Multi-Modell-Verifizierung', 'Prompt Engineering', 'PromptQuorum'],
         mentions: [
@@ -1116,7 +1116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/es/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['herramientas de investigación con IA', 'alucinación de IA', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'verificación multi-modelo', 'prompt engineering', 'PromptQuorum'],
         mentions: [
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['أدوات البحث بالذكاء الاصطناعي', 'هلوسة الذكاء الاصطناعي', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'التحقق متعدد النماذج', 'هندسة التعليمات', 'PromptQuorum'],
         mentions: [
@@ -2173,7 +2173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/pt/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['ferramentas de pesquisa com IA', 'alucinação de IA', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'verificação multi-modelo', 'prompt engineering', 'PromptQuorum'],
         mentions: [
@@ -2702,7 +2702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/fr/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['outils de recherche IA', 'hallucination IA', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'vérification multi-modèles', 'ingénierie de prompts', 'PromptQuorum'],
         mentions: [
@@ -3737,7 +3737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/ko/api/og/ai-powered-research',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       keywords: ['AI 연구 도구', 'AI 환각', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', '다중 모델 검증', '프롬프트 엔지니어링', 'PromptQuorum'],
       mentions: [

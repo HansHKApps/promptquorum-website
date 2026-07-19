@@ -160,7 +160,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
-      images: [{ url: finalOgImage, width: 1200, height: 630, alt: isGlossary ? 'Prompt Engineering Glossary Mind Map 2026 — 100 Essential Terms' : article.title }],
+      images: [{ url: finalOgImage, width: 1200, height: 675, alt: isGlossary ? 'Prompt Engineering Glossary Mind Map 2026 — 100 Essential Terms' : article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
     },

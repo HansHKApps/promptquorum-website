@@ -77,7 +77,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       url: `${BASE}${promptBitesArticlePath(lang, slug)}`,
       type: 'article',
       siteName: 'PromptQuorum',
-      images: [{ url: `${BASE}/api/og/${slug}?lang=${lang}`, width: 1200, height: 630, alt: article?.title ?? fallbackTitle }],
+      images: [{ url: `${BASE}/api/og/${slug}?lang=${lang}`, width: 1200, height: 675, alt: article?.title ?? fallbackTitle }],
       publishedTime: article?.publishDate,
     },
     twitter: {

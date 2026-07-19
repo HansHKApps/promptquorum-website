@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'en',
       keywords: ['prompt engineering workflow', 'developer prompts', 'CI/CD prompts', 'Promptfoo', 'Cursor IDE', 'Continue.dev', 'prompt version control'],
       proficiencyLevel: 'Advanced',
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'de',
     },
     sections: {
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'es',
     },
     sections: {
@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'pt-BR',
     },
     sections: {
@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'fr',
     },
     sections: {
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'ja',
     },
     sections: {
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'zh',
     },
     sections: {
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ar/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ar/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'ar',
     },
     sections: {
@@ -1390,7 +1390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 630 },
+      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/pe-for-developers-workflow', width: 1200, height: 675 },
       inLanguage: 'ko',
       keywords: ['프롬프트 엔지니어링 워크플로우', '개발자 프롬프트', 'CI/CD 프롬프트', 'Promptfoo', 'Cursor IDE', 'Continue.dev', '프롬프트 버전 관리'],
       proficiencyLevel: 'Advanced',

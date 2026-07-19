@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         '@type': 'ImageObject',
         url: 'https://www.promptquorum.com/api/og/ai-model-knowledge-cutoff-dates',
         width: 1200,
-        height: 630,
+        height: 675,
       },
       url: 'https://www.promptquorum.com/prompt-bites/ai-model-knowledge-cutoff-dates',
     },

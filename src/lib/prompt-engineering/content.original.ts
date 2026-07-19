@@ -263,7 +263,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 675 },
         url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'en',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -763,7 +763,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 675 },
         url: 'https://www.promptquorum.com/de/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'de',
       },
@@ -1192,7 +1192,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 675 },
         url: 'https://www.promptquorum.com/fr/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'fr',
       },
@@ -1642,7 +1642,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 675 },
         url: 'https://www.promptquorum.com/ja/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'ja',
       },
@@ -2032,7 +2032,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 675 },
         url: 'https://www.promptquorum.com/zh/prompt-engineering/fundamentals-of-prompt-optimization',
         inLanguage: 'zh',
       },
@@ -2403,7 +2403,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/what-is-prompt-engineering', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/what-is-prompt-engineering', width: 1200, height: 675 },
       },
       sections: {
 
@@ -5857,7 +5857,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-hallucinations-why-ai-makes-things-up', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-hallucinations-why-ai-makes-things-up', width: 1200, height: 675 },
       },
       gammaEmbedUrl: '/presentations/ai-hallucinations-why-ai-makes-things-up-static.html',
       gammaDescription: 'The slide deck below covers: why LLMs hallucinate (probabilistic token prediction, not comprehension), 7 hallucination types with detection patterns, prompt techniques that reduce hallucination, and a comparison of model behavior. Download the PDF as a hallucination reduction reference card.',
@@ -7232,7 +7232,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/temperature-and-top-p-control-ai-creativity', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/temperature-and-top-p-control-ai-creativity', width: 1200, height: 675 },
         keywords: ['temperature', 'top-p', 'nucleus sampling', 'AI randomness', 'LLM settings', 'creativity', 'GPT-4o', 'Claude', 'Gemini', 'prompt tuning'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
@@ -9318,7 +9318,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 675 },
         speakable: {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
@@ -9384,7 +9384,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['Kontextfenster', 'Tokens', 'LLM-Speicher', 'Prompt-Design', 'KI vergisst', 'Kontextlimits'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 675 },
       },
       sections: contextWindowsDe
     },
@@ -9408,7 +9408,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['fenêtre de contexte', 'tokens', 'mémoire LLM', 'conception de prompts', 'l\'IA oublie', 'limites de contexte'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/fr/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 675 },
       },
       sections: contextWindowsFr
     },
@@ -9432,7 +9432,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['コンテキストウィンドウ', 'トークン', 'LLMメモリ', 'プロンプト設計', 'AIが忘れる', 'コンテキスト制限'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/ja/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 675 },
       },
       sections: contextWindowsJa
     },
@@ -9456,7 +9456,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         keywords: ['上下文窗口', '令牌', 'LLM内存', '提示设计', 'AI忘记', '上下文限制'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 675 },
       },
       sections: contextWindowsZh
     },
@@ -9482,7 +9482,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         dateModified: '2026-03-25',
         url: 'https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images',
         inLanguage: 'en',
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/beyond-text-how-to-prompt-with-images', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/beyond-text-how-to-prompt-with-images', width: 1200, height: 675 },
         keywords: ['multimodal prompting', 'vision-language models', 'image prompting', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 1.5 Pro', 'prompt engineering', 'image analysis', 'text-to-image generation', 'image editing'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -9574,7 +9574,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         dateModified: '2026-04-12',
         proficiencyLevel: 'Intermediate',
         url: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/tokens-costs-limits-economics-of-ai-prompting', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/tokens-costs-limits-economics-of-ai-prompting', width: 1200, height: 675 },
         keywords: ['tokens', 'API costs', 'rate limits', 'prompt engineering', 'GPT-4o', 'Claude', 'Gemini', 'cost optimization', 'local LLMs'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -12725,7 +12725,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['AI research tools', 'AI hallucination', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'multi-model verification', 'prompt engineering', 'PromptQuorum'],
         mentions: [
@@ -13205,7 +13205,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/de/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['KI-Forschungstools', 'KI-Halluzination', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'Multi-Modell-Verifizierung', 'Prompt Engineering', 'PromptQuorum'],
         mentions: [
@@ -13685,7 +13685,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/fr/api/og/ai-powered-research',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['outils de recherche IA', 'hallucination IA', 'Elicit', 'Consensus', 'Perplexity AI', 'scite.ai', 'RAG', 'vérification multi-modèles', 'ingénierie de prompts', 'PromptQuorum'],
         mentions: [
@@ -14173,7 +14173,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/seo-meets-ai',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['GEO', 'SEO', 'generative engine optimization', 'AI search', 'ChatGPT search', 'Perplexity', 'Google AI Overviews', 'JSON-LD schema', 'AI citations'],
         mentions: [
@@ -14536,7 +14536,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/teaching-with-ai',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['AI tutoring', 'AI in education', 'Khanmigo', 'lesson planning', 'ChatGPT for teachers', 'Claude education', 'prompt engineering teaching'],
         mentions: [
@@ -14964,7 +14964,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
           '@type': 'ImageObject',
           url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
           width: 1200,
-          height: 630,
+          height: 675,
         },
         keywords: ['AI summarisation', 'document extraction', 'abstractive summarisation', 'extractive summarisation', 'NotebookLM', 'Claude', 'hallucination rates', 'prompt engineering'],
         mentions: [
@@ -15351,7 +15351,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         proficiencyLevel: 'Intermediate',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 675 },
         keywords: ['AI code review', 'code review tools', 'CodeRabbit', 'Greptile', 'static analysis', 'SAST', 'GitHub Copilot', 'prompt engineering', 'security testing'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'CodeRabbit' },
@@ -16637,7 +16637,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         dateModified: '2026-03-24',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 675 },
         keywords: ['output control', 'constrained decoding', 'JSON schema', 'structured output', 'temperature', 'top-p', 'sampling parameters', 'prompt engineering'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
@@ -16934,7 +16934,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         dateModified: '2026-03-24',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai', width: 1200, height: 675 },
         keywords: ['brand voice', 'brand consistency', 'tone of voice', 'content generation', 'prompt engineering', 'brand guidelines', 'AI-generated content'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -17110,7 +17110,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
         dateModified: '2026-03-24',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks', width: 1200, height: 675 },
         keywords: ['quality gates', 'CI/CD', 'AI hallucinations', 'code review', 'security scanning', 'dependency validation', 'build checks'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'SAST' },
@@ -22559,7 +22559,7 @@ zh: {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -23084,7 +23084,7 @@ zh: {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -23609,7 +23609,7 @@ zh: {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -24134,7 +24134,7 @@ zh: {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -24659,7 +24659,7 @@ zh: {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -25202,7 +25202,7 @@ zh: {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 675 },
         educationalLevel: 'Intermediate',
       },
       supplementalSchema: {
@@ -25889,7 +25889,7 @@ zh: {
         dateModified: '2026-04-02',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/de/api/og/geopolitics-and-ai', width: 1200, height: 675 },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
@@ -26502,7 +26502,7 @@ zh: {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 675 },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -27221,7 +27221,7 @@ zh: {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 675 },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -27385,7 +27385,7 @@ zh: {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/zh/api/og/geopolitics-and-ai', width: 1200, height: 675 },
       },
       supplementalSchema: {
         '@context': 'https://schema.org',
