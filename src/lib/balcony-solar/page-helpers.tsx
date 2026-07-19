@@ -17,12 +17,14 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { truncateTitle } from '@/lib/utils'
 import { BalconySolarPostClient } from '@/components/BalconySolarPostClient'
+import { BalconySolarWaitlistCTA } from '@/components/BalconySolarWaitlistCTA'
 import { balconySolarContent } from './content'
 import { BALCONY_SOLAR_SLUG_TO_KEY } from './slugs'
 import { BALCONY_SOLAR_CATEGORIES } from './categories'
 import { balconySolarAlternates, balconySolarHubPath, balconySolarArticlePath } from './metadata-helpers'
 import { isBalconySolarArticlePublished, isBalconySolarHubPublished } from './published'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
+import { formatDisplayDate } from '@/lib/formatDisplayDate'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -589,10 +591,200 @@ const CATEGORY_COPY: Partial<Record<Lang, Record<string, { badge: string; descri
   },
 }
 
+interface HubFaqEntry { q: string; a: string }
+
+const HUB_FAQ: Partial<Record<Lang, HubFaqEntry[]>> = {
+  en: [
+    { q: 'What is balcony solar (Balkonkraftwerk)?', a: 'A plug-in solar system — usually one or two panels feeding a small micro-inverter — that connects directly to a household outlet or dedicated connector, generating power for self-consumption without a rooftop installation or an electrician in most markets.' },
+    { q: 'Do I need a permit to install balcony solar?', a: 'It depends on the country. France, Austria, Belgium, the Netherlands, Germany, and Portugal use simple notification-only registration for small systems; the US now has 8 states with dedicated laws; several other markets — the UAE, Saudi Arabia, Brazil, Japan — have no dedicated framework yet, so requirements vary.' },
+    { q: 'How much does a balcony solar kit cost, and what\'s the payback time?', a: 'Typical kits run from a few hundred to around a thousand dollars or euros depending on panel count, inverter brand, and whether a battery is included — payback commonly falls in the 2–5 year range depending on local electricity prices and how much of the output you self-consume.' },
+    { q: 'Can I monitor my balcony solar system without the manufacturer\'s cloud app?', a: 'Yes, for most major brands — Hoymiles, Deye, APsystems, EcoFlow, Anker, and Zendure inverters and batteries can be read locally via Modbus, MQTT, or a local API and pulled into Home Assistant, keeping your production data off the vendor\'s servers.' },
+    { q: 'Is balcony solar legal where I live?', a: 'Check the country-by-country guide in this cluster — legal status ranges from fully codified (Germany, Portugal, France) to notification-only (Austria, Belgium, Netherlands) to nascent or unaddressed (the UAE, Saudi Arabia, Brazil, Japan, Bahrain, Taiwan) to state-by-state (the US).' },
+  ],
+  de: [
+    { q: 'Was ist ein Balkonkraftwerk?', a: 'Ein steckerfertiges Solargerät — meist ein oder zwei Module mit einem kleinen Mikrowechselrichter —, das direkt an eine Haushaltssteckdose oder einen eigenen Anschluss angeschlossen wird und Strom für den Eigenverbrauch erzeugt, ohne Dachinstallation oder Elektriker in den meisten Märkten.' },
+    { q: 'Brauche ich eine Genehmigung für ein Balkonkraftwerk?', a: 'Das hängt vom Land ab. Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal verlangen für kleine Anlagen nur eine einfache Meldung; die USA haben inzwischen 8 Bundesstaaten mit eigenen Gesetzen; mehrere andere Märkte — die VAE, Saudi-Arabien, Brasilien, Japan — haben noch keinen eigenen Rahmen, die Anforderungen variieren also.' },
+    { q: 'Was kostet ein Balkonkraftwerk-Set, und wie schnell amortisiert es sich?', a: 'Typische Sets kosten je nach Modulanzahl, Wechselrichter-Marke und Speicheroption zwischen ein paar Hundert und rund tausend Euro — die Amortisation liegt meist zwischen 2 und 5 Jahren, abhängig vom lokalen Strompreis und dem tatsächlichen Eigenverbrauchsanteil.' },
+    { q: 'Kann ich mein Balkonkraftwerk ohne die Hersteller-Cloud überwachen?', a: 'Ja, bei den meisten großen Marken — Wechselrichter und Speicher von Hoymiles, Deye, APsystems, EcoFlow, Anker und Zendure lassen sich lokal über Modbus, MQTT oder eine lokale API auslesen und in Home Assistant einbinden, sodass die Erzeugungsdaten nicht auf den Servern des Herstellers landen.' },
+    { q: 'Ist ein Balkonkraftwerk an meinem Wohnort legal?', a: 'Siehe den Länder-Guide in diesem Cluster — der rechtliche Status reicht von vollständig kodifiziert (Deutschland, Portugal, Frankreich) über reine Meldepflicht (Österreich, Belgien, Niederlande) bis zu unklar oder ungeregelt (VAE, Saudi-Arabien, Brasilien, Japan, Bahrain, Taiwan) und bundesstaatenweise geregelt (USA).' },
+  ],
+  fr: [
+    { q: 'Qu\'est-ce que le solaire de balcon (Balkonkraftwerk) ?', a: 'Un système solaire enfichable — généralement un ou deux panneaux alimentant un petit micro-onduleur — qui se branche directement sur une prise domestique ou un connecteur dédié, produisant de l\'électricité pour l\'autoconsommation sans installation sur toiture ni électricien dans la plupart des marchés.' },
+    { q: 'Ai-je besoin d\'un permis pour installer du solaire de balcon ?', a: 'Cela dépend du pays. La France, l\'Autriche, la Belgique, les Pays-Bas, l\'Allemagne et le Portugal utilisent une simple notification pour les petits systèmes ; les États-Unis comptent désormais 8 États avec des lois dédiées ; plusieurs autres marchés — les Émirats arabes unis, l\'Arabie saoudite, le Brésil, le Japon — n\'ont pas encore de cadre dédié, donc les exigences varient.' },
+    { q: 'Combien coûte un kit solaire de balcon, et quel est le délai de rentabilité ?', a: 'Les kits classiques coûtent de quelques centaines à environ mille dollars ou euros selon le nombre de panneaux, la marque de l\'onduleur et la présence d\'une batterie — la rentabilité se situe généralement entre 2 et 5 ans selon le prix local de l\'électricité et la part d\'autoconsommation.' },
+    { q: 'Puis-je surveiller mon installation solaire de balcon sans l\'application cloud du fabricant ?', a: 'Oui, pour la plupart des grandes marques — les onduleurs et batteries Hoymiles, Deye, APsystems, EcoFlow, Anker et Zendure peuvent être lus localement via Modbus, MQTT ou une API locale et intégrés à Home Assistant, gardant vos données de production hors des serveurs du fabricant.' },
+    { q: 'Le solaire de balcon est-il légal là où je vis ?', a: 'Consultez le guide pays par pays de ce cluster — le statut légal va du cadre pleinement codifié (Allemagne, Portugal, France) à la simple notification (Autriche, Belgique, Pays-Bas), en passant par des marchés naissants ou non réglementés (Émirats arabes unis, Arabie saoudite, Brésil, Japon, Bahreïn, Taïwan) jusqu\'à une réglementation État par État (États-Unis).' },
+  ],
+  ja: [
+    { q: 'バルコニーソーラー（Balkonkraftwerk）とは何ですか？', a: '通常1〜2枚のパネルと小型マイクロインバーターで構成され、家庭用コンセントや専用コネクタに直接接続できるプラグイン式の太陽光発電システムです。ほとんどの市場で屋根工事や電気工事士なしに自家消費用の電力を発電できます。' },
+    { q: 'バルコニーソーラーの設置に許可は必要ですか？', a: '国によって異なります。フランス・オーストリア・ベルギー・オランダ・ドイツ・ポルトガルは小規模システムに対して簡易な届出のみで済みます。米国では現在8州に専用法があります。UAE・サウジアラビア・ブラジル・日本など専用の枠組みがまだない市場もあり、要件は様々です。' },
+    { q: 'バルコニーソーラーキットの費用と投資回収期間はどれくらいですか？', a: '一般的なキットはパネル枚数・インバーターブランド・バッテリーの有無により数百ドル（ユーロ）から千ドル（ユーロ）程度です。投資回収期間は地域の電気料金と自家消費率次第で、一般的に2〜5年程度です。' },
+    { q: 'メーカーのクラウドアプリを使わずにバルコニーソーラーを監視できますか？', a: 'はい、主要ブランドのほとんどで可能です——Hoymiles・Deye・APsystems・EcoFlow・Anker・Zendureのインバーターやバッテリーは、Modbus・MQTT・ローカルAPI経由でローカルに読み取り、Home Assistantに取り込むことができ、発電データがベンダーのサーバーに送られるのを防げます。' },
+    { q: '自分の住んでいる場所でバルコニーソーラーは合法ですか？', a: 'このクラスター内の国別ガイドをご確認ください——法的状況は、完全に成文化された国（ドイツ・ポルトガル・フランス）から、届出制のみの国（オーストリア・ベルギー・オランダ）、まだ枠組みが未整備または未対応の国（UAE・サウジアラビア・ブラジル・日本・バーレーン・台湾）、そして州ごとに異なる米国まで多岐にわたります。' },
+  ],
+  zh: [
+    { q: '什么是阳台光伏（Balkonkraftwerk）？', a: '一种插入式太阳能系统——通常由一到两块面板配一个小型微型逆变器组成——可直接接入家用插座或专用接口，在大多数市场无需屋顶安装或电工即可为自家用电发电。' },
+    { q: '安装阳台光伏需要许可吗？', a: '这取决于所在国家。法国、奥地利、比利时、荷兰、德国和葡萄牙对小型系统仅要求简单备案；美国目前已有8个州出台专门法律；阿联酋、沙特阿拉伯、巴西、日本等一些市场尚无专门框架，因此要求各不相同。' },
+    { q: '阳台光伏套件多少钱，回本需要多久？', a: '典型套件价格从几百到约一千美元/欧元不等，取决于面板数量、逆变器品牌以及是否含电池——回本周期通常为2到5年，具体取决于当地电价及自用比例。' },
+    { q: '我能否在不使用厂商云端App的情况下监控我的阳台光伏系统？', a: '可以，大多数主流品牌都支持——Hoymiles、Deye、APsystems、EcoFlow、Anker和Zendure的逆变器与电池均可通过Modbus、MQTT或本地API本地读取，并接入Home Assistant，使发电数据不经过厂商服务器。' },
+    { q: '阳台光伏在我所在地是否合法？', a: '请查阅本专题内的各国指南——法律状态从完全成文（德国、葡萄牙、法国）到仅需备案（奥地利、比利时、荷兰），再到尚属新兴或无明确规定（阿联酋、沙特阿拉伯、巴西、日本、巴林、台湾），以及按州各异（美国），情况各不相同。' },
+  ],
+  es: [
+    { q: '¿Qué es la energía solar de balcón (Balkonkraftwerk)?', a: 'Un sistema solar enchufable — normalmente uno o dos paneles alimentando un pequeño microinversor — que se conecta directamente a un enchufe doméstico o a un conector dedicado, generando electricidad para autoconsumo sin instalación en tejado ni electricista en la mayoría de mercados.' },
+    { q: '¿Necesito un permiso para instalar energía solar de balcón?', a: 'Depende del país. Francia, Austria, Bélgica, los Países Bajos, Alemania y Portugal usan un simple registro por notificación para sistemas pequeños; EE. UU. ya cuenta con 8 estados con leyes dedicadas; otros mercados — los Emiratos Árabes Unidos, Arabia Saudita, Brasil, Japón — aún no tienen un marco dedicado, por lo que los requisitos varían.' },
+    { q: '¿Cuánto cuesta un kit de energía solar de balcón, y cuál es el plazo de amortización?', a: 'Los kits típicos van desde unos pocos cientos hasta cerca de mil dólares o euros según el número de paneles, la marca del inversor y si incluye batería — la amortización suele situarse entre 2 y 5 años según el precio local de la electricidad y cuánta producción autoconsumes.' },
+    { q: '¿Puedo monitorizar mi sistema de energía solar de balcón sin la app en la nube del fabricante?', a: 'Sí, para la mayoría de las marcas principales — los inversores y baterías de Hoymiles, Deye, APsystems, EcoFlow, Anker y Zendure pueden leerse localmente vía Modbus, MQTT o una API local e integrarse en Home Assistant, manteniendo tus datos de producción fuera de los servidores del fabricante.' },
+    { q: '¿Es legal la energía solar de balcón donde vivo?', a: 'Consulta la guía país por país de este clúster — el estado legal va desde plenamente codificado (Alemania, Portugal, Francia) hasta simple notificación (Austria, Bélgica, Países Bajos), pasando por mercados incipientes o sin regular (Emiratos Árabes Unidos, Arabia Saudita, Brasil, Japón, Baréin, Taiwán) y regulación estado por estado (EE. UU.).' },
+  ],
+  pt: [
+    { q: 'O que é energia solar de varanda (Balkonkraftwerk)?', a: 'Um sistema solar plug-and-play — geralmente um ou dois painéis alimentando um pequeno microinversor — que se conecta diretamente a uma tomada residencial ou a um conector dedicado, gerando energia para autoconsumo sem instalação no telhado nem eletricista na maioria dos mercados.' },
+    { q: 'Preciso de licença para instalar energia solar de varanda?', a: 'Depende do país. França, Áustria, Bélgica, Países Baixos, Alemanha e Portugal usam apenas um registro simples por notificação para sistemas pequenos; os EUA já têm 8 estados com leis próprias; outros mercados — Emirados Árabes Unidos, Arábia Saudita, Brasil, Japão — ainda não têm um marco dedicado, então os requisitos variam.' },
+    { q: 'Quanto custa um kit de energia solar de varanda, e qual é o prazo de retorno?', a: 'Kits típicos custam de algumas centenas a cerca de mil dólares ou euros, dependendo do número de painéis, da marca do inversor e da presença de bateria — o retorno costuma ficar entre 2 e 5 anos, dependendo do preço local da eletricidade e de quanto da produção você consome.' },
+    { q: 'Posso monitorar meu sistema de energia solar de varanda sem o aplicativo na nuvem do fabricante?', a: 'Sim, para a maioria das grandes marcas — inversores e baterias da Hoymiles, Deye, APsystems, EcoFlow, Anker e Zendure podem ser lidos localmente via Modbus, MQTT ou uma API local e integrados ao Home Assistant, mantendo seus dados de produção fora dos servidores do fabricante.' },
+    { q: 'A energia solar de varanda é legal onde eu moro?', a: 'Consulte o guia país por país deste cluster — o status legal varia de totalmente codificado (Alemanha, Portugal, França) a apenas notificação (Áustria, Bélgica, Países Baixos), passando por mercados incipientes ou sem regulamentação (Emirados Árabes Unidos, Arábia Saudita, Brasil, Japão, Bahrein, Taiwan) até regulamentação estado a estado (EUA).' },
+  ],
+  ar: [
+    { q: 'ما هي الطاقة الشمسية للشرفة (Balkonkraftwerk)؟', a: 'نظام شمسي قابل للتوصيل المباشر — عادةً لوح أو لوحان يغذيان عاكسًا دقيقًا صغيرًا — يتصل مباشرة بمقبس كهربائي منزلي أو موصل مخصص، وينتج كهرباء للاستهلاك الذاتي دون الحاجة لتركيب على السطح أو فني كهربائي في معظم الأسواق.' },
+    { q: 'هل أحتاج إلى تصريح لتركيب طاقة شمسية للشرفة؟', a: 'يعتمد ذلك على الدولة. تستخدم فرنسا والنمسا وبلجيكا وهولندا وألمانيا والبرتغال تسجيلاً بالإخطار فقط للأنظمة الصغيرة؛ ولدى الولايات المتحدة الآن 8 ولايات لديها قوانين مخصصة؛ بينما لا تزال أسواق أخرى — الإمارات والسعودية والبرازيل واليابان — بلا إطار مخصص، لذا تختلف المتطلبات.' },
+    { q: 'كم تكلفة طقم الطاقة الشمسية للشرفة، وما هي مدة استرداد التكلفة؟', a: 'تتراوح تكلفة الأطقم النموذجية بين بضع مئات وحوالي ألف دولار أو يورو حسب عدد الألواح وماركة العاكس ووجود بطارية من عدمها — وعادةً ما تتراوح مدة استرداد التكلفة بين 2 و5 سنوات حسب أسعار الكهرباء المحلية ونسبة الاستهلاك الذاتي.' },
+    { q: 'هل يمكنني مراقبة نظام الطاقة الشمسية للشرفة دون تطبيق السحابة الخاص بالشركة المصنعة؟', a: 'نعم، بالنسبة لمعظم العلامات التجارية الكبرى — يمكن قراءة عواكس وبطاريات Hoymiles وDeye وAPsystems وEcoFlow وAnker وZendure محليًا عبر Modbus أو MQTT أو واجهة برمجية محلية ودمجها في Home Assistant، مما يبقي بيانات الإنتاج بعيدًا عن خوادم الشركة المصنعة.' },
+    { q: 'هل الطاقة الشمسية للشرفة قانونية في مكان إقامتي؟', a: 'راجع الدليل الخاص بكل دولة في هذه المجموعة — يتراوح الوضع القانوني بين مقنن بالكامل (ألمانيا والبرتغال وفرنسا)، وقائم على الإخطار فقط (النمسا وبلجيكا وهولندا)، وناشئ أو غير محدد (الإمارات والسعودية والبرازيل واليابان والبحرين وتايوان)، وحتى منظم على مستوى كل ولاية (الولايات المتحدة).' },
+  ],
+  ko: [
+    { q: '발코니 태양광(Balkonkraftwerk)이란 무엇인가요?', a: '보통 한두 개의 패널과 소형 마이크로인버터로 구성되어 가정용 콘센트나 전용 커넥터에 직접 연결하는 플러그인 태양광 시스템으로, 대부분의 시장에서 지붕 공사나 전기기사 없이 자가소비용 전력을 생산합니다.' },
+    { q: '발코니 태양광 설치에 허가가 필요한가요?', a: '국가마다 다릅니다. 프랑스, 오스트리아, 벨기에, 네덜란드, 독일, 포르투갈은 소형 시스템에 대해 단순 신고 등록만 요구합니다. 미국은 현재 8개 주가 전용 법률을 갖추고 있습니다. UAE, 사우디아라비아, 브라질, 일본 등 일부 시장은 아직 전용 규정이 없어 요건이 다양합니다.' },
+    { q: '발코니 태양광 키트 가격과 투자 회수 기간은 어느 정도인가요?', a: '일반적인 키트는 패널 수, 인버터 브랜드, 배터리 포함 여부에 따라 수백에서 약 천 달러/유로 수준입니다. 투자 회수 기간은 현지 전기 요금과 자가소비 비율에 따라 보통 2~5년입니다.' },
+    { q: '제조사의 클라우드 앱 없이 발코니 태양광 시스템을 모니터링할 수 있나요?', a: '네, 대부분의 주요 브랜드에서 가능합니다 — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure의 인버터와 배터리는 Modbus, MQTT 또는 로컬 API를 통해 로컬에서 읽어 Home Assistant에 연동할 수 있어, 발전 데이터가 제조사 서버로 전송되지 않습니다.' },
+    { q: '제가 사는 곳에서 발코니 태양광은 합법인가요?', a: '이 클러스터의 국가별 가이드를 확인하세요 — 법적 상태는 완전히 성문화된 경우(독일, 포르투갈, 프랑스)부터 신고제만 있는 경우(오스트리아, 벨기에, 네덜란드), 아직 초기 단계이거나 규정이 없는 경우(UAE, 사우디아라비아, 브라질, 일본, 바레인, 대만), 그리고 주(州)별로 다른 미국까지 다양합니다.' },
+  ],
+}
+
+const HUB_FAQ_HEADING: Partial<Record<Lang, string>> = {
+  en: 'Frequently Asked Questions',
+  de: 'Häufig gestellte Fragen',
+  fr: 'Questions fréquentes',
+  ja: 'よくある質問',
+  zh: '常见问题',
+  es: 'Preguntas frecuentes',
+  pt: 'Perguntas frequentes',
+  ar: 'الأسئلة الشائعة',
+  ko: '자주 묻는 질문',
+}
+
+const HUB_REVIEWED_LABEL: Partial<Record<Lang, string>> = {
+  en: 'Content last reviewed:',
+  de: 'Inhalt zuletzt geprüft:',
+  fr: 'Contenu vérifié pour la dernière fois:',
+  ja: 'コンテンツの最終確認日:',
+  zh: '内容最后审核于:',
+  es: 'Contenido revisado por última vez:',
+  pt: 'Conteúdo revisado pela última vez em:',
+  ar: 'آخر مراجعة للمحتوى:',
+  ko: '콘텐츠 최종 검토일:',
+}
+
+// Most recent dateModified across all balcony-solar articles (EN block, always present).
+// Used as the hub's "content last reviewed" date — the hub itself has no article body to date.
+function latestBalconySolarDateModified(): string | undefined {
+  const dates = Object.values(balconySolarContent)
+    .map((article) => (article?.en as any)?.dateModified ?? article?.en?.publishDate)
+    .filter((d): d is string => !!d)
+  return dates.sort().at(-1)
+}
+
+const HUB_RELATED_LABEL: Partial<Record<Lang, string>> = {
+  en: 'Related guides',
+  de: 'Weitere Guides',
+  fr: 'Guides associés',
+  ja: '関連ガイド',
+  zh: '相关指南',
+  es: 'Guías relacionadas',
+  pt: 'Guias relacionados',
+  ar: 'أدلة ذات صلة',
+  ko: '관련 가이드',
+}
+
+const HUB_RELATED_LINKS: Partial<Record<Lang, { label: string; path: string }[]>> = {
+  en: [
+    { label: 'Smart Home', path: '/smart-home' },
+    { label: 'Local LLMs', path: '/local-llms' },
+    { label: 'Power Local LLM', path: '/power-local-llm' },
+  ],
+  de: [
+    { label: 'Smart Home', path: '/de/smart-home' },
+    { label: 'Lokale LLMs', path: '/de/local-llms' },
+    { label: 'Power Local LLM', path: '/de/power-local-llm' },
+  ],
+  fr: [
+    { label: 'Smart Home', path: '/fr/smart-home' },
+    { label: 'LLMs locaux', path: '/fr/local-llms' },
+    { label: 'Power Local LLM', path: '/fr/power-local-llm' },
+  ],
+  ja: [
+    { label: 'Smart Home', path: '/ja/smart-home' },
+    { label: 'ローカルLLM', path: '/ja/local-llms' },
+    { label: 'Power Local LLM', path: '/ja/power-local-llm' },
+  ],
+  zh: [
+    { label: 'Smart Home', path: '/zh/smart-home' },
+    { label: '本地大模型', path: '/zh/local-llms' },
+    { label: 'Power Local LLM', path: '/zh/power-local-llm' },
+  ],
+  es: [
+    { label: 'Smart Home', path: '/es/smart-home' },
+    { label: 'LLMs locales', path: '/es/local-llms' },
+    { label: 'Power Local LLM', path: '/es/power-local-llm' },
+  ],
+  pt: [
+    { label: 'Smart Home', path: '/pt/smart-home' },
+    { label: 'LLMs locais', path: '/pt/local-llms' },
+    { label: 'Power Local LLM', path: '/pt/power-local-llm' },
+  ],
+  ar: [
+    { label: 'Smart Home', path: '/ar/smart-home' },
+    { label: 'نماذج اللغة المحلية', path: '/ar/local-llms' },
+    { label: 'Power Local LLM', path: '/ar/power-local-llm' },
+  ],
+  ko: [
+    { label: 'Smart Home', path: '/ko/smart-home' },
+    { label: '로컬 LLM', path: '/ko/local-llms' },
+    { label: 'Power Local LLM', path: '/ko/power-local-llm' },
+  ],
+}
+
+const HUB_WAITLIST_CTA_LABEL: Partial<Record<Lang, string>> = {
+  en: 'Join the PromptQuorum Waitlist',
+  de: 'PromptQuorum-Warteliste beitreten',
+  fr: "Rejoindre la liste d'attente PromptQuorum",
+  ja: 'PromptQuorumのウェイトリストに参加',
+  zh: '加入 PromptQuorum 候补名单',
+  es: 'Únete a la lista de espera de PromptQuorum',
+  pt: 'Entre na lista de espera do PromptQuorum',
+  ar: 'انضم إلى قائمة انتظار PromptQuorum',
+  ko: 'PromptQuorum 대기자 명단 참여',
+}
+
+const HUB_PRESENTATION_URL = '/presentations/balcony-solar-overview-static.html'
+
+const HUB_PRESENTATION_DESCRIPTION: Partial<Record<Lang, string>> = {
+  en: 'The slide deck below covers: why balcony solar beats rooftop installation for cost and speed (plug-and-play, no electrician, fast payback), the core stack (panel, micro-inverter, optional battery, and Home Assistant for cloud-free monitoring), the EU\'s converging 800W standard versus Greece\'s stricter zero-feed-in design, and a hardware buying matrix for kits, batteries, and micro-inverters by brand. Download the PDF as a balcony solar planning reference.',
+  de: 'Das Foliendeck behandelt: warum ein Balkonkraftwerk bei Kosten und Geschwindigkeit gegenüber einer Dachanlage gewinnt (steckerfertig, kein Elektriker, schnelle Amortisation), den Kern-Stack (Modul, Mikrowechselrichter, optionaler Speicher und Home Assistant für cloudfreie Überwachung), den sich angleichenden 800-Watt-Standard in der EU gegenüber Griechenlands strengerem Zero-Feed-in-Modell sowie eine Kaufmatrix für Sets, Speicher und Mikrowechselrichter nach Marke. PDF als Planungsreferenz für Balkonkraftwerke herunterladen.',
+  fr: 'Le diaporama ci-dessous couvre : pourquoi le solaire de balcon l\'emporte sur une installation en toiture en coût et en rapidité (prêt à brancher, sans électricien, rentabilité rapide), la pile technique de base (panneau, micro-onduleur, batterie optionnelle et Home Assistant pour un suivi sans cloud), la convergence vers un standard de 800 W dans l\'UE face au modèle plus strict de zéro injection en Grèce, et une matrice d\'achat pour les kits, batteries et micro-onduleurs par marque. Téléchargez le PDF comme référence de planification pour le solaire de balcon.',
+  ja: '以下のスライドデッキは次をカバーします：バルコニーソーラーが屋根設置よりコストと速さで優れている理由（差し込むだけ、電気工事士不要、早期回収）、コアスタック（パネル、マイクロインバーター、オプションのバッテリー、クラウド不要の監視を実現するHome Assistant）、EUで収束しつつある800W標準とギリシャのより厳格なゼロフィードイン方式の比較、そしてブランド別のキット・バッテリー・マイクロインバーター購入比較表です。PDFをバルコニーソーラー計画のリファレンスとしてダウンロードしてください。',
+  zh: '以下幻灯片涵盖：为什么阳台光伏在成本和速度上优于屋顶安装（即插即用、无需电工、回本快），核心技术栈（面板、微型逆变器、可选电池，以及实现无云端监控的Home Assistant），欧盟正在趋同的800W标准与希腊更严格的零馈网方案的对比，以及按品牌划分的套件、电池与微型逆变器购买对比表。下载PDF作为阳台光伏规划参考。',
+  es: 'El deck de diapositivas a continuación cubre: por qué la energía solar de balcón supera a la instalación en tejado en coste y rapidez (listo para enchufar, sin electricista, amortización rápida), la pila básica (panel, microinversor, batería opcional y Home Assistant para una monitorización sin nube), la convergencia hacia un estándar de 800 W en la UE frente al modelo más estricto de cero inyección de Grecia, y una matriz de compra de kits, baterías y microinversores por marca. Descarga el PDF como referencia de planificación para energía solar de balcón.',
+  pt: 'O conjunto de slides abaixo aborda: por que a energia solar de varanda supera a instalação no telhado em custo e velocidade (plug-and-play, sem eletricista, retorno rápido), a pilha central (painel, microinversor, bateria opcional e Home Assistant para monitoramento sem nuvem), a convergência para um padrão de 800 W na UE frente ao modelo mais rígido de zero injeção da Grécia, e uma matriz de compra de kits, baterias e microinversores por marca. Baixe o PDF como referência de planejamento para energia solar de varanda.',
+  ar: 'يغطي عرض الشرائح أدناه: لماذا تتفوق الطاقة الشمسية للشرفة على التركيب على السطح من حيث التكلفة والسرعة (جاهزة للتوصيل، دون كهربائي، عائد سريع)، والمنظومة الأساسية (اللوح، العاكس الدقيق، البطارية الاختيارية، وHome Assistant للمراقبة دون سحابة)، وتقارب معيار 800 واط في الاتحاد الأوروبي مقابل نموذج اليونان الأكثر صرامة بلا تغذية عكسية، ومصفوفة شراء للأطقم والبطاريات والعواكس الدقيقة حسب العلامة التجارية. حمّل ملف PDF كمرجع للتخطيط للطاقة الشمسية للشرفة.',
+  ko: '아래 슬라이드 덱은 다음을 다룹니다: 발코니 태양광이 비용과 속도 면에서 지붕 설치보다 나은 이유(플러그 앤 플레이, 전기기사 불필요, 빠른 투자 회수), 핵심 스택(패널, 마이크로인버터, 선택적 배터리, 클라우드 없는 모니터링을 위한 Home Assistant), EU에서 수렴 중인 800W 표준과 그리스의 더 엄격한 제로 피드인 방식 비교, 그리고 브랜드별 키트·배터리·마이크로인버터 구매 비교표. 발코니 태양광 계획 참고 자료로 PDF를 다운로드하세요.',
+}
+
 function renderHub(lang: Lang) {
   const copy = HUB_COPY[lang] ?? HUB_COPY['en']!
   const hubTitle = copy.title
   const hubIntro = copy.intro
+  const reviewedDate = latestBalconySolarDateModified()
+  const faq = HUB_FAQ[lang] ?? HUB_FAQ['en']!
+  const relatedLinks = HUB_RELATED_LINKS[lang] ?? HUB_RELATED_LINKS['en']!
 
   return (
     <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
@@ -601,9 +793,51 @@ function renderHub(lang: Lang) {
           Balcony Solar
         </span>
         <h1 className="text-3xl sm:text-5xl font-bold text-text-primary mb-5">{hubTitle}</h1>
-        <p className="text-text-secondary leading-relaxed max-w-3xl mb-14">{hubIntro}</p>
+        <p className="text-text-secondary leading-relaxed max-w-3xl mb-4">{hubIntro}</p>
+        <p className="text-text-secondary leading-relaxed max-w-3xl mb-6">{copy.intro2}</p>
+        {reviewedDate && (
+          <time
+            dateTime={reviewedDate}
+            className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold mb-10"
+          >
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            {HUB_REVIEWED_LABEL[lang] ?? HUB_REVIEWED_LABEL['en']} {formatDisplayDate(reviewedDate, lang as any)}
+          </time>
+        )}
 
-        <div className="space-y-14">
+        <img
+          src="/images/balcony-solar-stack.svg"
+          alt=""
+          width={960}
+          height={480}
+          className="w-full h-auto rounded-2xl border border-primary/10 mb-10"
+        />
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+          {copy.benefits.map((benefit) => (
+            <div key={benefit.label} className="border border-primary/15 bg-card rounded-xl px-5 py-4">
+              <div className="text-sm font-bold text-primary mb-1">{benefit.label}</div>
+              <div className="text-sm text-text-secondary leading-relaxed">{benefit.detail}</div>
+            </div>
+          ))}
+        </div>
+
+        <section className="mb-14">
+          <p className="text-text-secondary leading-relaxed max-w-3xl mb-4">
+            {HUB_PRESENTATION_DESCRIPTION[lang] ?? HUB_PRESENTATION_DESCRIPTION['en']}
+          </p>
+          <iframe
+            src={`${HUB_PRESENTATION_URL}?lang=${lang}`}
+            title="Balcony Solar Overview"
+            className="w-full aspect-video rounded-xl border border-primary/15"
+            loading="lazy"
+          />
+        </section>
+
+        <div className="space-y-14 mb-14">
           {HUB_THEMES.map((theme) => (
             <section key={theme.id}>
               <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full border mb-3 ${theme.colorBadge}`}>
@@ -617,6 +851,7 @@ function renderHub(lang: Lang) {
                   const key = BALCONY_SOLAR_SLUG_TO_KEY[slug]
                   const articleData = key ? balconySolarContent[key] : undefined
                   const enArticle = articleData?.['en']
+                  const article = articleData?.[lang] ?? enArticle
                   const showNew = isNewArticle(enArticle?.publishDate)
                   const showUpdated = !showNew && isUpdatedArticle(enArticle?.publishDate, enArticle?.dateModified)
                   return (
@@ -636,9 +871,14 @@ function renderHub(lang: Lang) {
                         className={`group flex items-start gap-3 bg-card rounded-xl px-5 py-4 transition-colors ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/15 hover:border-primary/40'}`}
                       >
                         <span className={`mt-1.5 h-2 w-2 rounded-full shrink-0 ${theme.colorDot}`} />
-                        <span className="text-sm font-medium text-text-primary group-hover:text-primary transition-colors">
-                          {articleData?.[lang]?.title ?? enArticle?.title ?? slugToTitle(slug)}
-                        </span>
+                        <div>
+                          <div className="text-sm font-medium text-text-primary group-hover:text-primary transition-colors">
+                            {article?.title ?? enArticle?.title ?? slugToTitle(slug)}
+                          </div>
+                          {article?.intro && (
+                            <p className="text-xs text-text-secondary leading-relaxed mt-1 line-clamp-2">{article.intro}</p>
+                          )}
+                        </div>
                       </Link>
                     </div>
                   )
@@ -647,13 +887,102 @@ function renderHub(lang: Lang) {
             </section>
           ))}
         </div>
+
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold text-text-primary mb-6">{HUB_FAQ_HEADING[lang] ?? HUB_FAQ_HEADING['en']}</h2>
+          <div className="space-y-6">
+            {faq.map((entry) => (
+              <div key={entry.q}>
+                <div className="font-semibold text-text-primary mb-1">{entry.q}</div>
+                <p className="text-text-secondary leading-relaxed">{entry.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-14">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-text-secondary mb-4">
+            {HUB_RELATED_LABEL[lang] ?? HUB_RELATED_LABEL['en']}
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {relatedLinks.map((link) => (
+              <Link
+                key={link.path}
+                href={link.path}
+                className="px-4 py-2 border border-primary/15 bg-card rounded-lg text-sm font-medium text-text-primary hover:border-primary/40 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <BalconySolarWaitlistCTA label={HUB_WAITLIST_CTA_LABEL[lang] ?? HUB_WAITLIST_CTA_LABEL['en']!} />
       </div>
     </div>
   )
 }
 
 export async function buildHubPageElement(lang: Lang) {
-  return renderHub(lang)
+  const canonicalUrl = `${BASE}${balconySolarHubPath(lang)}`
+  const faq = HUB_FAQ[lang] ?? HUB_FAQ['en']!
+
+  const collectionPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: HUB_COPY[lang]?.title ?? HUB_COPY['en']!.title,
+    description: (HUB_COPY[lang] ?? HUB_COPY['en']!).intro,
+    url: canonicalUrl,
+    inLanguage: lang,
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    inLanguage: lang,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: HOME_LABEL[lang], item: BASE },
+      { '@type': 'ListItem', position: 2, name: HUB_LABEL, item: canonicalUrl },
+    ],
+  }
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: HUB_COPY[lang]?.title ?? HUB_COPY['en']!.title,
+    itemListElement: HUB_THEMES.flatMap((theme) => theme.slugs).map((slug, i) => {
+      const key = BALCONY_SOLAR_SLUG_TO_KEY[slug]
+      const articleData = key ? balconySolarContent[key] : undefined
+      const article = articleData?.[lang] ?? articleData?.['en']
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${BASE}${balconySolarArticlePath(lang, slug)}`,
+        name: article?.title ?? slugToTitle(slug),
+      }
+    }),
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: lang,
+    mainEntity: faq.map((entry) => ({
+      '@type': 'Question',
+      name: entry.q,
+      acceptedAnswer: { '@type': 'Answer', text: entry.a },
+    })),
+  }
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {renderHub(lang)}
+    </>
+  )
 }
 
 // ─── COMING SOON RENDERER ─────────────────────────────────────────────────
