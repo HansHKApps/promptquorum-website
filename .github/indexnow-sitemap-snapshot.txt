@@ -2,8 +2,12 @@ https://www.promptquorum.com
 https://www.promptquorum.com/about
 https://www.promptquorum.com/balcony-solar
 https://www.promptquorum.com/balcony-solar/balcony-solar-battery-storage-standard-2027
+https://www.promptquorum.com/balcony-solar/balcony-solar-brazil-status-2027
+https://www.promptquorum.com/balcony-solar/balcony-solar-china-2027
+https://www.promptquorum.com/balcony-solar/balcony-solar-greece-status-2027
 https://www.promptquorum.com/balcony-solar/balcony-solar-gulf-mena
 https://www.promptquorum.com/balcony-solar/balcony-solar-housing-associations-b2b-2027
+https://www.promptquorum.com/balcony-solar/balcony-solar-japan-status-2027
 https://www.promptquorum.com/balcony-solar/balcony-solar-legal-us-states
 https://www.promptquorum.com/balcony-solar/balcony-solar-mounting-guide
 https://www.promptquorum.com/balcony-solar/balcony-solar-not-producing-power-fixes
@@ -29,6 +33,7 @@ https://www.promptquorum.com/balcony-solar/is-balcony-solar-legal-country-guide
 https://www.promptquorum.com/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives
 https://www.promptquorum.com/balcony-solar/net-metering-rollback-balcony-solar-2027
 https://www.promptquorum.com/balcony-solar/what-is-balcony-solar
+https://www.promptquorum.com/balcony-solar/where-balcony-solar-doesnt-exist-yet-2027
 https://www.promptquorum.com/blog
 https://www.promptquorum.com/blog/ai-consensus-scoring
 https://www.promptquorum.com/blog/ai-model-comparison
