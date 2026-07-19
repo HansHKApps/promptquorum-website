@@ -16,16 +16,10 @@ import { BALCONY_SOLAR_SLUG_TO_KEY } from './slugs'
 // all four cleared and are now live.
 // BSOL-25 (us-balcony-solar-legalization-2027) dropped, not held back — see slugs.ts.
 //
-// Country expansion (BSOL-30..33) — EN-only scaffold drafted 2026-07-18 on
-// feat/balcony-solar-country-expansion. Held back pending review, translation,
-// and internal linking, same as BSOL-26..29 were before their Phase 7 authorization.
-const PENDING_SLUGS: ReadonlySet<string> = new Set([
-  'balcony-solar-japan-status-2027',
-  'balcony-solar-china-2027',
-  'balcony-solar-brazil-status-2027',
-  'where-balcony-solar-doesnt-exist-yet-2027',
-  'balcony-solar-greece-status-2027',
-])
+// Country expansion (BSOL-30..34) — published 2026-07-19 (Phase 7, explicit
+// authorization). Previously held back pending review, translation (all 9
+// languages), and internal linking; all five cleared and are now live.
+const PENDING_SLUGS: ReadonlySet<string> = new Set([])
 
 export const BALCONY_SOLAR_PUBLISHED_SLUGS: ReadonlySet<string> = new Set(
   Object.keys(BALCONY_SOLAR_SLUG_TO_KEY).filter(slug => !PENDING_SLUGS.has(slug))
