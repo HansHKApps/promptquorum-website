@@ -46,6 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Saudi Arabia', anchor: '#saudi-arabia' },
       { label: 'What This Means for Buyers', anchor: '#what-it-means' },
       { label: 'FAQ', anchor: '#faq' },
+      { label: 'Sources', anchor: '#sources' },
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
@@ -104,6 +105,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is balcony solar hardware even sold in the Gulf region?', a: 'No dedicated Gulf-market plug-in solar kit pricing was found during research for this guide — this product category doesn\'t appear commercially established in either market yet.' },
           { q: 'Should I just install a small system in Saudi Arabia since it\'s under the 1kW threshold?', a: 'This guide isn\'t going to tell you that\'s safe — "unaddressed by regulation" is not the same as "confirmed legal," and no source directly addresses whether a sub-1kW self-use device triggers any requirement. Proceed with that uncertainty in mind.' },
           { q: 'Will this page get clearer as regulation develops?', a: 'Likely, given how nascent the current state is in both markets — this page is on the standard 6-month refresh cycle and will update as SEWA\'s framework or ECRA\'s scope develops further.' },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        note: 'The AED 20,000 unauthorized-connection fine figure could not be independently confirmed against the governing instrument (Dubai Administrative Decision No. 4/2022, on fines for unauthorized solar generation units) — DEWA\'s FAQ and connection-application pages block automated access, and the legal-database record for the decision was not accessible in full. A secondary source cites AED 200 as DEWA\'s general fine for unauthorized utility connections, a different figure describing a different (non-solar-specific) violation category, so it neither confirms nor directly contradicts the AED 20,000 solar figure. Treat AED 20,000 as indicative of DEWA\'s enforcement mechanism rather than a confirmed statutory amount. The ECRA 1kW net-metering floor and the per-emirate NOC requirement (DEWA/ADDC/AADC/SEWA, not DEWA alone) are both independently confirmed against primary and secondary sources below.',
+        links: [
+          { url: 'https://www.dewa.gov.ae/en/consumer/solar-community/shams-dubai/shams-dubai-faq', title: 'Shams Dubai FAQ — DEWA', description: 'Official Dubai Electricity & Water Authority FAQ on the solar PV connection process and NOC requirements' },
+          { url: 'https://www.dewa.gov.ae/en/builder/electricity-network-services/apply-for-solar-pv-connections', title: 'Apply for Solar PV Connections — DEWA', description: 'DEWA\'s NOC and connection-approval process for grid-tied solar systems in Dubai, any size' },
+          { url: 'https://www.surgepv.com/solar-compliance/middle-east', title: 'Middle East Solar Compliance — SurgePV', description: 'Confirms NOC/approval requirements differ by emirate — DEWA in Dubai, ADDC/AADC in Abu Dhabi/Al Ain (with an added RSB approval step), SEWA in Sharjah' },
+          { url: 'https://www.cleantech.sa/small-scale-solar-pv-systems-regulations/', title: 'Small-Scale Solar PV Systems Regulations — Cleantech.sa', description: 'ECRA\'s 1kW-to-2MW capacity range governing net-metering eligibility for Saudi Arabia\'s small-scale solar PV framework' },
+          { url: 'https://rise.esmap.org/sites/default/files/library/saudi-arabia/Renewable%20Energy/Kingdom%20of%20Saudi%20Arabia_Regulatory%20Framework%20for%20Small-%20Scale%20Solar%20PV%20Systems.pdf', title: 'Regulatory Framework for Small-Scale Solar PV Systems — World Bank ESMAP', description: 'Saudi Arabia\'s regulatory framework for small-scale solar PV, source for the ECRA capacity thresholds' },
         ],
       },
     },
