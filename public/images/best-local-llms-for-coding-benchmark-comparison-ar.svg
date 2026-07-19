@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#1C1B1F" text-anchor="middle">درجات اختبارات البرمجة المرجعية (يونيو 2026)</text>
+
+  <!-- Legend -->
+  <rect x="150" y="52" width="14" height="14" fill="#34A853" rx="2"/>
+  <text x="168" y="63" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">HumanEval</text>
+  <rect x="290" y="52" width="14" height="14" fill="#6750A4" rx="2"/>
+  <text x="308" y="63" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">عائلة SWE-bench</text>
+  <rect x="470" y="52" width="14" height="14" fill="#F4B400" rx="2"/>
+  <text x="488" y="63" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F">اختبار واقعي مستقل /100</text>
+
+  <line x1="250" y1="85" x2="250" y2="399" stroke="#79747E" stroke-width="1.5"/>
+
+  <!-- Qwen3-Coder 32B -->
+  <text x="240" y="120" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end">Qwen3-Coder 32B</text>
+  <rect x="250" y="95" width="435" height="36" fill="#34A853" rx="3"/>
+  <text x="695" y="120" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">87% HumanEval</text>
+
+  <!-- DeepSeek V4 Flash -->
+  <text x="240" y="186" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end">DeepSeek V4 Flash</text>
+  <rect x="250" y="161" width="390" height="36" fill="#F4B400" rx="3"/>
+  <text x="650" y="186" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">78/100 واقعي</text>
+
+  <!-- Qwen 3.6 27B -->
+  <text x="240" y="252" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end">Qwen 3.6 27B</text>
+  <rect x="250" y="227" width="386" height="36" fill="#6750A4" rx="3"/>
+  <text x="646" y="252" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">77.2% SWE-bench</text>
+
+  <!-- Qwen3 8B -->
+  <text x="240" y="318" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end">Qwen3 8B</text>
+  <rect x="250" y="293" width="380" height="36" fill="#34A853" rx="3"/>
+  <text x="640" y="318" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">~76% HumanEval</text>
+
+  <!-- Kimi K2.6 (MoE) -->
+  <text x="240" y="384" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end">Kimi K2.6 (MoE)</text>
+  <rect x="250" y="359" width="293" height="36" fill="#6750A4" rx="3"/>
+  <text x="553" y="384" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">58.6 SWE-Bench Pro</text>
+
+  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">الدرجات مأخوذة من اختبارات مرجعية مختلفة وغير قابلة للمقارنة المباشرة — SWE-Bench Pro هو نسخة أصعب من SWE-bench. راجع جدول المقاييس الكامل لمعرفة متطلبات RAM ودعم FIM لكل نموذج.</text>
+<text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
