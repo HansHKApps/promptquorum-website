@@ -25,6 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Most Mac-for-AI advice fixates on the chip name when the number that actually binds the decision is unified memory. On Apple Silicon the model lives in the same memory pool as everything else, so a 64 GB Mac Mini runs a 34B model that a faster 24 GB MacBook Pro cannot fit. This guide compares three Macs for running local LLMs — the Mac Mini M5 Pro as an always-on server, the MacBook Pro 16" M5 Max as a portable workstation, and the Mac Studio as the desktop option — on the figures that decide a purchase: unified memory, memory bandwidth, measured tokens per second, and price. One caveat on price: Apple raised configured-memory pricing in 2026 on the same memory shortage that hit GPUs, so every price here is a July 2026 snapshot. And one caveat on availability: the Mac Studio M5 is not yet released — its specs and prices below are projected and clearly flagged.',
     metaDescription:
       'Mac Mini M5 Pro 64GB runs 34B models (~$1,199); Mac Studio M4 Max 128GB ships now at ~$3,999 for desktop 70B (M5 Mac Studio not yet released). July 2026 prices.',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-en.png',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio for local AI — three Macs, one decision rule: buy for unified memory, then bandwidth. July 2026 prices.',
     affiliateDisclosure: true,
@@ -208,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Expected late 2026 — not yet for sale',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-en.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-en.png',
         imageCaption: 'Mac Mini M5 Pro 64 GB (307 GB/s, ~$1,199) versus MacBook Pro 16" M5 Max 64-128 GB (460-614 GB/s, ~$3,499-$4,499) versus Mac Studio 128 GB (~$3,999); Mac Studio M5 Max specs are projected, unreleased as of July 2026.',
       },
       whichMac: {
@@ -357,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Silicon memory is soldered and cannot be upgraded. Buy one tier above your current need: if you run 34B models today, 64 GB is the floor, not the comfortable choice. For the full method, see the unified memory guide in Related Reading.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-en.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.png',
         imageCaption: 'Unified memory by model size at Q4_K_M: 8B needs 8-9 GB, 13-14B needs 11-13 GB, 34B needs 21-25 GB, 70B Q4 needs 39-42 GB, and 70B Q5 or concurrent models need 50-70+ GB.',
       },
       decisionFlowchart: {
@@ -507,6 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La mayoría de los consejos sobre Mac para IA se centran en el nombre del chip, cuando el número que realmente define la decisión es la memoria unificada. En Apple Silicon el modelo vive en el mismo pool de memoria que todo lo demás, por lo que un Mac Mini de 64 GB puede ejecutar un modelo 34B que un MacBook Pro más rápido con 24 GB no puede cargar. Esta guía compara tres Mac para ejecutar LLMs locales — el Mac Mini M5 Pro como servidor siempre activo, el MacBook Pro 16" M5 Max como estación de trabajo portátil y el Mac Studio como opción de escritorio — en las cifras que deciden una compra: memoria unificada, ancho de banda de memoria, tokens por segundo medidos y precio. Una advertencia sobre el precio: Apple subió los precios de la memoria configurada en 2026 debido a la misma escasez de memoria que afectó a las GPU, por lo que cada precio aquí es una instantánea de julio de 2026. Y una advertencia sobre disponibilidad: el Mac Studio M5 aún no ha sido lanzado — sus especificaciones y precios a continuación son proyecciones y están claramente señalados como tales.',
     metaDescription:
       'Mac Mini M5 Pro 64GB ejecuta modelos 34B; MacBook Pro M5 Max 64GB ejecuta 70B. Memoria unificada, tok/s, consumo y precios 2026 de tres Mac comparados.',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-es.png',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio para IA local — tres Mac, una regla de decisión: compra por memoria unificada, luego optimiza el ancho de banda. Precios de julio 2026.',
     affiliateDisclosure: true,
@@ -690,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': 'Esperado para finales de 2026 — aún no disponible',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-es.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-es.png',
         imageCaption: 'Mac Mini M5 Pro 64 GB (307 GB/s, ~$1,199) frente a MacBook Pro 16" M5 Max 64-128 GB (460-614 GB/s, ~$3,499-$4,499) frente a Mac Studio 128 GB (~$3,999); las especificaciones del Mac Studio M5 Max son proyecciones, no disponible en julio de 2026.',
       },
       whichMac: {
@@ -839,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La memoria de Apple Silicon está soldada y no se puede actualizar. Compra un nivel por encima de tu necesidad actual: si ejecutas modelos 34B hoy, 64 GB es el piso, no la opción cómoda. Para el método completo, consulta la guía de memoria unificada en la sección de Lectura relacionada.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-es.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-es.png',
         imageCaption: 'Memoria unificada por tamaño de modelo en Q4_K_M: 8B necesita 8-9 GB, 13-14B necesita 11-13 GB, 34B necesita 21-25 GB, 70B Q4 necesita 39-42 GB, y 70B Q5 o modelos concurrentes necesitan 50-70+ GB.',
       },
       decisionFlowchart: {
@@ -1001,6 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Die meisten Mac-für-KI-Empfehlungen fixieren sich auf den Chipnamen, dabei ist die Zahl, die die Entscheidung tatsächlich bindet, der Unified Memory. Auf Apple Silicon liegt das Modell im selben Speicherpool wie alles andere — ein Mac Mini mit 64 GB führt daher ein 34B-Modell aus, das in ein schnelleres MacBook Pro mit 24 GB schlicht nicht passt. Dieser Leitfaden vergleicht drei Macs für den Betrieb lokaler LLMs — den Mac Mini M5 Pro als Always-on-Server, das MacBook Pro 16" M5 Max als portable Workstation und den Mac Studio als Desktop-Option — anhand der Kennzahlen, die einen Kauf entscheiden: Unified Memory, Speicherbandbreite, gemessene Tokens pro Sekunde und Preis. Ein Hinweis zum Preis: Apple hat 2026 die Preise für konfigurierten Speicher angehoben, ausgelöst durch dieselbe Speicherknappheit, die auch GPUs verteuert hat — jeder Preis hier ist eine Momentaufnahme vom Juli 2026. Und ein Hinweis zur Verfügbarkeit: Der Mac Studio M5 ist noch nicht erschienen — die unten genannten Spezifikationen und Preise sind Prognosen und klar als solche gekennzeichnet.',
     metaDescription:
       'Mac Mini M5 Pro 64GB läuft 34B-Modelle; MacBook Pro M5 Max 64GB läuft 70B. Unified Memory, tok/s und Preise 2026: drei Macs für lokale KI im Vergleich.',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-de.png',
     twitterDescription:
       'Mac Mini M5 Pro vs. MacBook Pro 16" M5 Max vs. Mac Studio für lokale KI — drei Macs, eine Entscheidungsregel: zuerst nach Unified Memory kaufen, dann nach Bandbreite. Preise vom Juli 2026.',
     affiliateDisclosure: true,
@@ -1184,7 +1187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': 'Erwartet Ende 2026 — noch nicht im Handel',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-de.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-de.png',
         imageCaption: 'Mac Mini M5 Pro 64 GB (307 GB/s, ca. 1.699 €) im Vergleich zum MacBook Pro 16" M5 Max 64-128 GB (460-614 GB/s, ca. 4.179-5.299 €) und zum Mac Studio 128 GB (ca. 3.699 €); die Spezifikationen des Mac Studio M5 Max sind Prognosen — im Juli 2026 noch nicht erschienen.',
       },
       whichMac: {
@@ -1333,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Der Speicher von Apple Silicon ist verlötet und lässt sich nicht aufrüsten. Kaufen Sie eine Klasse über Ihrem aktuellen Bedarf: Wenn Sie heute 34B-Modelle ausführen, sind 64 GB die Untergrenze, nicht die komfortable Wahl. Die vollständige Methode finden Sie im Unified-Memory-Leitfaden unter Weiterführende Artikel.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-de.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-de.png',
         imageCaption: 'Unified Memory nach Modellgröße bei Q4_K_M: 8B braucht 8-9 GB, 13-14B braucht 11-13 GB, 34B braucht 21-25 GB, 70B Q4 braucht 39-42 GB, und 70B Q5 oder parallele Modelle brauchen 50-70+ GB.',
       },
       decisionFlowchart: {
@@ -1490,6 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La plupart des conseils sur les Mac pour l\'IA se fixent sur le nom de la puce, alors que le chiffre qui détermine réellement le choix est la mémoire unifiée. Sur Apple Silicon, le modèle réside dans le même pool mémoire que tout le reste : un Mac mini de 64 Go fait donc tourner un modèle 34B qu\'un MacBook Pro de 24 Go, pourtant plus rapide, ne peut pas charger. Ce guide compare trois Mac pour exécuter des LLM en local — le Mac mini M5 Pro comme serveur toujours actif, le MacBook Pro 16" M5 Max comme station de travail portable et le Mac Studio comme option de bureau — sur les chiffres qui décident d\'un achat : mémoire unifiée, bande passante mémoire, tokens par seconde mesurés et prix. Une réserve sur le prix : Apple a relevé en 2026 le tarif de la mémoire configurée, sous l\'effet de la même pénurie de mémoire qui a frappé les GPU ; chaque prix indiqué ici est un relevé de juillet 2026. Et une réserve sur la disponibilité : le Mac Studio M5 n\'est pas encore sorti — ses spécifications et ses prix ci-dessous sont des projections clairement signalées.',
     metaDescription:
       'Mac mini M5 Pro 64 Go fait tourner 34B ; MacBook Pro M5 Max 64 Go fait tourner 70B. Mémoire unifiée, tok/s et prix 2026 : trois Mac comparés pour l\'IA locale.',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-fr.png',
     twitterDescription:
       'Mac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio pour l\'IA locale — trois Mac, une règle : acheter selon la mémoire unifiée, puis la bande passante. Prix de juillet 2026.',
     affiliateDisclosure: true,
@@ -1673,7 +1677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Idéal pour': 'Attendu fin 2026 — pas encore en vente',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-fr.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-fr.png',
         imageCaption: 'Mac mini M5 Pro 64 Go (307 Go/s, env. 1 699 €) face au MacBook Pro 16" M5 Max 64-128 Go (460-614 Go/s, env. 4 179-5 299 €) et au Mac Studio 128 Go (env. 3 699 €) ; les spécifications du Mac Studio M5 Max sont des projections — pas encore sorti en juillet 2026.',
       },
       whichMac: {
@@ -1822,7 +1826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La mémoire d\'Apple Silicon est soudée et ne peut pas être mise à niveau. Achetez une catégorie au-dessus de votre besoin actuel : si vous exécutez des modèles 34B aujourd\'hui, 64 Go sont le plancher, pas le choix confortable. Pour la méthode complète, voir le guide de la mémoire unifiée dans À lire également.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-fr.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-fr.png',
         imageCaption: 'Mémoire unifiée par taille de modèle en Q4_K_M : 8B nécessite 8-9 Go, 13-14B nécessite 11-13 Go, 34B nécessite 21-25 Go, 70B Q4 nécessite 39-42 Go, et 70B Q5 ou plusieurs modèles nécessitent 50-70+ Go.',
       },
       decisionFlowchart: {
@@ -1971,6 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac選びの多くのアドバイスはチップ名にとらわれがちですが、購入判断を実際に左右する数値はunified memoryです。Apple Siliconではモデルが他のすべてと同じメモリプールに置かれるため、64GBのMac miniは34Bモデルを動かせますが、より高速でも24GBのMacBook Proには収まりません。本ガイドでは、ローカルLLMを動かすための3台のMac——常時稼働サーバーとしてのMac mini M5 Pro、ポータブルワークステーションとしてのMacBook Pro 16" M5 Max、デスクトップ選択肢としてのMac Studio——を、購入を決める数値、すなわちunified memory、メモリ帯域幅、実測のtokens per second、価格で比較します。価格について一点注意があります。Appleは2026年、GPUを直撃したのと同じメモリ不足を受けて構成メモリの価格を引き上げたため、ここに示す価格はすべて2026年7月時点のスナップショットです。そして入手性について一点注意があります。Mac Studio M5は未発売です——以下の仕様と価格は予測であり、その旨を明示しています。',
     metaDescription:
       'Mac mini M5 Pro 64GBは34Bモデルを実行可能、MacBook Pro M5 Max 64GBは70Bを実行。unified memory、tok/s、2026年価格で3台のMacを比較。',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ja.png',
     twitterDescription:
       'ローカルAI向けMac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio——3台のMac、判断ルールは一つ：まずunified memoryで選び、次に帯域幅。2026年7月時点の価格。',
     affiliateDisclosure: true,
@@ -2154,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': '2026年後半に予想——まだ販売されていない',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-ja.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ja.png',
         imageCaption: 'Mac mini M5 Pro 64GB（307GB/s、約¥184,800）とMacBook Pro 16" M5 Max 64-128GB（460-614GB/s、約¥554,800-¥718,800）、Mac Studio 128GB（約¥599,800）の比較。Mac Studio M5 Maxの仕様は予測値であり、2026年7月時点で未発売。',
       },
       whichMac: {
@@ -2303,7 +2308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Siliconのメモリは直付けされており、アップグレードできません。現在の必要量より1段階上を買ってください：今日34Bモデルを動かすなら、64GBは下限であって快適な選択ではありません。完全な方法は、関連記事のunified memoryガイドを参照してください。',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-ja.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-ja.png',
         imageCaption: 'Q4_K_Mでのモデルサイズ別unified memory：8Bは8-9GB、13-14Bは11-13GB、34Bは21-25GB、Q4の70Bは39-42GB、Q5の70Bまたは同時実行モデルは50-70GB以上が必要。',
       },
       decisionFlowchart: {
@@ -2452,6 +2457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '大多数关于「Mac 跑 AI」的建议都盯着芯片型号，但真正决定选择的数字是统一内存。在 Apple Silicon 上，模型与其他一切共用同一个内存池，因此一台 64 GB 的 Mac mini 能跑 34B 模型，而一台速度更快但只有 24 GB 的 MacBook Pro 却装不下。本指南从决定购买的几个数字——统一内存、内存带宽、实测的每秒 token 数和价格——比较三台用于运行本地 LLM 的 Mac：作为常开服务器的 Mac mini M5 Pro、作为便携工作站的 MacBook Pro 16" M5 Max，以及作为桌面选择的 Mac Studio。关于价格有一点提醒：Apple 在 2026 年因同一波冲击 GPU 的内存短缺而上调了配置内存的价格，因此这里的每个价格都是 2026 年 7 月的快照。关于供货还有一点提醒：Mac Studio M5 尚未发布——下文的规格和价格都是预测，并已明确标注。',
     metaDescription:
       'Mac mini M5 Pro 64GB可运行34B模型，MacBook Pro M5 Max 64GB可运行70B。统一内存、tok/s、功耗和2026年价格：三台Mac本地AI对比。',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-zh.png',
     twitterDescription:
       'Mac mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio 跑本地 AI——三台 Mac，一条决策规则：先按统一内存买，再优化带宽。2026 年 7 月价格。',
     affiliateDisclosure: true,
@@ -2635,7 +2641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '预计 2026 年底——尚未发售',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-zh.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-zh.png',
         imageCaption: 'Mac mini M5 Pro 64 GB（307 GB/s，约 $1,199）对比 MacBook Pro 16" M5 Max 64-128 GB（460-614 GB/s，约 $3,499-$4,499）对比 Mac Studio 128 GB（约 $3,999）；Mac Studio M5 Max 规格为预测值，截至 2026 年 7 月尚未发布。',
       },
       whichMac: {
@@ -2784,7 +2790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Silicon 的内存是焊死的，无法升级。买比当前需求高一档：如果你今天跑 34B 模型，64 GB 是底线，而不是从容的选择。完整方法请参见延伸阅读中的统一内存指南。',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-zh.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-zh.png',
         imageCaption: 'Q4_K_M 下按模型大小所需的统一内存：8B 需要 8-9 GB，13-14B 需要 11-13 GB，34B 需要 21-25 GB，70B Q4 需要 39-42 GB，70B Q5 或并行模型需要 50-70+ GB。',
       },
       decisionFlowchart: {
@@ -2933,6 +2939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A maioria dos conselhos sobre Mac para IA foca no nome do chip, quando o número que realmente define a decisão é a memória unificada. No Apple Silicon o modelo vive no mesmo pool de memória que todo o resto, então um Mac Mini de 64 GB consegue executar um modelo 34B que um MacBook Pro mais rápido com 24 GB não consegue carregar. Este guia compara três Macs para executar LLMs locais — o Mac Mini M5 Pro como servidor sempre ativo, o MacBook Pro 16" M5 Max como estação de trabalho portátil e o Mac Studio como opção de desktop — nos números que decidem uma compra: memória unificada, largura de banda de memória, tokens por segundo medidos e preço. Uma ressalva sobre o preço: a Apple subiu os preços da memória configurada em 2026 devido à mesma escassez de memória que afetou as GPUs, então cada preço aqui é um retrato de julho de 2026. E uma ressalva sobre disponibilidade: o Mac Studio M5 ainda não foi lançado — suas especificações e preços a seguir são projeções e estão claramente sinalizados como tais.',
     metaDescription:
       'Mac Mini M5 Pro 64GB executa modelos 34B; MacBook Pro M5 Max 64GB executa 70B. Memória unificada, tok/s, consumo e preços 2026: três Macs comparados para IA local.',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-pt.png',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio para IA local — três Macs, uma regra de decisão: compre pela memória unificada, depois otimize a largura de banda. Preços de julho de 2026.',
     affiliateDisclosure: true,
@@ -3116,7 +3123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': 'Esperado para o fim de 2026 — ainda não disponível',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-pt.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-pt.png',
         imageCaption: 'Mac Mini M5 Pro 64 GB (307 GB/s, ~$1.199) versus MacBook Pro 16" M5 Max 64-128 GB (460-614 GB/s, ~$3.499-$4.499) versus Mac Studio 128 GB (~$3.999); as especificações do Mac Studio M5 Max são projeções, ainda não disponível em julho de 2026.',
       },
       whichMac: {
@@ -3265,7 +3272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'A memória do Apple Silicon é soldada e não pode ser atualizada. Compre um nível acima da sua necessidade atual: se você executa modelos 34B hoje, 64 GB é o piso, não a opção confortável. Para o método completo, consulte o guia de memória unificada na seção de Leituras relacionadas.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-pt.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-pt.png',
         imageCaption: 'Memória unificada por tamanho de modelo em Q4_K_M: 8B precisa de 8-9 GB, 13-14B precisa de 11-13 GB, 34B precisa de 21-25 GB, 70B Q4 precisa de 39-42 GB, e 70B Q5 ou modelos concorrentes precisam de 50-70+ GB.',
       },
       decisionFlowchart: {
@@ -3428,6 +3435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تركّز معظم نصائح Mac للذكاء الاصطناعي على اسم الشريحة، بينما الرقم الذي يحدد القرار فعلاً هو الذاكرة الموحّدة. في Apple Silicon يعيش النموذج في نفس تجمّع الذاكرة مع كل شيء آخر، لذا يمكن لجهاز Mac Mini بذاكرة 64 GB تشغيل نموذج 34B لا يستطيع MacBook Pro أسرع بذاكرة 24 GB تحميله. يقارن هذا الدليل ثلاثة أجهزة Mac لتشغيل نماذج LLM محلياً — Mac Mini M5 Pro كخادم دائم التشغيل، وMacBook Pro 16" M5 Max كمحطة عمل محمولة، وMac Studio كخيار لسطح المكتب — في الأرقام التي تحدد عملية الشراء: الذاكرة الموحّدة، وعرض نطاق الذاكرة، والرموز المقاسة في الثانية، والسعر. تحذير بشأن السعر: رفعت Apple أسعار الذاكرة المُهيَّأة في 2026 بسبب نفس نقص الذاكرة الذي أثّر على وحدات GPU، لذا كل سعر هنا هو لقطة من يوليو 2026. وتحذير بشأن التوفر: لم يُطلق Mac Studio M5 بعد — مواصفاته وأسعاره أدناه توقعات ومُوضَّح ذلك بوضوح.',
     metaDescription:
       'Mac Mini M5 Pro يُشغّل نماذج 34B، وMacBook Pro M5 Max يصل إلى 70B — مقارنة ثلاثة أجهزة Mac بالذاكرة الموحّدة والرموز/ثانية وأسعار 2026.',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ar.png',
     twitterDescription:
       'Mac Mini M5 Pro مقابل MacBook Pro 16" M5 Max مقابل Mac Studio للذكاء الاصطناعي المحلي — ثلاثة أجهزة Mac، قاعدة قرار واحدة: اشترِ بالذاكرة الموحّدة أولاً، ثم حسّن عرض النطاق. أسعار يوليو 2026.',
     affiliateDisclosure: true,
@@ -3611,7 +3619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الأنسب لـ': 'متوقع في أواخر 2026 — غير متاح بعد',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-ar.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ar.png',
         imageCaption: 'مقارنة Mac Mini M5 Pro بذاكرة 64 GB (307 GB/ثانية، ~1,199 دولار) وMacBook Pro 16" M5 Max بذاكرة 64-128 GB (460-614 GB/ثانية، ~3,499-4,499 دولار) وMac Studio بذاكرة 128 GB (~3,999 دولار)؛ مواصفات Mac Studio M5 Max توقعات، وهو غير متاح حتى يوليو 2026.',
       },
       whichMac: {
@@ -3760,7 +3768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ذاكرة Apple Silicon ملحومة ولا يمكن ترقيتها. اشترِ مستوى واحداً فوق حاجتك الحالية: إذا كنت تُشغّل نماذج 34B اليوم، 64 GB هو الحد الأدنى لا الخيار المريح. للطريقة الكاملة، راجع دليل الذاكرة الموحّدة في قسم القراءة ذات الصلة.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-ar.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-ar.png',
         imageCaption: 'الذاكرة الموحّدة حسب حجم النموذج بتكميم Q4_K_M: يحتاج 8B إلى 8-9 GB، و13-14B إلى 11-13 GB، و34B إلى 21-25 GB، و70B Q4 إلى 39-42 GB، ويحتاج 70B Q5 أو النماذج المتزامنة إلى 50-70+ GB.',
       },
       decisionFlowchart: {
@@ -3922,6 +3930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac을 AI용으로 추천하는 대부분의 글은 칩 이름에만 집중하지만, 실제로 구매 결정을 좌우하는 수치는 통합 메모리(Unified Memory)입니다. Apple Silicon에서는 모델이 시스템의 모든 것과 동일한 메모리 풀을 공유합니다. 따라서 64GB Mac Mini는 더 빠른 24GB MacBook Pro가 로드조차 할 수 없는 34B 모델을 실행할 수 있습니다. 이 가이드는 로컬 LLM 실행을 위한 세 가지 Mac을 비교합니다. 상시 가동 서버로서의 Mac Mini M5 Pro, 휴대용 워크스테이션으로서의 MacBook Pro 16" M5 Max, 그리고 데스크톱 옵션으로서의 Mac Studio를 구매 결정에 중요한 수치인 통합 메모리, 메모리 대역폭, 측정된 초당 토큰 수, 가격으로 비교합니다. 가격에 관한 주의 사항: Apple은 GPU에 영향을 미친 것과 동일한 메모리 부족 현상으로 인해 2026년에 구성된 메모리 가격을 인상했으므로, 여기에 표시된 모든 가격은 2026년 7월의 스냅샷입니다. 가용성에 관한 주의 사항: Mac Studio M5는 아직 출시되지 않았습니다. 아래의 사양과 가격은 예상치이며 명확하게 표시되어 있습니다.',
     metaDescription:
       'Mac Mini M5 Pro 64GB로 34B 모델 실행, MacBook Pro M5 Max 64GB로 70B 실행. 통합 메모리·tok/s·2026년 가격을 세 가지 Mac으로 비교합니다.',
+    heroImage: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ko.png',
     twitterDescription:
       'Mac Mini M5 Pro vs MacBook Pro 16" M5 Max vs Mac Studio 로컬 AI 비교 — 세 가지 Mac, 하나의 결정 원칙: 통합 메모리를 먼저 보고, 그다음 대역폭을 최적화하세요. 2026년 7월 가격 기준.',
     affiliateDisclosure: true,
@@ -4105,7 +4114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '최적 용도': '2026년 하반기 예상 — 현재 미구매',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-comparison-table-ko.svg',
+        image: '/images/best-mac-for-local-ai-2026-comparison-table-hero-ko.png',
         imageCaption: 'Mac Mini M5 Pro 64GB(307GB/s, 약 $1,199) 대 MacBook Pro 16" M5 Max 64-128GB(460-614GB/s, 약 $3,499-$4,499) 대 Mac Studio 128GB(약 $3,999) 비교. Mac Studio M5 Max 사양은 예상치이며 2026년 7월 기준 미출시 상태다.',
       },
       whichMac: {
@@ -4254,7 +4263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Apple Silicon 메모리는 납땜되어 있어 업그레이드가 불가능합니다. 현재 필요보다 한 단계 위로 구매하십시오. 오늘 34B 모델을 실행한다면 64GB는 편안한 옵션이 아니라 최소 기준입니다. 전체 방법론은 관련 읽을거리 섹션의 통합 메모리 가이드를 참조하십시오.',
           },
         ],
-        image: '/images/best-mac-for-local-ai-2026-memory-by-model-ko.svg',
+        image: '/images/best-mac-for-local-ai-2026-memory-by-model-hero-ko.png',
         imageCaption: 'Q4_K_M 기준 모델 크기별 통합 메모리: 8B는 8-9GB, 13-14B는 11-13GB, 34B는 21-25GB, 70B Q4는 39-42GB, 70B Q5 또는 동시 모델은 50-70GB 이상이 필요합니다.',
       },
       decisionFlowchart: {
