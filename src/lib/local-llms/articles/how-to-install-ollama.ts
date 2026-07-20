@@ -106,6 +106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'The install script automatically registers Ollama as a systemd service. To manage it:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-en.svg',
+          imageCaption: 'Four-step flow for running Ollama as a systemd service on Linux: install with `curl -fsSL https://ollama.com/install.sh | sh`, check status with `systemctl status ollama`, control it with `start`/`stop`/`restart`, and tail logs with `journalctl -u ollama -f`.',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -146,6 +148,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Troubleshooting Common Ollama Installation Issues',
+          image: '/images/how-to-install-ollama-troubleshooting-table-en.svg',
+          imageCaption: 'Reference table of 5 common Ollama installation errors -- service not running, stalled 2-47 GB downloads, out-of-memory errors, undetected GPUs, and prompts truncated at 4096 tokens -- each mapped to its fix command.',
           faqs: [
             {
               q: 'Ollama says "could not connect to ollama app, is it running?"',
@@ -387,6 +391,8 @@ schema: {
           content: 'El script de instalación registra Ollama automáticamente como servicio systemd. Para gestionarlo:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-es.svg',
+          imageCaption: 'Flujo de cuatro pasos para ejecutar Ollama como servicio systemd en Linux: instalar con `curl -fsSL https://ollama.com/install.sh | sh`, verificar el estado con `systemctl status ollama`, controlarlo con `start`/`stop`/`restart`, y seguir los logs con `journalctl -u ollama -f`.',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -427,6 +433,8 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Solución de problemas comunes de instalación de Ollama',
+          image: '/images/how-to-install-ollama-troubleshooting-table-es.svg',
+          imageCaption: 'Tabla de referencia de 5 errores comunes al instalar Ollama -- servicio inactivo, descargas de 2-47 GB detenidas, errores de memoria insuficiente, GPUs no detectadas y prompts truncados a 4096 tokens -- cada uno con su comando de solución.',
           faqs: [
             {
               q: 'Ollama dice "could not connect to ollama app, is it running?"',
@@ -669,6 +677,8 @@ schema: {
           content: 'يسجّل سكربت التثبيت Ollama تلقائيًا كخدمة systemd. لإدارتها:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-ar.svg',
+          imageCaption: 'مخطط من أربع خطوات لتشغيل Ollama كخدمة systemd على Linux: التثبيت باستخدام `curl -fsSL https://ollama.com/install.sh | sh`، التحقق من الحالة باستخدام `systemctl status ollama`، التحكم بها عبر `start`/`stop`/`restart`، ومتابعة السجلات باستخدام `journalctl -u ollama -f`.',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -709,6 +719,8 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'حل مشكلات تثبيت Ollama الشائعة',
+          image: '/images/how-to-install-ollama-troubleshooting-table-ar.svg',
+          imageCaption: 'جدول مرجعي لـ 5 أخطاء شائعة عند تثبيت Ollama -- خدمة غير نشطة، توقف تنزيلات 2-47 جيجابايت، أخطاء نفاد الذاكرة، عدم اكتشاف GPU، واقتطاع الطلبات عند 4096 رمزاً -- مع أمر الحل لكل منها.',
           faqs: [
             {
               q: 'يقول Ollama "could not connect to ollama app, is it running?"',
@@ -1062,6 +1074,8 @@ schema: {
           content: 'Das Installationsskript registriert Ollama automatisch als systemd-Dienst. So verwalten Sie ihn:',
           codeBlock: '# Dienststatus überprüfen\nsystemctl status ollama\n\n# Starten / Stoppen / Neustarten\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# Protokolle anzeigen\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-de.svg',
+          imageCaption: 'Vierstufiger Ablauf, um Ollama als systemd-Dienst unter Linux auszuführen: Installation mit `curl -fsSL https://ollama.com/install.sh | sh`, Statusprüfung mit `systemctl status ollama`, Steuerung über `start`/`stop`/`restart`, und Log-Verfolgung mit `journalctl -u ollama -f`.',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -1104,6 +1118,8 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Wie behebe ich häufige Probleme bei der Installation von Ollama?',
+          image: '/images/how-to-install-ollama-troubleshooting-table-de.svg',
+          imageCaption: 'Referenztabelle mit 5 häufigen Ollama-Installationsfehlern -- Dienst läuft nicht, gestoppte 2-47 GB Downloads, Speicherfehler, nicht erkannte GPUs und bei 4096 Tokens abgeschnittene Prompts -- jeweils mit passendem Fix-Befehl.',
           faqs: [
             {
               q: 'Ollama sagt „could not connect to ollama app, is it running?" (Fehler: Keine Verbindung zur Ollama-App möglich. Läuft sie?)',
@@ -1388,6 +1404,8 @@ schema: {
           content: 'Le script d\'installation enregistre automatiquement Ollama comme service systemd. Pour le gérer :',
           codeBlock: '# Vérifier l\'état du service\nsystemctl status ollama\n\n# Démarrer / Arrêter / Redémarrer\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# Afficher les journaux\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-fr.svg',
+          imageCaption: 'Flux en quatre étapes pour exécuter Ollama comme service systemd sur Linux : installer avec `curl -fsSL https://ollama.com/install.sh | sh`, vérifier le statut avec `systemctl status ollama`, le contrôler avec `start`/`stop`/`restart`, et suivre les logs avec `journalctl -u ollama -f`.',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -1430,6 +1448,8 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Comment résoudre les problèmes courants d\'installation d\'Ollama ?',
+          image: '/images/how-to-install-ollama-troubleshooting-table-fr.svg',
+          imageCaption: 'Tableau de référence de 5 erreurs courantes d\'installation d\'Ollama -- service inactif, téléchargements de 2-47 Go bloqués, erreurs de mémoire insuffisante, GPU non détectés et prompts tronqués à 4096 tokens -- chacune avec sa commande de correction.',
           faqs: [
             {
               q: 'Ollama dit « could not connect to ollama app, is it running? » (impossible de se connecter à l\'application Ollama, fonctionne-t-elle ?)',
@@ -1714,6 +1734,8 @@ schema: {
           content: 'インストール スクリプトは自動的に Ollama を systemd サービスとして登録。管理方法は:',
           codeBlock: '# サービス ステータスを確認\nsystemctl status ollama\n\n# 開始 / 停止 / 再起動\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# ログを表示\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-ja.svg',
+          imageCaption: 'Linux で Ollama を systemd サービスとして実行する4ステップ: `curl -fsSL https://ollama.com/install.sh | sh` でインストール、`systemctl status ollama` でステータス確認、`start`/`stop`/`restart` で制御、`journalctl -u ollama -f` でログを追跡します。',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -1756,6 +1778,8 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Ollama インストール時の一般的な問題をトラブルシューティングするにはどうすればよいですか？',
+          image: '/images/how-to-install-ollama-troubleshooting-table-ja.svg',
+          imageCaption: 'Ollama インストールでよくある5つのエラーのリファレンステーブル -- サービス未起動、2〜47GBのダウンロード停止、メモリ不足エラー、GPU未検出、4096トークンでのプロンプト切り捨て -- それぞれに対応する修正コマンド付き。',
           faqs: [
             {
               q: 'Ollama が「could not connect to ollama app, is it running?」（Ollama アプリに接続できません。実行していますか？）と表示',
@@ -2040,6 +2064,8 @@ schema: {
           content: '安装脚本自动将 Ollama 注册为 systemd 服务。要管理它：',
           codeBlock: '# 检查服务状态\nsystemctl status ollama\n\n# 启动 / 停止 / 重启\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# 查看日志\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-zh.svg',
+          imageCaption: '在 Linux 上将 Ollama 作为 systemd 服务运行的四步流程：使用 `curl -fsSL https://ollama.com/install.sh | sh` 安装，用 `systemctl status ollama` 检查状态，通过 `start`/`stop`/`restart` 控制，并用 `journalctl -u ollama -f` 查看实时日志。',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -2082,6 +2108,8 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: '如何解决 Ollama 安装中的常见问题？',
+          image: '/images/how-to-install-ollama-troubleshooting-table-zh.svg',
+          imageCaption: '5 个常见 Ollama 安装错误参考表 -- 服务未运行、2-47GB 下载停滞、内存不足错误、GPU 未检测到、提示词在 4096 tokens 处被截断 -- 每项均附带修复命令。',
           faqs: [
             {
               q: 'Ollama 说"could not connect to ollama app, is it running?"（无法连接到 ollama 应用程序，是否正在运行？）',
@@ -2358,6 +2386,8 @@ schema: {
           content: '설치 스크립트가 자동으로 Ollama를 systemd 서비스로 등록합니다. 관리 방법:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-ko.svg',
+          imageCaption: 'Linux에서 Ollama를 systemd 서비스로 실행하는 4단계 흐름: `curl -fsSL https://ollama.com/install.sh | sh`로 설치, `systemctl status ollama`로 상태 확인, `start`/`stop`/`restart`로 제어, `journalctl -u ollama -f`로 로그 실시간 확인.',
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
@@ -2398,6 +2428,8 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: '일반적인 Ollama 설치 문제 해결',
+          image: '/images/how-to-install-ollama-troubleshooting-table-ko.svg',
+          imageCaption: 'Ollama 설치 시 흔한 5가지 오류 참조표 -- 서비스 미실행, 2-47GB 다운로드 멈춤, 메모리 부족 오류, GPU 미감지, 4096 토큰에서 프롬프트 잘림 -- 각각의 해결 명령 포함.',
           faqs: [
             {
               q: 'Ollama에서 "could not connect to ollama app, is it running?"이라고 표시됩니다',

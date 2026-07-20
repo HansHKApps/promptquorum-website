@@ -121,6 +121,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Quick Comparison Table',
         content: 'Head-to-head pricing and features for LLM inference, checked July 2026. Prices are hourly rates; most providers bill per-second, so actual costs depend on runtime. RTX 5090 listings are newer and less consistently available than RTX 4090 — check current stock on each provider\'s dashboard.',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-en.svg',
+        imageCaption: 'Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs as of July 2026, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA.',
         columns: ['Provider', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', 'Uptime SLA', 'Billing', 'Free Credits', 'EU Region'],
         rows: [
           {
@@ -359,6 +361,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'contrarian-daily',
         title: 'You Run LLMs >4 Hours Daily',
         content: 'At the RunPod RTX 4090 midpoint rate ($0.50/hr): $0.50/hr × 4 hours × 30 days = $60/month. Over 18 months that\'s $1,080 — more than two-thirds of the cost of an actual RTX 4090 (roughly $1,599 retail as of July 2026). If your usage is consistent and predictable, buying is cheaper long-term.',
+        image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg',
+        imageCaption: 'Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $1,599 RTX 4090 outright, based on 4 hours of daily use. Renting stays cheaper until roughly 3,200 hours (about 27 months), after which owning the GPU costs less than continued RunPod rental.',
         callouts: [
           { type: '💡 The Math', text: 'Breakeven point: at $0.50/hr and 4 hours/day, that\'s roughly 3,200 rental hours — about 27 months of daily 4-hour usage. If you\'re past that, calculate ROI: GPU cost ÷ hourly rate = breakeven hours.' },
         ],
@@ -655,6 +659,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Tabla de Comparación Rápida',
         content: 'Comparativa directa de precios y características para inferencia LLM, comprobada en julio de 2026. Los precios son tarifas por hora; la mayoría de los proveedores cobran por segundo, por lo que el coste real depende del tiempo de ejecución. Los listados de RTX 5090 son más nuevos y menos consistentes que los de RTX 4090 — revisa el stock actual en el panel de cada proveedor.',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-es.svg',
+        imageCaption: 'Comparación de precios por hora entre RunPod, Vast.ai y Lambda Labs para GPU RTX 4090, RTX 5090, A100 80GB y H100 80GB en julio de 2026, incluyendo el SLA de uptime de cada proveedor. RunPod ofrece el precio más equilibrado con un SLA del 99%, Vast.ai empieza desde $0,08/hr sin SLA, y Lambda Labs cobra un extra por su SLA del 99,9%.',
         columns: ['Proveedor', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', 'SLA Uptime', 'Facturación', 'Créditos Gratis', 'Región EU'],
         rows: [
           {
@@ -893,6 +899,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'contrarian-daily',
         title: 'Ejecutas LLMs Más de 4 Horas al Día',
         content: 'A la tarifa media de RunPod RTX 4090 ($0.50/hr): $0.50/hr × 4 horas × 30 días = $60/mes. En 18 meses eso son $1,080 — más de dos tercios del coste de una RTX 4090 real (unos $1,599 en comercio minorista a julio de 2026). Si tu uso es constante y predecible, comprar es más barato a largo plazo.',
+        image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-es.svg',
+        imageCaption: 'Línea de tiempo de costes que compara el alquiler de una RTX 4090 en RunPod a $0,50/hr frente a comprarla por $1.599, con un uso de 4 horas diarias. Alquilar sigue siendo más barato hasta unas 3.200 horas (unos 27 meses), tras lo cual comprar la GPU cuesta menos que seguir alquilando en RunPod.',
         callouts: [
           { type: '💡 El Cálculo', text: 'Punto de equilibrio: a $0.50/hr y 4 horas/día, son unas 3.200 horas de alquiler — unos 27 meses de uso diario de 4 horas. Si lo superas, calcula el ROI: coste de la GPU ÷ tarifa por hora = horas de equilibrio.' },
         ],
@@ -1208,6 +1216,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'جدول مقارنة سريعة',
         content: 'مقارنة مباشرة للأسعار والميزات لاستدلال LLM، مفحوصة يوليو 2026. الأسعار تعريفات بالساعة؛ يحاسب معظم المزودين بالثانية، لذا تعتمد التكلفة الفعلية على زمن التشغيل. توفر RTX 5090 أحدث وأقل اتساقاً من RTX 4090 — تحقّق من المخزون الحالي في لوحة كل مزود.',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-ar.svg',
+        imageCaption: 'مقارنة الأسعار بالساعة بين RunPod وVast.ai وLambda Labs لوحدات RTX 4090 وRTX 5090 وA100 80GB وH100 80GB حتى يوليو 2026، مع نسب اتفاقية وقت التشغيل لكل مزود. يقدم RunPod أفضل توازن سعري باتفاقية 99%، بينما يبدأ Vast.ai من 0.08$/ساعة بدون اتفاقية، ويفرض Lambda Labs سعراً أعلى مقابل اتفاقية 99.9%.',
         columns: ['المزود', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', 'اتفاقية وقت التشغيل', 'الفوترة', 'أرصدة مجانية', 'منطقة EU'],
         rows: [
           {
@@ -1446,6 +1456,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'contrarian-daily',
         title: 'تشغّل نماذج LLM أكثر من 4 ساعات يومياً',
         content: 'عند متوسط سعر RunPod RTX 4090 (0.50 دولار/ساعة): 0.50 دولار/ساعة × 4 ساعات × 30 يوماً = 60 دولاراً/شهرياً. خلال 18 شهراً يصبح ذلك 1,080 دولاراً — أكثر من ثلثي تكلفة RTX 4090 حقيقية (نحو 1,599 دولار بسعر التجزئة كما في يوليو 2026). إن كان استخدامك ثابتاً ومتوقَّعاً، الشراء أرخص على المدى الطويل.',
+        image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ar.svg',
+        imageCaption: 'جدول زمني للتكلفة يقارن استئجار RTX 4090 على RunPod بسعر 0.50$/ساعة مقابل شرائها مباشرة بـ1,599$، بافتراض استخدام 4 ساعات يومياً. يظل الاستئجار أرخص حتى نحو 3,200 ساعة (نحو 27 شهراً)، وبعدها تصبح ملكية وحدة GPU أرخص من الاستمرار في الاستئجار على RunPod.',
         callouts: [
           { type: '💡 الحساب', text: 'نقطة التعادل: عند 0.50 دولار/ساعة و4 ساعات/يوم، ذلك نحو 3,200 ساعة استئجار — أي نحو 27 شهراً من الاستخدام اليومي لمدة 4 ساعات. إن تجاوزتها، احسب العائد: تكلفة GPU ÷ السعر بالساعة = ساعات التعادل.' },
         ],
@@ -1746,6 +1758,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Tabela de Comparação Rápida',
         content: 'Comparativa direta de preços e características (maio de 2026). Preços são tarifas por hora. Os preços podem variar conforme o país.',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-pt.svg',
+        imageCaption: 'Comparação de preços por hora entre RunPod, Vast.ai e Lambda Labs para GPUs RTX 4090, A100 80GB e H100 80GB em maio de 2026, incluindo o SLA de uptime de cada provedor. RunPod oferece o preço mais equilibrado com SLA de 99%, Vast.ai começa em $0,09/hr sem SLA, e Lambda Labs cobra mais caro pelo SLA de 99,9%.',
         columns: ['Provedor', 'RTX 4090', 'A100 80GB', 'H100 80GB', 'SLA Uptime', 'Faturamento', 'Créditos Grátis', 'Região EU'],
         rows: [
           { 'Provedor': '[RunPod](https://www.runpod.io)', 'RTX 4090': '$0,34–0,69/hr', 'A100 80GB': '$1,79/hr', 'H100 80GB': '$2,69/hr', 'SLA Uptime': '99%', 'Faturamento': 'por segundo', 'Créditos Grátis': '$10', 'Região EU': 'Sim' },
@@ -1883,6 +1897,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Schneller Vergleich',
         content: 'Direkter Vergleich von Preisen und Funktionen für LLM-Inferenz, geprüft im Juli 2026. Alle Preise in USD (Anbieter rechnen in USD); EUR-Äquivalente sind Schätzungen zum Wechselkurs 1 USD ≈ 0,93 EUR. Die meisten Anbieter berechnen pro Sekunde, daher hängen die tatsächlichen Kosten von der Laufzeit ab. RTX-5090-Angebote sind neuer und weniger durchgängig verfügbar als RTX 4090 — aktuellen Bestand im Anbieter-Dashboard prüfen.',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-de.svg',
+        imageCaption: 'Stündlicher Preisvergleich zwischen RunPod, Vast.ai und Lambda Labs für RTX 4090, RTX 5090, A100 80GB und H100 80GB, Stand Juli 2026, inklusive Uptime-SLA je Anbieter. RunPod bietet mit 99% SLA die ausgewogenste Preisgestaltung, Vast.ai startet bei $0,08/h ohne SLA, und Lambda Labs verlangt einen Aufpreis für sein 99,9%-SLA.',
         columns: ['Anbieter', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', 'Verfügbarkeits-SLA', 'Abrechnung', 'Kostenlose Credits', 'EU-Region'],
         rows: [
           {
@@ -2050,6 +2066,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'contrarian-daily',
         title: 'Sie führen LLMs >4 Stunden täglich aus',
         content: 'Zum RunPod-RTX-4090-Mittelwert ($0,50/h): $0,50/h × 4 Stunden × 30 Tage = $60/Monat. Über 18 Monate sind das $1.080 — mehr als zwei Drittel der Kosten einer RTX 4090 (ca. $1.599 Einzelhandel, Stand Juli 2026). Bei konsistenter, vorhersehbarer Nutzung ist Kaufen langfristig günstiger.',
+        image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-de.svg',
+        imageCaption: 'Kostenverlauf im Vergleich: RTX-4090-Miete bei RunPod für $0,50/h gegenüber dem Kauf für $1.599, bei 4 Stunden täglicher Nutzung. Mieten bleibt bis etwa 3.200 Stunden (rund 27 Monate) günstiger; danach ist der Kauf der GPU billiger als die fortgesetzte Miete bei RunPod.',
         callouts: [
           { type: '💡 Die Mathematik', text: 'Break-Even-Punkt: bei $0,50/h und 4 Stunden/Tag sind das rund 3.200 Mietstunden — etwa 27 Monate täglicher 4-Stunden-Nutzung. Wenn Sie darüber hinausgehen, berechnen Sie den ROI: GPU-Kosten ÷ Stundensatz = Break-Even-Stunden.' },
         ],
@@ -2322,6 +2340,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Tableau de comparaison rapide',
         content: 'Comparaison directe des prix et fonctionnalités pour l\'inférence LLM, vérifiée juillet 2026. Tous les prix en USD (les fournisseurs facturent en USD) ; les équivalents EUR sont des estimations au taux de change 1 USD ≈ 0,93 EUR. La plupart des fournisseurs facturent par seconde, donc les coûts réels dépendent du temps d\'exécution. Les offres RTX 5090 sont plus récentes et moins constantes que RTX 4090 — vérifiez le stock actuel sur le tableau de bord du fournisseur.',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-fr.svg',
+        imageCaption: 'Comparaison des tarifs horaires entre RunPod, Vast.ai et Lambda Labs pour les GPU RTX 4090, RTX 5090, A100 80GB et H100 80GB en juillet 2026, avec le SLA de disponibilité de chaque fournisseur. RunPod propose le tarif le plus équilibré avec un SLA de 99%, Vast.ai démarre à $0,08/h sans SLA, et Lambda Labs facture plus cher pour son SLA de 99,9%.',
         columns: ['Fournisseur', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', 'SLA Disponibilité', 'Facturation', 'Crédits gratuits', 'Région UE'],
         rows: [
           {
@@ -2489,6 +2509,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'contrarian-daily',
         title: 'Vous exécutez les LLM >4 heures par jour',
         content: 'Au tarif médian RunPod RTX 4090 ($0,50/h) : $0,50/h × 4 heures × 30 jours = $60/mois. Sur 18 mois c\'est $1.080 — plus des deux tiers du coût d\'une véritable RTX 4090 (environ $1.599 au détail, juillet 2026). Si votre utilisation est cohérente et prévisible, l\'achat est plus économique à long terme.',
+        image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-fr.svg',
+        imageCaption: 'Chronologie des coûts comparant la location d\'une RTX 4090 sur RunPod à $0,50/h à son achat pour $1 599, sur la base de 4 heures d\'utilisation quotidienne. La location reste moins chère jusqu\'à environ 3 200 heures (environ 27 mois), après quoi l\'achat du GPU coûte moins cher que la location continue sur RunPod.',
         callouts: [
           { type: '💡 Les mathématiques', text: 'Point d\'équilibre : à $0,50/h et 4 heures/jour, cela représente environ 3.200 heures de location — soit environ 27 mois d\'utilisation quotidienne de 4 heures. Si vous dépassez cela, calculez le ROI : Coût GPU ÷ Taux horaire = Heures d\'équilibre.' },
         ],
@@ -2709,6 +2731,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'クイック比較表',
         content: 'LLM推論向けの価格と機能の直接比較(2026年7月確認)。すべての価格はUSD(プロバイダーはUSDで課金)。価格は時間レート。ほとんどのプロバイダーは秒単位で課金するため、実際のコストは実行時間に依存します。RTX 5090の提供はRTX 4090より新しく、在庫も安定していません — 各プロバイダーのダッシュボードで最新の在庫を確認してください。',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-ja.svg',
+        imageCaption: '2026年7月時点でのRunPod、Vast.ai、Lambda LabsによるRTX 4090、RTX 5090、A100 80GB、H100 80GBの時間単価比較と、各プロバイダーの稼働率SLA。RunPodは稼働率99%で最もバランスの取れた価格、Vast.aiはSLAなしで$0.08/時間から、Lambda Labsは稼働率99.9%のために割高な価格設定。',
         columns: ['プロバイダー', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', '稼働率SLA', '課金', '無料クレジット', 'EUリージョン'],
         rows: [
           {
@@ -2876,6 +2900,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'contrarian-daily',
         title: '毎日4時間以上LLMを実行している',
         content: 'RunPod RTX 4090の中間価格($0.50/時間)で計算: $0.50/時間 × 4時間 × 30日 = 月額$60。18ヶ月でそれは$1,080 — RTX 4090実機(2026年7月時点で小売約$1,599)のコストの3分の2以上です。使用が一貫性があり予測可能な場合、購入は長期的にはより経済的です。',
+        image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ja.svg',
+        imageCaption: '1日4時間利用を前提に、RunPodでRTX 4090を$0.50/時間でレンタルする場合と$1,599で購入する場合のコスト推移比較。レンタルは約3,200時間(約27ヶ月)まで購入より安く、それ以降はGPUを所有する方がRunPodでのレンタル継続よりも安価。',
         callouts: [
           { type: '💡 数学', text: 'ブレークイーブンポイント:$0.50/時間・1日4時間の利用では約3,200レンタル時間 — 1日4時間利用で約27ヶ月に相当。それを超える場合、ROIを計算:GPU費用÷時間料金=ブレークイーブン時間。' },
         ],
@@ -3096,6 +3122,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: '快速对比表',
         content: '面向LLM推理的价格和功能直接对比，2026年7月核实。所有价格均为美元(提供商以美元计费)。价格为小时费率;大多数提供商按秒计费,因此实际成本取决于运行时间。RTX 5090的上架比RTX 4090更新，库存也不如后者稳定——请在各提供商的控制面板核实当前库存。',
+        image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-zh.svg',
+        imageCaption: '截至2026年7月，RunPod、Vast.ai和Lambda Labs针对RTX 4090、RTX 5090、A100 80GB和H100 80GB的每小时价格对比，以及各提供商的正常运行时间SLA。RunPod以99%的SLA提供最均衡的定价，Vast.ai无SLA起价$0.08/小时，Lambda Labs为99.9%的SLA收取更高费用。',
         columns: ['提供商', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', '稼働率SLA', '计费', '免费积分', 'EU区域'],
         rows: [
           {
@@ -3263,6 +3291,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'contrarian-daily',
         title: '您每天运行LLM >4小时',
         content: '按RunPod RTX 4090中位价格($0.50/小时)计算: $0.50/小时 × 4小时 × 30天 = 每月$60。在18个月内,这是$1,080 — 超过真实RTX 4090成本(截至2026年7月零售约$1,599)的三分之二。如果您的使用是一致且可预测的,购买从长期来说更经济。',
+        image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-zh.svg',
+        imageCaption: '以每天使用4小时为前提，对比在RunPod以每小时$0.50租用RTX 4090与直接以$1,599购买的成本变化。租用在约3,200小时(约27个月)内更便宜，超过这个时间点后，拥有一块GPU比继续在RunPod租用更划算。',
         callouts: [
           { type: '💡 数学', text: '盈亏平衡点:按$0.50/小时、每天4小时计算,约为3,200租赁小时——相当于每天4小时使用约27个月。如果超过,计算ROI:GPU成本÷小时费率=盈亏平衡小时。' },
         ],
@@ -3487,6 +3517,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'comparison-table-main',
       title: '빠른 비교표',
       content: '가격 및 기능 정면 비교 (2026년 5월). 가격은 시간당 요금이며, 대부분의 공급업체는 초 단위로 청구하므로 실제 비용은 실행 시간에 따라 달라집니다.',
+      image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-ko.svg',
+      imageCaption: '2026년 5월 기준 RunPod, Vast.ai, Lambda Labs의 RTX 4090, A100 80GB, H100 80GB 시간당 가격과 각 공급업체의 가동률 SLA 비교. RunPod는 99% SLA로 가장 균형 잡힌 가격을 제공하며, Vast.ai는 SLA 없이 $0.09/시간부터 시작하고, Lambda Labs는 99.9% SLA를 위해 더 높은 가격을 책정합니다.',
       columns: ['공급업체', 'RTX 4090', 'A100 80GB', 'H100 80GB', '가동률 SLA', '청구 방식', '무료 크레딧', 'EU 리전'],
       rows: [
         {
@@ -3719,6 +3751,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'contrarian-daily',
       title: '하루 4시간 이상 LLM을 실행하는 경우',
       content: '$0.39/시간 × 4시간 × 30일 = RunPod RTX 4090 월 $46.80. 18개월이면 $843으로, 실제 RTX 4090 비용($1,599 소매가, 2026년 5월)의 절반 이상입니다. 사용량이 일정하고 예측 가능하다면 장기적으로 구매가 더 저렴합니다.',
+      image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ko.svg',
+      imageCaption: '하루 4시간 사용을 기준으로, RunPod에서 RTX 4090을 시간당 $0.39에 렌탈했을 때의 누적 비용과 $1,599에 직접 구매하는 비용을 비교한 타임라인. 렌탈은 약 34개월(약 4,080시간)까지 구매보다 저렴하며, 이후에는 GPU를 직접 소유하는 편이 더 경제적입니다.',
       callouts: [
         { type: '💡 계산 기준', text: '손익분기점: 월 4시간 사용 18개월(1,800시간). 이를 초과한다면 ROI를 계산하십시오: GPU 비용 ÷ 시간당 요금 = 손익분기 시간.' },
       ],

@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">2026년 로컬 비전 모델: VRAM 및 OCR 품질</text>
+
+  <text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">모델</text>
+  <text x="290" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">VRAM (Q4)</text>
+  <text x="400" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">OCR 품질</text>
+  <text x="540" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">최적 용도</text>
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="40" y="98" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Moondream 2 (1.9B)</text>
+  <text x="290" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">~2 GB</text>
+  <circle cx="405" cy="94" r="5" fill="#F4B400"/>
+  <text x="418" y="98" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">기본</text>
+  <text x="540" y="98" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">단순 사진, 낮은 VRAM</text>
+  <line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="136" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">LLaVA 1.6 7B</text>
+  <text x="290" y="136" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">~6 GB</text>
+  <circle cx="405" cy="132" r="5" fill="#6750A4"/>
+  <text x="418" y="136" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">양호</text>
+  <text x="540" y="136" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">일반 이미지 Q&amp;A, 문서</text>
+  <line x1="18" y1="146" x2="782" y2="146" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="174" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">MiniCPM-V 4.5 (8B)</text>
+  <text x="290" y="174" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">~6 GB</text>
+  <circle cx="405" cy="170" r="5" fill="#6750A4"/>
+  <text x="418" y="174" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">매우 좋음</text>
+  <text x="540" y="174" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">문서 OCR, 인보이스</text>
+  <line x1="18" y1="184" x2="782" y2="184" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="212" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Qwen3-VL 8B</text>
+  <text x="290" y="212" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">~6 GB</text>
+  <circle cx="405" cy="208" r="5" fill="#34A853"/>
+  <text x="418" y="212" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">우수</text>
+  <text x="540" y="212" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">다국어 OCR (CJK)</text>
+  <line x1="18" y1="222" x2="782" y2="222" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Llama 3.2 Vision 11B</text>
+  <text x="290" y="250" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">~8 GB</text>
+  <circle cx="405" cy="246" r="5" fill="#34A853"/>
+  <text x="418" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">우수</text>
+  <text x="540" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">일반 문서 및 사진</text>
+  <line x1="18" y1="260" x2="782" y2="260" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="288" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">InternVL 2.5 (8B)</text>
+  <text x="290" y="288" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">~8 GB</text>
+  <circle cx="405" cy="284" r="5" fill="#34A853"/>
+  <text x="418" y="288" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">우수</text>
+  <text x="540" y="288" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">UI 및 코드 스크린샷</text>
+  <line x1="18" y1="298" x2="782" y2="298" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="326" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Llama 3.2 Vision 90B</text>
+  <text x="290" y="326" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">~64 GB</text>
+  <circle cx="405" cy="322" r="5" fill="#34A853"/>
+  <text x="418" y="326" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#34A853">로컬 최고</text>
+  <text x="540" y="326" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">최고 품질, Apple M 시리즈</text>
+
+  <line x1="18" y1="345" x2="782" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">MiniCPM-V 4.5와 Qwen3-VL 8B는 6GB VRAM에서 문서 OCR을 선도하며, Llama 3.2 Vision 11B는</text>
+  <text x="400" y="395" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Ollama를 통해 8GB에서 최고의 범용 모델입니다.</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

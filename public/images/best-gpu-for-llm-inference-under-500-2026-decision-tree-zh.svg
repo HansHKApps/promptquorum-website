@@ -1,0 +1,40 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">应该购买哪款预算GPU？</text>
+  <line x1="370" y1="85" x2="165" y2="150" stroke="#6750A4" stroke-width="2"/>
+  <text x="245" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">否</text>
+  <line x1="430" y1="85" x2="550" y2="150" stroke="#6750A4" stroke-width="2"/>
+  <text x="500" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">是</text>
+  <line x1="540" y1="197" x2="475" y2="272" stroke="#6750A4" stroke-width="2"/>
+  <text x="465" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">是</text>
+  <line x1="620" y1="197" x2="655" y2="272" stroke="#6750A4" stroke-width="2"/>
+  <text x="655" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">否</text>
+  <line x1="625" y1="322" x2="580" y2="380" stroke="#6750A4" stroke-width="2"/>
+  <text x="588" y="336" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">是</text>
+  <line x1="715" y1="322" x2="715" y2="380" stroke="#6750A4" stroke-width="2"/>
+  <text x="730" y="341" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">否</text>
+  <rect x="290" y="45" width="220" height="40" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="69" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">预算低于$500？</text>
+  <rect x="20" y="140" width="260" height="70" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="20" y="140" width="260" height="4" fill="#34A853"/>
+  <text x="150" y="169" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">需要30B以上？</text>
+  <text x="150" y="184" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">预算$1,000以上：二手RTX 3090</text>
+  <text x="150" y="199" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">（24GB）或RTX 4080 SUPER（~$850）</text>
+  <rect x="465" y="153" width="230" height="44" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="580" y="179" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">需要14B模型达到Q8质量？</text>
+  <rect x="355" y="272" width="210" height="55" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="355" y="272" width="210" height="4" fill="#34A853"/>
+  <text x="460" y="301" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">RTX 4060 Ti 16GB</text>
+  <text x="460" y="316" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">~$424 — 165W，综合最佳</text>
+  <rect x="585" y="278" width="170" height="44" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="670" y="304" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">预算非常紧张（约$300）？</text>
+  <rect x="495" y="382" width="150" height="55" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="495" y="382" width="150" height="4" fill="#34A853"/>
+  <text x="570" y="411" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">Intel Arc B580 12GB</text>
+  <text x="570" y="426" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">~$303 — SYCL、Ollama</text>
+  <rect x="660" y="382" width="130" height="55" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="660" y="382" width="130" height="4" fill="#34A853"/>
+  <text x="725" y="411" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">RTX 3060 12GB</text>
+  <text x="725" y="426" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">~$339 — 更便宜的CUDA选择</text>
+  <text x="400" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">根据预算和14B-Q8需求找到推荐GPU：RTX 4060 Ti 16GB、RTX 3060 12GB或Intel Arc B580 12GB。</text>
+<text x="792" y="472" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

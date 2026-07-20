@@ -413,6 +413,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Flowchart: Pick Your Storage in Four Questions',
         content:
           '**Four questions, in order, route most buyers to the right storage.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-en.svg',
+        imageCaption: 'Decision flowchart routing local AI storage buyers through four questions: shared library, Synology versus QNAP, Samsung 990 Pro versus WD Black SN850X, and offsite backup. A solo developer ends at an SSD plus an external drive, while a shared library ends at a RAID 6 NAS with the 3-2-1 backup rule applied.',
         items: [
           '**1. Do multiple machines or people share the model library?** No: a fast SSD plus an external backup drive is enough. Yes: you need a NAS — continue.',
           '**2. Synology or QNAP?** Easiest software for a non-specialist team: Synology. More CPU and ports per dollar: QNAP.',
@@ -936,6 +938,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsdiagramm: Wählen Sie Ihren Speicher in vier Fragen',
         content:
           '**Vier Fragen, der Reihe nach, leiten die meisten Käufer zum richtigen Speicher.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-de.svg',
+        imageCaption: 'Entscheidungsdiagramm, das Käufer lokaler KI-Speicherlösungen durch vier Fragen führt: geteilte Bibliothek, Synology gegen QNAP, Samsung 990 Pro gegen WD Black SN850X und externes Backup. Ein einzelner Entwickler landet bei SSD plus externer Festplatte, eine geteilte Bibliothek bei einem RAID-6-NAS mit angewandter 3-2-1-Backup-Regel.',
         items: [
           '**1. Teilen mehrere Rechner oder Personen die Modellbibliothek?** Nein: eine schnelle SSD plus eine externe Sicherungsfestplatte genügt. Ja: Sie brauchen ein NAS — weiter.',
           '**2. Synology oder QNAP?** Einfachste Software für ein Team ohne Spezialisten: Synology. Mehr CPU und Anschlüsse pro Euro: QNAP.',
@@ -1467,6 +1471,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Organigramme de décision : choisissez votre stockage en quatre questions',
         content:
           '**Quatre questions, dans l\'ordre, orientent la plupart des acheteurs vers le bon stockage.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-fr.svg',
+        imageCaption: 'Organigramme de décision guidant les acheteurs de stockage IA locale à travers quatre questions : bibliothèque partagée, Synology contre QNAP, Samsung 990 Pro contre WD Black SN850X, et sauvegarde hors site. Un développeur seul aboutit à un SSD plus un disque externe, une bibliothèque partagée aboutit à un NAS RAID 6 avec la règle de sauvegarde 3-2-1 appliquée.',
         items: [
           '**1. Plusieurs machines ou personnes partagent-elles la bibliothèque de modèles ?** Non : un SSD rapide plus un disque de sauvegarde externe suffit. Oui : il vous faut un NAS — continuez.',
           '**2. Synology ou QNAP ?** Logiciel le plus simple pour une équipe non spécialiste : Synology. Plus de processeur et de ports par euro : QNAP.',
@@ -1990,6 +1996,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '意思決定フローチャート：4つの質問でストレージを選ぶ',
         content:
           '**順番に並んだ4つの質問が、ほとんどの購入者を適切なストレージへと導きます。**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ja.svg',
+        imageCaption: 'ローカルAIストレージの購入者を4つの質問で導く意思決定フローチャート。共有ライブラリの有無、SynologyかQNAPか、Samsung 990 ProかWD Black SN850Xか、オフサイトバックアップの有無を順に判定する。1人の開発者はSSDと外付けドライブで完結し、共有ライブラリは3-2-1バックアップルールを適用したRAID 6 NASで完結する。',
         items: [
           '**1. 複数のマシンや人がモデルライブラリを共有しますか？** いいえ：高速なSSDと外付けバックアップドライブで十分です。はい：NASが必要です — 次へ進んでください。',
           '**2. SynologyかQNAPか？** 専門家のいないチームに最も簡単なソフトウェア：Synology。価格あたりのCPUとポートの多さ：QNAP。',
@@ -2513,6 +2521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策流程图：用四个问题选定你的存储',
         content:
           '**按顺序排列的四个问题，把大多数购买者引向正确的存储。**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-zh.svg',
+        imageCaption: '决策流程图，通过四个问题引导本地 AI 存储买家：模型库是否共享、Synology 还是 QNAP、Samsung 990 Pro 还是 WD Black SN850X、是否有异地备份。单人开发者最终选择 SSD 加外置硬盘，共享模型库最终选择应用 3-2-1 备份规则的 RAID 6 NAS。',
         items: [
           '**1. 是否有多台机器或多人共享模型库？** 否：一块快速 SSD 加一块外置备份硬盘就够了。是：你需要 NAS——继续。',
           '**2. Synology 还是 QNAP？** 非专业团队的最简单软件：Synology。每美元更多 CPU 和端口：QNAP。',
@@ -3036,6 +3046,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisión: elige tu almacenamiento en cuatro preguntas',
         content:
           '**Cuatro preguntas, en orden, guían a la mayoría de los compradores hacia el almacenamiento correcto.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-es.svg',
+        imageCaption: 'Diagrama de decisión que guía a los compradores de almacenamiento para IA local por cuatro preguntas: biblioteca compartida, Synology contra QNAP, Samsung 990 Pro contra WD Black SN850X, y respaldo fuera del sitio. Un desarrollador solo termina con un SSD más un disco externo; una biblioteca compartida termina con un NAS en RAID 6 aplicando la regla de respaldo 3-2-1.',
         items: [
           '**1. ¿Varias máquinas o personas comparten la biblioteca de modelos?** No: un SSD rápido más una unidad de respaldo externa es suficiente. Sí: necesitas un NAS — continúa.',
           '**2. ¿Synology o QNAP?** Software más sencillo para un equipo sin especialistas: Synology. Más CPU y puertos por euro: QNAP.',
@@ -3572,6 +3584,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxograma de decisão: escolha o seu armazenamento em quatro perguntas',
         content:
           '**Quatro perguntas, em ordem, guiam a maioria dos compradores para o armazenamento correto.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-pt.svg',
+        imageCaption: 'Fluxograma de decisão que guia compradores de armazenamento para IA local por quatro perguntas: biblioteca compartilhada, Synology versus QNAP, Samsung 990 Pro versus WD Black SN850X, e backup fora do local. Um desenvolvedor solo termina com um SSD mais um disco externo; uma biblioteca compartilhada termina com um NAS em RAID 6 aplicando a regra de backup 3-2-1.',
         items: [
           '**1. Várias máquinas ou pessoas compartilham a biblioteca de modelos?** Não: um SSD rápido mais uma unidade de backup externa é suficiente. Sim: você precisa de um NAS — continue.',
           '**2. Synology ou QNAP?** Software mais simples para um time sem especialistas: Synology. Mais CPU e portas por real: QNAP.',
@@ -4109,6 +4123,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مخطط القرار: اختر تخزينك في أربعة أسئلة',
         content:
           '**أربعة أسئلة بالترتيب توجّه معظم المشترين نحو التخزين الصحيح.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ar.svg',
+        imageCaption: 'مخطط قرار يوجّه مشتري تخزين الذكاء الاصطناعي المحلي عبر أربعة أسئلة: المكتبة المشتركة، Synology مقابل QNAP، Samsung 990 Pro مقابل WD Black SN850X، والنسخ الاحتياطي خارج الموقع. ينتهي المطوّر المنفرد بقرص SSD مع محرك خارجي، بينما تنتهي المكتبة المشتركة بـNAS على RAID 6 مع تطبيق قاعدة النسخ الاحتياطي 3-2-1.',
         items: [
           '**1. هل تشترك أجهزة أو أشخاص متعددون في مكتبة النماذج؟** لا: SSD سريعة بالإضافة إلى محرك نسخ احتياطي خارجي كافٍ. نعم: تحتاج NAS — تابع.',
           '**2. Synology أم QNAP؟** برنامج أبسط لفريق بدون متخصصين: Synology. معالج أقوى وموانئ أكثر مقابل الدولار: QNAP.',
@@ -4645,6 +4661,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '의사결정 흐름도: 네 가지 질문으로 스토리지 선택',
         content:
           '**네 가지 질문이 순서대로 대부분의 구매자를 올바른 스토리지로 안내합니다.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ko.svg',
+        imageCaption: '로컬 AI 스토리지 구매자를 네 가지 질문으로 안내하는 의사결정 흐름도: 공유 라이브러리 여부, Synology 대 QNAP, Samsung 990 Pro 대 WD Black SN850X, 외부 백업 여부. 단독 개발자는 SSD와 외장 드라이브로 끝나고, 공유 라이브러리는 3-2-1 백업 규칙을 적용한 RAID 6 NAS로 끝난다.',
         items: [
           '**1. 여러 머신 또는 사람이 모델 라이브러리를 공유합니까?** 아니오: 빠른 SSD와 외장 백업 드라이브로 충분합니다. 예: NAS가 필요합니다. 계속 진행하십시오.',
           '**2. Synology 또는 QNAP?** 전문가 없는 팀을 위한 더 간단한 소프트웨어: Synology. 달러당 더 많은 CPU와 포트: QNAP.',

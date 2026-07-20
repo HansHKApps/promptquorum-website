@@ -91,6 +91,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Price (July 2026)': '~$339', 'Llama 3.3 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '14B (Q4)' },
           { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Price (July 2026)': '~$303', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '13B (Q4)' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-en.svg',
+        imageCaption: 'Budget GPU comparison for local LLM inference under $500: RTX 4060 Ti 16GB (~$424, 55 tok/s, 30B max), RTX 3060 12GB (~$339, 36 tok/s), and Intel Arc B580 12GB (~$303, 31 tok/s) benchmarked with Ollama in July 2026.',
       },
       methodology: {
         title: 'How We Selected and Tested These GPUs',
@@ -127,6 +129,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Need 30B model capability?** → The sub-$500 window closed in mid-2026. Used RTX 3090 (24 GB) now trades at $1,000–1,100. Budget $1,000+ for a used RTX 3090 or $850+ for an RTX 4080 SUPER (16 GB).',
           '**Windows user, no fuss** → RTX 4060 Ti 16GB. NVIDIA CUDA has the broadest Windows toolchain support for LLMs, fine-tuning, and multimodal runtimes.',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-en.svg',
+        imageCaption: 'Decision tree for choosing a budget GPU under $500 for local LLM inference: routes to RTX 4060 Ti 16GB (~$424) for 14B Q8 quality, RTX 3060 12GB (~$339) or Intel Arc B580 12GB (~$303) for tighter budgets, and a $1,000+ used RTX 3090 (24GB) path for 30B+ models.',
       },
       softwareCompat: {
         title: 'Software Compatibility by GPU',
@@ -342,6 +346,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Precio (julio 2026)': '~334 €', 'Llama 3.3 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '14B (Q4)' },
           { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Precio (julio 2026)': '~250 €', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-es.svg',
+        imageCaption: 'Comparativa de GPU económicas para inferencia LLM local por menos de 500 €: RTX 4060 Ti 16GB (~520 €, 55 tok/s, 30B máx.), RTX 3060 12GB (~334 €, 36 tok/s) e Intel Arc B580 12GB (~250 €, 31 tok/s), medidas con Ollama en julio de 2026.',
       },
       methodology: {
         title: 'Cómo seleccionamos y probamos estas GPU',
@@ -378,6 +384,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**¿Necesitas capacidad para modelos 30B?** → La ventana sub-500 € se cerró a mediados de 2026. La RTX 3090 usada (24 GB) ahora cotiza a 950–1.150 €. Presupuesta 1.000 €+ para una RTX 3090 usada o 999 €+ para una RTX 4080 SUPER (16 GB).',
           '**Usuario de Windows, sin complicaciones** → RTX 4060 Ti 16GB. NVIDIA CUDA tiene el soporte más amplio en Windows para LLMs, fine-tuning y runtimes multimodales.',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-es.svg',
+        imageCaption: 'Árbol de decisión para elegir una GPU económica por menos de 500 € para inferencia LLM local: dirige a la RTX 4060 Ti 16GB (~520 €) para calidad 14B Q8, a la RTX 3060 12GB (~334 €) o la Intel Arc B580 12GB (~250 €) para presupuestos más ajustados, y a una RTX 3090 usada (24 GB) desde 1.000 €+ para modelos de 30B o más.',
       },
       softwareCompat: {
         title: 'Compatibilidad de software por GPU',
@@ -605,6 +613,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'السعر (يوليو 2026)': '~$339', 'Llama 3.3 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'محدود بـ VRAM', 'أقصى نموذج (Q4)': '14B (Q4)' },
           { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'السعر (يوليو 2026)': '~$303', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'محدود بـ VRAM', 'أقصى نموذج (Q4)': '13B (Q4)' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ar.svg',
+        imageCaption: 'مقارنة بطاقات GPU الاقتصادية للاستدلال المحلي على LLM بأقل من $500: RTX 4060 Ti 16GB (~$424، 55 tok/s، أقصى نموذج 30B)، وRTX 3060 12GB (~$339، 36 tok/s)، وIntel Arc B580 12GB (~$303، 31 tok/s)، قياسات يوليو 2026 باستخدام Ollama.',
       },
       methodology: {
         title: 'كيف اخترنا واختبرنا هذه البطاقات',
@@ -641,6 +651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تحتاج قدرة نماذج 30B؟** ← نافذة $500 أُغلقت في منتصف 2026. RTX 3090 المستعملة (24 GB) الآن بـ $1,000–1,100. خصص $1,000+ لـ RTX 3090 مستعملة أو $850+ لـ RTX 4080 SUPER (16 GB).',
           '**مستخدم Windows، دون تعقيدات** ← RTX 4060 Ti 16GB. لدى NVIDIA CUDA أوسع دعم على Windows لنماذج LLM والضبط الدقيق وأنظمة التشغيل متعددة الوسائط.',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ar.svg',
+        imageCaption: 'شجرة قرار لاختيار GPU اقتصادية بأقل من $500 للاستدلال المحلي على LLM: تقود إلى RTX 4060 Ti 16GB (~$424) لجودة 14B بتكميم Q8، وRTX 3060 12GB (~$339) أو Intel Arc B580 12GB (~$303) للميزانيات الأكثر تقييداً، ومسار RTX 3090 مستعملة (24GB) بدءاً من $1,000+ لنماذج 30B فأكبر.',
       },
       softwareCompat: {
         title: 'توافق البرمجيات حسب GPU',
@@ -870,6 +882,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Preço (julho 2026)': '~R$ 1.999', 'Llama 3.3 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado pela VRAM', 'Modelo máximo (Q4)': '14B (Q4)' },
           { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Preço (julho 2026)': '~R$ 1.919', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado pela VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-pt.svg',
+        imageCaption: 'Comparativo de GPUs econômicas para inferência de LLM local por menos de US$ 500: RTX 4060 Ti 16GB (~R$ 3.299, 55 tok/s, máx. 30B), RTX 3060 12GB (~R$ 1.999, 36 tok/s) e Intel Arc B580 12GB (~R$ 1.919, 31 tok/s), testadas com Ollama em julho de 2026.',
       },
       methodology: {
         title: 'Como selecionamos e testamos estas GPUs',
@@ -906,6 +920,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Precisa de capacidade para modelos 30B?** → A janela sub-US$ 500 fechou em meados de 2026. A RTX 3090 usada (24 GB) agora está a partir de R$ 6.000. Orçamento a partir de R$ 6.000 para uma RTX 3090 usada ou ~R$ 8.000 para uma RTX 4080 SUPER (16 GB).',
           '**Usuário de Windows, sem complicação** → RTX 4060 Ti 16GB. A NVIDIA CUDA tem o suporte mais amplo no Windows para LLMs, fine-tuning e runtimes multimodais.',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-pt.svg',
+        imageCaption: 'Árvore de decisão para escolher uma GPU econômica por menos de US$ 500 para inferência de LLM local: leva à RTX 4060 Ti 16GB (~R$ 3.299) para qualidade 14B Q8, à RTX 3060 12GB (~R$ 1.999) ou à Intel Arc B580 12GB (~R$ 1.919) para orçamentos mais apertados, e a uma RTX 3090 usada (24GB) a partir de R$ 6.000 para modelos de 30B ou mais.',
       },
       softwareCompat: {
         title: 'Compatibilidade de software por GPU',
@@ -1131,6 +1147,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Preis (Juli 2026)': '~334 €', 'Llama 3.3 8B Q4 Tok/s': '36 Tok/s', 'Qwen3 14B Q8 Tok/s': 'VRAM-limitiert', 'Max. Modell (Q4)': '14B (Q4)' },
           { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Preis (Juli 2026)': '~250 €', 'Llama 3.3 8B Q4 Tok/s': '31 Tok/s', 'Qwen3 14B Q8 Tok/s': 'VRAM-limitiert', 'Max. Modell (Q4)': '13B (Q4)' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-de.svg',
+        imageCaption: 'Budget-GPU-Vergleich für lokale LLM-Inferenz unter 500 €: RTX 4060 Ti 16GB (~520 €, 55 Tok/s, 30B max.), RTX 3060 12GB (~334 €, 36 Tok/s) und Intel Arc B580 12GB (~250 €, 31 Tok/s), gemessen mit Ollama im Juli 2026.',
       },
       methodology: {
         title: 'Wie wir diese GPUs ausgewählt und getestet haben',
@@ -1167,6 +1185,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Brauchst du 30B-Modell-Fähigkeit?** → Das Sub-500-€-Fenster hat sich Mitte 2026 geschlossen. Gebrauchte RTX 3090 (24 GB) wird jetzt für 950–1.150 € gehandelt. Plane 1.000 €+ für eine gebrauchte RTX 3090 oder 999 €+ für eine RTX 4080 SUPER (16 GB) ein.',
           '**Windows-Nutzer, ohne Aufwand** → RTX 4060 Ti 16GB. NVIDIA CUDA bietet die breiteste Windows-Toolchain-Unterstützung für LLMs, Fine-Tuning und multimodale Laufzeitumgebungen.',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-de.svg',
+        imageCaption: 'Entscheidungsbaum zur Wahl einer Budget-GPU unter 500 € für lokale LLM-Inferenz: führt zur RTX 4060 Ti 16GB (~520 €) für 14B-Q8-Qualität, zur RTX 3060 12GB (~334 €) oder Intel Arc B580 12GB (~250 €) bei knapperem Budget, und zu einer gebrauchten RTX 3090 (24 GB) ab 1.000 €+ für 30B-Modelle.',
       },
       softwareCompat: {
         title: 'Software-Kompatibilität nach GPU',
@@ -1348,6 +1368,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12 Go', VRAM: '12 Go', 'Prix (juillet 2026)': '~334 €', 'Llama 3.3 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limité par la VRAM', 'Modèle max (Q4)': '14B (Q4)' },
           { GPU: 'Intel Arc B580 12 Go', VRAM: '12 Go', 'Prix (juillet 2026)': '~250 €', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limité par la VRAM', 'Modèle max (Q4)': '13B (Q4)' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-fr.svg',
+        imageCaption: 'Comparatif de GPU économiques pour l\'inférence LLM locale sous 500 € : RTX 4060 Ti 16 Go (~520 €, 55 tok/s, 30B max), RTX 3060 12 Go (~334 €, 36 tok/s) et Intel Arc B580 12 Go (~250 €, 31 tok/s), mesurées avec Ollama en juillet 2026.',
       },
       methodology: {
         title: 'Comment nous avons sélectionné et testé ces GPU',
@@ -1384,6 +1406,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Besoin de la capacité 30B ?** → La fenêtre sous 500 € s\'est refermée mi-2026. La RTX 3090 occasion (24 Go) se négocie désormais à 950–1 150 €. Prévoyez 1 000 €+ pour une RTX 3090 occasion ou 999 €+ pour une RTX 4080 SUPER (16 Go).',
           '**Utilisateur Windows, sans complications** → RTX 4060 Ti 16 Go. NVIDIA CUDA offre le support Windows le plus large pour les LLM, le fine-tuning et les runtimes multimodaux.',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-fr.svg',
+        imageCaption: 'Arbre de décision pour choisir une GPU économique sous 500 € pour l\'inférence LLM locale : mène à la RTX 4060 Ti 16 Go (~520 €) pour la qualité 14B Q8, à la RTX 3060 12 Go (~334 €) ou à l\'Intel Arc B580 12 Go (~250 €) pour un budget plus serré, et à une RTX 3090 occasion (24 Go) à partir de 1 000 €+ pour les modèles 30B et plus.',
       },
       softwareCompat: {
         title: 'Compatibilité logicielle par GPU',
@@ -1565,6 +1589,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', VRAM: '12GB', '価格（2026年7月）': '~¥52,980', 'Llama 3.3 8B Q4 トークン/秒': '36トークン/秒', 'Qwen3 14B Q8 トークン/秒': 'VRAM制限あり', '最大モデル（Q4）': '14B（Q4）' },
           { GPU: 'Intel Arc B580 12GB', VRAM: '12GB', '価格（2026年7月）': '約¥70,000', 'Llama 3.3 8B Q4 トークン/秒': '31トークン/秒', 'Qwen3 14B Q8 トークン/秒': 'VRAM制限あり', '最大モデル（Q4）': '13B（Q4）' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ja.svg',
+        imageCaption: '500ドル以下のローカルLLM推論向けバジェットGPU比較：RTX 4060 Ti 16GB（~¥88,000、55トークン/秒、最大30B）、RTX 3060 12GB（~¥52,980、36トークン/秒）、Intel Arc B580 12GB（約¥70,000、31トークン/秒）を2026年7月にOllamaで測定。',
       },
       methodology: {
         title: 'これらのGPUを選定・テストした方法',
@@ -1601,6 +1627,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**30Bモデル対応が必要ですか？** → $500相当以下の枠は2026年半ばに閉じました。中古RTX 3090（24GB）は現在約¥150,000〜200,000。中古RTX 3090に¥150,000以上、またはRTX 4080 SUPER（16GB）に約¥150,000以上を見込んでください。',
           '**Windowsユーザーで手間をかけたくない場合** → RTX 4060 Ti 16GB。NVIDIA CUDAはLLM・ファインチューニング・マルチモーダルランタイムで最も幅広いWindowsツールチェーンサポートを提供します。',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ja.svg',
+        imageCaption: '500ドル以下のローカルLLM推論向けバジェットGPU選定の決定木：14B Q8品質にはRTX 4060 Ti 16GB（~¥88,000）、より厳しい予算にはRTX 3060 12GB（~¥52,980）またはIntel Arc B580 12GB（約¥70,000）、30B以上のモデルには¥150,000以上の中古RTX 3090（24GB）へと分岐します。',
       },
       softwareCompat: {
         title: 'GPU別ソフトウェア互換性',
@@ -1784,6 +1812,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', '显存': '12GB', '价格（2026年7月）': '~$339', 'Llama 3.3 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': '显存受限', '最大模型（Q4）': '14B（Q4）' },
           { GPU: 'Intel Arc B580 12GB', '显存': '12GB', '价格（2026年7月）': '~$303', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': '显存受限', '最大模型（Q4）': '13B（Q4）' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-zh.svg',
+        imageCaption: '500美元以下本地LLM推理预算GPU对比：RTX 4060 Ti 16GB（~$424，55 tok/s，最大30B）、RTX 3060 12GB（~$339，36 tok/s）、Intel Arc B580 12GB（~$303，31 tok/s），2026年7月使用Ollama测得。',
       },
       methodology: {
         title: '我们如何挑选并测试这些GPU',
@@ -1820,6 +1850,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**需要30B模型能力？** → $500以下窗口已在2026年年中关闭。二手RTX 3090（24GB）现价$1,000–1,100。请为二手RTX 3090预算$1,000以上，或为RTX 4080 SUPER（16GB）预算$850以上。',
           '**Windows用户，追求省心** → RTX 4060 Ti 16GB。NVIDIA CUDA在LLM、微调和多模态运行时方面拥有最广泛的Windows工具链支持。',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-zh.svg',
+        imageCaption: '选择500美元以下预算GPU用于本地LLM推理的决策树：14B Q8质量指向RTX 4060 Ti 16GB（~$424），预算更紧张则指向RTX 3060 12GB（~$339）或Intel Arc B580 12GB（~$303），30B以上模型则指向$1,000以上的二手RTX 3090（24GB）。',
       },
       softwareCompat: {
         title: '各GPU的软件兼容性',
@@ -2008,6 +2040,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { GPU: 'RTX 3060 12GB', VRAM: '12 GB', '가격 (2026년 7월)': '~$339', 'Llama 3.3 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM 부족', '최대 모델 (Q4)': '14B (Q4)' },
           { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', '가격 (2026년 7월)': '~$303', 'Llama 3.3 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM 부족', '최대 모델 (Q4)': '13B (Q4)' },
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ko.svg',
+        imageCaption: '500달러 이하 로컬 LLM 추론용 보급형 GPU 비교: RTX 4060 Ti 16GB(~$424, 55 tok/s, 최대 30B), RTX 3060 12GB(~$339, 36 tok/s), Intel Arc B580 12GB(~$303, 31 tok/s), 2026년 7월 Ollama로 측정.',
       },
       methodology: {
         title: 'GPU 선정 및 테스트 방법',
@@ -2044,6 +2078,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**30B 모델 기능이 필요하다면?** → 2026년 중반에 $500 이하 옵션이 사라졌습니다. 중고 RTX 3090(24GB)은 현재 $1,000–1,100입니다. 중고 RTX 3090에 $1,000+, 또는 RTX 4080 SUPER(16GB, ~$850)를 목표로 저축하십시오.',
           '**Windows 사용자, 간편 설정** → RTX 4060 Ti 16GB. NVIDIA CUDA가 LLM, 파인튜닝, 멀티모달 런타임에서 가장 넓은 Windows 지원을 제공합니다.',
         ],
+        image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ko.svg',
+        imageCaption: '500달러 이하 예산 GPU를 선택하기 위한 로컬 LLM 추론 결정 트리: 14B Q8 품질은 RTX 4060 Ti 16GB(~$424)로, 더 빠듯한 예산은 RTX 3060 12GB(~$339) 또는 Intel Arc B580 12GB(~$303)로, 30B 이상 모델은 $1,000 이상의 중고 RTX 3090(24GB)으로 이어집니다.',
       },
       softwareCompat: {
         title: 'GPU별 소프트웨어 호환성',

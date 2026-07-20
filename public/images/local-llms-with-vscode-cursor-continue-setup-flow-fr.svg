@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="320" fill="#FFFFFF"/>
+<text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="17.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">Comment configurer Continue.dev pour les complétions de code locales</text>
+<circle cx="70" cy="110" r="20" fill="#6750A4"/>
+<text x="70" y="116" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="155.0" y="116" font-family="system-ui, sans-serif" font-size="17" fill="#6750A4" text-anchor="middle">&#8594;</text>
+<text x="70" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Installer</text>
+<text x="70" y="167" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Continue</text>
+<text x="70" y="188" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">VS Code Marketplace</text>
+<circle cx="240" cy="110" r="20" fill="#6750A4"/>
+<text x="240" y="116" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="325.0" y="116" font-family="system-ui, sans-serif" font-size="17" fill="#6750A4" text-anchor="middle">&#8594;</text>
+<text x="240" y="158" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Démarrer Ollama</text>
+<text x="240" y="179" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">ollama serve</text>
+<circle cx="410" cy="110" r="20" fill="#6750A4"/>
+<text x="410" y="116" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="495.0" y="116" font-family="system-ui, sans-serif" font-size="17" fill="#6750A4" text-anchor="middle">&#8594;</text>
+<text x="410" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ouvrir les</text>
+<text x="410" y="167" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">paramètres Continue</text>
+<text x="410" y="188" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">Ctrl+Maj+P</text>
+<text x="410" y="201" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">→ Continue</text>
+<circle cx="580" cy="110" r="20" fill="#6750A4"/>
+<text x="580" y="116" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="665.0" y="116" font-family="system-ui, sans-serif" font-size="17" fill="#6750A4" text-anchor="middle">&#8594;</text>
+<text x="580" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Définir provider</text>
+<text x="580" y="167" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">: ollama</text>
+<text x="580" y="188" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">modèle :</text>
+<text x="580" y="201" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">qwen2.5-coder:7b</text>
+<circle cx="750" cy="110" r="20" fill="#6750A4"/>
+<text x="750" y="116" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="750" y="158" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Appuyer sur Tab</text>
+<text x="750" y="179" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">pour les complétions</text>
+<line x1="30" y1="228" x2="770" y2="228" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="400" y="254" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Temps de configuration total : moins de 5 minutes · fonctionne entièrement hors ligne une fois qwen2.5-coder:7b téléchargé dans Ollama</text>
+<text x="792" y="315" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

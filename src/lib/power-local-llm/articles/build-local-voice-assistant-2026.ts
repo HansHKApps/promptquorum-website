@@ -135,6 +135,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'The Three-Layer Architecture',
         content:
           '**The offline voice assistant consists of three independent layers connected by a Python orchestrator.**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-en.svg',
+        imageCaption:
+          'Offline voice assistant pipeline: whisper.cpp speech-to-text, Ollama-served Llama 3.3 8B for reasoning, and Piper TTS for speech output, connected by a Python orchestrator with an optional OpenWakeWord or Porcupine wake-word gate.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -350,6 +353,9 @@ if __name__ == "__main__":
         title: 'Latency Optimization',
         content:
           '**The 1–2 second target is achievable on desktop hardware with the right settings.** Latency breaks down across the three layers:',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-en.svg',
+        imageCaption:
+          'Voice assistant end-to-end latency by hardware tier: Raspberry Pi 5 (8 GB) at 5–8 sec, Mini PC (16 GB RAM) at 3–5 sec, desktop RTX 3060 12 GB at 1–2 sec, and Mac Mini M5 (24 GB) at 1–1.5 sec, the fastest.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -534,6 +540,9 @@ if __name__ == "__main__":
         title: 'Die Drei-Schichten-Architektur',
         content:
           '**Der offline Sprachassistent besteht aus drei unabhängigen Schichten, die durch einen Python-Orchestrator verbunden werden.**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-de.svg',
+        imageCaption:
+          'Offline-Sprachassistent-Pipeline: whisper.cpp für Spracherkennung, Ollama mit Llama 3.3 8B für die Verarbeitung und Piper TTS für die Sprachausgabe, verbunden durch einen Python-Orchestrator mit optionalem OpenWakeWord- oder Porcupine-Wake-Word-Gate.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -749,6 +758,9 @@ if __name__ == "__main__":
         title: 'Latenzoptimierung',
         content:
           '**Das Ziel von 1–2 Sekunden ist auf Desktop-Hardware mit den richtigen Einstellungen erreichbar.** Die Latenz verteilt sich auf die drei Schichten:',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-de.svg',
+        imageCaption:
+          'End-to-End-Latenz des Sprachassistenten nach Hardware-Stufe: Raspberry Pi 5 (8 GB) mit 5–8 Sek., Mini-PC (16 GB RAM) mit 3–5 Sek., Desktop mit RTX 3060 12 GB mit 1–2 Sek. und Mac Mini M5 (24 GB) mit 1–1,5 Sek. – am schnellsten.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -941,6 +953,9 @@ if __name__ == "__main__":
         title: 'L\'architecture en trois couches',
         content:
           '**L\'assistant vocal hors ligne repose sur trois couches indépendantes connectées par un orchestrateur Python.**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-fr.svg',
+        imageCaption:
+          'Pipeline de l\'assistant vocal hors ligne : whisper.cpp pour la reconnaissance vocale, Ollama avec Llama 3.3 8B pour le raisonnement, et Piper TTS pour la synthèse vocale, reliés par un orchestrateur Python avec un détecteur de mot de réveil optionnel (OpenWakeWord ou Porcupine).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1156,6 +1171,9 @@ if __name__ == "__main__":
         title: 'Optimisation de la latence',
         content:
           '**L\'objectif de 1 à 2 secondes est atteignable sur du matériel de bureau avec les bons réglages.** La latence se décompose sur les trois couches :',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-fr.svg',
+        imageCaption:
+          'Latence de bout en bout de l\'assistant vocal par niveau matériel : Raspberry Pi 5 (8 Go) à 5–8 s, Mini PC (16 Go RAM) à 3–5 s, bureau avec RTX 3060 12 Go à 1–2 s, et Mac Mini M5 (24 Go) à 1–1,5 s, le plus rapide.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1339,6 +1357,9 @@ if __name__ == "__main__":
         title: '三層アーキテクチャ',
         content:
           '**オフライン音声アシスタントは、Pythonオーケストレーターによって接続された3つの独立したレイヤーで構成されています。**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-ja.svg',
+        imageCaption:
+          'オフライン音声アシスタントのパイプライン：音声認識のwhisper.cpp、推論を担うOllama上のLlama 3.3 8B、音声合成のPiper TTSをPythonオーケストレーターで接続。OpenWakeWordまたはPorcupineによるオプションのウェイクワード検出付き。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1554,6 +1575,9 @@ if __name__ == "__main__":
         title: 'レイテンシ最適化',
         content:
           '**1〜2秒の目標はデスクトップハードウェアで適切な設定により達成可能です。** レイテンシは3つのレイヤーに分散しています：',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-ja.svg',
+        imageCaption:
+          'ハードウェア別の音声アシスタントのエンドツーエンドレイテンシ：Raspberry Pi 5（8GB）は5〜8秒、ミニPC（16GB RAM）は3〜5秒、RTX 3060 12GB搭載デスクトップは1〜2秒、Mac Mini M5（24GB）は1〜1.5秒で最速。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1737,6 +1761,9 @@ if __name__ == "__main__":
         title: '三层架构',
         content:
           '**离线语音助手由三个独立层组成，通过Python编排器连接。**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-zh.svg',
+        imageCaption:
+          '离线语音助手流水线：使用whisper.cpp进行语音识别，通过Ollama运行Llama 3.3 8B进行推理，Piper TTS负责语音合成，由Python编排器连接，并支持OpenWakeWord或Porcupine可选唤醒词检测。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1952,6 +1979,9 @@ if __name__ == "__main__":
         title: '延迟优化',
         content:
           '**1–2秒目标在台式机硬件上通过正确配置可以实现。** 延迟分布在三个层：',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-zh.svg',
+        imageCaption:
+          '按硬件级别划分的语音助手端到端延迟：Raspberry Pi 5（8GB）为5–8秒，迷你主机（16GB内存）为3–5秒，搭载RTX 3060 12GB的台式机为1–2秒，Mac Mini M5（24GB）为1–1.5秒，速度最快。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2167,6 +2197,9 @@ if __name__ == "__main__":
         title: 'La arquitectura de tres capas',
         content:
           '**El asistente de voz offline consta de tres capas independientes conectadas por un orquestador Python.**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-es.svg',
+        imageCaption:
+          'Pipeline del asistente de voz offline: whisper.cpp para el reconocimiento de voz, Ollama con Llama 3.3 8B para el razonamiento, y Piper TTS para la síntesis de voz, conectados por un orquestador Python con una puerta opcional de palabra de activación (OpenWakeWord o Porcupine).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2382,6 +2415,9 @@ if __name__ == "__main__":
         title: 'Optimización de latencia',
         content:
           '**El objetivo de 1–2 segundos es alcanzable en hardware de escritorio con la configuración adecuada.** La latencia se distribuye entre las tres capas:',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-es.svg',
+        imageCaption:
+          'Latencia de extremo a extremo del asistente de voz por nivel de hardware: Raspberry Pi 5 (8 GB) con 5–8 s, Mini PC (16 GB RAM) con 3–5 s, escritorio con RTX 3060 12 GB con 1–2 s, y Mac Mini M5 (24 GB) con 1–1,5 s, el más rápido.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2601,6 +2637,9 @@ if __name__ == "__main__":
         id: 'architecture',
         title: '3레이어 아키텍처',
         content: '**오프라인 음성 어시스턴트는 Python 오케스트레이터로 연결된 세 개의 독립적인 레이어로 구성됩니다.**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-ko.svg',
+        imageCaption:
+          '오프라인 음성 어시스턴트 파이프라인: 음성 인식을 담당하는 whisper.cpp, 추론을 담당하는 Ollama 기반 Llama 3.3 8B, 음성 합성을 담당하는 Piper TTS를 Python 오케스트레이터로 연결하고, OpenWakeWord 또는 Porcupine을 통한 선택적 웨이크 워드 게이트를 지원합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2809,6 +2848,9 @@ if __name__ == "__main__":
         id: 'latency',
         title: '지연시간 최적화',
         content: '**1–2초 목표는 올바른 설정으로 데스크톱 하드웨어에서 달성 가능합니다.** 지연시간은 세 레이어에 분산됩니다:',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-ko.svg',
+        imageCaption:
+          '하드웨어 등급별 음성 어시스턴트 종단 간 지연시간: Raspberry Pi 5(8GB)는 5–8초, 미니 PC(16GB RAM)는 3–5초, RTX 3060 12GB 데스크톱은 1–2초, Mac Mini M5(24GB)는 1–1.5초로 가장 빠릅니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3035,6 +3077,9 @@ if __name__ == "__main__":
         title: 'A arquitetura de três camadas',
         content:
           '**O assistente de voz offline consiste em três camadas independentes conectadas por um orquestrador Python.**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-pt.svg',
+        imageCaption:
+          'Pipeline do assistente de voz offline: whisper.cpp para reconhecimento de voz, Ollama com Llama 3.3 8B para raciocínio, e Piper TTS para síntese de voz, conectados por um orquestrador Python com um gatilho opcional de palavra de ativação (OpenWakeWord ou Porcupine).',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3250,6 +3295,9 @@ if __name__ == "__main__":
         title: 'Otimização de latência',
         content:
           '**O objetivo de 1–2 segundos é alcançável em hardware de desktop com a configuração adequada.** A latência se distribui entre as três camadas:',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-pt.svg',
+        imageCaption:
+          'Latência de ponta a ponta do assistente de voz por nível de hardware: Raspberry Pi 5 (8 GB) com 5–8 s, Mini PC (16 GB RAM) com 3–5 s, desktop com RTX 3060 12 GB com 1–2 s, e Mac Mini M5 (24 GB) com 1–1,5 s, o mais rápido.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3478,6 +3526,9 @@ if __name__ == "__main__":
         title: 'معمارية الطبقات الثلاث',
         content:
           '**يتكون المساعد الصوتي دون اتصال من ثلاث طبقات مستقلة تربطها منسّق Python.**',
+        image: '/images/build-local-voice-assistant-2026-pipeline-architecture-ar.svg',
+        imageCaption:
+          'خط أنابيب المساعد الصوتي دون اتصال: whisper.cpp للتعرف على الكلام، Ollama مع Llama 3.3 8B للاستدلال، وPiper TTS لتحويل النص إلى كلام، تُربط جميعها بواسطة منسّق Python مع بوابة اختيارية لكلمة التنبيه عبر OpenWakeWord أو Porcupine.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3693,6 +3744,9 @@ if __name__ == "__main__":
         title: 'تحسين زمن الاستجابة',
         content:
           '**هدف 1–2 ثانية قابل للتحقيق على أجهزة مكتبية بالإعداد الصحيح.** يتوزع زمن الاستجابة على الطبقات الثلاث:',
+        image: '/images/build-local-voice-assistant-2026-latency-by-hardware-ar.svg',
+        imageCaption:
+          'زمن الاستجابة الكلي للمساعد الصوتي حسب فئة الجهاز: Raspberry Pi 5 (8 جيجابايت) عند 5–8 ثوانٍ، ميني PC (16 جيجابايت رام) عند 3–5 ثوانٍ، سطح مكتب بمعالج RTX 3060 12 جيجابايت عند 1–2 ثانية، وMac Mini M5 (24 جيجابايت) عند 1–1.5 ثانية، الأسرع.',
         snippetBlocks: [
           {
             type: 'one-sentence',
