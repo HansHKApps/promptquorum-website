@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Tool-call reliability is the single biggest determinant of whether a local agent finishes a task or stalls. The harness you wrap the model in matters less — same Cline, same MCP servers, same prompt: the model emits well-formed tool calls or it does not. This guide benchmarks the five reliable tool-callers in May 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) on real MCP workflows, names the failure modes, and tells you which model to pick per VRAM budget.',
     metaDescription:
       'Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B for tool-calling reliability. Real MCP benchmarks, not leaderboard scores.',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-en.png',
     twitterDescription:
       '5 local models benchmarked on real MCP tool calls: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Reliability rates, VRAM, and failure modes named.',
     current_models_mentioned: [
@@ -186,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Qwen3-Coder 30B', 'Size': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Well-formed call rate': '~96% (code) / ~91% (non-code)', 'Best for': 'Coding agents (replace_in_file, read_file, code-aware browser)', 'Common failure mode': 'Weaker on non-code servers than the general-purpose picks' },
           { 'Model': 'Llama 3.3 70B', 'Size': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Well-formed call rate': '~97%', 'Best for': 'Highest ceiling when hardware fits', 'Common failure mode': 'Slow per-token rate makes long agent loops painful' },
         ],
-        image: '/images/tool-calling-model-comparison-en.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-en.png',
         imageCaption: 'Five tool-calling models benchmarked on 4 MCP servers: Llama 3.3 70B leads at ~97% well-formed calls (42 GB VRAM); Qwen3-Coder 30B tops ~96% on code tools; Gemma 4 27B delivers ~95% on 16 GB VRAM; GLM-4.7 32B ~94% with 128K context; Qwen3 32B ~93% well-rounded.',
       },
       gemma4: {
@@ -299,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pick the format your harness supports natively, not the format that benchmarks well. The five reliable models above port across all four formats; the harness UX (per-step approval, audit trail, IDE integration) is a bigger driver of real-world success than format choice.',
           },
         ],
-        image: '/images/tool-calling-format-comparison-en.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-en.png',
         imageCaption: 'Four tool-call wire formats compared: OpenAI JSON (schema-validated, Continue.dev), Cline XML (very strict, first to surface failures), MCP JSON-RPC 2.0 (ecosystem standard, schema-validated), Aider SEARCH/REPLACE (pattern-matched verbatim) — all five benchmark models handle all four formats.',
       },
       commonMistakes: {
@@ -388,6 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Die Zuverlässigkeit von Tool Calls ist der wichtigste Faktor dafür, ob ein lokaler Agent eine Aufgabe abschließt oder stehen bleibt. Das Harness, das das Modell umhüllt, spielt weniger Rolle — bei gleichen Cline-, MCP-Servern und gleichem Prompt: Das Modell gibt korrekt geformte Tool Calls ab oder nicht. Dieser Leitfaden benchmarkt die fünf zuverlässigen Tool-Caller im Mai 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) auf echten MCP-Workflows, benennt die Fehlermuster und sagt Ihnen, welches Modell Sie je nach VRAM-Budget wählen sollten.',
     metaDescription:
       'Vergleichen Sie Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder und Llama 3.3 für Zuverlässigkeit von Tool Calls. Echte MCP-Benchmarks, keine Leaderboard-Scores.',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-de.png',
     twitterDescription:
       '5 lokale Modelle auf echten MCP Tool Calls getestet: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Zuverlässigkeitsraten, VRAM-Budgets und Fehlermuster.',
     current_models_mentioned: [
@@ -557,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Qwen3-Coder 30B', 'Größe': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Well-Formed-Call-Rate': '~96 % (Code) / ~91 % (Nicht-Code)', 'Am besten für': 'Coding-Agenten (replace_in_file, read_file, Code-bewusster Browser)', 'Häufiger Fehlermodus': 'Schwächer auf Non-Code-Servern als die universellen Picks' },
           { 'Modell': 'Llama 3.3 70B', 'Größe': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Well-Formed-Call-Rate': '~97 %', 'Am besten für': 'Höchste Obergrenze, wenn Hardware passt', 'Häufiger Fehlermodus': 'Langsame Pro-Token-Rate macht lange Agent-Schleifen schmerzhaft' },
         ],
-        image: '/images/tool-calling-model-comparison-de.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-de.png',
         imageCaption: 'Fünf Tool-Calling-Modelle auf 4 MCP-Servern benchmarkt: Llama 3.3 70B führt mit ~97% wohlgeformten Aufrufen (42 GB VRAM); Qwen3-Coder 30B ~96% auf Code-Tools; Gemma 4 27B ~95% auf 16 GB VRAM; GLM-4.7 32B ~94% mit 128K-Kontext; Qwen3 32B ~93% vielseitig.',
       },
       gemma4: {
@@ -670,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wählen Sie das Format, das Ihr Harness nativ unterstützt, nicht das Format, das gut benchmarkt. Die fünf zuverlässigen Modelle oben sind über alle vier Formate portabel; die Harness-UX (Pro-Schritt-Genehmigung, Audit-Trail, IDE-Integration) ist ein größerer Treiber für echte Weltsicherheit als Format-Wahl.',
           },
         ],
-        image: '/images/tool-calling-format-comparison-de.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-de.png',
         imageCaption: 'Vier Tool-Call-Formate verglichen: OpenAI JSON (Schema-validiert), Cline XML (sehr streng), MCP JSON-RPC 2.0 (Ecosystem-Standard), Aider SEARCH/REPLACE (exakt musterabgeglichen) — alle fünf Benchmark-Modelle verarbeiten alle vier Formate.',
       },
       commonMistakes: {
@@ -778,6 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La fiabilité des appels d\'outils est le déterminant le plus important du succès ou de l\'interruption d\'un agent local. Le harness qui enveloppe le modèle compte moins — même Cline, mêmes serveurs MCP, même prompt : le modèle émet des appels d\'outils bien formés ou non. Ce guide compare les cinq modèles fiables pour Tool Calling en mai 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) sur des flux MCP réels, nomme les modes de défaillance et vous dit quel modèle choisir selon votre budget VRAM.',
     metaDescription:
       'Comparez Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder et Llama 3.3 pour la fiabilité du Tool Calling. Benchmarks MCP réels, pas des scores de classement.',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-fr.png',
     twitterDescription:
       '5 modèles locaux testés sur des Tool Calls MCP réels : Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Taux de fiabilité, budgets VRAM et modes de défaillance.',
     current_models_mentioned: [
@@ -946,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Qwen3-Coder 30B', 'Taille': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Taux d\'appel bien formé': '~96 % (code) / ~91 % (non-code)', 'Meilleur pour': 'Agents de codage (replace_in_file, read_file, navigateur conscient du code)', 'Mode de défaillance courant': 'Plus faible sur serveurs non-code que les picks polyvalents' },
           { 'Modèle': 'Llama 3.3 70B', 'Taille': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Taux d\'appel bien formé': '~97 %', 'Meilleur pour': 'Plafond le plus élevé quand le matériel convient', 'Mode de défaillance courant': 'Débit lent par token rend longues boucles d\'agent douloureuses' },
         ],
-        image: '/images/tool-calling-model-comparison-fr.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-fr.png',
         imageCaption: 'Cinq modèles de tool calling testés sur 4 serveurs MCP : Llama 3.3 70B en tête à ~97% d\'appels bien formés (42 Go VRAM) ; Qwen3-Coder 30B ~96% sur outils code ; Gemma 4 27B ~95% sur 16 Go VRAM ; GLM-4.7 32B ~94% avec contexte 128K ; Qwen3 32B ~93% polyvalent.',
       },
       gemma4: {
@@ -1059,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Choisissez le format que votre harness supporte nativement, pas le format qui benchmarke bien. Les cinq modèles fiables ci-dessus passent sur les quatre formats ; l\'UX harness (approbation par étape, piste d\'audit, intégration IDE) est un plus grand moteur de succès du monde réel que choix de format.',
           },
         ],
-        image: '/images/tool-calling-format-comparison-fr.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-fr.png',
         imageCaption: 'Quatre formats de tool calling comparés : OpenAI JSON (validé par schéma), Cline XML (très strict), MCP JSON-RPC 2.0 (standard de l\'écosystème), Aider SEARCH/REPLACE (correspondance mot pour mot) — les cinq modèles gèrent les quatre formats.',
       },
       commonMistakes: {
@@ -1148,6 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ツール呼び出しの信頼性は、ローカルエージェントがタスクを完了するか停止するかを決める最も重要な要因です。モデルをラップするハーネスはそれほど重要ではありません — 同じCline、同じMCPサーバー、同じプロンプト : モデルは正しく形成されたツール呼び出しを出力するか、出力しません。このガイドは、2026年5月の5つの信頼できるツール呼び出し実行者(Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B)を実MCPワークフローでベンチマークし、失敗モードに名前を付け、VRAMバジェットあたりどのモデルを選択するかを示します。',
     metaDescription:
       '2026年のツール呼び出しに最適なローカルLLM。Qwen3、Llama 3.3、Mistralを実機テスト。関数呼び出し精度、JSON出力の信頼性、エージェント対応を比較。',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-ja.png',
     twitterDescription:
       '実MCPツール呼び出しでテストされた5つのローカルモデル: Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder、Llama 3.3。信頼度、VRAMバジェット、失敗モード。',
     current_models_mentioned: [
@@ -1316,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Qwen3-Coder 30B', 'サイズ': '30B', 'VRAM (Q4_K_M)': '~18 GB', '正しく形成された呼び出しレート': '~96% (コード) / ~91% (コード以外)', 'ベスト用途': 'コードエージェント(replace_in_file、read_file、コード認識ブラウザ)', '一般的な障害モード': '汎用ピックより非コードサーバーで弱い' },
           { 'モデル': 'Llama 3.3 70B', 'サイズ': '70B', 'VRAM (Q4_K_M)': '~42 GB', '正しく形成された呼び出しレート': '~97%', 'ベスト用途': 'ハードウェアが適合する場合は最高の天井', '一般的な障害モード': 'トークンレート遅延により長いエージェントループが困難' },
         ],
-        image: '/images/tool-calling-model-comparison-ja.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-ja.png',
         imageCaption: '5つのツールコールモデルを4つのMCPサーバーでベンチマーク：Llama 3.3 70Bが最高（約97%、42 GB VRAM）、Qwen3-Coder 30Bがコードツールで約96%、Gemma 4 27Bが16 GB VRAMで約95%、GLM-4.7 32Bが128Kコンテキストで約94%、Qwen3 32Bが万能型で約93%。',
       },
       gemma4: {
@@ -1429,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ハーネスがネイティブにサポートする形式を選択; ベンチマークする形式ではなく。5つの信頼できるモデルは4つの形式全体にポート; ハーネスUX(ステップごとの承認、監査トレイル、IDE統合)は形式の選択より実世界の成功の大きな運転手です。',
           },
         ],
-        image: '/images/tool-calling-format-comparison-ja.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-ja.png',
         imageCaption: '4つのツールコールフォーマットを比較：OpenAI JSON（スキーマ検証済み）、Cline XML（非常に厳格、最初に失敗が現れる）、MCP JSON-RPC 2.0（エコシステム標準、スキーマ検証）、Aider SEARCH/REPLACE（逐語一致マッチング）— 5つのベンチマークモデルすべてが4つのフォーマットに対応。',
       },
       commonMistakes: {
@@ -1518,6 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '工具调用可靠性是本地代理能否完成任务的最关键因素。包装模型的工具框架不太重要——相同的Cline、相同的MCP服务器、相同的提示：模型发出格式良好的工具调用或不发出。本指南针对2026年5月的5个可靠工具调用者（Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B）进行真实MCP工作流基准测试，列出失败模式，并告诉您根据VRAM预算应该选择哪个模型。',
     metaDescription:
       '比较Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder和Llama 3.3的工具调用可靠性。真实MCP基准，而非排行榜分数。',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-zh.png',
     twitterDescription:
       '5个模型在真实MCP工具调用上测试：Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder、Llama 3.3。可靠率、VRAM预算和故障模式。',
     current_models_mentioned: [
@@ -1686,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Qwen3-Coder 30B', '大小': '30B', 'VRAM (Q4_K_M)': '~18 GB', '格式良好调用率': '~96% (代码) / ~91% (非代码)', '最佳用途': '代码代理（replace_in_file、read_file、代码感知浏览器）', '常见故障模式': '在非代码服务器上弱于通用选择' },
           { '模型': 'Llama 3.3 70B', '大小': '70B', 'VRAM (Q4_K_M)': '~42 GB', '格式良好调用率': '~97%', '最佳用途': '硬件允许时最高上限', '常见故障模式': '令牌速率缓慢使长代理循环困难' },
         ],
-        image: '/images/tool-calling-model-comparison-zh.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-zh.png',
         imageCaption: '5个工具调用模型在4个MCP服务器上的基准测试：Llama 3.3 70B最高（约97%，42 GB VRAM），Qwen3-Coder 30B代码工具约96%，Gemma 4 27B在16 GB VRAM上约95%，GLM-4.7 32B配合128K上下文约94%，Qwen3 32B全能型约93%。',
       },
       gemma4: {
@@ -1799,7 +1804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '选择您的工具框架原生支持的格式，不是基准好的格式。上面的5个可靠模型跨4种格式移植；工具框架UX(每步批准、审计跟踪、IDE整合)是实际成功的更大驱动力比格式选择。',
           },
         ],
-        image: '/images/tool-calling-format-comparison-zh.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-zh.png',
         imageCaption: '四种工具调用线格式对比：OpenAI JSON（Schema验证）、Cline XML（非常严格，最先暴露失败）、MCP JSON-RPC 2.0（生态系统标准，Schema验证）、Aider SEARCH/REPLACE（逐字模式匹配）——5个基准模型均支持4种格式。',
       },
       commonMistakes: {
@@ -1888,6 +1893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La fiabilidad en las llamadas a herramientas es el factor determinante de si un agente local completa una tarea o se detiene. El harness que envuelve el modelo importa menos — mismo Cline, mismos servidores MCP, mismo prompt: el modelo emite llamadas a herramientas bien formadas o no lo hace. Esta guía compara los cinco modelos fiables para Tool Calling en mayo de 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) en flujos de trabajo MCP reales, identifica los modos de fallo y te indica qué modelo elegir según tu presupuesto de VRAM.',
     metaDescription:
       'Compara Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B en fiabilidad de Tool Calling. Benchmarks MCP reales, no de leaderboard.',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-es.png',
     twitterDescription:
       '5 modelos locales evaluados en tool calls MCP reales: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Tasas de fiabilidad, VRAM y modos de fallo.',
     current_models_mentioned: [
@@ -2056,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Qwen3-Coder 30B', 'Tamaño': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Tasa de llamadas bien formadas': '~96% (código) / ~91% (no código)', 'Mejor para': 'Agentes de código (replace_in_file, read_file, navegador orientado a código)', 'Modo de fallo común': 'Más débil en servidores no relacionados con código que las opciones de uso general' },
           { 'Modelo': 'Llama 3.3 70B', 'Tamaño': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Tasa de llamadas bien formadas': '~97%', 'Mejor para': 'Mayor techo cuando el hardware lo permite', 'Modo de fallo común': 'La baja tasa de tokens hace que los bucles de agente largos sean lentos' },
         ],
-        image: '/images/tool-calling-model-comparison-es.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-es.png',
         imageCaption: 'Cinco modelos de tool calling evaluados en 4 servidores MCP: Llama 3.3 70B lidera con ~97% de llamadas bien formadas (42 GB VRAM); Qwen3-Coder 30B ~96% en herramientas de código; Gemma 4 27B ~95% con 16 GB VRAM; GLM-4.7 32B ~94% con 128K de contexto; Qwen3 32B ~93% equilibrado.',
       },
       gemma4: {
@@ -2169,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Elige el formato que tu harness soporta de forma nativa, no el que mejor benchmark tiene. Los cinco modelos fiables de arriba son portables a los cuatro formatos; la UX del harness (aprobación por paso, pista de auditoría, integración con IDE) es un factor más determinante del éxito en el mundo real que la elección del formato.',
           },
         ],
-        image: '/images/tool-calling-format-comparison-es.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-es.png',
         imageCaption: 'Cuatro formatos de tool call comparados: OpenAI JSON (validado por esquema, Continue.dev), Cline XML (muy estricto, el primero en mostrar fallos), MCP JSON-RPC 2.0 (estándar del ecosistema, validado por esquema), Aider SEARCH/REPLACE (coincidencia literal de patrón) — los cinco modelos de benchmark gestionan los cuatro formatos.',
       },
       commonMistakes: {
@@ -2281,6 +2287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A confiabilidade nas chamadas a ferramentas é o fator determinante de se um agente local conclui uma tarefa ou trava. O harness que envolve o modelo importa menos — mesmo Cline, mesmos servidores MCP, mesmo prompt: o modelo emite chamadas a ferramentas bem formadas ou não. Este guia compara os cinco modelos confiáveis para Tool Calling em maio de 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) em fluxos de trabalho MCP reais, identifica os modos de falha e indica qual modelo escolher conforme seu orçamento de VRAM.',
     metaDescription:
       'Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B na confiabilidade de Tool Calling. Benchmarks MCP reais, não de leaderboard.',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-pt.png',
     twitterDescription:
       '5 modelos locais avaliados em tool calls MCP reais: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Taxas de confiabilidade, VRAM e modos de falha.',
     current_models_mentioned: [
@@ -2449,7 +2456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Qwen3-Coder 30B', 'Tamanho': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'Taxa de chamadas bem formadas': '~96% (código) / ~91% (não código)', 'Melhor para': 'Agentes de código (replace_in_file, read_file, navegador voltado a código)', 'Modo de falha comum': 'Mais fraco em servidores não relacionados a código do que as opções de uso geral' },
           { 'Modelo': 'Llama 3.3 70B', 'Tamanho': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'Taxa de chamadas bem formadas': '~97%', 'Melhor para': 'Maior teto quando o hardware permite', 'Modo de falha comum': 'A baixa taxa de tokens torna os loops de agente longos lentos' },
         ],
-        image: '/images/tool-calling-model-comparison-en.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-pt.png',
         imageCaption: 'Cinco modelos de tool calling avaliados em 4 servidores MCP: o Llama 3.3 70B lidera com ~97% de chamadas bem formadas (42 GB VRAM); o Qwen3-Coder 30B atinge ~96% em ferramentas de código; o Gemma 4 27B entrega ~95% com 16 GB VRAM; o GLM-4.7 32B ~94% com 128K de contexto; o Qwen3 32B ~93% equilibrado.',
       },
       gemma4: {
@@ -2562,7 +2569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Escolha o formato que o seu harness suporta nativamente, não o que tem o melhor benchmark. Os cinco modelos confiáveis acima são portáveis para os quatro formatos; a UX do harness (aprovação por etapa, trilha de auditoria, integração com IDE) é um fator mais determinante do sucesso no mundo real do que a escolha do formato.',
           },
         ],
-        image: '/images/tool-calling-format-comparison-en.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-pt.png',
         imageCaption: 'Quatro formatos de tool call comparados: OpenAI JSON (validado por esquema, Continue.dev), Cline XML (muito estrito, o primeiro a mostrar falhas), MCP JSON-RPC 2.0 (padrão do ecossistema, validado por esquema), Aider SEARCH/REPLACE (correspondência literal de padrão) — os cinco modelos de benchmark gerenciam os quatro formatos.',
       },
       commonMistakes: {
@@ -2675,6 +2682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'موثوقية استدعاء الأدوات هي العامل الحاسم الأول في تحديد ما إذا كان الوكيل المحلي يكمل المهمة أم يتوقف. المنظومة التي تُغلّف النموذج بها أقل أهمية — نفس Cline، نفس خوادم MCP، نفس الموجّه: النموذج يُصدر استدعاءات أدوات مشكّلة جيداً أو لا يفعل. يقارن هذا الدليل النماذج الخمسة الموثوقة لاستدعاء الأدوات في مايو 2026 (Gemma 4 27B وGLM-4.7 32B وQwen3 32B وQwen3-Coder 30B وLlama 3.3 70B) على سير عمل MCP الحقيقية، ويُحدّد أوضاع الفشل، ويُرشدك إلى النموذج المناسب لكل ميزانية VRAM.',
     metaDescription:
       'Qwen3 32B وGemma 4 27B وLlama 3.3 70B مُقيَّمة على سير عمل MCP حقيقية. موثوقية استدعاء الأدوات والفشل وVRAM لكل نموذج — لا نقاط لوحة صدارة.',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-ar.png',
     twitterDescription:
       '5 نماذج محلية مُقيَّمة على استدعاءات أدوات MCP الحقيقية: Gemma 4 وGLM-4.7 وQwen3 وQwen3-Coder وLlama 3.3. معدلات الموثوقية وVRAM وأوضاع الفشل.',
     current_models_mentioned: [
@@ -2843,7 +2851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Qwen3-Coder 30B', 'الحجم': '30B', 'VRAM (Q4_K_M)': '~18 GB', 'معدل الاستدعاءات المشكّلة جيداً': '~96% (كود) / ~91% (غير كود)', 'الأفضل لـ': 'وكلاء الكود (replace_in_file وread_file والمتصفح المدرك للكود)', 'وضع الفشل الشائع': 'أضعف على الخوادم غير المتعلقة بالكود من خيارات الأغراض العامة' },
           { 'النموذج': 'Llama 3.3 70B', 'الحجم': '70B', 'VRAM (Q4_K_M)': '~42 GB', 'معدل الاستدعاءات المشكّلة جيداً': '~97%', 'الأفضل لـ': 'أعلى سقف حين يتيح الجهاز', 'وضع الفشل الشائع': 'معدل رموز منخفض يجعل حلقات الوكيل الطويلة بطيئة' },
         ],
-        image: '/images/tool-calling-model-comparison-es.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-ar.png',
         imageCaption: 'خمسة نماذج لاستدعاء الأدوات مُقيَّمة على 4 خوادم MCP: Llama 3.3 70B يتصدر بـ~97% استدعاءات مشكّلة جيداً (42 GB VRAM)؛ Qwen3-Coder 30B ~96% على أدوات الكود؛ Gemma 4 27B ~95% بـ16 GB VRAM؛ GLM-4.7 32B ~94% مع سياق 128K؛ Qwen3 32B ~93% متوازن.',
       },
       gemma4: {
@@ -2956,7 +2964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'اختر التنسيق الذي تدعمه منظومتك بشكل أصيل لا الأحسن معيارياً. الخمسة النماذج الموثوقة أعلاه محمولة على التنسيقات الأربعة؛ تجربة مستخدم المنظومة (الموافقة خطوة بخطوة، مسار التدقيق، تكامل IDE) هو محدد أكثر أهمية للنجاح في الواقع من اختيار التنسيق.',
           },
         ],
-        image: '/images/tool-calling-format-comparison-es.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-ar.png',
         imageCaption: 'أربعة تنسيقات لاستدعاء الأدوات مُقارَنة: OpenAI JSON (مُتحقَّق من المخطط، Continue.dev)، Cline XML (صارم جداً، أول ما يُظهر الأخطاء)، MCP JSON-RPC 2.0 (معيار النظام البيئي، مُتحقَّق من المخطط)، Aider SEARCH/REPLACE (مطابقة نمط حرفية) — الخمسة النماذج تُعالج التنسيقات الأربعة.',
       },
       commonMistakes: {
@@ -3068,6 +3076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '도구 호출의 신뢰성은 로컬 에이전트가 작업을 완료할지 멈출지를 결정하는 핵심 요소입니다. 모델을 감싸는 harness는 그다지 중요하지 않습니다 — 동일한 Cline, 동일한 MCP 서버, 동일한 프롬프트: 모델이 올바르게 형성된 도구 호출을 발행하거나 그렇지 않거나입니다. 이 가이드는 2026년 5월 기준 신뢰할 수 있는 5개의 Tool Calling 모델(Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B)을 실제 MCP 워크플로우에서 비교하고, 실패 모드를 파악하며, VRAM 예산에 따라 어떤 모델을 선택할지 안내합니다.',
     metaDescription:
       'Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B의 Tool Calling 신뢰성 비교. 리더보드가 아닌 실제 MCP 벤치마크입니다.',
+    heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-ko.png',
     twitterDescription:
       '실제 MCP tool calls로 평가한 5개 로컬 모델: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. 신뢰성 비율, VRAM, 실패 모드.',
     current_models_mentioned: [
@@ -3236,7 +3245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Qwen3-Coder 30B', '크기': '30B', 'VRAM (Q4_K_M)': '~18 GB', '올바른 형성 호출 비율': '~96%(코드) / ~91%(비코드)', '최적 용도': '코드 에이전트(replace_in_file, read_file, 코드 인식 브라우저)', '일반적인 실패 모드': '범용 옵션보다 코드 비관련 서버에서 약함' },
           { '모델': 'Llama 3.3 70B', '크기': '70B', 'VRAM (Q4_K_M)': '~42 GB', '올바른 형성 호출 비율': '~97%', '최적 용도': '하드웨어가 허용할 때 최고 성능', '일반적인 실패 모드': '낮은 토큰 속도로 긴 에이전트 루프가 느림' },
         ],
-        image: '/images/tool-calling-model-comparison-en.svg',
+        image: '/images/best-local-models-tool-calling-2026-comparison-hero-ko.png',
         imageCaption: '4개 MCP 서버에서 평가한 5개 tool calling 모델: Llama 3.3 70B가 ~97% 올바른 형성 호출(42GB VRAM)로 선두; Qwen3-Coder 30B ~96%(코드 도구); Gemma 4 27B ~95%(16GB VRAM); GLM-4.7 32B ~94%(128K 컨텍스트); Qwen3 32B ~93%(균형).',
       },
       gemma4: {
@@ -3349,7 +3358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '가장 벤치마크가 좋은 것이 아닌 harness가 기본적으로 지원하는 형식을 선택하십시오. 위의 신뢰할 수 있는 5개 모델은 4가지 형식에 이식 가능합니다; harness UX(단계별 승인, 감사 추적, IDE 통합)는 형식 선택보다 실제 성공에 더 결정적인 요소입니다.',
           },
         ],
-        image: '/images/tool-calling-format-comparison-en.svg',
+        image: '/images/best-local-models-tool-calling-2026-format-comparison-hero-ko.png',
         imageCaption: '4가지 tool call 형식 비교: OpenAI JSON(스키마 검증됨, Continue.dev), Cline XML(매우 엄격, 처음으로 실패를 드러냄), MCP JSON-RPC 2.0(생태계 표준, 스키마 검증됨), Aider SEARCH/REPLACE(리터럴 패턴 매칭) — 벤치마크된 5개 모델 모두 4가지 형식을 처리합니다.',
       },
       commonMistakes: {
