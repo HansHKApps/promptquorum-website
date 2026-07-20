@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
@@ -1245,6 +1246,20 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               {renderInlineLinks((article as any).leadAnswerBlock, lang)}
             </p>
           </div>
+        )}
+
+        {/* Static Hero Image for Discover */}
+        {(article as any).heroImage && (
+          <figure className="mb-8 rounded-xl overflow-hidden">
+            <Image
+              src={(article as any).heroImage}
+              alt={article.title || 'Article hero image'}
+              width={1200}
+              height={675}
+              priority
+              className="w-full"
+            />
+          </figure>
         )}
 
         {/* Audience & difficulty signal (Rule 29) */}

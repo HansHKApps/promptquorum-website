@@ -26,6 +26,7 @@ export interface PESection {
 export interface PEArticle {
   theme: string
   title?: string
+  heroImage?: string
   intro?: string
   seoTitle?: string          // Overrides title in <title> tag for SERP CTR optimisation
   metaDescription?: string   // 150–160 char SEO-optimised description for meta tag (falls back to intro if absent)
