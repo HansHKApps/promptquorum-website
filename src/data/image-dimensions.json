@@ -2299,6 +2299,51 @@
     "width": 800,
     "height": 472
   },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -2313,6 +2358,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-laptops-local-llm-2026-comparison-table-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -5073,6 +5163,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-guide-2026-which-provider-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/code-review-security-steps-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -9688,6 +9868,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 320
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-step-by-step-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-llm-software-directory-2026-coding-patterns-de.svg": {
     "encodingFormat": "image/svg+xml",
