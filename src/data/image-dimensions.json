@@ -184,6 +184,96 @@
     "width": 1000,
     "height": 600
   },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/ai-regulation-timeline-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 900,
@@ -11084,6 +11174,51 @@
     "width": 800,
     "height": 390
   },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -11128,6 +11263,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -14129,6 +14309,51 @@
     "width": 800,
     "height": 360
   },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -14193,6 +14418,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-ja.svg": {
     "encodingFormat": "image/svg+xml",
