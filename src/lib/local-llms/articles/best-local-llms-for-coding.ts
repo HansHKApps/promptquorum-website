@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Best Local Coding LLMs 2026: Kimi K2.6, Qwen, Devstral',
       intro: 'The best local LLMs for coding in June 2026 are Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT license), Qwen 3.6 27B (77.2% SWE-bench, best dense model), and Devstral Small 24B (best agentic coding). For 8 GB machines, Qwen3 8B is the top pick (5 GB VRAM). All run locally via Ollama.',
       metaDescription: 'Kimi K2.6 leads at 58.6 SWE-Bench Pro, Qwen 3.6 27B hits 77.2% SWE-bench, Devstral 24B wins agentic coding. Compare VRAM, speed and benchmarks on Ollama.',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-en.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**In June 2026, the best local coding models are Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT license) for maximum quality, Qwen 3.6 27B (77.2% SWE-bench, best dense model) for balanced performance, and Devstral Small 24B (best for agentic workflows). For 8 GB RAM: Qwen3 8B. All run via Ollama locally for offline, private code generation without cloud API costs.** Unlike HumanEval which tests single functions, SWE-bench (solving real GitHub issues) is now the primary benchmark for practical coding in 2026.',
@@ -280,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'No' },
           ],
           columns: ['Model', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-en.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-en.png',
           imageCaption: 'Benchmark scores by model (June 2026): Qwen3-Coder 32B leads at 87% HumanEval, DeepSeek V4 Flash scores 78/100 on independent real-world tests, Qwen 3.6 27B hits 77.2% SWE-bench, Qwen3 8B reaches ~76% HumanEval, and Kimi K2.6 scores 58.6 on the harder SWE-Bench Pro.',
           callouts: [
             { type: 'note', text: 'HumanEval measures single-function Python generation. SWE-bench measures real-world multi-file code changes. \'Real-world\' scores are from independent multi-task coding benchmarks. Both metrics are relevant; SWE-bench better predicts production coding performance.' },
@@ -327,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'practice', text: 'Match model size to your hardware first, then optimize for your use case. If you have 8 GB, Qwen3 8B is the best choice. If you have 16+ GB, upgrade to Devstral Small 24B or Qwen 3.6 27B for noticeably better reasoning. Better to have a model that runs well than the perfect model that struggles.' },
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-en.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-en.png',
           imageCaption: 'Hardware-matched model selection (June 2026): 8 GB RAM → Qwen3 8B (5 GB VRAM, improved coding); 16 GB RAM → Devstral Small 24B (16 GB VRAM, agentic coding) or Qwen 3.6 27B (77.2% SWE-bench); 20+ GB RAM → Kimi K2.6 quantized (58.6 SWE-Bench Pro, best local quality).',
         },
         codingLlm8gb: {
@@ -548,6 +549,7 @@ schema: {
       seoTitle: 'Mejores LLM locales para código 2026: Kimi K2.6, Qwen',
       intro: 'Los mejores LLMs locales para programación en junio de 2026 son Kimi K2.6 (58.6 SWE-Bench Pro, MoE, licencia MIT modificada), Qwen 3.6 27B (77,2% en SWE-bench, mejor modelo denso) y Devstral Small 24B (mejor para codificación agéntica). Para máquinas con 8 GB, Qwen3 8B reemplaza la recomendación anterior de Qwen3-Coder 7B. Todos se ejecutan localmente a través de Ollama.',
       metaDescription: 'Kimi K2.6 lidera con 58.6 SWE-Bench Pro, Qwen 3.6 27B logra 77,2% SWE-bench y Devstral 24B gana en código agéntico. VRAM, velocidad y benchmarks en Ollama.',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-es.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**En junio de 2026, los mejores modelos de programación locales son Kimi K2.6 (58.6 SWE-Bench Pro, MoE, licencia MIT modificada) para máxima calidad, Qwen 3.6 27B (77,2% SWE-bench, mejor modelo denso) para rendimiento equilibrado y Devstral Small 24B (mejor para flujos de trabajo agénticos). Para 8 GB de RAM: Qwen3 8B. Todos se ejecutan vía Ollama localmente para generación de código sin conexión, privada y sin costos de API en la nube.** A diferencia de HumanEval que evalúa funciones individuales, SWE-bench (resolución de issues reales de GitHub) es ahora el benchmark principal para programación práctica en 2026.',
@@ -809,7 +811,7 @@ schema: {
             { 'Modelo': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'No' },
           ],
           columns: ['Modelo', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-es.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-es.png',
           imageCaption: 'Puntuaciones por modelo (junio de 2026): Qwen3-Coder 32B lidera con 87% en HumanEval, DeepSeek V4 Flash obtiene 78/100 en pruebas independientes en entornos reales, Qwen 3.6 27B alcanza 77.2% en SWE-bench, Qwen3 8B llega a ~76% en HumanEval, y Kimi K2.6 obtiene 58.6 en el más exigente SWE-Bench Pro.',
           callouts: [
             { type: 'note', text: 'HumanEval mide la generación de funciones Python individuales. SWE-bench mide cambios de código multi-archivo en el mundo real. Las puntuaciones \'reales\' provienen de benchmarks de codificación multi-tarea independientes. Ambas métricas son relevantes; SWE-bench predice mejor el rendimiento de programación en producción.' },
@@ -856,7 +858,7 @@ schema: {
           callouts: [
             { type: 'practice', text: 'Ajusta primero el tamaño del modelo a tu hardware, luego optimiza para tu caso de uso. Si tienes 8 GB, Qwen3 8B es la mejor opción. Si tienes 16+ GB, actualiza a Devstral Small 24B o Qwen 3.6 27B para un razonamiento notablemente mejor. Mejor tener un modelo que funcione bien que el modelo perfecto que luche.' },
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-en.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-es.png',
           imageCaption: 'Selección de modelo ajustada al hardware (junio 2026): 8 GB de RAM → Qwen3 8B (5 GB de VRAM, programación mejorada); 16 GB de RAM → Devstral Small 24B (16 GB de VRAM, codificación agéntica) o Qwen 3.6 27B (77,2% SWE-bench); 20+ GB de RAM → Kimi K2.6 cuantizado (58.6 SWE-Bench Pro, mejor calidad local).',
         },
         codingLlm8gb: {
@@ -1076,6 +1078,7 @@ schema: {
       seoTitle: 'أفضل ⁨LLM⁩ للبرمجة ⁨2026⁩: ⁨Kimi K2.6⁩ و⁨Qwen⁩ و⁨Devstral⁩',
       intro: 'أفضل نماذج LLM المحلية للبرمجة في يونيو 2026 هي Kimi K2.6 (58.6 SWE-Bench Pro، MoE، رخصة MIT معدّلة)، وQwen 3.6 27B (77.2% في SWE-bench، أفضل نموذج كثيف)، وDevstral Small 24B (الأفضل للبرمجة الوكيلة). للأجهزة بسعة 8 GB، يحل Qwen3 8B محل التوصية السابقة Qwen3-Coder 7B. تعمل جميعها محلياً عبر Ollama.',
       metaDescription: '⁨Kimi K2.6⁩ يتصدر بـ ⁨58.6⁩ في ⁨SWE-Bench Pro⁩، ⁨Qwen 3.6 27B⁩ يبلغ ⁨77.2%⁩ في ⁨SWE-bench⁩، ⁨Devstral 24B⁩ الأفضل للبرمجة الوكيلة. قارن ⁨VRAM⁩ عبر ⁨Ollama⁩.',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ar.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**في يونيو 2026، أفضل نماذج البرمجة المحلية هي Kimi K2.6 (58.6 SWE-Bench Pro، MoE، رخصة MIT معدّلة) لأقصى جودة، وQwen 3.6 27B (77.2% SWE-bench، أفضل نموذج كثيف) لأداء متوازن، وDevstral Small 24B (الأفضل لسير العمل الوكيل). لـ 8 GB من RAM: Qwen3 8B. تعمل جميعها عبر Ollama محلياً لتوليد كود دون اتصال وخاص ودون تكاليف API سحابية.** على عكس HumanEval الذي يقيّم الدوال الفردية، أصبح SWE-bench (حل مشكلات GitHub الحقيقية) المعيار الأساسي للبرمجة العملية في 2026.',
@@ -1289,7 +1292,7 @@ schema: {
             { 'النموذج': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'لا' },
           ],
           columns: ['النموذج', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-ar.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ar.png',
           imageCaption: 'درجات كل نموذج (يونيو 2026): يتصدر Qwen3-Coder 32B بنسبة 87% في HumanEval، ويحقق DeepSeek V4 Flash 78/100 في اختبارات واقعية مستقلة، ويصل Qwen 3.6 27B إلى 77.2% في SWE-bench، ويبلغ Qwen3 8B نحو 76% في HumanEval، بينما يحقق Kimi K2.6 درجة 58.6 في اختبار SWE-Bench Pro الأصعب.',
           callouts: [
             { type: 'note', text: 'يقيس HumanEval توليد دوال Python الفردية. يقيس SWE-bench تغييرات الكود متعددة الملفات في العالم الحقيقي. تأتي النتائج \'الحقيقية\' من اختبارات برمجة متعددة المهام مستقلة. كلا المقياسين مهم؛ يتنبأ SWE-bench بشكل أفضل بأداء البرمجة في الإنتاج.' },
@@ -1336,7 +1339,7 @@ schema: {
           callouts: [
             { type: 'practice', text: 'طابق حجم النموذج مع عتادك أولاً، ثم حسّن لحالة استخدامك. إذا كان لديك 8 GB، Qwen3 8B هو أفضل خيار. إذا كان لديك 16+ GB، رقِّ إلى Devstral Small 24B أو Qwen 3.6 27B لاستدلال أفضل بشكل ملحوظ. أن تملك نموذجاً يعمل جيداً أفضل من النموذج المثالي الذي يتعثر.' },
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-en.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-ar.png',
           imageCaption: 'اختيار نموذج مطابق للعتاد (يونيو 2026): 8 GB من RAM ← Qwen3 8B (5 GB من VRAM، برمجة محسّنة)؛ 16 GB من RAM ← Devstral Small 24B (16 GB من VRAM، برمجة وكيلة) أو Qwen 3.6 27B (77.2% SWE-bench)؛ 20+ GB من RAM ← Kimi K2.6 مكمَّم (58.6 SWE-Bench Pro، أفضل جودة محلية).',
         },
         codingLlm8gb: {
@@ -1556,6 +1559,7 @@ schema: {
       seoTitle: 'Melhor LLM local para código 2026: Kimi K2.6, Qwen',
       intro: 'Os melhores LLMs locais para programação em junho de 2026 são Kimi K2.6 (58,6 SWE-Bench Pro, MoE, licença MIT modificada), Qwen 3.6 27B (77,2% no SWE-bench, melhor modelo denso) e Devstral Small 24B (melhor para codificação agêntica). Para máquinas com 8 GB, Qwen3 8B é a recomendação para hardware limitado. Todos rodam localmente via Ollama.',
       metaDescription: 'Kimi K2.6 lidera com 58,6 SWE-Bench Pro, Qwen 3.6 27B atinge 77,2% SWE-bench e Devstral 24B vence em código agêntico. VRAM, velocidade e benchmarks no Ollama.',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-pt.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**Em junho de 2026, os melhores modelos de programação locais são Kimi K2.6 (58,6 SWE-Bench Pro, MoE, licença MIT modificada) para qualidade máxima, Qwen 3.6 27B (77,2% SWE-bench, melhor modelo denso) para desempenho equilibrado e Devstral Small 24B (melhor para fluxos de trabalho agênticos). Para 8 GB de RAM: Qwen3 8B. Todos rodam via Ollama localmente para geração de código offline, privada e sem custos de API na nuvem.**',
@@ -1780,7 +1784,7 @@ schema: {
             { 'Modelo': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'Não' },
           ],
           columns: ['Modelo', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-pt.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-pt.png',
           imageCaption: 'Pontuações por modelo (junho de 2026): o Qwen3-Coder 32B lidera com 87% no HumanEval, o DeepSeek V4 Flash obtém 78/100 em testes independentes de cenário real, o Qwen 3.6 27B atinge 77,2% no SWE-bench, o Qwen3 8B chega a ~76% no HumanEval, e o Kimi K2.6 marca 58,6 no SWE-Bench Pro, mais exigente.',
           callouts: [
             { type: 'note', text: 'O HumanEval mede a geração de funções Python isoladas. O SWE-bench mede mudanças de código reais em múltiplos arquivos. As pontuações de "cenário real" vêm de benchmarks de codificação multi-tarefa independentes. Ambas as métricas são relevantes; o SWE-bench prevê melhor o desempenho em produção.' },
@@ -1828,7 +1832,7 @@ schema: {
           callouts: [
             { type: 'practice', text: 'Ajuste o tamanho do modelo ao seu hardware primeiro, depois otimize para seu caso de uso. Com 8 GB, o Qwen3 8B é a melhor escolha. Com 16+ GB, migre para o Devstral Small 24B ou o Qwen 3.6 27B para um raciocínio nitidamente melhor. É melhor ter um modelo que roda bem do que o modelo perfeito que trava.' },
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-en.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-pt.png',
           imageCaption: 'Seleção de modelo por hardware (junho de 2026): 8 GB de RAM → Qwen3 8B (5 GB de VRAM, código aprimorado); 16 GB de RAM → Devstral Small 24B (16 GB de VRAM, código agêntico) ou Qwen 3.6 27B (77,2% SWE-bench); 20+ GB de RAM → Kimi K2.6 quantizado (58,6 SWE-Bench Pro, melhor qualidade local).',
         },
         codingLlm8gb: {
@@ -1980,6 +1984,7 @@ schema: {
       seoTitle: 'Beste Coding-LLMs 2026: Kimi K2.6, Qwen, Devstral',
       intro: 'Die besten lokalen LLMs für Programmierung im Juni 2026 sind Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT-Lizenz), Qwen 3.6 27B (77,2% SWE-bench, bestes dichtes Modell) und Devstral Small 24B (beste agentic Programmierung). Für 8-GB-Maschinen ist Qwen3 8B die Top-Empfehlung (5 GB VRAM). Alle laufen lokal über Ollama.',
       metaDescription: 'Kimi K2.6 führt mit 58.6 SWE-Bench Pro, Qwen 3.6 27B erreicht 77,2% SWE-bench, Devstral 24B für agentic Coding. VRAM, Tempo und Benchmarks via Ollama.',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-de.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**Im Juni 2026 sind die besten lokalen Programmiermodelle Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT-Lizenz) für maximale Qualität, Qwen 3.6 27B (77,2% SWE-bench, bestes dichtes Modell) für ausgewogene Leistung und Devstral Small 24B (beste für Agentic Workflows). Für 8 GB RAM: Qwen3 8B. Alle laufen über Ollama lokal für Offline-, privale Codegenerierung ohne Cloud-API-Kosten.** Im Gegensatz zu HumanEval, das einzelne Funktionen testet, testet SWE-bench (Lösen echter GitHub-Probleme) jetzt die primäre Benchmark für praktisches Programmieren 2026.',
@@ -2173,7 +2178,7 @@ schema: {
             { 'Modell': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': 'Nein' },
           ],
           columns: ['Modell', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-de.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-de.png',
           imageCaption: 'Benchmark-Ergebnisse nach Modell (Juni 2026): Qwen3-Coder 32B führt mit 87% HumanEval, DeepSeek V4 Flash erreicht 78/100 im unabhängigen Praxistest, Qwen 3.6 27B liegt bei 77,2% SWE-bench, Qwen3 8B bei ca. 76% HumanEval, und Kimi K2.6 erzielt 58,6 im schwereren SWE-Bench Pro.',
           callouts: [
             { type: 'note', text: 'HumanEval misst die Generierung einzelner Python-Funktionen. SWE-bench misst reale Multi-Datei-Codeänderungen. „Praxistest"-Werte stammen aus unabhängigen Multi-Task-Coding-Benchmarks. Beide Kennzahlen sind relevant; SWE-bench sagt die Produktions-Coding-Leistung besser voraus.' },
@@ -2192,7 +2197,7 @@ schema: {
           callouts: [
             { type: 'practice', text: 'Passe die Modellgröße zuerst an deine Hardware an, dann optimiere für deinen Use-Case. Wenn du 8 GB hast, ist Qwen3 8B die beste Wahl. Wenn du 16+ GB hast, upgrade auf Devstral Small 24B oder Qwen 3.6 27B für deutlich besseres Reasoning. Besser ein Modell, das gut läuft, als das perfekte Modell, das kämpft.' },
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-de.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-de.png',
           imageCaption: 'Hardware-angepasste Modellauswahl (Juni 2026): 8 GB RAM → Qwen3 8B (5 GB VRAM, verbesserte Programmierung); 16 GB RAM → Devstral Small 24B (16 GB VRAM, agentic Programmierung) oder Qwen 3.6 27B (77,2% SWE-bench); 20+ GB RAM → Kimi K2.6 quantisiert (58.6 SWE-Bench Pro, beste lokale Qualität).',
         },
         codingLlm8gb: {
@@ -2409,6 +2414,7 @@ schema: {
       seoTitle: 'Meilleurs LLM locaux pour le code 2026 : Kimi K2.6, Qwen',
       intro: 'En juin 2026, les meilleurs LLMs locaux pour la programmation sont Kimi K2.6 (58.6 SWE-Bench Pro, MoE, licence MIT modifiée), Qwen 3.6 27B (77,2% SWE-bench, meilleur modèle dense) et Devstral Small 24B (meilleur pour la programmation agentive). Pour les machines 8 GB, Qwen3 8B remplace la recommandation précédente Qwen3-Coder 7B. Tous fonctionnent localement via Ollama.',
       metaDescription: 'Kimi K2.6 mène avec 58.6 SWE-Bench Pro, Qwen 3.6 27B atteint 77,2% SWE-bench, Devstral 24B gagne en code agentique. VRAM, vitesse et benchmarks sur Ollama.',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-fr.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**En juin 2026, les meilleurs modèles de programmation locaux sont Kimi K2.6 (58.6 SWE-Bench Pro, MoE, licence MIT modifiée) pour la qualité maximale, Qwen 3.6 27B (77,2% SWE-bench, meilleur modèle dense) pour les performances équilibrées et Devstral Small 24B (meilleur pour les workflows agentives). Pour 8 GB RAM : Qwen3 8B. Tous fonctionnent via Ollama localement pour la génération de code hors ligne privée sans frais API cloud.** Contrairement à HumanEval qui teste des fonctions isolées, SWE-bench (résolution de vrais problèmes GitHub) est maintenant le benchmark principal pour la programmation pratique 2026.',
@@ -2602,7 +2608,7 @@ schema: {
             { 'Modèle': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 Go', 'FIM': 'Non' },
           ],
           columns: ['Modèle', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-fr.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-fr.png',
           imageCaption: 'Scores de benchmark par modèle (juin 2026) : Qwen3-Coder 32B en tête avec 87% HumanEval, DeepSeek V4 Flash obtient 78/100 en conditions réelles indépendantes, Qwen 3.6 27B atteint 77.2% SWE-bench, Qwen3 8B environ 76% HumanEval, et Kimi K2.6 obtient 58.6 sur le SWE-Bench Pro, plus exigeant.',
           callouts: [
             { type: 'note', text: 'HumanEval mesure la génération de fonctions Python isolées. SWE-bench mesure des modifications de code multi-fichiers réelles. Les scores « conditions réelles » proviennent de benchmarks de codage multi-tâches indépendants. Les deux métriques sont pertinentes ; SWE-bench prédit mieux la performance en production.' },
@@ -2621,7 +2627,7 @@ schema: {
           callouts: [
             { type: 'practice', text: 'Adaptez d\'abord la taille du modèle à votre matériel, puis optimisez pour votre cas d\'usage. Si vous avez 8 GB, Qwen3 8B est le meilleur choix. Ne perdez pas de temps à télécharger des modèles plus grands qui causeront une saturation mémoire. Mieux vaut un modèle qui s\'exécute que le modèle parfait qui plante.' },
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-fr.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-fr.png',
           imageCaption: 'Sélection de modèle adaptée au matériel : 8 GB RAM → Qwen3 8B (72% HumanEval, 4.5 GB utilisés); 16 GB RAM → DeepSeek-Coder V2 16B (81% HumanEval, 10 GB utilisés); 20+ GB RAM → Qwen3-Coder 32B (87% HumanEval, qualité maximale).',
         },
         codingLlm8gb: {
@@ -2824,6 +2830,7 @@ schema: {
       seoTitle: 'コーディング向けローカルLLM 2026：Kimi K2.6・Qwen・Devstral',
       intro: '2026年6月のコーディング用最高のローカルLLMはKimi K2.6（58.6 SWE-Bench Pro、MoE、Modified MITライセンス）、Qwen 3.6 27B（77.2% SWE-bench、最高の密集モデル）、Devstral Small 24B（最高のエージェントコーディング）です。8GB マシンの場合、Qwen3 8B が以前の Qwen3-Coder 7B の推奨に置き換わります。すべて Ollama 経由でローカルで実行されます。',
       metaDescription: 'Kimi K2.6は58.6 SWE-Bench Proで首位、Qwen 3.6 27Bは77.2% SWE-bench、Devstral 24Bはエージェントコーディングに最適。VRAM・速度・ベンチマークをOllamaで比較。',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ja.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**2026年6月の最高のローカルコーディングモデルはKimi K2.6（58.6 SWE-Bench Pro、MoE、Modified MIT ライセンス）で最高品質、Qwen 3.6 27B（77.2% SWE-bench、最高の密集モデル）でバランスのとれたパフォーマンス、Devstral Small 24B（エージェントワークフロー最高）です。8GB RAM：Qwen3 8B。すべて Ollama を介してローカルで実行され、クラウド API コストなしのオフライン プライベート コード生成が可能です。** 単一関数をテストする HumanEval とは異なり、SWE-bench（実際の GitHub 問題の解決）は 2026 年の実践的なコーディングの主要ベンチマークです。',
@@ -2958,7 +2965,7 @@ schema: {
             { 'モデル': 'Qwen3 8B', 'HumanEval': '~76%', 'SWE-bench': '—', 'RAM': '5 GB', 'FIM': '対応' },
             { 'モデル': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': '非対応' },
           ],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-ja.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ja.png',
           imageCaption: 'モデル別ベンチマークスコア(2026年6月):Qwen3-Coder 32BがHumanEval 87%で首位、DeepSeek V4 Flashは独立したリアルワールドテストで78/100、Qwen 3.6 27BはSWE-benchで77.2%、Qwen3 8Bは約76% HumanEval、Kimi K2.6はより困難なSWE-Bench Proで58.6を記録。',
           callouts: [
             { type: 'note', text: 'HumanEvalは単一関数のPython生成を測定します。SWE-benchは実際のマルチファイルコード変更を測定します。「実運用」スコアは独立したマルチタスクコーディングベンチマークによるものです。両指標とも重要ですが、SWE-benchの方が本番環境でのコーディング性能をより正確に予測します。' },
@@ -3000,7 +3007,7 @@ schema: {
             '選ぶモデルも重要ですが、コードの品質においてはプロンプトの方法がさらに重要です。言語・制約・テストケース・出力フォーマットを指定する構造化プロンプト技術は、コード生成の精度を大幅に向上させます。[プロンプトエンジニアリングガイド](https://www.promptquorum.com/prompt-engineering)では、基礎・フレームワーク・評価手法にわたる80のテクニックを解説しています。',
             'これらのモデルを軸にした完全な IDE ワークフローについては、[GitHub Copilot をローカル LLM で置き換える](/ja/power-local-llm/replace-github-copilot-with-local-llm)を参照してください。上記の選択肢と相性のよいオープンソーススタック（Continue.dev + Ollama + Qwen3-Coder）です。',
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-ja.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-ja.png',
           imageCaption: 'ハードウェア別モデル選択：8 GB RAM → Qwen3 8B（72% HumanEval、4.7 GB使用）；16 GB RAM → DeepSeek-Coder V2 16B（81% HumanEval、10 GB使用）；20+ GB RAM → Qwen3-Coder 32B（87% HumanEval、最高品質）。',
         },
         codingLlm8gb: {
@@ -3179,6 +3186,7 @@ schema: {
       seoTitle: '2026年最佳本地编程LLM：Kimi K2.6、Qwen、Devstral',
       intro: '2026年6月，用于编码的最佳本地LLM是Kimi K2.6（58.6 SWE-Bench Pro、MoE、修改版MIT许可证）、Qwen 3.6 27B（77.2% SWE基准、最佳密集模型）和Devstral Small 24B（最佳代理编码）。对于8GB机器，Qwen3 8B取代了之前的Qwen3-Coder 7B推荐。所有都通过Ollama本地运行。',
       metaDescription: 'Kimi K2.6以58.6 SWE-Bench Pro领先，Qwen 3.6 27B达77.2% SWE基准，Devstral 24B最适合代理编码。在Ollama上对比VRAM、速度与基准成绩。',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-zh.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-13',
       leadAnswerBlock: '**2026年6月，最佳本地编码模型是Kimi K2.6（58.6 SWE-Bench Pro、MoE、修改版MIT许可证）提供最高品质，Qwen 3.6 27B（77.2% SWE基准、最佳密集模型）提供均衡性能，Devstral Small 24B（代理工作流最佳）。8GB RAM：Qwen3 8B。所有通过Ollama本地运行，无云API成本的离线私密代码生成。** 与测试单个函数的HumanEval不同，SWE基准（解决实际GitHub问题）现在是2026年实际编码的主要基准。',
@@ -3313,7 +3321,7 @@ schema: {
             { '模型': 'Qwen3 8B', 'HumanEval': '~76%', 'SWE-bench': '—', 'RAM': '5 GB', 'FIM': '支持' },
             { '模型': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': '不支持' },
           ],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-zh.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-zh.png',
           imageCaption: '各模型基准得分(2026年6月):Qwen3-Coder 32B以87% HumanEval领先,DeepSeek V4 Flash在独立真实场景测试中获得78/100,Qwen 3.6 27B达到77.2% SWE-bench,Qwen3 8B约76% HumanEval,Kimi K2.6在更难的SWE-Bench Pro上获得58.6分。',
           callouts: [
             { type: 'note', text: 'HumanEval衡量单函数Python生成能力。SWE-bench衡量真实的多文件代码修改能力。"真实场景"得分来自独立的多任务编码基准测试。两项指标都很重要;SWE-bench更能预测生产环境下的编码表现。' },
@@ -3355,7 +3363,7 @@ schema: {
             '你选择的模型很重要，但对于代码质量来说，提示方式更重要。结构化提示技术——指定编程语言、约束条件、测试用例和输出格式——可以显著提高代码生成的准确性。[Prompt工程指南](https://www.promptquorum.com/prompt-engineering)涵盖了基础知识、框架和评估方法等80项技术。',
             '要围绕这些模型搭建完整的 IDE 工作流，请参阅[用本地 LLM 替代 GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm) —— 与上述模型完美搭配的开源方案（Continue.dev + Ollama + Qwen3-Coder）。',
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-zh.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-zh.png',
           imageCaption: '按硬件的模型选择：8 GB RAM → Qwen3 8B（72% HumanEval、4.7 GB占用）；16 GB RAM → DeepSeek-Coder V2 16B（81% HumanEval、10 GB占用）；20+ GB RAM → Qwen3-Coder 32B（87% HumanEval、最高质量）。',
         },
         codingLlm8gb: {
@@ -3537,6 +3545,7 @@ schema: {
       seoTitle: '2026년 최고의 로컬 코딩 LLM: Qwen vs DeepSeek vs Llama',
       intro: '2026년 6월 기준 코딩에 최적화된 로컬 LLM은 Kimi K2.6(SWE-Bench Pro 58.6점, MoE 아키텍처, Modified MIT 라이선스), Qwen 3.6 27B(SWE-bench 77.2%, 최고의 밀집형 모델), Devstral Small 24B(에이전트 코딩에 최적)입니다. 8GB 메모리 환경에서는 Qwen3 8B가 권장 모델입니다. 모든 모델은 Ollama를 통해 로컬에서 실행됩니다.',
       metaDescription: 'Qwen 3.6이 SWE-bench에서 77.2%를 기록했습니다. DeepSeek-Coder-V3 및 Llama 3.3과 VRAM, 속도, 벤치마크 점수를 비교하고 2026년 최고의 로컬 코딩 LLM을 확인하십시오.',
+      heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ko.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**2026년 6월 기준 최고의 로컬 코딩 모델은 최대 품질을 위한 Kimi K2.6(SWE-Bench Pro 58.6점, MoE 아키텍처, Modified MIT 라이선스), 균형 잡힌 성능을 위한 Qwen 3.6 27B(SWE-bench 77.2%, 최고의 밀집형 모델), 에이전트 워크플로우를 위한 Devstral Small 24B입니다. 8GB RAM 환경에서는 Qwen3 8B가 권장됩니다. 모든 모델은 Ollama를 통해 로컬에서 실행되므로 클라우드 API 비용 없이 오프라인으로 비공개 코드 생성이 가능합니다.** 단일 함수만 테스트하는 HumanEval과 달리, SWE-bench(실제 GitHub 이슈 해결 능력 평가)는 2026년 실무 코딩의 주요 벤치마크로 자리 잡았습니다.',
       quickAnswerTop: {
@@ -3749,7 +3758,7 @@ schema: {
             { 'Model': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': '미지원' },
           ],
           columns: ['Model', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
-          image: '/images/best-local-llms-for-coding-benchmark-comparison-ko.svg',
+          image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ko.png',
           imageCaption: '코딩 벤치마크 점수(2026년 6월): Qwen3-Coder 32B가 HumanEval 87%로 선두이며, DeepSeek V4 Flash는 독립 실측 테스트에서 78/100을 기록했습니다. Qwen 3.6 27B는 SWE-bench 77.2%를 달성했고, Qwen3 8B는 HumanEval 약 76%, Kimi K2.6은 더 어려운 SWE-Bench Pro에서 58.6점을 기록했습니다.',
           callouts: [
             { type: 'note', text: 'HumanEval은 단일 함수 Python 생성을 측정합니다. SWE-bench는 실제 멀티파일 코드 변경을 측정합니다. \'실제 환경\' 점수는 독립적인 멀티태스크 코딩 벤치마크에서 나온 것입니다. 두 지표 모두 유의미하며, SWE-bench가 실제 코딩 성능을 더 잘 예측합니다.' },
@@ -3796,7 +3805,7 @@ schema: {
           callouts: [
             { type: 'practice', text: '먼저 하드웨어에 맞는 모델 크기를 선택한 후 용도에 맞게 최적화하십시오. 8 GB이면 Qwen3 8B가 최선입니다. 16 GB 이상이면 눈에 띄게 향상된 추론을 위해 Devstral Small 24B 또는 Qwen 3.6 27B로 업그레이드하십시오. 잘 실행되는 모델이 겨우 돌아가는 완벽한 모델보다 낫습니다.' },
           ],
-          image: '/images/best-local-llms-for-coding-hardware-selection-en.svg',
+          image: '/images/best-local-llms-for-coding-hardware-selection-hero-ko.png',
           imageCaption: '하드웨어 맞춤 모델 선택 (2026년 6월): 8 GB RAM → Qwen3 8B (VRAM 5 GB, 향상된 코딩); 16 GB RAM → Devstral Small 24B (VRAM 16 GB, 에이전트 코딩) 또는 Qwen 3.6 27B (SWE-bench 77.2%); 20 GB 이상 RAM → 양자화된 Kimi K2.6 (SWE-Bench Pro 58.6점, 최고 로컬 품질).',
         },
         codingLlm8gb: {
