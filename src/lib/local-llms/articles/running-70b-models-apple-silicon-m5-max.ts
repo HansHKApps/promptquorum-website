@@ -144,6 +144,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Hardware': '4× RTX 3090 96GB', 'Quantization': 'Q8_0', 'Model Size': '74 GB', 'tok/s': '12–16', 'Quality': 'Lossless', 'Fits?': '✓ Yes (expensive)' },
         ],
         note: 'M5 Max 128GB is the only consumer hardware that runs 70B models without complex multi-GPU setups. The Mac Studio config at $4,000 replaces $5,000–8,000 NVIDIA multi-GPU rigs. M5 Max specs: 14-core CPU, up to 128 GB unified memory, 460–614 GB/s memory bandwidth. The M5 Max with 64 GB memory runs 70B models in Q4_K_M quantization — fitting comfortably within the memory budget (~40 GB needed). Inference speed is approximately 20–30+ tokens/second depending on quantization level.',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-en.svg',
+        imageCaption: 'M5 Max 128GB unified memory ($4,000, 460–614 GB/s bandwidth) runs 70B Q5 at 12–16 tokens/sec versus a dual RTX 4090 multi-GPU rig ($5,000+, 48 GB VRAM) at 18–25 tokens/sec with added orchestration complexity.',
       },
       setupInstall: {
         id: 'setup',
@@ -257,6 +259,8 @@ def detect_recursion(threshold=900):
           'Memory: Q4 = 42 GB, Q5 = 49 GB, Q8 = 74 GB. All fit in M5 Max 128GB. Leave headroom for OS (~8 GB) and apps.',
           'Practical tok/s: Q4 = 15–20, Q5 = 12–16, Q8 = 8–12. At 12 tok/s, a 500-word response takes ~40 seconds.',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-en.svg',
+        imageCaption: '70B model quantization tradeoffs on M5 Max 128GB: Q4_K_M uses 42 GB at 15–20 tok/s, Q5_K_M uses 49 GB at 12–16 tok/s (recommended), Q8_0 uses 74 GB at 8–12 tok/s lossless, and FP16 at 140 GB only fits M5 Ultra 256GB.',
       },
       alternatives: {
         id: 'alternatives',
@@ -518,6 +522,8 @@ for chunk in stream_generate(model, tokenizer, "Explain quantum computing", max_
           { 'Hardware': '4× RTX 3090 96GB', 'Cuantización': 'Q8_0', 'Tamaño del modelo': '74 GB', 'tok/s': '12–16', 'Calidad': 'Sin pérdida', '¿Cabe?': '✓ Sí (caro)' },
         ],
         note: 'M5 Max 128GB es el único hardware de consumo que ejecuta modelos 70B sin configuraciones multi-GPU complejas. La configuración Mac Studio de $4,000 reemplaza rigs multi-GPU NVIDIA de $5,000–8,000.',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-es.svg',
+        imageCaption: 'Memoria unificada M5 Max 128GB ($4,000, 460–614 GB/s de ancho de banda) ejecuta 70B Q5 a 12–16 tokens/seg frente a un equipo multi-GPU con doble RTX 4090 ($5,000+, 48 GB VRAM) a 18–25 tokens/seg con mayor complejidad de configuración.',
       },
       setupInstall: {
         id: 'setup',
@@ -631,6 +637,8 @@ def detect_recursion(threshold=900):
           'Memoria: Q4 = 42 GB, Q5 = 49 GB, Q8 = 74 GB. Todas caben en M5 Max 128GB. Deja margen para el SO (~8 GB) y las apps.',
           'tok/s prácticos: Q4 = 15–20, Q5 = 12–16, Q8 = 8–12. A 12 tok/s, una respuesta de 500 palabras tarda ~40 segundos.',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-es.svg',
+        imageCaption: 'Compensaciones de cuantización 70B en M5 Max 128GB: Q4_K_M usa 42 GB a 15–20 tok/s, Q5_K_M usa 49 GB a 12–16 tok/s (recomendado), Q8_0 usa 74 GB a 8–12 tok/s sin pérdida, y FP16 con 140 GB solo cabe en M5 Ultra 256GB.',
       },
       alternatives: {
         id: 'alternatives',
@@ -887,6 +895,8 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
           { 'Hardware': '4× RTX 3090 96GB', 'Cuantización': 'Q8_0', 'Tamaño del modelo': '74 GB', 'tok/s': '12–16', 'Calidad': 'بلا فقدان', '¿Cabe?': '✓ نعم (مكلف)' },
         ],
         note: 'M5 Max 128GB هو الجهاز الاستهلاكي الوحيد الذي يشغّل نماذج 70B دون إعدادات متعددة بطاقات الرسوم المعقدة. إعداد Mac Studio بـ $4,000 يحل محل منصات NVIDIA متعددة بطاقات الرسوم بقيمة $5,000–8,000.',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-ar.svg',
+        imageCaption: 'الذاكرة الموحدة لـ M5 Max 128GB ($4,000، نطاق ترددي 460–614 GB/ث) تشغّل 70B Q5 بسرعة 12–16 token/ث مقابل جهاز بطاقتي RTX 4090 ($5,000+، 48 GB VRAM) بسرعة 18–25 token/ث مع تعقيد إعداد أكبر.',
       },
       setupInstall: {
         id: 'setup',
@@ -1000,6 +1010,8 @@ def detect_recursion(threshold=900):
           'الذاكرة: Q4 = 42 GB، Q5 = 49 GB، Q8 = 74 GB. تتسع جميعها في M5 Max 128GB. اترك هامشًا لنظام التشغيل (~8 GB) والتطبيقات.',
           'token/ث عمليًا: Q4 = 15–20، Q5 = 12–16، Q8 = 8–12. بـ 12 token/ث، تستغرق استجابة من 500 كلمة ~40 ثانية.',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-ar.svg',
+        imageCaption: 'مقايضات تكميم نموذج 70B على M5 Max 128GB: يستخدم Q4_K_M مساحة 42 GB بسرعة 15–20 token/ث، ويستخدم Q5_K_M مساحة 49 GB بسرعة 12–16 token/ث (موصى به)، ويستخدم Q8_0 مساحة 74 GB بسرعة 8–12 token/ث بلا فقدان، بينما FP16 بحجم 140 GB يتسع فقط على M5 Ultra 256GB.',
       },
       alternatives: {
         id: 'alternatives',
@@ -1366,6 +1378,8 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
           { 'Hardware': '4× RTX 3090 96 GB', 'Quantisierung': 'Q8_0', 'Modellgröße': '74 GB', 'tok/s': '12–16', 'Qualität': 'Verlustfrei', 'Passt?': '✓ Ja (teuer)' },
         ],
         note: 'M5 Max 128 GB ist die einzige Consumer-Hardware, die 70B-Modelle ohne komplexe Multi-GPU-Konfigurationen ausführt. Die Mac-Studio-Konfiguration für ca. 4.000 € ersetzt NVIDIA-Multi-GPU-Setups für 5.000–8.000 €.',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-de.svg',
+        imageCaption: 'M5 Max 128 GB Unified Memory (4.000 €, 460–614 GB/s Bandbreite) führt 70B Q5 mit 12–16 Token/Sek. aus, verglichen mit einem Dual-RTX-4090-Multi-GPU-Aufbau (5.000 €+, 48 GB VRAM) mit 18–25 Token/Sek. bei deutlich höherer Konfigurationskomplexität.',
       },
       setupInstall: {
         id: 'setup',
@@ -1473,6 +1487,8 @@ def detect_recursion(threshold=900):
           'Speicher: Q4 = 42 GB, Q5 = 49 GB, Q8 = 74 GB. Alle passen in M5 Max 128 GB. Puffer für OS (~8 GB) und Apps einplanen.',
           'Praktische tok/s: Q4 = 15–20, Q5 = 12–16, Q8 = 8–12. Bei 12 tok/s dauert eine 500-Wort-Antwort ca. 40 Sekunden.',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-de.svg',
+        imageCaption: '70B-Quantisierungs-Kompromisse auf M5 Max 128GB: Q4_K_M benötigt 42 GB bei 15–20 tok/s, Q5_K_M benötigt 49 GB bei 12–16 tok/s (empfohlen), Q8_0 benötigt 74 GB bei 8–12 tok/s verlustfrei, und FP16 mit 140 GB passt nur auf M5 Ultra 256GB.',
       },
       alternatives: {
         id: 'alternatives',
@@ -1692,6 +1708,8 @@ for chunk in stream_generate(model, tokenizer, "Erkläre Quantencomputing", max_
           { 'Matériel': '4× RTX 3090 96GB', 'Quantification': 'Q8_0', 'Taille modèle': '74 GB', 'tok/s': '12–16', 'Qualité': 'Sans perte', 'Adapté ?': '✓ Oui (cher)' },
         ],
         note: 'M5 Max 128GB est le seul matériel grand public qui exécute les modèles 70B sans configurations multi-GPU complexes. La configuration Mac Studio à 3 299 € remplace les rigs multi-GPU NVIDIA à 5 000–8 000 €.',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-fr.svg',
+        imageCaption: 'Mémoire unifiée M5 Max 128GB (3 299 €, bande passante 460–614 Go/s) exécute 70B Q5 à 12–16 tokens/s contre une configuration multi-GPU double RTX 4090 (5 000 €+, 48 Go VRAM) à 18–25 tokens/s avec une complexité de configuration accrue.',
       },
       setupInstall: {
         id: 'setup',
@@ -1726,6 +1744,8 @@ for chunk in stream_generate(model, tokenizer, "Erkläre Quantencomputing", max_
           'Q8_0 (8-bit) : 74 GB, 8–12 tok/s, pratiquement sans perte. Utilisez uniquement si la qualité est critique.',
           'FP16 (16-bit) : 140 GB, 6–10 tok/s, précision complète. Seulement possible sur M5 Ultra 256GB.',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-fr.svg',
+        imageCaption: 'Compromis de quantification 70B sur M5 Max 128GB : Q4_K_M utilise 42 GB à 15–20 tok/s, Q5_K_M utilise 49 GB à 12–16 tok/s (recommandé), Q8_0 utilise 74 GB à 8–12 tok/s sans perte, et FP16 à 140 GB ne tient que sur M5 Ultra 256GB.',
       },
       alternatives: {
         id: 'alternatives',
@@ -1950,6 +1970,8 @@ for chunk in stream_generate(model, tokenizer, "Erkläre Quantencomputing", max_
           { 'ハードウェア': '4× RTX 3090 96GB', '量子化': 'Q8_0', 'モデルサイズ': '74 GB', 'tok/s': '12〜16', '品質': 'ロスレス', '対応？': '✓ 可（高コスト）' },
         ],
         note: 'M5 Max 128GBは、複雑なマルチGPU構成なしに70Bモデルを動かせる唯一のコンシューマーハードウェアです。約600,000円のMac Studio構成が、900,000〜1,200,000円相当のNVIDIAマルチGPUリグの代替となります。',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-ja.svg',
+        imageCaption: 'M5 Max 128GBユニファイドメモリ（$4,000、帯域幅460–614 GB/s）は70B Q5を12–16 tokens/秒で実行し、デュアルRTX 4090マルチGPU構成（$5,000+、48GB VRAM）は18–25 tokens/秒だが構成の複雑さが増す。',
       },
       setupInstall: {
         id: 'setup',
@@ -2057,6 +2079,8 @@ def detect_recursion(threshold=900):
           'メモリ：Q4 = 42 GB、Q5 = 49 GB、Q8 = 74 GB。すべてM5 Max 128GBに収まります。OS（約8 GB）とアプリのために余裕を確保してください。',
           '実際のtok/s：Q4 = 15〜20、Q5 = 12〜16、Q8 = 8〜12。12 tok/sでは500語の回答に約40秒かかります。',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-ja.svg',
+        imageCaption: 'M5 Max 128GBにおける70B量子化のトレードオフ：Q4_K_Mは42GBで15–20 tok/s、Q5_K_M（推奨）は49GBで12–16 tok/s、Q8_0は74GBで8–12 tok/s（ロスレス）、FP16は140GBでM5 Ultra 256GBのみ対応。',
       },
       alternatives: {
         id: 'alternatives',
@@ -2324,6 +2348,8 @@ for chunk in stream_generate(model, tokenizer, "量子コンピューティン�
           { '硬件': '4× RTX 3090 96GB', '量化方式': 'Q8_0', '模型大小': '74 GB', 'tok/s': '12–16', '质量': '无损', '是否兼容？': '✓ 是（昂贵）' },
         ],
         note: 'M5 Max 128GB是唯一无需复杂多GPU配置即可运行70B模型的消费级硬件。约27,000元的Mac Studio配置可替代需要35,000–55,000元的英伟达多GPU方案。',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-zh.svg',
+        imageCaption: 'M5 Max 128GB统一内存（$4,000，带宽460–614 GB/s）以12–16 tokens/秒运行70B Q5，而双路RTX 4090多GPU方案（$5,000+，48 GB显存）速度为18–25 tokens/秒，但配置复杂度更高。',
       },
       setupInstall: {
         id: 'setup',
@@ -2431,6 +2457,8 @@ def detect_recursion(threshold=900):
           '内存：Q4 = 42 GB，Q5 = 49 GB，Q8 = 74 GB。全部可装入M5 Max 128GB。为操作系统（约8 GB）和应用程序预留空间。',
           '实际tok/s：Q4 = 15–20，Q5 = 12–16，Q8 = 8–12。以12 tok/s的速度，500字回答大约需要40秒。',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-zh.svg',
+        imageCaption: 'M5 Max 128GB上70B量化权衡：Q4_K_M使用42 GB，速度15–20 tok/s；Q5_K_M（推荐）使用49 GB，速度12–16 tok/s；Q8_0使用74 GB，速度8–12 tok/s（无损）；FP16需140 GB，仅M5 Ultra 256GB可运行。',
       },
       alternatives: {
         id: 'alternatives',
@@ -2648,6 +2676,8 @@ for chunk in stream_generate(model, tokenizer, "解释量子计算", max_tokens=
           { '하드웨어': '4× RTX 3090 96GB', '양자화': 'Q8_0', '모델 크기': '74 GB', 'tok/s': '12–16', '품질': '무손실', '적합 여부': '✓ 가능(고비용)' },
         ],
         note: 'M5 Max 128GB는 복잡한 멀티 GPU 설정 없이 70B 모델을 실행할 수 있는 유일한 소비자용 하드웨어입니다. $4,000짜리 Mac Studio 구성은 $5,000–8,000짜리 NVIDIA 멀티 GPU 장비를 대체합니다.',
+        image: '/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-ko.svg',
+        imageCaption: 'M5 Max 128GB 통합 메모리($4,000, 대역폭 460–614 GB/s)는 70B Q5를 12–16 tokens/초로 실행하며, 듀얼 RTX 4090 멀티 GPU 구성($5,000+, 48GB VRAM)은 18–25 tokens/초이지만 구성 복잡성이 더 높습니다.',
       },
       setupInstall: {
         id: 'setup',
@@ -2761,6 +2791,8 @@ def detect_recursion(threshold=900):
           '메모리: Q4 = 42 GB, Q5 = 49 GB, Q8 = 74 GB. 모두 M5 Max 128GB에 맞습니다. OS(약 8 GB) 및 앱을 위한 여유 공간을 남겨 두십시오.',
           '실제 tok/s: Q4 = 15–20, Q5 = 12–16, Q8 = 8–12. 12 tok/s에서 500단어 응답은 약 40초가 걸립니다.',
         ],
+        image: '/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-ko.svg',
+        imageCaption: 'M5 Max 128GB에서의 70B 양자화 트레이드오프: Q4_K_M은 42 GB에 15–20 tok/s, Q5_K_M(권장)은 49 GB에 12–16 tok/s, Q8_0은 74 GB에 8–12 tok/s(무손실), FP16은 140 GB로 M5 Ultra 256GB에서만 실행 가능합니다.',
       },
       alternatives: {
         id: 'alternatives',

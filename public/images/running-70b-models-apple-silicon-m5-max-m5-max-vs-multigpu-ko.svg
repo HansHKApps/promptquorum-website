@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">70B 모델: M5 Max 통합 메모리 vs 멀티 GPU</text>
+
+  <rect x="28" y="50" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="50" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">M5 Max 128GB (단순)</text>
+
+  <text x="48" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">가격:</text>
+  <text x="150" y="108" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">$4,000 (Mac Studio)</text>
+
+  <text x="48" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">메모리:</text>
+  <text x="150" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">128GB 통합 메모리</text>
+
+  <text x="48" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">대역폭:</text>
+  <text x="150" y="160" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">460–614 GB/s</text>
+
+  <text x="48" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">70B Q5 속도:</text>
+  <text x="48" y="204" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#34A853">12–16 tokens/초</text>
+
+  <text x="48" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">단일 장치, 오케스트레이션 불필요,</text>
+  <text x="48" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">여러 카드용 전원/냉각 불필요.</text>
+  <text x="48" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853">✓ 멀티 GPU 복잡성 없이 70B를</text>
+  <text x="48" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853">  실행할 수 있는 유일한 소비자용 옵션</text>
+
+  <rect x="432" y="50" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="432" y="50" width="340" height="4" rx="0" fill="#F4B400"/>
+  <text x="602" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle">듀얼 RTX 4090 (복잡)</text>
+
+  <text x="452" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">가격:</text>
+  <text x="554" y="108" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">$5,000+ (구성 전체)</text>
+
+  <text x="452" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">메모리:</text>
+  <text x="554" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">48GB VRAM (2×24GB)</text>
+
+  <text x="452" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">대역폭:</text>
+  <text x="554" y="160" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">카드당 약 1,000 GB/s</text>
+
+  <text x="452" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">70B Q5 속도:</text>
+  <text x="452" y="204" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F">18–25 tokens/초</text>
+
+  <text x="452" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">GPU 오케스트레이션 필요,</text>
+  <text x="452" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">추가 전원 용량과 냉각 필요.</text>
+  <text x="452" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F4B400">△ 더 빠르지만 구축과 유지관리가</text>
+  <text x="452" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F4B400">  복잡함</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

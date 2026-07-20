@@ -134,6 +134,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model + Quant': 'Llama 3.3 70B Q8 (74 GB)', '16GB': '✗ Won\'t fit', '36GB': '✗ Won\'t fit', '64GB': '✗ Won\'t fit', '128GB': '✓ Fits' },
         ],
         note: '✓ Plenty = 4+ GB free | ✓ Comfortable = 2-4 GB free | ⚠️ Tight = under 2 GB free | ✗ Won\'t fit = uses swap or crashes',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-en.svg',
+        imageCaption: 'Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 3.8B fits every tier, Llama 3.3 8B is tight at 16GB, Llama 3.3 13B needs 36GB minimum, Qwen3 34B needs 64GB, and Llama 3.3 70B needs 128GB.',
       },
       whatFits: {
         id: 'what-fits',
@@ -186,6 +188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cheapest way to get 36GB+ unified memory: the base M5 Pro Mac mini ($999, 36GB) is the lowest-cost Mac with enough memory to run 13B models comfortably — cheaper than any Mac Studio or MacBook Pro configuration with equivalent memory.',
         ],
         note: 'Memory Cost Analysis (M5 Pro Mac Mini, 2026): 32 GB base = $799. 48 GB = $999 ($12.50/GB upgrade). 64 GB = $1,199 ($12.50/GB upgrade). Apple charges $200 for each 16 GB upgrade tier on M5 Pro. At $12.50/GB, memory upgrades are the single best value in the Apple Silicon ecosystem — replacing the entire Mac later costs $1,000+ vs $200 today.',
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-en.svg',
+        imageCaption: 'Buying decision tree for unified memory: 36GB for a single 13B model, 64GB if you also run vision/STT/TTS alongside it or want 34B Q5, and 128GB only if you specifically need 70B Q5 models.',
       },
       quantization: {
         id: 'quantization',
@@ -370,6 +374,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo + Cuantización': 'Llama 3.3 70B Q8 (74 GB)', '16GB': '✗ No cabe', '36GB': '✗ No cabe', '64GB': '✗ No cabe', '128GB': '✓ Cabe' },
         ],
         note: '✓ Sobra = 4+ GB libres | ✓ Cómodo = 2-4 GB libres | ⚠️ Justo = menos de 2 GB libres | ✗ No cabe = usa swap o falla',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-es.svg',
+        imageCaption: 'Niveles de memoria unificada de 16GB, 36GB, 64GB y 128GB frente a cinco tamaños de modelo: Phi-4 3.8B cabe en todos los niveles, Llama 3.3 8B va justo en 16GB, Llama 3.3 13B necesita 36GB como mínimo, Qwen3 34B necesita 64GB y Llama 3.3 70B necesita 128GB.',
       },
       whatFits: {
         id: 'what-fits',
@@ -422,6 +428,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La forma más económica de conseguir 36GB+ de memoria unificada: el Mac mini M5 Pro base ($999, 36GB) es el Mac más barato con memoria suficiente para ejecutar modelos 13B con comodidad — más barato que cualquier configuración de Mac Studio o MacBook Pro con memoria equivalente.',
         ],
         note: 'Análisis de costo de memoria (M5 Pro Mac Mini, 2026): 32 GB base = $799. 48 GB = $999 ($12.50/GB de upgrade). 64 GB = $1,199 ($12.50/GB de upgrade). Apple cobra $200 por cada nivel de upgrade de 16 GB en el M5 Pro. A $12.50/GB, los upgrades de memoria son el mejor valor en el ecosistema Apple Silicon — reemplazar todo el Mac después cuesta $1,000+ vs $200 hoy.',
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-es.svg',
+        imageCaption: 'Árbol de decisión de compra para memoria unificada: 36GB para un solo modelo 13B, 64GB si además ejecutas visión/STT/TTS junto a él o quieres 34B Q5, y 128GB solo si necesitas específicamente modelos 70B Q5.',
       },
       quantization: {
         id: 'quantization',
@@ -603,6 +611,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج + التكميم': 'Llama 3.3 70B Q8 (74 GB)', '16GB': '✗ لا يتسع', '36GB': '✗ لا يتسع', '64GB': '✗ لا يتسع', '128GB': '✓ يتسع' },
         ],
         note: '✓ فائض = 4+ GB متاحة | ✓ مريح = 2-4 GB متاحة | ⚠️ بالكاد = أقل من 2 GB متاحة | ✗ لا يتسع = يستخدم swap أو يفشل',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-ar.svg',
+        imageCaption: 'مستويات الذاكرة الموحدة 16GB و36GB و64GB و128GB مقابل خمسة أحجام نماذج: Phi-4 3.8B يتسع في كل المستويات، Llama 3.3 8B بالكاد يتسع في 16GB، Llama 3.3 13B يحتاج 36GB كحد أدنى، Qwen3 34B يحتاج 64GB، وLlama 3.3 70B يحتاج 128GB.',
       },
       whatFits: {
         id: 'what-fits',
@@ -655,6 +665,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أرخص طريقة للحصول على 36GB+ من الذاكرة الموحدة: جهاز Mac mini بمعالج M5 Pro الأساسي (999$، 36GB) هو أرخص Mac يملك ذاكرة كافية لتشغيل نماذج 13B بأريحية — أرخص من أي تهيئة Mac Studio أو MacBook Pro بذاكرة مماثلة.',
         ],
         note: 'تحليل تكلفة الذاكرة (M5 Pro Mac Mini، 2026): 32 GB أساسي = 799$. 48 GB = 999$ (12.50$/GB ترقية). 64 GB = 1199$ (12.50$/GB ترقية). تتقاضى Apple 200$ لكل مستوى ترقية 16 GB في M5 Pro. وبسعر 12.50$/GB، تكون ترقيات الذاكرة أفضل قيمة في منظومة Apple Silicon — استبدال Mac بالكامل لاحقًا يكلف 1000$+ مقابل 200$ اليوم.',
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ar.svg',
+        imageCaption: 'شجرة قرار شراء الذاكرة الموحدة: 36GB لنموذج 13B واحد، 64GB إذا كنت تشغّل أيضًا رؤية/STT/TTS بجانبه أو تريد 34B Q5، و128GB فقط إذا احتجت تحديدًا نماذج 70B Q5.',
       },
       quantization: {
         id: 'quantization',
@@ -962,6 +974,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell + Quantisierung': 'Llama 3.3 70B Q8 (74 GB)', '16 GB': '✗ Passt nicht', '36 GB': '✗ Passt nicht', '64 GB': '✗ Passt nicht', '128 GB': '✓ Passt' },
         ],
         note: '✓ Reichlich = 4+ GB frei | ✓ Komfortabel = 2–4 GB frei | ⚠️ Knapp = unter 2 GB frei | ✗ Passt nicht = Swap oder Absturz',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-de.svg',
+        imageCaption: 'Unified-Memory-Stufen 16 GB, 36 GB, 64 GB und 128 GB im Vergleich zu fünf Modellgrößen: Phi-4 3,8B passt in jede Stufe, Llama 3.3 8B ist bei 16 GB knapp, Llama 3.3 13B benötigt mindestens 36 GB, Qwen3 34B benötigt 64 GB und Llama 3.3 70B benötigt 128 GB.',
       },
       whatFits: {
         id: 'what-fits',
@@ -1014,6 +1028,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Günstigster Weg zu 36 GB+ Unified Memory: der Basis-M5-Pro-Mac-mini (ca. 1.000 €, 36 GB) ist der preisgünstigste Mac mit genug Speicher, um 13B-Modelle komfortabel auszuführen — günstiger als jede Mac-Studio- oder MacBook-Pro-Konfiguration mit vergleichbarem Speicher.',
         ],
         note: 'Speicherkostenanalyse (M5 Pro Mac Mini, 2026): 32 GB Basis = ca. 799 €. 48 GB = ca. 999 €. 64 GB = ca. 1.199 €. Apple berechnet ca. 200 € pro 16-GB-Upgrade-Stufe beim M5 Pro. Arbeitsspeicher-Upgrades bieten beim Kauf das beste Preis-Leistungs-Verhältnis im Apple-Silicon-Ökosystem — der spätere Ersatz des gesamten Macs kostet 1.000 €+ vs 200 € heute.',
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-de.svg',
+        imageCaption: 'Kaufentscheidungsbaum für Unified Memory: 36 GB für ein einzelnes 13B-Modell, 64 GB, wenn zusätzlich Vision/STT/TTS parallel läuft oder 34B Q5 gewünscht ist, und 128 GB nur, wenn gezielt 70B-Q5-Modelle benötigt werden.',
       },
       quantization: {
         id: 'quantization',
@@ -1212,6 +1228,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle + Quantification': 'Llama 3.3 70B Q8 (74 Go)', '16 Go': '✗ Incompatible', '36 Go': '✗ Incompatible', '64 Go': '✗ Incompatible', '128 Go': '✓ Compatible' },
         ],
         note: '✓ Largement = 4+ Go libres | ✓ Confortable = 2–4 Go libres | ⚠️ Serré = moins de 2 Go libres | ✗ Incompatible = swap ou plantage',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-fr.svg',
+        imageCaption: 'Niveaux de mémoire unifiée 16 Go, 36 Go, 64 Go et 128 Go comparés à cinq tailles de modèles : Phi-4 3,8B tient dans tous les niveaux, Llama 3.3 8B est serré à 16 Go, Llama 3.3 13B nécessite 36 Go minimum, Qwen3 34B nécessite 64 Go, et Llama 3.3 70B nécessite 128 Go.',
       },
       whatFits: {
         id: 'what-fits',
@@ -1264,6 +1282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Façon la moins chère d'obtenir 36 Go+ de mémoire unifiée : le Mac mini M5 Pro de base (~1 000 €, 36 Go) est le Mac le moins cher avec assez de mémoire pour exécuter des modèles 13B confortablement — moins cher que toute configuration Mac Studio ou MacBook Pro à mémoire équivalente.",
         ],
         note: "Analyse coût mémoire (M5 Pro Mac Mini, 2026) : 32 Go base = ~799 €. 48 Go = ~999 €. 64 Go = ~1 199 €. Apple facture ~200 € par tranche de 16 Go sur le M5 Pro. Les upgrades mémoire à l'achat offrent le meilleur rapport qualité-prix dans l'écosystème Apple Silicon — remplacer l'intégralité du Mac plus tard coûte 1 000 €+ vs 200 € aujourd'hui.",
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-fr.svg',
+        imageCaption: "Arbre de décision d'achat pour la mémoire unifiée : 36 Go pour un seul modèle 13B, 64 Go si vous exécutez aussi vision/STT/TTS en parallèle ou visez du 34B Q5, et 128 Go uniquement si vous avez spécifiquement besoin de modèles 70B Q5.",
       },
       quantization: {
         id: 'quantization',
@@ -1473,6 +1493,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル + 量子化': 'Llama 3.3 70B Q8 (74 GB)', '16GB': '✗ 収まらない', '36GB': '✗ 収まらない', '64GB': '✗ 収まらない', '128GB': '✓ 収まる' },
         ],
         note: '✓ 余裕 = 4GB以上空き | ✓ 余裕あり = 2〜4GB空き | ⚠️ ギリギリ = 2GB未満空き | ✗ 収まらない = スワップまたはクラッシュ',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-ja.svg',
+        imageCaption: '16GB、36GB、64GB、128GBの統合メモリ層と5つのモデルサイズの対応：Phi-4 3.8Bはすべての層に収まり、Llama 3.3 8Bは16GBでギリギリ、Llama 3.3 13Bは最低36GBが必要、Qwen3 34Bは64GBが必要、Llama 3.3 70Bは128GBが必要。',
       },
       whatFits: {
         id: 'what-fits',
@@ -1525,6 +1547,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '36GB以上のユニファイドメモリを最も安く手に入れる方法：ベースのM5 Pro Mac mini（約125,000円、36GB）は13Bモデルを余裕で実行できる最安のMac——同等メモリのMac StudioやMacBook Proより安い。',
         ],
         note: 'メモリコスト分析（M5 Pro Mac Mini、2026年）：32GBベース = 約100,000円。48GB = 約125,000円。64GB = 約150,000円。Apple Siliconエコシステムで最もコスト効率の高いアップグレードはメモリ——後でMac全体を交換すると100,000円以上対、今日25,000円の差。',
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ja.svg',
+        imageCaption: '統合メモリの購入判断ツリー：13Bモデル単体なら36GB、ビジョン/STT/TTSも同時実行するか34B Q5を使うなら64GB、70B Q5モデルが必要な場合のみ128GB。',
       },
       quantization: {
         id: 'quantization',
@@ -1746,6 +1770,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型 + 量化': 'Llama 3.3 70B Q8 (74 GB)', '16GB': '✗ 不适合', '36GB': '✗ 不适合', '64GB': '✗ 不适合', '128GB': '✓ 可以' },
         ],
         note: '✓ 充裕 = 空余4GB以上 | ✓ 舒适 = 空余2–4GB | ⚠️ 勉强 = 空余不足2GB | ✗ 不适合 = 使用交换分区或崩溃',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-zh.svg',
+        imageCaption: '统一内存层级16GB、36GB、64GB和128GB对应五种模型规模：Phi-4 3.8B在所有层级都能运行，Llama 3.3 8B在16GB上很勉强，Llama 3.3 13B至少需要36GB，Qwen3 34B需要64GB，Llama 3.3 70B需要128GB。',
       },
       whatFits: {
         id: 'what-fits',
@@ -1798,6 +1824,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '获得36GB以上统一内存最省钱的方式：基础款M5 Pro Mac mini（约8,000元，36GB）是能轻松运行13B模型的最便宜Mac——比同等内存的Mac Studio或MacBook Pro都便宜。',
         ],
         note: '内存成本分析（M5 Pro Mac Mini，2026年）：32GB基础款 = 约5,800元。48GB = 约7,200元。64GB = 约8,600元。Apple每增加16GB约收费1,400元。内存升级是Apple Silicon生态中性价比最高的选择——之后更换整台Mac要多花7,000元以上，而现在只多花1,400元。',
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-zh.svg',
+        imageCaption: '统一内存购买决策树：单独运行13B模型选36GB，同时运行视觉/STT/TTS或需要34B Q5选64GB，只有明确需要70B Q5模型时才选128GB。',
       },
       quantization: {
         id: 'quantization',
@@ -1968,6 +1996,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델 + 양자화': 'Llama 3.3 70B Q8 (74 GB)', '16GB': '✗ 불가', '36GB': '✗ 불가', '64GB': '✗ 불가', '128GB': '✓ 가능' },
         ],
         note: '✓ 충분 = 여유 4+ GB | ✓ 여유 = 여유 2-4 GB | ⚠️ 빠듯 = 여유 2 GB 미만 | ✗ 불가 = 스왑 사용 또는 충돌',
+        image: '/images/how-much-unified-memory-for-local-llm-tier-fit-chart-ko.svg',
+        imageCaption: '통합 메모리 티어 16GB, 36GB, 64GB, 128GB를 다섯 가지 모델 크기와 비교: Phi-4 3.8B는 모든 티어에서 실행 가능, Llama 3.3 8B는 16GB에서 빠듯함, Llama 3.3 13B는 최소 36GB 필요, Qwen3 34B는 64GB 필요, Llama 3.3 70B는 128GB 필요.',
       },
       whatFits: {
         id: 'what-fits',
@@ -2020,6 +2050,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '36GB 이상 통합 메모리를 가장 저렴하게 얻는 방법: 기본 M5 Pro Mac mini($999, 36GB)는 13B 모델을 여유롭게 실행할 수 있는 가장 저렴한 Mac입니다 — 동급 메모리의 Mac Studio나 MacBook Pro보다 저렴합니다.',
         ],
         note: '메모리 비용 분석(M5 Pro Mac Mini, 2026): 32 GB 기본 = $799. 48 GB = $999 (GB당 $12.50 업그레이드). 64 GB = $1,199 (GB당 $12.50 업그레이드). Apple은 M5 Pro에서 16 GB 업그레이드 티어당 $200을 청구합니다. GB당 $12.50으로, 메모리 업그레이드는 Apple Silicon 생태계에서 단연 최고의 가성비입니다 — 나중에 전체 Mac을 교체하면 오늘의 $200 대신 $1,000+ 비용이 발생합니다.',
+        image: '/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ko.svg',
+        imageCaption: '통합 메모리 구매 결정 트리: 13B 모델 하나만 실행하면 36GB, 비전/STT/TTS를 함께 실행하거나 34B Q5를 원하면 64GB, 70B Q5 모델이 특별히 필요한 경우에만 128GB.',
       },
       quantization: {
         id: 'quantization',

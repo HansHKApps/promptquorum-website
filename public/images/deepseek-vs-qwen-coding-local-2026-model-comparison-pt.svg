@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="350" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen3-Coder 32B vs DeepSeek-R1-Distill-Qwen-32B</text>
+<text x="400" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Ambos rodam em uma única RTX 4090 24 GB em Q4_K_M — mesmo hardware, forças diferentes</text>
+
+<!-- Left Panel: Qwen3-Coder 32B -->
+<rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<rect x="28" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+<text x="198" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Qwen3-Coder 32B</text>
+
+<text x="48" y="106" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Parâmetros:</text>
+<text x="48" y="124" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#49454F">32B denso</text>
+
+<text x="48" y="146" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">HumanEval (pass@1):</text>
+<text x="48" y="164" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#34A853">88,4%</text>
+
+<text x="48" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">VRAM (Q4_K_M):</text>
+<text x="48" y="204" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#49454F">20,1 GB · RTX 4090 24 GB</text>
+
+<text x="48" y="226" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Velocidade na RTX 4090:</text>
+<text x="48" y="244" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#49454F">10-14 tok/s</text>
+
+<text x="48" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Melhor em:</text>
+<text x="48" y="286" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">Rust, C++, refatoração,</text>
+<text x="48" y="302" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">chamadas de função agênticas</text>
+
+<text x="48" y="324" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">Melhor opção totalmente local</text>
+
+<!-- Right Panel: DeepSeek-R1-Distill-Qwen-32B -->
+<rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<rect x="432" y="55" width="340" height="4" rx="0" fill="#6750A4"/>
+<text x="602" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">DeepSeek-R1-Distill-Qwen-32B</text>
+
+<text x="452" y="106" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Parâmetros:</text>
+<text x="452" y="124" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#49454F">32B denso (destilado do R1)</text>
+
+<text x="452" y="146" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">HumanEval (pass@1):</text>
+<text x="452" y="164" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#6750A4">72,6%</text>
+
+<text x="452" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">VRAM (Q4_K_M):</text>
+<text x="452" y="204" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#49454F">20,1 GB · RTX 4090 24 GB</text>
+
+<text x="452" y="226" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Velocidade na RTX 4090:</text>
+<text x="452" y="244" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#49454F">8-12 tok/s</text>
+
+<text x="452" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Melhor em:</text>
+<text x="452" y="286" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">Raciocínio algorítmico,</text>
+<text x="452" y="302" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">programação competitiva</text>
+
+<text x="452" y="324" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6750A4">Melhor opção de raciocínio local</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

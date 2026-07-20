@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">70BモデルにおけるM5 Maxユニファイドメモリ対マルチGPU</text>
+
+  <rect x="28" y="50" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="50" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">M5 Max 128GB（シンプル）</text>
+
+  <text x="48" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">価格：</text>
+  <text x="150" y="108" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">$4,000（Mac Studio）</text>
+
+  <text x="48" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">メモリ：</text>
+  <text x="150" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">128GBユニファイド</text>
+
+  <text x="48" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">帯域幅：</text>
+  <text x="150" y="160" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">460–614 GB/s</text>
+
+  <text x="48" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">70B Q5速度：</text>
+  <text x="48" y="204" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#34A853">12–16 tokens/秒</text>
+
+  <text x="48" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">単一ユニット、オーケストレーション不要、</text>
+  <text x="48" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">複数カード用の電源・冷却も不要。</text>
+  <text x="48" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853">✓ マルチGPUの複雑さなしで70Bを</text>
+  <text x="48" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853">  動かせる唯一のコンシューマー選択肢</text>
+
+  <rect x="432" y="50" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="432" y="50" width="340" height="4" rx="0" fill="#F4B400"/>
+  <text x="602" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#F4B400" text-anchor="middle">デュアルRTX 4090（複雑）</text>
+
+  <text x="452" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">価格：</text>
+  <text x="554" y="108" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">$5,000+（構成一式）</text>
+
+  <text x="452" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">メモリ：</text>
+  <text x="554" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">48GB VRAM（2×24GB）</text>
+
+  <text x="452" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">帯域幅：</text>
+  <text x="554" y="160" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">約1,000 GB/s/カード</text>
+
+  <text x="452" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">70B Q5速度：</text>
+  <text x="452" y="204" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F">18–25 tokens/秒</text>
+
+  <text x="452" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">GPUオーケストレーションが必要、</text>
+  <text x="452" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">追加の電源容量と冷却が必要。</text>
+  <text x="452" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F4B400">△ 高速だが構築・維持が</text>
+  <text x="452" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#F4B400">  複雑</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

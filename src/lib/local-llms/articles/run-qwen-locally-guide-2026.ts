@@ -144,6 +144,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Model', 'VRAM', 'Tokens/sec (RTX 4090)', 'Best For'],
         tableFormat: true,
         note: 'Q4_K_M is the recommended quantization for most users — best quality-to-size ratio. Q8_0 offers higher quality at higher VRAM cost. Always use the explicit tag (qwen3.6:27b, not qwen3) to ensure you download the 27B model.',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-en.svg',
+        imageCaption: 'Qwen 3 model sizes by VRAM and speed: 27B Q4_K_M needs 16 GB VRAM at ~35 tokens/sec, 14B needs 9 GB at ~60 tokens/sec, 7B needs 5 GB at ~80 tokens/sec, and 72B needs 42 GB.',
       },
       hardware: {
         id: 'hardware',
@@ -220,6 +222,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: 'Do not skip Step 3. Ollama\'s default num_ctx is 2048 tokens — roughly 1,500 words. Most coding tasks (reading a file, explaining a function, writing tests) require 8,000–32,000 tokens of context. Without this fix, Qwen silently truncates your prompts and produces degraded output.' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-en.svg',
+        imageCaption: 'Five-step Ollama setup for Qwen 3.6 27B: install Ollama, pull qwen3.6:27b, fix num_ctx to 32768 in the Modelfile, build and run the model, then test the localhost:11434/v1 API endpoint — under 10 minutes total.',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
@@ -434,6 +438,8 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         columns: ['Modelo', 'VRAM', 'Tokens/seg (RTX 4090)', 'Mejor para'],
         tableFormat: true,
         note: 'Q4_K_M es la cuantización recomendada para la mayoría de los usuarios — mejor relación calidad-tamaño. Q8_0 ofrece mayor calidad a mayor costo de VRAM. Usa siempre la etiqueta explícita (qwen3.6:27b, no qwen3) para asegurarte de descargar el modelo 27B.',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-es.svg',
+        imageCaption: 'Tamaños de modelo Qwen 3 por VRAM y velocidad: 27B Q4_K_M necesita 16 GB VRAM a ~35 tokens/seg, 14B necesita 9 GB a ~60 tokens/seg, 7B necesita 5 GB a ~80 tokens/seg, y 72B necesita 42 GB.',
       },
       hardware: {
         id: 'hardware',
@@ -510,6 +516,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: 'No omitas el paso 3. El num_ctx predeterminado de Ollama es 2048 tokens — aproximadamente 1500 palabras. La mayoría de las tareas de programación (leer un archivo, explicar una función, escribir pruebas) requieren 8000–32000 tokens de contexto. Sin esta corrección, Qwen trunca silenciosamente tus prompts y produce resultados degradados.' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-es.svg',
+        imageCaption: 'Cinco pasos de configuración de Ollama para Qwen 3.6 27B: instalar Ollama, descargar qwen3.6:27b, corregir num_ctx a 32768 en el Modelfile, construir y ejecutar el modelo, luego probar el endpoint de API localhost:11434/v1 — menos de 10 minutos en total.',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
@@ -737,6 +745,8 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         columns: ['Modelo', 'VRAM', 'Tokens/seg (RTX 4090)', 'Mejor para'],
         tableFormat: true,
         note: 'Q4_K_M هو التكميم الموصى به لمعظم المستخدمين — أفضل نسبة جودة-حجم. Q8_0 يقدّم جودة أعلى بتكلفة VRAM أعلى. استخدم دائمًا الوسم الصريح (qwen3.6:27b، لا qwen3) لضمان تنزيل نموذج 27B.',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-ar.svg',
+        imageCaption: 'أحجام نماذج Qwen 3 حسب VRAM والسرعة: يحتاج 27B Q4_K_M إلى 16 GB VRAM بمعدل ~35 توكن/ثانية، و14B يحتاج 9 GB بمعدل ~60، و7B يحتاج 5 GB بمعدل ~80، و72B يحتاج 42 GB.',
       },
       hardware: {
         id: 'hardware',
@@ -813,6 +823,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: 'لا تتخطَّ الخطوة 3. num_ctx الافتراضي في Ollama هو 2048 token — نحو 1500 كلمة. تتطلب معظم مهام البرمجة (قراءة ملف، شرح دالة، كتابة اختبارات) 8000–32000 token من السياق. دون هذا التصحيح، يقتطع Qwen أوامرك بصمت وينتج نتائج متدهورة.' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-ar.svg',
+        imageCaption: 'خمس خطوات لإعداد Ollama لتشغيل Qwen 3.6 27B: تثبيت Ollama، سحب qwen3.6:27b، تصحيح num_ctx إلى 32768 في Modelfile، بناء النموذج وتشغيله، ثم اختبار نقطة نهاية API على localhost:11434/v1 — أقل من 10 دقائق إجمالاً.',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
@@ -1116,6 +1128,8 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         columns: ['Modell', 'VRAM', 'Token/Sek. (RTX 4090)', 'Empfohlen für'],
         tableFormat: true,
         note: 'Q4_K_M ist die empfohlene Quantisierung für die meisten Anwender — bestes Qualitäts-/Größenverhältnis. Q8_0 bietet höhere Qualität bei höherem VRAM-Bedarf. Verwenden Sie stets den expliziten Tag (qwen3.6:27b, nicht qwen3), um sicherzustellen, dass das 27B-Modell heruntergeladen wird.',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-de.svg',
+        imageCaption: 'Qwen-3-Modellgrößen nach VRAM und Geschwindigkeit: 27B Q4_K_M benötigt 16 GB VRAM bei ~35 Token/Sek., 14B benötigt 9 GB bei ~60 Token/Sek., 7B benötigt 5 GB bei ~80 Token/Sek., und 72B benötigt 42 GB.',
       },
       hardware: {
         id: 'hardware',
@@ -1192,6 +1206,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: 'Überspringen Sie Schritt 3 nicht. Ollamas Standard-num_ctx beträgt 2048 Token — etwa 1.500 Wörter. Die meisten Coding-Aufgaben (Datei lesen, Funktion erklären, Tests schreiben) benötigen 8.000–32.000 Token Kontext. Ohne diese Korrektur kürzt Qwen Ihre Anfragen lautlos ab und liefert schlechtere Ausgaben.' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-de.svg',
+        imageCaption: 'Fünf Schritte zur Ollama-Einrichtung für Qwen 3.6 27B: Ollama installieren, qwen3.6:27b herunterladen, num_ctx im Modelfile auf 32768 korrigieren, Modell erstellen und starten, dann den API-Endpunkt localhost:11434/v1 testen — insgesamt unter 10 Minuten.',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
@@ -1397,6 +1413,8 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         columns: ['Modèle', 'VRAM', 'Tokens/sec (RTX 4090)', 'Recommandé pour'],
         tableFormat: true,
         note: 'Q4_K_M est la quantification recommandée pour la plupart des utilisateurs — meilleur rapport qualité/taille. Q8_0 offre une meilleure qualité à un coût VRAM plus élevé. Utilisez toujours le tag explicite (qwen3.6:27b, pas qwen3) pour vous assurer de télécharger le modèle 27B.',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-fr.svg',
+        imageCaption: 'Tailles des modèles Qwen 3 par VRAM et vitesse : 27B Q4_K_M nécessite 16 Go VRAM à ~35 tokens/sec, 14B nécessite 9 Go à ~60 tokens/sec, 7B nécessite 5 Go à ~80 tokens/sec, et 72B nécessite 42 Go.',
       },
       hardware: {
         id: 'hardware',
@@ -1473,6 +1491,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: 'Ne sautez pas l\'étape 3. Le num_ctx par défaut d\'Ollama est 2 048 tokens — environ 1 500 mots. La plupart des tâches de codage (lire un fichier, expliquer une fonction, écrire des tests) nécessitent 8 000–32 000 tokens de contexte. Sans cette correction, Qwen tronque silencieusement vos requêtes et produit des résultats dégradés.' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-fr.svg',
+        imageCaption: 'Cinq étapes de configuration Ollama pour Qwen 3.6 27B : installer Ollama, télécharger qwen3.6:27b, corriger num_ctx à 32768 dans le Modelfile, construire et lancer le modèle, puis tester l\'endpoint API localhost:11434/v1 — moins de 10 minutes au total.',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
@@ -1676,6 +1696,8 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         columns: ['モデル', 'VRAM', 'トークン/秒（RTX 4090）', '推奨用途'],
         tableFormat: true,
         note: 'Q4_K_Mはほとんどのユーザーにとってはおすすめの量子化です — 品質とサイズの最良のバランスを提供します。Q8_0はより高いVRAMコストでより高い品質を提供します。必ず明示的なタグ（qwen3.6:27b、qwen3ではなく）を使用して27Bモデルをダウンロードしてください。',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-ja.svg',
+        imageCaption: 'VRAMと速度別のQwen 3モデルサイズ：27B Q4_K_Mは16 GB VRAMで約35トークン/秒、14Bは9 GBで約60トークン/秒、7Bは5 GBで約80トークン/秒、72Bは42 GBが必要。',
       },
       hardware: {
         id: 'hardware',
@@ -1752,6 +1774,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: 'ステップ3をスキップしないでください。Ollamaのデフォルトnum_ctxは2048トークン — 約1500語です。ほとんどのコーディングタスク（ファイルの読み込み、関数の説明、テストの作成）には8000〜32000トークンのコンテキストが必要です。この修正なしでは、Qwenはプロンプトを黙って切り捨て、品質の低い出力を生成します。' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-ja.svg',
+        imageCaption: 'Qwen 3.6 27B向けOllamaセットアップの5ステップ：Ollamaをインストール、qwen3.6:27bを取得、Modelfileでnum_ctxを32768に修正、モデルをビルドして実行、localhost:11434/v1のAPIエンドポイントをテスト — 合計10分未満。',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
@@ -1955,6 +1979,8 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         columns: ['型号', 'VRAM', '令牌/秒（RTX 4090）', '推荐用途'],
         tableFormat: true,
         note: 'Q4_K_M是大多数用户的推荐量化方式——最佳的质量与体积比。Q8_0以更高的显存成本提供更高质量。始终使用显式标签（qwen3.6:27b，而非qwen3）以确保下载的是27B模型。',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-zh.svg',
+        imageCaption: '按显存和速度划分的Qwen 3模型规模：27B Q4_K_M需要16 GB显存，约35令牌/秒；14B需要9 GB，约60令牌/秒；7B需要5 GB，约80令牌/秒；72B需要42 GB。',
       },
       hardware: {
         id: 'hardware',
@@ -2031,6 +2057,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: '不要跳过步骤3。Ollama默认的num_ctx为2048 token——约1500个词。大多数代码任务（读取文件、解释函数、编写测试）需要8000–32000 token的上下文。没有这个修复，Qwen会静默截断您的提示词并产生降级输出。' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-zh.svg',
+        imageCaption: 'Qwen 3.6 27B的Ollama设置五步流程：安装Ollama、拉取qwen3.6:27b、在Modelfile中将num_ctx修正为32768、构建并运行模型，然后测试localhost:11434/v1 API端点——总计不到10分钟。',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',
@@ -2237,6 +2265,8 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         columns: ['Model', 'VRAM', 'Tokens/sec (RTX 4090)', 'Best For'],
         tableFormat: true,
         note: 'Q4_K_M은 대부분의 사용자에게 권장되는 양자화 방식으로 최고의 품질 대비 크기 비율을 제공합니다. Q8_0은 VRAM 비용이 높지만 더 높은 품질을 제공합니다. 27B 모델을 다운로드하도록 명시적 태그(qwen3가 아닌 qwen3.6:27b)를 항상 사용하십시오.',
+        image: '/images/run-qwen-locally-guide-2026-model-sizes-ko.svg',
+        imageCaption: 'VRAM과 속도별 Qwen 3 모델 크기: 27B Q4_K_M은 16GB VRAM에서 약 35토큰/초, 14B는 9GB에서 약 60토큰/초, 7B는 5GB에서 약 80토큰/초, 72B는 42GB가 필요합니다.',
       },
       hardware: {
         id: 'hardware',
@@ -2313,6 +2343,8 @@ curl http://localhost:11434/v1/chat/completions \\
         callouts: [
           { type: 'warning', text: '3단계를 건너뛰지 마십시오. Ollama의 기본 num_ctx는 2048 토큰(약 1,500 단어)입니다. 이는 대부분의 실제 코딩 작업에 너무 작습니다. 대부분의 코딩 작업(파일 읽기, 함수 설명, 테스트 작성)은 8,000–32,000 토큰의 컨텍스트가 필요합니다. 이 수정 없이는 Qwen이 프롬프트를 자동으로 잘라내어 저하된 출력을 생성합니다.' },
         ],
+        image: '/images/run-qwen-locally-guide-2026-setup-steps-ko.svg',
+        imageCaption: 'Qwen 3.6 27B용 Ollama 설정 5단계: Ollama 설치, qwen3.6:27b 다운로드, Modelfile에서 num_ctx를 32768로 수정, 모델 빌드 및 실행, localhost:11434/v1 API 엔드포인트 테스트 — 총 10분 이내.',
       },
       lmStudioSetup: {
         id: 'lm-studio-setup',

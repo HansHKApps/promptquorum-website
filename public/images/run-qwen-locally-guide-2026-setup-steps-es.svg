@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="360" fill="#FFFFFF"/>
+<text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Configuración con Ollama: 5 pasos para Qwen 3.6 27B</text>
+
+<circle cx="80" cy="110" r="22" fill="#6750A4"/>
+<text x="80" y="117" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="80" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instalar</text>
+<text x="80" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama</text>
+<text x="80" y="192" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">brew install ollama</text>
+
+<text x="145" y="117" font-size="20" fill="#6750A4">→</text>
+
+<circle cx="222" cy="110" r="22" fill="#6750A4"/>
+<text x="222" y="117" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="222" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Descargar</text>
+<text x="222" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen 3.6 27B</text>
+<text x="222" y="192" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">ollama pull qwen3.6:27b</text>
+
+<text x="287" y="117" font-size="20" fill="#6750A4">→</text>
+
+<circle cx="364" cy="110" r="22" fill="#6750A4"/>
+<text x="364" y="117" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="364" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Corregir</text>
+<text x="364" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">num_ctx</text>
+<text x="364" y="192" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#EA4335" text-anchor="middle">num_ctx 32768</text>
+
+<text x="429" y="117" font-size="20" fill="#6750A4">→</text>
+
+<circle cx="506" cy="110" r="22" fill="#6750A4"/>
+<text x="506" y="117" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="506" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Construir y</text>
+<text x="506" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">ejecutar</text>
+<text x="506" y="192" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">ollama create qwen3-32k</text>
+
+<text x="571" y="117" font-size="20" fill="#6750A4">→</text>
+
+<circle cx="648" cy="110" r="22" fill="#6750A4"/>
+<text x="648" y="117" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="648" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Probar</text>
+<text x="648" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">API</text>
+<text x="648" y="192" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">localhost:11434/v1</text>
+
+<line x1="18" y1="230" x2="782" y2="230" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="30" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F">El paso 3 es crítico: Ollama usa num_ctx 2048 por defecto, lo que trunca la mayoría de tareas reales.</text>
+<text x="30" y="276" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F">Establecer num_ctx en 32768 permite a Qwen 3.6 27B manejar archivos completos y conversaciones largas.</text>
+<text x="30" y="304" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#79747E">Tiempo total de configuración: menos de 10 minutos en una GPU de 16 GB VRAM.</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

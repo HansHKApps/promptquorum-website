@@ -176,6 +176,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Vault search': 'No', 'Generation': 'Yes (chat)', 'Mobile sync': 'Plugin syncs; Ollama must be LAN-reachable', 'Best for': 'Privacy-first chat with current note' },
           { 'Plugin': 'BMO Chatbot', 'Vault search': 'No', 'Generation': 'Yes (chat)', 'Mobile sync': 'Plugin syncs; Ollama must be LAN-reachable', 'Best for': 'Lightweight chat with current note' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-en.svg',
+        imageCaption: 'Plugin comparison across 5 Obsidian LLM tools: Smart Connections is the only one with vault-wide embedding search, Copilot for Obsidian adds vault QA chat, and Text Generator, Local GPT, BMO Chatbot cover generation without vault search.',
         callouts: [
           {
             type: 'tip',
@@ -304,6 +306,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Test:** open a note → check Smart Connections sidebar for related notes → open Copilot chat → ask a question that requires vault knowledge ("summarise what I\'ve written about [topic]") → verify the response references your actual notes.',
           '**Optional third plugin:** add Text Generator if you have repeatable workflows (daily-note summaries, meeting expansions, MOC generation). Configure with the same Ollama endpoint.',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-en.svg',
+        imageCaption: 'Five-step setup flow for Smart Connections + Copilot for Obsidian: install Ollama and pull llama3.2:3b, start and verify at localhost:11434, index the vault with nomic-embed-text, configure Copilot at the /v1 endpoint, then test vault-aware chat.',
         callouts: [
           {
             type: 'tip',
@@ -623,6 +627,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Vault-Suche': 'Nein', 'Generierung': 'Ja (Chat)', 'Mobile-Sync': 'Plugin synchronisiert; Ollama muss im LAN erreichbar sein', 'Am besten geeignet für': 'Privacy-First-Chat mit der aktuellen Notiz' },
           { 'Plugin': 'BMO Chatbot', 'Vault-Suche': 'Nein', 'Generierung': 'Ja (Chat)', 'Mobile-Sync': 'Plugin synchronisiert; Ollama muss im LAN erreichbar sein', 'Am besten geeignet für': 'Schlanker Chat mit der aktuellen Notiz' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-de.svg',
+        imageCaption: 'Vergleich von 5 Obsidian-LLM-Plugins: Nur Smart Connections durchsucht den gesamten Vault per Embedding-Index, Copilot for Obsidian ergänzt Vault-QA-Chat, und Text Generator, Local GPT sowie BMO Chatbot decken Generierung ohne Vault-Suche ab.',
         callouts: [
           {
             type: 'tip',
@@ -751,6 +757,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Testen:** Notiz öffnen → Smart-Connections-Sidebar auf verwandte Notizen prüfen → Copilot-Chat öffnen → eine Frage stellen, die Vault-Wissen erfordert („Fasse zusammen, was ich zu [Thema] geschrieben habe") → prüfen, ob die Antwort tatsächlich Ihre Notizen referenziert.',
           '**Optionales drittes Plugin:** Text Generator hinzufügen, wenn Sie wiederholbare Workflows haben (Daily-Note-Zusammenfassungen, Meeting-Erweiterungen, MOC-Generierung). Mit demselben Ollama-Endpoint konfigurieren.',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-de.svg',
+        imageCaption: 'Fünf-Schritte-Setup für Smart Connections + Copilot for Obsidian: Ollama installieren und llama3.2:3b laden, unter localhost:11434 starten und prüfen, den Vault mit nomic-embed-text indexieren, Copilot am /v1-Endpoint konfigurieren und den vault-bewussten Chat testen.',
         callouts: [
           {
             type: 'tip',
@@ -1070,6 +1078,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Recherche vault': 'Non', 'Génération': 'Oui (chat)', 'Synchronisation mobile': 'Le plugin se synchronise ; Ollama doit être accessible sur le LAN', 'Meilleur pour': 'Chat axé sur la confidentialité avec note actuelle' },
           { 'Plugin': 'BMO Chatbot', 'Recherche vault': 'Non', 'Génération': 'Oui (chat)', 'Synchronisation mobile': 'Le plugin se synchronise ; Ollama doit être accessible sur le LAN', 'Meilleur pour': 'Chat léger avec note actuelle' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-fr.svg',
+        imageCaption: 'Comparaison de 5 plugins LLM pour Obsidian : seul Smart Connections indexe tout le vault par embeddings, Copilot for Obsidian ajoute le chat en mode QA vault, et Text Generator, Local GPT, BMO Chatbot couvrent la génération sans recherche dans le vault.',
         callouts: [
           {
             type: 'tip',
@@ -1198,6 +1208,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Testez :** ouvrez une note → vérifiez la barre latérale Smart Connections pour les notes connexes → ouvrez le chat Copilot → posez une question nécessitant la connaissance du vault (« résumez ce que j\'ai écrit sur [sujet] ») → vérifiez que la réponse référence réellement vos notes.',
           '**Plugin tiers optionnel :** ajoutez Text Generator si vous avez des workflows répétables (résumés de notes quotidiennes, expansions de réunion, génération MOC). Configurez avec le même endpoint Ollama.',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-fr.svg',
+        imageCaption: 'Configuration en 5 étapes pour Smart Connections + Copilot for Obsidian : installer Ollama et télécharger llama3.2:3b, démarrer et vérifier sur localhost:11434, indexer le vault avec nomic-embed-text, configurer Copilot sur le point de terminaison /v1, puis tester le chat conscient du vault.',
         callouts: [
           {
             type: 'tip',
@@ -1517,6 +1529,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'プラグイン': 'Local GPT', 'ボルト検索': 'いいえ', '生成': 'はい (チャット)', 'モバイル同期': 'プラグイン同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': '現在のノートでプライバシー重視チャット' },
           { 'プラグイン': 'BMO Chatbot', 'ボルト検索': 'いいえ', '生成': 'はい (チャット)', 'モバイル同期': 'プラグイン同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': '現在のノートで軽量チャット' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-ja.svg',
+        imageCaption: 'Obsidian向け5つのLLMプラグインの比較: Smart Connectionsだけがエンベディングでボルト全体を検索でき、Copilot for ObsidianはvaultQAチャットを追加、Text Generator・Local GPT・BMO Chatbotはボルト検索なしの生成をカバーする。',
         callouts: [
           {
             type: 'tip',
@@ -1645,6 +1659,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**テスト:** ノートを開く → Smart Connectionsサイドバーで関連ノートを確認 → Copilotチャットを開く → ボルト知識を必要とする質問を尋ねる (「[トピック] について書いたものを要約してください」) → 応答が実際にノートを参照しているか確認。',
           '**オプション3番目プラグイン:** 繰り返し可能なワークフローがある場合Text Generatorを追加 (日次ノート要約、会議展開、MOC生成)。同じOllamaエンドポイントで設定します。',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-ja.svg',
+        imageCaption: 'Smart Connections + Copilot for Obsidianの5ステップ設定: Ollamaをインストールしllama3.2:3bを取得、localhost:11434で起動・確認、nomic-embed-textでボルトをインデックス、Copilotを/v1エンドポイントで設定、ボルトを認識するチャットをテストする。',
         callouts: [
           {
             type: 'tip',
@@ -1964,6 +1980,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '插件': 'Local GPT', '库搜索': '否', '生成': '是（聊天）', '移动同步': '插件同步；Ollama 必须在 LAN 上可达', '最适合': '当前笔记的隐私优先聊天' },
           { '插件': 'BMO Chatbot', '库搜索': '否', '生成': '是（聊天）', '移动同步': '插件同步；Ollama 必须在 LAN 上可达', '最适合': '当前笔记的轻量级聊天' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-zh.svg',
+        imageCaption: '5 款 Obsidian 本地 LLM 插件对比：只有 Smart Connections 用嵌入索引搜索整个库，Copilot for Obsidian 增加了库 QA 聊天，Text Generator、Local GPT 和 BMO Chatbot 提供无库搜索的生成功能。',
         callouts: [
           {
             type: 'tip',
@@ -2092,6 +2110,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**测试：** 打开笔记 → 检查 Smart Connections 侧边栏的相关笔记 → 打开 Copilot 聊天 → 提出需要库知识的问题（"总结我写过的关于[主题]的内容"）→ 验证响应引用您的实际笔记。',
           '**可选第三个插件：** 如果您有可重复的工作流（每日笔记摘要、会议扩展、MOC 生成），添加 Text Generator。使用相同的 Ollama 端点配置。',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-zh.svg',
+        imageCaption: 'Smart Connections + Copilot for Obsidian 的 5 步安装流程：安装 Ollama 并拉取 llama3.2:3b，在 localhost:11434 启动并验证，用 nomic-embed-text 为库建立索引，在 /v1 端点配置 Copilot，最后测试库感知聊天。',
         callouts: [
           {
             type: 'tip',
@@ -2411,6 +2431,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Búsqueda en vault': 'No', 'Generación': 'Sí (chat)', 'Sincronización móvil': 'El plugin se sincroniza; Ollama debe ser accesible en LAN', 'Ideal para': 'Chat con privacidad prioritaria con la nota actual' },
           { 'Plugin': 'BMO Chatbot', 'Búsqueda en vault': 'No', 'Generación': 'Sí (chat)', 'Sincronización móvil': 'El plugin se sincroniza; Ollama debe ser accesible en LAN', 'Ideal para': 'Chat ligero con la nota actual' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-es.svg',
+        imageCaption: 'Comparación de 5 plugins de LLM local para Obsidian: solo Smart Connections indexa todo el vault con embeddings, Copilot for Obsidian añade el chat en modo vault QA, y Text Generator, Local GPT y BMO Chatbot cubren la generación sin búsqueda en el vault.',
         callouts: [
           {
             type: 'tip',
@@ -2539,6 +2561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Prueba:** abre una nota → revisa la barra lateral de Smart Connections para notas relacionadas → abre el chat de Copilot → haz una pregunta que requiera conocimiento del vault ("resume lo que he escrito sobre [tema]") → verifica que la respuesta hace referencia a tus notas reales.',
           '**Tercer plugin opcional:** agrega Text Generator si tienes flujos de trabajo repetibles (resúmenes de notas diarias, expansiones de reuniones, generación de MOC). Configura con el mismo endpoint de Ollama.',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-es.svg',
+        imageCaption: 'Configuración en 5 pasos de Smart Connections + Copilot for Obsidian: instalar Ollama y descargar llama3.2:3b, iniciar y verificar en localhost:11434, indexar el vault con nomic-embed-text, configurar Copilot en el endpoint /v1 y probar el chat consciente del vault.',
         callouts: [
           {
             type: 'tip',
@@ -2889,6 +2913,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Busca no vault': 'Não', 'Geração': 'Sim (chat)', 'Sincronização móvel': 'O plugin sincroniza; o Ollama deve ser acessível na LAN', 'Melhor para': 'Chat com privacidade em primeiro lugar com a nota atual' },
           { 'Plugin': 'BMO Chatbot', 'Busca no vault': 'Não', 'Geração': 'Sim (chat)', 'Sincronização móvel': 'O plugin sincroniza; o Ollama deve ser acessível na LAN', 'Melhor para': 'Chat leve com a nota atual' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-pt.svg',
+        imageCaption: 'Comparação de 5 plugins de LLM local para Obsidian: só o Smart Connections indexa o vault inteiro com embeddings, o Copilot for Obsidian acrescenta o chat em modo vault QA, e o Text Generator, Local GPT e BMO Chatbot cobrem a geração sem busca no vault.',
         callouts: [
           {
             type: 'tip',
@@ -3017,6 +3043,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Teste:** abra uma nota → verifique a barra lateral do Smart Connections em busca de notas relacionadas → abra o chat do Copilot → faça uma pergunta que exija conhecimento do vault ("resuma o que escrevi sobre [tema]") → verifique se a resposta faz referência às suas notas reais.',
           '**Terceiro plugin opcional:** adicione o Text Generator se você tem fluxos de trabalho repetíveis (resumos de notas diárias, expansões de reunião, geração de MOC). Configure com o mesmo endpoint do Ollama.',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-pt.svg',
+        imageCaption: 'Configuração em 5 passos do Smart Connections + Copilot for Obsidian: instalar o Ollama e baixar o llama3.2:3b, iniciar e verificar em localhost:11434, indexar o vault com nomic-embed-text, configurar o Copilot no endpoint /v1 e testar o chat com consciência do vault.',
         callouts: [
           {
             type: 'tip',
@@ -3349,6 +3377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الملحق': 'Local GPT', 'البحث في المخزن': 'لا', 'التوليد': 'نعم (دردشة)', 'المزامنة المحمولة': 'يتزامن الملحق؛ يجب أن يكون Ollama متاحاً على LAN', 'الأنسب لـ': 'دردشة تعطي الأولوية للخصوصية مع الملاحظة الحالية' },
           { 'الملحق': 'BMO Chatbot', 'البحث في المخزن': 'لا', 'التوليد': 'نعم (دردشة)', 'المزامنة المحمولة': 'يتزامن الملحق؛ يجب أن يكون Ollama متاحاً على LAN', 'الأنسب لـ': 'دردشة خفيفة مع الملاحظة الحالية' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-ar.svg',
+        imageCaption: 'مقارنة 5 ملحقات LLM محلية لـ Obsidian: Smart Connections وحده يفهرس المخزن بأكمله بالتضمينات، ويضيف Copilot for Obsidian دردشة بوضع vault QA، بينما يغطي Text Generator وLocal GPT وBMO Chatbot التوليد بدون بحث في المخزن.',
         callouts: [
           {
             type: 'tip',
@@ -3477,6 +3507,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الاختبار:** افتح ملاحظة ← راجع شريط Smart Connections الجانبي للملاحظات ذات الصلة ← افتح دردشة Copilot ← اطرح سؤالاً يتطلب معرفة بالمخزن ("لخّص ما كتبته عن [موضوع]") ← تحقق من أن الإجابة تُشير إلى ملاحظاتك الفعلية.',
           '**الملحق الثالث الاختياري:** أضف Text Generator إن كان لديك سير عمل متكررة (ملخصات الملاحظات اليومية، توسيعات الاجتماعات، توليد MOC). هيّئه بنفس نقطة نهاية Ollama.',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-ar.svg',
+        imageCaption: 'إعداد من 5 خطوات لـ Smart Connections + Copilot for Obsidian: ثبّت Ollama ونزّل llama3.2:3b، شغّله وتحقق منه على localhost:11434، فهرس المخزن باستخدام nomic-embed-text، هيّئ Copilot على نقطة نهاية /v1، ثم اختبر الدردشة المدركة للمخزن.',
         callouts: [
           {
             type: 'tip',
@@ -3809,6 +3841,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '플러그인': 'Local GPT', '보관함 검색': '아니오', '생성': '예(채팅)', '모바일 동기화': '플러그인 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '현재 노트와 개인 정보 보호 우선 채팅' },
           { '플러그인': 'BMO Chatbot', '보관함 검색': '아니오', '생성': '예(채팅)', '모바일 동기화': '플러그인 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '현재 노트와 경량 채팅' },
         ],
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-ko.svg',
+        imageCaption: 'Obsidian용 로컬 LLM 플러그인 5종 비교: Smart Connections만 임베딩으로 보관함 전체를 검색하고, Copilot for Obsidian은 보관함 QA 채팅을 추가하며, Text Generator·Local GPT·BMO Chatbot은 보관함 검색 없이 생성 기능을 제공합니다.',
         callouts: [
           {
             type: 'tip',
@@ -3937,6 +3971,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**테스트:** 노트 열기 → Smart Connections 사이드바에서 관련 노트 확인 → Copilot 채팅 열기 → 보관함 지식이 필요한 질문 하기("내가 [주제]에 대해 쓴 내용 요약해줘") → 응답이 실제 노트를 참조하는지 확인.',
           '**선택적 세 번째 플러그인:** 반복 가능한 워크플로(일일 노트 요약, 회의 확장, MOC 생성)가 있다면 Text Generator를 추가하십시오. 동일한 Ollama 엔드포인트로 설정하십시오.',
         ],
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-ko.svg',
+        imageCaption: 'Smart Connections + Copilot for Obsidian 5단계 설정: Ollama 설치 후 llama3.2:3b 다운로드, localhost:11434에서 시작 및 확인, nomic-embed-text로 보관함 색인 생성, /v1 엔드포인트에서 Copilot 설정, 보관함 인식 채팅 테스트.',
         callouts: [
           {
             type: 'tip',
