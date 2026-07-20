@@ -274,6 +274,76 @@
     "width": 1200,
     "height": 675
   },
+  "/images/ai-model-comparison-comparisonTable-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-comparisonTable-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-comparisonTable-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-comparisonTable-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-comparisonTable-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-comparisonTable-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-comparisonTable-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-task-winner-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-task-winner-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-task-winner-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-task-winner-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-task-winner-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-task-winner-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-model-comparison-task-winner-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/ai-regulation-timeline-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 900,
@@ -1303,6 +1373,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 500
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-amd-gpus-local-llm-price-performance-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -2583,6 +2743,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-model-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-japanese-language-models-local-task-mapping-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-laptops-local-llm-2026-comparison-table-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -5089,6 +5339,141 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-moe-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-moe-models-local-coding-ollama-setup-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -5134,50 +5519,50 @@
     "width": 800,
     "height": 590
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 346
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 310
+  "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-ollama-models-cpu-only-model-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -15563,6 +15948,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 900,
     "height": 500
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/rtx4090-70b-reality-de.svg": {
     "encodingFormat": "image/svg+xml",
