@@ -15,6 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'CPU-Only LLM 2026: Phi-4 Mini Runs 12 tok/s, No GPU',
       intro: 'CPU-only inference is practical for 3–13B models on modern processors with 8–32 GB RAM. The best CPU-only models in May 2026 are Phi-4 Mini (3.8B, ~2.3 GB, 12 tokens/sec on CPU), Gemma 3 2B (1.5 GB, 15 tokens/sec), and Llama 3.2 3B (2 GB, 10 tokens/sec). Run via Ollama, LM Studio, or llama.cpp with CPU-only mode enabled.',
       metaDescription: '5 CPU-only LLMs benchmarked in 2026: Phi-4 Mini (3.8B) runs 12 tok/s, Gemma 3 2B hits 15 tok/s, Llama 3.2 3B delivers 10 tok/s — all without a GPU.',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-en.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4', 'Qwen3 7B'],
@@ -139,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Params': '8B', 'GGUF Size': '~5 GB', 'RAM Needed': '7 GB', 'CPU Speed': '4 tok/sec', 'Best For': 'Coding, logic tasks' },
           ],
           columns: ['Model', 'Params', 'GGUF Size', 'RAM Needed', 'CPU Speed', 'Best For'],
-          image: '/images/best-cpu-only-llm-model-speeds-en.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-en.png',
           imageCaption: 'Phi-4 Mini balances speed and quality best -- Gemma 3 2B is faster but has less capability at 12 tok/s vs 15 tok/s.',
         },
         speedComparison: {
@@ -154,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Model': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Speed': '120 tokens/sec', 'Notes': 'GPU is 30× faster than CPU' },
           ],
           columns: ['Hardware', 'Model', 'Speed', 'Notes'],
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-en.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-en.png',
           imageCaption: 'CPU is 6-30x slower than GPU -- but costs $0 in dedicated hardware and works on any machine.',
         },
         ramRequirements: {
@@ -383,6 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: '5 LLMs sin GPU 2026: Phi-4 Mini, Gemma 3, Llama 3.2',
       intro: 'La inferencia solo con CPU es práctica para modelos de 3–13B en procesadores modernos con 8–32 GB de RAM. Los mejores modelos solo CPU en mayo de 2026 son Phi-4 Mini (3,8B, ~2,3 GB, 12 tokens/seg en CPU), Gemma 3 2B (1,5 GB, 15 tokens/seg) y Llama 3.2 3B (2 GB, 10 tokens/seg). Ejecútalos con Ollama, LM Studio o llama.cpp con el modo solo CPU activado.',
       metaDescription: 'Phi-4 Mini (12 tok/s), Gemma 3 2B (15 tok/s) y Llama 3.2 3B (10 tok/s) sin GPU. Solo 4 GB RAM mínima. Comparativa de 5 modelos LLM para CPU 2026.',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-es.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
@@ -438,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modelo', 'Parámetros', 'Tamaño GGUF', 'RAM necesaria', 'Velocidad CPU', 'Mejor para'],
         
-          image: '/images/best-cpu-only-llm-model-speeds-es.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-es.png',
           imageCaption: 'Phi-4 Mini ofrece el mejor equilibrio entre velocidad y calidad — Gemma 3 2B es más rápido pero menos capaz, con 15 tok/s frente a 12 tok/s.',
         },
         speedComparison: {
@@ -454,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Modelo', 'Velocidad', 'Notas'],
         
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-es.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-es.png',
           imageCaption: 'La CPU es de 6 a 30 veces más lenta que la GPU — pero cuesta 0 $ en hardware dedicado y funciona en cualquier equipo.',
         },
         ramRequirements: {
@@ -625,6 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: '⁨LLM⁩ على ⁨CPU⁩ فقط ⁨2026⁩: ⁨Phi-4 Mini⁩ بـ ⁨12⁩ رمزًا/ثانية',
       intro: 'الاستدلال باستخدام CPU فقط عملي لنماذج 3–13B على المعالجات الحديثة المزودة بذاكرة RAM بسعة 8–32 GB. أفضل نماذج CPU فقط في مايو 2026 هي Phi-4 Mini (3.8B، ~2.3 GB، 12 token/ثانية على CPU)، وGemma 3 2B (1.5 GB، 15 token/ثانية)، وLlama 3.2 3B (2 GB، 10 token/ثانية). شغّلها عبر Ollama أو LM Studio أو llama.cpp مع تفعيل وضع CPU فقط.',
       metaDescription: '⁨Phi-4 Mini⁩ (⁨3.8B⁩) يحقق ⁨12⁩ رمزًا/ثانية و⁨Gemma 3 2B⁩ يصل إلى ⁨15⁩ — بدون ⁨GPU⁩. مقارنة ⁨5⁩ نماذج ⁨LLM⁩ على ⁨CPU⁩ بمتطلبات ⁨RAM⁩ وسرعة الاستدلال الفعلية ⁨2026⁩.',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ar.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
@@ -680,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modelo', 'Parámetros', 'Tamaño GGUF', 'RAM necesaria', 'Velocidad CPU', 'Mejor para'],
         
-          image: '/images/best-cpu-only-llm-model-speeds-ar.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-ar.png',
           imageCaption: 'يوازن Phi-4 Mini بين السرعة والجودة بأفضل شكل — بينما يُعد Gemma 3 2B أسرع لكن أقل قدرة بمعدل 15 مقابل 12 رمزاً/ثانية.',
         },
         speedComparison: {
@@ -696,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Modelo', 'Velocidad', 'Notas'],
         
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-ar.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-ar.png',
           imageCaption: 'يكون CPU أبطأ من GPU بمقدار 6 إلى 30 مرة — لكنه لا يُكلّف شيئاً من عتاد مخصص ويعمل على أي جهاز.',
         },
         ramRequirements: {
@@ -867,6 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'LLM somente CPU 2026: Phi-4 Mini roda a 12 tok/s, sem GPU',
       intro: 'A inferência somente com CPU é prática para modelos de 3-13B em processadores modernos com 8-32 GB de RAM. Os melhores modelos somente CPU em maio de 2026 são Phi-4 Mini (3,8B, ~2,3 GB, 12 tokens/s na CPU), Gemma 3 2B (1,5 GB, 15 tokens/s) e Llama 3.2 3B (2 GB, 10 tokens/s). Rode-os com Ollama, LM Studio ou llama.cpp com o modo somente CPU ativado.',
       metaDescription: '5 LLMs somente CPU comparados em 2026: Phi-4 Mini (3,8B) atinge 12 tok/s, Gemma 3 2B chega a 15 tok/s, Llama 3.2 3B entrega 10 tok/s -- tudo sem GPU.',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-pt.png',
       publishDate: '2026-05-07',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
@@ -934,7 +938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modelo': 'Mistral Small Q4', 'Parâmetros': '7B', 'RAM necessária': '~4,5 GB', 'Velocidade CPU': '5-7 tok/s', 'Melhor para': 'Tarefas mais complexas sem GPU' },
           ],
         
-          image: '/images/best-cpu-only-llm-model-speeds-pt.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-pt.png',
           imageCaption: 'O Phi-4 Mini equilibra melhor velocidade e qualidade — o Gemma 3 2B é mais rápido, mas menos capaz, com 15 tok/s contra 12 tok/s.',
         },
         speedComparison: {
@@ -949,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Velocidade': '120 tokens/s', 'Notas': 'GPU é 30&#215; mais rápida que a CPU' },
           ],
           columns: ['Hardware', 'Modelo', 'Velocidade', 'Notas'],
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-pt.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-pt.png',
           imageCaption: 'A CPU é de 6 a 30 vezes mais lenta que a GPU — mas custa $0 em hardware dedicado e funciona em qualquer máquina.',
         },
         ramRequirements: {
@@ -1081,6 +1085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'CPU-only LLM 2026: Phi-4 Mini 12 Tok/Sek, kein GPU',
       intro: 'CPU-only-Inferenz ist praktisch für 3–13B-Modelle auf modernen Prozessoren mit 8–32 GB RAM. Die besten CPU-only-Modelle im Mai 2026 sind Phi-4 Mini (3,8B, ~2,3 GB, 12 Token/Sekunde auf CPU), Gemma 3 2B (1,5 GB, 15 Token/Sekunde) und Llama 3.2 3B (2 GB, 10 Token/Sekunde). Führen Sie über Ollama, LM Studio oder llama.cpp mit aktiviertem CPU-only-Modus aus.',
       metaDescription: '5 CPU-only-Modelle im Vergleich: Phi-4 Mini läuft mit 12 Tok/Sek, Gemma 3 2B mit 15 Tok/Sek, Llama 3.2 3B mit 10 Tok/Sek — ohne GPU, nur 4–8 GB RAM.',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-de.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
@@ -1136,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modell', 'Parameter', 'GGUF-Größe', 'RAM erforderlich', 'CPU-Geschwindigkeit', 'Beste für'],
         
-          image: '/images/best-cpu-only-llm-model-speeds-de.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-de.png',
           imageCaption: 'Phi-4 Mini bietet die beste Balance aus Geschwindigkeit und Qualität — Gemma 3 2B ist mit 15 statt 12 Tok/s schneller, aber weniger leistungsfähig.',
         },
         speedComparison: {
@@ -1152,7 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Hardware', 'Modell', 'Geschwindigkeit', 'Notizen'],
         
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-de.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-de.png',
           imageCaption: 'Die CPU ist 6- bis 30-mal langsamer als die GPU — kostet aber 0 $ an dedizierter Hardware und läuft auf jedem Rechner.',
         },
         ramRequirements: {
@@ -1396,6 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'LLM CPU-only 2026: Phi-4 Mini 12 tok/s, sans GPU requis',
       intro: 'L\'inférence CPU-only est pratique pour les modèles 3–13B sur processeurs modernes avec 8–32 GB de RAM. Les meilleurs modèles CPU-only en mai 2026 sont Phi-4 Mini (3.8B, ~2.3 GB, 12 tokens/sec sur CPU), Gemma 3 2B (1.5 GB, 15 tokens/sec), et Llama 3.2 3B (2 GB, 10 tokens/sec). Exécutez via Ollama, LM Studio, ou llama.cpp avec le mode CPU-only activé.',
       metaDescription: '5 LLMs CPU-only comparés en 2026 : Phi-4 Mini (3.8B) atteint 12 tok/s, Gemma 3 2B 15 tok/s, Llama 3.2 3B 10 tok/s — sans GPU, sur 4–8 Go RAM.',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-fr.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
@@ -1451,7 +1457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Modèle', 'Paramètres', 'Taille GGUF', 'RAM Requise', 'Vitesse CPU', 'Meilleur Pour'],
         
-          image: '/images/best-cpu-only-llm-model-speeds-fr.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-fr.png',
           imageCaption: 'Phi-4 Mini offre le meilleur équilibre entre vitesse et qualité — Gemma 3 2B est plus rapide mais moins performant, à 15 tok/s contre 12 tok/s.',
         },
         speedComparison: {
@@ -1467,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Matériel', 'Modèle', 'Vitesse', 'Notes'],
         
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-fr.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-fr.png',
           imageCaption: 'Le CPU est 6 à 30 fois plus lent que le GPU — mais coûte 0 $ en matériel dédié et fonctionne sur n\'importe quelle machine.',
         },
         ramRequirements: {
@@ -1707,6 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'CPU-only LLM 2026：Phi-4 Mini 12tok/秒、GPU不要の5モデル比較',
       intro: 'CPU-only 推論は、8–32 GB RAM を搭載したモダン CPU 上の 3–13B モデルに実用的です。2026年5月の最高の CPU-only モデルは Phi-4 Mini (3.8B、~2.3 GB、CPU 上で 12 トークン/秒)、Gemma 3 2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒) です。Ollama、LM Studio、または CPU-only モード有効の llama.cpp を使用して実行します。',
       metaDescription: 'Phi-4 Mini（3.8B）は12トークン/秒、Gemma 3 2B（1.5 GB）は15トークン/秒をCPUのみで達成。GPU不要、RAM 4〜32 GBで動作する5モデルを2026年版として速度別に比較。',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ja.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
@@ -1762,7 +1769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['モデル', 'パラメータ', 'GGUF サイズ', 'RAM 要件', 'CPU 速度', '最適な用途'],
         
-          image: '/images/best-cpu-only-llm-model-speeds-ja.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-ja.png',
           imageCaption: 'Phi-4 Miniは速度と品質のバランスが最良です — Gemma 3 2Bは15対12トークン/秒で高速ですが、能力は劣ります。',
         },
         speedComparison: {
@@ -1778,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['ハードウェア', 'モデル', '速度', '注釈'],
         
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-ja.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-ja.png',
           imageCaption: 'CPUはGPUより6〜30倍遅いですが、専用ハードウェアの費用は0ドルで、どのマシンでも動作します。',
         },
         ramRequirements: {
@@ -2018,6 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: '2026年最佳CPU-only LLM：Phi-4 Mini 12令牌/秒，无需GPU',
       intro: 'CPU-only 推理适用于搭载 8–32 GB RAM 的现代处理器上的 3–13B 模型。2026 年 5 月最佳的 CPU-only 模型是 Phi-4 Mini (3.8B、~2.3 GB、CPU 上 12 令牌/秒)、Gemma 3 2B (1.5 GB、15 令牌/秒) 和 Llama 3.2 3B (2 GB、10 令牌/秒)。通过启用 CPU-only 模式的 Ollama、LM Studio 或 llama.cpp 运行。',
       metaDescription: '2026年测试5款CPU-only LLM：Phi-4 Mini（3.8B）达12令牌/秒，Gemma 3 2B（1.5 GB）达15令牌/秒，Llama 3.2 3B达10令牌/秒。无需GPU，4–32 GB内存即可运行。',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-zh.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
@@ -2073,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['模型', '参数', 'GGUF 大小', 'RAM 需求', 'CPU 速度', '最适合'],
         
-          image: '/images/best-cpu-only-llm-model-speeds-zh.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-zh.png',
           imageCaption: 'Phi-4 Mini在速度和质量之间取得最佳平衡 — Gemma 3 2B速度更快（15对12 tok/s）但能力较弱。',
         },
         speedComparison: {
@@ -2089,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['硬件', '模型', '速度', '备注'],
         
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-zh.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-zh.png',
           imageCaption: 'CPU比GPU慢6–30倍 — 但专用硬件成本为0美元，且可在任何机器上运行。',
         },
         ramRequirements: {
@@ -2329,6 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'CPU 전용 LLM 2026: Phi-4 Mini 12토큰/초, GPU 불필요',
       intro: 'CPU 전용 추론은 8~32GB RAM을 탑재한 최신 프로세서에서 3~13B 모델을 실용적으로 실행하는 데 적합합니다. 2026년 5월 기준 최고의 CPU 전용 모델은 Phi-4 Mini(3.8B, 약 2.3GB, CPU에서 12토큰/초), Gemma 3 2B(1.5GB, 15토큰/초), Llama 3.2 3B(2GB, 10토큰/초)입니다. Ollama, LM Studio 또는 CPU 전용 모드를 활성화한 llama.cpp로 실행할 수 있습니다.',
       metaDescription: '2026년 CPU 전용 LLM 5종 벤치마크: Phi-4 Mini(3.8B)는 12토큰/초, Gemma 3 2B는 15토큰/초, Llama 3.2 3B는 10토큰/초 — GPU 없이 모두 실행 가능합니다.',
+      heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ko.png',
       publishDate: '2026-05-07',
       dateModified: '2026-06-19',
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
@@ -2398,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['모델', '파라미터', 'GGUF 크기', '필요 RAM', 'CPU 속도', '최적 용도'],
         
-          image: '/images/best-cpu-only-llm-model-speeds-ko.svg',
+          image: '/images/best-cpu-only-llm-model-speeds-hero-ko.png',
           imageCaption: 'Phi-4 Mini는 속도와 품질의 균형이 가장 좋습니다 — Gemma 3 2B는 15 대 12 tok/s로 더 빠르지만 성능은 떨어집니다.',
         },
         speedComparison: {
@@ -2414,7 +2423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['하드웨어', '모델', '속도', '비고'],
         
-          image: '/images/best-cpu-only-llm-cpu-vs-gpu-ko.svg',
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-ko.png',
           imageCaption: 'CPU는 GPU보다 6–30배 느리지만 전용 하드웨어 비용이 $0이며 모든 기기에서 작동합니다.',
         },
         ramRequirements: {
